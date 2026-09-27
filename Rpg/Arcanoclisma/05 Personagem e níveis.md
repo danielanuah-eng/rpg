@@ -6,7 +6,7 @@
 
 1. **Conceito e Era** — o mestre diz em que Era/cenário vão jogar (ver [[08 Mundo e entidades]]). Você diz quem é o personagem numa frase.
 2. **Comportamento** — anote Esquiva, PV, Limiares base, armaduras, o Talento de Base e o Hábito ([[04 Comportamentos]]).
-3. **Valor** — pegue a folha do Valor: 36 palavras, Skill, Drawback ([[03 Valores]]).
+3. **Valor** — o seu personagem é um **Comprometido**: marque o espaço do seu Valor no Caderno dos Valores (36 palavras, Skill, Drawback) e anote o **Compromisso** dele ([[03 Valores]]).
 4. **Vínculo** — responda às perguntas abaixo. Elas definem o **Catalisador** e o **Canal**.
 5. **Canal** — como a magia sai de você (Catalisador, Corpo, Voz, Familiar, Marca). Dá +1 de Sintonia ([[02 Magia]]).
 6. **Atributos** — distribua **+2, +1, +1, 0, 0, −1**.
@@ -56,10 +56,10 @@ A ficha de papel tem uma folha só para essas respostas; no app elas ficam num c
 | +1 Esquiva | uma vez por Patamar |
 | +1 em duas Vivências | — |
 | **Palavra Estrangeira**: escreva na ficha uma palavra de outro Valor | máx. 4 no total |
-| **Talento Hábil** de um Comportamento seu | Patamar 2+ |
-| **Talento de Mestre** de um Comportamento seu | Patamar 3+, precisa de um Hábil dele |
+| **Talento Hábil** do seu Comportamento | Patamar 2+ |
+| **Talento de Mestre** do seu Comportamento | Patamar 3+, precisa de um Hábil dele |
+| **Talento de outro Comportamento** (Base ou Hábito no Patamar 2+; Hábil no Patamar 3+, precisa do Base dele) | Mestre nunca |
 | **Ressonância** do seu Valor (II no Patamar 2+, III no Patamar 3+) | em ordem |
-| **Segundo Comportamento** (conta como os 2 avanços) | Patamar 3+, uma vez |
 | **Despertar outro Valor** (conta como os 2 avanços) | Patamar 3+, uma vez ❓ P-21 |
 
 ### Despertar outro Valor (proposta)
@@ -70,9 +70,13 @@ Isso responde o "uma ficha para cada Valor que a pessoa escolher" sem deixar alg
 
 ## Ficha — o que precisa aparecer
 
-**App**: tudo que o personagem liberou (Talentos, Ressonâncias, Palavras Estrangeiras, itens, Vivências, respostas do Vínculo), com os contadores clicáveis e o montador de magia.
+**App**: tudo que o personagem liberou (Talentos de qualquer Comportamento, Ressonâncias, Palavras Estrangeiras, itens, Vivências, respostas do Vínculo), com os contadores clicáveis e o montador de magia. Na aba de magia aparecem **as tabelas dos 9 Valores**: as palavras que você tem acesas, as outras apagadas, para você ver de onde pode aprender a próxima.
 
 **Papel**:
-- **Folha do personagem** (a parte pequena do Comportamento): nome, skin, atributos, Esquiva, Limiares, PV, Cansaço, Proteção, Arcano, armas, armadura, Vivências, talentos (6 caixas), Ordynus.
-- **Folha de Valor** (a maior parte, uma por Valor): símbolo e cor, tabela 6×6 das 36 palavras, 4 linhas em branco para Palavras Estrangeiras, Skill, Drawback, Ressonâncias com caixinha, a tabela de Graus resumida (dados, custo, Dificuldade, dano), Canal, e 6 linhas de "magias que eu gosto de usar".
+- **Folha do personagem** (a parte pequena, do Comportamento): nome, skin, atributos, Esquiva, Limiares, PV, Cansaço, Proteção, Arcano, armas, armadura, Vivências, **caixas de talento** (Base, Hábito e espaços vazios para os talentos que vier a pegar, de qualquer Comportamento), Ordynus.
+- **Caderno dos Valores** (a maior parte): **um espaço para cada um dos 9 Valores**, cada um com símbolo, cor, a tabela 6×6 das 36 palavras com uma **caixinha por palavra**, Skill, Drawback e Ressonâncias.
+  - O seu Valor: todas as caixinhas marcadas desde o nível 1, e o espaço dele é o maior da página.
+  - Os outros Valores: você marca a caixinha quando aprende aquela palavra como Palavra Estrangeira. Assim dá para ver de relance o que você tem e de onde veio.
+  - **Espaços extras em branco** para palavras que chegam por item, talento ou Evento, preenchidos ao longo dos níveis.
+  - Um quadro com a tabela de Graus resumida (dados, custo, Dificuldade, dano), o Canal e 6 linhas de "magias que eu gosto de usar".
 - **Folha do Vínculo** e **folha de Familiar** (opcional).

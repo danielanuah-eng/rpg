@@ -5,7 +5,7 @@
 ## O jogo em um minuto
 
 - Quando seu personagem tenta algo arriscado, você rola **2d12 + atributo** contra uma **Dificuldade**.
-- **Cada dado par te dá 1 Arcano. Cada dado ímpar dá 1 Cataclisma ao mestre.** Par e ímpar são o equilíbrio do mundo.
+- **Cada dado par te dá 1 Arcano. Cada dado ímpar dá 1 Cataclisma ao mestre.** Par é controle e fechamento; ímpar é o incompleto, que muda (ver [[08 Mundo e entidades]]).
 - **Dois dados iguais = Crítico.**
 - Magia não usa atributo: você junta **palavras** do seu Valor, escolhe o **Grau** (o tamanho do feito) e rola um conjunto de dados que **sempre soma no máximo 24**: 2d12 → 3d8 → 4d6 → 6d4. Mais dados = mais confiável, mas mais Arcano *e* mais Cataclisma saindo da mesa.
 - Adversários rolam **d20**. O mestre gasta **Cataclisma** para fazer o mundo reagir.

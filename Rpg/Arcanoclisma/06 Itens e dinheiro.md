@@ -80,11 +80,50 @@ O objeto do Vínculo. Se o seu Canal é Catalisador, ele dá +1 de Sintonia enqu
 | Com Palavra | 3 | guarda 1 palavra de qualquer Valor (não conta no limite de Estrangeiras) | 800 o |
 | Mestre | 4 | +1 de Sintonia a mais | 3.000 o |
 
-## Relíquias (itens com palavra)
+## Itens mágicos (Relíquias)
 
-A forma mais simples de item mágico: **um objeto que carrega uma palavra**. Enquanto você está com ele, a palavra é sua (nunca como núcleo, a não ser que seja do seu Valor). Não conta no limite de Palavras Estrangeiras. Algumas têm **cargas** (recuperam no Pouso).
+Itens mágicos servem para **tudo**, não só para quem conjura: ajudam em testes comuns, deixam a magia mais estável, mexem em Valores específicos. Cinco famílias, para o gerador e para as cartas:
 
-Exemplos: *Anel de Areia Parada* (Eternyr: **Parar**, 2 cargas) · *Luva do Estrangulador* (Dominum: **Prender**) · *Espelho de Bolso* (Alvorum: **Refletir**) · *Pena de Mentira* (Cognitium: **Falso**, 1 carga) · *Colar de Dente de Lobo* (Primitivum: **Farejar**).
+| Família | O que faz | Faixa de poder (Patamar 1 → 4) |
+|---|---|---|
+| **De Palavra** | carrega uma palavra de qualquer Valor; enquanto está com você, a palavra é sua (nunca como núcleo, a não ser que seja do seu Valor) e não conta no limite de Estrangeiras | 1 palavra, às vezes com cargas → 1 palavra sem cargas |
+| **De Ofício** | ajuda em mecânica básica: um atributo, um tipo de teste, Esquiva, Limiares, Proteção, PV ou Cansaço | Vantagem numa situação estreita → +1 num atributo |
+| **De Estabilidade** | mexe nas **Dificuldades** da magia: Dificuldade do Grau menor, uma Dificuldade (d20) a menos, Suavizar de graça, +1 no d20 da tabela | −1 na Dificuldade do Grau → uma Dificuldade a menos em toda magia |
+| **De Valor** | só funciona para um Valor: melhora a Skill, alivia o Drawback, ou dá a um não-Comprometido daquele Valor um pedaço da Skill | alívio pequeno → Skill melhorada |
+| **De Grau** | ajuda a magia a crescer: Ampliação de graça, +1 no dano de magia, +1 de Sintonia numa condição | 1 Ampliação por cena → +1 de Sintonia |
+
+Algumas têm **cargas** (recuperam no Pouso). Regra geral de equilíbrio: um item do Patamar X nunca dá mais que **um passo** da tabela de Graus, **+1** num número, ou **uma** palavra.
+
+### Exemplos
+
+| Item | Família | Patamar | Efeito | Preço |
+|---|---|---|---|---|
+| Luva do Estrangulador | Palavra (Dominum) | 1 | palavra **Prender** | 120 o |
+| Espelho de Bolso | Palavra (Alvorum) | 1 | palavra **Refletir** | 120 o |
+| Colar de Dente de Lobo | Palavra (Primitivum) | 1 | palavra **Farejar** | 120 o |
+| Pena de Mentira | Palavra (Cognitium) | 2 | palavra **Falso**, 1 carga, e quem lê o que ela escreve acredita | 250 o |
+| Anel de Areia Parada | Palavra (Eternyr) | 3 | palavra **Parar**, 2 cargas | 900 o |
+| Botas de Salto do Gato | Ofício | 1 | Vantagem para saltar e cair em pé | 80 o |
+| Luvas de Veludo Preto | Ofício | 1 | Vantagem para abrir fechaduras | 80 o |
+| Broche do Anfitrião | Ofício | 2 | +1 em Carisma com quem já comeu com você | 300 o |
+| Colete de Pele de Pedra | Ofício | 2 | +1 nos dois Limiares | 350 o |
+| Olho de Vidro do Vigia | Ofício | 3 | +1 em Percepção | 1.200 o |
+| Fita do Equilíbrio | Estabilidade | 1 | uma vez por sessão, Suavizar de graça | 100 o |
+| Sino de Contenção | Estabilidade | 2 | −1 na Dificuldade do Grau das suas magias | 400 o |
+| Pedra-Par | Estabilidade | 3 | suas magias Ímpares rolam uma Dificuldade a menos | 1.400 o |
+| Âncora de Sal | Estabilidade | 4 | +3 no d20 da tabela de Dificuldades | 3.000 o |
+| Bainha Vermelha | Valor (Conflitüo) | 2 | fora de combate, suas magias podem ter 3 palavras em vez de 2 | 300 o |
+| Ampulheta Rachada | Valor (Eternyr) | 2 | o Peso do Tempo cai para +1 | 450 o |
+| Máscara do Palhaço Triste | Valor (Persona) | 2 | quando o Drama acontece, o mestre não ganha Cataclisma se você reclamar | 300 o |
+| Lanterna Fechada | Valor (Alvorum) | 2 | uma magia por cena sem ser chamativa | 400 o |
+| Moeda do Barqueiro | Valor (Morbidyum) | 3 | ao usar a Volta, fica com 3 Arcano | 1.000 o |
+| Cadinho de Bolso | Valor (Sublimeyn) | 3 | o primeiro passo extra de estado de cada cena não custa Arcano | 1.000 o |
+| Coleira de Prata | Valor (Dominum) | 3 | Vontade Quebrada dura só até a próxima Pausa | 1.100 o |
+| Máscara de Casca | Valor (Primitivum) | 3 | +1 Traço Animal nas transformações | 1.000 o |
+| Véu de Seda Cinza | Valor (Cognitium) | 3 | se Espiar falhar, o alvo não sabe que foi você | 1.000 o |
+| Luva de Forja | Grau | 1 | uma Ampliação de dano de graça por cena | 150 o |
+| Tinteiro de Duas Penas | Grau | 2 | +1 no dano de magia | 400 o |
+| Coroa Pequena | Grau | 4 | +1 de Sintonia enquanto ninguém tocar em você na cena | 3.500 o |
 
 ## Artefatos
 

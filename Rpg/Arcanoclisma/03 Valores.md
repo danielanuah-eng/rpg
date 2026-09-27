@@ -4,6 +4,12 @@
 
 Em cada tabela: linhas 1–2 são **verbos** (o que a magia faz), 3–4 **substantivos** (com o que ela faz), 5–6 **qualidades** (como ela é).
 
+## Comprometidos
+
+Quem usa magia é um **Comprometido**: a vida, o jeito e o poder dele se orientam pelo Valor. Não é uma regra de conduta, é uma tendência: a personalidade puxa para o Valor, e o Valor puxa a personalidade. Cada Valor tem um **Compromisso**, uma frase que diz para onde ele puxa.
+
+**Viver o Compromisso**: uma vez por sessão, quando seguir o seu Compromisso te colocar em apuro de verdade (perder algo, se arriscar, complicar o plano), ganhe **2 Arcano**. Ir contra ele não tem punição; só não rende nada. ❓ P-61
+
 ## A roda dos Valores (opostos)
 
 Oposição serve para duas coisas: **Magia em Dupla de opostos** (mais forte, mais cara) e **fraqueza de adversários** (um adversário do Valor X resiste a X e é fraco contra o oposto de X).
@@ -30,6 +36,7 @@ Oposição serve para duas coisas: **Magia em Dupla de opostos** (mais forte, ma
 
 - **Símbolo**: um X em que uma das linhas se parte no meio. **Cor**: vermelho-ferrugem.
 - **Primordial**: Thorvessa, a Que Separa. **Oposto**: Persona.
+- **Compromisso**: "Não fujo de briga que é minha." Enfrenta de frente, resolve no choque, protege os seus com o corpo.
 - **Skill · Fio da Guerra**: em combate, cada magia sua ganha **+1 dado de dano** ou **+2 no total** (escolha ao conjurar).
 - **Drawback · Só Sabe Brigar**: magias fora de combate ou violência têm no máximo **2 palavras**.
 - **Ressonância II · Veterano**: marque 1 Cansaço para ter os dois bônus do Fio da Guerra na mesma magia.
@@ -44,7 +51,7 @@ Oposição serve para duas coisas: **Magia em Dupla de opostos** (mais forte, ma
 | **5** | Letal | Implacável | Afiado | Pesado | Certeiro | Veloz |
 | **6** | Blindado | Brutal | Incansável | Tático | Sangrento | Inquebrável |
 
-Exemplos: **G1** afiar a faca com um passar de dedo · **G2** *Lâmina + Projétil*: uma lâmina de luz vermelha atirada · **G3** *Muralha + Blindado*: um paredão de escudos entre o grupo e a carga · **G4** *Explodir + Estilhaço + Vários + Letal*: o chão do pátio explode em estilhaços contra seis inimigos.
+Exemplos: **G1** afiar a faca com um passar de dedo · **G2** *Lâmina + Projétil*: uma lâmina de luz vermelha atirada · **G3** *Muralha + Blindado*: um paredão de escudos entre o grupo e a carga · **G4** *Explodir + Estilhaço + Grupo + Letal*: o chão do pátio explode em estilhaços contra seis inimigos.
 
 Perguntas de vínculo: *Contra quem ou o quê você lutou pela primeira vez, e perdeu? · Existe alguém que você se recusa a ferir?*
 
@@ -56,6 +63,7 @@ Perguntas de vínculo: *Contra quem ou o quê você lutou pela primeira vez, e p
 
 - **Símbolo**: um círculo com três marcas dentro (um ponto cheio, uma gota, uma espiral). **Cor**: prata-mercúrio.
 - **Primordial**: Oyamar, o Primeiro Barro. **Oposto**: nenhum, é o Eixo.
+- **Compromisso**: "Nada precisa ficar como está." Experimenta, conserta, desmonta para ver por dentro, muda de ideia sem vergonha.
 - **Skill · Mistura**: gaste 1 Arcano para fundir dois elementos numa palavra só (Vapor + Metal = "vapor de ferro"). Conta como **uma** palavra e cria efeitos entre eles (ferrugem que queima, vidro que escorre).
 - **Drawback · Resistência da Matéria**: quanto mais longe a mudança, mais caro. Mudar o estado custa **+1 Arcano por passo além do primeiro** (sólido → líquido → gás → energia). Pedra em vapor = 2 passos = +1.
 - **Ressonância II · Alquimia Rápida**: a primeira Mistura de cada cena é grátis.
@@ -70,7 +78,7 @@ Perguntas de vínculo: *Contra quem ou o quê você lutou pela primeira vez, e p
 | **5** | Denso | Leve | Fluido | Volátil | Maleável | Rígido |
 | **6** | Cortante | Poroso | Ardente | Gélido | Corrosivo | Puro |
 
-Exemplos: **G1** gelo em água · **G2** *Fogo + Projétil*: uma bola de fogo · **G3** *Petrificar + Lama + Vários*: três inimigos presos na lama que endurece · **G4** *Sublimar + Pedra + Amplo*: a parede da fortaleza vira fumaça.
+Exemplos: **G1** gelo em água · **G2** *Fogo + Projétil*: uma bola de fogo · **G3** *Petrificar + Lama + Grupo*: três inimigos presos na lama que endurece · **G4** *Sublimar + Pedra + Área*: a parede da fortaleza vira fumaça.
 
 Perguntas de vínculo: *Qual material você sente como se fosse parte do seu corpo? · O que você já destruiu sem querer ao mudar de forma?*
 
@@ -82,6 +90,7 @@ Perguntas de vínculo: *Qual material você sente como se fosse parte do seu cor
 
 - **Símbolo**: um círculo de corrente fechado por uma mão. **Cor**: roxo-sangue.
 - **Primordial**: Kairvahnn, o Leão das Cem Cabeças. **Oposto**: Primitivum.
+- **Compromisso**: "Quem não manda, obedece." Toma a frente, cuida do que é seu, não aceita ordem sem motivo.
 - **Skill · Comando Reflexo**: o **único Valor com reação**. Quando um adversário age contra você ou alguém Perto, conjure uma magia de Dominum **antes** dele. Marque Cansaço igual ao Grau.
 - **Drawback · Vontade Quebrada**: se a magia falhar, ou se o alvo se libertar, você não pode usar Dominum nele de novo até o próximo Pouso.
 - **Ressonância II · Rédea Curta**: uma reação por cena sem marcar Cansaço.
@@ -108,6 +117,7 @@ Perguntas de vínculo: *A quem você já obedeceu e jurou nunca mais? · Você a
 
 - **Símbolo**: uma máscara partida ao meio, uma metade sorrindo. **Cor**: coral.
 - **Primordial**: Zahun, o Deus Humano. **Oposto**: Conflitüo.
+- **Compromisso**: "Gente vem antes de tudo." Se envolve, sente em voz alta, não abandona quem pediu ajuda.
 - **Skill · Toque Humano**: magias que afetam **pessoas** (corpo, alma ou emoção) têm **−2 na Dificuldade**. ❓ P-11
 - **Drawback · Drama**: se a magia falhar, o mestre descreve o resultado mais inútil ou mais cômico. Se você reclamar, ele ganha Cataclisma igual ao Grau.
 - **Ressonância II · Empatia**: role uma Dificuldade a menos quando a magia afetar pessoas.
@@ -122,7 +132,7 @@ Perguntas de vínculo: *A quem você já obedeceu e jurou nunca mais? · Você a
 | **5** | Belo | Grotesco | Robusto | Frágil | Vigoroso | Sereno |
 | **6** | Furioso | Corajoso | Apaixonado | Contagiante | Íntimo | Humano |
 
-Exemplos: **G1** corar as bochechas de alguém · **G2** *Amedrontar*: o capanga foge por 3 ações · **G3** *Fortalecer + Músculo + Aliado*: +2 em Força para até 3 aliados · **G4** *Cantar + Fúria + Contagiante + Vários*: uma música que faz a taverna inteira brigar.
+Exemplos: **G1** corar as bochechas de alguém · **G2** *Amedrontar*: o capanga foge por 3 ações · **G3** *Fortalecer + Músculo + Aliado*: +2 em Força para até 3 aliados · **G4** *Cantar + Fúria + Contagiante + Grupo*: uma música que faz a taverna inteira brigar.
 
 Perguntas de vínculo: *De quem você sente mais falta? · Qual emoção sua você mais esconde?*
 
@@ -134,6 +144,7 @@ Perguntas de vínculo: *De quem você sente mais falta? · Qual emoção sua voc
 
 - **Símbolo**: um olho com a pálpebra de cima dourada e a de baixo negra (um eclipse). **Cor**: dourado sobre preto.
 - **Primordial**: Idrael, o Olho de Duas Pálpebras. **Oposto**: Cognitium.
+- **Compromisso**: "O que está escondido tem que ser visto." Desconfia de segredo, fala a verdade mesmo quando atrapalha.
 - **Skill · Olhos Abertos**: gaste **2 Arcano**: pela cena, você enxerga através de escuridão, fumaça, disfarces, invisibilidade e ilusões de Grau até o seu máximo.
 - **Drawback · Farol**: toda magia sua é chamativa (brilho, som, sombra que se mexe). Impossível conjurar escondido; ao conjurar, você deixa de estar escondido.
 - **Ressonância II · Vigia**: Olhos Abertos custa 1.
@@ -148,7 +159,7 @@ Perguntas de vínculo: *De quem você sente mais falta? · Qual emoção sua voc
 | **5** | Radiante | Sombrio | Ofuscante | Solar | Lunar | Estelar |
 | **6** | Lúcido | Delirante | Oculto | Noturno | Nítido | Onírico |
 
-Exemplos: **G1** acender a ponta do dedo · **G2** *Cegar*: um inimigo cego por 3 ações · **G3** *Pesadelo + Vários*: três guardas acordados gritando · **G4** *Eclipsar + Sol + Amplo*: meio-dia vira noite sobre a praça pela cena inteira.
+Exemplos: **G1** acender a ponta do dedo · **G2** *Cegar*: um inimigo cego por 3 ações · **G3** *Pesadelo + Grupo*: três guardas acordados gritando · **G4** *Eclipsar + Sol + Área*: meio-dia vira noite sobre a praça pela cena inteira.
 
 Perguntas de vínculo: *O que você viu e queria não ter visto? · Você tem medo do escuro ou da luz?*
 
@@ -160,6 +171,7 @@ Perguntas de vínculo: *O que você viu e queria não ter visto? · Você tem me
 
 - **Símbolo**: uma porta aberta com uma flor de um lado e um osso do outro. **Cor**: verde-pálido.
 - **Primordial**: Velhena, a Porta Dupla. **Oposto**: Eternyr.
+- **Compromisso**: "Tudo passa, e alguém tem que ajudar a passar." Aceita perdas, cuida de quem está no fim, não teme a morte.
 - **Skill · Volta**: uma vez por sessão, ao marcar o último PV (mesmo que o corpo seja destruído), você volta **inteiro** (todos os PV limpos) no fim da próxima ação.
 - **Drawback · Sem Última Palavra**: você nunca escolhe Movimentos de Morte (se a Volta já foi usada, você só pode Apagar). Ao voltar, perde **todo** o Arcano; se não tinha nenhum, volta com **1 PV** só.
 - **Ressonância II · Meio Morto**: ao voltar, fica com metade do Arcano em vez de perder tudo.
@@ -174,7 +186,7 @@ Perguntas de vínculo: *O que você viu e queria não ter visto? · Você tem me
 | **5** | Mortal | Vital | Morto | Vivo | Pútrido | Pálido |
 | **6** | Silencioso | Subliminar | Oco | Etéreo | Febril | Solitário |
 
-Exemplos: **G1** murchar uma flor, ou fazer brotar uma · **G2** *Curar*: 1 PV (custa +1 Arcano) · **G3** *Drenar + Vida + Vários*: tira dos inimigos e fecha as feridas do grupo · **G4** *Reviver + Osso + Vários*: os mortos do campo de batalha levantam por uma cena.
+Exemplos: **G1** murchar uma flor, ou fazer brotar uma · **G2** *Curar*: 1 PV (custa +1 Arcano) · **G3** *Drenar + Vida + Grupo*: tira dos inimigos e fecha as feridas do grupo · **G4** *Reviver + Osso + Grupo*: os mortos do campo de batalha levantam por uma cena.
 
 Perguntas de vínculo: *Quem você não conseguiu salvar? · Você já morreu? O que viu do outro lado?*
 
@@ -186,6 +198,7 @@ Perguntas de vínculo: *Quem você não conseguiu salvar? · Você já morreu? O
 
 - **Símbolo**: uma espiral que vira labirinto. **Cor**: índigo.
 - **Primordial**: **o Trono Vazio** (era de Zahun antes dele virar humano). **Oposto**: Alvorum.
+- **Compromisso**: "Nem tudo que se pensa se diz." Calcula, guarda segredos, entende as pessoas antes de agir.
 - **Skill · Espiar**: gaste **2 Arcano** e role 2d12 + Sintonia contra a Dificuldade da pessoa: você lê o pensamento dela de agora (faça uma pergunta; a resposta é sincera). Uma vez por pessoa por cena.
 - **Drawback · Espelho**: se Espiar ou qualquer magia de Cognitium falhar contra alguém, ele lê os seus pensamentos e sabe o que você fez.
 - **Ressonância II · Leitura Leve**: Espiar custa 1; se falhar, você escolhe o que ele vê na sua mente.
@@ -200,7 +213,7 @@ Perguntas de vínculo: *Quem você não conseguiu salvar? · Você já morreu? O
 | **5** | Psíquico | Falso | Verdadeiro | Esquecido | Familiar | Confuso |
 | **6** | Convincente | Lógico | Absurdo | Hipnótico | Invisível | Nebuloso |
 
-Exemplos: **G1** lembrar exatamente onde deixou a chave · **G2** *Iludir + Cheiro*: o cão de guarda sente cheiro de carne do outro lado · **G3** *Esquecer + Vários*: três testemunhas esquecem seu rosto · **G4** *Labirinto + Mente + Amplo*: a guarnição inteira não consegue achar a saída do pátio.
+Exemplos: **G1** lembrar exatamente onde deixou a chave · **G2** *Iludir + Cheiro*: o cão de guarda sente cheiro de carne do outro lado · **G3** *Esquecer + Grupo*: três testemunhas esquecem seu rosto · **G4** *Labirinto + Mente + Área*: a guarnição inteira não consegue achar a saída do pátio.
 
 Perguntas de vínculo: *Qual memória você apagaria se pudesse? · Em que mentira sua você mesmo passou a acreditar?*
 
@@ -212,6 +225,7 @@ Perguntas de vínculo: *Qual memória você apagaria se pudesse? · Em que menti
 
 - **Símbolo**: um anel com um ponto escapando dele. **Cor**: azul-noite com branco.
 - **Primordial**: Ossyr, Aquele Que Já Foi. **Oposto**: Morbidyum.
+- **Compromisso**: "Cada coisa no seu tempo e no seu lugar." Paciente, organizado, detesta pressa e bagunça.
 - **Skill**: **nenhuma**. Eternyr é o único Valor que mexe no próprio jogo: holofote, ordem das ações, contagens e durações. Isso já é a vantagem.
 - **Drawback · Peso do Tempo**: toda magia de Eternyr tem **+2 na Dificuldade**. ❓ P-12
 - **Ressonância II · Passo**: uma vez por cena, teleporte até Perto como parte de qualquer ação, sem conjurar.
@@ -226,7 +240,7 @@ Perguntas de vínculo: *Qual memória você apagaria se pudesse? · Em que menti
 | **5** | Rápido | Lento | Imenso | Minúsculo | Distante | Próximo |
 | **6** | Antigo | Eterno | Efêmero | Ordenado | Reverso | Simultâneo |
 
-Exemplos: **G1** saber que horas são sem olhar · **G2** *Acelerar + Aliado*: um aliado age logo depois de você, antes do mestre · **G3** *Portal + Vários*: três pessoas atravessam para o outro lado do salão · **G4** *Parar + Tempo + Amplo*: tudo na praça para por 1 ação, menos você.
+Exemplos: **G1** saber que horas são sem olhar · **G2** *Acelerar + Aliado*: um aliado age logo depois de você, antes do mestre · **G3** *Portal + Grupo*: três pessoas atravessam para o outro lado do salão · **G4** *Parar + Tempo + Área*: tudo na praça para por 1 ação, menos você.
 
 Perguntas de vínculo: *Em que momento da sua vida você voltaria? · Onde é o único lugar em que você se sente no lugar certo?*
 
@@ -238,6 +252,7 @@ Perguntas de vínculo: *Em que momento da sua vida você voltaria? · Onde é o 
 
 - **Símbolo**: uma pegada dentro de uma folha. **Cor**: verde-musgo com âmbar.
 - **Primordial**: Tahwë, a Raiz que Anda. **Oposto**: Dominum.
+- **Compromisso**: "O corpo sabe antes da cabeça." Age por instinto, se adapta, confia mais em bicho que em gente.
 - **Skill · Forma Animal**: transforme-se em um animal. Vezes por sessão = seu **Patamar** ❓ P-13. Tamanho até o seu Grau máximo (G2 até gente, G3 cavalo, G4 urso grande, G5 fera colossal). Você mantém PV, Cansaço e Esquiva e ganha **2 Traços Animais** (+1 por Patamar acima do 1): voar, nadar, escalar, faro, garras (dano d10 × Proficiência), carapaça (+2 nos Limiares), veneno, corrida (move até Médio).
 - **Drawback · Sem Palavras**: em forma animal você não conjura. Magias já ativas continuam.
 - **Ressonância II · Meio Bicho**: em forma animal, pode conjurar Grau 1 e 2 de Primitivum.
@@ -252,7 +267,7 @@ Perguntas de vínculo: *Em que momento da sua vida você voltaria? · Onde é o 
 | **5** | Selvagem | Natural | Ancestral | Ágil | Camuflado | Venenoso |
 | **6** | Bestial | Primal | Resistente | Mutante | Espinhoso | Fértil |
 
-Exemplos: **G1** falar com um pássaro (só coisas de pássaro) · **G2** *Enraizar*: raízes prendem um inimigo · **G3** *Invocar + Espírito + Animal*: um espírito-lobo luta ao seu lado por 6 ações · **G4** *Crescer + Floresta + Amplo*: a mata engole a estrada e o acampamento inimigo.
+Exemplos: **G1** falar com um pássaro (só coisas de pássaro) · **G2** *Enraizar*: raízes prendem um inimigo · **G3** *Invocar + Espírito + Animal*: um espírito-lobo luta ao seu lado por 6 ações · **G4** *Crescer + Floresta + Área*: a mata engole a estrada e o acampamento inimigo.
 
 Perguntas de vínculo: *Que animal você seria sem pensar duas vezes? · Qual lugar selvagem é a sua casa?*
 

@@ -66,6 +66,21 @@ Cinco tamanhos. Escolha ou role 1d6. Os marcados com ✦ mexem na ficha dos joga
 5. Um semideus morre ou nasce.
 6. ✦ Um Valor inteiro some do mundo por uma sessão: ninguém conjura com ele.
 
+### Marés de Valor
+
+Eventos que mexem num **Valor específico**: fortalecem, enfraquecem, invertem, abrem um Reino. Custam como Tremor (**4**) se duram a cena, ou como Fissura (**7**) se duram a sessão. Escolha o Valor (ou role 1d10: 1 Conflitüo, 2 Sublimeyn, 3 Dominum, 4 Persona, 5 Alvorum, 6 Morbidyum, 7 Cognitium, 8 Eternyr, 9 Primitivum, 10 o mestre escolhe) e o efeito (1d8):
+
+| 1d8 | Maré | Efeito no Valor escolhido |
+|---|---|---|
+| 1 | **Maré Alta** | Dificuldade −2 e +1 dado de dano para magias dele (de jogadores **e** adversários) |
+| 2 | **Maré Baixa** | Dificuldade +2 e Grau máximo −1 para magias dele |
+| 3 | **Maré Cheia** | toda magia dele sobe um Grau de efeito de graça, mas gera +2 Cataclisma |
+| 4 | **Maré Virada** | o Valor passa a agir como o oposto (Dominum liberta, Morbidyum faz durar); cada magia dele rola uma Dificuldade a mais |
+| 5 | **Seca** | o Valor não funciona: nenhuma magia, Skill ou item dele |
+| 6 | **Maré Emprestada** | todos na cena podem usar 1 palavra desse Valor como se fosse sua |
+| 7 | **Chamado do Reino** | abre-se uma passagem para o Reino do Valor ([[08 Mundo e entidades]]); algo sai, ou alguém é puxado |
+| 8 | **Ressaca** | adversários desse Valor limpam 2 PV e perdem a fraqueza até o fim da maré |
+
 ## 2. Adversários
 
 Adversários rolam **d20 + Ataque** contra a Esquiva do jogador. A **Dificuldade** do adversário é o número que os jogadores precisam tirar para acertá-lo (com arma ou magia) e para resistir aos efeitos dele.
@@ -119,6 +134,28 @@ E marcas especiais, que o gerador sorteia por tipo:
 | **Divino** | ignora magias de Grau 1 e 2 |
 | **Com Familiar** | o familiar dá a ele voo, nado, faro, ou um segundo ponto de ataque |
 
+### Adversários experientes (maestria de Valores)
+
+Quanto mais experiente, mais Valores o adversário domina, e mais estranha fica a interação com a magia dos jogadores. O gerador usa esta régua:
+
+| Patamar | Valores | Marcas de maestria |
+|---|---|---|
+| 1 | 0–1 | nenhuma |
+| 2 | 1 | 0–1 |
+| 3 | 1–2 | 1 |
+| 4 | 2–3 | 1–2 (Chefes: 2–3) |
+
+| Marca de maestria | Efeito |
+|---|---|
+| **Sem Fraqueza** | domina o próprio oposto: não é fraco contra nada |
+| **Dupla Sozinho** | conjura juntando dois Valores seus como se fosse uma Magia em Dupla (Grau +1) |
+| **Mutável** | gasta 2 Cataclisma para trocar qual Valor está ativo, e com isso a resistência e a fraqueza |
+| **Ladrão de Valor** | reação: quando uma magia do Valor dele o atinge, gasta Cataclisma igual ao Grau e toma o controle dela |
+| **Eco** | toda vez que alguém usa o Valor dele na cena, o mestre ganha 1 Cataclisma |
+| **Maré Própria** | ao entrar em cena, dispara de graça uma Maré de Valor Alta no Valor dele |
+| **Ponto Cego** | tem uma fraqueza estranha que não é o oposto (uma palavra, um material, uma hora do dia) — o Curioso descobre |
+| **Senhor do Reino** | no Reino do seu Valor, limpa 1 PV sempre que o holofote volta para o mestre |
+
 ### Tipos de adversário (para o gerador)
 
 | Tipo | Papéis comuns | Valores e marcas típicas |
@@ -169,6 +206,27 @@ Perguntas para o mestre: 2
 | **Cemitério que Respira** | 2 · Hostil · Morbidyum | Toda cura custa +1 Arcano; quem cai aqui e não é recolhido levanta como fantasma | *Mãos do Chão* (2): Agilidade 14 ou Preso. *Os de Baixo* (3): um grupo de Lacaios mortos |
 | **Biblioteca que Esquece** | 2 · Exploração · Cognitium | Em cada Pausa aqui, cada jogador esquece uma Vivência até sair (1 Arcano para lembrar) | *Corredores* (2): o grupo se separa. *Livro Mentiroso* (4): todos acreditam numa mentira escrita (Inteligência 15 para duvidar) |
 | **Estação Parada** *(tecnomaga)* | 3 · Travessia · Eternyr | Perto do grande relógio, cada ação conta em dobro nas durações | *O Trem de Antes* (3): 3d10 em linha. *Preso no Instante* (5): um jogador fica 2 ações fora do tempo (não age, não é atingido) |
+
+### Cidades, povoados e variações
+
+Todo Terreno pode virar variação: troque o Valor, o Patamar ou o tipo e ajuste os números pela régua. Cidades e povoados são Terrenos **Sociais** na maior parte do tempo e **Hostis** quando a coisa aperta.
+
+| Terreno | Patamar · Tipo · Valor | Traço | Ações de Cataclisma |
+|---|---|---|---|
+| **Cidade-Muralha** | 1 · Social/Hostil · Conflitüo | Todo mundo anda armado; puxar arma não chama atenção, mas guardar a arma sim | *Toque de Recolher* (2): as ruas fecham, testes para andar pedem Carisma 13. *Milícia* (3): um grupo de Lacaios guardas |
+| **Porto de Vidro** | 2 · Social · Sublimeyn | Tudo é transparente: impossível se esconder atrás de parede | *Maré de Calor* (2): o vidro amolece, Agilidade 13 ou afunda até o joelho. *Estilhaço* (3): 2d10 em Área Perto |
+| **Mercado de Feras** | 1 · Social · Dominum | Barulho e cheiro: Desvantagem para ouvir e para rastrear | *Jaula Aberta* (3): uma fera escapa (Bruto). *Leilão* (1): alguém dá lance num jogador |
+| **Vila do Mesmo Dia** | 2 · Exploração · Eternyr | O dia se repete ao pôr do sol; só quem tem Eternyr ou uma âncora lembra | *Reinício* (4): a cena volta ao começo, os PNJs esquecem. *Déjà-vu* (1): um PNJ lembra de algo que não devia |
+| **Cidade Insone** | 2 · Social · Alvorum | Ninguém dorme; Pausas aqui só limpam metade | *Sonho Vazado* (2): o sonho de alguém aparece no meio da rua. *Olhos Abertos* (3): todo mundo vê o que o grupo faz |
+| **Aldeia da Curandeira** | 1 · Social · Morbidyum | Cura aqui não custa o Arcano extra | *Febre* (2): um PNJ adoece, contagem de 6 ações. *Enterro* (1): um morto que não devia ser enterrado |
+| **Rua dos Espelhos** | 2 · Exploração · Cognitium | Cada espelho mostra uma lembrança de quem passa | *Reflexo Solto* (3): o reflexo de um jogador sai e age (Padrão). *Memória Trocada* (2): dois jogadores trocam uma Vivência até a Pausa |
+| **Vila da Colheita** | 1 · Social · Primitivum | Na época de colheita, qualquer ajuda vira amizade | *Praga* (2): bichos atacam a plantação. *Festa* (1): um PNJ bêbado conta um segredo |
+| **Estrada do Crepúsculo** | 2 · Travessia · Alvorum | Metade é dia, metade é noite; atravessar a linha pede Sabedoria 13 | *Pálpebra Fecha* (3): escuridão total por 2 ações. *Viajante* (1): alguém que vem do outro lado |
+| **Mina Funda** | 1 · Travessia · Sublimeyn | Pouca luz, ar pesado: cada Pausa aqui limpa 1 Cansaço a menos | *Desabamento* (4): contagem de 4 ações. *Veio Vivo* (2): o minério se mexe e prende uma perna |
+| **Pátio de Duelos** *(Escola de Magia)* | 1 · Social · qualquer | Magia é permitida, ferir de verdade não: dano acima do Maior tira do duelo | *Professor Chegando* (2): quem conjurar Grau 3+ é pego. *Aposta* (1): a plateia escolhe um favorito |
+| **Torre dos Protetores** | 3 · Hostil · (nenhum) | **Zona de Anulação**: nada acima de Grau 2 funciona | *Alarme* (3): um grupo de Protetores. *Selar* (4): uma palavra de cada jogador selada até sair |
+
+Os **Reinos** (um por Valor, e os de Arcano e Cataclisma) são Terrenos de Patamar 3–4 e estão descritos em [[08 Mundo e entidades]].
 
 ## 4. Ambientes e dificuldades
 

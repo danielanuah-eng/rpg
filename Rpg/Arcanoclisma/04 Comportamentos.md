@@ -6,7 +6,12 @@
 
 - Na criação você escolhe **1 Comportamento**. Ganha o **Talento de Base** e o **Hábito** (o talento que custa 3 Arcano).
 - Ao subir de nível, um dos avanços pode ser **um Talento Hábil** (a partir do Patamar 2) ou **um Talento de Mestre** (a partir do Patamar 3, e só se já tiver um Hábil do mesmo Comportamento).
-- No Patamar 3 dá para **aprender um segundo Comportamento** (custa os dois avanços do nível): você ganha o Talento de Base e o Hábito dele, e depois pode pegar os Hábeis, **nunca os de Mestre**.
+- **Talentos de outros Comportamentos**: ao subir de nível, um avanço pode ser um talento de **qualquer outro Comportamento**, montando um personagem misturado aos poucos:
+  - **Talento de Base** de outro Comportamento: a partir do Patamar 2.
+  - **Hábito** de outro Comportamento: a partir do Patamar 2, se já tiver o Talento de Base dele.
+  - **Talento Hábil** de outro Comportamento: a partir do Patamar 3, se já tiver o Talento de Base dele.
+  - **Talentos de Mestre** só do seu Comportamento de origem.
+  - Números base (Esquiva, PV, Limiares, armaduras) sempre do Comportamento de origem. Ex.: um Curioso que pega *Ombro de Aríete* passa a usar armadura Pesada sem perder Esquiva.
 - Quase todo Comportamento tem um jeito de **ganhar Arcano** ou de **usar Cansaço para forçar um resultado**, como você pediu.
 
 ## Números base

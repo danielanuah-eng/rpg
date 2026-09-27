@@ -33,7 +33,9 @@ Objetivo: o jogo **funciona e é gostoso de jogar** antes de ter lore bonita. Na
 | 1.8 | Criação de personagem e níveis 1–10 | [[05 Personagem e níveis]] | 🟡 |
 | 1.9 | Armas, armaduras, catalisadores, familiares, relíquias, Ordynus | [[06 Itens e dinheiro]] | 🟡 |
 | 1.10 | Mestre: gastos de Cataclisma, Eventos, adversários, terrenos | [[07 Mestre - Cataclisma, adversários e terrenos]] | 🟡 |
-| 1.11 | Você responde as perguntas 🔴 de [[09 Perguntas pra decidir]] | — | ⬜ |
+| 1.11 | Você responde as perguntas 🔴 de [[09 Perguntas pra decidir]] | — | ✅ rodada 1 (27/09) |
+| 1.11b | Aplicar rodada 1: Palavras Básicas só verbo/substantivo, talentos de outros Comportamentos, Caderno dos Valores, itens mágicos de mecânica/Dificuldade/Valor, Marés de Valor, adversários experientes, mais terrenos | vários | ✅ |
+| 1.11c | Rodada 2 de perguntas (P-60 a P-63 e as abertas) | [[09 Perguntas pra decidir]] | ⬜ |
 | 1.12 | 4 personagens prontos (nível 1) para teste | — | ⬜ |
 | 1.13 | **Teste de mesa 1**: uma cena social + um combate + uma magia em dupla | — | ⬜ |
 | 1.14 | Ajustes do teste; **teste 2** no nível 5 (Patamar 3) | — | ⬜ |
@@ -58,11 +60,12 @@ Objetivo: o mundo explica as regras (por que par é Arcano, por que Eternyr é d
 |---|---|---|
 | 2.1 | Cosmogonia: Arcanoclisma, a Cisão, os Primordiais | 🟡 rascunho em [[08 Mundo e entidades]] |
 | 2.2 | Um Primordial e ao menos um semideus por Valor | 🟡 |
+| 2.2b | Reinos (9 de Valor + Arcano + Cataclisma), povos, culturas, estruturas — só lore de criação, sem história fechada | 🟡 rascunho em [[08 Mundo e entidades]] |
 | 2.3 | As Eras jogáveis (antes da magia, clássica, tecnomaga, escola de magia) com o ajuste de regra de cada uma | 🟡 |
 | 2.4 | Sociedade: como gente comum vê os magos, dinheiro (Ordynus), lugares | ⬜ |
 | 2.5 | Texto de ambientação de cada Valor e Comportamento (1 parágrafo + 3 frases de exemplo de jogo) | ⬜ |
 | 2.6 | Nomes definitivos (Cataclisma do Kairvahnn, criaturas, ordens) | ⬜ |
-| 2.7 | Aventura de introdução (1 sessão) usando só o que existe nas regras | ⬜ |
+| 2.7 | Kit de peças para campanha (lugares, entidades, artefatos) em vez de uma história pronta: cada mesa monta a sua | ⬜ |
 
 As perguntas de escritor estão no fim de [[08 Mundo e entidades]]. Responda como quiser, até em áudio transcrito; eu transformo em texto.
 

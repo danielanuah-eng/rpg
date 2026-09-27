@@ -159,18 +159,18 @@ O **Eixo** (o Valor sem oposto) combina com qualquer um sem penalidade.
 
 ## Palavras Básicas (todo mundo tem)
 
-36 palavras que qualquer personagem usa, para que ninguém fique sem ferramenta para atacar, se defender, roubar ou conversar. **Nunca são o núcleo** da magia. Tabela 6×6: role 1d6 para a linha e 1d6 para a coluna (d66).
+36 palavras **genéricas**, só **verbos e substantivos**, que qualquer personagem usa para não ficar sem ferramenta para atacar, se defender, roubar, explorar ou conversar. **Nunca são o núcleo** da magia. Não existem adjetivos básicos: o "como" da magia (forte, amplo, veloz) vem do **Grau**, das **Ampliações** ou das qualidades do seu Valor. Tabela 6×6: role 1d6 para a linha e 1d6 para a coluna (d66).
 
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
-| **1 · Combate** | Atacar | Defender | Empurrar | Derrubar | Segurar | Desviar |
-| **2 · Interação** | Falar | Ouvir | Chamar | Mostrar | Distrair | Sinalizar |
-| **3 · Furto e exploração** | Pegar | Esconder | Abrir | Trancar | Achar | Carregar |
-| **4 · Forma** | Projétil | Raio | Onda | Barreira | Cúpula | Toque |
-| **5 · Alvo** | Eu | Aliado | Inimigo | Objeto | Vários | Longe |
-| **6 · Modo** | Forte | Suave | Preciso | Amplo | Silencioso | Contínuo |
+| **1 · Verbos de combate** | Atacar | Defender | Empurrar | Derrubar | Segurar | Desviar |
+| **2 · Verbos de interação** | Falar | Ouvir | Chamar | Mostrar | Distrair | Seguir |
+| **3 · Verbos de furto e exploração** | Pegar | Esconder | Abrir | Fechar | Achar | Carregar |
+| **4 · Substantivos de forma** | Projétil | Raio | Onda | Barreira | Cúpula | Área |
+| **5 · Substantivos de coisa** | Corpo | Mão | Chão | Parede | Objeto | Arma |
+| **6 · Substantivos de gente** | Pessoa | Aliado | Inimigo | Grupo | Sinal | Rastro |
 
-Sem palavra de **Forma**, a magia sai do jeito mais simples: um alvo, no alcance do Grau.
+Sem palavra de forma, a magia sai do jeito mais simples: nos alvos e no alcance do Grau. **Quantos alvos** e **que tamanho** vêm sempre do Grau (tabela lá em cima); *Grupo* e *Área* só dizem que você quer usar esse máximo em vez de um alvo só.
 
 ## Exemplos de conjuração
 
@@ -179,7 +179,7 @@ Sem palavra de **Forma**, a magia sai do jeito mais simples: um alvo, no alcance
 - Grau 2 (uma pessoa, dano). Custo total 1 Arcano.
 - Rola 2d12 + 2 contra a maior entre 11 (Grau) e a Dificuldade do guarda, 12. Tira 7 e 8: total 17, acerta. Um par (+1 Arcano), um ímpar (+1 Cataclisma). Dano 1d10 + 2.
 
-**Tomé (Conflitüo) e Iara (Sublimeyn), nível 5** fazem uma dupla: **Explodir + Lâmina + Metal + Fundir + Vários**.
+**Tomé (Conflitüo) e Iara (Sublimeyn), nível 5** fazem uma dupla: **Explodir + Lâmina + Metal + Fundir + Grupo**.
 - 5 palavras, Grau do efeito 4 + 1 = **5 (Mítico)**: uma chuva de lâminas de metal derretido sobre até todos os inimigos à vista.
 - Custo: 3 (dupla) + palavras extras de cada um.
 - Tomé rola 4d6 + 4, Iara rola 4d6 + 4, somam contra 15 + 15 = 30. Skill do Conflitüo vale (+1 dado de dano). Se sair Ímpar, rolam 2 Dificuldades.
