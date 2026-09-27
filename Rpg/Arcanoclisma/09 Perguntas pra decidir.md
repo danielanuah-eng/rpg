@@ -333,3 +333,12 @@ Sua resposta: ✅ ok (aplicada em [[01 Regras centrais]]).
 
 **P-115** 🟢 **Cura criativa**: qualquer Valor pode curar se a relação convencer a mesa (custo normal, +1 Arcano por PV); Morbidyum cura sem precisar justificar.
 Sua resposta: ❌ não: **cura é só de Morbidyum** (vida, morte, passagem). Os outros Valores aliviam, não devolvem PV.
+
+## Rodada 15 — Jogada por Arcano ou por Cataclisma
+
+✅ Nos d12 (2d12, 3d12) o **maior dado** decide: par = jogada **por Arcano**; ímpar = jogada **por Cataclisma**, e o mestre pega a moldura. Nos outros conjuntos, a **maioria** decide. Cada dado continua dando 1 Arcano (par) ou 1 Cataclisma (ímpar). Aplicado em [[01 Regras centrais]].
+
+Efeito medido: o mestre passa a emoldurar em uns 46% das ações (antes 34%), perto do Daggerheart. O combate do kit (13 pontos, até o fim) caiu de 96% para 82% de vitória; com a moral, volta a ficar tranquilo. A escaramuça continua em 18–24 min.
+
+**P-116** 🟡 Empate na magia (4d6 ou 6d4 com metade pares e metade ímpares): coloquei **por Arcano**. Ok?
+Sua resposta:

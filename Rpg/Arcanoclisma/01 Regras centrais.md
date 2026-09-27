@@ -5,12 +5,12 @@
 ## O jogo em um minuto
 
 - Quando seu personagem tenta algo arriscado, você **descreve a ação com uma palavra de ação e um modo** ("roubar *furtivo*", "convencer *gentil*") e rola **2d12 + o atributo do modo** contra uma **Dificuldade**.
-- **Cada dado par te dá 1 Arcano. Cada dado ímpar dá 1 Cataclisma ao mestre.** Par é controle e fechamento; ímpar é o incompleto, que muda (ver [[08 Mundo e entidades]]).
+- **Cada dado par te dá 1 Arcano. Cada dado ímpar dá 1 Cataclisma ao mestre.** Par é controle e fechamento; ímpar é o incompleto, que muda (ver [[08 Mundo e entidades]]). Se o **maior d12 é ímpar**, a jogada é **por Cataclisma** e o mestre emoldura.
 - **Dois dados iguais = Crítico.**
 - Magia não usa atributo: você junta **palavras** do seu Valor, escolhe o **Grau** (o tamanho do feito) e rola um conjunto de dados que **sempre soma no máximo 24**: 2d12 → 3d8 → 4d6 → 6d4. Mais dados = mais confiável, mas mais Arcano *e* mais Cataclisma saindo da mesa.
 - Adversários rolam **d20**. O mestre gasta **Cataclisma** para fazer o mundo reagir.
 - Todo personagem tem **Laços** (relações, atitudes, sentimentos difíceis). Quando aperta, escolhe: **Atalho** (entregar Cataclisma ao mestre e burlar agora; repetido, aperta o Laço e o problema cresce) ou **Passo de Valor** (fazer o difícil que aproxima do que importa).
-- Não há turnos nem rodadas: o jogo anda em **Eventos** (uma situação completa: uma briga, uma conversa, uma fuga). Os jogadores agem; quando alguém falha ou tira Ímpar, **o mestre emoldura** a cena. Efeitos duram por **marcadores** (até a próxima falha, até o fim do Evento...), nunca por turno.
+- Não há turnos nem rodadas: o jogo anda em **Eventos** (uma situação completa: uma briga, uma conversa, uma fuga). Os jogadores agem; quando alguém falha ou faz uma jogada **por Cataclisma**, **o mestre emoldura** a cena. Efeitos duram por **marcadores** (até a próxima falha, até o fim do Evento...), nunca por turno.
 
 ---
 
@@ -60,20 +60,24 @@ Role 2d12, some o atributo (e bônus), compare com a Dificuldade. Igual ou maior
 
 **Duas ajudas, no máximo.** Cada rolagem aceita **no máximo duas ajudas** (Vivência, Ajudar, Atalho, Forçar, bônus de talento ou item). A **Relação** não conta: é o normal. Escolha as duas que mais fazem sentido na cena.
 
-### Leitura dos dados (paridade)
+### Leitura dos dados: por Arcano ou por Cataclisma
 
-Olhe os dois d12:
+Duas coisas acontecem em toda rolagem:
 
-| Os dois dados | Nome | Efeito |
+**1. Cada dado alimenta um lado.** Cada dado **par** dá **+1 Arcano** para você; cada dado **ímpar** dá **+1 Cataclisma** para o mestre. Sempre, em qualquer rolagem, com sucesso ou falha.
+
+**2. A jogada tem um dono.**
+
+- **Nos d12** (o 2d12 dos testes, o 3d12 do Tudo ou Nada): olhe o **maior dado**. Se ele é **par**, a jogada é **por Arcano**. Se é **ímpar**, a jogada é **por Cataclisma** e **o mestre pega a moldura** (emoldura).
+- **Nos outros conjuntos** (3d8, 4d6, 6d4 da magia): olhe **a maioria**. Mais pares, **por Arcano**; mais ímpares, **por Cataclisma** e o mestre emoldura. Empate: **por Arcano**.
+- **Dois d12 iguais = Crítico** (e, nos outros conjuntos, todos pares): sucesso automático, efeito crítico, e Arcano igual ao número do dado (máx. 6) no lugar do Arcano dos pares. O Crítico nunca passa a moldura ao mestre.
+
+| | Sucesso | Falha |
 |---|---|---|
-| iguais (qualquer número) | **Crítico** | sucesso automático + efeito crítico; ganha Arcano igual ao número do dado (**máx. 6**) — ❓ P-03 |
-| os dois pares | **Par** | +2 Arcano para você |
-| um par, um ímpar | **Equilíbrio** | +1 Arcano para você, +1 Cataclisma para o mestre |
-| os dois ímpares | **Ímpar** | +2 Cataclisma para o mestre; **o mestre emoldura** |
+| **Por Arcano** | conseguiu, e continua com vocês | não deu, e **o mestre emoldura** |
+| **Por Cataclisma** | conseguiu, mas o mundo se mexe: **o mestre emoldura** | não deu, e **o mestre emoldura** |
 
-Isso vale igual para sucesso e falha. Um sucesso Ímpar é "conseguiu, mas o mundo cobrou"; uma falha Par é "não deu, mas você aprendeu algo" (o Arcano).
-
-Chance de cada leitura no 2d12: Crítico 8%, Par 21%, Equilíbrio 50%, Ímpar 21%.
+Chances no 2d12: por Arcano 50%, por Cataclisma 42%, Crítico 8%.
 
 **Efeitos de crítico** (escolha um): ignorar um efeito negativo de magia; o melhor resultado possível do teste; dobrar o dano.
 
@@ -168,7 +172,7 @@ Não há iniciativa, turno nem rodada. A unidade do jogo é o **Evento**: uma si
 Dentro do Evento, os jogadores agem e o mestre **emoldura**: ele pega a cena, descreve o que mudou, faz o mundo e os adversários agirem, e devolve a vez.
 
 - Os jogadores decidem entre si quem age. Quem age faz **uma ação** (atacar, conjurar, ajudar, uma manobra) e pode se mover até **Perto** junto com ela.
-- **O mestre emoldura** quando um jogador **falha** ou tira **Ímpar** (dois ímpares). Na vez dele, o mestre ativa **1 adversário de graça** e **mais 1 por Cataclisma** gasto; depois devolve aos jogadores.
+- **O mestre emoldura** quando um jogador **falha** ou faz uma jogada **por Cataclisma** (o maior d12 ímpar; na magia, mais dados ímpares). Na vez dele, o mestre ativa **1 adversário de graça** e **mais 1 por Cataclisma** gasto; depois devolve aos jogadores.
 - **O mestre gasta Cataclisma quando quiser.** A qualquer momento ele pode **emoldurar** (1 Cataclisma), ativar adversários, disparar Abalos, cobrar Ameaças: sempre que for conveniente e bom para a narrativa. Não há ordem nem ritmo fixo.
 - E ele **age narrativamente sempre que fizer sentido**, sem gastar nada: o mundo reage, PNJs falam, o fogo espalha, a porta fecha. O Cataclisma é para quando a ação do mundo **mexe nos números** (ataques, condições, Abalos, Ameaças).
 - Dica: Cataclisma sobrando é sinal de mundo parado. Se a reserva está perto de 20, é hora de o mundo se mexer.

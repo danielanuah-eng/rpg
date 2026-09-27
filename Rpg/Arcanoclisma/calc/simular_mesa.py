@@ -174,8 +174,9 @@ def combate(M, n, extra=0, chefe=False, base=None, melhorias=0, moral=False):
             m = limiar(x, alvo.maior, alvo.grave)
             alvo.pv -= m
         seguidas += 1
-        if (not crit and (not ok or impares > pares)) or (seguidas >= 3 and cat >= 1):
-            if ok and not (impares > pares) and seguidas >= 3:
+        por_cat = (max(dados) % 2 == 1) if len(dados) == 2 else impares > pares
+        if (not crit and (not ok or por_cat)) or (seguidas >= 3 and cat >= 1):
+            if ok and not por_cat and seguidas >= 3:
                 cat -= 1
             seguidas = 0
             mestre()

@@ -145,7 +145,7 @@ def lutar(log=None):
                 log.append(f"{pj.nome} ({a},{b}{'+' if bonus>=0 else ''}{bonus}={total} vs {dif}) acerta {alvo.nome}: {txt}")
         elif log is not None:
             log.append(f"{pj.nome} ({a},{b}{'+' if bonus>=0 else ''}{bonus}={total} vs {dif}) erra {alvo.nome}")
-        if not crit and (not sucesso or pares == 0):
+        if not crit and (not sucesso or max(a, b) % 2 == 1):  # falha ou jogada por Cataclisma
             if log is not None:
                 log.append("→ o mestre emoldura")
             vez_do_mestre()
