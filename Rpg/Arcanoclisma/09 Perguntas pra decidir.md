@@ -227,3 +227,10 @@ Sua resposta:
 
 **P-90** 🟢 A Ficha 1 tem muita coisa (Palavras Básicas, itens, perguntas de criação). Prefere ela em **frente e verso** (frente: jogo; verso: criação, lore e relações), ou em uma página só mais apertada?
 Sua resposta:
+
+## Rodada 6 — Transcrito
+
+✅ O "livro" do jogo passa a se chamar **Transcrito**, para abrir mais formatos: PDF completo, páginas no site, leitura dentro do app, e Transcritos menores (jogador, mestre, um Valor, uma Era, bestiário). Ver [[00 Roteiro]], fase 5.
+
+**P-91** 🟢 Além desses, quer algum Transcrito específico (ex.: um Transcrito de aventura pronta, um de Reinos, um "Transcrito de bolso" de uma página para a mesa)?
+Sua resposta:
