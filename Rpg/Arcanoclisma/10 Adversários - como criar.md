@@ -11,6 +11,7 @@ SER:     1–2 substantivos        quem ele é
 AGIR:    2–4 verbos              o que ele faz (com determinador)
 PARECER: 1–3 adjetivos           como ele é (cada um é uma passiva)
 QUER:    uma frase               o que ele quer, e quando foge
+JEITO:   (Chefes) personalidade e modo de agir, em 2–3 frases
 LAÇO:    (opcional) uma palavra  o que o prende ou o conecta (narrativo)
 ```
 
@@ -50,7 +51,7 @@ A **Dificuldade** é o número que os jogadores tiram para acertar o adversário
 | **Conjurador** | Dif +1, PV −1, ataca com magia | 3–4 | 3 |
 | **Líder** | Dif +1, PV +1; ao agir, ativa um aliado de graça | 3 | 3 |
 | **Bruto** | Dif −1, Limiares ×1,3, PV +3, dano ×1,4 | 2–3 | 4 |
-| **Chefe** | Dif +2, Limiares ×1,5, **PV +5** (10 a 13, como os solos do Daggerheart); age 2 vezes quando ativado; um verbo pode ser **reação** | 4–5 | 5 |
+| **Chefe** | Dif +2, Limiares ×1,5, **PV +5** (10 a 13, como os solos do Daggerheart); age 2 vezes quando ativado; um verbo pode ser **reação**; tem **personalidade e modo de agir** descritos, que guiam o que ele faz | 4–5 | 5 |
 
 **Vida**: como no Daggerheart, os PV dos adversários ficam em números pequenos: Lacaio cai com um golpe, Padrão 5–8, Bruto 8–11, Chefe 10–13. Nenhuma melhoria passa de **12 PV** (exceto o Chefe base da Moldura 4).
 
@@ -66,7 +67,7 @@ Nem toda luta precisa ser grande. Escolha o tamanho pelo que a cena pede. Tempo 
 
 **+1 ponto com 3 jogadores, +2 com 2 jogadores** (mesa menor deixa o mesmo encontro mais fácil). −2 se houver 2 Chefes, +1 se usar adversários de Moldura abaixo.
 
-**Moral**: quando **metade dos pontos de adversários** caiu, o resto **foge, se rende ou negocia** (o campo *Quer* de cada um diz como). Feras encurraladas, Chefes e Deidades não têm moral: lutam até o fim ou até o *Quer* deles mudar. A moral é o que deixa a maior parte das lutas curta, e abre espaço para conversa no meio do combate.
+**Moral**: quando **metade dos pontos de adversários** caiu, o resto **foge, se rende ou negocia** (o campo *Quer* de cada um diz como). **Chefes não têm regra de comportamento**: o que um Chefe faz quando a luta vira (lutar até o fim, fugir, barganhar, trair os próprios aliados, mudar de lado) sai da **descrição da personalidade e do modo de agir** dele, e o mestre interpreta. Um Chefe é um ser contextual e subjetivo, não uma tabela. A moral é o que deixa a maior parte das lutas curta, e abre espaço para conversa no meio do combate.
 
 ### Dificuldade do encontro
 
