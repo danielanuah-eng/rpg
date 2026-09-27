@@ -13,7 +13,7 @@ Sistema de RPG próprio, inspirado em Daggerheart, Rune RPG, Ethmos e Triangle A
 3. [[01 Regras centrais]] — rolagem, Arcano, Cataclisma, Eventos e o emoldurar, dano, Cansaço, morte
 4. [[02 Magia]] — Graus, custos, Dificuldades, Magia em Dupla, Palavras Básicas
 5. [[03 Valores]] — os 9 Valores com as 36 palavras
-6. [[04 Comportamentos]] — os 10 Comportamentos e seus talentos
+6. [[04 Comportamentos]] — os 12 Comportamentos e seus talentos
 7. [[05 Personagem e níveis]] — criação, Vínculo, níveis 1–10
 8. [[06 Itens e dinheiro]] — armas, armaduras, catalisadores, relíquias, familiares, Ordynus
 9. [[07 Mestre - Cataclisma, abalos e terrenos]] — gastos do mestre, Abalos, Marés, Correntes, terrenos

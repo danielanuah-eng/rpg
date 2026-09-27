@@ -1,6 +1,6 @@
 # 04 — Comportamentos Hábeis
 
-> Rascunho v0 (revisado com os seus comentários). Comportamentos são **o jeito do personagem agir sem depender da magia**: corpo, furto, conversa, contatos, briga. Não dão magia. Definem Esquiva, PV e Limiares, e cada um tem **só dois talentos** (um Talento e um Hábito), cada um com versão **Básica** e **Superior**.
+> Rascunho v0 (revisado com os seus comentários; Explorador e Esperançoso criados na sessão de teste). Comportamentos são **o jeito do personagem agir sem depender da magia**: corpo, furto, conversa, contatos, briga. Não dão magia. Definem Esquiva, PV e Limiares, e cada um tem **só dois talentos** (um Talento e um Hábito), cada um com versão **Básica** e **Superior**.
 
 ## Como funcionam
 
@@ -26,6 +26,8 @@
 | **Curioso** | Inteligência, Sabedoria | 10 | 5 | 4 / 9 |
 | **Caótico** | Sabedoria | 11 | 6 | 5 / 10 |
 | **Enganador** | Carisma, Agilidade | 12 | 5 | 4 / 9 |
+| **Explorador** | Sabedoria, Percepção | 11 | 6 | 5 / 10 |
+| **Esperançoso** | Carisma, Sabedoria | 10 | 6 | 5 / 10 |
 
 Limiares finais = base + nível + armadura.
 
@@ -102,6 +104,20 @@ Nada deste Comportamento funciona em combate.
 |---|---|---|
 | **Talento · Mil Caras** | Vantagem para disfarçar, mentir e se esconder. Quando uma mentira sua funciona num PNJ, ganhe 1 Arcano (uma vez por PNJ por Evento). | Atacando de onde estava escondido, +1 dado de dano. Marque 1 Cansaço: um PNJ acredita numa mentira pequena sem você rolar. |
 | **Hábito · Sumir na Paisagem** | **Uma vez por sessão**: você se esconde no ambiente sem ninguém perceber, descrevendo como (atrás da procissão, dentro do barril, na fila do pão). | Pode usar duas vezes por sessão, e em vez de sumir pode **trocar de lugar** com alguém Perto sem ninguém perceber como. |
+
+## 11. Explorador — *aberto ao que vem, vive na estrada e sobrevive nela*
+
+| | Básico | Superior |
+|---|---|---|
+| **Talento · Estrada nos Pés** | Vantagem para **sobreviver e se orientar**: achar caminho, rastrear, achar abrigo, água e comida, ler o tempo. Em viagem, o grupo nunca se perde sem você perceber. | **Abertura**: uma vez por Evento, quando você tenta algo que o personagem **nunca fez antes** (a mesa julga), ganhe 1 Arcano, dê certo ou não. |
+| **Hábito · Outro Caminho** | Declare que você conhece ou acha **outro caminho**: uma saída, uma trilha, uma passagem, um atalho seguro. O mestre diz onde ele leva e o que ele cobra. | E, se houver uma Ameaça na cena, tire **2** do pote dela. |
+
+## 12. Esperançoso — *tem fé, às vezes inocente, sempre segue em frente*
+
+| | Básico | Superior |
+|---|---|---|
+| **Talento · Seguir em Frente** | Uma vez por Evento, quando você falha, a sua próxima rolagem tem **+2**: a falha não te derruba. PNJs neutros tendem a confiar em você: à primeira vista, ninguém te vê como ameaça. | Quando você dá um **Passo de Valor**, um aliado que te vê **limpa 1 Cansaço**: esperança pega. |
+| **Hábito · Acreditar** | Diga em voz alta no que você acredita nesta cena. Até o fim do Evento, **uma vez**, você ou um aliado transforma uma jogada **por Cataclisma** em **por Arcano**: o resultado fica igual, mas o mestre não pega a moldura. | Duas vezes no Evento. |
 
 ---
 
