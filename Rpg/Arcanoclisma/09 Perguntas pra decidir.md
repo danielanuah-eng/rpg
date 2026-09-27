@@ -220,3 +220,10 @@ Sua resposta:
 
 **P-83** 🟡 Adversários também podem ter Atalho e Laço (ex.: um vilão preso no próprio Laço, que os jogadores podem ajudar a quebrar ou usar contra ele)?
 Sua resposta:
+
+## Rodada 5 — Fichas
+
+✅ Duas fichas: **Ficha 1 — Personagem** (nome, itens, Palavras Básicas, criação, lore, relações...) igual para todos, e **Ficha 2 — Valor**, personalizada para cada um dos 9 Valores. Descrição em [[05 Personagem e níveis]].
+
+**P-90** 🟢 A Ficha 1 tem muita coisa (Palavras Básicas, itens, perguntas de criação). Prefere ela em **frente e verso** (frente: jogo; verso: criação, lore e relações), ou em uma página só mais apertada?
+Sua resposta:

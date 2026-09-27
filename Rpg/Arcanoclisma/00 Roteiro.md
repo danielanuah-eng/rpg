@@ -117,10 +117,10 @@ Entregas, na mesma família do Peso do Céu:
    - **Ficha digital**: tudo que o personagem liberou aparece nela; contadores de Arcano/Cansaço/PV/Proteção clicáveis; montador de magia (escolhe palavras → mostra Grau, custo, dados, Dificuldade, e rola os dados contando pares/ímpares); loja em Ordynus; subir de nível guiado; guardar/importar/exportar.
    - **Escudo do mestre digital**: contador de Cataclisma com Transbordo, tabela de Eventos, holofote.
    - **Geradores**: encontro (balanceado pela Moldura e nº de jogadores), adversário com imagem, terreno, tesouro/item, relíquia com palavra, PNJ, nome, gancho, Evento de Cataclisma, "magia aleatória" (d66 nas tabelas).
-2. **Ficha de papel** enfeitada para imprimir:
-   - Folha 1 (personagem): parte **pequena** para Comportamento, atributos, PV/Cansaço/Proteção, armas.
-   - **Uma folha por Valor**: parte **grande** para magia — tabela 6×6 das 36 palavras, Skill, Drawback, espaços em branco para Palavras Estrangeiras, tabela de Graus e custos, registro de magias favoritas.
-   - Folha do Vínculo (as perguntas de criação) e folha de Familiar.
+2. **Ficha de papel** enfeitada para imprimir, em **duas folhas** ([[05 Personagem e níveis]]):
+   - **Ficha 1 — Personagem** (igual para todos): nome, skin, Comportamento, atributos, Palavras Básicas, Arcano, Laço e Passos, Vivências, itens, Ordynus, perguntas de criação e relações da party.
+   - **Ficha 2 — Valor** (9 versões, uma por Valor, com arte própria): símbolo, Compromisso, Skill, Drawback, Ressonâncias, as 36 palavras, 4 espaços extras, Canal, tabela de Graus e magias favoritas.
+   - Opcional: folha de Familiar/montaria.
 3. **Livro** (PDF) com capa e **escudo do mestre** (PDF).
 4. **Site** em um **Netlify novo** (separado do Peso do Céu): página de apresentação com capa, documentos para baixar, botão para instalar o app, galeria de imagens.
-5. `calc/conferir.py`: confere antes de publicar que todo item/adversário está dentro da faixa do sua Moldura (o "balanceador" que o gerador usa).
+5. `calc/conferir.py`: confere antes de publicar que todo item/adversário está dentro da faixa da sua Moldura (o "balanceador" que o gerador usa).

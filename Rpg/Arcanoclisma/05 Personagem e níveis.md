@@ -97,14 +97,35 @@ Este bloco não dá bônus nem é cobrado pelo mestre. Serve para a mesa conhece
 | **Talento avulso** de outro Comportamento, versão Básica | Moldura 2+ |
 | **Ressonância** do seu Valor (II na Moldura 2+, III na Moldura 3+) | em ordem |
 
-## A ficha
+## A ficha: duas folhas
 
-**Uma ficha para cada Valor.** Todas têm o mesmo desenho; muda a tabela de palavras, o símbolo, a cor, a Skill e o Drawback, conforme o Valor escolhido.
+### Ficha 1 — Personagem (igual para todo mundo)
 
-**Papel**:
-- **Ficha do Valor** (a maior parte, onde fica a magia): símbolo e cor do Valor, a tabela 6×6 das 36 palavras, **4 espaços extras** para Palavras Estrangeiras (preenchidos ao longo dos níveis), Skill, Drawback, Ressonâncias com caixinha, Compromisso, Canal, a tabela de Graus resumida (dados, custo, Dificuldade, dano, marcador de duração), a tabela de Palavras Básicas (verbos, modos, formas) e linhas de "magias que eu gosto de usar".
-- **Parte do Comportamento** (pequena): nome, skin, atributos, Esquiva, Limiares, PV, Cansaço, Proteção, Arcano, **Laço (5 casas) e Passos (3 casas)** com o Atalho de costume e o que o personagem valoriza escritos do lado, armas, armadura, Vivências, **caixas de talento** (Talento e Hábito, com marcação Básico/Superior, e espaços vazios para talentos avulsos), Ordynus, relações da party.
-- **Folha das perguntas** (Vínculo, coração e jogador), com espaço para reescrever.
-- **Folha de Familiar** (opcional).
+Tudo o que não é a magia do Valor:
+- **Identidade**: nome, skin (aparência, com espaço para desenho ou foto), Era, conceito numa frase, jogador.
+- **Comportamento**: nome, Esquiva, Limiares (Maior/Grave), PV, Cansaço, Proteção, armaduras permitidas, **caixas de talento** (Talento e Hábito com marcação Básico/Superior, e espaços vazios para talentos avulsos).
+- **Atributos** (os 6, com casinha de marca de avanço).
+- **Palavras Básicas**: a tabela de verbos de ação, a de modos (com o atributo de cada coluna) e a de formas, para o jogador montar "verbo + modo" olhando a ficha.
+- **Arcano**, **Laço** (5 casas) e **Passos** (3 casas), com o **Atalho de costume** e **o que o personagem valoriza** escritos do lado.
+- **Vivências**.
+- **Itens**: armas (atributo, alcance, dano, traços), armadura, montaria, familiar, itens mágicos, consumíveis, materiais, **Ordynus**.
+- **Criação e lore**: as perguntas de criação (Vínculo, coração, você e o personagem) com espaço para reescrever, e as **relações da party** da sessão zero.
+- **Nível e Moldura**, com a tabela resumida do que cada Moldura libera.
 
-**App**: tudo que o personagem liberou aparece nela (talentos, Ressonâncias, Palavras Estrangeiras, itens, Vivências, relações, perguntas), com os contadores clicáveis e o montador de magia.
+### Ficha 2 — Valor (personalizada)
+
+Uma para cada um dos 9 Valores: **o desenho muda inteiro** conforme o Valor (cor, símbolo, ornamentos, fundo), e é onde mora a magia:
+- **Símbolo, cor e nome** do Valor, com o Primordial e o oposto.
+- **Compromisso** do Valor.
+- **Skill** e **Drawback**.
+- **Ressonâncias** II e III com caixinha.
+- A **tabela 6×6 das 36 palavras** do Valor (verbos, substantivos, qualidades), sorteável por d66.
+- **4 espaços extras** para Palavras Estrangeiras, preenchidos ao longo dos níveis.
+- **Canal** (foco, arma, livro...) com o benefício e a fraqueza, e a Sintonia.
+- **Tabela de Graus** resumida: dados, custo, Dificuldade, dano, alvos, alcance, marcador de duração.
+- Lembretes da magia: leitura dos dados (Crítico, Magia Ímpar, Desequilíbrio), Forçar, Ampliar.
+- **Magias que eu gosto de usar**: linhas para anotar combinações de palavras e a relação do personagem com cada uma.
+
+**Opcional**: folha de Familiar ou montaria.
+
+**App**: as mesmas duas partes em abas (Personagem e Valor, com as cores do Valor), com tudo que o personagem liberou, contadores clicáveis e o montador de magia.
