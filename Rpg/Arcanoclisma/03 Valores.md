@@ -119,7 +119,7 @@ Perguntas de vínculo: *A quem você já obedeceu e jurou nunca mais? · Você a
 - **Primordial**: Zahun, o Deus Humano. **Oposto**: Conflitüo.
 - **Compromisso**: "Gente vem antes de tudo." Se envolve, sente em voz alta, não abandona quem pediu ajuda.
 - **Skill · Toque Humano**: magias que afetam **pessoas** (corpo, alma ou emoção) têm **−2 na Dificuldade** do alvo.
-- **Drawback · Drama**: se a magia falhar, o mestre descreve o resultado mais inútil ou mais cômico. Se você reclamar, ele ganha Cataclisma igual ao Grau.
+- **Drawback · Tropeço**: se a magia falhar, ela ainda acontece de algum jeito, mas com um resultado **inútil ou que atrapalha** (o mestre descreve).
 - **Ressonância II · Empatia**: role uma Dificuldade a menos quando a magia afetar pessoas.
 - **Ressonância III · Carne Moldável**: mudar o próprio corpo (rosto, músculos, guelras, garras) é Grau 1 para você e dura até você desfazer.
 
@@ -280,7 +280,7 @@ Perguntas de vínculo: *Que animal você seria sem pensar duas vezes? · Qual lu
 | Conflitüo | Persona | +1 dado de dano ou +2 em combate | fora de combate, magia custa +2 Arcano |
 | Sublimeyn | Eixo | Mistura (2 elementos numa palavra) | +1 Arcano por passo de estado |
 | Dominum | Primitivum | reação | falhou, não repete no alvo |
-| Persona | Conflitüo | −2 Dificuldade em pessoas | falha vira comédia |
+| Persona | Conflitüo | −2 Dificuldade em pessoas | falha sai inútil ou atrapalha |
 | Alvorum | Cognitium | vê através de tudo (2 Arcano) | sempre chamativo |
 | Morbidyum | Eternyr | volta da morte 1×/sessão | perde o Arcano, sem Movimentos de Morte |
 | Cognitium | Alvorum | ler pensamento (2 Arcano) | se falhar, leem você |

@@ -60,7 +60,7 @@
 - **Esquiva** 12 · **PV** 5 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 6 / 12 · **Proteção** 3 (Leve)
 - **Adaga**: Agilidade, Toque, d8+1. **Magia de dano** (G2): 1d10 + 2.
 - **Talento — Mil Caras**: Vantagem para disfarçar, mentir e se esconder; mentira que funciona num PNJ = +1 Arcano. **Hábito — Sumir na Paisagem** (3, uma vez por sessão): se esconde no ambiente sem ninguém perceber, descrevendo como.
-- **Skill — Toque Humano**: −2 na Dificuldade de magias em pessoas (depois de escolher qual Dificuldade vale: contra a Domadora, 13 − 2 = 11). **Drawback — Drama**: se falhar, o mestre narra o resultado mais cômico.
+- **Skill — Toque Humano**: −2 na Dificuldade de magias em pessoas (depois de escolher qual Dificuldade vale: contra a Domadora, 13 − 2 = 11). **Drawback — Tropeço**: se falhar, a magia sai inútil ou atrapalha.
 - **Compromisso**: "Gente vem antes de tudo."
 - **Laços**: *A trupe que eu abandonei na estrada* · *Mentir antes que me perguntem* (Atalho de costume) · *O medo de que ninguém goste de quem eu sou sem máscara*
 - **Vivências**: Atriz de trupe · Conheço todo tipo de gente de feira

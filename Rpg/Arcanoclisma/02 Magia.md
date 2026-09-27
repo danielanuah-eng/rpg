@@ -166,17 +166,17 @@ Depois de rolar, antes do mestre dizer o resultado: marque Cansaço até o limit
 
 ## Canal: como você exerce a magia
 
-Todo personagem escolhe um Canal na criação. **Sintonia = Moldura + 1** para todos; o Canal dá um jeito próprio de usar a magia e uma fraqueza que, quando acontece, **derruba a Sintonia para a Moldura** (ou tem o efeito escrito).
+O Canal é **a forma como o personagem se relaciona com a magia**, não uma peça que pode ser tirada dele. **Qualquer item pode ser um Canal**, e a magia **continua funcionando na ausência dele**: se o personagem perde as luvas, o anel ou o caderno, ele conjura do mesmo jeito (e pode adotar outro objeto depois). **Sintonia = Moldura + 1** para todos. Cada Canal só muda o **jeito** e dá um benefício:
 
-| Canal | Como ajuda | Fraqueza |
+| Canal | Como é | Benefício |
 |---|---|---|
-| **Foco arcano** (anel, cajado, orbe, relógio) | **potencializa**: +1 no dano e na cura de magia | sem o foco na mão, Sintonia cai |
-| **Arma** (a magia sai pela lâmina, pela flecha, pelo tiro) | **letalidade**: nas magias de ataque feitas pela arma, **os traços da arma valem** (Precisa, Cruel, Atordoante, Alcance...) | magias que não são ataque: Sintonia cai |
-| **Transcrito** (grimório, caderno, pergaminhos: a magia escrita antes de ser dita) | **segurança**: se a ação anterior foi preparar (ou fora de pressa), a Dificuldade do Grau cai 2 e você rola **uma Dificuldade (d20) a menos** | mais lento: sem preparar, nenhum bônus; sem o Transcrito, Sintonia cai |
-| **Corpo** (gesto, dança, sangue, tatuagem) | nunca é desarmado | amarrado ou agarrado, não conjura Grau 2+ |
-| **Voz** (canto, grito, reza) | conjura com as mãos ocupadas; magias em quem te ouve têm +1 faixa de alcance | silenciado, não conjura |
-| **Familiar** (bicho ou espírito ligado a você) | a magia pode sair dele, até Médio de você | se ele cair, Grau máximo −1 até o Pouso |
-| **Marca** (um sinal na pele ou na alma) | não pode ser tirado de você | quem entende de magia sabe o que você é ao ver a marca |
+| **Foco arcano** | um objeto que concentra a magia: anel, cajado, orbe, relógio, luvas | **potencializa**: +1 no dano e na cura de magia |
+| **Arma** | a magia sai pela lâmina, pela flecha, pelo tiro | **letalidade**: nas magias de ataque feitas pela arma, **os traços da arma valem** (Precisa, Cruel, Atordoante, Alcance...) |
+| **Transcrito** | grimório, caderno, pergaminhos: a magia escrita antes de ser dita | **segurança**: se a ação anterior foi preparar (ou fora de pressa), a Dificuldade cai 2 e você rola **uma Dificuldade (d20) a menos** |
+| **Corpo** | gesto, dança, sangue, tatuagem | conjura em qualquer postura, mesmo agarrado ou caído |
+| **Voz** | canto, grito, reza | conjura com as mãos ocupadas; magias em quem te ouve têm +1 faixa de alcance |
+| **Familiar** | um bicho ou espírito ligado a você | a magia pode sair dele, até Médio de você |
+| **Marca** | um sinal na pele ou na alma | a magia deixa um rastro que só aliados reconhecem (combinem o sinal) |
 
 ## Magia em Dupla
 

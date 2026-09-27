@@ -109,15 +109,15 @@ Nada deste Comportamento funciona em combate.
 
 | | Básico | Superior |
 |---|---|---|
-| **Talento · Estrada nos Pés** | Vantagem para **sobreviver e se orientar**: achar caminho, rastrear, achar abrigo, água e comida, ler o tempo. Em viagem, o grupo nunca se perde sem você perceber. | **Abertura**: uma vez por Evento, quando você tenta algo que o personagem **nunca fez antes** (a mesa julga), ganhe 1 Arcano, dê certo ou não. |
-| **Hábito · Outro Caminho** | Declare que você conhece ou acha **outro caminho**: uma saída, uma trilha, uma passagem, um atalho seguro. O mestre diz onde ele leva e o que ele cobra. | E, se houver uma Ameaça na cena, tire **2** do pote dela. |
+| **Talento · Estrada nos Pés** | Vantagem para **sobreviver e se orientar**: achar caminho, rastrear, achar abrigo, água e comida, ler o tempo. Em viagem, o grupo nunca se perde sem você perceber. | **Abertura**: **uma vez por sessão**, quando você tenta algo que o personagem **nunca fez antes** (a mesa julga), ganhe 1 Arcano, dê certo ou não. |
+| **Hábito · Outro Caminho** | **Uma vez por sessão**: declare que você conhece ou acha **outro caminho**: uma saída, uma trilha, uma passagem, um atalho seguro. O mestre diz onde ele leva e o que ele cobra. | E, se houver uma Ameaça na cena, tire **2** do pote dela. |
 
 ## 12. Esperançoso — *tem fé, às vezes inocente, sempre segue em frente*
 
 | | Básico | Superior |
 |---|---|---|
 | **Talento · Seguir em Frente** | Uma vez por Evento, quando você falha, a sua próxima rolagem tem **+2**: a falha não te derruba. PNJs neutros tendem a confiar em você: à primeira vista, ninguém te vê como ameaça. | Quando você dá um **Passo de Valor**, um aliado que te vê **limpa 1 Cansaço**: esperança pega. |
-| **Hábito · Acreditar** | Diga em voz alta no que você acredita nesta cena. Até o fim do Evento, **uma vez**, você ou um aliado transforma uma jogada **por Cataclisma** em **por Arcano**: o resultado fica igual, mas o mestre não pega a moldura. | Duas vezes no Evento. |
+| **Hábito · Acreditar** | **Uma vez por sessão**: diga em voz alta no que você acredita nesta cena. Até o fim do Evento, **uma vez**, você ou um aliado transforma uma jogada **por Cataclisma** em **por Arcano**: o resultado fica igual, mas o mestre não pega a moldura. | Duas vezes por sessão. |
 
 ---
 

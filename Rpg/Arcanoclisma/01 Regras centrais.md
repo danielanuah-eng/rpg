@@ -269,6 +269,6 @@ Quase tudo que cresce com o nível passa pela **Moldura**:
 | 5–7 | 3 | 4 | 4 | +4 | 3 |
 | 8–10 | 4 | 5 | 5 | +5 | 4 |
 
-Regra fácil de lembrar: **Grau máximo, Palavras e Sintonia = Moldura + 1**. (Se a fraqueza do seu Canal acontecer, a Sintonia cai para a Moldura.)
+Regra fácil de lembrar: **Grau máximo, Palavras e Sintonia = Moldura + 1**.
 
 **Sintonia** é o bônus que se soma aos dados de magia (e ao dano de magia). Atributo não entra em magia.
