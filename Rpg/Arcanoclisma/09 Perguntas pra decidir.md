@@ -251,3 +251,14 @@ Sua resposta: ✅ serve; Atordoante agora **abala grandes defesas** (−2 nos Li
 
 **P-95** 🟡 **Povos infundidos**: outros povos existem, não usam magia porque são feitos dela; o jogador pode escolher ser de um deles, só como escolha narrativa, com as mesmas regras. Humanos também adquiriram a magia convivendo com eles. Usei os povos dos Reinos como os primeiros exemplos. Quer criar povos do mundo comum também (quantos, e ligados a quais Valores)?
 Sua resposta: ✅ por enquanto não criar mais povos. Todos os povos vivem em **Contacto**, o reino terreno; cada Valor tem seu **plano** com seres disformes, feéricos, entidades, projetos e deuses novos e antigos sem nome ou esquecidos.
+
+## Rodada 9 — Três versões curtas do Laço
+
+Em todas: o **Atalho** continua (2 ou 4 Cataclisma), o **Passo de Valor** continua (aceitar o desconforto → +1 Arcano, dê certo ou não) e as **perguntas de fim de sessão** continuam.
+
+- **A · Laços como palavras** (sem trilha): 3 Laços escritos na ficha como palavras — uma **pessoa**, um **valor**, um **Atalho** (ex.: *Irmã*, *Justiça*, *Piada*). Passo de Valor é agir por um Laço de conexão; Atalho é usar o Laço de Atalho. A palavra de Laço também justifica o **+1 de Relação** na magia. No fim do arco, o jogador pode reescrever um Laço (o personagem mudou).
+- **B · Laço solto ou apertado** (uma caixinha): dois Atalhos na mesma sessão sem nenhum Passo → o Laço **aperta** (Atalhos rendem metade). Um Passo **solta**.
+- **C · Laço de dois lados** (uma linha de 5 casas com o meio marcado): Atalho move o marcador para **Preso**, Passo para **Ligado**. No fim Preso, a situação de sempre volta; no fim Ligado, ganha uma Marca de Valor e volta ao meio.
+
+**P-96** 🔴 Qual versão (ou mistura)? Recomendo **A**, com a caixinha da **B** se quiser pressão mecânica.
+Sua resposta:
