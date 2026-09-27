@@ -45,6 +45,10 @@
 - **Ajuda**: pode dar Vantagem a Castian (o jogador paga o Arcano) e entrar em **Magia em Dupla**.
 - Laço (narrativo): *O sino é tudo que sobrou do marido.*
 
+**Relações da party** (sessão zero):
+- A Iolanda segue o Castian para ajudar **como a um filho**, para guiá-lo.
+- Na viagem, ela pegou um animal, matou e assou **com as mãos nuas** (Sublimeyn: esquentou a carne com o próprio toque). O Castian se assustou e riu para disfarçar.
+
 ## Registro da sessão
 
-(preenchido durante o jogo)
+- **Evento 1 — O cais de Vau-Grande.** Ameaça da Cheia: pote de 8, em 0. Cataclisma do mestre: 4. Arcano do Castian: 3. O Capitão Otávio, da Guilda do Rio, acusa a Iolanda de ter calado o sino.
