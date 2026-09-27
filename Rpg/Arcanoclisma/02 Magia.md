@@ -14,6 +14,8 @@ As palavras das tabelas **não são reais**. Ninguém no mundo "tem a palavra Fo
 
 Por isso a mesma palavra funciona de jeitos diferentes em personagens diferentes. **Lâmina**, para um Conflitüo que foi soldado, é a espada que nunca largou; para outro, que perdeu alguém numa briga, é o corte que ele sabe fazer parar. Palavras podem ser complexas, arbitrárias, subjetivas. O que torna a magia possível é o **envolvimento** do personagem com o seu Valor, e o que o jogador **descreve** na hora de usar.
 
+Ser um **Comprometido eficiente e adaptativo** é olhar e usar as palavras **de acordo com o que faz sentido** na hora: como um **espectador que manipula**, não como quem é manipulado por elas.
+
 ### Relação (+1)
 
 Ao conjurar, o jogador **pode** dizer em uma frase por que aquela palavra, para aquele personagem, faz aquilo acontecer. É opcional e só narrativo: ninguém é punido por não dizer.
@@ -40,7 +42,7 @@ Ela só vira rolagem quando é o **meio de uma ação** que já seria um teste: 
 
 ## Fusão: quando o personagem vira a palavra
 
-Às vezes o personagem para de **ter** a palavra e passa a **ser** a palavra: "eu corto" vira "eu sou a Lâmina". Aí a palavra está **fundida**. Na ficha do Valor, faça um **círculo** em volta dela.
+Às vezes o personagem para de **ter** a palavra e passa a **ser** a palavra: "eu corto" vira "eu sou a Lâmina". Aí a palavra está **fundida**: em vez de o personagem manipular a palavra, **a palavra manipula o personagem**. Na ficha do Valor, faça um **círculo** em volta dela.
 
 **Quando funde**: quando o jogador usa **sempre a mesma palavra**, repetidas vezes — como núcleo em magia atrás de magia, como resposta para tudo, ou como o Atalho de sempre. O mestre aponta, a mesa conversa, o jogador circula.
 
@@ -51,7 +53,7 @@ Ela só vira rolagem quando é o **meio de uma ação** que já seria um teste: 
 
 **Vira Laço**: uma palavra que fica fundida por muito tempo **vira um Laço novo**. O jogador escreve a descrição da relação do personagem com ela ("Ser a Lâmina: resolver tudo cortando").
 
-**Desfusão é ação, não percepção.** Perceber a fusão ajuda (e dá Arcano, ver Olhar para os Laços em [[01 Regras centrais]]), mas a palavra só se desfunde quando o personagem **age diferente com ela**: um **Passo de Valor** usando a palavra num sentido novo, não literal ("Lâmina: separar a briga", "Lâmina: cortar o silêncio"), ou agindo por um Laço de conexão **contra** o puxão da palavra. Dê certo ou não, a palavra se desfunde. Apague o círculo e escreva ao lado dela um **sentido** seu ("Lâmina: o que protege"), que daí em diante justifica o +1 de Relação.
+**Desfusão é ação, não percepção.** Perceber a fusão ajuda (e dá Arcano, ver Olhar para os Laços em [[01 Regras centrais]]), mas a palavra só se desfunde quando o personagem **age diferente com ela**: um **Passo de Valor** usando a palavra num sentido novo, não literal ("Lâmina: separar a briga", "Lâmina: cortar o silêncio"), ou agindo por um Laço de conexão **contra** o puxão da palavra. Dê certo ou não, a palavra se desfunde. O significado antigo **não some** (o personagem ainda pode cortar com a Lâmina), mas volta a ser uma escolha, não uma ordem. Apague o círculo e escreva ao lado dela um **sentido** seu ("Lâmina: o que protege"), que daí em diante justifica o +1 de Relação.
 
 ## Os Graus (níveis de poder)
 

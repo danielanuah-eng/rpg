@@ -135,7 +135,7 @@ Se o personagem pega **dois Atalhos na mesma sessão sem dar nenhum Passo**, o L
 
 Laço apertado **não tira bônus nem corta números**: ele **traz mais problema a longo prazo**. O mestre planta uma **consequência** ligada ao Laço — a relação esfria, a dívida cresce, o boato corre, alguém se machuca, o sentimento ganha corpo — e **toda sessão que termina com o Laço apertado, essa consequência cresce um passo** no mundo. É uma Corrente pessoal ([[07 Mestre - Cataclisma, abalos e terrenos]]), **montada junto**: o jogador diz como o Laço é por dentro e o que ele evita; o mestre traz as consequências; os outros jogadores podem sugerir caras para elas.
 
-**Soltar**: um **Passo de Valor que encara aquele Laço** solta a caixinha. O que já cresceu continua no mundo e precisa ser resolvido, mas **para de crescer**. Ao soltar, o jogador pode **reescrever o Laço**: o personagem mudou.
+**Soltar**: um **Passo de Valor que encara aquele Laço** solta a caixinha. O que já cresceu continua no mundo e precisa ser resolvido, mas **para de crescer**. O Laço **não é apagado**: a irmã, a vergonha, a piada continuam lá. Ao soltar, o jogador pode **reescrever o Laço** para dizer o que mudou na relação do personagem com aquilo — não o fato, mas o poder que ele tem.
 
 ### Olhar para os Laços
 
@@ -146,6 +146,8 @@ Laço apertado **não tira bônus nem corta números**: ele **traz mais problema
   3. Você notou o que outro personagem sentiu ou fez e participou disso?
 
 ### A ideia por trás
+
+> **Significados não somem. O sofrimento e o desconforto não somem. Mas eles têm o poder que damos a eles.**
 
 O desconforto não some quando é evitado: **muda de lugar**. No Atalho, o mundo carrega por você e cobra depois, com juros. No Passo, você carrega agora e muda com isso. Por isso quem usa magia se chama **Comprometido**. (Palavras que viram Laço: ver **Fusão** em [[02 Magia]].)
 
