@@ -181,7 +181,7 @@ Sua resposta:
 
 Aplicado: Patamar virou **Moldura**; teste por **verbo + modo** (o modo escolhe o atributo); Palavras Básicas com modos de volta, **grátis** e fora do limite; **Cenários** e **marcadores** no lugar de turnos; a palavra como **relação** do personagem; magia comum no mundo e **Canais** (foco, arma, livro...); Comportamentos com **2 talentos** (Básico/Superior) e talentos avulsos; perguntas de criação novas e **sessão zero**; **Correntes** de eventos; maestrias Anulador, Resiliente, Inquebrável, Quimerarcano, Deidade; **adversários por palavras** ([[10 Adversários - como criar]]), 54 no [[11 Bestiário]]; 144 itens e achados em [[12 Tesouros e itens mágicos]]; **dragões e wyverns**.
 
-**P-70** 🟡 metade respondida: os do Cataclisma agora se chamam **Abalos**. Falta: a situação completa continua **Cenário**, ou passa a se chamar **Evento**? **Cenário** é o nome que usei para "uma situação completa" (combate, conversa, perseguição). Você escreveu "Evento pra uma situação completa". Quer que a situação se chame **Evento** (e aí os Abalos mudam de nome, ex.: **Abalos**), ou fica **Cenário**?
+**P-70** ✅ os do Cataclisma são **Abalos** e a situação completa (combate, conversa, perseguição) se chama **Evento**.
 Sua resposta:
 
 **P-71** 🔁 os Contadores saíram (pareciam o Daggerheart); coisas que se aproximam agora são **Ameaças com preço em Cataclisma**. Marcadores no lugar de turnos: Instante · até a próxima Falha · até o holofote virar · até o mestre pagar · o Cenário · até o Pouso. E **Contadores** que descem a cada Falha dos jogadores. Faz sentido para a mesa?
@@ -236,7 +236,7 @@ Sua resposta:
 
 Aplicado: Abalos; Ameaças no lugar de Contadores; sem despertar outro Valor; Canal Transcrito; título. E, pela preocupação com complexidade, **Atalho e Valor ficaram mais enxutos**: saiu a trilha de Passos e o custo crescente do Atalho repetido; ficou **uma trilha só (Laço, 5 casas)** — Atalho marca, Passo de Valor apaga. O Laço é **montado junto** (jogador, mestre e mesa), e há recompensa por **olhar para os Laços**: +1 Arcano ao nomear o Atalho na hora, e três perguntas de fim de sessão (Atalho percebido, relação formada, participação no que outro sentiu ou fez).
 
-**P-92** 🔴 Sobre a complexidade: com a versão enxuta, a regra toda cabe numa tabela de duas linhas mais o Laço. Minha recomendação é **manter no núcleo**, porque é o que dá identidade ao jogo (está no título). Se ainda parecer pesado, a alternativa é virar **módulo opcional** e o núcleo ficar só com as perguntas de fim de sessão. O que prefere?
+**P-92** ✅ mantém no núcleo por enquanto. Sobre a complexidade: com a versão enxuta, a regra toda cabe numa tabela de duas linhas mais o Laço. Minha recomendação é **manter no núcleo**, porque é o que dá identidade ao jogo (está no título). Se ainda parecer pesado, a alternativa é virar **módulo opcional** e o núcleo ficar só com as perguntas de fim de sessão. O que prefere?
 Sua resposta:
 
 **P-93** 🟡 Recompensas das perguntas de fim de sessão: +1 Arcano **ou** apagar 1 Laço por "sim". Máximo 3 por sessão. Ok?

@@ -41,11 +41,11 @@ Ela só vira rolagem quando é o **meio de uma ação** que já seria um teste: 
 | **Dificuldade do Grau** | — | 11 | 13 | 15 | 18 |
 | **Moldura mínima** | 1 | 1 | 2 | 3 | 4 |
 | **Dano** | nenhum (só incômodo) | 1d10 + Sintonia | 2d10 + Sintonia | 3d10 + Sintonia | 5d10 + Sintonia |
-| **Cura** (sempre +1 Arcano por PV) | — | 1 PV | até 2 PV | até 3 PV ou 1 condição | todos os PV, ou trazer de volta quem morreu neste Cenário |
+| **Cura** (sempre +1 Arcano por PV) | — | 1 PV | até 2 PV | até 3 PV ou 1 condição | todos os PV, ou trazer de volta quem morreu neste Evento |
 | **Alvos** | você ou 1 objeto de mão | 1 | até 3 | até 6, ou um grupo | todos que você escolher à vista |
 | **Área / tamanho** | cabe na mão | uma pessoa, uma porta | uma sala, uma carroça | uma casa, uma praça | um quarteirão, um navio, um vale |
 | **Alcance** | Toque | Perto | Médio | Longe | Horizonte |
-| **Duração** (marcador) | Instante | até a próxima Falha | até o mestre pagar (no máximo o Cenário) | o Cenário inteiro | até o Pouso (permanente com custo, ver Artefatos) |
+| **Duração** (marcador) | Instante | até a próxima Falha | até o mestre pagar (no máximo o Evento) | o Evento inteiro | até o Pouso (permanente com custo, ver Artefatos) |
 | **Atributos** (+/−) | — | ±1 | ±2 | ±3 | ±4 |
 | **Resistir / escapar** (adversário no d20) | — | 12 | 14 | 16 | 19 |
 | **Forçar** (máx. de Cansaço) | 0 | 2 | 3 | 4 | 5 |
@@ -100,7 +100,7 @@ Role quando a magia sai Ímpar. **Número baixo é pior.** Você pode **Suavizar
 
 | d20 | Dificuldade | Efeito |
 |---|---|---|
-| 1 | **Ferida no Véu** | O lugar vira Terreno Instável até o fim do Cenário: toda magia ali gera +1 Cataclisma. Role outra Dificuldade. |
+| 1 | **Ferida no Véu** | O lugar vira Terreno Instável até o fim do Evento: toda magia ali gera +1 Cataclisma. Role outra Dificuldade. |
 | 2 | **Atenção Divina** | O Primordial ou semideus do seu Valor nota você. O mestre anota uma **Dívida** (a entidade vai cobrar um favor). |
 | 3 | **Eco Tardio** | A magia se repete sozinha na próxima vez que o mestre tiver o holofote, nos alvos mais inconvenientes. |
 | 4 | **Dívida Arcana** | Perca 1 Arcano por dado ímpar. Cada ponto que não puder pagar **sela** uma das palavras usadas até o fim da sessão; sem palavras para selar, marque 1 PV por ponto que sobrar (mínimo 1). |

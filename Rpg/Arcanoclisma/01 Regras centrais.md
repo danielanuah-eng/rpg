@@ -10,7 +10,7 @@
 - Magia não usa atributo: você junta **palavras** do seu Valor, escolhe o **Grau** (o tamanho do feito) e rola um conjunto de dados que **sempre soma no máximo 24**: 2d12 → 3d8 → 4d6 → 6d4. Mais dados = mais confiável, mas mais Arcano *e* mais Cataclisma saindo da mesa.
 - Adversários rolam **d20**. O mestre gasta **Cataclisma** para fazer o mundo reagir.
 - Quando aperta, você escolhe: **Atalho** (entregar Cataclisma ao mestre e burlar agora, marcando Laço) ou **Passo de Valor** (fazer o difícil que aproxima do que importa, e apagar Laço).
-- Não há turnos nem rodadas: o jogo anda em **Cenários** (uma situação completa: uma briga, uma conversa, uma fuga). Quem tem o **holofote** age; ele passa ao mestre quando alguém falha ou tira Ímpar. Efeitos duram por **marcadores** (até a próxima falha, até o fim do Cenário...), nunca por turno.
+- Não há turnos nem rodadas: o jogo anda em **Eventos** (uma situação completa: uma briga, uma conversa, uma fuga). Quem tem o **holofote** age; ele passa ao mestre quando alguém falha ou tira Ímpar. Efeitos duram por **marcadores** (até a próxima falha, até o fim do Evento...), nunca por turno.
 
 ---
 
@@ -133,7 +133,7 @@ Um **Passo de Valor dentro da situação do Laço** quebra o Laço: apague todas
 
 O jogo recompensa o jogador por **acompanhar** o próprio personagem, não só por agir:
 
-- **Na hora**: quando o jogador **nomeia o Atalho** que o personagem está pegando e **do que ele protege** ("ele faz piada porque não aguenta ver o irmão ferido"), ganhe **+1 Arcano**. Uma vez por Cenário.
+- **Na hora**: quando o jogador **nomeia o Atalho** que o personagem está pegando e **do que ele protege** ("ele faz piada porque não aguenta ver o irmão ferido"), ganhe **+1 Arcano**. Uma vez por Evento.
 - **No fim da sessão**, cada jogador responde as três perguntas. Cada "sim", com uma frase, vale **+1 Arcano** ou **apagar 1 Laço** (o jogador escolhe):
   1. **Você percebeu um Atalho do seu personagem**, e qual é a relação dele com esse Atalho? (Por que ele pega tanto esse?)
   2. **Uma relação se formou ou mudou** na party, ou com alguém do mundo?
@@ -143,11 +143,11 @@ O jogo recompensa o jogador por **acompanhar** o próprio personagem, não só p
 
 O desconforto não some quando é evitado: **muda de lugar**. No Atalho, o mundo carrega por você (Cataclisma) e cobra depois. No Passo de Valor, você carrega agora e muda com isso. Atalho às vezes é esperto; **só** Atalho vira laço. Por isso quem usa magia se chama **Comprometido**.
 
-## 6. Cenários e holofote
+## 6. Eventos e holofote
 
-Não há iniciativa, turno nem rodada. A unidade do jogo é o **Cenário**: uma situação completa, com começo e fim na ficção (um combate, um interrogatório, uma negociação, uma perseguição, um ritual). O mestre anuncia quando um Cenário começa e o que o encerra ("acaba quando vocês saírem da ponte, ou quando a ponte cair").
+Não há iniciativa, turno nem rodada. A unidade do jogo é o **Evento**: uma situação completa, com começo e fim na ficção (um combate, um interrogatório, uma negociação, uma perseguição, um ritual). O mestre anuncia quando um Evento começa e o que o encerra ("acaba quando vocês saírem da ponte, ou quando a ponte cair").
 
-Dentro do Cenário, o ritmo é o holofote:
+Dentro do Evento, o ritmo é o holofote:
 
 - Os jogadores decidem entre si quem age. Quem age faz **uma ação** (atacar, conjurar, ajudar, uma manobra) e pode se mover até **Perto** junto com ela.
 - **O holofote passa ao mestre** quando um jogador **falha** ou tira **Ímpar** (dois ímpares). Na vez dele, o mestre ativa **1 adversário de graça** e **mais 1 por Cataclisma** gasto; depois devolve aos jogadores.
@@ -164,7 +164,7 @@ Nada dura "X turnos". Efeitos duram até um **marcador** acontecer, e os marcado
 | **Até a próxima Falha** | qualquer jogador falhar uma rolagem |
 | **Até o holofote virar** | o holofote passar ao mestre |
 | **Até o mestre pagar** | o mestre gastar Cataclisma igual ao Grau para encerrar (ele pode, a qualquer momento) |
-| **O Cenário** | a situação terminar |
+| **O Evento** | a situação terminar |
 | **Até o Pouso** | a próxima noite de descanso |
 
 **Ameaças**: para coisas que se aproximam (o teto caindo, o ritual terminando, reforços chegando), o mestre **anuncia a ameaça e o preço dela em Cataclisma**: "o teto cai quando eu pagar 6". Ela acontece quando ele pagar. Como o Cataclisma vem dos dados ímpares da mesa, todo mundo vê a ameaça chegando conforme a reserva do mestre enche. Os jogadores podem resolver a ameaça pela ficção, ou adiá-la uma vez gastando Arcano igual à metade do preço (o preço sobe 2).
@@ -221,7 +221,7 @@ Limiares = base do Comportamento + nível + armadura.
 
 Ao marcar o último PV, escolha:
 
-- **Apagar**: você cai inconsciente e volta depois do Cenário com 1 PV. Role 1d12; se tirar **até o seu nível**, ganha uma **Marca do Cataclisma** (risque 1 casa de Arcano máximo, e diga que marca ficou no seu corpo).
+- **Apagar**: você cai inconsciente e volta depois do Evento com 1 PV. Role 1d12; se tirar **até o seu nível**, ganha uma **Marca do Cataclisma** (risque 1 casa de Arcano máximo, e diga que marca ficou no seu corpo).
 - **Última Palavra**: conjure uma magia 1 Grau acima do seu máximo, sem pagar Arcano e sem rolar Dificuldades. Depois, seu personagem morre.
 - **Jogar os dados**: role 2d12. **Crítico ou Par**: levanta com PV e Cansaço limpos. **Equilíbrio**: levanta com 1 PV e uma Marca do Cataclisma. **Ímpar**: morre.
 

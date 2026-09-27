@@ -55,7 +55,7 @@ Comparação com magia (dano médio por golpe, na força máxima de cada Moldura
 | 3 | 23,5 | 20,5 (G4) | 2 Arcano |
 | 4 | 31 | 32,5 (G5) | 4 Arcano |
 
-A arma bate um pouco mais forte num alvo só e não gasta nada; a magia acerta vários, faz efeito e muda o Cenário, mas custa e gera Cataclisma. Conflitüo fica no meio (+1 dado).
+A arma bate um pouco mais forte num alvo só e não gasta nada; a magia acerta vários, faz efeito e muda o Evento, mas custa e gera Cataclisma. Conflitüo fica no meio (+1 dado).
 
 ## Armaduras
 
@@ -98,7 +98,7 @@ Itens mágicos servem para **tudo**, não só para quem conjura: ajudam em teste
 | **De Ofício** | ajuda em mecânica básica: um atributo, um tipo de teste, Esquiva, Limiares, Proteção, PV ou Cansaço | Vantagem numa situação estreita → +1 num atributo |
 | **De Estabilidade** | mexe nas **Dificuldades** da magia: Dificuldade do Grau menor, uma Dificuldade (d20) a menos, Suavizar de graça, +1 no d20 da tabela | −1 na Dificuldade do Grau → uma Dificuldade a menos em toda magia |
 | **De Valor** | só funciona para um Valor: melhora a Skill, alivia o Drawback, ou dá a um não-Comprometido daquele Valor um pedaço da Skill | alívio pequeno → Skill melhorada |
-| **De Grau** | ajuda a magia a crescer: Ampliação de graça, +1 no dano de magia, +1 de Sintonia numa condição | 1 Ampliação por Cenário → +1 de Sintonia |
+| **De Grau** | ajuda a magia a crescer: Ampliação de graça, +1 no dano de magia, +1 de Sintonia numa condição | 1 Ampliação por Evento → +1 de Sintonia |
 
 Algumas têm **cargas** (recuperam no Pouso). Regra geral de equilíbrio: um item da Moldura X nunca dá mais que **um passo** da tabela de Graus, **+1** num número, ou **uma** palavra.
 
@@ -123,27 +123,27 @@ Algumas têm **cargas** (recuperam no Pouso). Regra geral de equilíbrio: um ite
 | Bainha Vermelha | Valor (Conflitüo) | 2 | fora de combate, suas magias podem ter 3 palavras em vez de 2 | 300 o |
 | Ampulheta Rachada | Valor (Eternyr) | 2 | o Peso do Tempo cai para +1 | 450 o |
 | Máscara do Palhaço Triste | Valor (Persona) | 2 | quando o Drama acontece, o mestre não ganha Cataclisma se você reclamar | 300 o |
-| Lanterna Fechada | Valor (Alvorum) | 2 | uma magia por Cenário sem ser chamativa | 400 o |
+| Lanterna Fechada | Valor (Alvorum) | 2 | uma magia por Evento sem ser chamativa | 400 o |
 | Moeda do Barqueiro | Valor (Morbidyum) | 3 | ao usar a Volta, fica com 3 Arcano | 1.000 o |
-| Cadinho de Bolso | Valor (Sublimeyn) | 3 | o primeiro passo extra de estado de cada Cenário não custa Arcano | 1.000 o |
+| Cadinho de Bolso | Valor (Sublimeyn) | 3 | o primeiro passo extra de estado de cada Evento não custa Arcano | 1.000 o |
 | Coleira de Prata | Valor (Dominum) | 3 | Vontade Quebrada dura só até a próxima Pausa | 1.100 o |
 | Máscara de Casca | Valor (Primitivum) | 3 | +1 Traço Animal nas transformações | 1.000 o |
 | Véu de Seda Cinza | Valor (Cognitium) | 3 | se Espiar falhar, o alvo não sabe que foi você | 1.000 o |
-| Luva de Forja | Grau | 1 | uma Ampliação de dano de graça por Cenário | 150 o |
+| Luva de Forja | Grau | 1 | uma Ampliação de dano de graça por Evento | 150 o |
 | Tinteiro de Duas Penas | Grau | 2 | +1 no dano de magia | 400 o |
-| Coroa Pequena | Grau | 4 | +1 de Sintonia enquanto ninguém tocar em você no Cenário | 3.500 o |
+| Coroa Pequena | Grau | 4 | +1 de Sintonia enquanto ninguém tocar em você no Evento | 3.500 o |
 
 ## Artefatos
 
 Raros, com nome e história. Carregam **2 ou 3 palavras** e um poder único, e cobram: usar dá Cataclisma ao mestre ou marca Cansaço. Só artefatos tornam uma magia de **Grau 5 permanente** (o artefato é consumido ou fica "ligado" ao efeito). Não se compram.
 
-Exemplo: **A Coroa de Vyal** — Persona (**Encantar**, **Amor**, **Irresistível**). Uma vez por Cenário, uma magia de Persona sua afeta um alvo a mais. Cada uso: o mestre ganha 2 Cataclisma e Vyal sabe onde você está.
+Exemplo: **A Coroa de Vyal** — Persona (**Encantar**, **Amor**, **Irresistível**). Uma vez por Evento, uma magia de Persona sua afeta um alvo a mais. Cada uso: o mestre ganha 2 Cataclisma e Vyal sabe onde você está.
 
 ## Familiares
 
 Um bicho, espírito ou construto ligado a você (ligação feita num Pouso; um por vez). Tem **2 PV** próprios (qualquer dano marca 1). Dá **1 Traço** (2 na Moldura 2, 3 na Moldura 3+):
 
-*Batedor* (você vê e ouve por ele até Longe) · *Montaria* (move até Longe) · *Voo* · *Nado* · *Faro* · *Carregador* · *Guardião* (uma vez por Cenário recebe um ataque no seu lugar) · *Canal* (a magia pode sair dele) · *Palavra* (ele conhece 1 palavra de outro Valor que você usa enquanto ele está com você).
+*Batedor* (você vê e ouve por ele até Longe) · *Montaria* (move até Longe) · *Voo* · *Nado* · *Faro* · *Carregador* · *Guardião* (uma vez por Evento recebe um ataque no seu lugar) · *Canal* (a magia pode sair dele) · *Palavra* (ele conhece 1 palavra de outro Valor que você usa enquanto ele está com você).
 
 Se o familiar cai, ele volta no próximo Pouso.
 
@@ -165,7 +165,7 @@ Wyverns são domesticáveis ([[08 Mundo e entidades]]); uma selvagem domada vale
 |---|---|---|
 | Tônico de Sangue | recupera 1d4 PV | 10 o |
 | Chá de Casca-Amarga | limpa 1d4 Cansaço | 10 o |
-| Pó de Arcano | +1 Arcano (um por Cenário) | 25 o |
+| Pó de Arcano | +1 Arcano (um por Evento) | 25 o |
 | Óleo de Lâmina | próximo ataque com arma +1d6 | 15 o |
 | Bomba de Fumaça | Vantagem para fugir ou se esconder | 15 o |
 | Tinta de Palavra | escreva uma palavra de qualquer Valor num objeto; vale uma vez | 30 o |

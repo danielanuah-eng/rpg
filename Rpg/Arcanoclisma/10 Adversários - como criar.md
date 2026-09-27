@@ -51,7 +51,7 @@ A **Dificuldade** é o número que os jogadores tiram para acertar o adversário
 | **Bruto** | Dif −1, Limiares ×1,3, PV +3, dano ×1,4 | 2–3 | 4 |
 | **Chefe** | Dif +2, Limiares ×1,5, PV ×2; age 2 vezes quando ativado; um verbo pode ser **reação** | 4–5 | 5 |
 
-**Orçamento do Cenário de combate**: **3 × nº de jogadores + 2** pontos. −2 para fácil, +2 para difícil, −2 se houver 2 Chefes, +1 se usar adversários de Moldura abaixo.
+**Orçamento do Evento de combate**: **3 × nº de jogadores + 2** pontos. −2 para fácil, +2 para difícil, −2 se houver 2 Chefes, +1 se usar adversários de Moldura abaixo.
 
 ## As palavras
 
@@ -74,7 +74,7 @@ Verbo (Custo · Alcance · Alvo · Resistência · Efeito · Marcador)
 | **Alvo** | 1 · Grupo (até 3) · Área (todos no alcance) · si |
 | **Resistência** | *ataque* (d20 + Ataque contra Esquiva) ou um **atributo** (o jogador rola 2d12 + atributo contra a Dificuldade do adversário) |
 | **Efeito** | Dano ×½ / ×1 / ×1,5 / ×2 · uma **Condição** · Movimento · Criar/Invocar · Proteger · Anular · Selar palavra · Mexer em Arcano/Cansaço |
-| **Marcador** | Instante · até a próxima Falha · até o holofote virar · até o mestre pagar · o Cenário |
+| **Marcador** | Instante · até a próxima Falha · até o holofote virar · até o mestre pagar · o Evento |
 
 **Quanto custa um verbo** (o gerador usa isto para balancear):
 
@@ -89,7 +89,7 @@ Verbo (Custo · Alcance · Alvo · Resistência · Efeito · Marcador)
 | Anular uma magia | Cataclisma igual ao Grau | | |
 | Marcar Cansaço (1 / 2) | livre / 1C | 1C / 2C | 2C / 3C |
 
-Dano **e** condição no mesmo verbo: some os custos. Marcador "o Cenário" ou "até o mestre pagar": +1C.
+Dano **e** condição no mesmo verbo: some os custos. Marcador "o Evento" ou "até o mestre pagar": +1C.
 
 **Condições**: *Caído* (o próximo ataque contra ele tem Vantagem; levantar é a ação), *Distraído* (Desvantagem na próxima rolagem), *Amedrontado* (não se aproxima da fonte do medo), *Preso* (não se move; soltar-se é Força ou Agilidade contra a Dificuldade), *Cego* (Desvantagem para tudo que precisa ver), *Atordoado* (perde a próxima vez que o holofote chegaria nele), *Selado* (uma palavra sua não funciona), *Vulnerável* (ataques contra ele têm Vantagem), *Envenenado* (marca 1 Cansaço sempre que o holofote vai ao mestre).
 
@@ -108,7 +108,7 @@ Cada adjetivo é uma passiva pronta. Tabela d66 para o gerador sortear:
 
 ### QUER
 
-Uma frase: o que ele quer e quando desiste. "Quer levar a criança; foge se ferido." Adversários com vontade conversam, fogem, se rendem, traem. Nem todo Cenário com adversário é combate.
+Uma frase: o que ele quer e quando desiste. "Quer levar a criança; foge se ferido." Adversários com vontade conversam, fogem, se rendem, traem. Nem todo Evento com adversário é combate.
 
 ## Valores e maestria
 
@@ -147,7 +147,7 @@ Marcas menores, que o gerador também sorteia: *Imune a [Valor]*, *Absorve [Valo
 | **Seres de energia** | Ágil, Conjurador | Etéreo, Absorve [seu Valor] | Chama, Luz, Vento, Eco |
 | **Povos dos Reinos** | qualquer | Valor do Reino | Juramentado, Moldado, Manso, Sentido, Vigia, Esquecido, Repetido |
 | **Semideuses** | Chefe | Valor do pai, Deidade | o nome dele |
-| **Deuses antigos** | não se derrota em combate | Deidade + Inquebrável | Cenário de Ameaça: sobreviver, fugir, convencer |
+| **Deuses antigos** | não se derrota em combate | Deidade + Inquebrável | Evento de Ameaça: sobreviver, fugir, convencer |
 
 ## Criar em 6 passos
 

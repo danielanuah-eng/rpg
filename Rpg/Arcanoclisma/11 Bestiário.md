@@ -2,7 +2,7 @@
 
 > Rascunho v0. 54 adversários no formato de palavras ([[10 Adversários - como criar]]). **Os números vêm da régua** (Moldura + Papel); aqui só o que muda. O gerador monta a ficha completa, com imagem.
 
-Abreviações do determinador: **C** = Cataclisma · **Falha** = até a próxima Falha · **Virar** = até o holofote virar · **Pagar** = até o mestre pagar · **Cen** = o Cenário · **Inst** = Instante. Atributos: Agi, For, Car, Int, Sab, Per. Verbo sem parênteses = ataque comum ou ação narrativa.
+Abreviações do determinador: **C** = Cataclisma · **Falha** = até a próxima Falha · **Virar** = até o holofote virar · **Pagar** = até o mestre pagar · **Ev** = o Evento · **Inst** = Instante. Atributos: Agi, For, Car, Int, Sab, Per. Verbo sem parênteses = ataque comum ou ação narrativa.
 
 ---
 
@@ -44,10 +44,10 @@ Ser: Duelista · Agir: Estocar · Desafiar (livre · Perto · 1 · Sab · o alvo
 Ser: Cantora, Espiã · Agir: Cantar (1C · Médio · Grupo · Sab · Amedrontado ou apaixonado · Falha) · Beijar (2C · Toque · 1 · Sab · o alvo protege ela · Pagar) · Parecer: Belo, Mentiroso · Quer: um segredo de alguém da mesa.
 
 **Leitor de Sombras** — M2 · Conjurador · Cognitium
-Ser: Espião, Leitor · Agir: Ler (livre · Médio · 1 · Sab · o mestre sabe o próximo plano do alvo · Inst) · Iludir (1C · Médio · Grupo · Int · Distraído · Falha) · Esquecer (2C · Perto · 1 · Int · Selado · Cen) · Parecer: Invisível, Covarde · Quer: vender o que viu.
+Ser: Espião, Leitor · Agir: Ler (livre · Médio · 1 · Sab · o mestre sabe o próximo plano do alvo · Inst) · Iludir (1C · Médio · Grupo · Int · Distraído · Falha) · Esquecer (2C · Perto · 1 · Int · Selado · Ev) · Parecer: Invisível, Covarde · Quer: vender o que viu.
 
 **Sacerdote da Porta** — M2 · Suporte · Morbidyum
-Ser: Sacerdote, Coveiro · Agir: Tocar · Levantar (2C · Médio · 1 aliado caído volta com 2 PV · Inst) · Apodrecer (1C · Toque · 1 · For · Envenenado · Cen) · Parecer: Pálido, Imundo · Quer: que ninguém morra sem cerimônia.
+Ser: Sacerdote, Coveiro · Agir: Tocar · Levantar (2C · Médio · 1 aliado caído volta com 2 PV · Inst) · Apodrecer (1C · Toque · 1 · For · Envenenado · Ev) · Parecer: Pálido, Imundo · Quer: que ninguém morra sem cerimônia.
 
 **Domadora de Garmhal** — M2 · Líder · Dominum
 Ser: Domadora · Agir: Chicotear (Perto) · Mandar (livre: ativa uma fera aliada) · Soltar (3C · Médio · invoca uma fera Bruta · Inst) · Parecer: Leal · Quer: levar feras para a Voragem.
@@ -59,7 +59,7 @@ Ser: Relojoeiro, Fugitivo · Agir: Atirar (Longe) · Parar (2C · Médio · 1 ·
 Ser: Arquimaga, Professora · Agir: Raio (Longe) · Cristalizar (2C · Médio · Grupo · For · Preso · Pagar) · Eclipsar (3C · Horizonte · Área · Per · Cego · Falha) · Refundir (reação, 2C · si · muda de Valor ativo e limpa 2 PV) · Sublimar (4C · Médio · Área · Agi · dano ×2 · Inst) · Parecer: Antigo, Brilhante · Quer: um aluno à altura, ou um sucessor à força.
 
 **Juiz-Feiticeiro** — M3 · Líder · Alvorum · Anulador
-Ser: Juiz · Agir: Condenar (livre · Médio · 1 · Car · Vulnerável · Falha) · Revelar (1C · Longe · Área · ninguém fica escondido · Cen) · Selar (2C · Perto · 1 · Sab · Selado · Cen) · Parecer: Sagrado, Duro · Quer: uma confissão.
+Ser: Juiz · Agir: Condenar (livre · Médio · 1 · Car · Vulnerável · Falha) · Revelar (1C · Longe · Área · ninguém fica escondido · Ev) · Selar (2C · Perto · 1 · Sab · Selado · Ev) · Parecer: Sagrado, Duro · Quer: uma confissão.
 
 ## Feras e monstros (de Kairvahnn)
 
@@ -102,10 +102,10 @@ Ser: Hidra · Agir: Morder (duas vezes) · Brotar (reação, 1C: quando toma dan
 Ser: Sobra · Agir: Arranhar · Parecer: Estranho (tem a forma de uma magia que alguém errou) · Quer: completar-se.
 
 **Rasgo Faminto** — M2 · Padrão · (sorteado) · Instável
-Ser: Rasgo, Boca · Agir: Morder · Engolir Palavra (2C · Toque · 1 · Sab · Selado · Cen) · Parecer: Faminto de Magia · Quer: comer magia.
+Ser: Rasgo, Boca · Agir: Morder · Engolir Palavra (2C · Toque · 1 · Sab · Selado · Ev) · Parecer: Faminto de Magia · Quer: comer magia.
 
 **Eco de Magia Morta** — M2 · Conjurador · (sorteado) · Instável
-Ser: Eco · Agir: Repetir (1C · a última magia conjurada no Cenário acontece de novo, com ele escolhendo os alvos · Inst) · Parecer: Etéreo, Estranho · Quer: ser conjurado de novo.
+Ser: Eco · Agir: Repetir (1C · a última magia conjurada no Evento acontece de novo, com ele escolhendo os alvos · Inst) · Parecer: Etéreo, Estranho · Quer: ser conjurado de novo.
 
 **Nó de Ímpares** — M3 · Bruto · Quimerarcano · Instável
 Ser: Nó · Agir: Esmagar · Desequilibrar (2C · Médio · Área · o próximo teste de cada um que falhar vira Ímpar automático · Falha) · Parecer: Enorme, Faminto de Magia · Quer: que tudo fique ímpar.
@@ -114,21 +114,21 @@ Ser: Nó · Agir: Esmagar · Desequilibrar (2C · Médio · Área · o próximo 
 Ser: Metade · Agir: Cortar · Trocar (1C · os dois trocam de lugar · Inst) · Parecer: Leal (se um cai, o outro age na hora) · Quer: achar a própria metade — que é o outro, e eles não sabem.
 
 **A Coisa Que Sobrou** — M4 · Chefe · três Valores · Quimerarcano, Resiliente
-Ser: Sobra, Tempestade · Agir: Rasgar · Maré (3C: dispara uma Maré de Valor à escolha, pelo Cenário) · Engolir (reação, 2C: anula uma magia e o mestre ganha Cataclisma igual ao Grau) · Ruptura (5C: um Abalo de Ruptura) · Parecer: Estranho, Enorme · Quer: nada. É o que sobra.
+Ser: Sobra, Tempestade · Agir: Rasgar · Maré (3C: dispara uma Maré de Valor à escolha, pelo Evento) · Engolir (reação, 2C: anula uma magia e o mestre ganha Cataclisma igual ao Grau) · Ruptura (5C: um Abalo de Ruptura) · Parecer: Estranho, Enorme · Quer: nada. É o que sobra.
 
 ## Protetores do Arcano
 
 **Sentinela de Selo** — M2 · Padrão · — · Anulador
-Ser: Guardião, Selo · Agir: Golpear · Selar (1C · Perto · 1 · Sab · Selado · Cen) · Parecer: Duro, Paciente · Quer: silêncio mágico na área.
+Ser: Guardião, Selo · Agir: Golpear · Selar (1C · Perto · 1 · Sab · Selado · Ev) · Parecer: Duro, Paciente · Quer: silêncio mágico na área.
 
 **Caçador de Ímpares** — M3 · Ágil · — · Anulador
-Ser: Caçador · Agir: Atirar (Longe) · Farejar Cataclisma (livre: sabe quem gerou mais Cataclisma no Cenário e o ataca primeiro) · Rede de Silêncio (2C · Médio · Grupo · Agi · Preso + não conjura Grau 2+ · Pagar) · Parecer: Silencioso, Veloz · Quer: levar o conjurador mais imprudente.
+Ser: Caçador · Agir: Atirar (Longe) · Farejar Cataclisma (livre: sabe quem gerou mais Cataclisma no Evento e o ataca primeiro) · Rede de Silêncio (2C · Médio · Grupo · Agi · Preso + não conjura Grau 2+ · Pagar) · Parecer: Silencioso, Veloz · Quer: levar o conjurador mais imprudente.
 
 **Juiz do Fechado** — M4 · Chefe · — · Anulador, Inquebrável
-Ser: Juiz, Estátua · Agir: Golpear · Fechar (3C · Longe · Área · Zona de Anulação · Cen) · Sentença (2C · Médio · 1 · Sab · marca Cansaço igual ao Cataclisma que o alvo gerou no Cenário, máx. 4 · Inst) · Imobilizar (reação, 2C · Perto · 1 · Preso · Virar) · Parecer: Sagrado, Pesado · Quer: fechar.
+Ser: Juiz, Estátua · Agir: Golpear · Fechar (3C · Longe · Área · Zona de Anulação · Ev) · Sentença (2C · Médio · 1 · Sab · marca Cansaço igual ao Cataclisma que o alvo gerou no Evento, máx. 4 · Inst) · Imobilizar (reação, 2C · Perto · 1 · Preso · Virar) · Parecer: Sagrado, Pesado · Quer: fechar.
 
 **Arquivista Sem Rosto** — M3 · Suporte · Cognitium · Resiliente
-Ser: Arquivista · Agir: Anotar (livre: cada magia vista no Cenário custa +1 Arcano na segunda vez) · Apagar (2C · Médio · 1 · Int · esquece uma Vivência · Cen) · Parecer: Astuto, Mentiroso · Quer: registrar tudo, e apagar o que for perigoso.
+Ser: Arquivista · Agir: Anotar (livre: cada magia vista no Evento custa +1 Arcano na segunda vez) · Apagar (2C · Médio · 1 · Int · esquece uma Vivência · Ev) · Parecer: Astuto, Mentiroso · Quer: registrar tudo, e apagar o que for perigoso.
 
 ## Seres de energia
 
@@ -150,7 +150,7 @@ Ser: Instante · Agir: Tocar (envelhece: dano) · Pular (livre · si · age de n
 Ser: Soldado, Morto · Agir: Cortar · Duelar (livre · Perto · 1 · o alvo só pode atacar ele · Falha) · Parecer: Incansável — como Duro · Quer: vencer uma luta, qualquer uma, e lembrar por quê.
 
 **Moldado** (Mar de Estados) — M3 · Ágil · Sublimeyn
-Ser: Moldado · Agir: Envolver (livre · Toque · 1 · For · Preso · Virar) · Mudar (1C · si · troca de estado: sólido Duro, líquido Etéreo, gás Invisível · Cen) · Parecer: Estranho · Quer: experimentar a forma dos visitantes.
+Ser: Moldado · Agir: Envolver (livre · Toque · 1 · For · Preso · Virar) · Mudar (1C · si · troca de estado: sólido Duro, líquido Etéreo, gás Invisível · Ev) · Parecer: Estranho · Quer: experimentar a forma dos visitantes.
 
 **Manso** (Voragem) — M2 · Social · Dominum
 Ser: Servo, Nascido-na-Voragem · Agir: Guiar · Obedecer · Parecer: Leal · Quer: um dono bom, ou nenhum.
@@ -167,7 +167,7 @@ Ser: Repetido · Agir: Repetir (faz a mesma ação que o último jogador fez) ·
 ## Semideuses como adversários
 
 **Serath Duas-Mãos** — M4 · Chefe · Conflitüo · Deidade
-Ser: Semideusa, General · Agir: Cortar (duas mãos: dois ataques) · Comandar (livre: ativa dois aliados) · Guerra (4C · Horizonte · Área · todos os adversários dela ganham +1 dado de dano · Cen) · Separar (reação, 2C: um aliado e um jogador que se ajudam ficam sem poder se ajudar · Cen) · Parecer: Blindado, Antigo · Quer: que a luta termine rápido, e do jeito dela.
+Ser: Semideusa, General · Agir: Cortar (duas mãos: dois ataques) · Comandar (livre: ativa dois aliados) · Guerra (4C · Horizonte · Área · todos os adversários dela ganham +1 dado de dano · Ev) · Separar (reação, 2C: um aliado e um jogador que se ajudam ficam sem poder se ajudar · Ev) · Parecer: Blindado, Antigo · Quer: que a luta termine rápido, e do jeito dela.
 
 **Garmhal, o Domador** — M4 · Chefe · Dominum + Primitivum · Deidade, Quimerarcano
 Ser: Semideus, Cavaleiro · Agir: Chicotear (Médio) · Montar (livre: está sempre sobre uma fera Bruta, que age junto) · Domar (3C · Médio · 1 · Sab · o alvo luta do lado dele · Pagar) · Abrir a Voragem (5C: invoca um grupo de feras e dispara Chamado do Reino) · Parecer: Enorme (com a montaria), Leal · Quer: guardar a boca da Voragem, e que ninguém saia dela sem dono.
@@ -188,7 +188,7 @@ Ser: Dragão, Fera · Agir: Morder · Cauda (livre · Perto · Grupo · Agi · C
 Ser: Dragão, Senhor · Agir: Morder (duas vezes) · Soprar (3C · Longe · Área · Agi · dano ×1,5 + efeito do Valor · Inst) · Asas (reação, 1C · sobe até Longe, fora do Toque) · Conjurar (palavras do seu Valor, até Grau 3) · Parecer: Voador, Enorme, Astuto · Quer: começa a falar; negocia se perder metade dos PV.
 
 **Dragão Ancião** — M4 · Chefe · Valor do dragão + um segundo · Deidade
-Ser: Dragão, Memória do Mundo · Agir: Morder · Soprar (4C · Horizonte · Área · Agi · dano ×2 + efeito forte do Valor · Inst) · Conjurar (palavras dos seus Valores, até Grau 5) · Lembrar (livre: conta uma verdade de outra Era, ou exige uma) · Parecer: Antigo, Enorme, Voador · Quer: sapiente e paciente; quase nunca é só um combate. Muitos Cenários com um Ancião são conversa.
+Ser: Dragão, Memória do Mundo · Agir: Morder · Soprar (4C · Horizonte · Área · Agi · dano ×2 + efeito forte do Valor · Inst) · Conjurar (palavras dos seus Valores, até Grau 5) · Lembrar (livre: conta uma verdade de outra Era, ou exige uma) · Parecer: Antigo, Enorme, Voador · Quer: sapiente e paciente; quase nunca é só um combate. Muitos Eventos com um Ancião são conversa.
 
 **Wyvern Selvagem** — M1 · Ágil · (Valor fraco, opcional)
 Ser: Wyvern · Agir: Garras · Mergulhar (1C · Longe · 1 · ataque · dano ×1,5 · Inst) · Parecer: Voador, Covarde · Quer: comida; pode ser domada (Dominum, Primitivum, ou dias de trabalho).

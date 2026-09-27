@@ -36,7 +36,7 @@ Objetivo: o jogo **funciona e é gostoso de jogar** antes de ter lore bonita. Na
 | 1.11 | Você responde as perguntas 🔴 de [[09 Perguntas pra decidir]] | — | ✅ rodada 1 (27/09) |
 | 1.11b | Aplicar rodada 1: Palavras Básicas só verbo/substantivo, talentos de outros Comportamentos, Caderno dos Valores, itens mágicos de mecânica/Dificuldade/Valor, Marés de Valor, adversários experientes, mais terrenos | vários | ✅ |
 | 1.11c | Rodada 2 respondida | [[09 Perguntas pra decidir]] | ✅ |
-| 1.11d | Aplicar rodada 2: Moldura, teste por verbo + modo, Cenários e marcadores, palavra como relação, Canais (foco/arma/Transcrito), 2 talentos por Comportamento, perguntas de criação e sessão zero, ficha por Valor, Correntes, maestrias, adversários por palavras, bestiário, tesouros, dragões | vários | ✅ |
+| 1.11d | Aplicar rodada 2: Moldura, teste por verbo + modo, Eventos e marcadores, palavra como relação, Canais (foco/arma/Transcrito), 2 talentos por Comportamento, perguntas de criação e sessão zero, ficha por Valor, Correntes, maestrias, adversários por palavras, bestiário, tesouros, dragões | vários | ✅ |
 | 1.11e | Rodada 3 de perguntas (P-70 em diante) | [[09 Perguntas pra decidir]] | ⬜ |
 | 1.12 | 4 personagens prontos (nível 1) para teste | — | ⬜ |
 | 1.13 | **Teste de mesa 1**: uma cena social + um combate + uma magia em dupla | — | ⬜ |
@@ -49,7 +49,7 @@ Perguntas de teste para a mesa (anotar depois de cada sessão):
 - Alguém ficou parado esperando muito tempo? (holofote)
 - Arcano sobrou ou faltou? Cataclisma encheu? (economia)
 - Alguém travou pensando em que palavras usar? (magia)
-- Alguma magia resolveu o Cenário sozinha? (Grau/limites)
+- Alguma magia resolveu o Evento sozinha? (Grau/limites)
 - Os marcadores (até a próxima Falha, até o mestre pagar) ficaram claros sem turno?
 - Os jogadores acharam fácil escolher verbo + modo?
 - Quem só usou arma se sentiu menor que quem usou magia?

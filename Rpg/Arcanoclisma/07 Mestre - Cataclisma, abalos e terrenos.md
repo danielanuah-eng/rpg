@@ -4,7 +4,7 @@
 
 ## 1. Cataclisma
 
-**Ganha**: 1 por dado ímpar dos jogadores (menos em rolagens de reação), 2 por jogador no início da sessão, 1d4 em Pausa, 1d4 + nº de jogadores em Pouso, e as Dificuldades de magia que dizem isso. **Máximo 20**; o excesso **transborda** num Evento imediato do tamanho do excesso.
+**Ganha**: 1 por dado ímpar dos jogadores (menos em rolagens de reação), 2 por jogador no início da sessão, 1d4 em Pausa, 1d4 + nº de jogadores em Pouso, e as Dificuldades de magia que dizem isso. **Máximo 20**; o excesso **transborda** num Abalo imediato do tamanho do excesso.
 
 Na média, cada rolagem de jogador rende 1 Cataclisma, então o mestre **deve gastar quase toda vez que tiver o holofote**. É a ideia: reservas grandes e gastos grandes. ❓ P-05
 
@@ -15,7 +15,7 @@ Na média, cada rolagem de jogador rende 1 Cataclisma, então o mestre **deve ga
 | 1 | **Interromper**: tomar o holofote agora |
 | 1 | **Mais um**: ativar mais um adversário na sua vez |
 | 1 | **Endurecer**: +2 na Dificuldade de uma magia sendo conjurada (até +4) |
-| 1 | **Complicação**: um detalhe ruim no Cenário (a porta emperra, a corda puxa, alguém grita) |
+| 1 | **Complicação**: um detalhe ruim no Evento (a porta emperra, a corda puxa, alguém grita) |
 | 2 | **Ação de Cataclisma** de um adversário (a habilidade especial dele) |
 | 2+ | **Ação de Cataclisma** de um Terreno |
 | 3 | **Reforço**: chega um grupo de Lacaios ou um adversário Padrão |
@@ -30,13 +30,13 @@ Cinco tamanhos. Escolha ou role 1d6. Os marcados com ✦ mexem na ficha dos joga
 1. Luzes falham: escuridão parcial até alguém consertar.
 2. Um objeto comum de um jogador cai, quebra ou some.
 3. Um PNJ neutro fica assustado ou hostil.
-4. ✦ **Palavra Trêmula**: uma palavra sorteada de um jogador custa +1 Arcano até o fim do Cenário.
+4. ✦ **Palavra Trêmula**: uma palavra sorteada de um jogador custa +1 Arcano até o fim do Evento.
 5. A próxima magia de qualquer um gera +1 Cataclisma.
 6. Um som ou visão estranha revela onde o grupo está.
 
 **Tremor (4)**
 1. O terreno muda: o chão cede, a água sobe, o fogo espalha. Novo perigo.
-2. Um adversário ganha um Valor a mais até o fim do Cenário.
+2. Um adversário ganha um Valor a mais até o fim do Evento.
 3. ✦ **Arcano Congelado**: ninguém gasta Arcano até o holofote passar ao mestre.
 4. Surge um grupo de Lacaios do Cataclisma.
 5. **Inversão**: até a próxima Falha, cura fere e dano cura.
@@ -45,7 +45,7 @@ Cinco tamanhos. Escolha ou role 1d6. Os marcados com ✦ mexem na ficha dos joga
 **Fissura (7)**
 1. Uma Criatura do Cataclisma (Padrão ou Bruto) rasga o espaço e entra.
 2. ✦ **Selo**: cada jogador escolhe uma palavra sua que fica selada até o fim da sessão.
-3. ✦ **Troca de Valor**: pelo Cenário, um jogador conjura com a tabela de outro Valor (sorteado), mantendo Skill e Drawback do seu.
+3. ✦ **Troca de Valor**: pelo Evento, um jogador conjura com a tabela de outro Valor (sorteado), mantendo Skill e Drawback do seu.
 4. O lugar começa a desabar: Ameaça de 6 (quem ainda estiver dentro quando o mestre pagar, se machuca feio).
 5. Todos os adversários limpam 2 PV.
 6. ✦ O Arcano de todos os jogadores cai pela metade (arredonde para cima).
@@ -54,13 +54,13 @@ Cinco tamanhos. Escolha ou role 1d6. Os marcados com ✦ mexem na ficha dos joga
 1. Um **Protetor do Arcano** chega, caçando quem mais gastou magia na sessão.
 2. ✦ Uma entidade (Primordial ou semideus) nota a mesa: cada jogador ganha uma **Dívida**.
 3. O lugar vira **Terreno Ferido** permanente (toda magia ali gera +1 Cataclisma, para sempre).
-4. Um Chefe entra no Cenário.
+4. Um Chefe entra no Evento.
 5. A última magia conjurada fica **permanente**, do jeito que saiu, com as Dificuldades junto.
 6. ✦ Todos os personagens ganham uma **Marca do Cataclisma** (−1 de Arcano máximo e uma marca no corpo).
 
 **Colapso (16)** — muda a campanha
 1. Um Primordial acorda para o problema dos mortais.
-2. O tempo volta ao começo do Cenário, e só os jogadores lembram.
+2. O tempo volta ao começo do Evento, e só os jogadores lembram.
 3. Uma cidade, ilha ou floresta some do mapa (ou aparece uma nova).
 4. O Arcano e o Cataclisma trocam de lugar por uma sessão: dado par dá Cataclisma, ímpar dá Arcano.
 5. Um semideus morre ou nasce.
@@ -68,7 +68,7 @@ Cinco tamanhos. Escolha ou role 1d6. Os marcados com ✦ mexem na ficha dos joga
 
 ### Marés de Valor
 
-Abalos que mexem num **Valor específico**: fortalecem, enfraquecem, invertem, abrem um Reino. Custam como Tremor (**4**) se duram o Cenário, ou como Fissura (**7**) se duram a sessão. Escolha o Valor (ou role 1d10: 1 Conflitüo, 2 Sublimeyn, 3 Dominum, 4 Persona, 5 Alvorum, 6 Morbidyum, 7 Cognitium, 8 Eternyr, 9 Primitivum, 10 o mestre escolhe) e o efeito (1d8):
+Abalos que mexem num **Valor específico**: fortalecem, enfraquecem, invertem, abrem um Reino. Custam como Tremor (**4**) se duram o Evento, ou como Fissura (**7**) se duram a sessão. Escolha o Valor (ou role 1d10: 1 Conflitüo, 2 Sublimeyn, 3 Dominum, 4 Persona, 5 Alvorum, 6 Morbidyum, 7 Cognitium, 8 Eternyr, 9 Primitivum, 10 o mestre escolhe) e o efeito (1d8):
 
 | 1d8 | Maré | Efeito no Valor escolhido |
 |---|---|---|
@@ -77,7 +77,7 @@ Abalos que mexem num **Valor específico**: fortalecem, enfraquecem, invertem, a
 | 3 | **Maré Cheia** | toda magia dele sobe um Grau de efeito de graça, mas gera +2 Cataclisma |
 | 4 | **Maré Virada** | o Valor passa a agir como o oposto (Dominum liberta, Morbidyum faz durar); cada magia dele rola uma Dificuldade a mais |
 | 5 | **Seca** | o Valor não funciona: nenhuma magia, Skill ou item dele |
-| 6 | **Maré Emprestada** | todos no Cenário podem usar 1 palavra desse Valor como se fosse sua |
+| 6 | **Maré Emprestada** | todos no Evento podem usar 1 palavra desse Valor como se fosse sua |
 | 7 | **Chamado do Reino** | abre-se uma passagem para o Reino do Valor ([[08 Mundo e entidades]]); algo sai, ou alguém é puxado |
 | 8 | **Ressaca** | adversários desse Valor limpam 2 PV e perdem a fraqueza até o fim da maré |
 
@@ -96,7 +96,7 @@ Desfecho: o que fica no mundo se ninguém interferir
 Como quebrar: o que os jogadores podem fazer para parar ou desviar
 ```
 
-- **Gatilhos**: a próxima Falha de alguém; o próximo Desequilíbrio; o fim de um Cenário; um Pouso; o mestre gastar 3+ Cataclisma de uma vez; os jogadores chegarem a um lugar; uma data na ficção.
+- **Gatilhos**: a próxima Falha de alguém; o próximo Desequilíbrio; o fim de um Evento; um Pouso; o mestre gastar 3+ Cataclisma de uma vez; os jogadores chegarem a um lugar; uma data na ficção.
 - **Custo**: o primeiro elo custa normal. Os seguintes custam **1 a menos** cada (mínimo 1), porque o mundo já está andando naquela direção. Um elo que dispara por gatilho sem o mestre gastar nada só pode ser de Faísca ou Tremor.
 - **Quebrar**: os jogadores podem desviar uma Corrente pela ficção (resolver a causa) ou gastando **Arcano igual ao custo do próximo elo**, juntos. Corrente quebrada vira um lugar, uma pessoa ou um item marcado por ela.
 - **Tipos**:
@@ -104,9 +104,9 @@ Como quebrar: o que os jogadores podem fazer para parar ou desviar
   - *Conflito*: duas forças (reinos, ordens, semideuses, povos) crescem uma contra a outra; cada elo é um passo da briga.
   - *Valor*: um Valor inteiro muda no mundo (Maré Baixa → Seca → Chamado do Reino).
 
-**Exemplo — A Noite Comprida** (Valor, Alvorum): Origem: um Desequilíbrio de Grau 4 com *Eclipsar*. Elos: (1, próximo Pouso) Maré Baixa de Alvorum na região, pela sessão; (2, fim do próximo Cenário) a cidade mais próxima amanhece sem sol; (3, próximo Desequilíbrio) Chamado do Reino: abre-se o Céu de Duas Pálpebras e saem Vigias; (4, uma semana na ficção) a região vira Terreno Ferido. Como quebrar: devolver a luz ao lugar do Desequilíbrio, ou pagar 3 Arcano no elo 3.
+**Exemplo — A Noite Comprida** (Valor, Alvorum): Origem: um Desequilíbrio de Grau 4 com *Eclipsar*. Elos: (1, próximo Pouso) Maré Baixa de Alvorum na região, pela sessão; (2, fim do próximo Evento) a cidade mais próxima amanhece sem sol; (3, próximo Desequilíbrio) Chamado do Reino: abre-se o Céu de Duas Pálpebras e saem Vigias; (4, uma semana na ficção) a região vira Terreno Ferido. Como quebrar: devolver a luz ao lugar do Desequilíbrio, ou pagar 3 Arcano no elo 3.
 
-**Exemplo — O Pedágio** (Conflito): os Protetores do Arcano e a Cidade-Muralha disputam a estrada. Elos: postos de bloqueio → Zona de Anulação na ponte → milícia contra Protetores (Cenário de combate onde os jogadores escolhem lado) → a estrada fecha ou vira fronteira.
+**Exemplo — O Pedágio** (Conflito): os Protetores do Arcano e a Cidade-Muralha disputam a estrada. Elos: postos de bloqueio → Zona de Anulação na ponte → milícia contra Protetores (Evento de combate onde os jogadores escolhem lado) → a estrada fecha ou vira fronteira.
 
 **Laços**: quando um personagem entra no Laço, ele vira uma Corrente pessoal **montada junto com o jogador** ([[01 Regras centrais]], seção 5). O jogador diz como o Laço é por dentro; você traz a situação com outra cara a cada vez; os outros jogadores podem sugerir. Seja justo: o Laço é para ser encarável, não uma punição. O Cataclisma que veio de Atalhos, gaste de preferência nos elos do Laço ou no que foi evitado.
 
@@ -145,7 +145,7 @@ Todo Terreno pode virar variação: troque o Valor, a Moldura ou o tipo e ajuste
 | **Cidade-Muralha** | 1 · Social/Hostil · Conflitüo | Todo mundo anda armado; puxar arma não chama atenção, mas guardar a arma sim | *Toque de Recolher* (2): as ruas fecham, testes para andar pedem Carisma 13. *Milícia* (3): um grupo de Lacaios guardas |
 | **Porto de Vidro** | 2 · Social · Sublimeyn | Tudo é transparente: impossível se esconder atrás de parede | *Maré de Calor* (2): o vidro amolece, Agilidade 13 ou afunda até o joelho. *Estilhaço* (3): 2d10 em Área Perto |
 | **Mercado de Feras** | 1 · Social · Dominum | Barulho e cheiro: Desvantagem para ouvir e para rastrear | *Jaula Aberta* (3): uma fera escapa (Bruto). *Leilão* (1): alguém dá lance num jogador |
-| **Vila do Mesmo Dia** | 2 · Exploração · Eternyr | O dia se repete ao pôr do sol; só quem tem Eternyr ou uma âncora lembra | *Reinício* (4): o Cenário volta ao começo, os PNJs esquecem. *Déjà-vu* (1): um PNJ lembra de algo que não devia |
+| **Vila do Mesmo Dia** | 2 · Exploração · Eternyr | O dia se repete ao pôr do sol; só quem tem Eternyr ou uma âncora lembra | *Reinício* (4): o Evento volta ao começo, os PNJs esquecem. *Déjà-vu* (1): um PNJ lembra de algo que não devia |
 | **Cidade Insone** | 2 · Social · Alvorum | Ninguém dorme; Pausas aqui só limpam metade | *Sonho Vazado* (2): o sonho de alguém aparece no meio da rua. *Olhos Abertos* (3): todo mundo vê o que o grupo faz |
 | **Aldeia da Curandeira** | 1 · Social · Morbidyum | Cura aqui não custa o Arcano extra | *Febre* (2): um PNJ adoece; Ameaça de 5: ele morre. *Enterro* (1): um morto que não devia ser enterrado |
 | **Rua dos Espelhos** | 2 · Exploração · Cognitium | Cada espelho mostra uma lembrança de quem passa | *Reflexo Solto* (3): o reflexo de um jogador sai e age (Padrão). *Memória Trocada* (2): dois jogadores trocam uma Vivência até a Pausa |
