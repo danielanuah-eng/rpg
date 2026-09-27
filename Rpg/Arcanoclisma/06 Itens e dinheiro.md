@@ -12,17 +12,17 @@ Moeda padrão: **Ordynus** (abreviação **o**). A mesa pode trocar o nome confo
 | Noite numa estalagem | 2 o |
 | Kit (viagem, larápio, curandeiro, estudo) | 10 o |
 | Cavalo ou montaria comum | 60 o |
-| Arma ou armadura do Patamar 1 | 10–90 o |
-| Item do Patamar 2 | 150–400 o |
-| Item do Patamar 3 | 600–1.500 o |
-| Item do Patamar 4 | 2.500+ o |
-| Recompensa típica por sessão | 30–60 o × Patamar² |
+| Arma ou armadura da Moldura 1 | 10–90 o |
+| Item da Moldura 2 | 150–400 o |
+| Item da Moldura 3 | 600–1.500 o |
+| Item da Moldura 4 | 2.500+ o |
+| Recompensa típica por sessão | 30–60 o × Moldura² |
 
 Começa com **50 o** (Privilegiado com Herança: 75 o). Vender um item: metade do preço.
 
 ## Armas
 
-Dano = **dado da arma × Proficiência + bônus**. A cada Patamar acima do 1, a mesma arma em versão melhor ganha **+2 de bônus** e um traço a mais (o gerador escolhe). Ataque = 2d12 + atributo contra a Dificuldade do adversário.
+Dano = **dado da arma × Proficiência + bônus**. A cada Moldura acima do 1, a mesma arma em versão melhor ganha **+2 de bônus** e um traço a mais (o gerador escolhe). Ataque = 2d12 + atributo contra a Dificuldade do adversário.
 
 | Arma | Atributo | Alcance | Dano (P1) | Mãos | Traço | Preço |
 |---|---|---|---|---|---|---|
@@ -33,7 +33,7 @@ Dano = **dado da arma × Proficiência + bônus**. A cada Patamar acima do 1, a 
 | Martelo de guerra | Força | Toque | d12+3 | 2 | Pesada (−1 Esquiva), Atordoante | 40 o |
 | Lança | Força | Perto | d10+2 | 2 | Alcance | 25 o |
 | Chicote | Agilidade | Perto | d6+2 | 1 | Desarmar, Puxar | 15 o |
-| Cajado | Força | Toque | d8+1 | 2 | Serve de Catalisador | 15 o |
+| Cajado | Força | Toque | d8+1 | 2 | Serve de foco arcano | 15 o |
 | Soqueira | Força | Toque | d6+2 | 1 | Não pode ser desarmada | 5 o |
 | Funda | Agilidade | Médio | d6+1 | 1 | Barata (munição de graça) | 5 o |
 | Arco curto | Agilidade | Longe | d8+2 | 2 | — | 30 o |
@@ -44,18 +44,18 @@ Dano = **dado da arma × Proficiência + bônus**. A cada Patamar acima do 1, a 
 
 **Secundárias** (na outra mão): escudo pequeno (+1 Esquiva, 15 o), escudo grande (+1 Proteção, −1 Esquiva, 30 o), adaga de apoio (+2 de dano na principal, 10 o).
 
-**Traços**: *Arremessável* (ataca à distância indicada); *Precisa* (+1 no ataque); *Cruel* (dano Grave marca +1 PV); *Pesada* (−1 Esquiva); *Atordoante* (dano Grave: o alvo perde a próxima ativação); *Alcance* (ataca até Perto); *Desarmar* e *Puxar* (no lugar do dano); *Recarga* (depois de atacar, role 1d6: no 1, a próxima ação é recarregar); *Barulhenta* (todo mundo por perto ouve); *Serve de Catalisador*.
+**Traços**: *Arremessável* (ataca à distância indicada); *Precisa* (+1 no ataque); *Cruel* (dano Grave marca +1 PV); *Pesada* (−1 Esquiva); *Atordoante* (dano Grave: o alvo perde a próxima ativação); *Alcance* (ataca até Perto); *Desarmar* e *Puxar* (no lugar do dano); *Recarga* (depois de atacar, role 1d6: no 1, a próxima ação é recarregar); *Barulhenta* (todo mundo por perto ouve); *Serve de foco arcano*.
 
-Comparação com magia (dano médio por golpe, na força máxima de cada Patamar):
+Comparação com magia (dano médio por golpe, na força máxima de cada Moldura):
 
-| Patamar | Espada longa | Magia no Grau máx. | Custo da magia |
+| Moldura | Espada longa | Magia no Grau máx. | Custo da magia |
 |---|---|---|---|
 | 1 | 8,5 | 7,5 (G2) | 0 |
 | 2 | 16 | 14 (G3) | 1 Arcano |
 | 3 | 23,5 | 20,5 (G4) | 2 Arcano |
 | 4 | 31 | 32,5 (G5) | 4 Arcano |
 
-A arma bate um pouco mais forte num alvo só e não gasta nada; a magia acerta vários, faz efeito e muda a cena, mas custa e gera Cataclisma. Conflitüo fica no meio (+1 dado).
+A arma bate um pouco mais forte num alvo só e não gasta nada; a magia acerta vários, faz efeito e muda o Cenário, mas custa e gera Cataclisma. Conflitüo fica no meio (+1 dado).
 
 ## Armaduras
 
@@ -67,36 +67,44 @@ Somam nos Limiares e dão casas de **Proteção**.
 | **Média** (cota, escamas) | +2 / +4 | 4 | — | 50 o |
 | **Pesada** (placas) | +4 / +7 | 5 | −1 (Brutamontes não perde) | 90 o |
 
-Versão melhor por Patamar: **P2 +2/+4 · P3 +4/+9 · P4 +6/+13** a mais nos Limiares, +1 Proteção no P3.
+Versão melhor por Moldura: **P2 +2/+4 · P3 +4/+9 · P4 +6/+13** a mais nos Limiares, +1 Proteção no P3.
 
-## Catalisadores
+## Focos, armas e livros de Canal
 
-O objeto do Vínculo. Se o seu Canal é Catalisador, ele dá +1 de Sintonia enquanto está na sua mão.
+O objeto do seu Canal ([[02 Magia]]) melhora por Moldura como qualquer item:
 
-| Catalisador | Patamar | Efeito extra | Preço |
+| Canal | Moldura 2 | Moldura 3 | Moldura 4 |
 |---|---|---|---|
-| Comum (o do Vínculo) | 1 | — | — |
-| Afinado | 2 | +1 no dano de magia | 200 o |
-| Com Palavra | 3 | guarda 1 palavra de qualquer Valor (não conta no limite de Estrangeiras) | 800 o |
-| Mestre | 4 | +1 de Sintonia a mais | 3.000 o |
+| **Foco arcano** | +1 no dano de magia a mais (200 o) | guarda 1 palavra de qualquer Valor (800 o) | +1 de Sintonia (3.000 o) |
+| **Arma** | a versão melhor da arma já conta (dado e bônus) | a arma guarda 1 palavra (800 o) | ataques mágicos pela arma: +1 dado da arma (3.000 o) |
+| **Livro** | preparar também dá +1 no dano (200 o) | guarda 1 palavra (800 o) | preparar vale para as duas próximas magias (3.000 o) |
 
 ## Itens mágicos (Relíquias)
 
+Existem dois jeitos de item mágico, e o jogo quer muitos dos dois:
+
+- **Narrativos**: fazem uma coisa estranha, direta, contextual, sem número nenhum. Um anel que deixa comer pedra. Uma mochila que nunca enche. Sapatos que deixam invisível enquanto você não fala. Um cajado que conversa (e tem opinião). Eles resolvem problemas pelo que **são**, não por bônus. A lista grande está em [[12 Tesouros e itens mágicos]].
+- **Mecânicos**: as cinco famílias abaixo, com números.
+
+**Regra dos narrativos**: o item faz exatamente o que diz, sempre, sem rolar, **dentro do bom senso da mesa**. Se alguém quiser usar para algo muito maior do que o item promete, vira uma magia de Grau 2–3 usando o item como Canal, com rolagem. Todo item narrativo tem um **porém** (a mochila é pesada como o que tem dentro; o cajado mente quando está com fome).
+
+### Itens mecânicos
+
 Itens mágicos servem para **tudo**, não só para quem conjura: ajudam em testes comuns, deixam a magia mais estável, mexem em Valores específicos. Cinco famílias, para o gerador e para as cartas:
 
-| Família | O que faz | Faixa de poder (Patamar 1 → 4) |
+| Família | O que faz | Faixa de poder (Moldura 1 → 4) |
 |---|---|---|
 | **De Palavra** | carrega uma palavra de qualquer Valor; enquanto está com você, a palavra é sua (nunca como núcleo, a não ser que seja do seu Valor) e não conta no limite de Estrangeiras | 1 palavra, às vezes com cargas → 1 palavra sem cargas |
 | **De Ofício** | ajuda em mecânica básica: um atributo, um tipo de teste, Esquiva, Limiares, Proteção, PV ou Cansaço | Vantagem numa situação estreita → +1 num atributo |
 | **De Estabilidade** | mexe nas **Dificuldades** da magia: Dificuldade do Grau menor, uma Dificuldade (d20) a menos, Suavizar de graça, +1 no d20 da tabela | −1 na Dificuldade do Grau → uma Dificuldade a menos em toda magia |
 | **De Valor** | só funciona para um Valor: melhora a Skill, alivia o Drawback, ou dá a um não-Comprometido daquele Valor um pedaço da Skill | alívio pequeno → Skill melhorada |
-| **De Grau** | ajuda a magia a crescer: Ampliação de graça, +1 no dano de magia, +1 de Sintonia numa condição | 1 Ampliação por cena → +1 de Sintonia |
+| **De Grau** | ajuda a magia a crescer: Ampliação de graça, +1 no dano de magia, +1 de Sintonia numa condição | 1 Ampliação por Cenário → +1 de Sintonia |
 
-Algumas têm **cargas** (recuperam no Pouso). Regra geral de equilíbrio: um item do Patamar X nunca dá mais que **um passo** da tabela de Graus, **+1** num número, ou **uma** palavra.
+Algumas têm **cargas** (recuperam no Pouso). Regra geral de equilíbrio: um item da Moldura X nunca dá mais que **um passo** da tabela de Graus, **+1** num número, ou **uma** palavra.
 
 ### Exemplos
 
-| Item | Família | Patamar | Efeito | Preço |
+| Item | Família | Moldura | Efeito | Preço |
 |---|---|---|---|---|
 | Luva do Estrangulador | Palavra (Dominum) | 1 | palavra **Prender** | 120 o |
 | Espelho de Bolso | Palavra (Alvorum) | 1 | palavra **Refletir** | 120 o |
@@ -115,29 +123,41 @@ Algumas têm **cargas** (recuperam no Pouso). Regra geral de equilíbrio: um ite
 | Bainha Vermelha | Valor (Conflitüo) | 2 | fora de combate, suas magias podem ter 3 palavras em vez de 2 | 300 o |
 | Ampulheta Rachada | Valor (Eternyr) | 2 | o Peso do Tempo cai para +1 | 450 o |
 | Máscara do Palhaço Triste | Valor (Persona) | 2 | quando o Drama acontece, o mestre não ganha Cataclisma se você reclamar | 300 o |
-| Lanterna Fechada | Valor (Alvorum) | 2 | uma magia por cena sem ser chamativa | 400 o |
+| Lanterna Fechada | Valor (Alvorum) | 2 | uma magia por Cenário sem ser chamativa | 400 o |
 | Moeda do Barqueiro | Valor (Morbidyum) | 3 | ao usar a Volta, fica com 3 Arcano | 1.000 o |
-| Cadinho de Bolso | Valor (Sublimeyn) | 3 | o primeiro passo extra de estado de cada cena não custa Arcano | 1.000 o |
+| Cadinho de Bolso | Valor (Sublimeyn) | 3 | o primeiro passo extra de estado de cada Cenário não custa Arcano | 1.000 o |
 | Coleira de Prata | Valor (Dominum) | 3 | Vontade Quebrada dura só até a próxima Pausa | 1.100 o |
 | Máscara de Casca | Valor (Primitivum) | 3 | +1 Traço Animal nas transformações | 1.000 o |
 | Véu de Seda Cinza | Valor (Cognitium) | 3 | se Espiar falhar, o alvo não sabe que foi você | 1.000 o |
-| Luva de Forja | Grau | 1 | uma Ampliação de dano de graça por cena | 150 o |
+| Luva de Forja | Grau | 1 | uma Ampliação de dano de graça por Cenário | 150 o |
 | Tinteiro de Duas Penas | Grau | 2 | +1 no dano de magia | 400 o |
-| Coroa Pequena | Grau | 4 | +1 de Sintonia enquanto ninguém tocar em você na cena | 3.500 o |
+| Coroa Pequena | Grau | 4 | +1 de Sintonia enquanto ninguém tocar em você no Cenário | 3.500 o |
 
 ## Artefatos
 
 Raros, com nome e história. Carregam **2 ou 3 palavras** e um poder único, e cobram: usar dá Cataclisma ao mestre ou marca Cansaço. Só artefatos tornam uma magia de **Grau 5 permanente** (o artefato é consumido ou fica "ligado" ao efeito). Não se compram.
 
-Exemplo: **A Coroa de Vyal** — Persona (**Encantar**, **Amor**, **Irresistível**). Uma vez por cena, uma magia de Persona sua afeta um alvo a mais. Cada uso: o mestre ganha 2 Cataclisma e Vyal sabe onde você está.
+Exemplo: **A Coroa de Vyal** — Persona (**Encantar**, **Amor**, **Irresistível**). Uma vez por Cenário, uma magia de Persona sua afeta um alvo a mais. Cada uso: o mestre ganha 2 Cataclisma e Vyal sabe onde você está.
 
 ## Familiares
 
-Um bicho, espírito ou construto ligado a você (ligação feita num Pouso; um por vez). Tem **2 PV** próprios (qualquer dano marca 1). Dá **1 Traço** (2 no Patamar 2, 3 no Patamar 3+):
+Um bicho, espírito ou construto ligado a você (ligação feita num Pouso; um por vez). Tem **2 PV** próprios (qualquer dano marca 1). Dá **1 Traço** (2 na Moldura 2, 3 na Moldura 3+):
 
-*Batedor* (você vê e ouve por ele até Longe) · *Montaria* (move até Longe) · *Voo* · *Nado* · *Faro* · *Carregador* · *Guardião* (uma vez por cena recebe um ataque no seu lugar) · *Canal* (a magia pode sair dele) · *Palavra* (ele conhece 1 palavra de outro Valor que você usa enquanto ele está com você).
+*Batedor* (você vê e ouve por ele até Longe) · *Montaria* (move até Longe) · *Voo* · *Nado* · *Faro* · *Carregador* · *Guardião* (uma vez por Cenário recebe um ataque no seu lugar) · *Canal* (a magia pode sair dele) · *Palavra* (ele conhece 1 palavra de outro Valor que você usa enquanto ele está com você).
 
 Se o familiar cai, ele volta no próximo Pouso.
+
+## Montarias
+
+| Montaria | Moldura | O que faz | Preço |
+|---|---|---|---|
+| Cavalo | 1 | move até Longe fora de combate; carrega | 60 o |
+| Mula de carga | 1 | carrega muito, anda devagar | 30 o |
+| **Wyvern de correio** | 2 | voa; leva uma pessoa leve ou cartas; não luta | 400 o |
+| **Wyvern de sela** | 3 | voa com um cavaleiro; em combate age junto com você (Garras, dano da régua da sua Moldura ×½) | 1.200 o |
+| **Wyvern de guerra** | 4 | voa com dois; ataca com você e tem o verbo Rasante | 3.500 o |
+
+Wyverns são domesticáveis ([[08 Mundo e entidades]]); uma selvagem domada vale como montaria da Moldura dela.
 
 ## Consumíveis
 
@@ -145,15 +165,15 @@ Se o familiar cai, ele volta no próximo Pouso.
 |---|---|---|
 | Tônico de Sangue | recupera 1d4 PV | 10 o |
 | Chá de Casca-Amarga | limpa 1d4 Cansaço | 10 o |
-| Pó de Arcano | +1 Arcano (um por cena) | 25 o |
+| Pó de Arcano | +1 Arcano (um por Cenário) | 25 o |
 | Óleo de Lâmina | próximo ataque com arma +1d6 | 15 o |
 | Bomba de Fumaça | Vantagem para fugir ou se esconder | 15 o |
 | Tinta de Palavra | escreva uma palavra de qualquer Valor num objeto; vale uma vez | 30 o |
 | Sal do Equilíbrio | depois de rolar, troque a paridade de um dado | 40 o |
 
-## Materiais (para a fase 3)
+## Materiais
 
-Um material por Valor, que cai de adversários e lugares e serve para fabricar Relíquias num Pouso (3 do mesmo Valor + preço de um item do Patamar = uma Relíquia com uma palavra daquele Valor):
+Um material por Valor, que cai de adversários e lugares e serve para fabricar Relíquias num Pouso (3 do mesmo Valor + preço de um item da Moldura = uma Relíquia com uma palavra daquele Valor):
 
 | Valor | Material |
 |---|---|

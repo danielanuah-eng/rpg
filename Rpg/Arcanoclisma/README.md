@@ -2,7 +2,7 @@
 
 Sistema de RPG próprio, inspirado em Daggerheart, Rune RPG, Ethmos e Triangle Agency.
 
-**O que é**: 2d12 em que cada dado par te dá Arcano e cada dado ímpar dá Cataclisma ao mestre; magia feita de palavras (9 Valores, 36 palavras cada), em Graus que trocam o conjunto de dados sem passar de 24; combate sem turno, com holofote.
+**O que é**: 2d12 em que cada dado par te dá Arcano e cada dado ímpar dá Cataclisma ao mestre; ações descritas com verbo + modo; magia feita de palavras (9 Valores, 36 palavras cada), em Graus que trocam o conjunto de dados sem passar de 24; sem turnos: Cenários, holofote e marcadores; adversários também feitos de palavras.
 
 ## Por onde ler
 
@@ -14,8 +14,11 @@ Sistema de RPG próprio, inspirado em Daggerheart, Rune RPG, Ethmos e Triangle A
 6. [[04 Comportamentos]] — os 10 Comportamentos e seus talentos
 7. [[05 Personagem e níveis]] — criação, Vínculo, níveis 1–10
 8. [[06 Itens e dinheiro]] — armas, armaduras, catalisadores, relíquias, familiares, Ordynus
-9. [[07 Mestre - Cataclisma, adversários e terrenos]] — gastos do mestre, Eventos, régua de adversários, terrenos
-10. [[08 Mundo e entidades]] — origem, Primordiais, semideuses, Eras, perguntas de escritor
+9. [[07 Mestre - Cataclisma, eventos e terrenos]] — gastos do mestre, Eventos, Marés, Correntes, terrenos
+10. [[08 Mundo e entidades]] — origem, par e ímpar, Primordiais, semideuses, Reinos, dragões, Eras, perguntas de escritor
+11. [[10 Adversários - como criar]] — adversários por palavras, régua, maestria
+12. [[11 Bestiário]] — 54 adversários prontos, com dragões e wyverns
+13. [[12 Tesouros e itens mágicos]] — itens narrativos, Maravilhas, itens comuns, achados
 
 ## Conta dos dados
 

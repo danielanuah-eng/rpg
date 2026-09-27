@@ -59,15 +59,15 @@ Sua resposta: ✅ ok (rodada 1)
 Recomendo: manter.
 Sua resposta: ✅ ok (rodada 1)
 
-**P-13** 🟡 Primitivum: transformações por sessão = **nível** (até 10) ou **Patamar** (até 4)?
-Recomendo: **Patamar.** Com o nível, no fim do jogo vira ilimitado na prática.
+**P-13** 🟡 Primitivum: transformações por sessão = **nível** (até 10) ou **Moldura** (até 4)?
+Recomendo: **Moldura.** Com o nível, no fim do jogo vira ilimitado na prática.
 Sua resposta: ✅ ok (rodada 1)
 
 **P-14** 🟢 Símbolos e cores dos Valores (em [[03 Valores]]). Quer mudar algum? Tem alguma imagem abstrata na cabeça para algum deles?
 Sua resposta:
 
 **P-15** 🔴 O personagem tem acesso às **36 palavras do Valor desde o nível 1**, e o que cresce é quantas ele junta por magia (2 → 5).
-Recomendo: manter. Alternativa: começa com 12 e libera uma linha por Patamar.
+Recomendo: manter. Alternativa: começa com 12 e libera uma linha por Moldura.
 Sua resposta: ✅ ok (rodada 1)
 
 **P-16** 🟡 Palavra Básica **nunca é o núcleo** (a primeira palavra tem que ser do seu Valor).
@@ -92,12 +92,12 @@ Sua resposta: ✅ ok (rodada 1)
 ## Personagem
 
 **P-21** 🟡 "Uma ficha para cada Valor que a pessoa escolher": dá para ter **dois Valores**?
-Recomendo: começa com 1; no Patamar 3 pode **Despertar outro Valor** (2 avanços), com 12 palavras dele, Skill e Drawback, Grau máximo −1 nele.
+Recomendo: começa com 1; na Moldura 3 pode **Despertar outro Valor** (❗ tirei da ficha por enquanto, já que cada ficha é de um Valor só — ver P-73) (2 avanços), com 12 palavras dele, Skill e Drawback, Grau máximo −1 nele.
 Sua resposta: ✅ fica a proposta; e a ficha terá **o espaço dos 9 Valores** com caixinha por palavra (ver P-60).
 
-**P-22** 🟡 **Segundo Comportamento** no Patamar 3 (2 avanços), sem acesso aos talentos de Mestre dele.
+**P-22** 🟡 **Segundo Comportamento** na Moldura 3 (2 avanços), sem acesso aos talentos de Mestre dele.
 Recomendo: manter.
-Sua resposta: 🔁 trocado: em vez de "segundo Comportamento" inteiro, **talentos avulsos de qualquer Comportamento** ao subir de nível (Base/Hábito no Patamar 2, Hábil no 3, Mestre só do seu).
+Sua resposta: 🔁 trocado: em vez de "segundo Comportamento" inteiro, **talentos avulsos de qualquer Comportamento** ao subir de nível (Base/Hábito na Moldura 2, Hábil no 3, Mestre só do seu).
 
 **P-23** 🟡 **Vivências** (frases do passado que dão +2 gastando 1 Arcano). Você não citou, mas vem do seu documento do Rune. Ficam?
 Sua resposta: ✅ ok (rodada 1)
@@ -166,7 +166,7 @@ Sua resposta:
 ## Rodada 2 (novas, das suas observações)
 
 **P-60** 🟡 Entendi a ficha assim: um **Caderno dos Valores** com o espaço dos **9 Valores**, cada um com a tabela das 36 palavras e uma caixinha por palavra. O seu Valor vem todo marcado; nos outros você marca as Palavras Estrangeiras que aprende; mais espaços em branco para palavras que chegam por item ou talento. No app, as tabelas dos 9 com as suas palavras acesas. É isso?
-Sua resposta:
+Sua resposta: 🔁 **uma ficha para cada Valor** (mesmo desenho, muda tabela, símbolo, Skill e Drawback) com **4 espaços extras** de palavras.
 
 **P-61** 🟡 **Viver o Compromisso**: uma vez por sessão, quando seguir o Compromisso do seu Valor te colocar em apuro de verdade, ganhe 2 Arcano. Gosta das 9 frases de Compromisso em [[03 Valores]]?
 Sua resposta:
@@ -175,4 +175,32 @@ Sua resposta:
 Sua resposta:
 
 **P-63** 🟢 Os **povos dos Reinos** (Juramentados, Moldados, Mansos, Sentidos, Vigias, Esquecidos, Repetidos). Nomes ok? Quer que algum vire opção de origem para personagem (só skin e Vivência, sem regra de raça)?
+Sua resposta:
+
+## Rodada 3 (das observações sobre itens, palavras, Cenários e adversários)
+
+Aplicado: Patamar virou **Moldura**; teste por **verbo + modo** (o modo escolhe o atributo); Palavras Básicas com modos de volta, **grátis** e fora do limite; **Cenários** e **marcadores** no lugar de turnos; a palavra como **relação** do personagem; magia comum no mundo e **Canais** (foco, arma, livro...); Comportamentos com **2 talentos** (Básico/Superior) e talentos avulsos; perguntas de criação novas e **sessão zero**; **Correntes** de eventos; maestrias Anulador, Resiliente, Inquebrável, Quimerarcano, Deidade; **adversários por palavras** ([[10 Adversários - como criar]]), 54 no [[11 Bestiário]]; 144 itens e achados em [[12 Tesouros e itens mágicos]]; **dragões e wyverns**.
+
+**P-70** 🔴 **Cenário** é o nome que usei para "uma situação completa" (combate, conversa, perseguição). Você escreveu "Evento pra uma situação completa". Quer que a situação se chame **Evento** (e aí os Eventos do Cataclisma mudam de nome, ex.: **Abalos**), ou fica **Cenário**?
+Sua resposta:
+
+**P-71** 🔴 Marcadores no lugar de turnos: Instante · até a próxima Falha · até o holofote virar · até o mestre pagar · o Cenário · até o Pouso. E **Contadores** que descem a cada Falha dos jogadores. Faz sentido para a mesa?
+Sua resposta:
+
+**P-72** 🟡 Palavras Básicas em magia: **grátis e fora do limite**, até uma de cada tipo (verbo, modo, forma). Assim uma magia de nível 1 pode ser "Gelo + atacar, preciso, projétil". Ok?
+Sua resposta:
+
+**P-73** 🟡 Com uma ficha por Valor, ainda existe **despertar um segundo Valor** mais tarde (ganhando uma segunda ficha), ou cada personagem é de um Valor só para sempre, e o resto vem pelas 4 palavras extras?
+Sua resposta:
+
+**P-74** 🟡 A relação com a palavra: o jogador diz em uma frase **por que aquela palavra** funciona para o personagem; se a relação for fraca, a magia usa a Dificuldade do Grau seguinte. Ok, ou prefere sem penalidade (só narrativo)?
+Sua resposta:
+
+**P-75** 🟢 Canais: Foco (+1 dano), Arma (+1 dado da arma no dano), Livro (mais seguro se preparar), Corpo, Voz, Familiar, Marca. Falta algum jeito de exercer magia?
+Sua resposta:
+
+**P-76** 🟢 Dragões: a tabela por Valor (Dragão-Lâmina, -Mercúrio, -Coleira, -Coral, -Eclipse, -Pálido, -Véu, -Ampulheta, -Musgo). Nomes e cores ok? De onde eles vêm (pergunta 18 de [[08 Mundo e entidades]])?
+Sua resposta:
+
+**P-77** 🟢 Quer que jogadores possam **ter** uma wyvern (montaria/familiar) desde o nível 1, ou só a partir da Moldura 2?
 Sua resposta:

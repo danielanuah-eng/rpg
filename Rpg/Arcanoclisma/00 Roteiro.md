@@ -32,13 +32,15 @@ Objetivo: o jogo **funciona e é gostoso de jogar** antes de ter lore bonita. Na
 | 1.7 | Os 10 Comportamentos com talentos e progressão | [[04 Comportamentos]] | 🟡 |
 | 1.8 | Criação de personagem e níveis 1–10 | [[05 Personagem e níveis]] | 🟡 |
 | 1.9 | Armas, armaduras, catalisadores, familiares, relíquias, Ordynus | [[06 Itens e dinheiro]] | 🟡 |
-| 1.10 | Mestre: gastos de Cataclisma, Eventos, adversários, terrenos | [[07 Mestre - Cataclisma, adversários e terrenos]] | 🟡 |
+| 1.10 | Mestre: gastos de Cataclisma, Eventos, adversários, terrenos | [[07 Mestre - Cataclisma, eventos e terrenos]] | 🟡 |
 | 1.11 | Você responde as perguntas 🔴 de [[09 Perguntas pra decidir]] | — | ✅ rodada 1 (27/09) |
 | 1.11b | Aplicar rodada 1: Palavras Básicas só verbo/substantivo, talentos de outros Comportamentos, Caderno dos Valores, itens mágicos de mecânica/Dificuldade/Valor, Marés de Valor, adversários experientes, mais terrenos | vários | ✅ |
-| 1.11c | Rodada 2 de perguntas (P-60 a P-63 e as abertas) | [[09 Perguntas pra decidir]] | ⬜ |
+| 1.11c | Rodada 2 respondida | [[09 Perguntas pra decidir]] | ✅ |
+| 1.11d | Aplicar rodada 2: Moldura, teste por verbo + modo, Cenários e marcadores, palavra como relação, Canais (foco/arma/livro), 2 talentos por Comportamento, perguntas de criação e sessão zero, ficha por Valor, Correntes, maestrias, adversários por palavras, bestiário, tesouros, dragões | vários | ✅ |
+| 1.11e | Rodada 3 de perguntas (P-70 em diante) | [[09 Perguntas pra decidir]] | ⬜ |
 | 1.12 | 4 personagens prontos (nível 1) para teste | — | ⬜ |
 | 1.13 | **Teste de mesa 1**: uma cena social + um combate + uma magia em dupla | — | ⬜ |
-| 1.14 | Ajustes do teste; **teste 2** no nível 5 (Patamar 3) | — | ⬜ |
+| 1.14 | Ajustes do teste; **teste 2** no nível 5 (Moldura 3) | — | ⬜ |
 | 1.15 | Simulador de combate (`calc/`) para conferir que nenhum Comportamento/Valor domina | — | ⬜ |
 
 **Pronto quando:** uma pessoa que nunca viu o jogo cria um personagem em até 20 minutos com a ficha, e um combate de 4 jogadores contra um encontro padrão termina em 45–60 minutos sem o mestre abrir o livro mais de 3 vezes.
@@ -47,7 +49,9 @@ Perguntas de teste para a mesa (anotar depois de cada sessão):
 - Alguém ficou parado esperando muito tempo? (holofote)
 - Arcano sobrou ou faltou? Cataclisma encheu? (economia)
 - Alguém travou pensando em que palavras usar? (magia)
-- Alguma magia resolveu a cena sozinha? (Grau/limites)
+- Alguma magia resolveu o Cenário sozinha? (Grau/limites)
+- Os marcadores (até a próxima Falha, até o mestre pagar) ficaram claros sem turno?
+- Os jogadores acharam fácil escolher verbo + modo?
 - Quem só usou arma se sentiu menor que quem usou magia?
 
 ---
@@ -73,26 +77,24 @@ As perguntas de escritor estão no fim de [[08 Mundo e entidades]]. Responda com
 
 ## Fase 3 — O que vai ser gerado
 
-Objetivo: fechar a **lista de coisas** que o livro, as cartas e o app vão produzir, com o formato de dados de cada uma.
+Objetivo: fechar a **lista de coisas** que o livro e o app vão produzir, com o formato de dados de cada uma. **Cartas ficam para o fim** (fase 5, último passo): primeiro definimos tudo.
 
-| Tipo | Vira carta? | Vai para o gerador? | Imagem? |
+| Tipo | Onde está o rascunho | Vai para o gerador? | Imagem? |
 |---|---|---|---|
-| Talentos de Comportamento | sim | ficha | não (ícone) |
-| Ressonâncias de Valor | sim | ficha | não (símbolo do Valor) |
-| Palavras (9 × 36 + 36 básicas) | tabela na ficha de Valor | ficha + sorteio de magia | não |
-| Magias de exemplo | sim | sorteio de magia | sim |
-| Armas, armaduras | sim | ficha (loja) + tesouro | sim |
-| Catalisadores, relíquias, artefatos | sim | ficha + tesouro | sim |
-| Familiares | sim | ficha | sim |
-| Consumíveis e materiais | sim | ficha + tesouro | sim |
-| Terrenos | sim | gerador de lugares | sim |
-| Adversários | **não** (só no gerador) | gerador de encontros, balanceado | sim (só no gerador) |
-| Eventos de Cataclisma | tabela no escudo | gerador | não |
-| PNJs sociais, nomes, ganchos | não | gerador | opcional |
+| Talentos de Comportamento | [[04 Comportamentos]] | ficha | não (ícone) |
+| Ressonâncias de Valor | [[03 Valores]] | ficha | não (símbolo do Valor) |
+| Palavras (9 × 36 + Básicas) | [[03 Valores]], [[02 Magia]] | ficha + sorteio de magia | não |
+| Armas, armaduras, montarias | [[06 Itens e dinheiro]] | ficha (loja) + tesouro | sim |
+| Itens mecânicos (5 famílias) | [[06 Itens e dinheiro]] | ficha + tesouro | sim |
+| Itens narrativos, Maravilhas, comuns, bugigangas | [[12 Tesouros e itens mágicos]] | tesouro | sim (os mágicos) |
+| Familiares, materiais, consumíveis | [[06 Itens e dinheiro]] | ficha + tesouro | sim |
+| Terrenos, cidades, Reinos | [[07 Mestre - Cataclisma, eventos e terrenos]], [[08 Mundo e entidades]] | gerador de lugares | sim |
+| Adversários (palavras) | [[10 Adversários - como criar]], [[11 Bestiário]] | gerador de encontros, balanceado | sim (só no gerador) |
+| Dragões e wyverns | [[08 Mundo e entidades]], [[11 Bestiário]] | gerador | sim |
+| Eventos, Marés, Correntes | [[07 Mestre - Cataclisma, eventos e terrenos]] | gerador | não |
+| PNJs sociais, nomes, ganchos | — | gerador | opcional |
 
-Formato de dados (proposta): um JSON por tipo em `dados/`, com o mesmo campo `patamar` em tudo, para o gerador escolher e balancear sozinho.
-
----
+Formato de dados (proposta): um JSON por tipo em `dados/`, com o mesmo campo `moldura` em tudo, para o gerador escolher e balancear sozinho.
 
 ## Fase 4 — Arte
 
@@ -114,11 +116,11 @@ Entregas, na mesma família do Peso do Céu:
 1. **App** (um HTML só, funciona offline, instalável no celular):
    - **Ficha digital**: tudo que o personagem liberou aparece nela; contadores de Arcano/Cansaço/PV/Proteção clicáveis; montador de magia (escolhe palavras → mostra Grau, custo, dados, Dificuldade, e rola os dados contando pares/ímpares); loja em Ordynus; subir de nível guiado; guardar/importar/exportar.
    - **Escudo do mestre digital**: contador de Cataclisma com Transbordo, tabela de Eventos, holofote.
-   - **Geradores**: encontro (balanceado pelo Patamar e nº de jogadores), adversário com imagem, terreno, tesouro/item, relíquia com palavra, PNJ, nome, gancho, Evento de Cataclisma, "magia aleatória" (d66 nas tabelas).
+   - **Geradores**: encontro (balanceado pela Moldura e nº de jogadores), adversário com imagem, terreno, tesouro/item, relíquia com palavra, PNJ, nome, gancho, Evento de Cataclisma, "magia aleatória" (d66 nas tabelas).
 2. **Ficha de papel** enfeitada para imprimir:
    - Folha 1 (personagem): parte **pequena** para Comportamento, atributos, PV/Cansaço/Proteção, armas.
    - **Uma folha por Valor**: parte **grande** para magia — tabela 6×6 das 36 palavras, Skill, Drawback, espaços em branco para Palavras Estrangeiras, tabela de Graus e custos, registro de magias favoritas.
    - Folha do Vínculo (as perguntas de criação) e folha de Familiar.
-3. **Livro** (PDF) com capa, **baralho** de cartas (itens, magias de exemplo, talentos, terrenos) e **escudo do mestre** (PDF).
+3. **Livro** (PDF) com capa e **escudo do mestre** (PDF).
 4. **Site** em um **Netlify novo** (separado do Peso do Céu): página de apresentação com capa, documentos para baixar, botão para instalar o app, galeria de imagens.
-5. `calc/conferir.py`: confere antes de publicar que todo item/adversário está dentro da faixa do seu Patamar (o "balanceador" que o gerador usa).
+5. `calc/conferir.py`: confere antes de publicar que todo item/adversário está dentro da faixa do sua Moldura (o "balanceador" que o gerador usa).

@@ -4,12 +4,12 @@
 
 ## O jogo em um minuto
 
-- Quando seu personagem tenta algo arriscado, você rola **2d12 + atributo** contra uma **Dificuldade**.
+- Quando seu personagem tenta algo arriscado, você **descreve a ação com uma palavra de ação e um modo** ("roubar *furtivo*", "convencer *gentil*") e rola **2d12 + o atributo do modo** contra uma **Dificuldade**.
 - **Cada dado par te dá 1 Arcano. Cada dado ímpar dá 1 Cataclisma ao mestre.** Par é controle e fechamento; ímpar é o incompleto, que muda (ver [[08 Mundo e entidades]]).
 - **Dois dados iguais = Crítico.**
 - Magia não usa atributo: você junta **palavras** do seu Valor, escolhe o **Grau** (o tamanho do feito) e rola um conjunto de dados que **sempre soma no máximo 24**: 2d12 → 3d8 → 4d6 → 6d4. Mais dados = mais confiável, mas mais Arcano *e* mais Cataclisma saindo da mesa.
 - Adversários rolam **d20**. O mestre gasta **Cataclisma** para fazer o mundo reagir.
-- Não há turnos: quem tem o **holofote** age; ele passa ao mestre quando alguém falha ou tira um resultado Ímpar.
+- Não há turnos nem rodadas: o jogo anda em **Cenários** (uma situação completa: uma briga, uma conversa, uma fuga). Quem tem o **holofote** age; ele passa ao mestre quando alguém falha ou tira Ímpar. Efeitos duram por **marcadores** (até a próxima falha, até o fim do Cenário...), nunca por turno.
 
 ---
 
@@ -29,6 +29,21 @@ Seis, usados só em testes e ataques com arma. **Não entram em magia** (exceto 
 Distribuição inicial: **+2, +1, +1, 0, 0, −1**. Máximo **+5**.
 
 ## 2. O teste: 2d12 + atributo
+
+### Descrever a ação: palavra de ação + modo
+
+Todo teste começa com o jogador dizendo **o que** faz e **como**, usando as **Palavras Básicas** ([[02 Magia]]): um **verbo de ação** e um **modo** (adjetivo). O **modo escolhe o atributo**.
+
+- "Vou **roubar**, **furtivo**" → Agilidade.
+- "Vou **convencer**, **gentil**" → Carisma.
+- "Vou **empurrar** a porta, **bruto**" → Força.
+- "Vou **procurar**, **metódico**" → Inteligência.
+
+A palavra precisa fazer **sentido concreto** na ficção: o mestre pode recusar um modo que não combina com o que foi descrito ("roubar *imponente*" no meio da feira não é furtar, é assaltar — então é outro teste). Palavras de ação não custam nada. Se o jogador descreve sem as palavras, o mestre ajuda a achar as duas.
+
+Uma magia de **Grau 1** pode ser o **meio** da ação ("atacar, preciso, com uma agulha de gelo"; "esconder, furtivo, numa sombra que eu puxo"): você rola o teste normal da ação e a magia é o seu instrumento (num ataque, dano **1d8 + Moldura**). Sozinha, sem virar teste, a magia de Grau 1 só acontece, sem rolar.
+
+### Rolar
 
 Role 2d12, some o atributo (e bônus), compare com a Dificuldade. Igual ou maior = sucesso.
 
@@ -73,7 +88,7 @@ Por rolagem de teste o jogador ganha em média **1 Arcano** (2 em magia de Grau 
 |---|---|
 | 1 | **Vivência**: +2 numa rolagem em que uma Vivência sua se aplica (uma por rolagem) |
 | 1 | **Ajudar**: dê Vantagem a um aliado (descreva como) |
-| 1 | **Palavra extra** numa magia (cada uma além da primeira) |
+| 1 | **Palavra extra** numa magia (cada palavra de Valor além da primeira; Palavras Básicas não custam) |
 | 1–3 | **Ampliar** uma magia um passo (1 no Grau 1–2, 2 no Grau 3–4, 3 no Grau 5) |
 | 2 | **Suavizar**: role de novo o d20 de uma Dificuldade de magia e fique com o melhor |
 | 3 | **Hábito**: o talento especial do seu Comportamento |
@@ -86,20 +101,35 @@ Por rolagem de teste o jogador ganha em média **1 Arcano** (2 em magia de Grau 
 
 O mestre **começa a sessão com 2 por jogador**, máximo **20**.
 
-**Transbordo**: se o mestre ganharia Cataclisma acima de 20, o excesso não some — ele dispara *na hora* um Evento de Cataclisma do tamanho do excesso (ver [[07 Mestre - Cataclisma, adversários e terrenos]]). O mestre não consegue "guardar tudo pro chefe"; o mundo vaza.
+**Transbordo**: se o mestre ganharia Cataclisma acima de 20, o excesso não some — ele dispara *na hora* um Evento de Cataclisma do tamanho do excesso (ver [[07 Mestre - Cataclisma, eventos e terrenos]]). O mestre não consegue "guardar tudo pro chefe"; o mundo vaza.
 
 O mestre gasta Cataclisma para: pegar o holofote, ativar mais adversários, ativar habilidades de adversários e de lugares, trazer reforços, endurecer uma magia (+2 na Dificuldade por ponto, até +4), cancelar uma magia Vacilante, e disparar Eventos (que podem mexer até na ficha dos jogadores). Tabela completa no arquivo 07.
 
-## 5. Holofote (combate sem turno)
+## 5. Cenários e holofote
 
-Não há iniciativa nem rodada.
+Não há iniciativa, turno nem rodada. A unidade do jogo é o **Cenário**: uma situação completa, com começo e fim na ficção (um combate, um interrogatório, uma negociação, uma perseguição, um ritual). O mestre anuncia quando um Cenário começa e o que o encerra ("acaba quando vocês saírem da ponte, ou quando a ponte cair").
+
+Dentro do Cenário, o ritmo é o holofote:
 
 - Os jogadores decidem entre si quem age. Quem age faz **uma ação** (atacar, conjurar, ajudar, uma manobra) e pode se mover até **Perto** junto com ela.
 - **O holofote passa ao mestre** quando um jogador **falha** ou tira **Ímpar** (dois ímpares). Na vez dele, o mestre ativa **1 adversário de graça** e **mais 1 por Cataclisma** gasto; depois devolve aos jogadores.
 - O mestre pode **tomar o holofote** a qualquer momento gastando 1 Cataclisma (ex.: logo depois de uma magia gigante).
 - Regra de mesa: ninguém age duas vezes seguidas se outro jogador ainda não agiu desde a sua última ação, a não ser que todos concordem.
 
-**Duração em ações.** Efeitos que "duram 3 ações" contam **qualquer** ação de **qualquer** personagem (jogador ou adversário). Use um dado de contagem na mesa.
+### Marcadores (no lugar de turnos)
+
+Nada dura "X turnos". Efeitos duram até um **marcador** acontecer, e os marcadores estão amarrados aos erros e à economia, que é onde o jogo se equilibra:
+
+| Marcador | Termina quando... |
+|---|---|
+| **Instante** | acontece e acaba |
+| **Até a próxima Falha** | qualquer jogador falhar uma rolagem |
+| **Até o holofote virar** | o holofote passar ao mestre |
+| **Até o mestre pagar** | o mestre gastar Cataclisma igual ao Grau para encerrar (ele pode, a qualquer momento) |
+| **O Cenário** | a situação terminar |
+| **Até o Pouso** | a próxima noite de descanso |
+
+**Contadores**: para coisas que se aproximam (o teto caindo, o ritual terminando, reforços chegando), o mestre põe um contador (ex.: 4). Ele desce 1 **a cada Falha dos jogadores** e **a cada vez que o mestre gasta 3+ Cataclisma de uma vez**. Quem erra acelera o perigo; quem acerta ganha tempo.
 
 ## 6. Alcance
 
@@ -145,7 +175,7 @@ Limiares = base do Comportamento + nível + armadura.
 
 ## 9. Descansos
 
-**Pausa** (uma hora): escolha **dois**: recuperar 1d4 + Patamar PV; limpar 1d4 + Patamar Cansaço; restaurar toda a Proteção; **Meditar** (+1 Arcano). O mestre ganha **1d4 Cataclisma**.
+**Pausa** (uma hora): escolha **dois**: recuperar 1d4 + Moldura PV; limpar 1d4 + Moldura Cansaço; restaurar toda a Proteção; **Meditar** (+1 Arcano). O mestre ganha **1d4 Cataclisma**.
 
 **Pouso** (uma noite): escolha **dois**, cada um completo: todos os PV; todo o Cansaço; toda a Proteção; trocar uma Palavra Estrangeira; trabalhar num projeto. O mestre ganha **1d4 + nº de jogadores** de Cataclisma.
 
@@ -153,7 +183,7 @@ Limiares = base do Comportamento + nível + armadura.
 
 Ao marcar o último PV, escolha:
 
-- **Apagar**: você cai inconsciente e volta depois da cena com 1 PV. Role 1d12; se tirar **até o seu nível**, ganha uma **Marca do Cataclisma** (risque 1 casa de Arcano máximo, e diga que marca ficou no seu corpo).
+- **Apagar**: você cai inconsciente e volta depois do Cenário com 1 PV. Role 1d12; se tirar **até o seu nível**, ganha uma **Marca do Cataclisma** (risque 1 casa de Arcano máximo, e diga que marca ficou no seu corpo).
 - **Última Palavra**: conjure uma magia 1 Grau acima do seu máximo, sem pagar Arcano e sem rolar Dificuldades. Depois, seu personagem morre.
 - **Jogar os dados**: role 2d12. **Crítico ou Par**: levanta com PV e Cansaço limpos. **Equilíbrio**: levanta com 1 PV e uma Marca do Cataclisma. **Ímpar**: morre.
 
@@ -163,17 +193,17 @@ Ao marcar o último PV, escolha:
 
 Frases curtas do passado do personagem ("Cresci num porto", "Fui soldado do Rei-Semideus", "Sei mentir para guardas"). Começa com **2**, cada uma vale **+2** quando você gasta **1 Arcano** numa rolagem em que ela faz sentido. Ganha mais nos níveis 2, 5 e 8.
 
-## 12. Patamar
+## 12. Moldura
 
-Quase tudo que cresce com o nível passa pelo **Patamar**:
+Quase tudo que cresce com o nível passa pela **Moldura**:
 
-| Nível | Patamar | Grau máximo | Palavras por magia | Sintonia (com o Canal) | Proficiência |
+| Nível | Moldura | Grau máximo | Palavras de Valor por magia | Sintonia | Proficiência |
 |---|---|---|---|---|---|
 | 1 | 1 | 2 | 2 | +2 | 1 |
 | 2–4 | 2 | 3 | 3 | +3 | 2 |
 | 5–7 | 3 | 4 | 4 | +4 | 3 |
 | 8–10 | 4 | 5 | 5 | +5 | 4 |
 
-Regra fácil de lembrar: **Grau máximo, Palavras e Sintonia = Patamar + 1**. (Sintonia é Patamar + 1 do Canal; sem a condição do Canal, é só o Patamar.)
+Regra fácil de lembrar: **Grau máximo, Palavras e Sintonia = Moldura + 1**. (Se a fraqueza do seu Canal acontecer, a Sintonia cai para a Moldura.)
 
 **Sintonia** é o bônus que se soma aos dados de magia (e ao dano de magia). Atributo não entra em magia.

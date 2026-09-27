@@ -65,10 +65,10 @@ def main():
             linha.append(f"{100*ok/total:.0f}")
         print(f"| {nome} | " + " | ".join(linha) + " |")
 
-    print("\n## Conjuração no Grau máximo do Patamar (dados + Sintonia contra a Dificuldade do Grau)\n")
-    # Sintonia = Patamar + 1 (o +1 vem do Canal)
-    graus = [("2d12", 2, 11, "G2 no Patamar 1"), ("3d8", 3, 13, "G3 no Patamar 2"),
-             ("4d6", 4, 15, "G4 no Patamar 3"), ("6d4", 5, 18, "G5 no Patamar 4")]
+    print("\n## Conjuração no Grau máximo da Moldura (dados + Sintonia contra a Dificuldade do Grau)\n")
+    # Sintonia = Moldura + 1 (o +1 vem do Canal)
+    graus = [("2d12", 2, 11, "G2 na Moldura 1"), ("3d8", 3, 13, "G3 na Moldura 2"),
+             ("4d6", 4, 15, "G4 na Moldura 3"), ("6d4", 5, 18, "G5 na Moldura 4")]
     print("| caso | dados | Sintonia | Dificuldade | chance |")
     print("|---|---|---|---|---|")
     for nome, sint, dif, caso in graus:
@@ -76,9 +76,9 @@ def main():
         ok = sum(n for s, n in somas.items() if s + sint >= dif)
         print(f"| {caso} | {nome} | +{sint} | {dif} | {100*ok/total:.0f}% |")
 
-    print("\n## Ataque mágico (dados + Sintonia = Patamar + 1) contra a Dificuldade típica de adversário\n")
+    print("\n## Ataque mágico (dados + Sintonia = Moldura + 1) contra a Dificuldade típica de adversário\n")
     adv = [(1, 12), (2, 14), (3, 16), (4, 18)]
-    print("| Patamar | Dif. adversário | " + " | ".join(POOLS) + " |")
+    print("| Moldura | Dif. adversário | " + " | ".join(POOLS) + " |")
     print("|---|---|" + "---|" * len(POOLS))
     for pat, dif in adv:
         cel = []

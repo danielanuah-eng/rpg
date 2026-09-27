@@ -70,7 +70,7 @@ Poucos. Uns se dizem deuses, outros vivem como gente comum, outros são donos de
 
 ## Os Reinos
 
-Cada Primordial deixou no mundo, ou fora dele, um lugar onde o Valor é a lei. Arcano e Cataclisma também têm os seus. São **dimensões** que tocam o mundo em pontos certos (e se abrem com a Maré "Chamado do Reino"). Como Terreno, são Patamar 3–4.
+Cada Primordial deixou no mundo, ou fora dele, um lugar onde o Valor é a lei. Arcano e Cataclisma também têm os seus. São **dimensões** que tocam o mundo em pontos certos (e se abrem com a Maré "Chamado do Reino"). Como Terreno, sãa Moldura 3–4.
 
 | Reino | Valor | Quem vive lá | O que acontece lá | Desafio | Benefício |
 |---|---|---|---|---|---|
@@ -91,7 +91,8 @@ Cada Primordial deixou no mundo, ou fora dele, um lugar onde o Valor é a lei. A
 Não há raças: há gente, de todas as aparências, e as culturas nascem do lugar e do Valor que manda nele.
 
 - **Comprometidos**: quem usa magia. A vida, o estilo e o poder se orientam pelo Valor, na personalidade e no jeito de agir (ver o Compromisso de cada Valor em [[03 Valores]]). Em muitos lugares se reconhece um Comprometido pelo jeito antes de ver a magia.
-- **Gente comum**: a maioria. Vive com a magia como se vive com o tempo: às vezes ajuda, às vezes destrói a colheita.
+- **Magia é comum.** Quem tem, usa o tempo todo: no fogão, na oficina, na lavoura, na briga. Cada um exerce do seu jeito (um foco, a própria arma, um livro, o corpo, a voz). O mundo só bagunça quando alguém usa magia de forma instável, poderosa demais ou sem parar — é aí que aparecem Feridas, Rasgados e Protetores.
+- **Gente sem Valor** também existe, e convive com a magia como se convive com o tempo: às vezes ajuda, às vezes destrói a colheita.
 - **Culturas de Valor** (sementes, para cada mesa expandir):
   - *Cidades-muralha* de Conflitüo, onde a arma é roupa;
   - *Portos e oficinas* de Sublimeyn, onde tudo é reaproveitado e refundido;
@@ -109,6 +110,28 @@ Não há raças: há gente, de todas as aparências, e as culturas nascem do lug
   - **Escolas de Magia**.
 - **Dinheiro**: **Ordynus** (cada mesa pode renomear conforme a Era).
 
+## Dragões e wyverns
+
+Dragões são criaturas **deste mundo**, e **representam os Valores**. Cada dragão nasce de um Valor e carrega isso no corpo: cor, forma, e **chamas luminosas e bruxuleantes** que saem dos espinhos e dos olhos. Dentro de um mesmo Valor as formas e aparências variam muito; a tabela dá o mais comum.
+
+- **Os mais velhos são inteligentes e sapientes**: falam, negociam, lembram Eras inteiras. Um Ancião raramente é "só" um combate.
+- **Os mais novos não**: são feras, guiadas por fome, território e brilho.
+- **Wyverns** são os parentes menores, sem sapiência e sem Valor forte: **domesticáveis e montáveis**. Cidades e exércitos criam wyverns para voo, correio e guerra.
+
+| Valor | Dragão | Cor e forma | Chamas (espinhos e olhos) | O sopro |
+|---|---|---|---|---|
+| Conflitüo | **Dragão-Lâmina** | vermelho-ferrugem, espinhos como lâminas | vermelhas, pulsando como coração em batalha | estilhaços de metal em brasa (dano e −1 Proteção) |
+| Sublimeyn | **Dragão-Mercúrio** | prata que escorre e endurece | azul-prateadas, que viram vapor, gota e cristal | muda o estado do chão (preso em pedra ou lama) |
+| Dominum | **Dragão-Coleira** | roxo-sangue, escamas que parecem correntes | violetas, só nos olhos | quem respira obedece uma ordem |
+| Persona | **Dragão-Coral** | coral, com um rosto quase humano | rosadas, mudando de tom com o humor dele | uma emoção (medo, paixão, fúria) |
+| Alvorum | **Dragão-Eclipse** | dourado de um lado, negro do outro | brancas nos espinhos, negras nos olhos | cegueira ou pesadelo |
+| Morbidyum | **Dragão-Pálido** | verde-pálido, ossos aparecendo | verdes, frias e tremidas | apodrece os inimigos, ou fecha feridas de quem ele quiser |
+| Cognitium | **Dragão-Véu** | índigo, meio transparente | sem cor; só se vê de canto de olho | esquecimento (uma palavra selada, o último minuto apagado) |
+| Eternyr | **Dragão-Ampulheta** | azul-noite com pontos brancos, como céu | chamas que se mexem devagar demais | envelhece, ou para no tempo |
+| Primitivum | **Dragão-Musgo** | verde-musgo e âmbar, galhos nos chifres | âmbar, como vaga-lumes | raízes que prendem, ou um instante como bicho |
+
+Os números estão no [[11 Bestiário]] (Dragonete, Jovem, Adulto, Ancião, Wyverns).
+
 ## As duas metades e quem as serve
 
 - **Protetores do Arcano**: servem o controle. Onde há magia demais, eles aparecem e fecham: selam palavras, anulam magia grande, levam gente embora.
@@ -121,7 +144,7 @@ Não há raças: há gente, de todas as aparências, e as culturas nascem do lug
 | **Era Muda** (antes da magia) | ninguém tem Valor; mundo duro e comum | sem Valor; Arcano e Cataclisma continuam como sorte e azar (Arcano só em usos sem magia) |
 | **Era dos Semideuses** | poucos Comprometidos, semideuses reinam | Grau máximo −1 para todos; semideuses aparecem com frequência |
 | **Era da Cisão** (padrão) | logo depois da divisão; magia instável, Protetores e Rasgados por toda parte | regras como estão |
-| **Era Tecnomaga** | futuro; magia e máquina; cidades verticais | armas de fogo; Canal **Dispositivo** (um Catalisador que pode ser hackeado); Terrenos tecnológicos |
+| **Era Tecnomaga** | futuro; magia e máquina; cidades verticais | armas de fogo; Canal **Dispositivo** (um foco arcano que pode ser hackeado); Terrenos tecnológicos |
 | **Escola de Magia** (modo, cabe em qualquer Era) | academia, turmas, rivalidade | Terrenos de escola; Protetores como inspetores |
 
 ---
@@ -154,8 +177,10 @@ Responda as que quiser; as ★ são as que mais destravam.
 15. Um Rasgado pode ser domado, ter nome, virar gente?
 16. Onde vivem os semideuses que "fingem ser comuns", e quantos existem que ninguém conhece?
 17. Zahun tem outros filhos? Que rostos ele costuma usar?
+18. ★ De onde vêm os dragões: dos Primordiais, dos Valores direto, de antes da divisão? E por que Vyal tem pele de dragão?
+19. Onde os Anciãos vivem, e o que as pessoas oferecem a eles?
 
 ### Tom
-18. ★ Aventura heroica, horror, drama político, comédia? (Pode ser "depende da Era".)
-19. Uma cena que, se acontecesse na mesa, faria você dizer "é esse o meu jogo".
-20. O que você **não quer** que o jogo vire.
+20. ★ Aventura heroica, horror, drama político, comédia? (Pode ser "depende da Era".)
+21. Uma cena que, se acontecesse na mesa, faria você dizer "é esse o meu jogo".
+22. O que você **não quer** que o jogo vire.
