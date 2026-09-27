@@ -134,7 +134,7 @@ def lutar(log=None):
         if sucesso:
             dano = dano_fn() * (2 if crit else 1)
             if alvo.lacaio:
-                mortos = 1 + max(0, dano - 1) // 4
+                mortos = limiar(dano, 4, 7)  # Lacaios: 1/2/3 como no Daggerheart
                 alvo.lacaio -= mortos
                 if alvo.lacaio <= 0:
                     alvo.pv = 0

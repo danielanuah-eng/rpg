@@ -41,7 +41,7 @@ A **Dificuldade** é o número que os jogadores tiram para acertar o adversário
 
 | Papel | Ajuste sobre a régua | Verbos | Pontos |
 |---|---|---|---|
-| **Lacaio** | Dif −2, 1 PV, sem Limiares, dano = metade. Vem em grupo do tamanho da mesa; cada 4 de dano que sobra derruba mais um | 1–2 | 1 por grupo |
+| **Lacaio** | Dif −2, dano = metade. Vem em grupo do tamanho da mesa. O grupo tem **Limiares pela metade** (M1 4/7 · M2 6/11 · M3 9/16 · M4 12/23) e o dano funciona **como no Daggerheart, 1/2/3**: um golpe abaixo do Maior derruba **1** Lacaio, no Maior derruba **2**, no Grave derruba **3** | 1–2 | 1 por grupo |
 | **Social** | não luta | 2 (de conversa) | 1 |
 | **Suporte** | PV −1 | 2–3, um de cuidar ou proteger | 1 |
 | **Padrão** | a régua | 2–3 | 2 |

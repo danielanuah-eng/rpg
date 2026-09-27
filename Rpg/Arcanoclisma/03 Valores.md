@@ -38,7 +38,7 @@ Oposição serve para duas coisas: **Magia em Dupla de opostos** (mais forte, ma
 - **Primordial**: Thorvessa, a Que Separa. **Oposto**: Persona.
 - **Compromisso**: "Não fujo de briga que é minha." Enfrenta de frente, resolve no choque, protege os seus com o corpo.
 - **Skill · Fio da Guerra**: em combate, cada magia sua ganha **+1 dado de dano** ou **+2 no total** (escolha ao conjurar).
-- **Drawback · Só Sabe Brigar**: magias fora de combate ou violência têm no máximo **2 palavras**.
+- **Drawback · Só Sabe Brigar**: magias fora de combate ou violência custam **+2 Arcano**.
 - **Ressonância II · Veterano**: marque 1 Cansaço para ter os dois bônus do Fio da Guerra na mesma magia.
 - **Ressonância III · Arsenal Vivo**: invocar uma arma ou escudo de Conflitüo é Grau 1 para você. Dura o Evento; ataques com ela usam Força ou Agilidade e causam 2d10 + Sintonia.
 
@@ -118,7 +118,7 @@ Perguntas de vínculo: *A quem você já obedeceu e jurou nunca mais? · Você a
 - **Símbolo**: uma máscara partida ao meio, uma metade sorrindo. **Cor**: coral.
 - **Primordial**: Zahun, o Deus Humano. **Oposto**: Conflitüo.
 - **Compromisso**: "Gente vem antes de tudo." Se envolve, sente em voz alta, não abandona quem pediu ajuda.
-- **Skill · Toque Humano**: magias que afetam **pessoas** (corpo, alma ou emoção) têm **−2 na Dificuldade**. ❓ P-11
+- **Skill · Toque Humano**: magias que afetam **pessoas** (corpo, alma ou emoção) têm **−2 na Dificuldade** (depois de escolher qual Dificuldade vale).
 - **Drawback · Drama**: se a magia falhar, o mestre descreve o resultado mais inútil ou mais cômico. Se você reclamar, ele ganha Cataclisma igual ao Grau.
 - **Ressonância II · Empatia**: role uma Dificuldade a menos quando a magia afetar pessoas.
 - **Ressonância III · Carne Moldável**: mudar o próprio corpo (rosto, músculos, guelras, garras) é Grau 1 para você e dura até você desfazer.
@@ -277,7 +277,7 @@ Perguntas de vínculo: *Que animal você seria sem pensar duas vezes? · Qual lu
 
 | Valor | Oposto | Skill | Drawback |
 |---|---|---|---|
-| Conflitüo | Persona | +1 dado de dano ou +2 em combate | fora de combate, 2 palavras |
+| Conflitüo | Persona | +1 dado de dano ou +2 em combate | fora de combate, magia custa +2 Arcano |
 | Sublimeyn | Eixo | Mistura (2 elementos numa palavra) | +1 Arcano por passo de estado |
 | Dominum | Primitivum | reação | falhou, não repete no alvo |
 | Persona | Conflitüo | −2 Dificuldade em pessoas | falha vira comédia |

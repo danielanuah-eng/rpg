@@ -268,10 +268,10 @@ Sua resposta: ✅ **A + B**, com mudanças: Laço é uma **descrição** (relaç
 Aplicado em [[02 Magia]]: palavra usada sempre, repetidas vezes, **se funde** (círculo na ficha); a fundida **atrapalha** (o mestre a faz entrar com 1 Cataclisma; ela colore a perspectiva, com Desvantagem para ver o que ela esconde; fica literal e sem +1 de Relação); fundida por muito tempo **vira um Laço novo**; **desfusão só por ação** (Passo de Valor usando a palavra num sentido novo, ou agindo contra o puxão dela), e aí o jogador escreve um **sentido** ao lado da palavra.
 
 **P-97** 🟡 "Sempre a mesma palavra": quer um número para ajudar a mesa (ex.: a mesma palavra como núcleo em **3 magias seguidas**, ou em todas as magias de uma sessão), ou deixa no olho do mestre e da mesa?
-Sua resposta:
+Sua resposta: ✅ no olho do mestre e da mesa.
 
 **P-98** 🟡 Quanto tempo fundida até **virar Laço**: uma sessão inteira fundida? Duas?
-Sua resposta:
+Sua resposta: ✅ uma sessão inteira fundida → vira Laço.
 
 ## Rodada 11 — Do teste simulado ([[13 Teste de mesa 1]])
 
@@ -279,17 +279,40 @@ Sua resposta:
 Sua resposta: 🔁 sem regra fixa: **o mestre gasta Cataclisma quando quiser** e age sempre que for conveniente e legal para a narrativa. Aplicado em [[01 Regras centrais]] (seção 6) e no arquivo 07.
 
 **P-100** 🟡 **Persona**: o −2 vale **depois** de escolher a maior Dificuldade (senão some na Moldura 1). Ok?
-Sua resposta:
+Sua resposta: ✅ ok (aplicado).
 
 **P-101** 🟡 **Conflitüo na Moldura 1**: o Drawback (2 palavras fora de combate) não pesa enquanto o limite de todos é 2. Troca por "fora de combate, a palavra extra custa 2 Arcano", ou deixa aparecer só da Moldura 2 em diante?
-Sua resposta:
+Sua resposta: ✅ aumentar o custo: fora de combate, magia de Conflitüo custa **+2 Arcano**. E testar a economia inteira: ver [[14 Teste das mecânicas]] e P-104.
 
 **P-102** 🟡 **Lacaios**: "um acerto derruba um Lacaio; cada 4 de dano a mais derruba outro". Ok?
-Sua resposta:
+Sua resposta: ✅ dano como no Daggerheart, 1/2/3: Lacaios com Limiares pela metade; cada golpe derruba 1, 2 ou 3.
 
 ## Rodada 12 — Emoldurar
 
 ✅ "Holofote" saiu: **o mestre emoldura**. Os jogadores agem; quando alguém falha ou tira Ímpar (ou quando o mestre gasta 1 Cataclisma, a qualquer momento), o mestre **emoldura** a cena: pega, descreve o que mudou, faz o mundo e os adversários agirem, e devolve a vez. O marcador "até o holofote virar" virou **"até o mestre emoldurar"**.
 
 **P-103** 🟡 **Moldura** também é o nome dos níveis de poder (Moldura 1 a 4). "O mestre emoldura" e "Moldura 3" convivem bem (a Moldura do personagem é o tamanho do quadro que ele consegue ocupar), ou prefere trocar o nome de um dos dois?
+Sua resposta: ✅ ficou legal: Moldura (nível) e emoldurar convivem.
+
+## Rodada 13 — Do teste das mecânicas ([[14 Teste das mecânicas]])
+
+**P-104** 🔴 **Economia**: magia de **Grau 2 custa 1 Arcano** (custos por Grau 0/1/2/3/5). Mantém "cada dado par = 1 Arcano" e para a sobra (fim de sessão com ~5 em vez de ~7, quase nunca no máximo).
+Sua resposta:
+
+**P-105** 🔴 **Teto de ajudas**: no máximo **duas ajudas por rolagem** (Vivência, Ajudar, Atalho, Forçar, talentos; a Relação não conta).
+Sua resposta:
+
+**P-106** 🟡 **Uma Dificuldade só na magia**: contra um alvo, só a Dificuldade do alvo; a do Grau só sem alvo.
+Sua resposta:
+
+**P-107** 🟡 **Magia em Dupla em uma rolagem**: quem conduz rola o Grau do efeito + Sintonia + Relação, o parceiro soma +2. Mesma chance, metade das etapas.
+Sua resposta:
+
+**P-108** 🟡 **Freio do Atalho**: com o Laço já apertado, cada novo Atalho nele faz a consequência crescer **na hora**.
+Sua resposta:
+
+**P-109** 🟡 **Passo de Valor**: o Arcano vem uma vez por Evento (os Passos continuam valendo para soltar Laços e desfundir).
+Sua resposta:
+
+**P-110** 🟢 Ficha com "Atalhos nesta sessão □□" do lado dos Laços.
 Sua resposta:

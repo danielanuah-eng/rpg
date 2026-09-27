@@ -32,7 +32,7 @@
 - **Esquiva** 10 · **PV** 6 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 8 / 16 · **Proteção** 4 (cota, Média)
 - **Machado**: Força, Toque, **d10+3** (com Gosto de Sangue), Cruel (dano Grave marca +1 PV). Pela arma, a magia também é Cruel.
 - **Talento — Gosto de Sangue**: +1 de dano com armas; dano Grave = +1 Arcano. **Hábito — Surra** (3): dano dobrado ou um segundo alvo.
-- **Skill — Fio da Guerra**: em combate, magia com +1 dado de dano ou +2 no total. **Drawback**: fora de combate, 2 palavras.
+- **Skill — Fio da Guerra**: em combate, magia com +1 dado de dano ou +2 no total. **Drawback**: fora de combate, magia custa +2 Arcano.
 - **Compromisso**: "Não fujo de briga que é minha."
 - **Laços**: *O Capitão Brando, que me mandou fugir e morreu na muralha* · *Resolver na porrada antes de pensar* (Atalho de costume) · *O medo de ser só uma arma*
 - **Vivências**: Soldado da Cidade-Muralha · Leio uma briga antes de ela começar
@@ -60,7 +60,7 @@
 - **Esquiva** 12 · **PV** 5 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 6 / 12 · **Proteção** 3 (Leve)
 - **Adaga**: Agilidade, Toque, d8+1. **Magia de dano** (G2): 1d10 + 2.
 - **Talento — Mil Caras**: Vantagem para disfarçar, mentir e se esconder; mentira que funciona num PNJ = +1 Arcano. **Hábito — Não Era Eu** (3): o ataque que acertaria erra; ela está escondida Perto.
-- **Skill — Toque Humano**: −2 na Dificuldade de magias em pessoas. **Drawback — Drama**: se falhar, o mestre narra o resultado mais cômico.
+- **Skill — Toque Humano**: −2 na Dificuldade de magias em pessoas (depois de escolher qual Dificuldade vale: contra a Domadora, 13 − 2 = 11). **Drawback — Drama**: se falhar, o mestre narra o resultado mais cômico.
 - **Compromisso**: "Gente vem antes de tudo."
 - **Laços**: *A trupe que eu abandonei na estrada* · *Mentir antes que me perguntem* (Atalho de costume) · *O medo de que ninguém goste de quem eu sou sem máscara*
 - **Vivências**: Atriz de trupe · Conheço todo tipo de gente de feira
@@ -116,7 +116,7 @@ Orçamento: 3 × 4 + 2 = **14 pontos**; usados **13**.
   Ser: Cão, Servo · Agir: Morder · Agarrar (livre · Toque · 1 · Força · Preso · até o mestre emoldurar) · Parecer: Leal · Quer: obedecer.
 - **Javali de Ferro** — Moldura 1 · **Bruto** (4) · Primitivum · Dif 11 · Limiares 10/18 · PV 8 · Ataque +1 · Dano 1d12+4
   Ser: Javali · Agir: Chifrar · Atropelar (1C · Médio em linha · Grupo · Agilidade · dano ×1 + Caído) · Parecer: Blindado, Furioso · Quer: sair da jaula. É **Primitivum**: resiste à magia de Oruã (Dificuldade +2, metade do dano), mas Oruã pode tentar **acalmar, calmo** (Sabedoria 15) falando com ele como bicho.
-- **Bandidos da Domadora** (4) — Moldura 1 · **Lacaios** (1) · — · Dif 10 · 1 PV · Dano 4
+- **Bandidos da Domadora** (4) — Moldura 1 · **Lacaios** (1) · — · Dif 10 · Limiares 4/7 (1, 2 ou 3 caem por golpe) · Dano 4
   Ser: Ladrão · Agir: Esfaquear · Fugir · Parecer: Covarde · Quer: a parte deles.
 
 **Valores**: a Domadora e os cães são **Dominum**: resistem a Dominum e são **fracos contra Primitivum** (Oruã: Dificuldade −2 e +1 dado de dano com magia).
