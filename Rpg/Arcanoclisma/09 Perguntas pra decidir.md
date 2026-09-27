@@ -272,3 +272,17 @@ Sua resposta:
 
 **P-98** 🟡 Quanto tempo fundida até **virar Laço**: uma sessão inteira fundida? Duas?
 Sua resposta:
+
+## Rodada 11 — Do teste simulado ([[13 Teste de mesa 1]])
+
+**P-99** 🔴 **Ritmo do mestre**: "depois de 3 ações seguidas de jogadores sem o holofote vir, o mestre gasta 1 Cataclisma e interrompe". Resolve o Cataclisma sobrando e o mestre agindo pouco. Entra como regra?
+Sua resposta:
+
+**P-100** 🟡 **Persona**: o −2 vale **depois** de escolher a maior Dificuldade (senão some na Moldura 1). Ok?
+Sua resposta:
+
+**P-101** 🟡 **Conflitüo na Moldura 1**: o Drawback (2 palavras fora de combate) não pesa enquanto o limite de todos é 2. Troca por "fora de combate, a palavra extra custa 2 Arcano", ou deixa aparecer só da Moldura 2 em diante?
+Sua resposta:
+
+**P-102** 🟡 **Lacaios**: "um acerto derruba um Lacaio; cada 4 de dano a mais derruba outro". Ok?
+Sua resposta:

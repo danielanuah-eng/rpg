@@ -38,10 +38,10 @@ Objetivo: o jogo **funciona e é gostoso de jogar** antes de ter lore bonita. Na
 | 1.11c | Rodada 2 respondida | [[09 Perguntas pra decidir]] | ✅ |
 | 1.11d | Aplicar rodada 2: Moldura, teste por verbo + modo, Eventos e marcadores, palavra como relação, Canais (foco/arma/Transcrito), 2 talentos por Comportamento, perguntas de criação e sessão zero, ficha por Valor, Correntes, maestrias, adversários por palavras, bestiário, tesouros, dragões | vários | ✅ |
 | 1.11e | Rodada 3 de perguntas (P-70 em diante) | [[09 Perguntas pra decidir]] | ⬜ |
-| 1.12 | 4 personagens prontos (nível 1) para teste | — | ⬜ |
-| 1.13 | **Teste de mesa 1**: uma cena social + um combate + uma magia em dupla | — | ⬜ |
+| 1.12 | 4 personagens prontos (nível 1) para teste | [[13 Teste de mesa 1]] | ✅ |
+| 1.13 | **Teste de mesa 1**: uma cena social + um combate + uma magia em dupla | [[13 Teste de mesa 1]] | 🟡 kit pronto e combate simulado; falta jogar |
 | 1.14 | Ajustes do teste; **teste 2** no nível 5 (Moldura 3) | — | ⬜ |
-| 1.15 | Simulador de combate (`calc/`) para conferir que nenhum Comportamento/Valor domina | — | ⬜ |
+| 1.15 | Simulador de combate (`calc/`) para conferir que nenhum Comportamento/Valor domina | `calc/simular_combate.py` | 🟡 primeira versão |
 
 **Pronto quando:** uma pessoa que nunca viu o jogo cria um personagem em até 20 minutos com a ficha, e um combate de 4 jogadores contra um encontro padrão termina em 45–60 minutos sem o mestre abrir o livro mais de 3 vezes.
 
