@@ -8,7 +8,7 @@ Em cada tabela: linhas 1–2 são **verbos** (o que a magia faz), 3–4 **substa
 
 Quem usa magia é um **Comprometido**: a vida, o jeito e o poder dele se orientam pelo Valor. Não é uma regra de conduta, é uma tendência: a personalidade puxa para o Valor, e o Valor puxa a personalidade. Cada Valor tem um **Compromisso**, uma frase que diz para onde ele puxa.
 
-**Viver o Compromisso**: uma vez por sessão, quando seguir o seu Compromisso te colocar em apuro de verdade (perder algo, se arriscar, complicar o plano), ganhe **2 Arcano**. Ir contra ele não tem punição; só não rende nada. ❓ P-61
+O Compromisso é um dos lugares para onde o **Passo de Valor** aponta ([[01 Regras centrais]]): fazer o difícil que o Compromisso pede, aceitando o desconforto, dá Arcano e quebra Laços. Ir contra ele não tem punição; usar Atalhos no lugar dele é que, com o tempo, prende o personagem num Laço.
 
 ## A roda dos Valores (opostos)
 

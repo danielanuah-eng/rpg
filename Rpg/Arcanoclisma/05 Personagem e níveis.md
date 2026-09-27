@@ -33,7 +33,7 @@ Anote cada relação na ficha dos dois personagens (no app, aparece nas duas fic
 6. **Atributos** — distribua **+2, +1, +1, 0, 0, −1**.
 7. **Vivências** — escreva **2** frases do passado do personagem. Cada uma vale +2 (gastando 1 Arcano).
 8. **Equipamento** — uma arma, uma armadura permitida, o objeto do Canal, um kit, **50 Ordynus** ([[06 Itens e dinheiro]]).
-9. **Números finais** — Arcano 3, Cansaço 6, PV do Comportamento, Proteção da armadura, Limiares = base + 1 + armadura, Sintonia +2.
+9. **Números finais** — Laço 0/5, Passos 0/3, Arcano 3, Cansaço 6, PV do Comportamento, Proteção da armadura, Limiares = base + 1 + armadura, Sintonia +2.
 
 ## As perguntas de criação
 
@@ -53,8 +53,10 @@ Três blocos. As respostas **mudam com a história**: a ficha tem espaço para r
 
 8. **Qual é a fraqueza do seu personagem?** (Não a do corpo: a do jeito de ser.)
 9. **Qual é a dor dele que mais te comove?**
-10. **Como ele lida com o desconforto?** Foge, briga, faz piada, cala, cuida dos outros?
-11. **O que é valioso para ele manter**, e **como a magia se relaciona com isso**? (Protege? Ameaça? Foi o preço?)
+10. **Como ele lida com o desconforto?** Foge, briga, faz piada, cala, cuida dos outros? (Esse é o **Atalho de costume** dele: anote na ficha.)
+11. **O que é valioso para ele manter**, e **como a magia se relaciona com isso**? (Protege? Ameaça? Foi o preço?) (Junto com o Compromisso, é para onde os **Passos de Valor** apontam.)
+
+As respostas 8 a 11 são o material do **Laço** desse personagem, se um dia ele se formar ([[01 Regras centrais]]).
 
 ### Você e o personagem (o jogador)
 
@@ -101,7 +103,7 @@ Este bloco não dá bônus nem é cobrado pelo mestre. Serve para a mesa conhece
 
 **Papel**:
 - **Ficha do Valor** (a maior parte, onde fica a magia): símbolo e cor do Valor, a tabela 6×6 das 36 palavras, **4 espaços extras** para Palavras Estrangeiras (preenchidos ao longo dos níveis), Skill, Drawback, Ressonâncias com caixinha, Compromisso, Canal, a tabela de Graus resumida (dados, custo, Dificuldade, dano, marcador de duração), a tabela de Palavras Básicas (verbos, modos, formas) e linhas de "magias que eu gosto de usar".
-- **Parte do Comportamento** (pequena): nome, skin, atributos, Esquiva, Limiares, PV, Cansaço, Proteção, Arcano, armas, armadura, Vivências, **caixas de talento** (Talento e Hábito, com marcação Básico/Superior, e espaços vazios para talentos avulsos), Ordynus, relações da party.
+- **Parte do Comportamento** (pequena): nome, skin, atributos, Esquiva, Limiares, PV, Cansaço, Proteção, Arcano, **Laço (5 casas) e Passos (3 casas)** com o Atalho de costume e o que o personagem valoriza escritos do lado, armas, armadura, Vivências, **caixas de talento** (Talento e Hábito, com marcação Básico/Superior, e espaços vazios para talentos avulsos), Ordynus, relações da party.
 - **Folha das perguntas** (Vínculo, coração e jogador), com espaço para reescrever.
 - **Folha de Familiar** (opcional).
 

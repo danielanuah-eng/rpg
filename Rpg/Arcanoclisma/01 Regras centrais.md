@@ -9,6 +9,7 @@
 - **Dois dados iguais = Crítico.**
 - Magia não usa atributo: você junta **palavras** do seu Valor, escolhe o **Grau** (o tamanho do feito) e rola um conjunto de dados que **sempre soma no máximo 24**: 2d12 → 3d8 → 4d6 → 6d4. Mais dados = mais confiável, mas mais Arcano *e* mais Cataclisma saindo da mesa.
 - Adversários rolam **d20**. O mestre gasta **Cataclisma** para fazer o mundo reagir.
+- Quando aperta, você escolhe: **Atalho** (aceitar Cataclisma e burlar agora, alimentando o seu Laço) ou **Passo de Valor** (fazer o difícil que aproxima do que importa, e crescer com isso).
 - Não há turnos nem rodadas: o jogo anda em **Cenários** (uma situação completa: uma briga, uma conversa, uma fuga). Quem tem o **holofote** age; ele passa ao mestre quando alguém falha ou tira Ímpar. Efeitos duram por **marcadores** (até a próxima falha, até o fim do Cenário...), nunca por turno.
 
 ---
@@ -105,7 +106,60 @@ O mestre **começa a sessão com 2 por jogador**, máximo **20**.
 
 O mestre gasta Cataclisma para: pegar o holofote, ativar mais adversários, ativar habilidades de adversários e de lugares, trazer reforços, endurecer uma magia (+2 na Dificuldade por ponto, até +4), cancelar uma magia Vacilante, e disparar Eventos (que podem mexer até na ficha dos jogadores). Tabela completa no arquivo 07.
 
-## 5. Cenários e holofote
+## 5. Atalho ou Valor
+
+Toda vez que a coisa aperta, o personagem tem dois caminhos. **Os dois são válidos.** O jogo só mostra o que cada um custa com o tempo.
+
+### Atalho: aceitar Cataclisma para burlar
+
+O personagem foge do desconforto do jeito que sempre funcionou: dá um jeitinho, mente, some, explode, empurra o problema para frente. Na mesa, o jogador **aceita Cataclisma** para conseguir uma vantagem agora:
+
+| Atalho | O mestre ganha | Você ganha |
+|---|---|---|
+| **Menor** | 2 Cataclisma | +3 numa rolagem (depois de ver os dados), **ou** ignorar uma condição ou Desvantagem |
+| **Maior** | 4 Cataclisma | uma falha vira sucesso (o mestre escolhe o custo depois), **ou** sair de uma situação sem ter que lidar com ela |
+
+- Funciona sempre, mesmo com 0 Arcano. É o que o personagem fez a vida inteira, e deu certo muitas vezes.
+- Cada Atalho **marca 1 casa de Laço** na ficha (5 casas).
+- O segundo Atalho no mesmo Cenário custa **+1 Cataclisma**, o terceiro +2, e assim por diante: quanto mais se foge, mais caro fica.
+- O Cataclisma de um Atalho é **do personagem**: o mestre gasta ele, sempre que puder, em coisas ligadas ao que foi evitado. O problema empurrado para frente volta, e maior.
+
+### O Laço
+
+Quando as 5 casas de Laço enchem, o personagem entra no **Laço**: a situação desconfortável de sempre começa a se repetir. É uma **Corrente pessoal** ([[07 Mestre - Cataclisma, eventos e terrenos]]) que o mestre monta com as respostas de criação dele: a fraqueza, a dor, o jeito como ele lida com desconforto, o que ele evita.
+
+Enquanto estiver no Laço:
+- o Laço aparece **pelo menos uma vez por sessão**, com outra cara (outra pessoa, outro lugar, a mesma sensação);
+- Atalhos custam o **dobro** de Cataclisma e dão **metade** (+1 em vez de +3; a falha vira sucesso parcial);
+- no Pouso, você só escolhe **um** descanso em vez de dois.
+
+O Laço não acaba sozinho, nem com descanso. Ele acaba quando o personagem **encara a situação do Laço com um Passo de Valor** (abaixo).
+
+### Passo de Valor: fazer o difícil que aproxima do que importa
+
+Agir envolve desconforto. Fazer o que é difícil coloca o personagem perto das coisas que importam para ele: o **Compromisso** do seu Valor, o que ele disse que é valioso manter, as pessoas da party.
+
+O jogador declara um **Passo de Valor** quando o personagem escolhe o caminho difícil **porque** ele leva para perto do que importa, e **aceita o desconforto** em vez de burlar. Escolha um:
+- rolar com **Desvantagem** (o jeito difícil, sem o atalho);
+- marcar **1 ou 2 Cansaço**;
+- aceitar uma consequência que o Atalho evitaria (ser visto, perder algo, falar a verdade, ficar).
+
+E ganhe, **dê certo ou não**:
+- **+1 Arcano** agora;
+- **1 casa de Passo** (3 casas);
+- se for uma magia: a relação com a palavra conta como forte (sem a Dificuldade maior de relação fraca).
+
+O resultado da rolagem não importa para o Passo: ele conta pela **direção**, não pelo sucesso.
+
+**3 Passos** → apague **2 casas de Laço** e zere os Passos. Uma vez por sessão, no máximo, o mestre ou a mesa podem dizer "isso foi um Passo" mesmo sem o jogador declarar.
+
+**Encarar o Laço**: quando você dá um Passo de Valor **dentro da situação do Laço**, o Laço se quebra. Apague todas as casas de Laço e ganhe uma **Marca de Valor**: escolha uma — +1 Arcano máximo, uma Vivência nova sobre o que aprendeu, ou reescrever uma resposta de criação (o personagem mudou). A situação daquele Laço não volta do mesmo jeito.
+
+### A ideia por trás
+
+O desconforto não some quando é evitado: **muda de lugar**. No Atalho, o mundo carrega o desconforto por você (Cataclisma) e cobra depois. No Passo de Valor, você carrega agora e muda com isso. Usar Atalho às vezes é esperto; usar **só** Atalho vira um laço de situações e sensações desconfortáveis. Por isso quem usa magia se chama **Comprometido**: o poder vem do compromisso com um Valor, não da fuga.
+
+## 6. Cenários e holofote
 
 Não há iniciativa, turno nem rodada. A unidade do jogo é o **Cenário**: uma situação completa, com começo e fim na ficção (um combate, um interrogatório, uma negociação, uma perseguição, um ritual). O mestre anuncia quando um Cenário começa e o que o encerra ("acaba quando vocês saírem da ponte, ou quando a ponte cair").
 
@@ -131,7 +185,7 @@ Nada dura "X turnos". Efeitos duram até um **marcador** acontecer, e os marcado
 
 **Contadores**: para coisas que se aproximam (o teto caindo, o ritual terminando, reforços chegando), o mestre põe um contador (ex.: 4). Ele desce 1 **a cada Falha dos jogadores** e **a cada vez que o mestre gasta 3+ Cataclisma de uma vez**. Quem erra acelera o perigo; quem acerta ganha tempo.
 
-## 6. Alcance
+## 7. Alcance
 
 | Faixa | Na mesa | Na ficção |
 |---|---|---|
@@ -143,7 +197,7 @@ Nada dura "X turnos". Efeitos duram até um **marcador** acontecer, e os marcado
 
 Mover até Perto vem junto com a ação. Ir mais longe **é** a ação (ou um teste de Agilidade para ir mais rápido).
 
-## 7. Esquiva, dano e Vida
+## 8. Esquiva, dano e Vida
 
 **Esquiva** vem do Comportamento. Adversário acerta se o **d20 + ataque ≥ Esquiva**.
 
@@ -160,11 +214,11 @@ Limiares = base do Comportamento + nível + armadura.
 
 **Vida (PV)**: 5–7 casas conforme o Comportamento, máximo 12.
 
-## 8. Cansaço
+## 9. Cansaço
 
 **6 casas** no início, máximo 12. Cansaço é o preço do corpo e da mente; Arcano é o preço do mundo.
 
-**Como ganha**: gastando para Forçar magia, algumas Dificuldades de magia, reações de Dominum, talentos de Comportamento, alguns ataques de adversários.
+**Como ganha**: em Passos de Valor, gastando para Forçar magia, algumas Dificuldades de magia, reações de Dominum, talentos de Comportamento, alguns ataques de adversários.
 
 **Com o que gasta (marcando casas)**:
 - **Forçar** uma magia: marque até (Grau) casas, **+2 no total por casa**.
@@ -173,13 +227,13 @@ Limiares = base do Comportamento + nível + armadura.
 
 **Exausto** (todas as casas marcadas): você fica **Vulnerável** (ataques contra você têm Vantagem), não pode marcar Cansaço de propósito, e cada Cansaço que você teria de marcar vira **1 PV**.
 
-## 9. Descansos
+## 10. Descansos
 
 **Pausa** (uma hora): escolha **dois**: recuperar 1d4 + Moldura PV; limpar 1d4 + Moldura Cansaço; restaurar toda a Proteção; **Meditar** (+1 Arcano). O mestre ganha **1d4 Cataclisma**.
 
 **Pouso** (uma noite): escolha **dois**, cada um completo: todos os PV; todo o Cansaço; toda a Proteção; trocar uma Palavra Estrangeira; trabalhar num projeto. O mestre ganha **1d4 + nº de jogadores** de Cataclisma.
 
-## 10. Quando os PV acabam
+## 11. Quando os PV acabam
 
 Ao marcar o último PV, escolha:
 
@@ -189,11 +243,11 @@ Ao marcar o último PV, escolha:
 
 (Morbidyum tem regra própria, ver [[03 Valores]].)
 
-## 11. Vivências
+## 12. Vivências
 
 Frases curtas do passado do personagem ("Cresci num porto", "Fui soldado do Rei-Semideus", "Sei mentir para guardas"). Começa com **2**, cada uma vale **+2** quando você gasta **1 Arcano** numa rolagem em que ela faz sentido. Ganha mais nos níveis 2, 5 e 8.
 
-## 12. Moldura
+## 13. Moldura
 
 Quase tudo que cresce com o nível passa pela **Moldura**:
 

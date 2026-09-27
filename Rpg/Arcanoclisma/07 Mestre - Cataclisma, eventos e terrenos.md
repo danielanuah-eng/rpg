@@ -108,6 +108,8 @@ Como quebrar: o que os jogadores podem fazer para parar ou desviar
 
 **Exemplo — O Pedágio** (Conflito): os Protetores do Arcano e a Cidade-Muralha disputam a estrada. Elos: postos de bloqueio → Zona de Anulação na ponte → milícia contra Protetores (Cenário de combate onde os jogadores escolhem lado) → a estrada fecha ou vira fronteira.
 
+**Correntes pessoais (Laços)**: quando um personagem entra no Laço (5 Atalhos), monte uma Corrente só dele com as respostas de criação 8 a 11: a origem é o que ele evita; cada elo traz a mesma sensação com outra cara; o desconforto cresce a cada Atalho novo. **Como quebrar** é sempre o mesmo: um Passo de Valor dentro da situação. Seja justo: o Laço é para ser encarável, não uma punição. O Cataclisma que veio de Atalhos, gaste de preferência nos elos do Laço ou em coisas ligadas ao que foi evitado.
+
 Adversários (ficha, palavras, régua, maestria) estão em [[10 Adversários - como criar]] e o bestiário em [[11 Bestiário]].
 
 ## 2. Terrenos

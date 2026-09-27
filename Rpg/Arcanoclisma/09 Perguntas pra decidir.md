@@ -168,7 +168,7 @@ Sua resposta:
 **P-60** 🟡 Entendi a ficha assim: um **Caderno dos Valores** com o espaço dos **9 Valores**, cada um com a tabela das 36 palavras e uma caixinha por palavra. O seu Valor vem todo marcado; nos outros você marca as Palavras Estrangeiras que aprende; mais espaços em branco para palavras que chegam por item ou talento. No app, as tabelas dos 9 com as suas palavras acesas. É isso?
 Sua resposta: 🔁 **uma ficha para cada Valor** (mesmo desenho, muda tabela, símbolo, Skill e Drawback) com **4 espaços extras** de palavras.
 
-**P-61** 🟡 **Viver o Compromisso**: uma vez por sessão, quando seguir o Compromisso do seu Valor te colocar em apuro de verdade, ganhe 2 Arcano. Gosta das 9 frases de Compromisso em [[03 Valores]]?
+**P-61** ✅ (absorvida pelo Passo de Valor, rodada 4) **Viver o Compromisso**: uma vez por sessão, quando seguir o Compromisso do seu Valor te colocar em apuro de verdade, ganhe 2 Arcano. Gosta das 9 frases de Compromisso em [[03 Valores]]?
 Sua resposta:
 
 **P-62** 🟢 Os **Reinos** de Arcano (**o Fechado**) e de Cataclisma (**a Sobra**), além dos 9 dos Valores. Ficam?
@@ -203,4 +203,20 @@ Sua resposta:
 Sua resposta:
 
 **P-77** 🟢 Quer que jogadores possam **ter** uma wyvern (montaria/familiar) desde o nível 1, ou só a partir da Moldura 2?
+Sua resposta:
+
+## Rodada 4 — Atalho e Valor
+
+Aplicado em [[01 Regras centrais]] (seção 5): **Atalho** (aceitar 2 ou 4 Cataclisma para +3, ignorar condição, virar falha em sucesso ou escapar), que marca **Laço**; com 5 marcas o personagem entra no **Laço** (Corrente pessoal feita das respostas de criação); **Passo de Valor** (aceitar o desconforto: Desvantagem, Cansaço ou uma consequência) dá +1 Arcano e 1 Passo, dê certo ou não; 3 Passos apagam 2 Laços; encarar o Laço com um Passo quebra ele e dá uma **Marca de Valor**. "Viver o Compromisso" foi absorvido pelo Passo de Valor (P-61 fica respondida).
+
+**P-80** 🔴 Custos do Atalho: **2 Cataclisma** (Menor) e **4** (Maior), +1 a cada Atalho repetido no mesmo Cenário. Parece justo, ou o Atalho tem que ser mais barato no começo ("funcionou a vida toda")?
+Sua resposta:
+
+**P-81** 🔴 O Passo de Valor conta **pela direção, não pelo sucesso** (ganha Arcano e Passo mesmo falhando). Concorda?
+Sua resposta:
+
+**P-82** 🟡 O Laço enche com **5** Atalhos e 3 Passos apagam **2**. Um personagem que alterna os dois nunca entra no Laço; um que só usa Atalho entra em umas 2 sessões. É esse o ritmo que você quer?
+Sua resposta:
+
+**P-83** 🟡 Adversários também podem ter Atalho e Laço (ex.: um vilão preso no próprio Laço, que os jogadores podem ajudar a quebrar ou usar contra ele)?
 Sua resposta:
