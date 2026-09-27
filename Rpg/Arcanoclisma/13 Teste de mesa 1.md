@@ -10,7 +10,7 @@
 
 **Dados**: cada **par** = +1 Arcano para você. Cada **ímpar** = +1 Cataclisma para o mestre. **Dois iguais = Crítico** (sucesso automático, +Arcano igual ao dado, máx. 6). **Dois ímpares** ou **falha** → o mestre emoldura.
 
-**Magia**: 1 palavra do seu Valor (núcleo) + até 1 palavra de Valor a mais (1 Arcano) + Palavras Básicas de graça (um verbo, um modo, uma forma). Na Moldura 1: **Grau 1** é grátis e acontece sem rolar (ou vira o meio de uma ação: dano 1d8+1); **Grau 2** custa **1 Arcano** e rola **2d12 + 2 (Sintonia) + 1 (Relação, se a palavra tem a ver com o personagem)** contra a Dificuldade do alvo (sem alvo, 12). Dano de Grau 2: **1d10 + 2**. Dura até a próxima Falha.
+**Magia**: 1 palavra do seu Valor (núcleo) + até 1 palavra de Valor a mais (1 Arcano) + **uma** Palavra Básica de graça (verbo, modo ou forma). Na Moldura 1: **Grau 1** é grátis e acontece sem rolar (ou vira o meio de uma ação: dano 1d8+1); **Grau 2** custa **1 Arcano** e rola **2d12 + 2 (Sintonia) + 1 (Relação, se a palavra tem a ver com o personagem)** contra a Dificuldade do alvo (sem alvo, 12). Dano de Grau 2: **1d10 + 2**. Dura até a próxima Falha.
 
 **Ajudas**: no máximo duas por rolagem (Relação não conta). **Arcano** (começa 3, máx. 12): 1 = Vivência +2 · 1 = Ajudar (Vantagem, +1d6) · 1 = palavra extra · 3 = Hábito · 3 = Ação em Dupla · 3 = Detalhe · 3 = Forçar o Grau (Grau 3, 3d8, contra 14).
 
@@ -36,7 +36,7 @@
 - **Compromisso**: "Não fujo de briga que é minha."
 - **Laços**: *O Capitão Brando, que me mandou fugir e morreu na muralha* · *Resolver na porrada antes de pensar* (Atalho de costume) · *O medo de ser só uma arma*
 - **Vivências**: Soldado da Cidade-Muralha · Leio uma briga antes de ela começar
-- **Magias prontas**: *Lâmina* + atacar, preciso, projétil (G2, lâmina vermelha atirada) · *Aparar* + defender, firme (G2) · *Grito* + intimidar, imponente (G2, Amedrontado até a próxima Falha)
+- **Magias prontas**: *Lâmina* + projétil (G2, lâmina vermelha atirada) · *Aparar* + defender (G2) · *Grito* + intimidar (G2, Amedrontado até a próxima Falha)
 
 ### Iara do Rio
 *Aprendiz de vidreira do Porto de Vidro, que carrega no pescoço um frasco do rio onde quase se afogou.*
@@ -50,7 +50,7 @@
 - **Compromisso**: "Nada precisa ficar como está."
 - **Laços**: *Meu pai, que acha que magia é doença* · *Estudar em vez de sentir* (Atalho de costume) · *A culpa pelo afogamento do Caio*
 - **Vivências**: Aprendiz de vidreira · Nado como peixe
-- **Magias prontas**: *Gelo* + atacar, preciso, projétil (G2) · *Solidificar* + segurar, firme, chão (G2, Preso até a próxima Falha) · *Vapor* + esconder, calmo, área (G1 no meio da ação, ou G2 para o grupo)
+- **Magias prontas**: *Gelo* + projétil (G2) · *Solidificar* + chão (G2, Preso até a próxima Falha) · *Vapor* + esconder (G1 no meio da ação) ou *Vapor* + área (G2, para o grupo)
 
 ### Nhanda das Máscaras
 *Atriz que largou a trupe na estrada e vive de ser quem os outros precisam que ela seja.*
@@ -64,7 +64,7 @@
 - **Compromisso**: "Gente vem antes de tudo."
 - **Laços**: *A trupe que eu abandonei na estrada* · *Mentir antes que me perguntem* (Atalho de costume) · *O medo de que ninguém goste de quem eu sou sem máscara*
 - **Vivências**: Atriz de trupe · Conheço todo tipo de gente de feira
-- **Magias prontas**: *Amedrontar* + inimigo (G2) · *Encantar* + convencer, charmoso (G2) · *Voz* + distrair, charmoso (G1 no meio da ação)
+- **Magias prontas**: *Amedrontar* + inimigo (G2) · *Encantar* + convencer (G2) · *Voz* + distrair (G1 no meio da ação)
 
 ### Oruã Casca-Grossa
 *Filho da Vila da Colheita, grande e calado, que fala melhor com bicho do que com gente.*
@@ -78,7 +78,7 @@
 - **Compromisso**: "O corpo sabe antes da cabeça."
 - **Laços**: *Minha avó Jaci, que me ensinou a falar com bicho* · *Ficar calado e aguentar* (Atalho de costume) · *A raiva que eu tenho da cidade*
 - **Vivências**: Criado na mata · Carrego qualquer coisa
-- **Magias prontas**: *Enraizar* + segurar, firme (G2) · *Garra* + atacar, bruto (G1 no meio da ação: dano 1d8+1) · *Farejar* + procurar, instintivo (G1)
+- **Magias prontas**: *Enraizar* + segurar (G2) · *Garra* + atacar, bruto (G1 no meio da ação: dano 1d8+1) · *Farejar* + procurar, instintivo (G1)
 
 **Relações da party** (para a sessão zero): Oruã e Iara se conheceram quando ele a tirou de um rio · Tomé desconfia de Nhanda desde que ela mentiu para um guarda por ele · Nhanda sabe que Iara esconde um diário · Tomé deve a vida a Oruã e nunca agradeceu direito.
 
@@ -127,7 +127,7 @@ Orçamento: 3 × 4 + 2 = **14 pontos**; usados **13**.
 
 Na briga, uma lamparina cai no feno. O ovo começa a rachar com o calor.
 
-**Ameaça**: "o teto cai quando eu pagar **6**". **Termina quando** o grupo sair com o ovo, ou o teto cair.
+**Ameaça**: "o teto cai quando este pote tiver **6**" (o mestre põe um copo na mesa e coloca Cataclisma nele quando quiser). **Termina quando** o grupo sair com o ovo, ou o teto cair.
 
 - Apagar ou conter o fogo é Grau 3 (uma sala): só com **Forçar o Grau** (3 Arcano) ou **Magia em Dupla**.
 - **Dupla sugerida**: **Iara** (Sublimeyn, o Eixo) com qualquer um — *Vapor* ou *Solidificar* + a palavra do outro — efeito de Grau 3; quem conduz rola **3d8 + 2 + 1**, o parceiro soma **+2**, contra **14** (uns 89%). Custa 3 Arcano.

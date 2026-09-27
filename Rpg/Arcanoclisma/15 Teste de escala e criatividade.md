@@ -1,6 +1,6 @@
 # 15 — Teste de escala, interações e criatividade
 
-> Testes feitos: combate em todas as Molduras com 2, 3 e 4 jogadores e quatro dificuldades de encontro; testes de atributo em situações difíceis; Eventos sociais com Ameaça; e se as palavras resolvem problemas de forma criativa. Scripts em `calc/simular_mesa.py` (resultado em `calc/saida_mesa.md`). Propostas em P-111 a P-115 ([[09 Perguntas pra decidir]]); nada foi mudado nas regras por este relatório.
+> Testes feitos: combate em todas as Molduras com 2, 3 e 4 jogadores e quatro dificuldades de encontro; testes de atributo em situações difíceis; Eventos sociais com Ameaça; e se as palavras resolvem problemas de forma criativa. Scripts em `calc/simular_mesa.py` (resultado em `calc/saida_mesa.md`). Propostas em P-111 a P-115 ([[09 Perguntas pra decidir]]). **Decidido e aplicado**: P-111 (régua nova), P-114 (Ameaça como pote), P-115 (cura só de Morbidyum) e uma Palavra Básica por magia.
 
 ## 1. Combate em todas as Molduras
 
@@ -92,20 +92,20 @@ Sete problemas comuns de mesa, resolvidos só com as palavras de cada Valor e as
 | **Persona** | ✅ *Fortalecer* + músculo: o salto | ✅ *Encantar* | ✅ *Remodelar* + pele | ✅ *Sentir*: medo, culpa | ✅ *Acalmar* | 🟡 *Encantar*: o carcereiro abre | 🟡 *Amedrontar*: os arqueiros hesitam |
 | **Alvorum** | 🟡 *Luz* + linha: uma ponte de luz (Grau 3) | 🟡 *Sonho*: o guarda vê uma ordem que não recebeu | 🟡 *Aurora*: o calor que mantém acordado | ✅ *Revelar* | ✅ *Eclipsar*: todo mundo no escuro | 🟡 *Ocultar*: sumir quando a porta abrir | ✅ *Espelho* + cúpula |
 | **Morbidyum** | 🟡 *Etéreo*: flutuar como fantasma | 🟡 *Presságio*: mostrar o que vai acontecer com ele | ✅ *Curar* | 🟡 *Sussurrar*: os mortos contam | ✅ *Esvaziar*: a vontade de brigar | ✅ *Apodrecer* + objeto | ✅ *Osso* + barreira |
-| **Cognitium** | ❌ (só *Lembrar* um caminho que já existia) | ✅ *Convencer* | 🟡 *Esquecer*: a dor, para ele conseguir andar | ✅ *Ler* + mente | ✅ *Confundir* | ✅ *Sugerir*: o guarda abre | 🟡 *Ilusão*: o grupo está em outro lugar |
+| **Cognitium** | 🟡 com a Palavra Básica: *Imaginar* + escalar — a ponte imaginada vira apoio para os pés de quem acredita | ✅ *Convencer* | 🟡 *Esquecer*: a dor, para ele conseguir andar | ✅ *Ler* + mente | ✅ *Confundir* | ✅ *Sugerir*: o guarda abre | 🟡 *Ilusão*: o grupo está em outro lugar |
 | **Eternyr** | ✅ *Saltar* ou *Teleportar* | 🟡 *Futuro*: mostrar a consequência | 🟡 *Voltar* + instante: desfazer o golpe | ✅ *Passado*: ver o que aconteceu | ✅ *Parar* | ✅ *Atravessar* | ✅ *Lento* + área |
 | **Primitivum** | ✅ *Asa* ou Forma Animal | 🟡 *Farejar*: sentir o que ele teme | 🟡 *Semente*: a erva certa | 🟡 *Farejar*: o cheiro do medo | ✅ *Enraizar* | ✅ *Cavar* | ✅ *Árvore* + barreira |
 
 **O que isso mostra**:
-- **Nenhum Valor fica sem resposta** para mais de um tipo de problema. Todo Valor tem 3 a 5 soluções diretas e resolve o resto de forma criativa. Só um ❌ em 63 casos (Cognitium não atravessa um abismo sozinho), e é para isso que existem a party, a Dupla e as 4 palavras extras.
+- **Nenhum Valor fica sem resposta** para mais de um tipo de problema. Todo Valor tem 3 a 5 soluções diretas e resolve o resto de forma criativa. O único buraco (Cognitium atravessar um abismo) se resolve com **uma Palavra Básica**: é para isso que ela existe na magia, dar ao Valor ações que ele sozinho não tem. Além dela, há a party, a Dupla e as 4 palavras extras.
 - **As soluções criativas são as mais interessantes** (*Cicatriz* para estabilizar, *Sal* para achar o mentiroso, *Esvaziar* para parar uma briga). Elas dependem justamente da **relação do personagem com a palavra**, que é o que a regra da Relação (+1) recompensa. A mecânica e a filosofia apontam para o mesmo lugar.
 - **Cada Valor resolve os mesmos problemas de um jeito diferente** (parar uma briga desarmando, afundando na lama, esvaziando a vontade, confundindo, parando o tempo): a party inteira pode enfrentar a mesma cena sem ninguém repetir o outro.
-- **Uma dúvida de regra apareceu**: curar. Hoje só Morbidyum "cura" diretamente, mas Conflitüo (*Cicatriz*), Persona (*Pele*), Eternyr (*Voltar*) e Primitivum (*Semente*) conseguem de forma criativa. **Proposta (P-115)**: qualquer Valor pode curar se a relação convencer a mesa, com o custo normal de cura (+1 Arcano por PV); Morbidyum é só o que faz isso **sem precisar justificar**.
+- **Cura (decidido, P-115)**: **só Morbidyum devolve PV**. As soluções da coluna "estabilizar" dos outros Valores (*Cicatriz*, *Pele*, *Voltar*, *Semente*) **aliviam**: tiram uma condição ou mantêm o aliado de pé por um momento, sem recuperar PV.
 
 ## 5. Resumo das propostas
 
-- **P-111 🔴** Régua nova de adversários (Dificuldade 12/13/14/15, ataque +1/+2/+3/+4, Limiares e dano levemente menores nas Molduras 2–4).
+- **P-111** ✅ aplicada: régua nova de adversários (Dificuldade 12/13/14/15, ataque +1/+2/+3/+4, Limiares e dano levemente menores nas Molduras 2–4).
 - **P-112 🟡** Orçamento: +2 pontos com 2 jogadores, +1 com 3.
 - **P-113 🟡** Dificuldade de encontro: **difícil = +2 pontos**, **muito difícil = +4**, **fácil = −2**.
-- **P-114 🟡** Ameaça como **pote** visível que o mestre enche quando quiser e que dispara quando cheio.
-- **P-115 🟢** Qualquer Valor cura se a relação convencer; Morbidyum sem precisar justificar.
+- **P-114** ✅ aplicada: Ameaça como **pote** visível que o mestre enche quando quiser e que dispara quando cheio.
+- **P-115** ✅ decidido: cura é só de Morbidyum.

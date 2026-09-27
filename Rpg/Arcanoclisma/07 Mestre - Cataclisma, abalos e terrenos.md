@@ -46,7 +46,7 @@ Cinco tamanhos. Escolha ou role 1d6. Os marcados com ✦ mexem na ficha dos joga
 1. Uma Criatura do Cataclisma (Padrão ou Bruto) rasga o espaço e entra.
 2. ✦ **Selo**: cada jogador escolhe uma palavra sua que fica selada até o fim da sessão.
 3. ✦ **Troca de Valor**: pelo Evento, um jogador conjura com a tabela de outro Valor (sorteado), mantendo Skill e Drawback do seu.
-4. O lugar começa a desabar: Ameaça de 6 (quem ainda estiver dentro quando o mestre pagar, se machuca feio).
+4. O lugar começa a desabar: Ameaça, pote de 6 (quem ainda estiver dentro quando o pote encher, se machuca feio).
 5. Todos os adversários limpam 2 PV.
 6. ✦ O Arcano de todos os jogadores cai pela metade (arredonde para cima).
 
@@ -134,7 +134,7 @@ Perguntas para o mestre: 2
 | **Farol Sem Noite** | 2 · Exploração · Alvorum | Luz constante: ninguém se esconde e ilusões não funcionam | *O Farol Gira* (2): todos em Longe ficam cegos até os jogadores voltarem a agir. *Pesadelo Aceso* (4): o pior medo de um jogador vira um adversário Padrão |
 | **Cemitério que Respira** | 2 · Hostil · Morbidyum | Toda cura custa +1 Arcano; quem cai aqui e não é recolhido levanta como fantasma | *Mãos do Chão* (2): Agilidade 14 ou Preso. *Os de Baixo* (3): um grupo de Lacaios mortos |
 | **Biblioteca que Esquece** | 2 · Exploração · Cognitium | Em cada Pausa aqui, cada jogador esquece uma Vivência até sair (1 Arcano para lembrar) | *Corredores* (2): o grupo se separa. *Livro Mentiroso* (4): todos acreditam numa mentira escrita (Inteligência 15 para duvidar) |
-| **Estação Parada** *(tecnomaga)* | 3 · Travessia · Eternyr | Perto do grande relógio, o preço de toda Ameaça cai 2 | *O Trem de Antes* (3): 3d10 em linha. *Preso no Instante* (5): um jogador fica fora do tempo até a próxima Falha do grupo (não age, não é atingido) |
+| **Estação Parada** *(tecnomaga)* | 3 · Travessia · Eternyr | Perto do grande relógio, todo pote de Ameaça é 2 menor | *O Trem de Antes* (3): 3d10 em linha. *Preso no Instante* (5): um jogador fica fora do tempo até a próxima Falha do grupo (não age, não é atingido) |
 
 ### Cidades, povoados e variações
 
@@ -147,11 +147,11 @@ Todo Terreno pode virar variação: troque o Valor, a Moldura ou o tipo e ajuste
 | **Mercado de Feras** | 1 · Social · Dominum | Barulho e cheiro: Desvantagem para ouvir e para rastrear | *Jaula Aberta* (3): uma fera escapa (Bruto). *Leilão* (1): alguém dá lance num jogador |
 | **Vila do Mesmo Dia** | 2 · Exploração · Eternyr | O dia se repete ao pôr do sol; só quem tem Eternyr ou uma âncora lembra | *Reinício* (4): o Evento volta ao começo, os PNJs esquecem. *Déjà-vu* (1): um PNJ lembra de algo que não devia |
 | **Cidade Insone** | 2 · Social · Alvorum | Ninguém dorme; Pausas aqui só limpam metade | *Sonho Vazado* (2): o sonho de alguém aparece no meio da rua. *Olhos Abertos* (3): todo mundo vê o que o grupo faz |
-| **Aldeia da Curandeira** | 1 · Social · Morbidyum | Cura aqui não custa o Arcano extra | *Febre* (2): um PNJ adoece; Ameaça de 5: ele morre. *Enterro* (1): um morto que não devia ser enterrado |
+| **Aldeia da Curandeira** | 1 · Social · Morbidyum | Cura aqui não custa o Arcano extra | *Febre* (2): um PNJ adoece; Ameaça, pote de 5: ele morre. *Enterro* (1): um morto que não devia ser enterrado |
 | **Rua dos Espelhos** | 2 · Exploração · Cognitium | Cada espelho mostra uma lembrança de quem passa | *Reflexo Solto* (3): o reflexo de um jogador sai e age (Padrão). *Memória Trocada* (2): dois jogadores trocam uma Vivência até a Pausa |
 | **Vila da Colheita** | 1 · Social · Primitivum | Na época de colheita, qualquer ajuda vira amizade | *Praga* (2): bichos atacam a plantação. *Festa* (1): um PNJ bêbado conta um segredo |
 | **Estrada do Crepúsculo** | 2 · Travessia · Alvorum | Metade é dia, metade é noite; atravessar a linha pede Sabedoria 13 | *Pálpebra Fecha* (3): escuridão total até a próxima Falha. *Viajante* (1): alguém que vem do outro lado |
-| **Mina Funda** | 1 · Travessia · Sublimeyn | Pouca luz, ar pesado: cada Pausa aqui limpa 1 Cansaço a menos | *Desabamento* (4): Ameaça de 5, a galeria fecha. *Veio Vivo* (2): o minério se mexe e prende uma perna |
+| **Mina Funda** | 1 · Travessia · Sublimeyn | Pouca luz, ar pesado: cada Pausa aqui limpa 1 Cansaço a menos | *Desabamento* (4): Ameaça, pote de 5: a galeria fecha. *Veio Vivo* (2): o minério se mexe e prende uma perna |
 | **Pátio de Duelos** *(Escola de Magia)* | 1 · Social · qualquer | Magia é permitida, ferir de verdade não: dano acima do Maior tira do duelo | *Professor Chegando* (2): quem conjurar Grau 3+ é pego. *Aposta* (1): a plateia escolhe um favorito |
 | **Torre dos Protetores** | 3 · Hostil · (nenhum) | **Zona de Anulação**: nada acima de Grau 2 funciona | *Alarme* (3): um grupo de Protetores. *Selar* (4): uma palavra de cada jogador selada até sair |
 

@@ -188,7 +188,7 @@ Sua resposta:
 Sua resposta:
 
 **P-72** 🟡 Palavras Básicas em magia: **grátis e fora do limite**, até uma de cada tipo (verbo, modo, forma). Assim uma magia de nível 1 pode ser "Gelo + atacar, preciso, projétil". Ok?
-Sua resposta: ✅ ok, e **nenhuma Palavra Básica pode ser elemento** (troquei "Raio" por "Linha").
+Sua resposta: ✅ ok, e **nenhuma Palavra Básica pode ser elemento** (troquei "Raio" por "Linha"). **Atualizado**: agora é **uma** Palavra Básica por magia, e ela existe para dar ao Valor ações que ele sozinho não tem.
 
 **P-73** ✅ não existe despertar outro Valor; nos ups o personagem pega palavras de outros Valores (os 4 espaços extras). Com uma ficha por Valor, ainda existe **despertar um segundo Valor** mais tarde (ganhando uma segunda ficha), ou cada personagem é de um Valor só para sempre, e o resto vem pelas 4 palavras extras?
 Sua resposta: ✅ não existe despertar outro Valor; o resto vem **só das 4 palavras extras** (o talento do Curioso agora respeita o limite de 4).
@@ -320,7 +320,7 @@ Sua resposta: ✅ ok.
 ## Rodada 14 — Do teste de escala e criatividade ([[15 Teste de escala e criatividade]])
 
 **P-111** 🔴 **Régua nova de adversários**: com a atual, a Moldura 4 vira massacre (19% de vitória num encontro padrão). Proposta: Dificuldade 12/13/14/15, ataque +1/+2/+3/+4, Limiares 8/14 · 11/21 · 16/30 · 22/42, dano 1d10+2 · 2d10+2 · 3d10+3 · 4d10+4. Encontro padrão fica em 97–100% em todas as Molduras.
-Sua resposta:
+Sua resposta: ✅ ok (aplicada em [[10 Adversários - como criar]]).
 
 **P-112** 🟡 Orçamento de encontro: **+2 pontos com 2 jogadores, +1 com 3** (menos gente deixa o mesmo encontro mais fácil).
 Sua resposta:
@@ -329,7 +329,7 @@ Sua resposta:
 Sua resposta:
 
 **P-114** 🟡 **Ameaça como pote**: o mestre coloca Cataclisma na Ameaça quando quiser, à vista (não volta), e ela dispara quando enche. Assim o anúncio cria suspense em vez de poder disparar na hora.
-Sua resposta:
+Sua resposta: ✅ ok (aplicada em [[01 Regras centrais]]).
 
 **P-115** 🟢 **Cura criativa**: qualquer Valor pode curar se a relação convencer a mesa (custo normal, +1 Arcano por PV); Morbidyum cura sem precisar justificar.
-Sua resposta:
+Sua resposta: ❌ não: **cura é só de Morbidyum** (vida, morte, passagem). Os outros Valores aliviam, não devolvem PV.

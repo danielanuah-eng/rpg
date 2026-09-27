@@ -15,9 +15,9 @@ d = lambda n: R.randint(1, n)
 NIVEL = {1: 1, 2: 3, 3: 6, 4: 9}
 POOL = {1: None, 2: (12, 2), 3: (8, 3), 4: (6, 4), 5: (4, 6)}
 CUSTO = {1: 0, 2: 1, 3: 2, 4: 3, 5: 5}
-REGUA = {  # Dif, Maior, Grave, PV, ataque, (dados, lados, bônus)
-    1: (12, 8, 14, 5, 1, (1, 10, 2)), 2: (14, 11, 22, 6, 3, (2, 10, 3)),
-    3: (16, 17, 32, 7, 5, (3, 10, 5)), 4: (18, 24, 45, 8, 7, (4, 10, 8)),
+REGUA = {  # Dif, Maior, Grave, PV, ataque, (dados, lados, bônus) — régua nova (P-111)
+    1: (12, 8, 14, 5, 1, (1, 10, 2)), 2: (13, 11, 21, 6, 2, (2, 10, 2)),
+    3: (14, 16, 30, 7, 3, (3, 10, 3)), 4: (15, 22, 42, 8, 4, (4, 10, 4)),
 }
 
 
@@ -33,8 +33,8 @@ class PJ:
     def __init__(s, M, magico):
         L = NIVEL[M]
         s.M, s.magico = M, magico
-        s.attr = {1: 2, 2: 3, 3: 3, 4: 4}[M]
-        s.esq = 10 + (M >= 3) + (M >= 4)
+        s.attr = {1: 2, 2: 3, 3: 4, 4: 5}[M]
+        s.esq = 9 + M
         s.pv = 6 + (M - 1)
         arm = {1: (2, 4), 2: (4, 8), 3: (6, 13), 4: (8, 17)}[M]
         s.maior, s.grave = 5 + L + arm[0], 11 + L + arm[1]

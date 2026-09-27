@@ -187,7 +187,10 @@ Nada dura "X turnos". Efeitos duram até um **marcador** acontecer, e os marcado
 | **O Evento** | a situação terminar |
 | **Até o Pouso** | a próxima noite de descanso |
 
-**Ameaças**: para coisas que se aproximam (o teto caindo, o ritual terminando, reforços chegando), o mestre **anuncia a ameaça e o preço dela em Cataclisma**: "o teto cai quando eu pagar 6". Ela acontece quando ele pagar. Como o Cataclisma vem dos dados ímpares da mesa, todo mundo vê a ameaça chegando conforme a reserva do mestre enche. Os jogadores podem resolver a ameaça pela ficção, ou adiá-la uma vez gastando Arcano igual à metade do preço (o preço sobe 2).
+**Ameaças (o pote)**: para coisas que se aproximam (o teto caindo, o ritual terminando, reforços chegando), o mestre **anuncia a ameaça e o tamanho do pote**: "o teto cai quando este pote tiver **6**". Ele põe o pote **à vista** na mesa (um copo, um espaço com fichas) e, **quando quiser**, coloca nele Cataclisma da própria reserva. O que entra no pote **não volta**. Quando o pote enche, a ameaça acontece.
+
+- O mestre escolhe o ritmo: alimentar a Ameaça ou gastar o Cataclisma em outra coisa. Os jogadores **veem o perigo subir**.
+- Os jogadores podem resolver a ameaça pela ficção (e aí o pote se desfaz), ou **esvaziar o pote** em 2 gastando Arcano igual ao que tiram, uma vez por ameaça.
 
 ## 7. Alcance
 

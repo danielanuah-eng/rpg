@@ -29,7 +29,7 @@ Os números do jogo **já contam com esse +1** (as Dificuldades foram calibradas
 1. **Intenção**: diga o que quer que aconteça, como a magia aparece (pelo seu Canal) e, se quiser, a sua relação com a palavra.
 2. **Palavras**:
    - **Palavras de Valor**: de 1 até o seu limite (Moldura + 1). **A primeira é do seu Valor** (o núcleo); as outras podem ser do seu Valor ou Palavras Estrangeiras.
-   - **Palavras Básicas** (ação, modo, forma): **não custam e não contam no limite**, até uma de cada tipo. Precisam fazer sentido concreto.
+   - **Uma Palavra Básica** (verbo, modo ou forma): **não custa e não conta no limite**. Ela existe para **dar ao Valor ações que ele sozinho não tem** (um Cognitium que precisa *escalar*, um Conflitüo que precisa *esconder*). Precisa fazer sentido concreto.
 3. **Grau**: pelo tamanho do efeito (tabela abaixo), até o seu máximo (Moldura + 1). O mestre tem a palavra final se o efeito pedido for maior do que o Grau.
 4. **Pague**: custo do Grau + 1 Arcano por palavra de Valor além da primeira + Ampliações. (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
 5. **Role** os dados do Grau + Sintonia (+1 de Relação), contra **a Dificuldade do alvo**; se a magia não tem alvo (abrir, criar, mudar o lugar), contra **a Dificuldade do Grau**. Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre).
@@ -64,7 +64,7 @@ Ela só vira rolagem quando é o **meio de uma ação** que já seria um teste: 
 | **Dificuldade do Grau** (magia sem alvo) | — | 12 | 14 | 16 | 19 |
 | **Moldura mínima** | 1 | 1 | 2 | 3 | 4 |
 | **Dano** | nenhum (só incômodo) | 1d10 + Sintonia | 2d10 + Sintonia | 3d10 + Sintonia | 5d10 + Sintonia |
-| **Cura** (sempre +1 Arcano por PV) | — | 1 PV | até 2 PV | até 3 PV ou 1 condição | todos os PV, ou trazer de volta quem morreu neste Evento |
+| **Cura** (só Morbidyum; sempre +1 Arcano por PV) | — | 1 PV | até 2 PV | até 3 PV ou 1 condição | todos os PV, ou trazer de volta quem morreu neste Evento |
 | **Alvos** | você ou 1 objeto de mão | 1 | até 3 | até 6, ou um grupo | todos que você escolher à vista |
 | **Área / tamanho** | cabe na mão | uma pessoa, uma porta | uma sala, uma carroça | uma casa, uma praça | um quarteirão, um navio, um vale |
 | **Alcance** | Toque | Perto | Médio | Longe | Horizonte |
@@ -73,6 +73,8 @@ Ela só vira rolagem quando é o **meio de uma ação** que já seria um teste: 
 | **Resistir / escapar** (adversário no d20) | — | 12 | 14 | 16 | 19 |
 | **Forçar** (máx. de Cansaço) | 0 | 2 | 3 | 4 | 5 |
 | **Quanto dobra a realidade** | truque que alguém poderia explicar | claramente magia | quebra uma regra física ali | reescreve a cena | deixa marca no mundo; as pessoas vão contar |
+
+**Cura é de Morbidyum.** Só magia de Morbidyum devolve PV: é o Valor da vida, da morte e da passagem entre elas. Os outros Valores podem **aliviar** (tirar uma condição, manter alguém de pé na ficção por um momento, esconder a dor), mas **nunca recuperam PV**. Fora da magia, PV voltam com descanso, consumíveis e cuidados.
 
 ### Exemplos observáveis de cada Grau
 
@@ -205,7 +207,7 @@ O **Eixo** (o Valor sem oposto) combina com qualquer um sem penalidade.
 Palavras genéricas que **guiam o que o personagem faz no mundo**, com ou sem magia. Servem para duas coisas:
 
 1. **Descrever qualquer ação** e escolher o teste: **verbo de ação + modo**. O **modo escolhe o atributo** (as colunas da tabela de modos). "Roubar *furtivo*" rola Agilidade; "convencer *gentil*", Carisma; "procurar *metódico*", Inteligência.
-2. **Completar uma magia**: um verbo, um modo e uma forma, de graça, sem contar no limite de palavras.
+2. **Completar uma magia**: **uma** Palavra Básica por magia, de graça, sem contar no limite de palavras. É ela que dá ao Valor as ações que ele sozinho não alcança.
 
 Palavras Básicas **não custam nada**, mas precisam fazer **sentido concreto** no que está acontecendo, e **nunca são o núcleo** de uma magia.
 
@@ -237,7 +239,7 @@ Formas são só formato: **nenhuma Palavra Básica é elemento** (fogo, gelo, lu
 
 **Iara, Sublimeyn, nível 1 (Moldura 1, Sintonia +2, Canal Foco: um frasco de água do rio onde quase se afogou)** quer derrubar o guarda com um jato de água gelada.
 - Relação: "Gelo, para ela, é o rio que parou para ela não morrer."
-- Palavras: **Gelo** (núcleo) + *Atacar*, *preciso*, *Projétil* (básicas, grátis).
+- Palavras: **Gelo** (núcleo) + *Projétil* (básica, grátis).
 - Grau 2 (uma pessoa, dano). Custo total 1 Arcano.
 - Rola 2d12 + 2 + 1 (Relação) contra a Dificuldade do guarda, 12. Tira 7 e 8: total 18, acerta. Um par (+1 Arcano: a magia se pagou), um ímpar (+1 Cataclisma). Dano 1d10 + 2 + 1 (Foco).
 

@@ -31,17 +31,17 @@ QUER:    comer o que morreu; foge com 1 PV
 | Moldura | Dificuldade | Limiares | PV | Cansaço | Ataque (d20 +) | Dano |
 |---|---|---|---|---|---|---|
 | 1 | 12 | 8 / 14 | 5 | 2 | +1 | 1d10+2 |
-| 2 | 14 | 11 / 22 | 6 | 3 | +3 | 2d10+3 |
-| 3 | 16 | 17 / 32 | 7 | 3 | +5 | 3d10+5 |
-| 4 | 18 | 24 / 45 | 8 | 4 | +7 | 4d10+8 |
+| 2 | 13 | 11 / 21 | 6 | 3 | +2 | 2d10+2 |
+| 3 | 14 | 16 / 30 | 7 | 3 | +3 | 3d10+3 |
+| 4 | 15 | 22 / 42 | 8 | 4 | +4 | 4d10+4 |
 
-A **Dificuldade** é o número que os jogadores tiram para acertar o adversário (arma ou magia) e para resistir ao que ele faz. Um golpe médio de jogador na Moldura certa marca 2 PV; um golpe médio do adversário marca 2 PV num jogador de armadura Média.
+A **Dificuldade** é o número que os jogadores tiram para acertar o adversário (arma ou magia) e para resistir ao que ele faz. Um golpe médio de jogador na Moldura certa marca 2 PV; um golpe médio do adversário marca 1–2 PV num jogador de armadura Média. A régua sobe devagar (Dificuldade +1 e ataque +1 por Moldura) porque os personagens também sobem devagar (atributo e Esquiva +1 por Moldura); conferido em [[15 Teste de escala e criatividade]].
 
 ### Papéis
 
 | Papel | Ajuste sobre a régua | Verbos | Pontos |
 |---|---|---|---|
-| **Lacaio** | Dif −2, dano = metade. Vem em grupo do tamanho da mesa. O grupo tem **Limiares pela metade** (M1 4/7 · M2 6/11 · M3 9/16 · M4 12/23) e o dano funciona **como no Daggerheart, 1/2/3**: um golpe abaixo do Maior derruba **1** Lacaio, no Maior derruba **2**, no Grave derruba **3** | 1–2 | 1 por grupo |
+| **Lacaio** | Dif −2, dano = metade. Vem em grupo do tamanho da mesa. O grupo tem **Limiares pela metade** (M1 4/7 · M2 5/10 · M3 8/15 · M4 11/21) e o dano funciona **como no Daggerheart, 1/2/3**: um golpe abaixo do Maior derruba **1** Lacaio, no Maior derruba **2**, no Grave derruba **3** | 1–2 | 1 por grupo |
 | **Social** | não luta | 2 (de conversa) | 1 |
 | **Suporte** | PV −1 | 2–3, um de cuidar ou proteger | 1 |
 | **Padrão** | a régua | 2–3 | 2 |
