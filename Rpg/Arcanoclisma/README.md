@@ -4,13 +4,13 @@
 
 Sistema de RPG próprio, inspirado em Daggerheart, Rune RPG, Ethmos e Triangle Agency.
 
-**O que é**: 2d12 em que cada dado par te dá Arcano e cada dado ímpar dá Cataclisma ao mestre; ações descritas com verbo + modo; magia feita de palavras (9 Valores, 36 palavras cada), em Graus que trocam o conjunto de dados sem passar de 24; sem turnos: Eventos, holofote e marcadores; adversários também feitos de palavras.
+**O que é**: 2d12 em que cada dado par te dá Arcano e cada dado ímpar dá Cataclisma ao mestre; ações descritas com verbo + modo; magia feita de palavras (9 Valores, 36 palavras cada), em Graus que trocam o conjunto de dados sem passar de 24; sem turnos: Eventos, o mestre emoldura, marcadores; adversários também feitos de palavras.
 
 ## Por onde ler
 
 1. [[00 Roteiro]] — o plano das 5 fases e onde estamos
 2. [[09 Perguntas pra decidir]] — **comece a responder por aqui** (as 🔴 primeiro)
-3. [[01 Regras centrais]] — rolagem, Arcano, Cataclisma, holofote, dano, Cansaço, morte
+3. [[01 Regras centrais]] — rolagem, Arcano, Cataclisma, Eventos e o emoldurar, dano, Cansaço, morte
 4. [[02 Magia]] — Graus, custos, Dificuldades, Magia em Dupla, Palavras Básicas
 5. [[03 Valores]] — os 9 Valores com as 36 palavras
 6. [[04 Comportamentos]] — os 10 Comportamentos e seus talentos

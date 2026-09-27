@@ -46,7 +46,7 @@ Dano = **dado da arma × Proficiência + bônus**. A cada Moldura acima do 1, a 
 
 Dano de arma se rola **como no Daggerheart**: dado × Proficiência + bônus.
 
-**Traços**: *Arremessável* (ataca à distância indicada); *Precisa* (+1 no ataque); *Cruel* (dano Grave marca +1 PV); *Pesada* (−1 Esquiva); *Atordoante* (abala grandes defesas: dano Maior ou Grave deixa o alvo com **−2 nos Limiares** até o holofote virar; contra jogadores, o alvo perde 1 casa de Proteção); *Alcance* (ataca até Perto); *Desarmar* e *Puxar* (no lugar do dano); *Recarga* (depois de atacar, role 1d6: no 1, a próxima ação é recarregar); *Barulhenta* (todo mundo por perto ouve); *Serve de foco arcano*.
+**Traços**: *Arremessável* (ataca à distância indicada); *Precisa* (+1 no ataque); *Cruel* (dano Grave marca +1 PV); *Pesada* (−1 Esquiva); *Atordoante* (abala grandes defesas: dano Maior ou Grave deixa o alvo com **−2 nos Limiares** até o mestre emoldurar; contra jogadores, o alvo perde 1 casa de Proteção); *Alcance* (ataca até Perto); *Desarmar* e *Puxar* (no lugar do dano); *Recarga* (depois de atacar, role 1d6: no 1, a próxima ação é recarregar); *Barulhenta* (todo mundo por perto ouve); *Serve de foco arcano*.
 
 Comparação com magia (dano médio por golpe, na força máxima de cada Moldura):
 

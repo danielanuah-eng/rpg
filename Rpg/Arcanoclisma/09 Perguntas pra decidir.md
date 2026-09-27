@@ -286,3 +286,10 @@ Sua resposta:
 
 **P-102** 🟡 **Lacaios**: "um acerto derruba um Lacaio; cada 4 de dano a mais derruba outro". Ok?
 Sua resposta:
+
+## Rodada 12 — Emoldurar
+
+✅ "Holofote" saiu: **o mestre emoldura**. Os jogadores agem; quando alguém falha ou tira Ímpar (ou quando o mestre gasta 1 Cataclisma, a qualquer momento), o mestre **emoldura** a cena: pega, descreve o que mudou, faz o mundo e os adversários agirem, e devolve a vez. O marcador "até o holofote virar" virou **"até o mestre emoldurar"**.
+
+**P-103** 🟡 **Moldura** também é o nome dos níveis de poder (Moldura 1 a 4). "O mestre emoldura" e "Moldura 3" convivem bem (a Moldura do personagem é o tamanho do quadro que ele consegue ocupar), ou prefere trocar o nome de um dos dois?
+Sua resposta:

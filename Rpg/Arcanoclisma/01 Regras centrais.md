@@ -10,7 +10,7 @@
 - Magia não usa atributo: você junta **palavras** do seu Valor, escolhe o **Grau** (o tamanho do feito) e rola um conjunto de dados que **sempre soma no máximo 24**: 2d12 → 3d8 → 4d6 → 6d4. Mais dados = mais confiável, mas mais Arcano *e* mais Cataclisma saindo da mesa.
 - Adversários rolam **d20**. O mestre gasta **Cataclisma** para fazer o mundo reagir.
 - Todo personagem tem **Laços** (relações, atitudes, sentimentos difíceis). Quando aperta, escolhe: **Atalho** (entregar Cataclisma ao mestre e burlar agora; repetido, aperta o Laço e o problema cresce) ou **Passo de Valor** (fazer o difícil que aproxima do que importa).
-- Não há turnos nem rodadas: o jogo anda em **Eventos** (uma situação completa: uma briga, uma conversa, uma fuga). Quem tem o **holofote** age; ele passa ao mestre quando alguém falha ou tira Ímpar. Efeitos duram por **marcadores** (até a próxima falha, até o fim do Evento...), nunca por turno.
+- Não há turnos nem rodadas: o jogo anda em **Eventos** (uma situação completa: uma briga, uma conversa, uma fuga). Os jogadores agem; quando alguém falha ou tira Ímpar, **o mestre emoldura** a cena. Efeitos duram por **marcadores** (até a próxima falha, até o fim do Evento...), nunca por turno.
 
 ---
 
@@ -67,7 +67,7 @@ Olhe os dois d12:
 | iguais (qualquer número) | **Crítico** | sucesso automático + efeito crítico; ganha Arcano igual ao número do dado (**máx. 6**) — ❓ P-03 |
 | os dois pares | **Par** | +2 Arcano para você |
 | um par, um ímpar | **Equilíbrio** | +1 Arcano para você, +1 Cataclisma para o mestre |
-| os dois ímpares | **Ímpar** | +2 Cataclisma para o mestre; **o holofote passa ao mestre** |
+| os dois ímpares | **Ímpar** | +2 Cataclisma para o mestre; **o mestre emoldura** |
 
 Isso vale igual para sucesso e falha. Um sucesso Ímpar é "conseguiu, mas o mundo cobrou"; uma falha Par é "não deu, mas você aprendeu algo" (o Arcano).
 
@@ -104,7 +104,7 @@ O mestre **começa a sessão com 2 por jogador**, máximo **20**.
 
 **Transbordo**: se o mestre ganharia Cataclisma acima de 20, o excesso não some — ele dispara *na hora* um Abalo do tamanho do excesso (ver [[07 Mestre - Cataclisma, abalos e terrenos]]). O mestre não consegue "guardar tudo pro chefe"; o mundo vaza.
 
-O mestre gasta Cataclisma para: pegar o holofote, ativar mais adversários, ativar habilidades de adversários e de lugares, trazer reforços, endurecer uma magia (+2 na Dificuldade por ponto, até +4), cancelar uma magia Vacilante, e disparar Abalos (que podem mexer até na ficha dos jogadores). Tabela completa no arquivo 07.
+O mestre gasta Cataclisma para: emoldurar quando quiser, ativar mais adversários, ativar habilidades de adversários e de lugares, trazer reforços, endurecer uma magia (+2 na Dificuldade por ponto, até +4), cancelar uma magia Vacilante, e disparar Abalos (que podem mexer até na ficha dos jogadores). Tabela completa no arquivo 07.
 
 ## 5. Laços, Atalhos e Passos
 
@@ -151,15 +151,15 @@ Laço apertado **não tira bônus nem corta números**: ele **traz mais problema
 
 O desconforto não some quando é evitado: **muda de lugar**. No Atalho, o mundo carrega por você e cobra depois, com juros. No Passo, você carrega agora e muda com isso. Por isso quem usa magia se chama **Comprometido**. (Palavras que viram Laço: ver **Fusão** em [[02 Magia]].)
 
-## 6. Eventos e holofote
+## 6. Eventos e o mestre que emoldura
 
 Não há iniciativa, turno nem rodada. A unidade do jogo é o **Evento**: uma situação completa, com começo e fim na ficção (um combate, um interrogatório, uma negociação, uma perseguição, um ritual). O mestre anuncia quando um Evento começa e o que o encerra ("acaba quando vocês saírem da ponte, ou quando a ponte cair").
 
-Dentro do Evento, o ritmo é o holofote:
+Dentro do Evento, os jogadores agem e o mestre **emoldura**: ele pega a cena, descreve o que mudou, faz o mundo e os adversários agirem, e devolve a vez.
 
 - Os jogadores decidem entre si quem age. Quem age faz **uma ação** (atacar, conjurar, ajudar, uma manobra) e pode se mover até **Perto** junto com ela.
-- **O holofote passa ao mestre** quando um jogador **falha** ou tira **Ímpar** (dois ímpares). Na vez dele, o mestre ativa **1 adversário de graça** e **mais 1 por Cataclisma** gasto; depois devolve aos jogadores.
-- **O mestre gasta Cataclisma quando quiser.** A qualquer momento ele pode **tomar o holofote** (1 Cataclisma), ativar adversários, disparar Abalos, cobrar Ameaças: sempre que for conveniente e bom para a narrativa. Não há ordem nem ritmo fixo.
+- **O mestre emoldura** quando um jogador **falha** ou tira **Ímpar** (dois ímpares). Na vez dele, o mestre ativa **1 adversário de graça** e **mais 1 por Cataclisma** gasto; depois devolve aos jogadores.
+- **O mestre gasta Cataclisma quando quiser.** A qualquer momento ele pode **emoldurar** (1 Cataclisma), ativar adversários, disparar Abalos, cobrar Ameaças: sempre que for conveniente e bom para a narrativa. Não há ordem nem ritmo fixo.
 - E ele **age narrativamente sempre que fizer sentido**, sem gastar nada: o mundo reage, PNJs falam, o fogo espalha, a porta fecha. O Cataclisma é para quando a ação do mundo **mexe nos números** (ataques, condições, Abalos, Ameaças).
 - Dica: Cataclisma sobrando é sinal de mundo parado. Se a reserva está perto de 20, é hora de o mundo se mexer.
 - Regra de mesa: ninguém age duas vezes seguidas se outro jogador ainda não agiu desde a sua última ação, a não ser que todos concordem.
@@ -172,7 +172,7 @@ Nada dura "X turnos". Efeitos duram até um **marcador** acontecer, e os marcado
 |---|---|
 | **Instante** | acontece e acaba |
 | **Até a próxima Falha** | qualquer jogador falhar uma rolagem |
-| **Até o holofote virar** | o holofote passar ao mestre |
+| **Até o mestre emoldurar** | o mestre emoldurar a cena |
 | **Até o mestre pagar** | o mestre gastar Cataclisma igual ao Grau para encerrar (ele pode, a qualquer momento) |
 | **O Evento** | a situação terminar |
 | **Até o Pouso** | a próxima noite de descanso |

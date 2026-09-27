@@ -46,7 +46,7 @@ Objetivo: o jogo **funciona e é gostoso de jogar** antes de ter lore bonita. Na
 **Pronto quando:** uma pessoa que nunca viu o jogo cria um personagem em até 20 minutos com a ficha, e um combate de 4 jogadores contra um encontro padrão termina em 45–60 minutos sem o mestre abrir o livro mais de 3 vezes.
 
 Perguntas de teste para a mesa (anotar depois de cada sessão):
-- Alguém ficou parado esperando muito tempo? (holofote)
+- Alguém ficou parado esperando muito tempo? (quando o mestre emoldura)
 - Arcano sobrou ou faltou? Cataclisma encheu? (economia)
 - Alguém travou pensando em que palavras usar? (magia)
 - Alguma magia resolveu o Evento sozinha? (Grau/limites)
@@ -119,7 +119,7 @@ Entregas, na mesma família do Peso do Céu:
 
 1. **App** (um HTML só, funciona offline, instalável no celular):
    - **Ficha digital**: tudo que o personagem liberou aparece nela; contadores de Arcano/Cansaço/PV/Proteção clicáveis; montador de magia (escolhe palavras → mostra Grau, custo, dados, Dificuldade, e rola os dados contando pares/ímpares); loja em Ordynus; subir de nível guiado; guardar/importar/exportar.
-   - **Escudo do mestre digital**: contador de Cataclisma com Transbordo, tabela de Abalos, holofote.
+   - **Escudo do mestre digital**: contador de Cataclisma com Transbordo, tabela de Abalos, o emoldurar.
    - **Geradores**: encontro (balanceado pela Moldura e nº de jogadores), adversário com imagem, terreno, tesouro/item, relíquia com palavra, PNJ, nome, gancho, Abalo, "magia aleatória" (d66 nas tabelas).
 2. **Ficha de papel** enfeitada para imprimir, em **A4**, colorida e com versão econômica em preto e branco, em **duas folhas** ([[05 Personagem e níveis]]):
    - **Ficha 1 — Personagem** (igual para todos): nome, skin, Comportamento, atributos, Palavras Básicas, Arcano, Laços, Vivências, itens, Ordynus, perguntas de criação e relações da party.

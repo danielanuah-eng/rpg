@@ -2,17 +2,17 @@
 
 > Rascunho v0. 54 adversários no formato de palavras ([[10 Adversários - como criar]]). **Os números vêm da régua** (Moldura + Papel); aqui só o que muda. O gerador monta a ficha completa, com imagem.
 
-Abreviações do determinador: **C** = Cataclisma · **Falha** = até a próxima Falha · **Virar** = até o holofote virar · **Pagar** = até o mestre pagar · **Ev** = o Evento · **Inst** = Instante. Atributos: Agi, For, Car, Int, Sab, Per. Verbo sem parênteses = ataque comum ou ação narrativa.
+Abreviações do determinador: **C** = Cataclisma · **Falha** = até a próxima Falha · **Emoldura** = até o mestre emoldurar · **Pagar** = até o mestre pagar · **Ev** = o Evento · **Inst** = Instante. Atributos: Agi, For, Car, Int, Sab, Per. Verbo sem parênteses = ataque comum ou ação narrativa.
 
 ---
 
 ## Gente comum
 
 **Guarda da Ponte** — M1 · Lacaio · —
-Ser: Guarda · Agir: Estocar · Apitar (livre · Horizonte · si · chama outro grupo de guardas em 1 Virar) · Parecer: Barulhento · Quer: cumprir o turno; se rende se o sargento cair.
+Ser: Guarda · Agir: Estocar · Apitar (livre · Horizonte · si · chama outro grupo de guardas na próxima vez que o mestre emoldurar) · Parecer: Barulhento · Quer: cumprir o turno; se rende se o sargento cair.
 
 **Sargento de Ronda** — M1 · Líder · Conflitüo
-Ser: Soldado, Veterano · Agir: Cortar · Ordenar (livre: ativa um aliado) · Encurralar (1C · Médio · 1 · Agi · Preso · Virar) · Parecer: Duro · Quer: levar alguém preso, vivo.
+Ser: Soldado, Veterano · Agir: Cortar · Ordenar (livre: ativa um aliado) · Encurralar (1C · Médio · 1 · Agi · Preso · Emoldura) · Parecer: Duro · Quer: levar alguém preso, vivo.
 
 **Bandido de Estrada** — M1 · Lacaio · —
 Ser: Ladrão · Agir: Esfaquear · Fugir (livre · si · some até Médio) · Parecer: Covarde · Quer: a bolsa, não a briga.
@@ -30,7 +30,7 @@ Ser: Mercador · Agir: Pechinchar · Esconder (mercadoria, provas) · Parecer: A
 Ser: Soldado, Contratado · Agir: Cortar · Aparar (1C · si · o próximo ataque contra ele erra · Inst) · Investir (1C · Médio · 1 · ataque · dano ×1,5 + Caído · Inst) · Parecer: Blindado · Quer: o pagamento; troca de lado por mais.
 
 **Carrasco da Cidade-Muralha** — M2 · Bruto · Conflitüo
-Ser: Carrasco · Agir: Decepar · Prender (livre · Toque · 1 · For · Preso · Virar) · Sentença (2C · Toque · 1 · ataque · dano ×2 em alguém Preso · Inst) · Parecer: Enorme, Silencioso · Quer: terminar o serviço.
+Ser: Carrasco · Agir: Decepar · Prender (livre · Toque · 1 · For · Preso · Emoldura) · Sentença (2C · Toque · 1 · ataque · dano ×2 em alguém Preso · Inst) · Parecer: Enorme, Silencioso · Quer: terminar o serviço.
 
 ## Comprometidos hostis
 
@@ -79,16 +79,16 @@ Ser: Aranha · Agir: Picar · Enredar (1C · Longe · 1 · Agi · Preso · Pagar
 Ser: Corvo, Aviso · Agir: Bicar · Anunciar (livre: o próximo ataque de um aliado dele contra o alvo tem Vantagem) · Parecer: Voador, Barulhento · Quer: seguir quem vai morrer.
 
 **Cão de Coleira Dupla** — M2 · Padrão · Dominum
-Ser: Cão, Servo · Agir: Morder · Agarrar (livre · Toque · 1 · For · Preso · Virar) · Parecer: Leal, Duro · Quer: obedecer o dono, até contra a própria vida.
+Ser: Cão, Servo · Agir: Morder · Agarrar (livre · Toque · 1 · For · Preso · Emoldura) · Parecer: Leal, Duro · Quer: obedecer o dono, até contra a própria vida.
 
 **Serpente-Espelho** — M2 · Ágil · Alvorum
 Ser: Serpente · Agir: Picar · Refletir (1C · si · a próxima magia contra ela volta para quem conjurou · Inst) · Hipnotizar (2C · Perto · 1 · Sab · Atordoado · Inst) · Parecer: Brilhante, Venenoso · Quer: o calor de quem dorme.
 
 **Urso-Raiz** — M2 · Bruto · Primitivum
-Ser: Urso, Árvore · Agir: Esmagar · Enraizar (1C · si · não é movido e limpa 1 PV · Virar) · Parecer: Enorme, Regenerante · Quer: dormir no inverno; quem acorda paga.
+Ser: Urso, Árvore · Agir: Esmagar · Enraizar (1C · si · não é movido e limpa 1 PV · Emoldura) · Parecer: Enorme, Regenerante · Quer: dormir no inverno; quem acorda paga.
 
 **Leão de Cem Dentes** — M3 · Chefe · Dominum · Inquebrável
-Ser: Leão, Filhote de Kairvahnn · Agir: Despedaçar · Rugir (2C · Longe · Área · Sab · Amedrontado · Falha) · Arrastar (2C · Médio · 1 · For · puxado até o Toque + Preso · Virar) · Devorar (3C · Toque · 1 Preso · ataque · dano ×2 · Inst) · Parecer: Enorme, Faminto · Quer: levar uma presa viva para a Voragem.
+Ser: Leão, Filhote de Kairvahnn · Agir: Despedaçar · Rugir (2C · Longe · Área · Sab · Amedrontado · Falha) · Arrastar (2C · Médio · 1 · For · puxado até o Toque + Preso · Emoldura) · Devorar (3C · Toque · 1 Preso · ataque · dano ×2 · Inst) · Parecer: Enorme, Faminto · Quer: levar uma presa viva para a Voragem.
 
 **Grifo-de-Vidro** — M3 · Ágil · Sublimeyn
 Ser: Grifo · Agir: Rasgar · Mergulhar (1C · Longe · 1 · ataque · dano ×1,5 · Inst) · Estilhaçar (2C · Perto · Área · Agi · dano ×1 · Inst; só quando cai a metade dos PV) · Parecer: Voador, Frágil · Quer: o ninho no alto da torre.
@@ -125,7 +125,7 @@ Ser: Guardião, Selo · Agir: Golpear · Selar (1C · Perto · 1 · Sab · Selad
 Ser: Caçador · Agir: Atirar (Longe) · Farejar Cataclisma (livre: sabe quem gerou mais Cataclisma no Evento e o ataca primeiro) · Rede de Silêncio (2C · Médio · Grupo · Agi · Preso + não conjura Grau 2+ · Pagar) · Parecer: Silencioso, Veloz · Quer: levar o conjurador mais imprudente.
 
 **Juiz do Selo** — M4 · Chefe · — · Anulador, Inquebrável
-Ser: Juiz, Estátua · Agir: Golpear · Fechar (3C · Longe · Área · Zona de Anulação · Ev) · Sentença (2C · Médio · 1 · Sab · marca Cansaço igual ao Cataclisma que o alvo gerou no Evento, máx. 4 · Inst) · Imobilizar (reação, 2C · Perto · 1 · Preso · Virar) · Parecer: Sagrado, Pesado · Quer: fechar.
+Ser: Juiz, Estátua · Agir: Golpear · Fechar (3C · Longe · Área · Zona de Anulação · Ev) · Sentença (2C · Médio · 1 · Sab · marca Cansaço igual ao Cataclisma que o alvo gerou no Evento, máx. 4 · Inst) · Imobilizar (reação, 2C · Perto · 1 · Preso · Emoldura) · Parecer: Sagrado, Pesado · Quer: fechar.
 
 **Arquivista Sem Rosto** — M3 · Suporte · Cognitium · Resiliente
 Ser: Arquivista · Agir: Anotar (livre: cada magia vista no Evento custa +1 Arcano na segunda vez) · Apagar (2C · Médio · 1 · Int · esquece uma Vivência · Ev) · Parecer: Astuto, Mentiroso · Quer: registrar tudo, e apagar o que for perigoso.
@@ -150,7 +150,7 @@ Ser: Instante · Agir: Tocar (envelhece: dano) · Pular (livre · si · age de n
 Ser: Soldado, Morto · Agir: Cortar · Duelar (livre · Perto · 1 · o alvo só pode atacar ele · Falha) · Parecer: Incansável — como Duro · Quer: vencer uma luta, qualquer uma, e lembrar por quê.
 
 **Moldado** (Mar de Estados) — M3 · Ágil · Sublimeyn
-Ser: Moldado · Agir: Envolver (livre · Toque · 1 · For · Preso · Virar) · Mudar (1C · si · troca de estado: sólido Duro, líquido Etéreo, gás Invisível · Ev) · Parecer: Estranho · Quer: experimentar a forma dos visitantes.
+Ser: Moldado · Agir: Envolver (livre · Toque · 1 · For · Preso · Emoldura) · Mudar (1C · si · troca de estado: sólido Duro, líquido Etéreo, gás Invisível · Ev) · Parecer: Estranho · Quer: experimentar a forma dos visitantes.
 
 **Manso** (Voragem) — M2 · Social · Dominum
 Ser: Servo, Nascido-na-Voragem · Agir: Guiar · Obedecer · Parecer: Leal · Quer: um dono bom, ou nenhum.

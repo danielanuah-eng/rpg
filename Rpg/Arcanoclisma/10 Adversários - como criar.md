@@ -75,7 +75,7 @@ Verbo (Custo · Alcance · Alvo · Resistência · Efeito · Marcador)
 | **Alvo** | 1 · Grupo (até 3) · Área (todos no alcance) · si |
 | **Resistência** | *ataque* (d20 + Ataque contra Esquiva) ou um **atributo** (o jogador rola 2d12 + atributo contra a Dificuldade do adversário) |
 | **Efeito** | Dano ×½ / ×1 / ×1,5 / ×2 · uma **Condição** · Movimento · Criar/Invocar · Proteger · Anular · Selar palavra · Mexer em Arcano/Cansaço |
-| **Marcador** | Instante · até a próxima Falha · até o holofote virar · até o mestre pagar · o Evento |
+| **Marcador** | Instante · até a próxima Falha · até o mestre emoldurar · até o mestre pagar · o Evento |
 
 **Quanto custa um verbo** (o gerador usa isto para balancear):
 
@@ -92,7 +92,7 @@ Verbo (Custo · Alcance · Alvo · Resistência · Efeito · Marcador)
 
 Dano **e** condição no mesmo verbo: some os custos. Marcador "o Evento" ou "até o mestre pagar": +1C.
 
-**Condições**: *Caído* (o próximo ataque contra ele tem Vantagem; levantar é a ação), *Distraído* (Desvantagem na próxima rolagem), *Amedrontado* (não se aproxima da fonte do medo), *Preso* (não se move; soltar-se é Força ou Agilidade contra a Dificuldade), *Cego* (Desvantagem para tudo que precisa ver), *Atordoado* (perde a próxima vez que o holofote chegaria nele), *Selado* (uma palavra sua não funciona), *Vulnerável* (ataques contra ele têm Vantagem), *Envenenado* (marca 1 Cansaço sempre que o holofote vai ao mestre).
+**Condições**: *Caído* (o próximo ataque contra ele tem Vantagem; levantar é a ação), *Distraído* (Desvantagem na próxima rolagem), *Amedrontado* (não se aproxima da fonte do medo), *Preso* (não se move; soltar-se é Força ou Agilidade contra a Dificuldade), *Cego* (Desvantagem para tudo que precisa ver), *Atordoado* (perde a próxima vez que agiria), *Selado* (uma palavra sua não funciona), *Vulnerável* (ataques contra ele têm Vantagem), *Envenenado* (marca 1 Cansaço sempre que o mestre emoldura).
 
 ### PARECER (adjetivos-passivas)
 
@@ -101,11 +101,11 @@ Cada adjetivo é uma passiva pronta. Tabela d66 para o gerador sortear:
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
 | **1** | **Blindado**: Limiares +25% | **Veloz**: move até Médio, Dif +1 | **Enorme**: Limiares ×1,3, ataca Grupo no Toque, não se esconde | **Minúsculo**: Dif +2, PV −1 | **Voador** | **Aquático**: no fundo da água, Vantagem em tudo |
-| **2** | **Escavador**: some no chão e reaparece até Médio | **Invisível**: até atacar; ataques contra ele com Desvantagem | **Venenoso**: o ataque comum deixa Envenenado | **Espinhoso**: quem o ataca no Toque sofre 1d6 | **Regenerante**: limpa 1 PV quando o holofote vai ao mestre | **Etéreo**: armas sem magia causam metade |
+| **2** | **Escavador**: some no chão e reaparece até Médio | **Invisível**: até atacar; ataques contra ele com Desvantagem | **Venenoso**: o ataque comum deixa Envenenado | **Espinhoso**: quem o ataca no Toque sofre 1d6 | **Regenerante**: limpa 1 PV quando o mestre emoldura | **Etéreo**: armas sem magia causam metade |
 | **3** | **Faminto**: ataca primeiro o mais ferido | **Furioso**: com metade dos PV, +1 dado de dano | **Covarde**: foge com 2 PV ou menos | **Astuto**: Dif +2 contra enganar e convencer | **Antigo**: um Valor a mais | **Cego**: imune a ilusões e a Alvorum de luz, Desvantagem à distância |
 | **4** | **Silencioso**: Vantagem para emboscar | **Numeroso**: é um bando; conta como Lacaio de 2 pontos que não cai com um golpe | **Brilhante**: não se esconde; quem o ataca no Toque fica Distraído | **Gélido**: quem o toca marca 1 Cansaço | **Ardente**: seu dano também queima objetos e armadura (−1 Proteção) | **Pesado**: não é empurrado; Agilidade −, Dif −1 |
 | **5** | **Leal**: se um aliado cai, ele age na hora | **Mentiroso**: o Curioso só descobre metade | **Faminto de Magia**: toda magia Perto dele gera +1 Cataclisma | **Marcado**: um Valor alheio que ele roubou (uma palavra de outro Valor) | **Sagrado**: Dif +2 contra Morbidyum e Dominum | **Imundo**: cura perto dele custa +1 Arcano |
-| **6** | **Barulhento**: todo mundo sabe onde ele está | **Paciente**: só age se o holofote for ao mestre por Falha | **Frágil**: Limiares −25%, Dif +1 | **Duro**: marca 1 PV a menos por golpe (mínimo 1) | **Belo**: Desvantagem para atacá-lo na primeira vez (Carisma para resistir) | **Estranho**: uma regra só dele, que o mestre inventa |
+| **6** | **Barulhento**: todo mundo sabe onde ele está | **Paciente**: só age quando o mestre emoldura por uma Falha | **Frágil**: Limiares −25%, Dif +1 | **Duro**: marca 1 PV a menos por golpe (mínimo 1) | **Belo**: Desvantagem para atacá-lo na primeira vez (Carisma para resistir) | **Estranho**: uma regra só dele, que o mestre inventa |
 
 ### QUER
 
@@ -122,7 +122,7 @@ Adversários experientes têm **Maestria**, que muda como a magia dos jogadores 
 | Maestria | Efeito |
 |---|---|
 | **Anulador** | reação: gasta Cataclisma igual ao Grau para anular uma magia contra ele ou Perto dele |
-| **Resiliente** | toda magia contra ele tem Dificuldade +2, e condições causadas por magia duram só **até o holofote virar** |
+| **Resiliente** | toda magia contra ele tem Dificuldade +2, e condições causadas por magia duram só **até o mestre emoldurar** |
 | **Inquebrável** | não pode ser controlado, movido, derrubado, selado nem enganado por magia; Dominum, Persona e Cognitium não o controlam |
 | **Quimerarcano** | mistura 2–3 Valores: conjura como Magia em Dupla sozinho (Grau +1), troca o Valor ativo gastando 2C (mudando resistência e fraqueza), e **não tem fraqueza fixa** |
 | **Deidade** | ignora magias de Grau 1 e 2, age duas vezes quando ativado, tem uma **Presença** (o lugar à volta vira Terreno do seu Valor) e não tem fraqueza |

@@ -37,14 +37,14 @@ Limiares finais = base + nível + armadura. Armadura fora da lista: −2 Esquiva
 | | Básico | Superior |
 |---|---|---|
 | **Talento · Ombro de Aríete** | Usa armadura Pesada sem perder Esquiva. Vantagem para empurrar, levantar, arrombar e segurar. | +2 nos dois Limiares; ninguém te empurra nem derruba. Uma vez por Evento, marque 1 Cansaço para marcar 1 PV a menos. |
-| **Hábito · Terremoto de Carne** | Ataque todos os adversários Perto com uma rolagem; quem for acertado cai. | Além disso, arremesse um deles até Médio (dano da arma nele e em quem ele atingir), e os caídos ficam sem agir até o holofote voltar a vocês. |
+| **Hábito · Terremoto de Carne** | Ataque todos os adversários Perto com uma rolagem; quem for acertado cai. | Além disso, arremesse um deles até Médio (dano da arma nele e em quem ele atingir), e os caídos ficam sem agir até os jogadores voltarem a agir. |
 
 ## 2. Atlético — *salta, escala, rola, nunca está onde o golpe cai*
 
 | | Básico | Superior |
 |---|---|---|
 | **Talento · Corpo Solto** | Junto com a ação você se move até Médio (os outros, até Perto). Vantagem para saltar, escalar e se equilibrar. | +1 Esquiva. Quando um ataque contra você erra, ganhe 1 Arcano (até 3 por Evento). |
-| **Hábito · Esquiva Impossível** | Quando um ataque te acertaria, ele erra, e você se reposiciona até Perto. | E você faz uma ação na hora, antes do holofote seguir. |
+| **Hábito · Esquiva Impossível** | Quando um ataque te acertaria, ele erra, e você se reposiciona até Perto. | E você faz uma ação na hora, antes de o mestre emoldurar. |
 
 ## 3. Popular — *todo mundo gosta, ou pelo menos todo mundo conhece*
 

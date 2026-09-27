@@ -115,7 +115,7 @@ Conjurar no seu Grau máximo, contra a Dificuldade do Grau, dá **81–84%** em 
 
 (É a sua regra "1 = 0, 3 = 1, 5 = 2".) Magias de 1 ou 2 palavras de Valor são **seguras** (Palavras Básicas não contam); o custo delas é só o Cataclisma que vai para o mestre.
 
-- **Falha** (total abaixo da Dificuldade): se ficou **até 2 abaixo**, a magia sai **um Grau menor** (Grau 2 vira um efeito de Grau 1). Mais que isso, não acontece. O Arcano gasto se perde e o holofote passa ao mestre.
+- **Falha** (total abaixo da Dificuldade): se ficou **até 2 abaixo**, a magia sai **um Grau menor** (Grau 2 vira um efeito de Grau 1). Mais que isso, não acontece. O Arcano gasto se perde e o mestre emoldura.
 
 ## Tabela de Dificuldades (d20)
 
@@ -125,10 +125,10 @@ Role quando a magia sai Ímpar. **Número baixo é pior.** Você pode **Suavizar
 |---|---|---|
 | 1 | **Ferida no Véu** | O lugar vira Terreno Instável até o fim do Evento: toda magia ali gera +1 Cataclisma. Role outra Dificuldade. |
 | 2 | **Atenção Divina** | O Primordial ou semideus do seu Valor nota você. O mestre anota uma **Dívida** (a entidade vai cobrar um favor). |
-| 3 | **Eco Tardio** | A magia se repete sozinha na próxima vez que o mestre tiver o holofote, nos alvos mais inconvenientes. |
+| 3 | **Eco Tardio** | A magia se repete sozinha na próxima vez que o mestre emoldurar, nos alvos mais inconvenientes. |
 | 4 | **Dívida Arcana** | Perca 1 Arcano por dado ímpar. Cada ponto que não puder pagar **sela** uma das palavras usadas até o fim da sessão; sem palavras para selar, marque 1 PV por ponto que sobrar (mínimo 1). |
 | 5 | **Respingo** | A magia também atinge, de forma ruim, todo aliado ou coisa importante na cena (em escala um Grau menor). O mestre define como. |
-| 6 | **Paralisia de Eco** | Você não pode se mover nem conjurar até o holofote passar ao mestre **(Grau − 1)** vezes (no mínimo 1). |
+| 6 | **Paralisia de Eco** | Você não pode se mover nem conjurar até o mestre emoldurar **(Grau − 1)** vezes (no mínimo 1). |
 | 7 | **Custo de Carne** | Marque 1 PV. O corpo pagou. |
 | 8 | **Esgotamento** | Marque Cansaço igual ao Grau. |
 | 9 | **Magia Vacilante** | Enquanto durar, o mestre pode cancelar a magia gastando Cataclisma igual a **Grau − 1**. |

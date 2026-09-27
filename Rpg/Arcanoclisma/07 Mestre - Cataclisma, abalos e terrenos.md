@@ -12,7 +12,7 @@ Na média, cada rolagem de jogador rende 1 Cataclisma. **O mestre gasta quando q
 
 | Custo | Gasto |
 |---|---|
-| 1 | **Interromper**: tomar o holofote agora |
+| 1 | **Emoldurar**: pegar a cena agora |
 | 1 | **Mais um**: ativar mais um adversário na sua vez |
 | 1 | **Endurecer**: +2 na Dificuldade de uma magia sendo conjurada (até +4) |
 | 1 | **Complicação**: um detalhe ruim no Evento (a porta emperra, a corda puxa, alguém grita) |
@@ -37,7 +37,7 @@ Cinco tamanhos. Escolha ou role 1d6. Os marcados com ✦ mexem na ficha dos joga
 **Tremor (4)**
 1. O terreno muda: o chão cede, a água sobe, o fogo espalha. Novo perigo.
 2. Um adversário ganha um Valor a mais até o fim do Evento.
-3. ✦ **Arcano Congelado**: ninguém gasta Arcano até o holofote passar ao mestre.
+3. ✦ **Arcano Congelado**: ninguém gasta Arcano até o mestre emoldurar.
 4. Surge um grupo de Lacaios do Cataclisma.
 5. **Inversão**: até a próxima Falha, cura fere e dano cura.
 6. ✦ Todos os jogadores marcam 1 Cansaço.
@@ -126,12 +126,12 @@ Perguntas para o mestre: 2
 
 | Terreno | Moldura · Tipo · Valor | Traço | Ações de Cataclisma |
 |---|---|---|---|
-| **Forja dos Mil Golpes** | 1 · Hostil · Conflitüo | Calor: toda vez que o holofote passa ao mestre, quem estiver sem proteção marca 1 Cansaço | *Martelo Cego* (2): ataque +3, 2d8 em linha até Médio. *Arsenal Solto* (3): um adversário pega uma arma Pesada da parede |
+| **Forja dos Mil Golpes** | 1 · Hostil · Conflitüo | Calor: toda vez que o mestre emoldura, quem estiver sem proteção marca 1 Cansaço | *Martelo Cego* (2): ataque +3, 2d8 em linha até Médio. *Arsenal Solto* (3): um adversário pega uma arma Pesada da parede |
 | **Charco Fervente** | 1 · Travessia · Sublimeyn | O chão alterna lama e pedra: mover além de Perto pede Agilidade 12 | *Gêiser* (2): Agilidade 13 ou 1d10+2 e empurrado. *Endurecer* (4): o charco vira pedra, todos presos até Força 14 |
 | **Floresta que Anda** | 1 · Travessia · Primitivum | As árvores trocam o caminho: sem rastrear (Percepção 13) o grupo anda em círculo | *Raízes* (2): Força 12 ou Preso. *Guardião* (3): uma fera-espírito Ágil defende a mata |
 | **Feira das Máscaras** | 1 · Social · Persona | Multidão: Vantagem para se esconder, Desvantagem para atirar | *Reconhecido* (1): alguém sabe quem um jogador é. *A Música Muda* (3): Sabedoria 13 ou uma emoção sorteada até a próxima Falha |
 | **Arena de Kairvahnn** | 2 · Hostil · Dominum | O público exige sangue: quem recua perde 1 Arcano | *Soltem a Fera* (3): entra um Bruto. *Chicote* (2): um jogador é puxado até o Toque de um adversário |
-| **Farol Sem Noite** | 2 · Exploração · Alvorum | Luz constante: ninguém se esconde e ilusões não funcionam | *O Farol Gira* (2): todos em Longe ficam cegos até o holofote voltar a eles. *Pesadelo Aceso* (4): o pior medo de um jogador vira um adversário Padrão |
+| **Farol Sem Noite** | 2 · Exploração · Alvorum | Luz constante: ninguém se esconde e ilusões não funcionam | *O Farol Gira* (2): todos em Longe ficam cegos até os jogadores voltarem a agir. *Pesadelo Aceso* (4): o pior medo de um jogador vira um adversário Padrão |
 | **Cemitério que Respira** | 2 · Hostil · Morbidyum | Toda cura custa +1 Arcano; quem cai aqui e não é recolhido levanta como fantasma | *Mãos do Chão* (2): Agilidade 14 ou Preso. *Os de Baixo* (3): um grupo de Lacaios mortos |
 | **Biblioteca que Esquece** | 2 · Exploração · Cognitium | Em cada Pausa aqui, cada jogador esquece uma Vivência até sair (1 Arcano para lembrar) | *Corredores* (2): o grupo se separa. *Livro Mentiroso* (4): todos acreditam numa mentira escrita (Inteligência 15 para duvidar) |
 | **Estação Parada** *(tecnomaga)* | 3 · Travessia · Eternyr | Perto do grande relógio, o preço de toda Ameaça cai 2 | *O Trem de Antes* (3): 3d10 em linha. *Preso no Instante* (5): um jogador fica fora do tempo até a próxima Falha do grupo (não age, não é atingido) |

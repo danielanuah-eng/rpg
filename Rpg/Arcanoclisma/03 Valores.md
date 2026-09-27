@@ -226,7 +226,7 @@ Perguntas de vínculo: *Qual memória você apagaria se pudesse? · Em que menti
 - **Símbolo**: um anel com um ponto escapando dele. **Cor**: azul-noite com branco.
 - **Primordial**: Ossyr, Aquele Que Já Foi. **Oposto**: Morbidyum.
 - **Compromisso**: "Cada coisa no seu tempo e no seu lugar." Paciente, organizado, detesta pressa e bagunça.
-- **Skill**: **nenhuma**. Eternyr é o único Valor que mexe no próprio jogo: holofote, Ameaças e marcadores de duração. Isso já é a vantagem.
+- **Skill**: **nenhuma**. Eternyr é o único Valor que mexe no próprio jogo: quando o mestre emoldura, Ameaças e marcadores de duração. Isso já é a vantagem.
 - **Drawback · Peso do Tempo**: toda magia de Eternyr tem **+2 na Dificuldade**. ❓ P-12
 - **Ressonância II · Passo**: uma vez por Evento, teleporte até Perto como parte de qualquer ação, sem conjurar.
 - **Ressonância III · Rebobinar**: uma vez por sessão, desfaça a última ação (sua ou de outro, até de adversário). Ela acontece de novo, e todos lembram o que vinha. O Cataclisma já ganho fica.
@@ -284,5 +284,5 @@ Perguntas de vínculo: *Que animal você seria sem pensar duas vezes? · Qual lu
 | Alvorum | Cognitium | vê através de tudo (2 Arcano) | sempre chamativo |
 | Morbidyum | Eternyr | volta da morte 1×/sessão | perde o Arcano, sem Movimentos de Morte |
 | Cognitium | Alvorum | ler pensamento (2 Arcano) | se falhar, leem você |
-| Eternyr | Morbidyum | mexe no holofote e no tempo | +2 na Dificuldade |
+| Eternyr | Morbidyum | mexe em quem age e no tempo | +2 na Dificuldade |
 | Primitivum | Dominum | Forma Animal | não conjura como bicho |

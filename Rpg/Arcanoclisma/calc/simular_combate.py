@@ -2,7 +2,7 @@
 
 Modelo simples, feito para achar números fora do lugar, não para jogar por
 ninguém: os jogadores atacam o adversário mais ferido; o mestre ativa um
-adversário de graça quando pega o holofote e gasta Cataclisma para ativar
+adversário de graça quando emoldura e gasta Cataclisma para ativar
 mais enquanto tiver reserva. Roda: python3 simular_combate.py [nº de lutas]
 """
 import random
@@ -149,7 +149,7 @@ def lutar(log=None):
             log.append(f"{pj.nome} ({a},{b}{'+' if bonus>=0 else ''}{bonus}={total} vs {dif}) erra {alvo.nome}")
         if not crit and (not sucesso or pares == 0):
             if log is not None:
-                log.append("→ holofote vai ao mestre")
+                log.append("→ o mestre emoldura")
             vez_do_mestre()
     stats["vitoria"] = any(not p.caido for p in pjs)
     stats["cat_final"] = cat
@@ -168,7 +168,7 @@ def main():
     print("|---|---|")
     print(f"| vitória dos jogadores | {100*med('vitoria'):.0f}% |")
     print(f"| ações de jogador até acabar | {med('acoes'):.1f} |")
-    print(f"| vezes que o holofote foi ao mestre | {med('vezes_mestre'):.1f} |")
+    print(f"| vezes que o mestre emoldurou | {med('vezes_mestre'):.1f} |")
     print(f"| PV perdidos pelo grupo (de 23) | {med('pv_perdido'):.1f} |")
     print(f"| jogadores que caíram | {med('caidos'):.2f} |")
     print(f"| Arcano ganho pelo grupo | {med('arcano'):.1f} |")

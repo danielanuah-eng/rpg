@@ -8,7 +8,7 @@
 
 **Testes**: diga **verbo + modo** ("roubar *furtivo*"). O modo escolhe o atributo. Role **2d12 + atributo** contra a Dificuldade (10 fácil · 12 normal · 15 difícil · 20 muito difícil).
 
-**Dados**: cada **par** = +1 Arcano para você. Cada **ímpar** = +1 Cataclisma para o mestre. **Dois iguais = Crítico** (sucesso automático, +Arcano igual ao dado, máx. 6). **Dois ímpares** ou **falha** → o holofote vai ao mestre.
+**Dados**: cada **par** = +1 Arcano para você. Cada **ímpar** = +1 Cataclisma para o mestre. **Dois iguais = Crítico** (sucesso automático, +Arcano igual ao dado, máx. 6). **Dois ímpares** ou **falha** → o mestre emoldura.
 
 **Magia**: 1 palavra do seu Valor (núcleo) + até 1 palavra de Valor a mais (1 Arcano) + Palavras Básicas de graça (um verbo, um modo, uma forma). Na Moldura 1: **Grau 1** acontece sem rolar (ou vira o meio de uma ação: dano 1d8+1); **Grau 2** rola **2d12 + 2 (Sintonia) + 1 (Relação, se a palavra tem a ver com o personagem)** contra **12** ou a Dificuldade do alvo, a maior. Dano de Grau 2: **1d10 + 2**. Dura até a próxima Falha.
 
@@ -113,7 +113,7 @@ Orçamento: 3 × 4 + 2 = **14 pontos**; usados **13**.
 - **Domadora de Garmhal** — Moldura 1 · **Líder** (3) · Dominum · Dif 13 · Limiares 8/14 · PV 6 · Ataque +1 · Dano 1d10+2
   Ser: Domadora · Agir: Chicotear (Perto) · Mandar (livre: ativa uma fera aliada) · Soltar a Fera (3C: o Javali age agora, mesmo que já tenha agido) · Parecer: Leal · Quer: vender o ovo para Garmhal; foge com 2 PV · Laço: *Dívida*.
 - **Cão de Coleira Dupla** ×2 — Moldura 1 · **Padrão** (2 cada) · Dominum · Dif 12 · Limiares 8/14 · PV 5 · Ataque +1 · Dano 1d10+2
-  Ser: Cão, Servo · Agir: Morder · Agarrar (livre · Toque · 1 · Força · Preso · até o holofote virar) · Parecer: Leal · Quer: obedecer.
+  Ser: Cão, Servo · Agir: Morder · Agarrar (livre · Toque · 1 · Força · Preso · até o mestre emoldurar) · Parecer: Leal · Quer: obedecer.
 - **Javali de Ferro** — Moldura 1 · **Bruto** (4) · Primitivum · Dif 11 · Limiares 10/18 · PV 8 · Ataque +1 · Dano 1d12+4
   Ser: Javali · Agir: Chifrar · Atropelar (1C · Médio em linha · Grupo · Agilidade · dano ×1 + Caído) · Parecer: Blindado, Furioso · Quer: sair da jaula. É **Primitivum**: resiste à magia de Oruã (Dificuldade +2, metade do dano), mas Oruã pode tentar **acalmar, calmo** (Sabedoria 15) falando com ele como bicho.
 - **Bandidos da Domadora** (4) — Moldura 1 · **Lacaios** (1) · — · Dif 10 · 1 PV · Dano 4
@@ -157,7 +157,7 @@ Anotem durante (uma folha, um risco por vez):
 
 ## 5. Relatório do teste simulado
 
-O combate do Evento 2 foi jogado **5.000 vezes** por `calc/simular_combate.py` com os personagens acima. O modelo é simples: os jogadores atacam o adversário mais ferido e não gastam Arcano; o mestre ativa um adversário de graça quando pega o holofote e gasta Cataclisma para ativar mais. Não modela Atalhos, Hábitos, condições nem Abalos. Serve para achar números fora do lugar.
+O combate do Evento 2 foi jogado **5.000 vezes** por `calc/simular_combate.py` com os personagens acima. O modelo é simples: os jogadores atacam o adversário mais ferido e não gastam Arcano; o mestre ativa um adversário de graça quando emoldura e gasta Cataclisma para ativar mais. Não modela Atalhos, Hábitos, condições nem Abalos. Serve para achar números fora do lugar.
 
 ### Resultado base
 
@@ -165,7 +165,7 @@ O combate do Evento 2 foi jogado **5.000 vezes** por `calc/simular_combate.py` c
 |---|---|
 | vitória dos jogadores | 96% |
 | ações de jogador até acabar | 22 (entre 19 e 26 em 80% das lutas) |
-| vezes que o holofote foi ao mestre | 7,5 |
+| vezes que o mestre emoldurou | 7,5 |
 | PV perdidos pelo grupo (de 23) | 12 |
 | jogadores que caíram | 0,8 |
 | Arcano ganho pelo grupo | 29 (uns 7 por jogador) |
@@ -185,22 +185,22 @@ O combate do Evento 2 foi jogado **5.000 vezes** por `calc/simular_combate.py` c
 
 ```
 Tomé (6,3 +2 = 11 vs 10) acerta os Bandidos: derruba 3
-Iara (11,1 +3 = 15 vs 12) acerta os Bandidos: derruba os outros   ← dois ímpares: holofote vai ao mestre
+Iara (11,1 +3 = 15 vs 12) acerta os Bandidos: derruba os outros   ← dois ímpares: o mestre emoldura
   Javali acerta Tomé: −1 PV · Domadora acerta Tomé: −1 PV · Cão 2 e Cão 1 erram
 Nhanda (1,10 +3 = 14 vs 12) acerta o Cão 1: −1 PV
 Oruã (4,11 +2 = 17 vs 12) acerta o Cão 1: −2 PV
 Tomé (1,10 +2 = 13 vs 12) acerta o Cão 1: −2 PV, ele cai
-Iara (7,1 +3 = 11 vs 12) erra o Cão 2                            ← falha: holofote vai ao mestre
+Iara (7,1 +3 = 11 vs 12) erra o Cão 2                            ← falha: o mestre emoldura
   Cão 2 acerta Iara: −1 · Javali acerta Iara: −1 · Domadora acerta Nhanda: −1
 ...
-18 ações de jogador; o mestre teve o holofote só 2 vezes e terminou com 18 de Cataclisma.
+18 ações de jogador; o mestre emoldurou só 2 vezes e terminou com 18 de Cataclisma.
 ```
 
 ### O que o teste mostrou
 
 1. **O orçamento de encontro funciona.** 13 pontos deram uma luta padrão (metade dos PV do grupo, quase 1 personagem caído, 96% de vitória); 17 pontos deram uma luta difícil de verdade (2 caídos, 74%). A régua dos adversários está no lugar.
 2. **O mestre fica com Cataclisma sobrando.** Ganha uns 20 por combate e só consegue gastar 11 ativando adversários, porque a partir da metade da luta sobram poucos adversários para ativar. Termina perto de 20, e o próximo Evento começa transbordando. **Decidido (P-99)**: sem regra fixa; o mestre gasta Cataclisma **quando quiser** e age sempre que for bom para a narrativa. A simulação serve de referência: interromper mais ou menos a cada 3 ações deixa a luta mais tensa (1,3 caídos) e termina com 11 na reserva.
-3. **O holofote vai pouco ao mestre** (34% das ações). Como os jogadores acertam uns 75% das vezes, o mestre só age quando alguém falha ou tira dois ímpares. O mestre gastando para interromper quando quiser resolve isso.
+3. **O mestre emoldura pouco** (34% das ações). Como os jogadores acertam uns 75% das vezes, o mestre só age quando alguém falha ou tira dois ímpares. O mestre gastando para interromper quando quiser resolve isso.
 4. **Arcano sobra na Moldura 1.** Cada jogador ganha uns 7 por combate e começa com 3: depois de uma luta está perto do máximo (12). Na mesa real eles vão gastar em Vivências, Hábitos e Forçar o Grau, mas vale observar se alguém bate no teto. Se bater, há duas saídas: máximo menor na Moldura 1, ou Equilíbrio dar só Cataclisma.
 5. **A Skill de Persona some na Moldura 1.** Nhanda tem −2 na Dificuldade contra pessoas, mas a magia usa **a maior** entre a Dificuldade do Grau (12) e a do alvo. Contra a Domadora (13 − 2 = 11), a Dificuldade volta a ser 12: o bônus quase não aparece. **Sugestão**: o −2 de Persona vale **depois** de escolher a maior (12 − 2 = 10).
 6. **O Drawback de Conflitüo não pesa na Moldura 1.** "Fora de combate, 2 palavras" é o limite de todo mundo na Moldura 1. **Sugestão**: "fora de combate, a primeira palavra extra custa 2 Arcano", ou deixar e aceitar que o Drawback só aparece da Moldura 2 em diante.
