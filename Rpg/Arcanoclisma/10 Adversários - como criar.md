@@ -52,7 +52,7 @@ A **Dificuldade** é o número que os jogadores tiram para acertar o adversário
 | **Bruto** | Dif −1, Limiares ×1,3, PV +3, dano ×1,4 | 2–3 | 4 |
 | **Chefe** | Dif +2, Limiares ×1,5, PV ×2; age 2 vezes quando ativado; um verbo pode ser **reação** | 4–5 | 5 |
 
-**Orçamento do Evento de combate**: **3 × nº de jogadores + 2** pontos. −2 para fácil, +2 para difícil, −2 se houver 2 Chefes, +1 se usar adversários de Moldura abaixo.
+**Orçamento do Evento de combate**: **3 × nº de jogadores + 2** pontos; **+1 com 3 jogadores, +2 com 2 jogadores** (mesa menor deixa o mesmo encontro mais fácil). −2 para fácil, +2 para difícil, −2 se houver 2 Chefes, +1 se usar adversários de Moldura abaixo.
 
 ## As palavras
 

@@ -323,7 +323,7 @@ Sua resposta: ✅ ok.
 Sua resposta: ✅ ok (aplicada em [[10 Adversários - como criar]]).
 
 **P-112** 🟡 Orçamento de encontro: **+2 pontos com 2 jogadores, +1 com 3** (menos gente deixa o mesmo encontro mais fácil).
-Sua resposta:
+Sua resposta: ✅ ok (aplicado em [[10 Adversários - como criar]]).
 
 **P-113** 🟡 Dificuldade de encontro: **fácil −2 · difícil +2 · muito difícil +4** pontos.
 Sua resposta:

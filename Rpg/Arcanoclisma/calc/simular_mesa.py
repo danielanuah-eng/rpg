@@ -83,7 +83,7 @@ PONTOS = {"Lacaio": 1, "Padrão": 2, "Líder": 3, "Bruto": 4, "Chefe": 5}
 
 
 def montar_encontro(M, n, extra=0, chefe=False):
-    orc = 3 * n + 2 + extra
+    orc = 3 * n + 2 + extra + {2: 2, 3: 1}.get(n, 0)  # P-112
     lista = []
     if chefe:
         lista.append("Chefe"); orc -= 5

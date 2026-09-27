@@ -105,7 +105,7 @@ Sete problemas comuns de mesa, resolvidos só com as palavras de cada Valor e as
 ## 5. Resumo das propostas
 
 - **P-111** ✅ aplicada: régua nova de adversários (Dificuldade 12/13/14/15, ataque +1/+2/+3/+4, Limiares e dano levemente menores nas Molduras 2–4).
-- **P-112 🟡** Orçamento: +2 pontos com 2 jogadores, +1 com 3.
+- **P-112** ✅ aplicado: orçamento: +2 pontos com 2 jogadores, +1 com 3.
 - **P-113 🟡** Dificuldade de encontro: **difícil = +2 pontos**, **muito difícil = +4**, **fácil = −2**.
 - **P-114** ✅ aplicada: Ameaça como **pote** visível que o mestre enche quando quiser e que dispara quando cheio.
 - **P-115** ✅ decidido: cura é só de Morbidyum.
