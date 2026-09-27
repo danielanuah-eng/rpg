@@ -14,17 +14,23 @@ As palavras das tabelas **não são reais**. Ninguém no mundo "tem a palavra Fo
 
 Por isso a mesma palavra funciona de jeitos diferentes em personagens diferentes. **Lâmina**, para um Conflitüo que foi soldado, é a espada que nunca largou; para outro, que perdeu alguém numa briga, é o corte que ele sabe fazer parar. Palavras podem ser complexas, arbitrárias, subjetivas. O que torna a magia possível é o **envolvimento** do personagem com o seu Valor, e o que o jogador **descreve** na hora de usar.
 
-Regra prática: ao conjurar, o jogador diz **por que aquela palavra**, para aquele personagem, faz aquilo acontecer. Uma frase basta. O mestre aceita qualquer relação que a mesa ache convincente; se a relação é fraca ou forçada, a magia sobe um Grau de dificuldade (use a Dificuldade do Grau seguinte).
+### Relação (+1)
+
+Ao conjurar, o jogador **pode** dizer em uma frase por que aquela palavra, para aquele personagem, faz aquilo acontecer. É opcional e só narrativo: ninguém é punido por não dizer.
+
+Mas quando a relação **corresponde ao personagem** (aos valores, à ética, às qualidades, ao jeito de ver o mundo, ao Compromisso dele), a magia ganha **+1 de Relação** no total.
+
+Os números do jogo **já contam com esse +1** (as Dificuldades de Grau foram calibradas com ele). Parece um extra, e é bom que pareça; mas é o jeito normal de conjurar. Quem não conta a relação conjura um pouco abaixo do esperado.
 
 ## Conjurar em 5 passos
 
-1. **Intenção**: diga o que quer que aconteça, como a magia aparece (pelo seu Canal) e qual a sua relação com a palavra.
+1. **Intenção**: diga o que quer que aconteça, como a magia aparece (pelo seu Canal) e, se quiser, a sua relação com a palavra.
 2. **Palavras**:
    - **Palavras de Valor**: de 1 até o seu limite (Moldura + 1). **A primeira é do seu Valor** (o núcleo); as outras podem ser do seu Valor ou Palavras Estrangeiras.
    - **Palavras Básicas** (ação, modo, forma): **não custam e não contam no limite**, até uma de cada tipo. Precisam fazer sentido concreto.
 3. **Grau**: pelo tamanho do efeito (tabela abaixo), até o seu máximo (Moldura + 1). O mestre tem a palavra final se o efeito pedido for maior do que o Grau.
 4. **Pague**: custo do Grau + 1 Arcano por palavra de Valor além da primeira + Ampliações.
-5. **Role** os dados do Grau + Sintonia, contra a Dificuldade (a maior entre a do Grau e a do alvo). Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre).
+5. **Role** os dados do Grau + Sintonia (+1 de Relação), contra a Dificuldade (a maior entre a do Grau e a do alvo). Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre).
 
 ### Grau 1: a magia do dia a dia
 
@@ -38,7 +44,7 @@ Ela só vira rolagem quando é o **meio de uma ação** que já seria um teste: 
 |---|---|---|---|---|---|
 | **Dados** | nenhum, acontece | **2d12** | **3d8** | **4d6** | **6d4** |
 | **Custo base** | 0 | 0 | 1 Arcano | 2 Arcano | 4 Arcano |
-| **Dificuldade do Grau** | — | 11 | 13 | 15 | 18 |
+| **Dificuldade do Grau** | — | 12 | 14 | 16 | 19 |
 | **Moldura mínima** | 1 | 1 | 2 | 3 | 4 |
 | **Dano** | nenhum (só incômodo) | 1d10 + Sintonia | 2d10 + Sintonia | 3d10 + Sintonia | 5d10 + Sintonia |
 | **Cura** (sempre +1 Arcano por PV) | — | 1 PV | até 2 PV | até 3 PV ou 1 condição | todos os PV, ou trazer de volta quem morreu neste Evento |
@@ -74,7 +80,7 @@ Os quatro conjuntos têm **o mesmo máximo, 24**, que era a sua ideia. O que mud
 - **Por que não 8d4**: soma até 32 (não 24) e acerta 98–100% contra qualquer Dificuldade. Ele quebraria a tabela. Troquei por **6d4** e coloquei **3d8** no meio. ❓ **P-02**
 - **3d8 é o Grau traiçoeiro**: número ímpar de dados nunca empata, então metade das magias Impressionantes sai Ímpar. Soa bem para o "Grau adolescente" da magia. Se não gostar, dá para contar empate a favor do jogador.
 
-Conjurar no seu Grau máximo, contra a Dificuldade do Grau, dá **81–84%** em todas as Molduras (com a Sintonia normal).
+Conjurar no seu Grau máximo, contra a Dificuldade do Grau, dá **81–84%** em todas as Molduras com a Sintonia normal **e o +1 de Relação**; sem a Relação, 70–77%. (Magia com Relação acerta um pouco mais que arma contra adversários; arma compensa batendo mais forte e sem custo.)
 
 ## Leitura dos dados na magia
 
@@ -202,11 +208,11 @@ Palavras Básicas **não custam nada**, mas precisam fazer **sentido concreto** 
 
 ### Formas e alvos (só para magia, d12)
 
-| 1 Projétil | 2 Raio | 3 Onda | 4 Barreira | 5 Cúpula | 6 Área |
+| 1 Projétil | 2 Linha | 3 Onda | 4 Barreira | 5 Cúpula | 6 Área |
 |---|---|---|---|---|---|
 | **7 Aliado** | **8 Inimigo** | **9 Grupo** | **10 Objeto** | **11 Arma** | **12 Chão** |
 
-Sem forma, a magia sai do jeito mais simples: nos alvos e no alcance do Grau. **Quantos alvos** e **que tamanho** vêm sempre do Grau; *Grupo* e *Área* só dizem que você quer usar esse máximo em vez de um alvo só.
+Formas são só formato: **nenhuma Palavra Básica é elemento** (fogo, gelo, luz, sombra são palavras de Valor). Sem forma, a magia sai do jeito mais simples: nos alvos e no alcance do Grau. **Quantos alvos** e **que tamanho** vêm sempre do Grau; *Grupo* e *Área* só dizem que você quer usar esse máximo em vez de um alvo só.
 
 ## Exemplos de conjuração
 
@@ -214,9 +220,9 @@ Sem forma, a magia sai do jeito mais simples: nos alvos e no alcance do Grau. **
 - Relação: "Gelo, para ela, é o rio que parou para ela não morrer."
 - Palavras: **Gelo** (núcleo) + *Atacar*, *preciso*, *Projétil* (básicas, grátis).
 - Grau 2 (uma pessoa, dano). Custo total 0.
-- Rola 2d12 + 2 contra a maior entre 11 (Grau) e a Dificuldade do guarda, 12. Tira 7 e 8: total 17, acerta. Um par (+1 Arcano), um ímpar (+1 Cataclisma). Dano 1d10 + 2 + 1 (Foco).
+- Rola 2d12 + 2 + 1 (Relação) contra a maior entre 12 (Grau) e a Dificuldade do guarda, 12. Tira 7 e 8: total 18, acerta. Um par (+1 Arcano), um ímpar (+1 Cataclisma). Dano 1d10 + 2 + 1 (Foco).
 
 **Tomé (Conflitüo) e Iara (Sublimeyn), nível 5** fazem uma dupla: **Explodir + Lâmina + Metal + Fundir + Grupo**.
 - 4 palavras de Valor, Grau do efeito 4 + 1 = **5 (Mítico)**: uma chuva de lâminas de metal derretido sobre até todos os inimigos à vista.
 - Custo: 3 (dupla) + as palavras de Valor extras de cada um (*Grupo* é básica, grátis).
-- Tomé rola 4d6 + 4, Iara rola 4d6 + 4, somam contra 15 + 15 = 30. Skill do Conflitüo vale (+1 dado de dano). Se sair Ímpar, rolam 1 Dificuldade (4 palavras de Valor).
+- Tomé rola 4d6 + 4 + 1, Iara rola 4d6 + 4 + 1 (os dois dizem a relação), somam contra 16 + 16 = 32. Skill do Conflitüo vale (+1 dado de dano). Se sair Ímpar, rolam 1 Dificuldade (4 palavras de Valor).

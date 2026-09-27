@@ -98,16 +98,20 @@ Formato de dados (proposta): um JSON por tipo em `dados/`, com o mesmo campo `mo
 
 ## Fase 4 — Arte
 
+Referências visuais (P-52):
+- **Página, diagramação, ornamentos**: a estética das artes do **Daggerheart**.
+- **Desenho de personagens**: o traço e a estética do **Wilderfeast**.
+- **Personagens das fichas e do livro**: estilos, épocas e poses diferentes (alguns futuristas, outros não), sempre **fazendo magia de algum jeito** (pelo foco, pela arma, pelo Transcrito, pelo corpo...). A ideia é passar o ponto do sistema sem prender a temática a uma Era só.
+
 | # | Tarefa |
 |---|---|
-| 4.1 | Guia visual: paleta de cada Valor, estilo (proposta: pintura com contorno, fundo neutro, cor do Valor como luz de recorte) |
-| 4.2 | 9 símbolos abstratos dos Valores (vetor, para ficha e cartas) |
+| 4.1 | Guia visual: paleta de cada Valor, a página no estilo Daggerheart, o personagem no estilo Wilderfeast |
+| 4.2 | 9 símbolos abstratos dos Valores (vetor, para as fichas) — decidir depois que o resto estiver fechado |
 | 4.3 | Capa do livro e das fichas |
-| 4.4 | Lista de prompts, um por item/terreno/adversário (igual ao `prompts das Peças novas.md`), com id = nome do arquivo |
-| 4.5 | Geração em lote (Canva), recorte de fundo, conferência uma a uma |
-| 4.6 | Molduras e ornamentos da ficha de papel |
-
----
+| 4.4 | Personagens de exemplo: um por Valor e um por Canal, misturando Eras e poses |
+| 4.5 | Lista de prompts, um por item/terreno/adversário/dragão (igual ao `prompts das Peças novas.md`), com id = nome do arquivo |
+| 4.6 | Geração em lote (Canva), recorte de fundo, conferência uma a uma |
+| 4.7 | Molduras e ornamentos das duas fichas (a do Valor muda de arte para cada um dos 9) |
 
 ## Fase 5 — Fichas, geradores, livro, site
 
@@ -117,7 +121,7 @@ Entregas, na mesma família do Peso do Céu:
    - **Ficha digital**: tudo que o personagem liberou aparece nela; contadores de Arcano/Cansaço/PV/Proteção clicáveis; montador de magia (escolhe palavras → mostra Grau, custo, dados, Dificuldade, e rola os dados contando pares/ímpares); loja em Ordynus; subir de nível guiado; guardar/importar/exportar.
    - **Escudo do mestre digital**: contador de Cataclisma com Transbordo, tabela de Abalos, holofote.
    - **Geradores**: encontro (balanceado pela Moldura e nº de jogadores), adversário com imagem, terreno, tesouro/item, relíquia com palavra, PNJ, nome, gancho, Abalo, "magia aleatória" (d66 nas tabelas).
-2. **Ficha de papel** enfeitada para imprimir, em **duas folhas** ([[05 Personagem e níveis]]):
+2. **Ficha de papel** enfeitada para imprimir, em **A4**, colorida e com versão econômica em preto e branco, em **duas folhas** ([[05 Personagem e níveis]]):
    - **Ficha 1 — Personagem** (igual para todos): nome, skin, Comportamento, atributos, Palavras Básicas, Arcano, Laço e Passos, Vivências, itens, Ordynus, perguntas de criação e relações da party.
    - **Ficha 2 — Valor** (9 versões, uma por Valor, com arte própria): símbolo, Compromisso, Skill, Drawback, Ressonâncias, as 36 palavras, 4 espaços extras, Canal, tabela de Graus e magias favoritas.
    - Opcional: folha de Familiar/montaria.
@@ -127,5 +131,5 @@ Entregas, na mesma família do Peso do Céu:
    - leitura dentro do app (cada regra abre a partir da ficha);
    - livretos menores separados: do jogador, do mestre, de um Valor, de uma Era, do bestiário.
    E o **escudo do mestre** (PDF).
-4. **Site** em um **Netlify novo** (separado do Peso do Céu): página de apresentação com capa, documentos para baixar, botão para instalar o app, galeria de imagens.
+4. **Site** (só depois de tudo pronto) em um **Netlify novo** (separado do Peso do Céu): página de apresentação com capa, documentos para baixar, botão para instalar o app, galeria de imagens.
 5. `calc/conferir.py`: confere antes de publicar que todo item/adversário está dentro da faixa da sua Moldura (o "balanceador" que o gerador usa).

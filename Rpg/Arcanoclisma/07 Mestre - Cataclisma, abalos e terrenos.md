@@ -155,7 +155,7 @@ Todo Terreno pode virar variação: troque o Valor, a Moldura ou o tipo e ajuste
 | **Pátio de Duelos** *(Escola de Magia)* | 1 · Social · qualquer | Magia é permitida, ferir de verdade não: dano acima do Maior tira do duelo | *Professor Chegando* (2): quem conjurar Grau 3+ é pego. *Aposta* (1): a plateia escolhe um favorito |
 | **Torre dos Protetores** | 3 · Hostil · (nenhum) | **Zona de Anulação**: nada acima de Grau 2 funciona | *Alarme* (3): um grupo de Protetores. *Selar* (4): uma palavra de cada jogador selada até sair |
 
-Os **Reinos** (um por Valor, e os de Arcano e Cataclisma) são Terrenos de Moldura 3–4 e estão descritos em [[08 Mundo e entidades]].
+Os **Reinos** (um por Valor) são Terrenos de Moldura 3–4 e estão descritos em [[08 Mundo e entidades]].
 
 ## 3. Ambientes e dificuldades
 

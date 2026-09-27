@@ -2,7 +2,7 @@
 
 > Rascunho v0. Os 9 Valores, cada um com **36 palavras** (tabela 6×6, sorteável com d66), Skill, Drawback, duas Ressonâncias (melhorias ao subir de nível), símbolo e cor. Os significados, símbolos e nomes são proposta para decidirmos juntos (❓ P-10 a P-14).
 
-Em cada tabela: linhas 1–2 são **verbos** (o que a magia faz), 3–4 **substantivos** (com o que ela faz), 5–6 **qualidades** (como ela é).
+Todo Valor tem **36 palavras só dele**: **12 verbos** (linhas 1–2, o que a magia faz), **12 substantivos** (linhas 3–4, com o que ela faz) e **12 adjetivos** (linhas 5–6, como ela é).
 
 ## Comprometidos
 

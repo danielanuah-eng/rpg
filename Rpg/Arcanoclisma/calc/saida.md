@@ -18,23 +18,25 @@
 | 6d4 | 100 | 99 | 98 | 95 | 90 | 82 | 70 | 57 | 43 | 30 | 18 | 10 | 5 | 2 | 1 |
 | 8d4 | 100 | 100 | 100 | 100 | 100 | 99 | 98 | 96 | 92 | 86 | 78 | 68 | 56 | 44 | 32 |
 
-## Conjuração no Grau máximo da Moldura (dados + Sintonia contra a Dificuldade do Grau)
+## Conjuração no Grau máximo da Moldura (dados + Sintonia + Relação contra a Dificuldade do Grau)
 
-| caso | dados | Sintonia | Dificuldade | chance |
-|---|---|---|---|---|
-| G2 na Moldura 1 | 2d12 | +2 | 11 | 81% |
-| G3 na Moldura 2 | 3d8 | +3 | 13 | 84% |
-| G4 na Moldura 3 | 4d6 | +4 | 15 | 84% |
-| G5 na Moldura 4 | 6d4 | +5 | 18 | 82% |
+Sintonia = Moldura + 1. A Relação (+1) é o normal: as Dificuldades foram calibradas com ela.
 
-## Ataque mágico (dados + Sintonia = Moldura + 1) contra a Dificuldade típica de adversário
+| caso | dados | Sintonia | Dificuldade | com Relação (+1) | sem Relação |
+|---|---|---|---|---|---|
+| G2 na Moldura 1 | 2d12 | +2 | 12 | 81% | 75% |
+| G3 na Moldura 2 | 3d8 | +3 | 14 | 84% | 77% |
+| G4 na Moldura 3 | 4d6 | +4 | 16 | 84% | 76% |
+| G5 na Moldura 4 | 6d4 | +5 | 19 | 82% | 70% |
+
+## Ataque mágico (dados + Sintonia + Relação) contra a Dificuldade típica de adversário
 
 | Moldura | Dif. adversário | 2d12 | 3d8 | 4d6 | 6d4 | 8d4 |
 |---|---|---|---|---|---|---|
-| 1 | 12 | 75% | 84% | 90% | 98% | 100% |
-| 2 | 14 | 69% | 77% | 84% | 95% | 100% |
-| 3 | 16 | 62% | 68% | 76% | 90% | 100% |
-| 4 | 18 | 54% | 59% | 66% | 82% | 99% |
+| 1 | 12 | 81% | 89% | 95% | 99% | 100% |
+| 2 | 14 | 75% | 84% | 90% | 98% | 100% |
+| 3 | 16 | 69% | 77% | 84% | 95% | 100% |
+| 4 | 18 | 62% | 68% | 76% | 90% | 100% |
 
 ## Teste comum: 2d12 + atributo
 

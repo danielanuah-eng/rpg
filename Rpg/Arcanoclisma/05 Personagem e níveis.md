@@ -25,7 +25,7 @@ Anote cada relação na ficha dos dois personagens (no app, aparece nas duas fic
 
 ## Criação em 9 passos
 
-1. **Conceito e Era** — quem é o personagem, numa frase.
+1. **Conceito e Era** — quem é o personagem, numa frase, e **de onde ele vem**: uma cidade, um povo, ou qualquer um dos **Reinos** ([[08 Mundo e entidades]]). A origem não dá habilidade nem bônus: dá história, costumes, sotaque, gente que ele conhece. A graça está no que isso significa para ele.
 2. **Comportamento** — anote Esquiva, PV, Limiares base, armaduras, o **Talento** e o **Hábito** ([[04 Comportamentos]]).
 3. **Valor** — o personagem é um **Comprometido**. Pegue a **ficha do seu Valor** (36 palavras, símbolo, Skill, Drawback, 4 espaços extras) e anote o **Compromisso** ([[03 Valores]]).
 4. **Vínculo** — responda às perguntas abaixo.
@@ -33,7 +33,7 @@ Anote cada relação na ficha dos dois personagens (no app, aparece nas duas fic
 6. **Atributos** — distribua **+2, +1, +1, 0, 0, −1**.
 7. **Vivências** — escreva **2** frases do passado do personagem. Cada uma vale +2 (gastando 1 Arcano).
 8. **Equipamento** — uma arma, uma armadura permitida, o objeto do Canal, um kit, **50 Ordynus** ([[06 Itens e dinheiro]]).
-9. **Números finais** — Laço 0/5, Arcano 3, Cansaço 6, PV do Comportamento, Proteção da armadura, Limiares = base + 1 + armadura, Sintonia +2.
+9. **Números finais** — Laço 0/5, Arcano 3, Cansaço 6, PV do Comportamento, Proteção da armadura, Limiares = base + 1 + armadura, Sintonia +2 (mais o +1 de Relação quando a magia tem a ver com o personagem).
 
 ## As perguntas de criação
 

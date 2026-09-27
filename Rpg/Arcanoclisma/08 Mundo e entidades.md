@@ -70,7 +70,7 @@ Poucos. Uns se dizem deuses, outros vivem como gente comum, outros são donos de
 
 ## Os Reinos
 
-Cada Primordial deixou no mundo, ou fora dele, um lugar onde o Valor é a lei. Arcano e Cataclisma também têm os seus. São **dimensões** que tocam o mundo em pontos certos (e se abrem com a Maré "Chamado do Reino"). Como Terreno, sãa Moldura 3–4.
+Cada Primordial deixou no mundo, ou fora dele, um lugar onde o Valor é a lei. (Arcano e Cataclisma não têm Reino: são forças da natureza, não lugares nem entidades.) São **dimensões** que tocam o mundo em pontos certos (e se abrem com a Maré "Chamado do Reino"). Como Terreno, sãa Moldura 3–4.
 
 | Reino | Valor | Quem vive lá | O que acontece lá | Desafio | Benefício |
 |---|---|---|---|---|---|
@@ -83,15 +83,13 @@ Cada Primordial deixou no mundo, ou fora dele, um lugar onde o Valor é a lei. A
 | **O Arquivo Sem Dono** | Cognitium | os **Esquecidos**; no centro, o Trono Vazio | biblioteca-labirinto de todas as memórias esquecidas; ilusão lá é matéria | cada Pausa ali apaga algo; para sair é preciso lembrar como entrou | recuperar qualquer memória |
 | **O Entretempo** | Eternyr | os **Repetidos**, que vivem o mesmo instante | ruínas de todas as épocas ao mesmo tempo; salas que são anos | o tempo lá fora corre diferente (1d6: horas, dias, semanas, meses, anos, nada) | ver um pedaço do passado ou do futuro |
 | **A Floresta Primeira** | Primitivum | Tahwë, espíritos-animais, os bichos que vieram antes dos bichos | a mata de onde veio tudo que é vivo | quanto mais se fica, mais bicho se vira | ganhar um Familiar |
-| **O Fechado** | Arcano | ninguém se mexe; estátuas que respiram | tudo perfeito, simétrico e parado; controle absoluto | lá dentro nada muda: ferida não piora, mas também não sara, e ninguém consegue decidir nada | Arcano enche até o máximo ao entrar |
-| **A Sobra** | Cataclisma | os **Rasgados** e tudo que ficou sem par | tudo muda o tempo todo; o chão, o céu, o próprio corpo | a cada ação, role um Abalo de Faísca | qualquer magia sobe um Grau de efeito |
 
 ## Povos, culturas e lugares
 
 Não há raças: há gente, de todas as aparências, e as culturas nascem do lugar e do Valor que manda nele.
 
 - **Comprometidos**: quem usa magia. A vida, o estilo e o poder se orientam pelo Valor, na personalidade e no jeito de agir (ver o Compromisso de cada Valor em [[03 Valores]]). Em muitos lugares se reconhece um Comprometido pelo jeito antes de ver a magia.
-- **Magia é comum.** Quem tem, usa o tempo todo: no fogão, na oficina, na lavoura, na briga. Cada um exerce do seu jeito (um foco, a própria arma, um Transcrito, o corpo, a voz). O mundo só bagunça quando alguém usa magia de forma instável, poderosa demais ou sem parar — é aí que aparecem Feridas, Rasgados e Protetores.
+- **Magia é comum.** Quem tem, usa o tempo todo: no fogão, na oficina, na lavoura, na briga. Cada um exerce do seu jeito (um foco, a própria arma, um Transcrito, o corpo, a voz). O mundo só bagunça quando alguém usa magia de forma instável, poderosa demais ou sem parar — é aí que aparecem Feridas, Disruptos e Protetores.
 - **Gente sem Valor** também existe, e convive com a magia como se convive com o tempo: às vezes ajuda, às vezes destrói a colheita.
 - **Culturas de Valor** (sementes, para cada mesa expandir):
   - *Cidades-muralha* de Conflitüo, onde a arma é roupa;
@@ -132,10 +130,12 @@ Dragões são criaturas **deste mundo**, e **representam os Valores**. Cada drag
 
 Os números estão no [[11 Bestiário]] (Dragonete, Jovem, Adulto, Ancião, Wyverns).
 
-## As duas metades e quem as serve
+## Arcano, Cataclisma e o que nasce deles
 
-- **Protetores do Arcano**: servem o controle. Onde há magia demais, eles aparecem e fecham: selam palavras, anulam magia grande, levam gente embora.
-- **Rasgados**: nascem onde o Cataclisma se acumula, feitos das sobras de magia. São mudança sem forma fixa.
+**Arcano e Cataclisma não são entidades.** São **forças homeostáticas** do mundo, mais parecidas com o tempo, a maré e a gravidade do que com deuses: não querem, não falam, não têm reino. Agem sozinhas, puxando o mundo de volta ao equilíbrio: o Arcano fecha, o Cataclisma move.
+
+- **Protetores do Arcano**: são **as duas coisas**. Há uma **ordem** de gente (Comprometidos e gente comum que juraram conter a magia desmedida) e há uma **espécie**, criaturas que surgem onde o Arcano fecha com força, como anticorpos do mundo. Os dois lados se reconhecem e às vezes trabalham juntos. Onde há magia demais, aparecem e fecham: selam palavras, anulam magia grande, levam gente embora.
+- **Disruptos**: nascem onde o Cataclisma se acumula, feitos das sobras de magia. São mudança sem forma fixa.
 
 ## Eras jogáveis
 
@@ -143,7 +143,7 @@ Os números estão no [[11 Bestiário]] (Dragonete, Jovem, Adulto, Ancião, Wyve
 |---|---|---|
 | **Era Muda** (antes da magia) | ninguém tem Valor; mundo duro e comum | sem Valor; Arcano e Cataclisma continuam como sorte e azar (Arcano só em usos sem magia) |
 | **Era dos Semideuses** | poucos Comprometidos, semideuses reinam | Grau máximo −1 para todos; semideuses aparecem com frequência |
-| **Era da Cisão** (padrão) | logo depois da divisão; magia instável, Protetores e Rasgados por toda parte | regras como estão |
+| **Era da Cisão** (padrão) | logo depois da divisão; magia instável, Protetores e Disruptos por toda parte | regras como estão |
 | **Era Tecnomaga** | futuro; magia e máquina; cidades verticais | armas de fogo; Canal **Dispositivo** (um foco arcano que pode ser hackeado); Terrenos tecnológicos |
 | **Escola de Magia** (modo, cabe em qualquer Era) | academia, turmas, rivalidade | Terrenos de escola; Protetores como inspetores |
 
@@ -173,8 +173,8 @@ Responda as que quiser; as ★ são as que mais destravam.
 13. Que festas, roupas e comidas são típicas de cada cultura de Valor?
 
 ### Entidades
-14. ★ Os Protetores do Arcano são gente, criaturas, ou Comprometidos que juraram algo?
-15. Um Rasgado pode ser domado, ter nome, virar gente?
+14. ★ Como a ordem dos Protetores e a espécie dos Protetores se encontraram pela primeira vez?
+15. Um Disrupto pode ser domado, ter nome, virar gente?
 16. Onde vivem os semideuses que "fingem ser comuns", e quantos existem que ninguém conhece?
 17. Zahun tem outros filhos? Que rostos ele costuma usar?
 18. ★ De onde vêm os dragões: dos Primordiais, dos Valores direto, de antes da divisão? E por que Vyal tem pele de dragão?

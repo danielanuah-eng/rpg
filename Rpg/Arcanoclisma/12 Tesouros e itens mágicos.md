@@ -75,8 +75,8 @@ Itens mais raros, com cara de lenda. Ainda sem número: o poder está no que faz
 | 44 | Sino dos Juramentados | quem ouve não foge da luta | nem você |
 | 45 | Luneta do Fim | mostra onde e como alguém vai morrer, se nada mudar | a pessoa sente que foi vista |
 | 46 | Cordão de Rhu | o dono entende e é entendido por lobos | às vezes acorda uivando |
-| 51 | Pedra do Fechado | onde ela é posta, nada muda por uma hora (fogo não espalha, água não sobe, ninguém envelhece) | nem ferida fecha |
-| 52 | Pedaço da Sobra | onde é jogado, tudo muda de forma por um instante | nunca muda do mesmo jeito |
+| 51 | Pedra Parada | onde ela é posta, nada muda por uma hora (fogo não espalha, água não sobe, ninguém envelhece) | nem ferida fecha |
+| 52 | Estilhaço de Disrupto | onde é jogado, tudo muda de forma por um instante | nunca muda do mesmo jeito |
 | 53 | Trono Dobrável | quem senta nele é ouvido por todos na sala | não consegue levantar até terminar de falar |
 | 54 | Harpa de Vidro de Liss | a música endurece o ar em escadas e pontes enquanto toca | uma nota errada e tudo quebra |
 | 55 | Relicário da Terceira Vida | guarda uma respiração; devolve a quem acabou de morrer | só guarda a respiração de quem a dá por vontade |

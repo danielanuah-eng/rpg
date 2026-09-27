@@ -96,7 +96,7 @@ Ser: Grifo · Agir: Rasgar · Mergulhar (1C · Longe · 1 · ataque · dano ×1,
 **Hidra de Barro** — M4 · Chefe · Sublimeyn + Primitivum
 Ser: Hidra · Agir: Morder (duas vezes) · Brotar (reação, 1C: quando toma dano Grave, cresce outra cabeça: +1 ataque por ativação, máx. 5) · Lamaçal (2C · Médio · Área · Agi · Preso · Pagar) · Parecer: Regenerante, Enorme · Quer: território; não sabe o que é recuar.
 
-## Rasgados (criaturas do Cataclisma)
+## Disruptos (nascidos do Cataclisma)
 
 **Sobra** — M1 · Lacaio · (sorteado) · Instável
 Ser: Sobra · Agir: Arranhar · Parecer: Estranho (tem a forma de uma magia que alguém errou) · Quer: completar-se.
@@ -110,7 +110,7 @@ Ser: Eco · Agir: Repetir (1C · a última magia conjurada no Evento acontece de
 **Nó de Ímpares** — M3 · Bruto · Quimerarcano · Instável
 Ser: Nó · Agir: Esmagar · Desequilibrar (2C · Médio · Área · o próximo teste de cada um que falhar vira Ímpar automático · Falha) · Parecer: Enorme, Faminto de Magia · Quer: que tudo fique ímpar.
 
-**Rasgado Gêmeo** — M3 · Ágil (sempre 2) · (sorteado) · Instável
+**Disrupto Gêmeo** — M3 · Ágil (sempre 2) · (sorteado) · Instável
 Ser: Metade · Agir: Cortar · Trocar (1C · os dois trocam de lugar · Inst) · Parecer: Leal (se um cai, o outro age na hora) · Quer: achar a própria metade — que é o outro, e eles não sabem.
 
 **A Coisa Que Sobrou** — M4 · Chefe · três Valores · Quimerarcano, Resiliente
@@ -124,7 +124,7 @@ Ser: Guardião, Selo · Agir: Golpear · Selar (1C · Perto · 1 · Sab · Selad
 **Caçador de Ímpares** — M3 · Ágil · — · Anulador
 Ser: Caçador · Agir: Atirar (Longe) · Farejar Cataclisma (livre: sabe quem gerou mais Cataclisma no Evento e o ataca primeiro) · Rede de Silêncio (2C · Médio · Grupo · Agi · Preso + não conjura Grau 2+ · Pagar) · Parecer: Silencioso, Veloz · Quer: levar o conjurador mais imprudente.
 
-**Juiz do Fechado** — M4 · Chefe · — · Anulador, Inquebrável
+**Juiz do Selo** — M4 · Chefe · — · Anulador, Inquebrável
 Ser: Juiz, Estátua · Agir: Golpear · Fechar (3C · Longe · Área · Zona de Anulação · Ev) · Sentença (2C · Médio · 1 · Sab · marca Cansaço igual ao Cataclisma que o alvo gerou no Evento, máx. 4 · Inst) · Imobilizar (reação, 2C · Perto · 1 · Preso · Virar) · Parecer: Sagrado, Pesado · Quer: fechar.
 
 **Arquivista Sem Rosto** — M3 · Suporte · Cognitium · Resiliente

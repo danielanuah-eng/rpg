@@ -142,8 +142,8 @@ Marcas menores, que o gerador também sorteia: *Imune a [Valor]*, *Absorve [Valo
 | **Gente comum** | Lacaio, Padrão, Social | nenhum ou 1 fraco | Guarda, Bandido, Nobre, Mercador |
 | **Comprometidos hostis** (feiticeiros, magos) | Conjurador, Líder, Chefe | 1–2, Resiliente, Espelho | Mago, Aprendiz, Sacerdote, Duelista |
 | **Monstros e feras** (de Kairvahnn) | Bruto, Ágil, Lacaio | Dominum ou Primitivum, Controlável | Fera, Matilha, Predador |
-| **Rasgados** (do Cataclisma) | qualquer | Valor sorteado; **Instável** (dano Grave nele dispara uma Faísca) | Sobra, Rasgo, Eco |
-| **Protetores do Arcano** | Padrão, Líder, Chefe | Anulador, Inquebrável | Guardião, Selo, Juiz |
+| **Disruptos** (do Cataclisma) | qualquer | Valor sorteado; **Instável** (dano Grave nele dispara uma Faísca) | Sobra, Rasgo, Eco |
+| **Protetores do Arcano** (ordem e espécie) | Padrão, Líder, Chefe | Anulador, Inquebrável | Guardião, Selo, Juiz |
 | **Seres de energia** | Ágil, Conjurador | Etéreo, Absorve [seu Valor] | Chama, Luz, Vento, Eco |
 | **Povos dos Reinos** | qualquer | Valor do Reino | Juramentado, Moldado, Manso, Sentido, Vigia, Esquecido, Repetido |
 | **Semideuses** | Chefe | Valor do pai, Deidade | o nome dele |

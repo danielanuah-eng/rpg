@@ -8,6 +8,8 @@ Quando um número das regras mudar, rode de novo e confira aqui.
 from itertools import product
 from fractions import Fraction
 
+RELACAO = 1  # bônus de Relação com a palavra: opcional na ficção, mas o normal nos números
+
 POOLS = {  # nome: (lados, quantidade)
     "2d12": (12, 2),
     "3d8": (8, 3),
@@ -65,25 +67,26 @@ def main():
             linha.append(f"{100*ok/total:.0f}")
         print(f"| {nome} | " + " | ".join(linha) + " |")
 
-    print("\n## Conjuração no Grau máximo da Moldura (dados + Sintonia contra a Dificuldade do Grau)\n")
-    # Sintonia = Moldura + 1 (o +1 vem do Canal)
-    graus = [("2d12", 2, 11, "G2 na Moldura 1"), ("3d8", 3, 13, "G3 na Moldura 2"),
-             ("4d6", 4, 15, "G4 na Moldura 3"), ("6d4", 5, 18, "G5 na Moldura 4")]
-    print("| caso | dados | Sintonia | Dificuldade | chance |")
-    print("|---|---|---|---|---|")
+    print("\n## Conjuração no Grau máximo da Moldura (dados + Sintonia + Relação contra a Dificuldade do Grau)\n")
+    print("Sintonia = Moldura + 1. A Relação (+1) é o normal: as Dificuldades foram calibradas com ela.\n")
+    graus = [("2d12", 2, 12, "G2 na Moldura 1"), ("3d8", 3, 14, "G3 na Moldura 2"),
+             ("4d6", 4, 16, "G4 na Moldura 3"), ("6d4", 5, 19, "G5 na Moldura 4")]
+    print("| caso | dados | Sintonia | Dificuldade | com Relação (+1) | sem Relação |")
+    print("|---|---|---|---|---|---|")
     for nome, sint, dif, caso in graus:
         total, somas = dados[nome]
-        ok = sum(n for s, n in somas.items() if s + sint >= dif)
-        print(f"| {caso} | {nome} | +{sint} | {dif} | {100*ok/total:.0f}% |")
+        com = sum(n for s, n in somas.items() if s + sint + RELACAO >= dif)
+        sem = sum(n for s, n in somas.items() if s + sint >= dif)
+        print(f"| {caso} | {nome} | +{sint} | {dif} | {100*com/total:.0f}% | {100*sem/total:.0f}% |")
 
-    print("\n## Ataque mágico (dados + Sintonia = Moldura + 1) contra a Dificuldade típica de adversário\n")
+    print("\n## Ataque mágico (dados + Sintonia + Relação) contra a Dificuldade típica de adversário\n")
     adv = [(1, 12), (2, 14), (3, 16), (4, 18)]
     print("| Moldura | Dif. adversário | " + " | ".join(POOLS) + " |")
     print("|---|---|" + "---|" * len(POOLS))
     for pat, dif in adv:
         cel = []
         for nome, (total, somas) in dados.items():
-            ok = sum(n for s, n in somas.items() if s + pat + 1 >= dif)
+            ok = sum(n for s, n in somas.items() if s + pat + 1 + RELACAO >= dif)
             cel.append(f"{100*ok/total:.0f}%")
         print(f"| {pat} | {dif} | " + " | ".join(cel) + " |")
 

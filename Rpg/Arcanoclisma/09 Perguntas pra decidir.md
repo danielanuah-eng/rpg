@@ -64,7 +64,7 @@ Recomendo: **Moldura.** Com o nível, no fim do jogo vira ilimitado na prática.
 Sua resposta: ✅ ok (rodada 1)
 
 **P-14** 🟢 Símbolos e cores dos Valores (em [[03 Valores]]). Quer mudar algum? Tem alguma imagem abstrata na cabeça para algum deles?
-Sua resposta:
+Sua resposta: ⏳ ainda não: só depois que decidirmos amplamente tudo.
 
 **P-15** 🔴 O personagem tem acesso às **36 palavras do Valor desde o nível 1**, e o que cresce é quantas ele junta por magia (2 → 5).
 Recomendo: manter. Alternativa: começa com 12 e libera uma linha por Moldura.
@@ -117,7 +117,7 @@ Sua resposta:
 ## Itens
 
 **P-30** 🟢 Moeda: **Ordynus** como padrão, e cada mesa pode renomear. O singular é "Ordyn"?
-Sua resposta:
+Sua resposta: ✅ sim: **Ordyn**, plural **Ordynus**.
 
 **P-31** 🟡 Arma bate um pouco mais forte que magia num alvo só e não gasta nada; magia acerta vários e muda a cena, mas custa e gera Cataclisma.
 Recomendo: manter (quem não usa magia não fica para trás).
@@ -127,7 +127,7 @@ Sua resposta: ✅ ok (rodada 1)
 Sua resposta: ✅ ok (rodada 1)
 
 **P-33** 🟢 Materiais por Valor e fabricar Relíquias num Pouso. Quer um sistema de fabricação maior (tipo receitas do Wilderfeast) ou só isso?
-Sua resposta:
+Sua resposta: ✅ fabricação fica como **módulo avançado / expansão**; materiais por enquanto são só tesouro.
 
 ## Mundo
 
@@ -138,30 +138,30 @@ Sua resposta: ✅ o Trono Vazio fica como **peça do mundo**, sem história amar
 Sua resposta: ✅ **a Voragem**.
 
 **P-42** 🟢 Protetores do Arcano: ordem de gente, espécie de criatura, ou os dois?
-Sua resposta:
+Sua resposta: ✅ os dois: uma **ordem** de gente e uma **espécie** de criatura.
 
 **P-43** 🟢 Nome dos humanos que usam magia: **Falantes** (porque a magia é feita de palavras)? Outras: Tocados, Herdeiros.
 Sua resposta: ✅ **Comprometidos**.
 
 **P-44** 🟢 Criaturas do Cataclisma: **os Rasgados**?
-Sua resposta:
+Sua resposta: ✅ **Disruptos**.
 
 **P-45** 🟢 Nomes dos Primordiais novos (Thorvessa, Oyamar, Idrael, Velhena, Ossyr, Tahwë) e dos semideuses. Troque o que quiser.
-Sua resposta:
+Sua resposta: ✅ ok por enquanto.
 
 **P-46** ✅ **Arcanoclisma — um passo diante do desconforto e do compromisso**. O nome do jogo: **Arcanoclisma**? Ou outro?
-Sua resposta:
+Sua resposta: ✅ **Arcanoclisma — um passo diante do desconforto e do compromisso**.
 
 ## Produção (fase 5)
 
 **P-50** 🟢 App num HTML só, offline, instalável no celular, num **Netlify novo** só deste jogo. Página inicial com capa, documentos para baixar, galeria e botão de instalar.
-Sua resposta:
+Sua resposta: ✅ sim, mas só depois.
 
 **P-51** 🟢 Ficha de papel em **A4**, colorida com versão econômica em preto e branco?
-Sua resposta:
+Sua resposta: ✅ sim.
 
 **P-52** 🟢 Estilo das imagens: mesmo pipeline do Peso do Céu (Canva, fundo branco, recorte automático)? Algum artista ou jogo de referência para o visual?
-Sua resposta:
+Sua resposta: ✅ página no estilo das artes do **Daggerheart**; personagens no traço do **Wilderfeast**; personagens de estilos e Eras diferentes (alguns futuristas), em poses fazendo magia, sem prender a temática. Ver [[00 Roteiro]], fase 4.
 
 ## Rodada 2 (novas, das suas observações)
 
@@ -172,10 +172,10 @@ Sua resposta: 🔁 **uma ficha para cada Valor** (mesmo desenho, muda tabela, s�
 Sua resposta:
 
 **P-62** 🟢 Os **Reinos** de Arcano (**o Fechado**) e de Cataclisma (**a Sobra**), além dos 9 dos Valores. Ficam?
-Sua resposta:
+Sua resposta: ✅ não: Arcano e Cataclisma são **forças homeostáticas**, mais forças da natureza que entidades; não têm Reino (removidos).
 
 **P-63** 🟢 Os **povos dos Reinos** (Juramentados, Moldados, Mansos, Sentidos, Vigias, Esquecidos, Repetidos). Nomes ok? Quer que algum vire opção de origem para personagem (só skin e Vivência, sem regra de raça)?
-Sua resposta:
+Sua resposta: ✅ qualquer Reino pode ser origem, sem habilidade extra: só possibilidades narrativas.
 
 ## Rodada 3 (das observações sobre itens, palavras, Cenários e adversários)
 
@@ -188,15 +188,15 @@ Sua resposta:
 Sua resposta:
 
 **P-72** 🟡 Palavras Básicas em magia: **grátis e fora do limite**, até uma de cada tipo (verbo, modo, forma). Assim uma magia de nível 1 pode ser "Gelo + atacar, preciso, projétil". Ok?
-Sua resposta:
+Sua resposta: ✅ ok, e **nenhuma Palavra Básica pode ser elemento** (troquei "Raio" por "Linha").
 
 **P-73** ✅ não existe despertar outro Valor; nos ups o personagem pega palavras de outros Valores (os 4 espaços extras). Com uma ficha por Valor, ainda existe **despertar um segundo Valor** mais tarde (ganhando uma segunda ficha), ou cada personagem é de um Valor só para sempre, e o resto vem pelas 4 palavras extras?
-Sua resposta:
+Sua resposta: ✅ não existe despertar outro Valor; o resto vem **só das 4 palavras extras** (o talento do Curioso agora respeita o limite de 4).
 
 **P-74** 🟡 A relação com a palavra: o jogador diz em uma frase **por que aquela palavra** funciona para o personagem; se a relação for fraca, a magia usa a Dificuldade do Grau seguinte. Ok, ou prefere sem penalidade (só narrativo)?
-Sua resposta:
+Sua resposta: ✅ sem penalidade; a relação é narrativa e opcional, mas dá **+1 de Relação** quando corresponde ao personagem (valores, ética, qualidades, perspectivas). As Dificuldades de Grau subiram 1 (12/14/16/19) para esse +1 ser o normal; a variável está em `calc/dados.py`.
 
-**P-75** 🟢 Canais: Foco (+1 dano), Arma (+1 dado da arma no dano), Livro (mais seguro se preparar), Corpo, Voz, Familiar, Marca. Falta algum jeito de exercer magia?
+**P-75** ❓ (sua resposta veio cortada: "Os danos da arma ser...") Canais: Foco (+1 dano), Arma (+1 dado da arma no dano), Livro (mais seguro se preparar), Corpo, Voz, Familiar, Marca. Falta algum jeito de exercer magia?
 Sua resposta:
 
 **P-76** 🟢 Dragões: a tabela por Valor (Dragão-Lâmina, -Mercúrio, -Coleira, -Coral, -Eclipse, -Pálido, -Véu, -Ampulheta, -Musgo). Nomes e cores ok? De onde eles vêm (pergunta 18 de [[08 Mundo e entidades]])?

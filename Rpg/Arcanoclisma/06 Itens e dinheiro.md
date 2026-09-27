@@ -4,7 +4,7 @@
 
 ## Dinheiro
 
-Moeda padrão: **Ordynus** (abreviação **o**). A mesa pode trocar o nome conforme a Era; o valor não muda. ❓ P-30
+Moeda padrão: **Ordyn** (plural **Ordynus**, abreviação **o**). A mesa pode trocar o nome conforme a Era; o valor não muda.
 
 | Coisa | Preço |
 |---|---|
@@ -171,9 +171,9 @@ Wyverns são domesticáveis ([[08 Mundo e entidades]]); uma selvagem domada vale
 | Tinta de Palavra | escreva uma palavra de qualquer Valor num objeto; vale uma vez | 30 o |
 | Sal do Equilíbrio | depois de rolar, troque a paridade de um dado | 40 o |
 
-## Materiais
+## Materiais (módulo avançado)
 
-Um material por Valor, que cai de adversários e lugares e serve para fabricar Relíquias num Pouso (3 do mesmo Valor + preço de um item da Moldura = uma Relíquia com uma palavra daquele Valor):
+Fabricação fica para um **módulo avançado / expansão**. Por enquanto, materiais são só tesouro para vender ou trocar. A tabela fica como semente:
 
 | Valor | Material |
 |---|---|

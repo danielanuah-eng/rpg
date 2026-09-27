@@ -85,7 +85,7 @@ Limiares finais = base + nível + armadura. Armadura fora da lista: −2 Esquiva
 
 | | Básico | Superior |
 |---|---|---|
-| **Talento · Já Li Sobre Isso** | Uma vez por Evento, pergunte ao mestre um fato sobre uma criatura, objeto ou lugar (inclui as palavras e o Valor de adversários). A resposta é verdadeira. | +1 Palavra Estrangeira além do limite; você lê escrita mágica. Falhar num teste de Inteligência te dá 1 Arcano. |
+| **Talento · Já Li Sobre Isso** | Uma vez por Evento, pergunte ao mestre um fato sobre uma criatura, objeto ou lugar (inclui as palavras e o Valor de adversários). A resposta é verdadeira. | Você lê escrita mágica, e quando vê uma palavra de outro Valor ser usada, pode escrevê-la num espaço extra livre sem gastar avanço (continua no limite de 4). Falhar num teste de Inteligência te dá 1 Arcano. |
 | **Hábito · Análise** | Descubra Dificuldade, Limiares, palavras e Valores de um adversário. Todos os aliados ganham +1 contra ele pelo Evento. | Ou, uma vez por sessão, depois que o mestre rolar, diga que previu: ele rola de novo. |
 
 ## 9. Caótico — *nada dá certo, e ele sabe navegar isso*
