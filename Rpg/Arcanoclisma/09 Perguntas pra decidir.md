@@ -316,3 +316,20 @@ Sua resposta: ✅ sem limite: todo Passo de Valor dá +1 Arcano (o custo do Pass
 
 **P-110** 🟢 Ficha com "Atalhos nesta sessão □□" do lado dos Laços.
 Sua resposta: ✅ ok.
+
+## Rodada 14 — Do teste de escala e criatividade ([[15 Teste de escala e criatividade]])
+
+**P-111** 🔴 **Régua nova de adversários**: com a atual, a Moldura 4 vira massacre (19% de vitória num encontro padrão). Proposta: Dificuldade 12/13/14/15, ataque +1/+2/+3/+4, Limiares 8/14 · 11/21 · 16/30 · 22/42, dano 1d10+2 · 2d10+2 · 3d10+3 · 4d10+4. Encontro padrão fica em 97–100% em todas as Molduras.
+Sua resposta:
+
+**P-112** 🟡 Orçamento de encontro: **+2 pontos com 2 jogadores, +1 com 3** (menos gente deixa o mesmo encontro mais fácil).
+Sua resposta:
+
+**P-113** 🟡 Dificuldade de encontro: **fácil −2 · difícil +2 · muito difícil +4** pontos.
+Sua resposta:
+
+**P-114** 🟡 **Ameaça como pote**: o mestre coloca Cataclisma na Ameaça quando quiser, à vista (não volta), e ela dispara quando enche. Assim o anúncio cria suspense em vez de poder disparar na hora.
+Sua resposta:
+
+**P-115** 🟢 **Cura criativa**: qualquer Valor pode curar se a relação convencer a mesa (custo normal, +1 Arcano por PV); Morbidyum cura sem precisar justificar.
+Sua resposta:

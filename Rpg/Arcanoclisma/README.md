@@ -23,7 +23,8 @@ Sistema de RPG próprio, inspirado em Daggerheart, Rune RPG, Ethmos e Triangle A
 13. [[12 Tesouros e itens mágicos]] — itens narrativos, Maravilhas, itens comuns, achados
 14. [[13 Teste de mesa 1]] — kit do primeiro teste (4 personagens, 3 Eventos) e relatório do combate simulado
 15. [[14 Teste das mecânicas]] — etapas, facilidade e vantagem repetida de cada mecânica; economia de Arcano
+16. [[15 Teste de escala e criatividade]] — combate em todas as Molduras e tamanhos de mesa, testes difíceis, Eventos sociais, uso criativo das palavras
 
 ## Conta dos dados
 
-`calc/dados.py` calcula todas as chances usadas nas regras; `calc/saida.md` é o resultado. `calc/simular_combate.py` joga o combate do teste milhares de vezes; `calc/simular_economia.py` testa ganhos e custos de Arcano. Se mudar um dado ou uma Dificuldade, rode `python3 calc/dados.py > calc/saida.md` de novo.
+`calc/dados.py` calcula todas as chances usadas nas regras; `calc/saida.md` é o resultado. `calc/simular_combate.py` joga o combate do teste milhares de vezes; `calc/simular_economia.py` testa ganhos e custos de Arcano; `calc/simular_mesa.py` testa todas as Molduras, tamanhos de mesa e Eventos sociais. Se mudar um dado ou uma Dificuldade, rode `python3 calc/dados.py > calc/saida.md` de novo.
