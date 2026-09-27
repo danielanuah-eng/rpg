@@ -16,6 +16,10 @@ Por isso a mesma palavra funciona de jeitos diferentes em personagens diferentes
 
 Ser um **Comprometido eficiente e adaptativo** é olhar e usar as palavras **de acordo com o que faz sentido** na hora: como um **espectador que manipula**, não como quem é manipulado por elas.
 
+### Palavras flexíveis
+
+As palavras da tabela **variam livremente**: plural, gênero, e troca entre verbo, substantivo e adjetivo da mesma raiz contam como **a mesma palavra** (*Acalmar* = calma = calmo; *Humano* = humanos = humanidade; *Fogo* = fogueira = em chamas). Se o jogador quiser uma palavra **próxima** que não está na tabela (*Serenar* no lugar de *Acalmar*), a mesa aceita quando o sentido é claramente o mesmo. Isso dá variedade sem mudar custo nem limite.
+
 ### Relação (+1)
 
 Ao conjurar, o jogador **pode** dizer em uma frase por que aquela palavra, para aquele personagem, faz aquilo acontecer. É opcional e só narrativo: ninguém é punido por não dizer.
