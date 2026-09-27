@@ -102,10 +102,28 @@ Sete problemas comuns de mesa, resolvidos só com as palavras de cada Valor e as
 - **Cada Valor resolve os mesmos problemas de um jeito diferente** (parar uma briga desarmando, afundando na lama, esvaziando a vontade, confundindo, parando o tempo): a party inteira pode enfrentar a mesma cena sem ninguém repetir o outro.
 - **Cura (decidido, P-115)**: **só Morbidyum devolve PV**. As soluções da coluna "estabilizar" dos outros Valores (*Cicatriz*, *Pele*, *Voltar*, *Semente*) **aliviam**: tiram uma condição ou mantêm o aliado de pé por um momento, sem recuperar PV.
 
-## 5. Resumo das propostas
+## 5. Duração dos combates e melhorias (P-113)
+
+Tempo estimado com o ritmo da sua mesa: uns **2–3 minutos por ação de jogador** (2 min conversando, 6 planejando uma ação do grupo, 8 fazendo planos, variando) e 1,5 minuto cada vez que o mestre emoldura. 4 jogadores:
+
+| Moldura | escaramuça (2 × jog., moral) | combate (3 × jog. + 2, moral) | combate difícil (+2 melhorias em todos) | batalha (sem moral) | chefe |
+|---|---|---|---|---|---|
+| 1 | 17 min · 100% · 0 caídos | 38 min · 100% · 0,3 | 38 min · 98% · 0,6 | 51 min · 99% · 0,4 | 51 min · 98% · 0,6 |
+| 2 | 19 min · 100% · 0 | 43 min · 98% · 0,7 | 43 min · 96% · 1,0 | 58 min · 98% · 0,9 | — |
+| 3 | 20 min · 100% · 0 | 48 min · 100% · 0,3 | 48 min · 98% · 0,7 | 65 min · 99% · 0,5 | — |
+| 4 | 23 min · 100% · 0 | 59 min · 99% · 0,6 | 59 min · 94% · 1,1 | 81 min · 97% · 0,9 | 82 min · 91% · 1,3 |
+
+- **A moral (o resto foge quando metade cai) corta um quarto do tempo** e combina com o campo *Quer* dos adversários. Testei também "o resto foge quando o líder cai": deixa tudo curto, mas vira sempre "mate o líder" e todo combate acaba igual. Ficou só a metade.
+- **Escaramuça** fica nos **15–25 minutos** que você quer para as lutas do dia a dia: quase nunca derruba alguém, mas gasta Arcano, Cansaço e Proteção, que é o que pesa depois.
+- **Melhorias**: aplicar uma melhoria a **um** adversário quase não muda nada; aplicada a **todos**, 1 ponto de melhoria pesa como 1 ponto de adversário, deixa a luta mais tensa e **não a deixa mais longa**. Foi assim que entrou nas regras.
+- **Vida parecida com o Daggerheart**: o Chefe agora tem PV +5 (10 a 13) em vez do dobro (que chegava a 16), e nenhuma melhoria passa de 12 PV. O chefe continua difícil (91–98%).
+
+Aplicado em [[10 Adversários - como criar]]: tamanhos de combate (escaramuça, combate, batalha), moral, dificuldade fácil −2 / difícil +2 / muito difícil +4, e a tabela de melhorias.
+
+## 6. Resumo das propostas
 
 - **P-111** ✅ aplicada: régua nova de adversários (Dificuldade 12/13/14/15, ataque +1/+2/+3/+4, Limiares e dano levemente menores nas Molduras 2–4).
 - **P-112** ✅ aplicado: orçamento: +2 pontos com 2 jogadores, +1 com 3.
-- **P-113 🟡** Dificuldade de encontro: **difícil = +2 pontos**, **muito difícil = +4**, **fácil = −2**.
+- **P-113** ✅ aplicado: dificuldade de encontro: **difícil = +2 pontos**, **muito difícil = +4**, **fácil = −2**.
 - **P-114** ✅ aplicada: Ameaça como **pote** visível que o mestre enche quando quiser e que dispara quando cheio.
 - **P-115** ✅ decidido: cura é só de Morbidyum.

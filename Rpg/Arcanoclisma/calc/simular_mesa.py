@@ -74,16 +74,26 @@ class Adv:
         elif papel == "Líder":
             dif += 1; pv += 1
         elif papel == "Chefe":
-            dif += 2; maior, grave = int(maior * 1.5), int(grave * 1.5); pv *= 2; s.ataques = 2
+            dif += 2; maior, grave = int(maior * 1.5), int(grave * 1.5); pv += 5; s.ataques = 2
         s.dif, s.maior, s.grave, s.pv, s.atk = dif, maior, grave, pv, atk
-        s.dano = lambda: int((sum(rolar(q, l)) + b) * mult)
+        s.bonus_dano = 0
+        s.dano = lambda: int((sum(rolar(q, l)) + b) * mult) + s.bonus_dano
+        s.pontos = PONTOS_P[papel]
+
+    def melhorar(s, tipo, M):
+        if tipo == "dano": s.bonus_dano += 2 + (M >= 3)
+        elif tipo == "acerto": s.atk += 1
+        elif tipo == "defesa": s.dif += 1
+        elif tipo == "duro": s.maior += 2 + (M >= 3); s.grave += 4 + 2 * (M >= 3)
+        elif tipo == "vida": s.pv = min(12, s.pv + 1)
 
 
 PONTOS = {"Lacaio": 1, "Padrão": 2, "Líder": 3, "Bruto": 4, "Chefe": 5}
+PONTOS_P = PONTOS
 
 
-def montar_encontro(M, n, extra=0, chefe=False):
-    orc = 3 * n + 2 + extra + {2: 2, 3: 1}.get(n, 0)  # P-112
+def montar_encontro(M, n, extra=0, chefe=False, base=None, melhorias=0):
+    orc = (3 * n + 2 if base is None else base) + extra + {2: 2, 3: 1}.get(n, 0)  # P-112
     lista = []
     if chefe:
         lista.append("Chefe"); orc -= 5
@@ -95,14 +105,20 @@ def montar_encontro(M, n, extra=0, chefe=False):
         lista.append("Padrão"); orc -= 2
     if orc >= 1:
         lista.append("Lacaio")
-    return [Adv(M, p, n) for p in lista]
+    advs = [Adv(M, p, n) for p in lista]
+    tipos = ["acerto", "dano", "defesa", "duro", "vida"]
+    for i in range(melhorias):  # 1 ponto = 1 melhoria para todos os adversários
+        for a in advs:
+            a.melhorar(tipos[i % len(tipos)], M)
+    return advs
 
 
-def combate(M, n, extra=0, chefe=False):
+def combate(M, n, extra=0, chefe=False, base=None, melhorias=0, moral=False):
     pjs = [PJ(M, i % 2 == 1) for i in range(n)]
-    advs = montar_encontro(M, n, extra, chefe)
+    advs = montar_encontro(M, n, extra, chefe, base, melhorias)
+    pts_total = sum(a.pontos for a in advs)
     cat = 2 * n
-    out = dict(acoes=0, pv=0, caidos=0)
+    out = dict(acoes=0, pv=0, caidos=0, mestre=0)
 
     def ativar(a):
         for _ in range(a.ataques):
@@ -120,6 +136,7 @@ def combate(M, n, extra=0, chefe=False):
 
     def mestre():
         nonlocal cat
+        out["mestre"] += 1
         vivos = [a for a in advs if a.pv > 0]
         R.shuffle(vivos)
         for i, a in enumerate(vivos):
@@ -129,7 +146,15 @@ def combate(M, n, extra=0, chefe=False):
                 cat -= 1; ativar(a)
 
     fila = seguidas = 0
-    while any(a.pv > 0 for a in advs) and any(not p.caido for p in pjs) and out["acoes"] < 400:
+    def acabou():
+        if not any(a.pv > 0 for a in advs):
+            return True
+        if moral:  # o resto foge ou se rende: metade dos pontos caiu
+            caidos = sum(a.pontos for a in advs if a.pv <= 0)
+            return caidos * 2 >= pts_total
+        return False
+
+    while not acabou() and any(not p.caido for p in pjs) and out["acoes"] < 400:
         vivos = [p for p in pjs if not p.caido]
         pj = vivos[fila % len(vivos)]; fila += 1
         alvo = min((a for a in advs if a.pv > 0), key=lambda a: a.pv)
@@ -160,11 +185,12 @@ def combate(M, n, extra=0, chefe=False):
     return out
 
 
-def resumo(M, n, extra=0, chefe=False, N=2000):
-    res = [combate(M, n, extra, chefe) for _ in range(N)]
+def resumo(M, n, extra=0, chefe=False, N=2000, **kw):
+    res = [combate(M, n, extra, chefe, **kw) for _ in range(N)]
     m = lambda k: st.mean(r[k] for r in res)
     return (f"{100*m('vitoria'):.0f}%", f"{m('acoes')/n:.1f}", f"{100*m('pv')/res[0]['pv_total']:.0f}%",
-            f"{m('caidos'):.1f}", f"{100*m('tpk'):.0f}%")
+            f"{m('caidos'):.1f}", f"{100*m('tpk'):.0f}%",
+            f"{m('acoes') * 2.5 + m('mestre') * 1.5:.0f} min")
 
 
 def social(n_jog, attr_bom, dif, precisa=3, ameaca=6, ajudas=0, N=20000):
@@ -187,12 +213,14 @@ def social(n_jog, attr_bom, dif, precisa=3, ameaca=6, ajudas=0, N=20000):
 
 
 def main():
-    print("## Combate: vitória · ações por jogador · PV perdidos · caídos · todos caídos\n")
-    print("| Moldura | jogadores | encontro | vitória | ações/jogador | PV perdidos | caídos | todos caem |")
-    print("|---|---|---|---|---|---|---|---|")
+    print("## Combate: vitória · ações por jogador · PV perdidos · caídos · todos caídos · tempo\n")
+    print("| Moldura | jogadores | encontro | vitória | ações/jogador | PV perdidos | caídos | todos caem | tempo |")
+    print("|---|---|---|---|---|---|---|---|---|")
     for M in (1, 2, 3, 4):
         for n in (4, 3, 2):
-            for nome, kw in (("padrão", {}), ("difícil (+4)", {"extra": 4}), ("chefe", {"chefe": True})):
+            for nome, kw in (("escaramuça", {"base": 2 * n, "moral": True}), ("combate", {"moral": True}),
+                             ("combate difícil (+2 melhorias)", {"moral": True, "melhorias": 2}),
+                             ("batalha", {}), ("chefe", {"chefe": True})):
                 r = resumo(M, n, **kw)
                 print(f"| {M} | {n} | {nome} | " + " | ".join(r) + " |")
     print("\n## Evento social com Ameaça (3 sucessos antes de a Ameaça de 6 encher com os ímpares)\n")

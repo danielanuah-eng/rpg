@@ -108,7 +108,7 @@
 
 **Termina quando** os adversários caírem, fugirem ou se renderem, ou o grupo pegar o ovo e sair.
 
-Orçamento: 3 × 4 + 2 = **14 pontos**; usados **13**.
+**Combate** (não escaramuça): orçamento 3 × 4 + 2 = **14 pontos**; usados **13**. **Moral**: quando metade dos pontos cair (7), os bandidos fogem e a Domadora tenta negociar o ovo pela vida dela.
 
 - **Domadora de Garmhal** — Moldura 1 · **Líder** (3) · Dominum · Dif 13 · Limiares 8/14 · PV 6 · Ataque +1 · Dano 1d10+2
   Ser: Domadora · Agir: Chicotear (Perto) · Mandar (livre: ativa uma fera aliada) · Soltar a Fera (3C: o Javali age agora, mesmo que já tenha agido) · Parecer: Leal · Quer: vender o ovo para Garmhal; foge com 2 PV · Laço: *Dívida*.

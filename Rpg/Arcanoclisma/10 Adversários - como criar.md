@@ -50,9 +50,37 @@ A **Dificuldade** é o número que os jogadores tiram para acertar o adversário
 | **Conjurador** | Dif +1, PV −1, ataca com magia | 3–4 | 3 |
 | **Líder** | Dif +1, PV +1; ao agir, ativa um aliado de graça | 3 | 3 |
 | **Bruto** | Dif −1, Limiares ×1,3, PV +3, dano ×1,4 | 2–3 | 4 |
-| **Chefe** | Dif +2, Limiares ×1,5, PV ×2; age 2 vezes quando ativado; um verbo pode ser **reação** | 4–5 | 5 |
+| **Chefe** | Dif +2, Limiares ×1,5, **PV +5** (10 a 13, como os solos do Daggerheart); age 2 vezes quando ativado; um verbo pode ser **reação** | 4–5 | 5 |
 
-**Orçamento do Evento de combate**: **3 × nº de jogadores + 2** pontos; **+1 com 3 jogadores, +2 com 2 jogadores** (mesa menor deixa o mesmo encontro mais fácil). −2 para fácil, +2 para difícil, −2 se houver 2 Chefes, +1 se usar adversários de Moldura abaixo.
+**Vida**: como no Daggerheart, os PV dos adversários ficam em números pequenos: Lacaio cai com um golpe, Padrão 5–8, Bruto 8–11, Chefe 10–13. Nenhuma melhoria passa de **12 PV** (exceto o Chefe base da Moldura 4).
+
+### Tamanho do combate
+
+Nem toda luta precisa ser grande. Escolha o tamanho pelo que a cena pede. Tempo estimado numa mesa que conversa antes de agir (uns 2–3 minutos por ação de jogador, planos em grupo incluídos):
+
+| Combate | Orçamento | Termina quando | Tempo | Risco |
+|---|---|---|---|---|
+| **Escaramuça** | **2 × jogadores** | metade dos adversários cai (moral) | **15–25 min** | baixo: custa recursos (Arcano, Cansaço, Proteção), raramente derruba alguém |
+| **Combate** | **3 × jogadores + 2** | metade dos adversários cai (moral) | 40–60 min | médio: o grupo perde metade dos PV, às vezes alguém cai |
+| **Batalha** | **3 × jogadores + 2**, ou com Chefe | até o fim (sem moral) | 50–90 min | alto: para os momentos grandes da história |
+
+**+1 ponto com 3 jogadores, +2 com 2 jogadores** (mesa menor deixa o mesmo encontro mais fácil). −2 se houver 2 Chefes, +1 se usar adversários de Moldura abaixo.
+
+**Moral**: quando **metade dos pontos de adversários** caiu, o resto **foge, se rende ou negocia** (o campo *Quer* de cada um diz como). Feras encurraladas, Chefes e Deidades não têm moral: lutam até o fim ou até o *Quer* deles mudar. A moral é o que deixa a maior parte das lutas curta, e abre espaço para conversa no meio do combate.
+
+### Dificuldade do encontro
+
+**Fácil −2 · Difícil +2 · Muito difícil +4 pontos.** Cada ponto pode virar **mais adversários** (como sempre) ou **uma melhoria para todos os adversários do encontro**:
+
+| Melhoria (1 ponto) | Moldura 1–2 | Moldura 3–4 |
+|---|---|---|
+| **Mais certeiros** | +1 no ataque | +1 no ataque |
+| **Mais fortes** | +2 de dano | +3 de dano |
+| **Mais difíceis de acertar** | +1 de Dificuldade | +1 de Dificuldade |
+| **Mais duros** | Limiares +2 / +4 | Limiares +3 / +6 |
+| **Mais vida** | +1 PV (máx. 12) | +1 PV (máx. 12) |
+
+A mesma melhoria não se repete no mesmo encontro. Nos testes, uma melhoria para todos pesa mais ou menos o mesmo que um ponto de adversário a mais, e deixa a luta mais tensa **sem deixá-la mais longa** (conferido em [[15 Teste de escala e criatividade]]).
 
 ## As palavras
 

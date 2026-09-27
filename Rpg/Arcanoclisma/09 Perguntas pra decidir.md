@@ -326,7 +326,7 @@ Sua resposta: ✅ ok (aplicada em [[10 Adversários - como criar]]).
 Sua resposta: ✅ ok (aplicado em [[10 Adversários - como criar]]).
 
 **P-113** 🟡 Dificuldade de encontro: **fácil −2 · difícil +2 · muito difícil +4** pontos.
-Sua resposta:
+Sua resposta: ✅ ok, e os pontos podem virar **melhorias para todos os adversários** (ataque, dano, Dificuldade, Limiares, vida até 12). Junto: tamanhos de combate (escaramuça 15–25 min, combate, batalha) e moral. Aplicado em [[10 Adversários - como criar]].
 
 **P-114** 🟡 **Ameaça como pote**: o mestre coloca Cataclisma na Ameaça quando quiser, à vista (não volta), e ela dispara quando enche. Assim o anúncio cria suspense em vez de poder disparar na hora.
 Sua resposta: ✅ ok (aplicada em [[01 Regras centrais]]).
