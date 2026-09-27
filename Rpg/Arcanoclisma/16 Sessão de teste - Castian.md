@@ -28,7 +28,7 @@
 ## Ficha 2 — Valor: Persona
 
 - **Compromisso**: "Gente vem antes de tudo."
-- **Skill · Toque Humano**: magias em pessoas têm −2 na Dificuldade.
+- **Skill · Toque Humano**: magia em pessoas funciona normal; fora de pessoas, −2 no total.
 - **Drawback · Tropeço**: se a magia falhar, sai inútil ou atrapalha.
 - **Canal · Foco arcano**: luvas marrons com pérolas enormes, que brilham numa luz branco-azulada, bruxuleante e uniforme. +1 no dano e na cura de magia.
 - **Sintonia** +2 (+1 de Relação) · **Grau máximo** 2 · **Palavras de Valor por magia** 2 · **uma** Palavra Básica grátis
@@ -52,3 +52,5 @@
 ## Registro da sessão
 
 - **Evento 1 — O cais de Vau-Grande.** Ameaça da Cheia: pote de 8, em 0. Cataclisma do mestre: 4. Arcano do Castian: 3. O Capitão Otávio, da Guilda do Rio, acusa a Iolanda de ter calado o sino.
+  - Castian conjura *Acalmar* na Iolanda (Grau 2, 1 Arcano): 🎲 2 e 7 → 12 contra 12, sucesso por Cataclisma. Iolanda calma; o mestre emoldura: pote 2/8; Otávio suspeita de um Comprometido de Persona e cita um "sineiro de plantão".
+  - Regra ajustada na mesa: palavras flexíveis (variações contam como a mesma palavra); Toque Humano virou restrição (−2 fora de pessoas).

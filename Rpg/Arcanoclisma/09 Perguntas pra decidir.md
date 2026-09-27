@@ -342,3 +342,10 @@ Efeito medido: o mestre passa a emoldurar em uns 46% das ações (antes 34%), pe
 
 **P-116** 🟡 Empate na magia (4d6 ou 6d4 com metade pares e metade ímpares): coloquei **por Arcano**. Ok?
 Sua resposta:
+
+
+## Rodada 16 — Da sessão de teste
+
+✅ **Palavras flexíveis**: variações (plural, verbo/substantivo/adjetivo da mesma raiz) e sinônimos claros contam como a mesma palavra.
+
+✅ **Persona · Toque Humano** corrigido: magia em pessoas funciona normal; **fora de pessoas, −2 no total**.
