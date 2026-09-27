@@ -203,30 +203,30 @@ Sua resposta: 🔁 dano de arma rolado como no Daggerheart; o Canal Arma ficou m
 Sua resposta: ✅ dragões são **manifestos cientes de desejo e vontade**; bem e mal não se aplicam; a humanidade é passageira e interessante para eles; deuses são "grandes primatas desprovidos de sentido"; uns sabem magia, outros aterrorizam, outros são curiosos; majestosos. Com Desejo, Domínio e pessoas preferidas.
 
 **P-77** 🟢 Quer que jogadores possam **ter** uma wyvern (montaria/familiar) desde o nível 1, ou só a partir da Moldura 2?
-Sua resposta:
+Sua resposta: ✅ wyverns, montarias e familiares se conquistam nas aventuras; **nunca têm ficha**, só uma linha na ficha do personagem (nome e 1–2 traços) e representação narrativa.
 
 ## Rodada 4 — Atalho e Valor
 
 Aplicado em [[01 Regras centrais]] (seção 5): **Atalho** (aceitar 2 ou 4 Cataclisma para +3, ignorar condição, virar falha em sucesso ou escapar), que marca **Laço**; com 5 marcas o personagem entra no **Laço** (Corrente pessoal feita das respostas de criação); **Passo de Valor** (aceitar o desconforto: Desvantagem, Cansaço ou uma consequência) dá +1 Arcano e 1 Passo, dê certo ou não; 3 Passos apagam 2 Laços; encarar o Laço com um Passo quebra ele e dá uma **Marca de Valor**. "Viver o Compromisso" foi absorvido pelo Passo de Valor (P-61 fica respondida).
 
 **P-80** ✅ 2 e 4 estão ok. Custos do Atalho: **2 Cataclisma** (Menor) e **4** (Maior), +1 a cada Atalho repetido no mesmo Cenário. Parece justo, ou o Atalho tem que ser mais barato no começo ("funcionou a vida toda")?
-Sua resposta:
+Sua resposta: ✅ não precisa ser mais barato: 2 e 4.
 
 **P-81** 🔴 O Passo de Valor conta **pela direção, não pelo sucesso** (ganha Arcano e Passo mesmo falhando). Concorda?
-Sua resposta:
+Sua resposta: ✅ sim.
 
 **P-82** 🟡 O Laço enche com **5** Atalhos e 3 Passos apagam **2**. Um personagem que alterna os dois nunca entra no Laço; um que só usa Atalho entra em umas 2 sessões. É esse o ritmo que você quer?
-Sua resposta:
+Sua resposta: ⏸ deixar de lado por enquanto: ainda é muita informação para pouca utilidade. Marcado "em revisão" na seção 5.
 
 **P-83** ✅ não: só o mestre usa Cataclisma, Atalho e Laço são dos jogadores. Adversários também podem ter Atalho e Laço (ex.: um vilão preso no próprio Laço, que os jogadores podem ajudar a quebrar ou usar contra ele)?
-Sua resposta:
+Sua resposta: ✅ podem, mas só narrativo: no máximo **uma palavra** sobre o Laço da criatura (campo opcional na ficha de adversário).
 
 ## Rodada 5 — Fichas
 
 ✅ Duas fichas: **Ficha 1 — Personagem** (nome, itens, Palavras Básicas, criação, lore, relações...) igual para todos, e **Ficha 2 — Valor**, personalizada para cada um dos 9 Valores. Descrição em [[05 Personagem e níveis]].
 
 **P-90** 🟢 A Ficha 1 tem muita coisa (Palavras Básicas, itens, perguntas de criação). Prefere ela em **frente e verso** (frente: jogo; verso: criação, lore e relações), ou em uma página só mais apertada?
-Sua resposta:
+Sua resposta: ✅ frente e verso.
 
 ## Rodada 6 — Transcrito e título
 
@@ -237,17 +237,17 @@ Sua resposta:
 Aplicado: Abalos; Ameaças no lugar de Contadores; sem despertar outro Valor; Canal Transcrito; título. E, pela preocupação com complexidade, **Atalho e Valor ficaram mais enxutos**: saiu a trilha de Passos e o custo crescente do Atalho repetido; ficou **uma trilha só (Laço, 5 casas)** — Atalho marca, Passo de Valor apaga. O Laço é **montado junto** (jogador, mestre e mesa), e há recompensa por **olhar para os Laços**: +1 Arcano ao nomear o Atalho na hora, e três perguntas de fim de sessão (Atalho percebido, relação formada, participação no que outro sentiu ou fez).
 
 **P-92** ✅ mantém no núcleo por enquanto. Sobre a complexidade: com a versão enxuta, a regra toda cabe numa tabela de duas linhas mais o Laço. Minha recomendação é **manter no núcleo**, porque é o que dá identidade ao jogo (está no título). Se ainda parecer pesado, a alternativa é virar **módulo opcional** e o núcleo ficar só com as perguntas de fim de sessão. O que prefere?
-Sua resposta:
+Sua resposta: ✅ fica no núcleo: **Laços são o que te conecta aos teus Valores, ao Compromisso, e também aos loopings de Atalho**.
 
 **P-93** 🟡 Recompensas das perguntas de fim de sessão: +1 Arcano **ou** apagar 1 Laço por "sim". Máximo 3 por sessão. Ok?
-Sua resposta:
+Sua resposta: ✅ ok.
 **P-91** 🟢 Além dos formatos do livro, quer algum livreto específico (aventura pronta, Reinos, uma página de regras para a mesa)?
-Sua resposta:
+Sua resposta: ✅ uma página de regras (o que fazer, mecânicas) e um livreto de Reinos.
 
 ## Rodada 8
 
 **P-94** 🟡 Canal Arma: **os traços da arma valem na magia** feita por ela. Assim a espada Precisa dá +1 no acerto da magia, o machado Cruel faz o Grave marcar +1 PV, o martelo Atordoante atordoa. Fica sutil e cada arma dá um "sabor" diferente. Serve, ou prefere um número fixo pequeno (ex.: +1 no dano, igual ao Foco)?
-Sua resposta:
+Sua resposta: ✅ serve; Atordoante agora **abala grandes defesas** (−2 nos Limiares até o holofote virar) em vez de tirar a ação.
 
 **P-95** 🟡 **Povos infundidos**: outros povos existem, não usam magia porque são feitos dela; o jogador pode escolher ser de um deles, só como escolha narrativa, com as mesmas regras. Humanos também adquiriram a magia convivendo com eles. Usei os povos dos Reinos como os primeiros exemplos. Quer criar povos do mundo comum também (quantos, e ligados a quais Valores)?
-Sua resposta:
+Sua resposta: ✅ por enquanto não criar mais povos. Todos os povos vivem em **Contacto**, o reino terreno; cada Valor tem seu **plano** com seres disformes, feéricos, entidades, projetos e deuses novos e antigos sem nome ou esquecidos.

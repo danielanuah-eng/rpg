@@ -46,7 +46,7 @@ Dano = **dado da arma × Proficiência + bônus**. A cada Moldura acima do 1, a 
 
 Dano de arma se rola **como no Daggerheart**: dado × Proficiência + bônus.
 
-**Traços**: *Arremessável* (ataca à distância indicada); *Precisa* (+1 no ataque); *Cruel* (dano Grave marca +1 PV); *Pesada* (−1 Esquiva); *Atordoante* (dano Grave: o alvo perde a próxima ativação); *Alcance* (ataca até Perto); *Desarmar* e *Puxar* (no lugar do dano); *Recarga* (depois de atacar, role 1d6: no 1, a próxima ação é recarregar); *Barulhenta* (todo mundo por perto ouve); *Serve de foco arcano*.
+**Traços**: *Arremessável* (ataca à distância indicada); *Precisa* (+1 no ataque); *Cruel* (dano Grave marca +1 PV); *Pesada* (−1 Esquiva); *Atordoante* (abala grandes defesas: dano Maior ou Grave deixa o alvo com **−2 nos Limiares** até o holofote virar; contra jogadores, o alvo perde 1 casa de Proteção); *Alcance* (ataca até Perto); *Desarmar* e *Puxar* (no lugar do dano); *Recarga* (depois de atacar, role 1d6: no 1, a próxima ação é recarregar); *Barulhenta* (todo mundo por perto ouve); *Serve de foco arcano*.
 
 Comparação com magia (dano médio por golpe, na força máxima de cada Moldura):
 
@@ -141,25 +141,21 @@ Raros, com nome e história. Carregam **2 ou 3 palavras** e um poder único, e c
 
 Exemplo: **A Coroa de Vyal** — Persona (**Encantar**, **Amor**, **Irresistível**). Uma vez por Evento, uma magia de Persona sua afeta um alvo a mais. Cada uso: o mestre ganha 2 Cataclisma e Vyal sabe onde você está.
 
-## Familiares
+## Familiares e montarias
 
-Um bicho, espírito ou construto ligado a você (ligação feita num Pouso; um por vez). Tem **2 PV** próprios (qualquer dano marca 1). Dá **1 Traço** (2 na Moldura 2, 3 na Moldura 3+):
+Wyverns, montarias e familiares **são conquistados ao longo das aventuras**: domados, salvos, herdados, ganhos de presente, seguidos até em casa. **Nunca têm ficha própria.** Ocupam **uma linha na ficha do personagem**: nome, o que ele é, e **1 ou 2 traços** que dizem o que ele permite fazer. O resto é narrativa.
 
-*Batedor* (você vê e ouve por ele até Longe) · *Montaria* (move até Longe) · *Voo* · *Nado* · *Faro* · *Carregador* · *Guardião* (uma vez por Evento recebe um ataque no seu lugar) · *Canal* (a magia pode sair dele) · *Palavra* (ele conhece 1 palavra de outro Valor que você usa enquanto ele está com você).
+Traços de exemplo: *voa* · *nada* · *carrega peso* · *leva até Longe fora de combate* · *vê e ouve por ele* · *faro* · *acha o caminho de casa* · *assusta gente* · *leva recados* · *a magia pode sair dele* (se for o seu Canal) · *conhece uma palavra de outro Valor* (conta nas 4 palavras extras).
 
-Se o familiar cai, ele volta no próximo Pouso.
+Se ele se machuca ou some, é história: o mestre diz o que aconteceu, e reencontrar, curar ou vingar vira aventura.
 
-## Montarias
+Montarias comuns (cavalo, mula, barco) podem ser compradas; **wyverns e familiares não se compram**, se conquistam ([[08 Mundo e entidades]]).
 
-| Montaria | Moldura | O que faz | Preço |
-|---|---|---|---|
-| Cavalo | 1 | move até Longe fora de combate; carrega | 60 o |
-| Mula de carga | 1 | carrega muito, anda devagar | 30 o |
-| **Wyvern de correio** | 2 | voa; leva uma pessoa leve ou cartas; não luta | 400 o |
-| **Wyvern de sela** | 3 | voa com um cavaleiro; em combate age junto com você (Garras, dano da régua da sua Moldura ×½) | 1.200 o |
-| **Wyvern de guerra** | 4 | voa com dois; ataca com você e tem o verbo Rasante | 3.500 o |
-
-Wyverns são domesticáveis ([[08 Mundo e entidades]]); uma selvagem domada vale como montaria da Moldura dela.
+| Montaria comum | Traço | Preço |
+|---|---|---|
+| Cavalo | leva até Longe fora de combate | 60 o |
+| Mula de carga | carrega muito | 30 o |
+| Barco pequeno | atravessa água | 80 o |
 
 ## Consumíveis
 

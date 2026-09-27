@@ -11,6 +11,7 @@ SER:     1–2 substantivos        quem ele é
 AGIR:    2–4 verbos              o que ele faz (com determinador)
 PARECER: 1–3 adjetivos           como ele é (cada um é uma passiva)
 QUER:    uma frase               o que ele quer, e quando foge
+LAÇO:    (opcional) uma palavra  o que o prende ou o conecta (narrativo)
 ```
 
 Exemplo:
@@ -145,7 +146,7 @@ Marcas menores, que o gerador também sorteia: *Imune a [Valor]*, *Absorve [Valo
 | **Disruptos** (do Cataclisma) | qualquer | Valor sorteado; **Instável** (dano Grave nele dispara uma Faísca) | Sobra, Rasgo, Eco |
 | **Protetores do Arcano** (ordem e espécie) | Padrão, Líder, Chefe | Anulador, Inquebrável | Guardião, Selo, Juiz |
 | **Seres de energia** | Ágil, Conjurador | Etéreo, Absorve [seu Valor] | Chama, Luz, Vento, Eco |
-| **Povos dos Reinos** | qualquer | Valor do Reino | Juramentado, Moldado, Manso, Sentido, Vigia, Esquecido, Repetido |
+| **Seres dos planos** (disformes, feéricos, entidades, projetos, deuses sem nome) | qualquer | Valor do plano | Juramentado, Moldado, Manso, Sentido, Vigia, Esquecido, Repetido |
 | **Semideuses** | Chefe | Valor do pai, Deidade | o nome dele |
 | **Deuses antigos** | não se derrota em combate | Deidade + Inquebrável | Evento de Ameaça: sobreviver, fugir, convencer |
 

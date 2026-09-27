@@ -70,9 +70,13 @@ Poucos. Uns se dizem deuses, outros vivem como gente comum, outros são donos de
 
 ## Os Reinos
 
-Cada Primordial deixou no mundo, ou fora dele, um lugar onde o Valor é a lei. (Arcano e Cataclisma não têm Reino: são forças da natureza, não lugares nem entidades.) São **dimensões** que tocam o mundo em pontos certos (e se abrem com a Maré "Chamado do Reino"). Como Terreno, sãa Moldura 3–4.
+**Contacto** é o reino terreno: o plano onde **todos os povos vivem**, humanos e infundidos, com suas cidades, estradas, mares e guerras. É o mundo comum de qualquer campanha.
 
-| Reino | Valor | Quem vive lá | O que acontece lá | Desafio | Benefício |
+Além dele, **cada Valor tem o seu plano**: um Reino onde o Valor é a lei, cheio de **seres disformes, feéricos, entidades, projetos** (coisas que alguém começou e nunca terminou), e **deuses novos e antigos, sem nome ou esquecidos**. Os seres desses planos **não são povos**: não têm cidades nem nações como Contacto. Os planos tocam Contacto em pontos certos (e se abrem com a Maré "Chamado do Reino"). Como Terreno, são Moldura 3–4. (Arcano e Cataclisma não têm plano: são forças da natureza.)
+
+Um personagem pode ter vindo de um plano, ou ter passado tempo num deles: é origem narrativa, sem regra extra.
+
+| Plano | Valor | Quem (ou o quê) está lá | O que acontece lá | Desafio | Benefício |
 |---|---|---|---|---|---|
 | **O Campo Sem Trégua** | Conflitüo | os **Juramentados**: soldados que morreram lutando e esqueceram por quê; ferreiros de guerra | uma batalha sem lados que nunca acaba; todo encontro vira duelo | ninguém sai sem vencer um duelo | armas forjadas lá ganham um traço a mais |
 | **O Mar de Estados** | Sublimeyn | os **Moldados** (gente de matéria viva), alquimistas náufragos | o mar é pedra de manhã, água à tarde e vapor à noite; ilhas de vidro | quem fica demais começa a mudar de estado | Cristal de Estado em abundância; Mistura de graça |
@@ -88,7 +92,7 @@ Cada Primordial deixou no mundo, ou fora dele, um lugar onde o Valor é a lei. (
 
 O mundo tem **humanos** e tem **outros povos**. As culturas nascem do lugar e do Valor que manda nele.
 
-- **Povos infundidos**: os outros povos do mundo **não usam magia: são feitos com ela**. O Valor está no corpo deles (na pele, no sangue, no jeito de existir), e não em palavras. Os povos dos Reinos (Juramentados, Moldados, Mansos, Sentidos, Vigias, Esquecidos, Repetidos) são alguns deles; outros vivem no mundo comum.
+- **Povos infundidos**: os outros povos do mundo **não usam magia: são feitos com ela**. O Valor está no corpo deles (na pele, no sangue, no jeito de existir), e não em palavras. Todos vivem em **Contacto**. (Os seres dos planos, como Juramentados, Moldados, Sentidos ou Esquecidos, não são povos: são habitantes disformes e feéricos dos Reinos dos Valores.)
 - **Humanos e povos infundidos**: foi também se relacionando com esses povos (em amizade, casamento, aprendizado, convivência) que muitos humanos **adquiriram o domínio do Arcano e a percepção dos Valores**, além dos que descendem de semideuses. Há famílias, vilas e cidades inteiras que são mistura das duas coisas.
 - **Jogar com um povo infundido**: por padrão os personagens são humanos Comprometidos, mas **o jogador pode escolher ser de um povo infundido**. Na mesa ele usa as mesmas regras (Comportamento, Valor, palavras); o povo dá **só possibilidades narrativas**: aparência, costumes, como os outros o tratam, o que ele sente ao conjurar com palavras aquilo que o povo dele simplesmente é.
 

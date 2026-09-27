@@ -144,7 +144,7 @@ Ser: Chama, Memória · Agir: Queimar · Mostrar (1C · Médio · 1 · Sab · v�
 **Hora Solta** — M3 · Ágil · Eternyr · Resiliente
 Ser: Instante · Agir: Tocar (envelhece: dano) · Pular (livre · si · age de novo se o último teste de jogador foi Falha) · Parecer: Etéreo, Estranho (não pode ser atacado duas vezes seguidas pelo mesmo jogador) · Quer: voltar ao relógio de onde saiu.
 
-## Povos dos Reinos
+## Seres dos planos dos Valores
 
 **Juramentado** (Campo Sem Trégua) — M3 · Padrão · Conflitüo
 Ser: Soldado, Morto · Agir: Cortar · Duelar (livre · Perto · 1 · o alvo só pode atacar ele · Falha) · Parecer: Incansável — como Duro · Quer: vencer uma luta, qualquer uma, e lembrar por quê.

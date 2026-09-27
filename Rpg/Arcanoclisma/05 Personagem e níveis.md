@@ -99,16 +99,16 @@ Este bloco não dá bônus nem é cobrado pelo mestre. Serve para a mesa conhece
 
 ## A ficha: duas folhas
 
-### Ficha 1 — Personagem (igual para todo mundo)
+### Ficha 1 — Personagem (igual para todo mundo, frente e verso)
 
-Tudo o que não é a magia do Valor:
+Tudo o que não é a magia do Valor. **Frente**: o que se usa jogando (identidade, Comportamento, atributos, Palavras Básicas, Arcano, Laço, itens). **Verso**: criação e lore (perguntas, relações da party, Vivências, anotações).
 - **Identidade**: nome, skin (aparência, com espaço para desenho ou foto), Era, conceito numa frase, jogador.
 - **Comportamento**: nome, Esquiva, Limiares (Maior/Grave), PV, Cansaço, Proteção, armaduras permitidas, **caixas de talento** (Talento e Hábito com marcação Básico/Superior, e espaços vazios para talentos avulsos).
 - **Atributos** (os 6, com casinha de marca de avanço).
 - **Palavras Básicas**: a tabela de verbos de ação, a de modos (com o atributo de cada coluna) e a de formas, para o jogador montar "verbo + modo" olhando a ficha.
 - **Arcano** e **Laço** (5 casas), com o **Atalho de costume** e **o que o personagem valoriza** escritos do lado.
 - **Vivências**.
-- **Itens**: armas (atributo, alcance, dano, traços), armadura, montaria, familiar, itens mágicos, consumíveis, materiais, **Ordynus**.
+- **Itens**: armas (atributo, alcance, dano, traços), armadura, uma linha para cada montaria/familiar (nome e traços), itens mágicos, consumíveis, materiais, **Ordynus**.
 - **Criação e lore**: as perguntas de criação (Vínculo, coração, você e o personagem) com espaço para reescrever, e as **relações da party** da sessão zero.
 - **Nível e Moldura**, com a tabela resumida do que cada Moldura libera.
 
@@ -126,6 +126,6 @@ Uma para cada um dos 9 Valores: **o desenho muda inteiro** conforme o Valor (cor
 - Lembretes da magia: leitura dos dados (Crítico, Magia Ímpar, Desequilíbrio), Forçar, Ampliar.
 - **Magias que eu gosto de usar**: linhas para anotar combinações de palavras e a relação do personagem com cada uma.
 
-**Opcional**: folha de Familiar ou montaria.
+Familiares, wyverns e montarias **não têm ficha**: são uma linha na Ficha 1, com nome e 1–2 traços.
 
 **App**: as mesmas duas partes em abas (Personagem e Valor, com as cores do Valor), com tudo que o personagem liberou, contadores clicáveis e o montador de magia.

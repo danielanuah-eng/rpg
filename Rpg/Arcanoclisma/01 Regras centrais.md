@@ -108,7 +108,11 @@ O mestre gasta Cataclisma para: pegar o holofote, ativar mais adversários, ativ
 
 ## 5. Atalho ou Valor
 
-Quando a coisa aperta, o personagem tem dois caminhos. **Os dois são válidos.** Só existe **uma trilha** na ficha: o **Laço** (5 casas).
+> ⚠️ **Em revisão** (P-82): a ideia fica no núcleo do jogo; os números e o formato da trilha ainda vão ser repensados para dar mais utilidade com menos informação.
+
+**Laços são aquilo que te conecta aos teus Valores**: ao Compromisso, ao que você valoriza, às pessoas, e também aos **loopings de Atalho** que se repetem. Um Laço pode prender ou sustentar; o jogo acompanha os dois.
+
+Quando a coisa aperta, o personagem tem dois caminhos. **Os dois são válidos.** Na ficha, uma trilha: o **Laço** (5 casas).
 
 | | O que é | O que custa | O que dá |
 |---|---|---|---|

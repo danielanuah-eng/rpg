@@ -124,12 +124,11 @@ Entregas, na mesma família do Peso do Céu:
 2. **Ficha de papel** enfeitada para imprimir, em **A4**, colorida e com versão econômica em preto e branco, em **duas folhas** ([[05 Personagem e níveis]]):
    - **Ficha 1 — Personagem** (igual para todos): nome, skin, Comportamento, atributos, Palavras Básicas, Arcano, Laço e Passos, Vivências, itens, Ordynus, perguntas de criação e relações da party.
    - **Ficha 2 — Valor** (9 versões, uma por Valor, com arte própria): símbolo, Compromisso, Skill, Drawback, Ressonâncias, as 36 palavras, 4 espaços extras, Canal, tabela de Graus e magias favoritas.
-   - Opcional: folha de Familiar/montaria.
 3. **Livro — *Arcanoclisma: um passo diante do desconforto e do compromisso*** — o texto completo do jogo, com capa, feito para sair em **vários formatos** a partir da mesma fonte:
    - PDF completo para baixar e imprimir;
    - páginas no site, com busca;
    - leitura dentro do app (cada regra abre a partir da ficha);
-   - livretos menores separados: do jogador, do mestre, de um Valor, de uma Era, do bestiário.
+   - livretos menores separados: do jogador, do mestre, de um Valor, de uma Era, do bestiário, dos Reinos, e **uma página de regras** (o que fazer na mesa, as mecânicas num resumo).
    E o **escudo do mestre** (PDF).
 4. **Site** (só depois de tudo pronto) em um **Netlify novo** (separado do Peso do Céu): página de apresentação com capa, documentos para baixar, botão para instalar o app, galeria de imagens.
 5. `calc/conferir.py`: confere antes de publicar que todo item/adversário está dentro da faixa da sua Moldura (o "balanceador" que o gerador usa).
