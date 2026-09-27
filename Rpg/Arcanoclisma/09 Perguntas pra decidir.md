@@ -276,7 +276,7 @@ Sua resposta:
 ## Rodada 11 — Do teste simulado ([[13 Teste de mesa 1]])
 
 **P-99** 🔴 **Ritmo do mestre**: "depois de 3 ações seguidas de jogadores sem o holofote vir, o mestre gasta 1 Cataclisma e interrompe". Resolve o Cataclisma sobrando e o mestre agindo pouco. Entra como regra?
-Sua resposta:
+Sua resposta: 🔁 sem regra fixa: **o mestre gasta Cataclisma quando quiser** e age sempre que for conveniente e legal para a narrativa. Aplicado em [[01 Regras centrais]] (seção 6) e no arquivo 07.
 
 **P-100** 🟡 **Persona**: o −2 vale **depois** de escolher a maior Dificuldade (senão some na Moldura 1). Ok?
 Sua resposta:

@@ -6,7 +6,7 @@
 
 **Ganha**: 1 por dado ímpar dos jogadores (menos em rolagens de reação), 2 por jogador no início da sessão, 1d4 em Pausa, 1d4 + nº de jogadores em Pouso, e as Dificuldades de magia que dizem isso. **Máximo 20**; o excesso **transborda** num Abalo imediato do tamanho do excesso.
 
-Na média, cada rolagem de jogador rende 1 Cataclisma, então o mestre **deve gastar quase toda vez que tiver o holofote**. É a ideia: reservas grandes e gastos grandes. ❓ P-05
+Na média, cada rolagem de jogador rende 1 Cataclisma. **O mestre gasta quando quiser**, sempre que for conveniente e bom para a narrativa: interromper, ativar, disparar Abalos, cobrar Ameaças. É a ideia: reservas grandes e gastos grandes. (No teste simulado, o mestre que só gasta ativando adversários termina a luta com quase 20; o resto vai para Abalos, Ameaças e interrupções.) ❓ P-05
 
 ### O que o Cataclisma compra
 

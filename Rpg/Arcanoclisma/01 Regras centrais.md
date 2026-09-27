@@ -159,7 +159,9 @@ Dentro do Evento, o ritmo é o holofote:
 
 - Os jogadores decidem entre si quem age. Quem age faz **uma ação** (atacar, conjurar, ajudar, uma manobra) e pode se mover até **Perto** junto com ela.
 - **O holofote passa ao mestre** quando um jogador **falha** ou tira **Ímpar** (dois ímpares). Na vez dele, o mestre ativa **1 adversário de graça** e **mais 1 por Cataclisma** gasto; depois devolve aos jogadores.
-- O mestre pode **tomar o holofote** a qualquer momento gastando 1 Cataclisma (ex.: logo depois de uma magia gigante).
+- **O mestre gasta Cataclisma quando quiser.** A qualquer momento ele pode **tomar o holofote** (1 Cataclisma), ativar adversários, disparar Abalos, cobrar Ameaças: sempre que for conveniente e bom para a narrativa. Não há ordem nem ritmo fixo.
+- E ele **age narrativamente sempre que fizer sentido**, sem gastar nada: o mundo reage, PNJs falam, o fogo espalha, a porta fecha. O Cataclisma é para quando a ação do mundo **mexe nos números** (ataques, condições, Abalos, Ameaças).
+- Dica: Cataclisma sobrando é sinal de mundo parado. Se a reserva está perto de 20, é hora de o mundo se mexer.
 - Regra de mesa: ninguém age duas vezes seguidas se outro jogador ainda não agiu desde a sua última ação, a não ser que todos concordem.
 
 ### Marcadores (no lugar de turnos)

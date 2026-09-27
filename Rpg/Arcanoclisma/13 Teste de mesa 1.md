@@ -121,7 +121,7 @@ Orçamento: 3 × 4 + 2 = **14 pontos**; usados **13**.
 
 **Valores**: a Domadora e os cães são **Dominum**: resistem a Dominum e são **fracos contra Primitivum** (Oruã: Dificuldade −2 e +1 dado de dano com magia).
 
-**Ritmo do mestre (teste)**: se três jogadores agirem seguidos sem o holofote vir, gaste 1 Cataclisma e interrompa (ver o relatório abaixo).
+**Mestre**: gaste Cataclisma quando quiser, sempre que for bom para a cena (interromper custa 1). No teste simulado, quem gasta pouco termina a luta com quase 20 e a luta fica fácil; gastar ao longo da luta (uma interrupção a cada 3 ações mais ou menos) deixa ela tensa na medida.
 
 ### Evento 3 — O celeiro pega fogo (Ameaça e Magia em Dupla)
 
@@ -199,8 +199,8 @@ Iara (7,1 +3 = 11 vs 12) erra o Cão 2                            ← falha: hol
 ### O que o teste mostrou
 
 1. **O orçamento de encontro funciona.** 13 pontos deram uma luta padrão (metade dos PV do grupo, quase 1 personagem caído, 96% de vitória); 17 pontos deram uma luta difícil de verdade (2 caídos, 74%). A régua dos adversários está no lugar.
-2. **O mestre fica com Cataclisma sobrando.** Ganha uns 20 por combate e só consegue gastar 11 ativando adversários, porque a partir da metade da luta sobram poucos adversários para ativar. Termina perto de 20, e o próximo Evento começa transbordando. **Sugestão**: escrever como regra de ritmo do mestre "depois de 3 ações seguidas de jogadores, gaste 1 Cataclisma e tome o holofote", e lembrar que Ameaças e Abalos são o destino natural do resto. Com isso a luta fica mais tensa (1,3 caídos) e o mestre termina com 11.
-3. **O holofote vai pouco ao mestre** (34% das ações). Como os jogadores acertam uns 75% das vezes, o mestre só age quando alguém falha ou tira dois ímpares. A regra de ritmo acima também resolve isso.
+2. **O mestre fica com Cataclisma sobrando.** Ganha uns 20 por combate e só consegue gastar 11 ativando adversários, porque a partir da metade da luta sobram poucos adversários para ativar. Termina perto de 20, e o próximo Evento começa transbordando. **Decidido (P-99)**: sem regra fixa; o mestre gasta Cataclisma **quando quiser** e age sempre que for bom para a narrativa. A simulação serve de referência: interromper mais ou menos a cada 3 ações deixa a luta mais tensa (1,3 caídos) e termina com 11 na reserva.
+3. **O holofote vai pouco ao mestre** (34% das ações). Como os jogadores acertam uns 75% das vezes, o mestre só age quando alguém falha ou tira dois ímpares. O mestre gastando para interromper quando quiser resolve isso.
 4. **Arcano sobra na Moldura 1.** Cada jogador ganha uns 7 por combate e começa com 3: depois de uma luta está perto do máximo (12). Na mesa real eles vão gastar em Vivências, Hábitos e Forçar o Grau, mas vale observar se alguém bate no teto. Se bater, há duas saídas: máximo menor na Moldura 1, ou Equilíbrio dar só Cataclisma.
 5. **A Skill de Persona some na Moldura 1.** Nhanda tem −2 na Dificuldade contra pessoas, mas a magia usa **a maior** entre a Dificuldade do Grau (12) e a do alvo. Contra a Domadora (13 − 2 = 11), a Dificuldade volta a ser 12: o bônus quase não aparece. **Sugestão**: o −2 de Persona vale **depois** de escolher a maior (12 − 2 = 10).
 6. **O Drawback de Conflitüo não pesa na Moldura 1.** "Fora de combate, 2 palavras" é o limite de todo mundo na Moldura 1. **Sugestão**: "fora de combate, a primeira palavra extra custa 2 Arcano", ou deixar e aceitar que o Drawback só aparece da Moldura 2 em diante.
