@@ -8,7 +8,7 @@ Todo Valor tem **36 palavras só dele**: **12 verbos** (linhas 1–2, o que a ma
 
 Quem usa magia é um **Comprometido**: a vida, o jeito e o poder dele se orientam pelo Valor. Não é uma regra de conduta, é uma tendência: a personalidade puxa para o Valor, e o Valor puxa a personalidade. Cada Valor tem um **Compromisso**, uma frase que diz para onde ele puxa.
 
-O Compromisso é um dos lugares para onde o **Passo de Valor** aponta ([[01 Regras centrais]]): fazer o difícil que o Compromisso pede, aceitando o desconforto, dá Arcano e quebra Laços. Ir contra ele não tem punição; usar Atalhos no lugar dele é que, com o tempo, prende o personagem num Laço.
+O Compromisso é um dos lugares para onde o **Passo de Valor** aponta ([[01 Regras centrais]]): fazer o difícil que o Compromisso pede, aceitando o desconforto, dá Arcano e solta Laços apertados. Ir contra ele não tem punição; usar só Atalhos no lugar dele é que, com o tempo, aperta os Laços do personagem.
 
 ## A roda dos Valores (opostos)
 

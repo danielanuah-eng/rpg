@@ -9,7 +9,7 @@
 - **Dois dados iguais = Crítico.**
 - Magia não usa atributo: você junta **palavras** do seu Valor, escolhe o **Grau** (o tamanho do feito) e rola um conjunto de dados que **sempre soma no máximo 24**: 2d12 → 3d8 → 4d6 → 6d4. Mais dados = mais confiável, mas mais Arcano *e* mais Cataclisma saindo da mesa.
 - Adversários rolam **d20**. O mestre gasta **Cataclisma** para fazer o mundo reagir.
-- Quando aperta, você escolhe: **Atalho** (entregar Cataclisma ao mestre e burlar agora, marcando Laço) ou **Passo de Valor** (fazer o difícil que aproxima do que importa, e apagar Laço).
+- Todo personagem tem **Laços** (relações, atitudes, sentimentos difíceis). Quando aperta, escolhe: **Atalho** (entregar Cataclisma ao mestre e burlar agora; repetido, aperta o Laço e o problema cresce) ou **Passo de Valor** (fazer o difícil que aproxima do que importa).
 - Não há turnos nem rodadas: o jogo anda em **Eventos** (uma situação completa: uma briga, uma conversa, uma fuga). Quem tem o **holofote** age; ele passa ao mestre quando alguém falha ou tira Ímpar. Efeitos duram por **marcadores** (até a próxima falha, até o fim do Evento...), nunca por turno.
 
 ---
@@ -106,46 +106,48 @@ O mestre **começa a sessão com 2 por jogador**, máximo **20**.
 
 O mestre gasta Cataclisma para: pegar o holofote, ativar mais adversários, ativar habilidades de adversários e de lugares, trazer reforços, endurecer uma magia (+2 na Dificuldade por ponto, até +4), cancelar uma magia Vacilante, e disparar Abalos (que podem mexer até na ficha dos jogadores). Tabela completa no arquivo 07.
 
-## 5. Atalho ou Valor
+## 5. Laços, Atalhos e Passos
 
-> ⚠️ **Em revisão** (P-82): a ideia fica no núcleo do jogo; os números e o formato da trilha ainda vão ser repensados para dar mais utilidade com menos informação.
+### Laços
 
-**Laços são aquilo que te conecta aos teus Valores**: ao Compromisso, ao que você valoriza, às pessoas, e também aos **loopings de Atalho** que se repetem. Um Laço pode prender ou sustentar; o jogo acompanha os dois.
+**Laços são o que te conecta aos teus Valores**: ao Compromisso, às pessoas, ao que importa, e também aos loopings que se repetem. Um Laço não é uma palavra solta: é **uma descrição** de uma dessas três coisas:
 
-Quando a coisa aperta, o personagem tem dois caminhos. **Os dois são válidos.** Na ficha, uma trilha: o **Laço** (5 casas).
+- uma **relação** com algo ou alguém — *"Minha irmã, que eu não consegui proteger"*;
+- uma **atitude** — *"Fazer piada quando a coisa dói"*;
+- um **sentimento difícil de encarar** — *"A vergonha de ter fugido da vila"*.
 
-| | O que é | O que custa | O que dá |
+Todo personagem começa com **3 Laços**, escritos a partir das perguntas de criação 8 a 11 ([[05 Personagem e níveis]]). Cada Laço tem uma caixinha: **apertado**.
+
+### Atalho ou Passo
+
+Quando a coisa aperta, o personagem tem dois caminhos. **Os dois são válidos.**
+
+| | O que é | Custo | O que dá |
 |---|---|---|---|
-| **Atalho** | fugir do desconforto do jeito que sempre funcionou (dar um jeitinho, mentir, sumir, explodir, empurrar para frente) | o mestre ganha **2 Cataclisma** (menor) ou **4** (maior); **marque 1 Laço** | menor: +3 numa rolagem já feita, ou ignorar uma condição · maior: a falha vira sucesso (o mestre diz o custo), ou sair da situação sem lidar com ela |
-| **Passo de Valor** | fazer o difícil **porque** aproxima do que importa (o Compromisso, o que o personagem valoriza, as pessoas da party) | aceitar o desconforto: rolar com **Desvantagem**, **ou** marcar **1–2 Cansaço**, **ou** aceitar a consequência que o Atalho evitaria | **+1 Arcano** e **apague 1 Laço**, **dê certo ou não** (conta a direção, não o resultado) |
+| **Atalho** | fugir do desconforto do jeito que sempre funcionou | o mestre ganha **2 Cataclisma** (menor) ou **4** (maior) | menor: +3 numa rolagem já feita, ou ignorar uma condição · maior: a falha vira sucesso (o mestre diz o custo), ou sair da situação sem lidar com ela |
+| **Passo de Valor** | fazer o difícil **porque** aproxima do que importa | aceitar o desconforto: rolar com **Desvantagem**, **ou** marcar **1–2 Cansaço**, **ou** aceitar a consequência que o Atalho evitaria | **+1 Arcano**, **dê certo ou não** (conta a direção, não o resultado) |
 
-Só o mestre gasta Cataclisma. No Atalho o jogador não gasta nada: ele **entrega** Cataclisma ao mestre, e o mestre usa esse Cataclisma, de preferência, no que foi evitado.
+Todo Atalho e todo Passo **tocam um Laço**: o jogador diz qual.
 
-### O Laço
+### Laço apertado
 
-Com as **5 casas** marcadas, o personagem está **no Laço**: a situação desconfortável de sempre passa a se repetir, com outras caras. Enquanto isso, **Atalhos rendem metade** (+1 em vez de +3; a falha vira sucesso parcial).
+Se o personagem pega **dois Atalhos na mesma sessão sem dar nenhum Passo**, o Laço que eles tocaram fica **apertado** (marque a caixinha).
 
-**O Laço é montado junto**, não só pelo mestre:
-- o **jogador** diz como o Laço é por dentro: que sensação volta, do que o Atalho está protegendo o personagem, que situação ele mais evita;
-- o **mestre** traz a situação para a mesa, com outra cara a cada vez;
-- os **outros jogadores** podem sugerir caras para o Laço ("e se for o meu personagem pedindo ajuda?") e interpretar os PNJs dele;
-- o **jogador** diz quando sente que o personagem encarou de verdade.
+Laço apertado **não tira bônus nem corta números**: ele **traz mais problema a longo prazo**. O mestre planta uma **consequência** ligada ao Laço — a relação esfria, a dívida cresce, o boato corre, alguém se machuca, o sentimento ganha corpo — e **toda sessão que termina com o Laço apertado, essa consequência cresce um passo** no mundo. É uma Corrente pessoal ([[07 Mestre - Cataclisma, abalos e terrenos]]), **montada junto**: o jogador diz como o Laço é por dentro e o que ele evita; o mestre traz as consequências; os outros jogadores podem sugerir caras para elas.
 
-Um **Passo de Valor dentro da situação do Laço** quebra o Laço: apague todas as casas e ganhe uma **Marca de Valor** (+1 Arcano máximo, uma Vivência nova, ou reescrever uma resposta de criação: o personagem mudou).
+**Soltar**: um **Passo de Valor que encara aquele Laço** solta a caixinha. O que já cresceu continua no mundo e precisa ser resolvido, mas **para de crescer**. Ao soltar, o jogador pode **reescrever o Laço**: o personagem mudou.
 
-### Olhar para os Laços (recompensas)
+### Olhar para os Laços
 
-O jogo recompensa o jogador por **acompanhar** o próprio personagem, não só por agir:
-
-- **Na hora**: quando o jogador **nomeia o Atalho** que o personagem está pegando e **do que ele protege** ("ele faz piada porque não aguenta ver o irmão ferido"), ganhe **+1 Arcano**. Uma vez por Evento.
-- **No fim da sessão**, cada jogador responde as três perguntas. Cada "sim", com uma frase, vale **+1 Arcano** ou **apagar 1 Laço** (o jogador escolhe):
-  1. **Você percebeu um Atalho do seu personagem**, e qual é a relação dele com esse Atalho? (Por que ele pega tanto esse?)
-  2. **Uma relação se formou ou mudou** na party, ou com alguém do mundo?
-  3. **Você notou o que outro personagem sentiu ou fez** (um Atalho, um Passo) e **participou** disso: falou, ajudou, esteve junto?
+- **Na hora**: quando o jogador nomeia o Atalho que o personagem está pegando e do que ele protege, ganha **+1 Arcano** (uma vez por Evento). Perceber dá Arcano, mas **não muda nada sozinho**: o que muda é agir.
+- **No fim da sessão**, três perguntas; cada "sim", com uma frase, vale **+1 Arcano**:
+  1. Você percebeu um Atalho do seu personagem, e qual é a relação dele com esse Atalho?
+  2. Uma relação se formou ou mudou na party, ou com alguém do mundo?
+  3. Você notou o que outro personagem sentiu ou fez e participou disso?
 
 ### A ideia por trás
 
-O desconforto não some quando é evitado: **muda de lugar**. No Atalho, o mundo carrega por você (Cataclisma) e cobra depois. No Passo de Valor, você carrega agora e muda com isso. Atalho às vezes é esperto; **só** Atalho vira laço. Por isso quem usa magia se chama **Comprometido**.
+O desconforto não some quando é evitado: **muda de lugar**. No Atalho, o mundo carrega por você e cobra depois, com juros. No Passo, você carrega agora e muda com isso. Por isso quem usa magia se chama **Comprometido**. (Palavras que viram Laço: ver **Fusão** em [[02 Magia]].)
 
 ## 6. Eventos e holofote
 

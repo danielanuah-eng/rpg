@@ -261,4 +261,14 @@ Em todas: o **Atalho** continua (2 ou 4 Cataclisma), o **Passo de Valor** contin
 - **C · Laço de dois lados** (uma linha de 5 casas com o meio marcado): Atalho move o marcador para **Preso**, Passo para **Ligado**. No fim Preso, a situação de sempre volta; no fim Ligado, ganha uma Marca de Valor e volta ao meio.
 
 **P-96** 🔴 Qual versão (ou mistura)? Recomendo **A**, com a caixinha da **B** se quiser pressão mecânica.
+Sua resposta: ✅ **A + B**, com mudanças: Laço é uma **descrição** (relação, atitude, sentimento difícil), não uma palavra; apertado **não corta números**, traz **problema a longo prazo** (consequência que cresce a cada sessão). Aplicado em [[01 Regras centrais]], seção 5.
+
+## Rodada 10 — Fusão
+
+Aplicado em [[02 Magia]]: palavra usada sempre, repetidas vezes, **se funde** (círculo na ficha); a fundida **atrapalha** (o mestre a faz entrar com 1 Cataclisma; ela colore a perspectiva, com Desvantagem para ver o que ela esconde; fica literal e sem +1 de Relação); fundida por muito tempo **vira um Laço novo**; **desfusão só por ação** (Passo de Valor usando a palavra num sentido novo, ou agindo contra o puxão dela), e aí o jogador escreve um **sentido** ao lado da palavra.
+
+**P-97** 🟡 "Sempre a mesma palavra": quer um número para ajudar a mesa (ex.: a mesma palavra como núcleo em **3 magias seguidas**, ou em todas as magias de uma sessão), ou deixa no olho do mestre e da mesa?
+Sua resposta:
+
+**P-98** 🟡 Quanto tempo fundida até **virar Laço**: uma sessão inteira fundida? Duas?
 Sua resposta:

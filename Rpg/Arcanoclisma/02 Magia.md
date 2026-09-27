@@ -38,6 +38,21 @@ Magia de **Grau 1** não rola nada **sozinha**: acontece. Acender, esfriar, mand
 
 Ela só vira rolagem quando é o **meio de uma ação** que já seria um teste: "**atacar**, *preciso*, com uma agulha de gelo", "**esconder**, *furtivo*, numa sombra que eu puxo". Aí você rola o **teste normal da ação** (2d12 + o atributo do modo, ver [[01 Regras centrais]]) e a magia é o seu instrumento. Num ataque, o dano é **1d8 + Moldura**, como uma arma leve que nunca sai da mão.
 
+## Fusão: quando o personagem vira a palavra
+
+Às vezes o personagem para de **ter** a palavra e passa a **ser** a palavra: "eu corto" vira "eu sou a Lâmina". Aí a palavra está **fundida**. Na ficha do Valor, faça um **círculo** em volta dela.
+
+**Quando funde**: quando o jogador usa **sempre a mesma palavra**, repetidas vezes — como núcleo em magia atrás de magia, como resposta para tudo, ou como o Atalho de sempre. O mestre aponta, a mesa conversa, o jogador circula.
+
+**A palavra fundida atrapalha:**
+- **Se manifesta**: o mestre pode gastar **1 Cataclisma** para a palavra fundida **entrar sem ser chamada** numa magia ou numa ação do personagem: a reação de sempre, mesmo quando a cena pedia outra coisa.
+- **Se funde com a perspectiva**: o personagem passa a ver o mundo pela palavra. O mestre descreve as cenas por essa lente ("para quem é Lâmina, tudo parece algo a cortar"), e testes para entender alguém ou enxergar uma saída que a palavra esconde têm **Desvantagem**.
+- **Fica rígida**: só funciona no sentido mais literal e **não dá o +1 de Relação** (não há distância entre o personagem e ela).
+
+**Vira Laço**: uma palavra que fica fundida por muito tempo **vira um Laço novo**. O jogador escreve a descrição da relação do personagem com ela ("Ser a Lâmina: resolver tudo cortando").
+
+**Desfusão é ação, não percepção.** Perceber a fusão ajuda (e dá Arcano, ver Olhar para os Laços em [[01 Regras centrais]]), mas a palavra só se desfunde quando o personagem **age diferente com ela**: um **Passo de Valor** usando a palavra num sentido novo, não literal ("Lâmina: separar a briga", "Lâmina: cortar o silêncio"), ou agindo por um Laço de conexão **contra** o puxão da palavra. Dê certo ou não, a palavra se desfunde. Apague o círculo e escreva ao lado dela um **sentido** seu ("Lâmina: o que protege"), que daí em diante justifica o +1 de Relação.
+
 ## Os Graus (níveis de poder)
 
 | | **1 · Comum** | **2 · Interessante** | **3 · Impressionante** | **4 · Fantástico** | **5 · Mítico** |

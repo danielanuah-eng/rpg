@@ -33,7 +33,7 @@ Anote cada relação na ficha dos dois personagens (no app, aparece nas duas fic
 6. **Atributos** — distribua **+2, +1, +1, 0, 0, −1**.
 7. **Vivências** — escreva **2** frases do passado do personagem. Cada uma vale +2 (gastando 1 Arcano).
 8. **Equipamento** — uma arma, uma armadura permitida, o objeto do Canal, um kit, **50 Ordynus** ([[06 Itens e dinheiro]]).
-9. **Números finais** — Laço 0/5, Arcano 3, Cansaço 6, PV do Comportamento, Proteção da armadura, Limiares = base + 1 + armadura, Sintonia +2 (mais o +1 de Relação quando a magia tem a ver com o personagem).
+9. **Números finais** — 3 Laços escritos, Arcano 3, Cansaço 6, PV do Comportamento, Proteção da armadura, Limiares = base + 1 + armadura, Sintonia +2 (mais o +1 de Relação quando a magia tem a ver com o personagem).
 
 ## As perguntas de criação
 
@@ -56,7 +56,7 @@ Três blocos. As respostas **mudam com a história**: a ficha tem espaço para r
 10. **Como ele lida com o desconforto?** Foge, briga, faz piada, cala, cuida dos outros? (Esse é o **Atalho de costume** dele: anote na ficha.)
 11. **O que é valioso para ele manter**, e **como a magia se relaciona com isso**? (Protege? Ameaça? Foi o preço?) (Junto com o Compromisso, é para onde os **Passos de Valor** apontam.)
 
-As respostas 8 a 11 são o ponto de partida do **Laço** desse personagem, que o jogador e o mestre montam juntos se um dia ele se formar ([[01 Regras centrais]]).
+Das respostas 8 a 11 saem os **3 Laços** iniciais: uma relação com algo ou alguém, uma atitude, um sentimento difícil de encarar ([[01 Regras centrais]]).
 
 ### Você e o personagem (o jogador)
 
@@ -106,7 +106,7 @@ Tudo o que não é a magia do Valor. **Frente**: o que se usa jogando (identidad
 - **Comportamento**: nome, Esquiva, Limiares (Maior/Grave), PV, Cansaço, Proteção, armaduras permitidas, **caixas de talento** (Talento e Hábito com marcação Básico/Superior, e espaços vazios para talentos avulsos).
 - **Atributos** (os 6, com casinha de marca de avanço).
 - **Palavras Básicas**: a tabela de verbos de ação, a de modos (com o atributo de cada coluna) e a de formas, para o jogador montar "verbo + modo" olhando a ficha.
-- **Arcano** e **Laço** (5 casas), com o **Atalho de costume** e **o que o personagem valoriza** escritos do lado.
+- **Arcano** e os **Laços**: 3 linhas de descrição (mais espaço para Laços novos), cada uma com a caixinha **apertado**; e o **Atalho de costume** escrito do lado.
 - **Vivências**.
 - **Itens**: armas (atributo, alcance, dano, traços), armadura, uma linha para cada montaria/familiar (nome e traços), itens mágicos, consumíveis, materiais, **Ordynus**.
 - **Criação e lore**: as perguntas de criação (Vínculo, coração, você e o personagem) com espaço para reescrever, e as **relações da party** da sessão zero.
