@@ -112,8 +112,24 @@ Não há raças: há gente, de todas as aparências, e as culturas nascem do lug
 
 Dragões são criaturas **deste mundo**, e **representam os Valores**. Cada dragão nasce de um Valor e carrega isso no corpo: cor, forma, e **chamas luminosas e bruxuleantes** que saem dos espinhos e dos olhos. Dentro de um mesmo Valor as formas e aparências variam muito; a tabela dá o mais comum.
 
-- **Os mais velhos são inteligentes e sapientes**: falam, negociam, lembram Eras inteiras. Um Ancião raramente é "só" um combate.
-- **Os mais novos não**: são feras, guiadas por fome, território e brilho.
+Um dragão é uma **manifestação pura de personalidade com desejo**: o Valor dele virou vontade com corpo. O desejo pode ser **nobre, perverso, assustador, terno, mesquinho** — mas é sempre inteiro, sem meio-termo. Todo dragão tem:
+- um **Desejo** (o que ele quer, do jeito dele);
+- um **Domínio** (o território que é dele: uma montanha, um porto, um bairro, uma biblioteca, uma rota de comércio);
+- **pessoas preferidas** (para proteger, colecionar, atormentar, ensinar, devorar — seja lá o que o Desejo pedir).
+
+- **Os mais velhos são inteligentes e sapientes**: falam, negociam, lembram Eras inteiras. O Desejo neles é consciente e paciente. Um Ancião raramente é "só" um combate.
+- **Os mais novos não**: são feras, e o Desejo neles é puro impulso, guiado por fome, território e brilho.
+
+**Gerador de dragão** (role ou escolha):
+
+| d6 | Desejo | Domínio | Pessoas preferidas | O que ele faz com elas |
+|---|---|---|---|---|
+| 1 | proteger o que é frágil | uma montanha ou vulcão | crianças | guarda, esconde |
+| 2 | ser adorado | um porto ou rio | artistas e músicos | coleciona, exibe |
+| 3 | possuir o que é raro | uma cidade inteira (às escondidas) | os que mentem bem | testa, desafia |
+| 4 | ver o mundo arder, ou congelar, ou apodrecer | uma estrada ou rota de comércio | os que têm o seu Valor | ensina, adota |
+| 5 | lembrar tudo, e ser lembrado | uma floresta, deserto ou ruína | os que o enganaram um dia | atormenta, cobra |
+| 6 | um desejo que ninguém entende | um Reino, ou a porta de um | uma família, há gerações | devora, ou salva, sem aviso |
 - **Wyverns** são os parentes menores, sem sapiência e sem Valor forte: **domesticáveis e montáveis**. Cidades e exércitos criam wyverns para voo, correio e guerra.
 
 | Valor | Dragão | Cor e forma | Chamas (espinhos e olhos) | O sopro |

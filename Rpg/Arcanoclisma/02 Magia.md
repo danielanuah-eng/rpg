@@ -152,7 +152,7 @@ Todo personagem escolhe um Canal na criação. **Sintonia = Moldura + 1** para t
 | Canal | Como ajuda | Fraqueza |
 |---|---|---|
 | **Foco arcano** (anel, cajado, orbe, relógio) | **potencializa**: +1 no dano e na cura de magia | sem o foco na mão, Sintonia cai |
-| **Arma** (a magia sai pela lâmina, pela flecha, pelo tiro) | **letalidade**: magias de ataque feitas pela arma somam **um dado da arma** ao dano | magias que não são ataque: Sintonia cai |
+| **Arma** (a magia sai pela lâmina, pela flecha, pelo tiro) | **letalidade**: nas magias de ataque feitas pela arma, **os traços da arma valem** (Precisa, Cruel, Atordoante, Alcance...) | magias que não são ataque: Sintonia cai |
 | **Transcrito** (grimório, caderno, pergaminhos: a magia escrita antes de ser dita) | **segurança**: se a ação anterior foi preparar (ou fora de pressa), a Dificuldade do Grau cai 2 e você rola **uma Dificuldade (d20) a menos** | mais lento: sem preparar, nenhum bônus; sem o Transcrito, Sintonia cai |
 | **Corpo** (gesto, dança, sangue, tatuagem) | nunca é desarmado | amarrado ou agarrado, não conjura Grau 2+ |
 | **Voz** (canto, grito, reza) | conjura com as mãos ocupadas; magias em quem te ouve têm +1 faixa de alcance | silenciado, não conjura |

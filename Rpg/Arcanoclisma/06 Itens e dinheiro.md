@@ -44,6 +44,8 @@ Dano = **dado da arma × Proficiência + bônus**. A cada Moldura acima do 1, a 
 
 **Secundárias** (na outra mão): escudo pequeno (+1 Esquiva, 15 o), escudo grande (+1 Proteção, −1 Esquiva, 30 o), adaga de apoio (+2 de dano na principal, 10 o).
 
+Dano de arma se rola **como no Daggerheart**: dado × Proficiência + bônus.
+
 **Traços**: *Arremessável* (ataca à distância indicada); *Precisa* (+1 no ataque); *Cruel* (dano Grave marca +1 PV); *Pesada* (−1 Esquiva); *Atordoante* (dano Grave: o alvo perde a próxima ativação); *Alcance* (ataca até Perto); *Desarmar* e *Puxar* (no lugar do dano); *Recarga* (depois de atacar, role 1d6: no 1, a próxima ação é recarregar); *Barulhenta* (todo mundo por perto ouve); *Serve de foco arcano*.
 
 Comparação com magia (dano médio por golpe, na força máxima de cada Moldura):
@@ -76,7 +78,7 @@ O objeto do seu Canal ([[02 Magia]]) melhora por Moldura como qualquer item:
 | Canal | Moldura 2 | Moldura 3 | Moldura 4 |
 |---|---|---|---|
 | **Foco arcano** | +1 no dano de magia a mais (200 o) | guarda 1 palavra de qualquer Valor (800 o) | +1 de Sintonia (3.000 o) |
-| **Arma** | a versão melhor da arma já conta (dado e bônus) | a arma guarda 1 palavra (800 o) | ataques mágicos pela arma: +1 dado da arma (3.000 o) |
+| **Arma** | +1 no dano de magia feita pela arma (200 o) | a arma guarda 1 palavra (800 o) | a arma ganha um traço a mais, que vale só para magia (3.000 o) |
 | **Transcrito** | preparar também dá +1 no dano (200 o) | guarda 1 palavra (800 o) | preparar vale para as duas próximas magias (3.000 o) |
 
 ## Itens mágicos (Relíquias)

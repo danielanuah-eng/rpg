@@ -197,10 +197,10 @@ Sua resposta: ✅ não existe despertar outro Valor; o resto vem **só das 4 pal
 Sua resposta: ✅ sem penalidade; a relação é narrativa e opcional, mas dá **+1 de Relação** quando corresponde ao personagem (valores, ética, qualidades, perspectivas). As Dificuldades de Grau subiram 1 (12/14/16/19) para esse +1 ser o normal; a variável está em `calc/dados.py`.
 
 **P-75** ❓ (sua resposta veio cortada: "Os danos da arma ser...") Canais: Foco (+1 dano), Arma (+1 dado da arma no dano), Livro (mais seguro se preparar), Corpo, Voz, Familiar, Marca. Falta algum jeito de exercer magia?
-Sua resposta:
+Sua resposta: 🔁 dano de arma rolado como no Daggerheart; o Canal Arma ficou mais sutil: em vez de +1 dado da arma, **os traços da arma valem nas magias de ataque** feitas por ela (Precisa +1 no acerto, Cruel, Atordoante, Alcance...). Ver P-94.
 
 **P-76** 🟢 Dragões: a tabela por Valor (Dragão-Lâmina, -Mercúrio, -Coleira, -Coral, -Eclipse, -Pálido, -Véu, -Ampulheta, -Musgo). Nomes e cores ok? De onde eles vêm (pergunta 18 de [[08 Mundo e entidades]])?
-Sua resposta:
+Sua resposta: 🟡 (veio cortada) dragões são **manifestações puras de personalidade com desejo** (nobre, perverso, assustador...), com **Domínio** e **pessoas preferidas**. Aplicado em [[08 Mundo e entidades]] com um gerador d6. Falta o resto da frase: "eles s...".
 
 **P-77** 🟢 Quer que jogadores possam **ter** uma wyvern (montaria/familiar) desde o nível 1, ou só a partir da Moldura 2?
 Sua resposta:
@@ -242,4 +242,9 @@ Sua resposta:
 **P-93** 🟡 Recompensas das perguntas de fim de sessão: +1 Arcano **ou** apagar 1 Laço por "sim". Máximo 3 por sessão. Ok?
 Sua resposta:
 **P-91** 🟢 Além dos formatos do livro, quer algum livreto específico (aventura pronta, Reinos, uma página de regras para a mesa)?
+Sua resposta:
+
+## Rodada 8
+
+**P-94** 🟡 Canal Arma: **os traços da arma valem na magia** feita por ela. Assim a espada Precisa dá +1 no acerto da magia, o machado Cruel faz o Grave marcar +1 PV, o martelo Atordoante atordoa. Fica sutil e cada arma dá um "sabor" diferente. Serve, ou prefere um número fixo pequeno (ex.: +1 no dano, igual ao Foco)?
 Sua resposta:
