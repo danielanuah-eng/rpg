@@ -118,7 +118,7 @@ Perguntas de vínculo: *A quem você já obedeceu e jurou nunca mais? · Você a
 - **Símbolo**: uma máscara partida ao meio, uma metade sorrindo. **Cor**: coral.
 - **Primordial**: Zahun, o Deus Humano. **Oposto**: Conflitüo.
 - **Compromisso**: "Gente vem antes de tudo." Se envolve, sente em voz alta, não abandona quem pediu ajuda.
-- **Skill · Toque Humano**: magias que afetam **pessoas** (corpo, alma ou emoção) têm **−2 na Dificuldade** (depois de escolher qual Dificuldade vale).
+- **Skill · Toque Humano**: magias que afetam **pessoas** (corpo, alma ou emoção) têm **−2 na Dificuldade** do alvo.
 - **Drawback · Drama**: se a magia falhar, o mestre descreve o resultado mais inútil ou mais cômico. Se você reclamar, ele ganha Cataclisma igual ao Grau.
 - **Ressonância II · Empatia**: role uma Dificuldade a menos quando a magia afetar pessoas.
 - **Ressonância III · Carne Moldável**: mudar o próprio corpo (rosto, músculos, guelras, garras) é Grau 1 para você e dura até você desfazer.

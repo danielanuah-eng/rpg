@@ -114,8 +114,6 @@ def lutar(log=None):
         alvo = min((a for a in advs if a.pv > 0), key=lambda a: (a.pv * (a.lacaio or 1)))
         bonus, dano_fn, dif_mod, magia = pj.ataque(alvo)
         dif = alvo.dif + dif_mod
-        if magia:
-            dif = max(dif, 12)  # Dificuldade do Grau 2
         a, b = d(12), d(12)
         stats["acoes"] += 1
         crit = a == b

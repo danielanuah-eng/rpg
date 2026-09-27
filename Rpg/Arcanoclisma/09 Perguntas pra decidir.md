@@ -297,22 +297,22 @@ Sua resposta: ✅ ficou legal: Moldura (nível) e emoldurar convivem.
 ## Rodada 13 — Do teste das mecânicas ([[14 Teste das mecânicas]])
 
 **P-104** 🔴 **Economia**: magia de **Grau 2 custa 1 Arcano** (custos por Grau 0/1/2/3/5). Mantém "cada dado par = 1 Arcano" e para a sobra (fim de sessão com ~5 em vez de ~7, quase nunca no máximo).
-Sua resposta:
+Sua resposta: ✅ ok: Grau 2 custa 1 (custos 0/1/2/3/5).
 
 **P-105** 🔴 **Teto de ajudas**: no máximo **duas ajudas por rolagem** (Vivência, Ajudar, Atalho, Forçar, talentos; a Relação não conta).
-Sua resposta:
+Sua resposta: ✅ ok: no máximo duas ajudas por rolagem (Relação não conta).
 
 **P-106** 🟡 **Uma Dificuldade só na magia**: contra um alvo, só a Dificuldade do alvo; a do Grau só sem alvo.
-Sua resposta:
+Sua resposta: ✅ ok: contra alvo, só a Dificuldade do alvo.
 
 **P-107** 🟡 **Magia em Dupla em uma rolagem**: quem conduz rola o Grau do efeito + Sintonia + Relação, o parceiro soma +2. Mesma chance, metade das etapas.
-Sua resposta:
+Sua resposta: ✅ ok: uma rolagem só.
 
 **P-108** 🟡 **Freio do Atalho**: com o Laço já apertado, cada novo Atalho nele faz a consequência crescer **na hora**.
-Sua resposta:
+Sua resposta: 🔁 Passo e Laço conversam direto, com peso mais narrativo que mecânico. Laço apertado: ações **diferentes do padrão do Laço** têm **Dificuldade +2** (agir por um Valor é difícil, mas necessário), uma **relação estremece** (não ajuda nem faz Dupla), a consequência cresce (por sessão e por Atalho novo). O Passo é a ação diferente e sempre solta. Aplicado em [[01 Regras centrais]].
 
 **P-109** 🟡 **Passo de Valor**: o Arcano vem uma vez por Evento (os Passos continuam valendo para soltar Laços e desfundir).
 Sua resposta:
 
 **P-110** 🟢 Ficha com "Atalhos nesta sessão □□" do lado dos Laços.
-Sua resposta:
+Sua resposta: ✅ ok.

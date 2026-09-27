@@ -22,7 +22,7 @@ Ao conjurar, o jogador **pode** dizer em uma frase por que aquela palavra, para 
 
 Mas quando a relação **corresponde ao personagem** (aos valores, à ética, às qualidades, ao jeito de ver o mundo, ao Compromisso dele), a magia ganha **+1 de Relação** no total.
 
-Os números do jogo **já contam com esse +1** (as Dificuldades de Grau foram calibradas com ele). Parece um extra, e é bom que pareça; mas é o jeito normal de conjurar. Quem não conta a relação conjura um pouco abaixo do esperado.
+Os números do jogo **já contam com esse +1** (as Dificuldades foram calibradas com ele). Parece um extra, e é bom que pareça; mas é o jeito normal de conjurar. Quem não conta a relação conjura um pouco abaixo do esperado.
 
 ## Conjurar em 5 passos
 
@@ -31,8 +31,8 @@ Os números do jogo **já contam com esse +1** (as Dificuldades de Grau foram ca
    - **Palavras de Valor**: de 1 até o seu limite (Moldura + 1). **A primeira é do seu Valor** (o núcleo); as outras podem ser do seu Valor ou Palavras Estrangeiras.
    - **Palavras Básicas** (ação, modo, forma): **não custam e não contam no limite**, até uma de cada tipo. Precisam fazer sentido concreto.
 3. **Grau**: pelo tamanho do efeito (tabela abaixo), até o seu máximo (Moldura + 1). O mestre tem a palavra final se o efeito pedido for maior do que o Grau.
-4. **Pague**: custo do Grau + 1 Arcano por palavra de Valor além da primeira + Ampliações.
-5. **Role** os dados do Grau + Sintonia (+1 de Relação), contra a Dificuldade (a maior entre a do Grau e a do alvo). Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre).
+4. **Pague**: custo do Grau + 1 Arcano por palavra de Valor além da primeira + Ampliações. (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
+5. **Role** os dados do Grau + Sintonia (+1 de Relação), contra **a Dificuldade do alvo**; se a magia não tem alvo (abrir, criar, mudar o lugar), contra **a Dificuldade do Grau**. Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre).
 
 ### Grau 1: a magia do dia a dia
 
@@ -60,8 +60,8 @@ Ela só vira rolagem quando é o **meio de uma ação** que já seria um teste: 
 | | **1 · Comum** | **2 · Interessante** | **3 · Impressionante** | **4 · Fantástico** | **5 · Mítico** |
 |---|---|---|---|---|---|
 | **Dados** | nenhum, acontece | **2d12** | **3d8** | **4d6** | **6d4** |
-| **Custo base** | 0 | 0 | 1 Arcano | 2 Arcano | 4 Arcano |
-| **Dificuldade do Grau** | — | 12 | 14 | 16 | 19 |
+| **Custo base** | 0 | 1 Arcano | 2 Arcano | 3 Arcano | 5 Arcano |
+| **Dificuldade do Grau** (magia sem alvo) | — | 12 | 14 | 16 | 19 |
 | **Moldura mínima** | 1 | 1 | 2 | 3 | 4 |
 | **Dano** | nenhum (só incômodo) | 1d10 + Sintonia | 2d10 + Sintonia | 3d10 + Sintonia | 5d10 + Sintonia |
 | **Cura** (sempre +1 Arcano por PV) | — | 1 PV | até 2 PV | até 3 PV ou 1 condição | todos os PV, ou trazer de volta quem morreu neste Evento |
@@ -178,18 +178,20 @@ Todo personagem escolhe um Canal na criação. **Sintonia = Moldura + 1** para t
 
 ## Magia em Dupla
 
-Dois personagens conjuram juntos. É o jeito de passar do limite.
+Dois personagens conjuram juntos, **numa rolagem só**. É o jeito de passar do limite.
 
 1. **Custo**: 3 Arcano, divididos como quiserem, e cada um paga suas palavras de Valor extras.
 2. **Palavras**: cada um põe palavras do próprio Valor (e as Básicas, de graça). Palavras de Valor no total: até **o maior limite dos dois + 2** (máx. 7).
-3. **Grau do efeito**: o maior Grau que qualquer um dos dois conseguiria **+1** (pode chegar a 5 mesmo na Moldura 3).
-4. **Rolagem**: cada um rola os dados do **seu** Grau máximo + sua Sintonia. **Soma os dois totais** contra **a soma das duas Dificuldades**.
+3. **Grau do efeito**: o maior Grau que qualquer um dos dois conseguiria **+1** (máx. 5).
+4. **Rolagem**: quem **conduz** rola os dados **do Grau do efeito** + a própria Sintonia + Relação; o **parceiro soma +2**. Contra a Dificuldade do alvo (sem alvo, a do Grau do efeito).
 5. **As Skills dos dois Valores valem**. Os Drawbacks também.
-6. Par/ímpar conta em **todos** os dados. Crítico ou Desequilíbrio: cada metade confere o seu; se acontecer em qualquer uma, vale.
+6. Par/ímpar, Crítico e Desequilíbrio: como numa magia normal, nos dados rolados.
+
+Chance: uns **89–90%** em qualquer Moldura.
 
 ### Valores opostos
 
-Se os dois Valores forem opostos (ver [[03 Valores]]): o efeito sobe **+2 Graus** em vez de +1 (o que passar de 5 vira Ampliações de graça), mas a **Dificuldade total +4**, **os dois marcam Cansaço igual ao Grau do efeito − 2**, e se sair Ímpar rolam **uma Dificuldade a mais**.
+Se os dois Valores forem opostos (ver [[03 Valores]]): o efeito sobe **+2 Graus** em vez de +1 (o que passar de 5 vira Ampliações de graça), mas a **Dificuldade +2**, **os dois marcam Cansaço igual ao Grau do efeito − 2**, e se sair Ímpar rolam **uma Dificuldade a mais**. Chance: uns 57–70%.
 
 O **Eixo** (o Valor sem oposto) combina com qualquer um sem penalidade.
 
@@ -236,10 +238,10 @@ Formas são só formato: **nenhuma Palavra Básica é elemento** (fogo, gelo, lu
 **Iara, Sublimeyn, nível 1 (Moldura 1, Sintonia +2, Canal Foco: um frasco de água do rio onde quase se afogou)** quer derrubar o guarda com um jato de água gelada.
 - Relação: "Gelo, para ela, é o rio que parou para ela não morrer."
 - Palavras: **Gelo** (núcleo) + *Atacar*, *preciso*, *Projétil* (básicas, grátis).
-- Grau 2 (uma pessoa, dano). Custo total 0.
-- Rola 2d12 + 2 + 1 (Relação) contra a maior entre 12 (Grau) e a Dificuldade do guarda, 12. Tira 7 e 8: total 18, acerta. Um par (+1 Arcano), um ímpar (+1 Cataclisma). Dano 1d10 + 2 + 1 (Foco).
+- Grau 2 (uma pessoa, dano). Custo total 1 Arcano.
+- Rola 2d12 + 2 + 1 (Relação) contra a Dificuldade do guarda, 12. Tira 7 e 8: total 18, acerta. Um par (+1 Arcano: a magia se pagou), um ímpar (+1 Cataclisma). Dano 1d10 + 2 + 1 (Foco).
 
 **Tomé (Conflitüo) e Iara (Sublimeyn), nível 5** fazem uma dupla: **Explodir + Lâmina + Metal + Fundir + Grupo**.
 - 4 palavras de Valor, Grau do efeito 4 + 1 = **5 (Mítico)**: uma chuva de lâminas de metal derretido sobre até todos os inimigos à vista.
 - Custo: 3 (dupla) + as palavras de Valor extras de cada um (*Grupo* é básica, grátis).
-- Tomé rola 4d6 + 4 + 1, Iara rola 4d6 + 4 + 1 (os dois dizem a relação), somam contra 16 + 16 = 32. Skill do Conflitüo vale (+1 dado de dano). Se sair Ímpar, rolam 1 Dificuldade (4 palavras de Valor).
+- Tomé conduz: rola **6d4** (Grau 5) + 4 + 1, e Iara soma +2, contra a Dificuldade dos inimigos (ou 19, se fosse sem alvo). Skill do Conflitüo vale (+1 dado de dano). Se sair Ímpar, rolam 1 Dificuldade (4 palavras de Valor).

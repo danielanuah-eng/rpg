@@ -10,11 +10,11 @@
 
 **Dados**: cada **par** = +1 Arcano para você. Cada **ímpar** = +1 Cataclisma para o mestre. **Dois iguais = Crítico** (sucesso automático, +Arcano igual ao dado, máx. 6). **Dois ímpares** ou **falha** → o mestre emoldura.
 
-**Magia**: 1 palavra do seu Valor (núcleo) + até 1 palavra de Valor a mais (1 Arcano) + Palavras Básicas de graça (um verbo, um modo, uma forma). Na Moldura 1: **Grau 1** acontece sem rolar (ou vira o meio de uma ação: dano 1d8+1); **Grau 2** rola **2d12 + 2 (Sintonia) + 1 (Relação, se a palavra tem a ver com o personagem)** contra **12** ou a Dificuldade do alvo, a maior. Dano de Grau 2: **1d10 + 2**. Dura até a próxima Falha.
+**Magia**: 1 palavra do seu Valor (núcleo) + até 1 palavra de Valor a mais (1 Arcano) + Palavras Básicas de graça (um verbo, um modo, uma forma). Na Moldura 1: **Grau 1** é grátis e acontece sem rolar (ou vira o meio de uma ação: dano 1d8+1); **Grau 2** custa **1 Arcano** e rola **2d12 + 2 (Sintonia) + 1 (Relação, se a palavra tem a ver com o personagem)** contra a Dificuldade do alvo (sem alvo, 12). Dano de Grau 2: **1d10 + 2**. Dura até a próxima Falha.
 
-**Arcano** (começa 3, máx. 12): 1 = Vivência +2 · 1 = Ajudar (Vantagem, +1d6) · 1 = palavra extra · 3 = Hábito · 3 = Ação em Dupla · 3 = Detalhe · 3 = Forçar o Grau (Grau 3, 3d8, contra 14).
+**Ajudas**: no máximo duas por rolagem (Relação não conta). **Arcano** (começa 3, máx. 12): 1 = Vivência +2 · 1 = Ajudar (Vantagem, +1d6) · 1 = palavra extra · 3 = Hábito · 3 = Ação em Dupla · 3 = Detalhe · 3 = Forçar o Grau (Grau 3, 3d8, contra 14).
 
-**Atalho ou Passo**: Atalho = o mestre ganha 2 (+3 numa rolagem, ou ignorar condição) ou 4 (falha vira sucesso). Passo de Valor = aceitar o desconforto (Desvantagem, ou 1–2 Cansaço, ou a consequência) → +1 Arcano, dê certo ou não. Dois Atalhos sem nenhum Passo apertam o Laço.
+**Atalho ou Passo**: Atalho = o mestre ganha 2 (+3 numa rolagem, ou ignorar condição) ou 4 (falha vira sucesso). Passo de Valor = aceitar o desconforto (Desvantagem, ou 1–2 Cansaço, ou a consequência) → +1 Arcano, dê certo ou não. Dois Atalhos sem nenhum Passo apertam o Laço (ações fora do padrão dele ficam +2, uma relação estremece, a consequência cresce); o Passo solta.
 
 **Dano**: abaixo do Maior = 1 PV · Maior = 2 · Grave = 3. Marque 1 Proteção para marcar 1 PV a menos.
 
@@ -130,8 +130,8 @@ Na briga, uma lamparina cai no feno. O ovo começa a rachar com o calor.
 **Ameaça**: "o teto cai quando eu pagar **6**". **Termina quando** o grupo sair com o ovo, ou o teto cair.
 
 - Apagar ou conter o fogo é Grau 3 (uma sala): só com **Forçar o Grau** (3 Arcano) ou **Magia em Dupla**.
-- **Dupla sugerida**: **Iara** (Sublimeyn, o Eixo) com qualquer um — *Vapor* ou *Solidificar* + a palavra do outro — efeito de Grau 3; cada um rola **2d12 + 2 + 1**, e a soma vai contra **12 + 12 = 24** (uns 89%).
-- **Dupla de opostos**: **Tomé** (Conflitüo) e **Nhanda** (Persona) — o efeito sobe 2 Graus (Grau 4: apagar o celeiro inteiro de uma vez), mas cada um continua rolando o **seu** Grau máximo (**2d12 + 2 + 1**), e a soma vai contra **12 + 12 + 4 = 28** (uns 74%); os dois marcam 2 Cansaço, e se sair Ímpar rolam uma Dificuldade a mais. Arriscado e bonito.
+- **Dupla sugerida**: **Iara** (Sublimeyn, o Eixo) com qualquer um — *Vapor* ou *Solidificar* + a palavra do outro — efeito de Grau 3; quem conduz rola **3d8 + 2 + 1**, o parceiro soma **+2**, contra **14** (uns 89%). Custa 3 Arcano.
+- **Dupla de opostos**: **Tomé** (Conflitüo) e **Nhanda** (Persona) — o efeito sobe 2 Graus (Grau 4: apagar o celeiro inteiro de uma vez); quem conduz rola **4d6 + 2 + 1**, o parceiro soma **+2**, contra **16 + 2 = 18** (uns 66%); os dois marcam 2 Cansaço, e se sair Ímpar rolam uma Dificuldade a mais. Arriscado e bonito.
 - **O ovo choca**: a wyvern nasce leal a quem estiver mais perto. Quem é? Vira uma linha na ficha (sem ficha própria).
 
 **Fim da sessão**: as três perguntas de fim de sessão, e cada jogador diz se algum Laço apertou.
@@ -205,7 +205,7 @@ Iara (7,1 +3 = 11 vs 12) erra o Cão 2                            ← falha: o m
 5. **A Skill de Persona some na Moldura 1.** Nhanda tem −2 na Dificuldade contra pessoas, mas a magia usa **a maior** entre a Dificuldade do Grau (12) e a do alvo. Contra a Domadora (13 − 2 = 11), a Dificuldade volta a ser 12: o bônus quase não aparece. **Sugestão**: o −2 de Persona vale **depois** de escolher a maior (12 − 2 = 10).
 6. **O Drawback de Conflitüo não pesa na Moldura 1.** "Fora de combate, 2 palavras" é o limite de todo mundo na Moldura 1. **Sugestão**: "fora de combate, a primeira palavra extra custa 2 Arcano", ou deixar e aceitar que o Drawback só aparece da Moldura 2 em diante.
 7. **A regra de Lacaios precisa de uma frase mais clara.** No script: cada acerto derruba 1, mais 1 para cada 4 de dano além do primeiro ponto. **Sugestão**: "um acerto derruba um Lacaio; cada 4 de dano a mais derruba outro".
-8. **A Magia em Dupla funciona bem na Moldura 1**: Dupla comum uns 89% (contra 24), Dupla de opostos uns 74% (contra 28), com o risco no Cansaço e nas Dificuldades. Na mesa, ver se o preço de 3 Arcano e o Cansaço dos opostos parecem justos pelo tamanho do efeito.
+8. **A Magia em Dupla funciona bem na Moldura 1**: comum uns 89%, de opostos uns 66% (agora numa rolagem só, ver [[14 Teste das mecânicas]]). Na mesa, ver se o preço de 3 Arcano e o Cansaço dos opostos parecem justos pelo tamanho do efeito.
 9. **Duração**: 22 ações de jogador é uma luta de uns 40–50 minutos numa mesa que já conhece as regras. Dentro da meta.
 
 **Ainda não testado pelo script** (só a mesa responde): se verbo + modo é fácil de escolher; se a Relação +1 flui ou trava a conversa; se Atalho e Passo aparecem naturalmente; a Fusão; o Evento social.

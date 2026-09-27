@@ -1,6 +1,6 @@
 # 14 — Teste das mecânicas
 
-> Cada mecânica testada em três perguntas: **quantas etapas** ela pede na mesa, se é **fácil de aplicar**, e se dá **vantagem demais quando repetida**. Números de `calc/simular_economia.py`, `calc/simular_combate.py` e contas diretas nos dados. Nada foi mudado nas regras por este relatório: as propostas estão em P-104 a P-110 ([[09 Perguntas pra decidir]]).
+> Cada mecânica testada em três perguntas: **quantas etapas** ela pede na mesa, se é **fácil de aplicar**, e se dá **vantagem demais quando repetida**. Números de `calc/simular_economia.py`, `calc/simular_combate.py` e contas diretas nos dados. **Decidido depois do teste**: P-104 (Grau 2 custa 1), P-105 (duas ajudas no máximo), P-106 (uma Dificuldade só), P-107 (Dupla numa rolagem), P-110 (caixinhas de Atalho) aplicados; P-108 virou o redesenho do Laço apertado (Dificuldade +2 fora do padrão, relação estremecida, consequência que cresce; o Passo solta). Em aberto: P-109.
 
 ## 1. Quanto cada ajuda vale
 

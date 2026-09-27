@@ -106,7 +106,7 @@ Tudo o que não é a magia do Valor. **Frente**: o que se usa jogando (identidad
 - **Comportamento**: nome, Esquiva, Limiares (Maior/Grave), PV, Cansaço, Proteção, armaduras permitidas, **caixas de talento** (Talento e Hábito com marcação Básico/Superior, e espaços vazios para talentos avulsos).
 - **Atributos** (os 6, com casinha de marca de avanço).
 - **Palavras Básicas**: a tabela de verbos de ação, a de modos (com o atributo de cada coluna) e a de formas, para o jogador montar "verbo + modo" olhando a ficha.
-- **Arcano** e os **Laços**: 3 linhas de descrição (mais espaço para Laços novos), cada uma com a caixinha **apertado**; e o **Atalho de costume** escrito do lado.
+- **Arcano** e os **Laços**: 3 linhas de descrição (mais espaço para Laços novos), cada uma com a caixinha **apertado**; as caixinhas **"Atalhos nesta sessão □□"**; e o **Atalho de costume** escrito do lado.
 - **Vivências**.
 - **Itens**: armas (atributo, alcance, dano, traços), armadura, uma linha para cada montaria/familiar (nome e traços), itens mágicos, consumíveis, materiais, **Ordynus**.
 - **Criação e lore**: as perguntas de criação (Vínculo, coração, você e o personagem) com espaço para reescrever, e as **relações da party** da sessão zero.

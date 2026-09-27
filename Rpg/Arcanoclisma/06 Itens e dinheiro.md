@@ -52,10 +52,10 @@ Comparação com magia (dano médio por golpe, na força máxima de cada Moldura
 
 | Moldura | Espada longa | Magia no Grau máx. | Custo da magia |
 |---|---|---|---|
-| 1 | 8,5 | 7,5 (G2) | 0 |
-| 2 | 16 | 14 (G3) | 1 Arcano |
-| 3 | 23,5 | 20,5 (G4) | 2 Arcano |
-| 4 | 31 | 32,5 (G5) | 4 Arcano |
+| 1 | 8,5 | 7,5 (G2) | 1 Arcano |
+| 2 | 16 | 14 (G3) | 2 Arcano |
+| 3 | 23,5 | 20,5 (G4) | 3 Arcano |
+| 4 | 31 | 32,5 (G5) | 5 Arcano |
 
 A arma bate um pouco mais forte num alvo só e não gasta nada; a magia acerta vários, faz efeito e muda o Evento, mas custa e gera Cataclisma. Conflitüo fica no meio (+1 dado).
 

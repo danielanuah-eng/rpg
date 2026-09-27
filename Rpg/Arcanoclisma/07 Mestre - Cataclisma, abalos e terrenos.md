@@ -108,7 +108,7 @@ Como quebrar: o que os jogadores podem fazer para parar ou desviar
 
 **Exemplo — O Pedágio** (Conflito): os Protetores do Arcano e a Cidade-Muralha disputam a estrada. Elos: postos de bloqueio → Zona de Anulação na ponte → milícia contra Protetores (Evento de combate onde os jogadores escolhem lado) → a estrada fecha ou vira fronteira.
 
-**Laços apertados**: quando um Laço aperta, ele vira uma Corrente pessoal **montada junto com o jogador** ([[01 Regras centrais]], seção 5): o jogador diz como o Laço é por dentro e o que ele evita; você planta a consequência e a faz crescer um passo a cada sessão que termina apertada; os outros jogadores podem sugerir caras. Seja justo: o Laço é para ser encarável, não uma punição. Gaste o Cataclisma dos Atalhos, de preferência, no que foi evitado. **Palavras fundidas**: 1 Cataclisma faz a palavra entrar sem ser chamada ([[02 Magia]]).
+**Laços apertados** ([[01 Regras centrais]], seção 5): enquanto apertado, ações **diferentes do padrão do Laço** têm Dificuldade +2, uma **relação** ligada a ele estremece (não ajuda nem faz Dupla), e a **consequência cresce** a cada sessão apertada e a cada novo Atalho nele. Monte junto com o jogador: ele diz como o Laço é por dentro; você traz as consequências; a mesa sugere caras. O peso é mais narrativo que mecânico: o Laço é para ser encarável, e o Passo sempre solta. Gaste o Cataclisma dos Atalhos, de preferência, no que foi evitado. **Palavras fundidas**: 1 Cataclisma faz a palavra entrar sem ser chamada ([[02 Magia]]).
 
 Adversários (ficha, palavras, régua, maestria) estão em [[10 Adversários - como criar]] e o bestiário em [[11 Bestiário]].
 

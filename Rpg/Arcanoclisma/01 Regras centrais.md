@@ -58,6 +58,8 @@ Role 2d12, some o atributo (e bônus), compare com a Dificuldade. Igual ou maior
 
 **Vantagem**: some +1d6. **Desvantagem**: subtraia 1d6. Não acumulam; uma anula a outra. O d6 extra **não conta** para par/ímpar.
 
+**Duas ajudas, no máximo.** Cada rolagem aceita **no máximo duas ajudas** (Vivência, Ajudar, Atalho, Forçar, bônus de talento ou item). A **Relação** não conta: é o normal. Escolha as duas que mais fazem sentido na cena.
+
 ### Leitura dos dados (paridade)
 
 Olhe os dois d12:
@@ -131,11 +133,19 @@ Todo Atalho e todo Passo **tocam um Laço**: o jogador diz qual.
 
 ### Laço apertado
 
-Se o personagem pega **dois Atalhos na mesma sessão sem dar nenhum Passo**, o Laço que eles tocaram fica **apertado** (marque a caixinha).
+Se o personagem pega **dois Atalhos na mesma sessão sem dar nenhum Passo**, o Laço que eles tocaram fica **apertado**. Na ficha, ao lado dos Laços, há duas caixinhas **"Atalhos nesta sessão □□"** para ninguém precisar lembrar.
 
-Laço apertado **não tira bônus nem corta números**: ele **traz mais problema a longo prazo**. O mestre planta uma **consequência** ligada ao Laço — a relação esfria, a dívida cresce, o boato corre, alguém se machuca, o sentimento ganha corpo — e **toda sessão que termina com o Laço apertado, essa consequência cresce um passo** no mundo. É uma Corrente pessoal ([[07 Mestre - Cataclisma, abalos e terrenos]]), **montada junto**: o jogador diz como o Laço é por dentro e o que ele evita; o mestre traz as consequências; os outros jogadores podem sugerir caras para elas.
+O peso de um Laço apertado é **mais narrativo que mecânico**, mas tem dente:
 
-**Soltar**: um **Passo de Valor que encara aquele Laço** solta a caixinha. O que já cresceu continua no mundo e precisa ser resolvido, mas **para de crescer**. O Laço **não é apagado**: a irmã, a vergonha, a piada continuam lá. Ao soltar, o jogador pode **reescrever o Laço** para dizer o que mudou na relação do personagem com aquilo — não o fato, mas o poder que ele tem.
+- **O caminho de sempre fica fácil, o diferente fica difícil.** Enquanto o Laço estiver apertado, **ações diferentes do padrão do Laço** (fazer o que o Atalho evita: ficar em vez de fugir, falar em vez de calar, pedir ajuda em vez de resolver sozinho) têm **Dificuldade +2**. Ações no padrão do Laço não. Agir em prol de um Valor é difícil, mas é o que muda.
+- **Uma relação piora.** O mestre e o jogador escolhem uma relação ligada ao Laço (alguém da party ou do mundo) e ela **estremece**: essa pessoa não pode te **Ajudar** nem fazer **Magia em Dupla** com você até vocês se acertarem (uma cena juntos, uma conversa, um Passo que a envolva).
+- **A consequência cresce.** O mestre planta uma consequência ligada ao Laço (a dívida cresce, o boato corre, alguém se machuca, o sentimento ganha corpo). Ela **cresce um passo** a cada sessão que termina apertada **e a cada novo Atalho que toca esse Laço**. É uma Corrente pessoal ([[07 Mestre - Cataclisma, abalos e terrenos]]), **montada junto**: o jogador diz como o Laço é por dentro e o que ele evita; o mestre traz as consequências; os outros jogadores podem sugerir caras para elas.
+
+### O Passo solta o Laço
+
+O **Passo de Valor** conversa diretamente com o Laço: ele **é** a ação diferente, a que o Laço torna difícil. O jogador diz qual Laço o Passo encara e faz o contrário do padrão, pagando o desconforto (Desvantagem, Cansaço ou a consequência) **e** a Dificuldade +2 do Laço apertado.
+
+**Dê certo ou não**, o Passo **solta** o Laço: a caixinha sai, a relação que estremeceu pode ser consertada na cena, e a consequência **para de crescer** (o que já cresceu continua no mundo e precisa ser resolvido). O Laço **não é apagado**: a irmã, a vergonha, a piada continuam lá. Ao soltar, o jogador pode **reescrever o Laço** para dizer o que mudou na relação do personagem com aquilo — não o fato, mas o poder que ele tem.
 
 ### Olhar para os Laços
 
