@@ -1,0 +1,145 @@
+{
+  "namespace": "test",
+  "namesets": [
+    {
+      "id": "japanese-test",
+      "nameCategories": {
+        "firstName": [{"name": "Hiroshi", "gender": "male"}, {"name": "Yuki", "gender": "female"}],
+        "lastName": [{"name": "Yamamoto"}, {"name": "Tanaka"}]
+      }
+    },
+    {
+      "id": "german-test",
+      "nameCategories": {
+        "firstName": [{"name": "Hans", "gender": "male"}, {"name": "Greta", "gender": "female"}],
+        "lastName": [{"name": "Mueller"}, {"name": "Schmidt"}]
+      }
+    },
+    {
+      "id": "diaspora-test",
+      "type": "aggregate",
+      "formats": {"default": "{firstName} {lastName}"},
+      "sources": [
+        {"nameset": "japanese-test", "weight": 50, "label": "ja"},
+        {"nameset": "german-test", "weight": 50, "label": "de"}
+      ],
+      "slots": {
+        "firstName": {"policy": "inherit"},
+        "lastName": {"policy": "mix", "rate": 0.5}
+      }
+    },
+    {
+      "id": "fully-mixed",
+      "type": "aggregate",
+      "formats": {"default": "{firstName} {lastName}"},
+      "sources": [
+        {"nameset": "japanese-test", "weight": 50, "label": "ja"},
+        {"nameset": "german-test", "weight": 50, "label": "de"}
+      ],
+      "slots": {
+        "firstName": {"policy": "inherit"},
+        "lastName": {"policy": "independent"}
+      }
+    },
+    {
+      "id": "forced-last",
+      "type": "aggregate",
+      "formats": {"default": "{firstName} {lastName}"},
+      "sources": [
+        {"nameset": "japanese-test", "weight": 50, "label": "ja"},
+        {"nameset": "german-test", "weight": 50, "label": "de"}
+      ],
+      "slots": {
+        "firstName": {"policy": "inherit"},
+        "lastName": {"policy": "forced", "nameset": "japanese-test"}
+      }
+    },
+    {
+      "id": "surname-only-test",
+      "hidden": true,
+      "formats": {"default": "{lastName}"},
+      "nameCategories": {
+        "lastName": [{"name": "Rask"}, {"name": "Modig"}]
+      }
+    },
+    {
+      "id": "pool-last",
+      "type": "aggregate",
+      "formats": {"default": "{firstName} {lastName}"},
+      "sources": [
+        {"nameset": "japanese-test", "weight": 50, "label": "ja"},
+        {"nameset": "german-test", "weight": 50, "label": "de"}
+      ],
+      "slots": {
+        "lastName": {
+          "policy": "pool",
+          "rate": 1.0,
+          "sources": [{"nameset": "surname-only-test", "weight": 1, "label": "soldier"}]
+        }
+      }
+    },
+    {
+      "id": "pool-last-half",
+      "type": "aggregate",
+      "formats": {"default": "{firstName} {lastName}"},
+      "sources": [
+        {"nameset": "japanese-test", "weight": 50, "label": "ja"},
+        {"nameset": "german-test", "weight": 50, "label": "de"}
+      ],
+      "slots": {
+        "lastName": {
+          "policy": "pool",
+          "rate": 0.5,
+          "sources": [{"nameset": "surname-only-test", "weight": 1, "label": "soldier"}]
+        }
+      }
+    },
+    {
+      "id": "pool-missing",
+      "type": "aggregate",
+      "formats": {"default": "{firstName} {lastName}"},
+      "sources": [{"nameset": "japanese-test", "weight": 50, "label": "ja"}],
+      "slots": {
+        "lastName": {
+          "policy": "pool",
+          "sources": [{"nameset": "nope-test", "weight": 1}]
+        }
+      }
+    },
+    {
+      "id": "station-test",
+      "hidden": true,
+      "nameCategories": {
+        "firstName": [{"name": "Kalle"}],
+        "lastName": [{"name": "Rask"}],
+        "station": [{"name": "Kalix"}, {"name": "Torne"}]
+      },
+      "formats": {"default": "{firstName} {lastName}"}
+    },
+    {
+      "id": "optional-particle",
+      "type": "aggregate",
+      "formats": {"default": "{firstName}[ af {station}]"},
+      "sources": [
+        {"nameset": "japanese-test", "weight": 50, "label": "ja"},
+        {"nameset": "station-test", "weight": 50, "label": "st"}
+      ],
+      "slots": {"station": {"policy": "inherit"}}
+    },
+    {
+      "id": "override-test",
+      "type": "aggregate",
+      "formats": {"default": "{firstName} {lastName}"},
+      "sources": [
+        {
+          "nameset": "japanese-test",
+          "weight": 100,
+          "label": "ja-male-only",
+          "override": {
+            "genderWeights": {"male": 100, "female": 0}
+          }
+        }
+      ]
+    }
+  ]
+}

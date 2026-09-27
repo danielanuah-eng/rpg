@@ -1,0 +1,325 @@
+Organize um roteiro de perguntas e respostas e ideias pra montar um sistema de rpg com alguns detalhes do daggerheart e do rune rpg e outros sistemas parecidos
+já tem algumas informações aí
+
+inspiração : daggerheart, rune rpg, ethmos, triangle agency
+
+ me ajude a preencher lacunas, gera história fazendo perguntas pra skill com ose fosse um escritor profissional, balancear, gera mecânicas, tornar fácil pros jogadores jogarem e não ficar só um copia e cola de outros rpgs
+
+ faça um planejamentom, que termina criando ficha e geradores elaborados que nem o rpg PESO DO CÉU, quando estivermos com tudo finalizado, mas com outro netlify pra baixar app, e com imagens.
+
+plano:
+
+1ajustar ismtema e mecânicas, itens, magias, ver se o jogo está bom de jogar e não extremamente mecanizado, npcs,ups
+
+2após tudo nos conformes, ajeitar lore e descrições
+
+3definir quais vão ser os objetos, artefatos, materiais que serão gerados
+
+4Arte
+
+5Ficha e geradores, obs: ficha tanto digital quanto modelo de papel enfeitado pra podermos imprimir em jogo físico, e esucod do mestre
+
+Gera html com o sistema com capa, documentos, geradores, ficha, tudo baseado na criteriosidade, automação e facilidade prática pra todos os envolvidos, que nem no PESO DOCÈU
+
+
+
+
+Não precisa ter cartas de inimigos, só de itens e magias e habilidades, e terrenos
+
+as imagens de inimigos servem pr ogerador apenas
+
+E sempre ele que vai balancear tudo, números, desafios, status.
+
+-História do mundo: Inicialmente, em um mundo onde uma grande força chamada Arcanoclisma, uma força de equilíbrio existia, ela criou deuses, para cuidar de elementos do mundo, pois ela é apenas uma força da criação e homeostase(cada um deles referente a um Valor)
+O mundo era comum, sem magia, até que Zahun, o deus do conhecimento em sua vasta curiosidade se relacionou com mortais ao longo do mundo para entender mais dessa criação a parte do Arcanoclisma, afinal eram diferentes dos deuses, não aparentavam ter propósito, mas definitivamente iam além de suas capacidades, então sem encontrar lógica se relacionou com diversos mortais, em busca de entender aquilo que chamavam de emoção, ppois mesm odefinindo  ela s fisiologicamente, mesmo assim  nãoo as compreendia, até que entendeu a simbologia delas, os detalhes comportamentais e contextuais das relações(bem behaviorista) e se apaixonou não só por usa complexidade, subjetividade, mas pela capacidade humana de criar símbolos tão bonitos
+
+de suas relações, surgiram os primeiros semideuses, eles não nascem da pura relação, mas sim do verdadeiro sentido encontrado entre uma alma humana e o arcano de um deus
+
+não são tão comuns, alguns se colocam como deuses, outros como pessoas comuns, outros como donos de pequenos reinos
+
+eles manipulam a magia de forma mais limitada que seus pais, mas com muita habilidade também
+
+e os filhos que tinham com mortais ou suas simples vontades pelo mundo ,criaram humanos que tinham certa influência sobre  a magia, e esses sim tinham um potencial imenso, grandes custos, mas grande possibilidade de mudar, de ir além da rigidez divina
+
+Pra alcançar o equilíbrio, arcanoclisma se separou em dois, Arcano e Cataclisma, de forma a regular o uso desenfreado de magia no mundo, a magia é regular, alguns tem, outros não, outros a usam, alguns constantemente, outros não, mas ela é muito instável e as vezes imprevisível.
+usar muito dela em níveis poderosos consome, atrapalha, principalmente por pessoas menos experientes e em menor quantidade, quanto mais complexa e mais impactante for, mais perigosa é 
+
+mas no rpg, apesar de ter esse contexto, pode ser passado, futuro, technomago, antes da magia, o cenário que o mestre escolher
+escola de magia, etc.
+
+Entidades: Zahun, antigo deus do conhecimento, atual (deus humano ), pois o conhecimento é um conjunto de aprendizados, regras e comportamentos ao longo da vida, cultura
+Adotam várias formas, os deuses primordiais não tem forma especial e tão pouco se importam com problemas da Terra, apenas sob suas próprias curiosidade, natureza, vontades
+
+
+Vyal: Primeiro semideus filho de Zahun, pele de dragão, aparência humana, moreno de olhos dourados, imortal, domina o espectro emocional como valor principal, arrogante, detém muito poder e influência, adora maquinar pra bagunçar o Arcano pois é carente de atenção do pai e quer ascender além.
+
+KairVahnn: Divindade dos monstros, feras e carne, responsável pela grande variedade de seres e monstros do mundo, quando aparece, costuma aparecer na forma de um grande leão com 100 cabeças de animais diferentes ao redor, monstros, possui um grande chicote e está relacionado ao tártaro grego(mude o nome). Seu valor é o Dominum
+
+Criar mais entidades, deuses, semideuses e sua relaçã ocom os valores
+
+-Rolagens pra ataques e atributos: 2d12 pra tudo e os atributo são modificadores diretos, algumas Habilidades Comportamentais tem formas de ganhar Cansaço ou Arcano pra se dar bem ou forçar um resultado
+
+-Filosofias dos tipos de magia e dos tipos de personagem: na criação de pesonagem, deve responder perguntas quanto a sua ligação com seu valor, o porquê, que ite mrepresenta isso, se ele usa algo pra castar esse item, como é a relaçã odele e sua magia com as pessoas ao seu redor,
+
+-Como usar a magia? Ela tem ligação narrativa?
+O jogador usa a magia como quiser, itens ,familiares, corpo, objetos, etc
+ele escolhe como ela se manifesta
+
+-Itens?
+sim, e muitos, além de itens mágicos, temos armasa e armaduras, pois os jogadores nem sempre usam magia, ou a usam pra ampliar seu arsenal!
+\\\o mundo tem que ter dinheiro, os jogadores escolhem, eu particularmente uso Ordynus
+
+-Inimigos? quem são?
+Podem ser feiticeiros, monstros, deuses, semideuses, etc, seresm com formas de energia, magos poderoso, criaturas do cataclisma, protetores do arcano, deuses antigos
+o importante é: inimigos podem ter 1 ou mais valores ou valores que tem alguma vantagem de interação ou combate contra eles!
+Todos pra atacar rolam d20 se for npc e o mestre gasta cataclisma pra afetar o mundo e e ventos acontecerem(tabela de eventos dea cordo com cataclisma gasto, ele pode afetar até a ficha dos jogadores
+Alguns anulam magias, outros são imunes a certos tipos, outros podem ser controlados.
+podem ter familiares que equipados garantem habilidades únicas e exclusivas, movimentação,et
+
+obs: tudo que o jogador tiver acesso, for liberado, deve estar na ficha do app, e na ficha física faça uma parte pequena pra falar das habilidades comportamentais e a maior parte pra focar na magia, com uma ficha pra cada Valor que a pessoa escolher, com tabela de palavras e lacunas vazias pras palavras extras
+
+obs: vamos decidir juntos os significados certinhos dos valores, representações, imagens abstratas deles
+
+
+
+algumas mecânicas:
+
+-Castar magias em dupla, misturando dois valores diferentes, valores opostos(que tenha algum custo pra dupla, e que as dificuldades se some, cataclisma, mas os resultados se amplie,)
+
+-Castar magias
+
+-Ambientes e dificuldades
+
+-Combate sem turnos que nem o daggerheart, sem iniciativa e com uso de "cataclisma" e "arcano" que nem o daggerheart
+
+-Cataclisma e arcano, porém com reservas maiores do que medo e esperança regularmente, pois a intenção é gera bastante de cada pra serem muito usadas ou com gastos incríveis
+
+-ações pra gastar Arcano e como elas podem ajudar
+
+
+Sistema:
+Alteração de dados pra cada magia que lançar (mais componentes = mais instável) - diferentes dados pra representar( forma de falhar, gerar "medo"/cataclisms ou "esperança"/Arcano pra mestre e buffs dos jogadores)
+
+Esperança/arcano usada pra upar as magias ou adicionar mais componentes ou alterar valores ou ajuda em testes
+
+Pontos de cataclisma são usados pra ativar habilidades, magias, lugares, empoderar os inimigos, fazer surgir inimigos, fazer coisas acontecerem no mundo, aumentar dificuldade de uma magia
+
+Os jogadores sempre jogam 2 ou mais dados, cuja soma seja 24(basico -2d12/ depois 4d6/depois 8d4) - essa contagem aumenta de acordo com o nível de poder da magia, os tiers pra aumentar devem cgastar pontos de arcano pra adicionar palavras
+
+Se pra cada dado par o jogaror ganha 1 de Arcano
+
+Pra cada dado ímpar o mestre ganha um cataclisma
+
+Ímpar e par no rpg refletem o equilíbrio do mundo
+
+Tirar todos os dados pares é um crítico e gera 
+Arcano igual o número maior entre as rolagens
+mas pra d12 o crítico é apenas se forem dois números xatamente iguais, par ou impar, independente
+
+tirar tofos os dados impares gera um evento catalismático imenso, negativo, menos no d12 como já falei
+
+
+No crítico: pode:
+ desconsiderar um efeito negativo de uma magia;
+Sucesso melhor possível no teste;
+Dobrar o dano de um ataque ou acerto.
+
+
+
+Magias Ímpar geram um cataclisma, pra cada tier de magia(de acordo com o número de palavras, a quantidade de cataclisms sobe 1(exemplo: 1=0, 3=1, 5=2,...)
+
+Como o rpg é limitado pela quantidade de dados,no máximo 8d4, tem de ter limite de palavras, até 5)a partir da quarta, 
+
+Proteção física (usar limiares iguais ao de daggerheart,  gostei)
+Mágicas contam como dano físico, e os efeitos jogam contra atributos)
+Vida que nem daggerheart
+
+ sem raça,  apenas skin e habilidades de personagem
+  
+
+D20 pra testes básicos 
+
+Atributos básicos de rpg:
+
+Agilidade, força,  carisma, inteligência,  sabedoria, percepção
+
+Eles nao interferem na magia, apenas em usos específicos 
+
+Comportamentos Hábeis:
+São habilidades comportamentais que o personagem domina
+
+Domínios pensados(Vamos chamar eles de Vontades):
+Cada dominio define uma lista de combinação de magias próprias por palavras simples,  fantásticas, adjetivos
+
+Podem usar as palavras pra fazer magia, efeitos, quanto menos palavras, mais simples de realizar, menos custos,menos efeitos, menos poderes
+
+As magias sao criadas pelos jogadores, mas teremos uma tabela de custos 
+
+Quanto mais poderosas, maiores os custos, esse poder e efeito vai ter uma tabela com feitos 
+Níveis vão liberar feitos
+
+Eles podem usar arcano pra reduzir dificuldades, ativar habilidades de seus domínios
+
+Dificuldades exemplo pra magias impares:
+
+1.Passar x jogadas de outros jogadores sem poder se mexer ou usar magias(x sendo o tier da magia)
+
+2.Pra cada cataclisma gerado, perde 1 ponto de arcano, se nao tiver pontos de arcano, aquelas palavras usadas ficam bloqueadas até o fim da sessão, e toma um de dano pra cada ponto que sobrar sem bloquear algo(mínimo 1 de dano)
+
+3.A mágica fica fragil e inconstante,  a dificuldade pra escapar dela reduz de acordo com o tier e pra ela acertar alguém em caso de ser um projétil aumenta a dificuldade também, ou a quantidade de turnos que dura vira 1(1 ação de jogador ou npc e ela acaba apos)
+
+4.Magia pode dar errado ou ser cancelada se o mestre gastar de cataclisma o tier dela -1
+
+5.Ela afeta de forma negativa todo aliado ou coisa importante na cena(ele define como)
+
+6.Ganha X pontos de cansaço igual ao tier dela
+
+7...
+8...
+20...
+
+Níveis de poder Arcano= nível do efeito
+
+Defina dados objetivos pra quanto cada nível ganha de 
+
+-Dano
+-Dificuldade pro inimigo passar no teste
+-Tamanho do evento
+-Descrição observável de exemplos.
+-Dificuldade de acerto(maior quanto maior o nivel)
+-ações máximas que duram 
+-quantidade de dificuldades(elas vao ser roladas em um d20)
+-o quanto alteram a realidade 
+-Tamanho 
+-quanto o Jogador pode ganhar de cansaço pra pedir ajuda na magia(regras de cansaço, com o que pode gastar, como ganha, o que acontece se encher a barra de cansaço, quais limitações)
+-O quanto ela pode mexer em atributos
+-O jogador pode usar cansaço ou Arcano pra upar essas, mas dependendo do nível de poder, custa mais ou menos, mas dá mais resultado
+
+1.Comum, o jogador faz algo basico, sem  dificuldade, uma palavra= Pequena ação de manipulação simples   - Exemplo: transformar um cubinho de gelo em água e vice-versa, gerar pequena chama na mão, mandar um recado telepático, identificar uma falha mais exposta em uma arma, armadura
+
+2.Interessante(1/2/3 palavras): aumenta tamanho, possibilidades, nada excepcional ainda, mas claramente um feito mais fora do comum, podendo mexer em Atributos 
+Não tem dificuldade ainda, consegue afetar, dar um dano regular
+
+3.Impressionante: feitos mais fora da realidade mas nem tanto, maior dano, nada fora do comum pro que pode no mundo, pode atrapalhar alguém substancialmente
+Nao tem dificuldade base 
+
+
+4.Fantastico:
+Sem dificuldade atrelada ainda, (1/2/3/4/5 palavras)
+
+Afeta mais substancialmente, habilidades que fogem do comum e esperado,  maior alcance ou dano ou duração ou quantidade, ou eficiencia
+
+Todo Valor tem uma skill única e Drawbacks caso acertem, usem ou errem.
+Todos eles tem 36 palavras pra escolher em uma tabela(com substantivos, adjetivos)
+
+aqui estão eles, não necessariamente com as palavras, mas com dieias, o que representam, pra te ajduar a gerar a descriçã oe as palavras, símbolo, etc
+
+
+CONFLITÜO: 
+Skill; Suas mágicas tem maior dano ou chance de acerto em combate
+Drawback: para ações não de combate ou violência, tem limite de 2 palavras
+
+Domínio da briga, guerra, armas, combate direto, letalidade , proteção, movimentação em combate,  lâmina, escudo,, explosão
+
+SUBLIMEYN: 
+Skill: Pode gastar arcano pra misturar elementos ou criar efeitos entre eles
+
+Drawback: O custo aumenta pra quanto mais querer mudar
+
+Domínio dos sólidos, líquidos e gasosos,  remodelação de matéria, manipulação, elementos, criar, derreter, liquefazer, gaseificar, sublimar
+
+Dominum:
+-Skills relacionadas: Único valor que tem reação, mas caso faça, ganha pontos de Cansaço de acordo com o tier, 
+-Drawback caso falhe:  não pode usar novamente no mesmo alvo caso falhe ou ele se liberte
+
+dominar outros seres vivos, forçar, anular, parar, dobrar a sua vontade, domesticar, , puxar, afastar, repelir, mandar, obrigar, expulsar, arrombar, servos, 
+
+
+Persona/humana:
+
+-Suas magias em pessoas tem 1 dificuldade a menos
+
+Drawback: Em caso de falha, o mestre descreve um cenário que não ajuda ou atrapalha( o que for melhor ou mais cômico e se reclamar ele ganha Cataclisma  igual ao tier da magia)
+
+ órgãos, pele, alterar na fisionomia, mudar corpo físico, atributos,  alma, emoções, medo, coragem ,fúria, amor, percepção, musica
+
+Alvorum:
+-Pode gastar 
+ pontos de arcano e desobstruir a sua visão e percepção de qualquer coisa
+
+-Drawback: Toda vez que conjurar usa magia, revela-se de forma chamativa.
+
+Luz, sombra, escuridão, sol, ardente, iluminação, contraste, perceber, visão, sentidos, lua, estrelas, pesadelo, sonho, eclipse, loucura, sanidade, revelação
+
+Morbidyum:
+
+-Você revive uma vez por sessão, inteiro, mesm oqeu seja reduzido a nada
+
+-Drawback: não pode fazer movimentos de morte, perde todo seu arcano, se não tiver arcano, revive com 1 de vida
+
+morte, vida, regenerar, fantasmas, solidão, vazio, vácuo, deterioração, doença, cura, mortos, vivos, previsão, subliminar, sombras
+
+Cognitium:
+
+-Pode gastar Arcano pra tentar ler os pensamentos de uma pessoa uma vez
+
+-Drawback, se falhar, ela lê os seus e sabe o que você fez
+
+Pensar, lembrar, esquecer, memória, ler mentes, psíquico, acreditar, enganar, iludir, enganar percepção, cheiros, sentidos, fazer acreditar
+
+Eternyr:
+
+Vantagem: não tem
+Drawback: suas magias são mais difíceis que o normal.(ampliar nível de dificuldade)
+
+tempo, espaço, teleportar, mover, guiar, localizar, andar, correr, atravessar, dimensão, parar, acelerar, voltar, pular, organizar, aumentar, diminuir 
+ 
+Primitivum: 
+
+-Vantagem: pode se transformar em qualquer animal por sessão x vezes igual seu nível
+
+-Drawback: Não pode usar magia enquanto animal, as  que existiam antes permanecem
+
+Mudar, transformar, animais da natureza, energia natural, espírito, natureza, voar, nadar, rastejar, cavar, adaptar, cheirar, selvagem, invocar ,arvores
+
+
+Obs: tem que tem palavras e adjetivos básicos pra ataque, forma, etc(pra ajudar jogadores a não serem prejudicados em algumas atividades)
+
+aumentara a dificuldade da magia pode ser só a questã odos dados, pensei melhor, o arcano pode ser usado como custo pra colcoar mais qualidades na magia ou mais palavras
+
+ o que upa em níveis são a capacidade dos personagens de juntar palavras, habilidades comportamentais, atributos
+
+Durante os ups, em alguns níveis os jogadores podem colocar na sua ficha palavras de outros Valores(até 4) a diferença é que com outros jogadores ajudando,  a magia fica mais forte ou efetiva, já se ele mesmo misturar, aumenta possibilidades, mas não  ganha as skills dos valores
+
+
+habilidades comportamentais:
+
+elas upam que nem as classes no daggerheart
+
+elas não dão acesso a magias, apenas liberar usar armaduras pesadsa, técnicas de furtividade, carisma, interações com o mundo(exemplo: conhecer npcs em momentos específicos), dar mais resistência
+
+elas definem sua Esquiva e Limites de dano Base que nem no daggerheart
+
+em alguns nivesi pode escolher upar elas e ganhar habilidades
+
+1Brutamontes: relacionado a força,shape, físico, pr aaqueles jogadores que querem ser parrudos
+
+2Atléticos: pra aqueles jogadores que gostam de saltar, ffazer cambalhotas, muita agilidade, 
+
+3popular: Pra aquels que querem personagens carismáticos, adorados por algum motivo
+
+4impaciente: pra que mgosta de tomar atitudes desesperadas, despreparadas, se jogar de cabeça
+
+5Larápio: pra quem gosta de roubar, enganar, fzer truques de mão
+
+6privilegiado: aquele que tem uma relação espcial com npcs, consegue usar estratégias limitadas pra ter vantagem, adicionar npcs que ajudem em algo, que ele deva ofavores ou devem pra ele, conseguir informações, itens
+
+7Briguento: Pra quem gosta do máximo de vantagem em combate
+
+8Curioso: pra quem gosta de fazer personagens inteligentes, curiosos, que gostam de ter mais conhecimento
+
+9Caótico: Personagem com capacidades de jogar ao lado da maré de caos no mundo, se adaptando a resultados ruins e situações desfavoráveis, ao falhar em outras situações, ganha pontos pra gastar em outras e mudar o jogo
+
+10Enganador: personagem que gosta de ludibriar, enganar, se esconder, ser furtivo
+
+Quero ajuda pra gera skills e balancear o jogo

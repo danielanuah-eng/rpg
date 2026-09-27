@@ -1,0 +1,718 @@
+#!/usr/bin/env python3
+"""Campaign log tool for tracking events chronologically."""
+
+import json
+import sys
+from pathlib import Path
+from typing import Dict, List, Optional, Any
+from datetime import datetime
+
+from lib.calendars import create_calendar, is_loose_date
+
+
+# Log storage
+log_entries: List[Dict[str, Any]] = []
+campaign_config: Dict[str, Any] = {}
+
+# Importance hierarchy for filtering (higher = more important)
+IMPORTANCE_LEVELS = {"minor": 0, "normal": 1, "major": 2, "critical": 3}
+
+
+def load_campaign_config(search_root: Path) -> Dict[str, Any]:
+    """Load campaign configuration."""
+    config_paths = [
+        search_root / "campaign" / "config.json",
+        search_root / "campaign.json",
+    ]
+
+    for path in config_paths:
+        if path.exists():
+            try:
+                with open(path, encoding='utf-8-sig') as f:
+                    return json.load(f)
+            except Exception as e:
+                print(f"Warning: Could not load campaign config: {e}", file=sys.stderr)
+
+    # Default config
+    return {
+        "calendar": {
+            "type": "offset",
+            "config": {"year_prefix": "Y", "day_prefix": "D"}
+        }
+    }
+
+
+def load_log(search_root: Path) -> List[Dict[str, Any]]:
+    """Load log entries from campaign/log.json."""
+    log_paths = [
+        search_root / "campaign" / "log.json",
+    ]
+
+    for path in log_paths:
+        if path.exists():
+            try:
+                with open(path, encoding='utf-8-sig') as f:
+                    return json.load(f)
+            except Exception as e:
+                print(f"Warning: Could not load log: {e}", file=sys.stderr)
+
+    return []
+
+
+def save_log(search_root: Path, entries: List[Dict[str, Any]]) -> None:
+    """Save log entries to campaign/log.json."""
+    log_dir = search_root / "campaign"
+    log_dir.mkdir(exist_ok=True)
+
+    log_path = log_dir / "log.json"
+    with open(log_path, 'w', encoding='utf-8') as f:
+        json.dump(entries, f, indent=2)
+
+
+def generate_log_id(entries: List[Dict[str, Any]]) -> str:
+    """Generate next log entry ID."""
+    max_num = 0
+    for entry in entries:
+        entry_id = entry.get("id", "")
+        if entry_id.startswith("log-"):
+            try:
+                num = int(entry_id[4:])
+                max_num = max(max_num, num)
+            except ValueError:
+                pass
+    return f"log-{max_num + 1:05d}"
+
+
+def get_calendar():
+    """Get calendar instance from config."""
+    cal_config = campaign_config.get("calendar", {})
+    cal_type = cal_config.get("type", "offset")
+    return create_calendar(cal_type, cal_config.get("config"))
+
+
+def parse_characters_arg(chars_str: str) -> Dict[str, str]:
+    """Parse characters argument like 'juno:defining,tam:present'."""
+    result = {}
+    if not chars_str:
+        return result
+
+    # Handle JSON format
+    if chars_str.startswith('{'):
+        try:
+            return json.loads(chars_str)
+        except json.JSONDecodeError:
+            pass
+
+    # Handle compact format: juno:defining,tam:present
+    for pair in chars_str.split(','):
+        pair = pair.strip()
+        if ':' in pair:
+            char_id, role = pair.split(':', 1)
+            result[char_id.strip()] = role.strip()
+        else:
+            result[pair] = "present"
+
+    return result
+
+
+def format_entry(entry: Dict[str, Any], verbose: bool = False) -> str:
+    """Format a log entry for display."""
+    lines = []
+
+    date = entry.get("date") or entry.get("date_loose") or "?"
+    summary = entry.get("summary", "")
+    entry_id = entry.get("id", "")
+
+    if verbose:
+        lines.append(f"[{entry_id}] {date}: {summary}")
+
+        if entry.get("branch"):
+            lines.append(f"  Branch: {entry['branch']}")
+        if entry.get("importance"):
+            lines.append(f"  Importance: {entry['importance']}")
+        if entry.get("characters"):
+            chars = entry["characters"]
+            char_strs = [f"{k} ({v})" for k, v in chars.items()]
+            lines.append(f"  Characters: {', '.join(char_strs)}")
+        if entry.get("locations"):
+            lines.append(f"  Locations: {', '.join(entry['locations'])}")
+        if entry.get("tags"):
+            lines.append(f"  Tags: {', '.join(entry['tags'])}")
+        if entry.get("memory"):
+            lines.append(f"  Memory: {entry['memory']}")
+        if entry.get("story"):
+            lines.append(f"  Story: {entry['story']}")
+    else:
+        lines.append(f"{date}: {summary}")
+
+    return "\n".join(lines)
+
+
+def cmd_add(
+    summary: str,
+    date: Optional[str] = None,
+    date_loose: Optional[str] = None,
+    branch: Optional[str] = None,
+    importance: str = "normal",
+    characters: Optional[str] = None,
+    locations: Optional[str] = None,
+    tags: Optional[str] = None,
+    session: Optional[str] = None,
+    memory: Optional[str] = None,
+    story: Optional[str] = None,
+    output_json: bool = False
+) -> None:
+    """Add a new log entry."""
+    global log_entries
+
+    entry = {
+        "id": generate_log_id(log_entries),
+        "summary": summary,
+        "importance": importance,
+        "created": datetime.now().isoformat(),
+    }
+
+    # Handle dates
+    if date:
+        if is_loose_date(date):
+            entry["date_loose"] = date
+        else:
+            entry["date"] = date
+    elif date_loose:
+        entry["date_loose"] = date_loose
+
+    if branch:
+        entry["branch"] = branch
+    else:
+        # Auto-detect from campaign state
+        state_path = Path.cwd() / "campaign" / "state.json"
+        if state_path.exists():
+            try:
+                with open(state_path, encoding='utf-8-sig') as f:
+                    state = json.load(f)
+                    if state.get("active_branch"):
+                        entry["branch"] = state["active_branch"]
+            except (OSError, json.JSONDecodeError) as e:
+                print(f"Warning: Could not auto-detect branch from state file: {e}", file=sys.stderr)
+    if characters:
+        entry["characters"] = parse_characters_arg(characters)
+    if locations:
+        entry["locations"] = [loc.strip() for loc in locations.split(',')]
+    if tags:
+        entry["tags"] = [tag.strip() for tag in tags.split(',')]
+    if session:
+        entry["session"] = session
+    if memory:
+        entry["memory"] = memory
+    if story:
+        entry["story"] = story
+
+    log_entries.append(entry)
+    save_log(Path.cwd(), log_entries)
+
+    if output_json:
+        print(json.dumps(entry, indent=2))
+    else:
+        print(f"Added: {format_entry(entry)}")
+
+
+def cmd_list(
+    branch: Optional[str] = None,
+    character: Optional[str] = None,
+    location: Optional[str] = None,
+    importance: Optional[str] = None,
+    tag: Optional[str] = None,
+    session: Optional[str] = None,
+    from_date: Optional[str] = None,
+    to_date: Optional[str] = None,
+    limit: int = 0,
+    verbose: bool = False,
+    output_json: bool = False
+) -> None:
+    """List log entries with optional filters."""
+    filtered = log_entries.copy()
+
+    if branch:
+        branch_lower = branch.lower()
+        filtered = [e for e in filtered if e.get("branch", "").lower() == branch_lower]
+
+    if character:
+        char_lower = character.lower()
+        filtered = [e for e in filtered
+                   if char_lower in [c.lower() for c in e.get("characters", {}).keys()]]
+
+    if location:
+        loc_lower = location.lower()
+        filtered = [e for e in filtered
+                   if loc_lower in [l.lower() for l in e.get("locations", [])]]
+
+    if importance:
+        imp_lower = importance.lower()
+        # Support "major+" syntax for hierarchical filtering
+        if imp_lower.endswith('+'):
+            base_level = imp_lower[:-1]
+            min_level = IMPORTANCE_LEVELS.get(base_level, 1)
+            filtered = [e for e in filtered
+                       if IMPORTANCE_LEVELS.get(e.get("importance", "normal").lower(), 1) >= min_level]
+        else:
+            # Exact match
+            filtered = [e for e in filtered
+                       if e.get("importance", "normal").lower() == imp_lower]
+
+    if tag is not None:
+        if not tag.strip():
+            print("Error: --tag cannot be empty", file=sys.stderr)
+            sys.exit(1)
+        tag_lower = tag.lower()
+        filtered = [e for e in filtered
+                   if tag_lower in [t.lower() for t in e.get("tags", [])]]
+
+    if session:
+        session_lower = session.lower()
+        filtered = [e for e in filtered if e.get("session", "").lower() == session_lower]
+
+    # Create calendar for date operations
+    calendar = get_calendar()
+
+    # Date range filtering
+    if from_date or to_date:
+        from_parsed = calendar.parse(from_date) if from_date else None
+        to_parsed = calendar.parse(to_date) if to_date else None
+
+        def in_range(entry):
+            entry_date = entry.get("date")
+            if not entry_date:
+                # Exclude loose dates from range queries (can't compare)
+                return False
+            parsed = calendar.parse(entry_date)
+            if not parsed:
+                return False  # Can't parse, exclude from range query
+            if from_parsed and parsed < from_parsed:
+                return False
+            if to_parsed and parsed > to_parsed:
+                return False
+            return True
+
+        filtered = [e for e in filtered if in_range(e)]
+
+    # Sort by date
+    def sort_key(entry):
+        date = entry.get("date")
+        if date:
+            parsed = calendar.parse(date)
+            if parsed:
+                return parsed.sort_key
+        return (float('inf'),)
+
+    filtered.sort(key=sort_key)
+
+    if limit > 0:
+        filtered = filtered[:limit]
+
+    if output_json:
+        print(json.dumps(filtered, indent=2))
+    else:
+        if not filtered:
+            print("No log entries found matching criteria")
+            return
+
+        for entry in filtered:
+            print(format_entry(entry, verbose))
+            if verbose:
+                print()
+
+
+def cmd_show(entry_id: str, output_json: bool = False) -> None:
+    """Show a specific log entry."""
+    for entry in log_entries:
+        if entry.get("id") == entry_id:
+            if output_json:
+                print(json.dumps(entry, indent=2))
+            else:
+                print(format_entry(entry, verbose=True))
+            return
+
+    print(f"Error: Log entry '{entry_id}' not found", file=sys.stderr)
+    sys.exit(1)
+
+
+def cmd_delete(entry_id: str) -> None:
+    """Delete a log entry."""
+    global log_entries
+
+    for i, entry in enumerate(log_entries):
+        if entry.get("id") == entry_id:
+            deleted = log_entries.pop(i)
+            save_log(Path.cwd(), log_entries)
+            print(f"Deleted: {format_entry(deleted)}")
+            return
+
+    print(f"Error: Log entry '{entry_id}' not found", file=sys.stderr)
+    sys.exit(1)
+
+
+def get_digest_defaults() -> Dict[str, int]:
+    """Get digest defaults from config or hardcoded values."""
+    digest_config = campaign_config.get("digest", {})
+    return {
+        "pillar_limit": digest_config.get("pillar_limit", 10),
+        "arc_sessions": digest_config.get("arc_sessions", 20),
+        "current_sessions": digest_config.get("current_sessions", 5),
+    }
+
+
+def load_memories_by_log_entry(search_root: Path) -> Dict[str, Dict]:
+    """Load memories indexed by their log_entry field."""
+    log_to_memory = {}
+    memories_dir = search_root / "memories"
+
+    if not memories_dir.exists():
+        return log_to_memory
+
+    for path in memories_dir.glob("*.json"):
+        try:
+            with open(path, encoding='utf-8-sig') as f:
+                data = json.load(f)
+                items = data if isinstance(data, list) else [data]
+                for item in items:
+                    log_entry = item.get("log_entry")
+                    if log_entry:
+                        log_to_memory[log_entry] = item
+        except (OSError, json.JSONDecodeError) as e:
+            print(f"Warning: Could not load memory file {path}: {e}", file=sys.stderr)
+
+    return log_to_memory
+
+
+def cmd_digest(
+    character: Optional[str] = None,
+    pillar_limit: Optional[int] = None,
+    arc_sessions: Optional[int] = None,
+    current_sessions: Optional[int] = None,
+    output_json: bool = False
+) -> None:
+    """Show tiered campaign digest."""
+    search_root = Path.cwd()
+
+    # Get defaults from config, then apply CLI overrides
+    defaults = get_digest_defaults()
+    pillar_limit = pillar_limit if pillar_limit is not None else defaults["pillar_limit"]
+    arc_sessions = arc_sessions if arc_sessions is not None else defaults["arc_sessions"]
+    current_sessions = current_sessions if current_sessions is not None else defaults["current_sessions"]
+
+    calendar = get_calendar()
+
+    # Load memories that reference log entries
+    log_to_memory = load_memories_by_log_entry(search_root)
+
+    # Get all entries sorted by date
+    all_entries = log_entries.copy()
+
+    def sort_key(entry):
+        date = entry.get("date")
+        if date:
+            parsed = calendar.parse(date)
+            if parsed:
+                return parsed.sort_key
+        return (float('inf'),)  # Entries without dates go at end
+
+    all_entries.sort(key=sort_key)
+
+    # Filter by character if specified
+    if character:
+        char_lower = character.lower()
+        all_entries = [e for e in all_entries
+                      if char_lower in [c.lower() for c in e.get("characters", {}).keys()]]
+
+    if not all_entries:
+        print("No log entries found")
+        return
+
+    # Get unique sessions for recency calculation
+    sessions = sorted(set(e.get("session", "") for e in all_entries if e.get("session")))
+    recent_arc_sessions = set(sessions[-arc_sessions:]) if len(sessions) > arc_sessions else set(sessions)
+    current_session_set = set(sessions[-current_sessions:]) if len(sessions) > current_sessions else set(sessions)
+
+    # Categorize entries
+    pillars = [e for e in all_entries
+               if e.get("importance", "").lower() == "critical"][:pillar_limit]
+
+    recent_arc = [e for e in all_entries
+                  if e.get("session") in recent_arc_sessions
+                  and IMPORTANCE_LEVELS.get(e.get("importance", "normal").lower(), 1) >= IMPORTANCE_LEVELS["major"]]
+
+    current = [e for e in all_entries
+               if e.get("session") in current_session_set]
+
+    if output_json:
+        print(json.dumps({
+            "pillars": pillars,
+            "recent_arc": recent_arc,
+            "current": current
+        }, indent=2))
+        return
+
+    def print_entry_with_memory(entry: Dict, log_to_memory: Dict):
+        """Print a log entry with optional associated memory."""
+        date = entry.get("date") or entry.get("date_loose") or "?"
+        summary = entry.get("summary", "")
+        memory_id = entry.get("memory")
+        memory_str = f" [memory: {memory_id}]" if memory_id else ""
+        print(f"{date}: {summary}{memory_str}")
+
+        # Check for memory that references this log entry
+        entry_id = entry.get("id")
+        if entry_id and entry_id in log_to_memory:
+            mem = log_to_memory[entry_id]
+            mem_title = mem.get("title", "")
+            mem_text = mem.get("text", "")
+            # Show title, or first 60 chars of text if no title
+            snippet = mem_title if mem_title else (mem_text[:60] + "..." if len(mem_text) > 60 else mem_text)
+            if snippet:
+                print(f"  └─ Memory: {snippet}")
+
+    # Display
+    if pillars:
+        print("=== PILLARS (critical, all time) ===")
+        for entry in pillars:
+            print_entry_with_memory(entry, log_to_memory)
+        print()
+
+    if recent_arc:
+        print(f"=== RECENT ARC (major+, last {arc_sessions} sessions) ===")
+        for entry in recent_arc:
+            print_entry_with_memory(entry, log_to_memory)
+        print()
+
+    if current:
+        print(f"=== CURRENT (last {current_sessions} sessions) ===")
+        for entry in current:
+            print_entry_with_memory(entry, log_to_memory)
+
+    if not pillars and not recent_arc and not current:
+        print("No significant entries found for digest")
+
+
+def main():
+    global log_entries, campaign_config
+
+    search_root = Path.cwd()
+    campaign_config = load_campaign_config(search_root)
+    log_entries = load_log(search_root)
+
+    if len(sys.argv) < 2 or sys.argv[1] in ('--help', '-h'):
+        print("Usage: python log.py <command> [options]")
+        print("\nCommands:")
+        print("  add <summary> [options]        Add a log entry")
+        print("  list [filters...]              List log entries")
+        print("  show <id>                      Show specific entry")
+        print("  delete <id>                    Delete an entry")
+        print("  digest [options]               Show tiered campaign digest")
+        print("\nAdd options:")
+        print("  --date DATE                    In-world date (e.g., Y3.D45)")
+        print("  --date-loose TEXT              Loose date (e.g., 'after the festival')")
+        print("  --branch NAME                  Branch/arc name")
+        print("  --importance LEVEL             normal, minor, major, critical")
+        print("  --characters CHARS             juno:defining,tam:present or JSON")
+        print("  --locations LOCS               Comma-separated location IDs")
+        print("  --tags TAGS                    Comma-separated tags")
+        print("  --session NAME                 Session identifier")
+        print("  --memory ID                    Link to a memory")
+        print("  --story ID                     Link to a story")
+        print("\nList filters:")
+        print("  --branch NAME                  Filter by branch")
+        print("  --character NAME               Filter by character involvement")
+        print("  --location NAME                Filter by location")
+        print("  --importance LEVEL             Filter by importance (use major+ for hierarchy)")
+        print("  --tag NAME                     Filter by tag")
+        print("  --from DATE                    Filter from date")
+        print("  --to DATE                      Filter to date")
+        print("  --limit N                      Limit results")
+        print("  --verbose                      Show full details")
+        print("\nDigest options:")
+        print("  --character NAME               Filter by character")
+        print("  --pillar-limit N               Max pillars to show (default: 10)")
+        print("  --arc-sessions N               Sessions for 'recent arc' (default: 20)")
+        print("  --current-sessions N           Sessions for 'current' (default: 5)")
+        print("\n  Defaults can be configured in campaign/config.json under 'digest' key:")
+        print("\nGlobal options:")
+        print("  --json                         Output as JSON")
+        sys.exit(0 if len(sys.argv) > 1 and sys.argv[1] in ('--help', '-h') else 1)
+
+    command = sys.argv[1]
+
+    # Parse options
+    opts = {
+        "summary": None,
+        "entry_id": None,
+        "date": None,
+        "date_loose": None,
+        "branch": None,
+        "importance": None,  # Default to None, not "normal" - only filter if user specifies
+        "characters": None,
+        "locations": None,
+        "tags": None,
+        "session": None,
+        "memory": None,
+        "story": None,
+        "character": None,
+        "location": None,
+        "tag": None,
+        "from_date": None,
+        "to_date": None,
+        "limit": 0,
+        "verbose": False,
+        "output_json": False,
+        "pillar_limit": None,
+        "arc_sessions": None,
+        "current_sessions": None,
+    }
+
+    i = 2
+    positional_set = False
+    while i < len(sys.argv):
+        arg = sys.argv[i]
+        if arg == "--date" and i + 1 < len(sys.argv):
+            opts["date"] = sys.argv[i + 1]
+            i += 2
+        elif arg == "--date-loose" and i + 1 < len(sys.argv):
+            opts["date_loose"] = sys.argv[i + 1]
+            i += 2
+        elif arg == "--branch" and i + 1 < len(sys.argv):
+            opts["branch"] = sys.argv[i + 1]
+            i += 2
+        elif arg == "--importance" and i + 1 < len(sys.argv):
+            opts["importance"] = sys.argv[i + 1]
+            i += 2
+        elif arg == "--characters" and i + 1 < len(sys.argv):
+            opts["characters"] = sys.argv[i + 1]
+            i += 2
+        elif arg == "--locations" and i + 1 < len(sys.argv):
+            opts["locations"] = sys.argv[i + 1]
+            i += 2
+        elif arg == "--tags" and i + 1 < len(sys.argv):
+            opts["tags"] = sys.argv[i + 1]
+            i += 2
+        elif arg == "--session" and i + 1 < len(sys.argv):
+            opts["session"] = sys.argv[i + 1]
+            i += 2
+        elif arg == "--memory" and i + 1 < len(sys.argv):
+            opts["memory"] = sys.argv[i + 1]
+            i += 2
+        elif arg == "--story" and i + 1 < len(sys.argv):
+            opts["story"] = sys.argv[i + 1]
+            i += 2
+        elif arg == "--character" and i + 1 < len(sys.argv):
+            opts["character"] = sys.argv[i + 1]
+            i += 2
+        elif arg == "--location" and i + 1 < len(sys.argv):
+            opts["location"] = sys.argv[i + 1]
+            i += 2
+        elif arg == "--tag" and i + 1 < len(sys.argv):
+            opts["tag"] = sys.argv[i + 1]
+            i += 2
+        elif arg == "--from" and i + 1 < len(sys.argv):
+            opts["from_date"] = sys.argv[i + 1]
+            i += 2
+        elif arg == "--to" and i + 1 < len(sys.argv):
+            opts["to_date"] = sys.argv[i + 1]
+            i += 2
+        elif arg == "--limit" and i + 1 < len(sys.argv):
+            opts["limit"] = int(sys.argv[i + 1])
+            i += 2
+        elif arg == "--verbose":
+            opts["verbose"] = True
+            i += 1
+        elif arg == "--json":
+            opts["output_json"] = True
+            i += 1
+        elif arg == "--pillar-limit" and i + 1 < len(sys.argv):
+            try:
+                opts["pillar_limit"] = int(sys.argv[i + 1])
+            except ValueError:
+                print("Error: --pillar-limit requires an integer value", file=sys.stderr)
+                sys.exit(1)
+            i += 2
+        elif arg == "--arc-sessions" and i + 1 < len(sys.argv):
+            try:
+                opts["arc_sessions"] = int(sys.argv[i + 1])
+            except ValueError:
+                print("Error: --arc-sessions requires an integer value", file=sys.stderr)
+                sys.exit(1)
+            i += 2
+        elif arg == "--current-sessions" and i + 1 < len(sys.argv):
+            try:
+                opts["current_sessions"] = int(sys.argv[i + 1])
+            except ValueError:
+                print("Error: --current-sessions requires an integer value", file=sys.stderr)
+                sys.exit(1)
+            i += 2
+        elif not arg.startswith("--") and not positional_set:
+            if command == "add":
+                opts["summary"] = arg
+            else:
+                opts["entry_id"] = arg
+            positional_set = True
+            i += 1
+        else:
+            print(f"Unknown option: {arg}", file=sys.stderr)
+            sys.exit(1)
+
+    # Execute command
+    if command == "add":
+        if not opts["summary"]:
+            print("Error: summary is required for 'add' command", file=sys.stderr)
+            sys.exit(1)
+        cmd_add(
+            opts["summary"],
+            date=opts["date"],
+            date_loose=opts["date_loose"],
+            branch=opts["branch"],
+            importance=opts["importance"] or "normal",  # Default to "normal" if not specified
+            characters=opts["characters"],
+            locations=opts["locations"],
+            tags=opts["tags"],
+            session=opts["session"],
+            memory=opts["memory"],
+            story=opts["story"],
+            output_json=opts["output_json"]
+        )
+    elif command == "list":
+        cmd_list(
+            branch=opts["branch"],
+            character=opts["character"],
+            location=opts["location"],
+            importance=opts["importance"],
+            tag=opts["tag"],
+            session=opts["session"],
+            from_date=opts["from_date"],
+            to_date=opts["to_date"],
+            limit=opts["limit"],
+            verbose=opts["verbose"],
+            output_json=opts["output_json"]
+        )
+    elif command == "show":
+        if not opts["entry_id"]:
+            print("Error: entry ID is required for 'show' command", file=sys.stderr)
+            sys.exit(1)
+        cmd_show(opts["entry_id"], output_json=opts["output_json"])
+    elif command == "delete":
+        if not opts["entry_id"]:
+            print("Error: entry ID is required for 'delete' command", file=sys.stderr)
+            sys.exit(1)
+        cmd_delete(opts["entry_id"])
+    elif command == "digest":
+        cmd_digest(
+            character=opts["character"],
+            pillar_limit=opts["pillar_limit"],
+            arc_sessions=opts["arc_sessions"],
+            current_sessions=opts["current_sessions"],
+            output_json=opts["output_json"]
+        )
+    else:
+        print(f"Unknown command: {command}", file=sys.stderr)
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

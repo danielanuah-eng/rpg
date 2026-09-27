@@ -1,0 +1,14 @@
+# Arquivos velhos
+_lixo/
+
+# Maiores que o limite de 100 MB do GitHub
+claude-skill-registry-main.zip
+Daggerheart/Daggerheart-Livro-Basico.pdf
+
+# Configuração local do Claude Code
+.claude/settings.local.json
+
+# Lixo do Windows e do Office
+Thumbs.db
+desktop.ini
+~$*
