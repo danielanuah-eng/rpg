@@ -69,7 +69,7 @@ Somam nos Limiares e dão casas de **Proteção**.
 
 Versão melhor por Moldura: **P2 +2/+4 · P3 +4/+9 · P4 +6/+13** a mais nos Limiares, +1 Proteção no P3.
 
-## Focos, armas e livros de Canal
+## Focos, armas e Transcritos de Canal
 
 O objeto do seu Canal ([[02 Magia]]) melhora por Moldura como qualquer item:
 
@@ -77,7 +77,7 @@ O objeto do seu Canal ([[02 Magia]]) melhora por Moldura como qualquer item:
 |---|---|---|---|
 | **Foco arcano** | +1 no dano de magia a mais (200 o) | guarda 1 palavra de qualquer Valor (800 o) | +1 de Sintonia (3.000 o) |
 | **Arma** | a versão melhor da arma já conta (dado e bônus) | a arma guarda 1 palavra (800 o) | ataques mágicos pela arma: +1 dado da arma (3.000 o) |
-| **Livro** | preparar também dá +1 no dano (200 o) | guarda 1 palavra (800 o) | preparar vale para as duas próximas magias (3.000 o) |
+| **Transcrito** | preparar também dá +1 no dano (200 o) | guarda 1 palavra (800 o) | preparar vale para as duas próximas magias (3.000 o) |
 
 ## Itens mágicos (Relíquias)
 

@@ -147,7 +147,7 @@ Marcas menores, que o gerador também sorteia: *Imune a [Valor]*, *Absorve [Valo
 | **Seres de energia** | Ágil, Conjurador | Etéreo, Absorve [seu Valor] | Chama, Luz, Vento, Eco |
 | **Povos dos Reinos** | qualquer | Valor do Reino | Juramentado, Moldado, Manso, Sentido, Vigia, Esquecido, Repetido |
 | **Semideuses** | Chefe | Valor do pai, Deidade | o nome dele |
-| **Deuses antigos** | não se derrota em combate | Deidade + Inquebrável | Cenário de Contador: sobreviver, fugir, convencer |
+| **Deuses antigos** | não se derrota em combate | Deidade + Inquebrável | Cenário de Ameaça: sobreviver, fugir, convencer |
 
 ## Criar em 6 passos
 

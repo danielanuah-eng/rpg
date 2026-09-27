@@ -1,6 +1,6 @@
-# 07 — Mestre: Cataclisma, eventos e terrenos
+# 07 — Mestre: Cataclisma, Abalos e terrenos
 
-> Rascunho v0. O que o mestre gasta, os Eventos que ele encadeia no mundo, e os lugares. Adversários estão em [[10 Adversários - como criar]].
+> Rascunho v0. O que o mestre gasta, os Abalos que ele encadeia no mundo, e os lugares. Adversários estão em [[10 Adversários - como criar]].
 
 ## 1. Cataclisma
 
@@ -20,9 +20,9 @@ Na média, cada rolagem de jogador rende 1 Cataclisma, então o mestre **deve ga
 | 2+ | **Ação de Cataclisma** de um Terreno |
 | 3 | **Reforço**: chega um grupo de Lacaios ou um adversário Padrão |
 | Grau − 1 | **Cancelar** uma magia Vacilante |
-| 2 / 4 / 7 / 11 / 16 | **Evento do Cataclisma** (tabela abaixo) |
+| 2 / 4 / 7 / 11 / 16 | **Abalo** (tabela abaixo) |
 
-### Eventos do Cataclisma
+### Abalos
 
 Cinco tamanhos. Escolha ou role 1d6. Os marcados com ✦ mexem na ficha dos jogadores (o Arcano pode **Conter** eventos de até 4 pontos que afetem só uma ficha).
 
@@ -46,7 +46,7 @@ Cinco tamanhos. Escolha ou role 1d6. Os marcados com ✦ mexem na ficha dos joga
 1. Uma Criatura do Cataclisma (Padrão ou Bruto) rasga o espaço e entra.
 2. ✦ **Selo**: cada jogador escolhe uma palavra sua que fica selada até o fim da sessão.
 3. ✦ **Troca de Valor**: pelo Cenário, um jogador conjura com a tabela de outro Valor (sorteado), mantendo Skill e Drawback do seu.
-4. O lugar desaba: Contador 4 para sair antes que acabe mal.
+4. O lugar começa a desabar: Ameaça de 6 (quem ainda estiver dentro quando o mestre pagar, se machuca feio).
 5. Todos os adversários limpam 2 PV.
 6. ✦ O Arcano de todos os jogadores cai pela metade (arredonde para cima).
 
@@ -68,7 +68,7 @@ Cinco tamanhos. Escolha ou role 1d6. Os marcados com ✦ mexem na ficha dos joga
 
 ### Marés de Valor
 
-Eventos que mexem num **Valor específico**: fortalecem, enfraquecem, invertem, abrem um Reino. Custam como Tremor (**4**) se duram o Cenário, ou como Fissura (**7**) se duram a sessão. Escolha o Valor (ou role 1d10: 1 Conflitüo, 2 Sublimeyn, 3 Dominum, 4 Persona, 5 Alvorum, 6 Morbidyum, 7 Cognitium, 8 Eternyr, 9 Primitivum, 10 o mestre escolhe) e o efeito (1d8):
+Abalos que mexem num **Valor específico**: fortalecem, enfraquecem, invertem, abrem um Reino. Custam como Tremor (**4**) se duram o Cenário, ou como Fissura (**7**) se duram a sessão. Escolha o Valor (ou role 1d10: 1 Conflitüo, 2 Sublimeyn, 3 Dominum, 4 Persona, 5 Alvorum, 6 Morbidyum, 7 Cognitium, 8 Eternyr, 9 Primitivum, 10 o mestre escolhe) e o efeito (1d8):
 
 | 1d8 | Maré | Efeito no Valor escolhido |
 |---|---|---|
@@ -83,14 +83,14 @@ Eventos que mexem num **Valor específico**: fortalecem, enfraquecem, invertem, 
 
 ### Correntes: encadear eventos no mundo
 
-O mestre pode **encadear** Eventos, Marés, forças mágicas, conflitos e Valores numa **Corrente**: uma sequência que continua se movendo no mundo, com ou sem os jogadores por perto.
+O mestre pode **encadear** Abalos, Marés, forças mágicas, conflitos e Valores numa **Corrente**: uma sequência que continua se movendo no mundo, com ou sem os jogadores por perto.
 
 ```
 CORRENTE — nome
 Tipo: Força mágica / Conflito / Valor
 Origem: o que disparou (um Desequilíbrio, uma Ruptura, uma escolha dos jogadores, um semideus)
 Elos (2 a 5), cada um com um gatilho:
-  1. [gatilho] → Evento, Maré, adversário, mudança num lugar
+  1. [gatilho] → Abalo, Maré, adversário, mudança num lugar
   2. [gatilho] → ...
 Desfecho: o que fica no mundo se ninguém interferir
 Como quebrar: o que os jogadores podem fazer para parar ou desviar
@@ -108,7 +108,7 @@ Como quebrar: o que os jogadores podem fazer para parar ou desviar
 
 **Exemplo — O Pedágio** (Conflito): os Protetores do Arcano e a Cidade-Muralha disputam a estrada. Elos: postos de bloqueio → Zona de Anulação na ponte → milícia contra Protetores (Cenário de combate onde os jogadores escolhem lado) → a estrada fecha ou vira fronteira.
 
-**Correntes pessoais (Laços)**: quando um personagem entra no Laço (5 Atalhos), monte uma Corrente só dele com as respostas de criação 8 a 11: a origem é o que ele evita; cada elo traz a mesma sensação com outra cara; o desconforto cresce a cada Atalho novo. **Como quebrar** é sempre o mesmo: um Passo de Valor dentro da situação. Seja justo: o Laço é para ser encarável, não uma punição. O Cataclisma que veio de Atalhos, gaste de preferência nos elos do Laço ou em coisas ligadas ao que foi evitado.
+**Laços**: quando um personagem entra no Laço, ele vira uma Corrente pessoal **montada junto com o jogador** ([[01 Regras centrais]], seção 5). O jogador diz como o Laço é por dentro; você traz a situação com outra cara a cada vez; os outros jogadores podem sugerir. Seja justo: o Laço é para ser encarável, não uma punição. O Cataclisma que veio de Atalhos, gaste de preferência nos elos do Laço ou no que foi evitado.
 
 Adversários (ficha, palavras, régua, maestria) estão em [[10 Adversários - como criar]] e o bestiário em [[11 Bestiário]].
 
@@ -134,7 +134,7 @@ Perguntas para o mestre: 2
 | **Farol Sem Noite** | 2 · Exploração · Alvorum | Luz constante: ninguém se esconde e ilusões não funcionam | *O Farol Gira* (2): todos em Longe ficam cegos até o holofote voltar a eles. *Pesadelo Aceso* (4): o pior medo de um jogador vira um adversário Padrão |
 | **Cemitério que Respira** | 2 · Hostil · Morbidyum | Toda cura custa +1 Arcano; quem cai aqui e não é recolhido levanta como fantasma | *Mãos do Chão* (2): Agilidade 14 ou Preso. *Os de Baixo* (3): um grupo de Lacaios mortos |
 | **Biblioteca que Esquece** | 2 · Exploração · Cognitium | Em cada Pausa aqui, cada jogador esquece uma Vivência até sair (1 Arcano para lembrar) | *Corredores* (2): o grupo se separa. *Livro Mentiroso* (4): todos acreditam numa mentira escrita (Inteligência 15 para duvidar) |
-| **Estação Parada** *(tecnomaga)* | 3 · Travessia · Eternyr | Perto do grande relógio, os Contadores descem 2 por vez | *O Trem de Antes* (3): 3d10 em linha. *Preso no Instante* (5): um jogador fica fora do tempo até a próxima Falha do grupo (não age, não é atingido) |
+| **Estação Parada** *(tecnomaga)* | 3 · Travessia · Eternyr | Perto do grande relógio, o preço de toda Ameaça cai 2 | *O Trem de Antes* (3): 3d10 em linha. *Preso no Instante* (5): um jogador fica fora do tempo até a próxima Falha do grupo (não age, não é atingido) |
 
 ### Cidades, povoados e variações
 
@@ -147,11 +147,11 @@ Todo Terreno pode virar variação: troque o Valor, a Moldura ou o tipo e ajuste
 | **Mercado de Feras** | 1 · Social · Dominum | Barulho e cheiro: Desvantagem para ouvir e para rastrear | *Jaula Aberta* (3): uma fera escapa (Bruto). *Leilão* (1): alguém dá lance num jogador |
 | **Vila do Mesmo Dia** | 2 · Exploração · Eternyr | O dia se repete ao pôr do sol; só quem tem Eternyr ou uma âncora lembra | *Reinício* (4): o Cenário volta ao começo, os PNJs esquecem. *Déjà-vu* (1): um PNJ lembra de algo que não devia |
 | **Cidade Insone** | 2 · Social · Alvorum | Ninguém dorme; Pausas aqui só limpam metade | *Sonho Vazado* (2): o sonho de alguém aparece no meio da rua. *Olhos Abertos* (3): todo mundo vê o que o grupo faz |
-| **Aldeia da Curandeira** | 1 · Social · Morbidyum | Cura aqui não custa o Arcano extra | *Febre* (2): um PNJ adoece, Contador 4. *Enterro* (1): um morto que não devia ser enterrado |
+| **Aldeia da Curandeira** | 1 · Social · Morbidyum | Cura aqui não custa o Arcano extra | *Febre* (2): um PNJ adoece; Ameaça de 5: ele morre. *Enterro* (1): um morto que não devia ser enterrado |
 | **Rua dos Espelhos** | 2 · Exploração · Cognitium | Cada espelho mostra uma lembrança de quem passa | *Reflexo Solto* (3): o reflexo de um jogador sai e age (Padrão). *Memória Trocada* (2): dois jogadores trocam uma Vivência até a Pausa |
 | **Vila da Colheita** | 1 · Social · Primitivum | Na época de colheita, qualquer ajuda vira amizade | *Praga* (2): bichos atacam a plantação. *Festa* (1): um PNJ bêbado conta um segredo |
 | **Estrada do Crepúsculo** | 2 · Travessia · Alvorum | Metade é dia, metade é noite; atravessar a linha pede Sabedoria 13 | *Pálpebra Fecha* (3): escuridão total até a próxima Falha. *Viajante* (1): alguém que vem do outro lado |
-| **Mina Funda** | 1 · Travessia · Sublimeyn | Pouca luz, ar pesado: cada Pausa aqui limpa 1 Cansaço a menos | *Desabamento* (4): Contador 3. *Veio Vivo* (2): o minério se mexe e prende uma perna |
+| **Mina Funda** | 1 · Travessia · Sublimeyn | Pouca luz, ar pesado: cada Pausa aqui limpa 1 Cansaço a menos | *Desabamento* (4): Ameaça de 5, a galeria fecha. *Veio Vivo* (2): o minério se mexe e prende uma perna |
 | **Pátio de Duelos** *(Escola de Magia)* | 1 · Social · qualquer | Magia é permitida, ferir de verdade não: dano acima do Maior tira do duelo | *Professor Chegando* (2): quem conjurar Grau 3+ é pego. *Aposta* (1): a plateia escolhe um favorito |
 | **Torre dos Protetores** | 3 · Hostil · (nenhum) | **Zona de Anulação**: nada acima de Grau 2 funciona | *Alarme* (3): um grupo de Protetores. *Selar* (4): uma palavra de cada jogador selada até sair |
 

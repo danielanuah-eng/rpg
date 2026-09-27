@@ -1,4 +1,6 @@
-# Arcanoclisma (título provisório)
+# Arcanoclisma
+
+*Um passo diante do desconforto e do compromisso.*
 
 Sistema de RPG próprio, inspirado em Daggerheart, Rune RPG, Ethmos e Triangle Agency.
 
@@ -14,7 +16,7 @@ Sistema de RPG próprio, inspirado em Daggerheart, Rune RPG, Ethmos e Triangle A
 6. [[04 Comportamentos]] — os 10 Comportamentos e seus talentos
 7. [[05 Personagem e níveis]] — criação, Vínculo, níveis 1–10
 8. [[06 Itens e dinheiro]] — armas, armaduras, catalisadores, relíquias, familiares, Ordynus
-9. [[07 Mestre - Cataclisma, eventos e terrenos]] — gastos do mestre, Eventos, Marés, Correntes, terrenos
+9. [[07 Mestre - Cataclisma, abalos e terrenos]] — gastos do mestre, Abalos, Marés, Correntes, terrenos
 10. [[08 Mundo e entidades]] — origem, par e ímpar, Primordiais, semideuses, Reinos, dragões, Eras, perguntas de escritor
 11. [[10 Adversários - como criar]] — adversários por palavras, régua, maestria
 12. [[11 Bestiário]] — 54 adversários prontos, com dragões e wyverns

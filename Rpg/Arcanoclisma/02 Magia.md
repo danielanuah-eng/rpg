@@ -4,7 +4,7 @@
 
 ## Magia no mundo
 
-Magia é **comum**. Quem tem, usa o tempo todo: para acender o fogão, abrir a porta emperrada, lutar, trabalhar. Todos os personagens usam magia; o que muda é **como** cada um exerce: com um foco arcano para potencializar, pela arma para ferir mais, com um livro para ir mais seguro (e mais devagar), com o corpo, a voz, um familiar.
+Magia é **comum**. Quem tem, usa o tempo todo: para acender o fogão, abrir a porta emperrada, lutar, trabalhar. Todos os personagens usam magia; o que muda é **como** cada um exerce: com um foco arcano para potencializar, pela arma para ferir mais, com um Transcrito para ir mais seguro (e mais devagar), com o corpo, a voz, um familiar.
 
 O mundo só **bagunça** quando a magia é usada de forma instável, poderosa demais ou o tempo todo. É isso que os Graus altos, as magias Ímpares e o Cataclisma medem.
 
@@ -80,7 +80,7 @@ Conjurar no seu Grau máximo, contra a Dificuldade do Grau, dá **81–84%** em 
 
 - Cada dado **par**: +1 Arcano para você. Cada dado **ímpar**: +1 Cataclisma para o mestre.
 - **Crítico** — no 2d12, dados iguais; nos outros, **todos pares**. Sucesso automático, escolha um efeito de crítico (ignorar um efeito negativo, melhor resultado possível, dobrar o dano), e ganhe Arcano igual ao **maior dado** (máx. 6) no lugar do Arcano dos pares.
-- **Desequilíbrio** — todos os dados **ímpares** (não existe no 2d12). O mestre ganha os pontos normais **e** dispara de graça um Evento de Cataclisma: **Tremor** no Grau 3, **Fissura** no Grau 4, **Ruptura** no Grau 5.
+- **Desequilíbrio** — todos os dados **ímpares** (não existe no 2d12). O mestre ganha os pontos normais **e** dispara de graça um Abalo: **Tremor** no Grau 3, **Fissura** no Grau 4, **Ruptura** no Grau 5.
 - **Magia Ímpar** — mais dados ímpares que pares. A magia acontece (se passou na Dificuldade), mas você rola **Dificuldades** no d20:
 
 | Palavras de Valor na magia | Dificuldades roladas se sair Ímpar |
@@ -147,7 +147,7 @@ Todo personagem escolhe um Canal na criação. **Sintonia = Moldura + 1** para t
 |---|---|---|
 | **Foco arcano** (anel, cajado, orbe, relógio) | **potencializa**: +1 no dano e na cura de magia | sem o foco na mão, Sintonia cai |
 | **Arma** (a magia sai pela lâmina, pela flecha, pelo tiro) | **letalidade**: magias de ataque feitas pela arma somam **um dado da arma** ao dano | magias que não são ataque: Sintonia cai |
-| **Livro** (grimório, caderno, pergaminhos) | **segurança**: se a ação anterior foi preparar (ou fora de pressa), a Dificuldade do Grau cai 2 e você rola **uma Dificuldade (d20) a menos** | mais lento: sem preparar, nenhum bônus; sem o livro, Sintonia cai |
+| **Transcrito** (grimório, caderno, pergaminhos: a magia escrita antes de ser dita) | **segurança**: se a ação anterior foi preparar (ou fora de pressa), a Dificuldade do Grau cai 2 e você rola **uma Dificuldade (d20) a menos** | mais lento: sem preparar, nenhum bônus; sem o Transcrito, Sintonia cai |
 | **Corpo** (gesto, dança, sangue, tatuagem) | nunca é desarmado | amarrado ou agarrado, não conjura Grau 2+ |
 | **Voz** (canto, grito, reza) | conjura com as mãos ocupadas; magias em quem te ouve têm +1 faixa de alcance | silenciado, não conjura |
 | **Familiar** (bicho ou espírito ligado a você) | a magia pode sair dele, até Médio de você | se ele cair, Grau máximo −1 até o Pouso |

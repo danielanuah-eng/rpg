@@ -226,7 +226,7 @@ Perguntas de vínculo: *Qual memória você apagaria se pudesse? · Em que menti
 - **Símbolo**: um anel com um ponto escapando dele. **Cor**: azul-noite com branco.
 - **Primordial**: Ossyr, Aquele Que Já Foi. **Oposto**: Morbidyum.
 - **Compromisso**: "Cada coisa no seu tempo e no seu lugar." Paciente, organizado, detesta pressa e bagunça.
-- **Skill**: **nenhuma**. Eternyr é o único Valor que mexe no próprio jogo: holofote, Contadores e marcadores de duração. Isso já é a vantagem.
+- **Skill**: **nenhuma**. Eternyr é o único Valor que mexe no próprio jogo: holofote, Ameaças e marcadores de duração. Isso já é a vantagem.
 - **Drawback · Peso do Tempo**: toda magia de Eternyr tem **+2 na Dificuldade**. ❓ P-12
 - **Ressonância II · Passo**: uma vez por Cenário, teleporte até Perto como parte de qualquer ação, sem conjurar.
 - **Ressonância III · Rebobinar**: uma vez por sessão, desfaça a última ação (sua ou de outro, até de adversário). Ela acontece de novo, e todos lembram o que vinha. O Cataclisma já ganho fica.

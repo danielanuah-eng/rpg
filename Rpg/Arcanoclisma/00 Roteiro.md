@@ -1,8 +1,8 @@
 # Arcanoclisma — Roteiro de criação
 
-> Título provisório. O plano segue as 5 fases que você definiu e termina como o **Peso do Céu**: Transcrito, cartas, escudo do mestre, fichas de papel enfeitadas, e um app (ficha + geradores) num **Netlify separado**, com imagens.
+> **Arcanoclisma — um passo diante do desconforto e do compromisso.** O plano segue as 5 fases que você definiu e termina como o **Peso do Céu**: livro, cartas, escudo do mestre, fichas de papel enfeitadas, e um app (ficha + geradores) num **Netlify separado**, com imagens.
 
-A regra que vale para todas as fases: **o texto das regras e os números moram em um lugar só** (estes arquivos agora; na fase 5, arquivos de dados). Transcrito, cartas, ficha e gerador são *gerados* a partir dali, então uma mudança numa regra chega em tudo de uma vez, igual ao Peso do Céu.
+A regra que vale para todas as fases: **o texto das regras e os números moram em um lugar só** (estes arquivos agora; na fase 5, arquivos de dados). Livro, cartas, ficha e gerador são *gerados* a partir dali, então uma mudança numa regra chega em tudo de uma vez, igual ao Peso do Céu.
 
 ---
 
@@ -32,18 +32,18 @@ Objetivo: o jogo **funciona e é gostoso de jogar** antes de ter lore bonita. Na
 | 1.7 | Os 10 Comportamentos com talentos e progressão | [[04 Comportamentos]] | 🟡 |
 | 1.8 | Criação de personagem e níveis 1–10 | [[05 Personagem e níveis]] | 🟡 |
 | 1.9 | Armas, armaduras, catalisadores, familiares, relíquias, Ordynus | [[06 Itens e dinheiro]] | 🟡 |
-| 1.10 | Mestre: gastos de Cataclisma, Eventos, adversários, terrenos | [[07 Mestre - Cataclisma, eventos e terrenos]] | 🟡 |
+| 1.10 | Mestre: gastos de Cataclisma, Abalos, adversários, terrenos | [[07 Mestre - Cataclisma, abalos e terrenos]] | 🟡 |
 | 1.11 | Você responde as perguntas 🔴 de [[09 Perguntas pra decidir]] | — | ✅ rodada 1 (27/09) |
 | 1.11b | Aplicar rodada 1: Palavras Básicas só verbo/substantivo, talentos de outros Comportamentos, Caderno dos Valores, itens mágicos de mecânica/Dificuldade/Valor, Marés de Valor, adversários experientes, mais terrenos | vários | ✅ |
 | 1.11c | Rodada 2 respondida | [[09 Perguntas pra decidir]] | ✅ |
-| 1.11d | Aplicar rodada 2: Moldura, teste por verbo + modo, Cenários e marcadores, palavra como relação, Canais (foco/arma/livro), 2 talentos por Comportamento, perguntas de criação e sessão zero, ficha por Valor, Correntes, maestrias, adversários por palavras, bestiário, tesouros, dragões | vários | ✅ |
+| 1.11d | Aplicar rodada 2: Moldura, teste por verbo + modo, Cenários e marcadores, palavra como relação, Canais (foco/arma/Transcrito), 2 talentos por Comportamento, perguntas de criação e sessão zero, ficha por Valor, Correntes, maestrias, adversários por palavras, bestiário, tesouros, dragões | vários | ✅ |
 | 1.11e | Rodada 3 de perguntas (P-70 em diante) | [[09 Perguntas pra decidir]] | ⬜ |
 | 1.12 | 4 personagens prontos (nível 1) para teste | — | ⬜ |
 | 1.13 | **Teste de mesa 1**: uma cena social + um combate + uma magia em dupla | — | ⬜ |
 | 1.14 | Ajustes do teste; **teste 2** no nível 5 (Moldura 3) | — | ⬜ |
 | 1.15 | Simulador de combate (`calc/`) para conferir que nenhum Comportamento/Valor domina | — | ⬜ |
 
-**Pronto quando:** uma pessoa que nunca viu o jogo cria um personagem em até 20 minutos com a ficha, e um combate de 4 jogadores contra um encontro padrão termina em 45–60 minutos sem o mestre abrir o Transcrito mais de 3 vezes.
+**Pronto quando:** uma pessoa que nunca viu o jogo cria um personagem em até 20 minutos com a ficha, e um combate de 4 jogadores contra um encontro padrão termina em 45–60 minutos sem o mestre abrir o livro mais de 3 vezes.
 
 Perguntas de teste para a mesa (anotar depois de cada sessão):
 - Alguém ficou parado esperando muito tempo? (holofote)
@@ -77,7 +77,7 @@ As perguntas de escritor estão no fim de [[08 Mundo e entidades]]. Responda com
 
 ## Fase 3 — O que vai ser gerado
 
-Objetivo: fechar a **lista de coisas** que o Transcrito e o app vão produzir, com o formato de dados de cada uma. **Cartas ficam para o fim** (fase 5, último passo): primeiro definimos tudo.
+Objetivo: fechar a **lista de coisas** que o livro e o app vão produzir, com o formato de dados de cada uma. **Cartas ficam para o fim** (fase 5, último passo): primeiro definimos tudo.
 
 | Tipo | Onde está o rascunho | Vai para o gerador? | Imagem? |
 |---|---|---|---|
@@ -88,10 +88,10 @@ Objetivo: fechar a **lista de coisas** que o Transcrito e o app vão produzir, c
 | Itens mecânicos (5 famílias) | [[06 Itens e dinheiro]] | ficha + tesouro | sim |
 | Itens narrativos, Maravilhas, comuns, bugigangas | [[12 Tesouros e itens mágicos]] | tesouro | sim (os mágicos) |
 | Familiares, materiais, consumíveis | [[06 Itens e dinheiro]] | ficha + tesouro | sim |
-| Terrenos, cidades, Reinos | [[07 Mestre - Cataclisma, eventos e terrenos]], [[08 Mundo e entidades]] | gerador de lugares | sim |
+| Terrenos, cidades, Reinos | [[07 Mestre - Cataclisma, abalos e terrenos]], [[08 Mundo e entidades]] | gerador de lugares | sim |
 | Adversários (palavras) | [[10 Adversários - como criar]], [[11 Bestiário]] | gerador de encontros, balanceado | sim (só no gerador) |
 | Dragões e wyverns | [[08 Mundo e entidades]], [[11 Bestiário]] | gerador | sim |
-| Eventos, Marés, Correntes | [[07 Mestre - Cataclisma, eventos e terrenos]] | gerador | não |
+| Abalos, Marés, Correntes | [[07 Mestre - Cataclisma, abalos e terrenos]] | gerador | não |
 | PNJs sociais, nomes, ganchos | — | gerador | opcional |
 
 Formato de dados (proposta): um JSON por tipo em `dados/`, com o mesmo campo `moldura` em tudo, para o gerador escolher e balancear sozinho.
@@ -102,30 +102,30 @@ Formato de dados (proposta): um JSON por tipo em `dados/`, com o mesmo campo `mo
 |---|---|
 | 4.1 | Guia visual: paleta de cada Valor, estilo (proposta: pintura com contorno, fundo neutro, cor do Valor como luz de recorte) |
 | 4.2 | 9 símbolos abstratos dos Valores (vetor, para ficha e cartas) |
-| 4.3 | Capa do Transcrito e das fichas |
+| 4.3 | Capa do livro e das fichas |
 | 4.4 | Lista de prompts, um por item/terreno/adversário (igual ao `prompts das Peças novas.md`), com id = nome do arquivo |
 | 4.5 | Geração em lote (Canva), recorte de fundo, conferência uma a uma |
 | 4.6 | Molduras e ornamentos da ficha de papel |
 
 ---
 
-## Fase 5 — Fichas, geradores, Transcrito, site
+## Fase 5 — Fichas, geradores, livro, site
 
 Entregas, na mesma família do Peso do Céu:
 
 1. **App** (um HTML só, funciona offline, instalável no celular):
    - **Ficha digital**: tudo que o personagem liberou aparece nela; contadores de Arcano/Cansaço/PV/Proteção clicáveis; montador de magia (escolhe palavras → mostra Grau, custo, dados, Dificuldade, e rola os dados contando pares/ímpares); loja em Ordynus; subir de nível guiado; guardar/importar/exportar.
-   - **Escudo do mestre digital**: contador de Cataclisma com Transbordo, tabela de Eventos, holofote.
-   - **Geradores**: encontro (balanceado pela Moldura e nº de jogadores), adversário com imagem, terreno, tesouro/item, relíquia com palavra, PNJ, nome, gancho, Evento de Cataclisma, "magia aleatória" (d66 nas tabelas).
+   - **Escudo do mestre digital**: contador de Cataclisma com Transbordo, tabela de Abalos, holofote.
+   - **Geradores**: encontro (balanceado pela Moldura e nº de jogadores), adversário com imagem, terreno, tesouro/item, relíquia com palavra, PNJ, nome, gancho, Abalo, "magia aleatória" (d66 nas tabelas).
 2. **Ficha de papel** enfeitada para imprimir, em **duas folhas** ([[05 Personagem e níveis]]):
    - **Ficha 1 — Personagem** (igual para todos): nome, skin, Comportamento, atributos, Palavras Básicas, Arcano, Laço e Passos, Vivências, itens, Ordynus, perguntas de criação e relações da party.
    - **Ficha 2 — Valor** (9 versões, uma por Valor, com arte própria): símbolo, Compromisso, Skill, Drawback, Ressonâncias, as 36 palavras, 4 espaços extras, Canal, tabela de Graus e magias favoritas.
    - Opcional: folha de Familiar/montaria.
-3. **Transcrito** (no lugar de "livro"): o texto completo do jogo, com capa, feito para sair em **vários formatos** a partir da mesma fonte:
+3. **Livro — *Arcanoclisma: um passo diante do desconforto e do compromisso*** — o texto completo do jogo, com capa, feito para sair em **vários formatos** a partir da mesma fonte:
    - PDF completo para baixar e imprimir;
    - páginas no site, com busca;
    - leitura dentro do app (cada regra abre a partir da ficha);
-   - Transcritos menores separados: do jogador, do mestre, de um Valor, de uma Era, do bestiário.
+   - livretos menores separados: do jogador, do mestre, de um Valor, de uma Era, do bestiário.
    E o **escudo do mestre** (PDF).
 4. **Site** em um **Netlify novo** (separado do Peso do Céu): página de apresentação com capa, documentos para baixar, botão para instalar o app, galeria de imagens.
 5. `calc/conferir.py`: confere antes de publicar que todo item/adversário está dentro da faixa da sua Moldura (o "balanceador" que o gerador usa).

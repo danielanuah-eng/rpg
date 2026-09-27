@@ -114,7 +114,7 @@ Ser: Nó · Agir: Esmagar · Desequilibrar (2C · Médio · Área · o próximo 
 Ser: Metade · Agir: Cortar · Trocar (1C · os dois trocam de lugar · Inst) · Parecer: Leal (se um cai, o outro age na hora) · Quer: achar a própria metade — que é o outro, e eles não sabem.
 
 **A Coisa Que Sobrou** — M4 · Chefe · três Valores · Quimerarcano, Resiliente
-Ser: Sobra, Tempestade · Agir: Rasgar · Maré (3C: dispara uma Maré de Valor à escolha, pelo Cenário) · Engolir (reação, 2C: anula uma magia e o mestre ganha Cataclisma igual ao Grau) · Ruptura (5C: um Evento de Ruptura) · Parecer: Estranho, Enorme · Quer: nada. É o que sobra.
+Ser: Sobra, Tempestade · Agir: Rasgar · Maré (3C: dispara uma Maré de Valor à escolha, pelo Cenário) · Engolir (reação, 2C: anula uma magia e o mestre ganha Cataclisma igual ao Grau) · Ruptura (5C: um Abalo de Ruptura) · Parecer: Estranho, Enorme · Quer: nada. É o que sobra.
 
 ## Protetores do Arcano
 

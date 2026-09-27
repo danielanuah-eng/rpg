@@ -1,6 +1,6 @@
 # 05 — Criar personagem e subir de nível
 
-> Rascunho v0. Não existe raça: a aparência é **skin** (livre) e o que o personagem faz vem do **Comportamento** e do **Valor**. Todo personagem usa magia; o jeito de exercer (foco, arma, livro, corpo...) é livre.
+> Rascunho v0. Não existe raça: a aparência é **skin** (livre) e o que o personagem faz vem do **Comportamento** e do **Valor**. Todo personagem usa magia; o jeito de exercer (foco, arma, Transcrito, corpo...) é livre.
 
 ## Sessão zero (antes das fichas)
 
@@ -29,11 +29,11 @@ Anote cada relação na ficha dos dois personagens (no app, aparece nas duas fic
 2. **Comportamento** — anote Esquiva, PV, Limiares base, armaduras, o **Talento** e o **Hábito** ([[04 Comportamentos]]).
 3. **Valor** — o personagem é um **Comprometido**. Pegue a **ficha do seu Valor** (36 palavras, símbolo, Skill, Drawback, 4 espaços extras) e anote o **Compromisso** ([[03 Valores]]).
 4. **Vínculo** — responda às perguntas abaixo.
-5. **Canal** — como você exerce a magia: foco arcano, arma, livro, corpo, voz, familiar ou marca ([[02 Magia]]).
+5. **Canal** — como você exerce a magia: foco arcano, arma, Transcrito, corpo, voz, familiar ou marca ([[02 Magia]]).
 6. **Atributos** — distribua **+2, +1, +1, 0, 0, −1**.
 7. **Vivências** — escreva **2** frases do passado do personagem. Cada uma vale +2 (gastando 1 Arcano).
 8. **Equipamento** — uma arma, uma armadura permitida, o objeto do Canal, um kit, **50 Ordynus** ([[06 Itens e dinheiro]]).
-9. **Números finais** — Laço 0/5, Passos 0/3, Arcano 3, Cansaço 6, PV do Comportamento, Proteção da armadura, Limiares = base + 1 + armadura, Sintonia +2.
+9. **Números finais** — Laço 0/5, Arcano 3, Cansaço 6, PV do Comportamento, Proteção da armadura, Limiares = base + 1 + armadura, Sintonia +2.
 
 ## As perguntas de criação
 
@@ -44,7 +44,7 @@ Três blocos. As respostas **mudam com a história**: a ficha tem espaço para r
 1. **Quando você percebeu que tinha esse Valor?** Onde estava, quem viu, o que quebrou ou mudou?
 2. **Por que esse Valor, e não outro?** O que na sua vida já era parecido com ele antes da magia?
 3. **Como você manifesta a sua magia?** Cor, som, cheiro, gesto, o que as pessoas veem.
-4. **Que objeto representa esse vínculo?** (Pode ser o seu foco, arma ou livro.)
+4. **Que objeto representa esse vínculo?** (Pode ser o seu foco, arma ou Transcrito.)
 5. **Como as pessoas perto de você lidam com a sua magia?** Alguém tem medo? Alguém depende dela?
 6. **O que você não faria com a sua magia de jeito nenhum?**
 7. As 2 perguntas do seu Valor ([[03 Valores]]).
@@ -56,7 +56,7 @@ Três blocos. As respostas **mudam com a história**: a ficha tem espaço para r
 10. **Como ele lida com o desconforto?** Foge, briga, faz piada, cala, cuida dos outros? (Esse é o **Atalho de costume** dele: anote na ficha.)
 11. **O que é valioso para ele manter**, e **como a magia se relaciona com isso**? (Protege? Ameaça? Foi o preço?) (Junto com o Compromisso, é para onde os **Passos de Valor** apontam.)
 
-As respostas 8 a 11 são o material do **Laço** desse personagem, se um dia ele se formar ([[01 Regras centrais]]).
+As respostas 8 a 11 são o ponto de partida do **Laço** desse personagem, que o jogador e o mestre montam juntos se um dia ele se formar ([[01 Regras centrais]]).
 
 ### Você e o personagem (o jogador)
 
@@ -106,7 +106,7 @@ Tudo o que não é a magia do Valor:
 - **Comportamento**: nome, Esquiva, Limiares (Maior/Grave), PV, Cansaço, Proteção, armaduras permitidas, **caixas de talento** (Talento e Hábito com marcação Básico/Superior, e espaços vazios para talentos avulsos).
 - **Atributos** (os 6, com casinha de marca de avanço).
 - **Palavras Básicas**: a tabela de verbos de ação, a de modos (com o atributo de cada coluna) e a de formas, para o jogador montar "verbo + modo" olhando a ficha.
-- **Arcano**, **Laço** (5 casas) e **Passos** (3 casas), com o **Atalho de costume** e **o que o personagem valoriza** escritos do lado.
+- **Arcano** e **Laço** (5 casas), com o **Atalho de costume** e **o que o personagem valoriza** escritos do lado.
 - **Vivências**.
 - **Itens**: armas (atributo, alcance, dano, traços), armadura, montaria, familiar, itens mágicos, consumíveis, materiais, **Ordynus**.
 - **Criação e lore**: as perguntas de criação (Vínculo, coração, você e o personagem) com espaço para reescrever, e as **relações da party** da sessão zero.
@@ -121,7 +121,7 @@ Uma para cada um dos 9 Valores: **o desenho muda inteiro** conforme o Valor (cor
 - **Ressonâncias** II e III com caixinha.
 - A **tabela 6×6 das 36 palavras** do Valor (verbos, substantivos, qualidades), sorteável por d66.
 - **4 espaços extras** para Palavras Estrangeiras, preenchidos ao longo dos níveis.
-- **Canal** (foco, arma, livro...) com o benefício e a fraqueza, e a Sintonia.
+- **Canal** (foco, arma, Transcrito...) com o benefício e a fraqueza, e a Sintonia.
 - **Tabela de Graus** resumida: dados, custo, Dificuldade, dano, alvos, alcance, marcador de duração.
 - Lembretes da magia: leitura dos dados (Crítico, Magia Ímpar, Desequilíbrio), Forçar, Ampliar.
 - **Magias que eu gosto de usar**: linhas para anotar combinações de palavras e a relação do personagem com cada uma.

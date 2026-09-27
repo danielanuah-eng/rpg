@@ -93,7 +93,7 @@ Limiares finais = base + nível + armadura. Armadura fora da lista: −2 Esquiva
 | | Básico | Superior |
 |---|---|---|
 | **Talento · Sorte Torta** | Recurso próprio (máx. 3): ganhe 1 quando **falhar**. Gaste 1 depois de rolar para tratar um dado seu como se tivesse a paridade oposta (o número não muda). | Máx. 5; ganhe 1 também quando um aliado Perto falhar. Exausto, você não fica Vulnerável. |
-| **Hábito · Abraçar o Caos** | Quando o mestre dispara um Evento de Cataclisma, escolha quem ele afeta (pode ser um adversário). | Quando você tira Desequilíbrio, sorteie 2 Eventos e escolha um; ele não te afeta. |
+| **Hábito · Abraçar o Caos** | Quando o mestre dispara um Abalo, escolha quem ele afeta (pode ser um adversário). | Quando você tira Desequilíbrio, sorteie 2 Eventos e escolha um; ele não te afeta. |
 
 ## 10. Enganador — *mente, disfarça, some*
 

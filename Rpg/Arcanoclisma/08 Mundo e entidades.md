@@ -84,14 +84,14 @@ Cada Primordial deixou no mundo, ou fora dele, um lugar onde o Valor é a lei. A
 | **O Entretempo** | Eternyr | os **Repetidos**, que vivem o mesmo instante | ruínas de todas as épocas ao mesmo tempo; salas que são anos | o tempo lá fora corre diferente (1d6: horas, dias, semanas, meses, anos, nada) | ver um pedaço do passado ou do futuro |
 | **A Floresta Primeira** | Primitivum | Tahwë, espíritos-animais, os bichos que vieram antes dos bichos | a mata de onde veio tudo que é vivo | quanto mais se fica, mais bicho se vira | ganhar um Familiar |
 | **O Fechado** | Arcano | ninguém se mexe; estátuas que respiram | tudo perfeito, simétrico e parado; controle absoluto | lá dentro nada muda: ferida não piora, mas também não sara, e ninguém consegue decidir nada | Arcano enche até o máximo ao entrar |
-| **A Sobra** | Cataclisma | os **Rasgados** e tudo que ficou sem par | tudo muda o tempo todo; o chão, o céu, o próprio corpo | a cada ação, role um Evento de Faísca | qualquer magia sobe um Grau de efeito |
+| **A Sobra** | Cataclisma | os **Rasgados** e tudo que ficou sem par | tudo muda o tempo todo; o chão, o céu, o próprio corpo | a cada ação, role um Abalo de Faísca | qualquer magia sobe um Grau de efeito |
 
 ## Povos, culturas e lugares
 
 Não há raças: há gente, de todas as aparências, e as culturas nascem do lugar e do Valor que manda nele.
 
 - **Comprometidos**: quem usa magia. A vida, o estilo e o poder se orientam pelo Valor, na personalidade e no jeito de agir (ver o Compromisso de cada Valor em [[03 Valores]]). Em muitos lugares se reconhece um Comprometido pelo jeito antes de ver a magia.
-- **Magia é comum.** Quem tem, usa o tempo todo: no fogão, na oficina, na lavoura, na briga. Cada um exerce do seu jeito (um foco, a própria arma, um livro, o corpo, a voz). O mundo só bagunça quando alguém usa magia de forma instável, poderosa demais ou sem parar — é aí que aparecem Feridas, Rasgados e Protetores.
+- **Magia é comum.** Quem tem, usa o tempo todo: no fogão, na oficina, na lavoura, na briga. Cada um exerce do seu jeito (um foco, a própria arma, um Transcrito, o corpo, a voz). O mundo só bagunça quando alguém usa magia de forma instável, poderosa demais ou sem parar — é aí que aparecem Feridas, Rasgados e Protetores.
 - **Gente sem Valor** também existe, e convive com a magia como se convive com o tempo: às vezes ajuda, às vezes destrói a colheita.
 - **Culturas de Valor** (sementes, para cada mesa expandir):
   - *Cidades-muralha* de Conflitüo, onde a arma é roupa;

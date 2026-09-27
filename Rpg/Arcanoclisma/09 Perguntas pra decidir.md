@@ -91,7 +91,7 @@ Sua resposta: ✅ ok (rodada 1)
 
 ## Personagem
 
-**P-21** 🟡 "Uma ficha para cada Valor que a pessoa escolher": dá para ter **dois Valores**?
+**P-21** ✅ (ver P-73: não se desperta outro Valor) "Uma ficha para cada Valor que a pessoa escolher": dá para ter **dois Valores**?
 Recomendo: começa com 1; na Moldura 3 pode **Despertar outro Valor** (❗ tirei da ficha por enquanto, já que cada ficha é de um Valor só — ver P-73) (2 avanços), com 12 palavras dele, Skill e Drawback, Grau máximo −1 nele.
 Sua resposta: ✅ fica a proposta; e a ficha terá **o espaço dos 9 Valores** com caixinha por palavra (ver P-60).
 
@@ -149,7 +149,7 @@ Sua resposta:
 **P-45** 🟢 Nomes dos Primordiais novos (Thorvessa, Oyamar, Idrael, Velhena, Ossyr, Tahwë) e dos semideuses. Troque o que quiser.
 Sua resposta:
 
-**P-46** 🟢 O nome do jogo: **Arcanoclisma**? Ou outro?
+**P-46** ✅ **Arcanoclisma — um passo diante do desconforto e do compromisso**. O nome do jogo: **Arcanoclisma**? Ou outro?
 Sua resposta:
 
 ## Produção (fase 5)
@@ -181,16 +181,16 @@ Sua resposta:
 
 Aplicado: Patamar virou **Moldura**; teste por **verbo + modo** (o modo escolhe o atributo); Palavras Básicas com modos de volta, **grátis** e fora do limite; **Cenários** e **marcadores** no lugar de turnos; a palavra como **relação** do personagem; magia comum no mundo e **Canais** (foco, arma, livro...); Comportamentos com **2 talentos** (Básico/Superior) e talentos avulsos; perguntas de criação novas e **sessão zero**; **Correntes** de eventos; maestrias Anulador, Resiliente, Inquebrável, Quimerarcano, Deidade; **adversários por palavras** ([[10 Adversários - como criar]]), 54 no [[11 Bestiário]]; 144 itens e achados em [[12 Tesouros e itens mágicos]]; **dragões e wyverns**.
 
-**P-70** 🔴 **Cenário** é o nome que usei para "uma situação completa" (combate, conversa, perseguição). Você escreveu "Evento pra uma situação completa". Quer que a situação se chame **Evento** (e aí os Eventos do Cataclisma mudam de nome, ex.: **Abalos**), ou fica **Cenário**?
+**P-70** 🟡 metade respondida: os do Cataclisma agora se chamam **Abalos**. Falta: a situação completa continua **Cenário**, ou passa a se chamar **Evento**? **Cenário** é o nome que usei para "uma situação completa" (combate, conversa, perseguição). Você escreveu "Evento pra uma situação completa". Quer que a situação se chame **Evento** (e aí os Abalos mudam de nome, ex.: **Abalos**), ou fica **Cenário**?
 Sua resposta:
 
-**P-71** 🔴 Marcadores no lugar de turnos: Instante · até a próxima Falha · até o holofote virar · até o mestre pagar · o Cenário · até o Pouso. E **Contadores** que descem a cada Falha dos jogadores. Faz sentido para a mesa?
+**P-71** 🔁 os Contadores saíram (pareciam o Daggerheart); coisas que se aproximam agora são **Ameaças com preço em Cataclisma**. Marcadores no lugar de turnos: Instante · até a próxima Falha · até o holofote virar · até o mestre pagar · o Cenário · até o Pouso. E **Contadores** que descem a cada Falha dos jogadores. Faz sentido para a mesa?
 Sua resposta:
 
 **P-72** 🟡 Palavras Básicas em magia: **grátis e fora do limite**, até uma de cada tipo (verbo, modo, forma). Assim uma magia de nível 1 pode ser "Gelo + atacar, preciso, projétil". Ok?
 Sua resposta:
 
-**P-73** 🟡 Com uma ficha por Valor, ainda existe **despertar um segundo Valor** mais tarde (ganhando uma segunda ficha), ou cada personagem é de um Valor só para sempre, e o resto vem pelas 4 palavras extras?
+**P-73** ✅ não existe despertar outro Valor; nos ups o personagem pega palavras de outros Valores (os 4 espaços extras). Com uma ficha por Valor, ainda existe **despertar um segundo Valor** mais tarde (ganhando uma segunda ficha), ou cada personagem é de um Valor só para sempre, e o resto vem pelas 4 palavras extras?
 Sua resposta:
 
 **P-74** 🟡 A relação com a palavra: o jogador diz em uma frase **por que aquela palavra** funciona para o personagem; se a relação for fraca, a magia usa a Dificuldade do Grau seguinte. Ok, ou prefere sem penalidade (só narrativo)?
@@ -209,7 +209,7 @@ Sua resposta:
 
 Aplicado em [[01 Regras centrais]] (seção 5): **Atalho** (aceitar 2 ou 4 Cataclisma para +3, ignorar condição, virar falha em sucesso ou escapar), que marca **Laço**; com 5 marcas o personagem entra no **Laço** (Corrente pessoal feita das respostas de criação); **Passo de Valor** (aceitar o desconforto: Desvantagem, Cansaço ou uma consequência) dá +1 Arcano e 1 Passo, dê certo ou não; 3 Passos apagam 2 Laços; encarar o Laço com um Passo quebra ele e dá uma **Marca de Valor**. "Viver o Compromisso" foi absorvido pelo Passo de Valor (P-61 fica respondida).
 
-**P-80** 🔴 Custos do Atalho: **2 Cataclisma** (Menor) e **4** (Maior), +1 a cada Atalho repetido no mesmo Cenário. Parece justo, ou o Atalho tem que ser mais barato no começo ("funcionou a vida toda")?
+**P-80** ✅ 2 e 4 estão ok. Custos do Atalho: **2 Cataclisma** (Menor) e **4** (Maior), +1 a cada Atalho repetido no mesmo Cenário. Parece justo, ou o Atalho tem que ser mais barato no começo ("funcionou a vida toda")?
 Sua resposta:
 
 **P-81** 🔴 O Passo de Valor conta **pela direção, não pelo sucesso** (ganha Arcano e Passo mesmo falhando). Concorda?
@@ -218,7 +218,7 @@ Sua resposta:
 **P-82** 🟡 O Laço enche com **5** Atalhos e 3 Passos apagam **2**. Um personagem que alterna os dois nunca entra no Laço; um que só usa Atalho entra em umas 2 sessões. É esse o ritmo que você quer?
 Sua resposta:
 
-**P-83** 🟡 Adversários também podem ter Atalho e Laço (ex.: um vilão preso no próprio Laço, que os jogadores podem ajudar a quebrar ou usar contra ele)?
+**P-83** ✅ não: só o mestre usa Cataclisma, Atalho e Laço são dos jogadores. Adversários também podem ter Atalho e Laço (ex.: um vilão preso no próprio Laço, que os jogadores podem ajudar a quebrar ou usar contra ele)?
 Sua resposta:
 
 ## Rodada 5 — Fichas
@@ -228,9 +228,18 @@ Sua resposta:
 **P-90** 🟢 A Ficha 1 tem muita coisa (Palavras Básicas, itens, perguntas de criação). Prefere ela em **frente e verso** (frente: jogo; verso: criação, lore e relações), ou em uma página só mais apertada?
 Sua resposta:
 
-## Rodada 6 — Transcrito
+## Rodada 6 — Transcrito e título
 
-✅ O "livro" do jogo passa a se chamar **Transcrito**, para abrir mais formatos: PDF completo, páginas no site, leitura dentro do app, e Transcritos menores (jogador, mestre, um Valor, uma Era, bestiário). Ver [[00 Roteiro]], fase 5.
+🔁 Corrigido: **Transcrito** é o nome do **Canal** (antes "Livro": grimório, caderno, pergaminhos). O livro do jogo se chama **Arcanoclisma — um passo diante do desconforto e do compromisso**, e continua planejado em vários formatos (PDF, site, dentro do app, livretos menores).
 
-**P-91** 🟢 Além desses, quer algum Transcrito específico (ex.: um Transcrito de aventura pronta, um de Reinos, um "Transcrito de bolso" de uma página para a mesa)?
+## Rodada 7 — Abalos, Ameaças, Laço mais leve
+
+Aplicado: Abalos; Ameaças no lugar de Contadores; sem despertar outro Valor; Canal Transcrito; título. E, pela preocupação com complexidade, **Atalho e Valor ficaram mais enxutos**: saiu a trilha de Passos e o custo crescente do Atalho repetido; ficou **uma trilha só (Laço, 5 casas)** — Atalho marca, Passo de Valor apaga. O Laço é **montado junto** (jogador, mestre e mesa), e há recompensa por **olhar para os Laços**: +1 Arcano ao nomear o Atalho na hora, e três perguntas de fim de sessão (Atalho percebido, relação formada, participação no que outro sentiu ou fez).
+
+**P-92** 🔴 Sobre a complexidade: com a versão enxuta, a regra toda cabe numa tabela de duas linhas mais o Laço. Minha recomendação é **manter no núcleo**, porque é o que dá identidade ao jogo (está no título). Se ainda parecer pesado, a alternativa é virar **módulo opcional** e o núcleo ficar só com as perguntas de fim de sessão. O que prefere?
+Sua resposta:
+
+**P-93** 🟡 Recompensas das perguntas de fim de sessão: +1 Arcano **ou** apagar 1 Laço por "sim". Máximo 3 por sessão. Ok?
+Sua resposta:
+**P-91** 🟢 Além dos formatos do livro, quer algum livreto específico (aventura pronta, Reinos, uma página de regras para a mesa)?
 Sua resposta:
