@@ -67,7 +67,7 @@ Nem toda luta precisa ser grande. Escolha o tamanho pelo que a cena pede. Tempo 
 
 **+1 ponto com 3 jogadores, +2 com 2 jogadores** (mesa menor deixa o mesmo encontro mais fácil). −2 se houver 2 Chefes, +1 se usar adversários de Moldura abaixo.
 
-**Moral**: quando **metade dos pontos de adversários** caiu, o resto **foge, se rende ou negocia** (o campo *Quer* de cada um diz como). **Chefes não têm regra de comportamento**: o que um Chefe faz quando a luta vira (lutar até o fim, fugir, barganhar, trair os próprios aliados, mudar de lado) sai da **descrição da personalidade e do modo de agir** dele, e o mestre interpreta. Um Chefe é um ser contextual e subjetivo, não uma tabela. A moral é o que deixa a maior parte das lutas curta, e abre espaço para conversa no meio do combate.
+**Moral**: quando **metade dos pontos de adversários** caiu, o resto **foge, se rende ou negocia** (o campo *Quer* de cada um diz como). A moral é a **linha de base** para todo adversário. **Chefes, feras encurraladas e Deidades** partem dela, mas o que fazem quando a luta vira sai da interpretação. **Chefes não têm regra de comportamento**: o que um Chefe faz quando a luta vira (lutar até o fim, fugir, barganhar, trair os próprios aliados, mudar de lado) sai da **descrição da personalidade e do modo de agir** dele, e o mestre interpreta. Um Chefe é um ser contextual e subjetivo, não uma tabela. A moral é o que deixa a maior parte das lutas curta, e abre espaço para conversa no meio do combate.
 
 ### Dificuldade do encontro
 
