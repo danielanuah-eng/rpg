@@ -126,7 +126,7 @@ Algumas têm **cargas** (recuperam no Pouso). Regra geral de equilíbrio: um ite
 | Âncora de Sal | Estabilidade | 4 | +3 no d20 da tabela de Dificuldades | 3.000 o |
 | Bainha Vermelha | Valor (Conflitüo) | 2 | fora de combate, suas magias podem ter 3 palavras em vez de 2 | 300 o |
 | Ampulheta Rachada | Valor (Eternyr) | 2 | o Peso do Tempo cai para +1 | 450 o |
-| Máscara do Palhaço Triste | Valor (Persona) | 2 | quando o Drama acontece, o mestre não ganha Cataclisma se você reclamar | 300 o |
+| Máscara do Palhaço Triste | Valor (Persona) | 2 | quando o Tropeço acontece, o resultado sai inútil, nunca atrapalha | 300 o |
 | Lanterna Fechada | Valor (Alvorum) | 2 | uma magia por Evento sem ser chamativa | 400 o |
 | Moeda do Barqueiro | Valor (Morbidyum) | 3 | ao usar a Volta, fica com 3 Arcano | 1.000 o |
 | Cadinho de Bolso | Valor (Sublimeyn) | 3 | o primeiro passo extra de estado de cada Evento não custa Arcano | 1.000 o |
