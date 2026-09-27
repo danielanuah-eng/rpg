@@ -54,3 +54,7 @@
 - **Evento 1 — O cais de Vau-Grande.** Ameaça da Cheia: pote de 8, em 0. Cataclisma do mestre: 4. Arcano do Castian: 3. O Capitão Otávio, da Guilda do Rio, acusa a Iolanda de ter calado o sino.
   - Castian conjura *Acalmar* na Iolanda (Grau 2, 1 Arcano): 🎲 2 e 7 → 12 contra 12, sucesso por Cataclisma. Iolanda calma; o mestre emoldura: pote 2/8; Otávio suspeita de um Comprometido de Persona e cita um "sineiro de plantão".
   - Regra ajustada na mesa: palavras flexíveis (variações contam como a mesma palavra); Toque Humano virou restrição (−2 fora de pessoas).
+  - Castian pergunta do sineiro: Lino, órfão criado pela Iolanda, sumiu na noite em que o sino parou; lá em cima há uma "teia cinza que come o som" no badalo.
+  - Castian foge para a torre (declara o Atalho de costume). *Medo* no guarda da frente (Grau 2, 1 Arcano): 🎲 8 e 7 → 18 contra 10, sucesso **por Arcano**. *Correr, rápido* (Agilidade 0) contra 12: 🎲 6 e 9 → 15, sucesso **por Cataclisma** → o mestre emoldura: a Iolanda fica para trás segurando os guardas; pote 3/8.
+  - Nota de regra: o Atalho só conta quando o jogador **pega o benefício** (e entrega Cataclisma). Como os dados resolveram sozinhos, não marcou Laço. Nomear o Atalho e do que ele protege dá +1 Arcano.
+- **Evento 2 — A torre que come o som.**
