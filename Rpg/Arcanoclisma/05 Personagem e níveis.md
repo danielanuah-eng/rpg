@@ -1,6 +1,6 @@
 # 05 — Criar personagem e subir de nível
 
-> Rascunho v0. Não existe raça: a aparência é **skin** (livre) e o que o personagem faz vem do **Comportamento** e do **Valor**. Todo personagem usa magia; o jeito de exercer (foco, arma, Transcrito, corpo...) é livre.
+> Rascunho v0. Não existe raça como regra: por padrão o personagem é humano, e pode ser de um **povo infundido** só como escolha narrativa ([[08 Mundo e entidades]]). A aparência é **skin** (livre) e o que o personagem faz vem do **Comportamento** e do **Valor**. Todo personagem usa magia; o jeito de exercer (foco, arma, Transcrito, corpo...) é livre.
 
 ## Sessão zero (antes das fichas)
 

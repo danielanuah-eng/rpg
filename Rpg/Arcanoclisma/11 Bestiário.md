@@ -174,7 +174,7 @@ Ser: Semideus, Cavaleiro · Agir: Chicotear (Médio) · Montar (livre: está sem
 
 ## Dragões e wyverns
 
-Dragões são criaturas deste mundo e **representam os Valores**: cada um nasce de um Valor, e isso aparece na cor, na forma e nas **chamas luminosas** que saem dos espinhos e dos olhos. Os **mais velhos são inteligentes e sapientes** (falam, negociam, lembram eras); os **mais novos não** (são feras). **Wyverns** são parentes menores, sem sapiência, **domesticáveis e montáveis** (ver [[06 Itens e dinheiro]]). Tabela de dragões por Valor em [[08 Mundo e entidades]].
+Dragões são criaturas deste mundo e **representam os Valores**: cada um nasce de um Valor, e isso aparece na cor, na forma e nas **chamas luminosas** que saem dos espinhos e dos olhos. Os **mais velhos são inteligentes e sapientes** (falam, negociam, lembram eras); os **mais novos não** (são feras). Bem e mal não se aplicam a eles; alguns sabem magia, outros são aterrorizantes, outros curiosos. **Wyverns** são parentes menores, sem sapiência, **domesticáveis e montáveis** (ver [[06 Itens e dinheiro]]). Tabela de dragões por Valor em [[08 Mundo e entidades]].
 
 Todo dragão tem o **Valor** do seu tipo, um **Desejo**, um **Domínio** e **pessoas preferidas** (gerador em [[08 Mundo e entidades]]) — o Desejo entra no campo *Quer* — e o verbo **Soprar** com o efeito do Valor (a chama de Alvorum cega, a de Morbidyum apodrece, a de Eternyr envelhece...).
 

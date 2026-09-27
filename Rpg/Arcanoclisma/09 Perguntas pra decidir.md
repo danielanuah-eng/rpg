@@ -200,7 +200,7 @@ Sua resposta: ✅ sem penalidade; a relação é narrativa e opcional, mas dá *
 Sua resposta: 🔁 dano de arma rolado como no Daggerheart; o Canal Arma ficou mais sutil: em vez de +1 dado da arma, **os traços da arma valem nas magias de ataque** feitas por ela (Precisa +1 no acerto, Cruel, Atordoante, Alcance...). Ver P-94.
 
 **P-76** 🟢 Dragões: a tabela por Valor (Dragão-Lâmina, -Mercúrio, -Coleira, -Coral, -Eclipse, -Pálido, -Véu, -Ampulheta, -Musgo). Nomes e cores ok? De onde eles vêm (pergunta 18 de [[08 Mundo e entidades]])?
-Sua resposta: 🟡 (veio cortada) dragões são **manifestações puras de personalidade com desejo** (nobre, perverso, assustador...), com **Domínio** e **pessoas preferidas**. Aplicado em [[08 Mundo e entidades]] com um gerador d6. Falta o resto da frase: "eles s...".
+Sua resposta: ✅ dragões são **manifestos cientes de desejo e vontade**; bem e mal não se aplicam; a humanidade é passageira e interessante para eles; deuses são "grandes primatas desprovidos de sentido"; uns sabem magia, outros aterrorizam, outros são curiosos; majestosos. Com Desejo, Domínio e pessoas preferidas.
 
 **P-77** 🟢 Quer que jogadores possam **ter** uma wyvern (montaria/familiar) desde o nível 1, ou só a partir da Moldura 2?
 Sua resposta:
@@ -247,4 +247,7 @@ Sua resposta:
 ## Rodada 8
 
 **P-94** 🟡 Canal Arma: **os traços da arma valem na magia** feita por ela. Assim a espada Precisa dá +1 no acerto da magia, o machado Cruel faz o Grave marcar +1 PV, o martelo Atordoante atordoa. Fica sutil e cada arma dá um "sabor" diferente. Serve, ou prefere um número fixo pequeno (ex.: +1 no dano, igual ao Foco)?
+Sua resposta:
+
+**P-95** 🟡 **Povos infundidos**: outros povos existem, não usam magia porque são feitos dela; o jogador pode escolher ser de um deles, só como escolha narrativa, com as mesmas regras. Humanos também adquiriram a magia convivendo com eles. Usei os povos dos Reinos como os primeiros exemplos. Quer criar povos do mundo comum também (quantos, e ligados a quais Valores)?
 Sua resposta:

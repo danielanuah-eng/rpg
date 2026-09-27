@@ -14,7 +14,7 @@
 >
 > Dessas relações nasceram os primeiros **semideuses**. Não bastava deitar-se com um mortal: um semideus só nasce quando uma alma humana e o arcano de um deus encontram, juntos, um sentido verdadeiro. Por isso são poucos.
 >
-> Dos semideuses, e às vezes da simples vontade deles, nasceram os **Comprometidos**: humanos que movem a magia e cuja vida passa a se orientar por ela. Menos poder que os pais, mas nenhuma rigidez divina. Um Comprometido pode ir aonde nenhum deus foi, e pagar o que nenhum deus pagaria.
+> Dos semideuses, e às vezes da simples vontade deles, nasceram os primeiros **Comprometidos**: humanos que movem a magia e cuja vida passa a se orientar por ela. Menos poder que os pais, mas nenhuma rigidez divina. Um Comprometido pode ir aonde nenhum deus foi, e pagar o que nenhum deus pagaria.
 >
 > A magia correu solta e o mundo perdeu o equilíbrio. Então o Arcanoclisma fez a única coisa que sabia: dividiu-se. Ele era **um**. Virou **dois**: **Arcano** e **Cataclisma**. E cada metade, sozinha, virou um **um** de novo: inteira por fora, incompleta por dentro.
 
@@ -86,7 +86,11 @@ Cada Primordial deixou no mundo, ou fora dele, um lugar onde o Valor é a lei. (
 
 ## Povos, culturas e lugares
 
-Não há raças: há gente, de todas as aparências, e as culturas nascem do lugar e do Valor que manda nele.
+O mundo tem **humanos** e tem **outros povos**. As culturas nascem do lugar e do Valor que manda nele.
+
+- **Povos infundidos**: os outros povos do mundo **não usam magia: são feitos com ela**. O Valor está no corpo deles (na pele, no sangue, no jeito de existir), e não em palavras. Os povos dos Reinos (Juramentados, Moldados, Mansos, Sentidos, Vigias, Esquecidos, Repetidos) são alguns deles; outros vivem no mundo comum.
+- **Humanos e povos infundidos**: foi também se relacionando com esses povos (em amizade, casamento, aprendizado, convivência) que muitos humanos **adquiriram o domínio do Arcano e a percepção dos Valores**, além dos que descendem de semideuses. Há famílias, vilas e cidades inteiras que são mistura das duas coisas.
+- **Jogar com um povo infundido**: por padrão os personagens são humanos Comprometidos, mas **o jogador pode escolher ser de um povo infundido**. Na mesa ele usa as mesmas regras (Comportamento, Valor, palavras); o povo dá **só possibilidades narrativas**: aparência, costumes, como os outros o tratam, o que ele sente ao conjurar com palavras aquilo que o povo dele simplesmente é.
 
 - **Comprometidos**: quem usa magia. A vida, o estilo e o poder se orientam pelo Valor, na personalidade e no jeito de agir (ver o Compromisso de cada Valor em [[03 Valores]]). Em muitos lugares se reconhece um Comprometido pelo jeito antes de ver a magia.
 - **Magia é comum.** Quem tem, usa o tempo todo: no fogão, na oficina, na lavoura, na briga. Cada um exerce do seu jeito (um foco, a própria arma, um Transcrito, o corpo, a voz). O mundo só bagunça quando alguém usa magia de forma instável, poderosa demais ou sem parar — é aí que aparecem Feridas, Disruptos e Protetores.
@@ -112,7 +116,9 @@ Não há raças: há gente, de todas as aparências, e as culturas nascem do lug
 
 Dragões são criaturas **deste mundo**, e **representam os Valores**. Cada dragão nasce de um Valor e carrega isso no corpo: cor, forma, e **chamas luminosas e bruxuleantes** que saem dos espinhos e dos olhos. Dentro de um mesmo Valor as formas e aparências variam muito; a tabela dá o mais comum.
 
-Um dragão é uma **manifestação pura de personalidade com desejo**: o Valor dele virou vontade com corpo. O desejo pode ser **nobre, perverso, assustador, terno, mesquinho** — mas é sempre inteiro, sem meio-termo. Todo dragão tem:
+Um dragão é um **manifesto ciente de desejo e vontade**: o Valor dele virou vontade com corpo, e ele sabe disso. **Bem e mal não se aplicam** a dragões; o desejo pode parecer nobre, perverso, assustador ou terno aos olhos humanos, mas para o dragão é só o que ele é, inteiro, sem meio-termo.
+
+Para eles, a **humanidade é passageira e interessante**: os mortais e os outros povos são como estações do ano, bonitos de observar e rápidos de acabar. **Os deuses**, os dragões consideram **grandes primatas desprovidos de sentido**. Alguns dragões **sabem magia** (conjuram com as palavras do seu Valor), outros são **aterrorizantes**, outros **curiosos**. Todos são **majestosos**.
 - um **Desejo** (o que ele quer, do jeito dele);
 - um **Domínio** (o território que é dele: uma montanha, um porto, um bairro, uma biblioteca, uma rota de comércio);
 - **pessoas preferidas** (para proteger, colecionar, atormentar, ensinar, devorar — seja lá o que o Desejo pedir).
@@ -195,8 +201,9 @@ Responda as que quiser; as ★ são as que mais destravam.
 17. Zahun tem outros filhos? Que rostos ele costuma usar?
 18. ★ De onde vêm os dragões: dos Primordiais, dos Valores direto, de antes da divisão? E por que Vyal tem pele de dragão?
 19. Onde os Anciãos vivem, e o que as pessoas oferecem a eles?
+20. ★ Quais são os povos infundidos do mundo comum (fora dos Reinos)? Que Valor cada um carrega no corpo, e como se relacionam com os humanos?
 
 ### Tom
-20. ★ Aventura heroica, horror, drama político, comédia? (Pode ser "depende da Era".)
-21. Uma cena que, se acontecesse na mesa, faria você dizer "é esse o meu jogo".
-22. O que você **não quer** que o jogo vire.
+21. ★ Aventura heroica, horror, drama político, comédia? (Pode ser "depende da Era".)
+22. Uma cena que, se acontecesse na mesa, faria você dizer "é esse o meu jogo".
+23. O que você **não quer** que o jogo vire.
