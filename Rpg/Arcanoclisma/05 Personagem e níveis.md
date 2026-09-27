@@ -26,7 +26,7 @@ Anote cada relação na ficha dos dois personagens (no app, aparece nas duas fic
 ## Criação em 9 passos
 
 1. **Conceito e Era** — quem é o personagem, numa frase, e **de onde ele vem**: uma cidade, um povo, ou qualquer um dos **Reinos** ([[08 Mundo e entidades]]). A origem não dá habilidade nem bônus: dá história, costumes, sotaque, gente que ele conhece. A graça está no que isso significa para ele.
-2. **Comportamento** — anote Esquiva, PV, Limiares base, armaduras, o **Talento** e o **Hábito** ([[04 Comportamentos]]).
+2. **Comportamento** — anote Esquiva, PV, Limiares base, o **Talento** e o **Hábito** ([[04 Comportamentos]]).
 3. **Valor** — o personagem é um **Comprometido**. Pegue a **ficha do seu Valor** (36 palavras, símbolo, Skill, Drawback, 4 espaços extras) e anote o **Compromisso** ([[03 Valores]]).
 4. **Vínculo** — responda às perguntas abaixo.
 5. **Canal** — como você exerce a magia: foco arcano, arma, Transcrito, corpo, voz, familiar ou marca ([[02 Magia]]).
@@ -103,7 +103,7 @@ Este bloco não dá bônus nem é cobrado pelo mestre. Serve para a mesa conhece
 
 Tudo o que não é a magia do Valor. **Frente**: o que se usa jogando (identidade, Comportamento, atributos, Palavras Básicas, Arcano, Laço, itens). **Verso**: criação e lore (perguntas, relações da party, Vivências, anotações).
 - **Identidade**: nome, skin (aparência, com espaço para desenho ou foto), Era, conceito numa frase, jogador.
-- **Comportamento**: nome, Esquiva, Limiares (Maior/Grave), PV, Cansaço, Proteção, armaduras permitidas, **caixas de talento** (Talento e Hábito com marcação Básico/Superior, e espaços vazios para talentos avulsos).
+- **Comportamento**: nome, Esquiva, Limiares (Maior/Grave), PV, Cansaço, Proteção, **caixas de talento** (Talento e Hábito com marcação Básico/Superior, e espaços vazios para talentos avulsos).
 - **Atributos** (os 6, com casinha de marca de avanço).
 - **Palavras Básicas**: a tabela de verbos de ação, a de modos (com o atributo de cada coluna) e a de formas, para o jogador montar "verbo + modo" olhando a ficha.
 - **Arcano** e os **Laços**: 3 linhas de descrição (mais espaço para Laços novos), cada uma com a caixinha **apertado**; as caixinhas **"Atalhos nesta sessão □□"**; e o **Atalho de costume** escrito do lado.

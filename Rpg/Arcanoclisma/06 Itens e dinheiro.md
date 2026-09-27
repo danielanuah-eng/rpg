@@ -61,15 +61,17 @@ A arma bate um pouco mais forte num alvo só e não gasta nada; a magia acerta v
 
 ## Armaduras
 
-Somam nos Limiares e dão casas de **Proteção**.
+Somam nos Limiares e dão casas de **Proteção**. Qualquer personagem usa qualquer armadura; as mais pesadas **atrapalham naturalmente**: tiram Esquiva e pesam nos testes de mobilidade (correr, saltar, escalar, nadar, se esconder).
 
-| Armadura | Limiares (P1) | Proteção | Esquiva | Preço |
-|---|---|---|---|---|
-| **Leve** (couro, gibão, casaco reforçado) | +1 / +2 | 3 | — | 20 o |
-| **Média** (cota, escamas) | +2 / +4 | 4 | — | 50 o |
-| **Pesada** (placas) | +4 / +7 | 5 | −1 (Brutamontes não perde) | 90 o |
+| Armadura | Limiares (M1) | Proteção | Esquiva | Testes de mobilidade | Preço |
+|---|---|---|---|---|---|
+| **Leve** (couro, gibão, casaco reforçado) | +1 / +2 | 3 | — | — | 20 o |
+| **Média** (cota, escamas) | +2 / +4 | 4 | — | −1 | 50 o |
+| **Pesada** (placas) | +4 / +7 | 5 | −1 | −2 | 90 o |
 
-Versão melhor por Moldura: **P2 +2/+4 · P3 +4/+9 · P4 +6/+13** a mais nos Limiares, +1 Proteção no P3.
+O **Brutamontes** não sofre a penalidade de mobilidade de nenhuma armadura (a Esquiva ele perde igual).
+
+Versão melhor por Moldura: **M2 +2/+4 · M3 +4/+9 · M4 +6/+13** a mais nos Limiares, +1 Proteção no P3.
 
 ## Focos, armas e Transcritos de Canal
 

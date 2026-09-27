@@ -112,7 +112,7 @@ Sua resposta: ✅ ok (rodada 1)
 Sua resposta: ✅ ok (rodada 1)
 
 **P-27** 🟢 Os talentos dos 10 Comportamentos (em [[04 Comportamentos]]). Marque os que você amou, os que quer trocar, e se sente falta de algum Comportamento.
-Sua resposta:
+Sua resposta: ✅ revisado: armaduras pesadas tiram Esquiva e pesam na mobilidade (Brutamontes só perde Esquiva); Brutamontes com Corpo de Pedra; Atlético com Impulso; Popular sem nada em combate e mais caro/limitado; Impaciente sem mecânica de PV baixo e Tudo ou Nada 1x/sessão; Larápio com Surrupiar rolado e sem roubar palavra; Privilegiado pergunta algo específico a qualquer momento; Briguento com arma improvisada e Aparar na Raça; Curioso objetivo (2x/sessão), Inteligência sem Cataclisma, Análise de um dado só; Caótico sem ganho pela falha dos aliados e Abraçar o Caos por sorteio; Enganador com Sumir na Paisagem. Ver [[04 Comportamentos]].
 
 ## Itens
 

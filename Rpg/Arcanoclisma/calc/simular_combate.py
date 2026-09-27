@@ -43,7 +43,7 @@ def montar():
         # Nhanda: Enganadora, Persona, Voz; magia G2 com −2 de Dificuldade em pessoas
         PJ("Nhanda", 12, 5, 6, 12, 3, lambda a: (3, lambda: d(10) + 2, -2 if a.humano else 0, True)),
         # Oruã: Brutamontes, Primitivum, Corpo; lança d10+2, Força +2, armadura Pesada
-        PJ("Oruã", 9, 7, 11, 20, 5, lambda a: (2, lambda: d(10) + 2, 0, False)),
+        PJ("Oruã", 8, 7, 11, 20, 5, lambda a: (2, lambda: d(10) + 2, 0, False)),
     ]
     advs = [
         Adv("Domadora (Líder)", 13, 6, 8, 14, 1, lambda: d(10) + 2, True),

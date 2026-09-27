@@ -29,9 +29,9 @@
 
 - **Comportamento**: Briguento · **Valor**: Conflitüo · **Canal**: Arma (machado)
 - **Atributos**: Força +2 · Agilidade +1 · Percepção +1 · Sabedoria 0 · Carisma 0 · Inteligência −1
-- **Esquiva** 10 · **PV** 6 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 8 / 16 · **Proteção** 4 (cota, Média)
+- **Esquiva** 10 · **PV** 6 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 8 / 16 · **Proteção** 4 (cota, Média: −1 em testes de mobilidade)
 - **Machado**: Força, Toque, **d10+3** (com Gosto de Sangue), Cruel (dano Grave marca +1 PV). Pela arma, a magia também é Cruel.
-- **Talento — Gosto de Sangue**: +1 de dano com armas; dano Grave = +1 Arcano. **Hábito — Surra** (3): dano dobrado ou um segundo alvo.
+- **Talento — Gosto de Sangue**: usa todas as armas, qualquer coisa vira arma (d8+1); +1 de dano com armas; dano Grave = +1 Arcano. **Hábito — Surra** (3): dano dobrado ou um segundo alvo.
 - **Skill — Fio da Guerra**: em combate, magia com +1 dado de dano ou +2 no total. **Drawback**: fora de combate, magia custa +2 Arcano.
 - **Compromisso**: "Não fujo de briga que é minha."
 - **Laços**: *O Capitão Brando, que me mandou fugir e morreu na muralha* · *Resolver na porrada antes de pensar* (Atalho de costume) · *O medo de ser só uma arma*
@@ -45,7 +45,7 @@
 - **Atributos**: Inteligência +2 · Sabedoria +1 · Percepção +1 · Agilidade 0 · Carisma 0 · Força −1
 - **Esquiva** 10 · **PV** 5 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 6 / 12 · **Proteção** 3 (couro, Leve)
 - **Adaga**: Agilidade, Toque, d8+1. **Magia de dano** (G2): 1d10 + 3 (com o Foco).
-- **Talento — Já Li Sobre Isso**: uma vez por Evento, um fato verdadeiro (inclui palavras e Valor de adversários). **Hábito — Análise** (3): descobre Dificuldade, Limiares e Valores; aliados +1 contra ele.
+- **Talento — Já Li Sobre Isso**: duas vezes por sessão, um fato objetivo e descritivo, verdadeiro, sobre uma criatura, objeto ou lugar. **Hábito — Análise** (3): no começo de um Evento, descobre **um** dado (a Dificuldade, os Limiares, uma palavra ou o Valor de um adversário; um costume; um perigo).
 - **Skill — Mistura** (1 Arcano): dois elementos numa palavra. **Drawback**: +1 Arcano por passo de estado além do primeiro.
 - **Compromisso**: "Nada precisa ficar como está."
 - **Laços**: *Meu pai, que acha que magia é doença* · *Estudar em vez de sentir* (Atalho de costume) · *A culpa pelo afogamento do Caio*
@@ -59,7 +59,7 @@
 - **Atributos**: Carisma +2 · Agilidade +1 · Inteligência +1 · Percepção 0 · Sabedoria 0 · Força −1
 - **Esquiva** 12 · **PV** 5 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 6 / 12 · **Proteção** 3 (Leve)
 - **Adaga**: Agilidade, Toque, d8+1. **Magia de dano** (G2): 1d10 + 2.
-- **Talento — Mil Caras**: Vantagem para disfarçar, mentir e se esconder; mentira que funciona num PNJ = +1 Arcano. **Hábito — Não Era Eu** (3): o ataque que acertaria erra; ela está escondida Perto.
+- **Talento — Mil Caras**: Vantagem para disfarçar, mentir e se esconder; mentira que funciona num PNJ = +1 Arcano. **Hábito — Sumir na Paisagem** (3, uma vez por sessão): se esconde no ambiente sem ninguém perceber, descrevendo como.
 - **Skill — Toque Humano**: −2 na Dificuldade de magias em pessoas (depois de escolher qual Dificuldade vale: contra a Domadora, 13 − 2 = 11). **Drawback — Drama**: se falhar, o mestre narra o resultado mais cômico.
 - **Compromisso**: "Gente vem antes de tudo."
 - **Laços**: *A trupe que eu abandonei na estrada* · *Mentir antes que me perguntem* (Atalho de costume) · *O medo de que ninguém goste de quem eu sou sem máscara*
@@ -71,9 +71,9 @@
 
 - **Comportamento**: Brutamontes · **Valor**: Primitivum · **Canal**: Corpo
 - **Atributos**: Força +2 · Sabedoria +1 · Agilidade +1 · Percepção 0 · Carisma 0 · Inteligência −1
-- **Esquiva** 9 · **PV** 7 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 11 / 20 · **Proteção** 5 (placas, Pesada, sem perder Esquiva)
+- **Esquiva** 8 · **PV** 7 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 11 / 20 · **Proteção** 5 (placas, Pesada: −1 Esquiva; a mobilidade não sofre, por ser Brutamontes)
 - **Lança**: Força, Perto, d10+2, Alcance.
-- **Talento — Ombro de Aríete**: Vantagem para empurrar, levantar, arrombar, segurar. **Hábito — Terremoto de Carne** (3): ataca todos Perto, quem é acertado cai.
+- **Talento — Ombro de Aríete**: Vantagem para empurrar, levantar, arrombar, segurar; armadura não atrapalha a mobilidade. **Hábito — Corpo de Pedra** (3): até o fim do Evento, Vantagem em testes de Força e de resistir.
 - **Skill — Forma Animal**: 1 vez nesta sessão (Moldura 1), um animal até o tamanho de gente, com 2 Traços Animais. **Drawback**: como bicho, não conjura.
 - **Compromisso**: "O corpo sabe antes da cabeça."
 - **Laços**: *Minha avó Jaci, que me ensinou a falar com bicho* · *Ficar calado e aguentar* (Atalho de costume) · *A raiva que eu tenho da cidade*
