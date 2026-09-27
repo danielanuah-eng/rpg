@@ -1,0 +1,161 @@
+# 09 — Perguntas pra decidir
+
+> O roteiro de perguntas e respostas. Cada pergunta tem a minha recomendação. Responda embaixo de cada uma, com uma palavra ("ok", "não") ou com a sua versão. As 🔴 travam o primeiro teste de mesa; as 🟡 dá para testar sem; as 🟢 são para a fase 2 em diante.
+
+---
+
+## Dados e economia
+
+**P-01** 🔴 Você escreveu "d20 pra testes básicos" e também "2d12 pra tudo".
+Recomendo: **jogador rola sempre 2d12; o mestre (adversários) rola sempre d20.** Assim todo teste de jogador alimenta Arcano e Cataclisma.
+Sua resposta:
+
+**P-02** 🔴 A escada 2d12 → 4d6 → 8d4 quebra: **8d4 soma até 32**, não 24, e acerta 98–100% contra qualquer Dificuldade.
+Recomendo: **2d12 → 3d8 → 4d6 → 6d4** (todos somam no máximo 24), um conjunto por Grau (2 a 5). Grau 1 não rola.
+Sua resposta:
+
+**P-03** 🔴 Crítico dá "Arcano igual ao maior dado". No d12 isso pode dar 12 Arcano de uma vez.
+Recomendo: **igual ao maior dado, no máximo 6**, e no lugar do Arcano dos pares (não soma os dois).
+Sua resposta:
+
+**P-04** 🟡 A tabela de Dificuldades (d20) está ordenada do pior (1) para o mais leve (20), e dá para gastar 2 Arcano para rolar de novo.
+Recomendo: **manter ordenada.** Alternativa: aleatória, sem ordem.
+Sua resposta:
+
+**P-05** 🔴 Com "cada dado ímpar = 1 Cataclisma", o mestre ganha em média **1 por rolagem de jogador** (o dobro do Medo do Daggerheart). Com 4 jogadores, uns 30 por hora.
+Recomendo: **testar assim** (é o "gerar bastante" que você pediu), com máximo 20 e Transbordo. Se ficar demais, a alavanca é: **Equilíbrio (um par, um ímpar) não dá Cataclisma**, só o Arcano.
+Sua resposta:
+
+**P-06** 🟡 Máximos: **Arcano 12 por jogador** (começa com 3) e **Cataclisma 20** (começa com 2 por jogador). O excesso de Cataclisma **transborda** num Evento automático.
+Recomendo: manter.
+Sua resposta:
+
+**P-07** 🟡 O holofote passa ao mestre quando o jogador **falha** ou tira **Ímpar** (dois ímpares). Em Equilíbrio (um de cada) com sucesso, continua com os jogadores.
+Recomendo: manter.
+Sua resposta:
+
+**P-08** 🟡 Rolagens de **reação** (resistir a algo) não geram Arcano nem Cataclisma.
+Recomendo: manter (segura a economia).
+Sua resposta:
+
+## Magia
+
+**P-09** 🔴 **Grau 1 (Comum) não rola**: acontece e não gera nada. Grau 2 é a primeira magia com dado.
+Recomendo: manter.
+Sua resposta:
+
+**P-10** 🔴 A roda de opostos. Recomendo a **A**: Conflitüo × Persona, Dominum × Primitivum, Alvorum × Cognitium, Morbidyum × Eternyr, **Sublimeyn = Eixo** (sem oposto).
+Alternativa B: Conflitüo × Sublimeyn, Dominum × Persona, Alvorum × Cognitium, Morbidyum × Primitivum, **Eternyr = Eixo**.
+Sua resposta:
+
+**P-11** 🔴 Persona: "suas magias em pessoas têm 1 dificuldade a menos". Isso é **−1 na Dificuldade (o número)** ou **uma Dificuldade (efeito ruim do d20) a menos**?
+Recomendo: **−2 no número** como Skill, e "uma Dificuldade a menos" como Ressonância II.
+Sua resposta:
+
+**P-12** 🟡 Eternyr não tem Skill e tem Dificuldade maior. Coloquei **+2** e deixei explícito que a vantagem dele é **mexer no holofote e no tempo**, coisa que ninguém mais faz. As Ressonâncias (Passo, Rebobinar) compensam.
+Recomendo: manter.
+Sua resposta:
+
+**P-13** 🟡 Primitivum: transformações por sessão = **nível** (até 10) ou **Patamar** (até 4)?
+Recomendo: **Patamar.** Com o nível, no fim do jogo vira ilimitado na prática.
+Sua resposta:
+
+**P-14** 🟢 Símbolos e cores dos Valores (em [[03 Valores]]). Quer mudar algum? Tem alguma imagem abstrata na cabeça para algum deles?
+Sua resposta:
+
+**P-15** 🔴 O personagem tem acesso às **36 palavras do Valor desde o nível 1**, e o que cresce é quantas ele junta por magia (2 → 5).
+Recomendo: manter. Alternativa: começa com 12 e libera uma linha por Patamar.
+Sua resposta:
+
+**P-16** 🟡 Palavra Básica **nunca é o núcleo** (a primeira palavra tem que ser do seu Valor).
+Recomendo: manter, para cada Valor ter cara própria.
+Sua resposta:
+
+**P-17** 🟡 **Cura custa +1 Arcano por PV curado**, em qualquer Grau.
+Recomendo: manter (senão Morbidyum com Grau 2 grátis cura sem fim).
+Sua resposta:
+
+**P-18** 🟡 **Falha por pouco** (até 2 abaixo): a magia sai um Grau menor.
+Recomendo: manter (magia falhar seco é frustrante).
+Sua resposta:
+
+**P-19** 🟡 **Magia em Dupla**: 3 Arcano, cada um rola o seu Grau máximo, soma os totais contra a soma das Dificuldades, efeito sobe 1 Grau (2 se opostos), as duas Skills valem. Opostos: Dificuldade +4, Cansaço, uma Dificuldade a mais.
+Recomendo: testar assim.
+Sua resposta:
+
+**P-20** 🟡 Quantas palavras extras de outros Valores: você disse **até 4**. Mantive, e o Curioso pode ter uma quinta.
+Sua resposta:
+
+## Personagem
+
+**P-21** 🟡 "Uma ficha para cada Valor que a pessoa escolher": dá para ter **dois Valores**?
+Recomendo: começa com 1; no Patamar 3 pode **Despertar outro Valor** (2 avanços), com 12 palavras dele, Skill e Drawback, Grau máximo −1 nele.
+Sua resposta:
+
+**P-22** 🟡 **Segundo Comportamento** no Patamar 3 (2 avanços), sem acesso aos talentos de Mestre dele.
+Recomendo: manter.
+Sua resposta:
+
+**P-23** 🟡 **Vivências** (frases do passado que dão +2 gastando 1 Arcano). Você não citou, mas vem do seu documento do Rune. Ficam?
+Sua resposta:
+
+**P-24** 🟡 Atributos: **+2, +1, +1, 0, 0, −1**, máximo +5.
+Sua resposta:
+
+**P-25** 🟡 **Movimentos de Morte**: Apagar, Última Palavra, Jogar os Dados (em [[01 Regras centrais]]).
+Sua resposta:
+
+**P-26** 🟡 Subir de nível por **marco** (o mestre decide quando), sem XP.
+Sua resposta:
+
+**P-27** 🟢 Os talentos dos 10 Comportamentos (em [[04 Comportamentos]]). Marque os que você amou, os que quer trocar, e se sente falta de algum Comportamento.
+Sua resposta:
+
+## Itens
+
+**P-30** 🟢 Moeda: **Ordynus** como padrão, e cada mesa pode renomear. O singular é "Ordyn"?
+Sua resposta:
+
+**P-31** 🟡 Arma bate um pouco mais forte que magia num alvo só e não gasta nada; magia acerta vários e muda a cena, mas custa e gera Cataclisma.
+Recomendo: manter (quem não usa magia não fica para trás).
+Sua resposta:
+
+**P-32** 🟢 **Relíquia = objeto com uma palavra.** É o jeito mais simples de item mágico conversar com o sistema de palavras.
+Sua resposta:
+
+**P-33** 🟢 Materiais por Valor e fabricar Relíquias num Pouso. Quer um sistema de fabricação maior (tipo receitas do Wilderfeast) ou só isso?
+Sua resposta:
+
+## Mundo
+
+**P-40** 🟢 **Zahun deixou o Cognitium e virou Persona**, e o trono do Cognitium ficou vazio — e é o que Vyal quer. Gosta?
+Sua resposta:
+
+**P-41** 🟢 Nome do "Tártaro" de Kairvahnn: **a Voragem**? (ou Fosso de Carne, Covil Sem Fundo, Tharkun, outro)
+Sua resposta:
+
+**P-42** 🟢 Protetores do Arcano: ordem de gente, espécie de criatura, ou os dois?
+Sua resposta:
+
+**P-43** 🟢 Nome dos humanos que usam magia: **Falantes** (porque a magia é feita de palavras)? Outras: Tocados, Herdeiros.
+Sua resposta:
+
+**P-44** 🟢 Criaturas do Cataclisma: **os Rasgados**?
+Sua resposta:
+
+**P-45** 🟢 Nomes dos Primordiais novos (Thorvessa, Oyamar, Idrael, Velhena, Ossyr, Tahwë) e dos semideuses. Troque o que quiser.
+Sua resposta:
+
+**P-46** 🟢 O nome do jogo: **Arcanoclisma**? Ou outro?
+Sua resposta:
+
+## Produção (fase 5)
+
+**P-50** 🟢 App num HTML só, offline, instalável no celular, num **Netlify novo** só deste jogo. Página inicial com capa, documentos para baixar, galeria e botão de instalar.
+Sua resposta:
+
+**P-51** 🟢 Ficha de papel em **A4**, colorida com versão econômica em preto e branco?
+Sua resposta:
+
+**P-52** 🟢 Estilo das imagens: mesmo pipeline do Peso do Céu (Canva, fundo branco, recorte automático)? Algum artista ou jogo de referência para o visual?
+Sua resposta:
