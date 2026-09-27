@@ -312,7 +312,7 @@ Sua resposta: ✅ ok: uma rolagem só.
 Sua resposta: 🔁 Passo e Laço conversam direto, com peso mais narrativo que mecânico. Laço apertado: ações **diferentes do padrão do Laço** têm **Dificuldade +2** (agir por um Valor é difícil, mas necessário), uma **relação estremece** (não ajuda nem faz Dupla), a consequência cresce (por sessão e por Atalho novo). O Passo é a ação diferente e sempre solta. Aplicado em [[01 Regras centrais]].
 
 **P-109** 🟡 **Passo de Valor**: o Arcano vem uma vez por Evento (os Passos continuam valendo para soltar Laços e desfundir).
-Sua resposta:
+Sua resposta: ✅ sem limite: todo Passo de Valor dá +1 Arcano (o custo do Passo, e o +2 do Laço apertado, já seguram o abuso).
 
 **P-110** 🟢 Ficha com "Atalhos nesta sessão □□" do lado dos Laços.
 Sua resposta: ✅ ok.

@@ -1,6 +1,6 @@
 # 14 — Teste das mecânicas
 
-> Cada mecânica testada em três perguntas: **quantas etapas** ela pede na mesa, se é **fácil de aplicar**, e se dá **vantagem demais quando repetida**. Números de `calc/simular_economia.py`, `calc/simular_combate.py` e contas diretas nos dados. **Decidido depois do teste**: P-104 (Grau 2 custa 1), P-105 (duas ajudas no máximo), P-106 (uma Dificuldade só), P-107 (Dupla numa rolagem), P-110 (caixinhas de Atalho) aplicados; P-108 virou o redesenho do Laço apertado (Dificuldade +2 fora do padrão, relação estremecida, consequência que cresce; o Passo solta). Em aberto: P-109.
+> Cada mecânica testada em três perguntas: **quantas etapas** ela pede na mesa, se é **fácil de aplicar**, e se dá **vantagem demais quando repetida**. Números de `calc/simular_economia.py`, `calc/simular_combate.py` e contas diretas nos dados. **Decidido depois do teste**: P-104 (Grau 2 custa 1), P-105 (duas ajudas no máximo), P-106 (uma Dificuldade só), P-107 (Dupla numa rolagem), P-110 (caixinhas de Atalho) aplicados; P-108 virou o redesenho do Laço apertado (Dificuldade +2 fora do padrão, relação estremecida, consequência que cresce; o Passo solta). P-109: sem limite — todo Passo dá +1 Arcano.
 
 ## 1. Quanto cada ajuda vale
 
@@ -74,7 +74,7 @@ Com H, a tabela de Graus ficaria: **Grau 1: 0 · Grau 2: 1 · Grau 3: 2 · Grau 
 3. **P-106 · Uma Dificuldade só**: magia **contra um alvo** usa **só a Dificuldade do alvo**; a Dificuldade do Grau vale só para efeitos **sem alvo**. As duas já são quase iguais em toda Moldura (12/14/16/19 contra 12/14/16/18), então o "a maior entre as duas" só atrasa a mesa (e foi o que escondeu a Skill de Persona).
 4. **P-107 · Dupla em uma rolagem**: quem conduz rola **os dados do Grau do efeito** (o maior Grau dos dois + 1) + Sintonia + Relação; o parceiro soma **+2**; contra a Dificuldade desse Grau. As duas Skills valem. Opostos: efeito +2 Graus, Dificuldade +2, os dois marcam Cansaço. Mesma chance de hoje (89–90% em qualquer Moldura; opostos 57–70%), com metade das etapas.
 5. **P-108 · Freio do Atalho**: com o Laço **já apertado**, cada novo Atalho que toca nele faz a consequência **crescer na hora**, não só no fim da sessão. O Atalho continua válido e forte; só passa a cobrar de verdade quando vira o único caminho.
-6. **P-109 · Passo de Valor**: o Arcano do Passo vem **uma vez por Evento**. Dá para dar quantos Passos quiser (para soltar Laços, desfundir palavras), mas o Arcano não vira fazenda.
+6. **P-109 · Passo de Valor**: ~~o Arcano do Passo vem uma vez por Evento~~ — decidido **sem limite**: o custo do Passo (desconforto, e o +2 com o Laço apertado) já segura.
 7. **P-110 · Ficha**: duas caixinhas "Atalhos nesta sessão □□" do lado dos Laços, para ninguém precisar lembrar.
 
 ## 5. Aplicado junto com este teste
