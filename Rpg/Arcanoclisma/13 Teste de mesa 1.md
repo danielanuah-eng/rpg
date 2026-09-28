@@ -64,7 +64,7 @@
 - **Compromisso**: "Gente vem antes de tudo."
 - **Laços**: *A trupe que eu abandonei na estrada* · *Mentir antes que me perguntem* (Atalho de costume) · *O medo de que ninguém goste de quem eu sou sem máscara*
 - **Vivências**: Atriz de trupe · Conheço todo tipo de gente de feira
-- **Magias prontas**: *Amedrontar* + inimigo (G2) · *Encantar* + convencer (G2) · *Voz* + distrair (G1 no meio da ação)
+- **Magias prontas**: *Medo* + inimigo (G2) · *Encantar* + convencer (G2) · *Voz* + distrair (G1 no meio da ação)
 
 ### Oruã Casca-Grossa
 *Filho da Vila da Colheita, grande e calado, que fala melhor com bicho do que com gente.*
@@ -78,7 +78,7 @@
 - **Compromisso**: "O corpo sabe antes da cabeça."
 - **Laços**: *Minha avó Jaci, que me ensinou a falar com bicho* · *Ficar calado e aguentar* (Atalho de costume) · *A raiva que eu tenho da cidade*
 - **Vivências**: Criado na mata · Carrego qualquer coisa
-- **Magias prontas**: *Enraizar* + segurar (G2) · *Garra* + atacar, bruto (G1 no meio da ação: dano 1d8+1) · *Farejar* + procurar, instintivo (G1)
+- **Magias prontas**: *Raiz* + segurar (G2) · *Garra* + atacar, bruto (G1 no meio da ação: dano 1d8+1) · *Farejar* + procurar, instintivo (G1)
 
 **Relações da party** (para a sessão zero): Oruã e Iara se conheceram quando ele a tirou de um rio · Tomé desconfia de Nhanda desde que ela mentiu para um guarda por ele · Nhanda sabe que Iara esconde um diário · Tomé deve a vida a Oruã e nunca agradeceu direito.
 

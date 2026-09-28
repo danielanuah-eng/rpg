@@ -388,3 +388,7 @@ Mais palavras = mais caro (1 Arcano cada), mais fácil, e mais caótico (mais Di
 Onde a palavra mais pesa é na magia **resistida**: o total maior é mais difícil de escapar.
 Sua resposta: ✅ mais palavras = efeito mais específico, mais fácil de funcionar, com **mais Cataclisma em alguns tiers** (a partir da 3ª palavra, +1 Cataclisma cada, ou seja, da Moldura 2 em diante). O que se acopla ao risco é o **tamanho do efeito**: a tabela de d20 virou **Efeitos Colaterais** (para não confundir com Dificuldade) e a quantidade vem do **Grau** (G1–2: 0 · G3–4: 1 · G5: 2 · opostos +1). Adversário resiste com **d20 + Ataque** (o mestre sempre rola d20), o que mudou a tabela: resistida no Grau máximo, M1 62%/68%, M4 69% a 94%. Aplicado em [[02 Magia]].
 
+✅ **Tabelas sem raiz repetida**: como toda palavra vale em qualquer forma (gênero, número, verbo/substantivo/adjetivo), as 9 tabelas foram revisadas e **46 palavras repetidas** viraram palavras novas (ex.: Persona trocou *Enfurecer, Encorajar, Amedrontar, Furioso, Corajoso* por *Envergonhar, Inspirar, Consolar, Ciumento, Terno*; Morbidyum trocou *Mortal, Morto, Vital, Vivo, Reviver* por *Fatal, Lúgubre, Pulsante, Renascido, Embalsamar*). Também saíram repetições entre Valores (*Parar*, *Esmagador*, *Cortante*, *Imóvel*, *Ordenado*, *Sangrento*). Aplicado em [[03 Valores]].
+
+✅ **Pequeno evento** inclui buff: tudo que modifica a realidade, o mundo, alguém ou alguma coisa, ou cria.
+

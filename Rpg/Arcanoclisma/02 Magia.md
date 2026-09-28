@@ -20,6 +20,8 @@ Ser um **Comprometido eficiente e adaptativo** é olhar e usar as palavras **de 
 
 As palavras da tabela **variam livremente**: plural, gênero, e troca entre verbo, substantivo e adjetivo da mesma raiz contam como **a mesma palavra** (*Acalmar* = calma = calmo; *Humano* = humanos = humanidade; *Fogo* = fogueira = em chamas). Se o jogador quiser uma palavra **próxima** que não está na tabela (*Serenar* no lugar de *Acalmar*), a mesa aceita quando o sentido é claramente o mesmo. Isso dá variedade sem mudar custo nem limite.
 
+Por isso **as tabelas nunca repetem uma raiz**: se o Valor tem *Coragem*, ele não tem *Corajoso* nem *Encorajar*, porque qualquer palavra já vale em todas as formas (flexão de gênero e número, e como verbo, substantivo ou adjetivo). Cada casa da tabela é uma ideia nova.
+
 **Só conta palavra que muda o efeito** (para custo e para bônus). Uma palavra que apenas diz *onde* ou *em quem* a magia cai, sem acrescentar nada que a primeira já não faça, é detalhe da intenção e não conta nem custa: *Fortalecer* (Músculo) em você mesmo é uma palavra só, porque fortalecer um corpo já é músculo; *Acalmar* (Humanos) numa pessoa também. Se a segunda palavra **acrescenta** efeito (*Fortalecer Coragem*: além do corpo, o medo some), ela conta e custa.
 
 ### Relação: as palavras somam

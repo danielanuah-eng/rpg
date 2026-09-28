@@ -49,7 +49,7 @@ Oposição serve para duas coisas: **Magia em Dupla de opostos** (mais forte, ma
 | **3** | Lâmina | Escudo | Lança | Martelo | Flecha | Muralha |
 | **4** | Armadura | Estandarte | Cicatriz | Trincheira | Grito | Estilhaço |
 | **5** | Letal | Implacável | Afiado | Pesado | Certeiro | Veloz |
-| **6** | Blindado | Brutal | Incansável | Tático | Sangrento | Inquebrável |
+| **6** | Blindado | Brutal | Incansável | Tático | Voraz | Inquebrável |
 
 Exemplos: **G1** afiar a faca com um passar de dedo · **G2** *Lâmina + Projétil*: uma lâmina de luz vermelha atirada · **G3** *Muralha + Blindado*: um paredão de escudos entre o grupo e a carga · **G4** *Explodir + Estilhaço + Grupo + Letal*: o chão do pátio explode em estilhaços contra seis inimigos.
 
@@ -72,13 +72,13 @@ Perguntas de vínculo: *Contra quem ou o quê você lutou pela primeira vez, e p
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
 | **1** | Derreter | Solidificar | Liquefazer | Gaseificar | Sublimar | Condensar |
-| **2** | Moldar | Fundir | Cristalizar | Dissolver | Evaporar | Petrificar |
+| **2** | Moldar | Fundir | Cristalizar | Dissolver | Forjar | Oxidar |
 | **3** | Pedra | Metal | Água | Fogo | Gelo | Vapor |
 | **4** | Ar | Areia | Vidro | Lama | Sal | Mercúrio |
-| **5** | Denso | Leve | Fluido | Volátil | Maleável | Rígido |
-| **6** | Cortante | Poroso | Ardente | Gélido | Corrosivo | Puro |
+| **5** | Compacto | Leve | Fluido | Volátil | Maleável | Rígido |
+| **6** | Abrasivo | Poroso | Ardente | Viscoso | Corrosivo | Puro |
 
-Exemplos: **G1** gelo em água · **G2** *Fogo + Projétil*: uma bola de fogo · **G3** *Petrificar + Lama + Grupo*: três inimigos presos na lama que endurece · **G4** *Sublimar + Pedra + Área*: a parede da fortaleza vira fumaça.
+Exemplos: **G1** gelo em água · **G2** *Fogo + Projétil*: uma bola de fogo · **G3** *Pedra + Lama + Grupo*: três inimigos presos na lama que endurece · **G4** *Sublimar + Pedra + Área*: a parede da fortaleza vira fumaça.
 
 Perguntas de vínculo: *Qual material você sente como se fosse parte do seu corpo? · O que você já destruiu sem querer ao mudar de forma?*
 
@@ -98,14 +98,14 @@ Perguntas de vínculo: *Qual material você sente como se fosse parte do seu cor
 
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
-| **1** | Mandar | Obrigar | Parar | Dobrar | Domesticar | Puxar |
+| **1** | Mandar | Obrigar | Ajoelhar | Dobrar | Domesticar | Puxar |
 | **2** | Afastar | Repelir | Expulsar | Arrombar | Anular | Prender |
 | **3** | Servo | Coleira | Corrente | Chicote | Fera | Matilha |
 | **4** | Trono | Jaula | Marca | Ordem | Sangue | Carne |
-| **5** | Submisso | Leal | Domado | Feroz | Imóvel | Irresistível |
-| **6** | Absoluto | Faminto | Cruel | Obediente | Esmagador | Soberano |
+| **5** | Submisso | Leal | Manso | Feroz | Rendido | Irresistível |
+| **6** | Absoluto | Faminto | Cruel | Obediente | Tirânico | Soberano |
 
-Exemplos: **G1** um cão para de latir · **G2** *Parar*: um guarda congela no lugar até a próxima Falha · **G3** *Repelir + Onda*: três atacantes arremessados para trás · **G4** *Mandar + Matilha + Obediente*: a alcateia inteira passa a lutar por você até o fim do Evento.
+Exemplos: **G1** um cão para de latir · **G2** *Ajoelhar*: um guarda cai de joelhos e não levanta até a próxima Falha · **G3** *Repelir + Onda*: três atacantes arremessados para trás · **G4** *Mandar + Matilha + Obediente*: a alcateia inteira passa a lutar por você até o fim do Evento.
 
 Perguntas de vínculo: *A quem você já obedeceu e jurou nunca mais? · Você acha que manda porque precisa ou porque gosta?*
 
@@ -125,14 +125,14 @@ Perguntas de vínculo: *A quem você já obedeceu e jurou nunca mais? · Você a
 
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
-| **1** | Sentir | Acalmar | Enfurecer | Encorajar | Amedrontar | Encantar |
+| **1** | Sentir | Acalmar | Envergonhar | Inspirar | Consolar | Encantar |
 | **2** | Comover | Remodelar | Fortalecer | Enfraquecer | Cantar | Despertar |
 | **3** | Coração | Pele | Rosto | Voz | Alma | Músculo |
 | **4** | Medo | Coragem | Fúria | Amor | Saudade | Música |
 | **5** | Belo | Grotesco | Robusto | Frágil | Vigoroso | Sereno |
-| **6** | Furioso | Corajoso | Apaixonado | Contagiante | Íntimo | Humano |
+| **6** | Ciumento | Terno | Apaixonado | Contagiante | Íntimo | Humano |
 
-Exemplos: **G1** corar as bochechas de alguém · **G2** *Amedrontar*: o capanga foge até a próxima Falha · **G3** *Fortalecer + Músculo + Aliado*: +2 em Força para até 3 aliados · **G4** *Cantar + Fúria + Contagiante + Grupo*: uma música que faz a taverna inteira brigar.
+Exemplos: **G1** corar as bochechas de alguém · **G2** *Medo*: o capanga foge até a próxima Falha · **G3** *Fortalecer + Músculo + Aliado*: +2 em Força para até 3 aliados · **G4** *Cantar + Fúria + Contagiante + Grupo*: uma música que faz a taverna inteira brigar.
 
 Perguntas de vínculo: *De quem você sente mais falta? · Qual emoção sua você mais esconde?*
 
@@ -152,14 +152,14 @@ Perguntas de vínculo: *De quem você sente mais falta? · Qual emoção sua voc
 
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
-| **1** | Iluminar | Escurecer | Cegar | Ofuscar | Revelar | Ocultar |
-| **2** | Perceber | Sonhar | Enlouquecer | Refletir | Eclipsar | Vigiar |
+| **1** | Cintilar | Escurecer | Cegar | Ofuscar | Revelar | Ocultar |
+| **2** | Perceber | Vislumbrar | Enlouquecer | Refletir | Projetar | Vigiar |
 | **3** | Luz | Sombra | Sol | Lua | Estrela | Espelho |
 | **4** | Olho | Sonho | Pesadelo | Eclipse | Aurora | Farol |
-| **5** | Radiante | Sombrio | Ofuscante | Solar | Lunar | Estelar |
-| **6** | Lúcido | Delirante | Oculto | Noturno | Nítido | Onírico |
+| **5** | Radiante | Crepuscular | Iridescente | Dourado | Prateado | Celeste |
+| **6** | Lúcido | Delirante | Velado | Noturno | Nítido | Translúcido |
 
-Exemplos: **G1** acender a ponta do dedo · **G2** *Cegar*: um inimigo cego até a próxima Falha · **G3** *Pesadelo + Grupo*: três guardas acordados gritando · **G4** *Eclipsar + Sol + Área*: meio-dia vira noite sobre a praça pelo Evento inteiro.
+Exemplos: **G1** acender a ponta do dedo · **G2** *Cegar*: um inimigo cego até a próxima Falha · **G3** *Pesadelo + Grupo*: três guardas acordados gritando · **G4** *Eclipse + Sol + Área*: meio-dia vira noite sobre a praça pelo Evento inteiro.
 
 Perguntas de vínculo: *O que você viu e queria não ter visto? · Você tem medo do escuro ou da luz?*
 
@@ -179,14 +179,14 @@ Perguntas de vínculo: *O que você viu e queria não ter visto? · Você tem me
 
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
-| **1** | Matar | Reviver | Regenerar | Curar | Apodrecer | Adoecer |
-| **2** | Drenar | Assombrar | Prever | Esvaziar | Sepultar | Sussurrar |
+| **1** | Matar | Embalsamar | Regenerar | Curar | Apodrecer | Definhar |
+| **2** | Drenar | Assombrar | Prever | Ceifar | Sepultar | Sussurrar |
 | **3** | Morte | Vida | Fantasma | Osso | Túmulo | Doença |
-| **4** | Vazio | Vácuo | Luto | Presságio | Solidão | Cinzas |
-| **5** | Mortal | Vital | Morto | Vivo | Pútrido | Pálido |
-| **6** | Silencioso | Subliminar | Oco | Etéreo | Febril | Solitário |
+| **4** | Vazio | Lamento | Luto | Presságio | Solidão | Cinzas |
+| **5** | Fatal | Pulsante | Lúgubre | Renascido | Macabro | Pálido |
+| **6** | Silencioso | Subliminar | Oco | Etéreo | Febril | Frio |
 
-Exemplos: **G1** murchar uma flor, ou fazer brotar uma · **G2** *Curar*: 1 PV (custa +1 Arcano) · **G3** *Drenar + Vida + Grupo*: tira dos inimigos e fecha as feridas do grupo · **G4** *Reviver + Osso + Grupo*: os mortos do campo de batalha levantam pelo Evento.
+Exemplos: **G1** murchar uma flor, ou fazer brotar uma · **G2** *Curar*: 1 PV (custa +1 Arcano) · **G3** *Drenar + Vida + Grupo*: tira dos inimigos e fecha as feridas do grupo · **G4** *Vida + Osso + Grupo*: os mortos do campo de batalha levantam pelo Evento.
 
 Perguntas de vínculo: *Quem você não conseguiu salvar? · Você já morreu? O que viu do outro lado?*
 
@@ -206,14 +206,14 @@ Perguntas de vínculo: *Quem você não conseguiu salvar? · Você já morreu? O
 
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
-| **1** | Pensar | Lembrar | Esquecer | Ler | Enganar | Iludir |
-| **2** | Convencer | Acreditar | Confundir | Sugerir | Apagar | Imaginar |
-| **3** | Mente | Memória | Pensamento | Ideia | Mentira | Ilusão |
+| **1** | Pensar | Lembrar | Esquecer | Ler | Enganar | Disfarçar |
+| **2** | Convencer | Implantar | Confundir | Sugerir | Apagar | Imaginar |
+| **3** | Mente | Memória | Dúvida | Ideia | Mentira | Ilusão |
 | **4** | Crença | Segredo | Cheiro | Gosto | Palavra | Labirinto |
-| **5** | Psíquico | Falso | Verdadeiro | Esquecido | Familiar | Confuso |
-| **6** | Convincente | Lógico | Absurdo | Hipnótico | Invisível | Nebuloso |
+| **5** | Psíquico | Falso | Verdadeiro | Enigmático | Familiar | Paradoxal |
+| **6** | Sutil | Lógico | Absurdo | Hipnótico | Invisível | Nebuloso |
 
-Exemplos: **G1** lembrar exatamente onde deixou a chave · **G2** *Iludir + Cheiro*: o cão de guarda sente cheiro de carne do outro lado · **G3** *Esquecer + Grupo*: três testemunhas esquecem seu rosto · **G4** *Labirinto + Mente + Área*: a guarnição inteira não consegue achar a saída do pátio.
+Exemplos: **G1** lembrar exatamente onde deixou a chave · **G2** *Ilusão + Cheiro*: o cão de guarda sente cheiro de carne do outro lado · **G3** *Esquecer + Grupo*: três testemunhas esquecem seu rosto · **G4** *Labirinto + Mente + Área*: a guarnição inteira não consegue achar a saída do pátio.
 
 Perguntas de vínculo: *Qual memória você apagaria se pudesse? · Em que mentira sua você mesmo passou a acreditar?*
 
@@ -234,11 +234,11 @@ Perguntas de vínculo: *Qual memória você apagaria se pudesse? · Em que menti
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
 | **1** | Teleportar | Mover | Guiar | Localizar | Atravessar | Parar |
-| **2** | Acelerar | Voltar | Saltar | Organizar | Aumentar | Diminuir |
+| **2** | Acelerar | Voltar | Saltar | Organizar | Aumentar | Encolher |
 | **3** | Tempo | Espaço | Portal | Caminho | Instante | Distância |
 | **4** | Dimensão | Passado | Futuro | Âncora | Ciclo | Horizonte |
-| **5** | Rápido | Lento | Imenso | Minúsculo | Distante | Próximo |
-| **6** | Antigo | Eterno | Efêmero | Ordenado | Reverso | Simultâneo |
+| **5** | Rápido | Lento | Imenso | Minúsculo | Infinito | Próximo |
+| **6** | Antigo | Eterno | Efêmero | Pontual | Reverso | Simultâneo |
 
 Exemplos: **G1** saber que horas são sem olhar · **G2** *Acelerar + Aliado*: um aliado age logo depois de você, antes do mestre · **G3** *Portal + Grupo*: três pessoas atravessam para o outro lado do salão · **G4** *Parar + Tempo + Área*: tudo na praça para por 1 ação, menos você.
 
@@ -260,14 +260,14 @@ Perguntas de vínculo: *Em que momento da sua vida você voltaria? · Onde é o 
 
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
-| **1** | Transformar | Mudar | Adaptar | Voar | Nadar | Rastejar |
-| **2** | Cavar | Farejar | Invocar | Crescer | Enraizar | Uivar |
+| **1** | Transformar | Caçar | Adaptar | Voar | Nadar | Rastejar |
+| **2** | Cavar | Farejar | Invocar | Crescer | Brotar | Uivar |
 | **3** | Animal | Árvore | Raiz | Espírito | Garra | Asa |
 | **4** | Presa | Escama | Semente | Floresta | Rio | Instinto |
 | **5** | Selvagem | Natural | Ancestral | Ágil | Camuflado | Venenoso |
 | **6** | Bestial | Primal | Resistente | Mutante | Espinhoso | Fértil |
 
-Exemplos: **G1** falar com um pássaro (só coisas de pássaro) · **G2** *Enraizar*: raízes prendem um inimigo · **G3** *Invocar + Espírito + Animal*: um espírito-lobo luta ao seu lado até o mestre pagar · **G4** *Crescer + Floresta + Área*: a mata engole a estrada e o acampamento inimigo.
+Exemplos: **G1** falar com um pássaro (só coisas de pássaro) · **G2** *Raiz*: raízes prendem um inimigo · **G3** *Invocar + Espírito + Animal*: um espírito-lobo luta ao seu lado até o mestre pagar · **G4** *Crescer + Floresta + Área*: a mata engole a estrada e o acampamento inimigo.
 
 Perguntas de vínculo: *Que animal você seria sem pensar duas vezes? · Qual lugar selvagem é a sua casa?*
 

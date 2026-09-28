@@ -104,7 +104,7 @@ Como quebrar: o que os jogadores podem fazer para parar ou desviar
   - *Conflito*: duas forças (reinos, ordens, semideuses, povos) crescem uma contra a outra; cada elo é um passo da briga.
   - *Valor*: um Valor inteiro muda no mundo (Maré Baixa → Seca → Chamado do Reino).
 
-**Exemplo — A Noite Comprida** (Valor, Alvorum): Origem: um Desequilíbrio de Grau 4 com *Eclipsar*. Elos: (1, próximo Pouso) Maré Baixa de Alvorum na região, pela sessão; (2, fim do próximo Evento) a cidade mais próxima amanhece sem sol; (3, próximo Desequilíbrio) Chamado do Reino: abre-se o Céu de Duas Pálpebras e saem Vigias; (4, uma semana na ficção) a região vira Terreno Ferido. Como quebrar: devolver a luz ao lugar do Desequilíbrio, ou pagar 3 Arcano no elo 3.
+**Exemplo — A Noite Comprida** (Valor, Alvorum): Origem: um Desequilíbrio de Grau 4 com *Eclipse*. Elos: (1, próximo Pouso) Maré Baixa de Alvorum na região, pela sessão; (2, fim do próximo Evento) a cidade mais próxima amanhece sem sol; (3, próximo Desequilíbrio) Chamado do Reino: abre-se o Céu de Duas Pálpebras e saem Vigias; (4, uma semana na ficção) a região vira Terreno Ferido. Como quebrar: devolver a luz ao lugar do Desequilíbrio, ou pagar 3 Arcano no elo 3.
 
 **Exemplo — O Pedágio** (Conflito): os Protetores do Arcano e a Cidade-Muralha disputam a estrada. Elos: postos de bloqueio → Zona de Anulação na ponte → milícia contra Protetores (Evento de combate onde os jogadores escolhem lado) → a estrada fecha ou vira fronteira.
 

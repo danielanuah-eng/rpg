@@ -33,7 +33,7 @@
 - **Canal · Foco arcano**: luvas marrons com pérolas enormes, que brilham numa luz branco-azulada, bruxuleante e uniforme. +1 no dano e na cura de magia.
 - **Sintonia** +2 (+1 por palavra de Valor, com a relação dita) · **Grau máximo** 2 · **Palavras de Valor por magia** 2 · **uma** Palavra Básica grátis
 - **Graus**: G1 grátis, sem rolar · G2 custa 1 Arcano, 2d12 + 2 + palavras (1 ou 2), dura até a próxima Falha
-- **Palavras de Persona**: Sentir, Acalmar, Enfurecer, Encorajar, Amedrontar, Encantar, Comover, Remodelar, Fortalecer, Enfraquecer, Cantar, Despertar · Coração, Pele, Rosto, Voz, Alma, Músculo, Medo, Coragem, Fúria, Amor, Saudade, Música · Belo, Grotesco, Robusto, Frágil, Vigoroso, Sereno, Furioso, Corajoso, Apaixonado, Contagiante, Íntimo, Humano
+- **Palavras de Persona**: Sentir, Acalmar, Envergonhar, Inspirar, Consolar, Encantar, Comover, Remodelar, Fortalecer, Enfraquecer, Cantar, Despertar · Coração, Pele, Rosto, Voz, Alma, Músculo, Medo, Coragem, Fúria, Amor, Saudade, Música · Belo, Grotesco, Robusto, Frágil, Vigoroso, Sereno, Ciumento, Terno, Apaixonado, Contagiante, Íntimo, Humano
 - **Palavras extras**: □ □ □ □
 
 ## Companheira: Dona Iolanda, a Sineira (PNJ)
