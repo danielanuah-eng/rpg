@@ -474,5 +474,7 @@ Sua resposta: ✅ aplicada, com *Cuidar* → **Proteger**, *Notar* → **Observa
 
 ✅ **P-10**: roda **A** confirmada.
 
-✅ **Comportamentos com voz**: cada um dos 12 ganhou duas falas, um *Como é*, e o **Atalho típico** e o **Passo típico** (o que aquele jeito de ser costuma evitar, e o difícil que o aproxima do que importa). Em [[04 Comportamentos]].
+✅ **Comportamentos com voz**: cada um dos 12 ganhou duas falas e um *Como é*. Saíram o Atalho típico e o Passo típico (exagero); no lugar, uma seção **Atalho: o que é e como criar o seu** (três perguntas para o jogador). Não mexe em números. Em [[04 Comportamentos]].
+
+✅ **Kit de campanha**: [[21 Kit de campanha]] com "campanha em 15 minutos", 11 lugares (OulVeil, Vau-Grande, Confluência e GrandGaleonis, Cidade-Muralha, Porto de Vidro, Cidade Insone, Vila do Mesmo Dia, boca da Voragem, Sarn-das-Escadas, Brejo-Alto, Querela), o que as entidades querem (d8) e personalidades novas para deuses, 8 sementes de Artefato, 20 ganchos e 6 arcos.
 

@@ -12,6 +12,20 @@
 - Hábito custa **3 Arcano** para usar, Básico ou Superior, salvo quando o texto diz outro valor.
 - Qualquer personagem usa qualquer armadura; as mais pesadas tiram Esquiva e pesam na mobilidade ([[06 Itens e dinheiro]]).
 
+## Atalho: o que é e como criar o seu
+
+Todo personagem tem um jeito de **fugir do desconforto** que sempre funcionou: rir, brigar, sumir, agradar, mentir, aguentar calado. Isso é um **Atalho** ([[01 Regras centrais]], seção 5). Não é defeito nem pecado: é o que o personagem aprendeu para sobreviver. Às vezes ainda é a melhor escolha.
+
+**Para criar o Atalho do seu personagem**, responda para você mesmo:
+
+1. **O que ele não aguenta sentir?** (medo, vergonha, ser comum, ser visto, ficar sozinho, perder o controle...)
+2. **O que ele faz quando esse sentimento chega?** (ri, briga, foge, se ocupa, compra, mente, some, agrada...)
+3. **O que isso resolve na hora, e o que custa depois?**
+
+Escreva a resposta como um Laço de **atitude** ou de **sentimento** ("*O medo que eu escondo fazendo tudo e rindo*", "*Ser o melhor da sala, sempre*"). O Comportamento ajuda a pensar (um Briguento tende a brigar, um Popular tende a agradar), mas **o Atalho é do personagem, não do Comportamento**: dois Briguentos podem fugir de coisas bem diferentes.
+
+Na mesa, quando o sentimento aperta, você escolhe: pegar o **Atalho** (e o mestre ganha Cataclisma) ou dar um **Passo de Valor**. Os dois são válidos. Dizer em voz alta qual Atalho o personagem está pegando, e do que ele protege, vale **+1 Arcano** (uma vez por Evento).
+
 ## Números base
 
 | Comportamento | Atributos que combinam | Esquiva | PV | Limiares base |
@@ -41,8 +55,6 @@ Limiares finais = base + nível + armadura.
 
 **Como é.** Ocupa espaço e sabe disso. Resolve com o corpo antes de resolver com a boca, e quase sempre funciona. Por baixo do peso tem gente que aprendeu cedo que ser grande é ser útil, e que ninguém pergunta se o grande está cansado.
 
-- **Atalho típico**: aguentar tudo sozinho, não pedir ajuda, resolver na força o que era para ser conversado.
-- **Passo típico**: pedir ajuda; deixar alguém ver que doeu; parar antes de quebrar.
 
 | | Básico | Superior |
 |---|---|---|
@@ -57,8 +69,6 @@ Limiares finais = base + nível + armadura.
 
 **Como é.** Vive em movimento: telhado, corda, muro, rio. O corpo resolve antes da dúvida chegar. Nunca está onde o problema cai, e às vezes também não está onde as pessoas precisam dele.
 
-- **Atalho típico**: sair da cena quando ela aperta; transformar tudo em desafio de corpo para não sentir.
-- **Passo típico**: ficar; esperar alguém mais lento; estar parado no meio do problema.
 
 | | Básico | Superior |
 |---|---|---|
@@ -73,8 +83,6 @@ Limiares finais = base + nível + armadura.
 
 **Como é.** Todo mundo conhece, ou acha que conhece. Abre portas com um sorriso e um nome. Vive de ser querido, e sabe exatamente o peso de cada olhar na sala.
 
-- **Atalho típico**: agradar todo mundo; dizer o que o outro quer ouvir; fugir de conflito para não perder o carinho.
-- **Passo típico**: dizer não; discordar em público; deixar alguém não gostar.
 
 Nada deste Comportamento funciona em combate.
 
@@ -91,8 +99,6 @@ Nada deste Comportamento funciona em combate.
 
 **Como é.** Pula antes de olhar, e às vezes é exatamente o que precisava. O mundo é lento demais para ele, e a espera dói mais que o erro. Chega primeiro em tudo, inclusive nos problemas.
 
-- **Atalho típico**: agir para não sentir a espera; decidir pelos outros; cortar a conversa.
-- **Passo típico**: esperar; ouvir até o fim; deixar a decisão com outra pessoa.
 
 | | Básico | Superior |
 |---|---|---|
@@ -107,8 +113,6 @@ Nada deste Comportamento funciona em combate.
 
 **Como é.** Mãos rápidas, bolsos fundos, olhos nas saídas. Aprendeu que o mundo não dá, então ele pega. Leal a quem o alimentou uma vez; desconfiado de quem oferece de graça.
 
-- **Atalho típico**: pegar antes que tirem; mentir por reflexo; não confiar em ninguém.
-- **Passo típico**: aceitar algo dado; devolver; confiar numa pessoa uma vez.
 
 | | Básico | Superior |
 |---|---|---|
@@ -123,8 +127,6 @@ Nada deste Comportamento funciona em combate.
 
 **Como é.** Nasceu com portas abertas: nome, dinheiro, tutores, a certeza de que o mundo responde. O privilégio pesa de um jeito que ele não sabe explicar, e é fácil demais usá-lo para não olhar o que dói.
 
-- **Atalho típico**: comprar a saída; usar o nome; esperar que alguém resolva.
-- **Passo típico**: pedir; perder algo que o dinheiro não repõe; fazer o trabalho com as próprias mãos.
 
 | | Básico | Superior |
 |---|---|---|
@@ -139,8 +141,6 @@ Nada deste Comportamento funciona em combate.
 
 **Como é.** Gosta de briga e fica melhor no meio dela. No choque, o mundo finalmente faz sentido: o outro, o golpe, a resposta. Fora dele, tudo fica barulhento demais. Muitos aprenderam a brigar antes de aprender a ler.
 
-- **Atalho típico**: transformar qualquer desconforto em briga; provocar para não sentir.
-- **Passo típico**: não revidar; baixar a guarda; dizer o que sente sem levantar a voz.
 
 | | Básico | Superior |
 |---|---|---|
@@ -155,8 +155,6 @@ Nada deste Comportamento funciona em combate.
 
 **Como é.** Leu sobre isso, perguntou sobre aquilo. O mundo é uma pergunta que ainda não acabou. Às vezes a curiosidade abre portas; às vezes abre a caixa que devia ficar fechada.
 
-- **Atalho típico**: estudar o problema em vez de sentir; fazer pergunta para não responder.
-- **Passo típico**: não saber e ficar em paz; sentir antes de entender.
 
 | | Básico | Superior |
 |---|---|---|
@@ -171,8 +169,6 @@ Nada deste Comportamento funciona em combate.
 
 **Como é.** Nada dá certo, e ele sabe navegar isso. Onde os outros veem desastre, ele vê o próximo passo. Vive bem no ímpar, no incompleto, no que muda. Às vezes provoca o caos só para ter onde navegar.
 
-- **Atalho típico**: bagunçar tudo quando as coisas ficam sérias; rir do que importa.
-- **Passo típico**: levar algo a sério até o fim; aceitar uma rotina; sustentar um compromisso.
 
 | | Básico | Superior |
 |---|---|---|
@@ -187,8 +183,6 @@ Nada deste Comportamento funciona em combate.
 
 **Como é.** Mente, disfarça, some. Tem mil caras e nenhuma é descanso. Aprendeu que ser visto de verdade é perigoso, e agora nem sempre lembra qual é o próprio rosto.
 
-- **Atalho típico**: mentir para não ser visto; sumir quando alguém chega perto.
-- **Passo típico**: dizer uma verdade que o expõe; deixar alguém ver o rosto de verdade.
 
 | | Básico | Superior |
 |---|---|---|
@@ -203,8 +197,6 @@ Nada deste Comportamento funciona em combate.
 
 **Como é.** Aberto ao que vem, vive na estrada e sobrevive nela. Todo lugar novo é uma pergunta; todo caminho, uma promessa. Às vezes andar é o jeito de não parar para sentir falta.
 
-- **Atalho típico**: ir embora quando aperta; trocar de lugar em vez de mudar.
-- **Passo típico**: ficar; voltar; criar raiz num lugar e numa pessoa.
 
 | | Básico | Superior |
 |---|---|---|
@@ -219,8 +211,6 @@ Nada deste Comportamento funciona em combate.
 
 **Como é.** Tem fé, às vezes inocente, sempre segue em frente. A esperança dele não é ignorar o escuro: é continuar andando dentro dele. E, quando pega, contagia.
 
-- **Atalho típico**: fingir que está tudo bem; não olhar o que dói para não perder a esperança.
-- **Passo típico**: admitir o medo e continuar mesmo assim; deixar alguém ver que está triste.
 
 | | Básico | Superior |
 |---|---|---|
