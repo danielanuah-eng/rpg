@@ -53,19 +53,19 @@ O **tipo do efeito** diz quem rola. É sempre **uma rolagem só** por magia: ou 
 
 | Efeito | Exemplos | Quem rola | Contra o quê |
 |---|---|---|---|
-| **Projétil** | jato, lâmina, flecha de luz, soco que atravessa: algo que sai e precisa acertar | **você** | a **Esquiva** (PJ) ou a **Dificuldade** (adversário) do alvo, **+1 no 3d8, +2 no 4d6, +3 no 6d4** |
+| **Projétil** | jato, lâmina, flecha de luz, soco que atravessa: algo que sai e precisa acertar | **você** | a **Esquiva** (PJ) ou a **Dificuldade** (adversário) do alvo |
 | **Teste mágico** | sono, encanto, medo, uma rede de gelo que prende, uma rajada que derruba: o efeito cai sobre um alvo (ou vários) e ele reage | **o alvo**, não você | a **Dificuldade da magia** (abaixo) |
 | **Pequeno evento** | acrescentar, mudar, detalhar ou alterar algo no mundo: abrir, criar, esquentar, fortalecer o próprio corpo, fazer o chão virar gelo, curar | **você** | a **Dificuldade do Grau**: passou, o mundo muda |
 
-**Mais dados para acertar = defesa maior.** A Esquiva e as Dificuldades foram feitas para 2d12. Conjuntos com mais dados acertam mais com o mesmo bônus, porque tiram perto da média com mais facilidade (em 4d6 é mais fácil tirar uma média do que em 2d12: mais chances, números mais próximos). Pela conta, **3d8 ≈ 2d12 + 1**, **4d6 ≈ 2d12 + 2**, **6d4 ≈ 2d12 + 3**. Então, **em toda rolagem de acerto** (atacar, alcançar, pegar, qualquer coisa contra a defesa de alguém) feita com mais dados que 2d12, a defesa sobe **+1 no 3d8, +2 no 4d6, +3 no 6d4**. **Dano não muda.** (Pequeno evento já tem isso na Dificuldade do Grau; no Teste mágico quem rola é o alvo.)
+**Por que a Sintonia não cresce.** A Esquiva e as Dificuldades foram feitas para 2d12. Conjuntos com mais dados tiram perto da média com mais facilidade (3d8 ≈ 2d12 + 1, 4d6 ≈ 2d12 + 2, 6d4 ≈ 2d12 + 3). Em vez de somar defesa extra, **a matemática já conta com isso**: a Sintonia fica em **+2** em toda Moldura, e o crescimento da magia vem dos dados e das palavras. No Grau máximo com uma palavra, a magia acerta como o melhor ataque de arma da Moldura; cada palavra a mais soma +1.
 
-A **defesa também sobe com a Moldura**, de adversários e de personagens: a régua dá Dificuldade +1 por Moldura, e a Esquiva cresce com os avanços. Quem é **hábil em desviar** (*Ágil*, *Veloz*, *Minúsculo*, Desviar forte) sobe mais; quem não é (*Enorme*, *Pesado*, *Lento*) compensa de outro jeito, com Limiares, *Blindado* ou *Duro*.
+A **defesa também sobe com a Moldura**, de adversários e de personagens: a régua dá Dificuldade +1 por Moldura, e a Esquiva cresce com os avanços. Quem é **hábil em desviar** (*Ágil*, *Veloz*, *Minúsculo*, Desviar forte) sobe mais; quem não é (*Enorme*, *Pesado*, *Lento*) compensa com Limiares, *Blindado* ou *Duro*.
 
 ### Teste mágico: só o alvo rola
 
 Você paga a magia e descreve o efeito; **quem rola é o alvo**. Uma rolagem por ação, e a mesa anda.
 
-**Dificuldade da magia = 12 + Sintonia + 1 por palavra de Valor** (e o que Skills e Retaliações mexem). Na Moldura 1, com Sintonia +2: **15** com uma palavra, **16** com duas.
+**Dificuldade da magia = 13 + Moldura + 1 por palavra de Valor** (e o que Skills e Retaliações mexem). Na Moldura 1: **15** com uma palavra, **16** com duas; na Moldura 3, 17 e 18.
 
 **O teste do alvo** é físico ou não conforme a descrição e o efeito; o mestre escolhe o **verbo** (e o atributo, se não for o da linha) pela magia e pela situação: medo, encanto e sono pedem **Firmar**; veneno, cãibra e doença, **Aguentar**; rede, prisão e peso, **Levantar** ou **Fugir**; chão que escorrega e rajada, **Desviar**; ilusão, **Observar**.
 
@@ -87,7 +87,7 @@ Você paga a magia e descreve o efeito; **quem rola é o alvo**. Uma rolagem por
 - **1 natural** = **Crítico seu**: o efeito pega, você escolhe um efeito de crítico e ganha 1 Arcano (no lugar do Cataclisma); o mestre não emoldura.
 - **20 natural** = o alvo **sempre escapa**, seja qual for a Dificuldade.
 
-Chance de o efeito pegar num adversário **da mesma Moldura**: **(12 + palavras) em 20**, em qualquer Moldura, porque a Sintonia e o Ataque sobem juntos.
+Chance de o efeito pegar num adversário **da mesma Moldura**: **(12 + palavras) em 20**, em qualquer Moldura, porque a Dificuldade da magia e o Ataque sobem juntos com a Moldura.
 
 | palavras de Valor | 1 | 2 | 3 | 4 | 5 |
 |---|---|---|---|---|---|
@@ -122,9 +122,9 @@ Ela só vira rolagem quando é o **meio de uma ação** que já seria um teste: 
 |---|---|---|---|---|---|
 | **Dados** | nenhum, acontece | **2d12** | **3d8** | **4d6** | **6d4** |
 | **Custo base** | 0 | 1 Arcano | 2 Arcano | 3 Arcano | 5 Arcano |
-| **Dificuldade do Grau** (magia sem alvo) | — | 12 | 14 | 16 | 19 |
+| **Dificuldade do Grau** (Pequeno evento) | — | 12 | 13 | 14 | 16 |
 | **Moldura mínima** | 1 | 1 | 2 | 3 | 4 |
-| **Dano** | nenhum (só incômodo) | 1d10 + Sintonia | 2d10 + Sintonia | 3d10 + Sintonia | 5d10 + Sintonia |
+| **Dano** | nenhum (só incômodo) | 1d10 + 2 | 2d10 + 3 | 3d10 + 4 | 5d10 + 5 |
 | **Cura** (só Morbidyum; sempre +1 Arcano por PV) | — | 1 PV | até 2 PV | até 3 PV ou 1 condição | todos os PV, ou trazer de volta quem morreu neste Evento |
 | **Alvos** | você ou 1 objeto de mão | 1 | até 3 | até 6, ou um grupo | todos que você escolher à vista |
 | **Área / tamanho** | cabe na mão | uma pessoa, uma porta | uma sala, uma carroça | uma casa, uma praça | um quarteirão, um navio, um vale |
@@ -160,7 +160,7 @@ Os quatro conjuntos têm **o mesmo máximo, 24**, que era a sua ideia. O que mud
 - **Por que não 8d4**: soma até 32 (não 24) e acerta 98–100% contra qualquer Dificuldade. Ele quebraria a tabela. Troquei por **6d4** e coloquei **3d8** no meio. ❓ **P-02**
 - **3d8 é o Grau traiçoeiro**: número ímpar de dados nunca empata, então metade das magias Impressionantes sai por Cataclisma. Soa bem para o "Grau adolescente" da magia. Se não gostar, dá para contar empate a favor do jogador.
 
-Conjurar no seu Grau máximo, contra a Dificuldade do Grau, dá **81–84%** em todas as Molduras com **1 palavra**; com 2 palavras, 85–90%; com o máximo, 85–99%.  (Magia com Relação acerta um pouco mais que arma contra adversários; arma compensa batendo mais forte e sem custo.)
+Conjurar no seu Grau máximo, contra a Dificuldade do Grau, dá **81–84%** em todas as Molduras com **1 palavra**; com 2 palavras, 85–90%; com o máximo de palavras, 85–99%. **Mais palavras sempre ajudam**, mesmo trazendo Cataclisma.  (Magia com Relação acerta um pouco mais que arma contra adversários; arma compensa batendo mais forte e sem custo.)
 
 ## Leitura dos dados na magia
 
@@ -243,7 +243,7 @@ Depois de rolar, antes do mestre dizer o resultado: marque Cansaço até o limit
 
 ## Canal: como você exerce a magia
 
-O Canal é **a forma como o personagem se relaciona com a magia**, não uma peça que pode ser tirada dele. **Qualquer item pode ser um Canal**, e a magia **continua funcionando na ausência dele**: se o personagem perde as luvas, o anel ou o caderno, ele conjura do mesmo jeito (e pode adotar outro objeto depois). **Sintonia = Moldura + 1** para todos. Cada Canal só muda o **jeito** e dá um benefício:
+O Canal é **a forma como o personagem se relaciona com a magia**, não uma peça que pode ser tirada dele. **Qualquer item pode ser um Canal**, e a magia **continua funcionando na ausência dele**: se o personagem perde as luvas, o anel ou o caderno, ele conjura do mesmo jeito (e pode adotar outro objeto depois). **Sintonia +2** para todos. Cada Canal só muda o **jeito** e dá um benefício:
 
 | Canal | Como é | Benefício |
 |---|---|---|
@@ -308,4 +308,4 @@ Formas são só formato: **nenhuma Palavra Básica é elemento** (fogo, gelo, lu
 **Tomé (Conflitüo) e Iara (Sublimeyn), nível 5** fazem uma dupla: **Explodir + Lâmina + Metal + Fundir + Grupo**.
 - 4 palavras de Valor, Grau do efeito 4 + 1 = **5 (Mítico)**: uma chuva de lâminas de metal derretido sobre até todos os inimigos à vista.
 - Custo: 3 (dupla) + as palavras de Valor extras de cada um (*Grupo* é básica, grátis).
-- Tomé conduz com as 2 palavras dele (*Explodir*, *Lâmina*): rola **6d4** (Grau 5) + 4 (Sintonia) + 2 (palavras), e Iara soma +2, contra a Dificuldade dos inimigos (é um ataque: precisa acertar). Skill do Conflitüo vale (+1 dado de dano). Se sair por Cataclisma, rolam **2 Efeitos Colaterais** (Grau 5).
+- Tomé conduz com as 2 palavras dele (*Explodir*, *Lâmina*): rola **6d4** (Grau 5) + 2 (Sintonia) + 2 (palavras), e Iara soma +2, contra a Dificuldade dos inimigos (é um ataque: precisa acertar). Skill do Conflitüo vale (+1 dado de dano). Se sair por Cataclisma, rolam **2 Efeitos Colaterais** (Grau 5).

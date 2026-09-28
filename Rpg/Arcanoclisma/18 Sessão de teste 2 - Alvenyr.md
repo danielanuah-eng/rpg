@@ -36,8 +36,8 @@
 - **Ressonância II · Veterano**: marque 1 Cansaço para ter os dois bônus do Fio da Guerra na mesma magia.
 - **Ressonância III · Arsenal Vivo**: invocar uma arma ou escudo de Conflitüo é **Grau 1**. Dura o Evento; ataques com ela (Força ou Agilidade + Bater) causam **2d10 + 4** (+1 do Gosto de Sangue = **2d10 + 5**). *As correntes da tatuagem desenrolam da pele e viram a arma.*
 - **Canal · Marca**: a tatuagem da rosa e das correntes. A magia deixa um rastro que só aliados reconhecem (uma rosa azul que se abre no ar).
-- **Sintonia** +4 · **Grau máximo** 4 · **Palavras de Valor por magia** 4 (cada uma soma +1; da 3ª em diante, +1 Cataclisma ao mestre) · uma Palavra Básica grátis
-- **Graus**: G2 = 2d12, custa 1, Dif 12 · G3 = 3d8, custa 2, Dif 14 · **G4 = 4d6, custa 3, Dif 16** · Teste mágico: Dificuldade da magia = **16 + palavras**
+- **Sintonia** +2 (desde o rebalanceamento pós-sessão; na sessão foi +4) · **Grau máximo** 4 · **Palavras de Valor por magia** 4 (cada uma soma +1; da 3ª em diante, +1 Cataclisma ao mestre) · uma Palavra Básica grátis
+- **Graus**: G2 = 2d12, custa 1, Dif 12 · G3 = 3d8, custa 2, Dif 13 · **G4 = 4d6, custa 3, Dif 14** · Teste mágico: Dificuldade da magia = **16 + palavras**
 - **Ampliar**: até 3 passos por magia (Arcano + Dificuldade +2 cada). **Domínio (dano)**: o primeiro passo de dano em cada magia não sobe a Dificuldade.
 - **Palavras de Conflitüo**: Cortar, Perfurar, Esmagar, Explodir, Bloquear, Aparar, Investir, Recuar, Desarmar, Romper, Provocar, Flanquear · Lâmina, Escudo, Lança, Martelo, Flecha, Muralha, Armadura, Estandarte, Cicatriz, Trincheira, Grito, Estilhaço · Letal, Implacável, Afiado, Pesado, Certeiro, Veloz, Blindado, Brutal, Incansável, Tático, Voraz, Inquebrável
 - **Palavras extras**: □ □ □ □

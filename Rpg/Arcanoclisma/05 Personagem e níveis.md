@@ -73,15 +73,15 @@ Este bloco não dá bônus nem é cobrado pelo mestre. Serve para a mesa conhece
 | Nível | Moldura | Grau máx. | Palavras de Valor | Sintonia | Proficiência | Automático |
 |---|---|---|---|---|---|---|
 | 1 | 1 | 2 | 2 | +2 | 1 | — |
-| 2 | 2 | 3 | 3 | +3 | 2 | +1 Vivência; +1 Limiares |
-| 3 | 2 | 3 | 3 | +3 | 2 | +1 Limiares |
-| 4 | 2 | 3 | 3 | +3 | 2 | +1 Limiares |
-| 5 | 3 | 4 | 4 | +4 | 3 | +1 Vivência; +1 Limiares; limpa marcas da tabela |
-| 6 | 3 | 4 | 4 | +4 | 3 | +1 Limiares |
-| 7 | 3 | 4 | 4 | +4 | 3 | +1 Limiares |
-| 8 | 4 | 5 | 5 | +5 | 4 | +1 Vivência; +1 Limiares; limpa marcas da tabela |
-| 9 | 4 | 5 | 5 | +5 | 4 | +1 Limiares |
-| 10 | 4 | 5 | 5 | +5 | 4 | +1 Limiares |
+| 2 | 2 | 3 | 3 | +2 | 2 | +1 Vivência; +1 Limiares |
+| 3 | 2 | 3 | 3 | +2 | 2 | +1 Limiares |
+| 4 | 2 | 3 | 3 | +2 | 2 | +1 Limiares |
+| 5 | 3 | 4 | 4 | +2 | 3 | +1 Vivência; +1 Limiares; limpa marcas da tabela |
+| 6 | 3 | 4 | 4 | +2 | 3 | +1 Limiares |
+| 7 | 3 | 4 | 4 | +2 | 3 | +1 Limiares |
+| 8 | 4 | 5 | 5 | +2 | 4 | +1 Vivência; +1 Limiares; limpa marcas da tabela |
+| 9 | 4 | 5 | 5 | +2 | 4 | +1 Limiares |
+| 10 | 4 | 5 | 5 | +2 | 4 | +1 Limiares |
 
 **Quando sobe**: por marco (o mestre decide; sugestão: a cada 2–3 sessões no começo, mais espaçado depois).
 

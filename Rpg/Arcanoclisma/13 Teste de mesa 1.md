@@ -64,7 +64,7 @@
 - **Compromisso**: "Gente vem antes de tudo."
 - **Laços**: *A trupe que eu abandonei na estrada* · *Mentir antes que me perguntem* (Atalho de costume) · *O medo de que ninguém goste de quem eu sou sem máscara*
 - **Vivências**: Atriz de trupe · Conheço todo tipo de gente de feira
-- **Magias prontas**: *Medo* + inimigo (G2) · *Encantar* + convencer (G2) · *Voz* + distrair (G1 no meio da ação)
+- **Magias prontas**: *Medo* + inimigo (G2) · *Seduzir* + **Encantar** (G2) · *Voz* + distrair (G1 no meio da ação)
 
 ### Oruã Casca-Grossa
 *Filho da Vila da Colheita, grande e calado, que fala melhor com bicho do que com gente.*

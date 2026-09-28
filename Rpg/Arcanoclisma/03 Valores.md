@@ -54,7 +54,7 @@ Oposição serve para duas coisas: **Magia em Dupla de opostos** (mais forte, ma
 - **Skill · Fio da Guerra**: em combate, cada magia sua ganha **+1 dado de dano** ou **+2 no total** (escolha ao conjurar).
 - **Retaliação · Só Sabe Brigar**: magias fora de combate ou violência custam **+2 Arcano**.
 - **Ressonância II · Veterano**: marque 1 Cansaço para ter os dois bônus do Fio da Guerra na mesma magia.
-- **Ressonância III · Arsenal Vivo**: invocar uma arma ou escudo de Conflitüo é Grau 1 para você. Dura o Evento; ataques com ela usam Força ou Agilidade e causam 2d10 + Sintonia.
+- **Ressonância III · Arsenal Vivo**: invocar uma arma ou escudo de Conflitüo é Grau 1 para você. Dura o Evento; ataques com ela usam Força ou Agilidade e causam 2d10 + Moldura + 1.
 
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
@@ -166,7 +166,7 @@ Perguntas de vínculo: *A quem você já obedeceu e jurou nunca mais? · Você a
 | Para | Como Persona faz | Tipo |
 |---|---|---|
 | **Atacar** | *Voz* ou *Música* como golpe; *Enfraquecer Músculo* (cãibra), *Coração* disparado, *Pele Grotesca*; *Medo*, *Fúria* contra o próprio aliado, *Saudade* que faz largar a arma | Projétil · Teste mágico (Aguentar) · Teste mágico (Firmar) |
-| **Proteger** | *Fortalecer*, *Robusto* em você ou num aliado; *Encantar* quem vem atacar | Pequeno evento · Teste mágico (Firmar) |
+| **Proteger** | *Fortalecer*, *Robusto* em você ou num aliado; *Seduzir* quem vem atacar | Pequeno evento · Teste mágico (Firmar) |
 | **Aliviar** | *Acalmar*, *Consolar*, *Coragem*: tirar medo, pânico, vergonha | Pequeno evento |
 | **Descobrir** | *Sentir* o que alguém sente, ou o rastro de alguém num objeto que ele amou | Pequeno evento |
 | **Mover** | *Fortalecer Músculo* para escalar; *Remodelar* o corpo (guelras, mãos que grudam) | Pequeno evento |
@@ -181,7 +181,7 @@ Perguntas de vínculo: *A quem você já obedeceu e jurou nunca mais? · Você a
 
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
-| **1** | Sentir | Acalmar | Envergonhar | Inspirar | Consolar | Encantar |
+| **1** | Sentir | Acalmar | Envergonhar | Inspirar | Consolar | Seduzir |
 | **2** | Comover | Remodelar | Fortalecer | Enfraquecer | Cantar | Despertar |
 | **3** | Coração | Pele | Rosto | Voz | Alma | Músculo |
 | **4** | Medo | Coragem | Fúria | Amor | Saudade | Música |

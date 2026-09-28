@@ -300,10 +300,10 @@ Quase tudo que cresce com o nível passa pela **Moldura**:
 | Nível | Moldura | Grau máximo | Palavras de Valor por magia | Sintonia | Proficiência |
 |---|---|---|---|---|---|
 | 1 | 1 | 2 | 2 | +2 | 1 |
-| 2–4 | 2 | 3 | 3 | +3 | 2 |
-| 5–7 | 3 | 4 | 4 | +4 | 3 |
-| 8–10 | 4 | 5 | 5 | +5 | 4 |
+| 2–4 | 2 | 3 | 3 | +2 | 2 |
+| 5–7 | 3 | 4 | 4 | +2 | 3 |
+| 8–10 | 4 | 5 | 5 | +2 | 4 |
 
-Regra fácil de lembrar: **Grau máximo, Palavras e Sintonia = Moldura + 1**.
+Regra fácil de lembrar: **Grau máximo e Palavras = Moldura + 1**; **Sintonia é sempre +2**.
 
-**Sintonia** é o bônus que se soma aos dados de magia (e ao dano de magia). Atributo não entra em magia.
+**Sintonia** é o bônus que se soma aos dados de magia. É **+2 em toda Moldura**: quem cresce são os **dados** (2d12 → 3d8 → 4d6 → 6d4, cada um acertando mais que o anterior) e as **palavras** (uma a mais por Moldura, +1 cada). Assim a magia no Grau máximo acerta como o melhor ataque de arma da mesma Moldura, sem regra extra de defesa. Atributo não entra em magia.

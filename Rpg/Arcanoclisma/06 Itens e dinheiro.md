@@ -141,7 +141,7 @@ Algumas têm **cargas** (recuperam no Pouso). Regra geral de equilíbrio: um ite
 
 Raros, com nome e história. Carregam **2 ou 3 palavras** e um poder único, e cobram: usar dá Cataclisma ao mestre ou marca Cansaço. Só artefatos tornam uma magia de **Grau 5 permanente** (o artefato é consumido ou fica "ligado" ao efeito). Não se compram.
 
-Exemplo: **A Coroa de Vyal** — Persona (**Encantar**, **Amor**, **Irresistível**). Uma vez por Evento, uma magia de Persona sua afeta um alvo a mais. Cada uso: o mestre ganha 2 Cataclisma e Vyal sabe onde você está.
+Exemplo: **A Coroa de Vyal** — Persona (**Seduzir**, **Amor**, **Apaixonado**). Uma vez por Evento, uma magia de Persona sua afeta um alvo a mais. Cada uso: o mestre ganha 2 Cataclisma e Vyal sabe onde você está.
 
 ## Familiares e montarias
 

@@ -111,7 +111,7 @@ Básicas: fortes Negociar, Ameaçar · fraco Movimentar
 
 **Herdeira em Fuga** — M1 · Social · Persona
 Ser: Herdeira, Fugitiva · Agir: Seduzir (livre · Perto · 1 · Firmar · o alvo a protege · Falha) · Parecer: Belo · Quer: nunca voltar para casa; paga bem, com o que roubou.
-Básicas: fortes Atrair, Mentir · fraco Sobreviver · Valor: Encantar, Rosto, Belo
+Básicas: fortes Atrair, Mentir · fraco Sobreviver · Valor: Seduzir, Rosto, Belo
 
 **Mendigo Que Viu Demais** — M1 · Social · —
 Ser: Mendigo, Testemunha · Agir: Pedir · Contar · Parecer: Estranho (diz a verdade, mas só em rima) · Quer: um prato quente; sabe onde está o corpo.
@@ -345,7 +345,7 @@ Básicas: fortes Bater, Desviar, Ameaçar · fraco Esconder · Valor: Provocar, 
 
 **Encantadora de Salão** — M2 · Conjurador · Persona
 Ser: Cantora, Espiã · Agir: Cantar (1C · Médio · Grupo · Firmar · Amedrontado ou apaixonado · Falha) · Beijar (2C · Toque · 1 · Firmar · o alvo protege ela · Pagar) · Parecer: Belo, Mentiroso · Quer: um segredo de alguém da mesa.
-Básicas: fortes Atrair, Mentir, Criar · fraco Aguentar · Valor: Cantar, Encantar, Apaixonado, Medo
+Básicas: fortes Atrair, Mentir, Criar · fraco Aguentar · Valor: Cantar, Seduzir, Apaixonado, Medo
 
 **Leitor de Sombras** — M2 · Conjurador · Cognitium
 Ser: Espião, Leitor · Agir: Ler (livre · Médio · 1 · Firmar · o mestre sabe o próximo plano do alvo · Inst) · Iludir (1C · Médio · Grupo · Observar · Distraído · Falha) · Esquecer (2C · Perto · 1 · Firmar · Selado · Ev) · Parecer: Invisível, Covarde · Quer: vender o que viu.
@@ -959,7 +959,7 @@ Básicas: fortes Movimentar, Agarrar · fraco Esconder
 
 **Canto Sem Cantor** — M2 · Conjurador · Persona
 Ser: Música · Agir: Tocar · Enfeitiçar (2C · Longe · Grupo · Firmar · anda na direção da música · Falha) · Parecer: Invisível, Belo · Quer: uma voz para morar dentro.
-Básicas: fortes Atrair, Criar · fraco Aguentar · Valor: Música, Encantar, Saudade
+Básicas: fortes Atrair, Criar · fraco Aguentar · Valor: Música, Seduzir, Saudade
 
 **Tempestade Viva** — M4 · Chefe · Sublimeyn + Conflitüo · Resiliente
 Ser: Tempestade · Agir: Raio (Longe) · Granizo (3C · Longe · Área · Desviar · dano ×1,5 · Inst) · Olho da Tempestade (livre: no Toque dela, tudo fica parado e em silêncio) · Parecer: Enorme, Voador · Quer: passar. Não tem raiva de ninguém; só não desvia. *Jeito*: acalma se alguém entra no olho dela sem medo.
@@ -1119,7 +1119,7 @@ Básicas: fortes Pensar, Intuir, Negociar · fraco Esconder · Valor: todas do V
 
 **Aurelhaz, Dragoa-Coral** — M3 · Chefe · Persona · Resiliente
 Ser: Dragoa, Colecionadora · Agir: Morder · Soprar (3C · Longe · Área · Firmar · sentem paixão por ela e não atacam · Falha) · Rosto Humano (livre: fala com a voz de alguém que o alvo ama) · Parecer: Belo, Voador · Quer: colecionar artistas e músicos; o Domínio dela é um teatro abandonado em Vau-Grande. Devolve os que a fazem chorar de verdade.
-Básicas: fortes Atrair, Negociar, Intuir · fraco Esconder · Valor: Música, Amor, Encantar, Apaixonado, Rosto, Comover
+Básicas: fortes Atrair, Negociar, Intuir · fraco Esconder · Valor: Música, Amor, Seduzir, Apaixonado, Rosto, Comover
 
 **Velho Ossário, Dragão-Pálido** — M4 · Chefe · Morbidyum + Eternyr · Deidade
 Ser: Dragão, Ancião · Agir: Morder · Soprar (4C · Horizonte · Área · Aguentar · apodrece os inimigos, ou fecha as feridas de quem ele quiser · Inst) · Lembrar Mortos (livre: fala com todo morto do lugar) · Parecer: Antigo, Pálido · Quer: ser lembrado; guarda os nomes de todos que morreram na estrada dele, e cobra que você diga um em voz alta.
