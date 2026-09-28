@@ -28,6 +28,7 @@ Sistema de RPG próprio, inspirado em Daggerheart, Rune RPG, Ethmos e Triangle A
 18. [[17 Interações - proposta]] — a tabela de Interações (atributos + 30 verbos): o porquê e as contas (P-122, aprovada)
 19. [[18 Sessão de teste 2 - Alvenyr]] — segunda sessão: solo, Moldura 3, Sarn-das-Escadas, luta de Chefe
 20. [[19 Fim de sessão - as perguntas de envolvimento]] — o fim de sessão e de aventura: Laços, as três perguntas, *Perceber e Mudar*, Marcos e o que eles compram
+21. [[20 Prompts de arte - personagens]] — os personagens das sessões como rostos do livro: estilo base (traço Wilderfeast) e um prompt por personagem, interagindo com a página
 
 ## Conta dos dados
 

@@ -17,7 +17,7 @@ Legenda: ✅ feito · 🟡 rascunho pronto, falta sua decisão · ⬜ não come�
 
 ---
 
-## Fase 1 — Sistema e mecânicas (estamos aqui)
+## Fase 1 — Sistema e mecânicas (rascunho completo; volta quando precisar)
 
 Objetivo: o jogo **funciona e é gostoso de jogar** antes de ter lore bonita. Nada de texto final ainda.
 
@@ -39,8 +39,8 @@ Objetivo: o jogo **funciona e é gostoso de jogar** antes de ter lore bonita. Na
 | 1.11d | Aplicar rodada 2: Moldura, teste por verbo + modo, Eventos e marcadores, palavra como relação, Canais (foco/arma/Transcrito), 2 talentos por Comportamento, perguntas de criação e sessão zero, ficha por Valor, Correntes, maestrias, adversários por palavras, bestiário, tesouros, dragões | vários | ✅ |
 | 1.11e | Rodada 3 de perguntas (P-70 em diante) | [[09 Perguntas pra decidir]] | ⬜ |
 | 1.12 | 4 personagens prontos (nível 1) para teste | [[13 Teste de mesa 1]] | ✅ |
-| 1.13 | **Teste de mesa 1**: uma cena social + um combate + uma magia em dupla | [[13 Teste de mesa 1]] | 🟡 kit pronto e combate simulado; falta jogar |
-| 1.14 | Ajustes do teste; **teste 2** no nível 5 (Moldura 3) | — | ⬜ |
+| 1.13 | **Teste de mesa 1**: uma cena social + um combate + uma magia em dupla | [[13 Teste de mesa 1]], [[16 Sessão de teste - Castian]] | ✅ jogado (Castian, Moldura 1) |
+| 1.14 | Ajustes do teste; **teste 2** no nível 5 (Moldura 3) | [[18 Sessão de teste 2 - Alvenyr]] | ✅ jogado (Alvenyr, solo, Chefe) |
 | 1.15 | Simulador de combate (`calc/`) para conferir que nenhum Comportamento/Valor domina | `calc/simular_combate.py` | 🟡 primeira versão |
 
 **Pronto quando:** uma pessoa que nunca viu o jogo cria um personagem em até 20 minutos com a ficha, e um combate de 4 jogadores contra um encontro padrão termina em 45–60 minutos sem o mestre abrir o livro mais de 3 vezes.
@@ -56,7 +56,7 @@ Perguntas de teste para a mesa (anotar depois de cada sessão):
 
 ---
 
-## Fase 2 — Lore e descrições
+## Fase 2 — Lore e descrições (estamos aqui)
 
 Objetivo: o mundo explica as regras (por que par é Arcano, por que Eternyr é difícil, por que Dominum pode reagir).
 
@@ -112,6 +112,7 @@ Referências visuais (P-52):
 | 4.5 | Lista de prompts, um por item/terreno/adversário/dragão (igual ao `prompts das Peças novas.md`), com id = nome do arquivo |
 | 4.6 | Geração em lote (Canva), recorte de fundo, conferência uma a uma |
 | 4.7 | Molduras e ornamentos das duas fichas (a do Valor muda de arte para cada um dos 9) |
+| 4.8 | **Personagens das sessões ao longo do livro**, interagindo com as páginas e soltando magia (traço Wilderfeast): prompts em [[20 Prompts de arte - personagens]], uma linha nova a cada personagem criado |
 
 ## Fase 5 — Fichas, geradores, livro, site
 
