@@ -127,12 +127,12 @@ Perguntas para o mestre: 2
 | Terreno | Moldura · Tipo · Valor | Traço | Ações de Cataclisma |
 |---|---|---|---|
 | **Forja dos Mil Golpes** | 1 · Hostil · Conflitüo | Calor: toda vez que o mestre emoldura, quem estiver sem proteção marca 1 Cansaço | *Martelo Cego* (2): ataque +3, 2d8 em linha até Médio. *Arsenal Solto* (3): um adversário pega uma arma Pesada da parede |
-| **Charco Fervente** | 1 · Travessia · Sublimeyn | O chão alterna lama e pedra: mover além de Perto pede Agilidade 12 | *Gêiser* (2): Agilidade 13 ou 1d10+2 e empurrado. *Endurecer* (4): o charco vira pedra, todos presos até Força 14 |
-| **Floresta que Anda** | 1 · Travessia · Primitivum | As árvores trocam o caminho: sem rastrear (Percepção 13) o grupo anda em círculo | *Raízes* (2): Força 12 ou Preso. *Guardião* (3): uma fera-espírito Ágil defende a mata |
+| **Charco Fervente** | 1 · Travessia · Sublimeyn | O chão alterna lama e pedra: mover além de Perto pede Movimentar 12 | *Gêiser* (2): Desviar 13 ou 1d10+2 e empurrado. *Endurecer* (4): o charco vira pedra, todos presos até Forçar 14 |
+| **Floresta que Anda** | 1 · Travessia · Primitivum | As árvores trocam o caminho: sem Rastrear 13 o grupo anda em círculo | *Raízes* (2): Forçar 12 ou Preso. *Guardião* (3): uma fera-espírito Ágil defende a mata |
 | **Feira das Máscaras** | 1 · Social · Persona | Multidão: Vantagem para se esconder, Desvantagem para atirar | *Reconhecido* (1): alguém sabe quem um jogador é. *A Música Muda* (3): Sabedoria 13 ou uma emoção sorteada até a próxima Falha |
 | **Arena de Kairvahnn** | 2 · Hostil · Dominum | O público exige sangue: quem recua perde 1 Arcano | *Soltem a Fera* (3): entra um Bruto. *Chicote* (2): um jogador é puxado até o Toque de um adversário |
 | **Farol Sem Noite** | 2 · Exploração · Alvorum | Luz constante: ninguém se esconde e ilusões não funcionam | *O Farol Gira* (2): todos em Longe ficam cegos até os jogadores voltarem a agir. *Pesadelo Aceso* (4): o pior medo de um jogador vira um adversário Padrão |
-| **Cemitério que Respira** | 2 · Hostil · Morbidyum | Toda cura custa +1 Arcano; quem cai aqui e não é recolhido levanta como fantasma | *Mãos do Chão* (2): Agilidade 14 ou Preso. *Os de Baixo* (3): um grupo de Lacaios mortos |
+| **Cemitério que Respira** | 2 · Hostil · Morbidyum | Toda cura custa +1 Arcano; quem cai aqui e não é recolhido levanta como fantasma | *Mãos do Chão* (2): Fugir 14 ou Preso. *Os de Baixo* (3): um grupo de Lacaios mortos |
 | **Biblioteca que Esquece** | 2 · Exploração · Cognitium | Em cada Pausa aqui, cada jogador esquece uma Vivência até sair (1 Arcano para lembrar) | *Corredores* (2): o grupo se separa. *Livro Mentiroso* (4): todos acreditam numa mentira escrita (Inteligência 15 para duvidar) |
 | **Estação Parada** *(tecnomaga)* | 3 · Travessia · Eternyr | Perto do grande relógio, todo pote de Ameaça é 2 menor | *O Trem de Antes* (3): 3d10 em linha. *Preso no Instante* (5): um jogador fica fora do tempo até a próxima Falha do grupo (não age, não é atingido) |
 
@@ -142,8 +142,8 @@ Todo Terreno pode virar variação: troque o Valor, a Moldura ou o tipo e ajuste
 
 | Terreno | Moldura · Tipo · Valor | Traço | Ações de Cataclisma |
 |---|---|---|---|
-| **Cidade-Muralha** | 1 · Social/Hostil · Conflitüo | Todo mundo anda armado; puxar arma não chama atenção, mas guardar a arma sim | *Toque de Recolher* (2): as ruas fecham, testes para andar pedem Carisma 13. *Milícia* (3): um grupo de Lacaios guardas |
-| **Porto de Vidro** | 2 · Social · Sublimeyn | Tudo é transparente: impossível se esconder atrás de parede | *Maré de Calor* (2): o vidro amolece, Agilidade 13 ou afunda até o joelho. *Estilhaço* (3): 2d10 em Área Perto |
+| **Cidade-Muralha** | 1 · Social/Hostil · Conflitüo | Todo mundo anda armado; puxar arma não chama atenção, mas guardar a arma sim | *Toque de Recolher* (2): as ruas fecham, andar pede Convencer ou Esconder 13. *Milícia* (3): um grupo de Lacaios guardas |
+| **Porto de Vidro** | 2 · Social · Sublimeyn | Tudo é transparente: impossível se esconder atrás de parede | *Maré de Calor* (2): o vidro amolece, Movimentar 13 ou afunda até o joelho. *Estilhaço* (3): 2d10 em Área Perto |
 | **Mercado de Feras** | 1 · Social · Dominum | Barulho e cheiro: Desvantagem para ouvir e para rastrear | *Jaula Aberta* (3): uma fera escapa (Bruto). *Leilão* (1): alguém dá lance num jogador |
 | **Vila do Mesmo Dia** | 2 · Exploração · Eternyr | O dia se repete ao pôr do sol; só quem tem Eternyr ou uma âncora lembra | *Reinício* (4): o Evento volta ao começo, os PNJs esquecem. *Déjà-vu* (1): um PNJ lembra de algo que não devia |
 | **Cidade Insone** | 2 · Social · Alvorum | Ninguém dorme; Pausas aqui só limpam metade | *Sonho Vazado* (2): o sonho de alguém aparece no meio da rua. *Olhos Abertos* (3): todo mundo vê o que o grupo faz |
@@ -163,7 +163,7 @@ Os **Reinos** (um por Valor) são Terrenos de Moldura 3–4 e estão descritos e
 |---|---|
 | Escuridão | Desvantagem para ver, mirar e ler |
 | Chuva forte, nevasca | Longe vira o alcance máximo para atirar; Desvantagem para ouvir |
-| Terreno difícil | mover além de Perto pede Agilidade |
+| Terreno difícil | mover além de Perto pede Movimentar |
 | Terreno Instável | toda magia gera +1 Cataclisma |
 | Terreno Ferido | como Instável, mas permanente |
 | Solo de um Valor | Dificuldade −2 para aquele Valor, +2 para o oposto |

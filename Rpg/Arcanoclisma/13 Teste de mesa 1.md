@@ -6,13 +6,13 @@
 
 ## 1. Resumo de regras (uma página para a mesa)
 
-**Testes**: diga o **verbo** (o que faz) e o **atributo** (como faz; por padrão, o da linha na tabela de Palavras Básicas). Role **2d12 + atributo + verbo** contra a Dificuldade (9 fácil · 12 médio · 15 difícil · 19 muito difícil · 23 lendário).
+**Testes**: descreva a ação com **até duas Palavras Básicas** ("Bater Rápido", "Convencer"). Role **2d12 + os números delas** contra a Dificuldade (9 fácil · 12 médio · 15 difícil · 19 muito difícil · 23 lendário).
 
 **Dados**: cada **par** = +1 Arcano para você. Cada **ímpar** = +1 Cataclisma para o mestre. **Dois iguais = Crítico** (sucesso automático, +Arcano igual ao dado, máx. 6). **Maior dado ímpar** (jogada por Cataclisma) ou **falha** → o mestre emoldura.
 
 **Magia**: 1 palavra do seu Valor (núcleo) + até 1 palavra de Valor a mais (1 Arcano) + **uma** Palavra Básica de graça (um verbo da tabela ou uma forma). Na Moldura 1: **Grau 1** é grátis e acontece sem rolar (ou vira o meio de uma ação: dano 1d8+1); **Grau 2** custa **1 Arcano** e rola **2d12 + 2 (Sintonia) + 1 por palavra de Valor** (a combinação, o sentido e o Grau combinados com o mestre) pelo tipo de efeito: **Projétil** contra a Esquiva/Dificuldade do alvo; **Teste mágico** (sono, medo, encanto): você não rola, o alvo rola contra **12 + 2 + palavras** (15 ou 16); **Pequeno evento** (mudar o mundo) contra 12. Dano de Grau 2: **1d10 + 2**. Dura até a próxima Falha.
 
-**Bônus**: só a tabela (atributo + verbo) e **Vantagem (+1d6)**, até 2 por rolagem; Desvantagem tira uma. **Arcano** (começa 3, máx. 12): 1 = Vivência (Vantagem) · 1 = Ajudar (Vantagem) · 1 = palavra extra · 3 = Hábito · 3 = Ação em Dupla · 3 = Detalhe · 3 = Forçar o Grau (Grau 3, 3d8, contra 14).
+**Bônus**: só as palavras e **Vantagem (+1d6)**, até 2 por rolagem; Desvantagem tira uma. **Arcano** (começa 3, máx. 12): 1 = Vivência (Vantagem) · 1 = Ajudar (Vantagem) · 1 = palavra extra · 3 = Hábito · 3 = Ação em Dupla · 3 = Detalhe · 3 = Subir o Grau (Grau 3, 3d8, contra 13).
 
 **Atalho ou Passo**: Atalho = o mestre ganha 2 (+3 numa rolagem, ou ignorar condição) ou 4 (falha vira sucesso). Passo de Valor = aceitar o desconforto (Desvantagem, ou 1–2 Cansaço, ou a consequência) → +1 Arcano, dê certo ou não. Dois Atalhos sem nenhum Passo apertam o Laço (ações fora do padrão dele ficam +2, uma relação estremece, a consequência cresce); o Passo solta.
 
@@ -28,9 +28,9 @@
 *Ex-soldado da Cidade-Muralha que ainda luta como se o capitão estivesse olhando.*
 
 - **Comportamento**: Briguento · **Valor**: Conflitüo · **Canal**: Arma (machado)
-- **Palavras Básicas**: Força +1 · Agilidade +1 · Inteligência −1 · Bater **+2** · Proteger +1 · Intuir +1 · Ameaçar +1 · Mentir −1 → Bater +3 · Proteger +1 · Ameaçar +1 · Intuir +1 · Mentir −1
+- **Palavras Básicas**: Bater **+2** · Forçar +1 · Rápido +1 · Proteger +1 · Ameaçar +1 · Intuir +1 · Mentir −1 · Raciocinar −1 → melhor teste *Bater Forçar* **+3**
 - **Esquiva** 10 · **PV** 6 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 8 / 16 · **Proteção** 4 (cota, Média: −1 em testes de mobilidade)
-- **Machado**: Força, Toque, **d10+3** (com Gosto de Sangue), Cruel (dano Grave marca +1 PV). Pela arma, a magia também é Cruel.
+- **Machado**: Bater (+ Forçar), Toque, **d10+3** (com Gosto de Sangue), Cruel (dano Grave marca +1 PV). Pela arma, a magia também é Cruel.
 - **Talento — Gosto de Sangue**: usa todas as armas, qualquer coisa vira arma (d8+1); +1 de dano com armas; dano Grave = +1 Arcano. **Hábito — Surra** (3): dano dobrado ou um segundo alvo.
 - **Skill — Fio da Guerra**: em combate, magia com +1 dado de dano ou +2 no total. **Retaliação**: fora de combate, magia custa +2 Arcano.
 - **Compromisso**: "Não fujo de briga que é minha."
@@ -42,9 +42,9 @@
 *Aprendiz de vidreira do Porto de Vidro, que carrega no pescoço um frasco do rio onde quase se afogou.*
 
 - **Comportamento**: Curiosa · **Valor**: Sublimeyn (o Eixo) · **Canal**: Foco (o frasco)
-- **Palavras Básicas**: Inteligência +1 · Percepção +1 · Força −1 · Consertar **+2** · Estudar +1 · Movimentar +1 · Observar +1 · Ameaçar −1 → Consertar +3 · Estudar +2 · Observar +2 · Movimentar +1
+- **Palavras Básicas**: Consertar **+2** · Estudar +1 · Raciocinar +1 · Observar +1 · Movimentar +1 · Lembrar +1 · Ameaçar −1 · Forçar −1 → melhor teste *Consertar Raciocinando* **+3**
 - **Esquiva** 10 · **PV** 5 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 6 / 12 · **Proteção** 3 (couro, Leve)
-- **Adaga**: Agilidade, Toque, d8+1. **Magia de dano** (G2): 1d10 + 3 (com o Foco).
+- **Adaga**: Bater (+ Rápido), Toque, d8+1. **Magia de dano** (G2): 1d10 + 3 (com o Foco).
 - **Talento — Já Li Sobre Isso**: duas vezes por sessão, um fato objetivo e descritivo, verdadeiro, sobre uma criatura, objeto ou lugar. **Hábito — Análise** (3): no começo de um Evento, descobre **um** dado (a Dificuldade, os Limiares, uma palavra ou o Valor de um adversário; um costume; um perigo).
 - **Skill — Mistura** (1 Arcano): dois elementos numa palavra. **Retaliação**: +1 Arcano por passo de estado além do primeiro.
 - **Compromisso**: "Nada precisa ficar como está."
@@ -56,9 +56,9 @@
 *Atriz que largou a trupe na estrada e vive de ser quem os outros precisam que ela seja.*
 
 - **Comportamento**: Enganadora · **Valor**: Persona · **Canal**: Voz
-- **Palavras Básicas**: Carisma +1 · Agilidade +1 · Força −1 · Mentir **+2** · Atrair +1 · Esconder +1 · Criar +1 · Firmar −1 → Mentir +3 · Atrair +2 · Esconder +2 · Criar +1
+- **Palavras Básicas**: Mentir **+2** · Atrair +1 · Esconder +1 · Criar +1 · Encantar +1 · Rápido +1 · Firmar −1 · Forçar −1 → melhor teste *Mentir Encantando* **+3**
 - **Esquiva** 12 · **PV** 5 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 6 / 12 · **Proteção** 3 (Leve)
-- **Adaga**: Agilidade, Toque, d8+1. **Magia de dano** (G2): 1d10 + 2.
+- **Adaga**: Bater (+ Rápido), Toque, d8+1. **Magia de dano** (G2): 1d10 + 2.
 - **Talento — Mil Caras**: Vantagem para disfarçar, mentir e se esconder; mentira que funciona num PNJ = +1 Arcano. **Hábito — Sumir na Paisagem** (3, uma vez por sessão): se esconde no ambiente sem ninguém perceber, descrevendo como.
 - **Skill — Toque Humano**: em pessoas, o primeiro passo de Ampliar sai de graça. **Retaliação — Tropeço** (e fora de gente, só pelo corpo ou sentimento): se falhar, a magia sai inútil ou atrapalha.
 - **Compromisso**: "Gente vem antes de tudo."
@@ -70,10 +70,10 @@
 *Filho da Vila da Colheita, grande e calado, que fala melhor com bicho do que com gente.*
 
 - **Comportamento**: Brutamontes · **Valor**: Primitivum · **Canal**: Corpo
-- **Palavras Básicas**: Força +1 · Sabedoria +1 · Inteligência −1 · Levantar **+2** · Sobreviver +1 · Rastrear +1 · Aguentar +1 · Negociar −1 → Levantar +3 · Aguentar +2 · Sobreviver +2 · Rastrear +1
+- **Palavras Básicas**: Levantar **+2** · Forçar +1 · Aguentar +1 · Sobreviver +1 · Rastrear +1 · Intuir +1 · Negociar −1 · Raciocinar −1 → melhor teste *Levantar Forçando* **+3**
 - **Esquiva** 8 · **PV** 7 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 11 / 20 · **Proteção** 5 (placas, Pesada: −1 Esquiva; a mobilidade não sofre, por ser Brutamontes)
-- **Lança**: Força, Perto, d10+2, Alcance.
-- **Talento — Ombro de Aríete**: Vantagem para empurrar, levantar, arrombar, segurar; armadura não atrapalha a mobilidade. **Hábito — Corpo de Pedra** (3): até o fim do Evento, Vantagem em testes de Força e de resistir.
+- **Lança**: Bater (+ Movimentar), Perto, d10+2, Alcance.
+- **Talento — Ombro de Aríete**: Vantagem para empurrar, levantar, arrombar, segurar; armadura não atrapalha a mobilidade. **Hábito — Corpo de Pedra** (3): até o fim do Evento, Vantagem em Forçar e Aguentar.
 - **Skill — Forma Animal**: 1 vez nesta sessão (Moldura 1), um animal até o tamanho de gente, com 2 Traços Animais. **Retaliação**: como bicho, não conjura.
 - **Compromisso**: "O corpo sabe antes da cabeça."
 - **Laços**: *Minha avó Jaci, que me ensinou a falar com bicho* · *Ficar calado e aguentar* (Atalho de costume) · *A raiva que eu tenho da cidade*
@@ -100,7 +100,7 @@
 - **Guarda Bento** — Moldura 1 · Social · — · Ser: Guarda, Cansado · Agir: Mandar embora · Aceitar (livre: um suborno de 5 o ou um bom motivo) · Parecer: Covarde · Quer: que o turno acabe sem problema.
 - **O Menino das Gaiolas** — Moldura 1 · Social · — · Ser: Criança, Testemunha · Agir: Fugir · Apontar (livre: se alguém for gentil com ele, aponta o celeiro) · Quer: não apanhar da Domadora.
 
-**Testes esperados**: *convencer, gentil* (Carisma, 12) com Tânia ou com o menino · *procurar, metódico* (Inteligência, 12) nas gaiolas vazias · *farejar, instintivo* (Oruã, Sabedoria, 15 com Desvantagem do terreno, ou Grau 1 de Primitivum) · *enganar, charmoso* (Nhanda, Carisma, 12) com o guarda.
+**Testes esperados**: *Convencer* (12) com Tânia ou com o menino · *Procurar Raciocinando* (12) nas gaiolas vazias · *Rastrear Intuindo* (Oruã, 15 com Desvantagem do terreno, ou Grau 1 de Primitivum) · *Mentir Encantando* (Nhanda, 12) com o guarda.
 
 **Momento de Laço**: o guarda empurra o menino. Quem se mete (Passo de Valor) e quem finge não ver (Atalho)?
 
@@ -113,9 +113,9 @@
 - **Domadora de Garmhal** — Moldura 1 · **Líder** (3) · Dominum · Dif 13 · Limiares 8/14 · PV 6 · Ataque +1 · Dano 1d10+2
   Ser: Domadora · Agir: Chicotear (Perto) · Mandar (livre: ativa uma fera aliada) · Soltar a Fera (3C: o Javali age agora, mesmo que já tenha agido) · Parecer: Leal · Quer: vender o ovo para Garmhal; foge com 2 PV · Laço: *Dívida*.
 - **Cão de Coleira Dupla** ×2 — Moldura 1 · **Padrão** (2 cada) · Dominum · Dif 12 · Limiares 8/14 · PV 5 · Ataque +1 · Dano 1d10+2
-  Ser: Cão, Servo · Agir: Morder · Agarrar (livre · Toque · 1 · Força · Preso · até o mestre emoldurar) · Parecer: Leal · Quer: obedecer.
+  Ser: Cão, Servo · Agir: Morder · Agarrar (livre · Toque · 1 · Forçar ou Fugir · Preso · até o mestre emoldurar) · Parecer: Leal · Quer: obedecer.
 - **Javali de Ferro** — Moldura 1 · **Bruto** (4) · Primitivum · Dif 11 · Limiares 10/18 · PV 8 · Ataque +1 · Dano 1d12+4
-  Ser: Javali · Agir: Chifrar · Atropelar (1C · Médio em linha · Grupo · Agilidade · dano ×1 + Caído) · Parecer: Blindado, Furioso · Quer: sair da jaula. É **Primitivum**: resiste à magia de Oruã (Dificuldade +2, metade do dano), mas Oruã pode tentar **acalmar, calmo** (Sabedoria 15) falando com ele como bicho.
+  Ser: Javali · Agir: Chifrar · Atropelar (1C · Médio em linha · Grupo · Desviar · dano ×1 + Caído) · Parecer: Blindado, Furioso · Quer: sair da jaula. É **Primitivum**: resiste à magia de Oruã (Dificuldade +2, metade do dano), mas Oruã pode tentar **Acalmar** (Convencer Intuindo, 15) falando com ele como bicho.
 - **Bandidos da Domadora** (4) — Moldura 1 · **Lacaios** (1) · — · Dif 10 · Limiares 4/7 (1, 2 ou 3 caem por golpe) · Dano 4
   Ser: Ladrão · Agir: Esfaquear · Fugir · Parecer: Covarde · Quer: a parte deles.
 
@@ -129,7 +129,7 @@ Na briga, uma lamparina cai no feno. O ovo começa a rachar com o calor.
 
 **Ameaça**: "o teto cai quando este pote tiver **6**" (o mestre põe um copo na mesa e coloca Cataclisma nele quando quiser). **Termina quando** o grupo sair com o ovo, ou o teto cair.
 
-- Apagar ou conter o fogo é Grau 3 (uma sala): só com **Forçar o Grau** (3 Arcano) ou **Magia em Dupla**.
+- Apagar ou conter o fogo é Grau 3 (uma sala): só com **Subir o Grau** (3 Arcano) ou **Magia em Dupla**.
 - **Dupla sugerida**: **Iara** (Sublimeyn, o Eixo) com qualquer um — *Vapor* ou *Solidificar* + a palavra do outro — efeito de Grau 3; quem conduz rola **3d8 + 2 + 1**, o parceiro soma **+2**, contra **14** (uns 89%). Custa 3 Arcano.
 - **Dupla de opostos**: **Tomé** (Conflitüo) e **Nhanda** (Persona) — o efeito sobe 2 Graus (Grau 4: apagar o celeiro inteiro de uma vez); quem conduz rola **4d6 + 2 + 1 (a palavra dele)**, o parceiro soma **+2**, contra **16 + 2 = 18** (uns 66%); os dois marcam 2 Cansaço, e se sair Ímpar rolam uma Dificuldade a mais. Arriscado e bonito.
 - **O ovo choca**: a wyvern nasce leal a quem estiver mais perto. Quem é? Vira uma linha na ficha (sem ficha própria).
@@ -143,7 +143,7 @@ Na briga, uma lamparina cai no feno. O ovo começa a rachar com o calor.
 Anotem durante (uma folha, um risco por vez):
 
 - Quanto tempo levou cada Evento? (meta do combate: 45–60 min)
-- Quantas vezes alguém ficou sem saber qual verbo e atributo usar?
+- Quantas vezes alguém ficou sem saber quais palavras usar?
 - Quantas vezes alguém usou magia? Grau 1 como meio de ação, Grau 2, Dupla?
 - Quanto Arcano cada um tinha no fim? Chegou no máximo (12)?
 - Quanto Cataclisma o mestre tinha no fim de cada Evento? Transbordou?
@@ -208,4 +208,4 @@ Iara (7,1 +3 = 11 vs 12) erra o Cão 2                            ← falha: o m
 8. **A Magia em Dupla funciona bem na Moldura 1**: comum uns 89%, de opostos uns 66% (agora numa rolagem só, ver [[14 Teste das mecânicas]]). Na mesa, ver se o preço de 3 Arcano e o Cansaço dos opostos parecem justos pelo tamanho do efeito.
 9. **Duração**: 22 ações de jogador é uma luta de uns 40–50 minutos numa mesa que já conhece as regras. Dentro da meta.
 
-**Ainda não testado pelo script** (só a mesa responde): se atributo + verbo é fácil de escolher; se a relação (as palavras somam) flui ou trava a conversa; se Atalho e Passo aparecem naturalmente; a Fusão; o Evento social.
+**Ainda não testado pelo script** (só a mesa responde): se escolher até duas palavras é fácil; se a relação (as palavras somam) flui ou trava a conversa; se Atalho e Passo aparecem naturalmente; a Fusão; o Evento social.

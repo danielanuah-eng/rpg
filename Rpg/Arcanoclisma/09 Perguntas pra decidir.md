@@ -516,3 +516,15 @@ As perguntas P-123 a P-126 (gerador de nomes, personagem aleatório com tabela d
 
 ✅ **Fichas (rascunho)**: Ficha 1 frente e verso e Ficha 2 (Conflitüo) em `arte/fichas.html`, com as Palavras Básicas como o maior bloco da frente.
 
+
+## Rodada 25 — Palavras soltas e a ficha da magia
+
+✅ **Sem atributos.** As palavras não se encaixam dentro de um atributo: são **52 Palavras Básicas soltas**, e qualquer uma combina com qualquer outra. **Lembrar, Raciocinar, Forçar e Rápido** entraram no lugar dos atributos. Teste = **2d12 + até duas palavras** ("Bater Rápido"). Criação: **+2, +1, +1, +1, +1, +1, −1, −1** em oito palavras; avanço: +1 em duas palavras; máximo +3 cada. Em [[01 Regras centrais]], [[04 Comportamentos]] (coluna "Palavras que combinam"), [[05 Personagem e níveis]], [[06 Itens e dinheiro]] (armas: "Combina com"), [[07 Mestre - Cataclisma, abalos e terrenos]], [[10 Adversários - como criar]] e nos personagens prontos. Os glifos de atributo foram descartados.
+
+✅ **Colisões de nome**: Cognitium *Lembrar* → **Evocar**; Eternyr *Rápido* → **Súbito**. A mecânica de magia "Forçar" (Cansaço, +2 por casa) virou **Esforço**; "Forçar o Grau" virou **Subir o Grau**.
+
+✅ **Ampliar traz colateral**: cada passo de Ampliar soma **+1 Efeito Colateral** se a magia sair por Cataclisma (além dos do Grau). Em [[02 Magia]].
+
+✅ **Arsenal Vivo** (Ressonância III de Conflitüo) detalhado: Lâmina, Lança, Arco ou Escudo, cada um com alcance, palavra de ataque e dano; uma de cada vez, dura o Evento, não pode ser desarmada, arma mágica, um traço à escolha. Em [[03 Valores]].
+
+✅ **Ficha do Valor**: ganha *Subir o Grau*, o guia de gasto de Arcano, o menu de Ampliar (cada gasto = uma coisa) e o resumo do que cada Grau faz. Em `arte/fichas.html`.

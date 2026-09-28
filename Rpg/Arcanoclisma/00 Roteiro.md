@@ -51,7 +51,7 @@ Perguntas de teste para a mesa (anotar depois de cada sessão):
 - Alguém travou pensando em que palavras usar? (magia)
 - Alguma magia resolveu o Evento sozinha? (Grau/limites)
 - Os marcadores (até a próxima Falha, até o mestre pagar) ficaram claros sem turno?
-- Os jogadores acharam fácil escolher atributo + verbo?
+- Os jogadores acharam fácil escolher as duas palavras do teste?
 - Quem só usou arma se sentiu menor que quem usou magia?
 
 ---
@@ -129,7 +129,7 @@ Entregas, na mesma família do Peso do Céu:
    - **Escudo do mestre digital**: contador de Cataclisma com Transbordo, tabela de Abalos, o emoldurar.
    - **Geradores**: encontro (balanceado pela Moldura e nº de jogadores), adversário com imagem, terreno, tesouro/item, relíquia com palavra, PNJ, nome, gancho, Abalo, "magia aleatória" (d66 nas tabelas).
 2. **Ficha de papel** enfeitada para imprimir, em **A4**, colorida e com versão econômica em preto e branco, em **duas folhas** ([[05 Personagem e níveis]]):
-   - **Ficha 1 — Personagem** (igual para todos): nome, skin, Comportamento, atributos, Palavras Básicas, Arcano, Laços, Vivências, itens, Ordynus, perguntas de criação e relações da party.
+   - **Ficha 1 — Personagem** (igual para todos): nome, skin, Comportamento, Palavras Básicas, Arcano, Laços, Vivências, itens, Ordynus, perguntas de criação e relações da party.
    - **Ficha 2 — Valor** (9 versões, uma por Valor, com arte própria): símbolo, Compromisso, Skill, Retaliação, Ressonâncias, as 36 palavras, 4 espaços extras, Canal, tabela de Graus e magias favoritas.
 3. **Livro — *Arcanoclisma: um passo diante do desconforto e do compromisso*** — o texto completo do jogo, com capa, feito para sair em **vários formatos** a partir da mesma fonte:
    - PDF completo para baixar e imprimir;

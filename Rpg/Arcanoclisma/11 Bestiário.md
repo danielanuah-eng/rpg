@@ -95,7 +95,7 @@ Básicas: fortes Consertar, Levantar, Bater · fraco Mentir
 
 **Taverneira que Vende Segredos** — M1 · Social · Cognitium
 Ser: Taverneira, Informante · Agir: Servir · Vender (livre: um segredo por moeda) · Parecer: Astuto, Mentiroso · Quer: saber tudo antes de todo mundo.
-Básicas: fortes Intuir, Negociar, Mentir · fraco Bater · Valor: Segredo, Lembrar, Sutil
+Básicas: fortes Intuir, Negociar, Mentir · fraco Bater · Valor: Segredo, Evocar, Sutil
 
 **Arruaceiro de Taverna** — M1 · Lacaio · —
 Ser: Bêbado · Agir: Socar · Arremessar (cadeira) · Parecer: Barulhento · Quer: briga; vira amigo se perder bonito.
@@ -307,7 +307,7 @@ Básicas: fortes Estudar, Pensar · fraco Aguentar · Valor: duas palavras do Va
 
 **Professora da Escola de Magia** — M2 · Suporte · Cognitium
 Ser: Professora · Agir: Corrigir (livre · Médio · a próxima magia de um aliado tem Vantagem) · Silenciar a Turma (1C · Médio · Grupo · Firmar · Distraído · Inst) · Parecer: Paciente, Astuto · Quer: que nenhum aluno morra este ano.
-Básicas: fortes Estudar, Chamar, Intuir · fraco Movimentar · Valor: Lembrar, Ideia, Lógico, Sugerir
+Básicas: fortes Estudar, Chamar, Intuir · fraco Movimentar · Valor: Evocar, Ideia, Lógico, Sugerir
 
 **Tatuadora de Marcas** — M1 · Social · Persona
 Ser: Tatuadora · Agir: Marcar (livre: grava um sinal que só aliados reconhecem) · Parecer: Silencioso · Quer: pele nova para desenhar; conhece o Canal Marca como ninguém.
@@ -493,7 +493,7 @@ Básicas: fortes Mentir, Criar, Esconder · fraco Aguentar · Valor: Labirinto, 
 
 **Mensageira do Portal** — M2 · Ágil · Eternyr
 Ser: Mensageira · Agir: Faca · Saltar (livre · si · teleporta até Médio · Inst) · Parecer: Veloz · Quer: entregar a carta no prazo, custe o que custar.
-Básicas: fortes Movimentar, Fugir · fraco Firmar · Valor: Saltar, Portal, Rápido
+Básicas: fortes Movimentar, Fugir · fraco Firmar · Valor: Saltar, Portal, Súbito
 
 **Guardião do Ciclo** — M3 · Padrão · Eternyr · Resiliente
 Ser: Guardião, Relógio · Agir: Bastão · Repetir (2C · o último ataque que ele deu acontece de novo · Inst) · Âncora (1C · Médio · 1 · Fugir · não se teleporta nem se move por magia · Ev) · Parecer: Paciente, Duro · Quer: que o dia de amanhã seja igual ao de hoje.
@@ -529,7 +529,7 @@ Básicas: fortes Estudar, Firmar, Chamar · fraco Movimentar · Valor: todas as 
 
 **O Antigo Bibliotecário** — M4 · Social · Cognitium · Inquebrável
 Ser: Bibliotecário, Homem que Pensou · Agir: Achar (livre: acha o livro de que alguém precisa, se receber um conhecimento de bom grado) · Esquecer Onde Pôs (livre: sabe que tem, não sabe onde) · Ratinhos (livre: os ratinhos organizam, buscam, avisam) · Parecer: Antigo, Estranho (sempre parece confuso, e é) · Quer: que ninguém saia do Postulário mais cruel do que entrou. Leva pela vida uma frase: *"Nunca seja cruel, nunca seja covarde, e o amor é sempre sábio."* *Jeito*: barbudo, careca, cabelos descabelados dos lados, óculos, macacão marrom; adora admitir que não sabe.
-Básicas: fortes Estudar, Intuir, Procurar · fraco Movimentar · Valor: Lembrar, Ideia, Memória, Palavra, Verdadeiro
+Básicas: fortes Estudar, Intuir, Procurar · fraco Movimentar · Valor: Evocar, Ideia, Memória, Palavra, Verdadeiro
 
 ## Povos infundidos
 
@@ -939,7 +939,7 @@ Básicas: fortes Movimentar, Quebrar · fraco Firmar
 
 **Chama que Lembra** — M2 · Conjurador · Sublimeyn + Cognitium
 Ser: Chama, Memória · Agir: Queimar · Mostrar (1C · Médio · 1 · Firmar · vê a pior lembrança; Distraído · Falha) · Parecer: Ardente, Etéreo · Quer: que alguém lembre da casa que queimou.
-Básicas: fortes Intuir, Atrair · fraco Aguentar · Valor: Fogo, Memória, Lembrar
+Básicas: fortes Intuir, Atrair · fraco Aguentar · Valor: Fogo, Memória, Evocar
 
 **Hora Solta** — M3 · Ágil · Eternyr · Resiliente
 Ser: Instante · Agir: Tocar (envelhece: dano) · Pular (livre · si · age de novo se o último teste de jogador foi Falha) · Parecer: Etéreo, Estranho (não pode ser atacada duas vezes seguidas pelo mesmo jogador) · Quer: voltar ao relógio de onde saiu.
@@ -1055,7 +1055,7 @@ Básicas: fortes Esconder, Furtar · fraco Firmar
 
 **Bibliotecária do Arquivo** (Arquivo Sem Dono) — M3 · Suporte · Cognitium
 Ser: Bibliotecária · Agir: Achar (livre: acha qualquer memória perdida, mediante troca) · Emprestar (1C · Toque · um aliado ganha uma Vivência por um Evento) · Parecer: Astuto, Paciente · Quer: que tudo volte para a estante; cobra uma lembrança por empréstimo.
-Básicas: fortes Estudar, Negociar, Procurar · fraco Movimentar · Valor: Memória, Lembrar, Labirinto
+Básicas: fortes Estudar, Negociar, Procurar · fraco Movimentar · Valor: Memória, Evocar, Labirinto
 
 **Sombra do Trono Vazio** (Arquivo Sem Dono) — M4 · Chefe · Cognitium · Inquebrável, Resiliente
 Ser: Trono, Ausência · Agir: Esquecer (2C · Médio · Grupo · Firmar · Selado · Ev) · Tomar o Lugar (3C · Médio · 1 · Firmar · o alvo esquece quem é e age como servo do Trono · Pagar) · Vazio (reação, 2C: um ataque contra ela passa por onde ela não está) · Parecer: Invisível, Antigo · Quer: alguém para sentar no Trono; testa todos que chegam perto. *Jeito*: não fala; responde mostrando lembranças dos próprios jogadores.

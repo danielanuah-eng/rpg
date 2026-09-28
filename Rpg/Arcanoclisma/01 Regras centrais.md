@@ -4,10 +4,10 @@
 
 ## O jogo em um minuto
 
-- Quando seu personagem tenta algo arriscado, você **diz o que faz (um verbo) e como (um atributo)** ("**Furtar**, com Percepção", "**Convencer**, com Carisma") e rola **2d12 + atributo + verbo** contra uma **Dificuldade**.
+- Quando seu personagem tenta algo arriscado, você **descreve a ação com uma ou duas Palavras Básicas** ("**Furtar**", "**Bater Rápido**") e rola **2d12 + os números dessas palavras** contra uma **Dificuldade**.
 - **Cada dado par te dá 1 Arcano. Cada dado ímpar dá 1 Cataclisma ao mestre.** Par é controle e fechamento; ímpar é o incompleto, que muda (ver [[08 Mundo e entidades]]). Se o **maior d12 é ímpar**, a jogada é **por Cataclisma** e o mestre emoldura.
 - **Dois dados iguais = Crítico.**
-- Magia não usa atributo: você junta **palavras** do seu Valor, escolhe o **Grau** (o tamanho do feito) e rola um conjunto de dados que **sempre soma no máximo 24**: 2d12 → 3d8 → 4d6 → 6d4. Mais dados = mais confiável, mas mais Arcano *e* mais Cataclisma saindo da mesa.
+- Magia não usa as Palavras Básicas como número: você junta **palavras** do seu Valor, escolhe o **Grau** (o tamanho do feito) e rola um conjunto de dados que **sempre soma no máximo 24**: 2d12 → 3d8 → 4d6 → 6d4. Mais dados = mais confiável, mas mais Arcano *e* mais Cataclisma saindo da mesa.
 - Adversários rolam **d20**. O mestre gasta **Cataclisma** para fazer o mundo reagir.
 - Todo personagem tem **Laços** (relações, atitudes, sentimentos difíceis). Quando aperta, escolhe: **Atalho** (entregar Cataclisma ao mestre e burlar agora; repetido, aperta o Laço e o problema cresce) ou **Passo de Valor** (fazer o difícil que aproxima do que importa).
 - Não há turnos nem rodadas: o jogo anda em **Eventos** (uma situação completa: uma briga, uma conversa, uma fuga). Os jogadores agem; quando alguém falha ou faz uma jogada **por Cataclisma**, **o mestre emoldura** a cena. Efeitos duram por **marcadores** (até a próxima falha, até o fim do Evento...), nunca por turno.
@@ -16,61 +16,57 @@
 
 ## 1. Palavras Básicas: onde você põe os seus números
 
-**Este é o coração do Arcanoclisma: os seus números ficam nas palavras.** Tudo o que um personagem faz sem magia está numa tabela só, a **tabela de Palavras Básicas**, e é nela, palavra por palavra, que o jogador coloca os seus modificadores. Cada coluna é um **atributo** (como você faz), e embaixo dele ficam os **verbos** (o que você faz) que costumam usar esse atributo. Monstros e PNJs usam a mesma tabela ([[10 Adversários - como criar]]).
+**Este é o coração do Arcanoclisma: os seus números ficam nas palavras.** Não existem atributos. Existe uma lista de **Palavras Básicas**, as ações que todo mundo no mundo faz, e é nela, palavra por palavra, que o jogador coloca os seus modificadores. Cada jogador põe os números onde o personagem dele é bom (ou ruim), e **mistura as palavras como quiser** na hora de agir. Monstros e PNJs usam a mesma lista ([[10 Adversários - como criar]]).
 
-| d8 | **Força** | **Agilidade** | **Percepção** | **Carisma** | **Inteligência** | **Sabedoria** |
-|---|---|---|---|---|---|---|
-| 1 | Bater | Movimentar | Atirar | Convencer | Pensar | Intuir |
-| 2 | Agarrar | Desviar | Observar | Mentir | Estudar | Sobreviver |
-| 3 | Levantar | Fugir | Procurar | Ameaçar | Consertar | Firmar |
-| 4 | Aguentar | Esconder | Rastrear | Atrair | Negociar | Proteger |
-| 5 | Quebrar | Mexer | Furtar | Chamar | Criar | Montar |
-| 6 | Abrir | Apagar | Investigar | Conjurar | Fazer | Preparar |
-| 7 | Acabar | Alcançar | Reconhecer | Encantar | Formar | Conectar |
-| 8 | Prender | Jogar | Entrar | Enrolar | Armar | Sair |
+| | | | |
+|---|---|---|---|
+| Abrir | Conjurar | Formar | Observar |
+| Acabar | Consertar | Fugir | Pensar |
+| Agarrar | Convencer | Furtar | Prender |
+| Aguentar | Criar | Intuir | Preparar |
+| Alcançar | Desviar | Investigar | Procurar |
+| Ameaçar | Encantar | Jogar | Proteger |
+| Apagar | Enrolar | Lembrar | Quebrar |
+| Armar | Entrar | Levantar | Raciocinar |
+| Atirar | Esconder | Mentir | Rápido |
+| Atrair | Estudar | Mexer | Rastrear |
+| Bater | Fazer | Montar | Reconhecer |
+| Chamar | Firmar | Movimentar | Sair |
+| Conectar | Forçar | Negociar | Sobreviver |
 
-O que cada verbo cobre, quando a dúvida aparecer:
+São **52 palavras**, em ordem alfabética. O que cada uma cobre, quando a dúvida aparecer:
 
-- **Bater**: corpo a corpo, com arma ou sem. **Agarrar**: segurar, derrubar, prender, desarmar. **Levantar**: erguer, empurrar, carregar. **Aguentar**: dor, veneno, frio, fome, doença. **Quebrar**: arrombar, partir, derrubar a porta. **Abrir**: forçar e escancarar (porta emperrada, tampa, caminho no mato). **Acabar**: terminar à força (o golpe final, derrubar de vez, esgotar). **Prender**: imobilizar, amarrar, trancar alguém.
-- **Movimentar**: correr, saltar, escalar, nadar, remar. **Desviar**: reagir rápido, escapar de armadilha, de rajada, de queda. **Fugir**: escapar de perseguição, de amarras, sair de uma briga. **Esconder**: furtividade, sumir na multidão. **Mexer**: mão leve, fechadura, truque, trapaça no jogo. **Apagar**: fogo, luz, rastros, depressa. **Alcançar**: pegar quem foge, chegar primeiro, alcançar o que está longe. **Jogar**: arremessar para alguém pegar, jogos de habilidade, lançar uma corda.
-- **Atirar**: arco, funda, arremesso, pistola. **Observar**: ver, ouvir, notar que algo mudou. **Procurar**: vasculhar com calma. **Rastrear**: seguir pegadas, cheiro, pistas. **Furtar**: achar a brecha e tirar sem ser visto. **Investigar**: examinar uma cena, juntar pistas. **Reconhecer**: identificar uma pessoa, uma magia, um brasão, um perigo. **Entrar**: achar e usar a entrada, se infiltrar, passar por onde ninguém vê.
-- **Convencer**: persuadir, pedir. **Mentir**: enganar, disfarçar, blefar. **Ameaçar**: intimidar, dar ultimato. **Atrair**: encantar, seduzir, distrair, chamar a atenção. **Chamar**: liderar, inspirar, se fazer ouvir. **Conjurar**: espetáculo, truque de palco, magia feita para ser vista. **Encantar**: deslumbrar, conquistar um público, fazer gostar. **Enrolar**: ganhar tempo na conversa, levar alguém no papo (enrolar com corda é Agilidade).
-- **Pensar**: deduzir, resolver, planejar. **Estudar**: lembrar o que se sabe, ler, pesquisar, entender magia alheia. **Consertar**: ofício, montar, desmontar, forjar, cozinhar. **Negociar**: comprar, vender, trocar, pechinchar. **Criar**: arte, música, inventar. **Fazer**: produzir algo com receita (poção, item, ferramenta). **Formar**: organizar gente e coisas (uma fila, uma formação, um plano, uma forma). **Armar**: montar armadilha, mecanismo, esquema.
-- **Intuir**: sentir intenção, mentira, perigo. **Sobreviver**: se orientar, achar abrigo, ler o tempo. **Firmar**: resistir ao medo, ao encanto, à loucura. **Proteger**: cobrir alguém com o corpo, estancar um sangramento, tirar alguém do perigo, acalmar quem está em pânico. **Montar**: cavalgar, conduzir, pilotar, lidar com bicho. **Preparar**: ritual, remédio, emboscada, o terreno antes da luta. **Conectar**: ligar pessoas, lugares e ideias; criar confiança; achar o que une. **Sair**: saber a hora de ir embora, sair de uma enrascada, de um transe, de um lugar sem ser notado.
+- **Abrir**: forçar e escancarar (porta emperrada, tampa, caminho no mato). **Acabar**: terminar de vez (o golpe final, derrubar, esgotar). **Agarrar**: segurar, derrubar, desarmar. **Aguentar**: dor, veneno, frio, fome, doença. **Alcançar**: pegar quem foge, chegar primeiro, alcançar o que está longe. **Ameaçar**: intimidar, dar ultimato. **Apagar**: fogo, luz, rastros, depressa. **Armar**: montar armadilha, mecanismo, esquema. **Atirar**: arco, funda, arremesso, pistola. **Atrair**: seduzir, distrair, chamar a atenção.
+- **Bater**: corpo a corpo, com arma ou sem. **Chamar**: liderar, inspirar, se fazer ouvir. **Conectar**: ligar pessoas, lugares e ideias; criar confiança. **Conjurar**: espetáculo, truque de palco, magia feita para ser vista. **Consertar**: ofício, montar, desmontar, forjar, cozinhar. **Convencer**: persuadir, pedir. **Criar**: arte, música, inventar.
+- **Desviar**: reagir, escapar de armadilha, de rajada, de queda. **Encantar**: deslumbrar, conquistar um público, fazer gostar. **Enrolar**: ganhar tempo na conversa, levar no papo, amarrar com corda. **Entrar**: achar e usar a entrada, se infiltrar. **Esconder**: furtividade, sumir na multidão. **Estudar**: ler, pesquisar, entender magia alheia. **Fazer**: produzir algo com receita (poção, item, ferramenta). **Firmar**: resistir ao medo, ao encanto, à loucura.
+- **Forçar**: força bruta, fazer na marra, empurrar, puxar. **Formar**: organizar gente e coisas (uma fila, uma formação, um plano). **Fugir**: escapar de perseguição, de amarras, sair de uma briga. **Furtar**: achar a brecha e tirar sem ser visto. **Intuir**: sentir intenção, mentira, perigo. **Investigar**: examinar uma cena, juntar pistas. **Jogar**: arremessar para alguém pegar, jogos de habilidade.
+- **Lembrar**: saber o que se aprendeu, reconhecer uma história, uma lei, um rosto antigo. **Levantar**: erguer, carregar. **Mentir**: enganar, disfarçar, blefar. **Mexer**: mão leve, fechadura, truque. **Montar**: cavalgar, conduzir, pilotar, lidar com bicho. **Movimentar**: correr, saltar, escalar, nadar, remar. **Negociar**: comprar, vender, trocar, pechinchar. **Observar**: ver, ouvir, notar que algo mudou.
+- **Pensar**: planejar, decidir, imaginar saídas. **Prender**: imobilizar, trancar alguém. **Preparar**: ritual, remédio, emboscada, o terreno antes da luta. **Procurar**: vasculhar com calma. **Proteger**: cobrir alguém com o corpo, estancar um sangramento, acalmar quem está em pânico. **Quebrar**: arrombar, partir, derrubar a porta. **Raciocinar**: deduzir, calcular, resolver um enigma. **Rápido**: fazer depressa, reflexo, chegar antes. **Rastrear**: seguir pegadas, cheiro, pistas. **Reconhecer**: identificar uma pessoa, uma magia, um brasão, um perigo. **Sair**: saber a hora de ir embora, sair de uma enrascada ou de um transe. **Sobreviver**: se orientar, achar abrigo, ler o tempo.
 
-**Na criação**, distribua obrigatoriamente:
+**Na criação**, distribua obrigatoriamente, em oito palavras diferentes: **+2 · +1 · +1 · +1 · +1 · +1 · −1 · −1**. As outras ficam em 0. Cada palavra vai até **+3**.
 
-- **Atributos**: **+1 · +1 · 0 · 0 · 0 · −1**
-- **Verbos**: **+2 · +1 · +1 · +1 · −1** (os outros ficam em 0)
-
-São **48 verbos** (6 × 8). Para sortear: d6 para o atributo, d8 para o verbo.
-
-**Os atributos também são palavras.** Força, Agilidade, Percepção, Carisma, Inteligência e Sabedoria fazem parte das Palavras Básicas como os verbos: dão nome a um teste quando nenhum verbo serve ("queda de braço" é **Força**) e podem ser a Palavra Básica grátis de uma magia ([[02 Magia]]). Na ficha, cada atributo tem a sua casa de número no topo da coluna.
-
-Atributo e verbo vão até **+3** cada (máximo de um teste: +6). Os números **não entram em magia** (exceto quando uma regra disser).
-
-## 2. O teste: 2d12 + atributo + verbo
+## 2. O teste: 2d12 + as palavras da ação
 
 ### Descrever a ação
 
-Todo teste começa com o jogador dizendo **o que** faz (o **verbo**) e **como** (o **atributo**). Por padrão, o atributo é o da linha do verbo; se a descrição pede outro, usa o outro.
+Todo teste começa com o jogador dizendo o que faz **com as Palavras Básicas**: **uma ou duas** palavras que descrevem a ação. Os números delas se somam.
 
-- "Vou **Furtar** a bolsa na feira" → Percepção + Furtar.
-- "Vou **Bater** com a adaga, rápido" → Agilidade + Bater.
-- "Vou **Convencer** com os fatos" → Inteligência + Convencer.
-- "Queda de braço" (nenhum verbo serve) → só Força.
+- "Vou **Furtar** a bolsa na feira" → Furtar.
+- "Vou **Bater**, **Rápido**, com a adaga" → Bater + Rápido.
+- "Vou **Convencer** o juiz, **Raciocinando** com os fatos" → Convencer + Raciocinar.
+- "Queda de braço" → Forçar.
 
-A descrição precisa fazer **sentido concreto** na ficção: o mestre pode recusar um atributo que não combina com o que foi descrito. Se o jogador descreve sem as palavras, o mestre ajuda a achar o verbo e o atributo.
+**No máximo duas palavras por teste** (o teste mais forte, com as duas em +3, dá +6). A descrição precisa fazer **sentido concreto** na ficção: o mestre pode recusar uma palavra que não combina com o que foi descrito. Se o jogador descreve sem as palavras, o mestre ajuda a achar.
 
 Uma magia de **Grau 1** pode ser o **meio** da ação ("**Atirar** uma agulha de gelo"; "**Esconder** numa sombra que eu puxo"): você rola o teste normal da ação e a magia é o seu instrumento (num ataque, dano **1d8 + Moldura**). Sozinha, sem virar teste, a magia de Grau 1 só acontece, sem rolar.
 
 ### Rolar
 
-Role 2d12, some o atributo e o verbo (e as Vantagens), compare com a Dificuldade. Igual ou maior = sucesso.
+Role 2d12, some os números das palavras (e as Vantagens), compare com a Dificuldade. Igual ou maior = sucesso.
 
 ### Dificuldades padrão
 
-Feitas pela conta: o teste que o jogador costuma fazer (atributo + verbo) fica perto da Moldura (+1 na M1, +4 na M4). A chance da última coluna é a desse jogador, **sem Vantagem**.
+Feitas pela conta: o teste que o jogador costuma fazer (as palavras da ação) fica perto da Moldura (+1 na M1, +4 na M4). A chance da última coluna é a desse jogador, **sem Vantagem**.
 
 | | M1 | M2 | M3 | M4 | chance |
 |---|---|---|---|---|---|
@@ -86,7 +82,7 @@ Use a coluna da **Moldura do desafio**, não a do grupo: a porta comum de uma vi
 
 Um teste só tem **dois tipos de bônus**:
 
-- **A tabela**: atributo + verbo, os números fixos. Item ou magia que "dá +1" mexe num atributo ou num verbo.
+- **As palavras**: os números fixos das Palavras Básicas da ação. Item ou magia que "dá +1" mexe numa palavra.
 - **Vantagem: +1d6.** **Tudo o que ajuda vira Vantagem**: Vivência (1 Arcano), Ajudar (1 Arcano), talento, item de situação, terreno, uma boa ideia na ficção.
 
 **Até 2 Vantagens por rolagem** (+2d6). Cada **Desvantagem** tira uma Vantagem; sem Vantagem para tirar, subtraia 1d6 (no máximo −2d6). O d6 **não conta** para par/ímpar nem para a leitura da jogada.
@@ -115,13 +111,13 @@ Duas coisas acontecem em toda rolagem:
 Chances no 2d12: por Arcano 50%, por Cataclisma 42%, Crítico 8%.
 
 **Efeitos de crítico** (escolha um):
-- **Ignorar um efeito negativo seu**: um Efeito Colateral, a Retaliação do Valor (como o Tropeço), o Cansaço de Forçar, ou uma condição que você carrega.
+- **Ignorar um efeito negativo seu**: um Efeito Colateral, a Retaliação do Valor (como o Tropeço), o Cansaço de Esforço, ou uma condição que você carrega.
 - **Melhor resultado possível**: o total conta como se os dados tivessem dado o máximo (24).
 
 Num **Teste mágico** de magia (ver [[02 Magia]]) só o alvo rola, e o d20 dele faz as vezes do seu dado: par dá Arcano a você, ímpar dá Cataclisma ao mestre; **1 natural** é o **seu Crítico**; **20 natural** faz ele sempre escapar.
 - **Dobrar o dano.**
 
-**Rolagens de reação** (resistir a algo que o mestre fez com você) usam 2d12 + atributo + verbo (Desviar, Aguentar, Firmar...) mas **não geram** Arcano nem Cataclisma. Isso segura a economia.
+**Rolagens de reação** (resistir a algo que o mestre fez com você) usam 2d12 + a palavra da reação (Desviar, Aguentar, Firmar...) mas **não geram** Arcano nem Cataclisma. Isso segura a economia.
 
 ❓ **P-01**: você escreveu "d20 pra testes básicos" e "2d12 pra tudo". Eu fiz: **jogador sempre 2d12, mestre sempre d20**. Confirma?
 
@@ -135,13 +131,13 @@ Por rolagem de teste o jogador ganha em média **1 Arcano** (2 em magia de Grau 
 |---|---|
 | 1 | **Vivência**: Vantagem numa rolagem em que uma Vivência sua se aplica (uma por rolagem) |
 | 1 | **Ajudar**: dê Vantagem a um aliado (descreva como) |
-| 1–3 | **Ampliar** uma magia um passo (1 no Grau 1–2, 2 no Grau 3–4, 3 no Grau 5); cada passo também sobe a Dificuldade em +2 |
+| 1–3 | **Ampliar** uma magia um passo (1 no Grau 1–2, 2 no Grau 3–4, 3 no Grau 5); cada passo também sobe a Dificuldade em +2 e, se a magia sair por Cataclisma, soma +1 Efeito Colateral |
 | 1 | **Palavra extra** numa magia (cada palavra de Valor além da primeira; Palavras Básicas não custam) |
 | 2 | **Suavizar**: role de novo o d20 de um Efeito Colateral de magia e fique com o melhor |
 | 3 | **Hábito**: o talento especial do seu Comportamento |
 | 3 | **Ação em Dupla**: você e um aliado rolam, os dois usam o maior resultado, e os efeitos se somam |
 | 3 | **Detalhe**: acrescente algo verdadeiro à cena (uma corda, um conhecido, uma saída) — o mestre ajusta |
-| 3 | **Forçar o Grau**: conjure 1 Grau acima do seu máximo (e marque Cansaço igual ao Grau) |
+| 3 | **Subir o Grau**: conjure 1 Grau acima do seu máximo (os 3 são além do custo do Grau; marque Cansaço igual ao Grau) |
 | igual ao custo | **Conter**: anule um Abalo de até 4 pontos que afete só a sua ficha. Aliados podem ajudar a pagar |
 
 ## 4. Cataclisma (do mestre)
@@ -261,7 +257,7 @@ Limiares = base do Comportamento + nível + armadura.
 
 **Proteção**: casas da armadura. Marque 1 casa para reduzir em 1 os PV marcados de um golpe. Restaura em Pausa.
 
-**Magia causa dano físico** normal (passa pelos Limiares). Efeitos de magia que não são dano (medo, paralisia, cegueira) são resistidos com **2d12 + atributo + verbo** (Firmar, Aguentar, Desviar, Observar) contra a Dificuldade do efeito (ver *Teste mágico* em [[02 Magia]]).
+**Magia causa dano físico** normal (passa pelos Limiares). Efeitos de magia que não são dano (medo, paralisia, cegueira) são resistidos com **2d12 + a palavra** (Firmar, Aguentar, Desviar, Observar) contra a Dificuldade do efeito (ver *Teste mágico* em [[02 Magia]]).
 
 **Vida (PV)**: 5–7 casas conforme o Comportamento, máximo 12.
 
@@ -269,10 +265,10 @@ Limiares = base do Comportamento + nível + armadura.
 
 **6 casas** no início, máximo 12. Cansaço é o preço do corpo e da mente; Arcano é o preço do mundo.
 
-**Como ganha**: em Passos de Valor, gastando para Forçar magia, alguns Efeitos Colaterais de magia, reações de Dominum, talentos de Comportamento, alguns ataques de adversários.
+**Como ganha**: em Passos de Valor, no **Esforço** da magia, alguns Efeitos Colaterais de magia, reações de Dominum, talentos de Comportamento, alguns ataques de adversários.
 
 **Com o que gasta (marcando casas)**:
-- **Forçar** uma magia: marque até (Grau) casas, **+2 no total por casa**.
+- **Esforço** numa magia: marque até (Grau) casas, **+2 no total por casa**.
 - Talentos que pedem Cansaço.
 
 **Exausto** (todas as casas marcadas): você fica **Vulnerável** (ataques contra você têm Vantagem), não pode marcar Cansaço de propósito, e cada Cansaço que você teria de marcar vira **1 PV**.

@@ -68,15 +68,15 @@ A versão clara da página (para impressão) troca o fundo por papel quente e ma
 
 ## Ícones
 
-Rascunho vetorial em `arte/icones/` (prévia em `arte/icones.html`): 12 Comportamentos, 6 atributos, Arcano e Cataclisma. Todos em traço de mesma espessura e `currentColor`, para trocar a cor na ficha colorida e na preto e branco.
+Rascunho vetorial em `arte/icones/` (prévia em `arte/icones.html`): 12 Comportamentos, Arcano e Cataclisma. Todos em traço de mesma espessura e `currentColor`, para trocar a cor na ficha colorida e na preto e branco.
 
 - **Comportamentos**: ícone de linha em fio dourado, dentro de um losango (não esfera, para não confundir com Valor).
-- **Atributos**: seis glifos simples de linha (Força, Agilidade, Percepção, Carisma, Inteligência, Sabedoria), usados no cabeçalho das colunas da tabela de Palavras Básicas.
+- **Atributos**: não existem mais (as Palavras Básicas são soltas). Os glifos de atributo foram apagados.
 - **Arcano e Cataclisma** na ficha: Arcano é um círculo fechado dourado; Cataclisma é um círculo com uma fresta, em ferrugem.
 
 ## Fichas
 
-Rascunho das duas em `arte/fichas.html`. **O centro da Ficha 1 é a tabela de Palavras Básicas**: é ali que o jogador põe os números dele, palavra por palavra (atributo no topo da coluna com a sua casa, verbos embaixo, cada um com a sua casa e uma marca de avanço). Esse é o diferencial do jogo, e a ficha tem que mostrar isso primeiro.
+Rascunho das duas em `arte/fichas.html`. **O centro da Ficha 1 é a tabela de Palavras Básicas**: é ali que o jogador põe os números dele, palavra por palavra: as 52 em ordem alfabética, cada uma com a sua casa de número e uma marca de avanço, sem colunas de atributo. Esse é o diferencial do jogo, e a ficha tem que mostrar isso primeiro.
 
 
 - **Ficha 1 (Personagem)**, frente: identidade, Esquiva, Limiares, PV, Proteção, Cansaço, Arcano, **Palavras Básicas** (o maior bloco), Laços, Comportamento, armas. Verso: retrato, Vivências, itens, perguntas de criação, relações da party, Marcos, notas.

@@ -33,7 +33,7 @@ Tudo parte de uma medida: **um dia de trabalho comum rende 3 a 5 o**.
 | **× 0,5** | narrativo, sem número ([[12 Tesouros e itens mágicos]]) |
 | **× 0,8** | Vantagem numa situação estreita, ou poucas cargas |
 | **× 1** | benefício comum (uma Skill melhorada, uma Retaliação aliviada) |
-| **× 1,3** | número permanente (+1 num atributo, num verbo, no dano, na Dificuldade) |
+| **× 1,3** | número permanente (+1 numa Palavra Básica, no dano, na Dificuldade) |
 | **× 1,5** | mexe na economia da magia (Ampliar grátis, Efeito Colateral a menos, Sintonia) |
 
 **Recompensa** (para o grupo, por pessoa): **por sessão ≈ Base ÷ 3** (M1 35 o · M2 100 o · M3 300 o · M4 900 o). Assim, **uma aventura (≈ 3 sessões) paga mais ou menos um item mágico da Moldura**, o mesmo ritmo dos Marcos ([[19 Fim de sessão - as perguntas de envolvimento]]). Vender um item: metade do preço.
@@ -42,25 +42,25 @@ Começa com **50 o** (Privilegiado com Herança: 75 o).
 
 ## Armas
 
-Dano = **dado da arma × Proficiência + bônus**. A cada Moldura acima do 1, a mesma arma em versão melhor ganha **+2 de bônus** e um traço a mais (o gerador escolhe). Ataque = 2d12 + atributo da arma + **Bater** (corpo a corpo) ou **Atirar** (à distância), contra a Dificuldade do adversário.
+Dano = **dado da arma × Proficiência + bônus**. A cada Moldura acima do 1, a mesma arma em versão melhor ganha **+2 de bônus** e um traço a mais (o gerador escolhe). Ataque = 2d12 + **Bater** (corpo a corpo) ou **Atirar** (à distância) + **uma segunda palavra** se o golpe pedir (a coluna sugere a que combina com a arma, mas vale o que a descrição disser: "Bater Rápido", "Atirar Observando"), contra a Dificuldade do adversário.
 
-| Arma | Atributo | Alcance | Dano (P1) | Mãos | Traço | Preço |
+| Arma | Combina com | Alcance | Dano (P1) | Mãos | Traço | Preço |
 |---|---|---|---|---|---|---|
-| Adaga | Agilidade | Toque | d8+1 | 1 | Arremessável (Perto) | 10 o |
-| Espada curta | Agilidade | Toque | d8+2 | 1 | Precisa | 20 o |
-| Espada longa | Força | Toque | d10+3 | 2 | — | 35 o |
-| Machado | Força | Toque | d10+2 | 1 | Cruel (dano Grave: +1 PV) | 30 o |
-| Martelo de guerra | Força | Toque | d12+3 | 2 | Pesada (−1 Esquiva), Atordoante | 40 o |
-| Lança | Força | Perto | d10+2 | 2 | Alcance | 25 o |
-| Chicote | Agilidade | Perto | d6+2 | 1 | Desarmar, Puxar | 15 o |
-| Cajado | Força | Toque | d8+1 | 2 | Serve de foco arcano | 15 o |
-| Soqueira | Força | Toque | d6+2 | 1 | Não pode ser desarmada | 5 o |
-| Funda | Agilidade | Médio | d6+1 | 1 | Barata (munição de graça) | 5 o |
-| Arco curto | Agilidade | Longe | d8+2 | 2 | — | 30 o |
-| Arco longo | Percepção | Longe | d10+3 | 2 | Pesada | 45 o |
-| Besta | Percepção | Longe | d10+2 | 2 | Recarga | 40 o |
-| Pistola *(Era tecnomaga)* | Percepção | Médio | d10+2 | 1 | Barulhenta, Recarga | 50 o |
-| Rifle *(Era tecnomaga)* | Percepção | Longe | d12+3 | 2 | Barulhenta, Recarga | 80 o |
+| Adaga | Rápido | Toque | d8+1 | 1 | Arremessável (Perto) | 10 o |
+| Espada curta | Rápido | Toque | d8+2 | 1 | Precisa | 20 o |
+| Espada longa | Forçar | Toque | d10+3 | 2 | — | 35 o |
+| Machado | Forçar | Toque | d10+2 | 1 | Cruel (dano Grave: +1 PV) | 30 o |
+| Martelo de guerra | Forçar | Toque | d12+3 | 2 | Pesada (−1 Esquiva), Atordoante | 40 o |
+| Lança | Movimentar | Perto | d10+2 | 2 | Alcance | 25 o |
+| Chicote | Rápido | Perto | d6+2 | 1 | Desarmar, Puxar | 15 o |
+| Cajado | Proteger | Toque | d8+1 | 2 | Serve de foco arcano | 15 o |
+| Soqueira | Rápido | Toque | d6+2 | 1 | Não pode ser desarmada | 5 o |
+| Funda | Jogar | Médio | d6+1 | 1 | Barata (munição de graça) | 5 o |
+| Arco curto | Rápido | Longe | d8+2 | 2 | — | 30 o |
+| Arco longo | Observar | Longe | d10+3 | 2 | Pesada | 45 o |
+| Besta | Observar | Longe | d10+2 | 2 | Recarga | 40 o |
+| Pistola *(Era tecnomaga)* | Rápido | Médio | d10+2 | 1 | Barulhenta, Recarga | 50 o |
+| Rifle *(Era tecnomaga)* | Observar | Longe | d12+3 | 2 | Barulhenta, Recarga | 80 o |
 
 **Secundárias** (na outra mão): escudo pequeno (+1 Esquiva, 15 o), escudo grande (+1 Proteção, −1 Esquiva, 30 o), adaga de apoio (+2 de dano na principal, 10 o).
 
@@ -119,7 +119,7 @@ Itens mágicos servem para **tudo**, não só para quem conjura: ajudam em teste
 | Família | O que faz | Faixa de poder (Moldura 1 → 4) |
 |---|---|---|
 | **De Palavra** | carrega uma palavra de qualquer Valor; enquanto está com você, a palavra é sua (nunca como núcleo, a não ser que seja do seu Valor) e não conta no limite de Estrangeiras | 1 palavra, às vezes com cargas → 1 palavra sem cargas |
-| **De Ofício** | ajuda em mecânica básica: um atributo ou verbo, Esquiva, Limiares, Proteção, PV ou Cansaço | Vantagem numa situação estreita → +1 num atributo ou verbo |
+| **De Ofício** | ajuda em mecânica básica: uma Palavra Básica, Esquiva, Limiares, Proteção, PV ou Cansaço | Vantagem numa situação estreita → +1 numa Palavra Básica |
 | **De Estabilidade** | mexe na **Dificuldade** e nos **Efeitos Colaterais** da magia: Dificuldade do Grau menor, um Efeito Colateral a menos, Suavizar de graça, +1 no d20 da tabela | −1 na Dificuldade do Grau → um Efeito Colateral a menos em toda magia |
 | **De Valor** | só funciona para um Valor: melhora a Skill, alivia a Retaliação, ou dá a um não-Comprometido daquele Valor um pedaço da Skill | alívio pequeno → Skill melhorada |
 | **De Grau** | ajuda a magia a crescer: um passo de Ampliar sem pagar Arcano, +1 no dano de magia, +1 de Sintonia numa condição | 1 passo de Ampliar sem pagar Arcano por Evento → +1 de Sintonia |
@@ -130,16 +130,16 @@ Algumas têm **cargas** (recuperam no Pouso). Regra geral de equilíbrio: um ite
 
 | Item | Família | Moldura | Efeito | Preço |
 |---|---|---|---|---|
-| Luva do Estrangulador | Palavra (Dominum) | 1 | palavra **Prender** | 120 o |
+| Luva do Estrangulador | Palavra (Dominum) | 1 | palavra **Algemar** | 120 o |
 | Espelho de Bolso | Palavra (Alvorum) | 1 | palavra **Refletir** | 120 o |
 | Colar de Dente de Lobo | Palavra (Primitivum) | 1 | palavra **Farejar** | 120 o |
 | Pena de Mentira | Palavra (Cognitium) | 2 | palavra **Falso**, 1 carga, e quem lê o que ela escreve acredita | 250 o |
 | Anel de Areia Parada | Palavra (Eternyr) | 3 | palavra **Parar**, 2 cargas | 900 o |
 | Botas de Salto do Gato | Ofício | 1 | Vantagem para saltar e cair em pé | 80 o |
 | Luvas de Veludo Preto | Ofício | 1 | Vantagem para abrir fechaduras | 80 o |
-| Broche do Anfitrião | Ofício | 2 | Vantagem em Carisma com quem já comeu com você | 300 o |
+| Broche do Anfitrião | Ofício | 2 | Vantagem em **Convencer** e **Negociar** com quem já comeu com você | 300 o |
 | Colete de Pele de Pedra | Ofício | 2 | +1 nos dois Limiares | 350 o |
-| Olho de Vidro do Vigia | Ofício | 3 | +1 em Percepção | 1.200 o |
+| Olho de Vidro do Vigia | Ofício | 3 | +1 em **Observar** | 1.200 o |
 | Fita do Equilíbrio | Estabilidade | 1 | uma vez por sessão, Suavizar de graça | 100 o |
 | Sino de Contenção | Estabilidade | 2 | −1 na Dificuldade do Grau das suas magias | 400 o |
 | Pedra-Par | Estabilidade | 3 | suas magias por Cataclisma rolam um Efeito Colateral a menos | 1.400 o |

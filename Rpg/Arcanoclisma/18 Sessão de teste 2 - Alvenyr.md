@@ -10,15 +10,13 @@
 - **Comportamento**: **Briguento** — Esquiva **11** · PV **7** · Limiares **15 / 27** · Proteção **4** · Cansaço 6
   - **Gosto de Sangue** (Talento, **Superior**): usa todas as armas, qualquer coisa vira arma (d8 + Moldura), +1 de dano com armas; dano Grave dá 1 Arcano. **Aparar na Raça**: quando um ataque o acerta, 2 Arcano: role um dado da arma e tire do dano, antes dos Limiares.
   - **Surra** (Hábito, 3 Arcano): um ataque; se acertar, dano dobrado ou um segundo alvo Perto com o mesmo resultado.
-- **Interações** (atributo + verbo):
-  - Atributos: Força **+2** · Carisma **+1** · Agilidade **+1** · Inteligência 0 · Percepção 0 · Sabedoria **−1**
-  - Verbos: Bater **+3** · Ameaçar **+2** · Estudar +1 · Atrair +1 · Intuir **−1**
-  - Testes prontos: **Bater +5** · **Ameaçar +3** · Atrair +2 · Levantar/Agarrar/Quebrar/Aguentar +2 · Desviar/Movimentar +1 · Estudar +1 · Firmar −1 · **Intuir −2**
+- **Palavras Básicas** (convertidas para as palavras soltas; o registro abaixo fica como foi jogado): Bater **+3** · Forçar **+2** · Ameaçar **+2** · Rápido +1 · Atrair +1 · Estudar +1 · Levantar +1 · Firmar **−1** · Intuir **−1**
+  - Melhor teste: *Bater Forçando* **+5** (Moldura 3 + 2) · *Ameaçar Forçando* +4 · *Bater Rápido* +4
 - **Vivências**: *Primeiro da turma em Duelo Arcano* · *Sobrevivi a uma Ferida em missão* · *Conheço GrandGaleonis de cor* · *Aprendi a brigar antes de aprender a ler*
 - **Equipamento**: casaco azul de couro (armadura Leve, versão da Moldura 3) · kit de viagem · selo de missão de GrandGaleonis · 300 Ordynus
 - **Arcano** 5 / 12 (chega assim à sessão)
 
-**Avanços** (níveis 2 a 5): +1 Força e +1 Bater · +1 PV · Ressonância II · **Domínio (dano)** · +1 Ameaçar e +1 Agilidade · +1 Esquiva · Ressonância III · Gosto de Sangue Superior.
+**Avanços** (níveis 2 a 5): +1 Forçar e +1 Bater · +1 PV · Ressonância II · **Domínio (dano)** · +1 Ameaçar e +1 Rápido · +1 Esquiva · Ressonância III · Gosto de Sangue Superior.
 
 **Laços** (Atalhos nesta sessão □□)
 
@@ -34,7 +32,7 @@
 - **Skill · Fio da Guerra**: em combate, cada magia ganha **+1 dado de dano** ou **+2 no total**.
 - **Retaliação · Só Sabe Brigar**: magias fora de combate ou violência custam **+2 Arcano**.
 - **Ressonância II · Veterano**: marque 1 Cansaço para ter os dois bônus do Fio da Guerra na mesma magia.
-- **Ressonância III · Arsenal Vivo**: invocar uma arma ou escudo de Conflitüo é **Grau 1**. Dura o Evento; ataques com ela (Força ou Agilidade + Bater) causam **2d10 + 4** (+1 do Gosto de Sangue = **2d10 + 5**). *As correntes da tatuagem desenrolam da pele e viram a arma.*
+- **Ressonância III · Arsenal Vivo** (texto completo em [[03 Valores]]): invocar Lâmina, Lança, Arco ou Escudo de Conflitüo é **Grau 1**, sem Arcano e sem rolar. Lâmina: Toque, **Bater**, **2d10 + 4** (+1 do Gosto de Sangue = **2d10 + 5**); dura o Evento, não pode ser desarmada, ganha um traço. *As correntes da tatuagem desenrolam da pele e viram a arma.*
 - **Canal · Marca**: a tatuagem da rosa e das correntes. A magia deixa um rastro que só aliados reconhecem (uma rosa azul que se abre no ar).
 - **Sintonia** +2 (desde o rebalanceamento pós-sessão; na sessão foi +4) · **Grau máximo** 4 · **Palavras de Valor por magia** 4 (cada uma soma +1; da 3ª em diante, +1 Cataclisma ao mestre) · uma Palavra Básica grátis
 - **Graus**: G2 = 2d12, custa 1, Dif 12 · G3 = 3d8, custa 2, Dif 13 · **G4 = 4d6, custa 3, Dif 14** · Teste mágico: Dificuldade da magia = **16 + palavras**

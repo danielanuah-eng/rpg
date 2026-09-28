@@ -1,4 +1,6 @@
-# 17 — Interações (aprovada)
+# 17 — Interações (aprovada, depois superada)
+
+> **Superada.** A tabela de atributos + verbos virou **52 Palavras Básicas soltas, sem atributos** (Lembrar, Raciocinar, Forçar e Rápido entraram no lugar deles). Cada palavra tem o seu número e o teste soma **até duas**. Regra atual em [[01 Regras centrais]], seção 1. Este arquivo fica como histórico.
 
 > **Aprovada (P-122) e aplicada.** O texto de regra está em [[01 Regras centrais]], seção 1. Este arquivo guarda o porquê e as contas. Proposta original: juntar os 6 atributos e as Palavras Básicas de ação numa **tabela só de Interações**. Quando aprovada, entra em [[01 Regras centrais]], [[02 Magia]], [[04 Comportamentos]], [[05 Personagem e níveis]], [[06 Itens e dinheiro]] e [[10 Adversários - como criar]].
 

@@ -30,7 +30,7 @@ Anote cada relação na ficha dos dois personagens (no app, aparece nas duas fic
 3. **Valor** — o personagem é um **Comprometido**. Pegue a **ficha do seu Valor** (36 palavras, símbolo, Skill, Retaliação, 4 espaços extras) e anote o **Compromisso** ([[03 Valores]]).
 4. **Vínculo** — responda às perguntas abaixo.
 5. **Canal** — como você exerce a magia: foco arcano, arma, Transcrito, corpo, voz, familiar ou marca ([[02 Magia]]).
-6. **Palavras Básicas** (os seus números) — na tabela ([[01 Regras centrais]], seção 1), distribua nos **atributos** **+1, +1, 0, 0, 0, −1** e nos **verbos** **+2, +1, +1, +1, −1** (os outros verbos ficam em 0).
+6. **Palavras Básicas** (os seus números) — na tabela ([[01 Regras centrais]], seção 1), escreva **+2, +1, +1, +1, +1, +1, −1, −1** em **oito palavras diferentes** (as outras ficam em 0). Não há atributos: as 52 palavras estão soltas, e qualquer uma combina com qualquer outra no teste.
 7. **Vivências** — escreva **2** frases do passado do personagem. Cada uma dá Vantagem (gastando 1 Arcano).
 8. **Equipamento** — uma arma, uma armadura permitida, o objeto do Canal, um kit, **50 Ordynus** ([[06 Itens e dinheiro]]).
 9. **Números finais** — 3 Laços escritos, Arcano 3, Cansaço 6, PV do Comportamento, Proteção da armadura, Limiares = base + 1 + armadura, Sintonia +2 (mais o +1 de Relação quando a magia tem a ver com o personagem).
@@ -91,8 +91,8 @@ Os números da ficha foram feitos para bater com os dados e com a régua dos adv
 
 | O quê | Como | Resultado |
 |---|---|---|
-| **Teste típico** do jogador | atributo + verbo ≈ Moldura | Médio da Moldura: ~69%; com 1 Vantagem, ~87% |
-| **Melhor teste** | ≈ Moldura + 2 | Médio: ~81% |
+| **Teste típico** do jogador | duas palavras ≈ Moldura | Médio da Moldura: ~69%; com 1 Vantagem, ~87% |
+| **Melhor teste** | as duas melhores palavras ≈ Moldura + 2 (na criação, +3) | Médio: ~81% |
 | **Ataque de arma** contra adversário | melhor teste contra Dif 11 + Moldura | ~81% |
 | **Magia no Grau máximo**, 1 palavra | dados do Grau + Sintonia 2 + 1 | ~81–90% contra a Dif do adversário; +1 por palavra a mais |
 | **Adversário te acertando** | d20 + Moldura contra Esquiva (base + 1 por Moldura) | ~50–60% |
@@ -104,7 +104,7 @@ Se um número novo (item, talento, Skill) quebrar alguma dessas linhas, ele est�
 
 | Avanço | Limite |
 |---|---|
-| +1 em dois atributos ou verbos que ainda não estão marcados (marque-os) | máx. +3 cada; marcas somem no nível 5 e 8 |
+| +1 em duas Palavras Básicas que ainda não estão marcadas (marque-as) | máx. +3 cada; marcas somem no nível 5 e 8 |
 | +1 PV | máx. 12 |
 | +1 Cansaço | máx. 12 |
 | +1 Esquiva | uma vez por Moldura |
@@ -122,11 +122,11 @@ Se um número novo (item, talento, Skill) quebrar alguma dessas linhas, ele est�
 Tudo o que não é a magia do Valor. **Frente**: o que se usa jogando (identidade, Comportamento, tabela de Palavras Básicas, formas de magia, Arcano, Laço, itens). **Verso**: criação e lore (perguntas, relações da party, Vivências, anotações).
 - **Identidade**: nome, skin (aparência, com espaço para desenho ou foto), Era, conceito numa frase, jogador.
 - **Comportamento**: nome, Esquiva, Limiares (Maior/Grave), PV, Cansaço, Proteção, **caixas de talento** (Talento e Hábito com marcação Básico/Superior, e espaços vazios para talentos avulsos).
-- **Tabela de Palavras Básicas**: as 6 palavras de atributo no topo das colunas e os 48 verbos embaixo, **cada palavra com a sua casa de número** e uma casinha de marca de avanço. É aqui que o jogador põe os modificadores dele. Ele monta "atributo + verbo" olhando a ficha.
+- **Tabela de Palavras Básicas**: as 52 palavras em ordem alfabética, **cada uma com a sua casa de número** e uma casinha de marca de avanço. É aqui que o jogador põe os modificadores dele. Na hora do teste, ele junta **até duas** palavras que descrevem a ação ("Bater Rápido") e soma as duas.
 - **Formas** de magia (Projétil, Onda, Barreira...).
 - **Arcano** e os **Laços**: 3 linhas de descrição (mais espaço para Laços novos), cada uma com a caixinha **apertado**; as caixinhas **"Atalhos nesta sessão □□"**; e o **Atalho de costume** escrito do lado.
 - **Vivências**.
-- **Itens**: armas (atributo, verbo, alcance, dano, traços), armadura, uma linha para cada montaria/familiar (nome e traços), itens mágicos, consumíveis, materiais, **Ordynus**.
+- **Itens**: armas (palavra, alcance, dano, traços), armadura, uma linha para cada montaria/familiar (nome e traços), itens mágicos, consumíveis, materiais, **Ordynus**.
 - **Criação e lore**: as perguntas de criação (Vínculo, coração, você e o personagem) com espaço para reescrever, e as **relações da party** da sessão zero.
 - **Nível e Moldura**, com a tabela resumida do que cada Moldura libera.
 
@@ -141,7 +141,7 @@ Uma para cada um dos 9 Valores: **o desenho muda inteiro** conforme o Valor (cor
 - **4 espaços extras** para Palavras Estrangeiras, preenchidos ao longo dos níveis.
 - **Canal** (foco, arma, Transcrito...) com o benefício e a fraqueza, e a Sintonia.
 - **Tabela de Graus** resumida: dados, custo, Dificuldade, dano, alvos, alcance, marcador de duração.
-- Lembretes da magia: leitura dos dados (Crítico, Efeitos Colaterais, Desequilíbrio), Forçar, Ampliar.
+- Lembretes da magia: leitura dos dados (Crítico, Efeitos Colaterais, Desequilíbrio), Esforço, Subir o Grau, **Ampliar** (menu de passos: custo em Arcano, +2 Dificuldade, +1 Efeito Colateral), resumo do que cada Grau faz.
 - **Magias que eu gosto de usar**: linhas para anotar combinações de palavras e a relação do personagem com cada uma.
 
 Familiares, wyverns e montarias **não têm ficha**: são uma linha na Ficha 1, com nome e 1–2 traços.

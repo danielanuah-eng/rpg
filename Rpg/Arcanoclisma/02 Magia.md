@@ -42,7 +42,7 @@ Esse é o bônus da magia: ela **não recebe Vantagem paga** (Vivência, Ajudar)
 1. **Intenção**: diga o que quer que aconteça, como a magia aparece (pelo seu Canal) e, se quiser, a sua relação com a palavra.
 2. **Palavras**:
    - **Palavras de Valor**: de 1 até o seu limite (Moldura + 1). **A primeira é do seu Valor** (o núcleo); as outras podem ser do seu Valor ou Palavras Estrangeiras.
-   - **Uma Palavra Básica** (um verbo da tabela de Palavras Básicas ou uma forma): **não custa e não conta no limite**. Ela existe para **dar ao Valor ações que ele sozinho não tem** (um Cognitium que precisa **Movimentar**, um Conflitüo que precisa **Esconder**). Precisa fazer sentido concreto.
+   - **Uma Palavra Básica** (uma palavra da lista, uma coisa ou uma forma): **não custa e não conta no limite**. Ela existe para **dar ao Valor ações que ele sozinho não tem** (um Cognitium que precisa **Movimentar**, um Conflitüo que precisa **Esconder**). Precisa fazer sentido concreto.
 3. **Grau**: pelo tamanho do efeito (tabela abaixo), até o seu máximo (Moldura + 1). O mestre tem a palavra final se o efeito pedido for maior do que o Grau.
 4. **Pague**: custo do Grau + 1 Arcano por palavra de Valor além da primeira + os passos de Ampliar. (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
 5. **Role** os dados do Grau + Sintonia + **1 por palavra de Valor**. Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre). **Contra o quê**, depende de quem recebe a magia (abaixo).
@@ -67,13 +67,13 @@ Você paga a magia e descreve o efeito; **quem rola é o alvo**. Uma rolagem por
 
 **Dificuldade da magia = 13 + Moldura + 1 por palavra de Valor** (e o que Skills e Retaliações mexem). Na Moldura 1: **15** com uma palavra, **16** com duas; na Moldura 3, 17 e 18.
 
-**O teste do alvo** é físico ou não conforme a descrição e o efeito; o mestre escolhe o **verbo** (e o atributo, se não for o da linha) pela magia e pela situação: medo, encanto e sono pedem **Firmar**; veneno, cãibra e doença, **Aguentar**; rede, prisão e peso, **Levantar** ou **Fugir**; chão que escorrega e rajada, **Desviar**; ilusão, **Observar**.
+**O teste do alvo** é físico ou não conforme a descrição e o efeito; o mestre escolhe a **Palavra Básica** da reação pela magia e pela situação: medo, encanto e sono pedem **Firmar**; veneno, cãibra e doença, **Aguentar**; rede, prisão e peso, **Levantar** ou **Fugir**; chão que escorrega e rajada, **Desviar**; ilusão, **Observar**.
 
-- **PJ** rola 2d12 + atributo + verbo (é reação: não gera Arcano nem Cataclisma).
+- **PJ** rola 2d12 + a palavra (é reação: não gera Arcano nem Cataclisma).
 - **Adversário** rola **d20 + o número do verbo** na tabela dele (o Ataque; +2 se o verbo é forte, −2 se é fraco). Uma palavra dele que combina com resistir (*Destemido* contra medo) dá Vantagem; uma que o deixa exposto (*Covarde*) dá Desvantagem.
 - **Cada ser é um ser.** Cada personagem diferente (adversário, lacaio, PNJ) rola o próprio teste.
 - **Bando ou grupo** (lacaios, uma matilha, uma multidão) conta como **um alvo** e rola **uma vez**. Se não passar, o efeito **reduz o grupo** pelo tamanho da derrota: falhou por **1–4**, 1 membro é pego; por **5–9**, 2; por **10 ou mais**, 3 (como o dano 1 / 2 / 3).
-- **Forçar** ainda vale: depois de ver o dado do alvo, marque Cansaço e some +2 por casa na Dificuldade da magia.
+- **Esforço** ainda vale: depois de ver o dado do alvo, marque Cansaço e some +2 por casa na Dificuldade da magia.
 
 **Passar ou não se lê na ficção.** O número diz quem levou a melhor; **como** isso aparece, o mestre e a mesa interpretam pela descrição. Quem passa pode escapar inteiro, escapar pela metade (sente o medo por um instante e segue), ou resistir de um jeito que muda a cena (o encanto não pega, mas ele percebe que alguém tentou). Quem não passa leva o efeito do jeito que foi descrito, no tamanho do Grau.
 
@@ -99,7 +99,7 @@ Cada palavra a mais é **+5%** de pegar. É o preço de mandar na cabeça ou no 
 
 Magia de **Grau 1** não rola nada **sozinha**: acontece. Acender, esfriar, mandar um recado, afiar, limpar.
 
-Ela só vira rolagem quando é o **meio de uma ação** que já seria um teste: "**Atirar** uma agulha de gelo", "**Esconder** numa sombra que eu puxo". Aí você rola o **teste normal da ação** (2d12 + atributo + verbo, ver [[01 Regras centrais]]) e a magia é o seu instrumento. Num ataque, o dano é **1d8 + Moldura**, como uma arma leve que nunca sai da mão.
+Ela só vira rolagem quando é o **meio de uma ação** que já seria um teste: "**Atirar** uma agulha de gelo", "**Esconder** numa sombra que eu puxo". Aí você rola o **teste normal da ação** (2d12 + a palavra da ação, ver [[01 Regras centrais]]) e a magia é o seu instrumento. Num ataque, o dano é **1d8 + Moldura**, como uma arma leve que nunca sai da mão.
 
 ## Fusão: quando o personagem vira a palavra
 
@@ -130,9 +130,9 @@ Ela só vira rolagem quando é o **meio de uma ação** que já seria um teste: 
 | **Área / tamanho** | cabe na mão | uma pessoa, uma porta | uma sala, uma carroça | uma casa, uma praça | um quarteirão, um navio, um vale |
 | **Alcance** | Toque | Perto | Médio | Longe | Horizonte |
 | **Duração** (marcador) | Instante | até a próxima Falha | até o mestre pagar (no máximo o Evento) | o Evento inteiro | até o Pouso (permanente com custo, ver Artefatos) |
-| **Atributos** (+/−) | — | ±1 | ±2 | ±3 | ±4 |
+| **Palavras Básicas afetadas** (+/−) | — | ±1 | ±2 | ±3 | ±4 |
 | **Resistir / escapar** (adversário no d20) | — | 12 | 14 | 16 | 19 |
-| **Forçar** (máx. de Cansaço) | 0 | 2 | 3 | 4 | 5 |
+| **Esforço** (máx. de Cansaço) | 0 | 2 | 3 | 4 | 5 |
 | **Quanto dobra a realidade** | truque que alguém poderia explicar | claramente magia | quebra uma regra física ali | reescreve a cena | deixa marca no mundo; as pessoas vão contar |
 
 **Cura é de Morbidyum.** Só magia de Morbidyum devolve PV: é o Valor da vida, da morte e da passagem entre elas. Os outros Valores podem **aliviar** (tirar uma condição, manter alguém de pé na ficção por um momento, esconder a dor), mas **nunca recuperam PV**. Fora da magia, PV voltam com descanso, consumíveis e cuidados.
@@ -140,7 +140,7 @@ Ela só vira rolagem quando é o **meio de uma ação** que já seria um teste: 
 ### Exemplos observáveis de cada Grau
 
 - **1 · Comum**: transformar um cubo de gelo em água e vice-versa; uma chama na palma; um recado telepático curto para alguém que você vê; notar a falha mais exposta numa arma ou armadura; esquentar a sopa; apagar uma vela no Perto.
-- **2 · Interessante**: um jato de fogo que queima uma pessoa; congelar uma poça para alguém escorregar; deixar alguém com medo até a próxima Falha (−1 em Carisma); abrir uma fechadura simples; ficar invisível no escuro até se mexer.
+- **2 · Interessante**: um jato de fogo que queima uma pessoa; congelar uma poça para alguém escorregar; deixar alguém com medo até a próxima Falha (−1 em Convencer); abrir uma fechadura simples; ficar invisível no escuro até se mexer.
 - **3 · Impressionante**: uma parede de pedra fechando um corredor; três inimigos derrubados por uma onda; uma pessoa acreditando por alguns instantes que você é o chefe dela; atravessar uma parede fina.
 - **4 · Fantástico**: uma tempestade dentro de um salão; um prédio que desaba em areia; uma multidão que dança sem conseguir parar; parar o tempo para todos menos você por um instante.
 - **5 · Mítico**: um vale inteiro congelado; um exército que esquece por que estava lutando; uma ponte de luz até o outro morro; o sol escurecendo sobre uma cidade até o amanhecer.
@@ -217,13 +217,14 @@ A **descrição** do efeito diz quanto poder ele tem. O **Grau** é o patamar; d
 - **Alcance**: +1 faixa.
 - **Alvos/área**: +1 faixa.
 - **Duração**: +1 marcador (na ordem da tabela).
-- **Número afetado**: +1 no atributo ou verbo que a magia mexe.
+- **Número afetado**: +1 na Palavra Básica que a magia mexe.
 - **Ferir** (Teste mágico): quem **não passa** também leva o **dano do Grau** (tabela de Graus). Sem esse passo, o Teste mágico só aplica o efeito (medo, cãibra, sono), sem dano.
 
 **Cada passo é um investimento e tem uma consequência**:
 
 - **Investimento**: pague **Arcano**, **1** no Grau 1–2, **2** no Grau 3–4, **3** no Grau 5.
 - **Consequência**: mais poder deixa a magia mais difícil de funcionar e de manter, **+2 na Dificuldade** por passo. Não é escolha: vem junto.
+- **Colateral**: se a magia sair **por Cataclisma**, cada passo de Ampliar soma **+1 Efeito Colateral** aos do Grau. Quem amplia pede mais ao mundo, e o mundo cobra mais.
 
 | Efeito | Onde entra o +2 por passo |
 |---|---|
@@ -237,7 +238,11 @@ Máximo de passos por magia = sua **Moldura**. Poder espalhado custa: dois passo
 
 **Grau abaixo do seu máximo** também é mais fácil de impor: num **Teste mágico**, a Dificuldade da magia sobe **+2 por Grau abaixo** do seu máximo (um susto pequeno pega mais fácil que um terror).
 
-## Forçar (pedir ajuda com Cansaço)
+## Subir o Grau
+
+Uma vez por magia, você pode conjurar **1 Grau acima do seu máximo**: pague **3 Arcano além do custo do Grau** e marque **Cansaço igual ao Grau**. A magia usa os dados, a Dificuldade, o dano e os Efeitos Colaterais do Grau novo. É o momento grande, não o de todo dia.
+
+## Esforço (pedir ajuda com Cansaço)
 
 Depois de rolar, antes do mestre dizer o resultado: marque Cansaço até o limite do Grau (2/3/4/5). **Cada casa = +2 no total.** Não muda par/ímpar.
 
@@ -263,7 +268,7 @@ Dois personagens conjuram juntos, **numa rolagem só**. É o jeito de passar do 
 2. **Palavras**: cada um põe palavras do próprio Valor (e as Básicas, de graça). Palavras de Valor no total: até **o maior limite dos dois + 2** (máx. 7).
 3. **Grau do efeito**: o maior Grau que qualquer um dos dois conseguiria **+1** (máx. 5).
 4. **Rolagem**: quem **conduz** rola os dados **do Grau do efeito** + a própria Sintonia + **1 por palavra de Valor que ele pôs**; o **parceiro soma +2**. Contra o que o efeito pedir (ver *Três tipos de efeito*); num Teste mágico, a Dificuldade da magia usa a Sintonia de quem conduz + as palavras dele + 2 do parceiro, e só o alvo rola.
-5. **As Skills dos dois Valores valem**. Os Retaliações também.
+5. **As Skills dos dois Valores valem**. As Retaliações também.
 6. Par/ímpar, Crítico e Desequilíbrio: como numa magia normal, nos dados rolados.
 
 Chance: uns **89–90%** em qualquer Moldura.
@@ -281,14 +286,14 @@ O **Eixo** (o Valor sem oposto) combina com qualquer um sem penalidade.
 
 ## Palavras Básicas (todo mundo tem)
 
-As Palavras Básicas são os **verbos da tabela de Palavras Básicas** ([[01 Regras centrais]], seção 1) e as **formas** abaixo. Servem para duas coisas:
+As Palavras Básicas são as **52 palavras** da lista ([[01 Regras centrais]], seção 1) e as **formas** abaixo. Servem para duas coisas:
 
-1. **Descrever qualquer ação** e escolher o teste: **atributo + verbo** ("Furtar", "Convencer", "Atirar").
-2. **Completar uma magia**: **uma** Palavra Básica por magia (um verbo da tabela ou uma forma), de graça, sem contar no limite de palavras. É ela que dá ao Valor as ações que ele sozinho não alcança: "*Voz* + **Ameaçar**", "*Raiz* + **Agarrar**", "*Sombra* + **Esconder**".
+1. **Descrever qualquer ação** e escolher o teste: **uma ou duas palavras** ("Furtar", "Bater Rápido", "Convencer").
+2. **Completar uma magia**: **uma** Palavra Básica por magia (uma palavra da lista, uma coisa ou uma forma), de graça, sem contar no limite de palavras. É ela que dá ao Valor as ações que ele sozinho não alcança: "*Voz* + **Ameaçar**", "*Raiz* + **Agarrar**", "*Sombra* + **Esconder**".
 
-Além dos verbos da tabela, cinco **coisas** também são Palavras Básicas: **Arma · Item · Poção · Objeto · Armadilha**. *Lâmina* + **Criar** faz uma arma do nada; *Desarmar* + **Arma** tira a arma (ou a magia que prende) da mão de alguém; *Fogo* + **Apagar** acaba com o incêndio; *Vida* + **Poção** põe a cura num frasco.
+Além das palavras da lista, cinco **coisas** também são Palavras Básicas: **Arma · Item · Poção · Objeto · Armadilha**. *Lâmina* + **Criar** faz uma arma do nada; *Desarmar* + **Arma** tira a arma (ou a magia que prende) da mão de alguém; *Fogo* + **Apagar** acaba com o incêndio; *Vida* + **Poção** põe a cura num frasco.
 
-Palavras Básicas **não custam nada**, mas precisam fazer **sentido concreto** no que está acontecendo, e **nunca são o núcleo** de uma magia. Os **seis atributos também são Palavras Básicas**: *Lâmina* + **Força** (um golpe pesado), *Voz* + **Carisma** (uma fala que conquista), *Sombra* + **Agilidade** (sumir rápido).
+Palavras Básicas **não custam nada**, mas precisam fazer **sentido concreto** no que está acontecendo, e **nunca são o núcleo** de uma magia.
 
 ### Formas e alvos (só para magia, d12)
 

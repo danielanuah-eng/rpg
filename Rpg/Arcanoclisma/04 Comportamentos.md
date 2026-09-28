@@ -28,20 +28,20 @@ Na mesa, quando o sentimento aperta, você escolhe: pegar o **Atalho** (e o mest
 
 ## Números base
 
-| Comportamento | Atributos que combinam | Esquiva | PV | Limiares base |
+| Comportamento | Palavras que combinam | Esquiva | PV | Limiares base |
 |---|---|---|---|---|
-| **Brutamontes** | Força | 9 | 7 | 6 / 12 |
-| **Atlético** | Agilidade | 12 | 6 | 4 / 10 |
-| **Popular** | Carisma | 10 | 5 | 4 / 9 |
-| **Impaciente** | Agilidade, Força | 11 | 6 | 5 / 11 |
-| **Larápio** | Agilidade, Percepção | 11 | 5 | 4 / 9 |
-| **Privilegiado** | Carisma, Inteligência | 10 | 5 | 4 / 9 |
-| **Briguento** | Força, Agilidade | 10 | 6 | 5 / 11 |
-| **Curioso** | Inteligência, Sabedoria | 10 | 5 | 4 / 9 |
-| **Caótico** | Sabedoria | 11 | 6 | 5 / 10 |
-| **Enganador** | Carisma, Agilidade | 12 | 5 | 4 / 9 |
-| **Explorador** | Sabedoria, Percepção | 11 | 6 | 5 / 10 |
-| **Esperançoso** | Carisma, Sabedoria | 10 | 6 | 5 / 10 |
+| **Brutamontes** | Forçar, Aguentar | 9 | 7 | 6 / 12 |
+| **Atlético** | Rápido, Movimentar | 12 | 6 | 4 / 10 |
+| **Popular** | Convencer, Chamar | 10 | 5 | 4 / 9 |
+| **Impaciente** | Rápido, Bater | 11 | 6 | 5 / 11 |
+| **Larápio** | Furtar, Observar | 11 | 5 | 4 / 9 |
+| **Privilegiado** | Negociar, Estudar | 10 | 5 | 4 / 9 |
+| **Briguento** | Bater, Forçar | 10 | 6 | 5 / 11 |
+| **Curioso** | Investigar, Raciocinar | 10 | 5 | 4 / 9 |
+| **Caótico** | Intuir, Mexer | 11 | 6 | 5 / 10 |
+| **Enganador** | Mentir, Rápido | 12 | 5 | 4 / 9 |
+| **Explorador** | Rastrear, Sobreviver | 11 | 6 | 5 / 10 |
+| **Esperançoso** | Convencer, Intuir | 10 | 6 | 5 / 10 |
 
 Limiares finais = base + nível + armadura.
 
@@ -59,7 +59,7 @@ Limiares finais = base + nível + armadura.
 | | Básico | Superior |
 |---|---|---|
 | **Talento · Ombro de Aríete** | Vantagem para **Levantar**, **Quebrar** e **Agarrar**. Armadura não atrapalha a sua mobilidade (a Esquiva você perde igual). | +2 nos dois Limiares; ninguém te empurra nem derruba. Uma vez por Evento, marque 1 Cansaço para marcar 1 PV a menos. |
-| **Hábito · Corpo de Pedra** | Até o fim do Evento, Vantagem em testes de **Força** e para **Aguentar** (dor, veneno, frio, peso, cansaço). | E, enquanto durar, sempre que for marcar Cansaço por esforço do corpo (Forçar, carregar, aguentar o ambiente), marque 1 a menos. |
+| **Hábito · Corpo de Pedra** | Até o fim do Evento, Vantagem em **Forçar** e **Aguentar** (dor, veneno, frio, peso, cansaço). | E, enquanto durar, sempre que for marcar Cansaço por esforço do corpo (Esforço, carregar, aguentar o ambiente), marque 1 a menos. |
 
 ## 2. Atlético — *salta, escala, corre, nunca está onde o problema cai*
 
@@ -117,7 +117,7 @@ Nada deste Comportamento funciona em combate.
 | | Básico | Superior |
 |---|---|---|
 | **Talento · Mão Leve** | Vantagem para **Furtar** e **Mexer** (fechaduras, truques de mão). Uma vez por sessão, tire do bolso um item comum pequeno que você "já tinha pego". | Ataques contra quem está distraído, cego, caído ou Vulnerável causam +1d6 + Moldura. |
-| **Hábito · Surrupiar** | Role **Furtar** (Agilidade) **com Vantagem** contra a Dificuldade do alvo: tire um item que um adversário Perto segura. **Não funciona de novo com o mesmo personagem**: ele fica esperto. | Se falhar, ninguém percebe que você tentou (e a tentativa não conta como "de novo"). |
+| **Hábito · Surrupiar** | Role **Furtar** **com Vantagem** contra a Dificuldade do alvo: tire um item que um adversário Perto segura. **Não funciona de novo com o mesmo personagem**: ele fica esperto. | Se falhar, ninguém percebe que você tentou (e a tentativa não conta como "de novo"). |
 
 ## 6. Privilegiado — *nasceu com portas abertas*
 

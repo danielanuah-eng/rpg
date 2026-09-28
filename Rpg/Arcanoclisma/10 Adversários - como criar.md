@@ -40,9 +40,9 @@ VALOR:   Morbidyum: Assombrar, Cinzas, Pálido
 | 3 | 14 | 16 / 30 | 7 | 3 | +3 | 3d10+3 |
 | 4 | 15 | 22 / 42 | 8 | 4 | +4 | 4d10+4 |
 
-A **Dificuldade** é o número que os jogadores tiram para acertar o adversário (arma ou magia) e para resistir ao que ele faz. Um golpe médio de jogador na Moldura certa marca 2 PV; um golpe médio do adversário marca 1–2 PV num jogador de armadura Média. A régua sobe devagar (Dificuldade +1 e ataque +1 por Moldura) porque os personagens também sobem devagar (atributo e Esquiva +1 por Moldura); conferido em [[15 Teste de escala e criatividade]].
+A **Dificuldade** é o número que os jogadores tiram para acertar o adversário (arma ou magia) e para resistir ao que ele faz. Um golpe médio de jogador na Moldura certa marca 2 PV; um golpe médio do adversário marca 1–2 PV num jogador de armadura Média. A régua sobe devagar (Dificuldade +1 e ataque +1 por Moldura) porque os personagens também sobem devagar (palavras e Esquiva +1 por Moldura); conferido em [[15 Teste de escala e criatividade]].
 
-**Cada adversário tem a sua tabela de Palavras Básicas**, do jeito curto: **um número para tudo** (o Ataque) e, pelas palavras dele (*Ser*, *Parecer*), **2 ou 3 verbos fortes (+2)** e **1 fraco (−2)**. Ele rola **d20 + o número** do verbo. Quando um jogador age **contra um verbo forte** dele (se esconder de quem Observa bem), a Dificuldade sobe **+2**; contra um fraco, cai **−2**. Se ele usa magia, tem também **palavras de Valor**; um humano comum não tem. PNJ importante pode ter a tabela inteira, com atributos, como um jogador. Todos os 280 do [[11 Bestiário]] já têm a linha **Básicas**.
+**Cada adversário tem a sua tabela de Palavras Básicas**, do jeito curto: **um número para tudo** (o Ataque) e, pelas palavras dele (*Ser*, *Parecer*), **2 ou 3 verbos fortes (+2)** e **1 fraco (−2)**. Ele rola **d20 + o número** do verbo. Quando um jogador age **contra um verbo forte** dele (se esconder de quem Observa bem), a Dificuldade sobe **+2**; contra um fraco, cai **−2**. Se ele usa magia, tem também **palavras de Valor**; um humano comum não tem. PNJ importante pode ter a tabela inteira, como um jogador. Todos os 280 do [[11 Bestiário]] já têm a linha **Básicas**.
 
 **A régua é o ponto de partida, não uma lei.** A Dificuldade de um adversário **varia** pelo que ele é: Valores, história, corpo, palavras. Um bicho frágil e distraído pode ter Dificuldade **abaixo** da régua; um guarda veterano de armadura, acima. Ajuste de −3 a +3 é normal; use o *Parecer* e o *Ser* como guia (*Lento*, *Cego*, *Enorme*: mais fácil de acertar; *Veloz*, *Blindado*, *Etéreo*: mais difícil).
 
@@ -115,7 +115,7 @@ Verbo (Custo · Alcance · Alvo · Resistência · Efeito · Marcador)
 | **Custo** | livre (usa ao ser ativado) · **NC** (N de Cataclisma) · **reação** (Chefes; custa 1C a mais) |
 | **Alcance** | Toque · Perto · Médio · Longe · Horizonte |
 | **Alvo** | 1 · Grupo (até 3) · Área (todos no alcance) · si |
-| **Resistência** | *ataque* (d20 + Ataque contra Esquiva) ou um **verbo** (o jogador rola 2d12 + atributo + verbo contra a Dificuldade do adversário: Desviar, Aguentar, Firmar, Fugir...). Quando o bestiário pede só um atributo ("Agilidade"), o jogador soma o verbo que a descrição pedir (Agilidade + Desviar) |
+| **Resistência** | *ataque* (d20 + Ataque contra Esquiva) ou um **verbo** (o jogador rola 2d12 + a palavra contra a Dificuldade do adversário: Desviar, Aguentar, Firmar, Fugir...; se a descrição pedir, até duas palavras, como Desviar Rápido) |
 | **Efeito** | Dano ×½ / ×1 / ×1,5 / ×2 · uma **Condição** · Movimento · Criar/Invocar · Proteger · Anular · Selar palavra · Mexer em Arcano/Cansaço |
 | **Marcador** | Instante · até a próxima Falha · até o mestre emoldurar · até o mestre pagar · o Evento |
 
@@ -134,7 +134,7 @@ Verbo (Custo · Alcance · Alvo · Resistência · Efeito · Marcador)
 
 Dano **e** condição no mesmo verbo: some os custos. Marcador "o Evento" ou "até o mestre pagar": +1C.
 
-**Condições**: *Caído* (o próximo ataque contra ele tem Vantagem; levantar é a ação), *Distraído* (Desvantagem na próxima rolagem), *Amedrontado* (não se aproxima da fonte do medo), *Preso* (não se move; soltar-se é Força ou Agilidade contra a Dificuldade), *Cego* (Desvantagem para tudo que precisa ver), *Atordoado* (perde a próxima vez que agiria), *Selado* (uma palavra sua não funciona), *Vulnerável* (ataques contra ele têm Vantagem), *Envenenado* (marca 1 Cansaço sempre que o mestre emoldura).
+**Condições**: *Caído* (o próximo ataque contra ele tem Vantagem; levantar é a ação), *Distraído* (Desvantagem na próxima rolagem), *Amedrontado* (não se aproxima da fonte do medo), *Preso* (não se move; soltar-se é Forçar ou Fugir contra a Dificuldade), *Cego* (Desvantagem para tudo que precisa ver), *Atordoado* (perde a próxima vez que agiria), *Selado* (uma palavra sua não funciona), *Vulnerável* (ataques contra ele têm Vantagem), *Envenenado* (marca 1 Cansaço sempre que o mestre emoldura).
 
 ### PARECER (adjetivos-passivas)
 
@@ -145,9 +145,9 @@ Cada adjetivo é uma passiva pronta. Tabela d66 para o gerador sortear:
 | **1** | **Blindado**: Limiares +25% | **Veloz**: move até Médio, Dif +1 | **Enorme**: Limiares ×1,3, ataca Grupo no Toque, não se esconde | **Minúsculo**: Dif +2, PV −1 | **Voador** | **Aquático**: no fundo da água, Vantagem em tudo |
 | **2** | **Escavador**: some no chão e reaparece até Médio | **Invisível**: até atacar; ataques contra ele com Desvantagem | **Venenoso**: o ataque comum deixa Envenenado | **Espinhoso**: quem o ataca no Toque sofre 1d6 | **Regenerante**: limpa 1 PV quando o mestre emoldura | **Etéreo**: armas sem magia causam metade |
 | **3** | **Faminto**: ataca primeiro o mais ferido | **Furioso**: com metade dos PV, +1 dado de dano | **Covarde**: foge com 2 PV ou menos | **Astuto**: Dif +2 contra enganar e convencer | **Antigo**: um Valor a mais | **Cego**: imune a ilusões e a Alvorum de luz, Desvantagem à distância |
-| **4** | **Silencioso**: Vantagem para emboscar | **Numeroso**: é um bando; conta como Lacaio de 2 pontos que não cai com um golpe | **Brilhante**: não se esconde; quem o ataca no Toque fica Distraído | **Gélido**: quem o toca marca 1 Cansaço | **Ardente**: seu dano também queima objetos e armadura (−1 Proteção) | **Pesado**: não é empurrado; Agilidade −, Dif −1 |
+| **4** | **Silencioso**: Vantagem para emboscar | **Numeroso**: é um bando; conta como Lacaio de 2 pontos que não cai com um golpe | **Brilhante**: não se esconde; quem o ataca no Toque fica Distraído | **Gélido**: quem o toca marca 1 Cansaço | **Ardente**: seu dano também queima objetos e armadura (−1 Proteção) | **Pesado**: não é empurrado; Rápido −2, Dif −1 |
 | **5** | **Leal**: se um aliado cai, ele age na hora | **Mentiroso**: o Curioso só descobre metade | **Faminto de Magia**: toda magia Perto dele gera +1 Cataclisma | **Marcado**: um Valor alheio que ele roubou (uma palavra de outro Valor) | **Sagrado**: Dif +2 contra Morbidyum e Dominum | **Imundo**: cura perto dele custa +1 Arcano |
-| **6** | **Barulhento**: todo mundo sabe onde ele está | **Paciente**: só age quando o mestre emoldura por uma Falha | **Frágil**: Limiares −25%, Dif +1 | **Duro**: marca 1 PV a menos por golpe (mínimo 1) | **Belo**: Desvantagem para atacá-lo na primeira vez (Carisma para resistir) | **Estranho**: uma regra só dele, que o mestre inventa |
+| **6** | **Barulhento**: todo mundo sabe onde ele está | **Paciente**: só age quando o mestre emoldura por uma Falha | **Frágil**: Limiares −25%, Dif +1 | **Duro**: marca 1 PV a menos por golpe (mínimo 1) | **Belo**: Desvantagem para atacá-lo na primeira vez (Firmar para resistir) | **Estranho**: uma regra só dele, que o mestre inventa |
 
 ### QUER
 
@@ -220,6 +220,6 @@ Nem todo PNJ luta. O dono da estalagem, a professora, o garoto que sabe o caminh
 
 **Testes contra um PNJ** (convencer, enganar, esconder dele) usam a **Dificuldade** dele: +2 se o jogador age contra um verbo forte dele, −2 contra o fraco.
 **PNJ que age sozinho** (ajuda, pesquisa, corre) rola **d20 + o verbo**, e não gera Arcano nem Cataclisma.
-**PNJ importante** pode ganhar a tabela inteira de Palavras Básicas, com atributos, como um jogador (ver *Criação* em [[05 Personagem e níveis]]).
+**PNJ importante** pode ganhar a tabela inteira de Palavras Básicas, como um jogador (ver *Criação* em [[05 Personagem e níveis]]).
 
 **Jogo solo** (um jogador): Chefe **sem o ×1,5 nos Limiares** e com **10 PV**; o dano dele cai **um dado** (M3: 2d10 + 3 no lugar de 3d10 + 3). Em teste.

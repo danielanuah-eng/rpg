@@ -53,7 +53,12 @@ Oposição serve para duas coisas: **Magia em Dupla de opostos** (mais forte, ma
 - **Skill · Fio da Guerra**: em combate, cada magia sua ganha **+1 dado de dano** ou **+2 no total** (escolha ao conjurar).
 - **Retaliação · Só Sabe Brigar**: magias fora de combate ou violência custam **+2 Arcano**.
 - **Ressonância II · Veterano**: marque 1 Cansaço para ter os dois bônus do Fio da Guerra na mesma magia.
-- **Ressonância III · Arsenal Vivo**: invocar uma arma ou escudo de Conflitüo é Grau 1 para você. Dura o Evento; ataques com ela usam Força ou Agilidade e causam 2d10 + Moldura + 1.
+- **Ressonância III · Arsenal Vivo**: invocar uma arma ou um escudo de Conflitüo é **Grau 1** para você: **não custa Arcano e não rola**; é uma ação. Escolha a forma:
+  - **Lâmina** (espada, machado, martelo): Toque, ataque com **Bater**, dano **2d10 + Moldura + 1**.
+  - **Lança** (lança, alabarda, corrente): Perto, ataque com **Bater**, dano **2d10 + Moldura**, traço *Alcance*.
+  - **Arco** (flechas de luz vermelha): Longe, ataque com **Atirar**, dano **2d10 + Moldura**.
+  - **Escudo**: **+2 na Esquiva** e **+1 casa de Proteção** enquanto durar.
+  - Regras de todas: **uma de cada vez** (trocar de forma é uma ação); **dura o Evento**, ou até você cair ou soltá-la; **não pode ser desarmada** (se arrancarem, ela volta para o seu Canal); conta como **arma mágica** (pega em *Etéreo*); e ganha **um traço** de arma à sua escolha ao ser invocada (*Precisa*, *Cruel*, *Atordoante* ou *Desarmar*).
 
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
@@ -187,7 +192,7 @@ Perguntas de vínculo: *A quem você já obedeceu e jurou nunca mais? · Você a
 | **5** | Belo | Grotesco | Robusto | Frágil | Vigoroso | Sereno |
 | **6** | Ciumento | Terno | Apaixonado | Contagiante | Íntimo | Humano |
 
-Exemplos: **G1** corar as bochechas de alguém · **G2** *Medo*: o capanga foge até a próxima Falha · **G3** *Fortalecer + Músculo + Aliado*: +2 em Força para até 3 aliados · **G4** *Cantar + Fúria + Contagiante + Grupo*: uma música que faz a taverna inteira brigar.
+Exemplos: **G1** corar as bochechas de alguém · **G2** *Medo*: o capanga foge até a próxima Falha · **G3** *Fortalecer + Músculo + Aliado*: +2 em Forçar e Levantar para até 3 aliados · **G4** *Cantar + Fúria + Contagiante + Grupo*: uma música que faz a taverna inteira brigar.
 
 Perguntas de vínculo: *De quem você sente mais falta? · Qual emoção sua você mais esconde?*
 
@@ -289,7 +294,7 @@ Perguntas de vínculo: *Quem você não conseguiu salvar? · Você já morreu? O
 |---|---|---|
 | **Atacar** | uma *Ideia* *Psíquica* que bate como pedrada; *Confundir*, *Labirinto*, *Hipnótico*; *Ilusão* de perigo | Projétil · Teste mágico (Firmar) · Teste mágico (Observar) |
 | **Proteger** | *Invisível* ou *Disfarçar*: ninguém mira em quem não vê; *Esquecer*: o guarda esquece que viu você | Pequeno evento · Teste mágico (Firmar) |
-| **Aliviar** | *Riscar* ou *Lembrar*: tirar uma lembrança que dói, devolver uma que se perdeu | Pequeno evento |
+| **Aliviar** | *Riscar* ou *Evocar*: tirar uma lembrança que dói, devolver uma que se perdeu | Pequeno evento |
 | **Descobrir** | *Ler*, *Segredo*; a Skill *Espiar* | Pequeno evento · Teste mágico |
 | **Mover** | *Invisível* para passar pela guarda; *Ilusão* de uma porta onde não tem | Pequeno evento · Teste mágico (Observar) |
 
@@ -303,7 +308,7 @@ Perguntas de vínculo: *Quem você não conseguiu salvar? · Você já morreu? O
 
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
-| **1** | Calcular | Lembrar | Esquecer | Ler | Enganar | Disfarçar |
+| **1** | Calcular | Evocar | Esquecer | Ler | Enganar | Disfarçar |
 | **2** | Doutrinar | Implantar | Confundir | Sugerir | Riscar | Imaginar |
 | **3** | Mente | Memória | Dúvida | Ideia | Farsa | Ilusão |
 | **4** | Crença | Segredo | Cheiro | Gosto | Palavra | Labirinto |
@@ -349,7 +354,7 @@ Perguntas de vínculo: *Qual memória você apagaria se pudesse? · Em que menti
 | **2** | Acelerar | Voltar | Saltar | Organizar | Aumentar | Encolher |
 | **3** | Tempo | Espaço | Portal | Caminho | Instante | Clone |
 | **4** | Dimensão | Passado | Futuro | Âncora | Ciclo | Horizonte |
-| **5** | Rápido | Lento | Imenso | Minúsculo | Infinito | Próximo |
+| **5** | Súbito | Lento | Imenso | Minúsculo | Infinito | Próximo |
 | **6** | Antigo | Eterno | Efêmero | Pontual | Reverso | Simultâneo |
 
 Exemplos: **G1** saber que horas são sem olhar · **G2** *Acelerar + Aliado*: um aliado age logo depois de você, antes do mestre · **G3** *Portal + Grupo*: três pessoas atravessam para o outro lado do salão · **G4** *Parar + Tempo + Área*: tudo na praça para por 1 ação, menos você.

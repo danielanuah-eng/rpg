@@ -21,12 +21,12 @@
 | # | Tipo | Quantos hoje | Fonte | Campos próprios | Vai para | Imagem |
 |---|---|---|---|---|---|---|
 | 1 | **Palavra de Valor** | 324 (9 × 36) | [[03 Valores]] | classe (verbo, substantivo, adjetivo), d66 | ficha do Valor, montador de magia, magia aleatória | não |
-| 2 | **Palavra Básica** | 6 atributos + 48 verbos + 6 coisas + 12 formas | [[01 Regras centrais]], [[02 Magia]] | atributo da coluna, d6/d8 | ficha, montador de magia | não |
+| 2 | **Palavra Básica** | 52 palavras + 5 coisas + 12 formas | [[01 Regras centrais]], [[02 Magia]] | descrição curta, ordem alfabética | ficha, montador de magia | não |
 | 3 | **Valor** | 9 | [[03 Valores]] | Compromisso, Skill, Retaliação, Ressonâncias, oposto, falas, *Como é*, tabela de usos, cor, símbolo | ficha do Valor, livro | símbolo + arte |
 | 4 | **Comportamento** | 12 | [[04 Comportamentos]] | números base, Talento e Hábito (Básico, Superior), falas, *Como é* | ficha, criador de personagem | ícone |
 | 5 | **Personagem pronto** | 6 (kit + sessões) | [[13 Teste de mesa 1]], [[16 Sessão de teste - Castian]], [[18 Sessão de teste 2 - Alvenyr]] | ficha inteira | app (carregar e jogar), livro | sim |
 | 6 | **PNJ / adversário** | 288 | [[11 Bestiário]], [[10 Adversários - como criar]] | Moldura, Papel, Maestria, Ser, Agir (com determinador), Parecer, Quer, Jeito, Básicas, Valor | gerador de encontro, gerador de PNJ, livro | todos no app do gerador; no livro, os relevantes |
-| 7 | **Arma / armadura** | 15 + 3 | [[06 Itens e dinheiro]] | atributo, verbo, alcance, dano, Proficiência, traços, Limiares, Proteção, preço | ficha (loja), tesouro | sim |
+| 7 | **Arma / armadura** | 15 + 3 | [[06 Itens e dinheiro]] | palavra que combina, alcance, dano, Proficiência, traços, Limiares, Proteção, preço | ficha (loja), tesouro | sim |
 | 8 | **Item mágico** (5 famílias) | ~30 | [[06 Itens e dinheiro]] | família, Moldura, efeito, cargas, **preço pela fórmula** (Base × fator) | ficha, tesouro, loja | sim |
 | 9 | **Item narrativo, comum, bugiganga** | tabelas d66 | [[12 Tesouros e itens mágicos]] | descrição, d66 | tesouro | só os mágicos |
 | 10 | **Consumível, material, montaria, familiar** | ~20 | [[06 Itens e dinheiro]] | efeito, preço | ficha, tesouro | sim |

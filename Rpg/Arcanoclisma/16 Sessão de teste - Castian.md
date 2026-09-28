@@ -10,11 +10,11 @@
 - **Comportamento**: **Explorador** — Esquiva **11** · PV **6** · Limiares **7 / 13** · Proteção **3**
   - **Estrada nos Pés** (Talento, Básico): Vantagem para sobreviver e se orientar.
   - **Outro Caminho** (Hábito, 3 Arcano, uma vez por sessão): acha outro caminho; o mestre diz onde leva e o que cobra.
-- **Interações**: Carisma +1 · Sabedoria +1 · Inteligência −1 · Proteger **+2** (acalmou a vila inteira) · Convencer +1 · Movimentar +1 (cresceu no cais) · Observar +1 · Mentir **−1** (inocente demais)
-  - Testes prontos: Proteger **+3** · Convencer **+2** · Movimentar **+1** · Observar **+1** · Mentir **0** · Pensar **−1**
+- **Palavras Básicas** (convertidas para as palavras soltas; o registro abaixo fica como foi jogado): Proteger **+2** (acalmou a vila inteira) · Convencer +1 · Movimentar +1 (cresceu no cais) · Observar +1 · Intuir +1 · Sobreviver +1 · Mentir **−1** (inocente demais) · Raciocinar **−1**
+  - Melhor teste: *Proteger Convencendo* **+3**
 - **Arcano** 3 / 12 · **Cansaço** 0 / 6 · **PV** 0 / 6 marcados
 - **Vivências**: *Acalmei a vila inteira em noite de tempestade* · *Cresci no cais de OulVeil*
-- **Equipamento**: remo de pescador (bastão: Força, Toque, d8+1) · rede de pesca · casaco de pescador (Leve) · kit de viagem · 50 Ordynus
+- **Equipamento**: remo de pescador (bastão: Bater, Toque, d8+1) · rede de pesca · casaco de pescador (Leve) · kit de viagem · 50 Ordynus
 
 **Laços** (Atalhos nesta sessão □□)
 
