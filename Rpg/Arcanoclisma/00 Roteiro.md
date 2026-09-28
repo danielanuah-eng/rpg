@@ -56,7 +56,7 @@ Perguntas de teste para a mesa (anotar depois de cada sessão):
 
 ---
 
-## Fase 2 — Lore e descrições (estamos aqui)
+## Fase 2 — Lore e descrições (rascunho completo)
 
 Objetivo: o mundo explica as regras (por que par é Arcano, por que Eternyr é difícil, por que Dominum pode reagir).
 
@@ -77,7 +77,9 @@ As perguntas de escritor estão no fim de [[08 Mundo e entidades]]. Responda com
 
 ---
 
-## Fase 3 — O que vai ser gerado
+## Fase 3 — O que vai ser gerado (estamos aqui)
+
+Catálogo fechado, formato de dados e geradores em [[22 O que é gerado]].
 
 Objetivo: fechar a **lista de coisas** que o livro e o app vão produzir, com o formato de dados de cada uma. **Cartas ficam para o fim** (fase 5, último passo): primeiro definimos tudo.
 

@@ -494,3 +494,7 @@ Sua resposta: ✅ aplicada, com *Cuidar* → **Proteger**, *Notar* → **Observa
 
 ✅ **Bronze Arco**: metal **comum**, feito de magia, **conduz magia** e é **mais resistente**. Em [[06 Itens e dinheiro]] (qualquer arma, armadura ou Canal pode ser de Bronze Arco, +50% no preço) e [[08 Mundo e entidades]].
 
+## Rodada 23 — Fase 3
+
+As perguntas P-123 a P-126 (gerador de nomes, personagem aleatório com tabela de Laços, quais PNJs ganham imagem, ids sem acento) estão em [[22 O que é gerado]].
+

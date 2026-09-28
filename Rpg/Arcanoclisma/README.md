@@ -30,6 +30,7 @@ Sistema de RPG próprio, inspirado em Daggerheart, Rune RPG, Ethmos e Triangle A
 20. [[19 Fim de sessão - as perguntas de envolvimento]] — o fim de sessão e de aventura: Laços, as três perguntas, *Perceber e Mudar*, Marcos e o que eles compram
 21. [[20 Prompts de arte - personagens]] — os personagens das sessões como rostos do livro: estilo base (traço Wilderfeast) e um prompt por personagem, interagindo com a página
 22. [[21 Kit de campanha]] — peças para o mestre: 11 lugares, o que as entidades querem, artefatos, 20 ganchos e 6 arcos
+23. [[22 O que é gerado]] — Fase 3: o catálogo de tudo que vira dado (24 tipos), os campos, os geradores e o exemplo de JSON
 
 ## Conta dos dados
 
