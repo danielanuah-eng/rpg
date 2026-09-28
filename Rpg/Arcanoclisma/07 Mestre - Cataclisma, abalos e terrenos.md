@@ -4,7 +4,7 @@
 
 ## 1. Cataclisma
 
-**Ganha**: 1 por dado ímpar dos jogadores (menos em rolagens de reação), 2 por jogador no início da sessão, 1d4 em Pausa, 1d4 + nº de jogadores em Pouso, e as Dificuldades de magia que dizem isso. **Máximo 20**; o excesso **transborda** num Abalo imediato do tamanho do excesso.
+**Ganha**: 1 por dado ímpar dos jogadores (menos em rolagens de reação), 2 por jogador no início da sessão, 1d4 em Pausa, 1d4 + nº de jogadores em Pouso, e os Efeitos Colaterais de magia que dizem isso, e **+1 por palavra de Valor a partir da 3ª** numa magia. **Máximo 20**; o excesso **transborda** num Abalo imediato do tamanho do excesso.
 
 Na média, cada rolagem de jogador rende 1 Cataclisma. **O mestre gasta quando quiser**, sempre que for conveniente e bom para a narrativa: interromper, ativar, disparar Abalos, cobrar Ameaças. É a ideia: reservas grandes e gastos grandes. (No teste simulado, o mestre que só gasta ativando adversários termina a luta com quase 20; o resto vai para Abalos, Ameaças e interrupções.) ❓ P-05
 
@@ -55,7 +55,7 @@ Cinco tamanhos. Escolha ou role 1d6. Os marcados com ✦ mexem na ficha dos joga
 2. ✦ Uma entidade (Primordial ou semideus) nota a mesa: cada jogador ganha uma **Dívida**.
 3. O lugar vira **Terreno Ferido** permanente (toda magia ali gera +1 Cataclisma, para sempre).
 4. Um Chefe entra no Evento.
-5. A última magia conjurada fica **permanente**, do jeito que saiu, com as Dificuldades junto.
+5. A última magia conjurada fica **permanente**, do jeito que saiu, com os Efeitos Colaterais junto.
 6. ✦ Todos os personagens ganham uma **Marca do Cataclisma** (−1 de Arcano máximo e uma marca no corpo).
 
 **Colapso (16)** — muda a campanha
@@ -75,7 +75,7 @@ Abalos que mexem num **Valor específico**: fortalecem, enfraquecem, invertem, a
 | 1 | **Maré Alta** | Dificuldade −2 e +1 dado de dano para magias dele (de jogadores **e** adversários) |
 | 2 | **Maré Baixa** | Dificuldade +2 e Grau máximo −1 para magias dele |
 | 3 | **Maré Cheia** | toda magia dele sobe um Grau de efeito de graça, mas gera +2 Cataclisma |
-| 4 | **Maré Virada** | o Valor passa a agir como o oposto (Dominum liberta, Morbidyum faz durar); cada magia dele rola uma Dificuldade a mais |
+| 4 | **Maré Virada** | o Valor passa a agir como o oposto (Dominum liberta, Morbidyum faz durar); cada magia dele rola um Efeito Colateral a mais |
 | 5 | **Seca** | o Valor não funciona: nenhuma magia, Skill ou item dele |
 | 6 | **Maré Emprestada** | todos no Evento podem usar 1 palavra desse Valor como se fosse sua |
 | 7 | **Chamado do Reino** | abre-se uma passagem para o Reino do Valor ([[08 Mundo e entidades]]); algo sai, ou alguém é puxado |

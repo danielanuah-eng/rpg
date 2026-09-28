@@ -20,15 +20,20 @@ Ser um **Comprometido eficiente e adaptativo** é olhar e usar as palavras **de 
 
 As palavras da tabela **variam livremente**: plural, gênero, e troca entre verbo, substantivo e adjetivo da mesma raiz contam como **a mesma palavra** (*Acalmar* = calma = calmo; *Humano* = humanos = humanidade; *Fogo* = fogueira = em chamas). Se o jogador quiser uma palavra **próxima** que não está na tabela (*Serenar* no lugar de *Acalmar*), a mesa aceita quando o sentido é claramente o mesmo. Isso dá variedade sem mudar custo nem limite.
 
-**Só conta palavra que muda o efeito.** Uma palavra que apenas diz *onde* ou *em quem* a magia cai, sem acrescentar nada que a primeira já não faça, é detalhe da intenção e não conta nem custa: *Fortalecer* (Músculo) em você mesmo é uma palavra só, porque fortalecer um corpo já é músculo; *Acalmar* (Humanos) numa pessoa também. Se a segunda palavra **acrescenta** efeito (*Fortalecer Coragem*: além do corpo, o medo some), ela conta e custa.
+**Só conta palavra que muda o efeito** (para custo e para bônus). Uma palavra que apenas diz *onde* ou *em quem* a magia cai, sem acrescentar nada que a primeira já não faça, é detalhe da intenção e não conta nem custa: *Fortalecer* (Músculo) em você mesmo é uma palavra só, porque fortalecer um corpo já é músculo; *Acalmar* (Humanos) numa pessoa também. Se a segunda palavra **acrescenta** efeito (*Fortalecer Coragem*: além do corpo, o medo some), ela conta e custa.
 
-### Relação (+1)
+### Relação: as palavras somam
 
-Ao conjurar, o jogador **pode** dizer em uma frase por que aquela palavra, para aquele personagem, faz aquilo acontecer. É opcional e só narrativo: ninguém é punido por não dizer.
+Ao conjurar, o jogador diz em **uma frase** por que aquelas palavras, para aquele personagem, fazem aquilo acontecer. A relação **corresponde ao personagem** (aos valores, à ética, às qualidades, ao jeito de ver o mundo, ao Compromisso dele).
 
-Mas quando a relação **corresponde ao personagem** (aos valores, à ética, às qualidades, ao jeito de ver o mundo, ao Compromisso dele), a magia ganha **+1 de Relação** no total.
+Com a relação dita, **cada palavra de Valor soma +1 no total**. Mais palavras deixam o efeito **mais específico**, e o que é específico funciona mais fácil. Sem a relação, as palavras entram no efeito, mas não somam.
 
-Os números do jogo **já contam com esse +1** (as Dificuldades foram calibradas com ele). Parece um extra, e é bom que pareça; mas é o jeito normal de conjurar. Quem não conta a relação conjura um pouco abaixo do esperado.
+- **1 palavra = +1**: é o normal, e as Dificuldades do Grau foram calibradas com ele.
+- Cada palavra a mais custa **1 Arcano** e soma **+1**.
+- A partir da **3ª palavra de Valor**, cada uma também dá **+1 Cataclisma** ao mestre: o específico demais puxa o mundo junto. (Na Moldura 1, que usa até 2, isso não aparece.)
+- Palavras Básicas não somam nem custam.
+
+Esse é o bônus da magia: ela **não recebe Vantagem paga** (Vivência, Ajudar); para somar força com alguém, use a **Dupla**. Desvantagem vale igual.
 
 ## Conjurar em 5 passos
 
@@ -38,7 +43,7 @@ Os números do jogo **já contam com esse +1** (as Dificuldades foram calibradas
    - **Uma Palavra Básica** (verbo, modo ou forma): **não custa e não conta no limite**. Ela existe para **dar ao Valor ações que ele sozinho não tem** (um Cognitium que precisa *escalar*, um Conflitüo que precisa *esconder*). Precisa fazer sentido concreto.
 3. **Grau**: pelo tamanho do efeito (tabela abaixo), até o seu máximo (Moldura + 1). O mestre tem a palavra final se o efeito pedido for maior do que o Grau.
 4. **Pague**: custo do Grau + 1 Arcano por palavra de Valor além da primeira + Ampliações. (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
-5. **Role** os dados do Grau + Sintonia (+1 de Relação). Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre). **Contra o quê**, depende de quem recebe a magia (abaixo).
+5. **Role** os dados do Grau + Sintonia + **1 por palavra de Valor** (com a relação dita). Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre). **Contra o quê**, depende de quem recebe a magia (abaixo).
 
 ### Quem recebe a magia
 
@@ -53,11 +58,20 @@ A rolagem é sempre **sua**: é o teste para a magia acontecer. O que muda é co
 **Resistir**: é uma reação (não gera Arcano nem Cataclisma). O mestre escolhe o atributo pela descrição da magia e pela situação: medo e encanto pedem *firme* (Sabedoria), ser preso pede *forte* (Força), uma ilusão pede *atento* (Percepção), um corpo que amolece pede *resistente* (Força). Iguala ou passa o seu total, escapa.
 
 - **PJ** resiste com 2d12 + o atributo.
-- **Adversário** resiste com 2d12 + o **Ataque** dele. Uma palavra dele que combina com resistir (*Destemido* contra medo) dá Vantagem; uma que o deixa exposto (*Covarde*) dá Desvantagem.
+- **Adversário** resiste com **d20 + o Ataque** dele (o mestre sempre rola d20). Uma palavra dele que combina com resistir (*Destemido* contra medo) dá Vantagem; uma que o deixa exposto (*Covarde*) dá Desvantagem.
 - **Lacaios não resistem**: o efeito pega. (Por golpe, caem 1 / 2 / 3, como no dano.)
 - Skills e Drawbacks que mexem no total (como o −2 de Persona fora de pessoas) mexem **no seu total**, e portanto na resistência também.
 
-Na Moldura 1, uma magia de Grau 2 que alguém resiste funciona **~60%** das vezes (contra ~80% das que não têm resistência). É o preço de mandar na cabeça ou no corpo de alguém; em troca, o efeito costuma decidir a cena.
+Resistir fica mais fácil conforme a **Moldura do adversário** (o Ataque dele sobe de +1 a +4), e mais difícil conforme **as palavras** de quem conjura. Magia no Grau máximo contra adversário da mesma Moldura:
+
+| Moldura | 1 palavra | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| 1 | 62% | 68% | — | — | — |
+| 2 | 65% | 71% | 77% | — | — |
+| 3 | 67% | 74% | 80% | 86% | — |
+| 4 | 69% | 78% | 85% | 90% | 94% |
+
+É o preço de mandar na cabeça ou no corpo de alguém; em troca, o efeito costuma decidir a cena. E é aí que a segunda palavra mais vale.
 
 ### Grau 1: a magia do dia a dia
 
@@ -113,44 +127,44 @@ Ela só vira rolagem quando é o **meio de uma ação** que já seria um teste: 
 
 Os quatro conjuntos têm **o mesmo máximo, 24**, que era a sua ideia. O que muda é o piso e a confiabilidade:
 
-| Dados | Mín | Média | Arcano e Cataclisma que saem por rolagem | Crítico | Desequilíbrio | Magia Ímpar |
+| Dados | Mín | Média | Arcano e Cataclisma que saem por rolagem | Crítico | Desequilíbrio | por Cataclisma |
 |---|---|---|---|---|---|---|
-| 2d12 | 2 | 13 | 1 e 1 | 8% (dados iguais) | — | 21% |
+| 2d12 | 2 | 13 | 1 e 1 | 8% (dados iguais) | — | 42% |
 | 3d8 | 3 | 13,5 | 1,5 e 1,5 | 12,5% | 12,5% | 50% |
 | 4d6 | 4 | 14 | 2 e 2 | 6% | 6% | 31% |
 | 6d4 | 6 | 15 | 3 e 3 | 1,6% | 1,6% | 34% |
 
 - **Magia maior = mais confiável, mas despeja mais Arcano *e* mais Cataclisma na mesa.** É a instabilidade que você queria: não é errar mais, é mexer mais no equilíbrio.
 - **Por que não 8d4**: soma até 32 (não 24) e acerta 98–100% contra qualquer Dificuldade. Ele quebraria a tabela. Troquei por **6d4** e coloquei **3d8** no meio. ❓ **P-02**
-- **3d8 é o Grau traiçoeiro**: número ímpar de dados nunca empata, então metade das magias Impressionantes sai Ímpar. Soa bem para o "Grau adolescente" da magia. Se não gostar, dá para contar empate a favor do jogador.
+- **3d8 é o Grau traiçoeiro**: número ímpar de dados nunca empata, então metade das magias Impressionantes sai por Cataclisma. Soa bem para o "Grau adolescente" da magia. Se não gostar, dá para contar empate a favor do jogador.
 
-Conjurar no seu Grau máximo, contra a Dificuldade do Grau, dá **81–84%** em todas as Molduras com a Sintonia normal **e o +1 de Relação**; sem a Relação, 70–77%. (Magia com Relação acerta um pouco mais que arma contra adversários; arma compensa batendo mais forte e sem custo.)
+Conjurar no seu Grau máximo, contra a Dificuldade do Grau, dá **81–84%** em todas as Molduras com **1 palavra** (e a relação dita); com 2 palavras, 85–90%; com o máximo, 85–99%. Sem a relação, 70–77%. (Magia com Relação acerta um pouco mais que arma contra adversários; arma compensa batendo mais forte e sem custo.)
 
 ## Leitura dos dados na magia
 
 - Cada dado **par**: +1 Arcano para você. Cada dado **ímpar**: +1 Cataclisma para o mestre.
 - **Crítico** — no 2d12, dados iguais; nos outros, **todos pares**. Sucesso automático, escolha um efeito de crítico (ignorar um efeito negativo, melhor resultado possível, dobrar o dano), e ganhe Arcano igual ao **maior dado** (máx. 6) no lugar do Arcano dos pares.
 - **Desequilíbrio** — todos os dados **ímpares** (não existe no 2d12). O mestre ganha os pontos normais **e** dispara de graça um Abalo: **Tremor** no Grau 3, **Fissura** no Grau 4, **Ruptura** no Grau 5.
-- **Magia Ímpar** — mais dados ímpares que pares. A magia acontece (se passou na Dificuldade), mas você rola **Dificuldades** no d20:
+- **Efeitos Colaterais** — quando a magia sai **por Cataclisma** (no 2d12, o maior dado ímpar; nos outros, a maioria ímpar), ela acontece (se passou), mas o mundo cobra: você rola **Efeitos Colaterais** no d20. **Quanto maior o efeito, mais colaterais**:
 
-| Palavras de Valor na magia | Dificuldades roladas se sair Ímpar |
+| Grau da magia | Efeitos Colaterais se sair por Cataclisma |
 |---|---|
-| 1–2 | 0 |
+| 1–2 | 0 (só o mestre emoldura) |
 | 3–4 | 1 |
 | 5 | 2 |
-| 6–7 (só em dupla) | 3 |
+| Dupla de opostos | +1 |
 
-(É a sua regra "1 = 0, 3 = 1, 5 = 2".) Magias de 1 ou 2 palavras de Valor são **seguras** (Palavras Básicas não contam); o custo delas é só o Cataclisma que vai para o mestre.
+As **palavras** não mexem nos Efeitos Colaterais: elas deixam a magia mais certeira e, a partir da 3ª, geram Cataclisma. O **tamanho** do que você pede é que abre a porta para o colateral.
 
 - **Falha** (total abaixo da Dificuldade): se ficou **até 2 abaixo**, a magia sai **um Grau menor** (Grau 2 vira um efeito de Grau 1). Mais que isso, não acontece. O Arcano gasto se perde e o mestre emoldura.
 
-## Tabela de Dificuldades (d20)
+## Tabela de Efeitos Colaterais (d20)
 
-Role quando a magia sai Ímpar. **Número baixo é pior.** Você pode **Suavizar** (2 Arcano: rolar de novo e ficar com o melhor). Resultados em que "o mestre decide" pedem que ele seja justo e interessante, não punitivo.
+Role quando a magia sai por Cataclisma (Grau 3+). **Número baixo é pior.** Você pode **Suavizar** (2 Arcano: rolar de novo e ficar com o melhor). Resultados em que "o mestre decide" pedem que ele seja justo e interessante, não punitivo.
 
-| d20 | Dificuldade | Efeito |
+| d20 | Efeito Colateral | O que acontece |
 |---|---|---|
-| 1 | **Ferida no Véu** | O lugar vira Terreno Instável até o fim do Evento: toda magia ali gera +1 Cataclisma. Role outra Dificuldade. |
+| 1 | **Ferida no Véu** | O lugar vira Terreno Instável até o fim do Evento: toda magia ali gera +1 Cataclisma. Role outro Efeito Colateral. |
 | 2 | **Atenção Divina** | O Primordial ou semideus do seu Valor nota você. O mestre anota uma **Dívida** (a entidade vai cobrar um favor). |
 | 3 | **Eco Tardio** | A magia se repete sozinha na próxima vez que o mestre emoldurar, nos alvos mais inconvenientes. |
 | 4 | **Dívida Arcana** | Perca 1 Arcano por dado ímpar. Cada ponto que não puder pagar **sela** uma das palavras usadas até o fim da sessão; sem palavras para selar, marque 1 PV por ponto que sobrar (mínimo 1). |
@@ -161,7 +175,7 @@ Role quando a magia sai Ímpar. **Número baixo é pior.** Você pode **Suavizar
 | 9 | **Magia Vacilante** | Enquanto durar, o mestre pode cancelar a magia gastando Cataclisma igual a **Grau − 1**. |
 | 10 | **Palavra Rebelde** | O mestre troca uma das palavras por outra da mesma tabela (role d66). O efeito muda de acordo. |
 | 11 | **Alvo Errado** | Além do alvo, a magia pega o alvo mais inconveniente por perto. |
-| 12 | **Magia Frágil** | A duração vira **até a próxima Falha**; a Dificuldade para escapar cai 2 por Grau. |
+| 12 | **Magia Frágil** | A duração vira **até a próxima Falha**; o total para resistir ou escapar cai 2 por Grau. |
 | 13 | **Sinal no Céu** | A magia deixa rastro visível ou sensível a quilômetros. Algo que caça magia vem (o mestre ganha um encontro em aberto). |
 | 14 | **Marca do Valor** | Uma marca física chamativa (olhos acesos, pele de cristal) até o próximo Pouso: Desvantagem para se esconder e para enganar. |
 | 15 | **Fome do Valor** | Sua próxima magia custa +2 Arcano. |
@@ -197,7 +211,7 @@ O Canal é **a forma como o personagem se relaciona com a magia**, não uma peç
 |---|---|---|
 | **Foco arcano** | um objeto que concentra a magia: anel, cajado, orbe, relógio, luvas | **potencializa**: +1 no dano e na cura de magia |
 | **Arma** | a magia sai pela lâmina, pela flecha, pelo tiro | **letalidade**: nas magias de ataque feitas pela arma, **os traços da arma valem** (Precisa, Cruel, Atordoante, Alcance...) |
-| **Transcrito** | grimório, caderno, pergaminhos: a magia escrita antes de ser dita | **segurança**: se a ação anterior foi preparar (ou fora de pressa), a Dificuldade cai 2 e você rola **uma Dificuldade (d20) a menos** |
+| **Transcrito** | grimório, caderno, pergaminhos: a magia escrita antes de ser dita | **segurança**: se a ação anterior foi preparar (ou fora de pressa), a Dificuldade cai 2 e você rola **um Efeito Colateral a menos** |
 | **Corpo** | gesto, dança, sangue, tatuagem | conjura em qualquer postura, mesmo agarrado ou caído |
 | **Voz** | canto, grito, reza | conjura com as mãos ocupadas; magias em quem te ouve têm +1 faixa de alcance |
 | **Familiar** | um bicho ou espírito ligado a você | a magia pode sair dele, até Médio de você |
@@ -210,7 +224,7 @@ Dois personagens conjuram juntos, **numa rolagem só**. É o jeito de passar do 
 1. **Custo**: 3 Arcano, divididos como quiserem, e cada um paga suas palavras de Valor extras.
 2. **Palavras**: cada um põe palavras do próprio Valor (e as Básicas, de graça). Palavras de Valor no total: até **o maior limite dos dois + 2** (máx. 7).
 3. **Grau do efeito**: o maior Grau que qualquer um dos dois conseguiria **+1** (máx. 5).
-4. **Rolagem**: quem **conduz** rola os dados **do Grau do efeito** + a própria Sintonia + Relação; o **parceiro soma +2**. Contra o que a magia pedir (ver *Quem recebe a magia*: Grau do efeito, Esquiva/Dificuldade de quem precisa ser acertado, e resistência de quem não quer).
+4. **Rolagem**: quem **conduz** rola os dados **do Grau do efeito** + a própria Sintonia + **1 por palavra de Valor que ele pôs**; o **parceiro soma +2**. Contra o que a magia pedir (ver *Quem recebe a magia*: Grau do efeito, Esquiva/Dificuldade de quem precisa ser acertado, e resistência de quem não quer).
 5. **As Skills dos dois Valores valem**. Os Drawbacks também.
 6. Par/ímpar, Crítico e Desequilíbrio: como numa magia normal, nos dados rolados.
 
@@ -218,7 +232,7 @@ Chance: uns **89–90%** em qualquer Moldura.
 
 ### Valores opostos
 
-Se os dois Valores forem opostos (ver [[03 Valores]]): o efeito sobe **+2 Graus** em vez de +1 (o que passar de 5 vira Ampliações de graça), mas a **Dificuldade +2**, **os dois marcam Cansaço igual ao Grau do efeito − 2**, e se sair Ímpar rolam **uma Dificuldade a mais**. Chance: uns 57–70%.
+Se os dois Valores forem opostos (ver [[03 Valores]]): o efeito sobe **+2 Graus** em vez de +1 (o que passar de 5 vira Ampliações de graça), mas a **Dificuldade +2**, **os dois marcam Cansaço igual ao Grau do efeito − 2**, e se sair por Cataclisma rolam **um Efeito Colateral a mais**. Chance: uns 57–70%.
 
 O **Eixo** (o Valor sem oposto) combina com qualquer um sem penalidade.
 
@@ -266,9 +280,9 @@ Formas são só formato: **nenhuma Palavra Básica é elemento** (fogo, gelo, lu
 - Relação: "Gelo, para ela, é o rio que parou para ela não morrer."
 - Palavras: **Gelo** (núcleo) + *Projétil* (básica, grátis).
 - Grau 2 (uma pessoa, dano). Custo total 1 Arcano.
-- Rola 2d12 + 2 + 1 (Relação) contra a Dificuldade do guarda, 12. Tira 7 e 8: total 18, acerta. Um par (+1 Arcano: a magia se pagou), um ímpar (+1 Cataclisma). Dano 1d10 + 2 + 1 (Foco).
+- É um jato: precisa **acertar**. Rola 2d12 + 2 (Sintonia) + 1 (uma palavra, com a relação dita) contra a Dificuldade do guarda, 12. Tira 7 e 8: total 18, acerta. Um par (+1 Arcano: a magia se pagou), um ímpar (+1 Cataclisma). Dano 1d10 + 2 + 1 (Foco).
 
 **Tomé (Conflitüo) e Iara (Sublimeyn), nível 5** fazem uma dupla: **Explodir + Lâmina + Metal + Fundir + Grupo**.
 - 4 palavras de Valor, Grau do efeito 4 + 1 = **5 (Mítico)**: uma chuva de lâminas de metal derretido sobre até todos os inimigos à vista.
 - Custo: 3 (dupla) + as palavras de Valor extras de cada um (*Grupo* é básica, grátis).
-- Tomé conduz: rola **6d4** (Grau 5) + 4 + 1, e Iara soma +2, contra a Dificuldade dos inimigos (ou 19, se fosse sem alvo). Skill do Conflitüo vale (+1 dado de dano). Se sair Ímpar, rolam 1 Dificuldade (4 palavras de Valor).
+- Tomé conduz com as 2 palavras dele (*Explodir*, *Lâmina*): rola **6d4** (Grau 5) + 4 (Sintonia) + 2 (palavras), e Iara soma +2, contra a Dificuldade dos inimigos (é um ataque: precisa acertar). Skill do Conflitüo vale (+1 dado de dano). Se sair por Cataclisma, rolam **2 Efeitos Colaterais** (Grau 5).

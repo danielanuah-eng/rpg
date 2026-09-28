@@ -38,6 +38,13 @@ QUER:    comer o que morreu; foge com 1 PV
 
 A **Dificuldade** é o número que os jogadores tiram para acertar o adversário (arma ou magia) e para resistir ao que ele faz. Um golpe médio de jogador na Moldura certa marca 2 PV; um golpe médio do adversário marca 1–2 PV num jogador de armadura Média. A régua sobe devagar (Dificuldade +1 e ataque +1 por Moldura) porque os personagens também sobem devagar (atributo e Esquiva +1 por Moldura); conferido em [[15 Teste de escala e criatividade]].
 
+**A régua é o ponto de partida, não uma lei.** A Dificuldade de um adversário **varia** pelo que ele é: Valores, história, corpo, palavras. Um bicho frágil e distraído pode ter Dificuldade **abaixo** da régua; um guarda veterano de armadura, acima. Ajuste de −3 a +3 é normal; use o *Parecer* e o *Ser* como guia (*Lento*, *Cego*, *Enorme*: mais fácil de acertar; *Veloz*, *Blindado*, *Etéreo*: mais difícil).
+
+**Contra magia**, o adversário se defende de dois jeitos, e os dois crescem com a Moldura dele:
+- **Desviar**: magia que precisa acertar rola contra a **Dificuldade** dele.
+- **Resistir**: magia que muda quem não quer (medo, encanto, prender) é resistida com **d20 + Ataque** contra o total de quem conjura. Palavras dele que combinam dão Vantagem; as que o expõem, Desvantagem. **Lacaios não resistem.**
+- Maestrias (*Resiliente*, *Anulador*) e o Valor do adversário mexem nas duas.
+
 ### Papéis
 
 | Papel | Ajuste sobre a régua | Verbos | Pontos |
@@ -151,7 +158,7 @@ Adversários experientes têm **Maestria**, que muda como a magia dos jogadores 
 | Maestria | Efeito |
 |---|---|
 | **Anulador** | reação: gasta Cataclisma igual ao Grau para anular uma magia contra ele ou Perto dele |
-| **Resiliente** | toda magia contra ele tem Dificuldade +2, e condições causadas por magia duram só **até o mestre emoldurar** |
+| **Resiliente** | +2 na Dificuldade e na resistência contra toda magia, e condições causadas por magia duram só **até o mestre emoldurar** |
 | **Inquebrável** | não pode ser controlado, movido, derrubado, selado nem enganado por magia; Dominum, Persona e Cognitium não o controlam |
 | **Quimerarcano** | mistura 2–3 Valores: conjura como Magia em Dupla sozinho (Grau +1), troca o Valor ativo gastando 2C (mudando resistência e fraqueza), e **não tem fraqueza fixa** |
 | **Deidade** | ignora magias de Grau 1 e 2, age duas vezes quando ativado, tem uma **Presença** (o lugar à volta vira Terreno do seu Valor) e não tem fraqueza |

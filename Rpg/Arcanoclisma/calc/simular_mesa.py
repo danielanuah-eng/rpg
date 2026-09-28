@@ -161,7 +161,7 @@ def combate(M, n, extra=0, chefe=False, base=None, melhorias=0, moral=False):
         dados, bonus, dif, dano = pj.acao(alvo.dif)
         viv = 0
         if pj.arcano >= 3 and R.random() < 0.5:
-            pj.arcano -= 1; viv = 2
+            pj.arcano -= 1; viv = d(6)  # Vivência = Vantagem
         out["acoes"] += 1
         pares = sum(1 for x in dados if x % 2 == 0)
         impares = len(dados) - pares
@@ -204,7 +204,7 @@ def social(n_jog, attr_bom, dif, precisa=3, ameaca=6, ajudas=0, N=20000):
         while suc < precisa and pote < ameaca:
             a, b = d(12), d(12)
             bonus = attr_bom if i % n_jog == 0 else attr_bom - 2
-            bonus += sum(R.choice([2, d(6)]) for _ in range(ajudas))
+            bonus += sum(d(6) for _ in range(ajudas))  # toda ajuda é Vantagem (+1d6)
             i += 1
             if a == b or a + b + bonus >= dif:
                 suc += 1

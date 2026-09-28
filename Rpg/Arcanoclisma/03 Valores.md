@@ -120,7 +120,7 @@ Perguntas de vínculo: *A quem você já obedeceu e jurou nunca mais? · Você a
 - **Compromisso**: "Gente vem antes de tudo." Se envolve, sente em voz alta, não abandona quem pediu ajuda.
 - **Skill · Toque Humano**: Persona é o Valor do humano. Magias que afetam **pessoas** (corpo, alma ou emoção) funcionam normalmente; magias que **não** são em pessoas (objetos, lugares, animais, o tempo, a matéria) têm **−2 no total**: rendem menos longe de gente.
 - **Drawback · Tropeço**: se a magia falhar, ela ainda acontece de algum jeito, mas com um resultado **inútil ou que atrapalha** (o mestre descreve).
-- **Ressonância II · Empatia**: role uma Dificuldade a menos quando a magia afetar pessoas.
+- **Ressonância II · Empatia**: role um Efeito Colateral a menos quando a magia afetar pessoas.
 - **Ressonância III · Carne Moldável**: mudar o próprio corpo (rosto, músculos, guelras, garras) é Grau 1 para você e dura até você desfazer.
 
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |

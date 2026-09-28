@@ -46,19 +46,34 @@ Uma magia de **Grau 1** pode ser o **meio** da ação ("atacar, preciso, com uma
 
 ### Rolar
 
-Role 2d12, some o atributo (e bônus), compare com a Dificuldade. Igual ou maior = sucesso.
+Role 2d12, some o atributo (e as Vantagens), compare com a Dificuldade. Igual ou maior = sucesso.
 
-| Dificuldade | Nome | chance com +2 |
-|---|---|---|
-| 10 | Fácil | 85% |
-| 12 | Normal | 75% |
-| 15 | Difícil | 54% |
-| 20 | Muito difícil | 19% |
-| 25 | Lendário | 2% (precisa de ajuda) |
+### Dificuldades padrão
 
-**Vantagem**: some +1d6. **Desvantagem**: subtraia 1d6. Não acumulam; uma anula a outra. O d6 extra **não conta** para par/ímpar.
+Feitas pela conta: o atributo que o jogador costuma usar fica perto da Moldura (+1 na M1, +4 na M4). A chance da última coluna é a desse jogador, **sem Vantagem**.
 
-**Duas ajudas, no máximo.** Cada rolagem aceita **no máximo duas ajudas** (Vivência, Ajudar, Atalho, Forçar, bônus de talento ou item). A **Relação** não conta: é o normal. Escolha as duas que mais fazem sentido na cena.
+| | M1 | M2 | M3 | M4 | chance |
+|---|---|---|---|---|---|
+| **Fácil** | 9 | 10 | 11 | 12 | ~88% |
+| **Médio** | 12 | 13 | 14 | 15 | ~68% |
+| **Difícil** | 15 | 16 | 17 | 18 | ~46% |
+| **Muito difícil** | 19 | 20 | 21 | 22 | ~19% |
+| **Lendário** | 23 | 24 | 25 | 26 | ~5% (com 2 Vantagens, ~45%) |
+
+Use a coluna da **Moldura do desafio**, não a do grupo: a porta comum de uma vila é M1 para sempre (é aí que o jogador sente que cresceu); a porta do cofre de um semideus é M4. A escada é um ponto de partida: o mestre sobe ou desce pela história, pelos Valores e pela situação.
+
+### Bônus: atributo e Vantagem
+
+Um teste só tem **dois tipos de bônus**:
+
+- **O atributo**: o número fixo. Item ou magia que "dá +1" mexe no atributo.
+- **Vantagem: +1d6.** **Tudo o que ajuda vira Vantagem**: Vivência (1 Arcano), Ajudar (1 Arcano), talento, item de situação, terreno, uma boa ideia na ficção.
+
+**Até 2 Vantagens por rolagem** (+2d6). Cada **Desvantagem** tira uma Vantagem; sem Vantagem para tirar, subtraia 1d6 (no máximo −2d6). O d6 **não conta** para par/ímpar nem para a leitura da jogada.
+
+Fora dessa conta fica só o **Atalho menor** (+3 depois de rolar): não é uma ajuda, é o preço de um Laço, e o mestre recebe Cataclisma por ele.
+
+Na **magia** o bônus vem das **palavras** (ver [[02 Magia]]), não de Vantagem paga; Desvantagem vale igual.
 
 ### Leitura dos dados: por Arcano ou por Cataclisma
 
@@ -93,11 +108,11 @@ Por rolagem de teste o jogador ganha em média **1 Arcano** (2 em magia de Grau 
 
 | Custo | Gasto |
 |---|---|
-| 1 | **Vivência**: +2 numa rolagem em que uma Vivência sua se aplica (uma por rolagem) |
+| 1 | **Vivência**: Vantagem numa rolagem em que uma Vivência sua se aplica (uma por rolagem) |
 | 1 | **Ajudar**: dê Vantagem a um aliado (descreva como) |
 | 1 | **Palavra extra** numa magia (cada palavra de Valor além da primeira; Palavras Básicas não custam) |
 | 1–3 | **Ampliar** uma magia um passo (1 no Grau 1–2, 2 no Grau 3–4, 3 no Grau 5) |
-| 2 | **Suavizar**: role de novo o d20 de uma Dificuldade de magia e fique com o melhor |
+| 2 | **Suavizar**: role de novo o d20 de um Efeito Colateral de magia e fique com o melhor |
 | 3 | **Hábito**: o talento especial do seu Comportamento |
 | 3 | **Ação em Dupla**: você e um aliado rolam, os dois usam o maior resultado, e os efeitos se somam |
 | 3 | **Detalhe**: acrescente algo verdadeiro à cena (uma corda, um conhecido, uma saída) — o mestre ajusta |
@@ -229,7 +244,7 @@ Limiares = base do Comportamento + nível + armadura.
 
 **6 casas** no início, máximo 12. Cansaço é o preço do corpo e da mente; Arcano é o preço do mundo.
 
-**Como ganha**: em Passos de Valor, gastando para Forçar magia, algumas Dificuldades de magia, reações de Dominum, talentos de Comportamento, alguns ataques de adversários.
+**Como ganha**: em Passos de Valor, gastando para Forçar magia, alguns Efeitos Colaterais de magia, reações de Dominum, talentos de Comportamento, alguns ataques de adversários.
 
 **Com o que gasta (marcando casas)**:
 - **Forçar** uma magia: marque até (Grau) casas, **+2 no total por casa**.
@@ -249,14 +264,14 @@ Limiares = base do Comportamento + nível + armadura.
 Ao marcar o último PV, escolha:
 
 - **Apagar**: você cai inconsciente e volta depois do Evento com 1 PV. Role 1d12; se tirar **até o seu nível**, ganha uma **Marca do Cataclisma** (risque 1 casa de Arcano máximo, e diga que marca ficou no seu corpo).
-- **Última Palavra**: conjure uma magia 1 Grau acima do seu máximo, sem pagar Arcano e sem rolar Dificuldades. Depois, seu personagem morre.
+- **Última Palavra**: conjure uma magia 1 Grau acima do seu máximo, sem pagar Arcano e sem Efeitos Colaterais. Depois, seu personagem morre.
 - **Jogar os dados**: role 2d12. **Crítico ou Par**: levanta com PV e Cansaço limpos. **Equilíbrio**: levanta com 1 PV e uma Marca do Cataclisma. **Ímpar**: morre.
 
 (Morbidyum tem regra própria, ver [[03 Valores]].)
 
 ## 12. Vivências
 
-Frases curtas do passado do personagem ("Cresci num porto", "Fui soldado do Rei-Semideus", "Sei mentir para guardas"). Começa com **2**, cada uma vale **+2** quando você gasta **1 Arcano** numa rolagem em que ela faz sentido. Ganha mais nos níveis 2, 5 e 8.
+Frases curtas do passado do personagem ("Cresci num porto", "Fui soldado do Rei-Semideus", "Sei mentir para guardas"). Começa com **2**; cada uma dá **Vantagem** quando você gasta **1 Arcano** numa rolagem em que ela faz sentido. Ganha mais nos níveis 2, 5 e 8.
 
 ## 13. Moldura
 

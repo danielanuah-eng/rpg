@@ -10,9 +10,9 @@
 
 **Dados**: cada **par** = +1 Arcano para você. Cada **ímpar** = +1 Cataclisma para o mestre. **Dois iguais = Crítico** (sucesso automático, +Arcano igual ao dado, máx. 6). **Maior dado ímpar** (jogada por Cataclisma) ou **falha** → o mestre emoldura.
 
-**Magia**: 1 palavra do seu Valor (núcleo) + até 1 palavra de Valor a mais (1 Arcano) + **uma** Palavra Básica de graça (verbo, modo ou forma). Na Moldura 1: **Grau 1** é grátis e acontece sem rolar (ou vira o meio de uma ação: dano 1d8+1); **Grau 2** custa **1 Arcano** e rola **2d12 + 2 (Sintonia) + 1 (Relação, se a palavra tem a ver com o personagem)** contra 12 (sem alvo ou em quem aceita; quem não quer resiste contra o seu total), ou contra a Esquiva/Dificuldade de quem precisa ser acertado. Dano de Grau 2: **1d10 + 2**. Dura até a próxima Falha.
+**Magia**: 1 palavra do seu Valor (núcleo) + até 1 palavra de Valor a mais (1 Arcano) + **uma** Palavra Básica de graça (verbo, modo ou forma). Na Moldura 1: **Grau 1** é grátis e acontece sem rolar (ou vira o meio de uma ação: dano 1d8+1); **Grau 2** custa **1 Arcano** e rola **2d12 + 2 (Sintonia) + 1 por palavra de Valor** (se você disser a relação: por que essas palavras, para esse personagem) contra 12 (sem alvo ou em quem aceita; quem não quer resiste contra o seu total), ou contra a Esquiva/Dificuldade de quem precisa ser acertado. Dano de Grau 2: **1d10 + 2**. Dura até a próxima Falha.
 
-**Ajudas**: no máximo duas por rolagem (Relação não conta). **Arcano** (começa 3, máx. 12): 1 = Vivência +2 · 1 = Ajudar (Vantagem, +1d6) · 1 = palavra extra · 3 = Hábito · 3 = Ação em Dupla · 3 = Detalhe · 3 = Forçar o Grau (Grau 3, 3d8, contra 14).
+**Bônus**: só atributo e **Vantagem (+1d6)**, até 2 por rolagem; Desvantagem tira uma. **Arcano** (começa 3, máx. 12): 1 = Vivência (Vantagem) · 1 = Ajudar (Vantagem) · 1 = palavra extra · 3 = Hábito · 3 = Ação em Dupla · 3 = Detalhe · 3 = Forçar o Grau (Grau 3, 3d8, contra 14).
 
 **Atalho ou Passo**: Atalho = o mestre ganha 2 (+3 numa rolagem, ou ignorar condição) ou 4 (falha vira sucesso). Passo de Valor = aceitar o desconforto (Desvantagem, ou 1–2 Cansaço, ou a consequência) → +1 Arcano, dê certo ou não. Dois Atalhos sem nenhum Passo apertam o Laço (ações fora do padrão dele ficam +2, uma relação estremece, a consequência cresce); o Passo solta.
 
@@ -131,7 +131,7 @@ Na briga, uma lamparina cai no feno. O ovo começa a rachar com o calor.
 
 - Apagar ou conter o fogo é Grau 3 (uma sala): só com **Forçar o Grau** (3 Arcano) ou **Magia em Dupla**.
 - **Dupla sugerida**: **Iara** (Sublimeyn, o Eixo) com qualquer um — *Vapor* ou *Solidificar* + a palavra do outro — efeito de Grau 3; quem conduz rola **3d8 + 2 + 1**, o parceiro soma **+2**, contra **14** (uns 89%). Custa 3 Arcano.
-- **Dupla de opostos**: **Tomé** (Conflitüo) e **Nhanda** (Persona) — o efeito sobe 2 Graus (Grau 4: apagar o celeiro inteiro de uma vez); quem conduz rola **4d6 + 2 + 1**, o parceiro soma **+2**, contra **16 + 2 = 18** (uns 66%); os dois marcam 2 Cansaço, e se sair Ímpar rolam uma Dificuldade a mais. Arriscado e bonito.
+- **Dupla de opostos**: **Tomé** (Conflitüo) e **Nhanda** (Persona) — o efeito sobe 2 Graus (Grau 4: apagar o celeiro inteiro de uma vez); quem conduz rola **4d6 + 2 + 1 (a palavra dele)**, o parceiro soma **+2**, contra **16 + 2 = 18** (uns 66%); os dois marcam 2 Cansaço, e se sair Ímpar rolam uma Dificuldade a mais. Arriscado e bonito.
 - **O ovo choca**: a wyvern nasce leal a quem estiver mais perto. Quem é? Vira uma linha na ficha (sem ficha própria).
 
 **Fim da sessão**: as três perguntas de fim de sessão, e cada jogador diz se algum Laço apertou.
@@ -208,4 +208,4 @@ Iara (7,1 +3 = 11 vs 12) erra o Cão 2                            ← falha: o m
 8. **A Magia em Dupla funciona bem na Moldura 1**: comum uns 89%, de opostos uns 66% (agora numa rolagem só, ver [[14 Teste das mecânicas]]). Na mesa, ver se o preço de 3 Arcano e o Cansaço dos opostos parecem justos pelo tamanho do efeito.
 9. **Duração**: 22 ações de jogador é uma luta de uns 40–50 minutos numa mesa que já conhece as regras. Dentro da meta.
 
-**Ainda não testado pelo script** (só a mesa responde): se verbo + modo é fácil de escolher; se a Relação +1 flui ou trava a conversa; se Atalho e Passo aparecem naturalmente; a Fusão; o Evento social.
+**Ainda não testado pelo script** (só a mesa responde): se verbo + modo é fácil de escolher; se a relação (as palavras somam) flui ou trava a conversa; se Atalho e Passo aparecem naturalmente; a Fusão; o Evento social.

@@ -116,7 +116,7 @@ Nada deste Comportamento funciona em combate.
 
 | | Básico | Superior |
 |---|---|---|
-| **Talento · Seguir em Frente** | Uma vez por Evento, quando você falha, a sua próxima rolagem tem **+2**: a falha não te derruba. PNJs neutros tendem a confiar em você: à primeira vista, ninguém te vê como ameaça. | Quando você dá um **Passo de Valor**, um aliado que te vê **limpa 1 Cansaço**: esperança pega. |
+| **Talento · Seguir em Frente** | Uma vez por Evento, quando você falha, a sua próxima rolagem tem **Vantagem**: a falha não te derruba. PNJs neutros tendem a confiar em você: à primeira vista, ninguém te vê como ameaça. | Quando você dá um **Passo de Valor**, um aliado que te vê **limpa 1 Cansaço**: esperança pega. |
 | **Hábito · Acreditar** | **Uma vez por sessão**: diga em voz alta no que você acredita nesta cena. Até o fim do Evento, **uma vez**, você ou um aliado transforma uma jogada **por Cataclisma** em **por Arcano**: o resultado fica igual, mas o mestre não pega a moldura. | Duas vezes por sessão. |
 
 ---

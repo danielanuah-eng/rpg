@@ -1,7 +1,7 @@
 """Simula a economia de Arcano de um jogador ao longo de uma sessão.
 
 Uma sessão = 3 Eventos × 8 rolagens. O jogador gasta de um jeito razoável:
-Vivência (+2) quando ajuda e dá, palavra extra em metade das magias,
+Vivência (Vantagem, +1d6) quando ajuda e dá, palavra extra em metade das magias,
 Hábito uma vez por Evento, ajudar um aliado de vez em quando, Forçar o Grau
 uma vez por sessão. Compara regras de ganho e de custo.
 Roda: python3 simular_economia.py
@@ -50,7 +50,7 @@ def sessao(ganho_fn, custo_viv=1, custo_palavra=1, custo_habito=3, so_falha_ou_p
                 arcano -= custo_habito; st_["gasto"] += custo_habito; st_["habitos"] += 1; usou_habito = True
             viv = 0
             if R.random() < 0.6 and arcano - custo_viv >= reserva:
-                arcano -= custo_viv; st_["gasto"] += custo_viv; st_["viv"] += 1; viv = 2
+                arcano -= custo_viv; st_["gasto"] += custo_viv; st_["viv"] += 1; viv = R.randint(1, 6)  # Vivência = Vantagem
             if R.random() < 0.15 and arcano - 1 >= reserva + 1:  # ajudar alguém
                 arcano -= 1; st_["gasto"] += 1
             a, b = R.randint(1, 12), R.randint(1, 12)

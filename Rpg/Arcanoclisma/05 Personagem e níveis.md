@@ -31,7 +31,7 @@ Anote cada relação na ficha dos dois personagens (no app, aparece nas duas fic
 4. **Vínculo** — responda às perguntas abaixo.
 5. **Canal** — como você exerce a magia: foco arcano, arma, Transcrito, corpo, voz, familiar ou marca ([[02 Magia]]).
 6. **Atributos** — distribua **+2, +1, +1, 0, 0, −1**.
-7. **Vivências** — escreva **2** frases do passado do personagem. Cada uma vale +2 (gastando 1 Arcano).
+7. **Vivências** — escreva **2** frases do passado do personagem. Cada uma dá Vantagem (gastando 1 Arcano).
 8. **Equipamento** — uma arma, uma armadura permitida, o objeto do Canal, um kit, **50 Ordynus** ([[06 Itens e dinheiro]]).
 9. **Números finais** — 3 Laços escritos, Arcano 3, Cansaço 6, PV do Comportamento, Proteção da armadura, Limiares = base + 1 + armadura, Sintonia +2 (mais o +1 de Relação quando a magia tem a ver com o personagem).
 
@@ -91,7 +91,7 @@ Este bloco não dá bônus nem é cobrado pelo mestre. Serve para a mesa conhece
 | +1 PV | máx. 12 |
 | +1 Cansaço | máx. 12 |
 | +1 Esquiva | uma vez por Moldura |
-| +1 em duas Vivências | — |
+| Uma Vivência nova | — |
 | **Palavra Estrangeira**: escreva num dos 4 espaços extras da sua ficha uma palavra de outro Valor | máx. 4 |
 | **Melhorar um talento seu** (Básico → Superior) | Moldura 2+ (do seu Comportamento), 3+ (de outro) |
 | **Talento avulso** de outro Comportamento, versão Básica | Moldura 2+ |
@@ -123,7 +123,7 @@ Uma para cada um dos 9 Valores: **o desenho muda inteiro** conforme o Valor (cor
 - **4 espaços extras** para Palavras Estrangeiras, preenchidos ao longo dos níveis.
 - **Canal** (foco, arma, Transcrito...) com o benefício e a fraqueza, e a Sintonia.
 - **Tabela de Graus** resumida: dados, custo, Dificuldade, dano, alvos, alcance, marcador de duração.
-- Lembretes da magia: leitura dos dados (Crítico, Magia Ímpar, Desequilíbrio), Forçar, Ampliar.
+- Lembretes da magia: leitura dos dados (Crítico, Efeitos Colaterais, Desequilíbrio), Forçar, Ampliar.
 - **Magias que eu gosto de usar**: linhas para anotar combinações de palavras e a relação do personagem com cada uma.
 
 Familiares, wyverns e montarias **não têm ficha**: são uma linha na Ficha 1, com nome e 1–2 traços.

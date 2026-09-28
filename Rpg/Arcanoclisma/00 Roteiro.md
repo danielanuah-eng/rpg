@@ -25,7 +25,7 @@ Objetivo: o jogo **funciona e é gostoso de jogar** antes de ter lore bonita. Na
 |---|---|---|---|
 | 1.1 | Rolagem base, paridade, Arcano/Cataclisma | [[01 Regras centrais]] | 🟡 |
 | 1.2 | Holofote (combate sem turno), alcances, dano, PV, Cansaço, morte | [[01 Regras centrais]] | 🟡 |
-| 1.3 | Magia: Graus, dados, custo, Dificuldades (d20), Crítico/Desequilíbrio | [[02 Magia]] | 🟡 |
+| 1.3 | Magia: Graus, dados, custo, Efeitos Colaterais (d20), Crítico/Desequilíbrio | [[02 Magia]] | 🟡 |
 | 1.4 | Magia em Dupla, Valores opostos, Canal | [[02 Magia]] | 🟡 |
 | 1.5 | Os 9 Valores: 36 palavras, Skill, Drawback, Ressonâncias | [[03 Valores]] | 🟡 |
 | 1.6 | Palavras Básicas (36, para todo mundo) | [[02 Magia]] | 🟡 |

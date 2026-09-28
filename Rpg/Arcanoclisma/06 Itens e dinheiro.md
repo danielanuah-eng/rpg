@@ -27,7 +27,7 @@ Dano = **dado da arma × Proficiência + bônus**. A cada Moldura acima do 1, a 
 | Arma | Atributo | Alcance | Dano (P1) | Mãos | Traço | Preço |
 |---|---|---|---|---|---|---|
 | Adaga | Agilidade | Toque | d8+1 | 1 | Arremessável (Perto) | 10 o |
-| Espada curta | Agilidade | Toque | d8+2 | 1 | Precisa (+1 no ataque) | 20 o |
+| Espada curta | Agilidade | Toque | d8+2 | 1 | Precisa | 20 o |
 | Espada longa | Força | Toque | d10+3 | 2 | — | 35 o |
 | Machado | Força | Toque | d10+2 | 1 | Cruel (dano Grave: +1 PV) | 30 o |
 | Martelo de guerra | Força | Toque | d12+3 | 2 | Pesada (−1 Esquiva), Atordoante | 40 o |
@@ -46,7 +46,7 @@ Dano = **dado da arma × Proficiência + bônus**. A cada Moldura acima do 1, a 
 
 Dano de arma se rola **como no Daggerheart**: dado × Proficiência + bônus.
 
-**Traços**: *Arremessável* (ataca à distância indicada); *Precisa* (+1 no ataque); *Cruel* (dano Grave marca +1 PV); *Pesada* (−1 Esquiva); *Atordoante* (abala grandes defesas: dano Maior ou Grave deixa o alvo com **−2 nos Limiares** até o mestre emoldurar; contra jogadores, o alvo perde 1 casa de Proteção); *Alcance* (ataca até Perto); *Desarmar* e *Puxar* (no lugar do dano); *Recarga* (depois de atacar, role 1d6: no 1, a próxima ação é recarregar); *Barulhenta* (todo mundo por perto ouve); *Serve de foco arcano*.
+**Traços**: *Arremessável* (ataca à distância indicada); *Precisa* (Vantagem para atacar quem não te viu ou está distraído); *Cruel* (dano Grave marca +1 PV); *Pesada* (−1 Esquiva); *Atordoante* (abala grandes defesas: dano Maior ou Grave deixa o alvo com **−2 nos Limiares** até o mestre emoldurar; contra jogadores, o alvo perde 1 casa de Proteção); *Alcance* (ataca até Perto); *Desarmar* e *Puxar* (no lugar do dano); *Recarga* (depois de atacar, role 1d6: no 1, a próxima ação é recarregar); *Barulhenta* (todo mundo por perto ouve); *Serve de foco arcano*.
 
 Comparação com magia (dano médio por golpe, na força máxima de cada Moldura):
 
@@ -100,7 +100,7 @@ Itens mágicos servem para **tudo**, não só para quem conjura: ajudam em teste
 |---|---|---|
 | **De Palavra** | carrega uma palavra de qualquer Valor; enquanto está com você, a palavra é sua (nunca como núcleo, a não ser que seja do seu Valor) e não conta no limite de Estrangeiras | 1 palavra, às vezes com cargas → 1 palavra sem cargas |
 | **De Ofício** | ajuda em mecânica básica: um atributo, um tipo de teste, Esquiva, Limiares, Proteção, PV ou Cansaço | Vantagem numa situação estreita → +1 num atributo |
-| **De Estabilidade** | mexe nas **Dificuldades** da magia: Dificuldade do Grau menor, uma Dificuldade (d20) a menos, Suavizar de graça, +1 no d20 da tabela | −1 na Dificuldade do Grau → uma Dificuldade a menos em toda magia |
+| **De Estabilidade** | mexe na **Dificuldade** e nos **Efeitos Colaterais** da magia: Dificuldade do Grau menor, um Efeito Colateral a menos, Suavizar de graça, +1 no d20 da tabela | −1 na Dificuldade do Grau → um Efeito Colateral a menos em toda magia |
 | **De Valor** | só funciona para um Valor: melhora a Skill, alivia o Drawback, ou dá a um não-Comprometido daquele Valor um pedaço da Skill | alívio pequeno → Skill melhorada |
 | **De Grau** | ajuda a magia a crescer: Ampliação de graça, +1 no dano de magia, +1 de Sintonia numa condição | 1 Ampliação por Evento → +1 de Sintonia |
 
@@ -117,13 +117,13 @@ Algumas têm **cargas** (recuperam no Pouso). Regra geral de equilíbrio: um ite
 | Anel de Areia Parada | Palavra (Eternyr) | 3 | palavra **Parar**, 2 cargas | 900 o |
 | Botas de Salto do Gato | Ofício | 1 | Vantagem para saltar e cair em pé | 80 o |
 | Luvas de Veludo Preto | Ofício | 1 | Vantagem para abrir fechaduras | 80 o |
-| Broche do Anfitrião | Ofício | 2 | +1 em Carisma com quem já comeu com você | 300 o |
+| Broche do Anfitrião | Ofício | 2 | Vantagem em Carisma com quem já comeu com você | 300 o |
 | Colete de Pele de Pedra | Ofício | 2 | +1 nos dois Limiares | 350 o |
 | Olho de Vidro do Vigia | Ofício | 3 | +1 em Percepção | 1.200 o |
 | Fita do Equilíbrio | Estabilidade | 1 | uma vez por sessão, Suavizar de graça | 100 o |
 | Sino de Contenção | Estabilidade | 2 | −1 na Dificuldade do Grau das suas magias | 400 o |
-| Pedra-Par | Estabilidade | 3 | suas magias Ímpares rolam uma Dificuldade a menos | 1.400 o |
-| Âncora de Sal | Estabilidade | 4 | +3 no d20 da tabela de Dificuldades | 3.000 o |
+| Pedra-Par | Estabilidade | 3 | suas magias por Cataclisma rolam um Efeito Colateral a menos | 1.400 o |
+| Âncora de Sal | Estabilidade | 4 | +3 no d20 da tabela de Efeitos Colaterais | 3.000 o |
 | Bainha Vermelha | Valor (Conflitüo) | 2 | fora de combate, suas magias podem ter 3 palavras em vez de 2 | 300 o |
 | Ampulheta Rachada | Valor (Eternyr) | 2 | o Peso do Tempo cai para +1 | 450 o |
 | Máscara do Palhaço Triste | Valor (Persona) | 2 | quando o Tropeço acontece, o resultado sai inútil, nunca atrapalha | 300 o |

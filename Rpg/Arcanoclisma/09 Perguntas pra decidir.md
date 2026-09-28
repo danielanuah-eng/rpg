@@ -360,7 +360,7 @@ Sua resposta:
 ## Rodada 17 — Menos bônus, palavras que valem
 
 **P-118** 🔴 **Só dois tipos de bônus nos testes**: o **atributo** (número fixo; itens e magias que dão +1 mexem no atributo) e **Vantagem** (+1d6). Tudo que ajuda vira Vantagem: Vivência (1 Arcano), Ajudar (1 Arcano), talentos, itens de situação, terreno, *Seguir em Frente*. **Até 2 Vantagens por rolagem** (substitui o "duas ajudas"); cada Desvantagem tira uma. Somem os +2 e +1 soltos (a Vivência deixa de ser +2; a arma *Precisa* vira Vantagem contra quem não te viu). Fica de fora só o **Atalho menor (+3)**, que é o preço do Laço e não uma ajuda.
-Sua resposta:
+Sua resposta: ✅ aceito. Aplicado em [[01 Regras centrais]], talentos, Vivências, armas, itens e kit.
 
 **P-119** 🔴 **Dificuldades padrão pela conta.** O atributo que o jogador costuma usar é ~igual à Moldura (+1, +2, +3, +4). A escada foi feita para esse jogador **sem Vantagem**: Fácil ~88%, Médio ~68%, Difícil ~46%, Muito difícil ~19%, Lendário ~5% (com 2 Vantagens, ~45%).
 
@@ -373,7 +373,7 @@ Sua resposta:
 | Lendário | 23 | 24 | 25 | 26 |
 
 Use a coluna da **Moldura do desafio** (não do grupo): uma porta comum é M1 para sempre, a porta do cofre de um semideus é M4. O Médio de cada coluna é igual à Dificuldade dos adversários da mesma Moldura (12/13/14/15), então é uma régua só.
-Sua resposta:
+Sua resposta: ✅ a escada vale como padrão, mas **a Dificuldade dos adversários varia** por Valores, história e corpo, e pode ficar até **abaixo** da régua. E o adversário resiste e desvia melhor conforme a Moldura dele. Aplicado em [[01 Regras centrais]] e [[10 Adversários - como criar]].
 
 **P-120** 🔴 **Palavras somam.** Cada palavra de Valor na magia soma **+1 no total**. A Relação deixa de ser um +1 à parte: ela é a condição (diga em uma frase por que aquelas palavras, para esse personagem, fazem isso; sem isso, as palavras entram no efeito mas não somam). Com 1 palavra dá o mesmo +1 de hoje, então as Dificuldades do Grau não mudam. Magia não recebe Vantagem paga (Vivência, Ajudar): o bônus dela vem das palavras e da Dupla. Desvantagem vale igual.
 Mais palavras = mais caro (1 Arcano cada), mais fácil, e mais caótico (mais Dificuldades se sair Ímpar).
@@ -386,5 +386,5 @@ Mais palavras = mais caro (1 Arcano cada), mais fácil, e mais caótico (mais Di
 | 4 | 1 · 2 · 3 · 4 · 5 | 82% · 90% · 95% · 98% · 99% | 64% · 73% · 80% · 86% · 90% |
 
 Onde a palavra mais pesa é na magia **resistida**: o total maior é mais difícil de escapar.
-Sua resposta:
+Sua resposta: ✅ mais palavras = efeito mais específico, mais fácil de funcionar, com **mais Cataclisma em alguns tiers** (a partir da 3ª palavra, +1 Cataclisma cada, ou seja, da Moldura 2 em diante). O que se acopla ao risco é o **tamanho do efeito**: a tabela de d20 virou **Efeitos Colaterais** (para não confundir com Dificuldade) e a quantidade vem do **Grau** (G1–2: 0 · G3–4: 1 · G5: 2 · opostos +1). Adversário resiste com **d20 + Ataque** (o mestre sempre rola d20), o que mudou a tabela: resistida no Grau máximo, M1 62%/68%, M4 69% a 94%. Aplicado em [[02 Magia]].
 
