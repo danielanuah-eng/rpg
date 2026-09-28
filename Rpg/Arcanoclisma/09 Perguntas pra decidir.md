@@ -478,3 +478,15 @@ Sua resposta: ✅ aplicada, com *Cuidar* → **Proteger**, *Notar* → **Observa
 
 ✅ **Kit de campanha**: [[21 Kit de campanha]] com "campanha em 15 minutos", 11 lugares (OulVeil, Vau-Grande, Confluência e GrandGaleonis, Cidade-Muralha, Porto de Vidro, Cidade Insone, Vila do Mesmo Dia, boca da Voragem, Sarn-das-Escadas, Brejo-Alto, Querela), o que as entidades querem (d8) e personalidades novas para deuses, 8 sementes de Artefato, 20 ganchos e 6 arcos.
 
+## Rodada 22 — Lugares
+
+✅ **Tom e Era**: do mestre (tirei o passo do kit).
+
+✅ **Lugares com padrão**: cada um é uma **dualidade** e tem um **sentimento**; nem sempre há endereço exato. Do jogador: **Permal** (tudo passa, mas nem sempre), **TinThrohr** (completude e troca), **o Postulário** (o Antigo Bibliotecário: *"Nunca seja cruel, nunca seja covarde, e o amor é sempre sábio"*), **AlvoMarfim** (o Imperador e Deódoris; esperança), **Profulgar** (o Bar da Mafrisa; resiliência, e luxúria, ambição, crueldade, deturpação), **Nostrum** (o Ministrum; ordem, restrição), **Fhim** (a Dama da Noite; paciência, fé). OulVeil refeita (casas e estalagens de madeira em palafitas sobre o mar, pontes e cordas). Os lugares antigos ganharam sentimento. **Novos meus**: Cinzarel, o Mar Quieto de Ulen, as Pontes de Sethra, Orrun (o Planalto dos Espelhos). Em [[21 Kit de campanha]].
+
+✅ **Confluência**: Professora **Ciantia** (arquimaga de todos os Valores, Conselho Vestryel, manifesta dragões criados por ela); criaturas pacíficas, a Mata do Véspero, mitos (Ceifador do Capim Alto, Menina do Poço Seco, Sem-Sombra) e monstros (Garramorta, Faminto de Vésperas).
+
+✅ **Cataclisma de Khairvhaan**: incidente mágico, experimento usado numa guerra pelo mago **Khairvhaan**, que misteriosamente resolveu (d4 de versões). Grafia diferente do Primordial **Kairvahnn** para não confundir.
+
+✅ **Bestiário: +7** (Imperador de AlvoMarfim, Mafrisa, Professora Ciantia, o Antigo Bibliotecário, Autômato do Postulário, o Ministrum, a Dama da Noite de Fhim): **287**.
+

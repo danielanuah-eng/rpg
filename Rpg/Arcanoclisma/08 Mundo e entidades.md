@@ -245,6 +245,21 @@ Os humanos também adquiriram o domínio do Arcano e a percepção dos Valores *
 - **Protetores do Arcano**: são **as duas coisas**. Há uma **ordem** de gente (Comprometidos e gente comum que juraram conter a magia desmedida) e há uma **espécie**, criaturas que surgem onde o Arcano fecha com força, como anticorpos do mundo. Os dois lados se reconhecem e às vezes trabalham juntos. Onde há magia demais, aparecem e fecham: selam palavras, anulam magia grande, levam gente embora.
 - **Disruptos**: nascem onde o Cataclisma se acumula, feitos das sobras de magia. São mudança sem forma fixa.
 
+## Acontecimentos antigos (versões)
+
+**O Cataclisma de Khairvhaan.** Um grande **incidente mágico**: um experimento de magia usado numa **guerra** por um mago chamado **Khairvhaan**. O que exatamente ele fez, ninguém concorda. O que todos contam é que foi ele mesmo, **misteriosamente, quem conseguiu resolver**. *(Não confundir com Kairvahnn, o Primordial de Dominum; há quem diga que o mago tirou o nome do Leão, e há quem diga o contrário.)*
+
+| d4 | Como ele resolveu, dizem |
+|---|---|
+| 1 | disse uma palavra que ninguém mais conseguiu repetir, e o experimento parou |
+| 2 | trocou de lugar com a própria magia, e desde então ninguém sabe se o Khairvhaan que voltou era ele |
+| 3 | pediu ajuda ao inimigo, e os dois exércitos fecharam a Ferida juntos |
+| 4 | não resolveu: escondeu. E o esconderijo está enfraquecendo |
+
+**O Conselho Vestryel.** Os magos mais poderosos e notórios do mundo se reúnem **uma vez por ano** para ajudar e discutir problemas e questões do mundo. Reuniões fora de época **não são bom sinal**. Ninguém sabe quantos membros há; sabe-se de alguns, como a **Professora Ciantia**, de GrandGaleonis.
+
+**Mais lugares**: Permal, TinThrohr, o Postulário, AlvoMarfim, Profulgar, Nostrum, Fhim e outros estão em [[21 Kit de campanha]], cada um com a sua dualidade e o seu sentimento.
+
 ## Eras jogáveis
 
 | Era | Como é | Ajuste de regra |

@@ -1,6 +1,6 @@
 # 11 — Bestiário: gente, bichos e seres do mundo
 
-> **280 personagens** no formato de palavras ([[10 Adversários - como criar]]). **Não há uma parte de inimigos e outra de aliados**: qualquer um aqui pode ser ameaça, aliado, cliente, vítima ou só alguém no caminho. O campo **Quer** diz para onde ele pende; a mesa decide o resto. Os números vêm da **régua** (Moldura + Papel); aqui fica só o que muda. O gerador monta a ficha completa, com imagem.
+> **287 personagens** no formato de palavras ([[10 Adversários - como criar]]). **Não há uma parte de inimigos e outra de aliados**: qualquer um aqui pode ser ameaça, aliado, cliente, vítima ou só alguém no caminho. O campo **Quer** diz para onde ele pende; a mesa decide o resto. Os números vêm da **régua** (Moldura + Papel); aqui fica só o que muda. O gerador monta a ficha completa, com imagem.
 
 **Como ler**
 
@@ -333,6 +333,14 @@ Básicas: fortes Observar, Intuir · fraco Aguentar · Valor: Sonho, Vigiar, Lú
 Ser: Domador, Correio · Agir: Assobiar · Mandar (livre: a wyvern leva uma mensagem até o Horizonte) · Parecer: Leal · Quer: que ninguém machuque os bichos dele.
 Básicas: fortes Montar, Chamar · fraco Mentir · Valor: Domesticar, Fera, Manso
 
+**O Imperador de AlvoMarfim** — M3 · Líder · — (não tem Valor)
+Ser: Imperador, Humano · Agir: Espada · Chamar os Reinos (livre: ativa dois aliados) · Deódoris (se estiver com ela: a espada eterna de valor o aceita; os ataques dele ignoram Resiliente e Inquebrável · Ev) · Parecer: Leal, Duro · Quer: a humanidade indo além dos próprios limites e expectativas. Escolhido em eras, nunca por herança. *Jeito*: corajoso, destemido, fala com o rei e com o mendigo no mesmo tom.
+Básicas: fortes Chamar, Firmar, Proteger · fraco Mentir
+
+**Mafrisa, do Bar da Mafrisa** — M3 · Suporte · — (fada)
+Ser: Fada, Dona de Bar · Agir: Puxar a Orelha (livre · Toque · 1 · Firmar · Distraído, e para de fazer besteira · Inst) · Dar Emprego (livre: um PNJ perdido ganha um lugar e passa a ajudar) · Botar pra Fora (1C · Perto · Grupo · Levantar · arremessados porta afora · Inst) · Parecer: Duro, Leal · Quer: que ninguém da rua passe fome no bar dela; reclama de tudo e cuida de todos. *Jeito*: corpulenta, sábia, forte; não pergunta o passado de ninguém, só se vai trabalhar direito.
+Básicas: fortes Intuir, Proteger, Ameaçar · fraco Mentir
+
 ## Comprometidos
 
 **Aprendiz Descontrolado** — M1 · Conjurador · Sublimeyn
@@ -514,6 +522,14 @@ Básicas: fortes Intuir, Chamar, Sobreviver · fraco Mentir · Valor: Invocar, E
 **Menina-Raposa** — M1 · Ágil · Primitivum
 Ser: Menina, Raposa · Agir: Morder · Rastejar (livre · si · some no mato até Médio) · Parecer: Minúsculo, Covarde · Quer: que a deixem em paz; guia quem dá mel.
 Básicas: fortes Esconder, Fugir, Rastrear · fraco Firmar · Valor: Camuflado, Rastejar, Ágil
+
+**Professora Ciantia** — M4 · Chefe · todos os Valores · Quimerarcano, Resiliente
+Ser: Arquimaga, Professora, Conselheira do Vestryel · Agir: Raio (Longe) · Manifestar Dragão (4C: um Dragão Jovem de qualquer Valor, criado por ela, luta ao lado dela pelo Evento) · Trocar de Valor (livre: muda o Valor ativo, e com ele a fraqueza) · Desfazer (reação, Cataclisma igual ao Grau: anula uma magia Perto) · Parecer: Antigo, Brilhante · Quer: que GrandGaleonis forme gente capaz de não precisar dela. Faz parte do **Conselho Vestryel**, que só reúne os magos mais poderosos do mundo uma vez por ano (reuniões seguidas são mau sinal). *Jeito*: calma, exigente, fala pouco; quando manifesta um dragão, conversa com ele como com um aluno.
+Básicas: fortes Estudar, Firmar, Chamar · fraco Movimentar · Valor: todas as palavras de todos os Valores
+
+**O Antigo Bibliotecário** — M4 · Social · Cognitium · Inquebrável
+Ser: Bibliotecário, Homem que Pensou · Agir: Achar (livre: acha o livro de que alguém precisa, se receber um conhecimento de bom grado) · Esquecer Onde Pôs (livre: sabe que tem, não sabe onde) · Ratinhos (livre: os ratinhos organizam, buscam, avisam) · Parecer: Antigo, Estranho (sempre parece confuso, e é) · Quer: que ninguém saia do Postulário mais cruel do que entrou. Leva pela vida uma frase: *"Nunca seja cruel, nunca seja covarde, e o amor é sempre sábio."* *Jeito*: barbudo, careca, cabelos descabelados dos lados, óculos, macacão marrom; adora admitir que não sabe.
+Básicas: fortes Estudar, Intuir, Procurar · fraco Movimentar · Valor: Lembrar, Ideia, Memória, Palavra, Verdadeiro
 
 ## Povos infundidos
 
@@ -1056,6 +1072,18 @@ Básicas: fortes Rastrear, Movimentar · fraco Negociar
 **Bicho-Antes-dos-Bichos** (Floresta Primeira) — M4 · Chefe · Primitivum · Deidade
 Ser: Fera, Origem · Agir: Morder · Mudar (livre: vira outro bicho a cada ativação, com a passiva dele) · Primeiro Uivo (4C · Horizonte · Área · Firmar · todo mundo vira bicho por um Instante · Inst) · Parecer: Enorme, Antigo · Quer: ver se os bichos de agora ainda lembram dele. *Jeito*: curioso, não cruel; luta como quem brinca, e para se alguém o imitar bem.
 Básicas: fortes Movimentar, Aguentar, Intuir · fraco Negociar · Valor: Transformar, Instinto, Primal, Ancestral
+
+**Autômato do Postulário** (O Postulário) — M4 · Bruto · — · Anulador, Inquebrável
+Ser: Autômato, Guardião · Agir: Esmagar · Fechar a Estante (2C · Médio · Área · ninguém tira um livro sem dar algo em troca · Ev) · Parecer: Enorme, Paciente · Quer: que nenhum mal aconteça ao Postulário; ignora quem vem de bom grado.
+Básicas: fortes Proteger, Observar, Aguentar · fraco Convencer
+
+**O Ministrum** (Nostrum) — M4 · Líder · Dominum + Cognitium · Inquebrável
+Ser: Juiz, Lógica · Agir: Sentenciar (livre · Médio · 1 · Firmar · Preso até a próxima sessão do tribunal · Pagar) · Pesar (livre: diz a pena exata e proporcional de qualquer ato) · Ordem no Tribunal (2C · Área · ninguém conjura sem registro · Ev) · Parecer: Antigo, Duro · Quer: ordem e proporção. Não entende sentimentos por si; nem sempre as decisões dele são adequadas, e ele não sabe disso. *Jeito*: pergunta os fatos, nunca os motivos; se alguém explicar um sentimento com lógica, ele escuta.
+Básicas: fortes Pensar, Reconhecer, Firmar · fraco Intuir · Valor: Ordem, Algemar, Lógico, Verdadeiro
+
+**A Dama da Noite de Fhim** (Fhim) — M4 · Social · Alvorum · Deidade
+Ser: Divindade, Noite · Agir: Observar (livre: sabe o que você procura) · Rir (livre: ninguém sabe do quê) · Encarar em Silêncio (livre · Perto · 1 · Firmar · o alvo diz em voz alta uma verdade que evitava · Inst) · Parecer: Belo, Etéreo · Quer: ninguém sabe. Feita de escuro e estrelas, com a capa da noite. *Jeito*: não fala; às vezes aponta, às vezes some, e deixa a estátua de anel mostrar o caminho.
+Básicas: fortes Observar, Intuir, Esconder · fraco Levantar · Valor: Estrela, Noturno, Vislumbrar, Sombra, Celeste
 
 ## Semideuses
 
