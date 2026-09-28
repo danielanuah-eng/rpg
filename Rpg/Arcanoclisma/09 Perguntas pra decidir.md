@@ -398,3 +398,7 @@ Sua resposta: ✅ mais palavras = efeito mais específico, mais fácil de funcio
 
 ✅ **Teste mágico: só o alvo rola** (menos rolagens por ação). O alvo rola contra a **Dificuldade da magia = 12 + Sintonia + palavras**. Adversário da mesma Moldura é pego em (12 + palavras)/20: 65% com 1 palavra, +5% por palavra. 1 natural do alvo = Crítico de quem conjurou; 20 natural = sempre escapa. Adversários iguais rolam um d20 só. Se o alvo passa, conta como falha por Cataclisma (mestre emoldura; Grau 3+ rola Efeitos Colaterais). **Passar ou não se interpreta na ficção** (escapar inteiro, pela metade, ou de um jeito que muda a cena). Aplicado em [[02 Magia]].
 
+✅ **Teste mágico gera economia pelo d20 do alvo**: par = +1 Arcano para quem conjurou (por Arcano); ímpar = +1 Cataclisma (por Cataclisma: mestre emoldura, Grau 3+ rola Efeitos Colaterais). 1 natural = Crítico de quem conjurou.
+
+✅ **Cada ser é um ser**: lacaios e qualquer personagem diferente rolam o próprio teste. **Bando ou grupo** conta como um alvo e rola uma vez; se falhar, perde 1 / 2 / 3 membros (falhou por 1–4 / 5–9 / 10+). Substitui "lacaios não rolam" e "adversários iguais rolam um d20 só".
+

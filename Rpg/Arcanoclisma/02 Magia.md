@@ -66,17 +66,22 @@ Você paga a magia e descreve o efeito; **quem rola é o alvo**. Uma rolagem por
 **O teste do alvo** é físico ou não conforme a descrição, o efeito e o atributo que combina; o mestre escolhe pela magia e pela situação: medo e encanto pedem *firme* (Sabedoria); rede e prisão, *forte* (Força); chão que escorrega e rajada, *ágil* (Agilidade); ilusão, *atento* (Percepção).
 
 - **PJ** rola 2d12 + o atributo (é reação: não gera Arcano nem Cataclisma).
-- **Adversário** rola **d20 + o Ataque** dele. Uma palavra dele que combina com resistir (*Destemido* contra medo) dá Vantagem; uma que o deixa exposto (*Covarde*) dá Desvantagem. **Adversários iguais rolam um d20 só.**
-- **Lacaios não rolam**: o efeito pega. (Caem 1 / 2 / 3, como no dano.)
+- **Adversário** rola **d20 + o Ataque** dele. Uma palavra dele que combina com resistir (*Destemido* contra medo) dá Vantagem; uma que o deixa exposto (*Covarde*) dá Desvantagem.
+- **Cada ser é um ser.** Cada personagem diferente (adversário, lacaio, PNJ) rola o próprio teste.
+- **Bando ou grupo** (lacaios, uma matilha, uma multidão) conta como **um alvo** e rola **uma vez**. Se não passar, o efeito **reduz o grupo** pelo tamanho da derrota: falhou por **1–4**, 1 membro é pego; por **5–9**, 2; por **10 ou mais**, 3 (como o dano 1 / 2 / 3).
 - **Forçar** ainda vale: depois de ver o dado do alvo, marque Cansaço e some +2 por casa na Dificuldade da magia.
 
 **Passar ou não se lê na ficção.** O número diz quem levou a melhor; **como** isso aparece, o mestre e a mesa interpretam pela descrição. Quem passa pode escapar inteiro, escapar pela metade (sente o medo por um instante e segue), ou resistir de um jeito que muda a cena (o encanto não pega, mas ele percebe que alguém tentou). Quem não passa leva o efeito do jeito que foi descrito, no tamanho do Grau.
 
-**Quando o alvo passa**, a magia conta como **falha por Cataclisma**: o mestre emoldura e, no Grau 3+, você rola os Efeitos Colaterais.
+**O d20 do alvo gera a economia da magia**, como se fosse o seu dado:
+- **Par**: +1 Arcano para você, e a jogada é **por Arcano**.
+- **Ímpar**: +1 Cataclisma para o mestre, e a jogada é **por Cataclisma**: o mestre emoldura e, no Grau 3+, você rola os Efeitos Colaterais.
+- **Se o alvo passa**, é uma falha sua: o mestre emoldura de qualquer jeito (o Arcano ou Cataclisma do dado vale igual).
+- Se o alvo é um **jogador** (a magia é de um adversário), o 2d12 dele é reação e não gera nada.
 
-**Crítico no Teste mágico** vem do dado do alvo:
-- **Falha crítica do alvo** (1 no d20; 1 e 1 no 2d12) = **Crítico seu**: o efeito pega e você escolhe um efeito de crítico.
-- **Crítico do alvo** (20 no d20; dados iguais no 2d12) = ele **sempre escapa**, seja qual for a Dificuldade.
+**Crítico no Teste mágico** também vem do dado do alvo:
+- **1 natural** = **Crítico seu**: o efeito pega, você escolhe um efeito de crítico e ganha 1 Arcano (no lugar do Cataclisma); o mestre não emoldura.
+- **20 natural** = o alvo **sempre escapa**, seja qual for a Dificuldade.
 
 Chance de o efeito pegar num adversário **da mesma Moldura**: **(12 + palavras) em 20**, em qualquer Moldura, porque a Sintonia e o Ataque sobem juntos.
 
