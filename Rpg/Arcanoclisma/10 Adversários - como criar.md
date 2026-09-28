@@ -13,7 +13,7 @@ PARECER: 1–3 adjetivos           como ele é (cada um é uma passiva)
 QUER:    uma frase               o que ele quer, e quando foge
 JEITO:   (Chefes) personalidade e modo de agir, em 2–3 frases
 LAÇO:    (opcional) uma palavra  o que o prende ou o conecta (narrativo)
-BÁSICAS: tudo = Ataque · 2–3 verbos fortes (+2) · 1 fraco (−2)   ← a tabela de Interações dele
+BÁSICAS: tudo = Ataque · 2–3 verbos fortes (+2) · 1 fraco (−2)   ← a tabela de Palavras Básicas dele
 VALOR:   palavras de Valor, se ele conjura (um humano comum não tem)
 ```
 
@@ -42,7 +42,7 @@ VALOR:   Morbidyum: Assombrar, Cinzas, Pálido
 
 A **Dificuldade** é o número que os jogadores tiram para acertar o adversário (arma ou magia) e para resistir ao que ele faz. Um golpe médio de jogador na Moldura certa marca 2 PV; um golpe médio do adversário marca 1–2 PV num jogador de armadura Média. A régua sobe devagar (Dificuldade +1 e ataque +1 por Moldura) porque os personagens também sobem devagar (atributo e Esquiva +1 por Moldura); conferido em [[15 Teste de escala e criatividade]].
 
-**Cada adversário tem a sua tabela de Interações**, do jeito curto: **um número para tudo** (o Ataque) e, pelas palavras dele (*Ser*, *Parecer*), **2 ou 3 verbos fortes (+2)** e **1 fraco (−2)**. Ele rola **d20 + o número** do verbo. Quando um jogador age **contra um verbo forte** dele (se esconder de quem Observa bem), a Dificuldade sobe **+2**; contra um fraco, cai **−2**. Se ele usa magia, tem também **palavras de Valor**; um humano comum não tem. PNJ importante pode ter a tabela inteira, com atributos, como um jogador. Todos os 280 do [[11 Bestiário]] já têm a linha **Básicas**.
+**Cada adversário tem a sua tabela de Palavras Básicas**, do jeito curto: **um número para tudo** (o Ataque) e, pelas palavras dele (*Ser*, *Parecer*), **2 ou 3 verbos fortes (+2)** e **1 fraco (−2)**. Ele rola **d20 + o número** do verbo. Quando um jogador age **contra um verbo forte** dele (se esconder de quem Observa bem), a Dificuldade sobe **+2**; contra um fraco, cai **−2**. Se ele usa magia, tem também **palavras de Valor**; um humano comum não tem. PNJ importante pode ter a tabela inteira, com atributos, como um jogador. Todos os 280 do [[11 Bestiário]] já têm a linha **Básicas**.
 
 **A régua é o ponto de partida, não uma lei.** A Dificuldade de um adversário **varia** pelo que ele é: Valores, história, corpo, palavras. Um bicho frágil e distraído pode ter Dificuldade **abaixo** da régua; um guarda veterano de armadura, acima. Ajuste de −3 a +3 é normal; use o *Parecer* e o *Ser* como guia (*Lento*, *Cego*, *Enorme*: mais fácil de acertar; *Veloz*, *Blindado*, *Etéreo*: mais difícil).
 
@@ -220,6 +220,6 @@ Nem todo PNJ luta. O dono da estalagem, a professora, o garoto que sabe o caminh
 
 **Testes contra um PNJ** (convencer, enganar, esconder dele) usam a **Dificuldade** dele: +2 se o jogador age contra um verbo forte dele, −2 contra o fraco.
 **PNJ que age sozinho** (ajuda, pesquisa, corre) rola **d20 + o verbo**, e não gera Arcano nem Cataclisma.
-**PNJ importante** pode ganhar a tabela inteira de Interações, com atributos, como um jogador (ver *Criação* em [[05 Personagem e níveis]]).
+**PNJ importante** pode ganhar a tabela inteira de Palavras Básicas, com atributos, como um jogador (ver *Criação* em [[05 Personagem e níveis]]).
 
 **Jogo solo** (um jogador): Chefe **sem o ×1,5 nos Limiares** e com **10 PV**; o dano dele cai **um dado** (M3: 2d10 + 3 no lugar de 3d10 + 3). Em teste.

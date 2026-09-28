@@ -42,7 +42,7 @@ Esse é o bônus da magia: ela **não recebe Vantagem paga** (Vivência, Ajudar)
 1. **Intenção**: diga o que quer que aconteça, como a magia aparece (pelo seu Canal) e, se quiser, a sua relação com a palavra.
 2. **Palavras**:
    - **Palavras de Valor**: de 1 até o seu limite (Moldura + 1). **A primeira é do seu Valor** (o núcleo); as outras podem ser do seu Valor ou Palavras Estrangeiras.
-   - **Uma Palavra Básica** (um verbo da tabela de Interações ou uma forma): **não custa e não conta no limite**. Ela existe para **dar ao Valor ações que ele sozinho não tem** (um Cognitium que precisa **Movimentar**, um Conflitüo que precisa **Esconder**). Precisa fazer sentido concreto.
+   - **Uma Palavra Básica** (um verbo da tabela de Palavras Básicas ou uma forma): **não custa e não conta no limite**. Ela existe para **dar ao Valor ações que ele sozinho não tem** (um Cognitium que precisa **Movimentar**, um Conflitüo que precisa **Esconder**). Precisa fazer sentido concreto.
 3. **Grau**: pelo tamanho do efeito (tabela abaixo), até o seu máximo (Moldura + 1). O mestre tem a palavra final se o efeito pedido for maior do que o Grau.
 4. **Pague**: custo do Grau + 1 Arcano por palavra de Valor além da primeira + os passos de Ampliar. (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
 5. **Role** os dados do Grau + Sintonia + **1 por palavra de Valor**. Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre). **Contra o quê**, depende de quem recebe a magia (abaixo).
@@ -281,7 +281,7 @@ O **Eixo** (o Valor sem oposto) combina com qualquer um sem penalidade.
 
 ## Palavras Básicas (todo mundo tem)
 
-As Palavras Básicas são os **verbos da tabela de Interações** ([[01 Regras centrais]], seção 1) e as **formas** abaixo. Servem para duas coisas:
+As Palavras Básicas são os **verbos da tabela de Palavras Básicas** ([[01 Regras centrais]], seção 1) e as **formas** abaixo. Servem para duas coisas:
 
 1. **Descrever qualquer ação** e escolher o teste: **atributo + verbo** ("Furtar", "Convencer", "Atirar").
 2. **Completar uma magia**: **uma** Palavra Básica por magia (um verbo da tabela ou uma forma), de graça, sem contar no limite de palavras. É ela que dá ao Valor as ações que ele sozinho não alcança: "*Voz* + **Ameaçar**", "*Raiz* + **Agarrar**", "*Sombra* + **Esconder**".

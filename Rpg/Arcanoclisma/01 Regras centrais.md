@@ -14,9 +14,9 @@
 
 ---
 
-## 1. Interações: atributos e verbos
+## 1. Palavras Básicas: onde você põe os seus números
 
-Tudo o que um personagem faz sem magia está numa tabela só, a **tabela de Interações**. Cada coluna é um **atributo** (como você faz), e embaixo dele ficam os **verbos** (o que você faz) que costumam usar esse atributo. Monstros e PNJs usam a mesma tabela ([[10 Adversários - como criar]]).
+**Este é o coração do Arcanoclisma: os seus números ficam nas palavras.** Tudo o que um personagem faz sem magia está numa tabela só, a **tabela de Palavras Básicas**, e é nela, palavra por palavra, que o jogador coloca os seus modificadores. Cada coluna é um **atributo** (como você faz), e embaixo dele ficam os **verbos** (o que você faz) que costumam usar esse atributo. Monstros e PNJs usam a mesma tabela ([[10 Adversários - como criar]]).
 
 | d8 | **Força** | **Agilidade** | **Percepção** | **Carisma** | **Inteligência** | **Sabedoria** |
 |---|---|---|---|---|---|---|

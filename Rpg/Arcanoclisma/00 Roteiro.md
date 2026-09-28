@@ -117,7 +117,7 @@ Referências visuais (P-52):
 | 4.4 | Personagens de exemplo: um por Valor e um por Canal, misturando Eras e poses |
 | 4.5 | Lista de prompts, um por item/terreno/adversário/dragão (igual ao `prompts das Peças novas.md`), com id = nome do arquivo |
 | 4.6 | Geração em lote (Canva), recorte de fundo, conferência uma a uma |
-| 4.7 | Molduras e ornamentos das duas fichas (a do Valor muda de arte para cada um dos 9) |
+| 4.7 | Molduras e ornamentos das duas fichas (a do Valor muda de arte para cada um dos 9) — 🟡 rascunho em `arte/fichas.html` |
 | 4.8 | **Personagens das sessões ao longo do livro**, interagindo com as páginas e soltando magia (traço Wilderfeast): prompts em [[20 Prompts de arte - personagens]], uma linha nova a cada personagem criado |
 
 ## Fase 5 — Fichas, geradores, livro, site

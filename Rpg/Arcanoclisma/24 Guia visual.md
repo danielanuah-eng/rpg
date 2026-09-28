@@ -71,10 +71,13 @@ A versão clara da página (para impressão) troca o fundo por papel quente e ma
 Rascunho vetorial em `arte/icones/` (prévia em `arte/icones.html`): 12 Comportamentos, 6 atributos, Arcano e Cataclisma. Todos em traço de mesma espessura e `currentColor`, para trocar a cor na ficha colorida e na preto e branco.
 
 - **Comportamentos**: ícone de linha em fio dourado, dentro de um losango (não esfera, para não confundir com Valor).
-- **Atributos**: seis glifos simples de linha (Força, Agilidade, Percepção, Carisma, Inteligência, Sabedoria), usados no cabeçalho das colunas da tabela de Interações.
+- **Atributos**: seis glifos simples de linha (Força, Agilidade, Percepção, Carisma, Inteligência, Sabedoria), usados no cabeçalho das colunas da tabela de Palavras Básicas.
 - **Arcano e Cataclisma** na ficha: Arcano é um círculo fechado dourado; Cataclisma é um círculo com uma fresta, em ferrugem.
 
 ## Fichas
 
-- **Ficha 1 (Personagem)**: moldura neutra em fio dourado; a tabela de Interações em colunas por atributo, com os glifos.
+Rascunho das duas em `arte/fichas.html`. **O centro da Ficha 1 é a tabela de Palavras Básicas**: é ali que o jogador põe os números dele, palavra por palavra (atributo no topo da coluna com a sua casa, verbos embaixo, cada um com a sua casa e uma marca de avanço). Esse é o diferencial do jogo, e a ficha tem que mostrar isso primeiro.
+
+
+- **Ficha 1 (Personagem)**, frente: identidade, Esquiva, Limiares, PV, Proteção, Cansaço, Arcano, **Palavras Básicas** (o maior bloco), Laços, Comportamento, armas. Verso: retrato, Vivências, itens, perguntas de criação, relações da party, Marcos, notas.
 - **Ficha 2 (Valor)**: a **esfera do Valor** no topo, a borda da folha na cor do Valor, a tabela das 36 palavras com as linhas de verbo, substantivo e adjetivo separadas por fio fino.

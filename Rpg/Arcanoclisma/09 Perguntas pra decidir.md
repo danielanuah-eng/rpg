@@ -512,3 +512,7 @@ As perguntas P-123 a P-126 (gerador de nomes, personagem aleatório com tabela d
 
 ✅ **Os atributos também são palavras**: Força, Agilidade, Percepção, Carisma, Inteligência e Sabedoria são Palavras Básicas como os verbos (teste sem verbo e Palavra Básica grátis de magia: *Lâmina* + **Força**). Na ficha, cada atributo tem a sua casa de número no topo da coluna. Em [[01 Regras centrais]], [[02 Magia]], [[22 O que é gerado]] e na prévia de ícones.
 
+✅ **O diferencial**: os jogadores põem os modificadores nas **Palavras Básicas**. A tabela deixa de se chamar "de Interações" e vira **tabela de Palavras Básicas** em todo o livro; a seção 1 de [[01 Regras centrais]] abre dizendo isso.
+
+✅ **Fichas (rascunho)**: Ficha 1 frente e verso e Ficha 2 (Conflitüo) em `arte/fichas.html`, com as Palavras Básicas como o maior bloco da frente.
+

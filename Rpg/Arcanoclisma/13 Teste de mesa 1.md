@@ -6,7 +6,7 @@
 
 ## 1. Resumo de regras (uma página para a mesa)
 
-**Testes**: diga o **verbo** (o que faz) e o **atributo** (como faz; por padrão, o da linha na tabela de Interações). Role **2d12 + atributo + verbo** contra a Dificuldade (9 fácil · 12 médio · 15 difícil · 19 muito difícil · 23 lendário).
+**Testes**: diga o **verbo** (o que faz) e o **atributo** (como faz; por padrão, o da linha na tabela de Palavras Básicas). Role **2d12 + atributo + verbo** contra a Dificuldade (9 fácil · 12 médio · 15 difícil · 19 muito difícil · 23 lendário).
 
 **Dados**: cada **par** = +1 Arcano para você. Cada **ímpar** = +1 Cataclisma para o mestre. **Dois iguais = Crítico** (sucesso automático, +Arcano igual ao dado, máx. 6). **Maior dado ímpar** (jogada por Cataclisma) ou **falha** → o mestre emoldura.
 
@@ -28,7 +28,7 @@
 *Ex-soldado da Cidade-Muralha que ainda luta como se o capitão estivesse olhando.*
 
 - **Comportamento**: Briguento · **Valor**: Conflitüo · **Canal**: Arma (machado)
-- **Interações**: Força +1 · Agilidade +1 · Inteligência −1 · Bater **+2** · Proteger +1 · Intuir +1 · Ameaçar +1 · Mentir −1 → Bater +3 · Proteger +1 · Ameaçar +1 · Intuir +1 · Mentir −1
+- **Palavras Básicas**: Força +1 · Agilidade +1 · Inteligência −1 · Bater **+2** · Proteger +1 · Intuir +1 · Ameaçar +1 · Mentir −1 → Bater +3 · Proteger +1 · Ameaçar +1 · Intuir +1 · Mentir −1
 - **Esquiva** 10 · **PV** 6 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 8 / 16 · **Proteção** 4 (cota, Média: −1 em testes de mobilidade)
 - **Machado**: Força, Toque, **d10+3** (com Gosto de Sangue), Cruel (dano Grave marca +1 PV). Pela arma, a magia também é Cruel.
 - **Talento — Gosto de Sangue**: usa todas as armas, qualquer coisa vira arma (d8+1); +1 de dano com armas; dano Grave = +1 Arcano. **Hábito — Surra** (3): dano dobrado ou um segundo alvo.
@@ -42,7 +42,7 @@
 *Aprendiz de vidreira do Porto de Vidro, que carrega no pescoço um frasco do rio onde quase se afogou.*
 
 - **Comportamento**: Curiosa · **Valor**: Sublimeyn (o Eixo) · **Canal**: Foco (o frasco)
-- **Interações**: Inteligência +1 · Percepção +1 · Força −1 · Consertar **+2** · Estudar +1 · Movimentar +1 · Observar +1 · Ameaçar −1 → Consertar +3 · Estudar +2 · Observar +2 · Movimentar +1
+- **Palavras Básicas**: Inteligência +1 · Percepção +1 · Força −1 · Consertar **+2** · Estudar +1 · Movimentar +1 · Observar +1 · Ameaçar −1 → Consertar +3 · Estudar +2 · Observar +2 · Movimentar +1
 - **Esquiva** 10 · **PV** 5 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 6 / 12 · **Proteção** 3 (couro, Leve)
 - **Adaga**: Agilidade, Toque, d8+1. **Magia de dano** (G2): 1d10 + 3 (com o Foco).
 - **Talento — Já Li Sobre Isso**: duas vezes por sessão, um fato objetivo e descritivo, verdadeiro, sobre uma criatura, objeto ou lugar. **Hábito — Análise** (3): no começo de um Evento, descobre **um** dado (a Dificuldade, os Limiares, uma palavra ou o Valor de um adversário; um costume; um perigo).
@@ -56,7 +56,7 @@
 *Atriz que largou a trupe na estrada e vive de ser quem os outros precisam que ela seja.*
 
 - **Comportamento**: Enganadora · **Valor**: Persona · **Canal**: Voz
-- **Interações**: Carisma +1 · Agilidade +1 · Força −1 · Mentir **+2** · Atrair +1 · Esconder +1 · Criar +1 · Firmar −1 → Mentir +3 · Atrair +2 · Esconder +2 · Criar +1
+- **Palavras Básicas**: Carisma +1 · Agilidade +1 · Força −1 · Mentir **+2** · Atrair +1 · Esconder +1 · Criar +1 · Firmar −1 → Mentir +3 · Atrair +2 · Esconder +2 · Criar +1
 - **Esquiva** 12 · **PV** 5 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 6 / 12 · **Proteção** 3 (Leve)
 - **Adaga**: Agilidade, Toque, d8+1. **Magia de dano** (G2): 1d10 + 2.
 - **Talento — Mil Caras**: Vantagem para disfarçar, mentir e se esconder; mentira que funciona num PNJ = +1 Arcano. **Hábito — Sumir na Paisagem** (3, uma vez por sessão): se esconde no ambiente sem ninguém perceber, descrevendo como.
@@ -70,7 +70,7 @@
 *Filho da Vila da Colheita, grande e calado, que fala melhor com bicho do que com gente.*
 
 - **Comportamento**: Brutamontes · **Valor**: Primitivum · **Canal**: Corpo
-- **Interações**: Força +1 · Sabedoria +1 · Inteligência −1 · Levantar **+2** · Sobreviver +1 · Rastrear +1 · Aguentar +1 · Negociar −1 → Levantar +3 · Aguentar +2 · Sobreviver +2 · Rastrear +1
+- **Palavras Básicas**: Força +1 · Sabedoria +1 · Inteligência −1 · Levantar **+2** · Sobreviver +1 · Rastrear +1 · Aguentar +1 · Negociar −1 → Levantar +3 · Aguentar +2 · Sobreviver +2 · Rastrear +1
 - **Esquiva** 8 · **PV** 7 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 11 / 20 · **Proteção** 5 (placas, Pesada: −1 Esquiva; a mobilidade não sofre, por ser Brutamontes)
 - **Lança**: Força, Perto, d10+2, Alcance.
 - **Talento — Ombro de Aríete**: Vantagem para empurrar, levantar, arrombar, segurar; armadura não atrapalha a mobilidade. **Hábito — Corpo de Pedra** (3): até o fim do Evento, Vantagem em testes de Força e de resistir.

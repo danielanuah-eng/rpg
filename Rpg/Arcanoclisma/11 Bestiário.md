@@ -6,7 +6,7 @@
 
 - **Cabeçalho**: Nome — Moldura · Papel · Valor (resiste a ele, fraco contra o oposto) · Maestria.
 - **Agir**, abreviações do determinador: **C** = Cataclisma · **Falha** = até a próxima Falha · **Emoldura** = até o mestre emoldurar · **Pagar** = até o mestre pagar · **Ev** = o Evento · **Inst** = Instante. A resistência é o **verbo** que o jogador rola (Desviar, Firmar, Aguentar, Fugir, Observar...). Verbo sem parênteses = ataque comum ou ação narrativa.
-- **Básicas**: a tabela de Interações dele. **Todo verbo vale o Ataque da régua** (M1 +1 · M2 +2 · M3 +3 · M4 +4; Ágil +1); os **fortes** valem +2 a mais, o **fraco** −2. Ele rola **d20 + o número**. Agir contra um verbo forte dele sobe a Dificuldade em +2; contra o fraco, cai 2.
+- **Básicas**: a tabela de Palavras Básicas dele. **Todo verbo vale o Ataque da régua** (M1 +1 · M2 +2 · M3 +3 · M4 +4; Ágil +1); os **fortes** valem +2 a mais, o **fraco** −2. Ele rola **d20 + o número**. Agir contra um verbo forte dele sobe a Dificuldade em +2; contra o fraco, cai 2.
 - **Valor**: as palavras que ele **conjura**. Só aparece em quem usa magia; gente comum não tem.
 
 ---

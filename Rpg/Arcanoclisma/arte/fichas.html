@@ -1,0 +1,175 @@
+<title>Fichas do Arcanoclisma</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Spectral:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+:root{--ground:#15141B;--ink:#ECE5D5;--muted:#A69E8E;--brass:#B8955A;--paper:#F1EADB;--pink:#2A2420;--pmute:#6E6254;--rule:#D8CDB7;--gold:#8C6E3C;color-scheme:dark}
+body{background:var(--ground);color:var(--ink);font:400 16px/1.55 "Spectral",Georgia,serif;padding-inline:clamp(16px,4vw,48px);padding-block:40px 64px}
+.wrap{max-width:900px;margin-inline:auto;display:flex;flex-direction:column;gap:32px}
+.intro{display:flex;flex-direction:column;gap:10px;max-width:66ch}
+.eyebrow{font:400 12px/1 "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+h1{font:400 clamp(32px,5vw,50px)/1.05 "Marcellus SC",Georgia,serif;margin:0}
+.intro p{margin:0;color:var(--muted)}
+.intro strong{color:var(--ink);font-weight:500}
+.sheet{background:var(--paper);color:var(--pink);border-radius:4px;padding:clamp(16px,3vw,32px);display:flex;flex-direction:column;gap:18px;box-shadow:0 18px 40px rgba(0,0,0,.45);border:1px solid #CDBF9F;position:relative}
+.sheet::before{content:"";position:absolute;inset:8px;border:1px solid var(--gold);opacity:.35;border-radius:2px;pointer-events:none}
+.tag{font:400 11px/1 "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+h3{font:400 24px/1.1 "Marcellus SC",Georgia,serif;margin:0}
+h4{font:400 17px/1.2 "Marcellus SC",Georgia,serif;margin:0 0 8px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;border-bottom:1px solid var(--gold);padding-bottom:4px}
+h4 small{font:400 11px/1.3 "IBM Plex Mono",monospace;color:var(--pmute);letter-spacing:.03em;display:inline-flex;gap:6px;align-items:center}
+.lab{font:400 11px/1 "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--pmute);display:inline-flex;align-items:center;gap:6px}
+.lab svg{width:18px;height:18px}
+.idgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) auto auto;gap:10px 18px;align-items:end}
+@media (max-width:640px){.idgrid{grid-template-columns:1fr 1fr}}
+.fld{display:flex;align-items:flex-end;gap:8px;min-width:0}
+.fld .ln{flex:1;border-bottom:1px solid var(--pmute);height:20px;min-width:40px}
+.sq{display:inline-block;width:30px;height:26px;border:1.5px solid var(--gold);border-radius:3px;background:#FBF7EE}
+.sq.lg{width:40px;height:34px}
+.sq.wide{width:90px}
+.stats{display:grid;grid-template-columns:auto auto 1fr;gap:10px 22px;align-items:center}
+@media (max-width:640px){.stats{grid-template-columns:1fr 1fr}}
+.stat{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.stat.wide{grid-column:1/-1}
+.pair{display:flex;align-items:center;gap:6px}
+.pair i{font:italic 400 13px/1 "Spectral",serif;color:var(--pmute);margin-right:6px}
+.row{display:flex;flex-wrap:wrap;gap:5px}
+.bx{width:16px;height:16px;border:1.5px solid var(--gold);border-radius:2px;display:inline-block}
+.pip{width:15px;height:15px;border:1.5px solid var(--gold);border-radius:50%;display:inline-block}
+.ck{width:12px;height:12px;border:1.5px solid var(--gold);border-radius:2px;display:inline-block;vertical-align:-1px}
+.pbwrap{border:1.5px solid var(--gold);border-radius:4px;padding:14px;display:flex;flex-direction:column;gap:12px;background:#F6F0E2}
+.pbhead{display:flex;flex-direction:column;gap:4px}
+.pbhead h3{font-size:26px}
+.pbhead p{margin:0;font-size:14px;color:var(--pmute)}
+.pbhead strong{color:var(--pink)}
+.pb{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+@media (max-width:760px){.pb{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:440px){.pb{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.col{display:flex;flex-direction:column;gap:6px;min-width:0}
+.attr{display:flex;flex-direction:column;align-items:center;gap:4px;padding-bottom:8px;border-bottom:1.5px solid var(--gold)}
+.attr svg{width:30px;height:30px}
+.attr .w{font:400 15px/1 "Marcellus SC",Georgia,serif}
+.n{display:inline-block;width:24px;height:20px;border:1.5px solid var(--gold);border-radius:3px;background:#FBF7EE;flex:none}
+.n.big{width:34px;height:26px}
+.col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:5px}
+.col li{display:flex;align-items:center;gap:6px;font-size:13.5px;min-width:0}
+.col li .w{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mk{width:9px;height:9px;border:1px solid var(--gold);border-radius:50%;flex:none}
+.coisas{margin:0;font-size:13px;color:var(--pmute);display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media (max-width:640px){.two{grid-template-columns:1fr}}
+.laco,.tal{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:end;margin-bottom:10px}
+.k{font:italic 400 14px/1.2 "Spectral",serif;color:var(--pmute)}
+.laco .ln,.tal .ln{border-bottom:1px solid var(--pmute);height:20px}
+.ap{font:400 11px/1 "IBM Plex Mono",monospace;color:var(--pmute);display:inline-flex;gap:4px;align-items:center}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;color:var(--pink);font-size:14px}
+th{font:400 11px/1.2 "IBM Plex Mono",monospace;letter-spacing:.05em;text-transform:uppercase;color:var(--pmute);text-align:left;padding:6px;border-bottom:1.5px solid var(--gold)}
+td{padding:7px 6px;border-bottom:1px solid var(--rule);height:18px;color:var(--pink)}
+.armor{display:flex;gap:18px;flex-wrap:wrap;align-items:end;margin-top:10px}
+.armor .fld:first-child{flex:1}
+.portrait{aspect-ratio:3/4;max-width:100%;border:1.5px dashed var(--gold);border-radius:4px}
+.lnf{border-bottom:1px solid var(--rule);height:24px}
+.qs{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
+@media (max-width:640px){.qs{grid-template-columns:1fr}}
+.mini{font:400 12px/1.5 "IBM Plex Mono",monospace;color:var(--pmute);margin:6px 0 0}
+.txt{margin:0 0 10px;font-size:14.5px}
+.vtop{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.vorb{width:110px;flex:none}
+.vorb svg{width:100%;height:auto;display:block}
+.vname{font-size:34px}
+.vname span{font:italic 400 18px/1 "Spectral",serif;color:var(--pmute)}
+.comp{margin:4px 0 0;font:italic 400 17px/1.4 "Spectral",serif}
+.val{border-top:6px solid var(--vc)}
+.val h4{border-bottom-color:var(--vc)}
+.words th:first-child,.words tbody th{width:28px;text-align:center;color:var(--vc)}
+.words tbody th{border-bottom:1px solid var(--rule)}
+.words td{font-size:14px}
+.words tr.sep td{height:0;padding:0;border-bottom:1.5px solid var(--vc)}
+.extra{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.xw{width:120px;max-width:40%;height:26px;border:1.5px solid var(--vc);border-radius:3px}
+footer{font:400 12px/1.5 "IBM Plex Mono",monospace;color:var(--muted)}
+</style>
+<div class="wrap">
+<div class="intro"><span class="eyebrow">Arcanoclisma · Fase 4 · rascunho das fichas</span>
+<h1>Fichas do Arcanoclisma</h1>
+<p>Duas folhas A4. A Ficha 1 é igual para todos, frente e verso; a Ficha 2 muda com o Valor (aqui, Conflitüo). No centro da Ficha 1 fica o que faz este jogo diferente: <strong>os números do jogador moram nas Palavras Básicas</strong>, palavra por palavra.</p></div>
+<article class="sheet" aria-label="Ficha 1, frente">
+<div class="tag">Ficha 1 · Personagem · frente</div>
+<div class="top">
+<div class="idgrid"><div class="fld"><span class="lab">Nome</span><span class="ln"></span></div><div class="fld"><span class="lab">Povo</span><span class="ln"></span></div><div class="fld"><span class="lab">Comportamento</span><span class="ln"></span></div><div class="fld"><span class="lab">Valor</span><span class="ln"></span></div>
+<div class="fld sm"><span class="lab">Nível</span><span class="sq"></span></div><div class="fld sm"><span class="lab">Moldura</span><span class="sq"></span></div></div>
+</div>
+<div class="stats">
+<div class="stat"><span class="lab">Esquiva</span><span class="sq lg"></span></div>
+<div class="stat"><span class="lab">Limiares</span><span class="pair"><span class="sq lg"></span><i>Maior</i><span class="sq lg"></span><i>Grave</i></span></div>
+<div class="stat wide"><span class="lab">PV</span><span class="row"><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span></span></div>
+<div class="stat wide"><span class="lab">Proteção</span><span class="row"><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span></span></div>
+<div class="stat wide"><span class="lab">Cansaço</span><span class="row"><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span><span class="bx"></span></span></div>
+<div class="stat wide"><span class="lab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" color="#8C6E3C" aria-hidden="true"><circle cx="32" cy="32" r="18" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="32" cy="32" r="5" fill="currentColor"/></svg>Arcano</span><span class="row"><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></span></div>
+</div>
+<section class="pbwrap">
+<header class="pbhead"><h3>Palavras Básicas</h3><p><strong>Os seus números ficam aqui.</strong> Teste = 2d12 + atributo + verbo. Criação: atributos <b>+1 +1 0 0 0 −1</b> · verbos <b>+2 +1 +1 +1 −1</b> · máximo <b>+3</b> em cada. A casinha do lado marca o avanço.</p></header>
+<div class="pb"><div class="col"><div class="attr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" color="#8C6E3C" aria-hidden="true"><path d="M14 44 L32 18 L50 44 Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><line x1="10" y1="48" x2="54" y2="48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 44 L32 34 L38 44" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/></svg><span class="w">Força</span><span class="n big"></span></div><ul><li><span class="n"></span><span class="w">Bater</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Agarrar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Levantar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Aguentar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Quebrar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Abrir</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Acabar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Prender</span><span class="mk" title="marca de avanço"></span></li></ul></div><div class="col"><div class="attr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" color="#8C6E3C" aria-hidden="true"><path d="M12 24 L30 24 M16 32 L34 32 M12 40 L30 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="44" cy="32" r="7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M47 25 L52 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="w">Agilidade</span><span class="n big"></span></div><ul><li><span class="n"></span><span class="w">Movimentar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Desviar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Fugir</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Esconder</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Mexer</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Apagar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Alcançar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Jogar</span><span class="mk" title="marca de avanço"></span></li></ul></div><div class="col"><div class="attr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" color="#8C6E3C" aria-hidden="true"><circle cx="32" cy="32" r="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 12 L32 20 M32 44 L32 52 M12 32 L20 32 M44 32 L52 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="w">Percepção</span><span class="n big"></span></div><ul><li><span class="n"></span><span class="w">Atirar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Observar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Procurar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Rastrear</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Furtar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Investigar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Reconhecer</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Entrar</span><span class="mk" title="marca de avanço"></span></li></ul></div><div class="col"><div class="attr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" color="#8C6E3C" aria-hidden="true"><circle cx="20" cy="32" r="4" fill="currentColor"/><path d="M28 24 Q34 32 28 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M35 19 Q45 32 35 45" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M42 14 Q56 32 42 50" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/></svg><span class="w">Carisma</span><span class="n big"></span></div><ul><li><span class="n"></span><span class="w">Convencer</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Mentir</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Ameaçar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Atrair</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Chamar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Conjurar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Encantar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Enrolar</span><span class="mk" title="marca de avanço"></span></li></ul></div><div class="col"><div class="attr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" color="#8C6E3C" aria-hidden="true"><path d="M32 12 L49 22 L49 42 L32 52 L15 42 L15 22 Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 12 L32 32 L49 42 M32 32 L15 42" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/><circle cx="32" cy="32" r="2.5" fill="currentColor"/></svg><span class="w">Inteligência</span><span class="n big"></span></div><ul><li><span class="n"></span><span class="w">Pensar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Estudar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Consertar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Negociar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Criar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Fazer</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Formar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Armar</span><span class="mk" title="marca de avanço"></span></li></ul></div><div class="col"><div class="attr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" color="#8C6E3C" aria-hidden="true"><path d="M38 14 A18 18 0 1 0 50 44 A14 14 0 1 1 38 14 Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M48 18 L49 21 L52 22 L49 23 L48 26 L47 23 L44 22 L47 21 Z" fill="currentColor"/></svg><span class="w">Sabedoria</span><span class="n big"></span></div><ul><li><span class="n"></span><span class="w">Intuir</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Sobreviver</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Firmar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Proteger</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Montar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Preparar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Conectar</span><span class="mk" title="marca de avanço"></span></li><li><span class="n"></span><span class="w">Sair</span><span class="mk" title="marca de avanço"></span></li></ul></div></div>
+<p class="coisas"><span class="lab">Coisas</span> Arma · Item · Poção · Objeto · Armadilha <span class="lab">Formas</span> Projétil · Linha · Onda · Barreira · Cúpula · Área · Aliado · Inimigo · Grupo · Objeto · Arma · Chão</p>
+</section>
+<div class="two">
+<section><h4>Laços <small>Atalhos nesta sessão <span class="ck"></span><span class="ck"></span></small></h4>
+<div class="laco"><span class="k">Relação</span><span class="ln"></span><span class="ap"><span class="ck"></span> apertado</span></div><div class="laco"><span class="k">Atitude</span><span class="ln"></span><span class="ap"><span class="ck"></span> apertado</span></div><div class="laco"><span class="k">Sentimento</span><span class="ln"></span><span class="ap"><span class="ck"></span> apertado</span></div>
+</section>
+<section><h4>Comportamento</h4>
+<div class="tal"><span class="k">Talento</span><span class="ln"></span><span class="ap"><span class="ck"></span> Superior</span></div>
+<div class="tal"><span class="k">Hábito · 3 Arcano</span><span class="ln"></span><span class="ap"><span class="ck"></span> Superior</span></div>
+<div class="tal"><span class="k">Talento avulso</span><span class="ln"></span></div>
+</section>
+</div>
+<section><h4>Armas e armadura</h4>
+<table class="gear"><thead><tr><th>Arma</th><th>Atributo + verbo</th><th>Alcance</th><th>Dano</th><th>Traços</th></tr></thead>
+<tbody><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<div class="armor"><div class="fld"><span class="lab">Armadura</span><span class="ln"></span></div><div class="fld sm"><span class="lab">Ordynus</span><span class="sq wide"></span></div></div>
+</section>
+</article>
+<article class="sheet" aria-label="Ficha 1, verso">
+<div class="tag">Ficha 1 · Personagem · verso</div>
+<div class="two">
+<section><h4>Retrato</h4><div class="portrait" aria-label="espaço para desenho"></div></section>
+<section><h4>Vivências <small>1 Arcano: Vantagem</small></h4><div class="lnf"></div><div class="lnf"></div><div class="lnf"></div><div class="lnf"></div><div class="lnf"></div>
+<h4>Itens mágicos e consumíveis</h4><div class="lnf"></div><div class="lnf"></div><div class="lnf"></div><div class="lnf"></div><div class="lnf"></div></section>
+</div>
+<section><h4>Perguntas de criação</h4>
+<div class="qs"><div class="q"><span class="k">Como a magia despertou em você?</span><div class="lnf"></div><div class="lnf"></div></div><div class="q"><span class="k">Do que o seu personagem foge?</span><div class="lnf"></div><div class="lnf"></div></div><div class="q"><span class="k">O que ele não abandona?</span><div class="lnf"></div><div class="lnf"></div></div><div class="q"><span class="k">Quem da party ele conhece, e de onde?</span><div class="lnf"></div><div class="lnf"></div></div></div>
+</section>
+<div class="two">
+<section><h4>Relações da party</h4><div class="lnf"></div><div class="lnf"></div><div class="lnf"></div><div class="lnf"></div></section>
+<section><h4>Marcos <small>fim de aventura</small></h4><div class="row"><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
+<p class="mini">1 Detalhe, reescrever Laço · 2 Vivência, consumível · 3 +1 num verbo, Palavra Estrangeira · 4 item de família · 5 semente de Artefato. Um bônus permanente por aventura.</p></section>
+</div>
+<section><h4>Notas</h4><div class="lnf"></div><div class="lnf"></div><div class="lnf"></div><div class="lnf"></div><div class="lnf"></div></section>
+</article>
+<article class="sheet val" aria-label="Ficha 2, Valor" style="--vc:#A8432E;--vd:#3A120B">
+<div class="tag">Ficha 2 · Valor · Conflitüo</div>
+<div class="vtop"><div class="vorb"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Esfera de conflituo"><defs><radialGradient id="g-conflituo-p" cx=".36" cy=".32" r=".75"><stop offset="0" stop-color="#E07A55"/><stop offset=".55" stop-color="#A8432E"/><stop offset="1" stop-color="#3A120B"/></radialGradient><clipPath id="c-conflituo-p"><circle cx="100" cy="100" r="88"/></clipPath></defs>
+<circle cx="100" cy="100" r="92" fill="none" stroke="#A8432E" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="100" cy="100" r="88" fill="url(#g-conflituo-p)"/>
+<g clip-path="url(#c-conflituo-p)"><line x1="52" y1="52" x2="148" y2="148" stroke="#F6D2B8" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="9"/>
+<line x1="148" y1="52" x2="112" y2="88" stroke="#F6D2B8" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="9"/><line x1="88" y1="112" x2="52" y2="148" stroke="#F6D2B8" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="9"/>
+<polygon points="100,86 104,97 96,97" fill="#F6D2B8"/><polygon points="114,100 104,104 106,94" fill="#F6D2B8" opacity=".8"/><polygon points="86,106 96,104 94,114" fill="#F6D2B8" opacity=".7"/></g>
+<ellipse cx="72" cy="58" rx="26" ry="12" transform="rotate(-30 72 58)" fill="#ffffff" opacity=".13"/>
+<circle cx="100" cy="100" r="88" fill="none" stroke="#3A120B" stroke-opacity=".6" stroke-width="2"/></svg></div><div><h3 class="vname">Conflitüo <span>a Lâmina</span></h3>
+<p class="comp">"Não fujo de briga que é minha."</p><p class="mini">Oposto: Persona · Primordial: Thorvessa, a Que Separa</p></div></div>
+<div class="two">
+<section><h4>Skill · Fio da Guerra</h4><p class="txt">Em combate, cada magia sua ganha +1 dado de dano ou +2 no total.</p>
+<h4>Retaliação · Só Sabe Brigar</h4><p class="txt">Magias fora de combate ou violência custam +2 Arcano.</p></section>
+<section><h4>Ressonâncias</h4><p class="txt"><span class="ck"></span> <b>II · Veterano</b>: 1 Cansaço, os dois bônus do Fio da Guerra.</p><p class="txt"><span class="ck"></span> <b>III · Arsenal Vivo</b>: arma ou escudo de Conflitüo é Grau 1; dura o Evento; 2d10 + Moldura + 1.</p>
+<div class="fld"><span class="lab">Canal</span><span class="ln"></span></div></section>
+</div>
+<section><h4>As 36 palavras <small>d66 · linhas 1–2 verbos · 3–4 substantivos · 5–6 adjetivos</small></h4>
+<div class="tw"><table class="words"><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead><tbody><tr><th>1</th><td>Cortar</td><td>Perfurar</td><td>Esmagar</td><td>Explodir</td><td>Bloquear</td><td>Aparar</td></tr><tr><th>2</th><td>Investir</td><td>Recuar</td><td>Desarmar</td><td>Romper</td><td>Provocar</td><td>Flanquear</td></tr><tr class="sep"><td colspan="7"></td></tr><tr><th>3</th><td>Lâmina</td><td>Escudo</td><td>Lança</td><td>Martelo</td><td>Flecha</td><td>Muralha</td></tr><tr><th>4</th><td>Armadura</td><td>Estandarte</td><td>Cicatriz</td><td>Trincheira</td><td>Grito</td><td>Estilhaço</td></tr><tr class="sep"><td colspan="7"></td></tr><tr><th>5</th><td>Letal</td><td>Implacável</td><td>Afiado</td><td>Pesado</td><td>Certeiro</td><td>Veloz</td></tr><tr><th>6</th><td>Blindado</td><td>Brutal</td><td>Incansável</td><td>Tático</td><td>Voraz</td><td>Inquebrável</td></tr></tbody></table></div>
+<div class="extra"><span class="lab">Palavras extras</span><span class="xw"></span><span class="xw"></span><span class="xw"></span><span class="xw"></span></div>
+</section>
+<section><h4>Graus <small>Sintonia +2 · cada palavra de Valor +1 · da 3ª em diante, +1 Cataclisma</small></h4>
+<div class="tw"><table class="graus"><thead><tr><th>Grau</th><th>Dados</th><th>Custo</th><th>Dificuldade</th><th>Dano</th><th>Moldura</th></tr></thead>
+<tbody><tr><td>1</td><td>acontece</td><td>0</td><td>—</td><td>—</td><td>1</td></tr><tr><td>2</td><td>2d12</td><td>1</td><td>12</td><td>1d10+2</td><td>1</td></tr><tr><td>3</td><td>3d8</td><td>2</td><td>13</td><td>2d10+3</td><td>2</td></tr><tr><td>4</td><td>4d6</td><td>3</td><td>14</td><td>3d10+4</td><td>3</td></tr><tr><td>5</td><td>6d4</td><td>5</td><td>16</td><td>5d10+5</td><td>4</td></tr></tbody></table></div>
+<p class="mini">Teste mágico: o alvo rola contra 13 + Moldura + palavras. Ampliar: Arcano e +2 na Dificuldade por passo.</p></section>
+<section><h4>Magias favoritas</h4><div class="lnf"></div><div class="lnf"></div><div class="lnf"></div><div class="lnf"></div></section>
+</article>
+<footer>Rascunho em papel claro · versão preto e branco usa só linha · Rpg/Arcanoclisma/arte/fichas.html</footer>
+</div>

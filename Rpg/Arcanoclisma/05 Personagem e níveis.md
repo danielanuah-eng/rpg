@@ -30,7 +30,7 @@ Anote cada relação na ficha dos dois personagens (no app, aparece nas duas fic
 3. **Valor** — o personagem é um **Comprometido**. Pegue a **ficha do seu Valor** (36 palavras, símbolo, Skill, Retaliação, 4 espaços extras) e anote o **Compromisso** ([[03 Valores]]).
 4. **Vínculo** — responda às perguntas abaixo.
 5. **Canal** — como você exerce a magia: foco arcano, arma, Transcrito, corpo, voz, familiar ou marca ([[02 Magia]]).
-6. **Interações** — na tabela ([[01 Regras centrais]], seção 1), distribua nos **atributos** **+1, +1, 0, 0, 0, −1** e nos **verbos** **+2, +1, +1, +1, −1** (os outros verbos ficam em 0).
+6. **Palavras Básicas** (os seus números) — na tabela ([[01 Regras centrais]], seção 1), distribua nos **atributos** **+1, +1, 0, 0, 0, −1** e nos **verbos** **+2, +1, +1, +1, −1** (os outros verbos ficam em 0).
 7. **Vivências** — escreva **2** frases do passado do personagem. Cada uma dá Vantagem (gastando 1 Arcano).
 8. **Equipamento** — uma arma, uma armadura permitida, o objeto do Canal, um kit, **50 Ordynus** ([[06 Itens e dinheiro]]).
 9. **Números finais** — 3 Laços escritos, Arcano 3, Cansaço 6, PV do Comportamento, Proteção da armadura, Limiares = base + 1 + armadura, Sintonia +2 (mais o +1 de Relação quando a magia tem a ver com o personagem).
@@ -119,10 +119,10 @@ Se um número novo (item, talento, Skill) quebrar alguma dessas linhas, ele est�
 
 ### Ficha 1 — Personagem (igual para todo mundo, frente e verso)
 
-Tudo o que não é a magia do Valor. **Frente**: o que se usa jogando (identidade, Comportamento, tabela de Interações, formas de magia, Arcano, Laço, itens). **Verso**: criação e lore (perguntas, relações da party, Vivências, anotações).
+Tudo o que não é a magia do Valor. **Frente**: o que se usa jogando (identidade, Comportamento, tabela de Palavras Básicas, formas de magia, Arcano, Laço, itens). **Verso**: criação e lore (perguntas, relações da party, Vivências, anotações).
 - **Identidade**: nome, skin (aparência, com espaço para desenho ou foto), Era, conceito numa frase, jogador.
 - **Comportamento**: nome, Esquiva, Limiares (Maior/Grave), PV, Cansaço, Proteção, **caixas de talento** (Talento e Hábito com marcação Básico/Superior, e espaços vazios para talentos avulsos).
-- **Tabela de Interações**: os 6 atributos na primeira coluna e os 30 verbos nas linhas deles, cada um com o seu número e uma casinha de marca de avanço. O jogador monta "atributo + verbo" olhando a ficha.
+- **Tabela de Palavras Básicas**: as 6 palavras de atributo no topo das colunas e os 48 verbos embaixo, **cada palavra com a sua casa de número** e uma casinha de marca de avanço. É aqui que o jogador põe os modificadores dele. Ele monta "atributo + verbo" olhando a ficha.
 - **Formas** de magia (Projétil, Onda, Barreira...).
 - **Arcano** e os **Laços**: 3 linhas de descrição (mais espaço para Laços novos), cada uma com a caixinha **apertado**; as caixinhas **"Atalhos nesta sessão □□"**; e o **Atalho de costume** escrito do lado.
 - **Vivências**.
