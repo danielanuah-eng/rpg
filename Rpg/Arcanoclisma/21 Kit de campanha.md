@@ -111,7 +111,7 @@ Um Artefato **cresce com a história**: começa com uma palavra e ganha outra a 
 | 1 | **A Primeira Moeda** | *Anular* | o primeiro Ordyn cunhado em Oryuundis; imune a tudo, até a quem o carrega |
 | 2 | **A Página Arrancada** | *Memória* | a folha que GrandGaleonis arrancou do livro de duelos; quem a lê, lembra de alguém que não conheceu |
 | 3 | **O Badalo de Vau-Grande** | *Voz* | o sino é o que sobrou do marido da sineira; o badalo, dizem, é o que sobrou dele de verdade |
-| 4 | **Escama do Vyal** | *Encantar* | caiu numa briga com o pai; quem a carrega é amado, e nunca sabe se é por ele ou pela escama |
+| 4 | **Escama do Vyal** | *Seduzir* | caiu numa briga com o pai; quem a carrega é amado, e nunca sabe se é por ele ou pela escama |
 | 5 | **Coroa Riscada** | *Implacável* | a tatuagem dos Invictos, gravada em Bronze Arco; pertenceu a duzentos e doze duelos |
 | 6 | **Lanterna do Véu** | *Aurora* | um pedaço da aurora de OulVeil preso num vidro; se apagar, a aurora apaga também |
 | 7 | **Âncora do Mesmo Dia** | *Ciclo* | segura um instante; Tique quer de volta |
