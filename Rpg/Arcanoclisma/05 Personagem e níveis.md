@@ -83,7 +83,22 @@ Este bloco não dá bônus nem é cobrado pelo mestre. Serve para a mesa conhece
 | 9 | 4 | 5 | 5 | +2 | 4 | +1 Limiares |
 | 10 | 4 | 5 | 5 | +2 | 4 | +1 Limiares |
 
-**Quando sobe**: por marco (o mestre decide; sugestão: a cada 2–3 sessões no começo, mais espaçado depois).
+**Quando sobe**: no **fim de uma aventura** (2–4 sessões), junto com o *Perceber e Mudar* ([[19 Fim de sessão - as perguntas de envolvimento]]). O mestre pode segurar ou adiantar.
+
+### A conta da ficha (conferida)
+
+Os números da ficha foram feitos para bater com os dados e com a régua dos adversários, **em qualquer Moldura**:
+
+| O quê | Como | Resultado |
+|---|---|---|
+| **Teste típico** do jogador | atributo + verbo ≈ Moldura | Médio da Moldura: ~69%; com 1 Vantagem, ~87% |
+| **Melhor teste** | ≈ Moldura + 2 | Médio: ~81% |
+| **Ataque de arma** contra adversário | melhor teste contra Dif 11 + Moldura | ~81% |
+| **Magia no Grau máximo**, 1 palavra | dados do Grau + Sintonia 2 + 1 | ~81–90% contra a Dif do adversário; +1 por palavra a mais |
+| **Adversário te acertando** | d20 + Moldura contra Esquiva (base + 1 por Moldura) | ~50–60% |
+| **Dano** | arma e magia batem 1–3 PV num adversário da mesma Moldura; o dele, 1–3 PV em você | lutas de 3–5 ações por jogador |
+
+Se um número novo (item, talento, Skill) quebrar alguma dessas linhas, ele está forte ou fraco demais.
 
 ## Avanços (escolha 2 a cada nível, do 2 ao 10)
 

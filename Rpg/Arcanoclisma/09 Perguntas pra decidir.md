@@ -436,11 +436,17 @@ Sua resposta: ✅ aplicada, com *Cuidar* → **Proteger**, *Notar* → **Observa
 
 ✅ **Palavra em negativa é a mesma palavra**: *Bloquear* vale como "imbloqueável".
 
-✅ **Toda rolagem de acerto com mais dados que 2d12**: defesa +1 no 3d8, +2 no 4d6, +3 no 6d4 (3d8 ≈ 2d12+1, 4d6 ≈ 2d12+2, 6d4 ≈ 2d12+3). Dano não muda. A defesa segue subindo com a Moldura; quem é hábil em desviar sobe mais, quem não é compensa com Limiares, Blindado, Duro.
+➖ ~~Defesa extra por quantidade de dados~~ → substituída: **a matemática já conta com os dados**. **Sintonia fixa em +2** em toda Moldura; Dificuldades do Grau **12 / 13 / 14 / 16**; dano de magia = **dados + Grau** (1d10+2, 2d10+3, 3d10+4, 5d10+5, iguais aos de antes); Dificuldade da magia = **13 + Moldura + palavras** (mesmos números). Mais palavras sempre ajudam. A defesa segue subindo com a Moldura; quem é hábil em desviar sobe mais, quem não é compensa com Limiares, Blindado, Duro.
 
 ✅ **Seis verbos novos na tabela de Interações**, que vira **6 × 6 (36 verbos, sorteável com d66)**: Abrir (Força), Apagar (Agilidade), Investigar (Percepção), Conjurar (Carisma), Fazer (Inteligência), Preparar (Sabedoria). **Arma, Item, Poção** são Palavras Básicas de coisa. Cognitium trocou *Apagar* por **Riscar**.
 
 ✅ **Bronze Arco**: metal arcano do mundo (em [[06 Itens e dinheiro]] e [[08 Mundo e entidades]]).
 
 ✅ **Ajuste solo de Chefe** (em teste): sem ×1,5 nos Limiares e 10 PV.
+
+✅ **Tabela de Interações 6 × 7 (42 verbos)**: entram Acabar (Força), Alcançar (Agilidade), Reconhecer (Percepção), Encantar (Carisma), Formar (Inteligência), Conectar (Sabedoria); **Objeto** vira coisa, junto de Arma, Item, Poção. Persona trocou *Encantar* por **Seduzir**.
+
+✅ **Fim de sessão e de aventura**: módulo [[19 Fim de sessão - as perguntas de envolvimento]] (as três perguntas dão Arcano; o *Perceber e Mudar* no fim da aventura dá **Marcos**, trocados por contatos, Vivências, itens e bônus limitados; mudar para pior também vale). Subir de nível passa a ser no fim da aventura.
+
+✅ **Criar PNJ**: aba nova em [[10 Adversários - como criar]] (qualquer PNJ, não só inimigo), com Dificuldade = 11 + Moldura, Básicas e Valor. **Conta da ficha** conferida em [[05 Personagem e níveis]].
 

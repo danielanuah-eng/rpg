@@ -190,7 +190,7 @@ O **Passo de Valor** conversa diretamente com o Laço: ele **é** a ação difer
 ### Olhar para os Laços
 
 - **Na hora**: quando o jogador nomeia o Atalho que o personagem está pegando e do que ele protege, ganha **+1 Arcano** (uma vez por Evento). Perceber dá Arcano, mas **não muda nada sozinho**: o que muda é agir.
-- **No fim da sessão**, três perguntas; cada "sim", com uma frase, vale **+1 Arcano**:
+- **No fim da sessão**, três perguntas de envolvimento; cada "sim", com uma frase, vale **+1 Arcano**. No **fim de uma aventura**, o *Perceber e Mudar* dá **Marcos** para trocar por itens, contatos e bônus limitados ([[19 Fim de sessão - as perguntas de envolvimento]]):
   1. Você percebeu um Atalho do seu personagem, e qual é a relação dele com esse Atalho?
   2. Uma relação se formou ou mudou na party, ou com alguém do mundo?
   3. Você notou o que outro personagem sentiu ou fez e participou disso?

@@ -200,5 +200,26 @@ Marcas menores, que o gerador também sorteia: *Imune a [Valor]*, *Absorve [Valo
 4. **Parecer**: 1–3 adjetivos da tabela (ou invente um com peso parecido).
 5. **Valores e Maestria** pela Moldura.
 6. **Quer**: uma frase.
+7. **Básicas**: tudo = Ataque; 2–3 verbos fortes (+2) e 1 fraco (−2), tirados do Ser e do Parecer.
+8. **Valor** (só se conjura): palavras do Valor dele, até Moldura + 1.
 
 Conferência rápida: nenhum verbo livre pode causar mais que dano ×1 num alvo ou condição leve; um adversário não deve ter mais de um verbo de Área na Moldura 1.
+
+## Criar um PNJ (qualquer um, não só inimigo)
+
+Nem todo PNJ luta. O dono da estalagem, a professora, o garoto que sabe o caminho: todos usam **a mesma ficha curta**, e o que muda é o que ele tem.
+
+| Passo | O que decidir | Números |
+|---|---|---|
+| 1. **Moldura** | quão competente ele é no mundo (M1 gente comum, M2 profissional, M3 mestre do ofício, M4 lenda) | **Ataque** = a Moldura (+1 a +4); **Dificuldade** = 11 + Moldura (12 a 15) |
+| 2. **Papel** | Social (não luta), Suporte, ou um papel de combate | Social: sem PV nem dano; se apanhar, sai de cena |
+| 3. **Ser e Quer** | quem é e o que quer | o *Quer* diz se ele ajuda, atrapalha, negocia ou foge |
+| 4. **Básicas** | no que ele é bom | tudo = Ataque; **2–3 fortes (+2)**, **1 fraco (−2)** |
+| 5. **Valor** | se conjura | palavras do Valor, até Moldura + 1; gente comum não tem |
+| 6. **Jeito** (opcional) | como ele fala e age | 1–2 frases, para PNJ importante |
+
+**Testes contra um PNJ** (convencer, enganar, esconder dele) usam a **Dificuldade** dele: +2 se o jogador age contra um verbo forte dele, −2 contra o fraco.
+**PNJ que age sozinho** (ajuda, pesquisa, corre) rola **d20 + o verbo**, e não gera Arcano nem Cataclisma.
+**PNJ importante** pode ganhar a tabela inteira de Interações, com atributos, como um jogador (ver *Criação* em [[05 Personagem e níveis]]).
+
+**Jogo solo** (um jogador): Chefe **sem o ×1,5 nos Limiares** e com **10 PV**; o dano dele cai **um dado** (M3: 2d10 + 3 no lugar de 3d10 + 3). Em teste.
