@@ -65,7 +65,7 @@ Poucos. Uns se dizem deuses, outros vivem como gente comum, outros são donos de
 
 | Semideus | Pai/Mãe | Valor | Quem é, onde está |
 |---|---|---|---|
-| **Vyal** | Zahun | Persona (todo o espectro emocional) | Primeiro filho de Zahun. Pele de dragão, aparência humana, moreno, olhos dourados, imortal. Arrogante, com muito poder e influência. Carente da atenção do pai; gosta de bagunçar o Arcano e quer ir além do que é. |
+| **Vyal** | Zahun | Persona (todo o espectro emocional) | Primeiro filho de Zahun, **a primeira mancha mortal no Arcano**. Aparência humana, moreno, olhos dourados, imortal, com **escamas dracônicas**: não porque seja dragão, mas porque é filho direto de uma entidade, e as escamas são o símbolo disso (nobreza, orgulho, intensidade, uma curiosidade funda). É um **recipiente das vontades do pai**. Arrogante, com muito poder e influência, carente da atenção de Zahun; gosta de bagunçar o Arcano e quer ir além do que é. |
 | **Serath Duas-Mãos** | Thorvessa | Conflitüo | Senhora da **Cidade-Muralha**, onde todo mundo anda armado e nenhuma guerra de fora entra. |
 | **Liss de Vidro** | Oyamar | Sublimeyn | Rainha do **Porto de Vidro**. O corpo dela muda de estado com o humor. |
 | **Garmhal, o Domador** | Kairvahnn | Dominum | Cavaleiro de monstros que vive na boca da **Voragem**. |
@@ -99,9 +99,9 @@ Um personagem pode ter vindo de um plano, ou ter passado tempo num deles: é ori
 
 O mundo tem **humanos** e tem **outros povos**. As culturas nascem do lugar e do Valor que manda nele.
 
-- **Povos infundidos**: os outros povos do mundo **não usam magia: são feitos com ela**. O Valor está no corpo deles (na pele, no sangue, no jeito de existir), e não em palavras. Todos vivem em **Contacto**. (Os seres dos planos, como Juramentados, Moldados, Sentidos ou Esquecidos, não são povos: são habitantes disformes e feéricos dos Reinos dos Valores.)
+- **Outros povos**: Contacto tem muitos povos além dos humanos (lista em *Os povos do mundo*, abaixo). Alguns são **infundidos**: o Valor está no corpo deles, e não em palavras. (Os seres dos planos, como Juramentados, Moldados, Sentidos ou Esquecidos, não são povos: são habitantes disformes e feéricos dos Reinos dos Valores.)
 - **Humanos e povos infundidos**: foi também se relacionando com esses povos (em amizade, casamento, aprendizado, convivência) que muitos humanos **adquiriram o domínio do Arcano e a percepção dos Valores**, além dos que descendem de semideuses. Há famílias, vilas e cidades inteiras que são mistura das duas coisas.
-- **Jogar com um povo infundido**: por padrão os personagens são humanos Comprometidos, mas **o jogador pode escolher ser de um povo infundido**. Na mesa ele usa as mesmas regras (Comportamento, Valor, palavras); o povo dá **só possibilidades narrativas**: aparência, costumes, como os outros o tratam, o que ele sente ao conjurar com palavras aquilo que o povo dele simplesmente é.
+- **Jogar com outro povo**: por padrão os personagens são humanos Comprometidos, mas **o jogador pode escolher qualquer povo**. Na mesa ele usa as mesmas regras (Comportamento, Valor, palavras); o povo muda **a aparência** e os costumes, e nos povos muito divinos, **o jeito da magia**. Nunca os números.
 
 - **Comprometidos**: quem usa magia. A vida, o estilo e o poder se orientam pelo Valor, na personalidade e no jeito de agir (ver o Compromisso de cada Valor em [[03 Valores]]). Em muitos lugares se reconhece um Comprometido pelo jeito antes de ver a magia.
 - **Magia é comum.** Quem tem, usa o tempo todo: no fogão, na oficina, na lavoura, na briga. Cada um exerce do seu jeito (um foco, a própria arma, um Transcrito, o corpo, a voz). O mundo só bagunça quando alguém usa magia de forma instável, poderosa demais ou sem parar — é aí que aparecem Feridas, Disruptos e Protetores.
@@ -130,9 +130,13 @@ O mundo tem **humanos** e tem **outros povos**. As culturas nascem do lugar e do
 
 ## Dragões e wyverns
 
-Dragões são criaturas **deste mundo**, e **representam os Valores**. Cada dragão nasce de um Valor e carrega isso no corpo: cor, forma, e **chamas luminosas e bruxuleantes** que saem dos espinhos e dos olhos. Dentro de um mesmo Valor as formas e aparências variam muito; a tabela dá o mais comum.
+Dragões **vêm dos desejos antigos**: dos deuses, dos semideuses, dos povos. Dos medos deles, dos Valores, das vontades. Um desejo antigo e grande o bastante ganha carne e escamas, e acorda. Por isso cada dragão carrega um Valor no corpo: cor, forma e **chamas luminosas e bruxuleantes** que saem dos espinhos e dos olhos. Dentro de um mesmo Valor as formas variam muito; a tabela dá o mais comum.
 
-Um dragão é um **manifesto ciente de desejo e vontade**: o Valor dele virou vontade com corpo, e ele sabe disso. **Bem e mal não se aplicam** a dragões; o desejo pode parecer nobre, perverso, assustador ou terno aos olhos humanos, mas para o dragão é só o que ele é, inteiro, sem meio-termo.
+Um dragão é **feito de Arcano e Cataclisma ao mesmo tempo**, infundidos em carne e escamas: o fechamento e a mudança num corpo só. É um **manifesto ciente de desejo e vontade**, essência de **orgulho** e de **manifestação**. Para um dragão **não existe bem ou mal: existe ser**, e existem as palavras. São **completos, vivos, cheios de alma**.
+
+Todo dragão é **nobre**, independente da conduta, até na violência. E todo dragão carrega um **peso emocional**, de amores e de medos, tanto para ele quanto para quem o observa: ninguém vê um dragão e sai igual.
+
+**O que dragões fazem** (qualquer um destes, e mais de um ao mesmo tempo): ajudam reinos · mantêm contatos e dívidas por séculos · instigam mortais · apostam · desafiam divindades e humanos · pedem favores · lutam por uma justiça ideal · pelo amor · pelo ódio · pela destruição · pela derrocada dos deuses.
 
 Para eles, a **humanidade é passageira e interessante**: os mortais e os outros povos são como estações do ano, bonitos de observar e rápidos de acabar. **Os deuses**, os dragões consideram **grandes primatas desprovidos de sentido**. Alguns dragões **sabem magia** (conjuram com as palavras do seu Valor), outros são **aterrorizantes**, outros **curiosos**. Todos são **majestosos**.
 - um **Desejo** (o que ele quer, do jeito dele);
@@ -152,7 +156,7 @@ Para eles, a **humanidade é passageira e interessante**: os mortais e os outros
 | 4 | ver o mundo arder, ou congelar, ou apodrecer | uma estrada ou rota de comércio | os que têm o seu Valor | ensina, adota |
 | 5 | lembrar tudo, e ser lembrado | uma floresta, deserto ou ruína | os que o enganaram um dia | atormenta, cobra |
 | 6 | um desejo que ninguém entende | um Reino, ou a porta de um | uma família, há gerações | devora, ou salva, sem aviso |
-- **Wyverns** são os parentes menores, sem sapiência e sem Valor forte: **domesticáveis e montáveis**. Cidades e exércitos criam wyverns para voo, correio e guerra.
+- **Wyverns** são **os filhos dos dragões, as crias deles** (como outras criaturas que nascem à sombra de um dragão): sem sapiência e sem Valor forte, **domesticáveis e montáveis**. Cidades e exércitos criam wyverns para voo, correio e guerra.
 
 | Valor | Dragão | Cor e forma | Chamas (espinhos e olhos) | O sopro |
 |---|---|---|---|---|
@@ -183,6 +187,8 @@ Os números estão no [[11 Bestiário]] (Dragonete, Jovem, Adulto, Ancião, Wyve
 
 ### Como a magia desperta (d6)
 
+O mais comum é **numa crise** (o 1). As outras versões existem para quem quiser variar.
+
 | d6 | O despertar |
 |---|---|
 | 1 | **numa crise**: diante de algo que importa e dói, a magia sai (a tempestade, o chiqueiro, a perda) |
@@ -192,30 +198,37 @@ Os números estão no [[11 Bestiário]] (Dragonete, Jovem, Adulto, Ancião, Wyve
 | 5 | **escola ou ritual**: um teste, uma iniciação, um juramento |
 | 6 | **toque**: um semideus, um dragão ou um Primordial olhou para você. Só isso. |
 
-### De onde vêm os dragões (d4)
+### Os povos do mundo (esboço)
 
-| d4 | Versão |
-|---|---|
-| 1 | **Desejo grande demais**: quando um desejo não cabe mais em alguém, ele sai do corpo e ganha o seu. Diz-se que o **Vyal** desejou a atenção do pai com tanta força que o desejo começou a virar dragão por fora (a pele). |
-| 2 | **Ovos de antes da Cisão**: o Arcanoclisma inteiro deixou ovos; cada um chocou num Valor quando ele se dividiu. |
-| 3 | **Sonho dos Valores**: cada Valor sonha consigo mesmo, e às vezes o sonho acorda com asas. |
-| 4 | **Ninguém sabe**, e os dragões riem quando perguntam. |
+Além dos humanos, Contacto tem muitos povos. **Não são "raças jogáveis" com números**: escolher um povo muda **a aparência**, os costumes e como os outros te tratam. Nos povos **muito divinos ou mágicos**, o povo pode mexer no **jeito da magia** (o Canal, a cor, o que acontece quando você conjura), nunca nos números.
 
-### Povos infundidos (esboço; nomes são proposta)
+| Povo | Esboço | Pesa em |
+|---|---|---|
+| **Anões** | baixos, largos, de pedra e forja; memória longa, rancor mais longo | aparência |
+| **Elfos** | longevos, de gestos lentos; parecem sempre ouvir uma música que os outros não ouvem | aparência |
+| **Halflings** | pequenos, de casa cheia e mesa farta; a coragem aparece na hora certa | aparência |
+| **Golias** | gigantes de montanha, pele marcada como rocha; medem tudo pela escalada | aparência |
+| **Tieflings** | chifres, cauda, olhos de brasa; carregam no corpo um pacto antigo de alguém da família | aparência · às vezes magia |
+| **Verdejantes** | seres do verde: casca, folha, musgo, flor; vivem com as estações | aparência · magia (Primitivum) |
+| **Orcs** | fortes, de presas, de clã; honra dita alto | aparência |
+| **Goblins** | pequenos, rápidos, engenhosos; vivem nas frestas das cidades dos outros | aparência |
+| **Gnomos** | curiosos, inventores, riem de tudo; toda casa gnoma tem uma máquina que ninguém sabe para que serve | aparência |
+| **Trolls** | enormes, de pele grossa que regenera; lentos para decidir, impossíveis de esquecer | aparência |
+| **Fadas** | minúsculas, feéricas, de regras próprias; toda promessa feita a uma fada vale | aparência · magia |
+| **Leprechauns** | pequenos, apostadores, colecionadores de ouro e de dívidas | aparência · magia (sorte) |
+| **Elementais** | corpos de fogo, água, pedra, ar ou mistura; o elemento é o humor deles | magia (Sublimeyn) |
+| **Draconatos** | gente com sangue de dragão: escamas, sopro, orgulho | aparência · magia (o Valor do dragão de origem) |
+| **Luphos** | humanoides com aparência de lobo, cão, raposa, coiote; de matilha e faro | aparência |
+| **Almum** | seres espirituais que se **prendem ao plano terreno** num corpo, numa arma ou num animal, e ali ficam | magia · o que você habita |
+| **Autômatos** | máquinas que acordaram; umas lembram quem as fez, outras não | aparência · às vezes magia (Dispositivo) |
+| **Vikings** | humanos maiores e mais fortes, que lutam em bandos, saqueiam e aguentam condições extremas; **pouca facilidade com o Arcano** (raros Comprometidos) | aparência |
+| **Corves** | vivem em cavernas nas montanhas geladas; pele cinza, pelo marrom, olhos espalhados pelo rosto e uma boca de muitos dentes; **pacíficos e acolhedores**, apesar do tamanho e das feições. Para eles, dificuldade se passa em grupo | aparência |
+| **Tritões e sereias** | gente do mar, de guelras e escamas; cantam de um jeito que faz barco se perder ou achar o caminho | aparência · às vezes magia (Persona) |
+| **Aviares** | gente-pássaro, de penas e ossos leves; vivem nas escarpas e nos ventos | aparência |
 
-Povos que **não conjuram: são feitos de magia**. O Valor está no corpo. Vivem em Contacto, misturados ou em terras próprias.
+**Innhomus** (fora de Contacto): seres **disformes e abstratos**, de formas geométricas, letras, sinais e símbolos, às vezes indescritíveis. São **divindades esquecidas e cataclismáticas**, com vontades e desejos próprios, e vivem em **planos à parte**. Não são um povo que se escolhe: são algo que se encontra.
 
-| Valor | Povo | No corpo | Um rumor |
-|---|---|---|---|
-| Conflitüo | **Vessai** | nascem com uma cicatriz que brilha quando alguém ameaça os seus | nenhum Vessai perde um duelo que escolheu lutar |
-| Sublimeyn | **Oyari** | a pele muda de estado com o humor: pedra, água, vidro, vapor | um Oyari muito triste vira chuva e não volta |
-| Dominum | **Vahni** | marcas de corrente de nascença; sentem fisicamente a quem são leais | um Vahni sem ninguém a quem ser leal adoece |
-| Persona | **Zahuni** | o rosto muda com o que sentem; mentir para um Zahuni é inútil | Zahun anda entre eles com um rosto que ninguém lembra |
-| Alvorum | **Idrae** | olhos que acendem no escuro; sonham acordados | um Idrae que fecha os olhos por uma noite inteira esquece o próprio nome |
-| Morbidyum | **Velhenos** | ossos claros, não sangram; sentem quanto falta para alguém morrer | cuidam dos cemitérios de todos os povos, de graça |
-| Cognitium | **Sem-Trono** | passam despercebidos; quem fala com eles esquece a conversa | alguns acham que o Sem-Nome é um deles |
-| Eternyr | **Ossyrianos** | vivem um instante atrasados, ou adiantados; envelhecem devagar | um Ossyriano sempre sabe quando você vai chegar |
-| Primitivum | **Tahwi** | chifres, pelos, musgo, escamas: cada família é meio bicho de um jeito | quando um Tahwi morre, uma árvore nasce onde ele caiu |
+Os humanos também adquiriram o domínio do Arcano e a percepção dos Valores **convivendo com esses povos** (em amizade, casamento, aprendizado), além dos que descendem de semideuses. Há famílias, vilas e cidades inteiras que são mistura.
 
 ## Arcano, Cataclisma e o que nasce deles
 

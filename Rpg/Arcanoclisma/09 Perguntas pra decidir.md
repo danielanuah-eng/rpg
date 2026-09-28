@@ -460,3 +460,9 @@ Sua resposta: ✅ aplicada, com *Cuidar* → **Proteger**, *Notar* → **Observa
 
 ➡️ Aplicado em [[08 Mundo e entidades]] como **Versões** (d6 como as pessoas veem um Comprometido, d6 como a magia desperta, d4 origem dos dragões) e um **esboço dos 9 povos infundidos** (Vessai, Oyari, Vahni, Zahuni, Idrae, Velhenos, Sem-Trono, Ossyrianos, Tahwi; nomes são proposta).
 
+✅ **Despertar**: o mais comum é numa **crise**; as outras versões ficam como variação.
+
+✅ **Vyal e os dragões**: as escamas do Vyal são **símbolo** (nobreza, orgulho, intensidade, curiosidade): ele é filho direto de uma entidade, **recipiente das vontades do pai**, **a primeira mancha mortal no Arcano**. **Dragões vêm dos desejos antigos** (de deuses, semideuses, povos: medos, valores, vontades); são feitos de **Arcano e Cataclisma ao mesmo tempo**; nobres independente da conduta; carregam peso emocional; não há bem nem mal, há **ser**. **Wyverns são filhos dos dragões.** Aplicado em [[08 Mundo e entidades]].
+
+✅ **Povos do mundo**: não são raças jogáveis com números; mudam a aparência e, nos muito divinos, o jeito da magia. Lista: anões, elfos, halflings, golias, tieflings, **Verdejantes**, orcs, goblins, gnomos, trolls, fadas, leprechauns, elementais, draconatos, **Luphos**, **Almum**, autômatos, **Vikings**, **Corves**; e os **Innhomus** (divindades esquecidas e cataclismáticas, em planos à parte). Acrescentei **tritões e sereias** e **aviares**. Substitui o esboço dos 9 povos que eu tinha proposto.
+
