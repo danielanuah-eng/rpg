@@ -4,21 +4,41 @@
 
 ## Dinheiro
 
-Moeda padrão: **Ordyn** (plural **Ordynus**, abreviação **o**). A mesa pode trocar o nome conforme a Era; o valor não muda.
+Moeda padrão: **Ordyn** (plural **Ordynus**, abreviação **o**), cunhada em **Oryuundis**, o metal imune à magia enquanto é moeda (e que, fundido, amplia palavras, Valores e sentimentos; ver [[08 Mundo e entidades]]). Ninguém falsifica um Ordyn com magia: por isso ele vale em qualquer lugar.
 
-| Coisa | Preço |
+### A conta dos preços
+
+Tudo parte de uma medida: **um dia de trabalho comum rende 3 a 5 o**.
+
+| Coisa | Preço | Em dias de trabalho |
+|---|---|---|
+| Refeição simples | 1 o | um terço de dia |
+| Noite numa estalagem | 2 o | meio dia |
+| Kit (viagem, larápio, curandeiro, estudo) | 10 o | 2–3 dias |
+| Arma ou armadura comum | 5–90 o | de um dia a um mês |
+| Cavalo ou montaria comum | 60 o | meio mês |
+| Consumível mágico | 10–40 o | alguns dias |
+
+**Itens mágicos** seguem uma base por Moldura, que **triplica** a cada Moldura (o impacto do item na mesa cresce junto com a Moldura), multiplicada por um **fator** do tipo de benefício:
+
+| Moldura do item | Base |
 |---|---|
-| Refeição simples | 1 o |
-| Noite numa estalagem | 2 o |
-| Kit (viagem, larápio, curandeiro, estudo) | 10 o |
-| Cavalo ou montaria comum | 60 o |
-| Arma ou armadura da Moldura 1 | 10–90 o |
-| Item da Moldura 2 | 150–400 o |
-| Item da Moldura 3 | 600–1.500 o |
-| Item da Moldura 4 | 2.500+ o |
-| Recompensa típica por sessão | 30–60 o × Moldura² |
+| 1 | **100 o** |
+| 2 | **300 o** |
+| 3 | **900 o** |
+| 4 | **2.700 o** |
 
-Começa com **50 o** (Privilegiado com Herança: 75 o). Vender um item: metade do preço.
+| Fator | Quando |
+|---|---|
+| **× 0,5** | narrativo, sem número ([[12 Tesouros e itens mágicos]]) |
+| **× 0,8** | Vantagem numa situação estreita, ou poucas cargas |
+| **× 1** | benefício comum (uma Skill melhorada, uma Retaliação aliviada) |
+| **× 1,3** | número permanente (+1 num atributo, num verbo, no dano, na Dificuldade) |
+| **× 1,5** | mexe na economia da magia (Ampliar grátis, Efeito Colateral a menos, Sintonia) |
+
+**Recompensa** (para o grupo, por pessoa): **por sessão ≈ Base ÷ 3** (M1 35 o · M2 100 o · M3 300 o · M4 900 o). Assim, **uma aventura (≈ 3 sessões) paga mais ou menos um item mágico da Moldura**, o mesmo ritmo dos Marcos ([[19 Fim de sessão - as perguntas de envolvimento]]). Vender um item: metade do preço.
+
+Começa com **50 o** (Privilegiado com Herança: 75 o).
 
 ## Armas
 

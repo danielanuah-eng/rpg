@@ -49,7 +49,7 @@ Sua resposta: ✅ ok (rodada 1)
 
 **P-10** 🔴 A roda de opostos. Recomendo a **A**: Conflitüo × Persona, Dominum × Primitivum, Alvorum × Cognitium, Morbidyum × Eternyr, **Sublimeyn = Eixo** (sem oposto).
 Alternativa B: Conflitüo × Sublimeyn, Dominum × Persona, Alvorum × Cognitium, Morbidyum × Primitivum, **Eternyr = Eixo**.
-Sua resposta: ✅ ok (rodada 1)
+Sua resposta: ✅ ok (rodada 1); confirmada: **opção A**.
 
 **P-11** 🔴 Persona: "suas magias em pessoas têm 1 dificuldade a menos". Isso é **−1 na Dificuldade (o número)** ou **uma Dificuldade (efeito ruim do d20) a menos**?
 Recomendo: **−2 no número** como Skill, e "uma Dificuldade a menos" como Ressonância II.
@@ -465,4 +465,12 @@ Sua resposta: ✅ aplicada, com *Cuidar* → **Proteger**, *Notar* → **Observa
 ✅ **Vyal e os dragões**: as escamas do Vyal são **símbolo** (nobreza, orgulho, intensidade, curiosidade): ele é filho direto de uma entidade, **recipiente das vontades do pai**, **a primeira mancha mortal no Arcano**. **Dragões vêm dos desejos antigos** (de deuses, semideuses, povos: medos, valores, vontades); são feitos de **Arcano e Cataclisma ao mesmo tempo**; nobres independente da conduta; carregam peso emocional; não há bem nem mal, há **ser**. **Wyverns são filhos dos dragões.** Aplicado em [[08 Mundo e entidades]].
 
 ✅ **Povos do mundo**: não são raças jogáveis com números; mudam a aparência e, nos muito divinos, o jeito da magia. Lista: anões, elfos, halflings, golias, tieflings, **Verdejantes**, orcs, goblins, gnomos, trolls, fadas, leprechauns, elementais, draconatos, **Luphos**, **Almum**, autômatos, **Vikings**, **Corves**; e os **Innhomus** (divindades esquecidas e cataclismáticas, em planos à parte). Acrescentei **tritões e sereias** e **aviares**. Substitui o esboço dos 9 povos que eu tinha proposto.
+
+✅ **Sociedade**: os humanos são dinâmicos nas interpretações; cada lugar trata a magia do seu jeito (d8: proibida, temida, adorada, ignorada, comum, nichada à nobreza, aliada a dores e problemas, controlada), às vezes duas ao mesmo tempo; versões de leis. Em [[08 Mundo e entidades]].
+
+✅ **Ordyn e Oryuundis**: moeda de metal cunhada em Oryuundis, imune à magia **só enquanto moeda**; fundido, **amplia palavras, Valores e sentimentos** (minha leitura do "amplia o poder das palavras, valores, sentimentos"). Moeda neutra e imparcial.
+
+✅ **Preços pela conta**: 1 dia de trabalho = 3–5 o; itens mágicos = Base da Moldura (100 / 300 / 900 / 2.700, triplica) × fator (0,5 narrativo · 0,8 situacional · 1 comum · 1,3 número permanente · 1,5 economia da magia); recompensa por sessão ≈ Base ÷ 3, uma aventura ≈ um item. Os preços da tabela de [[06 Itens e dinheiro]] já batiam com a fórmula.
+
+✅ **P-10**: roda **A** confirmada.
 

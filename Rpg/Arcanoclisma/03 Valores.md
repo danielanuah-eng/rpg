@@ -26,7 +26,6 @@ Oposição serve para duas coisas: **Magia em Dupla de opostos** (mais forte, ma
 - **Adversário do Valor X**: magias de X contra ele têm Dificuldade +2 e metade do dano. Magias do **oposto** de X têm Dificuldade −2 e +1 dado de dano.
 - **Sublimeyn é o Eixo**: não tem oposto. Em dupla combina com qualquer um sem penalidade. Adversários de Sublimeyn ganham do gerador uma fraqueza sorteada.
 
-❓ **P-10**: esta é a roda A. A alternativa B seria Conflitüo × Sublimeyn (romper × moldar), Dominum × Persona (impor × ser), Alvorum × Cognitium, Morbidyum × Primitivum (findar × brotar), com **Eternyr** como Eixo. Eu prefiro a A porque Dominum × Primitivum (domar × ser selvagem) e Morbidyum × Eternyr (acabar × durar) são opostos que qualquer jogador entende na hora.
 
 ---
 

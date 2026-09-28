@@ -126,7 +126,7 @@ O mundo tem **humanos** e tem **outros povos**. As culturas nascem do lugar e do
   - **Vau-Grande** — cidade de rio, com o **Sino da Maré** que há duzentos anos avisa as cheias.
   - **Confluência** — planície vasta cheia de criaturas mágicas pacíficas, onde Arcano e Cataclisma vivem em **homeostase pacífica**: a magia que sobra é absorvida pela terra. Ali fica **GrandGaleonis**, a escola-cidade de magia para Comprometidos.
 - **Bronze Arco**: metal arcano do mundo, dourado-escuro, que aceita runas. Armas de Bronze Arco cravejadas de runas de Conflitüo são as mais caras (e as mais conjuradas) das arenas.
-- **Dinheiro**: **Ordynus** (cada mesa pode renomear conforme a Era).
+- **Dinheiro**: o **Ordyn** (plural Ordynus) é uma moeda de metal cunhada em **Oryuundis**, um metal que **na sua essência é imune à magia**. O curioso: ele **só se mantém imune enquanto é usado como moeda**. Derretido, trabalhado em joia ou em arma, o Oryuundis faz o contrário: **amplia o poder das palavras, dos Valores e dos sentimentos** de quem o carrega. O Ordyn nasceu para ser uma **moeda neutra, imparcial**, que nenhuma magia falsifica. Por isso fundir moeda é crime em quase todo lugar, e por isso existe contrabando de Ordyn derretido.
 
 ## Dragões e wyverns
 
@@ -174,16 +174,24 @@ Os números estão no [[11 Bestiário]] (Dragonete, Jovem, Adulto, Ancião, Wyve
 
 ## Versões (para sortear, escolher ou ignorar)
 
-### Como as pessoas veem um Comprometido (d6, por lugar)
+### A sociedade: cada lugar interpreta a magia do seu jeito
 
-| d6 | Aqui, um Comprometido é... |
-|---|---|
-| 1 | **vizinho**: magia é como ofício; o ferreiro esquenta o metal com a mão e ninguém repara |
-| 2 | **arma**: todo Comprometido deve serviço à cidade, à guarda ou ao senhor local |
-| 3 | **santo**: pedem bênção, cura, chuva; e cobram quando não vem |
-| 4 | **doente**: "foi um de vocês que abriu a Ferida"; é vigiado, às vezes expulso |
-| 5 | **ferramenta**: contratado, alugado, vendido em contrato; valorizado, nunca igual |
-| 6 | **ninguém sabe**: a magia ali é segredo; quem tem, esconde |
+Os humanos (e os outros povos) são **dinâmicos nas suas interpretações**. A mesma magia que numa cidade é ofício, na vizinha é crime, e no vale seguinte é milagre. Isso muda com o tempo, com uma guerra, com uma Ferida, com um Comprometido que salvou ou destruiu alguém. Não há uma lei geral do mundo: há **lugares**, e cada um tem a sua relação com a magia, às vezes mais de uma ao mesmo tempo.
+
+| d8 | Aqui, a magia é... | Como aparece na mesa |
+|---|---|---|
+| 1 | **proibida** | lei escrita, multa, prisão, fogueira; Comprometidos vivem escondidos ou em fuga; Inquisidores |
+| 2 | **temida** | ninguém proíbe, mas todo mundo se afasta; portas fecham; culpa de tudo que dá errado |
+| 3 | **adorada** | templos, bênçãos, promessas; o Comprometido é santo, e o santo tem que cumprir |
+| 4 | **ignorada** | ninguém repara; magia é como o tempo, às vezes ajuda, às vezes estraga a colheita |
+| 5 | **comum** | ofício como outro qualquer; o ferreiro esquenta o metal com a mão, a padeira acende o forno com uma palavra |
+| 6 | **nichada à nobreza** | só famílias nobres têm Escolas e tutores; magia de plebeu é crime ou escândalo |
+| 7 | **aliada a dores e problemas** | a magia está onde está a guerra, a doença, a Ferida; cura paga caro, arma é alugada, cada magia lembra uma perda |
+| 8 | **controlada** | uma guilda, uma Escola ou os Protetores registram, licenciam e cobram; magia sem selo é contrabando |
+
+**Um mesmo lugar pode ter duas** (adorada pelo povo e proibida pela nobreza; comum na cidade e temida no campo). É aí que as histórias nascem.
+
+**Leis de magia (versões para um lugar)**: registro obrigatório de Comprometidos · proibição de certos Valores (Cognitium e Dominum são os mais proibidos) · magia só com licença de guilda · Comprometido deve serviço militar · magia em público só em festa · Escolas com imunidade · nenhuma lei, só costume.
 
 ### Como a magia desperta (d6)
 
