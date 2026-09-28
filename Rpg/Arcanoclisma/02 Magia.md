@@ -45,17 +45,17 @@ Esse é o bônus da magia: ela **não recebe Vantagem paga** (Vivência, Ajudar)
 4. **Pague**: custo do Grau + 1 Arcano por palavra de Valor além da primeira + Ampliações. (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
 5. **Role** os dados do Grau + Sintonia + **1 por palavra de Valor** (com a relação dita). Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre). **Contra o quê**, depende de quem recebe a magia (abaixo).
 
-### Quem recebe a magia
+### Três tipos de efeito
 
-A rolagem é sempre **sua**: é o teste para a magia acontecer. O que muda é contra o que você rola e se o alvo tem chance de escapar.
+A rolagem é sempre **sua**. O **tipo do efeito** diz contra o que você rola e se alguém faz um teste físico para escapar.
 
-| A magia… | Você rola contra | O alvo |
-|---|---|---|
-| **não tem alvo** (abrir, criar, mudar o lugar) ou vai em **quem aceita** (você, um aliado, um objeto seu) | a **Dificuldade do Grau** | não rola nada: ninguém resiste à própria magia nem à que aceitou |
-| **precisa acertar** (projétil, golpe, jato, algo que se desvia) | a **Esquiva** do alvo (PJ) ou a **Dificuldade** (adversário) | não rola: a Esquiva já é a defesa dele |
-| **muda quem não quer** (medo, encanto, sono, enfraquecer, prender) | a **Dificuldade do Grau** | se a magia aconteceu, **resiste**: rola contra **o seu total** |
+| Efeito | Exemplos | Você rola contra | Quem é pego |
+|---|---|---|---|
+| **Projétil** | jato, lâmina, flecha de luz, soco que atravessa: algo que sai e precisa acertar | a **Esquiva** (PJ) ou a **Dificuldade** (adversário) do alvo | não rola: a Esquiva já é a defesa |
+| **Teste mágico** | fortalecer o corpo, abrir, criar, mudar um objeto, curar: a magia só precisa acontecer | a **Dificuldade do Grau** | ninguém rola |
+| **Pequeno evento** | medo, encanto, sono, uma rede de gelo, o chão que escorrega, uma rajada: a magia cria uma situação e quem está nela reage | a **Dificuldade do Grau** | faz um **teste físico** contra **o seu total** para escapar |
 
-**Resistir**: é uma reação (não gera Arcano nem Cataclisma). O mestre escolhe o atributo pela descrição da magia e pela situação: medo e encanto pedem *firme* (Sabedoria), ser preso pede *forte* (Força), uma ilusão pede *atento* (Percepção), um corpo que amolece pede *resistente* (Força). Iguala ou passa o seu total, escapa.
+**O teste físico** de quem é pego é uma reação (não gera Arcano nem Cataclisma). O mestre escolhe o atributo pelo tipo da magia e pela situação: medo e encanto pedem *firme* (Sabedoria); rede e prisão, *forte* (Força); chão que escorrega e rajada, *ágil* (Agilidade); ilusão, *atento* (Percepção). Iguala ou passa o seu total, escapa.
 
 - **PJ** resiste com 2d12 + o atributo.
 - **Adversário** resiste com **d20 + o Ataque** dele (o mestre sempre rola d20). Uma palavra dele que combina com resistir (*Destemido* contra medo) dá Vantagem; uma que o deixa exposto (*Covarde*) dá Desvantagem.
@@ -224,7 +224,7 @@ Dois personagens conjuram juntos, **numa rolagem só**. É o jeito de passar do 
 1. **Custo**: 3 Arcano, divididos como quiserem, e cada um paga suas palavras de Valor extras.
 2. **Palavras**: cada um põe palavras do próprio Valor (e as Básicas, de graça). Palavras de Valor no total: até **o maior limite dos dois + 2** (máx. 7).
 3. **Grau do efeito**: o maior Grau que qualquer um dos dois conseguiria **+1** (máx. 5).
-4. **Rolagem**: quem **conduz** rola os dados **do Grau do efeito** + a própria Sintonia + **1 por palavra de Valor que ele pôs**; o **parceiro soma +2**. Contra o que a magia pedir (ver *Quem recebe a magia*: Grau do efeito, Esquiva/Dificuldade de quem precisa ser acertado, e resistência de quem não quer).
+4. **Rolagem**: quem **conduz** rola os dados **do Grau do efeito** + a própria Sintonia + **1 por palavra de Valor que ele pôs**; o **parceiro soma +2**. Contra o que o efeito pedir (ver *Três tipos de efeito*).
 5. **As Skills dos dois Valores valem**. Os Drawbacks também.
 6. Par/ímpar, Crítico e Desequilíbrio: como numa magia normal, nos dados rolados.
 

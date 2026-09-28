@@ -41,8 +41,8 @@ A **Dificuldade** é o número que os jogadores tiram para acertar o adversário
 **A régua é o ponto de partida, não uma lei.** A Dificuldade de um adversário **varia** pelo que ele é: Valores, história, corpo, palavras. Um bicho frágil e distraído pode ter Dificuldade **abaixo** da régua; um guarda veterano de armadura, acima. Ajuste de −3 a +3 é normal; use o *Parecer* e o *Ser* como guia (*Lento*, *Cego*, *Enorme*: mais fácil de acertar; *Veloz*, *Blindado*, *Etéreo*: mais difícil).
 
 **Contra magia**, o adversário se defende de dois jeitos, e os dois crescem com a Moldura dele:
-- **Desviar**: magia que precisa acertar rola contra a **Dificuldade** dele.
-- **Resistir**: magia que muda quem não quer (medo, encanto, prender) é resistida com **d20 + Ataque** contra o total de quem conjura. Palavras dele que combinam dão Vantagem; as que o expõem, Desvantagem. **Lacaios não resistem.**
+- **Desviar**: magia do tipo **Projétil** rola contra a **Dificuldade** dele.
+- **Resistir**: num **Pequeno evento** (medo, encanto, rede, chão que escorrega) ele faz o teste físico com **d20 + Ataque** contra o total de quem conjura. Palavras dele que combinam dão Vantagem; as que o expõem, Desvantagem. **Lacaios não resistem.**
 - Maestrias (*Resiliente*, *Anulador*) e o Valor do adversário mexem nas duas.
 
 ### Papéis

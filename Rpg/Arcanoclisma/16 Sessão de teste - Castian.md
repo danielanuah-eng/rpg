@@ -61,7 +61,7 @@
   - Castian examina a concha de OulVeil e amarra o casaco do Lino no braço esquerdo. *Sentir* no casaco: acha o rastro do Lino até o alto da torre.
   - *Fortalecer* (Músculo) em si mesmo (Grau 2, 1 Arcano): 🎲 4 e 12 → 19, sucesso. Força +1 até a próxima Falha.
   - Sobe pelo mastro com a Vivência *Cresci no cais de OulVeil*: 🎲 8 e 12 → 23, sucesso.
-  - Regra ajustada na mesa: **quem recebe a magia** (sem alvo ou em quem aceita → Dificuldade do Grau; acertar → Esquiva/Dificuldade; quem não quer → resiste contra o total). **Só conta palavra que muda o efeito** (opção B): *Fortalecer Músculo* e *Acalmar Humanos* valem uma palavra. Arcano do Castian fica em 6.
+  - Regra ajustada na mesa: **três tipos de efeito** (Projétil → Esquiva/Dificuldade; Teste mágico → Dificuldade do Grau; Pequeno evento → Dificuldade do Grau e quem é pego faz teste físico contra o total). **Só conta palavra que muda o efeito** (opção B): *Fortalecer Músculo* e *Acalmar Humanos* valem uma palavra. Arcano do Castian fica em 6.
 - **Evento 3 — O alto da torre (escaramuça).** Cataclisma do mestre: 5. Pote da Cheia 3/8. Pote do Lino 1/4 (quando encher, o Eco engole a voz do Lino de vez).
   - **O Eco que Come o Som**: Disrupto de Alvorum · Padrão M1 · Dif 12 · Limiares 8/14 · PV 5 · Ataque +1 · Dano 1d10+2. *Agir*: Enrolar; Engolir Voz (1C). *Parecer*: Faminto de Magia, Silencioso.
   - **2 Sobras** (lacaios): Dif 10 · Limiares 4/7 · Dano 4.
