@@ -392,3 +392,5 @@ Sua resposta: ✅ mais palavras = efeito mais específico, mais fácil de funcio
 
 ✅ **Pequeno evento** inclui buff: tudo que modifica a realidade, o mundo, alguém ou alguma coisa, ou cria.
 
+✅ **As palavras somam sem explicar relação**: basta jogador e mestre concordarem com a combinação, o sentido da junção e o nível do efeito. A relação vira só história, opcional. Aplicado em [[02 Magia]].
+

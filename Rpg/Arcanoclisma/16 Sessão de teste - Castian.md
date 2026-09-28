@@ -31,7 +31,7 @@
 - **Skill · Toque Humano**: magia em pessoas funciona normal; fora de pessoas, −2 no total.
 - **Drawback · Tropeço**: se a magia falhar, sai inútil ou atrapalha.
 - **Canal · Foco arcano**: luvas marrons com pérolas enormes, que brilham numa luz branco-azulada, bruxuleante e uniforme. +1 no dano e na cura de magia.
-- **Sintonia** +2 (+1 por palavra de Valor, com a relação dita) · **Grau máximo** 2 · **Palavras de Valor por magia** 2 · **uma** Palavra Básica grátis
+- **Sintonia** +2 (+1 por palavra de Valor) · **Grau máximo** 2 · **Palavras de Valor por magia** 2 · **uma** Palavra Básica grátis
 - **Graus**: G1 grátis, sem rolar · G2 custa 1 Arcano, 2d12 + 2 + palavras (1 ou 2), dura até a próxima Falha
 - **Palavras de Persona**: Sentir, Acalmar, Envergonhar, Inspirar, Consolar, Encantar, Comover, Remodelar, Fortalecer, Enfraquecer, Cantar, Despertar · Coração, Pele, Rosto, Voz, Alma, Músculo, Medo, Coragem, Fúria, Amor, Saudade, Música · Belo, Grotesco, Robusto, Frágil, Vigoroso, Sereno, Ciumento, Terno, Apaixonado, Contagiante, Íntimo, Humano
 - **Palavras extras**: □ □ □ □
@@ -71,6 +71,7 @@
   - **Atalho** (Laço *O medo que eu escondo fazendo tudo e rindo*): Castian ri e diz ao Lino que vai dar tudo bem, com frio na barriga e vontade de fugir. Ignora a Desvantagem; mestre +2 Cataclisma. Nomeou do que o Atalho protege: +1 Arcano. **Atalhos na sessão: 1/2.**
   - *Inspirar* (+ *Atacar*, básica) em si mesmo (Pequeno evento, Grau 2, 1 Arcano): 🎲 7 e 11 → 20 contra 12, sucesso **por Cataclisma**: Força +1 até a próxima Falha. O mestre emoldura: a Sobra sobe até o peito e o Castian **perde a voz**.
   - Remo no casulo (Força +1, contra Dif 12 do Eco): 🎲 2 e 10 → 13, sucesso **por Arcano**. Dano 6 + 1 = 7, abaixo do Limiar 8: Eco marca 1 PV (4/5). Os fios da boca e dos ouvidos do Lino se rompem: ele grita.
-  - Regra ajustada na mesa: as perguntas de criação são **narrativas** (orientam decisões, não dão bônus); a relação da magia é dita pelo jogador na hora, se quiser.
+  - Regra ajustada na mesa: as perguntas de criação são **narrativas** (orientam decisões, não dão bônus); **as palavras somam sem explicar relação**: basta jogador e mestre concordarem com a combinação, o sentido e o nível do efeito.
   - Castian quer "Aumentar Grito" (palavras de Eternyr e Conflitüo, que ele não tem) → vira **Fortalecer Voz** em Persona (sentido próximo). Grau 2, 2 palavras, 2 Arcano, sem relação dita. Na voz do Lino (pessoa, sem −2); o efeito pega o Eco e as Sobras. 🎲 **2 e 2: Crítico** (+2 Arcano, sem moldura para o mestre). Efeito de crítico: melhor resultado possível (total 24 + 2 = 26). O Eco testa (d20 20 + 1 = 21) e não aguenta. As duas Sobras estouram (lacaios não testam); o Castian recupera a voz. O Eco solta o casulo e se enfia na boca do sino, agarrado ao badalo. Lino livre. Pote do Lino encerrado. Mestre +1 Cataclisma (*Faminto de Magia*) e põe 1 na Cheia (4/8).
+  - O jogador canta de verdade ("OOOOOHHHHHH"). Castian se joga embaixo do sino: **Cantar Vigoroso** (Grau 2, 2 palavras, 2 Arcano, +2), a própria voz usando o sino como caixa. 🎲 **2 e 2: Crítico de novo** (+2 Arcano). Melhor resultado: 24 + 2 + 2 = 28. O Eco testa (d20 5 + 1 = 6) e não aguenta: estoura dentro do sino e solta todo o som que comeu. **O Sino da Maré toca.** A Cheia recua: Ameaça encerrada. Eco derrotado. Fim da escaramuça.
 

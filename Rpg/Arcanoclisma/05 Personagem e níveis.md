@@ -39,7 +39,7 @@ Anote cada relação na ficha dos dois personagens (no app, aparece nas duas fic
 
 Três blocos. As respostas **mudam com a história**: a ficha tem espaço para reescrever, e a mesa pode voltar a elas em cada Pouso longo ou no fim de um arco.
 
-As respostas são **narrativas**: orientam as decisões do personagem e dão assunto para a mesa, mas **não dão bônus** sozinhas. A relação de uma magia (que faz as palavras somarem) é dita pelo jogador na hora, se ele quiser; o mestre não a tira da ficha.
+As respostas são **narrativas**: orientam as decisões do personagem e dão assunto para a mesa, mas **não dão bônus** sozinhas. Na magia, o que conta é jogador e mestre concordarem com a combinação das palavras, o sentido e o nível do efeito.
 
 ### O Vínculo (o personagem e a magia)
 

@@ -24,11 +24,11 @@ Por isso **as tabelas nunca repetem uma raiz**: se o Valor tem *Coragem*, ele n�
 
 **Só conta palavra que muda o efeito** (para custo e para bônus). Uma palavra que apenas diz *onde* ou *em quem* a magia cai, sem acrescentar nada que a primeira já não faça, é detalhe da intenção e não conta nem custa: *Fortalecer* (Músculo) em você mesmo é uma palavra só, porque fortalecer um corpo já é músculo; *Acalmar* (Humanos) numa pessoa também. Se a segunda palavra **acrescenta** efeito (*Fortalecer Coragem*: além do corpo, o medo some), ela conta e custa.
 
-### Relação: as palavras somam
+### As palavras somam
 
-Ao conjurar, o jogador diz em **uma frase** por que aquelas palavras, para aquele personagem, fazem aquilo acontecer. A relação **corresponde ao personagem** (aos valores, à ética, às qualidades, ao jeito de ver o mundo, ao Compromisso dele).
+**Cada palavra de Valor soma +1 no total.** Mais palavras deixam o efeito **mais específico**, e o que é específico funciona mais fácil.
 
-Com a relação dita, **cada palavra de Valor soma +1 no total**. Mais palavras deixam o efeito **mais específico**, e o que é específico funciona mais fácil. Sem a relação, as palavras entram no efeito, mas não somam.
+Não é preciso explicar a relação do personagem com a palavra. O que precisa é **jogador e mestre concordarem** com três coisas: a **combinação** das palavras, o **sentido** da junção e o **nível do efeito** (o Grau). Se o jogador quiser contar por que aquela palavra é dele, ótimo para a história, mas não muda o número.
 
 - **1 palavra = +1**: é o normal, e as Dificuldades do Grau foram calibradas com ele.
 - Cada palavra a mais custa **1 Arcano** e soma **+1**.
@@ -45,7 +45,7 @@ Esse é o bônus da magia: ela **não recebe Vantagem paga** (Vivência, Ajudar)
    - **Uma Palavra Básica** (verbo, modo ou forma): **não custa e não conta no limite**. Ela existe para **dar ao Valor ações que ele sozinho não tem** (um Cognitium que precisa *escalar*, um Conflitüo que precisa *esconder*). Precisa fazer sentido concreto.
 3. **Grau**: pelo tamanho do efeito (tabela abaixo), até o seu máximo (Moldura + 1). O mestre tem a palavra final se o efeito pedido for maior do que o Grau.
 4. **Pague**: custo do Grau + 1 Arcano por palavra de Valor além da primeira + Ampliações. (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
-5. **Role** os dados do Grau + Sintonia + **1 por palavra de Valor** (com a relação dita). Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre). **Contra o quê**, depende de quem recebe a magia (abaixo).
+5. **Role** os dados do Grau + Sintonia + **1 por palavra de Valor**. Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre). **Contra o quê**, depende de quem recebe a magia (abaixo).
 
 ### Três tipos de efeito
 
@@ -140,7 +140,7 @@ Os quatro conjuntos têm **o mesmo máximo, 24**, que era a sua ideia. O que mud
 - **Por que não 8d4**: soma até 32 (não 24) e acerta 98–100% contra qualquer Dificuldade. Ele quebraria a tabela. Troquei por **6d4** e coloquei **3d8** no meio. ❓ **P-02**
 - **3d8 é o Grau traiçoeiro**: número ímpar de dados nunca empata, então metade das magias Impressionantes sai por Cataclisma. Soa bem para o "Grau adolescente" da magia. Se não gostar, dá para contar empate a favor do jogador.
 
-Conjurar no seu Grau máximo, contra a Dificuldade do Grau, dá **81–84%** em todas as Molduras com **1 palavra** (e a relação dita); com 2 palavras, 85–90%; com o máximo, 85–99%. Sem a relação, 70–77%. (Magia com Relação acerta um pouco mais que arma contra adversários; arma compensa batendo mais forte e sem custo.)
+Conjurar no seu Grau máximo, contra a Dificuldade do Grau, dá **81–84%** em todas as Molduras com **1 palavra**; com 2 palavras, 85–90%; com o máximo, 85–99%.  (Magia com Relação acerta um pouco mais que arma contra adversários; arma compensa batendo mais forte e sem custo.)
 
 ## Leitura dos dados na magia
 
@@ -279,10 +279,9 @@ Formas são só formato: **nenhuma Palavra Básica é elemento** (fogo, gelo, lu
 ## Exemplos de conjuração
 
 **Iara, Sublimeyn, nível 1 (Moldura 1, Sintonia +2, Canal Foco: um frasco de água do rio onde quase se afogou)** quer derrubar o guarda com um jato de água gelada.
-- Relação: "Gelo, para ela, é o rio que parou para ela não morrer."
 - Palavras: **Gelo** (núcleo) + *Projétil* (básica, grátis).
 - Grau 2 (uma pessoa, dano). Custo total 1 Arcano.
-- É um jato: precisa **acertar**. Rola 2d12 + 2 (Sintonia) + 1 (uma palavra, com a relação dita) contra a Dificuldade do guarda, 12. Tira 7 e 8: total 18, acerta. Um par (+1 Arcano: a magia se pagou), um ímpar (+1 Cataclisma). Dano 1d10 + 2 + 1 (Foco).
+- É um jato: precisa **acertar**. Rola 2d12 + 2 (Sintonia) + 1 (uma palavra) contra a Dificuldade do guarda, 12. Tira 7 e 8: total 18, acerta. Um par (+1 Arcano: a magia se pagou), um ímpar (+1 Cataclisma). Dano 1d10 + 2 + 1 (Foco).
 
 **Tomé (Conflitüo) e Iara (Sublimeyn), nível 5** fazem uma dupla: **Explodir + Lâmina + Metal + Fundir + Grupo**.
 - 4 palavras de Valor, Grau do efeito 4 + 1 = **5 (Mítico)**: uma chuva de lâminas de metal derretido sobre até todos os inimigos à vista.
