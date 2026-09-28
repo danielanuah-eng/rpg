@@ -60,7 +60,7 @@
 - **Esquiva** 12 · **PV** 5 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 6 / 12 · **Proteção** 3 (Leve)
 - **Adaga**: Bater (+ Rápido), Toque, d8+1. **Magia de dano** (G2): 1d10 + 2.
 - **Talento — Mil Caras**: Vantagem para disfarçar, mentir e se esconder; mentira que funciona num PNJ = +1 Arcano. **Hábito — Sumir na Paisagem** (3, uma vez por sessão): se esconde no ambiente sem ninguém perceber, descrevendo como.
-- **Skill — Toque Humano**: em pessoas, o primeiro passo de Ampliar sai de graça. **Retaliação — Tropeço** (e fora de gente, só pelo corpo ou sentimento): se falhar, a magia sai inútil ou atrapalha.
+- **Skill — Toque Humano**: em pessoas, o 1º quadrado da constituição sai de graça. **Retaliação — Tropeço** (e fora de gente, só pelo corpo ou sentimento): se falhar, a magia sai inútil ou atrapalha.
 - **Compromisso**: "Gente vem antes de tudo."
 - **Laços**: *A trupe que eu abandonei na estrada* · *Mentir antes que me perguntem* (Atalho de costume) · *O medo de que ninguém goste de quem eu sou sem máscara*
 - **Vivências**: Atriz de trupe · Conheço todo tipo de gente de feira

@@ -48,7 +48,7 @@ A **Dificuldade** é o número que os jogadores tiram para acertar o adversário
 
 **Contra magia**, o adversário se defende de dois jeitos, e os dois crescem com a Moldura dele:
 - **Desviar**: magia do tipo **Projétil** rola contra a **Dificuldade** dele.
-- **Resistir**: num **Teste mágico** (sono, encanto, medo, rede que prende) só ele rola: **d20 + Ataque** contra a **Dificuldade da magia** (12 + Sintonia + palavras de quem conjura). 20 natural sempre escapa; 1 natural é Crítico de quem conjurou; o d20 dele gera o Arcano (par) ou o Cataclisma (ímpar) daquela magia. Palavras dele que combinam dão Vantagem; as que o expõem, Desvantagem. **Cada ser rola o seu**; um **bando ou grupo** rola uma vez e, se falhar, perde 1 / 2 / 3 membros (falhou por 1–4 / 5–9 / 10+).
+- **Resistir**: num **Teste mágico** (sono, encanto, medo, rede que prende) só ele rola: **d20 + Ataque** contra a **Dificuldade da magia** (13 + Moldura + palavras de quem conjura). 20 natural sempre escapa; 1 natural é Crítico de quem conjurou; o d20 dele gera o Arcano (par) ou o Cataclisma (ímpar) daquela magia. Palavras dele que combinam dão Vantagem; as que o expõem, Desvantagem. **Cada ser rola o seu**; um **bando ou grupo** rola uma vez e, se falhar, perde 1 / 2 / 3 membros (falhou por 1–4 / 5–9 / 10+).
 - Maestrias (*Resiliente*, *Anulador*) e o Valor do adversário mexem nas duas.
 
 ### Papéis
