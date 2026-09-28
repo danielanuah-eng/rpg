@@ -158,7 +158,7 @@ Nada deste Comportamento funciona em combate.
 
 | | Básico | Superior |
 |---|---|---|
-| **Talento · Já Li Sobre Isso** | **Duas vezes por sessão**, pergunte ao mestre um **fato objetivo e descritivo** sobre uma criatura, objeto ou lugar: o que é, de que é feito, como funciona, onde costuma estar. A resposta é verdadeira. Não vale para segredos da história nem para saber o que alguém pensa ou se está mentindo. | Seus testes de **Inteligência nunca geram Cataclisma** (dados ímpares neles não dão ponto ao mestre). E quando você vê uma palavra de outro Valor ser usada, pode escrevê-la num espaço extra livre sem gastar avanço (continua no limite de 4). |
+| **Talento · Já Li Sobre Isso** | **Duas vezes por sessão**, pergunte ao mestre um **fato objetivo e descritivo** sobre uma criatura, objeto ou lugar: o que é, de que é feito, como funciona, onde costuma estar. A resposta é verdadeira. Não vale para segredos da história nem para saber o que alguém pensa ou se está mentindo. | Seus testes de **Estudar, Raciocinar, Lembrar e Investigar nunca geram Cataclisma** (dados ímpares neles não dão ponto ao mestre). E quando você vê uma palavra de outro Valor ser usada, pode escrevê-la num espaço extra livre sem gastar avanço (continua no limite de 4). |
 | **Hábito · Análise** | **No começo de um Evento**, descubra **um** dado sobre o que está à frente: a Dificuldade, os Limiares, uma palavra ou o Valor de um adversário; um costume de uma cidade; um perigo de um lugar. | Ou, uma vez por sessão, depois que o mestre rolar, diga que previu: ele rola de novo. |
 
 ## 9. Caótico — *nada dá certo, e ele sabe navegar isso*

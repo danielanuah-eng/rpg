@@ -241,7 +241,7 @@ Nada dura "X turnos". Efeitos duram até um **marcador** acontecer, e os marcado
 | **Longe** | até 6 passos | do outro lado da praça, tiro de arco |
 | **Horizonte** | o que se vê | outro morro, o céu |
 
-Mover até Perto vem junto com a ação. Ir mais longe **é** a ação (ou um teste de Agilidade para ir mais rápido).
+Mover até Perto vem junto com a ação. Ir mais longe **é** a ação (ou um teste de Movimentar Rápido para ir mais rápido).
 
 ## 8. Esquiva, dano e Vida
 

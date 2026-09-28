@@ -32,7 +32,8 @@ Sistema de RPG próprio, inspirado em Daggerheart, Rune RPG, Ethmos e Triangle A
 22. [[21 Kit de campanha]] — peças para o mestre: 11 lugares, o que as entidades querem, artefatos, 20 ganchos e 6 arcos
 23. [[22 O que é gerado]] — Fase 3: o catálogo de tudo que vira dado (24 tipos), os campos, os geradores e o exemplo de JSON
 24. [[23 Nomes e Laços]] — gerador de nomes (6 culturas, 8 povos, epítetos) e tabelas de Laços para o personagem aleatório
-25. [[24 Guia visual]] — Fase 4: página, personagem, as Esferas dos Valores (vetores em `arte/simbolos/`), cores, fontes, ícones, fichas
+25. [[24 Guia visual]] — Fase 4: página, personagem, as Esferas dos Valores (vetores em `arte/simbolos/`), cores, fontes, ícones, fichas, página do livro (`arte/livro-magia.html`)
+26. [[25 Prompts de arte - catálogo]] — Fase 4.5: 519 prompts (armas, itens, artefatos, terrenos, lugares, Reinos, povos, dragões e os 288 do bestiário), gerados por `arte/prompts/gerar_prompts.py`; prompt completo em `arte/prompts/catalogo.json`
 
 ## Conta dos dados
 

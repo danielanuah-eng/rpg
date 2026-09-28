@@ -43,7 +43,7 @@
 | 21 | **Efeito Colateral** | 20 | [[02 Magia]] | d20 | montador de magia (rola sozinho) | não |
 | 22 | **Versões de lore** | d8 sociedade, d6 despertar, d4 Khairvhaan... | [[08 Mundo e entidades]] | dado, texto | gerador de lugar e de campanha | não |
 | 23 | **Marcos** (loja) | 8 linhas | [[19 Fim de sessão - as perguntas de envolvimento]] | custo, limite | ficha (fim de aventura) | não |
-| 24 | **Prompt de arte** | 10 personagens + 1 por objeto com imagem | [[20 Prompts de arte - personagens]] | estilo base, cena, elemento da página que toca | geração de imagem em lote | — |
+| 24 | **Prompt de arte** | 10 personagens + 519 do catálogo | [[20 Prompts de arte - personagens]], [[25 Prompts de arte - catálogo]] | estilo base, cena, elemento da página que toca | geração de imagem em lote | — |
 
 ## Os geradores (o que o app faz com isso)
 
