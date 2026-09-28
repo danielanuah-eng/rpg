@@ -124,7 +124,7 @@ Perguntas de vínculo: *Qual material você sente como se fosse parte do seu cor
 
 | Para | Como Dominum faz | Tipo |
 |---|---|---|
-| **Atacar** | *Chicote* atirado; *Ajoelhar*, *Prender*, *Obrigar* a largar a arma | Projétil · Teste mágico (Firmar ou Levantar) |
+| **Atacar** | *Chicote* atirado; *Ajoelhar*, *Algemar*, *Obrigar* a largar a arma | Projétil · Teste mágico (Firmar ou Levantar) |
 | **Proteger** | *Repelir* ou *Afastar* quem vem; a Skill *Comando Reflexo*, antes do golpe | Teste mágico · reação |
 | **Aliviar** | *Mandar* um corpo parar de tremer; *Domesticar* uma fera ferida que ataca por medo | Pequeno evento · Teste mágico |
 | **Descobrir** | *Obrigar* alguém a responder; sentir onde está quem você *Marcou* | Teste mágico (Firmar) · Pequeno evento |
@@ -141,7 +141,7 @@ Perguntas de vínculo: *Qual material você sente como se fosse parte do seu cor
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
 | **1** | Mandar | Obrigar | Ajoelhar | Dobrar | Domesticar | Puxar |
-| **2** | Afastar | Repelir | Expulsar | Arrombar | Anular | Prender |
+| **2** | Afastar | Repelir | Expulsar | Arrombar | Anular | Algemar |
 | **3** | Servo | Coleira | Corrente | Chicote | Fera | Matilha |
 | **4** | Trono | Jaula | Marca | Ordem | Sangue | Carne |
 | **5** | Submisso | Leal | Manso | Feroz | Rendido | Irresistível |

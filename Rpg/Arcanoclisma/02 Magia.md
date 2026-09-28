@@ -286,7 +286,7 @@ As Palavras Básicas são os **verbos da tabela de Interações** ([[01 Regras c
 1. **Descrever qualquer ação** e escolher o teste: **atributo + verbo** ("Furtar", "Convencer", "Atirar").
 2. **Completar uma magia**: **uma** Palavra Básica por magia (um verbo da tabela ou uma forma), de graça, sem contar no limite de palavras. É ela que dá ao Valor as ações que ele sozinho não alcança: "*Voz* + **Ameaçar**", "*Raiz* + **Agarrar**", "*Sombra* + **Esconder**".
 
-Além dos verbos da tabela, quatro **coisas** também são Palavras Básicas: **Arma · Item · Poção · Objeto**. *Lâmina* + **Criar** faz uma arma do nada; *Desarmar* + **Arma** tira a arma (ou a magia que prende) da mão de alguém; *Fogo* + **Apagar** acaba com o incêndio; *Vida* + **Poção** põe a cura num frasco.
+Além dos verbos da tabela, cinco **coisas** também são Palavras Básicas: **Arma · Item · Poção · Objeto · Armadilha**. *Lâmina* + **Criar** faz uma arma do nada; *Desarmar* + **Arma** tira a arma (ou a magia que prende) da mão de alguém; *Fogo* + **Apagar** acaba com o incêndio; *Vida* + **Poção** põe a cura num frasco.
 
 Palavras Básicas **não custam nada**, mas precisam fazer **sentido concreto** no que está acontecendo, e **nunca são o núcleo** de uma magia. Atributos não são palavras de magia.
 

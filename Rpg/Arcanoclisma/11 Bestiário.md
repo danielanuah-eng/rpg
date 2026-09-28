@@ -809,7 +809,7 @@ Básicas: fortes Aguentar, Bater · fraco Pensar
 
 **Coleira Sem Dono** — M2 · Padrão · Dominum · Instável
 Ser: Coleira, Corrente · Agir: Chicotear · Apertar (1C · Perto · 1 · Fugir · Preso + marca 1 Cansaço · Emoldura) · Parecer: Faminto, Estranho (procura um pescoço) · Quer: um dono; qualquer um serve.
-Básicas: fortes Agarrar, Rastrear · fraco Firmar · Valor: Prender, Coleira, Obrigar
+Básicas: fortes Agarrar, Rastrear · fraco Firmar · Valor: Algemar, Coleira, Obrigar
 
 **Rosto Sem Gente** — M2 · Conjurador · Persona · Instável
 Ser: Rosto, Máscara · Agir: Gritar · Roubar Expressão (1C · Perto · 1 · Firmar · o alvo não consegue mostrar o que sente · Ev) · Parecer: Belo e Grotesco, alternando · Quer: um corpo para o rosto que ele é.
