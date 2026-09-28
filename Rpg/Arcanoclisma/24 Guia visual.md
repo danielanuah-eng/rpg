@@ -96,6 +96,26 @@ Traço do **Wilderfeast** (tinta grossa, contorno preto, cor chapada com sombra 
 
 As imagens de referência não entram no repositório (são de outros artistas): servem só de direção.
 
+### Referências e créditos
+
+O Arcanoclisma se **inspira** nessas obras; ele **não copia** nenhuma delas. A regra:
+
+- **Pode**: tirar qualidades gerais (imponência, chamas que envolvem o corpo, escamas de cristal, paleta curta com acento) e desenhar dragões **novos** com elas. É o que o estilo **D** faz.
+- **Não pode**: gerar ou desenhar uma imagem que seja **a obra de outra pessoa com leves alterações**, nem citar o nome de um artista no prompt para imitar o traço dele. **Crédito não substitui permissão**: uma cópia com o nome do artista embaixo continua sendo cópia.
+- **Se quisermos a obra de verdade** (ela mesma, ou algo muito perto dela): pedir **licença** ao artista, ou **encomendar** a arte a ele. Aí o crédito vem junto, do jeito que ele pedir.
+
+Referências de dragão usadas na direção de arte (confirmar nome e link de cada artista antes de publicar):
+
+| # | O que tiramos dela | Autoria |
+|---|---|---|
+| 1 | dragão negro e azul de escamas como placas de cristal, olhos acesos | não identificada (assinatura e dedicatória em japonês, "To. リリネラ・ルーシャ") |
+| 2 | *Ice Dragon*: traço de tinta, formas angulosas de cristal, cauda que vira chama | **PietroDK** |
+| 3 | *Excalibur* (2019): chamas espectrais que envolvem e desenham o corpo | **Bea Castillo** |
+| 4 | dragão deitado no campo: veios dourados acesos, pontas das asas em chama | não identificada |
+| 5 | dragão coral de penas: elegância, corpo alongado e nobre | não identificada |
+
+No livro, estas referências entram na página de **Créditos e inspirações** (Fase 5), junto com Daggerheart (página) e Wilderfeast (personagens), como **inspiração**, sem reproduzir nenhuma imagem.
+
 ## Página do livro
 
 Rascunho do capítulo de Magia em `arte/livro-magia.html`: páginas de papel com fio dourado e cantos fechados (seção de regra), título em Marcellus SC, texto em duas colunas, capitular na abertura, caixas de regra com borda dourada (ferrugem quando fala de custo e Cataclisma), exemplos montados como pedaços da ficha. Sete páginas: abertura e fórmula, palavras, Graus, quem rola e contra o quê, Descritores, os dados e os Efeitos Colaterais, Canal e Dupla.

@@ -117,6 +117,7 @@ Referências visuais (P-52):
 | 4.4 | Personagens de exemplo: um por Valor e um por Canal, misturando Eras e poses |
 | 4.5 | Lista de prompts, um por item/terreno/adversário/dragão (igual ao `prompts das Peças novas.md`), com id = nome do arquivo — ✅ [[25 Prompts de arte - catálogo]]: 519 prompts em 4 estilos (personagem, dragão, item, cenário), 92 marcados para o livro; gerados por `arte/prompts/gerar_prompts.py`, prompt completo em `arte/prompts/catalogo.json` |
 | 4.6 | Geração em lote (Canva), recorte de fundo, conferência uma a uma |
+| 4.10 | **Créditos e inspirações** (página do livro, Fase 5): Daggerheart, Wilderfeast e os artistas das referências de dragão; confirmar autoria e link de cada um antes de publicar ([[24 Guia visual]]) |
 | 4.9 | Páginas do livro: 🟡 rascunho do capítulo de Magia em `arte/livro-magia.html` |
 | 4.7 | Molduras e ornamentos das duas fichas (a do Valor muda de arte para cada um dos 9) — ✅ rascunho das 9 fichas de Valor em `arte/fichas.html` (seletor por esfera); falta a versão preto e branco e a arte de moldura de cada Valor |
 | 4.8 | **Personagens das sessões ao longo do livro**, interagindo com as páginas e soltando magia (traço Wilderfeast): prompts em [[20 Prompts de arte - personagens]], uma linha nova a cada personagem criado |
