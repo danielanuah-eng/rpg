@@ -44,7 +44,7 @@ Esse é o bônus da magia: ela **não recebe Vantagem paga** (Vivência, Ajudar)
    - **Palavras de Valor**: de 1 até o seu limite (Moldura + 1). **A primeira é do seu Valor** (o núcleo); as outras podem ser do seu Valor ou Palavras Estrangeiras.
    - **Uma Palavra Básica** (verbo, modo ou forma): **não custa e não conta no limite**. Ela existe para **dar ao Valor ações que ele sozinho não tem** (um Cognitium que precisa *escalar*, um Conflitüo que precisa *esconder*). Precisa fazer sentido concreto.
 3. **Grau**: pelo tamanho do efeito (tabela abaixo), até o seu máximo (Moldura + 1). O mestre tem a palavra final se o efeito pedido for maior do que o Grau.
-4. **Pague**: custo do Grau + 1 Arcano por palavra de Valor além da primeira + os passos de Ampliar que você pagar em Arcano. (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
+4. **Pague**: custo do Grau + 1 Arcano por palavra de Valor além da primeira + os passos de Ampliar. (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
 5. **Role** os dados do Grau + Sintonia + **1 por palavra de Valor**. Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre). **Contra o quê**, depende de quem recebe a magia (abaixo).
 
 ### Três tipos de efeito
@@ -215,14 +215,12 @@ A **descrição** do efeito diz quanto poder ele tem. O **Grau** é o patamar; d
 - **Duração**: +1 marcador (na ordem da tabela).
 - **Atributo afetado**: +1.
 
-**Cada passo tem um preço, e você escolhe qual paga**:
+**Cada passo é um investimento e tem uma consequência**:
 
-- **Certeza**: a magia fica mais difícil de funcionar e de manter, **+2 na Dificuldade**; ou
-- **Arcano**: **1** no Grau 1–2, **2** no Grau 3–4, **3** no Grau 5, e a Dificuldade não muda.
+- **Investimento**: pague **Arcano**, **1** no Grau 1–2, **2** no Grau 3–4, **3** no Grau 5.
+- **Consequência**: mais poder deixa a magia mais difícil de funcionar e de manter, **+2 na Dificuldade** por passo. Não é escolha: vem junto.
 
-Dá para misturar na mesma magia (um passo pago em Arcano, outro em Dificuldade).
-
-| Efeito | Onde entra o +2 por passo pago em certeza |
+| Efeito | Onde entra o +2 por passo |
 |---|---|
 | **Projétil** | na Esquiva/Dificuldade do alvo |
 | **Pequeno evento** | na Dificuldade do Grau |
@@ -230,7 +228,7 @@ Dá para misturar na mesma magia (um passo pago em Arcano, outro em Dificuldade)
 
 Máximo de passos por magia = sua **Moldura**. Poder espalhado custa: dois passos em propriedades diferentes pesam o mesmo que dois na mesma, mas a mesa deve descrever cada um (mais longe **e** mais tempo **e** mais gente é uma magia bem mais difícil de segurar).
 
-**Com os níveis, fica mais fácil.** O avanço **Domínio** ([[05 Personagem e níveis]]) escolhe uma propriedade (dano, alcance, alvos/área, duração ou atributo): **o primeiro passo nela, em cada magia, sai de graça** (nem Arcano, nem Dificuldade). Itens *De Grau* e algumas Ressonâncias fazem o mesmo.
+**Com os níveis, fica mais fácil.** O avanço **Domínio** ([[05 Personagem e níveis]]) escolhe uma propriedade (dano, alcance, alvos/área, duração ou atributo): **o primeiro passo nela, em cada magia, não sobe a Dificuldade** (o Arcano você paga igual). Itens *De Grau* dão passos sem custo de Arcano; algumas Ressonâncias tiram a Dificuldade de um passo, como o Domínio.
 
 **Grau abaixo do seu máximo** também é mais fácil de impor: num **Teste mágico**, a Dificuldade da magia sobe **+2 por Grau abaixo** do seu máximo (um susto pequeno pega mais fácil que um terror).
 
@@ -267,7 +265,7 @@ Chance: uns **89–90%** em qualquer Moldura.
 
 ### Valores opostos
 
-Se os dois Valores forem opostos (ver [[03 Valores]]): o efeito sobe **+2 Graus** em vez de +1 (o que passar de 5 vira passos de Ampliar de graça), mas a **Dificuldade +2**, **os dois marcam Cansaço igual ao Grau do efeito − 2**, e se sair por Cataclisma rolam **um Efeito Colateral a mais**. Chance: uns 57–70%.
+Se os dois Valores forem opostos (ver [[03 Valores]]): o efeito sobe **+2 Graus** em vez de +1 (o que passar de 5 vira passos de Ampliar sem custo nem Dificuldade), mas a **Dificuldade +2**, **os dois marcam Cansaço igual ao Grau do efeito − 2**, e se sair por Cataclisma rolam **um Efeito Colateral a mais**. Chance: uns 57–70%.
 
 O **Eixo** (o Valor sem oposto) combina com qualquer um sem penalidade.
 
