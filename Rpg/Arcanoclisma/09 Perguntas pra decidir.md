@@ -432,3 +432,15 @@ Sua resposta: ✅ aplicada, com *Cuidar* → **Proteger**, *Notar* → **Observa
 
 **Próxima sessão (pedido do jogador)**: sessão nova com outro personagem, **Moldura maior**, rápida, **aventura solo**, uma **cidade nova** (lugar e ambiente) e **uma luta de Chefe**.
 
+## Rodada 20 — Da sessão 2
+
+✅ **Palavra em negativa é a mesma palavra**: *Bloquear* vale como "imbloqueável".
+
+✅ **Projétil: defesa do alvo +1 por Grau acima do 2** (G3 +1, G4 +2, G5 +3), porque a Esquiva e a Dificuldade foram feitas para 2d12 e conjuntos maiores acertam mais. Pela conta, 3d8 ≈ 2d12+1, 4d6 ≈ 2d12+2, 6d4 ≈ 2d12+3.
+
+✅ **Palavras Básicas extras de magia**: Abrir, Fazer, Conjurar, Investigar, Preparar, Apagar; Arma, Item, Poção. Cognitium trocou *Apagar* por **Riscar**.
+
+✅ **Bronze Arco**: metal arcano do mundo (em [[06 Itens e dinheiro]] e [[08 Mundo e entidades]]).
+
+✅ **Ajuste solo de Chefe** (em teste): sem ×1,5 nos Limiares e 10 PV.
+

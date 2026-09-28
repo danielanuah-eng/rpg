@@ -53,9 +53,11 @@ O **tipo do efeito** diz quem rola. É sempre **uma rolagem só** por magia: ou 
 
 | Efeito | Exemplos | Quem rola | Contra o quê |
 |---|---|---|---|
-| **Projétil** | jato, lâmina, flecha de luz, soco que atravessa: algo que sai e precisa acertar | **você** | a **Esquiva** (PJ) ou a **Dificuldade** (adversário) do alvo |
+| **Projétil** | jato, lâmina, flecha de luz, soco que atravessa: algo que sai e precisa acertar | **você** | a **Esquiva** (PJ) ou a **Dificuldade** (adversário) do alvo, **+1 por Grau acima do 2** |
 | **Teste mágico** | sono, encanto, medo, uma rede de gelo que prende, uma rajada que derruba: o efeito cai sobre um alvo (ou vários) e ele reage | **o alvo**, não você | a **Dificuldade da magia** (abaixo) |
 | **Pequeno evento** | acrescentar, mudar, detalhar ou alterar algo no mundo: abrir, criar, esquentar, fortalecer o próprio corpo, fazer o chão virar gelo, curar | **você** | a **Dificuldade do Grau**: passou, o mundo muda |
+
+**Por que +1 por Grau no Projétil.** A Esquiva e a Dificuldade foram feitas para 2d12. Conjuntos com mais dados (3d8, 4d6, 6d4) têm média um pouco maior e quase nunca tiram pouco, então acertariam mais que qualquer arma. Pela conta, **3d8 ≈ 2d12 + 1**, **4d6 ≈ 2d12 + 2**, **6d4 ≈ 2d12 + 3**: a defesa do alvo sobe **+1 no Grau 3, +2 no Grau 4, +3 no Grau 5**, e a chance de acertar fica igual à de um 2d12 com o mesmo bônus. (Pequeno evento já tem isso na Dificuldade do Grau.)
 
 ### Teste mágico: só o alvo rola
 
@@ -282,7 +284,13 @@ As Palavras Básicas são os **verbos da tabela de Interações** ([[01 Regras c
 1. **Descrever qualquer ação** e escolher o teste: **atributo + verbo** ("Furtar", "Convencer", "Atirar").
 2. **Completar uma magia**: **uma** Palavra Básica por magia (um verbo da tabela ou uma forma), de graça, sem contar no limite de palavras. É ela que dá ao Valor as ações que ele sozinho não alcança: "*Voz* + **Ameaçar**", "*Raiz* + **Agarrar**", "*Sombra* + **Esconder**".
 
-Além dos verbos da tabela, **Abrir** também é Palavra Básica de magia (porta, passagem, portal, fechadura, ferida no mundo); nos testes sem magia, abrir é **Mexer** ou **Quebrar**. **Criar** já está na tabela e vale para magia: *Lâmina* + **Criar** faz uma arma do nada.
+Além dos verbos da tabela, a magia tem mais algumas **Palavras Básicas** (também grátis, uma por magia):
+
+| Verbos | Abrir · Fazer · Conjurar · Investigar · Preparar · Apagar |
+|---|---|
+| **Coisas** | Arma · Item · Poção |
+
+*Lâmina* + **Criar** faz uma arma do nada; *Desarmar* + **Arma** arranca a arma (ou a corrente) da mão de alguém; *Fogo* + **Apagar** acaba com o incêndio; *Vida* + **Poção** põe a cura num frasco. Nos testes sem magia, essas ações usam os verbos da tabela (abrir é **Mexer** ou **Quebrar**; investigar é **Procurar** ou **Pensar**; preparar é **Consertar** ou **Estudar**).
 
 Palavras Básicas **não custam nada**, mas precisam fazer **sentido concreto** no que está acontecendo, e **nunca são o núcleo** de uma magia. Atributos não são palavras de magia.
 

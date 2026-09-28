@@ -473,7 +473,7 @@ Básicas: fortes Pensar, Estudar, Convencer · fraco Bater · Valor: Lógico, Co
 
 **Ladra de Memórias** — M2 · Ágil · Cognitium
 Ser: Ladra · Agir: Faca · Apagar (2C · Toque · 1 · Firmar · esquece o último Evento · Inst) · Parecer: Invisível, Veloz · Quer: memórias felizes para vender a quem não tem.
-Básicas: fortes Furtar, Esconder, Mentir · fraco Aguentar · Valor: Apagar, Memória, Esquecer
+Básicas: fortes Furtar, Esconder, Mentir · fraco Aguentar · Valor: Riscar, Memória, Esquecer
 
 **Doutrinador** — M3 · Líder · Cognitium · Anulador
 Ser: Pregador, Mente · Agir: Falar · Doutrinar (2C · Médio · 1 · Firmar · o alvo acredita numa ideia dele · Pagar) · Coro (livre: ativa dois seguidores) · Parecer: Belo, Mentiroso · Quer: uma cidade inteira pensando igual; ele acha que é caridade.
@@ -865,7 +865,7 @@ Básicas: fortes Firmar, Intuir, Ameaçar · fraco Movimentar
 
 **Arquivista Sem Rosto** — M3 · Suporte · Cognitium · Resiliente
 Ser: Arquivista · Agir: Anotar (livre: cada magia vista no Evento custa +1 Arcano na segunda vez) · Apagar (2C · Médio · 1 · Firmar · esquece uma Vivência · Ev) · Parecer: Astuto, Mentiroso · Quer: registrar tudo, e apagar o que for perigoso.
-Básicas: fortes Estudar, Observar · fraco Bater · Valor: Apagar, Memória, Palavra
+Básicas: fortes Estudar, Observar · fraco Bater · Valor: Riscar, Memória, Palavra
 
 **Noviça da Ordem** — M1 · Suporte · — · Anulador
 Ser: Noviça, Protetora · Agir: Bastão · Abafar (1C · Perto · uma magia de Grau 1 ou 2 sai um Grau menor · Inst) · Parecer: Paciente · Quer: provar que merece o manto; ainda tem pena de quem prende.
@@ -1155,7 +1155,7 @@ Básicas: fortes Atirar, Desviar · fraco Firmar
 
 **Hacker de Dispositivos** — M2 · Conjurador · Cognitium
 Ser: Hacker, Comprometido · Agir: Invadir (2C · Médio · 1 · Firmar · o Dispositivo do alvo não conjura · Ev) · Apagar Registro (livre: some dos registros da cidade) · Parecer: Invisível, Astuto · Quer: a senha da Torre; vende informação a quem paga em Cristal.
-Básicas: fortes Mexer, Pensar, Esconder · fraco Bater · Valor: Apagar, Palavra, Lógico, Invisível
+Básicas: fortes Mexer, Pensar, Esconder · fraco Bater · Valor: Riscar, Palavra, Lógico, Invisível
 
 **Mecânica de Rua** — M1 · Social · Sublimeyn
 Ser: Mecânica · Agir: Consertar (livre: um aparelho volta a funcionar) · Chave Inglesa · Parecer: Astuto · Quer: peças raras; conserta de graça se o aparelho for bonito.

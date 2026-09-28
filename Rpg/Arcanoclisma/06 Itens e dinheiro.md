@@ -177,7 +177,7 @@ Fabricação fica para um **módulo avançado / expansão**. Por enquanto, mater
 
 | Valor | Material |
 |---|---|
-| Conflitüo | Aço Riscado |
+| Conflitüo | Aço Riscado · **Bronze Arco** (metal arcano dourado-escuro; aceita runas de Conflitüo, e armas dele não quebram contra magia) |
 | Sublimeyn | Cristal de Estado |
 | Dominum | Osso de Fera Domada |
 | Persona | Lágrima Seca |

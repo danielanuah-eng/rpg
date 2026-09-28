@@ -290,7 +290,7 @@ Perguntas de vínculo: *Quem você não conseguiu salvar? · Você já morreu? O
 |---|---|---|
 | **Atacar** | uma *Ideia* *Psíquica* que bate como pedrada; *Confundir*, *Labirinto*, *Hipnótico*; *Ilusão* de perigo | Projétil · Teste mágico (Firmar) · Teste mágico (Observar) |
 | **Proteger** | *Invisível* ou *Disfarçar*: ninguém mira em quem não vê; *Esquecer*: o guarda esquece que viu você | Pequeno evento · Teste mágico (Firmar) |
-| **Aliviar** | *Apagar* ou *Lembrar*: tirar uma lembrança que dói, devolver uma que se perdeu | Pequeno evento |
+| **Aliviar** | *Riscar* ou *Lembrar*: tirar uma lembrança que dói, devolver uma que se perdeu | Pequeno evento |
 | **Descobrir** | *Ler*, *Segredo*; a Skill *Espiar* | Pequeno evento · Teste mágico |
 | **Mover** | *Invisível* para passar pela guarda; *Ilusão* de uma porta onde não tem | Pequeno evento · Teste mágico (Observar) |
 
@@ -305,7 +305,7 @@ Perguntas de vínculo: *Quem você não conseguiu salvar? · Você já morreu? O
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
 | **1** | Calcular | Lembrar | Esquecer | Ler | Enganar | Disfarçar |
-| **2** | Doutrinar | Implantar | Confundir | Sugerir | Apagar | Imaginar |
+| **2** | Doutrinar | Implantar | Confundir | Sugerir | Riscar | Imaginar |
 | **3** | Mente | Memória | Dúvida | Ideia | Farsa | Ilusão |
 | **4** | Crença | Segredo | Cheiro | Gosto | Palavra | Labirinto |
 | **5** | Psíquico | Falso | Verdadeiro | Enigmático | Familiar | Paradoxal |
