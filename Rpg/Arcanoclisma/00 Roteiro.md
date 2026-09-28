@@ -68,8 +68,8 @@ Objetivo: o mundo explica as regras (por que par é Arcano, por que Eternyr é d
 | 2.2 | Um Primordial e ao menos um semideus por Valor | 🟡 |
 | 2.2b | Reinos (9 de Valor + Arcano + Cataclisma), povos, culturas, estruturas — só lore de criação, sem história fechada | 🟡 rascunho em [[08 Mundo e entidades]] |
 | 2.3 | As Eras jogáveis (antes da magia, clássica, tecnomaga, escola de magia) com o ajuste de regra de cada uma | 🟡 |
-| 2.4 | Sociedade: como gente comum vê os magos, dinheiro (Ordynus), lugares | ⬜ |
-| 2.5 | Texto de ambientação de cada Valor e Comportamento (1 parágrafo + 3 frases de exemplo de jogo) | ⬜ |
+| 2.4 | Sociedade: como gente comum vê os magos, dinheiro (Ordynus), lugares | 🟡 em [[08 Mundo e entidades]] e [[06 Itens e dinheiro]] |
+| 2.5 | Texto de ambientação de cada Valor e Comportamento (1 parágrafo + 3 frases de exemplo de jogo) | 🟡 falas e *Como é* em [[03 Valores]] e [[04 Comportamentos]] |
 | 2.6 | Nomes definitivos (Cataclisma do Kairvahnn, criaturas, ordens) | ⬜ |
 | 2.7 | Kit de peças para campanha (lugares, entidades, artefatos) em vez de uma história pronta: cada mesa monta a sua | ⬜ |
 

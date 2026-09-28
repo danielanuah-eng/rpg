@@ -126,7 +126,7 @@ O mundo tem **humanos** e tem **outros povos**. As culturas nascem do lugar e do
   - **Vau-Grande** — cidade de rio, com o **Sino da Maré** que há duzentos anos avisa as cheias.
   - **Confluência** — planície vasta cheia de criaturas mágicas pacíficas, onde Arcano e Cataclisma vivem em **homeostase pacífica**: a magia que sobra é absorvida pela terra. Ali fica **GrandGaleonis**, a escola-cidade de magia para Comprometidos.
 - **Bronze Arco**: metal arcano do mundo, dourado-escuro, que aceita runas. Armas de Bronze Arco cravejadas de runas de Conflitüo são as mais caras (e as mais conjuradas) das arenas.
-- **Dinheiro**: o **Ordyn** (plural Ordynus) é uma moeda de metal cunhada em **Oryuundis**, um metal que **na sua essência é imune à magia**. O curioso: ele **só se mantém imune enquanto é usado como moeda**. Derretido, trabalhado em joia ou em arma, o Oryuundis faz o contrário: **amplia o poder das palavras, dos Valores e dos sentimentos** de quem o carrega. O Ordyn nasceu para ser uma **moeda neutra, imparcial**, que nenhuma magia falsifica. Por isso fundir moeda é crime em quase todo lugar, e por isso existe contrabando de Ordyn derretido.
+- **Dinheiro**: o **Ordyn** (plural Ordynus) é uma moeda cunhada em **Oryuundis**, um metal que **não existia**: ele **nasceu da própria palavra**. Alguém disse, com todo o sentido que uma palavra pode ter, que precisava de uma moeda **neutra, imparcial**, que nenhuma magia pudesse tocar; e a palavra criou um metal **imune a ela mesma**. Por isso ele é tão específico: o Oryuundis **só é imune à magia enquanto é moeda**. É a prova de que a palavra pode criar até aquilo que escapa dela.
 
 ## Dragões e wyverns
 

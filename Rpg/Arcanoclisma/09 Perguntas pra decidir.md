@@ -468,9 +468,11 @@ Sua resposta: ✅ aplicada, com *Cuidar* → **Proteger**, *Notar* → **Observa
 
 ✅ **Sociedade**: os humanos são dinâmicos nas interpretações; cada lugar trata a magia do seu jeito (d8: proibida, temida, adorada, ignorada, comum, nichada à nobreza, aliada a dores e problemas, controlada), às vezes duas ao mesmo tempo; versões de leis. Em [[08 Mundo e entidades]].
 
-✅ **Ordyn e Oryuundis**: moeda de metal cunhada em Oryuundis, imune à magia **só enquanto moeda**; fundido, **amplia palavras, Valores e sentimentos** (minha leitura do "amplia o poder das palavras, valores, sentimentos"). Moeda neutra e imparcial.
+✅ **Ordyn e Oryuundis**: o Oryuundis é um metal que **não existia e nasceu da própria palavra**: a palavra criou algo que pode ser imune a ela, e por isso ele é tão específico (imune à magia **só enquanto moeda**). Moeda neutra e imparcial.
 
 ✅ **Preços pela conta**: 1 dia de trabalho = 3–5 o; itens mágicos = Base da Moldura (100 / 300 / 900 / 2.700, triplica) × fator (0,5 narrativo · 0,8 situacional · 1 comum · 1,3 número permanente · 1,5 economia da magia); recompensa por sessão ≈ Base ÷ 3, uma aventura ≈ um item. Os preços da tabela de [[06 Itens e dinheiro]] já batiam com a fórmula.
 
 ✅ **P-10**: roda **A** confirmada.
+
+✅ **Comportamentos com voz**: cada um dos 12 ganhou duas falas, um *Como é*, e o **Atalho típico** e o **Passo típico** (o que aquele jeito de ser costuma evitar, e o difícil que o aproxima do que importa). Em [[04 Comportamentos]].
 

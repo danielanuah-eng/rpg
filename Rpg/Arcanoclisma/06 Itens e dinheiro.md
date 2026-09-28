@@ -4,7 +4,7 @@
 
 ## Dinheiro
 
-Moeda padrão: **Ordyn** (plural **Ordynus**, abreviação **o**), cunhada em **Oryuundis**, o metal imune à magia enquanto é moeda (e que, fundido, amplia palavras, Valores e sentimentos; ver [[08 Mundo e entidades]]). Ninguém falsifica um Ordyn com magia: por isso ele vale em qualquer lugar.
+Moeda padrão: **Ordyn** (plural **Ordynus**, abreviação **o**), cunhada em **Oryuundis**, um metal que nasceu da própria palavra e que é imune à magia **enquanto é moeda** (ver [[08 Mundo e entidades]]). Ninguém falsifica um Ordyn com magia: por isso ele vale em qualquer lugar.
 
 ### A conta dos preços
 
