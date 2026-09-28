@@ -404,3 +404,5 @@ Sua resposta: ✅ mais palavras = efeito mais específico, mais fácil de funcio
 
 ✅ **Ampliar pelo poder da descrição**: dentro do Grau, o jogador escolhe onde pôr força (dano, alcance, alvos/área, duração, atributo). Cada passo **+2 na Dificuldade** (Projétil: na defesa do alvo; Pequeno evento: na do Grau; Teste mágico: a Dificuldade da magia cai 2). Não custa mais Arcano. Máximo = Moldura. Com os níveis, o avanço **Domínio** tira a Dificuldade do primeiro passo numa propriedade; itens *De Grau* também. No Teste mágico, magia abaixo do seu Grau máximo pega mais fácil (+2 por Grau abaixo). Aplicado em [[02 Magia]], [[05 Personagem e níveis]], [[06 Itens e dinheiro]].
 
+✅ **Ampliar: Arcano ou certeza.** Cada passo, o jogador escolhe: +2 na Dificuldade **ou** pagar Arcano (1 no Grau 1–2, 2 no 3–4, 3 no 5). Pode misturar. O Domínio e os itens *De Grau* deixam um passo de graça.
+

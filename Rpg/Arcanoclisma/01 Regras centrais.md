@@ -115,6 +115,7 @@ Por rolagem de teste o jogador ganha em média **1 Arcano** (2 em magia de Grau 
 |---|---|
 | 1 | **Vivência**: Vantagem numa rolagem em que uma Vivência sua se aplica (uma por rolagem) |
 | 1 | **Ajudar**: dê Vantagem a um aliado (descreva como) |
+| 1–3 | **Ampliar** uma magia um passo sem subir a Dificuldade (1 no Grau 1–2, 2 no Grau 3–4, 3 no Grau 5) |
 | 1 | **Palavra extra** numa magia (cada palavra de Valor além da primeira; Palavras Básicas não custam) |
 | 2 | **Suavizar**: role de novo o d20 de um Efeito Colateral de magia e fique com o melhor |
 | 3 | **Hábito**: o talento especial do seu Comportamento |

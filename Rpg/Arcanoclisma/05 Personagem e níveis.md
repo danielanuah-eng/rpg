@@ -97,7 +97,7 @@ Este bloco não dá bônus nem é cobrado pelo mestre. Serve para a mesa conhece
 | **Palavra Estrangeira**: escreva num dos 4 espaços extras da sua ficha uma palavra de outro Valor | máx. 4 |
 | **Melhorar um talento seu** (Básico → Superior) | Moldura 2+ (do seu Comportamento), 3+ (de outro) |
 | **Talento avulso** de outro Comportamento, versão Básica | Moldura 2+ |
-| **Domínio**: escolha dano, alcance, alvos/área, duração ou atributo. O primeiro passo de Ampliar nessa propriedade, em cada magia, não sobe a Dificuldade | uma vez por Moldura, propriedades diferentes |
+| **Domínio**: escolha dano, alcance, alvos/área, duração ou atributo. O primeiro passo de Ampliar nessa propriedade, em cada magia, sai de graça (nem Arcano, nem Dificuldade) | uma vez por Moldura, propriedades diferentes |
 | **Ressonância** do seu Valor (II na Moldura 2+, III na Moldura 3+) | em ordem |
 
 ## A ficha: duas folhas
