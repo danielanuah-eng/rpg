@@ -1,0 +1,173 @@
+<title>Esferas dos Valores</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Spectral:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+:root{--ground:#15141B;--plate:#1E1C26;--ink:#ECE5D5;--muted:#A69E8E;--brass:#B8955A;--line:#2E2B38;color-scheme:dark}
+body{background:var(--ground);color:var(--ink);font:400 17px/1.6 "Spectral",Georgia,serif;padding-inline:clamp(16px,4vw,48px);padding-block:40px 64px}
+.wrap{max-width:1120px;margin-inline:auto;display:flex;flex-direction:column;gap:40px}
+header{max-width:68ch;display:flex;flex-direction:column;gap:12px}
+.eyebrow{font:400 12px/1 "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+h1{font:400 clamp(34px,5vw,54px)/1.05 "Marcellus SC",Georgia,serif;margin:0;text-wrap:balance;letter-spacing:.02em}
+header p{margin:0;color:var(--muted)}
+header p strong{color:var(--ink);font-weight:500}
+.rule{height:1px;background:linear-gradient(90deg,var(--brass),transparent);opacity:.6}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.grid{grid-template-columns:1fr}}
+.plate{background:var(--plate);border:1px solid var(--line);border-radius:4px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.orb{width:min(180px,70%);align-self:center;filter:drop-shadow(0 10px 24px rgba(0,0,0,.45))}
+.orb svg{display:block;width:100%;height:auto}
+.plate h2{font:400 24px/1.2 "Marcellus SC",Georgia,serif;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.plate h2 span{font:italic 400 16px/1 "Spectral",Georgia,serif;color:var(--muted)}
+.plate p{margin:0;font-size:15.5px}
+.op{font:400 12px/1.4 "IBM Plex Mono",monospace;color:var(--brass);letter-spacing:.04em}
+.swatches{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 14px}
+.swatches li{display:flex;align-items:center;gap:6px}
+.sw{width:14px;height:14px;border-radius:50%;border:1px solid rgba(255,255,255,.18)}
+code{font:400 12px/1 "IBM Plex Mono",monospace;color:var(--muted)}
+.lang{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:900px}
+@media (max-width:640px){.lang{grid-template-columns:1fr}}
+.lang h3{font:400 20px/1.2 "Marcellus SC",Georgia,serif;margin:0 0 6px}
+.lang p{margin:0;color:var(--muted);font-size:15.5px}
+footer{font:400 12px/1.5 "IBM Plex Mono",monospace;color:var(--muted)}
+</style>
+<div class="wrap">
+<header>
+<span class="eyebrow">Arcanoclisma · Guia visual · rascunho</span>
+<h1>As Esferas dos Valores</h1>
+<p>Cada Valor é uma <strong>esfera</strong>, com uma cor só dela. Dentro, <strong>traços e figuras geométricas</strong> se juntam numa imagem abstrata que ainda lembra o Valor: a lâmina que se parte, a gota que vira vapor, o olho de duas pálpebras.</p>
+</header>
+<div class="rule" role="presentation"></div>
+<section class="grid" aria-label="Os nove Valores">
+<article class="plate">
+<div class="orb"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Esfera de conflituo"><defs><radialGradient id="g-conflituo-p" cx=".36" cy=".32" r=".75"><stop offset="0" stop-color="#E07A55"/><stop offset=".55" stop-color="#A8432E"/><stop offset="1" stop-color="#3A120B"/></radialGradient><clipPath id="c-conflituo-p"><circle cx="100" cy="100" r="88"/></clipPath></defs>
+<circle cx="100" cy="100" r="92" fill="none" stroke="#A8432E" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="100" cy="100" r="88" fill="url(#g-conflituo-p)"/>
+<g clip-path="url(#c-conflituo-p)"><line x1="52" y1="52" x2="148" y2="148" stroke="#F6D2B8" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="9"/>
+<line x1="148" y1="52" x2="112" y2="88" stroke="#F6D2B8" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="9"/><line x1="88" y1="112" x2="52" y2="148" stroke="#F6D2B8" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="9"/>
+<polygon points="100,86 104,97 96,97" fill="#F6D2B8"/><polygon points="114,100 104,104 106,94" fill="#F6D2B8" opacity=".8"/><polygon points="86,106 96,104 94,114" fill="#F6D2B8" opacity=".7"/></g>
+<ellipse cx="72" cy="58" rx="26" ry="12" transform="rotate(-30 72 58)" fill="#ffffff" opacity=".13"/>
+<circle cx="100" cy="100" r="88" fill="none" stroke="#3A120B" stroke-opacity=".6" stroke-width="2"/></svg></div>
+<h2>Conflitüo <span>a Lâmina</span></h2>
+<p>Duas lâminas em X; uma se parte no meio, e a fresta solta faíscas. O choque que faz cada coisa saber onde termina.</p>
+<p class="op">Oposto: Persona</p>
+<ul class="swatches" aria-label="Cores de Conflitüo"><li><span class="sw" style="background:#E07A55"></span><code>#E07A55</code></li><li><span class="sw" style="background:#A8432E"></span><code>#A8432E</code></li><li><span class="sw" style="background:#3A120B"></span><code>#3A120B</code></li><li><span class="sw" style="background:#F6D2B8"></span><code>#F6D2B8</code></li></ul>
+</article>
+<article class="plate">
+<div class="orb"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Esfera de sublimeyn"><defs><radialGradient id="g-sublimeyn-p" cx=".36" cy=".32" r=".75"><stop offset="0" stop-color="#DDE7EE"/><stop offset=".55" stop-color="#8FA3B0"/><stop offset="1" stop-color="#25323B"/></radialGradient><clipPath id="c-sublimeyn-p"><circle cx="100" cy="100" r="88"/></clipPath></defs>
+<circle cx="100" cy="100" r="92" fill="none" stroke="#8FA3B0" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="100" cy="100" r="88" fill="url(#g-sublimeyn-p)"/>
+<g clip-path="url(#c-sublimeyn-p)"><circle cx="100" cy="100" r="52" stroke="#F4F8FB" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="2.5" stroke-dasharray="3 7"/>
+<rect x="56" y="114" width="30" height="30" fill="#F4F8FB" transform="rotate(-8 71 129)"/>
+<path d="M140 108 C152 124 154 132 154 138 A14 14 0 0 1 126 138 C126 132 128 124 140 108 Z" fill="#F4F8FB" opacity=".9"/>
+<path d="M100 72 m-4 0 a4 4 0 1 1 8 0 a8 8 0 1 1 -16 0 a12 12 0 1 1 24 0 a16 16 0 1 1 -32 0" stroke="#F4F8FB" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3.5"/></g>
+<ellipse cx="72" cy="58" rx="26" ry="12" transform="rotate(-30 72 58)" fill="#ffffff" opacity=".13"/>
+<circle cx="100" cy="100" r="88" fill="none" stroke="#25323B" stroke-opacity=".6" stroke-width="2"/></svg></div>
+<h2>Sublimeyn <span>o Eixo</span></h2>
+<p>Quadrado, gota e espiral num mesmo anel pontilhado: sólido, líquido e gás girando no ciclo da matéria.</p>
+<p class="op">Oposto: nenhum — é o Eixo</p>
+<ul class="swatches" aria-label="Cores de Sublimeyn"><li><span class="sw" style="background:#DDE7EE"></span><code>#DDE7EE</code></li><li><span class="sw" style="background:#8FA3B0"></span><code>#8FA3B0</code></li><li><span class="sw" style="background:#25323B"></span><code>#25323B</code></li><li><span class="sw" style="background:#F4F8FB"></span><code>#F4F8FB</code></li></ul>
+</article>
+<article class="plate">
+<div class="orb"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Esfera de dominum"><defs><radialGradient id="g-dominum-p" cx=".36" cy=".32" r=".75"><stop offset="0" stop-color="#B4508C"/><stop offset=".55" stop-color="#6E2150"/><stop offset="1" stop-color="#22081A"/></radialGradient><clipPath id="c-dominum-p"><circle cx="100" cy="100" r="88"/></clipPath></defs>
+<circle cx="100" cy="100" r="92" fill="none" stroke="#6E2150" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="100" cy="100" r="88" fill="url(#g-dominum-p)"/>
+<g clip-path="url(#c-dominum-p)"><ellipse cx="150.0" cy="100.0" rx="9" ry="5.5" transform="rotate(90 150.0 100.0)" stroke="#F0C6DE" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3"/><ellipse cx="143.3" cy="125.0" rx="9" ry="5.5" transform="rotate(120 143.3 125.0)" stroke="#F0C6DE" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3"/><ellipse cx="125.0" cy="143.3" rx="9" ry="5.5" transform="rotate(150 125.0 143.3)" stroke="#F0C6DE" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3"/><ellipse cx="75.0" cy="143.3" rx="9" ry="5.5" transform="rotate(210 75.0 143.3)" stroke="#F0C6DE" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3"/><ellipse cx="56.7" cy="125.0" rx="9" ry="5.5" transform="rotate(240 56.7 125.0)" stroke="#F0C6DE" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3"/><ellipse cx="50.0" cy="100.0" rx="9" ry="5.5" transform="rotate(270 50.0 100.0)" stroke="#F0C6DE" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3"/><ellipse cx="56.7" cy="75.0" rx="9" ry="5.5" transform="rotate(300 56.7 75.0)" stroke="#F0C6DE" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3"/><ellipse cx="75.0" cy="56.7" rx="9" ry="5.5" transform="rotate(330 75.0 56.7)" stroke="#F0C6DE" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3"/><ellipse cx="100.0" cy="50.0" rx="9" ry="5.5" transform="rotate(360 100.0 50.0)" stroke="#F0C6DE" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3"/><ellipse cx="125.0" cy="56.7" rx="9" ry="5.5" transform="rotate(390 125.0 56.7)" stroke="#F0C6DE" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3"/><ellipse cx="143.3" cy="75.0" rx="9" ry="5.5" transform="rotate(420 143.3 75.0)" stroke="#F0C6DE" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3"/><line x1="65.4" y1="80.0" x2="89.6" y2="94.0" stroke="#F0C6DE" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="2" opacity=".75"/><line x1="100.0" y1="60.0" x2="100.0" y2="88.0" stroke="#F0C6DE" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="2" opacity=".75"/><line x1="134.6" y1="80.0" x2="110.4" y2="94.0" stroke="#F0C6DE" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="2" opacity=".75"/><line x1="134.6" y1="120.0" x2="110.4" y2="106.0" stroke="#F0C6DE" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="2" opacity=".75"/><line x1="65.4" y1="120.0" x2="89.6" y2="106.0" stroke="#F0C6DE" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="2" opacity=".75"/><polygon points="100,128 88,158 112,158" fill="#F0C6DE"/><circle cx="100" cy="100" r="6" fill="#F0C6DE"/></g>
+<ellipse cx="72" cy="58" rx="26" ry="12" transform="rotate(-30 72 58)" fill="#ffffff" opacity=".13"/>
+<circle cx="100" cy="100" r="88" fill="none" stroke="#22081A" stroke-opacity=".6" stroke-width="2"/></svg></div>
+<h2>Dominum <span>a Coleira</span></h2>
+<p>Um anel de elos com um fecho embaixo; linhas puxam tudo para o centro. A vontade que dá dono.</p>
+<p class="op">Oposto: Primitivum</p>
+<ul class="swatches" aria-label="Cores de Dominum"><li><span class="sw" style="background:#B4508C"></span><code>#B4508C</code></li><li><span class="sw" style="background:#6E2150"></span><code>#6E2150</code></li><li><span class="sw" style="background:#22081A"></span><code>#22081A</code></li><li><span class="sw" style="background:#F0C6DE"></span><code>#F0C6DE</code></li></ul>
+</article>
+<article class="plate">
+<div class="orb"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Esfera de persona"><defs><radialGradient id="g-persona-p" cx=".36" cy=".32" r=".75"><stop offset="0" stop-color="#F7B49B"/><stop offset=".55" stop-color="#E0735A"/><stop offset="1" stop-color="#4E1D14"/></radialGradient><clipPath id="c-persona-p"><circle cx="100" cy="100" r="88"/></clipPath></defs>
+<circle cx="100" cy="100" r="92" fill="none" stroke="#E0735A" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="100" cy="100" r="88" fill="url(#g-persona-p)"/>
+<g clip-path="url(#c-persona-p)"><line x1="100" y1="46" x2="100" y2="150" stroke="#FFF1EA" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="2.5" stroke-dasharray="2 6"/>
+<circle cx="78" cy="84" r="5" fill="#FFF1EA"/><circle cx="122" cy="84" r="5" fill="#FFF1EA"/>
+<path d="M64 106 Q80 124 94 108" stroke="#FFF1EA" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="5"/><path d="M106 116 Q120 100 136 116" stroke="#FFF1EA" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="5"/>
+<circle cx="93" cy="138" r="8" fill="#FFF1EA"/><circle cx="107" cy="138" r="8" fill="#FFF1EA"/><polygon points="85.5,141 114.5,141 100,158" fill="#FFF1EA"/></g>
+<ellipse cx="72" cy="58" rx="26" ry="12" transform="rotate(-30 72 58)" fill="#ffffff" opacity=".13"/>
+<circle cx="100" cy="100" r="88" fill="none" stroke="#4E1D14" stroke-opacity=".6" stroke-width="2"/></svg></div>
+<h2>Persona <span>o Coração</span></h2>
+<p>Um rosto partido: metade sorri, metade não. Embaixo, um coração feito de dois círculos e um triângulo.</p>
+<p class="op">Oposto: Conflitüo</p>
+<ul class="swatches" aria-label="Cores de Persona"><li><span class="sw" style="background:#F7B49B"></span><code>#F7B49B</code></li><li><span class="sw" style="background:#E0735A"></span><code>#E0735A</code></li><li><span class="sw" style="background:#4E1D14"></span><code>#4E1D14</code></li><li><span class="sw" style="background:#FFF1EA"></span><code>#FFF1EA</code></li></ul>
+</article>
+<article class="plate">
+<div class="orb"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Esfera de alvorum"><defs><linearGradient id="g-alvorum-p" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4D98A"/><stop offset=".5" stop-color="#D4A43A"/><stop offset=".5" stop-color="#2A2110"/><stop offset="1" stop-color="#120E06"/></linearGradient><clipPath id="c-alvorum-p"><circle cx="100" cy="100" r="88"/></clipPath></defs>
+<circle cx="100" cy="100" r="92" fill="none" stroke="#D4A43A" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="100" cy="100" r="88" fill="url(#g-alvorum-p)"/>
+<g clip-path="url(#c-alvorum-p)"><line x1="100" y1="46" x2="100" y2="60" stroke="#FFF3CF" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3"/><line x1="66" y1="54" x2="73" y2="66" stroke="#FFF3CF" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3"/><line x1="134" y1="54" x2="127" y2="66" stroke="#FFF3CF" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3"/><line x1="44" y1="72" x2="55" y2="80" stroke="#FFF3CF" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3"/><line x1="156" y1="72" x2="145" y2="80" stroke="#FFF3CF" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3"/><path d="M40 104 Q100 58 160 104 Q100 150 40 104 Z" stroke="#FFF3CF" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4.5"/>
+<circle cx="100" cy="104" r="17" fill="#FFF3CF"/><circle cx="100" cy="104" r="6" fill="#120E06"/></g>
+<ellipse cx="72" cy="58" rx="26" ry="12" transform="rotate(-30 72 58)" fill="#ffffff" opacity=".13"/>
+<circle cx="100" cy="100" r="88" fill="none" stroke="#120E06" stroke-opacity=".6" stroke-width="2"/></svg></div>
+<h2>Alvorum <span>o Olho</span></h2>
+<p>A esfera é dia em cima e noite embaixo; no meio, um olho aberto, com raios. O que é visto não fica escondido.</p>
+<p class="op">Oposto: Cognitium</p>
+<ul class="swatches" aria-label="Cores de Alvorum"><li><span class="sw" style="background:#F4D98A"></span><code>#F4D98A</code></li><li><span class="sw" style="background:#D4A43A"></span><code>#D4A43A</code></li><li><span class="sw" style="background:#120E06"></span><code>#120E06</code></li><li><span class="sw" style="background:#FFF3CF"></span><code>#FFF3CF</code></li></ul>
+</article>
+<article class="plate">
+<div class="orb"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Esfera de morbidyum"><defs><radialGradient id="g-morbidyum-p" cx=".36" cy=".32" r=".75"><stop offset="0" stop-color="#D6EDD9"/><stop offset=".55" stop-color="#8FBF98"/><stop offset="1" stop-color="#16281C"/></radialGradient><clipPath id="c-morbidyum-p"><circle cx="100" cy="100" r="88"/></clipPath></defs>
+<circle cx="100" cy="100" r="92" fill="none" stroke="#8FBF98" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="100" cy="100" r="88" fill="url(#g-morbidyum-p)"/>
+<g clip-path="url(#c-morbidyum-p)"><path d="M82 152 V84 A18 18 0 0 1 118 84 V152 Z" stroke="#F2FBF3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4.5"/>
+<line x1="70" y1="152" x2="130" y2="152" stroke="#F2FBF3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3"/><circle cx="111" cy="120" r="2.5" fill="#F2FBF3"/><circle cx="63.0" cy="108.0" r="6" fill="#F2FBF3" opacity=".85"/><circle cx="57.5" cy="115.6" r="6" fill="#F2FBF3" opacity=".85"/><circle cx="48.5" cy="112.7" r="6" fill="#F2FBF3" opacity=".85"/><circle cx="48.5" cy="103.3" r="6" fill="#F2FBF3" opacity=".85"/><circle cx="57.5" cy="100.4" r="6" fill="#F2FBF3" opacity=".85"/><circle cx="55" cy="108" r="4" fill="#16281C"/><line x1="55" y1="116" x2="55" y2="140" stroke="#F2FBF3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="2.5"/>
+<line x1="148" y1="94" x2="148" y2="130" stroke="#F2FBF3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="5"/><circle cx="144" cy="92" r="4.5" fill="#F2FBF3"/><circle cx="152" cy="92" r="4.5" fill="#F2FBF3"/><circle cx="144" cy="132" r="4.5" fill="#F2FBF3"/><circle cx="152" cy="132" r="4.5" fill="#F2FBF3"/></g>
+<ellipse cx="72" cy="58" rx="26" ry="12" transform="rotate(-30 72 58)" fill="#ffffff" opacity=".13"/>
+<circle cx="100" cy="100" r="88" fill="none" stroke="#16281C" stroke-opacity=".6" stroke-width="2"/></svg></div>
+<h2>Morbidyum <span>a Porta</span></h2>
+<p>Uma porta em arco: de um lado uma flor, do outro um osso. Tudo passa por ela, nos dois sentidos.</p>
+<p class="op">Oposto: Eternyr</p>
+<ul class="swatches" aria-label="Cores de Morbidyum"><li><span class="sw" style="background:#D6EDD9"></span><code>#D6EDD9</code></li><li><span class="sw" style="background:#8FBF98"></span><code>#8FBF98</code></li><li><span class="sw" style="background:#16281C"></span><code>#16281C</code></li><li><span class="sw" style="background:#F2FBF3"></span><code>#F2FBF3</code></li></ul>
+</article>
+<article class="plate">
+<div class="orb"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Esfera de cognitium"><defs><radialGradient id="g-cognitium-p" cx=".36" cy=".32" r=".75"><stop offset="0" stop-color="#7E84E0"/><stop offset=".55" stop-color="#3C409E"/><stop offset="1" stop-color="#0E0F2E"/></radialGradient><clipPath id="c-cognitium-p"><circle cx="100" cy="100" r="88"/></clipPath></defs>
+<circle cx="100" cy="100" r="92" fill="none" stroke="#3C409E" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="100" cy="100" r="88" fill="url(#g-cognitium-p)"/>
+<g clip-path="url(#c-cognitium-p)"><path d="M100 100 h8 v8 h-16 v-16 h24 v24 h-32 v-32 h40 v40 h-48 v-48 h56 v56 h-64 v-64 h66" stroke="#DADDFF" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+<circle cx="100" cy="100" r="3.5" fill="#DADDFF"/></g>
+<ellipse cx="72" cy="58" rx="26" ry="12" transform="rotate(-30 72 58)" fill="#ffffff" opacity=".13"/>
+<circle cx="100" cy="100" r="88" fill="none" stroke="#0E0F2E" stroke-opacity=".6" stroke-width="2"/></svg></div>
+<h2>Cognitium <span>o Véu</span></h2>
+<p>Uma espiral quadrada que vira labirinto a partir de um ponto. O pensamento que dá voltas até achar saída.</p>
+<p class="op">Oposto: Alvorum</p>
+<ul class="swatches" aria-label="Cores de Cognitium"><li><span class="sw" style="background:#7E84E0"></span><code>#7E84E0</code></li><li><span class="sw" style="background:#3C409E"></span><code>#3C409E</code></li><li><span class="sw" style="background:#0E0F2E"></span><code>#0E0F2E</code></li><li><span class="sw" style="background:#DADDFF"></span><code>#DADDFF</code></li></ul>
+</article>
+<article class="plate">
+<div class="orb"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Esfera de eternyr"><defs><radialGradient id="g-eternyr-p" cx=".36" cy=".32" r=".75"><stop offset="0" stop-color="#4A5FA8"/><stop offset=".55" stop-color="#1E2B5C"/><stop offset="1" stop-color="#070B1E"/></radialGradient><clipPath id="c-eternyr-p"><circle cx="100" cy="100" r="88"/></clipPath></defs>
+<circle cx="100" cy="100" r="92" fill="none" stroke="#1E2B5C" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="100" cy="100" r="88" fill="url(#g-eternyr-p)"/>
+<g clip-path="url(#c-eternyr-p)"><circle cx="58" cy="62" r="1.8" fill="#EEF2FF" opacity=".85"/><circle cx="146" cy="58" r="1.5" fill="#EEF2FF" opacity=".85"/><circle cx="70" cy="150" r="1.4" fill="#EEF2FF" opacity=".85"/><circle cx="150" cy="140" r="2" fill="#EEF2FF" opacity=".85"/><circle cx="120" cy="48" r="1.2" fill="#EEF2FF" opacity=".85"/><circle cx="44" cy="116" r="1.3" fill="#EEF2FF" opacity=".85"/><circle cx="96" cy="104" r="42" stroke="#EEF2FF" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+<line x1="126" y1="74" x2="150" y2="50" stroke="#EEF2FF" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="2" stroke-dasharray="2 5"/><circle cx="152" cy="48" r="6.5" fill="#EEF2FF"/></g>
+<ellipse cx="72" cy="58" rx="26" ry="12" transform="rotate(-30 72 58)" fill="#ffffff" opacity=".13"/>
+<circle cx="100" cy="100" r="88" fill="none" stroke="#070B1E" stroke-opacity=".6" stroke-width="2"/></svg></div>
+<h2>Eternyr <span>o Sempre</span></h2>
+<p>Um anel perfeito e um ponto escapando pela tangente, entre estrelas miúdas. O tempo que continua.</p>
+<p class="op">Oposto: Morbidyum</p>
+<ul class="swatches" aria-label="Cores de Eternyr"><li><span class="sw" style="background:#4A5FA8"></span><code>#4A5FA8</code></li><li><span class="sw" style="background:#1E2B5C"></span><code>#1E2B5C</code></li><li><span class="sw" style="background:#070B1E"></span><code>#070B1E</code></li><li><span class="sw" style="background:#EEF2FF"></span><code>#EEF2FF</code></li></ul>
+</article>
+<article class="plate">
+<div class="orb"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Esfera de primitivum"><defs><radialGradient id="g-primitivum-p" cx=".36" cy=".32" r=".75"><stop offset="0" stop-color="#9DBB63"/><stop offset=".55" stop-color="#5E7D3A"/><stop offset="1" stop-color="#1C2710"/></radialGradient><clipPath id="c-primitivum-p"><circle cx="100" cy="100" r="88"/></clipPath></defs>
+<circle cx="100" cy="100" r="92" fill="none" stroke="#5E7D3A" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="100" cy="100" r="88" fill="url(#g-primitivum-p)"/>
+<g clip-path="url(#c-primitivum-p)"><path d="M100 44 C146 70 146 130 100 158 C54 130 54 70 100 44 Z" stroke="#E6A43F" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+<line x1="100" y1="52" x2="100" y2="100" stroke="#E6A43F" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="2.5" opacity=".7"/>
+<ellipse cx="100" cy="124" rx="15" ry="12" fill="#E6A43F"/>
+<circle cx="80" cy="104" r="6" fill="#E6A43F"/><circle cx="92" cy="94" r="6" fill="#E6A43F"/><circle cx="108" cy="94" r="6" fill="#E6A43F"/><circle cx="120" cy="104" r="6" fill="#E6A43F"/></g>
+<ellipse cx="72" cy="58" rx="26" ry="12" transform="rotate(-30 72 58)" fill="#ffffff" opacity=".13"/>
+<circle cx="100" cy="100" r="88" fill="none" stroke="#1C2710" stroke-opacity=".6" stroke-width="2"/></svg></div>
+<h2>Primitivum <span>o Uivo</span></h2>
+<p>Uma pegada dentro de uma folha, em âmbar. O corpo que sabe antes da cabeça.</p>
+<p class="op">Oposto: Dominum</p>
+<ul class="swatches" aria-label="Cores de Primitivum"><li><span class="sw" style="background:#9DBB63"></span><code>#9DBB63</code></li><li><span class="sw" style="background:#5E7D3A"></span><code>#5E7D3A</code></li><li><span class="sw" style="background:#1C2710"></span><code>#1C2710</code></li><li><span class="sw" style="background:#E6A43F"></span><code>#E6A43F</code></li></ul>
+</article>
+</section>
+<div class="rule" role="presentation"></div>
+<section class="lang" aria-label="Linguagem visual">
+<div><h3>A esfera é par</h3><p>O contorno fechado é o Arcano: controle, o que se completa. Toda esfera tem o mesmo tamanho, o mesmo brilho no alto à esquerda e a mesma borda escura.</p></div>
+<div><h3>As figuras são ímpares</h3><p>Dentro, as formas quebram, abrem, escapam: a fresta da lâmina, o elo que falta na corrente, o ponto que foge do anel. É o Cataclisma, o que muda.</p></div>
+</section>
+<footer>Vetores em Rpg/Arcanoclisma/arte/simbolos · cores e regras em 24 Guia visual.md</footer>
+</div>

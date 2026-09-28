@@ -505,7 +505,7 @@ Básicas: fortes Estudar, Intuir, Sobreviver · fraco Negociar · Valor: Passado
 
 **Engenheira de Distâncias** — M2 · Suporte · Eternyr
 Ser: Engenheira · Agir: Medir · Encolher (1C · Médio · a distância entre dois aliados vira Perto · Inst) · Parecer: Astuto · Quer: uma ponte que atravesse o rio em um passo só.
-Básicas: fortes Pensar, Consertar · fraco Bater · Valor: Distância, Encolher, Próximo
+Básicas: fortes Pensar, Consertar · fraco Bater · Valor: Espaço, Encolher, Próximo
 
 **Druida de Tahwë** — M2 · Suporte · Primitivum
 Ser: Druida · Agir: Cajado · Brotar (1C · Médio · uma cerca de galhos: aliados atrás com Dif +2 · Ev) · Crescer (livre · Toque · uma planta cresce um ano) · Parecer: Paciente · Quer: que a mata cresça onde a cidade queimou.

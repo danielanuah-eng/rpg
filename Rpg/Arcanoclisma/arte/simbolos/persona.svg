@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Esfera de persona"><defs><radialGradient id="g-persona" cx=".36" cy=".32" r=".75"><stop offset="0" stop-color="#F7B49B"/><stop offset=".55" stop-color="#E0735A"/><stop offset="1" stop-color="#4E1D14"/></radialGradient><clipPath id="c-persona"><circle cx="100" cy="100" r="88"/></clipPath></defs>
+<circle cx="100" cy="100" r="92" fill="none" stroke="#E0735A" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="100" cy="100" r="88" fill="url(#g-persona)"/>
+<g clip-path="url(#c-persona)"><line x1="100" y1="46" x2="100" y2="150" stroke="#FFF1EA" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="2.5" stroke-dasharray="2 6"/>
+<circle cx="78" cy="84" r="5" fill="#FFF1EA"/><circle cx="122" cy="84" r="5" fill="#FFF1EA"/>
+<path d="M64 106 Q80 124 94 108" stroke="#FFF1EA" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="5"/><path d="M106 116 Q120 100 136 116" stroke="#FFF1EA" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="5"/>
+<circle cx="93" cy="138" r="8" fill="#FFF1EA"/><circle cx="107" cy="138" r="8" fill="#FFF1EA"/><polygon points="85.5,141 114.5,141 100,158" fill="#FFF1EA"/></g>
+<ellipse cx="72" cy="58" rx="26" ry="12" transform="rotate(-30 72 58)" fill="#ffffff" opacity=".13"/>
+<circle cx="100" cy="100" r="88" fill="none" stroke="#4E1D14" stroke-opacity=".6" stroke-width="2"/></svg>

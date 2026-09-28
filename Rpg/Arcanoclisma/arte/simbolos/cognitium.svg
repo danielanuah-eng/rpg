@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Esfera de cognitium"><defs><radialGradient id="g-cognitium" cx=".36" cy=".32" r=".75"><stop offset="0" stop-color="#7E84E0"/><stop offset=".55" stop-color="#3C409E"/><stop offset="1" stop-color="#0E0F2E"/></radialGradient><clipPath id="c-cognitium"><circle cx="100" cy="100" r="88"/></clipPath></defs>
+<circle cx="100" cy="100" r="92" fill="none" stroke="#3C409E" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="100" cy="100" r="88" fill="url(#g-cognitium)"/>
+<g clip-path="url(#c-cognitium)"><path d="M100 100 h8 v8 h-16 v-16 h24 v24 h-32 v-32 h40 v40 h-48 v-48 h56 v56 h-64 v-64 h66" stroke="#DADDFF" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="4"/>
+<circle cx="100" cy="100" r="3.5" fill="#DADDFF"/></g>
+<ellipse cx="72" cy="58" rx="26" ry="12" transform="rotate(-30 72 58)" fill="#ffffff" opacity=".13"/>
+<circle cx="100" cy="100" r="88" fill="none" stroke="#0E0F2E" stroke-opacity=".6" stroke-width="2"/></svg>

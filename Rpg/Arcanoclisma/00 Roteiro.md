@@ -77,7 +77,7 @@ As perguntas de escritor estão no fim de [[08 Mundo e entidades]]. Responda com
 
 ---
 
-## Fase 3 — O que vai ser gerado (estamos aqui)
+## Fase 3 — O que vai ser gerado (fechada)
 
 Catálogo fechado, formato de dados e geradores em [[22 O que é gerado]].
 
@@ -100,7 +100,9 @@ Objetivo: fechar a **lista de coisas** que o livro e o app vão produzir, com o 
 
 Formato de dados (proposta): um JSON por tipo em `dados/`, com o mesmo campo `moldura` em tudo, para o gerador escolher e balancear sozinho.
 
-## Fase 4 — Arte
+## Fase 4 — Arte (estamos aqui)
+
+Guia visual e Esferas dos Valores em [[24 Guia visual]].
 
 Referências visuais (P-52):
 - **Página, diagramação, ornamentos**: a estética das artes do **Daggerheart**.

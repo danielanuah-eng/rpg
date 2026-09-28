@@ -502,3 +502,9 @@ As perguntas P-123 a P-126 (gerador de nomes, personagem aleatório com tabela d
 
 ✅ **Fidraus**: povo feito de energia, música e sentimentos; aparência conforme a cultura para quem se apresentam, reluzindo com energia sólida, bruxuleante, resplandecente. Em [[08 Mundo e entidades]]; **Fidrau Cantor** no [[11 Bestiário]] (288).
 
+## Rodada 24 — Arte
+
+✅ **Símbolos dos Valores**: **esferas** de cores diferentes, com imagens abstratas dentro feitas de traços e figuras geométricas que lembram o Valor. Rascunho vetorial das 9 em `arte/simbolos/`, prévia em `arte/esferas.html`, regras em [[24 Guia visual]].
+
+✅ **Clone** entrou em **Eternyr** (você, ou alguém, de outro instante, lado a lado), no lugar de *Distância*.
+

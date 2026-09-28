@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Esfera de sublimeyn"><defs><radialGradient id="g-sublimeyn" cx=".36" cy=".32" r=".75"><stop offset="0" stop-color="#DDE7EE"/><stop offset=".55" stop-color="#8FA3B0"/><stop offset="1" stop-color="#25323B"/></radialGradient><clipPath id="c-sublimeyn"><circle cx="100" cy="100" r="88"/></clipPath></defs>
+<circle cx="100" cy="100" r="92" fill="none" stroke="#8FA3B0" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="100" cy="100" r="88" fill="url(#g-sublimeyn)"/>
+<g clip-path="url(#c-sublimeyn)"><circle cx="100" cy="100" r="52" stroke="#F4F8FB" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="2.5" stroke-dasharray="3 7"/>
+<rect x="56" y="114" width="30" height="30" fill="#F4F8FB" transform="rotate(-8 71 129)"/>
+<path d="M140 108 C152 124 154 132 154 138 A14 14 0 0 1 126 138 C126 132 128 124 140 108 Z" fill="#F4F8FB" opacity=".9"/>
+<path d="M100 72 m-4 0 a4 4 0 1 1 8 0 a8 8 0 1 1 -16 0 a12 12 0 1 1 24 0 a16 16 0 1 1 -32 0" stroke="#F4F8FB" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="3.5"/></g>
+<ellipse cx="72" cy="58" rx="26" ry="12" transform="rotate(-30 72 58)" fill="#ffffff" opacity=".13"/>
+<circle cx="100" cy="100" r="88" fill="none" stroke="#25323B" stroke-opacity=".6" stroke-width="2"/></svg>

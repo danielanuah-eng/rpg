@@ -47,7 +47,7 @@ Oposição serve para duas coisas: **Magia em Dupla de opostos** (mais forte, ma
 | **Descobrir** | *Tático*: ler o campo de batalha, o flanco aberto, quem vai correr primeiro | Pequeno evento |
 | **Mover** | *Investir* atravessando a briga; *Recuar* sem dar as costas | Pequeno evento |
 
-- **Símbolo**: um X em que uma das linhas se parte no meio. **Cor**: vermelho-ferrugem.
+- **Símbolo**: uma **esfera** (#A8432E) com, dentro, duas lâminas em X; uma se parte no meio, e a fresta solta faíscas. O choque que faz cada coisa saber onde termina. Vetor em `arte/simbolos/conflituo.svg`. **Cor**: vermelho-ferrugem.
 - **Primordial**: Thorvessa, a Que Separa. **Oposto**: Persona.
 - **Compromisso**: "Não fujo de briga que é minha." Enfrenta de frente, resolve no choque, protege os seus com o corpo.
 - **Skill · Fio da Guerra**: em combate, cada magia sua ganha **+1 dado de dano** ou **+2 no total** (escolha ao conjurar).
@@ -88,7 +88,7 @@ Perguntas de vínculo: *Contra quem ou o quê você lutou pela primeira vez, e p
 | **Descobrir** | sentir onde a parede é *Porosa* ou oca; do que uma coisa é feita | Pequeno evento |
 | **Mover** | *Moldar* a pedra em degraus; *Liquefazer* o chão para deslizar; *Leve* para saltar | Pequeno evento |
 
-- **Símbolo**: um círculo com três marcas dentro (um ponto cheio, uma gota, uma espiral). **Cor**: prata-mercúrio.
+- **Símbolo**: uma **esfera** (#8FA3B0) com, dentro, quadrado, gota e espiral num mesmo anel pontilhado: sólido, líquido e gás girando no ciclo da matéria. Vetor em `arte/simbolos/sublimeyn.svg`. **Cor**: prata-mercúrio.
 - **Primordial**: Oyamar, o Primeiro Barro. **Oposto**: nenhum, é o Eixo.
 - **Compromisso**: "Nada precisa ficar como está." Experimenta, conserta, desmonta para ver por dentro, muda de ideia sem vergonha.
 - **Skill · Mistura**: gaste 1 Arcano para fundir dois elementos numa palavra só (Vapor + Metal = "vapor de ferro"). Conta como **uma** palavra e cria efeitos entre eles (ferrugem que queima, vidro que escorre).
@@ -129,7 +129,7 @@ Perguntas de vínculo: *Qual material você sente como se fosse parte do seu cor
 | **Descobrir** | *Obrigar* alguém a responder; sentir onde está quem você *Marcou* | Teste mágico (Firmar) · Pequeno evento |
 | **Mover** | *Puxar* você mesmo pela corrente; montar a *Fera* que você domou | Pequeno evento |
 
-- **Símbolo**: um círculo de corrente fechado por uma mão. **Cor**: roxo-sangue.
+- **Símbolo**: uma **esfera** (#6E2150) com, dentro, um anel de elos com um fecho embaixo; linhas puxam tudo para o centro. A vontade que dá dono. Vetor em `arte/simbolos/dominum.svg`. **Cor**: roxo-sangue.
 - **Primordial**: Kairvahnn, o Leão das Cem Cabeças. **Oposto**: Primitivum.
 - **Compromisso**: "Quem não manda, obedece." Toma a frente, cuida do que é seu, não aceita ordem sem motivo.
 - **Skill · Comando Reflexo**: o **único Valor com reação**. Quando um adversário age contra você ou alguém Perto, conjure uma magia de Dominum **antes** dele. Marque Cansaço igual ao Grau.
@@ -170,7 +170,7 @@ Perguntas de vínculo: *A quem você já obedeceu e jurou nunca mais? · Você a
 | **Descobrir** | *Sentir* o que alguém sente, ou o rastro de alguém num objeto que ele amou | Pequeno evento |
 | **Mover** | *Fortalecer Músculo* para escalar; *Remodelar* o corpo (guelras, mãos que grudam) | Pequeno evento |
 
-- **Símbolo**: uma máscara partida ao meio, uma metade sorrindo. **Cor**: coral.
+- **Símbolo**: uma **esfera** (#E0735A) com, dentro, um rosto partido: metade sorri, metade não. Embaixo, um coração feito de dois círculos e um triângulo. Vetor em `arte/simbolos/persona.svg`. **Cor**: coral.
 - **Primordial**: Zahun, o Deus Humano. **Oposto**: Conflitüo.
 - **Compromisso**: "Gente vem antes de tudo." Se envolve, sente em voz alta, não abandona quem pediu ajuda.
 - **Skill · Toque Humano**: Persona é o Valor que vai mais longe em gente. Em **pessoas** (você incluído), o **primeiro passo de Ampliar** de cada magia sai **de graça** (sem Arcano e sem Dificuldade).
@@ -211,7 +211,7 @@ Perguntas de vínculo: *De quem você sente mais falta? · Qual emoção sua voc
 | **Descobrir** | *Revelar*, *Perceber*, *Vislumbrar* o que vem; a Skill *Olhos Abertos* | Pequeno evento |
 | **Mover** | *Estrela* ou *Farol*: achar o caminho no escuro, guiar o grupo | Pequeno evento |
 
-- **Símbolo**: um olho com a pálpebra de cima dourada e a de baixo negra (um eclipse). **Cor**: dourado sobre preto.
+- **Símbolo**: uma **esfera** (#D4A43A) com, dentro, a esfera é dia em cima e noite embaixo; no meio, um olho aberto, com raios. O que é visto não fica escondido. Vetor em `arte/simbolos/alvorum.svg`. **Cor**: dourado sobre preto.
 - **Primordial**: Idrael, o Olho de Duas Pálpebras. **Oposto**: Cognitium.
 - **Compromisso**: "O que está escondido tem que ser visto." Desconfia de segredo, fala a verdade mesmo quando atrapalha.
 - **Skill · Olhos Abertos**: gaste **2 Arcano**: pelo Evento, você enxerga através de escuridão, fumaça, disfarces, invisibilidade e ilusões de Grau até o seu máximo.
@@ -252,7 +252,7 @@ Perguntas de vínculo: *O que você viu e queria não ter visto? · Você tem me
 | **Descobrir** | *Prever*, *Presságio*; *Sussurrar* com um *Fantasma*; saber do que alguém morreu | Pequeno evento |
 | **Mover** | *Etéreo*: passar pela parede fina como quem já morreu | Pequeno evento |
 
-- **Símbolo**: uma porta aberta com uma flor de um lado e um osso do outro. **Cor**: verde-pálido.
+- **Símbolo**: uma **esfera** (#8FBF98) com, dentro, uma porta em arco: de um lado uma flor, do outro um osso. Tudo passa por ela, nos dois sentidos. Vetor em `arte/simbolos/morbidyum.svg`. **Cor**: verde-pálido.
 - **Primordial**: Velhena, a Porta Dupla. **Oposto**: Eternyr.
 - **Compromisso**: "Tudo passa, e alguém tem que ajudar a passar." Aceita perdas, cuida de quem está no fim, não teme a morte.
 - **Skill · Volta**: uma vez por sessão, ao marcar o último PV (mesmo que o corpo seja destruído), você volta **inteiro** (todos os PV limpos) no fim da próxima ação.
@@ -293,7 +293,7 @@ Perguntas de vínculo: *Quem você não conseguiu salvar? · Você já morreu? O
 | **Descobrir** | *Ler*, *Segredo*; a Skill *Espiar* | Pequeno evento · Teste mágico |
 | **Mover** | *Invisível* para passar pela guarda; *Ilusão* de uma porta onde não tem | Pequeno evento · Teste mágico (Observar) |
 
-- **Símbolo**: uma espiral que vira labirinto. **Cor**: índigo.
+- **Símbolo**: uma **esfera** (#3C409E) com, dentro, uma espiral quadrada que vira labirinto a partir de um ponto. O pensamento que dá voltas até achar saída. Vetor em `arte/simbolos/cognitium.svg`. **Cor**: índigo.
 - **Primordial**: **o Trono Vazio** (era de Zahun antes dele virar humano). **Oposto**: Alvorum.
 - **Compromisso**: "Nem tudo que se pensa se diz." Calcula, guarda segredos, entende as pessoas antes de agir.
 - **Skill · Espiar**: gaste **2 Arcano** e role 2d12 + Sintonia contra a Dificuldade da pessoa: você lê o pensamento dela de agora (faça uma pergunta; a resposta é sincera). Uma vez por pessoa por Evento.
@@ -333,8 +333,9 @@ Perguntas de vínculo: *Qual memória você apagaria se pudesse? · Em que menti
 | **Aliviar** | *Voltar* o objeto quebrado ao que era; *Lento*: o sangramento anda devagar | Pequeno evento |
 | **Descobrir** | *Localizar*; o *Passado* deste lugar | Pequeno evento |
 | **Mover** | *Teleportar*, *Atravessar*, *Saltar*, *Guiar*: ninguém chega mais longe | Pequeno evento |
+| **Estar em dois lugares** | *Clone*: você (ou alguém) de outro instante, lado a lado com você, pelo marcador do Grau | Pequeno evento |
 
-- **Símbolo**: um anel com um ponto escapando dele. **Cor**: azul-noite com branco.
+- **Símbolo**: uma **esfera** (#1E2B5C) com, dentro, um anel perfeito e um ponto escapando pela tangente, entre estrelas miúdas. O tempo que continua. Vetor em `arte/simbolos/eternyr.svg`. **Cor**: azul-noite com branco.
 - **Primordial**: Ossyr, Aquele Que Já Foi. **Oposto**: Morbidyum.
 - **Compromisso**: "Cada coisa no seu tempo e no seu lugar." Paciente, organizado, detesta pressa e bagunça.
 - **Skill**: **nenhuma**. Eternyr é o único Valor que mexe no próprio jogo: quando o mestre emoldura, Ameaças e marcadores de duração. Isso já é a vantagem.
@@ -346,7 +347,7 @@ Perguntas de vínculo: *Qual memória você apagaria se pudesse? · Em que menti
 |---|---|---|---|---|---|---|
 | **1** | Teleportar | Deslocar | Guiar | Localizar | Atravessar | Parar |
 | **2** | Acelerar | Voltar | Saltar | Organizar | Aumentar | Encolher |
-| **3** | Tempo | Espaço | Portal | Caminho | Instante | Distância |
+| **3** | Tempo | Espaço | Portal | Caminho | Instante | Clone |
 | **4** | Dimensão | Passado | Futuro | Âncora | Ciclo | Horizonte |
 | **5** | Rápido | Lento | Imenso | Minúsculo | Infinito | Próximo |
 | **6** | Antigo | Eterno | Efêmero | Pontual | Reverso | Simultâneo |
@@ -375,7 +376,7 @@ Perguntas de vínculo: *Em que momento da sua vida você voltaria? · Onde é o 
 | **Descobrir** | *Farejar*, *Instinto*; falar com bichos | Pequeno evento |
 | **Mover** | *Voar*, *Nadar*, *Rastejar*, *Cavar*; a Skill *Forma Animal* | Pequeno evento |
 
-- **Símbolo**: uma pegada dentro de uma folha. **Cor**: verde-musgo com âmbar.
+- **Símbolo**: uma **esfera** (#5E7D3A) com, dentro, uma pegada dentro de uma folha, em âmbar. O corpo que sabe antes da cabeça. Vetor em `arte/simbolos/primitivum.svg`. **Cor**: verde-musgo com âmbar.
 - **Primordial**: Tahwë, a Raiz que Anda. **Oposto**: Dominum.
 - **Compromisso**: "O corpo sabe antes da cabeça." Age por instinto, se adapta, confia mais em bicho que em gente.
 - **Skill · Forma Animal**: transforme-se em um animal. Vezes por sessão = seu **Moldura** ❓ P-13. Tamanho até o seu Grau máximo (G2 até gente, G3 cavalo, G4 urso grande, G5 fera colossal). Você mantém PV, Cansaço e Esquiva e ganha **2 Traços Animais** (+1 por Moldura acima do 1): voar, nadar, escalar, faro, garras (dano d10 × Proficiência), carapaça (+2 nos Limiares), veneno, corrida (move até Médio).

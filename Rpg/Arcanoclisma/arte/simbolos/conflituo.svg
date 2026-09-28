@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Esfera de conflituo"><defs><radialGradient id="g-conflituo" cx=".36" cy=".32" r=".75"><stop offset="0" stop-color="#E07A55"/><stop offset=".55" stop-color="#A8432E"/><stop offset="1" stop-color="#3A120B"/></radialGradient><clipPath id="c-conflituo"><circle cx="100" cy="100" r="88"/></clipPath></defs>
+<circle cx="100" cy="100" r="92" fill="none" stroke="#A8432E" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="100" cy="100" r="88" fill="url(#g-conflituo)"/>
+<g clip-path="url(#c-conflituo)"><line x1="52" y1="52" x2="148" y2="148" stroke="#F6D2B8" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="9"/>
+<line x1="148" y1="52" x2="112" y2="88" stroke="#F6D2B8" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="9"/><line x1="88" y1="112" x2="52" y2="148" stroke="#F6D2B8" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="9"/>
+<polygon points="100,86 104,97 96,97" fill="#F6D2B8"/><polygon points="114,100 104,104 106,94" fill="#F6D2B8" opacity=".8"/><polygon points="86,106 96,104 94,114" fill="#F6D2B8" opacity=".7"/></g>
+<ellipse cx="72" cy="58" rx="26" ry="12" transform="rotate(-30 72 58)" fill="#ffffff" opacity=".13"/>
+<circle cx="100" cy="100" r="88" fill="none" stroke="#3A120B" stroke-opacity=".6" stroke-width="2"/></svg>
