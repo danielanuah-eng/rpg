@@ -349,3 +349,11 @@ Sua resposta:
 ✅ **Palavras flexíveis**: variações (plural, verbo/substantivo/adjetivo da mesma raiz) e sinônimos claros contam como a mesma palavra.
 
 ✅ **Persona · Toque Humano** corrigido: magia em pessoas funciona normal; **fora de pessoas, −2 no total**.
+
+✅ **Quem recebe a magia** (substitui a P-106): quem conjura sempre rola. Sem alvo ou em quem aceita → contra a Dificuldade do Grau, sem teste do alvo. Magia que precisa acertar → contra a Esquiva/Dificuldade do alvo. Magia que muda quem não quer → contra a Dificuldade do Grau, e o alvo **resiste** contra o total (PJ: 2d12 + atributo escolhido pela descrição; adversário: 2d12 + Ataque, Vantagem/Desvantagem pelas palavras; lacaio não resiste). Aplicado em [[02 Magia]].
+
+✅ **Só conta palavra que muda o efeito** (opção B): palavra que só diz onde ou em quem a magia cai não conta nem custa.
+
+**P-117** 🟡 Magia resistida na Moldura 1 funciona ~60% (sem resistência, ~80%). Fica assim, ou o empate na resistência também vai para quem conjura e o alvo que resiste ainda sofre meio efeito (dura só o Instante)?
+Sua resposta:
+

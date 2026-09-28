@@ -20,6 +20,8 @@ Ser um **Comprometido eficiente e adaptativo** é olhar e usar as palavras **de 
 
 As palavras da tabela **variam livremente**: plural, gênero, e troca entre verbo, substantivo e adjetivo da mesma raiz contam como **a mesma palavra** (*Acalmar* = calma = calmo; *Humano* = humanos = humanidade; *Fogo* = fogueira = em chamas). Se o jogador quiser uma palavra **próxima** que não está na tabela (*Serenar* no lugar de *Acalmar*), a mesa aceita quando o sentido é claramente o mesmo. Isso dá variedade sem mudar custo nem limite.
 
+**Só conta palavra que muda o efeito.** Uma palavra que apenas diz *onde* ou *em quem* a magia cai, sem acrescentar nada que a primeira já não faça, é detalhe da intenção e não conta nem custa: *Fortalecer* (Músculo) em você mesmo é uma palavra só, porque fortalecer um corpo já é músculo; *Acalmar* (Humanos) numa pessoa também. Se a segunda palavra **acrescenta** efeito (*Fortalecer Coragem*: além do corpo, o medo some), ela conta e custa.
+
 ### Relação (+1)
 
 Ao conjurar, o jogador **pode** dizer em uma frase por que aquela palavra, para aquele personagem, faz aquilo acontecer. É opcional e só narrativo: ninguém é punido por não dizer.
@@ -36,7 +38,26 @@ Os números do jogo **já contam com esse +1** (as Dificuldades foram calibradas
    - **Uma Palavra Básica** (verbo, modo ou forma): **não custa e não conta no limite**. Ela existe para **dar ao Valor ações que ele sozinho não tem** (um Cognitium que precisa *escalar*, um Conflitüo que precisa *esconder*). Precisa fazer sentido concreto.
 3. **Grau**: pelo tamanho do efeito (tabela abaixo), até o seu máximo (Moldura + 1). O mestre tem a palavra final se o efeito pedido for maior do que o Grau.
 4. **Pague**: custo do Grau + 1 Arcano por palavra de Valor além da primeira + Ampliações. (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
-5. **Role** os dados do Grau + Sintonia (+1 de Relação), contra **a Dificuldade do alvo**; se a magia não tem alvo (abrir, criar, mudar o lugar), contra **a Dificuldade do Grau**. Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre).
+5. **Role** os dados do Grau + Sintonia (+1 de Relação). Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre). **Contra o quê**, depende de quem recebe a magia (abaixo).
+
+### Quem recebe a magia
+
+A rolagem é sempre **sua**: é o teste para a magia acontecer. O que muda é contra o que você rola e se o alvo tem chance de escapar.
+
+| A magia… | Você rola contra | O alvo |
+|---|---|---|
+| **não tem alvo** (abrir, criar, mudar o lugar) ou vai em **quem aceita** (você, um aliado, um objeto seu) | a **Dificuldade do Grau** | não rola nada: ninguém resiste à própria magia nem à que aceitou |
+| **precisa acertar** (projétil, golpe, jato, algo que se desvia) | a **Esquiva** do alvo (PJ) ou a **Dificuldade** (adversário) | não rola: a Esquiva já é a defesa dele |
+| **muda quem não quer** (medo, encanto, sono, enfraquecer, prender) | a **Dificuldade do Grau** | se a magia aconteceu, **resiste**: rola contra **o seu total** |
+
+**Resistir**: é uma reação (não gera Arcano nem Cataclisma). O mestre escolhe o atributo pela descrição da magia e pela situação: medo e encanto pedem *firme* (Sabedoria), ser preso pede *forte* (Força), uma ilusão pede *atento* (Percepção), um corpo que amolece pede *resistente* (Força). Iguala ou passa o seu total, escapa.
+
+- **PJ** resiste com 2d12 + o atributo.
+- **Adversário** resiste com 2d12 + o **Ataque** dele. Uma palavra dele que combina com resistir (*Destemido* contra medo) dá Vantagem; uma que o deixa exposto (*Covarde*) dá Desvantagem.
+- **Lacaios não resistem**: o efeito pega. (Por golpe, caem 1 / 2 / 3, como no dano.)
+- Skills e Drawbacks que mexem no total (como o −2 de Persona fora de pessoas) mexem **no seu total**, e portanto na resistência também.
+
+Na Moldura 1, uma magia de Grau 2 que alguém resiste funciona **~60%** das vezes (contra ~80% das que não têm resistência). É o preço de mandar na cabeça ou no corpo de alguém; em troca, o efeito costuma decidir a cena.
 
 ### Grau 1: a magia do dia a dia
 
@@ -189,7 +210,7 @@ Dois personagens conjuram juntos, **numa rolagem só**. É o jeito de passar do 
 1. **Custo**: 3 Arcano, divididos como quiserem, e cada um paga suas palavras de Valor extras.
 2. **Palavras**: cada um põe palavras do próprio Valor (e as Básicas, de graça). Palavras de Valor no total: até **o maior limite dos dois + 2** (máx. 7).
 3. **Grau do efeito**: o maior Grau que qualquer um dos dois conseguiria **+1** (máx. 5).
-4. **Rolagem**: quem **conduz** rola os dados **do Grau do efeito** + a própria Sintonia + Relação; o **parceiro soma +2**. Contra a Dificuldade do alvo (sem alvo, a do Grau do efeito).
+4. **Rolagem**: quem **conduz** rola os dados **do Grau do efeito** + a própria Sintonia + Relação; o **parceiro soma +2**. Contra o que a magia pedir (ver *Quem recebe a magia*: Grau do efeito, Esquiva/Dificuldade de quem precisa ser acertado, e resistência de quem não quer).
 5. **As Skills dos dois Valores valem**. Os Drawbacks também.
 6. Par/ímpar, Crítico e Desequilíbrio: como numa magia normal, nos dados rolados.
 

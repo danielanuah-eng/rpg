@@ -10,7 +10,7 @@
 
 **Dados**: cada **par** = +1 Arcano para você. Cada **ímpar** = +1 Cataclisma para o mestre. **Dois iguais = Crítico** (sucesso automático, +Arcano igual ao dado, máx. 6). **Maior dado ímpar** (jogada por Cataclisma) ou **falha** → o mestre emoldura.
 
-**Magia**: 1 palavra do seu Valor (núcleo) + até 1 palavra de Valor a mais (1 Arcano) + **uma** Palavra Básica de graça (verbo, modo ou forma). Na Moldura 1: **Grau 1** é grátis e acontece sem rolar (ou vira o meio de uma ação: dano 1d8+1); **Grau 2** custa **1 Arcano** e rola **2d12 + 2 (Sintonia) + 1 (Relação, se a palavra tem a ver com o personagem)** contra a Dificuldade do alvo (sem alvo, 12). Dano de Grau 2: **1d10 + 2**. Dura até a próxima Falha.
+**Magia**: 1 palavra do seu Valor (núcleo) + até 1 palavra de Valor a mais (1 Arcano) + **uma** Palavra Básica de graça (verbo, modo ou forma). Na Moldura 1: **Grau 1** é grátis e acontece sem rolar (ou vira o meio de uma ação: dano 1d8+1); **Grau 2** custa **1 Arcano** e rola **2d12 + 2 (Sintonia) + 1 (Relação, se a palavra tem a ver com o personagem)** contra 12 (sem alvo ou em quem aceita; quem não quer resiste contra o seu total), ou contra a Esquiva/Dificuldade de quem precisa ser acertado. Dano de Grau 2: **1d10 + 2**. Dura até a próxima Falha.
 
 **Ajudas**: no máximo duas por rolagem (Relação não conta). **Arcano** (começa 3, máx. 12): 1 = Vivência +2 · 1 = Ajudar (Vantagem, +1d6) · 1 = palavra extra · 3 = Hábito · 3 = Ação em Dupla · 3 = Detalhe · 3 = Forçar o Grau (Grau 3, 3d8, contra 14).
 
