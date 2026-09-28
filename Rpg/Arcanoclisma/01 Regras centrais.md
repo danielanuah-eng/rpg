@@ -16,32 +16,32 @@
 
 ## 1. Interações: atributos e verbos
 
-Tudo o que um personagem faz sem magia está numa tabela só, a **tabela de Interações**. A primeira coluna são os **atributos** (como você faz); as outras são **verbos** (o que você faz), cada um na linha do atributo que costuma usar. Monstros e PNJs usam a mesma tabela ([[10 Adversários - como criar]]).
+Tudo o que um personagem faz sem magia está numa tabela só, a **tabela de Interações**. A primeira coluna são os **atributos** (como você faz); as outras são os **42 verbos** (o que você faz), cada um na linha do atributo que costuma usar. Monstros e PNJs usam a mesma tabela ([[10 Adversários - como criar]]).
 
-| Atributo | | | | | | |
-|---|---|---|---|---|---|---|
-| **Força** | Bater | Agarrar | Levantar | Aguentar | Quebrar | Abrir |
-| **Agilidade** | Movimentar | Desviar | Fugir | Esconder | Mexer | Apagar |
-| **Percepção** | Atirar | Observar | Procurar | Rastrear | Furtar | Investigar |
-| **Carisma** | Convencer | Mentir | Ameaçar | Atrair | Chamar | Conjurar |
-| **Inteligência** | Pensar | Estudar | Consertar | Negociar | Criar | Fazer |
-| **Sabedoria** | Intuir | Sobreviver | Firmar | Proteger | Montar | Preparar |
+| Atributo | | | | | | | |
+|---|---|---|---|---|---|---|---|
+| **Força** | Bater | Agarrar | Levantar | Aguentar | Quebrar | Abrir | Acabar |
+| **Agilidade** | Movimentar | Desviar | Fugir | Esconder | Mexer | Apagar | Alcançar |
+| **Percepção** | Atirar | Observar | Procurar | Rastrear | Furtar | Investigar | Reconhecer |
+| **Carisma** | Convencer | Mentir | Ameaçar | Atrair | Chamar | Conjurar | Encantar |
+| **Inteligência** | Pensar | Estudar | Consertar | Negociar | Criar | Fazer | Formar |
+| **Sabedoria** | Intuir | Sobreviver | Firmar | Proteger | Montar | Preparar | Conectar |
 
 O que cada verbo cobre, quando a dúvida aparecer:
 
-- **Bater**: corpo a corpo, com arma ou sem. **Agarrar**: segurar, derrubar, prender, desarmar. **Levantar**: erguer, empurrar, carregar. **Aguentar**: dor, veneno, frio, fome, doença. **Quebrar**: arrombar, partir, derrubar a porta. **Abrir**: forçar e escancarar (porta emperrada, tampa, caminho no mato).
-- **Movimentar**: correr, saltar, escalar, nadar, remar. **Desviar**: reagir rápido, escapar de armadilha, de rajada, de queda. **Fugir**: escapar de perseguição, de amarras, sair de uma briga. **Esconder**: furtividade, sumir na multidão. **Mexer**: mão leve, fechadura, truque, trapaça no jogo. **Apagar**: fogo, luz, rastros, depressa.
-- **Atirar**: arco, funda, arremesso, pistola. **Observar**: ver, ouvir, notar que algo mudou. **Procurar**: vasculhar com calma. **Rastrear**: seguir pegadas, cheiro, pistas. **Furtar**: achar a brecha e tirar sem ser visto. **Investigar**: examinar uma cena, juntar pistas.
-- **Convencer**: persuadir, pedir. **Mentir**: enganar, disfarçar, blefar. **Ameaçar**: intimidar, dar ultimato. **Atrair**: encantar, seduzir, distrair, chamar a atenção. **Chamar**: liderar, inspirar, se fazer ouvir. **Conjurar**: espetáculo, truque de palco, magia feita para ser vista.
-- **Pensar**: deduzir, resolver, planejar. **Estudar**: lembrar o que se sabe, ler, pesquisar, entender magia alheia. **Consertar**: ofício, montar, desmontar, forjar, cozinhar. **Negociar**: comprar, vender, trocar, pechinchar. **Criar**: arte, música, inventar. **Fazer**: produzir algo com receita (poção, item, ferramenta).
-- **Intuir**: sentir intenção, mentira, perigo. **Sobreviver**: se orientar, achar abrigo, ler o tempo. **Firmar**: resistir ao medo, ao encanto, à loucura. **Proteger**: cobrir alguém com o corpo, estancar um sangramento, tirar alguém do perigo, acalmar quem está em pânico. **Montar**: cavalgar, conduzir, pilotar, lidar com bicho. **Preparar**: ritual, remédio, emboscada, o terreno antes da luta.
+- **Bater**: corpo a corpo, com arma ou sem. **Agarrar**: segurar, derrubar, prender, desarmar. **Levantar**: erguer, empurrar, carregar. **Aguentar**: dor, veneno, frio, fome, doença. **Quebrar**: arrombar, partir, derrubar a porta. **Abrir**: forçar e escancarar (porta emperrada, tampa, caminho no mato). **Acabar**: terminar à força (o golpe final, derrubar de vez, esgotar).
+- **Movimentar**: correr, saltar, escalar, nadar, remar. **Desviar**: reagir rápido, escapar de armadilha, de rajada, de queda. **Fugir**: escapar de perseguição, de amarras, sair de uma briga. **Esconder**: furtividade, sumir na multidão. **Mexer**: mão leve, fechadura, truque, trapaça no jogo. **Apagar**: fogo, luz, rastros, depressa. **Alcançar**: pegar quem foge, chegar primeiro, alcançar o que está longe.
+- **Atirar**: arco, funda, arremesso, pistola. **Observar**: ver, ouvir, notar que algo mudou. **Procurar**: vasculhar com calma. **Rastrear**: seguir pegadas, cheiro, pistas. **Furtar**: achar a brecha e tirar sem ser visto. **Investigar**: examinar uma cena, juntar pistas. **Reconhecer**: identificar uma pessoa, uma magia, um brasão, um perigo.
+- **Convencer**: persuadir, pedir. **Mentir**: enganar, disfarçar, blefar. **Ameaçar**: intimidar, dar ultimato. **Atrair**: encantar, seduzir, distrair, chamar a atenção. **Chamar**: liderar, inspirar, se fazer ouvir. **Conjurar**: espetáculo, truque de palco, magia feita para ser vista. **Encantar**: deslumbrar, conquistar um público, fazer gostar.
+- **Pensar**: deduzir, resolver, planejar. **Estudar**: lembrar o que se sabe, ler, pesquisar, entender magia alheia. **Consertar**: ofício, montar, desmontar, forjar, cozinhar. **Negociar**: comprar, vender, trocar, pechinchar. **Criar**: arte, música, inventar. **Fazer**: produzir algo com receita (poção, item, ferramenta). **Formar**: organizar gente e coisas (uma fila, uma formação, um plano, uma forma).
+- **Intuir**: sentir intenção, mentira, perigo. **Sobreviver**: se orientar, achar abrigo, ler o tempo. **Firmar**: resistir ao medo, ao encanto, à loucura. **Proteger**: cobrir alguém com o corpo, estancar um sangramento, tirar alguém do perigo, acalmar quem está em pânico. **Montar**: cavalgar, conduzir, pilotar, lidar com bicho. **Preparar**: ritual, remédio, emboscada, o terreno antes da luta. **Conectar**: ligar pessoas, lugares e ideias; criar confiança; achar o que une.
 
 **Na criação**, distribua obrigatoriamente:
 
 - **Atributos**: **+1 · +1 · 0 · 0 · 0 · −1**
 - **Verbos**: **+2 · +1 · +1 · +1 · −1** (os outros ficam em 0)
 
-São **36 verbos** (6 × 6): o mestre pode sortear um com d66 (linha, coluna).
+São **42 verbos** (6 linhas × 7): para sortear, d6 na linha e d8 na coluna (7–8: role de novo).
 
 Atributo e verbo vão até **+3** cada (máximo de um teste: +6). Os números **não entram em magia** (exceto quando uma regra disser).
 
