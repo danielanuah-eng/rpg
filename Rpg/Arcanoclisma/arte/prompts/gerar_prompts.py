@@ -56,9 +56,11 @@ ESTILOS = {
           'majestic even when threatening. It is an ancient desire that became flesh and scales, complete, alive and full of soul: '
           'made of order and change at once, part of its body whole, closed and symmetrical, part cracked open with light '
           'leaking through and shapes shifting. Slender elegant body with a long neck and long tail, angular crystal-like scales '
-          'drawn as flat blocks of color, a limited palette of two or three hues plus one glowing accent color. Luminous flickering '
-          'flames in the accent color rise from the spines, the edges of the wings and the tip of the tail and wrap around the '
-          'body like a moving mantle, with translucent wisps and glowing veins along the scales; the eyes burn with the same fire. '
+          'drawn as flat blocks of color, a limited palette of two or three hues plus one glowing accent color. The flames are NOT '
+          'realistic fire: they are ghostly, translucent, stylized flame shapes drawn as clean flat graphic ribbons and smoke-like '
+          'curls with simple edges, flowing in long elegant curves that trace and frame the silhouette of the body like a spectral '
+          'mantle. They appear only in a few places: the wing tips, the tip of the tail, the crest along the spine and the eyes, '
+          'where the body seems to dissolve into flame; plus a few thin glowing veins along the scales. '
           'Deep expressive eyes that carry emotional weight, love, fear or longing, looking at the viewer as if mortals were '
           'passing seasons. Plain light gray background, no scenery, no text, no logo, no signature. Subject (in Portuguese):'),
     'I': ('Item (1:1)',

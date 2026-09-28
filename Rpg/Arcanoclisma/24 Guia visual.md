@@ -89,7 +89,7 @@ Traço do **Wilderfeast** (tinta grossa, contorno preto, cor chapada com sombra 
 - **Imponência**: visto um pouco de baixo, cabeça erguida, peito orgulhoso, envergadura enorme; majestoso até ameaçando.
 - **Corpo**: nobre e alongado, pescoço e cauda longos; escamas angulosas como cristal, desenhadas em blocos de cor.
 - **Paleta**: duas ou três cores do Valor e **um acento que brilha**.
-- **Chamas bruxuleantes**: saem dos espinhos, da borda das asas e da ponta da cauda e **envolvem o corpo como um manto que se mexe**, com fiapos translúcidos e veios acesos nas escamas; os olhos queimam com o mesmo fogo.
+- **Chamas bruxuleantes**: **nada de fogo realista**. São chamas **fantasmagóricas e translúcidas**, desenhadas como **fitas e fumaça em formas chapadas**, de borda limpa, que correm em curvas longas e **contornam a silhueta** como um manto espectral. Aparecem **só em alguns pontos**: pontas das asas, ponta da cauda, crista e olhos, onde o corpo parece virar chama; mais alguns veios finos acesos nas escamas.
 - **Arcano e Cataclisma num corpo só**: parte do corpo inteira, fechada e simétrica; parte rachada, com luz vazando e forma mudando.
 - **Peso emocional**: olhos fundos e expressivos (amor, medo, saudade), olhando quem vê como se os mortais fossem estações.
 - **Idade**: o filhote e o jovem são feras de impulso; o adulto é senhor consciente; o ancião é memória do mundo, sábio, de cicatrizes antigas.
