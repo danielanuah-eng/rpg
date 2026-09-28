@@ -425,6 +425,6 @@ Sua resposta:
 
 ## Rodada 19 — Interações
 
-**P-122** 🔴 **Atributos + Palavras Básicas viram uma tabela só de 20 Interações** (Bater, Agarrar, Levantar, Aguentar, Movimentar, Desviar, Atirar, Esconder, Prestidigitação, Consertar, Cuidar, Convencer, Mentir, Ameaçar, Atrair, Chamar, Raciocinar, Perceber, Sobreviver, Firmar). Criação: **+3 · +2 · +2 · +1 · +1 · +1 · −1 · −1**, o resto em 0; máximo +6. Dados continuam 2d12; a escada de Dificuldades não muda. Monstros e PNJs: Ataque em tudo, 2–3 Interações fortes (+2) e 1 fraca (−2). Detalhes e contas em [[17 Interações - proposta]].
+**P-122** 🔴 **Tabela de Interações** (versão 2, depois do seu retorno): uma tabela 6 × 6, primeira coluna com os **atributos** (Força, Agilidade, Percepção, Carisma, Inteligência, Sabedoria) e 30 **verbos** nas linhas deles (Bater, Agarrar, Levantar, Aguentar, Defender · Movimentar, Desviar, Fugir, Esconder, Mexer · Atirar, Notar, Procurar, Rastrear, Furtar · Convencer, Mentir, Ameaçar, Atrair, Chamar · Pensar, Estudar, Consertar, Negociar, Criar · Intuir, Sobreviver, Firmar, Cuidar, Montar). Teste = **2d12 + atributo + verbo** (atributo pela descrição; padrão, o da linha). Criação: atributos **+1 · +1 · 0 · 0 · 0 · −1**, verbos **+2 · +1 · +1 · +1 · −1**; máximo +3 em cada, +6 no teste. Dados e escada de Dificuldades não mudam. Cada PNJ tem a sua tabela de básicas e, se usar magia, a de Valor. Detalhes e contas em [[17 Interações - proposta]].
 Sua resposta:
 

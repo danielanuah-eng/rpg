@@ -1,99 +1,101 @@
-# 17 — Interações (proposta)
+# 17 — Interações (proposta, versão 2)
 
-> Proposta da **P-122**: trocar os 6 atributos + as Palavras Básicas de ação + os modos por **uma tabela só de Interações**. Quando aprovada, entra em [[01 Regras centrais]], [[02 Magia]], [[04 Comportamentos]], [[05 Personagem e níveis]], [[06 Itens e dinheiro]] e [[10 Adversários - como criar]].
+> Proposta da **P-122**: juntar os 6 atributos e as Palavras Básicas de ação numa **tabela só de Interações**. Quando aprovada, entra em [[01 Regras centrais]], [[02 Magia]], [[04 Comportamentos]], [[05 Personagem e níveis]], [[06 Itens e dinheiro]] e [[10 Adversários - como criar]].
 
-## A ideia
+## A tabela
 
-Todo mundo no mundo faz as mesmas coisas básicas: bater, correr, mentir, convencer, notar, aguentar. Em vez de "atributo + palavra de ação + modo", o teste é **uma palavra só**: a **Interação**. Ela está na ficha com um número.
+A primeira coluna são os **atributos**. As outras são **verbos**: as ações básicas que todo mundo no mundo faz. Cada verbo fica na linha do atributo que ele costuma usar.
 
-> "Vou **Agarrar** o guarda." → 2d12 + Agarrar.
-> "Vou **Mentir** pro capitão." → 2d12 + Mentir.
+| Atributo | | | | | |
+|---|---|---|---|---|---|
+| **Força** | Bater | Agarrar | Levantar | Aguentar | Defender |
+| **Agilidade** | Movimentar | Desviar | Fugir | Esconder | Mexer |
+| **Percepção** | Atirar | Notar | Procurar | Rastrear | Furtar |
+| **Carisma** | Convencer | Mentir | Ameaçar | Atrair | Chamar |
+| **Inteligência** | Pensar | Estudar | Consertar | Negociar | Criar |
+| **Sabedoria** | Intuir | Sobreviver | Firmar | Cuidar | Montar |
 
-O **como** (rápido, gentil, bruto) continua na descrição, e é ele que o mestre usa para dar Vantagem ou Desvantagem. Mas não escolhe número.
+O que cada verbo cobre, quando a dúvida aparecer:
 
-## As 20 Interações
+- **Bater**: corpo a corpo, com arma ou sem. **Agarrar**: segurar, derrubar, prender, desarmar. **Levantar**: erguer, empurrar, arrombar, carregar. **Aguentar**: dor, veneno, frio, fome, doença. **Defender**: cobrir alguém, aparar, segurar a porta.
+- **Movimentar**: correr, saltar, escalar, nadar, remar. **Desviar**: reagir rápido, escapar de armadilha, de rajada, de queda. **Fugir**: escapar de perseguição, de amarras, sumir de uma briga. **Esconder**: furtividade, sumir na multidão. **Mexer**: mão leve, fechadura, truque, trapaça no jogo.
+- **Atirar**: arco, funda, arremesso, pistola. **Notar**: ver, ouvir, sentir que algo mudou. **Procurar**: vasculhar com calma. **Rastrear**: seguir pegadas, cheiro, pistas. **Furtar**: achar a brecha e tirar sem ser visto.
+- **Convencer**: persuadir, pedir. **Mentir**: enganar, disfarçar, blefar. **Ameaçar**: intimidar, dar ultimato. **Atrair**: encantar, seduzir, distrair, chamar a atenção. **Chamar**: liderar, inspirar, se fazer ouvir.
+- **Pensar**: deduzir, resolver, planejar. **Estudar**: lembrar o que se sabe, ler, pesquisar. **Consertar**: ofício, montar, desmontar, forjar, cozinhar. **Negociar**: comprar, vender, trocar, pechinchar. **Criar**: arte, música, inventar.
+- **Intuir**: sentir intenção, mentira, perigo. **Sobreviver**: se orientar, achar abrigo, ler o tempo. **Firmar**: resistir ao medo, ao encanto, à loucura. **Cuidar**: primeiros socorros, acalmar alguém, lidar com bicho. **Montar**: cavalgar, conduzir, pilotar.
 
-| Família | Interação | Cobre |
-|---|---|---|
-| **Corpo** | **Bater** | ataque corpo a corpo, com arma ou sem |
-| | **Agarrar** | segurar, derrubar, prender, desarmar |
-| | **Levantar** | erguer, empurrar, arrombar, carregar |
-| | **Aguentar** | dor, veneno, frio, fome, cansaço, doença |
-| **Movimento** | **Movimentar** | correr, saltar, escalar, nadar, remar, montar |
-| | **Desviar** | reagir rápido, escapar de armadilha, de rajada, de queda |
-| | **Atirar** | ataque à distância: arco, funda, arremesso, pistola |
-| | **Esconder** | furtividade, sumir na multidão, esconder um objeto |
-| **Mãos** | **Prestidigitação** | furtar, abrir fechadura, truque de mão, trapaça no jogo |
-| | **Consertar** | ofício, montar, desmontar, cozinhar, forjar |
-| | **Cuidar** | primeiros socorros, acalmar alguém, lidar com bicho |
-| **Voz** | **Convencer** | persuadir, negociar, pedir |
-| | **Mentir** | enganar, disfarçar, blefar |
-| | **Ameaçar** | intimidar, impor medo, dar ultimato |
-| | **Atrair** | encantar, seduzir, chamar a atenção, distrair |
-| | **Chamar** | liderar, comandar, inspirar, se fazer ouvir |
-| **Mente** | **Raciocinar** | deduzir, lembrar, estudar, resolver enigma |
-| | **Perceber** | notar, ouvir, procurar, achar o escondido |
-| | **Sobreviver** | se orientar, rastrear, ler o tempo, achar abrigo |
-| | **Firmar** | resistir ao medo, ao encanto, à loucura, à dor da alma |
+## O teste
+
+**2d12 + atributo + verbo.**
+
+- O **verbo** é o que você faz. O **atributo** é **como** faz: por padrão, o da linha do verbo; se a descrição pede outro, usa o outro. "Bater com a adaga, rápido" = Agilidade + Bater. "Convencer com os fatos" = Inteligência + Convencer.
+- Quando nenhum verbo serve, rola **só o atributo** (queda de braço: Força).
+- O resto continua igual: cada dado par dá Arcano, cada ímpar dá Cataclisma; **Vantagem (+1d6), até 2**; itens e talentos que dão "+1" sobem um verbo ou um atributo.
 
 ## Na criação
 
-Distribua **obrigatoriamente** estes valores, cada um numa Interação diferente:
+Distribua **obrigatoriamente**:
 
-**+3 · +2 · +2 · +1 · +1 · +1 · −1 · −1**
+- **Atributos**: **+1 · +1 · 0 · 0 · 0 · −1**
+- **Verbos**: **+2 · +1 · +1 · +1 · −1** (os outros 25 ficam em 0)
 
-As outras 12 ficam em **0**. Não precisa preencher tudo: o personagem é bom em poucas coisas, ruim em duas, e comum no resto. As duas casas de **−1** dizem quem ele é tanto quanto o +3.
+O melhor teste de um personagem novo dá **+3** (atributo +1 e verbo +2); o comum, perto de **+1**; o pior, **−2**.
 
-**Exemplo — o Castian** (antes: Carisma +2, Sabedoria +1, Percepção +1, Inteligência −1):
-Cuidar **+3** (acalmou a vila inteira) · Convencer **+2** · Movimentar **+2** (cresceu no cais) · Perceber **+1** · Sobreviver **+1** · Chamar **+1** · Mentir **−1** (inocente demais) · Raciocinar **−1**.
+**Exemplo — o Castian**: Carisma +1 · Sabedoria +1 · Inteligência −1 · Cuidar **+2** (acalmou a vila inteira) · Convencer +1 · Movimentar +1 (cresceu no cais) · Notar +1 · Mentir **−1** (inocente demais).
+Cuidar = +3 · Convencer = +2 · Movimentar = +1 · Notar = +1 · Mentir = 0 · Pensar = −1.
 
-**Avanço de nível** (troca "+1 em dois atributos"): **+1 em duas Interações** ainda não marcadas (as marcas somem nos níveis 5 e 8). Máximo **+6**.
+**Avanço de nível** (troca "+1 em dois atributos"): **+1 em dois atributos ou verbos** ainda não marcados (as marcas somem nos níveis 5 e 8). Atributo e verbo vão até **+3** cada, então o máximo de um teste é **+6**.
 
-## Contas: os dados continuam 2d12
+## Contas
 
-Nada muda no dado: **2d12 + Interação**, e cada dado par dá Arcano, cada ímpar dá Cataclisma. Pela conta, o número que o jogador costuma usar continua perto da Moldura (+1 na M1, +4 na M4): ele escolhe agir onde é bom na maior parte das vezes, mas nem sempre dá. O melhor número dele fica em Moldura + 2 (+3 na M1, +6 na M4).
+O teste que o jogador costuma fazer fica perto da **Moldura** (+1 na M1, +4 na M4) e o melhor dele em **Moldura + 2**, como antes. Por isso os **dados continuam 2d12** e a **escada de Dificuldades não muda** (Fácil 9 · Médio 12 · Difícil 15 · Muito difícil 19 · Lendário 23 na M1; +1 por Moldura do desafio).
 
-As **situações** que aumentam a rolagem seguem a regra de bônus (P-118): **Vantagem (+1d6), até 2**. Itens e talentos que dão "+1" sobem a Interação.
-
-Chance de passar (sem Vantagem / com 1 / com 2) na escada de Dificuldades, **em qualquer Moldura** (a escada sobe junto):
+Chance de passar (sem Vantagem / com 1 / com 2), em qualquer Moldura:
 
 | Quem rola | Fácil | Médio | Difícil | Muito difícil | Lendário |
 |---|---|---|---|---|---|
-| **Interação típica** (≈ Moldura) | 85 / 96 / 99% | 69 / 87 / 96% | 46 / 71 / 88% | 19 / 43 / 67% | 4 / 18 / 40% |
-| **Melhor Interação** (Moldura + 2) | 93 / 99 / 100% | 81 / 94 / 99% | 62 / 82 / 94% | 31 / 57 / 79% | 10 / 29 / 53% |
-| **Interação em 0**, na M1 | 81 / 94 / 99% | 62 / 82 / 94% | 38 / 64 / 83% | 15 / 36 / 60% | 2 / 13 / 33% |
-| **Interação em 0**, na M4 | 62 / 82 / 94% | 38 / 64 / 83% | 19 / 43 / 67% | 4 / 18 / 40% | 0 / 4 / 17% |
+| **Teste típico** (≈ Moldura) | 85 / 96 / 99% | 69 / 87 / 96% | 46 / 71 / 88% | 19 / 43 / 67% | 4 / 18 / 40% |
+| **Melhor teste** (Moldura + 2) | 93 / 99 / 100% | 81 / 94 / 99% | 62 / 82 / 94% | 31 / 57 / 79% | 10 / 29 / 53% |
+| **Nada treinado** (0), na M1 | 81 / 94 / 99% | 62 / 82 / 94% | 38 / 64 / 83% | 15 / 36 / 60% | 2 / 13 / 33% |
+| **Nada treinado** (0), na M4 | 62 / 82 / 94% | 38 / 64 / 83% | 19 / 43 / 67% | 4 / 18 / 40% | 0 / 4 / 17% |
 
-O que isso mostra:
-
-- **A escada de Dificuldades não precisa mudar** (Fácil 9 · Médio 12 · Difícil 15 · Muito difícil 19 · Lendário 23 na M1, +1 por Moldura do desafio).
-- **Especialidade pesa**: na M4, quem nunca treinou uma coisa tem 38% num desafio Médio; o especialista tem 81%. O grupo precisa se dividir.
-- **Uma Vantagem vale muito** (+15 a +25 pontos percentuais). Como ela custa Arcano (Vivência, Ajudar) ou vem de talento e ficção, está bom; o mestre só deve evitar dar Vantagem de graça em toda rolagem.
-- **Lendário** continua pedindo as duas Vantagens ou o melhor número do grupo.
+- **Especialidade pesa**: na M4, quem nunca treinou tem 38% num desafio Médio; o especialista, 81%. O grupo se divide.
+- **Uma Vantagem vale muito** (+15 a +25 pontos percentuais). Ela custa Arcano ou vem de talento e ficção; o mestre não deve dar de graça em toda rolagem.
+- **Lendário** pede as duas Vantagens ou o melhor teste do grupo.
 
 ## Na magia
 
-- A **Palavra Básica grátis** passa a ser **qualquer Interação** (o verbo) ou uma **forma** (Projétil, Onda, Barreira...). "*Voz* + **Ameaçar**", "*Raiz* + **Agarrar**".
-- Os **modos** (Rápido, Forte, Gentil...) saem da tabela de palavras: viram descrição.
-- No **Teste mágico**, o alvo rola a Interação que combina com o efeito: **Firmar** (medo, encanto, sono), **Aguentar** (veneno, cãibra, doença), **Desviar** (rajada, rede atirada), **Perceber** (ilusão), **Levantar** (prisão, peso).
+- A **Palavra Básica grátis** passa a ser **qualquer verbo** da tabela ou uma **forma** (Projétil, Onda, Barreira...). "*Voz* + **Ameaçar**", "*Raiz* + **Agarrar**". Os **modos** (Rápido, Forte, Gentil...) saem: viraram os atributos.
+- No **Teste mágico**, o alvo rola o verbo que combina com o efeito: **Firmar** (medo, encanto, sono), **Aguentar** (veneno, cãibra, doença), **Desviar** (rajada, rede), **Notar** (ilusão), **Levantar** (prisão, peso).
+- Para não repetir palavra, três palavras de Valor trocam: Cognitium *Pensar* → **Calcular**, *Convencer* → **Doutrinar**, *Mentira* → **Farsa**; Eternyr *Mover* → **Deslocar**.
 
 ## Monstros e PNJs
 
-Seguem a mesma tabela, do jeito curto:
+Cada um tem a **sua tabela de palavras básicas** e, se usar magia, a **sua tabela de palavras de Valor**. Um humano comum não tem a segunda.
 
-- O adversário tem **um número para tudo**: o **Ataque** da régua (+1 a +4). Ele rola **d20 + Ataque** em qualquer Interação.
-- As palavras dele (*Ser*, *Parecer*) marcam **2 ou 3 Interações fortes (+2)** e **1 fraca (−2)**. *Guarda veterano*: Bater e Perceber fortes, Mentir fraca. *Eco que Come o Som*: Agarrar e Firmar fortes, Perceber fraca.
-- Quando um jogador age **contra uma Interação forte** do adversário (se esconder de quem Percebe bem), a Dificuldade dele sobe **+2**; contra uma fraca, cai **−2**.
-- PNJ importante pode ter a tabela inteira, como um jogador.
+Do jeito curto (adversários do gerador):
+
+```
+Guarda veterano (Moldura 1, Padrão)
+Básicas: tudo +1 (o Ataque) · fortes: Bater, Notar, Defender (+3) · fraca: Mentir (−1)
+Valor: —
+
+O Eco que Come o Som (Moldura 1, Padrão, Disrupto de Alvorum)
+Básicas: tudo +1 · fortes: Agarrar, Firmar (+3) · fraca: Notar (−1)
+Valor (Alvorum): Escurecer, Sombra, Velado · (e o Agir dele: Enrolar, Engolir Voz)
+```
+
+- O adversário rola **d20 + o número** do verbo.
+- Quando um jogador age **contra um verbo forte** do adversário (se esconder de quem Nota bem), a Dificuldade sobe **+2**; contra um fraco, cai **−2**.
+- PNJ importante pode ter a tabela inteira, com atributos, como um jogador.
 
 ## O que muda nos outros arquivos
 
 | Onde | Antes | Depois |
 |---|---|---|
-| Ficha | 6 atributos + tabela de verbos e modos | as 20 Interações, com número |
-| Armas | Força / Agilidade / Percepção | **Bater** (corpo a corpo) ou **Atirar** (distância) |
-| Talentos | "Vantagem em testes de Força" | "Vantagem para **Levantar** e **Agarrar**" |
-| Itens de Ofício | +1 num atributo | +1 numa Interação |
-| Magia de buff | +1 no atributo afetado | +1 na Interação afetada |
-| Teste mágico | atributo pela descrição | Interação pela descrição |
-| Adversários | Ataque + palavras | Ataque + 2–3 Interações fortes e 1 fraca |
+| Ficha | 6 atributos + tabela de verbos e modos | a tabela de Interações, com número em atributos e verbos |
+| Armas | Força / Agilidade / Percepção | **Bater** ou **Atirar** + o atributo da arma |
+| Talentos | "Vantagem em testes de Força" | continua valendo (o atributo segue existindo); onde for mais claro, vira verbo |
+| Itens de Ofício | +1 num atributo | +1 num atributo ou verbo |
+| Teste mágico | atributo pela descrição | verbo pela descrição |
+| Adversários | Ataque + palavras | Ataque + verbos fortes e fracos + palavras de Valor, se tiver |
