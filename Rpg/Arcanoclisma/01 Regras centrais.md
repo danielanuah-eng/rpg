@@ -95,7 +95,7 @@ Duas coisas acontecem em toda rolagem:
 Chances no 2d12: por Arcano 50%, por Cataclisma 42%, Crítico 8%.
 
 **Efeitos de crítico** (escolha um):
-- **Ignorar um efeito negativo seu**: um Efeito Colateral, o Drawback do Valor (como o Tropeço), o Cansaço de Forçar, ou uma condição que você carrega.
+- **Ignorar um efeito negativo seu**: um Efeito Colateral, a Retaliação do Valor (como o Tropeço), o Cansaço de Forçar, ou uma condição que você carrega.
 - **Melhor resultado possível**: o total conta como se os dados tivessem dado o máximo (24).
 
 Num **Teste mágico** de magia (ver [[02 Magia]]) só o alvo rola, e o d20 dele faz as vezes do seu dado: par dá Arcano a você, ímpar dá Cataclisma ao mestre; **1 natural** é o **seu Crítico**; **20 natural** faz ele sempre escapar.

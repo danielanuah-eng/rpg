@@ -415,4 +415,11 @@ Proposta:
 - **Drawback · Tropeço** continua.
 - **Como Persona ataca**: bloco novo em [[03 Valores]] (a voz como arma, o corpo do outro contra ele, o sentimento como arma, o seu corpo como arma). Proposta extra: um bloco assim para **cada Valor** (atacar, defender, curar ou aliviar, descobrir, mover).
 Sua resposta:
+✅ Aplicado: Persona **sem o −2**. **Skill · Toque Humano**: em pessoas, o 1º passo de Ampliar sai de graça. **Retaliação · Tropeço**: falha sai inútil ou atrapalha, e fora de gente a magia só chega pelo corpo ou pelo sentimento.
+
+✅ **Drawback agora se chama Retaliação** (em todo o livro).
+
+✅ **Páginas dos Valores com voz**: cada Valor ganhou duas falas de Comprometidos, um **Como é** (cheiro, cor, como a magia aparece, como é carregar) e uma tabela **Para atacar · proteger · aliviar (ou curar) · descobrir · mover**, com palavras e tipo de efeito. Aplicado em [[03 Valores]].
+
+✅ **Ferir** virou um passo genérico de Ampliar: num Teste mágico, quem não passa também leva o dano do Grau. Sem ele, o Teste mágico só aplica o efeito.
 

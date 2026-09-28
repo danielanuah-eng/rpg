@@ -61,7 +61,7 @@ O **tipo do efeito** diz quem rola. É sempre **uma rolagem só** por magia: ou 
 
 Você paga a magia e descreve o efeito; **quem rola é o alvo**. Uma rolagem por ação, e a mesa anda.
 
-**Dificuldade da magia = 12 + Sintonia + 1 por palavra de Valor** (e o que Skills e Drawbacks mexem, como o −2 de Persona fora de pessoas). Na Moldura 1, com Sintonia +2: **15** com uma palavra, **16** com duas.
+**Dificuldade da magia = 12 + Sintonia + 1 por palavra de Valor** (e o que Skills e Retaliações mexem). Na Moldura 1, com Sintonia +2: **15** com uma palavra, **16** com duas.
 
 **O teste do alvo** é físico ou não conforme a descrição, o efeito e o atributo que combina; o mestre escolhe pela magia e pela situação: medo e encanto pedem *firme* (Sabedoria); rede e prisão, *forte* (Força); chão que escorrega e rajada, *ágil* (Agilidade); ilusão, *atento* (Percepção).
 
@@ -214,6 +214,7 @@ A **descrição** do efeito diz quanto poder ele tem. O **Grau** é o patamar; d
 - **Alvos/área**: +1 faixa.
 - **Duração**: +1 marcador (na ordem da tabela).
 - **Atributo afetado**: +1.
+- **Ferir** (Teste mágico): quem **não passa** também leva o **dano do Grau** (tabela de Graus). Sem esse passo, o Teste mágico só aplica o efeito (medo, cãibra, sono), sem dano.
 
 **Cada passo é um investimento e tem uma consequência**:
 
@@ -258,7 +259,7 @@ Dois personagens conjuram juntos, **numa rolagem só**. É o jeito de passar do 
 2. **Palavras**: cada um põe palavras do próprio Valor (e as Básicas, de graça). Palavras de Valor no total: até **o maior limite dos dois + 2** (máx. 7).
 3. **Grau do efeito**: o maior Grau que qualquer um dos dois conseguiria **+1** (máx. 5).
 4. **Rolagem**: quem **conduz** rola os dados **do Grau do efeito** + a própria Sintonia + **1 por palavra de Valor que ele pôs**; o **parceiro soma +2**. Contra o que o efeito pedir (ver *Três tipos de efeito*); num Teste mágico, a Dificuldade da magia usa a Sintonia de quem conduz + as palavras dele + 2 do parceiro, e só o alvo rola.
-5. **As Skills dos dois Valores valem**. Os Drawbacks também.
+5. **As Skills dos dois Valores valem**. Os Retaliações também.
 6. Par/ímpar, Crítico e Desequilíbrio: como numa magia normal, nos dados rolados.
 
 Chance: uns **89–90%** em qualquer Moldura.

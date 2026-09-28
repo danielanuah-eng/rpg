@@ -27,7 +27,7 @@ Objetivo: o jogo **funciona e é gostoso de jogar** antes de ter lore bonita. Na
 | 1.2 | Holofote (combate sem turno), alcances, dano, PV, Cansaço, morte | [[01 Regras centrais]] | 🟡 |
 | 1.3 | Magia: Graus, dados, custo, Efeitos Colaterais (d20), Crítico/Desequilíbrio | [[02 Magia]] | 🟡 |
 | 1.4 | Magia em Dupla, Valores opostos, Canal | [[02 Magia]] | 🟡 |
-| 1.5 | Os 9 Valores: 36 palavras, Skill, Drawback, Ressonâncias | [[03 Valores]] | 🟡 |
+| 1.5 | Os 9 Valores: 36 palavras, Skill, Retaliação, Ressonâncias | [[03 Valores]] | 🟡 |
 | 1.6 | Palavras Básicas (36, para todo mundo) | [[02 Magia]] | 🟡 |
 | 1.7 | Os 10 Comportamentos com talentos e progressão | [[04 Comportamentos]] | 🟡 |
 | 1.8 | Criação de personagem e níveis 1–10 | [[05 Personagem e níveis]] | 🟡 |
@@ -123,7 +123,7 @@ Entregas, na mesma família do Peso do Céu:
    - **Geradores**: encontro (balanceado pela Moldura e nº de jogadores), adversário com imagem, terreno, tesouro/item, relíquia com palavra, PNJ, nome, gancho, Abalo, "magia aleatória" (d66 nas tabelas).
 2. **Ficha de papel** enfeitada para imprimir, em **A4**, colorida e com versão econômica em preto e branco, em **duas folhas** ([[05 Personagem e níveis]]):
    - **Ficha 1 — Personagem** (igual para todos): nome, skin, Comportamento, atributos, Palavras Básicas, Arcano, Laços, Vivências, itens, Ordynus, perguntas de criação e relações da party.
-   - **Ficha 2 — Valor** (9 versões, uma por Valor, com arte própria): símbolo, Compromisso, Skill, Drawback, Ressonâncias, as 36 palavras, 4 espaços extras, Canal, tabela de Graus e magias favoritas.
+   - **Ficha 2 — Valor** (9 versões, uma por Valor, com arte própria): símbolo, Compromisso, Skill, Retaliação, Ressonâncias, as 36 palavras, 4 espaços extras, Canal, tabela de Graus e magias favoritas.
 3. **Livro — *Arcanoclisma: um passo diante do desconforto e do compromisso*** — o texto completo do jogo, com capa, feito para sair em **vários formatos** a partir da mesma fonte:
    - PDF completo para baixar e imprimir;
    - páginas no site, com busca;

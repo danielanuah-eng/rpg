@@ -28,8 +28,8 @@
 ## Ficha 2 — Valor: Persona
 
 - **Compromisso**: "Gente vem antes de tudo."
-- **Skill · Toque Humano**: magia em pessoas funciona normal; fora de pessoas, −2 no total.
-- **Drawback · Tropeço**: se a magia falhar, sai inútil ou atrapalha.
+- **Skill · Toque Humano**: em pessoas (ele incluído), o primeiro passo de Ampliar sai de graça.
+- **Retaliação · Tropeço**: se a magia falhar, sai inútil ou atrapalha; fora de gente, a magia só chega pelo corpo ou pelo sentimento.
 - **Canal · Foco arcano**: luvas marrons com pérolas enormes, que brilham numa luz branco-azulada, bruxuleante e uniforme. +1 no dano e na cura de magia.
 - **Sintonia** +2 (+1 por palavra de Valor) · **Dificuldade da magia** (Teste mágico, só o alvo rola) 15 com 1 palavra, 16 com 2 · **Grau máximo** 2 · **Palavras de Valor por magia** 2 · **uma** Palavra Básica grátis
 - **Graus**: G1 grátis, sem rolar · G2 custa 1 Arcano, 2d12 + 2 + palavras (1 ou 2), dura até a próxima Falha
@@ -91,7 +91,7 @@
 - **Leitura por Arcano / por Cataclisma** fez o mestre emoldurar nas horas certas (4 molduras em ~10 rolagens), sem precisar de turno.
 - **Potes de Ameaça** (Cheia, Lino) criaram pressão visível e deram um relógio para a escaramuça.
 - **Atalho** apareceu sozinho, do jeito que o personagem é (rir para esconder o medo), e o jogador nomeou o que ele protege. O ACT funcionou pela ficção, não pela regra.
-- **Tropeço** (Drawback de Persona) gerou a melhor cena da sessão: a magia de coragem voltou como medo.
+- **Tropeço** (Retaliação de Persona) gerou a melhor cena da sessão: a magia de coragem voltou como medo.
 - **Palavras com efeito** geraram soluções criativas (*Fortalecer Voz* na voz do Lino, *Cantar Vigoroso* dentro do sino). A escaramuça acabou pela ideia, não pelo dano.
 - **As perguntas de fim de sessão** renderam respostas ricas e sem esforço.
 
@@ -110,7 +110,7 @@
 | Lacaios | não resistem | cada ser rola; bando rola uma vez e perde 1/2/3 membros |
 | Crítico | escolha solta | efeitos claros; no Teste mágico vem do d20 do alvo |
 | Perguntas de criação | davam base para +1 | só narrativas: orientam decisões |
-| Persona | bônus em pessoas | −2 fora de pessoas; Drawback Tropeço |
+| Persona | bônus em pessoas | Skill: 1º passo de Ampliar de graça em pessoas; Retaliação Tropeço (fora de gente, só pelo corpo ou sentimento); sem −2 |
 
 ### O que observar
 

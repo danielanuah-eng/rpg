@@ -32,7 +32,7 @@
 - **Esquiva** 10 · **PV** 6 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 8 / 16 · **Proteção** 4 (cota, Média: −1 em testes de mobilidade)
 - **Machado**: Força, Toque, **d10+3** (com Gosto de Sangue), Cruel (dano Grave marca +1 PV). Pela arma, a magia também é Cruel.
 - **Talento — Gosto de Sangue**: usa todas as armas, qualquer coisa vira arma (d8+1); +1 de dano com armas; dano Grave = +1 Arcano. **Hábito — Surra** (3): dano dobrado ou um segundo alvo.
-- **Skill — Fio da Guerra**: em combate, magia com +1 dado de dano ou +2 no total. **Drawback**: fora de combate, magia custa +2 Arcano.
+- **Skill — Fio da Guerra**: em combate, magia com +1 dado de dano ou +2 no total. **Retaliação**: fora de combate, magia custa +2 Arcano.
 - **Compromisso**: "Não fujo de briga que é minha."
 - **Laços**: *O Capitão Brando, que me mandou fugir e morreu na muralha* · *Resolver na porrada antes de pensar* (Atalho de costume) · *O medo de ser só uma arma*
 - **Vivências**: Soldado da Cidade-Muralha · Leio uma briga antes de ela começar
@@ -46,7 +46,7 @@
 - **Esquiva** 10 · **PV** 5 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 6 / 12 · **Proteção** 3 (couro, Leve)
 - **Adaga**: Agilidade, Toque, d8+1. **Magia de dano** (G2): 1d10 + 3 (com o Foco).
 - **Talento — Já Li Sobre Isso**: duas vezes por sessão, um fato objetivo e descritivo, verdadeiro, sobre uma criatura, objeto ou lugar. **Hábito — Análise** (3): no começo de um Evento, descobre **um** dado (a Dificuldade, os Limiares, uma palavra ou o Valor de um adversário; um costume; um perigo).
-- **Skill — Mistura** (1 Arcano): dois elementos numa palavra. **Drawback**: +1 Arcano por passo de estado além do primeiro.
+- **Skill — Mistura** (1 Arcano): dois elementos numa palavra. **Retaliação**: +1 Arcano por passo de estado além do primeiro.
 - **Compromisso**: "Nada precisa ficar como está."
 - **Laços**: *Meu pai, que acha que magia é doença* · *Estudar em vez de sentir* (Atalho de costume) · *A culpa pelo afogamento do Caio*
 - **Vivências**: Aprendiz de vidreira · Nado como peixe
@@ -60,7 +60,7 @@
 - **Esquiva** 12 · **PV** 5 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 6 / 12 · **Proteção** 3 (Leve)
 - **Adaga**: Agilidade, Toque, d8+1. **Magia de dano** (G2): 1d10 + 2.
 - **Talento — Mil Caras**: Vantagem para disfarçar, mentir e se esconder; mentira que funciona num PNJ = +1 Arcano. **Hábito — Sumir na Paisagem** (3, uma vez por sessão): se esconde no ambiente sem ninguém perceber, descrevendo como.
-- **Skill — Toque Humano**: magia em pessoas funciona normal; fora de pessoas, −2 no total. **Drawback — Tropeço**: se falhar, a magia sai inútil ou atrapalha.
+- **Skill — Toque Humano**: em pessoas, o primeiro passo de Ampliar sai de graça. **Retaliação — Tropeço** (e fora de gente, só pelo corpo ou sentimento): se falhar, a magia sai inútil ou atrapalha.
 - **Compromisso**: "Gente vem antes de tudo."
 - **Laços**: *A trupe que eu abandonei na estrada* · *Mentir antes que me perguntem* (Atalho de costume) · *O medo de que ninguém goste de quem eu sou sem máscara*
 - **Vivências**: Atriz de trupe · Conheço todo tipo de gente de feira
@@ -74,7 +74,7 @@
 - **Esquiva** 8 · **PV** 7 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 11 / 20 · **Proteção** 5 (placas, Pesada: −1 Esquiva; a mobilidade não sofre, por ser Brutamontes)
 - **Lança**: Força, Perto, d10+2, Alcance.
 - **Talento — Ombro de Aríete**: Vantagem para empurrar, levantar, arrombar, segurar; armadura não atrapalha a mobilidade. **Hábito — Corpo de Pedra** (3): até o fim do Evento, Vantagem em testes de Força e de resistir.
-- **Skill — Forma Animal**: 1 vez nesta sessão (Moldura 1), um animal até o tamanho de gente, com 2 Traços Animais. **Drawback**: como bicho, não conjura.
+- **Skill — Forma Animal**: 1 vez nesta sessão (Moldura 1), um animal até o tamanho de gente, com 2 Traços Animais. **Retaliação**: como bicho, não conjura.
 - **Compromisso**: "O corpo sabe antes da cabeça."
 - **Laços**: *Minha avó Jaci, que me ensinou a falar com bicho* · *Ficar calado e aguentar* (Atalho de costume) · *A raiva que eu tenho da cidade*
 - **Vivências**: Criado na mata · Carrego qualquer coisa
@@ -203,7 +203,7 @@ Iara (7,1 +3 = 11 vs 12) erra o Cão 2                            ← falha: o m
 3. **O mestre emoldura pouco** (34% das ações). Como os jogadores acertam uns 75% das vezes, o mestre só age quando alguém falha ou tira dois ímpares. O mestre gastando para interromper quando quiser resolve isso.
 4. **Arcano sobra na Moldura 1.** Cada jogador ganha uns 7 por combate e começa com 3: depois de uma luta está perto do máximo (12). Na mesa real eles vão gastar em Vivências, Hábitos e Forçar o Grau, mas vale observar se alguém bate no teto. Se bater, há duas saídas: máximo menor na Moldura 1, ou Equilíbrio dar só Cataclisma.
 5. **A Skill de Persona some na Moldura 1.** Nhanda tem −2 na Dificuldade contra pessoas, mas a magia usa **a maior** entre a Dificuldade do Grau (12) e a do alvo. Contra a Domadora (13 − 2 = 11), a Dificuldade volta a ser 12: o bônus quase não aparece. **Sugestão**: o −2 de Persona vale **depois** de escolher a maior (12 − 2 = 10).
-6. **O Drawback de Conflitüo não pesa na Moldura 1.** "Fora de combate, 2 palavras" é o limite de todo mundo na Moldura 1. **Sugestão**: "fora de combate, a primeira palavra extra custa 2 Arcano", ou deixar e aceitar que o Drawback só aparece da Moldura 2 em diante.
+6. **A Retaliação de Conflitüo não pesa na Moldura 1.** "Fora de combate, 2 palavras" é o limite de todo mundo na Moldura 1. **Sugestão**: "fora de combate, a primeira palavra extra custa 2 Arcano", ou deixar e aceitar que a Retaliação só aparece da Moldura 2 em diante.
 7. **A regra de Lacaios precisa de uma frase mais clara.** No script: cada acerto derruba 1, mais 1 para cada 4 de dano além do primeiro ponto. **Sugestão**: "um acerto derruba um Lacaio; cada 4 de dano a mais derruba outro".
 8. **A Magia em Dupla funciona bem na Moldura 1**: comum uns 89%, de opostos uns 66% (agora numa rolagem só, ver [[14 Teste das mecânicas]]). Na mesa, ver se o preço de 3 Arcano e o Cansaço dos opostos parecem justos pelo tamanho do efeito.
 9. **Duração**: 22 ações de jogador é uma luta de uns 40–50 minutos numa mesa que já conhece as regras. Dentro da meta.

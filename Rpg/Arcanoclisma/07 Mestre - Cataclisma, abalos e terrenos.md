@@ -45,7 +45,7 @@ Cinco tamanhos. Escolha ou role 1d6. Os marcados com ✦ mexem na ficha dos joga
 **Fissura (7)**
 1. Uma Criatura do Cataclisma (Padrão ou Bruto) rasga o espaço e entra.
 2. ✦ **Selo**: cada jogador escolhe uma palavra sua que fica selada até o fim da sessão.
-3. ✦ **Troca de Valor**: pelo Evento, um jogador conjura com a tabela de outro Valor (sorteado), mantendo Skill e Drawback do seu.
+3. ✦ **Troca de Valor**: pelo Evento, um jogador conjura com a tabela de outro Valor (sorteado), mantendo Skill e Retaliação do seu.
 4. O lugar começa a desabar: Ameaça, pote de 6 (quem ainda estiver dentro quando o pote encher, se machuca feio).
 5. Todos os adversários limpam 2 PV.
 6. ✦ O Arcano de todos os jogadores cai pela metade (arredonde para cima).

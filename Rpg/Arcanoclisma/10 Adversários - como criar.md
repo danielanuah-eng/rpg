@@ -170,7 +170,7 @@ Adversários experientes têm **Maestria**, que muda como a magia dos jogadores 
 | 3 | 1–2 | 1 |
 | 4 | 2–3 | 1–2 (Chefes: 2; Deidade só para semideuses e acima) |
 
-Marcas menores, que o gerador também sorteia: *Imune a [Valor]*, *Absorve [Valor]* (a magia cura), *Espelho* (magia que falha contra ele volta para quem conjurou), *Controlável* (Dominum e Persona sem Drawback contra ele), *Indomável* (só Dominum controla), *Com Familiar*.
+Marcas menores, que o gerador também sorteia: *Imune a [Valor]*, *Absorve [Valor]* (a magia cura), *Espelho* (magia que falha contra ele volta para quem conjurou), *Controlável* (Dominum e Persona sem Retaliação contra ele), *Indomável* (só Dominum controla), *Com Familiar*.
 
 ## Tipos (para o gerador)
 

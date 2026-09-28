@@ -1,6 +1,6 @@
 # 03 — Os Valores
 
-> Rascunho v0. Os 9 Valores, cada um com **36 palavras** (tabela 6×6, sorteável com d66), Skill, Drawback, duas Ressonâncias (melhorias ao subir de nível), símbolo e cor. Os significados, símbolos e nomes são proposta para decidirmos juntos (❓ P-10 a P-14).
+> Rascunho v0. Os 9 Valores, cada um com **36 palavras** (tabela 6×6, sorteável com d66), Skill, Retaliação, duas Ressonâncias (melhorias ao subir de nível), símbolo e cor. Os significados, símbolos e nomes são proposta para decidirmos juntos (❓ P-10 a P-14).
 
 Todo Valor tem **36 palavras só dele**: **12 verbos** (linhas 1–2, o que a magia faz), **12 substantivos** (linhas 3–4, com o que ela faz) e **12 adjetivos** (linhas 5–6, como ela é).
 
@@ -34,11 +34,24 @@ Oposição serve para duas coisas: **Magia em Dupla de opostos** (mais forte, ma
 
 *Tudo o que acontece quando duas vontades se chocam: guerra, arma, escudo, o passo certo no meio da briga.*
 
+> *"A primeira regra é simples: se ela veio pra cima de você, ela é sua."* — sargento de Conflitüo, para os recrutas
+> *"Não odeio ninguém. Só não sei ficar parado quando alguém empurra."* — ferreira de Vau-Grande
+
+**Como é.** Cheira a ferro quente e a suor. A magia aparece como uma luz vermelho-ferrugem que vira arma por um instante, o eco de todas as lâminas que já se cruzaram, e some. Quem carrega vive com o corpo meio pronto: o ombro que se vira antes do soco, a mão que procura o cabo. Em paz, Conflitüo coça.
+
+| Para | Como Conflitüo faz | Tipo |
+|---|---|---|
+| **Atacar** | *Lâmina*, *Flecha* ou *Lança* atiradas; *Explodir* + *Estilhaço* no chão; *Desarmar* | Projétil · Projétil em área · Teste mágico (forte ou ágil) |
+| **Proteger** | *Escudo*, *Muralha*, *Trincheira*; *Aparar* o golpe que vem | Pequeno evento |
+| **Aliviar** | *Estandarte* + *Incansável*: o grupo aguenta de pé mais um pouco | Pequeno evento |
+| **Descobrir** | *Tático*: ler o campo de batalha, o flanco aberto, quem vai correr primeiro | Pequeno evento |
+| **Mover** | *Investir* atravessando a briga; *Recuar* sem dar as costas | Pequeno evento |
+
 - **Símbolo**: um X em que uma das linhas se parte no meio. **Cor**: vermelho-ferrugem.
 - **Primordial**: Thorvessa, a Que Separa. **Oposto**: Persona.
 - **Compromisso**: "Não fujo de briga que é minha." Enfrenta de frente, resolve no choque, protege os seus com o corpo.
 - **Skill · Fio da Guerra**: em combate, cada magia sua ganha **+1 dado de dano** ou **+2 no total** (escolha ao conjurar).
-- **Drawback · Só Sabe Brigar**: magias fora de combate ou violência custam **+2 Arcano**.
+- **Retaliação · Só Sabe Brigar**: magias fora de combate ou violência custam **+2 Arcano**.
 - **Ressonância II · Veterano**: marque 1 Cansaço para ter os dois bônus do Fio da Guerra na mesma magia.
 - **Ressonância III · Arsenal Vivo**: invocar uma arma ou escudo de Conflitüo é Grau 1 para você. Dura o Evento; ataques com ela usam Força ou Agilidade e causam 2d10 + Sintonia.
 
@@ -61,11 +74,24 @@ Perguntas de vínculo: *Contra quem ou o quê você lutou pela primeira vez, e p
 
 *A matéria e seus estados: sólido, líquido, gás, e o que há entre eles. Criar, derreter, liquefazer, gaseificar, sublimar.*
 
+> *"Tudo é gelo que ainda não sabe que é água."* — alquimista de beira de estrada
+> *"Me dá cinco minutos com essa porta e ela vira escada."* — Dona Iolanda, sineira de Vau-Grande
+
+**Como é.** Cheira a metal molhado e pedra quente. Perto de um Comprometido de Sublimeyn as coisas suam, rangem e mudam de cor antes de mudar de forma. A magia não aparece do nada: ela **convence** a matéria que já estava ali. Quem carrega nunca vê um objeto pronto; vê o que ele ainda pode ser.
+
+| Para | Como Sublimeyn faz | Tipo |
+|---|---|---|
+| **Atacar** | *Fogo*, *Gelo* ou *Areia* atirados; *Vapor* *Corrosivo* numa nuvem; *Lama* que *Solidifica* nos pés | Projétil · Teste mágico (forte) · Teste mágico (ágil) |
+| **Proteger** | *Pedra* ou *Vidro* em barreira; *Solidificar* o ar à sua frente | Pequeno evento |
+| **Aliviar** | esfriar a febre (*Gelo*), limpar a água (*Puro*), *Derreter* a corrente de um preso | Pequeno evento |
+| **Descobrir** | sentir onde a parede é *Porosa* ou oca; do que uma coisa é feita | Pequeno evento |
+| **Mover** | *Moldar* a pedra em degraus; *Liquefazer* o chão para deslizar; *Leve* para saltar | Pequeno evento |
+
 - **Símbolo**: um círculo com três marcas dentro (um ponto cheio, uma gota, uma espiral). **Cor**: prata-mercúrio.
 - **Primordial**: Oyamar, o Primeiro Barro. **Oposto**: nenhum, é o Eixo.
 - **Compromisso**: "Nada precisa ficar como está." Experimenta, conserta, desmonta para ver por dentro, muda de ideia sem vergonha.
 - **Skill · Mistura**: gaste 1 Arcano para fundir dois elementos numa palavra só (Vapor + Metal = "vapor de ferro"). Conta como **uma** palavra e cria efeitos entre eles (ferrugem que queima, vidro que escorre).
-- **Drawback · Resistência da Matéria**: quanto mais longe a mudança, mais caro. Mudar o estado custa **+1 Arcano por passo além do primeiro** (sólido → líquido → gás → energia). Pedra em vapor = 2 passos = +1.
+- **Retaliação · Resistência da Matéria**: quanto mais longe a mudança, mais caro. Mudar o estado custa **+1 Arcano por passo além do primeiro** (sólido → líquido → gás → energia). Pedra em vapor = 2 passos = +1.
 - **Ressonância II · Alquimia Rápida**: a primeira Mistura de cada Evento é grátis.
 - **Ressonância III · Transmutar**: além do estado, você troca o material (chumbo em vidro, madeira em ferro) com +1 Grau.
 
@@ -88,11 +114,24 @@ Perguntas de vínculo: *Qual material você sente como se fosse parte do seu cor
 
 *Dobrar a vontade de outro ser vivo: mandar, forçar, parar, puxar, afastar, domesticar, ter servos.*
 
+> *"Eu não peço duas vezes. Nem uma, na verdade."* — domadora de wyverns
+> *"Coleira não é crueldade. Crueldade é largar a fera sem dono no meio da feira."* — guarda de caravana
+
+**Como é.** Pesa. Perto de um Comprometido de Dominum o ar fica grosso, como antes de uma bronca. A magia aparece como correntes roxo-escuras que ninguém vê inteiras, só o puxão. Bicho baixa a cabeça; gente endireita as costas sem saber por quê. Quem carrega aprende cedo que obedecer e mandar são a mesma corda vista das duas pontas.
+
+| Para | Como Dominum faz | Tipo |
+|---|---|---|
+| **Atacar** | *Chicote* atirado; *Ajoelhar*, *Prender*, *Obrigar* a largar a arma | Projétil · Teste mágico (firme ou forte) |
+| **Proteger** | *Repelir* ou *Afastar* quem vem; a Skill *Comando Reflexo*, antes do golpe | Teste mágico · reação |
+| **Aliviar** | *Mandar* um corpo parar de tremer; *Domesticar* uma fera ferida que ataca por medo | Pequeno evento · Teste mágico |
+| **Descobrir** | *Obrigar* alguém a responder; sentir onde está quem você *Marcou* | Teste mágico (firme) · Pequeno evento |
+| **Mover** | *Puxar* você mesmo pela corrente; montar a *Fera* que você domou | Pequeno evento |
+
 - **Símbolo**: um círculo de corrente fechado por uma mão. **Cor**: roxo-sangue.
 - **Primordial**: Kairvahnn, o Leão das Cem Cabeças. **Oposto**: Primitivum.
 - **Compromisso**: "Quem não manda, obedece." Toma a frente, cuida do que é seu, não aceita ordem sem motivo.
 - **Skill · Comando Reflexo**: o **único Valor com reação**. Quando um adversário age contra você ou alguém Perto, conjure uma magia de Dominum **antes** dele. Marque Cansaço igual ao Grau.
-- **Drawback · Vontade Quebrada**: se a magia falhar, ou se o alvo se libertar, você não pode usar Dominum nele de novo até o próximo Pouso.
+- **Retaliação · Vontade Quebrada**: se a magia falhar, ou se o alvo se libertar, você não pode usar Dominum nele de novo até o próximo Pouso.
 - **Ressonância II · Rédea Curta**: uma reação por Evento sem marcar Cansaço.
 - **Ressonância III · Servo Jurado**: uma criatura (não Chefe) que ficar dominada até o fim do Evento pode virar seu servo ou Familiar permanente. Um por vez.
 
@@ -115,11 +154,24 @@ Perguntas de vínculo: *A quem você já obedeceu e jurou nunca mais? · Você a
 
 *A pessoa inteira: corpo, pele, órgãos, rosto, alma, e o que ela sente: medo, coragem, fúria, amor. A música que move gente.*
 
+> *"Não tenho medo de você. Tenho medo por você, o que é pior."* — parteira de OulVeil
+> *"Canta comigo. Não precisa ser bonito, precisa ser junto."* — trovadora de estrada
+
+**Como é.** Quente, perto demais. A magia de Persona aparece em quem ela toca, não em quem conjura: bochecha que cora, pelo que arrepia, um nó na garganta sem motivo. Às vezes vem com uma música que ninguém tocou. Quem carrega sente os outros como sente o próprio corpo, e nunca consegue fingir direito que não sentiu. Persona não joga fogo: ela machuca e cura **pelo corpo e pelo sentimento**.
+
+| Para | Como Persona faz | Tipo |
+|---|---|---|
+| **Atacar** | *Voz* ou *Música* como golpe; *Enfraquecer Músculo* (cãibra), *Coração* disparado, *Pele Grotesca*; *Medo*, *Fúria* contra o próprio aliado, *Saudade* que faz largar a arma | Projétil · Teste mágico (forte) · Teste mágico (firme) |
+| **Proteger** | *Fortalecer*, *Robusto* em você ou num aliado; *Encantar* quem vem atacar | Pequeno evento · Teste mágico (firme) |
+| **Aliviar** | *Acalmar*, *Consolar*, *Coragem*: tirar medo, pânico, vergonha | Pequeno evento |
+| **Descobrir** | *Sentir* o que alguém sente, ou o rastro de alguém num objeto que ele amou | Pequeno evento |
+| **Mover** | *Fortalecer Músculo* para escalar; *Remodelar* o corpo (guelras, mãos que grudam) | Pequeno evento |
+
 - **Símbolo**: uma máscara partida ao meio, uma metade sorrindo. **Cor**: coral.
 - **Primordial**: Zahun, o Deus Humano. **Oposto**: Conflitüo.
 - **Compromisso**: "Gente vem antes de tudo." Se envolve, sente em voz alta, não abandona quem pediu ajuda.
-- **Skill · Toque Humano**: Persona é o Valor do humano. Magias que afetam **pessoas** (corpo, alma ou emoção) funcionam normalmente; magias que **não** são em pessoas (objetos, lugares, animais, o tempo, a matéria) têm **−2 no total**: rendem menos longe de gente.
-- **Drawback · Tropeço**: se a magia falhar, ela ainda acontece de algum jeito, mas com um resultado **inútil ou que atrapalha** (o mestre descreve).
+- **Skill · Toque Humano**: Persona é o Valor que vai mais longe em gente. Em **pessoas** (você incluído), o **primeiro passo de Ampliar** de cada magia sai **de graça** (sem Arcano e sem Dificuldade).
+- **Retaliação · Tropeço**: se a magia falhar, ela ainda acontece de algum jeito, mas com um resultado **inútil ou que atrapalha** (o mestre descreve). E Persona só chega nas coisas **através de gente**: fora de pessoas, a descrição precisa passar por um corpo ou um sentimento (a sua voz que faz o sino tremer, o medo de uma fera, a força do seu braço); se não passa, não é magia de Persona.
 - **Ressonância II · Empatia**: role um Efeito Colateral a menos quando a magia afetar pessoas.
 - **Ressonância III · Carne Moldável**: mudar o próprio corpo (rosto, músculos, guelras, garras) é Grau 1 para você e dura até você desfazer.
 
@@ -134,17 +186,6 @@ Perguntas de vínculo: *A quem você já obedeceu e jurou nunca mais? · Você a
 
 Exemplos: **G1** corar as bochechas de alguém · **G2** *Medo*: o capanga foge até a próxima Falha · **G3** *Fortalecer + Músculo + Aliado*: +2 em Força para até 3 aliados · **G4** *Cantar + Fúria + Contagiante + Grupo*: uma música que faz a taverna inteira brigar.
 
-**Como Persona ataca.** Persona não joga fogo: ela machuca **pelo corpo e pelo sentimento**. Quatro jeitos:
-
-| Jeito | Tipo de efeito | Exemplos (Moldura 1, Grau 2) |
-|---|---|---|
-| **A voz como arma** | Projétil (você rola contra a defesa do alvo; dano 1d10 + Sintonia) | *Voz* + Projétil: um grito que acerta como um soco · *Música* + Onda: uma nota que racha a pedra e o tímpano |
-| **O corpo do outro se volta contra ele** | Teste mágico (o alvo rola Força ou firme; se não passar, leva o dano ou o efeito) | *Enfraquecer Músculo*: cãibra que derruba e dói · *Coração* disparado: o peito aperta até doer · *Pele Grotesca*: bolhas que ardem |
-| **O sentimento como arma** | Teste mágico (o alvo rola firme, Sabedoria) | *Medo*: foge ou trava · *Fúria* num inimigo: ele ataca o aliado dele · *Saudade*: larga a arma e chora |
-| **O seu corpo vira arma** | Pequeno evento em você, e depois ataca com arma ou mão | *Fortalecer Músculo*, *Remodelar* as mãos em garras (ou Grau 1 como meio da ação: "atacar, forte, com a mão que endurece", dano 1d8 + Moldura) |
-
-Num Teste mágico de dano, **passar ou não se lê na ficção**: quem não passa leva o dano inteiro; quem passa pode sentir só o susto, ou metade, como a mesa achar justo.
-
 Perguntas de vínculo: *De quem você sente mais falta? · Qual emoção sua você mais esconde?*
 
 ---
@@ -153,11 +194,24 @@ Perguntas de vínculo: *De quem você sente mais falta? · Qual emoção sua voc
 
 *Luz e sombra, sol, lua e estrelas, os sentidos, a visão, o sonho e o pesadelo, a loucura e a sanidade, a revelação.*
 
+> *"Se você está escondendo, eu já vi. Só estou esperando você contar."* — vigia de farol
+> *"Sonhei com você ontem. Quer saber como terminava?"* — vidente de feira
+
+**Como é.** Luz que não esquenta e sombra que não esfria. Quando um Comprometido de Alvorum conjura, tudo por perto fica nítido demais: poro, rachadura, a mentira no canto da boca. Ele nunca é discreto: a magia chega como farol. Quem carrega dorme mal, e vê nos sonhos coisas que depois acontecem, ou não.
+
+| Para | Como Alvorum faz | Tipo |
+|---|---|---|
+| **Atacar** | *Luz* ou *Sol* em raio; *Cegar*, *Ofuscar*; *Pesadelo*, *Enlouquecer* | Projétil · Teste mágico (atento) · Teste mágico (firme) |
+| **Proteger** | *Sombra* cobrindo o grupo; um *Espelho* de luz que desvia o golpe | Pequeno evento |
+| **Aliviar** | *Lúcido*: tirar alguém da loucura, do encanto, do pesadelo | Pequeno evento |
+| **Descobrir** | *Revelar*, *Perceber*, *Vislumbrar* o que vem; a Skill *Olhos Abertos* | Pequeno evento |
+| **Mover** | *Estrela* ou *Farol*: achar o caminho no escuro, guiar o grupo | Pequeno evento |
+
 - **Símbolo**: um olho com a pálpebra de cima dourada e a de baixo negra (um eclipse). **Cor**: dourado sobre preto.
 - **Primordial**: Idrael, o Olho de Duas Pálpebras. **Oposto**: Cognitium.
 - **Compromisso**: "O que está escondido tem que ser visto." Desconfia de segredo, fala a verdade mesmo quando atrapalha.
 - **Skill · Olhos Abertos**: gaste **2 Arcano**: pelo Evento, você enxerga através de escuridão, fumaça, disfarces, invisibilidade e ilusões de Grau até o seu máximo.
-- **Drawback · Farol**: toda magia sua é chamativa (brilho, som, sombra que se mexe). Impossível conjurar escondido; ao conjurar, você deixa de estar escondido.
+- **Retaliação · Farol**: toda magia sua é chamativa (brilho, som, sombra que se mexe). Impossível conjurar escondido; ao conjurar, você deixa de estar escondido.
 - **Ressonância II · Vigia**: Olhos Abertos custa 1.
 - **Ressonância III · Revelação**: uma vez por sessão, anule toda ilusão, invisibilidade ou efeito de Cognitium no Evento, de qualquer Grau.
 
@@ -180,11 +234,24 @@ Perguntas de vínculo: *O que você viu e queria não ter visto? · Você tem me
 
 *Morte e vida, e a passagem entre elas: regenerar, curar, adoecer, apodrecer, fantasmas, vazio, solidão, presságio.*
 
+> *"Não chora ainda. Ele ainda está aqui, e quer ouvir a sua voz."* — coveira de Vau-Grande
+> *"A doença não é inimiga. É visita. A gente só ensina ela a ir embora."* — curandeiro de aldeia
+
+**Como é.** Cheira a terra revirada e flor de velório. A magia de Morbidyum é verde-pálida e silenciosa; plantas murcham ou brotam por onde ela passa, às vezes as duas coisas no mesmo canteiro. Bicho fica quieto. Quem carrega conversa com quem já foi como se fosse normal, e às vezes os mortos respondem.
+
+| Para | Como Morbidyum faz | Tipo |
+|---|---|---|
+| **Atacar** | *Drenar* num toque que puxa a vida; *Definhar*, *Doença*, *Apodrecer*; *Assombrar* | Projétil · Teste mágico (forte) · Teste mágico (firme) |
+| **Proteger** | *Etéreo*: o golpe atravessa você; *Osso* como armadura | Pequeno evento |
+| **Curar** | **o único Valor que devolve PV**: *Curar*, *Regenerar*, *Vida* | Pequeno evento |
+| **Descobrir** | *Prever*, *Presságio*; *Sussurrar* com um *Fantasma*; saber do que alguém morreu | Pequeno evento |
+| **Mover** | *Etéreo*: passar pela parede fina como quem já morreu | Pequeno evento |
+
 - **Símbolo**: uma porta aberta com uma flor de um lado e um osso do outro. **Cor**: verde-pálido.
 - **Primordial**: Velhena, a Porta Dupla. **Oposto**: Eternyr.
 - **Compromisso**: "Tudo passa, e alguém tem que ajudar a passar." Aceita perdas, cuida de quem está no fim, não teme a morte.
 - **Skill · Volta**: uma vez por sessão, ao marcar o último PV (mesmo que o corpo seja destruído), você volta **inteiro** (todos os PV limpos) no fim da próxima ação.
-- **Drawback · Sem Última Palavra**: você nunca escolhe Movimentos de Morte (se a Volta já foi usada, você só pode Apagar). Ao voltar, perde **todo** o Arcano; se não tinha nenhum, volta com **1 PV** só.
+- **Retaliação · Sem Última Palavra**: você nunca escolhe Movimentos de Morte (se a Volta já foi usada, você só pode Apagar). Ao voltar, perde **todo** o Arcano; se não tinha nenhum, volta com **1 PV** só.
 - **Ressonância II · Meio Morto**: ao voltar, fica com metade do Arcano em vez de perder tudo.
 - **Ressonância III · Emprestar a Volta**: pode usar a Volta num aliado que caiu à vista, em vez de em si.
 
@@ -207,11 +274,24 @@ Perguntas de vínculo: *Quem você não conseguiu salvar? · Você já morreu? O
 
 *A mente: pensar, lembrar, esquecer, ler pensamentos, acreditar, enganar os sentidos (até cheiros e gostos), fazer crer.*
 
+> *"Você não me viu entrar. Nem vai lembrar que eu saí."* — ladra de biblioteca
+> *"Toda certeza é só uma dúvida que cansou."* — professor de Cognitium
+
+**Como é.** Não se vê. A magia de Cognitium acontece por dentro: um déjà-vu, um cheiro de infância numa sala vazia, a palavra que some da ponta da língua. No máximo, um brilho índigo nos olhos de quem conjura. Quem carrega ouve o que as pessoas pensam antes de falarem, e aprende a desconfiar dos próprios pensamentos também.
+
+| Para | Como Cognitium faz | Tipo |
+|---|---|---|
+| **Atacar** | uma *Ideia* *Psíquica* que bate como pedrada; *Confundir*, *Labirinto*, *Hipnótico*; *Ilusão* de perigo | Projétil · Teste mágico (firme) · Teste mágico (atento) |
+| **Proteger** | *Invisível* ou *Disfarçar*: ninguém mira em quem não vê; *Esquecer*: o guarda esquece que viu você | Pequeno evento · Teste mágico (firme) |
+| **Aliviar** | *Apagar* ou *Lembrar*: tirar uma lembrança que dói, devolver uma que se perdeu | Pequeno evento |
+| **Descobrir** | *Ler*, *Segredo*; a Skill *Espiar* | Pequeno evento · Teste mágico |
+| **Mover** | *Invisível* para passar pela guarda; *Ilusão* de uma porta onde não tem | Pequeno evento · Teste mágico (atento) |
+
 - **Símbolo**: uma espiral que vira labirinto. **Cor**: índigo.
 - **Primordial**: **o Trono Vazio** (era de Zahun antes dele virar humano). **Oposto**: Alvorum.
 - **Compromisso**: "Nem tudo que se pensa se diz." Calcula, guarda segredos, entende as pessoas antes de agir.
 - **Skill · Espiar**: gaste **2 Arcano** e role 2d12 + Sintonia contra a Dificuldade da pessoa: você lê o pensamento dela de agora (faça uma pergunta; a resposta é sincera). Uma vez por pessoa por Evento.
-- **Drawback · Espelho**: se Espiar ou qualquer magia de Cognitium falhar contra alguém, ele lê os seus pensamentos e sabe o que você fez.
+- **Retaliação · Espelho**: se Espiar ou qualquer magia de Cognitium falhar contra alguém, ele lê os seus pensamentos e sabe o que você fez.
 - **Ressonância II · Leitura Leve**: Espiar custa 1; se falhar, você escolhe o que ele vê na sua mente.
 - **Ressonância III · Mente em Rede**: no início da sessão, ligue as mentes do grupo: todos falam sem som e podem gastar Arcano uns pelos outros até o fim da sessão.
 
@@ -234,11 +314,24 @@ Perguntas de vínculo: *Qual memória você apagaria se pudesse? · Em que menti
 
 *Tempo e espaço: teleportar, mover, guiar, localizar, atravessar, parar, acelerar, voltar, organizar, aumentar e diminuir.*
 
+> *"Calma. Eu já estive aqui. Daqui a pouco a porta abre."* — mensageira de Eternyr
+> *"Pressa é só medo de que o tempo não seja seu."* — relojoeiro de OulVeil
+
+**Como é.** Um tique que só o conjurador ouve. Em volta da magia de Eternyr as coisas saem um pouco do lugar: a poeira cai devagar demais, a sombra chega antes do corpo, um passo é mais comprido do que devia. A cor é azul-noite com riscos brancos, como estrelas passando rápido. Quem carrega sempre sabe que horas são, e quase nunca tem pressa.
+
+| Para | Como Eternyr faz | Tipo |
+|---|---|---|
+| **Atacar** | *Acelerar* uma pedra até ela virar bala; *Lento*, *Parar*; *Aumentar* a arma do inimigo até ela pesar demais | Projétil · Teste mágico (ágil) · Teste mágico (forte) |
+| **Proteger** | um *Portal* onde o golpe entra e sai em outro lugar; *Voltar* um instante para desviar | Pequeno evento |
+| **Aliviar** | *Voltar* o objeto quebrado ao que era; *Lento*: o sangramento anda devagar | Pequeno evento |
+| **Descobrir** | *Localizar*; o *Passado* deste lugar | Pequeno evento |
+| **Mover** | *Teleportar*, *Atravessar*, *Saltar*, *Guiar*: ninguém chega mais longe | Pequeno evento |
+
 - **Símbolo**: um anel com um ponto escapando dele. **Cor**: azul-noite com branco.
 - **Primordial**: Ossyr, Aquele Que Já Foi. **Oposto**: Morbidyum.
 - **Compromisso**: "Cada coisa no seu tempo e no seu lugar." Paciente, organizado, detesta pressa e bagunça.
 - **Skill**: **nenhuma**. Eternyr é o único Valor que mexe no próprio jogo: quando o mestre emoldura, Ameaças e marcadores de duração. Isso já é a vantagem.
-- **Drawback · Peso do Tempo**: toda magia de Eternyr tem **+2 na Dificuldade**. ❓ P-12
+- **Retaliação · Peso do Tempo**: toda magia de Eternyr tem **+2 na Dificuldade**. ❓ P-12
 - **Ressonância II · Passo**: uma vez por Evento, teleporte até Perto como parte de qualquer ação, sem conjurar.
 - **Ressonância III · Rebobinar**: uma vez por sessão, desfaça a última ação (sua ou de outro, até de adversário). Ela acontece de novo, e todos lembram o que vinha. O Cataclisma já ganho fica.
 
@@ -261,11 +354,24 @@ Perguntas de vínculo: *Em que momento da sua vida você voltaria? · Onde é o 
 
 *Natureza e instinto: mudar, transformar, animais, espíritos da natureza, voar, nadar, rastejar, cavar, farejar, adaptar, invocar, árvores.*
 
+> *"O lobo não odeia o cervo. Você também não precisa me odiar."* — caçadora da mata
+> *"Na floresta ninguém pergunta quem eu sou. Só se eu sou rápido."* — menino-raposa
+
+**Como é.** Cheira a chuva no mato e pelo molhado. A magia de Primitivum sai do corpo: unha que cresce, pupila que vira fenda, a voz que vira rosnado por um segundo. Plantas se inclinam para quem conjura. Quem carrega entende bicho melhor que gente e confia mais no arrepio da nuca que em qualquer conselho.
+
+| Para | Como Primitivum faz | Tipo |
+|---|---|---|
+| **Atacar** | *Espinhos* atirados; *Raiz* ou *Brotar* que prende; *Venenoso*; *Invocar* um *Espírito* animal | Projétil · Teste mágico (forte) · Pequeno evento |
+| **Proteger** | *Escama* ou *Resistente* em você; *Árvore* que fecha o caminho | Pequeno evento |
+| **Aliviar** | *Adaptar* ao frio, à fome, ao ar ruim; ervas *Naturais* que acalmam a dor | Pequeno evento |
+| **Descobrir** | *Farejar*, *Instinto*; falar com bichos | Pequeno evento |
+| **Mover** | *Voar*, *Nadar*, *Rastejar*, *Cavar*; a Skill *Forma Animal* | Pequeno evento |
+
 - **Símbolo**: uma pegada dentro de uma folha. **Cor**: verde-musgo com âmbar.
 - **Primordial**: Tahwë, a Raiz que Anda. **Oposto**: Dominum.
 - **Compromisso**: "O corpo sabe antes da cabeça." Age por instinto, se adapta, confia mais em bicho que em gente.
 - **Skill · Forma Animal**: transforme-se em um animal. Vezes por sessão = seu **Moldura** ❓ P-13. Tamanho até o seu Grau máximo (G2 até gente, G3 cavalo, G4 urso grande, G5 fera colossal). Você mantém PV, Cansaço e Esquiva e ganha **2 Traços Animais** (+1 por Moldura acima do 1): voar, nadar, escalar, faro, garras (dano d10 × Proficiência), carapaça (+2 nos Limiares), veneno, corrida (move até Médio).
-- **Drawback · Sem Palavras**: em forma animal você não conjura. Magias já ativas continuam.
+- **Retaliação · Sem Palavras**: em forma animal você não conjura. Magias já ativas continuam.
 - **Ressonância II · Meio Bicho**: em forma animal, pode conjurar Grau 1 e 2 de Primitivum.
 - **Ressonância III · Quimera**: formas híbridas e fantásticas (grifo, serpente-marinha), com +2 Traços.
 
@@ -286,12 +392,12 @@ Perguntas de vínculo: *Que animal você seria sem pensar duas vezes? · Qual lu
 
 ## Resumo para a ficha
 
-| Valor | Oposto | Skill | Drawback |
+| Valor | Oposto | Skill | Retaliação |
 |---|---|---|---|
 | Conflitüo | Persona | +1 dado de dano ou +2 em combate | fora de combate, magia custa +2 Arcano |
 | Sublimeyn | Eixo | Mistura (2 elementos numa palavra) | +1 Arcano por passo de estado |
 | Dominum | Primitivum | reação | falhou, não repete no alvo |
-| Persona | Conflitüo | (restrição) −2 quando não é em pessoas | falha sai inútil ou atrapalha |
+| Persona | Conflitüo | em pessoas, 1º passo de Ampliar de graça | falha sai inútil ou atrapalha; fora de gente, só pelo corpo ou sentimento |
 | Alvorum | Cognitium | vê através de tudo (2 Arcano) | sempre chamativo |
 | Morbidyum | Eternyr | volta da morte 1×/sessão | perde o Arcano, sem Movimentos de Morte |
 | Cognitium | Alvorum | ler pensamento (2 Arcano) | se falhar, leem você |

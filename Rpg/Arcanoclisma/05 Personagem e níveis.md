@@ -27,7 +27,7 @@ Anote cada relação na ficha dos dois personagens (no app, aparece nas duas fic
 
 1. **Conceito e Era** — quem é o personagem, numa frase, e **de onde ele vem**: uma cidade, um povo, ou qualquer um dos **Reinos** ([[08 Mundo e entidades]]). A origem não dá habilidade nem bônus: dá história, costumes, sotaque, gente que ele conhece. A graça está no que isso significa para ele.
 2. **Comportamento** — anote Esquiva, PV, Limiares base, o **Talento** e o **Hábito** ([[04 Comportamentos]]).
-3. **Valor** — o personagem é um **Comprometido**. Pegue a **ficha do seu Valor** (36 palavras, símbolo, Skill, Drawback, 4 espaços extras) e anote o **Compromisso** ([[03 Valores]]).
+3. **Valor** — o personagem é um **Comprometido**. Pegue a **ficha do seu Valor** (36 palavras, símbolo, Skill, Retaliação, 4 espaços extras) e anote o **Compromisso** ([[03 Valores]]).
 4. **Vínculo** — responda às perguntas abaixo.
 5. **Canal** — como você exerce a magia: foco arcano, arma, Transcrito, corpo, voz, familiar ou marca ([[02 Magia]]).
 6. **Atributos** — distribua **+2, +1, +1, 0, 0, −1**.
@@ -120,7 +120,7 @@ Tudo o que não é a magia do Valor. **Frente**: o que se usa jogando (identidad
 Uma para cada um dos 9 Valores: **o desenho muda inteiro** conforme o Valor (cor, símbolo, ornamentos, fundo), e é onde mora a magia:
 - **Símbolo, cor e nome** do Valor, com o Primordial e o oposto.
 - **Compromisso** do Valor.
-- **Skill** e **Drawback**.
+- **Skill** e **Retaliação**.
 - **Ressonâncias** II e III com caixinha.
 - A **tabela 6×6 das 36 palavras** do Valor (verbos, substantivos, qualidades), sorteável por d66.
 - **4 espaços extras** para Palavras Estrangeiras, preenchidos ao longo dos níveis.

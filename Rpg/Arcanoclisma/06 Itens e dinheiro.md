@@ -101,7 +101,7 @@ Itens mágicos servem para **tudo**, não só para quem conjura: ajudam em teste
 | **De Palavra** | carrega uma palavra de qualquer Valor; enquanto está com você, a palavra é sua (nunca como núcleo, a não ser que seja do seu Valor) e não conta no limite de Estrangeiras | 1 palavra, às vezes com cargas → 1 palavra sem cargas |
 | **De Ofício** | ajuda em mecânica básica: um atributo, um tipo de teste, Esquiva, Limiares, Proteção, PV ou Cansaço | Vantagem numa situação estreita → +1 num atributo |
 | **De Estabilidade** | mexe na **Dificuldade** e nos **Efeitos Colaterais** da magia: Dificuldade do Grau menor, um Efeito Colateral a menos, Suavizar de graça, +1 no d20 da tabela | −1 na Dificuldade do Grau → um Efeito Colateral a menos em toda magia |
-| **De Valor** | só funciona para um Valor: melhora a Skill, alivia o Drawback, ou dá a um não-Comprometido daquele Valor um pedaço da Skill | alívio pequeno → Skill melhorada |
+| **De Valor** | só funciona para um Valor: melhora a Skill, alivia a Retaliação, ou dá a um não-Comprometido daquele Valor um pedaço da Skill | alívio pequeno → Skill melhorada |
 | **De Grau** | ajuda a magia a crescer: um passo de Ampliar sem pagar Arcano, +1 no dano de magia, +1 de Sintonia numa condição | 1 passo de Ampliar sem pagar Arcano por Evento → +1 de Sintonia |
 
 Algumas têm **cargas** (recuperam no Pouso). Regra geral de equilíbrio: um item da Moldura X nunca dá mais que **um passo** da tabela de Graus, **+1** num número, ou **uma** palavra.
