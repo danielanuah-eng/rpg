@@ -233,6 +233,7 @@ Além dos humanos, Contacto tem muitos povos. **Não são "raças jogáveis" com
 | **Corves** | vivem em cavernas nas montanhas geladas; pele cinza, pelo marrom, olhos espalhados pelo rosto e uma boca de muitos dentes; **pacíficos e acolhedores**, apesar do tamanho e das feições. Para eles, dificuldade se passa em grupo | aparência |
 | **Tritões e sereias** | gente do mar, de guelras e escamas; cantam de um jeito que faz barco se perder ou achar o caminho | aparência · às vezes magia (Persona) |
 | **Aviares** | gente-pássaro, de penas e ossos leves; vivem nas escarpas e nos ventos | aparência |
+| **Fidraus** | feitos de **energia, música e sentimentos**; a aparência muda de acordo com a **cultura para quem se apresentam**, e se vestem como ela, mas **reluzem** com uma energia sólida, bruxuleante, resplandecente | aparência · magia |
 
 **Innhomus** (fora de Contacto): seres **disformes e abstratos**, de formas geométricas, letras, sinais e símbolos, às vezes indescritíveis. São **divindades esquecidas e cataclismáticas**, com vontades e desejos próprios, e vivem em **planos à parte**. Não são um povo que se escolhe: são algo que se encontra.
 

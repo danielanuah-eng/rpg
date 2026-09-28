@@ -1,6 +1,6 @@
 # 11 — Bestiário: gente, bichos e seres do mundo
 
-> **287 personagens** no formato de palavras ([[10 Adversários - como criar]]). **Não há uma parte de inimigos e outra de aliados**: qualquer um aqui pode ser ameaça, aliado, cliente, vítima ou só alguém no caminho. O campo **Quer** diz para onde ele pende; a mesa decide o resto. Os números vêm da **régua** (Moldura + Papel); aqui fica só o que muda. O gerador monta a ficha completa, com imagem.
+> **288 personagens** no formato de palavras ([[10 Adversários - como criar]]). **Não há uma parte de inimigos e outra de aliados**: qualquer um aqui pode ser ameaça, aliado, cliente, vítima ou só alguém no caminho. O campo **Quer** diz para onde ele pende; a mesa decide o resto. Os números vêm da **régua** (Moldura + Papel); aqui fica só o que muda. O gerador monta a ficha completa, com imagem.
 
 **Como ler**
 
@@ -976,6 +976,10 @@ Básicas: fortes Movimentar, Agarrar · fraco Esconder
 **Canto Sem Cantor** — M2 · Conjurador · Persona
 Ser: Música · Agir: Tocar · Enfeitiçar (2C · Longe · Grupo · Firmar · anda na direção da música · Falha) · Parecer: Invisível, Belo · Quer: uma voz para morar dentro.
 Básicas: fortes Atrair, Criar · fraco Aguentar · Valor: Música, Seduzir, Saudade
+
+**Fidrau Cantor** — M2 · Suporte · Persona
+Ser: Fidrau, Música · Agir: Cantar (livre · Médio · os aliados limpam 1 Cansaço · uma vez por Evento) · Reluzir (1C · Médio · Grupo · Observar · Distraído pelo brilho · Inst) · Parecer: Brilhante, Belo · Quer: ser ouvido do jeito que a cultura dali ouve; aparece vestido como ela, mas brilha de um jeito que ninguém confunde.
+Básicas: fortes Criar, Encantar, Intuir · fraco Esconder · Valor: Música, Cantar, Contagiante
 
 **Tempestade Viva** — M4 · Chefe · Sublimeyn + Conflitüo · Resiliente
 Ser: Tempestade · Agir: Raio (Longe) · Granizo (3C · Longe · Área · Desviar · dano ×1,5 · Inst) · Olho da Tempestade (livre: no Toque dela, tudo fica parado e em silêncio) · Parecer: Enorme, Voador · Quer: passar. Não tem raiva de ninguém; só não desvia. *Jeito*: acalma se alguém entra no olho dela sem medo.

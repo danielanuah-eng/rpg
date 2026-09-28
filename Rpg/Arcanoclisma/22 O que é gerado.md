@@ -25,7 +25,7 @@
 | 3 | **Valor** | 9 | [[03 Valores]] | Compromisso, Skill, Retaliação, Ressonâncias, oposto, falas, *Como é*, tabela de usos, cor, símbolo | ficha do Valor, livro | símbolo + arte |
 | 4 | **Comportamento** | 12 | [[04 Comportamentos]] | números base, Talento e Hábito (Básico, Superior), falas, *Como é* | ficha, criador de personagem | ícone |
 | 5 | **Personagem pronto** | 6 (kit + sessões) | [[13 Teste de mesa 1]], [[16 Sessão de teste - Castian]], [[18 Sessão de teste 2 - Alvenyr]] | ficha inteira | app (carregar e jogar), livro | sim |
-| 6 | **PNJ / adversário** | 287 | [[11 Bestiário]], [[10 Adversários - como criar]] | Moldura, Papel, Maestria, Ser, Agir (com determinador), Parecer, Quer, Jeito, Básicas, Valor | gerador de encontro, gerador de PNJ, livro | sim (só no gerador e no livro) |
+| 6 | **PNJ / adversário** | 288 | [[11 Bestiário]], [[10 Adversários - como criar]] | Moldura, Papel, Maestria, Ser, Agir (com determinador), Parecer, Quer, Jeito, Básicas, Valor | gerador de encontro, gerador de PNJ, livro | todos no app do gerador; no livro, os relevantes |
 | 7 | **Arma / armadura** | 15 + 3 | [[06 Itens e dinheiro]] | atributo, verbo, alcance, dano, Proficiência, traços, Limiares, Proteção, preço | ficha (loja), tesouro | sim |
 | 8 | **Item mágico** (5 famílias) | ~30 | [[06 Itens e dinheiro]] | família, Moldura, efeito, cargas, **preço pela fórmula** (Base × fator) | ficha, tesouro, loja | sim |
 | 9 | **Item narrativo, comum, bugiganga** | tabelas d66 | [[12 Tesouros e itens mágicos]] | descrição, d66 | tesouro | só os mágicos |
@@ -34,7 +34,7 @@
 | 12 | **Lugar** | 22 | [[21 Kit de campanha]] | esboço, **sentimento**, dualidade, como trata a magia, ganchos, gente | gerador de lugar, livro | sim |
 | 13 | **Terreno** | tabela | [[07 Mestre - Cataclisma, abalos e terrenos]] | Moldura, tipo, Valor, pote de Ameaça | gerador de terreno | sim |
 | 14 | **Reino** (plano) | 9 | [[08 Mundo e entidades]] | Valor, quem vive, desafio, benefício | livro, gerador de lugar | sim |
-| 15 | **Povo** | 21 + Innhomus | [[08 Mundo e entidades]] | esboço, pesa em (aparência, magia) | criador de personagem, gerador de PNJ | sim |
+| 15 | **Povo** | 22 + Innhomus | [[08 Mundo e entidades]] | esboço, pesa em (aparência, magia) | criador de personagem, gerador de PNJ | sim |
 | 16 | **Entidade** (Primordial, semideus, dragão, Innhomus) | 9 + 9 + dragões | [[08 Mundo e entidades]], [[11 Bestiário]] | o que quer agora (d8), personalidade | gerador de gancho, livro | sim |
 | 17 | **Dragão** (gerador) | 9 tipos | [[08 Mundo e entidades]] | Valor, Desejo, Domínio, pessoas preferidas, sopro | gerador de dragão | sim |
 | 18 | **Gancho** | 20 + os de cada lugar | [[21 Kit de campanha]] | d20, lugar | gerador de gancho | não |
@@ -56,7 +56,7 @@
 | **Magia aleatória** | Valor, Grau | palavras sorteadas (d66) + verbo básico + forma, com custo e dados | tabela de Graus |
 | **Gancho e arco** | lugar, Laço de um jogador | gancho que puxa o Laço | — |
 | **Dragão** | Valor | Desejo, Domínio, pessoas preferidas, ficha pela idade | Moldura da idade |
-| **Nome** | povo ou lugar | nome e apelido | — |
+| **Nome** | povo ou cultura | nome e epíteto ([[23 Nomes e Laços]]) | — |
 | **Campanha em 15 minutos** | nada | 2–3 lugares, uma entidade e o que ela quer, um arco, um gancho | — |
 
 `calc/conferir.py` (Fase 5) roda antes de publicar: todo item e adversário dentro da faixa da sua Moldura, todo preço pela fórmula, toda palavra de Valor existindo na tabela, nenhum nome repetido.
@@ -90,7 +90,7 @@
 
 ## Decisões pendentes da Fase 3
 
-- **P-123** 🟡 **Gerador de nomes**: ainda não existe tabela de nomes. Proposta: uma tabela d66 de sílabas por **cultura** (uma para cada grupo de lugares: AlvoMarfim, Profulgar, Permal, TinThrohr, o mar de OulVeil, Confluência) e por **povo** (anões, elfos, Corves, Luphos...). Faço?
-- **P-124** 🟡 **Personagem aleatório**: o criador de personagem tem um botão "role tudo" (Valor, Comportamento, povo, Interações, 3 Laços sorteados de uma tabela de Laços)? Isso pede uma **tabela de Laços** (d66 de relações, atitudes e sentimentos).
-- **P-125** 🟡 **Imagem de PNJ comum**: os 287 do bestiário ganham imagem, ou só Chefes, semideuses, dragões e os PNJs com nome?
-- **P-126** 🟡 **Idioma dos ids**: ids em português sem acento (`kaelen-morvath`, `luva-de-forja`), como está aqui. Ok?
+- **P-123** ✅ **Gerador de nomes**: tabelas por cultura e por povo, mais epítetos, em [[23 Nomes e Laços]].
+- **P-124** ✅ **Personagem aleatório**: botão "role tudo"; tabelas de Laços (d12 relação, atitude, sentimento) em [[23 Nomes e Laços]].
+- **P-125** ✅ **Imagens**: **todos** os do bestiário ganham imagem **no app do gerador**; no **livro**, só os personagens relevantes, e aqui e ali um ao lado da ficha de PNJ.
+- **P-126** ✅ ids em português sem acento.

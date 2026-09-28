@@ -498,3 +498,7 @@ Sua resposta: ✅ aplicada, com *Cuidar* → **Proteger**, *Notar* → **Observa
 
 As perguntas P-123 a P-126 (gerador de nomes, personagem aleatório com tabela de Laços, quais PNJs ganham imagem, ids sem acento) estão em [[22 O que é gerado]].
 
+✅ P-123 nomes · ✅ P-124 personagem aleatório com tabelas de Laços · ✅ P-125 imagens: todos no app do gerador, no livro só os relevantes · ✅ P-126 ids sem acento. Tabelas em [[23 Nomes e Laços]].
+
+✅ **Fidraus**: povo feito de energia, música e sentimentos; aparência conforme a cultura para quem se apresentam, reluzindo com energia sólida, bruxuleante, resplandecente. Em [[08 Mundo e entidades]]; **Fidrau Cantor** no [[11 Bestiário]] (288).
+
