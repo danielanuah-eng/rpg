@@ -15,7 +15,7 @@
 | Código | Para | Texto (vai antes de cada prompt) |
 |---|---|---|
 | **P** | Personagem e criatura (1:1) | Bold graphic fantasy RPG illustration in a thick expressive ink style: heavy black outlines, flat vibrant colors with hard block shadows, dry-brush paper texture, stylized exaggerated proportions, comic-book cel shading, not realistic, not 3D, not a painting. Full body character, dynamic pose, strong facial expression. Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese): |
-| **D** | Dragão (1:1) | Bold graphic fantasy RPG illustration in a thick expressive ink style: heavy black outlines, flat vibrant colors with hard block shadows, dry-brush paper texture, stylized exaggerated proportions, comic-book cel shading, not realistic, not 3D, not a painting. An imposing, noble full body dragon seen slightly from below, head raised, chest proud, huge wingspan, majestic even when threatening. It is an ancient desire that became flesh and scales, complete, alive and full of soul: made of order and change at once, part of its body whole, closed and symmetrical, part cracked open with light leaking through and shapes shifting. Slender elegant body with a long neck and long tail, angular crystal-like scales drawn as flat blocks of color, a limited palette of two or three hues plus one glowing accent color. The flames are NOT realistic fire: they are ghostly, translucent, stylized flame shapes drawn as clean flat graphic ribbons and smoke-like curls with simple edges, flowing in long elegant curves that trace and frame the silhouette of the body like a spectral mantle. They appear only in a few places: the wing tips, the tip of the tail, the crest along the spine and the eyes, where the body seems to dissolve into flame; plus a few thin glowing veins along the scales. Deep expressive eyes that carry emotional weight, love, fear or longing, looking at the viewer as if mortals were passing seasons. Plain light gray background, no scenery, no text, no logo, no signature. Subject (in Portuguese): |
+| **D** | Dragão (1:1) | Bold graphic fantasy RPG illustration in a thick expressive ink style: heavy black outlines, flat vibrant colors with hard block shadows, dry-brush paper texture, stylized exaggerated proportions, comic-book cel shading, not realistic, not 3D, not a painting. An imposing, noble full body dragon seen slightly from below, head raised, chest proud, huge wingspan, majestic even when threatening. It is an ancient desire that became flesh and scales, complete, alive and full of soul: made of order and change at once, part of its body whole, closed and symmetrical, part cracked open with light leaking through and shapes shifting. Slender elegant body with a long neck and long tail, angular crystal-like scales drawn as flat blocks of color, a limited palette of two or three hues plus one glowing accent color. The flames are NOT realistic fire: they are ghostly, translucent, stylized flame shapes drawn as clean flat graphic ribbons and smoke-like curls with simple edges, flowing in long elegant curves that trace and frame the silhouette of the body like a spectral mantle. Their color, shape and behavior follow the dragon's Value, as described in the subject. They appear only in a few places: the wing tips, the tip of the tail, the crest along the spine and the eyes, where the body seems to dissolve into flame; plus a few thin glowing veins along the scales. Deep expressive eyes that carry emotional weight, love, fear or longing, looking at the viewer as if mortals were passing seasons. Plain light gray background, no scenery, no text, no logo, no signature. Subject (in Portuguese): |
 | **I** | Item (1:1) | Bold graphic fantasy RPG illustration in a thick expressive ink style: heavy black outlines, flat vibrant colors with hard block shadows, dry-brush paper texture, stylized exaggerated proportions, comic-book cel shading, not realistic, not 3D, not a painting. A single isolated object, whole and centered, three-quarter view, signs of use. Plain solid white background, no hand, no character, no text, no logo. Subject (in Portuguese): |
 | **C** | Cenário (paisagem 3:2) | Fantasy RPG environment illustration in a bold graphic ink style: heavy black outlines, flat vibrant colors with hard block shadows, dry-brush paper texture, wide establishing view, dramatic light, chapter-opening mood, no characters in the foreground, no text, no logo. Subject (in Portuguese): |
 
@@ -727,31 +727,31 @@
 
 - **Dragão-Lâmina** · Conflitüo · estilo **D** · 1:1 · **livro · gerar primeiro**  
   id `dragao-lamina`  
-  > Dragão-Lâmina, dragão de Conflitüo: vermelho-ferrugem, espinhos como lâminas; chamas vermelhas, pulsando como coração em batalha. O sopro: estilhaços de metal em brasa.
+  > Dragão-Lâmina, dragão de Conflitüo: vermelho-ferrugem, espinhos como lâminas. Its flames: ghostly rust-red flames shaped like blade edges and flying shards, pulsing like a heartbeat in battle. O sopro: estilhaços de metal em brasa.
 - **Dragão-Mercúrio** · Sublimeyn · estilo **D** · 1:1 · **livro · gerar primeiro**  
   id `dragao-mercurio`  
-  > Dragão-Mercúrio, dragão de Sublimeyn: prata que escorre e endurece; chamas azul-prateadas, que viram vapor, gota e cristal. O sopro: muda o estado do chão.
+  > Dragão-Mercúrio, dragão de Sublimeyn: prata que escorre e endurece. Its flames: ghostly silver-blue flames that keep changing state as they rise: vapor, then droplets, then little crystal shards. O sopro: muda o estado do chão.
 - **Dragão-Coleira** · Dominum · estilo **D** · 1:1 · **livro · gerar primeiro**  
   id `dragao-coleira`  
-  > Dragão-Coleira, dragão de Dominum: roxo-sangue, escamas que parecem correntes; chamas violetas, só nos olhos. O sopro: quem respira obedece uma ordem.
+  > Dragão-Coleira, dragão de Dominum: roxo-sangue, escamas que parecem correntes. Its flames: ghostly violet flames shaped like chain links and collar rings, held tight to the body, burning brightest in the eyes. O sopro: quem respira obedece uma ordem.
 - **Dragão-Coral** · Persona · estilo **D** · 1:1 · **livro · gerar primeiro**  
   id `dragao-coral`  
-  > Dragão-Coral, dragão de Persona: coral, com um rosto quase humano; chamas rosadas, mudando de tom com o humor dele. O sopro: uma emoção.
+  > Dragão-Coral, dragão de Persona: coral, com um rosto quase humano. Its flames: ghostly coral-pink flames soft as breath that shift hue with its mood, sometimes curling into faint face-like shapes. O sopro: uma emoção.
 - **Dragão-Eclipse** · Alvorum · estilo **D** · 1:1 · **livro · gerar primeiro**  
   id `dragao-eclipse`  
-  > Dragão-Eclipse, dragão de Alvorum: dourado de um lado, negro do outro; chamas brancas nos espinhos, negras nos olhos. O sopro: cegueira ou pesadelo.
+  > Dragão-Eclipse, dragão de Alvorum: dourado de um lado, negro do outro. Its flames: ghostly flames split in two: radiant white flames on the spines and black shadow-flames in the eyes, like day and night. O sopro: cegueira ou pesadelo.
 - **Dragão-Pálido** · Morbidyum · estilo **D** · 1:1 · **livro · gerar primeiro**  
   id `dragao-palido`  
-  > Dragão-Pálido, dragão de Morbidyum: verde-pálido, ossos aparecendo; chamas verdes, frias e tremidas. O sopro: apodrece os inimigos, ou fecha feridas de quem ele quiser.
+  > Dragão-Pálido, dragão de Morbidyum: verde-pálido, ossos aparecendo. Its flames: ghostly pale-green flames, cold and trembling, drifting upward like will-o-the-wisps and small departing souls. O sopro: apodrece os inimigos, ou fecha feridas de quem ele quiser.
 - **Dragão-Véu** · Cognitium · estilo **D** · 1:1 · **livro · gerar primeiro**  
   id `dragao-veu`  
-  > Dragão-Véu, dragão de Cognitium: índigo, meio transparente; chamas sem cor; só se vê de canto de olho. O sopro: esquecimento.
+  > Dragão-Véu, dragão de Cognitium: índigo, meio transparente. Its flames: ghostly almost colorless veil-like flames, seen only at the edge of sight, blurring into indigo mist and thin labyrinth lines. O sopro: esquecimento.
 - **Dragão-Ampulheta** · Eternyr · estilo **D** · 1:1 · **livro · gerar primeiro**  
   id `dragao-ampulheta`  
-  > Dragão-Ampulheta, dragão de Eternyr: azul-noite com pontos brancos, como céu; chamas chamas que se mexem devagar demais. O sopro: envelhece, ou para no tempo.
+  > Dragão-Ampulheta, dragão de Eternyr: azul-noite com pontos brancos, como céu. Its flames: ghostly night-blue flames with tiny white star points that move far too slowly, leaving frozen trails like long exposures. O sopro: envelhece, ou para no tempo.
 - **Dragão-Musgo** · Primitivum · estilo **D** · 1:1 · **livro · gerar primeiro**  
   id `dragao-musgo`  
-  > Dragão-Musgo, dragão de Primitivum: verde-musgo e âmbar, galhos nos chifres; chamas âmbar, como vaga-lumes. O sopro: raízes que prendem, ou um instante como bicho.
+  > Dragão-Musgo, dragão de Primitivum: verde-musgo e âmbar, galhos nos chifres. Its flames: ghostly amber flames like fireflies and floating seeds, drifting around moss and branch-like horns. O sopro: raízes que prendem, ou um instante como bicho.
 - **Wyvern** · cria de dragão · estilo **D** · 1:1 · **livro · gerar primeiro**  
   id `wyvern`  
   > Wyvern, a cria de um dragão: menor, duas patas e asas, sem chamas, olhar de bicho, arreio de couro de montaria.

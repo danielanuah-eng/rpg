@@ -90,6 +90,19 @@ Traço do **Wilderfeast** (tinta grossa, contorno preto, cor chapada com sombra 
 - **Corpo**: nobre e alongado, pescoço e cauda longos; escamas angulosas como cristal, desenhadas em blocos de cor.
 - **Paleta**: duas ou três cores do Valor e **um acento que brilha**.
 - **Chamas bruxuleantes**: **nada de fogo realista**. São chamas **fantasmagóricas e translúcidas**, desenhadas como **fitas e fumaça em formas chapadas**, de borda limpa, que correm em curvas longas e **contornam a silhueta** como um manto espectral. Aparecem **só em alguns pontos**: pontas das asas, ponta da cauda, crista e olhos, onde o corpo parece virar chama; mais alguns veios finos acesos nas escamas.
+- **Cada Valor tem a sua chama** (cor, forma e comportamento):
+
+| Valor | Chama |
+|---|---|
+| Conflitüo | vermelho-ferrugem, em forma de gume e estilhaço, pulsando como coração em batalha |
+| Sublimeyn | azul-prateada, mudando de estado enquanto sobe: vapor, gota, cristal |
+| Dominum | violeta, em elos de corrente e argolas de coleira, presa ao corpo; mais forte nos olhos |
+| Persona | coral, macia como respiração, mudando de tom com o humor; às vezes forma rostos |
+| Alvorum | partida: branca e radiante nos espinhos, negra de sombra nos olhos, dia e noite |
+| Morbidyum | verde-pálida, fria e tremida, subindo como fogos-fátuos e almas que partem |
+| Cognitium | quase sem cor, um véu visto só de canto de olho, desfazendo em névoa índigo e linhas de labirinto |
+| Eternyr | azul-noite com pontinhos brancos de estrela, lenta demais, deixando rastros parados |
+| Primitivum | âmbar, como vaga-lumes e sementes flutuando entre musgo e chifres de galho |
 - **Arcano e Cataclisma num corpo só**: parte do corpo inteira, fechada e simétrica; parte rachada, com luz vazando e forma mudando.
 - **Peso emocional**: olhos fundos e expressivos (amor, medo, saudade), olhando quem vê como se os mortais fossem estações.
 - **Idade**: o filhote e o jovem são feras de impulso; o adulto é senhor consciente; o ancião é memória do mundo, sábio, de cicatrizes antigas.

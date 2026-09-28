@@ -59,7 +59,7 @@ ESTILOS = {
           'drawn as flat blocks of color, a limited palette of two or three hues plus one glowing accent color. The flames are NOT '
           'realistic fire: they are ghostly, translucent, stylized flame shapes drawn as clean flat graphic ribbons and smoke-like '
           'curls with simple edges, flowing in long elegant curves that trace and frame the silhouette of the body like a spectral '
-          'mantle. They appear only in a few places: the wing tips, the tip of the tail, the crest along the spine and the eyes, '
+          'mantle. Their color, shape and behavior follow the dragon\'s Value, as described in the subject. They appear only in a few places: the wing tips, the tip of the tail, the crest along the spine and the eyes, '
           'where the body seems to dissolve into flame; plus a few thin glowing veins along the scales. '
           'Deep expressive eyes that carry emotional weight, love, fear or longing, looking at the viewer as if mortals were '
           'passing seasons. Plain light gray background, no scenery, no text, no logo, no signature. Subject (in Portuguese):'),
@@ -230,10 +230,23 @@ add('povo', 'Povos', 'Innhomus', 'fora de Contacto', 'P',
     id_='povo-innhomus', prioridade=True)
 
 # ---------------------------------------------------------------- dragões (08)
+# Chamas por Valor: a cor e o jeito da chama seguem o Valor do dragão (08, coluna Chamas), sempre espectrais.
+CHAMAS = {
+    'Conflitüo': 'ghostly rust-red flames shaped like blade edges and flying shards, pulsing like a heartbeat in battle',
+    'Sublimeyn': 'ghostly silver-blue flames that keep changing state as they rise: vapor, then droplets, then little crystal shards',
+    'Dominum': 'ghostly violet flames shaped like chain links and collar rings, held tight to the body, burning brightest in the eyes',
+    'Persona': 'ghostly coral-pink flames soft as breath that shift hue with its mood, sometimes curling into faint face-like shapes',
+    'Alvorum': 'ghostly flames split in two: radiant white flames on the spines and black shadow-flames in the eyes, like day and night',
+    'Morbidyum': 'ghostly pale-green flames, cold and trembling, drifting upward like will-o-the-wisps and small departing souls',
+    'Cognitium': 'ghostly almost colorless veil-like flames, seen only at the edge of sight, blurring into indigo mist and thin labyrinth lines',
+    'Eternyr': 'ghostly night-blue flames with tiny white star points that move far too slowly, leaving frozen trails like long exposures',
+    'Primitivum': 'ghostly amber flames like fireflies and floating seeds, drifting around moss and branch-like horns',
+}
 for r in tabela(t08, '| Valor | Dragão | Cor e forma |'):
     valor, nome = limpo(r[0]), limpo(r[1])
     add('dragao', 'Dragões', nome, valor, 'D',
-        f'{nome}, dragão de {valor}: {limpo(r[2])}; chamas {limpo(r[3])}. O sopro: {re.sub(r" *[(].*?[)]", "", limpo(r[4]))}.', prioridade=True)
+        f'{nome}, dragão de {valor}: {limpo(r[2])}. Its flames: {CHAMAS[valor]}. '
+        f'O sopro: {re.sub(r" *[(].*?[)]", "", limpo(r[4]))}.', prioridade=True)
 add('dragao', 'Dragões', 'Wyvern', 'cria de dragão', 'D',
     'Wyvern, a cria de um dragão: menor, duas patas e asas, sem chamas, olhar de bicho, arreio de couro de montaria.', prioridade=True)
 
