@@ -25,6 +25,7 @@ Sistema de RPG próprio, inspirado em Daggerheart, Rune RPG, Ethmos e Triangle A
 15. [[14 Teste das mecânicas]] — etapas, facilidade e vantagem repetida de cada mecânica; economia de Arcano
 16. [[15 Teste de escala e criatividade]] — combate em todas as Molduras e tamanhos de mesa, testes difíceis, Eventos sociais, uso criativo das palavras
 17. [[16 Sessão de teste - Castian]] — sessão jogada: ficha do Castian, a Iolanda e o registro dos Eventos, com as regras ajustadas na mesa
+18. [[17 Interações - proposta]] — proposta de trocar atributos, verbos e modos por 20 Interações (P-122)
 
 ## Conta dos dados
 

@@ -423,3 +423,8 @@ Sua resposta:
 
 ✅ **Ferir** virou um passo genérico de Ampliar: num Teste mágico, quem não passa também leva o dano do Grau. Sem ele, o Teste mágico só aplica o efeito.
 
+## Rodada 19 — Interações
+
+**P-122** 🔴 **Atributos + Palavras Básicas viram uma tabela só de 20 Interações** (Bater, Agarrar, Levantar, Aguentar, Movimentar, Desviar, Atirar, Esconder, Prestidigitação, Consertar, Cuidar, Convencer, Mentir, Ameaçar, Atrair, Chamar, Raciocinar, Perceber, Sobreviver, Firmar). Criação: **+3 · +2 · +2 · +1 · +1 · +1 · −1 · −1**, o resto em 0; máximo +6. Dados continuam 2d12; a escada de Dificuldades não muda. Monstros e PNJs: Ataque em tudo, 2–3 Interações fortes (+2) e 1 fraca (−2). Detalhes e contas em [[17 Interações - proposta]].
+Sua resposta:
+
