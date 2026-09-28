@@ -357,3 +357,34 @@ Sua resposta:
 **P-117** 🟡 Magia resistida na Moldura 1 funciona ~60% (sem resistência, ~80%). Fica assim, ou o empate na resistência também vai para quem conjura e o alvo que resiste ainda sofre meio efeito (dura só o Instante)?
 Sua resposta:
 
+## Rodada 17 — Menos bônus, palavras que valem
+
+**P-118** 🔴 **Só dois tipos de bônus nos testes**: o **atributo** (número fixo; itens e magias que dão +1 mexem no atributo) e **Vantagem** (+1d6). Tudo que ajuda vira Vantagem: Vivência (1 Arcano), Ajudar (1 Arcano), talentos, itens de situação, terreno, *Seguir em Frente*. **Até 2 Vantagens por rolagem** (substitui o "duas ajudas"); cada Desvantagem tira uma. Somem os +2 e +1 soltos (a Vivência deixa de ser +2; a arma *Precisa* vira Vantagem contra quem não te viu). Fica de fora só o **Atalho menor (+3)**, que é o preço do Laço e não uma ajuda.
+Sua resposta:
+
+**P-119** 🔴 **Dificuldades padrão pela conta.** O atributo que o jogador costuma usar é ~igual à Moldura (+1, +2, +3, +4). A escada foi feita para esse jogador **sem Vantagem**: Fácil ~88%, Médio ~68%, Difícil ~46%, Muito difícil ~19%, Lendário ~5% (com 2 Vantagens, ~45%).
+
+| | M1 | M2 | M3 | M4 |
+|---|---|---|---|---|
+| Fácil | 9 | 10 | 11 | 12 |
+| Médio | 12 | 13 | 14 | 15 |
+| Difícil | 15 | 16 | 17 | 18 |
+| Muito difícil | 19 | 20 | 21 | 22 |
+| Lendário | 23 | 24 | 25 | 26 |
+
+Use a coluna da **Moldura do desafio** (não do grupo): uma porta comum é M1 para sempre, a porta do cofre de um semideus é M4. O Médio de cada coluna é igual à Dificuldade dos adversários da mesma Moldura (12/13/14/15), então é uma régua só.
+Sua resposta:
+
+**P-120** 🔴 **Palavras somam.** Cada palavra de Valor na magia soma **+1 no total**. A Relação deixa de ser um +1 à parte: ela é a condição (diga em uma frase por que aquelas palavras, para esse personagem, fazem isso; sem isso, as palavras entram no efeito mas não somam). Com 1 palavra dá o mesmo +1 de hoje, então as Dificuldades do Grau não mudam. Magia não recebe Vantagem paga (Vivência, Ajudar): o bônus dela vem das palavras e da Dupla. Desvantagem vale igual.
+Mais palavras = mais caro (1 Arcano cada), mais fácil, e mais caótico (mais Dificuldades se sair Ímpar).
+
+| Moldura | palavras | conjura (Grau máx.) | resistida por adversário da mesma Moldura |
+|---|---|---|---|
+| 1 | 1 · 2 | 81% · 85% | 55% · 61% |
+| 2 | 1 · 2 · 3 | 84% · 89% · 93% | 58% · 65% · 71% |
+| 3 | 1 · 2 · 3 · 4 | 84% · 90% · 95% · 97% | 61% · 68% · 75% · 81% |
+| 4 | 1 · 2 · 3 · 4 · 5 | 82% · 90% · 95% · 98% · 99% | 64% · 73% · 80% · 86% · 90% |
+
+Onde a palavra mais pesa é na magia **resistida**: o total maior é mais difícil de escapar.
+Sua resposta:
+
