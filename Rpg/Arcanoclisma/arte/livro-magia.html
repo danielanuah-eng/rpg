@@ -87,13 +87,25 @@ tbody th{font:400 15px/1.2 "Marcellus SC",Georgia,serif;text-transform:none;lett
 .note{font-size:14px;color:var(--pmute)}
 .d20 td:first-child{font:400 15px/1 "Marcellus SC",Georgia,serif;color:var(--cat);width:34px;text-align:center}
 .d20 td:nth-child(2){white-space:nowrap;font-weight:600}
+.stp{display:grid;grid-template-columns:64px 1fr;gap:18px;border-top:1.5px solid var(--gold);padding-top:14px}
+@media (max-width:560px){.stp{grid-template-columns:1fr;gap:4px}}
+.sn{font:400 64px/1 "Marcellus SC",Georgia,serif;color:var(--gold)}
+.sb{display:flex;flex-direction:column;gap:12px;min-width:0}
+.sb h3{border:0;padding:0;font-size:26px}
+.sfaz{display:flex;flex-direction:column;gap:10px;max-width:70ch}
+.sinf{border-left:3px solid var(--gold);padding:4px 0 4px 14px;display:flex;flex-direction:column;gap:6px}
+.sinf ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:15px}
+.sex{border:1.5px dashed var(--cat);border-radius:4px;padding:10px 14px;background:var(--paper2);display:flex;flex-direction:column;gap:6px;font-size:15px}
+.sex .lab{color:var(--cat)}
+.eqn{font:400 18px/1.4 "Marcellus SC",Georgia,serif;text-align:center;padding:8px;border:1px solid var(--rule);border-radius:4px;background:var(--paper2)}
+.eqn i{font-style:normal;color:var(--gold);margin:0 6px}
 footer{font:400 12px/1.5 "IBM Plex Mono",monospace;color:var(--muted)}
 </style>
 <div class="wrap">
 <div class="intro"><span class="eyebrow">Arcanoclisma · Livro · rascunho de diagramação</span>
 <h1>Capítulo 2 · Magia</h1>
-<p>As páginas do livro sobre magia, com tudo o que saiu das fichas: a fórmula, as palavras, os Graus, os três tipos de efeito, os Descritores, a leitura dos dados, os Efeitos Colaterais, o Canal e a Magia em Dupla.</p>
-<nav class="toc" aria-label="Páginas"><a href="#p1">Abertura</a><a href="#p2">Palavras</a><a href="#p3">Graus</a><a href="#p4">Quem rola</a><a href="#p5">Descritores</a><a href="#p6">Os dados</a><a href="#p7">Canal e Dupla</a></nav></div>
+<p>As páginas do livro sobre magia, com tudo o que saiu das fichas: a fórmula, o passo a passo explicado por inteiro, as palavras, os Graus, os três tipos de efeito, os Descritores, a leitura dos dados, os Efeitos Colaterais, o Canal e a Magia em Dupla.</p>
+<nav class="toc" aria-label="Páginas"><a href="#p1">Abertura</a><a href="#ps1">Passo a passo</a><a href="#p2">Palavras</a><a href="#p3">Graus</a><a href="#p4">Quem rola</a><a href="#p5">Descritores</a><a href="#p6">Os dados</a><a href="#p7">Canal e Dupla</a></nav></div>
 
 <!-- P1 -->
 <article class="page" id="p1" aria-label="Página 1">
@@ -109,18 +121,35 @@ footer{font:400 12px/1.5 "IBM Plex Mono",monospace;color:var(--muted)}
 <div class="fx"><span>Dados</span><i>+</i><span>Palavras</span><i>≥</i><span>Dificuldade</span></div>
 <div class="fr"><span class="lab">Teste comum</span><span><b>2d12</b> + os números de <b>até duas Palavras Básicas</b> que descrevem a ação (Bater Rápido, Convencer).</span></div>
 <div class="fr"><span class="lab">Magia</span><span>os <b>dados do Grau</b> + <b>2</b> (a Sintonia, igual para todos) + <b>1 por palavra de Valor</b>.</span></div>
-<div class="fr"><span class="lab">Contra</span><span>no teste comum, a Dificuldade que o mestre diz; na magia, depende do tipo de efeito (página 4).</span></div>
+<div class="fr"><span class="lab">Contra</span><span>no teste comum, a Dificuldade que o mestre diz; na magia, depende do tipo de efeito (página 7).</span></div>
 <p class="note">É a mesma conta nos dois casos: você rola dados e soma o que as suas palavras valem. Na magia, cada palavra de Valor vale +1; no teste comum, cada Palavra Básica vale o número que você escreveu nela.</p></div>
-<h3>Conjurar em seis passos</h3>
-<ol class="steps">
-<li><b>Diga o que quer</b><span>Descreva o que acontece e como a magia aparece pelo seu Canal. "Jogo uma lâmina de luz vermelha no bandido."</span></li>
-<li><b>Escolha as palavras</b><span>A primeira é do seu Valor. Cada palavra de Valor soma +1. Uma Palavra Básica entra de graça (página 2).</span></li>
-<li><b>Escolha o Grau</b><span>O tamanho do que você pede, até o seu Grau máximo. O Grau dá os dados, o custo e o normal da magia (página 3).</span></li>
-<li><b>Marque os Descritores</b><span>Diga do que a magia é feita: se dá dano, se prende, quanto dura, até onde vai, quantos pega (página 5).</span></li>
-<li><b>Pague o Arcano</b><span>Custo do Grau + as palavras extras + os quadrados pagos.</span></li>
-<li><b>Role</b><span>Veja pelo tipo de efeito quem rola e contra o quê (página 4). Leia os dados (página 6).</span></li>
-</ol>
+<div class="box"><span class="lab">Os seis passos de toda magia</span><p><b>1</b> Diga o que quer · <b>2</b> Escolha as palavras · <b>3</b> Escolha o Grau · <b>4</b> Marque os Descritores · <b>5</b> Pague o Arcano · <b>6</b> Role. Nas próximas páginas, cada um explicado por inteiro, com um exemplo do começo ao fim.</p></div>
 <div class="folio">1</div>
+</article>
+
+<!-- PS1 -->
+<article class="page" id="ps1" aria-label="Passo a passo 1">
+<div class="run"><span>Capítulo 2</span><span>Passos 1 e 2</span></div>
+<h2>O passo a passo, sem pressa</h2>
+<p class="pl">Estes são os seis passos de toda magia, explicados um por um. Em cada passo: o que você faz, o que influencia a decisão (as regras, a ficha, o mestre, a cena) e o mesmo exemplo andando do começo ao fim: <b>Alvenyr</b>, Conflitüo de nível 5, contra três capangas numa escada.</p>
+<section class="stp"><div class="sn">1</div><div class="sb"><h3>Diga o que você quer que aconteça</h3><div class="sfaz"><p>Tudo começa na ficção. Diga, com as suas palavras, <b>o que a magia faz</b> e <b>como ela aparece</b>. Não pense ainda em números: pense na cena. O que você quer que mude? Em quem? Como a magia sai de você: pela arma, pela voz, pelo corpo, pelo caderno?</p><p>Essa frase é a coisa mais importante da magia. É dela que saem todos os outros passos: quais palavras fazem sentido, que tamanho o feito tem, o que marcar nos Descritores e quem vai rolar. Se a descrição muda no meio do caminho, os números mudam junto.</p><p>Converse com o mestre. Ele pode perguntar detalhes ("todos os três, ou só o da frente?") e tem a palavra final se o que você pediu for maior do que você acha.</p></div><div class="sinf"><span class="lab">O que influencia este passo</span><ul><li><b>O seu Valor</b>: a magia precisa caber nele. Conflitüo é briga e defesa; Persona só chega nas coisas através de gente; Primitivum é corpo e bicho. As palavras da sua ficha mostram até onde o Valor vai.</li><li><b>A Retaliação do Valor</b>: algumas mudam o preço ou o jeito conforme o que você descreve. Conflitüo, fora de combate, paga +2 Arcano; Alvorum nunca conjura escondido.</li><li><b>O seu Canal</b>: diz como a magia aparece (a lâmina, o canto, a tatuagem) e dá um benefício. Pela Arma, os traços da arma valem; pelo Foco, +1 no dano.</li><li><b>A situação</b>: o que já está na cena, o que o alvo está fazendo, se você teve tempo de se preparar.</li><li><b>O tipo de efeito</b> já começa a aparecer aqui: se a magia precisa acertar, se alguém pode resistir, ou se ela só muda o mundo (passo 6).</li></ul></div><div class="sex"><span class="lab">Com o Alvenyr</span><p><i>"As correntes da minha tatuagem se soltam e viram uma rajada de lâminas vermelhas contra os três capangas da escada. Quero que cortem e que eles caiam."</i> Alvenyr é Conflitüo, nível 5 (Moldura 3), está em combate e conjura pela Marca, a tatuagem.</p></div></div></section><section class="stp"><div class="sn">2</div><div class="sb"><h3>Escolha as palavras</h3><div class="sfaz"><p>Agora traduza a frase em <b>palavras de Valor</b>, da tabela de 36 da sua ficha. A <b>primeira</b> é obrigatoriamente do seu Valor: é o <b>núcleo</b>, o coração da magia. As outras podem ser do seu Valor ou Palavras Estrangeiras que você aprendeu subindo de nível.</p><p><b>Cada palavra de Valor soma +1</b> na sua rolagem (no Teste mágico, soma +1 na Dificuldade que o alvo precisa vencer). Mais palavras deixam o efeito mais específico, e o específico dá certo mais fácil. Você e o mestre só precisam concordar com três coisas: a <b>combinação</b> das palavras, o <b>sentido</b> da junção e o <b>tamanho</b> do efeito.</p><p>Depois, se quiser, acrescente <b>uma Palavra Básica</b> de graça: uma das 52 da Ficha 1, uma coisa (Arma, Item, Poção, Objeto, Armadilha) ou uma forma (Projétil, Onda, Barreira...). Ela dá ao Valor uma ação que ele sozinho não tem. Não soma +1, não custa e não conta no limite.</p><p>Só conta a palavra que <b>muda o efeito</b>. Uma palavra que só diz onde ou em quem a magia cai é detalhe, não palavra.</p></div><div class="sinf"><span class="lab">O que influencia este passo</span><ul><li><b>O seu nível</b>: diz <b>quantas</b> palavras de Valor cabem (a casa <i>Palavras por magia</i>): 2 na Moldura 1, 3 na 2, 4 na 3, 5 na 4.</li><li><b>O Grau</b> (passo 3): diz <b>quanto custa</b> cada palavra além da primeira: 1 Arcano no Grau 1 e 2, 2 no Grau 3 e 4, 3 no Grau 5. Por isso vale escolher palavras e Grau juntos.</li><li><b>A 3ª palavra de Valor</b> em diante dá +1 Cataclisma ao mestre, cada uma.</li><li><b>Palavras seladas</b> (por um Efeito Colateral) não podem ser usadas até o fim do prazo. <b>Palavras fundidas</b> (circuladas na ficha) entram sem ser chamadas e ficam rígidas.</li><li><b>Palavras Estrangeiras</b> ampliam o que você pode dizer, mas nunca são o núcleo e não trazem a Skill do outro Valor.</li></ul></div><div class="sex"><span class="lab">Com o Alvenyr</span><p><b>Lâmina</b> (núcleo) + <b>Implacável</b>: duas palavras de Valor, <b>+2</b> na rolagem. Palavra Básica grátis: <b>Atirar</b>. Ele poderia pôr até 4 palavras de Valor (Moldura 3), mas cada uma a mais custaria Arcano e a 3ª já daria Cataclisma ao mestre.</p></div></div></section>
+<div class="folio">2</div>
+</article>
+
+<!-- PS2 -->
+<article class="page" id="ps2" aria-label="Passo a passo 2">
+<div class="run"><span>Capítulo 2</span><span>Passos 3 e 4</span></div>
+<h2>O passo a passo, continuação</h2>
+<section class="stp"><div class="sn">3</div><div class="sb"><h3>Escolha o Grau</h3><div class="sfaz"><p>O <b>Grau</b> é o tamanho do feito. Olhe a sua descrição e compare com a tabela de Graus: quantos ela pega, até onde vai, quanto tempo fica, o quanto dobra a realidade. O Grau que encaixa é o da magia.</p><p>O Grau decide muita coisa de uma vez: <b>quais dados</b> você rola (2d12, 3d8, 4d6 ou 6d4), <b>quanto custa</b>, a <b>Dificuldade do Grau</b> (para o Pequeno evento), quantos <b>Efeitos Colaterais</b> vêm se a magia sair por Cataclisma e o <b>normal</b> da magia: o dano, o alcance, o tamanho e a duração que ela tem sem você marcar nenhum quadrado a mais.</p><p>Se o que você quer é um pouco maior que o normal de um Grau (mais longe, mais tempo, um dado a mais de dano), você não precisa subir o Grau inteiro: marque um Descritor no passo 4. Suba o Grau quando o feito todo for maior. Subir o Grau custa só o custo do Grau novo.</p></div><div class="sinf"><span class="lab">O que influencia este passo</span><ul><li><b>O seu nível</b>: o Grau não passa do seu <b>Grau máximo</b> (a casa da ficha): 2 na Moldura 1, 3 na 2, 4 na 3, 5 na 4. Acima disso, só em Dupla com outro personagem.</li><li><b>O mestre</b>: se a descrição pedir mais do que o Grau escolhido, ele diz qual Grau ela é.</li><li><b>Teste mágico</b>: conjurar abaixo do seu máximo deixa o efeito mais difícil de escapar (+2 na Dificuldade da magia por Grau abaixo). Um susto pequeno pega mais fácil que um terror.</li><li><b>Grau 1</b> não rola: acontece. Só vira rolagem quando é o meio de uma ação comum (aí é o teste comum, com Palavras Básicas).</li><li><b>O lugar</b>: Terrenos, Marés e Eras podem baixar o Grau máximo (Maré Baixa, Era dos Semideuses).</li></ul></div><div class="sex"><span class="lab">Com o Alvenyr</span><p>Três capangas a uma distância média: isso é <b>Grau 3</b> (até 3 alvos, alcance Médio, dano 2d10 + 3). Ele rola <b>3d8</b>, a magia custa <b>2</b> Arcano e cada palavra extra custa <b>2</b>. Alvenyr poderia ir até o Grau 4, mas o feito não pede.</p></div></div></section><section class="stp"><div class="sn">4</div><div class="sb"><h3>Marque os Descritores</h3><div class="sfaz"><p>Os Descritores dizem <b>do que a magia é feita</b>. Na ficha do Valor, marque os quadrados do que a sua descrição tem. O que você não marcar fica no normal do Grau.</p><p>Comece pelo <b>efeito principal</b>. A magia machuca? Marque o 1º quadrado de <b>Dano</b>. Ela prende, derruba, cega ou assusta? Marque <b>Restringe</b>. O primeiro desses dois é <b>grátis</b>: é o que a magia faz. Uma magia que só muda o mundo (abrir, criar, curar, fortalecer) não precisa de nenhum dos dois.</p><p>Depois, marque o que a descrição tem <b>a mais</b>. Um dado de dano a mais? Um quadrado de Dano (+1d10). Machuca <b>e</b> derruba? Restringe também. Mais longe, mais gente, mais tempo do que o Grau dá? Suba os degraus de Alcance, Tamanho e Duração. <b>Cada quadrado desses é pago</b>: 1 Arcano e +1 na Dificuldade (no Teste mágico, a Dificuldade da magia cai 1). A cada 2 quadrados pagos, a magia rola +1 Efeito Colateral se sair por Cataclisma.</p><p>Não há limite de quadrados além dos de cada Descritor (Dano: Grau + 1; Restringe: 1; as escadas: até o degrau 5). Quem segura é o preço: cada quadrado deixa a magia mais cara, mais difícil e mais perigosa.</p></div><div class="sinf"><span class="lab">O que influencia este passo</span><ul><li><b>A descrição</b> (passo 1): só marque o que você descreveu, e descreva o que marcou.</li><li><b>O Grau</b> (passo 3): diz onde cada escada começa e quantos quadrados de Dano cabem.</li><li><b>Domínio</b> (avanço): no Descritor escolhido, o 1º quadrado pago de cada magia não soma Dificuldade nem conta para os Efeitos Colaterais.</li><li><b>Skills e Ressonâncias</b>: Persona tem o 1º quadrado pago de graça em pessoas; Conflitüo ganha +1 dado de dano em combate pela Skill, sem quadrado.</li><li><b>Itens</b> <i>De Grau</i>: dão quadrados sem pagar Arcano.</li></ul></div><div class="sex"><span class="lab">Com o Alvenyr</span><p><b>Dano</b>: 1º quadrado (grátis) + <b>1 quadrado</b> (+1d10, pago). <b>Restringe</b>: <b>Caído</b> (pago). Tamanho e Alcance ficam no normal do Grau 3. São <b>2 quadrados pagos</b>. Alvenyr tem <b>Domínio (dano)</b>: o quadrado de dano não soma Dificuldade nem colateral. Resultado: <b>+2 Arcano</b>, <b>+1 na Dificuldade</b>, <b>+1 Efeito Colateral</b> se sair por Cataclisma (conta só o Caído, que dá 1).</p></div></div></section>
+<div class="folio">3</div>
+</article>
+
+<!-- PS3 -->
+<article class="page" id="ps3" aria-label="Passo a passo 3">
+<div class="run"><span>Capítulo 2</span><span>Passos 5 e 6</span></div>
+<h2>O passo a passo, fim</h2>
+<section class="stp"><div class="sn">5</div><div class="sb"><h3>Pague o Arcano</h3><div class="sfaz"><p>Some o preço da magia e risque o Arcano da ficha <b>antes de rolar</b>:</p><p class="eqn">custo do Grau <i>+</i> palavras extras <i>+</i> quadrados pagos <i>+</i> o que Skills e Retaliações mudarem</p><p>Se não tiver Arcano para tudo, tire alguma coisa: uma palavra, um quadrado, ou baixe o Grau. Uma magia sem Arcano suficiente não sai.</p><p>Lembre que a magia <b>se paga com os próprios dados</b>: cada dado par que você rolar devolve 1 Arcano. Magias grandes custam mais, mas também rolam mais dados.</p></div><div class="sinf"><span class="lab">O que influencia este passo</span><ul><li><b>O Grau</b>: 0, 1, 2, 3 ou 5.</li><li><b>As palavras</b>: cada uma além da primeira, pelo preço do Grau (1, 1, 2, 2, 3).</li><li><b>Os Descritores</b>: 1 por quadrado pago.</li><li><b>A Retaliação</b>: Conflitüo fora de combate +2; Sublimeyn paga por passo de estado; Fome do Valor (um Efeito Colateral) deixa a próxima magia +2.</li><li><b>Magia em Dupla</b>: +3, divididos entre os dois.</li><li><b>O seu Arcano</b>: máximo 12. Arcano é feito para ser gasto: você ganha mais rolando.</li></ul></div><div class="sex"><span class="lab">Com o Alvenyr</span><p>Grau 3 (<b>2</b>) + 1 palavra extra no Grau 3 (<b>2</b>) + 2 quadrados pagos (<b>2</b>) = <b>6 Arcano</b>. Em combate, a Retaliação do Conflitüo não pesa.</p></div></div></section><section class="stp"><div class="sn">6</div><div class="sb"><h3>Role</h3><div class="sfaz"><p>Agora descubra <b>quem rola e contra o quê</b> pelo tipo de efeito. Faça as três perguntas: a magia <b>precisa acertar</b>? É <b>Projétil</b>: você rola contra a Dificuldade do alvo (ou a Esquiva de um jogador). Alguém <b>pode resistir</b>? É <b>Teste mágico</b>: você não rola; o alvo rola contra 13 + a sua Moldura + as suas palavras. Ela <b>muda o mundo</b>? É <b>Pequeno evento</b>: você rola contra a Dificuldade do Grau.</p><p>Quando você rola, a conta é a fórmula de sempre: <b>dados do Grau + 2 + 1 por palavra de Valor</b>. Some os quadrados pagos na Dificuldade (no Teste mágico, tire da Dificuldade da magia).</p><p>Depois <b>leia os dados</b>. Cada dado par dá +1 Arcano a você; cada ímpar dá +1 Cataclisma ao mestre. Se o maior dado (no 2d12) ou a maioria (nos outros) for ímpar, a magia sai <b>por Cataclisma</b>: ela acontece se passou, mas o mestre emoldura e você rola os Efeitos Colaterais: os do Grau + 1 a cada 2 quadrados pagos. Errou por até 2? A magia sai um Grau menor. Errou por mais? Não sai, e o Arcano se perde.</p><p>Se acertou e a magia dá dano, role o dano: o do Grau + 1d10 por quadrado de Dano pago + os bônus de Skill e Canal. Numa magia com vários alvos, uma rolagem de dano vale para todos.</p></div><div class="sinf"><span class="lab">O que influencia este passo</span><ul><li><b>O tipo de efeito</b>: decide quem rola e contra qual número.</li><li><b>O alvo</b>: a Dificuldade dele (Projétil) ou o Ataque dele (Teste mágico). Palavras dele que combinam com resistir dão Vantagem a ele.</li><li><b>Esforço</b>: depois de ver os dados, antes do mestre dizer o resultado, marque Cansaço (até 2, 3, 4 ou 5 pelo Grau) e some +2 por casa. Não muda par e ímpar.</li><li><b>Crítico</b>: dados iguais no 2d12 (todos pares nos outros); no Teste mágico, 1 no d20 do alvo.</li><li><b>Suavizar</b> (2 Arcano): role de novo o d20 de um Efeito Colateral.</li></ul></div><div class="sex"><span class="lab">Com o Alvenyr</span><p>É um <b>Projétil</b>: as lâminas precisam acertar. Os capangas têm Dificuldade 14; com o Caído pago, <b>15</b>. Alvenyr rola <b>3d8 + 2 + 2</b>: 6, 3 e 5 = 14 + 4 = <b>18</b>. Acertou. Dois dados ímpares contra um par: sai <b>por Cataclisma</b> (+1 Arcano para ele, +2 Cataclisma para o mestre) e rola <b>2 Efeitos Colaterais</b> (1 do Grau 3 + 1 do quadrado): 16, <i>Esquecimento</i> (Implacável fica selada até a Pausa), e 8, <i>Esgotamento</i> (3 Cansaço). O dano: 2d10 + 3, +1d10 do quadrado, +1d10 do Fio da Guerra = <b>4d10 + 3</b>: 7, 4, 9 e 2 = <b>25</b>, acima do Limiar Maior (16): cada capanga marca 2 PV e cai na escada.</p></div></div></section>
+<div class="folio">4</div>
 </article>
 
 <!-- P2 -->
@@ -147,7 +176,7 @@ footer{font:400 12px/1.5 "IBM Plex Mono",monospace;color:var(--muted)}
 <tr><td>9 Grupo</td><td>10 Objeto</td><td>11 Arma</td><td>12 Chão</td></tr></tbody></table></div>
 <p class="note">Formas são só formato: fogo, gelo, luz e sombra são palavras de Valor. Quantos alvos e que tamanho vêm dos Descritores.</p></div>
 </div>
-<div class="folio">2</div>
+<div class="folio">5</div>
 </article>
 
 <!-- P3 -->
@@ -178,7 +207,7 @@ footer{font:400 12px/1.5 "IBM Plex Mono",monospace;color:var(--muted)}
 </tbody></table></div>
 <div class="box"><span class="lab">Como cada Grau aparece na mesa</span>
 <p><b>1</b> · gelo em água na palma; uma chama; um recado sem som para quem você vê. <b>2</b> · um jato de fogo que queima uma pessoa; alguém com medo até a próxima Falha. <b>3</b> · uma parede de pedra fechando um corredor; três inimigos derrubados por uma onda. <b>4</b> · uma tempestade dentro de um salão; parar o tempo para todos menos você por um instante. <b>5</b> · um vale inteiro congelado; um exército que esquece por que estava lutando.</p></div>
-<div class="folio">3</div>
+<div class="folio">6</div>
 </article>
 
 <!-- P4 -->
@@ -205,7 +234,7 @@ footer{font:400 12px/1.5 "IBM Plex Mono",monospace;color:var(--muted)}
 <p><b>Esforço</b> também vale aqui: depois de ver o d20, marque Cansaço e some +2 por casa na Dificuldade da magia.</p>
 </div>
 <div class="tw"><table class="num"><thead><tr><th>Palavras de Valor</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody><tr><th>Chance de pegar um adversário da mesma Moldura</th><td>65%</td><td>70%</td><td>75%</td><td>80%</td><td>85%</td></tr></tbody></table></div>
-<div class="folio">4</div>
+<div class="folio">7</div>
 </article>
 
 <!-- P5 -->
@@ -242,7 +271,7 @@ footer{font:400 12px/1.5 "IBM Plex Mono",monospace;color:var(--muted)}
 <div class="srow"><span class="n">Duração</span><div class="cks"><span class="ck">2 · próxima Falha (normal)</span><span class="ck on">3 · pago</span><span class="ck on">4 · Evento · pago</span></div></div>
 <div class="tally"><span>Arcano <b>1 + 2 = 3</b></span><span>O guarda rola <b>d20 + 1</b></span><span>Contra <b>13 + 1 + 1 − 2 = 13</b></span><span>Colaterais <b>+1</b> se Cataclisma</span></div></div>
 </div>
-<div class="folio">5</div>
+<div class="folio">8</div>
 </article>
 
 <!-- P6 -->
@@ -281,7 +310,7 @@ footer{font:400 12px/1.5 "IBM Plex Mono",monospace;color:var(--muted)}
 <tr><td>19</td><td>Sobrecarga</td><td>O mestre ganha Cataclisma extra igual ao Grau.</td></tr>
 <tr><td>20</td><td>Por Pouco</td><td>Nada acontece desta vez. Ganhe 1 Arcano.</td></tr>
 </tbody></table></div>
-<div class="folio">6</div>
+<div class="folio">9</div>
 </article>
 
 <!-- P7 -->
@@ -311,7 +340,7 @@ footer{font:400 12px/1.5 "IBM Plex Mono",monospace;color:var(--muted)}
 <h3>Fusão</h3>
 <p>Quem usa sempre a mesma palavra pode passar a <b>ser</b> a palavra: "eu corto" vira "eu sou a Lâmina". A palavra fundida entra sem ser chamada, tinge o jeito de ver o mundo e fica rígida. Desfaz-se agindo diferente com ela, num Passo de Valor.</p></div>
 </div>
-<div class="folio">7</div>
+<div class="folio">10</div>
 </article>
 <footer>Rascunho de diagramação · regra completa em Rpg/Arcanoclisma/02 Magia.md · Rpg/Arcanoclisma/arte/livro-magia.html</footer>
 </div>

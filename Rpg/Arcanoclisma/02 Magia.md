@@ -43,15 +43,18 @@ Esse é o bônus da magia: ela **não recebe Vantagem paga** (Vivência, Ajudar)
 
 A mesma para tudo: **Dados + Palavras ≥ Dificuldade**. No teste comum, 2d12 + até duas Palavras Básicas; na magia, os dados do Grau + 2 (Sintonia) + 1 por palavra de Valor.
 
-## Conjurar em 5 passos
+## Conjurar em 6 passos
+
+> O passo a passo explicado por inteiro, com o que influencia cada passo e um exemplo do começo ao fim, está nas páginas do livro (`arte/livro-magia.html`, páginas 2 a 4).
 
 1. **Intenção**: diga o que quer que aconteça, como a magia aparece (pelo seu Canal) e, se quiser, a sua relação com a palavra.
 2. **Palavras**:
    - **Palavras de Valor**: de 1 até o seu limite (Moldura + 1). **A primeira é do seu Valor** (o núcleo); as outras podem ser do seu Valor ou Palavras Estrangeiras.
    - **Uma Palavra Básica** (uma palavra da lista, uma coisa ou uma forma): **não custa e não conta no limite**. Ela existe para **dar ao Valor ações que ele sozinho não tem** (um Cognitium que precisa **Movimentar**, um Conflitüo que precisa **Esconder**). Precisa fazer sentido concreto.
 3. **Grau**: pelo tamanho do efeito (tabela abaixo), até o seu máximo (Moldura + 1). O mestre tem a palavra final se o efeito pedido for maior do que o Grau.
-4. **Pague**: custo do Grau + cada palavra de Valor além da primeira (1 no Grau 1–2, 2 no Grau 3–4, 3 no Grau 5) + 1 por quadrado pago de descritor. (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
-5. **Role** os dados do Grau + Sintonia + **1 por palavra de Valor**. Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre). **Contra o quê**, depende de quem recebe a magia (abaixo).
+4. **Descritores**: marque o que a magia tem (Dano, Restringe, Duração, Alcance, Tamanho). O 1º de Dano ou de Restringe é grátis; os outros são pagos (ver *Descritores*).
+5. **Pague**: custo do Grau + cada palavra de Valor além da primeira (1 no Grau 1–2, 2 no Grau 3–4, 3 no Grau 5) + 1 por quadrado pago de descritor. (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
+6. **Role** os dados do Grau + Sintonia + **1 por palavra de Valor**. Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre). **Contra o quê**, depende de quem recebe a magia (abaixo).
 
 ### Três tipos de efeito
 
