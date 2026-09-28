@@ -61,4 +61,14 @@ Básicas: fortes Intuir, Pensar, Esconder · fraco Bater · Valor: Ler, Mente, I
 **GrandGaleonis** é a escola, e é uma cidade: torres, dormitórios, bibliotecas, arenas de duelo, vilas de professores e de gente que vive de servir a escola, tudo no meio da planície. Renomada, cheia de professores, matérias e missões. Alunos fazem missões para a escola desde cedo, e o **Salão das Missões** decide quem é quem.
 
 ## Registro da sessão
+- **Evento 1 — O Salão das Missões.** A Professora Maelis Durand manda Alvenyr e Erick à Borda Cinza: o capim fica cinza, os lumerões correm para a escola, a equipe da Sera Voss (Sera, Tomas, Ilda) sumiu. Dario Vell provoca; Alvenyr devolve olhando nos olhos (sem rolagem: conversa sem risco). Bilhete da Sera: "estão sendo chamados; alguém que conhece a escola por dentro".
+  - Erick pesquisa o "melhor aluno" da Arena Velha: Estudar d20 6 + 3 = 9 contra 17, falha. Acha a página arrancada e a placa raspada: **K., 212 duelos, nenhuma derrota**. Mestre põe 1C no Estouro da Manada (1/6).
+- **Evento 2 — A Borda Cinza.** Voo na wyvern Pança; o puxão de Dominum faz a wyvern mergulhar.
+  - *Escudo* + Cúpula em volta da Pança (Pequeno evento, G3, 2 Arcano): 3d8 3, 4, 7 + 4 + 1 + 2 (Fio da Guerra) = 21 contra 14, sucesso **por Cataclisma** → 1 Efeito Colateral: d20 16, **Esquecimento** (Escudo selada até a Pausa).
+  - Pulo (Agilidade + Desviar +1): **5 e 5, Crítico** (+5 Arcano). Entrada no centro da Arena Velha.
+- **Evento 3 — A Arena Velha.** Kaelen Morvath, o Invicto (ex-prodígio apagado pela escola), prende os três alunos com coleiras e puxa a manada com correntes de Dominum. Propõe duelo.
+  - **Ajuste solo testado**: Chefe sem ×1,5 nos Limiares (16/30) e 10 PV.
+  - Regra ajustada na mesa: **Abrir** vira Palavra Básica de magia; **Criar** já era verbo da tabela.
+  - *Lâmina* + **Criar** + *Afiado* + *Inquebrável* (Projétil, G4, 5 Arcano; 3ª palavra dá +1C ao mestre): 4d6 1, 2, 4, 5 + 4 + 3 = 19 contra Dif 16, acerta; empate de pares e ímpares = **por Arcano**. Fio da Guerra: +1 dado de dano → 4d10 10, 5, 10, 4 + 4 = **33, Grave: Kaelen 7/10**. Gosto de Sangue: +1 Arcano. *Inquebrável* (combinado na mesa como "não se bloqueia") anula a reação de aparar do Kaelen.
+  - O mestre gasta 1C para emoldurar: Kaelen age duas vezes. **Coleira** (2C) no Alvenyr: Firmar 10 + 6 − 1 = 15 contra 16, falha por 1: puxado e **Preso**. **Lâmina**: d20 10 + 3 + 1 (Plateia) = 14 contra Esquiva 11, acerta: 3d10 2, 9, 1 + 3 = **15**.
 
