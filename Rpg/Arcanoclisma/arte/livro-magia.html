@@ -1,0 +1,317 @@
+<title>Livro · Magia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+:root{--ground:#15141B;--ink:#ECE5D5;--muted:#A69E8E;--brass:#B8955A;--paper:#F1EADB;--paper2:#F8F2E4;--pink:#2A2420;--pmute:#6E6254;--rule:#D8CDB7;--gold:#8C6E3C;--arc:#9A7A2E;--cat:#8E3B2A;color-scheme:dark}
+[hidden]{display:none!important}
+body{background:var(--ground);color:var(--ink);font:400 16px/1.6 "Spectral",Georgia,serif;padding-inline:clamp(16px,4vw,48px);padding-block:40px 64px}
+.wrap{max-width:920px;margin-inline:auto;display:flex;flex-direction:column;gap:36px}
+.intro{display:flex;flex-direction:column;gap:10px;max-width:66ch}
+.eyebrow{font:400 12px/1 "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+.intro h1{font:400 clamp(32px,5vw,50px)/1.05 "Marcellus SC",Georgia,serif;margin:0}
+.intro p{margin:0;color:var(--muted)}
+nav.toc{display:flex;flex-wrap:wrap;gap:8px}
+nav.toc a{font:400 13px/1 "IBM Plex Mono",monospace;color:var(--ink);text-decoration:none;border:1px solid #3A3644;border-radius:999px;padding:7px 12px}
+nav.toc a:hover{border-color:var(--brass)}
+.page{background:var(--paper);color:var(--pink);border-radius:3px;padding:clamp(20px,4.5vw,56px) clamp(18px,4.5vw,56px) clamp(18px,3vw,32px);position:relative;box-shadow:0 18px 40px rgba(0,0,0,.45);display:flex;flex-direction:column;gap:18px}
+.page::before{content:"";position:absolute;inset:10px;border:1px solid var(--gold);opacity:.4;pointer-events:none;border-radius:2px}
+.page::after{content:"";position:absolute;inset:16px;pointer-events:none;background:
+ linear-gradient(var(--gold),var(--gold)) top left/34px 1.5px no-repeat,linear-gradient(var(--gold),var(--gold)) top left/1.5px 34px no-repeat,
+ linear-gradient(var(--gold),var(--gold)) top right/34px 1.5px no-repeat,linear-gradient(var(--gold),var(--gold)) top right/1.5px 34px no-repeat,
+ linear-gradient(var(--gold),var(--gold)) bottom left/34px 1.5px no-repeat,linear-gradient(var(--gold),var(--gold)) bottom left/1.5px 34px no-repeat,
+ linear-gradient(var(--gold),var(--gold)) bottom right/34px 1.5px no-repeat,linear-gradient(var(--gold),var(--gold)) bottom right/1.5px 34px no-repeat;opacity:.8}
+.run{display:flex;justify-content:space-between;gap:12px;font:400 11px/1 "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.folio{margin-top:auto;padding-top:10px;text-align:center;font:400 13px/1 "Marcellus SC",Georgia,serif;color:var(--gold)}
+.folio::before,.folio::after{content:"";display:inline-block;width:40px;height:1px;background:var(--gold);vertical-align:middle;margin:0 10px;opacity:.6}
+h2{font:400 clamp(30px,4.4vw,44px)/1.05 "Marcellus SC",Georgia,serif;margin:0;text-wrap:balance}
+h3{font:400 24px/1.15 "Marcellus SC",Georgia,serif;margin:0;text-wrap:balance;border-bottom:1px solid var(--gold);padding-bottom:6px}
+h4{font:400 18px/1.2 "Marcellus SC",Georgia,serif;margin:0;color:var(--gold)}
+p{margin:0}
+.prose{display:flex;flex-direction:column;gap:12px;max-width:68ch}
+.pl{max-width:68ch}
+.cols{columns:2 300px;column-gap:36px}
+.cols>*{break-inside:avoid;margin:0 0 12px}
+.lede{font-size:18px;line-height:1.55}
+.lede::first-letter{font:400 3.3em/.8 "Marcellus SC",Georgia,serif;float:left;margin:6px 8px 0 0;color:var(--gold)}
+.quote{font-style:italic;color:var(--pmute);border-left:2px solid var(--gold);padding-left:12px}
+b,strong{font-weight:600}
+.box{border:1.5px solid var(--gold);border-radius:4px;background:var(--paper2);padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.box.rust{border-color:var(--cat)}
+.lab{font:400 11px/1.2 "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--pmute)}
+.formula .fx{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font:400 clamp(24px,3.6vw,32px)/1.1 "Marcellus SC",Georgia,serif}
+.formula .fx i{font-style:normal;color:var(--gold)}
+.fr{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:baseline;font-size:15px}
+@media (max-width:520px){.fr{grid-template-columns:1fr;gap:2px}}
+ol.steps{margin:0;padding:0;list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+ol.steps li{counter-increment:s;border-top:1.5px solid var(--gold);padding-top:8px;font-size:15px;display:flex;flex-direction:column;gap:4px}
+ol.steps li::before{content:counter(s);font:400 30px/1 "Marcellus SC",Georgia,serif;color:var(--gold)}
+ol.steps b{font:400 17px/1.2 "Marcellus SC",Georgia,serif;font-weight:400}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px;color:var(--pink)}
+th{font:400 11px/1.25 "IBM Plex Mono",monospace;letter-spacing:.05em;text-transform:uppercase;color:var(--pmute);text-align:left;padding:7px 8px;border-bottom:1.5px solid var(--gold);vertical-align:bottom}
+td{padding:8px;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--pink)}
+tbody th{font:400 15px/1.2 "Marcellus SC",Georgia,serif;text-transform:none;letter-spacing:0;color:var(--gold);border-bottom:1px solid var(--rule);vertical-align:top}
+.num td,.num th{font-variant-numeric:tabular-nums}
+.types{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:780px){.types{grid-template-columns:1fr}}
+.ty{border:1.5px solid var(--gold);border-radius:4px;background:var(--paper2);padding:14px;display:flex;flex-direction:column;gap:8px}
+.ty h4{font-size:21px;color:var(--pink)}
+.ty .q{font:italic 400 15px/1.35 "Spectral",serif;color:var(--gold)}
+.ty .ex{font:italic 400 14px/1.4 "Spectral",serif;color:var(--pmute)}
+.ty dl{margin:0;display:grid;grid-template-columns:1fr;gap:6px 10px;font-size:14.5px}
+.ty dt{font:400 10.5px/1.7 "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--pmute)}
+.ty dd{margin:0 0 4px}
+.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch}
+.flow .fq{flex:1 1 200px;border:1px dashed var(--gold);border-radius:4px;padding:10px 12px;font-size:15px}
+.flow .fq b{display:block;font:400 19px/1.2 "Marcellus SC",Georgia,serif;font-weight:400;color:var(--gold);margin-top:4px}
+.ladder{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:14px}
+.ladder span{border:1px solid var(--rule);border-radius:3px;padding:4px 8px;background:var(--paper2)}
+.ladder span b{font:400 10.5px/1 "IBM Plex Mono",monospace;color:var(--gold);margin-right:5px;font-weight:400}
+.ladder i{font-style:normal;color:var(--gold)}
+.sheet{border:1.5px solid var(--gold);border-radius:4px;background:#FBF7EE;padding:12px 14px;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.srow{display:grid;grid-template-columns:90px 1fr;gap:10px;align-items:center}
+.srow .n{font:400 15px/1 "Marcellus SC",Georgia,serif;color:var(--gold)}
+.cks{display:flex;flex-wrap:wrap;gap:6px}
+.ck{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--rule);border-radius:3px;padding:3px 7px;background:var(--paper2);font-size:13px}
+.ck::before{content:"";width:12px;height:12px;border:1.5px solid var(--gold);border-radius:2px}
+.ck.on::before{background:var(--gold);box-shadow:inset 0 0 0 2px var(--paper2)}
+.ck.free{border-color:var(--gold)}
+.tally{display:flex;flex-wrap:wrap;gap:8px 18px;border-top:1px solid var(--rule);padding-top:8px;font-size:14px}
+.tally b{font-variant-numeric:tabular-nums}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+.dice{display:flex;gap:6px;flex-wrap:wrap}
+.d{width:30px;height:30px;border-radius:6px;display:inline-grid;place-items:center;font:400 14px/1 "IBM Plex Mono",monospace;border:1.5px solid var(--arc);color:var(--arc);background:var(--paper2)}
+.d.odd{border-color:var(--cat);color:var(--cat);border-style:dashed}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;align-items:center}
+.note{font-size:14px;color:var(--pmute)}
+.d20 td:first-child{font:400 15px/1 "Marcellus SC",Georgia,serif;color:var(--cat);width:34px;text-align:center}
+.d20 td:nth-child(2){white-space:nowrap;font-weight:600}
+footer{font:400 12px/1.5 "IBM Plex Mono",monospace;color:var(--muted)}
+</style>
+<div class="wrap">
+<div class="intro"><span class="eyebrow">Arcanoclisma · Livro · rascunho de diagramação</span>
+<h1>Capítulo 2 · Magia</h1>
+<p>As páginas do livro sobre magia, com tudo o que saiu das fichas: a fórmula, as palavras, os Graus, os três tipos de efeito, os Descritores, a leitura dos dados, os Efeitos Colaterais, o Canal e a Magia em Dupla.</p>
+<nav class="toc" aria-label="Páginas"><a href="#p1">Abertura</a><a href="#p2">Palavras</a><a href="#p3">Graus</a><a href="#p4">Quem rola</a><a href="#p5">Descritores</a><a href="#p6">Os dados</a><a href="#p7">Canal e Dupla</a></nav></div>
+
+<!-- P1 -->
+<article class="page" id="p1" aria-label="Página 1">
+<div class="run"><span>Capítulo 2</span><span>Magia</span></div>
+<h2>Magia é uma relação com o mundo</h2>
+<div class="cols">
+<p class="lede">Magia é comum. Quem tem, usa o tempo todo: para acender o fogão, abrir a porta emperrada, trabalhar, lutar. Todo personagem é um Comprometido com um Valor, e a magia dele sai desse compromisso.</p>
+<p>As palavras das tabelas <b>não são reais</b>. Ninguém no mundo guarda "a palavra Fogo" no bolso. Elas são nomes que o jogador dá à relação do personagem com coisas reais. Por isso a mesma palavra funciona diferente em pessoas diferentes: <i>Lâmina</i>, para um soldado, é a espada que nunca largou; para quem perdeu alguém numa briga, é o corte que ele sabe fazer parar.</p>
+<p>O mundo só bagunça quando a magia é usada de forma instável, grande demais ou o tempo todo. É isso que os Graus altos, os dados ímpares e o Cataclisma medem.</p>
+<p class="quote">"Não é o que a palavra quer. É o que eu faço com ela." — ditado de Confluência</p>
+</div>
+<div class="box formula"><span class="lab">A fórmula de tudo</span>
+<div class="fx"><span>Dados</span><i>+</i><span>Palavras</span><i>≥</i><span>Dificuldade</span></div>
+<div class="fr"><span class="lab">Teste comum</span><span><b>2d12</b> + os números de <b>até duas Palavras Básicas</b> que descrevem a ação (Bater Rápido, Convencer).</span></div>
+<div class="fr"><span class="lab">Magia</span><span>os <b>dados do Grau</b> + <b>2</b> (a Sintonia, igual para todos) + <b>1 por palavra de Valor</b>.</span></div>
+<div class="fr"><span class="lab">Contra</span><span>no teste comum, a Dificuldade que o mestre diz; na magia, depende do tipo de efeito (página 4).</span></div>
+<p class="note">É a mesma conta nos dois casos: você rola dados e soma o que as suas palavras valem. Na magia, cada palavra de Valor vale +1; no teste comum, cada Palavra Básica vale o número que você escreveu nela.</p></div>
+<h3>Conjurar em seis passos</h3>
+<ol class="steps">
+<li><b>Diga o que quer</b><span>Descreva o que acontece e como a magia aparece pelo seu Canal. "Jogo uma lâmina de luz vermelha no bandido."</span></li>
+<li><b>Escolha as palavras</b><span>A primeira é do seu Valor. Cada palavra de Valor soma +1. Uma Palavra Básica entra de graça (página 2).</span></li>
+<li><b>Escolha o Grau</b><span>O tamanho do que você pede, até o seu Grau máximo. O Grau dá os dados, o custo e o normal da magia (página 3).</span></li>
+<li><b>Marque os Descritores</b><span>Diga do que a magia é feita: se dá dano, se prende, quanto dura, até onde vai, quantos pega (página 5).</span></li>
+<li><b>Pague o Arcano</b><span>Custo do Grau + as palavras extras + os quadrados pagos.</span></li>
+<li><b>Role</b><span>Veja pelo tipo de efeito quem rola e contra o quê (página 4). Leia os dados (página 6).</span></li>
+</ol>
+<div class="folio">1</div>
+</article>
+
+<!-- P2 -->
+<article class="page" id="p2" aria-label="Página 2">
+<div class="run"><span>Capítulo 2</span><span>Palavras</span></div>
+<h2>As palavras dizem o que a magia faz</h2>
+<div class="cols">
+<p><b>Palavras de Valor</b> são as 36 da ficha do seu Valor (mais as Palavras Estrangeiras que você aprende ao subir de nível). A <b>primeira</b> palavra de toda magia é do seu Valor: é o núcleo. As outras podem ser do seu Valor ou Estrangeiras.</p>
+<p><b>Cada palavra de Valor soma +1</b> na rolagem. Mais palavras deixam o efeito mais específico, e o que é específico dá certo mais fácil. Não é preciso explicar a relação do personagem com a palavra: basta o jogador e o mestre concordarem com a <b>combinação</b>, o <b>sentido</b> da junção e o <b>Grau</b>.</p>
+<p><b>Quantas cabem</b> numa magia vem do seu <b>nível</b> (a casa <i>Palavras por magia</i> da ficha): 2 na Moldura 1, 3 na 2, 4 na 3, 5 na 4.</p>
+<p><b>Quanto custa</b> cada palavra além da primeira vem do <b>Grau</b>: <b>1 Arcano</b> no Grau 1 e 2, <b>2</b> no Grau 3 e 4, <b>3</b> no Grau 5. Quanto maior o Grau, mais caro especificar.</p>
+<p>Da <b>3ª palavra de Valor</b> em diante, cada uma também dá <b>+1 Cataclisma</b> ao mestre: o específico demais puxa o mundo junto.</p>
+<p><b>Só conta palavra que muda o efeito.</b> Uma palavra que só diz onde ou em quem a magia cai não conta nem custa: <i>Fortalecer</i> no próprio braço é uma palavra só. Se a segunda palavra acrescenta efeito (<i>Fortalecer Coragem</i>: além do corpo, o medo some), ela conta e custa.</p>
+<p><b>Palavras flexíveis.</b> Plural, gênero e a troca entre verbo, substantivo e adjetivo da mesma raiz são a mesma palavra (<i>Acalmar</i> = calma = calmo). Uma palavra próxima que não está na tabela vale se o sentido é claramente o mesmo.</p>
+</div>
+<div class="two">
+<div class="box"><span class="lab">Uma Palavra Básica, de graça</span>
+<p>Toda magia pode levar <b>uma</b> Palavra Básica (das 52 da Ficha 1, uma coisa ou uma forma), sem custo e sem contar no limite. Ela dá ao Valor ações que ele sozinho não tem: <i>Voz</i> + <b>Ameaçar</b>, <i>Raiz</i> + <b>Agarrar</b>, <i>Sombra</i> + <b>Esconder</b>. Nunca é o núcleo e precisa fazer sentido concreto.</p>
+<p><b>Coisas</b>: Arma · Item · Poção · Objeto · Armadilha. <i>Lâmina</i> + <b>Criar</b> faz uma arma do nada; <i>Vida</i> + <b>Poção</b> põe a cura num frasco.</p></div>
+<div class="box"><span class="lab">Formas e alvos (d12)</span>
+<div class="tw"><table class="num"><tbody>
+<tr><td>1 Projétil</td><td>2 Linha</td><td>3 Onda</td><td>4 Barreira</td></tr>
+<tr><td>5 Cúpula</td><td>6 Área</td><td>7 Aliado</td><td>8 Inimigo</td></tr>
+<tr><td>9 Grupo</td><td>10 Objeto</td><td>11 Arma</td><td>12 Chão</td></tr></tbody></table></div>
+<p class="note">Formas são só formato: fogo, gelo, luz e sombra são palavras de Valor. Quantos alvos e que tamanho vêm dos Descritores.</p></div>
+</div>
+<div class="folio">2</div>
+</article>
+
+<!-- P3 -->
+<article class="page" id="p3" aria-label="Página 3">
+<div class="run"><span>Capítulo 2</span><span>Graus</span></div>
+<h2>O Grau diz quanto a magia faz</h2>
+<div class="cols">
+<p>O <b>Grau</b> é o tamanho do feito: de um truque que alguém poderia explicar (Grau 1) a algo que deixa marca no mundo (Grau 5). Ele dá os <b>dados</b> que você rola, o <b>custo</b>, a <b>Dificuldade</b> e o <b>normal</b> da magia: o dano, o alcance, o tamanho e a duração que ela tem sem marcar nenhum quadrado a mais.</p>
+<p>Os quatro conjuntos de dados somam <b>no máximo 24</b>. Mais dados dão resultados mais confiáveis, mas despejam mais Arcano <b>e</b> mais Cataclisma na mesa.</p>
+<p><b>Grau máximo</b> vem do nível (a casa da ficha): Grau 2 na Moldura 1, 3 na 2, 4 na 3, 5 na 4. <b>Subir o Grau</b> custa só o custo do Grau novo. Passar do seu máximo, só com a Magia em Dupla.</p>
+<p><b>Grau 1 não rola sozinho</b>: acontece. Acender, esfriar, mandar um recado, afiar. Vira rolagem só quando é o meio de uma ação que já seria um teste ("Atirar uma agulha de gelo"): aí é o teste comum, e num ataque o dano é 1d8 + Moldura.</p>
+</div>
+<div class="tw"><table class="num"><thead><tr><th></th><th>Grau 1<br>Comum</th><th>Grau 2<br>Interessante</th><th>Grau 3<br>Impressionante</th><th>Grau 4<br>Fantástico</th><th>Grau 5<br>Mítico</th></tr></thead><tbody>
+<tr><th>Dados</th><td>nenhum, acontece</td><td>2d12</td><td>3d8</td><td>4d6</td><td>6d4</td></tr>
+<tr><th>Custo</th><td>0</td><td>1 Arcano</td><td>2 Arcano</td><td>3 Arcano</td><td>5 Arcano</td></tr>
+<tr><th>Palavra extra</th><td>1</td><td>1</td><td>2</td><td>2</td><td>3</td></tr>
+<tr><th>Dificuldade do Grau</th><td>—</td><td>12</td><td>13</td><td>14</td><td>16</td></tr>
+<tr><th>Moldura mínima</th><td>1</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+<tr><th>Dano</th><td>só incômodo</td><td>1d10 + 2</td><td>2d10 + 3</td><td>3d10 + 4</td><td>5d10 + 5</td></tr>
+<tr><th>Tamanho</th><td>você ou 1 objeto</td><td>1 alvo</td><td>até 3</td><td>até 6 ou um grupo</td><td>todos à vista</td></tr>
+<tr><th>Área</th><td>cabe na mão</td><td>uma pessoa, uma porta</td><td>uma sala, uma carroça</td><td>uma casa, uma praça</td><td>um quarteirão, um vale</td></tr>
+<tr><th>Alcance</th><td>Toque</td><td>Perto</td><td>Médio</td><td>Longe</td><td>Horizonte</td></tr>
+<tr><th>Duração</th><td>um instante</td><td>até a próxima Falha</td><td>até o mestre pagar</td><td>o Evento inteiro</td><td>até o Pouso</td></tr>
+<tr><th>Palavras Básicas que mexe</th><td>—</td><td>±1</td><td>±2</td><td>±3</td><td>±4</td></tr>
+<tr><th>Efeitos Colaterais</th><td>0</td><td>0</td><td>1</td><td>1</td><td>2</td></tr>
+<tr><th>Esforço máximo</th><td>0</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+<tr><th>Cura (Morbidyum)</th><td>—</td><td>1 PV</td><td>até 2 PV</td><td>até 3 PV ou 1 condição</td><td>todos os PV, ou trazer de volta quem morreu neste Evento</td></tr>
+</tbody></table></div>
+<div class="box"><span class="lab">Como cada Grau aparece na mesa</span>
+<p><b>1</b> · gelo em água na palma; uma chama; um recado sem som para quem você vê. <b>2</b> · um jato de fogo que queima uma pessoa; alguém com medo até a próxima Falha. <b>3</b> · uma parede de pedra fechando um corredor; três inimigos derrubados por uma onda. <b>4</b> · uma tempestade dentro de um salão; parar o tempo para todos menos você por um instante. <b>5</b> · um vale inteiro congelado; um exército que esquece por que estava lutando.</p></div>
+<div class="folio">3</div>
+</article>
+
+<!-- P4 -->
+<article class="page" id="p4" aria-label="Página 4">
+<div class="run"><span>Capítulo 2</span><span>Quem rola e contra o quê</span></div>
+<h2>Três tipos de efeito</h2>
+<p class="pl">O tipo do efeito diz <b>quem rola</b> e <b>contra o quê</b>. É sempre <b>uma rolagem só</b> por magia: ou a sua, ou a de quem é pego. Para saber o tipo, faça três perguntas, nessa ordem:</p>
+<div class="flow"><div class="fq">A magia precisa acertar alguém?<b>→ Projétil</b></div><div class="fq">Alguém pode resistir a ela?<b>→ Teste mágico</b></div><div class="fq">Ela muda o mundo ou ajuda alguém?<b>→ Pequeno evento</b></div></div>
+<div class="types">
+<div class="ty"><h4>Projétil</h4><p class="q">algo sai de você e precisa acertar</p><p class="ex">jato de fogo, lâmina de luz, flecha, soco que atravessa</p>
+<dl><dt>Quem rola</dt><dd><b>Você.</b></dd><dt>Soma</dt><dd>dados do Grau + 2 + 1 por palavra</dd><dt>Contra</dt><dd>a <b>Dificuldade do adversário</b> (ou a <b>Esquiva</b> de um jogador), <b>+1 por quadrado pago</b></dd><dt>Se passar</dt><dd>acertou: aplique o que os Descritores dizem (dano, condição)</dd></dl></div>
+<div class="ty"><h4>Teste mágico</h4><p class="q">o efeito cai sobre alguém, e ele reage</p><p class="ex">medo, sono, encanto, rede que prende, rajada que derruba</p>
+<dl><dt>Quem rola</dt><dd><b>Só o alvo.</b> Você não rola.</dd><dt>Ele rola</dt><dd>adversário: <b>d20 + o Ataque</b> dele · jogador: 2d12 + a Palavra Básica da reação (Firmar, Aguentar, Desviar, Observar)</dd><dt>Contra</dt><dd><b>13 + a sua Moldura + 1 por palavra</b>, <b>−1 por quadrado pago</b></dd><dt>Se ele não passar</dt><dd>o efeito pega</dd></dl></div>
+<div class="ty"><h4>Pequeno evento</h4><p class="q">você acrescenta, muda ou detalha algo no mundo</p><p class="ex">abrir, criar, esquentar, curar, fortalecer alguém, gelo no chão</p>
+<dl><dt>Quem rola</dt><dd><b>Você.</b></dd><dt>Soma</dt><dd>dados do Grau + 2 + 1 por palavra</dd><dt>Contra</dt><dd>a <b>Dificuldade do Grau</b> (12, 13, 14, 16), <b>+1 por quadrado pago</b></dd><dt>Se passar</dt><dd>acontece</dd></dl></div>
+</div>
+<div class="cols">
+<h4>Mais sobre o Teste mágico</h4>
+<p><b>O d20 do alvo vale como o seu dado.</b> Par: +1 Arcano para você, e a magia sai por Arcano. Ímpar: +1 Cataclisma para o mestre, e ela sai por Cataclisma (o mestre emoldura e, no Grau 3+, você rola os Efeitos Colaterais). Se o alvo é um jogador, o 2d12 dele é reação e não gera nada.</p>
+<p><b>1 natural</b> no d20 do alvo é o <b>seu Crítico</b>: o efeito pega, você escolhe um efeito de crítico e ganha 1 Arcano. <b>20 natural</b>: ele sempre escapa.</p>
+<p><b>Cada ser rola o seu.</b> Um <b>bando</b> (lacaios, matilha, multidão) conta como um alvo e rola uma vez; se não passar, perde 1 membro (falhou por 1–4), 2 (por 5–9) ou 3 (por 10+).</p>
+<p><b>Passar ou não se lê na ficção.</b> Quem passa pode escapar inteiro, escapar pela metade ou resistir de um jeito que muda a cena. Quem não passa leva o efeito do jeito que foi descrito, no tamanho do Grau.</p>
+<p><b>Grau abaixo do seu máximo</b> pega mais fácil: a Dificuldade da magia sobe <b>+2 por Grau abaixo</b>.</p>
+<p><b>Esforço</b> também vale aqui: depois de ver o d20, marque Cansaço e some +2 por casa na Dificuldade da magia.</p>
+</div>
+<div class="tw"><table class="num"><thead><tr><th>Palavras de Valor</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody><tr><th>Chance de pegar um adversário da mesma Moldura</th><td>65%</td><td>70%</td><td>75%</td><td>80%</td><td>85%</td></tr></tbody></table></div>
+<div class="folio">4</div>
+</article>
+
+<!-- P5 -->
+<article class="page" id="p5" aria-label="Página 5">
+<div class="run"><span>Capítulo 2</span><span>Descritores</span></div>
+<h2>Descritores: do que a magia é feita</h2>
+<div class="cols">
+<p class="lede">Os Descritores dizem o que faz parte da sua magia. Na ficha do Valor, cada um tem quadrados: você marca os que a magia tem. O que você não marca vem do Grau. É o normal.</p>
+<p>Eles existem para equilibrar a escolha: a descrição é livre, e os quadrados mostram quanto dela você está pedindo ao mundo. Uma magia simples custa pouco; uma magia que machuca, prende, vai longe, pega todo mundo e dura o Evento inteiro é muito mais difícil de segurar.</p>
+</div>
+<div class="tw"><table><thead><tr><th>Descritor</th><th>Quadrados</th><th>O que marcar</th></tr></thead><tbody>
+<tr><th>Dano</th><td>até Grau + 1<br><span class="note">Grau 2 → 3 · 3 → 4 · 4 → 5 · 5 → 6</span></td><td>O <b>1º quadrado</b> = a magia <b>dá dano</b> (o dano do Grau). <b>Cada quadrado a mais</b> = <b>+1d10</b>.</td></tr>
+<tr><th>Restringe</th><td>1</td><td>A magia prende, derruba, cega, assusta ou atrapalha: o alvo fica com <b>uma</b> condição (<i>Preso, Caído, Cego, Amedrontado, Distraído, Atordoado</i>) ou com <b>−</b> nas Palavras Básicas (o número do Grau).</td></tr>
+<tr><th>Duração</th><td>um por degrau</td><td><div class="ladder"><span><b>1</b>um instante</span><i>→</i><span><b>2</b>até a próxima Falha</span><i>→</i><span><b>3</b>até o mestre pagar</span><i>→</i><span><b>4</b>o Evento inteiro</span><i>→</i><span><b>5</b>até o Pouso</span></div></td></tr>
+<tr><th>Alcance</th><td>um por degrau</td><td><div class="ladder"><span><b>1</b>Toque</span><i>→</i><span><b>2</b>Perto</span><i>→</i><span><b>3</b>Médio</span><i>→</i><span><b>4</b>Longe</span><i>→</i><span><b>5</b>Horizonte</span></div></td></tr>
+<tr><th>Tamanho</th><td>um por degrau</td><td><div class="ladder"><span><b>1</b>você ou 1 objeto</span><i>→</i><span><b>2</b>1 alvo</span><i>→</i><span><b>3</b>até 3</span><i>→</i><span><b>4</b>até 6 ou um grupo</span><i>→</i><span><b>5</b>todos à vista</span></div></td></tr>
+</tbody></table></div>
+<p class="pl"><b>Degrau</b> é o próximo passo da escada. O número pequeno é o Grau: a magia começa no degrau do seu Grau, de graça, e cada quadrado sobe um. Uma magia de Grau 3 já nasce em Médio, até 3 alvos, até o mestre pagar.</p>
+<div class="box rust"><span class="lab">O que custa</span>
+<div class="fr"><span class="lab">Grátis</span><span>o <b>1º quadrado de Dano ou de Restringe</b>: é o que a magia faz. Uma magia que só muda o mundo (abrir, criar, curar) não precisa de nenhum dos dois.</span></div>
+<div class="fr"><span class="lab">Cada outro</span><span><b>1 Arcano</b> e <b>+1 na Dificuldade</b>. No Teste mágico é o contrário: a Dificuldade da magia <b>cai 1</b> (o efeito maior fica mais fácil de escapar).</span></div>
+<div class="fr"><span class="lab">A cada 2 pagos</span><span><b>+1 Efeito Colateral</b> se a magia sair por Cataclisma, além dos do Grau (1–2 pagos → +1 · 3–4 → +2 · 5–6 → +3).</span></div>
+<div class="fr"><span class="lab">Domínio</span><span>no Descritor do seu Domínio, o 1º quadrado pago de cada magia não soma Dificuldade nem Efeito Colateral (o Arcano você paga).</span></div></div>
+<h3>Montando uma magia</h3>
+<div class="two">
+<div class="sheet"><span class="lab">Iara · Sublimeyn · Moldura 1 · Projétil</span>
+<p><i>"Um jato de gelo que derruba o guarda."</i> Palavras: <b>Gelo</b> + <b>Projétil</b> (Básica, grátis). Grau 2.</p>
+<div class="srow"><span class="n">Dano</span><div class="cks"><span class="ck on free">dá dano · grátis</span><span class="ck">+1d10</span><span class="ck">+1d10</span></div></div>
+<div class="srow"><span class="n">Restringe</span><div class="cks"><span class="ck on">Caído · pago</span></div></div>
+<div class="tally"><span>Arcano <b>1 + 1 = 2</b></span><span>Rola <b>2d12 + 3</b></span><span>Contra <b>12 + 1 = 13</b></span><span>Colaterais <b>+1</b> se Cataclisma</span></div></div>
+<div class="sheet"><span class="lab">Nhanda · Persona · Moldura 1 · Teste mágico</span>
+<p><i>"O guarda fica apavorado até a luta acabar."</i> Palavras: <b>Medo</b>. Grau 2.</p>
+<div class="srow"><span class="n">Restringe</span><div class="cks"><span class="ck on free">Amedrontado · grátis</span></div></div>
+<div class="srow"><span class="n">Duração</span><div class="cks"><span class="ck">2 · próxima Falha (normal)</span><span class="ck on">3 · pago</span><span class="ck on">4 · Evento · pago</span></div></div>
+<div class="tally"><span>Arcano <b>1 + 2 = 3</b></span><span>O guarda rola <b>d20 + 1</b></span><span>Contra <b>13 + 1 + 1 − 2 = 13</b></span><span>Colaterais <b>+1</b> se Cataclisma</span></div></div>
+</div>
+<div class="folio">5</div>
+</article>
+
+<!-- P6 -->
+<article class="page" id="p6" aria-label="Página 6">
+<div class="run"><span>Capítulo 2</span><span>Lendo os dados</span></div>
+<h2>O que os dados contam</h2>
+<div class="legend"><span class="dice"><span class="d">8</span><span class="d">4</span></span> par: <b>+1 Arcano</b> para você <span class="dice"><span class="d odd">7</span><span class="d odd">3</span></span> ímpar: <b>+1 Cataclisma</b> para o mestre</div>
+<div class="cols">
+<p><b>Por Arcano ou por Cataclisma.</b> No 2d12, olhe o <b>maior dado</b>: par, a magia sai por Arcano; ímpar, por Cataclisma. Nos outros conjuntos, vale a <b>maioria</b> (empate conta como Arcano). Por Cataclisma, a magia acontece (se passou), mas o mestre emoldura e, no Grau 3+, você rola os <b>Efeitos Colaterais</b>.</p>
+<p><b>Crítico.</b> No 2d12, dois dados iguais; nos outros, todos pares. Sucesso automático, um efeito de crítico (ignorar um efeito negativo seu, o melhor resultado possível ou dobrar o dano) e Arcano igual ao maior dado (máximo 6) no lugar dos pares.</p>
+<p><b>Desequilíbrio.</b> Todos os dados ímpares (não existe no 2d12). O mestre ganha os pontos e dispara de graça um Abalo: Tremor no Grau 3, Fissura no 4, Ruptura no 5.</p>
+<p><b>Falha.</b> Ficou até 2 abaixo: a magia sai um Grau menor. Mais que isso, não acontece; o Arcano gasto se perde e o mestre emoldura.</p>
+<p><b>Esforço.</b> Depois de rolar, antes do mestre dizer o resultado, marque Cansaço até o máximo do Grau (2, 3, 4, 5): cada casa soma +2. Não muda par e ímpar.</p>
+<p><b>Quantos Efeitos Colaterais</b>: os do Grau (0 no Grau 1–2, 1 no 3–4, 2 no 5), +1 a cada 2 quadrados pagos, +1 numa Dupla de opostos. <b>Suavizar</b> (2 Arcano): role de novo um d20 e fique com o melhor.</p>
+</div>
+<h3>Efeitos Colaterais (d20) <span class="note">número baixo é pior</span></h3>
+<div class="tw"><table class="d20"><tbody>
+<tr><td>1</td><td>Ferida no Véu</td><td>O lugar vira Terreno Instável até o fim do Evento: toda magia ali gera +1 Cataclisma. Role outro Efeito Colateral.</td></tr>
+<tr><td>2</td><td>Atenção Divina</td><td>O Primordial ou semideus do seu Valor nota você. O mestre anota uma Dívida.</td></tr>
+<tr><td>3</td><td>Eco Tardio</td><td>A magia se repete sozinha na próxima vez que o mestre emoldurar, nos alvos mais inconvenientes.</td></tr>
+<tr><td>4</td><td>Dívida Arcana</td><td>Perca 1 Arcano por dado ímpar. O que não puder pagar sela uma palavra usada até o fim da sessão; sem palavras, 1 PV por ponto (mínimo 1).</td></tr>
+<tr><td>5</td><td>Respingo</td><td>A magia também atinge, de forma ruim, aliados ou coisas importantes na cena, um Grau menor.</td></tr>
+<tr><td>6</td><td>Paralisia de Eco</td><td>Você não se move nem conjura até o mestre emoldurar Grau − 1 vezes (mínimo 1).</td></tr>
+<tr><td>7</td><td>Custo de Carne</td><td>Marque 1 PV.</td></tr>
+<tr><td>8</td><td>Esgotamento</td><td>Marque Cansaço igual ao Grau.</td></tr>
+<tr><td>9</td><td>Magia Vacilante</td><td>O mestre pode cancelar a magia gastando Cataclisma igual a Grau − 1.</td></tr>
+<tr><td>10</td><td>Palavra Rebelde</td><td>O mestre troca uma das palavras por outra da mesma tabela (d66).</td></tr>
+<tr><td>11</td><td>Alvo Errado</td><td>Além do alvo, a magia pega o mais inconveniente por perto.</td></tr>
+<tr><td>12</td><td>Magia Frágil</td><td>A duração vira até a próxima Falha; o total para resistir cai 2 por Grau.</td></tr>
+<tr><td>13</td><td>Sinal no Céu</td><td>A magia deixa rastro a quilômetros. Algo que caça magia vem.</td></tr>
+<tr><td>14</td><td>Marca do Valor</td><td>Uma marca chamativa até o Pouso: Desvantagem para se esconder e enganar.</td></tr>
+<tr><td>15</td><td>Fome do Valor</td><td>Sua próxima magia custa +2 Arcano.</td></tr>
+<tr><td>16</td><td>Esquecimento</td><td>Uma palavra usada fica selada até a próxima Pausa.</td></tr>
+<tr><td>17</td><td>Inversão</td><td>Num instante a magia sai ao contrário: uma consequência pequena, depois ela funciona.</td></tr>
+<tr><td>18</td><td>Contágio</td><td>Você e um aliado Perto marcam 1 Cansaço cada.</td></tr>
+<tr><td>19</td><td>Sobrecarga</td><td>O mestre ganha Cataclisma extra igual ao Grau.</td></tr>
+<tr><td>20</td><td>Por Pouco</td><td>Nada acontece desta vez. Ganhe 1 Arcano.</td></tr>
+</tbody></table></div>
+<div class="folio">6</div>
+</article>
+
+<!-- P7 -->
+<article class="page" id="p7" aria-label="Página 7">
+<div class="run"><span>Capítulo 2</span><span>Canal e Dupla</span></div>
+<h2>Canal e Magia em Dupla</h2>
+<p class="pl"><b>O Canal</b> é a forma como o personagem se relaciona com a magia, não uma peça que se tira dele. Qualquer item pode ser Canal, e a magia continua funcionando sem ele. Cada Canal muda o jeito e dá um benefício.</p>
+<div class="tw"><table><thead><tr><th>Canal</th><th>Como é</th><th>Benefício</th></tr></thead><tbody>
+<tr><th>Foco arcano</th><td>anel, cajado, orbe, relógio, luvas</td><td>+1 no dano e na cura de magia</td></tr>
+<tr><th>Arma</th><td>a magia sai pela lâmina, pela flecha, pelo tiro</td><td>os traços da arma valem nas magias de ataque feitas por ela</td></tr>
+<tr><th>Transcrito</th><td>grimório, caderno, pergaminho</td><td>se a ação anterior foi preparar, a Dificuldade cai 2 e você rola um Efeito Colateral a menos</td></tr>
+<tr><th>Corpo</th><td>gesto, dança, sangue, tatuagem</td><td>conjura em qualquer postura, mesmo agarrado ou caído</td></tr>
+<tr><th>Voz</th><td>canto, grito, reza</td><td>conjura com as mãos ocupadas; em quem te ouve, +1 degrau de alcance</td></tr>
+<tr><th>Familiar</th><td>um bicho ou espírito ligado a você</td><td>a magia pode sair dele, até Médio de você</td></tr>
+<tr><th>Marca</th><td>um sinal na pele ou na alma</td><td>a magia deixa um rastro que só aliados reconhecem</td></tr>
+</tbody></table></div>
+<div class="two">
+<div class="prose"><h3>Magia em Dupla</h3>
+<p>Dois personagens conjuram juntos, numa rolagem só. É o jeito de passar do Grau máximo.</p>
+<p><b>Custo</b>: 3 Arcano, divididos como quiserem; cada um paga as próprias palavras extras e quadrados.</p>
+<p><b>Grau</b>: o maior que qualquer um dos dois conseguiria, <b>+1</b> (máximo 5).</p>
+<p><b>Palavras</b>: cada um põe do próprio Valor; no total, até o maior limite dos dois + 2.</p>
+<p><b>Rolagem</b>: quem conduz rola os dados do Grau + 2 + as palavras dele; o parceiro soma <b>+2</b>. As Skills e as Retaliações dos dois valem.</p></div>
+<div class="prose"><h3>Valores opostos</h3>
+<p>O efeito sobe <b>+2 Graus</b>; o que passar de 5 vira quadrados de Descritor grátis. Em troca: Dificuldade +2, os dois marcam Cansaço igual ao Grau − 2, e um Efeito Colateral a mais se sair por Cataclisma.</p>
+<p>O <b>Eixo</b> (Sublimeyn) combina com qualquer Valor sem penalidade.</p>
+<h3>Fusão</h3>
+<p>Quem usa sempre a mesma palavra pode passar a <b>ser</b> a palavra: "eu corto" vira "eu sou a Lâmina". A palavra fundida entra sem ser chamada, tinge o jeito de ver o mundo e fica rígida. Desfaz-se agindo diferente com ela, num Passo de Valor.</p></div>
+</div>
+<div class="folio">7</div>
+</article>
+<footer>Rascunho de diagramação · regra completa em Rpg/Arcanoclisma/02 Magia.md · Rpg/Arcanoclisma/arte/livro-magia.html</footer>
+</div>

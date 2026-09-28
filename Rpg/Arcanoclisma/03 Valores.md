@@ -178,7 +178,7 @@ Perguntas de vínculo: *A quem você já obedeceu e jurou nunca mais? · Você a
 - **Símbolo**: uma **esfera** (#E0735A) com, dentro, um rosto partido: metade sorri, metade não. Embaixo, um coração feito de dois círculos e um triângulo. Vetor em `arte/simbolos/persona.svg`. **Cor**: coral.
 - **Primordial**: Zahun, o Deus Humano. **Oposto**: Conflitüo.
 - **Compromisso**: "Gente vem antes de tudo." Se envolve, sente em voz alta, não abandona quem pediu ajuda.
-- **Skill · Toque Humano**: Persona é o Valor que vai mais longe em gente. Em **pessoas** (você incluído), o **1º quadrado da constituição** de cada magia sai **de graça** (sem Arcano, sem Dificuldade e fora da conta dos Efeitos Colaterais).
+- **Skill · Toque Humano**: Persona é o Valor que vai mais longe em gente. Em **pessoas** (você incluído), o **1º quadrado pago de descritor** de cada magia sai **de graça** (sem Arcano, sem Dificuldade e fora da conta dos Efeitos Colaterais).
 - **Retaliação · Tropeço**: se a magia falhar, ela ainda acontece de algum jeito, mas com um resultado **inútil ou que atrapalha** (o mestre descreve). E Persona só chega nas coisas **através de gente**: fora de pessoas, a descrição precisa passar por um corpo ou um sentimento (a sua voz que faz o sino tremer, o medo de uma fera, a força do seu braço); se não passa, não é magia de Persona.
 - **Ressonância II · Empatia**: role um Efeito Colateral a menos quando a magia afetar pessoas.
 - **Ressonância III · Carne Moldável**: mudar o próprio corpo (rosto, músculos, guelras, garras) é Grau 1 para você e dura até você desfazer.
@@ -411,7 +411,7 @@ Perguntas de vínculo: *Que animal você seria sem pensar duas vezes? · Qual lu
 | Conflitüo | Persona | +1 dado de dano ou +2 em combate | fora de combate, magia custa +2 Arcano |
 | Sublimeyn | Eixo | Mistura (2 elementos numa palavra) | +1 Arcano por passo de estado |
 | Dominum | Primitivum | reação | falhou, não repete no alvo |
-| Persona | Conflitüo | em pessoas, 1º quadrado da constituição de graça | falha sai inútil ou atrapalha; fora de gente, só pelo corpo ou sentimento |
+| Persona | Conflitüo | em pessoas, 1º quadrado pago de descritor de graça | falha sai inútil ou atrapalha; fora de gente, só pelo corpo ou sentimento |
 | Alvorum | Cognitium | vê através de tudo (2 Arcano) | sempre chamativo |
 | Morbidyum | Eternyr | volta da morte 1×/sessão | perde o Arcano, sem Movimentos de Morte |
 | Cognitium | Alvorum | ler pensamento (2 Arcano) | se falhar, leem você |

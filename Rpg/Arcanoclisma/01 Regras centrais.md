@@ -131,7 +131,7 @@ Por rolagem de teste o jogador ganha em média **1 Arcano** (2 em magia de Grau 
 |---|---|
 | 1 | **Vivência**: Vantagem numa rolagem em que uma Vivência sua se aplica (uma por rolagem) |
 | 1 | **Ajudar**: dê Vantagem a um aliado (descreva como) |
-| 1 | **Quadrado da constituição** de uma magia (+1 dado de dano, +1 degrau de alcance, tamanho ou duração, ou uma condição a mais): cada um também deixa a magia +1 mais difícil e, a cada 2, soma +1 Efeito Colateral se ela sair por Cataclisma ([[02 Magia]]) |
+| 1 | **Quadrado de descritor** numa magia (+1 dado de dano, +1 degrau de alcance, tamanho ou duração, ou uma condição a mais; o 1º de Dano ou de Restringe é grátis): cada um também deixa a magia +1 mais difícil e, a cada 2, soma +1 Efeito Colateral se ela sair por Cataclisma ([[02 Magia]]) |
 | 1–3 | **Palavra extra** numa magia: cada palavra de Valor além da primeira, **1** no Grau 1–2, **2** no Grau 3–4, **3** no Grau 5 (Palavras Básicas não custam) |
 | 2 | **Suavizar**: role de novo o d20 de um Efeito Colateral de magia e fique com o melhor |
 | 3 | **Hábito**: o talento especial do seu Comportamento |

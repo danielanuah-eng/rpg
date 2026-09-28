@@ -112,7 +112,7 @@ Se um número novo (item, talento, Skill) quebrar alguma dessas linhas, ele est�
 | **Palavra Estrangeira**: escreva num dos 4 espaços extras da sua ficha uma palavra de outro Valor | máx. 4 |
 | **Melhorar um talento seu** (Básico → Superior) | Moldura 2+ (do seu Comportamento), 3+ (de outro) |
 | **Talento avulso** de outro Comportamento, versão Básica | Moldura 2+ |
-| **Domínio**: escolha dano, alcance, tamanho ou duração. O 1º quadrado nessa parte da constituição, em cada magia, não soma Dificuldade nem Efeito Colateral | uma vez por Moldura, propriedades diferentes |
+| **Domínio**: escolha dano, alcance, tamanho ou duração. O 1º quadrado pago nesse descritor, em cada magia, não soma Dificuldade nem Efeito Colateral | uma vez por Moldura, propriedades diferentes |
 | **Ressonância** do seu Valor (II na Moldura 2+, III na Moldura 3+) | em ordem |
 
 ## A ficha: duas folhas
@@ -141,7 +141,7 @@ Uma para cada um dos 9 Valores: **o desenho muda inteiro** conforme o Valor (cor
 - **4 espaços extras** para Palavras Estrangeiras, preenchidos ao longo dos níveis.
 - **Canal** (foco, arma, Transcrito...) com o benefício e a fraqueza, e a Sintonia.
 - **Tabela de Graus** resumida: dados, custo, Dificuldade, dano, alvos, alcance, marcador de duração.
-- Lembretes da magia: leitura dos dados (Crítico, Efeitos Colaterais, Desequilíbrio), Esforço, Subir o Grau (só o custo do Grau), custo das palavras extras pelo Grau, **Como rolar** (Projétil, Teste mágico, Pequeno evento: quem rola e contra o quê), **Constituição da magia** (quadrados de dano, condição, duração, alcance e tamanho: 1 Arcano e +1 Dificuldade cada, +1 Efeito Colateral a cada 2), resumo do que cada Grau faz.
+- Lembretes da magia: leitura dos dados (Crítico, Efeitos Colaterais, Desequilíbrio), Esforço, Subir o Grau (só o custo do Grau), custo das palavras extras pelo Grau, **Como rolar** (Projétil, Teste mágico, Pequeno evento: quem rola e contra o quê), **Descritores** (quadrados de Dano, Restringe, Duração, Alcance e Tamanho: o 1º de Dano ou Restringe grátis; os outros 1 Arcano e +1 Dificuldade cada, +1 Efeito Colateral a cada 2), resumo do que cada Grau faz.
 - **Magias que eu gosto de usar**: linhas para anotar combinações de palavras e a relação do personagem com cada uma.
 
 Familiares, wyverns e montarias **não têm ficha**: são uma linha na Ficha 1, com nome e 1–2 traços.

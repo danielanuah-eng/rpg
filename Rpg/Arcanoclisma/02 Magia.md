@@ -39,6 +39,10 @@ Não é preciso explicar a relação do personagem com a palavra. O que precisa 
 
 Esse é o bônus da magia: ela **não recebe Vantagem paga** (Vivência, Ajudar); para somar força com alguém, use a **Dupla**. Desvantagem vale igual.
 
+## A fórmula
+
+A mesma para tudo: **Dados + Palavras ≥ Dificuldade**. No teste comum, 2d12 + até duas Palavras Básicas; na magia, os dados do Grau + 2 (Sintonia) + 1 por palavra de Valor.
+
 ## Conjurar em 5 passos
 
 1. **Intenção**: diga o que quer que aconteça, como a magia aparece (pelo seu Canal) e, se quiser, a sua relação com a palavra.
@@ -46,7 +50,7 @@ Esse é o bônus da magia: ela **não recebe Vantagem paga** (Vivência, Ajudar)
    - **Palavras de Valor**: de 1 até o seu limite (Moldura + 1). **A primeira é do seu Valor** (o núcleo); as outras podem ser do seu Valor ou Palavras Estrangeiras.
    - **Uma Palavra Básica** (uma palavra da lista, uma coisa ou uma forma): **não custa e não conta no limite**. Ela existe para **dar ao Valor ações que ele sozinho não tem** (um Cognitium que precisa **Movimentar**, um Conflitüo que precisa **Esconder**). Precisa fazer sentido concreto.
 3. **Grau**: pelo tamanho do efeito (tabela abaixo), até o seu máximo (Moldura + 1). O mestre tem a palavra final se o efeito pedido for maior do que o Grau.
-4. **Pague**: custo do Grau + cada palavra de Valor além da primeira (1 no Grau 1–2, 2 no Grau 3–4, 3 no Grau 5) + 1 por quadrado da constituição. (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
+4. **Pague**: custo do Grau + cada palavra de Valor além da primeira (1 no Grau 1–2, 2 no Grau 3–4, 3 no Grau 5) + 1 por quadrado pago de descritor. (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
 5. **Role** os dados do Grau + Sintonia + **1 por palavra de Valor**. Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre). **Contra o quê**, depende de quem recebe a magia (abaixo).
 
 ### Três tipos de efeito
@@ -133,7 +137,6 @@ Ela só vira rolagem quando é o **meio de uma ação** que já seria um teste: 
 | **Alcance** | Toque | Perto | Médio | Longe | Horizonte |
 | **Duração** (marcador) | Instante | até a próxima Falha | até o mestre pagar (no máximo o Evento) | o Evento inteiro | até o Pouso (permanente com custo, ver Artefatos) |
 | **Palavras Básicas afetadas** (+/−) | — | ±1 | ±2 | ±3 | ±4 |
-| **Resistir / escapar** (adversário no d20) | — | 12 | 14 | 16 | 19 |
 | **Esforço** (máx. de Cansaço) | 0 | 2 | 3 | 4 | 5 |
 | **Quanto dobra a realidade** | truque que alguém poderia explicar | claramente magia | quebra uma regra física ali | reescreve a cena | deixa marca no mundo; as pessoas vão contar |
 
@@ -211,34 +214,31 @@ Role quando a magia sai por Cataclisma (Grau 3+). **Número baixo é pior.** Voc
 
 ❓ **P-04**: ordenei do pior (1) para o mais leve (20) para o "Suavizar" fazer sentido. Prefere aleatório puro?
 
-## Constituição da magia (Ampliar)
+## Descritores: do que a magia é feita
 
-Toda magia já vem com **o que o Grau dá** (a linha dele na tabela de Graus): o dano do Grau, o alcance do Grau, o tamanho do Grau, a duração do Grau. Esse é o **normal** e não custa nada além do custo do Grau.
+Os **descritores** dizem **o que faz parte** da sua magia. Na ficha do Valor, cada descritor tem **quadrados**; você marca os que a magia tem. O que não tem quadrado marcado vem do **Grau** (a linha dele na tabela de Graus): é o **normal**.
 
-Se quiser **mais** do que o normal, você monta a **constituição** da magia: marca **quadrados** na ficha do Valor, parte por parte. **Cada quadrado custa 1 Arcano e deixa a magia +1 mais difícil.** Não marcou nada? A magia é o normal do Grau.
+| Descritor | Quadrados | O que marcar |
+|---|---|---|
+| **Dano** | até **Grau + 1** (Grau 2 → 3, Grau 3 → 4, Grau 4 → 5, Grau 5 → 6) | **o 1º quadrado** = a magia **dá dano** (o dano do Grau). **Cada quadrado a mais** = **+1d10**. |
+| **Restringe** | **1** | a magia **prende, derruba, cega, assusta ou atrapalha**: o alvo fica com **uma** condição (*Preso, Caído, Cego, Amedrontado, Distraído, Atordoado*) ou com **−** nas Palavras Básicas (o número do Grau). |
+| **Duração** | um por degrau | começa no degrau do Grau; **cada quadrado sobe um degrau**: um instante → até a próxima Falha → até o mestre pagar → o Evento inteiro → até o Pouso |
+| **Alcance** | um por degrau | Toque → Perto → Médio → Longe → Horizonte |
+| **Tamanho** (alvos ou área) | um por degrau | você ou 1 objeto (cabe na mão) → 1 alvo (uma pessoa, uma porta) → até 3 (uma sala) → até 6 ou um grupo (uma casa, uma praça) → todos à vista (um quarteirão, um vale) |
 
-| Parte | Quando | Quadrados | O que cada quadrado faz |
-|---|---|---|---|
-| **Dano** | a magia machuca | até o **nº de dados de dano do Grau + 1**: Grau 2 → **2**, Grau 3 → **3**, Grau 4 → **4**, Grau 5 → **6** | **+1d10** de dano |
-| **Também machuca** | a magia não é de dano (um medo, uma rede) e você quer que ela fira também | **1** | quem é pego leva o **dano do Grau** (e aí pode marcar os quadrados de Dano) |
-| **Restringe ou atrapalha** | a magia faz outra coisa (machuca, muda o mundo) e você quer que ela **também** prenda, derrube, cegue ou assuste | **1** (uma condição por magia) | o alvo também fica com **uma condição** (*Preso, Caído, Cego, Amedrontado, Distraído, Atordoado*) ou com **−** nas Palavras Básicas (o número do Grau) |
-| **Duração** | a magia fica | um por **degrau** acima do do Grau | sobe **um degrau**: Instante → até a próxima Falha → até o mestre pagar → o Evento inteiro → até o Pouso |
-| **Alcance** | a magia vai longe | um por degrau acima | sobe **um degrau**: Toque → Perto → Médio → Longe → Horizonte |
-| **Tamanho** (alvos ou área) | a magia pega mais | um por degrau acima | sobe **um degrau**: você ou 1 objeto → 1 alvo (uma pessoa, uma porta) → até 3 (uma sala) → até 6 ou um grupo (uma casa, uma praça) → todos à vista (um quarteirão, um vale) |
+**Degrau** é o próximo passo daquela escada. O Grau 3, por exemplo, começa em Médio, até 3 alvos, até o mestre pagar.
 
-**"Degrau"** (antes, "faixa") é só o próximo passo daquela escada. Cada Grau começa no seu degrau (o Grau 3 começa em Médio, até 3 alvos, até o mestre pagar); o quadrado sobe um.
+**O que custa:**
 
-Se prender ou atrapalhar **já é** o efeito principal (um Teste mágico de sono, de medo), não precisa marcar nada: o efeito vem do Grau. O quadrado de Restringe é para **somar** uma condição a uma magia que faz outra coisa.
+- **O efeito principal é de graça**: o **1º quadrado de Dano ou de Restringe** (o que a magia faz). Uma magia que só muda o mundo (abrir, criar, curar, fortalecer) não precisa de nenhum dos dois.
+- **Todo outro quadrado custa 1 Arcano e deixa a magia +1 mais difícil.** No **Projétil**, soma na Dificuldade (ou Esquiva) do alvo; no **Pequeno evento**, na Dificuldade do Grau; no **Teste mágico**, a Dificuldade da magia **cai 1** (o efeito maior fica mais fácil de escapar).
+- **Efeitos Colaterais**: se a magia sair **por Cataclisma**, **+1 a cada 2 quadrados pagos** (1–2 → +1 · 3–4 → +2 · 5–6 → +3 · 7–8 → +4), além dos do Grau.
 
-**Somando os quadrados** (conte todos os que marcou na magia):
+Exemplos: um jato de fogo que queima (Dano: 1º quadrado, grátis). Um jato de fogo que queima **e** derruba (Dano grátis + Restringe: 1 pago). Um medo que também fere (Restringe grátis + Dano: 1 pago). Um medo que dura o Evento inteiro, no Grau 2 (Restringe grátis + Duração: 2 degraus, 2 pagos).
 
-- **Arcano**: +1 por quadrado.
-- **Dificuldade**: +1 por quadrado. No **Projétil**, soma na Dificuldade (ou Esquiva) do alvo; no **Pequeno evento**, na Dificuldade do Grau; no **Teste mágico**, a Dificuldade da magia **cai 1** por quadrado (o efeito maior fica mais fácil de escapar).
-- **Efeitos Colaterais**: se a magia sair **por Cataclisma**, role **+1 Efeito Colateral a cada 2 quadrados** (1–2 → +1 · 3–4 → +2 · 5–6 → +3 · 7–8 → +4), além dos do Grau. Quem pede mais ao mundo paga mais.
+Não há máximo de quadrados por magia além dos de cada descritor: quem segura é a Dificuldade, o Arcano e o Cataclisma. A mesa descreve cada descritor marcado (mais longe **e** mais tempo **e** mais gente é uma magia bem mais difícil de segurar).
 
-Não há máximo de quadrados por magia além dos de cada parte: quem segura é a Dificuldade, o Arcano e o Cataclisma. Poder espalhado também custa: a mesa descreve cada parte marcada (mais longe **e** mais tempo **e** mais gente é uma magia bem mais difícil de segurar).
-
-**Com os níveis, fica mais fácil.** O avanço **Domínio** ([[05 Personagem e níveis]]) escolhe uma parte (dano, alcance, tamanho ou duração): **o 1º quadrado nela, em cada magia, não soma Dificuldade nem conta para os Efeitos Colaterais** (o Arcano você paga igual). Itens *De Grau* dão quadrados sem Arcano.
+**Com os níveis, fica mais fácil.** O avanço **Domínio** ([[05 Personagem e níveis]]) escolhe um descritor (dano, alcance, tamanho ou duração): **o 1º quadrado pago nele, em cada magia, não soma Dificuldade nem conta para os Efeitos Colaterais** (o Arcano você paga igual). Itens *De Grau* dão quadrados sem Arcano.
 
 **Grau abaixo do seu máximo** também é mais fácil de impor: num **Teste mágico**, a Dificuldade da magia sobe **+2 por Grau abaixo** do seu máximo (um susto pequeno pega mais fácil que um terror).
 
@@ -279,7 +279,7 @@ Chance: uns **89–90%** em qualquer Moldura.
 
 ### Valores opostos
 
-Se os dois Valores forem opostos (ver [[03 Valores]]): o efeito sobe **+2 Graus** em vez de +1 (o que passar de 5 vira quadrados da constituição grátis: sem Arcano e sem Dificuldade), mas a **Dificuldade +2**, **os dois marcam Cansaço igual ao Grau do efeito − 2**, e se sair por Cataclisma rolam **um Efeito Colateral a mais**. Chance: uns 57–70%.
+Se os dois Valores forem opostos (ver [[03 Valores]]): o efeito sobe **+2 Graus** em vez de +1 (o que passar de 5 vira quadrados de descritor grátis: sem Arcano e sem Dificuldade), mas a **Dificuldade +2**, **os dois marcam Cansaço igual ao Grau do efeito − 2**, e se sair por Cataclisma rolam **um Efeito Colateral a mais**. Chance: uns 57–70%.
 
 O **Eixo** (o Valor sem oposto) combina com qualquer um sem penalidade.
 
