@@ -74,4 +74,52 @@
   - Regra ajustada na mesa: as perguntas de criação são **narrativas** (orientam decisões, não dão bônus); **as palavras somam sem explicar relação**: basta jogador e mestre concordarem com a combinação, o sentido e o nível do efeito.
   - Castian quer "Aumentar Grito" (palavras de Eternyr e Conflitüo, que ele não tem) → vira **Fortalecer Voz** em Persona (sentido próximo). Grau 2, 2 palavras, 2 Arcano, sem relação dita. Na voz do Lino (pessoa, sem −2); o efeito pega o Eco e as Sobras. 🎲 **2 e 2: Crítico** (+2 Arcano, sem moldura para o mestre). Efeito de crítico: melhor resultado possível (total 24 + 2 = 26). O Eco testa (d20 20 + 1 = 21) e não aguenta. As duas Sobras estouram (lacaios não testam); o Castian recupera a voz. O Eco solta o casulo e se enfia na boca do sino, agarrado ao badalo. Lino livre. Pote do Lino encerrado. Mestre +1 Cataclisma (*Faminto de Magia*) e põe 1 na Cheia (4/8).
   - O jogador canta de verdade ("OOOOOHHHHHH"). Castian se joga embaixo do sino: **Cantar Vigoroso** (Grau 2, 2 palavras, 2 Arcano, +2), a própria voz usando o sino como caixa. 🎲 **2 e 2: Crítico de novo** (+2 Arcano). Melhor resultado: 24 + 2 + 2 = 28. O Eco testa (d20 5 + 1 = 6) e não aguenta: estoura dentro do sino e solta todo o som que comeu. **O Sino da Maré toca.** A Cheia recua: Ameaça encerrada. Eco derrotado. Fim da escaramuça.
+- **Epílogo.** O Capitão Otávio pede desculpas à Iolanda (e paga o almoço do Castian por uma semana). O Lino conta que, entre os sons soltos, havia **uma voz que não era de ninguém**: disse "OulVeil" duas vezes e que "o véu está ficando fino". A aurora sobre o mar está mais fraca. Mestre guarda **12 Cataclisma**.
+- **Fim da sessão.** 1 Atalho, 0 Passos: Laço **não apertou**. Três perguntas, três "sim" (+3 Arcano):
+  1. *Ele ignora o que sente e age por impulso: cala a voz dos sentimentos.*
+  2. *Vê a Iolanda com mais empatia; vê no Lino alguém parecido com ele.*
+  3. *Percebeu o medo da Iolanda de algo acontecer com o filho dela.*
+- **Castian ao fim**: Arcano **10** / 12 · PV 6/6 · Cansaço 0/6.
+
+## Relatório do playtest
+
+**Formato**: 1 jogador + mestre, Moldura 1, 3 Eventos (social, travessia, escaramuça). Castian nunca levou dano.
+
+### O que funcionou
+
+- **Verbo + modo** saiu natural ("correr, rápido"; "atacar, forte"). O jogador descreve e o atributo vem sozinho.
+- **Leitura por Arcano / por Cataclisma** fez o mestre emoldurar nas horas certas (4 molduras em ~10 rolagens), sem precisar de turno.
+- **Potes de Ameaça** (Cheia, Lino) criaram pressão visível e deram um relógio para a escaramuça.
+- **Atalho** apareceu sozinho, do jeito que o personagem é (rir para esconder o medo), e o jogador nomeou o que ele protege. O ACT funcionou pela ficção, não pela regra.
+- **Tropeço** (Drawback de Persona) gerou a melhor cena da sessão: a magia de coragem voltou como medo.
+- **Palavras com efeito** geraram soluções criativas (*Fortalecer Voz* na voz do Lino, *Cantar Vigoroso* dentro do sino). A escaramuça acabou pela ideia, não pelo dano.
+- **As perguntas de fim de sessão** renderam respostas ricas e sem esforço.
+
+### O que mudamos na mesa
+
+| Assunto | Antes | Agora |
+|---|---|---|
+| Palavras | forma fixa | valem em qualquer forma; tabelas sem raiz repetida (46 trocas) |
+| Palavra que conta | toda palavra | só a que muda o efeito (opção B) |
+| Bônus nos testes | +2, +1, Vantagem, ajudas | só **atributo** e **Vantagem (+1d6)**, até 2 |
+| Dificuldades | 10/12/15/20/25 | escada por Moldura do desafio; adversário varia pela história |
+| Palavras na magia | Relação +1 | **+1 por palavra**, sem explicar relação; da 3ª em diante, +1 Cataclisma |
+| Tipos de magia | um alvo, uma Dificuldade | **Projétil** (você rola vs defesa) · **Teste mágico** (só o alvo rola, gera Arcano/Cataclisma pelo d20 dele) · **Pequeno evento** (você rola vs Grau) |
+| Dificuldades (d20) | por nº de palavras | **Efeitos Colaterais**, pelo Grau |
+| Ampliar | Arcano | **Arcano e +2 na Dificuldade** por passo; avanço **Domínio** |
+| Lacaios | não resistem | cada ser rola; bando rola uma vez e perde 1/2/3 membros |
+| Crítico | escolha solta | efeitos claros; no Teste mágico vem do d20 do alvo |
+| Perguntas de criação | davam base para +1 | só narrativas: orientam decisões |
+| Persona | bônus em pessoas | −2 fora de pessoas; Drawback Tropeço |
+
+### O que observar
+
+- **Arcano sobrando**: o Castian foi de 3 a 10 numa sessão, gastando bastante (2 Críticos ajudaram). Com Ampliar voltando a custar Arcano, pode equilibrar; vale medir de novo.
+- **Cataclisma do mestre** chegou a 12 com quase nada gasto: o mestre precisa de hábitos de gasto (Abalos, reforços, potes). Faltou usar.
+- **Teste mágico** agora devolve só 1 ponto (o d20 do alvo) contra ~2 da rolagem de quem conjura: magia de controle fica um pouco mais cara. Observar.
+- **Tamanho da escaramuça**: com 1 jogador, 2 lacaios + 1 Padrão acabou rápido (4 ações). Bom para teste; numa mesa cheia, testar o orçamento.
+
+### Ainda não testado
+
+Dano em jogador (Limiares, Proteção, Cansaço), Passo de Valor, Laço apertado, Hábito do Comportamento, Magia em Dupla (a Iolanda nunca entrou), Vivência como Vantagem, Fusão, Pausa e Pouso, Efeitos Colaterais (nenhuma magia de Grau 3+), mesa com mais jogadores.
 

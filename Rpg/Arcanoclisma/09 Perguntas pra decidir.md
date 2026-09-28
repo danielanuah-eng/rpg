@@ -355,7 +355,7 @@ Sua resposta:
 ✅ **Só conta palavra que muda o efeito** (opção B): palavra que só diz onde ou em quem a magia cai não conta nem custa.
 
 **P-117** 🟡 Magia resistida na Moldura 1 funciona ~60% (sem resistência, ~80%). Fica assim, ou o empate na resistência também vai para quem conjura e o alvo que resiste ainda sofre meio efeito (dura só o Instante)?
-Sua resposta:
+Sua resposta: ➖ superada: no Teste mágico só o alvo rola (65% com 1 palavra, +5% por palavra), e passar ou não se interpreta na ficção.
 
 ## Rodada 17 — Menos bônus, palavras que valem
 
