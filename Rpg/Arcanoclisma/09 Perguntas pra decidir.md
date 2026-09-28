@@ -406,3 +406,12 @@ Sua resposta: ✅ mais palavras = efeito mais específico, mais fácil de funcio
 
 ✅ **Ampliar: Arcano e consequência.** Cada passo **custa Arcano** (1 no Grau 1–2, 2 no 3–4, 3 no 5; é investimento) **e** sobe a Dificuldade em +2 (é consequência, não escolha). O **Domínio** tira a Dificuldade do primeiro passo numa propriedade; itens *De Grau* dão passos sem Arcano.
 
+## Rodada 18 — Persona depois da mesa
+
+**P-121** 🔴 **Persona tem dois castigos e nenhum dom.** Todo Valor tem uma Skill que dá algo (Fio da Guerra, Mistura, Volta, Espiar...) e um Drawback que cobra. Persona tem o −2 fora de pessoas **e** o Tropeço. Na mesa, o jogador não sabia bem o que Persona fazia fora de gente.
+Proposta:
+- **Tirar o −2.** O limite de Persona vira **ficção**: fora de gente, a descrição tem que **passar por um corpo ou um sentimento** (a sua voz que faz o sino tremer, a força do seu braço, o medo de uma fera). Se não passa, a magia não é de Persona.
+- **Nova Skill · Toque Humano**: em **pessoas** (você incluído), o **primeiro passo de Ampliar sai de graça** (sem Arcano e sem Dificuldade). Persona é o Valor que vai mais longe em gente.
+- **Drawback · Tropeço** continua.
+Sua resposta:
+
