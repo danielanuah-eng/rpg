@@ -40,23 +40,23 @@ def tabela(texto, cabecalho):
     return out
 
 # ---------------------------------------------------------------- estilos
+# Estilos em inglês: no teste do Canva (4.6) o estilo em inglês seguiu o traço grosso e chapado;
+# em português saiu realista. A parte específica de cada prompt continua em português.
+INK = ('Bold graphic fantasy RPG illustration in a thick expressive ink style: heavy black outlines, flat vibrant colors with hard block shadows, dry-brush paper texture, stylized exaggerated proportions, comic-book cel shading, not realistic, not 3D, not a painting.')
 ESTILOS = {
     'P': ('Personagem e criatura (1:1)',
-          'Ilustração de personagem de RPG de fantasia, traço de tinta grosso e expressivo, contornos pretos marcados, '
-          'cores chapadas e vibrantes com sombras em blocos, textura leve de papel e pincel seco, proporções estilizadas, '
-          'corpo inteiro, pose dinâmica, expressão forte. Fundo branco liso, sem cenário, sem texto, sem logotipo.'),
+          INK + ' Full body character, dynamic pose, strong facial expression. '
+          'Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese):'),
     'D': ('Dragão (1:1)',
-          'Ilustração de dragão de RPG de fantasia, traço de tinta grosso e expressivo, contornos pretos marcados, '
-          'cores chapadas e vibrantes com sombras em blocos, textura leve de pincel seco, corpo inteiro em pose majestosa, '
-          'asas abertas, sensação de tamanho enorme, chamas luminosas e bruxuleantes saindo dos espinhos e dos olhos. '
-          'Fundo branco liso, sem cenário, sem texto, sem logotipo.'),
+          INK + ' Full body dragon in a majestic pose, wings open, sense of enormous size, glowing flickering flames '
+          'coming out of its spines and eyes. Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese):'),
     'I': ('Item (1:1)',
-          'Ilustração de item de RPG de fantasia, um único objeto isolado e inteiro, vista em três-quartos, traço de tinta '
-          'grosso com contorno preto, cores chapadas com sombras em bloco, textura leve de pincel seco, marcas de uso. '
-          'Fundo branco liso, sem mão, sem personagem, sem texto, sem logotipo.'),
+          INK + ' A single isolated object, whole and centered, three-quarter view, signs of use. '
+          'Plain solid white background, no hand, no character, no text, no logo. Subject (in Portuguese):'),
     'C': ('Cenário (paisagem 3:2)',
-          'Pintura de cenário de RPG de fantasia, vista ampla, pinceladas visíveis, cores ricas, luz dramática, clima de '
-          'ilustração de abertura de capítulo, sem personagens em primeiro plano, sem texto, sem logotipo.'),
+          'Fantasy RPG environment illustration in a bold graphic ink style: heavy black outlines, flat vibrant colors with '
+          'hard block shadows, dry-brush paper texture, wide establishing view, dramatic light, chapter-opening mood, '
+          'no characters in the foreground, no text, no logo. Subject (in Portuguese):'),
 }
 FORMATO = {'P': '1:1', 'D': '1:1', 'I': '1:1', 'C': '3:2'}
 
