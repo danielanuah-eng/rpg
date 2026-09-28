@@ -19,7 +19,7 @@ Sistema de RPG próprio, inspirado em Daggerheart, Rune RPG, Ethmos e Triangle A
 9. [[07 Mestre - Cataclisma, abalos e terrenos]] — gastos do mestre, Abalos, Marés, Correntes, terrenos
 10. [[08 Mundo e entidades]] — origem, par e ímpar, Primordiais, semideuses, Reinos, dragões, Eras, perguntas de escritor
 11. [[10 Adversários - como criar]] — adversários por palavras, régua, maestria
-12. [[11 Bestiário]] — 54 adversários prontos, com dragões e wyverns
+12. [[11 Bestiário]] — 280 personagens do mundo numa lista só (gente comum, Comprometidos, povos infundidos, feras, Disruptos, Protetores, seres de energia e dos planos, semideuses, dragões, Era Tecnomaga), cada um com Básicas e, se conjura, Valor
 13. [[12 Tesouros e itens mágicos]] — itens narrativos, Maravilhas, itens comuns, achados
 14. [[13 Teste de mesa 1]] — kit do primeiro teste (4 personagens, 3 Eventos) e relatório do combate simulado
 15. [[14 Teste das mecânicas]] — etapas, facilidade e vantagem repetida de cada mecânica; economia de Arcano
