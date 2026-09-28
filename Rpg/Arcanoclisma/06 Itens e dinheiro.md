@@ -102,7 +102,7 @@ Itens mágicos servem para **tudo**, não só para quem conjura: ajudam em teste
 | **De Ofício** | ajuda em mecânica básica: um atributo, um tipo de teste, Esquiva, Limiares, Proteção, PV ou Cansaço | Vantagem numa situação estreita → +1 num atributo |
 | **De Estabilidade** | mexe na **Dificuldade** e nos **Efeitos Colaterais** da magia: Dificuldade do Grau menor, um Efeito Colateral a menos, Suavizar de graça, +1 no d20 da tabela | −1 na Dificuldade do Grau → um Efeito Colateral a menos em toda magia |
 | **De Valor** | só funciona para um Valor: melhora a Skill, alivia o Drawback, ou dá a um não-Comprometido daquele Valor um pedaço da Skill | alívio pequeno → Skill melhorada |
-| **De Grau** | ajuda a magia a crescer: Ampliação de graça, +1 no dano de magia, +1 de Sintonia numa condição | 1 Ampliação por Evento → +1 de Sintonia |
+| **De Grau** | ajuda a magia a crescer: um passo de Ampliar sem subir a Dificuldade, +1 no dano de magia, +1 de Sintonia numa condição | 1 passo de Ampliar por Evento sem subir a Dificuldade → +1 de Sintonia |
 
 Algumas têm **cargas** (recuperam no Pouso). Regra geral de equilíbrio: um item da Moldura X nunca dá mais que **um passo** da tabela de Graus, **+1** num número, ou **uma** palavra.
 
@@ -133,7 +133,7 @@ Algumas têm **cargas** (recuperam no Pouso). Regra geral de equilíbrio: um ite
 | Coleira de Prata | Valor (Dominum) | 3 | Vontade Quebrada dura só até a próxima Pausa | 1.100 o |
 | Máscara de Casca | Valor (Primitivum) | 3 | +1 Traço Animal nas transformações | 1.000 o |
 | Véu de Seda Cinza | Valor (Cognitium) | 3 | se Espiar falhar, o alvo não sabe que foi você | 1.000 o |
-| Luva de Forja | Grau | 1 | uma Ampliação de dano de graça por Evento | 150 o |
+| Luva de Forja | Grau | 1 | um passo de Ampliar no dano, sem subir a Dificuldade, por Evento | 150 o |
 | Tinteiro de Duas Penas | Grau | 2 | +1 no dano de magia | 400 o |
 | Coroa Pequena | Grau | 4 | +1 de Sintonia enquanto ninguém tocar em você no Evento | 3.500 o |
 

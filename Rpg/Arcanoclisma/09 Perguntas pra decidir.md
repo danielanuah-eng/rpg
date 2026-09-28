@@ -402,3 +402,5 @@ Sua resposta: ✅ mais palavras = efeito mais específico, mais fácil de funcio
 
 ✅ **Cada ser é um ser**: lacaios e qualquer personagem diferente rolam o próprio teste. **Bando ou grupo** conta como um alvo e rola uma vez; se falhar, perde 1 / 2 / 3 membros (falhou por 1–4 / 5–9 / 10+). Substitui "lacaios não rolam" e "adversários iguais rolam um d20 só".
 
+✅ **Ampliar pelo poder da descrição**: dentro do Grau, o jogador escolhe onde pôr força (dano, alcance, alvos/área, duração, atributo). Cada passo **+2 na Dificuldade** (Projétil: na defesa do alvo; Pequeno evento: na do Grau; Teste mágico: a Dificuldade da magia cai 2). Não custa mais Arcano. Máximo = Moldura. Com os níveis, o avanço **Domínio** tira a Dificuldade do primeiro passo numa propriedade; itens *De Grau* também. No Teste mágico, magia abaixo do seu Grau máximo pega mais fácil (+2 por Grau abaixo). Aplicado em [[02 Magia]], [[05 Personagem e níveis]], [[06 Itens e dinheiro]].
+

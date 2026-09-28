@@ -44,7 +44,7 @@ Esse é o bônus da magia: ela **não recebe Vantagem paga** (Vivência, Ajudar)
    - **Palavras de Valor**: de 1 até o seu limite (Moldura + 1). **A primeira é do seu Valor** (o núcleo); as outras podem ser do seu Valor ou Palavras Estrangeiras.
    - **Uma Palavra Básica** (verbo, modo ou forma): **não custa e não conta no limite**. Ela existe para **dar ao Valor ações que ele sozinho não tem** (um Cognitium que precisa *escalar*, um Conflitüo que precisa *esconder*). Precisa fazer sentido concreto.
 3. **Grau**: pelo tamanho do efeito (tabela abaixo), até o seu máximo (Moldura + 1). O mestre tem a palavra final se o efeito pedido for maior do que o Grau.
-4. **Pague**: custo do Grau + 1 Arcano por palavra de Valor além da primeira + Ampliações. (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
+4. **Pague**: custo do Grau + 1 Arcano por palavra de Valor além da primeira. (Ampliar não custa Arcano: sobe a Dificuldade.) (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
 5. **Role** os dados do Grau + Sintonia + **1 por palavra de Valor**. Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre). **Contra o quê**, depende de quem recebe a magia (abaixo).
 
 ### Três tipos de efeito
@@ -207,15 +207,27 @@ Role quando a magia sai por Cataclisma (Grau 3+). **Número baixo é pior.** Voc
 
 ## Ampliar
 
-Depois de escolher o Grau, você pode **subir uma propriedade um passo** na tabela de Graus, sem subir o Grau todo: +1 dado de dano, +1 faixa de alcance, +1 faixa de alvos/área, +1 marcador de duração (na ordem da tabela), +1 no atributo afetado.
+A **descrição** do efeito diz quanto poder ele tem. O **Grau** é o patamar; dentro dele, o jogador decide **onde pôr mais força**, subindo propriedades um passo na tabela de Graus, sem subir o Grau todo:
 
-| Grau da magia | Custo por passo (Arcano **ou** Cansaço) |
+- **Dano**: +1 dado.
+- **Alcance**: +1 faixa.
+- **Alvos/área**: +1 faixa.
+- **Duração**: +1 marcador (na ordem da tabela).
+- **Atributo afetado**: +1.
+
+**Cada passo deixa a magia mais difícil de funcionar e de manter: +2 na Dificuldade.** Não custa Arcano: custa certeza.
+
+| Efeito | Onde entra o +2 por passo |
 |---|---|
-| 1–2 | 1 |
-| 3–4 | 2 |
-| 5 | 3 |
+| **Projétil** | na Esquiva/Dificuldade do alvo |
+| **Pequeno evento** | na Dificuldade do Grau |
+| **Teste mágico** | a Dificuldade da magia **cai 2** (fica mais fácil de escapar) |
 
-Máximo de Ampliações por magia = sua Moldura. Magias grandes custam mais para ampliar, mas cada passo vale mais (um dado de dano do Grau 4 é o mesmo d10, só que sobre um efeito que já afeta 6 alvos).
+Máximo de passos por magia = sua **Moldura**. Poder espalhado custa: dois passos em propriedades diferentes pesam o mesmo que dois na mesma, mas a mesa deve descrever cada um (mais longe **e** mais tempo **e** mais gente é uma magia bem mais difícil de segurar).
+
+**Com os níveis, fica mais fácil.** O avanço **Domínio** ([[05 Personagem e níveis]]) escolhe uma propriedade (dano, alcance, alvos/área, duração ou atributo): **o primeiro passo nela, em cada magia, não sobe a Dificuldade**. Itens *De Grau* e algumas Ressonâncias fazem o mesmo.
+
+**Grau abaixo do seu máximo** também é mais fácil de impor: num **Teste mágico**, a Dificuldade da magia sobe **+2 por Grau abaixo** do seu máximo (um susto pequeno pega mais fácil que um terror).
 
 ## Forçar (pedir ajuda com Cansaço)
 
@@ -250,7 +262,7 @@ Chance: uns **89–90%** em qualquer Moldura.
 
 ### Valores opostos
 
-Se os dois Valores forem opostos (ver [[03 Valores]]): o efeito sobe **+2 Graus** em vez de +1 (o que passar de 5 vira Ampliações de graça), mas a **Dificuldade +2**, **os dois marcam Cansaço igual ao Grau do efeito − 2**, e se sair por Cataclisma rolam **um Efeito Colateral a mais**. Chance: uns 57–70%.
+Se os dois Valores forem opostos (ver [[03 Valores]]): o efeito sobe **+2 Graus** em vez de +1 (o que passar de 5 vira passos de Ampliar sem subir a Dificuldade), mas a **Dificuldade +2**, **os dois marcam Cansaço igual ao Grau do efeito − 2**, e se sair por Cataclisma rolam **um Efeito Colateral a mais**. Chance: uns 57–70%.
 
 O **Eixo** (o Valor sem oposto) combina com qualquer um sem penalidade.
 
