@@ -350,7 +350,7 @@ Sua resposta:
 
 ✅ **Persona · Toque Humano** corrigido: magia em pessoas funciona normal; **fora de pessoas, −2 no total**.
 
-✅ **Três tipos de efeito** (substitui a P-106; sem regra de "aceitar ou não"): quem conjura sempre rola. **Projétil** → contra a Esquiva/Dificuldade do alvo. **Teste mágico** (sono, encanto, medo: efeito sobre alvos) → contra a Dificuldade do Grau, e cada alvo faz um **teste físico** contra o total. **Pequeno evento** (acrescentar, mudar, detalhar, alterar o mundo) → contra a Dificuldade do Grau, ninguém rola (PJ: 2d12 + atributo escolhido pela descrição; adversário: 2d12 + Ataque, Vantagem/Desvantagem pelas palavras; lacaio não resiste). Aplicado em [[02 Magia]].
+✅ **Três tipos de efeito** (substitui a P-106; sem regra de "aceitar ou não"): quem conjura sempre rola. **Projétil** → contra a Esquiva/Dificuldade do alvo. **Teste mágico** (sono, encanto, medo: efeito sobre alvos) → contra a Dificuldade do Grau, e cada alvo faz um **teste** (físico ou não, pela descrição) contra o total. **Pequeno evento** (acrescentar, mudar, detalhar, alterar o mundo) → contra a Dificuldade do Grau, ninguém rola (PJ: 2d12 + atributo escolhido pela descrição; adversário: 2d12 + Ataque, Vantagem/Desvantagem pelas palavras; lacaio não resiste). Aplicado em [[02 Magia]].
 
 ✅ **Só conta palavra que muda o efeito** (opção B): palavra que só diz onde ou em quem a magia cai não conta nem custa.
 
