@@ -413,5 +413,6 @@ Proposta:
 - **Tirar o −2.** O limite de Persona vira **ficção**: fora de gente, a descrição tem que **passar por um corpo ou um sentimento** (a sua voz que faz o sino tremer, a força do seu braço, o medo de uma fera). Se não passa, a magia não é de Persona.
 - **Nova Skill · Toque Humano**: em **pessoas** (você incluído), o **primeiro passo de Ampliar sai de graça** (sem Arcano e sem Dificuldade). Persona é o Valor que vai mais longe em gente.
 - **Drawback · Tropeço** continua.
+- **Como Persona ataca**: bloco novo em [[03 Valores]] (a voz como arma, o corpo do outro contra ele, o sentimento como arma, o seu corpo como arma). Proposta extra: um bloco assim para **cada Valor** (atacar, defender, curar ou aliviar, descobrir, mover).
 Sua resposta:
 

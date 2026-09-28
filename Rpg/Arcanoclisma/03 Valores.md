@@ -134,6 +134,17 @@ Perguntas de vínculo: *A quem você já obedeceu e jurou nunca mais? · Você a
 
 Exemplos: **G1** corar as bochechas de alguém · **G2** *Medo*: o capanga foge até a próxima Falha · **G3** *Fortalecer + Músculo + Aliado*: +2 em Força para até 3 aliados · **G4** *Cantar + Fúria + Contagiante + Grupo*: uma música que faz a taverna inteira brigar.
 
+**Como Persona ataca.** Persona não joga fogo: ela machuca **pelo corpo e pelo sentimento**. Quatro jeitos:
+
+| Jeito | Tipo de efeito | Exemplos (Moldura 1, Grau 2) |
+|---|---|---|
+| **A voz como arma** | Projétil (você rola contra a defesa do alvo; dano 1d10 + Sintonia) | *Voz* + Projétil: um grito que acerta como um soco · *Música* + Onda: uma nota que racha a pedra e o tímpano |
+| **O corpo do outro se volta contra ele** | Teste mágico (o alvo rola Força ou firme; se não passar, leva o dano ou o efeito) | *Enfraquecer Músculo*: cãibra que derruba e dói · *Coração* disparado: o peito aperta até doer · *Pele Grotesca*: bolhas que ardem |
+| **O sentimento como arma** | Teste mágico (o alvo rola firme, Sabedoria) | *Medo*: foge ou trava · *Fúria* num inimigo: ele ataca o aliado dele · *Saudade*: larga a arma e chora |
+| **O seu corpo vira arma** | Pequeno evento em você, e depois ataca com arma ou mão | *Fortalecer Músculo*, *Remodelar* as mãos em garras (ou Grau 1 como meio da ação: "atacar, forte, com a mão que endurece", dano 1d8 + Moldura) |
+
+Num Teste mágico de dano, **passar ou não se lê na ficção**: quem não passa leva o dano inteiro; quem passa pode sentir só o susto, ou metade, como a mesa achar justo.
+
 Perguntas de vínculo: *De quem você sente mais falta? · Qual emoção sua você mais esconde?*
 
 ---
