@@ -510,3 +510,5 @@ As perguntas P-123 a P-126 (gerador de nomes, personagem aleatório com tabela d
 
 ✅ **Ícones** (rascunho): 12 Comportamentos em losango, 6 glifos de atributo (Força: montanha · Agilidade: rastro e bola · Percepção: mira · Carisma: voz · Inteligência: hexágono · Sabedoria: lua), Arcano (círculo fechado, dourado) e Cataclisma (círculo com fresta, ferrugem). Em `arte/icones/`; prévia com a tabela de Interações na ficha em `arte/icones.html`.
 
+✅ **Os atributos também são palavras**: Força, Agilidade, Percepção, Carisma, Inteligência e Sabedoria são Palavras Básicas como os verbos (teste sem verbo e Palavra Básica grátis de magia: *Lâmina* + **Força**). Na ficha, cada atributo tem a sua casa de número no topo da coluna. Em [[01 Regras centrais]], [[02 Magia]], [[22 O que é gerado]] e na prévia de ícones.
+

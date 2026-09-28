@@ -288,7 +288,7 @@ As Palavras Básicas são os **verbos da tabela de Interações** ([[01 Regras c
 
 Além dos verbos da tabela, cinco **coisas** também são Palavras Básicas: **Arma · Item · Poção · Objeto · Armadilha**. *Lâmina* + **Criar** faz uma arma do nada; *Desarmar* + **Arma** tira a arma (ou a magia que prende) da mão de alguém; *Fogo* + **Apagar** acaba com o incêndio; *Vida* + **Poção** põe a cura num frasco.
 
-Palavras Básicas **não custam nada**, mas precisam fazer **sentido concreto** no que está acontecendo, e **nunca são o núcleo** de uma magia. Atributos não são palavras de magia.
+Palavras Básicas **não custam nada**, mas precisam fazer **sentido concreto** no que está acontecendo, e **nunca são o núcleo** de uma magia. Os **seis atributos também são Palavras Básicas**: *Lâmina* + **Força** (um golpe pesado), *Voz* + **Carisma** (uma fala que conquista), *Sombra* + **Agilidade** (sumir rápido).
 
 ### Formas e alvos (só para magia, d12)
 

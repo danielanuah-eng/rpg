@@ -45,6 +45,8 @@ O que cada verbo cobre, quando a dúvida aparecer:
 
 São **48 verbos** (6 × 8). Para sortear: d6 para o atributo, d8 para o verbo.
 
+**Os atributos também são palavras.** Força, Agilidade, Percepção, Carisma, Inteligência e Sabedoria fazem parte das Palavras Básicas como os verbos: dão nome a um teste quando nenhum verbo serve ("queda de braço" é **Força**) e podem ser a Palavra Básica grátis de uma magia ([[02 Magia]]). Na ficha, cada atributo tem a sua casa de número no topo da coluna.
+
 Atributo e verbo vão até **+3** cada (máximo de um teste: +6). Os números **não entram em magia** (exceto quando uma regra disser).
 
 ## 2. O teste: 2d12 + atributo + verbo
