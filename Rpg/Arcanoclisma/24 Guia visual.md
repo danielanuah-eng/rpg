@@ -80,4 +80,4 @@ Rascunho das duas em `arte/fichas.html`. **O centro da Ficha 1 é a tabela de Pa
 
 
 - **Ficha 1 (Personagem)**, frente: identidade, Esquiva, Limiares, PV, Proteção, Cansaço, Arcano, **Palavras Básicas** (o maior bloco), Laços, Comportamento, armas. Verso: retrato, Vivências, itens, perguntas de criação, relações da party, Marcos, notas.
-- **Ficha 2 (Valor)**: a **esfera do Valor** no topo, a borda da folha na cor do Valor, a tabela das 36 palavras com as linhas de verbo, substantivo e adjetivo separadas por fio fino.
+- **Ficha 2 (Valor)**: uma para cada um dos **9 Valores**. A **esfera do Valor** no topo, a borda da folha na cor do Valor, Skill, Retaliação e Ressonâncias, a tabela **Como usar** (atacar, proteger, aliviar, descobrir, mover), a tabela das 36 palavras com as linhas de verbo, substantivo e adjetivo separadas por fio fino, e a parte de magia igual para todos (Graus, casas de Grau máximo e de palavras, o que cada Grau faz com exemplos do Valor, Arcano na magia, Ampliar, conta rápida). Cores de texto mais escuras nos Valores claros (Sublimeyn, Alvorum, Morbidyum) para ler bem no papel.
