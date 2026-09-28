@@ -132,12 +132,11 @@ Por rolagem de teste o jogador ganha em média **1 Arcano** (2 em magia de Grau 
 | 1 | **Vivência**: Vantagem numa rolagem em que uma Vivência sua se aplica (uma por rolagem) |
 | 1 | **Ajudar**: dê Vantagem a um aliado (descreva como) |
 | 1–3 | **Ampliar** uma magia um passo (1 no Grau 1–2, 2 no Grau 3–4, 3 no Grau 5); cada passo também sobe a Dificuldade em +2 e, se a magia sair por Cataclisma, soma +1 Efeito Colateral |
-| 1 | **Palavra extra** numa magia (cada palavra de Valor além da primeira; Palavras Básicas não custam) |
+| 1–3 | **Palavra extra** numa magia: cada palavra de Valor além da primeira, **1** no Grau 1–2, **2** no Grau 3–4, **3** no Grau 5 (Palavras Básicas não custam) |
 | 2 | **Suavizar**: role de novo o d20 de um Efeito Colateral de magia e fique com o melhor |
 | 3 | **Hábito**: o talento especial do seu Comportamento |
 | 3 | **Ação em Dupla**: você e um aliado rolam, os dois usam o maior resultado, e os efeitos se somam |
 | 3 | **Detalhe**: acrescente algo verdadeiro à cena (uma corda, um conhecido, uma saída) — o mestre ajusta |
-| 3 | **Subir o Grau**: conjure 1 Grau acima do seu máximo (os 3 são além do custo do Grau; marque Cansaço igual ao Grau) |
 | igual ao custo | **Conter**: anule um Abalo de até 4 pontos que afete só a sua ficha. Aliados podem ajudar a pagar |
 
 ## 4. Cataclisma (do mestre)
@@ -304,6 +303,6 @@ Quase tudo que cresce com o nível passa pela **Moldura**:
 | 5–7 | 3 | 4 | 4 | +2 | 3 |
 | 8–10 | 4 | 5 | 5 | +2 | 4 |
 
-Regra fácil de lembrar: **Grau máximo e Palavras = Moldura + 1**; **Sintonia é sempre +2**.
+Regra fácil de lembrar: **Grau máximo e Palavras = Moldura + 1**; **Sintonia é sempre +2**. Grau máximo e limite de palavras são **dois números diferentes** (a ficha do Valor tem uma casa para cada): o Grau diz quanto a magia faz; as palavras, o que ela faz. Subir o Grau custa só o custo do Grau; o que fica mais caro no Grau alto é cada palavra extra.
 
 **Sintonia** é o bônus que se soma aos dados de magia. É **+2 em toda Moldura**: quem cresce são os **dados** (2d12 → 3d8 → 4d6 → 6d4, cada um acertando mais que o anterior) e as **palavras** (uma a mais por Moldura, +1 cada). Assim a magia no Grau máximo acerta como o melhor ataque de arma da mesma Moldura, sem regra extra de defesa. Atributo não entra em magia.

@@ -141,7 +141,7 @@ Uma para cada um dos 9 Valores: **o desenho muda inteiro** conforme o Valor (cor
 - **4 espaços extras** para Palavras Estrangeiras, preenchidos ao longo dos níveis.
 - **Canal** (foco, arma, Transcrito...) com o benefício e a fraqueza, e a Sintonia.
 - **Tabela de Graus** resumida: dados, custo, Dificuldade, dano, alvos, alcance, marcador de duração.
-- Lembretes da magia: leitura dos dados (Crítico, Efeitos Colaterais, Desequilíbrio), Esforço, Subir o Grau, **Ampliar** (menu de passos: custo em Arcano, +2 Dificuldade, +1 Efeito Colateral), resumo do que cada Grau faz.
+- Lembretes da magia: leitura dos dados (Crítico, Efeitos Colaterais, Desequilíbrio), Esforço, Subir o Grau (só o custo do Grau), custo das palavras extras pelo Grau, **Ampliar** (menu de passos: custo em Arcano, +2 Dificuldade, +1 Efeito Colateral), resumo do que cada Grau faz.
 - **Magias que eu gosto de usar**: linhas para anotar combinações de palavras e a relação do personagem com cada uma.
 
 Familiares, wyverns e montarias **não têm ficha**: são uma linha na Ficha 1, com nome e 1–2 traços.

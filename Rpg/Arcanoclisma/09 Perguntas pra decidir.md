@@ -527,4 +527,6 @@ As perguntas P-123 a P-126 (gerador de nomes, personagem aleatório com tabela d
 
 ✅ **Arsenal Vivo** (Ressonância III de Conflitüo) detalhado: Lâmina, Lança, Arco ou Escudo, cada um com alcance, palavra de ataque e dano; uma de cada vez, dura o Evento, não pode ser desarmada, arma mágica, um traço à escolha. Em [[03 Valores]].
 
+✅ **Grau ≠ palavras**: o Grau aumenta efeito, dano, Dificuldade, alcance, custo; as palavras especificam e facilitam. **Subir o Grau custa só o custo do Grau**, até o Grau máximo do nível (acima dele, só Dupla ou Última Palavra). **Quanto maior o Grau, mais cara cada palavra extra** (1 no Grau 1–2, 2 no 3–4, 3 no 5); quantas palavras cabem vem só do nível. Na ficha, uma casa para o Grau máximo e outra para o limite de palavras.
+
 ✅ **Ficha do Valor**: ganha *Subir o Grau*, o guia de gasto de Arcano, o menu de Ampliar (cada gasto = uma coisa) e o resumo do que cada Grau faz. Em `arte/fichas.html`.

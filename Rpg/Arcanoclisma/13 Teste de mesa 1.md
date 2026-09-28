@@ -12,7 +12,7 @@
 
 **Magia**: 1 palavra do seu Valor (núcleo) + até 1 palavra de Valor a mais (1 Arcano) + **uma** Palavra Básica de graça (um verbo da tabela ou uma forma). Na Moldura 1: **Grau 1** é grátis e acontece sem rolar (ou vira o meio de uma ação: dano 1d8+1); **Grau 2** custa **1 Arcano** e rola **2d12 + 2 (Sintonia) + 1 por palavra de Valor** (a combinação, o sentido e o Grau combinados com o mestre) pelo tipo de efeito: **Projétil** contra a Esquiva/Dificuldade do alvo; **Teste mágico** (sono, medo, encanto): você não rola, o alvo rola contra **12 + 2 + palavras** (15 ou 16); **Pequeno evento** (mudar o mundo) contra 12. Dano de Grau 2: **1d10 + 2**. Dura até a próxima Falha.
 
-**Bônus**: só as palavras e **Vantagem (+1d6)**, até 2 por rolagem; Desvantagem tira uma. **Arcano** (começa 3, máx. 12): 1 = Vivência (Vantagem) · 1 = Ajudar (Vantagem) · 1 = palavra extra · 3 = Hábito · 3 = Ação em Dupla · 3 = Detalhe · 3 = Subir o Grau (Grau 3, 3d8, contra 13).
+**Bônus**: só as palavras e **Vantagem (+1d6)**, até 2 por rolagem; Desvantagem tira uma. **Arcano** (começa 3, máx. 12): 1 = Vivência (Vantagem) · 1 = Ajudar (Vantagem) · 1 = palavra extra (no Grau 2) · 3 = Hábito · 3 = Ação em Dupla · 3 = Detalhe.
 
 **Atalho ou Passo**: Atalho = o mestre ganha 2 (+3 numa rolagem, ou ignorar condição) ou 4 (falha vira sucesso). Passo de Valor = aceitar o desconforto (Desvantagem, ou 1–2 Cansaço, ou a consequência) → +1 Arcano, dê certo ou não. Dois Atalhos sem nenhum Passo apertam o Laço (ações fora do padrão dele ficam +2, uma relação estremece, a consequência cresce); o Passo solta.
 
@@ -129,7 +129,7 @@ Na briga, uma lamparina cai no feno. O ovo começa a rachar com o calor.
 
 **Ameaça**: "o teto cai quando este pote tiver **6**" (o mestre põe um copo na mesa e coloca Cataclisma nele quando quiser). **Termina quando** o grupo sair com o ovo, ou o teto cair.
 
-- Apagar ou conter o fogo é Grau 3 (uma sala): só com **Subir o Grau** (3 Arcano) ou **Magia em Dupla**.
+- Apagar ou conter o fogo é Grau 3 (uma sala): só com **Magia em Dupla** (o Grau máximo na Moldura 1 é 2).
 - **Dupla sugerida**: **Iara** (Sublimeyn, o Eixo) com qualquer um — *Vapor* ou *Solidificar* + a palavra do outro — efeito de Grau 3; quem conduz rola **3d8 + 2 + 1**, o parceiro soma **+2**, contra **14** (uns 89%). Custa 3 Arcano.
 - **Dupla de opostos**: **Tomé** (Conflitüo) e **Nhanda** (Persona) — o efeito sobe 2 Graus (Grau 4: apagar o celeiro inteiro de uma vez); quem conduz rola **4d6 + 2 + 1 (a palavra dele)**, o parceiro soma **+2**, contra **16 + 2 = 18** (uns 66%); os dois marcam 2 Cansaço, e se sair Ímpar rolam uma Dificuldade a mais. Arriscado e bonito.
 - **O ovo choca**: a wyvern nasce leal a quem estiver mais perto. Quem é? Vira uma linha na ficha (sem ficha própria).

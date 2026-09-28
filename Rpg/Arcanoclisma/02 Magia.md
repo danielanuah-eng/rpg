@@ -26,12 +26,14 @@ Por isso **as tabelas nunca repetem uma raiz**: se o Valor tem *Coragem*, ele n�
 
 ### As palavras somam
 
+**Grau e palavras são coisas diferentes.** O **Grau** diz **quanto** a magia faz: efeito, dano, alvos, área, alcance, duração, Dificuldade, custo e Efeitos Colaterais. As **palavras** dizem **o que** ela faz: especificam e facilitam (+1 cada). O **limite de palavras** e o **Grau máximo** vêm do **nível** (tabela de Moldura em [[01 Regras centrais]]) e ficam escritos na ficha do Valor, cada um na sua casa.
+
 **Cada palavra de Valor soma +1 no total.** Mais palavras deixam o efeito **mais específico**, e o que é específico funciona mais fácil.
 
 Não é preciso explicar a relação do personagem com a palavra. O que precisa é **jogador e mestre concordarem** com três coisas: a **combinação** das palavras, o **sentido** da junção e o **nível do efeito** (o Grau). Se o jogador quiser contar por que aquela palavra é dele, ótimo para a história, mas não muda o número.
 
 - **1 palavra = +1**: é o normal, e as Dificuldades do Grau foram calibradas com ele.
-- Cada palavra a mais custa **1 Arcano** e soma **+1**.
+- Cada palavra a mais soma **+1** e custa Arcano **pelo Grau** da magia: **1** no Grau 1–2, **2** no Grau 3–4, **3** no Grau 5. Quanto maior o Grau, mais caro especificar; **quantas** palavras você pode usar não muda com o Grau, só com o nível.
 - A partir da **3ª palavra de Valor**, cada uma também dá **+1 Cataclisma** ao mestre: o específico demais puxa o mundo junto. (Na Moldura 1, que usa até 2, isso não aparece.)
 - Palavras Básicas não somam nem custam.
 
@@ -44,7 +46,7 @@ Esse é o bônus da magia: ela **não recebe Vantagem paga** (Vivência, Ajudar)
    - **Palavras de Valor**: de 1 até o seu limite (Moldura + 1). **A primeira é do seu Valor** (o núcleo); as outras podem ser do seu Valor ou Palavras Estrangeiras.
    - **Uma Palavra Básica** (uma palavra da lista, uma coisa ou uma forma): **não custa e não conta no limite**. Ela existe para **dar ao Valor ações que ele sozinho não tem** (um Cognitium que precisa **Movimentar**, um Conflitüo que precisa **Esconder**). Precisa fazer sentido concreto.
 3. **Grau**: pelo tamanho do efeito (tabela abaixo), até o seu máximo (Moldura + 1). O mestre tem a palavra final se o efeito pedido for maior do que o Grau.
-4. **Pague**: custo do Grau + 1 Arcano por palavra de Valor além da primeira + os passos de Ampliar. (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
+4. **Pague**: custo do Grau + cada palavra de Valor além da primeira (1 no Grau 1–2, 2 no Grau 3–4, 3 no Grau 5) + os passos de Ampliar. (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
 5. **Role** os dados do Grau + Sintonia + **1 por palavra de Valor**. Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre). **Contra o quê**, depende de quem recebe a magia (abaixo).
 
 ### Três tipos de efeito
@@ -240,7 +242,7 @@ Máximo de passos por magia = sua **Moldura**. Poder espalhado custa: dois passo
 
 ## Subir o Grau
 
-Uma vez por magia, você pode conjurar **1 Grau acima do seu máximo**: pague **3 Arcano além do custo do Grau** e marque **Cansaço igual ao Grau**. A magia usa os dados, a Dificuldade, o dano e os Efeitos Colaterais do Grau novo. É o momento grande, não o de todo dia.
+Para subir o Grau de uma magia, pague **só o custo do Grau novo** (0 / 1 / 2 / 3 / 5). O teto é o **Grau máximo do seu nível**. O Grau novo traz os dados, a Dificuldade, o dano, o tamanho do efeito e os Efeitos Colaterais dele, e deixa as palavras extras mais caras. Passar do seu Grau máximo, só com a **Magia em Dupla** (ou a *Última Palavra*).
 
 ## Esforço (pedir ajuda com Cansaço)
 
