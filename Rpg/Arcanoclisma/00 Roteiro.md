@@ -60,6 +60,8 @@ Perguntas de teste para a mesa (anotar depois de cada sessão):
 
 Objetivo: o mundo explica as regras (por que par é Arcano, por que Eternyr é difícil, por que Dominum pode reagir).
 
+**Princípio (decidido)**: a lore é um **esboço de universo**: resumos, rumores e versões, nada definitivo. O mestre escolhe o tipo de campanha e pode reinterpretar tudo (até a personalidade dos deuses). O que não muda é o jogo ser **profundo, empático e sensível** em qualquer uso.
+
 | # | Tarefa | Status |
 |---|---|---|
 | 2.1 | Cosmogonia: Arcanoclisma, a Cisão, os Primordiais | 🟡 rascunho em [[08 Mundo e entidades]] |

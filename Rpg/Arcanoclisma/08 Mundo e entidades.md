@@ -2,6 +2,13 @@
 
 > Lore **de criação**: o que surgiu, quem existe, onde fica, como vivem. Não tem história fechada nem vilão com plano: são peças para cada mesa montar a sua campanha. Nomes novos são proposta.
 
+## Como usar esta lore
+
+- **O mundo é um esboço.** Aqui há resumos, rumores e **versões**, nunca a palavra final. Onde uma pergunta fica sem resposta, o livro oferece versões (para sortear, escolher ou ignorar).
+- **O mestre decide o tipo de campanha**: aventura, horror, política, escola de magia, viagem, guerra, o que a mesa quiser. Não existe receita básica.
+- **O mestre pode reinterpretar tudo**: dar personalidades novas aos deuses, mudar a origem dos dragões, inventar um Reino, apagar outro. O sistema funciona com qualquer versão.
+- **O que não muda**: em qualquer campanha, o jogo é **profundo, empático e sensível**. As pessoas, o que elas sentem e o que evitam sentir (Laços, Atalhos, Passos) importam em toda Era e em todo tom.
+
 ## A origem (texto de abertura, rascunho)
 
 > No começo havia uma força só, e ela não pensava: equilibrava. Chamaram-na, muito depois, de **Arcanoclisma**.
@@ -160,6 +167,55 @@ Para eles, a **humanidade é passageira e interessante**: os mortais e os outros
 | Primitivum | **Dragão-Musgo** | verde-musgo e âmbar, galhos nos chifres | âmbar, como vaga-lumes | raízes que prendem, ou um instante como bicho |
 
 Os números estão no [[11 Bestiário]] (Dragonete, Jovem, Adulto, Ancião, Wyverns).
+
+## Versões (para sortear, escolher ou ignorar)
+
+### Como as pessoas veem um Comprometido (d6, por lugar)
+
+| d6 | Aqui, um Comprometido é... |
+|---|---|
+| 1 | **vizinho**: magia é como ofício; o ferreiro esquenta o metal com a mão e ninguém repara |
+| 2 | **arma**: todo Comprometido deve serviço à cidade, à guarda ou ao senhor local |
+| 3 | **santo**: pedem bênção, cura, chuva; e cobram quando não vem |
+| 4 | **doente**: "foi um de vocês que abriu a Ferida"; é vigiado, às vezes expulso |
+| 5 | **ferramenta**: contratado, alugado, vendido em contrato; valorizado, nunca igual |
+| 6 | **ninguém sabe**: a magia ali é segredo; quem tem, esconde |
+
+### Como a magia desperta (d6)
+
+| d6 | O despertar |
+|---|---|
+| 1 | **numa crise**: diante de algo que importa e dói, a magia sai (a tempestade, o chiqueiro, a perda) |
+| 2 | **herança**: a família inteira é Comprometida; esperam isso de você, queira ou não |
+| 3 | **contato**: anos de convivência com um povo infundido, ou com alguém que ama um |
+| 4 | **Ferida**: você esteve perto de uma Ruptura e voltou diferente |
+| 5 | **escola ou ritual**: um teste, uma iniciação, um juramento |
+| 6 | **toque**: um semideus, um dragão ou um Primordial olhou para você. Só isso. |
+
+### De onde vêm os dragões (d4)
+
+| d4 | Versão |
+|---|---|
+| 1 | **Desejo grande demais**: quando um desejo não cabe mais em alguém, ele sai do corpo e ganha o seu. Diz-se que o **Vyal** desejou a atenção do pai com tanta força que o desejo começou a virar dragão por fora (a pele). |
+| 2 | **Ovos de antes da Cisão**: o Arcanoclisma inteiro deixou ovos; cada um chocou num Valor quando ele se dividiu. |
+| 3 | **Sonho dos Valores**: cada Valor sonha consigo mesmo, e às vezes o sonho acorda com asas. |
+| 4 | **Ninguém sabe**, e os dragões riem quando perguntam. |
+
+### Povos infundidos (esboço; nomes são proposta)
+
+Povos que **não conjuram: são feitos de magia**. O Valor está no corpo. Vivem em Contacto, misturados ou em terras próprias.
+
+| Valor | Povo | No corpo | Um rumor |
+|---|---|---|---|
+| Conflitüo | **Vessai** | nascem com uma cicatriz que brilha quando alguém ameaça os seus | nenhum Vessai perde um duelo que escolheu lutar |
+| Sublimeyn | **Oyari** | a pele muda de estado com o humor: pedra, água, vidro, vapor | um Oyari muito triste vira chuva e não volta |
+| Dominum | **Vahni** | marcas de corrente de nascença; sentem fisicamente a quem são leais | um Vahni sem ninguém a quem ser leal adoece |
+| Persona | **Zahuni** | o rosto muda com o que sentem; mentir para um Zahuni é inútil | Zahun anda entre eles com um rosto que ninguém lembra |
+| Alvorum | **Idrae** | olhos que acendem no escuro; sonham acordados | um Idrae que fecha os olhos por uma noite inteira esquece o próprio nome |
+| Morbidyum | **Velhenos** | ossos claros, não sangram; sentem quanto falta para alguém morrer | cuidam dos cemitérios de todos os povos, de graça |
+| Cognitium | **Sem-Trono** | passam despercebidos; quem fala com eles esquece a conversa | alguns acham que o Sem-Nome é um deles |
+| Eternyr | **Ossyrianos** | vivem um instante atrasados, ou adiantados; envelhecem devagar | um Ossyriano sempre sabe quando você vai chegar |
+| Primitivum | **Tahwi** | chifres, pelos, musgo, escamas: cada família é meio bicho de um jeito | quando um Tahwi morre, uma árvore nasce onde ele caiu |
 
 ## Arcano, Cataclisma e o que nasce deles
 

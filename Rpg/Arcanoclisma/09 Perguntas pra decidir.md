@@ -450,3 +450,13 @@ Sua resposta: ✅ aplicada, com *Cuidar* → **Proteger**, *Notar* → **Observa
 
 ✅ **Criar PNJ**: aba nova em [[10 Adversários - como criar]] (qualquer PNJ, não só inimigo), com Dificuldade = 11 + Moldura, Básicas e Valor. **Conta da ficha** conferida em [[05 Personagem e níveis]].
 
+## Rodada 21 — Lore
+
+✅ **Tabela de Interações em colunas por atributo** (6 × 8, 48 verbos; d6 atributo, d8 verbo): entram Prender, Jogar, Entrar, Enrolar, Sair e **Armar** (este meu, para fechar a coluna de Inteligência). **Armadilha** vira coisa. Dominum trocou *Prender* por **Algemar**.
+
+✅ **Tom**: depende do mestre. A lore é um universo esboçado (resumos, rumores, versões), nada definitivo; em qualquer uso o jogo é profundo, empático, sensível.
+
+✅ **Como veem os Comprometidos**: depende da campanha; sem receita. O mestre pode reinterpretar a lore e dar novas personalidades aos deuses.
+
+➡️ Aplicado em [[08 Mundo e entidades]] como **Versões** (d6 como as pessoas veem um Comprometido, d6 como a magia desperta, d4 origem dos dragões) e um **esboço dos 9 povos infundidos** (Vessai, Oyari, Vahni, Zahuni, Idrae, Velhenos, Sem-Trono, Ossyrianos, Tahwi; nomes são proposta).
+
