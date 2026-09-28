@@ -191,13 +191,15 @@ Montarias comuns (cavalo, mula, barco) podem ser compradas; **wyverns e familiar
 | Tinta de Palavra | escreva uma palavra de qualquer Valor num objeto; vale uma vez | 30 o |
 | Sal do Equilíbrio | depois de rolar, troque a paridade de um dado | 40 o |
 
+**Bronze Arco** é um metal **comum** no mundo: feito de magia, **conduz magia** e é **mais resistente** que o bronze e o ferro. Qualquer arma, armadura ou Canal pode ser de Bronze Arco (+50% no preço): serve de Canal sem perder o uso de arma, não quebra por magia, e aceita runas. Dourado-escuro; as runas acendem na cor do Valor de quem o usa.
+
 ## Materiais (módulo avançado)
 
 Fabricação fica para um **módulo avançado / expansão**. Por enquanto, materiais são só tesouro para vender ou trocar. A tabela fica como semente:
 
 | Valor | Material |
 |---|---|
-| Conflitüo | Aço Riscado · **Bronze Arco** (metal arcano dourado-escuro; aceita runas de Conflitüo, e armas dele não quebram contra magia) |
+| Conflitüo | Aço Riscado |
 | Sublimeyn | Cristal de Estado |
 | Dominum | Osso de Fera Domada |
 | Persona | Lágrima Seca |

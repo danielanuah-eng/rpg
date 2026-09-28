@@ -490,3 +490,7 @@ Sua resposta: ✅ aplicada, com *Cuidar* → **Proteger**, *Notar* → **Observa
 
 ✅ **Bestiário: +7** (Imperador de AlvoMarfim, Mafrisa, Professora Ciantia, o Antigo Bibliotecário, Autômato do Postulário, o Ministrum, a Dama da Noite de Fhim): **287**.
 
+✅ **Nomes propostos: passam todos** (por enquanto).
+
+✅ **Bronze Arco**: metal **comum**, feito de magia, **conduz magia** e é **mais resistente**. Em [[06 Itens e dinheiro]] (qualquer arma, armadura ou Canal pode ser de Bronze Arco, +50% no preço) e [[08 Mundo e entidades]].
+

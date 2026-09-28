@@ -125,7 +125,7 @@ O mundo tem **humanos** e tem **outros povos**. As culturas nascem do lugar e do
   - **OulVeil** — cidade praiana e portuária do interior, calma, de pesca, coberta por um **grande véu de aurora** no céu, dia e noite. Dizem que é um resquício da separação entre Arcano e Cataclisma; ninguém sabe explicar, só admirar.
   - **Vau-Grande** — cidade de rio, com o **Sino da Maré** que há duzentos anos avisa as cheias.
   - **Confluência** — planície vasta cheia de criaturas mágicas pacíficas, onde Arcano e Cataclisma vivem em **homeostase pacífica**: a magia que sobra é absorvida pela terra. Ali fica **GrandGaleonis**, a escola-cidade de magia para Comprometidos.
-- **Bronze Arco**: metal arcano do mundo, dourado-escuro, que aceita runas. Armas de Bronze Arco cravejadas de runas de Conflitüo são as mais caras (e as mais conjuradas) das arenas.
+- **Bronze Arco**: metal **comum** no mundo, feito de magia; **conduz magia** e é **mais resistente** que os metais comuns. Ferreiros de todo canto trabalham com ele; armas, ferramentas e focos de Bronze Arco são o padrão de quem conjura.
 - **Dinheiro**: o **Ordyn** (plural Ordynus) é uma moeda cunhada em **Oryuundis**, um metal que **não existia**: ele **nasceu da própria palavra**. Alguém disse, com todo o sentido que uma palavra pode ter, que precisava de uma moeda **neutra, imparcial**, que nenhuma magia pudesse tocar; e a palavra criou um metal **imune a ela mesma**. Por isso ele é tão específico: o Oryuundis **só é imune à magia enquanto é moeda**. É a prova de que a palavra pode criar até aquilo que escapa dela.
 
 ## Dragões e wyverns
