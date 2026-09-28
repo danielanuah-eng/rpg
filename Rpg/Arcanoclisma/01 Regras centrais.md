@@ -284,7 +284,7 @@ Ao marcar o último PV, escolha:
 
 - **Apagar**: você cai inconsciente e volta depois do Evento com 1 PV. Role 1d12; se tirar **até o seu nível**, ganha uma **Marca do Cataclisma** (risque 1 casa de Arcano máximo, e diga que marca ficou no seu corpo).
 - **Última Palavra**: conjure uma magia 1 Grau acima do seu máximo, sem pagar Arcano e sem Efeitos Colaterais. Depois, seu personagem morre.
-- **Jogar os dados**: role 2d12. **Crítico ou Par**: levanta com PV e Cansaço limpos. **Equilíbrio**: levanta com 1 PV e uma Marca do Cataclisma. **Ímpar**: morre.
+- **Jogar os dados**: role 2d12. **Crítico ou os dois pares**: levanta com PV e Cansaço limpos. **Um par e um ímpar**: levanta com 1 PV e uma Marca do Cataclisma. **Os dois ímpares**: morre.
 
 (Morbidyum tem regra própria, ver [[03 Valores]].)
 
@@ -305,4 +305,4 @@ Quase tudo que cresce com o nível passa pela **Moldura**:
 
 Regra fácil de lembrar: **Grau máximo e Palavras = Moldura + 1**; **Sintonia é sempre +2**. Grau máximo e limite de palavras são **dois números diferentes** (a ficha do Valor tem uma casa para cada): o Grau diz quanto a magia faz; as palavras, o que ela faz. Subir o Grau custa só o custo do Grau; o que fica mais caro no Grau alto é cada palavra extra.
 
-**Sintonia** é o bônus que se soma aos dados de magia. É **+2 em toda Moldura**: quem cresce são os **dados** (2d12 → 3d8 → 4d6 → 6d4, cada um acertando mais que o anterior) e as **palavras** (uma a mais por Moldura, +1 cada). Assim a magia no Grau máximo acerta como o melhor ataque de arma da mesma Moldura, sem regra extra de defesa. Atributo não entra em magia.
+**Sintonia** é o bônus que se soma aos dados de magia. É **+2 em toda Moldura**: quem cresce são os **dados** (2d12 → 3d8 → 4d6 → 6d4, cada um acertando mais que o anterior) e as **palavras** (uma a mais por Moldura, +1 cada). Assim a magia no Grau máximo acerta como o melhor ataque de arma da mesma Moldura, sem regra extra de defesa. Palavras Básicas não somam na magia (só a grátis entra, como palavra, sem número).

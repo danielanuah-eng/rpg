@@ -1,0 +1,300 @@
+<title>Livro · Regras centrais</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+:root{--ground:#15141B;--ink:#ECE5D5;--muted:#A69E8E;--brass:#B8955A;--paper:#F1EADB;--paper2:#F8F2E4;--pink:#2A2420;--pmute:#6E6254;--rule:#D8CDB7;--gold:#8C6E3C;--arc:#9A7A2E;--cat:#8E3B2A;color-scheme:dark}
+[hidden]{display:none!important}
+body{background:var(--ground);color:var(--ink);font:400 16px/1.6 "Spectral",Georgia,serif;padding-inline:clamp(16px,4vw,48px);padding-block:40px 64px}
+.wrap{max-width:920px;margin-inline:auto;display:flex;flex-direction:column;gap:36px}
+.intro{display:flex;flex-direction:column;gap:10px;max-width:66ch}
+.eyebrow{font:400 12px/1 "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+.intro h1{font:400 clamp(32px,5vw,50px)/1.05 "Marcellus SC",Georgia,serif;margin:0}
+.intro p{margin:0;color:var(--muted)}
+nav.toc{display:flex;flex-wrap:wrap;gap:8px}
+nav.toc a{font:400 13px/1 "IBM Plex Mono",monospace;color:var(--ink);text-decoration:none;border:1px solid #3A3644;border-radius:999px;padding:7px 12px}
+nav.toc a:hover{border-color:var(--brass)}
+.page{background:var(--paper);color:var(--pink);border-radius:3px;padding:clamp(20px,4.5vw,56px) clamp(18px,4.5vw,56px) clamp(18px,3vw,32px);position:relative;box-shadow:0 18px 40px rgba(0,0,0,.45);display:flex;flex-direction:column;gap:18px}
+.page::before{content:"";position:absolute;inset:10px;border:1px solid var(--gold);opacity:.4;pointer-events:none;border-radius:2px}
+.page::after{content:"";position:absolute;inset:16px;pointer-events:none;background:
+ linear-gradient(var(--gold),var(--gold)) top left/34px 1.5px no-repeat,linear-gradient(var(--gold),var(--gold)) top left/1.5px 34px no-repeat,
+ linear-gradient(var(--gold),var(--gold)) top right/34px 1.5px no-repeat,linear-gradient(var(--gold),var(--gold)) top right/1.5px 34px no-repeat,
+ linear-gradient(var(--gold),var(--gold)) bottom left/34px 1.5px no-repeat,linear-gradient(var(--gold),var(--gold)) bottom left/1.5px 34px no-repeat,
+ linear-gradient(var(--gold),var(--gold)) bottom right/34px 1.5px no-repeat,linear-gradient(var(--gold),var(--gold)) bottom right/1.5px 34px no-repeat;opacity:.8}
+.run{display:flex;justify-content:space-between;gap:12px;font:400 11px/1 "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.folio{margin-top:auto;padding-top:10px;text-align:center;font:400 13px/1 "Marcellus SC",Georgia,serif;color:var(--gold)}
+.folio::before,.folio::after{content:"";display:inline-block;width:40px;height:1px;background:var(--gold);vertical-align:middle;margin:0 10px;opacity:.6}
+h2{font:400 clamp(30px,4.4vw,44px)/1.05 "Marcellus SC",Georgia,serif;margin:0;text-wrap:balance}
+h3{font:400 24px/1.15 "Marcellus SC",Georgia,serif;margin:0;text-wrap:balance;border-bottom:1px solid var(--gold);padding-bottom:6px}
+h4{font:400 18px/1.2 "Marcellus SC",Georgia,serif;margin:0;color:var(--gold)}
+p{margin:0}
+.prose{display:flex;flex-direction:column;gap:12px;max-width:68ch}
+.pl{max-width:68ch}
+.cols{columns:2 300px;column-gap:36px}
+.cols>*{break-inside:avoid;margin:0 0 12px}
+.lede{font-size:18px;line-height:1.55}
+.lede::first-letter{font:400 3.3em/.8 "Marcellus SC",Georgia,serif;float:left;margin:6px 8px 0 0;color:var(--gold)}
+.quote{font-style:italic;color:var(--pmute);border-left:2px solid var(--gold);padding-left:12px}
+b,strong{font-weight:600}
+.box{border:1.5px solid var(--gold);border-radius:4px;background:var(--paper2);padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.box.rust{border-color:var(--cat)}
+.lab{font:400 11px/1.2 "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--pmute)}
+.formula .fx{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font:400 clamp(24px,3.6vw,32px)/1.1 "Marcellus SC",Georgia,serif}
+.formula .fx i{font-style:normal;color:var(--gold)}
+.fr{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:baseline;font-size:15px}
+@media (max-width:520px){.fr{grid-template-columns:1fr;gap:2px}}
+ol.steps{margin:0;padding:0;list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+ol.steps li{counter-increment:s;border-top:1.5px solid var(--gold);padding-top:8px;font-size:15px;display:flex;flex-direction:column;gap:4px}
+ol.steps li::before{content:counter(s);font:400 30px/1 "Marcellus SC",Georgia,serif;color:var(--gold)}
+ol.steps b{font:400 17px/1.2 "Marcellus SC",Georgia,serif;font-weight:400}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px;color:var(--pink)}
+th{font:400 11px/1.25 "IBM Plex Mono",monospace;letter-spacing:.05em;text-transform:uppercase;color:var(--pmute);text-align:left;padding:7px 8px;border-bottom:1.5px solid var(--gold);vertical-align:bottom}
+td{padding:8px;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--pink)}
+tbody th{font:400 15px/1.2 "Marcellus SC",Georgia,serif;text-transform:none;letter-spacing:0;color:var(--gold);border-bottom:1px solid var(--rule);vertical-align:top}
+.num td,.num th{font-variant-numeric:tabular-nums}
+.types{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:780px){.types{grid-template-columns:1fr}}
+.ty{border:1.5px solid var(--gold);border-radius:4px;background:var(--paper2);padding:14px;display:flex;flex-direction:column;gap:8px}
+.ty h4{font-size:21px;color:var(--pink)}
+.ty .q{font:italic 400 15px/1.35 "Spectral",serif;color:var(--gold)}
+.ty .ex{font:italic 400 14px/1.4 "Spectral",serif;color:var(--pmute)}
+.ty dl{margin:0;display:grid;grid-template-columns:1fr;gap:6px 10px;font-size:14.5px}
+.ty dt{font:400 10.5px/1.7 "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--pmute)}
+.ty dd{margin:0 0 4px}
+.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch}
+.flow .fq{flex:1 1 200px;border:1px dashed var(--gold);border-radius:4px;padding:10px 12px;font-size:15px}
+.flow .fq b{display:block;font:400 19px/1.2 "Marcellus SC",Georgia,serif;font-weight:400;color:var(--gold);margin-top:4px}
+.ladder{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:14px}
+.ladder span{border:1px solid var(--rule);border-radius:3px;padding:4px 8px;background:var(--paper2)}
+.ladder span b{font:400 10.5px/1 "IBM Plex Mono",monospace;color:var(--gold);margin-right:5px;font-weight:400}
+.ladder i{font-style:normal;color:var(--gold)}
+.sheet{border:1.5px solid var(--gold);border-radius:4px;background:#FBF7EE;padding:12px 14px;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.srow{display:grid;grid-template-columns:90px 1fr;gap:10px;align-items:center}
+.srow .n{font:400 15px/1 "Marcellus SC",Georgia,serif;color:var(--gold)}
+.cks{display:flex;flex-wrap:wrap;gap:6px}
+.ck{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--rule);border-radius:3px;padding:3px 7px;background:var(--paper2);font-size:13px}
+.ck::before{content:"";width:12px;height:12px;border:1.5px solid var(--gold);border-radius:2px}
+.ck.on::before{background:var(--gold);box-shadow:inset 0 0 0 2px var(--paper2)}
+.ck.free{border-color:var(--gold)}
+.tally{display:flex;flex-wrap:wrap;gap:8px 18px;border-top:1px solid var(--rule);padding-top:8px;font-size:14px}
+.tally b{font-variant-numeric:tabular-nums}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+.dice{display:flex;gap:6px;flex-wrap:wrap}
+.d{width:30px;height:30px;border-radius:6px;display:inline-grid;place-items:center;font:400 14px/1 "IBM Plex Mono",monospace;border:1.5px solid var(--arc);color:var(--arc);background:var(--paper2)}
+.d.odd{border-color:var(--cat);color:var(--cat);border-style:dashed}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;align-items:center}
+.note{font-size:14px;color:var(--pmute)}
+.d20 td:first-child{font:400 15px/1 "Marcellus SC",Georgia,serif;color:var(--cat);width:34px;text-align:center}
+.d20 td:nth-child(2){white-space:nowrap;font-weight:600}
+.stp{display:grid;grid-template-columns:64px 1fr;gap:18px;border-top:1.5px solid var(--gold);padding-top:14px}
+@media (max-width:560px){.stp{grid-template-columns:1fr;gap:4px}}
+.sn{font:400 64px/1 "Marcellus SC",Georgia,serif;color:var(--gold)}
+.sb{display:flex;flex-direction:column;gap:12px;min-width:0}
+.sb h3{border:0;padding:0;font-size:26px}
+.sfaz{display:flex;flex-direction:column;gap:10px;max-width:70ch}
+.sinf{border-left:3px solid var(--gold);padding:4px 0 4px 14px;display:flex;flex-direction:column;gap:6px}
+.sinf ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:15px}
+.sex{border:1.5px dashed var(--cat);border-radius:4px;padding:10px 14px;background:var(--paper2);display:flex;flex-direction:column;gap:6px;font-size:15px}
+.sex .lab{color:var(--cat)}
+.eqn{font:400 18px/1.4 "Marcellus SC",Georgia,serif;text-align:center;padding:8px;border:1px solid var(--rule);border-radius:4px;background:var(--paper2)}
+.eqn i{font-style:normal;color:var(--gold);margin:0 6px}
+footer{font:400 12px/1.5 "IBM Plex Mono",monospace;color:var(--muted)}
+.words52{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px 16px;font-size:13.5px;line-height:1.35}
+@media (max-width:760px){.words52{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.words52{grid-template-columns:1fr}}
+.words52 div{border-bottom:1px dotted var(--rule);padding-bottom:4px;color:var(--pmute)}
+.words52 b{display:block;font:400 16px/1.2 "Marcellus SC",Georgia,serif;color:var(--pink);font-weight:400}
+.sfaz table{font-size:14px}
+</style>
+
+<div class="wrap">
+<div class="intro"><span class="eyebrow">Arcanoclisma · Livro · rascunho de diagramação</span>
+<h1>Capítulo 1 · Regras centrais</h1>
+<p>As páginas do livro com o jogo inteiro fora da magia: a fórmula, as Palavras Básicas, o teste passo a passo, Arcano e Cataclisma, Laços, Eventos e o corpo do personagem.</p>
+<nav class="toc" aria-label="Páginas"><a href="#r1">Abertura</a><a href="#r2">Palavras Básicas</a><a href="#r3">O teste, passo a passo</a><a href="#r5">Arcano e Cataclisma</a><a href="#r6">Laços</a><a href="#r7">Eventos</a><a href="#r8">O corpo</a><a href="#r9">Moldura</a></nav></div>
+
+<article class="page" id="r1" aria-label="Página 1">
+<div class="run"><span>Capítulo 1</span><span>Regras centrais</span></div>
+<h2>Um passo diante do desconforto</h2>
+<div class="cols">
+<p class="lede">No Arcanoclisma, cada personagem é um Comprometido: alguém que carrega um Valor e paga por ele. O jogo pergunta, o tempo todo, o que o personagem faz quando a coisa aperta: pega o caminho de sempre ou dá um passo diante do desconforto.</p>
+<p>Quando o personagem tenta algo arriscado, o jogador <b>descreve a ação com uma ou duas Palavras Básicas</b> ("Furtar", "Bater Rápido") e rola <b>2d12</b>, somando os números dessas palavras, contra uma <b>Dificuldade</b>.</p>
+<p>Cada dado <b>par</b> dá <b>1 Arcano</b> ao jogador. Cada dado <b>ímpar</b> dá <b>1 Cataclisma</b> ao mestre. Par é o que se fecha e se controla; ímpar é o incompleto, o que muda. Os dados não dizem só se deu certo: dizem <b>quem fica com a cena</b>.</p>
+<p>Não há turnos nem rodadas. O jogo anda em <b>Eventos</b> (uma briga, uma conversa, uma fuga). Os jogadores agem; quando alguém falha ou rola por Cataclisma, <b>o mestre emoldura</b> a cena e o mundo responde. Efeitos duram por <b>marcadores</b> (até a próxima Falha, até o fim do Evento), nunca por turno.</p>
+<p>Todo personagem tem <b>Laços</b>: relações, atitudes e sentimentos difíceis. Quando aperta, ele escolhe entre o <b>Atalho</b> (o jeito de sempre, que o mundo cobra depois) e o <b>Passo de Valor</b> (o difícil, que aproxima do que importa).</p>
+</div>
+<div class="box formula"><span class="lab">A fórmula de tudo</span>
+<div class="fx"><span>Dados</span><i>+</i><span>Palavras</span><i>≥</i><span>Dificuldade</span></div>
+<div class="fr"><span class="lab">Teste comum</span><span><b>2d12</b> + os números de <b>até duas Palavras Básicas</b> que descrevem a ação.</span></div>
+<div class="fr"><span class="lab">Magia</span><span>os <b>dados do Grau</b> + <b>2</b> + <b>1 por palavra de Valor</b> (Capítulo 2).</span></div>
+<div class="fr"><span class="lab">Adversários</span><span>o mestre rola <b>d20</b> + o número do adversário.</span></div>
+<p class="note">Igual ou maior que a Dificuldade: deu certo. Menor: não deu, e o mestre emoldura.</p></div>
+<div class="folio">1</div>
+</article>
+
+<article class="page" id="r2" aria-label="Página 2">
+<div class="run"><span>Capítulo 1</span><span>Palavras Básicas</span></div>
+<h2>Os seus números ficam nas palavras</h2>
+<p class="pl"><b>Não existem atributos.</b> Existe uma lista de <b>52 Palavras Básicas</b>: as ações que todo mundo no mundo faz. É nela, palavra por palavra, que você escreve os números do seu personagem, onde ele é bom e onde é ruim. Na hora de agir, você <b>mistura as palavras como quiser</b>. Monstros e PNJs usam a mesma lista.</p>
+<div class="words52">
+<div><b>Abrir</b> forçar e escancarar</div><div><b>Acabar</b> terminar de vez, o golpe final</div><div><b>Agarrar</b> segurar, derrubar, desarmar</div><div><b>Aguentar</b> dor, veneno, frio, fome</div>
+<div><b>Alcançar</b> pegar quem foge, chegar primeiro</div><div><b>Ameaçar</b> intimidar, dar ultimato</div><div><b>Apagar</b> fogo, luz, rastros</div><div><b>Armar</b> armadilha, mecanismo, esquema</div>
+<div><b>Atirar</b> arco, funda, arremesso</div><div><b>Atrair</b> seduzir, distrair</div><div><b>Bater</b> corpo a corpo, com arma ou sem</div><div><b>Chamar</b> liderar, inspirar, se fazer ouvir</div>
+<div><b>Conectar</b> ligar pessoas e ideias, criar confiança</div><div><b>Conjurar</b> espetáculo, truque de palco</div><div><b>Consertar</b> ofício, forjar, cozinhar</div><div><b>Convencer</b> persuadir, pedir</div>
+<div><b>Criar</b> arte, música, inventar</div><div><b>Desviar</b> reagir, escapar de rajada ou queda</div><div><b>Encantar</b> deslumbrar, conquistar um público</div><div><b>Enrolar</b> ganhar tempo no papo, amarrar com corda</div>
+<div><b>Entrar</b> achar a entrada, se infiltrar</div><div><b>Esconder</b> furtividade, sumir na multidão</div><div><b>Estudar</b> ler, pesquisar, entender magia alheia</div><div><b>Fazer</b> produzir com receita: poção, ferramenta</div>
+<div><b>Firmar</b> resistir ao medo, ao encanto</div><div><b>Forçar</b> força bruta, empurrar, puxar</div><div><b>Formar</b> organizar gente, formação, plano</div><div><b>Fugir</b> escapar de perseguição e de amarras</div>
+<div><b>Furtar</b> achar a brecha e tirar sem ser visto</div><div><b>Intuir</b> sentir intenção, mentira, perigo</div><div><b>Investigar</b> examinar uma cena, juntar pistas</div><div><b>Jogar</b> arremessar para alguém, jogos de habilidade</div>
+<div><b>Lembrar</b> saber o que se aprendeu, um rosto antigo</div><div><b>Levantar</b> erguer, carregar</div><div><b>Mentir</b> enganar, disfarçar, blefar</div><div><b>Mexer</b> mão leve, fechadura, truque</div>
+<div><b>Montar</b> cavalgar, conduzir, lidar com bicho</div><div><b>Movimentar</b> correr, saltar, escalar, nadar</div><div><b>Negociar</b> comprar, vender, pechinchar</div><div><b>Observar</b> ver, ouvir, notar o que mudou</div>
+<div><b>Pensar</b> planejar, decidir, imaginar saídas</div><div><b>Prender</b> imobilizar, trancar alguém</div><div><b>Preparar</b> ritual, remédio, emboscada</div><div><b>Procurar</b> vasculhar com calma</div>
+<div><b>Proteger</b> cobrir alguém, acalmar quem está em pânico</div><div><b>Quebrar</b> arrombar, partir, derrubar</div><div><b>Raciocinar</b> deduzir, calcular, resolver enigma</div><div><b>Rápido</b> fazer depressa, reflexo, chegar antes</div>
+<div><b>Rastrear</b> pegadas, cheiro, pistas</div><div><b>Reconhecer</b> identificar pessoa, magia, perigo</div><div><b>Sair</b> saber a hora de ir, sair de uma enrascada</div><div><b>Sobreviver</b> se orientar, abrigo, ler o tempo</div>
+</div>
+<div class="two">
+<div class="box"><span class="lab">Na criação</span>
+<p>Escreva, em <b>oito palavras diferentes</b>: <b>+2 · +1 · +1 · +1 · +1 · +1 · −1 · −1</b>. As outras 44 ficam em 0. Nenhuma palavra passa de <b>+3</b>. A cada nível, um avanço pode dar <b>+1 em duas palavras</b>.</p>
+<p class="note">Pense no passado do personagem: o que ele fez a vida inteira vira +1 ou +2; o que ele nunca soube fazer vira −1.</p></div>
+<div class="box"><span class="lab">Duas palavras no máximo</span>
+<p>Um teste soma <b>uma ou duas</b> palavras que descrevem a ação. Com as duas em +3, o teste mais forte do jogo dá +6. A descrição precisa fazer <b>sentido concreto</b>: o mestre pode recusar uma palavra que não combina com o que foi descrito, e ajuda a achar a certa quando o jogador descreve sem ela.</p></div>
+</div>
+<div class="folio">2</div>
+</article>
+
+<article class="page" id="r3" aria-label="Página 3">
+<div class="run"><span>Capítulo 1</span><span>O teste, passos 1 e 2</span></div>
+<h2>O teste, passo a passo</h2>
+<p class="pl">Todo teste do jogo segue os mesmos cinco passos. Em cada um: o que você faz, o que influencia a decisão e o mesmo exemplo do começo ao fim: <b>Castian</b>, de OulVeil, nível 1, tentando convencer um guarda a deixar a Dona Iolanda, ferida, passar pela ponte.</p>
+<section class="stp"><div class="sn">1</div><div class="sb"><h3>Descreva a ação</h3><div class="sfaz"><p>Diga o que o personagem faz, na ficção, e escolha <b>uma ou duas Palavras Básicas</b> que descrevem a ação. Os números dessas palavras são o que você soma na rolagem.</p><p>A mesma situação aceita caminhos diferentes, e cada caminho usa palavras diferentes. Passar pelo guarda pode ser <i>Convencer</i>, <i>Mentir</i>, <i>Esconder</i>, <i>Ameaçar</i> ou <i>Bater Rápido</i>. Escolher como agir é escolher quais números entram, e o que o mundo vai responder.</p><p>Nem todo gesto pede teste. Se não há risco, pressa ou oposição, a ação simplesmente acontece. O teste existe quando o resultado importa e pode dar errado.</p></div><div class="sinf"><span class="lab">O que influencia este passo</span><ul><li><b>A ficção</b>: a palavra precisa combinar com o que foi descrito. O mestre pode recusar uma palavra que não faz sentido, e ajuda a achar a certa quando você descreve sem ela.</li><li><b>Os seus números</b>: as palavras onde o personagem é bom puxam a descrição para elas. Tudo bem: é assim que o personagem aparece na mesa.</li><li><b>Duas palavras no máximo</b>: uma diz <i>o que</i> ele faz; a outra, se houver, <i>como</i> (Bater <i>Rápido</i>, Convencer <i>Raciocinando</i>).</li><li><b>Magia de Grau 1</b> pode ser o meio da ação ("Atirar uma agulha de gelo"): o teste é este, com as Palavras Básicas.</li><li><b>Laço apertado</b>: se a ação vai contra o padrão de um Laço apertado, ela fica mais difícil (passo 2).</li></ul></div><div class="sex"><span class="lab">Com o Castian</span><p><i>"Eu me ponho entre o guarda e a Dona Iolanda e falo baixinho, como falava com a vila na noite da tempestade."</i> Isso é <b>Convencer</b> (+1) <b>Protegendo</b> (+2): <b>+3</b> na rolagem.</p></div></div></section>
+<section class="stp"><div class="sn">2</div><div class="sb"><h3>Ache a Dificuldade</h3><div class="sfaz"><p>O mestre diz a <b>Dificuldade</b>: o número que a rolagem precisa alcançar. Ele parte da escada abaixo, na coluna da <b>Moldura do desafio</b> (não a do grupo), e ajusta pela história.</p><div class="tw"><table class="num"><thead><tr><th></th><th>M1</th><th>M2</th><th>M3</th><th>M4</th><th>chance típica</th></tr></thead><tbody><tr><th>Fácil</th><td>9</td><td>10</td><td>11</td><td>12</td><td>~88%</td></tr><tr><th>Médio</th><td>12</td><td>13</td><td>14</td><td>15</td><td>~68%</td></tr><tr><th>Difícil</th><td>15</td><td>16</td><td>17</td><td>18</td><td>~46%</td></tr><tr><th>Muito difícil</th><td>19</td><td>20</td><td>21</td><td>22</td><td>~19%</td></tr><tr><th>Lendário</th><td>23</td><td>24</td><td>25</td><td>26</td><td>~5%</td></tr></tbody></table></div><p>Contra um <b>adversário</b>, a Dificuldade é a dele (cerca de 11 + a Moldura dele). A chance é a de quem rola as palavras certas, sem Vantagem.</p></div><div class="sinf"><span class="lab">O que influencia este passo</span><ul><li><b>A Moldura do desafio</b>: a porta de uma vila é Moldura 1 para sempre; o cofre de um semideus é Moldura 4.</li><li><b>As palavras do adversário</b>: agir contra uma palavra forte dele (se esconder de quem Observa bem) sobe a Dificuldade em +2; contra a fraca, desce 2.</li><li><b>O lugar</b>: Terrenos, Marés e Abalos mudam a Dificuldade de certas ações.</li><li><b>Laço apertado</b>: ação diferente do padrão do Laço, +2.</li><li><b>O mestre</b>: a escada é ponto de partida; a história, os Valores e a situação sobem ou descem o número.</li></ul></div><div class="sex"><span class="lab">Com o Castian</span><p>O Guarda da Ponte é um Lacaio de Moldura 1: Dificuldade <b>10</b> (a régua da Moldura 1 é 12, e Lacaios têm −2). E <i>Convencer</i> é a palavra fraca dele (ele não sabe dizer não para quem fala manso): <b>10 − 2 = 8</b>.</p></div></div></section>
+<div class="folio">3</div>
+</article>
+
+<article class="page" id="r4" aria-label="Página 4">
+<div class="run"><span>Capítulo 1</span><span>O teste, passos 3 a 5</span></div>
+<h2>O teste, continuação</h2>
+<section class="stp"><div class="sn">3</div><div class="sb"><h3>Some a ajuda</h3><div class="sfaz"><p>Tudo o que ajuda vira <b>Vantagem</b>: <b>+1d6</b> na rolagem. Você pode ter <b>até duas</b>. Cada <b>Desvantagem</b> tira uma Vantagem; sem Vantagem para tirar, você subtrai 1d6 (no máximo −2d6).</p><p>O d6 soma no total, mas <b>não conta</b> para par e ímpar nem para quem é o dono da jogada. Só os d12 fazem isso.</p><p>Um teste só tem esses dois tipos de bônus: os números das palavras e a Vantagem. Não existe "+1 de circunstância": o que ajuda é Vantagem, e o que atrapalha é Desvantagem.</p></div><div class="sinf"><span class="lab">O que influencia este passo</span><ul><li><b>Vivência</b> (1 Arcano): uma frase do passado do personagem que faz sentido aqui.</li><li><b>Ajudar</b> (1 Arcano de quem ajuda): um aliado descreve como ajuda e dá a Vantagem.</li><li><b>Talentos, itens de situação, terreno, uma boa ideia</b> na ficção.</li><li><b>Desvantagem</b>: ferimento, condição, pressa, terreno ruim, ou o custo de um Passo de Valor (passo 5).</li></ul></div><div class="sex"><span class="lab">Com o Castian</span><p>A Vivência dele é <i>"Acalmei a vila inteira em noite de tempestade"</i>. Faz todo o sentido: ele paga <b>1 Arcano</b> (de 3 para 2) e ganha <b>+1d6</b>.</p></div></div></section>
+<section class="stp"><div class="sn">4</div><div class="sb"><h3>Role e leia os dados</h3><div class="sfaz"><p>Role <b>2d12</b> e some os números das palavras e os d6 de Vantagem. <b>Igual ou maior</b> que a Dificuldade: deu certo. <b>Menor</b>: não deu.</p><p>Depois, leia os dados. <b>Cada d12 par</b> dá <b>+1 Arcano</b> a você; <b>cada ímpar</b>, <b>+1 Cataclisma</b> ao mestre. E olhe o <b>maior d12</b>: par, a jogada é <b>por Arcano</b> e a cena continua com vocês; ímpar, é <b>por Cataclisma</b>, e mesmo que tenha dado certo, <b>o mestre emoldura</b>: o mundo se mexe. Se não deu certo, o mestre emoldura de qualquer jeito.</p><p><b>Dois d12 iguais são Crítico</b>: sucesso automático, um efeito de crítico e Arcano igual ao número do dado (máximo 6).</p></div><div class="sinf"><span class="lab">O que influencia este passo</span><ul><li><b>Os d12</b>: decidem tudo o que é par e ímpar. Os d6 de Vantagem só somam.</li><li><b>Rolagem de reação</b> (resistir ao que o mestre fez com você) segue a mesma conta, mas não gera Arcano nem Cataclisma.</li><li><b>O mestre emoldura</b>: descreve o que mudou, faz o mundo e os adversários agirem, e devolve a vez.</li></ul></div><div class="sex"><span class="lab">Com o Castian</span><p>Ele rola <b>7 e 4</b>, e o d6 dá <b>3</b>: 11 + 3 + 3 = <b>17</b> contra 8. Deu certo. O 4 é par (+1 Arcano, ele volta a 3); o 7 é ímpar (+1 Cataclisma ao mestre). O maior dado é o 7, ímpar: <b>por Cataclisma</b>. O guarda deixa a Iolanda passar, e o mestre emoldura: ele grita para o sargento, no alto da ponte, que a velha sineira passou ferida. Alguém vai querer saber por quê.</p></div></div></section>
+<section class="stp"><div class="sn">5</div><div class="sb"><h3>Se não bastar: Atalho ou Passo</h3><div class="sfaz"><p>Quando a coisa aperta, o personagem tem dois caminhos, e os dois tocam um dos seus Laços.</p><p>O <b>Atalho</b> é o jeito de sempre: depois de rolar, antes do mestre narrar, você pode pegar o <b>Atalho menor</b> (+3 na rolagem, ou ignorar uma condição; o mestre ganha 2 Cataclisma) ou o <b>maior</b> (a falha vira sucesso com um custo que o mestre diz; o mestre ganha 4). Dois Atalhos na mesma sessão sem nenhum Passo apertam o Laço.</p><p>O <b>Passo de Valor</b> é o difícil que aproxima do que importa: antes de rolar, você aceita o desconforto (Desvantagem, 1–2 Cansaço, ou a consequência que o Atalho evitaria) e ganha <b>+1 Arcano, dê certo ou não</b>. Um Passo solta um Laço apertado.</p></div><div class="sinf"><span class="lab">O que influencia este passo</span><ul><li><b>Os seus Laços</b>: diga qual Laço o Atalho ou o Passo toca.</li><li><b>O Cataclisma do mestre</b>: todo Atalho alimenta o mundo, que cobra depois.</li><li><b>Nomear o Atalho</b> que o personagem está pegando, e do que ele protege, dá +1 Arcano (uma vez por Evento).</li><li><b>Outros gastos de Arcano</b>: Ação em Dupla (3), Detalhe (3), Hábito do Comportamento (3).</li></ul></div><div class="sex"><span class="lab">Com o Castian</span><p>Se o guarda fosse mais duro e ele tivesse ficado um ponto abaixo, poderia pegar o Atalho do Laço <i>"O medo que eu escondo fazendo tudo e rindo"</i>: faz uma piada, o guarda ri junto, <b>+3</b>, e o mestre ganha 2 Cataclisma. Nomeando o que o riso protege, ganha +1 Arcano. Ou, antes de rolar, o Passo: dizer ao guarda que está com medo de verdade, rolar com <b>Desvantagem</b> e ganhar <b>+1 Arcano</b>, dê certo ou não.</p></div></div></section>
+<div class="folio">4</div>
+</article>
+
+<article class="page" id="r5" aria-label="Página 5">
+<div class="run"><span>Capítulo 1</span><span>Arcano e Cataclisma</span></div>
+<h2>Arcano e Cataclisma</h2>
+<div class="legend"><span class="dice"><span class="d">8</span><span class="d">4</span></span> par: <b>+1 Arcano</b> para você <span class="dice"><span class="d odd">7</span><span class="d odd">3</span></span> ímpar: <b>+1 Cataclisma</b> para o mestre</div>
+<div class="cols">
+<p><b>Arcano é dos jogadores.</b> Cada um tem a sua reserva: começa com <b>3</b>, vai até <b>12</b> e passa de uma sessão para outra. Se ganharia mais que 12, pode dar o excesso a um aliado que o veja. Em média, cada teste dá 1 Arcano (a magia grande dá mais). É bastante, de propósito: <b>Arcano é para ser gasto o tempo todo</b>.</p>
+<p><b>Cataclisma é do mestre.</b> Ele começa a sessão com <b>2 por jogador</b>, até <b>20</b>. É com ele que o mundo reage: emoldurar quando quiser, ativar mais adversários, trazer reforços, endurecer uma magia, alimentar Ameaças e disparar Abalos.</p>
+<p><b>Transbordo.</b> Se o mestre ganharia Cataclisma acima de 20, o excesso não some: dispara na hora um Abalo do tamanho do excesso. O mestre não consegue guardar tudo para o chefe; o mundo vaza.</p>
+<p class="quote">Cataclisma sobrando é sinal de mundo parado. Se a reserva está perto de 20, é hora de o mundo se mexer.</p>
+</div>
+<h3>Com o que se gasta Arcano</h3>
+<div class="tw"><table class="num"><thead><tr><th>Custo</th><th>Gasto</th></tr></thead><tbody>
+<tr><td>1</td><td><b>Vivência</b>: Vantagem numa rolagem em que uma Vivência sua faz sentido (uma por rolagem)</td></tr>
+<tr><td>1</td><td><b>Ajudar</b>: dê Vantagem a um aliado, descrevendo como</td></tr>
+<tr><td>1–3</td><td><b>Magia</b>: palavras extras e quadrados de Descritor (Capítulo 2)</td></tr>
+<tr><td>2</td><td><b>Suavizar</b>: role de novo o d20 de um Efeito Colateral</td></tr>
+<tr><td>3</td><td><b>Hábito</b>: o talento especial do seu Comportamento</td></tr>
+<tr><td>3</td><td><b>Ação em Dupla</b>: você e um aliado rolam, os dois usam o maior resultado, e os efeitos se somam</td></tr>
+<tr><td>3</td><td><b>Detalhe</b>: acrescente algo verdadeiro à cena (uma corda, um conhecido, uma saída); o mestre ajusta</td></tr>
+<tr><td>= custo</td><td><b>Conter</b>: anule um Abalo de até 4 pontos que afete só a sua ficha; aliados podem ajudar a pagar</td></tr>
+</tbody></table></div>
+<div class="box"><span class="lab">A jogada tem um dono</span>
+<p>No <b>2d12</b>, olhe o <b>maior dado</b>: par, a jogada é <b>por Arcano</b>; ímpar, <b>por Cataclisma</b>. Nos conjuntos da magia (3d8, 4d6, 6d4), vale a <b>maioria</b>; empate conta como Arcano. <b>Dois d12 iguais</b> são <b>Crítico</b>.</p>
+<div class="tw"><table><thead><tr><th></th><th>Sucesso</th><th>Falha</th></tr></thead><tbody>
+<tr><th>Por Arcano</th><td>conseguiu, e a cena continua com vocês</td><td>não deu, e o mestre emoldura</td></tr>
+<tr><th>Por Cataclisma</th><td>conseguiu, mas o mundo se mexe: o mestre emoldura</td><td>não deu, e o mestre emoldura</td></tr>
+<tr><th>Crítico</th><td colspan="2">sucesso automático; escolha um efeito de crítico; ganhe Arcano igual ao dado (máximo 6) no lugar dos pares; o mestre não emoldura</td></tr>
+</tbody></table></div>
+<p class="note">Chances no 2d12: por Arcano 50%, por Cataclisma 42%, Crítico 8%. Efeitos de crítico: ignorar um efeito negativo seu, o melhor resultado possível (como se os dados dessem 24) ou dobrar o dano. Rolagens de <b>reação</b> (resistir ao que o mestre fez) não geram Arcano nem Cataclisma.</p></div>
+<div class="folio">5</div>
+</article>
+
+<article class="page" id="r6" aria-label="Página 6">
+<div class="run"><span>Capítulo 1</span><span>Laços, Atalhos e Passos</span></div>
+<h2>Laços, Atalhos e Passos</h2>
+<div class="cols">
+<p class="lede">Laços são o que liga o personagem aos seus Valores: ao Compromisso, às pessoas, ao que importa, e também aos loopings que se repetem. Um Laço não é uma palavra solta: é uma descrição.</p>
+<p>Todo personagem começa com <b>três Laços</b>: uma <b>relação</b> ("Minha irmã, que eu não consegui proteger"), uma <b>atitude</b> ("Fazer piada quando a coisa dói") e um <b>sentimento difícil de encarar</b> ("A vergonha de ter fugido da vila"). Cada Laço tem uma caixinha: <b>apertado</b>.</p>
+<p>Quando a coisa aperta, o personagem tem dois caminhos, e <b>os dois são válidos</b>. Todo Atalho e todo Passo tocam um Laço: o jogador diz qual.</p>
+</div>
+<div class="two">
+<div class="ty"><h4>Atalho</h4><p class="q">fugir do desconforto do jeito que sempre funcionou</p>
+<dl><dt>Custo</dt><dd>o mestre ganha <b>2 Cataclisma</b> (menor) ou <b>4</b> (maior)</dd><dt>Menor</dt><dd><b>+3</b> numa rolagem já feita, ou ignorar uma condição</dd><dt>Maior</dt><dd>a falha vira sucesso (o mestre diz o custo), ou sair da situação sem lidar com ela</dd></dl></div>
+<div class="ty"><h4>Passo de Valor</h4><p class="q">fazer o difícil porque aproxima do que importa</p>
+<dl><dt>Custo</dt><dd>aceitar o desconforto: rolar com <b>Desvantagem</b>, <b>ou</b> marcar <b>1–2 Cansaço</b>, <b>ou</b> aceitar a consequência que o Atalho evitaria</dd><dt>Ganho</dt><dd><b>+1 Arcano, dê certo ou não</b>: conta a direção, não o resultado</dd></dl></div>
+</div>
+<div class="cols">
+<h4>Quando o Laço aperta</h4>
+<p>Dois Atalhos na mesma sessão, sem nenhum Passo, deixam o Laço tocado <b>apertado</b>. Na ficha há duas caixinhas, <i>Atalhos nesta sessão</i>, para ninguém precisar lembrar. O peso é mais narrativo que mecânico, mas tem dente:</p>
+<p><b>O caminho de sempre fica fácil; o diferente, difícil.</b> Ações diferentes do padrão do Laço (ficar em vez de fugir, falar em vez de calar, pedir ajuda em vez de resolver sozinho) têm <b>Dificuldade +2</b>.</p>
+<p><b>Uma relação estremece.</b> Alguém ligado ao Laço não pode te Ajudar nem fazer Magia em Dupla com você até vocês se acertarem.</p>
+<p><b>A consequência cresce.</b> O mestre planta uma consequência ligada ao Laço, e ela cresce um passo a cada sessão que termina apertada e a cada novo Atalho no Laço. O jogador diz como o Laço é por dentro; o mestre traz o que ele custa.</p>
+<h4>O Passo solta o Laço</h4>
+<p>O Passo de Valor <b>é</b> a ação diferente. O jogador diz qual Laço encara, faz o contrário do padrão e paga o desconforto e a Dificuldade +2. <b>Dê certo ou não</b>, o Laço se solta: a caixinha sai, a relação pode ser consertada, a consequência para de crescer. O Laço não é apagado; o jogador pode reescrevê-lo para dizer o que mudou.</p>
+<h4>Olhar para os Laços</h4>
+<p>Nomear na hora o Atalho que o personagem está pegando, e do que ele protege, dá <b>+1 Arcano</b> (uma vez por Evento). No fim da sessão, três perguntas de envolvimento dão +1 Arcano cada; no fim da aventura, <i>Perceber e Mudar</i> dá Marcos.</p>
+</div>
+<p class="quote">Significados não somem. O sofrimento e o desconforto não somem. Mas eles têm o poder que damos a eles. No Atalho, o mundo carrega por você e cobra depois, com juros. No Passo, você carrega agora, e muda com isso.</p>
+<div class="folio">6</div>
+</article>
+
+<article class="page" id="r7" aria-label="Página 7">
+<div class="run"><span>Capítulo 1</span><span>Eventos</span></div>
+<h2>Eventos, e o mestre que emoldura</h2>
+<div class="cols">
+<p class="lede">Não há iniciativa, turno nem rodada. A unidade do jogo é o Evento: uma situação completa, com começo e fim na ficção.</p>
+<p>O mestre anuncia quando um Evento começa e o que o encerra: "acaba quando vocês saírem da ponte, ou quando a ponte cair". Dentro dele, os jogadores decidem entre si quem age. Quem age faz <b>uma ação</b> (atacar, conjurar, ajudar, uma manobra) e pode se mover até <b>Perto</b> junto com ela. Ninguém age duas vezes seguidas se outro jogador ainda não agiu, a não ser que todos concordem.</p>
+<p><b>O mestre emoldura</b> quando um jogador falha ou rola por Cataclisma. Ele pega a cena, descreve o que mudou, ativa <b>1 adversário de graça</b> e <b>mais 1 por Cataclisma</b> gasto, e devolve a vez. Ele também pode emoldurar quando quiser (1 Cataclisma), e age narrativamente sem gastar nada sempre que fizer sentido: o fogo espalha, a porta fecha, alguém grita.</p>
+<p><b>Ameaças (o pote).</b> Para o que se aproxima (o teto caindo, o ritual terminando), o mestre anuncia a Ameaça e o tamanho do pote ("o teto cai quando este pote tiver 6"), põe o pote à vista e, quando quiser, coloca nele Cataclisma da própria reserva. O que entra não volta. Pote cheio, a Ameaça acontece. Os jogadores podem resolver pela ficção, ou esvaziar o pote em 2 gastando Arcano, uma vez por Ameaça.</p>
+</div>
+<div class="two">
+<div><h3>Marcadores</h3><div class="tw"><table><thead><tr><th>Marcador</th><th>Termina quando</th></tr></thead><tbody>
+<tr><th>Instante</th><td>acontece e acaba</td></tr><tr><th>Até a próxima Falha</th><td>qualquer jogador falhar uma rolagem</td></tr><tr><th>Até o mestre emoldurar</th><td>o mestre emoldurar a cena</td></tr><tr><th>Até o mestre pagar</th><td>o mestre gastar Cataclisma igual ao Grau para encerrar</td></tr><tr><th>O Evento</th><td>a situação terminar</td></tr><tr><th>Até o Pouso</th><td>a próxima noite de descanso</td></tr></tbody></table></div></div>
+<div><h3>Alcance</h3><div class="tw"><table><thead><tr><th>Faixa</th><th>Na mesa</th><th>Na ficção</th></tr></thead><tbody>
+<tr><th>Toque</th><td>encostado</td><td>ao alcance da mão</td></tr><tr><th>Perto</th><td>1 passo curto</td><td>uma sala pequena</td></tr><tr><th>Médio</th><td>3 passos</td><td>um salão, um pátio</td></tr><tr><th>Longe</th><td>6 passos</td><td>a praça, tiro de arco</td></tr><tr><th>Horizonte</th><td>o que se vê</td><td>outro morro, o céu</td></tr></tbody></table></div>
+<p class="note">Mover até Perto vem junto com a ação. Ir mais longe é a ação, ou um teste de Movimentar Rápido.</p></div>
+</div>
+<div class="folio">7</div>
+</article>
+
+<article class="page" id="r8" aria-label="Página 8">
+<div class="run"><span>Capítulo 1</span><span>O corpo</span></div>
+<h2>Esquiva, dano, Cansaço e descanso</h2>
+<div class="cols">
+<p><b>Esquiva</b> vem do Comportamento. Um adversário acerta se o <b>d20 + o ataque dele</b> for igual ou maior que a sua Esquiva.</p>
+<p><b>Limiares</b>: cada personagem tem dois, <b>Maior</b> e <b>Grave</b> (base do Comportamento + nível + armadura). Dano abaixo do Maior marca <b>1 PV</b>; no Maior ou acima, <b>2 PV</b>; no Grave ou acima, <b>3 PV</b>. <b>Proteção</b> são as casas da armadura: marque uma para tirar 1 PV de um golpe. Volta na Pausa.</p>
+<p><b>Vida</b>: de 5 a 7 casas de PV, conforme o Comportamento, até 12. A magia causa dano normal, pelos Limiares; o que não é dano (medo, paralisia, cegueira) se resiste com 2d12 + a palavra da reação.</p>
+<p><b>Cansaço</b> é o preço do corpo e da mente; Arcano é o preço do mundo. Começa com <b>6 casas</b>, até 12. Marca-se no Passo de Valor, no Esforço da magia, em talentos e em alguns ataques. <b>Exausto</b> (todas marcadas): você fica Vulnerável, não pode marcar Cansaço de propósito, e cada Cansaço que marcaria vira 1 PV.</p>
+<p><b>Vivências</b>: frases curtas do passado ("Cresci num porto", "Sei mentir para guardas"). Começa com 2; cada uma dá Vantagem por 1 Arcano quando faz sentido. Mais nos níveis 2, 5 e 8.</p>
+</div>
+<div class="two">
+<div class="box"><span class="lab">Descansos</span>
+<p><b>Pausa</b> (uma hora): escolha dois: 1d4 + Moldura PV; 1d4 + Moldura Cansaço; toda a Proteção; Meditar (+1 Arcano). O mestre ganha 1d4 Cataclisma.</p>
+<p><b>Pouso</b> (uma noite): escolha dois, completos: todos os PV; todo o Cansaço; toda a Proteção; trocar uma Palavra Estrangeira; trabalhar num projeto. O mestre ganha 1d4 + nº de jogadores de Cataclisma.</p></div>
+<div class="box rust"><span class="lab">Quando os PV acabam</span>
+<p><b>Apagar</b>: cai inconsciente e volta depois do Evento com 1 PV. Role 1d12: até o seu nível, fica uma Marca do Cataclisma (−1 no Arcano máximo, e uma marca no corpo).</p>
+<p><b>Última Palavra</b>: conjure uma magia 1 Grau acima do seu máximo, sem pagar Arcano e sem Efeitos Colaterais. Depois, o personagem morre.</p>
+<p><b>Jogar os dados</b>: role 2d12. Crítico ou os dois pares: levanta limpo. Um par e um ímpar: levanta com 1 PV e uma Marca. Os dois ímpares: morre.</p></div>
+</div>
+<div class="folio">8</div>
+</article>
+
+<article class="page" id="r9" aria-label="Página 9">
+<div class="run"><span>Capítulo 1</span><span>Moldura</span></div>
+<h2>Moldura: o que cresce com o nível</h2>
+<p class="pl">Quase tudo que cresce com o nível passa pela <b>Moldura</b>. Ela diz o tamanho do mundo em que o personagem vive: que portas ele abre, que magias ele segura, que adversários o esperam. Os desafios também têm Moldura: a porta de uma vila é Moldura 1 para sempre, e é nela que o jogador sente que cresceu.</p>
+<div class="tw"><table class="num"><thead><tr><th>Nível</th><th>Moldura</th><th>Grau máximo</th><th>Palavras de Valor por magia</th><th>Sintonia</th><th>Proficiência</th></tr></thead><tbody>
+<tr><td>1</td><td>1</td><td>2</td><td>2</td><td>+2</td><td>1</td></tr><tr><td>2–4</td><td>2</td><td>3</td><td>3</td><td>+2</td><td>2</td></tr><tr><td>5–7</td><td>3</td><td>4</td><td>4</td><td>+2</td><td>3</td></tr><tr><td>8–10</td><td>4</td><td>5</td><td>5</td><td>+2</td><td>4</td></tr></tbody></table></div>
+<div class="cols">
+<p><b>Grau máximo e Palavras por magia = Moldura + 1.</b> São dois números diferentes, com uma casa cada na ficha do Valor: o Grau diz <i>quanto</i> a magia faz; as palavras, <i>o que</i> ela faz.</p>
+<p><b>Sintonia é sempre +2.</b> Quem cresce na magia são os dados (2d12 → 3d8 → 4d6 → 6d4) e as palavras. Assim a magia no Grau máximo acerta como o melhor ataque de arma da mesma Moldura, sem regra extra de defesa.</p>
+<p><b>Proficiência</b> multiplica o dado das armas: é o que faz a mesma espada bater mais forte na mão de quem já viveu mais.</p>
+<p>A cada nível, o jogador escolhe dois avanços: +1 em duas Palavras Básicas, PV, Cansaço, Esquiva, uma Vivência, Palavras Estrangeiras, talentos, Domínio e as Ressonâncias do Valor. A lista completa está no capítulo de Personagem.</p>
+</div>
+<div class="folio">9</div>
+</article>
+<footer>Rascunho de diagramação · regra completa em Rpg/Arcanoclisma/01 Regras centrais.md · Rpg/Arcanoclisma/arte/livro-regras.html</footer>
+</div>
