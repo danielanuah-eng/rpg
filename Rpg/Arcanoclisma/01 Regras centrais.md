@@ -96,7 +96,9 @@ Chances no 2d12: por Arcano 50%, por Cataclisma 42%, Crítico 8%.
 
 **Efeitos de crítico** (escolha um):
 - **Ignorar um efeito negativo seu**: um Efeito Colateral, o Drawback do Valor (como o Tropeço), o Cansaço de Forçar, ou uma condição que você carrega.
-- **Melhor resultado possível**: o total conta como se os dados tivessem dado o máximo (24). Num **Teste mágico**, o alvo **só escapa com um Crítico dele** (20 no d20 do mestre; dados iguais no 2d12 de um jogador).
+- **Melhor resultado possível**: o total conta como se os dados tivessem dado o máximo (24).
+
+Num **Teste mágico** de magia (ver [[02 Magia]]) só o alvo rola: a **falha crítica dele** (1 no d20; 1 e 1 no 2d12) é o **seu Crítico**, e o **Crítico dele** (20; dados iguais) faz ele sempre escapar.
 - **Dobrar o dano.**
 
 **Rolagens de reação** (resistir a algo que o mestre fez com você) usam 2d12 + atributo mas **não geram** Arcano nem Cataclisma. Isso segura a economia.

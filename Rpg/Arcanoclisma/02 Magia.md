@@ -49,31 +49,42 @@ Esse é o bônus da magia: ela **não recebe Vantagem paga** (Vivência, Ajudar)
 
 ### Três tipos de efeito
 
-A rolagem é sempre **sua**. O **tipo do efeito** diz contra o que você rola e se o alvo faz um teste para escapar.
+O **tipo do efeito** diz quem rola. É sempre **uma rolagem só** por magia: ou a sua, ou a de quem é pego.
 
-| Efeito | Exemplos | Você rola contra | Quem é pego |
+| Efeito | Exemplos | Quem rola | Contra o quê |
 |---|---|---|---|
-| **Projétil** | jato, lâmina, flecha de luz, soco que atravessa: algo que sai e precisa acertar | a **Esquiva** (PJ) ou a **Dificuldade** (adversário) do alvo | não rola: a Esquiva já é a defesa |
-| **Teste mágico** | sono, encanto, medo, uma rede de gelo que prende, uma rajada que derruba: o efeito cai sobre um alvo (ou vários) e ele reage | a **Dificuldade do Grau** | cada alvo faz um **teste** contra **o seu total** para escapar (físico ou mental, pela descrição) |
-| **Pequeno evento** | acrescentar, mudar, detalhar ou alterar algo no mundo: abrir, criar, esquentar, fortalecer o próprio corpo, fazer o chão virar gelo, curar | a **Dificuldade do Grau**: passou, o mundo muda | ninguém rola |
+| **Projétil** | jato, lâmina, flecha de luz, soco que atravessa: algo que sai e precisa acertar | **você** | a **Esquiva** (PJ) ou a **Dificuldade** (adversário) do alvo |
+| **Teste mágico** | sono, encanto, medo, uma rede de gelo que prende, uma rajada que derruba: o efeito cai sobre um alvo (ou vários) e ele reage | **o alvo**, não você | a **Dificuldade da magia** (abaixo) |
+| **Pequeno evento** | acrescentar, mudar, detalhar ou alterar algo no mundo: abrir, criar, esquentar, fortalecer o próprio corpo, fazer o chão virar gelo, curar | **você** | a **Dificuldade do Grau**: passou, o mundo muda |
 
-**O teste do alvo** é uma reação (não gera Arcano nem Cataclisma). Ele é **físico ou não** conforme a descrição, o efeito e o atributo que combina: o mestre escolhe pela magia e pela situação: medo e encanto pedem *firme* (Sabedoria); rede e prisão, *forte* (Força); chão que escorrega e rajada, *ágil* (Agilidade); ilusão, *atento* (Percepção). Iguala ou passa o seu total, escapa.
+### Teste mágico: só o alvo rola
 
-- **PJ** resiste com 2d12 + o atributo.
-- **Adversário** resiste com **d20 + o Ataque** dele (o mestre sempre rola d20). Uma palavra dele que combina com resistir (*Destemido* contra medo) dá Vantagem; uma que o deixa exposto (*Covarde*) dá Desvantagem.
-- **Lacaios não resistem**: o efeito pega. (Por golpe, caem 1 / 2 / 3, como no dano.)
-- Skills e Drawbacks que mexem no total (como o −2 de Persona fora de pessoas) mexem **no seu total**, e portanto na resistência também.
+Você paga a magia e descreve o efeito; **quem rola é o alvo**. Uma rolagem por ação, e a mesa anda.
 
-Resistir fica mais fácil conforme a **Moldura do adversário** (o Ataque dele sobe de +1 a +4), e mais difícil conforme **as palavras** de quem conjura. Magia no Grau máximo contra adversário da mesma Moldura:
+**Dificuldade da magia = 12 + Sintonia + 1 por palavra de Valor** (e o que Skills e Drawbacks mexem, como o −2 de Persona fora de pessoas). Na Moldura 1, com Sintonia +2: **15** com uma palavra, **16** com duas.
 
-| Moldura | 1 palavra | 2 | 3 | 4 | 5 |
+**O teste do alvo** é físico ou não conforme a descrição, o efeito e o atributo que combina; o mestre escolhe pela magia e pela situação: medo e encanto pedem *firme* (Sabedoria); rede e prisão, *forte* (Força); chão que escorrega e rajada, *ágil* (Agilidade); ilusão, *atento* (Percepção).
+
+- **PJ** rola 2d12 + o atributo (é reação: não gera Arcano nem Cataclisma).
+- **Adversário** rola **d20 + o Ataque** dele. Uma palavra dele que combina com resistir (*Destemido* contra medo) dá Vantagem; uma que o deixa exposto (*Covarde*) dá Desvantagem. **Adversários iguais rolam um d20 só.**
+- **Lacaios não rolam**: o efeito pega. (Caem 1 / 2 / 3, como no dano.)
+- **Forçar** ainda vale: depois de ver o dado do alvo, marque Cansaço e some +2 por casa na Dificuldade da magia.
+
+**Passar ou não se lê na ficção.** O número diz quem levou a melhor; **como** isso aparece, o mestre e a mesa interpretam pela descrição. Quem passa pode escapar inteiro, escapar pela metade (sente o medo por um instante e segue), ou resistir de um jeito que muda a cena (o encanto não pega, mas ele percebe que alguém tentou). Quem não passa leva o efeito do jeito que foi descrito, no tamanho do Grau.
+
+**Quando o alvo passa**, a magia conta como **falha por Cataclisma**: o mestre emoldura e, no Grau 3+, você rola os Efeitos Colaterais.
+
+**Crítico no Teste mágico** vem do dado do alvo:
+- **Falha crítica do alvo** (1 no d20; 1 e 1 no 2d12) = **Crítico seu**: o efeito pega e você escolhe um efeito de crítico.
+- **Crítico do alvo** (20 no d20; dados iguais no 2d12) = ele **sempre escapa**, seja qual for a Dificuldade.
+
+Chance de o efeito pegar num adversário **da mesma Moldura**: **(12 + palavras) em 20**, em qualquer Moldura, porque a Sintonia e o Ataque sobem juntos.
+
+| palavras de Valor | 1 | 2 | 3 | 4 | 5 |
 |---|---|---|---|---|---|
-| 1 | 62% | 68% | — | — | — |
-| 2 | 65% | 71% | 77% | — | — |
-| 3 | 67% | 74% | 80% | 86% | — |
-| 4 | 69% | 78% | 85% | 90% | 94% |
+| pega | 65% | 70% | 75% | 80% | 85% |
 
-É o preço de mandar na cabeça ou no corpo de alguém; em troca, o efeito costuma decidir a cena. E é aí que a segunda palavra mais vale.
+Cada palavra a mais é **+5%** de pegar. É o preço de mandar na cabeça ou no corpo de alguém; em troca, o efeito costuma decidir a cena.
 
 ### Grau 1: a magia do dia a dia
 
@@ -145,7 +156,7 @@ Conjurar no seu Grau máximo, contra a Dificuldade do Grau, dá **81–84%** em 
 ## Leitura dos dados na magia
 
 - Cada dado **par**: +1 Arcano para você. Cada dado **ímpar**: +1 Cataclisma para o mestre.
-- **Crítico** — no 2d12, dados iguais; nos outros, **todos pares**. Sucesso automático, escolha um efeito de crítico (ignorar um efeito negativo seu; melhor resultado possível, e num Teste mágico o alvo só escapa com um Crítico dele; dobrar o dano; ver [[01 Regras centrais]]), e ganhe Arcano igual ao **maior dado** (máx. 6) no lugar do Arcano dos pares.
+- **Crítico** — no 2d12, dados iguais; nos outros, **todos pares**. Sucesso automático, escolha um efeito de crítico (ignorar um efeito negativo seu; melhor resultado possível; dobrar o dano; ver [[01 Regras centrais]]), e ganhe Arcano igual ao **maior dado** (máx. 6) no lugar do Arcano dos pares.
 - **Desequilíbrio** — todos os dados **ímpares** (não existe no 2d12). O mestre ganha os pontos normais **e** dispara de graça um Abalo: **Tremor** no Grau 3, **Fissura** no Grau 4, **Ruptura** no Grau 5.
 - **Efeitos Colaterais** — quando a magia sai **por Cataclisma** (no 2d12, o maior dado ímpar; nos outros, a maioria ímpar), ela acontece (se passou), mas o mundo cobra: você rola **Efeitos Colaterais** no d20. **Quanto maior o efeito, mais colaterais**:
 
@@ -226,7 +237,7 @@ Dois personagens conjuram juntos, **numa rolagem só**. É o jeito de passar do 
 1. **Custo**: 3 Arcano, divididos como quiserem, e cada um paga suas palavras de Valor extras.
 2. **Palavras**: cada um põe palavras do próprio Valor (e as Básicas, de graça). Palavras de Valor no total: até **o maior limite dos dois + 2** (máx. 7).
 3. **Grau do efeito**: o maior Grau que qualquer um dos dois conseguiria **+1** (máx. 5).
-4. **Rolagem**: quem **conduz** rola os dados **do Grau do efeito** + a própria Sintonia + **1 por palavra de Valor que ele pôs**; o **parceiro soma +2**. Contra o que o efeito pedir (ver *Três tipos de efeito*).
+4. **Rolagem**: quem **conduz** rola os dados **do Grau do efeito** + a própria Sintonia + **1 por palavra de Valor que ele pôs**; o **parceiro soma +2**. Contra o que o efeito pedir (ver *Três tipos de efeito*); num Teste mágico, a Dificuldade da magia usa a Sintonia de quem conduz + as palavras dele + 2 do parceiro, e só o alvo rola.
 5. **As Skills dos dois Valores valem**. Os Drawbacks também.
 6. Par/ímpar, Crítico e Desequilíbrio: como numa magia normal, nos dados rolados.
 

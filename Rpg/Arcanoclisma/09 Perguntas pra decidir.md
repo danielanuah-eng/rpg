@@ -396,3 +396,5 @@ Sua resposta: ✅ mais palavras = efeito mais específico, mais fácil de funcio
 
 ✅ **Crítico**: continua sendo qualquer par de dados iguais (até 1 e 1). Efeitos de crítico esclarecidos: *ignorar um efeito negativo* vale para o que cai em **você** (Efeito Colateral, Drawback, Cansaço de Forçar, condição); *melhor resultado possível* num **Teste mágico** faz o alvo **só escapar com um Crítico dele** (20 no d20; dados iguais no 2d12).
 
+✅ **Teste mágico: só o alvo rola** (menos rolagens por ação). O alvo rola contra a **Dificuldade da magia = 12 + Sintonia + palavras**. Adversário da mesma Moldura é pego em (12 + palavras)/20: 65% com 1 palavra, +5% por palavra. 1 natural do alvo = Crítico de quem conjurou; 20 natural = sempre escapa. Adversários iguais rolam um d20 só. Se o alvo passa, conta como falha por Cataclisma (mestre emoldura; Grau 3+ rola Efeitos Colaterais). **Passar ou não se interpreta na ficção** (escapar inteiro, pela metade, ou de um jeito que muda a cena). Aplicado em [[02 Magia]].
+
