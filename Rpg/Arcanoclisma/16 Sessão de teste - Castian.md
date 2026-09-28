@@ -66,4 +66,10 @@
   - **O Eco que Come o Som**: Disrupto de Alvorum · Padrão M1 · Dif 12 · Limiares 8/14 · PV 5 · Ataque +1 · Dano 1d10+2. *Agir*: Enrolar; Engolir Voz (1C). *Parecer*: Faminto de Magia, Silencioso.
   - **2 Sobras** (lacaios): Dif 10 · Limiares 4/7 · Dano 4.
   - Lino, 12 anos, casulado no sino.
+  - A Sobra agarra a perna do Castian (onde encosta, o som some).
+  - *Sentir Coragem* no Lino (Pequeno evento, Grau 2, 2 Arcano): 🎲 2 e 5 → 7 + 2 = 9 contra 12 (sem relação dita, as palavras não somam). Falha por Cataclisma; **Tropeço**: a ligação abre ao contrário e o medo do Lino passa para o Castian (Desvantagem). A Força +1 do *Fortalecer* acaba (era até a próxima Falha). O mestre emoldura: o Eco chicoteia (d20 6 + 1 = 7 contra Esquiva 11, erra); pote do Lino 2/4.
+  - **Atalho** (Laço *O medo que eu escondo fazendo tudo e rindo*): Castian ri e diz ao Lino que vai dar tudo bem, com frio na barriga e vontade de fugir. Ignora a Desvantagem; mestre +2 Cataclisma. Nomeou do que o Atalho protege: +1 Arcano. **Atalhos na sessão: 1/2.**
+  - *Inspirar* (+ *Atacar*, básica) em si mesmo (Pequeno evento, Grau 2, 1 Arcano): 🎲 7 e 11 → 20 contra 12, sucesso **por Cataclisma**: Força +1 até a próxima Falha. O mestre emoldura: a Sobra sobe até o peito e o Castian **perde a voz**.
+  - Remo no casulo (Força +1, contra Dif 12 do Eco): 🎲 2 e 10 → 13, sucesso **por Arcano**. Dano 6 + 1 = 7, abaixo do Limiar 8: Eco marca 1 PV (4/5). Os fios da boca e dos ouvidos do Lino se rompem: ele grita.
+  - Regra ajustada na mesa: as perguntas de criação são **narrativas** (orientam decisões, não dão bônus); a relação da magia é dita pelo jogador na hora, se quiser.
 
