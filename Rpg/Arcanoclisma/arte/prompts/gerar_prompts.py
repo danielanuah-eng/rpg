@@ -360,3 +360,31 @@ for g in grupos:
         md.append(f"  > {it['especifico']}")
 (LIVRO / '25 Prompts de arte - catálogo.md').write_text('\n'.join(md) + '\n', encoding='utf-8')
 print(len(itens), 'prompts;', n_pri, 'do livro;', len(grupos), 'grupos')
+
+# ---------------------------------------------------------------- lista para gerar em outro lugar (txt e csv)
+import csv
+livro = [x for x in itens if x['prioridade']]
+app = [x for x in itens if not x['prioridade']]
+AR = {'1:1': 'quadrado 1:1', '3:2': 'paisagem 3:2'}
+L = ['ARCANOCLISMA · PROMPTS DE ARTE · TODAS AS IMAGENS',
+     f'{len(itens)} imagens: {len(livro)} do livro primeiro, depois {len(app)} do app.', '',
+     'Como usar:',
+     '- Cada bloco é uma imagem. Copie a linha do prompt inteira (é um parágrafo só).',
+     '- Gere no formato indicado (quadrado 1:1 ou paisagem 3:2).',
+     '- Salve o arquivo com o nome do id: <id>.png (ex.: dragao-lamina.png).',
+     '- Imagens 1:1 têm fundo liso para recortar; cenários 3:2 são inteiros.',
+     '- Se a ferramenta usar parâmetro de proporção (ex.: Midjourney), acrescente no fim: --ar 1:1 ou --ar 3:2.',
+     '- A parte depois de "Subject" está em português; se a ferramenta entender mal, traduza só esse trecho.', '']
+ordem = livro + app
+for i, x in enumerate(ordem, 1):
+    if i == 1:
+        L += ['#################### LIVRO (gerar primeiro) ####################', '']
+    if i == len(livro) + 1:
+        L += ['#################### APP DO GERADOR ####################', '']
+    L += [f'===== {i:03d} · {x["id"]} · {AR[x["formato"]]} · {x["nome"]} =====', x['prompt'], '']
+(AQUI / 'todos_os_prompts.txt').write_text('\n'.join(L), encoding='utf-8')
+with open(AQUI / 'todos_os_prompts.csv', 'w', encoding='utf-8-sig', newline='') as f:
+    w = csv.writer(f)
+    w.writerow(['ordem', 'id', 'nome', 'tipo', 'formato', 'livro', 'arquivo', 'prompt'])
+    for i, x in enumerate(ordem, 1):
+        w.writerow([i, x['id'], x['nome'], x['tipo'], x['formato'], 'sim' if x['prioridade'] else 'não', x['id'] + '.png', x['prompt']])
