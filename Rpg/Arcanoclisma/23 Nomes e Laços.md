@@ -31,12 +31,12 @@ Role **d6 para o começo** e **d6 para o fim**. Para nome composto, role duas ve
 | d6 | **Anões** | | **Elfos** | | **Halflings** | | **Orcs** | |
 |---|---|---|---|---|---|---|---|---|
 | | começo | fim | começo | fim | começo | fim | começo | fim |
-| 1 | Brom | din | Ael | thariel | Pip | pa | Gro | mash |
+| 1 | Brom | din | Ael | thariel | Pim | ota | Gro | mok |
 | 2 | Dur | gar | Syl | vanor | Tob | ias | Urk | a |
-| 3 | Thrag | mir | Ith | ilien | Mer | ry | Zog | thar |
-| 4 | Kaz | rik | Lor | aneth | Bil | bo | Mag | ra |
-| 5 | Bal | dra | Fae | ril | Rosi | e | Draka | nor |
-| 6 | Gim | ra | Eli | wyn | Wil | ton | Sha | gul |
+| 3 | Thrag | mir | Ith | iriel | Mel | rico | Zog | thar |
+| 4 | Kaz | rik | Lor | aneth | Bim | bel | Mag | ra |
+| 5 | Bal | dra | Fae | ril | Rosi | nha | Dhur | nor |
+| 6 | Hruk | ra | Eli | wyn | Wil | ton | Sha | gul |
 
 | d6 | **Goblins e gnomos** | | **Corves** | | **Luphos** | | **Fidraus** | |
 |---|---|---|---|---|---|---|---|---|
