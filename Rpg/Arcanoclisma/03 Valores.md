@@ -35,6 +35,7 @@ Oposição serve para duas coisas: **Magia em Dupla de opostos** (mais forte, ma
 *Tudo o que acontece quando duas vontades se chocam: guerra, arma, escudo, o passo certo no meio da briga.*
 
 > *"A primeira regra é simples: se ela veio pra cima de você, ela é sua."* — sargento de Conflitüo, para os recrutas
+>
 > *"Não odeio ninguém. Só não sei ficar parado quando alguém empurra."* — ferreira de Vau-Grande
 
 **Como é.** Cheira a ferro quente e a suor. A magia aparece como uma luz vermelho-ferrugem que vira arma por um instante, o eco de todas as lâminas que já se cruzaram, e some. Quem carrega vive com o corpo meio pronto: o ombro que se vira antes do soco, a mão que procura o cabo. Em paz, Conflitüo coça.
@@ -75,6 +76,7 @@ Perguntas de vínculo: *Contra quem ou o quê você lutou pela primeira vez, e p
 *A matéria e seus estados: sólido, líquido, gás, e o que há entre eles. Criar, derreter, liquefazer, gaseificar, sublimar.*
 
 > *"Tudo é gelo que ainda não sabe que é água."* — alquimista de beira de estrada
+>
 > *"Me dá cinco minutos com essa porta e ela vira escada."* — Dona Iolanda, sineira de Vau-Grande
 
 **Como é.** Cheira a metal molhado e pedra quente. Perto de um Comprometido de Sublimeyn as coisas suam, rangem e mudam de cor antes de mudar de forma. A magia não aparece do nada: ela **convence** a matéria que já estava ali. Quem carrega nunca vê um objeto pronto; vê o que ele ainda pode ser.
@@ -115,6 +117,7 @@ Perguntas de vínculo: *Qual material você sente como se fosse parte do seu cor
 *Dobrar a vontade de outro ser vivo: mandar, forçar, parar, puxar, afastar, domesticar, ter servos.*
 
 > *"Eu não peço duas vezes. Nem uma, na verdade."* — domadora de wyverns
+>
 > *"Coleira não é crueldade. Crueldade é largar a fera sem dono no meio da feira."* — guarda de caravana
 
 **Como é.** Pesa. Perto de um Comprometido de Dominum o ar fica grosso, como antes de uma bronca. A magia aparece como correntes roxo-escuras que ninguém vê inteiras, só o puxão. Bicho baixa a cabeça; gente endireita as costas sem saber por quê. Quem carrega aprende cedo que obedecer e mandar são a mesma corda vista das duas pontas.
@@ -155,6 +158,7 @@ Perguntas de vínculo: *A quem você já obedeceu e jurou nunca mais? · Você a
 *A pessoa inteira: corpo, pele, órgãos, rosto, alma, e o que ela sente: medo, coragem, fúria, amor. A música que move gente.*
 
 > *"Não tenho medo de você. Tenho medo por você, o que é pior."* — parteira de OulVeil
+>
 > *"Canta comigo. Não precisa ser bonito, precisa ser junto."* — trovadora de estrada
 
 **Como é.** Quente, perto demais. A magia de Persona aparece em quem ela toca, não em quem conjura: bochecha que cora, pelo que arrepia, um nó na garganta sem motivo. Às vezes vem com uma música que ninguém tocou. Quem carrega sente os outros como sente o próprio corpo, e nunca consegue fingir direito que não sentiu. Persona não joga fogo: ela machuca e cura **pelo corpo e pelo sentimento**.
@@ -195,6 +199,7 @@ Perguntas de vínculo: *De quem você sente mais falta? · Qual emoção sua voc
 *Luz e sombra, sol, lua e estrelas, os sentidos, a visão, o sonho e o pesadelo, a loucura e a sanidade, a revelação.*
 
 > *"Se você está escondendo, eu já vi. Só estou esperando você contar."* — vigia de farol
+>
 > *"Sonhei com você ontem. Quer saber como terminava?"* — vidente de feira
 
 **Como é.** Luz que não esquenta e sombra que não esfria. Quando um Comprometido de Alvorum conjura, tudo por perto fica nítido demais: poro, rachadura, a mentira no canto da boca. Ele nunca é discreto: a magia chega como farol. Quem carrega dorme mal, e vê nos sonhos coisas que depois acontecem, ou não.
@@ -235,6 +240,7 @@ Perguntas de vínculo: *O que você viu e queria não ter visto? · Você tem me
 *Morte e vida, e a passagem entre elas: regenerar, curar, adoecer, apodrecer, fantasmas, vazio, solidão, presságio.*
 
 > *"Não chora ainda. Ele ainda está aqui, e quer ouvir a sua voz."* — coveira de Vau-Grande
+>
 > *"A doença não é inimiga. É visita. A gente só ensina ela a ir embora."* — curandeiro de aldeia
 
 **Como é.** Cheira a terra revirada e flor de velório. A magia de Morbidyum é verde-pálida e silenciosa; plantas murcham ou brotam por onde ela passa, às vezes as duas coisas no mesmo canteiro. Bicho fica quieto. Quem carrega conversa com quem já foi como se fosse normal, e às vezes os mortos respondem.
@@ -275,6 +281,7 @@ Perguntas de vínculo: *Quem você não conseguiu salvar? · Você já morreu? O
 *A mente: pensar, lembrar, esquecer, ler pensamentos, acreditar, enganar os sentidos (até cheiros e gostos), fazer crer.*
 
 > *"Você não me viu entrar. Nem vai lembrar que eu saí."* — ladra de biblioteca
+>
 > *"Toda certeza é só uma dúvida que cansou."* — professor de Cognitium
 
 **Como é.** Não se vê. A magia de Cognitium acontece por dentro: um déjà-vu, um cheiro de infância numa sala vazia, a palavra que some da ponta da língua. No máximo, um brilho índigo nos olhos de quem conjura. Quem carrega ouve o que as pessoas pensam antes de falarem, e aprende a desconfiar dos próprios pensamentos também.
@@ -315,6 +322,7 @@ Perguntas de vínculo: *Qual memória você apagaria se pudesse? · Em que menti
 *Tempo e espaço: teleportar, mover, guiar, localizar, atravessar, parar, acelerar, voltar, organizar, aumentar e diminuir.*
 
 > *"Calma. Eu já estive aqui. Daqui a pouco a porta abre."* — mensageira de Eternyr
+>
 > *"Pressa é só medo de que o tempo não seja seu."* — relojoeiro de OulVeil
 
 **Como é.** Um tique que só o conjurador ouve. Em volta da magia de Eternyr as coisas saem um pouco do lugar: a poeira cai devagar demais, a sombra chega antes do corpo, um passo é mais comprido do que devia. A cor é azul-noite com riscos brancos, como estrelas passando rápido. Quem carrega sempre sabe que horas são, e quase nunca tem pressa.
@@ -355,6 +363,7 @@ Perguntas de vínculo: *Em que momento da sua vida você voltaria? · Onde é o 
 *Natureza e instinto: mudar, transformar, animais, espíritos da natureza, voar, nadar, rastejar, cavar, farejar, adaptar, invocar, árvores.*
 
 > *"O lobo não odeia o cervo. Você também não precisa me odiar."* — caçadora da mata
+>
 > *"Na floresta ninguém pergunta quem eu sou. Só se eu sou rápido."* — menino-raposa
 
 **Como é.** Cheira a chuva no mato e pelo molhado. A magia de Primitivum sai do corpo: unha que cresce, pupila que vira fenda, a voz que vira rosnado por um segundo. Plantas se inclinam para quem conjura. Quem carrega entende bicho melhor que gente e confia mais no arrepio da nuca que em qualquer conselho.
