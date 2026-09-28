@@ -394,3 +394,5 @@ Sua resposta: ✅ mais palavras = efeito mais específico, mais fácil de funcio
 
 ✅ **As palavras somam sem explicar relação**: basta jogador e mestre concordarem com a combinação, o sentido da junção e o nível do efeito. A relação vira só história, opcional. Aplicado em [[02 Magia]].
 
+✅ **Crítico**: continua sendo qualquer par de dados iguais (até 1 e 1). Efeitos de crítico esclarecidos: *ignorar um efeito negativo* vale para o que cai em **você** (Efeito Colateral, Drawback, Cansaço de Forçar, condição); *melhor resultado possível* num **Teste mágico** faz o alvo **só escapar com um Crítico dele** (20 no d20; dados iguais no 2d12).
+

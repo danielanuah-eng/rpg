@@ -145,7 +145,7 @@ Conjurar no seu Grau máximo, contra a Dificuldade do Grau, dá **81–84%** em 
 ## Leitura dos dados na magia
 
 - Cada dado **par**: +1 Arcano para você. Cada dado **ímpar**: +1 Cataclisma para o mestre.
-- **Crítico** — no 2d12, dados iguais; nos outros, **todos pares**. Sucesso automático, escolha um efeito de crítico (ignorar um efeito negativo, melhor resultado possível, dobrar o dano), e ganhe Arcano igual ao **maior dado** (máx. 6) no lugar do Arcano dos pares.
+- **Crítico** — no 2d12, dados iguais; nos outros, **todos pares**. Sucesso automático, escolha um efeito de crítico (ignorar um efeito negativo seu; melhor resultado possível, e num Teste mágico o alvo só escapa com um Crítico dele; dobrar o dano; ver [[01 Regras centrais]]), e ganhe Arcano igual ao **maior dado** (máx. 6) no lugar do Arcano dos pares.
 - **Desequilíbrio** — todos os dados **ímpares** (não existe no 2d12). O mestre ganha os pontos normais **e** dispara de graça um Abalo: **Tremor** no Grau 3, **Fissura** no Grau 4, **Ruptura** no Grau 5.
 - **Efeitos Colaterais** — quando a magia sai **por Cataclisma** (no 2d12, o maior dado ímpar; nos outros, a maioria ímpar), ela acontece (se passou), mas o mundo cobra: você rola **Efeitos Colaterais** no d20. **Quanto maior o efeito, mais colaterais**:
 
