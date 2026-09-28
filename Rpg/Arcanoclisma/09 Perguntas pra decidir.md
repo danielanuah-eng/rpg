@@ -436,9 +436,9 @@ Sua resposta: ✅ aplicada, com *Cuidar* → **Proteger**, *Notar* → **Observa
 
 ✅ **Palavra em negativa é a mesma palavra**: *Bloquear* vale como "imbloqueável".
 
-✅ **Projétil: defesa do alvo +1 por Grau acima do 2** (G3 +1, G4 +2, G5 +3), porque a Esquiva e a Dificuldade foram feitas para 2d12 e conjuntos maiores acertam mais. Pela conta, 3d8 ≈ 2d12+1, 4d6 ≈ 2d12+2, 6d4 ≈ 2d12+3.
+✅ **Toda rolagem de acerto com mais dados que 2d12**: defesa +1 no 3d8, +2 no 4d6, +3 no 6d4 (3d8 ≈ 2d12+1, 4d6 ≈ 2d12+2, 6d4 ≈ 2d12+3). Dano não muda. A defesa segue subindo com a Moldura; quem é hábil em desviar sobe mais, quem não é compensa com Limiares, Blindado, Duro.
 
-✅ **Palavras Básicas extras de magia**: Abrir, Fazer, Conjurar, Investigar, Preparar, Apagar; Arma, Item, Poção. Cognitium trocou *Apagar* por **Riscar**.
+✅ **Seis verbos novos na tabela de Interações**, que vira **6 × 6 (36 verbos, sorteável com d66)**: Abrir (Força), Apagar (Agilidade), Investigar (Percepção), Conjurar (Carisma), Fazer (Inteligência), Preparar (Sabedoria). **Arma, Item, Poção** são Palavras Básicas de coisa. Cognitium trocou *Apagar* por **Riscar**.
 
 ✅ **Bronze Arco**: metal arcano do mundo (em [[06 Itens e dinheiro]] e [[08 Mundo e entidades]]).
 

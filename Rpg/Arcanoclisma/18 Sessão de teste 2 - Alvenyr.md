@@ -71,4 +71,31 @@ Básicas: fortes Intuir, Pensar, Esconder · fraco Bater · Valor: Ler, Mente, I
   - Regra ajustada na mesa: **Abrir** vira Palavra Básica de magia; **Criar** já era verbo da tabela.
   - *Lâmina* + **Criar** + *Afiado* + *Bloquear* (em negativa: "imbloqueável", combinado antes) (Projétil, G4, 5 Arcano; 3ª palavra dá +1C ao mestre): 4d6 1, 2, 4, 5 + 4 + 3 = 19 contra Dif 16, acerta; empate de pares e ímpares = **por Arcano**. Fio da Guerra: +1 dado de dano → 4d10 10, 5, 10, 4 + 4 = **33, Grave: Kaelen 7/10**. Gosto de Sangue: +1 Arcano. "Imbloqueável" (*Bloquear* em negativa) anula a reação de aparar do Kaelen. Espada de **Bronze Arco** (metal arcano do mundo) com runas de Conflitüo.
   - O mestre gasta 1C para emoldurar: Kaelen age duas vezes. **Coleira** (2C) no Alvenyr: Firmar 10 + 6 − 1 = 15 contra 16, falha por 1: puxado e **Preso**. **Lâmina**: d20 10 + 3 + 1 (Plateia) = 14 contra Esquiva 11, acerta: 3d10 2, 9, 1 + 3 = **15**.
+  - Proteção: 1 casa (2 PV → 1). Alvenyr: "É só isso que você tem, seu palhaço de merda?"
+  - *Desarmar* + **Arma** contra **a magia das correntes** (não contra o Kaelen): Pequeno evento, G2, 1 Arcano: 2d12 2, 5 + 4 + 1 + 2 = 14 contra 12, sucesso **por Cataclisma**: a coleira se solta. (Na mesa eu tinha rolado como Teste mágico contra o Kaelen; o jogador corrigiu a intenção.)
+  - O mestre emoldura: faca do Kaelen, 14 contra Esquiva 11, 3d10 10, 10, 7 + 3 = 30 (Grave). Proteção: 1 casa → **2 PV**. Alvenyr 4/7.
+  - Espada de Bronze Arco (arma de magia G4, dura o Evento): Bater 12, 10 + 5 = 27 contra 16, **por Arcano**; 3d10 4, 2, 3 + 5 = 14: **1 PV. Kaelen 6/10.** O golpe revela no peito dele uma **coroa tatuada e riscada**, igual à das mãos do Alvenyr.
+  - **Fim do combate** (por interpretação do Chefe): o Kaelen vê a coroa, baixa as correntes, solta a manada e os três alunos. Pede que o Alvenyr diga o nome dele à escola.
+- **Estado final**: Alvenyr Arcano 9, PV 4/7, Proteção 2/4, Cansaço 0/6; nenhum Atalho, nenhum Passo. Mestre com 5 Cataclisma. Estouro da Manada 1/6 (não disparou).
+
+## Relatório do playtest 2
+
+**O que funcionou**
+- **Moldura 3 é outro jogo**: 4 palavras, Grau 4, Arsenal Vivo, Fio da Guerra. O jogador montou golpes grandes e descritivos (*Lâmina* + Criar + Afiado + Bloquear em negativa) e o sistema aguentou.
+- **Palavras somam** deixou a segunda, terceira e quarta palavra valiosas sem explicação de relação.
+- **Efeito Colateral pelo Grau** apareceu na hora certa (Grau 3, Esquecimento) e virou ficção.
+- **O Chefe com personalidade** resolveu a luta pela história: o espelho entre Kaelen e Alvenyr (prodígio apagado, coroa riscada) foi mais forte que zerar PV.
+- **Ajuste solo** (Chefe sem ×1,5 nos Limiares, 10 PV): em 4 ações do jogador o Chefe perdeu 4 PV; a luta andaria em ~8 ações. Bom para solo.
+
+**O que mudamos na mesa**
+- Palavra em negativa é a mesma palavra (*Bloquear* → "imbloqueável").
+- **Acerto com mais dados**: defesa +1 no 3d8, +2 no 4d6, +3 no 6d4, em toda rolagem de acerto; dano não muda.
+- Tabela de Interações virou **6 × 6** (Abrir, Apagar, Investigar, Conjurar, Fazer, Preparar); **Arma, Item, Poção** viraram Palavras Básicas de coisa.
+- **Bronze Arco** entrou no mundo. Cognitium: *Apagar* → **Riscar**.
+- Ficou claro que **magia contra magia** (soltar as correntes) é **Pequeno evento**, não Teste mágico contra quem conjurou.
+
+**O que observar**
+- O **dano do Chefe na Moldura 3** (3d10+3) tira 2 a 3 PV de um personagem com Limiares 15/27 por golpe: em solo, duas molduras seguidas quase derrubam. Talvez o ajuste solo também deva baixar o dano do Chefe um passo.
+- O **Arcano** subiu de novo (5 → 9) com dois Críticos e gastos grandes; a economia na Moldura 3 parece saudável.
+- Nenhum **Atalho** nem **Passo**: a luta foi rápida demais para os Laços entrarem. Numa próxima, dar uma cena de pressão emocional antes do Chefe.
 
