@@ -42,7 +42,7 @@ A **Dificuldade** é o número que os jogadores tiram para acertar o adversário
 
 **Contra magia**, o adversário se defende de dois jeitos, e os dois crescem com a Moldura dele:
 - **Desviar**: magia do tipo **Projétil** rola contra a **Dificuldade** dele.
-- **Resistir**: num **Pequeno evento** (medo, encanto, rede, chão que escorrega) ele faz o teste físico com **d20 + Ataque** contra o total de quem conjura. Palavras dele que combinam dão Vantagem; as que o expõem, Desvantagem. **Lacaios não resistem.**
+- **Resistir**: num **Teste mágico** (sono, encanto, medo, rede que prende) ele faz o teste físico com **d20 + Ataque** contra o total de quem conjura. Palavras dele que combinam dão Vantagem; as que o expõem, Desvantagem. **Lacaios não resistem.**
 - Maestrias (*Resiliente*, *Anulador*) e o Valor do adversário mexem nas duas.
 
 ### Papéis

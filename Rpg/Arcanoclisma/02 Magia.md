@@ -52,10 +52,10 @@ A rolagem é sempre **sua**. O **tipo do efeito** diz contra o que você rola e 
 | Efeito | Exemplos | Você rola contra | Quem é pego |
 |---|---|---|---|
 | **Projétil** | jato, lâmina, flecha de luz, soco que atravessa: algo que sai e precisa acertar | a **Esquiva** (PJ) ou a **Dificuldade** (adversário) do alvo | não rola: a Esquiva já é a defesa |
-| **Teste mágico** | fortalecer o corpo, abrir, criar, mudar um objeto, curar: a magia só precisa acontecer | a **Dificuldade do Grau** | ninguém rola |
-| **Pequeno evento** | medo, encanto, sono, uma rede de gelo, o chão que escorrega, uma rajada: a magia cria uma situação e quem está nela reage | a **Dificuldade do Grau** | faz um **teste físico** contra **o seu total** para escapar |
+| **Teste mágico** | sono, encanto, medo, uma rede de gelo que prende, uma rajada que derruba: o efeito cai sobre um alvo (ou vários) e ele reage | a **Dificuldade do Grau** | cada alvo faz um **teste físico** contra **o seu total** para escapar |
+| **Pequeno evento** | acrescentar, mudar, detalhar ou alterar algo no mundo: abrir, criar, esquentar, fortalecer o próprio corpo, fazer o chão virar gelo, curar | a **Dificuldade do Grau**: passou, o mundo muda | ninguém rola |
 
-**O teste físico** de quem é pego é uma reação (não gera Arcano nem Cataclisma). O mestre escolhe o atributo pelo tipo da magia e pela situação: medo e encanto pedem *firme* (Sabedoria); rede e prisão, *forte* (Força); chão que escorrega e rajada, *ágil* (Agilidade); ilusão, *atento* (Percepção). Iguala ou passa o seu total, escapa.
+**O teste físico** do alvo é uma reação (não gera Arcano nem Cataclisma). O mestre escolhe o atributo pelo tipo da magia e pela situação: medo e encanto pedem *firme* (Sabedoria); rede e prisão, *forte* (Força); chão que escorrega e rajada, *ágil* (Agilidade); ilusão, *atento* (Percepção). Iguala ou passa o seu total, escapa.
 
 - **PJ** resiste com 2d12 + o atributo.
 - **Adversário** resiste com **d20 + o Ataque** dele (o mestre sempre rola d20). Uma palavra dele que combina com resistir (*Destemido* contra medo) dá Vantagem; uma que o deixa exposto (*Covarde*) dá Desvantagem.
