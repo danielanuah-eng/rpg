@@ -87,7 +87,7 @@ Rascunho das duas em `arte/fichas.html`. **O centro da Ficha 1 é a tabela de Pa
 Traço do **Wilderfeast** (tinta grossa, contorno preto, cor chapada com sombra em bloco) com o que vem das referências de dragão do dono e da lore ([[08 Mundo e entidades]]):
 
 - **Imponência**: visto um pouco de baixo, cabeça erguida, peito orgulhoso, envergadura enorme; majestoso até ameaçando.
-- **Corpo**: nobre e alongado, pescoço e cauda longos; escamas angulosas como cristal, desenhadas em blocos de cor.
+- **Corpo**: nobre e alongado, pescoço e cauda longos. **Escamas suaves e orgânicas**: pequenas, sobrepostas, acompanhando as curvas do corpo como pele de cobra ou lagarto, em poucos traços e degradês chapados; **nada de pedra, rocha, placa de armadura ou escama rígida e artificial**. Poucos espinhos.
 - **Paleta**: duas ou três cores do Valor e **um acento que brilha**.
 - **Chamas bruxuleantes**: **nada de fogo realista**. São chamas **fantasmagóricas e translúcidas**, desenhadas como **fitas e fumaça em formas chapadas**, de borda limpa, que correm em curvas longas e **contornam a silhueta** como um manto espectral. Aparecem **só em alguns pontos**: pontas das asas, ponta da cauda, crista e olhos, onde o corpo parece virar chama; mais alguns veios finos acesos nas escamas.
 - **Cada Valor tem a sua chama** (cor, forma e comportamento):
