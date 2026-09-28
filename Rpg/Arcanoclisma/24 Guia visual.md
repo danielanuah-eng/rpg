@@ -68,6 +68,8 @@ A versão clara da página (para impressão) troca o fundo por papel quente e ma
 
 ## Ícones
 
+Rascunho vetorial em `arte/icones/` (prévia em `arte/icones.html`): 12 Comportamentos, 6 atributos, Arcano e Cataclisma. Todos em traço de mesma espessura e `currentColor`, para trocar a cor na ficha colorida e na preto e branco.
+
 - **Comportamentos**: ícone de linha em fio dourado, dentro de um losango (não esfera, para não confundir com Valor).
 - **Atributos**: seis glifos simples de linha (Força, Agilidade, Percepção, Carisma, Inteligência, Sabedoria), usados no cabeçalho das colunas da tabela de Interações.
 - **Arcano e Cataclisma** na ficha: Arcano é um círculo fechado dourado; Cataclisma é um círculo com uma fresta, em ferrugem.

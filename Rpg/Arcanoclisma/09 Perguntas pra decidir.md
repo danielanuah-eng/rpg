@@ -508,3 +508,5 @@ As perguntas P-123 a P-126 (gerador de nomes, personagem aleatório com tabela d
 
 ✅ **Clone** entrou em **Eternyr** (você, ou alguém, de outro instante, lado a lado), no lugar de *Distância*.
 
+✅ **Ícones** (rascunho): 12 Comportamentos em losango, 6 glifos de atributo (Força: montanha · Agilidade: rastro e bola · Percepção: mira · Carisma: voz · Inteligência: hexágono · Sabedoria: lua), Arcano (círculo fechado, dourado) e Cataclisma (círculo com fresta, ferrugem). Em `arte/icones/`; prévia com a tabela de Interações na ficha em `arte/icones.html`.
+
