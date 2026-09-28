@@ -82,6 +82,20 @@ Rascunho das duas em `arte/fichas.html`. **O centro da Ficha 1 é a tabela de Pa
 - **Ficha 1 (Personagem)**, frente: identidade, Esquiva, Limiares, PV, Proteção, Cansaço, Arcano, **Palavras Básicas** (o maior bloco), Laços, Comportamento, armas. Verso: retrato, Vivências, itens, perguntas de criação, relações da party, Marcos, notas.
 - **Ficha 2 (Valor)**: uma para cada um dos **9 Valores**, **limpa**: só o que se usa na mesa. Esfera e cor do Valor, Compromisso, Skill, Retaliação e Ressonâncias, as 36 palavras, as casas de Grau máximo e de palavras, **a fórmula** (a mesma da Ficha 1), a tabela de Graus e os **Descritores** em quadrados (Dano, Restringe, Duração, Alcance, Tamanho). As explicações ficam no **livro** (`arte/livro-magia.html`, capítulo de Magia) e na **ficha do app**. Cores de texto mais escuras nos Valores claros (Sublimeyn, Alvorum, Morbidyum).
 
+## Dragões
+
+Traço do **Wilderfeast** (tinta grossa, contorno preto, cor chapada com sombra em bloco) com o que vem das referências de dragão do dono e da lore ([[08 Mundo e entidades]]):
+
+- **Imponência**: visto um pouco de baixo, cabeça erguida, peito orgulhoso, envergadura enorme; majestoso até ameaçando.
+- **Corpo**: nobre e alongado, pescoço e cauda longos; escamas angulosas como cristal, desenhadas em blocos de cor.
+- **Paleta**: duas ou três cores do Valor e **um acento que brilha**.
+- **Chamas bruxuleantes**: saem dos espinhos, da borda das asas e da ponta da cauda e **envolvem o corpo como um manto que se mexe**, com fiapos translúcidos e veios acesos nas escamas; os olhos queimam com o mesmo fogo.
+- **Arcano e Cataclisma num corpo só**: parte do corpo inteira, fechada e simétrica; parte rachada, com luz vazando e forma mudando.
+- **Peso emocional**: olhos fundos e expressivos (amor, medo, saudade), olhando quem vê como se os mortais fossem estações.
+- **Idade**: o filhote e o jovem são feras de impulso; o adulto é senhor consciente; o ancião é memória do mundo, sábio, de cicatrizes antigas.
+
+As imagens de referência não entram no repositório (são de outros artistas): servem só de direção.
+
 ## Página do livro
 
 Rascunho do capítulo de Magia em `arte/livro-magia.html`: páginas de papel com fio dourado e cantos fechados (seção de regra), título em Marcellus SC, texto em duas colunas, capitular na abertura, caixas de regra com borda dourada (ferrugem quando fala de custo e Cataclisma), exemplos montados como pedaços da ficha. Sete páginas: abertura e fórmula, palavras, Graus, quem rola e contra o quê, Descritores, os dados e os Efeitos Colaterais, Canal e Dupla.

@@ -47,9 +47,20 @@ ESTILOS = {
     'P': ('Personagem e criatura (1:1)',
           INK + ' Full body character, dynamic pose, strong facial expression. '
           'Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese):'),
+    # Dragões: traço do Wilderfeast (INK) + as referências do dono (imponência, corpo nobre e alongado, escamas como
+    # cristal, paleta curta com acento que brilha, chamas bruxuleantes em volta do corpo) + a lore do 08: nascem de um
+    # desejo antigo que ganhou carne; são Arcano e Cataclisma num corpo só (partes fechadas e inteiras, partes rachadas
+    # e mudando); nobres até na violência, orgulhosos, cheios de alma, com peso emocional; os mortais são estações.
     'D': ('Dragão (1:1)',
-          INK + ' Full body dragon in a majestic pose, wings open, sense of enormous size, glowing flickering flames '
-          'coming out of its spines and eyes. Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese):'),
+          INK + ' An imposing, noble full body dragon seen slightly from below, head raised, chest proud, huge wingspan, '
+          'majestic even when threatening. It is an ancient desire that became flesh and scales, complete, alive and full of soul: '
+          'made of order and change at once, part of its body whole, closed and symmetrical, part cracked open with light '
+          'leaking through and shapes shifting. Slender elegant body with a long neck and long tail, angular crystal-like scales '
+          'drawn as flat blocks of color, a limited palette of two or three hues plus one glowing accent color. Luminous flickering '
+          'flames in the accent color rise from the spines, the edges of the wings and the tip of the tail and wrap around the '
+          'body like a moving mantle, with translucent wisps and glowing veins along the scales; the eyes burn with the same fire. '
+          'Deep expressive eyes that carry emotional weight, love, fear or longing, looking at the viewer as if mortals were '
+          'passing seasons. Plain light gray background, no scenery, no text, no logo, no signature. Subject (in Portuguese):'),
     'I': ('Item (1:1)',
           INK + ' A single isolated object, whole and centered, three-quarter view, signs of use. '
           'Plain solid white background, no hand, no character, no text, no logo. Subject (in Portuguese):'),
@@ -262,6 +273,14 @@ for s in secoes[1:]:
             i, pr = feitos[chave]
             add('adversario', f'Bestiário · {titulo}', nome, f'{cab} · prompt do [[20 Prompts de arte - personagens]]', 'P', pr, id_=i)
             continue
+        IDADE = {'Dragonete': 'um filhote pequeno, curioso e selvagem; o desejo nele é puro impulso: fome, brilho, a mãe',
+                 'Dragão Jovem': 'um dragão jovem, fera territorial e faminta, ainda sem sabedoria, desejo em impulso',
+                 'Dragão Adulto': 'um dragão adulto, senhor do seu Domínio, orgulhoso e consciente do próprio desejo',
+                 'Dragão Ancião': 'um dragão ancião, memória do mundo, sábio e paciente, cicatrizes antigas, Eras inteiras no olhar'}
+        if nome in IDADE:
+            add('adversario', f'Bestiário · {titulo}', nome, cab, 'D',
+                f'{nome}: {IDADE[nome]}. Cor, forma e chamas do Valor do dragão (desenhe no Valor escolhido; padrão: Conflitüo, vermelho-ferrugem).')
+            continue
         ser = limpo(campos.get('Ser', '')).lower()
         agir = limpo(campos.get('Agir', ''))
         acao = re.split(r'[ (·]', agir)[0].lower() if agir else ''
@@ -276,7 +295,8 @@ for s in secoes[1:]:
             txt += f'; no gesto de {acao}'
         if cor:
             txt += f'; {cor}'
-        add('adversario', f'Bestiário · {titulo}', nome, cab, 'P', txt + '.')
+        est = 'D' if re.search(r'\bdrag(ão|oa|ões)\b', ser + ' ' + nome.lower()) else 'P'
+        add('adversario', f'Bestiário · {titulo}', nome, cab, est, txt + '.')
 
 # ---------------------------------------------------------------- saída
 for it in itens:

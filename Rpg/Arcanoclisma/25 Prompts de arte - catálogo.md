@@ -15,7 +15,7 @@
 | Código | Para | Texto (vai antes de cada prompt) |
 |---|---|---|
 | **P** | Personagem e criatura (1:1) | Bold graphic fantasy RPG illustration in a thick expressive ink style: heavy black outlines, flat vibrant colors with hard block shadows, dry-brush paper texture, stylized exaggerated proportions, comic-book cel shading, not realistic, not 3D, not a painting. Full body character, dynamic pose, strong facial expression. Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese): |
-| **D** | Dragão (1:1) | Bold graphic fantasy RPG illustration in a thick expressive ink style: heavy black outlines, flat vibrant colors with hard block shadows, dry-brush paper texture, stylized exaggerated proportions, comic-book cel shading, not realistic, not 3D, not a painting. Full body dragon in a majestic pose, wings open, sense of enormous size, glowing flickering flames coming out of its spines and eyes. Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese): |
+| **D** | Dragão (1:1) | Bold graphic fantasy RPG illustration in a thick expressive ink style: heavy black outlines, flat vibrant colors with hard block shadows, dry-brush paper texture, stylized exaggerated proportions, comic-book cel shading, not realistic, not 3D, not a painting. An imposing, noble full body dragon seen slightly from below, head raised, chest proud, huge wingspan, majestic even when threatening. It is an ancient desire that became flesh and scales, complete, alive and full of soul: made of order and change at once, part of its body whole, closed and symmetrical, part cracked open with light leaking through and shapes shifting. Slender elegant body with a long neck and long tail, angular crystal-like scales drawn as flat blocks of color, a limited palette of two or three hues plus one glowing accent color. Luminous flickering flames in the accent color rise from the spines, the edges of the wings and the tip of the tail and wrap around the body like a moving mantle, with translucent wisps and glowing veins along the scales; the eyes burn with the same fire. Deep expressive eyes that carry emotional weight, love, fear or longing, looking at the viewer as if mortals were passing seasons. Plain light gray background, no scenery, no text, no logo, no signature. Subject (in Portuguese): |
 | **I** | Item (1:1) | Bold graphic fantasy RPG illustration in a thick expressive ink style: heavy black outlines, flat vibrant colors with hard block shadows, dry-brush paper texture, stylized exaggerated proportions, comic-book cel shading, not realistic, not 3D, not a painting. A single isolated object, whole and centered, three-quarter view, signs of use. Plain solid white background, no hand, no character, no text, no logo. Subject (in Portuguese): |
 | **C** | Cenário (paisagem 3:2) | Fantasy RPG environment illustration in a bold graphic ink style: heavy black outlines, flat vibrant colors with hard block shadows, dry-brush paper texture, wide establishing view, dramatic light, chapter-opening mood, no characters in the foreground, no text, no logo. Subject (in Portuguese): |
 
@@ -1601,22 +1601,22 @@
 
 ### Bestiário · Dragões e wyverns (10)
 
-- **Dragonete** · M1 · Ágil · Valor do dragão · estilo **P** · 1:1  
+- **Dragonete** · M1 · Ágil · Valor do dragão · estilo **D** · 1:1  
   id `dragonete`  
-  > Dragonete (filhote): dragão, filhote; dragão ou wyvern; jeito minúsculo, brilhante; leve e veloz; no gesto de morder.
-- **Dragão Jovem** · M2 · Bruto · Valor do dragão · estilo **P** · 1:1  
+  > Dragonete: um filhote pequeno, curioso e selvagem; o desejo nele é puro impulso: fome, brilho, a mãe. Cor, forma e chamas do Valor do dragão (desenhe no Valor escolhido; padrão: Conflitüo, vermelho-ferrugem).
+- **Dragão Jovem** · M2 · Bruto · Valor do dragão · estilo **D** · 1:1  
   id `dragao-jovem`  
-  > Dragão Jovem: dragão, fera; dragão ou wyvern; jeito voador, blindado; grande e pesado; no gesto de morder.
-- **Dragão Adulto** · M3 · Chefe · Valor do dragão · Resiliente · estilo **P** · 1:1  
+  > Dragão Jovem: um dragão jovem, fera territorial e faminta, ainda sem sabedoria, desejo em impulso. Cor, forma e chamas do Valor do dragão (desenhe no Valor escolhido; padrão: Conflitüo, vermelho-ferrugem).
+- **Dragão Adulto** · M3 · Chefe · Valor do dragão · Resiliente · estilo **D** · 1:1  
   id `dragao-adulto`  
-  > Dragão Adulto: dragão, senhor; dragão ou wyvern; jeito voador, enorme, astuto; pose imponente de chefe; no gesto de morder.
-- **Dragão Ancião** · M4 · Chefe · Valor do dragão + um segundo · Deidade · estilo **P** · 1:1  
+  > Dragão Adulto: um dragão adulto, senhor do seu Domínio, orgulhoso e consciente do próprio desejo. Cor, forma e chamas do Valor do dragão (desenhe no Valor escolhido; padrão: Conflitüo, vermelho-ferrugem).
+- **Dragão Ancião** · M4 · Chefe · Valor do dragão + um segundo · Deidade · estilo **D** · 1:1  
   id `dragao-anciao`  
-  > Dragão Ancião: dragão, memória do mundo; dragão ou wyvern; jeito antigo, enorme, voador; pose imponente de chefe; no gesto de morder.
-- **Aurelhaz, Dragoa-Coral** · M3 · Chefe · Persona · Resiliente · estilo **P** · 1:1  
+  > Dragão Ancião: um dragão ancião, memória do mundo, sábio e paciente, cicatrizes antigas, Eras inteiras no olhar. Cor, forma e chamas do Valor do dragão (desenhe no Valor escolhido; padrão: Conflitüo, vermelho-ferrugem).
+- **Aurelhaz, Dragoa-Coral** · M3 · Chefe · Persona · Resiliente · estilo **D** · 1:1  
   id `aurelhaz-dragoa-coral`  
   > Aurelhaz, Dragoa-Coral: dragoa, colecionadora; dragão ou wyvern; jeito belo, voador; pose imponente de chefe; no gesto de morder; magia coral.
-- **Velho Ossário, Dragão-Pálido** · M4 · Chefe · Morbidyum + Eternyr · Deidade · estilo **P** · 1:1  
+- **Velho Ossário, Dragão-Pálido** · M4 · Chefe · Morbidyum + Eternyr · Deidade · estilo **D** · 1:1  
   id `velho-ossario-dragao-palido`  
   > Velho Ossário, Dragão-Pálido: dragão, ancião; dragão ou wyvern; jeito antigo, pálido; pose imponente de chefe; no gesto de morder; magia verde-pálida.
 - **Wyvern Selvagem** · M1 · Ágil · (Valor fraco, opcional) · estilo **P** · 1:1  
