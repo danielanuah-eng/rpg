@@ -13,6 +13,8 @@ PARECER: 1–3 adjetivos           como ele é (cada um é uma passiva)
 QUER:    uma frase               o que ele quer, e quando foge
 JEITO:   (Chefes) personalidade e modo de agir, em 2–3 frases
 LAÇO:    (opcional) uma palavra  o que o prende ou o conecta (narrativo)
+BÁSICAS: tudo = Ataque · 2–3 verbos fortes (+2) · 1 fraco (−2)   ← a tabela de Interações dele
+VALOR:   palavras de Valor, se ele conjura (um humano comum não tem)
 ```
 
 Exemplo:
@@ -21,10 +23,12 @@ Exemplo:
 LOBO-DE-CINZA — Moldura 1 · Ágil · Morbidyum
 Dif 14 · Limiares 8/14 · PV 4 · Cansaço 2 · Ataque +2 · Dano 1d10+2
 SER:     Lobo, Luto
-AGIR:    Morder (ataque) · Uivar (2C · Longe · Grupo · Sabedoria · Amedrontado · até a próxima Falha)
+AGIR:    Morder (ataque) · Uivar (2C · Longe · Grupo · Firmar · Amedrontado · até a próxima Falha)
          Sumir (1C · si · Instante: vira cinza e reaparece até Médio)
 PARECER: Pálido (Vantagem para se esconder à noite) · Faminto (ataca primeiro quem está ferido)
 QUER:    comer o que morreu; foge com 1 PV
+BÁSICAS: tudo +2 · fortes: Rastrear, Esconder, Bater (+4) · fraco: Firmar (0)
+VALOR:   Morbidyum: Assombrar, Cinzas, Pálido
 ```
 
 ## Os números: régua por Moldura
@@ -37,6 +41,8 @@ QUER:    comer o que morreu; foge com 1 PV
 | 4 | 15 | 22 / 42 | 8 | 4 | +4 | 4d10+4 |
 
 A **Dificuldade** é o número que os jogadores tiram para acertar o adversário (arma ou magia) e para resistir ao que ele faz. Um golpe médio de jogador na Moldura certa marca 2 PV; um golpe médio do adversário marca 1–2 PV num jogador de armadura Média. A régua sobe devagar (Dificuldade +1 e ataque +1 por Moldura) porque os personagens também sobem devagar (atributo e Esquiva +1 por Moldura); conferido em [[15 Teste de escala e criatividade]].
+
+**Cada adversário tem a sua tabela de Interações**, do jeito curto: **um número para tudo** (o Ataque) e, pelas palavras dele (*Ser*, *Parecer*), **2 ou 3 verbos fortes (+2)** e **1 fraco (−2)**. Ele rola **d20 + o número** do verbo. Quando um jogador age **contra um verbo forte** dele (se esconder de quem Observa bem), a Dificuldade sobe **+2**; contra um fraco, cai **−2**. Se ele usa magia, tem também **palavras de Valor**; um humano comum não tem. PNJ importante pode ter a tabela inteira, com atributos, como um jogador. *(O bestiário ainda vai ganhar a linha BÁSICAS de cada um; até lá, o gerador tira das palavras.)*
 
 **A régua é o ponto de partida, não uma lei.** A Dificuldade de um adversário **varia** pelo que ele é: Valores, história, corpo, palavras. Um bicho frágil e distraído pode ter Dificuldade **abaixo** da régua; um guarda veterano de armadura, acima. Ajuste de −3 a +3 é normal; use o *Parecer* e o *Ser* como guia (*Lento*, *Cego*, *Enorme*: mais fácil de acertar; *Veloz*, *Blindado*, *Etéreo*: mais difícil).
 
@@ -109,7 +115,7 @@ Verbo (Custo · Alcance · Alvo · Resistência · Efeito · Marcador)
 | **Custo** | livre (usa ao ser ativado) · **NC** (N de Cataclisma) · **reação** (Chefes; custa 1C a mais) |
 | **Alcance** | Toque · Perto · Médio · Longe · Horizonte |
 | **Alvo** | 1 · Grupo (até 3) · Área (todos no alcance) · si |
-| **Resistência** | *ataque* (d20 + Ataque contra Esquiva) ou um **atributo** (o jogador rola 2d12 + atributo contra a Dificuldade do adversário) |
+| **Resistência** | *ataque* (d20 + Ataque contra Esquiva) ou um **verbo** (o jogador rola 2d12 + atributo + verbo contra a Dificuldade do adversário: Desviar, Aguentar, Firmar, Fugir...). Quando o bestiário pede só um atributo ("Agilidade"), o jogador soma o verbo que a descrição pedir (Agilidade + Desviar) |
 | **Efeito** | Dano ×½ / ×1 / ×1,5 / ×2 · uma **Condição** · Movimento · Criar/Invocar · Proteger · Anular · Selar palavra · Mexer em Arcano/Cansaço |
 | **Marcador** | Instante · até a próxima Falha · até o mestre emoldurar · até o mestre pagar · o Evento |
 

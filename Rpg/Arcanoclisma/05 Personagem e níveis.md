@@ -30,7 +30,7 @@ Anote cada relação na ficha dos dois personagens (no app, aparece nas duas fic
 3. **Valor** — o personagem é um **Comprometido**. Pegue a **ficha do seu Valor** (36 palavras, símbolo, Skill, Retaliação, 4 espaços extras) e anote o **Compromisso** ([[03 Valores]]).
 4. **Vínculo** — responda às perguntas abaixo.
 5. **Canal** — como você exerce a magia: foco arcano, arma, Transcrito, corpo, voz, familiar ou marca ([[02 Magia]]).
-6. **Atributos** — distribua **+2, +1, +1, 0, 0, −1**.
+6. **Interações** — na tabela ([[01 Regras centrais]], seção 1), distribua nos **atributos** **+1, +1, 0, 0, 0, −1** e nos **verbos** **+2, +1, +1, +1, −1** (os outros verbos ficam em 0).
 7. **Vivências** — escreva **2** frases do passado do personagem. Cada uma dá Vantagem (gastando 1 Arcano).
 8. **Equipamento** — uma arma, uma armadura permitida, o objeto do Canal, um kit, **50 Ordynus** ([[06 Itens e dinheiro]]).
 9. **Números finais** — 3 Laços escritos, Arcano 3, Cansaço 6, PV do Comportamento, Proteção da armadura, Limiares = base + 1 + armadura, Sintonia +2 (mais o +1 de Relação quando a magia tem a ver com o personagem).
@@ -76,10 +76,10 @@ Este bloco não dá bônus nem é cobrado pelo mestre. Serve para a mesa conhece
 | 2 | 2 | 3 | 3 | +3 | 2 | +1 Vivência; +1 Limiares |
 | 3 | 2 | 3 | 3 | +3 | 2 | +1 Limiares |
 | 4 | 2 | 3 | 3 | +3 | 2 | +1 Limiares |
-| 5 | 3 | 4 | 4 | +4 | 3 | +1 Vivência; +1 Limiares; limpa marcas de atributo |
+| 5 | 3 | 4 | 4 | +4 | 3 | +1 Vivência; +1 Limiares; limpa marcas da tabela |
 | 6 | 3 | 4 | 4 | +4 | 3 | +1 Limiares |
 | 7 | 3 | 4 | 4 | +4 | 3 | +1 Limiares |
-| 8 | 4 | 5 | 5 | +5 | 4 | +1 Vivência; +1 Limiares; limpa marcas de atributo |
+| 8 | 4 | 5 | 5 | +5 | 4 | +1 Vivência; +1 Limiares; limpa marcas da tabela |
 | 9 | 4 | 5 | 5 | +5 | 4 | +1 Limiares |
 | 10 | 4 | 5 | 5 | +5 | 4 | +1 Limiares |
 
@@ -89,7 +89,7 @@ Este bloco não dá bônus nem é cobrado pelo mestre. Serve para a mesa conhece
 
 | Avanço | Limite |
 |---|---|
-| +1 em dois atributos que ainda não estão marcados (marque-os) | marcas somem no nível 5 e 8 |
+| +1 em dois atributos ou verbos que ainda não estão marcados (marque-os) | máx. +3 cada; marcas somem no nível 5 e 8 |
 | +1 PV | máx. 12 |
 | +1 Cansaço | máx. 12 |
 | +1 Esquiva | uma vez por Moldura |
@@ -97,21 +97,21 @@ Este bloco não dá bônus nem é cobrado pelo mestre. Serve para a mesa conhece
 | **Palavra Estrangeira**: escreva num dos 4 espaços extras da sua ficha uma palavra de outro Valor | máx. 4 |
 | **Melhorar um talento seu** (Básico → Superior) | Moldura 2+ (do seu Comportamento), 3+ (de outro) |
 | **Talento avulso** de outro Comportamento, versão Básica | Moldura 2+ |
-| **Domínio**: escolha dano, alcance, alvos/área, duração ou atributo. O primeiro passo de Ampliar nessa propriedade, em cada magia, não sobe a Dificuldade | uma vez por Moldura, propriedades diferentes |
+| **Domínio**: escolha dano, alcance, alvos/área, duração ou número afetado. O primeiro passo de Ampliar nessa propriedade, em cada magia, não sobe a Dificuldade | uma vez por Moldura, propriedades diferentes |
 | **Ressonância** do seu Valor (II na Moldura 2+, III na Moldura 3+) | em ordem |
 
 ## A ficha: duas folhas
 
 ### Ficha 1 — Personagem (igual para todo mundo, frente e verso)
 
-Tudo o que não é a magia do Valor. **Frente**: o que se usa jogando (identidade, Comportamento, atributos, Palavras Básicas, Arcano, Laço, itens). **Verso**: criação e lore (perguntas, relações da party, Vivências, anotações).
+Tudo o que não é a magia do Valor. **Frente**: o que se usa jogando (identidade, Comportamento, tabela de Interações, formas de magia, Arcano, Laço, itens). **Verso**: criação e lore (perguntas, relações da party, Vivências, anotações).
 - **Identidade**: nome, skin (aparência, com espaço para desenho ou foto), Era, conceito numa frase, jogador.
 - **Comportamento**: nome, Esquiva, Limiares (Maior/Grave), PV, Cansaço, Proteção, **caixas de talento** (Talento e Hábito com marcação Básico/Superior, e espaços vazios para talentos avulsos).
-- **Atributos** (os 6, com casinha de marca de avanço).
-- **Palavras Básicas**: a tabela de verbos de ação, a de modos (com o atributo de cada coluna) e a de formas, para o jogador montar "verbo + modo" olhando a ficha.
+- **Tabela de Interações**: os 6 atributos na primeira coluna e os 30 verbos nas linhas deles, cada um com o seu número e uma casinha de marca de avanço. O jogador monta "atributo + verbo" olhando a ficha.
+- **Formas** de magia (Projétil, Onda, Barreira...).
 - **Arcano** e os **Laços**: 3 linhas de descrição (mais espaço para Laços novos), cada uma com a caixinha **apertado**; as caixinhas **"Atalhos nesta sessão □□"**; e o **Atalho de costume** escrito do lado.
 - **Vivências**.
-- **Itens**: armas (atributo, alcance, dano, traços), armadura, uma linha para cada montaria/familiar (nome e traços), itens mágicos, consumíveis, materiais, **Ordynus**.
+- **Itens**: armas (atributo, verbo, alcance, dano, traços), armadura, uma linha para cada montaria/familiar (nome e traços), itens mágicos, consumíveis, materiais, **Ordynus**.
 - **Criação e lore**: as perguntas de criação (Vínculo, coração, você e o personagem) com espaço para reescrever, e as **relações da party** da sessão zero.
 - **Nível e Moldura**, com a tabela resumida do que cada Moldura libera.
 

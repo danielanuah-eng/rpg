@@ -6,13 +6,13 @@
 
 ## 1. Resumo de regras (uma página para a mesa)
 
-**Testes**: diga **verbo + modo** ("roubar *furtivo*"). O modo escolhe o atributo. Role **2d12 + atributo** contra a Dificuldade (10 fácil · 12 normal · 15 difícil · 20 muito difícil).
+**Testes**: diga o **verbo** (o que faz) e o **atributo** (como faz; por padrão, o da linha na tabela de Interações). Role **2d12 + atributo + verbo** contra a Dificuldade (9 fácil · 12 médio · 15 difícil · 19 muito difícil · 23 lendário).
 
 **Dados**: cada **par** = +1 Arcano para você. Cada **ímpar** = +1 Cataclisma para o mestre. **Dois iguais = Crítico** (sucesso automático, +Arcano igual ao dado, máx. 6). **Maior dado ímpar** (jogada por Cataclisma) ou **falha** → o mestre emoldura.
 
-**Magia**: 1 palavra do seu Valor (núcleo) + até 1 palavra de Valor a mais (1 Arcano) + **uma** Palavra Básica de graça (verbo, modo ou forma). Na Moldura 1: **Grau 1** é grátis e acontece sem rolar (ou vira o meio de uma ação: dano 1d8+1); **Grau 2** custa **1 Arcano** e rola **2d12 + 2 (Sintonia) + 1 por palavra de Valor** (a combinação, o sentido e o Grau combinados com o mestre) pelo tipo de efeito: **Projétil** contra a Esquiva/Dificuldade do alvo; **Teste mágico** (sono, medo, encanto): você não rola, o alvo rola contra **12 + 2 + palavras** (15 ou 16); **Pequeno evento** (mudar o mundo) contra 12. Dano de Grau 2: **1d10 + 2**. Dura até a próxima Falha.
+**Magia**: 1 palavra do seu Valor (núcleo) + até 1 palavra de Valor a mais (1 Arcano) + **uma** Palavra Básica de graça (um verbo da tabela ou uma forma). Na Moldura 1: **Grau 1** é grátis e acontece sem rolar (ou vira o meio de uma ação: dano 1d8+1); **Grau 2** custa **1 Arcano** e rola **2d12 + 2 (Sintonia) + 1 por palavra de Valor** (a combinação, o sentido e o Grau combinados com o mestre) pelo tipo de efeito: **Projétil** contra a Esquiva/Dificuldade do alvo; **Teste mágico** (sono, medo, encanto): você não rola, o alvo rola contra **12 + 2 + palavras** (15 ou 16); **Pequeno evento** (mudar o mundo) contra 12. Dano de Grau 2: **1d10 + 2**. Dura até a próxima Falha.
 
-**Bônus**: só atributo e **Vantagem (+1d6)**, até 2 por rolagem; Desvantagem tira uma. **Arcano** (começa 3, máx. 12): 1 = Vivência (Vantagem) · 1 = Ajudar (Vantagem) · 1 = palavra extra · 3 = Hábito · 3 = Ação em Dupla · 3 = Detalhe · 3 = Forçar o Grau (Grau 3, 3d8, contra 14).
+**Bônus**: só a tabela (atributo + verbo) e **Vantagem (+1d6)**, até 2 por rolagem; Desvantagem tira uma. **Arcano** (começa 3, máx. 12): 1 = Vivência (Vantagem) · 1 = Ajudar (Vantagem) · 1 = palavra extra · 3 = Hábito · 3 = Ação em Dupla · 3 = Detalhe · 3 = Forçar o Grau (Grau 3, 3d8, contra 14).
 
 **Atalho ou Passo**: Atalho = o mestre ganha 2 (+3 numa rolagem, ou ignorar condição) ou 4 (falha vira sucesso). Passo de Valor = aceitar o desconforto (Desvantagem, ou 1–2 Cansaço, ou a consequência) → +1 Arcano, dê certo ou não. Dois Atalhos sem nenhum Passo apertam o Laço (ações fora do padrão dele ficam +2, uma relação estremece, a consequência cresce); o Passo solta.
 
@@ -28,7 +28,7 @@
 *Ex-soldado da Cidade-Muralha que ainda luta como se o capitão estivesse olhando.*
 
 - **Comportamento**: Briguento · **Valor**: Conflitüo · **Canal**: Arma (machado)
-- **Atributos**: Força +2 · Agilidade +1 · Percepção +1 · Sabedoria 0 · Carisma 0 · Inteligência −1
+- **Interações**: Força +1 · Agilidade +1 · Inteligência −1 · Bater **+2** · Proteger +1 · Intuir +1 · Ameaçar +1 · Mentir −1 → Bater +3 · Proteger +1 · Ameaçar +1 · Intuir +1 · Mentir −1
 - **Esquiva** 10 · **PV** 6 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 8 / 16 · **Proteção** 4 (cota, Média: −1 em testes de mobilidade)
 - **Machado**: Força, Toque, **d10+3** (com Gosto de Sangue), Cruel (dano Grave marca +1 PV). Pela arma, a magia também é Cruel.
 - **Talento — Gosto de Sangue**: usa todas as armas, qualquer coisa vira arma (d8+1); +1 de dano com armas; dano Grave = +1 Arcano. **Hábito — Surra** (3): dano dobrado ou um segundo alvo.
@@ -42,7 +42,7 @@
 *Aprendiz de vidreira do Porto de Vidro, que carrega no pescoço um frasco do rio onde quase se afogou.*
 
 - **Comportamento**: Curiosa · **Valor**: Sublimeyn (o Eixo) · **Canal**: Foco (o frasco)
-- **Atributos**: Inteligência +2 · Sabedoria +1 · Percepção +1 · Agilidade 0 · Carisma 0 · Força −1
+- **Interações**: Inteligência +1 · Percepção +1 · Força −1 · Consertar **+2** · Estudar +1 · Movimentar +1 · Observar +1 · Ameaçar −1 → Consertar +3 · Estudar +2 · Observar +2 · Movimentar +1
 - **Esquiva** 10 · **PV** 5 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 6 / 12 · **Proteção** 3 (couro, Leve)
 - **Adaga**: Agilidade, Toque, d8+1. **Magia de dano** (G2): 1d10 + 3 (com o Foco).
 - **Talento — Já Li Sobre Isso**: duas vezes por sessão, um fato objetivo e descritivo, verdadeiro, sobre uma criatura, objeto ou lugar. **Hábito — Análise** (3): no começo de um Evento, descobre **um** dado (a Dificuldade, os Limiares, uma palavra ou o Valor de um adversário; um costume; um perigo).
@@ -56,7 +56,7 @@
 *Atriz que largou a trupe na estrada e vive de ser quem os outros precisam que ela seja.*
 
 - **Comportamento**: Enganadora · **Valor**: Persona · **Canal**: Voz
-- **Atributos**: Carisma +2 · Agilidade +1 · Inteligência +1 · Percepção 0 · Sabedoria 0 · Força −1
+- **Interações**: Carisma +1 · Agilidade +1 · Força −1 · Mentir **+2** · Atrair +1 · Esconder +1 · Criar +1 · Firmar −1 → Mentir +3 · Atrair +2 · Esconder +2 · Criar +1
 - **Esquiva** 12 · **PV** 5 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 6 / 12 · **Proteção** 3 (Leve)
 - **Adaga**: Agilidade, Toque, d8+1. **Magia de dano** (G2): 1d10 + 2.
 - **Talento — Mil Caras**: Vantagem para disfarçar, mentir e se esconder; mentira que funciona num PNJ = +1 Arcano. **Hábito — Sumir na Paisagem** (3, uma vez por sessão): se esconde no ambiente sem ninguém perceber, descrevendo como.
@@ -70,7 +70,7 @@
 *Filho da Vila da Colheita, grande e calado, que fala melhor com bicho do que com gente.*
 
 - **Comportamento**: Brutamontes · **Valor**: Primitivum · **Canal**: Corpo
-- **Atributos**: Força +2 · Sabedoria +1 · Agilidade +1 · Percepção 0 · Carisma 0 · Inteligência −1
+- **Interações**: Força +1 · Sabedoria +1 · Inteligência −1 · Levantar **+2** · Sobreviver +1 · Rastrear +1 · Aguentar +1 · Negociar −1 → Levantar +3 · Aguentar +2 · Sobreviver +2 · Rastrear +1
 - **Esquiva** 8 · **PV** 7 · **Cansaço** 6 · **Arcano** 3 · **Limiares** 11 / 20 · **Proteção** 5 (placas, Pesada: −1 Esquiva; a mobilidade não sofre, por ser Brutamontes)
 - **Lança**: Força, Perto, d10+2, Alcance.
 - **Talento — Ombro de Aríete**: Vantagem para empurrar, levantar, arrombar, segurar; armadura não atrapalha a mobilidade. **Hábito — Corpo de Pedra** (3): até o fim do Evento, Vantagem em testes de Força e de resistir.
@@ -143,7 +143,7 @@ Na briga, uma lamparina cai no feno. O ovo começa a rachar com o calor.
 Anotem durante (uma folha, um risco por vez):
 
 - Quanto tempo levou cada Evento? (meta do combate: 45–60 min)
-- Quantas vezes alguém ficou sem saber qual verbo + modo usar?
+- Quantas vezes alguém ficou sem saber qual verbo e atributo usar?
 - Quantas vezes alguém usou magia? Grau 1 como meio de ação, Grau 2, Dupla?
 - Quanto Arcano cada um tinha no fim? Chegou no máximo (12)?
 - Quanto Cataclisma o mestre tinha no fim de cada Evento? Transbordou?
@@ -208,4 +208,4 @@ Iara (7,1 +3 = 11 vs 12) erra o Cão 2                            ← falha: o m
 8. **A Magia em Dupla funciona bem na Moldura 1**: comum uns 89%, de opostos uns 66% (agora numa rolagem só, ver [[14 Teste das mecânicas]]). Na mesa, ver se o preço de 3 Arcano e o Cansaço dos opostos parecem justos pelo tamanho do efeito.
 9. **Duração**: 22 ações de jogador é uma luta de uns 40–50 minutos numa mesa que já conhece as regras. Dentro da meta.
 
-**Ainda não testado pelo script** (só a mesa responde): se verbo + modo é fácil de escolher; se a relação (as palavras somam) flui ou trava a conversa; se Atalho e Passo aparecem naturalmente; a Fusão; o Evento social.
+**Ainda não testado pelo script** (só a mesa responde): se atributo + verbo é fácil de escolher; se a relação (as palavras somam) flui ou trava a conversa; se Atalho e Passo aparecem naturalmente; a Fusão; o Evento social.

@@ -22,7 +22,7 @@ Começa com **50 o** (Privilegiado com Herança: 75 o). Vender um item: metade d
 
 ## Armas
 
-Dano = **dado da arma × Proficiência + bônus**. A cada Moldura acima do 1, a mesma arma em versão melhor ganha **+2 de bônus** e um traço a mais (o gerador escolhe). Ataque = 2d12 + atributo contra a Dificuldade do adversário.
+Dano = **dado da arma × Proficiência + bônus**. A cada Moldura acima do 1, a mesma arma em versão melhor ganha **+2 de bônus** e um traço a mais (o gerador escolhe). Ataque = 2d12 + atributo da arma + **Bater** (corpo a corpo) ou **Atirar** (à distância), contra a Dificuldade do adversário.
 
 | Arma | Atributo | Alcance | Dano (P1) | Mãos | Traço | Preço |
 |---|---|---|---|---|---|---|
@@ -99,7 +99,7 @@ Itens mágicos servem para **tudo**, não só para quem conjura: ajudam em teste
 | Família | O que faz | Faixa de poder (Moldura 1 → 4) |
 |---|---|---|
 | **De Palavra** | carrega uma palavra de qualquer Valor; enquanto está com você, a palavra é sua (nunca como núcleo, a não ser que seja do seu Valor) e não conta no limite de Estrangeiras | 1 palavra, às vezes com cargas → 1 palavra sem cargas |
-| **De Ofício** | ajuda em mecânica básica: um atributo, um tipo de teste, Esquiva, Limiares, Proteção, PV ou Cansaço | Vantagem numa situação estreita → +1 num atributo |
+| **De Ofício** | ajuda em mecânica básica: um atributo ou verbo, Esquiva, Limiares, Proteção, PV ou Cansaço | Vantagem numa situação estreita → +1 num atributo ou verbo |
 | **De Estabilidade** | mexe na **Dificuldade** e nos **Efeitos Colaterais** da magia: Dificuldade do Grau menor, um Efeito Colateral a menos, Suavizar de graça, +1 no d20 da tabela | −1 na Dificuldade do Grau → um Efeito Colateral a menos em toda magia |
 | **De Valor** | só funciona para um Valor: melhora a Skill, alivia a Retaliação, ou dá a um não-Comprometido daquele Valor um pedaço da Skill | alívio pequeno → Skill melhorada |
 | **De Grau** | ajuda a magia a crescer: um passo de Ampliar sem pagar Arcano, +1 no dano de magia, +1 de Sintonia numa condição | 1 passo de Ampliar sem pagar Arcano por Evento → +1 de Sintonia |

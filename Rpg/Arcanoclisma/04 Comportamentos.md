@@ -37,14 +37,14 @@ Limiares finais = base + nível + armadura.
 
 | | Básico | Superior |
 |---|---|---|
-| **Talento · Ombro de Aríete** | Vantagem para empurrar, levantar, arrombar e segurar. Armadura não atrapalha a sua mobilidade (a Esquiva você perde igual). | +2 nos dois Limiares; ninguém te empurra nem derruba. Uma vez por Evento, marque 1 Cansaço para marcar 1 PV a menos. |
-| **Hábito · Corpo de Pedra** | Até o fim do Evento, Vantagem em testes de **Força** e de **resistir** (dor, veneno, frio, peso, cansaço). | E, enquanto durar, sempre que for marcar Cansaço por esforço do corpo (Forçar, carregar, aguentar o ambiente), marque 1 a menos. |
+| **Talento · Ombro de Aríete** | Vantagem para **Levantar**, **Quebrar** e **Agarrar**. Armadura não atrapalha a sua mobilidade (a Esquiva você perde igual). | +2 nos dois Limiares; ninguém te empurra nem derruba. Uma vez por Evento, marque 1 Cansaço para marcar 1 PV a menos. |
+| **Hábito · Corpo de Pedra** | Até o fim do Evento, Vantagem em testes de **Força** e para **Aguentar** (dor, veneno, frio, peso, cansaço). | E, enquanto durar, sempre que for marcar Cansaço por esforço do corpo (Forçar, carregar, aguentar o ambiente), marque 1 a menos. |
 
 ## 2. Atlético — *salta, escala, corre, nunca está onde o problema cai*
 
 | | Básico | Superior |
 |---|---|---|
-| **Talento · Corpo Solto** | Vantagem em testes de **movimentação**: saltar, escalar, se equilibrar, correr, cair bem. | Junto com a ação você se move até **Médio** (os outros, até Perto), e +1 Esquiva. |
+| **Talento · Corpo Solto** | Vantagem para **Movimentar** (saltar, escalar, se equilibrar, correr) e para **Desviar** de quedas. | Junto com a ação você se move até **Médio** (os outros, até Perto), e +1 Esquiva. |
 | **Hábito · Impulso** | Chegue, sem rolar, a qualquer lugar que dê para alcançar com o corpo nesta cena: o telhado, o outro lado do rio, o sino da torre, a janela do terceiro andar. | E leve um aliado junto. |
 
 ## 3. Popular — *todo mundo gosta, ou pelo menos todo mundo conhece*
@@ -67,8 +67,8 @@ Nada deste Comportamento funciona em combate.
 
 | | Básico | Superior |
 |---|---|---|
-| **Talento · Mão Leve** | Vantagem para furtar, abrir fechaduras e truques de mão. Uma vez por sessão, tire do bolso um item comum pequeno que você "já tinha pego". | Ataques contra quem está distraído, cego, caído ou Vulnerável causam +1d6 + Moldura. |
-| **Hábito · Surrupiar** | Role **roubar, rápido** (Agilidade) **com Vantagem** contra a Dificuldade do alvo: tire um item que um adversário Perto segura. **Não funciona de novo com o mesmo personagem**: ele fica esperto. | Se falhar, ninguém percebe que você tentou (e a tentativa não conta como "de novo"). |
+| **Talento · Mão Leve** | Vantagem para **Furtar** e **Mexer** (fechaduras, truques de mão). Uma vez por sessão, tire do bolso um item comum pequeno que você "já tinha pego". | Ataques contra quem está distraído, cego, caído ou Vulnerável causam +1d6 + Moldura. |
+| **Hábito · Surrupiar** | Role **Furtar** (Agilidade) **com Vantagem** contra a Dificuldade do alvo: tire um item que um adversário Perto segura. **Não funciona de novo com o mesmo personagem**: ele fica esperto. | Se falhar, ninguém percebe que você tentou (e a tentativa não conta como "de novo"). |
 
 ## 6. Privilegiado — *nasceu com portas abertas*
 
@@ -102,14 +102,14 @@ Nada deste Comportamento funciona em combate.
 
 | | Básico | Superior |
 |---|---|---|
-| **Talento · Mil Caras** | Vantagem para disfarçar, mentir e se esconder. Quando uma mentira sua funciona num PNJ, ganhe 1 Arcano (uma vez por PNJ por Evento). | Atacando de onde estava escondido, +1 dado de dano. Marque 1 Cansaço: um PNJ acredita numa mentira pequena sem você rolar. |
+| **Talento · Mil Caras** | Vantagem para **Mentir** (disfarces incluídos) e **Esconder**. Quando uma mentira sua funciona num PNJ, ganhe 1 Arcano (uma vez por PNJ por Evento). | Atacando de onde estava escondido, +1 dado de dano. Marque 1 Cansaço: um PNJ acredita numa mentira pequena sem você rolar. |
 | **Hábito · Sumir na Paisagem** | **Uma vez por sessão**: você se esconde no ambiente sem ninguém perceber, descrevendo como (atrás da procissão, dentro do barril, na fila do pão). | Pode usar duas vezes por sessão, e em vez de sumir pode **trocar de lugar** com alguém Perto sem ninguém perceber como. |
 
 ## 11. Explorador — *aberto ao que vem, vive na estrada e sobrevive nela*
 
 | | Básico | Superior |
 |---|---|---|
-| **Talento · Estrada nos Pés** | Vantagem para **sobreviver e se orientar**: achar caminho, rastrear, achar abrigo, água e comida, ler o tempo. Em viagem, o grupo nunca se perde sem você perceber. | **Abertura**: **uma vez por sessão**, quando você tenta algo que o personagem **nunca fez antes** (a mesa julga), ganhe 1 Arcano, dê certo ou não. |
+| **Talento · Estrada nos Pés** | Vantagem para **Sobreviver** e **Rastrear**: achar caminho, abrigo, água e comida, ler o tempo, seguir pistas. Em viagem, o grupo nunca se perde sem você perceber. | **Abertura**: **uma vez por sessão**, quando você tenta algo que o personagem **nunca fez antes** (a mesa julga), ganhe 1 Arcano, dê certo ou não. |
 | **Hábito · Outro Caminho** | **Uma vez por sessão**: declare que você conhece ou acha **outro caminho**: uma saída, uma trilha, uma passagem, um atalho seguro. O mestre diz onde ele leva e o que ele cobra. | E, se houver uma Ameaça na cena, tire **2** do pote dela. |
 
 ## 12. Esperançoso — *tem fé, às vezes inocente, sempre segue em frente*

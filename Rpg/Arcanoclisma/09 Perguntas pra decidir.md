@@ -426,5 +426,5 @@ Sua resposta:
 ## Rodada 19 — Interações
 
 **P-122** 🔴 **Tabela de Interações** (versão 2, depois do seu retorno): uma tabela 6 × 6, primeira coluna com os **atributos** (Força, Agilidade, Percepção, Carisma, Inteligência, Sabedoria) e 30 **verbos** nas linhas deles (Bater, Agarrar, Levantar, Aguentar, Defender · Movimentar, Desviar, Fugir, Esconder, Mexer · Atirar, Notar, Procurar, Rastrear, Furtar · Convencer, Mentir, Ameaçar, Atrair, Chamar · Pensar, Estudar, Consertar, Negociar, Criar · Intuir, Sobreviver, Firmar, Cuidar, Montar). Teste = **2d12 + atributo + verbo** (atributo pela descrição; padrão, o da linha). Criação: atributos **+1 · +1 · 0 · 0 · 0 · −1**, verbos **+2 · +1 · +1 · +1 · −1**; máximo +3 em cada, +6 no teste. Dados e escada de Dificuldades não mudam. Cada PNJ tem a sua tabela de básicas e, se usar magia, a de Valor. Detalhes e contas em [[17 Interações - proposta]].
-Sua resposta:
+Sua resposta: ✅ aplicada, com *Cuidar* → **Proteger**, *Notar* → **Observar** (e *Defender* → **Quebrar**, para não repetir Proteger). Aplicado em [[01 Regras centrais]], [[02 Magia]], [[03 Valores]], [[04 Comportamentos]], [[05 Personagem e níveis]], [[06 Itens e dinheiro]], [[10 Adversários - como criar]], kit e ficha do Castian. Falta: linha BÁSICAS em cada adversário do [[11 Bestiário]].
 

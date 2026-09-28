@@ -51,7 +51,7 @@ Perguntas de teste para a mesa (anotar depois de cada sessão):
 - Alguém travou pensando em que palavras usar? (magia)
 - Alguma magia resolveu o Evento sozinha? (Grau/limites)
 - Os marcadores (até a próxima Falha, até o mestre pagar) ficaram claros sem turno?
-- Os jogadores acharam fácil escolher verbo + modo?
+- Os jogadores acharam fácil escolher atributo + verbo?
 - Quem só usou arma se sentiu menor que quem usou magia?
 
 ---

@@ -42,7 +42,7 @@ Esse é o bônus da magia: ela **não recebe Vantagem paga** (Vivência, Ajudar)
 1. **Intenção**: diga o que quer que aconteça, como a magia aparece (pelo seu Canal) e, se quiser, a sua relação com a palavra.
 2. **Palavras**:
    - **Palavras de Valor**: de 1 até o seu limite (Moldura + 1). **A primeira é do seu Valor** (o núcleo); as outras podem ser do seu Valor ou Palavras Estrangeiras.
-   - **Uma Palavra Básica** (verbo, modo ou forma): **não custa e não conta no limite**. Ela existe para **dar ao Valor ações que ele sozinho não tem** (um Cognitium que precisa *escalar*, um Conflitüo que precisa *esconder*). Precisa fazer sentido concreto.
+   - **Uma Palavra Básica** (um verbo da tabela de Interações ou uma forma): **não custa e não conta no limite**. Ela existe para **dar ao Valor ações que ele sozinho não tem** (um Cognitium que precisa **Movimentar**, um Conflitüo que precisa **Esconder**). Precisa fazer sentido concreto.
 3. **Grau**: pelo tamanho do efeito (tabela abaixo), até o seu máximo (Moldura + 1). O mestre tem a palavra final se o efeito pedido for maior do que o Grau.
 4. **Pague**: custo do Grau + 1 Arcano por palavra de Valor além da primeira + os passos de Ampliar. (A magia se paga com os próprios dados: cada par devolve 1 Arcano.)
 5. **Role** os dados do Grau + Sintonia + **1 por palavra de Valor**. Conte pares (Arcano para você) e ímpares (Cataclisma para o mestre). **Contra o quê**, depende de quem recebe a magia (abaixo).
@@ -63,10 +63,10 @@ Você paga a magia e descreve o efeito; **quem rola é o alvo**. Uma rolagem por
 
 **Dificuldade da magia = 12 + Sintonia + 1 por palavra de Valor** (e o que Skills e Retaliações mexem). Na Moldura 1, com Sintonia +2: **15** com uma palavra, **16** com duas.
 
-**O teste do alvo** é físico ou não conforme a descrição, o efeito e o atributo que combina; o mestre escolhe pela magia e pela situação: medo e encanto pedem *firme* (Sabedoria); rede e prisão, *forte* (Força); chão que escorrega e rajada, *ágil* (Agilidade); ilusão, *atento* (Percepção).
+**O teste do alvo** é físico ou não conforme a descrição e o efeito; o mestre escolhe o **verbo** (e o atributo, se não for o da linha) pela magia e pela situação: medo, encanto e sono pedem **Firmar**; veneno, cãibra e doença, **Aguentar**; rede, prisão e peso, **Levantar** ou **Fugir**; chão que escorrega e rajada, **Desviar**; ilusão, **Observar**.
 
-- **PJ** rola 2d12 + o atributo (é reação: não gera Arcano nem Cataclisma).
-- **Adversário** rola **d20 + o Ataque** dele. Uma palavra dele que combina com resistir (*Destemido* contra medo) dá Vantagem; uma que o deixa exposto (*Covarde*) dá Desvantagem.
+- **PJ** rola 2d12 + atributo + verbo (é reação: não gera Arcano nem Cataclisma).
+- **Adversário** rola **d20 + o número do verbo** na tabela dele (o Ataque; +2 se o verbo é forte, −2 se é fraco). Uma palavra dele que combina com resistir (*Destemido* contra medo) dá Vantagem; uma que o deixa exposto (*Covarde*) dá Desvantagem.
 - **Cada ser é um ser.** Cada personagem diferente (adversário, lacaio, PNJ) rola o próprio teste.
 - **Bando ou grupo** (lacaios, uma matilha, uma multidão) conta como **um alvo** e rola **uma vez**. Se não passar, o efeito **reduz o grupo** pelo tamanho da derrota: falhou por **1–4**, 1 membro é pego; por **5–9**, 2; por **10 ou mais**, 3 (como o dano 1 / 2 / 3).
 - **Forçar** ainda vale: depois de ver o dado do alvo, marque Cansaço e some +2 por casa na Dificuldade da magia.
@@ -95,7 +95,7 @@ Cada palavra a mais é **+5%** de pegar. É o preço de mandar na cabeça ou no 
 
 Magia de **Grau 1** não rola nada **sozinha**: acontece. Acender, esfriar, mandar um recado, afiar, limpar.
 
-Ela só vira rolagem quando é o **meio de uma ação** que já seria um teste: "**atacar**, *preciso*, com uma agulha de gelo", "**esconder**, *furtivo*, numa sombra que eu puxo". Aí você rola o **teste normal da ação** (2d12 + o atributo do modo, ver [[01 Regras centrais]]) e a magia é o seu instrumento. Num ataque, o dano é **1d8 + Moldura**, como uma arma leve que nunca sai da mão.
+Ela só vira rolagem quando é o **meio de uma ação** que já seria um teste: "**Atirar** uma agulha de gelo", "**Esconder** numa sombra que eu puxo". Aí você rola o **teste normal da ação** (2d12 + atributo + verbo, ver [[01 Regras centrais]]) e a magia é o seu instrumento. Num ataque, o dano é **1d8 + Moldura**, como uma arma leve que nunca sai da mão.
 
 ## Fusão: quando o personagem vira a palavra
 
@@ -213,7 +213,7 @@ A **descrição** do efeito diz quanto poder ele tem. O **Grau** é o patamar; d
 - **Alcance**: +1 faixa.
 - **Alvos/área**: +1 faixa.
 - **Duração**: +1 marcador (na ordem da tabela).
-- **Atributo afetado**: +1.
+- **Número afetado**: +1 no atributo ou verbo que a magia mexe.
 - **Ferir** (Teste mágico): quem **não passa** também leva o **dano do Grau** (tabela de Graus). Sem esse passo, o Teste mágico só aplica o efeito (medo, cãibra, sono), sem dano.
 
 **Cada passo é um investimento e tem uma consequência**:
@@ -229,7 +229,7 @@ A **descrição** do efeito diz quanto poder ele tem. O **Grau** é o patamar; d
 
 Máximo de passos por magia = sua **Moldura**. Poder espalhado custa: dois passos em propriedades diferentes pesam o mesmo que dois na mesma, mas a mesa deve descrever cada um (mais longe **e** mais tempo **e** mais gente é uma magia bem mais difícil de segurar).
 
-**Com os níveis, fica mais fácil.** O avanço **Domínio** ([[05 Personagem e níveis]]) escolhe uma propriedade (dano, alcance, alvos/área, duração ou atributo): **o primeiro passo nela, em cada magia, não sobe a Dificuldade** (o Arcano você paga igual). Itens *De Grau* dão passos sem custo de Arcano; algumas Ressonâncias tiram a Dificuldade de um passo, como o Domínio.
+**Com os níveis, fica mais fácil.** O avanço **Domínio** ([[05 Personagem e níveis]]) escolhe uma propriedade (dano, alcance, alvos/área, duração ou número afetado): **o primeiro passo nela, em cada magia, não sobe a Dificuldade** (o Arcano você paga igual). Itens *De Grau* dão passos sem custo de Arcano; algumas Ressonâncias tiram a Dificuldade de um passo, como o Domínio.
 
 **Grau abaixo do seu máximo** também é mais fácil de impor: num **Teste mágico**, a Dificuldade da magia sobe **+2 por Grau abaixo** do seu máximo (um susto pequeno pega mais fácil que um terror).
 
@@ -277,28 +277,12 @@ O **Eixo** (o Valor sem oposto) combina com qualquer um sem penalidade.
 
 ## Palavras Básicas (todo mundo tem)
 
-Palavras genéricas que **guiam o que o personagem faz no mundo**, com ou sem magia. Servem para duas coisas:
+As Palavras Básicas são os **verbos da tabela de Interações** ([[01 Regras centrais]], seção 1) e as **formas** abaixo. Servem para duas coisas:
 
-1. **Descrever qualquer ação** e escolher o teste: **verbo de ação + modo**. O **modo escolhe o atributo** (as colunas da tabela de modos). "Roubar *furtivo*" rola Agilidade; "convencer *gentil*", Carisma; "procurar *metódico*", Inteligência.
-2. **Completar uma magia**: **uma** Palavra Básica por magia, de graça, sem contar no limite de palavras. É ela que dá ao Valor as ações que ele sozinho não alcança.
+1. **Descrever qualquer ação** e escolher o teste: **atributo + verbo** ("Furtar", "Convencer", "Atirar").
+2. **Completar uma magia**: **uma** Palavra Básica por magia (um verbo da tabela ou uma forma), de graça, sem contar no limite de palavras. É ela que dá ao Valor as ações que ele sozinho não alcança: "*Voz* + **Ameaçar**", "*Raiz* + **Agarrar**", "*Sombra* + **Esconder**".
 
-Palavras Básicas **não custam nada**, mas precisam fazer **sentido concreto** no que está acontecendo, e **nunca são o núcleo** de uma magia.
-
-### Verbos de ação (d6 para a linha, d6 para a coluna)
-
-| d66 | 1 | 2 | 3 | 4 | 5 | 6 |
-|---|---|---|---|---|---|---|
-| **1 · Combate** | Atacar | Defender | Empurrar | Segurar | Desviar | Fugir |
-| **2 · Interação** | Falar | Convencer | Enganar | Intimidar | Distrair | Ouvir |
-| **3 · Furto e exploração** | Roubar | Esconder | Abrir | Procurar | Escalar | Consertar |
-
-### Modos (a coluna diz o atributo)
-
-| d66 | Agilidade | Força | Carisma | Inteligência | Sabedoria | Percepção |
-|---|---|---|---|---|---|---|
-| **4** | Rápido | Forte | Gentil | Astuto | Calmo | Atento |
-| **5** | Furtivo | Bruto | Imponente | Metódico | Paciente | Preciso |
-| **6** | Ágil | Firme | Charmoso | Engenhoso | Instintivo | Cauteloso |
+Palavras Básicas **não custam nada**, mas precisam fazer **sentido concreto** no que está acontecendo, e **nunca são o núcleo** de uma magia. Atributos não são palavras de magia.
 
 ### Formas e alvos (só para magia, d12)
 

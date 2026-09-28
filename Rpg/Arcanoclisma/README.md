@@ -4,7 +4,7 @@
 
 Sistema de RPG próprio, inspirado em Daggerheart, Rune RPG, Ethmos e Triangle Agency.
 
-**O que é**: 2d12 em que cada dado par te dá Arcano e cada dado ímpar dá Cataclisma ao mestre; ações descritas com verbo + modo; magia feita de palavras (9 Valores, 36 palavras cada), em Graus que trocam o conjunto de dados sem passar de 24; sem turnos: Eventos, o mestre emoldura, marcadores; adversários também feitos de palavras.
+**O que é**: 2d12 em que cada dado par te dá Arcano e cada dado ímpar dá Cataclisma ao mestre; ações descritas com atributo + verbo (a tabela de Interações); magia feita de palavras (9 Valores, 36 palavras cada), em Graus que trocam o conjunto de dados sem passar de 24; sem turnos: Eventos, o mestre emoldura, marcadores; adversários também feitos de palavras.
 
 ## Por onde ler
 
@@ -25,7 +25,7 @@ Sistema de RPG próprio, inspirado em Daggerheart, Rune RPG, Ethmos e Triangle A
 15. [[14 Teste das mecânicas]] — etapas, facilidade e vantagem repetida de cada mecânica; economia de Arcano
 16. [[15 Teste de escala e criatividade]] — combate em todas as Molduras e tamanhos de mesa, testes difíceis, Eventos sociais, uso criativo das palavras
 17. [[16 Sessão de teste - Castian]] — sessão jogada: ficha do Castian, a Iolanda e o registro dos Eventos, com as regras ajustadas na mesa
-18. [[17 Interações - proposta]] — proposta de trocar atributos, verbos e modos por 20 Interações (P-122)
+18. [[17 Interações - proposta]] — a tabela de Interações (atributos + 30 verbos): o porquê e as contas (P-122, aprovada)
 
 ## Conta dos dados
 

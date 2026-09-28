@@ -4,7 +4,7 @@
 
 ## O jogo em um minuto
 
-- Quando seu personagem tenta algo arriscado, você **descreve a ação com uma palavra de ação e um modo** ("roubar *furtivo*", "convencer *gentil*") e rola **2d12 + o atributo do modo** contra uma **Dificuldade**.
+- Quando seu personagem tenta algo arriscado, você **diz o que faz (um verbo) e como (um atributo)** ("**Furtar**, com Percepção", "**Convencer**, com Carisma") e rola **2d12 + atributo + verbo** contra uma **Dificuldade**.
 - **Cada dado par te dá 1 Arcano. Cada dado ímpar dá 1 Cataclisma ao mestre.** Par é controle e fechamento; ímpar é o incompleto, que muda (ver [[08 Mundo e entidades]]). Se o **maior d12 é ímpar**, a jogada é **por Cataclisma** e o mestre emoldura.
 - **Dois dados iguais = Crítico.**
 - Magia não usa atributo: você junta **palavras** do seu Valor, escolhe o **Grau** (o tamanho do feito) e rola um conjunto de dados que **sempre soma no máximo 24**: 2d12 → 3d8 → 4d6 → 6d4. Mais dados = mais confiável, mas mais Arcano *e* mais Cataclisma saindo da mesa.
@@ -14,43 +14,57 @@
 
 ---
 
-## 1. Atributos
+## 1. Interações: atributos e verbos
 
-Seis, usados só em testes e ataques com arma. **Não entram em magia** (exceto quando uma regra disser).
+Tudo o que um personagem faz sem magia está numa tabela só, a **tabela de Interações**. A primeira coluna são os **atributos** (como você faz); as outras são **verbos** (o que você faz), cada um na linha do atributo que costuma usar. Monstros e PNJs usam a mesma tabela ([[10 Adversários - como criar]]).
 
-| Atributo | Para quê |
-|---|---|
-| **Agilidade** | esquivar ativamente, correr, acrobacia, armas leves e de disparo |
-| **Força** | levantar, empurrar, agarrar, armas pesadas |
-| **Carisma** | convencer, liderar, mentir, intimidar |
-| **Inteligência** | lembrar, deduzir, consertar, estudar magia alheia |
-| **Sabedoria** | intuição, sobreviver, resistir à mente, acalmar |
-| **Percepção** | notar, mirar à distância, rastrear, ouvir |
+| Atributo | | | | | |
+|---|---|---|---|---|---|
+| **Força** | Bater | Agarrar | Levantar | Aguentar | Quebrar |
+| **Agilidade** | Movimentar | Desviar | Fugir | Esconder | Mexer |
+| **Percepção** | Atirar | Observar | Procurar | Rastrear | Furtar |
+| **Carisma** | Convencer | Mentir | Ameaçar | Atrair | Chamar |
+| **Inteligência** | Pensar | Estudar | Consertar | Negociar | Criar |
+| **Sabedoria** | Intuir | Sobreviver | Firmar | Proteger | Montar |
 
-Distribuição inicial: **+2, +1, +1, 0, 0, −1**. Máximo **+5**.
+O que cada verbo cobre, quando a dúvida aparecer:
 
-## 2. O teste: 2d12 + atributo
+- **Bater**: corpo a corpo, com arma ou sem. **Agarrar**: segurar, derrubar, prender, desarmar. **Levantar**: erguer, empurrar, carregar. **Aguentar**: dor, veneno, frio, fome, doença. **Quebrar**: arrombar, partir, derrubar a porta.
+- **Movimentar**: correr, saltar, escalar, nadar, remar. **Desviar**: reagir rápido, escapar de armadilha, de rajada, de queda. **Fugir**: escapar de perseguição, de amarras, sair de uma briga. **Esconder**: furtividade, sumir na multidão. **Mexer**: mão leve, fechadura, truque, trapaça no jogo.
+- **Atirar**: arco, funda, arremesso, pistola. **Observar**: ver, ouvir, notar que algo mudou. **Procurar**: vasculhar com calma. **Rastrear**: seguir pegadas, cheiro, pistas. **Furtar**: achar a brecha e tirar sem ser visto.
+- **Convencer**: persuadir, pedir. **Mentir**: enganar, disfarçar, blefar. **Ameaçar**: intimidar, dar ultimato. **Atrair**: encantar, seduzir, distrair, chamar a atenção. **Chamar**: liderar, inspirar, se fazer ouvir.
+- **Pensar**: deduzir, resolver, planejar. **Estudar**: lembrar o que se sabe, ler, pesquisar, entender magia alheia. **Consertar**: ofício, montar, desmontar, forjar, cozinhar. **Negociar**: comprar, vender, trocar, pechinchar. **Criar**: arte, música, inventar.
+- **Intuir**: sentir intenção, mentira, perigo. **Sobreviver**: se orientar, achar abrigo, ler o tempo. **Firmar**: resistir ao medo, ao encanto, à loucura. **Proteger**: cobrir alguém com o corpo, estancar um sangramento, tirar alguém do perigo, acalmar quem está em pânico. **Montar**: cavalgar, conduzir, pilotar, lidar com bicho.
 
-### Descrever a ação: palavra de ação + modo
+**Na criação**, distribua obrigatoriamente:
 
-Todo teste começa com o jogador dizendo **o que** faz e **como**, usando as **Palavras Básicas** ([[02 Magia]]): um **verbo de ação** e um **modo** (adjetivo). O **modo escolhe o atributo**.
+- **Atributos**: **+1 · +1 · 0 · 0 · 0 · −1**
+- **Verbos**: **+2 · +1 · +1 · +1 · −1** (os outros ficam em 0)
 
-- "Vou **roubar**, **furtivo**" → Agilidade.
-- "Vou **convencer**, **gentil**" → Carisma.
-- "Vou **empurrar** a porta, **bruto**" → Força.
-- "Vou **procurar**, **metódico**" → Inteligência.
+Atributo e verbo vão até **+3** cada (máximo de um teste: +6). Os números **não entram em magia** (exceto quando uma regra disser).
 
-A palavra precisa fazer **sentido concreto** na ficção: o mestre pode recusar um modo que não combina com o que foi descrito ("roubar *imponente*" no meio da feira não é furtar, é assaltar — então é outro teste). Palavras de ação não custam nada. Se o jogador descreve sem as palavras, o mestre ajuda a achar as duas.
+## 2. O teste: 2d12 + atributo + verbo
 
-Uma magia de **Grau 1** pode ser o **meio** da ação ("atacar, preciso, com uma agulha de gelo"; "esconder, furtivo, numa sombra que eu puxo"): você rola o teste normal da ação e a magia é o seu instrumento (num ataque, dano **1d8 + Moldura**). Sozinha, sem virar teste, a magia de Grau 1 só acontece, sem rolar.
+### Descrever a ação
+
+Todo teste começa com o jogador dizendo **o que** faz (o **verbo**) e **como** (o **atributo**). Por padrão, o atributo é o da linha do verbo; se a descrição pede outro, usa o outro.
+
+- "Vou **Furtar** a bolsa na feira" → Percepção + Furtar.
+- "Vou **Bater** com a adaga, rápido" → Agilidade + Bater.
+- "Vou **Convencer** com os fatos" → Inteligência + Convencer.
+- "Queda de braço" (nenhum verbo serve) → só Força.
+
+A descrição precisa fazer **sentido concreto** na ficção: o mestre pode recusar um atributo que não combina com o que foi descrito. Se o jogador descreve sem as palavras, o mestre ajuda a achar o verbo e o atributo.
+
+Uma magia de **Grau 1** pode ser o **meio** da ação ("**Atirar** uma agulha de gelo"; "**Esconder** numa sombra que eu puxo"): você rola o teste normal da ação e a magia é o seu instrumento (num ataque, dano **1d8 + Moldura**). Sozinha, sem virar teste, a magia de Grau 1 só acontece, sem rolar.
 
 ### Rolar
 
-Role 2d12, some o atributo (e as Vantagens), compare com a Dificuldade. Igual ou maior = sucesso.
+Role 2d12, some o atributo e o verbo (e as Vantagens), compare com a Dificuldade. Igual ou maior = sucesso.
 
 ### Dificuldades padrão
 
-Feitas pela conta: o atributo que o jogador costuma usar fica perto da Moldura (+1 na M1, +4 na M4). A chance da última coluna é a desse jogador, **sem Vantagem**.
+Feitas pela conta: o teste que o jogador costuma fazer (atributo + verbo) fica perto da Moldura (+1 na M1, +4 na M4). A chance da última coluna é a desse jogador, **sem Vantagem**.
 
 | | M1 | M2 | M3 | M4 | chance |
 |---|---|---|---|---|---|
@@ -62,11 +76,11 @@ Feitas pela conta: o atributo que o jogador costuma usar fica perto da Moldura (
 
 Use a coluna da **Moldura do desafio**, não a do grupo: a porta comum de uma vila é M1 para sempre (é aí que o jogador sente que cresceu); a porta do cofre de um semideus é M4. A escada é um ponto de partida: o mestre sobe ou desce pela história, pelos Valores e pela situação.
 
-### Bônus: atributo e Vantagem
+### Bônus: a tabela e a Vantagem
 
 Um teste só tem **dois tipos de bônus**:
 
-- **O atributo**: o número fixo. Item ou magia que "dá +1" mexe no atributo.
+- **A tabela**: atributo + verbo, os números fixos. Item ou magia que "dá +1" mexe num atributo ou num verbo.
 - **Vantagem: +1d6.** **Tudo o que ajuda vira Vantagem**: Vivência (1 Arcano), Ajudar (1 Arcano), talento, item de situação, terreno, uma boa ideia na ficção.
 
 **Até 2 Vantagens por rolagem** (+2d6). Cada **Desvantagem** tira uma Vantagem; sem Vantagem para tirar, subtraia 1d6 (no máximo −2d6). O d6 **não conta** para par/ímpar nem para a leitura da jogada.
@@ -101,7 +115,7 @@ Chances no 2d12: por Arcano 50%, por Cataclisma 42%, Crítico 8%.
 Num **Teste mágico** de magia (ver [[02 Magia]]) só o alvo rola, e o d20 dele faz as vezes do seu dado: par dá Arcano a você, ímpar dá Cataclisma ao mestre; **1 natural** é o **seu Crítico**; **20 natural** faz ele sempre escapar.
 - **Dobrar o dano.**
 
-**Rolagens de reação** (resistir a algo que o mestre fez com você) usam 2d12 + atributo mas **não geram** Arcano nem Cataclisma. Isso segura a economia.
+**Rolagens de reação** (resistir a algo que o mestre fez com você) usam 2d12 + atributo + verbo (Desviar, Aguentar, Firmar...) mas **não geram** Arcano nem Cataclisma. Isso segura a economia.
 
 ❓ **P-01**: você escreveu "d20 pra testes básicos" e "2d12 pra tudo". Eu fiz: **jogador sempre 2d12, mestre sempre d20**. Confirma?
 
@@ -241,7 +255,7 @@ Limiares = base do Comportamento + nível + armadura.
 
 **Proteção**: casas da armadura. Marque 1 casa para reduzir em 1 os PV marcados de um golpe. Restaura em Pausa.
 
-**Magia causa dano físico** normal (passa pelos Limiares). Efeitos de magia que não são dano (medo, paralisia, cegueira) são resistidos com **2d12 + atributo** contra a Dificuldade do efeito.
+**Magia causa dano físico** normal (passa pelos Limiares). Efeitos de magia que não são dano (medo, paralisia, cegueira) são resistidos com **2d12 + atributo + verbo** (Firmar, Aguentar, Desviar, Observar) contra a Dificuldade do efeito (ver *Teste mágico* em [[02 Magia]]).
 
 **Vida (PV)**: 5–7 casas conforme o Comportamento, máximo 12.
 

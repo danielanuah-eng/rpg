@@ -42,7 +42,7 @@ Oposição serve para duas coisas: **Magia em Dupla de opostos** (mais forte, ma
 
 | Para | Como Conflitüo faz | Tipo |
 |---|---|---|
-| **Atacar** | *Lâmina*, *Flecha* ou *Lança* atiradas; *Explodir* + *Estilhaço* no chão; *Desarmar* | Projétil · Projétil em área · Teste mágico (forte ou ágil) |
+| **Atacar** | *Lâmina*, *Flecha* ou *Lança* atiradas; *Explodir* + *Estilhaço* no chão; *Desarmar* | Projétil · Projétil em área · Teste mágico (Agarrar ou Desviar) |
 | **Proteger** | *Escudo*, *Muralha*, *Trincheira*; *Aparar* o golpe que vem | Pequeno evento |
 | **Aliviar** | *Estandarte* + *Incansável*: o grupo aguenta de pé mais um pouco | Pequeno evento |
 | **Descobrir** | *Tático*: ler o campo de batalha, o flanco aberto, quem vai correr primeiro | Pequeno evento |
@@ -83,7 +83,7 @@ Perguntas de vínculo: *Contra quem ou o quê você lutou pela primeira vez, e p
 
 | Para | Como Sublimeyn faz | Tipo |
 |---|---|---|
-| **Atacar** | *Fogo*, *Gelo* ou *Areia* atirados; *Vapor* *Corrosivo* numa nuvem; *Lama* que *Solidifica* nos pés | Projétil · Teste mágico (forte) · Teste mágico (ágil) |
+| **Atacar** | *Fogo*, *Gelo* ou *Areia* atirados; *Vapor* *Corrosivo* numa nuvem; *Lama* que *Solidifica* nos pés | Projétil · Teste mágico (Aguentar) · Teste mágico (Desviar) |
 | **Proteger** | *Pedra* ou *Vidro* em barreira; *Solidificar* o ar à sua frente | Pequeno evento |
 | **Aliviar** | esfriar a febre (*Gelo*), limpar a água (*Puro*), *Derreter* a corrente de um preso | Pequeno evento |
 | **Descobrir** | sentir onde a parede é *Porosa* ou oca; do que uma coisa é feita | Pequeno evento |
@@ -124,10 +124,10 @@ Perguntas de vínculo: *Qual material você sente como se fosse parte do seu cor
 
 | Para | Como Dominum faz | Tipo |
 |---|---|---|
-| **Atacar** | *Chicote* atirado; *Ajoelhar*, *Prender*, *Obrigar* a largar a arma | Projétil · Teste mágico (firme ou forte) |
+| **Atacar** | *Chicote* atirado; *Ajoelhar*, *Prender*, *Obrigar* a largar a arma | Projétil · Teste mágico (Firmar ou Levantar) |
 | **Proteger** | *Repelir* ou *Afastar* quem vem; a Skill *Comando Reflexo*, antes do golpe | Teste mágico · reação |
 | **Aliviar** | *Mandar* um corpo parar de tremer; *Domesticar* uma fera ferida que ataca por medo | Pequeno evento · Teste mágico |
-| **Descobrir** | *Obrigar* alguém a responder; sentir onde está quem você *Marcou* | Teste mágico (firme) · Pequeno evento |
+| **Descobrir** | *Obrigar* alguém a responder; sentir onde está quem você *Marcou* | Teste mágico (Firmar) · Pequeno evento |
 | **Mover** | *Puxar* você mesmo pela corrente; montar a *Fera* que você domou | Pequeno evento |
 
 - **Símbolo**: um círculo de corrente fechado por uma mão. **Cor**: roxo-sangue.
@@ -165,8 +165,8 @@ Perguntas de vínculo: *A quem você já obedeceu e jurou nunca mais? · Você a
 
 | Para | Como Persona faz | Tipo |
 |---|---|---|
-| **Atacar** | *Voz* ou *Música* como golpe; *Enfraquecer Músculo* (cãibra), *Coração* disparado, *Pele Grotesca*; *Medo*, *Fúria* contra o próprio aliado, *Saudade* que faz largar a arma | Projétil · Teste mágico (forte) · Teste mágico (firme) |
-| **Proteger** | *Fortalecer*, *Robusto* em você ou num aliado; *Encantar* quem vem atacar | Pequeno evento · Teste mágico (firme) |
+| **Atacar** | *Voz* ou *Música* como golpe; *Enfraquecer Músculo* (cãibra), *Coração* disparado, *Pele Grotesca*; *Medo*, *Fúria* contra o próprio aliado, *Saudade* que faz largar a arma | Projétil · Teste mágico (Aguentar) · Teste mágico (Firmar) |
+| **Proteger** | *Fortalecer*, *Robusto* em você ou num aliado; *Encantar* quem vem atacar | Pequeno evento · Teste mágico (Firmar) |
 | **Aliviar** | *Acalmar*, *Consolar*, *Coragem*: tirar medo, pânico, vergonha | Pequeno evento |
 | **Descobrir** | *Sentir* o que alguém sente, ou o rastro de alguém num objeto que ele amou | Pequeno evento |
 | **Mover** | *Fortalecer Músculo* para escalar; *Remodelar* o corpo (guelras, mãos que grudam) | Pequeno evento |
@@ -206,7 +206,7 @@ Perguntas de vínculo: *De quem você sente mais falta? · Qual emoção sua voc
 
 | Para | Como Alvorum faz | Tipo |
 |---|---|---|
-| **Atacar** | *Luz* ou *Sol* em raio; *Cegar*, *Ofuscar*; *Pesadelo*, *Enlouquecer* | Projétil · Teste mágico (atento) · Teste mágico (firme) |
+| **Atacar** | *Luz* ou *Sol* em raio; *Cegar*, *Ofuscar*; *Pesadelo*, *Enlouquecer* | Projétil · Teste mágico (Observar) · Teste mágico (Firmar) |
 | **Proteger** | *Sombra* cobrindo o grupo; um *Espelho* de luz que desvia o golpe | Pequeno evento |
 | **Aliviar** | *Lúcido*: tirar alguém da loucura, do encanto, do pesadelo | Pequeno evento |
 | **Descobrir** | *Revelar*, *Perceber*, *Vislumbrar* o que vem; a Skill *Olhos Abertos* | Pequeno evento |
@@ -247,7 +247,7 @@ Perguntas de vínculo: *O que você viu e queria não ter visto? · Você tem me
 
 | Para | Como Morbidyum faz | Tipo |
 |---|---|---|
-| **Atacar** | *Drenar* num toque que puxa a vida; *Definhar*, *Doença*, *Apodrecer*; *Assombrar* | Projétil · Teste mágico (forte) · Teste mágico (firme) |
+| **Atacar** | *Drenar* num toque que puxa a vida; *Definhar*, *Doença*, *Apodrecer*; *Assombrar* | Projétil · Teste mágico (Aguentar) · Teste mágico (Firmar) |
 | **Proteger** | *Etéreo*: o golpe atravessa você; *Osso* como armadura | Pequeno evento |
 | **Curar** | **o único Valor que devolve PV**: *Curar*, *Regenerar*, *Vida* | Pequeno evento |
 | **Descobrir** | *Prever*, *Presságio*; *Sussurrar* com um *Fantasma*; saber do que alguém morreu | Pequeno evento |
@@ -288,11 +288,11 @@ Perguntas de vínculo: *Quem você não conseguiu salvar? · Você já morreu? O
 
 | Para | Como Cognitium faz | Tipo |
 |---|---|---|
-| **Atacar** | uma *Ideia* *Psíquica* que bate como pedrada; *Confundir*, *Labirinto*, *Hipnótico*; *Ilusão* de perigo | Projétil · Teste mágico (firme) · Teste mágico (atento) |
-| **Proteger** | *Invisível* ou *Disfarçar*: ninguém mira em quem não vê; *Esquecer*: o guarda esquece que viu você | Pequeno evento · Teste mágico (firme) |
+| **Atacar** | uma *Ideia* *Psíquica* que bate como pedrada; *Confundir*, *Labirinto*, *Hipnótico*; *Ilusão* de perigo | Projétil · Teste mágico (Firmar) · Teste mágico (Observar) |
+| **Proteger** | *Invisível* ou *Disfarçar*: ninguém mira em quem não vê; *Esquecer*: o guarda esquece que viu você | Pequeno evento · Teste mágico (Firmar) |
 | **Aliviar** | *Apagar* ou *Lembrar*: tirar uma lembrança que dói, devolver uma que se perdeu | Pequeno evento |
 | **Descobrir** | *Ler*, *Segredo*; a Skill *Espiar* | Pequeno evento · Teste mágico |
-| **Mover** | *Invisível* para passar pela guarda; *Ilusão* de uma porta onde não tem | Pequeno evento · Teste mágico (atento) |
+| **Mover** | *Invisível* para passar pela guarda; *Ilusão* de uma porta onde não tem | Pequeno evento · Teste mágico (Observar) |
 
 - **Símbolo**: uma espiral que vira labirinto. **Cor**: índigo.
 - **Primordial**: **o Trono Vazio** (era de Zahun antes dele virar humano). **Oposto**: Alvorum.
@@ -304,9 +304,9 @@ Perguntas de vínculo: *Quem você não conseguiu salvar? · Você já morreu? O
 
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
-| **1** | Pensar | Lembrar | Esquecer | Ler | Enganar | Disfarçar |
-| **2** | Convencer | Implantar | Confundir | Sugerir | Apagar | Imaginar |
-| **3** | Mente | Memória | Dúvida | Ideia | Mentira | Ilusão |
+| **1** | Calcular | Lembrar | Esquecer | Ler | Enganar | Disfarçar |
+| **2** | Doutrinar | Implantar | Confundir | Sugerir | Apagar | Imaginar |
+| **3** | Mente | Memória | Dúvida | Ideia | Farsa | Ilusão |
 | **4** | Crença | Segredo | Cheiro | Gosto | Palavra | Labirinto |
 | **5** | Psíquico | Falso | Verdadeiro | Enigmático | Familiar | Paradoxal |
 | **6** | Sutil | Lógico | Absurdo | Hipnótico | Invisível | Nebuloso |
@@ -329,7 +329,7 @@ Perguntas de vínculo: *Qual memória você apagaria se pudesse? · Em que menti
 
 | Para | Como Eternyr faz | Tipo |
 |---|---|---|
-| **Atacar** | *Acelerar* uma pedra até ela virar bala; *Lento*, *Parar*; *Aumentar* a arma do inimigo até ela pesar demais | Projétil · Teste mágico (ágil) · Teste mágico (forte) |
+| **Atacar** | *Acelerar* uma pedra até ela virar bala; *Lento*, *Parar*; *Aumentar* a arma do inimigo até ela pesar demais | Projétil · Teste mágico (Desviar) · Teste mágico (Levantar) |
 | **Proteger** | um *Portal* onde o golpe entra e sai em outro lugar; *Voltar* um instante para desviar | Pequeno evento |
 | **Aliviar** | *Voltar* o objeto quebrado ao que era; *Lento*: o sangramento anda devagar | Pequeno evento |
 | **Descobrir** | *Localizar*; o *Passado* deste lugar | Pequeno evento |
@@ -345,7 +345,7 @@ Perguntas de vínculo: *Qual memória você apagaria se pudesse? · Em que menti
 
 | d66 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
-| **1** | Teleportar | Mover | Guiar | Localizar | Atravessar | Parar |
+| **1** | Teleportar | Deslocar | Guiar | Localizar | Atravessar | Parar |
 | **2** | Acelerar | Voltar | Saltar | Organizar | Aumentar | Encolher |
 | **3** | Tempo | Espaço | Portal | Caminho | Instante | Distância |
 | **4** | Dimensão | Passado | Futuro | Âncora | Ciclo | Horizonte |
@@ -370,7 +370,7 @@ Perguntas de vínculo: *Em que momento da sua vida você voltaria? · Onde é o 
 
 | Para | Como Primitivum faz | Tipo |
 |---|---|---|
-| **Atacar** | *Espinhos* atirados; *Raiz* ou *Brotar* que prende; *Venenoso*; *Invocar* um *Espírito* animal | Projétil · Teste mágico (forte) · Pequeno evento |
+| **Atacar** | *Espinhos* atirados; *Raiz* ou *Brotar* que prende; *Venenoso*; *Invocar* um *Espírito* animal | Projétil · Teste mágico (Fugir, ou Aguentar no veneno) · Pequeno evento |
 | **Proteger** | *Escama* ou *Resistente* em você; *Árvore* que fecha o caminho | Pequeno evento |
 | **Aliviar** | *Adaptar* ao frio, à fome, ao ar ruim; ervas *Naturais* que acalmam a dor | Pequeno evento |
 | **Descobrir** | *Farejar*, *Instinto*; falar com bichos | Pequeno evento |
