@@ -41,7 +41,7 @@ Oposição serve para duas coisas: **Magia em Dupla de opostos** (mais forte, ma
 
 | Para | Como Conflitüo faz | Tipo |
 |---|---|---|
-| **Atacar** | *Lâmina*, *Flecha* ou *Lança* atiradas; *Explodir* + *Estilhaço* no chão; *Desarmar* | Projétil · Projétil em área · Teste mágico (Agarrar ou Desviar) |
+| **Atacar** | *Arma* ou *Ferro* atirados; *Explodir* + *Estilhaço* no chão; *Desarmar* | Projétil · Projétil em área · Teste mágico (Agarrar ou Desviar) |
 | **Proteger** | *Escudo*, *Muralha*, *Trincheira*; *Aparar* o golpe que vem | Pequeno evento |
 | **Aliviar** | *Estandarte* + *Incansável*: o grupo aguenta de pé mais um pouco | Pequeno evento |
 | **Descobrir** | *Tático*: ler o campo de batalha, o flanco aberto, quem vai correr primeiro | Pequeno evento |
@@ -53,7 +53,7 @@ Oposição serve para duas coisas: **Magia em Dupla de opostos** (mais forte, ma
 - **Skill · Fio da Guerra**: em combate, cada magia sua ganha **+1 dado de dano** ou **+2 no total** (escolha ao conjurar).
 - **Retaliação · Só Sabe Brigar**: magias fora de combate ou violência custam **+2 Arcano**.
 - **Ressonância II · Veterano**: marque 1 Cansaço para ter os dois bônus do Fio da Guerra na mesma magia.
-- **Ressonância III · Arsenal Vivo**: invocar uma arma ou um escudo de Conflitüo é **Grau 1** para você: **não custa Arcano e não rola**; é uma ação. Escolha a forma:
+- **Ressonância III · Arsenal Vivo**: invocar uma arma ou um escudo de Conflitüo é **Grau 1** para você: **não custa Arcano e não rola**; é uma ação. Escolha a forma (são **formas do Arsenal**, não palavras da lista de Conflitüo, que só tem *Arma* como palavra geral):
   - **Lâmina** (espada, machado, martelo): Toque, ataque com **Bater**, dano **2d10 + Moldura + 1**.
   - **Lança** (lança, alabarda, corrente): Perto, ataque com **Bater**, dano **2d10 + Moldura**, traço *Alcance*.
   - **Arco** (flechas de luz vermelha): Longe, ataque com **Atirar**, dano **2d10 + Moldura**.
@@ -64,12 +64,12 @@ Oposição serve para duas coisas: **Magia em Dupla de opostos** (mais forte, ma
 |---|---|---|---|---|---|---|
 | **1** | Cortar | Perfurar | Esmagar | Explodir | Bloquear | Aparar |
 | **2** | Investir | Recuar | Desarmar | Romper | Provocar | Flanquear |
-| **3** | Lâmina | Escudo | Lança | Martelo | Flecha | Muralha |
-| **4** | Armadura | Estandarte | Cicatriz | Trincheira | Grito | Estilhaço |
+| **3** | Duelo | Escudo | Ferro | Vanguarda | Cerco | Muralha |
+| **4** | Arma | Estandarte | Cicatriz | Trincheira | Grito | Estilhaço |
 | **5** | Letal | Implacável | Afiado | Pesado | Certeiro | Veloz |
 | **6** | Blindado | Brutal | Incansável | Tático | Voraz | Inquebrável |
 
-Exemplos: **G1** afiar a faca com um passar de dedo · **G2** *Lâmina + Projétil*: uma lâmina de luz vermelha atirada · **G3** *Muralha + Blindado*: um paredão de escudos entre o grupo e a carga · **G4** *Explodir + Estilhaço + Grupo + Letal*: o chão do pátio explode em estilhaços contra seis inimigos.
+Exemplos: **G1** afiar a faca com um passar de dedo · **G2** *Arma + Projétil*: uma arma de luz vermelha atirada · **G3** *Muralha + Blindado*: um paredão de escudos entre o grupo e a carga · **G4** *Explodir + Estilhaço + Grupo + Letal*: o chão do pátio explode em estilhaços contra seis inimigos.
 
 Perguntas de vínculo: *Contra quem ou o quê você lutou pela primeira vez, e perdeu? · Existe alguém que você se recusa a ferir?*
 
@@ -395,7 +395,7 @@ Perguntas de vínculo: *Em que momento da sua vida você voltaria? · Onde é o 
 | **2** | Cavar | Farejar | Invocar | Crescer | Brotar | Uivar |
 | **3** | Animal | Árvore | Raiz | Espírito | Garra | Asa |
 | **4** | Presa | Escama | Semente | Floresta | Rio | Instinto |
-| **5** | Selvagem | Natural | Ancestral | Ágil | Camuflado | Venenoso |
+| **5** | Selvagem | Natural | Ancestral | Sinuoso | Camuflado | Venenoso |
 | **6** | Bestial | Primal | Resistente | Mutante | Espinhoso | Fértil |
 
 Exemplos: **G1** falar com um pássaro (só coisas de pássaro) · **G2** *Raiz*: raízes prendem um inimigo · **G3** *Invocar + Espírito + Animal*: um espírito-lobo luta ao seu lado até o mestre pagar · **G4** *Crescer + Floresta + Área*: a mata engole a estrada e o acampamento inimigo.

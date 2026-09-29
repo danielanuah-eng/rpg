@@ -36,7 +36,7 @@
 - **Compromisso**: "Não fujo de briga que é minha."
 - **Laços**: *O Capitão Brando, que me mandou fugir e morreu na muralha* · *Resolver na porrada antes de pensar* (Atalho de costume) · *O medo de ser só uma arma*
 - **Vivências**: Soldado da Cidade-Muralha · Leio uma briga antes de ela começar
-- **Magias prontas**: *Lâmina* + projétil (G2, lâmina vermelha atirada) · *Aparar* + defender (G2) · *Grito* + intimidar (G2, Amedrontado até a próxima Falha)
+- **Magias prontas**: *Arma* + projétil (G2, arma vermelha atirada) · *Aparar* + defender (G2) · *Grito* + intimidar (G2, Amedrontado até a próxima Falha)
 
 ### Iara do Rio
 *Aprendiz de vidreira do Porto de Vidro, que carrega no pescoço um frasco do rio onde quase se afogou.*
@@ -100,7 +100,7 @@
 - **Guarda Bento** — Moldura 1 · Social · — · Ser: Guarda, Cansado · Agir: Mandar embora · Aceitar (livre: um suborno de 5 o ou um bom motivo) · Parecer: Covarde · Quer: que o turno acabe sem problema.
 - **O Menino das Gaiolas** — Moldura 1 · Social · — · Ser: Criança, Testemunha · Agir: Fugir · Apontar (livre: se alguém for gentil com ele, aponta o celeiro) · Quer: não apanhar da Domadora.
 
-**Testes esperados**: *Convencer* (12) com Tânia ou com o menino · *Procurar Raciocinando* (12) nas gaiolas vazias · *Rastrear Intuindo* (Oruã, 15 com Desvantagem do terreno, ou Grau 1 de Primitivum) · *Mentir Encantando* (Nhanda, 12) com o guarda.
+**Testes esperados**: *Convencer* (12) com Tânia ou com o menino · *Investigar Raciocinando* (12) nas gaiolas vazias · *Rastrear Intuindo* (Oruã, 15 com Desvantagem do terreno, ou Grau 1 de Primitivum) · *Mentir Encantando* (Nhanda, 12) com o guarda.
 
 **Momento de Laço**: o guarda empurra o menino. Quem se mete (Passo de Valor) e quem finge não ver (Atalho)?
 

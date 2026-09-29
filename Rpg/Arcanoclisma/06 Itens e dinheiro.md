@@ -55,7 +55,7 @@ Dano = **dado da arma × Proficiência + bônus**. A cada Moldura acima do 1, a 
 | Chicote | Rápido | Perto | d6+2 | 1 | Desarmar, Puxar | 15 o |
 | Cajado | Proteger | Toque | d8+1 | 2 | Serve de foco arcano | 15 o |
 | Soqueira | Rápido | Toque | d6+2 | 1 | Não pode ser desarmada | 5 o |
-| Funda | Jogar | Médio | d6+1 | 1 | Barata (munição de graça) | 5 o |
+| Funda | Atirar | Médio | d6+1 | 1 | Barata (munição de graça) | 5 o |
 | Arco curto | Rápido | Longe | d8+2 | 2 | — | 30 o |
 | Arco longo | Observar | Longe | d10+3 | 2 | Pesada | 45 o |
 | Besta | Observar | Longe | d10+2 | 2 | Recarga | 40 o |

@@ -275,7 +275,7 @@ Básicas: fortes Montar, Fugir · fraco Pensar
 
 **Ladrão de Túmulos** — M1 · Padrão · —
 Ser: Ladrão · Agir: Pá · Fugir · Parecer: Covarde, Imundo · Quer: o anel do morto; sabe que a cripta está assombrada.
-Básicas: fortes Mexer, Procurar · fraco Firmar
+Básicas: fortes Mexer, Preciso · fraco Firmar
 
 **Trapaceiro de Feira** — M1 · Social · —
 Ser: Trapaceiro · Agir: Enganar · Sumir na Multidão (1C · si · some até Médio · Inst) · Parecer: Mentiroso, Veloz · Quer: moeda fácil; vira informante se pego.
@@ -349,7 +349,7 @@ Básicas: fortes Estudar, Atirar · fraco Firmar · Valor: Fogo, Volátil, Arden
 
 **Duelista da Lâmina Vermelha** — M2 · Ágil · Conflitüo
 Ser: Duelista · Agir: Estocar · Desafiar (livre · Perto · 1 · Firmar · o alvo só pode atacar ele · Falha) · Contra-golpe (1C · depois que alguém erra ele, ataca · Inst) · Parecer: Veloz, Belo · Quer: um oponente digno; respeita quem vence.
-Básicas: fortes Bater, Desviar, Ameaçar · fraco Esconder · Valor: Provocar, Lâmina, Afiado, Certeiro
+Básicas: fortes Bater, Desviar, Ameaçar · fraco Esconder · Valor: Provocar, Arma, Afiado, Certeiro
 
 **Encantadora de Salão** — M2 · Conjurador · Persona
 Ser: Cantora, Espiã · Agir: Cantar (1C · Médio · Grupo · Firmar · Amedrontado ou apaixonado · Falha) · Beijar (2C · Toque · 1 · Firmar · o alvo protege ela · Pagar) · Parecer: Belo, Mentiroso · Quer: um segredo de alguém da mesa.
@@ -381,15 +381,15 @@ Básicas: fortes Intuir, Ameaçar, Observar · fraco Mentir · Valor: Revelar, O
 
 **Sargenta do Estandarte** — M2 · Líder · Conflitüo
 Ser: Soldada, Porta-estandarte · Agir: Lança · Erguer o Estandarte (1C · Médio · os aliados ignoram Amedrontado e ganham +1 no ataque · Emoldura) · Parecer: Leal, Barulhento · Quer: que ninguém da tropa fique para trás.
-Básicas: fortes Chamar, Bater, Firmar · fraco Esconder · Valor: Estandarte, Incansável, Lança
+Básicas: fortes Chamar, Bater, Firmar · fraco Esconder · Valor: Estandarte, Incansável, Vanguarda
 
 **Quebra-Escudos** — M1 · Bruto · Conflitüo
 Ser: Guerreiro, Martelo · Agir: Esmagar · Romper (1C · Toque · 1 · ataque · dano ×1 e −1 Proteção · Inst) · Parecer: Pesado · Quer: achar a armadura que ele não consegue quebrar.
-Básicas: fortes Quebrar, Bater · fraco Movimentar · Valor: Martelo, Romper, Brutal
+Básicas: fortes Quebrar, Bater · fraco Movimentar · Valor: Arma, Romper, Brutal
 
 **Arqueira da Última Flecha** — M2 · Atirador · Conflitüo
 Ser: Arqueira · Agir: Flecha de luz vermelha (Longe) · Certeira (2C · Horizonte · 1 · ataque · dano ×2 · Inst) · Parecer: Paciente, Silencioso · Quer: a única flecha que ela guarda, para quem matou o irmão dela.
-Básicas: fortes Atirar, Observar · fraco Convencer · Valor: Flecha, Certeiro, Perfurar
+Básicas: fortes Atirar, Observar · fraco Convencer · Valor: Arma, Certeiro, Perfurar
 
 **Senhor da Trincheira** — M3 · Bruto · Conflitüo · Resiliente
 Ser: Veterano, Trincheira · Agir: Esmagar · Cavar Linha (1C · Médio · uma trincheira: aliados atrás dela com Dif +2 · Ev) · Implacável (livre: quando cai para metade dos PV, ataca de novo) · Parecer: Duro, Blindado · Quer: segurar a linha até o fim, mesmo que a guerra já tenha acabado.
@@ -529,7 +529,7 @@ Básicas: fortes Estudar, Firmar, Chamar · fraco Movimentar · Valor: todas as 
 
 **O Antigo Bibliotecário** — M4 · Social · Cognitium · Inquebrável
 Ser: Bibliotecário, Homem que Pensou · Agir: Achar (livre: acha o livro de que alguém precisa, se receber um conhecimento de bom grado) · Esquecer Onde Pôs (livre: sabe que tem, não sabe onde) · Ratinhos (livre: os ratinhos organizam, buscam, avisam) · Parecer: Antigo, Estranho (sempre parece confuso, e é) · Quer: que ninguém saia do Postulário mais cruel do que entrou. Leva pela vida uma frase: *"Nunca seja cruel, nunca seja covarde, e o amor é sempre sábio."* *Jeito*: barbudo, careca, cabelos descabelados dos lados, óculos, macacão marrom; adora admitir que não sabe.
-Básicas: fortes Estudar, Intuir, Procurar · fraco Movimentar · Valor: Evocar, Ideia, Memória, Palavra, Verdadeiro
+Básicas: fortes Estudar, Intuir, Investigar · fraco Movimentar · Valor: Evocar, Ideia, Memória, Palavra, Verdadeiro
 
 ## Povos infundidos
 
@@ -995,7 +995,7 @@ Básicas: fortes Bater, Aguentar · fraco Pensar
 
 **Ferreiro de Guerra** (Campo Sem Trégua) — M3 · Suporte · Conflitüo
 Ser: Ferreiro, Juramentado · Agir: Martelo · Temperar (1C · Toque · a arma de um aliado ganha um traço até o fim do Evento) · Parecer: Ardente, Paciente · Quer: uma arma que termine a guerra; forja para qualquer lado.
-Básicas: fortes Consertar, Aguentar · fraco Convencer · Valor: Martelo, Lâmina, Afiado
+Básicas: fortes Consertar, Aguentar · fraco Convencer · Valor: Ferro, Arma, Afiado
 
 **Estandarte Sem Exército** (Campo Sem Trégua) — M2 · Social · Conflitüo
 Ser: Estandarte · Agir: Tremular (livre: quem o carrega não sente medo) · Parecer: Estranho · Quer: um exército; qualquer grupo de três já serve.
@@ -1055,7 +1055,7 @@ Básicas: fortes Esconder, Furtar · fraco Firmar
 
 **Bibliotecária do Arquivo** (Arquivo Sem Dono) — M3 · Suporte · Cognitium
 Ser: Bibliotecária · Agir: Achar (livre: acha qualquer memória perdida, mediante troca) · Emprestar (1C · Toque · um aliado ganha uma Vivência por um Evento) · Parecer: Astuto, Paciente · Quer: que tudo volte para a estante; cobra uma lembrança por empréstimo.
-Básicas: fortes Estudar, Negociar, Procurar · fraco Movimentar · Valor: Memória, Evocar, Labirinto
+Básicas: fortes Estudar, Negociar, Investigar · fraco Movimentar · Valor: Memória, Evocar, Labirinto
 
 **Sombra do Trono Vazio** (Arquivo Sem Dono) — M4 · Chefe · Cognitium · Inquebrável, Resiliente
 Ser: Trono, Ausência · Agir: Esquecer (2C · Médio · Grupo · Firmar · Selado · Ev) · Tomar o Lugar (3C · Médio · 1 · Firmar · o alvo esquece quem é e age como servo do Trono · Pagar) · Vazio (reação, 2C: um ataque contra ela passa por onde ela não está) · Parecer: Invisível, Antigo · Quer: alguém para sentar no Trono; testa todos que chegam perto. *Jeito*: não fala; responde mostrando lembranças dos próprios jogadores.

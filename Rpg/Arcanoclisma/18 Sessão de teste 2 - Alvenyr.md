@@ -37,7 +37,7 @@
 - **Sintonia** +2 (desde o rebalanceamento pós-sessão; na sessão foi +4) · **Grau máximo** 4 · **Palavras de Valor por magia** 4 (cada uma soma +1; da 3ª em diante, +1 Cataclisma ao mestre) · uma Palavra Básica grátis
 - **Graus**: G2 = 2d12, custa 1, Dif 12 · G3 = 3d8, custa 2, Dif 13 · **G4 = 4d6, custa 3, Dif 14** · Teste mágico: Dificuldade da magia = **16 + palavras**
 - **Ampliar**: até 3 passos por magia (Arcano + Dificuldade +2 cada). **Domínio (dano)**: o primeiro passo de dano em cada magia não sobe a Dificuldade.
-- **Palavras de Conflitüo**: Cortar, Perfurar, Esmagar, Explodir, Bloquear, Aparar, Investir, Recuar, Desarmar, Romper, Provocar, Flanquear · Lâmina, Escudo, Lança, Martelo, Flecha, Muralha, Armadura, Estandarte, Cicatriz, Trincheira, Grito, Estilhaço · Letal, Implacável, Afiado, Pesado, Certeiro, Veloz, Blindado, Brutal, Incansável, Tático, Voraz, Inquebrável
+- **Palavras de Conflitüo**: Cortar, Perfurar, Esmagar, Explodir, Bloquear, Aparar, Investir, Recuar, Desarmar, Romper, Provocar, Flanquear · Duelo, Escudo, Ferro, Vanguarda, Cerco, Muralha, Arma, Estandarte, Cicatriz, Trincheira, Grito, Estilhaço · Letal, Implacável, Afiado, Pesado, Certeiro, Veloz, Blindado, Brutal, Incansável, Tático, Voraz, Inquebrável
 - **Palavras extras**: □ □ □ □
 
 ## Companheiro: Erick Hess (PNJ)
@@ -67,7 +67,7 @@ Básicas: fortes Intuir, Pensar, Esconder · fraco Bater · Valor: Ler, Mente, I
 - **Evento 3 — A Arena Velha.** Kaelen Morvath, o Invicto (ex-prodígio apagado pela escola), prende os três alunos com coleiras e puxa a manada com correntes de Dominum. Propõe duelo.
   - **Ajuste solo testado**: Chefe sem ×1,5 nos Limiares (16/30) e 10 PV.
   - Regra ajustada na mesa: **Abrir** vira Palavra Básica de magia; **Criar** já era verbo da tabela.
-  - *Lâmina* + **Criar** + *Afiado* + *Bloquear* (em negativa: "imbloqueável", combinado antes) (Projétil, G4, 5 Arcano; 3ª palavra dá +1C ao mestre): 4d6 1, 2, 4, 5 + 4 + 3 = 19 contra Dif 16, acerta; empate de pares e ímpares = **por Arcano**. Fio da Guerra: +1 dado de dano → 4d10 10, 5, 10, 4 + 4 = **33, Grave: Kaelen 7/10**. Gosto de Sangue: +1 Arcano. "Imbloqueável" (*Bloquear* em negativa) anula a reação de aparar do Kaelen. Espada de **Bronze Arco** (metal arcano do mundo) com runas de Conflitüo.
+  - *Arma* + **Criar** + *Afiado* + *Bloquear* (em negativa: "imbloqueável", combinado antes) (Projétil, G4, 5 Arcano; 3ª palavra dá +1C ao mestre): 4d6 1, 2, 4, 5 + 4 + 3 = 19 contra Dif 16, acerta; empate de pares e ímpares = **por Arcano**. Fio da Guerra: +1 dado de dano → 4d10 10, 5, 10, 4 + 4 = **33, Grave: Kaelen 7/10**. Gosto de Sangue: +1 Arcano. "Imbloqueável" (*Bloquear* em negativa) anula a reação de aparar do Kaelen. Espada de **Bronze Arco** (metal arcano do mundo) com runas de Conflitüo.
   - O mestre gasta 1C para emoldurar: Kaelen age duas vezes. **Coleira** (2C) no Alvenyr: Firmar 10 + 6 − 1 = 15 contra 16, falha por 1: puxado e **Preso**. **Lâmina**: d20 10 + 3 + 1 (Plateia) = 14 contra Esquiva 11, acerta: 3d10 2, 9, 1 + 3 = **15**.
   - Proteção: 1 casa (2 PV → 1). Alvenyr: "É só isso que você tem, seu palhaço de merda?"
   - *Desarmar* + **Arma** contra **a magia das correntes** (não contra o Kaelen): Pequeno evento, G2, 1 Arcano: 2d12 2, 5 + 4 + 1 + 2 = 14 contra 12, sucesso **por Cataclisma**: a coleira se solta. (Na mesa eu tinha rolado como Teste mágico contra o Kaelen; o jogador corrigiu a intenção.)
@@ -79,7 +79,7 @@ Básicas: fortes Intuir, Pensar, Esconder · fraco Bater · Valor: Ler, Mente, I
 ## Relatório do playtest 2
 
 **O que funcionou**
-- **Moldura 3 é outro jogo**: 4 palavras, Grau 4, Arsenal Vivo, Fio da Guerra. O jogador montou golpes grandes e descritivos (*Lâmina* + Criar + Afiado + Bloquear em negativa) e o sistema aguentou.
+- **Moldura 3 é outro jogo**: 4 palavras, Grau 4, Arsenal Vivo, Fio da Guerra. O jogador montou golpes grandes e descritivos (*Arma* + Criar + Afiado + Bloquear em negativa) e o sistema aguentou.
 - **Palavras somam** deixou a segunda, terceira e quarta palavra valiosas sem explicação de relação.
 - **Efeito Colateral pelo Grau** apareceu na hora certa (Grau 3, Esquecimento) e virou ficção.
 - **O Chefe com personalidade** resolveu a luta pela história: o espelho entre Kaelen e Alvenyr (prodígio apagado, coroa riscada) foi mais forte que zerar PV.

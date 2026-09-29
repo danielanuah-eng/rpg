@@ -74,14 +74,14 @@
   "maestria": ["Resiliente"],
   "ser": ["Ex-prodígio", "Duelista"],
   "agir": [
-    {"verbo": "Lâmina", "ataque": true},
+    {"verbo": "Arma", "ataque": true},
     {"verbo": "Coleira", "custo": "2C", "alcance": "Longe", "alvo": "1", "resistencia": "Firmar", "efeito": "puxado até o Toque + Preso", "marcador": "Emoldura"}
   ],
   "parecer": ["Duro", "Astuto"],
   "quer": "um duelo digno, com plateia; que a escola diga o nome dele de novo",
   "jeito": "luta limpo enquanto o oponente luta limpo; com metade dos PV, oferece o lugar de 213º",
   "basicas": {"fortes": ["Bater", "Ameaçar", "Chamar"], "fraco": "Intuir"},
-  "palavras": ["Lâmina", "Implacável", "Corrente", "Coleira"],
+  "palavras": ["Arma", "Implacável", "Corrente", "Coleira"],
   "tags": ["Confluência", "GrandGaleonis", "Chefe", "Arena Velha"],
   "prompt": "kaelen-invicto",
   "fonte": "18 Sessão de teste 2 - Alvenyr.md"

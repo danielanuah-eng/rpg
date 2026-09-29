@@ -20,28 +20,30 @@
 
 | | | | |
 |---|---|---|---|
-| Abrir | Conjurar | Formar | Observar |
-| Acabar | Consertar | Fugir | Pensar |
-| Agarrar | Convencer | Furtar | Prender |
-| Aguentar | Criar | Intuir | Preparar |
-| Alcançar | Desviar | Investigar | Procurar |
-| Ameaçar | Encantar | Jogar | Proteger |
-| Apagar | Enrolar | Lembrar | Quebrar |
-| Armar | Entrar | Levantar | Raciocinar |
-| Atirar | Esconder | Mentir | Rápido |
-| Atrair | Estudar | Mexer | Rastrear |
-| Bater | Fazer | Montar | Reconhecer |
-| Chamar | Firmar | Movimentar | Sair |
-| Conectar | Forçar | Negociar | Sobreviver |
+| Abrir | Bruto | Firmar | Observar |
+| Absorver | Chamar | Forçar | Pensar |
+| Acabar | Conectar | Fugir | Preciso |
+| Agarrar | Conjurar | Furtar | Prender |
+| Ágil | Consertar | Intuir | Preparar |
+| Aguentar | Convencer | Investigar | Proteger |
+| Alcançar | Criar | Lembrar | Quebrar |
+| Ameaçar | Desviar | Levantar | Raciocinar |
+| Apagar | Encantar | Mentir | Rápido |
+| Armar | Enrolar | Mexer | Rastrear |
+| Atirar | Entrar | Montar | Reagir |
+| Atrair | Esconder | Movimentar | Reconhecer |
+| Bater | Estudar | Negociar | Sobreviver |
 
 São **52 palavras**, em ordem alfabética. O que cada uma cobre, quando a dúvida aparecer:
 
-- **Abrir**: forçar e escancarar (porta emperrada, tampa, caminho no mato). **Acabar**: terminar de vez (o golpe final, derrubar, esgotar). **Agarrar**: segurar, derrubar, desarmar. **Aguentar**: dor, veneno, frio, fome, doença. **Alcançar**: pegar quem foge, chegar primeiro, alcançar o que está longe. **Ameaçar**: intimidar, dar ultimato. **Apagar**: fogo, luz, rastros, depressa. **Armar**: montar armadilha, mecanismo, esquema. **Atirar**: arco, funda, arremesso, pistola. **Atrair**: seduzir, distrair, chamar a atenção.
-- **Bater**: corpo a corpo, com arma ou sem. **Chamar**: liderar, inspirar, se fazer ouvir. **Conectar**: ligar pessoas, lugares e ideias; criar confiança. **Conjurar**: espetáculo, truque de palco, magia feita para ser vista. **Consertar**: ofício, montar, desmontar, forjar, cozinhar. **Convencer**: persuadir, pedir. **Criar**: arte, música, inventar.
-- **Desviar**: reagir, escapar de armadilha, de rajada, de queda. **Encantar**: deslumbrar, conquistar um público, fazer gostar. **Enrolar**: ganhar tempo na conversa, levar no papo, amarrar com corda. **Entrar**: achar e usar a entrada, se infiltrar. **Esconder**: furtividade, sumir na multidão. **Estudar**: ler, pesquisar, entender magia alheia. **Fazer**: produzir algo com receita (poção, item, ferramenta). **Firmar**: resistir ao medo, ao encanto, à loucura.
-- **Forçar**: força bruta, fazer na marra, empurrar, puxar. **Formar**: organizar gente e coisas (uma fila, uma formação, um plano). **Fugir**: escapar de perseguição, de amarras, sair de uma briga. **Furtar**: achar a brecha e tirar sem ser visto. **Intuir**: sentir intenção, mentira, perigo. **Investigar**: examinar uma cena, juntar pistas. **Jogar**: arremessar para alguém pegar, jogos de habilidade.
+- **Abrir**: forçar e escancarar (porta emperrada, tampa, caminho no mato). **Absorver**: aguentar o golpe em vez de desviar, sugar um choque ou uma energia. **Acabar**: terminar de vez (o golpe final, derrubar, esgotar). **Agarrar**: segurar, derrubar, desarmar. **Ágil**: leveza e equilíbrio do corpo: acrobacia, contorcer-se, andar em corda bamba. **Aguentar**: dor, veneno, frio, fome, doença. **Alcançar**: pegar quem foge, chegar primeiro, alcançar o que está longe. **Ameaçar**: intimidar, dar ultimato. **Apagar**: fogo, luz, rastros, depressa. **Armar**: montar armadilha, mecanismo, esquema. **Atirar**: arco, funda, arremesso, pistola. **Atrair**: seduzir, distrair, chamar a atenção.
+- **Bater**: corpo a corpo, com arma ou sem. **Bruto**: sem sutileza: peso e violência, fazer na marra (*Bater Bruto*, *Quebrar Bruto*). **Chamar**: liderar, inspirar, se fazer ouvir. **Conectar**: ligar pessoas, lugares e ideias; criar confiança. **Conjurar**: espetáculo, truque de palco, magia feita para ser vista. **Consertar**: ofício, montar, desmontar, forjar, cozinhar. **Convencer**: persuadir, pedir. **Criar**: arte, música, inventar.
+- **Desviar**: escapar de armadilha, de rajada, de queda. **Encantar**: deslumbrar, conquistar um público, fazer gostar. **Enrolar**: ganhar tempo na conversa, levar no papo, amarrar com corda. **Entrar**: achar e usar a entrada, se infiltrar. **Esconder**: furtividade, sumir na multidão. **Estudar**: ler, pesquisar, entender magia alheia. **Firmar**: resistir ao medo, ao encanto, à loucura.
+- **Forçar**: empurrar, puxar, esticar, fazer na marra. **Fugir**: escapar de perseguição, de amarras, sair de uma briga. **Furtar**: achar a brecha e tirar sem ser visto. **Intuir**: sentir intenção, mentira, perigo. **Investigar**: examinar uma cena, juntar pistas.
 - **Lembrar**: saber o que se aprendeu, reconhecer uma história, uma lei, um rosto antigo. **Levantar**: erguer, carregar. **Mentir**: enganar, disfarçar, blefar. **Mexer**: mão leve, fechadura, truque. **Montar**: cavalgar, conduzir, pilotar, lidar com bicho. **Movimentar**: correr, saltar, escalar, nadar, remar. **Negociar**: comprar, vender, trocar, pechinchar. **Observar**: ver, ouvir, notar que algo mudou.
-- **Pensar**: planejar, decidir, imaginar saídas. **Prender**: imobilizar, trancar alguém. **Preparar**: ritual, remédio, emboscada, o terreno antes da luta. **Procurar**: vasculhar com calma. **Proteger**: cobrir alguém com o corpo, estancar um sangramento, acalmar quem está em pânico. **Quebrar**: arrombar, partir, derrubar a porta. **Raciocinar**: deduzir, calcular, resolver um enigma. **Rápido**: fazer depressa, reflexo, chegar antes. **Rastrear**: seguir pegadas, cheiro, pistas. **Reconhecer**: identificar uma pessoa, uma magia, um brasão, um perigo. **Sair**: saber a hora de ir embora, sair de uma enrascada ou de um transe. **Sobreviver**: se orientar, achar abrigo, ler o tempo.
+- **Pensar**: planejar, decidir, imaginar saídas. **Preciso**: cuidado e mira: pontaria, mão firme, o detalhe (*Atirar Preciso*, *Consertar Preciso*). **Prender**: imobilizar, trancar alguém. **Preparar**: ritual, remédio, emboscada, o terreno antes da luta. **Proteger**: cobrir alguém com o corpo, estancar um sangramento, acalmar quem está em pânico. **Quebrar**: arrombar, partir, derrubar a porta. **Raciocinar**: deduzir, calcular, resolver um enigma. **Rápido**: fazer depressa, chegar antes. **Rastrear**: seguir pegadas, cheiro, pistas. **Reagir**: responder no susto: reflexo, contra-atacar, ser o primeiro a se mexer quando a coisa acontece. **Reconhecer**: identificar uma pessoa, uma magia, um brasão, um perigo. **Sobreviver**: se orientar, achar abrigo, ler o tempo.
+
+**Quatro palavras dizem *como*, não *o quê***: **Rápido, Ágil, Bruto e Preciso**. Elas se juntam a um verbo e mudam o jeito da ação: *Bater Bruto* (sem sutileza), *Atirar Preciso* (mira cuidadosa), *Movimentar Ágil* (leve, no equilíbrio), *Bater Rápido* (antes do outro). Continuam sendo só duas palavras no teste.
 
 **Na criação**, distribua obrigatoriamente, em oito palavras diferentes: **+2 · +1 · +1 · +1 · +1 · +1 · −1 · −1**. As outras ficam em 0. Cada palavra vai até **+3**.
 

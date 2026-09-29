@@ -12,7 +12,7 @@ O mundo só **bagunça** quando a magia é usada de forma instável, poderosa de
 
 As palavras das tabelas **não são reais**. Ninguém no mundo "tem a palavra Fogo" guardada no bolso. Elas são **nomes que o jogador dá à relação do personagem com coisas reais**, através do Valor dele.
 
-Por isso a mesma palavra funciona de jeitos diferentes em personagens diferentes. **Lâmina**, para um Conflitüo que foi soldado, é a espada que nunca largou; para outro, que perdeu alguém numa briga, é o corte que ele sabe fazer parar. Palavras podem ser complexas, arbitrárias, subjetivas. O que torna a magia possível é o **envolvimento** do personagem com o seu Valor, e o que o jogador **descreve** na hora de usar.
+Por isso a mesma palavra funciona de jeitos diferentes em personagens diferentes. **Arma**, para um Conflitüo que foi soldado, é a espada que nunca largou; para outro, que perdeu alguém numa briga, é aquilo que ele jurou nunca mais empunhar. Palavras podem ser complexas, arbitrárias, subjetivas. O que torna a magia possível é o **envolvimento** do personagem com o seu Valor, e o que o jogador **descreve** na hora de usar.
 
 Ser um **Comprometido eficiente e adaptativo** é olhar e usar as palavras **de acordo com o que faz sentido** na hora: como um **espectador que manipula**, não como quem é manipulado por elas.
 
@@ -112,18 +112,18 @@ Ela só vira rolagem quando é o **meio de uma ação** que já seria um teste: 
 
 ## Fusão: quando o personagem vira a palavra
 
-Às vezes o personagem para de **ter** a palavra e passa a **ser** a palavra: "eu corto" vira "eu sou a Lâmina". Aí a palavra está **fundida**: em vez de o personagem manipular a palavra, **a palavra manipula o personagem**. Na ficha do Valor, faça um **círculo** em volta dela.
+Às vezes o personagem para de **ter** a palavra e passa a **ser** a palavra: "eu golpeio" vira "eu sou a Arma". Aí a palavra está **fundida**: em vez de o personagem manipular a palavra, **a palavra manipula o personagem**. Na ficha do Valor, faça um **círculo** em volta dela.
 
 **Quando funde**: quando o jogador usa **sempre a mesma palavra**, repetidas vezes — como núcleo em magia atrás de magia, como resposta para tudo, ou como o Atalho de sempre. Não há número: fica no **olho do mestre e da mesa**. O mestre aponta, a mesa conversa, o jogador circula.
 
 **A palavra fundida atrapalha:**
 - **Se manifesta**: o mestre pode gastar **1 Cataclisma** para a palavra fundida **entrar sem ser chamada** numa magia ou numa ação do personagem: a reação de sempre, mesmo quando a cena pedia outra coisa.
-- **Se funde com a perspectiva**: o personagem passa a ver o mundo pela palavra. O mestre descreve as cenas por essa lente ("para quem é Lâmina, tudo parece algo a cortar"), e testes para entender alguém ou enxergar uma saída que a palavra esconde têm **Desvantagem**.
+- **Se funde com a perspectiva**: o personagem passa a ver o mundo pela palavra. O mestre descreve as cenas por essa lente ("para quem é a Arma, tudo parece um alvo"), e testes para entender alguém ou enxergar uma saída que a palavra esconde têm **Desvantagem**.
 - **Fica rígida**: só funciona no sentido mais literal e **não dá o +1 de Relação** (não há distância entre o personagem e ela).
 
-**Vira Laço**: uma palavra que fica fundida **por uma sessão inteira** **vira um Laço novo**. O jogador escreve a descrição da relação do personagem com ela ("Ser a Lâmina: resolver tudo cortando").
+**Vira Laço**: uma palavra que fica fundida **por uma sessão inteira** **vira um Laço novo**. O jogador escreve a descrição da relação do personagem com ela ("Ser a Arma: resolver tudo no golpe").
 
-**Desfusão é ação, não percepção.** Perceber a fusão ajuda (e dá Arcano, ver Olhar para os Laços em [[01 Regras centrais]]), mas a palavra só se desfunde quando o personagem **age diferente com ela**: um **Passo de Valor** usando a palavra num sentido novo, não literal ("Lâmina: separar a briga", "Lâmina: cortar o silêncio"), ou agindo por um Laço de conexão **contra** o puxão da palavra. Dê certo ou não, a palavra se desfunde. O significado antigo **não some** (o personagem ainda pode cortar com a Lâmina), mas volta a ser uma escolha, não uma ordem. Apague o círculo e escreva ao lado dela um **sentido** seu ("Lâmina: o que protege"), que daí em diante justifica o +1 de Relação.
+**Desfusão é ação, não percepção.** Perceber a fusão ajuda (e dá Arcano, ver Olhar para os Laços em [[01 Regras centrais]]), mas a palavra só se desfunde quando o personagem **age diferente com ela**: um **Passo de Valor** usando a palavra num sentido novo, não literal ("Arma: separar a briga", "Arma: cortar o silêncio"), ou agindo por um Laço de conexão **contra** o puxão da palavra. Dê certo ou não, a palavra se desfunde. O significado antigo **não some** (o personagem ainda pode empunhar a arma), mas volta a ser uma escolha, não uma ordem. Apague o círculo e escreva ao lado dela um **sentido** seu ("Arma: o que protege"), que daí em diante justifica o +1 de Relação.
 
 ## Os Graus (níveis de poder)
 
@@ -298,7 +298,7 @@ As Palavras Básicas são as **52 palavras** da lista ([[01 Regras centrais]], s
 1. **Descrever qualquer ação** e escolher o teste: **uma ou duas palavras** ("Furtar", "Bater Rápido", "Convencer").
 2. **Completar uma magia**: **uma** Palavra Básica por magia (uma palavra da lista, uma coisa ou uma forma), de graça, sem contar no limite de palavras. É ela que dá ao Valor as ações que ele sozinho não alcança: "*Voz* + **Ameaçar**", "*Raiz* + **Agarrar**", "*Sombra* + **Esconder**".
 
-Além das palavras da lista, cinco **coisas** também são Palavras Básicas: **Arma · Item · Poção · Objeto · Armadilha**. *Lâmina* + **Criar** faz uma arma do nada; *Desarmar* + **Arma** tira a arma (ou a magia que prende) da mão de alguém; *Fogo* + **Apagar** acaba com o incêndio; *Vida* + **Poção** põe a cura num frasco.
+Além das palavras da lista, cinco **coisas** também são Palavras Básicas: **Arma · Item · Poção · Objeto · Armadilha**. *Ferro* + **Criar** faz uma arma do nada; *Desarmar* + **Arma** tira a arma (ou a magia que prende) da mão de alguém; *Fogo* + **Apagar** acaba com o incêndio; *Vida* + **Poção** põe a cura num frasco.
 
 Palavras Básicas **não custam nada**, mas precisam fazer **sentido concreto** no que está acontecendo, e **nunca são o núcleo** de uma magia.
 
@@ -317,7 +317,7 @@ Formas são só formato: **nenhuma Palavra Básica é elemento** (fogo, gelo, lu
 - Grau 2 (uma pessoa, dano). Custo total 1 Arcano.
 - É um jato: precisa **acertar**. Rola 2d12 + 2 (Sintonia) + 1 (uma palavra) contra a Dificuldade do guarda, 12. Tira 7 e 8: total 18, acerta. Um par (+1 Arcano: a magia se pagou), um ímpar (+1 Cataclisma). Dano 1d10 + 2 + 1 (Foco).
 
-**Tomé (Conflitüo) e Iara (Sublimeyn), nível 5** fazem uma dupla: **Explodir + Lâmina + Metal + Fundir + Grupo**.
+**Tomé (Conflitüo) e Iara (Sublimeyn), nível 5** fazem uma dupla: **Explodir + Arma + Metal + Fundir + Grupo**.
 - 4 palavras de Valor, Grau do efeito 4 + 1 = **5 (Mítico)**: uma chuva de lâminas de metal derretido sobre até todos os inimigos à vista.
 - Custo: 3 (dupla) + as palavras de Valor extras de cada um (*Grupo* é básica, grátis).
-- Tomé conduz com as 2 palavras dele (*Explodir*, *Lâmina*): rola **6d4** (Grau 5) + 2 (Sintonia) + 2 (palavras), e Iara soma +2, contra a Dificuldade dos inimigos (é um ataque: precisa acertar). Skill do Conflitüo vale (+1 dado de dano). Se sair por Cataclisma, rolam **2 Efeitos Colaterais** (Grau 5).
+- Tomé conduz com as 2 palavras dele (*Explodir*, *Arma*): rola **6d4** (Grau 5) + 2 (Sintonia) + 2 (palavras), e Iara soma +2, contra a Dificuldade dos inimigos (é um ataque: precisa acertar). Skill do Conflitüo vale (+1 dado de dano). Se sair por Cataclisma, rolam **2 Efeitos Colaterais** (Grau 5).
