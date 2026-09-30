@@ -544,3 +544,18 @@ As perguntas P-123 a P-126 (gerador de nomes, personagem aleatório com tabela d
 ✅ **Cinco Palavras Básicas novas** (continua 52): entram **Absorver, Reagir, Ágil, Bruto e Preciso**; saem as que mais se repetiam com outras, **Fazer, Jogar, Procurar, Sair e Formar**. *Rápido, Ágil, Bruto e Preciso* são as quatro palavras de **jeito** (dizem *como*): juntam a um verbo, "Bater Bruto", "Atirar Preciso". Definições ajustadas para não se repetirem: **Desviar** (só escapar; *Reagir* é o reflexo e o contra-ataque), **Forçar** (empurrar e puxar; *Bruto* é a violência sem sutileza), **Rápido** (só depressa). *Ágil* e *Bruto* também são nomes de arquétipos de adversário; mantidos, a coincidência é proposital (um Bruto tende a ter *Bruto* forte). *Sinuoso* substitui *Ágil* na lista de Primitivum para não haver a mesma palavra nos dois sistemas.
 
 ✅ **Conflitüo: palavra geral *Arma***: entra no lugar de *Armadura* (que repetia *Blindado* e *Escudo*). As armas específicas (**Lâmina, Lança, Martelo, Flecha**) saem da lista e entram **Duelo, Ferro, Vanguarda e Cerco**. Lâmina, Lança, Arco e Escudo continuam como **formas do Arsenal Vivo** (Ressonância III), não como palavras. Exemplos, bestiário, sessão do Alvenyr e o livro foram trocados. Atenção: *Arma* também é uma das cinco **coisas** grátis de todos (Arma · Item · Poção · Objeto · Armadilha); em Conflitüo ela existe duas vezes (a do Valor conta no limite de palavras, a grátis não).
+
+## Rodada 26 — Personagens da lore
+
+✅ **Três personagens novos** em [[26 Personagens da lore]]: **Ciantia** (a maga dos dragões, já existia no Bestiário e ganhou a aparência e as falas do autor), **DisScar** (roqueiro punk de Profulgar, líder da gangue mágica Coisa-Loca, Persona + Conflitüo + Cognitium) e o **Professor Ninguém** (inventor sem Valor que quer superar a magia). Cada um com ficha de PNJ (Bestiário, 290) e ficha de personagem (nível 10, 6 e 8). Prompts de arte em [[20 Prompts de arte - personagens]].
+
+❓ **Para decidir (propostas minhas, marcadas no arquivo):**
+1. **Ciantia parece jovem**, e o Bestiário a chamava de *Antiga*. Proposta: a mesa escolhe a verdade da cara (d4: jovem de verdade · viveu eras e a cara é escolha · o Dragão-Ampulheta lhe emprestou o tempo · ninguém sabe).
+2. **"Vocês querem vantagem, mas não têm"** virou uma regra dela: **Vantagem contra ela não conta**, a não ser que um Detalhe que ela não previu a ligue por uma rolagem. Concorda?
+3. **Ciantia e os nove Valores**: regra própria da Arquimaga (Valor ativo, troca grátis uma vez por Evento e depois 1 Arcano, a fraqueza é o oposto do ativo, Dupla sozinha com +3 Arcano). Só para ela.
+4. **DisScar com três Valores**: Persona principal, Conflitüo e Cognitium em Palavras Estrangeiras (e uma guardada na guitarra). No Bestiário ele é **Quimerarcano**, que já cobre 3 Valores.
+5. **Engenhos** (a regra do Professor): item construído com Grau até Moldura + 1, que se aciona com **2d12 + duas Palavras Básicas**, paga o Arcano do Grau e **funciona nas mãos de qualquer um**. É a resposta a "não usa magia, mas as invenções mudam o mundo". Vale como regra geral para quem constrói?
+6. **A Estrela** como arco: fixa o mundo (sem Cataclisma, sem regresso: nada se desfaz). Quer deixar isso como arco de campanha?
+7. **Ligações entre os três** e a **Casa** que o Professor largou (d4: origem da Era Tecnomaga · ensina em GrandGaleonis · é a Casa Durand, irmão da Maelis · fez a guitarra Rasgo do DisScar).
+8. Nomes que eu dei: **Rasgo** (a guitarra do DisScar), **Coisa-Loca** já era seu, **Modo Oficina / Modo Estrela** do Professor.
+

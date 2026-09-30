@@ -19,7 +19,7 @@ Sistema de RPG próprio, inspirado em Daggerheart, Rune RPG, Ethmos e Triangle A
 9. [[07 Mestre - Cataclisma, abalos e terrenos]] — gastos do mestre, Abalos, Marés, Correntes, terrenos
 10. [[08 Mundo e entidades]] — origem, par e ímpar, Primordiais, semideuses, Reinos, dragões, Eras, perguntas de escritor
 11. [[10 Adversários - como criar]] — adversários por palavras, régua, maestria
-12. [[11 Bestiário]] — 280 personagens do mundo numa lista só (gente comum, Comprometidos, povos infundidos, feras, Disruptos, Protetores, seres de energia e dos planos, semideuses, dragões, Era Tecnomaga), cada um com Básicas e, se conjura, Valor
+12. [[11 Bestiário]] — 290 personagens do mundo numa lista só (gente comum, Comprometidos, povos infundidos, feras, Disruptos, Protetores, seres de energia e dos planos, semideuses, dragões, Era Tecnomaga), cada um com Básicas e, se conjura, Valor
 13. [[12 Tesouros e itens mágicos]] — itens narrativos, Maravilhas, itens comuns, achados
 14. [[13 Teste de mesa 1]] — kit do primeiro teste (4 personagens, 3 Eventos) e relatório do combate simulado
 15. [[14 Teste das mecânicas]] — etapas, facilidade e vantagem repetida de cada mecânica; economia de Arcano
@@ -33,7 +33,8 @@ Sistema de RPG próprio, inspirado em Daggerheart, Rune RPG, Ethmos e Triangle A
 23. [[22 O que é gerado]] — Fase 3: o catálogo de tudo que vira dado (24 tipos), os campos, os geradores e o exemplo de JSON
 24. [[23 Nomes e Laços]] — gerador de nomes (6 culturas, 8 povos, epítetos) e tabelas de Laços para o personagem aleatório
 25. [[24 Guia visual]] — Fase 4: página, personagem, as Esferas dos Valores (vetores em `arte/simbolos/`), cores, fontes, ícones, fichas, página do livro (`arte/livro-magia.html`)
-26. [[25 Prompts de arte - catálogo]] — Fase 4.5: 519 prompts (armas, itens, artefatos, terrenos, lugares, Reinos, povos, dragões e os 288 do bestiário), gerados por `arte/prompts/gerar_prompts.py`; prompt completo em `arte/prompts/catalogo.json`
+26. [[25 Prompts de arte - catálogo]] — Fase 4.5: 521 prompts (armas, itens, artefatos, terrenos, lugares, Reinos, povos, dragões e os 290 do bestiário), gerados por `arte/prompts/gerar_prompts.py`; prompt completo em `arte/prompts/catalogo.json`
+27. [[26 Personagens da lore]] — Ciantia (a maga dos dragões), DisScar (o roqueiro da lama) e o Professor Ninguém: aparência, falas, lore, ficha de PNJ e ficha de personagem; regra proposta dos Engenhos
 
 ## Conta dos dados
 

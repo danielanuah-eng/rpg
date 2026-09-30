@@ -1,6 +1,6 @@
 # 25 — Prompts de arte: o catálogo (Fase 4.5)
 
-> **519 imagens**, uma por arma, armadura, item, artefato, terreno, lugar, Reino, povo, dragão e personagem do bestiário. **92 são do livro** (marcadas **livro · gerar primeiro**); as outras são do app do gerador ([[22 O que é gerado]], P-125). Gerado por `arte/prompts/gerar_prompts.py` a partir dos arquivos do livro; o prompt completo (estilo + específico) está em `arte/prompts/catalogo.json`. Não edite à mão: mude o arquivo de origem e rode o script de novo. Personagens das sessões continuam em [[20 Prompts de arte - personagens]].
+> **521 imagens**, uma por arma, armadura, item, artefato, terreno, lugar, Reino, povo, dragão e personagem do bestiário. **92 são do livro** (marcadas **livro · gerar primeiro**); as outras são do app do gerador ([[22 O que é gerado]], P-125). Gerado por `arte/prompts/gerar_prompts.py` a partir dos arquivos do livro; o prompt completo (estilo + específico) está em `arte/prompts/catalogo.json`. Não edite à mão: mude o arquivo de origem e rode o script de novo. Personagens das sessões continuam em [[20 Prompts de arte - personagens]].
 
 ## Como fazer
 
@@ -756,7 +756,7 @@
   id `wyvern`  
   > Wyvern, a cria de um dragão: menor, duas patas e asas, sem chamas, olhar de bicho, arreio de couro de montaria.
 
-### Bestiário · Gente comum (82)
+### Bestiário · Gente comum (83)
 
 - **Guarda da Ponte** · M1 · Lacaio · — · estilo **P** · 1:1  
   id `guarda-da-ponte`  
@@ -1004,8 +1004,11 @@
 - **Mafrisa, do Bar da Mafrisa** · M3 · Suporte · — (fada) · estilo **P** · 1:1  
   id `mafrisa-do-bar-da-mafrisa`  
   > Mafrisa, do Bar da Mafrisa: fada, dona de bar; pessoa comum do mundo, roupas de trabalho e de rua; jeito duro, leal; pose de quem ajuda os outros; no gesto de puxar.
+- **Professor Ninguém** · M4 · Chefe · — · Anulador, Espelho · prompt do [[20 Prompts de arte - personagens]] · estilo **P** · 1:1  
+  id `professor-estrela`  
+  > Jovem de roupa branca de universidade mágica, luvas brancas, cabelos azuis pintados de azul-escuro, olhar perdido e feliz. Das luvas saem engrenagens e um pequeno sol de latão que desenha linhas retas de esquema por cima da página, transformando os títulos em plantas de máquina; um autômato de bolso agarra a margem.
 
-### Bestiário · Comprometidos (47)
+### Bestiário · Comprometidos (48)
 
 - **Aprendiz Descontrolado** · M1 · Conjurador · Sublimeyn · estilo **P** · 1:1  
   id `aprendiz-descontrolado`  
@@ -1142,9 +1145,12 @@
 - **Menina-Raposa** · M1 · Ágil · Primitivum · estilo **P** · 1:1  
   id `menina-raposa`  
   > Menina-Raposa: menina, raposa; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito minúsculo, covarde; leve e veloz; no gesto de morder; magia verde-musgo e âmbar.
-- **Professora Ciantia** · M4 · Chefe · todos os Valores · Quimerarcano, Resiliente · estilo **P** · 1:1  
-  id `professora-ciantia`  
-  > Professora Ciantia: arquimaga, professora, conselheira do vestryel; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito antigo, brilhante; pose imponente de chefe; no gesto de raio.
+- **Professora Ciantia** · M4 · Chefe · todos os Valores · Quimerarcano, Resiliente · prompt do [[20 Prompts de arte - personagens]] · estilo **P** · 1:1  
+  id `ciantia-dragoes`  
+  > Mulher jovem, loira com mechas brancas platinadas, olhos verdes, roupa preta e jaqueta com bordas de veludo, sorriso confiante e controlado. Estende a palma da mão aberta para fora do quadro, com um dragãozinho de chamas fantasmagóricas translúcidas enrolado nela; atrás dela, a boca aberta de um dragão enorme emoldura a página, e as chamas de nove cores (uma por Valor) escorrem pela borda por cima do texto.
+- **DisScar** · M3 · Chefe · Persona, Conflitüo, Cognitium · Quimerarcano · prompt do [[20 Prompts de arte - personagens]] · estilo **P** · 1:1  
+  id `disscar-mosh`  
+  > Roqueiro punk de pele branca, meio jovem, roupas de couro, cabelo curto em degradê com moicano, escuro com partes pintadas de roxo vibrante, piercings nas orelhas e na boca, sorriso desafiador de canto a canto. Segura uma guitarra com lâminas; ondas de som coral com faíscas roxas saem dela e empurram as colunas de texto para as bordas, e três clones dele saem das ondas, cada um numa pose diferente.
 - **O Antigo Bibliotecário** · M4 · Social · Cognitium · Inquebrável · estilo **P** · 1:1  
   id `o-antigo-bibliotecario`  
   > O Antigo Bibliotecário: bibliotecário, homem que pensou; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito antigo, estranho (sempre parece confuso, e é); pose de conversa; no gesto de achar; magia índigo.
