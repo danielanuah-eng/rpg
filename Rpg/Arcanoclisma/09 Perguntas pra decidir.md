@@ -547,15 +547,14 @@ As perguntas P-123 a P-126 (gerador de nomes, personagem aleatório com tabela d
 
 ## Rodada 26 — Personagens da lore
 
-✅ **Três personagens novos** em [[26 Personagens da lore]]: **Ciantia** (a maga dos dragões, já existia no Bestiário e ganhou a aparência e as falas do autor), **DisScar** (roqueiro punk de Profulgar, líder da gangue mágica Coisa-Loca, Persona + Conflitüo + Cognitium) e o **Professor Ninguém** (inventor sem Valor que quer superar a magia). Cada um com ficha de PNJ (Bestiário, 290) e ficha de personagem (nível 10, 6 e 8). Prompts de arte em [[20 Prompts de arte - personagens]].
+✅ **Três personagens novos** em [[26 Personagens da lore]]: **Ciantia** (a maga dos dragões, já existia no Bestiário e ganhou a aparência do autor), **DisScar** (roqueiro punk, líder da gangue mágica Coisa-Loca, Persona + Conflitüo + Cognitium) e o **Professor Ninguém** (inventor sem Valor que quer superar a magia). Cada um com ficha de PNJ (Bestiário, 290), ficha de personagem (nível 10, 6 e 8) e **personalidade e vibe**. Prompts de arte em [[20 Prompts de arte - personagens]].
 
-❓ **Para decidir (propostas minhas, marcadas no arquivo):**
-1. **Ciantia parece jovem**, e o Bestiário a chamava de *Antiga*. Proposta: a mesa escolhe a verdade da cara (d4: jovem de verdade · viveu eras e a cara é escolha · o Dragão-Ampulheta lhe emprestou o tempo · ninguém sabe).
-2. **"Vocês querem vantagem, mas não têm"** virou uma regra dela: **Vantagem contra ela não conta**, a não ser que um Detalhe que ela não previu a ligue por uma rolagem. Concorda?
-3. **Ciantia e os nove Valores**: regra própria da Arquimaga (Valor ativo, troca grátis uma vez por Evento e depois 1 Arcano, a fraqueza é o oposto do ativo, Dupla sozinha com +3 Arcano). Só para ela.
-4. **DisScar com três Valores**: Persona principal, Conflitüo e Cognitium em Palavras Estrangeiras (e uma guardada na guitarra). No Bestiário ele é **Quimerarcano**, que já cobre 3 Valores.
-5. **Engenhos** (a regra do Professor): item construído com Grau até Moldura + 1, que se aciona com **2d12 + duas Palavras Básicas**, paga o Arcano do Grau e **funciona nas mãos de qualquer um**. É a resposta a "não usa magia, mas as invenções mudam o mundo". Vale como regra geral para quem constrói?
-6. **A Estrela** como arco: fixa o mundo (sem Cataclisma, sem regresso: nada se desfaz). Quer deixar isso como arco de campanha?
-7. **Ligações entre os três** e a **Casa** que o Professor largou (d4: origem da Era Tecnomaga · ensina em GrandGaleonis · é a Casa Durand, irmão da Maelis · fez a guitarra Rasgo do DisScar).
-8. Nomes que eu dei: **Rasgo** (a guitarra do DisScar), **Coisa-Loca** já era seu, **Modo Oficina / Modo Estrela** do Professor.
+✅ **As frases entre aspas são só frases de efeito**: mostram personalidade e vibe, e **não viram regra nem lore**. (A primeira versão as tratou como regra; foi desfeita.)
 
+❓ **Propostas minhas, marcadas no arquivo:**
+1. **Engenhos** (a regra do Professor, que não usa magia mas cujas invenções mudam o mundo): item construído com Grau até Moldura + 1, acionado com **2d12 + duas Palavras Básicas**, paga o Arcano do Grau e **funciona nas mãos de qualquer um**. Vale como regra geral para quem constrói?
+2. **A Grande Obra**: o "algo que supere a magia" que ele quer criar fica em aberto, para o mestre decidir.
+3. **Ciantia e os nove Valores**: regra própria da Arquimaga (Valor ativo, troca grátis uma vez por Evento e depois 1 Arcano, a fraqueza é o oposto do ativo, Dupla sozinha com +3 Arcano). Só para ela. A idade dela fica em aberto.
+4. **DisScar com três Valores**: Persona principal, Conflitüo e Cognitium em Palavras Estrangeiras (uma guardada na guitarra). No Bestiário ele é **Quimerarcano**.
+5. **Ligações entre os três** e a Casa que o Professor largou (d4: origem da Era Tecnomaga · ensina em GrandGaleonis · Casa Durand, irmão da Maelis · fez a guitarra Rasgo).
+6. Nomes que eu dei: **Rasgo** (a guitarra) e **a Grande Obra**.

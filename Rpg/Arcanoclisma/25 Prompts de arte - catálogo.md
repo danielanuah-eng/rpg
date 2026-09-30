@@ -1006,7 +1006,7 @@
   > Mafrisa, do Bar da Mafrisa: fada, dona de bar; pessoa comum do mundo, roupas de trabalho e de rua; jeito duro, leal; pose de quem ajuda os outros; no gesto de puxar.
 - **Professor Ninguém** · M4 · Chefe · — · Anulador, Espelho · prompt do [[20 Prompts de arte - personagens]] · estilo **P** · 1:1  
   id `professor-estrela`  
-  > Jovem de roupa branca de universidade mágica, luvas brancas, cabelos azuis pintados de azul-escuro, olhar perdido e feliz. Das luvas saem engrenagens e um pequeno sol de latão que desenha linhas retas de esquema por cima da página, transformando os títulos em plantas de máquina; um autômato de bolso agarra a margem.
+  > Jovem de roupa branca de universidade mágica, luvas brancas, cabelos azuis pintados de azul-escuro, olhar perdido e feliz. Das luvas saem engrenagens e pequenos mecanismos de latão que desenham linhas retas de esquema por cima da página, transformando os títulos em plantas de máquina; um autômato de bolso agarra a margem.
 
 ### Bestiário · Comprometidos (48)
 
@@ -1147,7 +1147,7 @@
   > Menina-Raposa: menina, raposa; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito minúsculo, covarde; leve e veloz; no gesto de morder; magia verde-musgo e âmbar.
 - **Professora Ciantia** · M4 · Chefe · todos os Valores · Quimerarcano, Resiliente · prompt do [[20 Prompts de arte - personagens]] · estilo **P** · 1:1  
   id `ciantia-dragoes`  
-  > Mulher jovem, loira com mechas brancas platinadas, olhos verdes, roupa preta e jaqueta com bordas de veludo, sorriso confiante e controlado. Estende a palma da mão aberta para fora do quadro, com um dragãozinho de chamas fantasmagóricas translúcidas enrolado nela; atrás dela, a boca aberta de um dragão enorme emoldura a página, e as chamas de nove cores (uma por Valor) escorrem pela borda por cima do texto.
+  > Mulher jovem, loira com mechas brancas platinadas, olhos verdes, roupa preta e jaqueta com bordas de veludo, sorriso confiante e controlado. Um dragãozinho de chamas fantasmagóricas translúcidas enrolado no braço dela; atrás dela, a cabeça de um dragão enorme emoldura a página, e as chamas de nove cores (uma por Valor) escorrem pela borda por cima do texto.
 - **DisScar** · M3 · Chefe · Persona, Conflitüo, Cognitium · Quimerarcano · prompt do [[20 Prompts de arte - personagens]] · estilo **P** · 1:1  
   id `disscar-mosh`  
   > Roqueiro punk de pele branca, meio jovem, roupas de couro, cabelo curto em degradê com moicano, escuro com partes pintadas de roxo vibrante, piercings nas orelhas e na boca, sorriso desafiador de canto a canto. Segura uma guitarra com lâminas; ondas de som coral com faíscas roxas saem dela e empurram as colunas de texto para as bordas, e três clones dele saem das ondas, cada um numa pose diferente.
