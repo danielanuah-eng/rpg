@@ -558,3 +558,14 @@ As perguntas P-123 a P-126 (gerador de nomes, personagem aleatório com tabela d
 4. **DisScar com três Valores**: Persona principal, Conflitüo e Cognitium em Palavras Estrangeiras (uma guardada na guitarra). No Bestiário ele é **Quimerarcano**.
 5. **Ligações entre os três** e a Casa que o Professor largou (d4: origem da Era Tecnomaga · ensina em GrandGaleonis · Casa Durand, irmão da Maelis · fez a guitarra Rasgo).
 6. Nomes que eu dei: **Rasgo** (a guitarra) e **a Grande Obra**.
+
+## Rodada 27 — O estilo de arte
+
+✅ **Direção de arte do dono**, em [[27 Estilo de arte - o traço]]: **quadrinho independente moderno e animação contemporânea** (linha limpa e esboço cheio de energia, expressividade); **cores chapadas, sombras em bloco e pontilhado (halftone)**; paleta **quente e terrosa** equilibrada com **azuis, cianos e verdes profundos**; personagens de **corpo diverso** e roupa **anacrônica** (sobrevivência + magia, moderno ou tecnologia); **monstros** de **paleontologia, criptozoologia e kaiju** (escamas, penas, carapaças), imponentes com um **toque caricato**; **itens exagerados e icônicos**, com as **armas de Bronze Arco** no mesmo traço; **a magia no mesmo tom**. Substitui o estilo anterior (tinta grossa, contorno preto pesado). Os 521 prompts e as descrições escritas foram refeitos.
+
+✅ **Novo estilo M** (monstros, criaturas e gigantes: feras, Disruptos, seres de energia e dos planos, semideuses, montarias), além de P (humanoides), D (dragões), I (itens) e C (cenários).
+
+✅ **Magia no mesmo tom**: forma gráfica chapada, sombra em bloco, **brilho de pontilhado**, na cor do Valor, dentro da paleta; **regra da dupla temperatura** (magia quente puxa o resto para o frio, e vice-versa).
+
+❓ **Dragões**: mantive as **escamas suaves** e as **chamas fantasmagóricas** que você pediu antes, e somei a presença de kaiju e a anatomia paleontológica. Se o corpo ainda vier pesado demais, afino no estilo D.
+

@@ -1,13 +1,13 @@
 # 24 — Guia visual (Fase 4)
 
-> O rascunho da identidade visual: a página, o personagem, os símbolos dos Valores, as cores e as fontes. Prévia das esferas em `arte/esferas.html` (também publicada como página). Personagens das sessões em [[20 Prompts de arte - personagens]].
+> O rascunho da identidade visual: a página, o personagem, os símbolos dos Valores, as cores e as fontes. **O traço, a cor e a magia das ilustrações estão em [[27 Estilo de arte - o traço]], que manda sobre o desenho.** Prévia das esferas em `arte/esferas.html` (também publicada como página). Personagens das sessões em [[20 Prompts de arte - personagens]].
 
 ## Três camadas
 
 | Camada | Referência | Como é |
 |---|---|---|
 | **A página** | a estética das páginas do **Daggerheart** | ornamentos finos em linha dourada, molduras discretas nos cantos, fundo com textura leve (papel ou noite), ilustrações de canto que vazam da coluna, títulos com serifa clássica; nunca copiar molduras ou elementos gráficos de lá, só a qualidade: elegância, respiro, ornamento com parcimônia |
-| **O personagem** | o traço do **Wilderfeast** | tinta grossa e expressiva, contorno preto marcado, cores chapadas e vibrantes com sombra em bloco, proporções estilizadas, poses exageradas; a magia desenhada como formas gráficas que **saem do quadro e mexem na página** |
+| **O personagem** | o traço do **Wilderfeast**, detalhado em [[27 Estilo de arte - o traço]] | quadrinho independente moderno e animação contemporânea: linha limpa e esboço cheio de energia, cores chapadas, sombra em bloco e **pontilhado (halftone)**, paleta quente e terrosa com azuis e verdes profundos; a magia é forma gráfica chapada com brilho pontilhado que **sai do quadro e mexe na página** |
 | **O símbolo** | próprio do Arcanoclisma | as **Esferas dos Valores** (abaixo) |
 
 ## A linguagem de par e ímpar
@@ -84,12 +84,12 @@ Rascunho das duas em `arte/fichas.html`. **O centro da Ficha 1 é a tabela de Pa
 
 ## Dragões
 
-Traço do **Wilderfeast** (tinta grossa, contorno preto, cor chapada com sombra em bloco) com o que vem das referências de dragão do dono e da lore ([[08 Mundo e entidades]]):
+Traço de [[27 Estilo de arte - o traço]] (linha limpa e solta, cor chapada, sombra em bloco, pontilhado), com a presença de **kaiju** e a anatomia **paleontológica**, e o que vem das referências de dragão do dono e da lore ([[08 Mundo e entidades]]):
 
 - **Imponência**: visto um pouco de baixo, cabeça erguida, peito orgulhoso, envergadura enorme; majestoso até ameaçando.
 - **Corpo**: nobre e alongado, pescoço e cauda longos. **Escamas suaves e orgânicas**: pequenas, sobrepostas, acompanhando as curvas do corpo como pele de cobra ou lagarto, em poucos traços e degradês chapados; **nada de pedra, rocha, placa de armadura ou escama rígida e artificial**. Poucos espinhos.
 - **Paleta**: duas ou três cores do Valor e **um acento que brilha**.
-- **Chamas bruxuleantes**: **nada de fogo realista**. São chamas **fantasmagóricas e translúcidas**, desenhadas como **fitas e fumaça em formas chapadas**, de borda limpa, que correm em curvas longas e **contornam a silhueta** como um manto espectral. Aparecem **só em alguns pontos**: pontas das asas, ponta da cauda, crista e olhos, onde o corpo parece virar chama; mais alguns veios finos acesos nas escamas.
+- **Chamas bruxuleantes**: **nada de fogo realista**. São chamas **fantasmagóricas e translúcidas**, desenhadas como **fitas e fumaça em formas chapadas**, de borda limpa e **degradê de pontilhado** para a transparência, que correm em curvas longas e **contornam a silhueta** como um manto espectral. Aparecem **só em alguns pontos**: pontas das asas, ponta da cauda, crista e olhos, onde o corpo parece virar chama; mais alguns veios finos acesos nas escamas.
 - **Cada Valor tem a sua chama** (cor, forma e comportamento):
 
 | Valor | Chama |

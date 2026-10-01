@@ -1,10 +1,10 @@
 # 20 — Prompts de arte: os personagens do livro
 
-> Os personagens que nascem nas sessões de teste (e nas mesas) viram **os rostos do livro**. Eles aparecem ao longo das páginas **interagindo com a diagramação**: a magia sai do quadro, derruba um título, escreve numa margem, acende uma tabela. Traço e cor na linha do **Wilderfeast** (personagens) sobre a página no estilo **Daggerheart** (ornamentos, molduras). Ver [[00 Roteiro]], Fase 4.
+> Os personagens que nascem nas sessões de teste (e nas mesas) viram **os rostos do livro**. Eles aparecem ao longo das páginas **interagindo com a diagramação**: a magia sai do quadro, derruba um título, escreve numa margem, acende uma tabela. Traço e cor como em [[27 Estilo de arte - o traço]] (na linha do **Wilderfeast**) sobre a página no estilo **Daggerheart** (ornamentos, molduras). Ver [[00 Roteiro]], Fase 4.
 
 ## Estilo base (colar no começo de todo prompt)
 
-> Ilustração de personagem de RPG de fantasia, traço de tinta grosso e expressivo, contornos pretos marcados, cores chapadas e vibrantes com sombras em blocos, textura leve de papel e pincel seco, proporções estilizadas, pose dinâmica e exagerada, expressão forte no rosto, fundo transparente, a magia desenhada como formas gráficas brilhantes que atravessam a borda da página e interagem com os elementos da diagramação (títulos, molduras, tabelas, margens). Sem texto, sem logotipo.
+> Ilustração dinâmica e expressiva, no estilo de quadrinhos independentes modernos e animações contemporâneas: traço que alterna linhas limpas e esboços cheios de energia, expressão facial e corporal forte, personagem de corpo próprio e roupa anacrônica (sobrevivência misturada com peças mágicas, modernas ou tecnológicas), cores chapadas com sombras em bloco e pontilhado (halftone), paleta quente e terrosa equilibrada com azuis e verdes profundos, pose dinâmica e exagerada, fundo transparente, a magia desenhada como formas gráficas em cor chapada com brilho pontilhado que atravessam a borda da página e interagem com os elementos da diagramação (títulos, molduras, tabelas, margens). Sem texto, sem logotipo. O guia completo está em [[27 Estilo de arte - o traço]].
 
 Cada Valor tem a cor da magia dele: Conflitüo vermelho-ferrugem · Sublimeyn prata-mercúrio · Dominum roxo-sangue · Persona coral · Alvorum dourado e preto · Morbidyum verde-pálido · Cognitium índigo · Eternyr azul-noite com riscos brancos · Primitivum verde-musgo e âmbar.
 

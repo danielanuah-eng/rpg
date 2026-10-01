@@ -42,38 +42,56 @@ def tabela(texto, cabecalho):
 # ---------------------------------------------------------------- estilos
 # Estilos em inglês: no teste do Canva (4.6) o estilo em inglês seguiu o traço grosso e chapado;
 # em português saiu realista. A parte específica de cada prompt continua em português.
-INK = ('Bold graphic fantasy RPG illustration in a thick expressive ink style: heavy black outlines, flat vibrant colors with hard block shadows, dry-brush paper texture, stylized exaggerated proportions, comic-book cel shading, not realistic, not 3D, not a painting.')
+BASE = ('Dynamic, expressive illustration in the style of modern independent comics and contemporary animation: line work that moves '
+        'between clean, well-defined lines in some elements and energetic loose sketch lines in others, with great fluidity, facial and body '
+        'expressiveness and organic shapes. Flat colors with simple flat, blocked shadows, and frequent halftone and stippling textures '
+        '(dots) that give a handmade finish, like classic printed retro comics. Vibrant palette with strong contrasts: warm earthy tones '
+        '(oranges, ochres, yellows, browns) balanced by cool tones (blues, cyans, deep greens), an adventurous, warm, lively mood. '
+        'Not realistic, not 3D, not a painting, no smooth airbrushed gradients, no neon.')
+MAGIA = ('Any magic is drawn in the same language: bold flat-color shapes (ribbons, spirals, shards, sigils) with blocked shadows and halftone '
+         'dot glow, in the color of its Value, balanced inside the warm and cool palette.')
 ESTILOS = {
-    'P': ('Personagem e criatura (1:1)',
-          INK + ' Full body character, dynamic pose, strong facial expression. '
-          'Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese):'),
-    # Dragões: traço do Wilderfeast (INK) + as referências do dono (imponência, corpo nobre e alongado, escamas como
-    # cristal, paleta curta com acento que brilha, chamas bruxuleantes em volta do corpo) + a lore do 08: nascem de um
-    # desejo antigo que ganhou carne; são Arcano e Cataclisma num corpo só (partes fechadas e inteiras, partes rachadas
-    # e mudando); nobres até na violência, orgulhosos, cheios de alma, com peso emocional; os mortais são estações.
+    'P': ('Personagem humanoide (1:1)',
+          BASE + ' Humanoid character with a distinct, diverse body type and expressive features, wearing anachronistic clothing that mixes '
+          'practical survival gear with magical, modern or technological pieces. Full body, dynamic pose, strong facial and body expression. '
+          + MAGIA + ' Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese):'),
+    'M': ('Monstro, criatura e gigante (1:1)',
+          BASE + ' A creature, monster or giant inspired by paleontology, cryptozoology and kaiju: imposing and organic, combining animal, '
+          'arcane or exotic traits (scales, feathers, carapaces, monstrous textures), sometimes overflowing with magic, but keeping a '
+          'caricatured, peculiar touch. Full body, dynamic pose. ' + MAGIA +
+          ' Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese):'),
+    # Dragões: o traço acima + as referências do dono (imponência, corpo nobre e alongado, escamas suaves, paleta curta com acento
+    # que brilha, chamas fantasmagóricas em volta do corpo) + a lore do 08: nascem de um desejo antigo que ganhou carne; são Arcano e
+    # Cataclisma num corpo só; nobres até na violência, cheios de alma; os mortais são estações.
     'D': ('Dragão (1:1)',
-          INK + ' An imposing, noble full body dragon seen slightly from below, head raised, chest proud, huge wingspan, '
-          'majestic even when threatening. It is an ancient desire that became flesh and scales, complete, alive and full of soul: '
-          'made of order and change at once, part of its body whole, closed and symmetrical, part cracked open with light '
-          'leaking through and shapes shifting. Slender elegant body with a long neck and long tail. Soft, smooth, organic scales: '
-          'small overlapping scales that flow with the curves of the body like the skin of a snake or a lizard, drawn with few '
-          'simple strokes and soft gradients of flat color; NOT stone, NOT rock, NOT armor plates, NOT rigid or artificial; only a '
-          'few spines. A limited palette of two or three hues plus one glowing accent color. The flames are NOT '
-          'realistic fire: they are ghostly, translucent, stylized flame shapes drawn as clean flat graphic ribbons and smoke-like '
-          'curls with simple edges, flowing in long elegant curves that trace and frame the silhouette of the body like a spectral '
-          'mantle. Their color, shape and behavior follow the dragon\'s Value, as described in the subject. They appear only in a few places: the wing tips, the tip of the tail, the crest along the spine and the eyes, '
-          'where the body seems to dissolve into flame; plus a few thin glowing veins along the scales. '
-          'Deep expressive eyes that carry emotional weight, love, fear or longing, looking at the viewer as if mortals were '
-          'passing seasons. Plain light gray background, no scenery, no text, no logo, no signature. Subject (in Portuguese):'),
-    'I': ('Item (1:1)',
-          INK + ' A single isolated object, whole and centered, three-quarter view, signs of use. '
-          'Plain solid white background, no hand, no character, no text, no logo. Subject (in Portuguese):'),
+          BASE + ' An imposing, noble full body dragon seen slightly from below, head raised, chest proud, huge wingspan, majestic even '
+          'when threatening, with the monumental presence of a kaiju and a paleontological sense of anatomy, yet with a touch of caricature. '
+          'It is an ancient desire that became flesh and scales, complete, alive and full of soul: made of order and change at once, part of '
+          'its body whole, closed and symmetrical, part cracked open with light leaking through and shapes shifting. Slender elegant body '
+          'with a long neck and long tail. Soft, smooth, organic scales: small overlapping scales that flow with the curves of the body '
+          'like the skin of a snake or a lizard, drawn with few simple strokes and flat color; NOT stone, NOT rock, NOT armor plates, NOT rigid '
+          'or artificial; only a few spines. A limited palette of two or three hues plus one glowing accent color. The flames are NOT '
+          'realistic fire: they are ghostly, translucent, stylized flame shapes drawn as clean flat graphic ribbons and smoke-like curls, '
+          'with halftone dot gradients to suggest the translucency, flowing in long elegant curves that trace and frame the silhouette of '
+          'the body like a spectral mantle. Their color, shape and behavior follow the dragon\'s Value, as described in the subject. They '
+          'appear only in a few places: the wing tips, the tip of the tail, the crest along the spine and the eyes, where the body seems '
+          'to dissolve into flame; plus a few thin glowing veins along the scales. Deep expressive eyes that carry emotional weight, love, '
+          'fear or longing, looking at the viewer as if mortals were passing seasons. Plain light gray background, no scenery, no text, '
+          'no logo, no signature. Subject (in Portuguese):'),
+    'I': ('Item e equipamento (1:1)',
+          BASE + ' An item or piece of equipment drawn with exaggerated, voluminous, iconic shapes (like giant cleavers, sturdy pots, twine, '
+          'complex blowtorches, huge spears, combat gloves), practical and handmade, with stippled textures. A single isolated object, whole '
+          'and centered, three-quarter view, signs of use. When the Subject mentions Bronze Arco, it is a dark-gold magical bronze whose runes '
+          'glow in halftone light in the color of the Value. ' + MAGIA +
+          ' Plain solid white background, no hand, no character, no text, no logo. Subject (in Portuguese):'),
     'C': ('Cenário (paisagem 3:2)',
-          'Fantasy RPG environment illustration in a bold graphic ink style: heavy black outlines, flat vibrant colors with '
-          'hard block shadows, dry-brush paper texture, wide establishing view, dramatic light, chapter-opening mood, '
-          'no characters in the foreground, no text, no logo. Subject (in Portuguese):'),
+          'Fantasy RPG environment illustration in the same style: modern independent comics and contemporary animation, loose energetic '
+          'lines mixed with clean ones, flat colors with blocked shadows, halftone and stippling textures, wide establishing view, '
+          'adventurous, warm, lively mood, warm earthy tones (oranges, ochres, yellows, browns) balanced by cool blues, cyans and deep greens '
+          'in the landscape. Magic drawn as flat-color shapes with halftone glow. Not realistic, not 3D, not a painting, no characters in the '
+          'foreground, no text, no logo. Subject (in Portuguese):'),
 }
-FORMATO = {'P': '1:1', 'D': '1:1', 'I': '1:1', 'C': '3:2'}
+FORMATO = {'P': '1:1', 'M': '1:1', 'D': '1:1', 'I': '1:1', 'C': '3:2'}
 
 COR = {
     'Conflitüo': 'magia vermelho-ferrugem', 'Sublimeyn': 'magia prata-mercúrio', 'Dominum': 'magia roxo-sangue',
@@ -118,7 +136,7 @@ t06 = ler('06 Itens e dinheiro.md')
 for r in tabela(t06, '| Arma | Combina com |'):
     nome = limpo(re.sub(r'\*\(.*?\)\*', '', r[0]))
     desc = ARMAS.get(nome, nome.lower())
-    add('arma', 'Armas', nome, f'{r[2]} · {r[3]} · {r[5]}', 'I', f'{desc}.', prioridade=True)
+    add('arma', 'Armas', nome, f'{r[2]} · {r[3]} · {r[5]}', 'I', f'{desc}; as partes de metal são de Bronze Arco, o bronze mágico dourado-escuro, com runas gravadas que acendem.', prioridade=True)
 add('arma', 'Armas', 'Espada de Bronze Arco', 'metal arcano comum', 'I',
     'espada longa de Bronze Arco, metal dourado-escuro, com runas gravadas ao longo da lâmina acendendo em luz vermelho-ferrugem.',
     prioridade=True)
@@ -142,7 +160,7 @@ for r in tabela(t06, '| Item | Efeito | Preço |'):
     add('consumivel', 'Consumíveis', limpo(r[0]), limpo(r[1]), 'I',
         f'{limpo(r[0])}: consumível de fantasia (frasco, pacote, vidrinho ou pote conforme o nome), rótulo sem letras.')
 for r in tabela(t06, '| Montaria comum | Traço | Preço |'):
-    est = 'I' if 'Barco' in r[0] else 'P'
+    est = 'I' if 'Barco' in r[0] else 'M'
     add('montaria', 'Montarias', limpo(r[0]), limpo(r[1]), est,
         f'{limpo(r[0])} de viagem, arreado e pronto, com alforjes; {limpo(r[1])}.')
 for r in tabela(t06, '| Valor | Material |'):
@@ -272,6 +290,7 @@ MOLDURA = {'Gente comum': 'pessoa comum do mundo, roupas de trabalho e de rua',
            'Era Tecnomaga': 'estética tecnomaga: magia e máquina, latão, vapor e runas'}
 PAPEL = {'Lacaio': 'um de um bando', 'Chefe': 'pose imponente de chefe', 'Líder': 'postura de quem comanda',
          'Bruto': 'grande e pesado', 'Ágil': 'leve e veloz', 'Social': 'pose de conversa', 'Suporte': 'pose de quem ajuda os outros'}
+CRIATURAS = {'Feras e monstros', 'Disruptos (nascidos do Cataclisma)', 'Seres de energia', 'Seres dos planos dos Valores', 'Semideuses'}
 t11 = ler('11 Bestiário.md')
 secoes = re.split(r'\n## ', t11)
 for s in secoes[1:]:
@@ -288,7 +307,7 @@ for s in secoes[1:]:
         chave = next((k for k in feitos if k and k.split(',')[0] in nome), None)
         if chave:
             i, pr = feitos[chave]
-            add('adversario', f'Bestiário · {titulo}', nome, f'{cab} · prompt do [[20 Prompts de arte - personagens]]', 'P', pr, id_=i)
+            add('adversario', f'Bestiário · {titulo}', nome, f'{cab} · prompt do [[20 Prompts de arte - personagens]]', 'M' if titulo in CRIATURAS else 'P', pr, id_=i)
             continue
         IDADE = {'Dragonete': 'um filhote pequeno, curioso e selvagem; o desejo nele é puro impulso: fome, brilho, a mãe',
                  'Dragão Jovem': 'um dragão jovem, fera territorial e faminta, ainda sem sabedoria, desejo em impulso',
@@ -312,7 +331,7 @@ for s in secoes[1:]:
             txt += f'; no gesto de {acao}'
         if cor:
             txt += f'; {cor}'
-        est = 'D' if re.search(r'\bdrag(ão|oa|ões)\b', ser + ' ' + nome.lower()) else 'P'
+        est = 'D' if re.search(r'\bdrag(ão|oa|ões)\b', ser + ' ' + nome.lower()) else ('M' if titulo in CRIATURAS else 'P')
         add('adversario', f'Bestiário · {titulo}', nome, cab, est, txt + '.')
 
 # ---------------------------------------------------------------- saída
@@ -341,6 +360,7 @@ md = [f'# 25 — Prompts de arte: o catálogo (Fase 4.5)',
       '3. Nas imagens 1:1 o fundo é branco liso: tire o fundo antes de usar (4.6). Cenários (3:2) ficam inteiros.',
       '4. Confira uma a uma: é o objeto ou o ser certo, inteiro, sem texto nem letras inventadas, no traço do estilo e na cor do Valor. Se estiver ruim (cortado, com cenário, com mão, com texto), gere de novo em vez de ajustar.',
       '5. Se o filtro barrar, troque só a palavra que parece violenta (arma, sangue, morte) por uma mais neutra (ferramenta, marca, sono) e gere de novo.',
+      '0. O estilo de todas as imagens (traço, cor, magia, monstros, itens) está em [[27 Estilo de arte - o traço]]; os blocos de estilo abaixo são gerados dele.',
       '6. Para testar em outra IA: `arte/prompts/descricoes_das_imagens.md` tem a **descrição escrita completa de cada imagem, em português** (assunto + estilo + fundo), pronta para colar.',
       '',
       '## Estilos',
@@ -392,28 +412,45 @@ with open(AQUI / 'todos_os_prompts.csv', 'w', encoding='utf-8-sig', newline='') 
 
 
 # ---------------------------------------------------------------- descrições escritas, em português, para colar em outra IA
-INK_PT = ('Ilustração de RPG de fantasia em tinta grossa e expressiva: contornos pretos pesados, cores chapadas e vibrantes '
-          'com sombras duras em blocos, textura de papel com pincel seco, proporções estilizadas e exageradas, sombreado de '
-          'quadrinhos. Nada realista, nada 3D, nada de pintura.')
+BASE_PT = ('Ilustração dinâmica e expressiva, no estilo de quadrinhos independentes modernos e animações contemporâneas: o traço transita entre '
+           'linhas limpas e bem definidas em alguns elementos e esboços soltos e cheios de energia em outros, com muita fluidez, expressividade '
+           'facial e corporal e formas orgânicas. Cores chapadas (flat) com sombras chapadas ou em bloco, simples, e uso frequente de texturas '
+           'de reticulação e pontilhado (halftone, stippling), que dão um acabamento artesanal de quadrinho retrô impresso. Paleta vibrante e de '
+           'contrastes marcantes: tons quentes e terrosos (laranjas, ocres, amarelos, marrons) equilibrados com tons frios (azuis, cianos, verdes '
+           'profundos), clima aventureiro, caloroso e vivo. Nada realista, nada 3D, nada de pintura, sem degradês suaves de aerógrafo, sem neon.')
+MAGIA_PT = ('Qualquer magia é desenhada na mesma linguagem: formas gráficas ousadas em cor chapada (fitas, espirais, estilhaços, sigilos), com '
+            'sombras em bloco e brilho feito de pontilhado, na cor do Valor, equilibradas dentro da paleta quente e fria.')
 ESTILOS_PT = {
-    'P': INK_PT + ' Personagem de corpo inteiro, pose dinâmica, expressão facial forte. Fundo branco liso, sem cenário, sem texto, sem logotipo.',
-    'D': INK_PT + (' Um dragão imponente e nobre, de corpo inteiro, visto levemente de baixo, cabeça erguida, peito orgulhoso, envergadura '
-          'enorme, majestoso mesmo quando ameaça. É um desejo antigo que virou carne e escamas, inteiro, vivo e cheio de alma: feito de '
-          'ordem e mudança ao mesmo tempo, com parte do corpo inteira, fechada e simétrica, e parte rachada, com luz vazando e formas mudando. '
-          'Corpo esguio e elegante, pescoço e cauda longos. Escamas macias, lisas e orgânicas: escamas pequenas que se sobrepõem e acompanham '
-          'as curvas do corpo como a pele de uma cobra ou de um lagarto, desenhadas com poucos traços simples e degradês suaves de cor chapada; '
-          'NÃO são pedra, NÃO são placas de armadura, NÃO são rígidas nem artificiais; só alguns espinhos. Paleta limitada de dois ou três '
-          'tons mais uma cor de destaque que brilha. As chamas NÃO são fogo realista: são chamas fantasmagóricas, translúcidas e estilizadas, '
-          'desenhadas como fitas gráficas limpas e espirais de fumaça de bordas simples, em curvas longas e elegantes que contornam a '
-          'silhueta do corpo como um manto espectral. A cor, a forma e o comportamento delas seguem o Valor do dragão, como descrito no '
-          'assunto. Aparecem só em alguns lugares: pontas das asas, ponta da cauda, crista ao longo da coluna e olhos, onde o corpo parece '
-          'se dissolver em chama; mais algumas veias finas brilhando nas escamas. Olhos profundos e expressivos, com peso emocional (amor, '
-          'medo ou saudade), olhando para quem vê como se os mortais fossem estações passando. Fundo cinza-claro liso, sem cenário, sem '
-          'texto, sem logotipo, sem assinatura.'),
-    'I': INK_PT + ' Um único objeto isolado, inteiro e centralizado, visto em três quartos, com sinais de uso. Fundo branco liso, sem mão, sem personagem, sem texto, sem logotipo.',
-    'C': ('Ilustração de cenário de RPG de fantasia em tinta gráfica e ousada: contornos pretos pesados, cores chapadas e vibrantes com '
-          'sombras duras em blocos, textura de papel com pincel seco, vista aberta e ampla, luz dramática, clima de abertura de capítulo, '
-          'sem personagens em primeiro plano, sem texto, sem logotipo.'),
+    'P': BASE_PT + ' Personagem humanoide com um tipo físico próprio e diverso e feições expressivas, de roupas anacrônicas que misturam '
+         'equipamento prático de sobrevivência com peças mágicas, modernas ou tecnológicas. Corpo inteiro, pose dinâmica, forte expressão '
+         'facial e corporal. ' + MAGIA_PT + ' Fundo branco liso, sem cenário, sem texto, sem logotipo.',
+    'M': BASE_PT + ' Uma criatura, monstro ou gigante de estética inspirada na paleontologia, na criptozoologia e nos kaijus: imponente e '
+         'orgânico, combinando traços animais, arcanos ou exóticos (escamas, penas, carapaças, texturas monstruosas), às vezes transbordando '
+         'magia, mas mantendo um toque caricato e peculiar. Corpo inteiro, pose dinâmica. ' + MAGIA_PT +
+         ' Fundo branco liso, sem cenário, sem texto, sem logotipo.',
+    'D': BASE_PT + (' Um dragão imponente e nobre, de corpo inteiro, visto levemente de baixo, cabeça erguida, peito orgulhoso, envergadura '
+          'enorme, majestoso mesmo quando ameaça, com a presença monumental de um kaiju e um senso paleontológico de anatomia, mas com um toque '
+          'de caricatura. É um desejo antigo que virou carne e escamas, inteiro, vivo e cheio de alma: feito de ordem e mudança ao mesmo tempo, '
+          'com parte do corpo inteira, fechada e simétrica, e parte rachada, com luz vazando e formas mudando. Corpo esguio e elegante, pescoço e '
+          'cauda longos. Escamas macias, lisas e orgânicas: pequenas, sobrepostas, acompanhando as curvas do corpo como a pele de uma cobra ou de '
+          'um lagarto, desenhadas com poucos traços simples e cor chapada; NÃO são pedra, NÃO são placas de armadura, NÃO são rígidas nem '
+          'artificiais; só alguns espinhos. Paleta limitada de dois ou três tons mais uma cor de destaque que brilha. As chamas NÃO são fogo '
+          'realista: são chamas fantasmagóricas, translúcidas e estilizadas, desenhadas como fitas gráficas limpas e espirais de fumaça, com '
+          'degradês de pontilhado para sugerir a transparência, em curvas longas e elegantes que contornam a silhueta do corpo como um manto '
+          'espectral. A cor, a forma e o comportamento delas seguem o Valor do dragão, como descrito no assunto. Aparecem só em alguns lugares: '
+          'pontas das asas, ponta da cauda, crista ao longo da coluna e olhos, onde o corpo parece se dissolver em chama; mais algumas veias '
+          'finas brilhando nas escamas. Olhos profundos e expressivos, com peso emocional (amor, medo ou saudade), olhando para quem vê como se '
+          'os mortais fossem estações passando. Fundo cinza-claro liso, sem cenário, sem texto, sem logotipo, sem assinatura.'),
+    'I': BASE_PT + ' Um item ou equipamento desenhado com formas exageradas, volumosas e icônicas (como cutelos gigantescos, panelas robustas, '
+         'barbantes, maçaricos complexos, lanças enormes, luvas de combate), prático e feito à mão, com texturas pontilhadas. Um único objeto '
+         'isolado, inteiro e centralizado, visto em três quartos, com sinais de uso. Quando o assunto cita Bronze Arco, é um bronze mágico '
+         'dourado-escuro cujas runas brilham em luz pontilhada na cor do Valor. ' + MAGIA_PT +
+         ' Fundo branco liso, sem mão, sem personagem, sem texto, sem logotipo.',
+    'C': ('Ilustração de cenário de RPG de fantasia no mesmo estilo: quadrinhos independentes modernos e animação contemporânea, traço solto e '
+          'cheio de energia misturado com linhas limpas, cores chapadas com sombras em bloco, texturas de reticulação e pontilhado, vista aberta '
+          'e ampla, clima aventureiro, caloroso e vivo, tons quentes e terrosos (laranjas, ocres, amarelos, marrons) equilibrados com azuis, '
+          'cianos e verdes profundos na paisagem. Magia desenhada como formas chapadas com brilho pontilhado. Nada realista, nada 3D, nada de '
+          'pintura, sem personagens em primeiro plano, sem texto, sem logotipo.'),
 }
 CHAMAS_PT = {
     'Conflitüo': 'chamas fantasmagóricas vermelho-ferrugem em forma de gumes de lâmina e estilhaços voando, pulsando como um coração em batalha',
@@ -447,7 +484,7 @@ D = ['# Descrições escritas das imagens do Arcanoclisma',
      '',
      '- O nome do arquivo é o `id` (ex.: `adaga.png`).',
      '- Imagens quadradas têm **fundo liso** (branco, ou cinza-claro nos dragões), para recortar depois. Paisagens (3:2) ficam inteiras.',
-     '- Se a IA devolver algo realista ou em 3D, repita a frase do estilo no começo e peça de novo: o traço é de **tinta grossa, cores chapadas e sombras duras**.',
+     '- Se a IA devolver algo realista, em 3D ou liso demais, repita a frase do estilo no começo e peça de novo: o traço é de **quadrinho independente moderno, cores chapadas, sombras em bloco e pontilhado (halftone)**. O guia completo do estilo está em `27 Estilo de arte - o traço.md`.',
      '- Os mesmos prompts em inglês (para Midjourney e parecidos) estão em `todos_os_prompts.txt` e `todos_os_prompts.csv`.',
      '']
 n = 0
@@ -462,3 +499,17 @@ for g in grupos:
               f"> **Assunto:** {assunto_pt(it)} **Estilo:** {ESTILOS_PT[it['estilo']]}", '']
 (AQUI / 'descricoes_das_imagens.md').write_text('\n'.join(D), encoding='utf-8')
 print('descrições escritas:', n)
+
+
+# ---------------------------------------------------------------- blocos de estilo dentro do documento 27
+NOMES_ESTILO = {k: v[0] for k, v in ESTILOS.items()}
+bloco = []
+for k in ESTILOS:
+    bloco += [f'### Estilo {k} · {NOMES_ESTILO[k]}', '',
+              '**Inglês** (vai antes do assunto, em cada prompt):', '', f'> {ESTILOS[k][1]}', '',
+              '**Português** (parte da descrição escrita):', '', f'> {ESTILOS_PT[k]}', '']
+doc27 = LIVRO / '27 Estilo de arte - o traço.md'
+if doc27.exists():
+    d27 = doc27.read_text(encoding='utf-8')
+    i, j = d27.index('<!-- ESTILOS:INICIO -->'), d27.index('<!-- ESTILOS:FIM -->')
+    doc27.write_text(d27[:i] + '<!-- ESTILOS:INICIO -->\n\n' + '\n'.join(bloco) + '\n' + d27[j:], encoding='utf-8')

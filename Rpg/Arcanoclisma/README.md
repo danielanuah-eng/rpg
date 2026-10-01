@@ -35,6 +35,7 @@ Sistema de RPG próprio, inspirado em Daggerheart, Rune RPG, Ethmos e Triangle A
 25. [[24 Guia visual]] — Fase 4: página, personagem, as Esferas dos Valores (vetores em `arte/simbolos/`), cores, fontes, ícones, fichas, página do livro (`arte/livro-magia.html`)
 26. [[25 Prompts de arte - catálogo]] — Fase 4.5: 521 prompts (armas, itens, artefatos, terrenos, lugares, Reinos, povos, dragões e os 290 do bestiário), gerados por `arte/prompts/gerar_prompts.py`; prompt completo em `arte/prompts/catalogo.json`
 27. [[26 Personagens da lore]] — Ciantia (a maga dos dragões), DisScar (o roqueiro da lama) e o Professor Ninguém: aparência, falas, lore, ficha de PNJ e ficha de personagem; regra proposta dos Engenhos
+28. [[27 Estilo de arte - o traço]] — a direção de arte: traço, pintura (cor chapada, sombra em bloco, pontilhado), personagens, monstros, itens, cores e a magia no mesmo tom; os blocos de estilo dos prompts saem dele
 
 ## Conta dos dados
 

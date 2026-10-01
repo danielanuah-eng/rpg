@@ -122,6 +122,7 @@ Referências visuais (P-52):
 | 4.7 | Molduras e ornamentos das duas fichas (a do Valor muda de arte para cada um dos 9) — ✅ rascunho das 9 fichas de Valor em `arte/fichas.html` (seletor por esfera); falta a versão preto e branco e a arte de moldura de cada Valor |
 | 4.8 | **Personagens das sessões ao longo do livro**, interagindo com as páginas e soltando magia (traço Wilderfeast): prompts em [[20 Prompts de arte - personagens]], uma linha nova a cada personagem criado |
 | 4.11 | **Personagens da lore** (Ciantia, DisScar, Professor Ninguém): ✅ rascunho em [[26 Personagens da lore]] (lore, fichas de PNJ e de personagem, prompts de arte); falta decidir a regra dos Engenhos e as ligações entre eles ([[09 Perguntas pra decidir]], Rodada 26) |
+| 4.12 | **Estilo de arte** (direção do dono: quadrinho independente moderno, cor chapada, sombra em bloco, pontilhado, quente e terroso com frios, monstros de paleontologia e kaiju, itens exagerados, Bronze Arco, magia no mesmo tom): ✅ [[27 Estilo de arte - o traço]]; os 521 prompts e as descrições escritas foram refeitos nele |
 
 ## Fase 5 — Fichas, geradores, livro, site
 
