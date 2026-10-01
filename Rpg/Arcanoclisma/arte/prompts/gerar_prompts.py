@@ -48,18 +48,23 @@ BASE = ('Dynamic, expressive illustration in the style of modern independent com
         '(dots) that give a handmade finish, like classic printed retro comics. Vibrant palette with strong contrasts: warm earthy tones '
         '(oranges, ochres, yellows, browns) balanced by cool tones (blues, cyans, deep greens), an adventurous, warm, lively mood. '
         'Not realistic, not 3D, not a painting, no smooth airbrushed gradients, no neon.')
-MAGIA = ('Any magic is drawn in the same language: bold flat-color shapes (ribbons, spirals, shards, sigils) with blocked shadows and halftone '
-         'dot glow, in the color of its Value, balanced inside the warm and cool palette.')
+MAGIA = ('Magic takes one of four forms, chosen to fit the subject and its Value: a smooth, uniform aura hugging the body; an aura '
+         'overflowing and spilling out, with gaps and breaks between one part of it and the next; smoke-like wisps and curls; or solid, '
+         'colorful hard-light constructs (shapes such as weapons, hands, chains, shields). All drawn as bold flat-color shapes with blocked '
+         'shadows and halftone dot glow, in the color of its Value, balanced inside the warm and cool palette.')
 ESTILOS = {
     'P': ('Personagem humanoide (1:1)',
-          BASE + ' Humanoid character with a distinct, diverse body type and expressive features, wearing anachronistic clothing that mixes '
-          'practical survival gear with magical, modern or technological pieces. Full body, dynamic pose, strong facial and body expression. '
-          + MAGIA + ' Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese):'),
-    'M': ('Monstro, criatura e gigante (1:1)',
-          BASE + ' A creature, monster or giant inspired by paleontology, cryptozoology and kaiju: imposing and organic, combining animal, '
-          'arcane or exotic traits (scales, feathers, carapaces, monstrous textures), sometimes overflowing with magic, but keeping a '
-          'caricatured, peculiar touch. Full body, dynamic pose. ' + MAGIA +
+          BASE + ' Human character with human anatomy only (no animal traits), a distinct, diverse body type and varied skin tones, wearing '
+          'anachronistic clothing that mixes practical survival gear with magical, modern or technological pieces. Anime-style face: large '
+          'expressive eyes with luminous highlights, an intense determined, defiant or joyful gaze, exaggerated emotive expression. Heroic, '
+          'defiant, full-body pose full of movement and attitude, never static or stiff. ' + MAGIA +
           ' Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese):'),
+    'M': ('Monstro, criatura e gigante (1:1)',
+          BASE + ' A creature, monster or giant inspired by paleontology, cryptozoology and kaiju, drawn with clean confident lines and soft '
+          'flat colors, expressive eyes and characterful, almost cartoonish anime-like expressions, textured scales, feathers, carapaces and '
+          'monstrous skin; imposing yet peculiar and slightly caricatured. Arcane details (glowing sigils, magic leaking out of the body, '
+          'auras) appear only when the Subject mentions magic or a Value; otherwise it is a natural, animal-like beast. If magic appears: ' +
+          MAGIA + ' Full body, dynamic pose. Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese):'),
     # Dragões: o traço acima + as referências do dono (imponência, corpo nobre e alongado, escamas suaves, paleta curta com acento
     # que brilha, chamas fantasmagóricas em volta do corpo) + a lore do 08: nascem de um desejo antigo que ganhou carne; são Arcano e
     # Cataclisma num corpo só; nobres até na violência, cheios de alma; os mortais são estações.
@@ -75,20 +80,20 @@ ESTILOS = {
           'with halftone dot gradients to suggest the translucency, flowing in long elegant curves that trace and frame the silhouette of '
           'the body like a spectral mantle. Their color, shape and behavior follow the dragon\'s Value, as described in the subject. They '
           'appear only in a few places: the wing tips, the tip of the tail, the crest along the spine and the eyes, where the body seems '
-          'to dissolve into flame; plus a few thin glowing veins along the scales. Deep expressive eyes that carry emotional weight, love, '
+          'to dissolve into flame; plus a few thin glowing veins along the scales. Deep anime-style expressive eyes with luminous highlights that carry emotional weight, love, '
           'fear or longing, looking at the viewer as if mortals were passing seasons. Plain light gray background, no scenery, no text, '
           'no logo, no signature. Subject (in Portuguese):'),
     'I': ('Item e equipamento (1:1)',
           BASE + ' An item or piece of equipment drawn with exaggerated, voluminous, iconic shapes (like giant cleavers, sturdy pots, twine, '
           'complex blowtorches, huge spears, combat gloves), practical and handmade, with stippled textures. A single isolated object, whole '
           'and centered, three-quarter view, signs of use. When the Subject mentions Bronze Arco, it is a dark-gold magical bronze whose runes '
-          'glow in halftone light in the color of the Value. ' + MAGIA +
+          'glow in halftone light in the color of the Value. If magic appears: ' + MAGIA +
           ' Plain solid white background, no hand, no character, no text, no logo. Subject (in Portuguese):'),
     'C': ('Cenário (paisagem 3:2)',
           'Fantasy RPG environment illustration in the same style: modern independent comics and contemporary animation, loose energetic '
           'lines mixed with clean ones, flat colors with blocked shadows, halftone and stippling textures, wide establishing view, '
           'adventurous, warm, lively mood, warm earthy tones (oranges, ochres, yellows, browns) balanced by cool blues, cyans and deep greens '
-          'in the landscape. Magic drawn as flat-color shapes with halftone glow. Not realistic, not 3D, not a painting, no characters in the '
+          'in the landscape. Magic, when present, is a smooth aura, an overflowing aura with gaps, smoke, or solid hard-light constructs, drawn as flat-color shapes with halftone glow. Not realistic, not 3D, not a painting, no characters in the '
           'foreground, no text, no logo. Subject (in Portuguese):'),
 }
 FORMATO = {'P': '1:1', 'M': '1:1', 'D': '1:1', 'I': '1:1', 'C': '3:2'}
@@ -98,6 +103,18 @@ COR = {
     'Persona': 'magia coral', 'Alvorum': 'magia dourada e preta', 'Morbidyum': 'magia verde-pálida',
     'Cognitium': 'magia índigo', 'Eternyr': 'magia azul-noite com riscos brancos', 'Primitivum': 'magia verde-musgo e âmbar',
 }
+FORMA = {
+    'Conflitüo': 'construtos sólidos de luz (armas, escudos)', 'Sublimeyn': 'fumaça e vapor que escorrem e cristalizam',
+    'Dominum': 'construtos sólidos (correntes, coleiras, elos)', 'Persona': 'aura suave e uniforme, que transborda quando a emoção é forte',
+    'Alvorum': 'aura dividida, com falhas entre a parte de luz e a de sombra', 'Morbidyum': 'fumaça fria e fios que partem',
+    'Cognitium': 'véu de fumaça com falhas, como se faltassem pedaços', 'Eternyr': 'aura com falhas e rastros parados no ar',
+    'Primitivum': 'construtos orgânicos (raízes, galhos) e esporos soltos',
+}
+def forma_de(texto):
+    for v, c in FORMA.items():
+        if v in texto:
+            return c
+    return ''
 def cor_de(texto):
     for v, c in COR.items():
         if v in texto:
@@ -331,6 +348,10 @@ for s in secoes[1:]:
             txt += f'; no gesto de {acao}'
         if cor:
             txt += f'; {cor}'
+            if forma_de(valor):
+                txt += f', na forma de {forma_de(valor)}'
+        if titulo in {'Disruptos (nascidos do Cataclisma)', 'Seres de energia', 'Seres dos planos dos Valores', 'Semideuses'}:
+            txt += '; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas'
         est = 'D' if re.search(r'\bdrag(ão|oa|ões)\b', ser + ' ' + nome.lower()) else ('M' if titulo in CRIATURAS else 'P')
         add('adversario', f'Bestiário · {titulo}', nome, cab, est, txt + '.')
 
@@ -418,16 +439,21 @@ BASE_PT = ('Ilustração dinâmica e expressiva, no estilo de quadrinhos indepen
            'de reticulação e pontilhado (halftone, stippling), que dão um acabamento artesanal de quadrinho retrô impresso. Paleta vibrante e de '
            'contrastes marcantes: tons quentes e terrosos (laranjas, ocres, amarelos, marrons) equilibrados com tons frios (azuis, cianos, verdes '
            'profundos), clima aventureiro, caloroso e vivo. Nada realista, nada 3D, nada de pintura, sem degradês suaves de aerógrafo, sem neon.')
-MAGIA_PT = ('Qualquer magia é desenhada na mesma linguagem: formas gráficas ousadas em cor chapada (fitas, espirais, estilhaços, sigilos), com '
-            'sombras em bloco e brilho feito de pontilhado, na cor do Valor, equilibradas dentro da paleta quente e fria.')
+MAGIA_PT = ('A magia aparece em uma de quatro formas, escolhida conforme o assunto e o Valor: uma aura suave e uniforme colada ao corpo; '
+            'uma aura que transborda e escorre, com falhas e cortes entre uma parte e outra; fumaça, fiapos e espirais; ou construtos sólidos e '
+            'coloridos de luz sólida (formas como armas, mãos, correntes, escudos). Tudo desenhado como formas gráficas ousadas em cor chapada, '
+            'com sombras em bloco e brilho de pontilhado, na cor do Valor, equilibradas dentro da paleta quente e fria.')
 ESTILOS_PT = {
-    'P': BASE_PT + ' Personagem humanoide com um tipo físico próprio e diverso e feições expressivas, de roupas anacrônicas que misturam '
-         'equipamento prático de sobrevivência com peças mágicas, modernas ou tecnológicas. Corpo inteiro, pose dinâmica, forte expressão '
-         'facial e corporal. ' + MAGIA_PT + ' Fundo branco liso, sem cenário, sem texto, sem logotipo.',
-    'M': BASE_PT + ' Uma criatura, monstro ou gigante de estética inspirada na paleontologia, na criptozoologia e nos kaijus: imponente e '
-         'orgânico, combinando traços animais, arcanos ou exóticos (escamas, penas, carapaças, texturas monstruosas), às vezes transbordando '
-         'magia, mas mantendo um toque caricato e peculiar. Corpo inteiro, pose dinâmica. ' + MAGIA_PT +
+    'P': BASE_PT + ' Personagem humano, só com anatomia humana (nenhum traço animal), de tipo físico próprio e diverso e tons de pele variados, '
+         'com roupas anacrônicas que misturam equipamento prático de sobrevivência com peças mágicas, modernas ou tecnológicas. Rosto no '
+         'estilo de anime: olhos grandes e expressivos com brilhos luminosos, olhar intenso, determinado, desafiador ou alegre, expressão '
+         'emotiva e exagerada. Pose heroica e desafiadora, de corpo inteiro, cheia de movimento e atitude, nunca estática ou dura. ' + MAGIA_PT +
          ' Fundo branco liso, sem cenário, sem texto, sem logotipo.',
+    'M': BASE_PT + ' Uma criatura, monstro ou gigante de estética inspirada na paleontologia, na criptozoologia e nos kaijus, desenhada com linhas '
+         'limpas e seguras e cores chapadas suaves, olhos expressivos e expressões cheias de personalidade, quase de desenho animado e de anime, '
+         'com escamas, penas, carapaças e pele monstruosa texturizadas; imponente, mas peculiar e levemente caricata. Detalhes arcanos (sigilos '
+         'brilhando, magia vazando do corpo, auras) aparecem só quando o assunto cita magia ou um Valor; fora isso, é uma fera natural, de '
+         'aparência animal. Se houver magia: ' + MAGIA_PT + ' Corpo inteiro, pose dinâmica. Fundo branco liso, sem cenário, sem texto, sem logotipo.',
     'D': BASE_PT + (' Um dragão imponente e nobre, de corpo inteiro, visto levemente de baixo, cabeça erguida, peito orgulhoso, envergadura '
           'enorme, majestoso mesmo quando ameaça, com a presença monumental de um kaiju e um senso paleontológico de anatomia, mas com um toque '
           'de caricatura. É um desejo antigo que virou carne e escamas, inteiro, vivo e cheio de alma: feito de ordem e mudança ao mesmo tempo, '
@@ -439,17 +465,17 @@ ESTILOS_PT = {
           'degradês de pontilhado para sugerir a transparência, em curvas longas e elegantes que contornam a silhueta do corpo como um manto '
           'espectral. A cor, a forma e o comportamento delas seguem o Valor do dragão, como descrito no assunto. Aparecem só em alguns lugares: '
           'pontas das asas, ponta da cauda, crista ao longo da coluna e olhos, onde o corpo parece se dissolver em chama; mais algumas veias '
-          'finas brilhando nas escamas. Olhos profundos e expressivos, com peso emocional (amor, medo ou saudade), olhando para quem vê como se '
+          'finas brilhando nas escamas. Olhos profundos e expressivos, no estilo de anime, com brilhos luminosos e peso emocional (amor, medo ou saudade), olhando para quem vê como se '
           'os mortais fossem estações passando. Fundo cinza-claro liso, sem cenário, sem texto, sem logotipo, sem assinatura.'),
     'I': BASE_PT + ' Um item ou equipamento desenhado com formas exageradas, volumosas e icônicas (como cutelos gigantescos, panelas robustas, '
          'barbantes, maçaricos complexos, lanças enormes, luvas de combate), prático e feito à mão, com texturas pontilhadas. Um único objeto '
          'isolado, inteiro e centralizado, visto em três quartos, com sinais de uso. Quando o assunto cita Bronze Arco, é um bronze mágico '
-         'dourado-escuro cujas runas brilham em luz pontilhada na cor do Valor. ' + MAGIA_PT +
+         'dourado-escuro cujas runas brilham em luz pontilhada na cor do Valor. Se houver magia: ' + MAGIA_PT +
          ' Fundo branco liso, sem mão, sem personagem, sem texto, sem logotipo.',
     'C': ('Ilustração de cenário de RPG de fantasia no mesmo estilo: quadrinhos independentes modernos e animação contemporânea, traço solto e '
           'cheio de energia misturado com linhas limpas, cores chapadas com sombras em bloco, texturas de reticulação e pontilhado, vista aberta '
           'e ampla, clima aventureiro, caloroso e vivo, tons quentes e terrosos (laranjas, ocres, amarelos, marrons) equilibrados com azuis, '
-          'cianos e verdes profundos na paisagem. Magia desenhada como formas chapadas com brilho pontilhado. Nada realista, nada 3D, nada de '
+          'cianos e verdes profundos na paisagem. A magia, quando houver, é uma aura suave, uma aura que transborda com falhas, fumaça ou construtos de luz sólida, desenhada como formas chapadas com brilho pontilhado. Nada realista, nada 3D, nada de '
           'pintura, sem personagens em primeiro plano, sem texto, sem logotipo.'),
 }
 CHAMAS_PT = {

@@ -107,7 +107,7 @@ Traço de [[27 Estilo de arte - o traço]] (linha limpa e solta, cor chapada, so
 - **Peso emocional**: olhos fundos e expressivos (amor, medo, saudade), olhando quem vê como se os mortais fossem estações.
 - **Idade**: o filhote e o jovem são feras de impulso; o adulto é senhor consciente; o ancião é memória do mundo, sábio, de cicatrizes antigas.
 
-As imagens de referência não entram no repositório (são de outros artistas): servem só de direção.
+As imagens de referência não entram no repositório (são de outros artistas): servem só de direção. As referências de **monstros, humanos, rostos e magia** estão em [[27 Estilo de arte - o traço]].
 
 ### Referências e créditos
 

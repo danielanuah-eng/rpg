@@ -16,11 +16,11 @@
 
 | Código | Para | Texto (vai antes de cada prompt) |
 |---|---|---|
-| **P** | Personagem humanoide (1:1) | Dynamic, expressive illustration in the style of modern independent comics and contemporary animation: line work that moves between clean, well-defined lines in some elements and energetic loose sketch lines in others, with great fluidity, facial and body expressiveness and organic shapes. Flat colors with simple flat, blocked shadows, and frequent halftone and stippling textures (dots) that give a handmade finish, like classic printed retro comics. Vibrant palette with strong contrasts: warm earthy tones (oranges, ochres, yellows, browns) balanced by cool tones (blues, cyans, deep greens), an adventurous, warm, lively mood. Not realistic, not 3D, not a painting, no smooth airbrushed gradients, no neon. Humanoid character with a distinct, diverse body type and expressive features, wearing anachronistic clothing that mixes practical survival gear with magical, modern or technological pieces. Full body, dynamic pose, strong facial and body expression. Any magic is drawn in the same language: bold flat-color shapes (ribbons, spirals, shards, sigils) with blocked shadows and halftone dot glow, in the color of its Value, balanced inside the warm and cool palette. Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese): |
-| **M** | Monstro, criatura e gigante (1:1) | Dynamic, expressive illustration in the style of modern independent comics and contemporary animation: line work that moves between clean, well-defined lines in some elements and energetic loose sketch lines in others, with great fluidity, facial and body expressiveness and organic shapes. Flat colors with simple flat, blocked shadows, and frequent halftone and stippling textures (dots) that give a handmade finish, like classic printed retro comics. Vibrant palette with strong contrasts: warm earthy tones (oranges, ochres, yellows, browns) balanced by cool tones (blues, cyans, deep greens), an adventurous, warm, lively mood. Not realistic, not 3D, not a painting, no smooth airbrushed gradients, no neon. A creature, monster or giant inspired by paleontology, cryptozoology and kaiju: imposing and organic, combining animal, arcane or exotic traits (scales, feathers, carapaces, monstrous textures), sometimes overflowing with magic, but keeping a caricatured, peculiar touch. Full body, dynamic pose. Any magic is drawn in the same language: bold flat-color shapes (ribbons, spirals, shards, sigils) with blocked shadows and halftone dot glow, in the color of its Value, balanced inside the warm and cool palette. Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese): |
-| **D** | Dragão (1:1) | Dynamic, expressive illustration in the style of modern independent comics and contemporary animation: line work that moves between clean, well-defined lines in some elements and energetic loose sketch lines in others, with great fluidity, facial and body expressiveness and organic shapes. Flat colors with simple flat, blocked shadows, and frequent halftone and stippling textures (dots) that give a handmade finish, like classic printed retro comics. Vibrant palette with strong contrasts: warm earthy tones (oranges, ochres, yellows, browns) balanced by cool tones (blues, cyans, deep greens), an adventurous, warm, lively mood. Not realistic, not 3D, not a painting, no smooth airbrushed gradients, no neon. An imposing, noble full body dragon seen slightly from below, head raised, chest proud, huge wingspan, majestic even when threatening, with the monumental presence of a kaiju and a paleontological sense of anatomy, yet with a touch of caricature. It is an ancient desire that became flesh and scales, complete, alive and full of soul: made of order and change at once, part of its body whole, closed and symmetrical, part cracked open with light leaking through and shapes shifting. Slender elegant body with a long neck and long tail. Soft, smooth, organic scales: small overlapping scales that flow with the curves of the body like the skin of a snake or a lizard, drawn with few simple strokes and flat color; NOT stone, NOT rock, NOT armor plates, NOT rigid or artificial; only a few spines. A limited palette of two or three hues plus one glowing accent color. The flames are NOT realistic fire: they are ghostly, translucent, stylized flame shapes drawn as clean flat graphic ribbons and smoke-like curls, with halftone dot gradients to suggest the translucency, flowing in long elegant curves that trace and frame the silhouette of the body like a spectral mantle. Their color, shape and behavior follow the dragon's Value, as described in the subject. They appear only in a few places: the wing tips, the tip of the tail, the crest along the spine and the eyes, where the body seems to dissolve into flame; plus a few thin glowing veins along the scales. Deep expressive eyes that carry emotional weight, love, fear or longing, looking at the viewer as if mortals were passing seasons. Plain light gray background, no scenery, no text, no logo, no signature. Subject (in Portuguese): |
-| **I** | Item e equipamento (1:1) | Dynamic, expressive illustration in the style of modern independent comics and contemporary animation: line work that moves between clean, well-defined lines in some elements and energetic loose sketch lines in others, with great fluidity, facial and body expressiveness and organic shapes. Flat colors with simple flat, blocked shadows, and frequent halftone and stippling textures (dots) that give a handmade finish, like classic printed retro comics. Vibrant palette with strong contrasts: warm earthy tones (oranges, ochres, yellows, browns) balanced by cool tones (blues, cyans, deep greens), an adventurous, warm, lively mood. Not realistic, not 3D, not a painting, no smooth airbrushed gradients, no neon. An item or piece of equipment drawn with exaggerated, voluminous, iconic shapes (like giant cleavers, sturdy pots, twine, complex blowtorches, huge spears, combat gloves), practical and handmade, with stippled textures. A single isolated object, whole and centered, three-quarter view, signs of use. When the Subject mentions Bronze Arco, it is a dark-gold magical bronze whose runes glow in halftone light in the color of the Value. Any magic is drawn in the same language: bold flat-color shapes (ribbons, spirals, shards, sigils) with blocked shadows and halftone dot glow, in the color of its Value, balanced inside the warm and cool palette. Plain solid white background, no hand, no character, no text, no logo. Subject (in Portuguese): |
-| **C** | Cenário (paisagem 3:2) | Fantasy RPG environment illustration in the same style: modern independent comics and contemporary animation, loose energetic lines mixed with clean ones, flat colors with blocked shadows, halftone and stippling textures, wide establishing view, adventurous, warm, lively mood, warm earthy tones (oranges, ochres, yellows, browns) balanced by cool blues, cyans and deep greens in the landscape. Magic drawn as flat-color shapes with halftone glow. Not realistic, not 3D, not a painting, no characters in the foreground, no text, no logo. Subject (in Portuguese): |
+| **P** | Personagem humanoide (1:1) | Dynamic, expressive illustration in the style of modern independent comics and contemporary animation: line work that moves between clean, well-defined lines in some elements and energetic loose sketch lines in others, with great fluidity, facial and body expressiveness and organic shapes. Flat colors with simple flat, blocked shadows, and frequent halftone and stippling textures (dots) that give a handmade finish, like classic printed retro comics. Vibrant palette with strong contrasts: warm earthy tones (oranges, ochres, yellows, browns) balanced by cool tones (blues, cyans, deep greens), an adventurous, warm, lively mood. Not realistic, not 3D, not a painting, no smooth airbrushed gradients, no neon. Human character with human anatomy only (no animal traits), a distinct, diverse body type and varied skin tones, wearing anachronistic clothing that mixes practical survival gear with magical, modern or technological pieces. Anime-style face: large expressive eyes with luminous highlights, an intense determined, defiant or joyful gaze, exaggerated emotive expression. Heroic, defiant, full-body pose full of movement and attitude, never static or stiff. Magic takes one of four forms, chosen to fit the subject and its Value: a smooth, uniform aura hugging the body; an aura overflowing and spilling out, with gaps and breaks between one part of it and the next; smoke-like wisps and curls; or solid, colorful hard-light constructs (shapes such as weapons, hands, chains, shields). All drawn as bold flat-color shapes with blocked shadows and halftone dot glow, in the color of its Value, balanced inside the warm and cool palette. Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese): |
+| **M** | Monstro, criatura e gigante (1:1) | Dynamic, expressive illustration in the style of modern independent comics and contemporary animation: line work that moves between clean, well-defined lines in some elements and energetic loose sketch lines in others, with great fluidity, facial and body expressiveness and organic shapes. Flat colors with simple flat, blocked shadows, and frequent halftone and stippling textures (dots) that give a handmade finish, like classic printed retro comics. Vibrant palette with strong contrasts: warm earthy tones (oranges, ochres, yellows, browns) balanced by cool tones (blues, cyans, deep greens), an adventurous, warm, lively mood. Not realistic, not 3D, not a painting, no smooth airbrushed gradients, no neon. A creature, monster or giant inspired by paleontology, cryptozoology and kaiju, drawn with clean confident lines and soft flat colors, expressive eyes and characterful, almost cartoonish anime-like expressions, textured scales, feathers, carapaces and monstrous skin; imposing yet peculiar and slightly caricatured. Arcane details (glowing sigils, magic leaking out of the body, auras) appear only when the Subject mentions magic or a Value; otherwise it is a natural, animal-like beast. If magic appears: Magic takes one of four forms, chosen to fit the subject and its Value: a smooth, uniform aura hugging the body; an aura overflowing and spilling out, with gaps and breaks between one part of it and the next; smoke-like wisps and curls; or solid, colorful hard-light constructs (shapes such as weapons, hands, chains, shields). All drawn as bold flat-color shapes with blocked shadows and halftone dot glow, in the color of its Value, balanced inside the warm and cool palette. Full body, dynamic pose. Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese): |
+| **D** | Dragão (1:1) | Dynamic, expressive illustration in the style of modern independent comics and contemporary animation: line work that moves between clean, well-defined lines in some elements and energetic loose sketch lines in others, with great fluidity, facial and body expressiveness and organic shapes. Flat colors with simple flat, blocked shadows, and frequent halftone and stippling textures (dots) that give a handmade finish, like classic printed retro comics. Vibrant palette with strong contrasts: warm earthy tones (oranges, ochres, yellows, browns) balanced by cool tones (blues, cyans, deep greens), an adventurous, warm, lively mood. Not realistic, not 3D, not a painting, no smooth airbrushed gradients, no neon. An imposing, noble full body dragon seen slightly from below, head raised, chest proud, huge wingspan, majestic even when threatening, with the monumental presence of a kaiju and a paleontological sense of anatomy, yet with a touch of caricature. It is an ancient desire that became flesh and scales, complete, alive and full of soul: made of order and change at once, part of its body whole, closed and symmetrical, part cracked open with light leaking through and shapes shifting. Slender elegant body with a long neck and long tail. Soft, smooth, organic scales: small overlapping scales that flow with the curves of the body like the skin of a snake or a lizard, drawn with few simple strokes and flat color; NOT stone, NOT rock, NOT armor plates, NOT rigid or artificial; only a few spines. A limited palette of two or three hues plus one glowing accent color. The flames are NOT realistic fire: they are ghostly, translucent, stylized flame shapes drawn as clean flat graphic ribbons and smoke-like curls, with halftone dot gradients to suggest the translucency, flowing in long elegant curves that trace and frame the silhouette of the body like a spectral mantle. Their color, shape and behavior follow the dragon's Value, as described in the subject. They appear only in a few places: the wing tips, the tip of the tail, the crest along the spine and the eyes, where the body seems to dissolve into flame; plus a few thin glowing veins along the scales. Deep anime-style expressive eyes with luminous highlights that carry emotional weight, love, fear or longing, looking at the viewer as if mortals were passing seasons. Plain light gray background, no scenery, no text, no logo, no signature. Subject (in Portuguese): |
+| **I** | Item e equipamento (1:1) | Dynamic, expressive illustration in the style of modern independent comics and contemporary animation: line work that moves between clean, well-defined lines in some elements and energetic loose sketch lines in others, with great fluidity, facial and body expressiveness and organic shapes. Flat colors with simple flat, blocked shadows, and frequent halftone and stippling textures (dots) that give a handmade finish, like classic printed retro comics. Vibrant palette with strong contrasts: warm earthy tones (oranges, ochres, yellows, browns) balanced by cool tones (blues, cyans, deep greens), an adventurous, warm, lively mood. Not realistic, not 3D, not a painting, no smooth airbrushed gradients, no neon. An item or piece of equipment drawn with exaggerated, voluminous, iconic shapes (like giant cleavers, sturdy pots, twine, complex blowtorches, huge spears, combat gloves), practical and handmade, with stippled textures. A single isolated object, whole and centered, three-quarter view, signs of use. When the Subject mentions Bronze Arco, it is a dark-gold magical bronze whose runes glow in halftone light in the color of the Value. If magic appears: Magic takes one of four forms, chosen to fit the subject and its Value: a smooth, uniform aura hugging the body; an aura overflowing and spilling out, with gaps and breaks between one part of it and the next; smoke-like wisps and curls; or solid, colorful hard-light constructs (shapes such as weapons, hands, chains, shields). All drawn as bold flat-color shapes with blocked shadows and halftone dot glow, in the color of its Value, balanced inside the warm and cool palette. Plain solid white background, no hand, no character, no text, no logo. Subject (in Portuguese): |
+| **C** | Cenário (paisagem 3:2) | Fantasy RPG environment illustration in the same style: modern independent comics and contemporary animation, loose energetic lines mixed with clean ones, flat colors with blocked shadows, halftone and stippling textures, wide establishing view, adventurous, warm, lively mood, warm earthy tones (oranges, ochres, yellows, browns) balanced by cool blues, cyans and deep greens in the landscape. Magic, when present, is a smooth aura, an overflowing aura with gaps, smoke, or solid hard-light constructs, drawn as flat-color shapes with halftone glow. Not realistic, not 3D, not a painting, no characters in the foreground, no text, no logo. Subject (in Portuguese): |
 
 ## Lista
 
@@ -766,25 +766,25 @@
   > Guarda da Ponte: guarda; pessoa comum do mundo, roupas de trabalho e de rua; jeito barulhento; um de um bando; no gesto de estocar.
 - **Sargento de Ronda** · M1 · Líder · Conflitüo · estilo **P** · 1:1  
   id `sargento-de-ronda`  
-  > Sargento de Ronda: soldado, veterano; pessoa comum do mundo, roupas de trabalho e de rua; jeito duro; postura de quem comanda; no gesto de cortar; magia vermelho-ferrugem.
+  > Sargento de Ronda: soldado, veterano; pessoa comum do mundo, roupas de trabalho e de rua; jeito duro; postura de quem comanda; no gesto de cortar; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos).
 - **Bandido de Estrada** · M1 · Lacaio · — · estilo **P** · 1:1  
   id `bandido-de-estrada`  
   > Bandido de Estrada: ladrão; pessoa comum do mundo, roupas de trabalho e de rua; jeito covarde; um de um bando; no gesto de esfaquear.
 - **Chefe de Quadrilha** · M1 · Padrão · Cognitium · estilo **P** · 1:1  
   id `chefe-de-quadrilha`  
-  > Chefe de Quadrilha: bandido, mentiroso; pessoa comum do mundo, roupas de trabalho e de rua; jeito astuto, covarde; no gesto de atirar; magia índigo.
+  > Chefe de Quadrilha: bandido, mentiroso; pessoa comum do mundo, roupas de trabalho e de rua; jeito astuto, covarde; no gesto de atirar; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços.
 - **Nobre Ofendido** · M1 · Social · Persona · estilo **P** · 1:1  
   id `nobre-ofendido`  
-  > Nobre Ofendido: nobre; pessoa comum do mundo, roupas de trabalho e de rua; jeito belo; pose de conversa; no gesto de humilhar; magia coral.
+  > Nobre Ofendido: nobre; pessoa comum do mundo, roupas de trabalho e de rua; jeito belo; pose de conversa; no gesto de humilhar; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte.
 - **Mercador de Sal** · M1 · Social · Sublimeyn · estilo **P** · 1:1  
   id `mercador-de-sal`  
-  > Mercador de Sal: mercador; pessoa comum do mundo, roupas de trabalho e de rua; jeito astuto; pose de conversa; no gesto de pechinchar; magia prata-mercúrio.
+  > Mercador de Sal: mercador; pessoa comum do mundo, roupas de trabalho e de rua; jeito astuto; pose de conversa; no gesto de pechinchar; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Mercenário de Serath** · M2 · Padrão · Conflitüo · estilo **P** · 1:1  
   id `mercenario-de-serath`  
-  > Mercenário de Serath: soldado, contratado; pessoa comum do mundo, roupas de trabalho e de rua; jeito blindado; no gesto de cortar; magia vermelho-ferrugem.
+  > Mercenário de Serath: soldado, contratado; pessoa comum do mundo, roupas de trabalho e de rua; jeito blindado; no gesto de cortar; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos).
 - **Carrasco da Cidade-Muralha** · M2 · Bruto · Conflitüo · estilo **P** · 1:1  
   id `carrasco-da-cidade-muralha`  
-  > Carrasco da Cidade-Muralha: carrasco; pessoa comum do mundo, roupas de trabalho e de rua; jeito enorme, silencioso; grande e pesado; no gesto de decepar; magia vermelho-ferrugem.
+  > Carrasco da Cidade-Muralha: carrasco; pessoa comum do mundo, roupas de trabalho e de rua; jeito enorme, silencioso; grande e pesado; no gesto de decepar; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos).
 - **Pescadora de OulVeil** · M1 · Social · — · estilo **P** · 1:1  
   id `pescadora-de-oulveil`  
   > Pescadora de OulVeil: pescadora, vizinha; pessoa comum do mundo, roupas de trabalho e de rua; jeito paciente; pose de conversa; no gesto de remar.
@@ -823,7 +823,7 @@
   > Ferreira de Vau-Grande: ferreira; pessoa comum do mundo, roupas de trabalho e de rua; jeito duro; pose de conversa; no gesto de martelar.
 - **Taverneira que Vende Segredos** · M1 · Social · Cognitium · estilo **P** · 1:1  
   id `taverneira-que-vende-segredos`  
-  > Taverneira que Vende Segredos: taverneira, informante; pessoa comum do mundo, roupas de trabalho e de rua; jeito astuto, mentiroso; pose de conversa; no gesto de servir; magia índigo.
+  > Taverneira que Vende Segredos: taverneira, informante; pessoa comum do mundo, roupas de trabalho e de rua; jeito astuto, mentiroso; pose de conversa; no gesto de servir; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços.
 - **Arruaceiro de Taverna** · M1 · Lacaio · — · estilo **P** · 1:1  
   id `arruaceiro-de-taverna`  
   > Arruaceiro de Taverna: bêbado; pessoa comum do mundo, roupas de trabalho e de rua; jeito barulhento; um de um bando; no gesto de socar.
@@ -835,7 +835,7 @@
   > Cobrador de Impostos: cobrador; pessoa comum do mundo, roupas de trabalho e de rua; jeito duro; pose de conversa; no gesto de cobrar.
 - **Herdeira em Fuga** · M1 · Social · Persona · estilo **P** · 1:1  
   id `herdeira-em-fuga`  
-  > Herdeira em Fuga: herdeira, fugitiva; pessoa comum do mundo, roupas de trabalho e de rua; jeito belo; pose de conversa; no gesto de seduzir; magia coral.
+  > Herdeira em Fuga: herdeira, fugitiva; pessoa comum do mundo, roupas de trabalho e de rua; jeito belo; pose de conversa; no gesto de seduzir; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte.
 - **Mendigo Que Viu Demais** · M1 · Social · — · estilo **P** · 1:1  
   id `mendigo-que-viu-demais`  
   > Mendigo Que Viu Demais: mendigo, testemunha; pessoa comum do mundo, roupas de trabalho e de rua; jeito estranho (diz a verdade, mas só em rima); pose de conversa; no gesto de pedir.
@@ -856,7 +856,7 @@
   > Salteador a Cavalo: salteador, cavaleiro; pessoa comum do mundo, roupas de trabalho e de rua; jeito veloz; leve e veloz; no gesto de cortar.
 - **Guarda da Cidade-Muralha** · M2 · Padrão · Conflitüo · estilo **P** · 1:1  
   id `guarda-da-cidade-muralha`  
-  > Guarda da Cidade-Muralha: soldado; pessoa comum do mundo, roupas de trabalho e de rua; jeito blindado; no gesto de estocar; magia vermelho-ferrugem.
+  > Guarda da Cidade-Muralha: soldado; pessoa comum do mundo, roupas de trabalho e de rua; jeito blindado; no gesto de estocar; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos).
 - **Recruta Assustado** · M1 · Lacaio · — · estilo **P** · 1:1  
   id `recruta-assustado`  
   > Recruta Assustado: recruta; pessoa comum do mundo, roupas de trabalho e de rua; jeito covarde; um de um bando; no gesto de estocar.
@@ -868,13 +868,13 @@
   > Tecelã de Redes: tecelã; pessoa comum do mundo, roupas de trabalho e de rua; jeito paciente; pose de conversa; no gesto de tecer.
 - **Menestrel Viajante** · M1 · Social · Persona · estilo **P** · 1:1  
   id `menestrel-viajante`  
-  > Menestrel Viajante: menestrel; pessoa comum do mundo, roupas de trabalho e de rua; jeito belo, barulhento; pose de conversa; no gesto de cantar; magia coral.
+  > Menestrel Viajante: menestrel; pessoa comum do mundo, roupas de trabalho e de rua; jeito belo, barulhento; pose de conversa; no gesto de cantar; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte.
 - **Curandeira de Ervas** · M1 · Suporte · — · estilo **P** · 1:1  
   id `curandeira-de-ervas`  
   > Curandeira de Ervas: herborista; pessoa comum do mundo, roupas de trabalho e de rua; jeito paciente; pose de quem ajuda os outros; no gesto de emplastro.
 - **Coveiro de Vau-Grande** · M1 · Social · Morbidyum · estilo **P** · 1:1  
   id `coveiro-de-vau-grande`  
-  > Coveiro de Vau-Grande: coveiro; pessoa comum do mundo, roupas de trabalho e de rua; jeito pálido, silencioso; pose de conversa; no gesto de cavar; magia verde-pálida.
+  > Coveiro de Vau-Grande: coveiro; pessoa comum do mundo, roupas de trabalho e de rua; jeito pálido, silencioso; pose de conversa; no gesto de cavar; magia verde-pálida, na forma de fumaça fria e fios que partem.
 - **Escriba do Porto** · M1 · Social · — · estilo **P** · 1:1  
   id `escriba-do-porto`  
   > Escriba do Porto: escriba; pessoa comum do mundo, roupas de trabalho e de rua; jeito astuto; pose de conversa; no gesto de anotar.
@@ -895,7 +895,7 @@
   > Assassina Paga: assassina; pessoa comum do mundo, roupas de trabalho e de rua; jeito silencioso; leve e veloz; no gesto de apunhalar.
 - **Espião da Coroa** · M2 · Social · Cognitium · estilo **P** · 1:1  
   id `espiao-da-coroa`  
-  > Espião da Coroa: espião; pessoa comum do mundo, roupas de trabalho e de rua; jeito mentiroso, astuto; pose de conversa; no gesto de mentir; magia índigo.
+  > Espião da Coroa: espião; pessoa comum do mundo, roupas de trabalho e de rua; jeito mentiroso, astuto; pose de conversa; no gesto de mentir; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços.
 - **Juíza da Cidade** · M2 · Social · — · estilo **P** · 1:1  
   id `juiza-da-cidade`  
   > Juíza da Cidade: juíza; pessoa comum do mundo, roupas de trabalho e de rua; jeito paciente, duro; pose de conversa; no gesto de sentenciar.
@@ -946,13 +946,13 @@
   > Noivo Abandonado: noivo; pessoa comum do mundo, roupas de trabalho e de rua; jeito belo, furioso; pose de conversa; no gesto de chorar.
 - **Sacerdotisa de Zahun** · M2 · Suporte · Persona · estilo **P** · 1:1  
   id `sacerdotisa-de-zahun`  
-  > Sacerdotisa de Zahun: sacerdotisa; pessoa comum do mundo, roupas de trabalho e de rua; jeito paciente; pose de quem ajuda os outros; no gesto de abençoar; magia coral.
+  > Sacerdotisa de Zahun: sacerdotisa; pessoa comum do mundo, roupas de trabalho e de rua; jeito paciente; pose de quem ajuda os outros; no gesto de abençoar; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte.
 - **Inquisidor Anti-Magia** · M2 · Líder · — · estilo **P** · 1:1  
   id `inquisidor-anti-magia`  
   > Inquisidor Anti-Magia: inquisidor, fanático; pessoa comum do mundo, roupas de trabalho e de rua; jeito sagrado, duro; postura de quem comanda; no gesto de cortar.
 - **Engenheira de Pontes** · M1 · Social · Sublimeyn · estilo **P** · 1:1  
   id `engenheira-de-pontes`  
-  > Engenheira de Pontes: engenheira; pessoa comum do mundo, roupas de trabalho e de rua; jeito astuto; pose de conversa; no gesto de medir; magia prata-mercúrio.
+  > Engenheira de Pontes: engenheira; pessoa comum do mundo, roupas de trabalho e de rua; jeito astuto; pose de conversa; no gesto de medir; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Cocheiro** · M1 · Social · — · estilo **P** · 1:1  
   id `cocheiro`  
   > Cocheiro: cocheiro; pessoa comum do mundo, roupas de trabalho e de rua; jeito veloz; pose de conversa; no gesto de chicotear.
@@ -982,25 +982,25 @@
   > Estudante da Escola de Magia: aprendiz, estudante; pessoa comum do mundo, roupas de trabalho e de rua; jeito frágil; pose de conversa; no gesto de estudar.
 - **Professora da Escola de Magia** · M2 · Suporte · Cognitium · estilo **P** · 1:1  
   id `professora-da-escola-de-magia`  
-  > Professora da Escola de Magia: professora; pessoa comum do mundo, roupas de trabalho e de rua; jeito paciente, astuto; pose de quem ajuda os outros; no gesto de corrigir; magia índigo.
+  > Professora da Escola de Magia: professora; pessoa comum do mundo, roupas de trabalho e de rua; jeito paciente, astuto; pose de quem ajuda os outros; no gesto de corrigir; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços.
 - **Tatuadora de Marcas** · M1 · Social · Persona · estilo **P** · 1:1  
   id `tatuadora-de-marcas`  
-  > Tatuadora de Marcas: tatuadora; pessoa comum do mundo, roupas de trabalho e de rua; jeito silencioso; pose de conversa; no gesto de marcar; magia coral.
+  > Tatuadora de Marcas: tatuadora; pessoa comum do mundo, roupas de trabalho e de rua; jeito silencioso; pose de conversa; no gesto de marcar; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte.
 - **Cartógrafo Perdido** · M1 · Social · — · estilo **P** · 1:1  
   id `cartografo-perdido`  
   > Cartógrafo Perdido: cartógrafo; pessoa comum do mundo, roupas de trabalho e de rua; jeito estranho (nunca erra um mapa, sempre erra o caminho); pose de conversa; no gesto de medir.
 - **Boticária do Porto de Vidro** · M1 · Social · Sublimeyn · estilo **P** · 1:1  
   id `boticaria-do-porto-de-vidro`  
-  > Boticária do Porto de Vidro: boticária; pessoa comum do mundo, roupas de trabalho e de rua; jeito astuto; pose de conversa; no gesto de vender; magia prata-mercúrio.
+  > Boticária do Porto de Vidro: boticária; pessoa comum do mundo, roupas de trabalho e de rua; jeito astuto; pose de conversa; no gesto de vender; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Velho Relojoeiro da Vila do Mesmo Dia** · M1 · Social · Eternyr · estilo **P** · 1:1  
   id `velho-relojoeiro-da-vila-do-mesmo-dia`  
-  > Velho Relojoeiro da Vila do Mesmo Dia: relojoeiro; pessoa comum do mundo, roupas de trabalho e de rua; jeito paciente; pose de conversa; no gesto de consertar; magia azul-noite com riscos brancos.
+  > Velho Relojoeiro da Vila do Mesmo Dia: relojoeiro; pessoa comum do mundo, roupas de trabalho e de rua; jeito paciente; pose de conversa; no gesto de consertar; magia azul-noite com riscos brancos, na forma de aura com falhas e rastros parados no ar.
 - **Noviça Insone** · M1 · Social · Alvorum · estilo **P** · 1:1  
   id `novica-insone`  
-  > Noviça Insone: noviça, insone; pessoa comum do mundo, roupas de trabalho e de rua; jeito pálido; pose de conversa; no gesto de vigiar; magia dourada e preta.
+  > Noviça Insone: noviça, insone; pessoa comum do mundo, roupas de trabalho e de rua; jeito pálido; pose de conversa; no gesto de vigiar; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra.
 - **Domador de Wyvern-Correio** · M1 · Social · Dominum · estilo **P** · 1:1  
   id `domador-de-wyvern-correio`  
-  > Domador de Wyvern-Correio: domador, correio; pessoa comum do mundo, roupas de trabalho e de rua; jeito leal; pose de conversa; no gesto de assobiar; magia roxo-sangue.
+  > Domador de Wyvern-Correio: domador, correio; pessoa comum do mundo, roupas de trabalho e de rua; jeito leal; pose de conversa; no gesto de assobiar; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos).
 - **O Imperador de AlvoMarfim** · M3 · Líder · — (não tem Valor) · estilo **P** · 1:1  
   id `o-imperador-de-alvomarfim`  
   > O Imperador de AlvoMarfim: imperador, humano; pessoa comum do mundo, roupas de trabalho e de rua; jeito leal, duro; postura de quem comanda; no gesto de espada.
@@ -1015,139 +1015,139 @@
 
 - **Aprendiz Descontrolado** · M1 · Conjurador · Sublimeyn · estilo **P** · 1:1  
   id `aprendiz-descontrolado`  
-  > Aprendiz Descontrolado: aprendiz; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito frágil, faminto de magia; no gesto de queimar; magia prata-mercúrio.
+  > Aprendiz Descontrolado: aprendiz; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito frágil, faminto de magia; no gesto de queimar; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Duelista da Lâmina Vermelha** · M2 · Ágil · Conflitüo · estilo **P** · 1:1  
   id `duelista-da-lamina-vermelha`  
-  > Duelista da Lâmina Vermelha: duelista; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito veloz, belo; leve e veloz; no gesto de estocar; magia vermelho-ferrugem.
+  > Duelista da Lâmina Vermelha: duelista; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito veloz, belo; leve e veloz; no gesto de estocar; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos).
 - **Encantadora de Salão** · M2 · Conjurador · Persona · estilo **P** · 1:1  
   id `encantadora-de-salao`  
-  > Encantadora de Salão: cantora, espiã; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito belo, mentiroso; no gesto de cantar; magia coral.
+  > Encantadora de Salão: cantora, espiã; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito belo, mentiroso; no gesto de cantar; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte.
 - **Leitor de Sombras** · M2 · Conjurador · Cognitium · estilo **P** · 1:1  
   id `leitor-de-sombras`  
-  > Leitor de Sombras: espião, leitor; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito invisível, covarde; no gesto de ler; magia índigo.
+  > Leitor de Sombras: espião, leitor; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito invisível, covarde; no gesto de ler; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços.
 - **Sacerdote da Porta** · M2 · Suporte · Morbidyum · estilo **P** · 1:1  
   id `sacerdote-da-porta`  
-  > Sacerdote da Porta: sacerdote, coveiro; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito pálido, imundo; pose de quem ajuda os outros; no gesto de tocar; magia verde-pálida.
+  > Sacerdote da Porta: sacerdote, coveiro; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito pálido, imundo; pose de quem ajuda os outros; no gesto de tocar; magia verde-pálida, na forma de fumaça fria e fios que partem.
 - **Domadora de Garmhal** · M2 · Líder · Dominum · estilo **P** · 1:1  
   id `domadora-de-garmhal`  
-  > Domadora de Garmhal: domadora; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito leal; postura de quem comanda; no gesto de chicotear; magia roxo-sangue.
+  > Domadora de Garmhal: domadora; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito leal; postura de quem comanda; no gesto de chicotear; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos).
 - **Relojoeiro Fugitivo** · M3 · Conjurador · Eternyr · Resiliente · estilo **P** · 1:1  
   id `relojoeiro-fugitivo`  
-  > Relojoeiro Fugitivo: relojoeiro, fugitivo; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito paciente, estranho (quem o mata acorda um dia antes, uma vez); no gesto de atirar; magia azul-noite com riscos brancos.
+  > Relojoeiro Fugitivo: relojoeiro, fugitivo; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito paciente, estranho (quem o mata acorda um dia antes, uma vez); no gesto de atirar; magia azul-noite com riscos brancos, na forma de aura com falhas e rastros parados no ar.
 - **Arquimaga da Torre Inversa** · M4 · Chefe · Sublimeyn + Alvorum · Quimerarcano · estilo **P** · 1:1  
   id `arquimaga-da-torre-inversa`  
-  > Arquimaga da Torre Inversa: arquimaga, professora; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito antigo, brilhante; pose imponente de chefe; no gesto de raio; magia prata-mercúrio.
+  > Arquimaga da Torre Inversa: arquimaga, professora; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito antigo, brilhante; pose imponente de chefe; no gesto de raio; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Juiz-Feiticeiro** · M3 · Líder · Alvorum · Anulador · estilo **P** · 1:1  
   id `juiz-feiticeiro`  
-  > Juiz-Feiticeiro: juiz; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito sagrado, duro; postura de quem comanda; no gesto de condenar; magia dourada e preta.
+  > Juiz-Feiticeiro: juiz; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito sagrado, duro; postura de quem comanda; no gesto de condenar; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra.
 - **Sargenta do Estandarte** · M2 · Líder · Conflitüo · estilo **P** · 1:1  
   id `sargenta-do-estandarte`  
-  > Sargenta do Estandarte: soldada, porta-estandarte; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito leal, barulhento; postura de quem comanda; no gesto de lança; magia vermelho-ferrugem.
+  > Sargenta do Estandarte: soldada, porta-estandarte; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito leal, barulhento; postura de quem comanda; no gesto de lança; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos).
 - **Quebra-Escudos** · M1 · Bruto · Conflitüo · estilo **P** · 1:1  
   id `quebra-escudos`  
-  > Quebra-Escudos: guerreiro, martelo; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito pesado; grande e pesado; no gesto de esmagar; magia vermelho-ferrugem.
+  > Quebra-Escudos: guerreiro, martelo; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito pesado; grande e pesado; no gesto de esmagar; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos).
 - **Arqueira da Última Flecha** · M2 · Atirador · Conflitüo · estilo **P** · 1:1  
   id `arqueira-da-ultima-flecha`  
-  > Arqueira da Última Flecha: arqueira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito paciente, silencioso; no gesto de flecha; magia vermelho-ferrugem.
+  > Arqueira da Última Flecha: arqueira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito paciente, silencioso; no gesto de flecha; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos).
 - **Senhor da Trincheira** · M3 · Bruto · Conflitüo · Resiliente · estilo **P** · 1:1  
   id `senhor-da-trincheira`  
-  > Senhor da Trincheira: veterano, trincheira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito duro, blindado; grande e pesado; no gesto de esmagar; magia vermelho-ferrugem.
+  > Senhor da Trincheira: veterano, trincheira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito duro, blindado; grande e pesado; no gesto de esmagar; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos).
 - **Ferreira-Alquimista** · M1 · Suporte · Sublimeyn · estilo **P** · 1:1  
   id `ferreira-alquimista`  
-  > Ferreira-Alquimista: ferreira, alquimista; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito ardente; pose de quem ajuda os outros; no gesto de martelar; magia prata-mercúrio.
+  > Ferreira-Alquimista: ferreira, alquimista; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito ardente; pose de quem ajuda os outros; no gesto de martelar; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Contrabandista de Mercúrio** · M2 · Ágil · Sublimeyn · estilo **P** · 1:1  
   id `contrabandista-de-mercurio`  
-  > Contrabandista de Mercúrio: contrabandista; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito veloz, mentiroso; leve e veloz; no gesto de faca; magia prata-mercúrio.
+  > Contrabandista de Mercúrio: contrabandista; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito veloz, mentiroso; leve e veloz; no gesto de faca; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Guardiã do Vapor** · M3 · Conjurador · Sublimeyn · estilo **P** · 1:1  
   id `guardia-do-vapor`  
-  > Guardiã do Vapor: maquinista, guardiã; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito ardente, paciente; no gesto de jato; magia prata-mercúrio.
+  > Guardiã do Vapor: maquinista, guardiã; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito ardente, paciente; no gesto de jato; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Escultor de Sal** · M1 · Social · Sublimeyn · estilo **P** · 1:1  
   id `escultor-de-sal`  
-  > Escultor de Sal: artesão; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito paciente; pose de conversa; no gesto de esculpir; magia prata-mercúrio.
+  > Escultor de Sal: artesão; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito paciente; pose de conversa; no gesto de esculpir; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Mestre de Coleira** · M3 · Líder · Dominum · estilo **P** · 1:1  
   id `mestre-de-coleira`  
-  > Mestre de Coleira: domador, mestre; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito duro, astuto; postura de quem comanda; no gesto de chicote; magia roxo-sangue.
+  > Mestre de Coleira: domador, mestre; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito duro, astuto; postura de quem comanda; no gesto de chicote; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos).
 - **Cobradora de Dívidas** · M2 · Padrão · Dominum · estilo **P** · 1:1  
   id `cobradora-de-dividas`  
-  > Cobradora de Dívidas: cobradora; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito paciente; no gesto de porrete; magia roxo-sangue.
+  > Cobradora de Dívidas: cobradora; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito paciente; no gesto de porrete; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos).
 - **Senhor de Escravos da Voragem** · M3 · Chefe · Dominum · Anulador · estilo **P** · 1:1  
   id `senhor-de-escravos-da-voragem`  
-  > Senhor de Escravos da Voragem: senhor, tirano; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito duro, covarde; pose imponente de chefe; no gesto de chicote; magia roxo-sangue.
+  > Senhor de Escravos da Voragem: senhor, tirano; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito duro, covarde; pose imponente de chefe; no gesto de chicote; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos).
 - **Menino Que Manda nos Cães** · M1 · Social · Dominum · estilo **P** · 1:1  
   id `menino-que-manda-nos-caes`  
-  > Menino Que Manda nos Cães: menino, matilha; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito minúsculo, leal; pose de conversa; no gesto de assobiar; magia roxo-sangue.
+  > Menino Que Manda nos Cães: menino, matilha; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito minúsculo, leal; pose de conversa; no gesto de assobiar; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos).
 - **Carpideira** · M1 · Social · Persona · estilo **P** · 1:1  
   id `carpideira`  
-  > Carpideira: carpideira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito paciente; pose de conversa; no gesto de chorar; magia coral.
+  > Carpideira: carpideira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito paciente; pose de conversa; no gesto de chorar; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte.
 - **Lutador de Pele de Pedra** · M2 · Bruto · Persona · estilo **P** · 1:1  
   id `lutador-de-pele-de-pedra`  
-  > Lutador de Pele de Pedra: lutador; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito enorme; grande e pesado; no gesto de socar; magia coral.
+  > Lutador de Pele de Pedra: lutador; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito enorme; grande e pesado; no gesto de socar; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte.
 - **Rainha do Carnaval** · M3 · Líder · Persona · estilo **P** · 1:1  
   id `rainha-do-carnaval`  
-  > Rainha do Carnaval: rainha, festa; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito belo, barulhento; postura de quem comanda; no gesto de dançar; magia coral.
+  > Rainha do Carnaval: rainha, festa; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito belo, barulhento; postura de quem comanda; no gesto de dançar; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte.
 - **Cirurgião de Rostos** · M2 · Conjurador · Persona · estilo **P** · 1:1  
   id `cirurgiao-de-rostos`  
-  > Cirurgião de Rostos: cirurgião; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito estranho (tem um rosto novo a cada evento); no gesto de bisturi; magia coral.
+  > Cirurgião de Rostos: cirurgião; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito estranho (tem um rosto novo a cada evento); no gesto de bisturi; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte.
 - **Faroleira de Vau-Grande** · M1 · Suporte · Alvorum · estilo **P** · 1:1  
   id `faroleira-de-vau-grande`  
-  > Faroleira de Vau-Grande: faroleira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito brilhante; pose de quem ajuda os outros; no gesto de cintilar; magia dourada e preta.
+  > Faroleira de Vau-Grande: faroleira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito brilhante; pose de quem ajuda os outros; no gesto de cintilar; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra.
 - **Vidente de Feira** · M1 · Social · Alvorum · estilo **P** · 1:1  
   id `vidente-de-feira`  
-  > Vidente de Feira: vidente, charlatã; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito mentiroso; pose de conversa; no gesto de ler; magia dourada e preta.
+  > Vidente de Feira: vidente, charlatã; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito mentiroso; pose de conversa; no gesto de ler; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra.
 - **Caçador de Pesadelos** · M3 · Ágil · Alvorum · Resiliente · estilo **P** · 1:1  
   id `cacador-de-pesadelos`  
-  > Caçador de Pesadelos: caçador, sonhador; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito pálido, veloz; leve e veloz; no gesto de lâmina; magia dourada e preta.
+  > Caçador de Pesadelos: caçador, sonhador; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito pálido, veloz; leve e veloz; no gesto de lâmina; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra.
 - **Bispa do Eclipse** · M4 · Conjurador · Alvorum · Resiliente · estilo **P** · 1:1  
   id `bispa-do-eclipse`  
-  > Bispa do Eclipse: bispa, sombra; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito antigo, brilhante; no gesto de raio; magia dourada e preta.
+  > Bispa do Eclipse: bispa, sombra; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito antigo, brilhante; no gesto de raio; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra.
 - **Curandeira de Beira de Estrada** · M1 · Suporte · Morbidyum · estilo **P** · 1:1  
   id `curandeira-de-beira-de-estrada`  
-  > Curandeira de Beira de Estrada: curandeira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito pálido; pose de quem ajuda os outros; no gesto de curar; magia verde-pálida.
+  > Curandeira de Beira de Estrada: curandeira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito pálido; pose de quem ajuda os outros; no gesto de curar; magia verde-pálida, na forma de fumaça fria e fios que partem.
 - **Embalsamador** · M2 · Conjurador · Morbidyum · estilo **P** · 1:1  
   id `embalsamador`  
-  > Embalsamador: embalsamador, artesão; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito silencioso, imundo; no gesto de tocar; magia verde-pálida.
+  > Embalsamador: embalsamador, artesão; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito silencioso, imundo; no gesto de tocar; magia verde-pálida, na forma de fumaça fria e fios que partem.
 - **Ceifadora da Peste** · M3 · Conjurador · Morbidyum · Resiliente · estilo **P** · 1:1  
   id `ceifadora-da-peste`  
-  > Ceifadora da Peste: ceifadora, doença; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito imundo, paciente; no gesto de foice; magia verde-pálida.
+  > Ceifadora da Peste: ceifadora, doença; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito imundo, paciente; no gesto de foice; magia verde-pálida, na forma de fumaça fria e fios que partem.
 - **Médium do Luto** · M1 · Social · Morbidyum · estilo **P** · 1:1  
   id `medium-do-luto`  
-  > Médium do Luto: médium; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito pálido; pose de conversa; no gesto de falar; magia verde-pálida.
+  > Médium do Luto: médium; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito pálido; pose de conversa; no gesto de falar; magia verde-pálida, na forma de fumaça fria e fios que partem.
 - **Professor de Lógica** · M1 · Social · Cognitium · estilo **P** · 1:1  
   id `professor-de-logica`  
-  > Professor de Lógica: professor; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito astuto; pose de conversa; no gesto de discutir; magia índigo.
+  > Professor de Lógica: professor; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito astuto; pose de conversa; no gesto de discutir; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços.
 - **Ladra de Memórias** · M2 · Ágil · Cognitium · estilo **P** · 1:1  
   id `ladra-de-memorias`  
-  > Ladra de Memórias: ladra; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito invisível, veloz; leve e veloz; no gesto de faca; magia índigo.
+  > Ladra de Memórias: ladra; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito invisível, veloz; leve e veloz; no gesto de faca; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços.
 - **Doutrinador** · M3 · Líder · Cognitium · Anulador · estilo **P** · 1:1  
   id `doutrinador`  
-  > Doutrinador: pregador, mente; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito belo, mentiroso; postura de quem comanda; no gesto de falar; magia índigo.
+  > Doutrinador: pregador, mente; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito belo, mentiroso; postura de quem comanda; no gesto de falar; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços.
 - **Ilusionista do Labirinto** · M2 · Conjurador · Cognitium · estilo **P** · 1:1  
   id `ilusionista-do-labirinto`  
-  > Ilusionista do Labirinto: ilusionista; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito mentiroso, estranho (a sombra dele aponta para o lado errado); no gesto de faca; magia índigo.
+  > Ilusionista do Labirinto: ilusionista; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito mentiroso, estranho (a sombra dele aponta para o lado errado); no gesto de faca; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços.
 - **Mensageira do Portal** · M2 · Ágil · Eternyr · estilo **P** · 1:1  
   id `mensageira-do-portal`  
-  > Mensageira do Portal: mensageira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito veloz; leve e veloz; no gesto de faca; magia azul-noite com riscos brancos.
+  > Mensageira do Portal: mensageira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito veloz; leve e veloz; no gesto de faca; magia azul-noite com riscos brancos, na forma de aura com falhas e rastros parados no ar.
 - **Guardião do Ciclo** · M3 · Padrão · Eternyr · Resiliente · estilo **P** · 1:1  
   id `guardiao-do-ciclo`  
-  > Guardião do Ciclo: guardião, relógio; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito paciente, duro; no gesto de bastão; magia azul-noite com riscos brancos.
+  > Guardião do Ciclo: guardião, relógio; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito paciente, duro; no gesto de bastão; magia azul-noite com riscos brancos, na forma de aura com falhas e rastros parados no ar.
 - **Viajante do Entretempo** · M3 · Social · Eternyr · estilo **P** · 1:1  
   id `viajante-do-entretempo`  
-  > Viajante do Entretempo: viajante; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito antigo, estranho (fala do amanhã no passado); pose de conversa; no gesto de contar; magia azul-noite com riscos brancos.
+  > Viajante do Entretempo: viajante; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito antigo, estranho (fala do amanhã no passado); pose de conversa; no gesto de contar; magia azul-noite com riscos brancos, na forma de aura com falhas e rastros parados no ar.
 - **Engenheira de Distâncias** · M2 · Suporte · Eternyr · estilo **P** · 1:1  
   id `engenheira-de-distancias`  
-  > Engenheira de Distâncias: engenheira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito astuto; pose de quem ajuda os outros; no gesto de medir; magia azul-noite com riscos brancos.
+  > Engenheira de Distâncias: engenheira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito astuto; pose de quem ajuda os outros; no gesto de medir; magia azul-noite com riscos brancos, na forma de aura com falhas e rastros parados no ar.
 - **Druida de Tahwë** · M2 · Suporte · Primitivum · estilo **P** · 1:1  
   id `druida-de-tahwe`  
-  > Druida de Tahwë: druida; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito paciente; pose de quem ajuda os outros; no gesto de cajado; magia verde-musgo e âmbar.
+  > Druida de Tahwë: druida; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito paciente; pose de quem ajuda os outros; no gesto de cajado; magia verde-musgo e âmbar, na forma de construtos orgânicos (raízes, galhos) e esporos soltos.
 - **Metamorfo Caçador** · M2 · Ágil · Primitivum · estilo **P** · 1:1  
   id `metamorfo-cacador`  
-  > Metamorfo Caçador: caçador, lobo; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito veloz, faminto; leve e veloz; no gesto de garra; magia verde-musgo e âmbar.
+  > Metamorfo Caçador: caçador, lobo; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito veloz, faminto; leve e veloz; no gesto de garra; magia verde-musgo e âmbar, na forma de construtos orgânicos (raízes, galhos) e esporos soltos.
 - **Invocadora de Espíritos** · M3 · Conjurador · Primitivum · estilo **P** · 1:1  
   id `invocadora-de-espiritos`  
-  > Invocadora de Espíritos: invocadora, xamã; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito antigo; no gesto de cajado; magia verde-musgo e âmbar.
+  > Invocadora de Espíritos: invocadora, xamã; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito antigo; no gesto de cajado; magia verde-musgo e âmbar, na forma de construtos orgânicos (raízes, galhos) e esporos soltos.
 - **Menina-Raposa** · M1 · Ágil · Primitivum · estilo **P** · 1:1  
   id `menina-raposa`  
-  > Menina-Raposa: menina, raposa; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito minúsculo, covarde; leve e veloz; no gesto de morder; magia verde-musgo e âmbar.
+  > Menina-Raposa: menina, raposa; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito minúsculo, covarde; leve e veloz; no gesto de morder; magia verde-musgo e âmbar, na forma de construtos orgânicos (raízes, galhos) e esporos soltos.
 - **Professora Ciantia** · M4 · Chefe · todos os Valores · Quimerarcano, Resiliente · prompt do [[20 Prompts de arte - personagens]] · estilo **P** · 1:1  
   id `ciantia-dragoes`  
   > Mulher jovem, loira com mechas brancas platinadas, olhos verdes, roupa preta e jaqueta com bordas de veludo, sorriso confiante e controlado. Um dragãozinho de chamas fantasmagóricas translúcidas enrolado no braço dela; atrás dela, a cabeça de um dragão enorme emoldura a página, e as chamas de nove cores (uma por Valor) escorrem pela borda por cima do texto.
@@ -1156,91 +1156,91 @@
   > Roqueiro punk de pele branca, meio jovem, roupas de couro, cabelo curto em degradê com moicano, escuro com partes pintadas de roxo vibrante, piercings nas orelhas e na boca, sorriso desafiador de canto a canto. Segura uma guitarra com lâminas; ondas de som coral com faíscas roxas saem dela e empurram as colunas de texto para as bordas, e três clones dele saem das ondas, cada um numa pose diferente.
 - **O Antigo Bibliotecário** · M4 · Social · Cognitium · Inquebrável · estilo **P** · 1:1  
   id `o-antigo-bibliotecario`  
-  > O Antigo Bibliotecário: bibliotecário, homem que pensou; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito antigo, estranho (sempre parece confuso, e é); pose de conversa; no gesto de achar; magia índigo.
+  > O Antigo Bibliotecário: bibliotecário, homem que pensou; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito antigo, estranho (sempre parece confuso, e é); pose de conversa; no gesto de achar; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços.
 
 ### Bestiário · Povos infundidos (15)
 
 - **Menina de Pele de Mercúrio** · M1 · Social · Sublimeyn · estilo **P** · 1:1  
   id `menina-de-pele-de-mercurio`  
-  > Menina de Pele de Mercúrio: menina, infundida; de um povo infundido, o Valor visível no próprio corpo; jeito estranho (a pele reflete quem olha); pose de conversa; no gesto de escorrer; magia prata-mercúrio.
+  > Menina de Pele de Mercúrio: menina, infundida; de um povo infundido, o Valor visível no próprio corpo; jeito estranho (a pele reflete quem olha); pose de conversa; no gesto de escorrer; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Estivador de Pedra** · M1 · Bruto · Sublimeyn · estilo **P** · 1:1  
   id `estivador-de-pedra`  
-  > Estivador de Pedra: estivador, infundido; de um povo infundido, o Valor visível no próprio corpo; jeito pesado, duro; grande e pesado; no gesto de esmagar; magia prata-mercúrio.
+  > Estivador de Pedra: estivador, infundido; de um povo infundido, o Valor visível no próprio corpo; jeito pesado, duro; grande e pesado; no gesto de esmagar; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Marcada da Corrente** · M2 · Padrão · Dominum · estilo **P** · 1:1  
   id `marcada-da-corrente`  
-  > Marcada da Corrente: guerreira, infundida; de um povo infundido, o Valor visível no próprio corpo; jeito leal; no gesto de corrente; magia roxo-sangue.
+  > Marcada da Corrente: guerreira, infundida; de um povo infundido, o Valor visível no próprio corpo; jeito leal; no gesto de corrente; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos).
 - **Rapaz do Rosto Mutável** · M1 · Social · Persona · estilo **P** · 1:1  
   id `rapaz-do-rosto-mutavel`  
-  > Rapaz do Rosto Mutável: rapaz, infundido; de um povo infundido, o Valor visível no próprio corpo; jeito belo; pose de conversa; no gesto de mudar; magia coral.
+  > Rapaz do Rosto Mutável: rapaz, infundido; de um povo infundido, o Valor visível no próprio corpo; jeito belo; pose de conversa; no gesto de mudar; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte.
 - **Cantora-Coral** · M2 · Suporte · Persona · estilo **P** · 1:1  
   id `cantora-coral`  
-  > Cantora-Coral: cantora, infundida; de um povo infundido, o Valor visível no próprio corpo; jeito belo, brilhante; pose de quem ajuda os outros; no gesto de cantar; magia coral.
+  > Cantora-Coral: cantora, infundida; de um povo infundido, o Valor visível no próprio corpo; jeito belo, brilhante; pose de quem ajuda os outros; no gesto de cantar; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte.
 - **Olhos-de-Farol** · M1 · Atirador · Alvorum · estilo **P** · 1:1  
   id `olhos-de-farol`  
-  > Olhos-de-Farol: vigia, infundido; de um povo infundido, o Valor visível no próprio corpo; jeito brilhante; no gesto de pedra; magia dourada e preta.
+  > Olhos-de-Farol: vigia, infundido; de um povo infundido, o Valor visível no próprio corpo; jeito brilhante; no gesto de pedra; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra.
 - **Sonâmbula das Duas Pálpebras** · M1 · Social · Alvorum · estilo **P** · 1:1  
   id `sonambula-das-duas-palpebras`  
-  > Sonâmbula das Duas Pálpebras: sonâmbula, infundida; de um povo infundido, o Valor visível no próprio corpo; jeito estranho; pose de conversa; no gesto de andar; magia dourada e preta.
+  > Sonâmbula das Duas Pálpebras: sonâmbula, infundida; de um povo infundido, o Valor visível no próprio corpo; jeito estranho; pose de conversa; no gesto de andar; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra.
 - **Velho de Ossos Claros** · M1 · Social · Morbidyum · estilo **P** · 1:1  
   id `velho-de-ossos-claros`  
-  > Velho de Ossos Claros: ancião, infundido; de um povo infundido, o Valor visível no próprio corpo; jeito pálido, antigo; pose de conversa; no gesto de contar; magia verde-pálida.
+  > Velho de Ossos Claros: ancião, infundido; de um povo infundido, o Valor visível no próprio corpo; jeito pálido, antigo; pose de conversa; no gesto de contar; magia verde-pálida, na forma de fumaça fria e fios que partem.
 - **Moça Que Não Sangra** · M2 · Padrão · Morbidyum · estilo **P** · 1:1  
   id `moca-que-nao-sangra`  
-  > Moça Que Não Sangra: guerreira, infundida; de um povo infundido, o Valor visível no próprio corpo; jeito duro, pálido; no gesto de espada; magia verde-pálida.
+  > Moça Que Não Sangra: guerreira, infundida; de um povo infundido, o Valor visível no próprio corpo; jeito duro, pálido; no gesto de espada; magia verde-pálida, na forma de fumaça fria e fios que partem.
 - **Esquecido de Nascença** · M1 · Social · Cognitium · estilo **P** · 1:1  
   id `esquecido-de-nascenca`  
-  > Esquecido de Nascença: rapaz, infundido; de um povo infundido, o Valor visível no próprio corpo; jeito invisível; pose de conversa; no gesto de passar; magia índigo.
+  > Esquecido de Nascença: rapaz, infundido; de um povo infundido, o Valor visível no próprio corpo; jeito invisível; pose de conversa; no gesto de passar; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços.
 - **Contadora de Mentes** · M2 · Social · Cognitium · estilo **P** · 1:1  
   id `contadora-de-mentes`  
-  > Contadora de Mentes: contadora, infundida; de um povo infundido, o Valor visível no próprio corpo; jeito astuto; pose de conversa; no gesto de calcular; magia índigo.
+  > Contadora de Mentes: contadora, infundida; de um povo infundido, o Valor visível no próprio corpo; jeito astuto; pose de conversa; no gesto de calcular; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços.
 - **Menino de Dois Instantes** · M1 · Social · Eternyr · estilo **P** · 1:1  
   id `menino-de-dois-instantes`  
-  > Menino de Dois Instantes: menino, infundido; de um povo infundido, o Valor visível no próprio corpo; jeito veloz, estranho; pose de conversa; no gesto de estar; magia azul-noite com riscos brancos.
+  > Menino de Dois Instantes: menino, infundido; de um povo infundido, o Valor visível no próprio corpo; jeito veloz, estranho; pose de conversa; no gesto de estar; magia azul-noite com riscos brancos, na forma de aura com falhas e rastros parados no ar.
 - **Anciã do Tempo Lento** · M2 · Suporte · Eternyr · estilo **P** · 1:1  
   id `ancia-do-tempo-lento`  
-  > Anciã do Tempo Lento: anciã, infundida; de um povo infundido, o Valor visível no próprio corpo; jeito antigo, paciente; pose de quem ajuda os outros; no gesto de falar; magia azul-noite com riscos brancos.
+  > Anciã do Tempo Lento: anciã, infundida; de um povo infundido, o Valor visível no próprio corpo; jeito antigo, paciente; pose de quem ajuda os outros; no gesto de falar; magia azul-noite com riscos brancos, na forma de aura com falhas e rastros parados no ar.
 - **Caçador de Chifres** · M2 · Ágil · Primitivum · estilo **P** · 1:1  
   id `cacador-de-chifres`  
-  > Caçador de Chifres: caçador, infundido; de um povo infundido, o Valor visível no próprio corpo; jeito veloz, faminto; leve e veloz; no gesto de chifrar; magia verde-musgo e âmbar.
+  > Caçador de Chifres: caçador, infundido; de um povo infundido, o Valor visível no próprio corpo; jeito veloz, faminto; leve e veloz; no gesto de chifrar; magia verde-musgo e âmbar, na forma de construtos orgânicos (raízes, galhos) e esporos soltos.
 - **Mulher-Musgo** · M1 · Suporte · Primitivum · estilo **P** · 1:1  
   id `mulher-musgo`  
-  > Mulher-Musgo: jardineira, infundida; de um povo infundido, o Valor visível no próprio corpo; jeito paciente, regenerante; pose de quem ajuda os outros; no gesto de enraizar; magia verde-musgo e âmbar.
+  > Mulher-Musgo: jardineira, infundida; de um povo infundido, o Valor visível no próprio corpo; jeito paciente, regenerante; pose de quem ajuda os outros; no gesto de enraizar; magia verde-musgo e âmbar, na forma de construtos orgânicos (raízes, galhos) e esporos soltos.
 
 ### Bestiário · Feras e monstros (45)
 
 - **Rato-de-Esgoto Gigante** · M1 · Lacaio · Primitivum · estilo **M** · 1:1  
   id `rato-de-esgoto-gigante`  
-  > Rato-de-Esgoto Gigante: rato; criatura selvagem; jeito numeroso, imundo; um de um bando; no gesto de roer; magia verde-musgo e âmbar.
+  > Rato-de-Esgoto Gigante: rato; criatura selvagem; jeito numeroso, imundo; um de um bando; no gesto de roer; magia verde-musgo e âmbar, na forma de construtos orgânicos (raízes, galhos) e esporos soltos.
 - **Javali de Ferro** · M1 · Bruto · Primitivum · estilo **M** · 1:1  
   id `javali-de-ferro`  
-  > Javali de Ferro: javali; criatura selvagem; jeito blindado, furioso; grande e pesado; no gesto de chifrar; magia verde-musgo e âmbar.
+  > Javali de Ferro: javali; criatura selvagem; jeito blindado, furioso; grande e pesado; no gesto de chifrar; magia verde-musgo e âmbar, na forma de construtos orgânicos (raízes, galhos) e esporos soltos.
 - **Lobo-de-Cinza** · M1 · Ágil · Morbidyum · estilo **M** · 1:1  
   id `lobo-de-cinza`  
-  > Lobo-de-Cinza: lobo, luto; criatura selvagem; jeito pálido, faminto; leve e veloz; no gesto de morder; magia verde-pálida.
+  > Lobo-de-Cinza: lobo, luto; criatura selvagem; jeito pálido, faminto; leve e veloz; no gesto de morder; magia verde-pálida, na forma de fumaça fria e fios que partem.
 - **Aranha-Tecelã** · M1 · Atirador · Dominum · estilo **M** · 1:1  
   id `aranha-tecela`  
-  > Aranha-Tecelã: aranha; criatura selvagem; jeito venenoso, silencioso; no gesto de picar; magia roxo-sangue.
+  > Aranha-Tecelã: aranha; criatura selvagem; jeito venenoso, silencioso; no gesto de picar; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos).
 - **Corvo-Presságio** · M1 · Suporte · Morbidyum · estilo **M** · 1:1  
   id `corvo-pressagio`  
-  > Corvo-Presságio: corvo, aviso; criatura selvagem; jeito voador, barulhento; pose de quem ajuda os outros; no gesto de bicar; magia verde-pálida.
+  > Corvo-Presságio: corvo, aviso; criatura selvagem; jeito voador, barulhento; pose de quem ajuda os outros; no gesto de bicar; magia verde-pálida, na forma de fumaça fria e fios que partem.
 - **Cão de Coleira Dupla** · M2 · Padrão · Dominum · estilo **M** · 1:1  
   id `cao-de-coleira-dupla`  
-  > Cão de Coleira Dupla: cão, servo; criatura selvagem; jeito leal, duro; no gesto de morder; magia roxo-sangue.
+  > Cão de Coleira Dupla: cão, servo; criatura selvagem; jeito leal, duro; no gesto de morder; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos).
 - **Serpente-Espelho** · M2 · Ágil · Alvorum · estilo **M** · 1:1  
   id `serpente-espelho`  
-  > Serpente-Espelho: serpente; criatura selvagem; jeito brilhante, venenoso; leve e veloz; no gesto de picar; magia dourada e preta.
+  > Serpente-Espelho: serpente; criatura selvagem; jeito brilhante, venenoso; leve e veloz; no gesto de picar; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra.
 - **Urso-Raiz** · M2 · Bruto · Primitivum · estilo **M** · 1:1  
   id `urso-raiz`  
-  > Urso-Raiz: urso, árvore; criatura selvagem; jeito enorme, regenerante; grande e pesado; no gesto de esmagar; magia verde-musgo e âmbar.
+  > Urso-Raiz: urso, árvore; criatura selvagem; jeito enorme, regenerante; grande e pesado; no gesto de esmagar; magia verde-musgo e âmbar, na forma de construtos orgânicos (raízes, galhos) e esporos soltos.
 - **Leão de Cem Dentes** · M3 · Chefe · Dominum · Inquebrável · estilo **M** · 1:1  
   id `leao-de-cem-dentes`  
-  > Leão de Cem Dentes: leão, filhote de kairvahnn; criatura selvagem; jeito enorme, faminto; pose imponente de chefe; no gesto de despedaçar; magia roxo-sangue.
+  > Leão de Cem Dentes: leão, filhote de kairvahnn; criatura selvagem; jeito enorme, faminto; pose imponente de chefe; no gesto de despedaçar; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos).
 - **Grifo-de-Vidro** · M3 · Ágil · Sublimeyn · estilo **M** · 1:1  
   id `grifo-de-vidro`  
-  > Grifo-de-Vidro: grifo; criatura selvagem; jeito voador, frágil; leve e veloz; no gesto de rasgar; magia prata-mercúrio.
+  > Grifo-de-Vidro: grifo; criatura selvagem; jeito voador, frágil; leve e veloz; no gesto de rasgar; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Hidra de Barro** · M4 · Chefe · Sublimeyn + Primitivum · estilo **M** · 1:1  
   id `hidra-de-barro`  
-  > Hidra de Barro: hidra; criatura selvagem; jeito regenerante, enorme; pose imponente de chefe; no gesto de morder; magia prata-mercúrio.
+  > Hidra de Barro: hidra; criatura selvagem; jeito regenerante, enorme; pose imponente de chefe; no gesto de morder; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Cavalo de Guerra** · M1 · Padrão · — · estilo **M** · 1:1  
   id `cavalo-de-guerra`  
   > Cavalo de Guerra: cavalo, montaria; criatura selvagem; jeito leal; no gesto de coice.
@@ -1255,7 +1255,7 @@
   > Cão Pastor: cão; criatura selvagem; jeito leal; pose de quem ajuda os outros; no gesto de morder.
 - **Bode das Encostas** · M1 · Ágil · Primitivum · estilo **M** · 1:1  
   id `bode-das-encostas`  
-  > Bode das Encostas: bode; criatura selvagem; jeito veloz; leve e veloz; no gesto de chifrar; magia verde-musgo e âmbar.
+  > Bode das Encostas: bode; criatura selvagem; jeito veloz; leve e veloz; no gesto de chifrar; magia verde-musgo e âmbar, na forma de construtos orgânicos (raízes, galhos) e esporos soltos.
 - **Enxame de Vespas** · M1 · Lacaio · — · estilo **M** · 1:1  
   id `enxame-de-vespas`  
   > Enxame de Vespas: vespas; criatura selvagem; jeito numeroso, venenoso; um de um bando; no gesto de picar.
@@ -1264,148 +1264,148 @@
   > Crocodilo de Lama: crocodilo; criatura selvagem; jeito aquático, paciente; grande e pesado; no gesto de morder.
 - **Morcego-Vampiro Gigante** · M1 · Ágil · Morbidyum · estilo **M** · 1:1  
   id `morcego-vampiro-gigante`  
-  > Morcego-Vampiro Gigante: morcego; criatura selvagem; jeito voador, cego; leve e veloz; no gesto de morder; magia verde-pálida.
+  > Morcego-Vampiro Gigante: morcego; criatura selvagem; jeito voador, cego; leve e veloz; no gesto de morder; magia verde-pálida, na forma de fumaça fria e fios que partem.
 - **Tatu de Couraça** · M1 · Padrão · — · estilo **M** · 1:1  
   id `tatu-de-couraca`  
   > Tatu de Couraça: tatu; criatura selvagem; jeito blindado, covarde; no gesto de garras.
 - **Coruja-Sábia** · M1 · Suporte · Alvorum · estilo **M** · 1:1  
   id `coruja-sabia`  
-  > Coruja-Sábia: coruja, vigia; criatura selvagem; jeito voador, silencioso; pose de quem ajuda os outros; no gesto de bicar; magia dourada e preta.
+  > Coruja-Sábia: coruja, vigia; criatura selvagem; jeito voador, silencioso; pose de quem ajuda os outros; no gesto de bicar; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra.
 - **Onça-das-Sombras** · M2 · Ágil · Alvorum · estilo **M** · 1:1  
   id `onca-das-sombras`  
-  > Onça-das-Sombras: onça; criatura selvagem; jeito silencioso, invisível (no escuro); leve e veloz; no gesto de garra; magia dourada e preta.
+  > Onça-das-Sombras: onça; criatura selvagem; jeito silencioso, invisível (no escuro); leve e veloz; no gesto de garra; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra.
 - **Touro de Kairvahnn** · M2 · Bruto · Dominum · estilo **M** · 1:1  
   id `touro-de-kairvahnn`  
-  > Touro de Kairvahnn: touro, fera; criatura selvagem; jeito enorme, furioso; grande e pesado; no gesto de chifrar; magia roxo-sangue.
+  > Touro de Kairvahnn: touro, fera; criatura selvagem; jeito enorme, furioso; grande e pesado; no gesto de chifrar; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos).
 - **Matilha da Voragem** · M2 · Lacaio · Dominum · estilo **M** · 1:1  
   id `matilha-da-voragem`  
-  > Matilha da Voragem: cães, matilha; criatura selvagem; jeito numeroso, faminto; um de um bando; no gesto de morder; magia roxo-sangue.
+  > Matilha da Voragem: cães, matilha; criatura selvagem; jeito numeroso, faminto; um de um bando; no gesto de morder; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos).
 - **Quimera de Três Fomes** · M3 · Bruto · Dominum + Primitivum · estilo **M** · 1:1  
   id `quimera-de-tres-fomes`  
-  > Quimera de Três Fomes: quimera; criatura selvagem; jeito enorme, faminto; grande e pesado; no gesto de morder; magia roxo-sangue.
+  > Quimera de Três Fomes: quimera; criatura selvagem; jeito enorme, faminto; grande e pesado; no gesto de morder; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos).
 - **Mantícora** · M3 · Atirador · Dominum · estilo **M** · 1:1  
   id `manticora`  
-  > Mantícora: mantícora; criatura selvagem; jeito voador, espinhoso; no gesto de espinhos; magia roxo-sangue.
+  > Mantícora: mantícora; criatura selvagem; jeito voador, espinhoso; no gesto de espinhos; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos).
 - **Basilisco de Estrada** · M3 · Padrão · Sublimeyn · estilo **M** · 1:1  
   id `basilisco-de-estrada`  
-  > Basilisco de Estrada: lagarto; criatura selvagem; jeito pesado, paciente; no gesto de morder; magia prata-mercúrio.
+  > Basilisco de Estrada: lagarto; criatura selvagem; jeito pesado, paciente; no gesto de morder; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Verme da Areia** · M3 · Bruto · Primitivum · estilo **M** · 1:1  
   id `verme-da-areia`  
-  > Verme da Areia: verme; criatura selvagem; jeito escavador, enorme; grande e pesado; no gesto de engolir; magia verde-musgo e âmbar.
+  > Verme da Areia: verme; criatura selvagem; jeito escavador, enorme; grande e pesado; no gesto de engolir; magia verde-musgo e âmbar, na forma de construtos orgânicos (raízes, galhos) e esporos soltos.
 - **Lesma-Lâmpada** · M1 · Social · Alvorum · estilo **M** · 1:1  
   id `lesma-lampada`  
-  > Lesma-Lâmpada: lesma; criatura selvagem; jeito brilhante, pesado; pose de conversa; no gesto de brilhar; magia dourada e preta.
+  > Lesma-Lâmpada: lesma; criatura selvagem; jeito brilhante, pesado; pose de conversa; no gesto de brilhar; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra.
 - **Garça-de-Neblina** · M1 · Social · Sublimeyn · estilo **M** · 1:1  
   id `garca-de-neblina`  
-  > Garça-de-Neblina: garça; criatura selvagem; jeito voador, etéreo; pose de conversa; no gesto de bicar; magia prata-mercúrio.
+  > Garça-de-Neblina: garça; criatura selvagem; jeito voador, etéreo; pose de conversa; no gesto de bicar; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Polvo do Porto de Vidro** · M2 · Ágil · Sublimeyn · estilo **M** · 1:1  
   id `polvo-do-porto-de-vidro`  
-  > Polvo do Porto de Vidro: polvo; criatura selvagem; jeito aquático, astuto; leve e veloz; no gesto de tentáculo; magia prata-mercúrio.
+  > Polvo do Porto de Vidro: polvo; criatura selvagem; jeito aquático, astuto; leve e veloz; no gesto de tentáculo; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Tubarão-Lâmina** · M2 · Bruto · Conflitüo · estilo **M** · 1:1  
   id `tubarao-lamina`  
-  > Tubarão-Lâmina: tubarão; criatura selvagem; jeito aquático, faminto; grande e pesado; no gesto de morder; magia vermelho-ferrugem.
+  > Tubarão-Lâmina: tubarão; criatura selvagem; jeito aquático, faminto; grande e pesado; no gesto de morder; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos).
 - **Serpente-Marinha** · M3 · Chefe · Primitivum · estilo **M** · 1:1  
   id `serpente-marinha`  
-  > Serpente-Marinha: serpente, mar; criatura selvagem; jeito aquático, enorme; pose imponente de chefe; no gesto de morder; magia verde-musgo e âmbar.
+  > Serpente-Marinha: serpente, mar; criatura selvagem; jeito aquático, enorme; pose imponente de chefe; no gesto de morder; magia verde-musgo e âmbar, na forma de construtos orgânicos (raízes, galhos) e esporos soltos.
 - **Caranguejo-Ermitão Gigante** · M2 · Padrão · Sublimeyn · estilo **M** · 1:1  
   id `caranguejo-ermitao-gigante`  
-  > Caranguejo-Ermitão Gigante: caranguejo; criatura selvagem; jeito blindado, covarde; no gesto de pinça; magia prata-mercúrio.
+  > Caranguejo-Ermitão Gigante: caranguejo; criatura selvagem; jeito blindado, covarde; no gesto de pinça; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Sapo-Profeta** · M1 · Social · Morbidyum · estilo **M** · 1:1  
   id `sapo-profeta`  
-  > Sapo-Profeta: sapo; criatura selvagem; jeito estranho; pose de conversa; no gesto de coaxar; magia verde-pálida.
+  > Sapo-Profeta: sapo; criatura selvagem; jeito estranho; pose de conversa; no gesto de coaxar; magia verde-pálida, na forma de fumaça fria e fios que partem.
 - **Ursa-Mãe** · M2 · Bruto · Primitivum · estilo **M** · 1:1  
   id `ursa-mae`  
-  > Ursa-Mãe: ursa, mãe; criatura selvagem; jeito enorme, furioso; grande e pesado; no gesto de garras; magia verde-musgo e âmbar.
+  > Ursa-Mãe: ursa, mãe; criatura selvagem; jeito enorme, furioso; grande e pesado; no gesto de garras; magia verde-musgo e âmbar, na forma de construtos orgânicos (raízes, galhos) e esporos soltos.
 - **Lebre-Relâmpago** · M1 · Social · Eternyr · estilo **M** · 1:1  
   id `lebre-relampago`  
-  > Lebre-Relâmpago: lebre; criatura selvagem; jeito veloz, minúsculo; pose de conversa; no gesto de sumir; magia azul-noite com riscos brancos.
+  > Lebre-Relâmpago: lebre; criatura selvagem; jeito veloz, minúsculo; pose de conversa; no gesto de sumir; magia azul-noite com riscos brancos, na forma de aura com falhas e rastros parados no ar.
 - **Cervo Branco** · M2 · Social · Alvorum · estilo **M** · 1:1  
   id `cervo-branco`  
-  > Cervo Branco: cervo, presságio; criatura selvagem; jeito brilhante, etéreo; pose de conversa; no gesto de aparecer; magia dourada e preta.
+  > Cervo Branco: cervo, presságio; criatura selvagem; jeito brilhante, etéreo; pose de conversa; no gesto de aparecer; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra.
 - **Gorila de Pedra** · M2 · Bruto · Sublimeyn · estilo **M** · 1:1  
   id `gorila-de-pedra`  
-  > Gorila de Pedra: gorila; criatura selvagem; jeito duro, pesado; grande e pesado; no gesto de socar; magia prata-mercúrio.
+  > Gorila de Pedra: gorila; criatura selvagem; jeito duro, pesado; grande e pesado; no gesto de socar; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Abutre da Ferida** · M1 · Lacaio · Morbidyum · estilo **M** · 1:1  
   id `abutre-da-ferida`  
-  > Abutre da Ferida: abutres; criatura selvagem; jeito voador, numeroso; um de um bando; no gesto de bicar; magia verde-pálida.
+  > Abutre da Ferida: abutres; criatura selvagem; jeito voador, numeroso; um de um bando; no gesto de bicar; magia verde-pálida, na forma de fumaça fria e fios que partem.
 - **Escorpião-Rei** · M3 · Padrão · Dominum · estilo **M** · 1:1  
   id `escorpiao-rei`  
-  > Escorpião-Rei: escorpião; criatura selvagem; jeito blindado, venenoso; no gesto de pinça; magia roxo-sangue.
+  > Escorpião-Rei: escorpião; criatura selvagem; jeito blindado, venenoso; no gesto de pinça; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos).
 - **Besouro-Carruagem** · M1 · Social · — · estilo **M** · 1:1  
   id `besouro-carruagem`  
   > Besouro-Carruagem: besouro, montaria; criatura selvagem; jeito blindado, pesado; pose de conversa; no gesto de chifrar.
 - **Ninho de Harpias** · M2 · Lacaio · Conflitüo · estilo **M** · 1:1  
   id `ninho-de-harpias`  
-  > Ninho de Harpias: harpias; criatura selvagem; jeito voador, barulhento; um de um bando; no gesto de garras; magia vermelho-ferrugem.
+  > Ninho de Harpias: harpias; criatura selvagem; jeito voador, barulhento; um de um bando; no gesto de garras; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos).
 - **Troll de Ponte** · M3 · Bruto · Primitivum · estilo **M** · 1:1  
   id `troll-de-ponte`  
-  > Troll de Ponte: troll; criatura selvagem; jeito regenerante, enorme; grande e pesado; no gesto de porrete; magia verde-musgo e âmbar.
+  > Troll de Ponte: troll; criatura selvagem; jeito regenerante, enorme; grande e pesado; no gesto de porrete; magia verde-musgo e âmbar, na forma de construtos orgânicos (raízes, galhos) e esporos soltos.
 - **Mãe-da-Lama** · M4 · Chefe · Primitivum + Morbidyum · Resiliente · estilo **M** · 1:1  
   id `mae-da-lama`  
-  > Mãe-da-Lama: pântano, mãe; criatura selvagem; jeito enorme, regenerante; pose imponente de chefe; no gesto de afogar; magia verde-pálida.
+  > Mãe-da-Lama: pântano, mãe; criatura selvagem; jeito enorme, regenerante; pose imponente de chefe; no gesto de afogar; magia verde-pálida, na forma de fumaça fria e fios que partem.
 
 ### Bestiário · Disruptos (nascidos do Cataclisma) (20)
 
 - **Sobra** · M1 · Lacaio · (sorteado) · Instável · estilo **M** · 1:1  
   id `sobra`  
-  > Sobra: sobra; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito estranho (tem a forma de uma magia que alguém errou); um de um bando; no gesto de arranhar.
+  > Sobra: sobra; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito estranho (tem a forma de uma magia que alguém errou); um de um bando; no gesto de arranhar; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **O Eco que Come o Som** · M1 · Padrão · Alvorum · Instável · prompt do [[20 Prompts de arte - personagens]] · estilo **M** · 1:1  
   id `eco-sobras`  
   > Massa de fios cinza-perolados cobrindo um sino, rosto sem olhos feito só de bocas abertas, fios comendo as letras de um parágrafo e deixando buracos brancos no texto. Duas bolas de fio pequenas rolando pela margem.
 - **Rasgo Faminto** · M2 · Padrão · (sorteado) · Instável · estilo **M** · 1:1  
   id `rasgo-faminto`  
-  > Rasgo Faminto: rasgo, boca; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito faminto de magia; no gesto de morder.
+  > Rasgo Faminto: rasgo, boca; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito faminto de magia; no gesto de morder; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Eco de Magia Morta** · M2 · Conjurador · (sorteado) · Instável · estilo **M** · 1:1  
   id `eco-de-magia-morta`  
-  > Eco de Magia Morta: eco; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito etéreo, estranho; no gesto de repetir.
+  > Eco de Magia Morta: eco; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito etéreo, estranho; no gesto de repetir; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Nó de Ímpares** · M3 · Bruto · Quimerarcano · Instável · estilo **M** · 1:1  
   id `no-de-impares`  
-  > Nó de Ímpares: nó; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito enorme, faminto de magia; grande e pesado; no gesto de esmagar.
+  > Nó de Ímpares: nó; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito enorme, faminto de magia; grande e pesado; no gesto de esmagar; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Disrupto Gêmeo** · M3 · Ágil (sempre 2) · (sorteado) · Instável · estilo **M** · 1:1  
   id `disrupto-gemeo`  
-  > Disrupto Gêmeo: metade; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito leal (se um cai, o outro age na hora); no gesto de cortar.
+  > Disrupto Gêmeo: metade; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito leal (se um cai, o outro age na hora); no gesto de cortar; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **A Coisa Que Sobrou** · M4 · Chefe · três Valores · Quimerarcano, Resiliente, Instável · estilo **M** · 1:1  
   id `a-coisa-que-sobrou`  
-  > A Coisa Que Sobrou: sobra, tempestade; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito estranho, enorme; pose imponente de chefe; no gesto de rasgar.
+  > A Coisa Que Sobrou: sobra, tempestade; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito estranho, enorme; pose imponente de chefe; no gesto de rasgar; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Chuva de Faíscas** · M1 · Lacaio · Conflitüo · Instável · estilo **M** · 1:1  
   id `chuva-de-faiscas`  
-  > Chuva de Faíscas: faíscas; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito numeroso, ardente; um de um bando; no gesto de queimar; magia vermelho-ferrugem.
+  > Chuva de Faíscas: faíscas; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito numeroso, ardente; um de um bando; no gesto de queimar; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos); magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Poça que Pensa** · M1 · Social · Sublimeyn · Instável · estilo **M** · 1:1  
   id `poca-que-pensa`  
-  > Poça que Pensa: poça, disrupto; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito estranho, minúsculo; pose de conversa; no gesto de imitar; magia prata-mercúrio.
+  > Poça que Pensa: poça, disrupto; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito estranho, minúsculo; pose de conversa; no gesto de imitar; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Carcaça Andante** · M2 · Bruto · Morbidyum · Instável · estilo **M** · 1:1  
   id `carcaca-andante`  
-  > Carcaça Andante: cadáver, sobra; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito imundo, duro; grande e pesado; no gesto de esmagar; magia verde-pálida.
+  > Carcaça Andante: cadáver, sobra; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito imundo, duro; grande e pesado; no gesto de esmagar; magia verde-pálida, na forma de fumaça fria e fios que partem; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Coleira Sem Dono** · M2 · Padrão · Dominum · Instável · estilo **M** · 1:1  
   id `coleira-sem-dono`  
-  > Coleira Sem Dono: coleira, corrente; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito faminto, estranho (procura um pescoço); no gesto de chicotear; magia roxo-sangue.
+  > Coleira Sem Dono: coleira, corrente; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito faminto, estranho (procura um pescoço); no gesto de chicotear; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos); magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Rosto Sem Gente** · M2 · Conjurador · Persona · Instável · estilo **M** · 1:1  
   id `rosto-sem-gente`  
-  > Rosto Sem Gente: rosto, máscara; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito belo e grotesco, alternando; no gesto de gritar; magia coral.
+  > Rosto Sem Gente: rosto, máscara; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito belo e grotesco, alternando; no gesto de gritar; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Sombra Que Ficou** · M2 · Ágil · Alvorum · Instável · estilo **M** · 1:1  
   id `sombra-que-ficou`  
-  > Sombra Que Ficou: sombra; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito invisível, silencioso; leve e veloz; no gesto de arranhar; magia dourada e preta.
+  > Sombra Que Ficou: sombra; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito invisível, silencioso; leve e veloz; no gesto de arranhar; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Relógio Quebrado** · M2 · Conjurador · Eternyr · Instável · estilo **M** · 1:1  
   id `relogio-quebrado`  
-  > Relógio Quebrado: relógio, disrupto; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito estranho, barulhento; no gesto de ponteiro; magia azul-noite com riscos brancos.
+  > Relógio Quebrado: relógio, disrupto; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito estranho, barulhento; no gesto de ponteiro; magia azul-noite com riscos brancos, na forma de aura com falhas e rastros parados no ar; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Pensamento Solto** · M1 · Conjurador · Cognitium · Instável · estilo **M** · 1:1  
   id `pensamento-solto`  
-  > Pensamento Solto: ideia, disrupto; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito invisível; no gesto de sussurrar; magia índigo.
+  > Pensamento Solto: ideia, disrupto; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito invisível; no gesto de sussurrar; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Raiz Errada** · M2 · Padrão · Primitivum · Instável · estilo **M** · 1:1  
   id `raiz-errada`  
-  > Raiz Errada: raiz, disrupto; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito regenerante, espinhoso; no gesto de enroscar; magia verde-musgo e âmbar.
+  > Raiz Errada: raiz, disrupto; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito regenerante, espinhoso; no gesto de enroscar; magia verde-musgo e âmbar, na forma de construtos orgânicos (raízes, galhos) e esporos soltos; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Enxame de Palavras** · M3 · Lacaio · (sorteado) · Instável · estilo **M** · 1:1  
   id `enxame-de-palavras`  
-  > Enxame de Palavras: palavras; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito numeroso, faminto de magia; um de um bando; no gesto de cortar.
+  > Enxame de Palavras: palavras; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito numeroso, faminto de magia; um de um bando; no gesto de cortar; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Colosso de Ferida** · M4 · Bruto · (sorteado) + Conflitüo · Instável, Resiliente · estilo **M** · 1:1  
   id `colosso-de-ferida`  
-  > Colosso de Ferida: colosso, ferida; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito enorme, pesado; grande e pesado; no gesto de esmagar; magia vermelho-ferrugem.
+  > Colosso de Ferida: colosso, ferida; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito enorme, pesado; grande e pesado; no gesto de esmagar; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos); magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Menino de Cataclisma** · M3 · Social · (sorteado) · Instável · estilo **M** · 1:1  
   id `menino-de-cataclisma`  
-  > Menino de Cataclisma: menino, disrupto; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito minúsculo, faminto de magia; pose de conversa; no gesto de chorar.
+  > Menino de Cataclisma: menino, disrupto; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito minúsculo, faminto de magia; pose de conversa; no gesto de chorar; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Maré de Sobras** · M3 · Chefe · (sorteado) · Instável, Quimerarcano · estilo **M** · 1:1  
   id `mare-de-sobras`  
-  > Maré de Sobras: maré, sobras; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito numeroso, estranho; pose imponente de chefe; no gesto de afogar.
+  > Maré de Sobras: maré, sobras; criatura nascida do Cataclisma, formas quebradas, frestas e pedaços que escapam do corpo, cores sujas; jeito numeroso, estranho; pose imponente de chefe; no gesto de afogar; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 
 ### Bestiário · Protetores do Arcano (15)
 
@@ -1420,7 +1420,7 @@
   > Juiz do Selo: juiz, estátua; guardião que anula a magia, armadura com selos e lacres; jeito sagrado, pesado; pose imponente de chefe; no gesto de golpear.
 - **Arquivista Sem Rosto** · M3 · Suporte · Cognitium · Resiliente · estilo **P** · 1:1  
   id `arquivista-sem-rosto`  
-  > Arquivista Sem Rosto: arquivista; guardião que anula a magia, armadura com selos e lacres; jeito astuto, mentiroso; pose de quem ajuda os outros; no gesto de anotar; magia índigo.
+  > Arquivista Sem Rosto: arquivista; guardião que anula a magia, armadura com selos e lacres; jeito astuto, mentiroso; pose de quem ajuda os outros; no gesto de anotar; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços.
 - **Noviça da Ordem** · M1 · Suporte · — · Anulador · estilo **P** · 1:1  
   id `novica-da-ordem`  
   > Noviça da Ordem: noviça, protetora; guardião que anula a magia, armadura com selos e lacres; jeito paciente; pose de quem ajuda os outros; no gesto de bastão.
@@ -1450,7 +1450,7 @@
   > Anjo do Fechamento (espécie): anjo, selo; guardião que anula a magia, armadura com selos e lacres; jeito sagrado, brilhante; pose imponente de chefe; no gesto de espada.
 - **Desertora da Ordem** · M2 · Ágil · Alvorum · — · estilo **P** · 1:1  
   id `desertora-da-ordem`  
-  > Desertora da Ordem: desertora, protetora; guardião que anula a magia, armadura com selos e lacres; jeito veloz, covarde; leve e veloz; no gesto de espada; magia dourada e preta.
+  > Desertora da Ordem: desertora, protetora; guardião que anula a magia, armadura com selos e lacres; jeito veloz, covarde; leve e veloz; no gesto de espada; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra.
 - **Guardiã da Fronteira** · M2 · Atirador · — · Anulador · estilo **P** · 1:1  
   id `guardia-da-fronteira`  
   > Guardiã da Fronteira: guardiã, protetora; guardião que anula a magia, armadura com selos e lacres; jeito paciente; no gesto de besta.
@@ -1459,154 +1459,154 @@
 
 - **Fogo-Fátuo** · M1 · Ágil · Alvorum · estilo **M** · 1:1  
   id `fogo-fatuo`  
-  > Fogo-Fátuo: luz, engano; ser feito de energia luminosa e sólida, bruxuleante; jeito etéreo, brilhante; leve e veloz; no gesto de queimar; magia dourada e preta.
+  > Fogo-Fátuo: luz, engano; ser feito de energia luminosa e sólida, bruxuleante; jeito etéreo, brilhante; leve e veloz; no gesto de queimar; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Vento Com Rancor** · M2 · Atirador · Sublimeyn · estilo **M** · 1:1  
   id `vento-com-rancor`  
-  > Vento Com Rancor: vento; ser feito de energia luminosa e sólida, bruxuleante; jeito etéreo, invisível; no gesto de cortar; magia prata-mercúrio.
+  > Vento Com Rancor: vento; ser feito de energia luminosa e sólida, bruxuleante; jeito etéreo, invisível; no gesto de cortar; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Chama que Lembra** · M2 · Conjurador · Sublimeyn + Cognitium · estilo **M** · 1:1  
   id `chama-que-lembra`  
-  > Chama que Lembra: chama, memória; ser feito de energia luminosa e sólida, bruxuleante; jeito ardente, etéreo; no gesto de queimar; magia prata-mercúrio.
+  > Chama que Lembra: chama, memória; ser feito de energia luminosa e sólida, bruxuleante; jeito ardente, etéreo; no gesto de queimar; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Hora Solta** · M3 · Ágil · Eternyr · Resiliente · estilo **M** · 1:1  
   id `hora-solta`  
-  > Hora Solta: instante; ser feito de energia luminosa e sólida, bruxuleante; jeito etéreo, estranho (não pode ser atacada duas vezes seguidas pelo mesmo jogador); leve e veloz; no gesto de tocar; magia azul-noite com riscos brancos.
+  > Hora Solta: instante; ser feito de energia luminosa e sólida, bruxuleante; jeito etéreo, estranho (não pode ser atacada duas vezes seguidas pelo mesmo jogador); leve e veloz; no gesto de tocar; magia azul-noite com riscos brancos, na forma de aura com falhas e rastros parados no ar; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Faísca de Tempestade** · M1 · Lacaio · Conflitüo · estilo **M** · 1:1  
   id `faisca-de-tempestade`  
-  > Faísca de Tempestade: raio; ser feito de energia luminosa e sólida, bruxuleante; jeito numeroso, brilhante; um de um bando; no gesto de choque; magia vermelho-ferrugem.
+  > Faísca de Tempestade: raio; ser feito de energia luminosa e sólida, bruxuleante; jeito numeroso, brilhante; um de um bando; no gesto de choque; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos); magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Nuvem Triste** · M1 · Social · Persona · estilo **M** · 1:1  
   id `nuvem-triste`  
-  > Nuvem Triste: nuvem, tristeza; ser feito de energia luminosa e sólida, bruxuleante; jeito etéreo, voador; pose de conversa; no gesto de chover; magia coral.
+  > Nuvem Triste: nuvem, tristeza; ser feito de energia luminosa e sólida, bruxuleante; jeito etéreo, voador; pose de conversa; no gesto de chover; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Aurora Que Desceu** · M3 · Suporte · Alvorum · estilo **M** · 1:1  
   id `aurora-que-desceu`  
-  > Aurora Que Desceu: aurora; ser feito de energia luminosa e sólida, bruxuleante; jeito brilhante, etéreo, estranho (tem as cores do véu de oulveil); pose de quem ajuda os outros; no gesto de iluminar; magia dourada e preta.
+  > Aurora Que Desceu: aurora; ser feito de energia luminosa e sólida, bruxuleante; jeito brilhante, etéreo, estranho (tem as cores do véu de oulveil); pose de quem ajuda os outros; no gesto de iluminar; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Brasa de Forja** · M1 · Padrão · Sublimeyn · estilo **M** · 1:1  
   id `brasa-de-forja`  
-  > Brasa de Forja: brasa; ser feito de energia luminosa e sólida, bruxuleante; jeito ardente; no gesto de queimar; magia prata-mercúrio.
+  > Brasa de Forja: brasa; ser feito de energia luminosa e sólida, bruxuleante; jeito ardente; no gesto de queimar; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Vento Mensageiro** · M1 · Social · Eternyr · estilo **M** · 1:1  
   id `vento-mensageiro`  
-  > Vento Mensageiro: vento; ser feito de energia luminosa e sólida, bruxuleante; jeito voador, invisível; pose de conversa; no gesto de levar; magia azul-noite com riscos brancos.
+  > Vento Mensageiro: vento; ser feito de energia luminosa e sólida, bruxuleante; jeito voador, invisível; pose de conversa; no gesto de levar; magia azul-noite com riscos brancos, na forma de aura com falhas e rastros parados no ar; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Luz de Velório** · M2 · Conjurador · Morbidyum · estilo **M** · 1:1  
   id `luz-de-velorio`  
-  > Luz de Velório: luz, luto; ser feito de energia luminosa e sólida, bruxuleante; jeito etéreo, pálido; no gesto de queimar; magia verde-pálida.
+  > Luz de Velório: luz, luto; ser feito de energia luminosa e sólida, bruxuleante; jeito etéreo, pálido; no gesto de queimar; magia verde-pálida, na forma de fumaça fria e fios que partem; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Redemoinho de Areia** · M2 · Bruto · Sublimeyn · estilo **M** · 1:1  
   id `redemoinho-de-areia`  
-  > Redemoinho de Areia: redemoinho; ser feito de energia luminosa e sólida, bruxuleante; jeito enorme, etéreo; grande e pesado; no gesto de arrastar; magia prata-mercúrio.
+  > Redemoinho de Areia: redemoinho; ser feito de energia luminosa e sólida, bruxuleante; jeito enorme, etéreo; grande e pesado; no gesto de arrastar; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Canto Sem Cantor** · M2 · Conjurador · Persona · estilo **M** · 1:1  
   id `canto-sem-cantor`  
-  > Canto Sem Cantor: música; ser feito de energia luminosa e sólida, bruxuleante; jeito invisível, belo; no gesto de tocar; magia coral.
+  > Canto Sem Cantor: música; ser feito de energia luminosa e sólida, bruxuleante; jeito invisível, belo; no gesto de tocar; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Fidrau Cantor** · M2 · Suporte · Persona · estilo **M** · 1:1  
   id `fidrau-cantor`  
-  > Fidrau Cantor: fidrau, música; ser feito de energia luminosa e sólida, bruxuleante; jeito brilhante, belo; pose de quem ajuda os outros; no gesto de cantar; magia coral.
+  > Fidrau Cantor: fidrau, música; ser feito de energia luminosa e sólida, bruxuleante; jeito brilhante, belo; pose de quem ajuda os outros; no gesto de cantar; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Tempestade Viva** · M4 · Chefe · Sublimeyn + Conflitüo · Resiliente · estilo **M** · 1:1  
   id `tempestade-viva`  
-  > Tempestade Viva: tempestade; ser feito de energia luminosa e sólida, bruxuleante; jeito enorme, voador; pose imponente de chefe; no gesto de raio; magia vermelho-ferrugem.
+  > Tempestade Viva: tempestade; ser feito de energia luminosa e sólida, bruxuleante; jeito enorme, voador; pose imponente de chefe; no gesto de raio; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos); magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 
 ### Bestiário · Seres dos planos dos Valores (25)
 
 - **Juramentado** · M3 · Padrão · Conflitüo · estilo **M** · 1:1  
   id `juramentado`  
-  > Juramentado (Campo Sem Trégua): soldado, morto; ser de outro plano, disforme e estranho; jeito duro; no gesto de cortar; magia vermelho-ferrugem.
+  > Juramentado (Campo Sem Trégua): soldado, morto; ser de outro plano, disforme e estranho; jeito duro; no gesto de cortar; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos); magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Ferreiro de Guerra** · M3 · Suporte · Conflitüo · estilo **M** · 1:1  
   id `ferreiro-de-guerra`  
-  > Ferreiro de Guerra (Campo Sem Trégua): ferreiro, juramentado; ser de outro plano, disforme e estranho; jeito ardente, paciente; pose de quem ajuda os outros; no gesto de martelo; magia vermelho-ferrugem.
+  > Ferreiro de Guerra (Campo Sem Trégua): ferreiro, juramentado; ser de outro plano, disforme e estranho; jeito ardente, paciente; pose de quem ajuda os outros; no gesto de martelo; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos); magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Estandarte Sem Exército** · M2 · Social · Conflitüo · estilo **M** · 1:1  
   id `estandarte-sem-exercito`  
-  > Estandarte Sem Exército (Campo Sem Trégua): estandarte; ser de outro plano, disforme e estranho; jeito estranho; pose de conversa; no gesto de tremular; magia vermelho-ferrugem.
+  > Estandarte Sem Exército (Campo Sem Trégua): estandarte; ser de outro plano, disforme e estranho; jeito estranho; pose de conversa; no gesto de tremular; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos); magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Moldado** · M3 · Ágil · Sublimeyn · estilo **M** · 1:1  
   id `moldado`  
-  > Moldado (Mar de Estados): moldado; ser de outro plano, disforme e estranho; jeito estranho; leve e veloz; no gesto de envolver; magia prata-mercúrio.
+  > Moldado (Mar de Estados): moldado; ser de outro plano, disforme e estranho; jeito estranho; leve e veloz; no gesto de envolver; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Alquimista Náufrago** · M2 · Social · Sublimeyn · estilo **M** · 1:1  
   id `alquimista-naufrago`  
-  > Alquimista Náufrago (Mar de Estados): alquimista, náufrago; ser de outro plano, disforme e estranho; jeito estranho (metade do corpo é vidro); pose de conversa; no gesto de trocar; magia prata-mercúrio.
+  > Alquimista Náufrago (Mar de Estados): alquimista, náufrago; ser de outro plano, disforme e estranho; jeito estranho (metade do corpo é vidro); pose de conversa; no gesto de trocar; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Ilha de Vidro Viva** · M4 · Bruto · Sublimeyn · Resiliente · estilo **M** · 1:1  
   id `ilha-de-vidro-viva`  
-  > Ilha de Vidro Viva (Mar de Estados): ilha; ser de outro plano, disforme e estranho; jeito enorme, frágil; grande e pesado; no gesto de estilhaçar; magia prata-mercúrio.
+  > Ilha de Vidro Viva (Mar de Estados): ilha; ser de outro plano, disforme e estranho; jeito enorme, frágil; grande e pesado; no gesto de estilhaçar; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Manso** · M2 · Social · Dominum · estilo **M** · 1:1  
   id `manso`  
-  > Manso (Voragem): servo, nascido-na-voragem; ser de outro plano, disforme e estranho; jeito leal; pose de conversa; no gesto de guiar; magia roxo-sangue.
+  > Manso (Voragem): servo, nascido-na-voragem; ser de outro plano, disforme e estranho; jeito leal; pose de conversa; no gesto de guiar; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos); magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Fera Acorrentada** · M3 · Bruto · Dominum · estilo **M** · 1:1  
   id `fera-acorrentada`  
-  > Fera Acorrentada (Voragem): fera, corrente; ser de outro plano, disforme e estranho; jeito enorme, furioso; grande e pesado; no gesto de despedaçar; magia roxo-sangue.
+  > Fera Acorrentada (Voragem): fera, corrente; ser de outro plano, disforme e estranho; jeito enorme, furioso; grande e pesado; no gesto de despedaçar; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos); magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Sentido** · M3 · Conjurador · Persona · estilo **M** · 1:1  
   id `sentido`  
-  > Sentido (Cidade dos Rostos): emoção (uma só: raiva, saudade, inveja...); ser de outro plano, disforme e estranho; jeito belo ou grotesco; no gesto de contagiar; magia coral.
+  > Sentido (Cidade dos Rostos): emoção (uma só: raiva, saudade, inveja...); ser de outro plano, disforme e estranho; jeito belo ou grotesco; no gesto de contagiar; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **O Seu Rosto** · M3 · Social · Persona · estilo **M** · 1:1  
   id `o-seu-rosto`  
-  > O Seu Rosto (Cidade dos Rostos): duplo; ser de outro plano, disforme e estranho; jeito estranho (tem o rosto de um dos jogadores); pose de conversa; no gesto de imitar; magia coral.
+  > O Seu Rosto (Cidade dos Rostos): duplo; ser de outro plano, disforme e estranho; jeito estranho (tem o rosto de um dos jogadores); pose de conversa; no gesto de imitar; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Vigia** · M3 · Atirador · Alvorum · Anulador · estilo **M** · 1:1  
   id `vigia`  
-  > Vigia (Céu de Duas Pálpebras): vigia; ser de outro plano, disforme e estranho; jeito cego (vê por dentro); no gesto de flecha; magia dourada e preta.
+  > Vigia (Céu de Duas Pálpebras): vigia; ser de outro plano, disforme e estranho; jeito cego (vê por dentro); no gesto de flecha; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Sonhador Perdido** · M2 · Social · Alvorum · estilo **M** · 1:1  
   id `sonhador-perdido`  
-  > Sonhador Perdido (Céu de Duas Pálpebras): sonhador; ser de outro plano, disforme e estranho; jeito etéreo; pose de conversa; no gesto de contar; magia dourada e preta.
+  > Sonhador Perdido (Céu de Duas Pálpebras): sonhador; ser de outro plano, disforme e estranho; jeito etéreo; pose de conversa; no gesto de contar; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Fantasma em Fila** · M1 · Lacaio · Morbidyum · estilo **M** · 1:1  
   id `fantasma-em-fila`  
-  > Fantasma em Fila (Antessala): fantasmas; ser de outro plano, disforme e estranho; jeito numeroso, etéreo; um de um bando; no gesto de tocar; magia verde-pálida.
+  > Fantasma em Fila (Antessala): fantasmas; ser de outro plano, disforme e estranho; jeito numeroso, etéreo; um de um bando; no gesto de tocar; magia verde-pálida, na forma de fumaça fria e fios que partem; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Porteira da Antessala** · M4 · Social · Morbidyum · Inquebrável · estilo **M** · 1:1  
   id `porteira-da-antessala`  
-  > Porteira da Antessala (Antessala): porteira, velha e parteira; ser de outro plano, disforme e estranho; jeito antigo, paciente; pose de conversa; no gesto de perguntar; magia verde-pálida.
+  > Porteira da Antessala (Antessala): porteira, velha e parteira; ser de outro plano, disforme e estranho; jeito antigo, paciente; pose de conversa; no gesto de perguntar; magia verde-pálida, na forma de fumaça fria e fios que partem; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **O Que Voltou** · M3 · Padrão · Morbidyum · estilo **M** · 1:1  
   id `o-que-voltou`  
-  > O Que Voltou (Antessala): morto, retornado; ser de outro plano, disforme e estranho; jeito pálido, duro; no gesto de espada; magia verde-pálida.
+  > O Que Voltou (Antessala): morto, retornado; ser de outro plano, disforme e estranho; jeito pálido, duro; no gesto de espada; magia verde-pálida, na forma de fumaça fria e fios que partem; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Esquecido** · M2 · Lacaio · Cognitium · estilo **M** · 1:1  
   id `esquecido`  
-  > Esquecido (Arquivo Sem Dono): esquecidos; ser de outro plano, disforme e estranho; jeito numeroso, invisível; um de um bando; no gesto de apagar; magia índigo.
+  > Esquecido (Arquivo Sem Dono): esquecidos; ser de outro plano, disforme e estranho; jeito numeroso, invisível; um de um bando; no gesto de apagar; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Bibliotecária do Arquivo** · M3 · Suporte · Cognitium · estilo **M** · 1:1  
   id `bibliotecaria-do-arquivo`  
-  > Bibliotecária do Arquivo (Arquivo Sem Dono): bibliotecária; ser de outro plano, disforme e estranho; jeito astuto, paciente; pose de quem ajuda os outros; no gesto de achar; magia índigo.
+  > Bibliotecária do Arquivo (Arquivo Sem Dono): bibliotecária; ser de outro plano, disforme e estranho; jeito astuto, paciente; pose de quem ajuda os outros; no gesto de achar; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Sombra do Trono Vazio** · M4 · Chefe · Cognitium · Inquebrável, Resiliente · estilo **M** · 1:1  
   id `sombra-do-trono-vazio`  
-  > Sombra do Trono Vazio (Arquivo Sem Dono): trono, ausência; ser de outro plano, disforme e estranho; jeito invisível, antigo; pose imponente de chefe; no gesto de esquecer; magia índigo.
+  > Sombra do Trono Vazio (Arquivo Sem Dono): trono, ausência; ser de outro plano, disforme e estranho; jeito invisível, antigo; pose imponente de chefe; no gesto de esquecer; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Repetido** · M3 · Lacaio · Eternyr · estilo **M** · 1:1  
   id `repetido`  
-  > Repetido (Entretempo): repetido; ser de outro plano, disforme e estranho; jeito numeroso, paciente; um de um bando; no gesto de repetir; magia azul-noite com riscos brancos.
+  > Repetido (Entretempo): repetido; ser de outro plano, disforme e estranho; jeito numeroso, paciente; um de um bando; no gesto de repetir; magia azul-noite com riscos brancos, na forma de aura com falhas e rastros parados no ar; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Sala Que É Um Ano** · M3 · Social · Eternyr · estilo **M** · 1:1  
   id `sala-que-e-um-ano`  
-  > Sala Que É Um Ano (Entretempo): sala, ano; ser de outro plano, disforme e estranho; jeito estranho; pose de conversa; no gesto de envelhecer; magia azul-noite com riscos brancos.
+  > Sala Que É Um Ano (Entretempo): sala, ano; ser de outro plano, disforme e estranho; jeito estranho; pose de conversa; no gesto de envelhecer; magia azul-noite com riscos brancos, na forma de aura com falhas e rastros parados no ar; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Espírito-Animal** · M2 · Padrão · Primitivum · estilo **M** · 1:1  
   id `espirito-animal`  
-  > Espírito-Animal (Floresta Primeira): espírito, animal; ser de outro plano, disforme e estranho; jeito etéreo, leal; no gesto de garra; magia verde-musgo e âmbar.
+  > Espírito-Animal (Floresta Primeira): espírito, animal; ser de outro plano, disforme e estranho; jeito etéreo, leal; no gesto de garra; magia verde-musgo e âmbar, na forma de construtos orgânicos (raízes, galhos) e esporos soltos; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Bicho-Antes-dos-Bichos** · M4 · Chefe · Primitivum · Deidade · estilo **M** · 1:1  
   id `bicho-antes-dos-bichos`  
-  > Bicho-Antes-dos-Bichos (Floresta Primeira): fera, origem; ser de outro plano, disforme e estranho; jeito enorme, antigo; pose imponente de chefe; no gesto de morder; magia verde-musgo e âmbar.
+  > Bicho-Antes-dos-Bichos (Floresta Primeira): fera, origem; ser de outro plano, disforme e estranho; jeito enorme, antigo; pose imponente de chefe; no gesto de morder; magia verde-musgo e âmbar, na forma de construtos orgânicos (raízes, galhos) e esporos soltos; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Autômato do Postulário** · M4 · Bruto · — · Anulador, Inquebrável · estilo **M** · 1:1  
   id `automato-do-postulario`  
-  > Autômato do Postulário (O Postulário): autômato, guardião; ser de outro plano, disforme e estranho; jeito enorme, paciente; grande e pesado; no gesto de esmagar.
+  > Autômato do Postulário (O Postulário): autômato, guardião; ser de outro plano, disforme e estranho; jeito enorme, paciente; grande e pesado; no gesto de esmagar; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **O Ministrum** · M4 · Líder · Dominum + Cognitium · Inquebrável · estilo **M** · 1:1  
   id `o-ministrum`  
-  > O Ministrum (Nostrum): juiz, lógica; ser de outro plano, disforme e estranho; jeito antigo, duro; postura de quem comanda; no gesto de sentenciar; magia roxo-sangue.
+  > O Ministrum (Nostrum): juiz, lógica; ser de outro plano, disforme e estranho; jeito antigo, duro; postura de quem comanda; no gesto de sentenciar; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos); magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **A Dama da Noite de Fhim** · M4 · Social · Alvorum · Deidade · estilo **M** · 1:1  
   id `a-dama-da-noite-de-fhim`  
-  > A Dama da Noite de Fhim (Fhim): divindade, noite; ser de outro plano, disforme e estranho; jeito belo, etéreo; pose de conversa; no gesto de observar; magia dourada e preta.
+  > A Dama da Noite de Fhim (Fhim): divindade, noite; ser de outro plano, disforme e estranho; jeito belo, etéreo; pose de conversa; no gesto de observar; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 
 ### Bestiário · Semideuses (9)
 
 - **Vyal, o Primeiro Filho** · M4 · Chefe · Persona · Deidade · estilo **M** · 1:1  
   id `vyal-o-primeiro-filho`  
-  > Vyal, o Primeiro Filho: semideus, filho de zahun; semideus, presença enorme e solene, aura divina; jeito belo, antigo; pose imponente de chefe; no gesto de tocar; magia coral.
+  > Vyal, o Primeiro Filho: semideus, filho de zahun; semideus, presença enorme e solene, aura divina; jeito belo, antigo; pose imponente de chefe; no gesto de tocar; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Serath Duas-Mãos** · M4 · Chefe · Conflitüo · Deidade · estilo **M** · 1:1  
   id `serath-duas-maos`  
-  > Serath Duas-Mãos: semideusa, general; semideus, presença enorme e solene, aura divina; jeito blindado, antigo; pose imponente de chefe; no gesto de cortar; magia vermelho-ferrugem.
+  > Serath Duas-Mãos: semideusa, general; semideus, presença enorme e solene, aura divina; jeito blindado, antigo; pose imponente de chefe; no gesto de cortar; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos); magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Liss de Vidro** · M4 · Chefe · Sublimeyn · Deidade · estilo **M** · 1:1  
   id `liss-de-vidro`  
-  > Liss de Vidro: semideusa, rainha; semideus, presença enorme e solene, aura divina; jeito belo, estranho; pose imponente de chefe; no gesto de toque; magia prata-mercúrio.
+  > Liss de Vidro: semideusa, rainha; semideus, presença enorme e solene, aura divina; jeito belo, estranho; pose imponente de chefe; no gesto de toque; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Garmhal, o Domador** · M4 · Chefe · Dominum + Primitivum · Deidade, Quimerarcano · estilo **M** · 1:1  
   id `garmhal-o-domador`  
-  > Garmhal, o Domador: semideus, cavaleiro; semideus, presença enorme e solene, aura divina; jeito enorme (com a montaria), leal; pose imponente de chefe; no gesto de chicotear; magia roxo-sangue.
+  > Garmhal, o Domador: semideus, cavaleiro; semideus, presença enorme e solene, aura divina; jeito enorme (com a montaria), leal; pose imponente de chefe; no gesto de chicotear; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos); magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Hael, o Insone** · M4 · Chefe · Alvorum · Deidade · estilo **M** · 1:1  
   id `hael-o-insone`  
-  > Hael, o Insone: semideus, insone; semideus, presença enorme e solene, aura divina; jeito pálido, brilhante; pose imponente de chefe; no gesto de olhar; magia dourada e preta.
+  > Hael, o Insone: semideus, insone; semideus, presença enorme e solene, aura divina; jeito pálido, brilhante; pose imponente de chefe; no gesto de olhar; magia dourada e preta, na forma de aura dividida, com falhas entre a parte de luz e a de sombra; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Morwen Terceira-Vida** · M4 · Suporte · Morbidyum · Deidade · estilo **M** · 1:1  
   id `morwen-terceira-vida`  
-  > Morwen Terceira-Vida: semideusa, curandeira; semideus, presença enorme e solene, aura divina; jeito paciente, antigo; pose de quem ajuda os outros; no gesto de curar; magia verde-pálida.
+  > Morwen Terceira-Vida: semideusa, curandeira; semideus, presença enorme e solene, aura divina; jeito paciente, antigo; pose de quem ajuda os outros; no gesto de curar; magia verde-pálida, na forma de fumaça fria e fios que partem; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **O Sem-Nome** · M4 · Social · Cognitium · Deidade · estilo **M** · 1:1  
   id `o-sem-nome`  
-  > O Sem-Nome: semideus, esquecido; semideus, presença enorme e solene, aura divina; jeito invisível, antigo; pose de conversa; no gesto de existir; magia índigo.
+  > O Sem-Nome: semideus, esquecido; semideus, presença enorme e solene, aura divina; jeito invisível, antigo; pose de conversa; no gesto de existir; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Tique** · M4 · Social · Eternyr · Deidade · estilo **M** · 1:1  
   id `tique`  
-  > Tique: criança, semideus; semideus, presença enorme e solene, aura divina; jeito minúsculo, antigo; pose de conversa; no gesto de brincar; magia azul-noite com riscos brancos.
+  > Tique: criança, semideus; semideus, presença enorme e solene, aura divina; jeito minúsculo, antigo; pose de conversa; no gesto de brincar; magia azul-noite com riscos brancos, na forma de aura com falhas e rastros parados no ar; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 - **Rhu, a Matilha** · M4 · Chefe · Primitivum · Deidade · estilo **M** · 1:1  
   id `rhu-a-matilha`  
-  > Rhu, a Matilha: semideus, matilha; semideus, presença enorme e solene, aura divina; jeito numeroso, leal; pose imponente de chefe; no gesto de morder; magia verde-musgo e âmbar.
+  > Rhu, a Matilha: semideus, matilha; semideus, presença enorme e solene, aura divina; jeito numeroso, leal; pose imponente de chefe; no gesto de morder; magia verde-musgo e âmbar, na forma de construtos orgânicos (raízes, galhos) e esporos soltos; magia e detalhes arcanos bem presentes no corpo, vazando pelas frestas.
 
 ### Bestiário · Dragões e wyverns (10)
 
@@ -1624,10 +1624,10 @@
   > Dragão Ancião: um dragão ancião, memória do mundo, sábio e paciente, cicatrizes antigas, Eras inteiras no olhar. Cor, forma e chamas do Valor do dragão (desenhe no Valor escolhido; padrão: Conflitüo, vermelho-ferrugem).
 - **Aurelhaz, Dragoa-Coral** · M3 · Chefe · Persona · Resiliente · estilo **D** · 1:1  
   id `aurelhaz-dragoa-coral`  
-  > Aurelhaz, Dragoa-Coral: dragoa, colecionadora; dragão ou wyvern; jeito belo, voador; pose imponente de chefe; no gesto de morder; magia coral.
+  > Aurelhaz, Dragoa-Coral: dragoa, colecionadora; dragão ou wyvern; jeito belo, voador; pose imponente de chefe; no gesto de morder; magia coral, na forma de aura suave e uniforme, que transborda quando a emoção é forte.
 - **Velho Ossário, Dragão-Pálido** · M4 · Chefe · Morbidyum + Eternyr · Deidade · estilo **D** · 1:1  
   id `velho-ossario-dragao-palido`  
-  > Velho Ossário, Dragão-Pálido: dragão, ancião; dragão ou wyvern; jeito antigo, pálido; pose imponente de chefe; no gesto de morder; magia verde-pálida.
+  > Velho Ossário, Dragão-Pálido: dragão, ancião; dragão ou wyvern; jeito antigo, pálido; pose imponente de chefe; no gesto de morder; magia verde-pálida, na forma de fumaça fria e fios que partem.
 - **Wyvern Selvagem** · M1 · Ágil · (Valor fraco, opcional) · estilo **P** · 1:1  
   id `wyvern-selvagem`  
   > Wyvern Selvagem: wyvern; dragão ou wyvern; jeito voador, covarde; leve e veloz; no gesto de garras.
@@ -1645,19 +1645,19 @@
 
 - **Autômato de Patrulha** · M2 · Padrão · Sublimeyn · estilo **P** · 1:1  
   id `automato-de-patrulha`  
-  > Autômato de Patrulha: autômato, guarda; estética tecnomaga: magia e máquina, latão, vapor e runas; jeito blindado, barulhento; no gesto de porrete; magia prata-mercúrio.
+  > Autômato de Patrulha: autômato, guarda; estética tecnomaga: magia e máquina, latão, vapor e runas; jeito blindado, barulhento; no gesto de porrete; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Pistoleira de Aluguel** · M2 · Atirador · — · estilo **P** · 1:1  
   id `pistoleira-de-aluguel`  
   > Pistoleira de Aluguel: pistoleira; estética tecnomaga: magia e máquina, latão, vapor e runas; jeito veloz; no gesto de pistola.
 - **Hacker de Dispositivos** · M2 · Conjurador · Cognitium · estilo **P** · 1:1  
   id `hacker-de-dispositivos`  
-  > Hacker de Dispositivos: hacker, comprometido; estética tecnomaga: magia e máquina, latão, vapor e runas; jeito invisível, astuto; no gesto de invadir; magia índigo.
+  > Hacker de Dispositivos: hacker, comprometido; estética tecnomaga: magia e máquina, latão, vapor e runas; jeito invisível, astuto; no gesto de invadir; magia índigo, na forma de véu de fumaça com falhas, como se faltassem pedaços.
 - **Mecânica de Rua** · M1 · Social · Sublimeyn · estilo **P** · 1:1  
   id `mecanica-de-rua`  
-  > Mecânica de Rua: mecânica; estética tecnomaga: magia e máquina, latão, vapor e runas; jeito astuto; pose de conversa; no gesto de consertar; magia prata-mercúrio.
+  > Mecânica de Rua: mecânica; estética tecnomaga: magia e máquina, latão, vapor e runas; jeito astuto; pose de conversa; no gesto de consertar; magia prata-mercúrio, na forma de fumaça e vapor que escorrem e cristalizam.
 - **Titã de Vapor** · M4 · Chefe · Sublimeyn + Conflitüo · Resiliente · estilo **P** · 1:1  
   id `tita-de-vapor`  
-  > Titã de Vapor: titã, máquina; estética tecnomaga: magia e máquina, latão, vapor e runas; jeito enorme, ardente; pose imponente de chefe; no gesto de esmagar; magia vermelho-ferrugem.
+  > Titã de Vapor: titã, máquina; estética tecnomaga: magia e máquina, latão, vapor e runas; jeito enorme, ardente; pose imponente de chefe; no gesto de esmagar; magia vermelho-ferrugem, na forma de construtos sólidos de luz (armas, escudos).
 - **Executiva da Torre** · M3 · Social · Dominum · estilo **P** · 1:1  
   id `executiva-da-torre`  
-  > Executiva da Torre: executiva, dona; estética tecnomaga: magia e máquina, latão, vapor e runas; jeito astuto, mentiroso; pose de conversa; no gesto de comprar; magia roxo-sangue.
+  > Executiva da Torre: executiva, dona; estética tecnomaga: magia e máquina, latão, vapor e runas; jeito astuto, mentiroso; pose de conversa; no gesto de comprar; magia roxo-sangue, na forma de construtos sólidos (correntes, coleiras, elos).

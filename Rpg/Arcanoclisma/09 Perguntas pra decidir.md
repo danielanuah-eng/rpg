@@ -569,3 +569,5 @@ As perguntas P-123 a P-126 (gerador de nomes, personagem aleatório com tabela d
 
 ❓ **Dragões**: mantive as **escamas suaves** e as **chamas fantasmagóricas** que você pediu antes, e somei a presença de kaiju e a anatomia paleontológica. Se o corpo ainda vier pesado demais, afino no estilo D.
 
+✅ **Ajuste do estilo com as novas referências** (cinco imagens do dono): **rostos, olhares e expressões no estilo de anime**; **monstros** no traço das criaturas de referência (linha limpa, cor suave, expressão), com **magia e arcano só em alguns**; **humanos** com o traço, os tons de pele e as posturas das referências, **sem traços animais**, em **gestos heróicos, desafiadores e em movimento**; **magia em quatro formas** (aura suave e uniforme · aura que transborda, com falhas · fumaça · construto de luz sólida, "como poder de lanterna"), cada **Valor com a sua forma típica** e a ligação **Arcano = fechada e suave, Cataclisma = aberta, com falhas**. Em [[27 Estilo de arte - o traço]]; prompts e descrições refeitos.
+
