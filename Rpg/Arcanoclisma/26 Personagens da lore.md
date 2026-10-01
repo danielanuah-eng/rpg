@@ -307,4 +307,4 @@ O Professor não usa magia, mas **suas invenções fazem coisas de magia**. Para
 
 ## Prompts de arte
 
-Os três entram em [[20 Prompts de arte - personagens]] (ids `ciantia-dragoes`, `disscar-mosh`, `professor-estrela`), com a cor do Valor e o elemento da página que cada um toca. O gerador de prompts ([[25 Prompts de arte - catálogo]]) usa esses.
+Os três entram em [[20 Prompts de arte - personagens]] (ids `ciantia-dragoes`, `disscar-rasgo`, `professor-ninguem`), com a cor do Valor e o elemento da página que cada um toca. O gerador de prompts ([[25 Prompts de arte - catálogo]]) usa esses.

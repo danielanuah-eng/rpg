@@ -341,6 +341,7 @@ md = [f'# 25 — Prompts de arte: o catálogo (Fase 4.5)',
       '3. Nas imagens 1:1 o fundo é branco liso: tire o fundo antes de usar (4.6). Cenários (3:2) ficam inteiros.',
       '4. Confira uma a uma: é o objeto ou o ser certo, inteiro, sem texto nem letras inventadas, no traço do estilo e na cor do Valor. Se estiver ruim (cortado, com cenário, com mão, com texto), gere de novo em vez de ajustar.',
       '5. Se o filtro barrar, troque só a palavra que parece violenta (arma, sangue, morte) por uma mais neutra (ferramenta, marca, sono) e gere de novo.',
+      '6. Para testar em outra IA: `arte/prompts/descricoes_das_imagens.md` tem a **descrição escrita completa de cada imagem, em português** (assunto + estilo + fundo), pronta para colar.',
       '',
       '## Estilos',
       '',
@@ -388,3 +389,76 @@ with open(AQUI / 'todos_os_prompts.csv', 'w', encoding='utf-8-sig', newline='') 
     w.writerow(['ordem', 'id', 'nome', 'tipo', 'formato', 'livro', 'arquivo', 'prompt'])
     for i, x in enumerate(ordem, 1):
         w.writerow([i, x['id'], x['nome'], x['tipo'], x['formato'], 'sim' if x['prioridade'] else 'não', x['id'] + '.png', x['prompt']])
+
+
+# ---------------------------------------------------------------- descrições escritas, em português, para colar em outra IA
+INK_PT = ('Ilustração de RPG de fantasia em tinta grossa e expressiva: contornos pretos pesados, cores chapadas e vibrantes '
+          'com sombras duras em blocos, textura de papel com pincel seco, proporções estilizadas e exageradas, sombreado de '
+          'quadrinhos. Nada realista, nada 3D, nada de pintura.')
+ESTILOS_PT = {
+    'P': INK_PT + ' Personagem de corpo inteiro, pose dinâmica, expressão facial forte. Fundo branco liso, sem cenário, sem texto, sem logotipo.',
+    'D': INK_PT + (' Um dragão imponente e nobre, de corpo inteiro, visto levemente de baixo, cabeça erguida, peito orgulhoso, envergadura '
+          'enorme, majestoso mesmo quando ameaça. É um desejo antigo que virou carne e escamas, inteiro, vivo e cheio de alma: feito de '
+          'ordem e mudança ao mesmo tempo, com parte do corpo inteira, fechada e simétrica, e parte rachada, com luz vazando e formas mudando. '
+          'Corpo esguio e elegante, pescoço e cauda longos. Escamas macias, lisas e orgânicas: escamas pequenas que se sobrepõem e acompanham '
+          'as curvas do corpo como a pele de uma cobra ou de um lagarto, desenhadas com poucos traços simples e degradês suaves de cor chapada; '
+          'NÃO são pedra, NÃO são placas de armadura, NÃO são rígidas nem artificiais; só alguns espinhos. Paleta limitada de dois ou três '
+          'tons mais uma cor de destaque que brilha. As chamas NÃO são fogo realista: são chamas fantasmagóricas, translúcidas e estilizadas, '
+          'desenhadas como fitas gráficas limpas e espirais de fumaça de bordas simples, em curvas longas e elegantes que contornam a '
+          'silhueta do corpo como um manto espectral. A cor, a forma e o comportamento delas seguem o Valor do dragão, como descrito no '
+          'assunto. Aparecem só em alguns lugares: pontas das asas, ponta da cauda, crista ao longo da coluna e olhos, onde o corpo parece '
+          'se dissolver em chama; mais algumas veias finas brilhando nas escamas. Olhos profundos e expressivos, com peso emocional (amor, '
+          'medo ou saudade), olhando para quem vê como se os mortais fossem estações passando. Fundo cinza-claro liso, sem cenário, sem '
+          'texto, sem logotipo, sem assinatura.'),
+    'I': INK_PT + ' Um único objeto isolado, inteiro e centralizado, visto em três quartos, com sinais de uso. Fundo branco liso, sem mão, sem personagem, sem texto, sem logotipo.',
+    'C': ('Ilustração de cenário de RPG de fantasia em tinta gráfica e ousada: contornos pretos pesados, cores chapadas e vibrantes com '
+          'sombras duras em blocos, textura de papel com pincel seco, vista aberta e ampla, luz dramática, clima de abertura de capítulo, '
+          'sem personagens em primeiro plano, sem texto, sem logotipo.'),
+}
+CHAMAS_PT = {
+    'Conflitüo': 'chamas fantasmagóricas vermelho-ferrugem em forma de gumes de lâmina e estilhaços voando, pulsando como um coração em batalha',
+    'Sublimeyn': 'chamas fantasmagóricas azul-prateadas que mudam de estado ao subir: vapor, depois gotas, depois pequenos cacos de cristal',
+    'Dominum': 'chamas fantasmagóricas violeta em forma de elos de corrente e argolas de coleira, coladas ao corpo, mais fortes nos olhos',
+    'Persona': 'chamas fantasmagóricas rosa-coral, suaves como um sopro, que mudam de tom com o humor do dragão e às vezes se enroscam em formas que lembram rostos',
+    'Alvorum': 'chamas fantasmagóricas divididas em duas: chamas brancas radiantes nos espinhos e chamas negras de sombra nos olhos, como dia e noite',
+    'Morbidyum': 'chamas fantasmagóricas verde-pálidas, frias e trêmulas, subindo como fogos-fátuos e pequenas almas que partem',
+    'Cognitium': 'chamas fantasmagóricas quase sem cor, como véus, vistas só no canto do olho, borrando-se em névoa índigo e finas linhas de labirinto',
+    'Eternyr': 'chamas fantasmagóricas azul-noite com pontinhos brancos de estrela que se movem devagar demais, deixando rastros congelados como fotos de longa exposição',
+    'Primitivum': 'chamas fantasmagóricas âmbar como vaga-lumes e sementes flutuando, em volta de musgo e de chifres em forma de galho',
+}
+FORMATO_PT = {'1:1': 'quadrado (1:1)', '3:2': 'paisagem (3:2)'}
+
+def assunto_pt(x):
+    s = x['especifico']
+    if 'Its flames:' in s:
+        for v, en in CHAMAS.items():
+            if en in s:
+                s = s.replace('Its flames: ' + en, 'Suas chamas: ' + CHAMAS_PT[v])
+    s = s.strip()
+    return s if s.endswith(('.', '!', '?')) else s + '.'
+
+D = ['# Descrições escritas das imagens do Arcanoclisma',
+     '',
+     f'**{len(itens)} imagens**, cada uma com a descrição completa em português: o **assunto** (o que aparece) seguido do **estilo, enquadramento e fundo**. '
+     'Cada descrição é autossuficiente: cole só o parágrafo da imagem na outra IA, no formato indicado. '
+     f'As **{n_pri}** marcadas com **livro** vão para o livro e são as que valem gerar primeiro; as outras são do app do gerador.',
+     '',
+     'Dicas para testar:',
+     '',
+     '- O nome do arquivo é o `id` (ex.: `adaga.png`).',
+     '- Imagens quadradas têm **fundo liso** (branco, ou cinza-claro nos dragões), para recortar depois. Paisagens (3:2) ficam inteiras.',
+     '- Se a IA devolver algo realista ou em 3D, repita a frase do estilo no começo e peça de novo: o traço é de **tinta grossa, cores chapadas e sombras duras**.',
+     '- Os mesmos prompts em inglês (para Midjourney e parecidos) estão em `todos_os_prompts.txt` e `todos_os_prompts.csv`.',
+     '']
+n = 0
+for g in grupos:
+    do = [it for it in itens if it['grupo'] == g]
+    D += ['', f'## {g} ({len(do)})', '']
+    for it in do:
+        n += 1
+        tag = ' · **livro**' if it['prioridade'] else ''
+        D += [f"### {n:03d} · {it['nome']}", '',
+              f"`{it['id']}` · {FORMATO_PT[it['formato']]}{tag}", '',
+              f"> **Assunto:** {assunto_pt(it)} **Estilo:** {ESTILOS_PT[it['estilo']]}", '']
+(AQUI / 'descricoes_das_imagens.md').write_text('\n'.join(D), encoding='utf-8')
+print('descrições escritas:', n)

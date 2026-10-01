@@ -9,6 +9,7 @@
 3. Nas imagens 1:1 o fundo é branco liso: tire o fundo antes de usar (4.6). Cenários (3:2) ficam inteiros.
 4. Confira uma a uma: é o objeto ou o ser certo, inteiro, sem texto nem letras inventadas, no traço do estilo e na cor do Valor. Se estiver ruim (cortado, com cenário, com mão, com texto), gere de novo em vez de ajustar.
 5. Se o filtro barrar, troque só a palavra que parece violenta (arma, sangue, morte) por uma mais neutra (ferramenta, marca, sono) e gere de novo.
+6. Para testar em outra IA: `arte/prompts/descricoes_das_imagens.md` tem a **descrição escrita completa de cada imagem, em português** (assunto + estilo + fundo), pronta para colar.
 
 ## Estilos
 
@@ -1005,7 +1006,7 @@
   id `mafrisa-do-bar-da-mafrisa`  
   > Mafrisa, do Bar da Mafrisa: fada, dona de bar; pessoa comum do mundo, roupas de trabalho e de rua; jeito duro, leal; pose de quem ajuda os outros; no gesto de puxar.
 - **Professor Ninguém** · M4 · Chefe · — · Anulador, Espelho · prompt do [[20 Prompts de arte - personagens]] · estilo **P** · 1:1  
-  id `professor-estrela`  
+  id `professor-ninguem`  
   > Jovem de roupa branca de universidade mágica, luvas brancas, cabelos azuis pintados de azul-escuro, olhar perdido e feliz. Das luvas saem engrenagens e pequenos mecanismos de latão que desenham linhas retas de esquema por cima da página, transformando os títulos em plantas de máquina; um autômato de bolso agarra a margem.
 
 ### Bestiário · Comprometidos (48)
@@ -1149,7 +1150,7 @@
   id `ciantia-dragoes`  
   > Mulher jovem, loira com mechas brancas platinadas, olhos verdes, roupa preta e jaqueta com bordas de veludo, sorriso confiante e controlado. Um dragãozinho de chamas fantasmagóricas translúcidas enrolado no braço dela; atrás dela, a cabeça de um dragão enorme emoldura a página, e as chamas de nove cores (uma por Valor) escorrem pela borda por cima do texto.
 - **DisScar** · M3 · Chefe · Persona, Conflitüo, Cognitium · Quimerarcano · prompt do [[20 Prompts de arte - personagens]] · estilo **P** · 1:1  
-  id `disscar-mosh`  
+  id `disscar-rasgo`  
   > Roqueiro punk de pele branca, meio jovem, roupas de couro, cabelo curto em degradê com moicano, escuro com partes pintadas de roxo vibrante, piercings nas orelhas e na boca, sorriso desafiador de canto a canto. Segura uma guitarra com lâminas; ondas de som coral com faíscas roxas saem dela e empurram as colunas de texto para as bordas, e três clones dele saem das ondas, cada um numa pose diferente.
 - **O Antigo Bibliotecário** · M4 · Social · Cognitium · Inquebrável · estilo **P** · 1:1  
   id `o-antigo-bibliotecario`  

@@ -2504,7 +2504,7 @@
   "prompt": "Bold graphic fantasy RPG illustration in a thick expressive ink style: heavy black outlines, flat vibrant colors with hard block shadows, dry-brush paper texture, stylized exaggerated proportions, comic-book cel shading, not realistic, not 3D, not a painting. Full body character, dynamic pose, strong facial expression. Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese): Mafrisa, do Bar da Mafrisa: fada, dona de bar; pessoa comum do mundo, roupas de trabalho e de rua; jeito duro, leal; pose de quem ajuda os outros; no gesto de puxar."
  },
  {
-  "id": "professor-estrela",
+  "id": "professor-ninguem",
   "tipo": "adversario",
   "nome": "Professor Ninguém",
   "formato": "1:1",
@@ -2880,7 +2880,7 @@
   "prompt": "Bold graphic fantasy RPG illustration in a thick expressive ink style: heavy black outlines, flat vibrant colors with hard block shadows, dry-brush paper texture, stylized exaggerated proportions, comic-book cel shading, not realistic, not 3D, not a painting. Full body character, dynamic pose, strong facial expression. Plain solid white background, no scenery, no text, no logo. Subject (in Portuguese): Mulher jovem, loira com mechas brancas platinadas, olhos verdes, roupa preta e jaqueta com bordas de veludo, sorriso confiante e controlado. Um dragãozinho de chamas fantasmagóricas translúcidas enrolado no braço dela; atrás dela, a cabeça de um dragão enorme emoldura a página, e as chamas de nove cores (uma por Valor) escorrem pela borda por cima do texto."
  },
  {
-  "id": "disscar-mosh",
+  "id": "disscar-rasgo",
   "tipo": "adversario",
   "nome": "DisScar",
   "formato": "1:1",
