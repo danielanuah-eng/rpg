@@ -1,0 +1,6468 @@
+{
+  "inicio": 87,
+  "fim": 521,
+  "total": 435,
+  "concluidas": 240,
+  "pendentes": 195,
+  "fundo": "Transparente; verificação do canal alfa e dos quatro cantos",
+  "push": "Somente após autorização explícita do usuário",
+  "imagens": [
+    {
+      "numero": 87,
+      "id": "manto-de-cor-de-parede",
+      "titulo": "Manto de Cor de Parede",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/manto-de-cor-de-parede.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 807550,
+      "pixelsOpacos": 936,
+      "bytes": 1691291,
+      "mtimeMs": 1790888597992.205,
+      "sha256": "174fdaefff7167e3813d65e49377663513ab120962d1dd3d7925ad58452028aa"
+    },
+    {
+      "numero": 88,
+      "id": "dedal-do-alfaiate-cego",
+      "titulo": "Dedal do Alfaiate Cego",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/dedal-do-alfaiate-cego.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 825896,
+      "pixelsOpacos": 1508,
+      "bytes": 1847645,
+      "mtimeMs": 1790888891586.636,
+      "sha256": "4f4e9b3cdf06ce5a3abb205e00983c57f7effb2f12b38ad5431588728f30954a"
+    },
+    {
+      "numero": 89,
+      "id": "pente-das-mil-caras",
+      "titulo": "Pente das Mil Caras",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/pente-das-mil-caras.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 858642,
+      "pixelsOpacos": 1348,
+      "bytes": 1756222,
+      "mtimeMs": 1790888950956.5923,
+      "sha256": "83dd4a2d8530bf73005f56474b6c8e8f338b4ddd887929311377fc1da0bfcd30"
+    },
+    {
+      "numero": 90,
+      "id": "tinteiro-de-mapas",
+      "titulo": "Tinteiro de Mapas",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/tinteiro-de-mapas.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 857692,
+      "pixelsOpacos": 1447,
+      "bytes": 1767095,
+      "mtimeMs": 1790888998831.4297,
+      "sha256": "ec711d6a2bdb41d6c3877216377129829840d129e3cab85b6fa15d5674b1f3c7"
+    },
+    {
+      "numero": 91,
+      "id": "cadeado-ciumento",
+      "titulo": "Cadeado Ciumento",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/cadeado-ciumento.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 692705,
+      "pixelsOpacos": 1089,
+      "bytes": 2086911,
+      "mtimeMs": 1790889055518.7722,
+      "sha256": "17a191a0bef2a1ec3c3d7f2ca8181d5a16addb0297bef2b13a99bd831cc01873"
+    },
+    {
+      "numero": 92,
+      "id": "sal-do-viajante",
+      "titulo": "Sal do Viajante",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/sal-do-viajante.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 578689,
+      "pixelsOpacos": 1257,
+      "bytes": 2397053,
+      "mtimeMs": 1790888959060.9006,
+      "sha256": "78309590b6b6c97d3fb8fcde241e87f24863208be5200af0677d5fa56b424d40"
+    },
+    {
+      "numero": 93,
+      "id": "apito-de-eco-longe",
+      "titulo": "Apito de Eco Longe",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/apito-de-eco-longe.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 925690,
+      "pixelsOpacos": 2263,
+      "bytes": 1592360,
+      "mtimeMs": 1790889026643.6038,
+      "sha256": "0c2a4bf22e2f0a5ef1adb00d62f465374d7efdb26cbf4db3da0633c76d25659f"
+    },
+    {
+      "numero": 94,
+      "id": "relogio-de-bolso-atrasado",
+      "titulo": "Relógio de Bolso Atrasado",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/relogio-de-bolso-atrasado.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 640367,
+      "pixelsOpacos": 1198,
+      "bytes": 1909864,
+      "mtimeMs": 1790889859139.9563,
+      "sha256": "59df92814f32bc8666fad1ddf493b7f28cf21921456830a41d6f7a5f372507ec"
+    },
+    {
+      "numero": 95,
+      "id": "bota-de-andar-em-parede",
+      "titulo": "Bota de Andar em Parede",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/bota-de-andar-em-parede.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 739186,
+      "pixelsOpacos": 192,
+      "bytes": 1878010,
+      "mtimeMs": 1790889170616.2703,
+      "sha256": "b72f868265782703fe6517f7288341e097d3afa55d69db6cd26460f9a8d45861"
+    },
+    {
+      "numero": 96,
+      "id": "dado-honesto",
+      "titulo": "Dado Honesto",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/dado-honesto.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 663096,
+      "pixelsOpacos": 992,
+      "bytes": 2086510,
+      "mtimeMs": 1790889190296.6304,
+      "sha256": "c0ad32f09ff00ac4b26c1f29ded9d336ee0155b9ed3abd23c37c344bfb240729"
+    },
+    {
+      "numero": 97,
+      "id": "garrafa-de-voz",
+      "titulo": "Garrafa de Voz",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/garrafa-de-voz.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 890703,
+      "pixelsOpacos": 972,
+      "bytes": 1679981,
+      "mtimeMs": 1790889251527.2192,
+      "sha256": "fc84e2cd52a9f38a87a155658a3299ba16d8359e7906d8fd179e844cb0dc4267"
+    },
+    {
+      "numero": 98,
+      "id": "chapeu-de-chuva-particular",
+      "titulo": "Chapéu de Chuva Particular",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/chapeu-de-chuva-particular.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 986174,
+      "pixelsOpacos": 1238,
+      "bytes": 1241583,
+      "mtimeMs": 1790889636266.7097,
+      "sha256": "ecef51eec2b3fa8bb539008bf6240edbef60265aaf9d15a916431c59aba53185"
+    },
+    {
+      "numero": 99,
+      "id": "lenco-das-lagrimas",
+      "titulo": "Lenço das Lágrimas",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/lenco-das-lagrimas.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 737151,
+      "pixelsOpacos": 662,
+      "bytes": 1920815,
+      "mtimeMs": 1790889240504.1013,
+      "sha256": "53451b371ba31ac3dd1a2851a4a999f1950c732f9750d4c442a276c16dee47ec"
+    },
+    {
+      "numero": 100,
+      "id": "balde-que-sobe",
+      "titulo": "Balde que Sobe",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/balde-que-sobe.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 795671,
+      "pixelsOpacos": 683,
+      "bytes": 1797569,
+      "mtimeMs": 1790889257021.8916,
+      "sha256": "b459f27abbf3adbd6ff7d086b846f50ff3f0ea3bb9d8784743cf094e7853d0a1"
+    },
+    {
+      "numero": 101,
+      "id": "sementes-de-um-dia",
+      "titulo": "Sementes de Um Dia",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/sementes-de-um-dia.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 782961,
+      "pixelsOpacos": 1078,
+      "bytes": 1936070,
+      "mtimeMs": 1790889306715.4207,
+      "sha256": "e1418d7db40b0dd9f54606327dbf673a9d8465f1e213466475526b444a050230"
+    },
+    {
+      "numero": 102,
+      "id": "porta-de-bolso",
+      "titulo": "Porta de Bolso",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/porta-de-bolso.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 694829,
+      "pixelsOpacos": 1209,
+      "bytes": 2093288,
+      "mtimeMs": 1790889330052.0986,
+      "sha256": "368aa542f40546f4d6d296352d852f6e8dae857963ca73354aa3defe9e09737d"
+    },
+    {
+      "numero": 103,
+      "id": "coroa-sem-rei",
+      "titulo": "Coroa Sem Rei",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/coroa-sem-rei.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 966969,
+      "pixelsOpacos": 2133,
+      "bytes": 1523985,
+      "mtimeMs": 1790889611691.057,
+      "sha256": "41ce73d5d0a30521f14092954bc9465f65fbee1f3f96c3a117c04b2ba8c3163b"
+    },
+    {
+      "numero": 104,
+      "id": "capa-de-vento",
+      "titulo": "Capa de Vento",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/capa-de-vento.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 638056,
+      "pixelsOpacos": 1867,
+      "bytes": 2130655,
+      "mtimeMs": 1790889376861.0217,
+      "sha256": "96e3c701f5f37ffbaf13ebb69d6cc40943b1a39fee8f07a4ffd5dba22991abe9"
+    },
+    {
+      "numero": 105,
+      "id": "violino-do-ontem",
+      "titulo": "Violino do Ontem",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/violino-do-ontem.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 881678,
+      "pixelsOpacos": 1282,
+      "bytes": 1773641,
+      "mtimeMs": 1790889435951.719,
+      "sha256": "6b5c7eae81bb5baf1b74301b1d46901c8cccd47a919e4ef4d632d53213c71b6d"
+    },
+    {
+      "numero": 106,
+      "id": "mascara-do-outro",
+      "titulo": "Máscara do Outro",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/mascara-do-outro.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 781200,
+      "pixelsOpacos": 635,
+      "bytes": 2071997,
+      "mtimeMs": 1790889428723.6313,
+      "sha256": "b579208af4526caf4ccec6dacb90d4662356441f1703ca588ceb8c7566113b05"
+    },
+    {
+      "numero": 107,
+      "id": "barco-dobravel",
+      "titulo": "Barco Dobrável",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/barco-dobravel.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 768988,
+      "pixelsOpacos": 1687,
+      "bytes": 2024433,
+      "mtimeMs": 1790889513078.705,
+      "sha256": "daecaee7b45faf3781c95ab0cdeabb118b9b966b0cc87d4017340292ae917a50"
+    },
+    {
+      "numero": 108,
+      "id": "ovo-de-wyvern",
+      "titulo": "Ovo de Wyvern",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/ovo-de-wyvern.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 611316,
+      "pixelsOpacos": 1617,
+      "bytes": 2323681,
+      "mtimeMs": 1790889576668.9766,
+      "sha256": "624679e3c12af2b6879a8c8e02965e647f6086c829178104651892e8a4033ab0"
+    },
+    {
+      "numero": 109,
+      "id": "olho-de-dragao-palido",
+      "titulo": "Olho de Dragão Pálido",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/olho-de-dragao-palido.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 638275,
+      "pixelsOpacos": 735,
+      "bytes": 2355457,
+      "mtimeMs": 1790889679073.5513,
+      "sha256": "ae06d09d5ab6111aa090cf0cbbcb5022b6f039203b069ca7d7a3ee8dc4de6911"
+    },
+    {
+      "numero": 110,
+      "id": "escama-do-dragao-mercurio",
+      "titulo": "Escama do Dragão-Mercúrio",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/escama-do-dragao-mercurio.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 945687,
+      "pixelsOpacos": 562,
+      "bytes": 1629168,
+      "mtimeMs": 1790889622010.7139,
+      "sha256": "b6ebb5f332ee98bf6935801f3f16187bc38dc8e69b7ad5ad846c880f428a8fe4"
+    },
+    {
+      "numero": 111,
+      "id": "livro-que-le-voce",
+      "titulo": "Livro Que Lê Você",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/livro-que-le-voce.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 654251,
+      "pixelsOpacos": 1847,
+      "bytes": 2218241,
+      "mtimeMs": 1790889688222.5713,
+      "sha256": "5af5be09db3cc835a6bcadc30f8f3de90ed20a4fe6c60a8171ee1105794b7bd8"
+    },
+    {
+      "numero": 112,
+      "id": "ampulheta-de-um-minuto",
+      "titulo": "Ampulheta de Um Minuto",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/ampulheta-de-um-minuto.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 770565,
+      "pixelsOpacos": 951,
+      "bytes": 1949904,
+      "mtimeMs": 1790889744457.0945,
+      "sha256": "e4953ce6e6bdeceaeff42f214475c97168f2f637e9f0aa7cc5024b97de1de859"
+    },
+    {
+      "numero": 113,
+      "id": "tapete-de-duas-casas",
+      "titulo": "Tapete de Duas Casas",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/tapete-de-duas-casas.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 745507,
+      "pixelsOpacos": 203,
+      "bytes": 2169083,
+      "mtimeMs": 1790889768249.0276,
+      "sha256": "90d690b07456d3a61367b8f6f8b0bbebd72c1e0209e2fedb22947b76c5b40e38"
+    },
+    {
+      "numero": 114,
+      "id": "jaula-de-luz",
+      "titulo": "Jaula de Luz",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/jaula-de-luz.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 622003,
+      "pixelsOpacos": 742,
+      "bytes": 2158873,
+      "mtimeMs": 1790889770059.4807,
+      "sha256": "447dc648b443f569415b484fc9f23aa9b8e5f59a14dfa4fdea16c99e13d112ad"
+    },
+    {
+      "numero": 115,
+      "id": "chave-da-voragem",
+      "titulo": "Chave da Voragem",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/chave-da-voragem.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1030601,
+      "pixelsOpacos": 686,
+      "bytes": 1384262,
+      "mtimeMs": 1790889810354.2146,
+      "sha256": "4309fc93375441f2689b914699565bc4767404fea4cddecd970d60901eb17972"
+    },
+    {
+      "numero": 116,
+      "id": "mapa-do-reino",
+      "titulo": "Mapa do Reino",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/mapa-do-reino.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 701054,
+      "pixelsOpacos": 1087,
+      "bytes": 2080313,
+      "mtimeMs": 1790889837318.653,
+      "sha256": "74ad5085cac47454f061fd8fead0d0a1b4111004e6bc999519f13f309b48f606"
+    },
+    {
+      "numero": 117,
+      "id": "pena-de-idrael",
+      "titulo": "Pena de Idrael",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/pena-de-idrael.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 850328,
+      "pixelsOpacos": 526,
+      "bytes": 1673904,
+      "mtimeMs": 1790889916018.5835,
+      "sha256": "2737d1fde19e74f8624e73ea1dbaeb9a53146985e94385039583bb9139ff7c14"
+    },
+    {
+      "numero": 118,
+      "id": "semente-da-floresta-primeira",
+      "titulo": "Semente da Floresta Primeira",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/semente-da-floresta-primeira.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 677874,
+      "pixelsOpacos": 533,
+      "bytes": 2220012,
+      "mtimeMs": 1790889887957.1335,
+      "sha256": "fd389a4266c748ef3e426e60940edfa015e1b315c8583b760f04c5dad1f260c5"
+    },
+    {
+      "numero": 119,
+      "id": "espada-que-nao-corta",
+      "titulo": "Espada Que Não Corta",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/espada-que-nao-corta.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1118190,
+      "pixelsOpacos": 1012,
+      "bytes": 1251731,
+      "mtimeMs": 1790889942702.975,
+      "sha256": "ed98be8c67a1ba6c9e0d6563da43c455c18a485d0212cf80d3052c8effc9d830"
+    },
+    {
+      "numero": 120,
+      "id": "calice-do-primeiro-barro",
+      "titulo": "Cálice do Primeiro Barro",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/calice-do-primeiro-barro.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 859687,
+      "pixelsOpacos": 759,
+      "bytes": 1855597,
+      "mtimeMs": 1790889938950.479,
+      "sha256": "0f2c53f3411fe512827a24f3c0261514148ae055de72915de6a5b160b6d8e3b2"
+    },
+    {
+      "numero": 121,
+      "id": "anel-de-tique",
+      "titulo": "Anel de Tique",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/anel-de-tique.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 672438,
+      "pixelsOpacos": 394,
+      "bytes": 2252405,
+      "mtimeMs": 1790889964193.5215,
+      "sha256": "16cfe2f229e66129531a3dc3f6449a4d31e107dd175a647c34ecf7bc97223614"
+    },
+    {
+      "numero": 122,
+      "id": "espelho-da-cidade-dos-rostos",
+      "titulo": "Espelho da Cidade dos Rostos",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/espelho-da-cidade-dos-rostos.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 972922,
+      "pixelsOpacos": 272,
+      "bytes": 1500007,
+      "mtimeMs": 1790890007450.3357,
+      "sha256": "9af6bb96d50f84c107c2de03afb1236788557073e6bf90724b19fdc4af76af45"
+    },
+    {
+      "numero": 123,
+      "id": "sino-dos-juramentados",
+      "titulo": "Sino dos Juramentados",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/sino-dos-juramentados.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 707907,
+      "pixelsOpacos": 1197,
+      "bytes": 2027270,
+      "mtimeMs": 1790890068105.493,
+      "sha256": "108be2d19358fd82e0d7102e1196049cb20bbec61fbc13e4cd32df2b1abde47a"
+    },
+    {
+      "numero": 124,
+      "id": "luneta-do-fim",
+      "titulo": "Luneta do Fim",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/luneta-do-fim.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 831743,
+      "pixelsOpacos": 628,
+      "bytes": 1805979,
+      "mtimeMs": 1790890006709.986,
+      "sha256": "393e82a816862ff900b4c89e602de88c1b394419429c486782b28f40d7af8893"
+    },
+    {
+      "numero": 125,
+      "id": "cordao-de-rhu",
+      "titulo": "Cordão de Rhu",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/cordao-de-rhu.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1017392,
+      "pixelsOpacos": 2269,
+      "bytes": 1405909,
+      "mtimeMs": 1790890080516.7444,
+      "sha256": "5ec081a3193e5f2b3e1f8e5cef67d3d2707dcdef3def19bf5dd7c1e7793ab189"
+    },
+    {
+      "numero": 126,
+      "id": "pedra-parada",
+      "titulo": "Pedra Parada",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/pedra-parada.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 757270,
+      "pixelsOpacos": 456,
+      "bytes": 2033265,
+      "mtimeMs": 1790890113401.014,
+      "sha256": "fb7462b2dac48dab75aeb2924e493c7c3bfb4a8e15ddcd2e2346989ff265d575"
+    },
+    {
+      "numero": 127,
+      "id": "estilhaco-de-disrupto",
+      "titulo": "Estilhaço de Disrupto",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/estilhaco-de-disrupto.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 924963,
+      "pixelsOpacos": 1361,
+      "bytes": 1661306,
+      "mtimeMs": 1790890175692.6338,
+      "sha256": "60438297f4297aa2dd7d3dba910c5061e8fd1f87918b2cf507adf63ab95fe981"
+    },
+    {
+      "numero": 128,
+      "id": "trono-dobravel",
+      "titulo": "Trono Dobrável",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/trono-dobravel.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 857883,
+      "pixelsOpacos": 2154,
+      "bytes": 1755354,
+      "mtimeMs": 1790890141441.8918,
+      "sha256": "b05cb3b7460177025b8f6b4a7a5c8aada1e2bd06b8454dd67216e81961dd2ce3"
+    },
+    {
+      "numero": 129,
+      "id": "harpa-de-vidro-de-liss",
+      "titulo": "Harpa de Vidro de Liss",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/harpa-de-vidro-de-liss.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 864993,
+      "pixelsOpacos": 528,
+      "bytes": 1694605,
+      "mtimeMs": 1790890179085.098,
+      "sha256": "13cec0a7a06907e466989775f51a9262ce7d440e4aa8b126c05d6ef83c5eaeee"
+    },
+    {
+      "numero": 130,
+      "id": "relicario-da-terceira-vida",
+      "titulo": "Relicário da Terceira Vida",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/relicario-da-terceira-vida.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 688340,
+      "pixelsOpacos": 1597,
+      "bytes": 1963506,
+      "mtimeMs": 1790890245213.9553,
+      "sha256": "d2b12112d4379eb8a0fed9e24ea5147556bd81eb19eb8fd9cd5d1d9e4b92717a"
+    },
+    {
+      "numero": 131,
+      "id": "balanca-de-serath",
+      "titulo": "Balança de Serath",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/balanca-de-serath.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 893441,
+      "pixelsOpacos": 816,
+      "bytes": 1680406,
+      "mtimeMs": 1790890207408.766,
+      "sha256": "fef510e703f9629ba3c8cea6d56715327808a63acc8ebaef2f1f39633bbf7610"
+    },
+    {
+      "numero": 132,
+      "id": "colar-de-vyal-falso",
+      "titulo": "Colar de Vyal (falso)",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/colar-de-vyal-falso.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 865819,
+      "pixelsOpacos": 1632,
+      "bytes": 1639789,
+      "mtimeMs": 1790890256214.0818,
+      "sha256": "9f046046eedbf0372d2d26fb56bfe2ed6135c60c9a9eb2da756e137dd8e1eb3b"
+    },
+    {
+      "numero": 133,
+      "id": "ninho-de-estrelas",
+      "titulo": "Ninho de Estrelas",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/ninho-de-estrelas.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 753080,
+      "pixelsOpacos": 343,
+      "bytes": 2042558,
+      "mtimeMs": 1790890298680.0496,
+      "sha256": "9a28c9ced15ad8a3b1552452506a67903c502af33158dbcfa581e1ffc9779bdf"
+    },
+    {
+      "numero": 134,
+      "id": "cadeira-de-espera",
+      "titulo": "Cadeira de Espera",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/cadeira-de-espera.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 718077,
+      "pixelsOpacos": 1033,
+      "bytes": 1970842,
+      "mtimeMs": 1790890317309.5894,
+      "sha256": "a1d9656faa8fc38d9f63cae8c113d98bd9b9f54ebad6ab770c3473f61d4f1673"
+    },
+    {
+      "numero": 135,
+      "id": "baralho-do-arquivo",
+      "titulo": "Baralho do Arquivo",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/baralho-do-arquivo.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 545181,
+      "pixelsOpacos": 541,
+      "bytes": 2606200,
+      "mtimeMs": 1790890348657.4421,
+      "sha256": "c58164112674fcab69d99042a971687375f414c6f1aef116972a06192da68fb9"
+    },
+    {
+      "numero": 136,
+      "id": "frasco-de-mare",
+      "titulo": "Frasco de Maré",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/frasco-de-mare.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 717794,
+      "pixelsOpacos": 785,
+      "bytes": 1952378,
+      "mtimeMs": 1790890391329.483,
+      "sha256": "895a12fe8746a50b402600815580f47893295bcc0b18708ad7bb23be39052c23"
+    },
+    {
+      "numero": 137,
+      "id": "coleira-de-ouro-vazia",
+      "titulo": "Coleira de Ouro Vazia",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/coleira-de-ouro-vazia.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 866482,
+      "pixelsOpacos": 713,
+      "bytes": 1687374,
+      "mtimeMs": 1790890404707.7788,
+      "sha256": "fd28d47bd33fbfb5635b44533d4f24e57335b8095f00d44632f514e752e10596"
+    },
+    {
+      "numero": 138,
+      "id": "a-coroa-de-vyal",
+      "titulo": "A Coroa de Vyal",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/a-coroa-de-vyal.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1007499,
+      "pixelsOpacos": 216,
+      "bytes": 1402149,
+      "mtimeMs": 1790890417083.7297,
+      "sha256": "390f89f1f74abf277deeb40d9930008cc1c0aafa4183a482ced8aea5a59cd7fd"
+    },
+    {
+      "numero": 139,
+      "id": "a-primeira-moeda",
+      "titulo": "A Primeira Moeda",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/a-primeira-moeda.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 597552,
+      "pixelsOpacos": 797,
+      "bytes": 2577571,
+      "mtimeMs": 1790890476819.236,
+      "sha256": "9d5be776ca0c5e42ce585a4d0cc36b98a9d5b24be1269b7633883a2a92ad0770"
+    },
+    {
+      "numero": 140,
+      "id": "a-pagina-arrancada",
+      "titulo": "A Página Arrancada",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/a-pagina-arrancada.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 747280,
+      "pixelsOpacos": 597,
+      "bytes": 2189265,
+      "mtimeMs": 1790890479778.6946,
+      "sha256": "bab8512fd2307f6a30ad2025c9f6c517caa9ec2983ca7b2f9ca96c1654321843"
+    },
+    {
+      "numero": 141,
+      "id": "o-badalo-de-vau-grande",
+      "titulo": "O Badalo de Vau-Grande",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/o-badalo-de-vau-grande.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 761546,
+      "pixelsOpacos": 1143,
+      "bytes": 2052368,
+      "mtimeMs": 1790890553022.949,
+      "sha256": "ed7d37ade379fb5576c7279b5998950159eba0293828ffbef3919cb2e8ffbcd6"
+    },
+    {
+      "numero": 142,
+      "id": "escama-do-vyal",
+      "titulo": "Escama do Vyal",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/escama-do-vyal.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 835226,
+      "pixelsOpacos": 1264,
+      "bytes": 1881004,
+      "mtimeMs": 1790890629745.8174,
+      "sha256": "53c4be34299b80826f62831c9e0004a5d706eb90950c5c61a22fb44f09399227"
+    },
+    {
+      "numero": 143,
+      "id": "coroa-riscada",
+      "titulo": "Coroa Riscada",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/coroa-riscada.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 932272,
+      "pixelsOpacos": 2577,
+      "bytes": 1610011,
+      "mtimeMs": 1790893887296.752,
+      "sha256": "accfd544f9be9670eda8a6daa4937210b8c4cc2a36109f2f6512ecbc87c71e84"
+    },
+    {
+      "numero": 144,
+      "id": "lanterna-do-veu",
+      "titulo": "Lanterna do Véu",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/lanterna-do-veu.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 792641,
+      "pixelsOpacos": 1046,
+      "bytes": 1838956,
+      "mtimeMs": 1790890702215.0498,
+      "sha256": "33e2a5ea96a885fc2a4f4972772e5bab96c01cb23743f97fead29f1111af8fdd"
+    },
+    {
+      "numero": 145,
+      "id": "ancora-do-mesmo-dia",
+      "titulo": "Âncora do Mesmo Dia",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/ancora-do-mesmo-dia.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 723963,
+      "pixelsOpacos": 918,
+      "bytes": 2152333,
+      "mtimeMs": 1790890770118.3333,
+      "sha256": "c14615a70e3bc058c20f52098d29b090ad378f417fbeb807abcc6f79ddb5272c"
+    },
+    {
+      "numero": 146,
+      "id": "coleira-de-kairvahnn",
+      "titulo": "Coleira de Kairvahnn",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/coleira-de-kairvahnn.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 665055,
+      "pixelsOpacos": 740,
+      "bytes": 2169697,
+      "mtimeMs": 1790890771146.8047,
+      "sha256": "f42d1a6e95be7784621b3e4b5dc6d324a8a5c2e5d98b06c6a126afda398dfa28"
+    },
+    {
+      "numero": 147,
+      "id": "forja-dos-mil-golpes",
+      "titulo": "Forja dos Mil Golpes",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/forja-dos-mil-golpes.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 575855,
+      "pixelsOpacos": 648,
+      "bytes": 2489526,
+      "mtimeMs": 1790891840081.0454,
+      "sha256": "10f676765ca80f97ea221926057cda73b2c0d5686daaf83951241dfb01feb2e0"
+    },
+    {
+      "numero": 148,
+      "id": "charco-fervente",
+      "titulo": "Charco Fervente",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/charco-fervente.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 513792,
+      "pixelsOpacos": 88,
+      "bytes": 2806702,
+      "mtimeMs": 1790892277729.8535,
+      "sha256": "693257479db30b05ee4e4c2bb618017efeff21fefdf84f229e35acb99a8c4c76"
+    },
+    {
+      "numero": 149,
+      "id": "floresta-que-anda",
+      "titulo": "Floresta que Anda",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/floresta-que-anda.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 507439,
+      "pixelsOpacos": 52,
+      "bytes": 2937910,
+      "mtimeMs": 1790892326250.7087,
+      "sha256": "02248b5a379653a75d1321ea69d4377b300c25ba1c94a84683b71124cc8e7a83"
+    },
+    {
+      "numero": 150,
+      "id": "feira-das-mascaras",
+      "titulo": "Feira das Máscaras",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/feira-das-mascaras.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 473004,
+      "pixelsOpacos": 303,
+      "bytes": 2950786,
+      "mtimeMs": 1790892739184.3884,
+      "sha256": "e538a140ab3a609b4d22cf68f3a216683c8350f05698db907161848ad3fe096a"
+    },
+    {
+      "numero": 151,
+      "id": "arena-de-kairvahnn",
+      "titulo": "Arena de Kairvahnn",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/arena-de-kairvahnn.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 352680,
+      "pixelsOpacos": 493,
+      "bytes": 3115903,
+      "mtimeMs": 1790892856017.3145,
+      "sha256": "d5758cd2e56a92bea8ee9bed8dea6b22a72249a1e6ddf78b3d9dddd7839cd8ed"
+    },
+    {
+      "numero": 152,
+      "id": "farol-sem-noite",
+      "titulo": "Farol Sem Noite",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/farol-sem-noite.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 573790,
+      "pixelsOpacos": 273,
+      "bytes": 2508292,
+      "mtimeMs": 1790892327905.5312,
+      "sha256": "8ee8bfc5df517102bd72819dc7e0eac215199a7a53fc070edbea3daea9852844"
+    },
+    {
+      "numero": 153,
+      "id": "cemiterio-que-respira",
+      "titulo": "Cemitério que Respira",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/cemiterio-que-respira.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 603993,
+      "pixelsOpacos": 191,
+      "bytes": 2523339,
+      "mtimeMs": 1790892405094.2705,
+      "sha256": "19a9929689126bcaed708dac7baf1266f87b7a20c078e56dfd586d7f644f90aa"
+    },
+    {
+      "numero": 154,
+      "id": "biblioteca-que-esquece",
+      "titulo": "Biblioteca que Esquece",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/biblioteca-que-esquece.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 485755,
+      "pixelsOpacos": 623,
+      "bytes": 2605878,
+      "mtimeMs": 1790892504924.1714,
+      "sha256": "2b0b50c899112dac5a08db50193fd10e04e839f3bdae381e28906b0a69b62eac"
+    },
+    {
+      "numero": 155,
+      "id": "estacao-parada",
+      "titulo": "Estação Parada",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/estacao-parada.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 536676,
+      "pixelsOpacos": 598,
+      "bytes": 2786760,
+      "mtimeMs": 1790909964342.6511,
+      "sha256": "317258c7d9eab04339348f2e78c92f375690cdee4da4d72ba573104985881004"
+    },
+    {
+      "numero": 156,
+      "id": "cidade-muralha",
+      "titulo": "Cidade-Muralha",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/cidade-muralha.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 516828,
+      "pixelsOpacos": 500,
+      "bytes": 2638131,
+      "mtimeMs": 1790893123798.957,
+      "sha256": "52af4249fa02178b2b937a15d90b13e56a417521b76ca862a7397cd55127769c"
+    },
+    {
+      "numero": 157,
+      "id": "porto-de-vidro",
+      "titulo": "Porto de Vidro",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/porto-de-vidro.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 516666,
+      "pixelsOpacos": 171,
+      "bytes": 2917437,
+      "mtimeMs": 1790893213975.9138,
+      "sha256": "4a0df7faa4ca3be668c9b83d374909d2493dc26b4eff841a46ddc994635e5531"
+    },
+    {
+      "numero": 158,
+      "id": "mercado-de-feras",
+      "titulo": "Mercado de Feras",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/mercado-de-feras.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 435316,
+      "pixelsOpacos": 397,
+      "bytes": 3076287,
+      "mtimeMs": 1790893313937.6057,
+      "sha256": "cf707ad3ce91d16706d0a95d20ccc40001fbab503d552ad3374432e17a781eb8"
+    },
+    {
+      "numero": 159,
+      "id": "vila-do-mesmo-dia",
+      "titulo": "Vila do Mesmo Dia",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/vila-do-mesmo-dia.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 570146,
+      "pixelsOpacos": 373,
+      "bytes": 2537536,
+      "mtimeMs": 1790893123228.0522,
+      "sha256": "e594a08d3b3b3d1477dc53c96d24b770e56651a3761cd4174b58c9e702e4de91"
+    },
+    {
+      "numero": 160,
+      "id": "cidade-insone",
+      "titulo": "Cidade Insone",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/cidade-insone.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 535804,
+      "pixelsOpacos": 467,
+      "bytes": 2663282,
+      "mtimeMs": 1790893232992.8147,
+      "sha256": "7193699ee86e73882e0fa1a6a043e8f531e498684b0cbc43a82ce72ea69d72cb"
+    },
+    {
+      "numero": 161,
+      "id": "aldeia-da-curandeira",
+      "titulo": "Aldeia da Curandeira",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/aldeia-da-curandeira.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 501935,
+      "pixelsOpacos": 244,
+      "bytes": 2977185,
+      "mtimeMs": 1790893338145.8691,
+      "sha256": "672b699121038bbe05cd9a27534ae33a7ca5a5dea6ce4cd7fc59823d19e90d89"
+    },
+    {
+      "numero": 162,
+      "id": "rua-dos-espelhos",
+      "titulo": "Rua dos Espelhos",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/rua-dos-espelhos.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 401027,
+      "pixelsOpacos": 374,
+      "bytes": 3143762,
+      "mtimeMs": 1790893316076.8247,
+      "sha256": "e46cbb1c7e4a92cc1b0d243a18099aa36a48eeac6032f1995d1a831ff40c6414"
+    },
+    {
+      "numero": 163,
+      "id": "vila-da-colheita",
+      "titulo": "Vila da Colheita",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/vila-da-colheita.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 486940,
+      "pixelsOpacos": 159,
+      "bytes": 2988589,
+      "mtimeMs": 1790893557707.8923,
+      "sha256": "98a08afd40680d17235f88ea6de2f1956a77d52f9eb4ee54355bfb8434fa894b"
+    },
+    {
+      "numero": 164,
+      "id": "estrada-do-crepusculo",
+      "titulo": "Estrada do Crepúsculo",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/estrada-do-crepusculo.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 558812,
+      "pixelsOpacos": 693,
+      "bytes": 2712742,
+      "mtimeMs": 1790910065663.864,
+      "sha256": "f47e69ea864ebfeeee313afb5c4bfe886828719770213480450dcac50207a668"
+    },
+    {
+      "numero": 165,
+      "id": "mina-funda",
+      "titulo": "Mina Funda",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/mina-funda.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 416740,
+      "pixelsOpacos": 612,
+      "bytes": 2890507,
+      "mtimeMs": 1790893612047.18,
+      "sha256": "74aa4d75272a314ca10888f4c7f2758f17ccbd100981eaf3b67749c271895cc1"
+    },
+    {
+      "numero": 166,
+      "id": "patio-de-duelos",
+      "titulo": "Pátio de Duelos",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/patio-de-duelos.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 468766,
+      "pixelsOpacos": 148,
+      "bytes": 2850820,
+      "mtimeMs": 1790893660966.546,
+      "sha256": "5cbbea3620d455e6f3a656b2ce5d805386d4a0ca11cabc5227e93cadfb370fc4"
+    },
+    {
+      "numero": 167,
+      "id": "torre-dos-protetores",
+      "titulo": "Torre dos Protetores",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/torre-dos-protetores.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 649702,
+      "pixelsOpacos": 277,
+      "bytes": 2262195,
+      "mtimeMs": 1790893686437.7805,
+      "sha256": "b16121a0452ec47a988280569c4bc1dd3f858dc6ba811cc7ab63db05c79c532e"
+    },
+    {
+      "numero": 168,
+      "id": "permal",
+      "titulo": "Permal",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/permal.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 564099,
+      "pixelsOpacos": 483,
+      "bytes": 2654323,
+      "mtimeMs": 1790910258479.4512,
+      "sha256": "370b642aba57af825cf9ba3439306394251c309246e426409a591536dc555ffd"
+    },
+    {
+      "numero": 169,
+      "id": "tinthrohr",
+      "titulo": "TinThrohr",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/tinthrohr.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 407384,
+      "pixelsOpacos": 65,
+      "bytes": 3273115,
+      "mtimeMs": 1790893726250.92,
+      "sha256": "eb9cd8297829af2b45b70d6811e24187d5479c57fe37260a8ba6596072396e0e"
+    },
+    {
+      "numero": 170,
+      "id": "o-postulario",
+      "titulo": "O Postulário",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/o-postulario.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 579158,
+      "pixelsOpacos": 718,
+      "bytes": 2795435,
+      "mtimeMs": 1790893813479.4492,
+      "sha256": "145b2b567a9a786d30cd5b8063a4c9c0864fdec0d8d51d75d10f107960f64b66"
+    },
+    {
+      "numero": 171,
+      "id": "alvomarfim",
+      "titulo": "AlvoMarfim",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/alvomarfim.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 580119,
+      "pixelsOpacos": 362,
+      "bytes": 2706812,
+      "mtimeMs": 1790893889996.55,
+      "sha256": "bb95951485bad4f42bb0fe777f5a03cc8d957eb4915b89fd242143bb29e11c9e"
+    },
+    {
+      "numero": 172,
+      "id": "profulgar",
+      "titulo": "Profulgar",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/profulgar.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 463885,
+      "pixelsOpacos": 523,
+      "bytes": 2984100,
+      "mtimeMs": 1790893964515.8264,
+      "sha256": "65d813f1f32343cfb440a370c4891063daea9b149cfbefa0fd5840f1649489f5"
+    },
+    {
+      "numero": 173,
+      "id": "nostrum",
+      "titulo": "Nostrum",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/nostrum.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 478337,
+      "pixelsOpacos": 500,
+      "bytes": 2944617,
+      "mtimeMs": 1790893827315.0903,
+      "sha256": "1857d066e0cb4a7764bb335d49395b170467147789745f3a1854183d6324cab8"
+    },
+    {
+      "numero": 174,
+      "id": "fhim",
+      "titulo": "Fhim",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/fhim.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 473663,
+      "pixelsOpacos": 252,
+      "bytes": 2983696,
+      "mtimeMs": 1790893868918.6758,
+      "sha256": "7ddaf5855072179d46c36782fa0efe8e10c4262dfe3b5ceb7c5353f281451ae1"
+    },
+    {
+      "numero": 175,
+      "id": "oulveil",
+      "titulo": "OulVeil",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/oulveil.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 588166,
+      "pixelsOpacos": 350,
+      "bytes": 2642462,
+      "mtimeMs": 1790893909549.916,
+      "sha256": "3a3716ac594c9265105c12a68173fd3e503d358d2a75fc7f7e34c09a5ac8a75a"
+    },
+    {
+      "numero": 176,
+      "id": "vau-grande",
+      "titulo": "Vau-Grande",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/vau-grande.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 613574,
+      "pixelsOpacos": 130,
+      "bytes": 2628759,
+      "mtimeMs": 1790893926905.8293,
+      "sha256": "136a95085bc9d320ed3741f50b50e4bc67d98dd4b81940098368315d682a8af7"
+    },
+    {
+      "numero": 177,
+      "id": "confluencia-e-grandgaleonis",
+      "titulo": "Confluência e GrandGaleonis",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/confluencia-e-grandgaleonis.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 532357,
+      "pixelsOpacos": 274,
+      "bytes": 2952337,
+      "mtimeMs": 1790893992961.8862,
+      "sha256": "d0d44b34f444f254a21275517ce153543607f72cc75392ab07b631c22ad819df"
+    },
+    {
+      "numero": 178,
+      "id": "a-cidade-muralha",
+      "titulo": "A Cidade-Muralha",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/a-cidade-muralha.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 490485,
+      "pixelsOpacos": 301,
+      "bytes": 2835099,
+      "mtimeMs": 1790894049883.9849,
+      "sha256": "186b3842f048af81b715c9d4f75bde3214676fe9e6f0594f59964517a0cab9a0"
+    },
+    {
+      "numero": 179,
+      "id": "o-porto-de-vidro",
+      "titulo": "O Porto de Vidro",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/o-porto-de-vidro.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 499569,
+      "pixelsOpacos": 272,
+      "bytes": 2926376,
+      "mtimeMs": 1790894086601.7917,
+      "sha256": "af81b8d12246a4e8730e3320b1407b383c3082246f6015a699a42142f7453efa"
+    },
+    {
+      "numero": 180,
+      "id": "a-cidade-insone",
+      "titulo": "A Cidade Insone",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/a-cidade-insone.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 527936,
+      "pixelsOpacos": 90,
+      "bytes": 2797791,
+      "mtimeMs": 1790894143679.881,
+      "sha256": "db3af91bef407c9c34623b878847d32297d0c4a1bed399589fb947ea0ad9621a"
+    },
+    {
+      "numero": 181,
+      "id": "a-vila-do-mesmo-dia",
+      "titulo": "A Vila do Mesmo Dia",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/a-vila-do-mesmo-dia.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 521723,
+      "pixelsOpacos": 403,
+      "bytes": 2918421,
+      "mtimeMs": 1790894224228.9602,
+      "sha256": "46c6a822b2da8fe233a98ff58ae3b3ffc91abef6f5e054d1c899a87f14b90de3"
+    },
+    {
+      "numero": 182,
+      "id": "a-boca-da-voragem",
+      "titulo": "A boca da Voragem",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/a-boca-da-voragem.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 426698,
+      "pixelsOpacos": 349,
+      "bytes": 2965676,
+      "mtimeMs": 1790894182044.1064,
+      "sha256": "076ed827eed56d80c31eac0dccf4e9701eb33b24f1aea7feea86d7c289c4ebe8"
+    },
+    {
+      "numero": 183,
+      "id": "sarn-das-escadas",
+      "titulo": "Sarn-das-Escadas",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/sarn-das-escadas.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 568650,
+      "pixelsOpacos": 204,
+      "bytes": 2784064,
+      "mtimeMs": 1790894208991.8708,
+      "sha256": "f08a2573afa4d8dc5c4c346c81d55334a06068feee21e1b3700144d41a02b898"
+    },
+    {
+      "numero": 184,
+      "id": "brejo-alto",
+      "titulo": "Brejo-Alto",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/brejo-alto.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 600996,
+      "pixelsOpacos": 421,
+      "bytes": 2517847,
+      "mtimeMs": 1790894263759.882,
+      "sha256": "25a21426cd8b2b621991c83df59e5804198ea85e21a8e868e5803f7e88be40f9"
+    },
+    {
+      "numero": 185,
+      "id": "querela",
+      "titulo": "Querela",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/querela.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 480148,
+      "pixelsOpacos": 333,
+      "bytes": 2950048,
+      "mtimeMs": 1790894296104.4846,
+      "sha256": "3568230a55b7333e55b0d96d3807f69811208e3d4a0fb924887c6af0ed69cc54"
+    },
+    {
+      "numero": 186,
+      "id": "cinzarel",
+      "titulo": "Cinzarel",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/cinzarel.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 773684,
+      "pixelsOpacos": 365,
+      "bytes": 2211510,
+      "mtimeMs": 1790909210992.7659,
+      "sha256": "ffb360e475c09011908f20b436f2a5bc26929159d8de01a5e3680d5390fb394b"
+    },
+    {
+      "numero": 187,
+      "id": "o-mar-quieto-de-ulen",
+      "titulo": "O Mar Quieto de Ulen",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/o-mar-quieto-de-ulen.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 779830,
+      "pixelsOpacos": 258,
+      "bytes": 2052137,
+      "mtimeMs": 1790909475806.263,
+      "sha256": "84794b64c6c3373b654615a294ddc0d8cacb7175990ddbe40e4f5815a9c0f53b"
+    },
+    {
+      "numero": 188,
+      "id": "as-pontes-de-sethra",
+      "titulo": "As Pontes de Sethra",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/as-pontes-de-sethra.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 866700,
+      "pixelsOpacos": 365,
+      "bytes": 1922545,
+      "mtimeMs": 1790909551260.0405,
+      "sha256": "e6c444b577d20a7299dae0a5a2e135a998337daefd98e12321ae6fc548a2d511"
+    },
+    {
+      "numero": 189,
+      "id": "orrun-o-planalto-dos-espelhos",
+      "titulo": "Orrun, o Planalto dos Espelhos",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/orrun-o-planalto-dos-espelhos.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 701292,
+      "pixelsOpacos": 643,
+      "bytes": 2295374,
+      "mtimeMs": 1790909622847.123,
+      "sha256": "5bf6ba467c2bde529e360cff18d40a329576f880b9e4d1104094cb2bb22a982f"
+    },
+    {
+      "numero": 190,
+      "id": "o-campo-sem-tregua",
+      "titulo": "O Campo Sem Trégua",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/o-campo-sem-tregua.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 722955,
+      "pixelsOpacos": 790,
+      "bytes": 2179809,
+      "mtimeMs": 1790909561523.9717,
+      "sha256": "16aeec5e8b3c3cb907b23c29d6e8b4c4ec3b49e044ba2136747055d3148c0379"
+    },
+    {
+      "numero": 191,
+      "id": "o-mar-de-estados",
+      "titulo": "O Mar de Estados",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/o-mar-de-estados.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 671722,
+      "pixelsOpacos": 167,
+      "bytes": 2485115,
+      "mtimeMs": 1790909637170.4321,
+      "sha256": "7e251c9f05e842c648b66b0aa1b43f7f2c9a356cb6ff4d2e5a3c693c43305183"
+    },
+    {
+      "numero": 192,
+      "id": "a-voragem",
+      "titulo": "A Voragem",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/a-voragem.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 648068,
+      "pixelsOpacos": 770,
+      "bytes": 2377746,
+      "mtimeMs": 1790909696814.8093,
+      "sha256": "43b05be452f709e244e3f5de1e35e5215058193ef70f920e3f1d3a8087eac491"
+    },
+    {
+      "numero": 193,
+      "id": "a-cidade-dos-rostos",
+      "titulo": "A Cidade dos Rostos",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/a-cidade-dos-rostos.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 749846,
+      "pixelsOpacos": 508,
+      "bytes": 2152254,
+      "mtimeMs": 1790910028067.0571,
+      "sha256": "ea2c6cb7d7f5540775d66c247d10fb6e562a404f2522b61a8f67a468af5f3e3b"
+    },
+    {
+      "numero": 194,
+      "id": "o-ceu-de-duas-palpebras",
+      "titulo": "O Céu de Duas Pálpebras",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/o-ceu-de-duas-palpebras.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 811714,
+      "pixelsOpacos": 135,
+      "bytes": 1950947,
+      "mtimeMs": 1790910075947.145,
+      "sha256": "c05f30248c26342f97a2882f226844ec9fa0bc05302a99f35fee54c30494e131"
+    },
+    {
+      "numero": 195,
+      "id": "a-antessala",
+      "titulo": "A Antessala",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/a-antessala.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 731911,
+      "pixelsOpacos": 362,
+      "bytes": 2258060,
+      "mtimeMs": 1790910146066.3083,
+      "sha256": "eb90943969082711cbf4bbf9cdc69a15b22baed2e8033dcf9d17d0eee8175c8b"
+    },
+    {
+      "numero": 196,
+      "id": "o-arquivo-sem-dono",
+      "titulo": "O Arquivo Sem Dono",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/o-arquivo-sem-dono.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 687289,
+      "pixelsOpacos": 458,
+      "bytes": 2370342,
+      "mtimeMs": 1790910123617.3933,
+      "sha256": "75daf68fc84c5ebb40f9584b8d9f2e1bd97205650da699b3ca60cab2f5e9ba59"
+    },
+    {
+      "numero": 197,
+      "id": "o-entretempo",
+      "titulo": "O Entretempo",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/o-entretempo.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 803180,
+      "pixelsOpacos": 473,
+      "bytes": 2159507,
+      "mtimeMs": 1790910172012.1362,
+      "sha256": "a0bc507fbd668ceffc80a3d02d1e30364a70cb280b8bdd697e14ed2579865b45"
+    },
+    {
+      "numero": 198,
+      "id": "a-floresta-primeira",
+      "titulo": "A Floresta Primeira",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/a-floresta-primeira.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 641599,
+      "pixelsOpacos": 175,
+      "bytes": 2444282,
+      "mtimeMs": 1790910241890.441,
+      "sha256": "8771bb4f90c2194a2fe89bf5cbcee3548b92d8e66033899dffaa2812172d5ed8"
+    },
+    {
+      "numero": 199,
+      "id": "povo-anoes",
+      "titulo": "Anões",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-anoes.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 903160,
+      "pixelsOpacos": 403,
+      "bytes": 1630931,
+      "mtimeMs": 1790910347755.1506,
+      "sha256": "b484f5304665f2edca0486bc14654cd6077dd524cc88691adf4813957c9029b2"
+    },
+    {
+      "numero": 200,
+      "id": "povo-elfos",
+      "titulo": "Elfos",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-elfos.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1030287,
+      "pixelsOpacos": 214,
+      "bytes": 1496268,
+      "mtimeMs": 1790910313724.1018,
+      "sha256": "0fe0f33e92fb262ffad642023c4ab900b5de0429c361ea8ac6ae0a3e31164a6f"
+    },
+    {
+      "numero": 201,
+      "id": "povo-halflings",
+      "titulo": "Halflings",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-halflings.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1027614,
+      "pixelsOpacos": 1292,
+      "bytes": 1338229,
+      "mtimeMs": 1790910391223.2417,
+      "sha256": "e0a995b3feb8050b173afa5ca28a1d71fdb4b2bfd5a3696e55957f179069e355"
+    },
+    {
+      "numero": 202,
+      "id": "povo-golias",
+      "titulo": "Golias",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-golias.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1013095,
+      "pixelsOpacos": 405,
+      "bytes": 1439029,
+      "mtimeMs": 1790910405375.4165,
+      "sha256": "9cb0d877db670540f4875a8a8e29b0f0ecb1102efe6b42490a36b4068e78c2ff"
+    },
+    {
+      "numero": 203,
+      "id": "povo-tieflings",
+      "titulo": "Tieflings",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-tieflings.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1130153,
+      "pixelsOpacos": 626,
+      "bytes": 1116082,
+      "mtimeMs": 1790910441361.7327,
+      "sha256": "3dbf881dc69985bf96a7cc213e2615865380e2618fda4eabfb94c9e6155f3c1d"
+    },
+    {
+      "numero": 204,
+      "id": "povo-verdejantes",
+      "titulo": "Verdejantes",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-verdejantes.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1052649,
+      "pixelsOpacos": 233,
+      "bytes": 1448389,
+      "mtimeMs": 1790910498745.7263,
+      "sha256": "abb87855e02d9173ea58ece6ec83ad4927152fdac9a67de8fc355d26ffed353a"
+    },
+    {
+      "numero": 205,
+      "id": "povo-orcs",
+      "titulo": "Orcs",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-orcs.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 989386,
+      "pixelsOpacos": 905,
+      "bytes": 1524116,
+      "mtimeMs": 1790910564260.727,
+      "sha256": "73f15d2ed92d70f32dc79c4e55ff1bdd840665f83fdb9e72d4dfb206495d4bb6"
+    },
+    {
+      "numero": 206,
+      "id": "povo-goblins",
+      "titulo": "Goblins",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-goblins.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 972446,
+      "pixelsOpacos": 438,
+      "bytes": 1568941,
+      "mtimeMs": 1790910601607.1099,
+      "sha256": "3468ba35577822a77bfea38a41a1e68d80c2328ca40e955d4f1836b81762d801"
+    },
+    {
+      "numero": 207,
+      "id": "povo-gnomos",
+      "titulo": "Gnomos",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-gnomos.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1129298,
+      "pixelsOpacos": 799,
+      "bytes": 1211078,
+      "mtimeMs": 1790910623468.797,
+      "sha256": "482e269023d030ae5354f57010c559f1f931183f20a6c464de0274a26d0f8dac"
+    },
+    {
+      "numero": 208,
+      "id": "povo-trolls",
+      "titulo": "Trolls",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-trolls.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 917616,
+      "pixelsOpacos": 425,
+      "bytes": 1754069,
+      "mtimeMs": 1790910673473.7954,
+      "sha256": "71b4e40b962f2004bf17f4bf1437a68a7e96d681a8f79686f21a781563dfb42f"
+    },
+    {
+      "numero": 209,
+      "id": "povo-fadas",
+      "titulo": "Fadas",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-fadas.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1043991,
+      "pixelsOpacos": 1048,
+      "bytes": 1400545,
+      "mtimeMs": 1790910757872.4973,
+      "sha256": "700211643e7a6ab474e410cd90f2a9b5320629c97f92b4392abafde514ddb7f9"
+    },
+    {
+      "numero": 210,
+      "id": "povo-leprechauns",
+      "titulo": "Leprechauns",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-leprechauns.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1097568,
+      "pixelsOpacos": 1013,
+      "bytes": 1108211,
+      "mtimeMs": 1790911523800.415,
+      "sha256": "f9245873f2ad55acee108b62a0814e058923c6652cb4e7a00489c4caf0d95343"
+    },
+    {
+      "numero": 211,
+      "id": "povo-elementais",
+      "titulo": "Elementais",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-elementais.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1235663,
+      "pixelsOpacos": 1236,
+      "bytes": 873730,
+      "mtimeMs": 1790913272732.5908,
+      "sha256": "170f22528ecdfec8ac03a7365908301d5c1a20c27bd1237118f38be36bd1330b"
+    },
+    {
+      "numero": 212,
+      "id": "povo-draconatos",
+      "titulo": "Draconatos",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-draconatos.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1057436,
+      "pixelsOpacos": 1035,
+      "bytes": 1357064,
+      "mtimeMs": 1790910905296.1416,
+      "sha256": "f943025e897f231abf8531785378490f01df5333d1ccb9851bf868d676efa0dc"
+    },
+    {
+      "numero": 213,
+      "id": "povo-luphos",
+      "titulo": "Luphos",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-luphos.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1106957,
+      "pixelsOpacos": 303,
+      "bytes": 1182641,
+      "mtimeMs": 1790910964846.121,
+      "sha256": "873483149c9269f885eb5d43229e8985056420da65828ec9a1b748ef04482887"
+    },
+    {
+      "numero": 214,
+      "id": "povo-almum",
+      "titulo": "Almum",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-almum.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 964732,
+      "pixelsOpacos": 495,
+      "bytes": 1644954,
+      "mtimeMs": 1790910992615.0854,
+      "sha256": "9d94eeac4a48fca3d4495163635d0492f1798e992e530e4fb6b949997e9362ee"
+    },
+    {
+      "numero": 215,
+      "id": "povo-automatos",
+      "titulo": "Autômatos",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-automatos.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1119148,
+      "pixelsOpacos": 762,
+      "bytes": 1220484,
+      "mtimeMs": 1790911055237.961,
+      "sha256": "c3d4a5c534d04955944dd032cd2e02eefffc07e7ea419c17a14a9fdb1727cb0d"
+    },
+    {
+      "numero": 216,
+      "id": "povo-vikings",
+      "titulo": "Vikings",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-vikings.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 955288,
+      "pixelsOpacos": 698,
+      "bytes": 1570057,
+      "mtimeMs": 1790911106859.3396,
+      "sha256": "5e9de43d097e349ea33c63dd90f23e4ea6b5bc0b707bd2af9c4226a43b1cd8ea"
+    },
+    {
+      "numero": 217,
+      "id": "povo-corves",
+      "titulo": "Corves",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-corves.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 861240,
+      "pixelsOpacos": 201,
+      "bytes": 1812896,
+      "mtimeMs": 1790911196859.2727,
+      "sha256": "541669a3ec8bb9ea42e9ca2c52ccb329bb11fa6154c33bbc2e8f69231c561f55"
+    },
+    {
+      "numero": 218,
+      "id": "povo-tritoes-e-sereias",
+      "titulo": "Tritões e sereias",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-tritoes-e-sereias.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 914542,
+      "pixelsOpacos": 335,
+      "bytes": 1750323,
+      "mtimeMs": 1790911238413.0332,
+      "sha256": "831bad94bf794750f4f73d7f5785bb1601171380d6bc1aa7be6f2868c30003df"
+    },
+    {
+      "numero": 219,
+      "id": "povo-aviares",
+      "titulo": "Aviares",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-aviares.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1056048,
+      "pixelsOpacos": 359,
+      "bytes": 1343398,
+      "mtimeMs": 1790911324981.027,
+      "sha256": "adedb9eb939b170870bf0b3aa09403cae9225e9f9172582ef341d724ba997374"
+    },
+    {
+      "numero": 220,
+      "id": "povo-fidraus",
+      "titulo": "Fidraus",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-fidraus.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 942819,
+      "pixelsOpacos": 369,
+      "bytes": 1708964,
+      "mtimeMs": 1790911399239.0989,
+      "sha256": "8c181e5a9ca2ff65a23d0370555a66ebb84b18675a26aaa103cfd4db2a0301b0"
+    },
+    {
+      "numero": 221,
+      "id": "povo-innhomus",
+      "titulo": "Innhomus",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/povo-innhomus.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 928326,
+      "pixelsOpacos": 922,
+      "bytes": 1787474,
+      "mtimeMs": 1790911473883.931,
+      "sha256": "b77d4ea67481caecdeb95bce1664ef3cdaabb093033a99f5ed780f85bf46d95e"
+    },
+    {
+      "numero": 222,
+      "id": "dragao-lamina",
+      "titulo": "Dragão-Lâmina",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/dragao-lamina.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 990043,
+      "pixelsOpacos": 1426,
+      "bytes": 1466800,
+      "mtimeMs": 1790913701978.913,
+      "sha256": "55e617cc586a73e502168b7fcd831e36022b78df557bdfa9f67174196594e160"
+    },
+    {
+      "numero": 223,
+      "id": "dragao-mercurio",
+      "titulo": "Dragão-Mercúrio",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/dragao-mercurio.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 804966,
+      "pixelsOpacos": 91,
+      "bytes": 2031882,
+      "mtimeMs": 1790911595540.3823,
+      "sha256": "dc4332b327c5cdc3251e4ae02f415abb1cd83a823d9de2430a795e86eef468a7"
+    },
+    {
+      "numero": 224,
+      "id": "dragao-coleira",
+      "titulo": "Dragão-Coleira",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/dragao-coleira.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 767991,
+      "pixelsOpacos": 1319,
+      "bytes": 2111042,
+      "mtimeMs": 1790911968506.7832,
+      "sha256": "13c986f575cb19e14d7e61a1d94e645b21dd5728220ebec783981a6b7d787932"
+    },
+    {
+      "numero": 225,
+      "id": "dragao-coral",
+      "titulo": "Dragão-Coral",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/dragao-coral.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 752989,
+      "pixelsOpacos": 129,
+      "bytes": 2040657,
+      "mtimeMs": 1790912017885.2632,
+      "sha256": "296a1063fb253569fe13dfe03cc906e7a9a98b1ace70243738514cdbb0a37f3e"
+    },
+    {
+      "numero": 226,
+      "id": "dragao-eclipse",
+      "titulo": "Dragão-Eclipse",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/dragao-eclipse.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 876276,
+      "pixelsOpacos": 728,
+      "bytes": 1876124,
+      "mtimeMs": 1790913598454.8948,
+      "sha256": "7f9a7790cbd7c38eff003a8b9626e732f2dd5478e3d0acce63cd7b72614806ce"
+    },
+    {
+      "numero": 227,
+      "id": "dragao-palido",
+      "titulo": "Dragão-Pálido",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/dragao-palido.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 860024,
+      "pixelsOpacos": 560,
+      "bytes": 1925204,
+      "mtimeMs": 1790912208950.4626,
+      "sha256": "25a3c2e83509926dd73a457c3690df3dc2885479e6591e1d6f087586327845b9"
+    },
+    {
+      "numero": 228,
+      "id": "dragao-veu",
+      "titulo": "Dragão-Véu",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/dragao-veu.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 781624,
+      "pixelsOpacos": 424,
+      "bytes": 1987523,
+      "mtimeMs": 1790912163713.878,
+      "sha256": "395e0794293aaaeb2de780e90613bd0306f9cbb451ccdb22e20287418236d741"
+    },
+    {
+      "numero": 229,
+      "id": "dragao-ampulheta",
+      "titulo": "Dragão-Ampulheta",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/dragao-ampulheta.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 774687,
+      "pixelsOpacos": 453,
+      "bytes": 2074931,
+      "mtimeMs": 1790912196422.583,
+      "sha256": "32b010aed65c063b111e20bcd067b1ace9eff58744df473e801d00c0803239f2"
+    },
+    {
+      "numero": 230,
+      "id": "dragao-musgo",
+      "titulo": "Dragão-Musgo",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/dragao-musgo.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 705805,
+      "pixelsOpacos": 182,
+      "bytes": 2205417,
+      "mtimeMs": 1790912271392.5884,
+      "sha256": "2a83733809f5a6d506b9fe1d2bbc75467467edcdbaeca6b6abe5f0f4bffbc44e"
+    },
+    {
+      "numero": 231,
+      "id": "wyvern",
+      "titulo": "Wyvern",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/wyvern.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 827668,
+      "pixelsOpacos": 416,
+      "bytes": 1859184,
+      "mtimeMs": 1790912317405.817,
+      "sha256": "b2c4bd31f9ced67839196271f8f7ed6226a5127fe7946901ce77c470df6a9993"
+    },
+    {
+      "numero": 232,
+      "id": "guarda-da-ponte",
+      "titulo": "Guarda da Ponte",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/guarda-da-ponte.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1182735,
+      "pixelsOpacos": 1267,
+      "bytes": 989342,
+      "mtimeMs": 1790912369796.286,
+      "sha256": "e58cea2605b80056b6ba1829f55c06b16d88df55caa9c9363914ebb89eb50c4a"
+    },
+    {
+      "numero": 233,
+      "id": "sargento-de-ronda",
+      "titulo": "Sargento de Ronda",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/sargento-de-ronda.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 976945,
+      "pixelsOpacos": 586,
+      "bytes": 1477695,
+      "mtimeMs": 1790912405079.6096,
+      "sha256": "e9c8e75931b75d26f36db50c9873f2a0c3fb3ad09b8671639dce8a5997b9e63c"
+    },
+    {
+      "numero": 234,
+      "id": "bandido-de-estrada",
+      "titulo": "Bandido de Estrada",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/bandido-de-estrada.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1004668,
+      "pixelsOpacos": 274,
+      "bytes": 1491932,
+      "mtimeMs": 1790912520596.949,
+      "sha256": "d7d19d14ad16b62f45833d0f6945d667617356f0cb817d70c217fd1df640fdcd"
+    },
+    {
+      "numero": 235,
+      "id": "chefe-de-quadrilha",
+      "titulo": "Chefe de Quadrilha",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/chefe-de-quadrilha.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 929983,
+      "pixelsOpacos": 484,
+      "bytes": 1598477,
+      "mtimeMs": 1790912586569.8428,
+      "sha256": "6d92fd2347c53550236d2396c43c93afb05f4b462ff58fb3f2db7c3a1d5bc2a3"
+    },
+    {
+      "numero": 236,
+      "id": "nobre-ofendido",
+      "titulo": "Nobre Ofendido",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/nobre-ofendido.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 951267,
+      "pixelsOpacos": 1604,
+      "bytes": 1569146,
+      "mtimeMs": 1790912608588.8408,
+      "sha256": "162cae2bdf971c2b3e8c647ae26be522c5036933c0326c54c58f88f8e7213081"
+    },
+    {
+      "numero": 237,
+      "id": "mercador-de-sal",
+      "titulo": "Mercador de Sal",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/mercador-de-sal.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 967089,
+      "pixelsOpacos": 188,
+      "bytes": 1638505,
+      "mtimeMs": 1790912720483.7334,
+      "sha256": "fb9de200cf3bb5f0da17796466ea8fb9a6d5a3d3d7d83b719b6169e74e04ef00"
+    },
+    {
+      "numero": 238,
+      "id": "mercenario-de-serath",
+      "titulo": "Mercenário de Serath",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/mercenario-de-serath.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 915759,
+      "pixelsOpacos": 902,
+      "bytes": 1675521,
+      "mtimeMs": 1790912674856.019,
+      "sha256": "0a7379f6659b17778abba57d4176ed7b0f257adc8574d3f42222d7d35c220bf1"
+    },
+    {
+      "numero": 239,
+      "id": "carrasco-da-cidade-muralha",
+      "titulo": "Carrasco da Cidade-Muralha",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/carrasco-da-cidade-muralha.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1030211,
+      "pixelsOpacos": 837,
+      "bytes": 1503404,
+      "mtimeMs": 1790915146333.5037,
+      "sha256": "75939d37263be552c0b3b2cf90bf5eaf3249f980a0438c9d6bb548ae27895c0a"
+    },
+    {
+      "numero": 240,
+      "id": "pescadora-de-oulveil",
+      "titulo": "Pescadora de OulVeil",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/pescadora-de-oulveil.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1086788,
+      "pixelsOpacos": 648,
+      "bytes": 1303196,
+      "mtimeMs": 1790912870082.9165,
+      "sha256": "02d3e9a5aba78685ba2182923f4c3d2008e4a4eba26b5414436cddf927026a29"
+    },
+    {
+      "numero": 241,
+      "id": "estalajadeiro-de-vau-grande",
+      "titulo": "Estalajadeiro de Vau-Grande",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/estalajadeiro-de-vau-grande.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1079478,
+      "pixelsOpacos": 524,
+      "bytes": 1256262,
+      "mtimeMs": 1790912927116.9324,
+      "sha256": "27be2d89401f98e64662c086dc5637c346eab26e704820731bbc63279ac2810b"
+    },
+    {
+      "numero": 242,
+      "id": "crianca-de-rua",
+      "titulo": "Criança de Rua",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/crianca-de-rua.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 1072553,
+      "pixelsOpacos": 1111,
+      "bytes": 1274660,
+      "mtimeMs": 1790912920574.8467,
+      "sha256": "de71e9ed09912b9567f988049ea208ea13a7985cd35fd578aae9825c15b5bccf"
+    },
+    {
+      "numero": 243,
+      "id": "capitao-otavio-da-guilda-do-rio",
+      "titulo": "Capitão Otávio, da Guilda do Rio",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/capitao-otavio-da-guilda-do-rio.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 927173,
+      "pixelsOpacos": 516,
+      "bytes": 1708359,
+      "mtimeMs": 1790913095460.1313,
+      "sha256": "902e1dea129941f6e9f1468e00b08d8ddacaa80b53323a013a1a9c68f43ec448"
+    },
+    {
+      "numero": 244,
+      "id": "iolanda-fundir",
+      "titulo": "Dona Iolanda, a Sineira",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/iolanda-fundir.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 861535,
+      "pixelsOpacos": 387,
+      "bytes": 1911072,
+      "mtimeMs": 1790913136345.6543,
+      "sha256": "13895aaf5c58c3b9949a1471d068a65acf47cc08fe24fd0d204578081cc7658d"
+    },
+    {
+      "numero": 245,
+      "id": "lino-sineiro",
+      "titulo": "Lino, o Sineiro de Plantão",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/lino-sineiro.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1323630,
+      "pixelsOpacos": 965,
+      "bytes": 674731,
+      "mtimeMs": 1790915203261.7407,
+      "sha256": "707ed7b0120607a40ea31e071261f040489806eb6d80c813f74a1d8acb76f54a"
+    },
+    {
+      "numero": 246,
+      "id": "barqueiro-do-rio",
+      "titulo": "Barqueiro do Rio",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/barqueiro-do-rio.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 935523,
+      "pixelsOpacos": 518,
+      "bytes": 1694175,
+      "mtimeMs": 1790913208731.0178,
+      "sha256": "8056df39f335bb57c9fcfb97289e4c4ba2381d4f49c24b4ff41637a243a589dc"
+    },
+    {
+      "numero": 247,
+      "id": "contrabandista-de-porto",
+      "titulo": "Contrabandista de Porto",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/contrabandista-de-porto.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 1080653,
+      "pixelsOpacos": 355,
+      "bytes": 1179518,
+      "mtimeMs": 1790913200411.4524,
+      "sha256": "cd650e0215add7a415cb4570727a1d97734f8ecdca524f6298423e4054c20f67"
+    },
+    {
+      "numero": 248,
+      "id": "guarda-costas-contratado",
+      "titulo": "Guarda-Costas Contratado",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/guarda-costas-contratado.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 999061,
+      "pixelsOpacos": 550,
+      "bytes": 1381643,
+      "mtimeMs": 1790913345032.1445,
+      "sha256": "4ee0768083c9c47f2b81c7db621253ca883b0e8ea49c1181183821ab2cfbf920"
+    },
+    {
+      "numero": 249,
+      "id": "cacador-de-recompensas",
+      "titulo": "Caçador de Recompensas",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/cacador-de-recompensas.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1033226,
+      "pixelsOpacos": 555,
+      "bytes": 1269979,
+      "mtimeMs": 1790913383969.3591,
+      "sha256": "639a7e6841c7271867ecb203412bf0d46c4891b5d3697fcaf8351091fbdb9a86"
+    },
+    {
+      "numero": 250,
+      "id": "parteira-da-aldeia",
+      "titulo": "Parteira da Aldeia",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/parteira-da-aldeia.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1106514,
+      "pixelsOpacos": 478,
+      "bytes": 1215210,
+      "mtimeMs": 1790913448282.9014,
+      "sha256": "5ca1e5993391e299a726ab871eba59f2aa1effb5978dd86d3c5d0d8d52520c05"
+    },
+    {
+      "numero": 251,
+      "id": "ferreira-de-vau-grande",
+      "titulo": "Ferreira de Vau-Grande",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/ferreira-de-vau-grande.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 956616,
+      "pixelsOpacos": 999,
+      "bytes": 1470150,
+      "mtimeMs": 1790913424315.1045,
+      "sha256": "1afb448976499d4a9a490f6c23a9a282923498e0405b26b20f4c929c89ed36d3"
+    },
+    {
+      "numero": 252,
+      "id": "taverneira-que-vende-segredos",
+      "titulo": "Taverneira que Vende Segredos",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/taverneira-que-vende-segredos.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1016933,
+      "pixelsOpacos": 673,
+      "bytes": 1398055,
+      "mtimeMs": 1790913496822.354,
+      "sha256": "10abd306da3f504d3cf7c50d99a3d6ca2aea11eb293e1baef35d3730619ca9ae"
+    },
+    {
+      "numero": 253,
+      "id": "arruaceiro-de-taverna",
+      "titulo": "Arruaceiro de Taverna",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/arruaceiro-de-taverna.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1021893,
+      "pixelsOpacos": 865,
+      "bytes": 1365446,
+      "mtimeMs": 1790913532109.5142,
+      "sha256": "6eb110c181d1c360c321dc56c88f1ab2aa5a399b164937b7f13367a2cabdee80"
+    },
+    {
+      "numero": 254,
+      "id": "vigia-de-muralha",
+      "titulo": "Vigia de Muralha",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/vigia-de-muralha.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1132231,
+      "pixelsOpacos": 926,
+      "bytes": 1141971,
+      "mtimeMs": 1790913609683.4084,
+      "sha256": "c32a10e61b46f64bc1feb65fcb3f5c8bb2c6e99a18eab8322a6550a04cf601eb"
+    },
+    {
+      "numero": 255,
+      "id": "cobrador-de-impostos",
+      "titulo": "Cobrador de Impostos",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/cobrador-de-impostos.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1137795,
+      "pixelsOpacos": 423,
+      "bytes": 1128111,
+      "mtimeMs": 1790913645498.6877,
+      "sha256": "451fe4f743bf901732db20193c98ae1886e5d93780c5c5116a417e47f2506b59"
+    },
+    {
+      "numero": 256,
+      "id": "herdeira-em-fuga",
+      "titulo": "Herdeira em Fuga",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/herdeira-em-fuga.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1017758,
+      "pixelsOpacos": 161,
+      "bytes": 1389428,
+      "mtimeMs": 1790913644219.6653,
+      "sha256": "da73b32eeddb434b0cfa157380495f73b7e07f64fdec2c0823eaf7db08d9b2fb"
+    },
+    {
+      "numero": 257,
+      "id": "mendigo-que-viu-demais",
+      "titulo": "Mendigo Que Viu Demais",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/mendigo-que-viu-demais.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1090808,
+      "pixelsOpacos": 557,
+      "bytes": 1266299,
+      "mtimeMs": 1790913722497.3242,
+      "sha256": "730a596240b4fe3ab8b2d44f5a745cde50ffe952f3d18f71d437b83be33747ca"
+    },
+    {
+      "numero": 258,
+      "id": "pregador-de-esquina",
+      "titulo": "Pregador de Esquina",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/pregador-de-esquina.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1131085,
+      "pixelsOpacos": 942,
+      "bytes": 1074396,
+      "mtimeMs": 1790913774850.7617,
+      "sha256": "96dd8d75ecc28b2d39cef834bd49e35570dbb297ec9aab244ac45207517291a4"
+    },
+    {
+      "numero": 259,
+      "id": "milicia-de-aldeia",
+      "titulo": "Milícia de Aldeia",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/milicia-de-aldeia.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 729907,
+      "pixelsOpacos": 775,
+      "bytes": 2200723,
+      "mtimeMs": 1790913773724.8557,
+      "sha256": "c740b7f83d78489f972d1f795f5ff54cd4f727967a10fa2c635a117170116d90"
+    },
+    {
+      "numero": 260,
+      "id": "chefe-da-aldeia",
+      "titulo": "Chefe da Aldeia",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/chefe-da-aldeia.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1061652,
+      "pixelsOpacos": 286,
+      "bytes": 1365915,
+      "mtimeMs": 1790913828862.1477,
+      "sha256": "da8060f3c860dae88c3de2b7e4f388e67a6a3b8eeef11b78afdb2669d7fe4118"
+    },
+    {
+      "numero": 261,
+      "id": "caravaneiro",
+      "titulo": "Caravaneiro",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/caravaneiro.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1020056,
+      "pixelsOpacos": 316,
+      "bytes": 1456067,
+      "mtimeMs": 1790913871616.7566,
+      "sha256": "80377208e8c9570ca66f052cb6f712c5c5427883276a77b153ea1ce4e0c316eb"
+    },
+    {
+      "numero": 262,
+      "id": "salteador-a-cavalo",
+      "titulo": "Salteador a Cavalo",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/salteador-a-cavalo.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1002321,
+      "pixelsOpacos": 172,
+      "bytes": 1468546,
+      "mtimeMs": 1790913908580.0215,
+      "sha256": "e1798697e6b1b04beb2aa9678a07cc4f104b466669594a28d6c42d62acb75a2b"
+    },
+    {
+      "numero": 263,
+      "id": "guarda-da-cidade-muralha",
+      "titulo": "Guarda da Cidade-Muralha",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/guarda-da-cidade-muralha.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1003082,
+      "pixelsOpacos": 873,
+      "bytes": 1489447,
+      "mtimeMs": 1790913986425.9805,
+      "sha256": "c8491da0db7ade573370e6b80713aeeb323c1f714066b9d6f403895fcec12ad1"
+    },
+    {
+      "numero": 264,
+      "id": "recruta-assustado",
+      "titulo": "Recruta Assustado",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/recruta-assustado.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1120169,
+      "pixelsOpacos": 1043,
+      "bytes": 1137763,
+      "mtimeMs": 1790913980670.64,
+      "sha256": "18e48e8afa8de8ba3e11fc8dd29c55e56297af343437bde60052cda0c8d6252f"
+    },
+    {
+      "numero": 265,
+      "id": "duelista-de-honra",
+      "titulo": "Duelista de Honra",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/duelista-de-honra.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1169023,
+      "pixelsOpacos": 913,
+      "bytes": 1101170,
+      "mtimeMs": 1790914036171.948,
+      "sha256": "cb9f925090c3760ed5d2ce8053e833b27be817d889e462d44d87f648c08f88ca"
+    },
+    {
+      "numero": 266,
+      "id": "tecela-de-redes",
+      "titulo": "Tecelã de Redes",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/tecela-de-redes.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 1008538,
+      "pixelsOpacos": 449,
+      "bytes": 1586510,
+      "mtimeMs": 1790914088159.6926,
+      "sha256": "b277aaa0300fe29102625c8c234250993117efe36919741bee5a05e0134d468e"
+    },
+    {
+      "numero": 267,
+      "id": "menestrel-viajante",
+      "titulo": "Menestrel Viajante",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/menestrel-viajante.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 879954,
+      "pixelsOpacos": 805,
+      "bytes": 1707521,
+      "mtimeMs": 1790914159835.7554,
+      "sha256": "caf071690a082431b188a02db90e1dcf5c28a96bff19deb3643629cce4f7d8ff"
+    },
+    {
+      "numero": 268,
+      "id": "curandeira-de-ervas",
+      "titulo": "Curandeira de Ervas",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/curandeira-de-ervas.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1072739,
+      "pixelsOpacos": 206,
+      "bytes": 1299932,
+      "mtimeMs": 1790914202531.5557,
+      "sha256": "7fc51515fe7a49fa3564cd52779bc9c5b8f74c7f3b9393f3104c85eebf4f248c"
+    },
+    {
+      "numero": 269,
+      "id": "coveiro-de-vau-grande",
+      "titulo": "Coveiro de Vau-Grande",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/coveiro-de-vau-grande.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 846860,
+      "pixelsOpacos": 178,
+      "bytes": 1785855,
+      "mtimeMs": 1790914203830.888,
+      "sha256": "f2c6fe87821c9e71b6f53a32295eb6882907816cc3a7494f9d854f83e96b84fb"
+    },
+    {
+      "numero": 270,
+      "id": "escriba-do-porto",
+      "titulo": "Escriba do Porto",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/escriba-do-porto.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1216377,
+      "pixelsOpacos": 790,
+      "bytes": 950883,
+      "mtimeMs": 1790914896319.4868,
+      "sha256": "fe53a9f496afaeee3277543ce6ec4cf94197b60880e48439468ea715e51f7810"
+    },
+    {
+      "numero": 271,
+      "id": "pirata-de-rio",
+      "titulo": "Pirata de Rio",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/pirata-de-rio.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 972924,
+      "pixelsOpacos": 328,
+      "bytes": 1576879,
+      "mtimeMs": 1790914299121.4182,
+      "sha256": "111dd970aa40362957b825e324c01408749a99915ade21ae1807dff9f83f0abf"
+    },
+    {
+      "numero": 272,
+      "id": "capita-de-navio-mercante",
+      "titulo": "Capitã de Navio Mercante",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/capita-de-navio-mercante.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1079429,
+      "pixelsOpacos": 402,
+      "bytes": 1124357,
+      "mtimeMs": 1790914342051.009,
+      "sha256": "09b9a4217ea8675a85eec3d27645c1efa9becdd2cc2f1aa60267494a46cac570"
+    },
+    {
+      "numero": 273,
+      "id": "marinheiro",
+      "titulo": "Marinheiro",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/marinheiro.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1148742,
+      "pixelsOpacos": 570,
+      "bytes": 1111437,
+      "mtimeMs": 1790914390006.5537,
+      "sha256": "a07a9eff7a5f3f2a577449fc46b67157e63b5d7177004ee578795436d12068b8"
+    },
+    {
+      "numero": 274,
+      "id": "monge-da-estrada",
+      "titulo": "Monge da Estrada",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/monge-da-estrada.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 948964,
+      "pixelsOpacos": 992,
+      "bytes": 1570890,
+      "mtimeMs": 1790914412777.1702,
+      "sha256": "ebe1438d1dfc8c28c45e051c4843b07f94e2d295cde3ee477f366eb72c85e7ca"
+    },
+    {
+      "numero": 275,
+      "id": "assassina-paga",
+      "titulo": "Assassina Paga",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/assassina-paga.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1116894,
+      "pixelsOpacos": 1237,
+      "bytes": 1214507,
+      "mtimeMs": 1790914459126.8716,
+      "sha256": "af6e1aa22a93d36f625ae81e8dbc9e44fd6f23aa75f11c76541f8cf905f5b6ef"
+    },
+    {
+      "numero": 276,
+      "id": "espiao-da-coroa",
+      "titulo": "Espião da Coroa",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/espiao-da-coroa.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1043049,
+      "pixelsOpacos": 350,
+      "bytes": 1253478,
+      "mtimeMs": 1790914498717.567,
+      "sha256": "f866ba5c590f1766e089ebadd0b8c8a02be436cd5fdd0be974bcc31567fe4808"
+    },
+    {
+      "numero": 277,
+      "id": "juiza-da-cidade",
+      "titulo": "Juíza da Cidade",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/juiza-da-cidade.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1028352,
+      "pixelsOpacos": 1055,
+      "bytes": 1228033,
+      "mtimeMs": 1790914693192.4678,
+      "sha256": "bd17de4f54d48d9ec51efab84c3f8bb3446357a843556e0b5e6511bf332cb285"
+    },
+    {
+      "numero": 278,
+      "id": "carcereiro",
+      "titulo": "Carcereiro",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/carcereiro.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1068263,
+      "pixelsOpacos": 525,
+      "bytes": 1218008,
+      "mtimeMs": 1790914736389.8062,
+      "sha256": "27755a0d5840a2c9ac54c2e4fcce3e9760971b3a0d54ad51f59d660e22226464"
+    },
+    {
+      "numero": 279,
+      "id": "prisioneiro-esquecido",
+      "titulo": "Prisioneiro Esquecido",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/prisioneiro-esquecido.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1204918,
+      "pixelsOpacos": 832,
+      "bytes": 949736,
+      "mtimeMs": 1790914791547.6743,
+      "sha256": "798590ca98c0b5b68c1007380763d9785cdeba03e1d5df3142110a0e6fbd1084"
+    },
+    {
+      "numero": 280,
+      "id": "mae-procurando-o-filho",
+      "titulo": "Mãe Procurando o Filho",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/mae-procurando-o-filho.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1199399,
+      "pixelsOpacos": 339,
+      "bytes": 931831,
+      "mtimeMs": 1790914827398.609,
+      "sha256": "d66abd37f435d6de034aed486291497a41583d47ba49195d755cc169ec795db2"
+    },
+    {
+      "numero": 281,
+      "id": "rei-do-esgoto",
+      "titulo": "Rei do Esgoto",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/rei-do-esgoto.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 778755,
+      "pixelsOpacos": 478,
+      "bytes": 1999810,
+      "mtimeMs": 1790914844263.9377,
+      "sha256": "46ac6f4acceef2089aec6b96017a54966e31cc9f7127cdd0b9493f26f7a7b15d"
+    },
+    {
+      "numero": 282,
+      "id": "gente-de-esgoto",
+      "titulo": "Gente-de-Esgoto",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/gente-de-esgoto.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 735407,
+      "pixelsOpacos": 401,
+      "bytes": 2147598,
+      "mtimeMs": 1790914949644.1904,
+      "sha256": "aca1e4140ce00ec160209d3f945c535dea732371ee780b9c90c217a811a6bc27"
+    },
+    {
+      "numero": 283,
+      "id": "veterana-de-guerra",
+      "titulo": "Veterana de Guerra",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/veterana-de-guerra.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1034044,
+      "pixelsOpacos": 956,
+      "bytes": 1410564,
+      "mtimeMs": 1790915007785.8713,
+      "sha256": "e0d38f8849828ff3b9d5d1eaa13dbd017d182f163e47e8e56d30c4eed0e6404d"
+    },
+    {
+      "numero": 284,
+      "id": "gladiador-da-arena",
+      "titulo": "Gladiador da Arena",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/gladiador-da-arena.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 923029,
+      "pixelsOpacos": 1075,
+      "bytes": 1655804,
+      "mtimeMs": 1790915074699.1506,
+      "sha256": "15c28c718c377880945c8ae112e27c51052d4989e950e829eb3a995fcbe55c63"
+    },
+    {
+      "numero": 285,
+      "id": "dono-da-arena",
+      "titulo": "Dono da Arena",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/dono-da-arena.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1107235,
+      "pixelsOpacos": 637,
+      "bytes": 1095403,
+      "mtimeMs": 1790915115916.0842,
+      "sha256": "680fbc6619dae45d14999a6117936198e090ea8b2762479d3aeceb57e3644c15"
+    },
+    {
+      "numero": 286,
+      "id": "cavaleiro-errante",
+      "titulo": "Cavaleiro Errante",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/cavaleiro-errante.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1057534,
+      "pixelsOpacos": 1225,
+      "bytes": 1357365,
+      "mtimeMs": 1790915176139.15,
+      "sha256": "325894b3ed992da202b45213b0bf3f42cde476166315bbe4d8f3167dac04845e"
+    },
+    {
+      "numero": 287,
+      "id": "escudeiro",
+      "titulo": "Escudeiro",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/escudeiro.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1131561,
+      "pixelsOpacos": 966,
+      "bytes": 1101608,
+      "mtimeMs": 1790915244365.391,
+      "sha256": "9c424b5e5b4eec6e686f49d6a16d5747449daf6f33513b4c2371784ccab56d82"
+    },
+    {
+      "numero": 288,
+      "id": "cacadora-da-mata",
+      "titulo": "Caçadora da Mata",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/cacadora-da-mata.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1105222,
+      "pixelsOpacos": 844,
+      "bytes": 1218338,
+      "mtimeMs": 1790915251458.2026,
+      "sha256": "b8628486909d4ccfa34cdf338a74651481a56d9e3d27a6a75a205e87ffd37852"
+    },
+    {
+      "numero": 289,
+      "id": "lenhador",
+      "titulo": "Lenhador",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/lenhador.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1155774,
+      "pixelsOpacos": 592,
+      "bytes": 992919,
+      "mtimeMs": 1790915287394.0583,
+      "sha256": "1f664c33b9dd0e83b01a8b763ca0b6008d5ce962cc1695dd87bbcda7df0d5bc6"
+    },
+    {
+      "numero": 290,
+      "id": "mineira",
+      "titulo": "Mineira",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/mineira.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1173316,
+      "pixelsOpacos": 1002,
+      "bytes": 1015753,
+      "mtimeMs": 1790915309501.9265,
+      "sha256": "2f7a2ea34fd37622d31fa38f31cb8af87bdf9bafcf2ea6ad0d468140f6279806"
+    },
+    {
+      "numero": 291,
+      "id": "contadora-de-historias",
+      "titulo": "Contadora de Histórias",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/contadora-de-historias.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1067002,
+      "pixelsOpacos": 240,
+      "bytes": 1385503,
+      "mtimeMs": 1790915357203.963,
+      "sha256": "6da742addbc022ad11199864550302a851c32969b4aa6e6c92db96527ca73388"
+    },
+    {
+      "numero": 292,
+      "id": "noivo-abandonado",
+      "titulo": "Noivo Abandonado",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/noivo-abandonado.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1157151,
+      "pixelsOpacos": 923,
+      "bytes": 1060943,
+      "mtimeMs": 1790915413003.7837,
+      "sha256": "38d285a6ed0a444ca0811d19622361af43a77b16c2a88f4428368fd6260e74ba"
+    },
+    {
+      "numero": 293,
+      "id": "sacerdotisa-de-zahun",
+      "titulo": "Sacerdotisa de Zahun",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/sacerdotisa-de-zahun.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 990034,
+      "pixelsOpacos": 349,
+      "bytes": 1538695,
+      "mtimeMs": 1790915405956.6956,
+      "sha256": "2ef04ed8b9e521604b14f50199d6321355ecf9969dba98c343bd141c8e3c2ca9"
+    },
+    {
+      "numero": 294,
+      "id": "inquisidor-anti-magia",
+      "titulo": "Inquisidor Anti-Magia",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/inquisidor-anti-magia.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 820027,
+      "pixelsOpacos": 723,
+      "bytes": 1952278,
+      "mtimeMs": 1790915476902.8882,
+      "sha256": "bcd01be041f6182195c08610e33df38540254929d70a478a02e01d56b067ebc7"
+    },
+    {
+      "numero": 295,
+      "id": "engenheira-de-pontes",
+      "titulo": "Engenheira de Pontes",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/engenheira-de-pontes.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1046597,
+      "pixelsOpacos": 803,
+      "bytes": 1414085,
+      "mtimeMs": 1790915534420.6216,
+      "sha256": "79b28a6dfa483de8be7ab4fb6faac535f667b7d2c2021bdd7c64a35482aad704"
+    },
+    {
+      "numero": 296,
+      "id": "cocheiro",
+      "titulo": "Cocheiro",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/cocheiro.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1139814,
+      "pixelsOpacos": 669,
+      "bytes": 1095514,
+      "mtimeMs": 1790915518604.3977,
+      "sha256": "3b94febce6d9e05b4dd6286c82282885fc68d069d97933878ce09a45f2397130"
+    },
+    {
+      "numero": 297,
+      "id": "ladrao-de-tumulos",
+      "titulo": "Ladrão de Túmulos",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/ladrao-de-tumulos.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 977642,
+      "pixelsOpacos": 871,
+      "bytes": 1572720,
+      "mtimeMs": 1790915592304.1877,
+      "sha256": "a3bff3ca7ddc0e35eb043bb3725469e5beb86a0f636c3d4012ddce720b3fe30d"
+    },
+    {
+      "numero": 298,
+      "id": "trapaceiro-de-feira",
+      "titulo": "Trapaceiro de Feira",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/trapaceiro-de-feira.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1133627,
+      "pixelsOpacos": 354,
+      "bytes": 1112836,
+      "mtimeMs": 1790915639698.034,
+      "sha256": "667bc065a3f7f3dc07a0915fe21508dcefec2da5d246098ee78281f0ca856e54"
+    },
+    {
+      "numero": 299,
+      "id": "leiloeiro",
+      "titulo": "Leiloeiro",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/leiloeiro.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1118849,
+      "pixelsOpacos": 918,
+      "bytes": 1110259,
+      "mtimeMs": 1790915703482.65,
+      "sha256": "41a0e89e4185020685ffeac9aaf2e0947e3f7e9fb51dee1fd178a06cca63b9f8"
+    },
+    {
+      "numero": 300,
+      "id": "pastora-de-cabras",
+      "titulo": "Pastora de Cabras",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/pastora-de-cabras.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 1139248,
+      "pixelsOpacos": 650,
+      "bytes": 1176240,
+      "mtimeMs": 1790915764734.052,
+      "sha256": "0b67909c5f9abdb4430c5364294bc6d704335bd5bddb57ba450d4f508311faea"
+    },
+    {
+      "numero": 301,
+      "id": "criado-de-mansao",
+      "titulo": "Criado de Mansão",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/criado-de-mansao.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1217318,
+      "pixelsOpacos": 854,
+      "bytes": 875568,
+      "mtimeMs": 1790915895242.8855,
+      "sha256": "df567918dbea0022d78ba5561d06c14216871722a224ed4a2ea35b6105da565b"
+    },
+    {
+      "numero": 302,
+      "id": "capita-mercenaria",
+      "titulo": "Capitã Mercenária",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/capita-mercenaria.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1018296,
+      "pixelsOpacos": 1048,
+      "bytes": 1361259,
+      "mtimeMs": 1790915961098.2026,
+      "sha256": "228059e94c1bb8a911ac15926e08ce656a4e31c40f3f99311461ed49acc0a1b3"
+    },
+    {
+      "numero": 303,
+      "id": "rei-mendigo-da-cidade-baixa",
+      "titulo": "Rei Mendigo da Cidade Baixa",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/rei-mendigo-da-cidade-baixa.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1109026,
+      "pixelsOpacos": 420,
+      "bytes": 1087954,
+      "mtimeMs": 1790915942951.535,
+      "sha256": "1571e3a035830aba9608fc054d240b4b54e1a75e5eeb12781c0f6ee4641962f5"
+    },
+    {
+      "numero": 304,
+      "id": "estudante-da-escola-de-magia",
+      "titulo": "Estudante da Escola de Magia",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/estudante-da-escola-de-magia.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1027858,
+      "pixelsOpacos": 292,
+      "bytes": 1341479,
+      "mtimeMs": 1790915981024.5244,
+      "sha256": "40b9728cb16f45c95dc49b377579e80b68a9d21f8abc4b5547bfb3bc0373fbc5"
+    },
+    {
+      "numero": 305,
+      "id": "professora-da-escola-de-magia",
+      "titulo": "Professora da Escola de Magia",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/professora-da-escola-de-magia.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 994108,
+      "pixelsOpacos": 905,
+      "bytes": 1482942,
+      "mtimeMs": 1790916024187.9006,
+      "sha256": "03b8aa8b70040a9d2208d2fefe84700ce569995b701353bc295531d68e6d6dfd"
+    },
+    {
+      "numero": 306,
+      "id": "tatuadora-de-marcas",
+      "titulo": "Tatuadora de Marcas",
+      "estado": "pendente"
+    },
+    {
+      "numero": 307,
+      "id": "cartografo-perdido",
+      "titulo": "Cartógrafo Perdido",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/cartografo-perdido.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1056765,
+      "pixelsOpacos": 801,
+      "bytes": 1355070,
+      "mtimeMs": 1790916048780.1052,
+      "sha256": "19ec3ab4c476351dd6cf568991cce377a829524af80581e86415b870247bd1fd"
+    },
+    {
+      "numero": 308,
+      "id": "boticaria-do-porto-de-vidro",
+      "titulo": "Boticária do Porto de Vidro",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/boticaria-do-porto-de-vidro.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 959182,
+      "pixelsOpacos": 541,
+      "bytes": 1563109,
+      "mtimeMs": 1790916079133.5674,
+      "sha256": "3064adda2444a7c650e1e06849094be7d9896694ac69753d0b7e1759ccdb90cf"
+    },
+    {
+      "numero": 309,
+      "id": "velho-relojoeiro-da-vila-do-mesmo-dia",
+      "titulo": "Velho Relojoeiro da Vila do Mesmo Dia",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/velho-relojoeiro-da-vila-do-mesmo-dia.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1078400,
+      "pixelsOpacos": 750,
+      "bytes": 1273505,
+      "mtimeMs": 1790916145918.1914,
+      "sha256": "1acb4d5b282cbcb43c42961a4310a04f2a4fb16ec304225d828bfe5268fafc13"
+    },
+    {
+      "numero": 310,
+      "id": "novica-insone",
+      "titulo": "Noviça Insone",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/novica-insone.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 935224,
+      "pixelsOpacos": 542,
+      "bytes": 1413142,
+      "mtimeMs": 1790916184472.2258,
+      "sha256": "5b9de0b180db8dcf8d06d6b93d2caf34e5248a3d4f6516798ef1857b20a1903e"
+    },
+    {
+      "numero": 311,
+      "id": "domador-de-wyvern-correio",
+      "titulo": "Domador de Wyvern-Correio",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/domador-de-wyvern-correio.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 963952,
+      "pixelsOpacos": 1205,
+      "bytes": 1547926,
+      "mtimeMs": 1790916212125.807,
+      "sha256": "79a6897912b329ad5e43de38a35756bd7b5ad3d96a09b3411658931226f66e56"
+    },
+    {
+      "numero": 312,
+      "id": "o-imperador-de-alvomarfim",
+      "titulo": "O Imperador de AlvoMarfim",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/o-imperador-de-alvomarfim.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 950508,
+      "pixelsOpacos": 1195,
+      "bytes": 1630080,
+      "mtimeMs": 1790916245944.6028,
+      "sha256": "21cbd66d3b04c9b2f26be4950a1b3910e00e25c53838da0998bbc84851171c58"
+    },
+    {
+      "numero": 313,
+      "id": "mafrisa-do-bar-da-mafrisa",
+      "titulo": "Mafrisa, do Bar da Mafrisa",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/mafrisa-do-bar-da-mafrisa.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1043453,
+      "pixelsOpacos": 797,
+      "bytes": 1355203,
+      "mtimeMs": 1790916229641.4946,
+      "sha256": "e32b4f36983dbb7149837ac90e4bfb4e470b23bf5716c56781e67852bec2ad62"
+    },
+    {
+      "numero": 314,
+      "id": "professor-ninguem",
+      "titulo": "Professor Ninguém",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/professor-ninguem.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 847517,
+      "pixelsOpacos": 194,
+      "bytes": 1948962,
+      "mtimeMs": 1790916283224.2456,
+      "sha256": "7e78fa8e6c642c881b65404cb1e40dff12aae8a627c5899325bc6efd41bd9e1b"
+    },
+    {
+      "numero": 315,
+      "id": "aprendiz-descontrolado",
+      "titulo": "Aprendiz Descontrolado",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/aprendiz-descontrolado.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 975324,
+      "pixelsOpacos": 193,
+      "bytes": 1652604,
+      "mtimeMs": 1790916327700.5176,
+      "sha256": "4a842bb26500e6e7dd76b88023b99105571934ad0820107ad9c58fcfb5a24284"
+    },
+    {
+      "numero": 316,
+      "id": "duelista-da-lamina-vermelha",
+      "titulo": "Duelista da Lâmina Vermelha",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/duelista-da-lamina-vermelha.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 989577,
+      "pixelsOpacos": 777,
+      "bytes": 1411954,
+      "mtimeMs": 1790916295857.01,
+      "sha256": "89c244a7a39d5b77712e77e0e836946bbf5509ea7c5670d235152027a88d6a32"
+    },
+    {
+      "numero": 317,
+      "id": "encantadora-de-salao",
+      "titulo": "Encantadora de Salão",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/encantadora-de-salao.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 779158,
+      "pixelsOpacos": 209,
+      "bytes": 2034216,
+      "mtimeMs": 1790916332273.3044,
+      "sha256": "49499e0e022bac178e1a24ea267af09eb471819d945c53369371776628b247af"
+    },
+    {
+      "numero": 318,
+      "id": "leitor-de-sombras",
+      "titulo": "Leitor de Sombras",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/leitor-de-sombras.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 987364,
+      "pixelsOpacos": 884,
+      "bytes": 1517751,
+      "mtimeMs": 1790916361796.5222,
+      "sha256": "5d23974422b53532f2fcc5e0cd2c3b297e6d066ed54b683cc4ffa4585f46cb31"
+    },
+    {
+      "numero": 319,
+      "id": "sacerdote-da-porta",
+      "titulo": "Sacerdote da Porta",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/sacerdote-da-porta.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 983219,
+      "pixelsOpacos": 664,
+      "bytes": 1592778,
+      "mtimeMs": 1790916388225.2031,
+      "sha256": "29ea1cbee3497492af0e583622f11dae0855ebd72d0f1ed881baa6c88dfe3b1e"
+    },
+    {
+      "numero": 320,
+      "id": "domadora-de-garmhal",
+      "titulo": "Domadora de Garmhal",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/domadora-de-garmhal.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 925309,
+      "pixelsOpacos": 530,
+      "bytes": 1621929,
+      "mtimeMs": 1790916385325.669,
+      "sha256": "136c5225074bde9e9279b27dfbaa350e76906d4993438fb27812f143e3d92e83"
+    },
+    {
+      "numero": 321,
+      "id": "relojoeiro-fugitivo",
+      "titulo": "Relojoeiro Fugitivo",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/relojoeiro-fugitivo.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1018098,
+      "pixelsOpacos": 1103,
+      "bytes": 1396390,
+      "mtimeMs": 1790916453553.7776,
+      "sha256": "094d862821032018c846bd867e18dd60c36dda2f086de605d05304ffeac37658"
+    },
+    {
+      "numero": 322,
+      "id": "arquimaga-da-torre-inversa",
+      "titulo": "Arquimaga da Torre Inversa",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/arquimaga-da-torre-inversa.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 781949,
+      "pixelsOpacos": 219,
+      "bytes": 2114276,
+      "mtimeMs": 1790916496976.511,
+      "sha256": "8dc13d0df0e2129ebee5c900007f48d913eaee244a1c81f8ebd80038261cb4a8"
+    },
+    {
+      "numero": 323,
+      "id": "juiz-feiticeiro",
+      "titulo": "Juiz-Feiticeiro",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/juiz-feiticeiro.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 741664,
+      "pixelsOpacos": 379,
+      "bytes": 2143839,
+      "mtimeMs": 1790916540560.1123,
+      "sha256": "105a25d7369bd0f75050f7d840d29b0d83c6856cd4b6327af48dfc03bdb66529"
+    },
+    {
+      "numero": 324,
+      "id": "sargenta-do-estandarte",
+      "titulo": "Sargenta do Estandarte",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/sargenta-do-estandarte.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 975351,
+      "pixelsOpacos": 873,
+      "bytes": 1528457,
+      "mtimeMs": 1790916566599.1807,
+      "sha256": "673b8a2288105bedd338bed60b1615adc5c7d20276dc6e2c7979f76460a0e667"
+    },
+    {
+      "numero": 325,
+      "id": "quebra-escudos",
+      "titulo": "Quebra-Escudos",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/quebra-escudos.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pixelsTransparentes": 795684,
+      "pixelsOpacos": 767,
+      "bytes": 2040255,
+      "mtimeMs": 1790916635420.5342,
+      "sha256": "f11aa16377ca6a8086222bf66c94ad0c1cf2c6afb5782e5a7bb9dda17a03b257"
+    },
+    {
+      "numero": 326,
+      "id": "arqueira-da-ultima-flecha",
+      "titulo": "Arqueira da Última Flecha",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/arqueira-da-ultima-flecha.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 1003213,
+      "pixelsOpacos": 665,
+      "bytes": 1507295,
+      "mtimeMs": 1790916693989.4258,
+      "sha256": "ee05c067766a94112f8ae992d09d2c6d70f53b6511b5a39d5e8f55845bcc9e9d"
+    },
+    {
+      "numero": 327,
+      "id": "senhor-da-trincheira",
+      "titulo": "Senhor da Trincheira",
+      "estado": "pendente"
+    },
+    {
+      "numero": 328,
+      "id": "ferreira-alquimista",
+      "titulo": "Ferreira-Alquimista",
+      "estado": "gerada e alfa conferido",
+      "arquivo": "imagens/ferreira-alquimista.png",
+      "largura": 1254,
+      "altura": 1254,
+      "hasAlpha": true,
+      "alfaCantos": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pixelsTransparentes": 897223,
+      "pixelsOpacos": 342,
+      "bytes": 1829221,
+      "mtimeMs": 1790916689594.768,
+      "sha256": "f99936a410bcc36f551c7b67aa4d87b3bcea73109a7734fbfc7983421aacd501"
+    },
+    {
+      "numero": 329,
+      "id": "contrabandista-de-mercurio",
+      "titulo": "Contrabandista de Mercúrio",
+      "estado": "pendente"
+    },
+    {
+      "numero": 330,
+      "id": "guardia-do-vapor",
+      "titulo": "Guardiã do Vapor",
+      "estado": "pendente"
+    },
+    {
+      "numero": 331,
+      "id": "escultor-de-sal",
+      "titulo": "Escultor de Sal",
+      "estado": "pendente"
+    },
+    {
+      "numero": 332,
+      "id": "mestre-de-coleira",
+      "titulo": "Mestre de Coleira",
+      "estado": "pendente"
+    },
+    {
+      "numero": 333,
+      "id": "cobradora-de-dividas",
+      "titulo": "Cobradora de Dívidas",
+      "estado": "pendente"
+    },
+    {
+      "numero": 334,
+      "id": "senhor-de-escravos-da-voragem",
+      "titulo": "Senhor de Escravos da Voragem",
+      "estado": "pendente"
+    },
+    {
+      "numero": 335,
+      "id": "menino-que-manda-nos-caes",
+      "titulo": "Menino Que Manda nos Cães",
+      "estado": "pendente"
+    },
+    {
+      "numero": 336,
+      "id": "carpideira",
+      "titulo": "Carpideira",
+      "estado": "pendente"
+    },
+    {
+      "numero": 337,
+      "id": "lutador-de-pele-de-pedra",
+      "titulo": "Lutador de Pele de Pedra",
+      "estado": "pendente"
+    },
+    {
+      "numero": 338,
+      "id": "rainha-do-carnaval",
+      "titulo": "Rainha do Carnaval",
+      "estado": "pendente"
+    },
+    {
+      "numero": 339,
+      "id": "cirurgiao-de-rostos",
+      "titulo": "Cirurgião de Rostos",
+      "estado": "pendente"
+    },
+    {
+      "numero": 340,
+      "id": "faroleira-de-vau-grande",
+      "titulo": "Faroleira de Vau-Grande",
+      "estado": "pendente"
+    },
+    {
+      "numero": 341,
+      "id": "vidente-de-feira",
+      "titulo": "Vidente de Feira",
+      "estado": "pendente"
+    },
+    {
+      "numero": 342,
+      "id": "cacador-de-pesadelos",
+      "titulo": "Caçador de Pesadelos",
+      "estado": "pendente"
+    },
+    {
+      "numero": 343,
+      "id": "bispa-do-eclipse",
+      "titulo": "Bispa do Eclipse",
+      "estado": "pendente"
+    },
+    {
+      "numero": 344,
+      "id": "curandeira-de-beira-de-estrada",
+      "titulo": "Curandeira de Beira de Estrada",
+      "estado": "pendente"
+    },
+    {
+      "numero": 345,
+      "id": "embalsamador",
+      "titulo": "Embalsamador",
+      "estado": "pendente"
+    },
+    {
+      "numero": 346,
+      "id": "ceifadora-da-peste",
+      "titulo": "Ceifadora da Peste",
+      "estado": "pendente"
+    },
+    {
+      "numero": 347,
+      "id": "medium-do-luto",
+      "titulo": "Médium do Luto",
+      "estado": "pendente"
+    },
+    {
+      "numero": 348,
+      "id": "professor-de-logica",
+      "titulo": "Professor de Lógica",
+      "estado": "pendente"
+    },
+    {
+      "numero": 349,
+      "id": "ladra-de-memorias",
+      "titulo": "Ladra de Memórias",
+      "estado": "pendente"
+    },
+    {
+      "numero": 350,
+      "id": "doutrinador",
+      "titulo": "Doutrinador",
+      "estado": "pendente"
+    },
+    {
+      "numero": 351,
+      "id": "ilusionista-do-labirinto",
+      "titulo": "Ilusionista do Labirinto",
+      "estado": "pendente"
+    },
+    {
+      "numero": 352,
+      "id": "mensageira-do-portal",
+      "titulo": "Mensageira do Portal",
+      "estado": "pendente"
+    },
+    {
+      "numero": 353,
+      "id": "guardiao-do-ciclo",
+      "titulo": "Guardião do Ciclo",
+      "estado": "pendente"
+    },
+    {
+      "numero": 354,
+      "id": "viajante-do-entretempo",
+      "titulo": "Viajante do Entretempo",
+      "estado": "pendente"
+    },
+    {
+      "numero": 355,
+      "id": "engenheira-de-distancias",
+      "titulo": "Engenheira de Distâncias",
+      "estado": "pendente"
+    },
+    {
+      "numero": 356,
+      "id": "druida-de-tahwe",
+      "titulo": "Druida de Tahwë",
+      "estado": "pendente"
+    },
+    {
+      "numero": 357,
+      "id": "metamorfo-cacador",
+      "titulo": "Metamorfo Caçador",
+      "estado": "pendente"
+    },
+    {
+      "numero": 358,
+      "id": "invocadora-de-espiritos",
+      "titulo": "Invocadora de Espíritos",
+      "estado": "pendente"
+    },
+    {
+      "numero": 359,
+      "id": "menina-raposa",
+      "titulo": "Menina-Raposa",
+      "estado": "pendente"
+    },
+    {
+      "numero": 360,
+      "id": "ciantia-dragoes",
+      "titulo": "Professora Ciantia",
+      "estado": "pendente"
+    },
+    {
+      "numero": 361,
+      "id": "disscar-rasgo",
+      "titulo": "DisScar",
+      "estado": "pendente"
+    },
+    {
+      "numero": 362,
+      "id": "o-antigo-bibliotecario",
+      "titulo": "O Antigo Bibliotecário",
+      "estado": "pendente"
+    },
+    {
+      "numero": 363,
+      "id": "menina-de-pele-de-mercurio",
+      "titulo": "Menina de Pele de Mercúrio",
+      "estado": "pendente"
+    },
+    {
+      "numero": 364,
+      "id": "estivador-de-pedra",
+      "titulo": "Estivador de Pedra",
+      "estado": "pendente"
+    },
+    {
+      "numero": 365,
+      "id": "marcada-da-corrente",
+      "titulo": "Marcada da Corrente",
+      "estado": "pendente"
+    },
+    {
+      "numero": 366,
+      "id": "rapaz-do-rosto-mutavel",
+      "titulo": "Rapaz do Rosto Mutável",
+      "estado": "pendente"
+    },
+    {
+      "numero": 367,
+      "id": "cantora-coral",
+      "titulo": "Cantora-Coral",
+      "estado": "pendente"
+    },
+    {
+      "numero": 368,
+      "id": "olhos-de-farol",
+      "titulo": "Olhos-de-Farol",
+      "estado": "pendente"
+    },
+    {
+      "numero": 369,
+      "id": "sonambula-das-duas-palpebras",
+      "titulo": "Sonâmbula das Duas Pálpebras",
+      "estado": "pendente"
+    },
+    {
+      "numero": 370,
+      "id": "velho-de-ossos-claros",
+      "titulo": "Velho de Ossos Claros",
+      "estado": "pendente"
+    },
+    {
+      "numero": 371,
+      "id": "moca-que-nao-sangra",
+      "titulo": "Moça Que Não Sangra",
+      "estado": "pendente"
+    },
+    {
+      "numero": 372,
+      "id": "esquecido-de-nascenca",
+      "titulo": "Esquecido de Nascença",
+      "estado": "pendente"
+    },
+    {
+      "numero": 373,
+      "id": "contadora-de-mentes",
+      "titulo": "Contadora de Mentes",
+      "estado": "pendente"
+    },
+    {
+      "numero": 374,
+      "id": "menino-de-dois-instantes",
+      "titulo": "Menino de Dois Instantes",
+      "estado": "pendente"
+    },
+    {
+      "numero": 375,
+      "id": "ancia-do-tempo-lento",
+      "titulo": "Anciã do Tempo Lento",
+      "estado": "pendente"
+    },
+    {
+      "numero": 376,
+      "id": "cacador-de-chifres",
+      "titulo": "Caçador de Chifres",
+      "estado": "pendente"
+    },
+    {
+      "numero": 377,
+      "id": "mulher-musgo",
+      "titulo": "Mulher-Musgo",
+      "estado": "pendente"
+    },
+    {
+      "numero": 378,
+      "id": "rato-de-esgoto-gigante",
+      "titulo": "Rato-de-Esgoto Gigante",
+      "estado": "pendente"
+    },
+    {
+      "numero": 379,
+      "id": "javali-de-ferro",
+      "titulo": "Javali de Ferro",
+      "estado": "pendente"
+    },
+    {
+      "numero": 380,
+      "id": "lobo-de-cinza",
+      "titulo": "Lobo-de-Cinza",
+      "estado": "pendente"
+    },
+    {
+      "numero": 381,
+      "id": "aranha-tecela",
+      "titulo": "Aranha-Tecelã",
+      "estado": "pendente"
+    },
+    {
+      "numero": 382,
+      "id": "corvo-pressagio",
+      "titulo": "Corvo-Presságio",
+      "estado": "pendente"
+    },
+    {
+      "numero": 383,
+      "id": "cao-de-coleira-dupla",
+      "titulo": "Cão de Coleira Dupla",
+      "estado": "pendente"
+    },
+    {
+      "numero": 384,
+      "id": "serpente-espelho",
+      "titulo": "Serpente-Espelho",
+      "estado": "pendente"
+    },
+    {
+      "numero": 385,
+      "id": "urso-raiz",
+      "titulo": "Urso-Raiz",
+      "estado": "pendente"
+    },
+    {
+      "numero": 386,
+      "id": "leao-de-cem-dentes",
+      "titulo": "Leão de Cem Dentes",
+      "estado": "pendente"
+    },
+    {
+      "numero": 387,
+      "id": "grifo-de-vidro",
+      "titulo": "Grifo-de-Vidro",
+      "estado": "pendente"
+    },
+    {
+      "numero": 388,
+      "id": "hidra-de-barro",
+      "titulo": "Hidra de Barro",
+      "estado": "pendente"
+    },
+    {
+      "numero": 389,
+      "id": "cavalo-de-guerra",
+      "titulo": "Cavalo de Guerra",
+      "estado": "pendente"
+    },
+    {
+      "numero": 390,
+      "id": "mula-teimosa",
+      "titulo": "Mula Teimosa",
+      "estado": "pendente"
+    },
+    {
+      "numero": 391,
+      "id": "gato-de-navio",
+      "titulo": "Gato de Navio",
+      "estado": "pendente"
+    },
+    {
+      "numero": 392,
+      "id": "cao-pastor",
+      "titulo": "Cão Pastor",
+      "estado": "pendente"
+    },
+    {
+      "numero": 393,
+      "id": "bode-das-encostas",
+      "titulo": "Bode das Encostas",
+      "estado": "pendente"
+    },
+    {
+      "numero": 394,
+      "id": "enxame-de-vespas",
+      "titulo": "Enxame de Vespas",
+      "estado": "pendente"
+    },
+    {
+      "numero": 395,
+      "id": "crocodilo-de-lama",
+      "titulo": "Crocodilo de Lama",
+      "estado": "pendente"
+    },
+    {
+      "numero": 396,
+      "id": "morcego-vampiro-gigante",
+      "titulo": "Morcego-Vampiro Gigante",
+      "estado": "pendente"
+    },
+    {
+      "numero": 397,
+      "id": "tatu-de-couraca",
+      "titulo": "Tatu de Couraça",
+      "estado": "pendente"
+    },
+    {
+      "numero": 398,
+      "id": "coruja-sabia",
+      "titulo": "Coruja-Sábia",
+      "estado": "pendente"
+    },
+    {
+      "numero": 399,
+      "id": "onca-das-sombras",
+      "titulo": "Onça-das-Sombras",
+      "estado": "pendente"
+    },
+    {
+      "numero": 400,
+      "id": "touro-de-kairvahnn",
+      "titulo": "Touro de Kairvahnn",
+      "estado": "pendente"
+    },
+    {
+      "numero": 401,
+      "id": "matilha-da-voragem",
+      "titulo": "Matilha da Voragem",
+      "estado": "pendente"
+    },
+    {
+      "numero": 402,
+      "id": "quimera-de-tres-fomes",
+      "titulo": "Quimera de Três Fomes",
+      "estado": "pendente"
+    },
+    {
+      "numero": 403,
+      "id": "manticora",
+      "titulo": "Mantícora",
+      "estado": "pendente"
+    },
+    {
+      "numero": 404,
+      "id": "basilisco-de-estrada",
+      "titulo": "Basilisco de Estrada",
+      "estado": "pendente"
+    },
+    {
+      "numero": 405,
+      "id": "verme-da-areia",
+      "titulo": "Verme da Areia",
+      "estado": "pendente"
+    },
+    {
+      "numero": 406,
+      "id": "lesma-lampada",
+      "titulo": "Lesma-Lâmpada",
+      "estado": "pendente"
+    },
+    {
+      "numero": 407,
+      "id": "garca-de-neblina",
+      "titulo": "Garça-de-Neblina",
+      "estado": "pendente"
+    },
+    {
+      "numero": 408,
+      "id": "polvo-do-porto-de-vidro",
+      "titulo": "Polvo do Porto de Vidro",
+      "estado": "pendente"
+    },
+    {
+      "numero": 409,
+      "id": "tubarao-lamina",
+      "titulo": "Tubarão-Lâmina",
+      "estado": "pendente"
+    },
+    {
+      "numero": 410,
+      "id": "serpente-marinha",
+      "titulo": "Serpente-Marinha",
+      "estado": "pendente"
+    },
+    {
+      "numero": 411,
+      "id": "caranguejo-ermitao-gigante",
+      "titulo": "Caranguejo-Ermitão Gigante",
+      "estado": "pendente"
+    },
+    {
+      "numero": 412,
+      "id": "sapo-profeta",
+      "titulo": "Sapo-Profeta",
+      "estado": "pendente"
+    },
+    {
+      "numero": 413,
+      "id": "ursa-mae",
+      "titulo": "Ursa-Mãe",
+      "estado": "pendente"
+    },
+    {
+      "numero": 414,
+      "id": "lebre-relampago",
+      "titulo": "Lebre-Relâmpago",
+      "estado": "pendente"
+    },
+    {
+      "numero": 415,
+      "id": "cervo-branco",
+      "titulo": "Cervo Branco",
+      "estado": "pendente"
+    },
+    {
+      "numero": 416,
+      "id": "gorila-de-pedra",
+      "titulo": "Gorila de Pedra",
+      "estado": "pendente"
+    },
+    {
+      "numero": 417,
+      "id": "abutre-da-ferida",
+      "titulo": "Abutre da Ferida",
+      "estado": "pendente"
+    },
+    {
+      "numero": 418,
+      "id": "escorpiao-rei",
+      "titulo": "Escorpião-Rei",
+      "estado": "pendente"
+    },
+    {
+      "numero": 419,
+      "id": "besouro-carruagem",
+      "titulo": "Besouro-Carruagem",
+      "estado": "pendente"
+    },
+    {
+      "numero": 420,
+      "id": "ninho-de-harpias",
+      "titulo": "Ninho de Harpias",
+      "estado": "pendente"
+    },
+    {
+      "numero": 421,
+      "id": "troll-de-ponte",
+      "titulo": "Troll de Ponte",
+      "estado": "pendente"
+    },
+    {
+      "numero": 422,
+      "id": "mae-da-lama",
+      "titulo": "Mãe-da-Lama",
+      "estado": "pendente"
+    },
+    {
+      "numero": 423,
+      "id": "sobra",
+      "titulo": "Sobra",
+      "estado": "pendente"
+    },
+    {
+      "numero": 424,
+      "id": "eco-sobras",
+      "titulo": "O Eco que Come o Som",
+      "estado": "pendente"
+    },
+    {
+      "numero": 425,
+      "id": "rasgo-faminto",
+      "titulo": "Rasgo Faminto",
+      "estado": "pendente"
+    },
+    {
+      "numero": 426,
+      "id": "eco-de-magia-morta",
+      "titulo": "Eco de Magia Morta",
+      "estado": "pendente"
+    },
+    {
+      "numero": 427,
+      "id": "no-de-impares",
+      "titulo": "Nó de Ímpares",
+      "estado": "pendente"
+    },
+    {
+      "numero": 428,
+      "id": "disrupto-gemeo",
+      "titulo": "Disrupto Gêmeo",
+      "estado": "pendente"
+    },
+    {
+      "numero": 429,
+      "id": "a-coisa-que-sobrou",
+      "titulo": "A Coisa Que Sobrou",
+      "estado": "pendente"
+    },
+    {
+      "numero": 430,
+      "id": "chuva-de-faiscas",
+      "titulo": "Chuva de Faíscas",
+      "estado": "pendente"
+    },
+    {
+      "numero": 431,
+      "id": "poca-que-pensa",
+      "titulo": "Poça que Pensa",
+      "estado": "pendente"
+    },
+    {
+      "numero": 432,
+      "id": "carcaca-andante",
+      "titulo": "Carcaça Andante",
+      "estado": "pendente"
+    },
+    {
+      "numero": 433,
+      "id": "coleira-sem-dono",
+      "titulo": "Coleira Sem Dono",
+      "estado": "pendente"
+    },
+    {
+      "numero": 434,
+      "id": "rosto-sem-gente",
+      "titulo": "Rosto Sem Gente",
+      "estado": "pendente"
+    },
+    {
+      "numero": 435,
+      "id": "sombra-que-ficou",
+      "titulo": "Sombra Que Ficou",
+      "estado": "pendente"
+    },
+    {
+      "numero": 436,
+      "id": "relogio-quebrado",
+      "titulo": "Relógio Quebrado",
+      "estado": "pendente"
+    },
+    {
+      "numero": 437,
+      "id": "pensamento-solto",
+      "titulo": "Pensamento Solto",
+      "estado": "pendente"
+    },
+    {
+      "numero": 438,
+      "id": "raiz-errada",
+      "titulo": "Raiz Errada",
+      "estado": "pendente"
+    },
+    {
+      "numero": 439,
+      "id": "enxame-de-palavras",
+      "titulo": "Enxame de Palavras",
+      "estado": "pendente"
+    },
+    {
+      "numero": 440,
+      "id": "colosso-de-ferida",
+      "titulo": "Colosso de Ferida",
+      "estado": "pendente"
+    },
+    {
+      "numero": 441,
+      "id": "menino-de-cataclisma",
+      "titulo": "Menino de Cataclisma",
+      "estado": "pendente"
+    },
+    {
+      "numero": 442,
+      "id": "mare-de-sobras",
+      "titulo": "Maré de Sobras",
+      "estado": "pendente"
+    },
+    {
+      "numero": 443,
+      "id": "sentinela-de-selo",
+      "titulo": "Sentinela de Selo",
+      "estado": "pendente"
+    },
+    {
+      "numero": 444,
+      "id": "cacador-de-impares",
+      "titulo": "Caçador de Ímpares",
+      "estado": "pendente"
+    },
+    {
+      "numero": 445,
+      "id": "juiz-do-selo",
+      "titulo": "Juiz do Selo",
+      "estado": "pendente"
+    },
+    {
+      "numero": 446,
+      "id": "arquivista-sem-rosto",
+      "titulo": "Arquivista Sem Rosto",
+      "estado": "pendente"
+    },
+    {
+      "numero": 447,
+      "id": "novica-da-ordem",
+      "titulo": "Noviça da Ordem",
+      "estado": "pendente"
+    },
+    {
+      "numero": 448,
+      "id": "inspetor-de-escola",
+      "titulo": "Inspetor de Escola",
+      "estado": "pendente"
+    },
+    {
+      "numero": 449,
+      "id": "carcereira-de-palavras",
+      "titulo": "Carcereira de Palavras",
+      "estado": "pendente"
+    },
+    {
+      "numero": 450,
+      "id": "mestre-da-torre-do-silencio",
+      "titulo": "Mestre da Torre do Silêncio",
+      "estado": "pendente"
+    },
+    {
+      "numero": 451,
+      "id": "olho-que-fecha",
+      "titulo": "Olho-que-Fecha",
+      "estado": "pendente"
+    },
+    {
+      "numero": 452,
+      "id": "cao-selo",
+      "titulo": "Cão-Selo",
+      "estado": "pendente"
+    },
+    {
+      "numero": 453,
+      "id": "muralha-viva",
+      "titulo": "Muralha Viva",
+      "estado": "pendente"
+    },
+    {
+      "numero": 454,
+      "id": "enxame-de-selos",
+      "titulo": "Enxame de Selos",
+      "estado": "pendente"
+    },
+    {
+      "numero": 455,
+      "id": "anjo-do-fechamento",
+      "titulo": "Anjo do Fechamento",
+      "estado": "pendente"
+    },
+    {
+      "numero": 456,
+      "id": "desertora-da-ordem",
+      "titulo": "Desertora da Ordem",
+      "estado": "pendente"
+    },
+    {
+      "numero": 457,
+      "id": "guardia-da-fronteira",
+      "titulo": "Guardiã da Fronteira",
+      "estado": "pendente"
+    },
+    {
+      "numero": 458,
+      "id": "fogo-fatuo",
+      "titulo": "Fogo-Fátuo",
+      "estado": "pendente"
+    },
+    {
+      "numero": 459,
+      "id": "vento-com-rancor",
+      "titulo": "Vento Com Rancor",
+      "estado": "pendente"
+    },
+    {
+      "numero": 460,
+      "id": "chama-que-lembra",
+      "titulo": "Chama que Lembra",
+      "estado": "pendente"
+    },
+    {
+      "numero": 461,
+      "id": "hora-solta",
+      "titulo": "Hora Solta",
+      "estado": "pendente"
+    },
+    {
+      "numero": 462,
+      "id": "faisca-de-tempestade",
+      "titulo": "Faísca de Tempestade",
+      "estado": "pendente"
+    },
+    {
+      "numero": 463,
+      "id": "nuvem-triste",
+      "titulo": "Nuvem Triste",
+      "estado": "pendente"
+    },
+    {
+      "numero": 464,
+      "id": "aurora-que-desceu",
+      "titulo": "Aurora Que Desceu",
+      "estado": "pendente"
+    },
+    {
+      "numero": 465,
+      "id": "brasa-de-forja",
+      "titulo": "Brasa de Forja",
+      "estado": "pendente"
+    },
+    {
+      "numero": 466,
+      "id": "vento-mensageiro",
+      "titulo": "Vento Mensageiro",
+      "estado": "pendente"
+    },
+    {
+      "numero": 467,
+      "id": "luz-de-velorio",
+      "titulo": "Luz de Velório",
+      "estado": "pendente"
+    },
+    {
+      "numero": 468,
+      "id": "redemoinho-de-areia",
+      "titulo": "Redemoinho de Areia",
+      "estado": "pendente"
+    },
+    {
+      "numero": 469,
+      "id": "canto-sem-cantor",
+      "titulo": "Canto Sem Cantor",
+      "estado": "pendente"
+    },
+    {
+      "numero": 470,
+      "id": "fidrau-cantor",
+      "titulo": "Fidrau Cantor",
+      "estado": "pendente"
+    },
+    {
+      "numero": 471,
+      "id": "tempestade-viva",
+      "titulo": "Tempestade Viva",
+      "estado": "pendente"
+    },
+    {
+      "numero": 472,
+      "id": "juramentado",
+      "titulo": "Juramentado",
+      "estado": "pendente"
+    },
+    {
+      "numero": 473,
+      "id": "ferreiro-de-guerra",
+      "titulo": "Ferreiro de Guerra",
+      "estado": "pendente"
+    },
+    {
+      "numero": 474,
+      "id": "estandarte-sem-exercito",
+      "titulo": "Estandarte Sem Exército",
+      "estado": "pendente"
+    },
+    {
+      "numero": 475,
+      "id": "moldado",
+      "titulo": "Moldado",
+      "estado": "pendente"
+    },
+    {
+      "numero": 476,
+      "id": "alquimista-naufrago",
+      "titulo": "Alquimista Náufrago",
+      "estado": "pendente"
+    },
+    {
+      "numero": 477,
+      "id": "ilha-de-vidro-viva",
+      "titulo": "Ilha de Vidro Viva",
+      "estado": "pendente"
+    },
+    {
+      "numero": 478,
+      "id": "manso",
+      "titulo": "Manso",
+      "estado": "pendente"
+    },
+    {
+      "numero": 479,
+      "id": "fera-acorrentada",
+      "titulo": "Fera Acorrentada",
+      "estado": "pendente"
+    },
+    {
+      "numero": 480,
+      "id": "sentido",
+      "titulo": "Sentido",
+      "estado": "pendente"
+    },
+    {
+      "numero": 481,
+      "id": "o-seu-rosto",
+      "titulo": "O Seu Rosto",
+      "estado": "pendente"
+    },
+    {
+      "numero": 482,
+      "id": "vigia",
+      "titulo": "Vigia",
+      "estado": "pendente"
+    },
+    {
+      "numero": 483,
+      "id": "sonhador-perdido",
+      "titulo": "Sonhador Perdido",
+      "estado": "pendente"
+    },
+    {
+      "numero": 484,
+      "id": "fantasma-em-fila",
+      "titulo": "Fantasma em Fila",
+      "estado": "pendente"
+    },
+    {
+      "numero": 485,
+      "id": "porteira-da-antessala",
+      "titulo": "Porteira da Antessala",
+      "estado": "pendente"
+    },
+    {
+      "numero": 486,
+      "id": "o-que-voltou",
+      "titulo": "O Que Voltou",
+      "estado": "pendente"
+    },
+    {
+      "numero": 487,
+      "id": "esquecido",
+      "titulo": "Esquecido",
+      "estado": "pendente"
+    },
+    {
+      "numero": 488,
+      "id": "bibliotecaria-do-arquivo",
+      "titulo": "Bibliotecária do Arquivo",
+      "estado": "pendente"
+    },
+    {
+      "numero": 489,
+      "id": "sombra-do-trono-vazio",
+      "titulo": "Sombra do Trono Vazio",
+      "estado": "pendente"
+    },
+    {
+      "numero": 490,
+      "id": "repetido",
+      "titulo": "Repetido",
+      "estado": "pendente"
+    },
+    {
+      "numero": 491,
+      "id": "sala-que-e-um-ano",
+      "titulo": "Sala Que É Um Ano",
+      "estado": "pendente"
+    },
+    {
+      "numero": 492,
+      "id": "espirito-animal",
+      "titulo": "Espírito-Animal",
+      "estado": "pendente"
+    },
+    {
+      "numero": 493,
+      "id": "bicho-antes-dos-bichos",
+      "titulo": "Bicho-Antes-dos-Bichos",
+      "estado": "pendente"
+    },
+    {
+      "numero": 494,
+      "id": "automato-do-postulario",
+      "titulo": "Autômato do Postulário",
+      "estado": "pendente"
+    },
+    {
+      "numero": 495,
+      "id": "o-ministrum",
+      "titulo": "O Ministrum",
+      "estado": "pendente"
+    },
+    {
+      "numero": 496,
+      "id": "a-dama-da-noite-de-fhim",
+      "titulo": "A Dama da Noite de Fhim",
+      "estado": "pendente"
+    },
+    {
+      "numero": 497,
+      "id": "vyal-o-primeiro-filho",
+      "titulo": "Vyal, o Primeiro Filho",
+      "estado": "pendente"
+    },
+    {
+      "numero": 498,
+      "id": "serath-duas-maos",
+      "titulo": "Serath Duas-Mãos",
+      "estado": "pendente"
+    },
+    {
+      "numero": 499,
+      "id": "liss-de-vidro",
+      "titulo": "Liss de Vidro",
+      "estado": "pendente"
+    },
+    {
+      "numero": 500,
+      "id": "garmhal-o-domador",
+      "titulo": "Garmhal, o Domador",
+      "estado": "pendente"
+    },
+    {
+      "numero": 501,
+      "id": "hael-o-insone",
+      "titulo": "Hael, o Insone",
+      "estado": "pendente"
+    },
+    {
+      "numero": 502,
+      "id": "morwen-terceira-vida",
+      "titulo": "Morwen Terceira-Vida",
+      "estado": "pendente"
+    },
+    {
+      "numero": 503,
+      "id": "o-sem-nome",
+      "titulo": "O Sem-Nome",
+      "estado": "pendente"
+    },
+    {
+      "numero": 504,
+      "id": "tique",
+      "titulo": "Tique",
+      "estado": "pendente"
+    },
+    {
+      "numero": 505,
+      "id": "rhu-a-matilha",
+      "titulo": "Rhu, a Matilha",
+      "estado": "pendente"
+    },
+    {
+      "numero": 506,
+      "id": "dragonete",
+      "titulo": "Dragonete",
+      "estado": "pendente"
+    },
+    {
+      "numero": 507,
+      "id": "dragao-jovem",
+      "titulo": "Dragão Jovem",
+      "estado": "pendente"
+    },
+    {
+      "numero": 508,
+      "id": "dragao-adulto",
+      "titulo": "Dragão Adulto",
+      "estado": "pendente"
+    },
+    {
+      "numero": 509,
+      "id": "dragao-anciao",
+      "titulo": "Dragão Ancião",
+      "estado": "pendente"
+    },
+    {
+      "numero": 510,
+      "id": "aurelhaz-dragoa-coral",
+      "titulo": "Aurelhaz, Dragoa-Coral",
+      "estado": "pendente"
+    },
+    {
+      "numero": 511,
+      "id": "velho-ossario-dragao-palido",
+      "titulo": "Velho Ossário, Dragão-Pálido",
+      "estado": "pendente"
+    },
+    {
+      "numero": 512,
+      "id": "wyvern-selvagem",
+      "titulo": "Wyvern Selvagem",
+      "estado": "pendente"
+    },
+    {
+      "numero": 513,
+      "id": "wyvern-de-guerra",
+      "titulo": "Wyvern de Guerra",
+      "estado": "pendente"
+    },
+    {
+      "numero": 514,
+      "id": "wyvern-correio",
+      "titulo": "Wyvern-Correio",
+      "estado": "pendente"
+    },
+    {
+      "numero": 515,
+      "id": "wyvern-de-carga",
+      "titulo": "Wyvern de Carga",
+      "estado": "pendente"
+    },
+    {
+      "numero": 516,
+      "id": "automato-de-patrulha",
+      "titulo": "Autômato de Patrulha",
+      "estado": "pendente"
+    },
+    {
+      "numero": 517,
+      "id": "pistoleira-de-aluguel",
+      "titulo": "Pistoleira de Aluguel",
+      "estado": "pendente"
+    },
+    {
+      "numero": 518,
+      "id": "hacker-de-dispositivos",
+      "titulo": "Hacker de Dispositivos",
+      "estado": "pendente"
+    },
+    {
+      "numero": 519,
+      "id": "mecanica-de-rua",
+      "titulo": "Mecânica de Rua",
+      "estado": "pendente"
+    },
+    {
+      "numero": 520,
+      "id": "tita-de-vapor",
+      "titulo": "Titã de Vapor",
+      "estado": "pendente"
+    },
+    {
+      "numero": 521,
+      "id": "executiva-da-torre",
+      "titulo": "Executiva da Torre",
+      "estado": "pendente"
+    }
+  ],
+  "estiloAtual": {
+    "versao": 2,
+    "geradasComAlfaConferido": 239,
+    "pendentes": 196,
+    "numeros": [
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296,
+      297,
+      298,
+      299,
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      328
+    ],
+    "nota": "Versão do prompt; revisão visual é registrada separadamente."
+  }
+}

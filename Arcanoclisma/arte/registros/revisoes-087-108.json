@@ -1,0 +1,6 @@
+{
+  "087": {"estiloVersao": 2, "revisao": "Cores chapadas e sombras duras com retícula; aprovado visualmente pelo Codex."},
+  "094": {"problema": "Mostrador com paisagem e céu suavemente sombreado.", "correcao": "Pôr do sol simplificado em símbolos e blocos azul, ferrugem e dourado; retícula e margem transparente.", "revisao": "Nova imagem vista pelo Codex; composição do mostrador simplificada."},
+  "098": {"problema": "Gerador interpretou chapéu como guarda-chuva.", "correcao": "Chapéu azul de aba larga e faixa ocre, nuvem localizada com gotas; cores chapadas e alfa transparente.", "revisao": "Nova imagem vista pelo Codex; assunto corrigido."},
+  "103": {"problema": "Efeitos e lateral da coroa encostavam na borda.", "correcao": "Coroa inteira centralizada com margem transparente; magia plana sem névoa.", "revisao": "Nova imagem vista pelo Codex; margem corrigida."}
+}

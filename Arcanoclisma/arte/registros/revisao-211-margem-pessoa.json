@@ -1,0 +1,19 @@
+{
+  "number": 211,
+  "id": "povo-elementais",
+  "revisao": "margem-pessoa",
+  "prompt": "Uma pessoa elemental de fogo; preservar a revisão de personagem único e aumentar margens transparentes.",
+  "arquivo": "imagens/povo-elementais.png",
+  "ferramenta": "image_gen integrada",
+  "alpha": {
+    "hasAlpha": true,
+    "pixelsTransparentes": 1235663,
+    "margens": [
+      339,
+      88,
+      325,
+      65
+    ]
+  },
+  "promovida": true
+}

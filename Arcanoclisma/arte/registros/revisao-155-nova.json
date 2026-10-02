@@ -1,0 +1,18 @@
+{
+  "numero": 155,
+  "prompt": "Edit target: existing RPG environment. Preserve the core composition, recognizable buildings/landforms and narrative. Keep the giant stopped clock, frozen brass train, suspended steam and dust, tiny travelers and luggage, and midnight-blue magic with white stopped streaks. Redraw steam as two or three solid cream/ochre shapes with hard blue shadow blocks and halftone dots; redraw blue magic as midnight-blue flat graphic ribbons with crisp white streaks and dotted accents, no electric/neon glow. Modern indie comic and animation style, expressive varied ink, SOLID FLAT COLORS and HARD CEL SHADOW blocks, printed halftone. No gradients, airbrush, watercolor, smooth shading, realistic metal glints or 3D. ENTIRE environment and ALL effects must fit in central 70% of SQUARE canvas, generous truly transparent empty margins on every side, complete currently clipped edges. Transparent alpha exterior and gaps, no backdrop, text or logos.",
+  "arquivoRevisado": "imagens/estacao-parada-revisada.png",
+  "estado": "Incorporada ao catálogo após inspeção visual do Codex e alfa/margens medidos",
+  "alfa": {
+    "numero": 155,
+    "hasAlpha": true,
+    "pixelsTransparentes": 536676,
+    "margens": [
+      24,
+      22,
+      13,
+      14
+    ],
+    "aprovada": true
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "bloqueio": {
+    "number": 327,
+    "error": "image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1790972630,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":null,\\\"resets_in_seconds\\\":56012}}\")"
+  },
+  "errosDoLote": [
+    {
+      "number": 231,
+      "error": "Error"
+    },
+    {
+      "number": 230,
+      "error": "Error"
+    },
+    {
+      "number": 232,
+      "error": "Error"
+    },
+    {
+      "number": 239,
+      "error": "exec_command failed: CreateProcess { message: \"Rejected(\\\"Failed to create unified exec process: timed out after 15000ms connecting runner pipe-in\\\")\" }"
+    },
+    {
+      "number": 245,
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID fe1b2b91-4828-4038-aa03-9bf42335a515. safety_violations=[self-harm].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"self-harm\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    },
+    {
+      "number": 306,
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID afe57175-77b8-45b0-9dd4-3f301ca8a06c. safety_violations=[self-harm].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"self-harm\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    },
+    {
+      "number": 327,
+      "error": "image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1790972630,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":null,\\\"resets_in_seconds\\\":56012}}\")"
+    }
+  ],
+  "retentativas": [
+    {
+      "number": 306,
+      "title": "Tatuadora de Marcas",
+      "id": "tatuadora-de-marcas",
+      "subject": "Tatuadora de Marcas: tatuadora; pessoa comum do mundo, roupas de trabalho e de rua; jeito silencioso; pose de conversa; no gesto de marcar; magia coral.",
+      "promptAdaptado": "Tatuadora de Marcas, adulta, silenciosa, em pose de conversa, roupas práticas de trabalho e rua. Ela apresenta um desenho de marca mágica coral já concluído num pergaminho e mostra marcas decorativas já cicatrizadas no próprio antebraço. Magia coral discreta ao redor de uma mão. Não mostrar agulhas, perfuração, sangue, ferimentos nem procedimentos; preservar a identidade de artista tatuadora através de portfólio, frascos fechados de pigmento e motivos decorativos. Figura inteira isolada, fundo alfa transparente, margens generosas. Estilo de quadrinhos independentes: traço de tinta variável, cores chapadas, sombras duras em blocos, reticulação, roupas de sobrevivência com acessórios de Bronze Arco. Sem texto ou cenário."
+    },
+    {
+      "number": 327,
+      "title": "Senhor da Trincheira",
+      "id": "senhor-da-trincheira",
+      "subject": "Senhor da Trincheira: veterano, trincheira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito duro, blindado; grande e pesado; no gesto de esmagar; magia vermelho-ferrugem.",
+      "promptAdaptado": "Senhor da Trincheira: veterano adulto, grande e pesado, postura dura, roupas e proteção robustas de sobrevivência. Gesto de esmagar um bloco de pedra inanimado com magia vermelho-ferrugem visível ao redor das mãos; sem vítimas, ferimentos ou sangue. Figura inteira e magia totalmente contidas no quadro, margens generosas, fundo alfa transparente. Quadrinhos independentes e animação contemporânea, traço de tinta variável, cores chapadas, sombras duras em blocos, reticulação, metal Bronze Arco."
+    }
+  ]
+}

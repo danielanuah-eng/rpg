@@ -1,0 +1,12 @@
+{
+  "number": 87,
+  "id": "manto-de-cor-de-parede",
+  "title": "Manto de Cor de Parede",
+  "estiloVersao": 2,
+  "revisaoEstilo": "Redesenhado em cores chapadas, sombras de cel shading em blocos, traço variado e pontilhado, removendo as transições de aquarela. Conferido visualmente pelo Codex.",
+  "arquivo": "imagens/manto-de-cor-de-parede.png",
+  "fundo": "transparente; canal alfa confirmado, quatro cantos com alfa 0",
+  "ferramenta": "image_gen integrada",
+  "adaptacoes": ["Fundo branco substituído por transparência a pedido do autor"],
+  "prompt": "Manto mágico que assume as cores do que está atrás, isolado sem personagem, com tecido usado ocre e azul-cinza, quadrinhos independentes e animação contemporânea, traço variado, cores chapadas, sombras em bloco e pontilhado. Composição quadrada. Remover totalmente o fundo branco e preservar o manto e os detalhes mágicos com canal alfa real. Sem texto, logotipo, mãos, manequim ou cenário."
+}

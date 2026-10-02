@@ -1,0 +1,12 @@
+{
+  "number": 317,
+  "id": "encantadora-de-salao",
+  "title": "Encantadora de Salão",
+  "arquivo": "imagens/encantadora-de-salao.png",
+  "estiloVersao": 2,
+  "prompt": "Use case: illustration-story. Transparent alpha RPG catalogue asset 317, Encantadora de Salão.\nPRIMARY SUBJECT: Encantadora de Salão: cantora, espiã; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito belo, mentiroso; no gesto de cantar; magia coral.\nSTYLE: modern independent comics and contemporary animation. Confident varied-weight expressive ink lines, clean major contours with loose energetic accents. LARGE SOLID FLAT COLORS, exactly 2–3 discrete tones per surface, crisp HARD CEL SHADOW BLOCKS, visible PRINTED HALFTONE DOT patches. Warm ochre/rust/earth hues balanced with cool muted blue/green.\nCOMPOSITION: Full-body human character, or small full-body group for a people/culture. Diverse human anatomy, skin tone and physique; expressive anime face, dynamic heroic movement, practical survival clothing mixed with magical/technical or modern details as appropriate. No animal ears, tails or skin anatomy. SQUARE 1:1. Fit the ENTIRE silhouette and effects in the central 70% of canvas, with WIDE EMPTY TRANSPARENT MARGINS on EVERY side, no clipping. Actual transparent alpha exterior and gaps; no rectangular backdrop, sky background or floor shadow.\nMAGIC ONLY if described, represented by FLAT uniform graphic aura/construct/smoke with gaps or overflowing wisps, crisp edges and halftone glow, NEVER soft luminous halo or smooth gradient. Value colors: Conflitüo rusty red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Opposite warm/cool details balance magic. All weapon/tool metal is Bronze Arco dark golden bronze in flat tones. Practical handmade wear, avoid extra jewelry/gems unless described.\n\nAVOID: smooth gradients, airbrush, painterly shading, watercolor, realistic metal highlights, 3D rendering, neon, text, lettering, logos or watermark. Non-graphic fantasy action, no graphic injuries or sexualization.",
+  "fundo": "transparente; conferir progresso.json",
+  "ferramenta": "image_gen integrada",
+  "adaptacoes": [],
+  "preferenciaEspada": false
+}

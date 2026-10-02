@@ -1,0 +1,16 @@
+{
+  "id": "dragao-lamina",
+  "number": 222,
+  "prompt": "Use case: precise-object-edit. Edit the reference slender rust-red dragon with CLOSED mouth. User explicitly chose this closed-mouth version as the base. Preserve this exact elegant long forward-leaning neck and head, closed narrow reptilian mouth, few horns/ridges, long tail, raised wings, red color and gentle translucent red energy ribbons, no flames. MAIN CHANGE: make it noticeably MORE MUSCULAR and athletic: defined strong chest and shoulder girdle, thicker powerful upper arms and forelimbs, strong thighs/haunches and calves, visibly firm organic muscles beneath small red scales. Keep long lean waist and neck; powerful agile swimmer/runner physique, not fat, not bulky blocky torso, not armor. Balance musculature naturally and anatomically. Keep expressive narrowed predatory eyes, DO NOT open mouth or add a roaring tooth display. Modern indie comic ink, flat colors, hard cel shadows, selective halftone. Restrained soft red energy, not fire, no sparks or embers. Fit WHOLE silhouette wings/tail/claws/effects well inside central 75% with generous transparent margins ALL sides, no clipping. True alpha background, no text/scenery.",
+  "arquivo": "imagens/dragao-lamina-ajuste-atual.png",
+  "alpha": {
+    "hasAlpha": true,
+    "pixelsTransparentes": 778990,
+    "margens": [
+      26,
+      19,
+      0,
+      33
+    ]
+  }
+}

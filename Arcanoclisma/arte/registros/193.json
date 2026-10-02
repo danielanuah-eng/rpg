@@ -1,0 +1,14 @@
+{
+  "number": 193,
+  "id": "a-cidade-dos-rostos",
+  "title": "A Cidade dos Rostos",
+  "arquivo": "imagens/a-cidade-dos-rostos.png",
+  "estiloVersao": 2,
+  "prompt": "Use case: illustration-story. Transparent alpha RPG catalogue asset 193, A Cidade dos Rostos.\nPRIMARY SUBJECT: A Cidade dos Rostos, o plano de Persona: uma cidade que imita todas as cidades humanas; o que você sente aparece como clima em volta de você. Quem vive lá: os Sentidos: emoções que andam em forma de gente. Cor dominante: coral.\nSTYLE: modern independent comics and contemporary animation. Confident varied-weight expressive ink lines, clean major contours with loose energetic accents. LARGE SOLID FLAT COLORS, exactly 2–3 discrete tones per surface, crisp HARD CEL SHADOW BLOCKS, visible PRINTED HALFTONE DOT patches. Warm ochre/rust/earth hues balanced with cool muted blue/green.\nCOMPOSITION: Compact irregular environment vignette; preserve the described setting and activity; any people are small distant figures, no added foreground hero. SQUARE 1:1. Fit the ENTIRE silhouette and effects in the central 70% of canvas, with WIDE EMPTY TRANSPARENT MARGINS on EVERY side, no clipping. Actual transparent alpha exterior and gaps; no rectangular backdrop, sky background or floor shadow.\nMAGIC ONLY if described, represented by FLAT uniform graphic aura/construct/smoke with gaps or overflowing wisps, crisp edges and halftone glow, NEVER soft luminous halo or smooth gradient. Value colors: Conflitüo rusty red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Opposite warm/cool details balance magic. All weapon/tool metal is Bronze Arco dark golden bronze in flat tones. Practical handmade wear, avoid extra jewelry/gems unless described.\n\nAVOID: smooth gradients, airbrush, painterly shading, watercolor, realistic metal highlights, 3D rendering, neon, text, lettering, logos or watermark. Non-graphic fantasy action, no graphic injuries or sexualization.",
+  "fundo": "transparente; conferir progresso.json",
+  "ferramenta": "image_gen integrada",
+  "adaptacoes": [
+    "Vinheta quadrada para recorte transparente"
+  ],
+  "preferenciaEspada": false
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "numero": 155,
+    "hasAlpha": true,
+    "pixelsTransparentes": 536676,
+    "margens": [
+      24,
+      22,
+      13,
+      14
+    ],
+    "aprovada": true
+  },
+  {
+    "numero": 164,
+    "hasAlpha": true,
+    "pixelsTransparentes": 558812,
+    "margens": [
+      17,
+      48,
+      16,
+      19
+    ],
+    "aprovada": true
+  },
+  {
+    "numero": 168,
+    "hasAlpha": true,
+    "pixelsTransparentes": 564099,
+    "margens": [
+      44,
+      87,
+      28,
+      35
+    ],
+    "aprovada": true
+  }
+]

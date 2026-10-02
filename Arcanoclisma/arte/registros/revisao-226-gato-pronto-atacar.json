@@ -1,0 +1,19 @@
+{
+  "number": 226,
+  "id": "dragao-eclipse",
+  "revisao": "gato-pronto-atacar",
+  "prompt": "Use case: precise-object-edit. Redesign the gold/purple Eclipse dragon reference to this exact user-directed pose and physique. POSE: a powerful CAT CROUCHED READY TO POUNCE, low compressed muscular body, broad shoulders lowered, hind haunches coiled and tense, four clawed feet braced in an anticipatory stalking stance. Long reptilian neck rises from low shoulders and the HEAD LOOKS UPWARD, eyes staring intently at an unseen target above; fierce focused direct upward gaze, pupils clearly visible. Wings half folded tightly back, emphasizing poised attack rather than airborne flight. Tail low and curved for balance. HEAD substantially more SQUARE/RECTANGULAR: strong broad squared reptilian skull, compact blunt angular snout and powerful jaw, coherent natural dragon anatomy, no narrow beak, no human face. More strength in chest, shoulders, limbs and neck; athletic predator. NO fur, feather mane, hairy frills or spiky beard. Smooth clean dragon contours covered in small natural ORGANIC SCALES, exactly two modest backward swept horns and extremely sparse small dorsal ridges, REMOVE most thorns. DARKER COLORS: subdued antique deep gold/ochre interwoven with rich DARK ROYAL PURPLE over whole body/wings/neck/tail in irregular scaled patches that try but fail to fuse, no halves, no bright yellow or neon violet. ENERGY MUCH SOFTER: just a few thin restrained semitransparent gold/violet flowing wisps close to the body, no big flames, flame mane, white-hot cores or overwhelming glow. Modern independent comic / contemporary animation, confident ink, flat surface colors and hard cel shadows, fine scale texture and selective halftone. ENTIRE crouching dragon, all feet, wings, tail and faint effects framed inside central 70% of SQUARE canvas with wide EMPTY TRANSPARENT MARGINS EVERY side. No ground platform, scenery, text or watermark. Real transparent alpha.",
+  "arquivo": "imagens/dragao-eclipse.png",
+  "ferramenta": "image_gen integrada",
+  "alpha": {
+    "hasAlpha": true,
+    "pixelsTransparentes": 876276,
+    "margens": [
+      52,
+      189,
+      18,
+      122
+    ]
+  },
+  "promovida": true
+}

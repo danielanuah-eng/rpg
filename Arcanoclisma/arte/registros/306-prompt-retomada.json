@@ -1,0 +1,10 @@
+{
+  "numero": 306,
+  "titulo": "Tatuadora de Marcas",
+  "estado": "pendente por cota",
+  "prompt": "Arcanoclisma, imagem 306 — Tatuadora de Marcas. Uma artista adulta silenciosa, pele castanha escura de subtom frio, rosto longo com nariz largo, olhos pequenos atentos, cabelo crespo bem curto com mecha grisalha lateral. Sentada de lado num pequeno banco de trabalho, pernas assimétricas, cotovelo apoiado na coxa e tronco curvado sobre um portfólio aberto; cabeça discretamente voltada para o interlocutor, expressão pensativa, boca fechada. Apresenta uma marca mágica coral já desenhada num pergaminho; tatuagens decorativas já concluídas no antebraço. Frascos fechados de pigmento presos ao cinto. Sem agulhas, perfuração, ferimentos, sangue ou procedimento em pele. Magia coral discreta acima do desenho. Roupas práticas de trabalho e rua, acessórios originais de Bronze Arco, sem lenço na cabeça. Ilustração de quadrinhos independentes e animação contemporânea, traço variável e vivo, cores chapadas com 2–3 tons, sombras duras em blocos, hachuras direcionais e reticulação. Linguagem corporal com peso e apoio naturais, linha de ação curva, sobreposição de braços, livro e pernas dando profundidade; identidade própria, sem repetir pose de conjurador com braço estendido. Figura, banco, magia e acessórios inteiros no centro de uma tela quadrada, margens transparentes generosas, fundo realmente transparente alfa, sem cenário, chão desenhado, texto, logo ou marca d'água.",
+  "erro": "image generation failed: http 429 Too Many Requests: Some(\"{\\\"error\\\":{\\\"type\\\":\\\"usage_limit_reached\\\",\\\"message\\\":\\\"The usage limit has been reached\\\",\\\"plan_type\\\":\\\"plus\\\",\\\"resets_at\\\":1790972631,\\\"eligible_promo\\\":null,\\\"limit_window_minutes\\\":null,\\\"resets_in_seconds\\\":28362}}\")",
+  "tentativaEm": "2026-10-02T12:31:29Z",
+  "estiloAtual": "poses variadas e linguagem corporal; referência Wilderfeast",
+  "adaptacao": "Apresentação de marcas concluídas e portfólio, sem procedimentos ou ferimentos."
+}

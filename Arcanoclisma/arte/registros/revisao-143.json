@@ -1,0 +1,6 @@
+{
+  "numero": 143,
+  "prompt": "Edit this crown illustration. Keep the original unusual worn dark-gold Bronze Arco crown and its engraved Invictos markings, same silhouette and orange stylized magic wisps. Frame the ENTIRE crown and ALL wisps well inside the canvas: scale the whole subject to 65% of the square canvas, centered, with generous fully transparent empty margins on EVERY side, especially right and bottom. Complete the currently cropped right edge. Flatten metallic rendering to only three solid color shapes: ochre bronze base, dark desaturated teal hard cel shadow shapes and pale ochre sharp highlight shapes; no gradients or specular rendering. Confident varied comic ink, printed halftone shadow dots. No scenery or text. Actual transparent alpha background and gaps.",
+  "motivo": "Completar borda cortada e criar margem transparente, simplificar tons metálicos",
+  "ferramenta": "image_gen integrada"
+}

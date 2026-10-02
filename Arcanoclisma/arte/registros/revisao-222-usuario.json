@@ -1,0 +1,17 @@
+{
+  "id": "dragao-lamina",
+  "number": 222,
+  "prompt": "Use case: precise-object-edit. Edit only the RED dragon reference. Preserve the new slender red organic scaled body, low forward inclined long neck, restrained sparse ridges, wings, long tail, delicate red energy ribbons, indie comic ink/cel shadows/halftone style and transparent alpha. FACE CORRECTION: give it a SMALL NARROW CROCODILE-like jaw and mouth, slightly open in a sly threatening grin, with MANY closely spaced TINY conical ivory teeth visible in both upper and lower rows along the jaw. Teeth small and numerous, no oversized fangs. Lean tapered reptile snout and compact lower jaw; NOT a huge gaping roaring mouth. Eyes explicitly MALEVOLENT: narrow predatory lids and sharply visible slit pupils, calculating cruel glare; no additional face spikes. Keep head at present small scale relative to body. Maintain NO fire/embers/breath, subtle red energy only. Entire silhouette including energy fully inside canvas with generous transparent margins on every edge, no clipping. No text or watermark.",
+  "arquivo": "imagens/dragao-lamina.png",
+  "ferramenta": "image_gen integrada",
+  "alpha": {
+    "pixelsTransparentes": 756004,
+    "margens": [
+      8,
+      13,
+      0,
+      31
+    ]
+  },
+  "estado": "alpha-validado"
+}

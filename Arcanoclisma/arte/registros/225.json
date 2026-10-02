@@ -1,0 +1,12 @@
+{
+  "number": 225,
+  "id": "dragao-coral",
+  "title": "Dragão-Coral",
+  "arquivo": "imagens/dragao-coral.png",
+  "estiloVersao": 2,
+  "prompt": "Use case: illustration-story. Transparent alpha RPG catalogue asset 225, Dragão-Coral.\nPRIMARY SUBJECT: Dragão-Coral, dragão de Persona: coral, com um rosto quase humano. Suas chamas: chamas fantasmagóricas rosa-coral, suaves como um sopro, que mudam de tom com o humor do dragão e às vezes se enroscam em formas que lembram rostos. O sopro: uma emoção.\nSTYLE: modern independent comics and contemporary animation. Confident varied-weight expressive ink lines, clean major contours with loose energetic accents. LARGE SOLID FLAT COLORS, exactly 2–3 discrete tones per surface, crisp HARD CEL SHADOW BLOCKS, visible PRINTED HALFTONE DOT patches. Warm ochre/rust/earth hues balanced with cool muted blue/green.\nCOMPOSITION: Entire noble elongated dragon, neck, wings and long tail completely visible. Small soft ORGANIC scales, never stone plates or armor. Expressive anime eyes and paleontological kaiju anatomy. Limited palette and graphic spectral flames at appropriate crest, eyes, wing and tail tips. SQUARE 1:1. Fit the ENTIRE silhouette and effects in the central 70% of canvas, with WIDE EMPTY TRANSPARENT MARGINS on EVERY side, no clipping. Actual transparent alpha exterior and gaps; no rectangular backdrop, sky background or floor shadow.\nMAGIC ONLY if described, represented by FLAT uniform graphic aura/construct/smoke with gaps or overflowing wisps, crisp edges and halftone glow, NEVER soft luminous halo or smooth gradient. Value colors: Conflitüo rusty red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Opposite warm/cool details balance magic. All weapon/tool metal is Bronze Arco dark golden bronze in flat tones. Practical handmade wear, avoid extra jewelry/gems unless described.\n\nAVOID: smooth gradients, airbrush, painterly shading, watercolor, realistic metal highlights, 3D rendering, neon, text, lettering, logos or watermark. Non-graphic fantasy action, no graphic injuries or sexualization.",
+  "fundo": "transparente; conferir progresso.json",
+  "ferramenta": "image_gen integrada",
+  "adaptacoes": [],
+  "preferenciaEspada": false
+}

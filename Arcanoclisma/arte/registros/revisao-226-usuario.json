@@ -1,0 +1,17 @@
+{
+  "id": "dragao-eclipse",
+  "number": 226,
+  "prompt": "Use case: precise-object-edit. Edit the GOLD AND BLACK Eclipse dragon reference for Arcanoclisma. USER CORRECTION overrides the original two-halves concept: REMOVE the left/right split entirely. GOLD and BLACK interweave over the WHOLE body, neck, face, wings, legs and tail as irregular branching marbled eddies and interlocking organic scaled patches; the two colors try to fuse but remain visibly distinct, interrupted transitional borders, turbulent incomplete fusion. Neither wing nor side should be purely one color. Dark charcoal black and antique ochre gold, small cool muted accents. Add more tactile ORGANIC SCALE TEXTURE through distinct small fine scales, expressive ink and selective stippled/halftone patches; NOT stone slabs or metal armor, NOT realistic 3D. Refine noble dragon anatomy and elegant head to be convincing, no bizarre excessive thorn beard. Eyes have CLEAR VISIBLE DARK SLIT PUPILS inside muted pale golden irises; pupils must NOT be hidden by glow, whiteout or shadow. Keep subtle white and black spectral energy accents in restrained interwoven wisps, no huge glare. Modern indie comic/contemporary animation, solid flat color and hard cel shadow blocks, selective halftone. Full dragon, all wings/feet/tail and effects entirely visible with wide transparent margin on ALL edges. Real alpha background, no scenery, text or logo.",
+  "arquivo": "imagens/dragao-eclipse.png",
+  "ferramenta": "image_gen integrada",
+  "alpha": {
+    "pixelsTransparentes": 589492,
+    "margens": [
+      18,
+      19,
+      10,
+      15
+    ]
+  },
+  "estado": "alpha-validado"
+}

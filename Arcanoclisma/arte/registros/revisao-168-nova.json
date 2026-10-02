@@ -1,0 +1,18 @@
+{
+  "numero": 168,
+  "prompt": "Edit target: existing RPG environment. Preserve the core composition, recognizable buildings/landforms and narrative. Keep the great inhospitable snowy mountain valley, very high snowy peaks, ruins and valuable mineral veins. Reduce the busy mining camp to a small shelter and simple winch, with only three distant adventurers so the valley feels isolated. Mineral veins use flat dark ochre and sharp pale ochre highlights, no glowing neon gold. Keep natural cold snow and contrasting warm equipment details. Modern indie comic and animation style, expressive varied ink, SOLID FLAT COLORS and HARD CEL SHADOW blocks, printed halftone. No gradients, airbrush, watercolor, smooth shading, realistic metal glints or 3D. ENTIRE environment and ALL effects must fit in central 70% of SQUARE canvas, generous truly transparent empty margins on every side, complete currently clipped edges. Transparent alpha exterior and gaps, no backdrop, text or logos.",
+  "arquivoRevisado": "imagens/permal-revisada.png",
+  "estado": "Incorporada ao catálogo após inspeção visual do Codex e alfa/margens medidos",
+  "alfa": {
+    "numero": 168,
+    "hasAlpha": true,
+    "pixelsTransparentes": 564099,
+    "margens": [
+      44,
+      87,
+      28,
+      35
+    ],
+    "aprovada": true
+  }
+}

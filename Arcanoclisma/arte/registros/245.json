@@ -1,0 +1,14 @@
+{
+  "number": 245,
+  "title": "Lino, o Sineiro de Plantão",
+  "id": "lino-sineiro",
+  "subject": "Menino de 12 anos, magro, fita vermelha no pulso, agarrado a uma corda de sino, gritando; a corda sai do quadro e amarra o título da seção.",
+  "arquivo": "imagens/lino-sineiro.png",
+  "estiloVersao": 2,
+  "prompt": "Use case: illustration-story. Transparent RPG asset 245 Lino, o Sineiro de Plantão. Subject: Lino, a slim 12-year-old boy bellringer, fully dressed in practical modest long-sleeved shirt, vest and trousers, red ribbon tied at his wrist, gripping a hanging bell rope with both hands and calling an alarm. A small bronze bell overhead attached to the rope, the whole rope and bell are visible inside the canvas. Safe nonviolent scene, natural youthful face, no text. Style: modern independent comics and contemporary animation, expressive confident varied ink, solid flat earth ochre/rust colors balanced muted blue/green, HARD cel shadow blocks and printed halftone dots, no smooth airbrush gradients or realistic 3D. One whole person, entire body and all props centered occupying 70% square canvas, wide empty transparent margins EVERY side. Real alpha exterior/gaps, no backdrop or ground shadow, no lettering/logo/watermark.",
+  "fundo": "transparente; conferir progresso.json",
+  "ferramenta": "image_gen integrada",
+  "adaptacoes": [
+    "Corda e sino incluídos inteiros no recorte, sem atravessar título ou conter texto."
+  ]
+}

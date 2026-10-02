@@ -1,0 +1,10 @@
+{
+  "number": 92,
+  "id": "sal-do-viajante",
+  "title": "Sal do Viajante",
+  "arquivo": "imagens/sal-do-viajante.png",
+  "fundo": "transparente solicitado; alfa a conferir",
+  "prompt": "Use case: stylized-concept. Asset: fantasy RPG equipment catalog, image 92 Sal do Viajante. Subject: Sal do Viajante: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: uma pitada e qualquer comida estragada fica boa.\nDepict a single ordinary-looking magical item with one strange functional detail, isolated, entire and centered, three-quarter view, exaggerated voluminous iconic practical handmade shape and visible wear. Square composition with generous margins. Do not depict user, wearer, hands, mannequin or scenery. Convey the magical function through small flat graphic details that belong to the object, not through a scene or extra characters. Direction: dynamic expressive modern independent comics and contemporary animation, varied clean confident ink lines and energetic loose lines, flat vibrant colors, simple hard blocked shadows, abundant halftone and stippling texture for printed handmade comic finish. Warm ochre, orange and earthy browns balanced with cool blue, cyan or deep green accents. Arcane effects only as flat graphic shapes with halftone dot glow, no smooth glowing neon. All metal parts dark golden magical bronze when applicable. Genuine transparent alpha background, with no floor, white fill or painted checkerboard. No text, letters, label, signature or logo. No photorealism, 3D, painterly watercolor or airbrush gradients.",
+  "adaptacoes": [],
+  "ferramenta": "image_gen integrada"
+}

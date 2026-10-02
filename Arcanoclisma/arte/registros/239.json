@@ -1,0 +1,14 @@
+{
+  "number": 239,
+  "title": "Carrasco da Cidade-Muralha",
+  "id": "carrasco-da-cidade-muralha",
+  "subject": "Carrasco da Cidade-Muralha: carrasco; pessoa comum do mundo, roupas de trabalho e de rua; jeito enorme, silencioso; grande e pesado; no gesto de decepar; magia vermelho-ferrugem.",
+  "arquivo": "imagens/carrasco-da-cidade-muralha.png",
+  "estiloVersao": 2,
+  "prompt": "Use case: illustration-story. Transparent RPG asset 239 Carrasco da Cidade-Muralha. Subject: An enormous silent adult city executioner in practical worn work clothes, heavy powerful build, holding a broad blunt fantasy ceremonial axe in a preparation stance, no victim or violent action. Restrained rusty-red magical ribbon around axe. Style: modern independent comics and contemporary animation, expressive confident varied ink, solid flat earth ochre/rust colors balanced muted blue/green, HARD cel shadow blocks and printed halftone dots, no smooth airbrush gradients or realistic 3D. One whole person, entire body and all props centered occupying 70% square canvas, wide empty transparent margins EVERY side. Real alpha exterior/gaps, no backdrop or ground shadow, no lettering/logo/watermark.",
+  "fundo": "transparente; conferir progresso.json",
+  "ferramenta": "image_gen integrada",
+  "adaptacoes": [
+    "Gesto de decepar adaptado para preparação com machado, sem vítima ou execução visível."
+  ]
+}

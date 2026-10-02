@@ -1,0 +1,10 @@
+{
+  "number": 186,
+  "id": "cinzarel",
+  "title": "Cinzarel",
+  "arquivo": "imagens/cinzarel.png",
+  "estiloVersao": 2,
+  "prompt": "Use case: illustration-story. RPG catalogue illustration 186, Cinzarel. Subject: a fantasy city that burns and is rebuilt every generation, always at the exact same site with the same street plan. Mystery whether fire is accident, promise or punishment. Mood of renewed beginnings and the fatigue of rebuilding. Show scorched remnants beside newly reconstructed buildings on the same visible street grid, small distant rebuilding workers, modest graphic flames in a few ruins, no injured people. Composition: one compact square 1:1 irregular city vignette isolated on a genuinely transparent alpha background. The COMPLETE terrain silhouette, all buildings and effects fit in the middle 70% of canvas with generous empty transparent margins on EVERY side. No rectangular background or sky. Preserve the environment as a setting cutout. Style: modern indie comic and contemporary animation, confident varied-weight ink and loose expressive accents, solid flat ochre/rust/earthy warm colors balanced with muted cool blue/green, HARD crisp cel shadow blocks, printed halftone dots. Only 2–3 discrete tones per material. Flat graphic flame shapes without soft halos. No smooth gradients, airbrush, watercolor, realism, 3D render, neon, text, logos, signatures or watermark.",
+  "fundo": "transparente; conferir progresso.json",
+  "ferramenta": "image_gen integrada"
+}

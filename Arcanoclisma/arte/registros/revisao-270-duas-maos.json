@@ -1,0 +1,19 @@
+{
+  "number": 270,
+  "id": "escriba-do-porto",
+  "revisao": "duas-maos",
+  "prompt": "Use case: precise-object-edit. Fix anatomy of this female port scribe: she currently has THREE HANDS. She must have exactly TWO natural arms and TWO hands total. Remove the entire extra outward gesturing arm and hand on image RIGHT, fill that space with transparent alpha. Recompose her two remaining arms coherently: one hand cradles the open ledger/book against her torso, the OTHER hand holds the feather quill and writes on its page. Only TWO hands visible, each attached to one of her two arms. Keep same woman, face/hair, outfit, belt scrolls, pose, fullbody/boots, palette, comic flat color/cel shadows/halftone; no other alterations. Entire silhouette within generous transparent margins, real alpha background. No text or watermark.",
+  "arquivo": "imagens/escriba-do-porto.png",
+  "ferramenta": "image_gen integrada",
+  "alpha": {
+    "hasAlpha": true,
+    "pixelsTransparentes": 1216377,
+    "margens": [
+      355,
+      12,
+      342,
+      15
+    ]
+  },
+  "promovida": true
+}

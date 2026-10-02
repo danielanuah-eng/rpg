@@ -1,0 +1,16 @@
+{
+  "id": "dragao-eclipse",
+  "number": 226,
+  "prompt": "Use case: precise-object-edit. Redesign the reference Eclipse/light-and-dark dragon according to the user's latest correction. Preserve interwoven incomplete fusion of the two colors over all surfaces, but PALETTE NOW GOLD AND VIBRANT PURPLE: rich warm antique gold and saturated royal violet, not black charcoal or pale gray. Strong organic small-scale texture, ink, hard cel shadows, selective halftone. Make the pose clearly DYNAMIC: whole body banking and twisting in mid-flight, torso diagonal, long neck extending in an energetic forward curve, one wing sweeping high and the other sweeping backward, legs drawn into athletic action, long tail curling opposite for balance. No stiff symmetrical standing posture. HEAD: convincing elegant natural reptilian dragon skull, streamlined elongated snout and coherent jaw, clear predatory eyes with visible slit pupils. Reduce spines drastically, remove jagged cheek beard and crown; just two smoothly swept horns and a few small dorsal ridges. Do not turn the head into a humanoid mask or malformed angular beak. GOLD and vivid PURPLE irregular sinuous scaled patches weave together like two energies trying unsuccessfully to fuse, no half-and-half division. Sparse restrained light/shadow energy wisps following motion. Modern indie comic/contemporary animation, flat colors, no realistic rendering. Entire dragon and energy in central 75% of square with wide empty actual transparent margins all sides; no clipped wing/tail/feet. No text or scenery.",
+  "arquivo": "imagens/dragao-eclipse-ajuste-atual.png",
+  "alpha": {
+    "hasAlpha": true,
+    "pixelsTransparentes": 738659,
+    "margens": [
+      46,
+      31,
+      33,
+      30
+    ]
+  }
+}

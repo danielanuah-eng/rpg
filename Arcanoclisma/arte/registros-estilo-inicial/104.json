@@ -1,0 +1,10 @@
+{
+  "number": 104,
+  "id": "capa-de-vento",
+  "title": "Capa de Vento",
+  "arquivo": "imagens/capa-de-vento.png",
+  "fundo": "transparente; alfa conferido em progresso.json",
+  "ferramenta": "image_gen integrada",
+  "adaptacoes": ["Removido o fundo atmosférico residual; vento preservado como fitas gráficas isoladas com transparência entre elas"],
+  "prompt": "Capa de Vento, conforme o assunto do catálogo. Preservar a capa azul e creme, o capuz, as dobras dinâmicas, os cordões, o fecho dourado, o traço de quadrinhos e o pontilhado. Remover todo o fundo marrom, ciano ou preto e todo halo ou névoa. Manter apenas a capa inteira e fitas isoladas de vento azul-claro em formas gráficas chapadas. Fundo com canal alfa real, sem pessoa, manequim, chão, sombra, texto ou logotipo. Composição quadrada, objeto inteiro."
+}
