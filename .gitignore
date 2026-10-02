@@ -12,3 +12,6 @@ Daggerheart/Daggerheart-Livro-Basico.pdf
 Thumbs.db
 desktop.ini
 ~$*
+
+# Contém token do Netlify MCP (segredo)
+netlify-proxy.txt
