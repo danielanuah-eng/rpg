@@ -1,0 +1,58 @@
+{
+  "_instrucoes": [
+    "MODELO. Copie para <tarefaId>.claude.json (mesmo tarefaId do <tarefaId>.visual.json escrito por Vuco vuco) e preencha. Este arquivo nao descreve nenhuma tarefa real.",
+    "Regras: veja COORDENACAO-VUCO-CLAUDE.md. Claude escreve SO este arquivo; Vuco vuco escreve o .visual.json. Nao editar o arquivo do outro agente.",
+    "Nao inventar comandos, timings, funcoes ou codigo. Use null enquanto o dado nao existir.",
+    "Estados permitidos: pendente_claude, aguardando_ajuste, mapeado, integracao_confirmada.",
+    "mapeado = imagem e comando foram associados. integracao_confirmada exige confirmacao de Claude ou evidencia de integracao (preencher confirmacao.evidencia). Se a integracao estiver so planejada, o estado NAO e integracao_confirmada.",
+    "Nenhum agente executa automaticamente comandos escritos aqui: o arquivo documenta o vinculo. Nunca gravar credenciais.",
+    "Mudancas: nao apagar a versao anterior; acrescentar uma linha em historico e subir versao."
+  ],
+  "projeto": null,
+  "tarefaId": null,
+  "versao": 1,
+  "elementos": [
+    {
+      "elementoId": null,
+      "tipo": null
+    }
+  ],
+  "acoes": [
+    {
+      "acaoId": null,
+      "elementoId": null,
+      "movimento": null,
+      "imagens": [],
+      "comandoClaude": null,
+      "referenciaClaude": {
+        "arquivoDeResposta": null,
+        "funcao": null,
+        "caminhoCodigo": null
+      },
+      "requisitosTecnicos": {
+        "fpsOuDuracao": null,
+        "direcao": null,
+        "loop": null,
+        "transicoes": null,
+        "pivos": null,
+        "observacoes": null
+      },
+      "ajusteSolicitado": null,
+      "estado": "pendente_claude",
+      "confirmacao": {
+        "confirmadaPor": null,
+        "data": null,
+        "evidencia": null
+      }
+    }
+  ],
+  "pendencias": [],
+  "historico": [
+    {
+      "versao": 1,
+      "data": null,
+      "motivo": "Criacao do modelo",
+      "mudancas": []
+    }
+  ]
+}
