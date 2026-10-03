@@ -185,6 +185,8 @@ export interface HabUsos {
   anularDoCemiterio: boolean;
   /** Já aplicou o bônus de primeiro dano de Aliado neste turno. */
   danoAliado: boolean;
+  /** A Armadura já protegeu um ataque neste turno (nenhuma protege mais de um ataque por turno). */
+  armadura: boolean;
 }
 
 export interface ZonasJogador {
@@ -218,6 +220,8 @@ export interface Combate {
   atacante: string;
   alvo: string;
   bloqueador: string | null;
+  /** Conjurador bloqueando: o dono escolheu usar a Armadura (padrão: usa). */
+  usarArmadura?: boolean;
   etapa: 'declarado' | 'aguardandoBloqueio' | 'bloqueado';
 }
 
@@ -258,7 +262,7 @@ export type Comando =
   | { tipo: 'suspenderGrau'; jogador: Jogador; carta: string }
   | { tipo: 'jogar'; jogador: Jogador; carta: string; alvo?: string; descartarGrau?: string[]; enviarArcano?: string[] }
   | { tipo: 'atacar'; jogador: Jogador; atacante: string; alvo: string; enviarArcano?: string[] }
-  | { tipo: 'bloquear'; jogador: Jogador; bloqueador: string | null }
+  | { tipo: 'bloquear'; jogador: Jogador; bloqueador: string | null; /** Conjurador bloqueando: usar a Armadura? Sem o campo, usa. */ usarArmadura?: boolean }
   | { tipo: 'descartar'; jogador: Jogador; cartas: string[] }
   | { tipo: 'ativar'; jogador: Jogador; carta: string; alvo?: string; enviarArcano?: string[] }
   | { tipo: 'pagarAnulacao'; jogador: Jogador; pagar: boolean; enviarArcano?: string[] }

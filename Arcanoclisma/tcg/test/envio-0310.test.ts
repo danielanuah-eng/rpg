@@ -62,6 +62,7 @@ test('armadura: quando o Conjurador bloqueia, evita até a Defesa e quebra ao co
   for (let k = 0; k < 4; k++) {
     const atacante = emCampo(e, 0, 'soldado');
     e.instancias[conj1].suspensa = false;
+    e.habUsos[1].armadura = false; // como se fosse outro turno: a Armadura protege um ataque por turno
     executar(e, { tipo: 'atacar', jogador: 0, atacante, alvo: conj1 });
     passarAte(e, () => e.pendencia?.tipo === 'bloqueio');
     executar(e, { tipo: 'bloquear', jogador: 1, bloqueador: conj1 });
@@ -73,6 +74,28 @@ test('armadura: quando o Conjurador bloqueia, evita até a Defesa e quebra ao co
   assert.equal(e.instancias[e.jogadores[0].conjuradorId].dano, 0);
   assert.ok(!e.jogadores[1].itens.includes(gibao));
   assert.ok(e.jogadores[1].cemiterio.includes(gibao));
+});
+
+test('armadura: protege só um ataque por turno, e o dono pode escolher não usar', () => {
+  const e = criar(['item-canal-cajado', 'item-armadura-gibao']); // Gibão: defesa 1
+  const conj1 = e.jogadores[1].conjuradorId;
+  const gibao = e.jogadores[1].itens.find((id) => e.instancias[id].defId === 'item-armadura-gibao')!;
+  const bloquear = (usarArmadura?: boolean) => {
+    const atacante = emCampo(e, 0, 'soldado');
+    e.instancias[conj1].suspensa = false;
+    executar(e, { tipo: 'atacar', jogador: 0, atacante, alvo: conj1 });
+    passarAte(e, () => e.pendencia?.tipo === 'bloqueio');
+    executar(e, { tipo: 'bloquear', jogador: 1, bloqueador: conj1, usarArmadura });
+    passarAte(e, () => e.combate === null);
+  };
+  bloquear(false); // escolheu não usar: sofre os 3 e a armadura não se desgasta
+  assert.equal(e.instancias[conj1].dano, 3);
+  assert.equal(e.instancias[gibao].dano, 0);
+  bloquear(); // usa: evita 1
+  assert.equal(e.instancias[conj1].dano, 5);
+  bloquear(); // mesmo turno: já protegeu um ataque
+  assert.equal(e.instancias[conj1].dano, 8);
+  assert.equal(e.instancias[gibao].dano, 1);
 });
 
 test('sem bloquear, a armadura não evita dano', () => {

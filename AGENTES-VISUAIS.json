@@ -10,35 +10,51 @@
   "agentes": {
     "carlos": {
       "funcao": "produção visual e avaliação da meta",
-      "definicao": ".agents/skills/carlos/SKILL.md"
+      "definicao": ".agents/skills/carlos/SKILL.md",
+      "estado": "ativo",
+      "foco": "produção e avaliação das artes do site"
     },
     "enzo": {
       "funcao": "memória e arquivo visual entre projetos",
-      "definicao": ".agents/skills/enzo/SKILL.md"
+      "definicao": ".agents/skills/enzo/SKILL.md",
+      "estado": "desligado",
+      "motivo": "auxiliar de arquivo: adiado durante a produção (regra: adiar auxiliares para economizar créditos); religar no encerramento aprovado"
     },
     "copiao": {
       "funcao": "pacote de procedimentos no encerramento",
-      "definicao": ".agents/skills/copiao/SKILL.md"
+      "definicao": ".agents/skills/copiao/SKILL.md",
+      "estado": "desligado",
+      "motivo": "auxiliar de encerramento: adiado até o encerramento aprovado"
     },
     "vuco-vuco": {
       "funcao": "imagens e movimentos para jogos; vínculos com Claude",
-      "definicao": ".agents/skills/vuco-vuco/SKILL.md"
+      "definicao": ".agents/skills/vuco-vuco/SKILL.md",
+      "estado": "ativo",
+      "foco": "imagens e movimentos do jogo online; vínculos imagem–comando com o Claude"
     },
     "arquiteto": {
       "funcao": "edição e combinação de imagens",
-      "definicao": ".agents/skills/arquiteto/SKILL.md"
+      "definicao": ".agents/skills/arquiteto/SKILL.md",
+      "estado": "ativo",
+      "foco": "recortes, combinações e ajustes das imagens do site"
     },
     "designer-cartas": {
       "definicao": ".agents/skills/designer-cartas/SKILL.md",
-      "funcao": "cenas, templates Canva e cartas do TCG conforme demanda atual do Claude"
+      "funcao": "cenas, templates Canva e cartas do TCG conforme demanda atual do Claude",
+      "estado": "ativo",
+      "foco": "arte das cartas e das telas do site online (pedidos em Arcanoclisma/online/pedidos-visuais)"
     },
     "embelezador": {
       "definicao": ".agents/skills/embelezador/SKILL.md",
-      "funcao": "assets de efeitos e animações conforme demanda atual do Claude; ataque genérico compartilhado dos aliados"
+      "funcao": "assets de efeitos e animações conforme demanda atual do Claude; ataque genérico compartilhado dos aliados",
+      "estado": "ativo",
+      "foco": "efeitos e animações da mesa online"
     },
     "produtor-de-cartas": {
       "definicao": ".agents/skills/produtor-de-cartas/SKILL.md",
-      "funcao": "quando o Claude e o autor fecham um lote de cartas (cartas/pedidos/lote-*.claude.json), põe Vuco vuco, Carlos, Arquiteto, Designer de Cartas, Embelezador e Enzo para trabalhar em cada carta e devolve as entregas ao Claude"
+      "funcao": "quando o Claude e o autor fecham um lote de cartas (cartas/pedidos/lote-*.claude.json), põe Vuco vuco, Carlos, Arquiteto, Designer de Cartas, Embelezador e Enzo para trabalhar em cada carta e devolve as entregas ao Claude",
+      "estado": "ativo",
+      "foco": "lote aberto: Arcanoclisma/cartas/pedidos/lote-site-v1.claude.json (arte de todas as cartas do site, com cenário de fundo)"
     }
   },
   "etapas": [
@@ -98,5 +114,14 @@
     "Preservar originais.",
     "Durante produção de imagens, adiar auxiliares para economizar créditos; preservar no encerramento aprovado.",
     "Push exige autorização."
-  ]
+  ],
+  "foco": {
+    "desde": "2026-10-03",
+    "projeto": "Arcanoclisma online (site jogável no Cloudflare)",
+    "regra": "Pedido do autor: desligar os subagentes que não são úteis neste momento. Agentes com estado \"desligado\" não são chamados até o autor religar.",
+    "pedidos": [
+      "Arcanoclisma/cartas/pedidos/lote-site-v1.claude.json",
+      "Arcanoclisma/online/pedidos-visuais/site.claude.json"
+    ]
+  }
 }

@@ -1,0 +1,19 @@
+// Arcanoclisma online no Cloudflare: Worker (API + site estático), D1 (contas, baralhos, opiniões, ideias)
+// e Durable Objects (cada partida online é um objeto; o Saguão lista as salas e faz a busca rápida).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "arcanoclisma",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-09-01",
+  "assets": { "directory": "./public", "binding": "ASSETS", "not_found_handling": "single-page-application", "run_worker_first": ["/api/*"] },
+  "d1_databases": [{ "binding": "DB", "database_name": "arcanoclisma", "database_id": "c56e5110-e965-4331-9c45-6ee9a26449a1" }],
+  "durable_objects": { "bindings": [{ "name": "PARTIDA", "class_name": "Partida" }, { "name": "SAGUAO", "class_name": "Saguao" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Partida", "Saguao"] }],
+  "vars": {
+    // E-mails com acesso ao painel do autor (aprovar opiniões e ideias), separados por vírgula.
+    "ADMIN_EMAILS": "danielanuah@gmail.com",
+    // ID público do cliente OAuth do Google (opcional): com ele aparece o botão "Entrar com Google".
+    "GOOGLE_CLIENT_ID": ""
+  },
+  "observability": { "enabled": true }
+}

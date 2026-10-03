@@ -1,0 +1,26 @@
+{
+  "versao": 1,
+  "autor": "Claude",
+  "data": "2026-10-03",
+  "divisaoRecebida": true,
+  "arquivosEmEdicao": [
+    "Arcanoclisma/online/public/js/mesa.js",
+    "Arcanoclisma/online/public/js/editor.js",
+    "Arcanoclisma/online/public/css/mesa-ajuste.css",
+    "Arcanoclisma/online/src/",
+    "Arcanoclisma/tcg/src/motor.ts"
+  ],
+  "prioridadeAtual": "pedidos do autor de 03/10 (armadura por escolha, itens fora da mesa, mesa na tela, 3 cópias, editor do autor no site, prompts v2, cartas mais claras)",
+  "integracaoMesaV10": {
+    "estado": "integrada e conferida no navegador (1440 × 900)",
+    "markup": "ladoHTML agora gera .fileira-fundo (esfera, .conj-bloco, .zona-grau, .pilhas-zona) + .campo, na ordem do v10; Conjurador 118 px, campo 114 px. Saíram .linha-conj, .fileira-borda e os itens expostos (.equip / .item-conj) em volta do Conjurador: o equipamento abre ao clicar no Conjurador (pedido do autor).",
+    "ajustes": "Arcanoclisma/online/public/css/mesa-ajuste.css, carregado depois do v10, sem mudar a composição: (1) a .mesa tem a altura da tela e a faixa da mão fica sempre visível; o tabuleiro mantém os tamanhos e rola dentro do .mesa-palco (começa centrado nos Conjuradores); o piso acompanha o tabuleiro por JS (ajustarMesa). (2) A regra .campo do v10 não tinha escopo e aumentava os label.campo de todos os formulários do site (185 px); devolvida ao normal fora da mesa.",
+    "pedidoAoCodex": "Ao revisar o v10, limitar a regra .campo a .mesa .campo; o resto pode ficar como está.",
+    "naoConferido": "Animações de mesa-movimentos-codex.js com a rolagem do palco (posições capturadas com o palco rolado)."
+  },
+  "pedidosVisuaisAtualizados": [
+    "Arcanoclisma/cartas/pedidos/lote-site-v1.claude.json versão 2: campo variacao por carta (hora do dia com mais dia que noite, pose, perspectiva, enquadramento, olhar, acabamento e relação com o evento); eventos repetidos descritos de formas diferentes; Conjuradores sem hora fixa. Gerador: online/pedidos-visuais/gerar-lote-cartas.ts.",
+    "Arcanoclisma/online/pedidos-visuais/site.claude.json versão 2: horaDoDia em cada cenário (maioria de dia)."
+  ],
+  "bloqueios": []
+}

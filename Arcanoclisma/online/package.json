@@ -1,0 +1,23 @@
+{
+  "name": "arcanoclisma-online",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Arcanoclisma online: site jogável no Cloudflare (Workers + Durable Objects + D1), com o motor real do TCG.",
+  "scripts": {
+    "construir": "node construir.ts",
+    "dev": "node construir.ts && wrangler dev",
+    "db:local": "wrangler d1 execute arcanoclisma --local --file=schema.sql",
+    "db:remoto": "wrangler d1 execute arcanoclisma --remote --file=schema.sql",
+    "publicar": "node construir.ts && wrangler deploy",
+    "test": "node --test test/*.test.ts"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5",
+    "wrangler": "^4.147.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true,
+    "workerd@1.20261001.1": true
+  }
+}

@@ -1,0 +1,20 @@
+/* Ajuste de integração (Claude, 03/10/2026), carregado depois de mesa-codex-v10.css.
+   A mesa cabe na tela e a faixa da mão fica sempre visível; o tabuleiro mantém os tamanhos do v10 (direção do autor em
+   coordenacao/site-online/INTERFACE-MESA.md: não reduzir as cartas) e ROLA dentro do palco quando não cabe.
+   O piso acompanha o tabuleiro (função ajustarMesa em js/mesa.js). Não muda a composição visual do v10. */
+@media (min-width: 761px) {
+  .mesa { height: calc(100dvh - 57px); min-height: 560px; overflow: hidden; align-items: stretch; }
+  .mesa-esq { grid-template-rows: auto minmax(0, 1fr) auto; min-height: 0; height: 100%; }
+  .mesa-palco { overflow: auto; display: flex; }
+  .mesa-conteudo { margin: auto; flex: none; }
+  .arena-piso { position: absolute; min-width: 0; translate: none; }
+  /* mão do rival mais baixa; a sua aparece até a metade e sobe ao passar o mouse */
+  .mao-op-faixa { min-height: 50px; padding: 5px 24px; }
+  .verso-mini { width: 28px; height: 39px; }
+  .mao-faixa { height: 122px; min-height: 0; overflow: visible; z-index: 20; }
+  .mao { min-height: 0; padding: 10px 28px 0; flex-wrap: nowrap; align-items: start; align-content: start; }
+  .mao-slot:hover { transform: translateY(-62px) scale(1.12); z-index: 30; }
+  .mao-slot.marcada .cm { transform: translateY(-24px); }
+}
+/* O ".campo" do v10 (campo de batalha) não tem escopo e pegava os formulários do site (label.campo): devolve o normal fora da mesa. */
+.campo:not(.campo-eu):not(.campo-op) { min-height: 0; padding: 0; gap: 4px; align-content: normal; }

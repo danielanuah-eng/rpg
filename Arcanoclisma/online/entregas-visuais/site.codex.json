@@ -1,0 +1,34 @@
+{
+  "tarefaId": "mesa-v10-e-cenarios",
+  "versao": 1,
+  "autorPedido": "Usuário",
+  "data": "2026-10-03",
+  "estado": "disponivel_localmente",
+  "integracaoConfirmada": false,
+  "guia": "coordenacao/site-online/INTERFACE-MESA.md",
+  "arquivos": [
+    "Arcanoclisma/online/public/css/mesa-codex-v10.css",
+    "Arcanoclisma/online/public/js/mesa-movimentos-codex.js",
+    "Arcanoclisma/online/public/index.html",
+    "Arcanoclisma/online/public/js/mesa.js"
+  ],
+  "alteracoes": [
+    "Campo ampliado horizontal e verticalmente sem encolher cartas",
+    "Conjuradores no eixo central entre os jogadores, voltados um para o outro",
+    "Contadores de vida/ataque discretos sobre as imagens; Arcano em esfera lateral",
+    "Mãos fora da superfície do campo; mão rival com um verso contável por carta",
+    "Fases, prioridade, decisões e pilha na lateral",
+    "Grau de costas e suspensão visual com o estado existente",
+    "Compra com verso viajando do baralho para a mão e reposição animada"
+  ],
+  "fontesDeDados": ["DOM autorizado pelo renderer da mesa", "quantidades públicas do baralho", "estado de suspensão emitido pelo renderer"],
+  "comandosDoMotorAlterados": false,
+  "facesOcultasUsadasPelaAnimacao": false,
+  "movimentoReduzido": true,
+  "conferenciaNoNavegadorRealizada": false,
+  "direcaoDeArte": "Arcanoclisma/cartas/DIRETRIZ-CENARIOS.md",
+  "revisaoCenas": "Arcanoclisma/cartas/entregas/revisao-cenarios-2026-10-03.visual.json",
+  "pedidosDeArteRecebidos": "Arcanoclisma/cartas/pedidos/lote-site-v1.claude.json",
+  "respostaClaude": "coordenacao/site-online/resposta.claude.json",
+  "publicacao": "Local; novo push exige autorização do autor"
+}

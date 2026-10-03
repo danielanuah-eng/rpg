@@ -34,7 +34,7 @@ function anotar(e: Estado, msg: string): void {
   e.log.push(msg);
 }
 
-const novoHab = (): HabUsos => ({ gatilho: false, carta: false, repentina: false, desconto: 0, anularDoCemiterio: false, danoAliado: false });
+const novoHab = (): HabUsos => ({ gatilho: false, carta: false, repentina: false, desconto: 0, anularDoCemiterio: false, danoAliado: false, armadura: false });
 
 function novaInst(e: Estado, defId: string, dono: Jogador, ehConjurador: boolean): Inst {
   const inst: Inst = { id: `i${e.proxId++}`, defId, ehConjurador, dono, suspensa: false, dano: 0, revelada: false, entrouNoTurno: 0, banidaDisponivel: 0, descontoBanimento: 0, banirAoResolver: false };
@@ -597,10 +597,12 @@ function danoDeCombate(e: Estado): void {
     if (lado === 'alvo') danoAoAlvo += mais; else danoAoAtacante += mais;
     anotar(e, `${defConjurador(e, it.dono).nome}: o primeiro dano de Aliado do turno causa ${mais} a mais.`);
   }
-  // Armadura: quando o Conjurador bloqueia, ela evita até "defesa" de dano e se desgasta; quebra quando o desgaste chega à vida de desgaste
-  if (alvoOk && c.bloqueador !== null && alvoInst.ehConjurador && danoAoAlvo > 0) {
+  // Armadura: quando o Conjurador bloqueia e o dono escolhe usá-la, ela evita até "defesa" de dano e se desgasta;
+  // quebra quando o desgaste chega à vida de desgaste. Nenhuma Armadura protege mais de um ataque por turno (decisão 16).
+  if (alvoOk && c.bloqueador !== null && alvoInst.ehConjurador && danoAoAlvo > 0 && c.usarArmadura !== false && !e.habUsos[alvoInst.dono].armadura) {
     const arm = armaduraDe(e, alvoInst.dono);
     if (arm) {
+      e.habUsos[alvoInst.dono].armadura = true;
       const da = defCarta(e, arm);
       const ia = e.instancias[arm];
       const evita = Math.min(da.defesa ?? 0, danoAoAlvo, Math.max(0, (da.vidaDesgaste ?? 0) - ia.dano));
@@ -887,9 +889,11 @@ export function executar(e: Estado, c: Comando): void {
         const bloqueadorEtereo = !e.instancias[c.bloqueador].ehConjurador && !!defCarta(e, c.bloqueador).palavrasChave?.includes('Etéreo');
         if (atacanteEtereo && !bloqueadorEtereo) falha('Só um Aliado Etéreo bloqueia um atacante Etéreo.');
         e.instancias[c.bloqueador].suspensa = true;
-        anotar(e, `Jogador ${c.jogador} bloqueia com ${nomeReg(e, c.bloqueador)}.`);
+        const semArmadura = c.usarArmadura === false && e.instancias[c.bloqueador].ehConjurador && armaduraDe(e, c.jogador);
+        anotar(e, `Jogador ${c.jogador} bloqueia com ${nomeReg(e, c.bloqueador)}${semArmadura ? ' sem usar a Armadura' : ''}.`);
       } else anotar(e, `Jogador ${c.jogador} não bloqueia.`);
       e.combate.bloqueador = c.bloqueador;
+      e.combate.usarArmadura = c.usarArmadura !== false;
       e.combate.etapa = 'bloqueado';
       e.pendencia = null;
       e.passes = 0;

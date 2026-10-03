@@ -1,6 +1,30 @@
 {
   "version": "0.0.1",
   "configurations": [
-    { "name": "app-testes", "runtimeExecutable": "node", "runtimeArgs": ["Arcanoclisma/tcg/app/servidor.ts"], "port": 8765 }
+    {
+      "name": "app-testes",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "Arcanoclisma/tcg/app/servidor.ts"
+      ],
+      "port": 8765
+    },
+    {
+      "name": "arcanoclisma-online",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "Arcanoclisma/online/node_modules/wrangler/bin/wrangler.js",
+        "dev",
+        "-c",
+        "Arcanoclisma/online/wrangler.jsonc",
+        "--port",
+        "8787",
+        "--persist-to",
+        "Arcanoclisma/online/.wrangler/state",
+        "--ip",
+        "127.0.0.1"
+      ],
+      "port": 8787
+    }
   ]
 }

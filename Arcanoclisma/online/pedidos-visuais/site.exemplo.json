@@ -1,0 +1,24 @@
+{
+  "autor": "Claude",
+  "versao": 1,
+  "estado": "exemplo_nao_executar",
+  "necessidadeAtual": false,
+  "objetivo": "[Necessidade atual do site]",
+  "prioridade": "[Etapa prioritária]",
+  "referencias": ["[Arquivo e trecho relevante]"],
+  "textosExatos": {},
+  "assets": [
+    {
+      "id": "[asset]",
+      "telaOuCarta": "[Destino]",
+      "descricao": "[Cena ou elemento necessário]",
+      "formatoDimensoes": "[Formato e dimensões, ou pendência]",
+      "eventoDeIntegracao": null,
+      "raridade": null,
+      "arteAlternativa": null
+    }
+  ],
+  "restricoesTecnicas": [],
+  "pendencias": [],
+  "arquivosEmEdicaoPeloClaude": []
+}

@@ -1,0 +1,210 @@
+{
+  "tarefaId": "site-online-v1",
+  "autor": "Claude",
+  "estado": "solicitado",
+  "necessidadeAtual": true,
+  "versao": 2,
+  "atualizadoEm": "2026-10-03",
+  "objetivoAtual": "Arte do site jogável do Arcanoclisma (primeira versão online no Cloudflare): logotipo, fundos das telas, cenários de cada Valor, peças de interface que o jogador clica (botões, ícones, esfera de Arcano, painel da direita) e a mesa. A arte das cartas está em outro pedido: Arcanoclisma/cartas/pedidos/lote-site-v1.claude.json.",
+  "pedidoDoAutor": [
+    "Site estético; o GPT faz a arte do site e os assets que os jogadores clicam para mandar os comandos.",
+    "Prompts de cenário para o GPT.",
+    "Tabuleiro limpo: nenhuma informação no meio da mesa. Vida e atributos discretos, por cima das imagens. Arcano numa esfera na lateral, com número. Fases, etapas e permissões no lado direito. A pilha aparece na direita, com a carta que faz o efeito e o efeito. A mão fica fora da mesa. O Grau fica no campo como cartas viradas (verso do TCG) que se deitam para gerar Arcano."
+  ],
+  "referenciasClaude": [
+    "Arcanoclisma/arte/27 Estilo de arte - o traço.md (bloco de estilo C para cenários)",
+    "Arcanoclisma/cartas/DIRETRIZ-ACABAMENTO-E-RARIDADE.md (iluminação de cenários de 03/10)",
+    "Arcanoclisma/arena (kit visual já entregue: arena, verso v3, molduras, ícones)",
+    "Arcanoclisma/online/public (o site que vai receber os arquivos; ver online/README.md)",
+    "Arcanoclisma/online/dados/identidade.json (cenários provisórios usados hoje)"
+  ],
+  "paleta": "Veludo escuro #0e0b1d, amálgama rosa #d27aa6 e azul #6f9be0, dourado discreto #e0bd6a. Fontes do site: Cinzel (títulos), Cormorant Garamond, Nunito Sans. As peças de interface conversam com o verso das cartas (raster/verso-arcano-v3).",
+  "regrasGerais": [
+    "Sem texto dentro das imagens (os rótulos são HTML). Exceção: o logotipo.",
+    "Peças de interface em SVG quando forem formas simples; raster PNG com alfa medido quando forem ilustradas. Registrar o alfa.",
+    "Cenários de tela: PNG ou WebP opaco, 2400 × 1350 (16:9), com uma área mais calma para o conteúdo do site por cima (indicada em cada item).",
+    "Cenários de Valor: 1600 × 1067 (3:2) e também um corte vertical 1260 × 1760 para servir de fundo de carta provisório.",
+    "Seguir o bloco de estilo C e a iluminação difusa e discreta (sem HDR, sem céu estourado, brilho forte só na magia focal).",
+    "Entregar em Arcanoclisma/online/arte-site/<id>.<ext> e registrar em Arcanoclisma/online/pedidos-visuais/site-online-v1.visual.json (arquivo, dimensões, alfa, prompt usado). O Claude integra e responde com site-online-v1.integracao.claude.json."
+  ],
+  "blocoEstiloC_en": "Fantasy RPG environment illustration in the same style: modern independent comics and contemporary animation, loose energetic lines mixed with clean ones, flat colors with blocked shadows, halftone and stippling textures, wide establishing view, adventurous, warm, lively mood, warm earthy tones (oranges, ochres, yellows, browns) balanced by cool blues, cyans and deep greens in the landscape. Magic, when present, is a smooth aura, an overflowing aura with gaps, smoke, or solid hard-light constructs, drawn as flat-color shapes with halftone glow. Not realistic, not 3D, not a painting, no characters in the foreground, no text, no logo. Diffuse, subtle lighting; strong glow only on the focal magic. Subject (in Portuguese):",
+  "cenarios": [
+    {
+      "id": "cenario-menu",
+      "uso": "fundo da página inicial e do herói do topo",
+      "area_calma": "metade esquerda (o título e os botões ficam ali)",
+      "assunto": "A floresta primeira numa manhã clara, vista do alto de uma colina: árvores colossais com raízes que formam arcos, ruínas de pedra cobertas de musgo, um rio azul serpenteando, e no céu uma rachadura luminosa do Cataclisma, dividida entre luz dourada quente e sombra azul fria. Ao longe, a silhueta de duas torres de conjuradores, uma de cada lado do vale, encarando-se.",
+      "horaDoDia": "manhã clara, sol alto e fresco"
+    },
+    {
+      "id": "cenario-jogar",
+      "uso": "tela Jogar e saguão de salas online",
+      "area_calma": "centro (dois painéis de escolha ficam por cima)",
+      "assunto": "Confluência e Grand Galeonis: um porto-praça movimentado onde conjuradores de todos os Valores chegam por pontes e barcos, bandeiras de nove cores, mesas de pedra com tabuleiros de cartas arcanas sendo jogados ao ar livre, lanternas acendendo ao anoitecer.",
+      "horaDoDia": "meio-dia, luz forte e cores vivas"
+    },
+    {
+      "id": "cenario-mesa",
+      "uso": "fundo atrás do tabuleiro durante as partidas",
+      "area_calma": "toda a imagem fica escura e calma, quase sem detalhe no centro (o tabuleiro cobre o meio); detalhes só nas bordas",
+      "assunto": "Um anfiteatro arcano em ruínas no fim da tarde, visto de cima, com arquibancadas de pedra quebradas nas bordas, braseiros de magia de várias cores e um céu de duas pálpebras. Clima de duelo, silencioso.",
+      "horaDoDia": "fim de tarde dourado e suave (calmo e legível atrás do tabuleiro, sem ser noturno)"
+    },
+    {
+      "id": "cenario-tutorial",
+      "uso": "lições do tutorial",
+      "area_calma": "lado direito (painel do tutorial)",
+      "assunto": "Pátio de treino de uma escola de magia ao amanhecer: alvos de palha, círculos de Grau desenhados no chão, cartas de luz flutuando sobre mesas de estudo, uma árvore antiga no centro com sinos de bronze.",
+      "horaDoDia": "amanhecer, luz rosada e dourada"
+    },
+    {
+      "id": "cenario-baralhos",
+      "uso": "Baralhos e construtor",
+      "area_calma": "centro",
+      "assunto": "O arquivo sem dono: uma biblioteca infinita de estantes que sobem até as nuvens, com cartas em vez de livros, escadas flutuantes, fiapos de fumaça índigo e luz dourada entrando por janelas altas.",
+      "horaDoDia": "dia nublado e luminoso, luz difusa e clara"
+    },
+    {
+      "id": "cenario-comunidade",
+      "uso": "Comentários e conta",
+      "area_calma": "centro",
+      "assunto": "Vau Grande ao entardecer: uma taverna à beira do rio com mesas para fora, um mural de recados coberto de bilhetes e desenhos de cartas, lampiões coloridos refletindo na água.",
+      "horaDoDia": "entardecer, lanternas acendendo e céu laranja e violeta"
+    },
+    {
+      "id": "cenario-ideias",
+      "uso": "aba Ideias (expansões, personagens, cartas, itens, Conjuradores)",
+      "area_calma": "centro",
+      "assunto": "O céu de duas pálpebras: um planalto de onde se vê um céu imenso com um olho de sol e um olho de lua abertos, constelações em forma de criaturas e cartas ainda não criadas, brilhando como ideias por nascer.",
+      "horaDoDia": "meio-dia, com a lua ainda visível no céu claro"
+    }
+  ],
+  "cenariosDosValores": [
+    {
+      "id": "valor-conflituo",
+      "assunto": "O campo sem trégua: planície de batalha eterna com estandartes vermelho-ferrugem rasgados, trincheiras, lâminas de luz sólida cravadas no chão, fumaça de forja. Magia em construtos sólidos (lâminas, escudos, estandartes). O céu puxa o frio (azul acinzentado).",
+      "horaDoDia": "tempestade de dia: céu carregado e relâmpagos, mas a cena continua clara"
+    },
+    {
+      "id": "valor-sublimeyn",
+      "assunto": "Mar de mercúrio sob nuvens prateadas: ilhas flutuantes, cachoeiras que sobem em vapor, cristais de prata pingando. Magia em fumaça e vapor que cristaliza. Detalhes quentes no pôr do sol ao fundo.",
+      "horaDoDia": "manhã clara, prata brilhando ao sol"
+    },
+    {
+      "id": "valor-dominum",
+      "assunto": "A cidade-muralha: muralhas colossais em anéis, correntes roxo-sangue de luz sólida ligando torres, um trono vazio no alto. Construtos de correntes e elos. Luz quente de tochas contrastando.",
+      "horaDoDia": "meio-dia, sombras duras das muralhas"
+    },
+    {
+      "id": "valor-persona",
+      "assunto": "A cidade dos rostos: ruas de festa com máscaras gigantes nas fachadas, espelhos, bandeirolas coral e pessoas pequenas ao fundo dançando. Aura coral suave que transborda. Sombras azuladas da noite.",
+      "horaDoDia": "tarde ensolarada de festa"
+    },
+    {
+      "id": "valor-alvorum",
+      "assunto": "O farol sem noite: um farol de bronze sobre um penhasco, metade em luz dourada e metade em sombra preta, campos de trigo ao amanhecer. Aura dividida com falhas entre luz e sombra. Mar frio ao fundo.",
+      "horaDoDia": "amanhecer"
+    },
+    {
+      "id": "valor-morbidyum",
+      "assunto": "O cemitério que respira: lápides tortas sobre um brejo, árvores retorcidas, fios de alma verde-pálidos subindo em fumaça fria. Lampiões quentes de uma aldeia de curandeiras ao longe.",
+      "horaDoDia": "dia nublado com névoa clara (não noturno)"
+    },
+    {
+      "id": "valor-cognitium",
+      "assunto": "Observatório do arquivo: torre de vidro cheia de mapas e páginas voando, véu de fumaça índigo com pedaços faltando, estrelas. Luz âmbar de velas nas mesas.",
+      "horaDoDia": "tarde, luz dourada entrando pelas janelas"
+    },
+    {
+      "id": "valor-eternyr",
+      "assunto": "O entretempo: uma vila do mesmo dia congelada num instante, pássaros parados no ar, relógios gigantes, rastros brancos parados no céu azul-noite. Janelas com luz quente.",
+      "horaDoDia": "um instante parado de tarde dourada"
+    },
+    {
+      "id": "valor-primitivum",
+      "assunto": "A floresta que anda: árvores colossais com raízes como pernas, feras gigantes ao longe, esporos âmbar flutuando, construtos de galhos e raízes. Céu frio de chuva por trás.",
+      "horaDoDia": "manhã depois da chuva, folhas molhadas brilhando"
+    },
+    {
+      "id": "valor-neutro",
+      "assunto": "Encruzilhada arcana devastada pelo Cataclisma: estrada de pedra que se divide em nove caminhos, cada um tingido levemente pela cor de um Valor, ruínas e um céu dividido entre luz quente e sombra fria. (Fundo das cartas sem Valor.)",
+      "horaDoDia": "entardecer"
+    }
+  ],
+  "interface": [
+    {
+      "id": "logo-arcanoclisma",
+      "formato": "SVG ou PNG com alfa, 1200 × 400",
+      "descricao": "Logotipo com o nome ARCANOCLISMA em letras de título serifadas (como Cinzel), com uma estrela arcana de oito pontas no lugar do O ou acima do nome, gradiente dourado → rosa → azul, filigrana fina dourada. Também uma versão só com o símbolo (512 × 512) para ícone do site."
+    },
+    {
+      "id": "esfera-arcano",
+      "formato": "PNG com alfa 256 × 256 (+ variante 'cheia' com mais brilho)",
+      "descricao": "Esfera de vidro arcano, azul profundo com núcleo claro, aro de bronze dourado fino, pontilhado de luz. O centro fica limpo e escuro o bastante para um número branco grande por cima (o número é HTML). Fica na lateral da mesa, uma por jogador."
+    },
+    {
+      "id": "marcadores-sobre-carta",
+      "formato": "SVG",
+      "descricao": "Duas pastilhas pequenas que ficam por cima da imagem das cartas no campo: Ataque (espada, bronze escuro com borda dourada) e Vida (coração/escudo, vinho com borda rosa) + variante 'ferida' (vermelho mais vivo). Discretas, legíveis em 14 px, com espaço para 2 dígitos."
+    },
+    {
+      "id": "grau-verso",
+      "formato": "usar raster/verso-arcano-v3 (já existe)",
+      "descricao": "Confirmar que o verso atual funciona pequeno (50 px de largura) e deitado (suspenso). Se perder leitura, entregar uma versão simplificada do verso para tamanho pequeno, com o mesmo desenho."
+    },
+    {
+      "id": "painel-direito",
+      "formato": "SVG/PNG de moldura em 9 fatias (bordas e cantos separados), 360 px de largura",
+      "descricao": "Moldura do painel da direita da mesa (fases, decisões, pilha): veludo escuro com filete dourado e cantos com pequenos cristais rosa/azul. Também um cabeçalho ornamentado para a seção 'Pilha'."
+    },
+    {
+      "id": "icones-etapas",
+      "formato": "SVG, 4 ícones 48 × 48",
+      "descricao": "Ícones das etapas do turno: Início (sol nascendo/mão comprando), Principal (estrela arcana), Cataclisma (rachadura com luz), Final (lua/carta virando). Mesma linha fina dourada."
+    },
+    {
+      "id": "botoes-comando",
+      "formato": "SVG com estados normal, hover, pressionado e desabilitado",
+      "descricao": "Botões que o jogador clica para mandar comandos: Passar / Encerrar fase (principal, grande, dourado), Atacar (vermelho-ferrugem), Bloquear (azul-aço), Jogar carta (rosa), Pôr no Grau (azul), Usar habilidade / item (dourado), Não bloquear e Cancelar (neutros). Formas com cantos chanfrados e filigrana discreta; o texto é HTML."
+    },
+    {
+      "id": "icones-zonas",
+      "formato": "SVG 32 × 32",
+      "descricao": "Ícones de Baralho, Cemitério, Banimento, Enviadas ao Arcano, Mão do oponente, Canal, Armadura e Extra, no mesmo traço (linha dourada, preenchimento escuro)."
+    },
+    {
+      "id": "banners-fim",
+      "formato": "PNG com alfa 1200 × 500",
+      "descricao": "Faixa de Vitória (dourada com raios de luz e estrela arcana) e de Derrota (rosa/vinho com rachadura do Cataclisma). Sem texto: a palavra é HTML por cima."
+    },
+    {
+      "id": "guia-tutorial",
+      "formato": "PNG com alfa 800 × 800, 4 expressões",
+      "descricao": "Personagem-guia do tutorial: uma professora da escola de magia, idosa e animada, pele marrom, óculos de lentes de cristal, manto azul com bolsos cheios de cartas, apontando. Expressões: explicando, comemorando, surpresa, pensativa. Estilo P, fundo transparente (é peça de interface, não carta)."
+    },
+    {
+      "id": "molduras-avatar",
+      "formato": "SVG 128 × 128",
+      "descricao": "Molduras redondas para o nome do jogador: uma por Valor (9), na cor do Valor, e uma dourada para o autor."
+    },
+    {
+      "id": "selos-comunidade",
+      "formato": "SVG 64 × 64",
+      "descricao": "Selos de estado para Comentários e Ideias: Novo, Aprovado para mudar, Em revisão, Não vai mudar, Feito; e categorias de Ideia: Expansão, Personagem, Carta, Item, Conjurador, Mecânica."
+    },
+    {
+      "id": "cartao-modo",
+      "formato": "PNG 800 × 500",
+      "descricao": "Ilustrações dos cartões de modo na página inicial: Tutorial, Contra o bot, Contra jogadores, Baralhos, Comentários, Ideias. Cada uma é uma cena pequena no estilo C com uma área escura embaixo para o título."
+    }
+  ],
+  "animacoesParaOEmbelezador": [
+    "Carta entrando na pilha (painel da direita): deslize da mesa para a direita com rastro de pontilhado na cor do Valor, 450 ms.",
+    "Resolver item da pilha: a carta pulsa e se desfaz em fumaça/construto conforme o Valor, 400 ms.",
+    "Grau suspendendo para gerar Arcano: o verso deita 90° e uma partícula de luz voa até a esfera de Arcano, que acende; 500 ms.",
+    "Dano sobre uma carta: número flutuante e tremida curta; cura: brilho verde-pálido.",
+    "Ataque e bloqueio: usar o movimento genérico compartilhado já entregue (arena/cartas.css), sem efeito específico por Aliado."
+  ],
+  "integracaoPrevista": "Os arquivos entram em Arcanoclisma/online/public (arte-site/ e kit/). O Claude troca os provisórios (cenários atuais em dados/identidade.json, CSS do painel e da esfera) pelos entregues e registra a integração.",
+  "mudancasVersao2": "Pedido do autor (03/10): HORA DO DIA em cada cenário, com mais dia que noite (\"todas as cartas parecem estar à noite\"). O campo horaDoDia define a luz da imagem inteira."
+}

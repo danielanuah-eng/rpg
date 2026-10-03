@@ -168,7 +168,7 @@ As habilidades usam efeitos de uma linha. Código em `src/conjuradores.ts`; simu
 ### 9.3 Itens do Conjurador (pedido do autor em 03/10; respostas confirmadas)
 Ficam **fora do baralho**, num **side deck**. Antes da partida, cada jogador escolhe do seu side deck **um Canal, uma Armadura e um Extra** e os equipa e revela na preparação. **Itens não são trocados durante a partida.**
 - **Canal**: a arma (cajado, espada, lança, item mágico...). Tem **Ataque**.
-- **Armadura**: tem **Defesa** e **vida de desgaste**. Quando o Conjurador **bloqueia**, ela evita até a Defesa de cada dano de combate; o dano evitado gasta o desgaste e, quando ele se esgota, a armadura quebra e vai para o cemitério. Sem bloquear, a armadura não protege.
+- **Armadura**: tem **Defesa** e **vida de desgaste**. Quando o Conjurador **bloqueia**, ela evita até a Defesa de cada dano de combate; o dano evitado gasta o desgaste e, quando ele se esgota, a armadura quebra e vai para o cemitério. Sem bloquear, a armadura não protege. O dono escolhe se a usa em cada bloqueio, e ela protege no máximo **um ataque por turno** (decisão 16).
 - **Extra**: item **consumível de suporte**, sem Ataque. Tem uma ativação de uso único: ao usar, o item é consumido e vai para o cemitério (ex.: Poção de cura, Elixir de foco).
 
 O Conjurador ataca e defende **suspendendo**. O ataque dele é o dano básico (0) + o Ataque do Canal; sem Canal ele não ataca, mas pode bloquear. **O Conjurador que bloqueia não devolve o dano da arma**, só se a arma tiver efeito que diga isso (efeitos de item virão depois, junto com os modificadores por raridade).
@@ -205,6 +205,7 @@ Fora desta fase: equipamentos, Extras, tokens, texto de efeitos em linguagem nat
 13. **Rodada 6 aprovada pelo autor**: varreduras novas, curva de Grau, unidades de Grau médio e bombas, Protegido N, gatilho de dano de combate ao Conjurador, destruir todos os Aliados e o segundo jogador sem carta extra (variante BAL → PADRAO).
 14. **Recusadas**: Cataclisma crescente (dano no Cataclisma a partir do 10º turno) e Grau suspenso para quem começa. Também não se limita a quantidade de cartas de um tipo por baralho (o deckbuilding é livre).
 15. **Envio de 03/10**: repor a mão até a mão inicial do Conjurador no Início (no lugar da compra no Final; limite geral 7); o Conjurador levanta no Início; o Conjurador ataca só com Canal e não devolve o dano da arma ao bloquear; itens vêm de um side deck (Canal, Armadura e Extra consumível), seção 9.3, dano básico 0; "Comprar cartas (custo 1)" virou "Olhar o topo" (Repentina: olhe 3, ponha 1 na mão, o resto no fundo). Feitos como edições do autor (`data/edicoes.json`), visíveis no editor.
+16. **Armadura por escolha (03/10, site)**: quando o Conjurador bloqueia, o dono **escolhe** se usa a Armadura naquele bloqueio; **nenhuma Armadura protege mais de um ataque por turno** (o limite volta no Início de cada turno). Sem escolha explícita (bot), ela é usada.
 
 **Ainda abertas:**
 - Cada carta do Grau gera 1 Arcano na fase 1. Recomendo manter.

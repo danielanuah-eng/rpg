@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arcanoclisma</title>
+<meta name="description" content="Arcanoclisma: o TCG dos Conjuradores. Jogue contra o bot, contra outros jogadores, monte baralhos e aprenda no tutorial.">
+<meta name="theme-color" content="#0e0b1d">
+<link rel="icon" href="/img/icone.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/kit/cartas.css">
+<link rel="stylesheet" href="/kit/acabamento-v9.css">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/mesa.css">
+<link rel="stylesheet" href="/css/mesa-codex-v10.css">
+<link rel="stylesheet" href="/css/mesa-ajuste.css">
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<header id="topo">
+  <a class="marca" href="#/inicio" aria-label="Arcanoclisma, início"><img src="/img/icone.svg" alt=""><span>Arcanoclisma</span></a>
+  <nav id="menu" aria-label="Seções">
+    <a href="#/inicio" data-r="inicio">Início</a>
+    <a href="#/jogar" data-r="jogar">Jogar</a>
+    <a href="#/tutorial" data-r="tutorial">Tutorial</a>
+    <a href="#/baralhos" data-r="baralhos">Baralhos</a>
+    <a href="#/comentarios" data-r="comentarios">Comentários</a>
+    <a href="#/ideias" data-r="ideias">Ideias</a>
+  </nav>
+  <div id="conta-topo"></div>
+  <button id="menu-celular" aria-label="Abrir menu">☰</button>
+</header>
+<main id="tela" tabindex="-1"></main>
+<div id="camada"></div>
+<div id="avisos" role="status" aria-live="polite"></div>
+<svg class="visual-filter-defs" width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none"><defs><filter id="arcano-highlight-v9" x="-8%" y="-8%" width="116%" height="116%" color-interpolation-filters="sRGB"><feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 .3333 .3333 .3333 0 -.38" result="energy"/><feComponentTransfer in="energy" result="bright"><feFuncA type="linear" slope="3.6"/></feComponentTransfer><feComposite in="bright" in2="SourceAlpha" operator="in" result="highlights"/><feGaussianBlur in="highlights" stdDeviation="1.2" result="bloom"/><feMerge><feMergeNode in="bloom"/><feMergeNode in="highlights"/></feMerge></filter></defs></svg>
+<script type="module" src="/js/app.js"></script>
+</body>
+</html>

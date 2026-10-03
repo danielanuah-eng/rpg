@@ -1,0 +1,194 @@
+:root{--card-ink:#111b2b;--card-paper:#f4eddc;--card-gold:#d6b977;--card-sheen-opacity:.1}
+.tcg-card{--card-w:150px;position:relative;width:var(--card-w);aspect-ratio:63/88;border-radius:calc(var(--card-w)*.045);isolation:isolate;transform-style:preserve-3d;filter:drop-shadow(0 5px 6px #02091388);font-family:Georgia,serif;flex:none;transition:filter .25s ease,transform .3s ease;overflow:hidden;background:#203747;color:var(--card-ink)}
+.tcg-card *{box-sizing:border-box}.tcg-card .front,.tcg-card .back{position:absolute;inset:0;border-radius:inherit;overflow:hidden;backface-visibility:hidden}
+.tcg-card .front{background:linear-gradient(145deg,#7d9c9b 0%,#dee0c7 60%,#c09083 100%)}
+.tcg-card .portrait{position:absolute;inset:4% 2.3% auto;width:95.4%;height:91%;object-fit:contain;object-position:50% 46%;filter:drop-shadow(0 3px 2px #12283144)}
+.tcg-card.scene-art .portrait{inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--art-position,50% 50%)}
+.tcg-card .frame{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
+.tcg-card .name{position:absolute;z-index:4;top:4.4%;left:18%;width:66%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;font-size:calc(var(--card-w)*.064);color:#fff7e7;text-shadow:0 1px 2px #13243488;text-align:center;line-height:1.3}
+.tcg-card .type-glyph{position:absolute;z-index:5;right:5.5%;top:5.1%;width:7.8%;height:5.6%}
+.tcg-card .badge{position:absolute;z-index:5;left:3%;width:12.4%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;font:700 calc(var(--card-w)*.085)/1 Georgia,serif;color:#fff7de}
+.tcg-card .generated{top:2.5%;background:#325e72;border:calc(var(--card-w)*.009) solid #a3d2de;box-shadow:0 2px 3px #16253266}
+.tcg-card .pips{position:absolute;z-index:5;top:12%;left:3%;width:13.5%;display:flex;gap:calc(var(--card-w)*.014);flex-wrap:wrap;justify-content:center}
+.tcg-card .pip{width:calc(var(--card-w)*.026);height:calc(var(--card-w)*.026);border-radius:50%;background:#9bdae8;box-shadow:0 0 0 1px #203444}
+.tcg-card .cost{top:19%;background:#182b38cc;border:calc(var(--card-w)*.011) solid #d9bf85;outline:1px solid #162537;outline-offset:1px}
+.tcg-card .cost:after{content:'';position:absolute;inset:-8%;border-radius:50%;border-top:2px solid #f0d49a;border-bottom:2px solid #f0d49a;pointer-events:none}
+.tcg-card .degree{position:absolute;z-index:5;top:30.5%;left:3%;width:12.8%;aspect-ratio:1;display:grid;place-items:center;color:#fff5d5;font:700 calc(var(--card-w)*.073)/1 Georgia,serif;background:#172e3ba8;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.tcg-card .type-line{position:absolute;z-index:4;top:79%;left:7%;right:7%;font:calc(var(--card-w)*.041)/1.2 system-ui,sans-serif;opacity:.8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tcg-card .rules{position:absolute;z-index:4;top:82.5%;left:7%;right:7%;font:calc(var(--card-w)*.044)/1.35 system-ui,sans-serif;max-height:7.8%;overflow:auto;scrollbar-width:thin}
+.tcg-card .flavour{position:absolute;z-index:4;top:91%;left:7%;right:25%;font:italic calc(var(--card-w)*.033)/1.2 Georgia,serif;opacity:.75;max-height:4%;overflow:hidden}
+.tcg-card .stats{position:absolute;z-index:4;top:70.5%;right:5%;display:flex;gap:calc(var(--card-w)*.025);font:700 calc(var(--card-w)*.071)/1 system-ui,sans-serif;color:#fff4df}
+.tcg-card .stat{display:flex;justify-content:center;gap:calc(var(--card-w)*.014);align-items:center;width:calc(var(--card-w)*.17);height:calc(var(--card-w)*.165);background:#385a52;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}.tcg-card .stat.stat-vida{background:#713f4c;clip-path:polygon(0 0,100% 0,100% 68%,50% 100%,0 68%)}.tcg-card .stat img{width:calc(var(--card-w)*.047);height:calc(var(--card-w)*.047)}
+.tcg-card .rarity{position:absolute;z-index:5;bottom:3.2%;left:7%;width:7%;height:5%}
+.tcg-card .back{display:none;background:#102c53}.tcg-card .back-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.tcg-card .back-title{position:absolute;inset:0;width:100%;height:100%;object-fit:fill}
+.tcg-card.is-hidden .front{display:none}.tcg-card.is-hidden .back{display:block}
+.tcg-card.facing-opponent{transform:rotate(180deg)}.tcg-card.revealed-readable{transform:rotate(0deg)}
+/* Todas as raridades têm a mesma geometria e os mesmos campos mecânicos. */
+.tcg-card .front:after{content:'';position:absolute;inset:0;pointer-events:none;z-index:8;opacity:0;background:linear-gradient(115deg,transparent 35%,#fff9df 48%,transparent 60%);transform:translateX(-130%)}
+.tcg-card:not(.is-hidden)[data-rarity="incomum"]{filter:drop-shadow(0 4px 6px #02091388) drop-shadow(0 0 2px #78bdb93d)}
+.tcg-card:not(.is-hidden)[data-rarity="rara"] .front:after{animation:arcano-sheen 9s ease-in-out infinite}
+.tcg-card:not(.is-hidden)[data-rarity="lendaria"] .front:after{animation:arcano-sheen 7s ease-in-out infinite;--card-sheen-opacity:.14}
+.tcg-card:not(.is-hidden)[data-rarity="lendaria"]{animation:arcano-edge-breathe 8s ease-in-out infinite}
+@keyframes arcano-sheen{0%,66%{opacity:0;transform:translateX(-130%)}72%{opacity:var(--card-sheen-opacity)}86%{opacity:var(--card-sheen-opacity);transform:translateX(130%)}90%,100%{opacity:0;transform:translateX(130%)}}
+@keyframes arcano-edge-breathe{0%,100%{filter:drop-shadow(0 4px 6px #02091388) drop-shadow(0 0 1px #d6ba6c44)}50%{filter:drop-shadow(0 4px 6px #02091388) drop-shadow(0 0 3px #d6ba6c66)}}
+/* Movimento genérico de ataque: pôr a classe no wrapper, conservando a rotação da carta. */
+.card-motion.attack-generic{--attack-y:-38px;animation:card-attack-generic 620ms cubic-bezier(.22,.7,.25,1) both;z-index:20}
+@keyframes card-attack-generic{0%,100%{translate:0 0;scale:1}20%{translate:0 calc(var(--attack-y)*-.18);scale:1.035}50%{translate:0 var(--attack-y);scale:1.06}67%{translate:0 calc(var(--attack-y)*.8);scale:1.03}}
+@media(prefers-reduced-motion:reduce){.tcg-card,.tcg-card .front:after,.card-motion.attack-generic{animation:none!important;transition:none!important}.tcg-card .front:after{opacity:0!important}}
+
+/* Direção do autor: detalhe fino nas margens, subtipos sem sobrepor regras. */
+.tcg-card .name{top:3.6%;font-style:italic;line-height:1.2}
+.tcg-card .type-line{top:75.5%;left:9%;right:9%;text-align:center;font-size:calc(var(--card-w)*.041);font-weight:600}
+.tcg-card .subtype-line{position:absolute;z-index:4;top:79%;left:9%;right:9%;max-height:4.2%;overflow:auto;text-align:center;font:calc(var(--card-w)*.036)/1.25 system-ui,sans-serif;color:#45525b;scrollbar-width:thin}
+.tcg-card .rules{top:85%;left:9%;right:9%;max-height:7.2%;text-align:center;font-size:calc(var(--card-w)*.042);line-height:1.4}
+.tcg-card .flavour{top:93.8%;left:9%;right:9%;max-height:2.5%;text-align:center}
+.tcg-card .rarity{left:50%;bottom:.2%;width:6.5%;height:4.6%;transform:translateX(-50%)}
+.tcg-card .stats{top:65.9%}
+.tcg-card .stat.stat-defesa{background:#535c63;clip-path:polygon(0 0,100% 0,100% 65%,50% 100%,0 65%)}
+.tcg-card .stat.stat-vidaDesgaste{background:#816647;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.tcg-card .valor-rim{position:absolute;inset:-10%;border-radius:50%;mask:radial-gradient(closest-side,transparent 76%,#000 78%);-webkit-mask:radial-gradient(closest-side,transparent 76%,#000 78%);pointer-events:none}
+.tcg-card .cost:after{border-color:#c5bda0aa;inset:-14%}
+.tcg-card .art-placeholder{position:absolute;inset:15% 15% 31%;display:grid;place-items:center;text-align:center;font-size:calc(var(--card-w)*.05);color:#52666b}
+.tcg-card .stats{top:61.5%}
+/* Brilho por raridade: só frente autorizada, sem alterar o verso oculto. */
+.tcg-card:not(.is-hidden)[data-rarity="incomum"]{filter:drop-shadow(0 5px 6px #02091388) drop-shadow(0 0 4px #85ccc566)}
+.tcg-card:not(.is-hidden)[data-rarity="rara"]{--card-sheen-opacity:.17;filter:drop-shadow(0 5px 6px #02091388) drop-shadow(0 0 5px #a7c9e577)}
+.tcg-card:not(.is-hidden)[data-rarity="rara"] .front:after{animation-duration:8s}
+.tcg-card:not(.is-hidden)[data-rarity="lendaria"]{--card-sheen-opacity:.22;animation-duration:7s}
+.tcg-card:not(.is-hidden)[data-rarity="lendaria"] .front:after{animation-duration:6.5s}
+@keyframes arcano-edge-breathe{0%,100%{filter:drop-shadow(0 5px 6px #02091388) drop-shadow(0 0 3px #d6ba6c66)}50%{filter:drop-shadow(0 5px 6px #02091388) drop-shadow(0 0 7px #e7ce8c99)}}
+/* Suspensão no wrapper: mantém o verso, a orientação e o brilho da carta interna. */
+.card-motion.attack-generic,.card-motion.block-generic{z-index:20;will-change:translate,scale,filter;animation-duration:880ms;animation-timing-function:cubic-bezier(.22,.7,.25,1);animation-fill-mode:both}
+.card-motion.attack-generic{animation-name:card-suspended-attack}
+.card-motion.block-generic{animation-name:card-suspended-block}
+@keyframes card-suspended-attack{
+  0%,100%{translate:0 0;scale:1;filter:drop-shadow(0 0 0 #0000)}
+  20%,36%{translate:0 -30px;scale:1.085;filter:drop-shadow(0 28px 12px #02091388)}
+  56%{translate:0 calc(var(--motion-advance,-72px) - 30px);scale:1.11;filter:drop-shadow(0 32px 15px #02091388)}
+  70%{translate:0 calc(var(--motion-advance,-72px)*.45 - 25px);scale:1.07;filter:drop-shadow(0 25px 11px #02091377)}
+  86%{translate:0 -18px;scale:1.04;filter:drop-shadow(0 16px 8px #02091355)}
+}
+@keyframes card-suspended-block{
+  0%,100%{translate:0 0;scale:1;rotate:0deg;filter:drop-shadow(0 0 0 #0000)}
+  24%,50%{translate:0 -36px;scale:1.09;rotate:-2deg;filter:drop-shadow(0 34px 15px #02091388)}
+  61%{translate:0 -31px;scale:1.075;rotate:2deg;filter:drop-shadow(0 30px 13px #02091388)}
+  74%{translate:0 -35px;scale:1.08;rotate:0deg;filter:drop-shadow(0 32px 13px #02091377)}
+}
+@media(prefers-reduced-motion:reduce){.card-motion.attack-generic,.card-motion.block-generic{animation:none!important;will-change:auto}.tcg-card:not(.is-hidden)[data-rarity="lendaria"]{filter:drop-shadow(0 5px 6px #02091388) drop-shadow(0 0 4px #d6ba6c77)}}
+/* Revisão v4: acabamento mais visível, reservado às faixas e aos indicadores. */
+.tcg-card .name{left:19%;width:68%;top:4.35%;font-size:calc(var(--card-w)*.057);letter-spacing:.015em;text-shadow:0 1px 1px #07131c,0 0 3px #142936;line-height:1.15}
+.tcg-card .badge{font-size:calc(var(--card-w)*.067);text-shadow:0 1px 1px #081926}
+.tcg-card .generated{left:2.86%;width:10.79%;top:1.93%;border-color:#d5c393;box-shadow:inset 0 0 0 1px #aacbd988,0 2px 3px #08192688}
+.tcg-card .cost{left:3.33%;width:9.84%;top:11.48%;border:0;outline:0;background:#162b3b}
+.tcg-card .cost:after{inset:-30%;border:0;background:url('vetores/acabamento-custo-v4.svg') center/contain no-repeat;z-index:-1}
+.tcg-card .valor-rim{inset:-5%;mask:radial-gradient(closest-side,transparent 86%,#000 88%);-webkit-mask:radial-gradient(closest-side,transparent 86%,#000 88%)}
+.tcg-card .value-symbols{position:absolute;left:-5%;right:-5%;bottom:-22%;display:flex;justify-content:center;gap:1px;pointer-events:none}
+.tcg-card .value-symbols img{width:calc(var(--card-w)*.026);height:calc(var(--card-w)*.026);filter:drop-shadow(0 1px 1px #0009)}
+.tcg-card .degree{top:19.2%;left:0;width:16.51%;background:url('vetores/acabamento-grau-v4.svg') center/contain no-repeat;clip-path:none;font-size:calc(var(--card-w)*.062)}
+.tcg-card .stats{left:66.98%;right:auto;top:63.86%;gap:calc(var(--card-w)*.03);font-size:calc(var(--card-w)*.056)}
+.tcg-card .stat{width:calc(var(--card-w)*.1206);height:calc(var(--card-w)*.127);clip-path:none;background:url('vetores/estatistica-ataque-v4.svg') center/contain no-repeat;gap:calc(var(--card-w)*.006);padding-bottom:calc(var(--card-w)*.002);text-shadow:0 1px 1px #142330}
+.tcg-card .stat.stat-vida{clip-path:none;background:url('vetores/estatistica-vida-v4.svg') center/contain no-repeat}
+.tcg-card .stat.stat-defesa{clip-path:none;background:url('vetores/estatistica-defesa-v4.svg') center/contain no-repeat}
+.tcg-card .stat.stat-vidaDesgaste{clip-path:none;background:url('vetores/estatistica-desgaste-v4.svg') center/contain no-repeat}
+.tcg-card .stat img{width:calc(var(--card-w)*.026);height:calc(var(--card-w)*.026)}
+.tcg-card .type-line{font-size:calc(var(--card-w)*.037);letter-spacing:.015em;opacity:1;color:#233742}
+/* Lendária: iridescência própria na borda e na arte, sem cobrir regras/números. */
+.tcg-card:not(.is-hidden)[data-rarity="lendaria"] .front:before{content:'';position:absolute;inset:0;border-radius:inherit;padding:calc(var(--card-w)*.006);z-index:7;pointer-events:none;background:conic-gradient(from 35deg,#bbdadb,#d4a0c9,#d9bd7d,#99bdd3,#bbdadb);mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;opacity:.8;animation:legendary-colour 8s ease-in-out infinite}
+.tcg-card:not(.is-hidden)[data-rarity="lendaria"] .front:after{background:linear-gradient(115deg,transparent 30%,#b4e3eb 42%,#dbb1db 49%,#e4d49b 54%,transparent 66%);mask:linear-gradient(#000 0 72%,transparent 77%);-webkit-mask:linear-gradient(#000 0 72%,transparent 77%);--card-sheen-opacity:.18;animation:legendary-sheen 7s ease-in-out infinite;mix-blend-mode:screen}
+@keyframes legendary-colour{0%,100%{opacity:.58;filter:hue-rotate(0deg)}50%{opacity:.92;filter:hue-rotate(18deg)}}
+@keyframes legendary-sheen{0%,45%{opacity:0;transform:translateX(-130%)}56%{opacity:var(--card-sheen-opacity)}78%{opacity:var(--card-sheen-opacity);transform:translateX(130%)}84%,100%{opacity:0;transform:translateX(130%)}}
+/* Suspender = carta inteira deitada; a elevação é só um detalhe do movimento. */
+.card-motion{transform-origin:50% 50%;transition:rotate 360ms cubic-bezier(.2,.75,.25,1)}
+.card-motion.is-suspended{rotate:90deg}
+.card-motion.attack-generic,.card-motion.block-generic{animation-duration:880ms}
+@keyframes card-suspended-attack{
+  0%{translate:0 0;scale:1;rotate:0deg;filter:drop-shadow(0 0 0 #0000)}
+  22%{translate:0 -18px;scale:1.055;rotate:90deg;filter:drop-shadow(0 20px 10px #02091377)}
+  38%{translate:0 -22px;scale:1.065;rotate:90deg;filter:drop-shadow(0 24px 12px #02091388)}
+  58%{translate:0 calc(var(--motion-advance,-72px) - 22px);scale:1.085;rotate:90deg;filter:drop-shadow(0 28px 14px #02091388)}
+  70%{translate:0 calc(var(--motion-advance,-72px)*.5 - 15px);scale:1.045;rotate:90deg;filter:drop-shadow(0 20px 10px #02091377)}
+  87%{translate:0 -9px;scale:1.02;rotate:90deg;filter:drop-shadow(0 8px 6px #02091344)}
+  100%{translate:0 0;scale:1;rotate:90deg;filter:drop-shadow(0 0 0 #0000)}
+}
+@keyframes card-suspended-block{
+  0%{translate:0 0;scale:1;rotate:0deg;filter:drop-shadow(0 0 0 #0000)}
+  25%,48%{translate:0 -22px;scale:1.07;rotate:90deg;filter:drop-shadow(0 24px 12px #02091388)}
+  60%{translate:0 -15px;scale:1.045;rotate:94deg;filter:drop-shadow(0 19px 10px #02091377)}
+  73%{translate:0 -20px;scale:1.055;rotate:90deg;filter:drop-shadow(0 22px 10px #02091366)}
+  100%{translate:0 0;scale:1;rotate:90deg;filter:drop-shadow(0 0 0 #0000)}
+}
+@media(prefers-reduced-motion:reduce){.card-motion{transition:none!important}.tcg-card:not(.is-hidden)[data-rarity="lendaria"] .front:before{animation:none!important;opacity:.65}.tcg-card:not(.is-hidden)[data-rarity="lendaria"] .front:after{animation:none!important;opacity:0!important}}
+/* v5: famílias de acabamento distintas, só em frentes autorizadas. */
+.tcg-card:not(.is-hidden):is([data-rarity="incomum"],[data-rarity="rara"],[data-rarity="lendaria"]){animation:rarity-halo-v5 var(--rarity-period) ease-in-out infinite;filter:drop-shadow(0 5px 6px #02091388) drop-shadow(0 0 var(--halo-size) var(--halo-primary))}
+.tcg-card:not(.is-hidden)[data-rarity="incomum"]{--rarity-period:9s;--halo-size:4px;--halo-primary:#abcbd677;--halo-secondary:#ddb6ce44;--foil-alpha:.16;--foil-colors:transparent 28%,#b5e5e9 42%,#e4bbd8 50%,#ebd09b 57%,transparent 69%;--foil-edge:conic-gradient(from 35deg,#b8e0e4,#dbaeca,#dfc081,#a5c7e1,#b8e0e4);--edge-alpha:.8}
+.tcg-card:not(.is-hidden)[data-rarity="rara"]{--rarity-period:7.5s;--halo-size:7px;--halo-primary:#d8dce5a6;--halo-secondary:#ae75df77;--foil-alpha:.23;--foil-colors:transparent 26%,#f3f3fb 39%,#c6c9df 47%,#bb8cec 54%,#eee7ff 59%,transparent 70%;--foil-edge:conic-gradient(from 40deg,#f4f1fb,#aeb7cc,#bb85e6,#ece5fa,#bc9bdc,#f4f1fb);--edge-alpha:.94}
+.tcg-card:not(.is-hidden)[data-rarity="lendaria"]{--rarity-period:6s;--halo-size:10px;--halo-primary:#ffce6fcc;--halo-secondary:#d5aff599;--foil-alpha:.32;--foil-colors:transparent 24%,#ffda80 34%,#ffa2b3 41%,#ba88ff 47%,#79c7ff 53%,#87e8bd 59%,#ffe38d 66%,transparent 77%;--foil-edge:conic-gradient(from 35deg,#ffe092 0%,#e7ba66 12%,#ffafc0 24%,#bc8afa 37%,#83cbff 49%,#99e9c4 61%,#f8e292 73%,#ffc796 85%,#ffe092 100%);--edge-alpha:1}
+.tcg-card:not(.is-hidden):is([data-rarity="incomum"],[data-rarity="rara"],[data-rarity="lendaria"]) .front:before{content:'';position:absolute;inset:0;border-radius:inherit;padding:calc(var(--card-w)*.009);z-index:7;pointer-events:none;background:var(--foil-edge);mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;opacity:var(--edge-alpha);animation:rarity-border-v5 var(--rarity-period) ease-in-out infinite}
+.tcg-card:not(.is-hidden):is([data-rarity="incomum"],[data-rarity="rara"],[data-rarity="lendaria"]) .front:after{z-index:3;background:linear-gradient(115deg,var(--foil-colors));--card-sheen-opacity:var(--foil-alpha);animation:rarity-sheen-v5 var(--rarity-period) ease-in-out infinite;mix-blend-mode:screen;mask-image:linear-gradient(transparent 0 10%,#000 16% 56%,transparent 64%),linear-gradient(to right,transparent 0 18%,#000 24% 92%,transparent 100%);mask-composite:intersect;-webkit-mask-image:linear-gradient(transparent 0 10%,#000 16% 56%,transparent 64%),linear-gradient(to right,transparent 0 18%,#000 24% 92%,transparent 100%);-webkit-mask-composite:source-in}
+.tcg-card:not(.is-hidden)[data-rarity="lendaria"] .rarity{filter:drop-shadow(0 0 2px #ffd983aa)}
+@keyframes rarity-sheen-v5{0%,40%{opacity:0;transform:translateX(-120%)}52%{opacity:var(--foil-alpha)}76%{opacity:var(--foil-alpha);transform:translateX(120%)}84%,100%{opacity:0;transform:translateX(120%)}}
+@keyframes rarity-border-v5{0%,100%{opacity:calc(var(--edge-alpha)*.8);filter:brightness(1)}50%{opacity:var(--edge-alpha);filter:brightness(1.23)}}
+@keyframes rarity-halo-v5{0%,100%{filter:drop-shadow(0 5px 6px #02091388) drop-shadow(0 0 calc(var(--halo-size)*.75) var(--halo-primary))}50%{filter:drop-shadow(0 5px 6px #02091388) drop-shadow(0 0 var(--halo-size) var(--halo-primary)) drop-shadow(0 0 calc(var(--halo-size)*.6) var(--halo-secondary))}}
+/* Filigranas e encaixes com o centro de cada número livre. */
+.tcg-card .generated{background-image:url('vetores/acabamento-geracao-v5.svg');background-size:118% 118%;background-position:center;border-color:#e1c68e;box-shadow:0 2px 3px #07182788}
+.tcg-card .cost:after{background-image:url('vetores/acabamento-custo-v5.svg')}
+.tcg-card .degree{background-image:url('vetores/acabamento-grau-v5.svg')}
+.tcg-card .stats{left:66.67%;top:63.64%;gap:calc(var(--card-w)*.024)}
+.tcg-card .stat{width:calc(var(--card-w)*.127);height:calc(var(--card-w)*.1333);background-image:url('vetores/estatistica-ataque-v5.svg')}
+.tcg-card .stat.stat-vida{background-image:url('vetores/estatistica-vida-v5.svg')}
+.tcg-card .stat.stat-defesa{background-image:url('vetores/estatistica-defesa-v5.svg')}
+.tcg-card .stat.stat-vidaDesgaste{background-image:url('vetores/estatistica-desgaste-v5.svg')}
+.tcg-card .stat img{width:calc(var(--card-w)*.027);height:calc(var(--card-w)*.027)}
+@media(prefers-reduced-motion:reduce){.tcg-card:not(.is-hidden):is([data-rarity="incomum"],[data-rarity="rara"],[data-rarity="lendaria"]){animation:none!important;filter:drop-shadow(0 5px 6px #02091388) drop-shadow(0 0 var(--halo-size) var(--halo-primary))}.tcg-card:not(.is-hidden):is([data-rarity="incomum"],[data-rarity="rara"],[data-rarity="lendaria"]) .front:before{animation:none!important;opacity:var(--edge-alpha)}.tcg-card .front:after{animation:none!important;opacity:0!important}}
+/* Lendária v6: acabamento holográfico na superfície, com pouco halo externo. */
+.tcg-card:not(.is-hidden)[data-rarity="lendaria"]{animation:none;filter:drop-shadow(0 5px 6px #02091388) drop-shadow(0 0 3px #e9c57666)}
+.tcg-card:not(.is-hidden)[data-rarity="lendaria"] .front:before{padding:calc(var(--card-w)*.004);opacity:.4;animation:none}
+.tcg-card:not(.is-hidden)[data-rarity="lendaria"] .front:after{animation:none;opacity:0}
+.tcg-card .foil-texture{position:absolute;inset:0;border-radius:inherit;z-index:3;pointer-events:none;background:url('vetores/foil-lendaria-v6.svg') center/100% 100% no-repeat;mix-blend-mode:soft-light;opacity:.86;overflow:hidden}
+.tcg-card .foil-texture:before{content:'';position:absolute;inset:-30%;background:linear-gradient(116deg,transparent 22%,#ffe4a8 34%,#eab2ce 43%,#bba1ef 48%,#94d9fa 54%,#a9e7c6 60%,#ffdf8c 67%,transparent 80%);background-size:220% 160%;background-position:120% 50%;mix-blend-mode:screen;opacity:.24;animation:card-foil-surface 6s ease-in-out infinite}
+@keyframes card-foil-surface{0%,100%{background-position:120% 50%;opacity:.18}50%{background-position:-20% 50%;opacity:.38}}
+@media(prefers-reduced-motion:reduce){.tcg-card .foil-texture:before{animation:none!important;background-position:50% 50%;opacity:.2}.tcg-card:not(.is-hidden)[data-rarity="lendaria"]{filter:drop-shadow(0 5px 6px #02091388) drop-shadow(0 0 3px #e9c57666)}.tcg-card:not(.is-hidden)[data-rarity="lendaria"] .front:before{opacity:.4}}
+/* Lendária v7: reflexo diagonal mais exuberante sobre a face. */
+.tcg-card .foil-texture{opacity:.96}
+.tcg-card .foil-texture:before{animation:none!important;opacity:0!important}
+.tcg-card:not(.is-hidden)[data-rarity="lendaria"] .foil-reflection{
+  position:absolute;inset:0;border-radius:inherit;overflow:hidden;
+  z-index:3;pointer-events:none;mix-blend-mode:screen;
+}
+.tcg-card .foil-reflection:before,.tcg-card .foil-reflection:after{
+  content:'';position:absolute;inset:-50%;
+  transform:translate3d(-72%,-72%,0);opacity:0;
+  animation:legendary-diagonal-v7 5.2s linear infinite;
+}
+.tcg-card .foil-reflection:before{
+  --foil-peak:.66;
+  background:linear-gradient(135deg,transparent 30%,#ffd56f44 38%,#ffd675bb 43%,#ff9ecfb0 48%,#b998ffc7 51%,#79cfffbd 54%,#9be6b0b8 58%,#fff0b5da 61%,#ffc75f99 66%,transparent 74%);
+}
+.tcg-card .foil-reflection:after{
+  --foil-peak:.28;
+  background:linear-gradient(135deg,transparent 42%,#ffe6a433 47%,#fff5d0aa 49.2%,#fffdf2 50%,#ffe19faa 50.8%,#ffd77a33 53%,transparent 58%);
+}
+@keyframes legendary-diagonal-v7{
+  0%,10%{transform:translate3d(-72%,-72%,0);opacity:0}
+  18%{transform:translate3d(-52%,-52%,0);opacity:calc(var(--foil-peak)*.25)}
+  40%{transform:translate3d(-20%,-20%,0);opacity:var(--foil-peak)}
+  60%{transform:translate3d(20%,20%,0);opacity:var(--foil-peak)}
+  82%{transform:translate3d(52%,52%,0);opacity:calc(var(--foil-peak)*.25)}
+  90%,100%{transform:translate3d(72%,72%,0);opacity:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .tcg-card .foil-reflection:before,.tcg-card .foil-reflection:after{
+    animation:none!important;transform:none;
+  }
+  .tcg-card .foil-reflection:before{opacity:.23}
+  .tcg-card .foil-reflection:after{opacity:.08}
+}
+/* Conjurador v8: esfera de dois Valores e Comprometimento. */
+.tcg-card .conjurador-values{position:absolute;left:45.56%;top:10%;width:8.89%;aspect-ratio:1;border-radius:50%;overflow:hidden;display:flex;z-index:5;background:#193044;box-shadow:0 1px 2px #09142366}
+.tcg-card .conjurador-value-half{width:50%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#0000,#07182988),var(--valor-color);position:relative}
+.tcg-card .conjurador-value-half img{width:100%;height:66%;object-fit:contain;filter:drop-shadow(0 1px 1px #07182899)}
+.tcg-card .conjurador-sphere-rim{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.tcg-card .value-placeholder{color:#dfceb2;font:700 calc(var(--card-w)*.029)/1 Georgia,serif}
+.tcg-card[data-type="conjurador"] .type-line{white-space:normal;max-height:3.4%;font-size:calc(var(--card-w)*.035);line-height:1.18}
+.tcg-card .conjurador-detail{top:79.2%;max-height:4.7%;font-size:calc(var(--card-w)*.032);line-height:1.3}
+/* Fim do conjurador v8. */

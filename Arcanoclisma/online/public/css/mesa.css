@@ -1,0 +1,192 @@
+/* Mesa de jogo. Direção do autor: tabuleiro limpo (nada no meio), vida e ataque por cima das imagens, Arcano numa esfera
+   na lateral, Grau como cartas viradas no campo, mão fora da mesa, fases/decisões/pilha na coluna da direita. */
+.mesa { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 360px; height: calc(100vh - 57px); min-height: 620px; overflow: hidden; background: #0b0918; }
+.mesa-esq { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; min-width: 0; min-height: 0; }
+
+/* mão do oponente (fora da mesa, em cima) */
+.mao-op-faixa { display: flex; align-items: center; gap: 10px; padding: 4px 14px; background: #0e0b1d; border-bottom: 1px solid #ffffff10; min-height: 34px; }
+.mao-op { display: flex; gap: 3px; }
+.verso-mini { width: 18px; height: 25px; border-radius: 3px; background: url('/kit/raster/verso-arcano-v3.webp') center/cover, #102c53; box-shadow: 0 1px 3px #0008; }
+.rot-peq { font: 800 11px var(--corpo); text-transform: uppercase; letter-spacing: .08em; color: var(--apagado); }
+
+/* tabuleiro */
+.mesa-palco { position: relative; min-height: 0; overflow-x: hidden; overflow-y: auto; background: linear-gradient(180deg, #0e0b1dcc, #0e0b1d77 45%, #0e0b1dcc), var(--cena) center/cover; }
+.arena-piso { position: absolute; left: 50%; top: 50%; translate: -50% -50%; width: 104%; max-width: none; height: 104%; object-fit: fill; opacity: .9; pointer-events: none; filter: drop-shadow(0 30px 40px #000a); }
+.mesa-conteudo { position: relative; z-index: 1; height: 100%; min-height: 520px; display: grid; grid-template-rows: minmax(0, 1fr) 6px minmax(0, 1fr); padding: 10px 18px; gap: 4px; }
+.linha-meio { align-self: center; height: 1px; background: linear-gradient(90deg, transparent, #e0bd6a44, transparent); }
+.lado { display: flex; flex-direction: column; gap: 8px; min-height: 0; }
+.lado-op { justify-content: flex-start; }
+.lado-eu { justify-content: flex-end; }
+
+/* fileira de trás: esfera de Arcano, Conjurador, Grau e pilhas */
+.fileira-fundo { display: flex; align-items: center; gap: 14px; }
+.esfera-arcano { flex: none; width: 66px; height: 66px; border-radius: 50%; display: grid; place-content: center; text-align: center; color: #eaf2ff;
+  background: radial-gradient(circle at 35% 30%, #c9dcff 0, #6f9be0 18%, #2b3f8a 55%, #141a45 100%); box-shadow: 0 0 0 2px #e0bd6a99, 0 0 18px #6f9be055, inset 0 -6px 12px #0006; }
+.esfera-arcano b { font: 900 26px/1 var(--titulo); text-shadow: 0 2px 4px #0009; }
+.esfera-arcano small { font: 800 8px var(--corpo); text-transform: uppercase; letter-spacing: .1em; opacity: .85; }
+.esfera-arcano.cheia { box-shadow: 0 0 0 2px var(--ouro), 0 0 26px #8fb6ffaa, inset 0 -6px 12px #0006; }
+.conj-bloco { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.conj-nome { font: 700 12px var(--titulo); color: var(--texto-2); max-width: 140px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.itens-linha { display: flex; gap: 3px; }
+.item-conj { display: inline-flex; flex-direction: column; align-items: center; gap: 0; padding: 2px 6px; border-radius: 8px; border: 1px solid #e0bd6a44; background: #1d1735e6; font-size: 11px; cursor: pointer; line-height: 1.2; }
+.item-conj .item-cat { color: var(--ouro); font-weight: 800; text-transform: uppercase; font-size: 9px; letter-spacing: .05em; }
+.item-conj.acionavel { border-color: var(--ouro); box-shadow: 0 0 10px #e0bd6a88; }
+.zona-grau { display: flex; flex-direction: column; gap: 3px; min-width: 0; flex: 1; }
+.zona-grau .rot { font: 800 11px var(--corpo); text-transform: uppercase; letter-spacing: .1em; color: var(--ouro); }
+.grau-cartas { display: flex; flex-wrap: wrap; gap: 4px; min-height: 70px; align-items: center; }
+.grau-cartas .cm.suspensa { margin: 0 12px; }
+.pilhas-zona { display: flex; flex-direction: column; gap: 4px; }
+.zona-btn { padding: 3px 9px; border-radius: 9px; border: 1px solid var(--borda); background: #0f0c22e6; font-size: 12px; font-weight: 700; cursor: pointer; text-align: left; }
+.zona-btn:hover { border-color: var(--ouro); }
+
+/* campo: Aliados e permanentes */
+.mesa .campo { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-items: center; flex: 1; min-height: 120px; padding: 6px; }
+
+/* cartas na mesa */
+.cm { position: relative; width: var(--w); flex: none; cursor: pointer; transition: transform .25s ease, filter .2s; border-radius: calc(var(--w) * .05); }
+.cm .tcg-card { pointer-events: none; }
+.cm.suspensa { transform: rotate(90deg) scale(.86); margin: 0 calc(var(--w) * .2); }
+.cm.do-oponente.suspensa { transform: rotate(-90deg) scale(.86); }
+.cm.acionavel { filter: drop-shadow(0 0 7px #e0bd6acc); }
+.cm.acionavel:hover { transform: translateY(-4px); }
+.cm.suspensa.acionavel:hover { transform: rotate(90deg) scale(.9); }
+.cm.alvo-ok { filter: drop-shadow(0 0 10px #ff8fb8) drop-shadow(0 0 4px #fff); animation: alvo 1s ease-in-out infinite; z-index: 4; }
+@keyframes alvo { 50% { filter: drop-shadow(0 0 16px #ff8fb8) drop-shadow(0 0 6px #fff); } }
+.cm.atacando { filter: drop-shadow(0 0 10px #ef6f7a); }
+.cm.alvejado::after { content: '🎯'; position: absolute; top: 35%; left: 50%; translate: -50% 0; font-size: calc(var(--w) * .3); z-index: 9; }
+.cm.bloqueando { filter: drop-shadow(0 0 10px #6f9be0); }
+.cm.destaque-tutorial { filter: drop-shadow(0 0 12px #7fd1a0) drop-shadow(0 0 4px #fff); animation: alvo 1s ease-in-out infinite; }
+/* vida e ataque por cima da imagem, discretos e legíveis */
+.marca-status { position: absolute; z-index: 9; left: 50%; top: 52%; translate: -50% 0; display: flex; gap: 4px; pointer-events: none; }
+.marca-status b { padding: 1px 7px; border-radius: 999px; font: 900 calc(var(--w) * .14)/1.25 var(--corpo); color: #fff; text-shadow: 0 1px 2px #000; box-shadow: 0 2px 6px #000a; white-space: nowrap; }
+.st-atk { background: #3d2a12e6; border: 1px solid #e0bd6a; }
+.st-vida { background: #4a1f33e6; border: 1px solid #ef8fa8; }
+.st-vida.ferida { background: #8a2338f0; }
+.st-vida.baixa { animation: pulsar 1.2s ease-in-out infinite; }
+@keyframes pulsar { 50% { box-shadow: 0 0 0 4px #ef6f7a66; } }
+.marca-vida { position: absolute; z-index: 9; bottom: 4px; left: 50%; translate: -50% 0; padding: 1px 7px; border-radius: 999px; background: #6a1f3a; border: 1px solid #ef6f7a; font: 800 12px var(--corpo); white-space: nowrap; }
+.marca-vida.baixa { background: #a2202f; }
+.marca-sono { position: absolute; z-index: 9; top: 2px; right: 4px; font: 800 12px var(--corpo); color: #b9c8ff; text-shadow: 0 1px 3px #000; }
+.marca-kw { position: absolute; z-index: 9; top: 2px; left: 4px; color: #d7e6ff; text-shadow: 0 0 6px #6f9be0; }
+
+/* mão do jogador (fora da mesa, embaixo) */
+.mao-faixa { position: relative; background: linear-gradient(180deg, #120e26, #0b0918); border-top: 1px solid var(--borda-ouro); height: 150px; }
+.mao { position: absolute; left: 0; right: 0; bottom: 0; height: 150px; display: flex; justify-content: center; align-items: flex-start; gap: 6px; padding: 8px 12px 0; overflow: visible; }
+.mao-slot { transition: transform .18s ease; }
+.mao-slot:hover { transform: translateY(-58%) scale(1.25); z-index: 30; position: relative; }
+.mao-slot.jogavel .cm { filter: drop-shadow(0 0 8px #7fd1a0) drop-shadow(0 0 2px #fff); }
+.mao-slot.marcada .cm { filter: drop-shadow(0 0 10px #ef6f7a); transform: translateY(-14px); }
+.mao-slot.alvo-mao .cm { filter: drop-shadow(0 0 10px #ff8fb8); }
+.mao-vazia { align-self: center; margin-top: 40px; }
+
+/* coluna da direita: fases, decisões, pilha */
+.mesa-direita { display: flex; flex-direction: column; min-height: 0; background: #120e26f7; border-left: 1px solid var(--borda); }
+.lateral-topo { padding: 8px 10px 0; }
+.lateral-topo .abas { margin: 0; }
+.lateral-topo .abas button { padding: 5px 11px; font-size: 13px; }
+.lateral-corpo { flex: 1; overflow: auto; padding: 10px 12px; display: flex; flex-direction: column; gap: 10px; font-size: 13px; }
+.lateral-pe { display: flex; gap: 6px; flex-wrap: wrap; padding: 8px 10px; border-top: 1px solid var(--borda); }
+.fase { padding: 8px 10px; border-radius: 12px; background: #0e0b1d; border: 1px solid var(--borda-ouro); }
+.fase-topo { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.fase-turno { font: 700 14px var(--titulo); color: var(--ouro-2); }
+.fase-vez { font-weight: 800; color: var(--texto-2); }
+.fase-vez.minha { color: var(--verde); }
+.fase-prazo { margin-left: auto; font-weight: 800; color: var(--texto-2); }
+.fase-prazo.acabando { color: var(--vermelho); }
+.fase-etapas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; margin-top: 6px; }
+.fase-etapas span { text-align: center; padding: 3px 0; border-radius: 7px; font-size: 11px; font-weight: 800; color: var(--apagado); background: #ffffff08; }
+.fase-etapas span.atual { color: #1a1230; background: var(--ouro); }
+.barra-acao { display: flex; }
+.barra-acao .botao { width: 100%; }
+.espera-txt { width: 100%; text-align: center; padding: 10px; border-radius: 12px; background: #ffffff08; color: var(--texto-2); font-style: italic; }
+.pendencia { padding: 10px 12px; border-radius: 14px; background: #1b1638; border: 1px solid var(--ouro); }
+.pendencia.urgente { border-color: #ff8fb8; box-shadow: 0 0 0 3px #ff8fb822; }
+.pendencia.espera { border-color: var(--borda); color: var(--texto-2); font-style: italic; }
+.pendencia.modo-alvo { border-color: #ff8fb8; display: flex; flex-direction: column; gap: 4px; }
+.combate-faixa { padding: 8px 10px; border-radius: 12px; background: #6a1f3ad9; border: 1px solid #ef6f7a; }
+.pilha { display: flex; flex-direction: column; gap: 8px; padding: 10px; border-radius: 14px; background: radial-gradient(ellipse at top, #2b1f55, #16112c); border: 1px solid var(--ouro); }
+.pilha-titulo { font: 700 12px var(--titulo); color: var(--ouro-2); letter-spacing: .1em; text-transform: uppercase; }
+.pilha-item { display: flex; gap: 10px; align-items: flex-start; }
+.pilha-item:not(.topo) { opacity: .8; }
+.pilha-item.chegando { animation: chegarPilha .5s cubic-bezier(.2, .9, .3, 1.2); }
+@keyframes chegarPilha { from { opacity: 0; transform: translateX(60px) scale(.8); } }
+.pilha-info { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.pilha-info b { font-size: 14px; }
+.pilha-rot { font-size: 11px; color: var(--apagado); text-transform: uppercase; letter-spacing: .06em; font-weight: 800; }
+.pilha-item.dele .pilha-rot { color: #f0a0b8; }
+.pilha-item.meu .pilha-rot { color: #9fd0ff; }
+.pilha-efeito { font-size: 13px; color: var(--texto); }
+.pilha-alvo { font-size: 12px; color: #ffc0d4; }
+.pilha-sem-carta { width: 86px; aspect-ratio: 63/88; border-radius: 6px; display: grid; place-items: center; font-size: 30px; color: var(--ouro); background: #ffffff0a; border: 1px dashed var(--borda); }
+.pilha-pergunta { font-size: 13px; padding-top: 4px; border-top: 1px solid #ffffff12; }
+.pilha-pergunta.espera { color: var(--texto-2); font-style: italic; }
+.topo-cartas { margin-top: 8px; }
+.acontecimentos { padding: 8px 10px; border-radius: 12px; background: #0e0b1d; border: 1px solid #ffffff10; font-size: 12px; color: var(--texto-2); }
+.acontecimentos div { padding: 2px 0; }
+.acontecimentos .novo { color: var(--texto); font-weight: 700; }
+.item-vitrine.marcada .tcg-card { outline: 3px solid var(--verde); outline-offset: 2px; }
+.item-vitrine.marcada::after { content: '✓'; position: absolute; top: -8px; right: -8px; width: 24px; height: 24px; border-radius: 50%; background: var(--verde); color: #0e2a1c; display: grid; place-items: center; font-weight: 900; z-index: 10; }
+.item-vitrine.sobrando { opacity: .55; }
+.item-vitrine .gera { position: absolute; bottom: 6px; left: 50%; translate: -50% 0; padding: 1px 8px; border-radius: 999px; background: #1f3a6a; border: 1px solid var(--azul); font-weight: 800; font-size: 12px; z-index: 6; }
+.jogar-zona { position: absolute; bottom: 8px; left: 50%; translate: -50% 0; z-index: 6; }
+.registro details { margin-bottom: 8px; }
+.registro summary { cursor: pointer; font: 700 13px var(--titulo); color: var(--ouro-2); }
+.registro div { padding: 2px 0 2px 8px; border-left: 1px solid #ffffff14; color: var(--texto-2); }
+.reg-etapa { color: var(--ouro); font-weight: 800; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+.chat-lista { display: flex; flex-direction: column; gap: 4px; }
+.chat-form { display: flex; gap: 6px; }
+.ajuda-mesa p { margin-bottom: 8px; }
+.opcao-linha { display: flex; gap: 8px; align-items: flex-start; margin: 8px 0; }
+
+/* menu de ação e zoom */
+.mesa-menu-acao { position: absolute; z-index: 40; display: none; flex-direction: column; gap: 6px; width: 190px; padding: 10px; border-radius: 14px; background: #1b1638f7; border: 1px solid var(--ouro); box-shadow: var(--sombra); }
+.mesa-menu-acao.aberto { display: flex; animation: aparecer .12s; }
+.menu-titulo { font: 700 14px var(--titulo); color: var(--ouro-2); text-align: center; }
+.mesa-zoom { position: fixed; z-index: 45; pointer-events: none; opacity: 0; transition: opacity .12s; }
+.mesa-zoom.visivel { opacity: 1; }
+.zoom-dano { margin-top: 6px; text-align: center; font-weight: 800; color: var(--vermelho); text-shadow: 0 1px 3px #000; }
+.zoom-info { max-width: 360px; }
+
+/* pagamento */
+.pagamento h4 { margin: 14px 0 6px; font: 700 14px var(--titulo); }
+.pag-resumo { font-size: 16px; }
+.pag-resumo .ok { color: var(--verde); font-weight: 800; }
+.pag-resumo .falta { color: var(--vermelho); font-weight: 800; }
+.num-ouro { color: var(--ouro-2); font-size: 20px; }
+.pag-linha { display: flex; flex-wrap: wrap; gap: 6px; }
+.pag-item { padding: 6px 10px; border-radius: 10px; border: 1px solid var(--borda); background: #0f0c22; cursor: pointer; }
+.pag-item.on { border-color: var(--azul); background: #1f3a6a; }
+.pag-mao .item-vitrine { position: relative; }
+
+/* fim */
+.fim-partida { position: absolute; inset: 0; z-index: 50; display: grid; place-items: center; background: #06041099; backdrop-filter: blur(3px); }
+.fim-caixa { text-align: center; padding: 30px 40px; border-radius: 22px; background: linear-gradient(180deg, #2a2050, #16112c); border: 1px solid var(--ouro); box-shadow: var(--sombra); animation: subir .4s ease; }
+.fim-caixa h2 { font-size: 46px; }
+.fim-caixa.vitoria h2 { color: var(--ouro-2); text-shadow: 0 0 24px #e0bd6a88; }
+.fim-caixa.derrota h2 { color: #f0a0b8; }
+
+/* tutorial (na coluna da direita) */
+.balao-tutorial { padding: 12px 14px; border-radius: 14px; background: linear-gradient(180deg, #24425f, #172a3f); border: 1px solid var(--verde); font-size: 14px; }
+.balao-tutorial h3 { color: #c6f3d8; margin-bottom: 6px; font-size: 16px; }
+.balao-tutorial .passo { font-size: 11px; color: #a8d8bc; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; }
+.balao-tutorial .objetivo { margin-top: 8px; padding: 8px 10px; border-radius: 10px; background: #0e2a1c99; border: 1px dashed var(--verde); font-weight: 700; }
+.balao-reabrir { align-self: flex-start; }
+
+@media (max-width: 1000px) {
+  .mesa { grid-template-columns: minmax(0, 1fr) 300px; }
+  .esfera-arcano { width: 54px; height: 54px; }
+  .esfera-arcano b { font-size: 21px; }
+}
+@media (max-width: 760px) {
+  .mesa { grid-template-columns: 1fr; grid-template-rows: minmax(0, 1fr) 42%; height: auto; min-height: calc(100vh - 57px); }
+  .mesa-direita { border-left: none; border-top: 1px solid var(--borda); }
+  .fileira-fundo { flex-wrap: wrap; gap: 8px; }
+  .pilhas-zona { flex-direction: row; }
+}
+
+/* Conjurador no centro (layout v10). O equipamento fica guardado e abre numa janela (clique no Conjurador). */
+.lado .conj-bloco .cm { filter: drop-shadow(0 0 14px #e0bd6a55); }
+.lado-op .conj-bloco { display: flex; flex-direction: column-reverse; }
+.equip-linha { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; }
+.equip-vitrine { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 170px; text-align: center; }
+.equip-vitrine.vazio { justify-content: center; min-height: 120px; border: 1px dashed #ffffff30; border-radius: 10px; color: var(--apagado); }
