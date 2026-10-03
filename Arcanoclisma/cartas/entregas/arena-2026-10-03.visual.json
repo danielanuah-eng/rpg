@@ -1,0 +1,248 @@
+{
+  "id": "arena-2026-10-03",
+  "origem": "pedido direto do autor",
+  "agentes": [
+    "Designer de Cartas",
+    "Embelezador",
+    "Carlos"
+  ],
+  "estado": "aguardando_avaliacao",
+  "escopo": [
+    "arena_cinco_cameras",
+    "componentes_separados",
+    "frentes_full_art",
+    "verso_aveludado_sem_faixa",
+    "raridade_cosmetica",
+    "movimento_generico"
+  ],
+  "entrada": "Arcanoclisma/arena/index.html",
+  "guia": "Arcanoclisma/arena/entrega-claude.md",
+  "inventario": "Arcanoclisma/arena/assets.json",
+  "layout": "Arcanoclisma/arena/layout.json",
+  "contratoVisual": "Arcanoclisma/arena/modelo-online.json",
+  "canva": {
+    "designId": "DAHW7B69D2E",
+    "url": "https://www.canva.com/d/WjHnBjX5bud3xd9",
+    "salvo": true,
+    "alinhamentoPosterior": "pendente de aprovação específica após bloqueio da revisão automática"
+  },
+  "integracaoClaudeConfirmada": false,
+  "testeDeMotorRede": false,
+  "impressaoFinal": false,
+  "pushRealizado": false,
+  "revisaoAtual": {
+    "estado": "aguardando_avaliacao",
+    "arena": "Ampla nos dois eixos, duas perspectivas; conjuradores centrais se encarando.",
+    "layout": "../../arena/layout.json",
+    "cartas": "Mais decoração fina; subtipos/regras separados; Valor no anel de custo; raridade inferior central.",
+    "itens": [
+      "Canal",
+      "Armadura",
+      "Extra provisório"
+    ],
+    "movimentos": [
+      "Suspender carta inteira em 90°",
+      "Ataque e bloqueio com retorno deitado",
+      "Preparar volta à vertical",
+      "Lendária com iridescência colorida discreta"
+    ],
+    "canva": "Rascunhos v5 aguardando aprovação após prévia",
+    "push": "publicação autorizada em 03/10/2026",
+    "motor": "Claude integra; kit apenas visual",
+    "versao": 9,
+    "tipos": {
+      "fontes": [
+        "../tcg/docs/LIVRO-DE-REGRAS.md:75",
+        "../tcg/docs/LIVRO-DE-REGRAS.md:81",
+        "../tcg/src/tipos.ts:5"
+      ],
+      "tiposDocumentados": [
+        "Aliado",
+        "Temporária",
+        "Mística",
+        "Estrutura",
+        "Item de Conjurador",
+        "Extra"
+      ],
+      "velocidades": [
+        "Findante",
+        "Repentina"
+      ],
+      "conjurador": "Figura própria com carta e estatísticas; não confundir habilidade repentina com velocidade da carta.",
+      "extra": "Carta multivalor; pode pertencer a qualquer tipo. Não é o mesmo que o slot provisório de item Extra.",
+      "tokens": "Tipo e regras definidos pela carta criadora.",
+      "modeloVisual": "Exibir tipo e Repentina quando aplicável. Em Temporária, exibir sempre Findante ou Repentina. Não acrescentar Permanente. Não inferir velocidade real se ausente.",
+      "escolhaAutor": "Manter Findante; não renomear como Momentânea.",
+      "motor": "Motor atual implementa Aliado/Temporária/Mística/Estrutura; itens e Extra estão documentados para fase 2."
+    },
+    "artePorCarta": {
+      "autor": "pedido direto, 2026-10-03",
+      "personagemExistente": "Preservar identidade com referências, mas criar arte nova para cada carta que cita o personagem.",
+      "variar": [
+        "pose",
+        "ação",
+        "expressão",
+        "enquadramento",
+        "cenário"
+      ],
+      "prioridade": "Se já existe como conjurador, não reutilizar a imagem ou o cenário dessa carta.",
+      "contexto": "A nova composição responde à identidade e ao evento solicitado pelo Claude.",
+      "layout": "Exemplos antigos da arena são referências de layout, não artes finais de cartas novas.",
+      "registroObrigatorio": [
+        "personagemReferenciado",
+        "arteReferencia",
+        "cartaDestino",
+        "cenaNova",
+        "alteracoesVisuais",
+        "arquivoArteFinal"
+      ],
+      "proibido": "Recortar, reenquadrar ou recolocar a mesma arte como suposta cena nova."
+    },
+    "acabamento": {
+      "versao": 9,
+      "apenasEstetica": true,
+      "arteAlternativaIndependeDeRaridade": true,
+      "css": "acabamento-v9.css",
+      "raridades": {
+        "comum": {
+          "acabamento": "Arte original; alternativa ativa perfil próprio."
+        },
+        "incomum": {
+          "paleta": [
+            "prata",
+            "roxo"
+          ],
+          "herda": "Rara v5",
+          "reflexo": 0.23,
+          "linhaDeLuz": 0.1,
+          "periodoSegundos": 7.5,
+          "textura": 0.36,
+          "mascara": "Área de arte"
+        },
+        "rara": {
+          "paleta": [
+            "prata",
+            "roxo"
+          ],
+          "herda": "Lendária v7 em prata/roxo",
+          "reflexo": 0.66,
+          "linhaDeLuz": 0.28,
+          "periodoSegundos": 5.2,
+          "textura": 0.96,
+          "mascara": "Face inteira sob os textos"
+        },
+        "lendaria": {
+          "paleta": [
+            "dourado",
+            "rosa",
+            "violeta",
+            "azul",
+            "verde"
+          ],
+          "reflexo": 0.9,
+          "linhaDeLuz": 0.5,
+          "periodoSegundos": 4.8,
+          "textura": 1,
+          "realceIluminacao": true,
+          "padraoBrilhoObrigatorio": true
+        }
+      },
+      "alternativa": {
+        "fullArt": true,
+        "padraoBrilhoObrigatorio": true,
+        "reflexo": 0.9,
+        "linhaDeLuz": 0.5,
+        "periodoSegundos": 4.8,
+        "realceIluminacao": true,
+        "profundidade": "Contraste, iluminação focal e sombra interna; tudo recortado à carta, sem deslocamento para fora."
+      },
+      "texturas": {
+        "dourada": "vetores/foil-arcoiris-dourado-v9.svg",
+        "prateada": "vetores/foil-prata-roxo-v9.svg"
+      },
+      "filtro": {
+        "id": "arcano-highlight-v9",
+        "modo": "Realce por intensidade RGB, alfa da fonte, blur leve e screen; não identifica semanticamente magia.",
+        "fonte": "Camada duplicada da arte; arquivo aprovado preservado",
+        "opacidade": 0.46
+      },
+      "camadas": {
+        "arte": 0,
+        "realceEProfundidade": 1,
+        "moldura": 2,
+        "texturaEReflexo": 3,
+        "textosEEstatisticas": 4,
+        "recursos": 5
+      },
+      "sigilo": "Nenhum dado de raridade/variante nem filtro em cartas ocultas.",
+      "movimentoReduzido": "Reflexo estático.",
+      "prompts": "Pedido define raridade e arteAlternativa; lendária/alternativa inclui iluminação mágica, brilho e textura desde a geração."
+    },
+    "conjurador": {
+      "versao": 8,
+      "template": "templates/conjurador-v8.svg",
+      "overlay": [
+        "templates/overlay-conjurador-v8.svg",
+        "templates/overlay-conjurador-v8.png"
+      ],
+      "esfera": "vetores/esfera-conjurador-v8.svg",
+      "simbolos": "vetores/valor-*-simbolo-v8.svg",
+      "valores": "ConjuradorDef.valores: dois símbolos completos, cada um centralizado em sua metade; cores separadas; sem custo/Arcano gerado.",
+      "tipo": {
+        "campoMotor": "ConjuradorDef.comprometimento",
+        "opcoes": [
+          "Invocador",
+          "Brigão",
+          "Parrudão da quebrada",
+          "Habilidoso",
+          "Preparado"
+        ],
+        "descricao": "descricaoComprometimento: texto visual editável; não inventar benefícios mecânicos."
+      },
+      "referencias": [
+        "Arcanoclisma/tcg/src/tipos.ts:115",
+        "Arcanoclisma/tcg/src/conjuradores.ts:1",
+        "Arcanoclisma/tcg/docs/LIVRO-DE-REGRAS.md:168"
+      ],
+      "camadas": {
+        "esfera": 5,
+        "tipoEDescricao": 4,
+        "reflexoLendario": 3
+      },
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "alfa": {
+        "pixelsTransparentes": 1461950,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "canva": "Asset local pronto para composição futura; não altera os rascunhos v5 nem confirma salvamento no Canva.",
+      "posicaoEsfera": {
+        "viewBox": [
+          630,
+          880
+        ],
+        "centro": [
+          315,
+          116
+        ],
+        "diametro": 56,
+        "descricao": "Centralizada logo abaixo do nome, fora da caixa de texto; pequena e discreta."
+      }
+    }
+  },
+  "publicacao": {
+    "autorizadaPeloAutor": true,
+    "dataAutorizacao": "2026-10-03",
+    "estado": "publicacao_autorizada",
+    "remoto": "https://github.com/danielanuah-eng/rpg.git",
+    "branch": "main",
+    "recebimentoClaudeConfirmado": false
+  }
+}

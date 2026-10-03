@@ -16,8 +16,13 @@
     "cena": "",
     "personagens": [],
     "composicao": "",
-    "uso": ""
+    "uso": "",
+    "raridade": "comum",
+    "arteAlternativa": false,
+    "acabamentoVisual": "arcanoclisma-v9",
+    "diretrizAcabamento": "Arcanoclisma/cartas/DIRETRIZ-ACABAMENTO-E-RARIDADE.md"
   },
   "camposSemAplicacao": [],
-  "respostas": []
+  "respostas": [],
+  "instrucoesAcabamento": "Definir raridade e arteAlternativa de cada carta; aplicar o padrão luminoso v9 a toda lendária/alternativa e incluir os campos no prompt completo. Raridade somente estética."
 }

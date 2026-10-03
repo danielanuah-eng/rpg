@@ -1,0 +1,63 @@
+{
+  "versao": 7,
+  "raridades": {
+    "incomum": {
+      "paleta": [
+        "azul suave",
+        "rosa",
+        "dourado contido"
+      ],
+      "efeito": "Iridescência da lendária v4 refinada",
+      "brilho": 4,
+      "opacidadeReflexo": 0.16,
+      "periodoSegundos": 9
+    },
+    "rara": {
+      "paleta": [
+        "prata",
+        "roxo"
+      ],
+      "efeito": "Borda e reflexo prateados com acentos violeta",
+      "brilho": 7,
+      "opacidadeReflexo": 0.23,
+      "periodoSegundos": 7.5
+    },
+    "lendaria": {
+      "paleta": [
+        "dourado",
+        "rosa",
+        "violeta",
+        "azul",
+        "verde"
+      ],
+      "efeito": "Textura holográfica com faixa larga dourada/arco-íris e reflexo luminoso, atravessando a face do canto superior esquerdo ao inferior direito.",
+      "brilho": 3,
+      "opacidadeBorda": 0.4,
+      "opacidadeTextura": 0.96,
+      "opacidadeReflexo": [
+        0,
+        0.66
+      ],
+      "periodoSegundos": 5.2,
+      "texturaSVG": "vetores/foil-lendaria-v6.svg",
+      "texturaPNG": "templates/foil-lendaria-v6.png",
+      "camada": 3,
+      "mesclagem": "soft-light",
+      "registro": "registros/foil-lendaria-v6.json",
+      "opacidadeReflexoDourado": [
+        0,
+        0.28
+      ],
+      "mesclagemReflexo": "screen",
+      "direcaoReflexo": "superior esquerdo → inferior direito",
+      "classeReflexo": "foil-reflection",
+      "animacao": "legendary-diagonal-v7"
+    }
+  },
+  "numerosProtegidos": "Película lendária na camada 3; textos e estatísticas na camada 4, recursos e marcadores na camada 5. Rara/incomum mantêm a máscara v5.",
+  "verso": "Mesmo verso para todas as cartas ocultas; sem brilho que revele raridade.",
+  "atributos": "Filigranas laterais, bordas em camadas, encaixes de cristal; centro numérico livre.",
+  "acessibilidade": "prefers-reduced-motion mantém acabamento estático e remove a varredura.",
+  "atributosVersao": 5,
+  "canva": "Overlays de atributos v5 continuam em rascunho, aguardando aprovação; película v6 é um asset separado aplicado no HTML."
+}

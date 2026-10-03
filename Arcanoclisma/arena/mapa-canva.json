@@ -1,0 +1,80 @@
+{
+  "designId": "DAHW7B69D2E",
+  "viewUrl": "https://www.canva.com/d/WjHnBjX5bud3xd9",
+  "editUrl": "https://www.canva.com/d/5lKzSdPAoKauwSk",
+  "dimensoesPx": [
+    1260,
+    1760
+  ],
+  "proporcao": "63:88",
+  "estado": "revisao_v5_aguardando_aprovacao_apos_previa",
+  "paginas": [
+    {
+      "numero": 1,
+      "id": "PBgFX3zwsTqwTDhR",
+      "modelo": "generico"
+    },
+    {
+      "numero": 2,
+      "id": "PBY9Gm7BsxyvyWbb",
+      "modelo": "aliado"
+    },
+    {
+      "numero": 3,
+      "id": "PBVVtg8h6M3RBQS8",
+      "modelo": "temporaria"
+    },
+    {
+      "numero": 4,
+      "id": "PByKjVNcngv0WBfS",
+      "modelo": "mistica"
+    },
+    {
+      "numero": 5,
+      "id": "PBf5Vd6nBZ7hlDcm",
+      "modelo": "estrutura"
+    }
+  ],
+  "molduraAssetId": "MAHW9q992QM",
+  "comoInserirArte": [
+    "Duplicar a página do modelo.",
+    "Inserir a cena aprovada e definir a imagem como fundo.",
+    "A moldura transparente fica sobre a cena; substituir nome, três X de recursos, X de ataque e X de vida.",
+    "Usar dados reais do Claude; ocultar ataque/vida/Grau quando não aplicáveis.",
+    "Ajustar enquadramento de arte sem cortar rosto ou ação; não esticar a imagem."
+  ],
+  "autofill": "Labels aplicados aos elementos; consultar get_design_dataset antes de depender de autofill em lote.",
+  "limite": "Formas estão em PNG/SVG reutilizável; textos e números são campos Canva editáveis.",
+  "transacaoPendente": "4917322720477143630",
+  "itens": {
+    "designId": "DAHW9THMHLk",
+    "viewUrl": "https://www.canva.com/d/tgjo3Z1WTjbpOlv",
+    "editUrl": "https://www.canva.com/d/z8fx_OEBT0Vsra-",
+    "dimensoesPx": [
+      1260,
+      1760
+    ],
+    "paginas": [
+      "Canal",
+      "Armadura",
+      "Extra (nome provisório)"
+    ],
+    "estado": "revisao_v5_aguardando_aprovacao_apos_previa",
+    "transacaoPendente": "9048249480088859456",
+    "editDraftUrl": "https://www.canva.com/d/eTZSRYwWfMS0fed"
+  },
+  "revisao": {
+    "ornamentos": "Acabamento v4 mais visível no nome, números, Valor e Grau; detalhes nas margens sem invadir a arte.",
+    "textos": "Nome central em serifada itálica; espaço entre tipo/subtipos e regras.",
+    "valor": "Um ou mais Valores indicados por cores no anel do custo, sem ocultar número.",
+    "raridade": "Centro da borda inferior; só cosmética.",
+    "armadura": [
+      "defesa",
+      "vidaDesgaste"
+    ],
+    "velocidade": "Temporária · Findante ou Temporária · Repentina; Repentina explícita em outros tipos quando definida pelo motor.",
+    "atributos": "v5: filigranas, bordas em camadas, pequenos cristais; centro numérico livre."
+  },
+  "elementosNota": "Dados antigos removidos; consultar transação/revisão e dataset atual para IDs e geometria.",
+  "editDraftUrl": "https://www.canva.com/d/63vhp9LLaD6ahdo"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "verso-arcano-v2",
+  "arquivo": "raster/verso-arcano-v2.png",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-a8346dce-cda1-4fe0-a71f-2c7a51cf9bd6.png",
+  "ferramenta": "image_gen integrada",
+  "prompt": "Use case: precise-object-edit. Edit target: the supplied Arcanoclisma TCG card back. Preserve portrait 63:88 proportion, rounded card silhouette, medium-dark midnight/navy blue and rose-pink/dark-blue intertwined arcane amalgam as the central identity. User asks: substantially less bright, simpler back, fewer ornamental excesses, more velvety texture. Remove most large gold curling flourishes, corner jewels/starbursts, repeated gold orbital loops and sharp specular highlights. Replace with one slim refined antique-gold border with subtle black bevel edges and restrained shallow embossed relief. The blue field should be deep soft matte velvet with tiny tactile nap, elegant and calm, no shiny plastic or coarse noise. Keep the recognizable two swirling rose-pink and dark-indigo energies merging in the central area, but soften the energy to muted diffuse luminous pigment, about 65% less glare, no white-hot center, no electric streak clutter. Rich saturated colors with darker values. Preserve the calm horizontal dark-blue central title ribbon exactly at midheight, simpler thin antique-gold outline, no lettering (editable title is added by HTML/SVG). Keep orientation composition and original representation recognizable, no new subjects or scenery. High-resolution polished card-design illustration, clean edges, not pixel art. Actual transparent background only outside the complete card silhouette; inside card stays opaque.\n",
+  "criadoEm": "2026-10-03T04:31:13.413Z",
+  "largura": 1061,
+  "altura": 1483,
+  "hasAlpha": true,
+  "alfaCantos": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "pixelsTransparentes": 241897,
+  "pixelsOpacos": 3096,
+  "sha256": "74160e09c66e74dcbcb2a5b9c4536ae385fba6cbbb631f300c8953b2c92d3419",
+  "avaliacaoAutor": "pendente"
+}

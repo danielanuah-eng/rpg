@@ -1,0 +1,79 @@
+{
+  "versao": 2,
+  "estado": "artes_aprovadas_propostas_aguardando_claude",
+  "cartas": [
+    {
+      "id": "licao-do-jardim",
+      "nome": "Lição do Jardim",
+      "tipo": "temporaria",
+      "subtipos": [
+        "Feitiço"
+      ],
+      "valores": [],
+      "custo": null,
+      "grau": null,
+      "arcanoGerado": null,
+      "ataque": null,
+      "vida": null,
+      "velocidade": "findante",
+      "texto": "Seus Dragões podem se suspender para gerar 1 Arcano em velocidade Repentina. Até o fim do turno, seus Dragões contribuem para o número de Grau.",
+      "ambientacao": "Mesmo a menor vida pede tempo.",
+      "arte": "../cartas/modelos-visuais/2026-10-03-v1/licao-do-jardim-arte-v2.png",
+      "arteModo": "cena",
+      "cosmetico": {
+        "raridade": "rara",
+        "arteAlternativa": false
+      },
+      "demonstracaoVisual": true,
+      "camposProvisorios": true,
+      "mostrarGrauModelo": true,
+      "identidadeCanonica": false,
+      "observacao": "Arte aprovada. Habilidades propostas pelo autor; números e redação final a definir pelo Claude. Raridade só estética.",
+      "contexto": "Ciantia de perfil guia o dragão dourado em um jardim suspenso. Roupa preta/roxa e iluminação difusa; o brilho fica concentrado na magia.",
+      "personagensFonte": "Arcanoclisma/arte/imagens/ciantia-dragoes.png",
+      "avaliacaoArte": "aprovada_pelo_autor",
+      "estadoCarta": "proposta_aguardando_claude",
+      "propostaAutor": "Arcanoclisma/cartas/propostas/ciantia-dragoes-2026-10-03.autor.json"
+    },
+    {
+      "id": "dragao-transplanar",
+      "nome": "Dragão Transplanar",
+      "tipo": "aliado",
+      "subtipos": [
+        "Dragão"
+      ],
+      "valores": [],
+      "custo": null,
+      "grau": null,
+      "arcanoGerado": null,
+      "ataque": "—",
+      "vida": "—",
+      "velocidade": null,
+      "texto": "Extra exclusivo de Ciantia desenvolvida. Jogue um Dragão da sua mão sem pagar seus custos, respeitando o Grau necessário. [Proteção a definir pelo Claude.]",
+      "ambientacao": "O caminho não terminou. O céu é que cedeu.",
+      "arte": "../cartas/modelos-visuais/2026-10-03-v1/dragao-da-travessia-arte-v1.png",
+      "arteModo": "cena",
+      "cosmetico": {
+        "raridade": "lendaria",
+        "arteAlternativa": true
+      },
+      "demonstracaoVisual": true,
+      "camposProvisorios": true,
+      "mostrarGrauModelo": true,
+      "identidadeCanonica": false,
+      "observacao": "Arte aprovada. Habilidades propostas pelo autor; números e redação final a definir pelo Claude. Raridade só estética.",
+      "contexto": "O dragão azul-violeta de Ciantia faz uma travessia em torção sobre a ponte que se desfaz, olhando para a ruptura no céu.",
+      "personagensFonte": "Arcanoclisma/arte/imagens/ciantia-dragoes.png",
+      "avaliacaoArte": "aprovada_pelo_autor",
+      "estadoCarta": "proposta_aguardando_claude",
+      "propostaAutor": "Arcanoclisma/cartas/propostas/ciantia-dragoes-2026-10-03.autor.json",
+      "idEstudoAnterior": "dragao-da-travessia",
+      "vinculoProposto": {
+        "equipamento": "Extra",
+        "conjurador": "Ciantia",
+        "requerDesenvolvimento": true
+      }
+    }
+  ],
+  "propostaAutor": "Arcanoclisma/cartas/propostas/ciantia-dragoes-2026-10-03.autor.json"
+}

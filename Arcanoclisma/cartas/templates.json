@@ -1,11 +1,346 @@
 {
-  "versao": 1,
+  "versao": 5,
   "agente": "Designer de Cartas",
-  "estado": "aguardando_pedido_atual_do_claude",
+  "estado": "base_salva_revisoes_v5_aguardando_aprovacao",
   "canva": {
-    "consultaEm": "2026-10-03",
-    "resultado": "erro de transporte na consulta; acesso não confirmado nesta configuração"
+    "designId": "DAHW7B69D2E",
+    "url": "https://www.canva.com/d/WjHnBjX5bud3xd9",
+    "dimensoesPx": [
+      1260,
+      1760
+    ],
+    "resultado": "Revisão v5 dos atributos em rascunho; textura e reflexo diagonal lendário v7 no HTML/CSS."
   },
-  "templates": [],
-  "camposPorTemplate": ["id", "versao", "designIdCanva", "urlCanva", "medidas", "modulos", "fontes", "exportacoesLocais", "aprovacao", "pedidosOrigem"]
+  "templates": [
+    {
+      "id": "full-art-generico-v5",
+      "designIdCanva": "DAHW7B69D2E",
+      "urlCanva": "https://www.canva.com/d/WjHnBjX5bud3xd9",
+      "corteAlvoMm": [
+        63,
+        88
+      ],
+      "canvaPx": [
+        1260,
+        1760
+      ],
+      "modulos": [
+        "arte-full-art",
+        "nome",
+        "arcano-gerado-esfera",
+        "custo-anel",
+        "grau-losango",
+        "ataque-hexagono",
+        "vida-escudo",
+        "texto-leve",
+        "subtipos",
+        "valor-anel-custo",
+        "raridade-borda-inferior"
+      ],
+      "mapa": "../arena/mapa-canva.json",
+      "exportacoesLocais": [
+        "../arena/templates/overlay-generico-v5.svg",
+        "../arena/templates/overlay-generico-v5.png"
+      ],
+      "aprovacao": "Revisão v5 aguardando aprovação após prévia",
+      "pedidosOrigem": [
+        "pedido direto do autor"
+      ]
+    },
+    {
+      "id": "item-canal-v5",
+      "designIdCanva": "DAHW9THMHLk",
+      "urlCanva": "https://www.canva.com/d/tgjo3Z1WTjbpOlv",
+      "pagina": 1,
+      "corteAlvoMm": [
+        63,
+        88
+      ],
+      "canvaPx": [
+        1260,
+        1760
+      ],
+      "exportacoesLocais": [
+        "../arena/templates/overlay-canal-v5.svg",
+        "../arena/templates/overlay-canal-v5.png"
+      ],
+      "camposEstatistica": [],
+      "aprovacao": "Revisão v5 aguardando aprovação após prévia",
+      "nomeProvisorio": false
+    },
+    {
+      "id": "item-armadura-v5",
+      "designIdCanva": "DAHW9THMHLk",
+      "urlCanva": "https://www.canva.com/d/tgjo3Z1WTjbpOlv",
+      "pagina": 2,
+      "corteAlvoMm": [
+        63,
+        88
+      ],
+      "canvaPx": [
+        1260,
+        1760
+      ],
+      "exportacoesLocais": [
+        "../arena/templates/overlay-armadura-v5.svg",
+        "../arena/templates/overlay-armadura-v5.png"
+      ],
+      "camposEstatistica": [
+        "defesa",
+        "vidaDesgaste"
+      ],
+      "aprovacao": "Revisão v5 aguardando aprovação após prévia",
+      "nomeProvisorio": false
+    },
+    {
+      "id": "item-extra-v5",
+      "designIdCanva": "DAHW9THMHLk",
+      "urlCanva": "https://www.canva.com/d/tgjo3Z1WTjbpOlv",
+      "pagina": 3,
+      "corteAlvoMm": [
+        63,
+        88
+      ],
+      "canvaPx": [
+        1260,
+        1760
+      ],
+      "exportacoesLocais": [
+        "../arena/templates/overlay-extra-v5.svg",
+        "../arena/templates/overlay-extra-v5.png"
+      ],
+      "camposEstatistica": [],
+      "aprovacao": "Revisão v5 aguardando aprovação após prévia",
+      "nomeProvisorio": true
+    }
+  ],
+  "versoesAnterioresCanva": [
+    {
+      "id": "DAHW6xJPzdk",
+      "estado": "substituido"
+    },
+    {
+      "id": "DAHW7AiUUSs",
+      "estado": "substituido"
+    }
+  ],
+  "revisaoAtual": {
+    "data": "2026-10-03",
+    "modelos": [
+      "aliado",
+      "temporaria",
+      "mistica",
+      "estrutura",
+      "conjurador",
+      "canal",
+      "armadura",
+      "extra"
+    ],
+    "proporcao": "63:88",
+    "impressaoMm": [
+      63,
+      88
+    ],
+    "overlayPx": [
+      1260,
+      1760
+    ],
+    "canvaGenerico": {
+      "designId": "DAHW7B69D2E",
+      "estado": "revisao_v5_aguardando_aprovacao_apos_previa"
+    },
+    "canvaItens": {
+      "designId": "DAHW9THMHLk",
+      "viewUrl": "https://www.canva.com/d/tgjo3Z1WTjbpOlv",
+      "editUrl": "https://www.canva.com/d/z8fx_OEBT0Vsra-",
+      "dimensoesPx": [
+        1260,
+        1760
+      ],
+      "paginas": [
+        "Canal",
+        "Armadura",
+        "Extra (nome provisório)"
+      ],
+      "estado": "revisao_v5_aguardando_aprovacao_apos_previa",
+      "transacaoPendente": "9048249480088859456",
+      "editDraftUrl": "https://www.canva.com/d/eTZSRYwWfMS0fed"
+    },
+    "ornamentos": "Detalhes finos que preservam full art",
+    "raridade": "Centro da borda inferior",
+    "camposArmadura": [
+      "defesa",
+      "vidaDesgaste"
+    ],
+    "valor": "Cor/anel no custo, preservando número",
+    "movimentos": "Suspender = deitar 90°; manter após ataque/bloqueio até o motor preparar.",
+    "artePorCarta": {
+      "autor": "pedido direto, 2026-10-03",
+      "personagemExistente": "Preservar identidade com referências, mas criar arte nova para cada carta que cita o personagem.",
+      "variar": [
+        "pose",
+        "ação",
+        "expressão",
+        "enquadramento",
+        "cenário"
+      ],
+      "prioridade": "Se já existe como conjurador, não reutilizar a imagem ou o cenário dessa carta.",
+      "contexto": "A nova composição responde à identidade e ao evento solicitado pelo Claude.",
+      "layout": "Exemplos antigos da arena são referências de layout, não artes finais de cartas novas.",
+      "registroObrigatorio": [
+        "personagemReferenciado",
+        "arteReferencia",
+        "cartaDestino",
+        "cenaNova",
+        "alteracoesVisuais",
+        "arquivoArteFinal"
+      ],
+      "proibido": "Recortar, reenquadrar ou recolocar a mesma arte como suposta cena nova."
+    },
+    "acabamento": {
+      "versao": 9,
+      "apenasEstetica": true,
+      "arteAlternativaIndependeDeRaridade": true,
+      "css": "acabamento-v9.css",
+      "raridades": {
+        "comum": {
+          "acabamento": "Arte original; alternativa ativa perfil próprio."
+        },
+        "incomum": {
+          "paleta": [
+            "prata",
+            "roxo"
+          ],
+          "herda": "Rara v5",
+          "reflexo": 0.23,
+          "linhaDeLuz": 0.1,
+          "periodoSegundos": 7.5,
+          "textura": 0.36,
+          "mascara": "Área de arte"
+        },
+        "rara": {
+          "paleta": [
+            "prata",
+            "roxo"
+          ],
+          "herda": "Lendária v7 em prata/roxo",
+          "reflexo": 0.66,
+          "linhaDeLuz": 0.28,
+          "periodoSegundos": 5.2,
+          "textura": 0.96,
+          "mascara": "Face inteira sob os textos"
+        },
+        "lendaria": {
+          "paleta": [
+            "dourado",
+            "rosa",
+            "violeta",
+            "azul",
+            "verde"
+          ],
+          "reflexo": 0.9,
+          "linhaDeLuz": 0.5,
+          "periodoSegundos": 4.8,
+          "textura": 1,
+          "realceIluminacao": true,
+          "padraoBrilhoObrigatorio": true
+        }
+      },
+      "alternativa": {
+        "fullArt": true,
+        "padraoBrilhoObrigatorio": true,
+        "reflexo": 0.9,
+        "linhaDeLuz": 0.5,
+        "periodoSegundos": 4.8,
+        "realceIluminacao": true,
+        "profundidade": "Contraste, iluminação focal e sombra interna; tudo recortado à carta, sem deslocamento para fora."
+      },
+      "texturas": {
+        "dourada": "vetores/foil-arcoiris-dourado-v9.svg",
+        "prateada": "vetores/foil-prata-roxo-v9.svg"
+      },
+      "filtro": {
+        "id": "arcano-highlight-v9",
+        "modo": "Realce por intensidade RGB, alfa da fonte, blur leve e screen; não identifica semanticamente magia.",
+        "fonte": "Camada duplicada da arte; arquivo aprovado preservado",
+        "opacidade": 0.46
+      },
+      "camadas": {
+        "arte": 0,
+        "realceEProfundidade": 1,
+        "moldura": 2,
+        "texturaEReflexo": 3,
+        "textosEEstatisticas": 4,
+        "recursos": 5
+      },
+      "sigilo": "Nenhum dado de raridade/variante nem filtro em cartas ocultas.",
+      "movimentoReduzido": "Reflexo estático.",
+      "prompts": "Pedido define raridade e arteAlternativa; lendária/alternativa inclui iluminação mágica, brilho e textura desde a geração."
+    },
+    "velocidade": "Exibir tipo e Repentina quando aplicável. Em Temporária, exibir sempre Findante ou Repentina. Não acrescentar Permanente. Não inferir velocidade real se ausente."
+  },
+  "revisaoVisual": 9,
+  "acabamentoLendario": {
+    "svg": "../arena/vetores/foil-arcoiris-dourado-v9.svg",
+    "png": "../arena/templates/foil-arcoiris-dourado-v9.png",
+    "especificacao": "../arena/acabamento-v9.json"
+  },
+  "conjurador": {
+    "versao": 8,
+    "template": "templates/conjurador-v8.svg",
+    "overlay": [
+      "templates/overlay-conjurador-v8.svg",
+      "templates/overlay-conjurador-v8.png"
+    ],
+    "esfera": "vetores/esfera-conjurador-v8.svg",
+    "simbolos": "vetores/valor-*-simbolo-v8.svg",
+    "valores": "ConjuradorDef.valores: dois símbolos completos, cada um centralizado em sua metade; cores separadas; sem custo/Arcano gerado.",
+    "tipo": {
+      "campoMotor": "ConjuradorDef.comprometimento",
+      "opcoes": [
+        "Invocador",
+        "Brigão",
+        "Parrudão da quebrada",
+        "Habilidoso",
+        "Preparado"
+      ],
+      "descricao": "descricaoComprometimento: texto visual editável; não inventar benefícios mecânicos."
+    },
+    "referencias": [
+      "Arcanoclisma/tcg/src/tipos.ts:115",
+      "Arcanoclisma/tcg/src/conjuradores.ts:1",
+      "Arcanoclisma/tcg/docs/LIVRO-DE-REGRAS.md:168"
+    ],
+    "camadas": {
+      "esfera": 5,
+      "tipoEDescricao": 4,
+      "reflexoLendario": 3
+    },
+    "dimensoes": [
+      1260,
+      1760
+    ],
+    "alfa": {
+      "pixelsTransparentes": 1461950,
+      "cantos": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "canva": "Asset local pronto para composição futura; não altera os rascunhos v5 nem confirma salvamento no Canva.",
+    "posicaoEsfera": {
+      "viewBox": [
+        630,
+        880
+      ],
+      "centro": [
+        315,
+        116
+      ],
+      "diametro": 56,
+      "descricao": "Centralizada logo abaixo do nome, fora da caixa de texto; pequena e discreta."
+    }
+  }
 }

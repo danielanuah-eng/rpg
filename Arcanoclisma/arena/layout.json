@@ -1,0 +1,286 @@
+{
+  "versao": 2,
+  "unidade": "px no palco conceitual",
+  "palco": [
+    1920,
+    1440
+  ],
+  "piso": {
+    "x": 20,
+    "y": 20,
+    "largura": 1880,
+    "altura": 1410
+  },
+  "camadas": [
+    "fundo-css",
+    "piso-raster",
+    "zonas-svg",
+    "sombras",
+    "cartas-campo",
+    "baralhos",
+    "contadores",
+    "mao",
+    "efeitos"
+  ],
+  "cameras": {
+    "jogador1": {
+      "arquivo": "raster/arena-jogador-1-ampla-larga-v2.png",
+      "observador": 0,
+      "marcadorLocal": "azul",
+      "campoRivalY": 210,
+      "campoLocalY": 900,
+      "divisoriaAproximadaY": 645
+    },
+    "jogador2": {
+      "arquivo": "raster/arena-jogador-2-ampla-larga-v2.png",
+      "observador": 1,
+      "marcadorLocal": "coral",
+      "campoRivalY": 210,
+      "campoLocalY": 900,
+      "divisoriaAproximadaY": 645
+    }
+  },
+  "baralho": {
+    "local": [
+      1420,
+      1180
+    ],
+    "rival": [
+      386,
+      57
+    ]
+  },
+  "mao": {
+    "localY": 1190,
+    "rivalY": 13,
+    "larguraLocal": 139,
+    "larguraRival": 78,
+    "intervaloLocal": 92,
+    "intervaloRival": 60,
+    "limiteSlots": null,
+    "adaptacao": "recalcular leque ou rolagem conforme quantidade real",
+    "x": 605
+  },
+  "campo": {
+    "localX": [
+      655,
+      870,
+      1085
+    ],
+    "rivalX": [
+      680,
+      870,
+      1060
+    ],
+    "limiteSlots": null,
+    "aviso": "três posições por lado são exemplos do conceito; não limitam cartas"
+  },
+  "conjurador": {
+    "versao": 8,
+    "template": "templates/conjurador-v8.svg",
+    "overlay": [
+      "templates/overlay-conjurador-v8.svg",
+      "templates/overlay-conjurador-v8.png"
+    ],
+    "esfera": "vetores/esfera-conjurador-v8.svg",
+    "simbolos": "vetores/valor-*-simbolo-v8.svg",
+    "valores": "ConjuradorDef.valores: dois símbolos completos, cada um centralizado em sua metade; cores separadas; sem custo/Arcano gerado.",
+    "tipo": {
+      "campoMotor": "ConjuradorDef.comprometimento",
+      "opcoes": [
+        "Invocador",
+        "Brigão",
+        "Parrudão da quebrada",
+        "Habilidoso",
+        "Preparado"
+      ],
+      "descricao": "descricaoComprometimento: texto visual editável; não inventar benefícios mecânicos."
+    },
+    "referencias": [
+      "Arcanoclisma/tcg/src/tipos.ts:115",
+      "Arcanoclisma/tcg/src/conjuradores.ts:1",
+      "Arcanoclisma/tcg/docs/LIVRO-DE-REGRAS.md:168"
+    ],
+    "camadas": {
+      "esfera": 5,
+      "tipoEDescricao": 4,
+      "reflexoLendario": 3
+    },
+    "dimensoes": [
+      1260,
+      1760
+    ],
+    "alfa": {
+      "pixelsTransparentes": 1461950,
+      "cantos": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "canva": "Asset local pronto para composição futura; não altera os rascunhos v5 nem confirma salvamento no Canva.",
+    "posicaoEsfera": {
+      "viewBox": [
+        630,
+        880
+      ],
+      "centro": [
+        315,
+        116
+      ],
+      "diametro": 56,
+      "descricao": "Centralizada logo abaixo do nome, fora da caixa de texto; pequena e discreta."
+    }
+  },
+  "vida": {
+    "local": [
+      252,
+      1190
+    ],
+    "rival": [
+      1540,
+      90
+    ]
+  },
+  "arcano": {
+    "local": [
+      305,
+      1092
+    ],
+    "rival": [
+      1514,
+      348
+    ]
+  },
+  "pilhaCompartilhada": [
+    1520,
+    625,
+    160,
+    112
+  ],
+  "orientacoes": {
+    "local": 0,
+    "rival": 180,
+    "reveladaLegivel": 0
+  },
+  "cameraNaoRevelaCarta": true,
+  "calibracao": "coordenadas conceituais; ajustar no layout final para viewport e quantidade real; pinturas não são câmera 3D calibrada",
+  "camerasAnteriores": "Estudos preservados em raster/; não são o piso vigente.",
+  "itens": {
+    "categorias": [
+      "canal",
+      "armadura",
+      "extra"
+    ],
+    "extraNomeProvisorio": true,
+    "local": [
+      1042,
+      741
+    ],
+    "rival": [
+      1042,
+      529
+    ],
+    "acesso": "Botão abre modelos públicos nesta prévia; motor autoriza inventário real.",
+    "fisico": "Itens abaixo do conjurador."
+  },
+  "movimentos": {
+    "wrapper": "card-motion",
+    "api": "ArcanoclismaCardVisual.animateMotion",
+    "ataque": "Gira 90°, eleva um pouco, avança, retorna à origem e pousa deitada.",
+    "bloqueio": "Gira 90°, prepara contato, absorve impacto e pousa deitada.",
+    "duracaoMs": 880,
+    "reduzirMovimento": "Respeita prefers-reduced-motion",
+    "suspender": "Rotação persistente de 90 graus no wrapper completo, mantendo a direção do observador.",
+    "preparar": "setSuspended(wrapper, false): volta à vertical com transição de 360 ms.",
+    "perspectiva": {
+      "ordemCss": "perspective(900px) rotateX(22deg) translate3d(0, avanço, altura) rotateZ(giro)",
+      "semantica": "Giro aplicado no plano do campo antes da projeção da câmera; carta inteira, textos e moldura compartilham a mesma perspectiva.",
+      "suspensa": "perspective(900px) rotateX(22deg) rotateZ(90deg)",
+      "pronta": "perspective(900px) rotateX(22deg) rotateZ(0deg)",
+      "rival": "Orientação 180° no conteúdo interno, sem aplicar uma segunda inclinação.",
+      "camera": "Inclinação parametrizada por --table-tilt; coordenadas ainda conceituais."
+    }
+  },
+  "acabamento": {
+    "versao": 9,
+    "apenasEstetica": true,
+    "arteAlternativaIndependeDeRaridade": true,
+    "css": "acabamento-v9.css",
+    "raridades": {
+      "comum": {
+        "acabamento": "Arte original; alternativa ativa perfil próprio."
+      },
+      "incomum": {
+        "paleta": [
+          "prata",
+          "roxo"
+        ],
+        "herda": "Rara v5",
+        "reflexo": 0.23,
+        "linhaDeLuz": 0.1,
+        "periodoSegundos": 7.5,
+        "textura": 0.36,
+        "mascara": "Área de arte"
+      },
+      "rara": {
+        "paleta": [
+          "prata",
+          "roxo"
+        ],
+        "herda": "Lendária v7 em prata/roxo",
+        "reflexo": 0.66,
+        "linhaDeLuz": 0.28,
+        "periodoSegundos": 5.2,
+        "textura": 0.96,
+        "mascara": "Face inteira sob os textos"
+      },
+      "lendaria": {
+        "paleta": [
+          "dourado",
+          "rosa",
+          "violeta",
+          "azul",
+          "verde"
+        ],
+        "reflexo": 0.9,
+        "linhaDeLuz": 0.5,
+        "periodoSegundos": 4.8,
+        "textura": 1,
+        "realceIluminacao": true,
+        "padraoBrilhoObrigatorio": true
+      }
+    },
+    "alternativa": {
+      "fullArt": true,
+      "padraoBrilhoObrigatorio": true,
+      "reflexo": 0.9,
+      "linhaDeLuz": 0.5,
+      "periodoSegundos": 4.8,
+      "realceIluminacao": true,
+      "profundidade": "Contraste, iluminação focal e sombra interna; tudo recortado à carta, sem deslocamento para fora."
+    },
+    "texturas": {
+      "dourada": "vetores/foil-arcoiris-dourado-v9.svg",
+      "prateada": "vetores/foil-prata-roxo-v9.svg"
+    },
+    "filtro": {
+      "id": "arcano-highlight-v9",
+      "modo": "Realce por intensidade RGB, alfa da fonte, blur leve e screen; não identifica semanticamente magia.",
+      "fonte": "Camada duplicada da arte; arquivo aprovado preservado",
+      "opacidade": 0.46
+    },
+    "camadas": {
+      "arte": 0,
+      "realceEProfundidade": 1,
+      "moldura": 2,
+      "texturaEReflexo": 3,
+      "textosEEstatisticas": 4,
+      "recursos": 5
+    },
+    "sigilo": "Nenhum dado de raridade/variante nem filtro em cartas ocultas.",
+    "movimentoReduzido": "Reflexo estático.",
+    "prompts": "Pedido define raridade e arteAlternativa; lendária/alternativa inclui iluminação mágica, brilho e textura desde a geração."
+  }
+}

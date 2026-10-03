@@ -1,0 +1,116 @@
+{
+  "tarefaId": "ciantia-dragoes-2026-10-03",
+  "versao": 1,
+  "autor": "Usuário",
+  "data": "2026-10-03",
+  "estado": "aguardando_claude",
+  "artesAprovadasPeloAutor": true,
+  "integracaoConfirmada": false,
+  "canal": "Arquivos do repositório; publicar pelo Git somente após autorização de push",
+  "instrucoes": "Arcanoclisma/cartas/propostas/ciantia-dragoes-2026-10-03.autor.md",
+  "raridadeSomenteCosmetica": true,
+  "cartas": [
+    {
+      "id": "dragao-transplanar",
+      "nome": "Dragão Transplanar",
+      "nomeEstudoAnterior": "Dragão da Travessia",
+      "arte": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-v1/dragao-da-travessia-arte-v1.png",
+      "tipoSolicitado": "aliado",
+      "subtiposSolicitados": [
+        "Dragão"
+      ],
+      "vinculoSolicitado": {
+        "equipamento": "Extra",
+        "exclusivoDe": "Ciantia",
+        "requerDesenvolvimento": true,
+        "conciliacaoAliadoEquipamento": "a_definir_pelo_claude"
+      },
+      "cosmetico": {
+        "raridade": "lendaria",
+        "arteAlternativa": true
+      },
+      "objetivoDeJogo": "Late game conforme pedido do autor, independente da raridade estética",
+      "habilidadeCentral": {
+        "acao": "jogar",
+        "origem": "mao_do_controlador",
+        "subtipoDaCarta": "Dragão",
+        "semPagarCustos": true,
+        "exigeGrauNecessario": true,
+        "gatilho": null,
+        "velocidade": null,
+        "frequencia": null,
+        "custoAtivacao": null,
+        "abrangenciaCustosDispensados": "a_definir_na_redacao_final"
+      },
+      "protecao": {
+        "obrigatoria": true,
+        "keyword": null,
+        "decisao": "Claude"
+      },
+      "numerosPendentes": [
+        "custo",
+        "grau",
+        "arcanoGerado",
+        "ataque",
+        "vida"
+      ],
+      "definicoesPendentes": [
+        "Valores",
+        "acesso/desenvolvimento",
+        "representação do vínculo Extra",
+        "ativação e limites",
+        "keyword de proteção",
+        "outros poderes/efeitos de late game",
+        "redação final"
+      ]
+    },
+    {
+      "id": "licao-do-jardim",
+      "nome": "Lição do Jardim",
+      "arte": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-v1/licao-do-jardim-arte-v2.png",
+      "tipoSolicitado": "temporaria",
+      "identidadeSolicitada": "feitiço",
+      "velocidadeDaCarta": "findante",
+      "cosmetico": {
+        "raridade": "rara",
+        "arteAlternativa": false
+      },
+      "raridadeOrigem": "Mantida do modelo visual; confirmar no briefing final",
+      "habilidadeConcedida": {
+        "beneficiarios": "Dragoes_do_controlador",
+        "custo": "suspender_o_proprio_dragao",
+        "efeito": "gerar_arcano",
+        "quantidade": 1,
+        "velocidade": "repentina",
+        "duracao": "a_confirmar; pedido explicitou fim do turno somente para contribuicao ao Grau"
+      },
+      "efeitoGrau": {
+        "beneficiarios": "Dragoes_do_controlador",
+        "acao": "contribuir_para_numero_de_grau",
+        "duracao": "ate_o_fim_do_turno",
+        "moverParaZonaDeGrau": false,
+        "interacaoComValores": "a_definir_pelo_claude"
+      },
+      "numerosPendentes": [
+        "custo",
+        "grau",
+        "arcanoGerado"
+      ],
+      "definicoesPendentes": [
+        "Valores",
+        "duração da concessão de habilidade",
+        "contagem/interações de Grau",
+        "redação final"
+      ]
+    }
+  ],
+  "respostaEsperada": "Arcanoclisma/cartas/entregas/ciantia-dragoes-2026-10-03.integracao.claude.json",
+  "publicacao": {
+    "autorizadaPeloAutor": true,
+    "dataAutorizacao": "2026-10-03",
+    "estado": "publicacao_autorizada",
+    "remoto": "https://github.com/danielanuah-eng/rpg.git",
+    "branch": "main",
+    "recebimentoClaudeConfirmado": false
+  }
+}

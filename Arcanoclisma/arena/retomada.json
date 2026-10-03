@@ -1,0 +1,52 @@
+{
+  "projeto": "arena-arcanoclisma",
+  "estado": "aguardando_avaliacao",
+  "rasterVigentes": [
+    "arena-jogador-1-ampla-larga-v2",
+    "arena-jogador-2-ampla-larga-v2",
+    "verso-arcano-v3",
+    "ornamento-arcano"
+  ],
+  "geracaoConcluida": true,
+  "templateCanva": "base salva; revisão v5 e templates de itens aguardam aprovação após prévia",
+  "integracaoClaude": "pendente",
+  "arquivamentoEnzo": "adiado conforme economia durante produção",
+  "push": "Publicação deste pacote autorizada pelo autor em 03/10/2026.",
+  "revisaoAtual": 9,
+  "acabamentoLendario": "Textura holográfica com reflexo dourado/arco-íris mais exuberante atravessando a face em diagonal.",
+  "conjurador": "Esfera dividida em dois Valores, linha de Comprometimento e descrição editável.",
+  "acabamentoLendarioAprovado": false,
+  "acabamento": "Raridades v9 e variante alternativa: iluminação, textura e reflexos cosméticos; aguardando avaliação.",
+  "modelosCenarios": {
+    "entregues": 2,
+    "manifesto": "../cartas/modelos-visuais/2026-10-03-v1/manifesto.json",
+    "ciantiaVigente": "v2",
+    "arteDragaoAprovada": true,
+    "elementosDerivaveis": 9
+  },
+  "suspensaoConjurador": "Suspender/Preparar no wrapper da carta, preservando perspectiva do tabuleiro.",
+  "propostasCiantia": {
+    "estado": "artes_aprovadas_propostas_aguardando_claude",
+    "arquivo": "Arcanoclisma/cartas/propostas/ciantia-dragoes-2026-10-03.autor.json",
+    "artesAprovadas": true,
+    "integracaoConfirmada": false
+  },
+  "conjuradorMovimento": {
+    "arquivo": "modelos-visuais-ui.js",
+    "acoes": [
+      "attack",
+      "block"
+    ],
+    "wrapper": ".board-position.self.conjurador",
+    "final": "suspensa",
+    "integracaoMotorConfirmada": false
+  },
+  "publicacao": {
+    "autorizadaPeloAutor": true,
+    "dataAutorizacao": "2026-10-03",
+    "estado": "publicacao_autorizada",
+    "remoto": "https://github.com/danielanuah-eng/rpg.git",
+    "branch": "main",
+    "recebimentoClaudeConfirmado": false
+  }
+}

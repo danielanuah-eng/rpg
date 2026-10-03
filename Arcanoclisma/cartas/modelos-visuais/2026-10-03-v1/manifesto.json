@@ -1,0 +1,96 @@
+{
+  "versao": 2,
+  "estado": "artes_aprovadas_propostas_aguardando_claude",
+  "ferramenta": "image_gen.imagegen integrada",
+  "referencia": "Arcanoclisma/arte/imagens/ciantia-dragoes.png",
+  "originaisPreservados": true,
+  "modelos": "modelos.json",
+  "prompts": "prompts.json",
+  "promptRevisao": "revisao-ciantia-v2.prompt.txt",
+  "elementosDerivaveis": "elementos-derivaveis.json",
+  "artes": [
+    {
+      "arquivo": "licao-do-jardim-arte-v1.png",
+      "sha256": "73a123af84f7ed2bd9b7eb5cae61ed40e6230decdb72b7ece2d18c82c17369b4",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "hasAlpha": false,
+      "alfa": {
+        "min": 255,
+        "max": 255,
+        "pixelsTransparentes": 0,
+        "cantos": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "funcao": "Cenário completo de carta: fundo opaco intencional",
+      "vigente": false,
+      "aprovacao": "Revisada por excesso de luz, ouro e distância da paleta regular"
+    },
+    {
+      "arquivo": "licao-do-jardim-arte-v2.png",
+      "sha256": "f921ed1364bffc221eaeb0c9fbed86716363d7110e812d7a6d718fd45806d559",
+      "dimensoes": [
+        1061,
+        1483
+      ],
+      "hasAlpha": false,
+      "alfa": {
+        "min": 255,
+        "max": 255,
+        "pixelsTransparentes": 0,
+        "cantos": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "funcao": "Cenário completo de carta: fundo opaco intencional",
+      "vigente": true,
+      "aprovacao": "Arte aprovada pelo autor"
+    },
+    {
+      "arquivo": "dragao-da-travessia-arte-v1.png",
+      "sha256": "94f50eba0f39496ad2ffd263257cabe84170fb11f52e68743a37e5b457d5c4f5",
+      "dimensoes": [
+        1062,
+        1481
+      ],
+      "hasAlpha": false,
+      "alfa": {
+        "min": 255,
+        "max": 255,
+        "pixelsTransparentes": 0,
+        "cantos": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "funcao": "Cenário completo de carta: fundo opaco intencional",
+      "vigente": true,
+      "aprovacao": "Arte aprovada pelo autor"
+    }
+  ],
+  "composicao": "Prévia de propostas de cartas com artes aprovadas; integração mecânica aguardando Claude.",
+  "dadosMecanicos": "Habilidades propostas pelo autor no arquivo vinculado; números pendentes aparecem como —, não como zero.",
+  "suspensaoConjurador": "Atacar/Bloquear usam animateMotion no wrapper; retornam suspensos em perspectiva. Suspender/Preparar usam setSuspended.",
+  "integracaoMotorConfirmada": false,
+  "push": "Publicação deste pacote autorizada pelo autor em 03/10/2026.",
+  "propostaAutor": "Arcanoclisma/cartas/propostas/ciantia-dragoes-2026-10-03.autor.json",
+  "publicacao": {
+    "autorizadaPeloAutor": true,
+    "dataAutorizacao": "2026-10-03",
+    "estado": "publicacao_autorizada",
+    "remoto": "https://github.com/danielanuah-eng/rpg.git",
+    "branch": "main",
+    "recebimentoClaudeConfirmado": false
+  }
+}

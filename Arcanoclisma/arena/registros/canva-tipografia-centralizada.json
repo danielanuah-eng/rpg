@@ -1,0 +1,609 @@
+{
+  "pedido": "Centralizar escrita e refinar tipografia do nome da carta",
+  "estado": "rascunho_aguardando_aprovacao_da_previa",
+  "designId": "DAHW7B69D2E",
+  "transacao": "1258148017450319762",
+  "url": "https://www.canva.com/d/WjHnBjX5bud3xd9",
+  "paginas": 5,
+  "alteracoes": {
+    "nome": {
+      "alinhamento": "centro",
+      "estilo": "serifa existente em negrito e itálico",
+      "tamanho": 64,
+      "largura": 860,
+      "left": 200,
+      "top": 61
+    },
+    "texto": {
+      "alinhamento": "centro",
+      "tamanho": 36,
+      "entrelinha": 1.5,
+      "largura": 1090,
+      "left": 85,
+      "top": 1460
+    },
+    "ataqueVida": {
+      "numeros": "centralizados nas formas acima das regras"
+    }
+  },
+  "campos": [
+    {
+      "pagina": 1,
+      "id": "PBgFX3zwsTqwTDhR-LB5rwZ265Zw5YKGz",
+      "texto": "[Nome da Carta]",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 60.99999999999999,
+          "left": 200
+        },
+        "dimension": {
+          "width": 860,
+          "height": 75.02827416864604
+        }
+      }
+    },
+    {
+      "pagina": 1,
+      "id": "PBgFX3zwsTqwTDhR-LBWt3PxmWb7llbrm",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 244.76598568872794,
+          "left": 89.22202494061756
+        },
+        "dimension": {
+          "width": 29.642131828978624,
+          "height": 60.73073634204275
+        }
+      }
+    },
+    {
+      "pagina": 1,
+      "id": "PBgFX3zwsTqwTDhR-LBhGjGgjNB251n91",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 422.3389845010795,
+          "left": 89.22202494061756
+        },
+        "dimension": {
+          "width": 29.642131828978624,
+          "height": 60.73073634204275
+        }
+      }
+    },
+    {
+      "pagina": 1,
+      "id": "PBgFX3zwsTqwTDhR-LBhB6rTffv1C1LfS",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 1260,
+          "left": 876
+        },
+        "dimension": {
+          "width": 88.00000000000001,
+          "height": 67.58648895486935
+        }
+      }
+    },
+    {
+      "pagina": 1,
+      "id": "PBgFX3zwsTqwTDhR-LBJHtZhcXpKMV0kX",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 77.02266621129328,
+          "left": 87.14733966745841
+        },
+        "dimension": {
+          "width": 33.88124703087886,
+          "height": 69.40429334916864
+        }
+      }
+    },
+    {
+      "pagina": 1,
+      "id": "PBgFX3zwsTqwTDhR-LBVRLqywMX7SvWzw",
+      "texto": "[Tipo / Subtipo]\n[Texto de regras]\n[Ambientação opcional]",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 1460,
+          "left": 85
+        },
+        "dimension": {
+          "width": 1090,
+          "height": 147.5729177850356
+        }
+      }
+    },
+    {
+      "pagina": 1,
+      "id": "PBgFX3zwsTqwTDhR-LBrDgmFxyXFNBwS5",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 1260,
+          "left": 1066
+        },
+        "dimension": {
+          "width": 88.00000000000001,
+          "height": 67.58648895486935
+        }
+      }
+    },
+    {
+      "pagina": 2,
+      "id": "PBY9Gm7BsxyvyWbb-LB1m9WvV4y7rCNCS",
+      "texto": "[Nome da Carta]",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 60.99999999999999,
+          "left": 200
+        },
+        "dimension": {
+          "width": 860,
+          "height": 75.02827416864604
+        }
+      }
+    },
+    {
+      "pagina": 2,
+      "id": "PBY9Gm7BsxyvyWbb-LBvTxJLhv2ls25G0",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 241.71225356294553,
+          "left": 105.36330166270794
+        },
+        "dimension": {
+          "width": 29.642131828978616,
+          "height": 60.73073634204274
+        }
+      }
+    },
+    {
+      "pagina": 2,
+      "id": "PBY9Gm7BsxyvyWbb-LB51w2lxRgVyzDvK",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 419.2852523752971,
+          "left": 105.36330166270794
+        },
+        "dimension": {
+          "width": 29.642131828978616,
+          "height": 60.73073634204274
+        }
+      }
+    },
+    {
+      "pagina": 2,
+      "id": "PBY9Gm7BsxyvyWbb-LBlSbPXClY2RVZ2h",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 1260,
+          "left": 876
+        },
+        "dimension": {
+          "width": 88,
+          "height": 67.58648895486934
+        }
+      }
+    },
+    {
+      "pagina": 2,
+      "id": "PBY9Gm7BsxyvyWbb-LBh3xmSZsQH43jfY",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 73.96893408551094,
+          "left": 103.28861638954879
+        },
+        "dimension": {
+          "width": 33.88124703087885,
+          "height": 69.40429334916864
+        }
+      }
+    },
+    {
+      "pagina": 2,
+      "id": "PBY9Gm7BsxyvyWbb-LBmy9ZL8N5xqrpGL",
+      "texto": "[Tipo / Subtipo]\n[Texto de regras]\n[Ambientação opcional]",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 1460,
+          "left": 85
+        },
+        "dimension": {
+          "width": 1090,
+          "height": 147.5729177850356
+        }
+      }
+    },
+    {
+      "pagina": 2,
+      "id": "PBY9Gm7BsxyvyWbb-LBF82JMpv31jzlR9",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 1260,
+          "left": 1066
+        },
+        "dimension": {
+          "width": 88.00000000000001,
+          "height": 67.58648895486935
+        }
+      }
+    },
+    {
+      "pagina": 2,
+      "id": "PBY9Gm7BsxyvyWbb-LBTBwYjZdbCZCp9t",
+      "texto": "",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 1642.6527226840856,
+          "left": 973.8592874109263
+        },
+        "dimension": {
+          "width": 5.279097387173396,
+          "height": 40.47307644893111
+        }
+      }
+    },
+    {
+      "pagina": 3,
+      "id": "PBVVtg8h6M3RBQS8-LBMPDDsR3ks4NHjk",
+      "texto": "[Nome da Carta]",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 60.99999999999999,
+          "left": 200
+        },
+        "dimension": {
+          "width": 860,
+          "height": 75.02827416864604
+        }
+      }
+    },
+    {
+      "pagina": 3,
+      "id": "PBVVtg8h6M3RBQS8-LBxVP6YMSP2rvr57",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 244.76598568872794,
+          "left": 89.22202494061756
+        },
+        "dimension": {
+          "width": 29.642131828978624,
+          "height": 60.73073634204275
+        }
+      }
+    },
+    {
+      "pagina": 3,
+      "id": "PBVVtg8h6M3RBQS8-LBcz4VwFCDXZ2Gnb",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 422.3389845010795,
+          "left": 89.22202494061756
+        },
+        "dimension": {
+          "width": 29.642131828978624,
+          "height": 60.73073634204275
+        }
+      }
+    },
+    {
+      "pagina": 3,
+      "id": "PBVVtg8h6M3RBQS8-LBjB7QKdPMMhzmlb",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 1260,
+          "left": 876
+        },
+        "dimension": {
+          "width": 88.00000000000001,
+          "height": 67.58648895486935
+        }
+      }
+    },
+    {
+      "pagina": 3,
+      "id": "PBVVtg8h6M3RBQS8-LBR4tZ4JLjjZg7Q0",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 77.02266621129328,
+          "left": 87.14733966745841
+        },
+        "dimension": {
+          "width": 33.88124703087886,
+          "height": 69.40429334916864
+        }
+      }
+    },
+    {
+      "pagina": 3,
+      "id": "PBVVtg8h6M3RBQS8-LBSg5JFQJjZ6TH4R",
+      "texto": "[Tipo / Subtipo]\n[Texto de regras]\n[Ambientação opcional]",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 1460,
+          "left": 85
+        },
+        "dimension": {
+          "width": 1090,
+          "height": 147.5729177850356
+        }
+      }
+    },
+    {
+      "pagina": 3,
+      "id": "PBVVtg8h6M3RBQS8-LBJs5crR9QDpSX2M",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 1260,
+          "left": 1066
+        },
+        "dimension": {
+          "width": 88.00000000000001,
+          "height": 67.58648895486935
+        }
+      }
+    },
+    {
+      "pagina": 4,
+      "id": "PByKjVNcngv0WBfS-LBTHLbSXyryYZwpW",
+      "texto": "[Nome da Carta]",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 60.99999999999999,
+          "left": 200
+        },
+        "dimension": {
+          "width": 860,
+          "height": 75.02827416864604
+        }
+      }
+    },
+    {
+      "pagina": 4,
+      "id": "PByKjVNcngv0WBfS-LBMH2B7wBCWknlwS",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 244.76598568872794,
+          "left": 89.22202494061756
+        },
+        "dimension": {
+          "width": 29.642131828978624,
+          "height": 60.73073634204275
+        }
+      }
+    },
+    {
+      "pagina": 4,
+      "id": "PByKjVNcngv0WBfS-LBf8VZqVSKVwbN7t",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 422.3389845010795,
+          "left": 89.22202494061756
+        },
+        "dimension": {
+          "width": 29.642131828978624,
+          "height": 60.73073634204275
+        }
+      }
+    },
+    {
+      "pagina": 4,
+      "id": "PByKjVNcngv0WBfS-LB2rcvDRFk405DkZ",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 1260,
+          "left": 876
+        },
+        "dimension": {
+          "width": 88.00000000000001,
+          "height": 67.58648895486935
+        }
+      }
+    },
+    {
+      "pagina": 4,
+      "id": "PByKjVNcngv0WBfS-LBXZwvkzD12lB4TX",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 77.02266621129328,
+          "left": 87.14733966745841
+        },
+        "dimension": {
+          "width": 33.88124703087886,
+          "height": 69.40429334916864
+        }
+      }
+    },
+    {
+      "pagina": 4,
+      "id": "PByKjVNcngv0WBfS-LBqqSw0SyNPzn7xP",
+      "texto": "[Tipo / Subtipo]\n[Texto de regras]\n[Ambientação opcional]",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 1460,
+          "left": 85
+        },
+        "dimension": {
+          "width": 1090,
+          "height": 147.5729177850356
+        }
+      }
+    },
+    {
+      "pagina": 4,
+      "id": "PByKjVNcngv0WBfS-LBt0x667YTPMqH78",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 1260,
+          "left": 1066
+        },
+        "dimension": {
+          "width": 88.00000000000001,
+          "height": 67.58648895486935
+        }
+      }
+    },
+    {
+      "pagina": 5,
+      "id": "PBf5Vd6nBZ7hlDcm-LB4wrdxp8rFybQBs",
+      "texto": "[Nome da Carta]",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 60.99999999999999,
+          "left": 200
+        },
+        "dimension": {
+          "width": 860,
+          "height": 75.02827416864604
+        }
+      }
+    },
+    {
+      "pagina": 5,
+      "id": "PBf5Vd6nBZ7hlDcm-LBWQF7TQHKwknsxP",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 244.76598568872794,
+          "left": 89.22202494061756
+        },
+        "dimension": {
+          "width": 29.642131828978624,
+          "height": 60.73073634204275
+        }
+      }
+    },
+    {
+      "pagina": 5,
+      "id": "PBf5Vd6nBZ7hlDcm-LBTCS0FTzppTxTZ5",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 422.3389845010795,
+          "left": 89.22202494061756
+        },
+        "dimension": {
+          "width": 29.642131828978624,
+          "height": 60.73073634204275
+        }
+      }
+    },
+    {
+      "pagina": 5,
+      "id": "PBf5Vd6nBZ7hlDcm-LBHZ7sjnHs052XKr",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 1260,
+          "left": 876
+        },
+        "dimension": {
+          "width": 88.00000000000001,
+          "height": 67.58648895486935
+        }
+      }
+    },
+    {
+      "pagina": 5,
+      "id": "PBf5Vd6nBZ7hlDcm-LBbfL6kCwMnxh1Fk",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 77.02266621129328,
+          "left": 87.14733966745841
+        },
+        "dimension": {
+          "width": 33.88124703087886,
+          "height": 69.40429334916864
+        }
+      }
+    },
+    {
+      "pagina": 5,
+      "id": "PBf5Vd6nBZ7hlDcm-LBt4hJ3MWnF2nVM0",
+      "texto": "[Tipo / Subtipo]\n[Texto de regras]\n[Ambientação opcional]",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 1460,
+          "left": 85
+        },
+        "dimension": {
+          "width": 1090,
+          "height": 147.5729177850356
+        }
+      }
+    },
+    {
+      "pagina": 5,
+      "id": "PBf5Vd6nBZ7hlDcm-LB4fWffy1gc5q59n",
+      "texto": "X",
+      "caixa": {
+        "type": "TEXT",
+        "position": {
+          "top": 1260,
+          "left": 1066
+        },
+        "dimension": {
+          "width": 88.00000000000001,
+          "height": 67.58648895486935
+        }
+      }
+    }
+  ],
+  "salvoNoCanva": false,
+  "erroOperacoes": []
+}

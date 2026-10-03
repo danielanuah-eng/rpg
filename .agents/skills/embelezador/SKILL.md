@@ -33,3 +33,7 @@ Aplicar `Arcanoclisma/cartas/REFERENCIA-ALTERED.md` para integração de figura,
 ## Limites
 
 Não modificar motor/regras ou implementar efeitos no código do Claude sem pedido que altere a divisão de responsabilidades. Ferramentas remotas não funcionam offline por copiar esta skill; manifestos e especificações são legíveis por outra IA. Não usar NVIDIA, expor segredos ou fazer push sem autorização específica.
+
+## Diretriz obrigatória de acabamento v9
+
+Direção atual do autor (03/10/2026): raridade é somente estética, sem alterar regras/efeitos/números. Claude informa raridade e arteAlternativa em todo pedido/prompt de imagem de carta. Toda lendária ou alternativa inclui iluminação, textura e brilho na ilustração conforme Arcanoclisma/cartas/DIRETRIZ-ACABAMENTO-E-RARIDADE.md; salvar o prompt e os parâmetros cosméticos. Alternativa pode sugerir volume 3D com luz, escorço e planos, mas fica inteiramente dentro da carta. Manter identidade, direção de arte e cenas novas para personagens existentes. O acabamento HTML/CSS complementa a arte; não substitui a iluminação pedida na geração. Não refazer automaticamente artes aprovadas.

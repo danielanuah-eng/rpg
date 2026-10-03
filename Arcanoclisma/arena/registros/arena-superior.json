@@ -1,0 +1,21 @@
+{
+  "id": "arena-superior",
+  "arquivo": "raster/arena-superior.png",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-f7976a1b-f738-411f-ac22-26e8fed2338b.png",
+  "ferramenta": "image_gen integrada",
+  "prompt": "Create a single independent background asset for an original two-player online TCG arena. Polished high-resolution fantasy game environment illustration in the established Arcanoclisma independent-comics / contemporary-animation style: flowing varied-weight ink, crisp antialiased silhouettes, clean flat-color shapes, 2-3 strong graphic shadow values, fine unobtrusive hatching and halftone material detail, warm antique-bronze and pale-stone accents balanced against cool deep-indigo and muted jade. Dimensional hand-drawn perspective and readable material depth. Elegant and finished, never pixel art, blocky low-resolution, blurry, airbrushed photorealistic or glossy 3D. Landscape 16:9, large native resolution. Directly OVERHEAD top-down symmetrical layout: a broad mostly rectangular octagonal floating stone dueling dais with subtle engraved rings at the periphery, spacious quiet empty play surface, upper and lower halves separated by a narrow quiet horizontal arcane seam across the middle. Both halves are equal in area and visual importance. Dark muted blue-grey slate playing surface, softly warm cream edge, weathered bronze inset details and moss only at extreme perimeter. The huge central play area is uncluttered so many cards can be laid over it by HTML. A calm circular arcane seal sunk into the very center, low contrast. Dais is cut out on true transparent background with complete silhouette and 8% transparent margins on every side. No scene outside the floating platform, no cards, no deck, no hands, no UI, labels, digits, HUD, creatures, logo, text, burned-in slots or strong light effects. All parts of the platform remain inside image. Fine polished edges and restrained magic.\n",
+  "criadoEm": "2026-10-03T04:03:36.492Z",
+  "largura": 1672,
+  "altura": 941,
+  "hasAlpha": true,
+  "alfaCantos": [
+    1,
+    0,
+    0,
+    0
+  ],
+  "pixelsTransparentes": 382605,
+  "pixelsOpacos": 391,
+  "sha256": "8dcc7415b595ab70749e3fbd876ce547b714ca9738b31ac7602e9f5b38447c5b",
+  "avaliacaoAutor": "pendente"
+}

@@ -7,7 +7,10 @@
   "atualizadoEm": null,
   "objetivoAtual": "Cartas definidas pelo autor e pelo Claude, prontas para o Produtor de Cartas pôr os agentes visuais para trabalhar.",
   "metaDeAvaliacao": "ex.: avaliar a cada 3 artes",
-  "referenciasClaude": ["Arcanoclisma/tcg/docs/LIVRO-DE-REGRAS.md", "Arcanoclisma/cartas/pedidos/templates-mecanica.claude.json"],
+  "referenciasClaude": [
+    "Arcanoclisma/tcg/docs/LIVRO-DE-REGRAS.md",
+    "Arcanoclisma/cartas/pedidos/templates-mecanica.claude.json"
+  ],
   "cartas": [
     {
       "id": "id-do-motor",
@@ -16,22 +19,48 @@
       "categoriaItem": "canal | armadura | extra (só itens)",
       "subtipos": [],
       "valores": [],
-      "numeros": { "custo": null, "grau": null, "arcanoGerado": null, "ataque": null, "vida": null, "defesa": null, "vidaDesgaste": null },
+      "numeros": {
+        "custo": null,
+        "grau": null,
+        "arcanoGerado": null,
+        "ataque": null,
+        "vida": null,
+        "defesa": null,
+        "vidaDesgaste": null
+      },
       "velocidade": "findante | repentina",
-      "textos": { "regras": "texto exato", "ambientacao": "" },
-      "raridade": "comum | incomum | rara | lendaria",
+      "textos": {
+        "regras": "texto exato",
+        "ambientacao": ""
+      },
+      "raridade": "comum",
       "identidade": "quem ou o que é, em uma ou duas frases",
       "personagens": [
-        { "nome": "", "jaExiste": false, "referencias": [], "aparencia": "", "papelNaCena": "" }
+        {
+          "nome": "",
+          "jaExiste": false,
+          "referencias": [],
+          "aparencia": "",
+          "papelNaCena": ""
+        }
       ],
       "cena": "o que acontece no momento retratado",
-      "arteObrigatorio": ["elementos que precisam aparecer: ligação com a mecânica, Valor, criatura, arma..."],
-      "arteProibido": ["reaproveitar a arte do Conjurador", "texto dentro da arte"],
+      "arteObrigatorio": [
+        "elementos que precisam aparecer: ligação com a mecânica, Valor, criatura, arma..."
+      ],
+      "arteProibido": [
+        "reaproveitar a arte do Conjurador",
+        "texto dentro da arte"
+      ],
       "composicao": "enquadramento sugerido (pode ser enriquecido pelo Designer)",
       "template": "aliado | temporaria | mistica | estrutura | conjurador | canal | armadura | extra",
       "uso": "baralho de teste, impressão, online",
-      "camposSemAplicacao": []
+      "camposSemAplicacao": [],
+      "arteAlternativa": false,
+      "acabamentoVisual": "arcanoclisma-v9",
+      "diretrizAcabamento": "Arcanoclisma/cartas/DIRETRIZ-ACABAMENTO-E-RARIDADE.md"
     }
   ],
-  "respostas": []
+  "respostas": [],
+  "instrucoesAcabamento": "Definir raridade e arteAlternativa de cada carta; aplicar o padrão luminoso v9 a toda lendária/alternativa e incluir os campos no prompt completo. Raridade somente estética."
 }

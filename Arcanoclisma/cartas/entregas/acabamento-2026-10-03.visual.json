@@ -1,0 +1,113 @@
+{
+  "tarefaId": "acabamento-v9",
+  "autorPedido": "Usuário",
+  "destinatario": "Claude",
+  "estado": "disponivel_localmente",
+  "integracaoConfirmada": false,
+  "versao": 9,
+  "apenasEstetica": true,
+  "diretriz": "Arcanoclisma/cartas/DIRETRIZ-ACABAMENTO-E-RARIDADE.md",
+  "arquivos": [
+    "Arcanoclisma/arena/acabamento-v9.css",
+    "Arcanoclisma/arena/acabamento-v9.json",
+    "Arcanoclisma/arena/index.html",
+    "Arcanoclisma/arena/arena.js",
+    "Arcanoclisma/arena/vetores/foil-arcoiris-dourado-v9.svg",
+    "Arcanoclisma/arena/vetores/foil-prata-roxo-v9.svg"
+  ],
+  "acabamento": {
+    "versao": 9,
+    "apenasEstetica": true,
+    "arteAlternativaIndependeDeRaridade": true,
+    "css": "acabamento-v9.css",
+    "raridades": {
+      "comum": {
+        "acabamento": "Arte original; alternativa ativa perfil próprio."
+      },
+      "incomum": {
+        "paleta": [
+          "prata",
+          "roxo"
+        ],
+        "herda": "Rara v5",
+        "reflexo": 0.23,
+        "linhaDeLuz": 0.1,
+        "periodoSegundos": 7.5,
+        "textura": 0.36,
+        "mascara": "Área de arte"
+      },
+      "rara": {
+        "paleta": [
+          "prata",
+          "roxo"
+        ],
+        "herda": "Lendária v7 em prata/roxo",
+        "reflexo": 0.66,
+        "linhaDeLuz": 0.28,
+        "periodoSegundos": 5.2,
+        "textura": 0.96,
+        "mascara": "Face inteira sob os textos"
+      },
+      "lendaria": {
+        "paleta": [
+          "dourado",
+          "rosa",
+          "violeta",
+          "azul",
+          "verde"
+        ],
+        "reflexo": 0.9,
+        "linhaDeLuz": 0.5,
+        "periodoSegundos": 4.8,
+        "textura": 1,
+        "realceIluminacao": true,
+        "padraoBrilhoObrigatorio": true
+      }
+    },
+    "alternativa": {
+      "fullArt": true,
+      "padraoBrilhoObrigatorio": true,
+      "reflexo": 0.9,
+      "linhaDeLuz": 0.5,
+      "periodoSegundos": 4.8,
+      "realceIluminacao": true,
+      "profundidade": "Contraste, iluminação focal e sombra interna; tudo recortado à carta, sem deslocamento para fora."
+    },
+    "texturas": {
+      "dourada": "vetores/foil-arcoiris-dourado-v9.svg",
+      "prateada": "vetores/foil-prata-roxo-v9.svg"
+    },
+    "filtro": {
+      "id": "arcano-highlight-v9",
+      "modo": "Realce por intensidade RGB, alfa da fonte, blur leve e screen; não identifica semanticamente magia.",
+      "fonte": "Camada duplicada da arte; arquivo aprovado preservado",
+      "opacidade": 0.46
+    },
+    "camadas": {
+      "arte": 0,
+      "realceEProfundidade": 1,
+      "moldura": 2,
+      "texturaEReflexo": 3,
+      "textosEEstatisticas": 4,
+      "recursos": 5
+    },
+    "sigilo": "Nenhum dado de raridade/variante nem filtro em cartas ocultas.",
+    "movimentoReduzido": "Reflexo estático.",
+    "prompts": "Pedido define raridade e arteAlternativa; lendária/alternativa inclui iluminação mágica, brilho e textura desde a geração."
+  },
+  "prompts": {
+    "raridadeObrigatoria": true,
+    "arteAlternativaObrigatoria": true,
+    "brilhoObrigatorioQuando": "lendaria ou arteAlternativa=true"
+  },
+  "push": "Publicação deste pacote autorizada pelo autor em 03/10/2026.",
+  "canal": "Arquivos locais do projeto; não confirma contato com conversa privada nem sincronização remota.",
+  "publicacao": {
+    "autorizadaPeloAutor": true,
+    "dataAutorizacao": "2026-10-03",
+    "estado": "publicacao_autorizada",
+    "remoto": "https://github.com/danielanuah-eng/rpg.git",
+    "branch": "main",
+    "recebimentoClaudeConfirmado": false
+  }
+}

@@ -1,0 +1,1871 @@
+{
+  "versao": 1,
+  "assets": [
+    {
+      "id": "arena-inclinada",
+      "arquivo": "raster/arena-inclinada.png",
+      "bytes": 2423476,
+      "sha256": "083b0d38ab904bb44caaa57191fd691e809bd28302804c41b8365dbbf093c543",
+      "avaliacaoAutor": "pendente",
+      "formato": "PNG",
+      "dimensoes": [
+        1672,
+        941
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 493273,
+        "pixelsOpacos": 251,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "vigente": false,
+      "registro": "registros/arena-inclinada.json"
+    },
+    {
+      "id": "arena-jogador-1-ampla-larga-v2",
+      "arquivo": "raster/arena-jogador-1-ampla-larga-v2.png",
+      "bytes": 2501807,
+      "sha256": "8b57b8eeb00f94336909266e910164abd6590927eec5a17392027090fc6f1ec6",
+      "avaliacaoAutor": "pendente",
+      "formato": "PNG",
+      "dimensoes": [
+        1448,
+        1086
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 266238,
+        "pixelsOpacos": 374,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "vigente": true,
+      "registro": "registros/arena-jogador-1-ampla-larga-v2.json"
+    },
+    {
+      "id": "arena-jogador-1-ampla",
+      "arquivo": "raster/arena-jogador-1-ampla.png",
+      "bytes": 2376095,
+      "sha256": "a47e611117cdb90d1de512f9cb3ba6d1cf1422ddebd4a22cd6ca75db951853c9",
+      "avaliacaoAutor": "pendente",
+      "formato": "PNG",
+      "dimensoes": [
+        1448,
+        1086
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 367399,
+        "pixelsOpacos": 465,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "vigente": false,
+      "registro": "registros/arena-jogador-1-ampla.json"
+    },
+    {
+      "id": "arena-jogador-1",
+      "arquivo": "raster/arena-jogador-1.png",
+      "bytes": 2122852,
+      "sha256": "4132e411726e1d4ef060b4f2d892f2ab428a3c84ae6b9ffbbcd8eb8233381bd7",
+      "avaliacaoAutor": "pendente",
+      "formato": "PNG",
+      "dimensoes": [
+        1672,
+        940
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 549966,
+        "pixelsOpacos": 277,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "vigente": false,
+      "registro": "registros/arena-jogador-1.json"
+    },
+    {
+      "id": "arena-jogador-2-ampla-larga-v2",
+      "arquivo": "raster/arena-jogador-2-ampla-larga-v2.png",
+      "bytes": 2364561,
+      "sha256": "ae714031e8d574c4fee0ef1ddba793895059518691b3726f7f555d344efd33b3",
+      "avaliacaoAutor": "pendente",
+      "formato": "PNG",
+      "dimensoes": [
+        1448,
+        1086
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 258430,
+        "pixelsOpacos": 417,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "vigente": true,
+      "registro": "registros/arena-jogador-2-ampla-larga-v2.json"
+    },
+    {
+      "id": "arena-jogador-2-ampla",
+      "arquivo": "raster/arena-jogador-2-ampla.png",
+      "bytes": 2256995,
+      "sha256": "91de277cfec7d2d2b5c82e2ff2d55665221b366d5f529310e6a6ca075fb9a03c",
+      "avaliacaoAutor": "pendente",
+      "formato": "PNG",
+      "dimensoes": [
+        1448,
+        1086
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 414299,
+        "pixelsOpacos": 780,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "vigente": false,
+      "registro": "registros/arena-jogador-2-ampla.json"
+    },
+    {
+      "id": "arena-jogador-2",
+      "arquivo": "raster/arena-jogador-2.png",
+      "bytes": 1915673,
+      "sha256": "fcc8e15dd507f618ef4f7dbc082979dc5349e8bd8705b17b202a7c6568c1ef54",
+      "avaliacaoAutor": "pendente",
+      "formato": "PNG",
+      "dimensoes": [
+        1672,
+        941
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 594276,
+        "pixelsOpacos": 420,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "vigente": false,
+      "registro": "registros/arena-jogador-2.json"
+    },
+    {
+      "id": "arena-oponente",
+      "arquivo": "raster/arena-oponente.png",
+      "bytes": 2410959,
+      "sha256": "6f085c45e3b815b31af90f8a2f4bb914140fe9c4efc695987042119bfb3efab4",
+      "avaliacaoAutor": "pendente",
+      "formato": "PNG",
+      "dimensoes": [
+        1672,
+        941
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 437342,
+        "pixelsOpacos": 408,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "vigente": false,
+      "registro": "registros/arena-oponente.json"
+    },
+    {
+      "id": "arena-superior",
+      "arquivo": "raster/arena-superior.png",
+      "bytes": 2615926,
+      "sha256": "8dcc7415b595ab70749e3fbd876ce547b714ca9738b31ac7602e9f5b38447c5b",
+      "avaliacaoAutor": "pendente",
+      "formato": "PNG",
+      "dimensoes": [
+        1672,
+        941
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 382605,
+        "pixelsOpacos": 391,
+        "cantos": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "vigente": false,
+      "registro": "registros/arena-superior.json"
+    },
+    {
+      "id": "ornamento-arcano",
+      "arquivo": "raster/ornamento-arcano.png",
+      "bytes": 1059150,
+      "sha256": "dddd3b88a946f7004ccd703fc9611123ce5e92f2f4bf249c5b4adb704f881d64",
+      "avaliacaoAutor": "pendente",
+      "formato": "PNG",
+      "dimensoes": [
+        1230,
+        1278
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 1201597,
+        "pixelsOpacos": 602,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "vigente": true,
+      "registro": "registros/ornamento-arcano.json"
+    },
+    {
+      "id": "verso-arcano-v2",
+      "arquivo": "raster/verso-arcano-v2.png",
+      "bytes": 2834278,
+      "sha256": "74160e09c66e74dcbcb2a5b9c4536ae385fba6cbbb631f300c8953b2c92d3419",
+      "avaliacaoAutor": "pendente",
+      "formato": "PNG",
+      "dimensoes": [
+        1061,
+        1483
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 241897,
+        "pixelsOpacos": 3096,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "vigente": false,
+      "registro": "registros/verso-arcano-v2.json"
+    },
+    {
+      "id": "verso-arcano-v3",
+      "arquivo": "raster/verso-arcano-v3.png",
+      "bytes": 2790590,
+      "sha256": "1be32b3ce05e1f347409f722ddc99f555534009b55ae88f7104c4109f0f1ec23",
+      "avaliacaoAutor": "pendente",
+      "formato": "PNG",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 226229,
+        "pixelsOpacos": 2155,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "vigente": true,
+      "registro": "registros/verso-arcano-v3.json"
+    },
+    {
+      "id": "verso-arcano",
+      "arquivo": "raster/verso-arcano.png",
+      "bytes": 3333559,
+      "sha256": "d5be6cbfc45d443d460731f4a8997432e8f68dc97a3397e06f1e19e1cd27c9e8",
+      "avaliacaoAutor": "pendente",
+      "formato": "PNG",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 239266,
+        "pixelsOpacos": 2247,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "vigente": false,
+      "registro": "registros/verso-arcano.json"
+    },
+    {
+      "id": "acabamento-custo-v4",
+      "arquivo": "vetores/acabamento-custo-v4.svg",
+      "bytes": 448,
+      "sha256": "68b10911726fe0d0169c78ee82a4277bdaaaf04e0f559e19f27532a61dca1edd",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 100 100",
+      "escalavel": true
+    },
+    {
+      "id": "acabamento-custo-v5",
+      "arquivo": "vetores/acabamento-custo-v5.svg",
+      "bytes": 955,
+      "sha256": "ed62ed72654101e60f267ec2189b264d28de0a7fb6b07fa123489cbe7b8f26dd",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 100 100",
+      "escalavel": true
+    },
+    {
+      "id": "acabamento-geracao-v5",
+      "arquivo": "vetores/acabamento-geracao-v5.svg",
+      "bytes": 693,
+      "sha256": "0dea0788b3d598da0227171a3fb39f4f3488d40fd5fd95af0aa62c64a4ae1759",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 82 82",
+      "escalavel": true
+    },
+    {
+      "id": "acabamento-grau-v4",
+      "arquivo": "vetores/acabamento-grau-v4.svg",
+      "bytes": 407,
+      "sha256": "966308150b73774a43ef97c808dfd695167eb5543b5a7caf1ee53c28a631a723",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 104 104",
+      "escalavel": true
+    },
+    {
+      "id": "acabamento-grau-v5",
+      "arquivo": "vetores/acabamento-grau-v5.svg",
+      "bytes": 945,
+      "sha256": "d3dffd5eb9c0cfbf827b1883b59f55d4a243342a90775030023e03c4ab58fe66",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 104 104",
+      "escalavel": true
+    },
+    {
+      "id": "base-mao",
+      "arquivo": "vetores/base-mao.svg",
+      "bytes": 280,
+      "sha256": "a533cb3914bf270b444c6b054c0025ce728254fa797ae4ca61fab33fa9dae6d5",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 800 150",
+      "escalavel": true
+    },
+    {
+      "id": "contador-arcano",
+      "arquivo": "vetores/contador-arcano.svg",
+      "bytes": 316,
+      "sha256": "76833eece84f0f437500d144a1a765f964e92e7ceb20df479d57ad3cc3d4c4e4",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 120 58",
+      "escalavel": true
+    },
+    {
+      "id": "contador-vida",
+      "arquivo": "vetores/contador-vida.svg",
+      "bytes": 422,
+      "sha256": "e16ee5a25c7bcb99bd1a393aa23560a8a82da11b6822dff3d5a429f86f2dfc6c",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 160 160",
+      "escalavel": true
+    },
+    {
+      "id": "divisoria",
+      "arquivo": "vetores/divisoria.svg",
+      "bytes": 273,
+      "sha256": "eb371b76c49dc5b527436a05f8a285644da5284891a8bdc8be3bc8ae62c91fe9",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 1220 40",
+      "escalavel": true
+    },
+    {
+      "id": "esfera-conjurador-v8",
+      "arquivo": "vetores/esfera-conjurador-v8.svg",
+      "bytes": 832,
+      "sha256": "107ec8788d46758400c8337bde3e299041eda90da0243c97ce67630269332061",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 76 76",
+      "escalavel": true
+    },
+    {
+      "id": "estatistica-ataque-v4",
+      "arquivo": "vetores/estatistica-ataque-v4.svg",
+      "bytes": 548,
+      "sha256": "ae2df4b3d2bac37c9a7223c7eaa291a3dc646336845be895a688367a4cc99eb7",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 80 88",
+      "escalavel": true
+    },
+    {
+      "id": "estatistica-ataque-v5",
+      "arquivo": "vetores/estatistica-ataque-v5.svg",
+      "bytes": 1213,
+      "sha256": "183a1c621ef042d058c5fb3640bf243dd5800aa8e52217d09355948fbcdaa34a",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 80 88",
+      "escalavel": true
+    },
+    {
+      "id": "estatistica-defesa-v4",
+      "arquivo": "vetores/estatistica-defesa-v4.svg",
+      "bytes": 554,
+      "sha256": "00cb92f13ca5db3f2a4deb4b7a75cc10a19f2d4b7bd03c32250f44dc09604f4c",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 80 88",
+      "escalavel": true
+    },
+    {
+      "id": "estatistica-defesa-v5",
+      "arquivo": "vetores/estatistica-defesa-v5.svg",
+      "bytes": 1237,
+      "sha256": "366054005d01fcf462578fdcfea8af5b21bf3f73474ee3601b1991d323a61dd4",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 80 88",
+      "escalavel": true
+    },
+    {
+      "id": "estatistica-desgaste-v4",
+      "arquivo": "vetores/estatistica-desgaste-v4.svg",
+      "bytes": 552,
+      "sha256": "318dd380be9dabdaa3968dbdf4b63419783a27be142609b3c460b29878cdd8bf",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 80 88",
+      "escalavel": true
+    },
+    {
+      "id": "estatistica-desgaste-v5",
+      "arquivo": "vetores/estatistica-desgaste-v5.svg",
+      "bytes": 1223,
+      "sha256": "d70ee1a5ffff4e2bc164f7e8480376087dd0fe7fa2ecf03ae98a7fb11cf9feb2",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 80 88",
+      "escalavel": true
+    },
+    {
+      "id": "estatistica-vida-v4",
+      "arquivo": "vetores/estatistica-vida-v4.svg",
+      "bytes": 550,
+      "sha256": "d88679374549c95e261b886565917969f653f93bbc72d3dba1f94f66e0c0b976",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 80 88",
+      "escalavel": true
+    },
+    {
+      "id": "estatistica-vida-v5",
+      "arquivo": "vetores/estatistica-vida-v5.svg",
+      "bytes": 1227,
+      "sha256": "53edbc4e8a3708d2bee3f5051b1f64ca8416b7def01087b51f886aea52262ce4",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 80 88",
+      "escalavel": true
+    },
+    {
+      "id": "foil-arcoiris-dourado-v9",
+      "arquivo": "vetores/foil-arcoiris-dourado-v9.svg",
+      "bytes": 1483,
+      "sha256": "6b483e1c27308a2a42d47df529b2e72ddeb2ca8ef519a8f8668ca8eaf00179ca",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "foil-lendaria-v6",
+      "arquivo": "vetores/foil-lendaria-v6.svg",
+      "bytes": 1565,
+      "sha256": "a22a243ec961994ea30e6cf8fc78484148483f9459694d65823e94693cb518db",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "foil-prata-roxo-v9",
+      "arquivo": "vetores/foil-prata-roxo-v9.svg",
+      "bytes": 1483,
+      "sha256": "8ba5cca10ff399b3ef00e8782fb78586753822143570354d05ff77adccc5f9c1",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "icone-aliado",
+      "arquivo": "vetores/icone-aliado.svg",
+      "bytes": 225,
+      "sha256": "fc5ded71991e7b40ab5209752cc7025e183349aec5f3708f6fd865e5088560d3",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-arcano-gerado-v5",
+      "arquivo": "vetores/icone-arcano-gerado-v5.svg",
+      "bytes": 442,
+      "sha256": "121f6faa7111361d51bcdd394b107ea3084495a33aa2c1b5eac588bb1ae8309b",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-arcano-gerado",
+      "arquivo": "vetores/icone-arcano-gerado.svg",
+      "bytes": 248,
+      "sha256": "e7203e1adfeff4cb6397b7cf9fac1dbf3a0b424e42f54ef25576d4560471b13d",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-armadura",
+      "arquivo": "vetores/icone-armadura.svg",
+      "bytes": 220,
+      "sha256": "aad0bbb58b5de7430c04b7174a47ae7768dbcfbea61734d657e8c7091e849b23",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-ataque-v5",
+      "arquivo": "vetores/icone-ataque-v5.svg",
+      "bytes": 442,
+      "sha256": "75dcc689fe4e52564b92a663aef2894a954be50f22d8be00ecf08d1e6a7c993f",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-ataque",
+      "arquivo": "vetores/icone-ataque.svg",
+      "bytes": 265,
+      "sha256": "2f15d8d25693b9db4956f0c098575051dfffc0b28623490a94218a3a0f972ce3",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-canal",
+      "arquivo": "vetores/icone-canal.svg",
+      "bytes": 269,
+      "sha256": "b8ee66142d453550c0e18724761928ad3bb785d0d99a5e849e973ce9e25672aa",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-conjurador",
+      "arquivo": "vetores/icone-conjurador.svg",
+      "bytes": 244,
+      "sha256": "83e1f9f8c963c370420a66e59d8f5fad4c8e5830f0a128d112ba71886ebe0b01",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-custo-arcano-v5",
+      "arquivo": "vetores/icone-custo-arcano-v5.svg",
+      "bytes": 456,
+      "sha256": "098d7908f17c7ecade4697336319acd59271b8323a832aeff3d70e0f5c4ff16e",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-custo-arcano",
+      "arquivo": "vetores/icone-custo-arcano.svg",
+      "bytes": 264,
+      "sha256": "b051c1c48f4caeab82da57193ac0fbd410d6f0af230d824338f7c1dfc86092d6",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-defesa-v5",
+      "arquivo": "vetores/icone-defesa-v5.svg",
+      "bytes": 438,
+      "sha256": "f65c45291e142e2c7a9a503c7431d3348609f9c3e6e211bf5b925f42ccd31adb",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-defesa",
+      "arquivo": "vetores/icone-defesa.svg",
+      "bytes": 277,
+      "sha256": "c41da6710fff23d6d5f9d0d79f1469f4e998380759301c3d5460a9c691bc0d41",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-desgaste-v5",
+      "arquivo": "vetores/icone-desgaste-v5.svg",
+      "bytes": 443,
+      "sha256": "56c81f52d7012405f4216bfa26b167e589844e9d1b43210caa76b69f7fb313fd",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-desgaste",
+      "arquivo": "vetores/icone-desgaste.svg",
+      "bytes": 294,
+      "sha256": "6bb98e19a626afec3e8ee1b3ab4fbab52f0d3268b8e64c02c9a88349c456349d",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-estrutura",
+      "arquivo": "vetores/icone-estrutura.svg",
+      "bytes": 230,
+      "sha256": "1c5e618ffcd26baf4facea7be88a3b984d0295c59d3841ad6f9e8033eac3ea07",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-extra",
+      "arquivo": "vetores/icone-extra.svg",
+      "bytes": 250,
+      "sha256": "7ac6821d762fea4e2d8bfe45a1eac0694e0db54a7eba7e694ef6bfdf8dcdaed0",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-grau-v5",
+      "arquivo": "vetores/icone-grau-v5.svg",
+      "bytes": 428,
+      "sha256": "f0ef47282e60034133742bf3bb85a6cfa389816d8836b74dccefe6aad0e1a3a5",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-grau",
+      "arquivo": "vetores/icone-grau.svg",
+      "bytes": 283,
+      "sha256": "2b182a28cb425833c36a7229313688d7f72d16f8a22b3ddd4611b4d789318971",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-item",
+      "arquivo": "vetores/icone-item.svg",
+      "bytes": 228,
+      "sha256": "c5e059c4efa8bfa98b5027bce15549baefb55e7ae18976f2de60a956dbc1f300",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-mistica",
+      "arquivo": "vetores/icone-mistica.svg",
+      "bytes": 192,
+      "sha256": "5c15fd5f027f2f8901bcca085504d61c0008e1b431547c0d8d5bd1f81c466723",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-temporaria",
+      "arquivo": "vetores/icone-temporaria.svg",
+      "bytes": 174,
+      "sha256": "cce98c47a08eb09ee63c5a3c0e15369942657c59b23608d36c3c35ae267e94f9",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-vida-v5",
+      "arquivo": "vetores/icone-vida-v5.svg",
+      "bytes": 447,
+      "sha256": "e9dfd06a629231f575373fa23a94ebd9e63a83a5e15d6f76edf40fdf2692f301",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "icone-vida",
+      "arquivo": "vetores/icone-vida.svg",
+      "bytes": 187,
+      "sha256": "80d648375cd0bed6cf4f86ac7da7827e376c4dc0afda22961508c1505f9ec978",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "pilha-baralho",
+      "arquivo": "vetores/pilha-baralho.svg",
+      "bytes": 389,
+      "sha256": "5aa93be71c47fbb696ab4589ca47cc37b0db084fda18a2133ec8dfa813142c8a",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 210 265",
+      "escalavel": true
+    },
+    {
+      "id": "raridade-comum",
+      "arquivo": "vetores/raridade-comum.svg",
+      "bytes": 178,
+      "sha256": "926dfdc4057f252889cc2972df0a22421c97a3f62c61dc21947845c8ed2617b2",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "raridade-incomum",
+      "arquivo": "vetores/raridade-incomum.svg",
+      "bytes": 181,
+      "sha256": "da91d8728592a116e2ba9520866a7f9f638fc52528687169dd8102f2c5855867",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "raridade-lendaria",
+      "arquivo": "vetores/raridade-lendaria.svg",
+      "bytes": 212,
+      "sha256": "6d11d6075ed6c13b2697c6d08f09a0c71ee7d0672bf8a292221f148af6cb8efc",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "raridade-rara",
+      "arquivo": "vetores/raridade-rara.svg",
+      "bytes": 188,
+      "sha256": "cf8d2edd0d4890a7f74447e1773ce349cdc2cfeda9e49420fa5fcf8ec634144b",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "sombra-carta",
+      "arquivo": "vetores/sombra-carta.svg",
+      "bytes": 308,
+      "sha256": "d8b7d17fd2d0856b7b9f236a241e36dce9dd525ab019223a579da5d896f0e2dd",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 360 140",
+      "escalavel": true
+    },
+    {
+      "id": "valor-alvorum-simbolo-v8",
+      "arquivo": "vetores/valor-alvorum-simbolo-v8.svg",
+      "bytes": 246,
+      "sha256": "40e06d246044bb971e1a293641e58a0340d3fab9f52230ff462f0465dc25a5f8",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "valor-alvorum",
+      "arquivo": "vetores/valor-alvorum.svg",
+      "bytes": 327,
+      "sha256": "160687cbb2cf4ef0e4cb7c33ae73ac78bad1dcdb7ab7c93262436b82150af46b",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "valor-cognitium-simbolo-v8",
+      "arquivo": "vetores/valor-cognitium-simbolo-v8.svg",
+      "bytes": 212,
+      "sha256": "2b492d987cc8c8a8fe0942779a0393496a1ab6e89b590c389fa686db73336da1",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "valor-cognitium",
+      "arquivo": "vetores/valor-cognitium.svg",
+      "bytes": 293,
+      "sha256": "8613bd8a85b76b5900441f87264bb163f1d68103b9d7f9b7d5d4a5d94333d3d9",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "valor-conflituo-simbolo-v8",
+      "arquivo": "vetores/valor-conflituo-simbolo-v8.svg",
+      "bytes": 213,
+      "sha256": "5f98aa1331ad646af29ec6dd16a0f39a400d32f054dd9d90369d922fbdca506d",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "valor-conflituo",
+      "arquivo": "vetores/valor-conflituo.svg",
+      "bytes": 294,
+      "sha256": "3680d871429d8f5d6d11d2f11eb8bcb515c8aad79cde867898452aab3870d929",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "valor-dominum-simbolo-v8",
+      "arquivo": "vetores/valor-dominum-simbolo-v8.svg",
+      "bytes": 210,
+      "sha256": "a606bf304337cf0d675d2024cb4e1781ead81b418ae1fc226a9d2b80d20cf506",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "valor-dominum",
+      "arquivo": "vetores/valor-dominum.svg",
+      "bytes": 291,
+      "sha256": "12b558547abe3173a92884cc842a17a7ceff1b264525132707e4c04c573c80de",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "valor-eternyr-simbolo-v8",
+      "arquivo": "vetores/valor-eternyr-simbolo-v8.svg",
+      "bytes": 217,
+      "sha256": "20715904c29622380e08bdf0e631dd201e8126c5b94a5fc7befef20c8f50e2f5",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "valor-eternyr",
+      "arquivo": "vetores/valor-eternyr.svg",
+      "bytes": 298,
+      "sha256": "97907255a44fb0c216e4e0a1760f8e123b80f0c6c7ecec4d3a4345c4566cc0c6",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "valor-morbidyum-simbolo-v8",
+      "arquivo": "vetores/valor-morbidyum-simbolo-v8.svg",
+      "bytes": 232,
+      "sha256": "6fa6d74dcfc56935b53acc4cbfd1efbba69dac525333bc27ddd58c881f156a24",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "valor-morbidyum",
+      "arquivo": "vetores/valor-morbidyum.svg",
+      "bytes": 313,
+      "sha256": "9e6f4cb025018f2bc7cfcaeb58c390345feb38466344ab9296f248702fa0566f",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "valor-persona-simbolo-v8",
+      "arquivo": "vetores/valor-persona-simbolo-v8.svg",
+      "bytes": 225,
+      "sha256": "517c580dfe2b6c337e4ce84131e930946df27992bef17e2680ae77bbae40ce00",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "valor-persona",
+      "arquivo": "vetores/valor-persona.svg",
+      "bytes": 306,
+      "sha256": "ab0ba159a3ea5c7620028f893181c4c4f97d2745c3238b1c98b0ba99ddea2fe3",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "valor-primitivum-simbolo-v8",
+      "arquivo": "vetores/valor-primitivum-simbolo-v8.svg",
+      "bytes": 212,
+      "sha256": "e9d9ac531ad5989ab4c00dc693ce583f7dbdedb8b7159e428551c4edb933086e",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "valor-primitivum",
+      "arquivo": "vetores/valor-primitivum.svg",
+      "bytes": 293,
+      "sha256": "d45671d6630865989618ac3b38fb37fbbcd6d3fcb8914ddb1d0980cc323fba40",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "valor-sublimeyn-simbolo-v8",
+      "arquivo": "vetores/valor-sublimeyn-simbolo-v8.svg",
+      "bytes": 208,
+      "sha256": "03d811ba50d5160751002c1e0b07c37857ca3a9fcd0c44650d307551b8037c01",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "valor-sublimeyn",
+      "arquivo": "vetores/valor-sublimeyn.svg",
+      "bytes": 289,
+      "sha256": "a23fae8b973454e80013dcf851e8df66dc3bdf357fc117a1e565d489e0408c44",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 64 64",
+      "escalavel": true
+    },
+    {
+      "id": "verso-titulo",
+      "arquivo": "vetores/verso-titulo.svg",
+      "bytes": 492,
+      "sha256": "06c0cee3c3efb11d64c7d401522a3f7dd70eadc9a604145e05d5f2925268406d",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "zona-arcano",
+      "arquivo": "vetores/zona-arcano.svg",
+      "bytes": 378,
+      "sha256": "d7aa05fa6a60cde4e1c2a60f2f721c7f19d1e12bf5ac901873ac86235a199160",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 560 180",
+      "escalavel": true
+    },
+    {
+      "id": "zona-baralho",
+      "arquivo": "vetores/zona-baralho.svg",
+      "bytes": 378,
+      "sha256": "d7aa05fa6a60cde4e1c2a60f2f721c7f19d1e12bf5ac901873ac86235a199160",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 560 180",
+      "escalavel": true
+    },
+    {
+      "id": "zona-campo",
+      "arquivo": "vetores/zona-campo.svg",
+      "bytes": 376,
+      "sha256": "4edf94c39568185b4e98fbbee174df431f8493f125745c71b0dab41f6022a398",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 560 180",
+      "escalavel": true
+    },
+    {
+      "id": "zona-cemiterio",
+      "arquivo": "vetores/zona-cemiterio.svg",
+      "bytes": 378,
+      "sha256": "d7aa05fa6a60cde4e1c2a60f2f721c7f19d1e12bf5ac901873ac86235a199160",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 560 180",
+      "escalavel": true
+    },
+    {
+      "id": "zona-conjurador",
+      "arquivo": "vetores/zona-conjurador.svg",
+      "bytes": 378,
+      "sha256": "d7aa05fa6a60cde4e1c2a60f2f721c7f19d1e12bf5ac901873ac86235a199160",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 560 180",
+      "escalavel": true
+    },
+    {
+      "id": "zona-grau",
+      "arquivo": "vetores/zona-grau.svg",
+      "bytes": 378,
+      "sha256": "d7aa05fa6a60cde4e1c2a60f2f721c7f19d1e12bf5ac901873ac86235a199160",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 560 180",
+      "escalavel": true
+    },
+    {
+      "id": "zona-mao",
+      "arquivo": "vetores/zona-mao.svg",
+      "bytes": 378,
+      "sha256": "d7aa05fa6a60cde4e1c2a60f2f721c7f19d1e12bf5ac901873ac86235a199160",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 560 180",
+      "escalavel": true
+    },
+    {
+      "id": "zona-pilha",
+      "arquivo": "vetores/zona-pilha.svg",
+      "bytes": 378,
+      "sha256": "d7aa05fa6a60cde4e1c2a60f2f721c7f19d1e12bf5ac901873ac86235a199160",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 560 180",
+      "escalavel": true
+    },
+    {
+      "id": "aliado-v4",
+      "arquivo": "templates/aliado-v4.svg",
+      "bytes": 2064,
+      "sha256": "522b168271209a15ce1df50243a8e97b2e4918af9bf04290125f36f26d64226e",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "aliado",
+      "arquivo": "templates/aliado.svg",
+      "bytes": 1077,
+      "sha256": "e2b5ca95a2eae22808d163430e979530a3f70a251d3d224c57c112dd344d4e7d",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "armadura-v4",
+      "arquivo": "templates/armadura-v4.svg",
+      "bytes": 2167,
+      "sha256": "ae910e8ab5e616eeefc2e5623d7faaf318a265fb604f490fa029761a901cac68",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "armadura",
+      "arquivo": "templates/armadura.svg",
+      "bytes": 1180,
+      "sha256": "901ce3585f1d023160fb06c0d18e74548957e47cdab9a6be273d04288c4f6661",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "canal-v4",
+      "arquivo": "templates/canal-v4.svg",
+      "bytes": 2160,
+      "sha256": "5de30d1e87eec4d95be24ed4256a6eee775297fbceafa39f28116915825c2dda",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "canal",
+      "arquivo": "templates/canal.svg",
+      "bytes": 1173,
+      "sha256": "eced32310d9dc5d5fc3f54f4efe58ac70587d8b97204071ba815c3a9d0df5480",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "conjurador-v4",
+      "arquivo": "templates/conjurador-v4.svg",
+      "bytes": 2064,
+      "sha256": "58cb89b78bca4ddeb627a3fa1b756e30a601631fcbcb1a15a44cf084277cbaee",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "conjurador-v8",
+      "arquivo": "templates/conjurador-v8.svg",
+      "bytes": 2141,
+      "sha256": "4866965e04f440ba27cd5c346157b4b81d39beb1c609db30dd7ccf818c0c2ec5",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "conjurador",
+      "arquivo": "templates/conjurador.svg",
+      "bytes": 1077,
+      "sha256": "6b98d19ba7c480fc6b14b784e2869d993ca2e98e5e0d4c5ca47e139717b6496f",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "estrutura-v4",
+      "arquivo": "templates/estrutura-v4.svg",
+      "bytes": 2064,
+      "sha256": "65721f4ad3d929c10c2e3b9b922e0e69da77dd8d559b0dfb1f4568380eef7cf6",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "estrutura",
+      "arquivo": "templates/estrutura.svg",
+      "bytes": 1077,
+      "sha256": "e454945bf184404b3e7f817ebda8291b05a6b56abc0680e417dcf5dfd39c36f9",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "extra-v4",
+      "arquivo": "templates/extra-v4.svg",
+      "bytes": 2158,
+      "sha256": "44ad878dbfdaa93853b46f03bacc037e23f8d9d19f20b5adf0dab3cb6b837796",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "extra",
+      "arquivo": "templates/extra.svg",
+      "bytes": 1171,
+      "sha256": "ce3825299964bc828aeba8bb11225314e0278b07f6aaef1ef2c1a76729a64557",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "foil-arcoiris-dourado-v9",
+      "arquivo": "templates/foil-arcoiris-dourado-v9.png",
+      "bytes": 4685705,
+      "sha256": "29bfe4cd43516617def4f1aa81539f048e8a243ba166dd424d626409a2dee058",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 61820,
+        "pixelsOpacos": 0,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "foil-lendaria-v6",
+      "arquivo": "templates/foil-lendaria-v6.png",
+      "bytes": 5408955,
+      "sha256": "4363933c63d8008f87c972b1f0dc8f831c0004c4196a859f0ddc3c8b2823cd57",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 61820,
+        "pixelsOpacos": 0,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "foil-prata-roxo-v9",
+      "arquivo": "templates/foil-prata-roxo-v9.png",
+      "bytes": 4431332,
+      "sha256": "56e0c3cf99c3d15b9e7b57af8daacb17f0f094bb740b608151bd246a3bb8eebf",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 61820,
+        "pixelsOpacos": 0,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "mistica-v4",
+      "arquivo": "templates/mistica-v4.svg",
+      "bytes": 2064,
+      "sha256": "66c2d6e5fd74c25972fc9ff09bf0a4a3ecf8e7af57c93b3e1d7eb3c1718bf151",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "mistica",
+      "arquivo": "templates/mistica.svg",
+      "bytes": 1077,
+      "sha256": "f497c3c4e569d8883fe29f82f03f141a129a400ec43e41ab526bd0a69f3b77ac",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "overlay-armadura-v3",
+      "arquivo": "templates/overlay-armadura-v3.png",
+      "bytes": 57540,
+      "sha256": "495fb09f69534acec4f3800b2b2be004f9491a21a52cb8d5f906c71d15d4a718",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 1392235,
+        "pixelsOpacos": 184894,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "overlay-armadura-v3",
+      "arquivo": "templates/overlay-armadura-v3.svg",
+      "bytes": 1682,
+      "sha256": "a53356871544d2cff442cf64a0b6c112bbf2d4912f5cb223875d9a9df675e5c3",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "overlay-armadura-v4",
+      "arquivo": "templates/overlay-armadura-v4.png",
+      "bytes": 93075,
+      "sha256": "d4326ea935de1d97c0a8bf9fa446a36fd2bf2d8f81d7c7b7604f26f01b46072c",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 1425081,
+        "pixelsOpacos": 211997,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "overlay-armadura-v4",
+      "arquivo": "templates/overlay-armadura-v4.svg",
+      "bytes": 4464,
+      "sha256": "7ffb0c8654db0ffe6608ab07619cdfee347a55022c752fc467d6d2cfa1c13e9d",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "overlay-armadura-v5",
+      "arquivo": "templates/overlay-armadura-v5.png",
+      "bytes": 111731,
+      "sha256": "78ff0557e7437e7def3916f38e0a8e41242ce7d33acb0ed399f971bcbf2c3a8e",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 1417431,
+        "pixelsOpacos": 218784,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "overlay-armadura-v5",
+      "arquivo": "templates/overlay-armadura-v5.svg",
+      "bytes": 7266,
+      "sha256": "d869fde06b185741c7f95eb9a3638014913346d83320ff53211e811884f5c3cc",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "overlay-armadura",
+      "arquivo": "templates/overlay-armadura.png",
+      "bytes": 56367,
+      "sha256": "10f8001af0da55b65fd6f6a9ed32b28c342d361ee5da655a340b28db57238095",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 1413596,
+        "pixelsOpacos": 95335,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "overlay-canal-v3",
+      "arquivo": "templates/overlay-canal-v3.png",
+      "bytes": 52674,
+      "sha256": "404b0edc80632c7e899a298af2bcfa0f0b485da1746877ec0b305ce8d3db1531",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 1416438,
+        "pixelsOpacos": 161475,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "overlay-canal-v3",
+      "arquivo": "templates/overlay-canal-v3.svg",
+      "bytes": 1474,
+      "sha256": "95df6e7b5fe943587aadb966fbcd62bd71a682ecf8970b5e3c5aa1a89943d4bd",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "overlay-canal-v4",
+      "arquivo": "templates/overlay-canal-v4.png",
+      "bytes": 85720,
+      "sha256": "9b8c81d4e0e651901e3ce6a9af5c4610c7c6713698dfab38b4c50777537dcd21",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 1447047,
+        "pixelsOpacos": 191080,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "overlay-canal-v4",
+      "arquivo": "templates/overlay-canal-v4.svg",
+      "bytes": 3345,
+      "sha256": "bc720e434be394db8926515969754bcd2c5abb5364ba16dcea78f09250f9092a",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "overlay-canal-v5",
+      "arquivo": "templates/overlay-canal-v5.png",
+      "bytes": 90066,
+      "sha256": "560a71626f302d409cc9f75d613995de46ab775f5207a25be24290d66bdb369d",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 1444085,
+        "pixelsOpacos": 194046,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "overlay-canal-v5",
+      "arquivo": "templates/overlay-canal-v5.svg",
+      "bytes": 4793,
+      "sha256": "67d01023664c2bbaf63d4e3235a0a91888572d8d24db9cf973280d801b8985dc",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "overlay-canal",
+      "arquivo": "templates/overlay-canal.png",
+      "bytes": 58570,
+      "sha256": "9f07adecd4f7a391235f65df217dbca56d4930f2d4c355bb0ab731cab09cba8e",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 1413984,
+        "pixelsOpacos": 95180,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "overlay-canva",
+      "arquivo": "templates/overlay-canva.png",
+      "bytes": 45023,
+      "sha256": "3bf4659ab9e74cf47f93d60753ace1416003c3822ef23395822daa5d68a40173",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 1519839,
+        "pixelsOpacos": 107525,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "overlay-canva",
+      "arquivo": "templates/overlay-canva.svg",
+      "bytes": 827,
+      "sha256": "1962c29ff5035b5b1db68aa82b033899f0c3cf7a19355fb5c8980e449d2f2533",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 1260 1760",
+      "escalavel": true
+    },
+    {
+      "id": "overlay-conjurador-v8",
+      "arquivo": "templates/overlay-conjurador-v8.png",
+      "bytes": 87080,
+      "sha256": "69ec102d19f9b48e4d6a67cb5a1344795edc0c93ac80f4a58c22c5a754625c78",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 1461950,
+        "pixelsOpacos": 167625,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "overlay-conjurador-v8",
+      "arquivo": "templates/overlay-conjurador-v8.svg",
+      "bytes": 5533,
+      "sha256": "eb166a53ac65c816f1fd9e4733def266da2dbe72d8aba4aa95135eb4533dddcf",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "overlay-extra-v3",
+      "arquivo": "templates/overlay-extra-v3.png",
+      "bytes": 51553,
+      "sha256": "496c6abd05940a79c30cd0097ba6ace2de47e2549f9759a74528bbbb37a034f8",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 1416703,
+        "pixelsOpacos": 161330,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "overlay-extra-v3",
+      "arquivo": "templates/overlay-extra-v3.svg",
+      "bytes": 1472,
+      "sha256": "1546e7632fdc802e5ca55c0f2a3b115701b71d71ab963ed7bfcff9b7acc4587c",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "overlay-extra-v4",
+      "arquivo": "templates/overlay-extra-v4.png",
+      "bytes": 84415,
+      "sha256": "d98c5a311bec95cc6edb56dd847adc724c08d5deada54ec63b0a135738a20f4f",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 1447513,
+        "pixelsOpacos": 190780,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "overlay-extra-v4",
+      "arquivo": "templates/overlay-extra-v4.svg",
+      "bytes": 3343,
+      "sha256": "d700ad90744ea816688446f5a2766fa3b411d6a30f619858a6bf8ba5c8a9cc13",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "overlay-extra-v5",
+      "arquivo": "templates/overlay-extra-v5.png",
+      "bytes": 88753,
+      "sha256": "f650f091954ede1fcb7c35b92fcd9f487ce0a6e865e85c88da979b09026b9b0f",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 1444571,
+        "pixelsOpacos": 193734,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "overlay-extra-v5",
+      "arquivo": "templates/overlay-extra-v5.svg",
+      "bytes": 4791,
+      "sha256": "1d442973c1175b143f46ef9435f848b890215d3bc88d048361b3301e71a3ed1e",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "overlay-extra",
+      "arquivo": "templates/overlay-extra.png",
+      "bytes": 57204,
+      "sha256": "a8ebf80bbc8d9c36520b34aa2269fba8423cb2578339261d7be9eb39196b2a25",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 1414185,
+        "pixelsOpacos": 95033,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "overlay-generico-v3",
+      "arquivo": "templates/overlay-generico-v3.png",
+      "bytes": 57205,
+      "sha256": "3c0cb4cc1009955fd427bc242ac5c11be732acb4462e7d94f07bb0cbd48291ea",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 1392900,
+        "pixelsOpacos": 184418,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "overlay-generico-v3",
+      "arquivo": "templates/overlay-generico-v3.svg",
+      "bytes": 1579,
+      "sha256": "fef0537e4274a3b7a644ee83921d68cb35a17114d8a64444165abc9ecb86c6f1",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "overlay-generico-v4",
+      "arquivo": "templates/overlay-generico-v4.png",
+      "bytes": 92616,
+      "sha256": "18d3939ab52eec78820980ede57017d2043f7f07a599798d3e1a1f9b7f7d34f7",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 1425712,
+        "pixelsOpacos": 211550,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "overlay-generico-v4",
+      "arquivo": "templates/overlay-generico-v4.svg",
+      "bytes": 4353,
+      "sha256": "65cc5a3c6d8ee3625aa6871fede49f4bf308f0974b16868b8bb1a391b29d53d2",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "overlay-generico-v5",
+      "arquivo": "templates/overlay-generico-v5.png",
+      "bytes": 111456,
+      "sha256": "cf7a959797d61e4ffba07bc8dff074d425116c67581753f661cec67a298f2fb8",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "PNG",
+      "dimensoes": [
+        1260,
+        1760
+      ],
+      "hasAlpha": true,
+      "alfa": {
+        "pixelsTransparentes": 1418062,
+        "pixelsOpacos": 218337,
+        "cantos": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "overlay-generico-v5",
+      "arquivo": "templates/overlay-generico-v5.svg",
+      "bytes": 7143,
+      "sha256": "0ff603a85f290abe184beef27c9f5bd84ce0fb5fc0b2f3f2964536ee4fa6d8a0",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "temporaria-v4",
+      "arquivo": "templates/temporaria-v4.svg",
+      "bytes": 2064,
+      "sha256": "30d8e2439d14767ca7c30a503ca28fee748c2821659b4d9d0d2762f0035c6939",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    },
+    {
+      "id": "temporaria",
+      "arquivo": "templates/temporaria.svg",
+      "bytes": 1077,
+      "sha256": "8ffce74016f6f52f701513fa9b800ae22b8a32d51778ae70c611f1566a5491dc",
+      "avaliacaoAutor": "template solicitado pelo autor",
+      "formato": "SVG",
+      "viewBox": "0 0 630 880",
+      "escalavel": true
+    }
+  ],
+  "nota": "Vetor/HTML editável; PNGs originais com alfa medido. Versões de verso v1/v2 preservadas e fora da composição vigente."
+}

@@ -1,0 +1,43 @@
+{
+  "versao": 5,
+  "raridades": {
+    "incomum": {
+      "paleta": [
+        "azul suave",
+        "rosa",
+        "dourado contido"
+      ],
+      "efeito": "Iridescência da lendária v4 refinada",
+      "brilho": 4,
+      "opacidadeReflexo": 0.16,
+      "periodoSegundos": 9
+    },
+    "rara": {
+      "paleta": [
+        "prata",
+        "roxo"
+      ],
+      "efeito": "Borda e reflexo prateados com acentos violeta",
+      "brilho": 7,
+      "opacidadeReflexo": 0.23,
+      "periodoSegundos": 7.5
+    },
+    "lendaria": {
+      "paleta": [
+        "dourado",
+        "rosa",
+        "violeta",
+        "azul",
+        "verde"
+      ],
+      "efeito": "Arco-íris com dourado dominante, borda mais visível e halo",
+      "brilho": 10,
+      "opacidadeReflexo": 0.32,
+      "periodoSegundos": 6
+    }
+  },
+  "numerosProtegidos": "Reflexo limitado à área de arte; exclui faixa do nome, recursos, estatísticas e regras.",
+  "verso": "Mesmo verso para todas as cartas ocultas; sem brilho que revele raridade.",
+  "atributos": "Filigranas laterais, bordas em camadas, encaixes de cristal; centro numérico livre.",
+  "acessibilidade": "prefers-reduced-motion mantém acabamento estático e remove a varredura."
+}

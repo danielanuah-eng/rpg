@@ -1,0 +1,23 @@
+{
+  "autor": "pedido direto, 2026-10-03",
+  "personagemExistente": "Preservar identidade com referências, mas criar arte nova para cada carta que cita o personagem.",
+  "variar": [
+    "pose",
+    "ação",
+    "expressão",
+    "enquadramento",
+    "cenário"
+  ],
+  "prioridade": "Se já existe como conjurador, não reutilizar a imagem ou o cenário dessa carta.",
+  "contexto": "A nova composição responde à identidade e ao evento solicitado pelo Claude.",
+  "layout": "Exemplos antigos da arena são referências de layout, não artes finais de cartas novas.",
+  "registroObrigatorio": [
+    "personagemReferenciado",
+    "arteReferencia",
+    "cartaDestino",
+    "cenaNova",
+    "alteracoesVisuais",
+    "arquivoArteFinal"
+  ],
+  "proibido": "Recortar, reenquadrar ou recolocar a mesma arte como suposta cena nova."
+}

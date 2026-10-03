@@ -1,0 +1,21 @@
+{
+  "id": "arena-inclinada",
+  "arquivo": "raster/arena-inclinada.png",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-ea07b55c-1530-4523-aad0-f9ff1d929b7b.png",
+  "ferramenta": "image_gen integrada",
+  "prompt": "Edit the referenced arena as the exact same location, materials, motifs and quiet composition. Polished high-resolution fantasy game environment illustration in the established Arcanoclisma independent-comics / contemporary-animation style: flowing varied-weight ink, crisp antialiased silhouettes, clean flat-color shapes, 2-3 strong graphic shadow values, fine unobtrusive hatching and halftone material detail, warm antique-bronze and pale-stone accents balanced against cool deep-indigo and muted jade. Dimensional hand-drawn perspective and readable material depth. Elegant and finished, never pixel art, blocky low-resolution, blurry, airbrushed photorealistic or glossy 3D. Make an independent landscape 16:9 arena asset viewed from the near player's side at a HIGH 3/4 camera about 55 degrees above the surface, a moderate perspective suited to an online card table. Opponent half above, near half below, equal logical play areas divided by the same subtle central seam. Reveal a little layered stone thickness and old bronze edge underneath. Empty large playing surface, low-contrast center seal, details kept at periphery. Preserve palette, proportions and all relevant landmarks of the top-down reference. Never add cards, players, text, slots, HUD, mountains or background. Entire floating platform silhouette and all edges fit inside canvas with 8% true transparent margin. Finished smooth ink contours, true RGBA alpha, no pixelated style.\n",
+  "criadoEm": "2026-10-03T04:07:30.005Z",
+  "largura": 1672,
+  "altura": 941,
+  "hasAlpha": true,
+  "alfaCantos": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "pixelsTransparentes": 493273,
+  "pixelsOpacos": 251,
+  "sha256": "083b0d38ab904bb44caaa57191fd691e809bd28302804c41b8365dbbf093c543",
+  "avaliacaoAutor": "pendente"
+}

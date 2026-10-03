@@ -1,0 +1,20 @@
+{
+  "fonte": "vetores/foil-arcoiris-dourado-v9.svg",
+  "arquivo": "templates/foil-arcoiris-dourado-v9.png",
+  "procedencia": "Textura de interface SVG procedural exportada com Sharp; arte original preservada.",
+  "dimensoes": [
+    1260,
+    1760
+  ],
+  "alfa": {
+    "min": 0,
+    "max": 158,
+    "pixelsTransparentes": 61820,
+    "cantos": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

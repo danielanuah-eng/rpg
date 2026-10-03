@@ -1,0 +1,21 @@
+{
+  "id": "arena-jogador-2-ampla-larga-v2",
+  "arquivo": "raster/arena-jogador-2-ampla-larga-v2.png",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-3964741b-e3e0-4137-92b0-549004d61acb.png",
+  "ferramenta": "image_gen integrada",
+  "prompt": "Edit target image 1, the enlarged Arcanoclisma arena. Deliver its opposite player's camera viewpoint, same physical board viewed from the other end: coral inset at near foreground, cyan inset far background. Image 2 is only reference for this near/far color orientation. Preserve image 1's WIDE AND DEEP usable floor and scale, exact framing and 4:3 canvas. Both horizontal and vertical enlargement remain. Retain matte midnight blue slate, warm limestone frame, thin bronze details, restrained moss. Clear central transverse division, open floor ready for four separated card rows. No cards, no typography, no UI. Full floating platform with near-edge stone thickness, no dramatic camera tilt or cramped trapezoid. True transparent alpha outside all stone edges, ALL corners transparent, no backdrop, no gradient sky, no glow. Entire arena visible, small clear margin. Polished painterly fantasy asset consistent with references.\n",
+  "criadoEm": "2026-10-03T13:28:48.597Z",
+  "largura": 1448,
+  "altura": 1086,
+  "hasAlpha": true,
+  "alfaCantos": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "pixelsTransparentes": 258430,
+  "pixelsOpacos": 417,
+  "sha256": "ae714031e8d574c4fee0ef1ddba793895059518691b3726f7f555d344efd33b3",
+  "avaliacaoAutor": "pendente"
+}

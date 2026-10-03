@@ -1,0 +1,21 @@
+{
+  "id": "arena-oponente",
+  "arquivo": "raster/arena-oponente.png",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-032a8a4a-88ce-4222-aab0-029a54e97db5.png",
+  "ferramenta": "image_gen integrada",
+  "prompt": "Edit the referenced arena as the exact same location, materials, palette and peripheral motifs. Polished high-resolution fantasy game environment illustration in the established Arcanoclisma independent-comics / contemporary-animation style: flowing varied-weight ink, crisp antialiased silhouettes, clean flat-color shapes, 2-3 strong graphic shadow values, fine unobtrusive hatching and halftone material detail, warm antique-bronze and pale-stone accents balanced against cool deep-indigo and muted jade. Dimensional hand-drawn perspective and readable material depth. Elegant and finished, never pixel art, blocky low-resolution, blurry, airbrushed photorealistic or glossy 3D. Independent landscape 16:9 view from the OPPOSITE player's end of this same floating dueling dais, high 3/4 camera 55 degrees above the surface, looking toward the former near end. Stable geometry and center seal, dark slate empty play surface, narrow center seam equally dividing the two player territories. Reveal appropriate opposite bronze rim and layered stone thickness. This is a rotated camera on the same table, not a new map. No characters, cards, slots, HUD, text or backdrop. Entire platform silhouette fits with transparent margins, full RGBA alpha. Quiet center for game readability.\n",
+  "criadoEm": "2026-10-03T04:11:36.629Z",
+  "largura": 1672,
+  "altura": 941,
+  "hasAlpha": true,
+  "alfaCantos": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "pixelsTransparentes": 437342,
+  "pixelsOpacos": 408,
+  "sha256": "6f085c45e3b815b31af90f8a2f4bb914140fe9c4efc695987042119bfb3efab4",
+  "avaliacaoAutor": "pendente"
+}

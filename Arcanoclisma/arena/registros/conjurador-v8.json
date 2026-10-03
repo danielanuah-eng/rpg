@@ -1,0 +1,59 @@
+{
+  "versao": 8,
+  "template": "templates/conjurador-v8.svg",
+  "overlay": [
+    "templates/overlay-conjurador-v8.svg",
+    "templates/overlay-conjurador-v8.png"
+  ],
+  "esfera": "vetores/esfera-conjurador-v8.svg",
+  "simbolos": "vetores/valor-*-simbolo-v8.svg",
+  "valores": "ConjuradorDef.valores: dois símbolos completos, cada um centralizado em sua metade; cores separadas; sem custo/Arcano gerado.",
+  "tipo": {
+    "campoMotor": "ConjuradorDef.comprometimento",
+    "opcoes": [
+      "Invocador",
+      "Brigão",
+      "Parrudão da quebrada",
+      "Habilidoso",
+      "Preparado"
+    ],
+    "descricao": "descricaoComprometimento: texto visual editável; não inventar benefícios mecânicos."
+  },
+  "referencias": [
+    "Arcanoclisma/tcg/src/tipos.ts:115",
+    "Arcanoclisma/tcg/src/conjuradores.ts:1",
+    "Arcanoclisma/tcg/docs/LIVRO-DE-REGRAS.md:168"
+  ],
+  "camadas": {
+    "esfera": 5,
+    "tipoEDescricao": 4,
+    "reflexoLendario": 3
+  },
+  "dimensoes": [
+    1260,
+    1760
+  ],
+  "alfa": {
+    "pixelsTransparentes": 1461950,
+    "cantos": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "canva": "Asset local pronto para composição futura; não altera os rascunhos v5 nem confirma salvamento no Canva.",
+  "posicaoEsfera": {
+    "viewBox": [
+      630,
+      880
+    ],
+    "centro": [
+      315,
+      116
+    ],
+    "diametro": 56,
+    "descricao": "Centralizada logo abaixo do nome, fora da caixa de texto; pequena e discreta."
+  },
+  "procedencia": "Vetores próprios; símbolos derivados dos SVGs de Valor existentes; composição SVG exportada com Sharp."
+}

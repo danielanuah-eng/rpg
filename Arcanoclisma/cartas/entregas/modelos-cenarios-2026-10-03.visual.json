@@ -1,0 +1,24 @@
+{
+  "tarefaId": "modelos-cenarios-2026-10-03",
+  "autorPedido": "Usuário",
+  "estado": "disponivel_localmente",
+  "integracaoConfirmada": false,
+  "manifesto": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-v1/manifesto.json",
+  "modelos": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-v1/modelos.json",
+  "arteAprovada": "dragao-transplanar",
+  "camposMecanicosPendentes": true,
+  "versao": 2,
+  "propostaAutor": "Arcanoclisma/cartas/propostas/ciantia-dragoes-2026-10-03.autor.json",
+  "artesAprovadas": [
+    "licao-do-jardim",
+    "dragao-transplanar"
+  ],
+  "publicacao": {
+    "autorizadaPeloAutor": true,
+    "dataAutorizacao": "2026-10-03",
+    "estado": "publicacao_autorizada",
+    "remoto": "https://github.com/danielanuah-eng/rpg.git",
+    "branch": "main",
+    "recebimentoClaudeConfirmado": false
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "ornamento-arcano",
+  "arquivo": "raster/ornamento-arcano.png",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-8ef7a453-d30a-4aa9-aec3-4ca9744e7cf8.png",
+  "ferramenta": "image_gen integrada",
+  "prompt": "Create one independent isolated decorative corner ornament for an original online fantasy TCG arena, a small arrangement of layered antique-bronze filigree, two angular pale slate fragments, jade moss and three tiny soft coral magic specks. Polished high-resolution fantasy game environment illustration in the established Arcanoclisma independent-comics / contemporary-animation style: flowing varied-weight ink, crisp antialiased silhouettes, clean flat-color shapes, 2-3 strong graphic shadow values, fine unobtrusive hatching and halftone material detail, warm antique-bronze and pale-stone accents balanced against cool deep-indigo and muted jade. Dimensional hand-drawn perspective and readable material depth. Elegant and finished, never pixel art, blocky low-resolution, blurry, airbrushed photorealistic or glossy 3D. Elegant sweeping curve, detailed clean ink, polished graphic textures. One compact connected composition anchored at lower left, extending diagonally upward, suitable to mirror in HTML as peripheral depth decoration. TRUE transparent background, ample alpha margin, no other environment, no letters, glyph-writing, text, characters, cards or UI. Quiet low contrast so it never overwhelms the game cards, no bright beams, no pixelated edges. Keep this very restrained and matte, no golden interior card ornamentation, no bright or blinding glows. Peripheral arena ornament only.",
+  "criadoEm": "2026-10-03T04:50:56.214Z",
+  "largura": 1230,
+  "altura": 1278,
+  "hasAlpha": true,
+  "alfaCantos": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "pixelsTransparentes": 1201597,
+  "pixelsOpacos": 602,
+  "sha256": "dddd3b88a946f7004ccd703fc9611123ce5e92f2f4bf249c5b4adb704f881d64",
+  "avaliacaoAutor": "pendente"
+}

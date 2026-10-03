@@ -1,0 +1,21 @@
+{
+  "arquivo": "templates/foil-lendaria-v6.png",
+  "fonte": "vetores/foil-lendaria-v6.svg",
+  "ferramenta": "SVG procedural exportado com Sharp; sem edição da arte",
+  "dimensoes": [
+    1260,
+    1760
+  ],
+  "alfa": {
+    "min": 0,
+    "max": 139,
+    "cantos": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "pixelsTransparentes": 61820
+  },
+  "uso": "Película semitransparente sobre face lendária; números e textos em camadas acima."
+}

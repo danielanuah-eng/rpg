@@ -1,0 +1,12 @@
+.scene-examples{max-width:1200px;margin:36px auto;padding:24px;border:1px solid #71818b55;border-radius:14px;background:#112330;color:#ebe4d6}
+.scene-examples h2{margin:0 0 12px;font:italic 28px Georgia,serif;color:#ded0b1}
+.scene-example-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:24px}
+.scene-example{display:grid;grid-template-columns:300px 1fr;gap:18px;align-items:center;min-width:0}
+.scene-example-card{display:flex;justify-content:center}
+.scene-example-details h3{font:italic 22px Georgia,serif;margin:0 0 12px;color:#f0dfba}
+.scene-example-details p{font-size:13px;line-height:1.6;color:#c6cfd0}
+.scene-example-details .scene-example-profile{color:#ceb88a;font-weight:600}
+.scene-example-details a{color:#a9d4dc;font-size:13px}
+.scene-example .tcg-card .name{font-size:calc(var(--card-w)*.056)}
+@media(max-width:1250px){.scene-example-grid{grid-template-columns:1fr}.scene-example{grid-template-columns:300px 1fr}}
+@media(max-width:580px){.scene-examples{margin:24px 12px;padding:18px}.scene-example{grid-template-columns:1fr}.scene-example-details{text-align:center}}

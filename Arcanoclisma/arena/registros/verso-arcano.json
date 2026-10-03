@@ -1,0 +1,21 @@
+{
+  "id": "verso-arcano",
+  "arquivo": "raster/verso-arcano.png",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-e7716105-1cfd-41e8-9986-94e037b10e50.png",
+  "ferramenta": "image_gen integrada",
+  "prompt": "Create ONE premium polished illustrated CARD BACK base for the original Arcanoclisma TCG. Portrait, exact 63:88 aspect, maximum native resolution. Full rectangular card with gently rounded corners, a complete ELEGANT GOLD BORDER with convincing illustrated embossed depth, thin subtle BLACK inner and outer beveled edges, medium-dark royal/navy BLUE field. At the exact center a beautiful compact AMALGAM OF MAGICAL ENERGY: rose-pink and deep dark blue swirls interpenetrate, braid and merge into an original arcane seal, contained and tastefully luminous rather than explosive. Fine engraved flourishes and orderly filigree repeat with 180-degree rotational balance. Restrained embossed relief, lifted border, inset blue field, tiny clean highlights and crisp material shadow shapes. Arcanoclisma independent-comics/contemporary-animation finish: nuanced live ink, polished anti-aliased contour, graphic colors and hard shadows, subtle hatching/halftone, no pixel art, no photorealistic or plastic 3D. Leave a calm dark horizontal ribbon of negative space across the CENTRAL seal for the editable gold title ARCAN OCLISMA to be typeset separately by HTML/SVG; DO NOT draw any letters, logo, numbers, text, stats, rarity or type identifiers in this base. Every card will share this same back. Full card perimeter fits within image with ample true TRANSPARENT margins. Opaque dark blue inside the card; alpha-zero only outside its rounded silhouette. No backdrop or floor shadow.\r\n",
+  "criadoEm": "2026-10-03T04:28:58.887Z",
+  "largura": 1061,
+  "altura": 1482,
+  "hasAlpha": true,
+  "alfaCantos": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "pixelsTransparentes": 239266,
+  "pixelsOpacos": 2247,
+  "sha256": "d5be6cbfc45d443d460731f4a8997432e8f68dc97a3397e06f1e19e1cd27c9e8",
+  "avaliacaoAutor": "pendente"
+}

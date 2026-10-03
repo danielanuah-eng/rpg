@@ -32,3 +32,7 @@ O autor autorizou o push das artes aprovadas, do agente e da documentação para
 ## Lotes de cartas (Produtor de Cartas)
 
 Quando o autor e o Claude fecham um conjunto de cartas, o Claude grava `pedidos/lote-<id>.claude.json` (modelo em `modelos/lote.claude.exemplo.json`) com a mecânica exata e a descrição dos personagens e do que a arte precisa ter. O **Produtor de Cartas** (`.agents/skills/produtor-de-cartas/SKILL.md`) vê o lote e põe os agentes visuais para trabalhar em cada carta, registrando o estado em `producao/lote-<id>.estado.json`. As entregas e a confirmação de integração seguem as etapas acima, carta por carta.
+
+## Diretriz obrigatória de acabamento v9
+
+Direção atual do autor (03/10/2026): raridade é somente estética, sem alterar regras/efeitos/números. Claude informa raridade e arteAlternativa em todo pedido/prompt de imagem de carta. Toda lendária ou alternativa inclui iluminação, textura e brilho na ilustração conforme Arcanoclisma/cartas/DIRETRIZ-ACABAMENTO-E-RARIDADE.md; salvar o prompt e os parâmetros cosméticos. Alternativa pode sugerir volume 3D com luz, escorço e planos, mas fica inteiramente dentro da carta. Manter identidade, direção de arte e cenas novas para personagens existentes. O acabamento HTML/CSS complementa a arte; não substitui a iluminação pedida na geração. Não refazer automaticamente artes aprovadas.

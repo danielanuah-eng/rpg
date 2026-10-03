@@ -1,0 +1,263 @@
+{
+  "versao": 2,
+  "fonte": "Contrato visual para motor do Claude",
+  "modeloPublico": {
+    "id": "identificador permitido ao observador",
+    "nome": "CartaDef.nome",
+    "tipo": "CartaDef.tipo",
+    "valores": "CartaDef.valores",
+    "custo": "CartaDef.custo",
+    "grau": "CartaDef.grau",
+    "arcanoGerado": "CartaDef.arcanoGerado",
+    "ataque": "CartaDef.ataque, se aplicável",
+    "vida": "CartaDef.vida ou vida calculada pelo motor",
+    "texto": "CartaDef.texto",
+    "arte": "caminho autorizado",
+    "arteModo": "cena | recorte",
+    "artePosicao": "50% 50%",
+    "cosmetico": {
+      "raridade": "comum | incomum | rara | lendaria",
+      "arteAlternativa": "boolean: variante visual full art, sem alterar a raridade"
+    },
+    "subtipos": "CartaDef.subtipos: lista, inclusive Dragão",
+    "categoriaItem": "canal | armadura | extra (proposta a integrar)",
+    "defesa": "defesa autorizada da armadura",
+    "vidaDesgaste": "vida de desgaste autorizada da armadura",
+    "velocidade": "CartaDef.velocidade: findante | repentina",
+    "comprometimento": "ConjuradorDef.comprometimento",
+    "descricaoComprometimento": "Texto visual opcional do Comprometimento, fornecido pelo Claude/autor"
+  },
+  "oculta": {
+    "modelo": null,
+    "verso": "raster/verso-arcano-v3.png",
+    "camposPermitidos": [
+      "posição/quantidade autorizadas pelo motor"
+    ],
+    "camposProibidos": [
+      "defId",
+      "nome",
+      "texto",
+      "arte",
+      "tipo",
+      "valores",
+      "raridade",
+      "custo",
+      "grau",
+      "arcanoGerado",
+      "ataque",
+      "vida",
+      "subtipos",
+      "categoriaItem",
+      "defesa",
+      "vidaDesgaste",
+      "velocidade",
+      "comprometimento",
+      "descricaoComprometimento",
+      "arteAlternativa",
+      "artVariant",
+      "finish"
+    ]
+  },
+  "revelacao": {
+    "fonte": "permissão calculada pelo servidor/motor",
+    "orientacaoNaoConcedePermissao": true,
+    "frenteLegivel": "readable:true",
+    "prototipo": "usa modelos fictícios públicos, não estabelece sigilo numa partida"
+  },
+  "vinculosZona": {
+    "pitch_zone": "zonaArcano",
+    "baralho": "jogador.baralho",
+    "mao": "jogador.mao",
+    "campo": "jogador.campo",
+    "grau": "jogador.grau",
+    "cemiterio": "jogador.cemiterio",
+    "pilha": "estado.pilha"
+  },
+  "raridade": {
+    "apenasCosmetica": true,
+    "versoUnico": true,
+    "foraDeEfeitosCustosEEstatisticas": true
+  },
+  "conjurador": {
+    "versao": 8,
+    "template": "templates/conjurador-v8.svg",
+    "overlay": [
+      "templates/overlay-conjurador-v8.svg",
+      "templates/overlay-conjurador-v8.png"
+    ],
+    "esfera": "vetores/esfera-conjurador-v8.svg",
+    "simbolos": "vetores/valor-*-simbolo-v8.svg",
+    "valores": "ConjuradorDef.valores: dois símbolos completos, cada um centralizado em sua metade; cores separadas; sem custo/Arcano gerado.",
+    "tipo": {
+      "campoMotor": "ConjuradorDef.comprometimento",
+      "opcoes": [
+        "Invocador",
+        "Brigão",
+        "Parrudão da quebrada",
+        "Habilidoso",
+        "Preparado"
+      ],
+      "descricao": "descricaoComprometimento: texto visual editável; não inventar benefícios mecânicos."
+    },
+    "referencias": [
+      "Arcanoclisma/tcg/src/tipos.ts:115",
+      "Arcanoclisma/tcg/src/conjuradores.ts:1",
+      "Arcanoclisma/tcg/docs/LIVRO-DE-REGRAS.md:168"
+    ],
+    "camadas": {
+      "esfera": 5,
+      "tipoEDescricao": 4,
+      "reflexoLendario": 3
+    },
+    "dimensoes": [
+      1260,
+      1760
+    ],
+    "alfa": {
+      "pixelsTransparentes": 1461950,
+      "cantos": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "canva": "Asset local pronto para composição futura; não altera os rascunhos v5 nem confirma salvamento no Canva.",
+    "posicaoEsfera": {
+      "viewBox": [
+        630,
+        880
+      ],
+      "centro": [
+        315,
+        116
+      ],
+      "diametro": 56,
+      "descricao": "Centralizada logo abaixo do nome, fora da caixa de texto; pequena e discreta."
+    }
+  },
+  "revisaoVisual": {
+    "palco": [
+      1920,
+      1440
+    ],
+    "itens": {
+      "tipo": "item",
+      "categorias": [
+        "canal",
+        "armadura",
+        "extra"
+      ],
+      "defesa": "número autorizado pelo motor",
+      "vidaDesgaste": "número autorizado pelo motor",
+      "extraNomeProvisorio": true,
+      "estado": "proposta visual; Claude precisa integrar ao motor"
+    },
+    "classificacoes": {
+      "subtipos": "lista, inclusive Dragão",
+      "valores": "lista de Valores do motor; extra classificação semântica indicada no custo por cores"
+    },
+    "movimentos": {
+      "api": "ArcanoclismaCardVisual.animateMotion",
+      "opcoes": {
+        "action": "attack | block",
+        "opponent": "boolean"
+      },
+      "duracaoMs": 880,
+      "retorno": "Promise; played/cancelled",
+      "permissoes": "Usar somente wrapper de carta cuja visualização já foi autorizada.",
+      "suspender": "Deitar o wrapper inteiro em 90 graus; ataque e bloqueio terminam nessa orientação.",
+      "preparar": "ArcanoclismaCardVisual.setSuspended(wrapper, false); somente quando motor permitir.",
+      "estado": "Inst.suspensa é fonte de verdade do jogo; animação não implementa regra.",
+      "perspectiva": {
+        "ordemCss": "perspective(900px) rotateX(22deg) translate3d(0, avanço, altura) rotateZ(giro)",
+        "semantica": "Giro aplicado no plano do campo antes da projeção da câmera; carta inteira, textos e moldura compartilham a mesma perspectiva.",
+        "suspensa": "perspective(900px) rotateX(22deg) rotateZ(90deg)",
+        "pronta": "perspective(900px) rotateX(22deg) rotateZ(0deg)",
+        "rival": "Orientação 180° no conteúdo interno, sem aplicar uma segunda inclinação.",
+        "camera": "Inclinação parametrizada por --table-tilt; coordenadas ainda conceituais."
+      }
+    },
+    "raridade": "Lendária com iridescência azul/rosa/dourado na borda e na arte, sem efeito sobre regras ou versos."
+  },
+  "acabamento": {
+    "versao": 9,
+    "apenasEstetica": true,
+    "arteAlternativaIndependeDeRaridade": true,
+    "css": "acabamento-v9.css",
+    "raridades": {
+      "comum": {
+        "acabamento": "Arte original; alternativa ativa perfil próprio."
+      },
+      "incomum": {
+        "paleta": [
+          "prata",
+          "roxo"
+        ],
+        "herda": "Rara v5",
+        "reflexo": 0.23,
+        "linhaDeLuz": 0.1,
+        "periodoSegundos": 7.5,
+        "textura": 0.36,
+        "mascara": "Área de arte"
+      },
+      "rara": {
+        "paleta": [
+          "prata",
+          "roxo"
+        ],
+        "herda": "Lendária v7 em prata/roxo",
+        "reflexo": 0.66,
+        "linhaDeLuz": 0.28,
+        "periodoSegundos": 5.2,
+        "textura": 0.96,
+        "mascara": "Face inteira sob os textos"
+      },
+      "lendaria": {
+        "paleta": [
+          "dourado",
+          "rosa",
+          "violeta",
+          "azul",
+          "verde"
+        ],
+        "reflexo": 0.9,
+        "linhaDeLuz": 0.5,
+        "periodoSegundos": 4.8,
+        "textura": 1,
+        "realceIluminacao": true,
+        "padraoBrilhoObrigatorio": true
+      }
+    },
+    "alternativa": {
+      "fullArt": true,
+      "padraoBrilhoObrigatorio": true,
+      "reflexo": 0.9,
+      "linhaDeLuz": 0.5,
+      "periodoSegundos": 4.8,
+      "realceIluminacao": true,
+      "profundidade": "Contraste, iluminação focal e sombra interna; tudo recortado à carta, sem deslocamento para fora."
+    },
+    "texturas": {
+      "dourada": "vetores/foil-arcoiris-dourado-v9.svg",
+      "prateada": "vetores/foil-prata-roxo-v9.svg"
+    },
+    "filtro": {
+      "id": "arcano-highlight-v9",
+      "modo": "Realce por intensidade RGB, alfa da fonte, blur leve e screen; não identifica semanticamente magia.",
+      "fonte": "Camada duplicada da arte; arquivo aprovado preservado",
+      "opacidade": 0.46
+    },
+    "camadas": {
+      "arte": 0,
+      "realceEProfundidade": 1,
+      "moldura": 2,
+      "texturaEReflexo": 3,
+      "textosEEstatisticas": 4,
+      "recursos": 5
+    },
+    "sigilo": "Nenhum dado de raridade/variante nem filtro em cartas ocultas.",
+    "movimentoReduzido": "Reflexo estático.",
+    "prompts": "Pedido define raridade e arteAlternativa; lendária/alternativa inclui iluminação mágica, brilho e textura desde a geração."
+  }
+}

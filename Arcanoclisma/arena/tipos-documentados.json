@@ -1,0 +1,25 @@
+{
+  "fontes": [
+    "../tcg/docs/LIVRO-DE-REGRAS.md:75",
+    "../tcg/docs/LIVRO-DE-REGRAS.md:81",
+    "../tcg/src/tipos.ts:5"
+  ],
+  "tiposDocumentados": [
+    "Aliado",
+    "Temporária",
+    "Mística",
+    "Estrutura",
+    "Item de Conjurador",
+    "Extra"
+  ],
+  "velocidades": [
+    "Findante",
+    "Repentina"
+  ],
+  "conjurador": "Figura própria com carta e estatísticas; não confundir habilidade repentina com velocidade da carta.",
+  "extra": "Carta multivalor; pode pertencer a qualquer tipo. Não é o mesmo que o slot provisório de item Extra.",
+  "tokens": "Tipo e regras definidos pela carta criadora.",
+  "modeloVisual": "Exibir tipo e Repentina quando aplicável. Em Temporária, exibir sempre Findante ou Repentina. Não acrescentar Permanente. Não inferir velocidade real se ausente.",
+  "escolhaAutor": "Manter Findante; não renomear como Momentânea.",
+  "motor": "Motor atual implementa Aliado/Temporária/Mística/Estrutura; itens e Extra estão documentados para fase 2."
+}

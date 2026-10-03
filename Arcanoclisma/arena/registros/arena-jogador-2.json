@@ -1,0 +1,21 @@
+{
+  "id": "arena-jogador-2",
+  "arquivo": "raster/arena-jogador-2.png",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-74594c4e-d890-4117-b94e-d8bf3427db5a.png",
+  "ferramenta": "image_gen integrada",
+  "prompt": "Use case: stylized-concept. Reference image: the supplied Arcanoclisma dueling platform, preserve the SAME arena identity: broad octagonal rectangular dark blue slate tabletop, thin subdued bronze central circular seal and straight dividing line, pale layered stone perimeter, minimal moss and bronze compass corner discs. Create a NEW camera view from PLAYER TWO's own opposite end, centered looking FORWARD across the playing field, as a seated player would see it. Moderately low frontal perspective looking down about 35 degrees, NOT overhead, NOT nearly top-down. The nearest short edge spans wide across the bottom of image; the far edge is substantially narrower due to perspective; the player's own half occupies the lower foreground, the dividing line visible in mid-distance, rival half recedes above it. Keep the ENTIRE platform including near edge visible, enough playable surface for HTML cards, empty smooth slate areas. Muted coral inset tiny marker at near central lip (Player2), restrained cyan inset tiny marker at far central lip (Player1), not glowing. No cards, characters, hands, text, letters, labels, HUD, numbers, life counters or sky background: these are separate assets. High-quality original fantasy ink illustration, warm limestone versus cool blue slate, firm contours, fine sparse material texture and restrained shading, polished crisp anti-aliased edges, not pixelated, not excessive ornaments or luminous effects. Landscape 16:9 maximum native resolution, complete floating platform isolated on true RGBA transparent background, soft cast shadow minimal and separate from stone. This is specifically the reverse observer camera, not a brand new board: as if walking around the platform to the opposite short end. Keep same shape and all material identities. Perspective depth: near own half clearly broad and rival half foreshortened. Preserve symmetry, reverse relative stone/moss details with coherent opposite viewpoint. No baked-in labels.\n",
+  "criadoEm": "2026-10-03T04:45:51.187Z",
+  "largura": 1672,
+  "altura": 941,
+  "hasAlpha": true,
+  "alfaCantos": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "pixelsTransparentes": 594276,
+  "pixelsOpacos": 420,
+  "sha256": "fcc8e15dd507f618ef4f7dbc082979dc5349e8bd8705b17b202a7c6568c1ef54",
+  "avaliacaoAutor": "pendente"
+}

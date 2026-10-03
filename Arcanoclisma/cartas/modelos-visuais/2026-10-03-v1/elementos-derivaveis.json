@@ -1,0 +1,140 @@
+{
+  "versao": 1,
+  "nota": "Elementos visíveis e ideias de derivações, sem atribuição de regras. Só dois modelos foram produzidos neste pedido.",
+  "elementos": [
+    {
+      "id": "dragao-energia-ciantia",
+      "visivel": "Grande dragão translúcido azul-violeta",
+      "origem": [
+        "Arcanoclisma/arte/imagens/ciantia-dragoes.png",
+        "dragao-da-travessia-arte-v1.png"
+      ],
+      "tiposPossiveis": [
+        "Aliado · Dragão"
+      ],
+      "modeloDerivado": "dragao-transplanar",
+      "ideia": "Desenvolver a criatura de energia da personagem em uma presença independente, com novas poses e eventos.",
+      "estado": "proposta_do_autor_aguardando_claude",
+      "mecanicaConfirmada": false,
+      "proximaCartaDependeDePedidoClaude": true,
+      "propostaAutor": "Arcanoclisma/cartas/propostas/ciantia-dragoes-2026-10-03.autor.json"
+    },
+    {
+      "id": "dragaozinho-dourado",
+      "visivel": "Pequeno dragão de energia âmbar",
+      "origem": [
+        "licao-do-jardim-arte-v2.png"
+      ],
+      "tiposPossiveis": [
+        "Aliado · Dragão"
+      ],
+      "ideia": "Uma carta centrada na criatura pequena, sua curiosidade e interação com plantas.",
+      "estado": "ideia_visual",
+      "mecanicaConfirmada": false,
+      "proximaCartaDependeDePedidoClaude": true
+    },
+    {
+      "id": "jardim-suspenso",
+      "visivel": "Terraços, arcos e vegetação sobre o vale",
+      "origem": [
+        "licao-do-jardim-arte-v2.png"
+      ],
+      "tiposPossiveis": [
+        "Estrutura"
+      ],
+      "ideia": "O próprio jardim como local; futura cena sem a composição de Ciantia repetida.",
+      "estado": "ideia_visual",
+      "mecanicaConfirmada": false,
+      "proximaCartaDependeDePedidoClaude": true
+    },
+    {
+      "id": "caderno-ciantia",
+      "visivel": "Caderno aberto de observações e desenhos",
+      "origem": [
+        "licao-do-jardim-arte-v2.png"
+      ],
+      "tiposPossiveis": [
+        "Item de Conjurador",
+        "Mística"
+      ],
+      "ideia": "Estudo, anotação ou conhecimento como tema visual; categoria e função a definir pelo Claude.",
+      "estado": "ideia_visual",
+      "mecanicaConfirmada": false,
+      "proximaCartaDependeDePedidoClaude": true
+    },
+    {
+      "id": "canais-bronze",
+      "visivel": "Canaletas de bronze com água e pequenos desníveis",
+      "origem": [
+        "licao-do-jardim-arte-v2.png"
+      ],
+      "tiposPossiveis": [
+        "Estrutura",
+        "Mística"
+      ],
+      "ideia": "Irrigação, condução ou manutenção do jardim; bronze envelhecido e luz discreta.",
+      "estado": "ideia_visual",
+      "mecanicaConfirmada": false,
+      "proximaCartaDependeDePedidoClaude": true
+    },
+    {
+      "id": "broto-luminoso",
+      "visivel": "Broto iluminado junto do pequeno dragão",
+      "origem": [
+        "licao-do-jardim-arte-v2.png"
+      ],
+      "tiposPossiveis": [
+        "Mística",
+        "Temporária"
+      ],
+      "ideia": "Crescimento e cuidado como evento próprio, com enquadramento novo.",
+      "estado": "ideia_visual",
+      "mecanicaConfirmada": false,
+      "proximaCartaDependeDePedidoClaude": true
+    },
+    {
+      "id": "ruptura-celeste",
+      "visivel": "Fenda violeta com contorno dourado no céu",
+      "origem": [
+        "dragao-da-travessia-arte-v1.png"
+      ],
+      "tiposPossiveis": [
+        "Temporária",
+        "Mística"
+      ],
+      "ideia": "A ruptura como protagonista do evento; brilho focal e cenário de menor intensidade.",
+      "estado": "ideia_visual",
+      "mecanicaConfirmada": false,
+      "proximaCartaDependeDePedidoClaude": true
+    },
+    {
+      "id": "ponte-interrompida",
+      "visivel": "Arcos, corrimãos e fragmentos de ponte suspensos",
+      "origem": [
+        "dragao-da-travessia-arte-v1.png"
+      ],
+      "tiposPossiveis": [
+        "Estrutura",
+        "Temporária"
+      ],
+      "ideia": "A ponte ou o instante da interrupção, vistos de outra posição e em nova composição.",
+      "estado": "ideia_visual",
+      "mecanicaConfirmada": false,
+      "proximaCartaDependeDePedidoClaude": true
+    },
+    {
+      "id": "viajantes-travessia",
+      "visivel": "Duas figuras pequenas na ponte distante",
+      "origem": [
+        "dragao-da-travessia-arte-v1.png"
+      ],
+      "tiposPossiveis": [
+        "Aliado"
+      ],
+      "ideia": "Desenvolver os viajantes com identidade própria e nova arte; não ampliar/copiar as silhuetas como arte final.",
+      "estado": "ideia_visual",
+      "mecanicaConfirmada": false,
+      "proximaCartaDependeDePedidoClaude": true
+    }
+  ]
+}

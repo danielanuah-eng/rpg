@@ -1,0 +1,12 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const file=path.resolve(root,'../cartas/templates.json');
+const t=JSON.parse(await fs.readFile(file,'utf8'));t.versao=3;t.estado='base_salva_revisoes_v3_aguardando_aprovacao';t.canva.resultado='Base anterior salva; revisão com decoração fina/textos espaçados e modelos de itens aguardam aprovação após prévia.';
+const generic=t.templates.find(x=>x.designIdCanva==='DAHW7B69D2E');if(generic){generic.id='full-art-generico-v3';generic.aprovacao='Revisão v3 aguardando aprovação após prévia';generic.exportacoesLocais=['../arena/templates/overlay-generico-v3.svg','../arena/templates/overlay-generico-v3.png'];generic.modulos=[...new Set([...generic.modulos,'subtipos','valor-anel-custo','raridade-borda-inferior'])];}
+t.templates=t.templates.filter(x=>!['item-canal-v3','item-armadura-v3','item-extra-v3'].includes(x.id));
+for(const [i,k]of ['canal','armadura','extra'].entries())t.templates.push({id:'item-'+k+'-v3',designIdCanva:'DAHW9THMHLk',urlCanva:'https://www.canva.com/d/tgjo3Z1WTjbpOlv',pagina:i+1,corteAlvoMm:[63,88],canvaPx:[1260,1760],exportacoesLocais:['../arena/templates/overlay-'+k+'-v3.svg','../arena/templates/overlay-'+k+'-v3.png'],camposEstatistica:k==='armadura'?['defesa','vidaDesgaste']:[],aprovacao:'Rascunho aguardando aprovação após prévia',nomeProvisorio:k==='extra'});
+await fs.writeFile(file,JSON.stringify(t,null,2)+'\n');
+const onlineFile=path.join(root,'modelo-online.json');const online=JSON.parse(await fs.readFile(onlineFile,'utf8'));online.versao=2;online.modeloPublico.subtipos='CartaDef.subtipos: lista, inclusive Dragão';online.modeloPublico.categoriaItem='canal | armadura | extra (proposta a integrar)';online.modeloPublico.defesa='defesa autorizada da armadura';online.modeloPublico.vidaDesgaste='vida de desgaste autorizada da armadura';online.oculta.camposProibidos.push('subtipos','categoriaItem','defesa','vidaDesgaste');online.oculta.camposProibidos=[...new Set(online.oculta.camposProibidos)];await fs.writeFile(onlineFile,JSON.stringify(online,null,2)+'\n');
+const generator=path.join(root,'scripts/gerar-vetores.mjs');let g=await fs.readFile(generator,'utf8');if(!g.includes("import('./compor-overlays.mjs')"))g+="\nawait import('./compor-overlays.mjs');\n";await fs.writeFile(generator,g);
