@@ -48,7 +48,7 @@ A conversa anterior chegou a 47% do contexto e foi encerrada para economizar cr�
 - Conjurador que bloqueia **não** devolve o dano da arma (só se a arma tiver efeito assim).
 - Itens vêm de um **side deck**; cada jogador escolhe antes da partida um Canal, uma Armadura e um Extra e não troca durante o jogo. O **Extra é um consumível de suporte** (sem Ataque; ativação de uso único): Poção de cura e Elixir de foco. O bot ainda NÃO usa o Extra. A escolha do side deck já está no app (tela inicial).
 - "Levanta também" vale só para o Conjurador: confirmado.
-- Pedido do autor: git push de tudo feito até agora (feito, ver commit). Depois: nova etapa em outra conversa.
+- Push feito: commit e0b7614 em origin/main (tudo do TCG, agentes e pedidos; ficaram de fora as artes e a pasta Arcanoclisma/arena, que são do Codex). Depois: nova etapa em outra conversa.
 - Pendências do Codex: pedido `templates-mecanica` precisa trocar "Extra com Ataque" por "Extra consumível sem Ataque".
 
 ## Esperando o autor (itens 1 a 3 acima já respondidos; ficam o 5 e novos envios)
