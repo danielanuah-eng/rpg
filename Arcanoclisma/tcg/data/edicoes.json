@@ -1,0 +1,140 @@
+{
+ "cartas": {
+  "base-comprar-c1": {
+   "nome": "Olhar o topo (custo 1, repentina)",
+   "velocidade": "repentina",
+   "efeitos": [
+    {
+     "tipo": "olharTopo",
+     "quantidade": 3,
+     "pegar": 1
+    }
+   ],
+   "texto": "Olhe as 3 cartas do topo do seu baralho. Ponha 1 na mão e as outras no fundo do baralho."
+  }
+ },
+ "conjuradores": {
+  "lyandra": {
+   "danoBasico": 0
+  },
+  "carmal": {
+   "danoBasico": 0
+  },
+  "ricardo": {
+   "danoBasico": 0
+  },
+  "roh": {
+   "danoBasico": 0
+  },
+  "agnelo": {
+   "danoBasico": 0
+  },
+  "diastaros": {
+   "danoBasico": 0
+  },
+  "ana": {
+   "danoBasico": 0
+  },
+  "mitonho": {
+   "danoBasico": 0
+  },
+  "osmar": {
+   "danoBasico": 0
+  }
+ },
+ "regras": {
+  "reporMaoNoInicio": true,
+  "conjuradorLevantaNoInicio": true,
+  "conjuradorSoAtacaComArma": true
+ },
+ "precos": {},
+ "baralhos": {
+  "lyandra": {
+   "itens": [
+    "item-canal-cajado",
+    "item-armadura-gibao",
+    "item-extra-pocao"
+   ]
+  },
+  "carmal": {
+   "itens": [
+    "item-canal-cajado",
+    "item-armadura-gibao",
+    "item-extra-pocao"
+   ]
+  },
+  "ricardo": {
+   "itens": [
+    "item-canal-cajado",
+    "item-armadura-gibao",
+    "item-extra-pocao"
+   ]
+  },
+  "roh": {
+   "itens": [
+    "item-canal-cajado",
+    "item-armadura-gibao",
+    "item-extra-pocao"
+   ]
+  },
+  "agnelo": {
+   "itens": [
+    "item-canal-cajado",
+    "item-armadura-gibao",
+    "item-extra-pocao"
+   ]
+  },
+  "diastaros": {
+   "itens": [
+    "item-canal-cajado",
+    "item-armadura-gibao",
+    "item-extra-pocao"
+   ]
+  },
+  "ana": {
+   "itens": [
+    "item-canal-cajado",
+    "item-armadura-gibao",
+    "item-extra-pocao"
+   ]
+  },
+  "mitonho": {
+   "itens": [
+    "item-canal-cajado",
+    "item-armadura-gibao",
+    "item-extra-pocao"
+   ]
+  },
+  "osmar": {
+   "itens": [
+    "item-canal-cajado",
+    "item-armadura-gibao",
+    "item-extra-pocao"
+   ]
+  }
+ },
+ "historico": [
+  {
+   "quando": "2026-10-03T15:20:41.827Z",
+   "nota": "Ajustes pedidos nos comentários do envio de 03/10 (feitos pelo Claude).",
+   "mudancas": [
+    "Regra: no Início do próprio turno, o jogador repõe a mão até a mão inicial do Conjurador (5); o Final não compra mais. Limite de mão geral continua 7.",
+    "Regra: no Início do próprio turno, o Conjurador levanta (pode atacar depois de ter bloqueado no turno do oponente).",
+    "Regra: o Conjurador só ataca com arma (item no Canal ou Extra); o ataque dele é o Ataque das armas.",
+    "Conjuradores: dano básico 1 → 0 (os 9).",
+    "Itens equipados nos 9 Conjuradores: Cajado de aprendiz (Canal, Ataque 1) e Gibão de couro (Armadura, Defesa 1, desgaste 4).",
+    "Carta Comprar cartas (custo 1) → Olhar o topo (custo 1, repentina): olhe 3, ponha 1 na mão, o resto no fundo do baralho."
+   ]
+  },
+  {
+   "quando": "2026-10-03T15:35:34.281Z",
+   "nota": "Respostas do autor sobre itens (feito pelo Claude).",
+   "mudancas": [
+    "Itens: o Conjurador que bloqueia não devolve o dano da arma (só com efeito da arma, no futuro).",
+    "Itens: o Extra agora é um item consumível de suporte (sem Ataque); só o Canal dá Ataque.",
+    "Itens: cada jogador escolhe do seu side deck um Canal, uma Armadura e um Extra antes da partida; não trocam durante o jogo.",
+    "Itens de teste: Poção de cura e Elixir de foco (Extra); Amuleto de faísca removido. Todos os Conjuradores levam Cajado, Gibão e Poção por padrão."
+   ]
+  }
+ ]
+}

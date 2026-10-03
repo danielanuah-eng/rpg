@@ -1,0 +1,37 @@
+{
+  "tarefaId": "lote-exemplo",
+  "autor": "Claude",
+  "estado": "rascunho",
+  "necessidadeAtual": false,
+  "versao": 1,
+  "atualizadoEm": null,
+  "objetivoAtual": "Cartas definidas pelo autor e pelo Claude, prontas para o Produtor de Cartas pôr os agentes visuais para trabalhar.",
+  "metaDeAvaliacao": "ex.: avaliar a cada 3 artes",
+  "referenciasClaude": ["Arcanoclisma/tcg/docs/LIVRO-DE-REGRAS.md", "Arcanoclisma/cartas/pedidos/templates-mecanica.claude.json"],
+  "cartas": [
+    {
+      "id": "id-do-motor",
+      "nome": "",
+      "tipo": "aliado | temporaria | mistica | estrutura | conjurador | item",
+      "categoriaItem": "canal | armadura | extra (só itens)",
+      "subtipos": [],
+      "valores": [],
+      "numeros": { "custo": null, "grau": null, "arcanoGerado": null, "ataque": null, "vida": null, "defesa": null, "vidaDesgaste": null },
+      "velocidade": "findante | repentina",
+      "textos": { "regras": "texto exato", "ambientacao": "" },
+      "raridade": "comum | incomum | rara | lendaria",
+      "identidade": "quem ou o que é, em uma ou duas frases",
+      "personagens": [
+        { "nome": "", "jaExiste": false, "referencias": [], "aparencia": "", "papelNaCena": "" }
+      ],
+      "cena": "o que acontece no momento retratado",
+      "arteObrigatorio": ["elementos que precisam aparecer: ligação com a mecânica, Valor, criatura, arma..."],
+      "arteProibido": ["reaproveitar a arte do Conjurador", "texto dentro da arte"],
+      "composicao": "enquadramento sugerido (pode ser enriquecido pelo Designer)",
+      "template": "aliado | temporaria | mistica | estrutura | conjurador | canal | armadura | extra",
+      "uso": "baralho de teste, impressão, online",
+      "camposSemAplicacao": []
+    }
+  ],
+  "respostas": []
+}

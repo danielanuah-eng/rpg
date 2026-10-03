@@ -1,0 +1,18 @@
+{
+  "_instrucoes": [
+    "Pedido do agente-balanceador ao agente de testes na variante BAL10b: Controle com identidade de Controle (remoção e vantagem a longo prazo, poucos Aliados).",
+    "Falham hoje: Controle perde mais Aliados que o oponente (1,11) e vence só 52% das partidas longas."
+  ],
+  "variante": "BAL10b",
+  "partidasPorConfronto": 60,
+  "partidasConfirmacao": 240,
+  "objetivos": [
+    {
+      "id": "controle-de-verdade",
+      "descricao": "Controle: segura o Aggro, troca bem e cresce com o tempo",
+      "arquetipo": "Controle",
+      "metas": [{ "contra": ["Aggro"], "vitoriaMin": 0.36 }, { "contra": ["Midrange"], "vitoriaMin": 0.3, "vitoriaMax": 0.5 }, { "contra": ["Tempo"], "vitoriaMax": 0.5 }],
+      "restricoes": { "contraOutrosMin": 0.4, "contraOutrosMax": 0.58, "travadasMax": 0.08, "trocasMax": 0.95, "vitoriaLongaMin": 0.57, "aliadosMax": 14 }
+    }
+  ]
+}

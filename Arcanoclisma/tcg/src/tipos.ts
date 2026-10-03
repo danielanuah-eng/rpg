@@ -1,0 +1,266 @@
+// Tipos do motor do Arcanoclisma TCG. Só sintaxe "apagável" (sem enum), para rodar direto no Node 24.
+
+export type Jogador = 0 | 1;
+export type Etapa = 'inicio' | 'principal' | 'cataclisma' | 'final';
+/** 'item': equipamento do Conjurador (Canal, Armadura ou Extra), escolhido na preparação, fora do baralho. */
+export type TipoCarta = 'aliado' | 'temporaria' | 'mistica' | 'estrutura' | 'item';
+export type CategoriaItem = 'canal' | 'armadura' | 'extra';
+export type Velocidade = 'findante' | 'repentina';
+export type AlvoEfeito = 'escolhido' | 'escolhidoAliado' | 'conjuradorInimigo' | 'conjuradorProprio';
+
+export type Efeito =
+  /** escalaGrau: soma ao dano o número de cartas na Zona de Grau de quem joga (remoção que cresce com o jogo). */
+  | { tipo: 'dano'; valor: number; alvo: AlvoEfeito; escalaGrau?: boolean }
+  /** Devolve a permanente alvo para a mão do dono (tempo). */
+  | { tipo: 'devolver'; alvo: 'escolhido' | 'escolhidoAliado' | 'escolhidoProprio' }
+  /** Causa dano a cada Aliado do oponente. */
+  | { tipo: 'danoTodosAliados'; valor: number; /** Rodada 6: também nos seus Aliados (varredura simétrica). */ ambos?: boolean }
+  /** Destrói todos os Aliados do oponente (ambos: false) ou de todos os jogadores (ambos: true). Rodada 6. */
+  | { tipo: 'destruirTodosAliados'; ambos: boolean }
+  /** Anula uma carta na pilha (vai para o cemitério do dono). */
+  | { tipo: 'anular'; alvo: 'pilha' }
+  | { tipo: 'curar'; valor: number; alvo: AlvoEfeito }
+  | { tipo: 'destruir'; alvo: 'escolhido' | 'escolhidoAliado' }
+  | { tipo: 'comprar'; valor: number }
+  | { tipo: 'arcano'; valor: number }
+  | { tipo: 'arcanoOponente'; valor: number }
+  /** Rodada 7. A primeira carta que você joga neste turno custa N a menos (só vale se você ainda não jogou carta no turno). */
+  | { tipo: 'descontoProximaCarta'; valor: number }
+  /** Rodada 7. Bane (zona de banimento) uma carta da sua mão; no seu próximo turno você pode jogá-la custando `desconto` a menos. Alvo: carta da mão. */
+  | { tipo: 'banirDaMao'; desconto: number }
+  /** Rodada 7. Põe no seu campo um Aliado do cemitério de qualquer jogador; você paga `custoExtra` a mais, além do custo dele. Alvo: Aliado em um cemitério. */
+  | { tipo: 'reanimar'; custoExtra: number }
+  /** Rodada 7. Neste turno você pode jogar do seu cemitério uma carta cujo efeito anule outra, pagando o custo dela; ao resolver ela é banida. */
+  | { tipo: 'permitirAnularDoCemiterio' }
+  /** Olhe as N cartas do topo do seu baralho, ponha `pegar` delas na mão e o resto no fundo do baralho. */
+  | { tipo: 'olharTopo'; quantidade: number; pegar: number };
+
+/** Habilidade ativada de uma permanente: paga custo em Arcano e (opcionalmente) suspende. */
+export interface Ativacao {
+  /** Habilidade de Conjurador de velocidade Repentina: pode ser usada com prioridade, a qualquer momento (as demais: só na sua Principal, pilha vazia). */
+  repentina?: boolean;
+  custo: number;
+  suspende: boolean;
+  efeitos: Efeito[];
+}
+
+export interface Regras {
+  /** Sem baralho, sem mão e sem ações possíveis no início da Principal: o jogador perde. */
+  semAcaoPerde: boolean;
+  /** Quem começa não pode pôr carta no Grau no turno 1. */
+  primeiroSemGrauNoTurno1: boolean;
+  /** Pôr carta no Grau não suspende o Conjurador (1 por turno), então ele ainda pode atacar. */
+  grauSemSuspender: boolean;
+  /** O Conjurador de quem começa não pode atacar no turno 1. */
+  primeiroConjSemAtacarTurno1: boolean;
+  /** Relógio de impasse: perde quem passa este número de turnos seguidos sem jogar carta, ativar ou atacar (0 = desligado). */
+  impasseTurnos: number;
+  /** Cartas a mais que o segundo jogador compra na preparação. */
+  segundoCartaExtra: number;
+  /** Arcano com que o segundo jogador começa. */
+  segundoArcanoInicial: number;
+  /** Máximo de cartas na mão no fim do turno (o excesso é descartado). */
+  limiteMao: number;
+  /** No Início do próprio turno, o jogador compra até ficar com a mão inicial do Conjurador (em vez de comprar no Final). */
+  reporMaoNoInicio: boolean;
+  /** No Início do próprio turno, o Conjurador levanta (ex.: depois de bloquear no turno do oponente). */
+  conjuradorLevantaNoInicio: boolean;
+  /** O Conjurador só ataca com arma (item no Canal ou Extra com Ataque). */
+  conjuradorSoAtacaComArma: boolean;
+}
+
+export interface CartaDef {
+  id: string;
+  nome: string;
+  tipo: TipoCarta;
+  subtipos: string[];
+  valores: string[];
+  custo: number;
+  grau: number;
+  /** Valores que precisam ter ao menos uma carta na Zona de Grau. */
+  custoValores?: string[];
+  /** Quantas cartas do Grau vão para o cemitério ao jogar. */
+  descartaGrau?: number;
+  velocidade: Velocidade;
+  /** Arcano que gera ao ser enviada à Zona de Contador Arcano. */
+  arcanoGerado: number;
+  /** Palavras-chave. 'Proficiente': ataca e usa ativações que suspendem no turno em que entra. 'Etéreo': só é bloqueado por Aliados Etéreos. */
+  palavrasChave?: string[];
+  ataque?: number;
+  vida?: number;
+  /** Enquanto estiver em campo, conta como cartas extras na Zona de Grau para os requisitos de Grau. */
+  grauExtra?: number;
+  /** Habilidade ativada (Estruturas, Aliados de suporte). */
+  ativacao?: Ativacao;
+  /** Burn: depois de jogada, o oponente pode pagar este Arcano para ela não resolver. */
+  pagarParaAnular?: number;
+  /** Efeitos de uma Temporária. */
+  efeitos?: Efeito[];
+  /** Gatilho ao entrar em campo (permanentes). */
+  aoEntrar?: Efeito[];
+  /** Rodada 6: gatilho "ao causar dano de combate ao Conjurador inimigo" (Aliados). */
+  aoDanoConjurador?: Efeito[];
+  /** Rodada 6, palavra-chave Protegido N: o oponente paga N de Arcano a mais para mirar esta carta com uma carta ou ativação. */
+  protegido?: number;
+  /** Item: espaço que ocupa no Conjurador. O Ataque de Canal e Extra é o valor da arma. */
+  categoriaItem?: CategoriaItem;
+  /** Armadura: dano de combate que ela evita quando o Conjurador bloqueia. */
+  defesa?: number;
+  /** Armadura: quanto dano ela ainda pode evitar antes de quebrar (vida de desgaste). */
+  vidaDesgaste?: number;
+  cenario: string;
+  texto: string;
+}
+
+/** Habilidade própria do Conjurador (rodada 7): uma ativada, um gatilho ou uma passiva. */
+export interface PoderConjurador {
+  /** Ativada: suspende o Conjurador (então ele não ataca nesse turno), paga o custo em Arcano e aplica os efeitos. */
+  ativacao?: Ativacao;
+  /** Gatilho de uma linha, no máximo uma vez por turno (qualquer turno). */
+  gatilho?: { quando: 'aliadoEntra' | 'aliadoMorre' | 'aliadoDanoConjurador'; efeitos: Efeito[]; /** Só conta no turno do dono do Conjurador. */ soNoSeuTurno?: boolean };
+  /** Passiva: o primeiro dano de combate que um Aliado seu causa em cada turno é N maior. */
+  primeiroDanoDeAliadoMais?: number;
+  /** Passiva: a primeira carta que você joga em cada turno custa N a menos. */
+  primeiraCartaMaisBarata?: number;
+  /** Passiva: a primeira carta Repentina que você joga em cada turno custa N a menos. */
+  primeiraRepentinaMaisBarata?: number;
+  /** Passiva: seus Aliados têm Protegido N. */
+  aliadosProtegidos?: number;
+}
+
+export interface ConjuradorDef {
+  id: string;
+  nome: string;
+  valores: string[];
+  comprometimento: 'Invocador' | 'Brigão' | 'Parrudão da quebrada' | 'Habilidoso' | 'Preparado';
+  vida: number;
+  maoInicial: number;
+  compraFinal: number;
+  danoBasico: number;
+  custoAtaque: number;
+  habilidade: string;
+  /** Versão mecânica da habilidade (o texto fica em `habilidade`). */
+  poder?: PoderConjurador;
+}
+
+export interface Catalogo {
+  cartas: Record<string, CartaDef>;
+  conjuradores: Record<string, ConjuradorDef>;
+}
+
+export interface BaralhoDef {
+  conjurador: string;
+  cartas: string[];
+  /** Itens equipados na preparação (no máximo um por espaço: Canal, Armadura, Extra). */
+  itens?: string[];
+}
+
+export interface Inst {
+  id: string;
+  defId: string;
+  ehConjurador: boolean;
+  dono: Jogador;
+  suspensa: boolean;
+  dano: number;
+  revelada: boolean;
+  /** Turno em que entrou em campo (0 = nunca entrou). */
+  entrouNoTurno: number;
+  /** Na zona de banimento: único turno (global) em que o dono pode jogá-la (0 = nunca). */
+  banidaDisponivel: number;
+  /** Desconto ao jogá-la a partir do banimento. */
+  descontoBanimento: number;
+  /** Quando resolver, vai para o banimento em vez do cemitério. */
+  banirAoResolver: boolean;
+}
+
+/** Todo dano é dano; só muda a fonte. Efeitos podem ser anulados; combate não. */
+export type FonteDano = 'efeito' | 'combate';
+
+/** Estado por turno das habilidades de Conjurador, por jogador. */
+export interface HabUsos {
+  gatilho: boolean; carta: boolean; repentina: boolean;
+  /** Desconto pendente para a primeira carta do turno. */
+  desconto: number;
+  /** Pode jogar do cemitério uma carta que anula (Mitonho). */
+  anularDoCemiterio: boolean;
+  /** Já aplicou o bônus de primeiro dano de Aliado neste turno. */
+  danoAliado: boolean;
+}
+
+export interface ZonasJogador {
+  conjuradorId: string;
+  baralho: string[];
+  mao: string[];
+  campo: string[];
+  cemiterio: string[];
+  grau: string[];
+  zonaArcano: string[];
+  /** Zona de banimento: cartas fora de jogo; algumas podem ser jogadas no turno indicado em Inst.banidaDisponivel. */
+  banimento: string[];
+  /** Itens equipados no Conjurador (instâncias). Na Armadura, Inst.dano guarda o desgaste. */
+  itens: string[];
+  arcano: number;
+}
+
+export type ItemPilha =
+  | { tipo: 'carta'; id: string; controlador: Jogador; instId: string; alvo?: string }
+  | { tipo: 'gatilho'; id: string; controlador: Jogador; efeitos: Efeito[]; alvo?: string; /** Nome de quem gerou o gatilho (registro). */ fonte?: string }
+  | { tipo: 'ataque'; id: string; controlador: Jogador; atacante: string; alvo: string };
+
+export type Pendencia =
+  | { tipo: 'escolherInicio'; jogador: Jogador }
+  | { tipo: 'descartar'; jogador: Jogador; quantidade: number }
+  | { tipo: 'bloqueio'; jogador: Jogador }
+  | { tipo: 'pagarAnulacao'; jogador: Jogador; custo: number; item: ItemPilha }
+  | { tipo: 'escolherDoTopo'; jogador: Jogador; cartas: string[]; pegar: number };
+
+export interface Combate {
+  atacante: string;
+  alvo: string;
+  bloqueador: string | null;
+  etapa: 'declarado' | 'aguardandoBloqueio' | 'bloqueado';
+}
+
+export interface Estado {
+  catalogo: Catalogo;
+  jogadores: [ZonasJogador, ZonasJogador];
+  instancias: Record<string, Inst>;
+  pilha: ItemPilha[];
+  turno: number;
+  ativo: Jogador;
+  etapa: Etapa | 'preparacao';
+  prioridade: Jogador;
+  passes: number;
+  pendencia: Pendencia | null;
+  combate: Combate | null;
+  vencedor: Jogador | 'empate' | null;
+  dados: [number, number];
+  regras: Regras;
+  /** Quem começou a partida. */
+  primeiro: Jogador;
+  /** Já pôs carta no Grau neste turno (regra grauSemSuspender). */
+  grauNoTurno: boolean;
+  /** Turnos seguidos de cada jogador sem jogar carta, ativar nem atacar (relógio de impasse). */
+  semAcaoTurnos: [number, number];
+  agiuNoTurno: boolean;
+  /** Turnos (globais) em que cada jogador causou dano a algo do oponente; só estatística. */
+  turnosDano: [number[], number[]];
+  /** Habilidade do Conjurador já usada neste turno (gatilho, 1ª carta, 1ª repentina), por jogador. */
+  habUsos: [HabUsos, HabUsos];
+  rng: number;
+  proxId: number;
+  log: string[];
+}
+
+export type Comando =
+  | { tipo: 'escolherInicio'; jogador: Jogador; primeiro: Jogador }
+  | { tipo: 'colocarGrau'; jogador: Jogador; carta: string }
+  | { tipo: 'suspenderGrau'; jogador: Jogador; carta: string }
+  | { tipo: 'jogar'; jogador: Jogador; carta: string; alvo?: string; descartarGrau?: string[]; enviarArcano?: string[] }
+  | { tipo: 'atacar'; jogador: Jogador; atacante: string; alvo: string; enviarArcano?: string[] }
+  | { tipo: 'bloquear'; jogador: Jogador; bloqueador: string | null }
+  | { tipo: 'descartar'; jogador: Jogador; cartas: string[] }
+  | { tipo: 'ativar'; jogador: Jogador; carta: string; alvo?: string; enviarArcano?: string[] }
+  | { tipo: 'pagarAnulacao'; jogador: Jogador; pagar: boolean; enviarArcano?: string[] }
+  | { tipo: 'escolherDoTopo'; jogador: Jogador; cartas: string[] }
+  | { tipo: 'passar'; jogador: Jogador };

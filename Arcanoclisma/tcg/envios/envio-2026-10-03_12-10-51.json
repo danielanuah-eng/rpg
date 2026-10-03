@@ -1,0 +1,6269 @@
+{
+ "app": "arcanoclisma-testes",
+ "versaoApp": 1,
+ "enviadoEm": "2026-10-03T15:10:51.042Z",
+ "dadosGeradosEm": "2026-10-03T14:32:59.614Z",
+ "variante": "CONJ",
+ "conjuradores": [
+  {
+   "id": "lyandra",
+   "nome": "Lyandra, a Domadora de Guerra",
+   "valores": [
+    "conflituo",
+    "primitivum"
+   ],
+   "habilidade": "O primeiro dano de combate que um Aliado seu causa em cada turno é 1 maior."
+  },
+  {
+   "id": "carmal",
+   "nome": "Carmal, o Druida Crepuscular",
+   "valores": [
+    "primitivum",
+    "alvorum"
+   ],
+   "habilidade": "Quando o primeiro Aliado seu entra em campo em cada turno, ganhe 1 Arcano."
+  },
+  {
+   "id": "ricardo",
+   "nome": "Alquimista Ricardo",
+   "valores": [
+    "alvorum",
+    "sublimeyn"
+   ],
+   "habilidade": "Suspenda o Conjurador: a primeira carta que você jogar neste turno custa 1 a menos."
+  },
+  {
+   "id": "roh",
+   "nome": "Roh, o Ilusionista das Máscaras",
+   "valores": [
+    "sublimeyn",
+    "persona"
+   ],
+   "habilidade": "Suspenda o Conjurador: devolva à sua mão um Aliado ou Mística seu."
+  },
+  {
+   "id": "agnelo",
+   "nome": "Agnelo, o Duelista Sombrio",
+   "valores": [
+    "persona",
+    "morbidyum"
+   ],
+   "habilidade": "Na primeira vez em cada um dos seus turnos que um Aliado seu vai do campo para o cemitério, compre 1 carta."
+  },
+  {
+   "id": "diastaros",
+   "nome": "Diástaros, o Necromante Vidente",
+   "valores": [
+    "morbidyum",
+    "cognitium"
+   ],
+   "habilidade": "Suspenda o Conjurador: ponha no seu campo um Aliado do seu cemitério ou do cemitério do oponente, pagando 2 de Arcano a mais além do custo dele."
+  },
+  {
+   "id": "ana",
+   "nome": "Ana, a Cronista do Tempo",
+   "valores": [
+    "cognitium",
+    "eternyr"
+   ],
+   "habilidade": "Suspenda o Conjurador e pague 2: bana uma carta da sua mão. No seu próximo turno, você pode jogá-la custando 4 a menos."
+  },
+  {
+   "id": "mitonho",
+   "nome": "Mitonho, o Carcereiro Temporal",
+   "valores": [
+    "eternyr",
+    "dominum"
+   ],
+   "habilidade": "Repentina: suspenda o Conjurador e pague 2. Neste turno, você pode jogar do seu cemitério uma carta cujo efeito anule outra, pagando o custo dela normalmente. Ao resolver, ela é banida."
+  },
+  {
+   "id": "osmar",
+   "nome": "Osmar, o Capataz de Ferro",
+   "valores": [
+    "dominum",
+    "conflituo"
+   ],
+   "habilidade": "Seus Aliados têm Protegido 1."
+  }
+ ],
+ "partidas": [
+  {
+   "id": "pmusfbtr8",
+   "inicio": "2026-10-03T13:24:39.140Z",
+   "fim": null,
+   "eu": "diastaros",
+   "oponente": "osmar",
+   "semente": 134817024,
+   "variante": "CONJ",
+   "dadosGeradosEm": "2026-10-03T13:23:50.839Z",
+   "comandos": [
+    {
+     "n": 1,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "escolherInicio",
+      "jogador": 1,
+      "primeiro": 1
+     },
+     "turno": 0,
+     "etapa": "preparacao",
+     "ts": "2026-10-03T13:24:39.140Z",
+     "resultado": [
+      "Jogador 1 começa. O jogador 0 compra 0 carta(s) a mais e recebe 0 Arcano.",
+      "Turno 1 (jogador 1): inicio."
+     ]
+    },
+    {
+     "n": 2,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "inicio",
+     "ts": "2026-10-03T13:24:39.140Z",
+     "resultado": []
+    },
+    {
+     "n": 3,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "inicio",
+     "ts": "2026-10-03T13:24:39.140Z",
+     "resultado": [
+      "Turno 1 (jogador 1): principal."
+     ]
+    },
+    {
+     "n": 4,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 1,
+      "atacante": "i62",
+      "alvo": "i1",
+      "enviarArcano": []
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.140Z",
+     "resultado": [
+      "Jogador 1 ataca."
+     ]
+    },
+    {
+     "n": 5,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.140Z",
+     "resultado": []
+    },
+    {
+     "n": 6,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.140Z",
+     "resultado": [
+      "Ataque declarado; o jogador 0 escolhe o bloqueio."
+     ]
+    },
+    {
+     "n": 7,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "bloquear",
+      "jogador": 0,
+      "bloqueador": null
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.762Z",
+     "resultado": []
+    },
+    {
+     "n": 8,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.762Z",
+     "resultado": []
+    },
+    {
+     "n": 9,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.763Z",
+     "resultado": [
+      "Diástaros, o Necromante Vidente sofre 1 de dano (combate).",
+      "Combate: 1 de dano ao alvo, 0 de volta."
+     ]
+    },
+    {
+     "n": 10,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.763Z",
+     "resultado": []
+    },
+    {
+     "n": 11,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.763Z",
+     "resultado": [
+      "Turno 1 (jogador 1): cataclisma."
+     ]
+    },
+    {
+     "n": 12,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T13:24:39.763Z",
+     "resultado": []
+    },
+    {
+     "n": 13,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T13:24:39.763Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 1 se dissipa.",
+      "Turno 1 (jogador 1): final."
+     ]
+    },
+    {
+     "n": 14,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "final",
+     "ts": "2026-10-03T13:24:39.763Z",
+     "resultado": []
+    },
+    {
+     "n": 15,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "final",
+     "ts": "2026-10-03T13:24:39.763Z",
+     "resultado": [
+      "Turno 2 (jogador 0): inicio."
+     ]
+    },
+    {
+     "n": 16,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 2,
+     "etapa": "inicio",
+     "ts": "2026-10-03T13:24:39.763Z",
+     "resultado": []
+    },
+    {
+     "n": 17,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 2,
+     "etapa": "inicio",
+     "ts": "2026-10-03T13:24:39.763Z",
+     "resultado": [
+      "Turno 2 (jogador 0): principal."
+     ]
+    },
+    {
+     "n": 18,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "colocarGrau",
+      "jogador": 0,
+      "carta": "i39"
+     },
+     "turno": 2,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.763Z",
+     "resultado": [
+      "Jogador 0 põe Mística básica (custo 4) no Grau."
+     ]
+    },
+    {
+     "n": 19,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 2,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.765Z",
+     "resultado": []
+    },
+    {
+     "n": 20,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 2,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.765Z",
+     "resultado": [
+      "Turno 2 (jogador 0): cataclisma."
+     ]
+    },
+    {
+     "n": 21,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 2,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T13:24:39.765Z",
+     "resultado": []
+    },
+    {
+     "n": 22,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 2,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T13:24:39.765Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 0 se dissipa.",
+      "Turno 2 (jogador 0): final."
+     ]
+    },
+    {
+     "n": 23,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 2,
+     "etapa": "final",
+     "ts": "2026-10-03T13:24:39.765Z",
+     "resultado": []
+    },
+    {
+     "n": 24,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 2,
+     "etapa": "final",
+     "ts": "2026-10-03T13:24:39.765Z",
+     "resultado": [
+      "Turno 3 (jogador 1): inicio."
+     ]
+    },
+    {
+     "n": 25,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 3,
+     "etapa": "inicio",
+     "ts": "2026-10-03T13:24:39.765Z",
+     "resultado": []
+    },
+    {
+     "n": 26,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 3,
+     "etapa": "inicio",
+     "ts": "2026-10-03T13:24:39.765Z",
+     "resultado": [
+      "Turno 3 (jogador 1): principal."
+     ]
+    },
+    {
+     "n": 27,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "colocarGrau",
+      "jogador": 1,
+      "carta": "i120"
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.765Z",
+     "resultado": [
+      "Jogador 1 põe Recurso básico no Grau."
+     ]
+    },
+    {
+     "n": 28,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i120"
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.765Z",
+     "resultado": []
+    },
+    {
+     "n": 29,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 1,
+      "carta": "i67",
+      "descartarGrau": [],
+      "enviarArcano": [
+       "i109"
+      ]
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.765Z",
+     "resultado": [
+      "Jogador 1 envia 1 carta(s) ao Arcano.",
+      "Jogador 1 joga Aliado básico (custo 2, agressivo)."
+     ]
+    },
+    {
+     "n": 30,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.765Z",
+     "resultado": []
+    },
+    {
+     "n": 31,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.766Z",
+     "resultado": [
+      "Aliado básico (custo 2, agressivo) entra em campo."
+     ]
+    },
+    {
+     "n": 32,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 1,
+      "atacante": "i62",
+      "alvo": "i1",
+      "enviarArcano": []
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.766Z",
+     "resultado": [
+      "Jogador 1 ataca."
+     ]
+    },
+    {
+     "n": 33,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.766Z",
+     "resultado": []
+    },
+    {
+     "n": 34,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.766Z",
+     "resultado": [
+      "Ataque declarado; o jogador 0 escolhe o bloqueio."
+     ]
+    },
+    {
+     "n": 35,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "bloquear",
+      "jogador": 0,
+      "bloqueador": null
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.768Z",
+     "resultado": []
+    },
+    {
+     "n": 36,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.768Z",
+     "resultado": []
+    },
+    {
+     "n": 37,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.769Z",
+     "resultado": [
+      "Diástaros, o Necromante Vidente sofre 1 de dano (combate).",
+      "Combate: 1 de dano ao alvo, 0 de volta."
+     ]
+    },
+    {
+     "n": 38,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.769Z",
+     "resultado": []
+    },
+    {
+     "n": 39,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.769Z",
+     "resultado": [
+      "Turno 3 (jogador 1): cataclisma."
+     ]
+    },
+    {
+     "n": 40,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 3,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T13:24:39.769Z",
+     "resultado": []
+    },
+    {
+     "n": 41,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 3,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T13:24:39.769Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 1 se dissipa.",
+      "Turno 3 (jogador 1): final."
+     ]
+    },
+    {
+     "n": 42,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 3,
+     "etapa": "final",
+     "ts": "2026-10-03T13:24:39.769Z",
+     "resultado": []
+    },
+    {
+     "n": 43,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 3,
+     "etapa": "final",
+     "ts": "2026-10-03T13:24:39.771Z",
+     "resultado": [
+      "Turno 4 (jogador 0): inicio."
+     ]
+    },
+    {
+     "n": 44,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 4,
+     "etapa": "inicio",
+     "ts": "2026-10-03T13:24:39.771Z",
+     "resultado": []
+    },
+    {
+     "n": 45,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 4,
+     "etapa": "inicio",
+     "ts": "2026-10-03T13:24:39.771Z",
+     "resultado": [
+      "Turno 4 (jogador 0): principal."
+     ]
+    },
+    {
+     "n": 46,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "colocarGrau",
+      "jogador": 0,
+      "carta": "i52"
+     },
+     "turno": 4,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.771Z",
+     "resultado": [
+      "Jogador 0 põe Dano básico (custo 2, repentina) no Grau."
+     ]
+    },
+    {
+     "n": 47,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 4,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.773Z",
+     "resultado": []
+    },
+    {
+     "n": 48,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 4,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.773Z",
+     "resultado": [
+      "Turno 4 (jogador 0): cataclisma."
+     ]
+    },
+    {
+     "n": 49,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 4,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T13:24:39.773Z",
+     "resultado": []
+    },
+    {
+     "n": 50,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 4,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T13:24:39.773Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 0 se dissipa.",
+      "Turno 4 (jogador 0): final."
+     ]
+    },
+    {
+     "n": 51,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 4,
+     "etapa": "final",
+     "ts": "2026-10-03T13:24:39.773Z",
+     "resultado": []
+    },
+    {
+     "n": 52,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 4,
+     "etapa": "final",
+     "ts": "2026-10-03T13:24:39.773Z",
+     "resultado": [
+      "Turno 5 (jogador 1): inicio."
+     ]
+    },
+    {
+     "n": 53,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 5,
+     "etapa": "inicio",
+     "ts": "2026-10-03T13:24:39.773Z",
+     "resultado": []
+    },
+    {
+     "n": 54,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 5,
+     "etapa": "inicio",
+     "ts": "2026-10-03T13:24:39.773Z",
+     "resultado": [
+      "Turno 5 (jogador 1): principal."
+     ]
+    },
+    {
+     "n": 55,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "colocarGrau",
+      "jogador": 1,
+      "carta": "i122"
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.773Z",
+     "resultado": [
+      "Jogador 1 põe Recurso básico no Grau."
+     ]
+    },
+    {
+     "n": 56,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i120"
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.773Z",
+     "resultado": []
+    },
+    {
+     "n": 57,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i122"
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.773Z",
+     "resultado": []
+    },
+    {
+     "n": 58,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 1,
+      "carta": "i71",
+      "descartarGrau": [],
+      "enviarArcano": []
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.773Z",
+     "resultado": [
+      "Jogador 1 joga Aliado básico (custo 2, agressivo proficiente)."
+     ]
+    },
+    {
+     "n": 59,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.773Z",
+     "resultado": []
+    },
+    {
+     "n": 60,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.775Z",
+     "resultado": [
+      "Aliado básico (custo 2, agressivo proficiente) entra em campo."
+     ]
+    },
+    {
+     "n": 61,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 1,
+      "atacante": "i71",
+      "alvo": "i1"
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.775Z",
+     "resultado": [
+      "Jogador 1 ataca."
+     ]
+    },
+    {
+     "n": 62,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.775Z",
+     "resultado": []
+    },
+    {
+     "n": 63,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.775Z",
+     "resultado": [
+      "Ataque declarado; o jogador 0 escolhe o bloqueio."
+     ]
+    },
+    {
+     "n": 64,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "bloquear",
+      "jogador": 0,
+      "bloqueador": null
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.777Z",
+     "resultado": []
+    },
+    {
+     "n": 65,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.777Z",
+     "resultado": []
+    },
+    {
+     "n": 66,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.779Z",
+     "resultado": [
+      "Diástaros, o Necromante Vidente sofre 2 de dano (combate).",
+      "Combate: 2 de dano ao alvo, 0 de volta."
+     ]
+    },
+    {
+     "n": 67,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 1,
+      "atacante": "i67",
+      "alvo": "i1"
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.779Z",
+     "resultado": [
+      "Jogador 1 ataca."
+     ]
+    },
+    {
+     "n": 68,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.779Z",
+     "resultado": []
+    },
+    {
+     "n": 69,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.779Z",
+     "resultado": [
+      "Ataque declarado; o jogador 0 escolhe o bloqueio."
+     ]
+    },
+    {
+     "n": 70,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "bloquear",
+      "jogador": 0,
+      "bloqueador": null
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.781Z",
+     "resultado": []
+    },
+    {
+     "n": 71,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.781Z",
+     "resultado": []
+    },
+    {
+     "n": 72,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.782Z",
+     "resultado": [
+      "Diástaros, o Necromante Vidente sofre 3 de dano (combate).",
+      "Combate: 3 de dano ao alvo, 0 de volta."
+     ]
+    },
+    {
+     "n": 73,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 1,
+      "atacante": "i62",
+      "alvo": "i1",
+      "enviarArcano": []
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.783Z",
+     "resultado": [
+      "Jogador 1 ataca."
+     ]
+    },
+    {
+     "n": 74,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.783Z",
+     "resultado": []
+    },
+    {
+     "n": 75,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.783Z",
+     "resultado": [
+      "Ataque declarado; o jogador 0 escolhe o bloqueio."
+     ]
+    },
+    {
+     "n": 76,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "bloquear",
+      "jogador": 0,
+      "bloqueador": null
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.784Z",
+     "resultado": []
+    },
+    {
+     "n": 77,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.784Z",
+     "resultado": []
+    },
+    {
+     "n": 78,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.786Z",
+     "resultado": [
+      "Diástaros, o Necromante Vidente sofre 1 de dano (combate).",
+      "Combate: 1 de dano ao alvo, 0 de volta."
+     ]
+    },
+    {
+     "n": 79,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.786Z",
+     "resultado": []
+    },
+    {
+     "n": 80,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.786Z",
+     "resultado": [
+      "Turno 5 (jogador 1): cataclisma."
+     ]
+    },
+    {
+     "n": 81,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 5,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T13:24:39.786Z",
+     "resultado": []
+    },
+    {
+     "n": 82,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 5,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T13:24:39.786Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 1 se dissipa.",
+      "Turno 5 (jogador 1): final."
+     ]
+    },
+    {
+     "n": 83,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 5,
+     "etapa": "final",
+     "ts": "2026-10-03T13:24:39.786Z",
+     "resultado": []
+    },
+    {
+     "n": 84,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 5,
+     "etapa": "final",
+     "ts": "2026-10-03T13:24:39.788Z",
+     "resultado": [
+      "Turno 6 (jogador 0): inicio."
+     ]
+    },
+    {
+     "n": 85,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 6,
+     "etapa": "inicio",
+     "ts": "2026-10-03T13:24:39.788Z",
+     "resultado": []
+    },
+    {
+     "n": 86,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 6,
+     "etapa": "inicio",
+     "ts": "2026-10-03T13:24:39.788Z",
+     "resultado": [
+      "Turno 6 (jogador 0): principal."
+     ]
+    },
+    {
+     "n": 87,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "colocarGrau",
+      "jogador": 0,
+      "carta": "i2"
+     },
+     "turno": 6,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.788Z",
+     "resultado": [
+      "Jogador 0 põe Aliado Etéreo (custo 2) no Grau."
+     ]
+    },
+    {
+     "n": 88,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 6,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.790Z",
+     "resultado": []
+    },
+    {
+     "n": 89,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 6,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.790Z",
+     "resultado": [
+      "Turno 6 (jogador 0): cataclisma."
+     ]
+    },
+    {
+     "n": 90,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 6,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T13:24:39.790Z",
+     "resultado": []
+    },
+    {
+     "n": 91,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 6,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T13:24:39.790Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 0 se dissipa.",
+      "Turno 6 (jogador 0): final."
+     ]
+    },
+    {
+     "n": 92,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 6,
+     "etapa": "final",
+     "ts": "2026-10-03T13:24:39.790Z",
+     "resultado": []
+    },
+    {
+     "n": 93,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 6,
+     "etapa": "final",
+     "ts": "2026-10-03T13:24:39.790Z",
+     "resultado": [
+      "Turno 7 (jogador 1): inicio."
+     ]
+    },
+    {
+     "n": 94,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "inicio",
+     "ts": "2026-10-03T13:24:39.790Z",
+     "resultado": []
+    },
+    {
+     "n": 95,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "inicio",
+     "ts": "2026-10-03T13:24:39.790Z",
+     "resultado": [
+      "Turno 7 (jogador 1): principal."
+     ]
+    },
+    {
+     "n": 96,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "colocarGrau",
+      "jogador": 1,
+      "carta": "i69"
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.790Z",
+     "resultado": [
+      "Jogador 1 põe Aliado básico (custo 2, agressivo) no Grau."
+     ]
+    },
+    {
+     "n": 97,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i120"
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.790Z",
+     "resultado": []
+    },
+    {
+     "n": 98,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i122"
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.790Z",
+     "resultado": []
+    },
+    {
+     "n": 99,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i69"
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.790Z",
+     "resultado": []
+    },
+    {
+     "n": 100,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 1,
+      "carta": "i77",
+      "descartarGrau": [],
+      "enviarArcano": []
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.790Z",
+     "resultado": [
+      "Jogador 1 joga Aliado básico (custo 3, equilibrado)."
+     ]
+    },
+    {
+     "n": 101,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.790Z",
+     "resultado": []
+    },
+    {
+     "n": 102,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.793Z",
+     "resultado": [
+      "Aliado básico (custo 3, equilibrado) entra em campo."
+     ]
+    },
+    {
+     "n": 103,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 1,
+      "atacante": "i67",
+      "alvo": "i1"
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.793Z",
+     "resultado": [
+      "Jogador 1 ataca."
+     ]
+    },
+    {
+     "n": 104,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.793Z",
+     "resultado": []
+    },
+    {
+     "n": 105,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.793Z",
+     "resultado": [
+      "Ataque declarado; o jogador 0 escolhe o bloqueio."
+     ]
+    },
+    {
+     "n": 106,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "bloquear",
+      "jogador": 0,
+      "bloqueador": null
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.797Z",
+     "resultado": []
+    },
+    {
+     "n": 107,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.797Z",
+     "resultado": []
+    },
+    {
+     "n": 108,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.799Z",
+     "resultado": [
+      "Diástaros, o Necromante Vidente sofre 3 de dano (combate).",
+      "Combate: 3 de dano ao alvo, 0 de volta."
+     ]
+    },
+    {
+     "n": 109,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 1,
+      "atacante": "i71",
+      "alvo": "i1"
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.799Z",
+     "resultado": [
+      "Jogador 1 ataca."
+     ]
+    },
+    {
+     "n": 110,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.799Z",
+     "resultado": []
+    },
+    {
+     "n": 111,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.799Z",
+     "resultado": [
+      "Ataque declarado; o jogador 0 escolhe o bloqueio."
+     ]
+    },
+    {
+     "n": 112,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "bloquear",
+      "jogador": 0,
+      "bloqueador": null
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.802Z",
+     "resultado": []
+    },
+    {
+     "n": 113,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.802Z",
+     "resultado": []
+    },
+    {
+     "n": 114,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.804Z",
+     "resultado": [
+      "Diástaros, o Necromante Vidente sofre 2 de dano (combate).",
+      "Combate: 2 de dano ao alvo, 0 de volta."
+     ]
+    },
+    {
+     "n": 115,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 1,
+      "atacante": "i62",
+      "alvo": "i1",
+      "enviarArcano": []
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.804Z",
+     "resultado": [
+      "Jogador 1 ataca."
+     ]
+    },
+    {
+     "n": 116,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.804Z",
+     "resultado": []
+    },
+    {
+     "n": 117,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.804Z",
+     "resultado": [
+      "Ataque declarado; o jogador 0 escolhe o bloqueio."
+     ]
+    },
+    {
+     "n": 118,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "bloquear",
+      "jogador": 0,
+      "bloqueador": null
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.807Z",
+     "resultado": []
+    },
+    {
+     "n": 119,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.807Z",
+     "resultado": []
+    },
+    {
+     "n": 120,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.810Z",
+     "resultado": [
+      "Diástaros, o Necromante Vidente sofre 1 de dano (combate).",
+      "Combate: 1 de dano ao alvo, 0 de volta."
+     ]
+    },
+    {
+     "n": 121,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.810Z",
+     "resultado": []
+    },
+    {
+     "n": 122,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.810Z",
+     "resultado": [
+      "Turno 7 (jogador 1): cataclisma."
+     ]
+    },
+    {
+     "n": 123,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T13:24:39.810Z",
+     "resultado": []
+    },
+    {
+     "n": 124,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T13:24:39.810Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 1 se dissipa.",
+      "Turno 7 (jogador 1): final."
+     ]
+    },
+    {
+     "n": 125,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "final",
+     "ts": "2026-10-03T13:24:39.810Z",
+     "resultado": []
+    },
+    {
+     "n": 126,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "final",
+     "ts": "2026-10-03T13:24:39.812Z",
+     "resultado": [
+      "Turno 8 (jogador 0): inicio."
+     ]
+    },
+    {
+     "n": 127,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "descartar",
+      "jogador": 0,
+      "cartas": [
+       "i46"
+      ]
+     },
+     "turno": 8,
+     "etapa": "inicio",
+     "ts": "2026-10-03T13:24:39.815Z",
+     "resultado": []
+    },
+    {
+     "n": 128,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 8,
+     "etapa": "inicio",
+     "ts": "2026-10-03T13:24:39.815Z",
+     "resultado": []
+    },
+    {
+     "n": 129,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 8,
+     "etapa": "inicio",
+     "ts": "2026-10-03T13:24:39.815Z",
+     "resultado": [
+      "Turno 8 (jogador 0): principal."
+     ]
+    },
+    {
+     "n": 130,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "colocarGrau",
+      "jogador": 0,
+      "carta": "i31"
+     },
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T13:24:39.816Z",
+     "resultado": [
+      "Jogador 0 põe Cura (custo 4) no Grau."
+     ]
+    }
+   ],
+   "erros": [],
+   "comentarios": [],
+   "resultado": null,
+   "enviada": false
+  },
+  {
+   "id": "pmush84ca",
+   "inicio": "2026-10-03T14:17:45.466Z",
+   "fim": null,
+   "eu": "lyandra",
+   "oponente": "agnelo",
+   "semente": 904209096,
+   "variante": "CONJ",
+   "dadosGeradosEm": "2026-10-03T13:23:50.839Z",
+   "comandos": [],
+   "erros": [],
+   "comentarios": [],
+   "resultado": null,
+   "enviada": false
+  },
+  {
+   "id": "pmush9sfu",
+   "inicio": "2026-10-03T14:19:03.354Z",
+   "fim": null,
+   "eu": "lyandra",
+   "oponente": "lyandra",
+   "semente": 1856185286,
+   "variante": "CONJ",
+   "dadosGeradosEm": "2026-10-03T13:23:50.839Z",
+   "comandos": [
+    {
+     "n": 1,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "escolherInicio",
+      "jogador": 1,
+      "primeiro": 1
+     },
+     "turno": 0,
+     "etapa": "preparacao",
+     "ts": "2026-10-03T14:19:03.354Z",
+     "resultado": [
+      "Jogador 1 começa. O jogador 0 compra 0 carta(s) a mais e recebe 0 Arcano.",
+      "Turno 1 (jogador 1): inicio."
+     ]
+    },
+    {
+     "n": 2,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:19:03.354Z",
+     "resultado": []
+    },
+    {
+     "n": 3,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:19:03.354Z",
+     "resultado": [
+      "Turno 1 (jogador 1): principal."
+     ]
+    },
+    {
+     "n": 4,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 1,
+      "carta": "i109",
+      "descartarGrau": [],
+      "enviarArcano": [
+       "i118"
+      ]
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:19:03.355Z",
+     "resultado": [
+      "Jogador 1 envia 1 carta(s) ao Arcano.",
+      "Jogador 1 joga Dano ao Conjurador (custo 1)."
+     ]
+    },
+    {
+     "n": 5,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:19:03.355Z",
+     "resultado": []
+    },
+    {
+     "n": 6,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:19:03.355Z",
+     "resultado": [
+      "Dano ao Conjurador (custo 1) resolve.",
+      "Lyandra, a Domadora de Guerra sofre 1 de dano (efeito)."
+     ]
+    },
+    {
+     "n": 7,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 1,
+      "atacante": "i62",
+      "alvo": "i1",
+      "enviarArcano": []
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:19:03.355Z",
+     "resultado": [
+      "Jogador 1 ataca."
+     ]
+    },
+    {
+     "n": 8,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:19:03.355Z",
+     "resultado": []
+    },
+    {
+     "n": 9,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:19:03.355Z",
+     "resultado": [
+      "Ataque declarado; o jogador 0 escolhe o bloqueio."
+     ]
+    }
+   ],
+   "erros": [],
+   "comentarios": [],
+   "resultado": null,
+   "enviada": false
+  },
+  {
+   "id": "pmusha6ca",
+   "inicio": "2026-10-03T14:19:21.370Z",
+   "fim": null,
+   "eu": "lyandra",
+   "oponente": "carmal",
+   "semente": 928520179,
+   "variante": "CONJ",
+   "dadosGeradosEm": "2026-10-03T13:23:50.839Z",
+   "comandos": [
+    {
+     "n": 1,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "escolherInicio",
+      "jogador": 1,
+      "primeiro": 1
+     },
+     "turno": 0,
+     "etapa": "preparacao",
+     "ts": "2026-10-03T14:19:21.371Z",
+     "resultado": [
+      "Jogador 1 começa. O jogador 0 compra 0 carta(s) a mais e recebe 0 Arcano.",
+      "Turno 1 (jogador 1): inicio."
+     ]
+    },
+    {
+     "n": 2,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:19:21.371Z",
+     "resultado": []
+    },
+    {
+     "n": 3,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:19:21.371Z",
+     "resultado": [
+      "Turno 1 (jogador 1): principal."
+     ]
+    },
+    {
+     "n": 4,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 1,
+      "carta": "i64",
+      "descartarGrau": [],
+      "enviarArcano": [
+       "i113"
+      ]
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:19:21.371Z",
+     "resultado": [
+      "Jogador 1 envia 1 carta(s) ao Arcano.",
+      "Jogador 1 joga Aliado básico (custo 1, equilibrado)."
+     ]
+    },
+    {
+     "n": 5,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:19:21.371Z",
+     "resultado": []
+    },
+    {
+     "n": 6,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:19:21.371Z",
+     "resultado": [
+      "Aliado básico (custo 1, equilibrado) entra em campo.",
+      "Jogador 1: gatilho da habilidade de Carmal, o Druida Crepuscular."
+     ]
+    },
+    {
+     "n": 7,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:19:21.371Z",
+     "resultado": []
+    },
+    {
+     "n": 8,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:19:21.371Z",
+     "resultado": []
+    },
+    {
+     "n": 9,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 1,
+      "atacante": "i62",
+      "alvo": "i1",
+      "enviarArcano": []
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:19:21.371Z",
+     "resultado": [
+      "Jogador 1 ataca."
+     ]
+    },
+    {
+     "n": 10,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:19:21.371Z",
+     "resultado": []
+    },
+    {
+     "n": 11,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:19:21.371Z",
+     "resultado": [
+      "Ataque declarado; o jogador 0 escolhe o bloqueio."
+     ]
+    },
+    {
+     "n": 12,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "bloquear",
+      "jogador": 0,
+      "bloqueador": "i1"
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:29:54.411Z",
+     "resultado": []
+    },
+    {
+     "n": 13,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:29:54.411Z",
+     "resultado": []
+    },
+    {
+     "n": 14,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:29:54.411Z",
+     "resultado": [
+      "Lyandra, a Domadora de Guerra sofre 1 de dano (combate).",
+      "Carmal, o Druida Crepuscular sofre 1 de dano (combate).",
+      "Combate: 1 de dano ao alvo, 1 de volta."
+     ]
+    },
+    {
+     "n": 15,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:29:54.411Z",
+     "resultado": []
+    },
+    {
+     "n": 16,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:29:54.411Z",
+     "resultado": [
+      "Turno 1 (jogador 1): cataclisma."
+     ]
+    },
+    {
+     "n": 17,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T14:29:54.411Z",
+     "resultado": []
+    },
+    {
+     "n": 18,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T14:29:54.411Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 1 se dissipa.",
+      "Turno 1 (jogador 1): final."
+     ]
+    },
+    {
+     "n": 19,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "final",
+     "ts": "2026-10-03T14:29:54.411Z",
+     "resultado": []
+    },
+    {
+     "n": 20,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "final",
+     "ts": "2026-10-03T14:29:54.411Z",
+     "resultado": [
+      "Turno 2 (jogador 0): inicio."
+     ]
+    },
+    {
+     "n": 21,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 2,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:29:54.411Z",
+     "resultado": []
+    },
+    {
+     "n": 22,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 2,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:29:54.411Z",
+     "resultado": [
+      "Turno 2 (jogador 0): principal."
+     ]
+    }
+   ],
+   "erros": [],
+   "comentarios": [
+    {
+     "ts": "2026-10-03T14:27:53.962Z",
+     "turno": 1,
+     "etapa": "principal",
+     "vidaVoce": 20,
+     "vidaOponente": 20,
+     "acoesAteAqui": 11,
+     "texto": "O conjurador está atacando, se o segundo jogador precisar dar pitch em carta , ele na primeira main phase do jogo compra cartas até ficar com a mão igual a mão inicial  e se ele usar o conjurador pra bloquear, ele levanta também"
+    },
+    {
+     "ts": "2026-10-03T14:29:43.146Z",
+     "turno": 1,
+     "etapa": "principal",
+     "vidaVoce": 20,
+     "vidaOponente": 20,
+     "acoesAteAqui": 11,
+     "texto": "Personagens só podem atacar diretamente se tiver uma arma como equipamento no canal ou item extra\nRetirar valor de ataque do conjurador básico, e atriburi sempre a Canais quando eles atacarem(a arma pode ser um cajado, espada, lança, item mágico, etc)"
+    }
+   ],
+   "resultado": null,
+   "enviada": false
+  },
+  {
+   "id": "pmushpbk4",
+   "inicio": "2026-10-03T14:31:07.972Z",
+   "fim": null,
+   "eu": "lyandra",
+   "oponente": "lyandra",
+   "semente": 1859997215,
+   "variante": "CONJ",
+   "dadosGeradosEm": "2026-10-03T14:30:40.984Z",
+   "dadosVersao": "5539baf083",
+   "comandos": [
+    {
+     "n": 1,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "escolherInicio",
+      "jogador": 0,
+      "primeiro": 0
+     },
+     "turno": 0,
+     "etapa": "preparacao",
+     "ts": "2026-10-03T14:31:13.800Z",
+     "resultado": [
+      "Jogador 0 começa. O jogador 1 compra 0 carta(s) a mais e recebe 0 Arcano.",
+      "Turno 1 (jogador 0): inicio."
+     ]
+    },
+    {
+     "n": 2,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:31:13.800Z",
+     "resultado": []
+    },
+    {
+     "n": 3,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:31:13.800Z",
+     "resultado": [
+      "Turno 1 (jogador 0): principal."
+     ]
+    }
+   ],
+   "erros": [],
+   "comentarios": [],
+   "resultado": null,
+   "enviada": false
+  },
+  {
+   "id": "pmusi26ki",
+   "inicio": "2026-10-03T14:41:08.034Z",
+   "fim": "2026-10-03T15:10:37.290Z",
+   "eu": "lyandra",
+   "oponente": "lyandra",
+   "semente": 505534462,
+   "variante": "CONJ",
+   "dadosGeradosEm": "2026-10-03T14:32:59.614Z",
+   "dadosVersao": "5539baf083",
+   "comandos": [
+    {
+     "n": 1,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "escolherInicio",
+      "jogador": 1,
+      "primeiro": 1
+     },
+     "turno": 0,
+     "etapa": "preparacao",
+     "ts": "2026-10-03T14:41:08.035Z",
+     "resultado": [
+      "Jogador 1 começa. O jogador 0 compra 0 carta(s) a mais e recebe 0 Arcano.",
+      "Turno 1 (jogador 1): inicio."
+     ]
+    },
+    {
+     "n": 2,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:41:08.035Z",
+     "resultado": []
+    },
+    {
+     "n": 3,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:41:08.035Z",
+     "resultado": [
+      "Turno 1 (jogador 1): principal."
+     ]
+    },
+    {
+     "n": 4,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 1,
+      "atacante": "i62",
+      "alvo": "i1",
+      "enviarArcano": []
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:41:08.037Z",
+     "resultado": [
+      "Jogador 1 ataca."
+     ]
+    },
+    {
+     "n": 5,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:41:08.037Z",
+     "resultado": []
+    },
+    {
+     "n": 6,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:41:08.037Z",
+     "resultado": [
+      "Ataque declarado; o jogador 0 escolhe o bloqueio."
+     ]
+    },
+    {
+     "n": 7,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "bloquear",
+      "jogador": 0,
+      "bloqueador": "i1"
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:49:36.594Z",
+     "resultado": []
+    },
+    {
+     "n": 8,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:49:36.594Z",
+     "resultado": []
+    },
+    {
+     "n": 9,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:49:36.594Z",
+     "resultado": [
+      "Lyandra, a Domadora de Guerra sofre 1 de dano (combate).",
+      "Lyandra, a Domadora de Guerra sofre 1 de dano (combate).",
+      "Combate: 1 de dano ao alvo, 1 de volta."
+     ]
+    },
+    {
+     "n": 10,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:49:36.594Z",
+     "resultado": []
+    },
+    {
+     "n": 11,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:49:36.594Z",
+     "resultado": [
+      "Turno 1 (jogador 1): cataclisma."
+     ]
+    },
+    {
+     "n": 12,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T14:49:36.594Z",
+     "resultado": []
+    },
+    {
+     "n": 13,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T14:49:36.594Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 1 se dissipa.",
+      "Turno 1 (jogador 1): final."
+     ]
+    },
+    {
+     "n": 14,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 1,
+     "etapa": "final",
+     "ts": "2026-10-03T14:49:36.594Z",
+     "resultado": []
+    },
+    {
+     "n": 15,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 1,
+     "etapa": "final",
+     "ts": "2026-10-03T14:49:36.594Z",
+     "resultado": [
+      "Turno 2 (jogador 0): inicio."
+     ]
+    },
+    {
+     "n": 16,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 2,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:49:36.594Z",
+     "resultado": []
+    },
+    {
+     "n": 17,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 2,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:49:36.594Z",
+     "resultado": [
+      "Turno 2 (jogador 0): principal."
+     ]
+    },
+    {
+     "n": 18,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "colocarGrau",
+      "jogador": 0,
+      "carta": "i46"
+     },
+     "turno": 2,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:50:01.321Z",
+     "resultado": [
+      "Jogador 0 põe Dano ao Conjurador (custo 3) no Grau."
+     ]
+    },
+    {
+     "n": 19,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 0,
+      "carta": "i46"
+     },
+     "turno": 2,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:50:04.018Z",
+     "resultado": []
+    },
+    {
+     "n": 20,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 0,
+      "carta": "i7",
+      "descartarGrau": [],
+      "enviarArcano": [
+       "i32"
+      ]
+     },
+     "turno": 2,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:50:29.730Z",
+     "resultado": [
+      "Jogador 0 envia 1 carta(s) ao Arcano.",
+      "Jogador 0 joga Aliado básico (custo 2, agressivo)."
+     ]
+    },
+    {
+     "n": 21,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 2,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:50:29.730Z",
+     "resultado": []
+    },
+    {
+     "n": 22,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 2,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:50:29.730Z",
+     "resultado": [
+      "Aliado básico (custo 2, agressivo) entra em campo."
+     ]
+    },
+    {
+     "n": 23,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 0,
+      "carta": "i56",
+      "descartarGrau": [],
+      "enviarArcano": [
+       "i20"
+      ]
+     },
+     "turno": 2,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:49.602Z",
+     "resultado": [
+      "Jogador 0 envia 1 carta(s) ao Arcano.",
+      "Jogador 0 joga Comprar cartas (custo 1)."
+     ]
+    },
+    {
+     "n": 24,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 2,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:49.602Z",
+     "resultado": []
+    },
+    {
+     "n": 25,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 2,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:49.602Z",
+     "resultado": [
+      "Comprar cartas (custo 1) resolve.",
+      "Jogador 0 compra 1 carta(s)."
+     ]
+    },
+    {
+     "n": 26,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 2,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": []
+    },
+    {
+     "n": 27,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 2,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": [
+      "Turno 2 (jogador 0): cataclisma."
+     ]
+    },
+    {
+     "n": 28,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 2,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": []
+    },
+    {
+     "n": 29,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 2,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 0 se dissipa.",
+      "Turno 2 (jogador 0): final."
+     ]
+    },
+    {
+     "n": 30,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 2,
+     "etapa": "final",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": []
+    },
+    {
+     "n": 31,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 2,
+     "etapa": "final",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": [
+      "Turno 3 (jogador 1): inicio."
+     ]
+    },
+    {
+     "n": 32,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 3,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": []
+    },
+    {
+     "n": 33,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 3,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": [
+      "Turno 3 (jogador 1): principal."
+     ]
+    },
+    {
+     "n": 34,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "colocarGrau",
+      "jogador": 1,
+      "carta": "i113"
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": [
+      "Jogador 1 põe Estrutura de dano (custo 4) no Grau."
+     ]
+    },
+    {
+     "n": 35,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i113"
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": []
+    },
+    {
+     "n": 36,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 1,
+      "carta": "i71",
+      "descartarGrau": [],
+      "enviarArcano": [
+       "i109"
+      ]
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": [
+      "Jogador 1 envia 1 carta(s) ao Arcano.",
+      "Jogador 1 joga Aliado básico (custo 2, agressivo proficiente)."
+     ]
+    },
+    {
+     "n": 37,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": []
+    },
+    {
+     "n": 38,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": [
+      "Aliado básico (custo 2, agressivo proficiente) entra em campo."
+     ]
+    },
+    {
+     "n": 39,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": []
+    },
+    {
+     "n": 40,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 3,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": [
+      "Turno 3 (jogador 1): cataclisma."
+     ]
+    },
+    {
+     "n": 41,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 3,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": []
+    },
+    {
+     "n": 42,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 3,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 1 se dissipa.",
+      "Turno 3 (jogador 1): final."
+     ]
+    },
+    {
+     "n": 43,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 3,
+     "etapa": "final",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": []
+    },
+    {
+     "n": 44,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 3,
+     "etapa": "final",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": [
+      "Turno 4 (jogador 0): inicio."
+     ]
+    },
+    {
+     "n": 45,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 4,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": []
+    },
+    {
+     "n": 46,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 4,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:52:56.066Z",
+     "resultado": [
+      "Turno 4 (jogador 0): principal."
+     ]
+    },
+    {
+     "n": 47,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 4,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:58.121Z",
+     "resultado": []
+    },
+    {
+     "n": 48,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 4,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:58.121Z",
+     "resultado": [
+      "Turno 4 (jogador 0): cataclisma."
+     ]
+    },
+    {
+     "n": 49,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 4,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T14:52:58.121Z",
+     "resultado": []
+    },
+    {
+     "n": 50,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 4,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T14:52:58.121Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 0 se dissipa.",
+      "Turno 4 (jogador 0): final."
+     ]
+    },
+    {
+     "n": 51,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 4,
+     "etapa": "final",
+     "ts": "2026-10-03T14:52:58.121Z",
+     "resultado": []
+    },
+    {
+     "n": 52,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 4,
+     "etapa": "final",
+     "ts": "2026-10-03T14:52:58.122Z",
+     "resultado": [
+      "Turno 5 (jogador 1): inicio."
+     ]
+    },
+    {
+     "n": 53,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 5,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:52:58.122Z",
+     "resultado": []
+    },
+    {
+     "n": 54,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 5,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:52:58.122Z",
+     "resultado": [
+      "Turno 5 (jogador 1): principal."
+     ]
+    },
+    {
+     "n": 55,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "colocarGrau",
+      "jogador": 1,
+      "carta": "i117"
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:58.122Z",
+     "resultado": [
+      "Jogador 1 põe Comprar cartas (custo 1) no Grau."
+     ]
+    },
+    {
+     "n": 56,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i113"
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:58.122Z",
+     "resultado": []
+    },
+    {
+     "n": 57,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i117"
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:58.122Z",
+     "resultado": []
+    },
+    {
+     "n": 58,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 1,
+      "carta": "i105",
+      "alvo": "i1",
+      "descartarGrau": [],
+      "enviarArcano": []
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:58.122Z",
+     "resultado": [
+      "Jogador 1 joga Dano básico (custo 2, repentina)."
+     ]
+    },
+    {
+     "n": 59,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:58.122Z",
+     "resultado": []
+    },
+    {
+     "n": 60,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:58.122Z",
+     "resultado": [
+      "Dano básico (custo 2, repentina) resolve.",
+      "Lyandra, a Domadora de Guerra sofre 2 de dano (efeito)."
+     ]
+    },
+    {
+     "n": 61,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:58.122Z",
+     "resultado": []
+    },
+    {
+     "n": 62,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 5,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:52:58.122Z",
+     "resultado": [
+      "Turno 5 (jogador 1): cataclisma."
+     ]
+    },
+    {
+     "n": 63,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 5,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T14:52:58.122Z",
+     "resultado": []
+    },
+    {
+     "n": 64,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 5,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T14:52:58.122Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 1 se dissipa.",
+      "Turno 5 (jogador 1): final."
+     ]
+    },
+    {
+     "n": 65,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 5,
+     "etapa": "final",
+     "ts": "2026-10-03T14:52:58.122Z",
+     "resultado": []
+    },
+    {
+     "n": 66,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 5,
+     "etapa": "final",
+     "ts": "2026-10-03T14:52:58.122Z",
+     "resultado": [
+      "Turno 6 (jogador 0): inicio."
+     ]
+    },
+    {
+     "n": 67,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 6,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:52:58.122Z",
+     "resultado": []
+    },
+    {
+     "n": 68,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 6,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:52:58.122Z",
+     "resultado": [
+      "Turno 6 (jogador 0): principal."
+     ]
+    },
+    {
+     "n": 69,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 6,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:53:01.913Z",
+     "resultado": []
+    },
+    {
+     "n": 70,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 6,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:53:01.914Z",
+     "resultado": [
+      "Turno 6 (jogador 0): cataclisma."
+     ]
+    },
+    {
+     "n": 71,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 6,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T14:53:01.914Z",
+     "resultado": []
+    },
+    {
+     "n": 72,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 6,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T14:53:01.914Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 0 se dissipa.",
+      "Turno 6 (jogador 0): final."
+     ]
+    },
+    {
+     "n": 73,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 6,
+     "etapa": "final",
+     "ts": "2026-10-03T14:53:01.914Z",
+     "resultado": []
+    },
+    {
+     "n": 74,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 6,
+     "etapa": "final",
+     "ts": "2026-10-03T14:53:01.914Z",
+     "resultado": [
+      "Turno 7 (jogador 1): inicio."
+     ]
+    },
+    {
+     "n": 75,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:53:01.914Z",
+     "resultado": []
+    },
+    {
+     "n": 76,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:53:01.914Z",
+     "resultado": [
+      "Turno 7 (jogador 1): principal."
+     ]
+    },
+    {
+     "n": 77,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "colocarGrau",
+      "jogador": 1,
+      "carta": "i112"
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:53:01.914Z",
+     "resultado": [
+      "Jogador 1 põe Cura (custo 2) no Grau."
+     ]
+    },
+    {
+     "n": 78,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i113"
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:53:01.914Z",
+     "resultado": []
+    },
+    {
+     "n": 79,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i117"
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:53:01.914Z",
+     "resultado": []
+    },
+    {
+     "n": 80,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i112"
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:53:01.914Z",
+     "resultado": []
+    },
+    {
+     "n": 81,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 1,
+      "carta": "i87",
+      "descartarGrau": [],
+      "enviarArcano": [
+       "i96"
+      ]
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:53:01.914Z",
+     "resultado": [
+      "Jogador 1 envia 1 carta(s) ao Arcano.",
+      "Jogador 1 joga Piromante."
+     ]
+    },
+    {
+     "n": 82,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:53:01.914Z",
+     "resultado": []
+    },
+    {
+     "n": 83,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:54:51.850Z",
+     "resultado": [
+      "Piromante entra em campo."
+     ]
+    },
+    {
+     "n": 84,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:54:51.850Z",
+     "resultado": []
+    },
+    {
+     "n": 85,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:59:10.706Z",
+     "resultado": [
+      "Aliado básico (custo 2, agressivo) sofre 1 de dano (efeito)."
+     ]
+    },
+    {
+     "n": 86,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 1,
+      "atacante": "i71",
+      "alvo": "i7"
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:59:10.707Z",
+     "resultado": [
+      "Jogador 1 ataca."
+     ]
+    },
+    {
+     "n": 87,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:59:10.707Z",
+     "resultado": []
+    },
+    {
+     "n": 88,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:59:10.707Z",
+     "resultado": [
+      "Ataque declarado; o jogador 0 escolhe o bloqueio."
+     ]
+    },
+    {
+     "n": 89,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "bloquear",
+      "jogador": 0,
+      "bloqueador": "i1"
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:59:23.666Z",
+     "resultado": []
+    },
+    {
+     "n": 90,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:59:23.666Z",
+     "resultado": []
+    },
+    {
+     "n": 91,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:59:40.890Z",
+     "resultado": [
+      "Lyandra, a Domadora de Guerra: o primeiro dano de Aliado do turno causa 1 a mais.",
+      "Lyandra, a Domadora de Guerra sofre 3 de dano (combate).",
+      "Aliado básico (custo 2, agressivo proficiente) sofre 1 de dano (combate).",
+      "Combate: 3 de dano ao alvo, 1 de volta."
+     ]
+    },
+    {
+     "n": 92,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:59:40.890Z",
+     "resultado": []
+    },
+    {
+     "n": 93,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "principal",
+     "ts": "2026-10-03T14:59:40.890Z",
+     "resultado": [
+      "Turno 7 (jogador 1): cataclisma."
+     ]
+    },
+    {
+     "n": 94,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T14:59:40.890Z",
+     "resultado": []
+    },
+    {
+     "n": 95,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T14:59:40.890Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 1 se dissipa.",
+      "Turno 7 (jogador 1): final."
+     ]
+    },
+    {
+     "n": 96,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 7,
+     "etapa": "final",
+     "ts": "2026-10-03T14:59:40.890Z",
+     "resultado": []
+    },
+    {
+     "n": 97,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 7,
+     "etapa": "final",
+     "ts": "2026-10-03T14:59:55.586Z",
+     "resultado": [
+      "Turno 8 (jogador 0): inicio."
+     ]
+    },
+    {
+     "n": 98,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 8,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:59:55.586Z",
+     "resultado": []
+    },
+    {
+     "n": 99,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 8,
+     "etapa": "inicio",
+     "ts": "2026-10-03T14:59:55.586Z",
+     "resultado": [
+      "Turno 8 (jogador 0): principal."
+     ]
+    },
+    {
+     "n": 100,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 0,
+      "carta": "i46"
+     },
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:01:02.914Z",
+     "resultado": []
+    },
+    {
+     "n": 101,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 0,
+      "carta": "i44",
+      "alvo": "i62",
+      "descartarGrau": [],
+      "enviarArcano": [
+       "i23"
+      ]
+     },
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:01:09.042Z",
+     "resultado": [
+      "Jogador 0 envia 1 carta(s) ao Arcano.",
+      "Jogador 0 joga Dano básico (custo 2, repentina)."
+     ]
+    },
+    {
+     "n": 102,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:01:09.042Z",
+     "resultado": []
+    },
+    {
+     "n": 103,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:01:09.042Z",
+     "resultado": [
+      "Dano básico (custo 2, repentina) resolve.",
+      "Lyandra, a Domadora de Guerra sofre 2 de dano (efeito)."
+     ]
+    },
+    {
+     "n": 104,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "colocarGrau",
+      "jogador": 0,
+      "carta": "i6"
+     },
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:01:20.042Z",
+     "resultado": [
+      "Jogador 0 põe Aliado básico (custo 2, agressivo) no Grau."
+     ]
+    },
+    {
+     "n": 105,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 0,
+      "carta": "i6"
+     },
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:01:21.153Z",
+     "resultado": []
+    },
+    {
+     "n": 106,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 0,
+      "carta": "i9",
+      "descartarGrau": [],
+      "enviarArcano": [
+       "i28"
+      ]
+     },
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:01:50.994Z",
+     "resultado": [
+      "Jogador 0 envia 1 carta(s) ao Arcano.",
+      "Jogador 0 joga Aliado básico (custo 2, agressivo)."
+     ]
+    },
+    {
+     "n": 107,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:01:50.994Z",
+     "resultado": []
+    },
+    {
+     "n": 108,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:01:50.994Z",
+     "resultado": [
+      "Aliado básico (custo 2, agressivo) entra em campo."
+     ]
+    },
+    {
+     "n": 109,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 0,
+      "atacante": "i7",
+      "alvo": "i62",
+      "enviarArcano": []
+     },
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:42.226Z",
+     "resultado": [
+      "Jogador 0 ataca."
+     ]
+    },
+    {
+     "n": 110,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:42.226Z",
+     "resultado": []
+    },
+    {
+     "n": 111,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:42.226Z",
+     "resultado": [
+      "Ataque declarado; o jogador 1 escolhe o bloqueio."
+     ]
+    },
+    {
+     "n": 112,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "bloquear",
+      "jogador": 1,
+      "bloqueador": "i87"
+     },
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:42.226Z",
+     "resultado": []
+    },
+    {
+     "n": 113,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:42.227Z",
+     "resultado": []
+    },
+    {
+     "n": 114,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:42.227Z",
+     "resultado": [
+      "Lyandra, a Domadora de Guerra: o primeiro dano de Aliado do turno causa 1 a mais.",
+      "Lyandra, a Domadora de Guerra: o primeiro dano de Aliado do turno causa 1 a mais.",
+      "Piromante sofre 4 de dano (combate).",
+      "Aliado básico (custo 2, agressivo) sofre 4 de dano (combate).",
+      "Combate: 4 de dano ao alvo, 4 de volta.",
+      "Aliado básico (custo 2, agressivo) foi para o cemitério.",
+      "Piromante foi para o cemitério."
+     ]
+    },
+    {
+     "n": 115,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:46.722Z",
+     "resultado": []
+    },
+    {
+     "n": 116,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:46.722Z",
+     "resultado": [
+      "Turno 8 (jogador 0): cataclisma."
+     ]
+    },
+    {
+     "n": 117,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 8,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T15:05:46.722Z",
+     "resultado": []
+    },
+    {
+     "n": 118,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 8,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T15:05:46.722Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 0 se dissipa.",
+      "Turno 8 (jogador 0): final."
+     ]
+    },
+    {
+     "n": 119,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 8,
+     "etapa": "final",
+     "ts": "2026-10-03T15:05:46.722Z",
+     "resultado": []
+    },
+    {
+     "n": 120,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 8,
+     "etapa": "final",
+     "ts": "2026-10-03T15:05:46.722Z",
+     "resultado": [
+      "Turno 9 (jogador 1): inicio."
+     ]
+    },
+    {
+     "n": 121,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 9,
+     "etapa": "inicio",
+     "ts": "2026-10-03T15:05:46.722Z",
+     "resultado": []
+    },
+    {
+     "n": 122,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 9,
+     "etapa": "inicio",
+     "ts": "2026-10-03T15:05:46.722Z",
+     "resultado": [
+      "Turno 9 (jogador 1): principal."
+     ]
+    },
+    {
+     "n": 123,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "colocarGrau",
+      "jogador": 1,
+      "carta": "i63"
+     },
+     "turno": 9,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:46.722Z",
+     "resultado": [
+      "Jogador 1 põe Aliado básico (custo 1, equilibrado) no Grau."
+     ]
+    },
+    {
+     "n": 124,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i113"
+     },
+     "turno": 9,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:46.722Z",
+     "resultado": []
+    },
+    {
+     "n": 125,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i117"
+     },
+     "turno": 9,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:46.722Z",
+     "resultado": []
+    },
+    {
+     "n": 126,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i112"
+     },
+     "turno": 9,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:46.722Z",
+     "resultado": []
+    },
+    {
+     "n": 127,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i63"
+     },
+     "turno": 9,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:46.722Z",
+     "resultado": []
+    },
+    {
+     "n": 128,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 1,
+      "carta": "i92",
+      "descartarGrau": [],
+      "enviarArcano": [
+       "i89"
+      ]
+     },
+     "turno": 9,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:46.722Z",
+     "resultado": [
+      "Jogador 1 envia 1 carta(s) ao Arcano.",
+      "Jogador 1 joga Fera de cerco."
+     ]
+    },
+    {
+     "n": 129,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 9,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:46.722Z",
+     "resultado": []
+    },
+    {
+     "n": 130,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 9,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:46.722Z",
+     "resultado": [
+      "Fera de cerco entra em campo."
+     ]
+    },
+    {
+     "n": 131,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 9,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:46.722Z",
+     "resultado": []
+    },
+    {
+     "n": 132,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 9,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:46.722Z",
+     "resultado": [
+      "Lyandra, a Domadora de Guerra sofre 2 de dano (efeito)."
+     ]
+    },
+    {
+     "n": 133,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 9,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:46.723Z",
+     "resultado": []
+    },
+    {
+     "n": 134,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 9,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:05:46.723Z",
+     "resultado": [
+      "Turno 9 (jogador 1): cataclisma."
+     ]
+    },
+    {
+     "n": 135,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 9,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T15:05:46.723Z",
+     "resultado": []
+    },
+    {
+     "n": 136,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 9,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T15:05:46.723Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 1 se dissipa.",
+      "Turno 9 (jogador 1): final."
+     ]
+    },
+    {
+     "n": 137,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 9,
+     "etapa": "final",
+     "ts": "2026-10-03T15:05:46.723Z",
+     "resultado": []
+    },
+    {
+     "n": 138,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 9,
+     "etapa": "final",
+     "ts": "2026-10-03T15:05:46.723Z",
+     "resultado": [
+      "Turno 10 (jogador 0): inicio."
+     ]
+    },
+    {
+     "n": 139,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 10,
+     "etapa": "inicio",
+     "ts": "2026-10-03T15:05:46.723Z",
+     "resultado": []
+    },
+    {
+     "n": 140,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 10,
+     "etapa": "inicio",
+     "ts": "2026-10-03T15:05:46.723Z",
+     "resultado": [
+      "Turno 10 (jogador 0): principal."
+     ]
+    },
+    {
+     "n": 141,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 10,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": []
+    },
+    {
+     "n": 142,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 10,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": [
+      "Turno 10 (jogador 0): cataclisma."
+     ]
+    },
+    {
+     "n": 143,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 10,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": []
+    },
+    {
+     "n": 144,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 10,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 0 se dissipa.",
+      "Turno 10 (jogador 0): final."
+     ]
+    },
+    {
+     "n": 145,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 10,
+     "etapa": "final",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": []
+    },
+    {
+     "n": 146,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 10,
+     "etapa": "final",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": [
+      "Turno 11 (jogador 1): inicio."
+     ]
+    },
+    {
+     "n": 147,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 11,
+     "etapa": "inicio",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": []
+    },
+    {
+     "n": 148,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 11,
+     "etapa": "inicio",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": [
+      "Turno 11 (jogador 1): principal."
+     ]
+    },
+    {
+     "n": 149,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "colocarGrau",
+      "jogador": 1,
+      "carta": "i122"
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": [
+      "Jogador 1 põe Recurso básico no Grau."
+     ]
+    },
+    {
+     "n": 150,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i113"
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": []
+    },
+    {
+     "n": 151,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i117"
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": []
+    },
+    {
+     "n": 152,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i112"
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": []
+    },
+    {
+     "n": 153,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i63"
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": []
+    },
+    {
+     "n": 154,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i122"
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": []
+    },
+    {
+     "n": 155,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 1,
+      "carta": "i91",
+      "descartarGrau": [],
+      "enviarArcano": []
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": [
+      "Jogador 1 joga Presa-trovão."
+     ]
+    },
+    {
+     "n": 156,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": []
+    },
+    {
+     "n": 157,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": [
+      "Presa-trovão entra em campo."
+     ]
+    },
+    {
+     "n": 158,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": []
+    },
+    {
+     "n": 159,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": []
+    },
+    {
+     "n": 160,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 1,
+      "atacante": "i92",
+      "alvo": "i9"
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": [
+      "Jogador 1 ataca."
+     ]
+    },
+    {
+     "n": 161,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": []
+    },
+    {
+     "n": 162,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:09.418Z",
+     "resultado": [
+      "Ataque declarado; o jogador 0 escolhe o bloqueio."
+     ]
+    },
+    {
+     "n": 163,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "bloquear",
+      "jogador": 0,
+      "bloqueador": "i9"
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:18.193Z",
+     "resultado": []
+    },
+    {
+     "n": 164,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:18.193Z",
+     "resultado": []
+    },
+    {
+     "n": 165,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:18.194Z",
+     "resultado": [
+      "Lyandra, a Domadora de Guerra: o primeiro dano de Aliado do turno causa 1 a mais.",
+      "Lyandra, a Domadora de Guerra: o primeiro dano de Aliado do turno causa 1 a mais.",
+      "Aliado básico (custo 2, agressivo) sofre 4 de dano (combate).",
+      "Fera de cerco sofre 4 de dano (combate).",
+      "Combate: 4 de dano ao alvo, 4 de volta.",
+      "Aliado básico (custo 2, agressivo) foi para o cemitério."
+     ]
+    },
+    {
+     "n": 166,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 1,
+      "atacante": "i71",
+      "alvo": "i1"
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:18.194Z",
+     "resultado": [
+      "Jogador 1 ataca."
+     ]
+    },
+    {
+     "n": 167,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:18.194Z",
+     "resultado": []
+    },
+    {
+     "n": 168,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:18.194Z",
+     "resultado": [
+      "Ataque declarado; o jogador 0 escolhe o bloqueio."
+     ]
+    },
+    {
+     "n": 169,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "bloquear",
+      "jogador": 0,
+      "bloqueador": "i1"
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:23.146Z",
+     "resultado": []
+    },
+    {
+     "n": 170,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:23.146Z",
+     "resultado": []
+    },
+    {
+     "n": 171,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:23.146Z",
+     "resultado": [
+      "Lyandra, a Domadora de Guerra sofre 2 de dano (combate).",
+      "Aliado básico (custo 2, agressivo proficiente) sofre 1 de dano (combate).",
+      "Combate: 2 de dano ao alvo, 1 de volta.",
+      "Aliado básico (custo 2, agressivo proficiente) foi para o cemitério."
+     ]
+    },
+    {
+     "n": 172,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 1,
+      "atacante": "i62",
+      "alvo": "i1",
+      "enviarArcano": []
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:23.146Z",
+     "resultado": [
+      "Jogador 1 ataca."
+     ]
+    },
+    {
+     "n": 173,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:23.146Z",
+     "resultado": []
+    },
+    {
+     "n": 174,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:23.146Z",
+     "resultado": [
+      "Ataque declarado; o jogador 0 escolhe o bloqueio."
+     ]
+    },
+    {
+     "n": 175,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "bloquear",
+      "jogador": 0,
+      "bloqueador": null
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:25.546Z",
+     "resultado": []
+    },
+    {
+     "n": 176,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:25.546Z",
+     "resultado": []
+    },
+    {
+     "n": 177,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:25.546Z",
+     "resultado": [
+      "Lyandra, a Domadora de Guerra sofre 1 de dano (combate).",
+      "Combate: 1 de dano ao alvo, 0 de volta."
+     ]
+    },
+    {
+     "n": 178,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:25.546Z",
+     "resultado": []
+    },
+    {
+     "n": 179,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 11,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:25.546Z",
+     "resultado": [
+      "Turno 11 (jogador 1): cataclisma."
+     ]
+    },
+    {
+     "n": 180,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 11,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T15:06:25.546Z",
+     "resultado": []
+    },
+    {
+     "n": 181,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 11,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T15:06:25.546Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 1 se dissipa.",
+      "Turno 11 (jogador 1): final."
+     ]
+    },
+    {
+     "n": 182,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 11,
+     "etapa": "final",
+     "ts": "2026-10-03T15:06:25.546Z",
+     "resultado": []
+    },
+    {
+     "n": 183,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 11,
+     "etapa": "final",
+     "ts": "2026-10-03T15:06:25.546Z",
+     "resultado": [
+      "Turno 12 (jogador 0): inicio."
+     ]
+    },
+    {
+     "n": 184,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 12,
+     "etapa": "inicio",
+     "ts": "2026-10-03T15:06:25.546Z",
+     "resultado": []
+    },
+    {
+     "n": 185,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 12,
+     "etapa": "inicio",
+     "ts": "2026-10-03T15:06:25.546Z",
+     "resultado": [
+      "Turno 12 (jogador 0): principal."
+     ]
+    },
+    {
+     "n": 186,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 0,
+      "carta": "i46"
+     },
+     "turno": 12,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:40.490Z",
+     "resultado": []
+    },
+    {
+     "n": 187,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 0,
+      "carta": "i6"
+     },
+     "turno": 12,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:06:41.090Z",
+     "resultado": []
+    },
+    {
+     "n": 188,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "colocarGrau",
+      "jogador": 0,
+      "carta": "i54"
+     },
+     "turno": 12,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:07:57.961Z",
+     "resultado": [
+      "Jogador 0 põe Comprar cartas (custo 1) no Grau."
+     ]
+    },
+    {
+     "n": 189,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 0,
+      "carta": "i54"
+     },
+     "turno": 12,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:08:00.562Z",
+     "resultado": []
+    },
+    {
+     "n": 190,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 0,
+      "carta": "i43",
+      "alvo": "i92",
+      "descartarGrau": [],
+      "enviarArcano": [
+       "i5"
+      ]
+     },
+     "turno": 12,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:08:30.874Z",
+     "resultado": [
+      "Jogador 0 envia 1 carta(s) ao Arcano.",
+      "Jogador 0 joga Dano básico (custo 4)."
+     ]
+    },
+    {
+     "n": 191,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 12,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:08:30.874Z",
+     "resultado": []
+    },
+    {
+     "n": 192,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 12,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:08:30.874Z",
+     "resultado": [
+      "Dano básico (custo 4) resolve.",
+      "Fera de cerco sofre 5 de dano (efeito).",
+      "Fera de cerco foi para o cemitério."
+     ]
+    },
+    {
+     "n": 193,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 0,
+      "carta": "i13",
+      "descartarGrau": [],
+      "enviarArcano": [
+       "i26",
+       "i47"
+      ]
+     },
+     "turno": 12,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:08:51.034Z",
+     "resultado": [
+      "Jogador 0 envia 2 carta(s) ao Arcano.",
+      "Jogador 0 joga Aliado básico (custo 2, agressivo proficiente)."
+     ]
+    },
+    {
+     "n": 194,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 12,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:08:51.034Z",
+     "resultado": []
+    },
+    {
+     "n": 195,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 12,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:08:51.034Z",
+     "resultado": [
+      "Aliado básico (custo 2, agressivo proficiente) entra em campo."
+     ]
+    },
+    {
+     "n": 196,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 0,
+      "atacante": "i13",
+      "alvo": "i62",
+      "enviarArcano": []
+     },
+     "turno": 12,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:08:57.338Z",
+     "resultado": [
+      "Jogador 0 ataca."
+     ]
+    },
+    {
+     "n": 197,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 12,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:08:57.338Z",
+     "resultado": []
+    },
+    {
+     "n": 198,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 12,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:08:57.338Z",
+     "resultado": [
+      "Ataque declarado; o jogador 1 escolhe o bloqueio."
+     ]
+    },
+    {
+     "n": 199,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "bloquear",
+      "jogador": 1,
+      "bloqueador": "i91"
+     },
+     "turno": 12,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:08:57.338Z",
+     "resultado": []
+    },
+    {
+     "n": 200,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 12,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:08:57.338Z",
+     "resultado": []
+    },
+    {
+     "n": 201,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 12,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:08:57.338Z",
+     "resultado": [
+      "Lyandra, a Domadora de Guerra: o primeiro dano de Aliado do turno causa 1 a mais.",
+      "Lyandra, a Domadora de Guerra: o primeiro dano de Aliado do turno causa 1 a mais.",
+      "Presa-trovão sofre 3 de dano (combate).",
+      "Aliado básico (custo 2, agressivo proficiente) sofre 6 de dano (combate).",
+      "Combate: 3 de dano ao alvo, 6 de volta.",
+      "Aliado básico (custo 2, agressivo proficiente) foi para o cemitério."
+     ]
+    },
+    {
+     "n": 202,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 12,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": []
+    },
+    {
+     "n": 203,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 12,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": [
+      "Turno 12 (jogador 0): cataclisma."
+     ]
+    },
+    {
+     "n": 204,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 12,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": []
+    },
+    {
+     "n": 205,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 12,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 0 se dissipa.",
+      "Turno 12 (jogador 0): final."
+     ]
+    },
+    {
+     "n": 206,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 12,
+     "etapa": "final",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": []
+    },
+    {
+     "n": 207,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 12,
+     "etapa": "final",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": [
+      "Turno 13 (jogador 1): inicio."
+     ]
+    },
+    {
+     "n": 208,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 13,
+     "etapa": "inicio",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": []
+    },
+    {
+     "n": 209,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 13,
+     "etapa": "inicio",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": [
+      "Turno 13 (jogador 1): principal."
+     ]
+    },
+    {
+     "n": 210,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i113"
+     },
+     "turno": 13,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": []
+    },
+    {
+     "n": 211,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i117"
+     },
+     "turno": 13,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": []
+    },
+    {
+     "n": 212,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i112"
+     },
+     "turno": 13,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": []
+    },
+    {
+     "n": 213,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i63"
+     },
+     "turno": 13,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": []
+    },
+    {
+     "n": 214,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i122"
+     },
+     "turno": 13,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": []
+    },
+    {
+     "n": 215,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 1,
+      "carta": "i84",
+      "descartarGrau": [],
+      "enviarArcano": [
+       "i73"
+      ]
+     },
+     "turno": 13,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": [
+      "Jogador 1 envia 1 carta(s) ao Arcano.",
+      "Jogador 1 joga Aliado básico (custo 6, agressivo)."
+     ]
+    },
+    {
+     "n": 216,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 13,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": []
+    },
+    {
+     "n": 217,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 13,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": [
+      "Aliado básico (custo 6, agressivo) entra em campo."
+     ]
+    },
+    {
+     "n": 218,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 1,
+      "atacante": "i62",
+      "alvo": "i1",
+      "enviarArcano": []
+     },
+     "turno": 13,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": [
+      "Jogador 1 ataca."
+     ]
+    },
+    {
+     "n": 219,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 13,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": []
+    },
+    {
+     "n": 220,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 13,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:09:01.162Z",
+     "resultado": [
+      "Ataque declarado; o jogador 0 escolhe o bloqueio."
+     ]
+    },
+    {
+     "n": 221,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "bloquear",
+      "jogador": 0,
+      "bloqueador": "i1"
+     },
+     "turno": 13,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:09:03.546Z",
+     "resultado": []
+    },
+    {
+     "n": 222,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 13,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:09:03.546Z",
+     "resultado": []
+    },
+    {
+     "n": 223,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 13,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:09:03.546Z",
+     "resultado": [
+      "Lyandra, a Domadora de Guerra sofre 1 de dano (combate).",
+      "Lyandra, a Domadora de Guerra sofre 1 de dano (combate).",
+      "Combate: 1 de dano ao alvo, 1 de volta."
+     ]
+    },
+    {
+     "n": 224,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 13,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:09:03.546Z",
+     "resultado": []
+    },
+    {
+     "n": 225,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 13,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:09:03.546Z",
+     "resultado": [
+      "Turno 13 (jogador 1): cataclisma."
+     ]
+    },
+    {
+     "n": 226,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 13,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T15:09:03.546Z",
+     "resultado": []
+    },
+    {
+     "n": 227,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 13,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T15:09:03.546Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 1 se dissipa.",
+      "Turno 13 (jogador 1): final."
+     ]
+    },
+    {
+     "n": 228,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 13,
+     "etapa": "final",
+     "ts": "2026-10-03T15:09:03.546Z",
+     "resultado": []
+    },
+    {
+     "n": 229,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 13,
+     "etapa": "final",
+     "ts": "2026-10-03T15:09:03.546Z",
+     "resultado": [
+      "Turno 14 (jogador 0): inicio."
+     ]
+    },
+    {
+     "n": 230,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 14,
+     "etapa": "inicio",
+     "ts": "2026-10-03T15:09:03.546Z",
+     "resultado": []
+    },
+    {
+     "n": 231,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 14,
+     "etapa": "inicio",
+     "ts": "2026-10-03T15:09:03.546Z",
+     "resultado": [
+      "Turno 14 (jogador 0): principal."
+     ]
+    },
+    {
+     "n": 232,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 14,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": []
+    },
+    {
+     "n": 233,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 14,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": [
+      "Turno 14 (jogador 0): cataclisma."
+     ]
+    },
+    {
+     "n": 234,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 14,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": []
+    },
+    {
+     "n": 235,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 14,
+     "etapa": "cataclisma",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": [
+      "Cataclisma: o Arcano do jogador 0 se dissipa.",
+      "Turno 14 (jogador 0): final."
+     ]
+    },
+    {
+     "n": 236,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 14,
+     "etapa": "final",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": []
+    },
+    {
+     "n": 237,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 14,
+     "etapa": "final",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": [
+      "Turno 15 (jogador 1): inicio."
+     ]
+    },
+    {
+     "n": 238,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 15,
+     "etapa": "inicio",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": []
+    },
+    {
+     "n": 239,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 15,
+     "etapa": "inicio",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": [
+      "Turno 15 (jogador 1): principal."
+     ]
+    },
+    {
+     "n": 240,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i113"
+     },
+     "turno": 15,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": []
+    },
+    {
+     "n": 241,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i117"
+     },
+     "turno": 15,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": []
+    },
+    {
+     "n": 242,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i112"
+     },
+     "turno": 15,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": []
+    },
+    {
+     "n": 243,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i63"
+     },
+     "turno": 15,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": []
+    },
+    {
+     "n": 244,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "suspenderGrau",
+      "jogador": 1,
+      "carta": "i122"
+     },
+     "turno": 15,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": []
+    },
+    {
+     "n": 245,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 1,
+      "carta": "i85",
+      "descartarGrau": [],
+      "enviarArcano": [
+       "i74"
+      ]
+     },
+     "turno": 15,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": [
+      "Jogador 1 envia 1 carta(s) ao Arcano.",
+      "Jogador 1 joga Aliado básico (custo 6, agressivo)."
+     ]
+    },
+    {
+     "n": 246,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 15,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": []
+    },
+    {
+     "n": 247,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 15,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": [
+      "Aliado básico (custo 6, agressivo) entra em campo."
+     ]
+    },
+    {
+     "n": 248,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "atacar",
+      "jogador": 1,
+      "atacante": "i84",
+      "alvo": "i1"
+     },
+     "turno": 15,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": [
+      "Jogador 1 ataca."
+     ]
+    },
+    {
+     "n": 249,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 15,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": []
+    },
+    {
+     "n": 250,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 15,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:10:33.770Z",
+     "resultado": [
+      "Ataque declarado; o jogador 0 escolhe o bloqueio."
+     ]
+    },
+    {
+     "n": 251,
+     "quem": "eu",
+     "cmd": {
+      "tipo": "bloquear",
+      "jogador": 0,
+      "bloqueador": null
+     },
+     "turno": 15,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:10:37.290Z",
+     "resultado": []
+    },
+    {
+     "n": 252,
+     "quem": "bot",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 1
+     },
+     "turno": 15,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:10:37.290Z",
+     "resultado": []
+    },
+    {
+     "n": 253,
+     "quem": "auto",
+     "cmd": {
+      "tipo": "passar",
+      "jogador": 0
+     },
+     "turno": 15,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:10:37.290Z",
+     "resultado": [
+      "Lyandra, a Domadora de Guerra: o primeiro dano de Aliado do turno causa 1 a mais.",
+      "Lyandra, a Domadora de Guerra sofre 12 de dano (combate).",
+      "Combate: 12 de dano ao alvo, 0 de volta.",
+      "Jogador 1 venceu."
+     ]
+    }
+   ],
+   "erros": [
+    {
+     "quem": "eu",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 0,
+      "carta": "i9",
+      "descartarGrau": [],
+      "enviarArcano": [
+       "i26",
+       "i47",
+       "i28"
+      ]
+     },
+     "msg": "Não envie mais cartas ao Arcano: o custo já está coberto.",
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:01:44.628Z"
+    },
+    {
+     "quem": "eu",
+     "cmd": {
+      "tipo": "jogar",
+      "jogador": 0,
+      "carta": "i9",
+      "descartarGrau": [],
+      "enviarArcano": [
+       "i47",
+       "i28"
+      ]
+     },
+     "msg": "Não envie mais cartas ao Arcano: o custo já está coberto.",
+     "turno": 8,
+     "etapa": "principal",
+     "ts": "2026-10-03T15:01:48.898Z"
+    }
+   ],
+   "comentarios": [
+    {
+     "ts": "2026-10-03T14:56:21.370Z",
+     "turno": 7,
+     "etapa": "principal",
+     "vidaVoce": 17,
+     "vidaOponente": 19,
+     "acoesAteAqui": 84,
+     "texto": "a quantidade de cartas que repôe da mão, é até o limite especificado no personagem\nlimite de cartas totais pra qualquer jogador:7\nQuanto cada personagem começa/repõe se tiver menos que isso: individual de personagem"
+    },
+    {
+     "ts": "2026-10-03T14:58:52.226Z",
+     "turno": 7,
+     "etapa": "principal",
+     "vidaVoce": 17,
+     "vidaOponente": 19,
+     "acoesAteAqui": 84,
+     "texto": "melhorar descrição do que está acontecendo aqui no testador,"
+    },
+    {
+     "ts": "2026-10-03T15:02:32.762Z",
+     "turno": 8,
+     "etapa": "principal",
+     "vidaVoce": 14,
+     "vidaOponente": 17,
+     "acoesAteAqui": 108,
+     "texto": "quando o grau entrar, ele ja pode ser usado(só primeiro jogador no primeiro turno que não pode colocar grau)"
+    },
+    {
+     "ts": "2026-10-03T15:07:39.738Z",
+     "turno": 12,
+     "etapa": "principal",
+     "vidaVoce": 9,
+     "vidaOponente": 20,
+     "acoesAteAqui": 187,
+     "texto": "ao invés desse comprar 1 carta por  1 de custo, coloqueefeito de olhar 3 cartas do topo do deck pra depois pegaruma pra mão, velocidade Repentina, o resto vai pr ofundo do deck"
+    },
+    {
+     "ts": "2026-10-03T15:10:17.250Z",
+     "turno": 14,
+     "etapa": "principal",
+     "vidaVoce": 8,
+     "vidaOponente": 19,
+     "acoesAteAqui": 231,
+     "texto": "cuidado, as cartas estão atacando e sendo conjuradas antes da main phase em si\nsó na main phase que os jogadores podem atacar, ativar feitiços não repentinos, jogar cartas ou ativar efeitos não repentinos"
+    }
+   ],
+   "resultado": {
+    "vencedor": "bot",
+    "turnos": 15,
+    "ultimoEvento": "Jogador 1 venceu.",
+    "motivo": "fim de jogo"
+   },
+   "enviada": false,
+   "desfeitos": [
+    {
+     "ts": "2026-10-03T15:08:18.738Z",
+     "comandos": [
+      {
+       "n": 190,
+       "quem": "eu",
+       "cmd": {
+        "tipo": "jogar",
+        "jogador": 0,
+        "carta": "i43",
+        "alvo": "i62",
+        "descartarGrau": [],
+        "enviarArcano": [
+         "i5"
+        ]
+       },
+       "turno": 12,
+       "etapa": "principal",
+       "ts": "2026-10-03T15:08:06.282Z",
+       "resultado": [
+        "Jogador 0 envia 1 carta(s) ao Arcano.",
+        "Jogador 0 joga Dano básico (custo 4)."
+       ]
+      },
+      {
+       "n": 191,
+       "quem": "auto",
+       "cmd": {
+        "tipo": "passar",
+        "jogador": 0
+       },
+       "turno": 12,
+       "etapa": "principal",
+       "ts": "2026-10-03T15:08:06.282Z",
+       "resultado": []
+      },
+      {
+       "n": 192,
+       "quem": "bot",
+       "cmd": {
+        "tipo": "passar",
+        "jogador": 1
+       },
+       "turno": 12,
+       "etapa": "principal",
+       "ts": "2026-10-03T15:08:06.282Z",
+       "resultado": [
+        "Dano básico (custo 4) resolve.",
+        "Lyandra, a Domadora de Guerra sofre 5 de dano (efeito)."
+       ]
+      }
+     ]
+    }
+   ],
+   "logCompleto": [
+    "Dados: jogador 0 tirou 5, jogador 1 tirou 18.",
+    "Jogador 1 começa. O jogador 0 compra 0 carta(s) a mais e recebe 0 Arcano.",
+    "Turno 1 (jogador 1): inicio.",
+    "Turno 1 (jogador 1): principal.",
+    "Jogador 1 ataca.",
+    "Ataque declarado; o jogador 0 escolhe o bloqueio.",
+    "Lyandra, a Domadora de Guerra sofre 1 de dano (combate).",
+    "Lyandra, a Domadora de Guerra sofre 1 de dano (combate).",
+    "Combate: 1 de dano ao alvo, 1 de volta.",
+    "Turno 1 (jogador 1): cataclisma.",
+    "Cataclisma: o Arcano do jogador 1 se dissipa.",
+    "Turno 1 (jogador 1): final.",
+    "Turno 2 (jogador 0): inicio.",
+    "Turno 2 (jogador 0): principal.",
+    "Jogador 0 põe Dano ao Conjurador (custo 3) no Grau.",
+    "Jogador 0 envia 1 carta(s) ao Arcano.",
+    "Jogador 0 joga Aliado básico (custo 2, agressivo).",
+    "Aliado básico (custo 2, agressivo) entra em campo.",
+    "Jogador 0 envia 1 carta(s) ao Arcano.",
+    "Jogador 0 joga Comprar cartas (custo 1).",
+    "Comprar cartas (custo 1) resolve.",
+    "Jogador 0 compra 1 carta(s).",
+    "Turno 2 (jogador 0): cataclisma.",
+    "Cataclisma: o Arcano do jogador 0 se dissipa.",
+    "Turno 2 (jogador 0): final.",
+    "Turno 3 (jogador 1): inicio.",
+    "Turno 3 (jogador 1): principal.",
+    "Jogador 1 põe Estrutura de dano (custo 4) no Grau.",
+    "Jogador 1 envia 1 carta(s) ao Arcano.",
+    "Jogador 1 joga Aliado básico (custo 2, agressivo proficiente).",
+    "Aliado básico (custo 2, agressivo proficiente) entra em campo.",
+    "Turno 3 (jogador 1): cataclisma.",
+    "Cataclisma: o Arcano do jogador 1 se dissipa.",
+    "Turno 3 (jogador 1): final.",
+    "Turno 4 (jogador 0): inicio.",
+    "Turno 4 (jogador 0): principal.",
+    "Turno 4 (jogador 0): cataclisma.",
+    "Cataclisma: o Arcano do jogador 0 se dissipa.",
+    "Turno 4 (jogador 0): final.",
+    "Turno 5 (jogador 1): inicio.",
+    "Turno 5 (jogador 1): principal.",
+    "Jogador 1 põe Comprar cartas (custo 1) no Grau.",
+    "Jogador 1 joga Dano básico (custo 2, repentina).",
+    "Dano básico (custo 2, repentina) resolve.",
+    "Lyandra, a Domadora de Guerra sofre 2 de dano (efeito).",
+    "Turno 5 (jogador 1): cataclisma.",
+    "Cataclisma: o Arcano do jogador 1 se dissipa.",
+    "Turno 5 (jogador 1): final.",
+    "Turno 6 (jogador 0): inicio.",
+    "Turno 6 (jogador 0): principal.",
+    "Turno 6 (jogador 0): cataclisma.",
+    "Cataclisma: o Arcano do jogador 0 se dissipa.",
+    "Turno 6 (jogador 0): final.",
+    "Turno 7 (jogador 1): inicio.",
+    "Turno 7 (jogador 1): principal.",
+    "Jogador 1 põe Cura (custo 2) no Grau.",
+    "Jogador 1 envia 1 carta(s) ao Arcano.",
+    "Jogador 1 joga Piromante.",
+    "Piromante entra em campo.",
+    "Aliado básico (custo 2, agressivo) sofre 1 de dano (efeito).",
+    "Jogador 1 ataca.",
+    "Ataque declarado; o jogador 0 escolhe o bloqueio.",
+    "Lyandra, a Domadora de Guerra: o primeiro dano de Aliado do turno causa 1 a mais.",
+    "Lyandra, a Domadora de Guerra sofre 3 de dano (combate).",
+    "Aliado básico (custo 2, agressivo proficiente) sofre 1 de dano (combate).",
+    "Combate: 3 de dano ao alvo, 1 de volta.",
+    "Turno 7 (jogador 1): cataclisma.",
+    "Cataclisma: o Arcano do jogador 1 se dissipa.",
+    "Turno 7 (jogador 1): final.",
+    "Turno 8 (jogador 0): inicio.",
+    "Turno 8 (jogador 0): principal.",
+    "Jogador 0 envia 1 carta(s) ao Arcano.",
+    "Jogador 0 joga Dano básico (custo 2, repentina).",
+    "Dano básico (custo 2, repentina) resolve.",
+    "Lyandra, a Domadora de Guerra sofre 2 de dano (efeito).",
+    "Jogador 0 põe Aliado básico (custo 2, agressivo) no Grau.",
+    "Jogador 0 envia 1 carta(s) ao Arcano.",
+    "Jogador 0 joga Aliado básico (custo 2, agressivo).",
+    "Aliado básico (custo 2, agressivo) entra em campo.",
+    "Jogador 0 ataca.",
+    "Ataque declarado; o jogador 1 escolhe o bloqueio.",
+    "Lyandra, a Domadora de Guerra: o primeiro dano de Aliado do turno causa 1 a mais.",
+    "Lyandra, a Domadora de Guerra: o primeiro dano de Aliado do turno causa 1 a mais.",
+    "Piromante sofre 4 de dano (combate).",
+    "Aliado básico (custo 2, agressivo) sofre 4 de dano (combate).",
+    "Combate: 4 de dano ao alvo, 4 de volta.",
+    "Aliado básico (custo 2, agressivo) foi para o cemitério.",
+    "Piromante foi para o cemitério.",
+    "Turno 8 (jogador 0): cataclisma.",
+    "Cataclisma: o Arcano do jogador 0 se dissipa.",
+    "Turno 8 (jogador 0): final.",
+    "Turno 9 (jogador 1): inicio.",
+    "Turno 9 (jogador 1): principal.",
+    "Jogador 1 põe Aliado básico (custo 1, equilibrado) no Grau.",
+    "Jogador 1 envia 1 carta(s) ao Arcano.",
+    "Jogador 1 joga Fera de cerco.",
+    "Fera de cerco entra em campo.",
+    "Lyandra, a Domadora de Guerra sofre 2 de dano (efeito).",
+    "Turno 9 (jogador 1): cataclisma.",
+    "Cataclisma: o Arcano do jogador 1 se dissipa.",
+    "Turno 9 (jogador 1): final.",
+    "Turno 10 (jogador 0): inicio.",
+    "Turno 10 (jogador 0): principal.",
+    "Turno 10 (jogador 0): cataclisma.",
+    "Cataclisma: o Arcano do jogador 0 se dissipa.",
+    "Turno 10 (jogador 0): final.",
+    "Turno 11 (jogador 1): inicio.",
+    "Turno 11 (jogador 1): principal.",
+    "Jogador 1 põe Recurso básico no Grau.",
+    "Jogador 1 joga Presa-trovão.",
+    "Presa-trovão entra em campo.",
+    "Jogador 1 ataca.",
+    "Ataque declarado; o jogador 0 escolhe o bloqueio.",
+    "Lyandra, a Domadora de Guerra: o primeiro dano de Aliado do turno causa 1 a mais.",
+    "Lyandra, a Domadora de Guerra: o primeiro dano de Aliado do turno causa 1 a mais.",
+    "Aliado básico (custo 2, agressivo) sofre 4 de dano (combate).",
+    "Fera de cerco sofre 4 de dano (combate).",
+    "Combate: 4 de dano ao alvo, 4 de volta.",
+    "Aliado básico (custo 2, agressivo) foi para o cemitério.",
+    "Jogador 1 ataca.",
+    "Ataque declarado; o jogador 0 escolhe o bloqueio.",
+    "Lyandra, a Domadora de Guerra sofre 2 de dano (combate).",
+    "Aliado básico (custo 2, agressivo proficiente) sofre 1 de dano (combate).",
+    "Combate: 2 de dano ao alvo, 1 de volta.",
+    "Aliado básico (custo 2, agressivo proficiente) foi para o cemitério.",
+    "Jogador 1 ataca.",
+    "Ataque declarado; o jogador 0 escolhe o bloqueio.",
+    "Lyandra, a Domadora de Guerra sofre 1 de dano (combate).",
+    "Combate: 1 de dano ao alvo, 0 de volta.",
+    "Turno 11 (jogador 1): cataclisma.",
+    "Cataclisma: o Arcano do jogador 1 se dissipa.",
+    "Turno 11 (jogador 1): final.",
+    "Turno 12 (jogador 0): inicio.",
+    "Turno 12 (jogador 0): principal.",
+    "Jogador 0 põe Comprar cartas (custo 1) no Grau.",
+    "Jogador 0 envia 1 carta(s) ao Arcano.",
+    "Jogador 0 joga Dano básico (custo 4).",
+    "Dano básico (custo 4) resolve.",
+    "Fera de cerco sofre 5 de dano (efeito).",
+    "Fera de cerco foi para o cemitério.",
+    "Jogador 0 envia 2 carta(s) ao Arcano.",
+    "Jogador 0 joga Aliado básico (custo 2, agressivo proficiente).",
+    "Aliado básico (custo 2, agressivo proficiente) entra em campo.",
+    "Jogador 0 ataca.",
+    "Ataque declarado; o jogador 1 escolhe o bloqueio.",
+    "Lyandra, a Domadora de Guerra: o primeiro dano de Aliado do turno causa 1 a mais.",
+    "Lyandra, a Domadora de Guerra: o primeiro dano de Aliado do turno causa 1 a mais.",
+    "Presa-trovão sofre 3 de dano (combate).",
+    "Aliado básico (custo 2, agressivo proficiente) sofre 6 de dano (combate).",
+    "Combate: 3 de dano ao alvo, 6 de volta.",
+    "Aliado básico (custo 2, agressivo proficiente) foi para o cemitério.",
+    "Turno 12 (jogador 0): cataclisma.",
+    "Cataclisma: o Arcano do jogador 0 se dissipa.",
+    "Turno 12 (jogador 0): final.",
+    "Turno 13 (jogador 1): inicio.",
+    "Turno 13 (jogador 1): principal.",
+    "Jogador 1 envia 1 carta(s) ao Arcano.",
+    "Jogador 1 joga Aliado básico (custo 6, agressivo).",
+    "Aliado básico (custo 6, agressivo) entra em campo.",
+    "Jogador 1 ataca.",
+    "Ataque declarado; o jogador 0 escolhe o bloqueio.",
+    "Lyandra, a Domadora de Guerra sofre 1 de dano (combate).",
+    "Lyandra, a Domadora de Guerra sofre 1 de dano (combate).",
+    "Combate: 1 de dano ao alvo, 1 de volta.",
+    "Turno 13 (jogador 1): cataclisma.",
+    "Cataclisma: o Arcano do jogador 1 se dissipa.",
+    "Turno 13 (jogador 1): final.",
+    "Turno 14 (jogador 0): inicio.",
+    "Turno 14 (jogador 0): principal.",
+    "Turno 14 (jogador 0): cataclisma.",
+    "Cataclisma: o Arcano do jogador 0 se dissipa.",
+    "Turno 14 (jogador 0): final.",
+    "Turno 15 (jogador 1): inicio.",
+    "Turno 15 (jogador 1): principal.",
+    "Jogador 1 envia 1 carta(s) ao Arcano.",
+    "Jogador 1 joga Aliado básico (custo 6, agressivo).",
+    "Aliado básico (custo 6, agressivo) entra em campo.",
+    "Jogador 1 ataca.",
+    "Ataque declarado; o jogador 0 escolhe o bloqueio.",
+    "Lyandra, a Domadora de Guerra: o primeiro dano de Aliado do turno causa 1 a mais.",
+    "Lyandra, a Domadora de Guerra sofre 12 de dano (combate).",
+    "Combate: 12 de dano ao alvo, 0 de volta.",
+    "Jogador 1 venceu."
+   ]
+  }
+ ],
+ "comentariosGerais": [
+  {
+   "ts": "2026-10-03T14:41:00.882Z",
+   "texto": "o jogador sempre ataca ou defende suspendendo\npra atacar usa o valor da arma, o canal e pra defender o valor da armadura\n\nCanais, armaduras, e itens extras podem ter efeitos, modificadores extras dependendo da raridade dele\n\nOlhe os templates e imagens do gpt queeu fiz com o canva, dê o comando do que precisa ter em cada imagem e template, não precisa especificar nada estético(pra criação do template), apenas quais partes importantes das mecânicas do jogo tem que ecistir\n\nCrie um agente pra quando definirmos cartas a serem criadas e tudo sobre ela, ele começar a colcoar os agentes dele pra trabalhar\n\nvocê vai ajudar a descrever pra ele personagens e o que é pra ter na arte\n\nOlhe as orientações que eu tambémdei pra ele sobre conjuradores e artes"
+  }
+ ],
+ "dadosVersao": "5539baf083",
+ "edicoes": {
+  "cartas": {},
+  "conjuradores": {},
+  "regras": {},
+  "precos": {},
+  "baralhos": {},
+  "historico": []
+ }
+}

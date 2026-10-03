@@ -1,0 +1,58 @@
+{
+  "tarefaId": "templates-mecanica",
+  "autor": "Claude",
+  "estado": "solicitado",
+  "necessidadeAtual": true,
+  "versao": 1,
+  "atualizadoEm": "2026-10-03",
+  "objetivoAtual": "Conferir os templates do Canva e da arena (arena/templates, mapa-canva.json) contra as partes MECÂNICAS que cada tipo de carta precisa mostrar. Pedido do autor: dizer só o que precisa existir em cada template, sem nada estético. A estética continua com o Designer de Cartas.",
+  "referenciasClaude": [
+    "Arcanoclisma/tcg/docs/LIVRO-DE-REGRAS.md (seções 2, 7, 8, 9.3)",
+    "Arcanoclisma/tcg/src/tipos.ts (CartaDef, ConjuradorDef)",
+    "Arcanoclisma/tcg/src/itens.ts (itens de teste)",
+    "Arcanoclisma/arena/modelos-cartas.json e modelo-online.json (o que existe hoje)"
+  ],
+  "mudancasDeRegraQueAfetamOsTemplates": [
+    "O Conjurador não tem mais Ataque próprio (dano básico 0): o ataque dele vem das armas equipadas (Canal e Extra). Tirar o campo de Ataque da carta de Conjurador (modelo-online.json ainda liga 'ataque' a ConjuradorDef.danoBasico).",
+    "Só o CANAL precisa de um campo de ATAQUE (valor da arma). O EXTRA é um item consumível de suporte, sem Ataque (resposta do autor). Hoje só a Armadura tem campos próprios (b-defesa, b-desgaste); overlay-canal não tem o número de Ataque.",
+    "Itens ficam FORA do baralho (equipados na preparação, sob o Conjurador): não têm Custo, Grau nem Arcano gerado. Os modelos de item em modelos-cartas.json mostram custo 2, Grau 1 e geração 2: esses campos devem sumir nos itens.",
+    "A mão do Conjurador agora também é até quanto a mão é reposta no Início do turno: a carta de Conjurador precisa mostrar esse número (Mão).",
+    "O autor disse que itens podem ter efeitos e modificadores conforme a raridade: nos ITENS a raridade pode ter efeito de regra (nas outras cartas continua só cosmética). Manter a raridade visível e legível nos itens."
+  ],
+  "templates": [
+    {
+      "tipo": "comum a todas as cartas do baralho (Aliado, Temporária, Mística, Estrutura)",
+      "obrigatorio": ["Nome", "Tipo e subtipos (lista; ex.: Aliado · Dragão)", "Valores (um, vários ou nenhum; indicados no anel do Custo)", "Custo em Arcano", "Grau (requisito; ocultar quando 0 só se o autor quiser)", "Arcano gerado ao enviar a carta ao Arcano (pitch)", "Caixa de texto de regras", "Raridade"],
+      "quandoAplicavel": ["Velocidade Repentina (sempre explícita quando a carta for Repentina)", "Ambientação (texto de sabor, opcional)"],
+      "textoDeRegrasPrecisaCaber": ["palavras-chave: Proficiente, Etéreo, Protegido N", "Descarte N do Grau para jogar", "Exige carta de um Valor no Grau", "Ao entrar: ...", "Ao causar dano de combate ao Conjurador inimigo: ...", "habilidade ativada: Suspenda [e pague N]: ...", "O oponente pode pagar N para anulá-la"]
+    },
+    { "tipo": "Aliado", "obrigatorio": ["tudo o que é comum", "Ataque", "Vida"] },
+    { "tipo": "Temporária", "obrigatorio": ["tudo o que é comum", "Velocidade SEMPRE visível: Findante ou Repentina"], "naoTem": ["Ataque", "Vida"] },
+    { "tipo": "Mística", "obrigatorio": ["tudo o que é comum"], "quandoAplicavel": ["Vida (se tiver Vida, pode ser atacada)"], "naoTem": ["Ataque (até hoje nenhuma Mística ataca)"] },
+    { "tipo": "Estrutura", "obrigatorio": ["tudo o que é comum", "Vida (só é atingida por magias)"], "naoTem": ["Ataque"] },
+    {
+      "tipo": "Conjurador",
+      "obrigatorio": ["Nome", "Valores (2)", "Vida (20)", "Mão (5: mão inicial e reposição no Início)", "Comprometimento", "Habilidade (texto; marcar Repentina quando for)"],
+      "naoTem": ["Custo", "Grau", "Arcano gerado", "Ataque (vem das armas)"],
+      "observacao": "A arte do Conjurador nunca é reaproveitada em outra carta (diretrizes-arte-por-carta.json)."
+    },
+    { "tipo": "Item: Canal", "obrigatorio": ["Nome", "Espaço: Canal", "Ataque (valor da arma)", "Raridade", "Caixa de texto (efeitos/modificadores, pode ficar vazia)"], "quandoAplicavel": ["Valores (itens de teste não têm)", "subtipos"], "naoTem": ["Custo", "Grau", "Arcano gerado", "Vida"] },
+    { "tipo": "Item: Armadura", "obrigatorio": ["Nome", "Espaço: Armadura", "Defesa", "Vida de desgaste", "Raridade", "Caixa de texto"], "quandoAplicavel": ["Valores", "subtipos"], "naoTem": ["Custo", "Grau", "Arcano gerado", "Ataque"] },
+    { "tipo": "Item: Extra (consumível de suporte)", "obrigatorio": ["Nome", "Espaço: Extra", "Raridade", "Caixa de texto (efeito de uso único)"], "quandoAplicavel": ["Valores", "subtipos"], "naoTem": ["Ataque", "Custo", "Grau", "Arcano gerado"] },
+    { "tipo": "Verso", "obrigatorio": ["Idêntico em todas as cartas do baralho (nenhuma informação)"] }
+  ],
+  "arenaOnline": {
+    "obrigatorio": [
+      "Zonas por jogador: baralho, mão, campo, Zona de Grau (cartas viradas, que podem estar suspensas), Zona de Contador Arcano, cemitério, banimento (aba discreta perto do cemitério), pilha compartilhada",
+      "Itens sob o Conjurador (botão de itens no online): até 3 espaços, Canal, Armadura e Extra",
+      "Desgaste atual da Armadura (ex.: 1/4), porque ela quebra",
+      "Ataque atual do Conjurador (soma das armas) perto dele",
+      "Vida atual de tudo que tem Vida (o dano fica guardado entre turnos)",
+      "Reserva de Arcano de cada jogador",
+      "Estado suspenso (carta deitada 90°) para Aliados, Conjurador, cartas do Grau e Estruturas"
+    ]
+  },
+  "camposSemAplicacao": ["arte", "cena", "personagens", "composicao: decisões estéticas ficam com o Designer de Cartas"],
+  "respostasEsperadas": "Gravar entregas/templates-mecanica.visual.json dizendo, para cada template, o que já existe, o que foi acrescentado e o que foi tirado. O Claude confere e responde em entregas/templates-mecanica.integracao.claude.json.",
+  "respostas": []
+}

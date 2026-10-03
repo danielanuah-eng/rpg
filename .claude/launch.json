@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "app-testes", "runtimeExecutable": "node", "runtimeArgs": ["Arcanoclisma/tcg/app/servidor.ts"], "port": 8765 }
+  ]
+}

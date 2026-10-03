@@ -1,0 +1,12 @@
+{
+  "name": "arcanoclisma-tcg",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Motor de regras do TCG Arcanoclisma (TypeScript, sem dependências; requer Node 24+).",
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "simular": "node sim/simular.ts 100",
+    "agente": "node sim/agente.ts"
+  }
+}

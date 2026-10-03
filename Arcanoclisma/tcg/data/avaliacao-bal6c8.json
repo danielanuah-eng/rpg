@@ -1,0 +1,367 @@
+{
+ "nomes": [
+  "Aggro",
+  "Midrange",
+  "Controle",
+  "Burn",
+  "Stall",
+  "Ramp",
+  "Tempo",
+  "Mistura",
+  "Eternyr"
+ ],
+ "geral": [
+  0.6520833333333332,
+  0.7375,
+  0.3645833333333333,
+  0.5270833333333333,
+  0.7375,
+  0.26041666666666663,
+  0.5541666666666667,
+  0.4416666666666667,
+  0.22499999999999998
+ ],
+ "matriz": [
+  [
+   null,
+   0.23333333333333334,
+   0.8833333333333333,
+   0.9,
+   0.36666666666666664,
+   0.7833333333333333,
+   0.6833333333333333,
+   0.5833333333333334,
+   0.7833333333333333
+  ],
+  [
+   0.7666666666666667,
+   null,
+   0.7833333333333333,
+   0.7,
+   0.45,
+   0.85,
+   0.65,
+   0.7166666666666667,
+   0.9833333333333333
+  ],
+  [
+   0.11666666666666667,
+   0.21666666666666667,
+   null,
+   0.26666666666666666,
+   0.25,
+   0.6833333333333333,
+   0.36666666666666664,
+   0.35,
+   0.6666666666666666
+  ],
+  [
+   0.1,
+   0.3,
+   0.7333333333333333,
+   null,
+   0.23333333333333334,
+   0.8833333333333333,
+   0.5833333333333334,
+   0.45,
+   0.9333333333333333
+  ],
+  [
+   0.6333333333333333,
+   0.55,
+   0.75,
+   0.7666666666666667,
+   null,
+   0.8333333333333334,
+   0.7166666666666667,
+   0.75,
+   0.9
+  ],
+  [
+   0.21666666666666667,
+   0.15,
+   0.31666666666666665,
+   0.11666666666666667,
+   0.16666666666666666,
+   null,
+   0.16666666666666666,
+   0.5166666666666667,
+   0.43333333333333335
+  ],
+  [
+   0.31666666666666665,
+   0.35,
+   0.6333333333333333,
+   0.4166666666666667,
+   0.2833333333333333,
+   0.8333333333333334,
+   null,
+   0.7,
+   0.9
+  ],
+  [
+   0.4166666666666667,
+   0.2833333333333333,
+   0.65,
+   0.55,
+   0.25,
+   0.48333333333333334,
+   0.3,
+   null,
+   0.6
+  ],
+  [
+   0.21666666666666667,
+   0.016666666666666666,
+   0.3333333333333333,
+   0.06666666666666667,
+   0.1,
+   0.5666666666666667,
+   0.1,
+   0.4,
+   null
+  ]
+ ],
+ "criterios": [
+  {
+   "id": "geral-max",
+   "descricao": "Nenhuma montagem passa de 59% de vitória média (confrontos podem ser desiguais).",
+   "ok": false,
+   "valor": "Aggro 65.2%, Midrange 73.8%, Stall 73.8%",
+   "alvo": "≤ 59.0%",
+   "desvio": 14.750000000000007,
+   "unidade": "pp",
+   "opcional": false
+  },
+  {
+   "id": "geral-min",
+   "descricao": "Toda montagem fica jogável (pelo menos 38% de vitória média). Proposta do Claude.",
+   "ok": false,
+   "valor": "Controle 36.5%, Ramp 26.0%, Eternyr 22.5%",
+   "alvo": "≥ 38.0%",
+   "desvio": 15.500000000000004,
+   "unidade": "pp",
+   "opcional": false
+  },
+  {
+   "id": "duracao",
+   "descricao": "Partidas por volta de 20 turnos totais (média entre 16 e 26).",
+   "ok": true,
+   "valor": "18.7 turnos",
+   "alvo": "16 a 26",
+   "desvio": 0,
+   "unidade": "rel",
+   "opcional": false
+  },
+  {
+   "id": "travadas",
+   "descricao": "Partidas que não terminam: no máximo 5%.",
+   "ok": true,
+   "valor": "0.0%",
+   "alvo": "≤ 5.0%",
+   "desvio": 0,
+   "unidade": "pp",
+   "opcional": false
+  },
+  {
+   "id": "primeiro",
+   "descricao": "Quem começa vence entre 45% e 55%.",
+   "ok": false,
+   "valor": "41.6%",
+   "alvo": "≥ 45.0% e ≤ 55.0%",
+   "desvio": 3.39506172839506,
+   "unidade": "pp",
+   "opcional": false
+  },
+  {
+   "id": "controle-vs-aggro",
+   "descricao": "Controle tem recursos para controlar o Aggro (o Aggro pode explodir às vezes).",
+   "ok": false,
+   "valor": "11.7% (n=60)",
+   "alvo": "≥ 35.0%",
+   "desvio": 23.333333333333332,
+   "unidade": "pp",
+   "opcional": false
+  },
+  {
+   "id": "controle-tardio",
+   "descricao": "Remoções e recursos do Controle pesam mais quanto mais o jogo passa: vence pelo menos 55% das partidas longas.",
+   "ok": false,
+   "valor": "53.0% em 317 partidas com 18+ turnos",
+   "alvo": "≥ 55.0%",
+   "desvio": 2.003154574132493,
+   "unidade": "pp",
+   "opcional": false
+  },
+  {
+   "id": "controle-trocas",
+   "descricao": "Controle perde menos Aliados que o oponente a longo prazo (razão perdidos/oponente ≤ 1).",
+   "ok": true,
+   "valor": "0.35 (489 × 1380 em 383 partidas)",
+   "alvo": "≤ 1",
+   "desvio": 0,
+   "unidade": "rel",
+   "opcional": false
+  },
+  {
+   "id": "aggro-cedo",
+   "descricao": "Aggro começa a bater cedo: primeiro dano até o turno global 4 (mediana).",
+   "ok": true,
+   "valor": "turno 2 (mediana)",
+   "alvo": "≤ 4",
+   "desvio": 0,
+   "unidade": "rel",
+   "opcional": false
+  },
+  {
+   "id": "aggro-mao",
+   "descricao": "Aggro gasta a mão rápido: até 2,5 cartas na mão ao fim do seu 4º turno (média).",
+   "ok": true,
+   "valor": "2.22 cartas",
+   "alvo": "≤ 2.5",
+   "desvio": 0,
+   "unidade": "rel",
+   "opcional": false
+  },
+  {
+   "id": "aggro-cansa",
+   "descricao": "Controlado, o Aggro cansa: vence no máximo 40% das partidas longas contra o Controle.",
+   "ok": false,
+   "valor": "46.2% em 13 partidas com 18+ turnos",
+   "alvo": "≤ 40.0%",
+   "desvio": 10,
+   "unidade": "pp",
+   "opcional": false,
+   "nota": "amostra pequena"
+  },
+  {
+   "id": "aggro-possivel",
+   "descricao": "...mas não é impossível: pelo menos 30% contra o Controle.",
+   "ok": true,
+   "valor": "88.3% (n=60)",
+   "alvo": "≥ 30.0%",
+   "desvio": 0,
+   "unidade": "pp",
+   "opcional": false
+  },
+  {
+   "id": "burn-constante",
+   "descricao": "Burn causa dano (em Aliados ou no Conjurador) em pelo menos 75% dos próprios turnos, mesmo que pouco.",
+   "ok": true,
+   "valor": "82.9% dos turnos próprios (a partir do 2º)",
+   "alvo": "≥ 75.0%",
+   "desvio": 0,
+   "unidade": "pp",
+   "opcional": false
+  },
+  {
+   "id": "midrange-vs-controle",
+   "descricao": "Midrange tem early game para pressionar o Controle.",
+   "ok": true,
+   "valor": "78.3% (n=60)",
+   "alvo": "≥ 50.0%",
+   "desvio": 0,
+   "unidade": "pp",
+   "opcional": false
+  },
+  {
+   "id": "midrange-vs-aggro",
+   "descricao": "Midrange tem controle suficiente para segurar o Aggro.",
+   "ok": true,
+   "valor": "76.7% (n=60)",
+   "alvo": "≥ 50.0%",
+   "desvio": 0,
+   "unidade": "pp",
+   "opcional": false
+  },
+  {
+   "id": "tempo-vs-controle",
+   "descricao": "Tempo (aggro-controle: ameaça barata + interação barata) pressiona o Controle.",
+   "ok": true,
+   "valor": "63.3% (n=60)",
+   "alvo": "≥ 50.0%",
+   "desvio": 0,
+   "unidade": "pp",
+   "opcional": false
+  },
+  {
+   "id": "tempo-interage",
+   "descricao": "Tempo interage no turno do oponente: pelo menos 1 carta repentina por partida.",
+   "ok": true,
+   "valor": "2.76 por partida",
+   "alvo": "≥ 1",
+   "desvio": 0,
+   "unidade": "rel",
+   "opcional": false
+  },
+  {
+   "id": "stall-ganha-por-dano",
+   "descricao": "Stall tem forma de ganhar dando dano: pelo menos 75% das vitórias são por dano, não por impasse.",
+   "ok": true,
+   "valor": "97.5% de 354 vitórias",
+   "alvo": "≥ 75.0%",
+   "desvio": 0,
+   "unidade": "pp",
+   "opcional": false
+  },
+  {
+   "id": "stall-vs-aggro",
+   "descricao": "Stall costuma ser pior contra Aggro, mas joga (pelo menos 30%).",
+   "ok": true,
+   "valor": "63.3% (n=60)",
+   "alvo": "≥ 30.0%",
+   "desvio": 0,
+   "unidade": "pp",
+   "opcional": false
+  },
+  {
+   "id": "stall-controlou",
+   "descricao": "Se o Stall controla o Aggro (partida longa), ele ganha: pelo menos 60%.",
+   "ok": true,
+   "valor": "80.9% em 47 partidas com 16+ turnos",
+   "alvo": "≥ 60.0%",
+   "desvio": 0,
+   "unidade": "pp",
+   "opcional": false
+  },
+  {
+   "id": "combo-existe",
+   "descricao": "Pode existir um deck de Combo (lento, pouca interação, muito forte se montar).",
+   "ok": false,
+   "valor": "não existe",
+   "alvo": "existir",
+   "desvio": 100,
+   "unidade": "rel",
+   "opcional": true
+  },
+  {
+   "id": "combo-vs-controle",
+   "descricao": "O counter do Combo é o Controle.",
+   "ok": false,
+   "valor": "montagem Combo não existe",
+   "alvo": "—",
+   "desvio": 100,
+   "unidade": "rel",
+   "opcional": true,
+   "nota": "ausente"
+  },
+  {
+   "id": "combo-montou",
+   "descricao": "Se monta (partida longa), o Combo fica muito forte.",
+   "ok": false,
+   "valor": "montagem Combo não existe",
+   "alvo": "—",
+   "desvio": 100,
+   "unidade": "rel",
+   "opcional": true,
+   "nota": "ausente"
+  }
+ ],
+ "ok": 14,
+ "total": 20,
+ "todos": false,
+ "proximo": false,
+ "partidas": 2430,
+ "decididas": 2430,
+ "turnosMedia": 18.694238683127573
+}

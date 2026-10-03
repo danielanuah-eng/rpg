@@ -1,0 +1,520 @@
+{
+ "variante": "BAL",
+ "cands": {
+  "Controle": {
+   "lista": [
+    [
+     "base-destruir-c3",
+     1
+    ],
+    [
+     "base-destruir-c4-repentina",
+     2
+    ],
+    [
+     "base-dano-c2",
+     2
+    ],
+    [
+     "base-dano-c3",
+     1
+    ],
+    [
+     "base-dano-c2-repentina",
+     2
+    ],
+    [
+     "bal-remocao-grau-c3",
+     1
+    ],
+    [
+     "bal-varredura-c5",
+     1
+    ],
+    [
+     "bal-anular-c3-repentina",
+     2
+    ],
+    [
+     "base-comprar-c3",
+     3
+    ],
+    [
+     "base-comprar-c2-repentina",
+     2
+    ],
+    [
+     "base-estrutura-c3",
+     1
+    ],
+    [
+     "base-curar-c3",
+     5
+    ],
+    [
+     "base-aliado-c2-defensivo",
+     3
+    ],
+    [
+     "base-aliado-c4-defensivo",
+     2
+    ],
+    [
+     "base-estrutura-c3-enfermaria",
+     2
+    ],
+    [
+     "base-aliado-c6-equilibrado",
+     1
+    ],
+    [
+     "base-aliado-c8-equilibrado",
+     1
+    ],
+    [
+     "base-recurso",
+     5
+    ],
+    [
+     "r6-ira-c4",
+     2
+    ],
+    [
+     "r6-por-do-sol-c7",
+     1
+    ],
+    [
+     "r6-furia-c3",
+     2
+    ],
+    [
+     "r6-presa-trovao-c5",
+     3
+    ],
+    [
+     "eternyr-dano-aliado-c5",
+     1
+    ],
+    [
+     "eternyr-comprar-c3-repentina",
+     1
+    ],
+    [
+     "base-aliado-c5-equilibrado",
+     1
+    ],
+    [
+     "r6-fera-cerco-c5",
+     2
+    ],
+    [
+     "base-estrutura-c8-reator",
+     1
+    ],
+    [
+     "base-aliado-c6-agressivo",
+     1
+    ],
+    [
+     "eternyr-comprar-c3",
+     2
+    ],
+    [
+     "base-dano-conjurador-c3",
+     1
+    ],
+    [
+     "base-dano-conjurador-c5",
+     1
+    ],
+    [
+     "base-dano-c3-repentina",
+     1
+    ],
+    [
+     "bal-estrutura-cerco-c3",
+     1
+    ],
+    [
+     "base-dano-conjurador-c2",
+     1
+    ],
+    [
+     "base-aliado-c8-equilibrado-descarta-grau",
+     1
+    ]
+   ],
+   "estilo": {
+    "nome": "Controle",
+    "agressividade": 0.1,
+    "reservaInstantes": true,
+    "grauAlvo": 8,
+    "queimaFace": false
+   }
+  },
+  "Midrange": {
+   "lista": [
+    [
+     "base-aliado-c2-equilibrado",
+     2
+    ],
+    [
+     "base-aliado-c3-equilibrado",
+     3
+    ],
+    [
+     "base-aliado-c6-equilibrado",
+     2
+    ],
+    [
+     "base-aliado-c8-equilibrado",
+     1
+    ],
+    [
+     "base-aliado-c2-defensivo",
+     2
+    ],
+    [
+     "base-dano-c2",
+     3
+    ],
+    [
+     "base-dano-c3",
+     3
+    ],
+    [
+     "base-dano-c4",
+     2
+    ],
+    [
+     "base-destruir-c3",
+     2
+    ],
+    [
+     "base-comprar-c3",
+     4
+    ],
+    [
+     "base-comprar-c1",
+     1
+    ],
+    [
+     "base-estrutura-c3",
+     1
+    ],
+    [
+     "base-recurso",
+     14
+    ],
+    [
+     "base-curar-c3",
+     1
+    ],
+    [
+     "base-estrutura-c3-enfermaria",
+     1
+    ],
+    [
+     "base-aliado-recurso-c5",
+     1
+    ],
+    [
+     "r6-piromante-c4",
+     4
+    ],
+    [
+     "r6-fera-cerco-c5",
+     1
+    ],
+    [
+     "r6-anjo-c6",
+     2
+    ],
+    [
+     "r6-mercador-c7",
+     1
+    ],
+    [
+     "base-curar-c1",
+     1
+    ],
+    [
+     "base-curar-c2",
+     1
+    ],
+    [
+     "base-aliado-c6-agressivo",
+     1
+    ],
+    [
+     "eternyr-comprar-c1",
+     1
+    ],
+    [
+     "base-dano-conjurador-c5",
+     1
+    ],
+    [
+     "r6-varredura-c2",
+     1
+    ],
+    [
+     "base-aliado-c4-equilibrado-grau5",
+     1
+    ],
+    [
+     "bal-devolver-c2-repentina",
+     1
+    ],
+    [
+     "base-estrutura-c4-fonte",
+     1
+    ]
+   ],
+   "estilo": {
+    "nome": "Midrange",
+    "agressividade": 0.6,
+    "reservaInstantes": true,
+    "grauAlvo": 6,
+    "queimaFace": false
+   }
+  },
+  "Tempo": {
+   "lista": [
+    [
+     "base-aliado-c2-agressivo-proficiente",
+     2
+    ],
+    [
+     "base-aliado-c5-equilibrado",
+     3
+    ],
+    [
+     "base-dano-c2-repentina",
+     2
+    ],
+    [
+     "base-comprar-c1",
+     2
+    ],
+    [
+     "base-destruir-c4-repentina",
+     4
+    ],
+    [
+     "base-dano-conjurador-c3",
+     1
+    ],
+    [
+     "base-recurso",
+     11
+    ],
+    [
+     "base-aliado-recurso-c1",
+     1
+    ],
+    [
+     "bal-etereo-c2",
+     2
+    ],
+    [
+     "bal-etereo-c3",
+     4
+    ],
+    [
+     "base-aliado-c2-equilibrado",
+     2
+    ],
+    [
+     "base-mistica-c4",
+     1
+    ],
+    [
+     "base-dano-c2",
+     2
+    ],
+    [
+     "eternyr-dano-aliado-c5",
+     2
+    ],
+    [
+     "base-estrutura-c3",
+     3
+    ],
+    [
+     "base-aliado-c6-equilibrado-descarta-grau",
+     1
+    ],
+    [
+     "bal-estrutura-cerco-c3",
+     1
+    ],
+    [
+     "r6-piromante-c4",
+     1
+    ],
+    [
+     "r6-varredura-c2",
+     1
+    ],
+    [
+     "eternyr-comprar-c4",
+     1
+    ],
+    [
+     "base-curar-c4",
+     3
+    ],
+    [
+     "bal-remocao-grau-c3",
+     1
+    ],
+    [
+     "base-dano-c1",
+     1
+    ],
+    [
+     "base-aliado-c6-equilibrado",
+     1
+    ],
+    [
+     "base-curar-c3",
+     1
+    ],
+    [
+     "r6-dragao-c8",
+     1
+    ],
+    [
+     "base-aliado-c3-equilibrado",
+     2
+    ],
+    [
+     "eternyr-comprar-c3",
+     1
+    ],
+    [
+     "eternyr-aliado-c6-g8",
+     1
+    ],
+    [
+     "base-destruir-c3",
+     1
+    ]
+   ],
+   "estilo": {
+    "nome": "Tempo",
+    "agressividade": 0.8,
+    "reservaInstantes": true,
+    "grauAlvo": 6,
+    "queimaFace": false
+   }
+  }
+ },
+ "medidas": [
+  {
+   "objetivo": "controle-r6b",
+   "vsMeta": {
+    "Aggro": {
+     "jogos": 240,
+     "vitorias": 100,
+     "travadas": 0,
+     "derrotas": 140,
+     "turnosDerrotas": 1656,
+     "perdiMeus": 472,
+     "perdiDeles": 1974,
+     "longas": 110,
+     "longasVencidas": 100
+    },
+    "Midrange": {
+     "jogos": 240,
+     "vitorias": 103,
+     "travadas": 0,
+     "derrotas": 137,
+     "turnosDerrotas": 3679,
+     "perdiMeus": 1449,
+     "perdiDeles": 2813,
+     "longas": 183,
+     "longasVencidas": 103
+    },
+    "Tempo": {
+     "jogos": 240,
+     "vitorias": 96,
+     "travadas": 0,
+     "derrotas": 144,
+     "turnosDerrotas": 3495,
+     "perdiMeus": 1425,
+     "perdiDeles": 2257,
+     "longas": 163,
+     "longasVencidas": 95
+    }
+   },
+   "vsOutros": 0.45499999999999996,
+   "travadasTotal": 0.0017857142857142857,
+   "falhas": [],
+   "score": 0
+  },
+  {
+   "objetivo": "midrange-r6b",
+   "vsMeta": {
+    "Controle": {
+     "jogos": 240,
+     "vitorias": 150,
+     "travadas": 0,
+     "derrotas": 90,
+     "turnosDerrotas": 4536,
+     "perdiMeus": 2509,
+     "perdiDeles": 1263,
+     "longas": 170,
+     "longasVencidas": 80
+    },
+    "Aggro": {
+     "jogos": 240,
+     "vitorias": 140,
+     "travadas": 0,
+     "derrotas": 100,
+     "turnosDerrotas": 1286,
+     "perdiMeus": 561,
+     "perdiDeles": 1566,
+     "longas": 138,
+     "longasVencidas": 126
+    }
+   },
+   "vsOutros": 0.5604166666666667,
+   "travadasTotal": 0,
+   "falhas": [],
+   "score": 0
+  },
+  {
+   "objetivo": "tempo-r6b",
+   "vsMeta": {
+    "Controle": {
+     "jogos": 240,
+     "vitorias": 150,
+     "travadas": 0,
+     "derrotas": 90,
+     "turnosDerrotas": 4496,
+     "perdiMeus": 2099,
+     "perdiDeles": 1373,
+     "longas": 155,
+     "longasVencidas": 66
+    },
+    "Aggro": {
+     "jogos": 240,
+     "vitorias": 101,
+     "travadas": 0,
+     "derrotas": 139,
+     "turnosDerrotas": 2001,
+     "perdiMeus": 545,
+     "perdiDeles": 1399,
+     "longas": 108,
+     "longasVencidas": 80
+    }
+   },
+   "vsOutros": 0.4833333333333334,
+   "travadasTotal": 0.0010416666666666667,
+   "falhas": [],
+   "score": 0
+  }
+ ]
+}

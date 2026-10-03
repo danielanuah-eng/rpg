@@ -35,6 +35,10 @@
     "embelezador": {
       "definicao": ".agents/skills/embelezador/SKILL.md",
       "funcao": "assets de efeitos e animações conforme demanda atual do Claude; ataque genérico compartilhado dos aliados"
+    },
+    "produtor-de-cartas": {
+      "definicao": ".agents/skills/produtor-de-cartas/SKILL.md",
+      "funcao": "quando o Claude e o autor fecham um lote de cartas (cartas/pedidos/lote-*.claude.json), põe Vuco vuco, Carlos, Arquiteto, Designer de Cartas, Embelezador e Enzo para trabalhar em cada carta e devolve as entregas ao Claude"
     }
   },
   "etapas": [

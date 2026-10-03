@@ -28,3 +28,7 @@ Claude pode solicitar assets visuais de animação e efeitos em `../efeitos/pedi
 ## Entrega desta configuração
 
 O autor autorizou o push das artes aprovadas, do agente e da documentação para o Claude acessar. Essa autorização vale para esta entrega. Pushes de novas cartas e revisões futuras continuam sujeitos à autorização do autor. Nenhuma demanda de carta deve ser inventada a partir da disponibilidade de artes.
+
+## Lotes de cartas (Produtor de Cartas)
+
+Quando o autor e o Claude fecham um conjunto de cartas, o Claude grava `pedidos/lote-<id>.claude.json` (modelo em `modelos/lote.claude.exemplo.json`) com a mecânica exata e a descrição dos personagens e do que a arte precisa ter. O **Produtor de Cartas** (`.agents/skills/produtor-de-cartas/SKILL.md`) vê o lote e põe os agentes visuais para trabalhar em cada carta, registrando o estado em `producao/lote-<id>.estado.json`. As entregas e a confirmação de integração seguem as etapas acima, carta por carta.

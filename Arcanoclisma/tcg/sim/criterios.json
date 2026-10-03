@@ -1,0 +1,46 @@
+{
+  "_instrucoes": [
+    "Parâmetros de balanceamento definidos pelo autor (rodada 4). Avaliados por sim/avaliar.ts; usados pelo agente-balanceador.",
+    "Cada critério tem um 'tipo' que o avaliador sabe medir. 'opcional: true' = a montagem ainda não existe ou o critério é só informativo; não conta para 'próximo'.",
+    "Taxas são frações (0.59 = 59%). 'turnosMin' em critérios de partida longa = turnos totais (dos dois jogadores).",
+    "O jogador automático não sabe 'sequenciar bem'; critérios de habilidade (como distribuir dano) não são medidos aqui."
+  ],
+  "proximo": { "fracaoMin": 0.85, "toleranciaPP": 5 },
+  "criterios": [
+    { "id": "geral-max", "tipo": "vitoriaGeralMax", "max": 0.59, "descricao": "Nenhuma montagem passa de 59% de vitória média (confrontos podem ser desiguais)." },
+    { "id": "geral-min", "tipo": "vitoriaGeralMin", "min": 0.38, "descricao": "Toda montagem fica jogável (pelo menos 38% de vitória média). Proposta do Claude.", "exceto": ["Mistura"] },
+    { "id": "duracao", "tipo": "duracao", "mediaMin": 16, "mediaMax": 26, "descricao": "Partidas por volta de 20 turnos totais (média entre 16 e 26)." },
+    { "id": "travadas", "tipo": "travadasMax", "max": 0.05, "descricao": "Partidas que não terminam: no máximo 5%." },
+    { "id": "primeiro", "tipo": "primeiroJogador", "min": 0.45, "max": 0.55, "descricao": "Quem começa vence entre 45% e 55%." },
+
+    { "id": "controle-vs-aggro", "tipo": "confronto", "a": "Controle", "b": "Aggro", "min": 0.35, "descricao": "Controle tem recursos para controlar o Aggro (o Aggro pode explodir às vezes)." },
+    { "id": "controle-tardio", "tipo": "vitoriaLonga", "arquetipo": "Controle", "turnosMin": 18, "min": 0.55, "descricao": "Remoções e recursos do Controle pesam mais quanto mais o jogo passa: vence pelo menos 55% das partidas longas." },
+    { "id": "controle-recurso", "tipo": "vantagemRecurso", "arquetipo": "Controle", "min": 0.55, "descricao": "Controle ganha em recurso: no turno 16, tem mais cartas (mão + campo + Grau) que o oponente em pelo menos 55% das partidas (pedido do autor, rodada 5)." },
+    { "id": "controle-devagar", "tipo": "duracaoVitorias", "arquetipo": "Controle", "min": 20, "descricao": "Controle não ganha rápido: as vitórias dele duram em média 20 turnos ou mais (pedido do autor, rodada 5)." },
+    { "id": "controle-trocas", "tipo": "trocas", "arquetipo": "Controle", "turnosMin": 14, "max": 1.0, "descricao": "Controle perde menos Aliados que o oponente a longo prazo (razão perdidos/oponente ≤ 1)." },
+
+    { "id": "aggro-cedo", "tipo": "primeiroDano", "arquetipo": "Aggro", "max": 4, "descricao": "Aggro começa a bater cedo: primeiro dano até o turno global 4 (mediana)." },
+    { "id": "aggro-mao", "tipo": "maoT4", "arquetipo": "Aggro", "max": 2.5, "descricao": "Aggro gasta a mão rápido: até 2,5 cartas na mão ao fim do seu 4º turno (média)." },
+    { "id": "aggro-cansa", "tipo": "vitoriaLonga", "arquetipo": "Aggro", "contra": "Controle", "turnosMin": 18, "max": 0.4, "descricao": "Controlado, o Aggro cansa: vence no máximo 40% das partidas longas contra o Controle." },
+    { "id": "aggro-possivel", "tipo": "confronto", "a": "Aggro", "b": "Controle", "min": 0.3, "descricao": "...mas não é impossível: pelo menos 30% contra o Controle." },
+
+    { "id": "burn-constante", "tipo": "constanciaDano", "arquetipo": "Burn", "min": 0.75, "descricao": "Burn causa dano (em Aliados ou no Conjurador) em pelo menos 75% dos próprios turnos, mesmo que pouco." },
+
+    { "id": "midrange-vs-controle", "tipo": "confronto", "a": "Midrange", "b": "Controle", "min": 0.5, "descricao": "Midrange tem early game para pressionar o Controle." },
+    { "id": "midrange-vs-aggro", "tipo": "confronto", "a": "Midrange", "b": "Aggro", "min": 0.5, "descricao": "Midrange tem controle suficiente para segurar o Aggro." },
+
+    { "id": "tempo-vs-controle", "tipo": "confronto", "a": "Tempo", "b": "Controle", "min": 0.5, "descricao": "Tempo (aggro-controle: ameaça barata + interação barata) pressiona o Controle." },
+    { "id": "tempo-interage", "tipo": "repentinas", "arquetipo": "Tempo", "min": 1.0, "descricao": "Tempo interage no turno do oponente: pelo menos 1 carta repentina por partida." },
+
+    { "id": "stall-ganha-por-dano", "tipo": "vitoriaSemImpasse", "arquetipo": "Stall", "min": 0.75, "descricao": "Stall tem forma de ganhar dando dano: pelo menos 75% das vitórias são por dano, não por impasse." },
+    { "id": "stall-vs-aggro", "tipo": "confronto", "a": "Stall", "b": "Aggro", "min": 0.3, "descricao": "Stall costuma ser pior contra Aggro, mas joga (pelo menos 30%)." },
+    { "id": "stall-controlou", "tipo": "vitoriaLonga", "arquetipo": "Stall", "contra": "Aggro", "turnosMin": 16, "min": 0.6, "descricao": "Se o Stall controla o Aggro (partida longa), ele ganha: pelo menos 60%." },
+
+    { "id": "largo-perde-tarde", "tipo": "vitoriaLonga", "arquetipo": "Aggro", "turnosMin": 20, "max": 0.4, "descricao": "Ir largo perde no late game: o Aggro vence no máximo 40% das partidas de 20+ turnos, contra todas as montagens (pedido do autor, rodada 6; acrescentado pelo balanceador)." },
+    { "id": "bomba-decide", "tipo": "bombaDecide", "grauMin": 5, "turnosMin": 18, "min": 0.6, "descricao": "No late game, unidades de Grau alto decidem: nas partidas de 18+ turnos em que só um lado jogou Aliado de Grau 5 ou mais, esse lado vence pelo menos 60% (pedido do autor, rodada 6; acrescentado pelo balanceador)." },
+
+    { "id": "combo-existe", "tipo": "existe", "arquetipo": "Combo", "opcional": true, "descricao": "Pode existir um deck de Combo (lento, pouca interação, muito forte se montar)." },
+    { "id": "combo-vs-controle", "tipo": "confronto", "a": "Combo", "b": "Controle", "max": 0.45, "opcional": true, "descricao": "O counter do Combo é o Controle." },
+    { "id": "combo-montou", "tipo": "vitoriaLonga", "arquetipo": "Combo", "turnosMin": 16, "min": 0.6, "opcional": true, "descricao": "Se monta (partida longa), o Combo fica muito forte." }
+  ]
+}

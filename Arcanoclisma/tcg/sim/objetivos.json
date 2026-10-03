@@ -1,0 +1,31 @@
+{
+  "_instrucoes": [
+    "Lista de objetivos do agente de testes (sim/agente.ts). O agente só para quando TODOS os objetivos forem atingidos e confirmados com uma amostra grande.",
+    "Cada objetivo escolhe uma montagem ('arquetipo') que o agente pode ajustar (cartas e estilo de jogo) e as metas dessa montagem.",
+    "metas: lista de { contra: [montagens], vitoriaMin, vitoriaMax? } = taxa de vitória da montagem contra cada uma delas.",
+    "sobrevivenciaMin: nas partidas que a montagem PERDE contra essas, os turnos totais médios precisam ser pelo menos isto (opcional).",
+    "restricoes evitam 'soluções' que quebram o resto do jogo: contraOutros = vitória média contra todas as outras montagens; adversarioMin = nenhuma montagem-alvo das metas pode ficar abaixo disto no geral.",
+    "As cartas continuam as do catálogo da variante escolhida: o agente não inventa números, só combina cartas existentes (até 4 cópias; 10 do Recurso) e o estilo do jogador automático."
+  ],
+  "variante": "PADRAO",
+  "partidasPorConfronto": 100,
+  "partidasConfirmacao": 400,
+  "objetivos": [
+    {
+      "id": "controle-sobrevive",
+      "descricao": "Melhorar o Controle a sobreviver contra Aggro e Burn",
+      "arquetipo": "Controle",
+      "metas": [
+        { "contra": ["Aggro"], "vitoriaMin": 0.4 },
+        { "contra": ["Burn"], "vitoriaMin": 0.4 }
+      ],
+      "sobrevivenciaMin": 12,
+      "restricoes": {
+        "contraOutrosMin": 0.3,
+        "contraOutrosMax": 0.62,
+        "adversarioMin": 0.3,
+        "travadasMax": 0.35
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "_instrucoes": [
+    "Segundo pedido do agente-balanceador ao agente de testes na variante BAL (rodada 6), depois de incorporar sim/baralhos-bal6-agente.json.",
+    "Mudanças do balanceador desde o primeiro pedido: o Aggro voltou à lista aprovada do PADRAO (o Aggro achado antes usava cartas lentas de Grau 5 a 10, varreduras, cura e Místicas, que não são de Aggro); o Eternyr ficou sem o Mercador e o Dragão; o Controle voltou a ser o Controle de remoção (vence em recurso), com a cura que compra e 2 Presa-trovão que o agente achou para segurar o Aggro.",
+    "O Aggro NÃO está nos objetivos de propósito: a lista dele fica fixa (a identidade aprovada), e as outras montagens se ajustam a ele.",
+    "Falham hoje (docs/AVALIACAO-BAL.md, 30 partidas por confronto): Controle 67,4% de média (teto 59%), Midrange 30% contra o Controle (meta 50%), Tempo 38% contra o Controle (meta 50%), duração 26,3 turnos (meta 16 a 26). Controle já cumpre: 48% contra o Aggro, 69% em recurso no turno 16, 83% das partidas longas, trocas 0,48.",
+    "Restrições do Controle (trocas e vitória longa) servem para ele continuar sendo Controle (remoção, vantagem a longo prazo) e não virar Midrange. Sem cotas de tipo de carta."
+  ],
+  "variante": "BAL",
+  "partidasPorConfronto": 60,
+  "partidasConfirmacao": 240,
+  "objetivos": [
+    {
+      "id": "controle-r6b",
+      "descricao": "Controle de remoção abaixo do teto: segura o Aggro, vence em recurso e devagar, mas perde mais para Midrange e Tempo",
+      "arquetipo": "Controle",
+      "metas": [
+        { "contra": ["Aggro"], "vitoriaMin": 0.38 },
+        { "contra": ["Midrange"], "vitoriaMin": 0.3, "vitoriaMax": 0.47 },
+        { "contra": ["Tempo"], "vitoriaMin": 0.3, "vitoriaMax": 0.47 }
+      ],
+      "restricoes": { "contraOutrosMin": 0.42, "contraOutrosMax": 0.56, "travadasMax": 0.05, "trocasMax": 0.7, "vitoriaLongaMin": 0.6 }
+    },
+    {
+      "id": "midrange-r6b",
+      "descricao": "Midrange pressiona o Controle e segura o Aggro",
+      "arquetipo": "Midrange",
+      "metas": [
+        { "contra": ["Controle"], "vitoriaMin": 0.53 },
+        { "contra": ["Aggro"], "vitoriaMin": 0.53 }
+      ],
+      "restricoes": { "contraOutrosMin": 0.42, "contraOutrosMax": 0.57, "travadasMax": 0.05 }
+    },
+    {
+      "id": "tempo-r6b",
+      "descricao": "Tempo pressiona o Controle com ameaça barata e interação barata",
+      "arquetipo": "Tempo",
+      "metas": [
+        { "contra": ["Controle"], "vitoriaMin": 0.53 },
+        { "contra": ["Aggro"], "vitoriaMin": 0.3 }
+      ],
+      "restricoes": { "contraOutrosMin": 0.42, "contraOutrosMax": 0.57, "travadasMax": 0.05 }
+    }
+  ]
+}

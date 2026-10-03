@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arcanoclisma: editor</title>
+<link rel="stylesheet" href="./estilo.css">
+<style>
+  header a { color: #fff; }
+  .barra { position: sticky; top: 0; z-index: 5; background: var(--fundo); padding: 8px 0; border-bottom: 1px solid var(--borda); margin-bottom: 10px; }
+  .barra input[type=text] { flex: 1; min-width: 200px; }
+  .pendente { color: var(--vermelho); font-weight: 700; }
+  .salvo { color: var(--verde); font-weight: 700; }
+  .duas { display: grid; grid-template-columns: minmax(280px, 420px) minmax(0, 1fr); gap: 12px; align-items: start; }
+  @media (max-width: 900px) { .duas { grid-template-columns: 1fr; } }
+  .lista { max-height: 72vh; overflow: auto; }
+  .lista tr { cursor: pointer; }
+  .lista tr:hover td { background: #f4efff; }
+  .lista tr.sel td { background: #e6dcff; }
+  .editada { color: var(--destaque); font-weight: 700; }
+  .campos { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px 12px; }
+  .campo { display: flex; flex-direction: column; gap: 2px; font-size: 12px; color: var(--suave); }
+  .campo input, .campo select, .campo textarea { font: inherit; font-size: 14px; color: var(--texto); padding: 3px 5px; border: 1px solid var(--borda); border-radius: 5px; min-width: 0; }
+  .campo.mudou input, .campo.mudou select, .campo.mudou textarea { border-color: var(--destaque); background: #f6f1ff; }
+  .campo .orig { font-size: 11px; }
+  .grupo { border: 1px solid var(--borda); border-radius: 8px; padding: 8px 10px; margin: 10px 0; }
+  .grupo > .titulo { font-weight: 700; margin-bottom: 6px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .efeito { display: flex; flex-wrap: wrap; gap: 6px; align-items: end; padding: 6px; background: #faf8f4; border-radius: 6px; margin-bottom: 6px; }
+  .efeito .campo { min-width: 110px; }
+  .checks { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 13px; color: var(--texto); }
+  .pp { font-size: 13px; }
+  .pp b.bom { color: var(--verde); } .pp b.ruim { color: var(--vermelho); }
+  .texto-gerado { background: #faf8f4; border-radius: 6px; padding: 6px 8px; font-size: 13px; }
+  .num { width: 70px; }
+  .ilegal td { color: var(--vermelho); }
+  .delta-pos { color: var(--verde); } .delta-neg { color: var(--vermelho); }
+  input[type=number] { width: 100%; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Arcanoclisma: editor de cartas e mecânicas</h1>
+  <a href="./index.html">← voltar ao app de testes</a>
+</header>
+<main id="app">Carregando…</main>
+<script type="module" src="./editor.js"></script>
+</body>
+</html>

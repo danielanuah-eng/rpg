@@ -1,0 +1,32 @@
+{
+  "_instrucoes": [
+    "Objetivos pedidos pelo agente-balanceador ao agente de testes na variante BAL7 (rodada 4): ajustar baralho e estilo de Eternyr, Ramp e Controle.",
+    "Eternyr e Ramp estão fracos (27% a 30% de vitória média); o Controle do agente ficou forte demais (65%) e o Midrange precisa de pelo menos 50% contra ele."
+  ],
+  "variante": "BAL7",
+  "partidasPorConfronto": 60,
+  "partidasConfirmacao": 240,
+  "objetivos": [
+    {
+      "id": "eternyr-jogavel",
+      "descricao": "Eternyr jogável (late game)",
+      "arquetipo": "Eternyr",
+      "metas": [{ "contra": ["Burn"], "vitoriaMin": 0.25 }, { "contra": ["Midrange"], "vitoriaMin": 0.3 }],
+      "restricoes": { "contraOutrosMin": 0.4, "contraOutrosMax": 0.58, "travadasMax": 0.08 }
+    },
+    {
+      "id": "ramp-jogavel",
+      "descricao": "Ramp jogável",
+      "arquetipo": "Ramp",
+      "metas": [{ "contra": ["Burn"], "vitoriaMin": 0.25 }, { "contra": ["Stall"], "vitoriaMin": 0.3 }],
+      "restricoes": { "contraOutrosMin": 0.4, "contraOutrosMax": 0.58, "travadasMax": 0.08 }
+    },
+    {
+      "id": "controle-na-medida",
+      "descricao": "Controle segura o Aggro sem dominar",
+      "arquetipo": "Controle",
+      "metas": [{ "contra": ["Aggro"], "vitoriaMin": 0.35 }, { "contra": ["Midrange"], "vitoriaMin": 0.3, "vitoriaMax": 0.5 }],
+      "restricoes": { "contraOutrosMin": 0.4, "contraOutrosMax": 0.58, "travadasMax": 0.08 }
+    }
+  ]
+}

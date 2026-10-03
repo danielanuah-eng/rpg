@@ -15,3 +15,9 @@ desktop.ini
 
 # Contém token do Netlify MCP (segredo)
 netlify-proxy.txt
+
+# App de testes: arquivos gerados ao iniciar o servidor
+Arcanoclisma/tcg/app/dist/
+
+# app de testes: versões geradas dos dados (cartas com que cada partida foi jogada)
+Arcanoclisma/tcg/app/versoes/

@@ -1,0 +1,57 @@
+{
+  "_instrucoes": [
+    "Pedido do agente-balanceador ao agente de testes na variante BAL (rodada 6: varreduras novas, curva de poder por Grau, unidades-problema e bombas, segundo jogador sem carta extra).",
+    "As cartas novas já estão no catálogo da BAL (prefixo r6-): Fúria, Ira, Pôr do sol, Onda de fagulhas, Espião alado, Piromante, Fera de cerco, Presa-trovão, Anjo da aurora, Mercador de segredos, Colosso de ferro, Dragão ancestral. Ver docs/CARTAS-BAL.md.",
+    "Falham hoje (docs/AVALIACAO-BAL-60.md, 60 partidas por confronto): Controle 23% contra o Aggro (meta 35%) e 53% nas partidas longas (meta 55%); Tempo 30,7% de média (piso 38%) e 45% contra o Controle (meta 50%); Aggro 59,1% e Ramp 59,6% (teto 59%).",
+    "Sem cotas de tipo de carta: o deckbuilding é livre. Ajuste cartas e estilo de jogo de cada montagem."
+  ],
+  "variante": "BAL",
+  "partidasPorConfronto": 60,
+  "partidasConfirmacao": 240,
+  "objetivos": [
+    {
+      "id": "controle-r6",
+      "descricao": "Controle: segura o Aggro e o Burn com as varreduras novas, troca bem e vence as partidas longas",
+      "arquetipo": "Controle",
+      "metas": [
+        { "contra": ["Aggro"], "vitoriaMin": 0.37 },
+        { "contra": ["Burn"], "vitoriaMin": 0.3 },
+        { "contra": ["Midrange"], "vitoriaMin": 0.3, "vitoriaMax": 0.48 },
+        { "contra": ["Tempo"], "vitoriaMin": 0.3, "vitoriaMax": 0.48 }
+      ],
+      "restricoes": { "contraOutrosMin": 0.42, "contraOutrosMax": 0.58, "travadasMax": 0.08, "trocasMax": 0.95, "vitoriaLongaMin": 0.58 }
+    },
+    {
+      "id": "tempo-r6",
+      "descricao": "Tempo jogável: ameaça barata e interação barata, pressiona o Controle",
+      "arquetipo": "Tempo",
+      "metas": [
+        { "contra": ["Controle"], "vitoriaMin": 0.52 },
+        { "contra": ["Midrange"], "vitoriaMin": 0.3 },
+        { "contra": ["Aggro"], "vitoriaMin": 0.25 }
+      ],
+      "restricoes": { "contraOutrosMin": 0.42, "contraOutrosMax": 0.58, "travadasMax": 0.08 }
+    },
+    {
+      "id": "aggro-r6",
+      "descricao": "Aggro abaixo do teto: rápido, mas controlável pelo Controle, Midrange e Stall",
+      "arquetipo": "Aggro",
+      "metas": [
+        { "contra": ["Controle"], "vitoriaMin": 0.32, "vitoriaMax": 0.63 },
+        { "contra": ["Midrange"], "vitoriaMin": 0.25, "vitoriaMax": 0.48 },
+        { "contra": ["Stall"], "vitoriaMin": 0.25, "vitoriaMax": 0.68 }
+      ],
+      "restricoes": { "contraOutrosMin": 0.45, "contraOutrosMax": 0.57, "travadasMax": 0.08 }
+    },
+    {
+      "id": "ramp-r6",
+      "descricao": "Ramp forte no late game com as bombas, mas abaixo do teto",
+      "arquetipo": "Ramp",
+      "metas": [
+        { "contra": ["Stall"], "vitoriaMin": 0.4, "vitoriaMax": 0.75 },
+        { "contra": ["Midrange"], "vitoriaMin": 0.4, "vitoriaMax": 0.68 }
+      ],
+      "restricoes": { "contraOutrosMin": 0.42, "contraOutrosMax": 0.57, "travadasMax": 0.08 }
+    }
+  ]
+}
