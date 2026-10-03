@@ -1,0 +1,129 @@
+{
+  "versao": 2,
+  "data": "2026-10-03",
+  "estado": "artes_aprovadas_dados_pendentes_claude",
+  "origemDoPedido": "Autor nesta conversa",
+  "nomeDoDragao": "Philgard, a Luz da Esperança",
+  "instrucoesAutor": [
+    "Ciantia em campo aberto, de costas, brincando com esse dragão adolescente.",
+    "O mesmo dragão sozinho, voltando ao lugar, já crescido, descansando com o livro dela abaixo do rosto sonolento.",
+    "Comparar versões das duas últimas cartas com cenários mais lisos, menos rugosos e menos extremamente expressivos."
+  ],
+  "localId": "campo-philgard",
+  "continuidade": {
+    "marcos": [
+      "salgueiro inclinado à direita",
+      "riacho sinuoso",
+      "pedra plana do livro",
+      "montanhas de dois picos"
+    ],
+    "objeto": "livro fechado de Ciantia, marrom/ameixa com cantos dourados e ornamento circular",
+    "cronologia": "adolescência com Ciantia; retorno adulto sozinho",
+    "naoInferir": "morte de Ciantia"
+  },
+  "cartas": [
+    {
+      "id": "ciantia-philgard-campo",
+      "nomeProvisorio": "Brincadeira no Campo",
+      "nomeDefinidoPeloAutor": false,
+      "personagens": [
+        "Ciantia",
+        "Philgard adolescente"
+      ],
+      "momentoDoDia": "tarde",
+      "cena": "Ciantia de costas ergue um ramo para brincar com Philgard adolescente; o livro repousa na pedra junto ao riacho.",
+      "escala": "dragão adolescente menor que Ciantia; riacho, árvore e montanhas dão referências de profundidade",
+      "tipo": null,
+      "raridade": null,
+      "arteAlternativa": null,
+      "valores": null,
+      "custo": null,
+      "grau": null,
+      "arcanoGerado": null,
+      "ataque": null,
+      "vida": null,
+      "textoDeRegras": null,
+      "versaoSelecionada": "v2-liso",
+      "variantes": [
+        {
+          "variante": "v1",
+          "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v1.png",
+          "tratamentoCenario": "original com textura mais intensa",
+          "estado": "anterior_preservada",
+          "principal": false
+        },
+        {
+          "variante": "v2-liso",
+          "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+          "tratamentoCenario": "V2 com planos mais lisos, menos textura e contraste de detalhes",
+          "estado": "aprovada_pelo_autor",
+          "principal": true
+        }
+      ],
+      "artePrincipal": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "aprovacaoArte": "aprovada_pelo_autor"
+    },
+    {
+      "id": "philgard-luz-da-esperanca",
+      "nome": "Philgard, a Luz da Esperança",
+      "nomeDefinidoPeloAutor": true,
+      "personagens": [
+        "Philgard adulto"
+      ],
+      "momentoDoDia": "entardecer",
+      "cena": "Philgard adulto repousa sozinho no mesmo campo, com o livro de Ciantia abaixo do rosto sonolento.",
+      "escala": "corpo adulto grande, patas dianteiras e livro em primeiro plano; local reconhecível ao fundo",
+      "tipo": null,
+      "raridade": null,
+      "arteAlternativa": null,
+      "valores": null,
+      "custo": null,
+      "grau": null,
+      "arcanoGerado": null,
+      "ataque": null,
+      "vida": null,
+      "textoDeRegras": null,
+      "versaoSelecionada": "v2-liso",
+      "variantes": [
+        {
+          "variante": "v1",
+          "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/philgard-luz-da-esperanca-adulto-v1.png",
+          "tratamentoCenario": "original com textura mais intensa",
+          "estado": "anterior_preservada",
+          "principal": false
+        },
+        {
+          "variante": "v2-liso",
+          "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/philgard-luz-da-esperanca-adulto-v2-liso.png",
+          "tratamentoCenario": "V2 com planos mais lisos, menos textura e contraste de detalhes",
+          "estado": "aprovada_pelo_autor",
+          "principal": true
+        }
+      ],
+      "artePrincipal": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/philgard-luz-da-esperanca-adulto-v2-liso.png",
+      "aprovacaoArte": "aprovada_pelo_autor"
+    }
+  ],
+  "pendencias": [
+    "Claude definir identidade mecânica, raridade e demais campos quando precisar das cartas"
+  ],
+  "enriquecimentosVisuais": {
+    "autor": "Codex a partir do pedido do autor",
+    "escolhas": [
+      "marcos de continuidade no campo",
+      "livro visível nas duas cenas",
+      "tarde e entardecer distinguem a passagem do tempo"
+    ]
+  },
+  "originalLicaoDoJardim": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-v1/licao-do-jardim-arte-v2.png",
+  "originalAprovadoPreservado": true,
+  "integracaoClaudeConfirmada": false,
+  "pushAutorizado": false,
+  "aprovacao": {
+    "data": "2026-10-03",
+    "autor": "Autor nesta conversa",
+    "texto": "o v2 ficou melhor",
+    "varianteSelecionada": "v2-liso",
+    "escopo": "ambas as cartas de Philgard"
+  }
+}

@@ -1,5 +1,11 @@
 # Colaboração neste repositório
 
+- Direção atual do autor para artes de cartas (03/10/2026): **todas as cartas têm cenário e ambientação**, qualquer que seja o tipo. Seguir `Arcanoclisma/cartas/DIRETRIZ-CENARIOS.md` em todo prompt ao GPT. Recortes do RPG servem como referência de identidade, não como entrega final de carta. Preservar a biblioteca de referências e as cenas aprovadas.
+
+
+- Etapa do site online (pedido do autor em 03/10/2026): **Codex gerencia os agentes e a divisão de tarefas**, consolidando demandas/entregas para poupar créditos do Claude. Seguir `coordenacao/site-online/DIVISAO.md` e `estado.codex.json`. Não iniciar processos de agentes por existir uma definição; usar as skills como funções conforme a tarefa. Claude cuida da programação e integração. Durante produção visual, manter só a produção e os registros mínimos; push de novas entregas exige autorização.
+
+
 - Arcanoclisma é um TCG. Para cartas, usar `.agents/skills/designer-cartas/SKILL.md` e `Arcanoclisma/cartas/COORDENACAO-CLAUDE.md`; produzir apenas a necessidade atual do Claude, com liberdade de enriquecer cenas e detalhes estéticos. Para assets de animação/efeitos, usar `.agents/skills/embelezador/SKILL.md`. Aliados usam movimento genérico compartilhado de ataque, sem efeitos exclusivos. Claude implementa o jogo e confirma integração.
 
 - Durante a retomada de imagens, focar apenas na produção e seus registros essenciais. Pausar atividades auxiliares e a automação de Enzo para reduzir consumo; adiar arquivamento e sincronizações até pedido do autor ou preservação final do encerramento aprovado.

@@ -112,3 +112,9 @@ Pedido do autor: primeira versão jogável na internet (Cloudflare), contra o bo
 
 Testes: `tcg npm test` 78 passam; `online npm test` 6 passam; `node test/online-local.mjs` 0 erros.
 Servidor local: a configuração `arcanoclisma-online` (porta 8787) pode estar rodando por outra conversa; os arquivos de `public/` e `src/` recarregam sozinhos.
+
+## Regras do autor para a próxima atualização (03/10, depois do push 2281aa1)
+1. Alinhar sempre com as orientações novas do GPT/Codex (ler `coordenacao/site-online/`, entregas e diretrizes antes de mexer).
+2. Polir o texto que o autor escreve nas cartas (Editor do site ou envios) para ficar mais estético, sem mudar a regra; mostrar antes/depois.
+3. Todo efeito tem de estar automatizado: texto de carta sem mecânica correspondente no motor não pode existir; efeito novo vira código + teste.
+Primeiro passo sugerido: puxar `GET /api/edicoes` do site publicado e revisar texto e automação de cada carta editada.

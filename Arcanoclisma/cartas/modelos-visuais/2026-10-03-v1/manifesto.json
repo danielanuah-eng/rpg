@@ -92,5 +92,17 @@
     "remoto": "https://github.com/danielanuah-eng/rpg.git",
     "branch": "main",
     "recebimentoClaudeConfirmado": false
-  }
+  },
+  "estudosVisuais": [
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-v1/licao-do-jardim-estudo-noturno-v1.png",
+      "registro": "licao-do-jardim-estudo-noturno.visual.json",
+      "estado": "estudo_nao_selecionado",
+      "decisaoAutor": {
+        "data": "2026-10-03",
+        "texto": "Essa carta em específico não precisava mudar.",
+        "acao": "Preservar Lição do Jardim diurna v2 aprovada; guardar estudo sem substituir."
+      }
+    }
+  ]
 }

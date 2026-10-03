@@ -1,5 +1,10 @@
 # Divisão de responsabilidades
 
+## Site online — gestão atribuída ao Codex em 03/10/2026
+
+O autor pediu reduzir o gasto do Claude com gerenciamento. Codex assume triagem de demandas, planejamento, escolha das funções/agentes necessários, dependências, fila, pedidos de revisão e consolidação das entregas. Claude recebe uma demanda/entrega por etapa e mantém programação, lógica, rede, dados e integração. Protocolo atual em `coordenacao/site-online/DIVISAO.md`; estado escrito por Codex em `estado.codex.json`, confirmação escrita por Claude em `resposta.claude.json`. A atribuição foi autorizada pelo autor; a leitura pelo Claude ainda precisa de confirmação. Essa divisão não inicia novos processos nem altera agentes desativados.
+
+
 ## TCG — atualização de 03/10/2026
 
 Designer de Cartas atende exclusivamente necessidades atuais do Claude e cria templates Canva, cenas e cartas para impressão. Pode enriquecer descrições visuais insuficientes com detalhes, eventos, efeitos mágicos, personagens, lugares e interações, priorizando estética, sensibilidade e magia sem alterar regras ou identidade essencial. Embelezador cria os assets visuais de efeitos e animações de que Claude precisa, junto do Designer ou separadamente. Claude implementa comportamento e integra as entregas. Aliados têm somente movimento genérico fluido e compartilhado de ataque, sem efeito específico individual. Os protocolos e manifestos ficam em `Arcanoclisma/cartas/` e `Arcanoclisma/efeitos/`.

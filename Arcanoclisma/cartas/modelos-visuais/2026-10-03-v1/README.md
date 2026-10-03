@@ -12,3 +12,7 @@ Arquivos editáveis: `modelos.json` e `modelos-cenas.js`; ilustrações em PNG s
 Habilidades do autor registradas em `../../propostas/ciantia-dragoes-2026-10-03.autor.md` e `.autor.json`. A redação final, representação do vínculo Aliado/Extra, custos, Grau, recurso gerado e estatísticas dependem do Claude. Números indefinidos aparecem como **—**, sem assumir zero. Raridade e variante são somente estéticas. Não são cartas já integradas no motor. O estudo anterior fica em `modelos-antes-propostas-autor.json`.
 
 As cenas são fundos completos opacos. A referência de Ciantia foi preservada; cada modelo usa ilustração nova. Arquivamento auxiliar adiado conforme a preferência do autor. Publicação deste pacote autorizada pelo autor em 03/10/2026; pushes futuros exigem nova autorização.
+
+## Estudo noturno — revisão de variedade
+
+`licao-do-jardim-estudo-noturno-v1.png`: interpretação calma à noite, com lua, água e vegetação, substituindo a cidade distante. Prompt e descrição/medidas/alfa estão nos arquivos `licao-do-jardim-estudo-noturno.prompt.txt` e `.visual.json`. A versão diurna aprovada continua vigente. O autor indicou que a mudança não era necessária; estudo não selecionado, preservado sem substituir a versão diurna aprovada. Novo push não autorizado. Direção para os próximos briefings em `../../DIRETRIZ-CENARIOS.md`.

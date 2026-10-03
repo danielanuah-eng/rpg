@@ -1,0 +1,57 @@
+{
+  "versao": 1,
+  "data": "2026-10-03",
+  "cartaId": "licao-do-jardim",
+  "estado": "estudo_nao_selecionado",
+  "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-v1/licao-do-jardim-estudo-noturno-v1.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "origemGerada": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-b008b874-65fa-4300-82b5-ac298cfa89c3.png",
+  "referencia": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-v1/licao-do-jardim-arte-v2.png",
+  "prompt": "licao-do-jardim-estudo-noturno.prompt.txt",
+  "cosmetico": {
+    "raridade": "rara",
+    "arteAlternativa": false
+  },
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "1a834ff317bfa5e759fd17b73d9ea0992bb7d24fb8b6d92a094ac4dc3ff3e020",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "fundo": "Cenário completo opaco intencional",
+  "descricao": "Ciantia cuida de uma planta junto ao pequeno dragão dourado, num jardim de vegetação e pedra à noite. Lua visível, folhas úmidas, lanternas discretas e água com reflexos; árvores substituem a cidade distante. Cena tranquila, com luz focal no dragão e no broto.",
+  "ambiente": "jardim botânico com água e vegetação, escala íntima",
+  "momentoDoDia": "noite com luar",
+  "clima": "folhas molhadas, reflexos e gotas/ripples visíveis; chuva recente como interpretação visual",
+  "escala": "personagem e dragão pequeno legíveis; plantas, degraus e água dão apoio e profundidade",
+  "eventoId": null,
+  "continuidadeCom": [
+    "licao-do-jardim"
+  ],
+  "relacaoComEvento": "Estudo de outro horário e ambientação para a mesma carta; cronologia canônica não definida",
+  "alteracoes": [
+    "dia para noite com luar",
+    "vegetação/água no fundo",
+    "remoção da cidade e das pontes distantes",
+    "ajuste de pose/mão e iluminação"
+  ],
+  "originalAprovadoPreservado": true,
+  "substituiVersaoVigente": false,
+  "integracaoClaudeConfirmada": false,
+  "decisaoAutor": {
+    "data": "2026-10-03",
+    "texto": "Essa carta em específico não precisava mudar.",
+    "acao": "Preservar Lição do Jardim diurna v2 aprovada; guardar estudo sem substituir."
+  }
+}

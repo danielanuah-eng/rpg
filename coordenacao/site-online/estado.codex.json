@@ -1,0 +1,78 @@
+{
+  "versao": 1,
+  "projeto": "Arcanoclisma — site online",
+  "data": "2026-10-03",
+  "autorDaAtribuicao": "Usuário",
+  "gestor": "Codex",
+  "estadoGestao": "ativa_autorizada_pelo_autor",
+  "divisao": "coordenacao/site-online/DIVISAO.md",
+  "confirmacaoClaude": "aguardando_leitura_e_resposta",
+  "arquivoRespostaClaude": "coordenacao/site-online/resposta.claude.json",
+  "programacaoEIntegracao": "Claude",
+  "gestaoEProducaoVisual": "Codex",
+  "arquivosEmTrabalhoDoClaude": [
+    "Arcanoclisma/online/",
+    "Arcanoclisma/tcg/",
+    "AGENTES-VISUAIS.json"
+  ],
+  "entradaVisual": "Arcanoclisma/online/pedidos-visuais/site.claude.json",
+  "entradaVisualRecebida": false,
+  "saidaVisual": "Arcanoclisma/online/entregas-visuais/site.codex.json",
+  "agentes": {
+    "modo": "skills_selecionadas_sob_demanda; sem_processos_novos_por_nome",
+    "disponibilidade": "AGENTES-VISUAIS.json",
+    "preservarDesligados": true,
+    "reativacaoAutomatica": false
+  },
+  "etapas": [
+    {
+      "id": "gestao",
+      "responsavel": "Codex",
+      "estado": "instrucoes_registradas"
+    },
+    {
+      "id": "site",
+      "responsavel": "Claude",
+      "estado": "em_andamento_conforme_autor"
+    },
+    {
+      "id": "briefing_visual",
+      "responsavel": "Claude",
+      "estado": "aguardando_pedido"
+    },
+    {
+      "id": "producao_visual",
+      "responsavel": "Codex",
+      "estado": "aguardando_pedido_confirmado"
+    },
+    {
+      "id": "integracao",
+      "responsavel": "Claude",
+      "estado": "por_etapa_conforme_entregas"
+    }
+  ],
+  "materialExistente": [
+    "Arcanoclisma/arena/entrega-claude.md",
+    "Arcanoclisma/cartas/propostas/PARA-CLAUDE.md"
+  ],
+  "codigoDoSiteAlteradoPorEstaGestao": false,
+  "processosDeAgentesIniciados": 1,
+  "automacoesCriadas": 0,
+  "economiaMedida": null,
+  "publicacaoGit": "instrucoes_locais; novo_push_exige_autorizacao",
+  "interfaceAtual": {
+    "estado": "entregue_localmente",
+    "entrega": "Arcanoclisma/online/entregas-visuais/site.codex.json",
+    "guia": "coordenacao/site-online/INTERFACE-MESA.md",
+    "confirmacaoClaude": false
+  },
+  "loteCartasRecebido": {
+    "arquivo": "Arcanoclisma/cartas/pedidos/lote-site-v1.claude.json",
+    "estado": "solicitado",
+    "cartas": 142,
+    "conjuradores": 9,
+    "diretrizAplicavel": "Arcanoclisma/cartas/DIRETRIZ-CENARIOS.md"
+  },
+  "revisaoCenas": "Arcanoclisma/cartas/entregas/revisao-cenarios-2026-10-03.visual.json",
+  "tarefaDelegada": "DeepSeek: leitura pontual do código público da mesa via OpenRouter, sem alterações de arquivos"
+}

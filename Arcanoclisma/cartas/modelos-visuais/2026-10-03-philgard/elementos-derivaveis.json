@@ -1,0 +1,21 @@
+{
+  "estado": "ideias_visuais_sem_producao_autorizada",
+  "elementos": [
+    {
+      "id": "philgard",
+      "tipo": "personagem",
+      "descricao": "Dragão dourado de energia, adolescente e adulto, identificado pelo autor como Philgard, a Luz da Esperança"
+    },
+    {
+      "id": "livro-ciantia",
+      "tipo": "objeto",
+      "descricao": "Livro fechado marrom/ameixa com ornamento circular e cantos dourados, presente nas duas cenas"
+    },
+    {
+      "id": "campo-philgard",
+      "tipo": "lugar",
+      "descricao": "Campo com riacho sinuoso, salgueiro à direita, pedra plana e montanhas de dois picos"
+    }
+  ],
+  "observacao": "Não são cartas adicionais encomendadas; Claude define futuras necessidades."
+}

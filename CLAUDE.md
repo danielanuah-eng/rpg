@@ -1,6 +1,22 @@
 # Responsabilidades do Claude
 
+## Etapa atual: site online — gestão com Codex (03/10/2026)
+
+Pedido mais recente do autor: reduzir seus créditos, especialmente os gastos gerenciando agentes. **Codex assume a triagem, divisão de tarefas, escolha de agentes, fila e consolidação das entregas.** Você concentra o trabalho em programação, regras, dados, backend, rede e integração.
+
+- Leia uma vez `coordenacao/site-online/DIVISAO.md`. Não é necessário reler todo o catálogo ou todas as skills para pedir algo visual.
+- Envie a necessidade atual em `Arcanoclisma/online/pedidos-visuais/site.claude.json`: objetivo, telas/assets, textos/dados, requisitos de integração e prioridade. Não distribua essa mesma tarefa entre vários agentes. Codex decide as funções visuais necessárias e conserva os agentes desligados.
+- Consuma o resumo e os arquivos indicados em `Arcanoclisma/online/entregas-visuais/site.codex.json`; registre somente decisões de integração ou bloqueios em `coordenacao/site-online/resposta.claude.json`.
+- Artes, templates e acabamento v9 já estão publicados no commit `0b38961`. Reuse-os a partir de `Arcanoclisma/arena/entrega-claude.md`. As propostas de Ciantia estão em `Arcanoclisma/cartas/propostas/PARA-CLAUDE.md`.
+- Continue trabalhando nos arquivos do site. Codex escreve os registros de coordenação e assets em seu escopo; não há alteração automática de sua conversa nem confirmação de recebimento até sua resposta local.
+
+
 ## Pedidos visuais do TCG
+
+**Direção atual do autor (03/10/2026): toda carta final tem cenário e ambientação próprios**, incluindo Conjurador, Aliado, Temporária/feitiço, Item/equipamento, Mística, Estrutura e cartas de Grau. Imagens recortadas do RPG são referências de identidade; não são a arte final da carta. Em todo briefing/prompt ao GPT, incluir `Arcanoclisma/cartas/DIRETRIZ-CENARIOS.md`. A revisão da mesa pede contadores discretos sobre o campo, Arcano em esfera lateral, mão fora da mesa e controles/pilha à direita, deixando o centro livre.
+
+**Varie os ambientes e horários entre cartas.** Nem toda cena precisa de um evento grandioso: retratos ambientados e situações calmas valem. Codex pode adaptar repetições estéticas do briefing. Para um mesmo evento em várias cartas, explicite a relação de cada carta com o acontecimento e preserve a continuidade de clima/horário. Inclua ambiente, momento do dia, escala e, quando aplicável, eventoId/continuidadeCom no briefing. A revisão visual da mesa está em `/css/mesa-codex-v10.css` e `/js/mesa-movimentos-codex.js`; preservar os links/hooks de integração.
+
 
 Arcanoclisma é um TCG. As 435 artes 087–521 estão aprovadas; veja `Arcanoclisma/cartas/catalogo-artes.json`. Designer de Cartas atende somente sua demanda atual de cartas, identidade, conteúdo e uso. Solicite por `Arcanoclisma/cartas/pedidos/<id>.claude.json`, conforme o exemplo e `COORDENACAO-CLAUDE.md`. Pode enriquecer descrições estéticas pobres com eventos, magia, ambientes, personagens e interações, mantendo função e identidade. Não alterar regras por escolhas visuais.
 

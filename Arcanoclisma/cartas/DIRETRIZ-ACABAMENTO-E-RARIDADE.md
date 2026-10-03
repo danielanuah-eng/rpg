@@ -4,6 +4,8 @@ Revisão 9, 03/10/2026. Destinatário: Claude e agentes de produção de cartas.
 
 ## Regras de uso
 
+- **Todas as cartas, independentemente de tipo, raridade ou variante, recebem cenário e ambientação próprios.** Aplicar `DIRETRIZ-CENARIOS.md` a todos os prompts de arte. Não entregar apenas o recorte de uma imagem do RPG dentro do template.
+
 - Raridade é **somente estética**. Não modifica custo, Grau, recurso gerado, ataque, vida, habilidade, velocidade, efeitos ou balanceamento. Variantes visuais compartilham a definição mecânica da carta.
 - Claude informa `raridade` em **todo pedido e prompt de imagem**: `comum`, `incomum`, `rara` ou `lendaria`.
 - Informar também `arteAlternativa: true | false`. Arte alternativa é uma variante visual independente da raridade; full art por si só não muda regras nem implica raridade lendária.

@@ -21,3 +21,6 @@ Arcanoclisma/tcg/app/dist/
 
 # app de testes: versões geradas dos dados (cartas com que cada partida foi jogada)
 Arcanoclisma/tcg/app/versoes/
+
+# Cache local do Wrangler (Cloudflare)
+.wrangler/

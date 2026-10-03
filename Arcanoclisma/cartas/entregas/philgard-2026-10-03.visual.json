@@ -1,0 +1,130 @@
+{
+  "tarefaId": "philgard-2026-10-03",
+  "versao": 2,
+  "pedidoVersao": null,
+  "origemDoPedido": "Autor nesta conversa",
+  "estado": "artes_aprovadas_aguardando_claude",
+  "cartas": [
+    {
+      "id": "ciantia-philgard-campo",
+      "nome": "Brincadeira no Campo",
+      "versaoSelecionada": "v2-liso",
+      "artePrincipal": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "aprovacaoArte": "aprovada_pelo_autor",
+      "variantes": [
+        {
+          "variante": "v1",
+          "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v1.png",
+          "tratamentoCenario": "original com textura mais intensa",
+          "estado": "anterior_preservada",
+          "principal": false
+        },
+        {
+          "variante": "v2-liso",
+          "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+          "tratamentoCenario": "V2 com planos mais lisos, menos textura e contraste de detalhes",
+          "estado": "aprovada_pelo_autor",
+          "principal": true
+        }
+      ]
+    },
+    {
+      "id": "philgard-luz-da-esperanca",
+      "nome": "Philgard, a Luz da Esperança",
+      "versaoSelecionada": "v2-liso",
+      "artePrincipal": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/philgard-luz-da-esperanca-adulto-v2-liso.png",
+      "aprovacaoArte": "aprovada_pelo_autor",
+      "variantes": [
+        {
+          "variante": "v1",
+          "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/philgard-luz-da-esperanca-adulto-v1.png",
+          "tratamentoCenario": "original com textura mais intensa",
+          "estado": "anterior_preservada",
+          "principal": false
+        },
+        {
+          "variante": "v2-liso",
+          "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/philgard-luz-da-esperanca-adulto-v2-liso.png",
+          "tratamentoCenario": "V2 com planos mais lisos, menos textura e contraste de detalhes",
+          "estado": "aprovada_pelo_autor",
+          "principal": true
+        }
+      ]
+    }
+  ],
+  "arquivos": [
+    {
+      "tipo": "arte_de_carta",
+      "caminho": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v1.png",
+      "sha256": "8b19a6dd63c68fe1303db4983d327f908cdca45d89ee5bad08f16989653e29f7",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "variante": "v1",
+      "principal": false,
+      "estado": "anterior_preservada"
+    },
+    {
+      "tipo": "arte_de_carta",
+      "caminho": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/philgard-luz-da-esperanca-adulto-v1.png",
+      "sha256": "89d9cbe55fd07b31ee20425f885e3c3e00da8ac4f0cef42232a0ebcb24315cd7",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "variante": "v1",
+      "principal": false,
+      "estado": "anterior_preservada"
+    },
+    {
+      "tipo": "arte_de_carta",
+      "caminho": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "sha256": "dba5dda2648d196f70ab4325557c65af74ca79d1a62f7a9c9eef37679a874225",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "variante": "v2-liso",
+      "principal": true,
+      "estado": "aprovada_pelo_autor"
+    },
+    {
+      "tipo": "arte_de_carta",
+      "caminho": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/philgard-luz-da-esperanca-adulto-v2-liso.png",
+      "sha256": "974ade6ea1bdc61273354b8d5db859c8dded15619b019103415732cd47574906",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "variante": "v2-liso",
+      "principal": true,
+      "estado": "aprovada_pelo_autor"
+    }
+  ],
+  "previa": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/index.html",
+  "descricoes": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/modelos.json",
+  "prompts": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/prompts.json",
+  "manifesto": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/manifesto.json",
+  "paraClaude": [
+    "Lição do Jardim diurna v2 permanece vigente; o estudo noturno não foi selecionado.",
+    "Philgard é o dragão dourado desta dupla. Não confundir com Dragão Transplanar azul-violeta ou reutilizar suas regras.",
+    "Usar V2-liso como arte principal nas duas cartas; aprovadas pelo autor. Tipo, custo, Grau, Arcano gerado, Valores, habilidades e raridade continuam pendentes.",
+    "Raridade altera apenas estética. Informar raridade e arteAlternativa no briefing futuro; lendária/alternativa segue acabamento v9.",
+    "O mesmo local liga as duas cenas por pedido do autor; outras cartas não devem repetir este cenário sem motivo.",
+    "Preferência estética confirmada: cenários mais lisos e menos rugosos, com menos textura expressiva e contraste de microdetalhes; conservar profundidade e detalhes dos personagens."
+  ],
+  "integracaoClaudeConfirmada": false,
+  "publicacao": {
+    "estado": "local",
+    "pushAutorizado": false
+  },
+  "arquivamentoAuxiliar": "adiado conforme preferência do autor",
+  "aprovacao": {
+    "data": "2026-10-03",
+    "autor": "Autor nesta conversa",
+    "texto": "o v2 ficou melhor",
+    "varianteSelecionada": "v2-liso",
+    "escopo": "ambas as cartas de Philgard"
+  }
+}

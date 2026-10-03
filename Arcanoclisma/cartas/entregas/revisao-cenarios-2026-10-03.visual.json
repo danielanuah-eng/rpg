@@ -1,0 +1,67 @@
+{
+  "tarefaId": "revisao-cenarios-2026-10-03",
+  "autorPedido": "Usuário",
+  "estado": "revisao_visual_e_diretrizes_registradas",
+  "escopoRevisado": "Duas cenas vigentes de cartas, inspecionadas visualmente. Não é revisão integral das 435 referências do RPG.",
+  "diretriz": "Arcanoclisma/cartas/DIRETRIZ-CENARIOS.md",
+  "cenas": [
+    {
+      "cartaId": "licao-do-jardim",
+      "arte": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-v1/licao-do-jardim-arte-v2.png",
+      "ambienteVisivel": "Jardim de pedra com plantas, canais de água e arquitetura ao fundo",
+      "momentoDoDia": "dia; horário exato não demonstrado",
+      "luzVisivel": "Luz natural difusa e brilho âmbar localizado no pequeno dragão",
+      "clima": "Céu com nuvens e névoa distante",
+      "escala": "Ciantia em primeiro plano; planta, dragão pequeno e água dão escala ao jardim; arquitetura distante dá profundidade",
+      "intensidadeEvento": "cena calma de ensino e cuidado com uma planta",
+      "decisao": "Preservar arte aprovada; preparar estudo noturno para variar ambiente e luz sem substituir a versão vigente",
+      "eventoId": null,
+      "continuidadeCom": [],
+      "relacaoComEvento": null
+    },
+    {
+      "cartaId": "dragao-transplanar",
+      "arte": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-v1/dragao-da-travessia-arte-v1.png",
+      "ambienteVisivel": "Ponte arquitetônica fragmentada sobre nuvens, com ruptura luminosa",
+      "momentoDoDia": "céu iluminado; horário exato não demonstrado",
+      "luzVisivel": "Energia azul-violeta do dragão e brilho âmbar da ruptura",
+      "clima": "Nuvens volumosas; não é possível afirmar noite pela cor violeta da magia",
+      "escala": "Dragão monumental, viajantes pequenos e fragmentos/ponte para referência de tamanho",
+      "intensidadeEvento": "travessia grandiosa em movimento",
+      "decisao": "Preservar arte explicitamente aprovada; não usar ponte, portal ou ruínas flutuantes como cenário genérico das próximas cartas",
+      "eventoId": null,
+      "continuidadeCom": [],
+      "relacaoComEvento": null
+    }
+  ],
+  "repeticoesObservadas": [
+    "arquitetura em pedra com elementos dourados",
+    "céus/nuvens e profundidade aberta"
+  ],
+  "direcaoParaProximas": [
+    "Alternar exteriores/interiores, formas de arquitetura, materiais e horizontes",
+    "Distribuir manhã, dia, tarde, crepúsculo, noite e iluminação de interiores",
+    "Alternar retratos ambientados, vida cotidiana, locais, equipamentos e ações quando pedidos",
+    "Registrar proporção/escala e preservar a leitura do personagem ou objeto",
+    "Para eventos recorrentes, declarar a relação própria de cada carta e continuidade confirmada"
+  ],
+  "briefingDisponivel": {
+    "arquivo": "Arcanoclisma/cartas/pedidos/lote-site-v1.claude.json",
+    "cartas": 142,
+    "conjuradores": 9,
+    "estadoDoPedido": "solicitado",
+    "estadoDasNovasArtes": "não afirmar conclusão por existência do briefing"
+  },
+  "integracaoClaudeConfirmada": false,
+  "push": "Não realizado nesta revisão; exige autorização",
+  "estudoNoturno": {
+    "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-v1/licao-do-jardim-estudo-noturno-v1.png",
+    "registro": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-v1/licao-do-jardim-estudo-noturno.visual.json",
+    "estado": "estudo_nao_selecionado",
+    "decisaoAutor": {
+      "data": "2026-10-03",
+      "texto": "Essa carta em específico não precisava mudar.",
+      "acao": "Preservar Lição do Jardim diurna v2 aprovada; guardar estudo sem substituir."
+    }
+  }
+}
