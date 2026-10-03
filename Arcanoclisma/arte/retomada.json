@@ -8,9 +8,9 @@
   "proximaImagem": null,
   "ordemDeRetomada": [],
   "atualizadoEm": "2026-10-03T03:23:34.066Z",
-  "pushRealizado": false,
+  "pushRealizado": true,
   "ajustesUsuario": "ajustes-dragões.md",
-  "nota": "Todas as 435 imagens aprovadas, incluindo a correção de Aurelhaz. Ciclo de produção encerrado. Nenhum push autorizado ou realizado.",
+  "nota": "435 artes aprovadas, Carlos pausado e entrega publicada no GitHub com autorização do autor. Designer de Cartas e Embelezador atendem somente demanda atual do Claude, por pedidos e entregas no repositório.",
   "regrasProximasCriacoes": "variacao-personagens.md",
   "orientacaoVisualMaisRecente": "Poses e linguagem corporal variadas; referência Wilderfeast para expressões, movimento e profundidade. Alternar perspectivas não é a exigência.",
   "ultimaTentativaEm": "2026-10-02T12:33:13.987Z",
@@ -469,5 +469,13 @@
     "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
   },
   "automacaoCarlos": "PAUSED — confirmada via ferramenta",
-  "pacoteFinal": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Biblioteca-Enzo\\pacotes\\arcanoclisma\\2026-10-03-v1"
+  "pacoteFinal": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Biblioteca-Enzo\\pacotes\\arcanoclisma\\2026-10-03-v1",
+  "publicacaoGitHub": {
+    "commitAssets": "27271d4",
+    "confirmadoEm": "2026-10-03T03:50:28.7342521Z",
+    "branch": "main",
+    "repositorio": "https://github.com/danielanuah-eng/rpg",
+    "autorizacao": "Pedido explícito do autor nesta conversa; não autoriza pushes futuros",
+    "estado": "publicado"
+  }
 }

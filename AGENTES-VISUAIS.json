@@ -1,0 +1,98 @@
+{
+  "versao": 1,
+  "gatilhos": [
+    "quero os agentes necessários",
+    "chame os agentes",
+    "use a equipe",
+    "ative os agentes necessários"
+  ],
+  "coordenador": "agentes-necessarios",
+  "agentes": {
+    "carlos": {
+      "funcao": "produção visual e avaliação da meta",
+      "definicao": ".agents/skills/carlos/SKILL.md"
+    },
+    "enzo": {
+      "funcao": "memória e arquivo visual entre projetos",
+      "definicao": ".agents/skills/enzo/SKILL.md"
+    },
+    "copiao": {
+      "funcao": "pacote de procedimentos no encerramento",
+      "definicao": ".agents/skills/copiao/SKILL.md"
+    },
+    "vuco-vuco": {
+      "funcao": "imagens e movimentos para jogos; vínculos com Claude",
+      "definicao": ".agents/skills/vuco-vuco/SKILL.md"
+    },
+    "arquiteto": {
+      "funcao": "edição e combinação de imagens",
+      "definicao": ".agents/skills/arquiteto/SKILL.md"
+    },
+    "designer-cartas": {
+      "definicao": ".agents/skills/designer-cartas/SKILL.md",
+      "funcao": "cenas, templates Canva e cartas do TCG conforme demanda atual do Claude"
+    },
+    "embelezador": {
+      "definicao": ".agents/skills/embelezador/SKILL.md",
+      "funcao": "assets de efeitos e animações conforme demanda atual do Claude; ataque genérico compartilhado dos aliados"
+    }
+  },
+  "etapas": [
+    {
+      "id": "briefing",
+      "saida": "objetivo, projeto e requisitos confirmados"
+    },
+    {
+      "id": "planejamento",
+      "dependeDe": [
+        "briefing"
+      ],
+      "saida": "plano JSON com agentes, entradas e saídas"
+    },
+    {
+      "id": "producao",
+      "dependeDe": [
+        "planejamento"
+      ],
+      "saida": "assets, prompts e procedimentos"
+    },
+    {
+      "id": "integracao",
+      "dependeDe": [
+        "producao"
+      ],
+      "opcional": true,
+      "saida": "vínculos imagem–comando de Claude"
+    },
+    {
+      "id": "avaliacao",
+      "dependeDe": [
+        "producao"
+      ],
+      "saida": "aprovar, refazer ou parar"
+    },
+    {
+      "id": "encerramento",
+      "dependeDe": [
+        "avaliacao"
+      ],
+      "saida": "arquivo final de Enzo e pacote de Copião"
+    }
+  ],
+  "estados": [
+    "planejado",
+    "em_execucao",
+    "aguardando_usuario",
+    "aguardando_claude",
+    "aguardando_cota",
+    "concluido",
+    "encerrado"
+  ],
+  "regras": [
+    "Selecionar agentes conforme a tarefa.",
+    "Não avançar sobre dependências pendentes.",
+    "Preservar originais.",
+    "Durante produção de imagens, adiar auxiliares para economizar créditos; preservar no encerramento aprovado.",
+    "Push exige autorização."
+  ]
+}

@@ -14,6 +14,8 @@ Geração: ferramenta de imagens integrada. Preservar descrições e ideia centr
 
 Catálogo 087–521 concluído: **435 imagens com alfa conferido e aprovadas pelo autor**, incluindo a revisão de Aurelhaz com segundo braço. Carlos está pausado. Consulte `progresso.json`, `retomada.json` e `registros/aprovacao-final-2026-10-03.json`. As versões anteriores ficam preservadas e não substituem as escolhas atuais. A biblioteca de cartas está em `../cartas/`, e os assets de efeitos futuros em `../efeitos/`.
 
+Entrega publicada na branch `main` de `danielanuah-eng/rpg` em 03/10/2026 com autorização explícita do autor: commit de assets `27271d4`. O Claude pode consumir as artes e os protocolos de Designer de Cartas e Embelezador por este repositório. Novos pushes precisam de nova autorização.
+
 Abra `galeria.html` para navegar pelas imagens sobre xadrez, branco ou escuro. `progresso.json` registra a conferência técnica do alfa; a revisão de estilo e assunto está separada em `revisao-estilo.md`. Os cenários 155, 164 e 168 foram revisados e substituídos, preservando suas versões anteriores. A validação de alfa não representa aprovação visual de todo o catálogo.
 
 Preferência adicional do autor para algumas espadas: usar como referência formal a espada de Riven (League of Legends), explorando lâminas largas, assimétricas, angulares e fragmentadas em variações próprias. Aplicar apenas quando compatível com o assunto, mantendo Bronze Arco e as cores e formas mágicas do Valor.
