@@ -1,0 +1,23 @@
+{
+  "tarefaId": "preencher-id",
+  "autor": "Claude",
+  "estado": "rascunho",
+  "necessidadeAtual": false,
+  "versao": 1,
+  "atualizadoEm": null,
+  "objetivoAtual": "",
+  "referenciasClaude": [],
+  "carta": {
+    "id": "",
+    "nome": "",
+    "identidade": "",
+    "tipo": "",
+    "textos": {},
+    "cena": "",
+    "personagens": [],
+    "composicao": "",
+    "uso": ""
+  },
+  "camposSemAplicacao": [],
+  "respostas": []
+}

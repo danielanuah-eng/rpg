@@ -1,0 +1,29 @@
+{
+  "numero": 448,
+  "titulo": "Inspetor de Escola",
+  "id": "inspetor-de-escola",
+  "assunto": "Inspetor de Escola: inspetor, protetor; guardião que anula a magia, armadura com selos e lacres; jeito duro, paciente; pose de conversa; no gesto de anotar.",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-02f86479-2a1a-4cc9-9fd7-bc0e38937364.png",
+  "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 448 — Inspetor de Escola. Recuperar todos os fios do topo do cabelo grisalho do inspetor humano. Manter idade, rosto, corpo, livro, pena e postura. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+  "variacao": "Inspetor humano idoso de pele bronzeada, magro, rosto comprido rugoso com nariz adunco, olhos pequenos, cabelos grisalhos ondulados até o queixo e bigode curto. Um ombro mais baixo, corpo inclinado observando de soslaio enquanto anota num caderno, pose de conversa rígida paciente, armadura selada leve.",
+  "adaptacoes": [],
+  "revisaoAnatomia": true,
+  "number": 448,
+  "arquivo": "imagens/inspetor-de-escola.png",
+  "ferramenta": "image_gen integrada",
+  "estiloVersao": 2,
+  "geradaEm": "2026-10-03T02:33:27.678Z",
+  "versaoAnterior": "versoes-anteriores/448-inspetor-de-escola-variante-animal-2026-10-02.png",
+  "correcaoFinal": {
+    "motivo": "Recuperar todos os fios do topo do cabelo grisalho do inspetor humano. Manter idade, rosto, corpo, livro, pena e postura.",
+    "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\448-inspetor-de-escola-antes-correcao-final-2026-10-02.png",
+    "registroAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\registros\\448-antes-correcao-final-2026-10-02.json"
+  },
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
+}

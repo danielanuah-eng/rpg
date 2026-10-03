@@ -1,0 +1,34 @@
+{
+  "numero": 511,
+  "titulo": "Velho Ossário, Dragão-Pálido",
+  "id": "velho-ossario-dragao-palido",
+  "assunto": "Velho Ossário, Dragão-Pálido: dragão, ancião; dragão ou wyvern; jeito antigo, pálido; pose imponente de chefe; no gesto de morder; magia verde-pálida.",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-d1ff7c81-6f38-4437-b271-f09d85bb4939.png",
+  "prompt": "Editar a imagem alvo anexa. CORREÇÃO SOMENTE DE ENQUADRAMENTO: o novo braço à direita está correto, mas a borda da mão/garras fica cortada. AFASTAR MUITO a vista, reduzir todo o dragão para que caiba nos 70% centrais da tela quadrada. Recuperar a ponta de cada garra do braço à direita. Deixar margem de alfa zero real em TODOS os lados. Manter EXATAMENTE o dragão desta referência, suas DUAS patas dianteiras musculosas completas, pernas traseiras, DUAS asas, pose sentada, rosto com presas, chifres e escamas originais marfim, expressão, pupilas verdes, cauda e energia verde suave. Não adicionar membros, não remover nenhum dos dois braços e não redesenhar a cabeça. Mesma tinta e cores. PNG verdadeiramente transparente. Sem texto, chão, sombra de chão ou fundo.",
+  "variacao": "Dragão pálido ancião com crânio compacto ósseo e pupilas visíveis, corpo forte envelhecido, escamas marfim antigas e poucos chifres grossos, sem sangue/gore; repousa de lado pescoço longo erguido devagar, asa recolhida, cauda curva baixa, verde-pálida mínima, presença antiga pelo desenho.",
+  "adaptacoes": [],
+  "revisaoAnatomia": false,
+  "number": 511,
+  "arquivo": "imagens/velho-ossario-dragao-palido.png",
+  "ferramenta": "image_gen integrada",
+  "estiloVersao": 2,
+  "geradaEm": "2026-10-03T02:44:01.261Z",
+  "correcaoFinal": {
+    "motivo": "Pedido do autor: manter esta versão do Velho Ossário e acrescentar o segundo braço dianteiro visível.",
+    "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\511-velho-ossario-dragao-palido-antes-correcao-final-2026-10-02.png",
+    "registroAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\registros\\511-antes-correcao-final-2026-10-02.json"
+  },
+  "pedidoAutor": {
+    "texto": "Manter esta imagem do último dragão (Velho Ossário, não os wyverns) e adicionar o segundo braço.",
+    "baseEscolhida": "versoes-anteriores/511-velho-ossario-dragao-palido-antes-correcao-final-2026-10-02.png",
+    "atendidoEm": "2026-10-03T02:45:49.535Z",
+    "avaliacaoDaNovaVersao": "aguardando autor"
+  },
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
+}

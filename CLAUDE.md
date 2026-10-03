@@ -1,5 +1,13 @@
 # Responsabilidades do Claude
 
+## Pedidos visuais do TCG
+
+Arcanoclisma é um TCG. As 435 artes 087–521 estão aprovadas; veja `Arcanoclisma/cartas/catalogo-artes.json`. Designer de Cartas atende somente sua demanda atual de cartas, identidade, conteúdo e uso. Solicite por `Arcanoclisma/cartas/pedidos/<id>.claude.json`, conforme o exemplo e `COORDENACAO-CLAUDE.md`. Pode enriquecer descrições estéticas pobres com eventos, magia, ambientes, personagens e interações, mantendo função e identidade. Não alterar regras por escolhas visuais.
+
+Embelezador atende sua demanda atual de assets para animações, efeitos e movimento em `Arcanoclisma/efeitos/`. Todos os aliados usam movimentação genérica fluida e compartilhada ao atacar, sem efeito específico por aliado. Prefira transformar a carta existente para esse movimento; solicite novos assets só quando necessários. Defina os gatilhos reais, formatos e timing para integração.
+
+Consuma manifestos `.visual.json` e devolva `.integracao.claude.json` com confirmação ou ajustes. Textos de cartas permanecem editáveis no Canva e seguem seu conteúdo exato. Corte planejado de 63 × 88 mm, conforme a especificação de impressão. Canva teve erro de transporte nesta configuração; não há template real gerado ainda. A pasta de pedidos começa sem demanda confirmada. A coordenação ocorre por arquivos/Git; não presumir conexão direta com a conversa do Codex.
+
 O autor atribuiu ao Codex a criação e revisão de imagens, designs e assets visuais, a leitura e análise de referências e modelos de imagem e a criação de modelos 3D quando necessários.
 
 O Claude fica responsável pelas demais partes do projeto, incluindo programação, lógica, sistemas, configuração e integração dos assets entregues pelo Codex.

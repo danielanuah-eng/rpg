@@ -1,0 +1,31 @@
+{
+  "numero": 359,
+  "id": "menina-raposa",
+  "titulo": "Menina-Raposa",
+  "assunto": "Menina-Raposa: menina, raposa; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito minúsculo, covarde; leve e veloz; no gesto de morder; magia verde-musgo e âmbar.",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-d44ccfb7-0823-405b-aee2-e4ddbd1e3fa1.png",
+  "prompt": "Arcanoclisma 359 — Menina-Raposa. Assunto obrigatório: Menina-Raposa: menina, raposa; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito minúsculo, covarde; leve e veloz; no gesto de morder; magia verde-musgo e âmbar.. Corpo curvado escutando ou reagindo, joelhos soltos e cabeça inclinada. Criança com idade e proporções descritas no catálogo. clara dourada; cabelo preto raspado numa lateral e comprido na outra; face oval com maçãs altas e queixo pequeno; olhos âmbar arredondados e espaçados. Não repetir a combinação de rosto, cabelo e corpo das imagens anteriores. . Cada detalhe explícito de espécie, idade, corpo e expressão do catálogo prevalece sobre as sugestões de variação. A ação e a ocupação originais prevalecem; não transformar conversa em combate. Exatamente dois braços e duas mãos nos humanos, sem mãos extras. Equipamento original de Bronze Arco quando apropriado. Ação expressiva e magia controlada apropriada, sem efeitos repetitivos. Quadrinho independente moderno e animação contemporânea. Linhas limpas e vivas com espessura variável, cores chapadas em 2–3 valores, sombras duras em bloco, hachuras direcionais e halftone. Linguagem corporal, expressões, peso, ação e profundidade como na referência Wilderfeast, sem copiar personagens. Nunca aquarela, pintura realista ou 3D. Magia gráfica na cor do Valor com pontilhado, sem fogo realista. Equilibrar cores quentes e frias. Figura e acessórios inteiros em tela quadrada com margens transparentes generosas. Fundo verdadeiro alfa transparente, sem chão, disco de sombra, cenário, texto ou logo. Reservar ao menos 10% de área transparente em cada borda. O personagem com os efeitos ocupa no máximo 80% da largura e da altura; não usar close-up. Se o feito é gigante, afastar o enquadramento para caber com todos os pés, mãos e efeitos inteiros.",
+  "adaptacoes": [],
+  "variacao": "Corpo curvado escutando ou reagindo, joelhos soltos e cabeça inclinada. Criança com idade e proporções descritas no catálogo. clara dourada; cabelo preto raspado numa lateral e comprido na outra; face oval com maçãs altas e queixo pequeno; olhos âmbar arredondados e espaçados. Não repetir a combinação de rosto, cabelo e corpo das imagens anteriores. ",
+  "caracteristicas": {
+    "pele": "clara dourada",
+    "cabelo": "cabelo preto raspado numa lateral e comprido na outra",
+    "rosto": "face oval com maçãs altas e queixo pequeno",
+    "olhos": "olhos âmbar arredondados e espaçados",
+    "corpo": "constituição larga com braços fortes",
+    "idade": "idoso de 68 anos com rugas naturais"
+  },
+  "feitoAnime": false,
+  "number": 359,
+  "arquivo": "imagens/menina-raposa.png",
+  "ferramenta": "image_gen integrada",
+  "estiloVersao": 2,
+  "geradaEm": "2026-10-02T21:31:58.414Z",
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
+}

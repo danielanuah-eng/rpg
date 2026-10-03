@@ -8,5 +8,12 @@
   "fundo": "alfa solicitado; conferir progresso.json",
   "prompt": "SQUARE 1:1 TRANSPARENT ALPHA game illustration cutout. Simple modern independent comic + contemporary animation: expressive varied ink lines and loose energetic accents, SOLID FLAT COLORS, crisp HARD CEL SHADOW BLOCKS, visible printed HALFTONE DOT patches. Only 2-3 discrete tones per surface. Warm ochre/orange/rust/browns balanced with cool muted blue/cyan/deep green. Entire subject with EMPTY TRANSPARENT MARGIN around all sides, no rectangular backdrop, no sky, no haze, no painting, realistic render, 3D, gradients, airbrush or neon.\nA compact miniature ENVIRONMENT CUTOUT in a SQUARE silhouette on one irregular terrain patch, like an illustrated game terrain asset. Keep buildings, terrain, described activity and crowds of tiny fully clothed humans if specified. SKY and all exterior are transparent. No horizon or background panorama.\nCatalogue 158 Mercado de Feras. EXACT SUBJECT: Mercado de Feras: mercado barulhento de jaulas e cercados, feras exóticas, domadores com chicotes, lama e palha, luz roxa nas coleiras. Sinais de magia roxo-sangue no ar.\nMagic is FLAT uniform/overflowing aura with gaps, wisps or hard-light shapes and printed dots. Value colors: Conflitüo rusty red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal is dark gold Bronze Arco in flat tones. No added text or watermark; non-graphic fantasy, no gore/victims, no sexualized figures.",
   "preferenciaEspada": false,
-  "ferramenta": "image_gen integrada"
+  "ferramenta": "image_gen integrada",
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
 }

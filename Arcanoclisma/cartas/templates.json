@@ -1,0 +1,11 @@
+{
+  "versao": 1,
+  "agente": "Designer de Cartas",
+  "estado": "aguardando_pedido_atual_do_claude",
+  "canva": {
+    "consultaEm": "2026-10-03",
+    "resultado": "erro de transporte na consulta; acesso não confirmado nesta configuração"
+  },
+  "templates": [],
+  "camposPorTemplate": ["id", "versao", "designIdCanva", "urlCanva", "medidas", "modulos", "fontes", "exportacoesLocais", "aprovacao", "pedidosOrigem"]
+}

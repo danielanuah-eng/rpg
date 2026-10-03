@@ -1,0 +1,21 @@
+{
+  "numero": 510,
+  "titulo": "Aurelhaz, Dragoa-Coral",
+  "id": "aurelhaz-dragoa-coral",
+  "assunto": "Aurelhaz, Dragoa-Coral: dragoa, colecionadora; dragão ou wyvern; jeito belo, voador; pose imponente de chefe; no gesto de morder; magia coral.",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-58cb20e4-379d-4d74-af56-ce740874180c.png",
+  "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 510 — Aurelhaz, Dragoa-Coral. Recuperar completamente a extremidade exterior da asa direita, hoje cortada; conservar a dragoa Aurelhaz coral, formato do rosto, pupilas, voo curvo, tesouros na garra, manchas e textura. Não criar novos espinhos ou luzes. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+  "variacao": "Dragoa coral imponente colecionadora, crânio compacto arredondado com pupilas visíveis, escamas grandes texturizadas sem pelos, corpo forte elegante, poucos espinhos; voo em curva descendente lateral com uma asa perto dobrada e outra estendida, segura pequenos objetos colecionados numa garra, energia coral suave.",
+  "adaptacoes": [],
+  "revisaoAnatomia": false,
+  "number": 510,
+  "arquivo": "imagens/aurelhaz-dragoa-coral.png",
+  "ferramenta": "image_gen integrada",
+  "estiloVersao": 2,
+  "geradaEm": "2026-10-03T02:25:13.161Z",
+  "correcaoFinal": {
+    "motivo": "Recuperar completamente a extremidade exterior da asa direita, hoje cortada; conservar a dragoa Aurelhaz coral, formato do rosto, pupilas, voo curvo, tesouros na garra, manchas e textura. Não criar novos espinhos ou luzes.",
+    "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\510-aurelhaz-dragoa-coral-antes-correcao-final-2026-10-02.png",
+    "registroAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\registros\\510-antes-correcao-final-2026-10-02.json"
+  }
+}

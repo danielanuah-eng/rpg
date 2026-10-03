@@ -1,0 +1,21 @@
+{
+  "numero": 511,
+  "titulo": "Velho Ossário, Dragão-Pálido",
+  "id": "velho-ossario-dragao-palido",
+  "assunto": "Velho Ossário, Dragão-Pálido: dragão, ancião; dragão ou wyvern; jeito antigo, pálido; pose imponente de chefe; no gesto de morder; magia verde-pálida.",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-ea0a0a27-71c7-4f2e-acf1-8d56e45c2d8e.png",
+  "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 511 — Velho Ossário, Dragão-Pálido. Recuperar completamente as garras da pata direita e todas as extremidades, hoje encostadas/cortadas. Reduzir os muitos espinhos finos do rosto: manter apenas dois chifres robustos e pequenas placas lisas nas bochechas, conservando a mandíbula compacta, boca aberta, pupilas e imponência. Manter escamas marfim, idade, pose sentada e energia verde-pálida suave. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+  "variacao": "Dragão pálido ancião com crânio compacto ósseo e pupilas visíveis, corpo forte envelhecido, escamas marfim antigas e poucos chifres grossos, sem sangue/gore; repousa de lado pescoço longo erguido devagar, asa recolhida, cauda curva baixa, verde-pálida mínima, presença antiga pelo desenho.",
+  "adaptacoes": [],
+  "revisaoAnatomia": false,
+  "number": 511,
+  "arquivo": "imagens/velho-ossario-dragao-palido.png",
+  "ferramenta": "image_gen integrada",
+  "estiloVersao": 2,
+  "geradaEm": "2026-10-03T02:28:52.977Z",
+  "correcaoFinal": {
+    "motivo": "Recuperar completamente as garras da pata direita e todas as extremidades, hoje encostadas/cortadas. Reduzir os muitos espinhos finos do rosto: manter apenas dois chifres robustos e pequenas placas lisas nas bochechas, conservando a mandíbula compacta, boca aberta, pupilas e imponência. Manter escamas marfim, idade, pose sentada e energia verde-pálida suave.",
+    "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\511-velho-ossario-dragao-palido-antes-correcao-final-2026-10-02.png",
+    "registroAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\registros\\511-antes-correcao-final-2026-10-02.json"
+  }
+}

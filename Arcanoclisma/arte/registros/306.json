@@ -1,0 +1,23 @@
+{
+  "numero": 306,
+  "number": 306,
+  "id": "tatuadora-de-marcas",
+  "titulo": "Tatuadora de Marcas",
+  "estiloVersao": 2,
+  "ferramenta": "image_gen integrada",
+  "arquivo": "imagens/tatuadora-de-marcas.png",
+  "prompt": "Arcanoclisma, imagem 306 — Tatuadora de Marcas. Uma artista adulta silenciosa, pele castanha escura de subtom frio, rosto longo com nariz largo, olhos pequenos atentos, cabelo crespo bem curto com mecha grisalha lateral. Sentada de lado num pequeno banco de trabalho, pernas assimétricas, cotovelo apoiado na coxa e tronco curvado sobre um portfólio aberto; cabeça discretamente voltada para o interlocutor, expressão pensativa, boca fechada. Apresenta uma marca mágica coral já desenhada num pergaminho; tatuagens decorativas já concluídas no antebraço. Frascos fechados de pigmento presos ao cinto. Sem agulhas, perfuração, ferimentos, sangue ou procedimento em pele. Magia coral discreta acima do desenho. Roupas práticas de trabalho e rua, acessórios originais de Bronze Arco, sem lenço na cabeça. Ilustração de quadrinhos independentes e animação contemporânea, traço variável e vivo, cores chapadas com 2–3 tons, sombras duras em blocos, hachuras direcionais e reticulação. Linguagem corporal com peso e apoio naturais, linha de ação curva, sobreposição de braços, livro e pernas dando profundidade; identidade própria, sem repetir pose de conjurador com braço estendido. Figura, banco, magia e acessórios inteiros no centro de uma tela quadrada, margens transparentes generosas, fundo realmente transparente alfa, sem cenário, chão desenhado, texto, logo ou marca d'água.",
+  "adaptacoes": [
+    "Marcas já concluídas e portfólio, sem procedimento em pele.",
+    "Corrigida mão extra; exatamente duas mãos."
+  ],
+  "pose": "Sentada de lado com portfólio, mão apoiada no queixo.",
+  "geradaEm": "2026-10-02T20:38:50.143Z",
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "numero": 447,
+  "titulo": "Noviça da Ordem",
+  "id": "novica-da-ordem",
+  "assunto": "Noviça da Ordem: noviça, protetora; guardião que anula a magia, armadura com selos e lacres; jeito paciente; pose de quem ajuda os outros; no gesto de bastão.",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-6e2e3d3d-cd55-46aa-bc82-3c4e89508440.png",
+  "prompt": "Redesenhe a imagem de referência para corrigir a anatomia conforme direção abaixo; preservar função, cores dos materiais e identidade da Ordem nos lacres e armadura. Substituir anatomia animal por humanoide/estátua indicada. Melhorar margens e silhueta. 447 — Noviça da Ordem\nDESCRIÇÃO ORIGINAL: Noviça da Ordem: noviça, protetora; guardião que anula a magia, armadura com selos e lacres; jeito paciente; pose de quem ajuda os outros; no gesto de bastão.\nDIREÇÃO VISUAL ESPECÍFICA: Noviça humana adulta jovem negra, baixa e robusta, rosto redondo, nariz largo, olhos castanhos gentis, tranças grossas presas em dois coques baixos, armadura leve de ordem com lacres; dando um passo para ajudar alguém, bastão apoiado junto ao corpo e mão aberta baixa, sorriso discreto.\nIlustração de Arcanoclisma, quadrinho independente moderno e animação contemporânea. Tinta expressiva de espessura variável, cores CHAPADAS em apenas 2–3 valores por material, sombras DURAS em blocos grandes, hachuras seletivas e halftone discreto. Desenho vivo com peso e gestual. Paleta quente terrosa equilibrada com frios profundos. Sem pintura realista, 3D, aquarela, airbrush ou gradientes. Energia gráfica na cor descrita, poucos contornos e pontos luminosos, sem fogo realista/neon. CORPO E TODOS ACESSÓRIOS COMPLETOS, inclusive armas, asas, pontas e caudas: ocupar no máximo 75% do quadro, centralizar na área útil deixando pelo menos 12% de espaço transparente de TODOS OS LADOS. Quadro quadrado. Fundo alfa realmente transparente, sem chão, sombra de chão, disco, cenário de fundo, texto legível, marca ou logotipo. Quando é criatura viva manter olhos com pupilas visíveis salvo cegueira descrita. Humanoides profissionais mantêm a anatomia humanoide proposta; não transformá-los em animais aleatórios. Crianças totalmente vestidas com proporções infantis, sem ferimentos gráficos. Sempre prevalecem descrição, ação e cores explícitas do catálogo.",
+  "variacao": "Noviça humana adulta jovem negra, baixa e robusta, rosto redondo, nariz largo, olhos castanhos gentis, tranças grossas presas em dois coques baixos, armadura leve de ordem com lacres; dando um passo para ajudar alguém, bastão apoiado junto ao corpo e mão aberta baixa, sorriso discreto.",
+  "adaptacoes": [],
+  "revisaoAnatomia": true,
+  "number": 447,
+  "arquivo": "imagens/novica-da-ordem.png",
+  "ferramenta": "image_gen integrada",
+  "estiloVersao": 2,
+  "geradaEm": "2026-10-03T00:48:20.168Z",
+  "versaoAnterior": "versoes-anteriores/447-novica-da-ordem-variante-animal-2026-10-02.png",
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
+}

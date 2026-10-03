@@ -8,5 +8,12 @@
   "fundo": "alfa transparente; conferir progresso.json",
   "prompt": "Transparent ALPHA cutout, SQUARE canvas. SIMPLE FLAT 2D animated-comic illustration. Clean expressive varied-weight ink, loose energetic accents, broad SOLID COLOR SHAPES, discrete HARD CEL SHADOW BLOCKS, printed HALFTONE DOT patches. Warm ochre/rust/browns balanced with cool muted blue/cyan/deep green. No realistic painting, 3D, gradients, airbrush or neon. Whole subject fully inside canvas with empty transparent margin, no text or watermark.\nIsolated environment VIGNETTE CUTOUT, compact irregular ground patch and structures. SKY AND EXTERIOR ARE FULLY TRANSPARENT. Environment can be wider than tall but canvas remains SQUARE. Keep the described activity and crowds when specified as small fully dressed human background figures. No opaque atmospheric backdrop or full screen landscape. Simplify details into bold graphic shapes.\nRPG catalogue 154 Biblioteca que Esquece. EXACT SUBJECT: Biblioteca que Esquece: biblioteca labiríntica de estantes infinitas, livros abertos com páginas em branco, letras índigo escapando e se apagando no ar. Sinais de magia índigo no ar.\nMagic: flat uniform/overflowing aura with gaps, smoke wisps or hard-light constructs and printed dots. Value colors: Conflitüo rust red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal when appropriate is dark golden Bronze Arco drawn in flat tones. Non-graphic fantasy, no gore or victims, no sexualized people.",
   "preferenciaEspada": false,
-  "ferramenta": "image_gen integrada"
+  "ferramenta": "image_gen integrada",
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
 }

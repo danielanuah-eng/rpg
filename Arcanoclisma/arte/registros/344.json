@@ -1,0 +1,24 @@
+{
+  "numero": 344,
+  "id": "curandeira-de-beira-de-estrada",
+  "titulo": "Curandeira de Beira de Estrada",
+  "assunto": "Curandeira de Beira de Estrada: curandeira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito pálido; pose de quem ajuda os outros; no gesto de curar; magia verde-pálida.",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-e81263e6-759e-445a-80ef-ce15e1dbf486.png",
+  "prompt": "Arcanoclisma 344 — Curandeira de Beira de Estrada. Assunto obrigatório: Curandeira de Beira de Estrada: curandeira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito pálido; pose de quem ajuda os outros; no gesto de curar; magia verde-pálida.. Comando com peso numa perna e peito virado de lado, gesto curto assimétrico. Se humano: pele negra dourada, queixo largo, nariz achatado, olhos escuros fundos, cabeça raspada e barba quadrada, expressão severa.. Sugestões de pose e aparência só se aplicam quando compatíveis com espécie, idade e ocupação; o gesto original prevalece. Humanos com dois braços e duas mãos, anatomia contínua sem mãos extras. Crianças com roupa e aparência adequadas à idade. Bronze Arco nas ferramentas quando apropriado. Ação expressiva e magia controlada apropriada ao assunto, sem efeitos repetitivos. Quadrinho independente moderno e animação contemporânea. Linhas limpas e vivas com espessura variável, cores chapadas em 2–3 valores, sombras duras em bloco, hachuras direcionais e halftone. Linguagem corporal, expressões, peso, ação e profundidade como na referência Wilderfeast, sem copiar personagens. Nunca aquarela, pintura realista ou 3D. Magia gráfica na cor do Valor com pontilhado, sem fogo realista. Equilibrar cores quentes e frias. Figura e acessórios inteiros em tela quadrada com margens transparentes generosas. Fundo verdadeiro alfa transparente, sem chão, disco de sombra, cenário, texto ou logo. Reservar ao menos 10% de área transparente em cada borda. O personagem com os efeitos ocupa no máximo 80% da largura e da altura; não usar close-up. Se o feito é gigante, afastar o enquadramento para caber com todos os pés, mãos e efeitos inteiros.",
+  "adaptacoes": [],
+  "variacao": "Comando com peso numa perna e peito virado de lado, gesto curto assimétrico. Se humano: pele negra dourada, queixo largo, nariz achatado, olhos escuros fundos, cabeça raspada e barba quadrada, expressão severa.",
+  "feitoAnime": false,
+  "number": 344,
+  "arquivo": "imagens/curandeira-de-beira-de-estrada.png",
+  "ferramenta": "image_gen integrada",
+  "estiloVersao": 2,
+  "geradaEm": "2026-10-02T21:07:44.254Z",
+  "revisaoDiversidade": "Curandeira idosa de corpo robusto, cabelo grisalho em coque baixo e gesto acolhedor; corrige repetição do personagem careca barbudo.",
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
+}

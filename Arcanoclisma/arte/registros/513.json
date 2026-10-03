@@ -1,0 +1,28 @@
+{
+  "numero": 513,
+  "titulo": "Wyvern de Guerra",
+  "id": "wyvern-de-guerra",
+  "assunto": "Wyvern de Guerra (montaria de cavaleiros): wyvern, montaria; dragão ou wyvern; jeito voador, leal; no gesto de garras.",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-c212b363-ff98-4a2b-9abf-e48778ac7356.png",
+  "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 513 — Wyvern de Guerra. Corrigir a anatomia de wyvern: remover inteiramente o pequeno par de patas/braços dianteiros extras pendurados sob o peito. Manter SOMENTE DUAS patas traseiras grandes e DUAS asas membranosas, que são o par de membros dianteiros, como uma ave/morcego. Não adicionar braços ou patas à frente. Manter cabeça, pupilas, armadura, sela vazia, cor, postura e asas. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+  "variacao": "Wyvern de guerra robusta grafite e ferrugem com arreios e sela vazia, APENAS duas patas traseiras e membros dianteiros alados; cabeça curta forte com pupilas, asas assimétricas em pouso ofensivo, garra traseira flexionada, armadura poucasplacas e nenhum excesso de espinhos.",
+  "adaptacoes": [],
+  "revisaoAnatomia": false,
+  "number": 513,
+  "arquivo": "imagens/wyvern-de-guerra.png",
+  "ferramenta": "image_gen integrada",
+  "estiloVersao": 2,
+  "geradaEm": "2026-10-03T02:26:31.804Z",
+  "correcaoFinal": {
+    "motivo": "Corrigir a anatomia de wyvern: remover inteiramente o pequeno par de patas/braços dianteiros extras pendurados sob o peito. Manter SOMENTE DUAS patas traseiras grandes e DUAS asas membranosas, que são o par de membros dianteiros, como uma ave/morcego. Não adicionar braços ou patas à frente. Manter cabeça, pupilas, armadura, sela vazia, cor, postura e asas.",
+    "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\513-wyvern-de-guerra-antes-correcao-final-2026-10-02.png",
+    "registroAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\registros\\513-antes-correcao-final-2026-10-02.json"
+  },
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
+}

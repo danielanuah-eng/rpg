@@ -1,0 +1,38 @@
+{
+  "numero": 353,
+  "id": "guardiao-do-ciclo",
+  "titulo": "Guardião do Ciclo",
+  "assunto": "Guardião do Ciclo: guardião, relógio; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito paciente, duro; no gesto de bastão; magia azul-noite com riscos brancos.",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-2a9225e7-e687-4587-b7a2-2738546b38cf.png",
+  "prompt": "Arcanoclisma 353 — Guardião do Ciclo. Assunto obrigatório: Guardião do Ciclo: guardião, relógio; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito paciente, duro; no gesto de bastão; magia azul-noite com riscos brancos.. Movimento lateral furtivo, torso curvo e olhar de canto. mulher idoso de 68 anos com rugas naturais, constituição larga com braços fortes. oliva clara acinzentada; cabelo loiro preso em rabo baixo; rosto redondo e nariz curto arredondado; olhos verdes estreitos e sobrancelhas retas. Não repetir a combinação de rosto, cabelo e corpo das imagens anteriores. Não acrescentar barba.. Cada detalhe explícito de espécie, idade, corpo e expressão do catálogo prevalece sobre as sugestões de variação. A ação e a ocupação originais prevalecem; não transformar conversa em combate. Exatamente dois braços e duas mãos nos humanos, sem mãos extras. Equipamento original de Bronze Arco quando apropriado. Ação expressiva e magia controlada apropriada, sem efeitos repetitivos. Quadrinho independente moderno e animação contemporânea. Linhas limpas e vivas com espessura variável, cores chapadas em 2–3 valores, sombras duras em bloco, hachuras direcionais e halftone. Linguagem corporal, expressões, peso, ação e profundidade como na referência Wilderfeast, sem copiar personagens. Nunca aquarela, pintura realista ou 3D. Magia gráfica na cor do Valor com pontilhado, sem fogo realista. Equilibrar cores quentes e frias. Figura e acessórios inteiros em tela quadrada com margens transparentes generosas. Fundo verdadeiro alfa transparente, sem chão, disco de sombra, cenário, texto ou logo. Reservar ao menos 10% de área transparente em cada borda. O personagem com os efeitos ocupa no máximo 80% da largura e da altura; não usar close-up. Se o feito é gigante, afastar o enquadramento para caber com todos os pés, mãos e efeitos inteiros.",
+  "adaptacoes": [],
+  "variacao": "Movimento lateral furtivo, torso curvo e olhar de canto. mulher idoso de 68 anos com rugas naturais, constituição larga com braços fortes. oliva clara acinzentada; cabelo loiro preso em rabo baixo; rosto redondo e nariz curto arredondado; olhos verdes estreitos e sobrancelhas retas. Não repetir a combinação de rosto, cabelo e corpo das imagens anteriores. Não acrescentar barba.",
+  "caracteristicas": {
+    "pele": "oliva clara acinzentada",
+    "cabelo": "cabelo loiro preso em rabo baixo",
+    "rosto": "rosto redondo e nariz curto arredondado",
+    "olhos": "olhos verdes estreitos e sobrancelhas retas",
+    "corpo": "constituição larga com braços fortes",
+    "idade": "idoso de 68 anos com rugas naturais"
+  },
+  "feitoAnime": true,
+  "number": 353,
+  "arquivo": "imagens/guardiao-do-ciclo.png",
+  "ferramenta": "image_gen integrada",
+  "estiloVersao": 2,
+  "geradaEm": "2026-10-02T21:25:07.173Z",
+  "revisaoFeitoCosmico": {
+    "pedido": "Pelo menos um Comprometido conjurando um enorme buraco negro ou feito galáctico.",
+    "prompt": "Edite este Guardião do Ciclo, um Comprometido usuário de magia. Preserve sua identidade, rosto duro e paciente, cabelo loiro preso, corpo robusto, roupas, bastão astronômico e magia azul-noite com riscos brancos. Amplie dramaticamente seu feito: está CONJURANDO UM ENORME BURACO NEGRO acima e atrás da mão estendida. Buraco negro reconhecível por esfera circular preta absolutamente opaca e disco de acreção brilhante azul-branco inclinado atravessando a esfera, com arco de lente gravitacional sobre e abaixo dela. Diâmetro aparente do buraco negro maior que o torso; efeito inteiro cabe no quadro. Pedras, fragmentos de relógios e filamentos de luz estelar são esticados em espiral e sugados na direção dele. Dois ou três feixes saem da mão e conectam claramente a conjuração ao buraco negro. Escala cósmica assustadora, sensação de manipular gravidade e espaço, mantendo personagem inteiro em primeiro plano, bastão e ambos os pés visíveis. Não faça apenas uma pequena bola ou portal azul. Silhueta clara com espaço negativo; pouco adorno, nenhum arco-íris, sem vários halos redundantes. Estilo tinta de quadrinho independente, cores chapadas 2–3 valores, sombras em bloco, hachuras e pontilhado. Não realista nem3D. Fundo completamente transparente com alfa, inclusive fora da esfera e dos filamentos, sem céu estrelado preenchendo a imagem, sem cenário, texto, chão ou logotipo. Margem livre 8% em cada borda. Centro do buraco negro deve ser preto opaco, NÃO transparente.",
+    "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-1a0947cf-d6c4-4620-8162-5d9223f0aa2a.png",
+    "geradaEm": "2026-10-02T21:50:30.307Z",
+    "versaoAnterior": "versoes-anteriores/353-guardiao-antes-buraco-negro.png"
+  },
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "projeto": "Arcanoclisma",
+  "versao": "2026-10-03-v1",
+  "criadoEm": "2026-10-03T03:23:34.066Z",
+  "aprovacao": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  },
+  "totalAprovadas": 435,
+  "indiceBiblioteca": "../../../indices/arcanoclisma.json",
+  "arquivos": [
+    {
+      "arquivo": "instrucoes/AGENTS-repositorio.md",
+      "origem": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\AGENTS.md",
+      "sha256": "60d31d2766d644aa185def5abfd83f20688304708c4a2d14a0656f77e30bc3ed"
+    },
+    {
+      "arquivo": "instrucoes/AGENTS-Arcanoclisma.md",
+      "origem": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\AGENTS.md",
+      "sha256": "7858693f432330ac352ea4fa2fd43ec26959aa005d1b43a9c746ff3bb6e3839b"
+    },
+    {
+      "arquivo": "instrucoes/agente-artes.md",
+      "origem": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\agente-artes.md",
+      "sha256": "df785f1ff77688f458afacad13f5699e62b77b0fef3aa9798d1fd9cbf6980ba2"
+    },
+    {
+      "arquivo": "instrucoes/estilo.md",
+      "origem": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\27 Estilo de arte - o traço.md",
+      "sha256": "09ea9a3ad46779717496fa40a603b50b423afd64a55f8898462c817f6434215c"
+    },
+    {
+      "arquivo": "instrucoes/variacao-personagens.md",
+      "origem": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\variacao-personagens.md",
+      "sha256": "45d12d43f2e1694067749656069d6cd5794a4cbf17b77edb40f62e7266632f51"
+    },
+    {
+      "arquivo": "instrucoes/aprovacao-final.json",
+      "origem": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\registros\\aprovacao-final-2026-10-03.json",
+      "sha256": "6fbe91a37ba2dbec76051bbe79f5ddcea9d3599fabedb119696cf5705173be15"
+    },
+    {
+      "arquivo": "skills/carlos.md",
+      "origem": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\.agents\\skills\\carlos\\SKILL.md",
+      "sha256": "e8dc03a4333eb4c603de42d4f217101244dffcc572fa2506138345ae8b826a8e"
+    },
+    {
+      "arquivo": "skills/enzo.md",
+      "origem": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\.agents\\skills\\enzo\\SKILL.md",
+      "sha256": "5bcf6640f548d10336bb61ab451dc1847db0bdb8dd9d0de85f0badd7027bade1"
+    },
+    {
+      "arquivo": "skills/copiao.md",
+      "origem": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\.agents\\skills\\copiao\\SKILL.md",
+      "sha256": "1a807390cefcc578b1cdd39f960ed62da494ae1890ed38c32e04a2f4394f9c84"
+    },
+    {
+      "arquivo": "skills/imagegen.md",
+      "origem": "C:/Users/Anuah/.codex/skills/.system/imagegen/SKILL.md",
+      "sha256": "706d4d96e1d5c9e6023fe3ccabba1bb34b364024d344fd25b8515ec7d28fe3c4"
+    },
+    {
+      "arquivo": "codigo/salvar-geracao.mjs",
+      "origem": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\salvar-geracao.mjs",
+      "sha256": "ed7404e402aae5b2b5da73d9115a4b97ad45364ac077db65f3e2930b286f8377"
+    },
+    {
+      "arquivo": "codigo/conferir.mjs",
+      "origem": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\conferir.mjs",
+      "sha256": "71782df540ef2d0b6b1ac8a8018172796884d8f05dd4c5aad2da6a2cef1d35d5"
+    },
+    {
+      "arquivo": "codigo/galeria.mjs",
+      "origem": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\galeria.mjs",
+      "sha256": "e405e882e848b1ea275d6e5782ca04d764b096b6acc98c57d2eefb7db27df580"
+    },
+    {
+      "arquivo": "codigo/encerrar-projeto.mjs",
+      "origem": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\encerrar-projeto.mjs",
+      "sha256": "2664f986a53c1e037be50ebd548ee04df7cff11a371d9a701562abe56c348bc8"
+    },
+    {
+      "arquivo": "codigo/arquivar.mjs",
+      "origem": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Biblioteca-Enzo\\scripts\\arquivar.mjs",
+      "sha256": "1f3dc2efe68c98b5cfb86d7341d302e3d5211b26902757129a50d1a576dedcec"
+    }
+  ],
+  "ferramentasUtilizadas": [
+    "image_gen integrada: geração e edição remotas",
+    "view_image: inspeção visual",
+    "Node.js e Sharp: arquivos, alfa, hash e galeria locais",
+    "arquivar.mjs: biblioteca local",
+    "automation_update: pausa de Carlos"
+  ],
+  "procedimentosLocais": [
+    "salvamento",
+    "alfa",
+    "galeria",
+    "arquivamento",
+    "encerramento"
+  ],
+  "procedimentosRemotos": [
+    "geração e edição de imagens",
+    "controle de automação Codex"
+  ],
+  "pendenciasReproducao": [
+    "Alternativa offline para geração/edição não implementada",
+    "Adaptar caminhos e instalar dependências locais ao reutilizar snapshots"
+  ],
+  "movimentos": "Não solicitados neste encerramento; nenhuma lógica de jogo implementada.",
+  "pushRealizado": false
+}

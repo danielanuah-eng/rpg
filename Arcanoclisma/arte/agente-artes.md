@@ -37,3 +37,7 @@ Ao terminar a fila, aguardar a aprovação sem gerar novas variantes. Só retoma
 
 Pasta: `C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte`.
 Escopo: completar as imagens 087–521 do catálogo; revisões somente quando solicitadas. A fila e a cota atuais estão em `progresso.json` e `retomada.json`.
+
+## Revisões de dragões autorizadas
+O autor pediu fazer os dragões após a revisão visual. Antes de retomar o catálogo 390–521, concluir os itens pendentes em registros/revisoes-dragoes.json (222–230), preservando anteriores. Itens concluídos não devem ser refeitos sem nova solicitação. Se atingir cota, guardar checkpoint e retomar essa fila primeiro após liberação.
+

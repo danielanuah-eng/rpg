@@ -1,0 +1,31 @@
+{
+  "numero": 360,
+  "id": "ciantia-dragoes",
+  "titulo": "Professora Ciantia",
+  "assunto": "Mulher jovem, loira com mechas brancas platinadas, olhos verdes, roupa preta e jaqueta com bordas de veludo, sorriso confiante e controlado. Um dragãozinho de chamas fantasmagóricas translúcidas enrolado no braço dela; atrás dela, a cabeça de um dragão enorme emoldura a página, e as chamas de nove cores (uma por Valor) escorrem pela borda por cima do texto.",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-a7ddb80f-cbf1-4ac1-817c-1af3b12852b2.png",
+  "prompt": "Arcanoclisma 360 — Professora Ciantia. Assunto obrigatório: Mulher jovem, loira com mechas brancas platinadas, olhos verdes, roupa preta e jaqueta com bordas de veludo, sorriso confiante e controlado. Um dragãozinho de chamas fantasmagóricas translúcidas enrolado no braço dela; atrás dela, a cabeça de um dragão enorme emoldura a página, e as chamas de nove cores (uma por Valor) escorrem pela borda por cima do texto.. Criatura com ação clara conforme o gesto e sua anatomia, peso e impulso, curva de ação, apoios assimétricos. Preservar espécie e cores, sem traços humanos acrescentados.. Cada detalhe explícito de espécie, idade, corpo e expressão do catálogo prevalece sobre as sugestões de variação. A ação e a ocupação originais prevalecem; não transformar conversa em combate. Exatamente dois braços e duas mãos nos humanos, sem mãos extras. Equipamento original de Bronze Arco quando apropriado. Ação expressiva e magia controlada apropriada, sem efeitos repetitivos. Quadrinho independente moderno e animação contemporânea. Linhas limpas e vivas com espessura variável, cores chapadas em 2–3 valores, sombras duras em bloco, hachuras direcionais e halftone. Linguagem corporal, expressões, peso, ação e profundidade como na referência Wilderfeast, sem copiar personagens. Nunca aquarela, pintura realista ou 3D. Magia gráfica na cor do Valor com pontilhado, sem fogo realista. Equilibrar cores quentes e frias. Figura e acessórios inteiros em tela quadrada com margens transparentes generosas. Fundo verdadeiro alfa transparente, sem chão, disco de sombra, cenário, texto ou logo. Reservar ao menos 10% de área transparente em cada borda. O personagem com os efeitos ocupa no máximo 80% da largura e da altura; não usar close-up. Se o feito é gigante, afastar o enquadramento para caber com todos os pés, mãos e efeitos inteiros.",
+  "adaptacoes": [],
+  "variacao": "Criatura com ação clara conforme o gesto e sua anatomia, peso e impulso, curva de ação, apoios assimétricos. Preservar espécie e cores, sem traços humanos acrescentados.",
+  "caracteristicas": null,
+  "feitoAnime": false,
+  "number": 360,
+  "arquivo": "imagens/ciantia-dragoes.png",
+  "ferramenta": "image_gen integrada",
+  "estiloVersao": 2,
+  "geradaEm": "2026-10-02T21:33:15.678Z",
+  "revisaoDragaoEnergia": {
+    "pedido": "Dragão real de energia atrás da Ciantia, sem exagero estético; remover arco-íris.",
+    "prompt": "Edite esta imagem da Professora Ciantia. Preserve exatamente a mulher jovem loira com mechas brancas, olhos verdes, sorriso confiante, rosto, pose, roupa preta, casaco com veludo roxo, detalhes dourados e o pequeno dragão dourado translúcido junto à mão. Substitua somente toda a enorme cabeça escura com chamas arco-íris atrás dela por UM DRAGÃO COMPLETO DE ENERGIA translúcida azul-violeta suave, claramente reconhecível: cabeça reptiliana proporcional com focinho definido, dois chifres discretos, pescoço elegante, torso, quatro membros e duas asas membranosas e cauda, em curva ascendente atrás da professora. Silhueta limpa, anatomia coerente, poucos detalhes, sem espinhos excessivos, sem arabescos, sem arco-íris, sem chamas. Energia serena com contornos suaves e apenas alguns pequenos pontos luminosos. Corpo do dragão parcialmente translúcido, sem aparência de dragão sólido ou armadura. Grande o suficiente para estar atrás dela mas não monumental nem abarrotando a composição. Ambos inteiros dentro do quadro, margem livre em todas as bordas. Mesma linguagem de quadrinho de tinta viva, cores chapadas, sombras em bloco e halftone. Fundo alfa completamente transparente, sem texto, cenário, chão ou sombra de chão.",
+    "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-0fe281f3-c974-4b20-a358-7bec84e012d2.png",
+    "geradaEm": "2026-10-02T21:42:23.478Z",
+    "versaoAnterior": "versoes-anteriores/360-ciantia-antes-dragao-energia.png"
+  },
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
+}

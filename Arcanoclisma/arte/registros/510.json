@@ -1,0 +1,36 @@
+{
+  "numero": 510,
+  "titulo": "Aurelhaz, Dragoa-Coral",
+  "id": "aurelhaz-dragoa-coral",
+  "assunto": "Aurelhaz, Dragoa-Coral: dragoa, colecionadora; dragão ou wyvern; jeito belo, voador; pose imponente de chefe; no gesto de morder; magia coral.",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-7f957604-f523-42a3-9c20-d167da169019.png",
+  "prompt": "Use case: precise-object-edit. EDIT the provided image of Aurelhaz, the coral dragon, as the exact target. A very small anatomical correction only: ADD her missing SECOND FRONT ARM. She is a true dragon with two wings, two front arms and two hind legs. Keep the existing front arm and claw holding the collection of golden jewels EXACTLY as is. Add the opposite front arm attached naturally to the far side of her upper chest/shoulder, just beneath the neck, between the jewel-holding arm and the hind legs: a clearly readable muscular coral-red upper arm, bent elbow, teal-dark hand with ivory claws reaching slightly down and forward. Make its shoulder connection and limb silhouette legible so it cannot be mistaken for a hind leg, jewelry, or wing. The second hand is empty. Anatomically coherent foreshortening, scale texture, ink and hard shadows matching the existing arm. PRESERVE EVERYTHING ELSE: exact face, eyes, open mouth, horns, coral ornaments, neck curve, torso, both hind legs, both wings and their cream/teal pattern, tail curve and tip, necklaces and held jewels, proportions, expressive pose, original ink linework, hatching and palette. Do not redesign, add lights, alter expression, remove treasure, move existing limbs, add extra limbs or crop any wing/tail/claw. All original figure fits with transparent margins. TRUE transparent alpha background including internal holes; no backdrop, checkerboard drawn in, ground, text or watermark. Change only the missing second front arm.",
+  "variacao": "Dragoa coral imponente colecionadora, crânio compacto arredondado com pupilas visíveis, escamas grandes texturizadas sem pelos, corpo forte elegante, poucos espinhos; voo em curva descendente lateral com uma asa perto dobrada e outra estendida, segura pequenos objetos colecionados numa garra, energia coral suave.",
+  "adaptacoes": [],
+  "revisaoAnatomia": false,
+  "number": 510,
+  "arquivo": "imagens/aurelhaz-dragoa-coral.png",
+  "ferramenta": "image_gen integrada",
+  "estiloVersao": 2,
+  "geradaEm": "2026-10-03T03:17:50.063Z",
+  "correcaoFinal": {
+    "motivo": "Recuperar completamente a extremidade exterior da asa direita, hoje cortada; conservar a dragoa Aurelhaz coral, formato do rosto, pupilas, voo curvo, tesouros na garra, manchas e textura. Não criar novos espinhos ou luzes.",
+    "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\510-aurelhaz-dragoa-coral-antes-correcao-final-2026-10-02.png",
+    "registroAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\registros\\510-antes-correcao-final-2026-10-02.json"
+  },
+  "pedidoAutor": {
+    "texto": "Todas estão boas, mas o pedido do segundo braço era para Aurelhaz, Dragoa-Coral, não o Ossário.",
+    "escopo": "Adicionar somente o segundo braço de Aurelhaz mantendo a imagem.",
+    "versaoAnterior": "versoes-anteriores/510-aurelhaz-dragoa-coral-antes-segundo-braco-2026-10-03.png",
+    "registroAnterior": "registros/510-antes-segundo-braco-2026-10-03.json",
+    "cumpridoEm": "2026-10-03T03:17:50.063Z",
+    "avaliacao": "aprovada pelo autor no encerramento"
+  },
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
+}

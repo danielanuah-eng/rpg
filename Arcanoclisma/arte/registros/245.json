@@ -10,5 +10,12 @@
   "ferramenta": "image_gen integrada",
   "adaptacoes": [
     "Corda e sino incluídos inteiros no recorte, sem atravessar título ou conter texto."
-  ]
+  ],
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
 }

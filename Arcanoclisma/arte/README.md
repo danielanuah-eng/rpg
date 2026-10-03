@@ -12,7 +12,7 @@ Geração: ferramenta de imagens integrada. Preservar descrições e ideia centr
 
 ## Estado da produção
 
-A geração atingiu a cota do serviço em 2 de outubro de 2026: 240 imagens salvas e com alfa conferido, 195 pendentes. A retomada começa pela 306 (com apresentação de marcas já concluídas), depois 327 e 329–521; a 328 já está salva. O serviço informou liberação prevista para 02/10/2026 às 17:23:50, horário de Fortaleza. Consulte `progresso.json` e `retomada.json` para o estado registrado. Os ajustes posteriores pedidos pelo autor para os dragões estão em `ajustes-dragões.md`, com prompts de revisão em `registros/`.
+Catálogo 087–521 concluído: **435 imagens com alfa conferido e aprovadas pelo autor**, incluindo a revisão de Aurelhaz com segundo braço. Carlos está pausado. Consulte `progresso.json`, `retomada.json` e `registros/aprovacao-final-2026-10-03.json`. As versões anteriores ficam preservadas e não substituem as escolhas atuais. A biblioteca de cartas está em `../cartas/`, e os assets de efeitos futuros em `../efeitos/`.
 
 Abra `galeria.html` para navegar pelas imagens sobre xadrez, branco ou escuro. `progresso.json` registra a conferência técnica do alfa; a revisão de estilo e assunto está separada em `revisao-estilo.md`. Os cenários 155, 164 e 168 foram revisados e substituídos, preservando suas versões anteriores. A validação de alfa não representa aprovação visual de todo o catálogo.
 

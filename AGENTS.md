@@ -1,5 +1,7 @@
 # Colaboração neste repositório
 
+- Arcanoclisma é um TCG. Para cartas, usar `.agents/skills/designer-cartas/SKILL.md` e `Arcanoclisma/cartas/COORDENACAO-CLAUDE.md`; produzir apenas a necessidade atual do Claude, com liberdade de enriquecer cenas e detalhes estéticos. Para assets de animação/efeitos, usar `.agents/skills/embelezador/SKILL.md`. Aliados usam movimento genérico compartilhado de ataque, sem efeitos exclusivos. Claude implementa o jogo e confirma integração.
+
 - Durante a retomada de imagens, focar apenas na produção e seus registros essenciais. Pausar atividades auxiliares e a automação de Enzo para reduzir consumo; adiar arquivamento e sincronizações até pedido do autor ou preservação final do encerramento aprovado.
 
 - Ao comando “quero os agentes necessários” ou equivalente, seguir `.agents/skills/agentes-necessarios/SKILL.md` e trabalhar em etapas. Selecionar os agentes conforme o pedido.

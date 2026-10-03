@@ -1,0 +1,29 @@
+{
+  "numero": 444,
+  "titulo": "Caçador de Ímpares",
+  "id": "cacador-de-impares",
+  "assunto": "Caçador de Ímpares: caçador; guardião que anula a magia, armadura com selos e lacres; jeito silencioso, veloz; leve e veloz; no gesto de atirar.",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-293585f1-7127-479e-ba58-9246d557027c.png",
+  "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 444 — Caçador de Ímpares. Recuperar completamente as duas pontas do arco e a ponta da flecha, hoje cortadas. Manter o caçador humano jovem, cabelo preto, armadura, posição agachada e arco tensionado. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+  "variacao": "Caçadora humana adulta asiática, corpo seco e comprido, rosto estreito, olhos atentos castanhos, cabelo preto curto arrepiado; capuz recuado. Ajoelhada de lado, arco inteiramente dentro do quadro, disparando flecha; postura silenciosa, sem sorriso.",
+  "adaptacoes": [],
+  "revisaoAnatomia": true,
+  "number": 444,
+  "arquivo": "imagens/cacador-de-impares.png",
+  "ferramenta": "image_gen integrada",
+  "estiloVersao": 2,
+  "geradaEm": "2026-10-03T02:22:51.586Z",
+  "versaoAnterior": "versoes-anteriores/444-cacador-de-impares-variante-animal-2026-10-02.png",
+  "correcaoFinal": {
+    "motivo": "Recuperar completamente as duas pontas do arco e a ponta da flecha, hoje cortadas. Manter o caçador humano jovem, cabelo preto, armadura, posição agachada e arco tensionado.",
+    "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\444-cacador-de-impares-antes-correcao-final-2026-10-02.png",
+    "registroAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\registros\\444-antes-correcao-final-2026-10-02.json"
+  },
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
+}

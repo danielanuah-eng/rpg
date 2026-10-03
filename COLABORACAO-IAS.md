@@ -1,5 +1,11 @@
 # Divisão de responsabilidades
 
+## TCG — atualização de 03/10/2026
+
+Designer de Cartas atende exclusivamente necessidades atuais do Claude e cria templates Canva, cenas e cartas para impressão. Pode enriquecer descrições visuais insuficientes com detalhes, eventos, efeitos mágicos, personagens, lugares e interações, priorizando estética, sensibilidade e magia sem alterar regras ou identidade essencial. Embelezador cria os assets visuais de efeitos e animações de que Claude precisa, junto do Designer ou separadamente. Claude implementa comportamento e integra as entregas. Aliados têm somente movimento genérico fluido e compartilhado de ataque, sem efeito específico individual. Os protocolos e manifestos ficam em `Arcanoclisma/cartas/` e `Arcanoclisma/efeitos/`.
+
+O autor autorizou nesta conversa o push desta entrega de artes aprovadas, agentes e documentação. Pushes futuros continuam exigindo autorização. Essas definições não iniciam uma produção autônoma de cartas sem pedido atual do Claude.
+
 Definida pelo autor em 02/10/2026 para este repositório.
 
 ## Codex — criação e direção visual

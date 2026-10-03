@@ -5,6 +5,8 @@ description: Coordenar o trabalho por etapas quando o autor disser quero os agen
 
 # Agentes necessários
 
+Para tarefas de TCG, incluir **Designer de Cartas** (`../designer-cartas/SKILL.md`) quando houver demanda atual de carta pelo Claude e **Embelezador** (`../embelezador/SKILL.md`) para assets de efeitos/animações. Podem atuar juntos ou separados. A liberdade de completar detalhes estéticos não autoriza criar cartas sem necessidade atual. Aliados usam movimento genérico compartilhado ao atacar. O planejador anterior não seleciona estes novos papéis automaticamente; acrescentá-los ao plano quando aplicáveis, sem presumir suporte já implementado no script.
+
 O comando “quero os agentes necessários” e variações como “chame os agentes”, “use a equipe” ou “ative os agentes necessários” acionam esta coordenação. Ler `C:/Users/Anuah/OneDrive/Área de Trabalho/Biblioteca-Enzo/equipe.json` e as definições pertinentes em `definicoes/`. Selecionar somente os agentes necessários ao pedido; nomes de agentes representam funções e skills, não processos independentes já executando.
 
 Trabalhar em etapas com arquivos de entrega e estado de execução:

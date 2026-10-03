@@ -1,0 +1,23 @@
+{
+  "numero": 340,
+  "id": "faroleira-de-vau-grande",
+  "titulo": "Faroleira de Vau-Grande",
+  "assunto": "Faroleira de Vau-Grande: faroleira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito brilhante; pose de quem ajuda os outros; no gesto de cintilar; magia dourada e preta.",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-05d5e6d4-a2bf-4366-a71c-a3cd141b6d59.png",
+  "prompt": "Arcanoclisma 340 — Faroleira de Vau-Grande. Assunto obrigatório: Faroleira de Vau-Grande: faroleira; um Comprometido (usuário de magia), a magia visível em volta das mãos; jeito brilhante; pose de quem ajuda os outros; no gesto de cintilar; magia dourada e preta.. Conversa assimétrica com torso torcido e olhar fora do quadro. Se humano: pele marrom profunda, rosto oval, queixo pequeno, nariz fino, olhos castanhos redondos, cabelo castanho em cachos apertados, expressão bem-humorada discreta.. Sugestões de pose e aparência só se aplicam quando compatíveis com espécie, idade e ocupação; o gesto original prevalece. Humanos com dois braços e duas mãos, anatomia contínua sem mãos extras. Crianças com roupa e aparência adequadas à idade. Bronze Arco nas ferramentas quando apropriado. Em parte dos usuários de magia, mostrar feitos absurdos de anime: construto maior que o corpo, onda ou redemoinho enorme, salto impossível, ferramenta magicamente gigantesca ou vários fragmentos inanimados suspensos. Compatível com ocupação, gesto e cor do Valor. O efeito amplia o gesto e a profundidade sem esconder rosto e silhueta. Alternar proezas espetaculares e magia controlada. Preservar o catálogo e o fundo transparente. Mostrar uma proeza espetacular compatível com o assunto, claramente maior que brilho junto às mãos. Quadrinho independente moderno e animação contemporânea. Linhas limpas e vivas com espessura variável, cores chapadas em 2–3 valores, sombras duras em bloco, hachuras direcionais e halftone. Linguagem corporal, expressões, peso, ação e profundidade como na referência Wilderfeast, sem copiar personagens. Nunca aquarela, pintura realista ou 3D. Magia gráfica na cor do Valor com pontilhado, sem fogo realista. Equilibrar cores quentes e frias. Figura e acessórios inteiros em tela quadrada com margens transparentes generosas. Fundo verdadeiro alfa transparente, sem chão, disco de sombra, cenário, texto ou logo. Reservar ao menos 10% de área transparente em cada borda. O personagem com os efeitos ocupa no máximo 80% da largura e da altura; não usar close-up. Se o feito é gigante, afastar o enquadramento para caber com todos os pés, mãos e efeitos inteiros.",
+  "adaptacoes": [],
+  "variacao": "Conversa assimétrica com torso torcido e olhar fora do quadro. Se humano: pele marrom profunda, rosto oval, queixo pequeno, nariz fino, olhos castanhos redondos, cabelo castanho em cachos apertados, expressão bem-humorada discreta.",
+  "feitoAnime": true,
+  "number": 340,
+  "arquivo": "imagens/faroleira-de-vau-grande.png",
+  "ferramenta": "image_gen integrada",
+  "estiloVersao": 2,
+  "geradaEm": "2026-10-02T21:03:38.085Z",
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
+}

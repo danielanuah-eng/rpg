@@ -1,0 +1,23 @@
+{
+  "numero": 380,
+  "id": "lobo-de-cinza",
+  "titulo": "Lobo-de-Cinza",
+  "assunto": "Lobo-de-Cinza: lobo, luto; criatura selvagem; jeito pálido, faminto; leve e veloz; no gesto de morder; magia verde-pálida.",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-b17e4ebf-61cf-4b98-ba22-3dd782ceb41e.png",
+  "prompt": "Arcanoclisma 380 — Lobo-de-Cinza. Assunto obrigatório: Lobo-de-Cinza: lobo, luto; criatura selvagem; jeito pálido, faminto; leve e veloz; no gesto de morder; magia verde-pálida.. Anatomia e ação próprias da espécie ou objeto, preservar identidade, sem acrescentar traços humanos. Detalhes explícitos de gênero, idade, aparência, cor, expressão, ação e equipamentos prevalecem. Crianças com idade e proporções infantis. Humanos com exatamente dois braços e duas mãos. Ação expressiva e magia apropriada se prevista no catálogo. Feitos grandes com silhueta clara e poucas formas fortes; sem excesso de ornamentos e sem arco-íris salvo pedido específico. Quadrinho independente moderno e animação contemporânea. Linhas limpas e vivas com espessura variável, cores chapadas em 2–3 valores, sombras duras em bloco, hachuras direcionais e halftone. Linguagem corporal, expressões, peso, ação e profundidade como na referência Wilderfeast, sem copiar personagens. Nunca aquarela, pintura realista ou 3D. Magia gráfica na cor do Valor com pontilhado, sem fogo realista. Equilibrar cores quentes e frias. Figura e acessórios inteiros em tela quadrada com margens transparentes generosas. Fundo verdadeiro alfa transparente, sem chão, disco de sombra, cenário, texto ou logo. Reservar ao menos 10% de área transparente em cada borda. O personagem com os efeitos ocupa no máximo 80% da largura e da altura; não usar close-up. Se o feito é gigante, afastar o enquadramento para caber com todos os pés, mãos e efeitos inteiros.",
+  "variacao": "Anatomia e ação próprias da espécie ou objeto, preservar identidade, sem acrescentar traços humanos.",
+  "feitoAnime": false,
+  "adaptacoes": [],
+  "number": 380,
+  "arquivo": "imagens/lobo-de-cinza.png",
+  "ferramenta": "image_gen integrada",
+  "estiloVersao": 2,
+  "geradaEm": "2026-10-02T22:03:06.791Z",
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
+}

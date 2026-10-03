@@ -1,0 +1,28 @@
+{
+  "numero": 470,
+  "titulo": "Fidrau Cantor",
+  "id": "fidrau-cantor",
+  "assunto": "Fidrau Cantor: fidrau, música; ser feito de energia luminosa e sólida, bruxuleante; jeito brilhante, belo; pose de quem ajuda os outros; no gesto de cantar; magia coral.",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-4aabf2db-8e91-44da-affa-da01cd5903e2.png",
+  "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 470 — Fidrau Cantor. A magia está na cor errada. Trocar toda a energia dourada e azul por CORAL salmão rosado #D66C61, luz pêssego #FFD6BF e sombras ameixa #703B4C. A entidade inteira é energia coral; manter exatamente o fidrau abstrato musical, mãos, pose, expressão e desenho. Nada dourado, amarelo, azul ou arco-íris. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+  "variacao": "Fidrau cantor como ser de energia coral em forma de instrumento orgânico curvado e garganta luminosa, torso estreito abstrato com duas longas mãos de energia abertas, canta e ampara; silhueta nova suave, sem realismo.",
+  "adaptacoes": [],
+  "revisaoAnatomia": false,
+  "number": 470,
+  "arquivo": "imagens/fidrau-cantor.png",
+  "ferramenta": "image_gen integrada",
+  "estiloVersao": 2,
+  "geradaEm": "2026-10-03T02:21:38.515Z",
+  "correcaoFinal": {
+    "motivo": "A magia está na cor errada. Trocar toda a energia dourada e azul por CORAL salmão rosado #D66C61, luz pêssego #FFD6BF e sombras ameixa #703B4C. A entidade inteira é energia coral; manter exatamente o fidrau abstrato musical, mãos, pose, expressão e desenho. Nada dourado, amarelo, azul ou arco-íris.",
+    "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\470-fidrau-cantor-antes-correcao-final-2026-10-02.png",
+    "registroAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\registros\\470-antes-correcao-final-2026-10-02.json"
+  },
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
+}

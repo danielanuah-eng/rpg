@@ -8,5 +8,26 @@
   "fundo": "transparente; conferir progresso.json",
   "ferramenta": "image_gen integrada",
   "adaptacoes": [],
-  "preferenciaEspada": false
+  "preferenciaEspada": false,
+  "revisaoDragoes20261002": {
+    "pedido": "Faça os dragões",
+    "prompt": "Editar o alvo 230 — dragao-musgo. Preserve verde-musgo e âmbar, musgo aderido, chifres como galhos. MUDE A POSE para arrancada quadrúpede baixa em diagonal, patas largas apoiadas assimetricamente, pescoço projetado à frente, uma asa parcialmente fechada e outra levantando para equilibrar, cauda contrapeso. Feito grandioso coerente: do sopro surgem TRÊS grandes raízes retorcidas de luz sólida verde-âmbar, arqueando a frente como garras gigantes, ligadas a poucos fragmentos de rocha flutuantes sem chão. Uma raiz em primeiro plano e duas atrás dão profundidade sem esconder o dragão. Poucas sementes e vaga-lumes âmbar, sem chamas. Cabeça reptiliana limpa sem excesso de espinhos, olhar instintivo atento. Galhos poucos, orgânicos e bem definidos. Mesmo universo e mesma identidade do alvo. Quadrinho independente moderno: tinta expressiva de espessura variável, cores chapadas em 2–3 valores, sombras em bloco, hachuras direcionais e halftone visível. Escamas pequenas orgânicas, sem placas de armadura. Não pintura realista, 3D, aquarela ou airbrush. Energia com formas claras e pontilhado suave, sem neon, fogo realista ou arco-íris. Exatamente quatro patas e duas asas no dragão, corpo e efeitos INTEIROS no quadro quadrado, afastar o enquadramento se necessário, deixar margens vazias transparentes em todas as bordas. Fundo verdadeiro alfa transparente, sem céu, cenário, chão, sombra de chão, disco, texto ou logo.",
+    "mudanca": "Preserve verde-musgo e âmbar, musgo aderido, chifres como galhos. MUDE A POSE para arrancada quadrúpede baixa em diagonal, patas largas apoiadas assimetricamente, pescoço projetado à frente, uma asa parcialmente fechada e outra levantando para equilibrar, cauda contrapeso. Feito grandioso coerente: do sopro surgem TRÊS grandes raízes retorcidas de luz sólida verde-âmbar, arqueando a frente como garras gigantes, ligadas a poucos fragmentos de rocha flutuantes sem chão. Uma raiz em primeiro plano e duas atrás dão profundidade sem esconder o dragão. Poucas sementes e vaga-lumes âmbar, sem chamas. Cabeça reptiliana limpa sem excesso de espinhos, olhar instintivo atento. Galhos poucos, orgânicos e bem definidos.",
+    "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-da22627b-0b67-42ab-ade6-e633fde42145.png",
+    "anterior": "versoes-anteriores/230-dragao-musgo-antes-revisao-2026-10-02.png",
+    "revisadaEm": "2026-10-02T22:29:54.111Z"
+  },
+  "escolhaAutorAposRevisao": {
+    "motivo": "O autor prefere a versão antiga do dragão verde; a nova está carregada de luzes.",
+    "versaoSelecionada": "versoes-anteriores/230-dragao-musgo-antes-revisao-2026-10-02.png",
+    "revisaoPreservada": "versoes-anteriores/230-dragao-musgo-revisao-nao-selecionada-2026-10-02.png",
+    "registradaEm": "2026-10-02T22:37:27.4599240Z"
+  },
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
 }

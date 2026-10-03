@@ -1,0 +1,15 @@
+{
+  "numero": 231,
+  "id": "wyvern",
+  "titulo": "Wyvern",
+  "arquivo": "imagens/wyvern.png",
+  "ferramenta": "não informado",
+  "nota": "Registro de aprovação criado no encerramento; prompt e procedência originais indisponíveis neste registro. Não inventar esses dados.",
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
+}

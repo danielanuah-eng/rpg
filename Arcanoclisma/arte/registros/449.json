@@ -1,0 +1,29 @@
+{
+  "numero": 449,
+  "titulo": "Carcereira de Palavras",
+  "id": "carcereira-de-palavras",
+  "assunto": "Carcereira de Palavras: carcereira, protetora; guardião que anula a magia, armadura com selos e lacres; jeito duro; no gesto de corrente.",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-a73a5dc1-7db0-47aa-90e7-5df1dec08f6d.png",
+  "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 449 — Carcereira de Palavras. Recuperar todos os fios superiores do cabelo ruivo encaracolado da carcereira humana. Manter rosto, músculos, armadura, corrente e pose de combate. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+  "variacao": "Carcereira humana adulta forte de pele oliva, rosto angular comprido, sobrancelhas juntas, olho verde e castanho, cabelo ruivo encaracolado preso alto, nariz largo, expressão dura de boca fechada. Dois pés humanos firmes, tronco torcido puxando com as duas mãos uma corrente longa que prende palavras abstratas; armadura com selos e lacres. Corrente como ação, não só adorno.",
+  "adaptacoes": [],
+  "revisaoAnatomia": true,
+  "number": 449,
+  "arquivo": "imagens/carcereira-de-palavras.png",
+  "ferramenta": "image_gen integrada",
+  "estiloVersao": 2,
+  "geradaEm": "2026-10-03T02:34:42.680Z",
+  "versaoAnterior": "versoes-anteriores/449-carcereira-de-palavras-variante-animal-2026-10-02.png",
+  "correcaoFinal": {
+    "motivo": "Recuperar todos os fios superiores do cabelo ruivo encaracolado da carcereira humana. Manter rosto, músculos, armadura, corrente e pose de combate.",
+    "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\449-carcereira-de-palavras-antes-correcao-final-2026-10-02.png",
+    "registroAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\registros\\449-antes-correcao-final-2026-10-02.json"
+  },
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
+}

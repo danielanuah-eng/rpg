@@ -1,0 +1,22 @@
+{
+  "number": 327,
+  "numero": 327,
+  "id": "senhor-da-trincheira",
+  "title": "Senhor da Trincheira",
+  "estiloVersao": 2,
+  "ferramenta": "image_gen integrada",
+  "arquivo": "imagens/senhor-da-trincheira.png",
+  "prompt": "Arcanoclisma 327 — Senhor da Trincheira. Um veterano adulto grande e pesado, duro e blindado, usuário de magia vermelho-ferrugem visível ao redor das mãos. Corpo muito robusto, pele clara rosada e marcada pelo sol, cabeça larga quadrangular, nariz torto, olhos estreitos cinza sob sobrancelhas densas, cabelo raspado, bigode grisalho curto e expressão cerrada. Armadura pesada original de Bronze Arco com placas irregulares e rebites, roupa de campanha azul-petróleo e tecido usado. Pose agachada e baixa, um joelho bem flexionado, pernas afastadas e peso projetado sobre o quadril; tronco torcido, antebraços aproximados esmagando um fragmento de chapa metálica sem qualquer vítima. Exatamente dois braços e duas mãos, uma em cada lado da chapa. A magia forma contornos gráficos vermelho-ferrugem em volta dos punhos, energia suave com pontilhado, sem fogo. Ação e compressão claras, silhueta compacta e assimétrica; expressão tensa de esforço, sem sorriso. Referência de linguagem corporal e expressão Wilderfeast, quadrinho independente moderno e animação contemporânea, linhas vivas variáveis, cores chapadas em 2–3 tons, sombras duras em bloco e reticulação, sem pintura realista, aquarela ou 3D. Corpo inteiro e equipamento inteiros em tela quadrada, grandes margens transparentes, sem trincheira desenhada, sem chão, sem cenário, texto ou logo. Fundo verdadeiro alfa transparente.",
+  "adaptacoes": [
+    "Esmaga chapa metálica sem vítima."
+  ],
+  "variacao": "Veterano raspado com bigode grisalho; pose baixa agachada e corpo robusto.",
+  "geradaEm": "2026-10-02T20:40:46.610Z",
+  "aprovacaoAutor": {
+    "estado": "aprovada",
+    "textoAutor": "Pronto, pode confirmar todas elas",
+    "registradaEm": "2026-10-03T03:23:34.066Z",
+    "origem": "Solicitação direta do autor nesta conversa",
+    "escopo": "435 imagens atuais do catálogo 087–521, incluindo Aurelhaz com segundo braço; versões anteriores não são aprovadas por esta decisão."
+  }
+}

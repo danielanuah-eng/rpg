@@ -1,0 +1,163 @@
+{
+  "estado": "revisoes_concluidas",
+  "atualizadoEm": "2026-10-03T02:44:01.861Z",
+  "itens": [
+    {
+      "numero": 443,
+      "titulo": "Sentinela de Selo",
+      "id": "sentinela-de-selo",
+      "assunto": "Sentinela de Selo: guardião, selo; guardião que anula a magia, armadura com selos e lacres; jeito duro, paciente; no gesto de golpear.",
+      "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 443 — Sentinela de Selo. Recuperar a borda exterior do ombro direito e qualquer parte da armadura cortada; manter o homem careca musculoso, rosto sério, martelo e golpe exatamente como na referência. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+      "motivo": "Recuperar a borda exterior do ombro direito e qualquer parte da armadura cortada; manter o homem careca musculoso, rosto sério, martelo e golpe exatamente como na referência.",
+      "estado": "corrigida",
+      "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\443-sentinela-de-selo-antes-correcao-final-2026-10-02.png",
+      "corrigidaEm": "2026-10-03T02:31:07.555Z"
+    },
+    {
+      "numero": 444,
+      "titulo": "Caçador de Ímpares",
+      "id": "cacador-de-impares",
+      "assunto": "Caçador de Ímpares: caçador; guardião que anula a magia, armadura com selos e lacres; jeito silencioso, veloz; leve e veloz; no gesto de atirar.",
+      "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 444 — Caçador de Ímpares. Recuperar completamente as duas pontas do arco e a ponta da flecha, hoje cortadas. Manter o caçador humano jovem, cabelo preto, armadura, posição agachada e arco tensionado. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+      "motivo": "Recuperar completamente as duas pontas do arco e a ponta da flecha, hoje cortadas. Manter o caçador humano jovem, cabelo preto, armadura, posição agachada e arco tensionado.",
+      "estado": "corrigida",
+      "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\444-cacador-de-impares-antes-correcao-final-2026-10-02.png",
+      "corrigidaEm": "2026-10-03T02:22:52.138Z"
+    },
+    {
+      "numero": 446,
+      "titulo": "Arquivista Sem Rosto",
+      "id": "arquivista-sem-rosto",
+      "assunto": "Arquivista Sem Rosto: arquivista; guardião que anula a magia, armadura com selos e lacres; jeito astuto, mentiroso; pose de quem ajuda os outros; no gesto de anotar; magia índigo.",
+      "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 446 — Arquivista Sem Rosto. Recuperar completamente o topo do capuz e tecidos do arquivista humano sem rosto. Manter máscara/rosto oculto, livro, pena, armadura e magia índigo. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+      "motivo": "Recuperar completamente o topo do capuz e tecidos do arquivista humano sem rosto. Manter máscara/rosto oculto, livro, pena, armadura e magia índigo.",
+      "estado": "corrigida",
+      "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\446-arquivista-sem-rosto-antes-correcao-final-2026-10-02.png",
+      "corrigidaEm": "2026-10-03T02:32:15.862Z"
+    },
+    {
+      "numero": 448,
+      "titulo": "Inspetor de Escola",
+      "id": "inspetor-de-escola",
+      "assunto": "Inspetor de Escola: inspetor, protetor; guardião que anula a magia, armadura com selos e lacres; jeito duro, paciente; pose de conversa; no gesto de anotar.",
+      "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 448 — Inspetor de Escola. Recuperar todos os fios do topo do cabelo grisalho do inspetor humano. Manter idade, rosto, corpo, livro, pena e postura. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+      "motivo": "Recuperar todos os fios do topo do cabelo grisalho do inspetor humano. Manter idade, rosto, corpo, livro, pena e postura.",
+      "estado": "corrigida",
+      "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\448-inspetor-de-escola-antes-correcao-final-2026-10-02.png",
+      "corrigidaEm": "2026-10-03T02:33:29.304Z"
+    },
+    {
+      "numero": 449,
+      "titulo": "Carcereira de Palavras",
+      "id": "carcereira-de-palavras",
+      "assunto": "Carcereira de Palavras: carcereira, protetora; guardião que anula a magia, armadura com selos e lacres; jeito duro; no gesto de corrente.",
+      "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 449 — Carcereira de Palavras. Recuperar todos os fios superiores do cabelo ruivo encaracolado da carcereira humana. Manter rosto, músculos, armadura, corrente e pose de combate. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+      "motivo": "Recuperar todos os fios superiores do cabelo ruivo encaracolado da carcereira humana. Manter rosto, músculos, armadura, corrente e pose de combate.",
+      "estado": "corrigida",
+      "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\449-carcereira-de-palavras-antes-correcao-final-2026-10-02.png",
+      "corrigidaEm": "2026-10-03T02:34:43.812Z"
+    },
+    {
+      "numero": 450,
+      "titulo": "Mestre da Torre do Silêncio",
+      "id": "mestre-da-torre-do-silencio",
+      "assunto": "Mestre da Torre do Silêncio: mestre, torre; guardião que anula a magia, armadura com selos e lacres; jeito antigo, sagrado; postura de quem comanda; no gesto de bastão.",
+      "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 450 — Mestre da Torre do Silêncio. Recuperar completamente as duas extremidades do bastão do mestre humano idoso. Manter idade, rosto, roupas, ornamentos e gesto de comando. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+      "motivo": "Recuperar completamente as duas extremidades do bastão do mestre humano idoso. Manter idade, rosto, roupas, ornamentos e gesto de comando.",
+      "estado": "corrigida",
+      "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\450-mestre-da-torre-do-silencio-antes-correcao-final-2026-10-02.png",
+      "corrigidaEm": "2026-10-03T02:35:54.391Z"
+    },
+    {
+      "numero": 455,
+      "titulo": "Anjo do Fechamento",
+      "id": "anjo-do-fechamento",
+      "assunto": "Anjo do Fechamento (espécie): anjo, selo; guardião que anula a magia, armadura com selos e lacres; jeito sagrado, brilhante; pose imponente de chefe; no gesto de espada.",
+      "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 455 — Anjo do Fechamento. Recuperar completamente a ponta superior da asa esquerda e todas as penas; manter o anjo humano negro de cabelo grisalho, rosto, espada e postura. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+      "motivo": "Recuperar completamente a ponta superior da asa esquerda e todas as penas; manter o anjo humano negro de cabelo grisalho, rosto, espada e postura.",
+      "estado": "corrigida",
+      "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\455-anjo-do-fechamento-antes-correcao-final-2026-10-02.png",
+      "corrigidaEm": "2026-10-03T02:24:04.295Z"
+    },
+    {
+      "numero": 469,
+      "titulo": "Canto Sem Cantor",
+      "id": "canto-sem-cantor",
+      "assunto": "Canto Sem Cantor: música; ser feito de energia luminosa e sólida, bruxuleante; jeito invisível, belo; no gesto de tocar; magia coral.",
+      "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 469 — Canto Sem Cantor. A magia está na cor errada. Trocar toda a energia dourada e azul por CORAL salmão rosado #D66C61, luz pêssego #FFD6BF e sombras ameixa #703B4C. A entidade inteira é energia coral; preservar exatamente os arcos, fios sonoros, volumes, materiais sólidos de energia e forma abstrata musical. Não acrescentar pessoa, instrumento ou texto. Nada dourado, amarelo, azul ou arco-íris. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+      "motivo": "A magia está na cor errada. Trocar toda a energia dourada e azul por CORAL salmão rosado #D66C61, luz pêssego #FFD6BF e sombras ameixa #703B4C. A entidade inteira é energia coral; preservar exatamente os arcos, fios sonoros, volumes, materiais sólidos de energia e forma abstrata musical. Não acrescentar pessoa, instrumento ou texto. Nada dourado, amarelo, azul ou arco-íris.",
+      "estado": "corrigida",
+      "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\469-canto-sem-cantor-antes-correcao-final-2026-10-02.png",
+      "corrigidaEm": "2026-10-03T02:20:20.044Z"
+    },
+    {
+      "numero": 470,
+      "titulo": "Fidrau Cantor",
+      "id": "fidrau-cantor",
+      "assunto": "Fidrau Cantor: fidrau, música; ser feito de energia luminosa e sólida, bruxuleante; jeito brilhante, belo; pose de quem ajuda os outros; no gesto de cantar; magia coral.",
+      "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 470 — Fidrau Cantor. A magia está na cor errada. Trocar toda a energia dourada e azul por CORAL salmão rosado #D66C61, luz pêssego #FFD6BF e sombras ameixa #703B4C. A entidade inteira é energia coral; manter exatamente o fidrau abstrato musical, mãos, pose, expressão e desenho. Nada dourado, amarelo, azul ou arco-íris. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+      "motivo": "A magia está na cor errada. Trocar toda a energia dourada e azul por CORAL salmão rosado #D66C61, luz pêssego #FFD6BF e sombras ameixa #703B4C. A entidade inteira é energia coral; manter exatamente o fidrau abstrato musical, mãos, pose, expressão e desenho. Nada dourado, amarelo, azul ou arco-íris.",
+      "estado": "corrigida",
+      "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\470-fidrau-cantor-antes-correcao-final-2026-10-02.png",
+      "corrigidaEm": "2026-10-03T02:21:39.101Z"
+    },
+    {
+      "numero": 510,
+      "titulo": "Aurelhaz, Dragoa-Coral",
+      "id": "aurelhaz-dragoa-coral",
+      "assunto": "Aurelhaz, Dragoa-Coral: dragoa, colecionadora; dragão ou wyvern; jeito belo, voador; pose imponente de chefe; no gesto de morder; magia coral.",
+      "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 510 — Aurelhaz, Dragoa-Coral. Recuperar completamente a extremidade exterior da asa direita, hoje cortada; conservar a dragoa Aurelhaz coral, formato do rosto, pupilas, voo curvo, tesouros na garra, manchas e textura. Não criar novos espinhos ou luzes. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+      "motivo": "Recuperar completamente a extremidade exterior da asa direita, hoje cortada; conservar a dragoa Aurelhaz coral, formato do rosto, pupilas, voo curvo, tesouros na garra, manchas e textura. Não criar novos espinhos ou luzes.",
+      "estado": "corrigida",
+      "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\510-aurelhaz-dragoa-coral-antes-correcao-final-2026-10-02.png",
+      "corrigidaEm": "2026-10-03T02:25:14.100Z"
+    },
+    {
+      "numero": 511,
+      "titulo": "Velho Ossário, Dragão-Pálido",
+      "id": "velho-ossario-dragao-palido",
+      "assunto": "Velho Ossário, Dragão-Pálido: dragão, ancião; dragão ou wyvern; jeito antigo, pálido; pose imponente de chefe; no gesto de morder; magia verde-pálida.",
+      "prompt": "Editar a imagem alvo anexa. CORREÇÃO SOMENTE DE ENQUADRAMENTO: o novo braço à direita está correto, mas a borda da mão/garras fica cortada. AFASTAR MUITO a vista, reduzir todo o dragão para que caiba nos 70% centrais da tela quadrada. Recuperar a ponta de cada garra do braço à direita. Deixar margem de alfa zero real em TODOS os lados. Manter EXATAMENTE o dragão desta referência, suas DUAS patas dianteiras musculosas completas, pernas traseiras, DUAS asas, pose sentada, rosto com presas, chifres e escamas originais marfim, expressão, pupilas verdes, cauda e energia verde suave. Não adicionar membros, não remover nenhum dos dois braços e não redesenhar a cabeça. Mesma tinta e cores. PNG verdadeiramente transparente. Sem texto, chão, sombra de chão ou fundo.",
+      "motivo": "Pedido do autor: manter esta versão do Velho Ossário e acrescentar o segundo braço dianteiro visível.",
+      "estado": "corrigida",
+      "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\511-velho-ossario-dragao-palido-antes-correcao-final-2026-10-02.png",
+      "corrigidaEm": "2026-10-03T02:44:01.861Z",
+      "referencia": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/versoes-anteriores/511-velho-ossario-dragao-palido-antes-correcao-final-2026-10-02.png",
+      "versaoEscolhidaPeloAutor": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/versoes-anteriores/511-velho-ossario-dragao-palido-antes-correcao-final-2026-10-02.png"
+    },
+    {
+      "numero": 513,
+      "titulo": "Wyvern de Guerra",
+      "id": "wyvern-de-guerra",
+      "assunto": "Wyvern de Guerra (montaria de cavaleiros): wyvern, montaria; dragão ou wyvern; jeito voador, leal; no gesto de garras.",
+      "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 513 — Wyvern de Guerra. Corrigir a anatomia de wyvern: remover inteiramente o pequeno par de patas/braços dianteiros extras pendurados sob o peito. Manter SOMENTE DUAS patas traseiras grandes e DUAS asas membranosas, que são o par de membros dianteiros, como uma ave/morcego. Não adicionar braços ou patas à frente. Manter cabeça, pupilas, armadura, sela vazia, cor, postura e asas. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+      "motivo": "Corrigir a anatomia de wyvern: remover inteiramente o pequeno par de patas/braços dianteiros extras pendurados sob o peito. Manter SOMENTE DUAS patas traseiras grandes e DUAS asas membranosas, que são o par de membros dianteiros, como uma ave/morcego. Não adicionar braços ou patas à frente. Manter cabeça, pupilas, armadura, sela vazia, cor, postura e asas.",
+      "estado": "corrigida",
+      "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\513-wyvern-de-guerra-antes-correcao-final-2026-10-02.png",
+      "corrigidaEm": "2026-10-03T02:26:32.487Z"
+    },
+    {
+      "numero": 514,
+      "titulo": "Wyvern-Correio",
+      "id": "wyvern-correio",
+      "assunto": "Wyvern-Correio: wyvern, mensageira; dragão ou wyvern; jeito voador, leal; pose de conversa; no gesto de voar.",
+      "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 514 — Wyvern-Correio. Recuperar completamente a extremidade exterior da asa direita e qualquer borda cortada. Manter exatamente o wyvern azul-marinho e marfim em voo horizontal, apenas duas patas traseiras e duas asas como membros dianteiros, bolsa com carta, cabeça e pupilas. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+      "motivo": "Recuperar completamente a extremidade exterior da asa direita e qualquer borda cortada. Manter exatamente o wyvern azul-marinho e marfim em voo horizontal, apenas duas patas traseiras e duas asas como membros dianteiros, bolsa com carta, cabeça e pupilas.",
+      "estado": "corrigida",
+      "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\514-wyvern-correio-antes-correcao-final-2026-10-02.png",
+      "corrigidaEm": "2026-10-03T02:27:37.894Z"
+    },
+    {
+      "numero": 515,
+      "titulo": "Wyvern de Carga",
+      "id": "wyvern-de-carga",
+      "assunto": "Wyvern de Carga: wyvern, montaria; dragão ou wyvern; jeito pesado, voador; grande e pesado; no gesto de garras.",
+      "prompt": "EDITAR A IMAGEM ANEXA, que é o alvo. Correção final de asset Arcanoclisma 515 — Wyvern de Carga. Recuperar completamente a extremidade exterior da asa direita, hoje encostada/cortada. Manter o wyvern verde-oliva pesado, duas patas traseiras, duas asas como membros anteriores, garra no pulso da asa apoiada, caixas bem amarradas, pescoço e olhar paciente. Preservar rigorosamente todo o restante do desenho: identidade, anatomia salvo correção indicada, pose, composição relativa, tinta viva de espessura variável, sombras duras de 2–3 valores, hachuras e retícula. REENQUADRAR: reduzir o conjunto inteiro para ocupar apenas os 70% centrais da tela; recuperar as partes cortadas; deixar uma faixa realmente vazia e TRANSPARENTE de pelo menos 15% em todos os quatro lados, incluindo ao redor de asas, armas, corrente, cabelo e energia. Toda a figura completa tem de caber; nenhum elemento toca as bordas. O fundo é alfa zero real, inclusive nos vazios internos; sem chão, sombra, cenário, legenda ou marca. PNG transparente.",
+      "motivo": "Recuperar completamente a extremidade exterior da asa direita, hoje encostada/cortada. Manter o wyvern verde-oliva pesado, duas patas traseiras, duas asas como membros anteriores, garra no pulso da asa apoiada, caixas bem amarradas, pescoço e olhar paciente.",
+      "estado": "corrigida",
+      "versaoAnterior": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\Arcanoclisma\\arte\\versoes-anteriores\\515-wyvern-de-carga-antes-correcao-final-2026-10-02.png",
+      "corrigidaEm": "2026-10-03T02:29:56.087Z"
+    }
+  ],
+  "conferidasVisualmenteEm": "2026-10-03T02:45:49.535Z"
+}
