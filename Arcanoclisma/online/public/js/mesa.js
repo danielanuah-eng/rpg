@@ -7,7 +7,7 @@
 //   fonte.ouvir(fn)    chama fn a cada mudança
 //   fonte.versao       número que cresce a cada mudança
 //   opcionais: fonte.chat(texto), fonte.desistir(), fonte.tutorial (dicas, destaques e travas), fonte.prazo(), fonte.conectados()
-import { defCarta, custoEfetivo, custoProtecao, origemDaCarta, grauEfetivo, recemChegado, ataqueConjurador } from '/jogo/motor.js';
+import { defCarta, custoEfetivo, custoProtecao, origemDaCarta, grauEfetivo, recemChegado, ataqueConjurador, distribuicaoPadrao } from '/jogo/motor.js';
 import { $, $$, esc, DADOS, VALOR, TIPO, textoCarta, janela, local, avisar, conj as conjDefDe } from './base.js';
 import { desenharCarta, modeloCarta, modeloConjurador } from './carta.js';
 import { criarMovimentosMesa } from './mesa-movimentos-codex.js';
@@ -132,6 +132,8 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   const ehConj = (id) => inst(id)?.ehConjurador;
   const conjDef = (j) => conjDefDe(inst(z(j).conjuradorId).defId);
   const nomeInst = (id) => { const i = inst(id); if (!i) return '?'; return i.ehConjurador ? conjDefDe(i.defId).nome.split(',')[0] : def(id).nome; };
+  const ataqueAtual = (id) => (ehConj(id) ? ataqueConjurador(e, inst(id).dono) : def(id).ataque ?? 0);
+  const vidaAtual = (id) => (vidaDe(id) ?? 0) - (inst(id)?.dano ?? 0);
   const nome = (j) => (j === EU ? 'Você' : fonte.nomes[j] ?? 'Oponente');
   const tenhoPrioridade = () => !e.pendencia && e.prioridade === EU && e.vencedor === null;
   const minhaJanela = () => e.ativo === EU && e.etapa === 'principal' && e.pilha.length === 0 && e.combate === null && !e.pendencia && e.vencedor === null;
@@ -212,7 +214,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     lista.delete(excluir);
     return [...lista];
   }
-  const alvosDeAtaque = () => [z(OP).conjuradorId, ...z(OP).campo.filter((a) => ['aliado', 'mistica'].includes(def(a).tipo) && def(a).vida !== undefined)];
+  const alvosDeAtaque = () => [z(OP).conjuradorId, ...z(OP).campo.filter((a) => ['aliado', 'mistica', 'estrutura'].includes(def(a).tipo) && (def(a).vida ?? 0) > 0)];
 
   // tutorial rígido (lições): só brilha o que o passo pede; fora das lições, tudo normal
   const tutDestaca = (id) => !fonte.tutorial?.restrito || fonte.tutorial.destaques().includes(id);
@@ -390,15 +392,17 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   /** Equipamento do Conjurador (Canal, Armadura e Extra): fica fora da mesa e aparece aqui. */
   function verEquipamento(j) {
     const rot = { canal: 'Canal', armadura: 'Armadura', extra: 'Extra' };
+    // cartas grandes e legíveis (pedido do autor, 04/10): três por linha no PC, uma ou duas no celular
+    const larg = Math.round(Math.max(150, Math.min(300, (Math.min(window.innerWidth, 1180) - 120) / 3.2, (window.innerHeight - 230) / 1.4)));
     const blocos = ['canal', 'armadura', 'extra'].map((cat) => {
       const id = itemDe(j, cat);
       if (!id) return `<div class="equip-vitrine vazio"><b>${rot[cat]}</b><p class="peq">Vazio.</p></div>`;
       const d = def(id);
       const st = cat === 'armadura' ? `Defesa ${d.defesa} · desgaste ${inst(id).dano}/${d.vidaDesgaste}${e.habUsos?.[j]?.armadura ? ' · já protegeu neste turno' : ''}` : cat === 'canal' && (d.tipoCanal ?? 'arma') === 'arma' ? `Arma · Ataque ${d.ataque}` : d.texto;
       const usar = j === EU && ativacaoDe(id) && podeAtivar(id) ? `<button class="botao primario peq" data-usar="${id}">Usar</button>` : '';
-      return `<div class="equip-vitrine">${desenharCarta(modeloCarta(inst(id).defId), { width: 150 }).outerHTML}<b>${rot[cat]}: ${esc(d.nome)}</b><p class="peq">${esc(st)}</p>${usar}</div>`;
+      return `<div class="equip-vitrine" style="width:${larg + 20}px">${desenharCarta(modeloCarta(inst(id).defId), { width: larg }).outerHTML}<b>${rot[cat]}: ${esc(d.nome)}</b><p class="peq">${esc(st)}</p>${usar}</div>`;
     }).join('');
-    const jan = janela(`<h3>${j === EU ? "Seu equipamento" : `Equipamento de ${esc(nome(j))}`}</h3><div class="equip-linha">${blocos}</div>`, { classe: 'larga' });
+    const jan = janela(`<h3>${j === EU ? "Seu equipamento" : `Equipamento de ${esc(nome(j))}`}</h3><div class="equip-linha">${blocos}</div>`, { classe: 'larga equip-janela' });
     jan.el.addEventListener('click', (ev) => {
       const b = ev.target.closest('[data-usar]');
       if (!b) return;
@@ -492,7 +496,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     if (ui.modo?.tipo === 'bloqueio' && ui.modo.ids.has(id) && tutAlvo(id)) cls.push('alvo-ok');
     if (e.combate && (e.combate.atacante === id)) cls.push('atacando');
     if (e.combate && (e.combate.alvo === id)) cls.push('alvejado');
-    if (e.combate?.bloqueador === id) cls.push('bloqueando');
+    if (e.combate?.bloqueadores?.includes(id) || e.combate?.bloqueador === id || (ui.modo?.tipo === 'bloqueio' && ui.modo.escolhidos?.has(id))) cls.push('bloqueando');
     if (fonte.tutorial?.destaques?.()?.includes(id)) cls.push('destaque-tutorial');
     return `<div class="${cls.filter(Boolean).join(' ')}" data-id="${id}" style="--w:${largura}px">${el.outerHTML}${marcas.join('')}</div>`;
   }
@@ -571,7 +575,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     else if (p) partes.push(`<div class="pendencia espera">${esc(nome(OP))} está decidindo${{ bloqueio: ' o bloqueio', descartar: ' o descarte', pagarAnulacao: ' se paga para anular', escolherDoTopo: ' as cartas do topo', escolherInicio: ' quem começa' }[p.tipo] ?? ''}…</div>`);
     if (e.combate && !e.pilha.some((x) => x.tipo === 'ataque')) {
       const c = e.combate;
-      partes.push(`<div class="combate-faixa">⚔ <b>${esc(nomeInst(c.atacante))}</b> ataca <b>${esc(nomeInst(c.alvo))}</b>${c.bloqueador ? ` · bloqueado por <b>${esc(nomeInst(c.bloqueador))}</b>` : c.etapa === 'bloqueado' ? ' · sem bloqueio' : ''}</div>`);
+      partes.push(`<div class="combate-faixa">⚔ <b>${esc(nomeInst(c.atacante))}</b> ataca <b>${esc(nomeInst(c.alvo))}</b>${c.bloqueadores?.length ? ` · bloqueado por <b>${c.bloqueadores.map((b) => esc(nomeInst(b))).join(' e ')}</b>` : c.etapa === 'bloqueado' ? (ehConj(c.alvo) ? ' · sem bloqueio' : ' · não pode ser bloqueado') : ''}</div>`);
       // janela antes do dano (pedido do autor, 04/10): depois do bloqueio, os dois podem jogar Repentinas; quem ataca primeiro
       if (c.etapa === 'bloqueado' && !e.pilha.length && e.vencedor === null) {
         const posso = tenhoPrioridade() && possoResponder();
@@ -596,8 +600,23 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     if (p.tipo === 'bloqueio') {
       const c = e.combate;
       const arm = z(EU).itens.find((i) => def(i).categoriaItem === 'armadura');
-      return `<div class="pendencia urgente"><b>Bloqueio!</b> ${esc(nomeInst(c.atacante))} ataca ${esc(nomeInst(c.alvo))}.<div class="pilha-item">${cartaMesa(c.atacante, { largura: 86, status: true })}<div class="pilha-info">Clique num bloqueador brilhando na mesa, ou:<div class="linha-botoes"><button class="botao primario" data-pend="naoBloquear">Não bloquear</button></div></div></div>
-        <p class="peq">Quem bloqueia fica suspenso. Um Aliado que bloqueia só levanta no seu Final; o Conjurador levanta no Início do seu turno${arm ? ` e, bloqueando, ${esc(def(arm).nome)} evita até ${def(arm).defesa} de dano` : ''}.${!ehConj(c.atacante) && def(c.atacante).palavrasChave?.includes('Etéreo') ? ' O atacante é Etéreo: só Aliados Etéreos bloqueiam.' : ''}</p></div>`;
+      const n = ui.modo?.tipo === 'bloqueio' ? ui.modo.escolhidos.size : 0;
+      return `<div class="pendencia urgente"><b>Bloqueio!</b> ${esc(nomeInst(c.atacante))} (Ataque ${ataqueAtual(c.atacante)}) ataca ${esc(nomeInst(c.alvo))}.<div class="pilha-item">${cartaMesa(c.atacante, { largura: 86, status: true })}<div class="pilha-info">Clique nos bloqueadores brilhando na mesa (um ou vários) e confirme:<div class="linha-botoes"><button class="botao primario" data-pend="bloquear" ${n ? '' : 'disabled'}>Bloquear${n ? ` com ${n}` : ''}</button><button class="botao" data-pend="naoBloquear">Não bloquear</button></div></div></div>
+        <p class="peq">Vários podem bloquear juntos: quem ataca distribui o dano entre eles e o que passar da Vida de cada um vai para o seu Conjurador. Todos os bloqueadores causam dano ao atacante, mesmo os que morrem. Quem bloqueia fica suspenso e só levanta no seu Final${arm ? `; bloqueando, o Conjurador usa ${esc(def(arm).nome)}, que evita até ${def(arm).defesa} de dano` : ''}.${!ehConj(c.atacante) && def(c.atacante).palavrasChave?.includes('Etéreo') ? ' O atacante é Etéreo: só Aliados Etéreos bloqueiam.' : ''}</p></div>`;
+    }
+    if (p.tipo === 'distribuirDano') {
+      const c = e.combate;
+      const bloqs = c.bloqueadores.filter((id) => inst(id));
+      const total = ataqueAtual(c.atacante);
+      if (!ui.dist || ui.dist.chave !== c.atacante + bloqs.join()) ui.dist = { chave: c.atacante + bloqs.join(), v: { ...distribuicaoPadrao(e, bloqs, total) } };
+      const soma = bloqs.reduce((t, id) => t + (ui.dist.v[id] ?? 0), 0);
+      const linha = (id) => {
+        const v = ui.dist.v[id] ?? 0;
+        const resta = Math.max(0, vidaAtual(id));
+        const exc = ehConj(id) ? 0 : Math.max(0, v - resta);
+        return `<div class="dist-linha">${cartaMesa(id, { largura: 70, status: true })}<div class="dist-info"><b>${esc(nomeInst(id))}</b><span class="peq">Vida restante ${resta}${exc ? ` · ${exc} passa para o Conjurador` : ''}</span><div class="dist-ctl"><button class="botao" data-dist="${id}" data-d="-1" ${v > 0 ? '' : 'disabled'}>−</button><b class="num-ouro">${v}</b><button class="botao" data-dist="${id}" data-d="1" ${soma < total ? '' : 'disabled'}>+</button></div></div></div>`;
+      };
+      return `<div class="pendencia urgente"><b>Distribua o dano:</b> ${esc(nomeInst(c.atacante))} causa <b>${total}</b> entre os bloqueadores (${soma}/${total}). O que passar da Vida de cada um vai para o Conjurador inimigo.<div class="dist-lista">${bloqs.map(linha).join('')}</div><div class="linha-botoes"><button class="botao primario" data-pend="distribuir" ${soma === total ? '' : 'disabled'}>Confirmar</button><button class="botao" data-pend="distAuto">Distribuição automática</button></div></div>`;
     }
     if (p.tipo === 'descartar') return `<div class="pendencia urgente"><b>Limite de mão:</b> descarte ${p.quantidade} carta(s). Clique nelas na sua mão.<div class="linha-botoes"><button class="botao primario" data-pend="descartar" ${ui.selecionadas.size === p.quantidade ? '' : 'disabled'}>Descartar (${ui.selecionadas.size}/${p.quantidade})</button></div></div>`;
     if (p.tipo === 'pagarAnulacao') return `<div class="pendencia urgente"><div class="pilha-item">${cartaMesa(p.item.instId, { largura: 86 })}<div class="pilha-info"><b>${esc(def(p.item.instId).nome)}</b> pode ser anulada se você pagar <b>${p.custo}</b> de Arcano.<div class="pilha-efeito">${esc(def(p.item.instId).texto)}</div></div></div><div class="linha-botoes"><button class="botao primario" data-pend="pagarAnul">Pagar ${p.custo} e anular</button><button class="botao" data-pend="naoPagar">Deixar resolver</button></div></div>`;
@@ -724,7 +743,8 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     for (const p of e.pilha) ui.pilhaVista.add(p.id);
     if (ui.modo?.tipo === 'bloqueio' && !(e.pendencia?.tipo === 'bloqueio' && e.pendencia.jogador === EU)) ui.modo = null;
     if (e.pendencia?.tipo === 'bloqueio' && e.pendencia.jogador === EU && !ui.modo) {
-      ui.modo = { tipo: 'bloqueio', ids: new Set([...z(EU).campo.filter((id) => def(id).tipo === 'aliado'), z(EU).conjuradorId].filter((id) => !inst(id).suspensa)) };
+      const etereo = !ehConj(e.combate.atacante) && def(e.combate.atacante).palavrasChave?.includes('Etéreo');
+      ui.modo = { tipo: 'bloqueio', escolhidos: new Set(), ids: new Set([...z(EU).campo.filter((id) => def(id).tipo === 'aliado' && (!etereo || def(id).palavrasChave?.includes('Etéreo'))), ...(etereo ? [] : [z(EU).conjuradorId])].filter((id) => !inst(id).suspensa)) };
       render();
       return;
     }
@@ -990,11 +1010,26 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
       if (ui.selecionadas.has(id)) ui.selecionadas.delete(id); else if (ui.selecionadas.size < p.pegar) ui.selecionadas.add(id);
       render(); return;
     }
+    if (b.matches('[data-dist]')) {
+      const id = b.dataset.dist;
+      ui.dist.v[id] = Math.max(0, (ui.dist.v[id] ?? 0) + Number(b.dataset.d));
+      render(); return;
+    }
     if (b.matches('[data-pend]')) {
       const k = b.dataset.pend;
       if (k === 'comecar-eu') return enviar({ tipo: 'escolherInicio', primeiro: EU });
       if (k === 'comecar-op') return enviar({ tipo: 'escolherInicio', primeiro: OP });
       if (k === 'naoBloquear') { ui.modo = null; return enviar({ tipo: 'bloquear', bloqueador: null }); }
+      if (k === 'bloquear' && ui.modo?.tipo === 'bloqueio' && ui.modo.escolhidos.size) {
+        const lista = [...ui.modo.escolhidos];
+        let usarArmadura;
+        if (lista.includes(z(EU).conjuradorId)) { usarArmadura = await perguntarArmadura(); if (usarArmadura === null) return; }
+        ui.modo = null;
+        const arm = usarArmadura === undefined ? {} : { usarArmadura };
+        return enviar(lista.length === 1 ? { tipo: 'bloquear', bloqueador: lista[0], ...arm } : { tipo: 'bloquear', bloqueadores: lista, ...arm });
+      }
+      if (k === 'distribuir') { const v = { ...ui.dist.v }; ui.dist = null; return enviar({ tipo: 'distribuirDano', distribuicao: v }); }
+      if (k === 'distAuto') { ui.dist = null; return enviar({ tipo: 'distribuirDano' }); }
       if (k === 'descartar') return enviar({ tipo: 'descartar', cartas: [...ui.selecionadas] });
       if (k === 'topo') return enviar({ tipo: 'escolherDoTopo', cartas: [...ui.selecionadas] });
       if (k === 'naoPagar') return enviar({ tipo: 'pagarAnulacao', pagar: false });
@@ -1010,10 +1045,9 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
       if (ui.modo?.tipo === 'alvo') { if (ui.modo.ids.has(id)) terminarModo(id); return; }
       if (ui.modo?.tipo === 'bloqueio') {
         if (!ui.modo.ids.has(id)) return verCarta(id);
-        let usarArmadura;
-        if (id === z(EU).conjuradorId) { usarArmadura = await perguntarArmadura(); if (usarArmadura === null) return; }
-        ui.modo = null;
-        return enviar({ tipo: 'bloquear', bloqueador: id, ...(usarArmadura === undefined ? {} : { usarArmadura }) });
+        // vários bloqueadores (decisão 20): cada clique marca ou desmarca; "Bloquear" confirma
+        if (ui.modo.escolhidos.has(id)) ui.modo.escolhidos.delete(id); else ui.modo.escolhidos.add(id);
+        render(); return;
       }
       if (e.pendencia?.tipo === 'descartar' && e.pendencia.jogador === EU && z(EU).mao.includes(id)) {
         if (ui.selecionadas.has(id)) ui.selecionadas.delete(id); else if (ui.selecionadas.size < e.pendencia.quantidade) ui.selecionadas.add(id);

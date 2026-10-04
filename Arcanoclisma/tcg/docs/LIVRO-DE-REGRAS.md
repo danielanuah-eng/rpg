@@ -1,4 +1,4 @@
-# Arcanoclisma TCG — Livro de Regras (rascunho 0.10)
+# Arcanoclisma TCG — Livro de Regras (rascunho 0.11)
 
 Escrito a partir de `TCG ARCANOCLISMA.txt`. Tudo que está marcado **[PROPOSTA]** é uma leitura minha de um trecho ambíguo e **precisa do seu OK** (ver seção 12). O motor em `src/` implementa exatamente o que está aqui.
 
@@ -96,10 +96,11 @@ Tokens: têm o tipo definido pela carta que os criou (fase 2).
 Todo ataque acontece na Principal, com a pilha vazia.
 
 1. **Declarar**: o atacante é **suspenso**. O Conjurador só ataca **com Canal** (arma); o ataque dele é o Ataque do Canal. Ele paga seu **custo de ataque** em Arcano (no padrão é **0**). Cria-se um item "ataque" na pilha, e o oponente pode responder.
-2. **Bloqueio**: quando o ataque resolve, o defensor escolhe um bloqueador (Aliado ou Conjurador **não suspenso**, que fica suspenso) ou nenhum.
-3. **Resposta**: há mais uma rodada de prioridade com o bloqueio declarado.
-4. **Dano**: simultâneo. Atacante e defensor trocam dano; se o alvo é o Conjurador sem bloqueio, só o atacante bate. Quando o **Conjurador bloqueia**, a Armadura dele evita dano (seção 9.3).
-5. Atacantes válidos: Aliados e Conjurador. Alvos válidos: Conjurador inimigo, Aliados e Místicas inimigas com Vida. Estruturas só por magia.
+2. **Bloqueio** (decisão 20): só se bloqueia **ataque ao Conjurador**. Quando ele resolve, o defensor escolhe **um ou vários** bloqueadores (Aliados e o próprio Conjurador **não suspensos**, que ficam suspensos) ou nenhum. Ataque a **Aliado, Mística ou Estrutura não pode ser bloqueado**: a pilha, as respostas e o cálculo do dano continuam iguais, só não há declaração de bloqueio.
+3. **Resposta**: há mais uma rodada de prioridade antes do dano.
+4. **Distribuição**: com 2 ou mais bloqueadores, **quem ataca distribui** o Ataque entre eles.
+5. **Dano**: simultâneo. Cada bloqueador recebe o que lhe foi distribuído; **o que passa da Vida restante de cada bloqueador vai para o Conjurador defensor** (excedente). **Todos os bloqueadores causam dano ao atacante ao mesmo tempo**, mesmo os que morrem nesse combate. Sem bloqueio, o alvo recebe o dano; Aliado, Mística ou Estrutura atacados revidam, o Conjurador não. Quando o **Conjurador está entre os bloqueadores**, a Armadura dele evita dano (seção 9.3), inclusive do excedente.
+6. Atacantes válidos: Aliados e Conjurador. Alvos válidos: Conjurador inimigo e Aliados, Místicas e Estruturas inimigas com Vida.
 
 ### 8.0 Entrada em campo e Proficiente
 Um Aliado, no turno em que entra, **não ataca e não usa efeitos que exijam suspendê-lo** (como "Suspenda: ganhe 1 Arcano"). É como o enjoo de invocação do Magic.
@@ -114,7 +115,7 @@ Tudo que tem Vida **guarda o dano recebido mesmo depois do fim do turno**. Morre
 Todo dano é o mesmo dano; muda a **fonte**: **efeito** (Raio, Bola de Fogo) ou **combate** (pancada). Efeito pode ser **anulado** por cartas de anulação (como **Anular**, seção 8.4); combate não. O motor tem um único caminho de dano com a fonte registrada.
 
 ### 8.3 Levantar e bloquear (tema tático)
-O Final levanta tudo, e cada jogador levanta as próprias cartas no **próprio** Final. Quem **ataca** levanta no Final do mesmo turno e pode bloquear no turno do oponente; um **Aliado que bloqueia** fica suspenso e **não ataca** no próprio turno seguinte (só levanta no Final dele). O **Conjurador** é exceção: levanta também no **Início** do próprio turno, então pode bloquear e ainda atacar no seu turno.
+O Final levanta tudo, e cada jogador levanta as próprias cartas no **próprio** Final. Quem **ataca** levanta no Final do mesmo turno e pode bloquear no turno do oponente; um **Aliado que bloqueia** fica suspenso e **não ataca** no próprio turno seguinte (só levanta no Final dele). Isso vale também para o **Conjurador** (decisão 22): se bloquear no turno do oponente, só levanta no próprio Final e não ataca nem usa itens no seu turno seguinte.
 
 ### 8.4 Palavras-chave e efeitos de uma linha
 - **Proficiente**: ataca e usa efeitos de suspender no turno em que entra (seção 8.0).
@@ -209,6 +210,9 @@ Fora desta fase: equipamentos, Extras, tokens, texto de efeitos em linguagem nat
 17. **Valores das cartas (03/10, noite, site)**: não existe carta neutra; toda carta pertence a um Valor, que é a cor da bolinha do custo. Normalmente 1 Valor; 1 a cada 10 cartas tem 2 (o par de um Conjurador); 1 a cada 50 tem 3 (e assim, multiplicando por 5, até 9). Só itens podem ser genéricos (cinza), e há itens exclusivos. As cartas de um Conjurador são só dos Valores dele, salvo regra escrita. A Mina Funda virou 9 minas, uma por Valor. Sem raridade por enquanto (o autor define no Editor). Aplicado na coleção do site (`online/valores.ts`); as simulações não mudaram.
 18. **Itens v2 (03/10, noite)**: o Canal pode ser **Arma** (dá Ataque ao Conjurador), **Foco Arcano** (o próximo dano ou cura de uma Temporária sua no turno fica maior) ou **Transcritor** (mexe no baralho e na mão: olhar o topo, comprar). Todo uso de item suspende o Conjurador (que precisa estar de pé) e tem um custo: pagar Arcano, descartar cartas da mão ou o Conjurador tomar dano; há itens melhores no início, no meio e no fim de jogo. **Extras de competência** só servem ao Comprometimento certo (ex.: Ovo de Wyvern para Invocador invoca uma ficha Wyvern Filhote 2/2; Luvas de Força para Brigão dão +2 de Ataque no turno pagando 2 de dano, sem suspender, para ele ainda poder atacar). O Canal não se consome; o Extra é de uso único. Ver `tcg/test/itens-v2.test.ts`.
 19. **Compra só no Final (04/10)**: o autor pediu que os Conjuradores comprem apenas no Final do próprio turno, não antes da fase Principal. Volta a valer a **Economia** do Conjurador (campo `compraFinal`, hoje 2 para os 9): no Final, ele compra esse número de cartas. A regra da decisão 15 ("repor a mão no Início") foi desligada (`reporMaoNoInicio: false` em `tcg/data/edicoes.json`). A Economia aparece na carta do Conjurador ao lado da Vida (template do GPT).
+20. **Vários bloqueadores (04/10)**: mais de uma unidade (e o Conjurador) pode bloquear o mesmo ataque e ajudar; quem ataca distribui o dano entre os bloqueadores e o excedente de cada um vai para a vida do jogador defensor; todos os bloqueadores causam dano, mesmo morrendo. Só se bloqueia ataque ao Conjurador; ataques a Aliados, Místicas e Estruturas (que agora podem ser atacadas, se tiverem Vida) não podem ser bloqueados. Seção 8. Testes em `tcg/test/envio-0410.test.ts`.
+21. **Aliado nunca é Repentina (04/10)**: unidade não pode ter Repentina no tipo, subtipo ou palavra-chave; só entra na fase principal com a pilha vazia. Repentina só aparece como parte de um efeito. Gato de Navio e Menina Raposa deixaram de ser Repentinas; o Editor do site trava a velocidade dos Aliados.
+22. **Conjurador levanta só no Final (04/10)**: a regra "levanta também no Início" (decisão 15) foi desligada (`conjuradorLevantaNoInicio: false` em `tcg/data/edicoes.json`).
 
 **Ainda abertas:**
 - Cada carta do Grau gera 1 Arcano na fase 1. Recomendo manter.

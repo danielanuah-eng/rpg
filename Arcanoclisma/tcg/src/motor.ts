@@ -1,6 +1,6 @@
 // Motor de regras do Arcanoclisma TCG (fase 1). Muta o estado e lança ErroRegra se o comando for ilegal.
 import type {
-  BaralhoDef, CartaDef, Catalogo, Comando, ConjuradorDef, Efeito, Estado, Etapa, FonteDano, HabUsos, Inst, ItemPilha, Jogador, Regras, ZonasJogador,
+  BaralhoDef, CartaDef, Catalogo, Comando, ConjuradorDef, Efeito, Estado, Etapa, FonteDano, HabUsos, Inst, ItemPilha, Jogador, Regras, Requisito, ZonasJogador,
 } from './tipos.ts';
 
 export const ARCANO_POR_GRAU = 1;
@@ -213,8 +213,29 @@ function resolverAlvo(e: Estado, ef: Efeito, dono: Jogador, escolhido?: string):
   return e.jogadores[ef.alvo === 'conjuradorInimigo' ? outro(dono) : dono].conjuradorId;
 }
 
+/**
+ * Requisito de uma linha de efeito (04/10, definido no Editor): Grau mínimo e Arcano pago na hora
+ * (reserva primeiro, depois cartas do Grau levantadas). Sem cumprir, a linha não acontece.
+ */
+function cumprirRequisito(e: Estado, r: Requisito | undefined, dono: Jogador): boolean {
+  if (!r) return true;
+  if (r.grau && grauEfetivo(e, dono) < r.grau) { anotar(e, `Requisito não cumprido: precisa de Grau ${r.grau} (tem ${grauEfetivo(e, dono)}); a linha não acontece.`); return false; }
+  const custo = r.arcano ?? 0;
+  if (custo <= 0) return true;
+  const z = e.jogadores[dono];
+  const levantadas = z.grau.filter((id) => !e.instancias[id].suspensa);
+  if (z.arcano + levantadas.length * ARCANO_POR_GRAU < custo) { anotar(e, `Requisito não cumprido: precisa pagar ${custo} de Arcano; a linha não acontece.`); return false; }
+  const daReserva = Math.min(z.arcano, custo);
+  z.arcano -= daReserva;
+  let falta = custo - daReserva;
+  for (const id of levantadas) { if (falta <= 0) break; e.instancias[id].suspensa = true; falta -= ARCANO_POR_GRAU; }
+  anotar(e, `Jogador ${dono} paga ${custo} de Arcano pelo requisito.`);
+  return true;
+}
+
 function aplicarEfeitos(e: Estado, efeitos: Efeito[], dono: Jogador, escolhido?: string, bonus = 0): void {
   for (const ef of efeitos) {
+    if (ef.requisito && !cumprirRequisito(e, ef.requisito, dono)) continue;
     if (ef.tipo === 'comprar') { comprar(e, dono, ef.valor); anotar(e, `Jogador ${dono} compra ${ef.valor} carta(s).`); }
     else if (ef.tipo === 'olharTopo') {
       const z = e.jogadores[dono];
@@ -541,9 +562,17 @@ function resolverTopo(e: Estado): void {
     if (item.fonte) anotar(e, `Efeito de ${item.fonte} resolve.`);
     aplicarEfeitos(e, item.efeitos, item.controlador, item.alvo);
   } else if (e.combate && naMesa(e, item.atacante) && naMesa(e, item.alvo)) {
-    e.combate.etapa = 'aguardandoBloqueio';
-    e.pendencia = { tipo: 'bloqueio', jogador: outro(item.controlador) };
-    anotar(e, `Ataque de ${nomeReg(e, item.atacante)} em ${nomeReg(e, item.alvo)}: o jogador ${outro(item.controlador)} escolhe o bloqueio.`);
+    if (e.instancias[item.alvo].ehConjurador) {
+      e.combate.etapa = 'aguardandoBloqueio';
+      e.pendencia = { tipo: 'bloqueio', jogador: outro(item.controlador) };
+      anotar(e, `Ataque de ${nomeReg(e, item.atacante)} em ${nomeReg(e, item.alvo)}: o jogador ${outro(item.controlador)} escolhe o bloqueio.`);
+    } else {
+      // Decisão 20: ataque a Aliado, Mística ou Estrutura não pode ser bloqueado; a janela antes do dano continua.
+      e.combate.etapa = 'bloqueado';
+      e.passes = 0;
+      e.prioridade = e.ativo;
+      anotar(e, `Ataque de ${nomeReg(e, item.atacante)} em ${nomeReg(e, item.alvo)}: ataque a ${defCarta(e, item.alvo).tipo === 'aliado' ? 'Aliado' : defCarta(e, item.alvo).tipo === 'mistica' ? 'Mística' : 'Estrutura'} não pode ser bloqueado.`);
+    }
   } else {
     e.combate = null;
     anotar(e, 'O ataque falhou: atacante ou alvo saiu do campo.');
@@ -591,57 +620,143 @@ function finalizarAnulacao(e: Estado): void {
   acoesDeEstado(e);
 }
 
+/** Vida que ainda falta para derrubar a carta (o Conjurador conta a vida inteira restante). */
+function vidaRestante(e: Estado, id: string): number {
+  return Math.max(0, (vidaDe(e, id) ?? 0) - e.instancias[id].dano);
+}
+
+/** Dano do atacante com a passiva "primeiro dano de combate de um Aliado em cada turno é maior" (marca o uso). */
+function comPrimeiroDanoDeAliado(e: Estado, id: string, dano: number): number {
+  const it = e.instancias[id];
+  if (!it || it.ehConjurador || defCarta(e, id).tipo !== 'aliado' || dano <= 0) return dano;
+  const mais = defConjurador(e, it.dono).poder?.primeiroDanoDeAliadoMais ?? 0;
+  if (!mais || e.habUsos[it.dono].danoAliado) return dano;
+  e.habUsos[it.dono].danoAliado = true;
+  anotar(e, `${defConjurador(e, it.dono).nome}: o primeiro dano de Aliado do turno causa ${mais} a mais.`);
+  return dano + mais;
+}
+
+/** Bloqueadores que continuam na mesa (os que saíram antes do dano não recebem nem causam dano). */
+function bloqueadoresVivos(e: Estado): string[] {
+  return e.combate ? e.combate.bloqueadores.filter((id) => naMesa(e, id)) : [];
+}
+
+/** Distribuição padrão: derruba o máximo de bloqueadores (os de menos vida primeiro; Conjurador por último). */
+export function distribuicaoPadrao(e: Estado, bloqs: string[], dano: number): Record<string, number> {
+  const ordem = [...bloqs].sort((a, b) => Number(e.instancias[a].ehConjurador) - Number(e.instancias[b].ehConjurador) || vidaRestante(e, a) - vidaRestante(e, b));
+  const d: Record<string, number> = {};
+  let resta = dano;
+  for (const id of ordem) {
+    const v = Math.min(resta, vidaRestante(e, id));
+    d[id] = v;
+    resta -= v;
+  }
+  // O que sobra passa como excedente: vai para o primeiro (já derrubado), que repassa ao Conjurador.
+  if (resta > 0 && ordem.length) d[ordem[0]] += resta;
+  return d;
+}
+
+/** Armadura: quando o Conjurador bloqueia e o dono escolhe usá-la, evita até "defesa" de dano e se desgasta (decisão 16). */
+function aplicarArmadura(e: Estado, conjId: string, dano: number): number {
+  const c = e.combate;
+  const dono = e.instancias[conjId].dono;
+  if (!c || dano <= 0 || c.usarArmadura === false || e.habUsos[dono].armadura) return dano;
+  const arm = armaduraDe(e, dono);
+  if (!arm) return dano;
+  e.habUsos[dono].armadura = true;
+  const da = defCarta(e, arm);
+  const ia = e.instancias[arm];
+  const evita = Math.min(da.defesa ?? 0, dano, Math.max(0, (da.vidaDesgaste ?? 0) - ia.dano));
+  if (evita <= 0) return dano;
+  ia.dano += evita;
+  anotar(e, `${da.nome} (jogador ${dono}) evita ${evita} de dano (desgaste ${ia.dano}/${da.vidaDesgaste}).`);
+  if (ia.dano >= (da.vidaDesgaste ?? 0)) {
+    const z = e.jogadores[dono];
+    tirar(z.itens, arm);
+    ia.dano = 0;
+    z.cemiterio.push(arm);
+    anotar(e, `${da.nome} (jogador ${dono}) quebrou e foi para o cemitério.`);
+  }
+  return dano - evita;
+}
+
+/** Valida a distribuição escolhida por quem ataca: só bloqueadores vivos, inteiros não negativos, soma = dano. */
+function validarDistribuicao(bloqs: string[], dano: number, d: Record<string, number>): void {
+  let soma = 0;
+  for (const [id, v] of Object.entries(d)) {
+    if (!bloqs.includes(id)) falha('Distribuição com uma carta que não está bloqueando.');
+    if (!Number.isInteger(v) || v < 0) falha('Distribuição inválida.');
+    soma += v;
+  }
+  if (soma !== dano) falha(`Distribua exatamente ${dano} de dano entre os bloqueadores.`);
+}
+
+/** Precisa que quem ataca escolha a distribuição (2 ou mais bloqueadores vivos e dano a distribuir)? */
+function precisaDistribuir(e: Estado): boolean {
+  const c = e.combate;
+  if (!c || c.distribuicao || !naMesa(e, c.atacante)) return false;
+  return bloqueadoresVivos(e).length > 1 && ataqueDe(e, c.atacante) > 0;
+}
+
 function danoDeCombate(e: Estado): void {
   const c = e.combate;
   if (!c) return;
-  e.combate = null;
-  const alvoFinal = c.bloqueador ?? c.alvo;
   const atacanteOk = naMesa(e, c.atacante);
-  const alvoOk = naMesa(e, alvoFinal);
-  const alvoInst = e.instancias[alvoFinal];
-  const revida = c.bloqueador !== null || !alvoInst.ehConjurador;
-  let danoAoAlvo = atacanteOk ? ataqueDe(e, c.atacante) : 0;
-  let danoAoAtacante = alvoOk && revida ? ataqueDe(e, alvoFinal, c.bloqueador !== null) : 0;
-  // Passiva "primeiro dano de combate de um Aliado em cada turno é maior" (primeiroDanoDeAliadoMais): atacante primeiro, depois quem bloqueou
-  for (const [id, lado] of [[c.atacante, 'alvo'], [alvoFinal, 'atacante']] as const) {
-    const it = e.instancias[id];
-    if (!it || it.ehConjurador || defCarta(e, id).tipo !== 'aliado') continue;
-    const mais = defConjurador(e, it.dono).poder?.primeiroDanoDeAliadoMais ?? 0;
-    const dano = lado === 'alvo' ? danoAoAlvo : danoAoAtacante;
-    if (!mais || e.habUsos[it.dono].danoAliado || dano <= 0) continue;
-    e.habUsos[it.dono].danoAliado = true;
-    if (lado === 'alvo') danoAoAlvo += mais; else danoAoAtacante += mais;
-    anotar(e, `${defConjurador(e, it.dono).nome}: o primeiro dano de Aliado do turno causa ${mais} a mais.`);
-  }
-  // Armadura: quando o Conjurador bloqueia e o dono escolhe usá-la, ela evita até "defesa" de dano e se desgasta;
-  // quebra quando o desgaste chega à vida de desgaste. Nenhuma Armadura protege mais de um ataque por turno (decisão 16).
-  if (alvoOk && c.bloqueador !== null && alvoInst.ehConjurador && danoAoAlvo > 0 && c.usarArmadura !== false && !e.habUsos[alvoInst.dono].armadura) {
-    const arm = armaduraDe(e, alvoInst.dono);
-    if (arm) {
-      e.habUsos[alvoInst.dono].armadura = true;
-      const da = defCarta(e, arm);
-      const ia = e.instancias[arm];
-      const evita = Math.min(da.defesa ?? 0, danoAoAlvo, Math.max(0, (da.vidaDesgaste ?? 0) - ia.dano));
-      if (evita > 0) {
-        danoAoAlvo -= evita;
-        ia.dano += evita;
-        anotar(e, `${da.nome} (jogador ${alvoInst.dono}) evita ${evita} de dano (desgaste ${ia.dano}/${da.vidaDesgaste}).`);
-        if (ia.dano >= (da.vidaDesgaste ?? 0)) {
-          const z = e.jogadores[alvoInst.dono];
-          tirar(z.itens, arm);
-          ia.dano = 0;
-          z.cemiterio.push(arm);
-          anotar(e, `${da.nome} (jogador ${alvoInst.dono}) quebrou e foi para o cemitério.`);
-        }
-      }
-    }
-  }
-  if (alvoOk) causarDano(e, alvoFinal, danoAoAlvo, 'combate');
-  if (atacanteOk) causarDano(e, c.atacante, danoAoAtacante, 'combate');
-  anotar(e, `Combate: ${nomeReg(e, c.atacante)} causa ${danoAoAlvo} a ${nomeReg(e, alvoFinal)}${revida ? `, que causa ${danoAoAtacante} de volta` : ''}.`);
-  // Gatilho "ao causar dano de combate ao Conjurador inimigo" (rodada 6): vai para a pilha como um gatilho de "ao entrar".
   const atk = e.instancias[c.atacante];
-  if (alvoOk && alvoInst.ehConjurador && alvoInst.dono !== atk.dono && danoAoAlvo > 0 && !atk.ehConjurador) {
+  const conjAlvo = e.jogadores[outro(atk.dono)].conjuradorId;
+  const recebido: Record<string, number> = {};
+  let danoAoAtacante = 0;
+  let resumo: string;
+  if (c.bloqueadores.length === 0) {
+    // Sem bloqueio: o alvo recebe o dano; Aliado, Mística ou Estrutura atacados revidam (o Conjurador não).
+    const alvoOk = naMesa(e, c.alvo);
+    const revida = !e.instancias[c.alvo].ehConjurador;
+    const dano = atacanteOk && alvoOk ? comPrimeiroDanoDeAliado(e, c.atacante, ataqueDe(e, c.atacante)) : 0;
+    if (alvoOk) recebido[c.alvo] = dano;
+    if (alvoOk && revida) danoAoAtacante = comPrimeiroDanoDeAliado(e, c.alvo, ataqueDe(e, c.alvo));
+    resumo = `${nomeReg(e, c.atacante)} causa ${dano} a ${nomeReg(e, c.alvo)}${revida && alvoOk ? `, que causa ${danoAoAtacante} de volta` : ''}`;
+  } else {
+    // Decisão 20: vários bloqueadores. Quem ataca distribui o dano; o que passa da vida de cada bloqueador vai para o Conjurador.
+    // Todo bloqueador na mesa causa dano ao atacante ao mesmo tempo, mesmo que morra no combate.
+    const bloqs = bloqueadoresVivos(e);
+    const dano = atacanteOk && bloqs.length ? comPrimeiroDanoDeAliado(e, c.atacante, ataqueDe(e, c.atacante)) : 0;
+    const dist = c.distribuicao ?? distribuicaoPadrao(e, bloqs, dano);
+    // a passiva pode ter somado dano depois da escolha: a diferença vai para o primeiro da distribuição
+    const somaDist = Object.values(dist).reduce((a, b) => a + b, 0);
+    if (somaDist !== dano && bloqs.length) dist[bloqs[0]] = (dist[bloqs[0]] ?? 0) + (dano - somaDist);
+    let excedente = 0;
+    const partes: string[] = [];
+    for (const id of bloqs) {
+      const v = Math.max(0, dist[id] ?? 0);
+      if (e.instancias[id].ehConjurador) { recebido[id] = (recebido[id] ?? 0) + v; partes.push(`${v} em ${nomeReg(e, id)}`); continue; }
+      const cabe = Math.min(v, vidaRestante(e, id));
+      recebido[id] = (recebido[id] ?? 0) + cabe;
+      excedente += v - cabe;
+      partes.push(`${v} em ${nomeReg(e, id)}`);
+    }
+    if (excedente > 0 && naMesa(e, conjAlvo)) recebido[conjAlvo] = (recebido[conjAlvo] ?? 0) + excedente;
+    let revide = 0;
+    let passivaUsada = false;
+    for (const id of bloqs) {
+      let v = ataqueDe(e, id, true);
+      if (!passivaUsada && v > 0 && !e.instancias[id].ehConjurador) {
+        const antes = v;
+        v = comPrimeiroDanoDeAliado(e, id, v);
+        passivaUsada = v !== antes;
+      }
+      revide += v;
+    }
+    danoAoAtacante = revide;
+    resumo = `${nomeReg(e, c.atacante)} distribui ${dano} (${partes.join(', ')})${excedente > 0 ? `; ${excedente} de excedente vai para ${nomeReg(e, conjAlvo)}` : ''}; os bloqueadores causam ${revide} de volta`;
+  }
+  // Armadura: só quando o Conjurador está entre os bloqueadores (protege o dano recebido, inclusive o excedente).
+  if (recebido[conjAlvo] && c.bloqueadores.includes(conjAlvo)) recebido[conjAlvo] = aplicarArmadura(e, conjAlvo, recebido[conjAlvo]);
+  e.combate = null;
+  for (const [id, v] of Object.entries(recebido)) causarDano(e, id, v, 'combate');
+  if (atacanteOk) causarDano(e, c.atacante, danoAoAtacante, 'combate');
+  anotar(e, `Combate: ${resumo}.`);
+  // Gatilho "ao causar dano de combate ao Conjurador inimigo" (rodada 6): vai para a pilha como um gatilho de "ao entrar".
+  if ((recebido[conjAlvo] ?? 0) > 0 && !atk.ehConjurador) {
     gatilhoConjurador(e, atk.dono, 'aliadoDanoConjurador');
     const efs = defCarta(e, c.atacante).aoDanoConjurador;
     if (efs?.length) {
@@ -652,12 +767,18 @@ function danoDeCombate(e: Estado): void {
   acoesDeEstado(e);
 }
 
+
 function todosPassaram(e: Estado): void {
   e.passes = 0;
   e.prioridade = e.ativo;
   if (e.pilha.length > 0) resolverTopo(e);
-  else if (e.combate?.etapa === 'bloqueado') danoDeCombate(e);
-  else avancarEtapa(e);
+  else if (e.combate?.etapa === 'bloqueado') {
+    // Vários bloqueadores: antes do dano, quem ataca escolhe como distribuir (decisão 20).
+    if (precisaDistribuir(e)) {
+      e.pendencia = { tipo: 'distribuirDano', jogador: e.instancias[e.combate.atacante].dono };
+      anotar(e, `O jogador ${e.pendencia.jogador} distribui o dano de ${nomeReg(e, e.combate.atacante)} entre os bloqueadores.`);
+    } else danoDeCombate(e);
+  } else avancarEtapa(e);
 }
 
 // ---------- comandos ----------
@@ -730,8 +851,9 @@ function jogarCarta(e: Estado, c: Extract<Comando, { tipo: 'jogar' }>): void {
   if (!origem) falha('A carta não está na sua mão (nem pode ser jogada de outra zona agora).');
   const d = defCarta(e, c.carta);
   const z = e.jogadores[c.jogador];
-  if (d.velocidade === 'findante' && !janelaFindante(e, c.jogador))
-    falha('Carta findante: só na sua fase principal, com a pilha vazia.');
+  // Unidade (Aliado) nunca é Repentina pelo tipo: só entra na sua fase principal, com a pilha vazia (decisão 21).
+  if ((d.velocidade === 'findante' || d.tipo === 'aliado') && !janelaFindante(e, c.jogador))
+    falha(d.tipo === 'aliado' ? 'Aliado: só na sua fase principal, com a pilha vazia.' : 'Carta findante: só na sua fase principal, com a pilha vazia.');
   if (grauEfetivo(e, c.jogador) < d.grau) falha(`Precisa de Grau ${d.grau} (você tem ${grauEfetivo(e, c.jogador)}).`);
   for (const v of d.custoValores ?? []) {
     if (!z.grau.some((id) => defCarta(e, id).valores.includes(v))) falha(`Precisa de uma carta de ${v} no Grau.`);
@@ -747,7 +869,7 @@ function jogarCarta(e: Estado, c: Extract<Comando, { tipo: 'jogar' }>): void {
   pagarCusto(e, c.jogador, custo, c.enviarArcano ?? [], reserva);
   e.habUsos[c.jogador].carta = true;
   e.habUsos[c.jogador].desconto = 0;
-  if (d.velocidade === 'repentina') e.habUsos[c.jogador].repentina = true;
+  if (d.velocidade === 'repentina' && d.tipo !== 'aliado') e.habUsos[c.jogador].repentina = true;
   for (const id of descarte) {
     tirar(z.grau, id);
     z.cemiterio.push(id);
@@ -775,13 +897,14 @@ function ativar(e: Estado, c: Extract<Comando, { tipo: 'ativar' }>): void {
   if (at.suspende && inst.suspensa) falha('A carta está suspensa.');
   if (at.suspende && recemChegado(e, c.carta)) falha('Este Aliado acabou de entrar e não é Proficiente.');
   if (ehConj && !at.repentina && !janelaFindante(e, c.jogador)) falha('Habilidade do Conjurador: só na sua fase principal, com a pilha vazia (ou se ela for Repentina).');
+  if (at.requisito?.grau && grauEfetivo(e, c.jogador) < at.requisito.grau) falha(`Precisa de Grau ${at.requisito.grau} para usar.`);
   const imediatos = ['arcano', 'descontoProximaCarta', 'permitirAnularDoCemiterio', 'banirDaMao', 'potenciaMagia', 'ataqueConjuradorTurno'];
   const soArcano = at.efeitos.every((ef) => imediatos.includes(ef.tipo));
   if (!soArcano || ehConj) exigirPrioridade(e, c.jogador);
   if (exigeAlvo(at.efeitos) && !alvoServe(e, at.efeitos, c.alvo, c.jogador)) falha('Esta ativação precisa de um alvo legal.');
   const rean = at.efeitos.find((ef) => ef.tipo === 'reanimar');
   const extraRean = rean && rean.tipo === 'reanimar' && c.alvo ? rean.custoExtra + defCarta(e, c.alvo).custo : 0;
-  const custo = at.custo + extraRean + custoProtecao(e, c.jogador, c.alvo);
+  const custo = at.custo + (at.requisito?.arcano ?? 0) + extraRean + custoProtecao(e, c.jogador, c.alvo);
   const conjInst = e.instancias[z.conjuradorId];
   if (at.suspendeConjurador && conjInst.suspensa) falha('O Conjurador está suspenso.');
   const descarte = c.descartarCusto ?? [];
@@ -832,7 +955,7 @@ function atacar(e: Estado, c: Extract<Comando, { tipo: 'atacar' }>): void {
   }
   const alvoOk =
     c.alvo === adv.conjuradorId ||
-    (adv.campo.includes(c.alvo) && ['aliado', 'mistica'].includes(defCarta(e, c.alvo).tipo) && vidaDe(e, c.alvo) !== undefined);
+    (adv.campo.includes(c.alvo) && ['aliado', 'mistica', 'estrutura'].includes(defCarta(e, c.alvo).tipo) && (vidaDe(e, c.alvo) ?? 0) > 0);
   if (!alvoOk) falha('Alvo de ataque inválido.');
   if (atacante.ehConjurador && e.regras.conjuradorSoAtacaComArma && ataqueConjurador(e, c.jogador) <= 0) falha('O Conjurador só ataca com uma arma (item no Canal).');
   if (atacante.ehConjurador) {
@@ -842,7 +965,7 @@ function atacar(e: Estado, c: Extract<Comando, { tipo: 'atacar' }>): void {
   } else if (c.enviarArcano?.length) falha('Este ataque não custa Arcano.');
   atacante.suspensa = true;
   e.agiuNoTurno = true;
-  e.combate = { atacante: c.atacante, alvo: c.alvo, bloqueador: null, etapa: 'declarado' };
+  e.combate = { atacante: c.atacante, alvo: c.alvo, bloqueador: null, bloqueadores: [], etapa: 'declarado' };
   e.pilha.push({ tipo: 'ataque', id: `p${e.proxId++}`, controlador: c.jogador, atacante: c.atacante, alvo: c.alvo });
   e.passes = 0;
   e.prioridade = c.jogador;
@@ -905,25 +1028,40 @@ export function executar(e: Estado, c: Comando): void {
     if (c.tipo === 'bloquear' && p.tipo === 'bloqueio') {
       if (c.jogador !== p.jogador || !e.combate) falha('Bloqueio inválido.');
       const z = e.jogadores[c.jogador];
-      if (c.bloqueador !== null) {
-        const ok =
-          z.conjuradorId === c.bloqueador ||
-          (z.campo.includes(c.bloqueador) && defCarta(e, c.bloqueador).tipo === 'aliado');
+      const lista = c.bloqueadores ?? (c.bloqueador ? [c.bloqueador] : []);
+      if (new Set(lista).size !== lista.length) falha('Bloqueador repetido.');
+      if (lista.length && !e.instancias[e.combate.alvo].ehConjurador) falha('Só se bloqueia ataque ao Conjurador.');
+      const atacanteEtereo = !e.instancias[e.combate.atacante].ehConjurador && !!defCarta(e, e.combate.atacante).palavrasChave?.includes('Etéreo');
+      for (const b of lista) {
+        const ok = z.conjuradorId === b || (z.campo.includes(b) && defCarta(e, b).tipo === 'aliado');
         if (!ok) falha('Bloqueador inválido.');
-        if (e.instancias[c.bloqueador].suspensa) falha('O bloqueador está suspenso.');
-        const atacanteEtereo = !e.instancias[e.combate.atacante].ehConjurador && !!defCarta(e, e.combate.atacante).palavrasChave?.includes('Etéreo');
-        const bloqueadorEtereo = !e.instancias[c.bloqueador].ehConjurador && !!defCarta(e, c.bloqueador).palavrasChave?.includes('Etéreo');
+        if (e.instancias[b].suspensa) falha('O bloqueador está suspenso.');
+        const bloqueadorEtereo = !e.instancias[b].ehConjurador && !!defCarta(e, b).palavrasChave?.includes('Etéreo');
         if (atacanteEtereo && !bloqueadorEtereo) falha('Só um Aliado Etéreo bloqueia um atacante Etéreo.');
-        e.instancias[c.bloqueador].suspensa = true;
-        const semArmadura = c.usarArmadura === false && e.instancias[c.bloqueador].ehConjurador && armaduraDe(e, c.jogador);
-        anotar(e, `Jogador ${c.jogador} bloqueia com ${nomeReg(e, c.bloqueador)}${semArmadura ? ' sem usar a Armadura' : ''}.`);
+      }
+      for (const b of lista) e.instancias[b].suspensa = true;
+      if (lista.length) {
+        const semArmadura = c.usarArmadura === false && lista.includes(z.conjuradorId) && armaduraDe(e, c.jogador);
+        anotar(e, `Jogador ${c.jogador} bloqueia com ${lista.map((b) => nomeReg(e, b)).join(' e ')}${semArmadura ? ' sem usar a Armadura' : ''}.`);
       } else anotar(e, `Jogador ${c.jogador} não bloqueia.`);
-      e.combate.bloqueador = c.bloqueador;
+      e.combate.bloqueadores = lista;
+      e.combate.bloqueador = lista[0] ?? null;
       e.combate.usarArmadura = c.usarArmadura !== false;
       e.combate.etapa = 'bloqueado';
       e.pendencia = null;
       e.passes = 0;
       e.prioridade = e.ativo;
+      return;
+    }
+    if (c.tipo === 'distribuirDano' && p.tipo === 'distribuirDano') {
+      if (c.jogador !== p.jogador || !e.combate) falha('Distribuição inválida.');
+      const bloqs = bloqueadoresVivos(e);
+      const dano = ataqueDe(e, e.combate.atacante);
+      const d = c.distribuicao ?? distribuicaoPadrao(e, bloqs, dano);
+      validarDistribuicao(bloqs, dano, d);
+      e.combate.distribuicao = { ...d };
+      e.pendencia = null;
+      danoDeCombate(e);
       return;
     }
     falha('Há uma decisão pendente.');

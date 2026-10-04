@@ -4,6 +4,8 @@
 import { DADOS, VALOR, conj, arteConj, textoPoder, EDICOES } from './base.js';
 import { aplicarIdentidadeValor } from './identidade-valor-v12.js';
 import { iconizar, temIcones } from './icones.js';
+import { lembretesDe } from './palavras-chave.js';
+const escHTML = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 /** Arte trocada pelo autor no Editor vale mais que a arte final do GPT. */
 const EDICOES_ARTE = new Proxy({}, { get: (_, k) => EDICOES.dados?.artes?.[k] ?? {} });
 /** Raridade definida pelo autor no Editor (sem raridade automática; pedido do autor, 03/10). */
@@ -43,7 +45,7 @@ export function modeloCarta(defId) {
   return {
     id: defId, nome: d.nome, tipo: d.tipo, valores: (d.valores ?? []).map((x) => VALOR[x] ?? x), custo: d.custo, grau: d.grau, arcanoGerado: d.arcanoGerado,
     ataque: d.tipo === 'aliado' ? d.ataque ?? 0 : d.ataque, vida: d.vida, texto: d.texto, subtipos: d.subtipos,
-    categoriaItem: d.categoriaItem, defesa: d.defesa, vidaDesgaste: d.vidaDesgaste, velocidade: d.velocidade,
+    categoriaItem: d.categoriaItem, defesa: d.defesa, vidaDesgaste: d.vidaDesgaste, velocidade: d.velocidade, lembretes: lembretesDe(d),
     // arte final do GPT (cena inteira, aprovada por ele) quando existe; senão, a arte do RPG recortada sobre um cenário
     ...(DADOS.artesFinais?.[defId] && !(EDICOES_ARTE.cartas?.[defId])
       ? { arte: `/arte/finais/${DADOS.artesFinais[defId]}.webp`, arteModo: 'cena' }
@@ -131,6 +133,11 @@ export function desenharCarta(model, { hidden = false, opponent = false, readabl
   // iconografia das mecânicas (ícones do GPT ao lado das palavras, quando aprovados); sem ícones, o texto fica igual
   const regras = el('div', 'rules', model.texto);
   if (temIcones()) regras.innerHTML = iconizar(model.texto);
+  // lembrete em itálico do que cada palavra-chave faz (pedido do autor, 04/10)
+  if (model.lembretes?.length) regras.insertAdjacentHTML('beforeend', model.lembretes.map((t) => ` <i class="lembrete">(${escHTML(t)})</i>`).join(''));
+  // letra menor conforme o tamanho do texto, para o texto e os lembretes caberem na caixa sem rolar
+  const tam = String(model.texto ?? '').length + (model.lembretes ?? []).join(' ').length;
+  if (tam > 230) regras.classList.add('texto-enorme'); else if (tam > 160) regras.classList.add('texto-muito-longo'); else if (tam > 95) regras.classList.add('texto-longo');
   front.append(el('div', 'type-line', typeText), detail, regras, el('div', 'flavour', ''));
   if (n.dataset.rarity !== 'nenhuma') front.append(img(`${K}vetores/raridade-${n.dataset.rarity}.svg`, 'rarity', `Raridade: ${n.dataset.rarity}`));
   const fields = model.categoriaItem === 'armadura' ? [['defesa', 'defesa'], ['vidaDesgaste', 'desgaste']]

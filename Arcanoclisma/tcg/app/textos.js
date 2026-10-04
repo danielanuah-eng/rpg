@@ -6,7 +6,18 @@ export const ALVO = { escolhido: 'um alvo', escolhidoAliado: 'um Aliado ou Míst
 /** "a" + alvo, contraindo "a o" em "ao" (e "de o" em "do"). */
 const a = (alvo) => (ALVO[alvo].startsWith('o ') ? 'ao ' + ALVO[alvo].slice(2) : 'a ' + ALVO[alvo]);
 const de = (alvo) => (ALVO[alvo].startsWith('o ') ? 'do ' + ALVO[alvo].slice(2) : 'de ' + ALVO[alvo]);
+/**
+ * Requisito de uma linha (04/10): "(3+ no Grau · Pague 2)". As palavras "no Grau" e "Pague N" ligam a iconografia
+ * de Grau e de pagar Arcano (online/public/js/icones.js) quando o GPT entregar os ícones.
+ */
+export function textoRequisito(r) {
+  if (!r || (!r.grau && !r.arcano)) return '';
+  return '(' + [r.grau ? `${r.grau}+ no Grau` : '', r.arcano ? `Pague ${r.arcano}` : ''].filter(Boolean).join(' · ') + ') ';
+}
 export function descEfeito(ef) {
+  return textoRequisito(ef.requisito) + descEfeitoBase(ef);
+}
+function descEfeitoBase(ef) {
   switch (ef.tipo) {
     case 'dano': return `cause ${ef.valor}${ef.escalaGrau ? ' + o número de cartas no seu Grau' : ''} de dano ${a(ef.alvo)}`;
     case 'curar': return `cure ${ef.valor} de dano ${de(ef.alvo)}`;
@@ -29,7 +40,11 @@ export function descEfeito(ef) {
     default: return ef.tipo;
   }
 }
-export const frase = (efs) => { const t = efs.map(descEfeito).join(' e '); return t.charAt(0).toUpperCase() + t.slice(1) + '.'; };
+/** Maiúscula na primeira letra (depois do requisito entre parênteses, se houver). */
+const maiuscula = (t) => t.replace(/^(\([^)]*\)\s*)?(.)/, (m, p, c) => (p ?? '') + c.toUpperCase());
+export const frase = (efs) => maiuscula(efs.map(descEfeito).join(' e ')) + '.';
+const reqAtivacao = (a) => (a.requisito?.grau ? `com ${a.requisito.grau}+ no Grau, ` : '');
+const custoAtivacao = (a) => (a.custo || a.requisito?.arcano ? `pague ${(a.custo ?? 0) + (a.requisito?.arcano ?? 0)}` : '');
 /** Frase no meio do texto (depois de dois-pontos): começa com minúscula sem rebaixar nomes próprios como Arcano. */
 const fraseMin = (efs) => efs.map(descEfeito).join(' e ') + '.';
 
@@ -51,9 +66,10 @@ export function textoCarta(d) {
   if (d.aoDanoConjurador?.length) p.push('Ao causar dano de combate ao Conjurador inimigo: ' + fraseMin(d.aoDanoConjurador));
   if (d.ativacao) {
     const a = d.ativacao;
-    const custos = [a.suspendeConjurador ? 'suspenda o Conjurador' : a.suspende ? 'suspenda' : '', a.custo ? `pague ${a.custo}` : '', a.descartar ? `descarte ${a.descartar} carta${a.descartar > 1 ? 's' : ''}` : '', a.danoNoConjurador ? `seu Conjurador toma ${a.danoNoConjurador} de dano` : ''].filter(Boolean);
+    const custos = [a.suspendeConjurador ? 'suspenda o Conjurador' : a.suspende ? 'suspenda' : '', custoAtivacao(a), a.descartar ? `descarte ${a.descartar} carta${a.descartar > 1 ? 's' : ''}` : '', a.danoNoConjurador ? `seu Conjurador toma ${a.danoNoConjurador} de dano` : ''].filter(Boolean);
     const lista = custos.length > 1 ? custos.slice(0, -1).join(', ') + ' e ' + custos.at(-1) : custos[0] ?? (d.categoriaItem === 'extra' ? 'use' : 'ative');
-    p.push(`${lista.charAt(0).toUpperCase() + lista.slice(1)}: ${fraseMin(a.efeitos ?? [])}`);
+    const l2 = reqAtivacao(a) + lista;
+    p.push(`${l2.charAt(0).toUpperCase() + l2.slice(1)}: ${fraseMin(a.efeitos ?? [])}`);
   }
   if (d.pagarParaAnular !== undefined) p.push(`O oponente pode pagar ${d.pagarParaAnular} para anulá-la.`);
   return p.join(' ');
@@ -66,7 +82,7 @@ export function textoPoder(p) {
   const t = [];
   if (p.ativacao) {
     const a = p.ativacao;
-    const custo = [a.suspende ? 'suspenda o Conjurador' : '', a.custo ? `pague ${a.custo}` : ''].filter(Boolean).join(' e ') || 'ative';
+    const custo = reqAtivacao(a) + ([a.suspende ? 'suspenda o Conjurador' : '', custoAtivacao(a)].filter(Boolean).join(' e ') || 'ative');
     const c = custo.charAt(0).toUpperCase() + custo.slice(1);
     t.push(`${a.repentina ? 'Repentina: ' + custo : c}: ${fraseMin(a.efeitos ?? [])}`);
   }

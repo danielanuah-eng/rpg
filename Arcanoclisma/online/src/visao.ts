@@ -20,7 +20,7 @@ export function visaoDe(e: Estado, j: Jogador): Record<string, unknown> {
     else if (p.tipo === 'ataque') ver([p.atacante, p.alvo]);
     else if (p.alvo) visiveis.add(p.alvo);
   }
-  if (e.combate) ver([e.combate.atacante, e.combate.alvo, ...(e.combate.bloqueador ? [e.combate.bloqueador] : [])]);
+  if (e.combate) ver([e.combate.atacante, e.combate.alvo, ...(e.combate.bloqueadores ?? (e.combate.bloqueador ? [e.combate.bloqueador] : []))]);
   const pend = e.pendencia;
   if (pend?.tipo === 'escolherDoTopo' && pend.jogador === j) ver(pend.cartas);
   if (pend?.tipo === 'pagarAnulacao' && pend.item.tipo === 'carta') visiveis.add(pend.item.instId);
@@ -48,6 +48,8 @@ export function visaoDe(e: Estado, j: Jogador): Record<string, unknown> {
     campo: z.campo.map(tr), cemiterio: z.cemiterio.map(tr), grau: z.grau.map(tr), zonaArcano: z.zonaArcano.map(tr),
     banimento: z.banimento.map(tr), itens: z.itens.map(tr),
   }));
+  // cartas públicas fora das zonas (na pilha, na pendência de anular): o cliente também precisa delas
+  for (const id of visiveis) if (e.instancias[id] && !instancias[id]) instancias[id] = e.instancias[id];
   let pendencia: unknown = pend;
   if (pend?.tipo === 'escolherDoTopo' && pend.jogador !== j) pendencia = { ...pend, cartas: pend.cartas.map(tr) };
   const { catalogo: _c, rng: _r, ...resto } = e;

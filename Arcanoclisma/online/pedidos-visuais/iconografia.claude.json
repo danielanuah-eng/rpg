@@ -3,9 +3,9 @@
   "autor": "Claude",
   "estado": "solicitado",
   "necessidadeAtual": true,
-  "versao": 1,
+  "versao": 2,
   "atualizadoEm": "2026-10-04",
-  "pedidoDoAutor": "Fazer a iconografia dos símbolos das mecânicas. Exemplo do autor: suspender uma carta = uma carta se deitando, com uma seta apontando para baixo e riscos atrás mostrando movimento. Ícones para pagar Arcano, suspender etc. facilitam a leitura.",
+  "pedidoDoAutor": "Fazer a iconografia dos símbolos das mecânicas. Exemplo do autor: suspender uma carta = uma carta se deitando, com uma seta apontando para baixo e riscos atrás mostrando movimento. Ícones para pagar Arcano, suspender etc. facilitam a leitura. Atualização (04/10): o autor pediu custo mínimo de Arcano e/ou Grau atrelado a cada caixa de texto, habilidade ou ação; o texto mostra \"(3+ no Grau · Pague 2)\" antes da linha. Precisamos de 2 ícones para esse requisito (custo de Arcano e Grau mínimo), que também servem para cartas e efeitos.",
   "objetivo": "Um ícone por mecânica, para aparecer ao lado da palavra no texto das cartas, na aba Palavras-chave e no tutorial do site.",
   "formato": {
     "arquivo": "SVG (vetor), um por ícone, viewBox 0 0 64 64, sem texto embutido (o número fica no texto da carta)",
@@ -31,6 +31,18 @@
     "tutorial": "depois da entrega, o Claude também usa os ícones nos balões do tutorial"
   },
   "icones": [
+    {
+      "id": "requisito-grau",
+      "nome": "Requisito de Grau",
+      "oQueMostra": "o losango azul do Grau com um sinal de + e o número ao lado (mínimo de cartas no Grau para a linha acontecer)",
+      "ondeAparece": "no texto das cartas, no requisito entre parênteses: \"3+ no Grau\""
+    },
+    {
+      "id": "requisito-arcano",
+      "nome": "Custo de Arcano da linha",
+      "oQueMostra": "uma esfera de Arcano pequena com moldura de selo (custo pago na hora para a linha acontecer), com o número ao lado",
+      "ondeAparece": "no texto das cartas, no requisito entre parênteses: \"Pague 2)\""
+    },
     {
       "id": "suspender",
       "nome": "Suspender",

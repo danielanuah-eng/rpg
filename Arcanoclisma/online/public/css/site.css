@@ -279,3 +279,15 @@ body:has(#tela.cheia) .opinar-flutuante { display: none; }
 /* ícones das mecânicas no texto (js/icones.js; arte do GPT em /kit/icones/) */
 .icone-mecanica { display: inline-block; width: 1.25em; height: 1.25em; vertical-align: -0.28em; margin-right: .15em; object-fit: contain; }
 .tcg-card .rules .icone-mecanica { width: 1.35em; height: 1.35em; }
+.tcg-card .rules .lembrete { display: block; font-style: italic; opacity: .82; font-size: .9em; margin-top: .15em; }
+/* Editor: requisitos por linha (Grau mínimo e Arcano) */
+.editor-req { display: flex; flex-direction: column; gap: 6px; }
+.editor-req-linha { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; }
+.editor-req-linha input { width: 64px; }
+.editor-auto { color: var(--ouro, #e0bd6a); }
+.tcg-card .rules.texto-longo { font-size: calc(var(--card-w) * .036); line-height: 1.25; }
+.tcg-card .rules.texto-muito-longo { font-size: calc(var(--card-w) * .031); line-height: 1.2; }
+.tcg-card .rules.texto-enorme { font-size: calc(var(--card-w) * .027); line-height: 1.15; }
+.tcg-card .rules .lembrete { line-height: 1.15; }
+/* caixa de texto um pouco mais alta (usa o espaço vazio do pé da carta) para caber o texto e os lembretes */
+.tcg-card .rules { max-height: 12.5%; }

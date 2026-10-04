@@ -30,10 +30,10 @@ export const PALAVRAS_CHAVE = [
     ['Banir', 'A carta vai para a zona de banimento; algumas podem ser jogadas de lá depois.'],
     ['Reanimar', 'Um Aliado volta do cemitério para o campo.'],
     ['Olhar o topo', 'Olhe as cartas do topo do baralho, ponha algumas na mão e o resto no fundo.'],
-    ['Suspender (ativação)', 'Deite a carta para usar a habilidade dela; ela levanta no seu próximo Início.'],
+    ['Suspender (ativação)', 'Deite a carta para usar a habilidade dela; ela levanta no seu Final.'],
   ] },
   { grupo: 'Conjurador e itens', itens: [
-    ['Bloquear', 'Quando um inimigo ataca, um Aliado de pé ou o seu Conjurador pode entrar na frente; bloquear deita quem bloqueou.'],
+    ['Bloquear', 'Quando um inimigo ataca o seu Conjurador, Aliados de pé e o próprio Conjurador podem entrar na frente, um ou vários. Quem ataca distribui o dano entre eles e o que passar da Vida de cada um vai para o Conjurador; todos os bloqueadores causam dano ao atacante, mesmo os que morrem. Ataques a Aliados, Místicas e Estruturas não podem ser bloqueados. Quem bloqueia fica deitado até o seu Final.'],
     ['Canal', 'Item do Conjurador: Arma, Foco Arcano ou Transcritor. Só a Arma dá Ataque ao Conjurador.'],
     ['Foco Arcano', 'Canal que fortalece magias: suspenda o Conjurador e pague o custo; o próximo dano ou cura de uma Temporária sua neste turno fica maior.'],
     ['Transcritor', 'Canal que mexe no baralho e na mão: suspenda o Conjurador e pague o custo para olhar o topo ou comprar cartas.'],
@@ -45,6 +45,28 @@ export const PALAVRAS_CHAVE = [
     ['Extra', 'Item de apoio de uso único (ou temático da competência do Conjurador).'],
   ] },
 ];
+
+/** Lembrete curto (em itálico na carta) do que cada palavra-chave faz; pedido do autor, 04/10. */
+export const LEMBRETES = {
+  Proficiente: 'ataca e usa ativações no turno em que entra.',
+  Etéreo: 'só Aliados Etéreos o bloqueiam.',
+  Protegido: (n) => `mirar esta carta custa ${n} a mais ao oponente.`,
+  Repentina: 'pode ser jogada em resposta, até no turno do oponente.',
+  'Pagar para anular': (n) => `o oponente pode pagar ${n} de Arcano para que ela não resolva.`,
+};
+
+/** Lembretes da carta (palavras-chave dela, Protegido, Repentina e "pagar para anular"). */
+export function lembretesDe(d) {
+  if (!d) return [];
+  const l = [];
+  // o texto já explica a palavra entre parênteses ("Etéreo (só é bloqueado...)"): não repete
+  const jaExplica = (k) => (d.texto ?? '').includes(k) && /^\s*(\d+\s*)?\(/.test((d.texto ?? '').split(k)[1] ?? '');
+  for (const k of d.palavrasChave ?? []) if (typeof LEMBRETES[k] === 'string' && !jaExplica(k)) l.push(`${k}: ${LEMBRETES[k]}`);
+  if (d.protegido && !jaExplica('Protegido')) l.push(`Protegido ${d.protegido}: ${LEMBRETES.Protegido(d.protegido)}`);
+  if (d.velocidade === 'repentina' && d.tipo !== 'aliado') l.push(`Repentina: ${LEMBRETES.Repentina}`);
+  if (d.pagarParaAnular) l.push(`Pagar para anular ${d.pagarParaAnular}: ${LEMBRETES['Pagar para anular'](d.pagarParaAnular)}`);
+  return l;
+}
 
 /** HTML da lista (com âncoras), para a aba do site e a ajuda da mesa. */
 export function palavrasChaveHTML(esc) {

@@ -249,6 +249,7 @@ export class Partida extends DurableObject<Env> {
     let cmd: Comando;
     if (p?.tipo === 'escolherInicio') cmd = { tipo: 'escolherInicio', jogador: a, primeiro: a };
     else if (p?.tipo === 'bloqueio') cmd = { tipo: 'bloquear', jogador: a, bloqueador: null };
+    else if (p?.tipo === 'distribuirDano') cmd = { tipo: 'distribuirDano', jogador: a };
     else if (p?.tipo === 'descartar') cmd = { tipo: 'descartar', jogador: a, cartas: z.mao.slice(-p.quantidade) };
     else if (p?.tipo === 'pagarAnulacao') cmd = { tipo: 'pagarAnulacao', jogador: a, pagar: false };
     else if (p?.tipo === 'escolherDoTopo') cmd = { tipo: 'escolherDoTopo', jogador: a, cartas: p.cartas.slice(0, p.pegar) };

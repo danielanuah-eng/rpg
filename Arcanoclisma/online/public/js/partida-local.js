@@ -32,6 +32,8 @@ export function criarPartidaLocal(cfg) {
     revanche: cfg.revanche,
     parar() { clearTimeout(timer); ouvintes.clear(); },
   };
+  // modo de teste (?teste na URL): a partida fica acessível no console para conferir situações de jogo
+  if (location.search.includes('teste')) globalThis.partidaTeste = { fonte, mudou: () => mudou() };
   function aplicar(cmd) {
     try { executar(e, cmd); } catch (erro) { if (erro instanceof ErroRegra) return erro.message; throw erro; }
     comandos.push(cmd);
@@ -63,6 +65,7 @@ export function criarPartidaLocal(cfg) {
         // jogada inválida do bot: passa (ou a decisão mais segura da pendência)
         const p = e.pendencia;
         const seguro = p?.tipo === 'bloqueio' ? { tipo: 'bloquear', jogador: BOT, bloqueador: null }
+          : p?.tipo === 'distribuirDano' ? { tipo: 'distribuirDano', jogador: BOT }
           : p?.tipo === 'pagarAnulacao' ? { tipo: 'pagarAnulacao', jogador: BOT, pagar: false }
           : p?.tipo === 'escolherDoTopo' ? { tipo: 'escolherDoTopo', jogador: BOT, cartas: p.cartas.slice(0, p.pegar) }
           : p?.tipo === 'descartar' ? { tipo: 'descartar', jogador: BOT, cartas: e.jogadores[BOT].mao.slice(-p.quantidade) }

@@ -8,7 +8,15 @@ export type CategoriaItem = 'canal' | 'armadura' | 'extra';
 export type Velocidade = 'findante' | 'repentina';
 export type AlvoEfeito = 'escolhido' | 'escolhidoAliado' | 'conjuradorInimigo' | 'conjuradorProprio';
 
-export type Efeito =
+/**
+ * Requisito de uma linha de efeito, habilidade ou ação (pedido do autor, 04/10), definido no Editor:
+ * grau = mínimo de cartas no seu Grau para acontecer; arcano = Arcano pago na hora (reserva, depois Grau levantado).
+ * Sem cumprir, aquela linha não acontece (as outras da carta continuam).
+ */
+export interface Requisito { grau?: number; arcano?: number }
+
+export type Efeito = EfeitoBase & { requisito?: Requisito };
+type EfeitoBase =
   /** escalaGrau: soma ao dano o número de cartas na Zona de Grau de quem joga (remoção que cresce com o jogo). */
   | { tipo: 'dano'; valor: number; alvo: AlvoEfeito; escalaGrau?: boolean }
   /** Devolve a permanente alvo para a mão do dono (tempo). */
@@ -56,6 +64,8 @@ export interface Ativacao {
   danoNoConjurador?: number;
   /** Itens: o item vai para o cemitério depois de usado (padrão: só o Extra). */
   consome?: boolean;
+  /** Requisito da habilidade (04/10): Grau mínimo para ativar; o Arcano soma ao custo. */
+  requisito?: Requisito;
 }
 
 export interface Regras {
@@ -239,13 +249,20 @@ export type Pendencia =
   | { tipo: 'escolherInicio'; jogador: Jogador }
   | { tipo: 'descartar'; jogador: Jogador; quantidade: number }
   | { tipo: 'bloqueio'; jogador: Jogador }
+  /** Vários bloqueadores: quem ataca distribui o dano entre eles (decisão 20). */
+  | { tipo: 'distribuirDano'; jogador: Jogador }
   | { tipo: 'pagarAnulacao'; jogador: Jogador; custo: number; item: ItemPilha }
   | { tipo: 'escolherDoTopo'; jogador: Jogador; cartas: string[]; pegar: number };
 
 export interface Combate {
   atacante: string;
   alvo: string;
+  /** Primeiro bloqueador (compatibilidade com a interface); null sem bloqueio. */
   bloqueador: string | null;
+  /** Todos os bloqueadores (decisão 20: vários podem bloquear o mesmo ataque ao Conjurador). */
+  bloqueadores: string[];
+  /** Dano do atacante por bloqueador, escolhido por quem ataca; o excedente de cada um vai para o Conjurador. */
+  distribuicao?: Record<string, number>;
   /** Conjurador bloqueando: o dono escolheu usar a Armadura (padrão: usa). */
   usarArmadura?: boolean;
   etapa: 'declarado' | 'aguardandoBloqueio' | 'bloqueado';
@@ -288,7 +305,8 @@ export type Comando =
   | { tipo: 'suspenderGrau'; jogador: Jogador; carta: string }
   | { tipo: 'jogar'; jogador: Jogador; carta: string; alvo?: string; descartarGrau?: string[]; enviarArcano?: string[] }
   | { tipo: 'atacar'; jogador: Jogador; atacante: string; alvo: string; enviarArcano?: string[] }
-  | { tipo: 'bloquear'; jogador: Jogador; bloqueador: string | null; /** Conjurador bloqueando: usar a Armadura? Sem o campo, usa. */ usarArmadura?: boolean }
+  | { tipo: 'bloquear'; jogador: Jogador; /** Um bloqueador (null: não bloqueia). */ bloqueador?: string | null; /** Vários bloqueadores (decisão 20); vale no lugar de bloqueador. */ bloqueadores?: string[]; /** Conjurador bloqueando: usar a Armadura? Sem o campo, usa. */ usarArmadura?: boolean }
+  | { tipo: 'distribuirDano'; jogador: Jogador; /** Dano por bloqueador (soma = Ataque do atacante). Sem o campo: distribuição padrão, que derruba o máximo de bloqueadores. */ distribuicao?: Record<string, number> }
   | { tipo: 'descartar'; jogador: Jogador; cartas: string[] }
   | { tipo: 'ativar'; jogador: Jogador; carta: string; alvo?: string; enviarArcano?: string[]; /** Cartas da mão descartadas como custo (Ativacao.descartar). */ descartarCusto?: string[] }
   | { tipo: 'pagarAnulacao'; jogador: Jogador; pagar: boolean; enviarArcano?: string[] }

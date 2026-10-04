@@ -51,9 +51,9 @@ export function criarGanchosMesa({ raiz, conteudo, eu }) {
     if (c) {
       const ka = `a:${e.turno}:${c.atacante}`;
       if (!vistos.has(ka)) { vistos.add(ka); movimentos.set(c.atacante, { acao: 'attack', t0: agora, rival: e.instancias[c.atacante]?.dono !== eu }); }
-      if (c.bloqueador) {
-        const kb = `b:${e.turno}:${c.bloqueador}`;
-        if (!vistos.has(kb)) { vistos.add(kb); movimentos.set(c.bloqueador, { acao: 'block', t0: agora, rival: e.instancias[c.bloqueador]?.dono !== eu }); }
+      for (const b of c.bloqueadores ?? (c.bloqueador ? [c.bloqueador] : [])) {
+        const kb = `b:${e.turno}:${b}`;
+        if (!vistos.has(kb)) { vistos.add(kb); movimentos.set(b, { acao: 'block', t0: agora, rival: e.instancias[b]?.dono !== eu }); }
       }
     }
     aplicarMovimentos(e, agora);

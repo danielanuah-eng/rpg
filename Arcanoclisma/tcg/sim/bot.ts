@@ -214,10 +214,12 @@ function planejarJogada(e: Estado, j: Jogador, est: Estilo, apenasRepentinas: bo
   let melhor: { i: Intencao; custo: number; pitch: string[]; nota: number } | null = null;
   for (const id of candidatas(e, j)) {
     const d = defCarta(e, id);
-    const rep = d.velocidade === 'repentina';
+    const rep = d.velocidade === 'repentina' && d.tipo !== 'aliado'; // Aliado nunca é Repentina pelo tipo (decisão 21)
     if (apenasRepentinas && !rep) continue;
     if (!apenasRepentinas && rep && est.reservaInstantes) continue;
     if (d.grau > grauEfetivo(e, j) || (d.descartaGrau ?? 0) > z.grau.length) continue;
+    // custo de Valor: precisa de uma carta daquele Valor no Grau (senão o motor recusa a jogada)
+    if ((d.custoValores ?? []).some((v) => !z.grau.some((g) => defCarta(e, g).valores.includes(v)))) continue;
     // janela de combate: só serve dano que tira o inimigo do combate antes do dano (ele não chega a bater)
     const efc = d.efeitos?.[0];
     const it = alvoCombate
@@ -271,9 +273,10 @@ function planejarAtivacao(e: Estado, j: Jogador, est: Estilo): Comando | null {
   if (doConj) fontes.push([z.conjuradorId, doConj]);
   for (const [id, at] of fontes) {
     if ((at.suspende && (e.instancias[id].suspensa || recemChegado(e, id))) || at.efeitos.every((ef) => ef.tipo === 'arcano')) continue;
+    if (at.requisito?.grau && grauEfetivo(e, j) < at.requisito.grau) continue; // requisito do Editor (04/10)
     const ef = at.efeitos[0];
     let alvo: string | undefined;
-    let necessario = at.custo;
+    let necessario = at.custo + (at.requisito?.arcano ?? 0);
     if (ef.tipo === 'comprar' || ef.tipo === 'olharTopo') { if (z.mao.length > 5) continue; }
     else if (ef.tipo === 'devolver') {
       // piscar um Aliado seu: reaproveita "ao entrar" ou salva um Aliado valioso machucado
@@ -326,14 +329,16 @@ function planejarDesconto(e: Estado, j: Jogador, est: Estilo): Comando | null {
   const at = defConjurador(e, j).poder?.ativacao;
   if (!at || !at.efeitos.some((ef) => ef.tipo === 'descontoProximaCarta')) return null;
   if (e.instancias[z.conjuradorId].suspensa || e.habUsos[j].carta || e.habUsos[j].desconto) return null;
+  if (at.requisito?.grau && grauEfetivo(e, j) < at.requisito.grau) return null;
   if (!planejarJogada(e, j, est, false, undefined, 0)) return null;
-  if (at.custo > 0) {
+  const custoTotal = at.custo + (at.requisito?.arcano ?? 0);
+  if (custoTotal > 0) {
     // habilidade paga (editor do autor): só vale a pena se o desconto for maior que o custo, e é preciso ter o Arcano
     const desconto = at.efeitos.reduce((s, ef) => s + (ef.tipo === 'descontoProximaCarta' ? ef.valor : 0), 0);
-    if (desconto <= at.custo) return null;
+    if (desconto <= custoTotal) return null;
     const disponivel = z.arcano + grauUsavel(e, j).length + manaPerm(e, j).reduce((t, id) => t + valorMana(e, id), 0);
-    if (disponivel < at.custo + 1) return null;
-    if (z.arcano < at.custo) {
+    if (disponivel < custoTotal + 1) return null;
+    if (z.arcano < custoTotal) {
       const mana = manaPerm(e, j)[0];
       if (mana) return { tipo: 'ativar', jogador: j, carta: mana };
       return { tipo: 'suspenderGrau', jogador: j, carta: grauUsavel(e, j)[0] };
@@ -383,6 +388,8 @@ function planejarAtaqueConj(e: Estado, j: Jogador, est: Estilo): Comando | null 
 
 function decidirAnulacao(e: Estado, j: Jogador, custo: number, instId: string, alvoEscolhido?: string): Comando {
   const z = e.jogadores[j];
+  // na visão online a carta pode não ter chegado (fora da pilha): sem saber o que é, não paga
+  if (!e.instancias[instId] || e.instancias[instId].ehConjurador || e.instancias[instId].defId === 'oculta') return { tipo: 'pagarAnulacao', jogador: j, pagar: false };
   const d = defCarta(e, instId);
   const ef = d.efeitos?.[0];
   let pagar = false;
@@ -453,11 +460,11 @@ function planejarAtaque(e: Estado, j: Jogador, est: Estilo): Comando | null {
   return est.atacaAliados ? ataqueAoAliado(e, j, est, disponiveis) : null;
 }
 
-/** Ataca um Aliado ou Mística inimiga quando mata o alvo e sai bem da troca, prevendo o bloqueio. */
+/** Ataca um Aliado, Mística ou Estrutura inimiga quando mata o alvo e sai bem da troca (esses ataques não podem ser bloqueados). */
 function ataqueAoAliado(e: Estado, j: Jogador, est: Estilo, disponiveis: string[]): Comando | null {
   const adv = e.jogadores[outro(j)];
   const alvos = adv.campo
-    .filter((id) => ['aliado', 'mistica'].includes(defCarta(e, id).tipo) && defCarta(e, id).vida !== undefined)
+    .filter((id) => ['aliado', 'mistica', 'estrutura'].includes(defCarta(e, id).tipo) && (defCarta(e, id).vida ?? 0) > 0)
     .sort((x, y) => valorPerm(e, y) - valorPerm(e, x));
   const atacantes = disponiveis.filter((a) => podeAtacar(e, a) && atk(e, a) > 0 && !(est.lento && defCarta(e, a).grau < 6));
   for (const x of alvos) {
@@ -479,6 +486,7 @@ function escolherBloqueador(e: Estado, j: Jogador, atacante: string, alvo: strin
   const z = e.jogadores[j];
   const forca = atk(e, atacante);
   const alvoEhMeuConj = alvo === z.conjuradorId;
+  if (!alvoEhMeuConj) return null; // decisão 20: só se bloqueia ataque ao Conjurador
   const letal = alvoEhMeuConj && vidaRest(e, alvo) <= forca;
   const opcoes = [...z.campo.filter((id) => ehAliado(e, id)), z.conjuradorId].filter((id) => !e.instancias[id].suspensa && (!etereo(e, atacante) || etereo(e, id)));
   const ehConj = (id: string) => id === z.conjuradorId;
@@ -498,7 +506,28 @@ function escolherBloqueador(e: Estado, j: Jogador, atacante: string, alvo: strin
 
 function decidirBloqueio(e: Estado, j: Jogador): Comando {
   const c = e.combate!;
-  return { tipo: 'bloquear', jogador: j, bloqueador: escolherBloqueador(e, j, c.atacante, c.alvo) };
+  const primeiro = escolherBloqueador(e, j, c.atacante, c.alvo);
+  if (primeiro === null || e.instancias[primeiro].ehConjurador) return { tipo: 'bloquear', jogador: j, bloqueador: primeiro };
+  // Bloqueio em grupo (decisão 20): junta Aliados quando, juntos, derrubam o atacante, ou quando o ataque seria letal
+  // (o dano que passa da vida dos bloqueadores vai para o Conjurador).
+  const z = e.jogadores[j];
+  const forca = atk(e, c.atacante);
+  const letal = vidaRest(e, z.conjuradorId) <= forca;
+  const extras = z.campo
+    .filter((id) => id !== primeiro && ehAliado(e, id) && !e.instancias[id].suspensa && (!etereo(e, c.atacante) || etereo(e, id)))
+    .sort((x, y) => valorPerm(e, x) - valorPerm(e, y));
+  const grupo = [primeiro];
+  const soma = (f: (id: string) => number) => grupo.reduce((t, id) => t + f(id), 0);
+  for (const b of extras) {
+    const mata = soma((id) => atk(e, id)) >= vidaRest(e, c.atacante);
+    const absorve = soma((id) => vidaRest(e, id)) >= forca;
+    if (mata && (absorve || !letal)) break;
+    if (!mata && !letal && valorPerm(e, b) > valorPerm(e, c.atacante)) continue;
+    grupo.push(b);
+  }
+  // só fica com o grupo se ele derruba o atacante ou segura um ataque letal; senão, o bloqueio simples
+  const vale = soma((id) => atk(e, id)) >= vidaRest(e, c.atacante) || (letal && soma((id) => vidaRest(e, id)) > 0);
+  return vale && grupo.length > 1 ? { tipo: 'bloquear', jogador: j, bloqueadores: grupo } : { tipo: 'bloquear', jogador: j, bloqueador: primeiro };
 }
 
 export function decidir(e: Estado, j: Jogador, est: Estilo): Comando {
@@ -515,6 +544,7 @@ export function decidir(e: Estado, j: Jogador, est: Estilo): Comando {
       const nota = (id: string) => { const d = defCarta(e, id); return valorCarta(d, z.grau.length) - (d.grau > g + 1 ? 6 : 0) - (d.custo === 0 ? 4 : 0); };
       return { tipo: 'escolherDoTopo', jogador: j, cartas: [...pend.cartas].sort((a, b) => nota(b) - nota(a)).slice(0, pend.pegar) };
     }
+    if (pend.tipo === 'distribuirDano') return { tipo: 'distribuirDano', jogador: j }; // padrão: derruba o máximo de bloqueadores
     return decidirBloqueio(e, j);
   }
   const passar: Comando = { tipo: 'passar', jogador: j };
@@ -532,7 +562,7 @@ export function decidir(e: Estado, j: Jogador, est: Estilo): Comando {
     }
     let reserva = 0;
     if (est.reservaInstantes) {
-      const custos = z.mao.map((id) => defCarta(e, id)).filter((d) => d.velocidade === 'repentina' && d.grau <= z.grau.length).map((d) => d.custo);
+      const custos = z.mao.map((id) => defCarta(e, id)).filter((d) => d.velocidade === 'repentina' && d.tipo !== 'aliado' && d.grau <= z.grau.length).map((d) => d.custo);
       if (custos.length && Math.min(...custos) <= z.grau.length) reserva = Math.min(...custos);
     }
     return planejarDesconto(e, j, est) ?? planejarJogada(e, j, est, false, undefined, reserva) ?? planejarAtivacao(e, j, est) ?? planejarAtaque(e, j, est) ?? planejarAtaqueConj(e, j, est) ?? passar;

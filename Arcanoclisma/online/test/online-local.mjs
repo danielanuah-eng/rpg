@@ -25,29 +25,32 @@ function jogador(nome, cookie, salaId, baralho) {
     const ws = new WebSocket(`${BASE.replace('http', 'ws')}/api/partida/${salaId}/ws?baralho=${baralho}`, { headers: { cookie } });
     let ultimo = null, enviados = 0, erros = 0;
     const estilo = DADOS.baralhos.find((b) => `pronto:${b.conjurador}` === baralho).estilo;
+    let vigia = null;
+    const vigiar = () => { clearTimeout(vigia); vigia = setTimeout(() => { const e = ultimo?.estado; console.log('PARADO', nome, JSON.stringify({ status: ultimo?.status, eu: ultimo?.eu, pend: e?.pendencia, prio: e?.prioridade, ativo: e?.ativo, etapa: e?.etapa, pilha: e?.pilha?.length, combate: e?.combate, log: e?.log?.slice(-6) })); }, 30000); };
     ws.onmessage = (ev) => {
+      vigiar();
       const m = JSON.parse(ev.data);
       if (m.t === 'erro') {
-        erros++;
+        erros++; console.log("erro do servidor:", m.msg);
         if (m.fatal) falha(new Error(m.msg));
         // jogada recusada pelo servidor: passa (ou decide a pendência do jeito mais simples)
         const e = ultimo?.estado; if (!e) return;
         const p = e.pendencia;
         const eu = ultimo.eu;
-        const cmd = p?.jogador === eu ? ({ bloqueio: { tipo: 'bloquear', bloqueador: null }, pagarAnulacao: { tipo: 'pagarAnulacao', pagar: false }, escolherDoTopo: { tipo: 'escolherDoTopo', cartas: p.cartas?.slice(0, p.pegar) }, descartar: { tipo: 'descartar', cartas: e.jogadores[eu].mao.slice(-p.quantidade) }, escolherInicio: { tipo: 'escolherInicio', primeiro: eu } })[p.tipo] : { tipo: 'passar' };
+        const cmd = p?.jogador === eu ? ({ bloqueio: { tipo: 'bloquear', bloqueador: null }, distribuirDano: { tipo: 'distribuirDano' }, pagarAnulacao: { tipo: 'pagarAnulacao', pagar: false }, escolherDoTopo: { tipo: 'escolherDoTopo', cartas: p.cartas?.slice(0, p.pegar) }, descartar: { tipo: 'descartar', cartas: e.jogadores[eu].mao.slice(-p.quantidade) }, escolherInicio: { tipo: 'escolherInicio', primeiro: eu } })[p.tipo] : { tipo: 'passar' };
         ws.send(JSON.stringify({ t: 'cmd', cmd }));
         return;
       }
       if (m.t !== 'estado') return;
       ultimo = m;
-      if (m.status === 'fim') { ws.close(); ok({ nome, eu: m.eu, vencedor: m.vencedor, motivo: m.motivo, turnos: m.estado?.turno, enviados, erros, oculto: contarOcultas(m), edicoes: m.edVersao }); return; }
+      if (m.status === 'fim') { clearTimeout(vigia); ws.close(); ok({ nome, eu: m.eu, vencedor: m.vencedor, motivo: m.motivo, turnos: m.estado?.turno, enviados, erros, oculto: contarOcultas(m), edicoes: m.edVersao }); return; }
       const e = m.estado;
       if (!e) return;
       e.catalogo = DADOS.catalogo;
       const ator = e.pendencia ? e.pendencia.jogador : e.prioridade;
       if (ator !== m.eu || e.vencedor !== null) return;
       let cmd;
-      try { cmd = decidir(e, m.eu, estilo); } catch { cmd = { tipo: 'passar', jogador: m.eu }; }
+      try { cmd = decidir(e, m.eu, estilo); } catch (err) { console.log('decidir falhou:', e.pendencia?.tipo, String(err).slice(0, 200)); cmd = { tipo: 'passar', jogador: m.eu }; }
       enviados++;
       ws.send(JSON.stringify({ t: 'cmd', cmd }));
     };

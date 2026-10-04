@@ -103,8 +103,9 @@ function medir(e: Estado, cmd: Comando, m: [Jog, Jog]): void {
       if (entrouAgora) m[j].proficienteAoEntrar++;
     }
   } else if (cmd.tipo === 'bloquear') {
-    if (cmd.bloqueador === null) m[j].semBloqueio++;
-    else if (e.instancias[cmd.bloqueador].ehConjurador) m[j].bloqueiosConj++;
+    const bl = cmd.bloqueadores?.[0] ?? cmd.bloqueador ?? null;
+    if (bl === null) m[j].semBloqueio++;
+    else if (e.instancias[bl].ehConjurador) m[j].bloqueiosConj++;
     else m[j].bloqueiosAliado++;
   }
 }

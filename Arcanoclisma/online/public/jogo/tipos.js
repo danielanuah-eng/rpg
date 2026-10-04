@@ -9,7 +9,15 @@
                                                   
                                                                                                      
 
-                    
+/**
+ * Requisito de uma linha de efeito, habilidade ou ação (pedido do autor, 04/10), definido no Editor:
+ * grau = mínimo de cartas no seu Grau para acontecer; arcano = Arcano pago na hora (reserva, depois Grau levantado).
+ * Sem cumprir, aquela linha não acontece (as outras da carta continuam).
+ */
+                                                             
+
+                                                            
+                 
                                                                                                                   
                                                                            
                                                               
@@ -57,6 +65,8 @@
                             
                                                                                  
                     
+                                                                                          
+                        
  
 
                          
@@ -240,13 +250,20 @@
                                                 
                                                                
                                           
+                                                                                  
+                                                
                                                                                
                                                                                   
 
                           
                    
                
+                                                                                  
                             
+                                                                                                
+                         
+                                                                                                                 
+                                        
                                                                               
                          
                                                           
@@ -289,7 +306,8 @@
                                                               
                                                                                                                         
                                                                                                  
-                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                       
                                                              
                                                                                                                                                                                             
                                                                                         

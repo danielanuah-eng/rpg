@@ -5,6 +5,7 @@
 import { $, $$, esc, api, DADOS, BASE, EDICOES, VALOR, TIPO, textoCarta, sessao, avisar, janela, local, usarEdicoes, carregarEdicoes, dataCurta } from './base.js';
 import { desenharCarta, modeloCarta, modeloConjurador } from './carta.js';
 import { edicoesVazias } from '/jogo/edicoes.js';
+import { descEfeito } from '/jogo/textos.js';
 
 const VALORES = Object.keys(VALOR);
 const COMPROMETIMENTOS = ['Invocador', 'Brigão', 'Parrudão da quebrada', 'Habilidoso', 'Preparado'];
@@ -13,7 +14,54 @@ const NUM_CONJ = [['vida', 'Vida'], ['maoInicial', 'Mão inicial'], ['compraFina
 /** Campos de mecânica editados como JSON. */
 const MEC_CARTA = ['efeitos', 'aoEntrar', 'aoDanoConjurador', 'ativacao', 'custoValores'];
 const igual = (a, b) => JSON.stringify(a ?? null) === JSON.stringify(b ?? null);
+/** Números citados no texto (efeitos, gatilhos, ativação, Protegido, pagar para anular, descarte do Grau; poder do Conjurador). */
+const NUM_TEXTO_CARTA = [...MEC_CARTA, 'protegido', 'pagarParaAnular', 'descartaGrau', 'grauExtra'];
+/** Caminho → número de cada valor numérico dentro dos campos indicados. */
+function numerosDe(obj, campos) {
+  const r = new Map();
+  const andar = (v, cam) => {
+    if (typeof v === 'number') r.set(cam, v);
+    else if (Array.isArray(v)) v.forEach((x, i) => andar(x, `${cam}[${i}]`));
+    else if (v && typeof v === 'object') for (const [k, x] of Object.entries(v)) andar(x, `${cam}.${k}`);
+  };
+  for (const k of campos) andar(obj?.[k], k);
+  return r;
+}
+/**
+ * Atualização automática do texto escrito pelo autor (pedido de 04/10): cada número da mecânica que mudou
+ * é trocado no texto quando aparece uma vez só; senão, avisa para conferir. Devolve { texto, avisos }.
+ */
+function atualizarNumerosNoTexto(texto, antes, depois, campos) {
+  const a = numerosDe(antes, campos), d = numerosDe(depois, campos);
+  const avisos = [];
+  let t = texto;
+  for (const [cam, novo] of d) {
+    const velho = a.get(cam);
+    if (velho === undefined || velho === novo) continue;
+    const re = new RegExp(String.raw`(?<![\d.,])${velho}(?![\d]|[.,]\d)`, 'g');
+    const n = (t.match(re) ?? []).length;
+    if (n === 1) t = t.replace(re, String(novo));
+    else avisos.push(n === 0 ? `${cam}: ${velho} → ${novo} (o número não aparece no texto)` : `${cam}: ${velho} → ${novo} (o ${velho} aparece ${n} vezes; confira)`);
+  }
+  return { texto: t, avisos };
+}
 const CHAVE_RASCUNHO = 'editor:rascunho';
+/** Linhas que aceitam requisito (Grau mínimo e Arcano): cada efeito, cada gatilho e cada habilidade ativada. */
+function linhasComRequisito(mec, conjur) {
+  const l = [];
+  const efs = (lista, cam, rot) => (lista ?? []).forEach((ef, i) => l.push({ cam: `${cam}.${i}`, rot: `${rot} ${i + 1}: ${descEfeito({ ...ef, requisito: undefined })}`, req: ef.requisito }));
+  if (conjur) {
+    if (mec.poder?.ativacao) { l.push({ cam: 'poder.ativacao', rot: 'Habilidade ativada (inteira)', req: mec.poder.ativacao.requisito }); efs(mec.poder.ativacao.efeitos, 'poder.ativacao.efeitos', 'Habilidade, efeito'); }
+    efs(mec.poder?.gatilho?.efeitos, 'poder.gatilho.efeitos', 'Gatilho, efeito');
+  } else {
+    efs(mec.efeitos, 'efeitos', 'Efeito');
+    efs(mec.aoEntrar, 'aoEntrar', 'Ao entrar');
+    efs(mec.aoDanoConjurador, 'aoDanoConjurador', 'Ao causar dano ao Conjurador');
+    if (mec.ativacao) { l.push({ cam: 'ativacao', rot: 'Ativação (inteira)', req: mec.ativacao.requisito }); efs(mec.ativacao.efeitos, 'ativacao.efeitos', 'Ativação, efeito'); }
+  }
+  return l;
+}
+const pegarCam = (obj, cam) => cam.split('.').reduce((o, k) => o?.[k], obj);
 
 let ARTES = null;
 const artes = async () => (ARTES ??= await (await fetch('/jogo/artes.json')).json());
@@ -77,6 +125,7 @@ export async function telaEditor(tela, partes, ctx) {
   // ---------- formulário ----------
   const numCampo = (k, rot, v) => `<label class="campo campo-num">${rot}<input type="number" step="1" data-num="${k}" value="${v ?? ''}" placeholder="—"></label>`;
   function desenharForm() {
+    delete form.dataset.textoAuto;
     if (!sel) { form.innerHTML = '<p class="vazio">Escolha uma carta ou um Conjurador na lista.</p>'; preview.innerHTML = ''; return; }
     const [t, id] = [sel.slice(0, 1), sel.slice(2)];
     const conjur = t === 'j';
@@ -94,14 +143,48 @@ export async function telaEditor(tela, partes, ctx) {
       <div class="campo"><span>Valores</span><div class="editor-valores">${VALORES.map((v) => `<label class="opcao-linha"><input type="checkbox" data-valor="${v}" ${c.valores.includes(v) ? 'checked' : ''}> ${esc(VALOR[v])}</label>`).join('')}</div></div>
       ${conjur
         ? `<label class="campo">Comprometimento<select data-f="comprometimento">${COMPROMETIMENTOS.map((x) => `<option ${x === c.comprometimento ? 'selected' : ''}>${esc(x)}</option>`).join('')}</select></label>`
+        : c.tipo === 'aliado'
+        ? `<label class="campo">Velocidade<select data-f="velocidade" disabled><option value="findante" selected>Findante (todo Aliado; Repentina só como parte de um efeito)</option></select></label>
+           <label class="campo">Palavras-chave (separadas por vírgula)<input type="text" data-f="palavrasChave" value="${esc((c.palavrasChave ?? []).join(', '))}" placeholder="Proficiente, Etéreo"></label>
+           <label class="campo">Subtipos (separados por vírgula)<input type="text" data-f="subtipos" value="${esc((c.subtipos ?? []).join(', '))}"></label>`
         : `<label class="campo">Velocidade<select data-f="velocidade"><option value="findante" ${c.velocidade === 'findante' ? 'selected' : ''}>Findante (na sua fase principal)</option><option value="repentina" ${c.velocidade === 'repentina' ? 'selected' : ''}>Repentina (a qualquer momento)</option></select></label>
            <label class="campo">Palavras-chave (separadas por vírgula)<input type="text" data-f="palavrasChave" value="${esc((c.palavrasChave ?? []).join(', '))}" placeholder="Proficiente, Etéreo"></label>
            <label class="campo">Subtipos (separados por vírgula)<input type="text" data-f="subtipos" value="${esc((c.subtipos ?? []).join(', '))}"></label>`}
       <label class="campo">Mecânica em JSON (${conjur ? 'poder' : MEC_CARTA.join(', ')})<textarea class="editor-json" data-json spellcheck="false">${esc(JSON.stringify(mec, null, 2))}</textarea></label>
       <p class="peq editor-json-erro" data-json-erro></p>
+      <div class="campo"><span>Requisitos por linha (Grau mínimo e Arcano a pagar; sem cumprir, a linha não acontece)</span><div class="editor-req" data-req-lista></div></div>
+      <p class="peq editor-auto" data-auto-aviso></p>
       <div class="linha-botoes"><button class="botao perigo peq" data-desfazer>Desfazer as mudanças desta ${conjur ? 'Conjurador' : 'carta'}</button></div>`;
+    desenharRequisitos();
     desenharPreview();
   }
+  function desenharRequisitos() {
+    const caixa = $('[data-req-lista]', form);
+    if (!caixa) return;
+    let mec;
+    try { mec = JSON.parse($('[data-json]', form).value || '{}'); } catch { return; }
+    const linhas = linhasComRequisito(mec, sel.startsWith('j:'));
+    caixa.innerHTML = linhas.length ? linhas.map((x) => `<div class="editor-req-linha"><span class="peq">${esc(x.rot)}</span>
+      <label>Grau <input type="number" min="0" step="1" data-req="${x.cam}" data-req-k="grau" value="${x.req?.grau ?? ''}" placeholder="—"></label>
+      <label>Arcano <input type="number" min="0" step="1" data-req="${x.cam}" data-req-k="arcano" value="${x.req?.arcano ?? ''}" placeholder="—"></label></div>`).join('') : '<p class="peq">Esta carta não tem efeitos nem habilidades.</p>';
+  }
+  /** Mudou um requisito: grava no JSON da mecânica (que o motor lê) e aplica na hora. */
+  form.addEventListener('input', (ev) => {
+    const inp = ev.target.closest('[data-req]');
+    if (!inp) return;
+    ev.stopImmediatePropagation();
+    const caixa = $('[data-json]', form);
+    let mec;
+    try { mec = JSON.parse(caixa.value || '{}'); } catch { return; }
+    const alvo = pegarCam(mec, inp.dataset.req);
+    if (!alvo) return;
+    const req = { ...(alvo.requisito ?? {}) };
+    const v = inp.value === '' ? 0 : Math.max(0, Math.trunc(Number(inp.value)));
+    if (v) req[inp.dataset.reqK] = v; else delete req[inp.dataset.reqK];
+    if (Object.keys(req).length) alvo.requisito = req; else delete alvo.requisito;
+    caixa.value = JSON.stringify(mec, null, 2);
+    clearTimeout(espera); espera = setTimeout(lerForm, 350);
+  }, true);
   function desenharPreview() {
     const [t, id] = [sel.slice(0, 1), sel.slice(2)];
     const m = t === 'j' ? modeloConjurador(id) : modeloCarta(id);
@@ -113,11 +196,26 @@ export async function telaEditor(tela, partes, ctx) {
     const [t, id] = [sel.slice(0, 1), sel.slice(2)];
     const conjur = t === 'j';
     const base = conjur ? BASE.catalogo.conjuradores[id] : BASE.catalogo.cartas[id];
+    const antes = structuredClone(conjur ? DADOS.catalogo.conjuradores[id] : DADOS.catalogo.cartas[id]);
     const novo = {};
     for (const el of $$('[data-f]', form)) {
       const k = el.dataset.f;
       novo[k] = ['palavrasChave', 'subtipos'].includes(k) ? el.value.split(',').map((x) => x.trim()).filter(Boolean) : el.value;
     }
+    const avisoAuto = [];
+    // Aliado nunca é Repentina pelo tipo, subtipo ou palavra-chave (decisão 21); só como parte de um efeito
+    if (!conjur && base.tipo === 'aliado') {
+      novo.velocidade = base.velocidade === 'repentina' ? 'findante' : base.velocidade;
+      for (const k of ['palavrasChave', 'subtipos']) {
+        const sem = novo[k].filter((x) => !/^repentin/i.test(x));
+        if (sem.length !== novo[k].length) avisoAuto.push('Aliado não pode ser Repentina (só como parte de um efeito): tirei "Repentina" de ' + (k === 'subtipos' ? 'subtipos' : 'palavras-chave') + '.');
+        if (sem.length !== novo[k].length) $(`[data-f="${k}"]`, form).value = sem.join(', ');
+        novo[k] = sem;
+      }
+    }
+    // texto que o editor escreveu sozinho (gerado da mecânica) não conta como texto do autor
+    const campoTxt = conjur ? 'habilidade' : 'texto';
+    if (form.dataset.textoAuto !== undefined && novo[campoTxt] === form.dataset.textoAuto) novo[campoTxt] = base[campoTxt];
     if (!conjur && !novo.palavrasChave.length) novo.palavrasChave = undefined;
     for (const el of $$('[data-num]', form)) novo[el.dataset.num] = el.value === '' ? undefined : Math.trunc(Number(el.value));
     novo.valores = $$('[data-valor]', form).filter((x) => x.checked).map((x) => x.dataset.valor);
@@ -140,13 +238,29 @@ export async function telaEditor(tela, partes, ctx) {
     const grupo = conjur ? rascunho.conjuradores : rascunho.cartas;
     if (Object.keys(parcial).length) grupo[id] = parcial; else delete grupo[id];
     aplicarRascunho();
+    // Atualização automática (pedido do autor, 04/10): mudou um número da mecânica → o texto acompanha.
+    const depois = conjur ? DADOS.catalogo.conjuradores[id] : DADOS.catalogo.cartas[id];
+    const caixa = $(`[data-f="${campoTxt}"]`, form);
+    if (grupo[id] && campoTxt in grupo[id]) {
+      // texto escrito pelo autor: troca os números que mudaram
+      const r = atualizarNumerosNoTexto(grupo[id][campoTxt], antes, depois, conjur ? ['poder'] : NUM_TEXTO_CARTA);
+      if (r.texto !== grupo[id][campoTxt]) { grupo[id][campoTxt] = r.texto; caixa.value = r.texto; aplicarRascunho(); avisoAuto.push('Números do texto atualizados sozinhos.'); }
+      if (r.avisos.length) avisoAuto.push('Confira o texto: ' + r.avisos.join('; ') + '.');
+      delete form.dataset.textoAuto;
+    } else if (!conjur && caixa && caixa.value !== depois.texto && document.activeElement !== caixa) {
+      // texto automático: mostra o texto novo gerado da mecânica
+      caixa.value = depois.texto; form.dataset.textoAuto = depois.texto;
+      avisoAuto.push('Texto gerado de novo a partir da mecânica.');
+    }
+    const av = $('[data-auto-aviso]', form);
+    if (av) av.textContent = avisoAuto.join(' ');
     desenharPreview();
     desenharLista();
     desenharEstado();
   }
   let espera = null;
   form.addEventListener('input', () => { clearTimeout(espera); espera = setTimeout(lerForm, 350); });
-  form.addEventListener('change', () => { clearTimeout(espera); lerForm(); });
+  form.addEventListener('change', (ev) => { clearTimeout(espera); lerForm(); if (ev.target.matches('[data-json]')) desenharRequisitos(); });
   form.addEventListener('click', async (ev) => {
     const [t, id] = sel ? [sel.slice(0, 1), sel.slice(2)] : [];
     if (ev.target.closest('[data-desfazer]')) {
