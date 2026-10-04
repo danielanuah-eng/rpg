@@ -1,0 +1,36 @@
+{
+  "id": "nv-estalagem-de-vau",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-0c1ce5da-420f-4f71-aedc-2c74098371df.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nESTALAGEM DE VAU GRANDE common Dominum STRUCTURE4life, suspendandPAY1 healTWOdamageYOUR OWNCONJURADOR. Actual cardPLACE primary, source INNKEEPER visible recognizable supportingresident: broadfatoliveadultman tousleddarkbrownhair thickcurlmustache/beard, jovialexpression creamshirttealvest creamworkapron rustwaisttowel browntrousersleatherboots. NEWpose leaningfrombehindcounter midLEFT, twohands carry warmstewbowl toONE wearyalliedadultconjurador longpurplebraid brownskinnavycoat bigbookandwaistorb sittingRIGHT withbandagedforearm. Faceofinnkeeper watchesguest/bowl, not sourcefrontal mugarmsopenpose. Sourcecommonperson doesnot becomeattackwizard: building/counter enchantedwith a small BLOODPURPLE sealwrappedhealingribbonaroundguestforearm, ONEspentpurpleArcanopearl bybowl. Guestsafety ordinaryclosedclothingnogore. WIDE3/4highcamera frominnentrance: entirewarmrustplaster/timberroof dininghall, beamsandroughonlysmallwooddetail, fireplaceleft smallquietflame, 3tables variedadults, stairtoprooms, broadwindowpastguestshowingharborfortoutside rainwashedafternoon. No whiteportraitblank/duplicate characterwithnewbackgroundpaste, muchsceneryandforegroundfloor. Warmocrebalanceddeepnavyshadow, localizedpurplemagic notDominumreflect/lockeffect. Noresurrectionorallpatronshealed.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/estalajadeiro-de-vau-grande.png",
+  "textoRegraLido": "Suspenda e pague 1: cure 2 de dano do seu Conjurador.",
+  "valoresLidos": [
+    "dominum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/estalajadeiro-de-vau-grande.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Salão da estalagem com balcão, mesas, lareira, escada para quartos e janela para Vau-Grande",
+  "momentoDoDia": "Tarde",
+  "clima": "Chuva vista pela janela",
+  "escala": "Estalajadeiro e conjuradora próximos, clientes e edifícios distantes",
+  "avaliacaoVisual": "Identidade e roupa do estalajadeiro preservadas em gesto novo de servir refeição. Conjuradora recebe cura roxo-sangue no antebraço e uma esfera de custo fica sobre a mesa. Ambiente completo, brilho local.",
+  "decisoes": [
+    "Dominum Estrutura suspende e paga um para curar dois do próprio Conjurador, sem cura de todos os clientes.",
+    "O estalajadeiro comum permanece morador da estrutura, sem converter sua ficha RPG em mago de ataque."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

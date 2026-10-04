@@ -1,16 +1,8 @@
 {
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 192,
+  "concluidas": 200,
   "pendentes": [
-    "nv-o-postulario",
-    "nv-brejo-alto",
-    "nv-patio-de-duelos",
-    "nv-porto-de-vidro",
-    "nv-mercado-de-feras",
-    "nv-casas-de-sarn",
-    "nv-estalagem-de-vau",
-    "nv-vila-do-mesmo-dia",
     "nv-floresta-que-anda",
     "base-recurso--cognitium",
     "base-recurso--conflituo",

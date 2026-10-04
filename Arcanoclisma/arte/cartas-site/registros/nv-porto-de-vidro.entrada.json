@@ -1,0 +1,36 @@
+{
+  "id": "nv-porto-de-vidro",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-a3492e52-14e6-486e-885a-5d772609f08c.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nO PORTO DE VIDRO common Sublimeyn STRUCTURE3life, suspendGAINONEArcano. Existing workshopsreuseandremelteverything, mutablegracefulportglassBLUE/tealpanels with oldbronze framework leafshapedverticalroofglasscentralhall, workingcraneswood pierssailboats, orangefurnaces ONLYsmall localized. NEW perspective fromINSIDEGLASSWORKSHOP nearlargeopenarchedwindow, foregroundcorner right tallbrassclamped glasssheets gentlycurving/reforging, one adultorcglassworkerwithgrayhairtiedback utilityclosedivoryshirt/darkapron, handgathersONE mercurySILVERorb froma calmglassbasin onworkbench. Placebodyfactoryharbor PRIMARY beyondwindow: tallleafroofglasshall centreLEFT, boatsdifferentnear/farpositions, crane loadinga recycled glassslabontooneboat, broadquietbluegraywater to horizon withlowclouddawnmorning. Noqueenportraitnewidentity/no army/battle, vanityandtransformation expressedthrougharchitecture notfiringlaser. Smooth translucentglassyplanesandoldbronze notbrightgoldluminousframe, beamskeepviewopen, clothnavy/rustlocal unchanged. TransparentglasslookWITHINoverallOPAQUEimage, no whiteemptybackground/isometriccutout. Daycalm variedworkerssmall throughpiers, fullnewunifiedscene.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/o-porto-de-vidro.png",
+  "textoRegraLido": "Suspenda: ganhe 1 de Arcano.",
+  "valoresLidos": [
+    "sublimeyn"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/o-porto-de-vidro.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Oficina de vidro aberta para o porto, gruas, barcos, galpões e salão de cobertura em folhas de vidro",
+  "momentoDoDia": "Manhã",
+  "clima": "Claro com nuvens",
+  "escala": "Vidreiro próximo, porto e embarcações em vários planos",
+  "avaliacaoVisual": "Vista através da oficina com vidro azul e bronze envelhecido; trabalhador orc molda uma esfera prateada junto à bacia. Barcos e gruas em funcionamento, fundo completo e luz controlada.",
+  "decisoes": [
+    "Sublimeyn Estrutura suspende para gerar um Arcano; os demais objetos esféricos são peças de vidro, sem geração extra.",
+    "Preservar reciclagem e transformação do porto sem criar ataque ou personagem jogável novo."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

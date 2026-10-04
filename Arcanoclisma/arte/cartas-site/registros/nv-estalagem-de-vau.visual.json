@@ -1,0 +1,66 @@
+{
+  "id": "nv-estalagem-de-vau",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-0c1ce5da-420f-4f71-aedc-2c74098371df.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-estalagem-de-vau.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/estalajadeiro-de-vau-grande.png",
+  "textoRegraLido": "Suspenda e pague 1: cure 2 de dano do seu Conjurador.",
+  "valoresLidos": [
+    "dominum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/estalajadeiro-de-vau-grande.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Salão da estalagem com balcão, mesas, lareira, escada para quartos e janela para Vau-Grande",
+  "momentoDoDia": "Tarde",
+  "clima": "Chuva vista pela janela",
+  "escala": "Estalajadeiro e conjuradora próximos, clientes e edifícios distantes",
+  "avaliacaoVisual": "Identidade e roupa do estalajadeiro preservadas em gesto novo de servir refeição. Conjuradora recebe cura roxo-sangue no antebraço e uma esfera de custo fica sobre a mesa. Ambiente completo, brilho local.",
+  "decisoes": [
+    "Dominum Estrutura suspende e paga um para curar dois do próprio Conjurador, sem cura de todos os clientes.",
+    "O estalajadeiro comum permanece morador da estrutura, sem converter sua ficha RPG em mago de ataque."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-estalagem-de-vau.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "a51ee6705bfcfd892cca6d33f6c6113949871975637da138ceea260328719ec6",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

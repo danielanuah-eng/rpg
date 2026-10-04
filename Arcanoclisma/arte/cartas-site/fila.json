@@ -7549,9 +7549,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/o-postulario.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "O Postulário: personagem/objeto do catálogo aprovado (o-postulario). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "O Postulário como lugar vivo e em funcionamento: visões, páginas ou cartas de luz se abrem diante de quem conjura, revelando o que vem. Estrutura não ataca: transmite permanência e poder.",
       "ambienteOriginal": "Ambiente do Valor Cognitium: o arquivo sem dono, bibliotecas que esquecem, observatórios. Magia na cor índigo, em véu de fumaça com falhas, como se faltassem pedaços. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -7567,7 +7567,9 @@
         "arquivo": "Arcanoclisma/arte/imagens/o-postulario.png",
         "descricao": "SQUARE 1:1 TRANSPARENT ALPHA game illustration cutout. Simple modern independent comic + contemporary animation: expressive varied ink lines and loose energetic accents, SOLID FLAT COLORS, crisp HARD CEL SHADOW BLOCKS, visible printed HALFTONE DOT patches. Only 2-3 discrete tones per surface. Warm ochre/orange/rust/browns balanced with cool muted blue/cyan/deep green. Entire subject with EMPTY TRANSPARENT MARGIN around all sides, no rectangular backdrop, no sky, no haze, no painting, realistic render, 3D, gradients, airbrush or neon.\nA compact miniature ENVIRONMENT CUTOUT in a SQUARE silhouette on one irregular terrain patch, like an illustrated game terrain asset. Keep buildings, terrain, described activity and crowds of tiny fully clothed humans if specified. SKY and all exterior are transparent. No horizon or background panorama.\nCatalogue 170 O Postulário. EXACT SUBJECT: O Postulário: Uma grande biblioteca de conhecimentos que vaga entre os planos, indefinidamente. Dizem que um Antigo Bibliotecário vive lá dentro, e que ela é guardada por autômatos diferentes, poderosos, que cuidam para que nenhum mal aconteça ao lugar. Clima: saber sem arrogância; o conhecimento dado de bom grado.\nMagic is FLAT uniform/overflowing aura with gaps, wisps or hard-light shapes and printed dots. Value colors: Conflitüo rusty red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal is dark gold Bronze Arco in flat tones. No added text or watermark; non-graphic fantasy, no gore/victims, no sexualized figures.",
         "nota": "o lugar vira a cena inteira da carta, em retrato vertical"
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-o-postulario.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-o-postulario.visual.json"
     },
     {
       "id": "nv-brejo-alto",
@@ -7583,9 +7585,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/brejo-alto.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Brejo-Alto: personagem/objeto do catálogo aprovado (brejo-alto). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Brejo-Alto como lugar vivo e em funcionamento. Estrutura não ataca: transmite permanência e poder.",
       "ambienteOriginal": "Ambiente do Valor Morbidyum: cemitérios que respiram, brejos, criptas e aldeias de curandeiras. Magia na cor verde-pálido, em fumaça fria e fios que partem, como almas. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -7601,7 +7603,9 @@
         "arquivo": "Arcanoclisma/arte/imagens/brejo-alto.png",
         "descricao": "SQUARE 1:1 TRANSPARENT ALPHA game illustration cutout. Simple modern independent comic + contemporary animation: expressive varied ink lines and loose energetic accents, SOLID FLAT COLORS, crisp HARD CEL SHADOW BLOCKS, visible printed HALFTONE DOT patches. Only 2-3 discrete tones per surface. Warm ochre/orange/rust/browns balanced with cool muted blue/cyan/deep green. Entire subject with EMPTY TRANSPARENT MARGIN around all sides, no rectangular backdrop, no sky, no haze, no painting, realistic render, 3D, gradients, airbrush or neon.\nA compact miniature ENVIRONMENT CUTOUT in a SQUARE silhouette on one irregular terrain patch, like an illustrated game terrain asset. Keep buildings, terrain, described activity and crowds of tiny fully clothed humans if specified. SKY and all exterior are transparent. No horizon or background panorama.\nCatalogue 184 Brejo-Alto. EXACT SUBJECT: Brejo-Alto: Cidade de palafitas num pântano que respira. As casas se movem com a maré de lama. Clima: apego (o que não se deixa ir).\nMagic is FLAT uniform/overflowing aura with gaps, wisps or hard-light shapes and printed dots. Value colors: Conflitüo rusty red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal is dark gold Bronze Arco in flat tones. No added text or watermark; non-graphic fantasy, no gore/victims, no sexualized figures.",
         "nota": "o lugar vira a cena inteira da carta, em retrato vertical"
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-brejo-alto.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-brejo-alto.visual.json"
     },
     {
       "id": "nv-patio-de-duelos",
@@ -7617,9 +7621,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/patio-de-duelos.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Pátio de Duelos: personagem/objeto do catálogo aprovado (patio-de-duelos). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Pátio de Duelos como lugar vivo e em funcionamento: a magia atinge o conjurador rival, ao longe com um impacto certeiro. Estrutura não ataca: transmite permanência e poder.",
       "ambienteOriginal": "Ambiente do Valor Conflitüo: campos de batalha sem trégua, arenas, trincheiras e forjas de guerra. Magia na cor vermelho-ferrugem, em construtos sólidos de luz: lâminas, escudos, estandartes. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -7635,7 +7639,9 @@
         "arquivo": "Arcanoclisma/arte/imagens/patio-de-duelos.png",
         "descricao": "SQUARE 1:1 TRANSPARENT ALPHA game illustration cutout. Simple modern independent comic + contemporary animation: expressive varied ink lines and loose energetic accents, SOLID FLAT COLORS, crisp HARD CEL SHADOW BLOCKS, visible printed HALFTONE DOT patches. Only 2-3 discrete tones per surface. Warm ochre/orange/rust/browns balanced with cool muted blue/cyan/deep green. Entire subject with EMPTY TRANSPARENT MARGIN around all sides, no rectangular backdrop, no sky, no haze, no painting, realistic render, 3D, gradients, airbrush or neon.\nA compact miniature ENVIRONMENT CUTOUT in a SQUARE silhouette on one irregular terrain patch, like an illustrated game terrain asset. Keep buildings, terrain, described activity and crowds of tiny fully clothed humans if specified. SKY and all exterior are transparent. No horizon or background panorama.\nCatalogue 166 Pátio de Duelos. EXACT SUBJECT: Pátio de Duelos: pátio de pedra de uma escola de magia, círculos de duelo desenhados no chão, arquibancadas de alunos, marcas de feitiço.\nMagic is FLAT uniform/overflowing aura with gaps, wisps or hard-light shapes and printed dots. Value colors: Conflitüo rusty red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal is dark gold Bronze Arco in flat tones. No added text or watermark; non-graphic fantasy, no gore/victims, no sexualized figures.",
         "nota": "o lugar vira a cena inteira da carta, em retrato vertical"
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-patio-de-duelos.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-patio-de-duelos.visual.json"
     },
     {
       "id": "nv-porto-de-vidro",
@@ -7651,9 +7657,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/o-porto-de-vidro.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "O Porto de Vidro: personagem/objeto do catálogo aprovado (o-porto-de-vidro). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "O Porto de Vidro como lugar vivo e em funcionamento: Arcano bruto jorra e se acumula em esferas de luz na cor do Valor. Estrutura não ataca: transmite permanência e poder.",
       "ambienteOriginal": "Ambiente do Valor Sublimeyn: céus de duas pálpebras, mares de mercúrio, nuvens e torres flutuantes. Magia na cor prata-mercúrio, em fumaça e vapor que escorrem, pingam e cristalizam. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -7669,7 +7675,9 @@
         "arquivo": "Arcanoclisma/arte/imagens/o-porto-de-vidro.png",
         "descricao": "SQUARE 1:1 TRANSPARENT ALPHA game illustration cutout. Simple modern independent comic + contemporary animation: expressive varied ink lines and loose energetic accents, SOLID FLAT COLORS, crisp HARD CEL SHADOW BLOCKS, visible printed HALFTONE DOT patches. Only 2-3 discrete tones per surface. Warm ochre/orange/rust/browns balanced with cool muted blue/cyan/deep green. Entire subject with EMPTY TRANSPARENT MARGIN around all sides, no rectangular backdrop, no sky, no haze, no painting, realistic render, 3D, gradients, airbrush or neon.\nA compact miniature ENVIRONMENT CUTOUT in a SQUARE silhouette on one irregular terrain patch, like an illustrated game terrain asset. Keep buildings, terrain, described activity and crowds of tiny fully clothed humans if specified. SKY and all exterior are transparent. No horizon or background panorama.\nCatalogue 179 O Porto de Vidro. EXACT SUBJECT: O Porto de Vidro: Oficinas de Sublimeyn, tudo reaproveitado e refundido. O corpo da rainha muda com o humor, e o porto muda com ela. Clima: transformação (e a vaidade de nunca parecer frágil).\nMagic is FLAT uniform/overflowing aura with gaps, wisps or hard-light shapes and printed dots. Value colors: Conflitüo rusty red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal is dark gold Bronze Arco in flat tones. No added text or watermark; non-graphic fantasy, no gore/victims, no sexualized figures.",
         "nota": "o lugar vira a cena inteira da carta, em retrato vertical"
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-porto-de-vidro.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-porto-de-vidro.visual.json"
     },
     {
       "id": "nv-mercado-de-feras",
@@ -7685,9 +7693,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mercado-de-feras.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Mercado de Feras: personagem/objeto do catálogo aprovado (mercado-de-feras). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Mercado de Feras como lugar vivo e em funcionamento: um atalho mágico se abre, encurtando o caminho do próximo feitiço. Estrutura não ataca: transmite permanência e poder.",
       "ambienteOriginal": "Ambiente do Valor Primitivum: a floresta primeira, florestas que andam, mercados de feras e montanhas. Magia na cor verde-musgo e âmbar, em construtos orgânicos: raízes, galhos e esporos soltos. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -7703,7 +7711,9 @@
         "arquivo": "Arcanoclisma/arte/imagens/mercado-de-feras.png",
         "descricao": "SQUARE 1:1 TRANSPARENT ALPHA game illustration cutout. Simple modern independent comic + contemporary animation: expressive varied ink lines and loose energetic accents, SOLID FLAT COLORS, crisp HARD CEL SHADOW BLOCKS, visible printed HALFTONE DOT patches. Only 2-3 discrete tones per surface. Warm ochre/orange/rust/browns balanced with cool muted blue/cyan/deep green. Entire subject with EMPTY TRANSPARENT MARGIN around all sides, no rectangular backdrop, no sky, no haze, no painting, realistic render, 3D, gradients, airbrush or neon.\nA compact miniature ENVIRONMENT CUTOUT in a SQUARE silhouette on one irregular terrain patch, like an illustrated game terrain asset. Keep buildings, terrain, described activity and crowds of tiny fully clothed humans if specified. SKY and all exterior are transparent. No horizon or background panorama.\nCatalogue 158 Mercado de Feras. EXACT SUBJECT: Mercado de Feras: mercado barulhento de jaulas e cercados, feras exóticas, domadores com chicotes, lama e palha, luz roxa nas coleiras. Sinais de magia roxo-sangue no ar.\nMagic is FLAT uniform/overflowing aura with gaps, wisps or hard-light shapes and printed dots. Value colors: Conflitüo rusty red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal is dark gold Bronze Arco in flat tones. No added text or watermark; non-graphic fantasy, no gore/victims, no sexualized figures.",
         "nota": "o lugar vira a cena inteira da carta, em retrato vertical"
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-mercado-de-feras.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-mercado-de-feras.visual.json"
     },
     {
       "id": "nv-casas-de-sarn",
@@ -7719,9 +7729,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/sarn-das-escadas.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Sarn-das-Escadas: personagem/objeto do catálogo aprovado (sarn-das-escadas). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Sarn-das-Escadas como lugar vivo e em funcionamento. Estrutura não ataca: transmite permanência e poder.",
       "ambienteOriginal": "Ambiente do Valor Alvorum: faróis sem noite, auroras, campos dourados ao amanhecer e ao entardecer. Magia na cor dourado e preto, em aura dividida, com falhas entre a parte de luz e a de sombra. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -7737,7 +7747,9 @@
         "arquivo": "Arcanoclisma/arte/imagens/sarn-das-escadas.png",
         "descricao": "SQUARE 1:1 TRANSPARENT ALPHA game illustration cutout. Simple modern independent comic + contemporary animation: expressive varied ink lines and loose energetic accents, SOLID FLAT COLORS, crisp HARD CEL SHADOW BLOCKS, visible printed HALFTONE DOT patches. Only 2-3 discrete tones per surface. Warm ochre/orange/rust/browns balanced with cool muted blue/cyan/deep green. Entire subject with EMPTY TRANSPARENT MARGIN around all sides, no rectangular backdrop, no sky, no haze, no painting, realistic render, 3D, gradients, airbrush or neon.\nA compact miniature ENVIRONMENT CUTOUT in a SQUARE silhouette on one irregular terrain patch, like an illustrated game terrain asset. Keep buildings, terrain, described activity and crowds of tiny fully clothed humans if specified. SKY and all exterior are transparent. No horizon or background panorama.\nCatalogue 183 Sarn-das-Escadas. EXACT SUBJECT: Sarn-das-Escadas: Cidade vertical cavada num paredão sobre o mar. Quem mora mais alto manda. Clima: ambição (e o que se pisa para subir).\nMagic is FLAT uniform/overflowing aura with gaps, wisps or hard-light shapes and printed dots. Value colors: Conflitüo rusty red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal is dark gold Bronze Arco in flat tones. No added text or watermark; non-graphic fantasy, no gore/victims, no sexualized figures.",
         "nota": "o lugar vira a cena inteira da carta, em retrato vertical"
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-casas-de-sarn.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-casas-de-sarn.visual.json"
     },
     {
       "id": "nv-estalagem-de-vau",
@@ -7751,9 +7763,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/estalajadeiro-de-vau-grande.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Estalajadeiro de Vau-Grande: personagem/objeto do catálogo aprovado (estalajadeiro-de-vau-grande). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Estalajadeiro de Vau-Grande como lugar vivo e em funcionamento: uma fonte, flor ou chuva mágica devolve as forças a quem estava caído. Estrutura não ataca: transmite permanência e poder.",
       "ambienteOriginal": "Ambiente do Valor Dominum: cidades-muralha, prisões, tronos e salões de juramento. Magia na cor roxo-sangue, em construtos de correntes, coleiras e elos. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -7777,7 +7789,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-estalagem-de-vau.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-estalagem-de-vau.visual.json"
     },
     {
       "id": "nv-vila-do-mesmo-dia",
@@ -7793,9 +7807,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/vila-do-mesmo-dia.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Vila do Mesmo Dia: personagem/objeto do catálogo aprovado (vila-do-mesmo-dia). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Vila do Mesmo Dia como lugar vivo e em funcionamento: quem conjura espia o futuro: algumas imagens brilham e uma é puxada para a mão, as outras afundam. Estrutura não ataca: transmite permanência e poder.",
       "ambienteOriginal": "Ambiente do Valor Eternyr: o entretempo, vilas do mesmo dia, estações paradas e relógios gigantes. Magia na cor azul-noite com riscos brancos, em aura com falhas e rastros parados no ar. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -7811,7 +7825,9 @@
         "arquivo": "Arcanoclisma/arte/imagens/vila-do-mesmo-dia.png",
         "descricao": "SQUARE 1:1 TRANSPARENT ALPHA game illustration cutout. Simple modern independent comic + contemporary animation: expressive varied ink lines and loose energetic accents, SOLID FLAT COLORS, crisp HARD CEL SHADOW BLOCKS, visible printed HALFTONE DOT patches. Only 2-3 discrete tones per surface. Warm ochre/orange/rust/browns balanced with cool muted blue/cyan/deep green. Entire subject with EMPTY TRANSPARENT MARGIN around all sides, no rectangular backdrop, no sky, no haze, no painting, realistic render, 3D, gradients, airbrush or neon.\nA compact miniature ENVIRONMENT CUTOUT in a SQUARE silhouette on one irregular terrain patch, like an illustrated game terrain asset. Keep buildings, terrain, described activity and crowds of tiny fully clothed humans if specified. SKY and all exterior are transparent. No horizon or background panorama.\nCatalogue 159 Vila do Mesmo Dia. EXACT SUBJECT: Vila do Mesmo Dia: vila pequena ao pôr do sol, sombras repetidas como ecos, relógio de torre, céu azul-noite com riscos brancos. Sinais de magia azul-noite com riscos brancos no ar.\nMagic is FLAT uniform/overflowing aura with gaps, wisps or hard-light shapes and printed dots. Value colors: Conflitüo rusty red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal is dark gold Bronze Arco in flat tones. No added text or watermark; non-graphic fantasy, no gore/victims, no sexualized figures.",
         "nota": "o lugar vira a cena inteira da carta, em retrato vertical"
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-vila-do-mesmo-dia.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-vila-do-mesmo-dia.visual.json"
     },
     {
       "id": "nv-floresta-que-anda",

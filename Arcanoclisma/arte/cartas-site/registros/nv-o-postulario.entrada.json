@@ -1,0 +1,36 @@
+{
+  "id": "nv-o-postulario",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-a5b533c3-e18b-4fc1-9efd-1524df01489d.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nO POSTULÁRIO common Cognitium STRUCTURE4life, suspendandPAYONE toDRAWONE. Existingplace great wandering library acrossplanes, ivory arches andcolumns, navyblue large domedroofandbanners, oldbronzetrim andarmillaryfinial, powerful bronzeautomaton guardians gentlebookcarriers, manybooksand tinyclosedrobedvisitors. Knowledgegivenkindlywithoutarrogance. NEW camera fromside OUTERbalcony closeup onefriendly guardian handsONE ivorypage tosmall visitingelderlydwarf withbluecoat andwhitebraidedbeard, ONEspentindigoorb quietlyinbasinbetween. Theguardian/body-left foreground onlypartially, wholelibrary mainarchitecturemiddlegroundview low/up across curvingplainivorybridge onto centraldomedreadingrotunda, stainedbluewindowsmanybooksvisible. Structurefloats betweensoftcloudandverydifferentfarplaneshorizonvalley; morningclear sky paleBLUE notgoldenvoid. SmallINDIGOfloating geometricwisps/currentValue notreference blazinggoldmagic. Metalphysicalagedbronzedim, restrainedtrimnohugegoldbloom. Oldarmillaryfinialnotchangedintosunspell. Smooth walls/bookspinesselectivedetail, coherentpanoramafullportraitedges, not 1:1cutoutpastedtosky/isometricterrainisland. Visitorsarecontextnotnewnamedcards, no guardianattack/drawmany.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/o-postulario.png",
+  "textoRegraLido": "Suspenda e pague 1: compre 1 carta.",
+  "valoresLidos": [
+    "cognitium"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/o-postulario.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Biblioteca viajante entre planos com rotunda azul, pontes, autômatos e ilhas ao longe",
+  "momentoDoDia": "Manhã",
+  "clima": "Claro com nuvens",
+  "escala": "Autômato e visitante próximos, biblioteca monumental em planos distantes",
+  "avaliacaoVisual": "Nova vista da varanda integra pontes e biblioteca ao horizonte. Autômato gentil entrega uma página a um visitante anão; uma esfera índigo na bacia. Cúpula e identidade arquitetônica preservadas.",
+  "decisoes": [
+    "Cognitium Estrutura: suspender e pagar um para comprar uma, sem ataque dos guardiões.",
+    "Ouro limitado aos materiais; magia ativa índigo, sem alterar regras por causa da aura RPG."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

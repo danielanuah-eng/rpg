@@ -1,0 +1,66 @@
+{
+  "id": "nv-brejo-alto",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-a28865a3-7877-4466-95e2-de99e1ec6a3b.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-brejo-alto.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/brejo-alto.png",
+  "textoRegraLido": "Conta como 1 carta no Grau.",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/brejo-alto.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Cidade de palafitas com canais, pavilhão, passarelas, mangues, canoas e moradores",
+  "momentoDoDia": "Manhã",
+  "clima": "Nublado luminoso",
+  "escala": "Vista à altura da água, canoa próxima e pavilhão mais distante",
+  "avaliacaoVisual": "Cidade redesenhada como ambiente inteiro; casas em raízes e estacas, toldos azul/ferrugem, moradores e garças. Água calma e névoa verde-pálida sutil, proporções de canal e edifícios coerentes.",
+  "decisoes": [
+    "Morbidyum Estrutura conta como uma carta no Grau; não atribuir geração de Arcano ou cura.",
+    "Movimento das casas pertence à ambientação, sem novo trigger de jogo."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-brejo-alto.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "2047a231302b9cc0090f13f962de0871d590d5ccd6b4ff24d8ff66371e3b80c2",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

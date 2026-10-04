@@ -1,0 +1,36 @@
+{
+  "id": "nv-mercado-de-feras",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-e92660bc-ff7f-4900-ac46-2400a6e1fa31.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nMERCADO DE FERAS common Primitivum STRUCTURE4life, suspend: FIRSTCARDYOU PLAYthisturn costsONEless, not onlyspells/not everycard/freecreatures. Existing noisybeastmarket cages/pens/exoticbeasts keepidentity: gianttiger, eagleheadedgriffin, rhino andsmallbluedragon inclear separate spaciouspens, straw/muddyground, navyandrustawnings bronze posts collarclasps, adultsworking andcoiledwhips wornbelts NOanimalbeingstruck. CurrentVALUEPrimitivum so activemagiccollars/glows MOSSgreenAMBER insteadofoldDominumpurple; physicalbeastsoriginalcolors. NEW overa shortbroadolivefemale merchant'sshoulder lowerRIGHT, camera looking alongwideforestedge markettoward animalpensLEFT and large caravanbarn undercool treesfarback. A smallroot-and-leaf SHORTCUT arch opensRIGHT beside tradercounter withONE fading ambercostpearl and a plain closedfolio beingpassed toadultcustomer throughit, notactual summoning/destruction/teleportallbeasts. Tigerliescalmrear, griffinlooksdownwatchful highpen, rhinograzes straw nearLEFTforeground, bluedragonvisible farbackquiet FOURlegs2wings noextraarmfocus. Sunset softviolet sky and dusty mutedamber sidelight, no hugegoldbloom, no fierceallcreaturesattacking. Architecturewoodcanvasdifferentfrommaskstreet/glassport, strongsimpleplanes, fullsceneedges. Don'tcreatecardtext/UI/namedincidentalNPC.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/mercado-de-feras.png",
+  "textoRegraLido": "Suspenda: a primeira carta que você jogar neste turno custa 1 a menos.",
+  "valoresLidos": [
+    "primitivum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mercado-de-feras.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Mercado junto à floresta com cercados, feras, toldos e galpão de caravanas",
+  "momentoDoDia": "Entardecer",
+  "clima": "Claro com nuvens",
+  "escala": "Comércio próximo, animais e cercados em planos diferentes",
+  "avaliacaoVisual": "Tigre, grifo, rinoceronte e dragão azul em cercados, mercadores com corpos e roupas variados. Coleiras e lanternas verde-musgo/âmbar, arco de raízes e livro trocado entre personagens. Cena completa sem ferimentos.",
+  "decisoes": [
+    "Primitivum atual substitui a magia roxo-sangue do catálogo.",
+    "A primeira carta do turno custa um a menos, incluindo tipos além de feitiços; não reduzir todas nem invocar feras gratuitamente."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}
