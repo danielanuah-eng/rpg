@@ -1,6 +1,6 @@
 // Gerado por online/construir.ts a partir de tcg/sim/bot.ts. Não edite: edite o .ts e reconstrua.
 // Jogador guloso para simulações. Não é forte: serve para expor quais mecânicas são usadas, ignoradas ou abusadas.
-import { ataqueConjurador, custoEfetivo, custoProtecao, origemDaCarta, defCarta, custoAtaqueConjurador, defConjurador, ehRepentina, GRAU_MAXIMO, grauAtaqueConjurador, grauEfetivo, recemChegado } from './motor.js';
+import { ataqueConjurador, custoEfetivo, custoProtecao, origemDaCarta, defCarta, custoAtaqueConjurador, defConjurador, ehRepentina, etereo as etereoMotor, GRAU_MAXIMO, grauAtaqueConjurador, grauEfetivo, recemChegado } from './motor.js';
                                                                           
 
                          
@@ -41,7 +41,8 @@ function atk(e        , id        )         {
   return i.ehConjurador ? ataqueConjurador(e, i.dono) : (defCarta(e, id).ataque ?? 0);
 }
 const ehAliado = (e        , id        )          => !e.instancias[id].ehConjurador && defCarta(e, id).tipo === 'aliado';
-const etereo = (e        , id        )          => !e.instancias[id].ehConjurador && !!defCarta(e, id).palavrasChave?.includes('Etéreo');
+/** Etéreo como o motor (decisão 24): o Conjurador ataca Etéreos com arma Etérea e bloqueia com Armadura Etérea. */
+const etereo = (e        , id        , papel                        = 'ataque')          => etereoMotor(e, id, papel);
 function valorPerm(e        , id        )         {
   const i = e.instancias[id];
   const bonus = !i.ehConjurador && defCarta(e, id).tipo === 'estrutura' ? 5 : 0;
@@ -449,7 +450,7 @@ function planejarAtaque(e        , j         , est        )                 {
       if (ok || (est.agressividade >= 0.9 && b !== null && atk(e, a) >= vidaRest(e, b))) return { tipo: 'atacar', jogador: j, atacante: a, alvo: adv.conjuradorId };
       continue;
     }
-    const podemBloquear = etereo(e, a) ? bloqueadores.filter((b) => etereo(e, b)) : bloqueadores;
+    const podemBloquear = etereo(e, a) ? bloqueadores.filter((b) => etereo(e, b, 'bloqueio')) : bloqueadores;
     if (podemBloquear.length === 0) return { tipo: 'atacar', jogador: j, atacante: a, alvo: adv.conjuradorId };
     if (bloqueadores.length === 0) return { tipo: 'atacar', jogador: j, atacante: a, alvo: adv.conjuradorId };
     const pior = [...bloqueadores].sort((x, y) => atk(e, y) - atk(e, x))[0];
@@ -472,7 +473,7 @@ function ataqueAoAliado(e        , j         , est        , disponiveis         
   for (const x of alvos) {
     // o atacante mais barato que mata o alvo e sobrevive (ou troca para cima)
     const bons = atacantes
-      .filter((a) => atk(e, a) >= vidaRest(e, x) && (atk(e, x) < vidaRest(e, a) || valorPerm(e, a) < valorPerm(e, x)))
+      .filter((a) => (!etereo(e, x) || etereo(e, a)) && atk(e, a) >= vidaRest(e, x) && (atk(e, x) < vidaRest(e, a) || valorPerm(e, a) < valorPerm(e, x)))
       .sort((p, q) => valorPerm(e, p) - valorPerm(e, q));
     for (const a of bons) {
       const b = escolherBloqueador(e, outro(j), a, x);
@@ -490,7 +491,7 @@ function escolherBloqueador(e        , j         , atacante        , alvo       
   const alvoEhMeuConj = alvo === z.conjuradorId;
   if (!alvoEhMeuConj) return null; // decisão 20: só se bloqueia ataque ao Conjurador
   const letal = alvoEhMeuConj && vidaRest(e, alvo) <= forca;
-  const opcoes = [...z.campo.filter((id) => ehAliado(e, id)), z.conjuradorId].filter((id) => !e.instancias[id].suspensa && (!etereo(e, atacante) || etereo(e, id)));
+  const opcoes = [...z.campo.filter((id) => ehAliado(e, id)), z.conjuradorId].filter((id) => !e.instancias[id].suspensa && (!etereo(e, atacante) || etereo(e, id, 'bloqueio')));
   const ehConj = (id        ) => id === z.conjuradorId;
   const pontuar = (b        )         => {
     const sobrevive = forca < vidaRest(e, b);
@@ -516,7 +517,7 @@ function decidirBloqueio(e        , j         )          {
   const forca = atk(e, c.atacante);
   const letal = vidaRest(e, z.conjuradorId) <= forca;
   const extras = z.campo
-    .filter((id) => id !== primeiro && ehAliado(e, id) && !e.instancias[id].suspensa && (!etereo(e, c.atacante) || etereo(e, id)))
+    .filter((id) => id !== primeiro && ehAliado(e, id) && !e.instancias[id].suspensa && (!etereo(e, c.atacante) || etereo(e, id, 'bloqueio')))
     .sort((x, y) => valorPerm(e, x) - valorPerm(e, y));
   const grupo = [primeiro];
   const soma = (f                        ) => grupo.reduce((t, id) => t + f(id), 0);
@@ -550,8 +551,16 @@ export function decidir(e        , j         , est        )          {
     if (pend.tipo === 'escolherCartas') {
       // construtor (04/10): cartas suas indo para lugar ruim (cemitério, fundo, Grau) = as menos valiosas; o resto = as melhores
       const minhas = pend.cartas.every((id) => e.instancias[id]?.dono === j);
-      const ruim = ['cemiterio', 'fundo', 'grau', 'banimento'].includes(pend.destino);
-      const nota = (id        ) => (e.instancias[id] && e.instancias[id].defId !== 'oculta' ? valorCarta(defCarta(e, id), z.grau.length) : 0);
+      const efA = pend.aplicar?.efeito;
+      const nocivo = !!efA && (['dano', 'destruir', 'devolver'].includes(efA.tipo) || (efA.tipo === 'campo' && ['dano', 'destruir', 'devolver', 'paraBaralho', 'naoAtaca', 'suspender'].includes(efA.acao)));
+      const ruim = ['cemiterio', 'fundo', 'grau', 'banimento'].includes(pend.destino) || nocivo;
+      const nota = (id        ) => { const i = e.instancias[id]; if (!i || i.defId === 'oculta') return 0; if (i.ehConjurador) return nocivo ? 3 : 8; return valorCarta(defCarta(e, id), z.grau.length); };
+      if (efA) {
+        // alvo: efeito nocivo nas cartas do oponente = a melhor dele; nas suas = a menos valiosa; benéfico = a melhor sua
+        const lista = [...pend.cartas].sort((a, b) => nota(b) - nota(a));
+        const alvo = nocivo ? (lista.find((id) => e.instancias[id]?.dono !== j) ?? lista[lista.length - 1]) : (lista.find((id) => e.instancias[id]?.dono === j) ?? lista[0]);
+        return { tipo: 'escolherCartas', jogador: j, cartas: [alvo] };
+      }
       const ordem = minhas && ruim ? ordemDeSacrificio(e, j, pend.cartas) : [...pend.cartas].sort((a, b) => nota(b) - nota(a));
       return { tipo: 'escolherCartas', jogador: j, cartas: ordem.slice(0, pend.quantidade) };
     }

@@ -88,11 +88,14 @@ const temIncomensuravel = (d: CartaDef | undefined) => !!d?.palavrasChave?.inclu
 /** Efeitos resolvendo agora vêm de uma fonte Incomensurável? (o dano que passar da Vida da carta vai para o Conjurador dela) */
 let fonteIncomensuravel = false;
 
-/** Etéreo (decisão 24): Aliado com a palavra-chave, ou Conjurador com arma Etérea. Só Etéreos atingem Etéreos em combate. */
-export function etereo(e: Estado, instId: string): boolean {
+/**
+ * Etéreo (decisão 24): só Etéreos atingem Etéreos em combate. Aliado: a palavra-chave. Conjurador: ao ATACAR vale a arma
+ * Etérea; ao BLOQUEAR vale a Armadura Etérea (pedido do autor, 04/10).
+ */
+export function etereo(e: Estado, instId: string, papel: 'ataque' | 'bloqueio' = 'ataque'): boolean {
   const i = e.instancias[instId];
   if (!i) return false;
-  if (i.ehConjurador) { const a = armaDe(e, i.dono); return !!a && !!defCarta(e, a).palavrasChave?.includes('Etéreo'); }
+  if (i.ehConjurador) { const a = papel === 'bloqueio' ? armaduraDe(e, i.dono) : armaDe(e, i.dono); return !!a && !!defCarta(e, a).palavrasChave?.includes('Etéreo'); }
   return !!defCarta(e, instId).palavrasChave?.includes('Etéreo');
 }
 
@@ -251,12 +254,27 @@ function alvosCampo(e: Estado, dono: Jogador, ef: Extract<Efeito, { tipo: 'campo
   }
   return r;
 }
-const ACOES_RUINS = ['dano', 'destruir', 'devolver', 'paraBaralho', 'naoAtaca', 'suspender'];
-/** Alvo automático de gatilhos sem alvo escolhido: o inimigo mais forte (efeito ruim) ou o seu mais ferido (efeito bom). */
-function alvoAutomatico(e: Estado, lista: string[], ruim: boolean): string | undefined {
-  const nota = (id: string) => (ruim ? ataqueDe(e, id) * 10 + (vidaDe(e, id) ?? 0) : e.instancias[id].dano * 10 + ataqueDe(e, id));
-  return [...lista].filter((id) => !e.jogadores.some((z) => z.itens.includes(id)) || ruim).sort((a, b) => nota(b) - nota(a))[0];
+/**
+ * Alvo sem escolha prévia (gatilhos, ou "o jogador atingido escolhe"/"ao acaso"): nunca é automático (pedido do autor, 04/10).
+ * Ao acaso: sorteia. Senão: abre a escolha para quem jogou/ativou ou para o jogador atingido, e o efeito acontece no escolhido.
+ */
+function escolherAlvoDepois(e: Estado, ef: Efeito, dono: Jogador, lista: string[], depois: Continuacao, ladoAtingido: Jogador): boolean {
+  if (!lista.length) { anotar(e, 'Efeito sem alvo legal; nada acontece.'); return false; }
+  const quem = ef.escolha ?? 'controlador';
+  const efeito = { ...ef, escolha: undefined } as Efeito;
+  if (quem === 'aleatorio') {
+    const id = lista[Math.floor(aleatorio(e) * lista.length)];
+    anotar(e, `Alvo sorteado: ${nomeReg(e, id)}.`);
+    aplicarEfeitos(e, [efeito], dono, id);
+    return false;
+  }
+  const j = quem === 'afetado' ? ladoAtingido : dono;
+  e.pendencia = { tipo: 'escolherCartas', jogador: j, cartas: lista, quantidade: 1, destino: 'nada', titulo: quem === 'afetado' ? 'Escolha qual carta sua é atingida' : 'Escolha o alvo', aplicar: { efeito, dono }, ...(depois.efeitos.length ? { depois } : {}) };
+  anotar(e, `Jogador ${j} escolhe o alvo.`);
+  return true;
 }
+/** O alvo deste efeito é escolhido na hora de jogar (só quando quem jogou escolhe). */
+const alvoNaJogada = (ef: Efeito) => (ef.escolha ?? 'controlador') === 'controlador';
 /** Aplica a ação do efeito "campo" numa carta. */
 function aplicarAcaoCampo(e: Estado, id: string, ef: Extract<Efeito, { tipo: 'campo' }>, dono: Jogador, bonus: number): void {
   const inst = e.instancias[id];
@@ -503,10 +521,12 @@ function aplicarEfeitos(e: Estado, efeitos: Efeito[], dono: Jogador, escolhido?:
       const lista = alvosCampo(e, dono, ef);
       let alvos: string[];
       if (ef.alcance === 'todos') alvos = lista;
-      else {
-        const a = escolhido !== undefined && lista.includes(escolhido) ? escolhido : auto ? alvoAutomatico(e, lista, ACOES_RUINS.includes(ef.acao)) : undefined;
-        alvos = a ? [a] : [];
-      }
+      else if (escolhido !== undefined && alvoNaJogada(ef) && lista.includes(escolhido)) alvos = [escolhido];
+      else if (escolhido === undefined || !alvoNaJogada(ef)) {
+        // sem alvo escolhido na jogada: quem escolhe é definido no efeito (nunca automático)
+        if (escolherAlvoDepois(e, ef, dono, lista, depois, ef.lado === 'proprio' ? dono : outro(dono))) return;
+        continue;
+      } else alvos = [];
       if (!alvos.length) { anotar(e, 'Efeito sem alvo legal; nada acontece.'); continue; }
       for (const id of alvos) aplicarAcaoCampo(e, id, ef, dono, bonus);
       continue;
@@ -575,11 +595,13 @@ function aplicarEfeitos(e: Estado, efeitos: Efeito[], dono: Jogador, escolhido?:
       for (const j of quem) for (const id of [...e.jogadores[j].campo]) if (defCarta(e, id).tipo === 'aliado') destruir(e, id);
     }
     else {
-      let alvo = resolverAlvo(e, ef, dono, escolhido);
-      if (alvo === undefined && auto && 'alvo' in ef && (ef.alvo === 'escolhido' || ef.alvo === 'escolhidoAliado' || ef.alvo === 'escolhidoProprio')) {
-        const proprio = ef.alvo === 'escolhidoProprio' || ef.tipo === 'curar';
-        const lista = alvosCampo(e, dono, { tipo: 'campo', acao: 'dano', alcance: 'todos', lado: proprio ? 'proprio' : 'inimigo', tipos: ef.alvo === 'escolhido' ? ['aliado', 'mistica', 'conjurador'] : ['aliado', 'mistica'] });
-        alvo = alvoAutomatico(e, lista, !proprio);
+      let alvo = alvoNaJogada(ef) ? resolverAlvo(e, ef, dono, escolhido) : undefined;
+      if (alvo === undefined && (escolhido === undefined || !alvoNaJogada(ef)) && 'alvo' in ef && (ef.alvo === 'escolhido' || ef.alvo === 'escolhidoAliado' || ef.alvo === 'escolhidoProprio')) {
+        // gatilho sem alvo (ou alvo escolhido depois): abre a escolha, nunca escolhe sozinho
+        const proprio = ef.alvo === 'escolhidoProprio';
+        const lista = alvosCampo(e, dono, { tipo: 'campo', acao: 'dano', alcance: 'todos', lado: proprio ? 'proprio' : 'ambos', tipos: ef.alvo === 'escolhido' ? ['aliado', 'mistica', 'conjurador'] : ['aliado', 'mistica'] });
+        if (escolherAlvoDepois(e, ef, dono, lista, depois, proprio ? dono : outro(dono))) return;
+        continue;
       }
       if (alvo === undefined) {
         anotar(e, 'Efeito sem alvo legal; nada acontece.');
@@ -595,12 +617,12 @@ function aplicarEfeitos(e: Estado, efeitos: Efeito[], dono: Jogador, escolhido?:
 }
 
 function exigeAlvo(efeitos: Efeito[] | undefined): boolean {
-  return (efeitos ?? []).some((ef) => (ef.tipo === 'campo' && ef.alcance === 'alvo') || ef.tipo === 'banirDaMao' || ef.tipo === 'reanimar' || ('alvo' in ef && (ef.alvo === 'escolhido' || ef.alvo === 'escolhidoAliado' || ef.alvo === 'escolhidoProprio' || ef.alvo === 'pilha')));
+  return (efeitos ?? []).filter(alvoNaJogada).some((ef) => (ef.tipo === 'campo' && ef.alcance === 'alvo') || ef.tipo === 'banirDaMao' || ef.tipo === 'reanimar' || ('alvo' in ef && (ef.alvo === 'escolhido' || ef.alvo === 'escolhidoAliado' || ef.alvo === 'escolhidoProprio' || ef.alvo === 'pilha')));
 }
 
 /** O alvo escolhido serve para todos os efeitos que o exigem? */
 function alvoServe(e: Estado, efeitos: Efeito[], alvo: string | undefined, dono: Jogador): boolean {
-  return efeitos.every((ef) => {
+  return efeitos.filter(alvoNaJogada).every((ef) => {
     if (ef.tipo === 'banirDaMao') return alvo !== undefined && e.jogadores[dono].mao.includes(alvo);
     if (ef.tipo === 'campo') return ef.alcance === 'todos' || (alvo !== undefined && alvosCampo(e, dono, ef).includes(alvo));
     if (ef.tipo === 'reanimar') return alvo !== undefined && [0, 1].some((j) => e.jogadores[j as Jogador].cemiterio.includes(alvo)) && defCarta(e, alvo).tipo === 'aliado';
@@ -1335,7 +1357,7 @@ function atacar(e: Estado, c: Extract<Comando, { tipo: 'atacar' }>): void {
   e.passes = 0;
   e.prioridade = c.jogador;
   anotar(e, `Jogador ${c.jogador} ataca com ${nomeReg(e, c.atacante)} (ataque ${ataqueDe(e, c.atacante)}) → ${nomeReg(e, c.alvo)}.`);
-  if (!atacante.ehConjurador) disparar(e, c.atacante, 'atacar', c.alvo);
+  if (!atacante.ehConjurador) disparar(e, c.atacante, 'atacar');
   // Arma: efeitos ao atacar (ganhar Arcano, comprar...), na hora em que o ataque é declarado
   const arma = atacante.ehConjurador ? armaDe(e, c.jogador) : undefined;
   const efs = arma ? defCarta(e, arma).aoAtacar?.efeitos : undefined;
@@ -1400,11 +1422,12 @@ function executarComando(e: Estado, c: Comando): void {
       if (c.cartas.length !== p.quantidade || new Set(c.cartas).size !== c.cartas.length || !c.cartas.every((id) => p.cartas.includes(id)))
         falha(`Escolha exatamente ${p.quantidade} carta(s).`);
       e.pendencia = null;
-      for (const id of c.cartas) moverPara(e, id, p.destino, c.jogador);
+      if (p.aplicar) for (const id of c.cartas) aplicarEfeitos(e, [p.aplicar.efeito], p.aplicar.dono, id);
+      else for (const id of c.cartas) moverPara(e, id, p.destino, c.jogador);
       const resto = p.cartas.filter((id) => !c.cartas.includes(id));
       if (p.resto) for (const id of resto) moverPara(e, id, p.resto, c.jogador);
       if (c.cartas.length) anotar(e, `Jogador ${c.jogador}: ${c.cartas.length} carta(s) ${DESTINO_TXT[p.destino]}${p.resto && resto.length ? `, ${resto.length} ${DESTINO_TXT[p.resto]}` : ''}.`);
-      if (p.depois) aplicarEfeitos(e, p.depois.efeitos, p.depois.dono, p.depois.alvo);
+      if (p.depois && !e.pendencia) aplicarEfeitos(e, p.depois.efeitos, p.depois.dono, p.depois.alvo);
       if (!e.pendencia) finalizarAnulacao(e);
       return;
     }
@@ -1432,10 +1455,10 @@ function executarComando(e: Estado, c: Comando): void {
         const ok = z.conjuradorId === b || (z.campo.includes(b) && defCarta(e, b).tipo === 'aliado');
         if (!ok) falha('Bloqueador inválido.');
         if (e.instancias[b].suspensa) falha('O bloqueador está suspenso.');
-        if (atacanteEtereo && !etereo(e, b)) falha('Só Etéreos (ou um Conjurador com arma Etérea) bloqueiam um atacante Etéreo.');
+        if (atacanteEtereo && !etereo(e, b, 'bloqueio')) falha('Só Etéreos (ou um Conjurador com Armadura Etérea) bloqueiam um atacante Etéreo.');
       }
       for (const b of lista) e.instancias[b].suspensa = true;
-      for (const b of lista) disparar(e, b, 'bloquear', e.combate.atacante);
+      for (const b of lista) disparar(e, b, 'bloquear');
       if (lista.length) {
         const semArmadura = c.usarArmadura === false && lista.includes(z.conjuradorId) && armaduraDe(e, c.jogador);
         anotar(e, `Jogador ${c.jogador} bloqueia com ${lista.map((b) => nomeReg(e, b)).join(' e ')}${semArmadura ? ' sem usar a Armadura' : ''}.`);

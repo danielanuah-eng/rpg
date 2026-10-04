@@ -7,7 +7,7 @@ import { textoHabilidade, textoProtecao } from '/jogo/textos.js';
 const TIPOS_CAMPO = [['aliado', 'Aliado'], ['mistica', 'Mística'], ['estrutura', 'Estrutura'], ['conjurador', 'Conjurador'], ['equipamento', 'Equipamento']];
 const DESTINOS = [['mao', 'Mão'], ['grau', 'Grau'], ['cemiterio', 'Cemitério'], ['fundo', 'Fundo do baralho'], ['topo', 'Topo do baralho'], ['campo', 'Campo (jogar)'], ['banimento', 'Banimento']];
 const LADO = [['inimigo', 'Do oponente'], ['proprio', 'Seu'], ['ambos', 'Dos dois']];
-const ALCANCE = [['alvo', 'Um alvo (escolhido)'], ['todos', 'Todos']];
+const ALCANCE = [['alvo', 'Um alvo'], ['todos', 'Todos (atinge tudo)']];
 const DURACAO = [['turno', 'Neste turno'], ['permanente', 'Permanente']];
 
 /** Tabela de condições ("quando"). */
@@ -29,7 +29,8 @@ const n = (k, rot, padrao = 1) => ({ k, rot, tipo: 'num', padrao });
 const sel = (k, rot, opcoes, padrao = opcoes[0][0]) => ({ k, rot, tipo: 'sel', opcoes, padrao });
 const multi = (k, rot, opcoes, padrao) => ({ k, rot, tipo: 'multi', opcoes, padrao });
 const bool = (k, rot) => ({ k, rot, tipo: 'bool', padrao: false });
-const campoPadrao = (acao, extra = []) => ({ fixo: { tipo: 'campo', acao }, campos: [...extra, sel('alcance', 'Quem', ALCANCE), sel('lado', 'Lado', LADO, acao === 'curar' || acao.startsWith('aumentar') || acao === 'levantar' ? 'proprio' : 'inimigo'), multi('tipos', 'Tipos', TIPOS_CAMPO, ['aliado'])] });
+const ESCOLHA = [['controlador', 'Quem jogou/ativou escolhe'], ['afetado', 'O jogador atingido escolhe'], ['aleatorio', 'Ao acaso']];
+const campoPadrao = (acao, extra = []) => ({ fixo: { tipo: 'campo', acao }, campos: [...extra, sel('alcance', 'Quem', ALCANCE), sel('escolha', 'Quem escolhe o alvo', ESCOLHA), sel('lado', 'Lado', LADO, acao === 'curar' || acao.startsWith('aumentar') || acao === 'levantar' ? 'proprio' : 'inimigo'), multi('tipos', 'Tipos', TIPOS_CAMPO, ['aliado'])] });
 
 /** Tabela de efeitos (rótulo → mecânica do motor). */
 export const EFEITOS = {

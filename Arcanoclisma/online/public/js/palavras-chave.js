@@ -9,7 +9,7 @@ export const PALAVRAS_CHAVE = [
   { grupo: 'Aliados', itens: [
     ['Repentino', 'Aliado que pode ser jogado a qualquer momento em que você tiver prioridade (em resposta, até no turno do oponente). Sem Repentino, Aliado só entra na sua fase principal.'],
     ['Proficiente', 'Ataca e usa efeitos de suspender no mesmo turno em que entra em campo (os outros Aliados esperam um turno).'],
-    ['Etéreo', 'Em combate, só Aliados Etéreos (ou um Conjurador com arma Etérea) atacam, bloqueiam ou atingem esta carta. Uma arma com Etéreo deixa o seu Conjurador atingir Etéreos.'],
+    ['Etéreo', 'Em combate, só Etéreos atingem esta carta: Aliados Etéreos atacam e bloqueiam; um Conjurador com arma Etérea pode atacá-la e, com Armadura Etérea, pode bloqueá-la.'],
     ['Incomensurável', 'O dano que passar da Vida restante da carta atingida vai para o Conjurador dela (ao atacar, ao ser bloqueado ou com uma magia Incomensurável). Sem Incomensurável, o excedente se perde.'],
     ['Protegido N', 'Quem mirar esta carta com uma carta ou ativação paga N de Arcano a mais (a sua própria não paga).'],
     ['Ao entrar', 'Efeito que acontece quando a carta entra em campo.'],
@@ -52,7 +52,7 @@ export const PALAVRAS_CHAVE = [
 export const LEMBRETES = {
   Repentino: 'este Aliado pode ser jogado em resposta, até no turno do oponente.',
   Proficiente: 'ataca e usa ativações no turno em que entra.',
-  Etéreo: 'em combate, só Etéreos e armas Etéreas o atingem.',
+  Etéreo: 'em combate, só Etéreos o atingem (arma Etérea ataca, Armadura Etérea bloqueia).',
   Incomensurável: 'o dano que passar da Vida da carta atingida vai para o Conjurador dela.',
   Protegido: (n) => `mirar esta carta custa ${n} a mais ao oponente.`,
   Repentina: 'pode ser jogada em resposta, até no turno do oponente.',

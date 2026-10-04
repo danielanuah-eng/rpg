@@ -30,7 +30,12 @@
  */
                                                              
 
-                                                            
+/**
+ * Quem escolhe o alvo de um efeito de alvo único (pedido do autor, 04/10): quem jogou/ativou (padrão), o jogador atingido
+ * ou ao acaso. Nada escolhe o alvo sozinho; "atinge tudo" é o alcance "todos".
+ */
+                                                                  
+                                                                                   
                  
                                                                                                                   
                                                                            
@@ -315,7 +320,7 @@
                                                                                
                                                                                  
                                                                                                                                
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                 
 
 /** Efeitos que esperam uma escolha terminar para continuar (efeitos acumulados). */
                                                                                 

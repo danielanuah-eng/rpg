@@ -48,7 +48,7 @@
 .tcg-card.template-v18 .painel-regras-v18 {
   position: absolute; z-index: 3; left: 3.6%; right: 3.6%; top: var(--leitura-topo); bottom: 2.8%;
   border-radius: calc(var(--card-w)*.025); pointer-events: none;
-  background: linear-gradient(165deg,#fff9e9ef,#e8e4d5f5);
+  background: linear-gradient(165deg,#fff9e9c7,#e8e4d5d1);
   border: calc(var(--card-w)*.003) solid #dac8a398;
   box-shadow: inset 0 1px 0 #fff9,0 -2px 7px #18283d26;
 }
@@ -77,6 +77,10 @@
 .tcg-card.template-v18 .rules .icone-mecanica { width: 1.08em; height: 1.08em; vertical-align: -.12em; }
 .tcg-card.template-v18 .stats { top: calc(var(--leitura-topo) - 11.5%); }
 .tcg-card.template-v18 .flavour:empty { display: none; }
+.tcg-card.template-v18 .name {
+  top: 6.31%; left: 20.2%; width: 68%; transform: translateY(-50%);
+  text-align: center; line-height: 1.15;
+}
 .tcg-card.template-v18 .name.nome-duplo-v18 { white-space: normal; line-height: 1.08; text-wrap: balance; max-height: 5.7%; text-overflow: clip; }
 /* A carta aberta e as informações cabem na janela; o texto repetido fica dispensado. */
 .janela.carta-zoom:has(.template-v18) {

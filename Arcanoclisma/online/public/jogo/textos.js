@@ -14,8 +14,9 @@ export function textoRequisito(r) {
   if (!r || (!r.grau && !r.arcano)) return '';
   return '(' + [r.grau ? `${r.grau}+ no Grau` : '', r.arcano ? `Pague ${r.arcano}` : ''].filter(Boolean).join(' · ') + ') ';
 }
+const ESCOLHA_TXT = { afetado: ' (o dono da carta atingida escolhe qual)', aleatorio: ' (ao acaso)' };
 export function descEfeito(ef) {
-  return textoRequisito(ef.requisito) + descEfeitoBase(ef);
+  return textoRequisito(ef.requisito) + descEfeitoBase(ef) + (ef.escolha && ef.escolha !== 'controlador' && (ef.alcance !== 'todos') ? ESCOLHA_TXT[ef.escolha] : '');
 }
 function descEfeitoBase(ef) {
   switch (ef.tipo) {

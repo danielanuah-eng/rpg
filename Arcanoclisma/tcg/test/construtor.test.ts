@@ -48,6 +48,7 @@ const cartas: CartaDef[] = [
   temp('banir', [{ quando: 'jogar', efeitos: [{ tipo: 'campo', acao: 'dano', valor: 0, alcance: 'alvo', lado: 'proprio', tipos: ['aliado'] }] }]),
   { ...base, id: 'arma-eterea', nome: 'Lâmina Etérea', tipo: 'item', categoriaItem: 'canal', tipoCanal: 'arma', ataque: 2, palavrasChave: ['Etéreo'] },
   { ...base, id: 'escudo', nome: 'Escudo', tipo: 'item', categoriaItem: 'armadura', defesa: 1, vidaDesgaste: 4 },
+  { ...base, id: 'manto-etereo', nome: 'Manto Etéreo', tipo: 'item', categoriaItem: 'armadura', defesa: 1, vidaDesgaste: 4, palavrasChave: ['Etéreo'] },
 ];
 
 function criar(itens: [string[], string[]] = [[], []]): Estado {
@@ -252,7 +253,7 @@ test('proteção mágica: Grau mínimo, Vida e descarte; ou Arcano e Grau ao cem
   assert.equal(f.jogadores[0].arcano, 0);
 });
 
-test('Etéreo: só Etéreos e armas Etéreas atingem um Etéreo (atacar e bloquear)', () => {
+test('Etéreo: só Etéreos atingem um Etéreo; arma Etérea ataca, Armadura Etérea bloqueia', () => {
   const e = criar();
   const fan = poe(e, 1, 'fantasma');
   const sold = poe(e, 0, 'soldado');
@@ -262,12 +263,21 @@ test('Etéreo: só Etéreos e armas Etéreas atingem um Etéreo (atacar e bloque
   executar(f, { tipo: 'atacar', jogador: 0, atacante: f.jogadores[0].conjuradorId, alvo: fan2 });
   resolver(f);
   assert.ok(f.jogadores[1].cemiterio.includes(fan2)); // a Lâmina Etérea (2) derrubou o Fantasma (2)
-  // o Conjurador com arma Etérea bloqueia um atacante Etéreo
+  // arma Etérea não basta para bloquear; a Armadura Etérea bloqueia um atacante Etéreo
   const g = criar([[], ['arma-eterea']]);
   const fan3 = poe(g, 0, 'fantasma');
   executar(g, { tipo: 'atacar', jogador: 0, atacante: fan3, alvo: g.jogadores[1].conjuradorId });
   executar(g, { tipo: 'passar', jogador: 0 }); executar(g, { tipo: 'passar', jogador: 1 });
-  executar(g, { tipo: 'bloquear', jogador: 1, bloqueador: g.jogadores[1].conjuradorId });
+  assert.throws(() => executar(g, { tipo: 'bloquear', jogador: 1, bloqueador: g.jogadores[1].conjuradorId }), /Armadura Etérea/);
+  const h = criar([[], ['manto-etereo']]);
+  const fan4 = poe(h, 0, 'fantasma');
+  executar(h, { tipo: 'atacar', jogador: 0, atacante: fan4, alvo: h.jogadores[1].conjuradorId });
+  executar(h, { tipo: 'passar', jogador: 0 }); executar(h, { tipo: 'passar', jogador: 1 });
+  executar(h, { tipo: 'bloquear', jogador: 1, bloqueador: h.jogadores[1].conjuradorId });
+  // e a Armadura Etérea não deixa atacar Etéreos
+  const k = criar([['manto-etereo'], []]);
+  const fan5 = poe(k, 1, 'fantasma');
+  assert.throws(() => executar(k, { tipo: 'atacar', jogador: 0, atacante: k.jogadores[0].conjuradorId, alvo: fan5 }), /Etéreo/);
 });
 
 test('texto gerado: cada condição e efeito vira uma frase', () => {
@@ -288,4 +298,37 @@ test('Incomensurável numa magia: o dano que passa da Vida do Aliado vai para o 
   jogar(f, 0, poe(f, 0, 'raio', 'mao'), s2); // Raio (3) sem Incomensurável: nada passa
   resolver(f);
   assert.equal(f.instancias[f.jogadores[1].conjuradorId].dano, 0);
+});
+
+test('alvo nunca é automático: gatilho abre a escolha de quem ativou; "o atingido escolhe"; "ao acaso"', () => {
+  const e = criar();
+  e.catalogo.cartas['lanceiro'] = aliado('lanceiro', 2, 4, [{ quando: 'atacar', efeitos: [{ tipo: 'campo', acao: 'dano', valor: 2, alcance: 'alvo', lado: 'inimigo', tipos: ['aliado'] }] }]);
+  const l = poe(e, 0, 'lanceiro');
+  const a1 = poe(e, 1, 'soldado'), a2 = poe(e, 1, 'soldado');
+  executar(e, { tipo: 'atacar', jogador: 0, atacante: l, alvo: e.jogadores[1].conjuradorId });
+  executar(e, { tipo: 'passar', jogador: 0 }); executar(e, { tipo: 'passar', jogador: 1 });
+  let p = e.pendencia as Extract<NonNullable<Estado['pendencia']>, { tipo: 'escolherCartas' }>;
+  assert.equal(p.tipo, 'escolherCartas'); assert.equal(p.jogador, 0); // quem ativou escolhe
+  assert.deepEqual([...p.cartas].sort(), [a1, a2].sort());
+  executar(e, { tipo: 'escolherCartas', jogador: 0, cartas: [a2] });
+  assert.equal(e.instancias[a2].dano, 2); assert.equal(e.instancias[a1].dano, 0);
+  // Temporária "o jogador atingido escolhe": joga sem alvo; o oponente escolhe qual Aliado dele leva o dano
+  const f = criar();
+  f.catalogo.cartas['sorte'] = temp('sorte', [{ quando: 'jogar', efeitos: [{ tipo: 'campo', acao: 'destruir', alcance: 'alvo', lado: 'inimigo', tipos: ['aliado'], escolha: 'afetado' }] }]);
+  const b1 = poe(f, 1, 'soldado'), b2 = poe(f, 1, 'gigante');
+  jogar(f, 0, poe(f, 0, 'sorte', 'mao'));
+  executar(f, { tipo: 'passar', jogador: 0 }); executar(f, { tipo: 'passar', jogador: 1 });
+  p = f.pendencia as typeof p;
+  assert.equal(p.jogador, 1);
+  executar(f, { tipo: 'escolherCartas', jogador: 1, cartas: [b1] });
+  assert.ok(f.jogadores[1].cemiterio.includes(b1)); assert.ok(f.jogadores[1].campo.includes(b2));
+  assert.match(textoCarta(f.catalogo.cartas['sorte']), /o dono da carta atingida escolhe/);
+  // ao acaso: sorteia entre os possíveis, sem pedir escolha
+  const g = criar();
+  g.catalogo.cartas['dado'] = temp('dado', [{ quando: 'jogar', efeitos: [{ tipo: 'campo', acao: 'dano', valor: 1, alcance: 'alvo', lado: 'inimigo', tipos: ['aliado'], escolha: 'aleatorio' }] }]);
+  const c1 = poe(g, 1, 'soldado'), c2 = poe(g, 1, 'soldado');
+  jogar(g, 0, poe(g, 0, 'dado', 'mao'));
+  executar(g, { tipo: 'passar', jogador: 0 }); executar(g, { tipo: 'passar', jogador: 1 });
+  assert.equal(g.pendencia, null);
+  assert.equal(g.instancias[c1].dano + g.instancias[c2].dano, 1);
 });

@@ -205,3 +205,6 @@ Regras fixas: seguir as orientações novas do GPT, polir textos, todo efeito au
 - ATENÇÃO: `public/js/construtor.js` é o construtor de BARALHOS (não confundir).
 - GPT entregando v18 (aros de custo/geração e selo de Grau em `public/kit/vetores/*-v18.svg`, evidências em `coordenacao/site-online/evidencias-v18`): ainda sem documento de entrega; integrar quando chegar.
 - Testes: tcg 110, online 7, partida online 0 erros.
+- (04/10, depois) **Etéreo por papel**: arma Etérea deixa o Conjurador ATACAR Etéreos; Armadura Etérea deixa BLOQUEAR atacantes Etéreos (`etereo(e, id, 'ataque'|'bloqueio')`).
+- **Alvo nunca automático**: efeitos de alvo único têm `escolha` = quem jogou/ativou (padrão, escolhe na jogada) | o jogador atingido | ao acaso; "atinge tudo" = alcance todos. Gatilhos sem alvo abrem a pendência `escolherCartas` com `aplicar` (efeito no escolhido). Os gatilhos "ao atacar/defender" não passam mais o alvo do ataque. Editor: campo "Quem escolhe o alvo".
+- v18 do GPT integrada (`coordenacao/site-online/templates-v18.integracao.claude.json`); o Codex também tirou a faixa azul do cabeçalho (commit 42e813b).

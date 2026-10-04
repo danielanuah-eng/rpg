@@ -29,7 +29,12 @@ export type AcaoCampo = 'dano' | 'curar' | 'destruir' | 'devolver' | 'paraBaralh
  */
 export interface Requisito { grau?: number; arcano?: number }
 
-export type Efeito = EfeitoBase & { requisito?: Requisito };
+/**
+ * Quem escolhe o alvo de um efeito de alvo único (pedido do autor, 04/10): quem jogou/ativou (padrão), o jogador atingido
+ * ou ao acaso. Nada escolhe o alvo sozinho; "atinge tudo" é o alcance "todos".
+ */
+export type QuemEscolhe = 'controlador' | 'afetado' | 'aleatorio';
+export type Efeito = EfeitoBase & { requisito?: Requisito; escolha?: QuemEscolhe };
 type EfeitoBase =
   /** escalaGrau: soma ao dano o número de cartas na Zona de Grau de quem joga (remoção que cresce com o jogo). */
   | { tipo: 'dano'; valor: number; alvo: AlvoEfeito; escalaGrau?: boolean }
@@ -314,7 +319,7 @@ export type Pendencia =
   | { tipo: 'pagarAnulacao'; jogador: Jogador; custo: number; item: ItemPilha }
   | { tipo: 'escolherDoTopo'; jogador: Jogador; cartas: string[]; pegar: number }
   /** Construtor (04/10): escolher cartas de uma lista e mandá-las a um destino; o resto (se saiu da zona) vai para `resto`. */
-  | { tipo: 'escolherCartas'; jogador: Jogador; cartas: string[]; quantidade: number; destino: Destino; resto?: Destino; titulo: string; depois?: Continuacao };
+  | { tipo: 'escolherCartas'; jogador: Jogador; cartas: string[]; quantidade: number; destino: Destino; resto?: Destino; titulo: string; depois?: Continuacao; /** Escolha de alvo: aplica este efeito em cada carta escolhida. */ aplicar?: { efeito: Efeito; dono: Jogador } };
 
 /** Efeitos que esperam uma escolha terminar para continuar (efeitos acumulados). */
 export interface Continuacao { efeitos: Efeito[]; dono: Jogador; alvo?: string }
