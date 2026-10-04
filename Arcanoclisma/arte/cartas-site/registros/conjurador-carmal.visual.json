@@ -1,28 +1,41 @@
 {
   "id": "conjurador-carmal",
-  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-a1929815-6994-460f-b26e-8c50dc34d067.png",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-d2b42ec6-5067-4884-ae79-ddadd89c3486.png",
   "prompt": "Arcanoclisma/arte/cartas-site/prompts/conjurador-carmal.txt",
   "baseInspecionada": true,
+  "baseVisualExistente": true,
   "descricaoLida": true,
-  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/druida-de-tahwe.webp",
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/druida-de-tahwe.png",
+  "referenciaJogoAtual": "Arcanoclisma/online/public/arte/druida-de-tahwe.webp",
+  "textoRegraLido": "Quando o primeiro Aliado seu entra em campo em cada turno, ganhe 1 Arcano.",
+  "valoresLidos": [
+    "primitivum",
+    "alvorum"
+  ],
   "referenciasGeracao": [
     {
-      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
-      "papel": "somente traço e acabamento do ambiente"
+      "arquivo": "Arcanoclisma/arte/imagens/druida-de-tahwe.png",
+      "papel": "Personagem atual aprovado; preservar identidade, pose, roupa, magia e traço"
     }
   ],
   "decisoes": [
-    "Novo Carmal idoso, alto e de pele escura conforme descrição, distinto do marcador do site",
-    "Floresta noturna com criatura chegando e rastro arcano; não reutiliza a cena de Lyandra",
-    "Substituída sugestão de tela/óleo rugoso pelo acabamento mais liso aprovado",
-    "Brilho lendário v9 localizado na magia e no cajado"
+    "Diretriz do autor: refazer somente o fundo do conjurador mantendo a figura atual.",
+    "Cenário opaco sinérgico e figura dominante; frente ou três-quartos frontal mantido.",
+    "Cena anterior com outra pose reservada para cartas futuras."
   ],
-  "avaliacaoVisual": "Cena inspecionada: druida e criaturas integrados à floresta, apoios/água e iluminação coerentes, fundo completo, sem montagem.",
+  "avaliacaoVisual": "Personagem reconhecível na composição original, com cenário integrado e leitura clara; luz localizada, sem novo protagonista.",
+  "versaoAnterior": {
+    "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-carmal.png",
+    "selecionada": false,
+    "motivo": "Reservada para cartas futuras por pedido do autor.",
+    "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-carmal.visual.json"
+  },
+  "diretrizAutor": "Fundo do conjurador, sem redesenhar o personagem.",
   "ferramenta": "image_gen.imagegen integrada",
   "modo": "built-in",
-  "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-carmal.png",
+  "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-carmal-92813aeb.png",
   "dimensoes": [
-    1061,
+    1062,
     1482
   ],
   "dimensoesSolicitadas": [
@@ -30,7 +43,7 @@
     1760
   ],
   "dimensoesEntregues": "Saída nativa real; não redimensionada",
-  "sha256": "f89e4494a161b4801ea093c4b0f56eac5735b361b246e8cc87388c55011cd736",
+  "sha256": "92813aeb57f3e742aa36a98f54d0a3644323c403cd3a6ade5868c2717f1fd79a",
   "alfa": {
     "hasAlpha": false,
     "min": 255,

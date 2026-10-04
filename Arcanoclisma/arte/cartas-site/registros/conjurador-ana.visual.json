@@ -1,36 +1,49 @@
 {
   "id": "conjurador-ana",
-  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-e1f51d6c-a3f2-4532-81bc-0e89d88baaab.png",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-36e61837-7786-4803-a618-4dbea5cf481a.png",
   "prompt": "Arcanoclisma/arte/cartas-site/prompts/conjurador-ana.txt",
   "baseInspecionada": true,
+  "baseVisualExistente": true,
   "descricaoLida": true,
-  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/viajante-do-entretempo.webp",
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/viajante-do-entretempo.png",
+  "referenciaJogoAtual": "Arcanoclisma/online/public/arte/viajante-do-entretempo.webp",
+  "textoRegraLido": "Suspenda o Conjurador e pague 2: bana uma carta da sua mão. No seu próximo turno, você pode jogá-la custando 4 a menos.",
+  "valoresLidos": [
+    "cognitium",
+    "eternyr"
+  ],
   "referenciasGeracao": [
     {
-      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
-      "papel": "somente acabamento e traço"
+      "arquivo": "Arcanoclisma/arte/imagens/viajante-do-entretempo.png",
+      "papel": "Personagem atual aprovado; preservar identidade, pose, roupa, magia e traço"
     }
   ],
   "decisoes": [
-    "Nova Ana de pele marrom, cachos com fios brancos, óculos e livro com correntes",
-    "Entretempo como estação temporal ao amanhecer, câmera baixa e passo em movimento",
-    "Instante congelado, páginas e gotas suspensas ligados à habilidade",
-    "Cena própria e lisa com brilho focal lendário v9"
+    "Diretriz do autor: refazer somente o fundo do conjurador mantendo a figura atual.",
+    "Cenário opaco sinérgico e figura dominante; frente ou três-quartos frontal mantido.",
+    "Cena anterior com outra pose reservada para cartas futuras."
   ],
-  "avaliacaoVisual": "Inspecionada: Ana distinta da viajante provisória, livro/relógio e tempo congelado integrados ao cenário, luz/apoio e profundidade coerentes.",
+  "avaliacaoVisual": "Mesma aparência, roupa, gesto e direção original da cabeça, com cenário próprio, corpo frontal e magia localizada.",
+  "versaoAnterior": {
+    "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ana.png",
+    "selecionada": false,
+    "motivo": "Reservada para cartas futuras por pedido do autor.",
+    "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-ana.visual.json"
+  },
+  "diretrizAutor": "Fundo do conjurador, sem redesenhar o personagem.",
   "ferramenta": "image_gen.imagegen integrada",
   "modo": "built-in",
-  "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ana.png",
+  "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ana-f036e89f.png",
   "dimensoes": [
-    1061,
-    1483
+    1062,
+    1482
   ],
   "dimensoesSolicitadas": [
     1260,
     1760
   ],
   "dimensoesEntregues": "Saída nativa real; não redimensionada",
-  "sha256": "012e30bd8444a327cc0fb0ffac3b36f3156ccbb4dccabf84a2881d2410a8a1be",
+  "sha256": "f036e89f9433467d67346e026febfaea118a950750f03f782da28b078ac26696",
   "alfa": {
     "hasAlpha": false,
     "min": 255,

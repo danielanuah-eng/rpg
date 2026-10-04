@@ -1,0 +1,21 @@
+{
+  "id": "conjurador-roh",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-1058a344-a4f0-4554-94ea-6989521a7d8b.png",
+  "prompt": "Use case: illustration-story. NEW unified Arcanoclisma vertical63:88 card art for \"Roh, o Ilusionista das Máscaras\", a NEW distinct young slender human illusionist. Style reference only: polished clean graphic fantasy drawing and smooth controlled environment, do not copy Ciantia or any meadow. Do not copy the game's temporary patchwork blue/gold mutable-faced boy. Roh has warm medium-brown skin, short ink-black hair, a long angular chin, a half-coral/half-mercury-silver mask partly concealing his face, several clearly different masks secured to his belt and shoulder, and a practical dark teal stage coat with deep pockets and dark plum lining. His BODY TURNS in a lively three-quarter spin, coat tails and short hair following the motion, knees bent with believable balance, not a static frontal hero. He trades a mask while extending his other hand toward the cool silver shadow cast by a mask on a low theatrical platform. One friendly human ally is being gently recalled through that mask-shadow in curling silver/coral illusion vapour; readable coherent silhouette and voluntary movement, no bodily distortion. The ally is an anonymous short-haired woman in a simple muted coat, not another copy of Roh. Complete MASK FAIR scene in a real town square: clean wooden stalls displaying varied ceramic masks, muted coral/cream fabric awnings, smooth pale-blue stone paving, a few distant patrons, storefronts and limited soft dust in warm SIDE AFTERNOON light. Environment proportions and shared contact shadows, diagonally composed foreground gesture toward the allied figure in midground, easy depth without tiny clutter. Warm sunlight stays restrained; silver magic and coral accents balance the palette organically. Do not divide the entire scene in colour halves. RARITY LEGENDARY, standard art, cosmetic only: v9 localized luminous silver core, fine gold/rainbow glints in illusion edges and small bronze fittings, soft transitions and clean material texture without global bloom. Smooth broad scene surfaces, low microcontrast, simplified calm masses and crisp main contours; no gritty grain, rough painterly/impasto brush marks, dense highcontrast foliage, generic ruined crossroads or portals. Polished Arcanoclisma linework with expressive movement and limited clear shadow tones; characters painted naturally inside the fair, not pasted cutouts or collage. Keep main body and mask readable, lower area quieter for editable card overlays. Complete opaque background, high native resolution,1260x1760 if available, preserve actual dimensions. No card frame, text, numbers, logos, photorealism or plastic3D.",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/rapaz-do-rosto-mutavel.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "somente traço e acabamento do ambiente"
+    }
+  ],
+  "decisoes": [
+    "Novo Roh mascarado com cabelo escuro e roupa de palco; não copia rapaz mutável provisório",
+    "Feira à tarde e giro de corpo, em vez de pose frontal parada",
+    "Aliada é reconduzida por sombra de máscara; magia de prata/coral",
+    "Cenário integrado liso com acabamento lendário v9 focal"
+  ],
+  "avaliacaoVisual": "Inspecionada: Roh, a aliada, máscaras e praça compartilham perspectiva e luz; expressão/movimento e contexto legíveis."
+}

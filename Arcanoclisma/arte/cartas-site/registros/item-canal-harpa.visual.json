@@ -1,0 +1,61 @@
+{
+  "id": "item-canal-harpa",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-888dd9c5-21cf-431c-b5d8-89cdeff33959.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-canal-harpa.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/harpa-de-vidro-de-liss.png",
+  "textoRegraLido": "Canal. Arma: Ataque 2.",
+  "valoresLidos": [
+    "sublimeyn",
+    "persona",
+    "cognitium"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/harpa-de-vidro-de-liss.png",
+      "papel": "Identidade do instrumento"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento pictórico aprovado"
+    }
+  ],
+  "decisoes": [
+    "Cena completa com fundo integrado; preservar as regras atuais.",
+    "Raridade permanece sem definição no aplicativo."
+  ],
+  "avaliacaoVisual": "Instrumento com estrutura original preservada, tocado por duas mãos num ateliê ao entardecer; cenário e personagem novos.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-canal-harpa.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "f7c9607b807ac2906b3398434e42298e9601c3c304d445bf42bf18ed3a24f7b5",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

@@ -1,0 +1,122 @@
+{
+  "versao": 1,
+  "data": "2026-10-04",
+  "pedidoAutor": "Enviar os conjuradores com fundos corrigidos e todas as outras artes já concluídas no mesmo push.",
+  "estado": "entrega_visual_concluida_fila_em_producao",
+  "pushAutorizado": true,
+  "aprovacaoVisualFinal": false,
+  "integracaoClaudeConfirmada": false,
+  "totalFila": 210,
+  "concluidas": 94,
+  "pendentes": 116,
+  "loteCompleto": "Arcanoclisma/cartas/entregas/lote-site-v1.visual.json",
+  "galeriaLote": "Arcanoclisma/arte/cartas-site/galeria.html",
+  "conjuradores": [
+    {
+      "id": "conjurador-lyandra",
+      "idConjurador": "lyandra",
+      "nome": "Lyandra, a Domadora de Guerra",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-lyandra-c92c861b.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-lyandra.visual.json",
+      "arteModo": "cena",
+      "estado": "gerada_aguardando_avaliacao_final",
+      "origemPersonagem": "Arcanoclisma/online/public/arte/domadora-de-garmhal.webp"
+    },
+    {
+      "id": "conjurador-carmal",
+      "idConjurador": "carmal",
+      "nome": "Carmal, o Druida Crepuscular",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-carmal-92813aeb.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-carmal.visual.json",
+      "arteModo": "cena",
+      "estado": "gerada_aguardando_avaliacao_final",
+      "origemPersonagem": "Arcanoclisma/online/public/arte/druida-de-tahwe.webp"
+    },
+    {
+      "id": "conjurador-ricardo",
+      "idConjurador": "ricardo",
+      "nome": "Alquimista Ricardo",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ricardo-1b3ce846.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-ricardo.visual.json",
+      "arteModo": "cena",
+      "estado": "gerada_aguardando_avaliacao_final",
+      "origemPersonagem": "Arcanoclisma/online/public/arte/alquimista-naufrago.webp"
+    },
+    {
+      "id": "conjurador-roh",
+      "idConjurador": "roh",
+      "nome": "Roh, o Ilusionista das Máscaras",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-roh-0a552076.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-roh.visual.json",
+      "arteModo": "cena",
+      "estado": "gerada_aguardando_avaliacao_final",
+      "origemPersonagem": "Arcanoclisma/online/public/arte/rapaz-do-rosto-mutavel.webp"
+    },
+    {
+      "id": "conjurador-agnelo",
+      "idConjurador": "agnelo",
+      "nome": "Agnelo, o Duelista Sombrio",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-agnelo-b4c81c4f.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-agnelo.visual.json",
+      "arteModo": "cena",
+      "estado": "gerada_aguardando_avaliacao_final",
+      "origemPersonagem": "Arcanoclisma/online/public/arte/duelista-da-lamina-vermelha.webp"
+    },
+    {
+      "id": "conjurador-diastaros",
+      "idConjurador": "diastaros",
+      "nome": "Diástaros, o Necromante Vidente",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-diastaros-992f5b6d.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-diastaros.visual.json",
+      "arteModo": "cena",
+      "estado": "gerada_aguardando_avaliacao_final",
+      "origemPersonagem": "Arcanoclisma/online/public/arte/medium-do-luto.webp"
+    },
+    {
+      "id": "conjurador-ana",
+      "idConjurador": "ana",
+      "nome": "Ana, a Cronista do Tempo",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ana-f036e89f.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-ana.visual.json",
+      "arteModo": "cena",
+      "estado": "gerada_aguardando_avaliacao_final",
+      "origemPersonagem": "Arcanoclisma/online/public/arte/viajante-do-entretempo.webp"
+    },
+    {
+      "id": "conjurador-mitonho",
+      "idConjurador": "mitonho",
+      "nome": "Mitonho, o Carcereiro Temporal",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-mitonho-158caaad.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-mitonho.visual.json",
+      "arteModo": "cena",
+      "estado": "gerada_aguardando_avaliacao_final",
+      "origemPersonagem": "Arcanoclisma/online/public/arte/carcereiro.webp"
+    },
+    {
+      "id": "conjurador-osmar",
+      "idConjurador": "osmar",
+      "nome": "Osmar, o Capataz de Ferro",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-osmar-183eb5f1.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-osmar.visual.json",
+      "arteModo": "cena",
+      "estado": "gerada_aguardando_avaliacao_final",
+      "origemPersonagem": "Arcanoclisma/online/public/arte/senhor-da-trincheira.webp"
+    }
+  ],
+  "ciantia": {
+    "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-04-conjuradores/conjurador-ciantia-dimensao-transplanar.png",
+    "manifesto": "Arcanoclisma/cartas/modelos-visuais/2026-10-04-conjuradores/manifesto.json",
+    "dimensao": "Mesma dimensão da primeira carta do Dragão Transplanar, com dragões verde, coral e âmbar vistos de baixo.",
+    "liberadaNoJogo": false
+  },
+  "cenasParaCartasFuturas": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/catalogo.json",
+  "instrucoesClaude": [
+    "Os arquivos deste mapa substituem as versões de conjurador anteriores; use o caminho exato, incluindo o hash no nome.",
+    "As nove cenas anteriores continuam preservadas para cartas futuras, não para o retrato de conjurador.",
+    "As 94 artes concluídas estão no lote vinculado; a fila de 210 ainda tem 116 pendências.",
+    "Não marcar aprovação final do autor automaticamente. A aprovação de push permite publicar a entrega.",
+    "ArteModo=cena. Preservar nitidez dos PNGs nativos e evitar filtro fosco.",
+    "Raridade somente estética, atualmente sem definição no app; preservar os acabamentos disponíveis.",
+    "Ciantia é modelo visual suplementar; A Mestra dos Dragões continua bloqueada para ativação ou mudanças de cartas até liberação explícita do autor."
+  ]
+}

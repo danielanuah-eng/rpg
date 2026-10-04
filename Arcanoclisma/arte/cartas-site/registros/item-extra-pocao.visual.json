@@ -1,0 +1,55 @@
+{
+  "id": "item-extra-pocao",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-22a73693-d93c-470b-825c-d58b3ba90623.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-extra-pocao.txt",
+  "baseInspecionada": false,
+  "baseVisualExistente": false,
+  "motivoSemBase": "Pedido sem arte de referência; design novo do objeto pela descrição autorizada.",
+  "descricaoLida": true,
+  "imagemBaseInspecionada": null,
+  "textoRegraLido": "Extra. Consumível: cure 3 do seu Conjurador.",
+  "velocidade": "findante",
+  "valoresLidos": [],
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento liso aprovado; estilo, não identidade"
+    }
+  ],
+  "decisoes": [
+    "Poção vermelho-coral de vidro espesso consumida em apotecária rural durante chuva de dia.",
+    "Novo conjurador genérico pálido, ruivo e sardento, olhos fechados e expressão aliviada.",
+    "Três linhas suaves de cura no curativo representam cura3; sem ferida gráfica nem alteração de regra."
+  ],
+  "avaliacaoVisual": "Vidro e líquido coral legíveis, duas mãos, três faixas no curativo, uso consumível e interior de farmácia com cenário completo.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-pocao.png",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "edc81282fbfec0b1c9a822496a77c366e8f8f7b2cbc62508f41065081da5bd61",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

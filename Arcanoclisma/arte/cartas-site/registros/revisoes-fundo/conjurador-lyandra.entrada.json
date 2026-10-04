@@ -1,0 +1,34 @@
+{
+  "id": "conjurador-lyandra",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-6b2a60fa-1137-4d24-8437-836171ab1f65.png",
+  "prompt": "Use case: identity-preserve / precise-object-edit. Asset: Arcanoclisma TCG conjurador portrait. EDIT the provided original character illustration by adding a fully painted, opaque, aesthetically synergistic environment around and behind it. The author approves this existing character and wants ONLY the missing backdrop addressed. LOCK the exact character identity, age, skin, face, hair, expression, original head direction, clothing, equipment, original colored magic, the silhouette and all limbs/hand positions. Do not redesign the person or invent another protagonist. Preserve the original front-facing or front-three-quarter body stance toward the viewer and keep the entire character large, centered and dominant, roughly 75-85% of the image height; do not turn their back or replace the original action with a scene facing sideways. Preserve the existing expression and gaze rather than forcing a different head direction. The existing drawing's clean expressive ink contours, flat graphic shades and fine halftone detail must stay crisp, recognizable and richly colored. The environment must use the SAME illustrated language, with smoother broad matte color shapes and quiet depth, never photographic or excessively rough/scratchy texture. Ground the feet/pose coherently, matching the background's perspective and soft local light; not a pasted cutout on a generic background. Foreground, midground and background should read at card scale while the subject stays foremost. Soft controlled lighting and moderate contrast; no blazing gold sky, white haze, HDR, giant anime spotlight or whole-frame glow. Existing magical glow stays local and unchanged, supporting the character. Output a full vertical illustration in approximately standard card art ratio 63:88, preferred 1260x1760 when supported. NO card borders, rarity decorations, title, numbers, letters, UI, watermark or signature. Full opaque background right to every edge, no transparent/white blank areas. Only the background should meaningfully change. Scene: A cool overcast late-afternoon war-beast training enclosure on the edge of a forest: worn wide flagstones beneath her stance, weathered timber palisades and low moss-covered ridge behind. One distant indistinct war-beast silhouette can suggest her vocation, far smaller than her. Muted grey-blue sky and moss greenery support her cream scarf, rust clothes and violet energy whip. No grand battle, crowd, extra large beast or architecture competing with her.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/domadora-de-garmhal.png",
+  "referenciaJogoAtual": "Arcanoclisma/online/public/arte/domadora-de-garmhal.webp",
+  "textoRegraLido": "O primeiro dano de combate que um Aliado seu causa em cada turno é 1 maior.",
+  "valoresLidos": [
+    "conflituo",
+    "primitivum"
+  ],
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/domadora-de-garmhal.png",
+      "papel": "Personagem atual aprovado; preservar identidade, pose, roupa, magia e traço"
+    }
+  ],
+  "decisoes": [
+    "Diretriz do autor: refazer somente o fundo do conjurador mantendo a figura atual.",
+    "Cenário opaco sinérgico e figura dominante; frente ou três-quartos frontal mantido.",
+    "Cena anterior com outra pose reservada para cartas futuras."
+  ],
+  "avaliacaoVisual": "Personagem reconhecível na composição original, com cenário integrado e leitura clara; luz localizada, sem novo protagonista.",
+  "versaoAnterior": {
+    "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-lyandra.png",
+    "selecionada": false,
+    "motivo": "Reservada para cartas futuras por pedido do autor.",
+    "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-lyandra.visual.json"
+  },
+  "diretrizAutor": "Fundo do conjurador, sem redesenhar o personagem."
+}

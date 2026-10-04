@@ -1,7 +1,7 @@
 {
   "versao": 1,
   "projeto": "Arcanoclisma — site online",
-  "data": "2026-10-03",
+  "data": "2026-10-04",
   "autorDaAtribuicao": "Usuário",
   "gestor": "Codex",
   "estadoGestao": "ativa_autorizada_pelo_autor",
@@ -16,7 +16,7 @@
     "AGENTES-VISUAIS.json"
   ],
   "entradaVisual": "Arcanoclisma/online/pedidos-visuais/site.claude.json",
-  "entradaVisualRecebida": false,
+  "entradaVisualRecebida": true,
   "saidaVisual": "Arcanoclisma/online/entregas-visuais/site.codex.json",
   "agentes": {
     "modo": "skills_selecionadas_sob_demanda; sem_processos_novos_por_nome",
@@ -59,7 +59,7 @@
   "processosDeAgentesIniciados": 1,
   "automacoesCriadas": 0,
   "economiaMedida": null,
-  "publicacaoGit": "instrucoes_locais; novo_push_exige_autorizacao",
+  "publicacaoGit": "pushs_das_imagens_autorizados_pelo_autor; entregas_concluidas_publicadas_em_lotes",
   "interfaceAtual": {
     "estado": "entregue_localmente",
     "entrega": "Arcanoclisma/online/entregas-visuais/site.codex.json",
@@ -68,11 +68,25 @@
   },
   "loteCartasRecebido": {
     "arquivo": "Arcanoclisma/cartas/pedidos/lote-site-v1.claude.json",
-    "estado": "solicitado",
-    "cartas": 142,
+    "estado": "em_producao",
+    "cartas": 201,
     "conjuradores": 9,
     "diretrizAplicavel": "Arcanoclisma/cartas/DIRETRIZ-CENARIOS.md"
   },
   "revisaoCenas": "Arcanoclisma/cartas/entregas/revisao-cenarios-2026-10-03.visual.json",
-  "tarefaDelegada": "DeepSeek: leitura pontual do código público da mesa via OpenRouter, sem alterações de arquivos"
+  "tarefaDelegada": "DeepSeek: leitura pontual anterior do código público da mesa via OpenRouter, sem alterações de arquivos; auxiliares pausados durante produção de imagens",
+  "entregaVisualAtual": {
+    "data": "2026-10-04",
+    "guia": "coordenacao/site-online/ENTREGA-ARTES-04-10.md",
+    "mapaConjuradores": "Arcanoclisma/cartas/entregas/conjuradores-fundos-2026-10-04.visual.json",
+    "lote": "Arcanoclisma/cartas/entregas/lote-site-v1.visual.json",
+    "concluidas": 94,
+    "meta": 210,
+    "pendentes": 116,
+    "conjuradoresComFundo": 9,
+    "ciantiaDimensaoTransplanar": true,
+    "cenasAnterioresGuardadasParaCartasFuturas": true,
+    "integracaoClaudeConfirmada": false,
+    "expansaoLiberada": false
+  }
 }

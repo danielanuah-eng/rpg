@@ -1,36 +1,49 @@
 {
   "id": "conjurador-mitonho",
-  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-9c207c16-7293-4151-ac09-90a3f6b74791.png",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-7590eca6-a534-44d5-8dcf-73f9f84962a3.png",
   "prompt": "Arcanoclisma/arte/cartas-site/prompts/conjurador-mitonho.txt",
   "baseInspecionada": true,
+  "baseVisualExistente": true,
   "descricaoLida": true,
-  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/carcereiro.webp",
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/carcereiro.png",
+  "referenciaJogoAtual": "Arcanoclisma/online/public/arte/carcereiro.webp",
+  "textoRegraLido": "Repentina: suspenda o Conjurador e pague 2. Neste turno, você pode jogar do seu cemitério uma carta cujo efeito anule outra, pagando o custo dela normalmente. Ao resolver, ela é banida.",
+  "valoresLidos": [
+    "eternyr",
+    "dominum"
+  ],
   "referenciasGeracao": [
     {
-      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
-      "papel": "somente acabamento e traço"
+      "arquivo": "Arcanoclisma/arte/imagens/carcereiro.png",
+      "papel": "Personagem atual aprovado; preservar identidade, pose, roupa, magia e traço"
     }
   ],
   "decisoes": [
-    "Novo Mitonho robusto e baixo, barba grisalha, chaves-relógio e lampião",
-    "Pose agachada, vista inclinada, cenário de prisão temporal ao amanhecer",
-    "Feitiço preso nas correntes é círculo de cancelamento, sem repetir página brilhante",
-    "Magia azul/roxa focal com v9, ambiente unificado e legível"
+    "Diretriz do autor: refazer somente o fundo do conjurador mantendo a figura atual.",
+    "Cenário opaco sinérgico e figura dominante; frente ou três-quartos frontal mantido.",
+    "Cena anterior com outra pose reservada para cartas futuras."
   ],
-  "avaliacaoVisual": "Inspecionada: giro da chave e lampião claros, personagem com apoio no chão, cela e efeito compartilham iluminação/perspectiva.",
+  "avaliacaoVisual": "Mesma aparência, roupa, gesto e direção original da cabeça, com cenário próprio, corpo frontal e magia localizada.",
+  "versaoAnterior": {
+    "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-mitonho.png",
+    "selecionada": false,
+    "motivo": "Reservada para cartas futuras por pedido do autor.",
+    "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-mitonho.visual.json"
+  },
+  "diretrizAutor": "Fundo do conjurador, sem redesenhar o personagem.",
   "ferramenta": "image_gen.imagegen integrada",
   "modo": "built-in",
-  "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-mitonho.png",
+  "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-mitonho-158caaad.png",
   "dimensoes": [
-    1062,
-    1481
+    1061,
+    1482
   ],
   "dimensoesSolicitadas": [
     1260,
     1760
   ],
   "dimensoesEntregues": "Saída nativa real; não redimensionada",
-  "sha256": "7ad4921f6441bafa69606bd0e9c4298a119b2ea6f262667a16b381485e18541f",
+  "sha256": "158caaad3537841762416c71f68e868478cc81b0e10fd6768d38f5a1b1aa1013",
   "alfa": {
     "hasAlpha": false,
     "min": 255,

@@ -1,0 +1,29 @@
+# Entrega visual para Claude — 04/10/2026
+
+O autor pediu o envio conjunto das artes concluídas e dos conjuradores com cenários corrigidos. Autorizou os pushes das imagens. Esta entrega não altera habilidades, custos ou regras.
+
+## Arquivos de entrada
+
+- Mapa dos nove conjuradores e do modelo de Ciantia: `Arcanoclisma/cartas/entregas/conjuradores-fundos-2026-10-04.visual.json`.
+- Lote completo: `Arcanoclisma/cartas/entregas/lote-site-v1.visual.json`.
+- Prévia dos conjuradores: `Arcanoclisma/cartas/modelos-visuais/2026-10-04-conjuradores/galeria.html`.
+- Galeria geral: `Arcanoclisma/arte/cartas-site/galeria.html`.
+
+## Diretriz atual do autor
+
+Os retratos de conjurador do site estavam bons em traço, aparência, pose e detalhes. O pedido é preservar essa composição e acrescentar apenas um ambiente sinérgico. Use os novos caminhos exatos do mapa, inclusive o hash no nome. Eles correspondem a Lyandra, Carmal, Ricardo, Roh, Agnelo, Diástaros, Ana, Mitonho e Osmar. A figura fica dominante, com o corpo frontal ou em três-quartos frontal.
+
+As nove cenas anteriores, que mudavam o personagem e a pose, foram guardadas por pedido do autor para cartas futuras. Imagens, prompts e registros estão preservados no catálogo `Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/catalogo.json`. Não usá-las como retrato principal de conjurador.
+
+Ciantia preserva a pose frontal original e seus dois dragões. O fundo vigente é a mesma dimensão da primeira carta do Dragão Transplanar: pontes e torres suspensas entre nuvens, com três dragões da mesma espécie em verde, coral e âmbar, voando acima e vistos de baixo. O estudo anterior no lago permanece como variante não selecionada.
+
+## Estado da entrega
+
+Há **94 de 210** artes da fila concluídas, incluindo os nove conjuradores agora revisados; **116** permanecem pendentes. O modelo de Ciantia é suplementar. Os quatro itens recém-concluídos são Couraça de placas, Poção de cura, Elixir de foco e Harpa de Vidro de Liss.
+
+As cenas completas têm fundo opaco medido. Os PNGs são saídas nativas, sem redimensionamento. Preserve essa nitidez na carta; use `arteModo=cena` e evite tratamento fosco.
+
+A aprovação de publicação não representa a avaliação visual final de toda a fila. Não registrar aprovação final automaticamente. Raridade é somente estética, sem definição automática no aplicativo; os acabamentos continuam disponíveis.
+
+**A Mestra dos Dragões permanece bloqueada para ativação no jogo ou mudanças de cartas até liberação específica do autor.** A produção e publicação das imagens não liberam a expansão. Claude faz a integração; o recebimento e a integração desta revisão ainda não foram confirmados.
+

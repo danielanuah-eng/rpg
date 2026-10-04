@@ -1,12 +1,8 @@
 {
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 90,
+  "concluidas": 94,
   "pendentes": [
-    "item-armadura-couraca",
-    "item-extra-pocao",
-    "item-extra-elixir",
-    "item-canal-harpa",
     "item-canal-badalo",
     "item-canal-violino",
     "item-canal-coleira",

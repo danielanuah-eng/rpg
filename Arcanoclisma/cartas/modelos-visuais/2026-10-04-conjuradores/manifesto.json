@@ -1,0 +1,83 @@
+{
+  "versao": 1,
+  "personagemFonte": "Arcanoclisma/arte/imagens/ciantia-dragoes.png",
+  "dimensaoFonte": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-v1/dragao-da-travessia-arte-v1.png",
+  "liberadaNoJogo": false,
+  "variantes": [
+    {
+      "id": "conjurador-ciantia",
+      "nome": "Ciantia — retrato de conjuradora",
+      "source": "Arcanoclisma/arte/imagens/ciantia-dragoes.png",
+      "expansao": true,
+      "prompt": "Arcanoclisma/cartas/modelos-visuais/2026-10-04-conjuradores/ciantia-lago.prompt.txt",
+      "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-bf99397c-fef2-4314-a05f-7de3dfca2479.png",
+      "destino": "Arcanoclisma/cartas/modelos-visuais/2026-10-04-conjuradores/conjurador-ciantia-fundo.png",
+      "estado": "variante_anterior_nao_selecionada",
+      "liberadaNoJogo": false,
+      "observacao": "Modelo solicitado preservando a pose frontal de Ciantia. A expansão A Mestra dos Dragões permanece bloqueada para jogo.",
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-04-conjuradores/conjurador-ciantia-fundo.png",
+      "sha256": "2c980ab0982275bcddf054e0d7e6d642cd36cda4978515643a26e1ae4e157d62",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "alfa": {
+        "hasAlpha": false,
+        "min": 255,
+        "max": 255,
+        "pixelsTransparentes": 0,
+        "cantos": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "selecionada": false,
+      "ferramenta": "image_gen.imagegen integrada",
+      "dimensoesEntregues": "Saída nativa, sem redimensionamento"
+    },
+    {
+      "id": "conjurador-ciantia",
+      "nome": "Ciantia — retrato de conjuradora na dimensão transplanar",
+      "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-4ea07c4a-50d6-4702-adb6-2ace97eb2b72.png",
+      "destino": "Arcanoclisma/cartas/modelos-visuais/2026-10-04-conjuradores/conjurador-ciantia-dimensao-transplanar.png",
+      "prompt": "Arcanoclisma/cartas/modelos-visuais/2026-10-04-conjuradores/ciantia-dimensao.prompt.txt",
+      "referenciasGeracao": [
+        {
+          "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-04-conjuradores/conjurador-ciantia-fundo.png",
+          "papel": "Preservar personagem e dois dragões na composição frontal original"
+        },
+        {
+          "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-v1/dragao-da-travessia-arte-v1.png",
+          "papel": "Dimensão e anatomia da espécie dos três dragões distantes vistos de baixo"
+        }
+      ],
+      "estado": "gerada_aguardando_avaliacao_final",
+      "liberadaNoJogo": false,
+      "avaliacaoVisual": "Ciantia mantém pose frontal e ambos os dragões originais; fundo substituído por pontes e torres suspensas na dimensão transplanar. Três dragões menores verde, coral e âmbar voam acima, vistos de baixo. Fundo sem grande portal dourado.",
+      "observacao": "A expansão A Mestra dos Dragões permanece bloqueada para jogo.",
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-04-conjuradores/conjurador-ciantia-dimensao-transplanar.png",
+      "sha256": "9b82a49f07ade84ccdf16c255fe15e5e092cb177d35e5ec61aa805623657586b",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "alfa": {
+        "hasAlpha": false,
+        "min": 255,
+        "max": 255,
+        "pixelsTransparentes": 0,
+        "cantos": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "selecionada": true,
+      "ferramenta": "image_gen.imagegen integrada",
+      "dimensoesEntregues": "Saída nativa, sem redimensionamento"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "item-extra-elixir",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-1ecb5870-6e07-4ff4-a31e-1c3d6c70be0f.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-extra-elixir.txt",
+  "baseInspecionada": false,
+  "baseVisualExistente": false,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": null,
+  "textoRegraLido": "Extra. Consumível: ganhe 2 de Arcano.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento pictórico aprovado"
+    }
+  ],
+  "decisoes": [
+    "Cena completa com fundo integrado; preservar as regras atuais.",
+    "Raridade permanece sem definição no aplicativo."
+  ],
+  "avaliacaoVisual": "Frasco azul e duas esferas de recurso numa cena noturna; não representa cura.",
+  "motivoSemBase": "O pedido não fornece arte original do item; foi criada uma cena nova com referência de acabamento.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-elixir.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "80620b3761223dbe0581e9391ea4ac7eb03140ff8ddd88332149e59954a2dc2a",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

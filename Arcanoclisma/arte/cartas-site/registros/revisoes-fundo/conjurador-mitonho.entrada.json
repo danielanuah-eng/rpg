@@ -1,0 +1,34 @@
+{
+  "id": "conjurador-mitonho",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-7590eca6-a534-44d5-8dcf-73f9f84962a3.png",
+  "prompt": "Use case: identity-preserve / precise-object-edit. Asset: Arcanoclisma TCG conjurador portrait. EDIT the provided original character illustration by adding a fully painted, opaque, aesthetically synergistic environment around and behind it. The author approves this existing character and wants ONLY the missing backdrop addressed. LOCK the exact character identity, age, skin, face, hair, expression, original head direction, clothing, equipment, original colored magic, the silhouette and all limbs/hand positions. Do not redesign the person or invent another protagonist. Preserve the original front-facing or front-three-quarter body stance toward the viewer and keep the entire character large, centered and dominant, roughly 75-85% of the image height; do not turn their back or replace the original action with a scene facing sideways. Preserve the existing expression and gaze rather than forcing a different head direction. The existing drawing's clean expressive ink contours, flat graphic shades and fine halftone detail must stay crisp, recognizable and richly colored. The environment must use the SAME illustrated language, with smoother broad matte color shapes and quiet depth, never photographic or excessively rough/scratchy texture. Ground the feet/pose coherently, matching the background's perspective and soft local light; not a pasted cutout on a generic background. Foreground, midground and background should read at card scale while the subject stays foremost. Soft controlled lighting and moderate contrast; no blazing gold sky, white haze, HDR, giant anime spotlight or whole-frame glow. Existing magical glow stays local and unchanged, supporting the character. Output a full vertical illustration in approximately standard card art ratio 63:88, preferred 1260x1760 when supported. NO card borders, rarity decorations, title, numbers, letters, UI, watermark or signature. Full opaque background right to every edge, no transparent/white blank areas. Only the background should meaningfully change. Scene: A sober fortified prison gatehouse in cool early morning, a wide smooth flagstone floor under his original guarded stance, muted blue-grey rectangular stone walls behind, one heavy bronze barred doorway distant at one side and one small unlit watch-lantern. A subdued violet-blue haze can sit FAR inside the doorway, without adding spells to his figure. Preserve the original dark short hair and full beard, muscular forearms, cream rolled sleeves, dark teal apron-coat, three large bronze keys at his belt and original one-hand raised bronze mace, second clenched fist. No kneeling old grey-haired replacement, magic chains on his costume or flaming portal.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/carcereiro.png",
+  "referenciaJogoAtual": "Arcanoclisma/online/public/arte/carcereiro.webp",
+  "textoRegraLido": "Repentina: suspenda o Conjurador e pague 2. Neste turno, você pode jogar do seu cemitério uma carta cujo efeito anule outra, pagando o custo dela normalmente. Ao resolver, ela é banida.",
+  "valoresLidos": [
+    "eternyr",
+    "dominum"
+  ],
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/carcereiro.png",
+      "papel": "Personagem atual aprovado; preservar identidade, pose, roupa, magia e traço"
+    }
+  ],
+  "decisoes": [
+    "Diretriz do autor: refazer somente o fundo do conjurador mantendo a figura atual.",
+    "Cenário opaco sinérgico e figura dominante; frente ou três-quartos frontal mantido.",
+    "Cena anterior com outra pose reservada para cartas futuras."
+  ],
+  "avaliacaoVisual": "Mesma aparência, roupa, gesto e direção original da cabeça, com cenário próprio, corpo frontal e magia localizada.",
+  "versaoAnterior": {
+    "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-mitonho.png",
+    "selecionada": false,
+    "motivo": "Reservada para cartas futuras por pedido do autor.",
+    "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-mitonho.visual.json"
+  },
+  "diretrizAutor": "Fundo do conjurador, sem redesenhar o personagem."
+}

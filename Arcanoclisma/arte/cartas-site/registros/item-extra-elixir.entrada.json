@@ -1,0 +1,24 @@
+{
+  "id": "item-extra-elixir",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-1ecb5870-6e07-4ff4-a31e-1c3d6c70be0f.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\n\nCARD ART — ELIXIR DE FOCO. Only image reference is approved smoother illustration STYLE. New equipment visual from authorized description: a THIN TALL glass flask of blue elixir with light points RISING in the liquid. Extra consumable: gain TWO Arcano, not healing, drawing cards, reducing costs, or making a black hole. Generic equipment, no rarity foil. Slender straight flattened flask with long small neck and a simple ceramic cap lying beside it, understated dark leather carrying wrap, pale cyan-blue liquid, a few points of light rising upward in one clear path. Bottle must be distinct from the squat round red-coral healing potion.\nNEW composition mostly HANDS and object, camera from BEHIND SHOULDER of an unnamed older female stargazer whose only partial neck/long straight grey hair edge and rust-colored practical shawl appear at far LEFT. Hands medium brown with light age marks, one RIGHT hand holds the TALL flask VERTICAL prominently at CENTER-RIGHT, the LEFT hand is cupped OPEN below-left, TWO small separate restrained BLUE-WHITE Arcano orbs float just above palm. No extra hand, limb, face or second bottle. A little residue of the consumed elixir and rising blue dots in the vessel show it is a one-use focus consumable. Not another figure drinking in the same pose as the healing potion. Two orbs only, no Arcano number or type symbols printed.\nSetting CLEAR QUIET NIGHT at a modest hilltop traveller's camp, muted moss grass, plain navy woven blanket at foreground, small wooden star chart case CLOSED with no readable writing, ordinary tea mug, low canvas shelter half-visible at right; distant SILHOUETTES of rolling hills and a small village dot light beneath thin mist. No apothecary room, greenhouse, portal, cathedral or river-lock background. Moonlight soft blue-grey, few tiny cold stars, glass blue light local to fingers/palm, no large blue flare around whole landscape. Warm rusty shawl and muted clay cup contrast the cold magic. Smooth glass and broad material planes, sparse clear detail, crisp polished object edges; no realistic photo or rough impasto. Lower third calm blanket/grass region. Full new opaque scene, no white background, transparent cutout, frame or UI lettering.",
+  "baseInspecionada": false,
+  "baseVisualExistente": false,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": null,
+  "textoRegraLido": "Extra. Consumível: ganhe 2 de Arcano.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento pictórico aprovado"
+    }
+  ],
+  "decisoes": [
+    "Cena completa com fundo integrado; preservar as regras atuais.",
+    "Raridade permanece sem definição no aplicativo."
+  ],
+  "avaliacaoVisual": "Frasco azul e duas esferas de recurso numa cena noturna; não representa cura.",
+  "motivoSemBase": "O pedido não fornece arte original do item; foi criada uma cena nova com referência de acabamento."
+}

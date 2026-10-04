@@ -1,36 +1,49 @@
 {
   "id": "conjurador-diastaros",
-  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-d33b079a-489f-4554-a2b2-5a07dcd763d7.png",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-493187c3-a0be-40b0-8ef0-471e7ad1d850.png",
   "prompt": "Arcanoclisma/arte/cartas-site/prompts/conjurador-diastaros.txt",
   "baseInspecionada": true,
+  "baseVisualExistente": true,
   "descricaoLida": true,
-  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/medium-do-luto.webp",
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/medium-do-luto.png",
+  "referenciaJogoAtual": "Arcanoclisma/online/public/arte/medium-do-luto.webp",
+  "textoRegraLido": "Suspenda o Conjurador: ponha no seu campo um Aliado do seu cemitério ou do cemitério do oponente, pagando 2 de Arcano a mais além do custo dele.",
+  "valoresLidos": [
+    "morbidyum",
+    "cognitium"
+  ],
   "referenciasGeracao": [
     {
-      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
-      "papel": "apenas direção de arte"
+      "arquivo": "Arcanoclisma/arte/imagens/medium-do-luto.png",
+      "papel": "Personagem atual aprovado; preservar identidade, pose, roupa, magia e traço"
     }
   ],
   "decisoes": [
-    "Novo Diástaros idoso e curvado com venda índigo e manto de corvo",
-    "Cripta/columbário ao invés de repetir o cemitério costeiro de Agnelo",
-    "Ressurreição sem ferimentos gráficos, fios índigo/verde-pálidos",
-    "Substituição da tela/óleo rugoso por cena mais lisa, v9 focal"
+    "Diretriz do autor: refazer somente o fundo do conjurador mantendo a figura atual.",
+    "Cenário opaco sinérgico e figura dominante; frente ou três-quartos frontal mantido.",
+    "Cena anterior com outra pose reservada para cartas futuras."
   ],
-  "avaliacaoVisual": "Inspecionada: necromante vendado e aliado despertando, mãos e magia conduzem a ação, arquitetura em planos e luz noturna coerente.",
+  "avaliacaoVisual": "Mesma aparência, roupa, gesto e direção original da cabeça, com cenário próprio, corpo frontal e magia localizada.",
+  "versaoAnterior": {
+    "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-diastaros.png",
+    "selecionada": false,
+    "motivo": "Reservada para cartas futuras por pedido do autor.",
+    "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-diastaros.visual.json"
+  },
+  "diretrizAutor": "Fundo do conjurador, sem redesenhar o personagem.",
   "ferramenta": "image_gen.imagegen integrada",
   "modo": "built-in",
-  "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-diastaros.png",
+  "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-diastaros-992f5b6d.png",
   "dimensoes": [
     1061,
-    1483
+    1482
   ],
   "dimensoesSolicitadas": [
     1260,
     1760
   ],
   "dimensoesEntregues": "Saída nativa real; não redimensionada",
-  "sha256": "a0a8b516b320cded953b3f7b61358a327bc521d0a57ad83a6a1f22aee8745ba1",
+  "sha256": "992f5b6d7b9c79118bcd30f30ed729a3d53b2d3ab33bedfe0a10f1a7a9c40101",
   "alfa": {
     "hasAlpha": false,
     "min": 255,

@@ -3,12 +3,8 @@
   "pedidoVersao": 2,
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 90,
+  "concluidas": 94,
   "pendentes": [
-    "item-armadura-couraca",
-    "item-extra-pocao",
-    "item-extra-elixir",
-    "item-canal-harpa",
     "item-canal-badalo",
     "item-canal-violino",
     "item-canal-coleira",
@@ -130,7 +126,7 @@
     {
       "id": "conjurador-lyandra",
       "nome": "Lyandra, a Domadora de Guerra",
-      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-lyandra.png",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-lyandra-c92c861b.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-lyandra.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
@@ -138,7 +134,7 @@
     {
       "id": "conjurador-carmal",
       "nome": "Carmal, o Druida Crepuscular",
-      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-carmal.png",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-carmal-92813aeb.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-carmal.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
@@ -146,7 +142,7 @@
     {
       "id": "conjurador-ricardo",
       "nome": "Alquimista Ricardo",
-      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ricardo.png",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ricardo-1b3ce846.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-ricardo.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
@@ -154,7 +150,7 @@
     {
       "id": "conjurador-roh",
       "nome": "Roh, o Ilusionista das Máscaras",
-      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-roh.png",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-roh-0a552076.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-roh.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
@@ -162,7 +158,7 @@
     {
       "id": "conjurador-agnelo",
       "nome": "Agnelo, o Duelista Sombrio",
-      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-agnelo.png",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-agnelo-b4c81c4f.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-agnelo.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
@@ -170,7 +166,7 @@
     {
       "id": "conjurador-diastaros",
       "nome": "Diástaros, o Necromante Vidente",
-      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-diastaros.png",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-diastaros-992f5b6d.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-diastaros.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
@@ -178,7 +174,7 @@
     {
       "id": "conjurador-ana",
       "nome": "Ana, a Cronista do Tempo",
-      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ana.png",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ana-f036e89f.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-ana.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
@@ -186,7 +182,7 @@
     {
       "id": "conjurador-mitonho",
       "nome": "Mitonho, o Carcereiro Temporal",
-      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-mitonho.png",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-mitonho-158caaad.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-mitonho.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
@@ -194,7 +190,7 @@
     {
       "id": "conjurador-osmar",
       "nome": "Osmar, o Capataz de Ferro",
-      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-osmar.png",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-osmar-183eb5f1.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-osmar.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
@@ -845,6 +841,38 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-armadura-gibao.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-armadura-gibao.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-armadura-couraca",
+      "nome": "Couraça de placas",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-armadura-couraca.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-armadura-couraca.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-extra-pocao",
+      "nome": "Poção de cura",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-pocao.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-pocao.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-extra-elixir",
+      "nome": "Elixir de foco",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-elixir.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-elixir.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-canal-harpa",
+      "nome": "Harpa de Vidro de Liss",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-canal-harpa.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-canal-harpa.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
     }
   ],

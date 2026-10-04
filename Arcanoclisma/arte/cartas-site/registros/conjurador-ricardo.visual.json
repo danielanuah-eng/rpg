@@ -1,36 +1,49 @@
 {
   "id": "conjurador-ricardo",
-  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-c34cb310-5aca-445c-9a9c-40c3e2e8fc17.png",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-d3f9a6d1-ec7e-43a8-8475-7d625687097a.png",
   "prompt": "Arcanoclisma/arte/cartas-site/prompts/conjurador-ricardo.txt",
   "baseInspecionada": true,
+  "baseVisualExistente": true,
   "descricaoLida": true,
-  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/alquimista-naufrago.webp",
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/alquimista-naufrago.png",
+  "referenciaJogoAtual": "Arcanoclisma/online/public/arte/alquimista-naufrago.webp",
+  "textoRegraLido": "Suspenda o Conjurador: a primeira carta que você jogar neste turno custa 1 a menos.",
+  "valoresLidos": [
+    "alvorum",
+    "sublimeyn"
+  ],
   "referenciasGeracao": [
     {
-      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
-      "papel": "somente direção de arte, sem copiar personagens ou local"
+      "arquivo": "Arcanoclisma/arte/imagens/alquimista-naufrago.png",
+      "papel": "Personagem atual aprovado; preservar identidade, pose, roupa, magia e traço"
     }
   ],
   "decisoes": [
-    "Ricardo é personagem novo com bigode e lentes, sem copiar marcador ruivo náufrago",
-    "Laboratório aberto ao amanhecer, vista elevada, pose parcialmente de costas",
-    "Acabamento ambiental mais liso substitui pinceladas visíveis do briefing",
-    "Lendária v9 com reflexos focalizados na alquimia e nos vidros"
+    "Diretriz do autor: refazer somente o fundo do conjurador mantendo a figura atual.",
+    "Cenário opaco sinérgico e figura dominante; frente ou três-quartos frontal mantido.",
+    "Cena anterior com outra pose reservada para cartas futuras."
   ],
-  "avaliacaoVisual": "Inspecionada: bancada, personagem e frascos compartilham câmera e luz, cenário completo, gesto alquímico e expressão próprios.",
+  "avaliacaoVisual": "Personagem reconhecível na composição original, com cenário integrado e leitura clara; luz localizada, sem novo protagonista.",
+  "versaoAnterior": {
+    "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ricardo.png",
+    "selecionada": false,
+    "motivo": "Reservada para cartas futuras por pedido do autor.",
+    "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-ricardo.visual.json"
+  },
+  "diretrizAutor": "Fundo do conjurador, sem redesenhar o personagem.",
   "ferramenta": "image_gen.imagegen integrada",
   "modo": "built-in",
-  "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ricardo.png",
+  "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ricardo-1b3ce846.png",
   "dimensoes": [
     1061,
-    1483
+    1482
   ],
   "dimensoesSolicitadas": [
     1260,
     1760
   ],
   "dimensoesEntregues": "Saída nativa real; não redimensionada",
-  "sha256": "0bb719b8d1543e2ccc42f5e744f6f9550933c5b4af997b2ed930b11e048ccf9b",
+  "sha256": "1b3ce84681f81caf427471d927039bb1651e00ca64bbff8899c744bcc2ed5e4f",
   "alfa": {
     "hasAlpha": false,
     "min": 255,

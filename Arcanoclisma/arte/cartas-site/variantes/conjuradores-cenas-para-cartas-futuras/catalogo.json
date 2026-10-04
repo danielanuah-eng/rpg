@@ -1,0 +1,96 @@
+{
+  "pedidoAutor": "Guardar as versões anteriores dos conjuradores com cenas e poses diferentes para cartas futuras.",
+  "imagensOriginaisPreservadas": true,
+  "cenas": [
+    {
+      "id": "conjurador-lyandra",
+      "nome": "Lyandra, a Domadora de Guerra",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-lyandra.png",
+      "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-lyandra.visual.json",
+      "prompt": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-lyandra.prompt.txt",
+      "uso": "Cartas futuras com novas poses e eventos",
+      "aprovacaoFinal": false,
+      "regras": "Não cria carta nem habilidade; Claude define uma carta futura conforme pedido do autor."
+    },
+    {
+      "id": "conjurador-carmal",
+      "nome": "Carmal, o Druida Crepuscular",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-carmal.png",
+      "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-carmal.visual.json",
+      "prompt": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-carmal.prompt.txt",
+      "uso": "Cartas futuras com novas poses e eventos",
+      "aprovacaoFinal": false,
+      "regras": "Não cria carta nem habilidade; Claude define uma carta futura conforme pedido do autor."
+    },
+    {
+      "id": "conjurador-ricardo",
+      "nome": "Alquimista Ricardo",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ricardo.png",
+      "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-ricardo.visual.json",
+      "prompt": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-ricardo.prompt.txt",
+      "uso": "Cartas futuras com novas poses e eventos",
+      "aprovacaoFinal": false,
+      "regras": "Não cria carta nem habilidade; Claude define uma carta futura conforme pedido do autor."
+    },
+    {
+      "id": "conjurador-roh",
+      "nome": "Roh, o Ilusionista das Máscaras",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-roh.png",
+      "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-roh.visual.json",
+      "prompt": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-roh.prompt.txt",
+      "uso": "Cartas futuras com novas poses e eventos",
+      "aprovacaoFinal": false,
+      "regras": "Não cria carta nem habilidade; Claude define uma carta futura conforme pedido do autor."
+    },
+    {
+      "id": "conjurador-agnelo",
+      "nome": "Agnelo, o Duelista Sombrio",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-agnelo.png",
+      "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-agnelo.visual.json",
+      "prompt": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-agnelo.prompt.txt",
+      "uso": "Cartas futuras com novas poses e eventos",
+      "aprovacaoFinal": false,
+      "regras": "Não cria carta nem habilidade; Claude define uma carta futura conforme pedido do autor."
+    },
+    {
+      "id": "conjurador-diastaros",
+      "nome": "Diástaros, o Necromante Vidente",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-diastaros.png",
+      "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-diastaros.visual.json",
+      "prompt": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-diastaros.prompt.txt",
+      "uso": "Cartas futuras com novas poses e eventos",
+      "aprovacaoFinal": false,
+      "regras": "Não cria carta nem habilidade; Claude define uma carta futura conforme pedido do autor."
+    },
+    {
+      "id": "conjurador-ana",
+      "nome": "Ana, a Cronista do Tempo",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ana.png",
+      "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-ana.visual.json",
+      "prompt": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-ana.prompt.txt",
+      "uso": "Cartas futuras com novas poses e eventos",
+      "aprovacaoFinal": false,
+      "regras": "Não cria carta nem habilidade; Claude define uma carta futura conforme pedido do autor."
+    },
+    {
+      "id": "conjurador-mitonho",
+      "nome": "Mitonho, o Carcereiro Temporal",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-mitonho.png",
+      "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-mitonho.visual.json",
+      "prompt": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-mitonho.prompt.txt",
+      "uso": "Cartas futuras com novas poses e eventos",
+      "aprovacaoFinal": false,
+      "regras": "Não cria carta nem habilidade; Claude define uma carta futura conforme pedido do autor."
+    },
+    {
+      "id": "conjurador-osmar",
+      "nome": "Osmar, o Capataz de Ferro",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-osmar.png",
+      "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-osmar.visual.json",
+      "prompt": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-osmar.prompt.txt",
+      "uso": "Cartas futuras com novas poses e eventos",
+      "aprovacaoFinal": false,
+      "regras": "Não cria carta nem habilidade; Claude define uma carta futura conforme pedido do autor."
+    }
+  ]
+}

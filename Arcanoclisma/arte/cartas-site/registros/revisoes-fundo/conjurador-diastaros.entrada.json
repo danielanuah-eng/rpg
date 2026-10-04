@@ -1,0 +1,34 @@
+{
+  "id": "conjurador-diastaros",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-493187c3-a0be-40b0-8ef0-471e7ad1d850.png",
+  "prompt": "Use case: identity-preserve / precise-object-edit. Asset: Arcanoclisma TCG conjurador portrait. EDIT the provided original character illustration by adding a fully painted, opaque, aesthetically synergistic environment around and behind it. The author approves this existing character and wants ONLY the missing backdrop addressed. LOCK the exact character identity, age, skin, face, hair, expression, original head direction, clothing, equipment, original colored magic, the silhouette and all limbs/hand positions. Do not redesign the person or invent another protagonist. Preserve the original front-facing or front-three-quarter body stance toward the viewer and keep the entire character large, centered and dominant, roughly 75-85% of the image height; do not turn their back or replace the original action with a scene facing sideways. Preserve the existing expression and gaze rather than forcing a different head direction. The existing drawing's clean expressive ink contours, flat graphic shades and fine halftone detail must stay crisp, recognizable and richly colored. The environment must use the SAME illustrated language, with smoother broad matte color shapes and quiet depth, never photographic or excessively rough/scratchy texture. Ground the feet/pose coherently, matching the background's perspective and soft local light; not a pasted cutout on a generic background. Foreground, midground and background should read at card scale while the subject stays foremost. Soft controlled lighting and moderate contrast; no blazing gold sky, white haze, HDR, giant anime spotlight or whole-frame glow. Existing magical glow stays local and unchanged, supporting the character. Output a full vertical illustration in approximately standard card art ratio 63:88, preferred 1260x1760 when supported. NO card borders, rarity decorations, title, numbers, letters, UI, watermark or signature. Full opaque background right to every edge, no transparent/white blank areas. Only the background should meaningfully change. Scene: An old quiet memorial garden at blue-hour dusk, shallow stone steps and broad smooth slate slabs beneath his boots, ivy-covered low walls and two plain small weathered gravestones far behind, distant dark cypress silhouettes under a soft muted indigo sky. His green hand-magic provides the only strong local glow. Preserve the original balding dark-grey-haired clean-shaven pale man, worried face turned slightly right, torn olive/black cloak, bronze crescent belt ornaments and both exact hand gestures. No new long-haired blindfolded necromancer, huge resurrection event, coffin occupant or second figure.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/medium-do-luto.png",
+  "referenciaJogoAtual": "Arcanoclisma/online/public/arte/medium-do-luto.webp",
+  "textoRegraLido": "Suspenda o Conjurador: ponha no seu campo um Aliado do seu cemitério ou do cemitério do oponente, pagando 2 de Arcano a mais além do custo dele.",
+  "valoresLidos": [
+    "morbidyum",
+    "cognitium"
+  ],
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/medium-do-luto.png",
+      "papel": "Personagem atual aprovado; preservar identidade, pose, roupa, magia e traço"
+    }
+  ],
+  "decisoes": [
+    "Diretriz do autor: refazer somente o fundo do conjurador mantendo a figura atual.",
+    "Cenário opaco sinérgico e figura dominante; frente ou três-quartos frontal mantido.",
+    "Cena anterior com outra pose reservada para cartas futuras."
+  ],
+  "avaliacaoVisual": "Mesma aparência, roupa, gesto e direção original da cabeça, com cenário próprio, corpo frontal e magia localizada.",
+  "versaoAnterior": {
+    "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-diastaros.png",
+    "selecionada": false,
+    "motivo": "Reservada para cartas futuras por pedido do autor.",
+    "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-diastaros.visual.json"
+  },
+  "diretrizAutor": "Fundo do conjurador, sem redesenhar o personagem."
+}

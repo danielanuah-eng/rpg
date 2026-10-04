@@ -1,36 +1,49 @@
 {
   "id": "conjurador-osmar",
-  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-323a7fec-5f46-4c8f-8f47-4915b0623260.png",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-15afd740-3a06-4f6f-b164-6b0c3827ba94.png",
   "prompt": "Arcanoclisma/arte/cartas-site/prompts/conjurador-osmar.txt",
   "baseInspecionada": true,
+  "baseVisualExistente": true,
   "descricaoLida": true,
-  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/senhor-da-trincheira.webp",
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/senhor-da-trincheira.png",
+  "referenciaJogoAtual": "Arcanoclisma/online/public/arte/senhor-da-trincheira.webp",
+  "textoRegraLido": "Seus Aliados têm Protegido 1.",
+  "valoresLidos": [
+    "dominum",
+    "conflituo"
+  ],
   "referenciasGeracao": [
     {
-      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
-      "papel": "somente direção de acabamento"
+      "arquivo": "Arcanoclisma/arte/imagens/senhor-da-trincheira.png",
+      "papel": "Personagem atual aprovado; preservar identidade, pose, roupa, magia e traço"
     }
   ],
   "decisoes": [
-    "Novo Osmar operário enorme com um braço mecânico de bronze e capacete",
-    "Cena de obra de muralha ao entardecer, proteção de dois aliados por escudos/correntes",
-    "Pose de costas parcialmente e câmera baixa, diferente do marcador em ataque frontal",
-    "Acabamento lendário v9 focal na proteção e no bronze"
+    "Diretriz do autor: refazer somente o fundo do conjurador mantendo a figura atual.",
+    "Cenário opaco sinérgico e figura dominante; frente ou três-quartos frontal mantido.",
+    "Cena anterior com outra pose reservada para cartas futuras."
   ],
-  "avaliacaoVisual": "Inspecionada: identidade própria, dois braços distintos, ação protetora coerente, trabalhadores e barreira integrados no cenário.",
+  "avaliacaoVisual": "Mesma aparência, roupa, gesto e direção original da cabeça, com cenário próprio, corpo frontal e magia localizada.",
+  "versaoAnterior": {
+    "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-osmar.png",
+    "selecionada": false,
+    "motivo": "Reservada para cartas futuras por pedido do autor.",
+    "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-osmar.visual.json"
+  },
+  "diretrizAutor": "Fundo do conjurador, sem redesenhar o personagem.",
   "ferramenta": "image_gen.imagegen integrada",
   "modo": "built-in",
-  "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-osmar.png",
+  "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-osmar-183eb5f1.png",
   "dimensoes": [
-    1061,
-    1483
+    1062,
+    1482
   ],
   "dimensoesSolicitadas": [
     1260,
     1760
   ],
   "dimensoesEntregues": "Saída nativa real; não redimensionada",
-  "sha256": "52355f9d3221005db13586a43201720d6d1ad909e0cc421de6516882c9203363",
+  "sha256": "183eb5f13ccda7c16163c36b91887c2e3110bcf8e30bbcc51badcda8adf80a3e",
   "alfa": {
     "hasAlpha": false,
     "min": 255,

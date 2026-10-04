@@ -1,0 +1,21 @@
+{
+  "id": "conjurador-diastaros",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-d33b079a-489f-4554-a2b2-5a07dcd763d7.png",
+  "prompt": "Use case: illustration-story. NEW unified Arcanoclisma vertical63:88 card scene for \"Diástaros, o Necromante Vidente\". Original new human conjurador, not the bald standing medium used as the game's temporary marker. The reference only supplies clean expressive graphic fantasy art and smoother environment style. Diástaros is elderly and distinctly HUNCHBACKED, thin gaunt lined face, olive-grey aged skin, sparse grey hair, eyes covered by an INDIGO blindfold embroidered with a few eye motifs, bony but coherent hands wearing a few bronze rings, and a raven-feather cloak whose feather masses are clearly grouped rather than busy microscopic texture. Three-quarter perspective, low stooped active body in the RIGHT third, head turned slightly back as he draws INDIGO and PALE GREEN soul threads between his hands. A fully clothed armored fallen ally is being resurrected out of a partly opened smooth stone sarcophagus on the LEFT, rising with coherent intact anatomy and surprised awakening expression. No wounds, blood, decay, exposed flesh or graphic corpse imagery; this is non-graphic fantasy resurrection. Hands and threads visibly guide the rising ally, no floating unrelated hero pose. The cemetery setting is a QUIET UNDERGROUND COLUMBARIUM/CRYPT, deliberately different from Agnelo's open coastal burial ground: broad simple masonry niches, polished worn slate floor, a few empty vessels and subdued memorial plinths, distant witnesses silhouetted near an upper stairway, no inscriptions. NIGHT is indicated by a small high opening with moonlight and a glimpse of stars; cool clear moonlit planes support the readable figures. No giant gothic cathedral, portal, battlefield, repeat meadow or dense plants. Complete scene with unified shared perspective, lighting, contact shadows and clear foreground/midground/background. RARITY LEGENDARY, standard art, cosmetic only: v9 localized luminous indigo/pale-green magical centres, fine aged-gold/rainbow specular glints in the threads and bronze rings, subtle real reflections, no global bloom or washed faces. Preserve polished confident Arcanoclisma linework, rich clean colour planes and limited clear shadow blocks, smooth quiet environmental shapes, low microcontrast texture. The author's smoother finish overrides the briefing's oil/canvas texture. No rough painterly noise, exaggerated chipped stone or gritty grain. Main character and risen ally large enough to read, lower area calmly composed for card text later. Entirely new illustrated poses and environment, never pasted cutouts. Opaque background, high native resolution1260x1760 if available, actual dimensions preserved. No text, frame, numbers, logos, photorealism, generic anime or plastic3D.",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/medium-do-luto.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "apenas direção de arte"
+    }
+  ],
+  "decisoes": [
+    "Novo Diástaros idoso e curvado com venda índigo e manto de corvo",
+    "Cripta/columbário ao invés de repetir o cemitério costeiro de Agnelo",
+    "Ressurreição sem ferimentos gráficos, fios índigo/verde-pálidos",
+    "Substituição da tela/óleo rugoso por cena mais lisa, v9 focal"
+  ],
+  "avaliacaoVisual": "Inspecionada: necromante vendado e aliado despertando, mãos e magia conduzem a ação, arquitetura em planos e luz noturna coerente."
+}

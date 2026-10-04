@@ -1,0 +1,52 @@
+{
+  "id": "conjurador-roh",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-1058a344-a4f0-4554-94ea-6989521a7d8b.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-roh.prompt.txt",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/rapaz-do-rosto-mutavel.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "somente traço e acabamento do ambiente"
+    }
+  ],
+  "decisoes": [
+    "Novo Roh mascarado com cabelo escuro e roupa de palco; não copia rapaz mutável provisório",
+    "Feira à tarde e giro de corpo, em vez de pose frontal parada",
+    "Aliada é reconduzida por sombra de máscara; magia de prata/coral",
+    "Cenário integrado liso com acabamento lendário v9 focal"
+  ],
+  "avaliacaoVisual": "Inspecionada: Roh, a aliada, máscaras e praça compartilham perspectiva e luz; expressão/movimento e contexto legíveis.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-roh.png",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "9e550c591be9ed5cb5ef3e30c9bb122f78d17994d3d52564770333925fbf9414",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "lendaria",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false,
+  "papelAtual": "Opção de cena para carta futura; não usar como substituição do retrato de conjurador"
+}

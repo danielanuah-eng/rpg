@@ -1,36 +1,49 @@
 {
   "id": "conjurador-agnelo",
-  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-4960e2e2-95c5-4e66-8f15-857fa4ceeceb.png",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-f0a8b820-6a1b-4aae-8408-89766db8423e.png",
   "prompt": "Arcanoclisma/arte/cartas-site/prompts/conjurador-agnelo.txt",
   "baseInspecionada": true,
+  "baseVisualExistente": true,
   "descricaoLida": true,
-  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/duelista-da-lamina-vermelha.webp",
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/duelista-da-lamina-vermelha.png",
+  "referenciaJogoAtual": "Arcanoclisma/online/public/arte/duelista-da-lamina-vermelha.webp",
+  "textoRegraLido": "Na primeira vez em cada um dos seus turnos que um Aliado seu vai do campo para o cemitério, compre 1 carta.",
+  "valoresLidos": [
+    "persona",
+    "morbidyum"
+  ],
   "referenciasGeracao": [
     {
-      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
-      "papel": "somente acabamento e traço"
+      "arquivo": "Arcanoclisma/arte/imagens/duelista-da-lamina-vermelha.png",
+      "papel": "Personagem atual aprovado; preservar identidade, pose, roupa, magia e traço"
     }
   ],
   "decisoes": [
-    "Novo Agnelo pálido de cabelo preso, casaco sóbrio e florete verde-pálido, sem copiar duelista ruivo",
-    "Cemitério costeiro luminoso, luto sereno e conhecimento da alma",
-    "Cena nova com aliado inteiro e sem ferimentos gráficos",
-    "Brilho lendário localizado e ambiente com formas mais lisas"
+    "Diretriz do autor: refazer somente o fundo do conjurador mantendo a figura atual.",
+    "Cenário opaco sinérgico e figura dominante; frente ou três-quartos frontal mantido.",
+    "Cena anterior com outra pose reservada para cartas futuras."
   ],
-  "avaliacaoVisual": "Inspecionada: postura inclinada e triste, fio de alma e imagem de lembrança, solo e iluminação compartilhados; composição própria.",
+  "avaliacaoVisual": "Mesma aparência, roupa, gesto e direção original da cabeça, com cenário próprio, corpo frontal e magia localizada.",
+  "versaoAnterior": {
+    "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-agnelo.png",
+    "selecionada": false,
+    "motivo": "Reservada para cartas futuras por pedido do autor.",
+    "registro": "Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/conjurador-agnelo.visual.json"
+  },
+  "diretrizAutor": "Fundo do conjurador, sem redesenhar o personagem.",
   "ferramenta": "image_gen.imagegen integrada",
   "modo": "built-in",
-  "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-agnelo.png",
+  "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-agnelo-b4c81c4f.png",
   "dimensoes": [
-    1061,
-    1483
+    1062,
+    1482
   ],
   "dimensoesSolicitadas": [
     1260,
     1760
   ],
   "dimensoesEntregues": "Saída nativa real; não redimensionada",
-  "sha256": "da0493e5c5a5bb618a4bfddc76e9f9dbbfef9cbb12d1ad1f318b5350941d70ca",
+  "sha256": "b4c81c4f8be7fa231e03d1d0199cb46400d15db2f861b943e0e5cd3185c97835",
   "alfa": {
     "hasAlpha": false,
     "min": 255,

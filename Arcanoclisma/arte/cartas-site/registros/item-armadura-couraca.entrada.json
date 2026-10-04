@@ -1,0 +1,25 @@
+{
+  "id": "item-armadura-couraca",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-c53912a9-4cd4-4dc1-a6ee-b3c30d9111a1.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\n\nCARD ART — COURAÇA DE PLACAS. Reference is smooth illustrated style ONLY; invent armor from authorized description: heavy Bronze Arco plate cuirass with rivets and subtle geometric protection runes. Item — Armadura defense2 / wear life6, generic with no rarity. No pre-existing armor image. Real bronze chest/abdomen plates articulated over dark charcoal cloth, heavy but practical, solid teal-brown patina in recesses, limited warm polished edges. Small orderly protective angular rune incisions, no readable text, no gold HDR or full-body forcefield. Armor distinctly heavier than the padded leather vest, not the same leather chest shape.\nNEW wearer is a powerful broad-built OLDER BLACK WOMAN around fifty, very dark rich brown skin, shaved hair with one small grey coil above temple, strong broad nose and deep smile lines; she has a defiant amused half-smile, looking DOWN to the wooden club contacting her armor, calm strength, not another young slim freckled face. Three-quarter SIDE near-full upper body from a LOW camera, armor foreground CENTER, torso turned and leaning diagonally LEFT. One bent arm braces close to her ribs, other raised bent elbow pushes aside the visible opponent's shaft; exactly two arms, two hands. A wooden club strikes a cuirass side plate obliquely and skids away, TWO tiny restrained material contact flecks, shallow scuff only, no puncture/gore or impossible shield; no magical retaliation skill.\nScene dry HIGH SUMMER MIDDAY on the edge of an ordinary orchard guardhouse, clay ochre soil, muted purple scrub hill, terracotta storage jars under low timber shade roof, very little water and no canal/sea/wet city like previous items. A small new lanky opponent in dusty cream practice clothes at RIGHT partially cropped and wielding one wooden staff/club, two other distant guards at a simple palisade, a quiet bell and orchard ladder. The context is a guarded spar/training challenge with ordinary physical contact, no grand catastrophic field. Sky soft pale lavender-blue, diffuse sun through canvas awning, bronze warm and MATTE with cool dark reflections, golden setting not radiantly luminous. Smooth large shapes and painted volume, sparse meaningful material texture, no noisy rough impasto. Foreground armor and wear details central, quieter bench/ground lower third. One coherent new scene at all image edges, no UI text/card border, no isolated object, no approved cutout pasted onto background.",
+  "baseInspecionada": false,
+  "baseVisualExistente": false,
+  "motivoSemBase": "Pedido sem arte de referência; design novo do objeto pela descrição autorizada.",
+  "descricaoLida": true,
+  "imagemBaseInspecionada": null,
+  "textoRegraLido": "Armadura. Defesa 2, desgaste 6.",
+  "velocidade": "findante",
+  "valoresLidos": [],
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento liso aprovado; estilo, não identidade"
+    }
+  ],
+  "decisoes": [
+    "Couraça pesada de Bronze Arco, proteção material em treino sob telheiro de pomar.",
+    "Nova mulher negra mais velha e corpulenta, reação confiante e sorriso; duas mãos e placas coerentes.",
+    "Duas pequenas faíscas de contato, sem imunidade ou aura refletora inventada; ambiente seco de verão."
+  ],
+  "avaliacaoVisual": "Bronze e rebites legíveis, contato de madeira sem ferida, dois braços próprios coerentes e ambiente de pomar; postura e expressão novas."
+}

@@ -1,0 +1,21 @@
+{
+  "id": "conjurador-mitonho",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-9c207c16-7293-4151-ac09-90a3f6b74791.png",
+  "prompt": "Use case: illustration-story. NEW complete Arcanoclisma vertical63:88 TCG artwork for \"Mitonho, o Carcereiro Temporal\". Original NEW human character, not the club-wielding generic jailer in the game's temporary art. Input image only establishes polished Arcanoclisma illustration and smoother environment, not identity/scenery. Mitonho is a SHORT STOUT strong middle-aged guard with a broad square weathered face, grey beard, close-cropped greying hair with a receding crown, deep-set eyes, heavy practical dark navy guard coat, purple chains, distinct clock-key bundle on his belt and a MIDNIGHT-BLUE lantern. Little decoration except functional bronze fastenings. Unique compact silhouette and determined expression looking RIGHT. He CROUCHES beside a large stopped-clock cell lock, one thick gloved hand turning a clock-key while the other holds the blue lantern low. A previously spent annulment spell emerges from the opening cell as a restrained violet midnight-blue circle of broken magical fragments and WHITE cancellation threads still caught in purple chains. Make the release/action visually legible, not another blank glowing rectangular card. Dutch camera tilt modestly around10 degrees, foreground cell bars frame the crouched protagonist and dark purple effect; background contains a pair of small guards in tense readiness rather than graphic fighting. A COMPLETE TEMPORAL PRISON: simple smooth blue-grey walls, functional iron bars, broad slate slabs, quiet stacked stopped clock mechanisms with blank/no-letter faces. DAWN softly pink outside the high barred windows, cool readable interior and local blue lantern illumination. Different from Ana's open clock station, no repeats of open arches/courtyards, laboratory, meadow, crypt or portal. Coherent architectural perspective, solid ground support, contact shadows and proper scale. RARITY LEGENDARY, standard art, cosmetic only. V9 focal glow in the released spell/lantern, fine selective gold and subtle rainbow edge reflections on bronze clock-keys and magical fragments; no gold lighting bath, washed face or all-over bloom. Smooth broad scenery planes and limited clean shadow blocks, polished expressive varied-weight graphic fantasy linework, low texture microcontrast; no grain, gritty cracks, impasto or dense ornament. Character, chains, cage and light painted TOGETHER as a new contextual scene, never a pasted cutout. Keep figure/face large enough to read and lower composition quieter for future rules overlays. Opaque scene, high native resolution1260x1760 if available, report actual dimensions. No text, numbers, frame, logo, photorealism, generic anime or plastic3D.",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/carcereiro.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "somente acabamento e traço"
+    }
+  ],
+  "decisoes": [
+    "Novo Mitonho robusto e baixo, barba grisalha, chaves-relógio e lampião",
+    "Pose agachada, vista inclinada, cenário de prisão temporal ao amanhecer",
+    "Feitiço preso nas correntes é círculo de cancelamento, sem repetir página brilhante",
+    "Magia azul/roxa focal com v9, ambiente unificado e legível"
+  ],
+  "avaliacaoVisual": "Inspecionada: giro da chave e lampião claros, personagem com apoio no chão, cela e efeito compartilham iluminação/perspectiva."
+}

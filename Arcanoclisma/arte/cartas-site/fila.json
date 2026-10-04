@@ -50,8 +50,9 @@
         }
       ],
       "objetoReferencia": null,
-      "arteNova": "Arcanoclisma/arte/cartas-site/conjurador-lyandra.png",
-      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-lyandra.visual.json"
+      "arteNova": "Arcanoclisma/arte/cartas-site/conjurador-lyandra-c92c861b.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-lyandra.visual.json",
+      "diretrizAutorAtual": "Conjurador: preservar personagem, pose e traço da arte atual do site; mudar só o fundo. Cenas anteriores com outra pose ficam reservadas para cartas futuras."
     },
     {
       "id": "conjurador-carmal",
@@ -90,8 +91,9 @@
         }
       ],
       "objetoReferencia": null,
-      "arteNova": "Arcanoclisma/arte/cartas-site/conjurador-carmal.png",
-      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-carmal.visual.json"
+      "arteNova": "Arcanoclisma/arte/cartas-site/conjurador-carmal-92813aeb.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-carmal.visual.json",
+      "diretrizAutorAtual": "Conjurador: preservar personagem, pose e traço da arte atual do site; mudar só o fundo. Cenas anteriores com outra pose ficam reservadas para cartas futuras."
     },
     {
       "id": "conjurador-ricardo",
@@ -130,8 +132,9 @@
         }
       ],
       "objetoReferencia": null,
-      "arteNova": "Arcanoclisma/arte/cartas-site/conjurador-ricardo.png",
-      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-ricardo.visual.json"
+      "arteNova": "Arcanoclisma/arte/cartas-site/conjurador-ricardo-1b3ce846.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-ricardo.visual.json",
+      "diretrizAutorAtual": "Conjurador: preservar personagem, pose e traço da arte atual do site; mudar só o fundo. Cenas anteriores com outra pose ficam reservadas para cartas futuras."
     },
     {
       "id": "conjurador-roh",
@@ -170,8 +173,9 @@
         }
       ],
       "objetoReferencia": null,
-      "arteNova": "Arcanoclisma/arte/cartas-site/conjurador-roh.png",
-      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-roh.visual.json"
+      "arteNova": "Arcanoclisma/arte/cartas-site/conjurador-roh-0a552076.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-roh.visual.json",
+      "diretrizAutorAtual": "Conjurador: preservar personagem, pose e traço da arte atual do site; mudar só o fundo. Cenas anteriores com outra pose ficam reservadas para cartas futuras."
     },
     {
       "id": "conjurador-agnelo",
@@ -210,8 +214,9 @@
         }
       ],
       "objetoReferencia": null,
-      "arteNova": "Arcanoclisma/arte/cartas-site/conjurador-agnelo.png",
-      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-agnelo.visual.json"
+      "arteNova": "Arcanoclisma/arte/cartas-site/conjurador-agnelo-b4c81c4f.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-agnelo.visual.json",
+      "diretrizAutorAtual": "Conjurador: preservar personagem, pose e traço da arte atual do site; mudar só o fundo. Cenas anteriores com outra pose ficam reservadas para cartas futuras."
     },
     {
       "id": "conjurador-diastaros",
@@ -250,8 +255,9 @@
         }
       ],
       "objetoReferencia": null,
-      "arteNova": "Arcanoclisma/arte/cartas-site/conjurador-diastaros.png",
-      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-diastaros.visual.json"
+      "arteNova": "Arcanoclisma/arte/cartas-site/conjurador-diastaros-992f5b6d.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-diastaros.visual.json",
+      "diretrizAutorAtual": "Conjurador: preservar personagem, pose e traço da arte atual do site; mudar só o fundo. Cenas anteriores com outra pose ficam reservadas para cartas futuras."
     },
     {
       "id": "conjurador-ana",
@@ -290,8 +296,9 @@
         }
       ],
       "objetoReferencia": null,
-      "arteNova": "Arcanoclisma/arte/cartas-site/conjurador-ana.png",
-      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-ana.visual.json"
+      "arteNova": "Arcanoclisma/arte/cartas-site/conjurador-ana-f036e89f.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-ana.visual.json",
+      "diretrizAutorAtual": "Conjurador: preservar personagem, pose e traço da arte atual do site; mudar só o fundo. Cenas anteriores com outra pose ficam reservadas para cartas futuras."
     },
     {
       "id": "conjurador-mitonho",
@@ -330,8 +337,9 @@
         }
       ],
       "objetoReferencia": null,
-      "arteNova": "Arcanoclisma/arte/cartas-site/conjurador-mitonho.png",
-      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-mitonho.visual.json"
+      "arteNova": "Arcanoclisma/arte/cartas-site/conjurador-mitonho-158caaad.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-mitonho.visual.json",
+      "diretrizAutorAtual": "Conjurador: preservar personagem, pose e traço da arte atual do site; mudar só o fundo. Cenas anteriores com outra pose ficam reservadas para cartas futuras."
     },
     {
       "id": "conjurador-osmar",
@@ -370,8 +378,9 @@
         }
       ],
       "objetoReferencia": null,
-      "arteNova": "Arcanoclisma/arte/cartas-site/conjurador-osmar.png",
-      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-osmar.visual.json"
+      "arteNova": "Arcanoclisma/arte/cartas-site/conjurador-osmar-183eb5f1.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-osmar.visual.json",
+      "diretrizAutorAtual": "Conjurador: preservar personagem, pose e traço da arte atual do site; mudar só o fundo. Cenas anteriores com outra pose ficam reservadas para cartas futuras."
     },
     {
       "id": "base-recurso",
@@ -3631,9 +3640,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": null,
       "referenciasIdentidade": [],
-      "estado": "pendente",
+      "estado": "gerada_aguardando_avaliacao_final",
       "baseInspecionada": false,
-      "descricaoLida": false,
+      "descricaoLida": true,
       "identidade": "Item sem arte de referência: couraça de placas de Bronze Arco, pesada, com rebites e runas de proteção.",
       "cenaOriginal": "couraça de placas de Bronze Arco, pesada, com rebites e runas de proteção protegendo um conjurador que bloqueia um golpe (Armadura: Defesa 2, desgaste 6), com marcas de uso e a magia de proteção visível, num cenário de batalha.",
       "ambienteOriginal": "Ambiente: uma encruzilhada arcana devastada pelo Cataclisma, com ruínas, céu dividido entre luz quente e sombra fria e restos de magia no chão.",
@@ -3645,7 +3654,9 @@
         "relacaoComOEvento": "mostrar o efeito como parte de uma batalha maior, com outras figuras ao fundo"
       },
       "personagens": [],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-armadura-couraca.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-armadura-couraca.visual.json"
     },
     {
       "id": "item-extra-pocao",
@@ -3659,9 +3670,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": null,
       "referenciasIdentidade": [],
-      "estado": "pendente",
+      "estado": "gerada_aguardando_avaliacao_final",
       "baseInspecionada": false,
-      "descricaoLida": false,
+      "descricaoLida": true,
       "identidade": "Item sem arte de referência: poção de cura num frasco grosso de vidro com rolha de cera, líquido vermelho-coral que brilha.",
       "cenaOriginal": "poção de cura num frasco grosso de vidro com rolha de cera, líquido vermelho-coral que brilha sendo usado uma única vez (Extra consumível): uma luz de cura fecha feridas de quem conjura, num lugar coerente com o item.",
       "ambienteOriginal": "Ambiente: uma encruzilhada arcana devastada pelo Cataclisma, com ruínas, céu dividido entre luz quente e sombra fria e restos de magia no chão.",
@@ -3673,7 +3684,9 @@
         "relacaoComOEvento": "mostrar o instante DEPOIS: o rastro, as marcas e as consequências no lugar"
       },
       "personagens": [],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-extra-pocao.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-pocao.visual.json"
     },
     {
       "id": "item-extra-elixir",
@@ -3687,9 +3700,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": null,
       "referenciasIdentidade": [],
-      "estado": "pendente",
+      "estado": "gerada_aguardando_avaliacao_final",
       "baseInspecionada": false,
-      "descricaoLida": false,
+      "descricaoLida": true,
       "identidade": "Item sem arte de referência: elixir de foco num frasco fino e alto, líquido azul com pontos de luz que sobem.",
       "cenaOriginal": "elixir de foco num frasco fino e alto, líquido azul com pontos de luz que sobem sendo usado uma única vez (Extra consumível): Arcano bruto jorra e se acumula em esferas de luz na cor do Valor, num lugar coerente com o item.",
       "ambienteOriginal": "Ambiente: uma encruzilhada arcana devastada pelo Cataclisma, com ruínas, céu dividido entre luz quente e sombra fria e restos de magia no chão.",
@@ -3701,7 +3714,9 @@
         "relacaoComOEvento": "mostrar quem SOFRE o efeito, no instante do impacto"
       },
       "personagens": [],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-extra-elixir.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-elixir.visual.json"
     },
     {
       "id": "item-canal-harpa",
@@ -3715,9 +3730,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/harpa-de-vidro-de-liss.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Harpa de Vidro de Liss: personagem/objeto do catálogo aprovado (harpa-de-vidro-de-liss). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Harpa de Vidro de Liss em uso como arma ou foco de magia (Canal, Ataque 2), empunhado por um conjurador visto de modo parcial (mão, braço ou silhueta), no instante de um ataque, num cenário de batalha.",
       "ambienteOriginal": "Ambiente do Valor Sublimeyn: céus de duas pálpebras, mares de mercúrio, nuvens e torres flutuantes. Magia na cor prata-mercúrio, em fumaça e vapor que escorrem, pingam e cristalizam. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Persona, Cognitium: detalhes discretos dessas cores podem aparecer.",
@@ -3732,7 +3747,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/harpa-de-vidro-de-liss.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 129 Harpa de Vidro de Liss. Subject: Harpa de Vidro de Liss: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: a música endurece o ar em escadas e pontes enquanto toca.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-canal-harpa.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-canal-harpa.visual.json"
     },
     {
       "id": "item-canal-badalo",
