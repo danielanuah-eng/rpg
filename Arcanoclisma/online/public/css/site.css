@@ -291,3 +291,9 @@ body:has(#tela.cheia) .opinar-flutuante { display: none; }
 .tcg-card .rules .lembrete { line-height: 1.15; }
 /* caixa de texto um pouco mais alta (usa o espaço vazio do pé da carta) para caber o texto e os lembretes */
 .tcg-card .rules { max-height: 12.5%; }
+/* Editor: barra de salvar fixa no topo (pedido do autor, 04/10) */
+.editor-barra-salvar { position: sticky; top: 62px; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 10px 16px; margin-bottom: 12px; }
+.editor-barra-salvar.pendente { border-color: var(--ouro, #e0bd6a); box-shadow: 0 0 0 1px var(--ouro, #e0bd6a), 0 6px 18px #0008; }
+.editor-barra-salvar .botao { font-size: 1.05rem; padding: 8px 20px; }
+.editor-barra-salvar:not(.pendente) .botao { opacity: .7; }
+.editor-barra-salvar .ok-salvo { color: #7fd69b; }

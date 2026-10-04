@@ -86,7 +86,8 @@ export async function telaEditor(tela, partes, ctx) {
   aplicarRascunho();
 
   tela.classList.add('cheia');
-  tela.innerHTML = `<div class="editor">
+  tela.innerHTML = `<div class="editor-barra-salvar painel"><span class="editor-barra-estado" data-barra-estado></span><button class="botao primario" data-salvar>💾 Salvar edição</button></div>
+    <div class="editor">
     <aside class="editor-lista painel">
       <div class="titulo-secao"><h2>Editor</h2></div>
       <input type="search" placeholder="Buscar" data-busca>
@@ -109,6 +110,13 @@ export async function telaEditor(tela, partes, ctx) {
 
   function desenharEstado() {
     const n = mudancas().size;
+    const barra = $('[data-barra-estado]', tela);
+    if (barra) {
+      barra.innerHTML = difereDoSalvo()
+        ? `<b class="falta">Edição não salva</b> (${n} carta(s)/Conjurador(es) no rascunho). Só vale para todos depois de salvar.`
+        : `<b class="ok-salvo">Tudo salvo</b> · versão em vigor no site: ${EDICOES.id || 'nenhuma edição'}.`;
+      tela.querySelector('.editor-barra-salvar').classList.toggle('pendente', difereDoSalvo());
+    }
     estado.innerHTML = `<p class="peq">Versão em vigor no site: <b>${EDICOES.id || 'nenhuma edição'}</b>. Rascunho: <b>${n}</b> carta(s)/Conjurador(es) mudados${difereDoSalvo() ? ' · <span class="falta">não salvo</span>' : ' · salvo'}.<br>O rascunho já vale nesta página (teste contra o bot); os outros jogadores só veem depois de salvar.</p>`;
   }
   function desenharLista() {
@@ -315,8 +323,12 @@ export async function telaEditor(tela, partes, ctx) {
       h.innerHTML = versoes.length ? versoes.map((v) => `<div class="editor-versao"><b>#${v.id}</b> · ${dataCurta(v.criado)} · ${v.mudancas} mudança(s)${v.id === EDICOES.id ? ' · <span class="etiqueta">em vigor</span>' : ''}<br>${esc(v.nota || 'sem nota')}<div class="linha-botoes"><button class="botao peq" data-versao="${v.id}">Abrir como rascunho</button></div></div>`).join('') : 'Nenhuma versão salva ainda.';
     } catch (err) { h.textContent = 'Não foi possível ler as versões: ' + err.message; }
   }
-  $('.editor-lado', tela).addEventListener('click', async (ev) => {
+  // salvar: botão fixo no topo e o da coluna da direita (pedido do autor, 04/10: a edição só vale depois de salvar)
+  tela.addEventListener('click', async (ev) => {
+    if (!ev.target.closest('[data-salvar], [data-baixar], [data-descartar], [data-versao]')) return;
     if (ev.target.closest('[data-salvar]')) {
+      // grava no rascunho a última mudança ainda esperando o intervalo de digitação
+      if (sel) { clearTimeout(espera); lerForm(); }
       const j = janela(`<h3>Salvar no site</h3><p class="peq">A versão nova vale para todos a partir de agora (partidas online já começadas continuam com a versão do início).</p>
         <label class="campo">Nota (o porquê da mudança)<textarea data-nota maxlength="500"></textarea></label><div class="linha-botoes"><button class="botao primario" data-ok>Salvar</button></div>`);
       $('[data-ok]', j.el).onclick = async () => {
