@@ -1,8 +1,10 @@
 # Entrega visual para Claude — 04/10/2026
 
-## Atualização posterior: 176/210
+## Atualização posterior: 184/210
 
-O lote e a galeria agora têm 176 artes concluídas, com 34 pendentes. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega inicial de conjuradores abaixo. Entraram Moça que Não Sangra, Rosto sem Gente, Leitura de Sombras, Sentença do Selo, Luz da Faroleira, Chamado da Matilha, Golpe do Quebra-Escudos e Nuvem Triste. As 151 do pedido inicial estão entregues; as adicionais pertencem à mesma meta de 210. Cada ID tem cena e registro próprios, com dimensões e alfa medidos. Os Valores atuais determinam a cor da magia; aparência física e roupas dos personagens aprovados continuam preservadas. Os gestos e cenários não adicionam efeitos ao jogo.
+O lote e a galeria agora têm 184 artes concluídas, com 26 pendentes. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega inicial de conjuradores abaixo. Entraram Cadeira de Espera, Saque de Túmulos, Máscara do Outro, Refutação, Lamento da Carpideira, Hora Roubada, Selo Súbito e Tiro de Aluguel. As 151 do pedido inicial estão entregues; as adicionais pertencem à mesma meta de 210. Cada ID tem cena e registro próprios, com dimensões e alfa medidos. Os Valores atuais determinam a cor da magia; aparência física e roupas dos personagens aprovados continuam preservadas. Os gestos e cenários não adicionam efeitos ao jogo.
+
+Cadeira e Saque são Findantes; Máscara, Refutação, Lamento, Hora, Selo e Tiro são Repentinas. Cadeira guarda uma carta para o próximo turno com desconto de dois; Saque compra duas e Hora compra uma, sem ressuscitar ou conceder turno extra. Máscara devolve uma criatura, sem adotar a habilidade RPG de trocar rosto e voz. Refutação anula uma carta na pilha, sem reflexão. Selo cura um alvo, com martelo no chão; Lamento e Tiro causam dois a um alvo. O projétil do Tiro é reto e alinhado ao cano e à mira.
 
 Rosto sem Gente recebeu revisão de cabeça para acompanhar o portal; o estudo em `variantes/` fica como histórico. Protegido 1 da Moça é custo adicional para escolhê-la como alvo, sem reflexão. Leitura de Sombras escolhe duas entre quatro; Sentença destrói um único Aliado ou Mística. Faroleira cura o próprio Conjurador e compra uma; Matilha atinge só os Aliados adversários. Quebra-Escudos mantém rosto, martelo e impacto alinhados e não atinge Conjurador. Nuvem Triste conserva o corpo coral, mas o efeito atual de Sublimeyn é prata-mercúrio: devolução de uma criatura intacta e compra de uma carta.
 

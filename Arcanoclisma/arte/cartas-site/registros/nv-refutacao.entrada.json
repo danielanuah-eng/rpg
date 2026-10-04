@@ -1,0 +1,36 @@
+{
+  "id": "nv-refutacao",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-ad4db597-fc0d-4d01-8e77-7404898b2f50.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nREFUTAÇÃO common Cognitium REPENTINA, counter ONE card currently in stack. Approved professor ofLogic: thinelderlyman68deepcoolbrownskin naturalwrinkles white shortspikyhair white pointedgoatee, amberwidelyspacedeyes, highforehead, creamshirt longnavycoat highcollar bronzeedge geometricindigostole, leatherbeltbag. NEW relaxed but precise seated sideways on frontedge lecturetable, onefootonbarotherfootfree, torso twists LEFT, WHOLEHEAD profileDOWNLEFT eyes at rival redglyph enteringroom lowerleft from student's wand. His right indexfinger extended diagonallydownleft sends ONE compact indigosmokering with missingsections, unravelling thisONE redspellglyph into inert fragmented geometriclines justbeforearrival; no reflectedattack, noinjuredstudents, no masssilencing. Lefthandrestsclosedbookonlap. Overrivalstudent's shoulder lowerleft camera, professor upmidright, classroomlargewindow to rainwashedtowercourt right and plaintealblackboard behind (faintabstractgeometry NOreadableletters). Afternoon softsid light, ivory plaster and warmwood, 2quietclassmates farbehind only. Distinct posefromfloatingreferencebooks. Strongintelligentfriendlyslyexpression, notberserk. No giantglowclutter, restrained indigo localized resolution makescardidentity clear.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/professor-de-logica.png",
+  "textoRegraLido": "Anule uma carta na pilha.",
+  "valoresLidos": [
+    "cognitium"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/professor-de-logica.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Sala de escola de magia, quadro geométrico, mesas e vista de torres pela janela",
+  "momentoDoDia": "Tarde",
+  "clima": "Após chuva",
+  "escala": "Professor sentado na mesa, aluno próximo de costas e colegas ao fundo",
+  "avaliacaoVisual": "Professor idoso com cabelo branco, pele marrom e indumentária aprovada. Olhar e dedo apontam para uma única magia vermelha que se desfaz no anel índigo. Gesto novo e expressão astuta.",
+  "decisoes": [
+    "Cognitium Repentina anula uma carta na pilha; não reflete dano nem silencia todo o ambiente.",
+    "Os demais estudantes são ambientação, sem novas cartas ou efeitos."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

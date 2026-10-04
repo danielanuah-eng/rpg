@@ -1,0 +1,36 @@
+{
+  "id": "nv-tiro-de-aluguel",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-cbe285a4-e124-40ad-86eb-7100f72f7fa9.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nTIRO DE ALUGUEL common Conflituo REPENTINA, deal TWO damage to ONE target. Approved pistoleira SHORT stockystrong adultwoman olivefreckledskin smallsuspiciousbrowneyes shortwide nose angularjaw, shortcopperredcurlyhair shavedone side, closed blackbrownutilityjacket creamchestshirt leatherstraps redwaistsashdarktrousersbronzekneeplates. Twooriginal brass techpistols, ONEholsteredatbelt, ONLYONE firing. NEW pose crouchedLOWbehind a merchantcart wheel atRIGHT, sidePROFILE head/noseeyes firmly LEFT straight alongextendedpistolbarrel toward ONE opposing orc'sshield inleftmiddleground. Weapon axis horizontalLEFT slightlydown, ONEshortSTRAIGHT rustred projectile betweenmuzzle andshield, no curvedbeam/no frontallystaringwhileaimingsideways, impactsmallno gore. Left hand bracescartwheel, feetgroundednot sourceairbornedualgunpose. Lowoveropponent'sshouldercamera leftforeground, clearlineofaim visibleacrossstreet. Afternoon inruralmilitarized workshopvillage with stonewindmill, thatchedtoolshed, cart with bolts andstackedplanks, broadcoolgraypaving, cloudyblue sky; few citizens behind safetydoor unaffected. Incidentallyorc targetnotnewnamedally. Polishedcleanfantasyinkscene smoothpaint, orangegunflare localized, not blazingbattlesky.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/pistoleira-de-aluguel.png",
+  "textoRegraLido": "Cause 2 de dano a um alvo.",
+  "valoresLidos": [
+    "conflituo"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/pistoleira-de-aluguel.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Rua de vila com oficina, carroça e moinho",
+  "momentoDoDia": "Tarde",
+  "clima": "Claro com nuvens",
+  "escala": "Pistoleira junto à roda da carroça e um adversário próximo",
+  "avaliacaoVisual": "Pistoleira baixa e forte, cachos ruivos, roupas e pistolas preservadas. Uma pistola dispara e outra fica no coldre. Olhar, cano, projétil reto e escudo adversário acompanham a mesma linha.",
+  "decisoes": [
+    "Conflituo Repentina causa dois a um alvo; sem explosão em área ou morte garantida.",
+    "Pose nova apoiada na carroça, com cenário unificado e brilho apenas no tiro."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

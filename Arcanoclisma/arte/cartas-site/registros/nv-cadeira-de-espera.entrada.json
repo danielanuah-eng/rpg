@@ -1,0 +1,36 @@
+{
+  "id": "nv-cadeira-de-espera",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-8d339662-79bb-4edd-a0d0-f65af5e61534.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nCADEIRA DE ESPERA, common Eternyr Findante. Preserve ordinary sturdy honeybrown wooden armchair, four squaredlegs curvedbroadarmrests and worn teal upholstered seat/back. NEW view HIGH and diagonal behind one arm, emptychair foreground angled left, one small plain ivoryfolio sealed in a MIDNIGHTBLUE aura on its cushion with WHITE stopped time ticks (abstractmarks, NOT printedromantext). ExactlyONEcard banishedfromcasterhand waits for NEXTTURN with TWO fading smallwhitecostorbs symbolizing2discount; no returningcreature/damage/draw. Caster incidental seatedopposite on plainbench, elderly olivewoman greybraid spectacles looseochrecoat, reachinghandreleasedfolio and quietly watches it, threeother closed books on shelf not extraexile. Warm lateafternoon inside WAITINGROOM of smalltrainstation in frozenvalley, large simple roundwallclock stopped behind, sunflowercolorplaster, oakfloor, cooldust shadows, distant motionless train and tinytravellers through open door. Rainstreakwindowdespiteclearingsky, scattered few suspendeddust motes. NOgiant blazinggoldclockrings as source; activeValueBLUEWHITE. Emptychair itself primary, cozy surreal everydayobject, smooth broadplanes, fullsceneedges.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/cadeira-de-espera.png",
+  "textoRegraLido": "Bana uma carta da sua mão; no seu próximo turno ela pode ser jogada custando 2 a menos.",
+  "valoresLidos": [
+    "eternyr"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/cadeira-de-espera.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Sala de espera de estação em um vale, relógio parado, trem e viajantes ao fundo",
+  "momentoDoDia": "Tarde",
+  "clima": "Após chuva, luz lateral",
+  "escala": "Cadeira em primeiro plano e viajante sentada mais atrás",
+  "avaliacaoVisual": "Madeira e estofado azul preservados em vista diagonal posterior. Um envelope no assento, aura azul-noite com marcas brancas e duas esferas claras; objeto continua em destaque.",
+  "decisoes": [
+    "Eternyr Findante bana uma carta da mão, jogável no próximo turno com redução de dois no custo; sem anular, devolver criaturas ou comprar.",
+    "Trocar os anéis dourados antigos pela magia azul e branca do Valor atual."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

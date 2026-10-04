@@ -1,0 +1,36 @@
+{
+  "id": "nv-mascara-do-outro",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-f27bef5f-5496-48aa-9362-4435adcf9db8.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nMÁSCARA DO OUTRO common Persona REPENTINA. Current rule return ONE Ally or Mystica to ownerhand ONLY. Primary reference full face smoothivory/ochre mask with narrow darkalmond eyeopenings, sculptednose closedmouth, oldbronze thinrim and darkbrownleatherstrap with buckle. Newdynamic scene: close tilted sideview lookingdown across a performer's glovedhand holdingmask LOWERLEFT, strap dangling and nosepointingright. Physicalivorygold identity preserved but MAGIC CORALinstead of oldicywhite. A coral curtainlike portal rises BEHINDmask at centreright drawing ONE intact LARGE jadeandbronze beetle ally with sixlegs2antennae roundwingcovers BACK into its owner's hand visiblethroughveil at rightbackground, no harm or fragmentation. Mask mainobject largerthan backgroundbeetle. No actual copiedpersonface/voice rule, no summon orstatdamage. Noon maskfestival alley under coolblue clothshade, stairs with few greenplanters, stalls/mirrors unlit and distant dressedadults as small everydayfigures, simplevariedsmoothstucco not identicalcastle. Foreground incidental performer middleaged darkskinhandcreamglove, faceonlysideportion not fullnewprotagonist. Coralsoftglow localized masksilhouette readable. Not productonblankbackground, fillallsceneedges.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/mascara-do-outro.png",
+  "textoRegraLido": "Devolva um Aliado ou Mística à mão do dono.",
+  "valoresLidos": [
+    "persona"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mascara-do-outro.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Rua da feira de máscaras com escadaria, cortinas azuis, espelhos e vasos",
+  "momentoDoDia": "Meio-dia",
+  "clima": "Claro, sombra de tecido",
+  "escala": "Máscara grande na mão em primeiro plano, besouro intacto no portal atrás",
+  "avaliacaoVisual": "Máscara de marfim e ocre, aro bronze e correia preservados; aura coral e portal devolvem um único besouro à mão do dono. Cena integrada, sem fundo branco.",
+  "decisoes": [
+    "Persona Repentina apenas devolve um Aliado ou Mística; não aplicar a troca de rosto e voz do objeto RPG.",
+    "Enquadramento próximo do objeto, sem reutilizar uma figura inteira sobre um fundo."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

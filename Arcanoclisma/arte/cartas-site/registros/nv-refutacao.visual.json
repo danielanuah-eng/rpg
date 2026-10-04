@@ -1,0 +1,66 @@
+{
+  "id": "nv-refutacao",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-ad4db597-fc0d-4d01-8e77-7404898b2f50.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-refutacao.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/professor-de-logica.png",
+  "textoRegraLido": "Anule uma carta na pilha.",
+  "valoresLidos": [
+    "cognitium"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/professor-de-logica.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Sala de escola de magia, quadro geométrico, mesas e vista de torres pela janela",
+  "momentoDoDia": "Tarde",
+  "clima": "Após chuva",
+  "escala": "Professor sentado na mesa, aluno próximo de costas e colegas ao fundo",
+  "avaliacaoVisual": "Professor idoso com cabelo branco, pele marrom e indumentária aprovada. Olhar e dedo apontam para uma única magia vermelha que se desfaz no anel índigo. Gesto novo e expressão astuta.",
+  "decisoes": [
+    "Cognitium Repentina anula uma carta na pilha; não reflete dano nem silencia todo o ambiente.",
+    "Os demais estudantes são ambientação, sem novas cartas ou efeitos."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-refutacao.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "3d4d278baa5e00b0c6b1bf93ea16ef2d9978e06573629041723815ed3e4e505c",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

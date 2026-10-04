@@ -1,0 +1,66 @@
+{
+  "id": "nv-tiro-de-aluguel",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-cbe285a4-e124-40ad-86eb-7100f72f7fa9.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-tiro-de-aluguel.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/pistoleira-de-aluguel.png",
+  "textoRegraLido": "Cause 2 de dano a um alvo.",
+  "valoresLidos": [
+    "conflituo"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/pistoleira-de-aluguel.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Rua de vila com oficina, carroça e moinho",
+  "momentoDoDia": "Tarde",
+  "clima": "Claro com nuvens",
+  "escala": "Pistoleira junto à roda da carroça e um adversário próximo",
+  "avaliacaoVisual": "Pistoleira baixa e forte, cachos ruivos, roupas e pistolas preservadas. Uma pistola dispara e outra fica no coldre. Olhar, cano, projétil reto e escudo adversário acompanham a mesma linha.",
+  "decisoes": [
+    "Conflituo Repentina causa dois a um alvo; sem explosão em área ou morte garantida.",
+    "Pose nova apoiada na carroça, com cenário unificado e brilho apenas no tiro."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-tiro-de-aluguel.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "e4ae5c0de9ee75549d3eede6b501a5d30b9cb9ffd97cc663d973a3de9dfd7049",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

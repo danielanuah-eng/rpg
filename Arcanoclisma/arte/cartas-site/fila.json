@@ -6897,9 +6897,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/cadeira-de-espera.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Cadeira de Espera: personagem/objeto do catálogo aprovado (cadeira-de-espera). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Cadeira de Espera como fonte ou forma do feitiço: um objeto ou carta é selado num instante parado do tempo, guardado para depois.",
       "ambienteOriginal": "Ambiente do Valor Eternyr: o entretempo, vilas do mesmo dia, estações paradas e relógios gigantes. Magia na cor azul-noite com riscos brancos, em aura com falhas e rastros parados no ar. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -6914,7 +6914,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/cadeira-de-espera.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 134 Cadeira de Espera. Subject: Cadeira de Espera: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: quem senta não sente fome, sede nem tempo.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-cadeira-de-espera.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-cadeira-de-espera.visual.json"
     },
     {
       "id": "nv-ladrao-de-tumulos",
@@ -6928,9 +6930,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/ladrao-de-tumulos.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Ladrão de Túmulos: personagem/objeto do catálogo aprovado (ladrao-de-tumulos). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Ladrão de Túmulos como fonte ou forma do feitiço: livros se abrem sozinhos numa estante e as letras saltam no ar.",
       "ambienteOriginal": "Ambiente do Valor Morbidyum: cemitérios que respiram, brejos, criptas e aldeias de curandeiras. Magia na cor verde-pálido, em fumaça fria e fios que partem, como almas. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -6954,7 +6956,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-ladrao-de-tumulos.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-ladrao-de-tumulos.visual.json"
     },
     {
       "id": "nv-mascara-do-outro",
@@ -6970,9 +6974,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mascara-do-outro.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Máscara do Outro: personagem/objeto do catálogo aprovado (mascara-do-outro). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Máscara do Outro como fonte ou forma do feitiço: uma criatura é puxada de volta através de um portal, sumindo do campo.",
       "ambienteOriginal": "Ambiente do Valor Persona: a cidade dos rostos, feiras de máscaras, ruas de espelhos e tavernas cheias. Magia na cor coral, em aura suave e uniforme que transborda quando a emoção é forte. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -6987,7 +6991,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/mascara-do-outro.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 106 Máscara do Outro. Subject: Máscara do Outro: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: quem usa tem o rosto e a voz da última pessoa que tocou nela.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-mascara-do-outro.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-mascara-do-outro.visual.json"
     },
     {
       "id": "nv-refutacao",
@@ -7001,9 +7007,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/professor-de-logica.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Professor de Lógica: personagem/objeto do catálogo aprovado (professor-de-logica). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Professor de Lógica como fonte ou forma do feitiço: as runas de um feitiço rival se embaralham e caem no chão, sem efeito.",
       "ambienteOriginal": "Ambiente do Valor Cognitium: o arquivo sem dono, bibliotecas que esquecem, observatórios. Magia na cor índigo, em véu de fumaça com falhas, como se faltassem pedaços. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -7027,7 +7033,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-refutacao.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-refutacao.visual.json"
     },
     {
       "id": "nv-lamento-da-carpideira",
@@ -7041,9 +7049,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/carpideira.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Carpideira: personagem/objeto do catálogo aprovado (carpideira). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Carpideira como fonte ou forma do feitiço: a magia estoura na guarda de um inimigo (criatura ou conjurador rival), que quase cede.",
       "ambienteOriginal": "Ambiente do Valor Morbidyum: cemitérios que respiram, brejos, criptas e aldeias de curandeiras. Magia na cor verde-pálido, em fumaça fria e fios que partem, como almas. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -7067,7 +7075,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-lamento-da-carpideira.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-lamento-da-carpideira.visual.json"
     },
     {
       "id": "nv-hora-roubada",
@@ -7081,9 +7091,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/relojoeiro-fugitivo.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Relojoeiro Fugitivo: personagem/objeto do catálogo aprovado (relojoeiro-fugitivo). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Relojoeiro Fugitivo como fonte ou forma do feitiço: visões, páginas ou cartas de luz se abrem diante de quem conjura, revelando o que vem.",
       "ambienteOriginal": "Ambiente do Valor Eternyr: o entretempo, vilas do mesmo dia, estações paradas e relógios gigantes. Magia na cor azul-noite com riscos brancos, em aura com falhas e rastros parados no ar. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -7107,7 +7117,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-hora-roubada.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-hora-roubada.visual.json"
     },
     {
       "id": "nv-selo-subito",
@@ -7121,9 +7133,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/sentinela-de-selo.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Sentinela de Selo: personagem/objeto do catálogo aprovado (sentinela-de-selo). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Sentinela de Selo como fonte ou forma do feitiço: ataduras de luz se enrolam sozinhas num ferido que volta a ficar de pé.",
       "ambienteOriginal": "Ambiente do Valor Alvorum: faróis sem noite, auroras, campos dourados ao amanhecer e ao entardecer. Magia na cor dourado e preto, em aura dividida, com falhas entre a parte de luz e a de sombra. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -7147,7 +7159,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-selo-subito.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-selo-subito.visual.json"
     },
     {
       "id": "nv-tiro-de-aluguel",
@@ -7161,9 +7175,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/pistoleira-de-aluguel.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Pistoleira de Aluguel: personagem/objeto do catálogo aprovado (pistoleira-de-aluguel). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Pistoleira de Aluguel como fonte ou forma do feitiço: o chão onde o inimigo estava ainda queima ou brilha, marcado pelo golpe que acabou de cair.",
       "ambienteOriginal": "Ambiente do Valor Conflitüo: campos de batalha sem trégua, arenas, trincheiras e forjas de guerra. Magia na cor vermelho-ferrugem, em construtos sólidos de luz: lâminas, escudos, estandartes. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -7187,7 +7201,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-tiro-de-aluguel.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-tiro-de-aluguel.visual.json"
     },
     {
       "id": "nv-espelho-da-serpente",

@@ -1,0 +1,66 @@
+{
+  "id": "nv-lamento-da-carpideira",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-f7ea9d79-487c-4d59-a177-4803bb749485.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-lamento-da-carpideira.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/carpideira.png",
+  "textoRegraLido": "Cause 2 de dano a um alvo.",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/carpideira.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Vila funerária sobre o brejo, passarelas, casas de barro e fitas brancas",
+  "momentoDoDia": "Fim da tarde após chuva",
+  "clima": "Nuvens abrindo",
+  "escala": "Carpideira ajoelhada e um saqueador mais distante",
+  "avaliacaoVisual": "Trança, roupas e ornamentos preservados; rosto em perfil olha para o alvo. Um único lamento verde-pálido atinge o escudo do saqueador, sem ferimento gráfico. Cena aquática completa.",
+  "decisoes": [
+    "Morbidyum Repentina causa dois a um alvo; magia verde-pálida substitui o coral antigo.",
+    "Não sugerir cura, ressuscitação nem dano em área."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-lamento-da-carpideira.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "ac1ab3654cdc982ff7de4ddd77ec7bcb5636bf9ad7fbe5e981d186f8761a5746",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

@@ -1,0 +1,66 @@
+{
+  "id": "nv-cadeira-de-espera",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-8d339662-79bb-4edd-a0d0-f65af5e61534.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-cadeira-de-espera.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/cadeira-de-espera.png",
+  "textoRegraLido": "Bana uma carta da sua mão; no seu próximo turno ela pode ser jogada custando 2 a menos.",
+  "valoresLidos": [
+    "eternyr"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/cadeira-de-espera.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Sala de espera de estação em um vale, relógio parado, trem e viajantes ao fundo",
+  "momentoDoDia": "Tarde",
+  "clima": "Após chuva, luz lateral",
+  "escala": "Cadeira em primeiro plano e viajante sentada mais atrás",
+  "avaliacaoVisual": "Madeira e estofado azul preservados em vista diagonal posterior. Um envelope no assento, aura azul-noite com marcas brancas e duas esferas claras; objeto continua em destaque.",
+  "decisoes": [
+    "Eternyr Findante bana uma carta da mão, jogável no próximo turno com redução de dois no custo; sem anular, devolver criaturas ou comprar.",
+    "Trocar os anéis dourados antigos pela magia azul e branca do Valor atual."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-cadeira-de-espera.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "2c35e9021ca9bf2d46bf6d55e106c14f5d2e0034523b769e294f71653481532a",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

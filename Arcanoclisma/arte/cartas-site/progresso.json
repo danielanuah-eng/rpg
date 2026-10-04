@@ -1,16 +1,8 @@
 {
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 176,
+  "concluidas": 184,
   "pendentes": [
-    "nv-cadeira-de-espera",
-    "nv-ladrao-de-tumulos",
-    "nv-mascara-do-outro",
-    "nv-refutacao",
-    "nv-lamento-da-carpideira",
-    "nv-hora-roubada",
-    "nv-selo-subito",
-    "nv-tiro-de-aluguel",
     "nv-espelho-da-serpente",
     "nv-dama-da-noite",
     "nv-canto-sem-cantor",

@@ -1,0 +1,36 @@
+{
+  "id": "nv-lamento-da-carpideira",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-f7ea9d79-487c-4d59-a177-4803bb749485.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nLAMENTO DA CARPIDEIRA common Morbidyum REPENTINA, deal TWO damage to ONE target. Preserve approved adultwoman coolbrownskin highcheekbones widelyspaced greyeyes longblackhair inONEthickbraid, creamdraped garment burgundysash bronzeearrings bracelets/anklet discs, barefoot. NEW lowkneeling sideways in flooded funeralvillage boardwalk, kneesontimber, left hand wipingONE tear nearcheek, right palm extended LEFT. Entirehead andgreyeyes faceLEFT toward ONE approaching maskedraider withshield on steppingstone beyondboardwalk. Frompalm ONE palegreen cold lament ribbon with ONE faint mournfulface reachesraiderguard, cracksitsedge justa little, nogore NOguaranteeddeath or resurrection. CurrentMorbidyumGREENnotoldcoralaura. Sadcontrolleddetermined expression mouthslightlyopen, not giantfourscreamingheadshidingface. Wider oblique frame from right side, wet longplankwalk, terracotta huts onstilts, reedmarshpond andwhiteburialclothstreamers, ONE distantmourner safeoffpath. Afterrainlateafternoon coolcloudbreaks, warmbrownstructures restrainedreeds, naturalreflectingwater noaggressivebloom. Nohealing of raider, no explosionallvillage.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/carpideira.png",
+  "textoRegraLido": "Cause 2 de dano a um alvo.",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/carpideira.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Vila funerária sobre o brejo, passarelas, casas de barro e fitas brancas",
+  "momentoDoDia": "Fim da tarde após chuva",
+  "clima": "Nuvens abrindo",
+  "escala": "Carpideira ajoelhada e um saqueador mais distante",
+  "avaliacaoVisual": "Trança, roupas e ornamentos preservados; rosto em perfil olha para o alvo. Um único lamento verde-pálido atinge o escudo do saqueador, sem ferimento gráfico. Cena aquática completa.",
+  "decisoes": [
+    "Morbidyum Repentina causa dois a um alvo; magia verde-pálida substitui o coral antigo.",
+    "Não sugerir cura, ressuscitação nem dano em área."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

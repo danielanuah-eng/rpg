@@ -1,0 +1,66 @@
+{
+  "id": "nv-mascara-do-outro",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-f27bef5f-5496-48aa-9362-4435adcf9db8.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-mascara-do-outro.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/mascara-do-outro.png",
+  "textoRegraLido": "Devolva um Aliado ou Mística à mão do dono.",
+  "valoresLidos": [
+    "persona"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mascara-do-outro.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Rua da feira de máscaras com escadaria, cortinas azuis, espelhos e vasos",
+  "momentoDoDia": "Meio-dia",
+  "clima": "Claro, sombra de tecido",
+  "escala": "Máscara grande na mão em primeiro plano, besouro intacto no portal atrás",
+  "avaliacaoVisual": "Máscara de marfim e ocre, aro bronze e correia preservados; aura coral e portal devolvem um único besouro à mão do dono. Cena integrada, sem fundo branco.",
+  "decisoes": [
+    "Persona Repentina apenas devolve um Aliado ou Mística; não aplicar a troca de rosto e voz do objeto RPG.",
+    "Enquadramento próximo do objeto, sem reutilizar uma figura inteira sobre um fundo."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-mascara-do-outro.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "8682108ee4ed863504fc18b120998ec253380024da0379caf8110fd7cf87a3be",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

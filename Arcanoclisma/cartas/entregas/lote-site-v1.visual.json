@@ -3,16 +3,8 @@
   "pedidoVersao": 2,
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 176,
+  "concluidas": 184,
   "pendentes": [
-    "nv-cadeira-de-espera",
-    "nv-ladrao-de-tumulos",
-    "nv-mascara-do-outro",
-    "nv-refutacao",
-    "nv-lamento-da-carpideira",
-    "nv-hora-roubada",
-    "nv-selo-subito",
-    "nv-tiro-de-aluguel",
     "nv-espelho-da-serpente",
     "nv-dama-da-noite",
     "nv-canto-sem-cantor",
@@ -1447,6 +1439,70 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-nuvem-triste.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-nuvem-triste.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-cadeira-de-espera",
+      "nome": "Cadeira de Espera",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-cadeira-de-espera.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-cadeira-de-espera.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-ladrao-de-tumulos",
+      "nome": "Saque de Túmulos",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-ladrao-de-tumulos.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-ladrao-de-tumulos.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-mascara-do-outro",
+      "nome": "Máscara do Outro",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-mascara-do-outro.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-mascara-do-outro.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-refutacao",
+      "nome": "Refutação",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-refutacao.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-refutacao.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-lamento-da-carpideira",
+      "nome": "Lamento da Carpideira",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-lamento-da-carpideira.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-lamento-da-carpideira.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-hora-roubada",
+      "nome": "Hora Roubada",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-hora-roubada.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-hora-roubada.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-selo-subito",
+      "nome": "Selo Súbito",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-selo-subito.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-selo-subito.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-tiro-de-aluguel",
+      "nome": "Tiro de Aluguel",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-tiro-de-aluguel.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-tiro-de-aluguel.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
     }
   ],
