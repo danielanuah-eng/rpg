@@ -65,11 +65,15 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     const pw = w / (AZUL.x1 - AZUL.x0), ph = h / (AZUL.y1 - AZUL.y0);
     Object.assign(mundo.style, { width: pw + 'px', height: ph + 'px' });
     Object.assign(conteudo.style, { left: AZUL.x0 * pw + 'px', top: AZUL.y0 * ph + 'px' });
-    const k = Math.max(compacto() ? 0.12 : ZOOM_MIN, Math.min(1, palco.clientWidth / pw, palco.clientHeight / ph));
+    // câmera mais perto (pedido do autor, 04/10): encaixa o tabuleiro (as cartas) no palco, com uma folga pequena;
+    // o piso decorado continua atrás e a moldura pode ficar cortada nas bordas
+    const folga = compacto() ? 6 : 16;
+    const k = Math.max(0.12, Math.min(1.25, (palco.clientWidth - folga) / w, (palco.clientHeight - folga) / h));
     raiz.firstElementChild?.classList.toggle('compacta', compacto());
     mundo.style.zoom = k;
+    // centro do tabuleiro no centro do palco (o palco não rola: tudo cabe). left/top do elemento com zoom são escalados por k.
+    Object.assign(mundo.style, { position: 'absolute', left: (palco.clientWidth / 2 - (AZUL.x0 * pw + w / 2) * k) / k + 'px', top: (palco.clientHeight / 2 - (AZUL.y0 * ph + h / 2) * k) / k + 'px' });
     // na primeira vez, mostra o meio da mesa (os dois Conjuradores)
-    if (!centrou && palco.scrollHeight > palco.clientHeight) { centrou = true; palco.scrollTop = (palco.scrollHeight - palco.clientHeight) / 2; }
   }
   new ResizeObserver(() => ajustarMesa()).observe(palco);
   // tela cheia: some o topo do site e o botão troca de nome
@@ -207,6 +211,10 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     return [...lista];
   }
   const alvosDeAtaque = () => [z(OP).conjuradorId, ...z(OP).campo.filter((a) => ['aliado', 'mistica'].includes(def(a).tipo) && def(a).vida !== undefined)];
+
+  // tutorial rígido (lições): só brilha o que o passo pede; fora das lições, tudo normal
+  const tutDestaca = (id) => !fonte.tutorial?.restrito || fonte.tutorial.destaques().includes(id);
+  const tutAlvo = (id) => { const a = fonte.tutorial?.restrito ? fonte.tutorial.alvos?.() : null; return !a || a.includes(id); };
 
   // ---------- envio ----------
   async function enviar(cmd, { silencioso = false } = {}) {
@@ -472,10 +480,10 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     if (!oculto && !verso && !i.ehConjurador && recemChegado(e, id)) marcas.push('<span class="marca-sono" title="Acabou de entrar">zZ</span>');
     if (!oculto && !verso && i.ehConjurador === false && def(id).palavrasChave?.includes('Etéreo')) marcas.push('<span class="marca-kw" title="Etéreo: só Aliados Etéreos o bloqueiam">✦</span>');
     const cls = ['cm', i?.suspensa ? 'suspensa' : '', oponente ? 'do-oponente' : '', classes];
-    const acionavel = !oculto && !ui.modo && i.dono === EU && temAcao(id);
+    const acionavel = !oculto && !ui.modo && i.dono === EU && temAcao(id) && tutDestaca(id);
     if (acionavel) cls.push('acionavel');
-    if (ui.modo?.tipo === 'alvo' && ui.modo.ids.has(id)) cls.push('alvo-ok');
-    if (ui.modo?.tipo === 'bloqueio' && ui.modo.ids.has(id)) cls.push('alvo-ok');
+    if (ui.modo?.tipo === 'alvo' && ui.modo.ids.has(id) && tutAlvo(id)) cls.push('alvo-ok');
+    if (ui.modo?.tipo === 'bloqueio' && ui.modo.ids.has(id) && tutAlvo(id)) cls.push('alvo-ok');
     if (e.combate && (e.combate.atacante === id)) cls.push('atacando');
     if (e.combate && (e.combate.alvo === id)) cls.push('alvejado');
     if (e.combate?.bloqueador === id) cls.push('bloqueando');
@@ -489,11 +497,13 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     const c = conjDef(j);
     const meu = j === EU;
     const grau = m.grau.map((g) => cartaMesa(g, { largura: 50, oponente: !meu, verso: true })).join('');
+    // zonas (04/10): o baralho é uma pilha de versos; cemitério, banimento e Arcano mostram a carta de cima
+    const topoArte = (lista) => { const id = lista[lista.length - 1]; const d = id && inst(id) && inst(id).defId !== 'oculta' ? modeloCarta(inst(id).defId) : null; return d?.arte ? `style="--topo:url('${d.arte}')"` : ''; };
+    const zona = (k, lista, rot, icone, titulo) => `<button class="zona-pilha zp-${k} ${lista.length ? '' : 'vazia'}" data-zona="${k}" data-j="${j}" title="${titulo}: ${lista.length}">
+        <span class="zp-carta" ${k === 'baralho' ? '' : topoArte(lista)}>${lista.length || k === 'baralho' ? '' : icone}</span><b>${lista.length}</b><small>${rot}</small></button>`;
     const pilhas = `<div class="pilhas-zona">
-      <button class="zona-btn" data-zona="baralho" data-j="${j}" title="Baralho">🂠 ${m.baralho.length}</button>
-      <button class="zona-btn" data-zona="cemiterio" data-j="${j}" title="Cemitério">☠ ${m.cemiterio.length}</button>
-      <button class="zona-btn" data-zona="banimento" data-j="${j}" title="Banimento">⊘ ${m.banimento.length}</button>
-      ${m.zonaArcano.length ? `<button class="zona-btn" data-zona="zonaArcano" data-j="${j}" title="Enviadas ao Arcano (vão para o fundo do baralho no Final)">✧ ${m.zonaArcano.length}</button>` : ''}
+      ${zona('baralho', m.baralho, 'Baralho', '🂠', 'Baralho')}
+      <div class="zp-linha">${zona('cemiterio', m.cemiterio, 'Cemitério', '☠', 'Cemitério')}${zona('banimento', m.banimento, 'Banidas', '⊘', 'Banimento')}${m.zonaArcano.length ? zona('zonaArcano', m.zonaArcano, 'Arcano', '✧', 'Enviadas ao Arcano (vão para o fundo do baralho no Final)') : ''}</div>
     </div>`;
     // Layout v10 (Codex/autor): os dois Conjuradores no eixo central, junto da linha do meio, encarando-se; a esfera de Arcano,
     // o Grau (virado) e os montes na mesma fileira; os Aliados e permanentes atrás. O equipamento fica guardado (clique no Conjurador).
@@ -501,7 +511,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     const fileira = `<div class="fileira-fundo">
       <div class="esfera-arcano ${m.arcano ? 'cheia' : ''}" title="Arcano na reserva"><b>${m.arcano}</b><small>Arcano</small></div>
       <div class="conj-bloco"><div class="conj-nome">${esc(nome(j))}${fonte.conectados && !meu && !fonte.conectados()[j] ? ' <span class="etiqueta">desconectado</span>' : ''}</div>${cartaMesa(m.conjuradorId, { largura: 118, status: true })}</div>
-      <div class="zona-grau"><span class="rot" title="Grau: ${grauEfetivo(e, j)} (cartas no Grau${grauEfetivo(e, j) !== m.grau.length ? ' + bônus' : ''})">◆ Grau ${grauEfetivo(e, j)}</span><div class="grau-cartas">${grau}</div></div>
+      <div class="zona-grau ${m.grau.length ? '' : 'vazia'}" data-n="${m.grau.length}"><span class="rot" title="Grau: ${grauEfetivo(e, j)} (cartas no Grau${grauEfetivo(e, j) !== m.grau.length ? ' + bônus' : ''})">◆ Grau ${grauEfetivo(e, j)}</span><div class="grau-cartas">${grau}</div></div>
       ${pilhas}
     </div>`;
     const campo = `<div class="campo campo-${meu ? 'eu' : 'op'}">${m.campo.map((id) => cartaMesa(id, { largura: 114, oponente: !meu, status: true })).join('')}</div>`;
@@ -589,9 +599,9 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     const m = z(EU);
     const descartando = e.pendencia?.tipo === 'descartar' && e.pendencia.jogador === EU;
     return `<div class="mao">${m.mao.map((id) => {
-      const brilho = !ui.modo && (podeJogar(id) ? 'jogavel' : '');
+      const brilho = !ui.modo && (podeJogar(id) && tutDestaca(id) ? 'jogavel' : '');
       const sel = descartando && ui.selecionadas.has(id) ? 'marcada' : '';
-      const alvo = ui.modo?.tipo === 'alvo' && ui.modo.ids.has(id) ? 'alvo-mao' : '';
+      const alvo = ui.modo?.tipo === 'alvo' && ui.modo.ids.has(id) && tutAlvo(id) ? 'alvo-mao' : '';
       return `<div class="mao-slot ${brilho} ${sel} ${alvo}">${cartaMesa(id, { largura: 104 })}</div>`;
     }).join('') || '<span class="peq mao-vazia">Sua mão está vazia.</span>'}</div>`;
   }
@@ -608,7 +618,9 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     else if (e.combate) rot = 'Passar: resolver o combate';
     else if (minhaJanela()) rot = 'Encerrar fase Principal';
     else if (e.ativo === EU) rot = `Passar (${ETAPAS.find(([k]) => k === e.etapa)?.[1] ?? ''})`;
-    return `<div class="barra-acao"><button class="botao primario grande" data-passar>${esc(rot)} ▸</button></div>`;
+    // tutorial rígido: o botão só fica aceso quando passar faz parte do passo
+    const travaTut = fonte.tutorial?.restrito && fonte.tutorial.permitir?.({ tipo: 'passar' });
+    return `<div class="barra-acao"><button class="botao ${travaTut ? 'apagado-tutorial' : 'primario'} grande" data-passar ${travaTut ? `title="${esc(travaTut)}"` : ''}>${esc(rot)} ▸</button></div>`;
   }
 
   function lateralHTML() {

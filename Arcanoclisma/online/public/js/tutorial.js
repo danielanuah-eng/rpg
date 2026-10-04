@@ -49,10 +49,10 @@ const LICOES = [
     }),
     passos: [
       { titulo: 'Bem-vindo à mesa', texto: 'Embaixo fica o seu Conjurador (Lyandra): a vida ♥ e o ataque ⚔ (que vem da arma) aparecem sobre a carta dele. A esfera azul ao lado é o seu Arcano. Em cima, o Conjurador do oponente. Vence quem zerar a vida do Conjurador do outro. Sua mão fica fora da mesa, embaixo; fases, decisões e a pilha ficam aqui na direita.' },
-      { titulo: 'A Zona de Grau', texto: `Uma vez por turno você põe uma carta da mão na Zona de Grau, onde ela fica virada (verso) no seu campo. O Grau decide quais cartas você pode jogar: uma carta de Grau 2 exige 2 cartas no seu Grau. Clique em <b>${N('base-recurso')}</b> na sua mão e escolha <b>Pôr no Grau</b>.`, objetivo: 'Ponha uma carta no Grau.', feito: (e) => e.jogadores[EU].grau.length >= 2, destaque: (e) => [maoDe(e, EU, 'base-recurso')] },
-      { titulo: 'Arcano para pagar', texto: `Cada carta do Grau pode ser suspensa (deitada) para gerar 1 Arcano. O <b>${N('base-aliado-c2-agressivo')}</b> custa 2 e exige Grau 1. Clique nele e escolha <b>Jogar</b>: a janela de pagamento já sugere suspender as duas cartas do Grau.`, objetivo: `Jogue o ${N('base-aliado-c2-agressivo')}.`, feito: (e) => !!campoDe(e, EU, 'base-aliado-c2-agressivo'), destaque: (e) => [maoDe(e, EU, 'base-aliado-c2-agressivo')] },
+      { titulo: 'A Zona de Grau', texto: `Uma vez por turno você põe uma carta da mão na Zona de Grau, onde ela fica virada (verso) no seu campo. O Grau decide quais cartas você pode jogar: uma carta de Grau 2 exige 2 cartas no seu Grau. Clique em <b>${N('base-recurso')}</b> na sua mão e escolha <b>Pôr no Grau</b>.`, objetivo: 'Ponha uma carta no Grau.', feito: (e) => e.jogadores[EU].grau.length >= 2, destaque: (e) => [maoDe(e, EU, 'base-recurso')], acoes: [{ tipo: 'colocarGrau', def: 'base-recurso' }] },
+      { titulo: 'Arcano para pagar', texto: `Cada carta do Grau pode ser suspensa (deitada) para gerar 1 Arcano. O <b>${N('base-aliado-c2-agressivo')}</b> custa 2 e exige Grau 1. Clique nele e escolha <b>Jogar</b>: a janela de pagamento já sugere suspender as duas cartas do Grau.`, objetivo: `Jogue o ${N('base-aliado-c2-agressivo')}.`, feito: (e) => !!campoDe(e, EU, 'base-aliado-c2-agressivo'), destaque: (e) => [maoDe(e, EU, 'base-aliado-c2-agressivo')], acoes: [{ tipo: 'jogar', def: 'base-aliado-c2-agressivo' }] },
       { titulo: 'A pilha', texto: 'Viu a carta aqui na direita? Tudo que você joga vai para a pilha e o oponente pode responder antes de resolver. Quando os dois passam, a carta resolve. O Aliado entrou com "zZ": no turno em que entra ele não ataca.', botao: true },
-      { titulo: 'Enviar cartas ao Arcano', texto: `Seu Grau já está todo suspenso. Para pagar mais, envie cartas da mão ao Arcano: cada uma gera o número do círculo de cima (a ${N('base-recurso')} gera 3). Elas vão para o fundo do baralho no seu Final. Jogue <b>${N('base-dano-c1')}</b> (2 de dano) no Aliado do oponente e pague enviando uma carta.`, objetivo: `Destrua o Aliado do oponente com ${N('base-dano-c1')}.`, feito: (e) => e.jogadores[BOT].campo.length === 0, destaque: (e) => [maoDe(e, EU, 'base-dano-c1')] },
+      { titulo: 'Enviar cartas ao Arcano', texto: `Seu Grau já está todo suspenso. Para pagar mais, envie cartas da mão ao Arcano: cada uma gera o número do círculo de cima (a ${N('base-recurso')} gera 3). Elas vão para o fundo do baralho no seu Final. Jogue <b>${N('base-dano-c1')}</b> (2 de dano) no Aliado do oponente e pague enviando uma carta.`, objetivo: `Destrua o Aliado do oponente com ${N('base-dano-c1')}.`, feito: (e) => e.jogadores[BOT].campo.length === 0, destaque: (e) => [maoDe(e, EU, 'base-dano-c1')], alvos: (e) => e.jogadores[BOT].campo, acoes: [{ tipo: 'jogar', def: 'base-dano-c1' }] },
       { titulo: 'Grau limita o poder', texto: `O <b>${N('base-aliado-c4-agressivo')}</b> custa 4 e exige Grau 3: você só tem 2. As cartas fortes chegam quando o seu Grau cresce, um por turno. A sobra de Arcano fica na reserva até o seu Cataclisma, quando some.`, botao: true },
       { titulo: 'Lição concluída!', texto: 'Você aprendeu Grau, Arcano, pagamento e a pilha. Próxima: combate.', fim: true },
     ],
@@ -65,11 +65,11 @@ const LICOES = [
       bot: { conj: 'carmal', itens: ['item-canal-cajado', 'item-armadura-gibao'], campo: ['base-aliado-c2-defensivo', 'base-aliado-c4-agressivo'], grau: ['base-recurso', 'base-recurso', 'base-recurso'] },
     }),
     passos: [
-      { titulo: 'Atacar', texto: `Na sua fase Principal, com a pilha vazia, Aliados de pé podem atacar o Conjurador ou um Aliado inimigo. Atacar suspende (deita) a carta. Clique no <b>${N('base-aliado-c2-agressivo')}</b>, escolha <b>Atacar</b> e mire o Conjurador do oponente.`, objetivo: 'Cause dano ao Conjurador do oponente.', feito: (e) => danoConj(e, BOT) > 0 && !e.combate, destaque: (e) => [campoDe(e, EU, 'base-aliado-c2-agressivo')] },
-      { titulo: 'Proficiente', texto: `Aliados que acabaram de entrar não atacam, a não ser que tenham <b>Proficiente</b>. A <b>${N('base-aliado-c2-agressivo-proficiente')}</b> tem. Jogue-a e ataque com ela no mesmo turno.`, objetivo: `Jogue e ataque com ${N('base-aliado-c2-agressivo-proficiente')}.`, feito: (e) => { const id = campoDe(e, EU, 'base-aliado-c2-agressivo-proficiente'); return !!id && e.instancias[id].suspensa && !e.combate; }, destaque: (e) => [maoDe(e, EU, 'base-aliado-c2-agressivo-proficiente') ?? campoDe(e, EU, 'base-aliado-c2-agressivo-proficiente')] },
-      { titulo: 'O Conjurador ataca com a arma', texto: 'O seu Conjurador também ataca, com o Ataque do Canal (aqui, o Cajado de aprendiz: 1). Ataque o Conjurador do oponente com Lyandra. Ele vai bloquear: quem bloqueia troca dano com o atacante.', objetivo: 'Ataque com o seu Conjurador.', feito: (e) => e.instancias[e.jogadores[EU].conjuradorId].suspensa && !e.combate, destaque: (e) => [e.jogadores[EU].conjuradorId] },
-      { titulo: 'Encerrar o turno', texto: 'Clique em <b>Encerrar fase Principal</b>. Depois vêm o Cataclisma (o Arcano que sobrou some) e o Final (suas cartas levantam).', objetivo: 'Passe o turno.', feito: (e) => e.ativo === BOT },
-      { titulo: 'Bloquear', texto: `O oponente vai atacar. Quando um ataque resolve, você escolhe um bloqueador de pé: clique no <b>${N('base-aliado-c6-defensivo')}</b> (5/14) quando ele brilhar. Quem bloqueia fica suspenso; um Aliado só levanta no seu Final, então não ataca no seu próximo turno. O Conjurador levanta no Início do seu turno, e a Armadura dele evita dano quando ele bloqueia.`, objetivo: 'Bloqueie o ataque.', feito: (e) => noLog(e, 'Jogador 0 bloqueia com') && !e.combate, destaque: (e) => [campoDe(e, EU, 'base-aliado-c6-defensivo')] },
+      { titulo: 'Atacar', texto: `Na sua fase Principal, com a pilha vazia, Aliados de pé podem atacar o Conjurador ou um Aliado inimigo. Atacar suspende (deita) a carta. Clique no <b>${N('base-aliado-c2-agressivo')}</b>, escolha <b>Atacar</b> e mire o Conjurador do oponente.`, objetivo: 'Cause dano ao Conjurador do oponente.', feito: (e) => danoConj(e, BOT) > 0 && !e.combate, destaque: (e) => [campoDe(e, EU, 'base-aliado-c2-agressivo')], alvos: (e) => [e.jogadores[BOT].conjuradorId], acoes: [{ tipo: 'atacar', def: 'base-aliado-c2-agressivo' }] },
+      { titulo: 'Proficiente', texto: `Aliados que acabaram de entrar não atacam, a não ser que tenham <b>Proficiente</b>. A <b>${N('base-aliado-c2-agressivo-proficiente')}</b> tem. Jogue-a e ataque com ela no mesmo turno.`, objetivo: `Jogue e ataque com ${N('base-aliado-c2-agressivo-proficiente')}.`, feito: (e) => { const id = campoDe(e, EU, 'base-aliado-c2-agressivo-proficiente'); return !!id && e.instancias[id].suspensa && !e.combate; }, destaque: (e) => [maoDe(e, EU, 'base-aliado-c2-agressivo-proficiente') ?? campoDe(e, EU, 'base-aliado-c2-agressivo-proficiente')], acoes: [{ tipo: 'jogar', def: 'base-aliado-c2-agressivo-proficiente' }, { tipo: 'atacar', def: 'base-aliado-c2-agressivo-proficiente' }] },
+      { titulo: 'O Conjurador ataca com a arma', texto: 'O seu Conjurador também ataca, com o Ataque do Canal (aqui, o Cajado de aprendiz: 1). Ataque o Conjurador do oponente com Lyandra. Ele vai bloquear: quem bloqueia troca dano com o atacante.', objetivo: 'Ataque com o seu Conjurador.', feito: (e) => e.instancias[e.jogadores[EU].conjuradorId].suspensa && !e.combate, destaque: (e) => [e.jogadores[EU].conjuradorId], alvos: (e) => [e.jogadores[BOT].conjuradorId], acoes: [{ tipo: 'atacar', conj: true }] },
+      { titulo: 'Encerrar o turno', texto: 'Clique em <b>Encerrar fase Principal</b>. Depois vêm o Cataclisma (o Arcano que sobrou some) e o Final (suas cartas levantam).', objetivo: 'Passe o turno.', feito: (e) => e.ativo === BOT, passar: true },
+      { titulo: 'Bloquear', texto: `O oponente vai atacar. Quando um ataque resolve, você escolhe um bloqueador de pé: clique no <b>${N('base-aliado-c6-defensivo')}</b> (5/14) quando ele brilhar. Quem bloqueia fica suspenso; um Aliado só levanta no seu Final, então não ataca no seu próximo turno. O Conjurador levanta no Início do seu turno, e a Armadura dele evita dano quando ele bloqueia.`, objetivo: 'Bloqueie o ataque.', feito: (e) => noLog(e, 'Jogador 0 bloqueia com') && !e.combate, destaque: (e) => [campoDe(e, EU, 'base-aliado-c6-defensivo')], alvos: (e) => [campoDe(e, EU, 'base-aliado-c6-defensivo')], acoes: [{ tipo: 'bloquear', def: 'base-aliado-c6-defensivo' }] },
       { titulo: 'Lição concluída!', texto: 'Dano fica guardado (memória de dano) até alguém curar. Etéreo: só é bloqueado por Aliados Etéreos. Próxima lição: responder na pilha.', fim: true },
     ],
     bot: (e) => {
@@ -88,10 +88,10 @@ const LICOES = [
     }),
     passos: [
       { titulo: 'O turno do oponente', texto: 'Agora é a vez do oponente. Cartas <b>Findantes</b> só se jogam na sua fase Principal. Cartas <b>Repentinas</b> (como Anular) se jogam sempre que você tem a prioridade, até no turno do oponente.', botao: true },
-      { titulo: 'Responda!', texto: `O oponente jogou uma carta no seu Aliado: ela aparece aqui na direita, na pilha, esperando a sua resposta. Jogue <b>${N('bal-anular-c3-repentina')}</b> (anula uma carta na pilha) e mire a carta dele. Pague com o seu Grau.`, objetivo: 'Anule a carta do oponente.', feito: (e) => noLog(e, 'foi anulada'), destaque: (e) => [maoDe(e, EU, 'bal-anular-c3-repentina')], travaPassar: 'Responda primeiro: jogue o Anular na carta do oponente (senão o seu Aliado morre).' },
+      { titulo: 'Responda!', texto: `O oponente jogou uma carta no seu Aliado: ela aparece aqui na direita, na pilha, esperando a sua resposta. Jogue <b>${N('bal-anular-c3-repentina')}</b> (anula uma carta na pilha) e mire a carta dele. Pague com o seu Grau.`, objetivo: 'Anule a carta do oponente.', feito: (e) => noLog(e, 'foi anulada'), destaque: (e) => [maoDe(e, EU, 'bal-anular-c3-repentina')], alvos: (e) => e.pilha.filter((p) => p.controlador === BOT).flatMap((p) => [p.id, p.instId]), acoes: [{ tipo: 'jogar', def: 'bal-anular-c3-repentina' }], travaPassar: 'Responda primeiro: jogue o Anular na carta do oponente (senão o seu Aliado morre).' },
       { titulo: 'De cima para baixo', texto: 'O Anular entrou por cima e resolveu primeiro, tirando a carta do oponente da pilha. É assim sempre: a última carta posta resolve primeiro.', botao: true },
-      { titulo: 'Pagar para anular', texto: `Agora ele jogou <b>${N('col-sino-dos-juramentados')}</b>: 5 de dano no seu Conjurador. Essa carta deixa você pagar 3 de Arcano para anulá-la quando ela for resolver. Passe a prioridade e, quando o jogo perguntar, pague enviando a ${N('base-recurso')} ao Arcano.`, objetivo: 'Pague 3 e anule o Sino.', feito: (e) => noLog(e, 'Jogador 0 paga 3'), falhou: (e) => noLog(e, 'Sino dos Juramentados resolve') },
-      { titulo: 'Olhar o topo', texto: `De volta ao seu turno, você repôs a mão até 5 cartas. Jogue <b>${N('base-comprar-c1')}</b>: olhe as 3 cartas do topo, ponha 1 na mão e o resto vai para o fundo.`, objetivo: 'Escolha uma carta do topo.', feito: (e) => noLog(e, 'Jogador 0 põe 1 carta(s) na mão'), destaque: (e) => [maoDe(e, EU, 'base-comprar-c1')] },
+      { titulo: 'Pagar para anular', texto: `Agora ele jogou <b>${N('col-sino-dos-juramentados')}</b>: 5 de dano no seu Conjurador. Essa carta deixa você pagar 3 de Arcano para anulá-la quando ela for resolver. Passe a prioridade e, quando o jogo perguntar, pague enviando a ${N('base-recurso')} ao Arcano.`, objetivo: 'Pague 3 e anule o Sino.', feito: (e) => noLog(e, 'Jogador 0 paga 3'), falhou: (e) => noLog(e, 'Sino dos Juramentados resolve'), passar: true, destaque: (e) => (e.pendencia?.tipo === 'pagarAnulacao' ? [maoDe(e, EU, 'base-recurso')] : []), acoes: [{ tipo: 'pagarAnulacao', pagar: true }] },
+      { titulo: 'Olhar o topo', texto: `De volta ao seu turno, você repôs a mão até 5 cartas. Jogue <b>${N('base-comprar-c1')}</b>: olhe as 3 cartas do topo, ponha 1 na mão e o resto vai para o fundo.`, objetivo: 'Escolha uma carta do topo.', feito: (e) => noLog(e, 'Jogador 0 põe 1 carta(s) na mão'), destaque: (e) => [maoDe(e, EU, 'base-comprar-c1')], acoes: [{ tipo: 'jogar', def: 'base-comprar-c1' }, { tipo: 'escolherDoTopo' }] },
       { titulo: 'Lição concluída!', texto: 'Você domina a pilha. Dica: em Opções da mesa dá para mandar o jogo sempre esperar seu clique quando o oponente jogar algo.', fim: true },
     ],
     bot: (e, passo) => {
@@ -114,10 +114,10 @@ const LICOES = [
       bot: { conj: 'osmar', itens: ['item-canal-cajado', 'item-armadura-gibao'], campo: ['bal-etereo-c2'], grau: ['base-recurso', 'base-recurso'] },
     }),
     passos: [
-      { titulo: 'Itens do Conjurador', texto: 'Antes da partida cada jogador escolhe do side deck um <b>Canal</b> (arma), uma <b>Armadura</b> e um <b>Extra</b> (consumível de uso único). Eles ficam ao lado do Conjurador. Use a <b>Poção de cura</b>: clique no botão Extra embaixo do seu Conjurador.', objetivo: 'Use a Poção de cura.', feito: (e) => !e.jogadores[EU].itens.some((i) => e.instancias[i].defId === 'item-extra-pocao') },
-      { titulo: 'Estruturas', texto: `Estruturas ficam em campo e não são atacadas, só atingidas por magias. A <b>${N('base-estrutura-c4-torre')}</b> diz: "Suspenda e pague 1: cause 2 de dano a um alvo". Use-a no Aliado Etéreo do oponente (Etéreo só é bloqueado por Etéreos).`, objetivo: 'Destrua o Aliado Etéreo do oponente com a Torre.', feito: (e) => e.jogadores[BOT].campo.length === 0, destaque: (e) => [campoDe(e, EU, 'base-estrutura-c4-torre')] },
-      { titulo: 'Habilidade do Conjurador', texto: `Cada Conjurador tem uma habilidade. A de Roh: suspenda o Conjurador e devolva à mão um Aliado ou Mística seu. O <b>${N('base-aliado-c4-agressivo')}</b> está ferido (o dano fica guardado). Clique no Roh, <b>Usar habilidade</b>, e devolva o ${N('base-aliado-c4-agressivo')}: na mão ele perde o dano.`, objetivo: 'Devolva o Aliado ferido para a mão.', feito: (e) => !!maoDe(e, EU, 'base-aliado-c4-agressivo'), destaque: (e) => [e.jogadores[EU].conjuradorId] },
-      { titulo: 'Fim do turno', texto: 'Ao encerrar: no <b>Cataclisma</b> o Arcano que sobrou na reserva some; no <b>Final</b> tudo que é seu levanta, o Grau vira para baixo e as cartas enviadas ao Arcano vão para o fundo do baralho. No Início do seu turno você repõe a mão até 5. Encerre a fase Principal.', objetivo: 'Passe o turno.', feito: (e) => e.ativo === BOT },
+      { titulo: 'Itens do Conjurador', texto: 'Antes da partida cada jogador escolhe do side deck um <b>Canal</b> (arma), uma <b>Armadura</b> e um <b>Extra</b> (consumível de uso único). Eles ficam ao lado do Conjurador. Use a <b>Poção de cura</b>: clique no botão Extra embaixo do seu Conjurador.', objetivo: 'Use a Poção de cura.', feito: (e) => !e.jogadores[EU].itens.some((i) => e.instancias[i].defId === 'item-extra-pocao'), destaque: (e) => [e.jogadores[EU].conjuradorId], acoes: [{ tipo: 'ativar', def: 'item-extra-pocao' }] },
+      { titulo: 'Estruturas', texto: `Estruturas ficam em campo e não são atacadas, só atingidas por magias. A <b>${N('base-estrutura-c4-torre')}</b> diz: "Suspenda e pague 1: cause 2 de dano a um alvo". Use-a no Aliado Etéreo do oponente (Etéreo só é bloqueado por Etéreos).`, objetivo: 'Destrua o Aliado Etéreo do oponente com a Torre.', feito: (e) => e.jogadores[BOT].campo.length === 0, destaque: (e) => [campoDe(e, EU, 'base-estrutura-c4-torre')], alvos: (e) => e.jogadores[BOT].campo, acoes: [{ tipo: 'ativar', def: 'base-estrutura-c4-torre' }] },
+      { titulo: 'Habilidade do Conjurador', texto: `Cada Conjurador tem uma habilidade. A de Roh: suspenda o Conjurador e devolva à mão um Aliado ou Mística seu. O <b>${N('base-aliado-c4-agressivo')}</b> está ferido (o dano fica guardado). Clique no Roh, <b>Usar habilidade</b>, e devolva o ${N('base-aliado-c4-agressivo')}: na mão ele perde o dano.`, objetivo: 'Devolva o Aliado ferido para a mão.', feito: (e) => !!maoDe(e, EU, 'base-aliado-c4-agressivo'), destaque: (e) => [e.jogadores[EU].conjuradorId], alvos: (e) => [campoDe(e, EU, 'base-aliado-c4-agressivo')], acoes: [{ tipo: 'ativar', conj: true }] },
+      { titulo: 'Fim do turno', texto: 'Ao encerrar: no <b>Cataclisma</b> o Arcano que sobrou na reserva some; no <b>Final</b> tudo que é seu levanta, o Grau vira para baixo e as cartas enviadas ao Arcano vão para o fundo do baralho. No Início do seu turno você repõe a mão até 5. Encerre a fase Principal.', objetivo: 'Passe o turno.', feito: (e) => e.ativo === BOT, passar: true },
       { titulo: 'Regras para lembrar', texto: '<b>Limite de mão</b>: 7. <b>Impasse</b>: 5 turnos seguidos sem jogar, ativar ou atacar e você perde. <b>Protegido N</b>: mirar a carta custa N a mais. Algumas cartas pedem uma carta de certo Valor no Grau, ou descartar cartas do Grau. O <b>Banimento</b> guarda cartas fora de jogo (a Ana pode jogá-las depois). Baralho acabado não faz perder.', botao: true },
       { titulo: 'Tutorial completo!', texto: 'Agora jogue uma partida inteira contra o bot com dicas, ou vá direto para o modo Jogar.', fim: true },
     ],
@@ -158,8 +158,12 @@ export async function telaTutorial(tela, partes, ctx) {
         ${p.fim ? `${LICOES[indice + 1] ? `<a class="botao primario peq" href="#/tutorial/${LICOES[indice + 1].id}">Próxima lição ▸</a>` : '<a class="botao primario peq" href="#/tutorial/partida">Partida com dicas ▸</a>'}<a class="botao peq" href="#/tutorial">Lições</a>` : ''}
         <button class="botao peq fantasma" data-tut-reiniciar>Recomeçar lição</button></div></div>`;
     },
+    /** Lição rígida (pedido do autor, 04/10): só brilha e só vale o que o passo pede. */
+    restrito: true,
     destaques() { return atual().destaque?.(fonte.e)?.filter(Boolean) ?? []; },
-    permitir(cmd) { return cmd.tipo === 'passar' && travado() ? atual().travaPassar : null; },
+    /** Alvos aceitos no passo (null = qualquer). */
+    alvos() { const a = atual().alvos?.(fonte.e); return a ? a.filter(Boolean) : null; },
+    permitir(cmd) { return permitirTutorial(fonte.e, atual(), cmd, travado()); },
     semAutoPasse() { return travado() || (temProximo(atual()) && fonte.e.ativo === EU); },
   };
   /** O passo pede uma resposta e a carta do oponente ainda está no topo da pilha. */
@@ -215,6 +219,37 @@ function dica(e) {
   if (!e.instancias[z.conjuradorId].suspensa) dicas.push('Lyandra pode atacar com a arma (Canal).');
   dicas.push('Quando terminar, clique em Encerrar fase Principal.');
   return dicas.map((d) => `• ${esc(d)}`).join('<br>');
+}
+
+/** Trava da lição: devolve a mensagem quando o comando não faz parte do passo atual (null = pode). */
+function permitirTutorial(e, p, cmd, travado) {
+  const faca = p.objetivo ? `No tutorial, agora: ${p.objetivo}${p.destaque?.(e)?.some(Boolean) ? ' Use o que está brilhando.' : ''}` : 'Leia o balão e clique em Próximo para continuar.';
+  if (p.fim) return 'Lição concluída! Use os botões do balão para seguir.';
+  // pagar custos (suspender o Grau) e as decisões obrigatórias do jogo sempre valem
+  if (['suspenderGrau', 'escolherInicio', 'descartar'].includes(cmd.tipo)) return null;
+  const defDe = (id) => (id ? e.instancias[id]?.defId : null);
+  // fontes de Arcano (ativação que só gera Arcano) servem para pagar
+  if (cmd.tipo === 'ativar') { const d = DADOS.catalogo.cartas[defDe(cmd.carta)]; if (d?.ativacao?.efeitos?.every((ef) => ef.tipo === 'arcano')) return null; }
+  if (cmd.tipo === 'passar') {
+    if (travado) return p.travaPassar;
+    if (p.passar || e.pendencia) return null;
+    // deixar resolver o que já está na pilha, o combate, e o turno do oponente
+    if (e.pilha.length || e.combate || e.ativo !== EU || e.etapa !== 'principal') return null;
+    return faca;
+  }
+  if (!p.acoes) return faca;
+  const alvosOk = p.alvos?.(e)?.filter(Boolean) ?? null;
+  const ok = p.acoes.some((a) => {
+    if (a.tipo !== cmd.tipo) return false;
+    const id = cmd.carta ?? cmd.atacante ?? cmd.bloqueador ?? null;
+    if (a.conj && id !== e.jogadores[EU].conjuradorId) return false;
+    if (a.def && defDe(id) !== a.def) return false;
+    if ('pagar' in a && cmd.pagar !== a.pagar) return false;
+    if (alvosOk && cmd.alvo && !alvosOk.includes(cmd.alvo)) return false;
+    if (alvosOk && cmd.tipo === 'atacar' && !alvosOk.includes(cmd.alvo)) return false;
+    return true;
+  });
+  return ok ? null : faca;
 }
 
 export { conjuradorHTML, nomeCurto };
