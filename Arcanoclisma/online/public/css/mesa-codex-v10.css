@@ -85,9 +85,9 @@
 }
 
 /* Não encolher as cartas quando o campo enche; as fileiras e o campo crescem. */
-.campo { min-height: 185px; gap: 24px 28px; padding: 12px 28px; align-content: center; }
-.campo .cm { --w: 114px !important; }
-.campo .tcg-card { --card-w: 114px !important; }
+.mesa .campo { min-height: 185px; gap: 24px 28px; padding: 12px 28px; align-content: center; }
+.mesa .campo .cm { --w: 114px !important; }
+.mesa .campo .tcg-card { --card-w: 114px !important; }
 .marca-status {
   top: auto;
   bottom: 7px;

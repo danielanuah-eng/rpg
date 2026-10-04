@@ -1,0 +1,23 @@
+/* A carta inteira forma um plano em perspectiva, incluindo moldura, texto e estatísticas. */
+.mesa-efeitos-codex {
+  position: fixed; inset: 0; z-index: 48; pointer-events: none;
+  perspective: 1500px; overflow: hidden; contain: layout style;
+}
+.mesa-efeitos-codex .efeito-plano-carta {
+  position: absolute; transform-style: preserve-3d; pointer-events: none;
+  filter: drop-shadow(0 14px 10px #02081185); will-change: transform, opacity;
+}
+.mesa-efeitos-codex .efeito-plano-carta > .tcg-card {
+  width: 100%; height: 100%; --card-w: var(--efeito-largura);
+  transform: none !important; transition: none; margin: 0;
+}
+.mesa-efeitos-codex .efeito-imagem-carta {
+  position: absolute; width: var(--efeito-tamanho, 96px); height: var(--efeito-tamanho, 96px);
+  object-fit: contain; pointer-events: none; will-change: transform, opacity;
+}
+.mesa-efeitos-codex .tcg-card.scene-art .portrait:not(.art-magic-glow-v9) {
+  opacity: 1; filter: contrast(1.045) brightness(1.025) saturate(1.06);
+}
+@media (prefers-reduced-motion: reduce) {
+  .mesa-efeitos-codex { display: none; }
+}
