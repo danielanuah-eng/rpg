@@ -1,0 +1,36 @@
+{
+  "id": "nv-moca-que-nao-sangra",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-05f5b8b5-d629-423a-9a98-ff3cb4fb710e.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nExact existing adultfemaleidentity MocaQueNaoSangra: pale skin, shortvoluminous WHITEhair sidepart, SQUAREface andbroadnose, hardwatchfulbrows, studearring, muscularstrongarms, darkgreen scarf/cloak, creamwraptunicleatherstraps, brownarmguards/belts/boots anddarktrousers. Her swordislongbroadangulargreyblade carvedwithrunechannel, simplebronzehilt; doNOTreplaceweaponwithordinaryrapier. CurrentValorPERSONA so luminousbodymarking geometry andswordglow becomeSOFTCORAL ratherthanoldgreen. PhysicalgreenclothesUNCHANGED. NEWactionpose vaultinga lowbluegreymarketparapet in the CityOfFaces atcoolsoftDUSK: LEFTpalm firmlybracedonparapet, ONEkneefoldedhighwithbootrestingedge, otherlegloweringontowoodenwalkway, torso3/4backtwistsheadUPLEFT watchfullyinto alley; righthandholdsswordlowtrailingbehind body, notsame twohandedwide-legstand. FaceandpupilspointUPLEFT coherently, swordiscarried notfiringatanotherdirection. Simplemaskstalls, plainbluegreymirrors/windows andsoftcorallamplocal, distantfiguressmallfullyclothed, broadcleanmutedplaster. Verysmall brokenCORALwardcontour closearoundshoulder,silhouettevisible, no giantshieldbubble or spellreflection. Current commonAliado3/3 cost3 grau2 generated1 Protegido1 means opponentpays1extraArcano toTARGET, NOT invincibility/damageimmunity/bounce. No reflectedenemybeam, no newexhaust/payabilities. Originalidentityandtattoopatternpreserved, magicalcoloradjustedtocurrentPersona. Localcontainedglints, coherentcalmenvironmentnotHDRanimebloom.\nLastrefONLYapprovedsmoothfinish, nevercopygirl/dragon/meadow/pose. Fullopaquevertical63:88scene.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/moca-que-nao-sangra.png",
+  "textoRegraLido": "Protegido 1.",
+  "valoresLidos": [
+    "persona"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/moca-que-nao-sangra.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Mercado de máscaras da Cidade de Rostos, com parapeito de pedra e passarela de madeira",
+  "momentoDoDia": "Crepúsculo",
+  "clima": "Seco e fresco",
+  "escala": "Personagem em primeiro plano, edificações de escala urbana ao fundo",
+  "avaliacaoVisual": "Identidade preservada em nova pose apoiada no parapeito; cabelos brancos curtos, manto verde e equipamento de couro. Luz coral localizada, cenário liso e completo.",
+  "decisoes": [
+    "Persona conforme os dados atuais; Protegido 1 exige um arcano adicional do adversário para escolher este aliado como alvo, sem imunidade nem reflexão.",
+    "Pose e cenário novos; espada baixa, fora de ação de ataque, sem alvo fictício."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

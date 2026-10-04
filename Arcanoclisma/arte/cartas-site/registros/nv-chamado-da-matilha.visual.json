@@ -1,0 +1,67 @@
+{
+  "id": "nv-chamado-da-matilha",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-4b19fa8f-5105-4bba-b646-6eee9382c6e3.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-chamado-da-matilha.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/matilha-da-voragem.png",
+  "textoRegraLido": "Cause 2 de dano a cada Aliado do oponente.",
+  "valoresLidos": [
+    "primitivum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/matilha-da-voragem.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Ravina florestal com rio, ponte em ruínas, árvores grandes e posto de monstros",
+  "momentoDoDia": "Manhã",
+  "clima": "Claro e fresco",
+  "escala": "Matilha em vários planos de profundidade, trolls na margem adversária",
+  "avaliacaoVisual": "Cães escuros e avermelhados avançam para a direita com olhos, focinhos e magia acompanhando os alvos; raízes verde-musgo e âmbar alcançam os trolls. Conjurador distante permanece fora do efeito.",
+  "decisoes": [
+    "Primitivum conforme os dados atuais, substituindo a magia roxo-sangue da base.",
+    "Causa dois a cada Aliado adversário, sem atingir próprios aliados ou Conjuradores.",
+    "Criaturas caninas preservadas, não acrescentar membros humanos."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-chamado-da-matilha.png",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "7d7aa45f541a3e2c8e7a54b88e8fc8dece599f044981962f990d3e1deef5944f",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

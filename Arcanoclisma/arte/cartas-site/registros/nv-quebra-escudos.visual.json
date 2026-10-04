@@ -1,0 +1,66 @@
+{
+  "id": "nv-quebra-escudos",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-8104e1bf-5cbb-4f48-a773-f2d25302b1f1.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-quebra-escudos.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/quebra-escudos.png",
+  "textoRegraLido": "Cause 4 de dano a um Aliado ou Mística.",
+  "valoresLidos": [
+    "conflituo"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/quebra-escudos.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Pedreira de guerra com andaimes e antiga forja ao fundo",
+  "momentoDoDia": "Meio-dia",
+  "clima": "Nuvens claras",
+  "escala": "Impacto próximo sobre o escudo de um único guerreiro reptiliano",
+  "avaliacaoVisual": "Nova queda em salto; duas mãos seguram o martelo, rosto e olhos acompanham o impacto abaixo à esquerda. Escudo se parte sem ferimento gráfico, magia vermelho-ferrugem concentrada no golpe.",
+  "decisoes": [
+    "Conflituo Findante causa quatro a um Aliado ou Mística; não atingir Conjurador nem garantir destruição do alvo.",
+    "Arma, olhar e direção do efeito coerentes, sem raio curvado para corrigir uma mira errada."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-quebra-escudos.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "1ab0d6543c7e952ff08c9d873c6bd0bbd8ae1e4a01bd4ea69b02ae140df2df0a",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

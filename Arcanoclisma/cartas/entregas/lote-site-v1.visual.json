@@ -3,16 +3,8 @@
   "pedidoVersao": 2,
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 168,
+  "concluidas": 176,
   "pendentes": [
-    "nv-moca-que-nao-sangra",
-    "nv-rosto-sem-gente",
-    "nv-leitura-de-sombras",
-    "nv-sentenca-do-selo",
-    "nv-luz-da-faroleira",
-    "nv-chamado-da-matilha",
-    "nv-quebra-escudos",
-    "nv-nuvem-triste",
     "nv-cadeira-de-espera",
     "nv-ladrao-de-tumulos",
     "nv-mascara-do-outro",
@@ -1391,6 +1383,70 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-esquecido.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-esquecido.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-moca-que-nao-sangra",
+      "nome": "Moça que Não Sangra",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-moca-que-nao-sangra.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-moca-que-nao-sangra.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-rosto-sem-gente",
+      "nome": "Rosto sem Gente",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-rosto-sem-gente.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-rosto-sem-gente.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-leitura-de-sombras",
+      "nome": "Leitura de Sombras",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-leitura-de-sombras.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-leitura-de-sombras.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-sentenca-do-selo",
+      "nome": "Sentença do Selo",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-sentenca-do-selo.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-sentenca-do-selo.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-luz-da-faroleira",
+      "nome": "Luz da Faroleira",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-luz-da-faroleira.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-luz-da-faroleira.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-chamado-da-matilha",
+      "nome": "Chamado da Matilha",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-chamado-da-matilha.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-chamado-da-matilha.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-quebra-escudos",
+      "nome": "Golpe do Quebra-Escudos",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-quebra-escudos.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-quebra-escudos.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-nuvem-triste",
+      "nome": "Nuvem Triste",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-nuvem-triste.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-nuvem-triste.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
     }
   ],

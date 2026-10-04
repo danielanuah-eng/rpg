@@ -1,0 +1,66 @@
+{
+  "id": "nv-sentenca-do-selo",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-2c1f4010-49a4-40c1-926c-fce4aa604ac3.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-sentenca-do-selo.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/juiz-do-selo.png",
+  "textoRegraLido": "Destrua um Aliado ou Mística.",
+  "valoresLidos": [
+    "dominum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/juiz-do-selo.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Pátio de juramentos com muralha, arco e piso molhado",
+  "momentoDoDia": "Fim da manhã após chuva",
+  "clima": "Aberturas de céu claro",
+  "escala": "Juiz enorme à esquerda e um golem menor à direita; guardas distantes",
+  "avaliacaoVisual": "Juiz humanoide de pedra e armadura selada, cabeça inclinada para o alvo, mão estendida. Um único golem cerâmico se desfaz por correntes roxo-sangue; sem ferimentos gráficos. Martelo parcialmente enquadrado na margem esquerda.",
+  "decisoes": [
+    "Dominum Findante destrói um Aliado ou Mística; não representar anulação de feitiço só porque a base RPG descreve isso.",
+    "Manter selos, vestimenta azul e metal envelhecido sem transformar dourado em brilho geral."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-sentenca-do-selo.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "204c13c45a17bf6cf77842a7651e65727e7fd20b1dc306d6833c43eb129d7a27",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

@@ -1,0 +1,36 @@
+{
+  "id": "nv-leitura-de-sombras",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-8eff16a9-b4c3-4137-b736-559f8bf37dd0.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nLEITURA DE SOMBRAS, common Cognitium Findante. Preserve reference reader: warm olive complexion, young adult lean man, unruly dark curls, greyblue hood with restrained ochre edging, indigo scarf over mouth, cream sleeves, leather straps/satchel/fingerless gloves, old ornamental book. NEW pose: seated sideways high on a narrow wooden library ladder, bent knees, left hand braces his open book on thigh, right hand draws TWO of FOUR small distinct indigo shadow leaves toward the book. The other TWO leaves spiral gently back underneath the closed stack at ladder foot. Face/nose/eyes distinctly tilted DOWN toward the four leaves; watchful reserved expression, no frontal stare. Spell rule exactly look at FOUR top cards, TWO to hand, others bottom; symbolic paper leaves, no readable card UI. Dawn inside a round observatory archive over a valley; curved plain plaster walls, shelving at right, low pinkish sky through broad open roof slit, a single suspended bronze armillary and distant mountain. Close slightly high camera from ladder side, character upper right, action below left. Magic indigo localized smoky shapes with missing pieces, scenery muted terracotta and ivory; smooth spacious painted walls, not scratchy shelf noise. Not invisibility attack and no new companion.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/leitor-de-sombras.png",
+  "textoRegraLido": "Olhe as 4 cartas do topo do seu baralho; ponha 2 na mão e as outras no fundo do baralho.",
+  "valoresLidos": [
+    "cognitium"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/leitor-de-sombras.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Arquivo em observatório aberto para um vale, com estantes, escada e esfera armilar",
+  "momentoDoDia": "Amanhecer",
+  "clima": "Céu claro",
+  "escala": "Leitor próximo e vale urbano distante",
+  "avaliacaoVisual": "Leitor sentado na escada, olhando para as folhas de sombra; quatro folhas distinguíveis, duas próximas da mão e duas junto à pilha inferior. Índigo localizado e identidade preservada.",
+  "decisoes": [
+    "Cognitium Findante: olhar quatro, duas para a mão e duas para o fundo; sem criar regras de ataque ou invisibilidade.",
+    "Novo gesto e enquadramento lateral, cenário completo."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

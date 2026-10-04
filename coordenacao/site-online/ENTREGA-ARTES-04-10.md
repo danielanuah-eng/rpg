@@ -1,8 +1,10 @@
 # Entrega visual para Claude — 04/10/2026
 
-## Atualização posterior: 168/210
+## Atualização posterior: 176/210
 
-O lote e a galeria agora têm 168 artes concluídas, com 42 pendentes. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega inicial de conjuradores abaixo. Entraram Pente das Mil Caras, Balde que Sobe, Luz de Velório, Carcaça Andante, Coveiro de Vau Grande, Embalsamador, Velho Ossário e O Esquecido. As 151 do pedido inicial estão entregues; as adicionais pertencem à mesma meta de 210. Cada ID tem cena e registro próprios, com dimensões e alfa medidos. Os Valores atuais determinam a cor da magia; aparência física e roupas dos personagens aprovados continuam preservadas. Os gestos e cenários não adicionam efeitos ao jogo.
+O lote e a galeria agora têm 176 artes concluídas, com 34 pendentes. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega inicial de conjuradores abaixo. Entraram Moça que Não Sangra, Rosto sem Gente, Leitura de Sombras, Sentença do Selo, Luz da Faroleira, Chamado da Matilha, Golpe do Quebra-Escudos e Nuvem Triste. As 151 do pedido inicial estão entregues; as adicionais pertencem à mesma meta de 210. Cada ID tem cena e registro próprios, com dimensões e alfa medidos. Os Valores atuais determinam a cor da magia; aparência física e roupas dos personagens aprovados continuam preservadas. Os gestos e cenários não adicionam efeitos ao jogo.
+
+Rosto sem Gente recebeu revisão de cabeça para acompanhar o portal; o estudo em `variantes/` fica como histórico. Protegido 1 da Moça é custo adicional para escolhê-la como alvo, sem reflexão. Leitura de Sombras escolhe duas entre quatro; Sentença destrói um único Aliado ou Mística. Faroleira cura o próprio Conjurador e compra uma; Matilha atinge só os Aliados adversários. Quebra-Escudos mantém rosto, martelo e impacto alinhados e não atinge Conjurador. Nuvem Triste conserva o corpo coral, mas o efeito atual de Sublimeyn é prata-mercúrio: devolução de uma criatura intacta e compra de uma carta.
 
 Luz de Velório permanece vela de energia sem anatomia humana. Carcaça não recebe proteção por estar em postura firme. O Esquecido conserva três formas visuais como identidade de uma única carta, sem criar três Aliados. Ossário tem quatro patas e duas asas, com ambos os braços dianteiros presentes; não é wyvern. Ossário e Embalsamador trazem um único aliado de cemitério, ainda pagando o custo indicado no texto. As transparências dos seres etéreos são visuais dentro de PNGs com fundo opaco medido.
 

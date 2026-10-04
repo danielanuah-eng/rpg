@@ -6559,9 +6559,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/moca-que-nao-sangra.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Moça Que Não Sangra: personagem/objeto do catálogo aprovado (moca-que-nao-sangra). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Moça Que Não Sangra avançando ao ataque com fúria, em pleno golpe; cercado por uma proteção que desvia magias inimigas.",
       "ambienteOriginal": "Ambiente do Valor Persona: a cidade dos rostos, feiras de máscaras, ruas de espelhos e tavernas cheias. Magia na cor coral, em aura suave e uniforme que transborda quando a emoção é forte. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -6585,7 +6585,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-moca-que-nao-sangra.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-moca-que-nao-sangra.visual.json"
     },
     {
       "id": "nv-rosto-sem-gente",
@@ -6599,9 +6601,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/rosto-sem-gente.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Rosto Sem Gente: personagem/objeto do catálogo aprovado (rosto-sem-gente). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Rosto Sem Gente como fonte ou forma do feitiço: uma criatura é puxada de volta através de um portal, sumindo do campo.",
       "ambienteOriginal": "Ambiente do Valor Persona: a cidade dos rostos, feiras de máscaras, ruas de espelhos e tavernas cheias. Magia na cor coral, em aura suave e uniforme que transborda quando a emoção é forte. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -6625,7 +6627,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-rosto-sem-gente.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-rosto-sem-gente.visual.json"
     },
     {
       "id": "nv-leitura-de-sombras",
@@ -6639,9 +6643,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/leitor-de-sombras.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Leitor de Sombras: personagem/objeto do catálogo aprovado (leitor-de-sombras). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Leitor de Sombras como fonte ou forma do feitiço: quem conjura espia o futuro: algumas imagens brilham e uma é puxada para a mão, as outras afundam.",
       "ambienteOriginal": "Ambiente do Valor Cognitium: o arquivo sem dono, bibliotecas que esquecem, observatórios. Magia na cor índigo, em véu de fumaça com falhas, como se faltassem pedaços. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -6665,7 +6669,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-leitura-de-sombras.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-leitura-de-sombras.visual.json"
     },
     {
       "id": "nv-sentenca-do-selo",
@@ -6679,9 +6685,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/juiz-do-selo.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Juiz do Selo: personagem/objeto do catálogo aprovado (juiz-do-selo). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Juiz do Selo como fonte ou forma do feitiço: uma criatura inimiga é desfeita por completo pela magia.",
       "ambienteOriginal": "Ambiente do Valor Dominum: cidades-muralha, prisões, tronos e salões de juramento. Magia na cor roxo-sangue, em construtos de correntes, coleiras e elos. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -6705,7 +6711,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-sentenca-do-selo.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-sentenca-do-selo.visual.json"
     },
     {
       "id": "nv-luz-da-faroleira",
@@ -6719,9 +6727,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/faroleira-de-vau-grande.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Faroleira de Vau-Grande: personagem/objeto do catálogo aprovado (faroleira-de-vau-grande). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Faroleira de Vau-Grande como fonte ou forma do feitiço: uma luz de cura fecha feridas de quem conjura; um mensageiro, pássaro ou vento traz pergaminhos e segredos até as mãos de quem conjura.",
       "ambienteOriginal": "Ambiente do Valor Alvorum: faróis sem noite, auroras, campos dourados ao amanhecer e ao entardecer. Magia na cor dourado e preto, em aura dividida, com falhas entre a parte de luz e a de sombra. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -6745,7 +6753,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-luz-da-faroleira.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-luz-da-faroleira.visual.json"
     },
     {
       "id": "nv-chamado-da-matilha",
@@ -6759,9 +6769,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/matilha-da-voragem.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Matilha da Voragem: personagem/objeto do catálogo aprovado (matilha-da-voragem). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Matilha da Voragem como fonte ou forma do feitiço: uma onda de magia varre o campo inimigo e atinge várias criaturas ao mesmo tempo.",
       "ambienteOriginal": "Ambiente do Valor Primitivum: a floresta primeira, florestas que andam, mercados de feras e montanhas. Magia na cor verde-musgo e âmbar, em construtos orgânicos: raízes, galhos e esporos soltos. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -6785,7 +6795,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-chamado-da-matilha.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-chamado-da-matilha.visual.json"
     },
     {
       "id": "nv-quebra-escudos",
@@ -6799,9 +6811,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/quebra-escudos.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Quebra-Escudos: personagem/objeto do catálogo aprovado (quebra-escudos). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Quebra-Escudos como fonte ou forma do feitiço: um projétil de magia corta o ar em direção a uma criatura inimiga.",
       "ambienteOriginal": "Ambiente do Valor Conflitüo: campos de batalha sem trégua, arenas, trincheiras e forjas de guerra. Magia na cor vermelho-ferrugem, em construtos sólidos de luz: lâminas, escudos, estandartes. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -6825,7 +6837,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-quebra-escudos.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-quebra-escudos.visual.json"
     },
     {
       "id": "nv-nuvem-triste",
@@ -6839,9 +6853,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/nuvem-triste.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Nuvem Triste: personagem/objeto do catálogo aprovado (nuvem-triste). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Nuvem Triste como fonte ou forma do feitiço: uma criatura é puxada de volta através de um portal, sumindo do campo; um mensageiro, pássaro ou vento traz pergaminhos e segredos até as mãos de quem conjura.",
       "ambienteOriginal": "Ambiente do Valor Sublimeyn: céus de duas pálpebras, mares de mercúrio, nuvens e torres flutuantes. Magia na cor prata-mercúrio, em fumaça e vapor que escorrem, pingam e cristalizam. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -6865,7 +6879,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-nuvem-triste.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-nuvem-triste.visual.json"
     },
     {
       "id": "nv-cadeira-de-espera",

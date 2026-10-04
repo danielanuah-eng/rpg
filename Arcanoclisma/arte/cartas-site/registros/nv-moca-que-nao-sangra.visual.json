@@ -1,0 +1,66 @@
+{
+  "id": "nv-moca-que-nao-sangra",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-05f5b8b5-d629-423a-9a98-ff3cb4fb710e.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-moca-que-nao-sangra.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/moca-que-nao-sangra.png",
+  "textoRegraLido": "Protegido 1.",
+  "valoresLidos": [
+    "persona"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/moca-que-nao-sangra.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Mercado de máscaras da Cidade de Rostos, com parapeito de pedra e passarela de madeira",
+  "momentoDoDia": "Crepúsculo",
+  "clima": "Seco e fresco",
+  "escala": "Personagem em primeiro plano, edificações de escala urbana ao fundo",
+  "avaliacaoVisual": "Identidade preservada em nova pose apoiada no parapeito; cabelos brancos curtos, manto verde e equipamento de couro. Luz coral localizada, cenário liso e completo.",
+  "decisoes": [
+    "Persona conforme os dados atuais; Protegido 1 exige um arcano adicional do adversário para escolher este aliado como alvo, sem imunidade nem reflexão.",
+    "Pose e cenário novos; espada baixa, fora de ação de ataque, sem alvo fictício."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-moca-que-nao-sangra.png",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "873024a664e78b3bd6d5a586f664b575e25f955df1eb8b9e54834c621fea0ae2",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

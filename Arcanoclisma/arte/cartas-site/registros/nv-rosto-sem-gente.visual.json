@@ -1,0 +1,72 @@
+{
+  "id": "nv-rosto-sem-gente",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-f8495ddd-3b84-4b2b-b482-c25cfa88097c.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-rosto-sem-gente.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/rosto-sem-gente.png",
+  "textoRegraLido": "Devolva um Aliado ou Mística à mão do dono.",
+  "valoresLidos": [
+    "persona"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/rosto-sem-gente.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Bastidores de teatro e oficina de máscaras, piso de madeira, cortinas azul-escuras e máscaras penduradas",
+  "momentoDoDia": "Noite",
+  "clima": "Interior abrigado",
+  "escala": "Forma mágica grande e aliado lobo íntegro passando por um único portal para o dono ao fundo à esquerda",
+  "avaliacaoVisual": "Cabeça corrigida para acompanhar o portal e o lobo à esquerda. Materiais secos de cerâmica, fibras e tecido; magia coral de Persona. Cena opaca, sem tipografia.",
+  "decisoes": [
+    "Temporária Findante de Persona conforme os dados atuais: devolve um Aliado ou Mística à mão do dono; pode afetar qualquer lado.",
+    "A criatura representa a forma do feitiço, não um novo aliado. Lobo com pelagem, sem petrificação ou destruição."
+  ],
+  "revisaoMira": {
+    "arquivoAnterior": "Arcanoclisma/arte/cartas-site/variantes/nv-rosto-sem-gente-antes-mira.png",
+    "origemAnterior": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-78ae1f9c-e576-4bc7-8572-7a65ec873ca9.png",
+    "prompt": "Edit ONLY the nonhuman mask creature's HEAD and upperneck in this image. Keep its SAMEivory/darkblue ceramicmaskdesign, shards, holloweyeholes andgapingmouth. TURN the actualwholehead/neck to a DOWNLEFT threequarterPROFILE lookingdirectly at the WOLF and CORALPORTAL inlowerleft. Thelongnose, BOTHeyehollows andopenmouthmustphysicallyaimtowardthat portal/wolf, nottowardrightimageedge orviewer. Do not just move eyes or adda secondhead. Creature'slowerbody, clawhands, feet, proportions, bark/clothmaterials andlocallycoralaura unchanged. Preserveexactwolf, itsowner atleft, portalposition, stagewood,costumes,hangingmasks,lamps,darkcurtains andcomposition. Samecleanpolishedfantasyillustrationfinish. A tinyshortcoralwisp may connect mouthtoportal'supperrimdirectly toclarifycause, no bentstraightlaser, no damage/killing. No extra target orarm. Fullopaqueverticalsame63:88scene, nocardframe/text/UI/watermark. Sole purpose is coherentheadandgazedirection toward existingportal andits target.",
+    "motivo": "Orientar a cabeça para o portal e o aliado afetado, preservando a composição restante."
+  },
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-rosto-sem-gente.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "98cbca15e66901ba7653c29dd76c6440962f6cbd4185eb36719ad1886dbcefd4",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

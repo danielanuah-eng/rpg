@@ -1,0 +1,36 @@
+{
+  "id": "nv-quebra-escudos",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-8104e1bf-5cbb-4f48-a773-f2d25302b1f1.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nGOLPE DO QUEBRA-ESCUDOS, common Conflituo Findante, deal FOUR to ONE Ally or Mystica, no conjurador damage. Preserve reference bulky broad muscular brown male with blackdreadlocks tied high, thick shortblackbeard, rustredscarf/cloak, sleeveless cream tunic teal trousers, brownleatherbronze bracers/shinplates/boots and heavy blockyhammer. NEW sideways airborne drop from low quarryledge: knees bentbehind, TWO hands grip hammerhaft as ONE hammerhead strikes DOWNLEFT toward ONE opposing bluish lizard warrior's roundshield. Nose, eyebrows, pupils WHOLEFACE angled DOWNLEFT directly along hammerstrike toward lizard. Solid rustRED compressed hammer-shaped magic follows the SAME straight downleft direction from hammerface to target, no curvedbeam, NOT openhandcast whilehammerelsewhere. ONEshield splits at non-gory contact; damage not automatically destroy target. Coolgray battleground in giant abandoned quarryforge with one brokenwheel, distant scaffolds, cloudedwhite middaylight. Camera from behind target's shoulder lowerleft showing caster in upperright, avoid repeated frontal spreadlegs referencepose. Surface smooth painted broadstoneplanes, not grittyscratchy landscape. Gloves naturalfivefingers and twocontinuousarms.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/quebra-escudos.png",
+  "textoRegraLido": "Cause 4 de dano a um Aliado ou Mística.",
+  "valoresLidos": [
+    "conflituo"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/quebra-escudos.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Pedreira de guerra com andaimes e antiga forja ao fundo",
+  "momentoDoDia": "Meio-dia",
+  "clima": "Nuvens claras",
+  "escala": "Impacto próximo sobre o escudo de um único guerreiro reptiliano",
+  "avaliacaoVisual": "Nova queda em salto; duas mãos seguram o martelo, rosto e olhos acompanham o impacto abaixo à esquerda. Escudo se parte sem ferimento gráfico, magia vermelho-ferrugem concentrada no golpe.",
+  "decisoes": [
+    "Conflituo Findante causa quatro a um Aliado ou Mística; não atingir Conjurador nem garantir destruição do alvo.",
+    "Arma, olhar e direção do efeito coerentes, sem raio curvado para corrigir uma mira errada."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}
