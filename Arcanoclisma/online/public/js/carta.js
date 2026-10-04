@@ -54,7 +54,7 @@ export function modeloConjurador(conjId) {
   const c = conj(conjId);
   return {
     id: conjId, nome: c.nome, tipo: 'conjurador', valores: c.valores.map((x) => VALOR[x] ?? x), comprometimento: c.comprometimento,
-    texto: c.habilidade || textoPoder(c.poder), vida: c.vida, ...(DADOS.artesFinais?.['conjurador-' + conjId] && !(EDICOES_ARTE.conjuradores?.[conjId])
+    texto: c.habilidade || textoPoder(c.poder), vida: c.vida, compraFinal: c.compraFinal, ...(DADOS.artesFinais?.['conjurador-' + conjId] && !(EDICOES_ARTE.conjuradores?.[conjId])
       ? { arte: `/arte/finais/${DADOS.artesFinais['conjurador-' + conjId]}.webp`, arteModo: 'cena' }
       : { arte: arteConj(conjId), arteModo: 'recorte', ...cenaDe(conjId, c.valores) }), cosmetico: { raridade: EDICOES_RARIDADE.conjuradores?.[conjId] ?? null },
   };
@@ -129,8 +129,21 @@ export function desenharCarta(model, { hidden = false, opponent = false, readabl
   const detail = el('div', model.tipo === 'conjurador' ? 'subtype-line conjurador-detail' : 'subtype-line', [...new Set(subtypes)].join(' · '));
   front.append(el('div', 'type-line', typeText), detail, el('div', 'rules', model.texto), el('div', 'flavour', ''));
   if (n.dataset.rarity !== 'nenhuma') front.append(img(`${K}vetores/raridade-${n.dataset.rarity}.svg`, 'rarity', `Raridade: ${n.dataset.rarity}`));
-  const fields = model.categoriaItem === 'armadura' ? [['defesa', 'defesa'], ['vidaDesgaste', 'desgaste']] : [['ataque', 'ataque'], ['vida', 'vida']];
-  if (fields.some(([key]) => model[key] != null)) { const stats = el('div', 'stats'); for (const [key, symbol] of fields) if (model[key] != null) { const stat = el('span', 'stat stat-' + key); stat.title = { ataque: 'Ataque', vida: 'Vida', defesa: 'Defesa', vidaDesgaste: 'Vida de desgaste' }[key]; stat.append(img(`${K}vetores/icone-${symbol}-v5.svg`, '', stat.title), el('span', '', model[key])); stats.append(stat); } front.append(stats); }
+  const fields = model.categoriaItem === 'armadura' ? [['defesa', 'defesa'], ['vidaDesgaste', 'desgaste']]
+    : model.tipo === 'conjurador' ? [['ataque', 'ataque'], ['vida', 'vida'], ['compraFinal', 'economia']]
+    : [['ataque', 'ataque'], ['vida', 'vida']];
+  if (fields.some(([key]) => model[key] != null)) {
+    const stats = el('div', 'stats');
+    for (const [key, symbol] of fields) if (model[key] != null) {
+      const stat = el('span', 'stat stat-' + key);
+      stat.title = key === 'compraFinal' ? `Economia: compra ${model[key]} carta${model[key] === 1 ? '' : 's'} no fim do turno.`
+        : { ataque: 'Ataque', vida: 'Vida', defesa: 'Defesa', vidaDesgaste: 'Vida de desgaste' }[key];
+      stat.setAttribute('aria-label', key === 'compraFinal' ? stat.title : `${stat.title}: ${model[key]}`);
+      stat.append(img(`${K}vetores/icone-${symbol}-${symbol === 'economia' ? 'v16' : 'v5'}.svg`, '', ''), el('span', '', model[key]));
+      stats.append(stat);
+    }
+    front.append(stats);
+  }
   if (['incomum', 'rara', 'lendaria', 'alternativa'].includes(n.dataset.finish)) { const foil = el('div', 'foil-texture'); foil.setAttribute('aria-hidden', 'true'); front.append(foil); const reflection = el('div', 'foil-reflection'); reflection.setAttribute('aria-hidden', 'true'); front.append(reflection); }
   n.append(front);
   return aplicarIdentidadeValor(n, model);

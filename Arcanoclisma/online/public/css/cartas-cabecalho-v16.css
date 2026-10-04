@@ -38,3 +38,11 @@
 .tcg-card:not(.is-hidden) .generated { top: 1.7%; }
 .tcg-card:not(.is-hidden) .degree { top: 17.5%; }
 /* Não reposicionar os versos nem os brilhos de raridade ou a carta inteira. */
+.tcg-card .stat.stat-compraFinal {
+  background: url('/kit/vetores/estatistica-economia-v16.svg') center / contain no-repeat;
+}
+.tcg-card .stat.stat-compraFinal > img {
+  left: 9%; top: 9%;
+  width: calc(var(--card-w) * .034);
+  height: calc(var(--card-w) * .034);
+}

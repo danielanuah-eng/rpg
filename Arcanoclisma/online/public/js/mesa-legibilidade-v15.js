@@ -11,7 +11,6 @@
   const tela = document.getElementById('tela');
   if (!tela) return;
   let agendado = false;
-  let ultimoPalco = null;
   let mundoAtual = null;
   const escalaObserver = new MutationObserver(agendar);
 
@@ -24,7 +23,7 @@
       frente.append(faixa);
     }
     const mesa = tela.querySelector('.mesa');
-    if (!mesa) { ultimoPalco = null; mundoAtual = null; escalaObserver.disconnect(); return; }
+    if (!mesa) { mundoAtual = null; escalaObserver.disconnect(); return; }
     const mundo = mesa.querySelector('.mesa-mundo');
     if (mundo && mundo !== mundoAtual) {
       escalaObserver.disconnect(); mundoAtual = mundo;

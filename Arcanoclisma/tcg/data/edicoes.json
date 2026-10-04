@@ -43,7 +43,7 @@
   }
  },
  "regras": {
-  "reporMaoNoInicio": true,
+  "reporMaoNoInicio": false,
   "conjuradorLevantaNoInicio": true,
   "conjuradorSoAtacaComArma": true
  },

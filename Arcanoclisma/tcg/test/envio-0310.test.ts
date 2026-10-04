@@ -154,3 +154,14 @@ test('Extra é consumível: usa uma vez, aplica o efeito e vai para o cemitério
   assert.ok(!z.itens.includes(extra));
   assert.ok(z.cemiterio.includes(extra));
 });
+
+test('decisão 19 (04/10): só se compra no Final, a Economia do Conjurador (2); o limite de mão continua no Início', () => {
+  const e = criar([], { ...novas, reporMaoNoInicio: false });
+  const j = e.ativo;
+  const antes = e.jogadores[j].mao.length;
+  passarAte(e, () => e.etapa === 'final');
+  assert.equal(e.jogadores[j].mao.length, antes + 2, 'compra a Economia no Final');
+  passarAte(e, () => e.ativo !== j && e.etapa === 'principal');
+  const k = e.ativo, mk = e.jogadores[k].mao.length;
+  assert.equal(mk, 5, 'o outro jogador não compra no Início dele');
+});

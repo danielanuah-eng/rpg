@@ -499,7 +499,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     const grau = m.grau.map((g) => cartaMesa(g, { largura: 50, oponente: !meu, verso: true })).join('');
     // zonas (04/10): o baralho é uma pilha de versos; cemitério, banimento e Arcano mostram a carta de cima
     const topoArte = (lista) => { const id = lista[lista.length - 1]; const d = id && inst(id) && inst(id).defId !== 'oculta' ? modeloCarta(inst(id).defId) : null; return d?.arte ? `style="--topo:url('${d.arte}')"` : ''; };
-    const zona = (k, lista, rot, icone, titulo) => `<button class="zona-pilha zp-${k} ${lista.length ? '' : 'vazia'}" data-zona="${k}" data-j="${j}" title="${titulo}: ${lista.length}">
+    const zona = (k, lista, rot, icone, titulo) => `<button class="zona-pilha zp-${k} ${lista.length ? '' : 'vazia'} ${meu && lista.some((id) => origemDaCarta(e, EU, id)) ? 'tem-jogavel' : ''}" data-zona="${k}" data-j="${j}" title="${titulo}: ${lista.length}">
         <span class="zp-carta" ${k === 'baralho' ? '' : topoArte(lista)}>${lista.length || k === 'baralho' ? '' : icone}</span><b>${lista.length}</b><small>${rot}</small></button>`;
     const pilhas = `<div class="pilhas-zona">
       ${zona('baralho', m.baralho, 'Baralho', '🂠', 'Baralho')}
@@ -598,12 +598,19 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   function maoHTML() {
     const m = z(EU);
     const descartando = e.pendencia?.tipo === 'descartar' && e.pendencia.jogador === EU;
-    return `<div class="mao">${m.mao.map((id) => {
+    // cartas jogáveis de fora da mão (habilidades de Ana e Mitonho, pedido do autor 04/10): ficam na faixa da mão com a zona marcada
+    const deFora = [...m.banimento, ...m.cemiterio].filter((id) => origemDaCarta(e, EU, id));
+    const foraHTML = deFora.map((id) => {
+      const brilho = !ui.modo && podeJogar(id) && tutDestaca(id) ? 'jogavel' : '';
+      const zona = m.banimento.includes(id) ? 'Banida' : 'Cemitério';
+      return `<div class="mao-slot fora-da-mao ${brilho}" title="${zona}: pode ser jogada agora pela habilidade do seu Conjurador">${cartaMesa(id, { largura: 104 })}<span class="tag-zona">${zona}</span></div>`;
+    }).join('');
+    return `<div class="mao">${foraHTML}${m.mao.map((id) => {
       const brilho = !ui.modo && (podeJogar(id) && tutDestaca(id) ? 'jogavel' : '');
       const sel = descartando && ui.selecionadas.has(id) ? 'marcada' : '';
       const alvo = ui.modo?.tipo === 'alvo' && ui.modo.ids.has(id) && tutAlvo(id) ? 'alvo-mao' : '';
       return `<div class="mao-slot ${brilho} ${sel} ${alvo}">${cartaMesa(id, { largura: 104 })}</div>`;
-    }).join('') || '<span class="peq mao-vazia">Sua mão está vazia.</span>'}</div>`;
+    }).join('') || (deFora.length ? '' : '<span class="peq mao-vazia">Sua mão está vazia.</span>')}</div>`;
   }
   function maoOpHTML() {
     const n = z(OP).mao.length;
@@ -830,7 +837,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     }
     f.classList.add('aguardando');
     await preparar('jogar', a.id);
-    if (z(EU).mao.includes(a.id)) return voltar(); // cancelou ou não pagou: volta para a mão
+    if (z(EU).mao.includes(a.id) || origemDaCarta(e, EU, a.id)) return voltar(); // cancelou ou não pagou: volta para a mão (ou a zona)
     // jogou: a carta vai do ponto onde foi solta até o lugar dela (campo, ou a pilha se for Temporária)
     const destino = $(`.mesa-conteudo .cm[data-id="${a.id}"]`, raiz) ?? $(`.mesa-direita .cm[data-id="${a.id}"]`, raiz);
     if (destino) {
@@ -847,6 +854,15 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     const alvo = ev.target;
     if (ev.target.closest('.mesa-menu-acao')) return;
     if (ui.menu && !alvo.closest('.cm')) fecharMenu();
+    // pilha e efeitos na lateral (pedido do autor, 04/10): clicar no item amplia a carta para ler o efeito; efeito sem carta abre o texto grande.
+    // Escolhendo alvo (ex.: Anular), o clique continua escolhendo o alvo.
+    const itemPilha = alvo.closest('.mesa-direita .pilha-item');
+    if (itemPilha && !alvo.closest('button') && ui.modo?.tipo !== 'alvo') {
+      const c = itemPilha.querySelector('.cm[data-id]');
+      if (c && inst(c.dataset.id) && inst(c.dataset.id).defId !== 'oculta') return verCarta(c.dataset.id);
+      const info = itemPilha.querySelector('.pilha-info');
+      if (info) { janela(`<h3>Na pilha</h3><div class="efeito-ampliado">${info.innerHTML}</div>`); return; }
+    }
     const b = alvo.closest('button, .cm, [data-topo]');
     if (!b) return;
     if (b.matches('[data-passar]')) { fecharMenu(); return enviar({ tipo: 'passar' }); }

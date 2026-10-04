@@ -59,10 +59,10 @@ Meta de ritmo: partidas de cerca de 20 turnos, com early, mid e late game bem de
 
 Cada jogador tem o seu turno. Etapas:
 
-1. **Início** — o **Conjurador levanta** (mesmo que tenha bloqueado no turno do oponente) e o jogador **repõe a mão**: compra até ficar com a **mão inicial do Conjurador** (5 nos 9 Conjuradores). Se tiver mais de 7 cartas (limite geral), descarta o excesso. Depois, gatilhos de início de turno.
+1. **Início** — o **Conjurador levanta** (mesmo que tenha bloqueado no turno do oponente) Não se compra no Início. Depois, gatilhos de início de turno.
 2. **Principal** — joga cartas, ataca, gera Arcano, põe carta no Grau.
 3. **Cataclisma** — ao fim desta fase, **todo o Arcano do jogador do turno some**.
-4. **Final** — **levanta tudo que está suspenso** (Aliados, Conjurador, Grau), vira o Grau para baixo, e as cartas da Zona de Contador Arcano vão para o fundo do baralho. (A compra do Final foi trocada pela reposição da mão no Início, pedido do autor em 03/10.)
+4. **Final** — **levanta tudo que está suspenso** (Aliados, Conjurador, Grau), vira o Grau para baixo, e as cartas da Zona de Contador Arcano vão para o fundo do baralho; depois o jogador **compra a Economia do Conjurador** (2 cartas nos 9 Conjuradores). O limite de mão (7) continua sendo conferido no Início do turno. (Decisão 19, 04/10: só se compra no Final.)
 
 **Relógio de impasse**: no Final, se o jogador do turno passou o turno inteiro **sem jogar carta, ativar efeito ou atacar**, ele marca 1 turno parado; qualquer ação zera a contagem. Com **5 turnos parados seguidos**, ele perde.
 
@@ -133,7 +133,7 @@ A lista de cartas do padrão, com custo, Grau e texto, está em [CARTAS-PADRAO.m
 
 ## 9. Conjurador
 
-Define: Valores permitidos no baralho, habilidade exclusiva, **Vida** (padrão: **20**, decisão do autor), **mão inicial** (também é até quanto a mão é reposta no Início), **dano básico** (agora **0**: o ataque vem das armas) e **custo de ataque** (padrão: 0). Suspende-se para ativar habilidades, atacar e bloquear.
+Define: Valores permitidos no baralho, habilidade exclusiva, **Vida** (padrão: **20**, decisão do autor), **mão inicial**, **Economia** (quantas cartas compra no Final do próprio turno; 2 nos 9 Conjuradores; aparece na carta ao lado da Vida), **dano básico** (agora **0**: o ataque vem das armas) e **custo de ataque** (padrão: 0). Suspende-se para ativar habilidades, atacar e bloquear.
 
 ### 9.1 Os 9 Conjuradores iniciais (rodada 7)
 Cada Conjurador combina **2 Valores** (o baralho só leva cartas desses Valores ou sem Valor) e tem uma **habilidade própria** ligada aos Valores ou a um tipo de carta. Cada Valor aparece em exatamente 2 Conjuradores. Vida 20, mão inicial 5 (repõe até 5 no Início), dano básico 0, ataque grátis. Itens padrão de teste: Cajado de aprendiz, Gibão de couro e Poção de cura.
@@ -208,6 +208,7 @@ Fora desta fase: equipamentos, Extras, tokens, texto de efeitos em linguagem nat
 16. **Armadura por escolha (03/10, site)**: quando o Conjurador bloqueia, o dono **escolhe** se usa a Armadura naquele bloqueio; **nenhuma Armadura protege mais de um ataque por turno** (o limite volta no Início de cada turno). Sem escolha explícita (bot), ela é usada.
 17. **Valores das cartas (03/10, noite, site)**: não existe carta neutra; toda carta pertence a um Valor, que é a cor da bolinha do custo. Normalmente 1 Valor; 1 a cada 10 cartas tem 2 (o par de um Conjurador); 1 a cada 50 tem 3 (e assim, multiplicando por 5, até 9). Só itens podem ser genéricos (cinza), e há itens exclusivos. As cartas de um Conjurador são só dos Valores dele, salvo regra escrita. A Mina Funda virou 9 minas, uma por Valor. Sem raridade por enquanto (o autor define no Editor). Aplicado na coleção do site (`online/valores.ts`); as simulações não mudaram.
 18. **Itens v2 (03/10, noite)**: o Canal pode ser **Arma** (dá Ataque ao Conjurador), **Foco Arcano** (o próximo dano ou cura de uma Temporária sua no turno fica maior) ou **Transcritor** (mexe no baralho e na mão: olhar o topo, comprar). Todo uso de item suspende o Conjurador (que precisa estar de pé) e tem um custo: pagar Arcano, descartar cartas da mão ou o Conjurador tomar dano; há itens melhores no início, no meio e no fim de jogo. **Extras de competência** só servem ao Comprometimento certo (ex.: Ovo de Wyvern para Invocador invoca uma ficha Wyvern Filhote 2/2; Luvas de Força para Brigão dão +2 de Ataque no turno pagando 2 de dano, sem suspender, para ele ainda poder atacar). O Canal não se consome; o Extra é de uso único. Ver `tcg/test/itens-v2.test.ts`.
+19. **Compra só no Final (04/10)**: o autor pediu que os Conjuradores comprem apenas no Final do próprio turno, não antes da fase Principal. Volta a valer a **Economia** do Conjurador (campo `compraFinal`, hoje 2 para os 9): no Final, ele compra esse número de cartas. A regra da decisão 15 ("repor a mão no Início") foi desligada (`reporMaoNoInicio: false` em `tcg/data/edicoes.json`). A Economia aparece na carta do Conjurador ao lado da Vida (template do GPT).
 
 **Ainda abertas:**
 - Cada carta do Grau gera 1 Arcano na fase 1. Recomendo manter.

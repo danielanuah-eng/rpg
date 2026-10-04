@@ -252,3 +252,19 @@ body.tela-cheia .mesa-direita { top: 0; height: 100dvh; }
 .mesa-mundo .fileira-fundo { grid-template-columns: 92px minmax(0, 1fr) 140px minmax(0, 1fr) 160px; }
 .zona-pilha.zp-baralho .zp-carta { width: 72px; height: 100px; }
 .zona-pilha small { white-space: nowrap; }
+
+/* pilha e efeitos: clicar amplia (js/mesa.js, itemPilha) */
+.mesa-direita .pilha-item { cursor: zoom-in; border-radius: 10px; transition: background .2s ease; }
+.mesa-direita .pilha-item:hover { background: #ffffff0d; }
+.mesa-direita .pilha-item .pilha-rot::after { content: ' · 🔍 clique para ampliar'; font-weight: 600; opacity: .55; text-transform: none; letter-spacing: 0; }
+.efeito-ampliado { font-size: 20px; line-height: 1.45; }
+.efeito-ampliado .pilha-rot { font-size: 14px; opacity: .8; }
+.efeito-ampliado .pilha-rot::after { content: none; }
+.efeito-ampliado b { color: #f0dca0; }
+
+/* cartas jogáveis de fora da mão (banidas pela Ana, anular do cemitério pelo Mitonho) */
+.mao-slot.fora-da-mao { position: relative; }
+.mao-slot.fora-da-mao .tag-zona { position: absolute; left: 50%; top: -2px; translate: -50% 0; z-index: 4; padding: 2px 9px; border-radius: 999px;
+  background: #3a1f5c; border: 1px solid #c79bff; color: #f1e6ff; font: 800 11px var(--corpo); letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; box-shadow: 0 2px 6px #000a; }
+.mao-slot.fora-da-mao .cm { filter: drop-shadow(0 0 10px #b78cff88); }
+.zona-pilha.tem-jogavel .zp-carta { outline: 2px solid #c79bff; outline-offset: 2px; animation: alvo 1.2s ease-in-out infinite; }
