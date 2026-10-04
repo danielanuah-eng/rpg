@@ -1,0 +1,36 @@
+{
+  "id": "base-dano-conjurador-c2",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-7e032b37-bb07-4d1a-980e-b47b27776fba.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nID base-dano-conjurador-c2; rarity comum, arteAlternativa false; Values conflituo. Actual rules: Causa 2 de dano ao Conjurador inimigo.\nImage1 identity: SAME squat round blue glass bottle with short narrowed neck, thick ochre cork, worn bronze collar and side latch, rust cloth/leather tie spiraling around neck and loose side loop, tiny amber sound-curl held inside. NEW unified scene on a lively but mostly empty low terracotta rooftop garden above a canal in overcast afternoon: an adult light olive-skinned woman with short straight black bob and long narrow face stands sideways, simple dusty coral blouse and navy trousers; one hand holds the bottle close, her other hand clearly lifts the cork. Her lips part in a short purposeful exhale and ONE broad translucent rust-amber sound ripple streams from the bottle toward a different distant conjurador in an unlit window across the canal, making that conjurador flinch and grip the window ledge. The bottle is prominent, characters secondary with clear proportions. Current rule only deal2damage to enemyConjurador, no stored-card/playback mechanic added. Small plants in plain terracotta pots, modest awnings, pale green-blue canal, laundry fabric moving gently, no magical city catastrophe or ruin template. No visible words or musical notation, no gore, not glass exploding. Smooth contours and shading, local amber in bottle and ripple, clouded sky quiet, no blazing gold.\nReference2 ONLY approved smooth illustration finish. Full opaque vertical63:88,1260x1760 preferred if supported; no frame, UI, lettering or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/garrafa-de-voz.png",
+  "textoRegraLido": "Causa 2 de dano ao Conjurador inimigo.",
+  "valoresLidos": [
+    "conflituo"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/garrafa-de-voz.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Objeto aprovado preservado e integrado à nova cena.",
+    "Ação de dano corresponde ao texto atual, sem poderes extras."
+  ],
+  "avaliacaoVisual": "Garrafa azul com cortiça, aro e laço ferrugem reconhecíveis. Duas mãos da conjuradora abertas coerentemente; onda de voz atinge rival na janela do canal. Cena urbana de tarde com brilho restrito ao feitiço.",
+  "ambiente": "Telhado-jardim sobre canal",
+  "momentoDoDia": "Tarde",
+  "clima": "Nublado luminoso",
+  "escala": "Conjuradora e garrafa próximos; rival do outro lado do canal",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

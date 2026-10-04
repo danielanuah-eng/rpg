@@ -31,3 +31,9 @@ Campos da entrega: `ambiente`, `momentoDoDia`, `clima`, `escala`, `eventoId` (ou
 ## Acabamento de cenários — preferência confirmada em 03/10/2026
 
 O autor preferiu a V2 das duas cenas de Philgard: cenários mais lisos, menos rugosos e menos extremamente expressivos. Priorizar formas amplas, transições suaves e textura discreta no terreno, rochas, troncos e vegetação; reduzir granulação, rachaduras exageradas, pinceladas agressivas e contraste excessivo nos pequenos detalhes. Manter profundidade, materiais legíveis e detalhes dos personagens, com o cenário apoiando o assunto principal. As V2 de Philgard são referência local desse tratamento. Não refazer automaticamente artes já aprovadas.
+
+## Variedade de ambientes — exemplos do autor, 04/10/2026
+
+Alternar interiores de escola de magia; dimensões próprias dos Valores com criaturas relacionadas ao Valor; calabouços; vales com monstros ou dragões; vilas; oficinas; acampamentos de monstros; reuniões de magos; mago conjurando no castelo. São possibilidades conforme a identidade e função da carta, não uma lista para inserir em todas elas. Variar atividades, escala, composição, horário e clima; não transformar todos os ambientes em campos de batalha, torres suspensas ou ruínas. Criaturas e figuras de apoio podem enriquecer a cena, sem inventar habilidades ou novas cartas jogáveis. Preservar o assunto principal, a luz contida e o acabamento liso.
+
+Quando houver mira ou magia dirigida, olhar, gesto/objeto, direção da emissão e alvo precisam estar coerentes. Um feixe reto continua o eixo da luneta/artefato; não curvar para compensar uma pose desalinhada. Conferir isso antes da entrega.

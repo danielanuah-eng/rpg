@@ -1,0 +1,66 @@
+{
+  "id": "base-dano-conjurador-c2",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-7e032b37-bb07-4d1a-980e-b47b27776fba.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-dano-conjurador-c2.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/garrafa-de-voz.png",
+  "textoRegraLido": "Causa 2 de dano ao Conjurador inimigo.",
+  "valoresLidos": [
+    "conflituo"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/garrafa-de-voz.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Objeto aprovado preservado e integrado à nova cena.",
+    "Ação de dano corresponde ao texto atual, sem poderes extras."
+  ],
+  "avaliacaoVisual": "Garrafa azul com cortiça, aro e laço ferrugem reconhecíveis. Duas mãos da conjuradora abertas coerentemente; onda de voz atinge rival na janela do canal. Cena urbana de tarde com brilho restrito ao feitiço.",
+  "ambiente": "Telhado-jardim sobre canal",
+  "momentoDoDia": "Tarde",
+  "clima": "Nublado luminoso",
+  "escala": "Conjuradora e garrafa próximos; rival do outro lado do canal",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c2.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "a7604bd7d033a7907c4f65f3de12ceab6e963b636cacad80164ca47629969507",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

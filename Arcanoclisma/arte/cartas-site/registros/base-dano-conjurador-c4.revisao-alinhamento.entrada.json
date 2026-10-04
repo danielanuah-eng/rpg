@@ -1,0 +1,43 @@
+{
+  "id": "base-dano-conjurador-c4",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-26446404-843a-4947-888c-877343f65640.png",
+  "prompt": "Use case: precise-object-edit. Edit THIS existing finished Luneta do Fim TCG illustration. Preserve the same bald bearded man, same outfit, telescope identity and blue lens, mountain observatory, dawn colors, snow, far rival, overall framing, polish and smooth finish. Correct ONLY the aiming geometry and the magic trajectory. The man must be in a clear side profile looking directly THROUGH the rear eyepiece AT the far rival. His eye, rear eyepiece, long telescope barrel axis, front objective center and rival's impact point must be collinear in the depicted projection. Reorient his head/hands and tilt the telescope just enough to aim genuinely across the canyon; move the distant rival slightly on the stair if needed for alignment. Show two believable clear hands correctly supporting eyepiece/barrel. Do not show him facing the viewer while telescope aims elsewhere. Replace the winding red ray with ONE perfectly straight thin red-orange magical ray that is an exact unbent continuation of the telescope's long axis, from center of blue front lens directly to rival. No bent, curved, zigzag or looping beam and no split second trajectory. A small bright contact mark on the far rival, no gore. Keep soft cyan wisps only around the lens; they must not redirect the main straight ray. Lens should appear at a believable oblique elliptical angle consistent with aiming across the scene, NOT facing straight at the viewer. Keep whole telescope inside frame, its stitched brown leather, bronze segments/straps and blue spectral lens. Opaque full scene, vertical63:88. No labels, text, arrows, diagrams, UI or border. Maintain current uncommon cosmetic finish, no new abilities.\n\nRefinamento da direção do raio:\nPrecise geometric correction ONLY to this existing finished illustration. Keep the man in strict side profile, same face, clothing, hands, spyglass, lens, sky, snowy observatory and mountains. The current ray is straight but tilted too steeply relative to the spyglass. Fix that remaining aiming mismatch: make the red ray an EXACT straight extension of the centerline of the long telescope barrel. In the image plane the line begins at the man's eye/rear eyepiece around x27%, y28.3%, passes through the objective center around x64%, y34.5%, and must continue with that SAME slope to a target around x95%, y39.7%. Move the distant rival and their small stone landing UPWARD about 50 pixels if needed so the torso impact lies on that continuation, not below it. The beam must continue the barrel's gentle downward incline, not bend abruptly down as it exits the lens. One thin continuous straight red-orange line from lens to rival; small contained impact. Maintain eye looking through eyepiece and both hands, objective lens narrow elliptical from side angle, and no new elements. Do not draw guide lines, labels, numbers, charts, UI or text. Opaque vertical63:88. Preserve every unrelated part, palette, polished illustrated finish and composition.",
+  "promptsEdicao": [
+    "Use case: precise-object-edit. Edit THIS existing finished Luneta do Fim TCG illustration. Preserve the same bald bearded man, same outfit, telescope identity and blue lens, mountain observatory, dawn colors, snow, far rival, overall framing, polish and smooth finish. Correct ONLY the aiming geometry and the magic trajectory. The man must be in a clear side profile looking directly THROUGH the rear eyepiece AT the far rival. His eye, rear eyepiece, long telescope barrel axis, front objective center and rival's impact point must be collinear in the depicted projection. Reorient his head/hands and tilt the telescope just enough to aim genuinely across the canyon; move the distant rival slightly on the stair if needed for alignment. Show two believable clear hands correctly supporting eyepiece/barrel. Do not show him facing the viewer while telescope aims elsewhere. Replace the winding red ray with ONE perfectly straight thin red-orange magical ray that is an exact unbent continuation of the telescope's long axis, from center of blue front lens directly to rival. No bent, curved, zigzag or looping beam and no split second trajectory. A small bright contact mark on the far rival, no gore. Keep soft cyan wisps only around the lens; they must not redirect the main straight ray. Lens should appear at a believable oblique elliptical angle consistent with aiming across the scene, NOT facing straight at the viewer. Keep whole telescope inside frame, its stitched brown leather, bronze segments/straps and blue spectral lens. Opaque full scene, vertical63:88. No labels, text, arrows, diagrams, UI or border. Maintain current uncommon cosmetic finish, no new abilities.",
+    "Precise geometric correction ONLY to this existing finished illustration. Keep the man in strict side profile, same face, clothing, hands, spyglass, lens, sky, snowy observatory and mountains. The current ray is straight but tilted too steeply relative to the spyglass. Fix that remaining aiming mismatch: make the red ray an EXACT straight extension of the centerline of the long telescope barrel. In the image plane the line begins at the man's eye/rear eyepiece around x27%, y28.3%, passes through the objective center around x64%, y34.5%, and must continue with that SAME slope to a target around x95%, y39.7%. Move the distant rival and their small stone landing UPWARD about 50 pixels if needed so the torso impact lies on that continuation, not below it. The beam must continue the barrel's gentle downward incline, not bend abruptly down as it exits the lens. One thin continuous straight red-orange line from lens to rival; small contained impact. Maintain eye looking through eyepiece and both hands, objective lens narrow elliptical from side angle, and no new elements. Do not draw guide lines, labels, numbers, charts, UI or text. Opaque vertical63:88. Preserve every unrelated part, palette, polished illustrated finish and composition."
+  ],
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/cartas-site/base-dano-conjurador-c4.png",
+  "textoRegraLido": "Causa 4 de dano ao Conjurador inimigo.",
+  "valoresLidos": [
+    "conflituo"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c4.png",
+      "papel": "Alvo da edição, versão anterior preservada"
+    },
+    {
+      "arquivo": "Arcanoclisma/arte/cartas-site/variantes/base-dano-conjurador-c4-alinhamento-intermediario.png",
+      "papel": "Primeira revisão de perfil, refinada no alinhamento"
+    }
+  ],
+  "revisaoDe": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c4.png",
+  "motivoAutor": "Personagem não parecia olhar para o alvo e o raio dobrava.",
+  "decisoes": [
+    "Perfil da cabeça e apoio da luneta corrigidos; feixe único reto até o rival.",
+    "Observatório, roupas, identidade, cenário e regra preservados.",
+    "Versão anterior e revisão intermediária preservadas; apenas revisão final entra no mapa corrente."
+  ],
+  "avaliacaoVisual": "Cabeça em perfil com olho no visor, lente oblíqua, apoio com duas mãos. Feixe reto com inclinação mais próxima do cano e rival reposicionado; não há curva/zigue-zague.",
+  "ambiente": "Observatório de montanha e vale nevado",
+  "momentoDoDia": "Amanhecer rosado",
+  "clima": "Frio claro",
+  "escala": "Portador próximo, rival distante",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

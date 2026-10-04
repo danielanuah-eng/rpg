@@ -1,0 +1,37 @@
+{
+  "id": "base-curar-c3",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-6ba12dff-e690-45be-85fc-193396f46a14.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nID base-curar-c3; rarity comum, arteAlternativa false; Values primitivum. Actual rules: Cure 11 de dano de um alvo e compre 1.\nImage1 identity: SAME simple orange terracotta stemmed goblet with broad cup, low circular foot, horizontal hand-made ridges, a minor crack near rim and carved small curved spiral relief on its side, containing blue liquid wisps. Keep ordinary clay silhouette and marks; no golden chalice/gem decoration. NEW intimate scene in a MONSTER CAMP in a mossy deep valley of Primitivum at cloudy midmorning: the goblet large in foreground in the hands of a stocky brown-skinned travelling healer with tightly curled dark hair, round spectacles and simple teal vest, seated sideways on a plain stump. Two clear hands steady the cup as gentle blue-green restorative drops settle onto the bandaged shoulder of a tired young horned stone-furred pack creature beside him; a relieved friendly expression and relaxed weight, no blood. Behind them a few monsters of differing silhouettes quietly mend a tent or rest beside large rounded moss-stone roots, not hostile army. A single pale leaf-shaped vision of a path rises subtly from the cup toward the healer's attentive gaze to suggest one gained card, NOT literal printed cards or multiple future visions. Current rule only cure11damage from one target and draw1; no terrain transformation, mass healing or summoned monster ability. Coherent quiet camp scale, cloth shade, subdued pale green/blue vapor with warm clay, smooth rounded valley and big leaf shadows, no same medieval town/portal/inverted tower. Complete integrated artwork with focus on goblet and gesture.\nReference2 ONLY approved smooth illustration finish. Full opaque vertical63:88,1260x1760 preferred if supported; no frame, UI, lettering or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/calice-do-primeiro-barro.png",
+  "textoRegraLido": "Cure 11 de dano de um alvo e compre 1.",
+  "valoresLidos": [
+    "primitivum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/calice-do-primeiro-barro.png",
+      "papel": "Identidade do objeto aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Variação de ambiente conforme exemplos mais recentes do autor.",
+    "Figuras e criaturas de apoio são contexto visual, sem novas cartas ou habilidades.",
+    "Cura e recurso/compra seguem somente o texto atual."
+  ],
+  "avaliacaoVisual": "Cálice de barro com relevo e conteúdo azul reconhecível; duas mãos do curandeiro e gotas curativas sobre criatura de chifres. Uma folha de visão discreta, outras criaturas ocupadas no acampamento.",
+  "ambiente": "Acampamento de monstros em vale de Primitivum",
+  "momentoDoDia": "Manhã",
+  "clima": "Dia luminoso com nuvens",
+  "escala": "Cálice/curandeiro e criatura dominantes, barracas e monstros recuados",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

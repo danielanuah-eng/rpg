@@ -1,0 +1,38 @@
+{
+  "id": "item-extra-relogio",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-ae0a4545-1b5c-470e-a0e6-0e5e0625e43a.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nID item-extra-relogio; rarity comum, arteAlternativa false; Values eternyr, cognitium, alvorum. Actual rules: Extra. Uso único. Use: compre 1 carta e ganhe 1 de Arcano.\nImage1 identity: SAME open bronze pocket-watch with hinged lid, sun medallion on the dark blue inside of the lid, thick bronze linked chain, dark blue face with ochre horizon and half-sun, one long bronze pointer and tiny star markers. No ordinary Roman-numeral replacement, no digital display. NEW quiet unified scene in a reed-marsh ferryman's hut in early sunset: an elderly light-brown traveler's single clear hand holds the open watch close to a small reading desk, chain hangs naturally; one book lying flat on the desk opens a SINGLE blank leaf in a soft indigo wisp, and ONE modest blue-nocturne arcane sphere with a fine white streak gathers next to the palm. These are only visual metaphors for actual current one-use rule draw1card and gain1Arcano. No freezing people/time, foreseeing future, storms or extra powers. Horizontal window shows dark reeds, a small moored ferry and quiet cool water, soft peach sunset beyond; muted amber light confined to watch and one window edge, smooth compact shapes and clean dark/light masses, no blazing gold room. Item fills middle foreground, gentle diagonals, no literal cards/UI/writing/numbers.\nReference2 ONLY approved smooth illustration finish, never copy its figures. Full opaque vertical63:88,1260x1760 preferred if supported; no frame, text, UI or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/relogio-de-bolso-atrasado.png",
+  "textoRegraLido": "Extra. Uso único. Use: compre 1 carta e ganhe 1 de Arcano.",
+  "valoresLidos": [
+    "eternyr",
+    "cognitium",
+    "alvorum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/relogio-de-bolso-atrasado.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Referência de identidade preservada em cena nova.",
+    "Dados atuais prevalecem sobre Valores antigos do briefing; nenhuma habilidade inventada."
+  ],
+  "avaliacaoVisual": "Relógio aberto com céu azul, horizonte e sol no mostrador, tampa com sol e corrente preservados. Uma mão, página aberta e uma única esfera de Arcano no abrigo ao pôr do sol.",
+  "ambiente": "Abrigo de barqueiro em pântano de juncos",
+  "momentoDoDia": "Pôr do sol",
+  "clima": "Calmo",
+  "escala": "Relógio próximo; barco e margem ao fundo",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

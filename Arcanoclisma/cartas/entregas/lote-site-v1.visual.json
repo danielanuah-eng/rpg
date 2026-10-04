@@ -3,16 +3,8 @@
   "pedidoVersao": 2,
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 104,
+  "concluidas": 112,
   "pendentes": [
-    "item-extra-relogio",
-    "base-aliado-c4-equilibrado-grau5",
-    "base-dano-c4-repentina",
-    "base-dano-conjurador-c5",
-    "base-dano-conjurador-c2",
-    "base-dano-conjurador-c4",
-    "base-curar-c1",
-    "base-curar-c3",
     "base-curar-c8",
     "eternyr-comprar-c3-repentina",
     "eternyr-dano-aliado-c6",
@@ -943,6 +935,70 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-lanterna.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-lanterna.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-extra-relogio",
+      "nome": "Relógio de Bolso Atrasado",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-relogio.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-relogio.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c4-equilibrado-grau5",
+      "nome": "Arquimaga da Torre Inversa",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c4-equilibrado-grau5.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c4-equilibrado-grau5.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-dano-c4-repentina",
+      "nome": "Eco de Magia Morta",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c4-repentina.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-c4-repentina.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-dano-conjurador-c5",
+      "nome": "Estilhaço de Disrupto",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c5.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-conjurador-c5.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-dano-conjurador-c2",
+      "nome": "Garrafa de Voz",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c2.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-conjurador-c2.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-dano-conjurador-c4",
+      "nome": "Luneta do Fim",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c4-a745c23c.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-conjurador-c4.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-curar-c1",
+      "nome": "Lenço das Lágrimas",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-curar-c1.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-curar-c1.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-curar-c3",
+      "nome": "Cálice do Primeiro Barro",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-curar-c3.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-curar-c3.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
     }
   ],

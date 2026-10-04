@@ -1,0 +1,67 @@
+{
+  "id": "base-curar-c1",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-cf4b7023-408a-49cb-9347-b5dfbb9ef79e.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-curar-c1.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/lenco-das-lagrimas.png",
+  "textoRegraLido": "Cure 5 de dano de um alvo e ganhe 1 Arcano.",
+  "valoresLidos": [
+    "primitivum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/lenco-das-lagrimas.png",
+      "papel": "Identidade do objeto aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Variação de ambiente conforme exemplos mais recentes do autor.",
+    "Figuras e criaturas de apoio são contexto visual, sem novas cartas ou habilidades.",
+    "Cura e recurso/compra seguem somente o texto atual."
+  ],
+  "avaliacaoVisual": "Lenço marfim com borda azul em evidência no antebraço do aluno; cura localizada e uma esfera de Arcano. Enfermaria noturna de escola com pessoas trabalhando e criatura vegetal pequena na parede.",
+  "ambiente": "Enfermaria de escola de magia",
+  "momentoDoDia": "Noite",
+  "clima": "Interior abrigado",
+  "escala": "Healer e aluno próximos, alunos e criatura do Valor ao fundo",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-curar-c1.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "69fd5c7d04f14d53fdfa1d7d7a03cf107a10e88424a74ccee03f3db6431e0d5b",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

@@ -1,0 +1,36 @@
+{
+  "id": "base-aliado-c4-equilibrado-grau5",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-5b689348-7036-411b-a0c2-3c03a11f59db.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nID base-aliado-c4-equilibrado-grau5; rarity rara, arteAlternativa false; Values primitivum. Actual rules: No additional skill text documented\nImage1 locks Archmage identity: mature dark bronze-skinned woman with narrow regal face and golden-hazel eyes, very long voluminous curly WHITE hair, cream tunic and long open teal/navy coat with rust-red lining, bronze trim, corseted dark midsection and belts, strapped dark boots, leather scroll/book satchel on hip. Preserve all these recognizable essentials. NEW pose rather than copied frontal hand gesture: she is sideways on a wide moss-edged stair of an INVERTED watchtower whose main base descends from the underside of a broad forest canopy terrace, torso twisting left and both knees slightly bent, left hand held forward at chest height and right hand lower beside hip, palms anatomically readable; proud attentive expression looking down toward approach. Two small allies shelter further back on the stair at a believable distance. Current values ONLY primitivum, statistics are cost4/grau5/atk7/vida10 and no printed skill text, so do not invent protection/immunity or attack spell; hands carry only modest pale moss-silver readiness wisps, not giant laser/fire aura. Tower reverse geometry visibly suggested by tapered stone above and a reversed hanging arch below terrace, but concise calm background with dark forest mass, simple root bridges and overcast late afternoon mist. Camera low angled from side to vary pose. Rarity rara cosmetic: restrained silver/violet material highlights on coat clasps and localized magic only, no broad rainbow/gold blaze. Smooth illustrated scenery, confident selective comic outlines, not photo, rough watercolor, impasto or generic anime.\nReference2 ONLY approved smooth illustration finish, never copy its figures. Full opaque vertical63:88,1260x1760 preferred if supported; no frame, text, UI or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/arquimaga-da-torre-inversa.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "primitivum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/arquimaga-da-torre-inversa.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Referência de identidade preservada em cena nova.",
+    "Dados atuais prevalecem sobre Valores antigos do briefing; nenhuma habilidade inventada."
+  ],
+  "avaliacaoVisual": "Arquimaga mantém pele bronze, cabelo branco encaracolado, casaco azul/creme/vermelho e bolsa de pergaminhos. Nova postura em escada com aliados atrás e torre invertida na floresta; ambas as mãos visíveis. Olhar lateral à direita no resultado; brilho prata-violeta localizado.",
+  "ambiente": "Escadas e pontes de torre invertida sobre floresta",
+  "momentoDoDia": "Fim de tarde",
+  "clima": "Neblina suave",
+  "escala": "Arquimaga dominante e arquitetura suspensa recuada",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

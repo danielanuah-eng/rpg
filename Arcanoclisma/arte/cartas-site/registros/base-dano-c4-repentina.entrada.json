@@ -1,0 +1,36 @@
+{
+  "id": "base-dano-c4-repentina",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-6707ea0f-8f26-4dc5-b490-2efcccb25d69.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nID base-dano-c4-repentina; rarity incomum, arteAlternativa false; Values conflituo. Actual rules: Causa 4 de dano a um alvo.\nImage1 identifies Eco de Magia Morta, a NONHUMAN four-legged broken wolf-like echo: ivory angular mask/skeletal shell over midnight-blue fissured interior, very long fragmented tail with bronze-brown floating chips, pale glow in gaps, clawed limbs and narrow open canine jaw. Preserve species and anatomy, do not invent a humanoid face, clothes or bones of a real corpse. NEW fleeting spell scene at an empty coastal fishing jetty during blue night: the echo crouches low across slick broad wooden boards in a sideways twisting arc, four claws visible and long tail whipping upwards, gaze fixed toward a distant cloaked rival. A single rust-red magical impact has just marked the wood near the rival's feet, with two fading broken echoes of the same trajectory behind the tail suggesting repetition, NOT additional solid creatures. Current rule only Repentina deal4damage to one target; no summoned permanent ally, resurrection or loop of repeated damage. Clean dark board shapes, a few empty fishing baskets and smooth wave silhouettes with moonlit cloud opening, calm blue setting offsets rust-red impact. Magic glow localized, cinematic expressive weight, no blood or graphic injury. Rarity incomum small silver-violet glints limited to fissures/materials; no blazing sea.\nReference2 ONLY approved smooth illustration finish. Full opaque vertical63:88,1260x1760 preferred if supported; no frame, UI, lettering or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/eco-de-magia-morta.png",
+  "textoRegraLido": "Causa 4 de dano a um alvo.",
+  "valoresLidos": [
+    "conflituo"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/eco-de-magia-morta.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Arte nova do feitiço em cenário integrado, sem converter referência em novo aliado persistente.",
+    "Dano conforme texto atual; nenhuma regra adicional atribuída."
+  ],
+  "avaliacaoVisual": "Eco mantém anatomia canina não humana e corpo fragmentado marfim/azul, com cauda girando e rastro de repetição. Impacto ferrugem discreto perto do rival em cais noturno, sem ferimento gráfico.",
+  "ambiente": "Cais de vila de pescadores",
+  "momentoDoDia": "Noite de lua",
+  "clima": "Mar calmo com nuvens",
+  "escala": "Eco próximo e rival ao fundo",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

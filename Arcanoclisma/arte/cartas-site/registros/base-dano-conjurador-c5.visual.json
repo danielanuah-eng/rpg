@@ -1,0 +1,66 @@
+{
+  "id": "base-dano-conjurador-c5",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-8bb0a19b-f9d9-4864-a5b6-3a79ea50489d.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-dano-conjurador-c5.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/estilhaco-de-disrupto.png",
+  "textoRegraLido": "Causa 4 de dano ao Conjurador inimigo.",
+  "valoresLidos": [
+    "conflituo"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/estilhaco-de-disrupto.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Arte nova do feitiço em cenário integrado, sem converter referência em novo aliado persistente.",
+    "Dano conforme texto atual; nenhuma regra adicional atribuída."
+  ],
+  "avaliacaoVisual": "Estilhaço mantém núcleo espiral azul, pedra ferrugem e fragmentos. Trajetória entre mão do conjurador e impacto no traje do rival dentro do moinho; personagem recua sem lesão gráfica.",
+  "ambiente": "Moinho de grãos sobre campos",
+  "momentoDoDia": "Manhã",
+  "clima": "Dia claro com nuvens",
+  "escala": "Projétil grande em primeiro plano e alvo recuado",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c5.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "94084d60f2cf64aba5035c76409de72afc160ed0331577f073bc119171ccc18e",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "incomum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

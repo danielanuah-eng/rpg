@@ -4093,9 +4093,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/relogio-de-bolso-atrasado.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Relógio de Bolso Atrasado: personagem/objeto do catálogo aprovado (relogio-de-bolso-atrasado). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Relógio de Bolso Atrasado sendo usado uma única vez (Extra consumível): livros se abrem sozinhos numa estante e as letras saltam no ar e Arcano bruto jorra e se acumula em esferas de luz na cor do Valor, num lugar coerente com o item.",
       "ambienteOriginal": "Ambiente do Valor Eternyr: o entretempo, vilas do mesmo dia, estações paradas e relógios gigantes. Magia na cor azul-noite com riscos brancos, em aura com falhas e rastros parados no ar. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Cognitium, Alvorum: detalhes discretos dessas cores podem aparecer.",
@@ -4110,7 +4110,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/relogio-de-bolso-atrasado.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 094 Relógio de Bolso Atrasado. Subject: Relógio de Bolso Atrasado: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: sabe sempre quanto falta para o pôr do sol.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-extra-relogio.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-relogio.visual.json"
     },
     {
       "id": "base-aliado-c4-equilibrado-grau5",
@@ -4126,9 +4128,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/arquimaga-da-torre-inversa.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Arquimaga da Torre Inversa: personagem/objeto do catálogo aprovado (arquimaga-da-torre-inversa). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Arquimaga da Torre Inversa em guarda firme, protegendo os aliados e segurando a linha.",
       "ambienteOriginal": "Ambiente do Valor Alvorum: faróis sem noite, auroras, campos dourados ao amanhecer e ao entardecer. Magia na cor dourado e preto, em aura dividida, com falhas entre a parte de luz e a de sombra. Dupla temperatura: a magia é quente, então o cenário puxa o frio. A carta também serve aos Valores Morbidyum, Eternyr, Primitivum, Dominum: detalhes discretos dessas cores podem aparecer.",
@@ -4152,7 +4154,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/base-aliado-c4-equilibrado-grau5.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c4-equilibrado-grau5.visual.json"
     },
     {
       "id": "base-dano-c4-repentina",
@@ -4168,9 +4172,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/eco-de-magia-morta.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Eco de Magia Morta: personagem/objeto do catálogo aprovado (eco-de-magia-morta). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Eco de Magia Morta como fonte ou forma do feitiço: o chão onde o inimigo estava ainda queima ou brilha, marcado pelo golpe que acabou de cair.",
       "ambienteOriginal": "Ambiente do Valor Conflitüo: campos de batalha sem trégua, arenas, trincheiras e forjas de guerra. Magia na cor vermelho-ferrugem, em construtos sólidos de luz: lâminas, escudos, estandartes. Dupla temperatura: a magia é quente, então o cenário puxa o frio. A carta também serve aos Valores Sublimeyn, Dominum, Cognitium, Eternyr: detalhes discretos dessas cores podem aparecer.",
@@ -4194,7 +4198,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/base-dano-c4-repentina.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-c4-repentina.visual.json"
     },
     {
       "id": "base-dano-conjurador-c5",
@@ -4208,9 +4214,9 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/estilhaco-de-disrupto.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Estilhaço de Disrupto: personagem/objeto do catálogo aprovado (estilhaco-de-disrupto). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Estilhaço de Disrupto como fonte ou forma do feitiço: a magia atinge o conjurador rival, ao longe com um impacto certeiro.",
       "ambienteOriginal": "Ambiente do Valor Conflitüo: campos de batalha sem trégua, arenas, trincheiras e forjas de guerra. Magia na cor vermelho-ferrugem, em construtos sólidos de luz: lâminas, escudos, estandartes. Dupla temperatura: a magia é quente, então o cenário puxa o frio. A carta também serve aos Valores Primitivum, Alvorum, Eternyr: detalhes discretos dessas cores podem aparecer.",
@@ -4225,7 +4231,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/estilhaco-de-disrupto.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 127 Estilhaço de Disrupto. Subject: Estilhaço de Disrupto: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: onde é jogado, tudo muda de forma por um instante.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c5.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-conjurador-c5.visual.json"
     },
     {
       "id": "base-dano-conjurador-c2",
@@ -4239,9 +4247,9 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/garrafa-de-voz.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Garrafa de Voz: personagem/objeto do catálogo aprovado (garrafa-de-voz). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Garrafa de Voz como fonte ou forma do feitiço: a magia estoura na guarda de o conjurador rival, ao longe, que quase cede.",
       "ambienteOriginal": "Ambiente do Valor Conflitüo: campos de batalha sem trégua, arenas, trincheiras e forjas de guerra. Magia na cor vermelho-ferrugem, em construtos sólidos de luz: lâminas, escudos, estandartes. Dupla temperatura: a magia é quente, então o cenário puxa o frio. A carta também serve aos Valores Primitivum, Alvorum, Eternyr: detalhes discretos dessas cores podem aparecer.",
@@ -4256,7 +4264,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/garrafa-de-voz.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 097 Garrafa de Voz. Subject: Garrafa de Voz: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: guarda uma frase dita dentro; toca quando aberta.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c2.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-conjurador-c2.visual.json"
     },
     {
       "id": "base-dano-conjurador-c4",
@@ -4270,9 +4280,9 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/luneta-do-fim.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Luneta do Fim: personagem/objeto do catálogo aprovado (luneta-do-fim). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Luneta do Fim como fonte ou forma do feitiço: quem conjura mira com calma e solta a magia, que ainda está a caminho do alvo.",
       "ambienteOriginal": "Ambiente do Valor Conflitüo: campos de batalha sem trégua, arenas, trincheiras e forjas de guerra. Magia na cor vermelho-ferrugem, em construtos sólidos de luz: lâminas, escudos, estandartes. Dupla temperatura: a magia é quente, então o cenário puxa o frio. A carta também serve aos Valores Primitivum, Alvorum, Eternyr: detalhes discretos dessas cores podem aparecer.",
@@ -4287,7 +4297,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/luneta-do-fim.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 124 Luneta do Fim. Subject: Luneta do Fim: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: mostra onde e como alguém vai morrer, se nada mudar.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c4-a745c23c.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-conjurador-c4.visual.json"
     },
     {
       "id": "base-curar-c1",
@@ -4301,9 +4313,9 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/lenco-das-lagrimas.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Lenço das Lágrimas: personagem/objeto do catálogo aprovado (lenco-das-lagrimas). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Lenço das Lágrimas como fonte ou forma do feitiço: ataduras de luz se enrolam sozinhas num ferido que volta a ficar de pé; Arcano bruto jorra e se acumula em esferas de luz na cor do Valor.",
       "ambienteOriginal": "Ambiente do Valor Morbidyum: cemitérios que respiram, brejos, criptas e aldeias de curandeiras. Magia na cor verde-pálido, em fumaça fria e fios que partem, como almas. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Primitivum, Alvorum: detalhes discretos dessas cores podem aparecer.",
@@ -4318,7 +4330,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/lenco-das-lagrimas.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 099 Lenço das Lágrimas. Subject: Lenço das Lágrimas: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: enxuga e a pessoa esquece do que chorava por uma hora.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/base-curar-c1.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-curar-c1.visual.json"
     },
     {
       "id": "base-curar-c3",
@@ -4332,9 +4346,9 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/calice-do-primeiro-barro.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Cálice do Primeiro Barro: personagem/objeto do catálogo aprovado (calice-do-primeiro-barro). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Cálice do Primeiro Barro como fonte ou forma do feitiço: uma fonte, flor ou chuva mágica devolve as forças a quem estava caído; visões, páginas ou cartas de luz se abrem diante de quem conjura, revelando o que vem.",
       "ambienteOriginal": "Ambiente do Valor Morbidyum: cemitérios que respiram, brejos, criptas e aldeias de curandeiras. Magia na cor verde-pálido, em fumaça fria e fios que partem, como almas. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Primitivum, Alvorum: detalhes discretos dessas cores podem aparecer.",
@@ -4349,7 +4363,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/calice-do-primeiro-barro.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 120 Cálice do Primeiro Barro. Subject: Cálice do Primeiro Barro: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: o que se põe dentro vira outro material à escolha, do mesmo tamanho.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/base-curar-c3.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-curar-c3.visual.json"
     },
     {
       "id": "base-curar-c8",

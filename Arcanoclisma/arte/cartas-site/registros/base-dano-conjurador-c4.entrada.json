@@ -1,0 +1,36 @@
+{
+  "id": "base-dano-conjurador-c4",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-84a88f6c-2b5e-4104-a2df-0144251ebb31.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nID base-dano-conjurador-c4; rarity incomum, arteAlternativa false; Values conflituo. Actual rules: Causa 4 de dano ao Conjurador inimigo.\nImage1 identity: SAME telescoping bronze spyglass with broad stitched rust-brown leather barrel, dark brown straps and tiny bronze buckles, large blue objective lens containing a quiet cloaked silhouette and twisting blue mist. Preserve recognizable lens identity and worn ordinary workmanship. NEW scene low over the snowy parapet of a small mountain observatory at soft pink dawn: a stout middle-aged East Asian man with shaved scalp, wide calm face and heavy moss-grey wool mantle kneels SIDEWAYS with one knee on an ordinary folded pad. Two distinct clear hands hold the spyglass correctly, one supports barrel and the other steadies eyepiece near his eye; the telescope points diagonally across a narrow canyon to a distant rival conjurador on a simple stone stair. A thin localized rusty-red arcane line originates at the blue lens and is still traveling toward that rival, clear separation rather than a gun or huge cannon. Current Findante spell deals4damage to enemyConjurador, no prophecy, destruction, instant death or sniper weapon rules. Spyglass large and fully inside frame, polished contrast and muted bronze, pale blue snow sheets, softly painted mountain shapes and pink sky, small indigo shimmer only at lens. Cosmetic uncommon finish subtle silver/rose/blue flecks within existing magic, not foil covering entire sky.\nReference2 ONLY approved smooth illustration finish. Full opaque vertical63:88,1260x1760 preferred if supported; no frame, UI, lettering or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/luneta-do-fim.png",
+  "textoRegraLido": "Causa 4 de dano ao Conjurador inimigo.",
+  "valoresLidos": [
+    "conflituo"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/luneta-do-fim.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Objeto aprovado preservado e integrado à nova cena.",
+    "Ação de dano corresponde ao texto atual, sem poderes extras."
+  ],
+  "avaliacaoVisual": "Luneta de bronze/couro com lente azul preservada, duas mãos de apoio e mira clara. Traço mágico fino atravessa vale até conjurador distante. Figurino e observatório distintos das cenas anteriores.",
+  "ambiente": "Observatório de montanha e vale nevado",
+  "momentoDoDia": "Amanhecer rosado",
+  "clima": "Frio claro",
+  "escala": "Luneta e portador próximos; alvo recuado no cânion",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

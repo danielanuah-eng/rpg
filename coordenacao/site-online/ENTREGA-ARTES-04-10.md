@@ -1,5 +1,9 @@
 # Entrega visual para Claude — 04/10/2026
 
+## Atualização posterior: 112/210
+
+O lote e a galeria agora têm 112 artes concluídas. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega de conjuradores abaixo. A **Luneta do Fim** foi revista após o autor apontar cabeça/mira incoerentes e raio dobrado: arquivo corrente `Arcanoclisma/arte/cartas-site/base-dano-conjurador-c4-a745c23c.png`. A versão sem hash e o estudo intermediário são históricos, não devem prevalecer sobre o mapa. Entraram também as curas na escola de magia e no acampamento de monstros. Os exemplos novos de ambientes e a coerência de mira estão em `DIRETRIZ-CENARIOS.md`. Nenhuma nova imagem de Ciantia faz parte desta publicação. A fila continua em produção; avaliação final e integração do Claude seguem pendentes.
+
 O autor pediu o envio conjunto das artes concluídas e dos conjuradores com cenários corrigidos. Autorizou os pushes das imagens. Esta entrega não altera habilidades, custos ou regras.
 
 ## Arquivos de entrada

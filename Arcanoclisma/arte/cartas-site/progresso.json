@@ -1,16 +1,8 @@
 {
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 104,
+  "concluidas": 112,
   "pendentes": [
-    "item-extra-relogio",
-    "base-aliado-c4-equilibrado-grau5",
-    "base-dano-c4-repentina",
-    "base-dano-conjurador-c5",
-    "base-dano-conjurador-c2",
-    "base-dano-conjurador-c4",
-    "base-curar-c1",
-    "base-curar-c3",
     "base-curar-c8",
     "eternyr-comprar-c3-repentina",
     "eternyr-dano-aliado-c6",
