@@ -1,0 +1,67 @@
+{
+  "id": "r6-varredura-c2",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-09cd8fea-12de-4d86-8da6-c69128d3831c.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/r6-varredura-c2.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/enxame-de-palavras.png",
+  "textoRegraLido": "Causa 1 de dano a cada Aliado do oponente.",
+  "valoresLidos": [
+    "alvorum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/enxame-de-palavras.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Oficina de encadernação mágica de Alvorum, prensas de bronze, estantes e janela para a vila",
+  "momentoDoDia": "Fim da manhã",
+  "clima": "Céu encoberto visto pela janela",
+  "escala": "Enxame em primeiro plano e três aliados adversários em profundidade",
+  "avaliacaoVisual": "Criaturas não humanas de papel rasgado, corpos fragmentados escuros e olhos âmbar; enxame sai do livro e pequenos impactos alcançam besouro blindado, cão de pedra e criatura pequena. Cenário azul frio, magia dourada localizada, sem ferimentos gráficos.",
+  "decisoes": [
+    "Valor atual Alvorum prevalece sobre múltiplos valores do briefing antigo.",
+    "Findante temporária: pequenos impactos em cada Aliado adversário, não invocação persistente.",
+    "Perspectiva elevada de oficina; acabamento comum sem foil lendário."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/r6-varredura-c2.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "6873e74fa98338cc14b200468362853d400ab96722ca89dd78e0152983e9381e",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

@@ -3,16 +3,8 @@
   "pedidoVersao": 2,
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 112,
+  "concluidas": 120,
   "pendentes": [
-    "base-curar-c8",
-    "eternyr-comprar-c3-repentina",
-    "eternyr-dano-aliado-c6",
-    "eternyr-dano-jogador-c5",
-    "eternyr-aliado-c8-g10",
-    "r6-varredura-c2",
-    "r6-furia-c3",
-    "col-campeao-conflituo",
     "col-campeao-sublimeyn",
     "col-campeao-dominum",
     "col-campeao-persona",
@@ -999,6 +991,70 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-curar-c3.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-curar-c3.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-curar-c8",
+      "nome": "Semente da Floresta Primeira",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-curar-c8.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-curar-c8.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "eternyr-comprar-c3-repentina",
+      "nome": "Menino de Dois Instantes",
+      "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c3-repentina.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-comprar-c3-repentina.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "eternyr-dano-aliado-c6",
+      "nome": "Sala Que É Um Ano",
+      "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-dano-aliado-c6.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-dano-aliado-c6.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "eternyr-dano-jogador-c5",
+      "nome": "O Entretempo",
+      "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-dano-jogador-c5.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-dano-jogador-c5.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "eternyr-aliado-c8-g10",
+      "nome": "Dragão-Ampulheta",
+      "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-aliado-c8-g10.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-aliado-c8-g10.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "r6-varredura-c2",
+      "nome": "Enxame de Palavras",
+      "arquivo": "Arcanoclisma/arte/cartas-site/r6-varredura-c2.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/r6-varredura-c2.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "r6-furia-c3",
+      "nome": "Charco Fervente",
+      "arquivo": "Arcanoclisma/arte/cartas-site/r6-furia-c3.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/r6-furia-c3.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-campeao-conflituo",
+      "nome": "Ferreiro de Guerra",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-campeao-conflituo.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-conflituo.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
     }
   ],

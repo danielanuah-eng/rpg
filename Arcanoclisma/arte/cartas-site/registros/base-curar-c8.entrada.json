@@ -1,0 +1,37 @@
+{
+  "id": "base-curar-c8",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-ebf215ee-112c-44ae-aefa-e261626ab2fd.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nID base-curar-c8; rarity lendaria, arteAlternativa false; Values primitivum. Actual rules: Cure 20 de dano de um alvo e compre 3.\nImage1 identity: SAME oversized living seed, round wooden nut husk with moss patches, four twisted root feet, green shoots and a long central gold crack showing a tiny entire forest inside. Preserve all four root feet and recognizable little forest in fissure. NEW grand but restorative scene INSIDE THE DIMENSION OF PRIMITIVUM, a vast smooth root-vault sanctuary with fern canopies, distant impossible rounded living hills through openings and a few tiny seed-creatures quietly gathering at its edge. The seed stands prominently close on a mossy stone cradle. One broad controlled arc of living green-gold light from its central fissure restores the fractured shoulder of ONE immense resting ancient moss-stone horned beast in middle distance. Show regained strength and a serene open eye, no dead body, resurrection, army healed, summoned forest shield or offensive blast. A nearby adult druid in simple dark cloth is small compared with beast and seed, hands softly directing the restorative arc, not stealing focus. Exactly THREE subtle translucent leaf-shaped glimpses of different paths rise separately above the seed, symbolizing draw3; no UI/cards/letters. Actual rule cure20damage of one target and draw3. Early dawn cool mist, rounded smooth scenery, modest warm rim on seed. Legendary illustration finish v9: gold/opal rainbow sheen and tiny colored glints localized to the central crack, bark ridges and magic arc; preserve rich non-grey color and readable edges, no entire luminous sky or yellow fog. Scale grand, sensitivity and ecology, not battle spectacle.\nReference2 ONLY approved smooth illustration finish. Full opaque vertical63:88,1260x1760 preferred if supported; no frame, UI, lettering or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/semente-da-floresta-primeira.png",
+  "textoRegraLido": "Cure 20 de dano de um alvo e compre 3.",
+  "valoresLidos": [
+    "primitivum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/semente-da-floresta-primeira.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Dimensão do Valor com vida e figuras contextuais conforme novo exemplo do autor.",
+    "Personagem/objeto aprovado preservado em nova composição.",
+    "Magnitude visual acompanha o efeito real, sem novas regras."
+  ],
+  "avaliacaoVisual": "Semente preserva fissura com floresta interna, folhas e pés de raiz, em santuário de Primitivum. Magia dourada/verde localizada restaura uma criatura colossal e três visões em folhas ficam legíveis; o ambiente conserva volumes e sombra.",
+  "ambiente": "Santuário de raízes na dimensão de Primitivum",
+  "momentoDoDia": "Amanhecer",
+  "clima": "Névoa leve",
+  "escala": "Semente grande, conjurador pequeno e criatura colossal; apoio visual ao efeito de cura",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

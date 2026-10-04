@@ -1,0 +1,67 @@
+{
+  "id": "base-curar-c8",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-ebf215ee-112c-44ae-aefa-e261626ab2fd.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-curar-c8.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/semente-da-floresta-primeira.png",
+  "textoRegraLido": "Cure 20 de dano de um alvo e compre 3.",
+  "valoresLidos": [
+    "primitivum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/semente-da-floresta-primeira.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Dimensão do Valor com vida e figuras contextuais conforme novo exemplo do autor.",
+    "Personagem/objeto aprovado preservado em nova composição.",
+    "Magnitude visual acompanha o efeito real, sem novas regras."
+  ],
+  "avaliacaoVisual": "Semente preserva fissura com floresta interna, folhas e pés de raiz, em santuário de Primitivum. Magia dourada/verde localizada restaura uma criatura colossal e três visões em folhas ficam legíveis; o ambiente conserva volumes e sombra.",
+  "ambiente": "Santuário de raízes na dimensão de Primitivum",
+  "momentoDoDia": "Amanhecer",
+  "clima": "Névoa leve",
+  "escala": "Semente grande, conjurador pequeno e criatura colossal; apoio visual ao efeito de cura",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-curar-c8.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "b00fecdebdfed8ef381b48a31a024591562fac3c2ef96c7ddfe6a84481cc13bc",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "lendaria",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

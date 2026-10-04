@@ -1,16 +1,8 @@
 {
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 112,
+  "concluidas": 120,
   "pendentes": [
-    "base-curar-c8",
-    "eternyr-comprar-c3-repentina",
-    "eternyr-dano-aliado-c6",
-    "eternyr-dano-jogador-c5",
-    "eternyr-aliado-c8-g10",
-    "r6-varredura-c2",
-    "r6-furia-c3",
-    "col-campeao-conflituo",
     "col-campeao-sublimeyn",
     "col-campeao-dominum",
     "col-campeao-persona",

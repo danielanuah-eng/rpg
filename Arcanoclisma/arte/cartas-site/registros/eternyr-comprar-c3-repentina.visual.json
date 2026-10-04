@@ -1,0 +1,67 @@
+{
+  "id": "eternyr-comprar-c3-repentina",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-0ad7c419-9cd6-4ed2-aeda-7c6ffd8dae90.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/eternyr-comprar-c3-repentina.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/menino-de-dois-instantes.png",
+  "textoRegraLido": "Compre 2 cartas.",
+  "valoresLidos": [
+    "eternyr"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/menino-de-dois-instantes.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Dimensão do Valor com vida e figuras contextuais conforme novo exemplo do autor.",
+    "Personagem/objeto aprovado preservado em nova composição.",
+    "Magnitude visual acompanha o efeito real, sem novas regras."
+  ],
+  "avaliacaoVisual": "Menino mantém tranças com contas, roupa marfim/azul e pés descalços infantis. Novo passo com duas visões de momentos diferentes, olhando para o estudioso atrás; reunião de magos e criaturas de relógio contextualizam Eternyr.",
+  "ambiente": "Salão de reunião de magos no entretempo de Eternyr",
+  "momentoDoDia": "Tarde",
+  "clima": "Interior com luz de janela",
+  "escala": "Menino dominante, estudiosos e mecanismos em segundo plano",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c3-repentina.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "6a16f0da9d0b56cade20c7dfa457c5bda4d441a5a423d72cc7d6bec775310765",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

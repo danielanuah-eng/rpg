@@ -1,8 +1,8 @@
 # Entrega visual para Claude — 04/10/2026
 
-## Atualização posterior: 112/210
+## Atualização posterior: 120/210
 
-O lote e a galeria agora têm 112 artes concluídas. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega de conjuradores abaixo. A **Luneta do Fim** foi revista após o autor apontar cabeça/mira incoerentes e raio dobrado: arquivo corrente `Arcanoclisma/arte/cartas-site/base-dano-conjurador-c4-a745c23c.png`. A versão sem hash e o estudo intermediário são históricos, não devem prevalecer sobre o mapa. Entraram também as curas na escola de magia e no acampamento de monstros. Os exemplos novos de ambientes e a coerência de mira estão em `DIRETRIZ-CENARIOS.md`. Nenhuma nova imagem de Ciantia faz parte desta publicação. A fila continua em produção; avaliação final e integração do Claude seguem pendentes.
+O lote e a galeria agora têm 120 artes concluídas, com 90 pendentes. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega inicial de conjuradores abaixo. A **Luneta do Fim** foi revista após o autor apontar cabeça/mira incoerentes e raio dobrado: arquivo corrente `Arcanoclisma/arte/cartas-site/base-dano-conjurador-c4-a745c23c.png`. A versão sem hash e o estudo intermediário são históricos, não devem prevalecer sobre o mapa. Este lote acrescenta Semente da Floresta Primeira, Menino de Dois Instantes, Sala Que É Um Ano, O Entretempo, Dragão-Ampulheta, Enxame de Palavras, Charco Fervente e Ferreiro de Guerra. Cada ID tem cena e registro próprios, com dimensões e alfa medidos. Os exemplos novos de ambientes e a coerência de mira estão em `DIRETRIZ-CENARIOS.md`. Nenhuma nova imagem de Ciantia faz parte desta publicação. A fila continua em produção; avaliação final e integração do Claude seguem pendentes.
 
 O autor pediu o envio conjunto das artes concluídas e dos conjuradores com cenários corrigidos. Autorizou os pushes das imagens. Esta entrega não altera habilidades, custos ou regras.
 
@@ -21,7 +21,7 @@ As nove cenas anteriores, que mudavam o personagem e a pose, foram guardadas por
 
 Ciantia: **orientação posterior do autor, 04/10 — não usar nem reenviar o modelo frontal corrigido**. Essa imagem havia sido publicada no commit `dceec35` antes da nova instrução. Está retirada do uso; não integra o jogo. O prompt para uma futura cena lateral, de olhos fechados, agachada brincando com os dois dragões voltados para o jogador e livro atrás está reservado em `Arcanoclisma/expansoes/a-mestra-dos-dragoes/arte/prompts/ciantia-brincando-dimensao-transplanar.prompt.txt`. Não gerar essa revisão durante a fila prioritária.
 
-## Estado da entrega
+## Estado da entrega inicial (histórico)
 
 Há **94 de 210** artes da fila concluídas, incluindo os nove conjuradores agora revisados; **116** permanecem pendentes. O modelo de Ciantia é suplementar. Os quatro itens recém-concluídos são Couraça de placas, Poção de cura, Elixir de foco e Harpa de Vidro de Liss.
 

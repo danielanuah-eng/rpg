@@ -1,0 +1,36 @@
+{
+  "id": "eternyr-dano-aliado-c6",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-9f12572d-df43-4460-812d-102b9f35ea75.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nID eternyr-dano-aliado-c6; rarity rara, arteAlternativa false; Values eternyr. Actual rules: Causa 9 de dano a um Aliado ou Mística.\nImage1 identity is an ARCHITECTURAL nonhuman room fragment, not a person: folded dark oak room with exactly FOUR empty wooden doorway frames showing spring blossom, green summer leaves, rusty autumn foliage and winter snow/aged wood, blue-nocturne carpet, central bronze armillary ring with white clock-hand geometry and navy time ribbons. Preserve these distinctive components. NEW scene inside a deep CASTLE CALABOUÇO in Eternyr's dimension: the magical room unfolds across a broad quiet underground chamber, warm smooth stone vault, plain locked empty alcoves and one small lantern make scale clear. View obliquely from a doorway so the room fills the picture as real spatial architecture, no floating isolated cutout on generic sky. ONE hostile mist-stone four-legged hound at the center recoils from a localized silver-white clock-hand impact issuing from the room's armillary heart; legs grounded and creature fully readable, no blood/disintegration. Current spell ONLY deal9damage to one Ally or Mystic; no automatic instant aging death, trapping rules or multiple targets harmed. Seasonal frames show different times simultaneously while normal dungeon walls stay still. Broad quiet shadows and clean surfaces, no extremely rough cracked stone or prison torture. Rarity rara silver/violet glints on armillary and clock energy, matte bronze not whole-room gold. Clear action/source/one target.\nReference2 ONLY approved smooth illustration finish. Full opaque vertical63:88,1260x1760 preferred if supported; no frame, UI, lettering or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/sala-que-e-um-ano.png",
+  "textoRegraLido": "Causa 9 de dano a um Aliado ou Mística.",
+  "valoresLidos": [
+    "eternyr"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/sala-que-e-um-ano.png",
+      "papel": "Identidade do lugar aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Arquitetura/lugar é o assunto, sem herói arbitrário em primeiro plano.",
+    "Impacto e alvo seguem o texto atual; componentes de tempo apenas narrativos."
+  ],
+  "avaliacaoVisual": "Arquitetura da Sala preserva quatro portas sazonais e armilar central, integrada ao calabouço. Uma criatura canina recebe o golpe de ponteiro, sem ferimento gráfico. Prata/violeta na energia, lanternas contidas.",
+  "ambiente": "Calabouço de castelo em Eternyr",
+  "momentoDoDia": "Interior noturno, estações simultâneas nas portas",
+  "clima": "Abrigo subterrâneo",
+  "escala": "Sala mágica inteira dominante, criatura alvo na frente",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

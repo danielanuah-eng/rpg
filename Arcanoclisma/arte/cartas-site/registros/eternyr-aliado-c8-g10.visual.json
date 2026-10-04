@@ -1,0 +1,67 @@
+{
+  "id": "eternyr-aliado-c8-g10",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-33603b29-acce-4813-af67-560412cae710.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/eternyr-aliado-c8-g10.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/dragao-ampulheta.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "eternyr"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/dragao-ampulheta.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Terraço de ponte de uma vila de Eternyr, aqueduto mecânico, montanhas e telhados ao fundo",
+  "momentoDoDia": "Início do entardecer",
+  "clima": "Tempo aberto, nuvens suaves",
+  "escala": "Dragão monumental, viajantes pequenos ao fundo",
+  "avaliacaoVisual": "Quatro patas e duas asas distintas; escamas azul-noite estreladas, ventre marfim e chifres dourados preservados. Pupila legível, guarda firme e cauda longa. Brilho localizado em energia estelar e escamas; vila e aqueduto estabelecem profundidade.",
+  "decisoes": [
+    "Aliado de Eternyr; regras atuais vazias, não acrescentar habilidade de sopro ou proteção.",
+    "Imponência por anatomia e escala; cenário completo novo.",
+    "Acabamento lendário apenas estético."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-aliado-c8-g10.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "fff9f30447f14da2c58f19d8725ca6e6f64ad1f2bbde0a874fe527b968d68283",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "lendaria",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}
