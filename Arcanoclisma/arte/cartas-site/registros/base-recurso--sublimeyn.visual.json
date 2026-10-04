@@ -1,0 +1,68 @@
+{
+  "id": "base-recurso--sublimeyn",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-0769a1ff-a93d-4b11-b845-b17bc5205e5a.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-recurso--sublimeyn.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/mina-funda.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "sublimeyn"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Galeria de mineração em uma falésia, passarela ferroviária e elevador voltados para o Mar de Mercúrio e ilhas flutuantes.",
+  "momentoDoDia": "Tarde, céu claro com luz lateral suave.",
+  "clima": "Ar marítimo e céu parcialmente nublado.",
+  "escala": "Operários e vagões pequenos em relação à galeria e ao horizonte.",
+  "avaliacaoVisual": "Dois trabalhadores empurram carga de prata com vista de costas e perfil; vapor de prata localizado sob vigas. Cena opaca contínua com mar e ilhas.",
+  "decisoes": [
+    "Nova vista de falésia e mar; minério, magia e líquido prateados são elementos materiais distintos.",
+    "Sublimeyn segue a identidade prata-mercúrio, sem brilho de raridade comum.",
+    "Texto de regras vazio preservado; trabalho cotidiano não adiciona ativação, compra ou dano.",
+    "Três unidades de pitch permanecem metadados."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--sublimeyn.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "d634aa7c37f4071c9a42c90861b6a1474f74f18846dee87e2e5199cb88b123c2",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

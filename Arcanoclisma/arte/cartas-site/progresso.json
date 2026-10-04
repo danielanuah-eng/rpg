@@ -1,13 +1,15 @@
 {
-  "estado": "em_producao",
+  "estado": "aguardando_avaliacao",
   "meta": 210,
-  "concluidas": 208,
-  "pendentes": [
-    "base-recurso--sublimeyn",
-    "ficha-wyvern-filhote"
-  ],
+  "concluidas": 210,
+  "pendentes": [],
   "expansaoAdiada": "A Mestra dos Dragões, 90 cartas, bloqueada para jogo",
-  "aguardandoAvaliacaoFinal": false,
+  "aguardandoAvaliacaoFinal": true,
   "pushAutorizado": true,
-  "publicar": "Entregas concluídas; aprovação visual e liberação da expansão são independentes"
+  "publicar": "Entregas concluídas; aprovação visual e liberação da expansão são independentes",
+  "avaliacaoSolicitadaEm": "2026-10-04T09:01:23Z",
+  "perguntaDeAvaliacao": "Aprovar o lote de 210 artes, pedir ajustes (informar cartas e o que mudar) ou parar?",
+  "naoRepetirPergunta": true,
+  "producaoPermitidaEnquantoAguarda": false,
+  "galeria": "Arcanoclisma/arte/cartas-site/galeria.html"
 }

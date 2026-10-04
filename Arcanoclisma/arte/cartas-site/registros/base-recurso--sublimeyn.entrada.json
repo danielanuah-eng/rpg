@@ -1,0 +1,38 @@
+{
+  "id": "base-recurso--sublimeyn",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-0769a1ff-a93d-4b11-b845-b17bc5205e5a.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nCARD Mina Funda do Mar de Mercurio, COMMON Sublimeyn Structure. Reference 1 gives a deep silver mine with timber beams, rail tracks, ore carts and sparse lanterns. Invent a NEW mine partly inside a warm ochre coastal cliff of the Mercury Sea, NOT the same ground shaft/corridor/worker layout. View from behind a small wooden ore cart in lower LEFT along a high stone loading ledge sweeping diagonally RIGHT; huge silver veins in smooth cool slate ceiling, timber braces partly cut by image edges, two small ore sorting workers FAR center. A very large lateral natural cave opening upper RIGHT reveals the fantastical calm MERCURY-SILVER SEA far below, floating dark islands and two thin cloud layers, blue/mauve afternoon sky; warm late afternoon daylight softly touches the rock lips, not blazing gold. Long thin SILVER vapor descends gently off a beam and crystallizes into a few tiny droplets, localized current Sublimeyn ambience with NO resource spheres. In center a slim older blue-gray elf with short white hair, rust rolled-sleeve shirt and navy apron directs a loaded cart toward a wooden goods lift, a short brown worker with a teal scarf and long black braid helps; both clear profile/turned to work, not portraits facing camera. Enough cave depth to remain Mina Funda, not open beach quarry. SILVER physical ore is distinct solid facets from silver thin magic vapor and smooth liquid sea. Broad smoothly painted planes, restrained deliberate details, no dense rough stone marks or HDR/bright gold fog. EMPTY card rules: NO attack, draw, activation, healing, summoning or portals. 3 pitch resource is metadata, no invented power. No UI, foil, words, frame, white margins or cutout; finished continuous opaque portrait environment.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/mina-funda.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "sublimeyn"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Galeria de mineração em uma falésia, passarela ferroviária e elevador voltados para o Mar de Mercúrio e ilhas flutuantes.",
+  "momentoDoDia": "Tarde, céu claro com luz lateral suave.",
+  "clima": "Ar marítimo e céu parcialmente nublado.",
+  "escala": "Operários e vagões pequenos em relação à galeria e ao horizonte.",
+  "avaliacaoVisual": "Dois trabalhadores empurram carga de prata com vista de costas e perfil; vapor de prata localizado sob vigas. Cena opaca contínua com mar e ilhas.",
+  "decisoes": [
+    "Nova vista de falésia e mar; minério, magia e líquido prateados são elementos materiais distintos.",
+    "Sublimeyn segue a identidade prata-mercúrio, sem brilho de raridade comum.",
+    "Texto de regras vazio preservado; trabalho cotidiano não adiciona ativação, compra ou dano.",
+    "Três unidades de pitch permanecem metadados."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

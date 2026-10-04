@@ -1,0 +1,42 @@
+{
+  "id": "ficha-wyvern-filhote",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-c16de1d0-a07a-4cde-8e6f-dda9d2210d19.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nCARD: Wyvern Filhote, COMMON allied token 2/2, rules EMPTY and current Valores array EMPTY. Reference 1 is the approved Dragonete only for warm rusty RED scales, cream underside, small short CROCODILIAN baby head, big GOLD eyes with clearly visible slit pupils, stubby limited dark horn plates and long tail. The TCG subject is explicitly WYVERN: redesign as EXACTLY TWO rear walking LEGS plus TWO wing FORELIMBS, NO separate front arms or forepaws; there are FOUR total appendages including wings. Do not copy source's four-legged dragon anatomy. NEW playful alert wild movement: very small youngster halfway through a banked low hop from a smooth dark rock lower right toward a little normal cream moth upper LEFT, body diagonally across middle, BOTH wings spread and fully visible, both hind legs tucked but clearly distinguishable, entire tail curves to lower left. HEAD fully turned LEFT and UP, whole muzzle and golden pupil gaze toward the moth, not forward toward camera. Closed tiny mouth with mischievous curiosity, no fire/bent beam/spell and no adult exaggerated spines. One continuous environment of ruined arcane crossroads: smooth slate terraces with a little broken ivory arch, wild grass, distant old castle wall and a calm violet/rust twilight sky, one muted physical amber pebble on the rock and faint old faded sigils without readable writing. Subject remains brightly readable against cooler subdued background; no raging attack for a helpless baby, simply a vigorous low pounce. Native full opaque upright composition with enough space for every wing and tail tip, no square source pasted on scene. No foil, text, borders/UI or neutral-Value symbol. Preserve physical red without inventing a Value or magical ability missing from current token data. Polished smooth Arcanoclisma, different pose and unified lighting, not overtextured scenic clutter.\nFRAME REVISION from C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-a56c0de5-e618-43b4-a68a-55f5fbf11aec.png:\nEdit this exact finished Arcanoclisma Wyvern Filhote card scene to repair the CROPPED WINGTIPS. Keep its approved rust-red/cream baby wyvern identity, exactly TWO rear legs and TWO wing forelimbs (no separate arms), closed baby crocodilian muzzle, golden slit pupil looking UP LEFT at the same moth, joyous diagonal low hop, curled tail, smooth paint, twilight ruined landscape, light and colors. Preserve the composition and character expression. Pull the framing slightly BACK so the whole wyvern is about 15 percent smaller inside the SAME upright 63:88 opaque canvas. Both COMPLETE wings, especially the large upper-right wing tip and the left edge wing tip, ALL horns, hind feet and tail tip must fit fully inside the canvas with a little breathing room. Do not tuck/fold/amputate the wings, do not add appendages, do not change the species, do not turn the gaze front, do not make it older. Extend the existing continuous castle/ruins/sky/vegetation naturally at the edges to fill the frame, no border or empty margins. The moth should remain close above its head as the gaze target. No text/UI/frame/foil/neon. Keep native portrait output and opaque scene.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/dragonete.png",
+  "textoRegraLido": "",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/dragonete.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Encruzilhada arcana em ruínas, terraços de pedra, riacho e castelo ao fundo.",
+  "momentoDoDia": "Entardecer, sol baixo e céu violeta/alaranjado.",
+  "clima": "Céu parcialmente nublado, atmosfera calma.",
+  "escala": "Wyvern jovem em salto baixo atrás de mariposa, ambiente amplio ao redor.",
+  "avaliacaoVisual": "Cabeça e pupila apontam à mariposa acima à esquerda. Duas pernas traseiras e duas asas como membros dianteiros; asas e cauda inteiras após ajuste de enquadramento.",
+  "decisoes": [
+    "Identidade física do Dragonete mantida, com anatomia adaptada ao nome atual Wyvern Filhote: duas pernas e duas asas, sem braços adicionais.",
+    "Nova pose de salto e ambiente unificado, em vez do recorte do catálogo.",
+    "Revisão abriu enquadramento para preservar ambas as pontas de asa.",
+    "Valores atuais vazios na ficha: sem inventar afinidade; vermelho preservado como cor física.",
+    "Ficha 2/2 e regra vazia; cena lúdica não introduz poderes."
+  ],
+  "revisaoEnquadramento": {
+    "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-a56c0de5-e618-43b4-a68a-55f5fbf11aec.png",
+    "prompt": "Edit this exact finished Arcanoclisma Wyvern Filhote card scene to repair the CROPPED WINGTIPS. Keep its approved rust-red/cream baby wyvern identity, exactly TWO rear legs and TWO wing forelimbs (no separate arms), closed baby crocodilian muzzle, golden slit pupil looking UP LEFT at the same moth, joyous diagonal low hop, curled tail, smooth paint, twilight ruined landscape, light and colors. Preserve the composition and character expression. Pull the framing slightly BACK so the whole wyvern is about 15 percent smaller inside the SAME upright 63:88 opaque canvas. Both COMPLETE wings, especially the large upper-right wing tip and the left edge wing tip, ALL horns, hind feet and tail tip must fit fully inside the canvas with a little breathing room. Do not tuck/fold/amputate the wings, do not add appendages, do not change the species, do not turn the gaze front, do not make it older. Extend the existing continuous castle/ruins/sky/vegetation naturally at the edges to fill the frame, no border or empty margins. The moth should remain close above its head as the gaze target. No text/UI/frame/foil/neon. Keep native portrait output and opaque scene.",
+    "motivo": "Pontas de asa cortadas no primeiro estudo; quadro ampliado mantendo cena e pose."
+  },
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

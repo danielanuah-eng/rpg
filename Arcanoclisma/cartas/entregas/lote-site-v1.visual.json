@@ -1,13 +1,10 @@
 {
   "tarefaId": "lote-site-v1",
   "pedidoVersao": 2,
-  "estado": "em_producao",
+  "estado": "aguardando_avaliacao",
   "meta": 210,
-  "concluidas": 208,
-  "pendentes": [
-    "base-recurso--sublimeyn",
-    "ficha-wyvern-filhote"
-  ],
+  "concluidas": 210,
+  "pendentes": [],
   "cartas": [
     {
       "id": "conjurador-lyandra",
@@ -1671,6 +1668,22 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--primitivum.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--primitivum.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-recurso--sublimeyn",
+      "nome": "Mina Funda do Mar de Mercúrio",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--sublimeyn.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--sublimeyn.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "ficha-wyvern-filhote",
+      "nome": "Wyvern Filhote",
+      "arquivo": "Arcanoclisma/arte/cartas-site/ficha-wyvern-filhote.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/ficha-wyvern-filhote.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
     }
   ],

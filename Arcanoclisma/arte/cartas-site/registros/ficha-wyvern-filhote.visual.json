@@ -1,0 +1,72 @@
+{
+  "id": "ficha-wyvern-filhote",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-c16de1d0-a07a-4cde-8e6f-dda9d2210d19.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/ficha-wyvern-filhote.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/dragonete.png",
+  "textoRegraLido": "",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/dragonete.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Encruzilhada arcana em ruínas, terraços de pedra, riacho e castelo ao fundo.",
+  "momentoDoDia": "Entardecer, sol baixo e céu violeta/alaranjado.",
+  "clima": "Céu parcialmente nublado, atmosfera calma.",
+  "escala": "Wyvern jovem em salto baixo atrás de mariposa, ambiente amplio ao redor.",
+  "avaliacaoVisual": "Cabeça e pupila apontam à mariposa acima à esquerda. Duas pernas traseiras e duas asas como membros dianteiros; asas e cauda inteiras após ajuste de enquadramento.",
+  "decisoes": [
+    "Identidade física do Dragonete mantida, com anatomia adaptada ao nome atual Wyvern Filhote: duas pernas e duas asas, sem braços adicionais.",
+    "Nova pose de salto e ambiente unificado, em vez do recorte do catálogo.",
+    "Revisão abriu enquadramento para preservar ambas as pontas de asa.",
+    "Valores atuais vazios na ficha: sem inventar afinidade; vermelho preservado como cor física.",
+    "Ficha 2/2 e regra vazia; cena lúdica não introduz poderes."
+  ],
+  "revisaoEnquadramento": {
+    "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-a56c0de5-e618-43b4-a68a-55f5fbf11aec.png",
+    "prompt": "Edit this exact finished Arcanoclisma Wyvern Filhote card scene to repair the CROPPED WINGTIPS. Keep its approved rust-red/cream baby wyvern identity, exactly TWO rear legs and TWO wing forelimbs (no separate arms), closed baby crocodilian muzzle, golden slit pupil looking UP LEFT at the same moth, joyous diagonal low hop, curled tail, smooth paint, twilight ruined landscape, light and colors. Preserve the composition and character expression. Pull the framing slightly BACK so the whole wyvern is about 15 percent smaller inside the SAME upright 63:88 opaque canvas. Both COMPLETE wings, especially the large upper-right wing tip and the left edge wing tip, ALL horns, hind feet and tail tip must fit fully inside the canvas with a little breathing room. Do not tuck/fold/amputate the wings, do not add appendages, do not change the species, do not turn the gaze front, do not make it older. Extend the existing continuous castle/ruins/sky/vegetation naturally at the edges to fill the frame, no border or empty margins. The moth should remain close above its head as the gaze target. No text/UI/frame/foil/neon. Keep native portrait output and opaque scene.",
+    "motivo": "Pontas de asa cortadas no primeiro estudo; quadro ampliado mantendo cena e pose."
+  },
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/ficha-wyvern-filhote.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "a825763010247aa16e4d6e4e9a4bbaa93cb934beedf007363ccaa7549e89445a",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}
