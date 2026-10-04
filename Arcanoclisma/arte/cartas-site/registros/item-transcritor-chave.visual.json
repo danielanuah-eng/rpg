@@ -1,0 +1,66 @@
+{
+  "id": "item-transcritor-chave",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-e9cdac5f-5251-4b38-b75e-409f40bb2b02.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-transcritor-chave.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/chave-da-voragem.png",
+  "textoRegraLido": "Canal. Transcritor. Suspenda o Conjurador, pague 2 e descarte 1 carta: compre 3 cartas.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/chave-da-voragem.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Banca de pergaminhos no mercado de cidade em terraços",
+  "momentoDoDia": "Tarde",
+  "clima": "Luz diurna suave sob toldos terracota",
+  "escala": "Chave e mãos próximas da câmera; três pergaminhos acima do armário",
+  "avaliacaoVisual": "Chave de bronze com argola grossa, haste anelada e dentes angulares reconhecíveis junto à fechadura. Três pergaminhos seguem à mão livre; fólio gasto na tigela e duas pequenas esferas junto à fechadura. Mercado completo ao fundo.",
+  "decisoes": [
+    "Canal / Transcritor genérico, sem Valores ou ataque.",
+    "Suspender Conjurador, pagar 2 e descartar 1 para comprar 3. Os elementos representam quantidades diferentes, sem novas habilidades.",
+    "Abrir correntes e jaulas no RPG não adiciona remoção de prisões no TCG.",
+    "Raridade comum; bronze e luz local não definem Alvorum."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-transcritor-chave.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "b82e412dbca4957bfb2374b4c860cbe85066f9ca427c07bce7dde158ee35a0d8",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

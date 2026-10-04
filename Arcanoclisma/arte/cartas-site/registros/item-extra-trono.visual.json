@@ -1,0 +1,66 @@
+{
+  "id": "item-extra-trono",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-554da0b3-d2d1-4a95-a00d-d728602270cc.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-extra-trono.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/trono-dobravel.png",
+  "textoRegraLido": "Extra de Parrudão da quebrada. Uso único. Suspenda o Conjurador e pague 1: cure 4 de dano do seu Conjurador.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/trono-dobravel.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Estalagem de vila com cozinha, casacos e janela chuvosa",
+  "momentoDoDia": "Fim da tarde",
+  "clima": "Luz quente de interior contrastada com chuva azulada",
+  "escala": "Cadeira inteira em primeiro plano, Conjuradora recuperada ao lado",
+  "avaliacaoVisual": "Cadeira dobrável de madeira com pernas cruzadas, pinos de bronze, lona vermelha e símbolo de orelha preservados. Uma mulher forte de pele roxa e trança laranja observa o próprio antebraço enfaixado com fita curativa branca; pequena esfera junto à mão na cadeira.",
+  "decisoes": [
+    "Extra de Parrudão da quebrada, genérico sem Valores, uso único.",
+    "Suspender Conjurador e pagar 1 para curar 4 de dano do próprio Conjurador. Não representar cura de aliados ou grupo.",
+    "Símbolo dourado na lona é desenho físico; não define Valor Alvorum.",
+    "Não adicionar o efeito RPG de ser ouvido por toda a sala às regras do TCG; raridade comum."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-trono.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "d43fbee39e9f6b2eca63c5f5d74f1ca50033d98e76ae21313ff7890cfa5d251c",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

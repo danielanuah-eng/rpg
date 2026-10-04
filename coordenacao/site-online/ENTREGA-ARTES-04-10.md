@@ -1,8 +1,10 @@
 # Entrega visual para Claude — 04/10/2026
 
-## Atualização posterior: 152/210
+## Atualização posterior: 160/210
 
-O lote e a galeria agora têm 152 artes concluídas, com 58 pendentes. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega inicial de conjuradores abaixo. Entraram Frasco de Maré, Chapéu de Chuva Particular, Barco Dobrável, Mapa do Reino, Última Flecha, Maré de Sobras, Coroa Riscada e Espelho da Cidade dos Rostos. As 151 do pedido inicial estão entregues; o Espelho começa as 59 adicionais, parte da mesma meta de 210. Cada ID tem cena e registro próprios, com dimensões e alfa medidos. Os Valores atuais determinam a cor da magia; aparência física e roupas dos personagens aprovados continuam preservadas. Os gestos e cenários não adicionam efeitos ao jogo.
+O lote e a galeria agora têm 160 artes concluídas, com 50 pendentes. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega inicial de conjuradores abaixo. Entraram Pedra Parada, A Coroa de Vyal, Pena de Idrael, A Página Arrancada, Chave da Voragem, Ovo de Wyvern, Luvas de Força e Trono Dobrável. As 151 do pedido inicial estão entregues; as adicionais pertencem à mesma meta de 210. Cada ID tem cena e registro próprios, com dimensões e alfa medidos. Os Valores atuais determinam a cor da magia; aparência física e roupas dos personagens aprovados continuam preservadas. Os gestos e cenários não adicionam efeitos ao jogo.
+
+**Corrigir mapeamento das Luvas de Força:** o briefing usava `cordao-de-rhu`, que é um colar. O novo `item-extra-luvas.png` mostra de fato luvas, inspiradas só nos materiais do cordão. A habilidade de entender lobos não foi transferida. Use o novo caminho do mapa para as Luvas, sem alterar o Cordão de Rhu. Estes oito equipamentos são genéricos sem Valores conforme os dados atuais; suas cores físicas não atribuem afinidades. Custos de ativação, dano próprio e uso único continuam nos textos do Claude. Ovo mostra uma única wyvern com duas pernas e duas asas, sem braços adicionais.
 
 Última Flecha: rosto, arco e flecha reta miram o mesmo alvo. Maré de Sobras atinge aliados dos dois lados, não protege os próprios. Mapa do Reino usa a regra atual de escolher duas entre cinco, sem repetir a descrição antiga que escolhia uma. Coroa Riscada ainda exige descarte de uma carta do Grau. Espelho é Canal / Foco Arcano genérico, sem Valores ou ataque; os cinco rostos coloridos pertencem à identidade do objeto e não são afinidades de jogo.
 

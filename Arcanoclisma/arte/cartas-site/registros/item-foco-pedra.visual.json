@@ -1,0 +1,66 @@
+{
+  "id": "item-foco-pedra",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-4fdfd7ac-fb67-4bda-b3e1-ca370c7ad269.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-foco-pedra.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/pedra-parada.png",
+  "textoRegraLido": "Canal. Foco Arcano. Suspenda o Conjurador e descarte 1 carta: o próximo dano ou cura de uma Temporária sua neste turno tem +2.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/pedra-parada.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Oficina de lapidação na montanha, com bancada e ferramentas",
+  "momentoDoDia": "Entardecer",
+  "clima": "Luz quente de janela sobre pedra azul-acinzentada",
+  "escala": "Pedra em primeiro plano com duas mãos em gestos de ativação e descarte",
+  "avaliacaoVisual": "Bloco ocre irregular com espiral de bronze e fissuras ciano preservados. Mulher ruiva de trança longa olha para a pedra, uma mão toca o topo e a outra solta um fólio numa tigela. Oficina completa com montanhas ao fundo.",
+  "decisoes": [
+    "Equipamento genérico, sem Valores; fissuras ciano são características do objeto e não definem afinidade.",
+    "Canal / Foco Arcano: suspender Conjurador e descartar uma carta para +2 no próximo dano OU cura de uma Temporária própria neste turno.",
+    "A função RPG de paralisar mudanças não adiciona estase às regras do TCG. Não inventar Ataque undefined.",
+    "Raridade comum, sem acabamento lendário."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-foco-pedra.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "8879a82692954c44afb538cbe0163546088b65e4b8877df627ad818dd68a152e",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

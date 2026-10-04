@@ -1,0 +1,66 @@
+{
+  "id": "item-foco-coroa",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-85099082-3d74-4c45-9091-42696dd03302.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-foco-coroa.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/a-coroa-de-vyal.png",
+  "textoRegraLido": "Canal. Foco Arcano. Suspenda o Conjurador, pague 2 e seu Conjurador toma 2 de dano: o próximo dano ou cura de uma Temporária sua neste turno tem +4.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/a-coroa-de-vyal.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Varanda de castelo sobre vale de névoa, dragões distantes no céu",
+  "momentoDoDia": "Hora azul depois do pôr do sol",
+  "clima": "Céu violeta e luzes pequenas de castelo",
+  "escala": "Coroa no rosto próximo, mãos e foco local sobre parapeito",
+  "avaliacaoVisual": "Coroa fina de ouro rosado com escama coral reconhecível. Conjurador de olhos fechados toca a têmpora em leve esforço. Duas pequenas esferas se aproximam da única fita de foco branco; vale e dragões pequenos ficam como ambiente.",
+  "decisoes": [
+    "Equipamento genérico sem Valores; escama coral preserva identidade e não torna o item Persona.",
+    "Canal / Foco Arcano: suspender, pagar 2 e tomar 2 de dano próprio; próximo dano OU cura da Temporária própria tem +4 neste turno.",
+    "Esforço sugerido por gesto e expressão, sem dano gráfico nem ataque contra outro personagem.",
+    "Raridade comum e brilho apenas localizado na escama e foco."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-foco-coroa.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "86815db9109ee61b69c4b324507318b2d74c87f793a30df663195e8b5413f65b",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

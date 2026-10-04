@@ -1,0 +1,66 @@
+{
+  "id": "item-extra-ovo",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-7810b237-10db-4ee8-b79c-dce9d095cf3e.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-extra-ovo.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/ovo-de-wyvern.png",
+  "textoRegraLido": "Extra de Invocador. Uso único. Suspenda o Conjurador e pague 2: invoque um Wyvern Filhote 2/2.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/ovo-de-wyvern.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Viveiro de wyverns em plataforma de madeira entre pinheiros da montanha",
+  "momentoDoDia": "Manhã nublada",
+  "clima": "Garoa e vale cinzento, calor âmbar dentro do ovo",
+  "escala": "Ovo dominante e um filhote saindo diante da mão do invocador",
+  "avaliacaoVisual": "Ovo com placas laranja, creme e azul-acinzentadas, espinhos laterais e fissuras âmbar preservados. Um único filhote possui duas asas membranosas como membros anteriores, duas pernas traseiras e cauda. Olha para a mão próxima, com duas esferas pequenas.",
+  "decisoes": [
+    "Extra de Invocador genérico sem Valores, uso único.",
+    "Suspender Conjurador e pagar 2 invoca um Wyvern Filhote 2/2; não inventar outros filhotes ou espera de 30 dias nas regras.",
+    "Anatomia de wyvern: duas pernas e duas asas, sem braços adicionais.",
+    "Âmbar do ovo é identidade do objeto, não afinidade Alvorum ou raridade lendária."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-ovo.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "00211553edad460b54a8ff21712c7d2b500f04c2ba449e948ffd4ae0ec814024",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

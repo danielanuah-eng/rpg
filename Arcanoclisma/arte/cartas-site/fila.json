@@ -5959,9 +5959,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/pedra-parada.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Pedra Parada: personagem/objeto do catálogo aprovado (pedra-parada). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Pedra Parada em uso como arma ou foco de magia (Canal, Ataque undefined), empunhado por um conjurador visto de modo parcial (mão, braço ou silhueta), no instante de um ataque, num cenário de batalha.",
       "ambienteOriginal": "Ambiente: uma encruzilhada arcana devastada pelo Cataclisma, com ruínas, céu dividido entre luz quente e sombra fria e restos de magia no chão.",
@@ -5976,7 +5976,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/pedra-parada.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 126 Pedra Parada. Subject: Pedra Parada: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: onde ela é posta, nada muda por uma hora (fogo não espalha, água não sobe, ninguém envelhece).\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-foco-pedra.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-foco-pedra.visual.json"
     },
     {
       "id": "item-foco-coroa",
@@ -5992,9 +5994,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/a-coroa-de-vyal.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "A Coroa de Vyal: personagem/objeto do catálogo aprovado (a-coroa-de-vyal). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "A Coroa de Vyal em uso como arma ou foco de magia (Canal, Ataque undefined), empunhado por um conjurador visto de modo parcial (mão, braço ou silhueta), no instante de um ataque, num cenário de batalha.",
       "ambienteOriginal": "Ambiente: uma encruzilhada arcana devastada pelo Cataclisma, com ruínas, céu dividido entre luz quente e sombra fria e restos de magia no chão.",
@@ -6009,7 +6011,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/a-coroa-de-vyal.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 138 A Coroa de Vyal. Subject: A Coroa de Vyal: coroa fina de ouro rosado com uma escama de dragão coral no centro, brilho coral pulsando como um coração.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-foco-coroa.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-foco-coroa.visual.json"
     },
     {
       "id": "item-transcritor-pena",
@@ -6025,9 +6029,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/pena-de-idrael.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Pena de Idrael: personagem/objeto do catálogo aprovado (pena-de-idrael). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Pena de Idrael em uso como arma ou foco de magia (Canal, Ataque undefined), empunhado por um conjurador visto de modo parcial (mão, braço ou silhueta), no instante de um ataque, num cenário de batalha.",
       "ambienteOriginal": "Ambiente: uma encruzilhada arcana devastada pelo Cataclisma, com ruínas, céu dividido entre luz quente e sombra fria e restos de magia no chão.",
@@ -6042,7 +6046,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/pena-de-idrael.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 117 Pena de Idrael. Subject: Pena de Idrael: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: acordar alguém de qualquer sono mágico.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-transcritor-pena.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-transcritor-pena.visual.json"
     },
     {
       "id": "item-transcritor-pagina",
@@ -6058,9 +6064,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/a-pagina-arrancada.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "A Página Arrancada: personagem/objeto do catálogo aprovado (a-pagina-arrancada). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "A Página Arrancada em uso como arma ou foco de magia (Canal, Ataque undefined), empunhado por um conjurador visto de modo parcial (mão, braço ou silhueta), no instante de um ataque, num cenário de batalha.",
       "ambienteOriginal": "Ambiente: uma encruzilhada arcana devastada pelo Cataclisma, com ruínas, céu dividido entre luz quente e sombra fria e restos de magia no chão.",
@@ -6075,7 +6081,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/a-pagina-arrancada.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 140 A Página Arrancada. Subject: A Página Arrancada: artefato lendário, antigo e único. Rumor: a folha que GrandGaleonis arrancou do livro de duelos; quem a lê, lembra de alguém que não conheceu.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-transcritor-pagina.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-transcritor-pagina.visual.json"
     },
     {
       "id": "item-transcritor-chave",
@@ -6091,9 +6099,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/chave-da-voragem.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Chave da Voragem: personagem/objeto do catálogo aprovado (chave-da-voragem). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Chave da Voragem em uso como arma ou foco de magia (Canal, Ataque undefined), empunhado por um conjurador visto de modo parcial (mão, braço ou silhueta), no instante de um ataque, num cenário de batalha.",
       "ambienteOriginal": "Ambiente: uma encruzilhada arcana devastada pelo Cataclisma, com ruínas, céu dividido entre luz quente e sombra fria e restos de magia no chão.",
@@ -6108,7 +6116,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/chave-da-voragem.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 115 Chave da Voragem. Subject: Chave da Voragem: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: abre qualquer jaula, coleira ou corrente.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-transcritor-chave.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-transcritor-chave.visual.json"
     },
     {
       "id": "item-extra-ovo",
@@ -6124,9 +6134,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/ovo-de-wyvern.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Ovo de Wyvern: personagem/objeto do catálogo aprovado (ovo-de-wyvern). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Ovo de Wyvern sendo usado uma única vez (Extra consumível): a magia acontece, num lugar coerente com o item.",
       "ambienteOriginal": "Ambiente: uma encruzilhada arcana devastada pelo Cataclisma, com ruínas, céu dividido entre luz quente e sombra fria e restos de magia no chão.",
@@ -6141,7 +6151,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/ovo-de-wyvern.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 108 Ovo de Wyvern. Subject: Ovo de Wyvern: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: choca em 30 dias; a wyvern nasce leal a quem estava perto.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-extra-ovo.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-ovo.visual.json"
     },
     {
       "id": "item-extra-luvas",
@@ -6157,9 +6169,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/cordao-de-rhu.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Cordão de Rhu: personagem/objeto do catálogo aprovado (cordao-de-rhu). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Cordão de Rhu sendo usado uma única vez (Extra consumível): a magia acontece, num lugar coerente com o item.",
       "ambienteOriginal": "Ambiente: uma encruzilhada arcana devastada pelo Cataclisma, com ruínas, céu dividido entre luz quente e sombra fria e restos de magia no chão.",
@@ -6174,7 +6186,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/cordao-de-rhu.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 125 Cordão de Rhu. Subject: Cordão de Rhu: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: o dono entende e é entendido por lobos.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-extra-luvas.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-luvas.visual.json"
     },
     {
       "id": "item-extra-trono",
@@ -6190,9 +6204,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/trono-dobravel.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Trono Dobrável: personagem/objeto do catálogo aprovado (trono-dobravel). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Trono Dobrável sendo usado uma única vez (Extra consumível): uma fonte, flor ou chuva mágica devolve as forças a quem estava caído, num lugar coerente com o item.",
       "ambienteOriginal": "Ambiente: uma encruzilhada arcana devastada pelo Cataclisma, com ruínas, céu dividido entre luz quente e sombra fria e restos de magia no chão.",
@@ -6207,7 +6221,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/trono-dobravel.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 128 Trono Dobrável. Subject: Trono Dobrável: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: quem senta nele é ouvido por todos na sala.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-extra-trono.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-trono.visual.json"
     },
     {
       "id": "item-extra-pente",

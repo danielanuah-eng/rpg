@@ -1,0 +1,66 @@
+{
+  "id": "item-extra-luvas",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-2a435307-0572-4cc4-833c-52730f1f106c.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-extra-luvas.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/cordao-de-rhu.png",
+  "textoRegraLido": "Extra de Brigão. Uso único. Seu Conjurador toma 2 de dano: seu Conjurador ganha +2 de Ataque neste turno.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/cordao-de-rhu.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Salão de treino de bairro, vigas e poste revestido de corda",
+  "momentoDoDia": "Manhã chuvosa",
+  "clima": "Luz cinzenta de janela sobre madeira quente",
+  "escala": "Dois punhos enluvados e golpe contra poste em primeiro plano",
+  "avaliacaoVisual": "Par novo de luvas de couro com proteção simples de bronze, cordões trançados, faixas verde-acinzentadas e pequeno dente no punho. Brigão de cabelo preso e bigode mira o poste diretamente; golpe e rosto seguem a mesma direção. Nenhum colar foi usado como arte principal.",
+  "decisoes": [
+    "Referência do briefing é Cordão de Rhu, incompatível com o nome atual Luvas de Força. Criar luvas novas e usar apenas couro, cordões e dente como motivos materiais; preservar o arquivo antigo.",
+    "Extra de Brigão genérico sem Valores e de uso único: próprio Conjurador toma 2 e ganha +2 de Ataque neste turno.",
+    "Não adicionar suspensão nem pagamento de Arcano ausentes da regra atual.",
+    "Não transferir a comunicação com lobos do Cordão de Rhu para esta carta. Raridade comum."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-luvas.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "0095678e20eeafd4e517bd299a2f2c2127d58ab2dc59c4a8dedc2c4c10e5d1d4",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

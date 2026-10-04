@@ -1,0 +1,36 @@
+{
+  "id": "item-transcritor-chave",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-e9cdac5f-5251-4b38-b75e-409f40bb2b02.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPreserveChaveDaVoragem firstref ancientBronzeArco key: large thickCIRCULARringbow, ribbedcylindricalshank, largeangularbit withsteppedrectangularcutouts andhooknotch, heavyworncoppergoldpatina. NEWscene openairmagicalmarket in terracedcity onbrightcloudyafternoon, clothsageandterracottaawning, woodenstallscrollcabinet besidecobbledpath, palehillsfarback. Closeview atlockheight, just brownleatherglovedhands and edge ofplainnavytravelercoat visible atleft, no repeatedhumanface. Onehand turnskey inlittlecabinetlock, mostofkeyring/shankvisibleforegrounddiagonal. Exactly THREE small newcleanblankrolledscrolls spiralfromopendrawer toward the FREE hand, groupedclearlyabove cabinet. A singleoldfoldedblankfolio alreadyspent in shallowbowl onstallbelow; TWOfaintneutralwhiteArcanopearlsfade nearlock. No additionalflyingfolios. Inherentoldkey glints nowsoftamber onlynotwholeimagegoldaura, emittedtranscriptwispsneutralwhite notDominumchains. GenericEQUIPMENTNO Valores,commonrarity; oldRPGunlocksallcages loredoesn'tcreateannulmentorprisonremovalrules. Canal/Transcritor: suspendConjuradorpay2discard1, DRAW3. NoAttackundefined or extraeffects. Smallblurredcustomersandplainbasketsfarbackunderawning, calm muteddaylight, broadcleanwood/plasterclothplanes, focuskeyand3scrolls, no cardsUIorreadablewords.\nLastreferenceisONLYsmoothfinish. DoNOTcopygirl/goldendragon/meadow/pose. Fullopaquevertical63:88scene.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/chave-da-voragem.png",
+  "textoRegraLido": "Canal. Transcritor. Suspenda o Conjurador, pague 2 e descarte 1 carta: compre 3 cartas.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/chave-da-voragem.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Banca de pergaminhos no mercado de cidade em terraços",
+  "momentoDoDia": "Tarde",
+  "clima": "Luz diurna suave sob toldos terracota",
+  "escala": "Chave e mãos próximas da câmera; três pergaminhos acima do armário",
+  "avaliacaoVisual": "Chave de bronze com argola grossa, haste anelada e dentes angulares reconhecíveis junto à fechadura. Três pergaminhos seguem à mão livre; fólio gasto na tigela e duas pequenas esferas junto à fechadura. Mercado completo ao fundo.",
+  "decisoes": [
+    "Canal / Transcritor genérico, sem Valores ou ataque.",
+    "Suspender Conjurador, pagar 2 e descartar 1 para comprar 3. Os elementos representam quantidades diferentes, sem novas habilidades.",
+    "Abrir correntes e jaulas no RPG não adiciona remoção de prisões no TCG.",
+    "Raridade comum; bronze e luz local não definem Alvorum."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

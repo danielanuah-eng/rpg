@@ -1,0 +1,36 @@
+{
+  "id": "item-transcritor-pagina",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-15df8f06-b80a-4060-812c-418ccf1fb200.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nFirstreference A PaginaArrancada exactidentity: single oldtorn ochreparchment with raggedburnt-lookingedges, thinangularborder, roundsuncompass at top, printedsepia vignette TWOduelists crossing swords incenter, fleur-likeornamentlow. Preserve drawinginsidepage andwrinkledshape, not newwords; oldnavy/goldwisps nowonlysmall subtleinherentartifactglints, notassignedValues. NEWscene in an old openairduelingtheatre with broadsmoothemptytiers and quietvines atpinkgreyDAWN, nomassbattle. Foregroundpartialadult femaleconjurador age45, deepbrownskin, closelyshavedhead, broadcheekbones, ordinarycreamlinenandbrownloosecoat, face3/4profileturneddownright towardpage, focused slightlystrainedbreath. ONEhand againstownlowerchest in briefwearinessselfcost, otherhand reachesONEsmallcleanblankrolledfolio newly released frompage. Artifactpage floatsdominantmiddle withthe originalsepia duelistdrawing visible. Singlefine neutralwhitelight linksparchmentedge and freshfolio; no extra cards flowing, no injuredperson,bloodorburns. GenericEQUIPMENT NOValores, commonrarity despitelegendaryRPGorigin. RulesCanal/Transcritor suspendConjuradorSELFtakes1damage, draw1; no Arcano payment added, not+heal damageamp, noopponenttarget. Smoothwarmseatstone contrasted withcoolviolet dawnshadow, detached quietmemory ofduelsbehindobject notadditionalmechanics; controlledlightand simplematerials, no generic battlecrossroads.\nLastreferencefinishONLY, nevercopywoman,goldendragon,meadoworpose. Fullyopaquevertical63:88scene.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/a-pagina-arrancada.png",
+  "textoRegraLido": "Canal. Transcritor. Suspenda o Conjurador e seu Conjurador toma 1 de dano: compre 1 carta.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/a-pagina-arrancada.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Teatro de duelos vazio com arquibancadas, arcadas e trepadeiras",
+  "momentoDoDia": "Amanhecer",
+  "clima": "Céu rosa-violeta e luz lateral suave",
+  "escala": "Página dominante; um fólio novo e conjuradora parcialmente vista",
+  "avaliacaoVisual": "Página rasgada ocre mantém moldura angular, sol-bússola, dois duelistas impressos e ornamento inferior. Conjuradora de pele escura e cabeça raspada toca o peito em esforço discreto; a outra mão alcança um único pergaminho. Ambiente de duelos completo e vazio.",
+  "decisoes": [
+    "Canal / Transcritor genérico sem Valores. A origem lendária RPG não define a raridade comum atual.",
+    "Suspender e tomar 1 de dano próprio para comprar uma carta, sem adicionar pagamento de Arcano.",
+    "Custo próprio sugerido por postura, sem feridas ou dano em outro personagem.",
+    "Preservar desenho dos duelistas como parte do artefato, sem identificar personagens ausentes do acesso."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

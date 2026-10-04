@@ -3,16 +3,8 @@
   "pedidoVersao": 2,
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 152,
+  "concluidas": 160,
   "pendentes": [
-    "item-foco-pedra",
-    "item-foco-coroa",
-    "item-transcritor-pena",
-    "item-transcritor-pagina",
-    "item-transcritor-chave",
-    "item-extra-ovo",
-    "item-extra-luvas",
-    "item-extra-trono",
     "item-extra-pente",
     "item-extra-balde",
     "nv-luz-de-velorio",
@@ -1279,6 +1271,70 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-foco-espelho.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-foco-espelho.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-foco-pedra",
+      "nome": "Pedra Parada",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-foco-pedra.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-foco-pedra.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-foco-coroa",
+      "nome": "A Coroa de Vyal",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-foco-coroa.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-foco-coroa.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-transcritor-pena",
+      "nome": "Pena de Idrael",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-transcritor-pena.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-transcritor-pena.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-transcritor-pagina",
+      "nome": "A Página Arrancada",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-transcritor-pagina.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-transcritor-pagina.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-transcritor-chave",
+      "nome": "Chave da Voragem",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-transcritor-chave.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-transcritor-chave.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-extra-ovo",
+      "nome": "Ovo de Wyvern",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-ovo.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-ovo.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-extra-luvas",
+      "nome": "Luvas de Força",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-luvas.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-luvas.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-extra-trono",
+      "nome": "Trono Dobrável",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-trono.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-trono.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
     }
   ],

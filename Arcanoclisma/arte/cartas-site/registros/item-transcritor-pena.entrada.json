@@ -1,0 +1,36 @@
+{
+  "id": "item-transcritor-pena",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-bf148507-a2cb-4046-9482-473f547f266e.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPreserve exact PenaDeIdrael feather: oversized broad navy-and-cream feather, creamtip/downybase, navybarbs withsmall irregularcreamspots, rustbrown leatherwrap atlowerstem, narrowbronze nib. Make it the main subject diagonal acrossmiddle. New nighttimeenvironment inside a canvascaravan scribe's tent by a quietport, woodencratesandfoldingsmalltable, amber oil lantern and coolnavysky withsparselights throughopenflap. Topdown threequartercloseview: just TWO adultorc olivegreenhands withthickshortfingers, plainleathercuffs, no face inframe. Righthand uses feather over ONEopenedbook. Exactly TWO smallfoldedblank parchmentfolios lift fromupperbook edge into a quietneutralwhite wisp. ONEgoestowardfreeLEFTpalm, the other foldsbackUNDER theclosedlowerbookcorner, two clearlydifferentroutes. Small SINGLEneutralArcanopearl fadesnexttothefeather tip tohintpay1. GenericitemwithoutValores, featherphysicalblue/cream preserved; notactiveEternyrtimewisps or assignedCognitiumaffinity. Common Canal/TRANSCRITOR: suspendConjuradorpay1, looktop2 take1tohandother1bottomdeck. Not a weapon; don'trepresentattackundefined, no oldRPGamewakingvictim rule. Show carefulselection without readablewriting or UI, no goldplumesblazing. Tent canvasinbroad smoothplanes, blanket/worktools, few distantboatsoutside, cleanordinarymagiccontext, different fromstonecastlelibrary.\nLastreferencefinishONLY, nevercopywoman,goldendragon,meadoworpose. Fullyopaquevertical63:88scene.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/pena-de-idrael.png",
+  "textoRegraLido": "Canal. Transcritor. Suspenda o Conjurador e pague 1: olhe as 2 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/pena-de-idrael.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Tenda de escriba viajante num porto com barcos à noite",
+  "momentoDoDia": "Noite",
+  "clima": "Lamparina quente e céu azul escuro",
+  "escala": "Pena e duas mãos na bancada, escolha de dois fólios",
+  "avaliacaoVisual": "Pena azul e creme manchada, envoltório de couro e ponta de bronze preservados. Duas mãos verdes de escriba: uma escreve, a outra recebe um fólio; o segundo segue para baixo do livro. Esfera pequena sugere pagamento. Tenda e porto dão cenário completo.",
+  "decisoes": [
+    "Canal / Transcritor genérico, sem Valores e sem ataque.",
+    "Olhar duas do topo, levar uma à mão e a outra ao fundo; suspender Conjurador e pagar 1.",
+    "Azul da pena é característica física, não afinidade Eternyr ou Cognitium automática.",
+    "Raridade comum; ignorar o ataque undefined e o uso de acordar do RPG como regra nova."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

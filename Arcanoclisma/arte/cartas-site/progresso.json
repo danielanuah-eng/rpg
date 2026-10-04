@@ -1,16 +1,8 @@
 {
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 152,
+  "concluidas": 160,
   "pendentes": [
-    "item-foco-pedra",
-    "item-foco-coroa",
-    "item-transcritor-pena",
-    "item-transcritor-pagina",
-    "item-transcritor-chave",
-    "item-extra-ovo",
-    "item-extra-luvas",
-    "item-extra-trono",
     "item-extra-pente",
     "item-extra-balde",
     "nv-luz-de-velorio",

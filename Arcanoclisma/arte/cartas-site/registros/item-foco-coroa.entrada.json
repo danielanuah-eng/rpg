@@ -1,0 +1,36 @@
+{
+  "id": "item-foco-coroa",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-85099082-3d74-4c45-9091-42696dd03302.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nFirstref EXACTCrownOfVyal: thinrose-goldcirclet, sparse curvedangular pointedarches andone centralelongatedCORALdragon scale withoverlapping scales surface; softlypulsingcoral heartlight insidecenter scale. Keep crownthin rather than turninginto gianthelm. New scene: crown WORN by one adultmaleconjurador withstraightblackhair cutshortatoneside, warmbrownskin, strongsquarenose, narrow brow and eyes, clean-shaven; plain darkplumclothes withslate shoulderlinen. Threequarterprofile atleftthird, onehand touches temple nearcircletandotherhand low preparing a single neutralwhitefocusribbon. He bracesoneelbow ona balcony rail of an oldcastleabove a darkmistvalley at bluehour. Eyesclosedinconcentration, slightstrainedexpressionandweightedshoulders hintselfcost, no blood/injury. TWOsmall faintneutralarcanopearls by lowerhand are fadinginto thefocus; crown'scoral pulse sharpens theONEprepared neutralwhiteTemporariaribbon nearhand. Magicnotgalactic, focusglint localizedonly. Broad smoothnavy/tanbalconyplanes, hangingvine, fewfardragonsilhouettescloudsoft unobtrusive atdistance no copyVyaldragon. GenericEQUIPMENTNO Valores, doNOT assignPersonafromcoralartifactcolor. CurrentCanal/FocoArcano: suspendConjurador,pay2,SELFtakes2damage, NEXTTemporariadamageORheal+4 thisturn. No hittinganotherentity, no passivefreebuff, no attackvalueundefined. Commonrarity, ordinarymaterialhighlights andcoralscale alonebright enough torecognize, notlegendaryfoil. Verticalenvironmentaroundfigure atalledges, mediumcloseviewofhead/hands/crown, subtlecoststrainand magicalsensitivity ratherthan battleexplosion.\nLastref ONLY smoothfinish. Nevercopy its girl, golden dragon, meadow orpose. Full opaqueupright63:88 art.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/a-coroa-de-vyal.png",
+  "textoRegraLido": "Canal. Foco Arcano. Suspenda o Conjurador, pague 2 e seu Conjurador toma 2 de dano: o próximo dano ou cura de uma Temporária sua neste turno tem +4.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/a-coroa-de-vyal.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Varanda de castelo sobre vale de névoa, dragões distantes no céu",
+  "momentoDoDia": "Hora azul depois do pôr do sol",
+  "clima": "Céu violeta e luzes pequenas de castelo",
+  "escala": "Coroa no rosto próximo, mãos e foco local sobre parapeito",
+  "avaliacaoVisual": "Coroa fina de ouro rosado com escama coral reconhecível. Conjurador de olhos fechados toca a têmpora em leve esforço. Duas pequenas esferas se aproximam da única fita de foco branco; vale e dragões pequenos ficam como ambiente.",
+  "decisoes": [
+    "Equipamento genérico sem Valores; escama coral preserva identidade e não torna o item Persona.",
+    "Canal / Foco Arcano: suspender, pagar 2 e tomar 2 de dano próprio; próximo dano OU cura da Temporária própria tem +4 neste turno.",
+    "Esforço sugerido por gesto e expressão, sem dano gráfico nem ataque contra outro personagem.",
+    "Raridade comum e brilho apenas localizado na escama e foco."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

@@ -1,0 +1,36 @@
+{
+  "id": "item-extra-luvas",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-2a435307-0572-4cc4-833c-52730f1f106c.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nIMPORTANT currentcardtitle is LUVAS DE FORCA, but the firstreference is an OLDINCORRECTartmapping to CordaoDeRhu necklace. DoNOT make necklace thecard subject. Create a NEW matchingpair of robustbrownleatherFULLfinger gauntletgloves for a Brigao. Take ONLYmaterialmotifs fromoldnecklace: braidedrustbrownleathercords, greygreenwristwraps andone smallivorywolf-fangcharm attachedoutsideonewrist; no wolfcommunicatinggameplay. New gloves have simplemutedBronzeArco reinforcedknuckleplates, widewrists, cleanstrongsilhouette, notoverornamented. NEWscene inside a timber-beamedneighborhoodtraininghall on greyRAINYmorning. Adultmuscularhumanmale40, warmtanEastAsianfeatures, broadnose, thickshortmustache, blackhairinshorttopknot, plainnavyrolledsleevesworkshirt. Torso twistsforwardleft; ONEglovedfist closecamera directedtoward a woodenpracticepost UPLEFT, otherglovedhand raisedbesideribs, his nose/pupilslookingdirectlyatpost. Bothgloves clearlyvisible. Mildfocusedstrainface andtautshoulders suggestSELFcost2, no wound, blood orsomeoneelseinjured. A shortwhite/greystrengthglint concentratesalonggloveknucklesonly, not a fullcoloredValorbeam. Dustylowwindowraindrops, broadwoodpanels, hangingtowel and emptybenches give groundedfullscene, no arenaofgoldenexplosions. CurrentGENERIC ExtraDEBRIGAO UsoUnico: SELFconjuradortakes2damage, gains+2ATKthisturn; doNOTadd suspend/Arcano payment notinrule, no existingfixedattacknumber. Commonrarity. Nativecleanpolishedsmoothtones, identitydesignclearlyGLOVESnotnecklace.\nLastreferencefinishONLY, nevercopywoman,dragon,meadoworpose. Fullopaqueupright63:88environment.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/cordao-de-rhu.png",
+  "textoRegraLido": "Extra de Brigão. Uso único. Seu Conjurador toma 2 de dano: seu Conjurador ganha +2 de Ataque neste turno.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/cordao-de-rhu.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Salão de treino de bairro, vigas e poste revestido de corda",
+  "momentoDoDia": "Manhã chuvosa",
+  "clima": "Luz cinzenta de janela sobre madeira quente",
+  "escala": "Dois punhos enluvados e golpe contra poste em primeiro plano",
+  "avaliacaoVisual": "Par novo de luvas de couro com proteção simples de bronze, cordões trançados, faixas verde-acinzentadas e pequeno dente no punho. Brigão de cabelo preso e bigode mira o poste diretamente; golpe e rosto seguem a mesma direção. Nenhum colar foi usado como arte principal.",
+  "decisoes": [
+    "Referência do briefing é Cordão de Rhu, incompatível com o nome atual Luvas de Força. Criar luvas novas e usar apenas couro, cordões e dente como motivos materiais; preservar o arquivo antigo.",
+    "Extra de Brigão genérico sem Valores e de uso único: próprio Conjurador toma 2 e ganha +2 de Ataque neste turno.",
+    "Não adicionar suspensão nem pagamento de Arcano ausentes da regra atual.",
+    "Não transferir a comunicação com lobos do Cordão de Rhu para esta carta. Raridade comum."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

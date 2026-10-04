@@ -1,0 +1,66 @@
+{
+  "id": "item-transcritor-pena",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-bf148507-a2cb-4046-9482-473f547f266e.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-transcritor-pena.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/pena-de-idrael.png",
+  "textoRegraLido": "Canal. Transcritor. Suspenda o Conjurador e pague 1: olhe as 2 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/pena-de-idrael.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Tenda de escriba viajante num porto com barcos à noite",
+  "momentoDoDia": "Noite",
+  "clima": "Lamparina quente e céu azul escuro",
+  "escala": "Pena e duas mãos na bancada, escolha de dois fólios",
+  "avaliacaoVisual": "Pena azul e creme manchada, envoltório de couro e ponta de bronze preservados. Duas mãos verdes de escriba: uma escreve, a outra recebe um fólio; o segundo segue para baixo do livro. Esfera pequena sugere pagamento. Tenda e porto dão cenário completo.",
+  "decisoes": [
+    "Canal / Transcritor genérico, sem Valores e sem ataque.",
+    "Olhar duas do topo, levar uma à mão e a outra ao fundo; suspender Conjurador e pagar 1.",
+    "Azul da pena é característica física, não afinidade Eternyr ou Cognitium automática.",
+    "Raridade comum; ignorar o ataque undefined e o uso de acordar do RPG como regra nova."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-transcritor-pena.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "bfdd8af6aeab0cd00bf36170d4e70dab2b854ceae5ee58b2145e1142a649581f",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}
