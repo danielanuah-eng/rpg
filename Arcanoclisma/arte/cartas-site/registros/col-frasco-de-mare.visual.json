@@ -1,0 +1,68 @@
+{
+  "id": "col-frasco-de-mare",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-de7cd060-edec-4626-bf91-d4490f4dece2.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-frasco-de-mare.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/frasco-de-mare.png",
+  "textoRegraLido": "Ganhe 3 de Arcano.",
+  "valoresLidos": [
+    "primitivum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/frasco-de-mare.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Laboratório numa gruta costeira com ervas, frascos e mar visível",
+  "momentoDoDia": "Manhã nublada",
+  "clima": "Luz difusa do mar com lamparinas locais",
+  "escala": "Frasco dominante; três esferas junto à mão da conjuradora",
+  "avaliacaoVisual": "Garrafa azul arredondada, corda, rolha apoiada e pingente espiral preservados. Três esferas verde-musgo com centros âmbar sobem do gargalo. Mulher de pele escura e tranças brancas acompanha as esferas com o olhar; cenário marinho completo.",
+  "decisoes": [
+    "Valor atual Primitivum prevalece sobre Alvorum e Eternyr do briefing antigo.",
+    "A água física do frasco continua azul; a magia ativa é verde-musgo e âmbar.",
+    "Três esferas representam ganhar 3 de Arcano, sem inventar ataque ou catástrofe.",
+    "Raridade comum; reflexos são materiais da cena, sem foil lendário."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-frasco-de-mare.png",
+  "dimensoes": [
+    1062,
+    1480
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "f9519fb2889b08a084f752fa3d1edaace90bcf7abd4fc8230a5341f280be86f7",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

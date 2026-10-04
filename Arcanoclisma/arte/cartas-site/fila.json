@@ -5669,9 +5669,9 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/frasco-de-mare.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Frasco de Maré: personagem/objeto do catálogo aprovado (frasco-de-mare). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Frasco de Maré como fonte ou forma do feitiço: Arcano bruto jorra e se acumula em esferas de luz na cor do Valor.",
       "ambienteOriginal": "Ambiente do Valor Alvorum: faróis sem noite, auroras, campos dourados ao amanhecer e ao entardecer. Magia na cor dourado e preto, em aura dividida, com falhas entre a parte de luz e a de sombra. Dupla temperatura: a magia é quente, então o cenário puxa o frio. A carta também serve aos Valores Primitivum, Eternyr: detalhes discretos dessas cores podem aparecer.",
@@ -5686,7 +5686,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/frasco-de-mare.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 136 Frasco de Maré. Subject: Frasco de Maré: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: guarda uma Maré de Valor e solta uma vez (o mestre escolhe qual veio dentro).\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-frasco-de-mare.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-frasco-de-mare.visual.json"
     },
     {
       "id": "col-chapeu-de-chuva",
@@ -5700,9 +5702,9 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/chapeu-de-chuva-particular.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Chapéu de Chuva Particular: personagem/objeto do catálogo aprovado (chapeu-de-chuva-particular). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Chapéu de Chuva Particular como fonte ou forma do feitiço: uma fonte, flor ou chuva mágica devolve as forças a quem estava caído.",
       "ambienteOriginal": "Ambiente do Valor Morbidyum: cemitérios que respiram, brejos, criptas e aldeias de curandeiras. Magia na cor verde-pálido, em fumaça fria e fios que partem, como almas. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Alvorum, Dominum: detalhes discretos dessas cores podem aparecer.",
@@ -5717,7 +5719,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/chapeu-de-chuva-particular.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 098 Chapéu de Chuva Particular. Subject: Chapéu de Chuva Particular: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: chove só em cima de quem você apontar (Perto).\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-chapeu-de-chuva.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-chapeu-de-chuva.visual.json"
     },
     {
       "id": "col-barco-dobravel",
@@ -5731,9 +5735,9 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/barco-dobravel.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Barco Dobrável: personagem/objeto do catálogo aprovado (barco-dobravel). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Barco Dobrável como fonte ou forma do feitiço: uma criatura é puxada de volta através de um portal, sumindo do campo.",
       "ambienteOriginal": "Ambiente do Valor Sublimeyn: céus de duas pálpebras, mares de mercúrio, nuvens e torres flutuantes. Magia na cor prata-mercúrio, em fumaça e vapor que escorrem, pingam e cristalizam. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Persona, Eternyr: detalhes discretos dessas cores podem aparecer.",
@@ -5748,7 +5752,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/barco-dobravel.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 107 Barco Dobrável. Subject: Barco Dobrável: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: vira barco de 4 lugares ao tocar água.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-barco-dobravel.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-barco-dobravel.visual.json"
     },
     {
       "id": "col-mapa-do-reino",
@@ -5762,9 +5768,9 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/mapa-do-reino.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Mapa do Reino: personagem/objeto do catálogo aprovado (mapa-do-reino). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Mapa do Reino como fonte ou forma do feitiço: quem conjura espia o futuro: algumas imagens brilham e uma é puxada para a mão, as outras afundam.",
       "ambienteOriginal": "Ambiente do Valor Cognitium: o arquivo sem dono, bibliotecas que esquecem, observatórios. Magia na cor índigo, em véu de fumaça com falhas, como se faltassem pedaços. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Sublimeyn, Eternyr: detalhes discretos dessas cores podem aparecer.",
@@ -5779,7 +5785,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/mapa-do-reino.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 116 Mapa do Reino. Subject: Mapa do Reino: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: desenha o caminho até a porta de um Reino.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-mapa-do-reino.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-mapa-do-reino.visual.json"
     },
     {
       "id": "col-arqueira-da-ultima-flecha",
@@ -5795,9 +5803,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/arqueira-da-ultima-flecha.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Arqueira da Última Flecha: personagem/objeto do catálogo aprovado (arqueira-da-ultima-flecha). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Arqueira da Última Flecha como fonte ou forma do feitiço: quem conjura mira com calma e solta a magia, que ainda está a caminho do alvo.",
       "ambienteOriginal": "Ambiente do Valor Conflitüo: campos de batalha sem trégua, arenas, trincheiras e forjas de guerra. Magia na cor vermelho-ferrugem, em construtos sólidos de luz: lâminas, escudos, estandartes. Dupla temperatura: a magia é quente, então o cenário puxa o frio. A carta também serve aos Valores Primitivum, Persona: detalhes discretos dessas cores podem aparecer.",
@@ -5821,7 +5829,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-arqueira-da-ultima-flecha.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-arqueira-da-ultima-flecha.visual.json"
     },
     {
       "id": "col-mare-de-sobras",
@@ -5837,9 +5847,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mare-de-sobras.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Maré de Sobras: personagem/objeto do catálogo aprovado (mare-de-sobras). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Maré de Sobras como fonte ou forma do feitiço: uma onda de magia varre o campo inimigo e atinge várias criaturas ao mesmo tempo, sem poupar as próprias; livros se abrem sozinhos numa estante e as letras saltam no ar.",
       "ambienteOriginal": "Ambiente do Valor Morbidyum: cemitérios que respiram, brejos, criptas e aldeias de curandeiras. Magia na cor verde-pálido, em fumaça fria e fios que partem, como almas. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Eternyr: detalhes discretos dessas cores podem aparecer.",
@@ -5863,7 +5873,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-mare-de-sobras.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-mare-de-sobras.visual.json"
     },
     {
       "id": "col-descartar-grau",
@@ -5877,9 +5889,9 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/coroa-riscada.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Coroa Riscada: personagem/objeto do catálogo aprovado (coroa-riscada). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Coroa Riscada como fonte ou forma do feitiço: uma criatura inimiga vira pó, cinza ou cristal, partindo-se em pedaços; um mensageiro, pássaro ou vento traz pergaminhos e segredos até as mãos de quem conjura.",
       "ambienteOriginal": "Ambiente do Valor Dominum: cidades-muralha, prisões, tronos e salões de juramento. Magia na cor roxo-sangue, em construtos de correntes, coleiras e elos. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Alvorum: detalhes discretos dessas cores podem aparecer.",
@@ -5894,7 +5906,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/coroa-riscada.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 143 Coroa Riscada. Subject: Coroa Riscada: artefato lendário, antigo e único. Rumor: a tatuagem dos Invictos, gravada em Bronze Arco; pertenceu a duzentos e doze duelos.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-descartar-grau.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-descartar-grau.visual.json"
     },
     {
       "id": "item-foco-espelho",
@@ -5910,9 +5924,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/espelho-da-cidade-dos-rostos.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Espelho da Cidade dos Rostos: personagem/objeto do catálogo aprovado (espelho-da-cidade-dos-rostos). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Espelho da Cidade dos Rostos em uso como arma ou foco de magia (Canal, Ataque undefined), empunhado por um conjurador visto de modo parcial (mão, braço ou silhueta), no instante de um ataque, num cenário de batalha.",
       "ambienteOriginal": "Ambiente: uma encruzilhada arcana devastada pelo Cataclisma, com ruínas, céu dividido entre luz quente e sombra fria e restos de magia no chão.",
@@ -5927,7 +5941,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/espelho-da-cidade-dos-rostos.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 122 Espelho da Cidade dos Rostos. Subject: Espelho da Cidade dos Rostos: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: mostra o que a pessoa sente, como clima em volta dela.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-foco-espelho.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-foco-espelho.visual.json"
     },
     {
       "id": "item-foco-pedra",

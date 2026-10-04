@@ -3,16 +3,8 @@
   "pedidoVersao": 2,
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 144,
+  "concluidas": 152,
   "pendentes": [
-    "col-frasco-de-mare",
-    "col-chapeu-de-chuva",
-    "col-barco-dobravel",
-    "col-mapa-do-reino",
-    "col-arqueira-da-ultima-flecha",
-    "col-mare-de-sobras",
-    "col-descartar-grau",
-    "item-foco-espelho",
     "item-foco-pedra",
     "item-foco-coroa",
     "item-transcritor-pena",
@@ -1223,6 +1215,70 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-cadeado-ciumento.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-cadeado-ciumento.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-frasco-de-mare",
+      "nome": "Frasco de Maré",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-frasco-de-mare.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-frasco-de-mare.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-chapeu-de-chuva",
+      "nome": "Chapéu de Chuva Particular",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-chapeu-de-chuva.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-chapeu-de-chuva.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-barco-dobravel",
+      "nome": "Barco Dobrável",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-barco-dobravel.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-barco-dobravel.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-mapa-do-reino",
+      "nome": "Mapa do Reino",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-mapa-do-reino.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-mapa-do-reino.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-arqueira-da-ultima-flecha",
+      "nome": "Última Flecha",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-arqueira-da-ultima-flecha.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-arqueira-da-ultima-flecha.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-mare-de-sobras",
+      "nome": "Maré de Sobras",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-mare-de-sobras.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-mare-de-sobras.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-descartar-grau",
+      "nome": "Coroa Riscada",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-descartar-grau.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-descartar-grau.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-foco-espelho",
+      "nome": "Espelho da Cidade dos Rostos",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-foco-espelho.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-foco-espelho.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
     }
   ],

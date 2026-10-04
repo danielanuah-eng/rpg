@@ -1,0 +1,68 @@
+{
+  "id": "col-mare-de-sobras",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-f3eb242a-f6cc-4797-b197-0a288dd07823.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-mare-de-sobras.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/mare-de-sobras.png",
+  "textoRegraLido": "Cause 2 de dano a cada Aliado (inclusive os seus) e compre 1 carta.",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mare-de-sobras.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Comporta em ruínas e acampamento de monstros no brejo",
+  "momentoDoDia": "Dia nublado",
+  "clima": "Luz difusa depois da chuva; água física azul e maré mágica verde-pálida",
+  "escala": "Criatura de cerâmica dominante e quatro aliados atravessados pela mesma onda",
+  "avaliacaoVisual": "Maré de Sobras preserva cacos de ânfora, cracas, tecido verde-azulado, madeira e mandíbula vazada. As duas garras agora varrem baixo. Uma mesma onda alcança quatro silhuetas diferentes, sem feridas gráficas; conjurador pequeno fica na estrutura elevada ao fundo.",
+  "decisoes": [
+    "Valor atual Morbidyum; não adicionar poderes Eternyr do briefing antigo.",
+    "Causa 2 de dano a cada Aliado inclusive os próprios. Os dois pares são atingidos pela mesma onda, sem sugerir aliados imunes.",
+    "Uma memória pequena junto ao conjurador sugere comprar uma carta; não alterar efeitos ou adicionar destruição automática.",
+    "Incomum apenas estética, sem brilho lendário generalizado."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-mare-de-sobras.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "5755e65b5cfbca80299ee7fe01b162e885362696df7bf44d3b306646bb73a6b1",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "incomum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

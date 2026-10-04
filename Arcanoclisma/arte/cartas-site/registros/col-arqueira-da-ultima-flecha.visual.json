@@ -1,0 +1,68 @@
+{
+  "id": "col-arqueira-da-ultima-flecha",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-62deefb4-55db-41c7-bca8-f17622aa4e7f.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-arqueira-da-ultima-flecha.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/arqueira-da-ultima-flecha.png",
+  "textoRegraLido": "Cause 3 de dano a um Aliado ou Mística.",
+  "valoresLidos": [
+    "conflituo"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/arqueira-da-ultima-flecha.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Muralha e pátio de castelo, com portão e montanhas ao longe",
+  "momentoDoDia": "Entardecer",
+  "clima": "Céu violeta e pêssego; pedras azul-acinzentadas",
+  "escala": "Arqueira agachada no alto; um alvo no pátio abaixo",
+  "avaliacaoVisual": "Identidade da arqueira, cachos, faixa vermelha, camisa clara, lenço azul e arco preservados. Nova pose agachada em três-quartos de costas. Rosto olha para baixo à esquerda, na direção do arco e da única flecha reta; um aliado ogro é o alvo.",
+  "decisoes": [
+    "Mira coerente entre rosto, arco, trajetória reta e um único alvo, seguindo a revisão solicitada para Luneta.",
+    "Regra atual causa 3 de dano a um Aliado ou Mística; não atingir Conjurador nem grupo.",
+    "Conflitüo atual: magia vermelho-ferrugem localizada no arco e flecha.",
+    "Pose e ambiente novos, preservando a identidade original; raridade comum."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-arqueira-da-ultima-flecha.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "d78a8bc0f8cc8afd3212b93468d60bf9bf5ac8d6b555e9a32e157ecf83e338cb",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

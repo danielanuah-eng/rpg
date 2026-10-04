@@ -1,16 +1,8 @@
 {
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 144,
+  "concluidas": 152,
   "pendentes": [
-    "col-frasco-de-mare",
-    "col-chapeu-de-chuva",
-    "col-barco-dobravel",
-    "col-mapa-do-reino",
-    "col-arqueira-da-ultima-flecha",
-    "col-mare-de-sobras",
-    "col-descartar-grau",
-    "item-foco-espelho",
     "item-foco-pedra",
     "item-foco-coroa",
     "item-transcritor-pena",

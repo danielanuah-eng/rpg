@@ -1,0 +1,36 @@
+{
+  "id": "item-foco-espelho",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-1149c7b0-2bd1-4af7-a78e-7e72dc3b835d.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nExactfirstrefmirror: oval handmirror with broadweatheredBronzeArco frame, lowerlong sculptedhandle withsmall teardropinset, coolglass containing FIVE softsuperimposed profilefaces in coral,ochre,blue,green,violet arrangedlikemoods. Preserve fivefaces and handcraftedmirror identity; coloredfaces are physical/reflectedemotionalimagery NOT fiveplayableValues. NEWenvironment: a quietpracticealcove INSIDE schoolofmagic, creamplasterwalls, softmorningwindowlight, cleanwoodworkbench, simpleclayteaandlinen. Maturedarkskinnedmale healer withshortblacklocs, plaincreamrolledsleeves and slateapron, partiallyvisiblebehindmirror, onehandholdsactualhandleoverbench. Righthand preparesONEquiethealingTemporaria as paleWHITE/SILVER-NEUTRAL flame-shapedribbon above a closedcleanbandagepouch. Mirror catches a smallerweakerreflection of the same ribbon then releases a slightlyfullersmoothribbon along SAMEdirection; gentle optical amplification toshowfocusfunction, no separateattack/combatneweffect, no healinggroup, no targetinvincibility. His eyesare turneddown towardthe ribbon/mirror surface, notattheviewer. Two blurred fullydressed apprentices discussingblankparchment by farwindow, quietcontext, nocrowdedbattleground. Item is CURRENTGENERIC EQUIPMENT with NO Valores: do NOT assignPersona or multicolorValueaffinity, no emblem/UI. RulesONLY Canal/FocoArcano, suspendConjuradorandpay1: NEXTdamageORheal ofYOURTemporaria thisturn+1; not a weaponwithattackundefined or autonomouscast. Commonrarity, normalmaterialglints, no legendaryrainbowfoil. Mainfocus is bigmirror ondiagonal andoneusegesture withschoolenvironment ateveryedge, broad smoothsurfaces andlocallyreflectedlight, no embossedphotorealism.\nLastreference ONLY approvedsmoothillustration finish, no repeatingher girl,dragon,meadoworpose. Opaquefullvertical63:88scene.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/espelho-da-cidade-dos-rostos.png",
+  "textoRegraLido": "Canal. Foco Arcano. Suspenda o Conjurador e pague 1: o próximo dano ou cura de uma Temporária sua neste turno tem +1.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/espelho-da-cidade-dos-rostos.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Alcova de prática dentro de escola de magia, com bancada e janela",
+  "momentoDoDia": "Manhã",
+  "clima": "Luz suave de janela, materiais quentes e efeito branco localizado",
+  "escala": "Espelho oval dominante, rosto e mãos do conjurador junto à preparação de uma magia",
+  "avaliacaoVisual": "Moldura oval de bronze, cabo alongado com inserto e cinco perfis coloridos preservados. Homem de pele escura e locs curtos observa o espelho e uma fita mágica branca ampliada. Escola e aprendizes pequenos ao fundo completam o cenário.",
+  "decisoes": [
+    "Equipamento genérico sem Valores, permitido pelas regras atuais; os rostos coloridos não significam cinco Valores de jogo.",
+    "Canal / Foco Arcano: suspender Conjurador e pagar 1 melhora em +1 o próximo dano OU cura de uma Temporária própria neste turno.",
+    "Ignorar Ataque undefined e batalha impostos pelo briefing antigo; este foco não recebe valor de ataque inventado.",
+    "Raridade comum, sem foil lendário; figuras de ambientação sem identidade de carta inventada."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

@@ -1,0 +1,38 @@
+{
+  "id": "col-barco-dobravel",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-7ae2cf26-0718-4f66-91b4-4d4f299aa544.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nFirst reference exactfoldedboatidentity: oval cylindrical luggage bundle ofcreamcanvas, darknavyfoldedwoodpanels at end, two rustbrown leatherbelts withsimple rectangularbronzebuckles, topbrownleatherhandle, centralbronzeclasp withsmall physicalbluewaterdrop jewel. New scene: on a peach sandstone jetty suspended above a still mercury-silver sea in Sublimeyn, high threequarter overhead camera. Folded boat rests on lower-right jetty while a few wooden ribs fan partly open into a compact fourseat skiff; keep originalstraps/handle/bundle design visible. A single OWN friendly adult stout green lizard traveler, in a plain russet waistcoat and loosecreamtrousers, is stepping intact toward a small liquid-silver oval RETURN portal above that partiallyunfoldedskiff. Its expressive face looks toward its owner: one adult small goblin mage withlongstraightnavyhair, olive skin, plain pale blue workshirt and ochre scarf, at left side extends hand toward ownally. Portal shrinks directionally from traveler to owner'sopenpalm, vaporform fluidmercurysilver, intactfriendly ally not killed, no second victim or enemy. Broad warm sandstone planes, vertical stilt houses and a few hanging linencloths above calm reflective silver sea, hazy diffuse overcast midday. No violent tidalwaves, no golden heaven, no lightblast. Common Repentina cost2 grau1 generated1, returnONEofYOURAliado OR Mistica to owner'shand. Represent ONEownallyreturnonly, no stealing enemy, no new transportgameplay. Incidentaltraveler has no invented name/cardstats. Shipartifact is main foreground; environment fills each edge, clean silhouettes, restrained magic and smooth planes, no roughcanvas overlay.\nLast reference ONLY illustrates the smooth finish, nevercopy its girl, dragon, meadow, pose. New full opaque upright63:88 scene.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/barco-dobravel.png",
+  "textoRegraLido": "Devolva um Aliado ou Mística seu à mão do dono.",
+  "valoresLidos": [
+    "sublimeyn"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/barco-dobravel.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Porto de casas sobre o mar de mercúrio de Sublimeyn",
+  "momentoDoDia": "Meio do dia",
+  "clima": "Céu difuso e água calma",
+  "escala": "Barco parcialmente aberto em primeiro plano; um aliado retornando ao dono",
+  "avaliacaoVisual": "Bundle de lona creme, duas correias, alça, peças de madeira azul e fecho com gota preservados no barco parcialmente aberto. Um viajante reptiliano inteiro passa pelo portal prateado em direção à mão da maga goblin; ambos se olham. Cais e porto completam a cena.",
+  "decisoes": [
+    "Valor atual Sublimeyn: vapor de mercúrio prateado, sem os Valores secundários do briefing antigo.",
+    "Devolve um único Aliado ou Mística próprio à mão do dono. A cena escolhe um aliado intacto, não rouba um inimigo nem representa morte.",
+    "As figuras de ambientação não recebem nomes, estatísticas ou novas habilidades.",
+    "Raridade comum; portal é efeito do feitiço, sem acabamento lendário."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

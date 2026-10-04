@@ -1,0 +1,38 @@
+{
+  "id": "col-mapa-do-reino",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-57975d31-3020-4d95-8374-5ec23dddad45.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPreserve exact firstreference kingdommap identity: one raggedochre parchment with curledtop/bottomrolls, rust leather ties, painted blue river, darkgreenforests, tinyfortress/castle and a jaggedmountaingateway; originaltinyyellowroute may be faded ink ONLY, no blazing goldportal. New environment: a ruralcartographer's tower open onto a broad valley of quietfarms and distant colossalgreybeasts grazing, clearfreshmorning. Camera over left shoulder of adult dwarf male explorer with shortredhair and bushydarkredbeard wearing a plain indigo linenvest, no elaborate goldembroideredmage robe. His shoulder frames lowerleft, ONE map spreadonwoodentable is main centralimage. Exactly FIVE small translucent indigo terrainmemoryislands hovering in row just overparchment: village,bridge,tower,forest,gateway. TWO of these (bridge andtower) draw gently toward his openRIGHTpalm along two thinindigotrails; the other THREE descend toward the lowerfar parchment edge andfade underneath. He turns hishead slightlydownright, looks directly at twochosenmemories. Everymagic trail is INDIGO withdiscontinuoussmoke, currentCOGNITIUMonly, not activeSublimeynsilver orEternyrbluewhite. Story ofselection, not new teleportability. CommonFindante cost3 grau2 generated1, looktop5choose2tohandremaining3bottomdeck; no numbers, playingcardUI or readabletext. Broad warmwoodplasterinterior, coolnaturalvalley beyond, handcarvedmaptools and one clayteacup, broad smoothtoneplanes, mediumcloseenvironmental composition. No gold-HDR, no giantspacevortex.\nLast reference ONLY illustrates the smooth finish, nevercopy its girl, dragon, meadow, pose. New full opaque upright63:88 scene.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/mapa-do-reino.png",
+  "textoRegraLido": "Olhe as 5 cartas do topo do seu baralho; ponha 2 na mão e as outras no fundo do baralho.",
+  "valoresLidos": [
+    "cognitium"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mapa-do-reino.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Torre de cartógrafo voltada a vale rural com criaturas gigantes ao longe",
+  "momentoDoDia": "Manhã clara",
+  "clima": "Luz fresca e nuvens pequenas",
+  "escala": "Mapa sobre bancada visto por cima do ombro, vale amplo ao fundo",
+  "avaliacaoVisual": "Pergaminho com rolos, rios, florestas, castelos e porta entre montanhas preservado. Cinco pequenas memórias de terreno em índigo; as duas centrais ligam-se à mão, as três externas ao mapa. O explorador olha para a seleção. Paisagem ampla e bancada legíveis.",
+  "decisoes": [
+    "Valor atual Cognitium. A rota antiga dourada vira desenho físico discreto, sem portal Alvorum ativo.",
+    "Regras atuais: olhar cinco cartas do topo, pôr duas na mão e três no fundo. O briefing antigo que selecionava uma não prevalece.",
+    "Memórias ilustram a seleção sem adicionar teleporte ou poderes das criaturas incidentais do vale.",
+    "Raridade comum e superfícies lisas; ambiente novo sem copiar a composição da referência de acabamento."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

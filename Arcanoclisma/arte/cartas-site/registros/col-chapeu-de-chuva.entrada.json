@@ -1,0 +1,38 @@
+{
+  "id": "col-chapeu-de-chuva",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-23f25a93-fb57-4c4b-b3a2-e3deaf2af0f7.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nFirst reference identity: battered soft NAVY wizard hat with a folded angular point, wide uneven round brim, muted ochre/gold cloth band with one plain oval bronze buckle, thin worn ochre seam at brim. Keep its handmade hat shape, no redesign. NEW full scene in a warm terracotta village courtyard with a dry fountain and climbing vines under a broad shaded canopy at late afternoon, quiet rather than grand event. One mature brown-skinned female conjurador, short silver curls, teal tunic and rust-red trousers, sits sideways on a fountain edge. She lifts her own hat in right hand slightly over her left forearm, looking calmly and directly down at that forearm. A compact palegreen magical raincloud hangs beneath the near brim; only one localized gentle shower of palegreen curative droplets reaches HER forearm with a clean linen bandage. She regains strength, composed relieved expression. Single subject being healed, no rain on whole village and no healing crowd. An ordinary sleepy cat stays dry on shaded stair far back. Leaf shadows cross smooth terracotta walls, small cool blue shadows on walkway, warm soft late afternoon sky glimpsed high above. Current Morbidyum only, magic palegreen cold soul wisps mixed with gentle drops; hat fabric staysnavy. Common Repentina cost2 grau1 generated1, heal4 damage ofYOURconjurador only; no resurrection or extra status. Tight-but-environmental threequarter view, full hat silhouette legible, face not looking at viewer, fingers anatomically clear, broad smooth painted planes, understated localized magic. No text or card UI.\nLast reference is finish ONLY, never reproduce its girl, golden dragon, meadow or pose. Full opaque upright63:88 scene at every edge.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/chapeu-de-chuva-particular.png",
+  "textoRegraLido": "Cure 4 de dano do seu Conjurador.",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/chapeu-de-chuva-particular.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Pátio de vila de terracota com fonte, trepadeiras e escada",
+  "momentoDoDia": "Fim da tarde",
+  "clima": "Luz quente e sombra de folhas; chuva mágica apenas localizada",
+  "escala": "Uma conjuradora sentada com o chapéu sobre o próprio braço",
+  "avaliacaoVisual": "Chapéu azul-marinho de ponta dobrada, aba larga e faixa ocre reconhecível. Chuva verde-pálida de uma pequena nuvem alcança somente o antebraço enfaixado da mulher, que olha para o local curado. Pátio e gato ao fundo dão ambiente sem evento grandioso.",
+  "decisoes": [
+    "Valor atual Morbidyum, sem adicionar os Valores secundários do briefing antigo.",
+    "Cura de 4 de dano do próprio Conjurador, em velocidade Repentina; não representar cura de um grupo ou ressurreição.",
+    "Figura de ambientação redesenhada para esta carta, sem associar nome ou identidade não documentados.",
+    "Raridade comum e iluminação localizada."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

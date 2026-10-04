@@ -1,0 +1,38 @@
+{
+  "id": "col-arqueira-da-ultima-flecha",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-62deefb4-55db-41c7-bca8-f17622aa4e7f.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPreserve existing adultfemale archer exactly: warmtan skin, darkbrown voluminous curlyhair heldbyrustredband, patientfocusedexpression, white rolledsleeve shirt, blue-teal scarf, brownleathercorset/belts/bracers/boots, rustred cloak, quiver and carvedslenderbronze recurvebow. Make a NEWPOSE, not the oldstandingright-facingcutout. She crouches withone knee atop a bluegreycastlebattlement at dusk, body inupper-right3/4backside, torso twisted toward DOWNLEFT. Her entirehead/nosepointDOWNLEFT, cheeknear bowstring, pupilssighted along the arrow toward ONEarmored hornedogre ALLY visiblelowerleft on emptycourtyardstone. Her lefthand holdsbowforward downleft, righthandhasjustreleasednearcheek, exactlyONEredrust energyarrow flies in a SINGLE STRAIGHTLINE from bow toward ogre shoulderarmor. Make head, bowaxis, arrowdirection andtargetall co-linear. No arrowbends,hairpinray or lookingatcamera. Ogre braces shield but arrow is nearimpact; non-graphic impact, no blood. Quiet violet dusk with muted peachsky, oldcastle archway, few smallcurtainsfarback, large calmarchitecturalplanes, bow andhandslegible. Controlledrustred hardlightaroundbowandarrowONLY Conflituo. Common Repentina cost3 grau2 generated1, deal3toONEAliado OR Mistica; choose oneally not enemyconjurador, no groupblast. Do not change archeridentity oradd another arrow. Local magic clear without foregroundwash or overallHDRglow.\nLast ref ONLY smooth finish; never reuse its woman, golden dragon ormeadow. Full opaque upright63:88illustration.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/arqueira-da-ultima-flecha.png",
+  "textoRegraLido": "Cause 3 de dano a um Aliado ou Mística.",
+  "valoresLidos": [
+    "conflituo"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/arqueira-da-ultima-flecha.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Muralha e pátio de castelo, com portão e montanhas ao longe",
+  "momentoDoDia": "Entardecer",
+  "clima": "Céu violeta e pêssego; pedras azul-acinzentadas",
+  "escala": "Arqueira agachada no alto; um alvo no pátio abaixo",
+  "avaliacaoVisual": "Identidade da arqueira, cachos, faixa vermelha, camisa clara, lenço azul e arco preservados. Nova pose agachada em três-quartos de costas. Rosto olha para baixo à esquerda, na direção do arco e da única flecha reta; um aliado ogro é o alvo.",
+  "decisoes": [
+    "Mira coerente entre rosto, arco, trajetória reta e um único alvo, seguindo a revisão solicitada para Luneta.",
+    "Regra atual causa 3 de dano a um Aliado ou Mística; não atingir Conjurador nem grupo.",
+    "Conflitüo atual: magia vermelho-ferrugem localizada no arco e flecha.",
+    "Pose e ambiente novos, preservando a identidade original; raridade comum."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

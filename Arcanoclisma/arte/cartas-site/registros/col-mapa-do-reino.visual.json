@@ -1,0 +1,68 @@
+{
+  "id": "col-mapa-do-reino",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-57975d31-3020-4d95-8374-5ec23dddad45.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-mapa-do-reino.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/mapa-do-reino.png",
+  "textoRegraLido": "Olhe as 5 cartas do topo do seu baralho; ponha 2 na mão e as outras no fundo do baralho.",
+  "valoresLidos": [
+    "cognitium"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mapa-do-reino.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Torre de cartógrafo voltada a vale rural com criaturas gigantes ao longe",
+  "momentoDoDia": "Manhã clara",
+  "clima": "Luz fresca e nuvens pequenas",
+  "escala": "Mapa sobre bancada visto por cima do ombro, vale amplo ao fundo",
+  "avaliacaoVisual": "Pergaminho com rolos, rios, florestas, castelos e porta entre montanhas preservado. Cinco pequenas memórias de terreno em índigo; as duas centrais ligam-se à mão, as três externas ao mapa. O explorador olha para a seleção. Paisagem ampla e bancada legíveis.",
+  "decisoes": [
+    "Valor atual Cognitium. A rota antiga dourada vira desenho físico discreto, sem portal Alvorum ativo.",
+    "Regras atuais: olhar cinco cartas do topo, pôr duas na mão e três no fundo. O briefing antigo que selecionava uma não prevalece.",
+    "Memórias ilustram a seleção sem adicionar teleporte ou poderes das criaturas incidentais do vale.",
+    "Raridade comum e superfícies lisas; ambiente novo sem copiar a composição da referência de acabamento."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-mapa-do-reino.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "3b8e76a2a2f3a54d31bbd500f6a5ed19e5086b4a84df51f80db57b4e28e5781e",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

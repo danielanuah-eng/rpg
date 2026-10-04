@@ -1,8 +1,10 @@
 # Entrega visual para Claude — 04/10/2026
 
-## Atualização posterior: 144/210
+## Atualização posterior: 152/210
 
-O lote e a galeria agora têm 144 artes concluídas, com 66 pendentes. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega inicial de conjuradores abaixo. Entraram Ninho de Estrelas, Coroa Sem Rei, Tapete de Duas Casas, Primeira Moeda, Sino dos Juramentados, Âncora do Mesmo Dia, Cemitério que Respira e Cadeado Ciumento. Cada ID tem cena e registro próprios, com dimensões e alfa medidos. Os Valores atuais determinam a cor da magia; aparência física e roupas dos personagens aprovados continuam preservadas. Os gestos e cenários não adicionam efeitos ao jogo.
+O lote e a galeria agora têm 152 artes concluídas, com 58 pendentes. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega inicial de conjuradores abaixo. Entraram Frasco de Maré, Chapéu de Chuva Particular, Barco Dobrável, Mapa do Reino, Última Flecha, Maré de Sobras, Coroa Riscada e Espelho da Cidade dos Rostos. As 151 do pedido inicial estão entregues; o Espelho começa as 59 adicionais, parte da mesma meta de 210. Cada ID tem cena e registro próprios, com dimensões e alfa medidos. Os Valores atuais determinam a cor da magia; aparência física e roupas dos personagens aprovados continuam preservadas. Os gestos e cenários não adicionam efeitos ao jogo.
+
+Última Flecha: rosto, arco e flecha reta miram o mesmo alvo. Maré de Sobras atinge aliados dos dois lados, não protege os próprios. Mapa do Reino usa a regra atual de escolher duas entre cinco, sem repetir a descrição antiga que escolhia uma. Coroa Riscada ainda exige descarte de uma carta do Grau. Espelho é Canal / Foco Arcano genérico, sem Valores ou ataque; os cinco rostos coloridos pertencem à identidade do objeto e não são afinidades de jogo.
 
 Cemitério que Respira mostra um único aliado retornando, ainda sujeito ao pagamento do custo; O Que Voltou aparece em pose nova, voltado para o conjurador. Cadeado Ciumento usa Dominum atual: recuperar uma carta que anula outra neste turno, banida ao resolver, e comprar uma carta. Não interpretar a aparência do cadeado como anulação permanente. Ninho de Estrelas usa Sublimeyn, Âncora do Mesmo Dia usa Cognitium e as raridades do catálogo RPG não substituem o briefing do TCG.
 

@@ -1,0 +1,38 @@
+{
+  "id": "col-descartar-grau",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-0675fa67-6593-4af2-9594-0bc15df53df6.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nFirst reference exactCoroaRiscada artifact: open agedBronzeArco circlet with tallbroad jaggedpointedprongs, centralwideforkedbladeform, darkbluegreen incised flowingmarks andstrong lowerband. Preserve scratches,patina and irregular silhouette; actualmetal mutedbronze NOT blazinggold. NEWscene in the duelingcourt of a warmclaywalled city, atclearmidday withhardarchitecturalshadows and coolbluegrey paving. Crown heldlow atlower-right by left hand of elderlyfemale mage with olive skin, shortstraightblueblackbob and plainmutedpurplerobe. Partialsideviewofher face inrightthird lookingdirectly toward ONE animatedstonewarrior statue farleft. Darkbloodpurple linkconstruct extends straightfromcrown to ONEstoneidol, which cracksanddissolvesinto dust onasimplepedestal, no harm tohumanbystanders or blood. Onsameforegroundstonebench ONE oldblankfoldedparchment representing a Grade alreadybeingpaidlies inashbowl; a SEPARATE newcleanblankrolledscroll driftstowardheropenrighthand, representdraw1. No additionaldestroyedtargets. Emptydistantcourt arches and high citywall, a few smalldistantduelsilhouettesunharmed and subdued, no grandlightblast. Common TemporariaFindante cost3 grau2 generated1, requires DISCARD1 fromOWNGRAU, destroyONEtarget, draw1. No removalofenemyGrade or freecast. ActualValueDominum only, chainmagicpurpleovermutedbluecourtyard; oldgoldaura andRPGlendaryrumor are notextraValue/rarity. Crown dominatescamera, smoothbroadwallplanes, expressive selectiveink.\nLastreference ONLY approvedsmoothillustration finish, no repeatingher girl,dragon,meadoworpose. Opaquefullvertical63:88scene.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/coroa-riscada.png",
+  "textoRegraLido": "Para jogar, descarte 1 carta do seu Grau. Destrua um alvo e compre 1 carta.",
+  "valoresLidos": [
+    "dominum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/coroa-riscada.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Pátio de duelos numa cidade murada, com arcadas e brasões",
+  "momentoDoDia": "Meio-dia",
+  "clima": "Céu claro e sombras arquitetônicas azuladas",
+  "escala": "Coroa próxima da câmera, um alvo de pedra se dissipando e um pergaminho comprado",
+  "avaliacaoVisual": "Coroa de bronze com grandes pontas, inscrições verde-azuladas e desgaste preservados. Uma única estátua atingida pelo vínculo roxo se desfaz. Pergaminho gasto na tigela de cinzas e outro novo junto à mão se distinguem; perfil da maga voltado à ação.",
+  "decisoes": [
+    "Regra atual exige descartar uma carta do próprio Grau, destruir um alvo e comprar uma carta. Não omitir o custo nem multiplicar alvos.",
+    "Valor Dominum atual determina o vínculo roxo; a aura dourada do RPG não torna a carta Alvorum.",
+    "Origem lendária no RPG não substitui raridade comum do TCG.",
+    "Cena unificada em pátio, sem colar o recorte antigo em um fundo."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}
