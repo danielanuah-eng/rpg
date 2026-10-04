@@ -1,0 +1,67 @@
+{
+  "id": "col-ilusionista-do-labirinto",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-c0e6111d-d9ff-4350-a804-708fd4bcda9d.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-ilusionista-do-labirinto.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/ilusionista-do-labirinto.png",
+  "textoRegraLido": "Ao entrar: devolva um Aliado ou Mística à mão do dono.",
+  "valoresLidos": [
+    "sublimeyn"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/ilusionista-do-labirinto.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Pátio labiríntico de escola de teatro flutuante de Sublimeyn",
+  "momentoDoDia": "Meio do dia",
+  "clima": "Luz clara e nuvens amplas entre as construções",
+  "escala": "Ilusionista no terço direito, portal grande e uma criatura em travessia à esquerda",
+  "avaliacaoVisual": "Jovem adulto com topo calvo e cabelo nas têmporas, olhos azuis, roupa e medaIhões originais preservados. Nova torção do tronco e gesto baixo junto ao portal prateado, uma criatura de pedra intacta em travessia. Sombra deslocada na pavimentação e cenário de labirinto completo.",
+  "decisoes": [
+    "Valor atual Sublimeyn: portais e vapor prateados; roupa mantém índigo físico.",
+    "Ao entrar devolve um Aliado ou Mística à mão; apenas uma criatura intacta atravessa o portal.",
+    "Raridade incomum apenas estética; não alterar texto ou custos."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-ilusionista-do-labirinto.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "61a92bc5198d40439b205a47205abbfbe0fe9db6fcc51dd078524383b888c0ce",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "incomum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

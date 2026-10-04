@@ -1,0 +1,37 @@
+{
+  "id": "col-ilusionista-do-labirinto",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-c0e6111d-d9ff-4350-a804-708fd4bcda9d.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPreserve Ilusionista doLabirinto firstreference: slim tall youngADULT around25, narrowshoulders, rosyfair skin with subtlefreckles, wide squareface crookednose, largeblueeyes underthinbrows, BALDtop with darkhair only at temples/back. Navy/cream magicianclothes, layered longpurple/navycoat tails, brownleather belts/pouches and bronzeroundmedallions, tall practicalboots. New pose partly BACKtoviewer, body turned sideprofile toLEFT, one hand low makes a knife-like slicinggesture opening an upright portal, other hand bent up near ownshoulder. Faceglances DOWN at the SAME portal near his cuttinghand, mischievous slightasymmetricsmile, clearlyaimed. An intact horned little grey stoneboar ALLY backs through this mercury portal into a quiet room visible on otherside, halfbody stillhere/half beyond, visibly RETURNING rather than being destroyed. No dismemberment, dustdeath or newcopy creature. Current liveSublimeyn card Aoentrar:returnoneAllyORmystictoownerhand; depictONEally exit. Silvermercury vapor and crystalline cutedges, NOT activeindigoCognitiummagic. Surrounding illusion architecture as a few separate curved panels like firstreference, in SILVER, not hugewall of blueglow. Scene: warm ochre bricklabyrinth courtyardinside Sublimeyn's floating theatre school at brightOVERCASTnoon, low darkmaroon doorways and curvedhedgerows, nonsymmetrical walkway highviewtoonecorner, distant cloudsea visibleoverparapet. His dark physicalSHADOW deliberately points in WRONGdirection toward daylight instead of away, clear meaningfulshadowshape on paving, no otherface inshadow. Mainfigure inrightthird and portal left, smoothpainted walls/plants and limitedsurfacegrain. Incomum subtle local softmetalfinishonly, calm clear environmentalillumination. Stats2/3 cost4 grau3 generated1; no extra teleportcopy damage or cardnumberUI.\nSecond referenceONLY polished smooth finish, neverreusewoman/dragon/meadow. New fullopaqueenvironment upright63:88; no frame, cardtext, numerals, UI, logos or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/ilusionista-do-labirinto.png",
+  "textoRegraLido": "Ao entrar: devolva um Aliado ou Mística à mão do dono.",
+  "valoresLidos": [
+    "sublimeyn"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/ilusionista-do-labirinto.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Pátio labiríntico de escola de teatro flutuante de Sublimeyn",
+  "momentoDoDia": "Meio do dia",
+  "clima": "Luz clara e nuvens amplas entre as construções",
+  "escala": "Ilusionista no terço direito, portal grande e uma criatura em travessia à esquerda",
+  "avaliacaoVisual": "Jovem adulto com topo calvo e cabelo nas têmporas, olhos azuis, roupa e medaIhões originais preservados. Nova torção do tronco e gesto baixo junto ao portal prateado, uma criatura de pedra intacta em travessia. Sombra deslocada na pavimentação e cenário de labirinto completo.",
+  "decisoes": [
+    "Valor atual Sublimeyn: portais e vapor prateados; roupa mantém índigo físico.",
+    "Ao entrar devolve um Aliado ou Mística à mão; apenas uma criatura intacta atravessa o portal.",
+    "Raridade incomum apenas estética; não alterar texto ou custos."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

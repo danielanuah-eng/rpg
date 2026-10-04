@@ -1,0 +1,37 @@
+{
+  "id": "col-vento-mensageiro",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-e094d7ca-8c14-40e7-a101-c31d8d5b0473.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nVentoMensageiro firstref identity shape: a NONHUMAN windbeing composed of TWO long crossing fluidribbons with voidgaps, elongated fluttering trailingbody with a simple small ghostlike headshape and two paleglowing eyes, carries ONE CLOSED IVORY ENVELOPE with small round blue-seal-symbol and absolutelynolettering. Keep envelope and ribbongeometry recognizable; no anthropomorphichands/legs/wings or humanface. CURRENTplayable ValorSublimeyn, so energeticmaterial primarily SILVER-MERCURY with cooldeepblue reflectedshadows and pale streaks rather than solid midnightblueactiveEternyrmagic. New S-curving flyingpath from upperleft toward a low open circularwindow at lowerright; envelope held between crossedribbontips nearcamera, head looking along path toward window. Newscene over a mountainpass posthouse lodged inside a floating ochre windmill/signalstation in Sublimeyn at mutedclearnoon. Camera from elevatedrooftop looking diagonally DOWN shows deepcool mountainravine through cloudlayers, terra-cotta bridgeways, scattered suspendedrockislets and few plainfluttering postal pennants, openwindow with darkwood ledge and incidental smallreader inside. Foreground softoutoffocus banner edge framesupperleft, no map/text/chesscard UI. Fulltransparent-looking etherealribbons but fullBACKGROUND opaqueeverywhere. Softsilvervapor trails and controlledglints, no huge halo/lightningstorm, envelopecrispfocus against bluegreyair, warmterracottaposthouse. Current ally2/1 cost3 grau2 generated1 rulesEtéreo,Proficiente only; do notinventrecipientdraw or damageeffect. Common no foil. Smooth polished illustratedplanes, windwhispsgraceful but not a glowing flameblob.\nSecondreference only smoothfinish, neveritscharacters/dragon/meadow. Full new opaque63:88 verticalscene; no cardborder, UI, text, number, watermark or logo.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/vento-mensageiro.png",
+  "textoRegraLido": "Etéreo, Proficiente.",
+  "valoresLidos": [
+    "sublimeyn"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/vento-mensageiro.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Posto postal em moinho flutuante de Sublimeyn acima de um desfiladeiro",
+  "momentoDoDia": "Meio do dia",
+  "clima": "Tempo claro com nuvens entre ilhas suspensas",
+  "escala": "Ser de vento e envelope próximos; janela de destino, moinhos e montanhas em profundidade",
+  "avaliacaoVisual": "Duas fitas de vento cruzadas, cabeça não humana com olhos luminosos e envelope fechado preservados. Material prateado com sombras azuis, movimento curvo em direção à janela e cenário completo opaco. Relevo do desfiladeiro e bandeira próxima estabelecem distância.",
+  "decisoes": [
+    "Valor atual Sublimeyn, refletido em vapor e fitas prata-mercúrio; manter forma reconhecível do ser.",
+    "Etéreo e Proficiente são as únicas palavras-chave atuais, não adicionar compra ao destinatário.",
+    "Arte comum, sem textos legíveis no envelope nem UI."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

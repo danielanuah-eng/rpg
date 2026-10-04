@@ -1,0 +1,37 @@
+{
+  "id": "col-curandeira-de-ervas",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-18b16710-686f-40f7-b832-4c3448d88372.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nExact identity CurandeiraDeErvas firstref: adultbrown/tanskin woman with warmbrownwideeyes, smallsoftnose, patientfriendlyexpression, curlydarkbrownhair gatheredup underMOSSgreenheadband, creamrolledsleeve shirt, rustshawl and practicalgreen longapron with smallmutedbronzeplantmotifs, brownbagsof herbs and simplewooden mortar, loosebrowntrousers and tallleatherboots. NEWpose kneeling on oneknee beside woodenbenchtable, shoulders angled and head bentDOWN toward actual treatmenttarget, onehand places cleanherbpoultice and other holds gentlewhitebandage on FOREARMof seatedadultrugged reptiliantravelergreyblue scales wearing a weatheredgreyvest. Nographicwoundorfluids; forearmpadded cleanly. Both of her handsnotoldsource selftreating, targetgentleandrelaxed. CURRENTValorPrimitivum, tinyMOSSgreen/AMBER organicwisps and looseleafspores overpoultice, not palegreenMorbidyumghostfaces. Rule Suspend:heal2damagefromONEtarget; depict smallfocusedcare notmassheal or resurrection. Scene in a cozyherborist conservatory attached to a hillsidevillagehouse at mildmorning: largefoggedgreenishwindow shows patchworkfields and windingroad, timberroof and broad creamclaywalls, uncomplicatedplantbeds and orderlybrownpots, dullbronzetaps, shadefrom bigleaves nearforeground, a few dryherbbundles. Not grand magictemple or classroomhall or wildnoisyforest. Softwindowlight, mutedrust warmthbalancesgreenplants, smoothpaintedsurfaces, warmquiet story with skillfulhands. Current ally0/2 cost2 grau1 generated1, common no foil. Full scene occupies allopaqueedges.\nSecondreferenceonly approvedsmoothillustrationfinish; no borrowingwoman/dragon/meadow. New fullopaque upright63:88 cardillustration. No frame, text, numerals, UI, logos or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/curandeira-de-ervas.png",
+  "textoRegraLido": "Suspenda: cure 2 de dano de um alvo.",
+  "valoresLidos": [
+    "primitivum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/curandeira-de-ervas.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Estufa de herborista de Primitivum em casa de vila, campos e morros pela janela",
+  "momentoDoDia": "Manhã",
+  "clima": "Tempo claro com sombras de folhas",
+  "escala": "Curandeira e um paciente reptiliano na sala; paisagem ao fundo",
+  "avaliacaoVisual": "Cabelo castanho cacheado preso, faixa verde, xale ferrugem, avental e bolsas de ervas preservados. Nova pose ajoelhada aplicando emplastro com duas mãos num único braço enfaixado, olhar focado na ação. Pequenas folhas e brilho musgo/âmbar, sem ferimento gráfico.",
+  "decisoes": [
+    "Valor atual Primitivum prevalece sobre Morbidyum do briefing antigo.",
+    "Suspenda: cure 2 de dano de um alvo; cuidado pontual em apenas um paciente.",
+    "Nova interação completa em estufa, acabamento comum, sem reutilizar autoemplastro do recorte."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

@@ -1,0 +1,67 @@
+{
+  "id": "col-contrabandista-de-porto",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-058ed51a-0c89-406b-8c86-29f792d5da89.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-contrabandista-de-porto.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/contrabandista-de-porto.png",
+  "textoRegraLido": "Etéreo. Ao causar dano de combate ao Conjurador inimigo: ganhe 1 de Arcano.",
+  "valoresLidos": [
+    "persona"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/contrabandista-de-porto.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Cais de alfândega de Persona, armazéns, guindastes, cargas e varanda rival",
+  "momentoDoDia": "Início da manhã",
+  "clima": "Céu claro com nuvens leves e ar marítimo",
+  "escala": "Contrabandista no salto etéreo, observador à frente, cais e rival em planos posteriores",
+  "avaliacaoVisual": "Lenço vermelho, cabelo preto, colete azul gasto, roupa e adaga de bronze preservados. Corpo em diagonal acima do cais com bordas parcialmente etéreas coral. Olhar, rosto e lâmina direcionados à varanda do conjurador rival, sem contato gráfico.",
+  "decisoes": [
+    "Etéreo justifica transparência visual localizada, sem atribuir imunidade extra.",
+    "Regra ganha 1 Arcano ao causar dano de combate ao Conjurador inimigo; cena de aproximação não adiciona recompensa automática.",
+    "Valor atual Persona, comum, cena nova integrada."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-contrabandista-de-porto.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "a7427d6215914a3e3a9a79742a91f72a887b0504c4cd2e429c8152da53700b9d",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

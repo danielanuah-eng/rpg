@@ -1,0 +1,67 @@
+{
+  "id": "col-menina-raposa",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-8d7677f6-1de2-4f15-bd8a-2a557cbcae6b.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-menina-raposa.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/menina-raposa.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "persona"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/menina-raposa.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Beco de oficina de máscaras de Persona, toldos e portas azuis",
+  "momentoDoDia": "Manhã depois da chuva",
+  "clima": "Chão molhado, céu clareando",
+  "escala": "Menina no salto, máscara perto e artesão distante na oficina",
+  "avaliacaoVisual": "Proporções infantis, orelhas e cauda de raposa, cabelo preto assimétrico e roupa verde preservados. Nova pose de salto com dois braços e pernas visíveis, expressão surpresa e olhar na máscara à direita. Poça e arquitetura criam profundidade; magia coral discreta nas mãos.",
+  "decisoes": [
+    "Valor atual Persona determina a cor da magia; roupa e pelagem mantêm cores aprovadas.",
+    "Leveza e reação medrosa preservadas sem inventar habilidade ou ferimento.",
+    "Aliado Repentina 2/2 com regras vazias, acabamento comum."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-menina-raposa.png",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "45b87c30a4644384aaa819f43917ead557de1d121dc7d3fec0bbd1c3be23d575",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

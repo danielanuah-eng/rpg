@@ -1,8 +1,10 @@
 # Entrega visual para Claude — 04/10/2026
 
-## Atualização posterior: 128/210
+## Atualização posterior: 136/210
 
-O lote e a galeria agora têm 128 artes concluídas, com 82 pendentes. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega inicial de conjuradores abaixo. Entraram Sonhador Perdido, Juramentado, O Seu Rosto, O Ministrum, O Que Voltou, Bibliotecária do Arquivo, Repetido e Espírito-Animal. Cada ID tem cena e registro próprios, com dimensões e alfa medidos. Os Valores atuais determinam a cor da magia; aparência física e roupas dos personagens aprovados continuam preservadas. As regras vazias desses Aliados continuam vazias: eventos narrativos da arte não adicionam efeitos ao jogo.
+O lote e a galeria agora têm 136 artes concluídas, com 74 pendentes. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega inicial de conjuradores abaixo. Entraram Gato de Navio, Menina Raposa, Ilusionista do Labirinto, Ceifadora da Peste, Contrabandista de Porto, Vento Mensageiro, Guarda-costas Contratado e Curandeira de Ervas. Cada ID tem cena e registro próprios, com dimensões e alfa medidos. Os Valores atuais determinam a cor da magia; aparência física e roupas dos personagens aprovados continuam preservadas. Os gestos e cenários não adicionam efeitos ao jogo.
+
+A Ceifadora passou por revisão mínima de rosto e pupilas para mirar o alvo da foice. Usar `col-ceifadora-da-peste.png` do mapa, não o estudo anterior em `variantes/`. O Ilusionista mostra uma criatura intacta atravessando um portal, enquanto a Ceifadora mostra um único alvo se dissipando. Protegido 2 do Guarda-costas continua sendo pagamento adicional de Arcano para escolhê-lo como alvo, sem imunidade ou reflexão. Curandeira: Valor atual Primitivum, cura pontual de 2 de dano em um alvo.
 
 A **Luneta do Fim** foi revista após o autor apontar cabeça/mira incoerentes e raio dobrado: arquivo corrente `Arcanoclisma/arte/cartas-site/base-dano-conjurador-c4-a745c23c.png`. A versão sem hash e o estudo intermediário são históricos, não devem prevalecer sobre o mapa. Os exemplos novos de ambientes e a coerência de mira estão em `DIRETRIZ-CENARIOS.md`. Nenhuma nova imagem de Ciantia faz parte desta publicação. A fila continua em produção; avaliação final e integração do Claude seguem pendentes.
 

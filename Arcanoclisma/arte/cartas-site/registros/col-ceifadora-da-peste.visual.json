@@ -1,0 +1,76 @@
+{
+  "id": "col-ceifadora-da-peste",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-75373787-44f9-4aeb-b8b2-c09550fc9576.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-ceifadora-da-peste.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/ceifadora-da-peste.png",
+  "textoRegraLido": "Ao entrar: destrua um Aliado ou Mística.",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/ceifadora-da-peste.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/arte/cartas-site/variantes/col-ceifadora-da-peste-antes-alinhamento.png",
+      "papel": "Imagem gerada antes da revisão mínima da mira"
+    }
+  ],
+  "ambiente": "Escadaria de capela antiga em charneca de Morbidyum, muro, salgueiros e bruma",
+  "momentoDoDia": "Entardecer",
+  "clima": "Céu violeta e laranja, bruma baixa",
+  "escala": "Ceifadora e foice monumental, um alvo em primeiro plano e duas testemunhas distantes",
+  "avaliacaoVisual": "Mulher adulta de cabelo branco curto espetado e roupa aprovada preservados. Foice espectral verde-pálida envolve um único alvo que se dissipa sem ferimentos gráficos. Revisão mínima mudou rosto e olhos para baixo à esquerda, acompanhando a criatura atingida; corpo e cenário mantidos.",
+  "decisoes": [
+    "Ao entrar destrói um Aliado ou Mística: não ampliar para destruição de campo inteiro.",
+    "Morbidyum determina magia verde-pálida; rara é acabamento estético prateado/roxo discreto.",
+    "Corrigir direção de cabeça e pupilas em relação ao alvo, preservando composição.",
+    "Guardar o estudo anterior em variantes, fora do mapa corrente."
+  ],
+  "revisaoMira": {
+    "versaoAnterior": "Arcanoclisma/arte/cartas-site/variantes/col-ceifadora-da-peste-antes-alinhamento.png",
+    "promptEdicao": "Edit this exact finished card art minimally. Keep character identity, short spiky white hair, outfit, BOTH arms/hands, huge pale-green spectral scythe, creature dissolving at LOWER LEFT, chapel, stairs, light, camera, all colors and all composition. Change ONLY the woman's HEAD rotation and eye gaze: turn her entire face toward IMAGE LEFT (toward her own right shoulder), tilt chin DOWN about 20 degrees, BOTH grey eyes and visible pupils look directly down at the dissolving armored creature at the LOWER LEFT of the frame. Patient stern focused expression. Eyes do not look at viewer, upper right, her raised hand, or outside scene. Align nose direction, face direction and pupils with the lower-left target. Not merely moving pupils while face stays turned away. Preserve exact hairstyle and recognizable face features, all face/head anatomy coherent. Do not move or alter scythe, body stance, garments, creature or environment. Full opaque upright native image, no words, border or UI."
+  },
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-ceifadora-da-peste.png",
+  "dimensoes": [
+    1063,
+    1480
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "8b58d89a75a85a6f6c234b4e588a743ed08feaf62a18ab485a79dd997dc33c6f",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "rara",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

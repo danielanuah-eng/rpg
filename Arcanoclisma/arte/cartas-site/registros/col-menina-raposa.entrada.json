@@ -1,0 +1,37 @@
+{
+  "id": "col-menina-raposa",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-8d7677f6-1de2-4f15-bd8a-2a557cbcae6b.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPreserve MeninaRaposa firstref as a SMALL FOX-GIRL CHILD with childface/body proportions, lightgolden skin, ovalface highcheekbones smallchin, widelyspaced roundamber eyes, blackhair SHAVED on one side and long/tousledbraided on other, orangefoxears with whiteinnerfur, largebushy orange/white tail, small foxfurred feet/paws. Fullydressed in practical mossgreen stitchedtunic with creamscarf/wrapping, darkshorttrousers/skirtlikepanels, leatherbracelets and mattebronzebeltclasps. Keepidentity exact, do not age intoadult. New dynamicscene: startled nimble sidejump over a shallow rainpuddle in a sheltered Persona workshop alley; knees drawn up asymmetrically, torso twists and TWOhandspoint out for balance, head turned RIGHT with worried surprisedexpression and smallteethvisible. She's looking right at a little mechanicalmask on a loose clothline that suddenly swings toward her, NOT gazingatviewer, no damagedpeopleorgraphicviolence. Tiny soft CORAL wisps around TWO hands per CURRENT playable Valor Persona; originalgreen/amber remain ONLY physicaloutfit andfurpalette, noactive Primitivumspell. Alley after morningrain: blue-grey smoothplasterwall, smallwhite/blueglazed doors, hanging maskmaker cloth awnings, open doorway with warm wooden shelves, modest adult craftsman barelyvisible at rear. Puddlewater reflects paleovercastsky, distantstreet and a littletree through arch not huge grandiose event. Slight dutchangle camera at girl's waistlevel so leap/feetreadclearly, foreground clothleftaddsdepth. Current allyRepentina2/2 cost2 grau1 generated1 EMPTYrules, agility/startle narrativeonly. Common no foil, smooth scenery and gentle illumination, child's distinct haircut/foxanatomypreserved.\nReference2 only polished smooth finish. Original unified full opaque upright63:88 art, no cardborder, typography, UI, numbers, logo or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/menina-raposa.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "persona"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/menina-raposa.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Beco de oficina de máscaras de Persona, toldos e portas azuis",
+  "momentoDoDia": "Manhã depois da chuva",
+  "clima": "Chão molhado, céu clareando",
+  "escala": "Menina no salto, máscara perto e artesão distante na oficina",
+  "avaliacaoVisual": "Proporções infantis, orelhas e cauda de raposa, cabelo preto assimétrico e roupa verde preservados. Nova pose de salto com dois braços e pernas visíveis, expressão surpresa e olhar na máscara à direita. Poça e arquitetura criam profundidade; magia coral discreta nas mãos.",
+  "decisoes": [
+    "Valor atual Persona determina a cor da magia; roupa e pelagem mantêm cores aprovadas.",
+    "Leveza e reação medrosa preservadas sem inventar habilidade ou ferimento.",
+    "Aliado Repentina 2/2 com regras vazias, acabamento comum."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

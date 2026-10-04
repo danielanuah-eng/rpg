@@ -1,0 +1,37 @@
+{
+  "id": "col-guarda-costas",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-bb5726a2-2699-46c8-b4e3-af2af0f0e6de.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPreserve GuardaCostasContratado firstref ordinary human adultmale: athleticbroad tanbody, short darkbrown wavyhair, closecropped darkbeard/moustache, stern darkeyes with visiblepupils; rolledsleeve creamworkshirt, charcoalopenlongjacket, darkslate trousers, leatherbelt/thighpouch, plainbronzebuckle and practicalbrownboundboots. No armoredknightredesign or magicalweapon. New guarded bodylanguage: plantedfeetwide, one elbow bent and forearmheld outward to stop passage, otherhand at ownwaist near leatherpouch; torso partlyBACKtoviewer turning head over shoulder toward an adultpayingmerchant behindhim. Strong clearunequalstance, NOT sourcefrontalextendedpunch. Scene at evening in a narrow Dominum guildhallentry: smoothbrickochrewalls and broadwoodstairs, roundwooddoor halfopen onto rainybluecourtyard, lantern on onewall, rolledcontracts and modestcoinpouch on nearby sidebench, fullydressed merchant waiting behindshoulder. Camera at chestheightthreequartersfrom hallfloor, surroundingsdarkwarm enough to frame charcoaloutfit, bluewetground beyond providesdistance. CURRENT ValorDominum, extremelysubtle DARKBLOODPURPLE brokenchain-links nearbody outline/forearms. Rule Protegido2 means opponent must PAY2additional Arcano to target him; it is NOT immunity, spellreflection, indestructibility or projectiledeflection. Thus depict contractual protectedpresence ONLY, no incomingbeam bouncedaway or opaque forcefield. Stats2/3 cost3 grau2 generated1. Keep exactlytwo armsandhands/twolegs, common no foil, room planesclean smooth, mainexpressionreadable.\nSecondreferenceonly approvedsmoothillustrationfinish; no borrowingwoman/dragon/meadow. New fullopaque upright63:88 cardillustration. No frame, text, numerals, UI, logos or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/guarda-costas-contratado.png",
+  "textoRegraLido": "Protegido 2.",
+  "valoresLidos": [
+    "dominum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/guarda-costas-contratado.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Entrada de guilda de Dominum, contratos, banco de madeira e pátio chuvoso",
+  "momentoDoDia": "Início da noite",
+  "clima": "Chuva no exterior e lanternas quentes no interior",
+  "escala": "Guarda-costas central, contratante atrás e figuras na porta",
+  "avaliacaoVisual": "Homem de cabelo curto e barba, camisa creme e casaco escuro aprovados, em nova posição vista parcialmente de costas. Duas mãos e pernas visíveis, gesto de deter passagem, cliente junto a bolsa de pagamento. Vínculos roxos discretos na silhueta, ambiente noturno com profundidade.",
+  "decisoes": [
+    "Protegido 2 é custo adicional para ser alvo, não imunidade nem reflexão de feitiços.",
+    "Aura contratual de Dominum discreta; não inventar força extra à carta.",
+    "Raridade comum e cena própria, preservar roupas de trabalho."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

@@ -5054,9 +5054,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/gato-de-navio.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Gato de Navio: personagem/objeto do catálogo aprovado (gato-de-navio). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Gato de Navio avançando ao ataque com fúria, em pleno golpe; surgindo de repente, de surpresa, no meio da ação.",
       "ambienteOriginal": "Ambiente do Valor Persona: a cidade dos rostos, feiras de máscaras, ruas de espelhos e tavernas cheias. Magia na cor coral, em aura suave e uniforme que transborda quando a emoção é forte. Dupla temperatura: a magia é quente, então o cenário puxa o frio. A carta também serve aos Valores Primitivum: detalhes discretos dessas cores podem aparecer.",
@@ -5080,7 +5080,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-gato-de-navio.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-gato-de-navio.visual.json"
     },
     {
       "id": "col-menina-raposa",
@@ -5096,9 +5098,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/menina-raposa.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Menina-Raposa: personagem/objeto do catálogo aprovado (menina-raposa). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Menina-Raposa avançando ao ataque com fúria, em pleno golpe; surgindo de repente, de surpresa, no meio da ação.",
       "ambienteOriginal": "Ambiente do Valor Persona: a cidade dos rostos, feiras de máscaras, ruas de espelhos e tavernas cheias. Magia na cor coral, em aura suave e uniforme que transborda quando a emoção é forte. Dupla temperatura: a magia é quente, então o cenário puxa o frio. A carta também serve aos Valores Sublimeyn, Primitivum: detalhes discretos dessas cores podem aparecer.",
@@ -5122,7 +5124,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-menina-raposa.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-menina-raposa.visual.json"
     },
     {
       "id": "col-ilusionista-do-labirinto",
@@ -5138,9 +5142,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/ilusionista-do-labirinto.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Ilusionista do Labirinto: personagem/objeto do catálogo aprovado (ilusionista-do-labirinto). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Ilusionista do Labirinto em guarda firme, protegendo os aliados e segurando a linha; ao chegar, uma criatura é puxada de volta através de um portal, sumindo do campo.",
       "ambienteOriginal": "Ambiente do Valor Sublimeyn: céus de duas pálpebras, mares de mercúrio, nuvens e torres flutuantes. Magia na cor prata-mercúrio, em fumaça e vapor que escorrem, pingam e cristalizam. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Persona: detalhes discretos dessas cores podem aparecer.",
@@ -5164,7 +5168,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-ilusionista-do-labirinto.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-ilusionista-do-labirinto.visual.json"
     },
     {
       "id": "col-ceifadora-da-peste",
@@ -5180,9 +5186,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/ceifadora-da-peste.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Ceifadora da Peste: personagem/objeto do catálogo aprovado (ceifadora-da-peste). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Ceifadora da Peste em guarda firme, protegendo os aliados e segurando a linha; ao chegar, uma criatura inimiga é desfeita por completo pela magia.",
       "ambienteOriginal": "Ambiente do Valor Morbidyum: cemitérios que respiram, brejos, criptas e aldeias de curandeiras. Magia na cor verde-pálido, em fumaça fria e fios que partem, como almas. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Dominum: detalhes discretos dessas cores podem aparecer.",
@@ -5206,7 +5212,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-ceifadora-da-peste.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-ceifadora-da-peste.visual.json"
     },
     {
       "id": "col-contrabandista-de-porto",
@@ -5222,9 +5230,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/contrabandista-de-porto.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Contrabandista de Porto: personagem/objeto do catálogo aprovado (contrabandista-de-porto). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Contrabandista de Porto em forma etérea, meio translúcido, flutuando acima do campo de batalha, fora do alcance de quem anda no chão; rumo ao conjurador rival.",
       "ambienteOriginal": "Ambiente do Valor Persona: a cidade dos rostos, feiras de máscaras, ruas de espelhos e tavernas cheias. Magia na cor coral, em aura suave e uniforme que transborda quando a emoção é forte. Dupla temperatura: a magia é quente, então o cenário puxa o frio. A carta também serve aos Valores Cognitium: detalhes discretos dessas cores podem aparecer.",
@@ -5248,7 +5256,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-contrabandista-de-porto.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-contrabandista-de-porto.visual.json"
     },
     {
       "id": "col-vento-mensageiro",
@@ -5264,9 +5274,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/vento-mensageiro.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Vento Mensageiro: personagem/objeto do catálogo aprovado (vento-mensageiro). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Vento Mensageiro em forma etérea, meio translúcido, flutuando acima do campo de batalha, fora do alcance de quem anda no chão.",
       "ambienteOriginal": "Ambiente do Valor Sublimeyn: céus de duas pálpebras, mares de mercúrio, nuvens e torres flutuantes. Magia na cor prata-mercúrio, em fumaça e vapor que escorrem, pingam e cristalizam. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Conflitüo: detalhes discretos dessas cores podem aparecer.",
@@ -5290,7 +5300,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-vento-mensageiro.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-vento-mensageiro.visual.json"
     },
     {
       "id": "col-guarda-costas",
@@ -5306,9 +5318,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/guarda-costas-contratado.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Guarda-Costas Contratado: personagem/objeto do catálogo aprovado (guarda-costas-contratado). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Guarda-Costas Contratado em guarda firme, protegendo os aliados e segurando a linha; cercado por uma proteção que desvia magias inimigas.",
       "ambienteOriginal": "Ambiente do Valor Dominum: cidades-muralha, prisões, tronos e salões de juramento. Magia na cor roxo-sangue, em construtos de correntes, coleiras e elos. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Conflitüo: detalhes discretos dessas cores podem aparecer.",
@@ -5332,7 +5344,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-guarda-costas.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-guarda-costas.visual.json"
     },
     {
       "id": "col-curandeira-de-ervas",
@@ -5348,9 +5362,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/curandeira-de-ervas.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Curandeira de Ervas: personagem/objeto do catálogo aprovado (curandeira-de-ervas). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Curandeira de Ervas em guarda firme, protegendo os aliados e segurando a linha.",
       "ambienteOriginal": "Ambiente do Valor Morbidyum: cemitérios que respiram, brejos, criptas e aldeias de curandeiras. Magia na cor verde-pálido, em fumaça fria e fios que partem, como almas. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Alvorum, Primitivum: detalhes discretos dessas cores podem aparecer.",
@@ -5374,7 +5388,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-curandeira-de-ervas.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-curandeira-de-ervas.visual.json"
     },
     {
       "id": "col-ninho-de-estrelas",

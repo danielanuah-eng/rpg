@@ -3,16 +3,8 @@
   "pedidoVersao": 2,
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 128,
+  "concluidas": 136,
   "pendentes": [
-    "col-gato-de-navio",
-    "col-menina-raposa",
-    "col-ilusionista-do-labirinto",
-    "col-ceifadora-da-peste",
-    "col-contrabandista-de-porto",
-    "col-vento-mensageiro",
-    "col-guarda-costas",
-    "col-curandeira-de-ervas",
     "col-ninho-de-estrelas",
     "col-coroa-sem-rei",
     "col-tapete-de-duas-casas",
@@ -1111,6 +1103,70 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-campeao-primitivum.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-primitivum.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-gato-de-navio",
+      "nome": "Gato de Navio",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-gato-de-navio.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-gato-de-navio.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-menina-raposa",
+      "nome": "Menina Raposa",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-menina-raposa.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-menina-raposa.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-ilusionista-do-labirinto",
+      "nome": "Ilusionista do Labirinto",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-ilusionista-do-labirinto.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-ilusionista-do-labirinto.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-ceifadora-da-peste",
+      "nome": "Ceifadora da Peste",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-ceifadora-da-peste.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-ceifadora-da-peste.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-contrabandista-de-porto",
+      "nome": "Contrabandista de Porto",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-contrabandista-de-porto.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-contrabandista-de-porto.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-vento-mensageiro",
+      "nome": "Vento Mensageiro",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-vento-mensageiro.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-vento-mensageiro.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-guarda-costas",
+      "nome": "Guarda-costas Contratado",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-guarda-costas.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-guarda-costas.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-curandeira-de-ervas",
+      "nome": "Curandeira de Ervas",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-curandeira-de-ervas.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-curandeira-de-ervas.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
     }
   ],

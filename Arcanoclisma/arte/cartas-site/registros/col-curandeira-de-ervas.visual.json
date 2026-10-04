@@ -1,0 +1,67 @@
+{
+  "id": "col-curandeira-de-ervas",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-18b16710-686f-40f7-b832-4c3448d88372.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-curandeira-de-ervas.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/curandeira-de-ervas.png",
+  "textoRegraLido": "Suspenda: cure 2 de dano de um alvo.",
+  "valoresLidos": [
+    "primitivum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/curandeira-de-ervas.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Estufa de herborista de Primitivum em casa de vila, campos e morros pela janela",
+  "momentoDoDia": "Manhã",
+  "clima": "Tempo claro com sombras de folhas",
+  "escala": "Curandeira e um paciente reptiliano na sala; paisagem ao fundo",
+  "avaliacaoVisual": "Cabelo castanho cacheado preso, faixa verde, xale ferrugem, avental e bolsas de ervas preservados. Nova pose ajoelhada aplicando emplastro com duas mãos num único braço enfaixado, olhar focado na ação. Pequenas folhas e brilho musgo/âmbar, sem ferimento gráfico.",
+  "decisoes": [
+    "Valor atual Primitivum prevalece sobre Morbidyum do briefing antigo.",
+    "Suspenda: cure 2 de dano de um alvo; cuidado pontual em apenas um paciente.",
+    "Nova interação completa em estufa, acabamento comum, sem reutilizar autoemplastro do recorte."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-curandeira-de-ervas.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "fc8b5964a8be2e87febae4373016840f658f5e65faa990712bef962d13ef171a",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

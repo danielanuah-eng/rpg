@@ -1,0 +1,67 @@
+{
+  "id": "col-gato-de-navio",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-dcd0859d-56f6-4765-996b-7f2da75c5d47.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-gato-de-navio.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/gato-de-navio.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "persona"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/gato-de-navio.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Convés de barco mercante no rio, cidade de Persona e ponte ao fundo",
+  "momentoDoDia": "Dia claro",
+  "clima": "Nuvens leves e luz difusa",
+  "escala": "Gato pequeno em relação ao cesto, cordas, barris e marinheiro",
+  "avaliacaoVisual": "Gato tigrado com cauda anelada, peito creme e olhos amarelo-verdes preservado. Quatro patas separadas, saltando do cesto com garra voltada à corda coral, olhar acompanha esse alvo. Barco e cidade em profundidade; criatura comum sem aura acrescentada.",
+  "decisoes": [
+    "Persona apenas como Valor da carta e cor no ambiente; gato natural não ganha magia inventada.",
+    "Aliado Repentina 1/1 com regras vazias; surgimento rápido é narrativa visual.",
+    "Novo gesto em cena integrada, não colagem do recorte."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-gato-de-navio.png",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "116ba6c94c8cfafc0e369c7eb8b23ef36aee3a711493b15655f2aeab0a3eec6e",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

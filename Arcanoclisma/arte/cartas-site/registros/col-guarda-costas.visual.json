@@ -1,0 +1,67 @@
+{
+  "id": "col-guarda-costas",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-bb5726a2-2699-46c8-b4e3-af2af0f0e6de.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-guarda-costas.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/guarda-costas-contratado.png",
+  "textoRegraLido": "Protegido 2.",
+  "valoresLidos": [
+    "dominum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/guarda-costas-contratado.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Entrada de guilda de Dominum, contratos, banco de madeira e pátio chuvoso",
+  "momentoDoDia": "Início da noite",
+  "clima": "Chuva no exterior e lanternas quentes no interior",
+  "escala": "Guarda-costas central, contratante atrás e figuras na porta",
+  "avaliacaoVisual": "Homem de cabelo curto e barba, camisa creme e casaco escuro aprovados, em nova posição vista parcialmente de costas. Duas mãos e pernas visíveis, gesto de deter passagem, cliente junto a bolsa de pagamento. Vínculos roxos discretos na silhueta, ambiente noturno com profundidade.",
+  "decisoes": [
+    "Protegido 2 é custo adicional para ser alvo, não imunidade nem reflexão de feitiços.",
+    "Aura contratual de Dominum discreta; não inventar força extra à carta.",
+    "Raridade comum e cena própria, preservar roupas de trabalho."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-guarda-costas.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "3256591d435ff0ea4c1002efe4f467bc99eba75e26f76a6d24f2d4e2fb802256",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

@@ -1,16 +1,8 @@
 {
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 128,
+  "concluidas": 136,
   "pendentes": [
-    "col-gato-de-navio",
-    "col-menina-raposa",
-    "col-ilusionista-do-labirinto",
-    "col-ceifadora-da-peste",
-    "col-contrabandista-de-porto",
-    "col-vento-mensageiro",
-    "col-guarda-costas",
-    "col-curandeira-de-ervas",
     "col-ninho-de-estrelas",
     "col-coroa-sem-rei",
     "col-tapete-de-duas-casas",

@@ -1,0 +1,67 @@
+{
+  "id": "col-vento-mensageiro",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-e094d7ca-8c14-40e7-a101-c31d8d5b0473.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-vento-mensageiro.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/vento-mensageiro.png",
+  "textoRegraLido": "Etéreo, Proficiente.",
+  "valoresLidos": [
+    "sublimeyn"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/vento-mensageiro.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Posto postal em moinho flutuante de Sublimeyn acima de um desfiladeiro",
+  "momentoDoDia": "Meio do dia",
+  "clima": "Tempo claro com nuvens entre ilhas suspensas",
+  "escala": "Ser de vento e envelope próximos; janela de destino, moinhos e montanhas em profundidade",
+  "avaliacaoVisual": "Duas fitas de vento cruzadas, cabeça não humana com olhos luminosos e envelope fechado preservados. Material prateado com sombras azuis, movimento curvo em direção à janela e cenário completo opaco. Relevo do desfiladeiro e bandeira próxima estabelecem distância.",
+  "decisoes": [
+    "Valor atual Sublimeyn, refletido em vapor e fitas prata-mercúrio; manter forma reconhecível do ser.",
+    "Etéreo e Proficiente são as únicas palavras-chave atuais, não adicionar compra ao destinatário.",
+    "Arte comum, sem textos legíveis no envelope nem UI."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-vento-mensageiro.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "363dfde5f6f4ebcede940ef0470381131b1788f7e23b4d8191e88d5022f06ebe",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}
