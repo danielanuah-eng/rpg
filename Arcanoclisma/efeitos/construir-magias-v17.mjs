@@ -90,9 +90,13 @@ function svg(d, id, fase) {
   }).join('');
   const forma = motivo[d.motivo];
   if (!forma) throw new Error('Motivo ausente: '+d.motivo);
-  const linhas = fase==='impacto' ? [0,1,2,3,4,5].map(i=>`<path d="M128 34V14" transform="rotate(${i*60+seed%25} 128 128)" stroke="${d.cor}" stroke-width="3" stroke-linecap="round"/>`).join('') : '';
+  const linhas = fase==='impacto' ? Array.from({length:11},(_,i)=>`<g transform="rotate(${i*32.7+seed%25} 128 128)"><path d="M122 101Q103 63 124 ${15+i%3*11}Q112 58 130 91Z" fill="${i%3?d.cor:d.nucleo}" opacity="${.3+i%4*.13}"/><path d="M131 83Q147 63 138 39" stroke="${d.nucleo}" stroke-width="1.5" fill="none" opacity=".65"/></g>`).join('') : '';
   const corpo = `<g fill="url(#corpo)" stroke="${d.nucleo}" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">${forma}</g>`;
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 256 256"><title>${xml(id+' · '+fase+' · '+d.motivo)}</title><defs><linearGradient id="corpo" x1="0" y1="0" x2="1" y2="1"><stop stop-color="${d.nucleo}" stop-opacity=".9"/><stop offset=".44" stop-color="${d.cor}" stop-opacity=".78"/><stop offset="1" stop-color="${d.cor}" stop-opacity=".3"/></linearGradient><filter id="brilho" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4"/></filter></defs><g opacity=".26" filter="url(#brilho)">${corpo}</g>${linhas}<g transform="translate(128 128) scale(${fase==='conjurar'?.72:1}) translate(-128 -128)">${corpo}</g>${pontos}</svg>`;
+  const rastro = fase==='trajeto' ? `<g fill="url(#corpo)"><path d="M7 139Q69 86 186 105L218 125Q117 98 52 150Q120 112 195 139Q124 160 24 172Q81 137 7 139Z"/><path d="M19 112Q95 56 196 110Q105 78 19 112Z"/><path d="M42 191Q123 151 218 133Q167 178 42 191Z"/></g><g stroke="${d.nucleo}" stroke-width="2" fill="none" opacity=".75"><path d="M14 144Q88 105 203 124M38 172Q127 138 195 133"/></g>` : '';
+  const escala = fase==='conjurar'?.7:fase==='impacto'?.38:.52;
+  const assinatura=`<g transform="translate(${fase==='trajeto'?185:128} 128) scale(${escala}) translate(-128 -128)">${corpo}</g>`;
+  const conteudo=linhas+rastro+assinatura;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 256 256"><title>${xml(id+' · '+fase+' · '+d.motivo)}</title><defs><linearGradient id="corpo" x1="0" y1="0" x2="1" y2="1"><stop stop-color="${d.nucleo}" stop-opacity=".78"/><stop offset=".44" stop-color="${d.cor}" stop-opacity=".7"/><stop offset="1" stop-color="${d.cor}" stop-opacity=".14"/></linearGradient><filter id="brilho" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3.2"/></filter></defs><g opacity=".18" filter="url(#brilho)">${conteudo}</g>${conteudo}${pontos}</svg>`;
 }
 function destino(p, d) {
   const t=p.texto.toLowerCase();

@@ -13,7 +13,7 @@
   top: 2.8%;
   z-index: 5;
 }
-.tcg-card:not(.is-hidden):is([data-type="conjurador"]) :is(.conjurador-values, .valores-centrais-v12) {
+.tcg-card:not(.is-hidden) :is(.conjurador-values, .valores-centrais-v12) {
   top: 8%;
   left: 45.56%;
   width: 8.89%;

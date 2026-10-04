@@ -57,6 +57,7 @@
 .mesa .zona-pilha:focus-visible { outline: 2px solid #f0d397; outline-offset: 3px; }
 .mesa .zona-pilha:hover .zp-carta { outline-color: var(--zona-cor); }
 .mesa .esfera-arcano small { color: #eff5ff; opacity: 1; }
+.mesa .marca-status .st-economia { background: #1e3851f2; border-color: #aecad9; color: #eef6ff; }
 .mesa .campo .cm .mesa-card-nome, .mesa .campo .cm.suspensa .mesa-card-nome {
   top: 2.5%;
   left: 16%;

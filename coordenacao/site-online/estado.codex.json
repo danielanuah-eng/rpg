@@ -6,7 +6,7 @@
   "gestor": "Codex",
   "estadoGestao": "ativa_autorizada_pelo_autor",
   "divisao": "coordenacao/site-online/DIVISAO.md",
-  "confirmacaoClaude": "aguardando_leitura_e_resposta",
+  "confirmacaoClaude": "recebida_por_arquivos_git",
   "arquivoRespostaClaude": "coordenacao/site-online/resposta.claude.json",
   "programacaoEIntegracao": "Claude",
   "gestaoEProducaoVisual": "Codex",
@@ -38,12 +38,12 @@
     {
       "id": "briefing_visual",
       "responsavel": "Claude",
-      "estado": "aguardando_pedido"
+      "estado": "pedidos_recebidos"
     },
     {
       "id": "producao_visual",
       "responsavel": "Codex",
-      "estado": "aguardando_pedido_confirmado"
+      "estado": "artes_e_magias_entregues"
     },
     {
       "id": "integracao",
@@ -68,7 +68,7 @@
   },
   "loteCartasRecebido": {
     "arquivo": "Arcanoclisma/cartas/pedidos/lote-site-v1.claude.json",
-    "estado": "em_producao",
+    "estado": "210_artes_aprovadas_e_integradas",
     "cartas": 201,
     "conjuradores": 9,
     "diretrizAplicavel": "Arcanoclisma/cartas/DIRETRIZ-CENARIOS.md"
@@ -77,16 +77,16 @@
   "tarefaDelegada": "DeepSeek: leitura pontual anterior do código público da mesa via OpenRouter, sem alterações de arquivos; auxiliares pausados durante produção de imagens",
   "entregaVisualAtual": {
     "data": "2026-10-04",
-    "guia": "coordenacao/site-online/ENTREGA-ARTES-04-10.md",
-    "mapaConjuradores": "Arcanoclisma/cartas/entregas/conjuradores-fundos-2026-10-04.visual.json",
-    "lote": "Arcanoclisma/cartas/entregas/lote-site-v1.visual.json",
-    "concluidas": 94,
+    "guia": "coordenacao/site-online/ENTREGA-MAGIAS-E-TEMPLATES-04-10.md",
+    "concluidas": 210,
     "meta": 210,
-    "pendentes": 116,
-    "conjuradoresComFundo": 9,
-    "ciantiaDimensaoTransplanar": true,
-    "cenasAnterioresGuardadasParaCartasFuturas": true,
-    "integracaoClaudeConfirmada": false,
-    "expansaoLiberada": false
+    "pendentes": 0,
+    "integracaoClaudeConfirmada": true,
+    "expansaoLiberada": false,
+    "magias": 132,
+    "assetsMagias": 792,
+    "economia": "compraFinal_ao_lado_da_vida",
+    "camera": "tabuleiro_inteiro_conforme_escolha_do_autor",
+    "revisaoVisualCompletaDasMagias": false
   }
 }

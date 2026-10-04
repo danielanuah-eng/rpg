@@ -1,27 +1,39 @@
 {
   "tarefaId": "mesa-efeitos-v1",
   "autor": "Codex",
-  "estado": "movimentos_entregues_assets_de_magia_pendentes",
+  "estado": "movimentos_e_132_magias_entregues",
   "modulo": "Arcanoclisma/online/public/js/mesa-efeitos-codex.js",
   "css": "Arcanoclisma/online/public/css/mesa-efeitos-codex.css",
   "metodos": {
-    "entrarEmCampo": { "duracaoMs": 620, "entregue": true },
-    "colidir": { "duracaoMs": 880, "entregue": true, "anima": "carta inteira em perspectiva, deitando e avançando; arte atual da própria carta" },
-    "resolver": { "executorEntregue": true, "assetsParticularesEntregues": false, "requer": "manifesto por ID com okGpt:true e arquivo real" },
-    "limpar": { "entregue": true }
+    "entrarEmCampo": {
+      "duracaoMs": 930,
+      "entregue": true
+    },
+    "colidir": {
+      "duracaoMs": 1320,
+      "entregue": true,
+      "anima": "carta inteira em perspectiva, deitando e avançando; arte atual da própria carta"
+    },
+    "resolver": {
+      "executorEntregue": true,
+      "assetsParticularesEntregues": true,
+      "requer": "manifesto por ID com okGpt:true e arquivo real",
+      "cartas": 132,
+      "manifesto": "Arcanoclisma/efeitos/entregas/magias-v17.visual.json"
+    },
+    "limpar": {
+      "entregue": true
+    }
   },
   "usaGeometriaEmPixelsDaTela": true,
   "movimentoReduzido": "sem animação",
   "cartasOcultas": "não clona nem consulta faces de cartas ocultas",
   "motorAlteradoPeloCodex": false,
-  "confirmacaoClaude": false,
+  "confirmacaoClaude": true,
   "conferenciaNavegador": "nao executada nesta etapa",
   "integracao": [
-    "Contrato recebido de efeitos/pedidos/mesa-efeitos-v1.claude.json; Claude reconstrói para atualizar DADOS.efeitosCodex.",
-    "O hook atual considera qualquer saída da pilha uma resolução, inclusive anulação. Claude deve passar resultado:'resolvido' apenas para resolução real (ou item.resultado com o mesmo valor); resultado não informado ou anulado não produz efeito de resolução.",
-    "O módulo conserva snapshots de cartas já visíveis para colisões mesmo quando uma delas sai de campo; sem snapshot/rect válido retorna motivo, sem inventar uma face.",
-    "O pedido atualizado contempla 132 resoluções e 70 colisões. As imagens particulares das resoluções seguem pendentes; manifesto vazio não declara aprovação nem fornece efeitos genéricos.",
-    "Codex limitou .campo do CSS v10 a .mesa .campo conforme pedido de Claude, evitando alterar campos do editor."
+    "Arcanoclisma/efeitos/entregas/magias-v17.integracao.claude.json",
+    "Todos os alvos e resultados vêm dos ganchos do Claude; cinco testes de contrato passaram. Revisão visual completa no jogo permanece pendente."
   ],
   "pushAutorizado": true
 }

@@ -31,6 +31,20 @@
     }
     const escala = Math.max(.25, Math.min(1.5, Number.parseFloat(mundo?.style.zoom) || 1));
     mesa.style.setProperty('--mesa-escala-visual', escala.toFixed(4));
+    // Economia impressa no template também acompanha a Vida sobre a carta em campo.
+    for (const conj of mesa.querySelectorAll('.conj-bloco .cm')) {
+      const valor = conj.querySelector('.stat-compraFinal > span')?.textContent;
+      const marcas = conj.querySelector('.marca-status');
+      if (valor == null || !marcas) continue;
+      let economia = marcas.querySelector('.st-economia');
+      if (!economia) {
+        economia = document.createElement('b'); economia.className = 'st-economia';
+        marcas.append(economia);
+      }
+      economia.title = `Economia: compra ${valor} cartas no fim do turno`;
+      const texto = `▱ ${valor}`;
+      if (economia.textContent !== texto) economia.textContent = texto;
+    }
     for (const carta of mesa.querySelectorAll('.campo-eu > .cm, .campo-op > .cm')) {
       const frente = carta.querySelector('.tcg-card:not(.is-hidden) .name');
       const nome = frente?.textContent?.trim();

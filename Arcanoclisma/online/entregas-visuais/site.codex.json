@@ -2,10 +2,10 @@
   "tarefaId": "mesa-v10-e-cenarios",
   "versao": 1,
   "autorPedido": "Usuário",
-  "data": "2026-10-03",
-  "estado": "disponivel_localmente",
-  "integracaoConfirmada": false,
-  "guia": "coordenacao/site-online/INTERFACE-MESA.md",
+  "data": "2026-10-04",
+  "estado": "entregas_visuais_v16_v17_disponiveis",
+  "integracaoConfirmada": true,
+  "guia": "coordenacao/site-online/ENTREGA-MAGIAS-E-TEMPLATES-04-10.md",
   "arquivos": [
     "Arcanoclisma/online/public/css/mesa-codex-v10.css",
     "Arcanoclisma/online/public/js/mesa-movimentos-codex.js",
@@ -21,7 +21,11 @@
     "Grau de costas e suspensão visual com o estado existente",
     "Compra com verso viajando do baralho para a mão e reposição animada"
   ],
-  "fontesDeDados": ["DOM autorizado pelo renderer da mesa", "quantidades públicas do baralho", "estado de suspensão emitido pelo renderer"],
+  "fontesDeDados": [
+    "DOM autorizado pelo renderer da mesa",
+    "quantidades públicas do baralho",
+    "estado de suspensão emitido pelo renderer"
+  ],
   "comandosDoMotorAlterados": false,
   "facesOcultasUsadasPelaAnimacao": false,
   "movimentoReduzido": true,
@@ -30,5 +34,34 @@
   "revisaoCenas": "Arcanoclisma/cartas/entregas/revisao-cenarios-2026-10-03.visual.json",
   "pedidosDeArteRecebidos": "Arcanoclisma/cartas/pedidos/lote-site-v1.claude.json",
   "respostaClaude": "coordenacao/site-online/resposta.claude.json",
-  "publicacao": "Local; novo push exige autorização do autor"
+  "publicacao": "push_automatico_autorizado_pelo_autor",
+  "entregasAtuais": {
+    "zonas": "Arcanoclisma/online/public/css/mesa-zonas-v16.css",
+    "cabecalho": "Arcanoclisma/online/public/css/cartas-cabecalho-v16.css",
+    "economia": "Arcanoclisma/online/public/js/carta.js",
+    "magias": "Arcanoclisma/efeitos/entregas/magias-v17.visual.json",
+    "previa": "Arcanoclisma/efeitos/previas/magias-v17/index.html"
+  },
+  "cameraAtual": "inteira; CSS mesa-proxima-v15.css arquivado sem carregamento",
+  "validacaoMagias": {
+    "data": "2026-10-04",
+    "testes": 5,
+    "passaram": 5,
+    "comando": "node --test Arcanoclisma/efeitos/verificar-magias-v17.test.mjs",
+    "cobre": [
+      "132 IDs",
+      "792 arquivos e hashes",
+      "alfa medido",
+      "feixe até o alvo",
+      "cancelamento",
+      "movimento reduzido",
+      "gatilho e resolução confirmados"
+    ],
+    "navegadorCodex": "preview file:// bloqueada pela política do navegador",
+    "navegadorClaude": [
+      "base-dano-c1-repentina (conjurar, trajeto, impacto) no tutorial Como a pilha funciona",
+      "bal-devolver-c2-repentina e base-dano-c1 sem alvo: corretamente nao tocaram"
+    ],
+    "revisaoVisualCompleta": false
+  }
 }
