@@ -1,0 +1,36 @@
+{
+  "id": "item-extra-pente",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-ed4add71-c7ef-47d8-bdcd-6ee5ed20a190.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nExactfirstreference combidentity: longcarvedwarmbrownwoodcomb, manyfine straightteeth, curvedsimplehandle withspiralcarving, rowofEIGHTsmall changingemotionface-relief heads alongtopspine. Keepfacecarvings distinguishable, actualwood ratherthangoldenroyaljewelry. NEWscene inside a floatingcanalboat's smallbarber/workshopcabinatsoftmorninglight, broadcreamplaster/bluepaintedwoodpanels andportwindowshowinglowhousesandquietcanal. Camera overrightshoulderofadultmaleelf withverylongstraightmaroonhair andsimplemustardlinenclothes, facepartialprofile turnedtowardcomb/hair ratherthanviewer. Onehand passescomb throughlowerstrand ofhair, the otherfreehand catches TWO tiny foldedwhitePAPERBIRDS (messages rather than creatures). Exactly THREEvisionpaperbirds emerge fromcomb: TWO approachfreepalm andONEdescends into a lowclosedwoodboxbelow. A different alreadyspentflatblankfolio lies inshallowtray ontable torepresentdiscardcost. No drawingnewletters, no largemultiValue effects, oldcoralaura reducedtolowinherentreflection in carvedwood only; activetranscriptwispsneutralwhite/grey. CurrentGENERICitem noValores; Extra deHabilidoso UsoUnico, suspendConjuradordiscard1, looktop3 take2handother1bottom. No+stats, no addedArcano payment, no realidentitydisguise or newValorPersona. Commonrarity, gentle ordinaryweekdaymagic in fullaestheticenvironment, combcentralandbig enoughfaces/teethread clearly, smoothillustrationfinish notgrainycanvas.\nLastrefONLYsmoothfinish, no copygirl,dragon,meadoworpose. Fullopaquevertical63:88art.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/pente-das-mil-caras.png",
+  "textoRegraLido": "Extra de Habilidoso. Uso único. Suspenda o Conjurador e descarte 1 carta: olhe as 3 cartas do topo do seu baralho; ponha 2 na mão e as outras no fundo do baralho.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/pente-das-mil-caras.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Cabine de barbeiro/escriba num barco junto ao canal",
+  "momentoDoDia": "Manhã",
+  "clima": "Luz suave pela janela sobre madeira azul e creme",
+  "escala": "Pente próximo, figura de costas em perfil e três mensagens",
+  "avaliacaoVisual": "Pente de madeira com rostos de expressões distintas, dentes finos e cabo espiral preservados. Figura de cabelo longo vinho penteia uma mecha; dois pássaros de papel chegam à mão e um vai à caixa. Fólio gasto separado na bandeja, canal completo ao fundo.",
+  "decisoes": [
+    "Extra de Habilidoso genérico, uso único, sem Valores.",
+    "Suspender e descartar uma carta; olhar três do topo, levar duas à mão e uma ao fundo. Sem pagamento de Arcano novo.",
+    "Os pássaros são mensagens de papel, sem novas criaturas ou habilidades de disfarce.",
+    "Coral da referência foi mantido apenas como caráter material discreto; magia de leitura neutra. Raridade comum."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

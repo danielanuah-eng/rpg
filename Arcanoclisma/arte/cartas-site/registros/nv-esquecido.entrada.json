@@ -1,0 +1,38 @@
+{
+  "id": "nv-esquecido",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-51d01a5e-9070-41de-a10b-64746a07958b.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPreservefirstreference Esquecido identity THREE barelyrememberedetherealfigures withdifferentwarmbrown/creamgarments andmissingindigocontours. Centralonecreamraggedhood andlongdarkblueviolethair, palebluelavenderskin andamberPUPILS; secondbrowncloakwithflowinglongindigohair, thirdshortpurplehair withmutedbronzeband/chainmantle. TheyformvisualoneOEsquecido identity, not3separatelysummonedallies. NEWscene inside a desertedCognitiumobservatory atsoftpinkvioletDUSK, warmclaysmoothwallplanes, bronzeastrolabe onlowwoodstand, openroundroofwindowforfaintsky/clouds andquietvillagebelow. CENTRALhoodedfigure floats in3/4partialBACKturn aroundastrolabe, looksDOWNLEFT over shoulder at ownOPENlefthand holdinga fewabstractindigofragments of itsOWNbodymemory, no deletingvictim/building or unreadableletters. OtherfigurehighleftlooksUPtowardroof, thirdlowrightturnsPROFILEtowarddoortotheoutside, three distinctgazes/poses unlikeoriginalfrontalgroup. Garmentedges slowlypeelintosmallindigogaps; observatorywallsandfloor visibleTHROUGH partiallytranslucentbodies, floatnoopaquegrounddisk. No sameoldcutoutgroup withaddedbackground, no giantblast, no flightbattle. CurrentCognitiumcommonAliado2/1 cost2 grau1 generated1, EtéreoONLY. No extraerase/bounce/drawability. Indigo localgapwisps, bronzeordinaryphysicalglints notAlvorumaffinity/legendaryfoil. Quietuncannysensitivity in layeredfullscene, broad smoothtones and selectiveink, readablecontrastswithoutneon.\nLastrefsmoothfinishONLY, nevercopywoman,goldendragon,meadoworpose. FullOPAQUEvertical63:88environment, evenwhenfiguresareethereal.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/esquecido.png",
+  "textoRegraLido": "Etéreo.",
+  "valoresLidos": [
+    "cognitium"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/esquecido.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Observatório vazio de Cognitium com astrolábio e céu aberto",
+  "momentoDoDia": "Entardecer",
+  "clima": "Céu rosa-violeta e bronze sob iluminação controlada",
+  "escala": "Três formas apagadas em alturas distintas, uma examinando fragmentos na mão",
+  "avaliacaoVisual": "Três figuras mantêm roupas diferentes, cabelos índigo, pele azul-pálida e pupilas âmbar. Figura de capuz com palma aberta junto aos próprios fragmentos; outras olham para alto e lateral. Corpos incompletos deixam cenário visível; astrolábio e arquitetura integram a cena.",
+  "decisoes": [
+    "O Esquecido é uma carta de Aliado Cognitium 2/1 comum com Etéreo apenas.",
+    "As três figuras pertencem à identidade visual da referência, sem gerar três Aliados ou estatísticas extras.",
+    "Fragmentos são da própria forma incompleta; não representam destruir ou banir um alvo.",
+    "Etherealidade visual dentro de fundo completo opaco; sem nova habilidade de apagar ou comprar cartas."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

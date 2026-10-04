@@ -1,0 +1,66 @@
+{
+  "id": "item-extra-balde",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-d1950158-b063-4d58-9ab7-21f0c930fc5e.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-extra-balde.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/balde-que-sobe.png",
+  "textoRegraLido": "Extra de Preparado. Uso único. Suspenda o Conjurador e seu Conjurador toma 1 de dano: ganhe 2 de Arcano e compre 1 carta.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/balde-que-sobe.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Poço em pátio de vila rural com moinho e casas de telha",
+  "momentoDoDia": "Meio da manhã",
+  "clima": "Céu azul fresco e sombras de folhas",
+  "escala": "Balde subindo do poço, duas esferas e um pergaminho junto à mão",
+  "avaliacaoVisual": "Balde de tábuas com duas cintas metálicas, alça e roldanas reconhecíveis. Vista baixa mostra água escorrendo durante a subida. Duas esferas claras e um pergaminho se aproximam do conjurador de pele azul-acinzentada, olhar dirigido às esferas e outra mão no próprio lado.",
+  "decisoes": [
+    "Extra de Preparado genérico sem Valores, uso único.",
+    "Suspender Conjurador e tomar 1 de dano próprio para ganhar 2 de Arcano e comprar uma carta.",
+    "Sem pagamento de Arcano adicional nem atribuição Alvorum por causa do metal e aura do RPG.",
+    "Trajetória de subida integrada ao poço real, sem setas de interface; raridade comum."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-balde.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "b75adfe2fd28be0915f927fbdfd0d51a739e69e1cc85ef19212f3269d41c8716",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

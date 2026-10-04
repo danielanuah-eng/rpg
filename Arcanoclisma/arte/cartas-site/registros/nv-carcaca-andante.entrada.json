@@ -1,0 +1,38 @@
+{
+  "id": "nv-carcaca-andante",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-8b10b64a-b96e-44a0-9086-74d03f18d82d.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nFirstreference exactcreature silhouette CarcacaAndante: colossalHUNCHED heavycataclysm undead, TWO hugeasymmetricalarms, TWO thickshortlegsfeet, longjaggedivory skulljaw, one smallerembedded skull onits leftshoulder, chunkyivoryboneplates/spines and darkstone chunks mergingwithbody, dirtygrey-green surface anddarkburgundy tatteredstrands. Preserve both skulls and weight. Make decayed details NON-GRAPHIC: burgundystrands are dryoldcloth, cracks darkshadow, grey-green skin closed/weathered likebark; no exposedrawmuscle, entrails,bloodorwetwounds. Eyes andmouth smallPALEGREENsoul glintonly. NEWPOSE: both enormoushands lowbracedonmud/woodedge, onefootforward, broadshoulderscrouching across the entrance of a monsteroutpost's lowwoodpalisadebridge overquietmarsh. HeadtiltedslightlyUPLEFT watches emptydistantridge, not oldforeshortened raisedclaw atviewer. Dawnclearblue withfreshrisinglight; broadmuted ochrewoodgate/bridge contrastgreyfog/reeds, simplelowclaycabinsbehind. A fullydressedsmallgoblin andstoutskeletonmerchant quietlywalkingbehindatdistance forscale, no magicprotectivebubble, no attackagainstbodies. CurrentMorbidyum commonAliado2/3 cost2 grau1 generated1, rulesEMPTY; firmstanceisvisualonly, no addingProtegido/guardtaunt oronsummonability. Calmwideenvironmentaldepth, creaturemainhunchedmasscenter/lowerhalf, alltwoarms/twolegscorrect, bodymaterialdetailedwhilebackgroundsmoothcleanplanes, restrainedgreenwisp betweenbones not wholeframebloom.\nLastreferenceONLY smoothfinish, nevercopygirl/dragon/meadow/pose. Fullopaqueupright63:88newscene.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/carcaca-andante.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/carcaca-andante.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Ponte de brejo na entrada de um posto de monstros com paliçada de madeira",
+  "momentoDoDia": "Manhã clara",
+  "clima": "Céu azul, névoa distante e placas de osso sob luz suave",
+  "escala": "Criatura pesada em primeiro plano, duas figuras pequenas ao fundo para escala",
+  "avaliacaoVisual": "Carcaça conserva enorme corpo curvado, dois braços e duas pernas, crânio central, crânio menor no ombro, placas de osso e pedra. Nova pose com ambas as mãos apoiadas baixo, cabeça erguida e magia verde-pálida discreta. Corpo sem sangue ou feridas em terceiros.",
+  "decisoes": [
+    "Aliado Morbidyum 2/3 com texto vazio. Postura de sustentação é visual, sem adicionar Protegido ou provocação.",
+    "Preservar espécie e silhueta pesada; tiras bordô tratadas como tecidos secos, com sombras no lugar de partes gráficas.",
+    "Ponte e posto de monstros integram a criatura à cena, sem montagem do recorte antigo.",
+    "Raridade comum; brilho de alma localizado nos crânios e entre placas."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

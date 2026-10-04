@@ -1,8 +1,10 @@
 # Entrega visual para Claude — 04/10/2026
 
-## Atualização posterior: 160/210
+## Atualização posterior: 168/210
 
-O lote e a galeria agora têm 160 artes concluídas, com 50 pendentes. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega inicial de conjuradores abaixo. Entraram Pedra Parada, A Coroa de Vyal, Pena de Idrael, A Página Arrancada, Chave da Voragem, Ovo de Wyvern, Luvas de Força e Trono Dobrável. As 151 do pedido inicial estão entregues; as adicionais pertencem à mesma meta de 210. Cada ID tem cena e registro próprios, com dimensões e alfa medidos. Os Valores atuais determinam a cor da magia; aparência física e roupas dos personagens aprovados continuam preservadas. Os gestos e cenários não adicionam efeitos ao jogo.
+O lote e a galeria agora têm 168 artes concluídas, com 42 pendentes. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega inicial de conjuradores abaixo. Entraram Pente das Mil Caras, Balde que Sobe, Luz de Velório, Carcaça Andante, Coveiro de Vau Grande, Embalsamador, Velho Ossário e O Esquecido. As 151 do pedido inicial estão entregues; as adicionais pertencem à mesma meta de 210. Cada ID tem cena e registro próprios, com dimensões e alfa medidos. Os Valores atuais determinam a cor da magia; aparência física e roupas dos personagens aprovados continuam preservadas. Os gestos e cenários não adicionam efeitos ao jogo.
+
+Luz de Velório permanece vela de energia sem anatomia humana. Carcaça não recebe proteção por estar em postura firme. O Esquecido conserva três formas visuais como identidade de uma única carta, sem criar três Aliados. Ossário tem quatro patas e duas asas, com ambos os braços dianteiros presentes; não é wyvern. Ossário e Embalsamador trazem um único aliado de cemitério, ainda pagando o custo indicado no texto. As transparências dos seres etéreos são visuais dentro de PNGs com fundo opaco medido.
 
 **Corrigir mapeamento das Luvas de Força:** o briefing usava `cordao-de-rhu`, que é um colar. O novo `item-extra-luvas.png` mostra de fato luvas, inspiradas só nos materiais do cordão. A habilidade de entender lobos não foi transferida. Use o novo caminho do mapa para as Luvas, sem alterar o Cordão de Rhu. Estes oito equipamentos são genéricos sem Valores conforme os dados atuais; suas cores físicas não atribuem afinidades. Custos de ativação, dano próprio e uso único continuam nos textos do Claude. Ovo mostra uma única wyvern com duas pernas e duas asas, sem braços adicionais.
 

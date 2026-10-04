@@ -6239,9 +6239,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/pente-das-mil-caras.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Pente das Mil Caras: personagem/objeto do catálogo aprovado (pente-das-mil-caras). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Pente das Mil Caras sendo usado uma única vez (Extra consumível): quem conjura espia o futuro: algumas imagens brilham e uma é puxada para a mão, as outras afundam, num lugar coerente com o item.",
       "ambienteOriginal": "Ambiente: uma encruzilhada arcana devastada pelo Cataclisma, com ruínas, céu dividido entre luz quente e sombra fria e restos de magia no chão.",
@@ -6256,7 +6256,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/pente-das-mil-caras.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 089 Pente das Mil Caras. Subject: Pente das Mil Caras: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: penteia o cabelo e o rosto muda um pouco (não disfarça totalmente).\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-extra-pente.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-pente.visual.json"
     },
     {
       "id": "item-extra-balde",
@@ -6272,9 +6274,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/balde-que-sobe.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Balde que Sobe: personagem/objeto do catálogo aprovado (balde-que-sobe). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Balde que Sobe sendo usado uma única vez (Extra consumível): Arcano bruto jorra e se acumula em esferas de luz na cor do Valor e um mensageiro, pássaro ou vento traz pergaminhos e segredos até as mãos de quem conjura, num lugar coerente com o item.",
       "ambienteOriginal": "Ambiente: uma encruzilhada arcana devastada pelo Cataclisma, com ruínas, céu dividido entre luz quente e sombra fria e restos de magia no chão.",
@@ -6289,7 +6291,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/balde-que-sobe.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 100 Balde que Sobe. Subject: Balde que Sobe: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: sobe sozinho de poço, penhasco ou janela.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-extra-balde.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-balde.visual.json"
     },
     {
       "id": "nv-luz-de-velorio",
@@ -6303,9 +6307,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/luz-de-velorio.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Luz de Velório: personagem/objeto do catálogo aprovado (luz-de-velorio). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Luz de Velório em forma etérea, meio translúcido, flutuando acima do campo de batalha, fora do alcance de quem anda no chão.",
       "ambienteOriginal": "Ambiente do Valor Morbidyum: cemitérios que respiram, brejos, criptas e aldeias de curandeiras. Magia na cor verde-pálido, em fumaça fria e fios que partem, como almas. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -6329,7 +6333,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-luz-de-velorio.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-luz-de-velorio.visual.json"
     },
     {
       "id": "nv-carcaca-andante",
@@ -6343,9 +6349,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/carcaca-andante.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Carcaça Andante: personagem/objeto do catálogo aprovado (carcaca-andante). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Carcaça Andante em guarda firme, protegendo os aliados e segurando a linha.",
       "ambienteOriginal": "Ambiente do Valor Morbidyum: cemitérios que respiram, brejos, criptas e aldeias de curandeiras. Magia na cor verde-pálido, em fumaça fria e fios que partem, como almas. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -6369,7 +6375,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-carcaca-andante.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-carcaca-andante.visual.json"
     },
     {
       "id": "nv-coveiro",
@@ -6383,9 +6391,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/coveiro-de-vau-grande.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Coveiro de Vau-Grande: personagem/objeto do catálogo aprovado (coveiro-de-vau-grande). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Coveiro de Vau-Grande em guarda firme, protegendo os aliados e segurando a linha; ao chegar, quem conjura espia o futuro: algumas imagens brilham e uma é puxada para a mão, as outras afundam.",
       "ambienteOriginal": "Ambiente do Valor Morbidyum: cemitérios que respiram, brejos, criptas e aldeias de curandeiras. Magia na cor verde-pálido, em fumaça fria e fios que partem, como almas. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -6409,7 +6417,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-coveiro.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-coveiro.visual.json"
     },
     {
       "id": "nv-embalsamador",
@@ -6423,9 +6433,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/embalsamador.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Embalsamador: personagem/objeto do catálogo aprovado (embalsamador). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Embalsamador em guarda firme, protegendo os aliados e segurando a linha.",
       "ambienteOriginal": "Ambiente do Valor Morbidyum: cemitérios que respiram, brejos, criptas e aldeias de curandeiras. Magia na cor verde-pálido, em fumaça fria e fios que partem, como almas. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -6449,7 +6459,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-embalsamador.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-embalsamador.visual.json"
     },
     {
       "id": "nv-ossario",
@@ -6463,9 +6475,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/velho-ossario-dragao-palido.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Velho Ossário, Dragão-Pálido: personagem/objeto do catálogo aprovado (velho-ossario-dragao-palido). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Velho Ossário, Dragão-Pálido avançando ao ataque com fúria, em pleno golpe; ao chegar, um aliado caído se levanta do cemitério, com fios de alma voltando ao corpo.",
       "ambienteOriginal": "Ambiente do Valor Morbidyum: cemitérios que respiram, brejos, criptas e aldeias de curandeiras. Magia na cor verde-pálido, em fumaça fria e fios que partem, como almas. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -6489,7 +6501,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-ossario.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-ossario.visual.json"
     },
     {
       "id": "nv-esquecido",
@@ -6503,9 +6517,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/esquecido.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Esquecido: personagem/objeto do catálogo aprovado (esquecido). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Esquecido em forma etérea, meio translúcido, flutuando acima do campo de batalha, fora do alcance de quem anda no chão.",
       "ambienteOriginal": "Ambiente do Valor Cognitium: o arquivo sem dono, bibliotecas que esquecem, observatórios. Magia na cor índigo, em véu de fumaça com falhas, como se faltassem pedaços. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -6529,7 +6543,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-esquecido.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-esquecido.visual.json"
     },
     {
       "id": "nv-moca-que-nao-sangra",

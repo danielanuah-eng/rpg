@@ -1,0 +1,68 @@
+{
+  "id": "nv-esquecido",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-51d01a5e-9070-41de-a10b-64746a07958b.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-esquecido.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/esquecido.png",
+  "textoRegraLido": "Etéreo.",
+  "valoresLidos": [
+    "cognitium"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/esquecido.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Observatório vazio de Cognitium com astrolábio e céu aberto",
+  "momentoDoDia": "Entardecer",
+  "clima": "Céu rosa-violeta e bronze sob iluminação controlada",
+  "escala": "Três formas apagadas em alturas distintas, uma examinando fragmentos na mão",
+  "avaliacaoVisual": "Três figuras mantêm roupas diferentes, cabelos índigo, pele azul-pálida e pupilas âmbar. Figura de capuz com palma aberta junto aos próprios fragmentos; outras olham para alto e lateral. Corpos incompletos deixam cenário visível; astrolábio e arquitetura integram a cena.",
+  "decisoes": [
+    "O Esquecido é uma carta de Aliado Cognitium 2/1 comum com Etéreo apenas.",
+    "As três figuras pertencem à identidade visual da referência, sem gerar três Aliados ou estatísticas extras.",
+    "Fragmentos são da própria forma incompleta; não representam destruir ou banir um alvo.",
+    "Etherealidade visual dentro de fundo completo opaco; sem nova habilidade de apagar ou comprar cartas."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-esquecido.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "3377edfb77deac97be1100ba24b311345a30a3bd752af1e28f03e672e31221f3",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

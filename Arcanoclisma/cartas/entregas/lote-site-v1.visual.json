@@ -3,16 +3,8 @@
   "pedidoVersao": 2,
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 160,
+  "concluidas": 168,
   "pendentes": [
-    "item-extra-pente",
-    "item-extra-balde",
-    "nv-luz-de-velorio",
-    "nv-carcaca-andante",
-    "nv-coveiro",
-    "nv-embalsamador",
-    "nv-ossario",
-    "nv-esquecido",
     "nv-moca-que-nao-sangra",
     "nv-rosto-sem-gente",
     "nv-leitura-de-sombras",
@@ -1335,6 +1327,70 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-trono.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-trono.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-extra-pente",
+      "nome": "Pente das Mil Caras",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-pente.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-pente.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-extra-balde",
+      "nome": "Balde que Sobe",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-balde.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-balde.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-luz-de-velorio",
+      "nome": "Luz de Velório",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-luz-de-velorio.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-luz-de-velorio.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-carcaca-andante",
+      "nome": "Carcaça Andante",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-carcaca-andante.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-carcaca-andante.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-coveiro",
+      "nome": "Coveiro de Vau Grande",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-coveiro.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-coveiro.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-embalsamador",
+      "nome": "Embalsamador",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-embalsamador.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-embalsamador.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-ossario",
+      "nome": "Velho Ossário, o Dragão Pálido",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-ossario.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-ossario.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-esquecido",
+      "nome": "O Esquecido",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-esquecido.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-esquecido.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
     }
   ],

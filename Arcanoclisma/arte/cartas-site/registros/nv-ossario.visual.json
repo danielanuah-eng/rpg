@@ -1,0 +1,68 @@
+{
+  "id": "nv-ossario",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-a6fd6d74-5d7c-473b-b3c2-9da6669f15ba.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-ossario.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/velho-ossario-dragao-palido.png",
+  "textoRegraLido": "Ao entrar: ponha no seu campo um Aliado de qualquer cemitério, pagando o custo dele + 0.",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/velho-ossario-dragao-palido.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Terraço funerário sobre penhascos e vale de rio com cidade distante",
+  "momentoDoDia": "Tarde",
+  "clima": "Luz suave, céu azul com nuvens claras e sombras frias",
+  "escala": "Dragão enorme com quatro patas distintas das asas, aliado pequeno abaixo e observador perto",
+  "avaliacaoVisual": "Ossário mantém escamas marfim, ventre e membranas verde-acinzentados, presas, chifres e olhos verdes. Dois braços dianteiros musculosos e patas traseiras são distinguíveis. Nova posição sobre terraço, cabeça inclinada ao único aliado esquelético que se ergue; energia verde-pálida parte da pata próxima.",
+  "decisoes": [
+    "Aliado Morbidyum 7/7 comum, não atribuir raridade lendária por ser dragão.",
+    "Ao entrar, trazer um Aliado de qualquer cemitério ainda pagando custo normal +0; não sugerir invocação grátis.",
+    "Manter os dois braços dianteiros separados das duas asas e as duas patas traseiras.",
+    "Cenário e ação novos; grandiosidade vem do porte, sem ataque adicional ou proteção inventados."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-ossario.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "78c9b7d116b9d80383d8a5bdb6347cea8998c4b273651448ea2f46f0b831a0de",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

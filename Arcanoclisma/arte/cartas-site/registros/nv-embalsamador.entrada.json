@@ -1,0 +1,38 @@
+{
+  "id": "nv-embalsamador",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-2a6102d9-711a-4032-8ef6-9bcd13ccf34d.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nExactexistingEmbalsamador identity: tan bronze skin, narrowjaw, wide-set greeneyes, longchestnutbrownthinbraids halfgatheredhigh flowingdown, closedmouth impatientfocusedexpression, raggeddirtycream/greyartisancoat withdarkforestgreenlining, leatherbelts/ringsandnarrowglassvials alongwaist, brownboots/wristlinen. Genderpresentationandfacefollowreference, don't masculinize orinventdifferenthead. Newpose kneelingonONEknee behind an embalmer'swidewoodworktable, RIGHTfingers touchingforeheadofONElarge skeletalHOUND emergingassembledfrom bone/wisp ontable, LEFThand openingbesideits shoulder toguiderecall. Houndisoneintactfantasyally, quadrupedFOURpaws,longtail, longivoryjaggedskullandboneback, no humanorgans orflesh, NOsecondbeast/giantbackgrounddragon vortex. Subjecteyes/nosepointDOWNRIGHTdirectlytothat skull underhand, braidedhairfallswithgravity. Palegreen cold Morbidyum soulfibersjoinbonesintoONEreturningally. Theoldgiantskeletalconstructinreferenceis magicaleffectidentity, don'tcopyoldposeoraddseparatefreeattack. NEWenvironment riverbankworkshop housedinsidea warmwoodboathouse at quietNIGHT, littleoil lampwarmamber, blueblackriverunderwindowandonecanoeoutside, broad smoothplankwalls, linenrolls/clayherbpots, no bloodyoperatingroom. Current commonAliado2/3 cost3 grau2 generated1: suspendTHISallypay2 putONEAliado fromANYgraveyard onYOURfield PAYINGitscost+1. DoNOTsuggestfreeresurrection,multiplesorautomaticprotection. TinyTWOlowwhitearcanopearlsfadebycasterbeltoptionalhintactivationpay2, allycoststillrequirednoUI. Controlledlocalizedpalegreenlight, ordinarymaterialglintsnofoil, fullverticalunifiedscene.\nLastrefONLY smoothapprovedfinish, neverreusegirl/dragon/meadow/pose. Fullopaqueupright63:88scene.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/embalsamador.png",
+  "textoRegraLido": "Suspenda e pague 2: ponha no seu campo um Aliado de qualquer cemitério, pagando o custo dele + 1.",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/embalsamador.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Oficina ribeirinha em casa de barcos, ervas e instrumentos sobre bancada",
+  "momentoDoDia": "Noite",
+  "clima": "Lamparinas âmbar e luar azul no rio",
+  "escala": "Artesão ajoelhado e um único aliado esquelético sobre a bancada",
+  "avaliacaoVisual": "Feições, olhos verdes, tranças castanhas, roupa cinza rasgada com verde interno e frascos preservados. Nova pose de uma mão sobre a testa do único quadrúpede esquelético, outra ao lado; olhar acompanha o gesto. Quatro patas e cauda legíveis, cena ribeirinha completa.",
+  "decisoes": [
+    "Aliado Morbidyum 2/3 comum. Suspender e pagar 2 para trazer um Aliado de qualquer cemitério, ainda pagando o custo dele +1.",
+    "O quadrúpede é representação de um aliado retornando, sem nome, estatísticas ou cartas novas inventadas.",
+    "A arte não cria ressurreição grátis, invocação múltipla ou proteção automática.",
+    "Construto antigo da referência foi adaptado à ação atual em cena nova; materiais e magia verde-pálida mantidos."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

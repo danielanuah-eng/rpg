@@ -1,0 +1,38 @@
+{
+  "id": "nv-coveiro",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-2d8bb3ba-20b9-4901-88ae-b092e31d99fc.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPreserveexistingCoveiroDeVauGrande adultmale: paleweatheredskin, messyshortdarkbrownwavyhair, stubble,tireddownturnedbrows, white rolledsleevesworker shirt, darkgreen scarf, broadbrownleatherapron, browntrousers/boots, largebrownsatchel/ropecoil andplainlongwoodshovelwithrectangularironblade. NEWPOSE: descending3stairs into the funeralguild's recordalcove undera town, shovelcarried onRIGHTshoulder supportedbyrighthand, LEFTpalmopenlowtowardtwo smallPALEGREENmemoryleaves that justrosefrom a thickclosedstoneboundledger besidepath. ONEleafmoves towardleftpalm; the OTHERdescendsunderledger edge, two paths legible. His FACE/nose/pupils turnDOWNLEFTtowardchosenleaf, shouldersunevenandweightmidstep, not oldbothhandsdiggingpose. NEWenvironment warmbroadclayplasterwalls andcopperpipes in vaultedrecordroom, smallroundupperwindowshows rainwashedfreshDAYskyandfewvineleaves, shallowrainwaterchannelswithreflections, emptyterracottavasesonledges, woodenrecorddrawers farback. No humanbodies orcoffin gore, nocombatandno protectivebarrier. Current Morbidyum commonAliado1/2 cost2 grau1 generated1, AOENTRAR look2topcards take1handother1bottom. No abilitytogeneratearmy or protectallies despitegenericoldbriefguardlanguage. Lowselectivepalewisp aroundleaves andshovel only, physicalbonequietnotgiantwallskullmagic. Fullsceneunifiedandreadable, facesandclothesidentitypreserved, smoothwallsnotheavyrugosity.\nLastrefONLY smoothapprovedfinish, neverreusegirl/dragon/meadow/pose. Fullopaqueupright63:88scene.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/coveiro-de-vau-grande.png",
+  "textoRegraLido": "Ao entrar: olhe as 2 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/coveiro-de-vau-grande.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Arquivo de registros funerários sob uma cidade, com escadaria e gavetas",
+  "momentoDoDia": "Dia depois da chuva",
+  "clima": "Janela alta e degraus molhados, luz quente de lamparinas",
+  "escala": "Coveiro em pleno passo com pá no ombro; duas memórias junto ao livro",
+  "avaliacaoVisual": "Rosto cansado, cabelo escuro ondulado, camisa clara, lenço verde, avental, bolsa, corda e pá preservados. Nova pose descendo escadas, olhar direcionado à folha que vai à mão; outra folha desce sob o livro. Arquivo e janela ocupam todo o fundo.",
+  "decisoes": [
+    "Ao entrar: olhar duas do topo, levar uma à mão e uma ao fundo.",
+    "Aliado Morbidyum 1/2 comum; nenhuma proteção ou ataque mágico novo.",
+    "A figura trabalha e se desloca em vez de repetir o recorte cavando.",
+    "Magia verde-pálida nas memórias, cenário quente e chuva de dia com luz controlada."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

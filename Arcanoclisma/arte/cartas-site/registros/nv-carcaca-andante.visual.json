@@ -1,0 +1,68 @@
+{
+  "id": "nv-carcaca-andante",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-8b10b64a-b96e-44a0-9086-74d03f18d82d.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-carcaca-andante.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/carcaca-andante.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/carcaca-andante.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Ponte de brejo na entrada de um posto de monstros com paliçada de madeira",
+  "momentoDoDia": "Manhã clara",
+  "clima": "Céu azul, névoa distante e placas de osso sob luz suave",
+  "escala": "Criatura pesada em primeiro plano, duas figuras pequenas ao fundo para escala",
+  "avaliacaoVisual": "Carcaça conserva enorme corpo curvado, dois braços e duas pernas, crânio central, crânio menor no ombro, placas de osso e pedra. Nova pose com ambas as mãos apoiadas baixo, cabeça erguida e magia verde-pálida discreta. Corpo sem sangue ou feridas em terceiros.",
+  "decisoes": [
+    "Aliado Morbidyum 2/3 com texto vazio. Postura de sustentação é visual, sem adicionar Protegido ou provocação.",
+    "Preservar espécie e silhueta pesada; tiras bordô tratadas como tecidos secos, com sombras no lugar de partes gráficas.",
+    "Ponte e posto de monstros integram a criatura à cena, sem montagem do recorte antigo.",
+    "Raridade comum; brilho de alma localizado nos crânios e entre placas."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-carcaca-andante.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "77dedd67f4ab94562b23cbd93a9697c809f6831aedacf403aa3e63ae10f56d7d",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

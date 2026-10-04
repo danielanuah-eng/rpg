@@ -1,0 +1,38 @@
+{
+  "id": "nv-ossario",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-a6fd6d74-5d7c-473b-b3c2-9da6669f15ba.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPreserveapprovedVelhoOssario identity: livingheavyivory/pale-scaledDRAGON not justa barebones skeleton; longthickforwardneck, fierceelongatedsquarejaw withlargecurvedfangs andmany smallteeth, TWO sweptback darkivory horns, greenPUPILS, strongivoryscalearmor, darkgreygreenbelly, darkgreenmembranousTWOwings, longthicktail, moderatebonycrestedridge. FOURLEGS: TWO completeMUSCULARFOREARMS distinctfromwings + TWO rearlegs, allclawtips visible. SIX appendagestotal4legs2wings; doNOTmistake dragonforwyvern. NEWpose landing diagonally fromhighrighton wideoldcemeterygate terrace builtincliffs abovea river, wingspartlyspreadbehind inbothdirections, bothforepawsextendedlowerfrontbalanced, rearfeet planted furtherback, tailcurlstooppositebottomedge. Notoldsittingportraitpastedonscene. DragonheadtiltsDOWNtowardONE smallfriendlyundeadarmoredknight gentlyreturningfrom anoldstonealcove belowfrontpaw; knightintactivoryskull andclosedbrowncoat, raises handtowarddragon. Palegreen soulwispsflow gently fromdragon'snearforepaw toONEknight, soft ratherthan attackbeam/fire. No soulsreanimatingmanyothergraves, no blood. Lowcamera over partialshoulder of a smallplaincladobserver inbottom-left forscale, largewarmochreterraceblocks againstsoftbluegreyRIVERvalley, cypresses, highplainfuneralarch and cloudysoftAFTERNOON. Avoid wholeimagegoldensunblast. ActualMorbidyumcommonAliado7/7 cost7 grau6 generated1. AOENTRAR bringONEAliadofromANYgraveyard PAYitsnormalcost+0; notfreeplay, no fear/protectionkeywordsornewspellblast. DRAGONmainimposingclearsilhouette withallfourlimbs/twowingscontainedinframe, polishedsmoothenvironment planes, subduedgreenlocalglowandexpressivecoherent gaze.\nLastrefsmoothfinishONLY, nevercopywoman,goldendragon,meadoworpose. FullOPAQUEvertical63:88environment, evenwhenfiguresareethereal.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/velho-ossario-dragao-palido.png",
+  "textoRegraLido": "Ao entrar: ponha no seu campo um Aliado de qualquer cemitério, pagando o custo dele + 0.",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/velho-ossario-dragao-palido.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Terraço funerário sobre penhascos e vale de rio com cidade distante",
+  "momentoDoDia": "Tarde",
+  "clima": "Luz suave, céu azul com nuvens claras e sombras frias",
+  "escala": "Dragão enorme com quatro patas distintas das asas, aliado pequeno abaixo e observador perto",
+  "avaliacaoVisual": "Ossário mantém escamas marfim, ventre e membranas verde-acinzentados, presas, chifres e olhos verdes. Dois braços dianteiros musculosos e patas traseiras são distinguíveis. Nova posição sobre terraço, cabeça inclinada ao único aliado esquelético que se ergue; energia verde-pálida parte da pata próxima.",
+  "decisoes": [
+    "Aliado Morbidyum 7/7 comum, não atribuir raridade lendária por ser dragão.",
+    "Ao entrar, trazer um Aliado de qualquer cemitério ainda pagando custo normal +0; não sugerir invocação grátis.",
+    "Manter os dois braços dianteiros separados das duas asas e as duas patas traseiras.",
+    "Cenário e ação novos; grandiosidade vem do porte, sem ataque adicional ou proteção inventados."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

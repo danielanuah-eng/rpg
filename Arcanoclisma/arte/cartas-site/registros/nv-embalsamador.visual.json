@@ -1,0 +1,68 @@
+{
+  "id": "nv-embalsamador",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-2a6102d9-711a-4032-8ef6-9bcd13ccf34d.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-embalsamador.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/embalsamador.png",
+  "textoRegraLido": "Suspenda e pague 2: ponha no seu campo um Aliado de qualquer cemitério, pagando o custo dele + 1.",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/embalsamador.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Oficina ribeirinha em casa de barcos, ervas e instrumentos sobre bancada",
+  "momentoDoDia": "Noite",
+  "clima": "Lamparinas âmbar e luar azul no rio",
+  "escala": "Artesão ajoelhado e um único aliado esquelético sobre a bancada",
+  "avaliacaoVisual": "Feições, olhos verdes, tranças castanhas, roupa cinza rasgada com verde interno e frascos preservados. Nova pose de uma mão sobre a testa do único quadrúpede esquelético, outra ao lado; olhar acompanha o gesto. Quatro patas e cauda legíveis, cena ribeirinha completa.",
+  "decisoes": [
+    "Aliado Morbidyum 2/3 comum. Suspender e pagar 2 para trazer um Aliado de qualquer cemitério, ainda pagando o custo dele +1.",
+    "O quadrúpede é representação de um aliado retornando, sem nome, estatísticas ou cartas novas inventadas.",
+    "A arte não cria ressurreição grátis, invocação múltipla ou proteção automática.",
+    "Construto antigo da referência foi adaptado à ação atual em cena nova; materiais e magia verde-pálida mantidos."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-embalsamador.png",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "c54198cca0408b4d9f19cb18aada1b6d7731600250ee86e76ac58ecfd7f422db",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

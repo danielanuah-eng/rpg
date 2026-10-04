@@ -1,0 +1,68 @@
+{
+  "id": "nv-luz-de-velorio",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-4950c918-ffa0-4739-b28c-739f1040e698.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-luz-de-velorio.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/luz-de-velorio.png",
+  "textoRegraLido": "Etéreo.",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/luz-de-velorio.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Pátio funerário com glicínias, cadeiras e memorial florido",
+  "momentoDoDia": "Dia nublado depois da chuva",
+  "clima": "Piso úmido e céu cinzento claro, luz verde-pálida localizada",
+  "escala": "Vela perto da câmera; duas figuras pequenas de costas junto ao memorial",
+  "avaliacaoVisual": "Vela etérea sem rosto mantém corpo de luz verde-pálida, gotas e faixa negra de luto. Flutua sem base opaca, com piso visível atrás. Cenário completo de glicínias, três cadeiras e duas pessoas de costas, sem combate.",
+  "decisoes": [
+    "Aliado Morbidyum 1/1, apenas Etéreo: translucidez e flutuação representam a keyword.",
+    "A referência não tem anatomia humana. Ignorar sugestão genérica de roupa, cabelo ou olhar.",
+    "Nenhuma habilidade de cura ou ressurreição foi adicionada.",
+    "Raridade comum, iluminação pequena e emocional, sem brilho da carta inteira."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-luz-de-velorio.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "493800e121eb05530137949284002db99a87ffcc5a2df5338487ccae93610867",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}
