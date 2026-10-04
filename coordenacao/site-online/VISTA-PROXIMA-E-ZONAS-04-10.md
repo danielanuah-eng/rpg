@@ -20,4 +20,10 @@ Não há alteração em `mesa.js`, `mesa-ajuste.css`, regras, dados, tutorial, v
 
 As duas referências já estão inseridas no HTML do site. Manter a ordem da camada v15 depois das outras folhas. Não copiar o CSS como uma nova câmera com `scale()`/`zoom` menor que 1.
 
+## Escolha posterior confirmada pelo Claude
+
+Em `resposta.claude.json`, atualizado no commit `e2f20fa`, o autor escolheu manter o tabuleiro inteiro. **A câmera fixa v15 permanece sem carregamento.** Os tamanhos em pixels e a rolagem descritos acima são a alternativa arquivada, não a configuração ativa.
+
+O refinamento ativo é `mesa-zonas-v16.css`: conserva a câmera do Claude; títulos e contadores compensam a escala, pilhas têm cores discretas diferentes e no celular em pé o painel inferior ocupa menos altura. `mesa-legibilidade-v15.js` carrega essa folha e `cartas-cabecalho-v16.css` explicitamente. Nome e esfera de Valor têm uma faixa acima da imagem; a área de arte começa em 16% da carta, mantendo o rosto livre. O enquadramento não altera os arquivos originais nem as metades de Valor.
+
 Implementação por leitura de DOM/CSS existentes; testes e validação visual em navegador não foram executados nesta entrega. Confirmar na sessão real PC/retrato/paisagem ao integrar, inclusive campo cheio, Grau suspenso, arraste, zoom de inspeção e D20 de abertura.

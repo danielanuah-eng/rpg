@@ -1,15 +1,37 @@
 /* Complemento visual independente do motor: legenda para cartas públicas.
    Não lê fonte.e, catálogo, mãos nem dados privados. Não muda ações da mesa. */
 (() => {
+  // A escolha confirmada pelo autor ao Claude é manter o tabuleiro inteiro.
+  // Não carregar a câmera fixa/rolagem v15; só rótulos, zonas e cabeçalho.
+  for (const href of ['/css/mesa-zonas-v16.css', '/css/cartas-cabecalho-v16.css']) {
+    if (document.querySelector(`link[href="${href}"]`)) continue;
+    const css = document.createElement('link');
+    css.rel = 'stylesheet'; css.href = href; document.head.append(css);
+  }
   const tela = document.getElementById('tela');
   if (!tela) return;
   let agendado = false;
   let ultimoPalco = null;
+  let mundoAtual = null;
+  const escalaObserver = new MutationObserver(agendar);
 
   function atualizar() {
     agendado = false;
+    for (const frente of tela.querySelectorAll('.tcg-card:not(.is-hidden) .front')) {
+      if (frente.querySelector('.cabecalho-arte-v16')) continue;
+      const faixa = document.createElement('div');
+      faixa.className = 'cabecalho-arte-v16'; faixa.setAttribute('aria-hidden', 'true');
+      frente.append(faixa);
+    }
     const mesa = tela.querySelector('.mesa');
-    if (!mesa) { ultimoPalco = null; return; }
+    if (!mesa) { ultimoPalco = null; mundoAtual = null; escalaObserver.disconnect(); return; }
+    const mundo = mesa.querySelector('.mesa-mundo');
+    if (mundo && mundo !== mundoAtual) {
+      escalaObserver.disconnect(); mundoAtual = mundo;
+      escalaObserver.observe(mundo, { attributes: true, attributeFilter: ['style'] });
+    }
+    const escala = Math.max(.25, Math.min(1.5, Number.parseFloat(mundo?.style.zoom) || 1));
+    mesa.style.setProperty('--mesa-escala-visual', escala.toFixed(4));
     for (const carta of mesa.querySelectorAll('.campo-eu > .cm, .campo-op > .cm')) {
       const frente = carta.querySelector('.tcg-card:not(.is-hidden) .name');
       const nome = frente?.textContent?.trim();
@@ -22,16 +44,6 @@
         carta.append(legenda);
       }
       if (legenda.textContent !== nome) legenda.textContent = nome;
-    }
-    const palco = mesa.querySelector('.mesa-palco');
-    if (palco && palco !== ultimoPalco && mesa.querySelector('.lado-eu')) {
-      ultimoPalco = palco;
-      // Primeira abertura: os dois Conjuradores juntos ficam na vista.
-      // Após isso a rolagem pertence ao jogador e é preservada nos redraws.
-      palco.scrollLeft = Math.max(0, (palco.scrollWidth - palco.clientWidth) / 2);
-      const linha = mesa.querySelector('.linha-meio');
-      const centro = linha ? linha.getBoundingClientRect().top - palco.getBoundingClientRect().top + palco.scrollTop : palco.scrollHeight / 2;
-      palco.scrollTop = Math.max(0, centro - palco.clientHeight / 2);
     }
   }
   function agendar() {

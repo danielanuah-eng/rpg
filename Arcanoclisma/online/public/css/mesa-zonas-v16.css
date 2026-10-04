@@ -1,0 +1,82 @@
+/* Refinamento com TABULEIRO INTEIRO, conforme escolha registrada pelo autor
+   no resposta.claude.json. A câmera e o enquadramento continuam com mesa.js. */
+.mesa .zona-grau {
+  padding: 23px 7px 5px;
+  border-color: #a9bfd480;
+  background: linear-gradient(145deg, #1e3049e8, #101c31db);
+  box-shadow: inset 0 1px 0 #eef5ff1a, 0 3px 9px #0004;
+}
+.mesa .zona-grau .rot {
+  top: -6px;
+  left: 5px;
+  max-width: calc(100% - 10px);
+  padding: 3px 8px;
+  font-size: clamp(13px, calc(12px / var(--mesa-escala-visual, 1)), 21px);
+  line-height: 1.15;
+  letter-spacing: .025em;
+  color: #f5e4bc;
+  white-space: nowrap;
+}
+.mesa .zona-grau.vazia::after { color: #cfdeee; font-size: 12px; padding-top: 16px; }
+.mesa .pilhas-zona {
+  padding: 5px;
+  border: 1px solid #a8c1d445;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #192a40bd, #101a2bd9);
+  box-shadow: inset 0 1px 0 #eaf3ff12;
+}
+.mesa .zona-pilha { --zona-cor: #a9c7de; border-radius: 6px; padding: 2px; gap: 3px; }
+.mesa .zp-baralho { --zona-cor: #e0c48e; }
+.mesa .zp-cemiterio { --zona-cor: #cba4d3; }
+.mesa .zp-banimento { --zona-cor: #a6ace9; }
+.mesa .zp-zonaArcano { --zona-cor: #86d4e2; }
+.mesa .zona-pilha .zp-carta { border-color: var(--zona-cor); }
+.mesa .zona-pilha b {
+  top: 1px;
+  right: -3px;
+  min-width: 27px;
+  padding: 2px 5px;
+  color: #fff5db;
+  border-color: var(--zona-cor);
+  background: #101a2bf5;
+  font-size: clamp(15px, calc(14px / var(--mesa-escala-visual, 1)), 25px);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.mesa .zona-pilha small, .mesa .zp-linha .zona-pilha small {
+  height: 18px;
+  line-height: 18px;
+  font-size: clamp(11px, calc(10px / var(--mesa-escala-visual, 1)), 17px);
+  color: #e4edf9;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.mesa .zona-pilha.vazia b { opacity: 1; color: #d6e3f2; }
+.mesa .zona-pilha.vazia .zp-carta { color: #c3d2e4; border-color: #93abc18c; }
+.mesa .zona-pilha:hover { background: #a8cef41a; }
+.mesa .zona-pilha:focus-visible { outline: 2px solid #f0d397; outline-offset: 3px; }
+.mesa .zona-pilha:hover .zp-carta { outline-color: var(--zona-cor); }
+.mesa .esfera-arcano small { color: #eff5ff; opacity: 1; }
+.mesa .campo .cm .mesa-card-nome, .mesa .campo .cm.suspensa .mesa-card-nome {
+  top: 2.5%;
+  left: 16%;
+  right: 5%;
+  z-index: 6;
+  font-size: clamp(12px, calc(11px / var(--mesa-escala-visual, 1)), 20px);
+  line-height: 1.05;
+  max-height: 11%;
+  padding: 2px 3px;
+  white-space: nowrap;
+  background: #0d182bee;
+  border-color: #b7a16b55;
+}
+@media (max-width: 900px) and (orientation: portrait) {
+  /* Libera altura para a câmera sem reduzir nem recortar o tabuleiro. */
+  .mesa { grid-template-rows: minmax(0, 1fr) clamp(126px, 18dvh, 172px); }
+  .mesa-mundo .mesa-conteudo { min-width: 560px; }
+  .mesa-mundo .fileira-fundo { grid-template-columns: 70px minmax(0, 1fr) 126px minmax(98px, 1fr) 134px; gap: 5px; }
+  .mesa .pilhas-zona { gap: 5px; }
+  .mesa .zona-pilha .zp-carta { width: 45px; height: 63px; }
+  .mesa .zp-baralho .zp-carta { width: 64px; height: 89px; }
+  .mesa .zp-linha { gap: 2px; }
+}
