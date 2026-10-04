@@ -207,7 +207,7 @@ function candidatas(e        , j         )           {
 }
 
 /** Planeja jogar uma carta: devolve o próximo comando (suspender Grau ou jogar). */
-function planejarJogada(e        , j         , est        , apenasRepentinas         , filtro                           , reserva = 0)                 {
+function planejarJogada(e        , j         , est        , apenasRepentinas         , filtro                           , reserva = 0, alvoCombate         )                 {
   const z = e.jogadores[j];
   const usavel = grauUsavel(e, j);
   const mana = manaPerm(e, j);
@@ -219,7 +219,11 @@ function planejarJogada(e        , j         , est        , apenasRepentinas    
     if (apenasRepentinas && !rep) continue;
     if (!apenasRepentinas && rep && est.reservaInstantes) continue;
     if (d.grau > grauEfetivo(e, j) || (d.descartaGrau ?? 0) > z.grau.length) continue;
-    const it = intencao(e, j, id, est);
+    // janela de combate: só serve dano que tira o inimigo do combate antes do dano (ele não chega a bater)
+    const efc = d.efeitos?.[0];
+    const it = alvoCombate
+      ? (efc?.tipo === 'dano' && efc.alvo !== 'conjuradorInimigo' && vidaRest(e, alvoCombate) <= efc.valor ? { carta: id, alvo: alvoCombate, utilidade: 4 + valorPerm(e, alvoCombate) / 2 } : null)
+      : intencao(e, j, id, est);
     if (!it || it.utilidade <= 0 || (filtro && !filtro(it))) continue;
     const custo = custoEfetivo(e, j, id) + custoProtecao(e, j, it.alvo);
     let pitch           = [];
@@ -548,6 +552,13 @@ export function decidir(e        , j         , est        )          {
       const c = planejarJogada(e, j, est, true, (i) => i.utilidade >= 4, 0);
       if (c) return c;
     }
+  }
+  // janela depois do bloqueio e antes do dano (pedido do autor, 04/10): os dois jogadores podem jogar Repentinas.
+  // Quem ataca mira o bloqueador; quem defende mira o atacante.
+  if (e.combate?.etapa === 'bloqueado' && e.pilha.length === 0 && e.combate.bloqueador) {
+    const inimigo = e.ativo === j ? e.combate.bloqueador : e.combate.atacante;
+    const c = planejarJogada(e, j, est, true, (i) => i.alvo === inimigo, 0, inimigo);
+    if (c) return c;
   }
   return passar;
 }

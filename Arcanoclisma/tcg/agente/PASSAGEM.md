@@ -174,3 +174,6 @@ Regras fixas: seguir as orientações novas do GPT, polir textos, todo efeito au
 - **Pilha clicável**: clicar num item da pilha/efeito na lateral amplia a carta (ou o texto do efeito).
 - **Ana e Mitonho**: o motor já aceitava jogar do banimento/cemitério; faltava a tela. Agora as cartas jogáveis de fora da mão aparecem na faixa da mão com etiqueta "Banida"/"Cemitério" (clique ou arraste) e a pilha da zona brilha.
 - **Próximo**: integrar os efeitos de magia v17 do GPT (Arcanoclisma/efeitos/entregas/magias-v17.visual.json, kit/efeitos/<id>/, manifesto.json): "assets_e_animador_entregues_integracao_de_eventos_pendente".
+- **Olhar o topo / escolher cartas**: 🔍 em cada carta abre a carta grande (sem marcar a escolha); passar o mouse também amplia. Celular: pinça volta a funcionar no tabuleiro (touch-action manipulation).
+- **Janela de combate** (04/10): depois do bloqueio e antes do dano, os dois jogadores podem jogar Repentinas (o motor já deixava). A lateral avisa "Antes do dano..." e diz quando você pode responder. O bot agora usa essa janela: Repentina de dano que tira o inimigo do combate antes do dano (tcg/sim/bot.ts, `alvoCombate`). Isso muda as simulações do bot.
+- **D20**: a camada da abertura não pega mais cliques e some em até 8 s (com a aba em segundo plano ela ficava por cima e impedia bloquear).

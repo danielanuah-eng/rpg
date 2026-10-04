@@ -268,3 +268,15 @@ body.tela-cheia .mesa-direita { top: 0; height: 100dvh; }
   background: #3a1f5c; border: 1px solid #c79bff; color: #f1e6ff; font: 800 11px var(--corpo); letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; box-shadow: 0 2px 6px #000a; }
 .mao-slot.fora-da-mao .cm { filter: drop-shadow(0 0 10px #b78cff88); }
 .zona-pilha.tem-jogavel .zp-carta { outline: 2px solid #c79bff; outline-offset: 2px; animation: alvo 1.2s ease-in-out infinite; }
+
+/* 🔍 nas cartas de olhar o topo / escolher cartas (js/mesa.js, data-ampliar) */
+.item-vitrine { position: relative; }
+.item-vitrine .lupa { position: absolute; top: 4px; right: 4px; z-index: 3; width: 34px; height: 34px; border-radius: 50%; border: 1px solid #e0bd6a99;
+  background: #120e26e6; color: #fff; font-size: 16px; line-height: 1; cursor: zoom-in; box-shadow: 0 2px 8px #000a; display: grid; place-items: center; padding: 0; }
+.item-vitrine .lupa:hover { border-color: #f0dca0; background: #2a2150; }
+/* celular: o gesto de pinça (dois dedos) volta a aproximar/afastar no tabuleiro e na carta ampliada */
+.mesa-palco { touch-action: manipulation !important; }
+#camada .tcg-card, #camada .zoom-info { touch-action: manipulation; }
+/* janela de Repentinas depois do bloqueio e antes do dano */
+.janela-combate { margin: 6px 0; padding: 8px 10px; border-radius: 10px; border: 1px dashed #e0bd6a88; background: #2a1d0e66; font-size: 13px; line-height: 1.35; }
+.janela-combate.posso { border-style: solid; border-color: #7fd1a0; background: #0e2a1c99; box-shadow: 0 0 12px #7fd1a055; }

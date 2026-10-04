@@ -293,7 +293,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   function escolherCartas(titulo, ids, n, { minimo = n, rotuloOk = 'Confirmar' } = {}) {
     return new Promise((ok) => {
       const sel = new Set();
-      const j = janela(`<h3>${esc(titulo)}</h3><div class="vitrine escolha-cartas">${ids.map((id) => `<div class="item-vitrine" data-id="${id}">${desenharCarta(modeloCarta(inst(id).defId), { width: 120 }).outerHTML}</div>`).join('')}</div>
+      const j = janela(`<h3>${esc(titulo)}</h3><div class="vitrine escolha-cartas">${ids.map((id) => `<div class="item-vitrine" data-id="${id}">${desenharCarta(modeloCarta(inst(id).defId), { width: 120 }).outerHTML}<button class="lupa" data-ampliar="${id}" title="Ampliar a carta" aria-label="Ampliar a carta">🔍</button></div>`).join('')}</div>
         <div class="linha-botoes"><button class="botao primario" data-ok disabled>${esc(rotuloOk)}</button></div>`, { classe: 'larga', aoFechar: () => ok(null) });
       const botao = $('[data-ok]', j.el);
       const atual = () => { botao.disabled = sel.size < minimo || sel.size > n; botao.textContent = `${rotuloOk} (${sel.size}/${n})`; };
@@ -458,7 +458,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     if (!i.ehConjurador && recemChegado(e, id)) extra.push('Acabou de entrar (não ataca neste turno)');
     if (d?.palavrasChave?.length) extra.push(d.palavrasChave.join(', '));
     const nomeMec = DADOS.visual[i.defId]?.nomeMecanico;
-    janela(`${desenharCarta(m, { width: 300 }).outerHTML}<div class="zoom-info painel"><h3>${esc(m.nome)}</h3>
+    janela(`${desenharCarta(m, { width: Math.min(300, innerWidth - 48) }).outerHTML}<div class="zoom-info painel"><h3>${esc(m.nome)}</h3>
       <p class="peq">${esc(i.ehConjurador ? 'Conjurador · ' + m.comprometimento : `${TIPO[d.tipo] ?? d.tipo} · custo ${d.custo} · Grau ${d.grau} · gera ${d.arcanoGerado}`)}${nomeMec ? ` · <i>${esc(nomeMec)}</i>` : ''}</p>
       <p>${esc(m.texto || 'Sem texto de regras.')}</p>
       <p class="peq">Valores: ${esc((m.valores ?? []).join(' + ') || 'sem Valor')}</p>${extra.length ? `<p class="peq">${esc(extra.join(' · '))}</p>` : ''}</div>`, { classe: 'carta-zoom' });
@@ -568,6 +568,11 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     if (e.combate && !e.pilha.some((x) => x.tipo === 'ataque')) {
       const c = e.combate;
       partes.push(`<div class="combate-faixa">⚔ <b>${esc(nomeInst(c.atacante))}</b> ataca <b>${esc(nomeInst(c.alvo))}</b>${c.bloqueador ? ` · bloqueado por <b>${esc(nomeInst(c.bloqueador))}</b>` : c.etapa === 'bloqueado' ? ' · sem bloqueio' : ''}</div>`);
+      // janela antes do dano (pedido do autor, 04/10): depois do bloqueio, os dois podem jogar Repentinas; quem ataca primeiro
+      if (c.etapa === 'bloqueado' && !e.pilha.length && e.vencedor === null) {
+        const posso = tenhoPrioridade() && possoResponder();
+        partes.push(`<div class="janela-combate ${posso ? 'posso' : ''}">⏳ <b>Antes do dano:</b> os dois jogadores podem jogar cartas <b>Repentinas</b> (quem ataca primeiro). Quando os dois passarem, o dano acontece.${posso ? '<br>✨ <b>Você pode responder agora</b>: as cartas que dá para jogar estão brilhando.' : ''}</div>`);
+      }
     }
     if (e.pilha.length) {
       const itens = [...e.pilha].reverse();
@@ -592,7 +597,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     }
     if (p.tipo === 'descartar') return `<div class="pendencia urgente"><b>Limite de mão:</b> descarte ${p.quantidade} carta(s). Clique nelas na sua mão.<div class="linha-botoes"><button class="botao primario" data-pend="descartar" ${ui.selecionadas.size === p.quantidade ? '' : 'disabled'}>Descartar (${ui.selecionadas.size}/${p.quantidade})</button></div></div>`;
     if (p.tipo === 'pagarAnulacao') return `<div class="pendencia urgente"><div class="pilha-item">${cartaMesa(p.item.instId, { largura: 86 })}<div class="pilha-info"><b>${esc(def(p.item.instId).nome)}</b> pode ser anulada se você pagar <b>${p.custo}</b> de Arcano.<div class="pilha-efeito">${esc(def(p.item.instId).texto)}</div></div></div><div class="linha-botoes"><button class="botao primario" data-pend="pagarAnul">Pagar ${p.custo} e anular</button><button class="botao" data-pend="naoPagar">Deixar resolver</button></div></div>`;
-    if (p.tipo === 'escolherDoTopo') return `<div class="pendencia urgente"><b>Olhar o topo:</b> escolha ${p.pegar} carta(s) para a mão; as outras vão para o fundo do baralho.<div class="vitrine topo-cartas">${p.cartas.map((id) => `<div class="item-vitrine ${ui.selecionadas.has(id) ? 'marcada' : ''}" data-topo="${id}">${desenharCarta(modeloCarta(inst(id).defId), { width: 92 }).outerHTML}</div>`).join('')}</div><div class="linha-botoes"><button class="botao primario" data-pend="topo" ${ui.selecionadas.size === p.pegar ? '' : 'disabled'}>Confirmar</button></div></div>`;
+    if (p.tipo === 'escolherDoTopo') return `<div class="pendencia urgente"><b>Olhar o topo:</b> escolha ${p.pegar} carta(s) para a mão; as outras vão para o fundo do baralho.<div class="vitrine topo-cartas">${p.cartas.map((id) => `<div class="item-vitrine ${ui.selecionadas.has(id) ? 'marcada' : ''}" data-topo="${id}">${desenharCarta(modeloCarta(inst(id).defId), { width: 92 }).outerHTML}<button class="lupa" data-ampliar="${id}" title="Ampliar a carta" aria-label="Ampliar a carta">🔍</button></div>`).join('')}</div><div class="linha-botoes"><button class="botao primario" data-pend="topo" ${ui.selecionadas.size === p.pegar ? '' : 'disabled'}>Confirmar</button></div></div>`;
     return '';
   }
 
@@ -943,9 +948,9 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   });
   // pré-visualização ao passar o mouse
   raiz.addEventListener('mouseover', (ev) => {
-    const c = ev.target.closest('.cm');
+    const c = ev.target.closest('.cm, [data-topo]');
     if (!c || matchMedia('(hover: none)').matches) return;
-    const i = inst(c.dataset.id);
+    const i = inst(c.dataset.id ?? c.dataset.topo);
     if (!i || i.defId === 'oculta' || (i.dono !== EU && z(i.dono).grau.includes(c.dataset.id) && !i.revelada)) { zoom.classList.remove('visivel'); return; }
     const m = i.ehConjurador ? modeloConjurador(i.defId) : modeloCarta(i.defId);
     zoom.innerHTML = desenharCarta(m, { width: 250 }).outerHTML + (i.dano ? `<div class="zoom-dano">Dano: ${i.dano}</div>` : '');
@@ -954,7 +959,15 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     zoom.style.top = Math.max(70, Math.min(innerHeight - 370, r.top - 60)) + 'px';
     zoom.classList.add('visivel');
   });
-  raiz.addEventListener('mouseout', (ev) => { if (ev.target.closest('.cm') && !ev.relatedTarget?.closest?.('.cm')) zoom.classList.remove('visivel'); });
+  raiz.addEventListener('mouseout', (ev) => { if (ev.target.closest('.cm, [data-topo]') && !ev.relatedTarget?.closest?.('.cm, [data-topo]')) zoom.classList.remove('visivel'); });
+  // 🔍 (olhar o topo, escolher cartas): abre a carta grande por cima, sem marcar/desmarcar a escolha (pedido do autor, 04/10)
+  const aoAmpliar = (ev) => {
+    const b = ev.target.closest?.('[data-ampliar]');
+    if (!b || !inst(b.dataset.ampliar)) return;
+    ev.preventDefault(); ev.stopPropagation(); ev.stopImmediatePropagation();
+    verCarta(b.dataset.ampliar);
+  };
+  document.addEventListener('click', aoAmpliar, true);
 
   function verZona(zona, j) {
     const ids = z(j)[zona];
@@ -997,7 +1010,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   render();
   return {
     render,
-    fechar() { fechada = true; document.body.classList.remove('em-mesa'); for (const d of dadosAbertura) try { d.destruir(); } catch { /* nada */ } globalThis.ArcanoclismaAbertura?.limparEntradaArena(raiz); clearTimeout(timerAuto); clearInterval(timerPrazo); movimentosMesa.limpar(); ganchos.limpar(); document.removeEventListener('fullscreenchange', aoTelaCheia); if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); document.body.classList.remove('tela-cheia'); window.removeEventListener('pointermove', moverArrasto); window.removeEventListener('pointerup', soltar); window.removeEventListener('pointercancel', soltar); arrasto?.fantasma?.remove(); raiz.innerHTML = ''; },
+    fechar() { fechada = true; document.removeEventListener('click', aoAmpliar, true); document.body.classList.remove('em-mesa'); for (const d of dadosAbertura) try { d.destruir(); } catch { /* nada */ } globalThis.ArcanoclismaAbertura?.limparEntradaArena(raiz); clearTimeout(timerAuto); clearInterval(timerPrazo); movimentosMesa.limpar(); ganchos.limpar(); document.removeEventListener('fullscreenchange', aoTelaCheia); if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); document.body.classList.remove('tela-cheia'); window.removeEventListener('pointermove', moverArrasto); window.removeEventListener('pointerup', soltar); window.removeEventListener('pointercancel', soltar); arrasto?.fantasma?.remove(); raiz.innerHTML = ''; },
     contexto,
   };
 }
