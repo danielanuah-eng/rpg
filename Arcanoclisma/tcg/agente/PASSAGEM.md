@@ -8,19 +8,22 @@ Versão enxuta. Histórico completo (o que foi feito em 03–04/10, decisões 15
 - Regras de atualização: seguir as orientações novas do GPT; polir textos do autor sem mudar regra (mostrar antes/depois); todo efeito automatizado no motor com teste.
 
 ## Equipe de subagentes (definida em 04/10)
-Ver `.claude/EQUIPE.md`: `triagem-feedback` (haiku), `motor-regras` (sonnet), `integrador-visual` (sonnet), `verificador` (haiku); DeepSeek para leitura grande e tela; equipe de balanceamento desligada até o autor pedir.
+Ver `.claude/EQUIPE.md`: `triagem-feedback` (haiku), `motor-regras` (opus médio), `motor-regras-alto` (opus alto), `integrador-visual` (sonnet), `verificador` (haiku); DeepSeek para leitura grande e tela; equipe de balanceamento desligada até o autor pedir.
 
 ## Estado
-- Tudo comitado até `c86b85c` (git limpo em 04/10 16h50), incluindo Etéreo por papel, alvo nunca automático e templates v18 do GPT integrados.
-- Testes: tcg 110, online 7, partida online local 0 erros (última medição).
+- Publicado e no GitHub em 04/10 à noite (commit ff1d1da, deploy b2a1eccb): Concessão + Reanimum (dec. 27), destruir não mira Conjurador (28), Editor dos Conjuradores visual (29), Protessência (30), pilha sem passe automático quando dá para responder, Ovo de Wyvern com Grau na mesa.
+- Testes: tcg 162, online 11, partida online 0 erros. Nada conferido na tela pelo Claude.
+- Mecânicas: agentes motor-regras (Opus médio) e motor-regras-alto (Opus alto), pedido do autor.
+- Limite mensal de gasto atingido em 04/10 (reinicia 19:10 para a sessão).
 
 ## Próximos passos
-1. Rodar `triagem-feedback` (diagnóstico Yes + envios + entregas do Codex desde 04/10 tarde).
-2. Integrar o que estiver pendente do Codex: efeitos de magia v17 (`efeitos/entregas/magias-v17.visual.json`, conferir a `.integracao.claude.json` existente), ícones (`kit/icones/manifesto.json` com `requisito-grau`/`requisito-arcano`), template que ressalta o Arcano.
-3. Usar os ícones nos balões do tutorial quando chegarem.
-4. Simulação não foi refeita com as regras novas de combate/itens v3 (só relatar; balancear é com a equipe).
+1. Gatilho novo "no Cataclisma do turno do oponente" (fim do turno do adversário) no motor + construtor (cartas e Conjuradores) + bot + texto — motor-regras.
+2. Ligar a entrega iconografia v19 do Codex (online/entregas-visuais/iconografia-v19.codex.json, kit/icones, css/js iconografia-v19, qa/magias-v19) — integrador-visual. Usar ícones nos balões do tutorial.
+3. Efeitos de magia v17: conferir pendências da integração.
 
 ## Esperando o autor
+- Perguntas da Protessência: ataque de unidade continua permitido (padrão adotado: sim); "pagar para anular" não mira, então não bloqueado; palavra permanente + por turnos: só a por turnos expira.
+
 - Novos comentários marcados Yes / novos ENVIAR.
 - Liberação da expansão "A Mestra dos Dragões" (até lá, não tocar).
 - Push de mudanças que não sejam entregas do Codex: perguntar.
