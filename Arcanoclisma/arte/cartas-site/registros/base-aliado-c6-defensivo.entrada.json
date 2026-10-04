@@ -1,0 +1,25 @@
+{
+  "id": "base-aliado-c6-defensivo",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/gorila-de-pedra.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/gorila-de-pedra.png",
+      "papel": "identidade pétrea e mercúrio"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Nova ação parcialmente de costas, soco no piso e defesa visual em mercúrio.",
+    "Pátio com horta medicinal em dia claro nublado; espectadores em segundo plano.",
+    "Câmera lateral mais alta para evitar repetir o enquadramento sobre ombro do Leão.",
+    "Magia prata-mercúrio original mantida apesar do roxo genérico sugerido ao Valor."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-e2205593-bc77-4575-b08a-58eef011ff5c.png",
+  "prompt": "Use case: illustration-story. New cohesive Arcanoclisma TCG illustration \"Gorila de Pedra\", RARE defensive beast. Polished fantasy narrative illustration matching approved second reference: crisp selective contours, smooth painted broad surfaces, controlled shadows and material texture, integrated lighting and contact shadows. No gritty canvas grain, overly expressive scratched scenery, excessive HDR/anime gloss, foggy wash or blooms. Actual NEW single painted scene; not a transparent RPG cutout pasted onto an environment. Opaque full background to all edges, portrait 63:88 requested1260x1760. No lettering, card frame, UI, stats or watermarks. Leave key faces/action above lower third for overlay. Rare restrained SILVER/VIOLET finish, not gold or rainbow foil.\nImage1 identity ONLY: huge heavy wild GORILLA composed of broad faceted grey-brown rock plates, powerful ape shoulders, short grey gorilla muzzle, amber eyes, exactly two long ape arms and two shorter ape legs, silver mercury streaks between stone plates and liquid-metal magic around fists. Natural ape anatomy, no human clothing or armor. New body language, CLOSED mouth and concentrated expression instead of the original roaring frontal punch. Image2 smooth painted finish only; no borrowed characters, hills or dragon.\nLUMINOUS OVERCAST DAY in a quiet warm red-plaster outer courtyard of a fortified citadel, with a terraced medicinal garden and a shallow canal. Moderately HIGH SIDE camera from a distant terrace makes weight and ground readable, avoiding another foreground over-shoulder scout. Gorilla occupies RIGHT third, THREE-QUARTERS BACK toward viewer, huge stone back central, crouched on both hindfeet. One long forearm swings its closed fist DOWN into a broad paving slab; other arm knuckles support on ground. He looks DOWN at the struck fist and the small sheet of SILVER MERCURY that flows from its impact into an upright curved reflective shield protecting the passage. Only one clear metal arc, subtle droplets and two or three stone chips; not a giant storm. Face visible in profile, all four limbs attached normally.\nAt distant upper left behind the barrier, three ordinary unarmed evacuees witness this defense from under a red-plaster garden loggia; use varied ages and skin tones, small figures, one elderly bald man, one black woman gardener, one young person in a hood. A plain abandoned crossbow bolt rests harmlessly at outer edge of barrier to imply what is stopped. No active attacked human, no wounds. Broad warm plaster walls, quiet shadowless diffuse daylight, sage planting rows and clear canal planes differentiate from warforge, gate and siegecamp. Citadel architecture spare, not excessive carved stone or jeweled throne. Rock texture detailed on beast but broad and smooth elsewhere. Cold mercury and subtle violet reflections against restrained warm walls; background muted, no harsh gold illumination, neon halo or global mist. Fresh unified painting, sharp main face and gesture.",
+  "avaliacaoVisual": "Gorila de costas em defesa baixa, braços e pernas legíveis, rosto fechado olhando para mercúrio. Barreira prateada e espectadores em horta de cidadela integram cena nova; forte nitidez e prata/violeta."
+}

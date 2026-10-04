@@ -1,0 +1,31 @@
+{
+  "id": "base-aliado-recurso-c5",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/professora-da-escola-de-magia.webp",
+  "textoRegraLido": "Conta como 1 carta no Grau. Suspenda: ganhe 2 Arcano.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/professora-da-escola-de-magia.png",
+      "papel": "Identidade do protagonista ou lugar; cena nova"
+    },
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/estudante-da-escola-de-magia.png",
+      "papel": "Identidade da aluna já existente; nova interação"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-85e4f9de-dc22-473b-9dd2-931b10c620f2.png",
+  "prompt": "TCG Professora da Escola de Magia, existing allied teacher generates TWO Arcano. Reference1 establishes ACTUAL teacher identity: olive-tan skin, round GOLD-RIM SPECTACLES with pupils clearly visible, dark-brown curly hair in high loosely pinned bun, sharp patient dark-brown eyes, cream blouse, long navy-blue teaching coat with modest muted amber swirling trim, teal-green skirt, worn brown satchel with scrolls, small astrolabe charm. She is the generic approved school teacher, her own identity. Reference2 establishes EXISTING STUDENT only: younger light-olive freckled girl, brown messy bun with navy ribbon, brick-red scarf, navy practical coat and cream shirt. Preserve approved faces but paint both in completely NEW poses and shared light. New classroom at LIGHT RAINY AFTERNOON, tall simple blue-grey windows show rainy school rooftops and garden, plain cream plaster wall and warm oak slab practice table, chalk bottles, shallow brass dishes and low shelves, no opulent gold library. Camera slightly HIGH looking from doorway ACROSS their table. Teacher at middle RIGHT stands bent modestly forward with one elbow rested ON table, torso turned almost AWAY from viewer, face seen in PROFILE and looking DOWN over glasses toward student's work, warm sly half-smile, no source's upright writing gesture. One teacher hand guides the student's near palm; her other hand makes a small downward correcting gesture above TWO carefully separated SILVER-WHITE Arcano orbs on an indigo curl above the dish in upper middle table. Student sits at middle LEFT with BOTH feet under bench, shoulders slightly hunched, one palm up and opposite hand steadies dish, eyes wide in an attentive sideways look and embarrassed grin. Distinct hand ownership: teacher exactly2 hands, student exactly2 hands, no merged fingers or extra wrists. ONE dish and TWO spheres only, teaching/support not combat or resource beam aimed at enemy. Teacher satchel hangs on chair behind, modest materials and blue/ivory magic, uncommon fine muted bronze charm glints but no rainbow foil. Approved Arcanoclisma smooth narrative fantasy illustration with selective crisp organic contours, broad clean painted color groups, controlled shadows and material finish, shared environmental light and coherent perspective. NEW integrated full painted scene, not source cutout/montage. No overexpressive scratches, harsh gritty grain, overloaded foliage/ornamental microdetail, grey fog wash or photoreal/anime HDR glare. Opaque portrait63:88 requested1260x1760, no written words, frame, UI, stats or watermark. Important figures/event upper two thirds. LAST reference for STYLE ONLY, do not copy its character, dragon or meadow.",
+  "decisoes": [
+    "Professora e Estudante já existentes redesenhadas juntas, sem reutilizar a arte isolada de nenhuma delas.",
+    "Aula à tarde chuvosa, nova postura de orientação e olhares relacionados entre si.",
+    "Duas esferas de Arcano sobre a bacia; bolsa, óculos e roupas preservam a identidade da professora.",
+    "Acabamento incomum discreto nos metais, sem brilho lendário ou magia ofensiva."
+  ],
+  "avaliacaoVisual": "As duas identidades são reconhecíveis, mãos pertencem às figuras corretas e dois orbes são claros. Expressões diferentes ligadas à aula, ambiente chuvoso completo e compartilhado."
+}

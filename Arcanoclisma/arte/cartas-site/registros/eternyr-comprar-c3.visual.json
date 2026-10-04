@@ -1,0 +1,56 @@
+{
+  "id": "eternyr-comprar-c3",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/anel-de-tique.webp",
+  "textoRegraLido": "Compre 2 cartas.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/anel-de-tique.png",
+      "papel": "Identidade do objeto ou lugar; composição integralmente nova"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-f9b04e2f-823c-470d-9bbc-d972521a3a1c.png",
+  "decisoes": [
+    "Anel preservado como peça de bronze com mostrador de tique, redesenhado no dedo e em uso.",
+    "Banca de mapas ao ar livre numa cidade costeira; duas folhas de mapa ilustram a compra de duas cartas.",
+    "Novo vendedor com cabelo preto e branco encaracolado, expressão astuta e lenço ao vento. Cena comum sem acabamento de raridade."
+  ],
+  "avaliacaoVisual": "Anel legível na mão dianteira, exatamente duas grandes folhas mágicas sobre o atlas, duas mãos coerentes. Composição inclinada com profundidade pela cidade e pelo mar; luz natural localizada, fundo integral e sem montagem.",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/eternyr-comprar-c3.txt",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c3.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "38e6f2d58e0c3abcc993948885b2b1bffc8c065577ddfdfc1ff0771f05c0cefa",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

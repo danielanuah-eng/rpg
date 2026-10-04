@@ -1,0 +1,27 @@
+{
+  "id": "base-estrutura-c8-reator",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/a-boca-da-voragem.webp",
+  "textoRegraLido": "Conta como 2 cartas no Grau. Suspenda: ganhe 4 Arcano.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/a-boca-da-voragem.png",
+      "papel": "Identidade de lugar e participantes ou personagem; novos gestos e contexto"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e luz controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-469ca748-4d5f-4664-ae7a-b2dcde007788.png",
+  "prompt": "TCG A boca da Voragem, legendary permanent gateway place generates FOUR Arcano, do not invent a combat ability. Reference1 for LOCATION AND PARTICIPANTS identity ONLY: monumental dark-slate stone gateway with old-bronze circular arch and pointed keystone, purple banners, immense black/dark-violet vortical doorway, raised terraces and paths; GARMHAL O DOMADOR is the grey-bearded tall heavily muscular tan guardian with long loose black-grey hair, red cloak with one white-fur shoulder, old bronze clasps/cuffs and practical dark loin/tabard armor and boots; TWO tawny male lions with dark ochre manes and simple bronze brow collars, connected with old gold chains. Preserve these identities but completely REPAINT in NEW poses, angle, environment and shared light. Low view from entrance RAMP at LEFT, looking diagonally UP to gate at upper RIGHT, ramp has clean slate geometric steps with smooth broad rock and muted moss, grounded valley/ruined wall horizon beyond at left, cool heavy-blue LATE AFTERNOON after rain. Garmhal is now KNEELING on one knee near upper-middle, not huge upright arms-out pose, looking intensely DOWN toward the nearby lion's collar, one hand checking collar and other loosely holding the two slack chains. One lion reclines broadside just in front of him facing LEFT with forepaws crossed and eyes half closed, the other lion turns AWAY climbing a step toward portal, exactly four natural limbs per lion with overlaps coherent, no extra animals. A few small wardens in plain muted clothes watch far down ramp, human proportions consistent relative to guardian and architecture. The huge portal's black-violet throat bends tiny smooth purple Arcano strands into a tremendous abyssal depth, overwhelming quiet grandeur from void not explosion; within upper arch exactly FOUR distinct small deep-VIOLET Arcano spheres coalesce in an arc, one strand connects them to portal, functional harvesting only. Domador still guards doorway, not attacking visitors. LEGENDARY integrated finish: clearly visible fine GOLD+RAINBOW IRIDESCENT thread sheen in selected arch metal facets, lion collars and portal's thin lip, multiple restrained gold/chromatic glints reacting to the dark violet light, aesthetic foil texture belongs to the picture's surfaces and highlights, not only borders, not a gold flood over background. Keep stone dark and sky cool; no blinding radiant golden universe. Approved Arcanoclisma smooth narrative fantasy illustration, selectively crisp organic contours with broad clean painted surfaces, coherent proportions, shared environmental lighting and contact shadows. Complete NEW scene not a source cutout composited on scenery. Controlled warm/cool color design, no overly scratched/rugged scenery, photoreal/anime HDR, opaque fog wash or everything-gold bloom. Full opaque portrait63:88 requested1260x1760, no words, title/frame, stats, UI or watermark. Key face/event upper two thirds, scenery continues to every edge. Reference2 for approved STYLE ONLY, not its woman, dragon, meadow or layout.",
+  "decisoes": [
+    "Boca da Voragem refeita a partir da rampa lateral em tarde pós-chuva, portal roxo/negro e participantes mantidos.",
+    "Garmhal ajoelhado junto ao colar, leão deitado e outro subindo escada; poses novas em interação.",
+    "Quatro esferas coalescem no portal, sem inventar ataque ou liberação da expansão.",
+    "Lendária com ouro e arco-íris integrados ao arco, colares e reflexos; cenário permanece escuro e frio."
+  ],
+  "avaliacaoVisual": "Quatro esferas distintas acima do portal, Garmhal e exatamente dois leões reconhecíveis em novos gestos. Degraus, vale, céu e portal formam cena completa. Reflexos cromáticos da lendária na própria arte, sem cobrir faces."
+}

@@ -1,0 +1,24 @@
+{
+  "id": "base-aliado-c4-defensivo",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/lutador-de-pele-de-pedra.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/lutador-de-pele-de-pedra.png",
+      "papel": "identidade, pedra e magia coral"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Novo soco para cima em preparação defensiva, em vez do soco frontal da base.",
+    "Salão de juramentos ao meio-dia, com proteção de aliados e ambiente completo.",
+    "Proeza grande construída em poucas formas de pedra; magia coral preservada, sem fundo excessivamente luminoso."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-1c64953a-516c-4c76-b1ae-d5e92b3257e0.png",
+  "prompt": "Use case: illustration-story. New unified scene for Arcanoclisma \"Lutador de Pele de Pedra\", UNCOMMON defensive ally. Polished fantasy narrative illustration matching approved second reference: crisp selective contours, smooth painted broad surfaces, controlled shadows and material texture, integrated lighting and contact shadows. No gritty canvas grain, overly expressive scratched scenery, excessive HDR/anime gloss, foggy wash or blooms. Actual NEW single painted scene; not a transparent RPG cutout pasted onto an environment. Opaque full background to all edges, portrait 63:88 requested1260x1760. No lettering, card frame, UI, stats or watermarks. Leave key faces/action above lower third for overlay. Uncommon restrained finish, no rainbow foil.\nReference1 character IDENTITY ONLY: enormous heavy-built man with warm fair golden skin, long square-angular face, broad nose, small brown eyes, chin-length wavy blond hair, cautious stern expression; thick body covered in brown stone-like skin plates, cream cloth wraps across torso, dark plum trousers, burgundy scarf and belt sash with bronze medallions, clothwrapped calves and heavy stone feet. CORAL magic around both fists. Preserve those particular colors, do not convert coral to the generic Dominum-purple in surroundings. Exactly two arms, two hands. Change whole pose and direction of action from reference.\nScene: bright MIDDAY light shafts inside a warm terracotta and cream vaulted HALL OF OATHS, simple benches and dark violet pennants establish fortified Dominum domain, smooth decorated plaster and geometric tiled floor rather than ruined crossroads. Eye-level composition, main figure in RIGHT third HALF-KNEELING, one knee down and other foot planted, elbows gathered before chest, face turned UP with concentrated guarded stare. He is about to PUNCH UPWARD, not toward viewer. ONE enormous stone FIST construct forms above/right of his own raised right forearm in an upward arc, larger than his entire torso, animated stone blocks aligning into clear knuckles held by two controlled coral energy ribbons. His actual left hand closed close to chest; no additional arms or disconnected hands. Face unobscured beside construct.\nThreatened upper stone arch is beginning to fail but held before impact by the forming stone fist; few large suspended intact blocks show scale, no ocean of gravel. At left two protected allies, an older brown-skinned woman in a simple slate shawl and a dark-skinned bald guard, retreat behind a bench with different restrained expressions. Emphasize DEFENSE and imposing preparation, no wounds or gore. Coral energy local, casting small warm bounce on stone fist, hall stays naturally lit and cool shaded, no blinding gold, firestorm or global anime bloom. Strong readable gesture, big feat with a small number of powerful shapes, smooth environment and crisp focal face. New cohesive painting, opaque all edges, no stats, text or UI.",
+  "avaliacaoVisual": "Dois braços, novo soco para cima e apoio ajoelhado legíveis. Punho gigante sustenta o arco diante dos aliados; rosto preservado e magia coral focal, arquitetura contínua sem colagem."
+}

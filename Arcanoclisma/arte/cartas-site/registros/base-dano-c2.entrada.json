@@ -1,0 +1,25 @@
+{
+  "id": "base-dano-c2",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/brasa-de-forja.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/brasa-de-forja.png",
+      "papel": "brasa achatada de carvão e núcleo prata-mercúrio"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Brasa viaja da direita para esquerda, com aparência metálica pesada, não bicho ou bola de fogo.",
+    "Forja industrial ao meio-dia com câmera inclinada moderada; conjuradora parcialmente de costas.",
+    "Alvo, silhuetas, roupas e direção variam em relação às duas magias anteriores.",
+    "Prata-mercúrio do núcleo preservada e impacto localizado."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-af63d15a-4eab-47fb-9cd8-e37819d5ea51.png",
+  "prompt": "Use case: illustration-story. New unified Arcanoclisma TCG art \"Brasa de Forja\", COMMON temporary spell. Polished fantasy narrative illustration matching approved second reference: crisp selective contours, smooth painted broad surfaces, controlled shadows and material texture, integrated lighting and contact shadows. No gritty canvas grain, overly expressive scratched scenery, excessive HDR/anime gloss, foggy wash or blooms. Actual NEW single painted scene; not a transparent RPG cutout pasted onto an environment. Opaque full background to all edges, portrait 63:88 requested1260x1760. No lettering, card frame, UI, stats or watermarks. Leave key faces/action above lower third for overlay. Common card: no rainbow foil. Keep strong illustrated contour design and painterly scene surfaces; not a photoreal render or polished anime poster.\nImage1 MAGIC FORM ONLY: a heavy flattened live forge ember, a SILVER-MERCURY luminous core held between angular graphite/rust charcoal fragments, short lateral breath of silver vapor, NO animal face/body. Change arrangement and orientation organically for a traveling projectile. Image2 scene finish only, no meadow, castle, mountains, gold embroidery or borrowed characters.\nMIDDAY inside an open-sided INDUSTRIAL FORGE WORKSHOP with flat dark teal painted metal walls, simple brick furnace mouths now quiet, heavy workbench, tongs and broad grey floor planes; white daylight enters high shutter windows. Subtle 6-degree Dutch camera, not exaggerated tilt. At RIGHT upper middle, NEW short lean pale-skinned older female smith caster, shaved silver head, freckles and sharp grey eyes, plain midnight-blue headcloth tied behind neck, grey rolledsleeve shirt and leather apron, three-quarter BACK to viewer. She turns her face over shoulder and flicks a long tong to send the flattened ember across toward LEFT. Both hands clearly attached, one tong hand extended and other bracing low.\nLarge projectile sweeps diagonally across center from upper right to mid-left, MERCURY-SILVER core unmistakable and charcoal fragments dark heavy, short silver trailing breath rather than orange fireball. At LEFT foreground a new broad-shouldered mahogany-skinned male enemy in a simple moss cloak and dull bronze chestplate twists away JUST AFTER impact at chestplate edge. His long black braids and tense closed mouth are visible in profile, one hand opens involuntarily, no shield or bleeding. Small dark scorch mark and a few silver droplets remain on metal; flattened ember is breaking at contact, clear trajectory/source/consequence. Counterbeam of noon daylight stays cold and modest, source spell local bright silver, warm rust charcoal rims controlled.\nWorkshop environment uses smooth designed large planes and sparse props, no noisy scrap pile or shiny gold scene. Cool blue-green shadows balance ember's grey/rust shell, silver spell remains distinct, no red energy substituted. Character gesture and physical perspective newly composed as one painting, every corner has environment. No creature manifestation, ornate frame, lettering, UI or card statistics.",
+  "avaliacaoVisual": "Brasa prata-mercúrio com carvão atravessa composição inversa, conjuradora parcialmente de costas e alvo em primeiro plano. Mãos legíveis e impacto sem sangue; forja completa com materiais e luz coerentes, sem corpo de criatura."
+}

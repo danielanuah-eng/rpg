@@ -1,0 +1,27 @@
+{
+  "id": "bal-estrutura-cerco-c3",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/a-cidade-muralha.webp",
+  "textoRegraLido": "Suspenda: cause 1 de dano ao Conjurador inimigo.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/a-cidade-muralha.png",
+      "papel": "Identidade da estrutura ou objeto; composição e evento novos"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-069ae7da-7c4d-44de-9c56-21e8924a08a7.png",
+  "decisoes": [
+    "Cidade redesenhada desde a varanda do mercado olhando para portão, ponte e rio, preservando muralhas creme e estandartes azuis com sol.",
+    "Comércio e moradores armados contextualizam o lugar; operador ativa um único dispositivo que envia dano um a um conjurador fora da cidade.",
+    "A arquitetura não foi transformada numa prisão roxa pela indicação genérica do Valor.",
+    "Comum sem acabamento holográfico."
+  ],
+  "avaliacaoVisual": "Cidade ocupa a cena inteira com planos de mercado, muralha, ponte e vale. Trajetória vermelha liga dispositivo a um conjurador rival de pés apoiados na margem externa, em escala coerente. Construção habitada, símbolos solares legíveis, céu frio equilibrando pedra quente.",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nA CIDADE-MURALHA source identity: imposing HABITABLE fortified city of warm cream limestone round towers, crenellated walls, navy blue standards bearing gold sun symbols, orange terracotta tiled houses, cypress trees and a fortified arched gate/bridge over turquoise river. Armed residents and sentinels, protection with fear of outside world. Preserve blue-and-sun standards and actual architecture; generic mechanical Dominum briefing must NOT turn it into a purple prison.\nNEW fully environmental view: camera on a sheltered interior market balcony above a narrow street, looking outward diagonally through part of the city toward the gate and the rocky river valley outside. Near LEFT arch/wood balcony frames the view, plain warm awnings and armed merchants with sheathed swords on inner street; mid-right round gate towers large, smaller city roofs rise behind left, clear source sun emblems. Outside the gate, the stone approach bridge and opposite bank visible through the open gap. An operator on middle-right parapet activates ONE small old bronze ward fixture, sending a SINGLE thin rusty-red magic pulse diagonally across bridge to ONE distant enemy conjurador, a lean dark-cloaked adult standing on opposite bank with one hand holding a simple crooked wand and the other shielding his face as the local red pulse hits his chest ward. His feet remain grounded, modest recoil no gore, no enormous explosion. Target outside city, guards and citizens inside protected; scale fits the bridge. Structure does not become an attacking creature; this illustrates its activated 'Suspenda: cause1damage to enemy Conjurador' effect. Overcast cool early morning, smooth cream stone, darker blue river and soft muted rust rooftops; not grand gilded cathedral, no entire cutout fortress island, no universal purple tint. COMMON no foil or rainbow finish. All edges continuous coherent perspective."
+}

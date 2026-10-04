@@ -1,0 +1,57 @@
+{
+  "id": "bal-estrutura-cerco-c3",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/a-cidade-muralha.webp",
+  "textoRegraLido": "Suspenda: cause 1 de dano ao Conjurador inimigo.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/a-cidade-muralha.png",
+      "papel": "Identidade da estrutura ou objeto; composição e evento novos"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-069ae7da-7c4d-44de-9c56-21e8924a08a7.png",
+  "decisoes": [
+    "Cidade redesenhada desde a varanda do mercado olhando para portão, ponte e rio, preservando muralhas creme e estandartes azuis com sol.",
+    "Comércio e moradores armados contextualizam o lugar; operador ativa um único dispositivo que envia dano um a um conjurador fora da cidade.",
+    "A arquitetura não foi transformada numa prisão roxa pela indicação genérica do Valor.",
+    "Comum sem acabamento holográfico."
+  ],
+  "avaliacaoVisual": "Cidade ocupa a cena inteira com planos de mercado, muralha, ponte e vale. Trajetória vermelha liga dispositivo a um conjurador rival de pés apoiados na margem externa, em escala coerente. Construção habitada, símbolos solares legíveis, céu frio equilibrando pedra quente.",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/bal-estrutura-cerco-c3.txt",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/bal-estrutura-cerco-c3.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "d992220c7d081dc12e5718d98857d5aad0e96b19871ba499e7d6f05ca7e90cff",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

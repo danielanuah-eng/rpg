@@ -1,0 +1,25 @@
+{
+  "id": "base-dano-c4",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/rasgo-faminto.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/rasgo-faminto.png",
+      "papel": "Forma e identidade do feitiço; nova posição e contexto"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Apenas acabamento liso, iluminação e desenho da versão aprovada"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-f8c9975c-6015-4dd6-ac02-e4e7631c1470.png",
+  "prompt": "TCG artwork Rasgo Faminto, damage spell. Reference1 identifies the monstrous MAGIC SHAPE only: irregular dislocated ivory shell plates over charcoal-black body and dark magenta void seams, enormous broken hungry mouth with cream teeth, curled tail and claws. This is a spell taking this familiar form, not a new permanent monster or ally. Make a completely NEW pose and camera: dramatic overhead three-quarter shot down onto a wide floating pontoon of weathered smooth grey timber in a flooded lowland city at blue hour AFTER sunset, several low slate houses and canal gates beyond; use clean broad reflections and silhouettes. At upper RIGHT a short heavyset adult woman with shaved temples and dark curly topknot, copper-brown skin, teal rolled sleeves and faded mauve apron, twists sideways extending one hand down. From that hand a single thin jagged magenta arc expands into the giant hungry spell, its body curling COUNTERCLOCKWISE over the wet pontoon, huge jaw at upper LEFT snapping the metal bracer and guard of an opposing tall grey-haired adult in a mustard coat. Opponent braces backwards and shield bends slightly, fragments are shell and metal ONLY, no blood, gore, bodily injury or exposed anatomy. Both people's feet supported by the pontoon, visible space and continuous magic origin-to-impact. The ivory mouth and charcoal-magenta body remain the source's identity; do NOT recolor it orange fire. Less elaborate spikes, scene fully integrated. Several low domestic window lights give restrained warm contrast, not a luminous golden palace. Uncommon finish: discreet tiny warm metallic glints on ivory plate edges and the opponent's bracer, no rainbow foil, no bright outline framing the whole picture. Polished fantasy narrative illustration matching the second reference's smooth pictorial handling and controlled light. Crisp selective organic ink contours with broad smooth painted surfaces, clean readable shape design, no gritty canvas grain, no excessively rough masonry, no atmospheric fog washing everything out, no anime HDR glow. Paint everything as one NEW unified environmental scene with shared light, perspective and contact shadows. Opaque full environment reaches every edge. Portrait63:88 requested1260x1760; no title, frame, UI, stats, words or watermark. Main action and faces above lower third. Reference2 is STYLE ONLY, do not copy its people, dragon, meadow or composition.",
+  "decisoes": [
+    "Nova câmera elevada em canal residencial à noite, evitando repetir arenas e forjas.",
+    "Rasgo preserva marfim, carvão e fendas magenta; aparece como forma de feitiço conectada à conjuradora.",
+    "Ação de dano mostrada mordendo a guarda metálica; sem ferimento gráfico.",
+    "Incomum com pontos metálicos quentes discretos."
+  ],
+  "avaliacaoVisual": "Origem, forma faminta e alvo legíveis; curvas do corpo e cauda mudam a pose original. Dois humanos apoiados no pontão e reflexos coerentes. Magia magenta localizada e fundo completo."
+}

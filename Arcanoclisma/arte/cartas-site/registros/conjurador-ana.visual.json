@@ -1,0 +1,51 @@
+{
+  "id": "conjurador-ana",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-e1f51d6c-a3f2-4532-81bc-0e89d88baaab.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/conjurador-ana.txt",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/viajante-do-entretempo.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "somente acabamento e traço"
+    }
+  ],
+  "decisoes": [
+    "Nova Ana de pele marrom, cachos com fios brancos, óculos e livro com correntes",
+    "Entretempo como estação temporal ao amanhecer, câmera baixa e passo em movimento",
+    "Instante congelado, páginas e gotas suspensas ligados à habilidade",
+    "Cena própria e lisa com brilho focal lendário v9"
+  ],
+  "avaliacaoVisual": "Inspecionada: Ana distinta da viajante provisória, livro/relógio e tempo congelado integrados ao cenário, luz/apoio e profundidade coerentes.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ana.png",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "012e30bd8444a327cc0fb0ffac3b36f3156ccbb4dccabf84a2881d2410a8a1be",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "lendaria",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

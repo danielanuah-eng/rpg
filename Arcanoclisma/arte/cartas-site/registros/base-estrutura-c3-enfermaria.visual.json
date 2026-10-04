@@ -1,0 +1,57 @@
+{
+  "id": "base-estrutura-c3-enfermaria",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/aldeia-da-curandeira.webp",
+  "textoRegraLido": "Suspenda: cure 3 de um alvo.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/aldeia-da-curandeira.png",
+      "papel": "Identidade da referência visual aprovada; pose e enquadramento refeitos"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Apenas acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-08e8d07a-3d38-4b4f-88d8-42f899f1c404.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-estrutura-c3-enfermaria.txt",
+  "decisoes": [
+    "Aldeia redesenhada como cena completa vista através do portão da horta, com proporção de pessoas e edifícios.",
+    "Cabana de palha, ervas penduradas, medalhão, canteiros, cestos e poço preservam o lugar.",
+    "Dia nublado de outono e chão úmido, cura discreta no ombro do viajante junto à porta.",
+    "Magia verde localizada no tratamento; sem gerar esferas de recurso ou inventar efeito ofensivo."
+  ],
+  "avaliacaoVisual": "Cabana e aldeia contínuas com jardim, poço, percurso e céu nublado. Cura discreta à porta, moradores com atividades distintas. Não permanece ilha de cenário recortada, fundo cobre toda a imagem.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c3-enfermaria.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "c6379e4fbc09836000b658e7e884a52a5c74d7202bb0f8d00a617202141d79c3",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

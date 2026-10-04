@@ -1,0 +1,24 @@
+{
+  "id": "base-aliado-c7-equilibrado",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/touro-de-kairvahnn.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/touro-de-kairvahnn.png",
+      "papel": "identidade e anatomia bovina"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Touro deitado de forma bovina depois da defesa, de lado e com rosto parcialmente sombreado.",
+    "Entardecer numa bacia de argila cobre com canal de mercúrio, distinto da arena noturna.",
+    "Energia roxo-sangue dos chifres preservada em fios suaves, sem fogo ou banho de luz."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-b48607bb-70f3-4130-91ff-4e5fab19b1d1.png",
+  "prompt": "Use case: illustration-story. New card art \"Touro de Kairvahnn\", RARE wild beast, Arcanoclisma. Polished fantasy narrative illustration matching approved second reference: crisp selective contours, smooth painted broad surfaces, controlled shadows and material texture, integrated lighting and contact shadows. No gritty canvas grain, overly expressive scratched scenery, excessive HDR/anime gloss, foggy wash or blooms. Actual NEW single painted scene; not a transparent RPG cutout pasted onto an environment. Opaque full background to all edges, portrait 63:88 requested1260x1760. No lettering, card frame, UI, stats or watermarks. Leave key faces/action above lower third for overlay. Rare: restrained silver and violet material glints, no rainbow/gold foil wash.\nImage1 preserves beast IDENTITY ONLY: massive muscular russet bull, dense dark reddish curly forelock and short mane, cream large horns curving sideways and then sharply up, dark divided hooves, dark tail with long tuft, BLOOD-PURPLE energy wisps around horns and shoulders. Pure bovine anatomy, no human arms, armor or dragon details. Image2 approved finish and smooth planes only; no characters, dragon, meadow or mountains.\nAt late sunset on a vast warm copper-clay basin beside a SILVER MERCURY STREAM. Dramatic fairly close three-quarter SIDE view from low height. Bull reclines naturally on a wide basalt shelf, four bovine legs folded under its weight, massive chest forward, head angled down toward LEFT, horns silhouetted against orange-to-violet sky. Face partly shaded by its curled forelock, one watchful violet eye and muzzle clear; exhausted but ferocious guardian, not charging straight toward viewer like original. Calm tense breath and a few thin dark-purple energy wisps curling from horns, no flame. Foreground retains deep hoof gouges, a split fence post and two small purple energy crystals marking aftermath of its defense. Tiny travelers with a covered wagon stay safely across the channel in distant right background, no close human subject. Broad expansive sky occupies upper third; one far floating tower and gentle overlapping cloud arcs acknowledge Sublimeyn without repeating last card's arena. Low sun as a small subdued disk, not blazing golden backlight. Smooth clay bands, flat reflective silver water shapes, clean painted duskclouds, selective soft fur detail. Integrated contact shadow anchors huge body to shelf. Local horn-violet glints and cool silver stream contrast warm terrain, quiet environment, no bloom, neon rings, lightning storm or oversized rainbow. Fill the whole portrait with cohesive environment.",
+  "avaliacaoVisual": "Touro deitado, peso apoiado no terreno e patas bovinas; pelagem, chifres e energia roxa reconhecíveis. Canal metálico e pôr do sol integrados; novo momento após defesa, sem colagem."
+}

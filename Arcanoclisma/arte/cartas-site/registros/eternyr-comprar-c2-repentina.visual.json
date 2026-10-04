@@ -1,0 +1,63 @@
+{
+  "id": "eternyr-comprar-c2-repentina",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/hora-solta.webp",
+  "textoRegraLido": "Compre 1 carta.",
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/hora-solta.png",
+      "papel": "Identidade da criatura, redesenhada com nova pose e ambiente"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-531502f1-9093-42e0-a2df-26a65099758e.png",
+  "decisoes": [
+    "Hora Solta foi redesenhada numa curva horizontal sobre a zeladora de um relógio, em telhado nevado ao amanhecer.",
+    "Uma única visão ilustra comprar uma carta em velocidade Repentina; sem poderes novos.",
+    "V1 preservada: a silhueta vertical ainda repetia o catálogo. Revisão mudou direção, postura e posição da visão.",
+    "Carta comum sem acabamento holográfico."
+  ],
+  "avaliacaoVisual": "Revisão mostra corpo de energia numa curva horizontal, face angular inclinada para baixo à esquerda e mão com uma única folha de memória junto à zeladora. Mantidos fundo nevado e as duas mãos da mulher no instrumento. Identidade azul-noite e arcos de relógio preservada, iluminação localizada e ambiente integral.",
+  "versaoAnterior": {
+    "arquivo": "Arcanoclisma/arte/cartas-site/variantes/eternyr-comprar-c2-repentina-v1-pose-repetida.png",
+    "selecionada": false,
+    "motivo": "Silhueta da criatura muito próxima à pose do catálogo.",
+    "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-459f8fb0-fe40-4e0e-9169-da4136a7cdab.png"
+  },
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/eternyr-comprar-c2-repentina.txt",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c2-repentina.png",
+  "dimensoes": [
+    1062,
+    1480
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "992b7a4e94f33f2aa69c5fcad3d1c9ecc09751f514e678146e74cb70e8db350d",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

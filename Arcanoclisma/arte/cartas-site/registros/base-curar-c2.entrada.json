@@ -1,0 +1,27 @@
+{
+  "id": "base-curar-c2",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/sementes-de-um-dia.webp",
+  "textoRegraLido": "Cure 8 de dano de um alvo e ganhe 1 Arcano.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/sementes-de-um-dia.png",
+      "papel": "Identidade da forma mágica ou objeto; redesenho integrado ao evento"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento liso e iluminação controlada aprovados; não copiar composição"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-907703d6-3704-4e0e-88e9-bc8776971e54.png",
+  "prompt": "TCG Sementes de Um Dia, healing spell: heals a target and generates ONE Arcano. Reference1 gives seed-pouch design only: rust-orange patched cloth, prominent plain tan circle with a three-leaf sprout symbol, thick turquoise drawcord, tan split seeds with a green inner core. Repaint in a completely new angle, the pouch tipped from hands, not a pasted isolated item. A new quiet FULL environment in a dry inland healer village at white noon: simple ochre adobe wall and low shaded porch, swept terracotta earth, distant pale sand dunes, sparse scrub sage, a donkey shelter small and contextual; broad smooth surfaces without excessive pitted detail. Camera at seated eye level from the injured man's SIDE, not a centered magical portrait. A slim exhausted adult man with light tawny freckled skin, shaved ginger hair and a crooked nose, plain cream shirt and rolled trousers, sits on a low blue-painted stool in the LEFT middle, right forearm wrapped in intact mundane cloth (no exposed wound). A practical stout healer, older woman with olive skin and straight dark braid wrapped in plain linen, stands at RIGHT behind him tipping the pouch with two distinct hands. Golden-amber roots and pale-green leaf-light grow from a SMALL cluster of falling seeds, wrapping loosely around intact forearm as clean luminous bandages, not engulfing the body or scenery. Man straightens back and relieved smile at recovering fingers; one SINGLE small pale-green energy sphere coalesces just above the healer's open wrist, clean indication of one Arcano, no duplicated orb array. A seed touching soil sprouts one tiny two-leaf plant; no enormous sudden tree hiding everything. Contained daylight magic, matte amber rather than dazzling gold and NO broad bloom. Warm ground offsets cool green healing. Polished contemporary fantasy story illustration in approved reference2's smooth handling, crisp selective organic contours, broad clean surfaces, readable spatial proportion and integrated shadows. NEW single painted environmental composition, not a transparent catalog cutout composited onto scenery. Less decorative, muted material colors with saturated SMALL magic focal accents, no all-over gold embroidery, no scratched expressive texture, no realistic photo skin or overblown anime neon. Opaque full environment to all edges; portrait63:88 requested1260x1760. No card frame or typography, no words, UI or watermarks; action above lower third. Common rarity no foil shimmer. Style reference only, not its people or dragon or meadow.",
+  "decisoes": [
+    "Nova aldeia de curandeira junto a dunas ao meio-dia, com sombra de varanda e fundos completos.",
+    "Bolsa de sementes mantém tecido remendado, corda azul e emblema de broto em novo gesto de uso.",
+    "Cura mostrada por ataduras de luz no braço intacto; só uma esfera representa o Arcano ganho.",
+    "Cenário de tons de barro e luz natural, brilho verde e âmbar localizado na cura."
+  ],
+  "avaliacaoVisual": "Bolsa reconhecível, curandeira segura e verte sementes com uma mão e gera uma esfera na outra; paciente sentado reage com alívio à cura do braço enfaixado. Sem ferida exposta. Fundo completo, sombras coerentes e materiais mate."
+}

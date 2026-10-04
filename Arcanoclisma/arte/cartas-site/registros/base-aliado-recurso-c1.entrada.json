@@ -1,0 +1,27 @@
+{
+  "id": "base-aliado-recurso-c1",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/estudante-da-escola-de-magia.webp",
+  "textoRegraLido": "Suspenda: ganhe 1 Arcano.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/estudante-da-escola-de-magia.png",
+      "papel": "Traços e identidade efetiva da imagem aprovada; pose e ação novas"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente desenho liso e luz controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-2fa3fe69-bca4-4a2e-b5d8-9d3ad0a1ddb3.png",
+  "prompt": "TCG Estudante da Escola de Magia, ordinary allied apprentice generates ONE Arcano. Reference1 ONLY for this EXISTING girl's identity: warm light-olive skin with freckles, small round expressive face and dark brown eyes, medium-brown messy curly hair gathered into a high bun tied with navy ribbon, loose cream linen shirt, long navy practical coat with very modest tan edging, brick-red scarf, dark tan breeches and lace-up brown boots, worn brown satchel and navy astrology book with pale diagram. Preserve these features, but completely NEW pose, expression and setting. She sits SIDEWAYS on a low wide wooden step of a modest magic-school outdoor practice veranda beside a shallow canal, left knee slightly pulled toward chest, other foot firmly on lower step, torso twisted OVER HER SHOULDER toward a classmate just outside frame, eyebrows knitted in concentration and a crooked little determined smile (not original upright chatting pose). Book rests OPEN on her raised thigh and her far hand holds its edge; near hand delicately pinches ONE small silver-white Arcano orb above the page with indigo-white tiny moon-shaped smoke, clearly one resource gathering. Satchel placed on step beside her, correctly separate from body. Full quiet windy AFTERNOON under thin cloudy light: whitewashed teaching hall wall at upper LEFT with two plain teal windows, terracotta water jars on shelf, SIMPLE canvas sunshade edge overhead and hanging dried chalkboards WITHOUT writing, floorboards and steps in lower foreground, a tiny second adult student with dark skin and straight short hair stands in background adjusting brass practice scales near wall, distinct pose. Water broad soft blue reflected planes and small reeds, no giant floating palace, no golden rays, no ocean of books. Main existing girl integrated with new scene, all anatomy coherent and no extra feet. Approved smooth Arcanoclisma fantasy illustration with selective organic ink contours, broad smoothly painted surfaces, clear clean color groups, expressive individual facial features, coherent perspective/light and grounded shadows. NEW complete integrated scene not a catalog character cutout on background. No excessively rough painterly environment, noisy grain, realistic HDR skin, all-over gilded costume embroidery, anime neon blooms or grey fog wash. Opaque portrait63:88 requested1260x1760, no words, card frame, stats, symbols of UI or watermark. Face/action in upper two thirds. Common rarity no foil. Reference2 STYLE ONLY not its woman, dragon or meadow.",
+  "decisoes": [
+    "Estudante sentada nos degraus, expressão concentrada, livro no colo e uma esfera; nova ação em vez da conversa em pé da fonte.",
+    "Traços de rosto, cabelo preso com fita azul, cachecol, casaco, bolsa e livro preservados.",
+    "Pátio de prática junto ao canal durante o dia, colega com atividade própria em segundo plano.",
+    "Um Arcano prata/branco com motivos azuis do livro; comum sem acabamento foil."
+  ],
+  "avaliacaoVisual": "Rosto e roupas reconhecíveis, duas pernas em posição sentada e duas mãos no estudo, uma esfera acima do livro. Bolsa no degrau e colega ao fundo integram personagem à escola; composição completa sem recorte sobre fundo."
+}

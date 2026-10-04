@@ -1,0 +1,27 @@
+{
+  "id": "base-aliado-recurso-c3",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/ferreira-alquimista.webp",
+  "textoRegraLido": "Conta como 1 carta no Grau. Suspenda: ganhe 1 Arcano.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/ferreira-alquimista.png",
+      "papel": "Traços e identidade efetiva da imagem aprovada; pose e ação novas"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente desenho liso e luz controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-fc9cdc39-a426-456e-b598-5404090783fc.png",
+  "prompt": "TCG Ferreira-Alquimista, ally produces ONE Arcano and contributes Grau. Reference1 ONLY for approved EXISTING character likeness: athletic tan skin, angular broad jaw with SHORT DARK BEARD/STUBBLE, thick dark eyebrows, black curly hair pulled loosely back into small tie with curls around face, rolled-sleeve cream workshirt, rust-brown leather apron, dark trousers, faded petrol-blue cloth sash and several small brass bottles at waist, square-headed dull bronze forging HAMMER, metallic-silver mercury magic around hands. Preserve actual approved facial features. Completely NEW action and pose, not overhead-raised hammer: three-quarter SIDE view from left, character stands leaning gently FORWARD over a waist-high spinning alchemical molding wheel, head down turned slightly toward an assistant at far RIGHT, a tight focused smile. ONE hand holds the HAMMER DOWN with head resting by the near thigh (not attacking), other ungloved hand hovers palm-up above the wheel. On wheel, small metallic-silver molten ribbon spirals into ONE tidy silver-white Arcano sphere above palm, continuous origin and gravity-coherent small droplets, not extra spells/orbs. Background an open NIGHT smithy under red-clay arch: charcoal-grey workbench, shallow crucible furnace with ONE contained orange flame at back LEFT, roof beams, pipe and simple tongs/metal blanks arranged on wall, dark-blue moonless night visible through side doorway. A short old assistant with warm dark-brown skin, shaved scalp and very round face, plain grey apron, watches while holding a single pair of tongs at right background, not repeated face or fighting. Warm low furnace contrasts with cool silver magic, everything in same scene and depth. Cloth/brick smooth restrained material treatment, no big fog cloud or white-hot flare hiding faces. Approved smooth Arcanoclisma fantasy illustration with selective organic ink contours, broad smoothly painted surfaces, clear clean color groups, expressive individual facial features, coherent perspective/light and grounded shadows. NEW complete integrated scene not a catalog character cutout on background. No excessively rough painterly environment, noisy grain, realistic HDR skin, all-over gilded costume embroidery, anime neon blooms or grey fog wash. Opaque portrait63:88 requested1260x1760, no words, card frame, stats, symbols of UI or watermark. Face/action in upper two thirds. Common rarity no foil. Reference2 STYLE ONLY not its woman, dragon or meadow.",
+  "decisoes": [
+    "Preservados os traços efetivos aprovados de Ferreira-Alquimista, inclusive cabelo encaracolado e barba curta, roupa de trabalho e frascos.",
+    "Martelo abaixado e mercúrio formado em roda de moldagem; nova postura de trabalho, sem repetir golpe sobre a cabeça.",
+    "Forja noturna com assistente observando, uma esfera de Arcano e trajetória contínua da roda à mão.",
+    "Luz quente do forno contrasta com prata da magia, fundo completo e integrado."
+  ],
+  "avaliacaoVisual": "Rosto e vestuário da fonte reconhecíveis, martelo abaixado, mão criando uma esfera e roda de moldagem contínua na cena. Assistente com tongs, oficina e céu noturno legíveis; duas mãos do protagonista sem membros duplicados."
+}

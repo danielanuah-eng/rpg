@@ -1,5 +1,17 @@
 # Responsabilidades do Claude
 
+## Ajustes atuais de Valores e raridade
+
+Ler `coordenacao/site-online/VALORES-E-RARIDADE-03-10.md` e a entrega `Arcanoclisma/cartas/entregas/templates-valor-v12.visual.json`. Codex cuida de arte, templates e movimentos; mantenha catálogo, editor, triggers, custos e keywords com você. Raridade fica sem aplicação automática no app, **sem apagar** acabamentos já criados; o autor escolhe no editor. Esfera e moldura mostram o(s) Valor(es), e apenas equipamentos podem ser genéricos/cinza. Solicitar artes variadas pelos IDs reais das cartas. O autor reafirmou aprovação de todos os pushes das imagens; publicar a entrega não aprova automaticamente cada arte nova nem libera a expansão.
+
+## Prioridade e autorização atuais (03/10/2026)
+
+Codex está refazendo as 151 artes do jogo atual, carta por carta, com cenas novas e integradas; consuma `Arcanoclisma/cartas/entregas/lote-site-v1.visual.json` por ID. Ler `coordenacao/site-online/INTERACOES-E-NITIDEZ.md` para o pedido de arraste, pagamento confirmado, retorno à mão, tela cheia, efeitos particulares de resolução e cartas dentro da área azul do campo. Codex cria arte e movimentos; você integra regras, alvos, custos e eventos. **O autor autorizou push automático das entregas concluídas e integração com você nesta conversa**, substituindo a exigência anterior de perguntar a cada push desse trabalho. A expansão de 90 cartas A Mestra dos Dragões ainda exige liberação específica para entrar em jogo ou ter suas cartas alteradas.
+
+## Expansão bloqueada: A Mestra dos Dragões (03/10/2026)
+
+Pedido atual do autor: Codex produz somente as artes desta expansão, que introduzirá Ciantia. **Você só poderá colocar a expansão em jogo ou criar/alterar suas cartas quando o autor liberar explicitamente.** A aprovação das imagens e uma eventual autorização de push não constituem essa liberação. Consulte `Arcanoclisma/expansoes/a-mestra-dos-dragoes/expansao.json` e `AGENTS.md`; inicialmente `liberacaoDoAutor.concedida` é false. Esta restrição aplica-se também às propostas de Ciantia/Philgard destinadas a essa expansão. Nomes, descrições e categorias visuais não autorizam regras, custos, raridades jogáveis, balanceamento ou inclusão em baralhos.
+
 ## Etapa atual: site online — gestão com Codex (03/10/2026)
 
 Pedido mais recente do autor: reduzir seus créditos, especialmente os gastos gerenciando agentes. **Codex assume a triagem, divisão de tarefas, escolha de agentes, fila e consolidação das entregas.** Você concentra o trabalho em programação, regras, dados, backend, rede e integração.

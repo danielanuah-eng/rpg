@@ -1,0 +1,57 @@
+{
+  "id": "bal-varredura-c3",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/enxame-de-vespas.webp",
+  "textoRegraLido": "Causa 2 de dano a cada Aliado do oponente.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/enxame-de-vespas.png",
+      "papel": "Identidade do lugar ou criaturas; composição e evento inteiramente novos"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-530d3f8b-6f74-42bf-96eb-79e998c3418a.png",
+  "decisoes": [
+    "Vespas redesenhadas voando em diferentes ângulos por um pomar outonal durante a manhã.",
+    "O enxame alcança três aliados novos com reações distintas, representando dano dois a cada aliado oponente.",
+    "Tamanho aparente dos insetos grandes vem da proximidade da câmera; cores naturais preservadas, sem aura dourada ou acabamento holográfico.",
+    "Cena comum integral, com fruta, caixas, barraca e profundidade do pomar."
+  ],
+  "avaliacaoVisual": "Três alvos separados: homem de colete vermelho defendendo rosto, mulher de cabelos brancos atrás de caixa e jovem de túnica ocre protegendo pescoço. Mãos e membros dos humanos coerentes; insetos principais têm corpos de vespa, antenas, asas e patas articuladas. Sem ferimentos gráficos, luz ambiental controlada.",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/bal-varredura-c3.txt",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/bal-varredura-c3.png",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "29d0a3198a17352bb1856cb3fc1a22b76c4f4093dc96487f89ae5cf9511247c6",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

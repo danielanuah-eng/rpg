@@ -1,0 +1,31 @@
+{
+  "id": "base-destruir-c4-repentina",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/sombra-que-ficou.webp",
+  "textoRegraLido": "Destrua um Aliado ou Mística.",
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/sombra-que-ficou.png",
+      "papel": "Identidade da forma mágica ou jaula; nova posição"
+    },
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/jaula-de-luz.png",
+      "papel": "Identidade da Mística como alvo do feitiço de destruição"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-321d54d5-7c24-4667-8a70-ed3c0b4c5be0.png",
+  "prompt": "TCG Sombra Que Ficou, a REPENTINA spell destroying a single enemy Mística. Reference1 establishes the SHAPE of the shadow-spell only: broken charcoal-black shadow-cat, splintered black plates, restrained dark golden veins, gold claw tips and yellow eyes, curved segmented tail; preserve identity but completely NEW pose. Reference2 establishes the one enemy Jaula de Luz only: small domed brass cage, upright glowing warm ivory bars, squared base and little handle and front latch. Reference3 STYLE ONLY. A warded magical cage hovers around head height beside a tollhouse courtyard in a walled CITY at clear mid-morning: cream plaster walls and dark teal shutter, broad smoothly painted cobbles, clothesline far behind, simple red awning overhead, a guard and a traveler only as small reacting figures near back-left arch. Moderate raised camera, top down across courtyard, no usual left-to-right beam battle. The shadow has spread FLAT across a sunlit wall and a diagonal stone ledge like liquid black cloth, feline HEAD and two long foreclaws peel OUT of that FLAT shadow at upper RIGHT, rear body remains a stretched shallow silhouette on wall, tail arcs upward as torn dark panels, not the source's forward leaping monster. It curls both claws around the golden cage in UPPER CENTER/LEFT; half of the cage is sinking into a dark vertical slit and luminous bars begin disappearing as the slit closes. Single cage only, no trapped human or animal, destruction mystical object. Sunlit surfaces meet this ominous shadow so spatial geometry and illusion are clear. Thin controlled gold seams on shadow, not fire or smoke; no explosion, body wounds, gore, no invented summon ability. Uncommon finish a few warm metallic sparks along cage edge, not rainbow. Approved Arcanoclisma smooth fantasy illustration with selectively crisp organic ink contours, broad painted shapes, coherent perspective and shared contact shadows. NEW fully integrated narrative environmental artwork, not a source cutout pasted over a scene. Smooth restrained scenery rather than overexpressive rugged paint; no all-over embossed gold, no neon anime glare, no grey fog wash. Opaque scene to every edge, portrait63:88 requested1260x1760, no text, frame, stats, letters or watermark. Important action/identity above lower third. Final style reference ONLY, not its characters, dragons or meadow.",
+  "decisoes": [
+    "Sombra se desprende de parede e fenda, em nova postura, preservando placas negras, veios e olhos dourados.",
+    "Alvo é uma Jaula de Luz vazia, permitindo mostrar destruição de Mística sem vítima ou regra nova.",
+    "Pátio de posto urbano em manhã clara e câmera elevada diagonal; figurantes só contextualizam.",
+    "Incomum com brilhos metálicos pontuais; energia não representa fogo."
+  ],
+  "avaliacaoVisual": "Dois antebraços de sombra envolvem a jaula parcialmente sobreposta pela fenda vertical, com corpo saindo da parede. Perspectiva elevada e figurantes pequenos distintos da arte RPG isolada. Sem fundo vazio ou ferimento."
+}

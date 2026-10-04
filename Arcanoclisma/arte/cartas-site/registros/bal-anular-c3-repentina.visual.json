@@ -1,0 +1,63 @@
+{
+  "id": "bal-anular-c3-repentina",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/olho-que-fecha.webp",
+  "textoRegraLido": "Anule uma carta na pilha.",
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/olho-que-fecha.png",
+      "papel": "Identidade da criatura; desenho novo com pose, ação e ambiente diferentes"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-36aeeb0e-7978-4d7c-b4bc-d7566d72e5a7.png",
+  "decisoes": [
+    "Olho redesenhado de lado com pálpebras quase fechadas, lacres vermelhos e a identidade metálica preservados.",
+    "Nova maga de pele escura e cabelos brancos permanece serena enquanto a magia do rival se desfaz.",
+    "V1 preservada; revisão reduziu o olho para respeitar o tamanho diminuto do catálogo.",
+    "Anulação de uma carta na pilha em velocidade Repentina, sem dano extra. Comum sem brilho holográfico."
+  ],
+  "avaliacaoVisual": "Olho pequeno e separado do rosto da maga, com íris dourada ainda legível, impacto vermelho próximo e sem grande escudo ou feixe emitido. Duas mãos coerentes por humano, magos de aparência e expressão diferentes. Interior e exterior contínuos com iluminação crepuscular controlada.",
+  "versaoAnterior": {
+    "arquivo": "Arcanoclisma/arte/cartas-site/variantes/bal-anular-c3-repentina-v1-olho-grande.png",
+    "selecionada": false,
+    "motivo": "Tamanho do olho não respeitava sua descrição diminuta.",
+    "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-145c9d99-f0b7-49c0-9080-26e9897b6800.png"
+  },
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/bal-anular-c3-repentina.txt",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/bal-anular-c3-repentina.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "c1bbdad59fe02b1a36c28a21d4acdf7572fc0f9640f743551da03d0066c78fb0",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

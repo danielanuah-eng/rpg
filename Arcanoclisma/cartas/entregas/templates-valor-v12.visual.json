@@ -1,0 +1,27 @@
+{
+  "tarefaId": "templates-valores-2026-10-03",
+  "autor": "Codex",
+  "estado": "entrega_visual_local",
+  "raridade": { "padraoApp": "nenhuma", "definicao": "autor no editor", "acabamentosPreservados": true, "efeitoMecanico": false },
+  "templates": {
+    "pasta": "Arcanoclisma/online/public/kit/templates/valores-v12",
+    "molduras": 75, "complementos": 2, "valores": 9,
+    "tipos": ["aliado", "temporaria", "mistica", "estrutura", "conjurador", "canal", "armadura", "extra"],
+    "genericos": ["canal", "armadura", "extra"],
+    "formato": "SVG", "viewBox": [0, 0, 630, 880], "proporcaoFisicaMm": [63, 88],
+    "centroDaArte": "transparente; geometria aprovada preservada",
+    "regenerar": "node Arcanoclisma/arena/scripts/gerar-templates-valor-v12.mjs"
+  },
+  "esfera": {
+    "modulo": "Arcanoclisma/online/public/js/identidade-valor-v12.js",
+    "css": "Arcanoclisma/online/public/css/templates-valor-v12.css",
+    "maxValores": 9, "numero": "camada independente sobre os simbolos",
+    "conjurador": "centralizada sob o nome", "atribuiValores": false, "revelaCartasOcultas": false
+  },
+  "integracao": {
+    "rendererLocal": "Arcanoclisma/online/public/js/carta.js", "motorAlteradoPeloCodex": false,
+    "conferenciaNavegador": "nao executada nesta etapa", "confirmacaoClaude": false,
+    "diretrizes": "coordenacao/site-online/VALORES-E-RARIDADE-03-10.md"
+  },
+  "pushAutorizado": true, "expansaoMestraDosDragoesLiberada": false
+}

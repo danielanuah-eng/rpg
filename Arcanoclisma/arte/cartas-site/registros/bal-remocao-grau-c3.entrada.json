@@ -1,0 +1,27 @@
+{
+  "id": "bal-remocao-grau-c3",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/raiz-errada.webp",
+  "textoRegraLido": "Causa 1 + o número de cartas no seu Grau de dano a um Aliado ou Mística.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/raiz-errada.png",
+      "papel": "Identidade da criatura ou fenômeno, redesenhados em ação e com novo ambiente"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-d63a5fe3-57ba-4dda-b137-74ab878e05f0.png",
+  "decisoes": [
+    "Raiz Errada redesenhada rastejando sobre um tronco e golpeando um alvo à esquerda, invertendo direção e postura da base.",
+    "Noite numa casa de chá sobre canal de irrigação, com luz de lanternas e paisagem de arrozais.",
+    "Preservados madeira, musgo, olho e seiva âmbar; dano variável por Grau ilustrado por um impacto, sem inventar veneno ou regeneração.",
+    "Carta comum sem brilho de raridade."
+  ],
+  "avaliacaoVisual": "Criatura de raízes integra tronco, ambiente e golpe no escudo da aliada. Cabeça abaixada e corpo horizontal, cauda prolongada para trás, membros de madeira coerentes. Alvo com dois braços e postura defensiva; canal e casa preenchem toda a cena com luz noturna localizada.",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nRAIZ ERRADA identity: Cataclysm root disrupto made of thick twisting brown wood, cream exposed wood thorns and jagged bark plates, dark moss green coating, amber sap and one visible amber eye, a jagged wooden open maw, TWO branch arms, TWO rooted legs and one long curling root tail. Not dragon, not ordinary tree, not leafy green humanoid. Preserve moss green/amber SOURCE MAGIC despite mechanical Eternyr Value. Do not invent poison or regeneration mechanics in this card.\nNEW action and setting: humid NIGHT at a modest timber tea house built over a rice irrigation channel, dark moss-green water, soft ivory paper lantern at doorway, distant terraced paddies, cloudy deep blue sky. Camera LOW at water level on a smooth near stone ledge, looking diagonally along a fallen trunk used as a small bridge. The root creature crawls forward nearly HORIZONTALLY along this trunk from RIGHT toward LEFT; body turned broad side-on, head lowered, both feet anchored on trunk, one branch hand gripping trunk and other long thorned arm lashes forward. Tail trails low behind to far RIGHT, never loops vertically above its own head like source. One amber-edged moss-green spell lash from that arm strikes the round wooden shield of ONE new enemy ally on left stone bank, a heavy-set East Asian adult woman with medium warm skin, dark almond eyes, straight dark bob haircut, pale grey practical sleeveless padded coat over blue trousers. Her shield in one hand and other hand gripping the railing, TWO arms two planted legs, surprised gritted expression looking at root creature. Pale watery reflections remain subtle, tea house has plain quiet architecture no filigree. Actual Findante rule is damage1 plus cards in own Grau to an Ally or Mística; show one damage impact ONLY, no pictured numbers, no new ability or grade requirement. COMMON no foil; sap amber glow local, not golden scenery. Unified newly drawn scene, smooth surfaces with texture confined to creature's wood."
+}

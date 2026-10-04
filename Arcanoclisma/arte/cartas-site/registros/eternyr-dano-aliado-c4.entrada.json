@@ -1,0 +1,26 @@
+{
+  "id": "eternyr-dano-aliado-c4",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/relogio-quebrado.webp",
+  "textoRegraLido": "Causa 6 de dano a um Aliado ou Mística.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/relogio-quebrado.png",
+      "papel": "Identidade da criatura, redesenhada com nova pose e ambiente"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-a398d40d-c651-4f8a-9d9f-1924ae768ca7.png",
+  "decisoes": [
+    "Relógio Quebrado redesenhado em ataque no pátio de uma capela de barro durante a manhã.",
+    "Preservados mostrador rachado, olho único, placas creme, bronze e energia azul-noite.",
+    "Golpe atinge o escudo de um novo aliado inimigo e ilustra dano seis sem alterar a regra. Incomum com reflexos metálicos discretos."
+  ],
+  "avaliacaoVisual": "Criatura em composição diagonal e plano próximo; lança alinhada ao golpe azul e ao escudo do alvo. Inimigo com dois braços e duas pernas apoiado contra a parede, expressão de impacto. Recorte do corpo da criatura continua pela borda esquerda; fundo e chão contínuos, efeitos localizados, sem ferimentos gráficos.",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nRELÓGIO QUEBRADO identity from reference1: squat nonhuman disrupto clock construct made of disconnected cream ceramic clock plates, aged bronze segments, exposed cogs, broken large chest dial, MIDNIGHT BLUE energy filling gaps with fine white strokes. Small pointed birdlike broken clock mask, ONE bright oval blue eye. Two arms, one ending in a long bronze clock-hand spear and the other clawlike, TWO jointed sturdy clawed legs; floating small body fragments are not extra limbs. Preserve identity, REDRAW whole body in a NEW braced low crouch and almost SIDE profile, not upright reference pose.\nSCENE: a sun-baked red clay chapel courtyard beside dry scrub and a sagging canvas shade, late morning under pale lightly clouded sky. Elevated diagonal camera from a short stairwell, looking down left-to-right across tiles. The clock creature on LOWER LEFT has its spear arm aimed downward-right, discharging ONE sharp blue-white fractured-time bolt from its spear tip across the courtyard. It strikes the bronze shield of ONE enemy allied warrior on the MID-RIGHT, a stocky adult man with deep brown skin, grey short beard, closely shaven head, plain teal padded armor and black sash. His face in a startled grimace, feet wide, TWO legs and TWO arms, left arm with shield, other empty hand bracing the wall as he recoils. Brief pale blue impact fractures and ceramic debris in air, no gore, no destroyed building or injured civilians. Both bodies visible clearly separated, coherent bolt tip-to-shield, realistic relative scale. This is the temporária Findante spell dealing SIX damage to an Ally or Mística, not a conjurador and not a new persistent creature mechanic. Smooth broad red-brown architecture and cool shadow, local magic, no generic library or station. UNCOMMON: subtle warm metallic highlights on small bronze areas only, no rainbow foil."
+}

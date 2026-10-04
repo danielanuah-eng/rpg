@@ -1,0 +1,55 @@
+{
+  "id": "base-aliado-c6-equilibrado-descarta-grau",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/quimera-de-tres-fomes.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/quimera-de-tres-fomes.png",
+      "papel": "identidade híbrida de três cabeças"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Três cabeças com ações e expressões diferentes ao consumir runas, sem repetir leque frontal.",
+    "Noite em enseada de farol, Alvorum com luz discreta e cenário frio.",
+    "Magia roxo-sangue da Quimera mantida; consumo de Grau mostrado por pedras geométricas sem texto.",
+    "Indicação genérica de braços abertos adaptada à anatomia animal."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-c2a7aa04-4284-4282-a77e-59dd4f815559.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-aliado-c6-equilibrado-descarta-grau.txt",
+  "avaliacaoVisual": "Três cabeças reconhecíveis com novas direções e expressões, consumindo runas quebradas; membros híbridos apoiados e uma cauda. Enseada noturna coesa, farol discreto e magia roxa localizada. Rochas costeiras têm textura mais marcada que céu e água.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c6-equilibrado-descarta-grau.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "3221471c935d7130aef5078e681e52c6918c73a0b3997289630375429da2441d",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "rara",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

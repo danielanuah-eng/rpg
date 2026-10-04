@@ -1,0 +1,57 @@
+{
+  "id": "bal-varredura-c5",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/redemoinho-de-areia.webp",
+  "textoRegraLido": "Causa 3 de dano a cada Aliado do oponente.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/redemoinho-de-areia.png",
+      "papel": "Identidade da criatura ou fenômeno, redesenhados em ação e com novo ambiente"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-748a3779-8deb-43ca-9249-d56ca2aefff7.png",
+  "decisoes": [
+    "Redemoinho redesenhado inclinado e varrendo o pátio de basalto, visto por cima do ombro de quem conjura.",
+    "Mantidos areia ocre e lâminas prata-mercúrio, sem transformar a magia em uma aura Alvorum.",
+    "Três aliados inimigos reagem de formas distintas ao dano em área; marcas curvas no chão registram o trajeto.",
+    "Incomum com metal visível nas lâminas, sem acabamento lendário."
+  ],
+  "avaliacaoVisual": "Vórtice diagonal com areia e faixas prateadas reconhecíveis. Guardiã agachada com escudo, ancião apoiado na cerca e pequeno humanoide de pedra separados dentro do mesmo campo de impacto. Fortaleza e céu escuros equilibram a areia clara; cena contínua com profundidade e sem recorte colado.",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/bal-varredura-c5.txt",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/bal-varredura-c5.png",
+  "dimensoes": [
+    1062,
+    1480
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "b1dd6bc2c8906755618de11a796f37752d2ad31e6a7c7c5fe6c691d0c05963b7",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "incomum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

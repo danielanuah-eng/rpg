@@ -1,0 +1,57 @@
+{
+  "id": "base-estrutura-c8-reator",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/a-boca-da-voragem.webp",
+  "textoRegraLido": "Conta como 2 cartas no Grau. Suspenda: ganhe 4 Arcano.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/a-boca-da-voragem.png",
+      "papel": "Identidade de lugar e participantes ou personagem; novos gestos e contexto"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e luz controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-469ca748-4d5f-4664-ae7a-b2dcde007788.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-estrutura-c8-reator.txt",
+  "decisoes": [
+    "Boca da Voragem refeita a partir da rampa lateral em tarde pós-chuva, portal roxo/negro e participantes mantidos.",
+    "Garmhal ajoelhado junto ao colar, leão deitado e outro subindo escada; poses novas em interação.",
+    "Quatro esferas coalescem no portal, sem inventar ataque ou liberação da expansão.",
+    "Lendária com ouro e arco-íris integrados ao arco, colares e reflexos; cenário permanece escuro e frio."
+  ],
+  "avaliacaoVisual": "Quatro esferas distintas acima do portal, Garmhal e exatamente dois leões reconhecíveis em novos gestos. Degraus, vale, céu e portal formam cena completa. Reflexos cromáticos da lendária na própria arte, sem cobrir faces.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c8-reator.png",
+  "dimensoes": [
+    1062,
+    1480
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "63b7502c43c3724f5949e79219036b778fa51921491c30804638cf95b783723f",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "lendaria",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

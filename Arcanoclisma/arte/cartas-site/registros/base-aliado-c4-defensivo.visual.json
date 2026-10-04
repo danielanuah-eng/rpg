@@ -1,0 +1,54 @@
+{
+  "id": "base-aliado-c4-defensivo",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/lutador-de-pele-de-pedra.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/lutador-de-pele-de-pedra.png",
+      "papel": "identidade, pedra e magia coral"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Novo soco para cima em preparação defensiva, em vez do soco frontal da base.",
+    "Salão de juramentos ao meio-dia, com proteção de aliados e ambiente completo.",
+    "Proeza grande construída em poucas formas de pedra; magia coral preservada, sem fundo excessivamente luminoso."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-1c64953a-516c-4c76-b1ae-d5e92b3257e0.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-aliado-c4-defensivo.txt",
+  "avaliacaoVisual": "Dois braços, novo soco para cima e apoio ajoelhado legíveis. Punho gigante sustenta o arco diante dos aliados; rosto preservado e magia coral focal, arquitetura contínua sem colagem.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c4-defensivo.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "1a89a8feb2b9d67785fe5fc979c9de435c1715a9f6e8e0647c765c145eb1e2ed",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "incomum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

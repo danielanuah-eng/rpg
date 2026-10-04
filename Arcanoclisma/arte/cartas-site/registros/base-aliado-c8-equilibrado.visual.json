@@ -1,0 +1,60 @@
+{
+  "id": "base-aliado-c8-equilibrado",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/hidra-de-barro.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/hidra-de-barro.png",
+      "papel": "identidade de cinco cabeças, barro e mercúrio"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    },
+    {
+      "arquivo": "Arcanoclisma/arte/cartas-site/variantes/base-aliado-c8-equilibrado-v1-pose-repetida.png",
+      "papel": "alvo da edição de pose, primeira tentativa não selecionada"
+    }
+  ],
+  "decisoes": [
+    "Hidra vista de cima e parcialmente de costas numa cisterna, cinco cabeças em alturas distintas.",
+    "Cenário fechado no crepúsculo para diferenciar do entardecer aberto do Touro.",
+    "Lendária com reflexos dourados e espectrais nos materiais úmidos, sem alterar efeitos ou iluminar todo o fundo."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-fef055e5-87af-49d2-8d50-be21ef9882cd.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-aliado-c8-equilibrado.txt",
+  "avaliacaoVisual": "Revisão muda corpo para diagonal vista de costas e de cima; cinco cabeças distintas à direita, cauda e apoio coerentes. Mercúrio com reflexos dourados e espectrais localizados; cenário novo coeso.",
+  "versaoAnterior": "Arcanoclisma/arte/cartas-site/variantes/base-aliado-c8-equilibrado-v1-pose-repetida.png",
+  "versaoAnteriorSelecionada": false,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c8-equilibrado.png",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "6fd494629af9073f810ce0e10f91cb0b8e19c5ea91003c7975f46f08344783d8",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "lendaria",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

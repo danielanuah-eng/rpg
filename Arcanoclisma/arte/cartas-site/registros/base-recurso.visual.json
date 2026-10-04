@@ -1,0 +1,55 @@
+{
+  "id": "base-recurso",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-be5bc3ec-7fc4-45e0-aa89-76eb7fa28371.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-recurso.txt",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/mina-funda.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
+      "papel": "identidade do lugar, madeira/trilhos/minério prateado/lanternas"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento e direção"
+    }
+  ],
+  "decisoes": [
+    "Estrutura Mina Funda em cena vertical inteiramente nova, sem margem transparente de diorama",
+    "Novo primeiro plano de mão/minério, trilhos e poses de mineiros distintos",
+    "Interior com apoio, escala e luz coerentes; ambiente genérico de ruínas substituído pela identidade da mina",
+    "Raridade comum, sem foil"
+  ],
+  "avaliacaoVisual": "Inspecionada: galeria completa preenchendo a carta, ação de mineração, matéria prata/mercúrio e profundidade reais, sem recorte colado.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso.png",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "66329c0a641f0dec44468c97598da0d3d241e5781ac30f4876d85ad9509840e0",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

@@ -1,0 +1,27 @@
+{
+  "id": "eternyr-aliado-c6-g8",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/ancia-do-tempo-lento.webp",
+  "textoRegraLido": "",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/ancia-do-tempo-lento.png",
+      "papel": "Identidade da criatura, redesenhada com nova pose e ambiente"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-9b5ee33a-935b-4206-a0b9-d0d0b8ce95e7.png",
+  "decisoes": [
+    "Preservada Anciã como tartaruga humanoide, redesenhada em vista lateral e de costas, olhando por cima do ombro num abrigo de cânion chuvoso.",
+    "Duas mãos no cajado e duas patas no chão; viajantes pequenos contextualizam sua presença paciente e protetora.",
+    "Sem inventar habilidade para o aliado de regras vazias. Lendária com reflexos arco-íris e dourados dentro das placas do casco e das dobras do manto.",
+    "Iluminação quente vem de lanternas do abrigo, equilibrada pelo cânion e chuva frios."
+  ],
+  "avaliacaoVisual": "Casco, escamas, rosto reptiliano e cajado com ampulheta identificáveis. Nova postura mostra o casco e cabeça voltada sobre o ombro; duas mãos e duas patas visíveis. Textura iridescente legível no material do casco e manto, rosto preservado, ambiente contínuo com ponte e viajantes em profundidade.",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nANCIÃ DO TEMPO LENTO identity from reference1 IS A FEMALE ANTHROPOMORPHIC TORTOISE elder, NOT a human old lady: gentle weathered yellow-beige reptile face and cream/gray tiled scales, clear patient small dark pupils, squat powerful two-legged body, large dark blue-gray segmented tortoise shell covered in fine white clock symbols. Layered navy robes with ochre tassels and modest clock pendants. Crooked wood staff with a blue-white starry HOURGLASS suspended in the crooked top. TWO arms with clawed hands, TWO sturdy clawed feet only; no extra reptile legs behind her.\nNEW scene and pose: rainy evening in a vast sandstone canyon rest station with carved shelters and a plain timber rope footbridge. Camera slightly above side of the bridge, not frontal catalogue view. Elder on middle-left in THREE-QUARTER BACK PROFILE: her full shell visible, body leans forward, left shoulder lowered, staff planted across the path diagonally in front of her with both hands naturally holding it at different heights. She turns her head OVER her shoulder to the right, patient but watchful expression, small pupils plainly seen, mouth gently closed. Feet firmly on broad wet dark stone, cloth hangs in real gravity, show both feet. A few exhausted small travelers pass BEHIND her toward a dim shelter, creating protective guard context; no conjured protective barrier, time-stop, healing, specific rules ability, or invented card text. This legendary ally has only attack14 life20 and empty current rules; impart power and wisdom through body, presence and composition, not a made-up giant spell. Staff retains small original hourglass and restrained blue-white traces. Background sandstone is dark warm mauve/rust, rainy sky soft slate; no blazing yellow sunset, moon disk, snow or library.\nLEGENDARY premium integrated surface finish: visible but tasteful gold-and-rainbow iridescent sheen traveling diagonally across SELECTED shell plates and navy robe folds, fine luminous pearlescent filaments on the existing clock sigils and pendants; clearly show violet/blue/rose/green glints edged in gold INSIDE actual materials, not an external border. Keep face/scales readable natural and whole environment dim, no flood of sparkles or aura. Style stays smooth drawn fantasy, NOT plastic CGI. One unified newly drawn card scene."
+}

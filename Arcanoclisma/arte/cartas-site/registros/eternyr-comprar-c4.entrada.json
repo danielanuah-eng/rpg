@@ -1,0 +1,26 @@
+{
+  "id": "eternyr-comprar-c4",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/o-arquivo-sem-dono.webp",
+  "textoRegraLido": "Compre 3 cartas.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/o-arquivo-sem-dono.png",
+      "papel": "Identidade do objeto ou lugar; composição integralmente nova"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-0ab737e7-b88e-43c4-983f-e2a976196822.png",
+  "decisoes": [
+    "O lugar inteiro foi redesenhado como cena vertical desde uma passarela interna, com o Trono Vazio ao fundo.",
+    "Preservados arquitetura índigo, astrolábio, estantes suspensas e Esquecidos; a origem Cognitium não foi recolorida pelo Valor mecânico Eternyr.",
+    "Três páginas grandes saem de gavetas no primeiro plano, ilustrando a compra de três cartas. Incomum com brilho metálico discreto no bronze."
+  ],
+  "avaliacaoVisual": "Trono vazio visível ao centro superior, passarelas e estantes em profundidades diferentes, habitantes pequenos sem novo protagonista. Três páginas principais legíveis à direita; ambiente contínuo até as bordas, acabamento suave, bronze contido sobre a arquitetura azul.",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; reference 2 is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nSUBJECT O Arquivo Sem Dono, the Cognitium plane: immense indigo library-labyrinth of all forgotten memories, where illusion is matter; Esquecidos inhabit it and the Empty Throne is at its center. Preserve actual reference's soaring blue indigo architecture, aged bronze fittings, branching stairs, dark-robed wisps of forgotten people, astrolabe above the EMPTY throne. It is an entire living environment, NEVER a model floating on a transparent patch.\nNEW VIEW AND EVENT: from inside the labyrinth, camera under a curving bridge and beside its plain blue stone balustrade, looking diagonally across the deep central court toward the Empty Throne on a distant middle-height platform. Throne visibly vacant, not occupied or transformed into an enemy. Sky at top is velvet blue near dawn, cool mist within the deep open well, one calm ivory slit of skylight on the throne. Three parchment leaves emerge from separate drawers of an unowned chest on the NEAR right balustrade and drift toward the camera, one high, one middle, one low; enough foreground clarity to count THREE. They have faint abstract diagrams, no lettering. Several small dark indigo Esquecidos on differently receding stairs are background inhabitants, no added big foreground hero. In particular DO NOT reuse the symmetrical frontal catalogue view, and do not make a conventional human library desk room. Strong depth with stairs, court floor and structure filling every edge, clearly fabricated architecture with plausible scale, smoother stone and wood than reference1. Source magic belongs to Cognitium: subtle INDIGO memory phenomena, even though game card's mechanical Value is Eternyr; don't repaint the whole subject cyan. Rule is draw THREE cards at Findante speed, no extra invented action. UNCOMMON: discreet warm metallic glints only on selected bronze edges and leaf fibers, not glossy sky, no legendary rainbow."
+}

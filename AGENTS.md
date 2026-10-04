@@ -1,5 +1,11 @@
 # Colaboração neste repositório
 
+- Direção mais recente do autor: Codex ajusta apenas arte, templates, movimentação e animações. Seguir `coordenacao/site-online/VALORES-E-RARIDADE-03-10.md`. Raridade fica sem aplicação automática no app, mas brilhos, texturas e animações são preservados para escolha do autor. Equipamentos genéricos podem ser cinza; demais cartas têm Valor. Push de todas as imagens foi explicitamente reafirmado; publicar entregas prontas com seu estado real de revisão.
+
+- Autorização atual do autor, 03/10/2026: push automático das entregas concluídas deste trabalho e integração com o Claude. Prioridade: refazer as 151 artes do jogo atual, lendo cada imagem base e descrição, em cenas novas e integradas. A expansão A Mestra dos Dragões tem 90 cartas e aguarda essa revisão; inclusão em jogo e alteração de suas cartas seguem bloqueadas até liberação específica do autor. Detalhes de interação em `coordenacao/site-online/INTERACOES-E-NITIDEZ.md`.
+
+- **A Mestra dos Dragões**: produção visual autorizada pelo autor em 03/10/2026; integração em jogo e criação/alteração das cartas pelo Claude bloqueadas até liberação explícita do autor. Ler `Arcanoclisma/expansoes/a-mestra-dos-dragoes/expansao.json`. Aprovar artes ou autorizar push não libera o conteúdo jogável.
+
 - Direção atual do autor para artes de cartas (03/10/2026): **todas as cartas têm cenário e ambientação**, qualquer que seja o tipo. Seguir `Arcanoclisma/cartas/DIRETRIZ-CENARIOS.md` em todo prompt ao GPT. Recortes do RPG servem como referência de identidade, não como entrega final de carta. Preservar a biblioteca de referências e as cenas aprovadas.
 
 
@@ -24,4 +30,4 @@
 - Claude é responsável pelas demais partes do projeto, incluindo código e integração dos assets.
 - Respeitar as instruções mais específicas de cada diretório e as orientações atuais do autor.
 - Para trabalho simultâneo, usar pastas/worktrees e branches separadas; coordenar arquivos compartilhados.
-- Sempre perguntar ao autor antes de qualquer push para o GitHub.
+- Push automático autorizado pelo autor em 03/10/2026 para este trabalho; substitui a instrução anterior de perguntar antes. A expansão continua exigindo liberação específica para entrar em jogo.

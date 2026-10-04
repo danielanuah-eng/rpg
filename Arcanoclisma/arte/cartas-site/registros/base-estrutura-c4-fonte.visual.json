@@ -1,0 +1,57 @@
+{
+  "id": "base-estrutura-c4-fonte",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/porto-de-vidro.webp",
+  "textoRegraLido": "Conta como 1 carta no Grau. Suspenda: ganhe 2 Arcano.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/porto-de-vidro.png",
+      "papel": "Identidade do lugar, com nova perspectiva e funcionamento"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-dcfbe123-b20b-4626-b1c8-15d0a66c96b5.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-estrutura-c4-fonte.txt",
+  "decisoes": [
+    "Porto desenhado da proa de embarcação que chega, com cais e fachadas de vidro em profundidade.",
+    "Vidro azul-prata em reflexos legíveis, bordas de bronze, moradores descarregando caixas e navios proporcionais.",
+    "Duas esferas de Arcano junto ao trabalhador refletem a produção ativada da estrutura.",
+    "Manhã clara e água azul equilibrada; sem cidade inteira resplandecente nem efeito ofensivo."
+  ],
+  "avaliacaoVisual": "POV da proa legível, porto contínuo com vidro azul/transparência e casas além do cais. Dois orbes de recurso junto à mão do trabalhador; barcos e moradores com proporções distintas pela distância. Fundo completo, sem ilha recortada.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c4-fonte.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "998f28f59ed2abd30449c6c750ab13d5a06cdc0f47e9dc5033c69cf324b49bd3",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "incomum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

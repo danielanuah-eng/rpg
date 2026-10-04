@@ -1,0 +1,34 @@
+/* Pedido visual direto do autor, 03/10/2026. Camada posterior aos ajustes de integração. */
+.mesa .tcg-card .front.com-cena {
+  background: var(--fundo-cena) var(--cena-pos, 50% 35%) / cover no-repeat;
+  background-blend-mode: normal;
+}
+.mesa .tcg-card .portrait:not(.art-magic-glow-v9) {
+  opacity: 1;
+  filter: contrast(1.08) brightness(1.08) saturate(1.10);
+  image-rendering: auto;
+}
+.mesa .tcg-card.scene-art .portrait:not(.art-magic-glow-v9) {
+  filter: contrast(1.045) brightness(1.025) saturate(1.06);
+  object-fit: cover;
+}
+.mesa .tcg-card:is([data-finish="lendaria"],[data-finish="alternativa"]) .portrait:not(.art-magic-glow-v9) {
+  filter: contrast(1.06) brightness(1.035) saturate(1.11);
+}
+.mesa .tcg-card .art-depth-v9 { opacity: .32; }
+.mesa-conteudo .cm {
+  transform: perspective(1500px) rotateX(5deg) rotateZ(var(--mesa-turn));
+}
+.mesa-conteudo .cm.suspensa {
+  transform: perspective(1500px) rotateX(5deg) rotateZ(var(--mesa-turn)) scale(.98);
+}
+.mesa-conteudo .cm.acionavel:hover {
+  transform: translateY(-3px) perspective(1500px) rotateX(5deg) rotateZ(var(--mesa-turn));
+}
+.mesa-conteudo .cm.suspensa.acionavel:hover {
+  transform: perspective(1500px) rotateX(5deg) rotateZ(var(--mesa-turn));
+}
+.mesa-zoom .tcg-card .portrait:not(.art-magic-glow-v9) {
+  opacity: 1; filter: contrast(1.045) brightness(1.025) saturate(1.06);
+}
+

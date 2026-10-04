@@ -1,0 +1,55 @@
+{
+  "id": "base-dano-conjurador-c3",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/olho-de-dragao-palido.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/olho-de-dragao-palido.png",
+      "papel": "Forma e identidade do feitiço; nova posição e contexto"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Apenas acabamento liso, iluminação e desenho da versão aprovada"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-050b4068-e8f5-462a-a8af-66c522af79c1.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-dano-conjurador-c3.txt",
+  "decisoes": [
+    "Lente mantém couro castanho, aro de bronze, vidro verde e olho reptiliano; nova vista em mão e cena completa.",
+    "Feitiço atinge conjuradora rival em terraço de celeiro com jardim de água ao amanhecer.",
+    "Raio e silhueta óssea são projeções mágicas sobre roupa intacta; efeito de dano, não cura.",
+    "Ambiente pintado com planos claros, sem névoa opaca nem acabamento de raridade lendária."
+  ],
+  "avaliacaoVisual": "Objeto no primeiro plano, conjuradora rival reagindo à direita e trajetória verde contínua. Mãos, roupa e cenário integrados; símbolos de ossos sem ferimento. Fundo de manhã com sombras legíveis.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c3.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "6b16abf50fb5455a2ea911deebb301f748a8f3653e89812b68b4df0ddfd0200e",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

@@ -1,0 +1,26 @@
+/* Molduras por Valor; centro da arte livre. Acabamentos de raridade continuam no kit v9. */
+.tcg-card .moldura-multivalor-v12 {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  -webkit-mask: url('/kit/templates/valores-v12/contorno-valor-v12.svg') center / 100% 100% no-repeat;
+  mask: url('/kit/templates/valores-v12/contorno-valor-v12.svg') center / 100% 100% no-repeat;
+  mix-blend-mode: color; opacity: .88;
+}
+.tcg-card .esfera-valor-v12 {
+  position: absolute; z-index: 5; aspect-ratio: 1; border-radius: 50%;
+  display: grid; place-items: center; isolation: isolate;
+  box-shadow: inset 0 -3px 5px #0006, inset 0 2px 3px #fff3, 0 1px 3px #06132199;
+  color: #fff8e4; text-shadow: 0 1px 2px #050a13, 0 0 3px #050a13;
+}
+.tcg-card .esfera-valor-v12.cost { border: 0; outline: 0; }
+.tcg-card .esfera-valor-v12.cost::after { content: none; }
+.tcg-card .esfera-simbolos-v12 { position: absolute; inset: 0; border-radius: inherit; overflow: hidden; z-index: -1; pointer-events: none; }
+.tcg-card .esfera-simbolos-v12 img {
+  position: absolute; height: auto; max-height: 75%; object-fit: contain;
+  transform: translate(-50%, -50%); opacity: .34;
+}
+.tcg-card .esfera-numero-v12 { position: relative; z-index: 1; font: inherit; color: inherit; }
+.tcg-card .esfera-aro-v12 { position: absolute; inset: -9%; width: 118%; height: 118%; pointer-events: none; z-index: 2; }
+.tcg-card .valores-centrais-v12 { left: 45.56%; top: 10%; width: 8.89%; }
+.tcg-card .valores-centrais-v12 .esfera-simbolos-v12 img { opacity: .88; }
+/* Sem escolha de raridade, apenas a identidade por Valor aparece. As texturas não são excluídas. */
+.tcg-card[data-finish="nenhuma"] :is(.foil-texture,.foil-reflection,.art-magic-glow-v9) { display: none; }

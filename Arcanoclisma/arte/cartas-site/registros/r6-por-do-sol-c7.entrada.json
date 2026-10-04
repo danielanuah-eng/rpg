@@ -1,0 +1,27 @@
+{
+  "id": "r6-por-do-sol-c7",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/estrada-do-crepusculo.webp",
+  "textoRegraLido": "Destrua todos os Aliados do oponente.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/estrada-do-crepusculo.png",
+      "papel": "Identidade do lugar; cena nova em escala ampla coerente com as regras"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-d0e709a1-2265-446f-9d0e-ddddb2a0f578.png",
+  "decisoes": [
+    "Estrada redesenhada desde o parapeito junto a duas testemunhas, preservando um mesmo lugar com dia e noite coexistindo.",
+    "Três aliados inimigos se desfazem na faixa crepuscular, enquanto as duas testemunhas do lado diurno permanecem inteiras.",
+    "Novos rostos, roupas e enquadramento, sem reaproveitar uma arte de personagem ou mudar a regra.",
+    "Lendária com dourado e arco-íris integrados à faixa mágica e às superfícies do caminho."
+  ],
+  "avaliacaoVisual": "Paisagem contínua atravessada por estrada, dia claro à esquerda e noite estrelada à direita; transição ligada à mesma arquitetura. Dois observadores no primeiro plano e três alvos isolados em dissolução não gráfica. Efeito iridescente legível sobre pedras e faixa mágica, cenário em profundidade sem montagem ou borda artificial.",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nESTRADA DO CREPÚSCULO source: long raised stone roadway dividing one continuous landscape into ordinary daylight and STARRED NIGHT, the twilight boundary crosses road, gold-and-black magical curves. Terracotta village roofs, tall cypress, stone arched bridges, a river/waterfall valley and ruined high gateway. Preserve impossible simultaneous day/night landscape, smoothly transition light across one coherent world, NOT collage/split-screen of two unrelated places, NO harsh center divider.\nNEW perspective/event: LOW side view from a plain bridge parapet on LOWER RIGHT, looking diagonally lengthwise along the roadway as it bends UP toward a distant ruined gateway on upper LEFT. Daylit terrain spreads to far LEFT in matte soft amber and olive, right side below bridge is deep navy night with tiny calm stars overhead and cool river reflection, ONE subdued small crescent moon not giant suns or huge graphic emblems. Twilight effect follows a narrow curving gold-and-black edge crossing the road diagonally, sweeping ONLY THREE enemy allies on middle-right roadway into non-graphic black shadows and fading golden flakes; they wear matching dusty violet cloaks over different practical armor, two human adult silhouettes and one small simple stone beast with four legs, all physically spaced, no torn bodies. Their two conjurador observers on closer LEFT day-side remain whole and safe: one new tall lean deep-ebony adult female with short coiled black hair and simple sage tunic holding a small bronze charm, beside a new plump pale middle-aged male with red knit cap and grey-brown raincoat who holds a folded atlas; different sizes/faces, natural quiet reverence, two arms each. No exploding buildings or allied observers disappearing. These are witnesses, not new named game cards. Rule Findante: destroy ALL enemy allies, no allied casualties. Night/day coexists as setting, not time travel ability.\nLEGENDARY premium gold-and-rainbow iridescent filaments sweep diagonally through the ACTUAL magical twilight band, road wet stone seams and selected quiet metal details, visibly rose/cyan/violet/green with fine warm gold highlights. Keep matte landscape, soft controlled daylight, never radiant gold field, no foil border or glitter everywhere. Smooth clean drawing, one continuous scene fills every edge."
+}

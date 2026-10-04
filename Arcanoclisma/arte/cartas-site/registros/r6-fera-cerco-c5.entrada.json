@@ -1,0 +1,33 @@
+{
+  "id": "r6-fera-cerco-c5",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/manticora.webp",
+  "textoRegraLido": "Ao entrar: cause 2 de dano ao Conjurador inimigo e cure 2 do seu Conjurador.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/manticora.png",
+      "papel": "Identidade da criatura; nova pose e cena do efeito de entrada"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-6988d7b1-f968-4fb1-a67a-febaf118cde9.png",
+  "decisoes": [
+    "Mantícora redesenhada aterrissada junto à conjuradora em ruínas de pedágio, com cauda baixa e identidade de leão, asas vermelhas e cauda de escorpião preservada.",
+    "Magia violeta da referência causa dano ao rival à direita e envolve a bandagem da aliada à esquerda, ilustrando dano dois e cura dois ao entrar.",
+    "V1 preservada; revisão removeu braço e mão excedentes do rival.",
+    "Incomum sem brilho de lendária, sem nova habilidade recorrente de ataque."
+  ],
+  "avaliacaoVisual": "Rival corrigido com exatamente duas mãos, uma protegendo-se e outra segurando cajado. Mantidos mantícora, duas asas, cauda única e membros felinos coerentes, conjuradora com mãos naturais e fio de cura. Dois efeitos e alvos separados, céu e campo frios, fundo contínuo.",
+  "versaoAnterior": {
+    "arquivo": "Arcanoclisma/arte/cartas-site/variantes/r6-fera-cerco-c5-v1-mao-extra-rival.png",
+    "selecionada": false,
+    "motivo": "Rival apresentava três braços/mãos.",
+    "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-980172ed-9075-426f-8875-4a6e481dfa53.png"
+  },
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nMANTÍCORA source identity: powerful ochre/tawny LION body and lion face with rust-red mane, violet eyes with readable slit pupils, FOUR clawed paws, TWO dark crimson batlike wings on shoulders, ONE segmented brown scorpion tail with stinger. NO human face, no extra legs or arms. Purple-blood magic and few sharp violet magical spines from tail, preserve source, don't recolor moss green.\nNEW pose/event: newly landed broad SIDE-ON crouch facing LEFT across a cool high moor ruined toll court, wings partially folded close at different angles, all four paws planted, head turned BACK over right shoulder and mouth slightly open with small readable teeth, not frontal jumping roar with outstretched claws. One tail curves LOW behind torso toward RIGHT rather than high overhead.\nA SINGLE arrival effect illustrates both actual rules: just THREE small blunt-edged purple magical stinger shards leave its tail to strike the personal ward of ONE enemy conjurador far RIGHT, a pale wiry older male with green sleeveless travel robe, long straight black hair tied low, narrow tired face, dark mustache and simple wood staff; his feet planted and free hand bracing shoulder, no blood/injury. At near LEFT a different friendly conjurador, a short heavy-set deep-brown female with cropped natural curls, plain blue cloak, lined rounded face and dark eyes, kneels beside a stone post with one hand on manticore shoulder and other hand cradling a cloth bandage on her forearm. A soft purple life-thread from creature's flank becomes TWO small calm violet light folds gently around that bandage, representing healing2, NOT deadly draining veins or a new healing flower summon. Enemy and friendly sharply separated, normal scale, each human two hands/two legs, no excess targets.\nENVIRONMENT cool hazy afternoon under gray low cloud, short moor grass, slate stones, broken low tower behind and canvas field shelter, NO grand cathedral/gold scenery or foliage canopy. Actual uncommon Ally3/6: on enter deal2 enemy Conjurador, heal2 own Conjurador, no extra recurring attack skill. INCOMUM only subdued warm metallic glints on harness/buckles, no legendary foil. Complete opaque smoothly drawn scene all edges; creature natural fur texture moderate, not excessively spiky embellishment.\n\nREVISÃO ANATÔMICA:\nMake ONE local anatomical correction to the green-robed enemy male mage at far RIGHT. He currently has THREE arms/hands: raised palm with violet ward, forearm crossing chest pointing right, and hand gripping the vertical wood staff at right edge. He must have EXACTLY TWO human arms and TWO hands. KEEP his raised ward palm/arm clearly connected to its shoulder, and KEEP the other hand gripping the wood staff with its correct single arm. REMOVE ONLY the extra middle forearm and pointing hand that crosses diagonally over his chest. Repaint natural uninterrupted green tunic, brown belt and cloak underneath where that spare limb was. Two normal human shoulders, one ward hand and one staff hand only, all anatomy connected. Preserve EXACT mage face/hair, his legs and feet, ward with three purple projectiles, exact lion manticore, both wings, tail, four paws, healing thread and friendly female, their faces/positions, whole gray afternoon moor environment and illustration finish. No composition changes, no cropping, no new details, no re-lighting. Full opaque portrait same native size."
+}

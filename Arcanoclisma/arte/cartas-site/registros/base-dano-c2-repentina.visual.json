@@ -1,0 +1,55 @@
+{
+  "id": "base-dano-c2-repentina",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/vento-com-rancor.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/vento-com-rancor.png",
+      "papel": "duas lâminas translúcidas prata-mercúrio"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Feitiço mostrado depois do corte com duas marcas no lugar, alvo desequilibrado e vento remanescente.",
+    "Ponte de moinho em tempestade diurna, câmera baixa e enquadramento diagonal.",
+    "Conjurador apenas sugerido pela mão para variar da composição de duas figuras completas.",
+    "Forma etérea prateada preservada, sem criatura, fogo ou vermelho substituindo a identidade."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-d0f663aa-2f47-4203-8a56-dab5725e41a7.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-dano-c2-repentina.txt",
+  "avaliacaoVisual": "Duas lâminas de vento prateadas atravessam ponte e deixam cortes; alvo idoso apoiado no chão, mão de conjurador em primeiro plano. Ambiente de moinho e chuva legível, sem criatura ou fogo; pose e escala diferentes dos feitiços anteriores.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c2-repentina.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "ef261ead4c4f7665d4aa82d44f52d9ef2f58f64f195f24bcecf4219288caf65d",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

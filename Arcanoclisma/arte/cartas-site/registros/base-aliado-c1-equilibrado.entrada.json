@@ -1,0 +1,24 @@
+{
+  "id": "base-aliado-c1-equilibrado",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-470683a2-17de-44d4-a855-e976a4c32bfa.png",
+  "prompt": "Use case: illustration-story. Create a NEW, unified portrait card illustration for Arcanoclisma TCG, \"Recruta Assustado\", common ally. Requested 1260 x 1760, 63:88 ratio. Opaque detailed scene extending to every edge, no borders, text, statistics or template.\nREFERENCES: image 1 preserves this recruit's identity ONLY: young slim tan man, short tousled dark brown hair, large anxious brown eyes, cream rolled-sleeve shirt, simple brown leather vest, dark green scarf, patched grey-green trousers, pouch and worn boots, wooden spear with bronze leaf point. Reimagine his whole body in a genuinely different pose. Image 2 is approved painterly drawing quality, smooth environment treatment and integrated depth ONLY; do not include Ciantia, dragons, glowing gold or its meadow.\nSCENE: low camera at a village gate on a fresh clear morning. The frightened recruit occupies the left third, nearly in profile facing LEFT, crouching with one knee low and his weight planted, thrusting his spear outward left to hold the line. Lips pressed, worried wide eyes glancing back to check protected allies; fear with stubborn effort rather than screaming. Spear and both hands anatomically clear. A fellow villager behind an overturned market cart and a second defender shelter behind him at right, smaller and integrated in depth. The gate's pale plaster buildings, awning, distant blue hills, scattered fallen vegetables and snapped fence tell a modest interrupted morning. No gore, no giant event or magic added to this ordinary person.\nFINISH: high quality fantasy narrative illustration, selective crisp contour work, dimensional painted surfaces with clean broad planes and smooth light transitions. Smooth painted plaster and stone, controlled low microcontrast in the backdrop, subtle natural material texture, no canvas grain or gritty scratched brushwork. Muted terracotta, forest green, warm cream and sky blue. Fresh daylight, restrained highlights, natural contact shadows. Subject sharp and readable when reduced, background clear but quiet. Cohesive single painted scene, never a character cutout pasted on a background. No foil, halo, bloom, white blank background, HDR or excessive anime eyes. Keep face and key action in upper/middle two thirds for overlaid card UI.",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/recruta-assustado.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/recruta-assustado.png",
+      "papel": "identidade"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento liso e profundidade"
+    }
+  ],
+  "decisoes": [
+    "Nova guarda baixa e olhar por cima do ombro; identidade preservada.",
+    "Portão de vila pela manhã, aliados atrás de carroça, cenário integrado.",
+    "Sem magia nem acabamento lendário; aliado comum."
+  ],
+  "avaliacaoVisual": "Rosto ansioso, mãos e lança legíveis; posição e cena diferentes da base. Iluminação natural, fundo completo, materiais pintados lisos e profundidade coerente."
+}

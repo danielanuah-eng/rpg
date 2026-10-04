@@ -1,0 +1,27 @@
+{
+  "id": "bal-etereo-c3",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/onca-das-sombras.webp",
+  "textoRegraLido": "Etéreo (só é bloqueado por Aliados Etéreos).",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/onca-das-sombras.png",
+      "papel": "Identidade do animal; pose e ambiente novos"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-0f1b9eb5-0355-476b-a1d8-83f8c77329c6.png",
+  "decisoes": [
+    "Onça redesenhada sentada em perfil sobre armazém, com boca fechada, olhar elevado e cauda descendo do telhado.",
+    "Mercado portuário ao entardecer com toldo, caixas, barcas e um guarda desatento abaixo; não é uma cena de ataque frontal.",
+    "Preservadas rosetas escuras, olhos dourados e finas linhas mágicas douradas, sem recolorir verde.",
+    "Comum sem textura holográfica ou habilidade exclusiva de ataque."
+  ],
+  "avaliacaoVisual": "Postura sentada natural com patas dianteiras juntas e traseiras dobradas, uma cauda, duas orelhas, rosto e olhos legíveis. Ouro restrito às linhas da criatura e lanternas. Perspectiva baixa valoriza telhado e gato, cenário completo com profundidade do cais.",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nONÇA-DAS-SOMBRAS identity from reference1: ONE muscular black JAGUAR with charcoal visible rosette markings, broad feline square muzzle, small rounded ears, dark-gold eyes with readable pupils, fine GOLD/BLACK magical seams and thin gold whiskers. FOUR legs, ONE long tail, TWO ears, no wings, horns, extra cat or tiger stripes. Keep common animal color identity, not a Morbidyum green cat. No rainbow finish just because source has gold magic.\nNEW calm stealth posture: seated almost SIDE-ON at upper RIGHT on the flat tiled roof of a modest warehouse, its two front paws both together on the parapet, two folded rear legs clearly natural under body, tail hangs in a LOW curve over roof edge rather than raised source tail. Mouth CLOSED, head turned upward and to left, alert eyes with pupils visible, no front-on lunging claws or snarling copied source pose. Body blends into roof shadows with a few charcoal partially translucent edge wisps and source thin gold traces, no glowing fiery aura or blast.\nNEW scene: windy dusk at a working river-market quay, sky slate-blue with narrow muted rose band, old brick warehouse roof, coarse but smoothly drawn sailcloth canopy, broad timber crates and rope reels below left, warm amber lamp under canopy, silhouettes of river barges receding behind. Camera LOW under edge of sailcloth looking diagonally UP to jaguar on roof, not aerial flooded ruins or graveyard. On street below far left a small uniformed guard in dull blue short cloak walks past with lantern, oblivious; two grounded legs, spear carried casually, no combat, no new named NPC protagonist. Jaguar's apparent supernatural shadow hides it beyond ordinary ground allies, contextualizes Etéreo only blocked by Etéreo, common ally3/3; do not depict extra special attack. Vary quiet everyday context. Gold thin marks on ACTUAL cat skin, muted clay/indigo scene, no golden sunset or metallic foil. Full artwork to edges, one unified redraw of creature+roof+market."
+}

@@ -1,0 +1,51 @@
+{
+  "id": "conjurador-diastaros",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-d33b079a-489f-4554-a2b2-5a07dcd763d7.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/conjurador-diastaros.txt",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/medium-do-luto.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "apenas direção de arte"
+    }
+  ],
+  "decisoes": [
+    "Novo Diástaros idoso e curvado com venda índigo e manto de corvo",
+    "Cripta/columbário ao invés de repetir o cemitério costeiro de Agnelo",
+    "Ressurreição sem ferimentos gráficos, fios índigo/verde-pálidos",
+    "Substituição da tela/óleo rugoso por cena mais lisa, v9 focal"
+  ],
+  "avaliacaoVisual": "Inspecionada: necromante vendado e aliado despertando, mãos e magia conduzem a ação, arquitetura em planos e luz noturna coerente.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-diastaros.png",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "a0a8b516b320cded953b3f7b61358a327bc521d0a57ad83a6a1f22aee8745ba1",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "lendaria",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

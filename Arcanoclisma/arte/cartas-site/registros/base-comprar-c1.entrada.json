@@ -1,0 +1,25 @@
+{
+  "id": "base-comprar-c1",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/baralho-do-arquivo.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/baralho-do-arquivo.png",
+      "papel": "Identidade do objeto mágico, com nova posição e interação"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento e desenho da versão lisa aprovada"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-02f31815-9796-453b-a987-288cf99e3ecb.png",
+  "prompt": "New TCG artwork Baralho do Arquivo, drawing knowledge/memory. Reference1 establishes magical object identity, NOT a premade pasted cutout: a thick deck with worn cream card edges, deep navy backs ornamented with muted gold sun and moon diagrams, rust-brown leather strap and round moon buckle, single-card fronts with silhouettes of remembered people. Reference2 is STYLE ONLY; do not copy meadow, dragon, woman or pose. Build a fresh unified scene inside an open-sided riverside MEMORY TRADER'S STALL at bright overcast midday, broad muted turquoise canopy, hanging empty card sleeves, low ochre plaster wall, smooth slate worktop and river with flat broad water reflections behind. Across the upper middle, viewed through the opening as though you are the customer: a very tall slender young adult man with copper-brown freckles, long face, broad nose, short asymmetrical tightly curled hair, pale linen tunic and dark petrol vest leans his elbow on counter, amused concentration and eyes on one card, new identity NOT an existing conjurador. Original deck lies diagonally open ON the table with strap visibly unbuckled, several subdued blue memory vignettes float above it (a sailboat leaving, a woman gardening), and ONE card drifts into his outstretched hand. Other cards gently settle toward deck, clear controlled curves show spell drawing knowledge, no offensive beam. Objects have correct relative scale and grounded shadows. Deck and hand/card are focal above lower third. No fighting, ruins, castle or cosmic golden sky. Gold is worn matte print on card backs, small blue/gold spell threads only. Scene smooth, reserved color treatment but vivid focal details, opaque environmental picture to all edges. Polished fantasy narrative illustration matching approved second reference: crisp selective contours, smooth painted broad surfaces, controlled shadows and material texture, integrated lighting and contact shadows. No gritty canvas grain, overly expressive scratched scenery, excessive HDR/anime gloss, foggy wash or blooms. Actual NEW single painted scene; not a transparent RPG cutout pasted onto an environment. Opaque full background to all edges, portrait 63:88 requested1260x1760. No lettering, card frame, UI, stats or watermarks. Leave key faces/action above lower third for overlay. Common card: no rainbow foil. Spell rules visual: exactly THREE offered cards over the deck, ONE selected in hand, TWO settling down toward bottom. Their images are sailboat, gardener, a traveler, one motif per card.",
+  "decisoes": [
+    "Retirada da encruzilhada arruinada genérica: balcão de memórias aberto ao rio, durante o dia.",
+    "Baralho original reinterpretado aberto, com correia solta e três cartas de lembranças: uma selecionada e duas retornando.",
+    "Novo participante de cabelo curto encaracolado e sardas; sem reutilizar pose de conjurador.",
+    "Brilho azul e dourado limitado aos fios de magia; raridade comum."
+  ],
+  "avaliacaoVisual": "Três cartas visíveis, uma na mão e duas suspensas acima do baralho; objeto, mão e rosto legíveis. Contador narrativo segue a regra de seleção. Pintura contínua, cenário diurno completo."
+}

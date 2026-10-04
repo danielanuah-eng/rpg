@@ -1,0 +1,27 @@
+{
+  "id": "base-comprar-c2-repentina",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/pensamento-solto.webp",
+  "textoRegraLido": "Compre 1 carta.",
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/pensamento-solto.png",
+      "papel": "Identidade da forma mágica ou objeto; redesenho integrado ao evento"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento liso e iluminação controlada aprovados; não copiar composição"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-11056f97-4cc4-4c39-a600-4ba56bea6a75.png",
+  "prompt": "TCG Pensamento Solto, a sudden knowledge spell (draw ONE card). Reference1 gives magic-creature identity ONLY: slender charcoal broken cat-like apparition, angular cream plates suspended over its body, pointed triangular head crest, big blue-indigo eyes, deep indigo void gaps in body and curling segmented tail; whispering mysterious aura. Repaint it in a new pose: curled nearly upside-down in midair ABOVE the shoulder of a stocky bald older man with deep black skin, wide nose, small ivory moustache, round unadorned copper spectacles and plain terracotta workshirt, in a rooftop weather-observatory studio during a bright cloudy morning. The apparition is the shape of a fleeing thought SPELL, not a summoned permanent ally. It stretches head SIDEWAYS close to man's ear, eyes half-closed as if whispering, a raised small claw near its mouth. Body and floating plates incomplete toward the tail, readable temporary magic. The man turns ONLY his head to listen with sharply lifted eyebrow and a puzzled little frown, one hand steadying a wooden astrolabe on waist-high white-plaster table; another hand reaches for ONE hovering navy leaf of a star-map under an indigo spiral. Interpret drawing a card as receiving one thought. Medium full scene framed through an OPEN circular roof hatch, warm red tile roofs outside, low rounded distant hills no snow peaks, orange ceramic coffee cup, brass rain gauge and rolled maps without writing. Mild restrained indigo spell illumination, overcast natural shadows and broad smooth plaster planes. No library shelves or repeating lighthouse. Polished contemporary fantasy story illustration in approved reference2's smooth handling, crisp selective organic contours, broad clean surfaces, readable spatial proportion and integrated shadows. NEW single painted environmental composition, not a transparent catalog cutout composited onto scenery. Less decorative, muted material colors with saturated SMALL magic focal accents, no all-over gold embroidery, no scratched expressive texture, no realistic photo skin or overblown anime neon. Opaque full environment to all edges; portrait63:88 requested1260x1760. No card frame or typography, no words, UI or watermarks; action above lower third. Common rarity no foil shimmer. Style reference only, not its people or dragon or meadow.",
+  "decisoes": [
+    "Novo observatório de cobertura sob céu claro, evitando repetir estante ou encruzilhada.",
+    "Pensamento Solto sussurra junto ao ouvido em nova posição, corpo incompleto e índigo mantidos.",
+    "Um pensamento entregue numa folha flutuante; não cria aliado nem efeito ofensivo.",
+    "Participante novo mais velho, careca, bigode branco e óculos discretos; expressão desconfiada."
+  ],
+  "avaliacaoVisual": "Aparição índigo cochicha junto ao ouvido, receptor olha de lado com surpresa, mão levanta uma folha. Instrumentos, arco e telhados dão cenário integrado. O mapa sobre a mesa permanece material, sem efeito de compra extra."
+}

@@ -1,0 +1,27 @@
+{
+  "id": "base-aliado-recurso-c7",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/o-antigo-bibliotecario.webp",
+  "textoRegraLido": "Conta como 1 carta no Grau. Suspenda: ganhe 3 Arcano.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/o-antigo-bibliotecario.png",
+      "papel": "Identidade de lugar e participantes ou personagem; novos gestos e contexto"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e luz controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-bbed6787-ffa9-40f1-9118-1191212fd028.png",
+  "prompt": "TCG O Antigo Bibliotecário, existing allied keeper generates THREE Arcano, described as strange confused and ancient in manner though appearance YOUNG and stout. Reference1 IDENTITY ONLY: short stocky young adult approx25, round soft freckled face, short nose, narrow GREEN eyes and straight brows, short messy reddish hair with uneven fringe, round visible belly, cream simple toggle shirt, long worn ochre coat with dark navy astrology panels edged muted gold, brown trousers/boots, leather shoulder scroll bag, small dull bronze astrolabe on belt, INDIGO magic around hands. Keep face/age/hair/build, NOT elderly thin white-beard librarian. Completely NEW pose and environmental situation: he half-SITS on a sturdy low filing trunk beside a basement book-conservation workbench, torso angled LEFT, elbow of one hand resting on knee and that hand cupping his cheek in confused thought; other forearm lies along the tabletop and palm faces up. Above that ONE working palm exactly THREE small SILVER-WHITE Arcano spheres wrapped in fine broken INDIGO smoke balance unevenly, spell is resources, not attack or card draw. His eyes look SIDEWAYS UP to an upside-down book being carried off by a small indigo draft above and slightly to right, eyebrow uneven and mouth a little crooked in perplexity, not original walking/pointing-forward pose. Environment FULL in basement repository, midnight moonlight from a low narrow ground-level window at upper LEFT mixes with one restrained amber oil lamp on workbench, ordinary red-clay plaster walls, robust square wooden book cubbies and horizontal conservation presses, loose thread spools and folded plain cloth; open partly restored book lies on table at upper RIGHT, no gold palace or sweeping multiple-story library. Little silver mercury drips in a shallow tray secondary, clearly detached small work objects with coherent shadows. RARE integrated finish only silver-violet microfaceted sheen on navy magic-lit sleeve folds and orb edges; not rainbow/legendary golden cast over room. Smooth broad material planes and readable intimate scene, no hovering book storm or blinding aura. Approved Arcanoclisma smooth narrative fantasy illustration, selectively crisp organic contours with broad clean painted surfaces, coherent proportions, shared environmental lighting and contact shadows. Complete NEW scene not a source cutout composited on scenery. Controlled warm/cool color design, no overly scratched/rugged scenery, photoreal/anime HDR, opaque fog wash or everything-gold bloom. Full opaque portrait63:88 requested1260x1760, no words, title/frame, stats, UI or watermark. Key face/event upper two thirds, scenery continues to every edge. Reference2 for approved STYLE ONLY, not its woman, dragon, meadow or layout.",
+  "decisoes": [
+    "Antigo Bibliotecário mantém aparência jovem, corpo baixo e robusto, franja ruiva, olhos verdes e roupa original.",
+    "Nova pose sentada no arquivo de conservação, cabeça apoiada na mão e expressão confusa.",
+    "Três esferas de Arcano na outra mão, índigo em torno da magia e livro; noite no porão com luz da lua.",
+    "Rara com brilho prateado/violeta localizado, sem arco-íris ou fundo dourado resplandecente."
+  ],
+  "avaliacaoVisual": "Duas mãos e duas pernas sem extras, três esferas distintas, expressão confusa e identidade ruiva robusta preservada. Arquivo e trabalho de conservação contextualizam o personagem, luz noturna equilibrada e fundo completo."
+}

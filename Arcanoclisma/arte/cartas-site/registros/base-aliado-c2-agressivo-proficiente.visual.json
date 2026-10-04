@@ -1,0 +1,55 @@
+{
+  "id": "base-aliado-c2-agressivo-proficiente",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/lebre-relampago.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/lebre-relampago.png",
+      "papel": "identidade, escala pequena e magia azul-noite/branca"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Lebre faz curva apoiada no chão, em vez de repetir salto da base.",
+    "Dia nublado em planície de juncos fria, com bota em primeiro plano indicando tamanho real.",
+    "Figura pequena mas legível; uma lebre apenas e sem membros duplicados por rastro.",
+    "Magia azul-noite com riscos brancos preservada; roupas/capuz do pedido genérico adaptados às orelhas."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-4dbe3f9f-e83d-493c-be36-6d40be11165e.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-aliado-c2-agressivo-proficiente.txt",
+  "avaliacaoVisual": "Uma lebre em curva apoiada no piso, orelhas e patas legíveis, rastro azul/branco sem clones. Bota, gelo e juncos demonstram escala e velocidade; nova cena integrada com nitidez e céu moderado.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c2-agressivo-proficiente.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "8b7a1d8bcd5c2345544c52ad91b6c51434a174f15ef35ff6e527a412bc4154c2",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

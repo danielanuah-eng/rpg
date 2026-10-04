@@ -1,0 +1,22 @@
+{
+  "id": "conjurador-lyandra",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-f44e59a1-8715-481c-955d-c4f58d8d7802.png",
+  "prompt": "Use case: illustration-story. Create a NEW fully integrated vertical 63:88 Arcanoclisma TCG scene for \"Lyandra, a Domadora de Guerra\". The reference image establishes only the approved polished graphic fantasy style and smoother landscape rendering; do not use its characters, dragon, meadow or pose. Lyandra is a NEW character, not the game's placeholder beast-tamer. Adult battle-beast tamer, strong muscular physique, brown skin, angular broad-nosed face with a few healed small scars, dark brown braided hair with modest tooth and feather ties, patched practical leather armour and one dark bronze metal shoulder guard. Rust-red luminous whip-chain in her hand, arc flowing behind her, no excessive jewellery. Unique resolute face and commanding expression looking LEFT. At MIDDAY she stands firmly with her weight on one leg at the edge of a compact earthen fortification, leading war beasts that charge along a cold slate-grey battlefield toward the lower left. A robust four-legged wolf/boar-like war beast in the foreground is the leading striker, teeth visible in an energetic non-graphic lunge; other beasts follow with clearly coherent anatomy. No blood, wounds, dying soldiers or animal human traits. Composition over the partial shoulder of a secondary helmeted fighter at the extreme lower corner, dominant diagonal from foreground beast toward Lyandra in midground, enough body and face size to read as her conjurador card. There is a complete grounded scene: worn timber defences, smooth compacted earth, distant low trenches, blue-grey sky and olive woodland edge, varied coherent depths and real contact shadows. Avoid the generic ruined crossroads, arches, bridge or portal of repeated briefing environments. Magia Conflitüo rust-red as solid graphic light constructs, Primitivum moss green/amber only in supporting beast and natural accents; combine the palette organically, not split the painting into coloured halves. RARITY: LEGENDARY, standard art, aesthetic only. Include the established v9 focal luminous core in the whip magic, fine illustrated material textures, selective aged-gold and subtle rainbow specular glints on bronze and light edges, localized magical reflections, expressive light without blowing out face or background. Rich legible colour, sharp main contours, hard but limited cel-like shadow blocks. Smooth broad restrained environmental shapes and soft low microcontrast materials, no gritty cracks, impasto, grain or highly expressive rough landscape marks. Use polished varied-weight graphic comic/fantasy linework matching the supplied style reference, not gritty painterly realism, generic anime or plastic 3D. The figures must be painted WITH the setting in one consistent camera/perspective/light; never a cutout pasted onto a background. Detailed enough for print and sharp card display, request 1260 x 1760 native if available; save actual native output without fabricated dimensions. Keep lower area quieter for later editable rules overlays. No card frame, text, numbers, logo or watermark. Complete opaque background. Preserve all existing images; this is the dedicated new Lyandra scene.",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/domadora-de-garmhal.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "somente direção de traço e acabamento do cenário"
+    }
+  ],
+  "decisoes": [
+    "Lyandra é personagem novo conforme Claude; marcador do jogo não é sua identidade",
+    "Cena unificada inédita com matilha e fortificação em nova pose",
+    "Paleta dos dois Valores integrada, sem dividir a imagem em metades",
+    "Acabamento lendário v9 focal"
+  ],
+  "avaliacaoVisual": "Imagem inspecionada: nova identidade de Lyandra, matilha e ambiente integrados, magia vermelha focal, figura e animais legíveis."
+}
+

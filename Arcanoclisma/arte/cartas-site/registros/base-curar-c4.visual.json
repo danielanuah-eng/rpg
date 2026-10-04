@@ -1,0 +1,57 @@
+{
+  "id": "base-curar-c4",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/relicario-da-terceira-vida.webp",
+  "textoRegraLido": "Cure 15 de dano de um alvo e compre 1.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/relicario-da-terceira-vida.png",
+      "papel": "Identidade do objeto mágico em uso, nova posição"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente desenho liso e iluminação aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-69d88bfa-5a27-4e9c-90d3-b75c52bb4285.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-curar-c4.txt",
+  "decisoes": [
+    "Novo Relicário aberto e segurado junto a receptora viva; recuperação, sem introduzir ressurreição nas regras.",
+    "Vila de pesca sobre o brejo em manhã clara, com ataduras substituídas por respiração armazenada ciano.",
+    "Uma imagem de barco materializa a compra de uma carta.",
+    "Participantes novos, mulher negra de rosto forte e cabelo curto em tranças e curandeiro idoso; dourado só no metal e luz natural."
+  ],
+  "avaliacaoVisual": "Frasco, tampa e duas mãos do curandeiro legíveis; respiração ciano toca a mão e o rosto da receptora. Uma visão de barco. Cenário completo da vila, personagens no mesmo espaço e sem fundo isolado.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-curar-c4.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "d38f9e99482081e3d75801a159c2b4cde0863740441b7a20d985711cfd23e424",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "incomum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

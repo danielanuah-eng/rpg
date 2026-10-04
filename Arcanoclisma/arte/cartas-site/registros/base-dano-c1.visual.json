@@ -1,0 +1,54 @@
+{
+  "id": "base-dano-c1",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/chuva-de-faiscas.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/chuva-de-faiscas.png",
+      "papel": "forma transitória do feitiço e magia vermelho-ferrugem"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Criatura da base usada como forma transitória do feitiço, sem criar aliado ou alterar regra.",
+    "Conjurador novo gira no mercado ao meio-dia; chuva de faíscas mostra origem, arco e impacto em escudo.",
+    "Fundo teal contido e novo gesto lateral da manifestação, sem explosão excessivamente luminosa."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-748a3a95-af75-452c-950a-0c5d5352ff67.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-dano-c1.txt",
+  "avaliacaoVisual": "Manifestação transitória ligada à mão do conjurador, chuva curva alcança escudo com impacto preciso. Pessoas, mãos e origem/destino claros; mercado diurno integrado e magia localizada, sem converter feitiço em aliado.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c1.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "6d5acbabfc2253f13916a906ac1238dde025ce9450f8d529e25c25be141d1666",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

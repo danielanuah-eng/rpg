@@ -1,0 +1,24 @@
+{
+  "id": "base-aliado-c3-equilibrado",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/guarda-da-ponte.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/guarda-da-ponte.png",
+      "papel": "identidade"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Nova rotação do tronco e gesto de impedir a passagem, olhando para viajantes.",
+    "Ponte sobre desfiladeiro marítimo durante tempestade diurna.",
+    "Figura legível sem ficar minúscula na cena; sem magia adicionada."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-ae1408b7-a500-40e5-87df-869990b1c2c7.png",
+  "prompt": "Use case: illustration-story. New full scene for \"Guarda da Ponte\", Arcanoclisma common ally. Polished fantasy narrative illustration matching approved second reference: crisp selective contours, smooth painted broad surfaces, controlled shadows and material texture, integrated lighting and contact shadows. No gritty canvas grain, overly expressive scratched scenery, excessive HDR/anime gloss, foggy wash or blooms. Actual NEW single painted scene; not a transparent RPG cutout pasted onto an environment. Opaque full background to all edges, portrait 63:88 requested1260x1760. No lettering, card frame, UI, stats or watermarks. Leave key faces/action above lower third for overlay. Common card: no rainbow foil.\nReference1 identity ONLY: young tan male guard, short wavy black hair, dark bronze brimmed helmet, blue scarf and blue split tunic with cream edging, cream undershirt, brown leather vest, burnt orange trousers, dark knee guards, brown boots, small bronze whistle at belt, long wooden spear with dark bronze angular leaf point. Preserve clothing and face but no reuse of extended thrust pose. Reference2 smooth painterly environment finish only.\nSCENE: stormy daylight on a suspended stone bridge over a deep sea gorge. Eye-level moderately wide composition, guard occupies middle left at roughly half image height, readable expressive face. His torso rotates toward the far end while looking over his shoulder back at approaching travelers; he loudly signals halt with open mouth and raised free hand, other hand holding spear diagonally downward across the bridge, feet in a staggered anchored stance. Blue cloth and helmet cord whip in wind. Three travelers in distant right background huddle with an animal and cart by the safer arch, witnessing his defense. Broken bridge parapet and the narrow safe passage are visible. Sea spray far BELOW bridge, no surreal floating road. Smooth pale stone forms, dark slate sea, soft overcast turquoise and grey cloud planes, a faint distant lightning streak. No rune portal, ruined crossroads, luminous magic or raging fire. Local warm skin against cool storm, quiet bronze metal. Sharp large shapes, no global haze over figure, natural scale, atmospheric distance. All elements part of one newly composed painting; key face and spear remain above bottom overlay region.",
+  "avaliacaoVisual": "Guarda com ambas as mãos e pernas coerentes, novo gesto de bloqueio e olhar para viajantes; ponte e mar integrados, contraste legível em tempestade."
+}

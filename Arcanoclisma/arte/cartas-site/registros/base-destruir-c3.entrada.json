@@ -1,0 +1,31 @@
+{
+  "id": "base-destruir-c3",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/balanca-de-serath.webp",
+  "textoRegraLido": "Destrua um Aliado ou Mística.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/balanca-de-serath.png",
+      "papel": "Identidade do objeto mágico em uso, nova posição"
+    },
+    {
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c2-agressivo.png",
+      "papel": "Identidade do Lobo-de-Cinza; cena e pose novas"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente desenho liso e iluminação aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-c2f490f2-c2cf-4c59-9a83-b76b7ed5a964.png",
+  "prompt": "TCG Balança de Serath, spell destroys ONE enemy ally OR mystical permanent. Reference1 ONLY gives the scale identity: ordinary weighted old bronze scale, ONE vertical stem, ONE slightly curving pivoted arm and TWO shallow bowls suspended by THREE chains each, dull verdigris patina, small opposing indigo-blue and amber-gold magic in its two pans. Reference2 establishes enemy Lobo-de-Cinza identity only: grey-silver thick fur, pointed ears, green eyes and pale-green ghostlike strands. Reference3 ONLY the approved smooth illustration finish; do NOT copy any reference's pose/background. Completely NEW spell scene, camera low just BEHIND caster's shoulder at LEFT foreground, caster is an adult olive-skinned woman with straight auburn pixie haircut, pointed long nose and plain white linen tunic; she places her right palm flat above the balance ON a waist-high dark ceramic plinth. Scale occupies middle-left, shown nearly SIDEWAYS with its arm tilting so amber pan is lowered and indigo pan rises. From lowered pan a precise narrow deep-plum loop (judgment) extends down the stairs to the enemy WOLF at upper RIGHT, now STANDING broadside facing AWAY with head turning back, four legs supported at first, tail relaxed (new pose, no biting shield). One target only. Show the wolf already mostly dissolving into harmless INDIGO spectral wisps and faint geometric dust along its FAR hindquarters, not grotesque anatomy, no gore or exposed tissue. It must still read as the same grey-green wolf, not a new black dragon. Spell is disintegration, NOT chains turning the wolf into a pet. Full courtyard of a prison's oath registry at LATE AFTERNOON, warm muted red-brick walls and simple wide stairs, bars only as background gates, small doorway figures watching, pale blue sky narrow at top. Broad smooth plaster panels and brick groups, no overcrowded throne ornament or glitter everywhere. Scale brass matte, the blue/gold pans focal but restrained, judgment purple local. Common rarity, no foil/rainbow overlays. Polished fantasy story illustration in approved smooth painted comic tradition, crisp selective organic contours, broad clean material and background surfaces with integrated shadows. NEW unified scene, not a catalog cutout composited onto a backdrop. Controlled warm/cool palette, sharp meaningful details but not gritty/rough canvas noise, no fog wash, no extreme anime bloom. Opaque environmental artwork to all edges, portrait63:88 requested1260x1760. No words, card frame, stats, UI or watermark. Faces/event in top two thirds.",
+  "decisoes": [
+    "Balança redesenhada de lado e inclinada sobre plinto; mantém dois pratos, correntes e contraposição azul/âmbar.",
+    "Lobo-de-Cinza reaparece em pose traseira voltando o olhar, no pátio de juramento de uma prisão.",
+    "Destruição de um único alvo demonstrada por desagregação índigo sem ferimento gráfico.",
+    "Nova conjuradora de cabelo ruivo curto, vista de costas; cenário quente contrasta com magia roxa."
+  ],
+  "avaliacaoVisual": "Balança de dois pratos legível, conectada por magia ao único lobo-alvo. Identidade cinza/verde mantida, novo olhar sobre o ombro e desagregação posterior. Correntes, escada e figuras secundárias integradas, sem gore."
+}

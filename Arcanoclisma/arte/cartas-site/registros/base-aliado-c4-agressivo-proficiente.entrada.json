@@ -1,0 +1,24 @@
+{
+  "id": "base-aliado-c4-agressivo-proficiente",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/salteador-a-cavalo.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/salteador-a-cavalo.png",
+      "papel": "identidade de cavaleiro e cavalo"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Cavalo empina lateralmente; cavaleiro recua no selim e golpeia corda, novo gesto da chegada rápida.",
+    "Passarela de madeira sobre estuário ao pôr do sol, sem repetir castelo ou montanhas da referência.",
+    "Figura ampliada o suficiente para leitura; sem magia não indicada."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-c729686c-af68-4fdb-9316-45362b351000.png",
+  "prompt": "Use case: illustration-story. NEW Arcanoclisma illustration \"Salteador a Cavalo\", UNCOMMON fast-entry aggressive ally. Polished fantasy narrative illustration matching approved second reference: crisp selective contours, smooth painted broad surfaces, controlled shadows and material texture, integrated lighting and contact shadows. No gritty canvas grain, overly expressive scratched scenery, excessive HDR/anime gloss, foggy wash or blooms. Actual NEW single painted scene; not a transparent RPG cutout pasted onto an environment. Opaque full background to all edges, portrait 63:88 requested1260x1760. No lettering, card frame, UI, stats or watermarks. Leave key faces/action above lower third for overlay. Uncommon restrained sheen, no rainbow foil.\nImage1 identity ONLY: adult tan dark-haired rider, short scruffy beard and sly angular face, long ragged rust-red scarf, cream rolledsleeve shirt, charcoal-blue vest, torn fadedblue skirt panels, olive trousers, leather belts and boots, bronze curved saber; chestnut horse with BLACK mane and tail, long white facial blaze and white lowerlegs, plain leather saddle/bridle with bronze fittings. Human exactly two arms/two hands, horse exactly four legs, no extra stirrups, legs or riders. Reference2 smooth painterly finish only, no same meadow/mountain/tower composition.\nA WIDE action scene on a narrow elevated timber causeway through a cold blue coastal salt-marsh at SUNSET. Perspective slightly above walkway level from SIDE, not original front-gallop. Horse on diagonal from lower RIGHT to upper LEFT, REARING WITH TWO FORELEGS lifted and TWO HIND HOOVES anchored on boards, chestnut side/flank clearly visible. Rider leans BACK in saddle, startled brow and mouth slightly open, looks UP at a suddenly lowered rope from an elevated watch-platform; his saber arm sweeps downward-left, cutting the rope beside a recoiling armored toll guard on left. Other hand pulls reins. Saber not raised behind head as in reference. Impact is rope and guard's deflected shield, no bloody injury. This is the raider entering an encounter at speed, abruptly checking his horse while striking, clear physical weight and cause.\nGuard small pale woman with cropped sandy hair under simple bronze cap, grey-green cape, eyes narrowed, pulls shield close; no duplicated generic red scarf. Marsh reflects muted violet/orange sky, tall reed bands, tied skiffs far below and a distant wooden lookout on stilts rather than castle or battlefield ruins. Long causeway zigzags into quiet horizon; figure readable, not tiny silhouette. A small warm sunset rimlight with cool teal shadow, no golden resplendence. No magic added to ordinary rider, just a tight bronze sword glint. Smooth water/cloud planes, clean constructed timber, moderate local material detail and crisp faces. All parts newly painted in cohesive contact shadows, NOT a mounted RPG cutout over a background.",
+  "avaliacaoVisual": "Cavalo empinado com quatro pernas e duas mãos do cavaleiro legíveis; novo golpe junto ao posto de guarda. Passarela sobre estuário contextualiza cena e dá profundidade; identidade do cavalo preservada."
+}

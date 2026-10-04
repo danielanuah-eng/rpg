@@ -1,0 +1,24 @@
+{
+  "id": "base-aliado-c4-equilibrado",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/cavaleiro-errante.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/cavaleiro-errante.png",
+      "papel": "identidade"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Cavaleiro ajoelhado ajuda companheiro numa balsa, visto sobre ombro de outro aliado.",
+    "Manhã no rio com salgueiros, sem repetir a encruzilhada genérica do pedido.",
+    "Sem conceder magia não descrita ao cavaleiro; acabamento incomum contido."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-b191d452-ffe0-48a9-9482-90da958dd2d4.png",
+  "prompt": "Use case: illustration-story. New Arcanoclisma card scene \"Cavaleiro Errante\", uncommon ally. Polished fantasy narrative illustration matching approved second reference: crisp selective contours, smooth painted broad surfaces, controlled shadows and material texture, integrated lighting and contact shadows. No gritty canvas grain, overly expressive scratched scenery, excessive HDR/anime gloss, foggy wash or blooms. Actual NEW single painted scene; not a transparent RPG cutout pasted onto an environment. Opaque full background to all edges, portrait 63:88 requested1260x1760. No lettering, card frame, UI, stats or watermarks. Leave key faces/action above lower third for overlay. Uncommon: restrained warm metal glints, no rainbow foil.\nReference1 preserves knight IDENTITY ONLY: rugged young adult tan man, wavy dark brown hair, slight mustache and chin stubble, rust-red scarf, faded deep blue cape, cream tunic, leather belts and rolled blanket, olive trousers, dark golden bronze shoulder and knee armor, brown gloves and boots, long bronze pointed lance with faded red streamers. Completely new pose, expression and setting. Reference2 painting finish only.\nView from above the shoulder of a retreating fellow soldier in lower left foreground toward a flooded willow riverbank, fresh clear morning. The errant knight at upper middle is HALF KNEELING on a grounded wooden ferry, back and three-quarter profile to viewer, face turned upward scanning the far bank with a calm resolute gaze. His right hand holds his lance nearly VERTICAL as he guards the landing; left arm extends back to help a weary companion climb aboard. Their hands meet clearly, no fused arms. A small group of distant armed figures move along the opposite bank, establishing a larger skirmish without becoming a separate main subject. Wet ferry deck, ropes, reeds, broad willow roots, water reflecting pale sky; only one foreground partial figure and one assisted companion near knight. Earthy green and muted blue, sparse rust accents, subtle bronze specular edges. Cloth lifted by breeze. Smooth environment surfaces and quiet crisp water shapes, not rugged white cliffs or a castle gate. Sunlight gentle and directional, no blinding gold. Identity remains recognizable, cohesive continuous scene with spatial depth. Key face and lance above lower overlay. No supernatural powers newly assigned to this mundane knight.",
+  "avaliacaoVisual": "Cavaleiro ajoelhado com lança vertical e gesto de ajudar, rosto e traje preservados; cena fluvial coesa, cores naturais, figura nítida. Acabamento sem ofuscamento."
+}

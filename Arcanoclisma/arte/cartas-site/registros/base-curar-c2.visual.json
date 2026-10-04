@@ -1,0 +1,57 @@
+{
+  "id": "base-curar-c2",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/sementes-de-um-dia.webp",
+  "textoRegraLido": "Cure 8 de dano de um alvo e ganhe 1 Arcano.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/sementes-de-um-dia.png",
+      "papel": "Identidade da forma mágica ou objeto; redesenho integrado ao evento"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento liso e iluminação controlada aprovados; não copiar composição"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-907703d6-3704-4e0e-88e9-bc8776971e54.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-curar-c2.txt",
+  "decisoes": [
+    "Nova aldeia de curandeira junto a dunas ao meio-dia, com sombra de varanda e fundos completos.",
+    "Bolsa de sementes mantém tecido remendado, corda azul e emblema de broto em novo gesto de uso.",
+    "Cura mostrada por ataduras de luz no braço intacto; só uma esfera representa o Arcano ganho.",
+    "Cenário de tons de barro e luz natural, brilho verde e âmbar localizado na cura."
+  ],
+  "avaliacaoVisual": "Bolsa reconhecível, curandeira segura e verte sementes com uma mão e gera uma esfera na outra; paciente sentado reage com alívio à cura do braço enfaixado. Sem ferida exposta. Fundo completo, sombras coerentes e materiais mate.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-curar-c2.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "e97dbf45a7ff82973b68f8a5964e6b4f0dbec2deccc789819b1f7d88555a5210",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

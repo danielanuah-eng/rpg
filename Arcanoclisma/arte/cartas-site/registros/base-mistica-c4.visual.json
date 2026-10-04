@@ -1,0 +1,57 @@
+{
+  "id": "base-mistica-c4",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/muralha-viva.webp",
+  "textoRegraLido": "",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/muralha-viva.png",
+      "papel": "Identidade arquitetônica da criatura ou lugar; nova perspectiva e evento"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento liso e iluminação controlada, não copiar a cena"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-1119f9da-1d51-4ddb-aab7-8c8dedaad6f8.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-mistica-c4.txt",
+  "decisoes": [
+    "Muralha em postura de apoio: duas mãos em superfícies distintas e duas pernas apoiadas, sem esmagar magia como na arte RPG.",
+    "Preservada criatura arquitetônica sem rosto, ombros em ameias, blocos articulados, selos e fechaduras.",
+    "Cais noturno junto ao mar de mercúrio e torres suspensas; carregadores e carroça dão escala.",
+    "Presença mística com iluminação azul discreta nas juntas, sem atribuir habilidade ausente no catálogo."
+  ],
+  "avaliacaoVisual": "Duas mãos e duas pernas de pedra legíveis, uma mão no cais e outra no parapeito. Ausência de cabeça animal preservada. Trabalhadores pequenos coerentes com o tamanho monumental; fundo noturno completo, sem pose de combate.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-mistica-c4.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "d9cea87eb8aeb2b94536d13bf565f792c1e2fd2d977bc1513412c0a9eb8085aa",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "incomum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

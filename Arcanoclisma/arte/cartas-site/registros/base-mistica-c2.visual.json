@@ -1,0 +1,63 @@
+{
+  "id": "base-mistica-c2",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/jaula-de-luz.webp",
+  "textoRegraLido": "",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/jaula-de-luz.png",
+      "papel": "Identidade da forma mágica ou jaula; nova posição"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-903a1705-f479-413f-a89a-860c6ab231b7.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-mistica-c2.txt",
+  "decisoes": [
+    "Jaula nova vista inferior sobre lago de mercúrio em conservatório ao amanhecer; presença mística sem atribuir habilidade ausente.",
+    "Mantidos base quadrada, cúpula, alça, fecho e barras de luz; interior sem prisioneiro.",
+    "Revisão específica reduziu dourado excessivo e halo, principalmente os reflexos do lago, sem tornar a carta fosca.",
+    "Versão inicial preservada sem seleção em Arcanoclisma/arte/cartas-site/variantes/base-mistica-c2-v1-dourado-excessivo.png."
+  ],
+  "avaliacaoVisual": "Na versão revisada, bronze com detalhes visíveis e lago mais prateado-azulado, com reflexo dourado restrito. Composição, jaula vazia e observador preservados; fundo completo e brilho focal legível.",
+  "versaoAnterior": {
+    "arquivo": "Arcanoclisma/arte/cartas-site/variantes/base-mistica-c2-v1-dourado-excessivo.png",
+    "selecionada": false,
+    "motivo": "Dourado excessivo no lago e halo da jaula",
+    "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-89fbc987-6fcb-40b1-8b57-2c48d9a99a5a.png"
+  },
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-mistica-c2.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "b339a80b8e779b70dfdf8ab0182e57829868aa71c1491f806f1fe4f36cc583fd",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

@@ -1,0 +1,27 @@
+{
+  "id": "bal-varredura-c5",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/redemoinho-de-areia.webp",
+  "textoRegraLido": "Causa 3 de dano a cada Aliado do oponente.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/redemoinho-de-areia.png",
+      "papel": "Identidade da criatura ou fenômeno, redesenhados em ação e com novo ambiente"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-748a3779-8deb-43ca-9249-d56ca2aefff7.png",
+  "decisoes": [
+    "Redemoinho redesenhado inclinado e varrendo o pátio de basalto, visto por cima do ombro de quem conjura.",
+    "Mantidos areia ocre e lâminas prata-mercúrio, sem transformar a magia em uma aura Alvorum.",
+    "Três aliados inimigos reagem de formas distintas ao dano em área; marcas curvas no chão registram o trajeto.",
+    "Incomum com metal visível nas lâminas, sem acabamento lendário."
+  ],
+  "avaliacaoVisual": "Vórtice diagonal com areia e faixas prateadas reconhecíveis. Guardiã agachada com escudo, ancião apoiado na cerca e pequeno humanoide de pedra separados dentro do mesmo campo de impacto. Fortaleza e céu escuros equilibram a areia clara; cena contínua com profundidade e sem recorte colado.",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nREDEMOINHO DE AREIA identity: living sandy vortex of broad MERCURY SILVER curved blades threaded through earthy ochre sand, a narrow base with a much wider S-curved upper sweep, a few pebbles held in the moving sand. No face, body, eyes, hands or sentient humanoid. Preserve silver and earth, not Alvorum yellow sunlight. REDRAW vortex leaning diagonally almost sideways, sweeping a battlefield left-to-right, NEVER reference's straight upright product silhouette.\nNEW SCENE: outside an immense plain BLACK BASALT desert fortress, on flat dry reddish clay at late afternoon under a slate storm front. Camera just behind a small caster's shoulder on far left bottom, muted olive cloak, only shoulder and back of cropped head visible; do not add hands. The vortex originates on left middle distance and arcs through center toward THREE enemy allies spread across right courtyard, silver bands visible within dust, dark cracked basalt wall and windblown plain flags behind. One broad deep-brown female guard with shaved head in maroon cloth armor crouches holding a rectangular shield above head, one tall pale skinny older male with long white mustache in grey coat braces sideways against a timber fence, one SMALL simple stone humanoid with exactly two arms/two legs leans backward with both arms defending head. Clearly one opposing team, no caster among targets. Show residual curved sand tracks across ground and each target's different response, few airborne stones, no gore or body mutilation. Findante spell deals3 damage to EACH opponent Ally, no additional property. Smooth broad surfaces, clean graphic dust masses with airy gaps, not photographic gritty desert texture or blinding yellow scene. UNCOMMON small metal glints within silver vortex, no rainbow foil. Full environmental edges."
+}

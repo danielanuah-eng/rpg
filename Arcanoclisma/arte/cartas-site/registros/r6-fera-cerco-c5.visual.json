@@ -1,0 +1,63 @@
+{
+  "id": "r6-fera-cerco-c5",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/manticora.webp",
+  "textoRegraLido": "Ao entrar: cause 2 de dano ao Conjurador inimigo e cure 2 do seu Conjurador.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/manticora.png",
+      "papel": "Identidade da criatura; nova pose e cena do efeito de entrada"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-6988d7b1-f968-4fb1-a67a-febaf118cde9.png",
+  "decisoes": [
+    "Mantícora redesenhada aterrissada junto à conjuradora em ruínas de pedágio, com cauda baixa e identidade de leão, asas vermelhas e cauda de escorpião preservada.",
+    "Magia violeta da referência causa dano ao rival à direita e envolve a bandagem da aliada à esquerda, ilustrando dano dois e cura dois ao entrar.",
+    "V1 preservada; revisão removeu braço e mão excedentes do rival.",
+    "Incomum sem brilho de lendária, sem nova habilidade recorrente de ataque."
+  ],
+  "avaliacaoVisual": "Rival corrigido com exatamente duas mãos, uma protegendo-se e outra segurando cajado. Mantidos mantícora, duas asas, cauda única e membros felinos coerentes, conjuradora com mãos naturais e fio de cura. Dois efeitos e alvos separados, céu e campo frios, fundo contínuo.",
+  "versaoAnterior": {
+    "arquivo": "Arcanoclisma/arte/cartas-site/variantes/r6-fera-cerco-c5-v1-mao-extra-rival.png",
+    "selecionada": false,
+    "motivo": "Rival apresentava três braços/mãos.",
+    "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-980172ed-9075-426f-8875-4a6e481dfa53.png"
+  },
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/r6-fera-cerco-c5.txt",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/r6-fera-cerco-c5.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "b2c099ceee7a5e40d7f9cc9ce83f9176fc4bec3f21cfb3e816e16d107a9961cd",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "incomum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

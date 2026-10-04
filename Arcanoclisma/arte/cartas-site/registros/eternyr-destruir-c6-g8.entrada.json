@@ -1,0 +1,27 @@
+{
+  "id": "eternyr-destruir-c6-g8",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/a-voragem.webp",
+  "textoRegraLido": "Destrua um alvo e compre 4 cartas.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/a-voragem.png",
+      "papel": "Identidade do lugar ou criaturas; composição e evento inteiramente novos"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-e565f4f9-0879-4367-919a-bb802d9d3d61.png",
+  "decisoes": [
+    "Voragem redesenhada desde uma passarela alta, com abismo em espiral preenchendo o cenário inteiro.",
+    "Um guardião novo é engolido por uma fenda e exatamente quatro páginas principais chegam à conjuradora, correspondendo a destruir um alvo e comprar quatro.",
+    "Mantidas cores roxo-sangue, seres acorrentados e arquitetura do plano Dominum, apesar do Valor mecânico Eternyr.",
+    "Acabamento lendário dourado e arco-íris integrado principalmente às páginas e detalhes de bronze; cenário permanece escuro."
+  ],
+  "avaliacaoVisual": "Escala colossal estabelecida por níveis em espiral, figuras pequenas e correntes. Um alvo à direita em dissolução não gráfica, uma conjuradora à esquerda e quatro páginas grandes claramente separadas. Materiais iridescentes visíveis sem fundo branco, sem montagem ou explosão solar.",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nA VORAGEM identity from reference1 is the Dominum plane: colossal purple-blood spiral abyss of organic cavernous bridges and architectural bone-like arches, everything owned; chained purple beasts, tiny Manso attendants, black jagged towers and aged bronze chains. Preserve its mauve/magenta/dark violet source color, DO NOT repaint the plane midnight blue for mechanical Eternyr Value. Treat organic architecture as smooth abstract coral-like fantasy matter, no gore, organs or graphic wounds.\nNEW viewpoint and spell event: high camera from an OVERHANGING UPPER walkway, looking steeply DOWN and diagonally into the gigantic spiral to emphasize world-scale depth. Huge curved mauve arch close across top-left, several sloping spiral bridge rings below, tiny chained beasts very distant near upper-right structures. Not a pasted entire isometric vignette or frontal island. On near lower-right bridge one NEW animated stone-and-wood humanoid guardian, two legs and two arms, is being swallowed from below by a contracting DARK VIOLET spatial slit that connects into the abyss; its feet and lower legs already dissolving into small non-graphic dark fragments, remaining upper body leans back with one arm lifted and other braced on parapet. ONE target only, no people injured. Show an anonymous young dark-brown female conjuring observer in three-quarter back view at lower LEFT, small compared with architecture, short tight plum-tinted curls, practical slate cloak, ONE hand raised toward the slit and other hand receiving EXACTLY FOUR separate illuminated memory leaves flying out of the slit toward her. Four large countable rectangular leaves, abstract diagrams, no writing, no extra foreground paper. Destroy one target, draw4 at Findante speed, no invented extra mechanics.\nTime of scene: dim violet late twilight within the plane, no normal sunny landscape, scattered small warm lanterns rather than glowing gold buildings. Spectacular grand depth and magical scale; viewer sees the abyss is far beyond the people, but readable central interaction. LEGENDARY visible premium gold-and-rainbow pearlescent texture integrated into SELECTED purple portal surfaces, memory leaf fibers and bronze chain details; diagonally flowing fine rose/cyan/violet/green glints edged in warm gold INSIDE actual material surfaces, not border-only or universal aura. Keep dark shadows and muted architecture, avoid whole image bright neon. Full scene all edges."
+}

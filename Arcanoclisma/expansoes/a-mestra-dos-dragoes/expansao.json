@@ -1,0 +1,44 @@
+{
+  "id": "a-mestra-dos-dragoes",
+  "nome": "A Mestra dos Dragões",
+  "nomeProvisorio": false,
+  "data": "2026-10-03",
+  "origem": "pedido direto do autor nesta conversa",
+  "estado": "aguardando_revisao_visual_do_jogo_atual",
+  "liberacaoDoAutor": {
+    "concedida": false,
+    "texto": null,
+    "data": null
+  },
+  "restricoesClaude": {
+    "inserirEmJogo": false,
+    "criarOuAlterarCartas": false,
+    "balancearOuDefinirEfeitos": false,
+    "incluirEmBaralhosOuColecoesJogaveis": false
+  },
+  "escopoAutorizado": "Criar e organizar somente as imagens e descrições visuais da expansão, introduzindo Ciantia",
+  "quantidadeNova": {
+    "alvo": 90,
+    "provisoria": false,
+    "aguardandoResposta": false
+  },
+  "integracaoClaudeConfirmada": false,
+  "pushAutorizado": false,
+  "referenciasAprovadas": [
+    "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+    "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/philgard-luz-da-esperanca-adulto-v2-liso.png",
+    "Arcanoclisma/cartas/modelos-visuais/2026-10-03-v1/licao-do-jardim-arte-v2.png",
+    "Arcanoclisma/cartas/modelos-visuais/2026-10-03-v1/dragao-da-travessia-arte-v1.png"
+  ],
+  "direcao": {
+    "cenarios": "Completos, mais lisos, planos limpos e detalhes contidos; nunca fundos em branco",
+    "variedade": "Interiores e exteriores, manhã/dia/tarde/noite, clima, perspectiva, gestos e tipos de interação distintos",
+    "magia": "Luz localizada; dourado não ofusca o ambiente; alternar cotidiano, sensibilidade e ações amplas",
+    "personagens": "Identidade de Ciantia e dragões aprovados preservada; sempre nova pose e cena por arte",
+    "raridade": "Pendente; não atribuir raridade mecânica ou estética de carta final sem briefing autorizado"
+  },
+  "arquivamentoAuxiliar": "adiado durante geração conforme autor",
+  "metaCartas": 90,
+  "prioridade": "depois de concluir revisão das 151 artes atuais",
+  "planejamentoVisualCompleto": false
+}

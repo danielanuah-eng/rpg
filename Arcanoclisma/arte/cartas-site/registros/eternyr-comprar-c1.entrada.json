@@ -1,0 +1,26 @@
+{
+  "id": "eternyr-comprar-c1",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/tinteiro-de-mapas.webp",
+  "textoRegraLido": "Compre 1 carta.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/tinteiro-de-mapas.png",
+      "papel": "Identidade do objeto, redesenhado em uso e com nova cena"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-4a4af69f-f5b2-4be8-8e0d-7e105a85611d.png",
+  "decisoes": [
+    "Objeto redesenhado em uso dentro de uma caravana, com paisagem de estepe ao meio-dia.",
+    "Uma viajante nova recebe um mapa traçado pela tinta; a imagem ilustra comprar uma carta sem adicionar efeitos à regra.",
+    "Cena opaca com superfícies suaves e luz localizada; carta comum sem acabamento de raridade."
+  ],
+  "avaliacaoVisual": "Tinteiro identificável sobre a mesa, um fluxo de tinta desenhando o mapa e uma folha na mão. Viajante de pele escura com cabelo branco curto, expressão pensativa, dois braços coerentes. Interior e janela formam uma composição contínua, sem colagem ou fundo vazio.",
+  "prompt": "TCG Tinteiro de Mapas, draws ONE card / one revealed knowledge. Reference1 identity ONLY: small squat square chamfered ink bottle with cream glass sides showing a navy topographic map, old worn BRONZE corner frame, short round neck and round hinged metal lid OPEN, DARK NAVY ink with thin pale-blue trails. Repaint in completely NEW side-low angle on a real table, different angle from source. Full scene INSIDE a covered traveling CARAVAN WAGON at WINDY CLEAR MIDDAY through a flat warm ochre steppe (no snowy mountains or castle skyline). Wagon has simple muted terracotta canvas stretched over wood hoops, low broad blue-grey folding tabletop, worn rolled blankets and brass-latched map case secondary, a square canvas flap window at top RIGHT shows a single distant caravan silhouette on level ochre plain under pale blue sky. A new stout middle-aged adult woman with warm dark-brown skin, broad flat nose, short salt-white kinky hair shaved close at sides, wide round face and no jewelry, plain rust-red travelling shirt and charcoal waistcoat, sits at RIGHT leaning sideways over table, one palm under her chin in thoughtful concentration and other hand steadies ONE unfolding blank parchment page above ink bottle. NAVY ink climbs in a thin continuous ribbon out of bottle to that parchment and draws a crisp overhead MAP of the current caravan route and two camps, no readable place names, one page only. Small dull bottle map on glass connects to new map, paper casts subtle contact light/shadow, not a huge blue glowing sheet hiding character. Three-quarter profile woman facing LEFT/down map with slightly puckered lips (not standard smiling conjurador portrait), maybe second companion's shoulder small near far wagon entrance, no combat or grand explosion. Modest reflected silver/white ink highlights, dark blue magic against warm steppe light, continuous coherent painted interior and exterior to borders. Approved smooth Arcanoclisma fantasy illustration with crisp selective organic ink contours, broad smoothly painted surfaces and restrained expressive detail, shared light/perspective and contact shadows. New whole environmental narrative scene, not a source cutout pasted on backdrop. Warm/cool balance, matte bronze, no white-gold HDR/anime blaze, no rough noisy stone or canvas scratches, no fog wash. Opaque portrait63:88 requested1260x1760 with scene at all edges, no words, titles, UI, frame or watermark, essential object/action above lower third. Common card without iridescent foil. Reference2 is STYLE ONLY, not its people/dragon/meadow."
+}

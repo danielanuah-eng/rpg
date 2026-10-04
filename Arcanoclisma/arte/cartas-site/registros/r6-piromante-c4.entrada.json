@@ -1,0 +1,27 @@
+{
+  "id": "r6-piromante-c4",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/aprendiz-descontrolado.webp",
+  "textoRegraLido": "Ao entrar: cause 1 de dano a cada Aliado do oponente.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/aprendiz-descontrolado.png",
+      "papel": "Identidade da criatura ou personagem, redesenhados em nova pose e ação"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-42aba5fc-4510-402c-acec-35e106f2aa48.png",
+  "decisoes": [
+    "Aprendiz redesenhado em postura baixa e torcida, mãos juntas tentando conter a magia, identidade e roupa remendada preservadas.",
+    "Incluído o feito grandioso solicitado pelo autor: Comprometido conjurando um grande construto arcano semelhante a buraco negro com detalhes galácticos.",
+    "O construto é interpretação visual do pulso de chegada; não cria habilidade, dano gravitacional, destruição do mundo, custo, Grau ou raridade novos. Regra permanece dano um a cada aliado do oponente ao entrar.",
+    "Magia prata-mercúrio original, observatório noturno e três alvos no pulso. Incomum sem acabamento arco-íris de lendária."
+  ],
+  "avaliacaoVisual": "Duas mãos juntas, dois braços e duas pernas plantadas coerentes, expressão de esforço ansioso diferente da base. Faixa prateada liga mãos ao grande núcleo escuro galáctico; pulso horizontal alcança três alvos que se defendem, sem ferimentos gráficos. Arquitetura intacta e fundo frio controlado; efeito amplo sem substituir personagem por colagem.",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nAPRENDIZ DESCONTROLADO source identity: a young male COMPROMETIDO magic user, light warm skin, narrow scrappy freckled face with visible anxious dark pupils, messy dark brown short hair, rusty orange scarf/cape, torn cream shirt under worn teal vest, patched dark olive trousers, brown boots, book pouch at hip and small bronze buckles. Preserve likeness and palette, DO NOT replace with a glamorous white-haired mage, copy source frontal two-hands-apart pose, or recolor his magic red. Actual magic is SILVER-MERCURY vapor/construction.\nNEW expressive event with a grand anime-scale feat, without copying anime rendering style: night at an open training courtyard built into an abandoned plain sandstone observatory, cloudy navy sky, simple broad worn steps, matte warm clay arches far behind. The apprentice is on LOWER LEFT in deep sideways crouch, BOTH feet planted, torso twisting away from his own spell, TWO hands held together above and just forward of one shoulder as if struggling to pull down an overgrown magical construct. Face in clear three-quarter profile looking UP, teeth gritted in worry, scarf pulled by force. From joined hands a continuous narrow mercury-silver ribbon feeds a HUGE floating arcane BLACK-HOLE-LIKE construct above courtyard: dark circular core with a broad SILVER/ivory accretion spiral and distorted small galaxy-like star flecks, visibly a magical constructed celestial model, spectacular enough to dwarf the mage, NOT a literal planet-eating astronomical disaster or printed diagram. It emits ONE shallow expanding silver shock ring along ground toward THREE small enemy allied training opponents on RIGHT, two human adults and a small stone humanoid, each bracing with two arms/two legs, surprised but uninjured. Make clear ordinary training architecture stays intact, no destroyed city, dead bodies, drawing cards or swallowing opponents. The cosmic appearance is purely the visual interpretation of his uncontrolled arrival burst, NOT new game rule/keyword. Current Ally3/4 rule: Ao entrar cause1 damage to each enemy Ally. Grand magical scale does not alter damage, cost, Grau or rarity.\nKEEP source silver rather than gold, local light on magic, surrounding navy/earth surfaces subdued; no whole background blinding glow. INCOMUM ONLY small silver metallic sparkle; no gold-rainbow legendary foil. Fully unified new character pose and setting, smooth graphic painted arcs and clear anatomy, no hectic scratch texture, no anime cel portrait eyes."
+}

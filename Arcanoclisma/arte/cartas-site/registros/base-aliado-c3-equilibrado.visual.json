@@ -1,0 +1,54 @@
+{
+  "id": "base-aliado-c3-equilibrado",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/guarda-da-ponte.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/guarda-da-ponte.png",
+      "papel": "identidade"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Nova rotação do tronco e gesto de impedir a passagem, olhando para viajantes.",
+    "Ponte sobre desfiladeiro marítimo durante tempestade diurna.",
+    "Figura legível sem ficar minúscula na cena; sem magia adicionada."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-ae1408b7-a500-40e5-87df-869990b1c2c7.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-aliado-c3-equilibrado.txt",
+  "avaliacaoVisual": "Guarda com ambas as mãos e pernas coerentes, novo gesto de bloqueio e olhar para viajantes; ponte e mar integrados, contraste legível em tempestade.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c3-equilibrado.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "d4e22b407af00d6154eb9d0770603daf2d50e99ead3db942436718ac8f742d58",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

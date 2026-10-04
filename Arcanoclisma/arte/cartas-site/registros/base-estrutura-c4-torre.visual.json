@@ -1,0 +1,63 @@
+{
+  "id": "base-estrutura-c4-torre",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/torre-dos-protetores.webp",
+  "textoRegraLido": "Suspenda e pague 1: cause 2 de dano a um alvo.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/torre-dos-protetores.png",
+      "papel": "Identidade do lugar, com nova perspectiva e funcionamento"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-a3579097-3238-4b46-a176-fe2bc717ce5f.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-estrutura-c4-torre.txt",
+  "decisoes": [
+    "Nova vista da passagem abaixo da torre, com exterior rural contínuo, céu e cúpula completos.",
+    "Operador ativa selo para lançar um único projétil em alvo exterior; estrutura não ganha ação de ataque de aliado.",
+    "Revisão corrigiu escala e apoio do alvo distante, agora menor em caminho ligado à encosta.",
+    "Arquitetura, selos, armilar e bandeiras mantidos; metais só com brilhos pontuais. V1 preservada em Arcanoclisma/arte/cartas-site/variantes/base-estrutura-c4-torre-v1-escala-alvo.png."
+  ],
+  "avaliacaoVisual": "Torre inteira e causa do efeito legíveis. Na revisão, alvo reduzido e caminho contínuo sobre a encosta, com um impacto. Cúpula e povoamento em proporção visual mais coerente; luz forte natural sem cenário isolado.",
+  "versaoAnterior": {
+    "arquivo": "Arcanoclisma/arte/cartas-site/variantes/base-estrutura-c4-torre-v1-escala-alvo.png",
+    "selecionada": false,
+    "motivo": "Alvo distante grande e apoio de terreno pouco coerente",
+    "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-aa7523ad-7fa5-4986-87ca-9758a490f4f3.png"
+  },
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c4-torre.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "86e79f14cf3cb5ae0a974f8fc05bbb8e9c152793c5a2510569cb2b0fc29e84f7",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "incomum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

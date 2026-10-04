@@ -1,0 +1,57 @@
+{
+  "id": "base-comprar-c2-repentina",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/pensamento-solto.webp",
+  "textoRegraLido": "Compre 1 carta.",
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/pensamento-solto.png",
+      "papel": "Identidade da forma mágica ou objeto; redesenho integrado ao evento"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento liso e iluminação controlada aprovados; não copiar composição"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-11056f97-4cc4-4c39-a600-4ba56bea6a75.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-comprar-c2-repentina.txt",
+  "decisoes": [
+    "Novo observatório de cobertura sob céu claro, evitando repetir estante ou encruzilhada.",
+    "Pensamento Solto sussurra junto ao ouvido em nova posição, corpo incompleto e índigo mantidos.",
+    "Um pensamento entregue numa folha flutuante; não cria aliado nem efeito ofensivo.",
+    "Participante novo mais velho, careca, bigode branco e óculos discretos; expressão desconfiada."
+  ],
+  "avaliacaoVisual": "Aparição índigo cochicha junto ao ouvido, receptor olha de lado com surpresa, mão levanta uma folha. Instrumentos, arco e telhados dão cenário integrado. O mapa sobre a mesa permanece material, sem efeito de compra extra.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-comprar-c2-repentina.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "702e12f6aa73c94792abda8f6fc2669b535b61f7484c1ee62e7020a280d1db19",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

@@ -1,0 +1,25 @@
+{
+  "id": "base-aliado-c2-agressivo-proficiente",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/lebre-relampago.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/lebre-relampago.png",
+      "papel": "identidade, escala pequena e magia azul-noite/branca"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Lebre faz curva apoiada no chão, em vez de repetir salto da base.",
+    "Dia nublado em planície de juncos fria, com bota em primeiro plano indicando tamanho real.",
+    "Figura pequena mas legível; uma lebre apenas e sem membros duplicados por rastro.",
+    "Magia azul-noite com riscos brancos preservada; roupas/capuz do pedido genérico adaptados às orelhas."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-4dbe3f9f-e83d-493c-be36-6d40be11165e.png",
+  "prompt": "Use case: illustration-story. NEW Arcanoclisma card art \"Lebre-Relâmpago\", COMMON proficiente aggressive beast. Polished fantasy narrative illustration matching approved second reference: crisp selective contours, smooth painted broad surfaces, controlled shadows and material texture, integrated lighting and contact shadows. No gritty canvas grain, overly expressive scratched scenery, excessive HDR/anime gloss, foggy wash or blooms. Actual NEW single painted scene; not a transparent RPG cutout pasted onto an environment. Opaque full background to all edges, portrait 63:88 requested1260x1760. No lettering, card frame, UI, stats or watermarks. Leave key faces/action above lower third for overlay. Common card: no rainbow foil.\nReference1 preserves hare IDENTITY ONLY: a SMALL lean brown hare with cream muzzle, chest and belly, very long ears with pink inner ears and dark tips, large expressive blue eyes, white-grey fluffy tail, MIDNIGHT-BLUE speed magic with WHITE slashes. Exactly four natural rabbit legs, no human clothes, no red fire or armor. Reference2 painterly finish only; no Ciantia, dragons, castle, mountains or meadow copied.\nScene under an overcast bright winter-day sky on a wide cold reed plain used as a battlefield crossing. Wide composition with large clean sky upper third and shallow icy puddles, fallen rushes, a low discarded equipment crate and distant indistinct troop silhouettes. A SINGLE hare skids in a SHARP LEFT TURN just after entering battle at speed, low center-right, paws press the wet ground and body twists sideways, one ear sweeps across part of its face and the other backward. NOT the original suspended upright leap. Close natural-scale bronze armored boot from an unidentified opponent at left foreground makes clear how TINY hare is, but hare and action remain easily readable, about a quarter of image width. Its alert eye looks along turn toward the boot, ears partly mask expression.\nOne clean narrow midnight-blue streak with white edge zigzags along its route from distant right toward current hare, demonstrating absurd speed without duplicating the animal, no repeated phantom legs or afterimage animals. A small WHITE/BLUE spark touches the boot where hare passes, very localized. Ground spray small and natural, no gore or injured humans. Short broken reeds foreground frame depth, soft silvergrey diffuse sky, cool mint and muted dusty brown ground, quiet worn bronze. No sunhalo, firestorm, rainbow or bright gold. Smooth broad painted icy pools and reeds, crisp expressive hare face and anatomy, selective fur texture, no gritty scratchy canvas. Whole setting freshly painted with shared contact shadows and scale, opaque full scene, no cutout montage.",
+  "avaliacaoVisual": "Uma lebre em curva apoiada no piso, orelhas e patas legíveis, rastro azul/branco sem clones. Bota, gelo e juncos demonstram escala e velocidade; nova cena integrada com nitidez e céu moderado."
+}

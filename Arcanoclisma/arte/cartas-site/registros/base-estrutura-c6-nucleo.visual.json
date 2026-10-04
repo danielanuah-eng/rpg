@@ -1,0 +1,57 @@
+{
+  "id": "base-estrutura-c6-nucleo",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/forja-dos-mil-golpes.webp",
+  "textoRegraLido": "Conta como 1 carta no Grau. Suspenda: ganhe 3 Arcano.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/forja-dos-mil-golpes.png",
+      "papel": "Identidade do protagonista ou lugar; cena nova"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-87cb0ef1-3074-448c-a805-4c5627c8b7a0.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-estrutura-c6-nucleo.txt",
+  "decisoes": [
+    "Forja refeita em vista interna de passarela, com bigornas monumentais, martelos mecânicos e rios de metal.",
+    "Três esferas coletadas em um recipiente, coerentes com a produção da estrutura.",
+    "Funcionários e máquinas dão escala, luz do entardecer entra por arcos laterais e calor fica nos canais.",
+    "Rara com reflexos prateados/violetas nos metais frios e corrimão; magia e metal líquido seguem o vermelho-ferrugem original."
+  ],
+  "avaliacaoVisual": "Três orbes legíveis, plataforma de coleta apoiada e trabalhadores com escala frente às bigornas. Martelos sustentados por mecanismos; arquitetura ocupa todo o fundo. Reflexos violeta/prata visíveis no corrimão sem alterar o vermelho dos canais.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c6-nucleo.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "2385d75a262d3ac3e6fdd8f3490ccc236577353fa7f2bcd4b1347a1a84e00393",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "rara",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

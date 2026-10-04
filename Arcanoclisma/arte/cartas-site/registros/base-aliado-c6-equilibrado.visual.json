@@ -1,0 +1,54 @@
+{
+  "id": "base-aliado-c6-equilibrado",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/gladiador-da-arena.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/gladiador-da-arena.png",
+      "papel": "identidade e proporções"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Nova defesa com braços cruzados diante do rosto e base ampla, protegendo aliado antes do impacto.",
+    "Arena noturna sobre mar de mercúrio adequada ao ambiente Sublimeyn do pedido.",
+    "Brilhos prateados e violeta discretos para a rara, sem banho dourado."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-cd9a3257-0a6d-40d0-83cc-84621c3763ed.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-aliado-c6-equilibrado.txt",
+  "avaliacaoVisual": "Gladiador identificado por corpo, rosto e armadura, com defesa de braços cruzados distinta da base. Arena noturna com mercúrio e torres flutuantes, contorno nítido; prata/violeta localizados e tochas quentes.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c6-equilibrado.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "34e8c0f84a234933ac200cdd527e7cdd95a82d9423ec07e2a06d66865585f889",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "rara",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

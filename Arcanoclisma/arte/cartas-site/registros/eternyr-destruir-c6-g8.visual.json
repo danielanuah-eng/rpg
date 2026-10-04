@@ -1,0 +1,57 @@
+{
+  "id": "eternyr-destruir-c6-g8",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/a-voragem.webp",
+  "textoRegraLido": "Destrua um alvo e compre 4 cartas.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/a-voragem.png",
+      "papel": "Identidade do lugar ou criaturas; composição e evento inteiramente novos"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-e565f4f9-0879-4367-919a-bb802d9d3d61.png",
+  "decisoes": [
+    "Voragem redesenhada desde uma passarela alta, com abismo em espiral preenchendo o cenário inteiro.",
+    "Um guardião novo é engolido por uma fenda e exatamente quatro páginas principais chegam à conjuradora, correspondendo a destruir um alvo e comprar quatro.",
+    "Mantidas cores roxo-sangue, seres acorrentados e arquitetura do plano Dominum, apesar do Valor mecânico Eternyr.",
+    "Acabamento lendário dourado e arco-íris integrado principalmente às páginas e detalhes de bronze; cenário permanece escuro."
+  ],
+  "avaliacaoVisual": "Escala colossal estabelecida por níveis em espiral, figuras pequenas e correntes. Um alvo à direita em dissolução não gráfica, uma conjuradora à esquerda e quatro páginas grandes claramente separadas. Materiais iridescentes visíveis sem fundo branco, sem montagem ou explosão solar.",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/eternyr-destruir-c6-g8.txt",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-destruir-c6-g8.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "734491ee3d5fd8c2e61c0d18ff67a80af51db2b763ae7089a1463019bd5e41e2",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "lendaria",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

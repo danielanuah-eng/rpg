@@ -1,0 +1,54 @@
+{
+  "id": "base-dano-c3-repentina",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/tempestade-viva.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/tempestade-viva.png",
+      "papel": "forma original do feitiço"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Tempestade em cobertura enorme de nuvens com uma descarga dominante alcançando a carroça na resolução.",
+    "Cais de fortaleza em dia nublado, conjuradora pequena e legível apontando com calma.",
+    "Feito grandioso com poucas formas claras e luz vermelha localizada, sem criatura ou céu incendiado."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-04cf8739-37d4-4789-baf2-8e14eb73d184.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-dano-c3-repentina.txt",
+  "avaliacaoVisual": "Tempestade colossal como nuvem, sem corpo animal, descarga vermelho-ferrugem alcança a carroça. Conjuradora e alvo pequenos e legíveis; cenário de fortaleza costeira coeso e céu não incendiado.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c3-repentina.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "cea398f7e764fccb7d0810e80a4cc2de414f2f306186be71a5a5ffdad8801b11",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

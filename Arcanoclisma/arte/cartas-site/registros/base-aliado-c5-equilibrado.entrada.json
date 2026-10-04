@@ -1,0 +1,24 @@
+{
+  "id": "base-aliado-c5-equilibrado",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/veterana-de-guerra.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/veterana-de-guerra.png",
+      "papel": "identidade e lâmina"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Veterana sentada em parapeito desvia flecha; rosto mais contido, olhando para cima.",
+    "Pátio urbano de tijolos pela manhã com câmera suavemente inclinada.",
+    "Rastro vermelho da lâmina mantido localizado, sem iluminar o cenário inteiro."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-1abf9a7b-69dd-4f9a-9def-51b8ce4cd226.png",
+  "prompt": "Use case: illustration-story. Create new Arcanoclisma TCG illustration \"Veterana de Guerra\", uncommon ally. Polished fantasy narrative illustration matching approved second reference: crisp selective contours, smooth painted broad surfaces, controlled shadows and material texture, integrated lighting and contact shadows. No gritty canvas grain, overly expressive scratched scenery, excessive HDR/anime gloss, foggy wash or blooms. Actual NEW single painted scene; not a transparent RPG cutout pasted onto an environment. Opaque full background to all edges, portrait 63:88 requested1260x1760. No lettering, card frame, UI, stats or watermarks. Leave key faces/action above lower third for overlay. Uncommon restrained highlights, no rainbow foil.\nReference1 identity ONLY: stern mature athletic tan woman, angular cheekbones with faint healed cheek scar, dark brown curly hair tied into messy bun, rust neckscarf, worn olive short coat over creamshirt, crossed leather straps, blue patched trousers, fingerless gloves, bronze belt flask, heavy worn leatherboots. Her weapon is the distinctive broad curved dark golden bronze blade with a RUST-RED graphic cutting trail; preserve these traits, change entire pose and expression. Reference2 smooth painted finish ONLY, no meadow, mountains or dragon.\nA fresh clear morning over a compact red-brick city guard courtyard. Slightly tilted camera, around 7 degrees, creates a strong rising diagonal. The veteran sits astride a broken broad brick parapet in upper middle, one boot firmly braced and the other down against the wall, torso balanced and relaxed despite danger. She looks UP toward a single approaching arrow with a cool appraising smirk, sweeping her curved blade overhead to deflect it away from two guards below; one short restrained rust-red arc traces the cutting motion, small bronze sparks at arrow impact. A competent seasoned guardian, no screaming pose or crouched lunge copied from source. Both hands anatomically clear; one gripping weapon, other balances on masonry. Eye focus connects blade and arrow. Behind and below: simple training targets, water jug, repaired shields and seated tired soldiers watching from courtyard shade, terracotta tiled rooftops and canvas awnings beyond. No castle ruins, magical portal, whitecliffs or golden glow. Warm brick and olive clothing balanced by cool blue shade. Crisp human form and quiet broad painted architecture, mild material detail, legible skin and blade, not rough gritty sandstone. Continuous cohesive lighting and depth; small motion effect stays local, never illuminates the whole background.",
+  "avaliacaoVisual": "Pose sentada, olhar elevado e lâmina curva legíveis; roupa, cicatriz e cabelo coerentes com a base. Rastro vermelho e faísca localizados, pátio completo sem resplandecer."
+}

@@ -1,0 +1,25 @@
+{
+  "id": "base-recurso",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-be5bc3ec-7fc4-45e0-aa89-76eb7fa28371.png",
+  "prompt": "Use case: illustration-story. Create a NEW fully painted vertical63:88 Arcanoclisma card scene for \"Mina Funda\", ID base-recurso, a COMMON structure card with NO foil finish. Image1 shows only the mine's established identity: deep timber-supported tunnels, tracks, carts, bright silver ore and limited lanterns with silver/mercury arcane wisps. Image2 supplies only the approved smoother environment finish and art direction. Do not crop, frame, paste or enlarge the old square terrain cutout. Paint a whole NEW interior view with different worker poses and camera placement: eye-level at a broad branching underground gallery, a miner's gloved hand and a newly found silver ore piece near the LEFT foreground, a sturdy ore cart on diagonal tracks in midground, two helmeted miners working deeper along a supported side tunnel. The primary subject is the functioning MINE, not a lone hero. A few thin silver/mercury wisps rise naturally from ore veins and catch the lantern light; localized readable magic rather than a neon fog. Entire ceiling, walls, ground and depth fill the painting, no cutout exterior, white margin or blank sky. Large smooth dark teal/slate rock shapes, clear veins with restrained crystalline highlights, clean broad wooden beams and rails, quiet material detail rather than dense gritty cracks and heavy rough texture. Warm amber lantern pools balance cool grey/silver ore, bring readable midtones and crisp main edges without dark muddy blacks. A distant high ventilation opening admits subdued grey DAY light and a hint of damp drizzle, consistent with stormy daytime outdoors, but this is a deep interior without an artificial big sky. Proper tunnel perspective, shared grounded contact shadows and coherent relative sizes. The author's smoother clean setting replaces the briefing's repeated devastated-crossroads environment and rough/watercolour suggestions. Polished Arcanoclisma graphic fantasy contours, rich large colour planes and2-3 controlled shadow tones; retain some subtle print texture only on small supporting surfaces. No harsh grain, impasto, tiny clutter everywhere, HDR, photorealism or plastic3D. New integrated painting, not a montage of RPG terrain and background. Lower third not excessively crowded for later editable rules text. Native high resolution1260x1760 if available, retain actual dimensions. Opaque complete scene, no card frame, text, numbers, logo or watermark.",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/mina-funda.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
+      "papel": "identidade do lugar, madeira/trilhos/minério prateado/lanternas"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento e direção"
+    }
+  ],
+  "decisoes": [
+    "Estrutura Mina Funda em cena vertical inteiramente nova, sem margem transparente de diorama",
+    "Novo primeiro plano de mão/minério, trilhos e poses de mineiros distintos",
+    "Interior com apoio, escala e luz coerentes; ambiente genérico de ruínas substituído pela identidade da mina",
+    "Raridade comum, sem foil"
+  ],
+  "avaliacaoVisual": "Inspecionada: galeria completa preenchendo a carta, ação de mineração, matéria prata/mercúrio e profundidade reais, sem recorte colado."
+}

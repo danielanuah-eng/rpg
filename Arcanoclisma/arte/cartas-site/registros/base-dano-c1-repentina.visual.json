@@ -1,0 +1,55 @@
+{
+  "id": "base-dano-c1-repentina",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/faisca-de-tempestade.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/faisca-de-tempestade.png",
+      "papel": "formas triangulares e ramificações vermelho-ferrugem"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Faíscas reorganizadas em projétil diagonal e rastro de impacto, sem corpos de criatura.",
+    "Galé no cais ao amanhecer; personagens novos com expressões e roupas diferentes.",
+    "Alvo sem escudo para variar do feitiço anterior; impacto sem ferimento gráfico.",
+    "Feitiço repentino permanece sem texto na pintura, identificação cabe ao template."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-e6688f78-2d1b-4813-9e30-ca82982d019f.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-dano-c1-repentina.txt",
+  "avaliacaoVisual": "Projétil ramificado vermelho-ferrugem liga mão e ombro do alvo, sem corpo de criatura. Conjuradora nova com duas mãos claras, alvo sem escudo, cenário naval coeso e impacto sem sangue; fundos de céu/água moderados.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c1-repentina.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "10d11caec7e7cda33c306d5e10416c8649505a6eb7a0d8fc7f02022dbf76ff08",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

@@ -1,0 +1,57 @@
+{
+  "id": "r6-espiao-c4",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/wyvern-correio.webp",
+  "textoRegraLido": "Etéreo. Ao causar dano de combate ao Conjurador inimigo: compre 1 carta.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/wyvern-correio.png",
+      "papel": "Identidade da criatura ou personagem, redesenhados em nova pose e ação"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-8f08c3a5-2bbd-4c1f-a662-6ec341058209.png",
+  "decisoes": [
+    "Wyvern redesenhado em manobra num mercado de máscaras de manhã, com corpo parcialmente de costas e cauda estendida.",
+    "Preservados azul-marinho e marfim, olhos com pupilas e bolsa postal; anatomia tem apenas duas patas traseiras e asas como membros dianteiros.",
+    "Ataque físico genérico ao conjurador rival e uma carta-envelope no rastro contextualizam o efeito de compra após dano de combate.",
+    "Incomum com pequenos reflexos nos metais e rastros coral discretos, sem ataque mágico exclusivo."
+  ],
+  "avaliacaoVisual": "Duas patas traseiras identificáveis, uma tocando o ombro do rival e outra recolhida; duas asas e uma cauda, sem braços adicionados. Bolsa e envelope únicos legíveis. Conjurador com duas mãos e pernas coerentes, mercado e moradores em profundidade, desenho completo sem colagem.",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/r6-espiao-c4.txt",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/r6-espiao-c4.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "bcbded35f380790ad7b557bf4fa710e1e4067ddb410bc27a3a436ced1e8baa9d",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "incomum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

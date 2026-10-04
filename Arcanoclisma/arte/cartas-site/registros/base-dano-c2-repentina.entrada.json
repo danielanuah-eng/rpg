@@ -1,0 +1,25 @@
+{
+  "id": "base-dano-c2-repentina",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/vento-com-rancor.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/vento-com-rancor.png",
+      "papel": "duas lâminas translúcidas prata-mercúrio"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Feitiço mostrado depois do corte com duas marcas no lugar, alvo desequilibrado e vento remanescente.",
+    "Ponte de moinho em tempestade diurna, câmera baixa e enquadramento diagonal.",
+    "Conjurador apenas sugerido pela mão para variar da composição de duas figuras completas.",
+    "Forma etérea prateada preservada, sem criatura, fogo ou vermelho substituindo a identidade."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-d0f663aa-2f47-4203-8a56-dab5725e41a7.png",
+  "prompt": "Use case: illustration-story. New Arcanoclisma card scene \"Vento Com Rancor\", COMMON REPENTINA spell. Polished fantasy narrative illustration matching approved second reference: crisp selective contours, smooth painted broad surfaces, controlled shadows and material texture, integrated lighting and contact shadows. No gritty canvas grain, overly expressive scratched scenery, excessive HDR/anime gloss, foggy wash or blooms. Actual NEW single painted scene; not a transparent RPG cutout pasted onto an environment. Opaque full background to all edges, portrait 63:88 requested1260x1760. No lettering, card frame, UI, stats or watermarks. Leave key faces/action above lower third for overlay. Common card: no rainbow foil. Visible drawn contour accents and broad illustrated shadow shapes, not photographic rendering.\nReference1 MAGIC IDENTITY ONLY: TWO long twisted diagonal blades of translucent SILVER-MERCURY cutting wind, hollow air spaces between them, a few carried particles, NO eyes, face, creature or solid monster. Newly arrange them as passing attack and fading consequence across a REAL FULL SCENE, not a big standalone floating logo. Reference2 approved smooth painterly finish only; no same characters, hills or castle.\nDAYTIME THUNDERSTORM on a defended WINDMILL BRIDGE used to carry grain wagons over a narrow millrace. Low camera from a broken reddish timber grain chute at lower left looking up along a diagonal ramp toward upper right. Winds bend sails and wet rushes; clear diffused cool daylight keeps scenery and subject readable, no thick grey haze. Simple warm timber millwall behind, blue-grey water and broad painted stormcloud bands through opening, sparse props and clean surfaces.\nTwo SILVER wind blade arcs have JUST passed from lower left toward upper right, leaving TWO thin faintly gleaming cut-marks across wet rampboards and a split rope above the rail. Opposing raider near upper middle RIGHT, a tall lean olive-skinned elderly man with long white beard, crooked nose, wiry grey ponytail, plain russet hoodcoat and wrapped legs, has been swept off balance. He sinks on one knee with left palm braced, right hand gripping dropped bronze polearm, shoulders physically tense; looks DOWN at the marked ground, weather pulls beard and coat sideways. No blood, torn flesh, shield or burning human. Partial caster forearm at lower LEFT frame, a dark-skinned adult woman's hand with simple blue sleeve, palm after sweeping gesture, not another fully posed caster/target duo.\nMain wind curves in a distinct stretched X/diagonal spatial arrangement, not original S icon, silver reflective edge but mostly clear air, modest local light, no orange flames or swapped rust-red aura. Fallen grain sack, drifting handful of kernels and damaged millwheel links show consequence at place, limited particles. Target figure normal two arms/two legs, head readable, natural weight and contact shadows. New cohesive action scene, smooth timber and sky planes, selective crisp wind edge, no granular canvas texture or golden bloom. No frame, text or UI.",
+  "avaliacaoVisual": "Duas lâminas de vento prateadas atravessam ponte e deixam cortes; alvo idoso apoiado no chão, mão de conjurador em primeiro plano. Ambiente de moinho e chuva legível, sem criatura ou fogo; pose e escala diferentes dos feitiços anteriores."
+}

@@ -1,0 +1,33 @@
+{
+  "id": "bal-anular-c3-repentina",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/olho-que-fecha.webp",
+  "textoRegraLido": "Anule uma carta na pilha.",
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/olho-que-fecha.png",
+      "papel": "Identidade da criatura; desenho novo com pose, ação e ambiente diferentes"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-36aeeb0e-7978-4d7c-b4bc-d7566d72e5a7.png",
+  "decisoes": [
+    "Olho redesenhado de lado com pálpebras quase fechadas, lacres vermelhos e a identidade metálica preservados.",
+    "Nova maga de pele escura e cabelos brancos permanece serena enquanto a magia do rival se desfaz.",
+    "V1 preservada; revisão reduziu o olho para respeitar o tamanho diminuto do catálogo.",
+    "Anulação de uma carta na pilha em velocidade Repentina, sem dano extra. Comum sem brilho holográfico."
+  ],
+  "avaliacaoVisual": "Olho pequeno e separado do rosto da maga, com íris dourada ainda legível, impacto vermelho próximo e sem grande escudo ou feixe emitido. Duas mãos coerentes por humano, magos de aparência e expressão diferentes. Interior e exterior contínuos com iluminação crepuscular controlada.",
+  "versaoAnterior": {
+    "arquivo": "Arcanoclisma/arte/cartas-site/variantes/bal-anular-c3-repentina-v1-olho-grande.png",
+    "selecionada": false,
+    "motivo": "Tamanho do olho não respeitava sua descrição diminuta.",
+    "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-145c9d99-f0b7-49c0-9080-26e9897b6800.png"
+  },
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nOLHO-QUE-FECHA source identity: tiny flying ONE golden iris eye with a black vertical slit pupil, upper/lower armored eyelids of SILVER plates framed in aged bronze, navy blue circular sun seal above brow, dark red ribbons with asymmetrical suspended navy/bronze seal tags. ONLY one eye, NO animal body, wings, mouth, head, legs, humanoid torso or eyeball swarm.\nNEW pose and event: dusk inside a SMALL brick oath-hall whose tall open shutters overlook a quiet town, smooth burgundy brick, plain wooden desks, clear doorway. Camera SIDE-ON at chest height toward a new slender female mage on mid-left. She has very dark ebony skin clearly distinct from warm brown, short fluffy white natural hair, long narrow face, prominent cheekbones, deep brown eyes, simple dusty blue tunic with no gold embroidery, and an amused confident closed-mouth smile. ONE arm folded over her stomach, the other rests fingertips on a desk; two arms total. Eye floats in foreground above her right shoulder turned in THREE-QUARTER SIDE PROFILE, metal lids are almost CLOSED with just thin slit of golden iris visible, red seals trailing backward to left. A single enemy rusty-red magical projectile from a small rival caster in the far doorway at RIGHT visibly collapses into a few non-graphic red sparks on a SMALL near-invisible plane just ahead of the eye. NOT a big glowing dome, eye does not shoot a beam, no metal wall. Rival male has pale skin, short curly copper hair, thin clean-shaven face, practical brown robe, both arms lowering in confusion as his spell cancels, two grounded legs. Rule: Anule uma carta na pilha, REPENTINA. Quick moment of cancellation shown in airborne spell, no cards-with-text, no extra damage or imprisonment. One sliver of sunset provides muted mauve ambient light; local tiny warm iris and projectile, no all-gold scene. COMMON no foil. Characters and creature redrawn in unified complete environment.\n\nREVISÃO DE ESCALA:\nEdit this exact image with one localized scale correction. Keep both people's exact faces, poses, hands, skin colors, clothing, whole room, tables, books, doorway and sunset light unchanged. The armored flying eye is meant to be TINY. Redraw ONLY this same eye+its attached dangling seals and ribbons at 40 PERCENT of their current overall width AND height, approximately an adult palm-sized object in-world. Keep the small eye hovering close beside and slightly above the woman's shoulder, center approximately at the old eye's LOWER-left quadrant, entirely separated from her face. Preserve silver armor lids almost shut over gold iris and black slit pupil, bronze borders, navy sun seal, red ribbons, same recognizable identity, no copy of large eye remains. Repaint exposed brick and bookshelf background naturally where the large eye used to be. Keep ONE incoming red spell breaking into small red shards just ahead of the smaller eye; subtly move this compact spark impact to line up with the small eye, not hovering arbitrarily high where the old eye stood. No aura dome or beam emitted by eye, no new effects. Keep the eye sharper than background so it remains readable despite being small. Do not crop or zoom rest of picture, no anatomical edits, same portrait dimensions, full opaque artwork."
+}

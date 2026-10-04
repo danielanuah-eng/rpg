@@ -1,0 +1,27 @@
+{
+  "id": "base-curar-c4",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/relicario-da-terceira-vida.webp",
+  "textoRegraLido": "Cure 15 de dano de um alvo e compre 1.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/relicario-da-terceira-vida.png",
+      "papel": "Identidade do objeto mágico em uso, nova posição"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente desenho liso e iluminação aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-69d88bfa-5a27-4e9c-90d3-b75c52bb4285.png",
+  "prompt": "TCG Relicário da Terceira Vida, heals fifteen damage and draws one, NOT a gameplay resurrection. Reference1 ONLY identifies small handmade flask: round squat dark dull-bronze body in brown leather straps, large circular cyan glass window with a spiral of stored breathing, screw cap and short loop handle, subtle worn studs. Repaint in a NEW angle and in actual hands, opened cap visible. Reference2 is approved smooth STYLE ONLY, no meadow, Ciantia or dragon. In foreground upper LEFT an elderly short slight healer man with warm tawny skin, deeply lined long face and tiny dark eyes, white hair tied into ONE long thin braid, plain saffron linen coat, leans toward a recovering broad-shouldered middle-aged woman at RIGHT. She has deep black skin, square strong face, close short black dreadlocks and NO jewelry, plain practical faded blue fisher's shirt and trousers; kneels on one knee on a reed dock after an exhausting escape, eyes closed, breathing deeply, hand over her intact chest. A continuous fine cool-cyan ribbon of stored breath streams from the unstoppered relicario into her open palm and up toward her mouth; she is alive and recovering, no corpse, exposed wound or gore. ONE small translucent cyan page/image of a safe boat appears from the flask alongside the breath (knowledge drawn), not a multitude of cards. Environment broad viewpoint in a marsh-front fishing hamlet in CLEAR early morning: smooth broad reed-water reflections, low plaster houses on stilts, a little skiff tied behind them, hanging terracotta fishing weights, warm tan reeds and pale blue sky. Hero object large enough to recognize but people and scene shared light and contact shadows. Simple coherent hand anatomy, no floating unheld props. Uncommon finish only delicate warm metallic rim glints on flask, cyan glow LOCAL, no rainbow or gold palace glare. Polished fantasy story illustration in approved smooth painted comic tradition, crisp selective organic contours, broad clean material and background surfaces with integrated shadows. NEW unified scene, not a catalog cutout composited onto a backdrop. Controlled warm/cool palette, sharp meaningful details but not gritty/rough canvas noise, no fog wash, no extreme anime bloom. Opaque environmental artwork to all edges, portrait63:88 requested1260x1760. No words, card frame, stats, UI or watermark. Faces/event in top two thirds.",
+  "decisoes": [
+    "Novo Relicário aberto e segurado junto a receptora viva; recuperação, sem introduzir ressurreição nas regras.",
+    "Vila de pesca sobre o brejo em manhã clara, com ataduras substituídas por respiração armazenada ciano.",
+    "Uma imagem de barco materializa a compra de uma carta.",
+    "Participantes novos, mulher negra de rosto forte e cabelo curto em tranças e curandeiro idoso; dourado só no metal e luz natural."
+  ],
+  "avaliacaoVisual": "Frasco, tampa e duas mãos do curandeiro legíveis; respiração ciano toca a mão e o rosto da receptora. Uma visão de barco. Cenário completo da vila, personagens no mesmo espaço e sem fundo isolado."
+}

@@ -1,0 +1,28 @@
+{
+  "id": "base-dano-c3",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/chama-que-lembra.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/chama-que-lembra.png",
+      "papel": "forma original do feitiço"
+    },
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/touro-de-kairvahnn.png",
+      "papel": "identidade do Touro em nova ação"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Touro de Kairvahnn reaparece como alvo em nova pose e contexto, sem reutilizar sua imagem de carta.",
+    "Laço prata-mercúrio com pequenas lembranças preservado; impacto arremessa fera sem ferimentos gráficos.",
+    "Pátio de balneário à tarde, ambiente frio e dourado restrito às miniaturas dentro da magia."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-045c902a-47ec-4b2e-ad5a-4c054d1a26f8.png",
+  "prompt": "Use case: illustration-story. NEW full Arcanoclisma card scene \"Chama que Lembra\", COMMON temporary spell. Polished fantasy narrative illustration matching approved second reference: crisp selective contours, smooth painted broad surfaces, controlled shadows and material texture, integrated lighting and contact shadows. No gritty canvas grain, overly expressive scratched scenery, excessive HDR/anime gloss, foggy wash or blooms. Actual NEW single painted scene; not a transparent RPG cutout pasted onto an environment. Opaque full background to all edges, portrait 63:88 requested1260x1760. No lettering, card frame, UI, stats or watermarks. Leave key faces/action above lower third for overlay. Common card: no rainbow foil. Maintain lively illustrated contours and broad painted surfaces, not photographic rendering.\nReference1 MAGIC IDENTITY ONLY: solid silver-mercury memory-flame tongue folding into a low asymmetrical LOOP, small warm memory silhouettes embedded INSIDE its silver envelope: handholding people, a tree, book, familiar room. No animal body or giant standalone S icon. Reference2 EXISTING TARGET identity: Touro de Kairvahnn, huge russet curly-maned bull with ivory upcurved horns, dark hooves, blood-purple energy. Preserve bull species/design but COMPLETELY NEW pose and action, not original charge or resting card scene. Reference3 smooth painted finish ONLY, no Ciantia, young dragon or copied meadow.\nAFTERNOON at a cold teal abandoned bathhouse courtyard, wide flat tiled steps, shallow empty basin, clean column shadows, a damaged simple wooden doorway and a few ivy shapes. Low eye-level view, large quiet upper sky area pale coolblue through missing roof, warm sideways sun gentle and muted, not golden resplendence. The low silver loop of memory-flame bursts toward RIGHT from a small cracked memory reliquary resting on LEFT basin edge, a contained spreading silver ribbon with only warm miniatures WITHIN its narrow surface. It hits the BULL as target near lower-middle RIGHT: bull turns in clear right-facing SIDE PROFILE, forehooves raised, rear hooves skidding backward, head sharply lifted and ears back in surprise. Not frontal roar, no humanoid limbs, exactly FOUR bovine legs. Silver impact swirl and two or three tile shards/dust shapes show enemy thrown back by blow without wounds or blood. Existing blood-purple wisps remain small at bull's horns, distinct from silver spell.\nTwo tiny adult watchers under far bathhouse porch see the event, no fully posed duel of new mages. New interaction of existing beast in context, unified continuous painting, not a bull cutout plus background. Silver loop and embedded memories sharp and readable, not glowing golden environment. Quiet smooth tile and plaster planes, controlled fur detail and coherent contact shadows. No fiery orange storm, creature made of flame, rune text, numerals, UI or frame.",
+  "avaliacaoVisual": "Touro em nova pose de impacto com quatro patas e cabeça de perfil; chama prateada com lembranças envolve o alvo, duas testemunhas ao fundo. Pátio iluminado naturalmente; brilho dourado contido na magia."
+}

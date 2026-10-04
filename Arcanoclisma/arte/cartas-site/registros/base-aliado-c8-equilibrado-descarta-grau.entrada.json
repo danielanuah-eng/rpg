@@ -1,0 +1,24 @@
+{
+  "id": "base-aliado-c8-equilibrado-descarta-grau",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/colosso-de-ferida.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/colosso-de-ferida.png",
+      "papel": "identidade do colosso e energia vermelho-ferrugem"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Colosso ajoelhado esmaga pilar de runas para se sustentar, sem repetir palma frontal.",
+    "Bacia agrícola fria pela manhã com farol solar distante; campos ocres sem resplandecer.",
+    "Brilho lendário dourado/espectral localizado nos materiais, mantendo fissuras vermelho-ferrugem."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-445e1a13-d8aa-41a2-9d01-485a9975567a.png",
+  "prompt": "Use case: illustration-story. NEW Arcanoclisma TCG full scene \"Colosso de Ferida\", LEGENDARY ally consuming Grau runes. Polished fantasy narrative illustration matching approved second reference: crisp selective contours, smooth painted broad surfaces, controlled shadows and material texture, integrated lighting and contact shadows. No gritty canvas grain, overly expressive scratched scenery, excessive HDR/anime gloss, foggy wash or blooms. Actual NEW single painted scene; not a transparent RPG cutout pasted onto an environment. Opaque full background to all edges, portrait 63:88 requested1260x1760. No lettering, card frame, UI, stats or watermarks. Leave key faces/action above lower third for overlay. Legendary v9: visible yet localized GOLD and RAINBOW lustrous surface glints on lit materials, no frame and no global golden bloom.\nReference1 preserves IDENTITY ONLY: a gigantic heavy broken STONE COLOSSUS born of Cataclysm, dark jagged grey-brown plates with deep hollow fissures and scattered floating pieces joined by RUST-RED magical threads. Crestlike split angular stone head with hollow narrow slit rather than a human face; exactly two huge arms/hands and two planted legs. No organic flesh or gore, no molten lava flames. Preserve red rusty internal energy and imposing fractured design but CHANGE whole pose: do not repeat the open palm coming toward viewer.\nFresh CLEAR MORNING in a cold blue-violet upland agricultural basin with low muted ochre grain fields and a distant simple black-and-brass solar beacon. Framing through the wooden crossbars of a broken irrigation wheel in lower foreground, eye-level front three-quarter, colossus visible above/middle at safe readable distance. Colossus HALF KNEELS with left knee on an intact flat irrigation terrace, right foot braced, chest tilted upward. His RIGHT CLOSED FIST presses DOWN on a tall angular broken RUNE PILLAR, crushing its cap to consume the power; rust-red geometric fragments flow visibly from shattered cap INTO chest fissures. Left forearm forms a protective low guard alongside torso, NOT raised giant palm toward camera. Head tilts UP vigilant toward distant threat. Exactly two arms, no separate floating limbs confused with fragments.\nA small cluster of varied human farmers watch from a distant shaded canal station behind the defensive figure; one holds a child, all tiny clothed figures, no army spectacle or wounds. Ruptured terrace channel and bare broken runic slabs show price of its summoning, drawn with a few strong clean shapes, not an ocean of tiny rubble. Terrain broad smooth cultivated bands, cool clean sky and modest early morning light, muted ochre crops NEVER brightly resplendent gold. Legend finish adds fine rainbow refractions and tight golden gleams on SELECT plate edges, droplets on irrigation wheel and a few rune shards, luminous dimensional texture stays within image and respects original red fissures. Main head and chest remain dark imposing design, no rainbow stripes repainting golem. Crisp focal outlines, smooth painted environment, no gritty crosshatch or granular dirt on every surface. No text, numerical runes, UI or ornate border.",
+  "avaliacaoVisual": "Colosso ajoelhado esmaga pilar com punho fechado; dois braços e pernas coerentes, fissuras e cabeça originais preservadas. Consumo de runas visível e brilho dourado/espectral localizado em placas e água; fundo diurno sem bloom global."
+}

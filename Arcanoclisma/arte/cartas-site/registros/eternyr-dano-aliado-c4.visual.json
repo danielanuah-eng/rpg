@@ -1,0 +1,56 @@
+{
+  "id": "eternyr-dano-aliado-c4",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/relogio-quebrado.webp",
+  "textoRegraLido": "Causa 6 de dano a um Aliado ou Mística.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/relogio-quebrado.png",
+      "papel": "Identidade da criatura, redesenhada com nova pose e ambiente"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-a398d40d-c651-4f8a-9d9f-1924ae768ca7.png",
+  "decisoes": [
+    "Relógio Quebrado redesenhado em ataque no pátio de uma capela de barro durante a manhã.",
+    "Preservados mostrador rachado, olho único, placas creme, bronze e energia azul-noite.",
+    "Golpe atinge o escudo de um novo aliado inimigo e ilustra dano seis sem alterar a regra. Incomum com reflexos metálicos discretos."
+  ],
+  "avaliacaoVisual": "Criatura em composição diagonal e plano próximo; lança alinhada ao golpe azul e ao escudo do alvo. Inimigo com dois braços e duas pernas apoiado contra a parede, expressão de impacto. Recorte do corpo da criatura continua pela borda esquerda; fundo e chão contínuos, efeitos localizados, sem ferimentos gráficos.",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/eternyr-dano-aliado-c4.txt",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-dano-aliado-c4.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "1775e5087d24fdd29321b77c493008e84cc12453f7a621079736464b9260d1be",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "incomum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

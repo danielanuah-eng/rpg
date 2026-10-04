@@ -1,0 +1,31 @@
+{
+  "id": "base-aliado-c6-agressivo",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/leao-de-cem-dentes.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/leao-de-cem-dentes.png",
+      "papel": "identidade, juba vermelha e magia roxo-sangue"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    },
+    {
+      "arquivo": "Arcanoclisma/arte/cartas-site/variantes/base-aliado-c6-agressivo-v1-anatomia-incorreta.png",
+      "papel": "alvo de correção anatômica"
+    }
+  ],
+  "decisoes": [
+    "Leão salta lateralmente sobre mecanismo de cerco, olhando para o alvo abaixo.",
+    "Vista sobre ombro de batedora num acampamento ao anoitecer.",
+    "Braços abertos do pedido adaptados a patas felinas naturais; sem anatomia humana.",
+    "Magia roxo-sangue e dentes numerosos da identidade preservados."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-d6f3385f-f39a-48e6-bd07-5a8943f3a7a8.png",
+  "prompt": "Use case: illustration-story. New full Arcanoclisma TCG art \"Leão de Cem Dentes\", RARE aggressive beast. Polished fantasy narrative illustration matching approved second reference: crisp selective contours, smooth painted broad surfaces, controlled shadows and material texture, integrated lighting and contact shadows. No gritty canvas grain, overly expressive scratched scenery, excessive HDR/anime gloss, foggy wash or blooms. Actual NEW single painted scene; not a transparent RPG cutout pasted onto an environment. Opaque full background to all edges, portrait 63:88 requested1260x1760. No lettering, card frame, UI, stats or watermarks. Leave key faces/action above lower third for overlay. Rare finish: restrained silver/violet gleams, no gold or rainbow foil wash.\nImage1 IDENTITY ONLY: massive heavy wild LION, golden ochre coat and cream muzzle/chest, a striking deep CRIMSON and burgundy mane, violet eyes, jaws with MANY small sharp ivory teeth arranged densely (not just two fangs), long violet-tinted claws and dark-red tufted tail. BLOOD-PURPLE energy trails. Natural lion body with four legs, never human arms or a minotaur. Reimagine pose and expression, no original upright roaring swat. Image2 smooth painterly style only, no meadow, women or dragons copied.\nAt DUSK in a cold slate-blue siege encampment, seen over the shoulder of a dark-skinned female scout in lower LEFT foreground, wearing a plain bronze helmet, short violet braids visible and faded teal cape. Scout partial and subordinate. Lion appears high in upper/middle composition in a spectacular SIDEWAYS DOWNWARD LEAP from a low battlement onto the metal winding mechanism of a siege ballista at right. Body travels from upper left to lower right, all FOUR legs natural: both front paws open with claws extended in two separate contact directions, hind legs tucked in a feline leap, tail stretched for balance. Head bends DOWN toward mechanism, three-quarter profile shows crowded teeth in a tense snarl, no frontal roar. Two short sharp blood-purple energy claw marks form where claws leave paws and tear the ballista's bronze cog and rope cable. Show CAUSE at release, clear lion intention and physical trajectory. No injured humans or blood; broken inanimate machine only.\nLarge folded canvas camp tents, tethered ropes, cold grass, distant siege silhouettes, dusky violet sky with a thin muted orange strip near horizon. Foreground roughness minimal: simple painted packed earth planes and clear foreground shoulder provide depth. Lion mane richly shaped but restrained texture, smooth background forms, no noisy brush scratches, overbright orange sunset, castle-meadow or ruined crossroads. Warm lion contrasts cool encampment; local purple claw sheen and a couple silver-violet glints add rare finish. No fiery red magic, no circular neon halo, no golden resplendence. Paint entire scene as coherent new art, not a cutout over a photo.\n\nREVISAO ANATOMICA:\nPrecise anatomy correction to the attached finished lion card scene. Preserve everything: crimson-maned ochre lion leaping at the ballista, purple magic and dense sharp teeth, twilight siege camp, foreground scout, lighting, painterly style and composition. The lion incorrectly shows THREE hind paws at upper left. Correct to EXACTLY TWO HIND LEGS plus the existing TWO FORELEGS = FOUR total. Remove the EXTRA central hanging rear paw/leg around one quarter of image width and one quarter of image height, between the high far-left hind paw and the lower/right hind paw behind the mane. Keep just one bent rear leg on the far side, one bent rear leg on the near side, both naturally connected to the pelvis and clearly readable, no phantom third paw or duplicated hip. Fill removed limb area coherently with background or natural continuous belly fur as appropriate. Keep both front paws on the mechanism untouched. One tail only. No new changes to poses, face, environment, characters or effects. Opaque portrait artwork, no text or frame.",
+  "avaliacaoVisual": "Revisão anatômica confirmou duas patas traseiras e duas dianteiras, corrigindo uma pata extra da tentativa inicial. Salto lateral, alvo mecânico e observadora dão profundidade; dentes, juba e magia roxa preservados.",
+  "versaoAnterior": "Arcanoclisma/arte/cartas-site/variantes/base-aliado-c6-agressivo-v1-anatomia-incorreta.png",
+  "versaoAnteriorSelecionada": false
+}

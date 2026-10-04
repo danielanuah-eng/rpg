@@ -1,0 +1,55 @@
+{
+  "id": "base-aliado-c6-defensivo",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/gorila-de-pedra.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/gorila-de-pedra.png",
+      "papel": "identidade pétrea e mercúrio"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Nova ação parcialmente de costas, soco no piso e defesa visual em mercúrio.",
+    "Pátio com horta medicinal em dia claro nublado; espectadores em segundo plano.",
+    "Câmera lateral mais alta para evitar repetir o enquadramento sobre ombro do Leão.",
+    "Magia prata-mercúrio original mantida apesar do roxo genérico sugerido ao Valor."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-e2205593-bc77-4575-b08a-58eef011ff5c.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-aliado-c6-defensivo.txt",
+  "avaliacaoVisual": "Gorila de costas em defesa baixa, braços e pernas legíveis, rosto fechado olhando para mercúrio. Barreira prateada e espectadores em horta de cidadela integram cena nova; forte nitidez e prata/violeta.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c6-defensivo.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "2798290639332375dc738e211607985bd3f6e956385d0220e12828282fae0f75",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "rara",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

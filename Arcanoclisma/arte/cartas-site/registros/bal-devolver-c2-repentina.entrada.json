@@ -1,0 +1,27 @@
+{
+  "id": "bal-devolver-c2-repentina",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/porta-de-bolso.webp",
+  "textoRegraLido": "Devolva um Aliado ou Mística à mão do dono.",
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/porta-de-bolso.png",
+      "papel": "Identidade da estrutura ou objeto; composição e evento novos"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-dc171f6e-1a6f-45ae-9871-0b34a7df04b4.png",
+  "decisoes": [
+    "Porta de Bolso redesenhada em uso desde o quarto interno, com painel aberto à direita, cortina azul-petróleo, livros e lanterna.",
+    "Uma cabra aliada de carga nova e sem identidade mecânica adicionada cruza do acampamento para o quarto, ilustrando a devolução de um aliado à mão em velocidade Repentina.",
+    "Mago idoso de rosto, cabelo e roupas novos contextualiza o efeito do lado de fora.",
+    "Cena comum, com traços ciano e dourados discretos da referência, sem brilho de raridade."
+  ],
+  "avaliacaoVisual": "Quarto, dobradiças, madeira vermelha, bronze e trilha chuvosa formam ambiente contínuo. Animal com cabeça e patas dianteiras dentro e corpo traseiro no limiar, sem duplicação de corpo ou corte gráfico. Mago tem duas mãos coerentes, uma levantada e outra segurando cobertor. Luz controlada e acabamento liso.",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPORTA DE BOLSO source identity: magical folding portable RED-BROWN wooden door and thick arched bronze frame, hinged in sections with practical bronze corner plates, simple circular ring latch; when open shows a private cozy room with TEAL curtain, little bookshelf and amber lantern. Preserve this recognizable everyday object, redraw new hinge orientation and viewpoint naturally. It can unfold to full height in use, not a floating product.\nNEW scene at bright but diffuse MIDDAY after rain: an ordinary rocky woodland trail just outside a field camp, wet broad gray flagstones, bare birch trunks, moss only in small patches, dull maroon tent and packs. Camera from INSIDE the small private room at the doorway, looking diagonally OUT through bronze arch across the rainy trail. Small parts of bookshelf and teal curtain frame LEFT edge, far door panel swings outward to RIGHT so red timber and bronze ring latch are visible. One NEW allied fantasy animal, a small robust goat creature with four legs, two short curled horns, grey rough fur and plain blue cloth saddle with bronze bell, is being recalled through the threshold TOWARD the viewer. Its head, chest and two front hooves already inside the room; hindquarters and two rear legs still outside on trail, spatially coherent, smooth local silver-mercury ribbon at threshold shows transit and tiny source cyan/warm gold traces, no cut-animal gore. Behind on trail a new plump elderly male spellworker with very dark brown skin, flat broad nose, deep smile lines, short soft black-and-grey twists, round copper glasses and muted rust raincoat quietly raises one hand toward doorway, other arm holds a rolled blanket; do not copy any known conjurador. Return ONE Ally/Mística to owner's hand at REPENTINA speed, illustrated by safe recall to private room; no healing, teleport opponents to prison, or extra creatures. Small amber lantern only; outside neutral cool daylight, no blazing golden aura, no new ornate dress. COMMON no foil. This is ONE coherent redraw of room+threshold+trail, not a catalogue door pasted over a background."
+}

@@ -1,0 +1,33 @@
+{
+  "id": "eternyr-comprar-c2-repentina",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/hora-solta.webp",
+  "textoRegraLido": "Compre 1 carta.",
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/hora-solta.png",
+      "papel": "Identidade da criatura, redesenhada com nova pose e ambiente"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-531502f1-9093-42e0-a2df-26a65099758e.png",
+  "decisoes": [
+    "Hora Solta foi redesenhada numa curva horizontal sobre a zeladora de um relógio, em telhado nevado ao amanhecer.",
+    "Uma única visão ilustra comprar uma carta em velocidade Repentina; sem poderes novos.",
+    "V1 preservada: a silhueta vertical ainda repetia o catálogo. Revisão mudou direção, postura e posição da visão.",
+    "Carta comum sem acabamento holográfico."
+  ],
+  "avaliacaoVisual": "Revisão mostra corpo de energia numa curva horizontal, face angular inclinada para baixo à esquerda e mão com uma única folha de memória junto à zeladora. Mantidos fundo nevado e as duas mãos da mulher no instrumento. Identidade azul-noite e arcos de relógio preservada, iluminação localizada e ambiente integral.",
+  "versaoAnterior": {
+    "arquivo": "Arcanoclisma/arte/cartas-site/variantes/eternyr-comprar-c2-repentina-v1-pose-repetida.png",
+    "selecionada": false,
+    "motivo": "Silhueta da criatura muito próxima à pose do catálogo.",
+    "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-459f8fb0-fe40-4e0e-9169-da4136a7cdab.png"
+  },
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nHORA SOLTA identity from reference1: nonhuman temporal apparition of solid flickering MIDNIGHT BLUE ribbon-energy, white angular streaks, small scattered star specks, fragmented cream clock arcs and understated bronze clock charms. Its taper has an abstract hand, its upper angular glowing face has NO human eyes, hair, skin, wings or horns. Keep this recognizable abstract identity; redraw the flowing body in a NEW broad horizontal S-curve, not the reference's standing vertical corkscrew pose.\nSCENE: a snowy town clocktower rooftop at the blue hour just before sunrise, with broad smooth snow caps, plain clay chimneys, small brass bell and old clock mechanism integrated into architecture. View at roof height behind a small chimney on the near right, looking diagonally across the gently sloping roof and down toward the sleeping town. The apparition slides between the bell and the chimney and with its abstract hand gently opens ONE pale blue-white memory sheet hanging in the air. A new elderly olive-skinned female clock keeper, broad angular face, silver buzz cut, dark eyes and tiny copper hoop earrings, heavy muted green coat and rust knitted gloves, appears in SIDE PROFILE crouched firmly on a short wooden roof platform beside the bell. Her two hands hold one long brass maintenance tool horizontally; she turns her surprised face toward the single vision. Her body is modestly smaller than apparition, not a foreground glam heroine. No extra human, no paper avalanche. Draw ONE card at Repentina speed; show quick apparition delivering insight, NOT an attack or resurrection. Cold surrounding blue, a small warm window below and muted terracotta, NOT a blinding gold sunrise. COMMON: no foil, no rainbow. Full environmental painting with no cutout patch.\n\nREVISÃO DE POSE:\nEdit this specific illustration. Preserve the beautiful snowy clocktower rooftop, elderly clock keeper's exact face, clothes, two gloved hands on the brass tool, village, dawn light, original smooth drawing style and all surroundings. Change ONLY Hora Solta's bodily pose and the ONE vision sheet it holds, regenerating the revealed sky/background coherently. It currently repeats an upright reference silhouette. Make this nonhuman midnight-blue ribbon apparition swim in a HORIZONTAL forward curl from upper right to the LEFT beside the bell. Its recognizable pointed glowing angular face is tilted nearly sideways, on the upper LEFT-center looking down toward the elderly keeper; most of its flowing body makes a loose low, horizontal loop across the upper CENTER, NOT a tall vertical standing spiral. Keep fragmented cream clock arcs and small bronze charms attached to that new body naturally, white angular energy streaks and dark starry blue material. Its ONE abstract hand reaches DOWN near CENTER toward the keeper, holding the SINGLE smaller translucent pale blue-white memory sheet, so the keeper is plainly looking at it. No copy of the original creature remaining at upper right, no second apparition or second sheet, no humanization, wings or extra limbs. Keep environmental edges opaque, same portrait size and all controlled illumination. Do not brighten the snow or enlarge the gold accents."
+}

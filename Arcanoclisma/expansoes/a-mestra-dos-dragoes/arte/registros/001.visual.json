@@ -1,0 +1,22 @@
+{
+  "id": "001",
+  "estado": "gerada_aguardando_avaliacao",
+  "arquivo": "Arcanoclisma/expansoes/a-mestra-dos-dragoes/arte/imagens/001-ciantia-a-mestra-dos-dragoes-v1.png",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-5c99d17c-e442-412f-820d-b8550b409637.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "52cfde39de38aa2fd3cb3b6297c6381e749fb3db0cb5ebccc826fb449d05c461",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "fundo": "Cenário completo opaco",
+  "liberadaParaJogo": false,
+  "claudePodeAlterarCarta": false,
+  "pushAutorizado": false
+}

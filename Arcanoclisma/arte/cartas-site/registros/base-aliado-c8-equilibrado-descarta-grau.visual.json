@@ -1,0 +1,54 @@
+{
+  "id": "base-aliado-c8-equilibrado-descarta-grau",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/colosso-de-ferida.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/colosso-de-ferida.png",
+      "papel": "identidade do colosso e energia vermelho-ferrugem"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Colosso ajoelhado esmaga pilar de runas para se sustentar, sem repetir palma frontal.",
+    "Bacia agrícola fria pela manhã com farol solar distante; campos ocres sem resplandecer.",
+    "Brilho lendário dourado/espectral localizado nos materiais, mantendo fissuras vermelho-ferrugem."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-445e1a13-d8aa-41a2-9d01-485a9975567a.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-aliado-c8-equilibrado-descarta-grau.txt",
+  "avaliacaoVisual": "Colosso ajoelhado esmaga pilar com punho fechado; dois braços e pernas coerentes, fissuras e cabeça originais preservadas. Consumo de runas visível e brilho dourado/espectral localizado em placas e água; fundo diurno sem bloom global.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c8-equilibrado-descarta-grau.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "769985bab2273d3d42cb7f7f4a4bbc7641cd01cbb896b2f8629452e2a11370ce",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "lendaria",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

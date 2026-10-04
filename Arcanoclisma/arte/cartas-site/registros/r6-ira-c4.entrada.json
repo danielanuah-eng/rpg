@@ -1,0 +1,27 @@
+{
+  "id": "r6-ira-c4",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/o-campo-sem-tregua.webp",
+  "textoRegraLido": "Destrua todos os Aliados (os seus também).",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/o-campo-sem-tregua.png",
+      "papel": "Identidade do lugar; cena nova em escala ampla coerente com as regras"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-b8a95f3f-7cdb-4d04-b5b7-11d95d35da3c.png",
+  "decisoes": [
+    "Campo Sem Trégua redesenhado desde uma plataforma de forja olhando para o campo amplo e a colina com elmo colossal.",
+    "Seis aliados de duas fileiras diferentes se desfazem numa mesma onda vermelho-ferrugem, explicitando que a regra destrói os aliados de ambos os lados.",
+    "Preservada origem Conflitüo sem recolorir todo o plano de dourado; ruínas continuam inteiras.",
+    "Rara com reflexos prata e violeta nos metais em primeiro plano e nas armaduras, sem brilho arco-íris de lendária."
+  ],
+  "avaliacaoVisual": "Três figuras de mantos vermelhos e três de mantos azuis atingidas pela mesma onda, dissolução não gráfica. Elmo, estandartes, forja e viadutos preservam o cenário do catálogo em nova perspectiva. Acabamento prateado/violeta visível no escudo e bigorna; arte contínua até as bordas.",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nO CAMPO SEM TRÉGUA source place: Conflitüo plane of endless war without sides, rusty red battlefield cliffs, black broken viaducts, a colossal ANCIENT BRONZE HELMET embedded in a dark rocky hill, torn rust-red standards, war-forges and scattered old sheathed weapons. The source's primary RUST/RED magic and whole plane identity must be preserved, not recolored gold just because TCG supports Alvorum. No gore or realistic corpse field.\nNEW broad scene and mass spell event: camera from an abandoned low war-forge PLATFORM at early gray MID-MORNING, looking diagonally down across a vast battlefield toward the giant helmet hill at far LEFT. Near right foreground smooth dark anvil and dull unlit forge tongs frame shot; open valley occupies center, no copied frontal vignette. A single huge RUST-RED/charcoal wave of broken temporal ember-like ribbons crosses the battlefield in an expanding curve. SIX differently posed spectral armored allies representing BOTH teams dissolve in non-graphic black/red ash from their legs upward: three dull rust-cloaked figures on left and three slate-blue figures on right, each adult silhouette with two arms/two legs, some kneel some turn some brace, normal spaced scale. No non-disappearing allied army or caster accidentally inside wave, no graphic injuries. Leave hollow bronze armor plates and fading cloth edges to express magical destruction rather than slaughter. The ruins/terrain remain intact: spell destroys ALL ALLIES including one's own, not all buildings or all humans in the entire world. Distant ruined bridge and red flags clarify endless battlefield source, sky calm slate and ivory no all-gold solar explosion. This rare Findante spell needs grand sweep but legible scene at card size.\nRARE: silver and violet reflected finely patterned sheen across selected abandoned shield/anvil/helmet edges and spectral armor materials, INSIDE surfaces not border. No rainbow gold legendary wash. Smoothly modeled large rocky surfaces, restrained detail, red movement ribbon keeps clean shaped gaps, opaque coherent environment at all edges."
+}

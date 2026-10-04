@@ -1,0 +1,746 @@
+{
+  "tarefaId": "lote-site-v1",
+  "pedidoVersao": 2,
+  "estado": "em_producao",
+  "meta": 151,
+  "concluidas": 82,
+  "pendentes": [
+    "r6-anjo-c6",
+    "r6-mercador-c7",
+    "r6-colosso-c7",
+    "r6-dragao-c8",
+    "item-canal-cajado",
+    "item-canal-lamina",
+    "item-canal-lanca",
+    "item-armadura-gibao",
+    "item-armadura-couraca",
+    "item-extra-pocao",
+    "item-extra-elixir",
+    "item-canal-harpa",
+    "item-canal-badalo",
+    "item-canal-violino",
+    "item-canal-coleira",
+    "item-armadura-capa",
+    "item-armadura-escama",
+    "item-armadura-manto",
+    "item-armadura-vyal",
+    "item-extra-sal",
+    "item-extra-dado",
+    "item-extra-lanterna",
+    "item-extra-relogio",
+    "base-aliado-c4-equilibrado-grau5",
+    "base-dano-c4-repentina",
+    "base-dano-conjurador-c5",
+    "base-dano-conjurador-c2",
+    "base-dano-conjurador-c4",
+    "base-curar-c1",
+    "base-curar-c3",
+    "base-curar-c8",
+    "eternyr-comprar-c3-repentina",
+    "eternyr-dano-aliado-c6",
+    "eternyr-dano-jogador-c5",
+    "eternyr-aliado-c8-g10",
+    "r6-varredura-c2",
+    "r6-furia-c3",
+    "col-campeao-conflituo",
+    "col-campeao-sublimeyn",
+    "col-campeao-dominum",
+    "col-campeao-persona",
+    "col-campeao-alvorum",
+    "col-campeao-morbidyum",
+    "col-campeao-cognitium",
+    "col-campeao-eternyr",
+    "col-campeao-primitivum",
+    "col-gato-de-navio",
+    "col-menina-raposa",
+    "col-ilusionista-do-labirinto",
+    "col-ceifadora-da-peste",
+    "col-contrabandista-de-porto",
+    "col-vento-mensageiro",
+    "col-guarda-costas",
+    "col-curandeira-de-ervas",
+    "col-ninho-de-estrelas",
+    "col-coroa-sem-rei",
+    "col-tapete-de-duas-casas",
+    "col-primeira-moeda",
+    "col-sino-dos-juramentados",
+    "col-ancora-do-mesmo-dia",
+    "col-cemiterio-que-respira",
+    "col-cadeado-ciumento",
+    "col-frasco-de-mare",
+    "col-chapeu-de-chuva",
+    "col-barco-dobravel",
+    "col-mapa-do-reino",
+    "col-arqueira-da-ultima-flecha",
+    "col-mare-de-sobras",
+    "col-descartar-grau"
+  ],
+  "cartas": [
+    {
+      "id": "conjurador-lyandra",
+      "nome": "Lyandra, a Domadora de Guerra",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-lyandra.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-lyandra.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "conjurador-carmal",
+      "nome": "Carmal, o Druida Crepuscular",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-carmal.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-carmal.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "conjurador-ricardo",
+      "nome": "Alquimista Ricardo",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ricardo.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-ricardo.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "conjurador-roh",
+      "nome": "Roh, o Ilusionista das Máscaras",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-roh.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-roh.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "conjurador-agnelo",
+      "nome": "Agnelo, o Duelista Sombrio",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-agnelo.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-agnelo.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "conjurador-diastaros",
+      "nome": "Diástaros, o Necromante Vidente",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-diastaros.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-diastaros.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "conjurador-ana",
+      "nome": "Ana, a Cronista do Tempo",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ana.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-ana.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "conjurador-mitonho",
+      "nome": "Mitonho, o Carcereiro Temporal",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-mitonho.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-mitonho.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "conjurador-osmar",
+      "nome": "Osmar, o Capataz de Ferro",
+      "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-osmar.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-osmar.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-recurso",
+      "nome": "Mina Funda",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c1-equilibrado",
+      "nome": "Recruta Assustado",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c1-equilibrado.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c1-equilibrado.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c2-equilibrado",
+      "nome": "Milícia de Aldeia",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c2-equilibrado.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c2-equilibrado.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c3-equilibrado",
+      "nome": "Guarda da Ponte",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c3-equilibrado.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c3-equilibrado.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c4-equilibrado",
+      "nome": "Cavaleiro Errante",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c4-equilibrado.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c4-equilibrado.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c5-equilibrado",
+      "nome": "Veterana de Guerra",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c5-equilibrado.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c5-equilibrado.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c6-equilibrado",
+      "nome": "Gladiador da Arena",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c6-equilibrado.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c6-equilibrado.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c7-equilibrado",
+      "nome": "Touro de Kairvahnn",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c7-equilibrado.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c7-equilibrado.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c8-equilibrado",
+      "nome": "Hidra de Barro",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c8-equilibrado.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c8-equilibrado.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c2-agressivo",
+      "nome": "Lobo-de-Cinza",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c2-agressivo.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c2-agressivo.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c2-defensivo",
+      "nome": "Tatu de Couraça",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c2-defensivo.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c2-defensivo.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c4-agressivo",
+      "nome": "Javali de Ferro",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c4-agressivo.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c4-agressivo.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c4-defensivo",
+      "nome": "Lutador de Pele de Pedra",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c4-defensivo.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c4-defensivo.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c6-agressivo",
+      "nome": "Leão de Cem Dentes",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c6-agressivo.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c6-agressivo.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c6-defensivo",
+      "nome": "Gorila de Pedra",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c6-defensivo.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c6-defensivo.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c2-agressivo-proficiente",
+      "nome": "Lebre-Relâmpago",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c2-agressivo-proficiente.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c2-agressivo-proficiente.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c4-agressivo-proficiente",
+      "nome": "Salteador a Cavalo",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c4-agressivo-proficiente.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c4-agressivo-proficiente.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c6-equilibrado-descarta-grau",
+      "nome": "Quimera de Três Fomes",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c6-equilibrado-descarta-grau.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c6-equilibrado-descarta-grau.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-c8-equilibrado-descarta-grau",
+      "nome": "Colosso de Ferida",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c8-equilibrado-descarta-grau.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c8-equilibrado-descarta-grau.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-dano-c1",
+      "nome": "Chuva de Faíscas",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c1.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-c1.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-dano-c1-repentina",
+      "nome": "Faísca de Tempestade",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c1-repentina.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-c1-repentina.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-dano-c2",
+      "nome": "Brasa de Forja",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c2.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-c2.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-dano-c2-repentina",
+      "nome": "Vento Com Rancor",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c2-repentina.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-c2-repentina.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-dano-c3",
+      "nome": "Chama que Lembra",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c3.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-c3.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-dano-c3-repentina",
+      "nome": "Tempestade Viva",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c3-repentina.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-c3-repentina.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-dano-c4",
+      "nome": "Rasgo Faminto",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c4.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-c4.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-dano-conjurador-c3",
+      "nome": "Olho de Dragão Pálido",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c3.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-conjurador-c3.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-comprar-c1",
+      "nome": "Baralho do Arquivo",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-comprar-c1.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-comprar-c1.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-comprar-c3",
+      "nome": "Livro Que Lê Você",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-comprar-c3.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-comprar-c3.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-comprar-c2-repentina",
+      "nome": "Pensamento Solto",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-comprar-c2-repentina.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-comprar-c2-repentina.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-curar-c2",
+      "nome": "Sementes de Um Dia",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-curar-c2.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-curar-c2.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-curar-c4",
+      "nome": "Relicário da Terceira Vida",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-curar-c4.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-curar-c4.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-destruir-c3",
+      "nome": "Balança de Serath",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-destruir-c3.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-destruir-c3.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-destruir-c4-repentina",
+      "nome": "Sombra Que Ficou",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-destruir-c4-repentina.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-destruir-c4-repentina.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-mistica-c2",
+      "nome": "Jaula de Luz",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-mistica-c2.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-mistica-c2.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-mistica-c4",
+      "nome": "Muralha Viva",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-mistica-c4.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-mistica-c4.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-estrutura-c1",
+      "nome": "Vila da Colheita",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c1.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-estrutura-c1.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-estrutura-c3",
+      "nome": "Biblioteca que Esquece",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c3.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-estrutura-c3.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-dano-conjurador-c1",
+      "nome": "Apito de Eco Longe",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c1.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-conjurador-c1.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-curar-c6",
+      "nome": "Aurora Que Desceu",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-curar-c6.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-curar-c6.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-estrutura-c3-enfermaria",
+      "nome": "Aldeia da Curandeira",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c3-enfermaria.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-estrutura-c3-enfermaria.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-estrutura-c4-torre",
+      "nome": "Torre dos Protetores",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c4-torre.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-estrutura-c4-torre.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-estrutura-c4-fonte",
+      "nome": "Porto de Vidro",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c4-fonte.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-estrutura-c4-fonte.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-recurso-c1",
+      "nome": "Estudante da Escola de Magia",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-recurso-c1.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-recurso-c1.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-recurso-c3",
+      "nome": "Ferreira-Alquimista",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-recurso-c3.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-recurso-c3.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-recurso-c5",
+      "nome": "Professora da Escola de Magia",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-recurso-c5.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-recurso-c5.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-estrutura-c6-nucleo",
+      "nome": "Forja dos Mil Golpes",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c6-nucleo.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-estrutura-c6-nucleo.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-estrutura-c8-reator",
+      "nome": "A boca da Voragem",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c8-reator.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-estrutura-c8-reator.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-aliado-recurso-c7",
+      "nome": "O Antigo Bibliotecário",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-recurso-c7.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-recurso-c7.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "eternyr-comprar-c1",
+      "nome": "Tinteiro de Mapas",
+      "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c1.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-comprar-c1.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "eternyr-comprar-c2",
+      "nome": "Ampulheta de Um Minuto",
+      "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c2.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-comprar-c2.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "eternyr-comprar-c3",
+      "nome": "Anel de Tique",
+      "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c3.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-comprar-c3.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "eternyr-comprar-c4",
+      "nome": "O Arquivo Sem Dono",
+      "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c4.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-comprar-c4.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "eternyr-comprar-c2-repentina",
+      "nome": "Hora Solta",
+      "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c2-repentina.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-comprar-c2-repentina.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "eternyr-dano-aliado-c4",
+      "nome": "Relógio Quebrado",
+      "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-dano-aliado-c4.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-dano-aliado-c4.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "eternyr-dano-aliado-c5",
+      "nome": "Nó de Ímpares",
+      "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-dano-aliado-c5.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-dano-aliado-c5.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "eternyr-aliado-c6-g8",
+      "nome": "Anciã do Tempo Lento",
+      "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-aliado-c6-g8.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-aliado-c6-g8.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "eternyr-destruir-c6-g8",
+      "nome": "A Voragem",
+      "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-destruir-c6-g8.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-destruir-c6-g8.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "bal-varredura-c3",
+      "nome": "Enxame de Vespas",
+      "arquivo": "Arcanoclisma/arte/cartas-site/bal-varredura-c3.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/bal-varredura-c3.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "bal-varredura-c5",
+      "nome": "Redemoinho de Areia",
+      "arquivo": "Arcanoclisma/arte/cartas-site/bal-varredura-c5.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/bal-varredura-c5.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "bal-remocao-grau-c3",
+      "nome": "Raiz Errada",
+      "arquivo": "Arcanoclisma/arte/cartas-site/bal-remocao-grau-c3.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/bal-remocao-grau-c3.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "bal-estrutura-cerco-c3",
+      "nome": "A Cidade-Muralha",
+      "arquivo": "Arcanoclisma/arte/cartas-site/bal-estrutura-cerco-c3.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/bal-estrutura-cerco-c3.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "bal-devolver-c2-repentina",
+      "nome": "Porta de Bolso",
+      "arquivo": "Arcanoclisma/arte/cartas-site/bal-devolver-c2-repentina.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/bal-devolver-c2-repentina.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "bal-anular-c3-repentina",
+      "nome": "Olho-que-Fecha",
+      "arquivo": "Arcanoclisma/arte/cartas-site/bal-anular-c3-repentina.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/bal-anular-c3-repentina.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "bal-etereo-c1",
+      "nome": "Fogo-Fátuo",
+      "arquivo": "Arcanoclisma/arte/cartas-site/bal-etereo-c1.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/bal-etereo-c1.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "bal-etereo-c2",
+      "nome": "Corvo-Presságio",
+      "arquivo": "Arcanoclisma/arte/cartas-site/bal-etereo-c2.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/bal-etereo-c2.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "bal-etereo-c3",
+      "nome": "Onça-das-Sombras",
+      "arquivo": "Arcanoclisma/arte/cartas-site/bal-etereo-c3.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/bal-etereo-c3.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "r6-ira-c4",
+      "nome": "O Campo Sem Trégua",
+      "arquivo": "Arcanoclisma/arte/cartas-site/r6-ira-c4.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/r6-ira-c4.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "r6-por-do-sol-c7",
+      "nome": "Estrada do Crepúsculo",
+      "arquivo": "Arcanoclisma/arte/cartas-site/r6-por-do-sol-c7.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/r6-por-do-sol-c7.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "r6-espiao-c4",
+      "nome": "Wyvern-Correio",
+      "arquivo": "Arcanoclisma/arte/cartas-site/r6-espiao-c4.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/r6-espiao-c4.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "r6-piromante-c4",
+      "nome": "Aprendiz Descontrolado",
+      "arquivo": "Arcanoclisma/arte/cartas-site/r6-piromante-c4.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/r6-piromante-c4.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "r6-fera-cerco-c5",
+      "nome": "Mantícora",
+      "arquivo": "Arcanoclisma/arte/cartas-site/r6-fera-cerco-c5.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/r6-fera-cerco-c5.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "r6-presa-trovao-c5",
+      "nome": "Ursa-Mãe",
+      "arquivo": "Arcanoclisma/arte/cartas-site/r6-presa-trovao-c5.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/r6-presa-trovao-c5.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    }
+  ],
+  "integracaoClaudeConfirmada": false,
+  "pushAutorizado": true,
+  "instrucoesClaude": [
+    "Substituir a arte provisória pelo PNG correspondente ao mesmo ID; arteModo=cena; sem fundo separado nem recorte colado.",
+    "Novas artes não alteram custos, Grau, habilidades ou outros dados de jogo.",
+    "Usar saída nativa de alta resolução; não rebaixar a miniatura de 640px como arquivo único da carta.",
+    "Manter verso idêntico para cartas ocultas; jamais colocar identidade/raridade privada no DOM.",
+    "A Mestra dos Dragões permanece bloqueada até liberação explícita do autor."
+  ],
+  "galeria": "Arcanoclisma/arte/cartas-site/galeria.html"
+}

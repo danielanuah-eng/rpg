@@ -1,0 +1,27 @@
+{
+  "id": "bal-etereo-c1",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/fogo-fatuo.webp",
+  "textoRegraLido": "Etéreo (só é bloqueado por Aliados Etéreos).",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/fogo-fatuo.png",
+      "papel": "Identidade da criatura; desenho novo com pose, ação e ambiente diferentes"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-0187ef10-2e4e-4154-b8ff-672f8f8cbf0c.png",
+  "decisoes": [
+    "Fogo-Fátuo redesenhado em deriva horizontal, com núcleo preto e filamentos dourados da referência.",
+    "Ambiente de ruínas alagadas durante a manhã, com patrulheiros pequenos no chão e a criatura acima do alcance terrestre.",
+    "Condição Etéreo contextualizada por outra presença etérea distante, sem habilidade de ataque específica ou regra nova.",
+    "Comum sem acabamento de raridade; dourado concentrado na criatura, cenário de luz difusa."
+  ],
+  "avaliacaoVisual": "Forma abstrata sem olhos ou corpo animal, cauda horizontal distinta da pose do catálogo. Ruínas, água, ponte e patrulheiros constituem cena completa, gradação de planos e escala por proximidade. Magia quente contrasta com o ambiente frio e claro, sem fundo branco ou recorte colado.",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nFOGO-FÁTUO source identity: small ABSTRACT solid GOLD-and-BLACK will-o-wisp, irregular teardrop flame with dark deceptive CORE and short curved golden filaments, NO face/eyes, animal, wings, skull, humanoid body or legs. Source is actually Alvorum gold/black light even if general TCG Value description says pale green; preserve actual approved identity. REDRAW flame drifting sideways LEFT, long taper nearly horizontal right, dark core visible, NOT vertical standing source silhouette. Its bright warm parts are controlled small surfaces, no sunburst.\nSCENE: a misty bright MID-MORNING battlefield in old submerged reedland ruins, camera at upper height of a low cracked aqueduct, broad ivory sky, muted dull blue-gray floodwater, charcoal reeds, terracotta ruin fragments and one lean weathered wooden bridge. One main Fogo-Fátuo hovers over the ruined arch in LEFT-center, clearly a tiny floating wisp in space not colossal orb. Camera is close enough for it to be legible but scale reads from old mossy parapet. Below middle-right two small ground-level patrol allies, a heavy black-haired adult female wearing plain blue padded jacket and a very lanky dark-brown male with bald head in russet cloak, glance UP while walking past a fallen cart. Weapons sheathed, no person casting at or being burned by the wisp. Above distant arch on far right a single small DIFFERENT vague cool indigo mist-wisp gives context of another ethereal being, not a second Fogo-Fátuo copy. Main wispy body has narrow translucent breaks, no added attack beam or special elemental exclusive attack. Actual common Ally attack1/life1 keyword Etéreo: only blocked by Etéreo allies. Show a being outside ground reach, not inventing damage or healing. Smooth ruin surfaces and restrained reeds, not heavy gritty impasto. Dawn fog palette daylight soft, tiny warm-black magic distinct; no gilded landscape, no legendary shine. Full scene fills all edges, no floating cutout."
+}

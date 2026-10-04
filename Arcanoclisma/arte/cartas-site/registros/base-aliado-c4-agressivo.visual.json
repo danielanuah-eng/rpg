@@ -1,0 +1,54 @@
+{
+  "id": "base-aliado-c4-agressivo",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/javali-de-ferro.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/javali-de-ferro.png",
+      "papel": "identidade, placas e magia verde-musgo/âmbar"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Novo galope lateral contra barricada, câmera alta no terreno molhado após chuva.",
+    "Ambiente de trincheiras frio em vez de repetir forja ou portão.",
+    "Magia verde-musgo/âmbar da identidade prevalece sobre indicação vermelha genérica do Valor."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-c84a1e6a-30e4-4b0f-86c7-e32916e35bd3.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-aliado-c4-agressivo.txt",
+  "avaliacaoVisual": "Javali em novo ataque voltado à esquerda contra barricada, cascos e placas legíveis; magia verde-musgo/âmbar localizada e chão chuvoso integrado. Ilustração nítida sem recorte colado.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c4-agressivo.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "3dd3cd8e6b0692c732d9208ae12dc55ff8ac97a4fbef418364468607ad07451a",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "incomum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

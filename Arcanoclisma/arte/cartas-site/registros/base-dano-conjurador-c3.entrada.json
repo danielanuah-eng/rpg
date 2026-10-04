@@ -1,0 +1,25 @@
+{
+  "id": "base-dano-conjurador-c3",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/olho-de-dragao-palido.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/olho-de-dragao-palido.png",
+      "papel": "Forma e identidade do feitiço; nova posição e contexto"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Apenas acabamento liso, iluminação e desenho da versão aprovada"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-050b4068-e8f5-462a-a8af-66c522af79c1.png",
+  "prompt": "TCG artwork Olho de Dragão Pálido, a spell damaging a rival conjurador. Reference1 identifies the ordinary handmade enchanted lens: circular pale-green glass with reptile slit-pupil motif, dull brass circular rim with three round studs, brown leather band and side loop; preserve this design in a NEW angle and situation. In an extreme near foreground at LEFT, a light olive-skinned elderly person's rough hand in an indigo sleeve holds this palm-sized lens almost edge-on then tilts it toward the viewer so its circular surface is legible, not filling the entire frame. Looking THROUGH the green lens is the distant opposing adult conjurador, a black-haired angular woman in a plum tabard standing tensely against an old whitewashed rice-granary terrace and stepped water garden at early morning AFTER rain. A thin projected pale-green serpent-eye beam connects lens to her abdomen; at the moment AFTER impact, she has taken a step back and one knee bends, her one hand on her uninjured chest and other gripping a walking staff. Ground has a small smolderless pale-green crescent where the hit landed. Inside the glass only, show a very subtle magical x-ray silhouette, ribs depicted as a flat symbolic light pattern under intact cloth, absolutely no wound or medical gore, outside the lens her flesh and clothing normal. Spell source foremost, victim and surroundings readable behind, natural depth by scale rather than blur. No physical dragon; no invented army or repeated duel of shields. Smooth flat granary walls, rice leaves, stepped pond broad reflected tones, quiet dawn sky pink-grey, green spell is localized and controlled. Common card, no rainbow/gold foil sheen. Polished fantasy narrative illustration matching the second reference's smooth pictorial handling and controlled light. Crisp selective organic ink contours with broad smooth painted surfaces, clean readable shape design, no gritty canvas grain, no excessively rough masonry, no atmospheric fog washing everything out, no anime HDR glow. Paint everything as one NEW unified environmental scene with shared light, perspective and contact shadows. Opaque full environment reaches every edge. Portrait63:88 requested1260x1760; no title, frame, UI, stats, words or watermark. Main action and faces above lower third. Reference2 is STYLE ONLY, do not copy its people, dragon, meadow or composition.",
+  "decisoes": [
+    "Lente mantém couro castanho, aro de bronze, vidro verde e olho reptiliano; nova vista em mão e cena completa.",
+    "Feitiço atinge conjuradora rival em terraço de celeiro com jardim de água ao amanhecer.",
+    "Raio e silhueta óssea são projeções mágicas sobre roupa intacta; efeito de dano, não cura.",
+    "Ambiente pintado com planos claros, sem névoa opaca nem acabamento de raridade lendária."
+  ],
+  "avaliacaoVisual": "Objeto no primeiro plano, conjuradora rival reagindo à direita e trajetória verde contínua. Mãos, roupa e cenário integrados; símbolos de ossos sem ferimento. Fundo de manhã com sombras legíveis."
+}

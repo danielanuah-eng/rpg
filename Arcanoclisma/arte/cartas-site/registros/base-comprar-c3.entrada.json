@@ -1,0 +1,25 @@
+{
+  "id": "base-comprar-c3",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/livro-que-le-voce.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/livro-que-le-voce.png",
+      "papel": "Identidade do objeto mágico, com nova posição e interação"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento e desenho da versão lisa aprovada"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-b5902b2f-a9e3-48be-86a2-d7f1f85308dc.png",
+  "prompt": "New TCG artwork Livro Que Lê Você, knowledge/draw spell. Reference1 gives ONLY the book identity: chunky russet-brown stitched leather book, brass corner plates and one short clasp, in the COVER a single cream-gold watching eye with BLACK vertical pupil, a navy bookmark trimmed dull gold. Do not replace eye with ordinary jewelry or duplicate eyes. Reference2 for approved smooth illustration handling ONLY, no reference woman's face or meadow. A QUIET NIGHTTIME AFTER-HOURS archive in a lighthouse: cool slate cylindrical plaster wall, curved plain oak shelves with books, circular window showing deep blue sea and sparse distant boat lamps, one subdued oil lamp, no huge golden architecture or blown-out rays. Three-quarter view from slightly below the table: a compact middle-aged adult woman with warm medium-brown skin, straight salt-grey bob, small round face and prominent dark eyebrows, practical jade reading robe, sits sideways with one knee lifted under chair and leans her head curiously away from the magical book, one palm open in surprise, her other hand resting on table. Book levitates at her EYE LEVEL, cover angled TOWARD her and viewer, pages partly fluttered, watchful cover eye seeming to read HER while she looks back at it; small translucent warm amber memory symbols drift from its pages toward her open palm. Two peripheral books open gently on shelf, restrained magic; no readable letters, no written titles. Important focus in upper/middle part; full environment remains readable, silhouette varied from other card actors. Eye light is tiny localized warm focus, nighttime blue stays blue, matte leather and smooth plaster, fantasy wonder with humor rather than an anime blast. Common, no foil overlays. Polished fantasy narrative illustration matching approved second reference: crisp selective contours, smooth painted broad surfaces, controlled shadows and material texture, integrated lighting and contact shadows. No gritty canvas grain, overly expressive scratched scenery, excessive HDR/anime gloss, foggy wash or blooms. Actual NEW single painted scene; not a transparent RPG cutout pasted onto an environment. Opaque full background to all edges, portrait 63:88 requested1260x1760. No lettering, card frame, UI, stats or watermarks. Leave key faces/action above lower third for overlay. Common card: no rainbow foil. Two tiny memory symbols correspond to gaining two cards, aesthetic suggestion only, no changed game effect.",
+  "decisoes": [
+    "Arquivo de farol à noite, mar azul visível pela janela e estantes integradas à cena.",
+    "Livro preserva olho de pupila vertical, costura, cantos metálicos e marcador azul; levita diante da leitora em nova perspectiva.",
+    "Duas lembranças projetadas correspondem visualmente à compra de duas cartas, sem alterar regras.",
+    "Concentração do dourado na magia e na lâmpada; mar e sombras ficam azuis."
+  ],
+  "avaliacaoVisual": "Olho e identidade do livro nítidos, duas lembranças, leitora sentada de lado com joelho elevado e expressão de surpresa. Arquivo noturno com fundo completo e dourado focal. Sem colagem de recorte."
+}

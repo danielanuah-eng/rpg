@@ -1,0 +1,55 @@
+{
+  "id": "base-comprar-c1",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/baralho-do-arquivo.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/baralho-do-arquivo.png",
+      "papel": "Identidade do objeto mágico, com nova posição e interação"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Somente acabamento e desenho da versão lisa aprovada"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-02f31815-9796-453b-a987-288cf99e3ecb.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-comprar-c1.txt",
+  "decisoes": [
+    "Retirada da encruzilhada arruinada genérica: balcão de memórias aberto ao rio, durante o dia.",
+    "Baralho original reinterpretado aberto, com correia solta e três cartas de lembranças: uma selecionada e duas retornando.",
+    "Novo participante de cabelo curto encaracolado e sardas; sem reutilizar pose de conjurador.",
+    "Brilho azul e dourado limitado aos fios de magia; raridade comum."
+  ],
+  "avaliacaoVisual": "Três cartas visíveis, uma na mão e duas suspensas acima do baralho; objeto, mão e rosto legíveis. Contador narrativo segue a regra de seleção. Pintura contínua, cenário diurno completo.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-comprar-c1.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "d6b001ad338b00ed5974e9f519f51643ea422697749d1d64634f44b1719fdd8e",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

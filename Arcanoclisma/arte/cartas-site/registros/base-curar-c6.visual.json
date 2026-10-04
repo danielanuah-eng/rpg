@@ -1,0 +1,57 @@
+{
+  "id": "base-curar-c6",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/aurora-que-desceu.webp",
+  "textoRegraLido": "Cure 20 de dano de um alvo e compre 2.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/aurora-que-desceu.png",
+      "papel": "Identidade da referência visual aprovada; pose e enquadramento refeitos"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Apenas acabamento liso e iluminação controlada aprovados"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-f391fc3f-1e6c-4117-9c1f-9ffb8f23bd25.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-curar-c6.txt",
+  "decisoes": [
+    "Mantida a personificação feminina da imagem aprovada de Aurora, em vez de eliminar a identidade visual já existente; manto de energia sem corpo animal.",
+    "Nova pose ajoelhada e vista pelas costas, amparando viajante vivo em recuperação.",
+    "Hospício de peregrinos antes do amanhecer, iluminação fria no fundo e dourado concentrado no manto.",
+    "Duas visões pequenas acompanham a cura e compra de duas cartas; detalhes prateados/violetas da rara, sem arco-íris lendário."
+  ],
+  "avaliacaoVisual": "Aurora com cabelo, cor de pele, diadema e manto da fonte, agora ajoelhada em perfil traseiro com duas mãos em gesto de amparo. Duas visões legíveis. Viajante vivo e sem ferida aberta, cenário pré-amanhecer completo e brilho localizado.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-curar-c6.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "73439959cd0df639f838fa961ed8b26ec3bf61ddda3d2c0fe57b6ef5efe360e4",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "rara",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

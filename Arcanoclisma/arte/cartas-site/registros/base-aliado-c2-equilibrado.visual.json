@@ -1,0 +1,54 @@
+{
+  "id": "base-aliado-c2-equilibrado",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/milicia-de-aldeia.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/milicia-de-aldeia.png",
+      "papel": "identidade de cinco camponeses"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento"
+    }
+  ],
+  "decisoes": [
+    "Cinco identidades da milícia preservadas em novas poses e interações.",
+    "Pomar irrigado à noite, sem repetir o portão diurno do Recruta.",
+    "Sem magia adicionada ao aliado comum."
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-3df0b29e-5210-4f58-adbe-035638bd172e.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-aliado-c2-equilibrado.txt",
+  "avaliacaoVisual": "Cinco camponeses identificáveis em poses distintas, noite legível, pomar com canal integrado; contornos nítidos e textura moderada. Cena nova preserva o grupo.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c2-equilibrado.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "f31746394811c2dea314ad766696e4d72b13d97dfae25a3da8421f1968cb35ea",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

@@ -1,0 +1,51 @@
+{
+  "id": "conjurador-ricardo",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-c34cb310-5aca-445c-9a9c-40c3e2e8fc17.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/conjurador-ricardo.txt",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/alquimista-naufrago.webp",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "somente direção de arte, sem copiar personagens ou local"
+    }
+  ],
+  "decisoes": [
+    "Ricardo é personagem novo com bigode e lentes, sem copiar marcador ruivo náufrago",
+    "Laboratório aberto ao amanhecer, vista elevada, pose parcialmente de costas",
+    "Acabamento ambiental mais liso substitui pinceladas visíveis do briefing",
+    "Lendária v9 com reflexos focalizados na alquimia e nos vidros"
+  ],
+  "avaliacaoVisual": "Inspecionada: bancada, personagem e frascos compartilham câmera e luz, cenário completo, gesto alquímico e expressão próprios.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ricardo.png",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "0bb719b8d1543e2ccc42f5e744f6f9550933c5b4af997b2ed930b11e048ccf9b",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "lendaria",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}
