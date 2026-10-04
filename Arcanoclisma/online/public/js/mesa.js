@@ -113,6 +113,9 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     const hosts = [...caixa.querySelectorAll('.abertura-dado')];
     try { dadosAbertura = hosts.map((h) => new A.D20Transplanar(h)); } catch (err) { console.error('d20', err); caixa.remove(); return; }
     const fim = () => { for (const d of dadosAbertura) try { d.destruir(); } catch { /* nada */ } dadosAbertura = []; caixa.remove(); };
+    // segurança (04/10): com a aba em segundo plano o navegador pausa a animação do dado e a camada ficava por cima da mesa
+    // para sempre; ela some sozinha em no máximo 8 s (e nunca pega cliques: pointer-events none no CSS)
+    setTimeout(() => { if (caixa.isConnected) fim(); }, 8000);
     Promise.all([dadosAbertura[0].rolar(e.dados[EU], { duracao: 4200 }), dadosAbertura[1].rolar(e.dados[OP], { duracao: 4200 })]).then(() => {
       if (fechada) return fim();
       const ganhei = e.dados[EU] > e.dados[OP];
@@ -120,7 +123,6 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
       caixa.classList.add('resolvido');
       setTimeout(() => caixa.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 700, easing: 'ease' }).finished.then(fim, fim), 1600);
     }, fim);
-    caixa.addEventListener('click', () => { for (const d of dadosAbertura) try { d.cancelar({ concluir: true }); } catch { /* nada */ } });
   }
 
   // ---------- consultas ----------
