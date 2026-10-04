@@ -1,6 +1,6 @@
 // Gerado por online/construir.ts a partir de tcg/sim/bot.ts. Não edite: edite o .ts e reconstrua.
 // Jogador guloso para simulações. Não é forte: serve para expor quais mecânicas são usadas, ignoradas ou abusadas.
-import { ataqueConjurador, custoEfetivo, custoProtecao, origemDaCarta, defCarta, defConjurador, ehRepentina, GRAU_MAXIMO, grauEfetivo, recemChegado } from './motor.js';
+import { ataqueConjurador, custoEfetivo, custoProtecao, origemDaCarta, defCarta, custoAtaqueConjurador, defConjurador, ehRepentina, GRAU_MAXIMO, grauAtaqueConjurador, grauEfetivo, recemChegado } from './motor.js';
                                                                           
 
                          
@@ -375,8 +375,9 @@ function planejarAtaqueConj(e        , j         , est        )                 
   const adv = e.jogadores[outro(j)];
   if (e.instancias[z.conjuradorId].suspensa) return null;
   if (ataqueConjurador(e, j) <= 0) return null;
+  if (grauEfetivo(e, j) < grauAtaqueConjurador(e, j)) return null; // arma pede Grau (04/10)
   if (adv.campo.some((id) => ehAliado(e, id) && !e.instancias[id].suspensa)) return null;
-  const custo = defConjurador(e, j).custoAtaque;
+  const custo = custoAtaqueConjurador(e, j);
   if (z.arcano < custo) {
     const mana = manaPerm(e, j)[0];
     if (mana) return { tipo: 'ativar', jogador: j, carta: mana };

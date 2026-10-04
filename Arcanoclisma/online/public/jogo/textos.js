@@ -56,6 +56,17 @@ export function textoCarta(d) {
     p.push(d.categoriaItem === 'armadura' ? `${esp}. Defesa ${d.defesa ?? 0}, desgaste ${d.vidaDesgaste ?? 0}.`
       : d.categoriaItem === 'canal' ? (canal === 'Arma' ? `${esp}. Arma: Ataque ${d.ataque ?? 0}.` : `${esp}. ${canal}.`)
       : `${esp}${d.competencia ? ` de ${d.competencia}` : ''}. Uso único.`);
+    // custo e Grau do item (pedido do autor, 04/10): para atacar (arma), para proteger (armadura) ou para usar
+    const req = [d.grau ? `Grau ${d.grau}` : '', d.custo && !d.ativacao ? `pague ${d.custo}` : ''].filter(Boolean).join(' e ');
+    if (canal === 'Arma' && d.categoriaItem === 'canal') p.push(req ? `Para atacar: ${req}.` : 'Atacar é de graça.');
+    else if (d.categoriaItem === 'armadura') { if (req) p.push(`Para proteger: ${req}.`); }
+    else if (d.grau) p.push(`Para usar: Grau ${d.grau}.`);
+    const aa = d.aoAtacar;
+    if (aa?.efeitos?.length) p.push('Ao atacar com ela: ' + fraseMin(aa.efeitos));
+    if (aa?.danoUnidades) p.push(`+${aa.danoUnidades} de dano quando acerta Aliados, Místicas ou Estruturas.`);
+    if (aa?.desgasteArmadura) p.push(`Desgasta ${aa.desgasteArmadura} a mais a Armadura inimiga que protege deste ataque.`);
+    if (d.aoProteger?.length) p.push('Ao proteger: ' + fraseMin(d.aoProteger));
+    if (d.espinhos) p.push(`Ao proteger, causa ${d.espinhos} de dano ao atacante.`);
   }
   if (d.palavrasChave?.length) p.push(d.palavrasChave.join(', ') + '.');
   if (d.protegido) p.push(`Protegido ${d.protegido}.`);

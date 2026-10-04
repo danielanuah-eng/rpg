@@ -50,6 +50,16 @@
                                                                              
                                                      
 
+/** Arma: efeitos ao atacar (pedido do autor, 04/10). */
+                           
+                                                                               
+                     
+                                                                                                    
+                        
+                                                                             
+                            
+ 
+
 /** Habilidade ativada de uma permanente: paga custo em Arcano e (opcionalmente) suspende. */
                            
                                                                                                                                                            
@@ -137,6 +147,15 @@
                          
                                                                         
                   
+     
+                                                                                                                    
+                                                                                    
+     
+                      
+                                                                                          
+                        
+                                                                      
+                    
                                                                               
                   
                                                                                          

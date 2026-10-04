@@ -88,7 +88,8 @@ function dados(artes: Map<string, Arte>, ident: Identidade) {
       catalogo.cartas[cid] = { ...c, nome: artes.get(arte)!.titulo };
     } else visual[cid] = { arte: null, raridade: null };
   }
-  for (const [cid, c] of Object.entries(catalogo.cartas)) if (!c.texto) catalogo.cartas[cid] = { ...c, texto: textoCarta(c) };
+  // itens: texto sempre gerado da mecânica (custo, Grau e efeitos mudam com o Editor; pedido do autor, 04/10)
+  for (const [cid, c] of Object.entries(catalogo.cartas)) if (!c.texto || c.tipo === 'item') catalogo.cartas[cid] = { ...c, texto: textoCarta(c) };
   const baralhos = ctx.arqs.map((a) => ({
     id: `pronto-${a.conjurador}`, conjurador: a.conjurador, nome: `${catalogo.conjuradores[a.conjurador].nome.split(',')[0]} (pronto)`,
     estilo: estiloDe(a, v), lista: a.lista, itens: a.itens ?? [],

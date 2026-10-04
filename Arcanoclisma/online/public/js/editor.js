@@ -9,10 +9,10 @@ import { descEfeito } from '/jogo/textos.js';
 
 const VALORES = Object.keys(VALOR);
 const COMPROMETIMENTOS = ['Invocador', 'Brigão', 'Parrudão da quebrada', 'Habilidoso', 'Preparado'];
-const NUM_CARTA = [['custo', 'Custo'], ['grau', 'Grau'], ['arcanoGerado', 'Gera Arcano'], ['ataque', 'Ataque'], ['vida', 'Vida'], ['defesa', 'Defesa (armadura)'], ['vidaDesgaste', 'Desgaste (armadura)'], ['protegido', 'Protegido'], ['descartaGrau', 'Descarta do Grau'], ['pagarParaAnular', 'Pagar para anular'], ['grauExtra', 'Grau extra']];
+const NUM_CARTA = [['custo', 'Custo'], ['grau', 'Grau'], ['arcanoGerado', 'Gera Arcano'], ['ataque', 'Ataque'], ['vida', 'Vida'], ['defesa', 'Defesa (armadura)'], ['vidaDesgaste', 'Desgaste (armadura)'], ['protegido', 'Protegido'], ['descartaGrau', 'Descarta do Grau'], ['pagarParaAnular', 'Pagar para anular'], ['grauExtra', 'Grau extra'], ['espinhos', 'Espinhos (armadura)']];
 const NUM_CONJ = [['vida', 'Vida'], ['maoInicial', 'Mão inicial'], ['compraFinal', 'Compra no Final'], ['danoBasico', 'Dano básico'], ['custoAtaque', 'Custo de ataque']];
 /** Campos de mecânica editados como JSON. */
-const MEC_CARTA = ['efeitos', 'aoEntrar', 'aoDanoConjurador', 'ativacao', 'custoValores'];
+const MEC_CARTA = ['efeitos', 'aoEntrar', 'aoDanoConjurador', 'ativacao', 'custoValores', 'aoAtacar', 'aoProteger'];
 const igual = (a, b) => JSON.stringify(a ?? null) === JSON.stringify(b ?? null);
 /** Números citados no texto (efeitos, gatilhos, ativação, Protegido, pagar para anular, descarte do Grau; poder do Conjurador). */
 const NUM_TEXTO_CARTA = [...MEC_CARTA, 'protegido', 'pagarParaAnular', 'descartaGrau', 'grauExtra'];
@@ -58,6 +58,8 @@ function linhasComRequisito(mec, conjur) {
     efs(mec.aoEntrar, 'aoEntrar', 'Ao entrar');
     efs(mec.aoDanoConjurador, 'aoDanoConjurador', 'Ao causar dano ao Conjurador');
     if (mec.ativacao) { l.push({ cam: 'ativacao', rot: 'Ativação (inteira)', req: mec.ativacao.requisito }); efs(mec.ativacao.efeitos, 'ativacao.efeitos', 'Ativação, efeito'); }
+    efs(mec.aoAtacar?.efeitos, 'aoAtacar.efeitos', 'Arma, ao atacar');
+    efs(mec.aoProteger, 'aoProteger', 'Armadura, ao proteger');
   }
   return l;
 }

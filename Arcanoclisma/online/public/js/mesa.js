@@ -7,7 +7,7 @@
 //   fonte.ouvir(fn)    chama fn a cada mudança
 //   fonte.versao       número que cresce a cada mudança
 //   opcionais: fonte.chat(texto), fonte.desistir(), fonte.tutorial (dicas, destaques e travas), fonte.prazo(), fonte.conectados()
-import { defCarta, custoEfetivo, custoProtecao, origemDaCarta, grauEfetivo, recemChegado, ataqueConjurador, distribuicaoPadrao, ehRepentina } from '/jogo/motor.js';
+import { defCarta, custoEfetivo, custoProtecao, origemDaCarta, grauEfetivo, recemChegado, ataqueConjurador, distribuicaoPadrao, ehRepentina, custoAtaqueConjurador, grauAtaqueConjurador } from '/jogo/motor.js';
 import { $, $$, esc, DADOS, VALOR, TIPO, textoCarta, janela, local, avisar, conj as conjDefDe } from './base.js';
 import { desenharCarta, modeloCarta, modeloConjurador } from './carta.js';
 import { criarMovimentosMesa } from './mesa-movimentos-codex.js';
@@ -178,7 +178,8 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   }
   function podeAtacar(id) {
     if (!minhaJanela() || inst(id).suspensa) return false;
-    if (ehConj(id)) return ataqueConjurador(e, EU) > 0 || !e.regras.conjuradorSoAtacaComArma;
+    // arma com Grau e custo (pedido do autor, 04/10): precisa do Grau e de Arcano para pagar
+    if (ehConj(id)) return (ataqueConjurador(e, EU) > 0 || !e.regras.conjuradorSoAtacaComArma) && grauEfetivo(e, EU) >= grauAtaqueConjurador(e, EU) && custoAtaqueConjurador(e, EU) <= potencial();
     return def(id).tipo === 'aliado' && !recemChegado(e, id) && (def(id).ataque ?? 0) > 0;
   }
   /** Você tem alguma resposta agora (carta Repentina, habilidade Repentina ou ativação)? */
@@ -260,7 +261,17 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
       descartarGrau = await escolherCartas(`${titulo}: descarte ${descarta} carta(s) do seu Grau`, z(EU).grau, descarta);
       if (!descartarGrau) return;
     }
-    if (tipo === 'atacar') { await enviar({ tipo: 'atacar', atacante: id, alvo, enviarArcano: [] }); return; }
+    if (tipo === 'atacar') {
+      // o Conjurador paga o custo da arma (e o custo de ataque dele); Aliados atacam de graça
+      const custoAtq = ehConj(id) ? custoAtaqueConjurador(e, EU) : 0;
+      if (!custoAtq) { await enviar({ tipo: 'atacar', atacante: id, alvo, enviarArcano: [] }); return; }
+      const pgA = await pagar(`${titulo} (custo da arma)`, custoAtq, undefined, alvo);
+      if (!pgA) return;
+      for (const g of pgA.grau) if (await enviar({ tipo: 'suspenderGrau', carta: g })) return;
+      for (const f of pgA.fontes) if (await enviar({ tipo: 'ativar', carta: f, enviarArcano: [] })) return;
+      await enviar({ tipo: 'atacar', atacante: id, alvo, enviarArcano: pgA.pitch });
+      return;
+    }
     // custo de descarte (itens v2): escolhe as cartas da mão antes de pagar
     let descartarCusto = [];
     const nDesc = tipo === 'ativar' ? ativacaoDe(id).descartar ?? 0 : 0;

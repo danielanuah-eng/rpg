@@ -74,6 +74,35 @@ function ataqueDe(e        , instId        , bloqueando = false)         {
   return inst.ehConjurador ? (bloqueando ? defConjurador(e, inst.dono).danoBasico : ataqueConjurador(e, inst.dono)) : (defCarta(e, instId).ataque ?? 0);
 }
 
+/** A arma do Conjurador (Canal do tipo Arma), se houver. */
+export function armaDe(e        , j         )                     {
+  return (e.jogadores[j].itens ?? []).find((id) => { const d = defCarta(e, id); return d.categoriaItem === 'canal' && (d.tipoCanal ?? 'arma') === 'arma' && (d.ataque ?? 0) > 0; });
+}
+
+/** Arcano que o Conjurador paga para atacar: o custo de ataque dele + o custo da arma (pedido do autor, 04/10). */
+export function custoAtaqueConjurador(e        , j         )         {
+  const arma = armaDe(e, j);
+  return defConjurador(e, j).custoAtaque + (arma ? defCarta(e, arma).custo : 0);
+}
+
+/** Grau mínimo para o Conjurador atacar: o Grau da arma (0 sem arma). */
+export function grauAtaqueConjurador(e        , j         )         {
+  const arma = armaDe(e, j);
+  return arma ? defCarta(e, arma).grau : 0;
+}
+
+/**
+ * Item serve a este Conjurador? Itens sem Valor (básicos ou genéricos) servem a todos; um item com Valor só serve
+ * se tiver os dois Valores do Conjurador (pedido do autor, 04/10). Competência e exclusividade continuam valendo.
+ */
+export function itemServe(conj               , d          )          {
+  if (d.tipo !== 'item') return false;
+  if (d.valores.length && !conj.valores.every((v) => d.valores.includes(v))) return false;
+  if (d.competencia && d.competencia !== conj.comprometimento) return false;
+  if (d.exclusivoDe?.length && !d.exclusivoDe.includes(conj.id)) return false;
+  return true;
+}
+
 /** Ataque do Conjurador ao atacar: dano básico + o Ataque do Canal (a arma). O Extra é um item consumível de suporte, sem Ataque. */
 export function ataqueConjurador(e        , j         )         {
   const z = e.jogadores[j];
@@ -368,7 +397,7 @@ export function validarBaralho(cat          , b            , tamanho = 60)      
     if (c.exclusivoDe?.length && !c.exclusivoDe.includes(conj.id)) erros.push(`${c.nome} é exclusivo de outro Conjurador.`);
     if (espacos.has(c.categoriaItem)) erros.push(`Dois itens no mesmo espaço (${c.categoriaItem}).`);
     espacos.add(c.categoriaItem);
-    if (c.valores.length > 0 && !c.valores.some((v) => conj.valores.includes(v))) erros.push(`${c.nome} não combina com os Valores de ${conj.nome}.`);
+    if (c.valores.length > 0 && !conj.valores.every((v) => c.valores.includes(v))) erros.push(`${c.nome} não combina com os dois Valores de ${conj.nome}.`);
   }
   if (b.cartas.some((id) => cat.cartas[id]?.tipo === 'item')) erros.push('Itens não entram no baralho: equipe-os no Conjurador.');
   return erros;
@@ -508,7 +537,7 @@ function temAcao(e        , j         )          {
   if (z.mao.length > 0 || z.baralho.length > 0) return true;
   const conj = e.instancias[z.conjuradorId];
   const fontes = z.arcano + z.grau.filter((id) => !e.instancias[id].suspensa).length;
-  if (!conj.suspensa && fontes >= defConjurador(e, j).custoAtaque) return true;
+  if (!conj.suspensa && fontes >= custoAtaqueConjurador(e, j) && grauEfetivo(e, j) >= grauAtaqueConjurador(e, j)) return true;
   for (const id of z.campo) {
     const d = defCarta(e, id);
     const inst = e.instancias[id];
@@ -635,6 +664,16 @@ function vidaRestante(e        , id        )         {
 }
 
 /** Dano do atacante com a passiva "primeiro dano de combate de um Aliado em cada turno é maior" (marca o uso). */
+/** Arma com "dano a mais em unidades": soma quando o golpe do Conjurador acerta Aliados, Místicas ou Estruturas. */
+function bonusArmaUnidades(e        , atacante        , acertaUnidade         )         {
+  const at = e.instancias[atacante];
+  if (!at?.ehConjurador || !acertaUnidade) return 0;
+  const arma = armaDe(e, at.dono);
+  const n = arma ? defCarta(e, arma).aoAtacar?.danoUnidades ?? 0 : 0;
+  if (n) anotar(e, `${defCarta(e, arma ).nome}: +${n} de dano contra unidades.`);
+  return n;
+}
+
 function comPrimeiroDanoDeAliado(e        , id        , dano        )         {
   const it = e.instancias[id];
   if (!it || it.ehConjurador || defCarta(e, id).tipo !== 'aliado' || dano <= 0) return dano;
@@ -672,13 +711,23 @@ function aplicarArmadura(e        , conjId        , dano        )         {
   if (!c || dano <= 0 || c.usarArmadura === false || e.habUsos[dono].armadura) return dano;
   const arm = armaduraDe(e, dono);
   if (!arm) return dano;
-  e.habUsos[dono].armadura = true;
   const da = defCarta(e, arm);
+  // Armadura com Grau mínimo ou custo em Arcano (pedido do autor, 04/10): sem cumprir, não protege neste ataque
+  if ((da.grau || da.custo) && !cumprirRequisito(e, { grau: da.grau, arcano: da.custo }, dono)) return dano;
+  e.habUsos[dono].armadura = true;
   const ia = e.instancias[arm];
   const evita = Math.min(da.defesa ?? 0, dano, Math.max(0, (da.vidaDesgaste ?? 0) - ia.dano));
   if (evita <= 0) return dano;
   ia.dano += evita;
   anotar(e, `${da.nome} (jogador ${dono}) evita ${evita} de dano (desgaste ${ia.dano}/${da.vidaDesgaste}).`);
+  // arma do atacante que desgasta a Armadura a mais
+  const atk = e.instancias[c.atacante];
+  const armaAtk = atk?.ehConjurador ? armaDe(e, atk.dono) : undefined;
+  const extra = armaAtk ? defCarta(e, armaAtk).aoAtacar?.desgasteArmadura ?? 0 : 0;
+  if (extra > 0) { ia.dano += extra; anotar(e, `${defCarta(e, armaAtk ).nome} desgasta ${extra} a mais (${ia.dano}/${da.vidaDesgaste}).`); }
+  // efeitos da Armadura ao proteger
+  if (da.aoProteger?.length) { anotar(e, `${da.nome}: efeito ao proteger.`); aplicarEfeitos(e, da.aoProteger, dono); }
+  if (da.espinhos && naMesa(e, c.atacante)) causarDano(e, c.atacante, da.espinhos, 'efeito');
   if (ia.dano >= (da.vidaDesgaste ?? 0)) {
     const z = e.jogadores[dono];
     tirar(z.itens, arm);
@@ -720,7 +769,7 @@ function danoDeCombate(e        )       {
     // Sem bloqueio: o alvo recebe o dano; Aliado, Mística ou Estrutura atacados revidam (o Conjurador não).
     const alvoOk = naMesa(e, c.alvo);
     const revida = !e.instancias[c.alvo].ehConjurador;
-    const dano = atacanteOk && alvoOk ? comPrimeiroDanoDeAliado(e, c.atacante, ataqueDe(e, c.atacante)) : 0;
+    const dano = atacanteOk && alvoOk ? comPrimeiroDanoDeAliado(e, c.atacante, ataqueDe(e, c.atacante)) + bonusArmaUnidades(e, c.atacante, !e.instancias[c.alvo].ehConjurador) : 0;
     if (alvoOk) recebido[c.alvo] = dano;
     if (alvoOk && revida) danoAoAtacante = comPrimeiroDanoDeAliado(e, c.alvo, ataqueDe(e, c.alvo));
     resumo = `${nomeReg(e, c.atacante)} causa ${dano} a ${nomeReg(e, c.alvo)}${revida && alvoOk ? `, que causa ${danoAoAtacante} de volta` : ''}`;
@@ -728,7 +777,7 @@ function danoDeCombate(e        )       {
     // Decisão 20: vários bloqueadores. Quem ataca distribui o dano; o que passa da vida de cada bloqueador vai para o Conjurador.
     // Todo bloqueador na mesa causa dano ao atacante ao mesmo tempo, mesmo que morra no combate.
     const bloqs = bloqueadoresVivos(e);
-    const dano = atacanteOk && bloqs.length ? comPrimeiroDanoDeAliado(e, c.atacante, ataqueDe(e, c.atacante)) : 0;
+    const dano = atacanteOk && bloqs.length ? comPrimeiroDanoDeAliado(e, c.atacante, ataqueDe(e, c.atacante)) + bonusArmaUnidades(e, c.atacante, bloqs.some((b) => !e.instancias[b].ehConjurador)) : 0;
     const dist = c.distribuicao ?? distribuicaoPadrao(e, bloqs, dano);
     // a passiva pode ter somado dano depois da escolha: a diferença vai para o primeiro da distribuição
     const somaDist = Object.values(dist).reduce((a, b) => a + b, 0);
@@ -900,6 +949,7 @@ function ativar(e        , c                                      )       {
   const ehItem = !ehConj && z.itens.includes(c.carta);
   if (!ehConj && !ehItem && !z.campo.includes(c.carta)) falha('A carta não está no seu campo.');
   if (ehItem && !defCarta(e, c.carta).ativacao) falha('Este item não tem uso.');
+  if (ehItem && grauEfetivo(e, c.jogador) < defCarta(e, c.carta).grau) falha(`Para usar ${defCarta(e, c.carta).nome}, precisa de Grau ${defCarta(e, c.carta).grau}.`);
   const at = ehConj ? defConjurador(e, c.jogador).poder?.ativacao : defCarta(e, c.carta).ativacao;
   if (!at) falha(ehConj ? 'Este Conjurador não tem habilidade ativada.' : 'Esta carta não tem ativação.');
   const inst = e.instancias[c.carta];
@@ -967,8 +1017,9 @@ function atacar(e        , c                                      )       {
     (adv.campo.includes(c.alvo) && ['aliado', 'mistica', 'estrutura'].includes(defCarta(e, c.alvo).tipo) && (vidaDe(e, c.alvo) ?? 0) > 0);
   if (!alvoOk) falha('Alvo de ataque inválido.');
   if (atacante.ehConjurador && e.regras.conjuradorSoAtacaComArma && ataqueConjurador(e, c.jogador) <= 0) falha('O Conjurador só ataca com uma arma (item no Canal).');
+  if (atacante.ehConjurador && grauEfetivo(e, c.jogador) < grauAtaqueConjurador(e, c.jogador)) falha(`Para atacar com esta arma, precisa de Grau ${grauAtaqueConjurador(e, c.jogador)}.`);
   if (atacante.ehConjurador) {
-    const custo = defConjurador(e, c.jogador).custoAtaque;
+    const custo = custoAtaqueConjurador(e, c.jogador);
     const reserva = validarEnvio(e, c.jogador, custo, c.enviarArcano ?? []);
     pagarCusto(e, c.jogador, custo, c.enviarArcano ?? [], reserva);
   } else if (c.enviarArcano?.length) falha('Este ataque não custa Arcano.');
@@ -979,6 +1030,10 @@ function atacar(e        , c                                      )       {
   e.passes = 0;
   e.prioridade = c.jogador;
   anotar(e, `Jogador ${c.jogador} ataca com ${nomeReg(e, c.atacante)} (ataque ${ataqueDe(e, c.atacante)}) → ${nomeReg(e, c.alvo)}.`);
+  // Arma: efeitos ao atacar (ganhar Arcano, comprar...), na hora em que o ataque é declarado
+  const arma = atacante.ehConjurador ? armaDe(e, c.jogador) : undefined;
+  const efs = arma ? defCarta(e, arma).aoAtacar?.efeitos : undefined;
+  if (arma && efs?.length) { anotar(e, `${defCarta(e, arma).nome}: efeito ao atacar.`); aplicarEfeitos(e, efs, c.jogador); }
 }
 
 export function executar(e        , c         )       {

@@ -148,6 +148,9 @@ test('Extra é consumível: usa uma vez, aplica o efeito e vai para o cemitério
   const extra = z.itens.find((id) => e.instancias[id].defId === 'item-extra-elixir')!;
   const canal = z.itens.find((id) => e.instancias[id].defId === 'item-canal-cajado')!;
   assert.throws(() => executar(e, { tipo: 'ativar', jogador: 0, carta: canal }), /não tem uso/);
+  // o Elixir pede Grau 1 (pedido do autor, 04/10)
+  assert.throws(() => executar(e, { tipo: 'ativar', jogador: 0, carta: extra }), /Grau 1/);
+  const g = z.mao[0]; z.mao.splice(0, 1); z.grau.push(g);
   executar(e, { tipo: 'ativar', jogador: 0, carta: extra });
   passarAte(e, () => e.pilha.length === 0);
   assert.equal(z.arcano, 2);

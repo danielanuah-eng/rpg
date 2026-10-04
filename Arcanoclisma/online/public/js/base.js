@@ -111,10 +111,10 @@ export const local = {
 };
 
 // ---------- baralhos ----------
-/** Itens que um Conjurador pode levar no side deck (sem Valor, ou de um dos Valores dele). */
+/** Itens que um Conjurador pode levar no side deck: sem Valor (básicos/genéricos), ou com os DOIS Valores dele (pedido do autor, 04/10). */
 export function itensDoConjurador(conjId) {
   const c = conj(conjId);
-  return Object.values(DADOS.catalogo.cartas).filter((x) => x.tipo === 'item' && (!x.valores?.length || x.valores.some((v) => c.valores.includes(v)))
+  return Object.values(DADOS.catalogo.cartas).filter((x) => x.tipo === 'item' && (!x.valores?.length || c.valores.every((v) => x.valores.includes(v)))
     && (!x.competencia || x.competencia === c.comprometimento) && (!x.exclusivoDe?.length || x.exclusivoDe.includes(conjId)));
 }
 /** A carta pode entrar no baralho deste Conjurador (algum Valor dele; toda carta tem Valor, menos itens). */

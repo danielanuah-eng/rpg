@@ -1,5 +1,5 @@
 // Jogador guloso para simulações. Não é forte: serve para expor quais mecânicas são usadas, ignoradas ou abusadas.
-import { ataqueConjurador, custoEfetivo, custoProtecao, origemDaCarta, defCarta, defConjurador, ehRepentina, GRAU_MAXIMO, grauEfetivo, recemChegado } from '../src/motor.ts';
+import { ataqueConjurador, custoEfetivo, custoProtecao, origemDaCarta, defCarta, custoAtaqueConjurador, defConjurador, ehRepentina, GRAU_MAXIMO, grauAtaqueConjurador, grauEfetivo, recemChegado } from '../src/motor.ts';
 import type { CartaDef, Comando, Estado, Jogador } from '../src/tipos.ts';
 
 export interface Estilo {
@@ -374,8 +374,9 @@ function planejarAtaqueConj(e: Estado, j: Jogador, est: Estilo): Comando | null 
   const adv = e.jogadores[outro(j)];
   if (e.instancias[z.conjuradorId].suspensa) return null;
   if (ataqueConjurador(e, j) <= 0) return null;
+  if (grauEfetivo(e, j) < grauAtaqueConjurador(e, j)) return null; // arma pede Grau (04/10)
   if (adv.campo.some((id) => ehAliado(e, id) && !e.instancias[id].suspensa)) return null;
-  const custo = defConjurador(e, j).custoAtaque;
+  const custo = custoAtaqueConjurador(e, j);
   if (z.arcano < custo) {
     const mana = manaPerm(e, j)[0];
     if (mana) return { tipo: 'ativar', jogador: j, carta: mana };

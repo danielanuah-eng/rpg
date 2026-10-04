@@ -49,6 +49,16 @@ type EfeitoBase =
   /** Itens (03/10, noite). Seu Conjurador ganha +N de Ataque neste turno. */
   | { tipo: 'ataqueConjuradorTurno'; valor: number };
 
+/** Arma: efeitos ao atacar (pedido do autor, 04/10). */
+export interface AoAtacar {
+  /** Efeitos ao declarar o ataque (ex.: ganhe 1 de Arcano, compre 1 carta). */
+  efeitos?: Efeito[];
+  /** Dano a mais quando o golpe acerta Aliados, Místicas ou Estruturas (atacados ou bloqueando). */
+  danoUnidades?: number;
+  /** Desgaste a mais na Armadura inimiga quando ela protege deste ataque. */
+  desgasteArmadura?: number;
+}
+
 /** Habilidade ativada de uma permanente: paga custo em Arcano e (opcionalmente) suspende. */
 export interface Ativacao {
   /** Habilidade de Conjurador de velocidade Repentina: pode ser usada com prioridade, a qualquer momento (as demais: só na sua Principal, pilha vazia). */
@@ -136,6 +146,15 @@ export interface CartaDef {
   exclusivoDe?: string[];
   /** Ficha: carta criada por efeito (invocar); não entra em baralho. */
   ficha?: boolean;
+  /**
+   * Arma (Canal): o que acontece quando o Conjurador ataca com ela (pedido do autor, 04/10). O Arcano pago e o Grau
+   * mínimo para atacar são o custo e o Grau da própria carta do item (podem ser 0).
+   */
+  aoAtacar?: AoAtacar;
+  /** Armadura: efeitos quando ela evita dano (ex.: ganhe 1 de Arcano, compre 1 carta). */
+  aoProteger?: Efeito[];
+  /** Armadura: quando ela evita dano, causa este dano ao atacante. */
+  espinhos?: number;
   /** Armadura: dano de combate que ela evita quando o Conjurador bloqueia. */
   defesa?: number;
   /** Armadura: quanto dano ela ainda pode evitar antes de quebrar (vida de desgaste). */
