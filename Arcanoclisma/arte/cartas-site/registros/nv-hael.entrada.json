@@ -1,0 +1,36 @@
+{
+  "id": "nv-hael",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-ee43d932-d155-4b2e-9dbd-814cc383fe3f.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nHAEL O INSONE common Alvorum MYSTICA5life. Actual suspendTHISandPAYONE toHEALTHREE ONEtarget. Approved adultsemigod verypale tallleanbody elongatedface wideopenamberpupiledeyes with darkeyebags, longblackhair tiedLOW, pointedears asvisualreference, blackcreamlongrobe smallmutedgoldsolarbrooches andcharms. NEWscene crouchedonstoneaqueductbalcony LEFT, rightpalm gentlypressedtoONE tired brownwhitegriffin's bandagedwing on lowwoodplatformRIGHT (fourlegs2wings featherheadno human face), left hand onownknee. ONEsmalldimgoldspentpearlinstonebowlsymbolizespaidactivation. ENTIREheadnose/eyesright/down atgriffinwing, fatigued solemnkindlook, notheadupwhilehealingdown. Thin GOLDandBLACK divided ribbons wrapthatONEwing, healingnotattacknobigbarrierorresurrection. Incidentalgriffinunplayabledescriptiononly, no newcardname. Sunsetmutedorangeviolet sky overriverandbluegraycity, tallivoryaqueductarches shadowed, hangingmintplanters andwaterchannels, noburninggoldsky. Overgriffinshoulder camera lowright, closebothfiguresbutwidenenoughbalcony/brownroofsdistant. Preservegodoutfitmaterialcolours, smoothstonepaint, localizedgoldsoft NOTsurroundingfullframe.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/hael-o-insone.png",
+  "textoRegraLido": "Suspenda e pague 1: cure 3 de dano de um alvo.",
+  "valoresLidos": [
+    "alvorum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/hael-o-insone.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Varanda sobre aqueduto e rio, plataforma de madeira e cidade distante",
+  "momentoDoDia": "Entardecer",
+  "clima": "Nuvens altas",
+  "escala": "Hael e um grifo próximos, cidade em vários planos",
+  "avaliacaoVisual": "Hael agachado, cabelo preso baixo, rosto pálido e olhos voltados à asa enfaixada de um único grifo. Faixas douradas e pretas localizadas e uma esfera em tigela; cenário completo.",
+  "decisoes": [
+    "Alvorum Mística exige suspensão e pagamento de um para curar três de um alvo.",
+    "Grifo é ambientação, sem nova carta, invocação automática ou cura de grupo."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

@@ -1,0 +1,66 @@
+{
+  "id": "nv-hael",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-ee43d932-d155-4b2e-9dbd-814cc383fe3f.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-hael.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/hael-o-insone.png",
+  "textoRegraLido": "Suspenda e pague 1: cure 3 de dano de um alvo.",
+  "valoresLidos": [
+    "alvorum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/hael-o-insone.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Varanda sobre aqueduto e rio, plataforma de madeira e cidade distante",
+  "momentoDoDia": "Entardecer",
+  "clima": "Nuvens altas",
+  "escala": "Hael e um grifo próximos, cidade em vários planos",
+  "avaliacaoVisual": "Hael agachado, cabelo preso baixo, rosto pálido e olhos voltados à asa enfaixada de um único grifo. Faixas douradas e pretas localizadas e uma esfera em tigela; cenário completo.",
+  "decisoes": [
+    "Alvorum Mística exige suspensão e pagamento de um para curar três de um alvo.",
+    "Grifo é ambientação, sem nova carta, invocação automática ou cura de grupo."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-hael.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "ce3d503c7615e9cb4055ecf7b71bcda04ca47fd0b5df7e570635a16232db56be",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

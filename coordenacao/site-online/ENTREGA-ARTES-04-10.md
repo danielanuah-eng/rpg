@@ -1,8 +1,10 @@
 # Entrega visual para Claude — 04/10/2026
 
-## Atualização posterior: 184/210
+## Atualização posterior: 192/210
 
-O lote e a galeria agora têm 184 artes concluídas, com 26 pendentes. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega inicial de conjuradores abaixo. Entraram Cadeira de Espera, Saque de Túmulos, Máscara do Outro, Refutação, Lamento da Carpideira, Hora Roubada, Selo Súbito e Tiro de Aluguel. As 151 do pedido inicial estão entregues; as adicionais pertencem à mesma meta de 210. Cada ID tem cena e registro próprios, com dimensões e alfa medidos. Os Valores atuais determinam a cor da magia; aparência física e roupas dos personagens aprovados continuam preservadas. Os gestos e cenários não adicionam efeitos ao jogo.
+O lote e a galeria agora têm 192 artes concluídas, com 18 pendentes. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega inicial de conjuradores abaixo. Entraram Espelho da Serpente, A Dama da Noite de Fhim, Canto sem Cantor, O Sentido, Tique, Hael, Estandarte sem Exército e Feira das Máscaras. As 151 do pedido inicial estão entregues; as adicionais pertencem à mesma meta de 210. Cada ID tem cena e registro próprios, com dimensões e alfa medidos. Os Valores atuais determinam a cor da magia; aparência física e roupas dos personagens aprovados continuam preservadas. Os gestos e cenários não adicionam efeitos ao jogo.
+
+Serpente usa Sublimeyn e devolve uma criatura intacta, sem veneno. Dama usa Morbidyum e aponta o fio para um Conjurador inimigo, conforme a ativação de um dano. Canto exige pagar dois para comprar uma; Sentido exige pagar um para escolher uma entre duas. Tique compra só ao entrar, a ativação posterior gera um Arcano. Hael exige suspensão e um Arcano para curar um único alvo. Estandarte ganha um Arcano só ao entrar, além de Protegido um como custo adicional de alvo, sem escudo invulnerável. Feira permanece noturna e gera um Arcano por suspensão. Nenhuma destas cenas introduz habilidades novas.
 
 Cadeira e Saque são Findantes; Máscara, Refutação, Lamento, Hora, Selo e Tiro são Repentinas. Cadeira guarda uma carta para o próximo turno com desconto de dois; Saque compra duas e Hora compra uma, sem ressuscitar ou conceder turno extra. Máscara devolve uma criatura, sem adotar a habilidade RPG de trocar rosto e voz. Refutação anula uma carta na pilha, sem reflexão. Selo cura um alvo, com martelo no chão; Lamento e Tiro causam dois a um alvo. O projétil do Tiro é reto e alinhado ao cano e à mira.
 

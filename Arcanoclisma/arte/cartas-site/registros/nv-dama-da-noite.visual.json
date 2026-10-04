@@ -1,0 +1,66 @@
+{
+  "id": "nv-dama-da-noite",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-ab57b4a5-8332-41ae-809c-abd7c3ae11b7.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-dama-da-noite.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/a-dama-da-noite-de-fhim.png",
+  "textoRegraLido": "Suspenda: cause 1 de dano ao Conjurador inimigo.",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/a-dama-da-noite-de-fhim.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Varanda de mausoléu sobre vila funerária com jardins de romã e lago em terraços",
+  "momentoDoDia": "Crepúsculo e início da noite",
+  "clima": "Céu com estrelas e lua crescente",
+  "escala": "Divindade acima, um conjurador com livro e esfera abaixo",
+  "avaliacaoVisual": "Dama de pé inclinada, rosto dirigido ao conjurador abaixo à direita, dedos e fio verde-pálido na mesma direção. Identidade, cabelo curto, manto negro e adornos preservados, ouro limitado aos materiais e lanternas.",
+  "decisoes": [
+    "Mística Morbidyum: suspender para causar um ao Conjurador inimigo; não direcionar o efeito a um aliado.",
+    "Etéreo visual não significa keyword extra ou PNG transparente."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-dama-da-noite.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "214b0b94c7ce5b08d5ecff7c9b505940c04bec041604bd6b2711d46bcb913549",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

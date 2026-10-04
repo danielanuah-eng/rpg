@@ -1,0 +1,36 @@
+{
+  "id": "nv-feira-das-mascaras",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-9df5eccb-1d6b-4618-b7bd-f54849a78163.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nFEIRA DAS MÁSCARAS common Persona STRUCTURE3life, suspendGAINONEArcano ONLY; structuredoesnotattack. Sourceplaceidentity MUST preserve crowded NIGHTmaskmarket, blueandrustfabric stalls coral lanterns, everybodywearing masks, tinycoralmagic inair and music. NEW eyelevel walkingcamera fromthe MARKETSTREET bend, not source floatingisometric3tiercutout. Broad smoothplastered townwalls curvelefttofararch underdeepnavystars, maskstalllargeRIGHTforeground showing masksceramicanimal/abstractvariedshapes simplegoldphysical accents, vendor andcustomerboth maskedafronttrade. ONE small CORALArcanoorb overvendorpalm in foreground amidquietmatching lanterns, not allorbexplosion. A smallmaskedduomusicianswithflute/handdrum seenoffmidleftstreet, differentposition/scale thanoriginal. Around12 distinctvariedadult silhouettes stout/tall/dwarf/orc variedclosedgarmentsnavyocreivorygreenrust, ALLvisiblefacesmasked, no centralhero. BrightenfacesandstallsenoughtoreadtexturesbutNIGHTnotday, lightpools localizedwarmcoral alternatingwithcoolshade. Smoothcleanpaint architecture/fabric, littlewallgrain, generousnegative skyspaceupperthirdnotblankwhite, coherentcandid scene. Masks remainsetting notnewcardnames orpowers.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/feira-das-mascaras.png",
+  "textoRegraLido": "Suspenda: ganhe 1 de Arcano.",
+  "valoresLidos": [
+    "persona"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/feira-das-mascaras.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Rua noturna da Cidade dos Rostos, barracas de máscaras, músicos e moradores",
+  "momentoDoDia": "Noite",
+  "clima": "Céu estrelado",
+  "escala": "Vista à altura dos pedestres, barraca próxima e rua longa",
+  "avaliacaoVisual": "Arquitetura integrada substitui a ilha isolada em níveis. Máscaras, tecidos azul/ferrugem, lanternas coral e música preservam a identidade; uma esfera na mão do vendedor. Figuras variadas com máscaras.",
+  "decisoes": [
+    "Estrutura Persona suspende para ganhar um Arcano, sem atacar.",
+    "A feira é noturna conforme a descrição específica, que prevalece sobre a sugestão genérica de tarde."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

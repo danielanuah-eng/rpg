@@ -1,0 +1,36 @@
+{
+  "id": "nv-canto-sem-cantor",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-c7461804-ee5a-4479-b204-cfcfd6dc6696.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nCANTO SEM CANTOR commonPersona MYSTICA3life. Actual activation suspendandPAY2 toDRAWONE, not free orautomaticdraw. Approvedentity entirely ABSTRACT CORAL energy (#D66C61 salmon,peachlight #FFD6BF, plumshadow #703B4C): irregularcurved solidbands, suspendedsonicthreadsandbeads, noface nohumanbody NOactualinstrument ormusicalprintednotes. NEW shape flowing like threeopen asymmetrical flyingarches across room, stretchedfromupperLEFT toLOWERright, not centeredclosedrosettesamecutout. Gentlewave liftsONE closedfolioleaf from bookpile atwoodtaverncounter towardcaster'sONE glovedhand enteringfromlowerRIGHT. ExactlyTWO small spentcoralpearls on counter nearhand symbolizepaidcost, no extrapapers. Empty PERSONA INN courtyard seen frominsidebluepaintedhall, coralabstractentityprimaryoccupiesupperhalf, 3quiettables bowls mugs hangingclothshade and one mirror onplasterwall, lateafternoon mutedbluelightsandlocalwarmwindow. Nocharacteraddedtocreature, no singer/instrument anywhere inroom. Fullsmoothscene, fewlineslimited texture, no goldblue energy onentity, no rainbow, nomassbattle. Etherealopenness revealsroom BETWEENarches but overallPNGOPAQUE.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/canto-sem-cantor.png",
+  "textoRegraLido": "Suspenda e pague 2: compre 1 carta.",
+  "valoresLidos": [
+    "persona"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/canto-sem-cantor.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Salão de estalagem aberto para pátio, mesas, espelho e cortinas azuis",
+  "momentoDoDia": "Tarde",
+  "clima": "Claro",
+  "escala": "Entidade abstrata ocupa o teto próximo, mão e livro em primeiro plano",
+  "avaliacaoVisual": "Arcos e fios sonoros coral, sem pessoa ou instrumento na entidade; uma folha chega à mão e duas esferas coral ficam na mesa. Forma aberta e ambiente completo.",
+  "decisoes": [
+    "Mística Persona: suspender e pagar dois para comprar uma; não tornar a compra automática ou gratuita.",
+    "Coral integral da entidade, mantendo os vazios visíveis dentro de uma cena opaca."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

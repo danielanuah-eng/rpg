@@ -1,0 +1,36 @@
+{
+  "id": "nv-dama-da-noite",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-ab57b4a5-8332-41ae-809c-abd7c3ae11b7.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nA DAMA DA NOITE DE FHIM common Morbidyum MYSTICA with3life, suspend THIS mystica: dealONEdamage enemyCONJURADOR (not anally). Preserve approved tallmuscular adultfemale deity deepbrownskin beautifulbroadface almondambereyes withvisiblepupils, veryshortblackcurlyhair, restrained goldcrescentcrown and chains, darknightcloak tinyagedgoldstars andseamtrim, roundbronzejewelry. New pose STANDING on stone mausoleumbalcony, weightoneleg torsoleaningforward, onehandonbalconyrail andother lowered extended TWO fingers. ENTIREFACEprofile DOWNRIGHT, eyesdirectlyat ONE opponentconjurador small adultgrayhairedgreencloaked wizard withopen spellbook andwaistorb lowerRIGHT courtyard. A THIN palegreen coldwisp slides from herfingers alonga single coherentdiagonal toconju'sarm/chest makinghimflinchslightly, no gorenodeath/nodamageothers. Her ownbodyandcloakedgespartlyetherealbutopaqueSCENE, physicalgoldblackidentity activeMorbidyumPALEGREEN magic. Duskbluecemeteryvillage with stillpondterraces, terracottaarchlowplasterwalls pomegranatebranches, firststarsandcrescentmoon, 2lampslocalamber. Lowcamera frombehindopponent'sshoulder, divinebodyimposinglyupperleft, no seatedchinonhandreferencepose. Mythiccalmseverity notbigblast/bloom, no newpower orbarrier.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/a-dama-da-noite-de-fhim.png",
+  "textoRegraLido": "Suspenda: cause 1 de dano ao Conjurador inimigo.",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/a-dama-da-noite-de-fhim.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Varanda de mausoléu sobre vila funerária com jardins de romã e lago em terraços",
+  "momentoDoDia": "Crepúsculo e início da noite",
+  "clima": "Céu com estrelas e lua crescente",
+  "escala": "Divindade acima, um conjurador com livro e esfera abaixo",
+  "avaliacaoVisual": "Dama de pé inclinada, rosto dirigido ao conjurador abaixo à direita, dedos e fio verde-pálido na mesma direção. Identidade, cabelo curto, manto negro e adornos preservados, ouro limitado aos materiais e lanternas.",
+  "decisoes": [
+    "Mística Morbidyum: suspender para causar um ao Conjurador inimigo; não direcionar o efeito a um aliado.",
+    "Etéreo visual não significa keyword extra ou PNG transparente."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

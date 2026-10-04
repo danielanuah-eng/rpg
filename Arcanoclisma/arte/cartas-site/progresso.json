@@ -1,16 +1,8 @@
 {
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 184,
+  "concluidas": 192,
   "pendentes": [
-    "nv-espelho-da-serpente",
-    "nv-dama-da-noite",
-    "nv-canto-sem-cantor",
-    "nv-o-sentido",
-    "nv-tique",
-    "nv-hael",
-    "nv-estandarte-sem-exercito",
-    "nv-feira-das-mascaras",
     "nv-o-postulario",
     "nv-brejo-alto",
     "nv-patio-de-duelos",

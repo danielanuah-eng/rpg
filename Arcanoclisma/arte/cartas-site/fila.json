@@ -7217,9 +7217,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/serpente-espelho.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Serpente-Espelho: personagem/objeto do catálogo aprovado (serpente-espelho). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Serpente-Espelho como fonte ou forma do feitiço: uma criatura é puxada de volta através de um portal, sumindo do campo.",
       "ambienteOriginal": "Ambiente do Valor Sublimeyn: céus de duas pálpebras, mares de mercúrio, nuvens e torres flutuantes. Magia na cor prata-mercúrio, em fumaça e vapor que escorrem, pingam e cristalizam. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -7243,7 +7243,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-espelho-da-serpente.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-espelho-da-serpente.visual.json"
     },
     {
       "id": "nv-dama-da-noite",
@@ -7257,9 +7259,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/a-dama-da-noite-de-fhim.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "A Dama da Noite de Fhim: personagem/objeto do catálogo aprovado (a-dama-da-noite-de-fhim). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "A Dama da Noite de Fhim como presença mística pairando sobre o campo (aura, barreira ou ser divino); quem conjura mira com calma e solta a magia, que ainda está a caminho do alvo.",
       "ambienteOriginal": "Ambiente do Valor Morbidyum: cemitérios que respiram, brejos, criptas e aldeias de curandeiras. Magia na cor verde-pálido, em fumaça fria e fios que partem, como almas. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -7283,7 +7285,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-dama-da-noite.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-dama-da-noite.visual.json"
     },
     {
       "id": "nv-canto-sem-cantor",
@@ -7297,9 +7301,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/canto-sem-cantor.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Canto Sem Cantor: personagem/objeto do catálogo aprovado (canto-sem-cantor). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Canto Sem Cantor como presença mística pairando sobre o campo (aura, barreira ou ser divino); um mensageiro, pássaro ou vento traz pergaminhos e segredos até as mãos de quem conjura.",
       "ambienteOriginal": "Ambiente do Valor Persona: a cidade dos rostos, feiras de máscaras, ruas de espelhos e tavernas cheias. Magia na cor coral, em aura suave e uniforme que transborda quando a emoção é forte. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -7323,7 +7327,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-canto-sem-cantor.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-canto-sem-cantor.visual.json"
     },
     {
       "id": "nv-o-sentido",
@@ -7337,9 +7343,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/sentido.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Sentido: personagem/objeto do catálogo aprovado (sentido). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Sentido como presença mística pairando sobre o campo (aura, barreira ou ser divino); quem conjura espia o futuro: algumas imagens brilham e uma é puxada para a mão, as outras afundam.",
       "ambienteOriginal": "Ambiente do Valor Cognitium: o arquivo sem dono, bibliotecas que esquecem, observatórios. Magia na cor índigo, em véu de fumaça com falhas, como se faltassem pedaços. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -7363,7 +7369,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-o-sentido.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-o-sentido.visual.json"
     },
     {
       "id": "nv-tique",
@@ -7377,9 +7385,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/tique.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Tique: personagem/objeto do catálogo aprovado (tique). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Tique como presença mística pairando sobre o campo (aura, barreira ou ser divino); Arcano bruto jorra e se acumula em esferas de luz na cor do Valor; ao surgir, visões, páginas ou cartas de luz se abrem diante de quem conjura, revelando o que vem.",
       "ambienteOriginal": "Ambiente do Valor Eternyr: o entretempo, vilas do mesmo dia, estações paradas e relógios gigantes. Magia na cor azul-noite com riscos brancos, em aura com falhas e rastros parados no ar. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -7403,7 +7411,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-tique.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-tique.visual.json"
     },
     {
       "id": "nv-hael",
@@ -7417,9 +7427,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/hael-o-insone.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Hael, o Insone: personagem/objeto do catálogo aprovado (hael-o-insone). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Hael, o Insone como presença mística pairando sobre o campo (aura, barreira ou ser divino); uma luz de cura fecha feridas de um inimigo (criatura ou conjurador rival).",
       "ambienteOriginal": "Ambiente do Valor Alvorum: faróis sem noite, auroras, campos dourados ao amanhecer e ao entardecer. Magia na cor dourado e preto, em aura dividida, com falhas entre a parte de luz e a de sombra. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -7443,7 +7453,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-hael.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-hael.visual.json"
     },
     {
       "id": "nv-estandarte-sem-exercito",
@@ -7457,9 +7469,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/estandarte-sem-exercito.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Estandarte Sem Exército: personagem/objeto do catálogo aprovado (estandarte-sem-exercito). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Estandarte Sem Exército como presença mística pairando sobre o campo (aura, barreira ou ser divino); ao surgir, Arcano bruto jorra e se acumula em esferas de luz na cor do Valor.",
       "ambienteOriginal": "Ambiente do Valor Dominum: cidades-muralha, prisões, tronos e salões de juramento. Magia na cor roxo-sangue, em construtos de correntes, coleiras e elos. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -7483,7 +7495,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-estandarte-sem-exercito.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-estandarte-sem-exercito.visual.json"
     },
     {
       "id": "nv-feira-das-mascaras",
@@ -7499,9 +7513,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/feira-das-mascaras.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Feira das Máscaras: personagem/objeto do catálogo aprovado (feira-das-mascaras). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Feira das Máscaras como lugar vivo e em funcionamento: Arcano bruto jorra e se acumula em esferas de luz na cor do Valor. Estrutura não ataca: transmite permanência e poder.",
       "ambienteOriginal": "Ambiente do Valor Persona: a cidade dos rostos, feiras de máscaras, ruas de espelhos e tavernas cheias. Magia na cor coral, em aura suave e uniforme que transborda quando a emoção é forte. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -7517,7 +7531,9 @@
         "arquivo": "Arcanoclisma/arte/imagens/feira-das-mascaras.png",
         "descricao": "Transparent ALPHA cutout, SQUARE canvas. SIMPLE FLAT 2D animated-comic illustration. Clean expressive varied-weight ink, loose energetic accents, broad SOLID COLOR SHAPES, discrete HARD CEL SHADOW BLOCKS, printed HALFTONE DOT patches. Warm ochre/rust/browns balanced with cool muted blue/cyan/deep green. No realistic painting, 3D, gradients, airbrush or neon. Whole subject fully inside canvas with empty transparent margin, no text or watermark.\nIsolated environment VIGNETTE CUTOUT, compact irregular ground patch and structures. SKY AND EXTERIOR ARE FULLY TRANSPARENT. Environment can be wider than tall but canvas remains SQUARE. Keep the described activity and crowds when specified as small fully dressed human background figures. No opaque atmospheric backdrop or full screen landscape. Simplify details into bold graphic shapes.\nRPG catalogue 150 Feira das Máscaras. EXACT SUBJECT: Feira das Máscaras: feira noturna lotada, barracas coloridas, todo mundo de máscara, lanternas coral, música no ar. Sinais de magia coral no ar.\nMagic: flat uniform/overflowing aura with gaps, smoke wisps or hard-light constructs and printed dots. Value colors: Conflitüo rust red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal when appropriate is dark golden Bronze Arco drawn in flat tones. Non-graphic fantasy, no gore or victims, no sexualized people.",
         "nota": "o lugar vira a cena inteira da carta, em retrato vertical"
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-feira-das-mascaras.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-feira-das-mascaras.visual.json"
     },
     {
       "id": "nv-o-postulario",

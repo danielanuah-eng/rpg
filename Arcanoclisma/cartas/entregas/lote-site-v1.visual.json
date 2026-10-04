@@ -3,16 +3,8 @@
   "pedidoVersao": 2,
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 184,
+  "concluidas": 192,
   "pendentes": [
-    "nv-espelho-da-serpente",
-    "nv-dama-da-noite",
-    "nv-canto-sem-cantor",
-    "nv-o-sentido",
-    "nv-tique",
-    "nv-hael",
-    "nv-estandarte-sem-exercito",
-    "nv-feira-das-mascaras",
     "nv-o-postulario",
     "nv-brejo-alto",
     "nv-patio-de-duelos",
@@ -1503,6 +1495,70 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-tiro-de-aluguel.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-tiro-de-aluguel.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-espelho-da-serpente",
+      "nome": "Espelho da Serpente",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-espelho-da-serpente.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-espelho-da-serpente.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-dama-da-noite",
+      "nome": "A Dama da Noite de Fhim",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-dama-da-noite.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-dama-da-noite.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-canto-sem-cantor",
+      "nome": "Canto sem Cantor",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-canto-sem-cantor.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-canto-sem-cantor.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-o-sentido",
+      "nome": "O Sentido",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-o-sentido.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-o-sentido.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-tique",
+      "nome": "Tique, o Segundo a Mais",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-tique.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-tique.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-hael",
+      "nome": "Hael, o Insone",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-hael.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-hael.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-estandarte-sem-exercito",
+      "nome": "Estandarte sem Exército",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-estandarte-sem-exercito.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-estandarte-sem-exercito.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-feira-das-mascaras",
+      "nome": "Feira das Máscaras",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-feira-das-mascaras.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-feira-das-mascaras.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
     }
   ],

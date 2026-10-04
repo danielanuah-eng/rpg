@@ -1,0 +1,66 @@
+{
+  "id": "nv-tique",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-6a77620e-bbf3-4a61-9423-fbf64115f5b3.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-tique.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/tique.png",
+  "textoRegraLido": "Ao entrar: compre 1 carta. Suspenda: ganhe 1 de Arcano.",
+  "valoresLidos": [
+    "eternyr"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/tique.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Degrau de loja de brinquedos em vila do entretempo, casas e torre de relógio ao fundo",
+  "momentoDoDia": "Dia",
+  "clima": "Claro com nuvens",
+  "escala": "Criança pequena em primeiro plano, adultos distantes",
+  "avaliacaoVisual": "Tique de pé em equilíbrio brinca com relógio e uma esfera azul-noite/branca; aparência infantil e roupa fechada preservadas. Uma folha discreta no degrau representa a entrada.",
+  "decisoes": [
+    "Ao entrar compra uma; suspender gera um Arcano. A compra não se repete a cada geração de Arcano.",
+    "Manter proporções infantis e aura localizada, sem ataque ou dano."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-tique.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "f77f7b1402642083c1791c7f0e226b9691d357fded97499641b3e4987a7b1bc5",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

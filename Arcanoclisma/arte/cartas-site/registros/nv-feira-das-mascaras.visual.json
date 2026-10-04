@@ -1,0 +1,66 @@
+{
+  "id": "nv-feira-das-mascaras",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-9df5eccb-1d6b-4618-b7bd-f54849a78163.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-feira-das-mascaras.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/feira-das-mascaras.png",
+  "textoRegraLido": "Suspenda: ganhe 1 de Arcano.",
+  "valoresLidos": [
+    "persona"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/feira-das-mascaras.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Rua noturna da Cidade dos Rostos, barracas de máscaras, músicos e moradores",
+  "momentoDoDia": "Noite",
+  "clima": "Céu estrelado",
+  "escala": "Vista à altura dos pedestres, barraca próxima e rua longa",
+  "avaliacaoVisual": "Arquitetura integrada substitui a ilha isolada em níveis. Máscaras, tecidos azul/ferrugem, lanternas coral e música preservam a identidade; uma esfera na mão do vendedor. Figuras variadas com máscaras.",
+  "decisoes": [
+    "Estrutura Persona suspende para ganhar um Arcano, sem atacar.",
+    "A feira é noturna conforme a descrição específica, que prevalece sobre a sugestão genérica de tarde."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-feira-das-mascaras.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "a5ce45bebd5b1d6b3b2a4342d2561d3ccf1ecbe7e9afd8ce8cc12f862c781384",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

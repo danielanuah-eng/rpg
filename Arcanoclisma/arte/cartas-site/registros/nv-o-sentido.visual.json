@@ -1,0 +1,66 @@
+{
+  "id": "nv-o-sentido",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-a948c21d-0575-4ee1-80cc-f8f17f6384fe.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/nv-o-sentido.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/sentido.png",
+  "textoRegraLido": "Suspenda e pague 1: olhe as 2 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+  "valoresLidos": [
+    "cognitium"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/sentido.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Pomar junto de uma casa de arquivo, banco de pedra e varanda coberta por vegetação",
+  "momentoDoDia": "Manhã",
+  "clima": "Claro",
+  "escala": "Entidade próxima oferecendo uma folha a uma viajante idosa",
+  "avaliacaoVisual": "Identidade de cabelos claros, tecidos ferrugem e estrutura vazada preservada em interação nova; olhar dirigido à interlocutora e às folhas. Duas visões índigo, uma junto à mão e outra no livro, com esfera índigo na pedra.",
+  "decisoes": [
+    "Cognitium atual: suspender e pagar um, olhar duas, uma na mão e outra no fundo.",
+    "O coral físico dos tecidos não muda a afinidade para Persona; sem contágio ou debuff novo."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/nv-o-sentido.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "91a98a616bf9650f2d27c96aada39f2092316b7cb88d322be6e8d150dea2c7c0",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}
