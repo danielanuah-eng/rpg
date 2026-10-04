@@ -1,0 +1,31 @@
+{
+  "versao": 18,
+  "data": "2026-10-04",
+  "estado": "entregue",
+  "escopo": "acabamento de custo de Arcano, Grau, Arcano gerado e leitura integral dos templates",
+  "entradaExistente": "Arcanoclisma/online/public/js/mesa-legibilidade-v15.js",
+  "arquivosNovos": [
+    "Arcanoclisma/online/public/css/cartas-leitura-v18.css",
+    "Arcanoclisma/online/public/js/cartas-leitura-v18.js",
+    "Arcanoclisma/online/public/kit/vetores/aro-custo-v18.svg",
+    "Arcanoclisma/online/public/kit/vetores/aro-geracao-v18.svg",
+    "Arcanoclisma/online/public/kit/vetores/selo-grau-v18.svg"
+  ],
+  "verificacao": {
+    "colecao": 201,
+    "regrasCortadas": 0,
+    "nomesCortados": 0,
+    "telas": ["1366x768", "390x844", "844x390"],
+    "cartaLonga": "Arquivista Sem Rosto",
+    "testesContratoEfeitos": {"passaram": 5, "falharam": 0},
+    "documento": "coordenacao/site-online/ENTREGA-TEMPLATES-V18.md"
+  },
+  "achadoParaClaude": {
+    "area": "geometria visivel da pilha no tutorial",
+    "estado": "ajuste de integracao necessario",
+    "cenario": "tutorial/pilha: Olho-que-Fecha anulando Brasa de Forja",
+    "problema": "alvoRect confirmado abaixo da tela; animacao ocorre fora da janela",
+    "evidencia": "coordenacao/site-online/evidencias-v18/anulacao-pilha.jpg"
+  },
+  "pushAutorizadoPeloAutor": true
+}
