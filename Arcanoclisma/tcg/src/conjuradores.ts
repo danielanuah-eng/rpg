@@ -35,8 +35,8 @@ export const conjuradoresPorValor: ConjuradorDef[] = [
     { gatilho: { quando: 'aliadoMorre', efeitos: [{ tipo: 'comprar', valor: 1 }], soNoSeuTurno: true } }),
   // Morbidyum (cemitério, reviver) + Cognitium (mente): chama de volta quem já caiu, de qualquer cemitério.
   conj('diastaros', 'Diástaros, o Necromante Vidente', ['morbidyum', 'cognitium'], 'Preparado',
-    'Suspenda o Conjurador: ponha no seu campo um Aliado do seu cemitério ou do cemitério do oponente, pagando 2 de Arcano a mais além do custo dele.',
-    { ativacao: { custo: 0, suspende: true, efeitos: [{ tipo: 'reanimar', custoExtra: 2 }] } }),
+    'Suspenda o Conjurador: ponha no seu campo um Aliado do seu cemitério ou do cemitério do oponente, pagando 2 de Arcano a mais além do custo dele. O Aliado entra com Etéreo.',
+    { ativacao: { custo: 0, suspende: true, efeitos: [{ tipo: 'reanimar', custoExtra: 2, concessao: { palavras: ['Etéreo'] } }] } }),
   // Cognitium (mente, olhar o futuro) + Eternyr (tempo): guarda uma carta no tempo para jogá-la mais barata.
   conj('ana', 'Ana, a Cronista do Tempo', ['cognitium', 'eternyr'], 'Preparado',
     'Suspenda o Conjurador e pague 2: bana uma carta da sua mão. No seu próximo turno, você pode jogá-la custando 4 a menos.',

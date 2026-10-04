@@ -95,9 +95,17 @@
           animar(local,[{transform:transform(0,18,.25,-14),opacity:0},{transform:transform(0,-12,.95,6),opacity:.95,offset:.42},{transform:transform(0,-48,.78,14),opacity:0}],.78,.15);
           pulso(alvo,.66,.85);
         } else if (modo==='portal' || modo==='selo' || modo==='alvo') {
-          const p=novoImg(fontes[1],alvo,Math.max(tamanho*1.7,retangulo.width*1.35));
+          const lado=Math.max(tamanho*1.7,retangulo.width*1.35);
+          // A carta anulada pode estar no limite inferior da pilha lateral.
+          // Reservar espaço para o selo inteiro, além do retângulo da carta.
+          const margem=lado*.55+4;
+          const alvoVisual=visual.destino==='alvo-pilha' ? {
+            x:Math.max(margem,Math.min(innerWidth-margem,alvo.x)),
+            y:Math.max(margem,Math.min(innerHeight-margem,alvo.y)),
+          } : alvo;
+          const p=novoImg(fontes[1],alvoVisual,lado);
           animar(p,[{transform:transform(0,0,.16,-18),opacity:0},{transform:transform(0,0,1,0),opacity:.95,offset:.35},{transform:transform(0,0,modo==='portal'?.06:.8,modo==='selo'?0:12),opacity:0}],.83,.12);
-          pulso(alvo,.69,.8);
+          pulso(alvoVisual,.69,.8);
         } else {
           const p=novoImg(fontes[1],origemP,tamanho);
           const cura=modo==='cura',ressurgir=modo==='ressurgir';

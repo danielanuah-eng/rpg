@@ -3,7 +3,7 @@
 (() => {
   // A escolha confirmada pelo autor ao Claude é manter o tabuleiro inteiro.
   // Não carregar a câmera fixa/rolagem v15; só rótulos, zonas e cabeçalho.
-  for (const href of ['/css/mesa-zonas-v16.css', '/css/cartas-cabecalho-v16.css', '/css/cartas-leitura-v18.css']) {
+  for (const href of ['/css/mesa-zonas-v16.css', '/css/cartas-cabecalho-v16.css', '/css/cartas-leitura-v18.css', '/css/iconografia-v19.css']) {
     if (document.querySelector(`link[href="${href}"]`)) continue;
     const css = document.createElement('link');
     css.rel = 'stylesheet'; css.href = href; document.head.append(css);
@@ -11,6 +11,10 @@
   if (!document.querySelector('script[data-cartas-leitura-v18]')) {
     const leitura = document.createElement('script'); leitura.src = '/js/cartas-leitura-v18.js';
     leitura.dataset.cartasLeituraV18 = ''; document.head.append(leitura);
+  }
+  if (!document.querySelector('script[data-iconografia-v19]')) {
+    const simbolos = document.createElement('script'); simbolos.src = '/js/iconografia-v19.js';
+    simbolos.dataset.iconografiaV19 = ''; document.head.append(simbolos);
   }
   const tela = document.getElementById('tela');
   if (!tela) return;

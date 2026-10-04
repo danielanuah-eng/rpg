@@ -1,0 +1,8 @@
+/* Máscaras vetoriais herdam a cor real do texto, inclusive nas páginas escuras. */
+.icone-mecanica.icone-mask-v19 {
+  background-color: currentColor;
+  -webkit-mask: var(--icone-v19) center / contain no-repeat;
+  mask: var(--icone-v19) center / contain no-repeat;
+}
+.icone-mask-v19 > img { display: none; }
+.mecanica-termo-v19 { white-space: nowrap; }

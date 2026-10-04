@@ -139,6 +139,10 @@ export function usarEdicoes(v) {
     // mudou a mecânica e o autor não escreveu o texto: texto gerado a partir da mecânica
     if (cat.cartas[id] && !('texto' in p) && CAMPOS_TEXTO_AUTOMATICO.some((k) => k in p)) cat.cartas[id] = { ...cat.cartas[id], texto: textoCarta(cat.cartas[id]) };
   }
+  for (const [id, p] of Object.entries(dados.conjuradores)) {
+    // mudou o poder e o autor não escreveu a habilidade: texto gerado a partir do poder (Editor de Conjuradores, 04/10)
+    if (cat.conjuradores[id] && !('habilidade' in p) && 'poder' in p) cat.conjuradores[id] = { ...cat.conjuradores[id], habilidade: textoPoder(cat.conjuradores[id].poder) };
+  }
   Object.assign(DADOS.catalogo.cartas, cat.cartas);
   Object.assign(DADOS.catalogo.conjuradores, cat.conjuradores);
   CONJS.splice(0, CONJS.length, ...Object.values(DADOS.catalogo.conjuradores));

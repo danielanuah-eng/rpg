@@ -100,7 +100,7 @@ export function destruir(custo: number, e: Extras = {}): CartaDef {
     ...comum(`base-destruir-c${custo}${e.repentina ? '-repentina' : ''}`, `Destruir (custo ${custo}${e.repentina ? ', repentina' : ''})`, custo, e),
     tipo: 'temporaria',
     efeitos: [ef],
-    texto: 'Destrua um Aliado ou Mística.',
+    texto: 'Destrua um Aliado, Mística ou Estrutura.',
   };
 }
 

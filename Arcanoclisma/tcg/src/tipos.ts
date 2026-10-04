@@ -10,17 +10,32 @@ export type AlvoEfeito = 'escolhido' | 'escolhidoAliado' | 'conjuradorInimigo' |
 
 // ---------- construtor de efeitos (pedido do autor, 04/10) ----------
 /** Quando uma habilidade acontece. */
-export type Quando = 'jogar' | 'entrar' | 'ativada' | 'alvo' | 'grau' | 'atacar' | 'bloquear' | 'cemiterio' | 'banimento' | 'danoConjurador';
+export type Quando = 'jogar' | 'entrar' | 'ativada' | 'alvo' | 'grau' | 'atacar' | 'bloquear' | 'cemiterio' | 'banimento' | 'danoConjurador'
+  /** Só de Conjurador (Editor, 04/10): um Aliado seu entra em campo / vai do campo para o cemitério / causa dano de combate ao Conjurador inimigo. */
+  | 'aliadoEntra' | 'aliadoMorre' | 'aliadoDanoConjurador';
 /** Custo de uma habilidade ativada ("virar/pagar"). */
 export interface CustoHabilidade { suspender?: boolean; arcano?: number; vida?: number; descartar?: number; grau?: number }
 /** Habilidade montada no Editor: condição + efeitos (que se acumulam, em ordem). */
-export interface Habilidade { quando: Quando; custo?: CustoHabilidade; efeitos: Efeito[]; /** Gatilho só na primeira vez em cada turno. */ umaVezPorTurno?: boolean }
+export interface Habilidade {
+  quando: Quando; custo?: CustoHabilidade; efeitos: Efeito[];
+  /** Gatilho só na primeira vez em cada turno. */ umaVezPorTurno?: boolean;
+  /** Gatilho só no turno do dono (Editor de Conjuradores, 04/10). */ soNoSeuTurno?: boolean;
+  /** Ativada de Conjurador com velocidade Repentina: a qualquer momento, com prioridade (as demais: só na sua Principal, pilha vazia). */ repentina?: boolean;
+  /** Requisito da habilidade ativada: Grau mínimo e Arcano a mais (soma ao custo). */ requisito?: Requisito;
+}
 /** Proteção mágica: quem mira esta carta (com carta ou ativação do oponente) paga isto; sem poder pagar, não pode mirar. */
 export interface Protecao { arcano?: number; vida?: number; descartar?: number; grauParaCemiterio?: number; grauMin?: number }
 /** Para onde vão as cartas escolhidas. */
 export type Destino = 'mao' | 'roubar' | 'grau' | 'cemiterio' | 'fundo' | 'topo' | 'campo' | 'banimento' | 'nada';
 export type TipoAlvoCampo = 'aliado' | 'mistica' | 'estrutura' | 'conjurador' | 'equipamento';
-export type AcaoCampo = 'dano' | 'curar' | 'destruir' | 'devolver' | 'paraBaralho' | 'naoAtaca' | 'suspender' | 'levantar' | 'aumentarAtaque' | 'aumentarVida';
+/**
+ * Concessão (pedido do autor, 04/10): palavras-chave e/ou condições dadas a uma carta em campo, definidas nos dados.
+ * palavras: qualquer palavra-chave que o motor entende ("Etéreo", "Protegido 2", "Reanimum"...); ataque/vida: modificador
+ * permanente enquanto está em campo (pode ser negativo); turnos: fica X turnos do seu controlador em campo (conta o da
+ * entrada); destino: para onde vai ao sair por turnos (padrão: cemitério).
+ */
+export interface Concessao { palavras?: string[]; /** As palavras duram N turnos do dono da carta (o turno em que são dadas conta como o 1º); vazio = permanentes. */ palavrasTurnos?: number; ataque?: number; vida?: number; turnos?: number; destino?: 'cemiterio' | 'banimento' | 'baralho' | 'mao' }
+export type AcaoCampo = 'conceder' | 'dano' | 'curar' | 'destruir' | 'devolver' | 'paraBaralho' | 'naoAtaca' | 'suspender' | 'levantar' | 'aumentarAtaque' | 'aumentarVida';
 
 /**
  * Requisito de uma linha de efeito, habilidade ou ação (pedido do autor, 04/10), definido no Editor:
@@ -56,7 +71,7 @@ type EfeitoBase =
   /** Rodada 7. Bane (zona de banimento) uma carta da sua mão; no seu próximo turno você pode jogá-la custando `desconto` a menos. Alvo: carta da mão. */
   | { tipo: 'banirDaMao'; desconto: number }
   /** Rodada 7. Põe no seu campo um Aliado do cemitério de qualquer jogador; você paga `custoExtra` a mais, além do custo dele. Alvo: Aliado em um cemitério. */
-  | { tipo: 'reanimar'; custoExtra: number }
+  | { tipo: 'reanimar'; custoExtra: number; concessao?: Concessao }
   /** Rodada 7. Neste turno você pode jogar do seu cemitério uma carta cujo efeito anule outra, pagando o custo dela; ao resolver ela é banida. */
   | { tipo: 'permitirAnularDoCemiterio' }
   /** Olhe as N cartas do topo do seu baralho, ponha `pegar` delas na mão e o resto no fundo do baralho. */
@@ -64,7 +79,7 @@ type EfeitoBase =
   /** Itens (03/10, noite). Foco Arcano: neste turno, o próximo efeito de dano ou cura de uma Temporária sua tem +N. */
   | { tipo: 'potenciaMagia'; valor: number }
   /** Itens (03/10, noite). Põe no seu campo uma ficha (carta do catálogo que não vai em baralho, ex.: Espírito Invocado). */
-  | { tipo: 'invocar'; carta: string; /** Nome para o texto da carta. */ nome?: string }
+  | { tipo: 'invocar'; carta: string; /** Nome para o texto da carta. */ nome?: string; /** A ficha já entra com isto. */ concessao?: Concessao }
   /** Itens (03/10, noite). Seu Conjurador ganha +N de Ataque neste turno. */
   | { tipo: 'ataqueConjuradorTurno'; valor: number }
   /** Construtor (04/10). Um jogador descarta N (você ou o oponente); quem descarta escolhe, ou ao acaso. */
@@ -76,9 +91,9 @@ type EfeitoBase =
   /** Construtor. Olha a mão do oponente e escolhe `pegar` cartas para `destino` (cemitério, fundo do baralho, roubar). */
   | { tipo: 'olharMao'; pegar: number; destino: Destino }
   /** Construtor. Põe em campo (sem pagar) até N cartas da zona, dos tipos e custo máximo indicados. */
-  | { tipo: 'jogarDe'; de: 'cemiterio' | 'mao' | 'baralho' | 'banimento'; valor: number; tipos?: TipoCarta[]; custoMax?: number }
+  | { tipo: 'jogarDe'; de: 'cemiterio' | 'mao' | 'baralho' | 'banimento'; valor: number; tipos?: TipoCarta[]; custoMax?: number; concessao?: Concessao }
   /** Construtor. Afeta o campo: um alvo escolhido ou todos de um lado, dos tipos indicados. */
-  | { tipo: 'campo'; acao: AcaoCampo; valor?: number; alcance: 'alvo' | 'todos'; lado: 'inimigo' | 'proprio' | 'ambos'; tipos: TipoAlvoCampo[]; duracao?: 'turno' | 'permanente'; onde?: 'topo' | 'fundo' | 'embaralhar' }
+  | { tipo: 'campo'; acao: AcaoCampo; valor?: number; alcance: 'alvo' | 'todos'; lado: 'inimigo' | 'proprio' | 'ambos'; tipos: TipoAlvoCampo[]; duracao?: 'turno' | 'permanente'; onde?: 'topo' | 'fundo' | 'embaralhar'; /** Ação 'conceder'. */ concessao?: Concessao }
   /** Construtor. Seu Conjurador perde N de Vida (custo de outro efeito, por exemplo). */
   | { tipo: 'perderVida'; valor: number };
 
@@ -214,7 +229,22 @@ export interface PoderConjurador {
   primeiraRepentinaMaisBarata?: number;
   /** Passiva: seus Aliados têm Protegido N. */
   aliadosProtegidos?: number;
+  /** Passiva (Editor, 04/10): você pode jogar cartas destas zonas, pagando o custo normal. */
+  permiteJogarDe?: PermissaoJogar[];
+  /**
+   * Editor de Conjuradores (04/10): habilidades no mesmo formato das cartas (construtor de efeitos), além da ativação e do
+   * gatilho acima. Condições: ativada (com `repentina`), aliadoEntra/aliadoMorre/aliadoDanoConjurador (com `umaVezPorTurno` e
+   * `soNoSeuTurno`) e as do próprio Conjurador: atacar, bloquear, alvo, danoConjurador. Ativar: comando `ativar` com `habilidade`.
+   */
+  habilidades?: Habilidade[];
 }
+
+/**
+ * Permissão contínua do Conjurador (Editor, 04/10): pode jogar do seu cemitério ou banimento cartas dos tipos indicados
+ * (padrão: qualquer uma) e custo até `custoMax`, pagando o custo normal, na velocidade normal da carta. `banir`: a carta
+ * jogada assim vai para o banimento ao resolver ou ao sair do campo (como o Reanimum). `umaVezPorTurno`: só uma carta por turno.
+ */
+export interface PermissaoJogar { de: 'cemiterio' | 'banimento'; tipos?: TipoCarta[]; custoMax?: number; banir?: boolean; umaVezPorTurno?: boolean }
 
 export interface ConjuradorDef {
   id: string;
@@ -268,6 +298,18 @@ export interface Inst {
   naoAtacaAte?: number;
   /** Habilidades "uma vez por turno" já usadas: índice → turno. */
   usosHab?: Record<number, number>;
+  /** Concessão: palavras-chave extras enquanto está em campo. */
+  palavrasExtra?: string[];
+  /** Concessão com palavras por N turnos (palavrasTurnos): somem no Final do último turno. */
+  palavrasTemp?: Array<{ palavras: string[]; restantes: number; conta?: number }>;
+  /** Concessão: turnos do controlador que ainda faltam (conta o atual); some no Final do último. Visível para a tela. */
+  turnosRestantes?: number;
+  /** Concessão: para onde vai quando o tempo acaba. */
+  destinoSaida?: 'cemiterio' | 'banimento' | 'baralho' | 'mao';
+  /** Concessão com tempo dada no turno do oponente: esse turno (global) conta como o 1º. */
+  turnoEntradaConta?: number;
+  /** Jogada pelo Reanimum: ao sair do campo vai para o banimento. */
+  banirAoSair?: boolean;
 }
 
 /** Todo dano é dano; só muda a fonte. Efeitos podem ser anulados; combate não. */
@@ -288,6 +330,8 @@ export interface HabUsos {
   potencia: number;
   /** Ataque extra do Conjurador neste turno. */
   ataqueExtra: number;
+  /** Permissões do Conjurador (`permiteJogarDe` uma vez por turno) já usadas neste turno: índices. */
+  permissoes?: number[];
 }
 
 export interface ZonasJogador {
@@ -319,7 +363,7 @@ export type Pendencia =
   | { tipo: 'pagarAnulacao'; jogador: Jogador; custo: number; item: ItemPilha }
   | { tipo: 'escolherDoTopo'; jogador: Jogador; cartas: string[]; pegar: number }
   /** Construtor (04/10): escolher cartas de uma lista e mandá-las a um destino; o resto (se saiu da zona) vai para `resto`. */
-  | { tipo: 'escolherCartas'; jogador: Jogador; cartas: string[]; quantidade: number; destino: Destino; resto?: Destino; titulo: string; depois?: Continuacao; /** Escolha de alvo: aplica este efeito em cada carta escolhida. */ aplicar?: { efeito: Efeito; dono: Jogador } };
+  | { tipo: 'escolherCartas'; jogador: Jogador; cartas: string[]; quantidade: number; destino: Destino; resto?: Destino; titulo: string; depois?: Continuacao; /** Escolha de alvo: aplica este efeito em cada carta escolhida. */ aplicar?: { efeito: Efeito; dono: Jogador }; /** Concessão dada às cartas que entram em campo por esta escolha. */ concessao?: Concessao };
 
 /** Efeitos que esperam uma escolha terminar para continuar (efeitos acumulados). */
 export interface Continuacao { efeitos: Efeito[]; dono: Jogador; alvo?: string }

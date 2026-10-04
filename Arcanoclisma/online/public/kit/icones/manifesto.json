@@ -1,0 +1,126 @@
+{
+  "requisito-grau": {
+    "arquivo": "/kit/icones/requisito-grau.svg",
+    "okGpt": true
+  },
+  "requisito-arcano": {
+    "arquivo": "/kit/icones/requisito-arcano.svg",
+    "okGpt": true
+  },
+  "suspender": {
+    "arquivo": "/kit/icones/suspender.svg",
+    "okGpt": true
+  },
+  "levantar": {
+    "arquivo": "/kit/icones/levantar.svg",
+    "okGpt": true
+  },
+  "pagar-arcano": {
+    "arquivo": "/kit/icones/pagar-arcano.svg",
+    "okGpt": true
+  },
+  "ganhar-arcano": {
+    "arquivo": "/kit/icones/ganhar-arcano.svg",
+    "okGpt": true
+  },
+  "enviar-arcano": {
+    "arquivo": "/kit/icones/enviar-arcano.svg",
+    "okGpt": true
+  },
+  "grau": {
+    "arquivo": "/kit/icones/grau.svg",
+    "okGpt": true
+  },
+  "comprar": {
+    "arquivo": "/kit/icones/comprar.svg",
+    "okGpt": true
+  },
+  "olhar-topo": {
+    "arquivo": "/kit/icones/olhar-topo.svg",
+    "okGpt": true
+  },
+  "fundo-baralho": {
+    "arquivo": "/kit/icones/fundo-baralho.svg",
+    "okGpt": true
+  },
+  "descartar": {
+    "arquivo": "/kit/icones/descartar.svg",
+    "okGpt": true
+  },
+  "dano": {
+    "arquivo": "/kit/icones/dano.svg",
+    "okGpt": true
+  },
+  "curar": {
+    "arquivo": "/kit/icones/curar.svg",
+    "okGpt": true
+  },
+  "destruir": {
+    "arquivo": "/kit/icones/destruir.svg",
+    "okGpt": true
+  },
+  "devolver": {
+    "arquivo": "/kit/icones/devolver.svg",
+    "okGpt": true
+  },
+  "banir": {
+    "arquivo": "/kit/icones/banir.svg",
+    "okGpt": true
+  },
+  "cemiterio": {
+    "arquivo": "/kit/icones/cemiterio.svg",
+    "okGpt": true
+  },
+  "anular": {
+    "arquivo": "/kit/icones/anular.svg",
+    "okGpt": true
+  },
+  "invocar": {
+    "arquivo": "/kit/icones/invocar.svg",
+    "okGpt": true
+  },
+  "ao-entrar": {
+    "arquivo": "/kit/icones/ao-entrar.svg",
+    "okGpt": true
+  },
+  "atacar": {
+    "arquivo": "/kit/icones/atacar.svg",
+    "okGpt": true
+  },
+  "bloquear": {
+    "arquivo": "/kit/icones/bloquear.svg",
+    "okGpt": true
+  },
+  "repentina": {
+    "arquivo": "/kit/icones/repentina.svg",
+    "okGpt": true
+  },
+  "findante": {
+    "arquivo": "/kit/icones/findante.svg",
+    "okGpt": true
+  },
+  "proficiente": {
+    "arquivo": "/kit/icones/proficiente.svg",
+    "okGpt": true
+  },
+  "etereo": {
+    "arquivo": "/kit/icones/etereo.svg",
+    "okGpt": true
+  },
+  "protegido": {
+    "arquivo": "/kit/icones/protegido.svg",
+    "okGpt": true
+  },
+  "economia": {
+    "arquivo": "/kit/icones/economia.svg",
+    "okGpt": true
+  },
+  "cataclisma": {
+    "arquivo": "/kit/icones/cataclisma.svg",
+    "okGpt": true
+  },
+  "uso-unico": {
+    "arquivo": "/kit/icones/uso-unico.svg",
+    "okGpt": true
+  }
+}

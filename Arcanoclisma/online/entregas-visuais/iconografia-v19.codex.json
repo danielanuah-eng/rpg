@@ -1,0 +1,450 @@
+{
+  "tarefaId": "iconografia-mecanicas-v1",
+  "versao": 19,
+  "pedidoVersao": 2,
+  "estado": "entregue",
+  "total": 31,
+  "manifesto": "Arcanoclisma/online/public/kit/icones/manifesto.json",
+  "gerador": "Arcanoclisma/arena/scripts/gerar-iconografia-v19.mjs",
+  "arquivos": [
+    {
+      "id": "requisito-grau",
+      "nome": "Requisito de Grau",
+      "arquivo": "/kit/icones/requisito-grau.svg",
+      "sha256": "a92ee64a96fccc5c6abebd24bde5594077c0ac699a319ba8f40b8d01b974186c",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "requisito-arcano",
+      "nome": "Custo de Arcano da linha",
+      "arquivo": "/kit/icones/requisito-arcano.svg",
+      "sha256": "ba17cf08ddef406cb89e1eccbd3b922aedfb3cf9b192e107d47826e8325d4c45",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "suspender",
+      "nome": "Suspender",
+      "arquivo": "/kit/icones/suspender.svg",
+      "sha256": "c0a927995ad7c9e6d64150d14416f47794f6745f360af6863423e4fc0ad65249",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "levantar",
+      "nome": "Levantar",
+      "arquivo": "/kit/icones/levantar.svg",
+      "sha256": "1ce70fb66daf9bef4eb67c07ce58ba81f9905dcdf21cea4c81a2080ab61916da",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "pagar-arcano",
+      "nome": "Pagar Arcano",
+      "arquivo": "/kit/icones/pagar-arcano.svg",
+      "sha256": "4c46ce20292924579dae4152c59b1711841312fc3718e14c3def0c168655e193",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "ganhar-arcano",
+      "nome": "Ganhar Arcano",
+      "arquivo": "/kit/icones/ganhar-arcano.svg",
+      "sha256": "756021691fb56e34c1c94cc29d207571540e9c689b2bd53799f18a5a7b6ff833",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "enviar-arcano",
+      "nome": "Enviar ao Arcano",
+      "arquivo": "/kit/icones/enviar-arcano.svg",
+      "sha256": "bac8f1c639808da50dcc11dded8de58491ff3d7f790f6b6658ce421b31b11b54",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "grau",
+      "nome": "Grau",
+      "arquivo": "/kit/icones/grau.svg",
+      "sha256": "434bf0d579ce9820698db16404cbd8a36e345eaad7c6c259aa44010f858d2235",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "comprar",
+      "nome": "Comprar",
+      "arquivo": "/kit/icones/comprar.svg",
+      "sha256": "e3537161ec01016bd0d1e16940791685659395e7c31ff988f93d45dbd1fe15ce",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "olhar-topo",
+      "nome": "Olhar o topo",
+      "arquivo": "/kit/icones/olhar-topo.svg",
+      "sha256": "12f2d49df10b4d1d2eae04f5d470c92d3ce02616c714dc5798d5ffa43e9504ad",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "fundo-baralho",
+      "nome": "Fundo do baralho",
+      "arquivo": "/kit/icones/fundo-baralho.svg",
+      "sha256": "7c6c215785593fe9e79b4b1672a5067e2bb325ca7b243cd1e278312ae9171bc4",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "descartar",
+      "nome": "Descartar",
+      "arquivo": "/kit/icones/descartar.svg",
+      "sha256": "adaebf1e01e3035d00854c4cbf7248d6ce13250f230d20bb60d88b6b4dc948c3",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "dano",
+      "nome": "Causar dano",
+      "arquivo": "/kit/icones/dano.svg",
+      "sha256": "2eafe6fa669f9de26b59d57fdbda08b8e94da76355803e3dcfc13520f727a52c",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "curar",
+      "nome": "Curar",
+      "arquivo": "/kit/icones/curar.svg",
+      "sha256": "9e53c4372cadf478da65d98ae3320bdaad6ffae839a7f93b9241de25bf712c7b",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "destruir",
+      "nome": "Destruir",
+      "arquivo": "/kit/icones/destruir.svg",
+      "sha256": "8c385bbeda696b4db79096cd02776994f2e14791bb517e57f14e985dba9df1c8",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "devolver",
+      "nome": "Devolver à mão",
+      "arquivo": "/kit/icones/devolver.svg",
+      "sha256": "35ff09bbf83ca2a38bc8e477b7b946b48d4e3bde693eeee14105f54cc11e3a50",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "banir",
+      "nome": "Banir",
+      "arquivo": "/kit/icones/banir.svg",
+      "sha256": "dcfc1c719770722222a3e2f03a7b7bf681c803e6928bd8506e2f994af8823966",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "cemiterio",
+      "nome": "Cemitério",
+      "arquivo": "/kit/icones/cemiterio.svg",
+      "sha256": "c69271c57fc41ace29a86420a31995485ebf68647764a6bcc8c549e39ed51e26",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "anular",
+      "nome": "Anular",
+      "arquivo": "/kit/icones/anular.svg",
+      "sha256": "226d1dcda89e54f7b799fb6bdc01bd34c6de64d31ad235ba02324def192a068a",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "invocar",
+      "nome": "Invocar ficha",
+      "arquivo": "/kit/icones/invocar.svg",
+      "sha256": "60f56922a2b1469ac299c34b6d63dd67f7bad3da4fdb0a6b46f7e2de0c446b87",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "ao-entrar",
+      "nome": "Ao entrar",
+      "arquivo": "/kit/icones/ao-entrar.svg",
+      "sha256": "c24a3dfd7b90962432fec91df7e99e9d01ac87a3377944ddcd97b6c780e6edf8",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "atacar",
+      "nome": "Atacar",
+      "arquivo": "/kit/icones/atacar.svg",
+      "sha256": "3afa69ba0fbe8994a57e5f8fdecf05248e8b41e24c67c7bc96fc36fc652857fe",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "bloquear",
+      "nome": "Bloquear",
+      "arquivo": "/kit/icones/bloquear.svg",
+      "sha256": "9009762d00e8c0e76f6cc09caf3e02df74eb9ec9e3ade178576761398efe6378",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "repentina",
+      "nome": "Repentina",
+      "arquivo": "/kit/icones/repentina.svg",
+      "sha256": "fbbadb63dba4071305983bea00778a64394a04625e392ec67cc634be130243a3",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "findante",
+      "nome": "Findante",
+      "arquivo": "/kit/icones/findante.svg",
+      "sha256": "dbeb698284b9c6be4d744b09c3aa6b7e6e58b83fb70d0e4a09b13b6fd85fbf5b",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "proficiente",
+      "nome": "Proficiente",
+      "arquivo": "/kit/icones/proficiente.svg",
+      "sha256": "bfbbb4604a05db5b3d78ffaeddf1574f08d327840003323e19442fe49c98f11f",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "etereo",
+      "nome": "Etéreo",
+      "arquivo": "/kit/icones/etereo.svg",
+      "sha256": "69192e75cf86f01675a504f4a78964c80c5971f596446f7e72879153702cafdc",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "protegido",
+      "nome": "Protegido",
+      "arquivo": "/kit/icones/protegido.svg",
+      "sha256": "ecbf0fa9b22286b6cd72201da561a431fa44abd2696125405fa376d3347cba2d",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "economia",
+      "nome": "Economia",
+      "arquivo": "/kit/icones/economia.svg",
+      "sha256": "04843dd763e4eabb9d6db8a2792b8523928bdbb117e41db5098f2694421246b9",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "cataclisma",
+      "nome": "Cataclisma",
+      "arquivo": "/kit/icones/cataclisma.svg",
+      "sha256": "e821d60305c97c9f0037655d9c932101870c2d834c5e317e4948ffa151fb835c",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "uso-unico",
+      "nome": "Uso único",
+      "arquivo": "/kit/icones/uso-unico.svg",
+      "sha256": "21f9ccd1d09bb72003ff5387e9995b9127addd8a3c7e5fa73c1e8bb8a4888b2c",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    }
+  ],
+  "decisoes": [
+    "Uso único tem frasco riscado e uma marca pictográfica, sem algarismo; respeita o pedido de não embutir números.",
+    "Números dos requisitos e poderes permanecem no texto editável do jogo.",
+    "SVG externo em img não herda a cor do texto; o adaptador visual de máscara v19 aplica currentColor ao elemento decorativo."
+  ]
+}

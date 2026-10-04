@@ -57,6 +57,20 @@ test('o feixe reto se estende da origem ao alvo, em vez de voar como ícone',asy
   assert.ok(feixe);assert.equal(parseFloat(feixe.style.width),Math.hypot(500,260));
   assert.match(feixe.style.transform,/rotate\(/);assert.equal(feixe.quadros[1].clipPath,'inset(-50% 0 -50% 0)');
 });
+test('o selo de anulação reserva margem para aparecer inteiro na borda da pilha',async()=>{
+  registro=[];
+  const camada=new No();
+  const e=ArcanoclismaMagias.conjurar({camada,visual:manifesto['bal-anular-c3-repentina'],origem,destinos:[{left:1150,top:770,width:100,height:40}]});
+  assert.equal((await e.finished).realizado,true);
+  const alvos=registro.filter(r=>r.tag==='img'&&parseFloat(r.style.left)>600);
+  assert.equal(alvos.length,2);
+  for(const r of alvos){
+    const x=parseFloat(r.style.left),y=parseFloat(r.style.top),w=parseFloat(r.style.width),h=parseFloat(r.style.height);
+    assert.ok(x-w/2>=4&&x+w/2<=innerWidth-4);
+    assert.ok(y-h/2>=4&&y+h/2<=innerHeight-4);
+  }
+  assert.equal(camada.children.length,0);
+});
 test('redução de movimento, geometria inválida e cancelamento não deixam efeitos',async()=>{
   reduzido=true;const n=leituras;assert.equal((await tocar(manifesto['base-dano-c2']).finished).realizado,false);assert.equal(leituras,n);reduzido=false;
   const camada=new No();const invalido=ArcanoclismaMagias.conjurar({camada,visual:manifesto['base-dano-c2'],origem,destinos:[null]});assert.equal((await invalido.finished).realizado,false);assert.equal(camada.children.length,0);

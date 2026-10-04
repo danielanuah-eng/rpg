@@ -2,7 +2,7 @@
 // e a mecânica em JSON). As mudanças vão para um rascunho que já vale nesta página (dá para testar contra o bot);
 // "Salvar no site" grava uma versão nova no D1 e ela passa a valer para todos (partidas online já começadas
 // continuam com a versão do início). Mesmo formato do editor do app de testes (tcg/data/edicoes.json).
-import { $, $$, esc, api, DADOS, BASE, EDICOES, VALOR, TIPO, textoCarta, sessao, avisar, janela, local, usarEdicoes, carregarEdicoes, dataCurta } from './base.js';
+import { $, $$, esc, api, DADOS, BASE, EDICOES, VALOR, TIPO, textoCarta, textoPoder, sessao, avisar, janela, local, usarEdicoes, carregarEdicoes, dataCurta } from './base.js';
 import { desenharCarta, modeloCarta, modeloConjurador } from './carta.js';
 import { edicoesVazias } from '/jogo/edicoes.js';
 import { descEfeito } from '/jogo/textos.js';
@@ -54,6 +54,11 @@ function linhasComRequisito(mec, conjur) {
   if (conjur) {
     if (mec.poder?.ativacao) { l.push({ cam: 'poder.ativacao', rot: 'Habilidade ativada (inteira)', req: mec.poder.ativacao.requisito }); efs(mec.poder.ativacao.efeitos, 'poder.ativacao.efeitos', 'Habilidade, efeito'); }
     efs(mec.poder?.gatilho?.efeitos, 'poder.gatilho.efeitos', 'Gatilho, efeito');
+    // habilidades montadas no construtor (Editor de Conjuradores, 04/10)
+    (mec.poder?.habilidades ?? []).forEach((h, k) => {
+      if (h.quando === 'ativada') l.push({ cam: `poder.habilidades.${k}`, rot: `Habilidade ${k + 1} (inteira)`, req: h.requisito });
+      efs(h.efeitos, `poder.habilidades.${k}.efeitos`, `Habilidade ${k + 1}, efeito`);
+    });
   } else {
     efs(mec.efeitos, 'efeitos', 'Efeito');
     efs(mec.aoEntrar, 'aoEntrar', 'Ao entrar');
@@ -148,7 +153,7 @@ export async function telaEditor(tela, partes, ctx) {
     form.innerHTML = `<div class="titulo-secao"><h2>${esc(c.nome)}</h2><span class="etiqueta">${conjur ? 'Conjurador' : esc(TIPO[c.categoriaItem ?? c.tipo] ?? c.tipo)} · ${esc(id)}</span></div>
       <label class="campo">Nome<input type="text" data-f="nome" value="${esc(c.nome)}"></label>
       <label class="campo">${conjur ? 'Habilidade (texto)' : 'Texto de regras'}<textarea data-f="${conjur ? 'habilidade' : 'texto'}">${esc(conjur ? c.habilidade : c.texto)}</textarea></label>
-      ${conjur ? '' : '<div class="linha-botoes"><button class="botao peq" data-texto-auto>Gerar o texto a partir da mecânica</button></div>'}
+      <div class="linha-botoes"><button class="botao peq" data-texto-auto>Gerar o texto a partir da mecânica</button></div>
       <div class="campo"><span>Arte</span><div class="editor-arte"><img src="/arte/${esc(arteAtual)}.webp" alt=""><div><b>${esc(arteAtual ?? 'sem arte')}</b><div class="linha-botoes"><button class="botao peq" data-trocar-arte>Trocar arte</button></div></div></div></div>
       <label class="campo">Raridade (só aparência; você decide)<select data-raridade>${[['', 'Sem raridade'], ['comum', 'Comum'], ['incomum', 'Incomum'], ['rara', 'Rara'], ['lendaria', 'Lendária']].map(([v, r]) => `<option value="${v}" ${(rascunho.raridades[conjur ? 'conjuradores' : 'cartas'][id] ?? '') === v ? 'selected' : ''}>${r}</option>`).join('')}</select></label>
       <div class="editor-nums">${(conjur ? NUM_CONJ : NUM_CARTA).map(([k, r]) => numCampo(k, r, c[k])).join('')}</div>
@@ -162,19 +167,22 @@ export async function telaEditor(tela, partes, ctx) {
         : `<label class="campo">Velocidade<select data-f="velocidade"><option value="findante" ${c.velocidade === 'findante' ? 'selected' : ''}>Findante (na sua fase principal)</option><option value="repentina" ${c.velocidade === 'repentina' ? 'selected' : ''}>Repentina (a qualquer momento)</option></select></label>
            <label class="campo">Palavras-chave (separadas por vírgula)<input type="text" data-f="palavrasChave" value="${esc((c.palavrasChave ?? []).join(', '))}" placeholder="Proficiente, Etéreo"></label>
            <label class="campo">Subtipos (separados por vírgula)<input type="text" data-f="subtipos" value="${esc((c.subtipos ?? []).join(', '))}"></label>`}
-      <div class="campo"><span>Construtor de efeitos <span class="peq">(condição + efeitos que se acumulam; vira a mecânica real e o texto da carta)</span></span><div class="editor-construtor" data-construtor></div></div>
-      <label class="campo">Mecânica em JSON (${conjur ? 'poder' : MEC_CARTA.join(', ')})<textarea class="editor-json" data-json spellcheck="false">${esc(JSON.stringify(mec, null, 2))}</textarea></label>
+      <div class="campo"><span>Construtor de efeitos <span class="peq">${conjur ? '(habilidades ativadas e gatilhos com efeitos que se acumulam, passivas e permissões; vira o poder real e o texto da habilidade)' : '(condição + efeitos que se acumulam; vira a mecânica real e o texto da carta)'}</span></span><div class="editor-construtor" data-construtor></div></div>
+      <label class="campo">Mecânica em JSON (${conjur ? 'poder; alternativa avançada ao construtor' : MEC_CARTA.join(', ')})<textarea class="editor-json" data-json spellcheck="false">${esc(JSON.stringify(mec, null, 2))}</textarea></label>
       <p class="peq editor-json-erro" data-json-erro></p>
       <div class="campo"><span>Requisitos por linha (Grau mínimo e Arcano a pagar; sem cumprir, a linha não acontece)</span><div class="editor-req" data-req-lista></div></div>
       <p class="peq editor-auto" data-auto-aviso></p>
       <div class="linha-botoes"><button class="botao perigo peq" data-desfazer>Desfazer as mudanças desta ${conjur ? 'Conjurador' : 'carta'}</button></div>`;
-    montarConstrutor($('[data-construtor]', form), mec, {
-      conjur, tipoCarta: c.tipo, form,
+    construtor = montarConstrutor($('[data-construtor]', form), mec, {
+      conjur, tipoCarta: c.tipo, form, fichas: Object.values(DADOS.catalogo.cartas).filter((x) => x.ficha).map((x) => [x.id, x.nome]),
       aoMudar: (novo) => { $('[data-json]', form).value = JSON.stringify(novo, null, 2); desenharRequisitos(); clearTimeout(espera); lerForm(); },
     });
     desenharRequisitos();
     desenharPreview();
   }
+  /** Construtor aberto (recarregado quando o JSON muda por fora: requisitos por linha ou JSON avançado). */
+  let construtor = null;
+  const recarregarConstrutor = () => { try { construtor?.definir(JSON.parse($('[data-json]', form).value || '{}')); } catch { /* JSON inválido: o aviso já aparece */ } };
   function desenharRequisitos() {
     const caixa = $('[data-req-lista]', form);
     if (!caixa) return;
@@ -200,7 +208,7 @@ export async function telaEditor(tela, partes, ctx) {
     if (v) req[inp.dataset.reqK] = v; else delete req[inp.dataset.reqK];
     if (Object.keys(req).length) alvo.requisito = req; else delete alvo.requisito;
     caixa.value = JSON.stringify(mec, null, 2);
-    clearTimeout(espera); espera = setTimeout(lerForm, 350);
+    clearTimeout(espera); espera = setTimeout(() => { lerForm(); recarregarConstrutor(); }, 350);
   }, true);
   function desenharPreview() {
     const [t, id] = [sel.slice(0, 1), sel.slice(2)];
@@ -269,9 +277,9 @@ export async function telaEditor(tela, partes, ctx) {
       if (r.texto !== grupo[id][campoTxt]) { grupo[id][campoTxt] = r.texto; caixa.value = r.texto; aplicarRascunho(); avisoAuto.push('Números do texto atualizados sozinhos.'); }
       if (r.avisos.length) avisoAuto.push('Confira o texto: ' + r.avisos.join('; ') + '.');
       delete form.dataset.textoAuto;
-    } else if (!conjur && caixa && caixa.value !== depois.texto && document.activeElement !== caixa) {
-      // texto automático: mostra o texto novo gerado da mecânica
-      caixa.value = depois.texto; form.dataset.textoAuto = depois.texto;
+    } else if (caixa && caixa.value !== depois[campoTxt] && document.activeElement !== caixa) {
+      // texto automático: mostra o texto novo gerado da mecânica (carta) ou do poder (Conjurador)
+      caixa.value = depois[campoTxt]; form.dataset.textoAuto = depois[campoTxt];
       avisoAuto.push('Texto gerado de novo a partir da mecânica.');
     }
     const av = $('[data-auto-aviso]', form);
@@ -282,7 +290,7 @@ export async function telaEditor(tela, partes, ctx) {
   }
   let espera = null;
   form.addEventListener('input', () => { clearTimeout(espera); espera = setTimeout(lerForm, 350); });
-  form.addEventListener('change', (ev) => { clearTimeout(espera); lerForm(); if (ev.target.matches('[data-json]')) desenharRequisitos(); });
+  form.addEventListener('change', (ev) => { clearTimeout(espera); lerForm(); if (ev.target.matches('[data-json]')) { desenharRequisitos(); recarregarConstrutor(); } });
   form.addEventListener('click', async (ev) => {
     const [t, id] = sel ? [sel.slice(0, 1), sel.slice(2)] : [];
     if (ev.target.closest('[data-desfazer]')) {
@@ -292,8 +300,8 @@ export async function telaEditor(tela, partes, ctx) {
       aplicarRascunho(); desenharTudo(); return;
     }
     if (ev.target.closest('[data-texto-auto]')) {
-      const c = DADOS.catalogo.cartas[id];
-      $('[data-f="texto"]', form).value = textoCarta({ ...c, texto: '' });
+      if (t === 'j') $('[data-f="habilidade"]', form).value = textoPoder(DADOS.catalogo.conjuradores[id].poder);
+      else $('[data-f="texto"]', form).value = textoCarta({ ...DADOS.catalogo.cartas[id], texto: '' });
       lerForm(); return;
     }
     if (ev.target.closest('[data-trocar-arte]')) {

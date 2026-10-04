@@ -43,7 +43,7 @@ type Arte = { numero: number; id: string; titulo: string; arquivo: string; largu
 function motorJS(): void {
   const dest = publico + 'jogo/';
   garantir(dest);
-  for (const [de, para] of [['tcg/src/motor.ts', 'motor.js'], ['tcg/src/tipos.ts', 'tipos.js'], ['tcg/src/balanco.ts', 'balanco.js'], ['tcg/sim/bot.ts', 'bot.js'], ['online/src/edicoes.ts', 'edicoes.js']]) {
+  for (const [de, para] of [['tcg/src/motor.ts', 'motor.js'], ['tcg/src/tipos.ts', 'tipos.js'], ['tcg/src/balanco.ts', 'balanco.js'], ['tcg/sim/bot.ts', 'bot.js'], ['online/src/edicoes.ts', 'edicoes.js'], ['tcg/src/poder-conjurador.ts', 'poder-conjurador.js']]) {
     let js = stripTypeScriptTypes(readFileSync(raizArcano + de, 'utf8'));
     js = js.replace(/from\s+'(?:\.\.\/src\/|\.\.\/sim\/|\.\/)([\w-]+)\.ts'/g, "from './$1.js'");
     writeFileSync(dest + para, `// Gerado por online/construir.ts a partir de ${de}. Não edite: edite o .ts e reconstrua.\n${js}`);

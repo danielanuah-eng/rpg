@@ -11,17 +11,32 @@
 
 // ---------- construtor de efeitos (pedido do autor, 04/10) ----------
 /** Quando uma habilidade acontece. */
-                                                                                                                                             
+                                                                                                                                            
+                                                                                                                                                      
+                                                           
 /** Custo de uma habilidade ativada ("virar/pagar"). */
                                                                                                                            
 /** Habilidade montada no Editor: condição + efeitos (que se acumulam, em ordem). */
-                                                                                                                                                                     
+                             
+                                                             
+                                                                            
+                                                                                             
+                                                                                                                                                               
+                                                                                                             
+ 
 /** Proteção mágica: quem mira esta carta (com carta ou ativação do oponente) paga isto; sem poder pagar, não pode mirar. */
                                                                                                                               
 /** Para onde vão as cartas escolhidas. */
                                                                                                                   
                                                                                               
-                                                                                                                                                               
+/**
+ * Concessão (pedido do autor, 04/10): palavras-chave e/ou condições dadas a uma carta em campo, definidas nos dados.
+ * palavras: qualquer palavra-chave que o motor entende ("Etéreo", "Protegido 2", "Reanimum"...); ataque/vida: modificador
+ * permanente enquanto está em campo (pode ser negativo); turnos: fica X turnos do seu controlador em campo (conta o da
+ * entrada); destino: para onde vai ao sair por turnos (padrão: cemitério).
+ */
+                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                            
 
 /**
  * Requisito de uma linha de efeito, habilidade ou ação (pedido do autor, 04/10), definido no Editor:
@@ -57,7 +72,7 @@
                                                                                                                                                          
                                             
                                                                                                                                                                 
-                                            
+                                                                   
                                                                                                                                                   
                                          
                                                                                                            
@@ -65,7 +80,7 @@
                                                                                                                        
                                             
                                                                                                                              
-                                                                                        
+                                                                                                                                                 
                                                                              
                                                     
                                                                                                             
@@ -77,9 +92,9 @@
                                                                                                                           
                                                          
                                                                                                        
-                                                                                                                                 
+                                                                                                                                                        
                                                                                                
-                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                         
                                                                                          
                                           
 
@@ -215,7 +230,22 @@
                                        
                                                
                              
+                                                                                              
+                                    
+     
+                                                                                                                           
+                                                                                                                              
+                                                                                                                                   
+     
+                             
  
+
+/**
+ * Permissão contínua do Conjurador (Editor, 04/10): pode jogar do seu cemitério ou banimento cartas dos tipos indicados
+ * (padrão: qualquer uma) e custo até `custoMax`, pagando o custo normal, na velocidade normal da carta. `banir`: a carta
+ * jogada assim vai para o banimento ao resolver ou ao sair do campo (como o Reanimum). `umaVezPorTurno`: só uma carta por turno.
+ */
+                                                                                                                                                    
 
                                 
              
@@ -269,6 +299,18 @@
                        
                                                                    
                                    
+                                                                 
+                           
+                                                                                              
+                                                                                  
+                                                                                                                         
+                           
+                                                       
+                                                               
+                                                                                            
+                             
+                                                                     
+                        
  
 
 /** Todo dano é dano; só muda a fonte. Efeitos podem ser anulados; combate não. */
@@ -289,6 +331,8 @@
                    
                                                 
                       
+                                                                                                      
+                        
  
 
                                
@@ -320,7 +364,7 @@
                                                                                
                                                                                  
                                                                                                                                
-                                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                                                                                                                              
 
 /** Efeitos que esperam uma escolha terminar para continuar (efeitos acumulados). */
                                                                                 

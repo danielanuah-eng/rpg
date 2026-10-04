@@ -17,7 +17,7 @@ Cada mensagem numa conversa grande reenvia todo o histórico, então ela custa m
 
 ## Passagem
 
-1. Escreva `Arcanoclisma/tcg/agente/PASSAGEM.md`, sobrescrevendo a anterior depois de copiá-la para `agente/passagens/PASSAGEM-<AAAA-MM-DD_HH-MM>.md`. O arquivo deve trazer:
+1. Escreva `Arcanoclisma/tcg/agente/PASSAGEM.md`, sobrescrevendo a anterior depois de copiá-la para `agente/passagens/PASSAGEM-<AAAA-MM-DD_HH-MM>.md`. Mantenha-a **curta (~4 KB, só o estado atual)**: não acumule seções antigas, elas ficam no arquivo copiado. O arquivo deve trazer:
    - **Objetivos** do autor, com as palavras dele quando forem importantes.
    - **Feito**: arquivos e decisões.
    - **Em andamento e próximo passo**, de forma concreta.

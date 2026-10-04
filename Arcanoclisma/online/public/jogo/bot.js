@@ -1,7 +1,7 @@
 // Gerado por online/construir.ts a partir de tcg/sim/bot.ts. Não edite: edite o .ts e reconstrua.
 // Jogador guloso para simulações. Não é forte: serve para expor quais mecânicas são usadas, ignoradas ou abusadas.
-import { ataqueConjurador, custoEfetivo, custoProtecao, origemDaCarta, defCarta, custoAtaqueConjurador, defConjurador, ehRepentina, etereo as etereoMotor, GRAU_MAXIMO, grauAtaqueConjurador, grauEfetivo, recemChegado } from './motor.js';
-                                                                          
+import { ataqueConjurador, ativacaoDeHabilidade, custoEfetivo, custoProtecao, origemDaCarta, defCarta, custoAtaqueConjurador, defConjurador, ehRepentina, etereo as etereoMotor, GRAU_MAXIMO, grauAtaqueConjurador, grauEfetivo, recemChegado, efeitoSemConjurador, protegidaDe } from './motor.js';
+                                                                                    
 
                          
                
@@ -90,6 +90,7 @@ function ordemDeSacrificio(e        , j         , ids          )           {
 function alvosInimigos(e        , j         , est         )           {
   const adv = e.jogadores[outro(j)];
   return adv.campo.filter((id) => {
+    if (protegidaDe(e, id, j)) return false; // Protessência (decisão 30): não mira
     const t = defCarta(e, id).tipo;
     return t === 'aliado' || t === 'mistica' || (!!est?.alvejaEstruturas && t === 'estrutura');
   });
@@ -139,7 +140,7 @@ function intencaoBase(e        , j         , id        , est        )           
   const ef = ef0.tipo === 'dano' && ef0.escalaGrau ? { ...ef0, valor: ef0.valor + z.grau.length } : ef0;
   if (ef.tipo === 'anular') {
     const topo = e.pilha[e.pilha.length - 1];
-    if (!topo || topo.tipo !== 'carta' || topo.controlador === j) return null;
+    if (!topo || topo.tipo !== 'carta' || topo.controlador === j || protegidaDe(e, topo.instId, j)) return null;
     const dv = defCarta(e, topo.instId);
     const v = valorCarta(dv, z.grau.length);
     const queima = !!dv.efeitos?.some((x) => x.tipo === 'dano' && x.alvo === 'conjuradorInimigo');
@@ -185,6 +186,17 @@ function intencaoBase(e        , j         , id        , est        )           
     const melhor = alvosInimigos(e, j, est).sort((a, b) => valorPerm(e, b) - valorPerm(e, a))[0];
     return melhor && valorPerm(e, melhor) >= 6 ? { carta: id, alvo: melhor, utilidade: 6 + valorPerm(e, melhor) / 2 } : null;
   }
+  // Concessão (04/10): ficha invocada já com palavras/bônus; conceder em aliados seus (ou piorar um aliado inimigo)
+  if (ef.tipo === 'invocar') return { carta: id, utilidade: 4 };
+  if (ef.tipo === 'campo' && ef.acao === 'conceder') {
+    const c = ef.concessao ?? {};
+    const ruimParaAlvo = (c.ataque ?? 0) < 0 || (c.vida ?? 0) < 0;
+    const lista = (ruimParaAlvo ? adv.campo : z.campo).filter((a) => ehAliado(e, a) && (ef.alcance === 'todos' || !protegidaDe(e, a, j)));
+    if (!lista.length) return null;
+    if (ef.alcance === 'todos') return { carta: id, utilidade: 2 + lista.length * (ruimParaAlvo ? 1.5 : 1) };
+    const alvo = [...lista].sort((a, b) => valorPerm(e, b) - valorPerm(e, a))[0];
+    return { carta: id, alvo, utilidade: 3 + valorPerm(e, alvo) / 3 };
+  }
   return null;
 }
 
@@ -228,6 +240,7 @@ function planejarJogada(e        , j         , est        , apenasRepentinas    
       ? (efc?.tipo === 'dano' && efc.alvo !== 'conjuradorInimigo' && vidaRest(e, alvoCombate) <= efc.valor ? { carta: id, alvo: alvoCombate, utilidade: 4 + valorPerm(e, alvoCombate) / 2 } : null)
       : intencao(e, j, id, est);
     if (!it || it.utilidade <= 0 || (filtro && !filtro(it))) continue;
+    if (it.alvo && protegidaDe(e, it.alvo, j)) continue; // Protessência: o alvo não serve
     const custo = custoEfetivo(e, j, id) + custoProtecao(e, j, it.alvo);
     let pitch           = [];
     const falta = custo - disponivel;
@@ -266,15 +279,35 @@ function planejarJogada(e        , j         , est        , apenasRepentinas    
   };
 }
 
+/** Habilidades ativadas do Conjurador: a ativação do poder e as "virar/pagar" montadas no Editor (índice em `habilidade`). */
+function ativacoesConj(e        , j         )                                               {
+  const p = defConjurador(e, j).poder;
+  const r                                               = [];
+  if (p?.ativacao) r.push({ at: p.ativacao });
+  (p?.habilidades ?? []).forEach((h, i) => { if (h.quando === 'ativada') r.push({ at: ativacaoDeHabilidade(h), habilidade: i }); });
+  return r;
+}
+/** Custos extras de uma ativação do Conjurador (Editor): descarta as cartas menos valiosas; só paga Vida com folga. */
+function custosExtrasConj(e        , j         , at          )                                       {
+  const z = e.jogadores[j];
+  if (at.danoNoConjurador && (defConjurador(e, j).vida - e.instancias[z.conjuradorId].dano) <= at.danoNoConjurador + 5) return null;
+  const n = at.descartar ?? 0;
+  if (!n) return {};
+  if (z.mao.length < n + 1) return null;
+  const g = grauEfetivo(e, j);
+  return { descartarCusto: [...z.mao].sort((a, b) => valorCarta(defCarta(e, a), g) - valorCarta(defCarta(e, b), g)).slice(0, n) };
+}
+
 function planejarAtivacao(e        , j         , est        )                 {
   const z = e.jogadores[j];
   const adv = e.jogadores[outro(j)];
-  const doConj = defConjurador(e, j).poder?.ativacao;
-  const fontes                                                     = [];
+  const fontes                                                              = [];
   for (const id of z.campo) { const a = defCarta(e, id).ativacao; if (a) fontes.push([id, a]); }
-  if (doConj) fontes.push([z.conjuradorId, doConj]);
-  for (const [id, at] of fontes) {
+  for (const { at, habilidade } of ativacoesConj(e, j)) fontes.push([z.conjuradorId, at, habilidade]);
+  for (const [id, at, hab] of fontes) {
     if ((at.suspende && (e.instancias[id].suspensa || recemChegado(e, id))) || at.efeitos.every((ef) => ef.tipo === 'arcano')) continue;
+    const extras = id === z.conjuradorId ? custosExtrasConj(e, j, at) : {};
+    if (!extras) continue;
     if (at.requisito?.grau && grauEfetivo(e, j) < at.requisito.grau) continue; // requisito do Editor (04/10)
     const ef = at.efeitos[0];
     let alvo                    ;
@@ -320,7 +353,8 @@ function planejarAtivacao(e        , j         , est        )                 {
       if (!g) continue;
       return { tipo: 'suspenderGrau', jogador: j, carta: g };
     }
-    return { tipo: 'ativar', jogador: j, carta: id, alvo, enviarArcano: [] };
+    if (alvo && protegidaDe(e, alvo, j)) continue; // Protessência (decisão 30)
+    return { tipo: 'ativar', jogador: j, carta: id, alvo, enviarArcano: [], ...extras, ...(hab !== undefined ? { habilidade: hab } : {}) };
   }
   return null;
 }
@@ -328,9 +362,11 @@ function planejarAtivacao(e        , j         , est        )                 {
 /** Alquimista Ricardo: ativa o desconto antes de jogar quando há algo para jogar. */
 function planejarDesconto(e        , j         , est        )                 {
   const z = e.jogadores[j];
-  const at = defConjurador(e, j).poder?.ativacao;
-  if (!at || !at.efeitos.some((ef) => ef.tipo === 'descontoProximaCarta')) return null;
-  if (e.instancias[z.conjuradorId].suspensa || e.habUsos[j].carta || e.habUsos[j].desconto) return null;
+  const achada = ativacoesConj(e, j).find((x) => x.at.efeitos.some((ef) => ef.tipo === 'descontoProximaCarta') && custosExtrasConj(e, j, x.at));
+  if (!achada) return null;
+  const at = achada.at;
+  const extraCmd = { ...custosExtrasConj(e, j, at), ...(achada.habilidade !== undefined ? { habilidade: achada.habilidade } : {}) };
+  if ((at.suspende && e.instancias[z.conjuradorId].suspensa) || e.habUsos[j].carta || e.habUsos[j].desconto) return null;
   if (at.requisito?.grau && grauEfetivo(e, j) < at.requisito.grau) return null;
   if (!planejarJogada(e, j, est, false, undefined, 0)) return null;
   const custoTotal = at.custo + (at.requisito?.arcano ?? 0);
@@ -346,15 +382,17 @@ function planejarDesconto(e        , j         , est        )                 {
       return { tipo: 'suspenderGrau', jogador: j, carta: grauUsavel(e, j)[0] };
     }
   }
-  return { tipo: 'ativar', jogador: j, carta: z.conjuradorId };
+  return { tipo: 'ativar', jogador: j, carta: z.conjuradorId, ...extraCmd };
 }
 
 /** Mitonho: em resposta a uma carta valiosa do oponente, libera o Anular do cemitério. */
 function planejarLiberarAnular(e        , j         , est        )                 {
   const z = e.jogadores[j];
-  const at = defConjurador(e, j).poder?.ativacao;
-  if (!at?.repentina || !at.efeitos.some((ef) => ef.tipo === 'permitirAnularDoCemiterio')) return null;
-  if (e.instancias[z.conjuradorId].suspensa || e.habUsos[j].anularDoCemiterio) return null;
+  const achada = ativacoesConj(e, j).find((x) => x.at.repentina && x.at.efeitos.some((ef) => ef.tipo === 'permitirAnularDoCemiterio') && custosExtrasConj(e, j, x.at));
+  if (!achada) return null;
+  const at = achada.at;
+  const extraCmd = { ...custosExtrasConj(e, j, at), ...(achada.habilidade !== undefined ? { habilidade: achada.habilidade } : {}) };
+  if ((at.suspende && e.instancias[z.conjuradorId].suspensa) || e.habUsos[j].anularDoCemiterio) return null;
   const topo = e.pilha[e.pilha.length - 1];
   if (!topo || topo.tipo !== 'carta' || topo.controlador === j) return null;
   const anula = z.cemiterio.find((id) => defCarta(e, id).efeitos?.some((ef) => ef.tipo === 'anular') && defCarta(e, id).grau <= grauEfetivo(e, j));
@@ -366,7 +404,7 @@ function planejarLiberarAnular(e        , j         , est        )              
     if (mana) return { tipo: 'ativar', jogador: j, carta: mana };
     return { tipo: 'suspenderGrau', jogador: j, carta: grauUsavel(e, j)[0] };
   }
-  return { tipo: 'ativar', jogador: j, carta: z.conjuradorId, enviarArcano: [] };
+  return { tipo: 'ativar', jogador: j, carta: z.conjuradorId, enviarArcano: [], ...extraCmd };
 }
 
 function planejarAtaqueConj(e        , j         , est        )                 {
@@ -552,12 +590,14 @@ export function decidir(e        , j         , est        )          {
       // construtor (04/10): cartas suas indo para lugar ruim (cemitério, fundo, Grau) = as menos valiosas; o resto = as melhores
       const minhas = pend.cartas.every((id) => e.instancias[id]?.dono === j);
       const efA = pend.aplicar?.efeito;
-      const nocivo = !!efA && (['dano', 'destruir', 'devolver'].includes(efA.tipo) || (efA.tipo === 'campo' && ['dano', 'destruir', 'devolver', 'paraBaralho', 'naoAtaca', 'suspender'].includes(efA.acao)));
+      const nocivo = !!efA && (['dano', 'destruir', 'devolver'].includes(efA.tipo) || (efA.tipo === 'campo' && (['dano', 'destruir', 'devolver', 'paraBaralho', 'naoAtaca', 'suspender'].includes(efA.acao) || (efA.acao === 'conceder' && ((efA.concessao?.ataque ?? 0) < 0 || (efA.concessao?.vida ?? 0) < 0)))));
       const ruim = ['cemiterio', 'fundo', 'grau', 'banimento'].includes(pend.destino) || nocivo;
       const nota = (id        ) => { const i = e.instancias[id]; if (!i || i.defId === 'oculta') return 0; if (i.ehConjurador) return nocivo ? 3 : 8; return valorCarta(defCarta(e, id), z.grau.length); };
       if (efA) {
         // alvo: efeito nocivo nas cartas do oponente = a melhor dele; nas suas = a menos valiosa; benéfico = a melhor sua
-        const lista = [...pend.cartas].sort((a, b) => nota(b) - nota(a));
+        // destruir/devolver nunca miram o Conjurador (decisão 28)
+        const lista = [...pend.cartas].filter((id) => !(efeitoSemConjurador(efA) && e.instancias[id]?.ehConjurador)).sort((a, b) => nota(b) - nota(a));
+        if (!lista.length) lista.push(...pend.cartas);
         const alvo = nocivo ? (lista.find((id) => e.instancias[id]?.dono !== j) ?? lista[lista.length - 1]) : (lista.find((id) => e.instancias[id]?.dono === j) ?? lista[0]);
         return { tipo: 'escolherCartas', jogador: j, cartas: [alvo] };
       }

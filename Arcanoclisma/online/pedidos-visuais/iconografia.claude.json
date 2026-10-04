@@ -194,6 +194,14 @@
       "ondeAparece": "no texto das cartas, antes de: Etéreos"
     },
     {
+      "id": "protessencia",
+      "nome": "Protessência",
+      "oQueMostra": "uma carta envolta por um véu/aura fechada que desvia uma mira (retícula) riscada",
+      "ondeAparece": "no texto das cartas, antes de: Protessência (não pode ser alvo de efeitos do oponente nem anulada por ele)",
+      "formato": "SVG 64x64 currentColor, mesmo formato dos outros",
+      "adicionadoEm": "2026-10-04"
+    },
+    {
       "id": "protegido",
       "nome": "Protegido",
       "oQueMostra": "uma carta com uma redoma/escudo arredondado em volta e um número",

@@ -7,7 +7,8 @@
 //   fonte.ouvir(fn)    chama fn a cada mudança
 //   fonte.versao       número que cresce a cada mudança
 //   opcionais: fonte.chat(texto), fonte.desistir(), fonte.tutorial (dicas, destaques e travas), fonte.prazo(), fonte.conectados()
-import { defCarta, custoEfetivo, custoProtecao, origemDaCarta, grauEfetivo, recemChegado, ataqueConjurador, distribuicaoPadrao, ehRepentina, custoAtaqueConjurador, grauAtaqueConjurador, efeitosAoJogar, efeitosAoEntrar, ataqueAtualDe, vidaAtualDe, etereo as etereoDe } from '/jogo/motor.js';
+import { defCarta, custoEfetivo, custoProtecao, origemDaCarta, grauEfetivo, recemChegado, ataqueConjurador, distribuicaoPadrao, ehRepentina, custoAtaqueConjurador, grauAtaqueConjurador, efeitosAoJogar, efeitosAoEntrar, ataqueAtualDe, vidaAtualDe, etereo as etereoDe, alvosCampo as alvosCampoMotor, efeitoSemConjurador, ativacaoDeHabilidade, protegidaDe, temPalavra } from '/jogo/motor.js';
+import { textoHabilidade } from '/jogo/textos.js';
 import { $, $$, esc, DADOS, VALOR, TIPO, textoCarta, janela, local, avisar, conj as conjDefDe } from './base.js';
 import { desenharCarta, modeloCarta, modeloConjurador } from './carta.js';
 import { criarMovimentosMesa } from './mesa-movimentos-codex.js';
@@ -134,7 +135,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   const nomeInst = (id) => { const i = inst(id); if (!i) return '?'; return i.ehConjurador ? conjDefDe(i.defId).nome.split(',')[0] : def(id).nome; };
   const ataqueAtual = (id) => ataqueAtualDe(e, id);
   const incomensuravelDe = (id) => { const i = inst(id); if (!i) return false; if (i.ehConjurador) return z(i.dono).itens.some((it) => def(it).categoriaItem === 'canal' && def(it).palavrasChave?.includes('Incomensurável')); return !!def(id).palavrasChave?.includes('Incomensurável'); };
-  const textoHab = (h) => { const t = textoCarta({ tipo: 'aliado', habilidades: [h] }); return t.length > 70 ? t.slice(0, 68) + '…' : t; };
+  const textoHab = (h, conj = false) => { const t = conj ? textoHabilidade(h, true) : textoCarta({ tipo: 'aliado', habilidades: [h] }); return t.length > 70 ? t.slice(0, 68) + '…' : t; };
   const vidaAtual = (id) => (vidaDe(id) ?? 0) - (inst(id)?.dano ?? 0);
   const nome = (j) => (j === EU ? 'Você' : fonte.nomes[j] ?? 'Oponente');
   const tenhoPrioridade = () => !e.pendencia && e.prioridade === EU && e.vencedor === null;
@@ -150,16 +151,18 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   }
   function ativacaoDe(id, hab) {
     if (hab !== undefined) {
-      // habilidade "virar/pagar" do construtor de efeitos (04/10): o mesmo formato da ativação
-      const h = def(id).habilidades?.[hab];
+      // habilidade "virar/pagar" do construtor de efeitos (04/10): o mesmo formato da ativação (no Conjurador, a do poder)
+      const h = habsDe(id)[hab];
       if (!h || h.quando !== 'ativada') return null;
-      return { custo: h.custo?.arcano ?? 0, suspende: !!h.custo?.suspender, efeitos: h.efeitos, descartar: h.custo?.descartar, danoNoConjurador: h.custo?.vida, requisito: h.custo?.grau ? { grau: h.custo.grau } : undefined, consome: false };
+      return ativacaoDeHabilidade(h);
     }
     if (id === z(EU).conjuradorId) return conjDef(EU).poder?.ativacao ?? null;
     return def(id).ativacao ?? null;
   }
-  /** Índices das habilidades "virar/pagar" da carta. */
-  const habsAtivadas = (id) => (ehConj(id) ? [] : (def(id).habilidades ?? []).map((h, i) => (h.quando === 'ativada' ? i : -1)).filter((i) => i >= 0));
+  /** Habilidades do construtor da carta, ou do poder do Conjurador (Editor de Conjuradores, 04/10). */
+  const habsDe = (id) => (ehConj(id) ? conjDefDe(inst(id).defId)?.poder?.habilidades : def(id).habilidades) ?? [];
+  /** Índices das habilidades "virar/pagar" da carta ou do Conjurador. */
+  const habsAtivadas = (id) => habsDe(id).map((h, i) => (h.quando === 'ativada' ? i : -1)).filter((i) => i >= 0);
   const soArcano = (at) => at.efeitos.every((ef) => ef.tipo === 'arcano');
   function podeJogar(id) {
     if (!tenhoPrioridade() || !origemDaCarta(e, EU, id)) return false;
@@ -179,6 +182,8 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     if (item) {
       // itens v2: suspendem o Conjurador e podem pedir descarte ou dano no Conjurador
       const cj = inst(z(EU).conjuradorId);
+      // Grau da carta do item = Grau mínimo para usar (itens v3); vale para todo item
+      if (grauEfetivo(e, EU) < (def(id).grau ?? 0)) return false;
       if (at.suspendeConjurador && cj.suspensa) return false;
       if ((at.descartar ?? 0) > z(EU).mao.length) return false;
       if (at.danoNoConjurador && conjDef(EU).vida - cj.dano <= at.danoNoConjurador) return false;
@@ -200,6 +205,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     for (const id of [...m.mao, ...m.banimento, ...m.cemiterio]) if (ehRepentina(def(id)) && podeJogar(id)) return true;
     const at = conjDef(EU).poder?.ativacao;
     if (at?.repentina && podeAtivar(m.conjuradorId)) return true;
+    for (const h of habsAtivadas(m.conjuradorId)) if (habsDe(m.conjuradorId)[h].repentina && podeAtivar(m.conjuradorId, h)) return true;
     for (const id of [...m.campo, ...m.itens]) { const a = ativacaoDe(id); if (a && !soArcano(a) && podeAtivar(id)) return true; }
     return false;
   }
@@ -210,22 +216,13 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     for (const ef of efs ?? []) {
       if (ef.tipo === 'banirDaMao') s.add('mao');
       else if (ef.tipo === 'reanimar') s.add('cemiterio');
-      else if ('alvo' in ef && ['escolhido', 'escolhidoAliado', 'escolhidoProprio', 'pilha'].includes(ef.alvo)) s.add(ef.alvo);
+      else if ('alvo' in ef && ['escolhido', 'escolhidoAliado', 'escolhidoProprio', 'pilha'].includes(ef.alvo)) { s.add(ef.alvo); if (ef.alvo === 'escolhido' && efeitoSemConjurador(ef)) s.semConjurador = true; }
       else if (ef.tipo === 'campo' && ef.alcance === 'alvo') { s.add('campo'); (s.campos ??= []).push(ef); }
     }
     return s;
   }
-  /** Cartas que um efeito "campo" pode atingir (lado e tipos). */
-  function alvosCampo(ef) {
-    const lados = ef.lado === 'inimigo' ? [OP] : ef.lado === 'proprio' ? [EU] : [EU, OP];
-    const r = [];
-    for (const j of lados) {
-      if (ef.tipos.includes('conjurador')) r.push(z(j).conjuradorId);
-      for (const id of z(j).campo) if (ef.tipos.includes(def(id).tipo)) r.push(id);
-      if (ef.tipos.includes('equipamento')) r.push(...z(j).itens);
-    }
-    return r;
-  }
+  /** Cartas que um efeito "campo" pode atingir (lado e tipos): a mesma lista do motor (destruir/devolver nunca miram o Conjurador, decisão 28). */
+  const alvosCampo = (ef) => alvosCampoMotor(e, EU, ef);
   function candidatos(tipos, excluir) {
     const lista = new Set();
     const campoTodos = [EU, OP].flatMap((j) => z(j).campo);
@@ -233,12 +230,13 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     if (tipos.has('pilha')) for (const p of e.pilha) if (p.tipo === 'carta') lista.add(p.instId);
     if (tipos.has('mao')) for (const id of z(EU).mao) lista.add(id);
     if (tipos.has('cemiterio')) for (const j of [EU, OP]) for (const id of z(j).cemiterio) if (def(id).tipo === 'aliado') lista.add(id);
-    if (tipos.has('escolhido')) { for (const j of [OP, EU]) lista.add(z(j).conjuradorId); for (const id of campoTodos) lista.add(id); }
+    if (tipos.has('escolhido')) { if (!tipos.semConjurador) for (const j of [OP, EU]) lista.add(z(j).conjuradorId); for (const id of campoTodos) lista.add(id); }
     if (tipos.has('escolhidoAliado')) for (const id of campoTodos) if (deAliado(id)) lista.add(id);
     if (tipos.has('escolhidoProprio')) for (const id of z(EU).campo) if (deAliado(id)) lista.add(id);
     if (tipos.has('campo')) for (const ef of tipos.campos) for (const id of alvosCampo(ef)) lista.add(id);
     lista.delete(excluir);
-    return [...lista];
+    // Protessência (decisão 30): carta do oponente com Protessência não acende como alvo
+    return [...lista].filter((id) => !protegidaDe(e, id, EU));
   }
   // Etéreo (decisão 24): só Etéreos (ou um Conjurador com arma Etérea) atacam um Etéreo
   const alvosDeAtaque = (atacante) => [z(OP).conjuradorId, ...z(OP).campo.filter((a) => ['aliado', 'mistica', 'estrutura'].includes(def(a).tipo) && (vidaDe(a) ?? 0) > 0 && (!etereoDe(e, a) || !atacante || etereoDe(e, atacante)))];
@@ -422,7 +420,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
       const at = ativacaoDe(id);
       if (at && podeAtivar(id)) a.push(['ativar', m.itens.includes(id) ? 'Usar' : id === m.conjuradorId ? 'Usar habilidade' : soArcano(at) ? `Gerar Arcano (+${ganhoFonte(id)})` : 'Ativar', 'primario']);
       // itens com uso (Canal foco/transcritor e Extra) aparecem no menu do Conjurador
-      for (const h of habsAtivadas(id)) if (podeAtivar(id, h)) a.push([`hab:${h}`, `Ativar: ${textoHab(def(id).habilidades[h])}`, 'primario']);
+      for (const h of habsAtivadas(id)) if (podeAtivar(id, h)) a.push([`hab:${h}`, `Ativar: ${textoHab(habsDe(id)[h], ehConj(id))}`, 'primario']);
       if (id === m.conjuradorId) for (const it of m.itens) if (ativacaoDe(it) && podeAtivar(it)) a.push([`usarItem:${it}`, `Usar ${def(it).nome}${(ativacaoDe(it).consome ?? def(it).categoriaItem === 'extra') ? ' (uso único)' : ''}`, 'primario']);
     }
     if (ehConj(id) && z(i.dono).itens.length) a.push(['equip', 'Ver equipamento', '']);
@@ -533,7 +531,9 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     } else if (!oculto && !verso && i.dano && vida !== undefined) marcas.push(`<span class="marca-vida ${vida - i.dano <= Math.ceil(vida / 3) ? 'baixa' : ''}">♥ ${vida - i.dano}</span>`);
     if (verso && !oculto && i.revelada) marcas.push('<span class="marca-sono" title="Posta no Grau neste turno (à vista)">👁</span>');
     if (!oculto && !verso && !i.ehConjurador && recemChegado(e, id)) marcas.push('<span class="marca-sono" title="Acabou de entrar">zZ</span>');
-    if (!oculto && !verso && i.ehConjurador === false && def(id).palavrasChave?.includes('Etéreo')) marcas.push('<span class="marca-kw" title="Etéreo: em combate, só Etéreos e armas Etéreas o atingem">✦</span>');
+    if (!oculto && !verso && i.ehConjurador === false && etereoDe(e, id)) marcas.push('<span class="marca-kw" title="Etéreo: em combate, só Etéreos e armas Etéreas o atingem">✦</span>');
+    if (!oculto && !verso && inst(id) && temPalavra(e, id, 'Protessência')) marcas.push('<span class="marca-kw" title="Protessência: não pode ser alvo de efeitos do oponente, nem anulada por ele">◈</span>');
+    if (!oculto && !verso && i.turnosRestantes !== undefined) marcas.push(`<span class="marca-kw" title="Fica em campo por mais ${i.turnosRestantes} turno(s) do dono (o da entrada conta); depois vai para ${{ cemiterio: 'o cemitério', banimento: 'o banimento', baralho: 'o baralho', mao: 'a mão' }[i.destinoSaida ?? 'cemiterio']}">⏳ ${i.turnosRestantes}</span>`);
     const cls = ['cm', i?.suspensa ? 'suspensa' : '', oponente ? 'do-oponente' : '', classes];
     const acionavel = !oculto && !ui.modo && i.dono === EU && temAcao(id) && tutDestaca(id);
     if (acionavel) cls.push('acionavel');
@@ -682,7 +682,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     const foraHTML = deFora.map((id) => {
       const brilho = !ui.modo && podeJogar(id) && tutDestaca(id) ? 'jogavel' : '';
       const zona = m.banimento.includes(id) ? 'Banida' : 'Cemitério';
-      return `<div class="mao-slot fora-da-mao ${brilho}" title="${zona}: pode ser jogada agora pela habilidade do seu Conjurador">${cartaMesa(id, { largura: 104 })}<span class="tag-zona">${zona}</span></div>`;
+      return `<div class="mao-slot fora-da-mao ${brilho}" title="${zona}: pode ser jogada agora (habilidade do Conjurador ou Reanimum)">${cartaMesa(id, { largura: 104 })}<span class="tag-zona">${zona}</span></div>`;
     }).join('');
     return `<div class="mao">${foraHTML}${m.mao.map((id) => {
       const brilho = !ui.modo && (podeJogar(id) && tutDestaca(id) ? 'jogavel' : '');
@@ -700,7 +700,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     if (e.vencedor !== null || ui.modo) return '';
     if (!tenhoPrioridade()) return e.pendencia ? '' : `<div class="barra-acao"><span class="espera-txt">Vez de ${esc(nome(OP))}…</span></div>`;
     let rot = 'Passar';
-    if (e.pilha.length) rot = 'Passar: deixar resolver';
+    if (e.pilha.length) rot = e.pilha[e.pilha.length - 1].controlador === EU ? 'Passar (deixar o oponente responder)' : 'Passar (deixar resolver)';
     else if (e.combate) rot = 'Passar: resolver o combate';
     else if (minhaJanela()) rot = 'Encerrar fase Principal';
     else if (e.ativo === EU) rot = `Passar (${ETAPAS.find(([k]) => k === e.etapa)?.[1] ?? ''})`;
@@ -753,7 +753,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
       <p><b>Findante</b> só na sua fase Principal com a pilha vazia. <b>Repentina</b> sempre que você tiver a prioridade, até no turno do oponente.</p>
       <p><b>Pilha:</b> cartas, efeitos e ataques aparecem aqui na direita; cada jogador pode responder. Quando os dois passam, a de cima resolve.</p>
       <p><b>Combate:</b> atacar suspende. O defensor pode bloquear com um Aliado ou o Conjurador que esteja de pé. Aliados que acabaram de entrar (zZ) não atacam, salvo Proficiente.</p>
-      <p><b>Etéreo:</b> em combate, só Etéreos e armas Etéreas o atingem. <b>Incomensurável:</b> o dano que passar da Vida vai para o Conjurador. <b>Protegido N:</b> mirar custa N a mais.</p>
+      <p><b>Etéreo:</b> em combate, só Etéreos e armas Etéreas o atingem. <b>Incomensurável:</b> o dano que passar da Vida vai para o Conjurador. <b>Protegido N:</b> mirar custa N a mais. <b>Protessência (◈):</b> não pode ser alvo de efeitos do oponente nem anulada por ele; pode ser atacada.</p>
       <p><b>Impasse:</b> 5 turnos seguidos sem agir e você perde.</p>
       <p class="peq">Passe o mouse numa carta para ver; clique ou arraste para agir.</p>
       <h3>Palavras-chave</h3>${palavrasChaveHTML(esc)}</div>`;
@@ -877,7 +877,8 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     if (fonte.tutorial?.semAutoPasse?.()) return false;
     const topo = e.pilha[e.pilha.length - 1];
     if (topo) {
-      if (topo.controlador === EU) return true;
+      // pilha como no Magic (04/10): depois de empilhar, a prioridade volta para você; só passa sozinho se não tiver o que acrescentar
+      if (topo.controlador === EU) return cfg.autoPassar && !possoResponder();
       if (cfg.esperarPilha) return false;
       return cfg.autoPassar && !possoResponder();
     }

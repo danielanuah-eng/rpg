@@ -1,0 +1,149 @@
+{
+  "campos": {
+    "campos": [
+      {
+        "classe": "campo campo-op",
+        "h": 123.515625,
+        "w": 696.515625,
+        "x": 139.734375,
+        "y": 42.453125
+      },
+      {
+        "classe": "campo campo-eu",
+        "h": 123.515625,
+        "w": 696.515625,
+        "x": 139.734375,
+        "y": 480.828125
+      }
+    ],
+    "ondas": [
+      {
+        "area": {
+          "h": 123.515625,
+          "w": 696.515625,
+          "x": 139.734375,
+          "y": 480.828125
+        },
+        "opacity": "1"
+      },
+      {
+        "area": {
+          "h": 123.515625,
+          "w": 696.515625,
+          "x": 139.734375,
+          "y": 42.453125
+        },
+        "opacity": "1"
+      }
+    ],
+    "tela": {
+      "h": 720,
+      "w": 1280
+    }
+  },
+  "ressurgimento": {
+    "camadas": [
+      {
+        "left": "845.008px",
+        "opacity": "0.0744496",
+        "rect": {
+          "h": 126.3599853515625,
+          "w": 126.3599853515625,
+          "x": 781.8200073242188,
+          "y": 301.00750732421875
+        },
+        "src": "/kit/efeitos/col-cemiterio-que-respira/conjurar-v17.svg",
+        "top": "364.188px"
+      },
+      {
+        "left": "845.008px",
+        "opacity": "0.917814",
+        "rect": {
+          "h": 120.59197998046876,
+          "w": 120.59197998046876,
+          "x": 683.0867309570312,
+          "y": 354.7892150878906
+        },
+        "src": "/kit/efeitos/col-cemiterio-que-respira/trajeto-v17.svg",
+        "top": "364.188px"
+      },
+      {
+        "left": "488.43px",
+        "opacity": "0",
+        "rect": {
+          "h": 40.17376708984375,
+          "w": 40.173736572265625,
+          "x": 468.3349914550781,
+          "y": 522.6943969726562
+        },
+        "src": "/kit/efeitos/col-cemiterio-que-respira/impacto-v17.svg",
+        "top": "542.789px"
+      }
+    ],
+    "cemiterio": [
+      {
+        "h": 70.65625,
+        "w": 51.015625,
+        "x": 819.5,
+        "y": 328.859375
+      }
+    ],
+    "tela": {
+      "h": 720,
+      "w": 1280
+    }
+  },
+  "pilha": {
+    "camadas": [
+      {
+        "left": "504.156px",
+        "opacity": "0.021668",
+        "rect": {
+          "h": 128.7811279296875,
+          "w": 128.7811279296875,
+          "x": 439.76568603515625,
+          "y": 304.64068603515625
+        },
+        "src": "/kit/efeitos/bal-anular-c3-repentina/conjurar-v17.svg",
+        "top": "369.045px"
+      },
+      {
+        "left": "1129px",
+        "opacity": "0.733278",
+        "rect": {
+          "h": 175.2171630859375,
+          "w": 175.2171630859375,
+          "x": 1041.391357421875,
+          "y": 575.4070434570312
+        },
+        "src": "/kit/efeitos/bal-anular-c3-repentina/trajeto-v17.svg",
+        "top": "663.02px"
+      },
+      {
+        "left": "1129px",
+        "opacity": "0",
+        "rect": {
+          "h": 32.13751220703125,
+          "w": 32.137451171875,
+          "x": 1112.9312744140625,
+          "y": 646.9468994140625
+        },
+        "src": "/kit/efeitos/bal-anular-c3-repentina/impacto-v17.svg",
+        "top": "663.02px"
+      }
+    ],
+    "tela": {
+      "h": 768,
+      "w": 1366
+    }
+  },
+  "limpeza": {
+    "ressurgimento": {
+      "elementos": 0
+    },
+    "pilha": {
+      "elementos": 0
+    }
+  },
+  "escopo": "Motor real: tutorial oficial para anulacao; cenarios locais deterministas com mesa e motor existentes para ambos-campos e ressurgimento."
+}
