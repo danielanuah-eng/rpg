@@ -19,6 +19,20 @@ export function criarGanchosMesa({ raiz, conteudo, eu }) {
 
   // o tabuleiro primeiro; depois a lateral (cartas na pilha, alvo de Anular)
   const elDe = (id) => (id ? conteudo.querySelector(`.cm[data-id="${CSS.escape(id)}"]`) ?? raiz.querySelector(`.mesa-direita .cm[data-id="${CSS.escape(id)}"]`) : null);
+  /**
+   * Retângulo de uma carta da lateral (pilha) trazido para a parte VISÍVEL da tela (achado da entrega v18 do Codex:
+   * no tutorial, a carta anulada ficava abaixo da janela e o trajeto/impacto eram desenhados fora da tela).
+   */
+  const rectVisivel = (el) => {
+    const r = el.getBoundingClientRect();
+    const lado = el.closest('.mesa-direita')?.getBoundingClientRect();
+    const topo = Math.max(0, lado?.top ?? 0), fundo = Math.min(innerHeight, lado?.bottom ?? innerHeight);
+    const esq = Math.max(0, lado?.left ?? 0), dir = Math.min(innerWidth, lado?.right ?? innerWidth);
+    const h = Math.min(r.height, Math.max(24, fundo - topo)), w = Math.min(r.width, Math.max(24, dir - esq));
+    const y = Math.min(Math.max(r.top, topo), fundo - h), x = Math.min(Math.max(r.left, esq), dir - w);
+    if (x === r.left && y === r.top && h === r.height && w === r.width) return r;
+    return new DOMRect(x, y, w, h);
+  };
   const reduzido = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
   // o motivo de um efeito não tocar fica no console (nível debug) para conferir a integração
   const chamar = (nome, dados) => { try { Promise.resolve(efeitos?.[nome]?.(dados)).then((r) => { if (r && !r.realizado) console.debug('efeito não tocou', nome, dados.defId ?? '', r.motivo); }, (err) => console.error('efeito', nome, err)); } catch (err) { console.error('efeito', nome, err); } };
@@ -37,7 +51,7 @@ export function criarGanchosMesa({ raiz, conteudo, eu }) {
     if (!e || !ultimo) return null;
     return {
       ...ultimo,
-      rects: new Map([...raiz.querySelectorAll('.mesa-direita .cm[data-id]'), ...conteudo.querySelectorAll('.cm[data-id]')].map((el) => [el.dataset.id, el.getBoundingClientRect()])),
+      rects: new Map([...[...raiz.querySelectorAll('.mesa-direita .cm[data-id]')].map((el) => [el.dataset.id, rectVisivel(el)]), ...[...conteudo.querySelectorAll('.cm[data-id]')].map((el) => [el.dataset.id, el.getBoundingClientRect()])]),
     };
   }
 

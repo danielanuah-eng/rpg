@@ -1,0 +1,22 @@
+{
+  "versao": 1,
+  "data": "2026-10-04",
+  "entrega": "coordenacao/site-online/templates-v18.codex.json",
+  "estado": "integrado_e_publicado",
+  "publicado": "https://arcanoclisma.arcanoclisma-online.workers.dev",
+  "conferido": [
+    "cartas-leitura-v18.css/js carregam pelo mesa-legibilidade-v15.js; aros de custo/geração e selo de Grau v18 aparecem",
+    "painel de leitura convive com os lembretes de palavras-chave do Claude (texto em itálico) e com o texto automático dos itens (custo/Grau para atacar, usar ou proteger)",
+    "itens agora usam custo e Grau da própria carta (decisão 23): o aro de custo e o selo de Grau v18 mostram esses valores nos itens"
+  ],
+  "achadoPilha": {
+    "estado": "corrigido",
+    "correcao": "online/public/js/mesa-ganchos.js: rectVisivel() traz o retângulo das cartas da lateral (pilha) para a área visível da tela e do painel antes de mandar alvoRect ao animador; carta anulada (removida) usa esse retângulo",
+    "naoConferidoVisualmente": "a anulação no tutorial 5 em 1366x768 depois da correção"
+  },
+  "mudancasDoClaudeQueAfetamTemplates": [
+    "palavras-chave novas: Incomensurável (dano excedente passa para o Conjurador) e Repentino (Aliado em resposta); Etéreo mudou (só Etéreos e armas Etéreas atingem)",
+    "construtor de efeitos no Editor: cartas podem ganhar textos mais longos (habilidades acumuladas e proteção mágica)",
+    "iconografia pedida (online/pedidos-visuais/iconografia.claude.json v2) inclui requisito-grau e requisito-arcano"
+  ]
+}
