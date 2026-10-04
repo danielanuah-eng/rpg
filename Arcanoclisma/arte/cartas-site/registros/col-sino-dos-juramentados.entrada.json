@@ -1,0 +1,37 @@
+{
+  "id": "col-sino-dos-juramentados",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-0fde3b4a-c7e1-4408-9ca9-717799e343aa.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPreserve SinoDosJuramentados first ref: practical heavy weathered Bronze Arco bell with broad open mouth and hanging round clapper, stout top hinged loop, two thin horizontal metal ridges, rough slit-like red geometric grooves in bell side, mottled blue patina. Not a golden cathedral jewelry bell. New perspective from LOW under a wooden siege lookout platform in Conflituo during a daytime storm: bell suspended at left close foreground by its top loop from a simple crossbeam, swings so its mouth aims diagonally to the RIGHT toward a distant enemy Conjurador standing on broken fort stair. A compact rust-red graphic shockwave/few solid curved sonic bands travels in a clear unbent line FROM bell toward ONE rival mage, causing non-graphic impact and a backward step/knockback with dusty cloth motion. Enemy is an adult compact blond woman in weathered blue/grey robe; her face looks back toward bell, same coherent source-target line. Other small allied silhouettes sheltered beneath platform remain unaffected. Large environmental masses: cold blue stormclouds, damp grey muddy trench below, low timber barricades, a torn rust banner, distant dark smooth fortress wall. Avoid lightning behind every character, neon firestorm, hyperdense rubble or shinygold sky. Current Valor ONLY Conflituo, common Temporaria Findante cost2 grau1 generated1, rule deal5 to enemyConjurador, opponent MAY pay3 to annul. Depict a successful single-target resolution, not forced unavoidable damage, don't invent cannot-flee property from RPG rumor, no generic teamwide attack. Local rust energy shines only near bell grooves and impact, physical aged bronze matte, artwork clear at card size.\nReference2 ONLY smooth finish, not its woman, dragon or meadow. New full opaque upright63:88 image with environment at every edge; no cardborder, typography, UI, numerals, logos or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/sino-dos-juramentados.png",
+  "textoRegraLido": "Cause 5 de dano ao Conjurador inimigo. O oponente pode pagar 3 para anulá-la.",
+  "valoresLidos": [
+    "conflituo"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/sino-dos-juramentados.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Posto de vigia de cerco em Conflitüo, trincheiras e muralha",
+  "momentoDoDia": "Dia de tempestade",
+  "clima": "Chuva, nuvens pesadas e barro",
+  "escala": "Sino no primeiro plano, alvo único na escadaria e soldados abrigados abaixo",
+  "avaliacaoVisual": "Sino de bronze com patina e sulcos vermelhos preservado. Faixas sonoras seguem linha clara do sino ao conjurador rival na escadaria, com recuo e poeira sem ferimento gráfico. Cena de chuva mantém outros soldados fora do impacto.",
+  "decisoes": [
+    "Conflitüo, dano de 5 apenas ao Conjurador inimigo.",
+    "Pagamento de 3 para anular continua opção da regra; imagem mostra uma resolução, não dano inevitável.",
+    "Não adicionar proibição de fuga do rumor RPG; comum sem foil."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

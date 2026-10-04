@@ -1,0 +1,37 @@
+{
+  "id": "col-ancora-do-mesmo-dia",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-ad46d13c-d858-4243-ac90-e071d64ef358.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPreserve AncoraDoMesmoDia first ref exact artifact design: old chunky Bronze Arco ANCHOR with TWO upward curved angular flukes, transverse cylindrical bar, large circular top loop, thick olive/brown rope tied around shank, central little glass HOURGLASS framed with four simple bronze rods. Muted chipped bronze with blue-grey patina. Current card Valor ONLY COGNITIUM, so magical smoke is deep INDIGO with gaps and disconnected fragments, not active white time ribbons for extraEternyr. Hourglass stays recognizable physical detail, small subtle pale reflective sand inside. New scene: anchor stands partly tilted on a slanted wooden workbench inside a castle MEMORY VAULT and instrument workshop at soft warm late morning. One small CLOSED clothbound blue folio representing a single memory/card is gently suspended in an indigo bubble above the hourglass, a thin broken indigo veil seals it for later. Nearby adult old dark-skinned mage with shavedhead and plain tan/navy coat lowers one hand after setting the memory aside, eyes directed at this ONE folio, no giant human hero or gameUI. Round deep wooden cabinets, an open shaded window showing quiet courtyard and cypress trees, muted brass calipers and one unlit oil lamp on bench. A calm brighter patch toward rear doorway suggests a later return, no duplicated floating future card. Current common TemporariaFindante cost1 grau0 generated1: banishONEcard fromYOURhand, NEXTturn it can be played costing3less; do not represent freecast now, enemycard banishment or playingmultiplecards. Legendary RPG rumor is identityonly, no foil/immunity mechanics. Low camera along the bench toward anchor, artifact dominates foreground with complete flukes, rope and hourglass legible, broad smooth wooden/plasterplanes, no glowing galaxy or stone rubble.\nReference2 ONLY smooth finish, not its woman, dragon or meadow. New full opaque upright63:88 image with environment at every edge; no cardborder, typography, UI, numerals, logos or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/ancora-do-mesmo-dia.png",
+  "textoRegraLido": "Bana uma carta da sua mão; no seu próximo turno ela pode ser jogada custando 3 a menos.",
+  "valoresLidos": [
+    "cognitium"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/ancora-do-mesmo-dia.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Oficina de instrumentos e cofre de memória num castelo de Cognitium",
+  "momentoDoDia": "Fim da manhã",
+  "clima": "Luz suave de janela sobre pátio tranquilo",
+  "escala": "Âncora dominante na bancada, um fólio guardado e mago ao fundo",
+  "avaliacaoVisual": "Âncora com dois braços curvos, barra cilíndrica, anel, corda e ampulheta de bronze preservados. Um único livro fechado suspenso em invólucro índigo, olhar do mago dirigido ao livro. Madeira e paredes em planos legíveis, objeto no foco.",
+  "decisoes": [
+    "Valor atual Cognitium prevalece sobre Eternyr do briefing antigo.",
+    "Banir uma carta da própria mão para jogar no próximo turno com redução de 3; representar reserva, não uso imediato gratuito.",
+    "Rumor de artefato lendário não define raridade atual comum nem imunidade."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "col-ninho-de-estrelas",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-7e1db34e-d997-464b-a0e0-cba15a86ee2e.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPreserve NinhoDeEstrelas fromfirstreference as ordinary handmade basket-NEST: round woven brownwicker cup, olive drapedcloth with ties and few leaves, rustleather curvedcarrystrap with smallbronze buckle, ONE little sphericalstar-spirit with simple TWO ovaleyemarks and a little starpoint crest nestled inside. Not a realbirdnestfullof babybirds, do not substituteornategoldlantern. CURRENTValueSublimeyn so spiritlight and smallstarribbons are SOFTSILVER-WHITE with cool mercuryshadow, not blazeorangemagic; wicker/leather/clothphysicalcolors preserved. Sceneinside a traveling healer's airshipcabin on a calmmoonlitnight: curved woodbeam hull, circularwindow showing deepcool clouds and distant mountain, foldednavycloth hammock, mutedrust blankets and simplebronzehooks. Basket floats beside an adultredhaired darktan traveler sitting onedgeofhammock; one forearm is softlywrapped in magicalsilverribbon BANDAGES stretching from tiny starinside nest, patient sitsto stand with tiredrelievedexpression and hand on bench. Nographicinjury, no resurrection, onlyONElivingtargethealed. Nest inleftforeground fills nearlyhalfofimage, strap tiltednewangle, patient's face smaller butlegibleonright. Primarycurrentrule Suspendandpay1:heal3damageofonetarget, Mistica vida3 cost3 grau2 generated1. Wovenmaterialdrawnwithselectiverhythmlines, no noisyroughtextureeverywhere, gentlelocalizedlight onbandages andnest, darkwood/coldmoonlighthavebroadsmoothplanes, no fullwhiteoverglow. Common no foil. Allopaqueenvironmentfilled.\nReference2 only smoothfinish, neverreusewoman/dragon/meadow. New fullopaque upright63:88cardillustration, no actualframe, numerals, readabletext, UI, logo or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/ninho-de-estrelas.png",
+  "textoRegraLido": "Suspenda e pague 1: cure 3 de dano de um alvo.",
+  "valoresLidos": [
+    "sublimeyn"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/ninho-de-estrelas.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Cabine de dirigível de um curandeiro viajante, rede e janela redonda para as montanhas",
+  "momentoDoDia": "Noite de lua cheia",
+  "clima": "Nuvens baixas abaixo da cabine",
+  "escala": "Ninho próximo e um viajante sentado ao lado, paisagem distante pela janela",
+  "avaliacaoVisual": "Cesto de vime redondo, pano oliva, alça de couro e pequeno ser de luz com dois olhos preservados. Luz agora prateada de Sublimeyn, ataduras mágicas envolvem um único braço. Interior de madeira escuro e lua fria equilibram a iluminação local, sem ferimento gráfico.",
+  "decisoes": [
+    "Valor atual Sublimeyn prevalece sobre Alvorum do briefing antigo.",
+    "Suspenda e pague 1: cure 3 de dano de um alvo; somente um paciente em foco.",
+    "Não atribuir cura gratuita ou ressurreição ao objeto; acabamento comum."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

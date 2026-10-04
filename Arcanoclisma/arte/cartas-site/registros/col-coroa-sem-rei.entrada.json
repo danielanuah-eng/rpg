@@ -1,0 +1,37 @@
+{
+  "id": "col-coroa-sem-rei",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-08ad90e0-52bf-4464-9899-3dffb8054990.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPreserve CoroaSemRei firstref exactbasic crownshape: large handmadebronze circlet with uneven tallforked pointedspikes, chipped darkvioletblue patina between old dullgold planes, doubleband with smallrectangularjoiningclips and centralhollowroundring. MatteagedBronzeArco, no actualgemstones, no jewelryexcess. CurrentValorDominum: several small broken BLOODPURPLE chain-linkwisps curlthrough hollowband, not oldgoldblazeaura. Crown FLOATS over an EMPTY plainwoodstool on a dais in a converted villagegrainhall used by a groupofMAGES as an oathassemblyroom. New perspective near sidetable looking UPtoward crown tiltedalmostprofile, prominentartifactintopleft/center with crowninteriorlegible. Widerenvironmentsmoothochreplasterwalls, exposedwood beams and lowstacksofclosedgrainchests with calmivorycloth, narrowwindow shows rainyblue eveningvillage, mutedcandle on sidetable. At far right a small fullydressed adultbrownwoman mage with shorthalfgreyhair receives ONE closedrolledscroll delivered by an ordinarysmall messengerbird, hands and gaze focusonthatscroll, allsecondary to crown. No kingwearer and no magicallyenslavedcrowd. CURRENTMistica Aoentrar:draw1card, vida6 cost4 grau3 generated1; deliveredONEscroll is narrative metaphoronly, don'tinventobedience/compulsionabilityfromRPGdescription. Incomum softmetalhighlights on crownrim, no legendaryrainbowfoil orstronggoldsky. Clear artifact againstlargedarkwallexpanse; quietfantasyinterior and coherentdepth, no cardborder/text/UI.\nReference2 only smoothfinish, neverreusewoman/dragon/meadow. New fullopaque upright63:88cardillustration, no actualframe, numerals, readabletext, UI, logo or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/coroa-sem-rei.png",
+  "textoRegraLido": "Ao entrar: compre 1 carta.",
+  "valoresLidos": [
+    "dominum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/coroa-sem-rei.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Celeiro convertido em salão de juramentos e reunião de magos de Dominum",
+  "momentoDoDia": "Início da noite",
+  "clima": "Chuva vista pela janela",
+  "escala": "Coroa flutuante grande sobre banco vazio, mensageiro e maga menores",
+  "avaliacaoVisual": "Coroa de bronze com pontas desiguais, pátina violeta, anel central e banda dupla preservados. Presença flutuante com elos roxos pequenos, ambiente de madeira e velas. Um pássaro entrega um único pergaminho à maga em plano secundário; foco continua na coroa.",
+  "decisoes": [
+    "Valor atual Dominum com elos roxos; bronze dourado é material físico.",
+    "Ao entrar: compre 1 carta; pergaminho único é metáfora visual, sem habilidade de obediência do RPG.",
+    "Mística incomum, não equipamento nem nova regra."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

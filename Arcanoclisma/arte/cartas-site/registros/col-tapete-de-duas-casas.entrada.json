@@ -1,0 +1,37 @@
+{
+  "id": "col-tapete-de-duas-casas",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-a9e94f77-0a5a-4e56-ab63-b2ac2c65f389.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPreserve exact rug from first reference: thick terracotta-red woven carpet with deep teal geometric diamond centers, cream diamond borders, ochre zigzag edging and short ivory fringes, mild practical wear. It is Tapete de Duas Casas, a pair of twin rugs. New full domestic scene in Alvorum on a cloudy late afternoon: front rug is unrolled FLAT across blue-grey tiles of a modest mage's house, one end curling slightly; a low oval doorway/shortcut in its surface shows a SECOND identical rug laid in the wooden floor of another house on a distant hillside. Both rugs have same pattern; the other room is coherently visible through the aperture, not a graphic pasted collage. An adult small dark-skinned mage in a plain muted blue robe stands by the side and carries a compact nascent black/gold spell between two palms; its small flowing ribbon takes a noticeably shorter path through the rugs. She looks down toward that shortcut. Structure is stable, not attacking or a flying carpet mount. CURRENT rule Suspend:the FIRST card you play this turn costs1less, cost2 grau1 generated1 vida2; twin-house shortcut is visual metaphor, DO NOT add an actual gameplay teleport or recurring all-card discount. ONLY Valor Alvorum, contained divided GOLD/BLACK energy at aperture rim with gaps, not bright whole floor. Everyday furnishings: a pale green painted cupboard, a quiet cat curled on a wooden chair, unlit cooking stove, open narrow window to cool grey clouds and hillside garden, small coat hooks. Camera from over mage's near shoulder looks down along rugs, environmental perspective legible, clean broad smooth planes, selective rug weave only, restrained warm magic against cool interior. Common no foil. No typography, UI, card border or number.\nSecond reference ONLY approved smooth finish, never its woman/dragon/meadow. New opaque edge-to-edge63:88 upright illustration; no actual cardframe, readabletext, UI, logo or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/tapete-de-duas-casas.png",
+  "textoRegraLido": "Suspenda: a primeira carta que você jogar neste turno custa 1 a menos.",
+  "valoresLidos": [
+    "alvorum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/tapete-de-duas-casas.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Casa de maga de Alvorum, piso azul, armário verde e atalho para outra casa",
+  "momentoDoDia": "Fim da tarde",
+  "clima": "Nuvens cinzentas no exterior",
+  "escala": "Tapete ocupa o primeiro plano, segundo tapete visto pelo atalho e maga ao lado",
+  "avaliacaoVisual": "Padrão terracota/azul de losangos, franjas claras e bordas aprovadas preservados em duas peças gêmeas. Tapete desenrolado no piso, atalho integrado na superfície, casa habitada e um gato na cadeira. Magia dourada/preta restrita à abertura e ao pequeno feitiço.",
+  "decisoes": [
+    "Estrutura permanece no lugar; não retratar ataque nem montaria.",
+    "Suspenda: primeira carta do turno custa 1 a menos; atalho é representação visual, não regra nova de teleporte.",
+    "Valor atual Alvorum, comum e fundo inteiro."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

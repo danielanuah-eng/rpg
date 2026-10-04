@@ -1,0 +1,72 @@
+{
+  "id": "col-cemiterio-que-respira",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-61985466-c63f-40c3-a6df-343ca8b81bd5.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-cemiterio-que-respira.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/cemiterio-que-respira.png",
+  "textoRegraLido": "Ponha no seu campo um Aliado de qualquer cemitério, pagando o custo dele + 0.",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/cemiterio-que-respira.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/o-que-voltou.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Cemitério antigo com capela, portão de ferro, túmulos e memorial de pedra",
+  "momentoDoDia": "Dia de tempestade",
+  "clima": "Chuva e céu lilás acinzentado; fios verde-pálido junto à terra",
+  "escala": "Lugar amplo com um aliado retornando e conjurador na lateral",
+  "avaliacaoVisual": "Um único aliado de cabelos pretos, espada baixa e mão no chão retorna em nova pose. Seu rosto se volta ao conjurador à esquerda. Capela, monumento, árvores e túmulos formam cenário completo; efeito verde-pálido localizado.",
+  "decisoes": [
+    "Valor atual Morbidyum, sem adicionar Cognitium do briefing antigo.",
+    "O Que Voltou serve de identidade de aliado já existente; foi redesenhado em nova pose dentro da cena.",
+    "O efeito põe um Aliado de qualquer cemitério no campo pagando o custo dele; a ilustração não altera esse pagamento.",
+    "Rareza apenas estética: reflexos locais prateados e violeta, sem novos Valores."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-cemiterio-que-respira.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "bed78cb16eb22bc97edc79d25643bf87378a6cdca36c90ef69e8c0f8f9165426",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "rara",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

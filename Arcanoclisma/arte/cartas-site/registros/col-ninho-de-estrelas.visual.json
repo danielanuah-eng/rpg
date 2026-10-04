@@ -1,0 +1,67 @@
+{
+  "id": "col-ninho-de-estrelas",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-7e1db34e-d997-464b-a0e0-cba15a86ee2e.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-ninho-de-estrelas.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/ninho-de-estrelas.png",
+  "textoRegraLido": "Suspenda e pague 1: cure 3 de dano de um alvo.",
+  "valoresLidos": [
+    "sublimeyn"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/ninho-de-estrelas.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Cabine de dirigível de um curandeiro viajante, rede e janela redonda para as montanhas",
+  "momentoDoDia": "Noite de lua cheia",
+  "clima": "Nuvens baixas abaixo da cabine",
+  "escala": "Ninho próximo e um viajante sentado ao lado, paisagem distante pela janela",
+  "avaliacaoVisual": "Cesto de vime redondo, pano oliva, alça de couro e pequeno ser de luz com dois olhos preservados. Luz agora prateada de Sublimeyn, ataduras mágicas envolvem um único braço. Interior de madeira escuro e lua fria equilibram a iluminação local, sem ferimento gráfico.",
+  "decisoes": [
+    "Valor atual Sublimeyn prevalece sobre Alvorum do briefing antigo.",
+    "Suspenda e pague 1: cure 3 de dano de um alvo; somente um paciente em foco.",
+    "Não atribuir cura gratuita ou ressurreição ao objeto; acabamento comum."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-ninho-de-estrelas.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "b48b20f12ad9ee147e52e4206023ee8a5de91d954cd249cc55722527bcfaa0ff",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

@@ -1,0 +1,67 @@
+{
+  "id": "col-ancora-do-mesmo-dia",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-ad46d13c-d858-4243-ac90-e071d64ef358.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-ancora-do-mesmo-dia.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/ancora-do-mesmo-dia.png",
+  "textoRegraLido": "Bana uma carta da sua mão; no seu próximo turno ela pode ser jogada custando 3 a menos.",
+  "valoresLidos": [
+    "cognitium"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/ancora-do-mesmo-dia.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Oficina de instrumentos e cofre de memória num castelo de Cognitium",
+  "momentoDoDia": "Fim da manhã",
+  "clima": "Luz suave de janela sobre pátio tranquilo",
+  "escala": "Âncora dominante na bancada, um fólio guardado e mago ao fundo",
+  "avaliacaoVisual": "Âncora com dois braços curvos, barra cilíndrica, anel, corda e ampulheta de bronze preservados. Um único livro fechado suspenso em invólucro índigo, olhar do mago dirigido ao livro. Madeira e paredes em planos legíveis, objeto no foco.",
+  "decisoes": [
+    "Valor atual Cognitium prevalece sobre Eternyr do briefing antigo.",
+    "Banir uma carta da própria mão para jogar no próximo turno com redução de 3; representar reserva, não uso imediato gratuito.",
+    "Rumor de artefato lendário não define raridade atual comum nem imunidade."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-ancora-do-mesmo-dia.png",
+  "dimensoes": [
+    1062,
+    1480
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "557d59be229ceafa438e59411cd54e0a66b159e1ed8eab1393d4cf520f6abfde",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

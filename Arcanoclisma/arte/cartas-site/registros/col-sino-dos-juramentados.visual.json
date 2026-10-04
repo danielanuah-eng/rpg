@@ -1,0 +1,67 @@
+{
+  "id": "col-sino-dos-juramentados",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-0fde3b4a-c7e1-4408-9ca9-717799e343aa.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-sino-dos-juramentados.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/sino-dos-juramentados.png",
+  "textoRegraLido": "Cause 5 de dano ao Conjurador inimigo. O oponente pode pagar 3 para anulá-la.",
+  "valoresLidos": [
+    "conflituo"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/sino-dos-juramentados.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Posto de vigia de cerco em Conflitüo, trincheiras e muralha",
+  "momentoDoDia": "Dia de tempestade",
+  "clima": "Chuva, nuvens pesadas e barro",
+  "escala": "Sino no primeiro plano, alvo único na escadaria e soldados abrigados abaixo",
+  "avaliacaoVisual": "Sino de bronze com patina e sulcos vermelhos preservado. Faixas sonoras seguem linha clara do sino ao conjurador rival na escadaria, com recuo e poeira sem ferimento gráfico. Cena de chuva mantém outros soldados fora do impacto.",
+  "decisoes": [
+    "Conflitüo, dano de 5 apenas ao Conjurador inimigo.",
+    "Pagamento de 3 para anular continua opção da regra; imagem mostra uma resolução, não dano inevitável.",
+    "Não adicionar proibição de fuga do rumor RPG; comum sem foil."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-sino-dos-juramentados.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "7e7cd2d145a0b82ccec6334794dd21bcec5436e8c2f0cb857f8787b7bdb85984",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

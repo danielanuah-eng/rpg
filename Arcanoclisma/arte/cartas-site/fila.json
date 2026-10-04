@@ -5404,9 +5404,9 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/ninho-de-estrelas.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Ninho de Estrelas: personagem/objeto do catálogo aprovado (ninho-de-estrelas). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Ninho de Estrelas como presença mística pairando sobre o campo (aura, barreira ou ser divino); ataduras de luz se enrolam sozinhas num ferido que volta a ficar de pé.",
       "ambienteOriginal": "Ambiente do Valor Alvorum: faróis sem noite, auroras, campos dourados ao amanhecer e ao entardecer. Magia na cor dourado e preto, em aura dividida, com falhas entre a parte de luz e a de sombra. Dupla temperatura: a magia é quente, então o cenário puxa o frio. A carta também serve aos Valores Morbidyum, Sublimeyn: detalhes discretos dessas cores podem aparecer.",
@@ -5421,7 +5421,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/ninho-de-estrelas.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 133 Ninho de Estrelas. Subject: Ninho de Estrelas: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: uma pequena luz que segue o dono como bicho.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-ninho-de-estrelas.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-ninho-de-estrelas.visual.json"
     },
     {
       "id": "col-coroa-sem-rei",
@@ -5435,9 +5437,9 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/coroa-sem-rei.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Coroa Sem Rei: personagem/objeto do catálogo aprovado (coroa-sem-rei). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Coroa Sem Rei como presença mística pairando sobre o campo (aura, barreira ou ser divino); ao surgir, um mensageiro, pássaro ou vento traz pergaminhos e segredos até as mãos de quem conjura.",
       "ambienteOriginal": "Ambiente do Valor Dominum: cidades-muralha, prisões, tronos e salões de juramento. Magia na cor roxo-sangue, em construtos de correntes, coleiras e elos. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Persona: detalhes discretos dessas cores podem aparecer.",
@@ -5452,7 +5454,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/coroa-sem-rei.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 103 Coroa Sem Rei. Subject: Coroa Sem Rei: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: quem usa é obedecido em coisas pequenas por quem não o conhece.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-coroa-sem-rei.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-coroa-sem-rei.visual.json"
     },
     {
       "id": "col-tapete-de-duas-casas",
@@ -5466,9 +5470,9 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/tapete-de-duas-casas.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Tapete de Duas Casas: personagem/objeto do catálogo aprovado (tapete-de-duas-casas). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Tapete de Duas Casas como lugar vivo e em funcionamento: um atalho mágico se abre, encurtando o caminho do próximo feitiço. Estrutura não ataca: transmite permanência e poder.",
       "ambienteOriginal": "Ambiente do Valor Alvorum: faróis sem noite, auroras, campos dourados ao amanhecer e ao entardecer. Magia na cor dourado e preto, em aura dividida, com falhas entre a parte de luz e a de sombra. Dupla temperatura: a magia é quente, então o cenário puxa o frio. A carta também serve aos Valores Sublimeyn: detalhes discretos dessas cores podem aparecer.",
@@ -5483,7 +5487,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/tapete-de-duas-casas.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 113 Tapete de Duas Casas. Subject: Tapete de Duas Casas: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: quem pisa nele sai no outro tapete gêmeo, onde estiver.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-tapete-de-duas-casas.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-tapete-de-duas-casas.visual.json"
     },
     {
       "id": "col-primeira-moeda",
@@ -5497,9 +5503,9 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/a-primeira-moeda.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "A Primeira Moeda: personagem/objeto do catálogo aprovado (a-primeira-moeda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "A Primeira Moeda como fonte ou forma do feitiço: livros se abrem sozinhos numa estante e as letras saltam no ar; parte da magia escapa e escorre para o lado do rival, como um preço pago.",
       "ambienteOriginal": "Ambiente do Valor Persona: a cidade dos rostos, feiras de máscaras, ruas de espelhos e tavernas cheias. Magia na cor coral, em aura suave e uniforme que transborda quando a emoção é forte. Dupla temperatura: a magia é quente, então o cenário puxa o frio. A carta também serve aos Valores Cognitium, Alvorum: detalhes discretos dessas cores podem aparecer.",
@@ -5514,7 +5520,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/a-primeira-moeda.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 139 A Primeira Moeda. Subject: A Primeira Moeda: artefato lendário, antigo e único. Rumor: o primeiro Ordyn cunhado em Oryuundis; imune a tudo, até a quem o carrega.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-primeira-moeda.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-primeira-moeda.visual.json"
     },
     {
       "id": "col-sino-dos-juramentados",
@@ -5528,9 +5536,9 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/sino-dos-juramentados.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Sino dos Juramentados: personagem/objeto do catálogo aprovado (sino-dos-juramentados). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Sino dos Juramentados como fonte ou forma do feitiço: o conjurador rival, ao longe é arremessado para trás pela explosão, com estilhaços e poeira.",
       "ambienteOriginal": "Ambiente do Valor Conflitüo: campos de batalha sem trégua, arenas, trincheiras e forjas de guerra. Magia na cor vermelho-ferrugem, em construtos sólidos de luz: lâminas, escudos, estandartes. Dupla temperatura: a magia é quente, então o cenário puxa o frio. A carta também serve aos Valores Primitivum, Dominum: detalhes discretos dessas cores podem aparecer.",
@@ -5545,7 +5553,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/sino-dos-juramentados.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 123 Sino dos Juramentados. Subject: Sino dos Juramentados: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: quem ouve não foge da luta.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-sino-dos-juramentados.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-sino-dos-juramentados.visual.json"
     },
     {
       "id": "col-ancora-do-mesmo-dia",
@@ -5559,9 +5569,9 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/ancora-do-mesmo-dia.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Âncora do Mesmo Dia: personagem/objeto do catálogo aprovado (ancora-do-mesmo-dia). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Âncora do Mesmo Dia como fonte ou forma do feitiço: um objeto ou carta é selado num instante parado do tempo, guardado para depois.",
       "ambienteOriginal": "Ambiente do Valor Eternyr: o entretempo, vilas do mesmo dia, estações paradas e relógios gigantes. Magia na cor azul-noite com riscos brancos, em aura com falhas e rastros parados no ar. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Cognitium: detalhes discretos dessas cores podem aparecer.",
@@ -5576,7 +5586,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/ancora-do-mesmo-dia.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 145 Âncora do Mesmo Dia. Subject: Âncora do Mesmo Dia: artefato lendário, antigo e único. Rumor: segura um instante; Tique quer de volta.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-ancora-do-mesmo-dia.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-ancora-do-mesmo-dia.visual.json"
     },
     {
       "id": "col-cemiterio-que-respira",
@@ -5590,9 +5602,9 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/cemiterio-que-respira.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Cemitério que Respira: personagem/objeto do catálogo aprovado (cemiterio-que-respira). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Cemitério que Respira como fonte ou forma do feitiço: um aliado caído se levanta do cemitério, com fios de alma voltando ao corpo.",
       "ambienteOriginal": "Ambiente do Valor Morbidyum: cemitérios que respiram, brejos, criptas e aldeias de curandeiras. Magia na cor verde-pálido, em fumaça fria e fios que partem, como almas. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Cognitium: detalhes discretos dessas cores podem aparecer.",
@@ -5608,7 +5620,9 @@
         "arquivo": "Arcanoclisma/arte/imagens/cemiterio-que-respira.png",
         "descricao": "Transparent ALPHA cutout, SQUARE canvas. SIMPLE FLAT 2D animated-comic illustration. Clean expressive varied-weight ink, loose energetic accents, broad SOLID COLOR SHAPES, discrete HARD CEL SHADOW BLOCKS, printed HALFTONE DOT patches. Warm ochre/rust/browns balanced with cool muted blue/cyan/deep green. No realistic painting, 3D, gradients, airbrush or neon. Whole subject fully inside canvas with empty transparent margin, no text or watermark.\nIsolated environment VIGNETTE CUTOUT, compact irregular ground patch and structures. SKY AND EXTERIOR ARE FULLY TRANSPARENT. Environment can be wider than tall but canvas remains SQUARE. Keep the described activity and crowds when specified as small fully dressed human background figures. No opaque atmospheric backdrop or full screen landscape. Simplify details into bold graphic shapes.\nRPG catalogue 153 Cemitério que Respira. EXACT SUBJECT: Cemitério que Respira: cemitério antigo sob névoa verde-pálida, a terra das covas subindo e descendo devagar como um peito respirando. Sinais de magia verde-pálida no ar.\nMagic: flat uniform/overflowing aura with gaps, smoke wisps or hard-light constructs and printed dots. Value colors: Conflitüo rust red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal when appropriate is dark golden Bronze Arco drawn in flat tones. Non-graphic fantasy, no gore or victims, no sexualized people.",
         "nota": "o lugar vira a cena inteira da carta, em retrato vertical"
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-cemiterio-que-respira.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-cemiterio-que-respira.visual.json"
     },
     {
       "id": "col-cadeado-ciumento",
@@ -5622,9 +5636,9 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/cadeado-ciumento.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Cadeado Ciumento: personagem/objeto do catálogo aprovado (cadeado-ciumento). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Cadeado Ciumento como fonte ou forma do feitiço: feitiços já usados se reacendem nas sepulturas, prontos para responder de novo; livros se abrem sozinhos numa estante e as letras saltam no ar.",
       "ambienteOriginal": "Ambiente do Valor Eternyr: o entretempo, vilas do mesmo dia, estações paradas e relógios gigantes. Magia na cor azul-noite com riscos brancos, em aura com falhas e rastros parados no ar. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Dominum: detalhes discretos dessas cores podem aparecer.",
@@ -5639,7 +5653,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/cadeado-ciumento.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 091 Cadeado Ciumento. Subject: Cadeado Ciumento: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: nada que ele tranca é aberto por outra pessoa.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-cadeado-ciumento.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-cadeado-ciumento.visual.json"
     },
     {
       "id": "col-frasco-de-mare",

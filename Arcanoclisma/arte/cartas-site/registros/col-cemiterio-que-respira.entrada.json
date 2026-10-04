@@ -1,0 +1,42 @@
+{
+  "id": "col-cemiterio-que-respira",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-61985466-c63f-40c3-a6df-343ca8b81bd5.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nReference1 is the exact PLACE: ancient cemetery with old low rounded graves, small Gothic mausoleum arches, broken iron gate, ivy and one weathered HOODED stone memorial statue; earth grave mounds subtly rise/fall like a breathing chest, small PALEGREEN fog wisps over earth. Reference2 identifies an EXISTING character for one returned ALLY: OQueVoltou, tall gaunt pale adult humanoid, straight black hair to shoulders, tired red eyes, closed charcoal coat with brownleather/burgundy accents and broad asymmetrical grey sword/bronzehilt. Reference3 ONLY smooth style. New cemetery view from just inside open gate at eye level under a daytime rainstorm: huge grey/lilac clouds, broad smooth muddygrass earth mounds, stone chapel distant with muted warm ochre wall, tall darkbaretree bending, still-readable calm masses. ONE OQueVoltou rises in new crouched pose from a grave mound, both feet and whole closedcloth body intact, one knee low and hand pushing against ground, other hand holds sword low atside, head looks UP toward a small fullydressed older summoner standing offleft, palegreen soulthreads gently reconnect to that onebody. No corpses lyingaround, no gore, no rippedanatomy, no crowd resurrected. The PLACE remains central identity and roughly2/3 scene; returnedfigure on rightmidground establishesstory. Current Morbidyum TemporariaFindante cost6 grau5 generated1: putoneALLYfromANYgraveyard onyourfield PAYING itscost+0, not free resurrection, no mystic/revivealliesmass rule. Depict single return narrative, not paymentnumerals/UI. Rare finish local SILVER/VIOLET glints on rain/metal only, not purple secondValue magic, primary palegreen near one grave. Quietimposing environment with smooth broad stone/earthplanes and selectiveivy detail, never a bright green floodlight or rough noisy every-rock texture.\nLast reference ONLY smooth finish. Entirely new opaque fullenvironment63:88 upright illustration, no cardframe, numerals, typography, UI, logo or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/cemiterio-que-respira.png",
+  "textoRegraLido": "Ponha no seu campo um Aliado de qualquer cemitério, pagando o custo dele + 0.",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/cemiterio-que-respira.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/o-que-voltou.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Cemitério antigo com capela, portão de ferro, túmulos e memorial de pedra",
+  "momentoDoDia": "Dia de tempestade",
+  "clima": "Chuva e céu lilás acinzentado; fios verde-pálido junto à terra",
+  "escala": "Lugar amplo com um aliado retornando e conjurador na lateral",
+  "avaliacaoVisual": "Um único aliado de cabelos pretos, espada baixa e mão no chão retorna em nova pose. Seu rosto se volta ao conjurador à esquerda. Capela, monumento, árvores e túmulos formam cenário completo; efeito verde-pálido localizado.",
+  "decisoes": [
+    "Valor atual Morbidyum, sem adicionar Cognitium do briefing antigo.",
+    "O Que Voltou serve de identidade de aliado já existente; foi redesenhado em nova pose dentro da cena.",
+    "O efeito põe um Aliado de qualquer cemitério no campo pagando o custo dele; a ilustração não altera esse pagamento.",
+    "Rareza apenas estética: reflexos locais prateados e violeta, sem novos Valores."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

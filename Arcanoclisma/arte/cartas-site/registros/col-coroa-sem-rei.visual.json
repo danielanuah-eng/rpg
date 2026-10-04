@@ -1,0 +1,67 @@
+{
+  "id": "col-coroa-sem-rei",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-08ad90e0-52bf-4464-9899-3dffb8054990.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-coroa-sem-rei.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/coroa-sem-rei.png",
+  "textoRegraLido": "Ao entrar: compre 1 carta.",
+  "valoresLidos": [
+    "dominum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/coroa-sem-rei.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Celeiro convertido em salão de juramentos e reunião de magos de Dominum",
+  "momentoDoDia": "Início da noite",
+  "clima": "Chuva vista pela janela",
+  "escala": "Coroa flutuante grande sobre banco vazio, mensageiro e maga menores",
+  "avaliacaoVisual": "Coroa de bronze com pontas desiguais, pátina violeta, anel central e banda dupla preservados. Presença flutuante com elos roxos pequenos, ambiente de madeira e velas. Um pássaro entrega um único pergaminho à maga em plano secundário; foco continua na coroa.",
+  "decisoes": [
+    "Valor atual Dominum com elos roxos; bronze dourado é material físico.",
+    "Ao entrar: compre 1 carta; pergaminho único é metáfora visual, sem habilidade de obediência do RPG.",
+    "Mística incomum, não equipamento nem nova regra."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-coroa-sem-rei.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "f321e03f2d71951601b32ba61220850568fd6ef6bf0cb6d68e7ad47de5245e7d",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "incomum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

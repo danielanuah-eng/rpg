@@ -3,16 +3,8 @@
   "pedidoVersao": 2,
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 136,
+  "concluidas": 144,
   "pendentes": [
-    "col-ninho-de-estrelas",
-    "col-coroa-sem-rei",
-    "col-tapete-de-duas-casas",
-    "col-primeira-moeda",
-    "col-sino-dos-juramentados",
-    "col-ancora-do-mesmo-dia",
-    "col-cemiterio-que-respira",
-    "col-cadeado-ciumento",
     "col-frasco-de-mare",
     "col-chapeu-de-chuva",
     "col-barco-dobravel",
@@ -1167,6 +1159,70 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-curandeira-de-ervas.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-curandeira-de-ervas.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-ninho-de-estrelas",
+      "nome": "Ninho de Estrelas",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-ninho-de-estrelas.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-ninho-de-estrelas.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-coroa-sem-rei",
+      "nome": "Coroa sem Rei",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-coroa-sem-rei.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-coroa-sem-rei.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-tapete-de-duas-casas",
+      "nome": "Tapete de Duas Casas",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-tapete-de-duas-casas.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-tapete-de-duas-casas.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-primeira-moeda",
+      "nome": "A Primeira Moeda",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-primeira-moeda.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-primeira-moeda.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-sino-dos-juramentados",
+      "nome": "Sino dos Juramentados",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-sino-dos-juramentados.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-sino-dos-juramentados.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-ancora-do-mesmo-dia",
+      "nome": "Âncora do Mesmo Dia",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-ancora-do-mesmo-dia.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-ancora-do-mesmo-dia.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-cemiterio-que-respira",
+      "nome": "Cemitério que Respira",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-cemiterio-que-respira.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-cemiterio-que-respira.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "col-cadeado-ciumento",
+      "nome": "Cadeado Ciumento",
+      "arquivo": "Arcanoclisma/arte/cartas-site/col-cadeado-ciumento.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-cadeado-ciumento.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
     }
   ],

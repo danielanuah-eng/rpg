@@ -1,8 +1,10 @@
 # Entrega visual para Claude — 04/10/2026
 
-## Atualização posterior: 136/210
+## Atualização posterior: 144/210
 
-O lote e a galeria agora têm 136 artes concluídas, com 74 pendentes. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega inicial de conjuradores abaixo. Entraram Gato de Navio, Menina Raposa, Ilusionista do Labirinto, Ceifadora da Peste, Contrabandista de Porto, Vento Mensageiro, Guarda-costas Contratado e Curandeira de Ervas. Cada ID tem cena e registro próprios, com dimensões e alfa medidos. Os Valores atuais determinam a cor da magia; aparência física e roupas dos personagens aprovados continuam preservadas. Os gestos e cenários não adicionam efeitos ao jogo.
+O lote e a galeria agora têm 144 artes concluídas, com 66 pendentes. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega inicial de conjuradores abaixo. Entraram Ninho de Estrelas, Coroa Sem Rei, Tapete de Duas Casas, Primeira Moeda, Sino dos Juramentados, Âncora do Mesmo Dia, Cemitério que Respira e Cadeado Ciumento. Cada ID tem cena e registro próprios, com dimensões e alfa medidos. Os Valores atuais determinam a cor da magia; aparência física e roupas dos personagens aprovados continuam preservadas. Os gestos e cenários não adicionam efeitos ao jogo.
+
+Cemitério que Respira mostra um único aliado retornando, ainda sujeito ao pagamento do custo; O Que Voltou aparece em pose nova, voltado para o conjurador. Cadeado Ciumento usa Dominum atual: recuperar uma carta que anula outra neste turno, banida ao resolver, e comprar uma carta. Não interpretar a aparência do cadeado como anulação permanente. Ninho de Estrelas usa Sublimeyn, Âncora do Mesmo Dia usa Cognitium e as raridades do catálogo RPG não substituem o briefing do TCG.
 
 A Ceifadora passou por revisão mínima de rosto e pupilas para mirar o alvo da foice. Usar `col-ceifadora-da-peste.png` do mapa, não o estudo anterior em `variantes/`. O Ilusionista mostra uma criatura intacta atravessando um portal, enquanto a Ceifadora mostra um único alvo se dissipando. Protegido 2 do Guarda-costas continua sendo pagamento adicional de Arcano para escolhê-lo como alvo, sem imunidade ou reflexão. Curandeira: Valor atual Primitivum, cura pontual de 2 de dano em um alvo.
 

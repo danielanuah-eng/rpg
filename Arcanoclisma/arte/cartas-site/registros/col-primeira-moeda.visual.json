@@ -1,0 +1,67 @@
+{
+  "id": "col-primeira-moeda",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-61af010d-29ad-4d82-89d0-599d6ae8b0ed.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-primeira-moeda.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/a-primeira-moeda.png",
+  "textoRegraLido": "Compre 2 cartas e o oponente ganha 1 de Arcano.",
+  "valoresLidos": [
+    "persona"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/a-primeira-moeda.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Loja de livros e moedas de Persona junto a um canal",
+  "momentoDoDia": "Início da manhã",
+  "clima": "Tempo claro e água azul no canal",
+  "escala": "Moeda próxima à palma, dois fólios e rival em planos posteriores",
+  "avaliacaoVisual": "Moeda antiga de bronze com pátina azul, relevo solar e borda irregular preservados. Dois fólios abertos recebem fios coral; uma única esfera de Arcano segue para a mão do rival. Cena de balcão e janela em profundidade, magia localizada, sem combate.",
+  "decisoes": [
+    "Raridade atual comum prevalece sobre o rumor de artefato lendário do RPG.",
+    "Compre 2 cartas e o oponente ganha 1 de Arcano: duas formas de conhecimento e uma esfera do outro lado.",
+    "Valor Persona; não adicionar imunidade ou outra propriedade mecânica."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-primeira-moeda.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "e587f9ff80c6807943f43d3f4fd4f92734fa32adcffe3e2cbb9651fb0b44a6d6",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

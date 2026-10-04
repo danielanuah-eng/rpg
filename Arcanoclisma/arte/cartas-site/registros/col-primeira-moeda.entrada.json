@@ -1,0 +1,37 @@
+{
+  "id": "col-primeira-moeda",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-61af010d-29ad-4d82-89d0-599d6ae8b0ed.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPreserve APrimeiraMoeda from first reference: ancient thick circular Bronze Arco coin, chipped worn irregular rim, teal/blue patina on broad bronze face, central SUN-like circular relief with FOUR long pointed rays and smaller wavy rays, four tiny round studs, no actual lettering or numbers. Unique ancient artefact physical identity, not jewelry. CURRENT card rarity COMMON despite legendary RPG rumor; do not add legendary foil or immunity mechanics. New close perspective coin spinning slightly above one open left palm, dominating left-center foreground naturally with macro perspective; fingers show physical coin scale, no colossal coin statue. Source of ONE temporaria REPENTINA spell in Persona. TWO small booklike folios rise open above a merchant's low desk at center-right, abstract unreadable ink marks and coral threads form knowledge arriving toward the coin's holder; a separate single CORAL Arcano pearl escapes toward a rival's outstretched hand at far upper-right across counter. Current EXACT rule draw2cards and opponent gains1Arcano, cost2 grau1 generated1; show two knowledge shapes and one concession, not two coins and no forced discard. Scene in a narrow secondhand book-and-coin shop on Persona's canal street at fresh early morning: smooth pale blue walls, a small wooden desk and one simple shelf, wide window shows grey-blue water and passing unremarkable boat, folded dark cloth and closed ledger. The palm belongs to a darkbrown adult woman in practical cream sleeve, small face in background focuses on floating folios; rival adult older man has round face, short grey hair and quiet russet waistcoat. No swords, no combat, no black hole. Calm controlled daylight, matte aged bronze with small edge sheen, localized CORAL energy not old brightgold spell; single consistent illustration, clear foreground scale and background depth.\nSecond reference ONLY approved smooth finish, never its woman/dragon/meadow. New opaque edge-to-edge63:88 upright illustration; no actual cardframe, readabletext, UI, logo or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/a-primeira-moeda.png",
+  "textoRegraLido": "Compre 2 cartas e o oponente ganha 1 de Arcano.",
+  "valoresLidos": [
+    "persona"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/a-primeira-moeda.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Loja de livros e moedas de Persona junto a um canal",
+  "momentoDoDia": "Início da manhã",
+  "clima": "Tempo claro e água azul no canal",
+  "escala": "Moeda próxima à palma, dois fólios e rival em planos posteriores",
+  "avaliacaoVisual": "Moeda antiga de bronze com pátina azul, relevo solar e borda irregular preservados. Dois fólios abertos recebem fios coral; uma única esfera de Arcano segue para a mão do rival. Cena de balcão e janela em profundidade, magia localizada, sem combate.",
+  "decisoes": [
+    "Raridade atual comum prevalece sobre o rumor de artefato lendário do RPG.",
+    "Compre 2 cartas e o oponente ganha 1 de Arcano: duas formas de conhecimento e uma esfera do outro lado.",
+    "Valor Persona; não adicionar imunidade ou outra propriedade mecânica."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

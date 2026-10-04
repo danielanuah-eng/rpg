@@ -1,16 +1,8 @@
 {
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 136,
+  "concluidas": 144,
   "pendentes": [
-    "col-ninho-de-estrelas",
-    "col-coroa-sem-rei",
-    "col-tapete-de-duas-casas",
-    "col-primeira-moeda",
-    "col-sino-dos-juramentados",
-    "col-ancora-do-mesmo-dia",
-    "col-cemiterio-que-respira",
-    "col-cadeado-ciumento",
     "col-frasco-de-mare",
     "col-chapeu-de-chuva",
     "col-barco-dobravel",

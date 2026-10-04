@@ -1,0 +1,67 @@
+{
+  "id": "col-tapete-de-duas-casas",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-a9e94f77-0a5a-4e56-ab63-b2ac2c65f389.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-tapete-de-duas-casas.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/tapete-de-duas-casas.png",
+  "textoRegraLido": "Suspenda: a primeira carta que você jogar neste turno custa 1 a menos.",
+  "valoresLidos": [
+    "alvorum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/tapete-de-duas-casas.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Casa de maga de Alvorum, piso azul, armário verde e atalho para outra casa",
+  "momentoDoDia": "Fim da tarde",
+  "clima": "Nuvens cinzentas no exterior",
+  "escala": "Tapete ocupa o primeiro plano, segundo tapete visto pelo atalho e maga ao lado",
+  "avaliacaoVisual": "Padrão terracota/azul de losangos, franjas claras e bordas aprovadas preservados em duas peças gêmeas. Tapete desenrolado no piso, atalho integrado na superfície, casa habitada e um gato na cadeira. Magia dourada/preta restrita à abertura e ao pequeno feitiço.",
+  "decisoes": [
+    "Estrutura permanece no lugar; não retratar ataque nem montaria.",
+    "Suspenda: primeira carta do turno custa 1 a menos; atalho é representação visual, não regra nova de teleporte.",
+    "Valor atual Alvorum, comum e fundo inteiro."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-tapete-de-duas-casas.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "51fe00eddd22876e2355cd7500d24c19246784b8d3d25d6b52620bb0af5bb220",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

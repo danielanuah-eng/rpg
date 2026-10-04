@@ -1,0 +1,68 @@
+{
+  "id": "col-cadeado-ciumento",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-7ba5e1fd-8ddc-4371-af66-998555f0777f.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-cadeado-ciumento.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/cadeado-ciumento.png",
+  "textoRegraLido": "Neste turno você pode jogar do cemitério uma carta que anula outra (ela é banida ao resolver) e compre 1 carta.",
+  "valoresLidos": [
+    "dominum"
+  ],
+  "velocidade": "repentina",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/cadeado-ciumento.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Arquivo de baús e feitiços usados numa cripta de Dominum",
+  "momentoDoDia": "Crepúsculo",
+  "clima": "Luz quente de velas e janela violeta discreta",
+  "escala": "Cadeado em primeiro plano; um livro recuperado e um pergaminho novo com o mago",
+  "avaliacaoVisual": "Cadeado de bronze quadrangular, arco em U, fechadura e rebites reconhecíveis. Correntes púrpuras levam a um livro fechado observado pelo mago; a outra mão recebe um único pergaminho. Cenário de arquivo completo com luz controlada.",
+  "decisoes": [
+    "Valor atual Dominum prevalece sobre Eternyr do briefing antigo.",
+    "Repentina permite jogar neste turno uma carta do cemitério que anula outra; ela é banida ao resolver. O livro e a folha dissipando sugerem essa recuperação, sem criar anulação permanente.",
+    "Um único pergaminho representa a compra de uma carta; nenhuma regra nova.",
+    "Raridade comum, sem acabamento de lendária."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-cadeado-ciumento.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "8acb20ca059bc20b855921df2d80d841e448bd68432d3f58eabcc173d2c00ed4",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}
