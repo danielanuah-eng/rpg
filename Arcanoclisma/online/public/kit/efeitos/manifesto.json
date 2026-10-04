@@ -1,1 +1,4373 @@
-{}
+{
+  "base-dano-c1": {
+    "versao": 17,
+    "nome": "Chuva de Faíscas",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-dano-c1/conjurar-v17.svg",
+      "/kit/efeitos/base-dano-c1/trajeto-v17.svg",
+      "/kit/efeitos/base-dano-c1/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-dano-c1/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-dano-c1/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-dano-c1/impacto-v17.svg"
+    },
+    "movimento": "projetil",
+    "motivo": "dragao",
+    "paleta": [
+      "#ff682b",
+      "#ffe4a3"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-c1.png",
+    "arteSha256": "6d5acbabfc2253f13916a906ac1238dde025ce9450f8d529e25c25be141d1666",
+    "textoBase": "Causa 2 de dano a um alvo.",
+    "assinaturaEfeito": "bf82d4396e662d73aad745da2de766778fefd9469076313cf334465930c7f081",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-dano-c1-repentina": {
+    "versao": 17,
+    "nome": "Faísca de Tempestade",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-dano-c1-repentina/conjurar-v17.svg",
+      "/kit/efeitos/base-dano-c1-repentina/trajeto-v17.svg",
+      "/kit/efeitos/base-dano-c1-repentina/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-dano-c1-repentina/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-dano-c1-repentina/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-dano-c1-repentina/impacto-v17.svg"
+    },
+    "movimento": "feixe",
+    "motivo": "relampago",
+    "paleta": [
+      "#f95c38",
+      "#fff1cc"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 66,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-c1-repentina.png",
+    "arteSha256": "10d11caec7e7cda33c306d5e10416c8649505a6eb7a0d8fc7f02022dbf76ff08",
+    "textoBase": "Causa 1 de dano a um alvo.",
+    "assinaturaEfeito": "e0bf2cc0587ff95adf58fc4340383c732b8a16873720256367ab0070cd6cade1",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-dano-c2": {
+    "versao": 17,
+    "nome": "Brasa de Forja",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-dano-c2/conjurar-v17.svg",
+      "/kit/efeitos/base-dano-c2/trajeto-v17.svg",
+      "/kit/efeitos/base-dano-c2/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-dano-c2/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-dano-c2/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-dano-c2/impacto-v17.svg"
+    },
+    "movimento": "projetil",
+    "motivo": "brasa",
+    "paleta": [
+      "#cbdfe6",
+      "#fff5da"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-c2.png",
+    "arteSha256": "3a118e25fcd7d12434ae391fb55e0ef5893aba453c4f0b62455f4c25106b3342",
+    "textoBase": "Causa 3 de dano a um alvo.",
+    "assinaturaEfeito": "a48f70768ef88ca33ffbc13e0d1079927ce1d5082b3eea5999c9ceba521f1e5f",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-dano-c2-repentina": {
+    "versao": 17,
+    "nome": "Vento Com Rancor",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-dano-c2-repentina/conjurar-v17.svg",
+      "/kit/efeitos/base-dano-c2-repentina/trajeto-v17.svg",
+      "/kit/efeitos/base-dano-c2-repentina/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-dano-c2-repentina/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-dano-c2-repentina/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-dano-c2-repentina/impacto-v17.svg"
+    },
+    "movimento": "feixe",
+    "motivo": "vento",
+    "paleta": [
+      "#c1e5ed",
+      "#f5fcff"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 66,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-c2-repentina.png",
+    "arteSha256": "ef261ead4c4f7665d4aa82d44f52d9ef2f58f64f195f24bcecf4219288caf65d",
+    "textoBase": "Causa 2 de dano a um alvo.",
+    "assinaturaEfeito": "bf82d4396e662d73aad745da2de766778fefd9469076313cf334465930c7f081",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-dano-c3": {
+    "versao": 17,
+    "nome": "Chama que Lembra",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-dano-c3/conjurar-v17.svg",
+      "/kit/efeitos/base-dano-c3/trajeto-v17.svg",
+      "/kit/efeitos/base-dano-c3/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-dano-c3/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-dano-c3/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-dano-c3/impacto-v17.svg"
+    },
+    "movimento": "projetil",
+    "motivo": "dragao",
+    "paleta": [
+      "#eab84f",
+      "#fff1bf"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-c3.png",
+    "arteSha256": "645424780ecac160774dd5ed4bed751375d84d550c784e9dcfff12dbaa14d182",
+    "textoBase": "Causa 4 de dano a um alvo.",
+    "assinaturaEfeito": "274fad14d962a5d676285f21d7a532a51d39ff02cc8d13e1e3befd21a48ccb29",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-dano-c3-repentina": {
+    "versao": 17,
+    "nome": "Tempestade Viva",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-dano-c3-repentina/conjurar-v17.svg",
+      "/kit/efeitos/base-dano-c3-repentina/trajeto-v17.svg",
+      "/kit/efeitos/base-dano-c3-repentina/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-dano-c3-repentina/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-dano-c3-repentina/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-dano-c3-repentina/impacto-v17.svg"
+    },
+    "movimento": "feixe",
+    "motivo": "relampago",
+    "paleta": [
+      "#f85731",
+      "#ffe5b6"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 66,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-c3-repentina.png",
+    "arteSha256": "cea398f7e764fccb7d0810e80a4cc2de414f2f306186be71a5a5ffdad8801b11",
+    "textoBase": "Causa 3 de dano a um alvo.",
+    "assinaturaEfeito": "a48f70768ef88ca33ffbc13e0d1079927ce1d5082b3eea5999c9ceba521f1e5f",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-dano-c4": {
+    "versao": 17,
+    "nome": "Rasgo Faminto",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-dano-c4/conjurar-v17.svg",
+      "/kit/efeitos/base-dano-c4/trajeto-v17.svg",
+      "/kit/efeitos/base-dano-c4/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-dano-c4/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-dano-c4/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-dano-c4/impacto-v17.svg"
+    },
+    "movimento": "projetil",
+    "motivo": "mandibula",
+    "paleta": [
+      "#c95a9e",
+      "#f6d7ba"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-c4.png",
+    "arteSha256": "2586cc7f50712041775e8decd592d83edeae13e519ecaa389278a90b322c0121",
+    "textoBase": "Causa 5 de dano a um alvo.",
+    "assinaturaEfeito": "72b4a45a0eb45c51a57450d72182425c428e02345842fd7c2fd38aec2b7d566b",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-dano-c4-repentina": {
+    "versao": 17,
+    "nome": "Eco de Magia Morta",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-dano-c4-repentina/conjurar-v17.svg",
+      "/kit/efeitos/base-dano-c4-repentina/trajeto-v17.svg",
+      "/kit/efeitos/base-dano-c4-repentina/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-dano-c4-repentina/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-dano-c4-repentina/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-dano-c4-repentina/impacto-v17.svg"
+    },
+    "movimento": "projetil",
+    "motivo": "ossos",
+    "paleta": [
+      "#d5c7ae",
+      "#fff5e3"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-c4-repentina.png",
+    "arteSha256": "96006301f6a4a8c80ba54d01745e6ce8736b9aa3e2c060a5f8ffee31d565e5c4",
+    "textoBase": "Causa 4 de dano a um alvo.",
+    "assinaturaEfeito": "274fad14d962a5d676285f21d7a532a51d39ff02cc8d13e1e3befd21a48ccb29",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-dano-conjurador-c3": {
+    "versao": 17,
+    "nome": "Olho de Dragão Pálido",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-dano-conjurador-c3/conjurar-v17.svg",
+      "/kit/efeitos/base-dano-conjurador-c3/trajeto-v17.svg",
+      "/kit/efeitos/base-dano-conjurador-c3/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-dano-conjurador-c3/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-dano-conjurador-c3/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-dano-conjurador-c3/impacto-v17.svg"
+    },
+    "movimento": "feixe",
+    "motivo": "olho",
+    "paleta": [
+      "#97c96d",
+      "#ecf4bf"
+    ],
+    "destino": "conjurador-rival",
+    "duracaoMs": 1300,
+    "tamanhoPx": 66,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c3.png",
+    "arteSha256": "6b16abf50fb5455a2ea911deebb301f748a8f3653e89812b68b4df0ddfd0200e",
+    "textoBase": "Causa 3 de dano ao Conjurador inimigo.",
+    "assinaturaEfeito": "433400a653a121d833d32cd442887f018a2f5faf0b929a172f4b17d0f4bcf9f9",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-dano-conjurador-c5": {
+    "versao": 17,
+    "nome": "Estilhaço de Disrupto",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-dano-conjurador-c5/conjurar-v17.svg",
+      "/kit/efeitos/base-dano-conjurador-c5/trajeto-v17.svg",
+      "/kit/efeitos/base-dano-conjurador-c5/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-dano-conjurador-c5/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-dano-conjurador-c5/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-dano-conjurador-c5/impacto-v17.svg"
+    },
+    "movimento": "projetil",
+    "motivo": "cristal",
+    "paleta": [
+      "#30bbf0",
+      "#d0f5ff"
+    ],
+    "destino": "conjurador-rival",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c5.png",
+    "arteSha256": "94084d60f2cf64aba5035c76409de72afc160ed0331577f073bc119171ccc18e",
+    "textoBase": "Causa 4 de dano ao Conjurador inimigo.",
+    "assinaturaEfeito": "201cdd1d438c19d01498346dd076cd26df6358ed0892cd7101d437b273e9b62a",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-comprar-c1": {
+    "versao": 17,
+    "nome": "Baralho do Arquivo",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-comprar-c1/conjurar-v17.svg",
+      "/kit/efeitos/base-comprar-c1/trajeto-v17.svg",
+      "/kit/efeitos/base-comprar-c1/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-comprar-c1/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-comprar-c1/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-comprar-c1/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "cartas",
+    "paleta": [
+      "#40bad3",
+      "#edcf7b"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-comprar-c1.png",
+    "arteSha256": "d6b001ad338b00ed5974e9f519f51643ea422697749d1d64634f44b1719fdd8e",
+    "textoBase": "Olhe as 3 cartas do topo do seu baralho. Ponha 1 na mão e as outras no fundo do baralho.",
+    "assinaturaEfeito": "0ad4104e578025064539b920a100b5c5774e14aebdf26b0cf0913ed10eb84c3a",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-comprar-c3": {
+    "versao": 17,
+    "nome": "Livro Que Lê Você",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-comprar-c3/conjurar-v17.svg",
+      "/kit/efeitos/base-comprar-c3/trajeto-v17.svg",
+      "/kit/efeitos/base-comprar-c3/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-comprar-c3/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-comprar-c3/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-comprar-c3/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "livro",
+    "paleta": [
+      "#e9b75d",
+      "#fff1c9"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-comprar-c3.png",
+    "arteSha256": "613b6423ca48bcdda301998e02abc08119647f56bfe88b57e8373bf6bd44f9b6",
+    "textoBase": "Compre 2 cartas.",
+    "assinaturaEfeito": "93bcd5bb4ac59fa18293101139f4b8226b1c120e0e65221f80a4966a24685be8",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-comprar-c2-repentina": {
+    "versao": 17,
+    "nome": "Pensamento Solto",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-comprar-c2-repentina/conjurar-v17.svg",
+      "/kit/efeitos/base-comprar-c2-repentina/trajeto-v17.svg",
+      "/kit/efeitos/base-comprar-c2-repentina/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-comprar-c2-repentina/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-comprar-c2-repentina/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-comprar-c2-repentina/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "paginas",
+    "paleta": [
+      "#827ad5",
+      "#e6e8ff"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-comprar-c2-repentina.png",
+    "arteSha256": "702e12f6aa73c94792abda8f6fc2669b535b61f7484c1ee62e7020a280d1db19",
+    "textoBase": "Compre 1 carta.",
+    "assinaturaEfeito": "ac47cfb2c62cfd6a8d05945f0e60ed097fba633e05c1b9a8b2b041da4db59210",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-curar-c2": {
+    "versao": 17,
+    "nome": "Sementes de Um Dia",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-curar-c2/conjurar-v17.svg",
+      "/kit/efeitos/base-curar-c2/trajeto-v17.svg",
+      "/kit/efeitos/base-curar-c2/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-curar-c2/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-curar-c2/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-curar-c2/impacto-v17.svg"
+    },
+    "movimento": "cura",
+    "motivo": "folhas",
+    "paleta": [
+      "#a5ca50",
+      "#f4e69b"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-curar-c2.png",
+    "arteSha256": "e97dbf45a7ff82973b68f8a5964e6b4f0dbec2deccc789819b1f7d88555a5210",
+    "textoBase": "Cure 8 de dano de um alvo e ganhe 1 Arcano.",
+    "assinaturaEfeito": "3b9c8472a6faf00eca58781e8d5c4d50d1e97bc50f362c255c7aacd68fa40caa",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-curar-c4": {
+    "versao": 17,
+    "nome": "Relicário da Terceira Vida",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-curar-c4/conjurar-v17.svg",
+      "/kit/efeitos/base-curar-c4/trajeto-v17.svg",
+      "/kit/efeitos/base-curar-c4/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-curar-c4/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-curar-c4/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-curar-c4/impacto-v17.svg"
+    },
+    "movimento": "cura",
+    "motivo": "laco",
+    "paleta": [
+      "#7cdee7",
+      "#eefaff"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-curar-c4.png",
+    "arteSha256": "d38f9e99482081e3d75801a159c2b4cde0863740441b7a20d985711cfd23e424",
+    "textoBase": "Cure 15 de dano de um alvo e compre 1.",
+    "assinaturaEfeito": "65fb71f01c6cc7fe6b292969da78fbac7faa218399a2380625827d47811f2587",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-destruir-c3": {
+    "versao": 17,
+    "nome": "Balança de Serath",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-destruir-c3/conjurar-v17.svg",
+      "/kit/efeitos/base-destruir-c3/trajeto-v17.svg",
+      "/kit/efeitos/base-destruir-c3/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-destruir-c3/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-destruir-c3/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-destruir-c3/impacto-v17.svg"
+    },
+    "movimento": "alvo",
+    "motivo": "balanca",
+    "paleta": [
+      "#9b66d8",
+      "#eee2ff"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-destruir-c3.png",
+    "arteSha256": "cc8960352594035c905817650349d776244c537a530a60a2c61ebed38939d548",
+    "textoBase": "Destrua um Aliado ou Mística.",
+    "assinaturaEfeito": "20904a9ec595e0f588cda7c09cba9a065c1e5a0d0f30ae004f67c0055d56f402",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-destruir-c4-repentina": {
+    "versao": 17,
+    "nome": "Sombra Que Ficou",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-destruir-c4-repentina/conjurar-v17.svg",
+      "/kit/efeitos/base-destruir-c4-repentina/trajeto-v17.svg",
+      "/kit/efeitos/base-destruir-c4-repentina/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-destruir-c4-repentina/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-destruir-c4-repentina/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-destruir-c4-repentina/impacto-v17.svg"
+    },
+    "movimento": "alvo",
+    "motivo": "mandibula",
+    "paleta": [
+      "#73647d",
+      "#f1e4c6"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-destruir-c4-repentina.png",
+    "arteSha256": "15a87a744e41d045d05e72c752fdcf38a26984c46688510e269b54eaa0aac4a6",
+    "textoBase": "Destrua um Aliado ou Mística.",
+    "assinaturaEfeito": "20904a9ec595e0f588cda7c09cba9a065c1e5a0d0f30ae004f67c0055d56f402",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-estrutura-c1": {
+    "versao": 17,
+    "nome": "Vila da Colheita",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-estrutura-c1/conjurar-v17.svg",
+      "/kit/efeitos/base-estrutura-c1/trajeto-v17.svg",
+      "/kit/efeitos/base-estrutura-c1/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-estrutura-c1/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-estrutura-c1/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-estrutura-c1/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "trigo",
+    "paleta": [
+      "#dbb555",
+      "#f4e4b5"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-estrutura-c1.png",
+    "arteSha256": "85a4e16860de5c311c9d9cad615859077d705a710ecb54f9432b3e1b478b1207",
+    "textoBase": "Suspenda: ganhe 1 Arcano.",
+    "assinaturaEfeito": "0c820f7ebb98710cf03bf86b470965310b2ad9cf36467b5850bbda81e3d23ffe",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-estrutura-c3": {
+    "versao": 17,
+    "nome": "Biblioteca que Esquece",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-estrutura-c3/conjurar-v17.svg",
+      "/kit/efeitos/base-estrutura-c3/trajeto-v17.svg",
+      "/kit/efeitos/base-estrutura-c3/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-estrutura-c3/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-estrutura-c3/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-estrutura-c3/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "paginas",
+    "paleta": [
+      "#a3b8ed",
+      "#f8edd2"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-estrutura-c3.png",
+    "arteSha256": "50bd3bba3143dfd521d8fd7e4c6610d812952b4bedf22f370e55907d003a0de5",
+    "textoBase": "Suspenda e pague 1: compre 1.",
+    "assinaturaEfeito": "3178e320bf96ce51604dd1bd93b569ed95c5b785b3b348addfc0b72d021c1cc5",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-dano-conjurador-c1": {
+    "versao": 17,
+    "nome": "Apito de Eco Longe",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-dano-conjurador-c1/conjurar-v17.svg",
+      "/kit/efeitos/base-dano-conjurador-c1/trajeto-v17.svg",
+      "/kit/efeitos/base-dano-conjurador-c1/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-dano-conjurador-c1/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-dano-conjurador-c1/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-dano-conjurador-c1/impacto-v17.svg"
+    },
+    "movimento": "feixe",
+    "motivo": "som",
+    "paleta": [
+      "#62c4e7",
+      "#ebf8ff"
+    ],
+    "destino": "conjurador-rival",
+    "duracaoMs": 1300,
+    "tamanhoPx": 66,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c1.png",
+    "arteSha256": "4b75ac1a1327090bf006ed945ce28e765226b3a45d0325a6056bcaf458b8d566",
+    "textoBase": "Causa 1 de dano ao Conjurador inimigo.",
+    "assinaturaEfeito": "263384d1ac792e773b7c7f44d864fec09c26e4aaca44f78cb8ee0c1ddb0e3b02",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-dano-conjurador-c2": {
+    "versao": 17,
+    "nome": "Garrafa de Voz",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-dano-conjurador-c2/conjurar-v17.svg",
+      "/kit/efeitos/base-dano-conjurador-c2/trajeto-v17.svg",
+      "/kit/efeitos/base-dano-conjurador-c2/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-dano-conjurador-c2/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-dano-conjurador-c2/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-dano-conjurador-c2/impacto-v17.svg"
+    },
+    "movimento": "feixe",
+    "motivo": "som",
+    "paleta": [
+      "#edab4c",
+      "#fff0c1"
+    ],
+    "destino": "conjurador-rival",
+    "duracaoMs": 1300,
+    "tamanhoPx": 66,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c2.png",
+    "arteSha256": "a7604bd7d033a7907c4f65f3de12ceab6e963b636cacad80164ca47629969507",
+    "textoBase": "Causa 2 de dano ao Conjurador inimigo.",
+    "assinaturaEfeito": "b0a61fcdd5fc364584218475beb38d4c72f93bc097eece2f38008dce0d6169e1",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-dano-conjurador-c4": {
+    "versao": 17,
+    "nome": "Luneta do Fim",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-dano-conjurador-c4/conjurar-v17.svg",
+      "/kit/efeitos/base-dano-conjurador-c4/trajeto-v17.svg",
+      "/kit/efeitos/base-dano-conjurador-c4/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-dano-conjurador-c4/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-dano-conjurador-c4/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-dano-conjurador-c4/impacto-v17.svg"
+    },
+    "movimento": "feixe",
+    "motivo": "laser",
+    "paleta": [
+      "#f26150",
+      "#ffe3cb"
+    ],
+    "destino": "conjurador-rival",
+    "duracaoMs": 1300,
+    "tamanhoPx": 66,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c4-a745c23c.png",
+    "arteSha256": "a745c23cddd06f76229178bd1e866430d560688873523043e0d0b1c26f3d97cc",
+    "textoBase": "Causa 4 de dano ao Conjurador inimigo.",
+    "assinaturaEfeito": "201cdd1d438c19d01498346dd076cd26df6358ed0892cd7101d437b273e9b62a",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-curar-c1": {
+    "versao": 17,
+    "nome": "Lenço das Lágrimas",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-curar-c1/conjurar-v17.svg",
+      "/kit/efeitos/base-curar-c1/trajeto-v17.svg",
+      "/kit/efeitos/base-curar-c1/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-curar-c1/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-curar-c1/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-curar-c1/impacto-v17.svg"
+    },
+    "movimento": "cura",
+    "motivo": "lenco",
+    "paleta": [
+      "#bada7d",
+      "#f7efc7"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-curar-c1.png",
+    "arteSha256": "69fd5c7d04f14d53fdfa1d7d7a03cf107a10e88424a74ccee03f3db6431e0d5b",
+    "textoBase": "Cure 5 de dano de um alvo e ganhe 1 Arcano.",
+    "assinaturaEfeito": "18229392f40d9feb9046598affdb31d4c792b672c8dece0106c241f686629620",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-curar-c3": {
+    "versao": 17,
+    "nome": "Cálice do Primeiro Barro",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-curar-c3/conjurar-v17.svg",
+      "/kit/efeitos/base-curar-c3/trajeto-v17.svg",
+      "/kit/efeitos/base-curar-c3/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-curar-c3/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-curar-c3/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-curar-c3/impacto-v17.svg"
+    },
+    "movimento": "cura",
+    "motivo": "agua",
+    "paleta": [
+      "#4ed7d9",
+      "#d8ffff"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-curar-c3.png",
+    "arteSha256": "db12b6339f0e20e4216ede3a858ec87b106ef2e19cd6d68281472088499e98a8",
+    "textoBase": "Cure 11 de dano de um alvo e compre 1.",
+    "assinaturaEfeito": "9861c5b2b8ab3de404d1b42fe3e1b795cd71d7a6b254df6db8c2f6f648b61d6a",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-curar-c6": {
+    "versao": 17,
+    "nome": "Aurora Que Desceu",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-curar-c6/conjurar-v17.svg",
+      "/kit/efeitos/base-curar-c6/trajeto-v17.svg",
+      "/kit/efeitos/base-curar-c6/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-curar-c6/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-curar-c6/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-curar-c6/impacto-v17.svg"
+    },
+    "movimento": "cura",
+    "motivo": "laco",
+    "paleta": [
+      "#d9b457",
+      "#e9dfff"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-curar-c6.png",
+    "arteSha256": "73439959cd0df639f838fa961ed8b26ec3bf61ddda3d2c0fe57b6ef5efe360e4",
+    "textoBase": "Cure 20 de dano de um alvo e compre 2.",
+    "assinaturaEfeito": "ebf79affb321f9e7eafd46df52789caa8e4c6b4494b03dd6cedd410cd931d715",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-curar-c8": {
+    "versao": 17,
+    "nome": "Semente da Floresta Primeira",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-curar-c8/conjurar-v17.svg",
+      "/kit/efeitos/base-curar-c8/trajeto-v17.svg",
+      "/kit/efeitos/base-curar-c8/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-curar-c8/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-curar-c8/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-curar-c8/impacto-v17.svg"
+    },
+    "movimento": "cura",
+    "motivo": "raiz",
+    "paleta": [
+      "#bdd873",
+      "#f5efc5"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-curar-c8.png",
+    "arteSha256": "b00fecdebdfed8ef381b48a31a024591562fac3c2ef96c7ddfe6a84481cc13bc",
+    "textoBase": "Cure 20 de dano de um alvo e compre 3.",
+    "assinaturaEfeito": "e7fd448b12207ab4c80559570d0a7bf0b9c0f347627e097d95c5e380df7e23d4",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-estrutura-c3-enfermaria": {
+    "versao": 17,
+    "nome": "Aldeia da Curandeira",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-estrutura-c3-enfermaria/conjurar-v17.svg",
+      "/kit/efeitos/base-estrutura-c3-enfermaria/trajeto-v17.svg",
+      "/kit/efeitos/base-estrutura-c3-enfermaria/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-estrutura-c3-enfermaria/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-estrutura-c3-enfermaria/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-estrutura-c3-enfermaria/impacto-v17.svg"
+    },
+    "movimento": "cura",
+    "motivo": "folhas",
+    "paleta": [
+      "#b6c97a",
+      "#ffeec4"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-estrutura-c3-enfermaria.png",
+    "arteSha256": "c6379e4fbc09836000b658e7e884a52a5c74d7202bb0f8d00a617202141d79c3",
+    "textoBase": "Suspenda: cure 3 de um alvo.",
+    "assinaturaEfeito": "e50194e45a98ad24020b121f9764563c8cdd3338ee9bb1a189033a7ae432f019",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-estrutura-c4-torre": {
+    "versao": 17,
+    "nome": "Torre dos Protetores",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-estrutura-c4-torre/conjurar-v17.svg",
+      "/kit/efeitos/base-estrutura-c4-torre/trajeto-v17.svg",
+      "/kit/efeitos/base-estrutura-c4-torre/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-estrutura-c4-torre/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-estrutura-c4-torre/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-estrutura-c4-torre/impacto-v17.svg"
+    },
+    "movimento": "feixe",
+    "motivo": "laser",
+    "paleta": [
+      "#d7b365",
+      "#f9e9bd"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 66,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-estrutura-c4-torre.png",
+    "arteSha256": "86e79f14cf3cb5ae0a974f8fc05bbb8e9c152793c5a2510569cb2b0fc29e84f7",
+    "textoBase": "Suspenda e pague 1: cause 2 de dano a um alvo.",
+    "assinaturaEfeito": "09a9f91f672464d0dd904ed6419730f4173c71d047b921f6379ab4c933a33908",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-estrutura-c4-fonte": {
+    "versao": 17,
+    "nome": "Porto de Vidro",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-estrutura-c4-fonte/conjurar-v17.svg",
+      "/kit/efeitos/base-estrutura-c4-fonte/trajeto-v17.svg",
+      "/kit/efeitos/base-estrutura-c4-fonte/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-estrutura-c4-fonte/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-estrutura-c4-fonte/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-estrutura-c4-fonte/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "cristal",
+    "paleta": [
+      "#9cdbe6",
+      "#eefeff"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-estrutura-c4-fonte.png",
+    "arteSha256": "998f28f59ed2abd30449c6c750ab13d5a06cdc0f47e9dc5033c69cf324b49bd3",
+    "textoBase": "Conta como 1 carta no Grau. Suspenda: ganhe 2 Arcano.",
+    "assinaturaEfeito": "8e058e78342a4283151f5070fc7aaa40e0f8faacd0d963a4d1a7a9ce44093c23",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-aliado-recurso-c1": {
+    "versao": 17,
+    "nome": "Estudante da Escola de Magia",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-aliado-recurso-c1/conjurar-v17.svg",
+      "/kit/efeitos/base-aliado-recurso-c1/trajeto-v17.svg",
+      "/kit/efeitos/base-aliado-recurso-c1/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-aliado-recurso-c1/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-aliado-recurso-c1/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-aliado-recurso-c1/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "livro",
+    "paleta": [
+      "#a8cfed",
+      "#edf8ff"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-aliado-recurso-c1.png",
+    "arteSha256": "f128d7556eb719035b6306aebd1baf48539041ad8187ac13c9a9714368a90672",
+    "textoBase": "Suspenda: ganhe 1 Arcano.",
+    "assinaturaEfeito": "0c820f7ebb98710cf03bf86b470965310b2ad9cf36467b5850bbda81e3d23ffe",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-aliado-recurso-c3": {
+    "versao": 17,
+    "nome": "Ferreira-Alquimista",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-aliado-recurso-c3/conjurar-v17.svg",
+      "/kit/efeitos/base-aliado-recurso-c3/trajeto-v17.svg",
+      "/kit/efeitos/base-aliado-recurso-c3/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-aliado-recurso-c3/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-aliado-recurso-c3/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-aliado-recurso-c3/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "bolhas",
+    "paleta": [
+      "#b5d9ef",
+      "#ffffff"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-aliado-recurso-c3.png",
+    "arteSha256": "07c0dc65204f10a89ef642f56be85d46e3a9e85379309783ac7f37ac7e76e2d0",
+    "textoBase": "Conta como 1 carta no Grau. Suspenda: ganhe 1 Arcano.",
+    "assinaturaEfeito": "34e4bb0ef4e4a43381cf43d1cac9f7b46220b1b36f655e17917f7a407216670b",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-aliado-recurso-c5": {
+    "versao": 17,
+    "nome": "Professora da Escola de Magia",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-aliado-recurso-c5/conjurar-v17.svg",
+      "/kit/efeitos/base-aliado-recurso-c5/trajeto-v17.svg",
+      "/kit/efeitos/base-aliado-recurso-c5/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-aliado-recurso-c5/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-aliado-recurso-c5/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-aliado-recurso-c5/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "bolhas",
+    "paleta": [
+      "#b8bded",
+      "#f2f5ff"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-aliado-recurso-c5.png",
+    "arteSha256": "0c99c6b7ff0ad765c2957013febed4a6711286651fd7f5bcae6821769cb23a44",
+    "textoBase": "Conta como 1 carta no Grau. Suspenda: ganhe 2 Arcano.",
+    "assinaturaEfeito": "8e058e78342a4283151f5070fc7aaa40e0f8faacd0d963a4d1a7a9ce44093c23",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-estrutura-c6-nucleo": {
+    "versao": 17,
+    "nome": "Forja dos Mil Golpes",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-estrutura-c6-nucleo/conjurar-v17.svg",
+      "/kit/efeitos/base-estrutura-c6-nucleo/trajeto-v17.svg",
+      "/kit/efeitos/base-estrutura-c6-nucleo/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-estrutura-c6-nucleo/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-estrutura-c6-nucleo/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-estrutura-c6-nucleo/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "brasa",
+    "paleta": [
+      "#f49b37",
+      "#ffe6b8"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-estrutura-c6-nucleo.png",
+    "arteSha256": "2385d75a262d3ac3e6fdd8f3490ccc236577353fa7f2bcd4b1347a1a84e00393",
+    "textoBase": "Conta como 1 carta no Grau. Suspenda: ganhe 3 Arcano.",
+    "assinaturaEfeito": "9e3b5d6dfc18210e5e04343f7558d847dd186e59b32b68351b701a72d23a06f9",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-estrutura-c8-reator": {
+    "versao": 17,
+    "nome": "A boca da Voragem",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-estrutura-c8-reator/conjurar-v17.svg",
+      "/kit/efeitos/base-estrutura-c8-reator/trajeto-v17.svg",
+      "/kit/efeitos/base-estrutura-c8-reator/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-estrutura-c8-reator/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-estrutura-c8-reator/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-estrutura-c8-reator/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "portal",
+    "paleta": [
+      "#a563ef",
+      "#dfb8ff"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-estrutura-c8-reator.png",
+    "arteSha256": "63b7502c43c3724f5949e79219036b778fa51921491c30804638cf95b783723f",
+    "textoBase": "Conta como 2 cartas no Grau. Suspenda: ganhe 4 Arcano.",
+    "assinaturaEfeito": "23e4a2bac54a4f8c69410c48ed70dc56cf001dae6867b0e9ad35f32a055431c0",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "base-aliado-recurso-c7": {
+    "versao": 17,
+    "nome": "O Antigo Bibliotecário",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/base-aliado-recurso-c7/conjurar-v17.svg",
+      "/kit/efeitos/base-aliado-recurso-c7/trajeto-v17.svg",
+      "/kit/efeitos/base-aliado-recurso-c7/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/base-aliado-recurso-c7/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/base-aliado-recurso-c7/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/base-aliado-recurso-c7/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "livro",
+    "paleta": [
+      "#ac79eb",
+      "#eee1ff"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/base-aliado-recurso-c7.png",
+    "arteSha256": "fbda6fba7ef21999cefd305a87ce1d6c5a4edee59642b2874f07307c99440906",
+    "textoBase": "Conta como 1 carta no Grau. Suspenda: ganhe 3 Arcano.",
+    "assinaturaEfeito": "9e3b5d6dfc18210e5e04343f7558d847dd186e59b32b68351b701a72d23a06f9",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "eternyr-comprar-c1": {
+    "versao": 17,
+    "nome": "Tinteiro de Mapas",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/eternyr-comprar-c1/conjurar-v17.svg",
+      "/kit/efeitos/eternyr-comprar-c1/trajeto-v17.svg",
+      "/kit/efeitos/eternyr-comprar-c1/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/eternyr-comprar-c1/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/eternyr-comprar-c1/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/eternyr-comprar-c1/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "mapa",
+    "paleta": [
+      "#4a9bc4",
+      "#d4f1ff"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c1.png",
+    "arteSha256": "ab99ff41cc98cb07f04a3384a87c22eb55ab532febad1afd39da4cd2fcd7aec9",
+    "textoBase": "Compre 1 carta.",
+    "assinaturaEfeito": "ac47cfb2c62cfd6a8d05945f0e60ed097fba633e05c1b9a8b2b041da4db59210",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "eternyr-comprar-c2": {
+    "versao": 17,
+    "nome": "Ampulheta de Um Minuto",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/eternyr-comprar-c2/conjurar-v17.svg",
+      "/kit/efeitos/eternyr-comprar-c2/trajeto-v17.svg",
+      "/kit/efeitos/eternyr-comprar-c2/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/eternyr-comprar-c2/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/eternyr-comprar-c2/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/eternyr-comprar-c2/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "ampulheta",
+    "paleta": [
+      "#619ce6",
+      "#e9dcac"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c2.png",
+    "arteSha256": "6acb2b6e69fc0c1caceb27374de85846d313196d2225341a34b2bae0ac8a1be0",
+    "textoBase": "Compre 2 cartas.",
+    "assinaturaEfeito": "93bcd5bb4ac59fa18293101139f4b8226b1c120e0e65221f80a4966a24685be8",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "eternyr-comprar-c3": {
+    "versao": 17,
+    "nome": "Anel de Tique",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/eternyr-comprar-c3/conjurar-v17.svg",
+      "/kit/efeitos/eternyr-comprar-c3/trajeto-v17.svg",
+      "/kit/efeitos/eternyr-comprar-c3/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/eternyr-comprar-c3/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/eternyr-comprar-c3/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/eternyr-comprar-c3/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "paginas",
+    "paleta": [
+      "#a2cfe9",
+      "#fff4d5"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c3.png",
+    "arteSha256": "38e6f2d58e0c3abcc993948885b2b1bffc8c065577ddfdfc1ff0771f05c0cefa",
+    "textoBase": "Compre 2 cartas.",
+    "assinaturaEfeito": "93bcd5bb4ac59fa18293101139f4b8226b1c120e0e65221f80a4966a24685be8",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "eternyr-comprar-c4": {
+    "versao": 17,
+    "nome": "O Arquivo Sem Dono",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/eternyr-comprar-c4/conjurar-v17.svg",
+      "/kit/efeitos/eternyr-comprar-c4/trajeto-v17.svg",
+      "/kit/efeitos/eternyr-comprar-c4/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/eternyr-comprar-c4/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/eternyr-comprar-c4/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/eternyr-comprar-c4/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "paginas",
+    "paleta": [
+      "#a8c7eb",
+      "#f8e8b9"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c4.png",
+    "arteSha256": "dc2438875e650caf15d09ab0a78ac39079429d6e5a3861de84f276882a45dd92",
+    "textoBase": "Compre 3 cartas.",
+    "assinaturaEfeito": "060c473da9d2e3f3f9d8cd7cecb6cbf9b738d24548d14244ad87fdd82ae67f44",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "eternyr-comprar-c2-repentina": {
+    "versao": 17,
+    "nome": "Hora Solta",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/eternyr-comprar-c2-repentina/conjurar-v17.svg",
+      "/kit/efeitos/eternyr-comprar-c2-repentina/trajeto-v17.svg",
+      "/kit/efeitos/eternyr-comprar-c2-repentina/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/eternyr-comprar-c2-repentina/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/eternyr-comprar-c2-repentina/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/eternyr-comprar-c2-repentina/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "engrenagem",
+    "paleta": [
+      "#6b94e3",
+      "#ead59c"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c2-repentina.png",
+    "arteSha256": "992b7a4e94f33f2aa69c5fcad3d1c9ecc09751f514e678146e74cb70e8db350d",
+    "textoBase": "Compre 1 carta.",
+    "assinaturaEfeito": "ac47cfb2c62cfd6a8d05945f0e60ed097fba633e05c1b9a8b2b041da4db59210",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "eternyr-comprar-c3-repentina": {
+    "versao": 17,
+    "nome": "Menino de Dois Instantes",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/eternyr-comprar-c3-repentina/conjurar-v17.svg",
+      "/kit/efeitos/eternyr-comprar-c3-repentina/trajeto-v17.svg",
+      "/kit/efeitos/eternyr-comprar-c3-repentina/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/eternyr-comprar-c3-repentina/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/eternyr-comprar-c3-repentina/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/eternyr-comprar-c3-repentina/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "ampulheta",
+    "paleta": [
+      "#6ba8fa",
+      "#ecf7ff"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c3-repentina.png",
+    "arteSha256": "6a16f0da9d0b56cade20c7dfa457c5bda4d441a5a423d72cc7d6bec775310765",
+    "textoBase": "Compre 2 cartas.",
+    "assinaturaEfeito": "93bcd5bb4ac59fa18293101139f4b8226b1c120e0e65221f80a4966a24685be8",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "eternyr-dano-aliado-c4": {
+    "versao": 17,
+    "nome": "Relógio Quebrado",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/eternyr-dano-aliado-c4/conjurar-v17.svg",
+      "/kit/efeitos/eternyr-dano-aliado-c4/trajeto-v17.svg",
+      "/kit/efeitos/eternyr-dano-aliado-c4/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/eternyr-dano-aliado-c4/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/eternyr-dano-aliado-c4/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/eternyr-dano-aliado-c4/impacto-v17.svg"
+    },
+    "movimento": "projetil",
+    "motivo": "engrenagem",
+    "paleta": [
+      "#689ae5",
+      "#e8d5aa"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-dano-aliado-c4.png",
+    "arteSha256": "1775e5087d24fdd29321b77c493008e84cc12453f7a621079736464b9260d1be",
+    "textoBase": "Causa 6 de dano a um Aliado ou Mística.",
+    "assinaturaEfeito": "d3db25a6f8d7a42866b5c29af2c3112979d79a86c0d5b8a7186de4cbf71033e3",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "eternyr-dano-aliado-c5": {
+    "versao": 17,
+    "nome": "Nó de Ímpares",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/eternyr-dano-aliado-c5/conjurar-v17.svg",
+      "/kit/efeitos/eternyr-dano-aliado-c5/trajeto-v17.svg",
+      "/kit/efeitos/eternyr-dano-aliado-c5/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/eternyr-dano-aliado-c5/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/eternyr-dano-aliado-c5/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/eternyr-dano-aliado-c5/impacto-v17.svg"
+    },
+    "movimento": "feixe",
+    "motivo": "garras",
+    "paleta": [
+      "#ef9748",
+      "#f8dbac"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 66,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-dano-aliado-c5.png",
+    "arteSha256": "0686022ab294abcc6deedff651d4cb3c98b9c257e8976925b3a234979aae0d70",
+    "textoBase": "Causa 8 de dano a um Aliado ou Mística.",
+    "assinaturaEfeito": "de6e364b9f917a014523121c7eea124c293bae985a6f448221d9ebe3bbd238c2",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "eternyr-dano-aliado-c6": {
+    "versao": 17,
+    "nome": "Sala Que É Um Ano",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/eternyr-dano-aliado-c6/conjurar-v17.svg",
+      "/kit/efeitos/eternyr-dano-aliado-c6/trajeto-v17.svg",
+      "/kit/efeitos/eternyr-dano-aliado-c6/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/eternyr-dano-aliado-c6/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/eternyr-dano-aliado-c6/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/eternyr-dano-aliado-c6/impacto-v17.svg"
+    },
+    "movimento": "feixe",
+    "motivo": "laco",
+    "paleta": [
+      "#ad9bea",
+      "#eaf5ff"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 66,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-dano-aliado-c6.png",
+    "arteSha256": "d8c1ce4a1d2b1147391f67cc1c3eff61e11f9075b5dcec0700e4e21c8a5a49ff",
+    "textoBase": "Causa 9 de dano a um Aliado ou Mística.",
+    "assinaturaEfeito": "0be1b21f24d8a7d652cbfd2e2b8d0faf16addd58bcaf37ab9e91ae68fb73f55f",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "eternyr-dano-jogador-c5": {
+    "versao": 17,
+    "nome": "O Entretempo",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/eternyr-dano-jogador-c5/conjurar-v17.svg",
+      "/kit/efeitos/eternyr-dano-jogador-c5/trajeto-v17.svg",
+      "/kit/efeitos/eternyr-dano-jogador-c5/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/eternyr-dano-jogador-c5/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/eternyr-dano-jogador-c5/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/eternyr-dano-jogador-c5/impacto-v17.svg"
+    },
+    "movimento": "feixe",
+    "motivo": "portal",
+    "paleta": [
+      "#8da6e9",
+      "#e2e9ff"
+    ],
+    "destino": "conjurador-rival",
+    "duracaoMs": 1300,
+    "tamanhoPx": 66,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-dano-jogador-c5.png",
+    "arteSha256": "51e3baa6fa59da834173a5cfd4d2fa9ee2229c39de38dd66c0013ad51984b5e6",
+    "textoBase": "Causa 4 de dano ao Conjurador inimigo.",
+    "assinaturaEfeito": "201cdd1d438c19d01498346dd076cd26df6358ed0892cd7101d437b273e9b62a",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "eternyr-destruir-c6-g8": {
+    "versao": 17,
+    "nome": "A Voragem",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/eternyr-destruir-c6-g8/conjurar-v17.svg",
+      "/kit/efeitos/eternyr-destruir-c6-g8/trajeto-v17.svg",
+      "/kit/efeitos/eternyr-destruir-c6-g8/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/eternyr-destruir-c6-g8/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/eternyr-destruir-c6-g8/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/eternyr-destruir-c6-g8/impacto-v17.svg"
+    },
+    "movimento": "alvo",
+    "motivo": "portal",
+    "paleta": [
+      "#d480d6",
+      "#fff0dd"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-destruir-c6-g8.png",
+    "arteSha256": "734491ee3d5fd8c2e61c0d18ff67a80af51db2b763ae7089a1463019bd5e41e2",
+    "textoBase": "Destrua um alvo e compre 4 cartas.",
+    "assinaturaEfeito": "4f12107aca199cf4abf19b4c99c214a48d1604caba22d0e921d525e5c4b7f37d",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "bal-varredura-c3": {
+    "versao": 17,
+    "nome": "Enxame de Vespas",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/bal-varredura-c3/conjurar-v17.svg",
+      "/kit/efeitos/bal-varredura-c3/trajeto-v17.svg",
+      "/kit/efeitos/bal-varredura-c3/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/bal-varredura-c3/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/bal-varredura-c3/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/bal-varredura-c3/impacto-v17.svg"
+    },
+    "movimento": "onda",
+    "motivo": "vespas",
+    "paleta": [
+      "#e3b144",
+      "#f7d893"
+    ],
+    "destino": "campo-rival",
+    "duracaoMs": 1550,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/bal-varredura-c3.png",
+    "arteSha256": "29d0a3198a17352bb1856cb3fc1a22b76c4f4093dc96487f89ae5cf9511247c6",
+    "textoBase": "Causa 2 de dano a cada Aliado do oponente.",
+    "assinaturaEfeito": "9a363f4eaa7e00ad925aebb2fc908c30eb793fc800bdafa2f0e8127c041ed8c5",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "bal-varredura-c5": {
+    "versao": 17,
+    "nome": "Redemoinho de Areia",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/bal-varredura-c5/conjurar-v17.svg",
+      "/kit/efeitos/bal-varredura-c5/trajeto-v17.svg",
+      "/kit/efeitos/bal-varredura-c5/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/bal-varredura-c5/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/bal-varredura-c5/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/bal-varredura-c5/impacto-v17.svg"
+    },
+    "movimento": "onda",
+    "motivo": "areia",
+    "paleta": [
+      "#d8b076",
+      "#f1ddaf"
+    ],
+    "destino": "campo-rival",
+    "duracaoMs": 1550,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/bal-varredura-c5.png",
+    "arteSha256": "b1dd6bc2c8906755618de11a796f37752d2ad31e6a7c7c5fe6c691d0c05963b7",
+    "textoBase": "Causa 3 de dano a cada Aliado do oponente.",
+    "assinaturaEfeito": "bb37c19fb94dbc65f9d85b88c39b1896a26f3506adac6eb06cf583af04dca5c8",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "bal-remocao-grau-c3": {
+    "versao": 17,
+    "nome": "Raiz Errada",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/bal-remocao-grau-c3/conjurar-v17.svg",
+      "/kit/efeitos/bal-remocao-grau-c3/trajeto-v17.svg",
+      "/kit/efeitos/bal-remocao-grau-c3/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/bal-remocao-grau-c3/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/bal-remocao-grau-c3/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/bal-remocao-grau-c3/impacto-v17.svg"
+    },
+    "movimento": "projetil",
+    "motivo": "raiz",
+    "paleta": [
+      "#a6b35e",
+      "#edc477"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/bal-remocao-grau-c3.png",
+    "arteSha256": "da69fae97d439ef569eff6ad3ffd0236bcf280adb0956f1b01287d7b22dc82f0",
+    "textoBase": "Causa 1 + o número de cartas no seu Grau de dano a um Aliado ou Mística.",
+    "assinaturaEfeito": "26a9ab6219aeff49d784c8bce7d4790a81c47b1b5ba4021fe12d44fbee938a85",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "bal-estrutura-cerco-c3": {
+    "versao": 17,
+    "nome": "A Cidade-Muralha",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/bal-estrutura-cerco-c3/conjurar-v17.svg",
+      "/kit/efeitos/bal-estrutura-cerco-c3/trajeto-v17.svg",
+      "/kit/efeitos/bal-estrutura-cerco-c3/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/bal-estrutura-cerco-c3/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/bal-estrutura-cerco-c3/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/bal-estrutura-cerco-c3/impacto-v17.svg"
+    },
+    "movimento": "projetil",
+    "motivo": "flecha",
+    "paleta": [
+      "#d9b15d",
+      "#f4ecc9"
+    ],
+    "destino": "conjurador-rival",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/bal-estrutura-cerco-c3.png",
+    "arteSha256": "d992220c7d081dc12e5718d98857d5aad0e96b19871ba499e7d6f05ca7e90cff",
+    "textoBase": "Suspenda: cause 1 de dano ao Conjurador inimigo.",
+    "assinaturaEfeito": "b8b6c6f9e4ebeec6cf43814b92c3b24a7ab341b01ef1978005f299d85aaeed90",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "bal-devolver-c2-repentina": {
+    "versao": 17,
+    "nome": "Porta de Bolso",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/bal-devolver-c2-repentina/conjurar-v17.svg",
+      "/kit/efeitos/bal-devolver-c2-repentina/trajeto-v17.svg",
+      "/kit/efeitos/bal-devolver-c2-repentina/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/bal-devolver-c2-repentina/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/bal-devolver-c2-repentina/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/bal-devolver-c2-repentina/impacto-v17.svg"
+    },
+    "movimento": "portal",
+    "motivo": "porta",
+    "paleta": [
+      "#89d1df",
+      "#efd797"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/bal-devolver-c2-repentina.png",
+    "arteSha256": "70ae55697ffbd654d9b9d117e978c823b143f90a2b3dc4a191cd63797c0218cc",
+    "textoBase": "Devolva um Aliado ou Mística à mão do dono.",
+    "assinaturaEfeito": "3d1b3dcee4fadb3320c5c3931de6495e763b7ba931a36252cd0f9713122b145b",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "bal-anular-c3-repentina": {
+    "versao": 17,
+    "nome": "Olho-que-Fecha",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/bal-anular-c3-repentina/conjurar-v17.svg",
+      "/kit/efeitos/bal-anular-c3-repentina/trajeto-v17.svg",
+      "/kit/efeitos/bal-anular-c3-repentina/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/bal-anular-c3-repentina/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/bal-anular-c3-repentina/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/bal-anular-c3-repentina/impacto-v17.svg"
+    },
+    "movimento": "selo",
+    "motivo": "olho",
+    "paleta": [
+      "#cf795d",
+      "#f4d98e"
+    ],
+    "destino": "alvo-pilha",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/bal-anular-c3-repentina.png",
+    "arteSha256": "c1bbdad59fe02b1a36c28a21d4acdf7572fc0f9640f743551da03d0066c78fb0",
+    "textoBase": "Anule uma carta na pilha.",
+    "assinaturaEfeito": "22efe3126b4bd8a925a00d29a414cc9f79498246d2f08ee82fdd0b7e80a00617",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "r6-varredura-c2": {
+    "versao": 17,
+    "nome": "Enxame de Palavras",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/r6-varredura-c2/conjurar-v17.svg",
+      "/kit/efeitos/r6-varredura-c2/trajeto-v17.svg",
+      "/kit/efeitos/r6-varredura-c2/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/r6-varredura-c2/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/r6-varredura-c2/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/r6-varredura-c2/impacto-v17.svg"
+    },
+    "movimento": "onda",
+    "motivo": "paginas",
+    "paleta": [
+      "#e3c58b",
+      "#fbecd1"
+    ],
+    "destino": "campo-rival",
+    "duracaoMs": 1550,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/r6-varredura-c2.png",
+    "arteSha256": "6873e74fa98338cc14b200468362853d400ab96722ca89dd78e0152983e9381e",
+    "textoBase": "Causa 1 de dano a cada Aliado do oponente.",
+    "assinaturaEfeito": "6c6a153590e7d778bb64ee6dff448453758b607147cd5c7cf8e6a786a5f93ee2",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "r6-ira-c4": {
+    "versao": 17,
+    "nome": "O Campo Sem Trégua",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/r6-ira-c4/conjurar-v17.svg",
+      "/kit/efeitos/r6-ira-c4/trajeto-v17.svg",
+      "/kit/efeitos/r6-ira-c4/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/r6-ira-c4/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/r6-ira-c4/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/r6-ira-c4/impacto-v17.svg"
+    },
+    "movimento": "onda",
+    "motivo": "lamina",
+    "paleta": [
+      "#df5c4c",
+      "#f4b47c"
+    ],
+    "destino": "ambos-campos",
+    "duracaoMs": 1550,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/r6-ira-c4.png",
+    "arteSha256": "d424d66232080c41946cf93ec3eacbc1d945110cf0696fc67fd07ae61d1225de",
+    "textoBase": "Destrua todos os Aliados (os seus também).",
+    "assinaturaEfeito": "dd3021345eedd433c50b3367c7437aaa0cf6434039441875ddf1f300139b2da1",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "r6-por-do-sol-c7": {
+    "versao": 17,
+    "nome": "Estrada do Crepúsculo",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/r6-por-do-sol-c7/conjurar-v17.svg",
+      "/kit/efeitos/r6-por-do-sol-c7/trajeto-v17.svg",
+      "/kit/efeitos/r6-por-do-sol-c7/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/r6-por-do-sol-c7/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/r6-por-do-sol-c7/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/r6-por-do-sol-c7/impacto-v17.svg"
+    },
+    "movimento": "onda",
+    "motivo": "laco",
+    "paleta": [
+      "#c47ce6",
+      "#f6d36f"
+    ],
+    "destino": "campo-rival",
+    "duracaoMs": 1550,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/r6-por-do-sol-c7.png",
+    "arteSha256": "8c1a462cb04bd0aecea686d56447359f7df1cefbdc217271b07111bee4c07187",
+    "textoBase": "Destrua todos os Aliados do oponente.",
+    "assinaturaEfeito": "fd0c413efdb868017feab1ed6349596d57cc6e3b14ed4dc4006a27c6baed6e92",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "r6-furia-c3": {
+    "versao": 17,
+    "nome": "Charco Fervente",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/r6-furia-c3/conjurar-v17.svg",
+      "/kit/efeitos/r6-furia-c3/trajeto-v17.svg",
+      "/kit/efeitos/r6-furia-c3/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/r6-furia-c3/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/r6-furia-c3/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/r6-furia-c3/impacto-v17.svg"
+    },
+    "movimento": "onda",
+    "motivo": "vapor",
+    "paleta": [
+      "#dec694",
+      "#eaf5ff"
+    ],
+    "destino": "ambos-campos",
+    "duracaoMs": 1550,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/r6-furia-c3.png",
+    "arteSha256": "4309e6af84771474151165fdb419d6c024d54cd44ea158b709acbb8dae2e2065",
+    "textoBase": "Causa 3 de dano a cada Aliado (os seus também).",
+    "assinaturaEfeito": "40f9c74145bd1bd87fb02d9be47b251a0285fd52de378cd22c4404f0f6d0f2aa",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "r6-espiao-c4": {
+    "versao": 17,
+    "nome": "Wyvern-Correio",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/r6-espiao-c4/conjurar-v17.svg",
+      "/kit/efeitos/r6-espiao-c4/trajeto-v17.svg",
+      "/kit/efeitos/r6-espiao-c4/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/r6-espiao-c4/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/r6-espiao-c4/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/r6-espiao-c4/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "carta",
+    "paleta": [
+      "#739bc7",
+      "#efb9aa"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "gatilho"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/r6-espiao-c4.png",
+    "arteSha256": "bcbded35f380790ad7b557bf4fa710e1e4067ddb410bc27a3a436ced1e8baa9d",
+    "textoBase": "Etéreo. Ao causar dano de combate ao Conjurador inimigo: compre 1 carta.",
+    "assinaturaEfeito": "864222b0ff855b4029119c9f49423eda4db76026cc3f31d25e9ff3cfcc0c5844",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "r6-piromante-c4": {
+    "versao": 17,
+    "nome": "Aprendiz Descontrolado",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/r6-piromante-c4/conjurar-v17.svg",
+      "/kit/efeitos/r6-piromante-c4/trajeto-v17.svg",
+      "/kit/efeitos/r6-piromante-c4/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/r6-piromante-c4/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/r6-piromante-c4/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/r6-piromante-c4/impacto-v17.svg"
+    },
+    "movimento": "onda",
+    "motivo": "singularidade",
+    "paleta": [
+      "#b0b8dc",
+      "#e6e9f8"
+    ],
+    "destino": "campo-rival",
+    "duracaoMs": 1550,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "entrada",
+      "gatilho"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/r6-piromante-c4.png",
+    "arteSha256": "86428018c1bac497c7128bc3f3cdfd93de262805dfa2ce06d83ab65ce3bfe633",
+    "textoBase": "Ao entrar: cause 1 de dano a cada Aliado do oponente.",
+    "assinaturaEfeito": "1e358b7489040dc51a4d27f477d51c87152dd42477e021cc5e6690b1944c4425",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "r6-fera-cerco-c5": {
+    "versao": 17,
+    "nome": "Mantícora",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/r6-fera-cerco-c5/conjurar-v17.svg",
+      "/kit/efeitos/r6-fera-cerco-c5/trajeto-v17.svg",
+      "/kit/efeitos/r6-fera-cerco-c5/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/r6-fera-cerco-c5/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/r6-fera-cerco-c5/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/r6-fera-cerco-c5/impacto-v17.svg"
+    },
+    "movimento": "projetil",
+    "motivo": "garras",
+    "paleta": [
+      "#c08bdb",
+      "#f5da99"
+    ],
+    "destino": "conjurador-rival",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "entrada",
+      "gatilho"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/r6-fera-cerco-c5.png",
+    "arteSha256": "b2c099ceee7a5e40d7f9cc9ce83f9176fc4bec3f21cfb3e816e16d107a9961cd",
+    "textoBase": "Ao entrar: cause 2 de dano ao Conjurador inimigo e cure 2 do seu Conjurador.",
+    "assinaturaEfeito": "7295022834e7db840b9bc6bb5e434c6f2008ad1c351fd097486559927279102a",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "r6-presa-trovao-c5": {
+    "versao": 17,
+    "nome": "Ursa-Mãe",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/r6-presa-trovao-c5/conjurar-v17.svg",
+      "/kit/efeitos/r6-presa-trovao-c5/trajeto-v17.svg",
+      "/kit/efeitos/r6-presa-trovao-c5/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/r6-presa-trovao-c5/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/r6-presa-trovao-c5/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/r6-presa-trovao-c5/impacto-v17.svg"
+    },
+    "movimento": "cura",
+    "motivo": "folhas",
+    "paleta": [
+      "#a3bc65",
+      "#e8deb7"
+    ],
+    "destino": "conjurador-proprio",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "entrada",
+      "gatilho"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/r6-presa-trovao-c5.png",
+    "arteSha256": "4429c5ad43a02f6d26aa99e6164ab9aeb5b7661b77f8a081cb9c5c26efbabb3e",
+    "textoBase": "Ao entrar: cure 5 do seu Conjurador.",
+    "assinaturaEfeito": "bdf33aa50a5d22d4a8a436cc3b32251fe813a9c48f08748f5d82eaba447a0ec3",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "r6-anjo-c6": {
+    "versao": 17,
+    "nome": "Anjo do Fechamento",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/r6-anjo-c6/conjurar-v17.svg",
+      "/kit/efeitos/r6-anjo-c6/trajeto-v17.svg",
+      "/kit/efeitos/r6-anjo-c6/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/r6-anjo-c6/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/r6-anjo-c6/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/r6-anjo-c6/impacto-v17.svg"
+    },
+    "movimento": "cura",
+    "motivo": "pena",
+    "paleta": [
+      "#c5addb",
+      "#f2e3be"
+    ],
+    "destino": "conjurador-proprio",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "gatilho"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/r6-anjo-c6.png",
+    "arteSha256": "8855dcd571e4f2a3b94e61db62be847524396d20399f96a87002babda507351d",
+    "textoBase": "Etéreo. Ao causar dano de combate ao Conjurador inimigo: cure 4 do seu Conjurador.",
+    "assinaturaEfeito": "f9440b53748747435e9c3ecfb3e14d3195da0e2b12e383423129df0c923ea957",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "r6-mercador-c7": {
+    "versao": 17,
+    "nome": "Arquivista Sem Rosto",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/r6-mercador-c7/conjurar-v17.svg",
+      "/kit/efeitos/r6-mercador-c7/trajeto-v17.svg",
+      "/kit/efeitos/r6-mercador-c7/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/r6-mercador-c7/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/r6-mercador-c7/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/r6-mercador-c7/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "paginas",
+    "paleta": [
+      "#b298e5",
+      "#f5e4c4"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "entrada",
+      "gatilho",
+      "gatilho"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/r6-mercador-c7.png",
+    "arteSha256": "0ccb4d1f0ad587b52c96a999841689331b18b8a41922ace4de9eae3be4d706f3",
+    "textoBase": "Etéreo. Protegido 2. Ao entrar: compre 1 carta. Ao causar dano de combate ao Conjurador inimigo: compre 1 carta.",
+    "assinaturaEfeito": "14c4622b298d7f1de7a3bdd3f44e7daed84b6707b2439599de97e82bccea4f00",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "r6-dragao-c8": {
+    "versao": 17,
+    "nome": "Dragão Ancião",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/r6-dragao-c8/conjurar-v17.svg",
+      "/kit/efeitos/r6-dragao-c8/trajeto-v17.svg",
+      "/kit/efeitos/r6-dragao-c8/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/r6-dragao-c8/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/r6-dragao-c8/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/r6-dragao-c8/impacto-v17.svg"
+    },
+    "movimento": "onda",
+    "motivo": "dragao",
+    "paleta": [
+      "#d6bc82",
+      "#f2e2bc"
+    ],
+    "destino": "campo-rival",
+    "duracaoMs": 1550,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "entrada",
+      "gatilho"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/r6-dragao-c8.png",
+    "arteSha256": "6da6a72acfc3a5b668dc59ec00d1711d9a28787d65116427fe641599bcda2806",
+    "textoBase": "Etéreo. Protegido 1. Ao entrar: cause 2 de dano a cada Aliado do oponente.",
+    "assinaturaEfeito": "7b863100cc7ca808bb19ad4e0c876c9b7e744bc83a9f52fcff1000e3c2e9d520",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "item-extra-pocao": {
+    "versao": 17,
+    "nome": "Poção de cura",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/item-extra-pocao/conjurar-v17.svg",
+      "/kit/efeitos/item-extra-pocao/trajeto-v17.svg",
+      "/kit/efeitos/item-extra-pocao/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/item-extra-pocao/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/item-extra-pocao/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/item-extra-pocao/impacto-v17.svg"
+    },
+    "movimento": "cura",
+    "motivo": "gota",
+    "paleta": [
+      "#dc6d57",
+      "#f8cfb4"
+    ],
+    "destino": "conjurador-proprio",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-pocao.png",
+    "arteSha256": "edc81282fbfec0b1c9a822496a77c366e8f8f7b2cbc62508f41065081da5bd61",
+    "textoBase": "Extra. Consumível: cure 3 do seu Conjurador.",
+    "assinaturaEfeito": "9e0a6c47e84fba6bce85428e5e7d592e7c053bf3b669937d98d52f4684f6de5f",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "item-extra-elixir": {
+    "versao": 17,
+    "nome": "Elixir de foco",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/item-extra-elixir/conjurar-v17.svg",
+      "/kit/efeitos/item-extra-elixir/trajeto-v17.svg",
+      "/kit/efeitos/item-extra-elixir/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/item-extra-elixir/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/item-extra-elixir/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/item-extra-elixir/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "bolhas",
+    "paleta": [
+      "#6fbeef",
+      "#def6ff"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-elixir.png",
+    "arteSha256": "80620b3761223dbe0581e9391ea4ac7eb03140ff8ddd88332149e59954a2dc2a",
+    "textoBase": "Extra. Consumível: ganhe 2 de Arcano.",
+    "assinaturaEfeito": "723e25fe32d1afc766fcad953fe7a497ebae3f487ed431845219c5e0afa1a8e6",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-ilusionista-do-labirinto": {
+    "versao": 17,
+    "nome": "Ilusionista do Labirinto",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-ilusionista-do-labirinto/conjurar-v17.svg",
+      "/kit/efeitos/col-ilusionista-do-labirinto/trajeto-v17.svg",
+      "/kit/efeitos/col-ilusionista-do-labirinto/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-ilusionista-do-labirinto/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-ilusionista-do-labirinto/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-ilusionista-do-labirinto/impacto-v17.svg"
+    },
+    "movimento": "portal",
+    "motivo": "espelho",
+    "paleta": [
+      "#becde1",
+      "#f4f8ff"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "entrada",
+      "gatilho"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-ilusionista-do-labirinto.png",
+    "arteSha256": "61a92bc5198d40439b205a47205abbfbe0fe9db6fcc51dd078524383b888c0ce",
+    "textoBase": "Ao entrar: devolva um Aliado ou Mística à mão do dono.",
+    "assinaturaEfeito": "e10494e65830565d20031188b5e4eff0a581d65e2d051b36be8592f494dc1cdd",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-ceifadora-da-peste": {
+    "versao": 17,
+    "nome": "Ceifadora da Peste",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-ceifadora-da-peste/conjurar-v17.svg",
+      "/kit/efeitos/col-ceifadora-da-peste/trajeto-v17.svg",
+      "/kit/efeitos/col-ceifadora-da-peste/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-ceifadora-da-peste/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-ceifadora-da-peste/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-ceifadora-da-peste/impacto-v17.svg"
+    },
+    "movimento": "alvo",
+    "motivo": "foice",
+    "paleta": [
+      "#a0cfa5",
+      "#e3f0c9"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "entrada",
+      "gatilho"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-ceifadora-da-peste.png",
+    "arteSha256": "8b58d89a75a85a6f6c234b4e588a743ed08feaf62a18ab485a79dd997dc33c6f",
+    "textoBase": "Ao entrar: destrua um Aliado ou Mística.",
+    "assinaturaEfeito": "3612b7eb30a12819aa3c9892a3689a5369d898932da76dea44b0f9d255cf8fac",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-contrabandista-de-porto": {
+    "versao": 17,
+    "nome": "Contrabandista de Porto",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-contrabandista-de-porto/conjurar-v17.svg",
+      "/kit/efeitos/col-contrabandista-de-porto/trajeto-v17.svg",
+      "/kit/efeitos/col-contrabandista-de-porto/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-contrabandista-de-porto/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-contrabandista-de-porto/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-contrabandista-de-porto/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "carta",
+    "paleta": [
+      "#dd8f82",
+      "#ffe3cd"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "gatilho"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-contrabandista-de-porto.png",
+    "arteSha256": "a7427d6215914a3e3a9a79742a91f72a887b0504c4cd2e429c8152da53700b9d",
+    "textoBase": "Etéreo. Ao causar dano de combate ao Conjurador inimigo: ganhe 1 de Arcano.",
+    "assinaturaEfeito": "983cf1e85f3ae2ec336df40ffa17c03077da5f11eba9cefec432f2885607da3f",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-curandeira-de-ervas": {
+    "versao": 17,
+    "nome": "Curandeira de Ervas",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-curandeira-de-ervas/conjurar-v17.svg",
+      "/kit/efeitos/col-curandeira-de-ervas/trajeto-v17.svg",
+      "/kit/efeitos/col-curandeira-de-ervas/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-curandeira-de-ervas/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-curandeira-de-ervas/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-curandeira-de-ervas/impacto-v17.svg"
+    },
+    "movimento": "cura",
+    "motivo": "folhas",
+    "paleta": [
+      "#a6c286",
+      "#f0e3b7"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-curandeira-de-ervas.png",
+    "arteSha256": "fc8b5964a8be2e87febae4373016840f658f5e65faa990712bef962d13ef171a",
+    "textoBase": "Suspenda: cure 2 de dano de um alvo.",
+    "assinaturaEfeito": "a9904aac64f885d26d579f849d27b8c78ba2898074aadc2ed2fe2d2c5a0f8d08",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-ninho-de-estrelas": {
+    "versao": 17,
+    "nome": "Ninho de Estrelas",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-ninho-de-estrelas/conjurar-v17.svg",
+      "/kit/efeitos/col-ninho-de-estrelas/trajeto-v17.svg",
+      "/kit/efeitos/col-ninho-de-estrelas/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-ninho-de-estrelas/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-ninho-de-estrelas/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-ninho-de-estrelas/impacto-v17.svg"
+    },
+    "movimento": "cura",
+    "motivo": "estrela",
+    "paleta": [
+      "#c7dded",
+      "#fff7db"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-ninho-de-estrelas.png",
+    "arteSha256": "b48b20f12ad9ee147e52e4206023ee8a5de91d954cd249cc55722527bcfaa0ff",
+    "textoBase": "Suspenda e pague 1: cure 3 de dano de um alvo.",
+    "assinaturaEfeito": "69dcbdfb204177e7fb1896a950632689d3dda2218f0673b144ca8678d6fc0ab4",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-coroa-sem-rei": {
+    "versao": 17,
+    "nome": "Coroa sem Rei",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-coroa-sem-rei/conjurar-v17.svg",
+      "/kit/efeitos/col-coroa-sem-rei/trajeto-v17.svg",
+      "/kit/efeitos/col-coroa-sem-rei/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-coroa-sem-rei/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-coroa-sem-rei/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-coroa-sem-rei/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "coroa",
+    "paleta": [
+      "#af76d7",
+      "#e9c775"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "entrada",
+      "gatilho"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-coroa-sem-rei.png",
+    "arteSha256": "f321e03f2d71951601b32ba61220850568fd6ef6bf0cb6d68e7ad47de5245e7d",
+    "textoBase": "Ao entrar: compre 1 carta.",
+    "assinaturaEfeito": "c42a3473a72d2e11972cb8a681db17e4ebae85735006e72c608e9ea3daba9667",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-tapete-de-duas-casas": {
+    "versao": 17,
+    "nome": "Tapete de Duas Casas",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-tapete-de-duas-casas/conjurar-v17.svg",
+      "/kit/efeitos/col-tapete-de-duas-casas/trajeto-v17.svg",
+      "/kit/efeitos/col-tapete-de-duas-casas/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-tapete-de-duas-casas/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-tapete-de-duas-casas/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-tapete-de-duas-casas/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "mapa",
+    "paleta": [
+      "#d9af64",
+      "#fae7b8"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-tapete-de-duas-casas.png",
+    "arteSha256": "51fe00eddd22876e2355cd7500d24c19246784b8d3d25d6b52620bb0af5bb220",
+    "textoBase": "Suspenda: a primeira carta que você jogar neste turno custa 1 a menos.",
+    "assinaturaEfeito": "79024ba12f856673e770a15df382ef64be838b0515af83ce2f0ccbc5e70e8b50",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-primeira-moeda": {
+    "versao": 17,
+    "nome": "A Primeira Moeda",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-primeira-moeda/conjurar-v17.svg",
+      "/kit/efeitos/col-primeira-moeda/trajeto-v17.svg",
+      "/kit/efeitos/col-primeira-moeda/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-primeira-moeda/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-primeira-moeda/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-primeira-moeda/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "moeda",
+    "paleta": [
+      "#dc9957",
+      "#f6db91"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-primeira-moeda.png",
+    "arteSha256": "e587f9ff80c6807943f43d3f4fd4f92734fa32adcffe3e2cbb9651fb0b44a6d6",
+    "textoBase": "Compre 2 cartas e o oponente ganha 1 de Arcano.",
+    "assinaturaEfeito": "2e504ec40f1e7751ce6b9d11bac153e1b47fef82da337b1903b37228dca830bf",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-sino-dos-juramentados": {
+    "versao": 17,
+    "nome": "Sino dos Juramentados",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-sino-dos-juramentados/conjurar-v17.svg",
+      "/kit/efeitos/col-sino-dos-juramentados/trajeto-v17.svg",
+      "/kit/efeitos/col-sino-dos-juramentados/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-sino-dos-juramentados/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-sino-dos-juramentados/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-sino-dos-juramentados/impacto-v17.svg"
+    },
+    "movimento": "feixe",
+    "motivo": "som",
+    "paleta": [
+      "#e57559",
+      "#f6c891"
+    ],
+    "destino": "conjurador-rival",
+    "duracaoMs": 1300,
+    "tamanhoPx": 66,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-sino-dos-juramentados.png",
+    "arteSha256": "7e7cd2d145a0b82ccec6334794dd21bcec5436e8c2f0cb857f8787b7bdb85984",
+    "textoBase": "Cause 5 de dano ao Conjurador inimigo. O oponente pode pagar 3 para anulá-la.",
+    "assinaturaEfeito": "79702ad65df6b8d2b4aea01d87d9b307a2a0a6b86e8074a7721e747f8db5fc05",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-ancora-do-mesmo-dia": {
+    "versao": 17,
+    "nome": "Âncora do Mesmo Dia",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-ancora-do-mesmo-dia/conjurar-v17.svg",
+      "/kit/efeitos/col-ancora-do-mesmo-dia/trajeto-v17.svg",
+      "/kit/efeitos/col-ancora-do-mesmo-dia/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-ancora-do-mesmo-dia/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-ancora-do-mesmo-dia/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-ancora-do-mesmo-dia/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "ancora",
+    "paleta": [
+      "#6a8cdf",
+      "#e2c477"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-ancora-do-mesmo-dia.png",
+    "arteSha256": "557d59be229ceafa438e59411cd54e0a66b159e1ed8eab1393d4cf520f6abfde",
+    "textoBase": "Bana uma carta da sua mão; no seu próximo turno ela pode ser jogada custando 3 a menos.",
+    "assinaturaEfeito": "dc6625c2beda6a4e432cff90409f9077b1734531dbea16a0e68094f48aca6403",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-cemiterio-que-respira": {
+    "versao": 17,
+    "nome": "Cemitério que Respira",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-cemiterio-que-respira/conjurar-v17.svg",
+      "/kit/efeitos/col-cemiterio-que-respira/trajeto-v17.svg",
+      "/kit/efeitos/col-cemiterio-que-respira/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-cemiterio-que-respira/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-cemiterio-que-respira/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-cemiterio-que-respira/impacto-v17.svg"
+    },
+    "movimento": "ressurgir",
+    "motivo": "ossos",
+    "paleta": [
+      "#accea3",
+      "#eef1d3"
+    ],
+    "destino": "campo-proprio",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-cemiterio-que-respira.png",
+    "arteSha256": "bed78cb16eb22bc97edc79d25643bf87378a6cdca36c90ef69e8c0f8f9165426",
+    "textoBase": "Ponha no seu campo um Aliado de qualquer cemitério, pagando o custo dele + 0.",
+    "assinaturaEfeito": "3ccc818812be4ac2581780edf45c88fcaff808f81e55bc2c863f823256f39549",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-cadeado-ciumento": {
+    "versao": 17,
+    "nome": "Cadeado Ciumento",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-cadeado-ciumento/conjurar-v17.svg",
+      "/kit/efeitos/col-cadeado-ciumento/trajeto-v17.svg",
+      "/kit/efeitos/col-cadeado-ciumento/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-cadeado-ciumento/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-cadeado-ciumento/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-cadeado-ciumento/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "chave",
+    "paleta": [
+      "#ab78e7",
+      "#efdca2"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-cadeado-ciumento.png",
+    "arteSha256": "8acb20ca059bc20b855921df2d80d841e448bd68432d3f58eabcc173d2c00ed4",
+    "textoBase": "Neste turno você pode jogar do cemitério uma carta que anula outra (ela é banida ao resolver) e compre 1 carta.",
+    "assinaturaEfeito": "f87dc0130cae704589af2dbc773132602e2d51b58e277a6f6c1c5b9522ab6644",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-frasco-de-mare": {
+    "versao": 17,
+    "nome": "Frasco de Maré",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-frasco-de-mare/conjurar-v17.svg",
+      "/kit/efeitos/col-frasco-de-mare/trajeto-v17.svg",
+      "/kit/efeitos/col-frasco-de-mare/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-frasco-de-mare/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-frasco-de-mare/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-frasco-de-mare/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "agua",
+    "paleta": [
+      "#66c8ed",
+      "#dcfcff"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-frasco-de-mare.png",
+    "arteSha256": "f9519fb2889b08a084f752fa3d1edaace90bcf7abd4fc8230a5341f280be86f7",
+    "textoBase": "Ganhe 3 de Arcano.",
+    "assinaturaEfeito": "c020edd8941b6d37f4c6d262bbe1b9d8c2ef17bad13103e0f7f86abd35e7ee3f",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-chapeu-de-chuva": {
+    "versao": 17,
+    "nome": "Chapéu de Chuva Particular",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-chapeu-de-chuva/conjurar-v17.svg",
+      "/kit/efeitos/col-chapeu-de-chuva/trajeto-v17.svg",
+      "/kit/efeitos/col-chapeu-de-chuva/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-chapeu-de-chuva/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-chapeu-de-chuva/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-chapeu-de-chuva/impacto-v17.svg"
+    },
+    "movimento": "cura",
+    "motivo": "chuva",
+    "paleta": [
+      "#9bd1ae",
+      "#f7ecc8"
+    ],
+    "destino": "conjurador-proprio",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-chapeu-de-chuva.png",
+    "arteSha256": "b3cdbded78627439d8f0645adf993d0961a3c409d552b23c24817d46d4d65f9d",
+    "textoBase": "Cure 4 de dano do seu Conjurador.",
+    "assinaturaEfeito": "2cab31924c71557127048b76d751b4b6d83583c4e755ef4583e0a03eaa534ba4",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-barco-dobravel": {
+    "versao": 17,
+    "nome": "Barco Dobrável",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-barco-dobravel/conjurar-v17.svg",
+      "/kit/efeitos/col-barco-dobravel/trajeto-v17.svg",
+      "/kit/efeitos/col-barco-dobravel/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-barco-dobravel/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-barco-dobravel/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-barco-dobravel/impacto-v17.svg"
+    },
+    "movimento": "portal",
+    "motivo": "porta",
+    "paleta": [
+      "#b5d8ea",
+      "#fff4db"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-barco-dobravel.png",
+    "arteSha256": "86963b62cf7a6369a2512efe63939a53d36819d812bae7bcb47e3dd831b1f598",
+    "textoBase": "Devolva um Aliado ou Mística seu à mão do dono.",
+    "assinaturaEfeito": "a86dc6fb7048715238851f557431785cf92bcaf02071f97498a30525bf351703",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-mapa-do-reino": {
+    "versao": 17,
+    "nome": "Mapa do Reino",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-mapa-do-reino/conjurar-v17.svg",
+      "/kit/efeitos/col-mapa-do-reino/trajeto-v17.svg",
+      "/kit/efeitos/col-mapa-do-reino/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-mapa-do-reino/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-mapa-do-reino/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-mapa-do-reino/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "mapa",
+    "paleta": [
+      "#94a3e1",
+      "#dce8ff"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-mapa-do-reino.png",
+    "arteSha256": "3b8e76a2a2f3a54d31bbd500f6a5ed19e5086b4a84df51f80db57b4e28e5781e",
+    "textoBase": "Olhe as 5 cartas do topo do seu baralho; ponha 2 na mão e as outras no fundo do baralho.",
+    "assinaturaEfeito": "03267b7121f30449c0fe1f895015badb3db150d708467335fd80ddf73cb68777",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-arqueira-da-ultima-flecha": {
+    "versao": 17,
+    "nome": "Última Flecha",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-arqueira-da-ultima-flecha/conjurar-v17.svg",
+      "/kit/efeitos/col-arqueira-da-ultima-flecha/trajeto-v17.svg",
+      "/kit/efeitos/col-arqueira-da-ultima-flecha/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-arqueira-da-ultima-flecha/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-arqueira-da-ultima-flecha/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-arqueira-da-ultima-flecha/impacto-v17.svg"
+    },
+    "movimento": "projetil",
+    "motivo": "flecha",
+    "paleta": [
+      "#e46d59",
+      "#f7c57a"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-arqueira-da-ultima-flecha.png",
+    "arteSha256": "d78a8bc0f8cc8afd3212b93468d60bf9bf5ac8d6b555e9a32e157ecf83e338cb",
+    "textoBase": "Cause 3 de dano a um Aliado ou Mística.",
+    "assinaturaEfeito": "ce52796d3a635c7aa62c22deaf9175b796a556009050a445f3d7cf76aeb06b46",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-mare-de-sobras": {
+    "versao": 17,
+    "nome": "Maré de Sobras",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-mare-de-sobras/conjurar-v17.svg",
+      "/kit/efeitos/col-mare-de-sobras/trajeto-v17.svg",
+      "/kit/efeitos/col-mare-de-sobras/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-mare-de-sobras/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-mare-de-sobras/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-mare-de-sobras/impacto-v17.svg"
+    },
+    "movimento": "onda",
+    "motivo": "mandibula",
+    "paleta": [
+      "#78babc",
+      "#e1ddc5"
+    ],
+    "destino": "ambos-campos",
+    "duracaoMs": 1550,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-mare-de-sobras.png",
+    "arteSha256": "5755e65b5cfbca80299ee7fe01b162e885362696df7bf44d3b306646bb73a6b1",
+    "textoBase": "Cause 2 de dano a cada Aliado (inclusive os seus) e compre 1 carta.",
+    "assinaturaEfeito": "a423a17e19ac0b49144c0089a1911e5a655808062e5f1db2acad308ffc54bd3a",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "col-descartar-grau": {
+    "versao": 17,
+    "nome": "Coroa Riscada",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/col-descartar-grau/conjurar-v17.svg",
+      "/kit/efeitos/col-descartar-grau/trajeto-v17.svg",
+      "/kit/efeitos/col-descartar-grau/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/col-descartar-grau/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/col-descartar-grau/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/col-descartar-grau/impacto-v17.svg"
+    },
+    "movimento": "alvo",
+    "motivo": "coroa",
+    "paleta": [
+      "#a477c9",
+      "#e1c999"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/col-descartar-grau.png",
+    "arteSha256": "0551327f30d78f03de1e831505649cbc7b989c373f0d7aa75a693aa473b45f43",
+    "textoBase": "Para jogar, descarte 1 carta do seu Grau. Destrua um alvo e compre 1 carta.",
+    "assinaturaEfeito": "a6dc11ec36f7cb98c6be4a633e7617c0dd11af5dd3d5956aa13c76c52799ec29",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "item-extra-sal": {
+    "versao": 17,
+    "nome": "Sal do Viajante",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/item-extra-sal/conjurar-v17.svg",
+      "/kit/efeitos/item-extra-sal/trajeto-v17.svg",
+      "/kit/efeitos/item-extra-sal/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/item-extra-sal/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/item-extra-sal/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/item-extra-sal/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "sal",
+    "paleta": [
+      "#d3c294",
+      "#f9f0d7"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-sal.png",
+    "arteSha256": "22bf6a7544645eb60d4db659e2fd3948a0e64b5c507511840c4ac59240830758",
+    "textoBase": "Extra. Uso único. Use: olhe as 3 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+    "assinaturaEfeito": "9b4de35f084a1e23098efc29e6796f3469c34185e75f188834eff46487fb9e2c",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "item-extra-dado": {
+    "versao": 17,
+    "nome": "Dado Honesto",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/item-extra-dado/conjurar-v17.svg",
+      "/kit/efeitos/item-extra-dado/trajeto-v17.svg",
+      "/kit/efeitos/item-extra-dado/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/item-extra-dado/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/item-extra-dado/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/item-extra-dado/impacto-v17.svg"
+    },
+    "movimento": "projetil",
+    "motivo": "dado",
+    "paleta": [
+      "#5aabd8",
+      "#e8d08b"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-dado.png",
+    "arteSha256": "df783d439d31086a77256ff8e50d8983346c21744582c2371fb510287595c2f3",
+    "textoBase": "Extra. Uso único. Use: cause 2 de dano a um alvo.",
+    "assinaturaEfeito": "bc55bb293a246989e2bcfc5a51d1223304f5772f8a38b56a5d843df2d8fdd4b2",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "item-extra-lanterna": {
+    "versao": 17,
+    "nome": "Lanterna do Véu",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/item-extra-lanterna/conjurar-v17.svg",
+      "/kit/efeitos/item-extra-lanterna/trajeto-v17.svg",
+      "/kit/efeitos/item-extra-lanterna/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/item-extra-lanterna/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/item-extra-lanterna/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/item-extra-lanterna/impacto-v17.svg"
+    },
+    "movimento": "portal",
+    "motivo": "laco",
+    "paleta": [
+      "#9591df",
+      "#e6e5ff"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-lanterna.png",
+    "arteSha256": "74d34e153d7e2fbb25acb1b8298d5d4b80a45407f94de3c373ed84028362df50",
+    "textoBase": "Extra. Uso único. Use: devolva um Aliado ou Mística à mão do dono.",
+    "assinaturaEfeito": "6b04ee8987878b092b668ad4547c7d68b110d286bcf72a3437eb1984e5fd3386",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "item-extra-relogio": {
+    "versao": 17,
+    "nome": "Relógio de Bolso Atrasado",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/item-extra-relogio/conjurar-v17.svg",
+      "/kit/efeitos/item-extra-relogio/trajeto-v17.svg",
+      "/kit/efeitos/item-extra-relogio/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/item-extra-relogio/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/item-extra-relogio/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/item-extra-relogio/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "relogio",
+    "paleta": [
+      "#6a99e1",
+      "#e5c181"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-relogio.png",
+    "arteSha256": "a0ae5b1b29008c5785ef213f671c1c3bc7efa28b21e08a0a96eac1efadc5336a",
+    "textoBase": "Extra. Uso único. Use: compre 1 carta e ganhe 1 de Arcano.",
+    "assinaturaEfeito": "fa77ec2764b522be624a618169cfcf09fecae9494f810e42f23c9f31a25ac8be",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "item-foco-espelho": {
+    "versao": 17,
+    "nome": "Espelho da Cidade dos Rostos",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/item-foco-espelho/conjurar-v17.svg",
+      "/kit/efeitos/item-foco-espelho/trajeto-v17.svg",
+      "/kit/efeitos/item-foco-espelho/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/item-foco-espelho/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/item-foco-espelho/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/item-foco-espelho/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "espelho",
+    "paleta": [
+      "#d4cfbe",
+      "#fff3d4"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/item-foco-espelho.png",
+    "arteSha256": "17f5638df5418ce32e60ba10afc0e8eb9ba0047c2be50c77d8f8f64c386b9c8c",
+    "textoBase": "Canal. Foco Arcano. Suspenda o Conjurador e pague 1: o próximo dano ou cura de uma Temporária sua neste turno tem +1.",
+    "assinaturaEfeito": "7d7cf55f91b7105fb8a9adef893f7fc20bfac70859f6332954b88779e76c66b4",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "item-foco-pedra": {
+    "versao": 17,
+    "nome": "Pedra Parada",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/item-foco-pedra/conjurar-v17.svg",
+      "/kit/efeitos/item-foco-pedra/trajeto-v17.svg",
+      "/kit/efeitos/item-foco-pedra/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/item-foco-pedra/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/item-foco-pedra/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/item-foco-pedra/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "cristal",
+    "paleta": [
+      "#54bfd8",
+      "#d4f8ff"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/item-foco-pedra.png",
+    "arteSha256": "8879a82692954c44afb538cbe0163546088b65e4b8877df627ad818dd68a152e",
+    "textoBase": "Canal. Foco Arcano. Suspenda o Conjurador e descarte 1 carta: o próximo dano ou cura de uma Temporária sua neste turno tem +2.",
+    "assinaturaEfeito": "66d3a08eb8a9af075bb340b4ce0e999f9d44c7fa9ba3e3a2ea9253aaba93d124",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "item-foco-coroa": {
+    "versao": 17,
+    "nome": "A Coroa de Vyal",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/item-foco-coroa/conjurar-v17.svg",
+      "/kit/efeitos/item-foco-coroa/trajeto-v17.svg",
+      "/kit/efeitos/item-foco-coroa/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/item-foco-coroa/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/item-foco-coroa/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/item-foco-coroa/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "coroa",
+    "paleta": [
+      "#dba073",
+      "#f7e8d5"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/item-foco-coroa.png",
+    "arteSha256": "86815db9109ee61b69c4b324507318b2d74c87f793a30df663195e8b5413f65b",
+    "textoBase": "Canal. Foco Arcano. Suspenda o Conjurador, pague 2 e seu Conjurador toma 2 de dano: o próximo dano ou cura de uma Temporária sua neste turno tem +4.",
+    "assinaturaEfeito": "a804e5529e03773bf14121df7d787fe6674fd3aee1d8c148e34773e7a1471b10",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "item-transcritor-pena": {
+    "versao": 17,
+    "nome": "Pena de Idrael",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/item-transcritor-pena/conjurar-v17.svg",
+      "/kit/efeitos/item-transcritor-pena/trajeto-v17.svg",
+      "/kit/efeitos/item-transcritor-pena/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/item-transcritor-pena/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/item-transcritor-pena/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/item-transcritor-pena/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "pena",
+    "paleta": [
+      "#6fb1dc",
+      "#eef4fb"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/item-transcritor-pena.png",
+    "arteSha256": "bfdd8af6aeab0cd00bf36170d4e70dab2b854ceae5ee58b2145e1142a649581f",
+    "textoBase": "Canal. Transcritor. Suspenda o Conjurador e pague 1: olhe as 2 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+    "assinaturaEfeito": "edc87d8e026889a48a12b83df87643d25b9338e1a54a7827b42da49fbf33cc9c",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "item-transcritor-pagina": {
+    "versao": 17,
+    "nome": "A Página Arrancada",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/item-transcritor-pagina/conjurar-v17.svg",
+      "/kit/efeitos/item-transcritor-pagina/trajeto-v17.svg",
+      "/kit/efeitos/item-transcritor-pagina/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/item-transcritor-pagina/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/item-transcritor-pagina/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/item-transcritor-pagina/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "paginas",
+    "paleta": [
+      "#e5b977",
+      "#ffebba"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/item-transcritor-pagina.png",
+    "arteSha256": "d97cb5463bfab549b8c838fc0201b7bc16c6893e085a3f26214e66bda66977a6",
+    "textoBase": "Canal. Transcritor. Suspenda o Conjurador e seu Conjurador toma 1 de dano: compre 1 carta.",
+    "assinaturaEfeito": "d761b0409465b1813065c35656c590b304c8c8b3fd75f32744f853381e9b864b",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "item-transcritor-chave": {
+    "versao": 17,
+    "nome": "Chave da Voragem",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/item-transcritor-chave/conjurar-v17.svg",
+      "/kit/efeitos/item-transcritor-chave/trajeto-v17.svg",
+      "/kit/efeitos/item-transcritor-chave/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/item-transcritor-chave/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/item-transcritor-chave/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/item-transcritor-chave/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "chave",
+    "paleta": [
+      "#e2bc76",
+      "#fff0c2"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/item-transcritor-chave.png",
+    "arteSha256": "b82e412dbca4957bfb2374b4c860cbe85066f9ca427c07bce7dde158ee35a0d8",
+    "textoBase": "Canal. Transcritor. Suspenda o Conjurador, pague 2 e descarte 1 carta: compre 3 cartas.",
+    "assinaturaEfeito": "8f74d888d41dbe5ab7eb6280e26f37e77946b51ba0e98dd0ffbdd4b79c1b58ba",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "item-extra-ovo": {
+    "versao": 17,
+    "nome": "Ovo de Wyvern",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/item-extra-ovo/conjurar-v17.svg",
+      "/kit/efeitos/item-extra-ovo/trajeto-v17.svg",
+      "/kit/efeitos/item-extra-ovo/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/item-extra-ovo/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/item-extra-ovo/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/item-extra-ovo/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "ovo",
+    "paleta": [
+      "#da8e44",
+      "#f2d999"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-ovo.png",
+    "arteSha256": "00211553edad460b54a8ff21712c7d2b500f04c2ba449e948ffd4ae0ec814024",
+    "textoBase": "Extra de Invocador. Uso único. Suspenda o Conjurador e pague 2: invoque um Wyvern Filhote 2/2.",
+    "assinaturaEfeito": "a31e1e1a354d9a0edb60fef9e79973cceb630fa4576241500a4dc38ef36a6dcb",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "item-extra-luvas": {
+    "versao": 17,
+    "nome": "Luvas de Força",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/item-extra-luvas/conjurar-v17.svg",
+      "/kit/efeitos/item-extra-luvas/trajeto-v17.svg",
+      "/kit/efeitos/item-extra-luvas/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/item-extra-luvas/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/item-extra-luvas/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/item-extra-luvas/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "punho",
+    "paleta": [
+      "#b9a075",
+      "#ecd9b4"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-luvas.png",
+    "arteSha256": "0095678e20eeafd4e517bd299a2f2c2127d58ab2dc59c4a8dedc2c4c10e5d1d4",
+    "textoBase": "Extra de Brigão. Uso único. Seu Conjurador toma 2 de dano: seu Conjurador ganha +2 de Ataque neste turno.",
+    "assinaturaEfeito": "aa01c3d345643bd79817c10c89af274113938fb45d9d1841b5c3174b45c9ccdc",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "item-extra-trono": {
+    "versao": 17,
+    "nome": "Trono Dobrável",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/item-extra-trono/conjurar-v17.svg",
+      "/kit/efeitos/item-extra-trono/trajeto-v17.svg",
+      "/kit/efeitos/item-extra-trono/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/item-extra-trono/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/item-extra-trono/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/item-extra-trono/impacto-v17.svg"
+    },
+    "movimento": "cura",
+    "motivo": "laco",
+    "paleta": [
+      "#dcccbc",
+      "#fff1d2"
+    ],
+    "destino": "conjurador-proprio",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-trono.png",
+    "arteSha256": "d43fbee39e9f6b2eca63c5f5d74f1ca50033d98e76ae21313ff7890cfa5d251c",
+    "textoBase": "Extra de Parrudão da quebrada. Uso único. Suspenda o Conjurador e pague 1: cure 4 de dano do seu Conjurador.",
+    "assinaturaEfeito": "f84f33dfb115504551247e4a8d1f00db7da26013d516130d55361e43dbe49d27",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "item-extra-pente": {
+    "versao": 17,
+    "nome": "Pente das Mil Caras",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/item-extra-pente/conjurar-v17.svg",
+      "/kit/efeitos/item-extra-pente/trajeto-v17.svg",
+      "/kit/efeitos/item-extra-pente/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/item-extra-pente/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/item-extra-pente/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/item-extra-pente/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "pente",
+    "paleta": [
+      "#c8976f",
+      "#f2deba"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-pente.png",
+    "arteSha256": "90ec12725921ab97eb9841d1a9ce1e9095a8a3f2eebac14da11423e34674540e",
+    "textoBase": "Extra de Habilidoso. Uso único. Suspenda o Conjurador e descarte 1 carta: olhe as 3 cartas do topo do seu baralho; ponha 2 na mão e as outras no fundo do baralho.",
+    "assinaturaEfeito": "5ae89486bc76a095803b3933df0d77ae198b0c001845d37b7b098b0310437834",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "item-extra-balde": {
+    "versao": 17,
+    "nome": "Balde que Sobe",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/item-extra-balde/conjurar-v17.svg",
+      "/kit/efeitos/item-extra-balde/trajeto-v17.svg",
+      "/kit/efeitos/item-extra-balde/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/item-extra-balde/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/item-extra-balde/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/item-extra-balde/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "bolhas",
+    "paleta": [
+      "#b9d2dc",
+      "#f4f6eb"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-balde.png",
+    "arteSha256": "b75adfe2fd28be0915f927fbdfd0d51a739e69e1cc85ef19212f3269d41c8716",
+    "textoBase": "Extra de Preparado. Uso único. Suspenda o Conjurador e seu Conjurador toma 1 de dano: ganhe 2 de Arcano e compre 1 carta.",
+    "assinaturaEfeito": "0f6d51c31abbe11aaf6ea66199a2cb8b9f7eb78d6c82908d58d31fc98a7158aa",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-coveiro": {
+    "versao": 17,
+    "nome": "Coveiro de Vau Grande",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-coveiro/conjurar-v17.svg",
+      "/kit/efeitos/nv-coveiro/trajeto-v17.svg",
+      "/kit/efeitos/nv-coveiro/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-coveiro/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-coveiro/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-coveiro/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "nevoa",
+    "paleta": [
+      "#90ba94",
+      "#e3eccd"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "entrada",
+      "gatilho"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-coveiro.png",
+    "arteSha256": "84c5e84aada6712579898508ebfaba00f0779cbd005228f9a60144f0d33c5305",
+    "textoBase": "Ao entrar: olhe as 2 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+    "assinaturaEfeito": "f4a3fe10da1ac9dd67ad558b30df5ee4f914625edf2d4b68e9f66a9cb13e9ed5",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-embalsamador": {
+    "versao": 17,
+    "nome": "Embalsamador",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-embalsamador/conjurar-v17.svg",
+      "/kit/efeitos/nv-embalsamador/trajeto-v17.svg",
+      "/kit/efeitos/nv-embalsamador/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-embalsamador/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-embalsamador/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-embalsamador/impacto-v17.svg"
+    },
+    "movimento": "ressurgir",
+    "motivo": "ossos",
+    "paleta": [
+      "#86c9b4",
+      "#d5f3dc"
+    ],
+    "destino": "campo-proprio",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-embalsamador.png",
+    "arteSha256": "c54198cca0408b4d9f19cb18aada1b6d7731600250ee86e76ac58ecfd7f422db",
+    "textoBase": "Suspenda e pague 2: ponha no seu campo um Aliado de qualquer cemitério, pagando o custo dele + 1.",
+    "assinaturaEfeito": "77b093cb08a2ac3a22239dd1bff8329f25a9d224809476ead87bc2843d27f647",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-ossario": {
+    "versao": 17,
+    "nome": "Velho Ossário, o Dragão Pálido",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-ossario/conjurar-v17.svg",
+      "/kit/efeitos/nv-ossario/trajeto-v17.svg",
+      "/kit/efeitos/nv-ossario/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-ossario/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-ossario/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-ossario/impacto-v17.svg"
+    },
+    "movimento": "ressurgir",
+    "motivo": "dragao",
+    "paleta": [
+      "#aed49a",
+      "#ece9d3"
+    ],
+    "destino": "campo-proprio",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "entrada",
+      "gatilho"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-ossario.png",
+    "arteSha256": "78c9b7d116b9d80383d8a5bdb6347cea8998c4b273651448ea2f46f0b831a0de",
+    "textoBase": "Ao entrar: ponha no seu campo um Aliado de qualquer cemitério, pagando o custo dele + 0.",
+    "assinaturaEfeito": "186a08a1e1fb5cdbeef8b356d84fe301135f22082b9267e1159b260b313e7870",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-rosto-sem-gente": {
+    "versao": 17,
+    "nome": "Rosto sem Gente",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-rosto-sem-gente/conjurar-v17.svg",
+      "/kit/efeitos/nv-rosto-sem-gente/trajeto-v17.svg",
+      "/kit/efeitos/nv-rosto-sem-gente/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-rosto-sem-gente/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-rosto-sem-gente/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-rosto-sem-gente/impacto-v17.svg"
+    },
+    "movimento": "portal",
+    "motivo": "mascara",
+    "paleta": [
+      "#e98d69",
+      "#f9d7b4"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-rosto-sem-gente.png",
+    "arteSha256": "98cbca15e66901ba7653c29dd76c6440962f6cbd4185eb36719ad1886dbcefd4",
+    "textoBase": "Devolva um Aliado ou Mística à mão do dono.",
+    "assinaturaEfeito": "3d1b3dcee4fadb3320c5c3931de6495e763b7ba931a36252cd0f9713122b145b",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-leitura-de-sombras": {
+    "versao": 17,
+    "nome": "Leitura de Sombras",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-leitura-de-sombras/conjurar-v17.svg",
+      "/kit/efeitos/nv-leitura-de-sombras/trajeto-v17.svg",
+      "/kit/efeitos/nv-leitura-de-sombras/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-leitura-de-sombras/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-leitura-de-sombras/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-leitura-de-sombras/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "paginas",
+    "paleta": [
+      "#9388d3",
+      "#e7d8f3"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-leitura-de-sombras.png",
+    "arteSha256": "bbdb107ba820079978a4305f06751e6e079183af4dfaf9b40fe29373f883dd5e",
+    "textoBase": "Olhe as 4 cartas do topo do seu baralho; ponha 2 na mão e as outras no fundo do baralho.",
+    "assinaturaEfeito": "3cca04fe9ac0ab86589139a54e88fedbc547c641b4670a0515927cf01316c2be",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-sentenca-do-selo": {
+    "versao": 17,
+    "nome": "Sentença do Selo",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-sentenca-do-selo/conjurar-v17.svg",
+      "/kit/efeitos/nv-sentenca-do-selo/trajeto-v17.svg",
+      "/kit/efeitos/nv-sentenca-do-selo/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-sentenca-do-selo/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-sentenca-do-selo/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-sentenca-do-selo/impacto-v17.svg"
+    },
+    "movimento": "alvo",
+    "motivo": "selo",
+    "paleta": [
+      "#b587d7",
+      "#ecdec1"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-sentenca-do-selo.png",
+    "arteSha256": "204c13c45a17bf6cf77842a7651e65727e7fd20b1dc306d6833c43eb129d7a27",
+    "textoBase": "Destrua um Aliado ou Mística.",
+    "assinaturaEfeito": "a4729eeeb312706f3ee2cead9afcbaf09d2eeb2b1b3e47dedcf642d18be55dc7",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-luz-da-faroleira": {
+    "versao": 17,
+    "nome": "Luz da Faroleira",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-luz-da-faroleira/conjurar-v17.svg",
+      "/kit/efeitos/nv-luz-da-faroleira/trajeto-v17.svg",
+      "/kit/efeitos/nv-luz-da-faroleira/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-luz-da-faroleira/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-luz-da-faroleira/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-luz-da-faroleira/impacto-v17.svg"
+    },
+    "movimento": "cura",
+    "motivo": "estrela",
+    "paleta": [
+      "#d4b66f",
+      "#f5e9c3"
+    ],
+    "destino": "conjurador-proprio",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-luz-da-faroleira.png",
+    "arteSha256": "dd70ff40feadabd7da2e2b096096fdf34a7496e609e96c1e886eb0b5ce8d075b",
+    "textoBase": "Cure 4 de dano do seu Conjurador e compre 1 carta.",
+    "assinaturaEfeito": "4c2d046c87ddb7f761453905c1d770eeaf9f929109d243df4b15e4ec28a621dc",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-chamado-da-matilha": {
+    "versao": 17,
+    "nome": "Chamado da Matilha",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-chamado-da-matilha/conjurar-v17.svg",
+      "/kit/efeitos/nv-chamado-da-matilha/trajeto-v17.svg",
+      "/kit/efeitos/nv-chamado-da-matilha/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-chamado-da-matilha/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-chamado-da-matilha/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-chamado-da-matilha/impacto-v17.svg"
+    },
+    "movimento": "onda",
+    "motivo": "garras",
+    "paleta": [
+      "#acbc56",
+      "#ebdb91"
+    ],
+    "destino": "campo-rival",
+    "duracaoMs": 1550,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-chamado-da-matilha.png",
+    "arteSha256": "7d7aa45f541a3e2c8e7a54b88e8fc8dece599f044981962f990d3e1deef5944f",
+    "textoBase": "Cause 2 de dano a cada Aliado do oponente.",
+    "assinaturaEfeito": "9a363f4eaa7e00ad925aebb2fc908c30eb793fc800bdafa2f0e8127c041ed8c5",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-quebra-escudos": {
+    "versao": 17,
+    "nome": "Golpe do Quebra-Escudos",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-quebra-escudos/conjurar-v17.svg",
+      "/kit/efeitos/nv-quebra-escudos/trajeto-v17.svg",
+      "/kit/efeitos/nv-quebra-escudos/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-quebra-escudos/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-quebra-escudos/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-quebra-escudos/impacto-v17.svg"
+    },
+    "movimento": "projetil",
+    "motivo": "punho",
+    "paleta": [
+      "#df795d",
+      "#f5ceb1"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-quebra-escudos.png",
+    "arteSha256": "1ab0d6543c7e952ff08c9d873c6bd0bbd8ae1e4a01bd4ea69b02ae140df2df0a",
+    "textoBase": "Cause 4 de dano a um Aliado ou Mística.",
+    "assinaturaEfeito": "36ee3c086d55bdff8ad1301370f830047c74c2148cb912a2c2a43481a1d04d10",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-nuvem-triste": {
+    "versao": 17,
+    "nome": "Nuvem Triste",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-nuvem-triste/conjurar-v17.svg",
+      "/kit/efeitos/nv-nuvem-triste/trajeto-v17.svg",
+      "/kit/efeitos/nv-nuvem-triste/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-nuvem-triste/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-nuvem-triste/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-nuvem-triste/impacto-v17.svg"
+    },
+    "movimento": "portal",
+    "motivo": "nuvem",
+    "paleta": [
+      "#ea9d8d",
+      "#c4e1eb"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-nuvem-triste.png",
+    "arteSha256": "f7a60baaedbff82d612d7512892aea3645f77114e3755023178eef327cc21df4",
+    "textoBase": "Devolva um Aliado ou Mística à mão do dono e compre 1 carta.",
+    "assinaturaEfeito": "32ce880c762c67ebb86be09f7494dfebdf5ed2f85ccf8d502a7c90efc1661c8c",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-cadeira-de-espera": {
+    "versao": 17,
+    "nome": "Cadeira de Espera",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-cadeira-de-espera/conjurar-v17.svg",
+      "/kit/efeitos/nv-cadeira-de-espera/trajeto-v17.svg",
+      "/kit/efeitos/nv-cadeira-de-espera/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-cadeira-de-espera/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-cadeira-de-espera/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-cadeira-de-espera/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "relogio",
+    "paleta": [
+      "#7da6e5",
+      "#e0eaff"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-cadeira-de-espera.png",
+    "arteSha256": "2c35e9021ca9bf2d46bf6d55e106c14f5d2e0034523b769e294f71653481532a",
+    "textoBase": "Bana uma carta da sua mão; no seu próximo turno ela pode ser jogada custando 2 a menos.",
+    "assinaturaEfeito": "ca4948d195a7dd169105ed249c53994328a252451e97089d87f1634f46ff78a6",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-ladrao-de-tumulos": {
+    "versao": 17,
+    "nome": "Saque de Túmulos",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-ladrao-de-tumulos/conjurar-v17.svg",
+      "/kit/efeitos/nv-ladrao-de-tumulos/trajeto-v17.svg",
+      "/kit/efeitos/nv-ladrao-de-tumulos/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-ladrao-de-tumulos/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-ladrao-de-tumulos/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-ladrao-de-tumulos/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "paginas",
+    "paleta": [
+      "#a6c8a6",
+      "#eaf1d3"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-ladrao-de-tumulos.png",
+    "arteSha256": "de426e920351a4daa16587bc8b50e62e1569b27f923afd43c7577c5dd3040ab9",
+    "textoBase": "Compre 2 cartas.",
+    "assinaturaEfeito": "93bcd5bb4ac59fa18293101139f4b8226b1c120e0e65221f80a4966a24685be8",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-mascara-do-outro": {
+    "versao": 17,
+    "nome": "Máscara do Outro",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-mascara-do-outro/conjurar-v17.svg",
+      "/kit/efeitos/nv-mascara-do-outro/trajeto-v17.svg",
+      "/kit/efeitos/nv-mascara-do-outro/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-mascara-do-outro/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-mascara-do-outro/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-mascara-do-outro/impacto-v17.svg"
+    },
+    "movimento": "portal",
+    "motivo": "mascara",
+    "paleta": [
+      "#e08d7a",
+      "#f4dec0"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-mascara-do-outro.png",
+    "arteSha256": "8682108ee4ed863504fc18b120998ec253380024da0379caf8110fd7cf87a3be",
+    "textoBase": "Devolva um Aliado ou Mística à mão do dono.",
+    "assinaturaEfeito": "3d1b3dcee4fadb3320c5c3931de6495e763b7ba931a36252cd0f9713122b145b",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-refutacao": {
+    "versao": 17,
+    "nome": "Refutação",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-refutacao/conjurar-v17.svg",
+      "/kit/efeitos/nv-refutacao/trajeto-v17.svg",
+      "/kit/efeitos/nv-refutacao/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-refutacao/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-refutacao/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-refutacao/impacto-v17.svg"
+    },
+    "movimento": "selo",
+    "motivo": "selo",
+    "paleta": [
+      "#9c91db",
+      "#e4ccf8"
+    ],
+    "destino": "alvo-pilha",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-refutacao.png",
+    "arteSha256": "3d4d278baa5e00b0c6b1bf93ea16ef2d9978e06573629041723815ed3e4e505c",
+    "textoBase": "Anule uma carta na pilha.",
+    "assinaturaEfeito": "22efe3126b4bd8a925a00d29a414cc9f79498246d2f08ee82fdd0b7e80a00617",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-lamento-da-carpideira": {
+    "versao": 17,
+    "nome": "Lamento da Carpideira",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-lamento-da-carpideira/conjurar-v17.svg",
+      "/kit/efeitos/nv-lamento-da-carpideira/trajeto-v17.svg",
+      "/kit/efeitos/nv-lamento-da-carpideira/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-lamento-da-carpideira/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-lamento-da-carpideira/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-lamento-da-carpideira/impacto-v17.svg"
+    },
+    "movimento": "feixe",
+    "motivo": "som",
+    "paleta": [
+      "#aed3b0",
+      "#e6f3d1"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 66,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-lamento-da-carpideira.png",
+    "arteSha256": "ac1ab3654cdc982ff7de4ddd77ec7bcb5636bf9ad7fbe5e981d186f8761a5746",
+    "textoBase": "Cause 2 de dano a um alvo.",
+    "assinaturaEfeito": "bf82d4396e662d73aad745da2de766778fefd9469076313cf334465930c7f081",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-hora-roubada": {
+    "versao": 17,
+    "nome": "Hora Roubada",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-hora-roubada/conjurar-v17.svg",
+      "/kit/efeitos/nv-hora-roubada/trajeto-v17.svg",
+      "/kit/efeitos/nv-hora-roubada/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-hora-roubada/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-hora-roubada/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-hora-roubada/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "relogio",
+    "paleta": [
+      "#c2b9a3",
+      "#f0e4c5"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-hora-roubada.png",
+    "arteSha256": "0b078ff6f9a2db87bac87e76e49512c717e64c8fd3d5f6508058882aa1b0121f",
+    "textoBase": "Compre 1 carta.",
+    "assinaturaEfeito": "ac47cfb2c62cfd6a8d05945f0e60ed097fba633e05c1b9a8b2b041da4db59210",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-selo-subito": {
+    "versao": 17,
+    "nome": "Selo Súbito",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-selo-subito/conjurar-v17.svg",
+      "/kit/efeitos/nv-selo-subito/trajeto-v17.svg",
+      "/kit/efeitos/nv-selo-subito/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-selo-subito/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-selo-subito/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-selo-subito/impacto-v17.svg"
+    },
+    "movimento": "cura",
+    "motivo": "selo",
+    "paleta": [
+      "#d6b96f",
+      "#efe3b8"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-selo-subito.png",
+    "arteSha256": "26b3ef8a6898b82a14a08c292f9aed2da16446a8d0ec677d0dc6f79686c91eab",
+    "textoBase": "Cure 3 de dano de um alvo.",
+    "assinaturaEfeito": "d2423da20850db9ab754adfc76ca97f00da58d6206852393dfdce85551258b33",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-tiro-de-aluguel": {
+    "versao": 17,
+    "nome": "Tiro de Aluguel",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-tiro-de-aluguel/conjurar-v17.svg",
+      "/kit/efeitos/nv-tiro-de-aluguel/trajeto-v17.svg",
+      "/kit/efeitos/nv-tiro-de-aluguel/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-tiro-de-aluguel/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-tiro-de-aluguel/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-tiro-de-aluguel/impacto-v17.svg"
+    },
+    "movimento": "feixe",
+    "motivo": "laser",
+    "paleta": [
+      "#eaaa5c",
+      "#ffe6b0"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 66,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-tiro-de-aluguel.png",
+    "arteSha256": "e4ae5c0de9ee75549d3eede6b501a5d30b9cb9ffd97cc663d973a3de9dfd7049",
+    "textoBase": "Cause 2 de dano a um alvo.",
+    "assinaturaEfeito": "bf82d4396e662d73aad745da2de766778fefd9469076313cf334465930c7f081",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-espelho-da-serpente": {
+    "versao": 17,
+    "nome": "Espelho da Serpente",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-espelho-da-serpente/conjurar-v17.svg",
+      "/kit/efeitos/nv-espelho-da-serpente/trajeto-v17.svg",
+      "/kit/efeitos/nv-espelho-da-serpente/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-espelho-da-serpente/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-espelho-da-serpente/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-espelho-da-serpente/impacto-v17.svg"
+    },
+    "movimento": "portal",
+    "motivo": "serpente",
+    "paleta": [
+      "#c1d6e0",
+      "#e7d6a3"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "resolucao"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-espelho-da-serpente.png",
+    "arteSha256": "4ef88c8b4517fa1f341723b8e398279e8877076af1ace19fdf2e7f125afa0e3e",
+    "textoBase": "Devolva um Aliado ou Mística à mão do dono.",
+    "assinaturaEfeito": "3d1b3dcee4fadb3320c5c3931de6495e763b7ba931a36252cd0f9713122b145b",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-dama-da-noite": {
+    "versao": 17,
+    "nome": "A Dama da Noite de Fhim",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-dama-da-noite/conjurar-v17.svg",
+      "/kit/efeitos/nv-dama-da-noite/trajeto-v17.svg",
+      "/kit/efeitos/nv-dama-da-noite/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-dama-da-noite/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-dama-da-noite/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-dama-da-noite/impacto-v17.svg"
+    },
+    "movimento": "feixe",
+    "motivo": "nevoa",
+    "paleta": [
+      "#abc2aa",
+      "#eee4b9"
+    ],
+    "destino": "conjurador-rival",
+    "duracaoMs": 1300,
+    "tamanhoPx": 66,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-dama-da-noite.png",
+    "arteSha256": "214b0b94c7ce5b08d5ecff7c9b505940c04bec041604bd6b2711d46bcb913549",
+    "textoBase": "Suspenda: cause 1 de dano ao Conjurador inimigo.",
+    "assinaturaEfeito": "b8b6c6f9e4ebeec6cf43814b92c3b24a7ab341b01ef1978005f299d85aaeed90",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-canto-sem-cantor": {
+    "versao": 17,
+    "nome": "Canto sem Cantor",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-canto-sem-cantor/conjurar-v17.svg",
+      "/kit/efeitos/nv-canto-sem-cantor/trajeto-v17.svg",
+      "/kit/efeitos/nv-canto-sem-cantor/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-canto-sem-cantor/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-canto-sem-cantor/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-canto-sem-cantor/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "som",
+    "paleta": [
+      "#dc8d99",
+      "#f7d4c8"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-canto-sem-cantor.png",
+    "arteSha256": "5690e296cdfade0052aa34f5ad1f2e773508a535d5533d37b921589452b3127e",
+    "textoBase": "Suspenda e pague 2: compre 1 carta.",
+    "assinaturaEfeito": "1793ab6df796040096203a2fbe6cd0e18a56cdc53a0ad5ab506ff9af70d1d8e0",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-o-sentido": {
+    "versao": 17,
+    "nome": "O Sentido",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-o-sentido/conjurar-v17.svg",
+      "/kit/efeitos/nv-o-sentido/trajeto-v17.svg",
+      "/kit/efeitos/nv-o-sentido/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-o-sentido/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-o-sentido/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-o-sentido/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "laco",
+    "paleta": [
+      "#d4b49e",
+      "#f3e3cc"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-o-sentido.png",
+    "arteSha256": "91a98a616bf9650f2d27c96aada39f2092316b7cb88d322be6e8d150dea2c7c0",
+    "textoBase": "Suspenda e pague 1: olhe as 2 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+    "assinaturaEfeito": "fdce59a729d3a4877235cd70f647eae473fa3ad5911c82151a98b9571faa1a85",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-tique": {
+    "versao": 17,
+    "nome": "Tique, o Segundo a Mais",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-tique/conjurar-v17.svg",
+      "/kit/efeitos/nv-tique/trajeto-v17.svg",
+      "/kit/efeitos/nv-tique/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-tique/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-tique/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-tique/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "relogio",
+    "paleta": [
+      "#689dcf",
+      "#ecdbad"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "entrada",
+      "gatilho",
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-tique.png",
+    "arteSha256": "f77f7b1402642083c1791c7f0e226b9691d357fded97499641b3e4987a7b1bc5",
+    "textoBase": "Ao entrar: compre 1 carta. Suspenda: ganhe 1 de Arcano.",
+    "assinaturaEfeito": "eeaaef54bb0ac83b1bdfe4127ee786afa39e1a1920c42d3438520e7ba34a4746",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-hael": {
+    "versao": 17,
+    "nome": "Hael, o Insone",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-hael/conjurar-v17.svg",
+      "/kit/efeitos/nv-hael/trajeto-v17.svg",
+      "/kit/efeitos/nv-hael/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-hael/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-hael/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-hael/impacto-v17.svg"
+    },
+    "movimento": "cura",
+    "motivo": "nevoa",
+    "paleta": [
+      "#c9bca7",
+      "#f5e8c6"
+    ],
+    "destino": "alvo",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-hael.png",
+    "arteSha256": "ce3d503c7615e9cb4055ecf7b71bcda04ca47fd0b5df7e570635a16232db56be",
+    "textoBase": "Suspenda e pague 1: cure 3 de dano de um alvo.",
+    "assinaturaEfeito": "69dcbdfb204177e7fb1896a950632689d3dda2218f0673b144ca8678d6fc0ab4",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-estandarte-sem-exercito": {
+    "versao": 17,
+    "nome": "Estandarte sem Exército",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-estandarte-sem-exercito/conjurar-v17.svg",
+      "/kit/efeitos/nv-estandarte-sem-exercito/trajeto-v17.svg",
+      "/kit/efeitos/nv-estandarte-sem-exercito/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-estandarte-sem-exercito/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-estandarte-sem-exercito/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-estandarte-sem-exercito/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "estandarte",
+    "paleta": [
+      "#bd7395",
+      "#e9ba93"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "entrada",
+      "gatilho"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-estandarte-sem-exercito.png",
+    "arteSha256": "b9ec8847ccbb372d5e9ceab2692521ee9596a7d7f593c6992723664d0b23a1bf",
+    "textoBase": "Protegido 1. Ao entrar: ganhe 1 de Arcano.",
+    "assinaturaEfeito": "db3fdec3bf58c2f116a01e56c0d75fddc91ab7ce769d122462393c0eefbc6fc7",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-feira-das-mascaras": {
+    "versao": 17,
+    "nome": "Feira das Máscaras",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-feira-das-mascaras/conjurar-v17.svg",
+      "/kit/efeitos/nv-feira-das-mascaras/trajeto-v17.svg",
+      "/kit/efeitos/nv-feira-das-mascaras/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-feira-das-mascaras/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-feira-das-mascaras/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-feira-das-mascaras/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "mascara",
+    "paleta": [
+      "#d18c68",
+      "#f1d0a3"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-feira-das-mascaras.png",
+    "arteSha256": "a5ce45bebd5b1d6b3b2a4342d2561d3ccf1ecbe7e9afd8ce8cc12f862c781384",
+    "textoBase": "Suspenda: ganhe 1 de Arcano.",
+    "assinaturaEfeito": "c469e92bac4a43175b4a5d260b978590f9ebc05c695407bea41055f8c13f8be2",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-o-postulario": {
+    "versao": 17,
+    "nome": "O Postulário",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-o-postulario/conjurar-v17.svg",
+      "/kit/efeitos/nv-o-postulario/trajeto-v17.svg",
+      "/kit/efeitos/nv-o-postulario/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-o-postulario/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-o-postulario/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-o-postulario/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "carta",
+    "paleta": [
+      "#929fdd",
+      "#e1dcfa"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-o-postulario.png",
+    "arteSha256": "a4502facc444b24108a28f6b426b16369eef71b65e513c3be6e58c070e08457e",
+    "textoBase": "Suspenda e pague 1: compre 1 carta.",
+    "assinaturaEfeito": "50efc1d054e98727234fccdea9248391fe92933e6b7ee968a0c519c8def0bf66",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-patio-de-duelos": {
+    "versao": 17,
+    "nome": "Pátio de Duelos",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-patio-de-duelos/conjurar-v17.svg",
+      "/kit/efeitos/nv-patio-de-duelos/trajeto-v17.svg",
+      "/kit/efeitos/nv-patio-de-duelos/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-patio-de-duelos/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-patio-de-duelos/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-patio-de-duelos/impacto-v17.svg"
+    },
+    "movimento": "projetil",
+    "motivo": "lamina",
+    "paleta": [
+      "#d69b67",
+      "#f4d7b0"
+    ],
+    "destino": "conjurador-rival",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-patio-de-duelos.png",
+    "arteSha256": "c75382bff73d66d0593cb0b09fd6c499ba10f08fc70fbd97e5d2df3bd3257c99",
+    "textoBase": "Suspenda: cause 1 de dano ao Conjurador inimigo.",
+    "assinaturaEfeito": "b8b6c6f9e4ebeec6cf43814b92c3b24a7ab341b01ef1978005f299d85aaeed90",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-porto-de-vidro": {
+    "versao": 17,
+    "nome": "O Porto de Vidro",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-porto-de-vidro/conjurar-v17.svg",
+      "/kit/efeitos/nv-porto-de-vidro/trajeto-v17.svg",
+      "/kit/efeitos/nv-porto-de-vidro/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-porto-de-vidro/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-porto-de-vidro/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-porto-de-vidro/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "agua",
+    "paleta": [
+      "#9ad6e1",
+      "#eaf9fb"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-porto-de-vidro.png",
+    "arteSha256": "f0362ebf6f10cab6462d325faf24d57e66da37b9ed3fa49ddaef7de5b043c0d5",
+    "textoBase": "Suspenda: ganhe 1 de Arcano.",
+    "assinaturaEfeito": "c469e92bac4a43175b4a5d260b978590f9ebc05c695407bea41055f8c13f8be2",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-mercado-de-feras": {
+    "versao": 17,
+    "nome": "Mercado de Feras",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-mercado-de-feras/conjurar-v17.svg",
+      "/kit/efeitos/nv-mercado-de-feras/trajeto-v17.svg",
+      "/kit/efeitos/nv-mercado-de-feras/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-mercado-de-feras/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-mercado-de-feras/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-mercado-de-feras/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "corrente",
+    "paleta": [
+      "#c4b07e",
+      "#efdcae"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-mercado-de-feras.png",
+    "arteSha256": "39ef6bd616e15dfb01787cf8d668ff4ff6fc6238b3893f61b533f785079e33c3",
+    "textoBase": "Suspenda: a primeira carta que você jogar neste turno custa 1 a menos.",
+    "assinaturaEfeito": "79024ba12f856673e770a15df382ef64be838b0515af83ce2f0ccbc5e70e8b50",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-estalagem-de-vau": {
+    "versao": 17,
+    "nome": "Estalagem de Vau Grande",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-estalagem-de-vau/conjurar-v17.svg",
+      "/kit/efeitos/nv-estalagem-de-vau/trajeto-v17.svg",
+      "/kit/efeitos/nv-estalagem-de-vau/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-estalagem-de-vau/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-estalagem-de-vau/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-estalagem-de-vau/impacto-v17.svg"
+    },
+    "movimento": "cura",
+    "motivo": "vapor",
+    "paleta": [
+      "#cbb990",
+      "#f5e6c9"
+    ],
+    "destino": "conjurador-proprio",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-estalagem-de-vau.png",
+    "arteSha256": "a51ee6705bfcfd892cca6d33f6c6113949871975637da138ceea260328719ec6",
+    "textoBase": "Suspenda e pague 1: cure 2 de dano do seu Conjurador.",
+    "assinaturaEfeito": "0c9b49db625b8c45f0e3c5851615628afe3fa0112c87f0e3cca2a73d3b2dbc2b",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-vila-do-mesmo-dia": {
+    "versao": 17,
+    "nome": "Vila do Mesmo Dia",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-vila-do-mesmo-dia/conjurar-v17.svg",
+      "/kit/efeitos/nv-vila-do-mesmo-dia/trajeto-v17.svg",
+      "/kit/efeitos/nv-vila-do-mesmo-dia/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-vila-do-mesmo-dia/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-vila-do-mesmo-dia/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-vila-do-mesmo-dia/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "cartas",
+    "paleta": [
+      "#a4c7ec",
+      "#eff4fc"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "habilidade"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-vila-do-mesmo-dia.png",
+    "arteSha256": "ba4c50080fe87c72c7c3aed578a7638d3cd6409be95307ec8cc3eeb558bf3f96",
+    "textoBase": "Suspenda e pague 2: olhe as 3 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+    "assinaturaEfeito": "ed53c0c7e7fa55603aaf6879c39cae777a34670b360f23b46663cc4b4c436aea",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  },
+  "nv-floresta-que-anda": {
+    "versao": 17,
+    "nome": "Floresta que Anda",
+    "okGpt": true,
+    "arquivos": [
+      "/kit/efeitos/nv-floresta-que-anda/conjurar-v17.svg",
+      "/kit/efeitos/nv-floresta-que-anda/trajeto-v17.svg",
+      "/kit/efeitos/nv-floresta-que-anda/impacto-v17.svg"
+    ],
+    "camadas": {
+      "conjurar": "/kit/efeitos/nv-floresta-que-anda/conjurar-v17.svg",
+      "trajeto": "/kit/efeitos/nv-floresta-que-anda/trajeto-v17.svg",
+      "impacto": "/kit/efeitos/nv-floresta-que-anda/impacto-v17.svg"
+    },
+    "movimento": "local",
+    "motivo": "raiz",
+    "paleta": [
+      "#adbf70",
+      "#e7dfb5"
+    ],
+    "destino": "origem",
+    "duracaoMs": 1300,
+    "tamanhoPx": 108,
+    "gatilhosAceitos": [
+      "entrada",
+      "gatilho"
+    ],
+    "arte": "Arcanoclisma/arte/cartas-site/nv-floresta-que-anda.png",
+    "arteSha256": "d856014640d2b0cdeb53e81d5ca0a6b1a4a8cd49778bb474e3fc18126fe2fd07",
+    "textoBase": "Conta como 1 carta no Grau. Ao entrar: ganhe 1 de Arcano.",
+    "assinaturaEfeito": "b666943765714d167bd598211bac5e4da80b0f111d65c9c448e7d236a9a49e8d",
+    "revisaoVisual": "132 artes inspecionadas em seis pranchas; direção individual por ID",
+    "testadoNoJogo": false
+  }
+}

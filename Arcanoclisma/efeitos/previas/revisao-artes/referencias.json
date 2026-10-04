@@ -1,0 +1,4120 @@
+[
+  {
+    "id": "base-dano-c1",
+    "nome": "Chuva de Faíscas",
+    "tipo": "temporaria",
+    "valores": [
+      "primitivum"
+    ],
+    "texto": "Causa 2 de dano a um alvo.",
+    "arteDaCarta": "chuva-de-faiscas",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-c1.png",
+    "decisoesDaArte": [
+      "Criatura da base usada como forma transitória do feitiço, sem criar aliado ou alterar regra.",
+      "Conjurador novo gira no mercado ao meio-dia; chuva de faíscas mostra origem, arco e impacto em escudo.",
+      "Fundo teal contido e novo gesto lateral da manifestação, sem explosão excessivamente luminosa."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/chuva-de-faiscas.png",
+        "papel": "forma transitória do feitiço e magia vermelho-ferrugem"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "acabamento"
+      }
+    ]
+  },
+  {
+    "id": "base-dano-c1-repentina",
+    "nome": "Faísca de Tempestade",
+    "tipo": "temporaria",
+    "valores": [
+      "sublimeyn"
+    ],
+    "texto": "Causa 1 de dano a um alvo.",
+    "arteDaCarta": "faisca-de-tempestade",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-c1-repentina.png",
+    "decisoesDaArte": [
+      "Faíscas reorganizadas em projétil diagonal e rastro de impacto, sem corpos de criatura.",
+      "Galé no cais ao amanhecer; personagens novos com expressões e roupas diferentes.",
+      "Alvo sem escudo para variar do feitiço anterior; impacto sem ferimento gráfico.",
+      "Feitiço repentino permanece sem texto na pintura, identificação cabe ao template."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/faisca-de-tempestade.png",
+        "papel": "formas triangulares e ramificações vermelho-ferrugem"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "acabamento"
+      }
+    ]
+  },
+  {
+    "id": "base-dano-c2",
+    "nome": "Brasa de Forja",
+    "tipo": "temporaria",
+    "valores": [
+      "conflituo"
+    ],
+    "texto": "Causa 3 de dano a um alvo.",
+    "arteDaCarta": "brasa-de-forja",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-c2.png",
+    "decisoesDaArte": [
+      "Brasa viaja da direita para esquerda, com aparência metálica pesada, não bicho ou bola de fogo.",
+      "Forja industrial ao meio-dia com câmera inclinada moderada; conjuradora parcialmente de costas.",
+      "Alvo, silhuetas, roupas e direção variam em relação às duas magias anteriores.",
+      "Prata-mercúrio do núcleo preservada e impacto localizado."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/brasa-de-forja.png",
+        "papel": "brasa achatada de carvão e núcleo prata-mercúrio"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "acabamento"
+      }
+    ]
+  },
+  {
+    "id": "base-dano-c2-repentina",
+    "nome": "Vento Com Rancor",
+    "tipo": "temporaria",
+    "valores": [
+      "cognitium",
+      "eternyr"
+    ],
+    "texto": "Causa 2 de dano a um alvo.",
+    "arteDaCarta": "vento-com-rancor",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-c2-repentina.png",
+    "decisoesDaArte": [
+      "Feitiço mostrado depois do corte com duas marcas no lugar, alvo desequilibrado e vento remanescente.",
+      "Ponte de moinho em tempestade diurna, câmera baixa e enquadramento diagonal.",
+      "Conjurador apenas sugerido pela mão para variar da composição de duas figuras completas.",
+      "Forma etérea prateada preservada, sem criatura, fogo ou vermelho substituindo a identidade."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/vento-com-rancor.png",
+        "papel": "duas lâminas translúcidas prata-mercúrio"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "acabamento"
+      }
+    ]
+  },
+  {
+    "id": "base-dano-c3",
+    "nome": "Chama que Lembra",
+    "tipo": "temporaria",
+    "valores": [
+      "primitivum"
+    ],
+    "texto": "Causa 4 de dano a um alvo.",
+    "arteDaCarta": "chama-que-lembra",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-c3.png",
+    "decisoesDaArte": [
+      "Touro de Kairvahnn reaparece como alvo em nova pose e contexto, sem reutilizar sua imagem de carta.",
+      "Laço prata-mercúrio com pequenas lembranças preservado; impacto arremessa fera sem ferimentos gráficos.",
+      "Pátio de balneário à tarde, ambiente frio e dourado restrito às miniaturas dentro da magia."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/chama-que-lembra.png",
+        "papel": "forma original do feitiço"
+      },
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/touro-de-kairvahnn.png",
+        "papel": "identidade do Touro em nova ação"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "acabamento"
+      }
+    ]
+  },
+  {
+    "id": "base-dano-c3-repentina",
+    "nome": "Tempestade Viva",
+    "tipo": "temporaria",
+    "valores": [
+      "cognitium"
+    ],
+    "texto": "Causa 3 de dano a um alvo.",
+    "arteDaCarta": "tempestade-viva",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-c3-repentina.png",
+    "decisoesDaArte": [
+      "Tempestade em cobertura enorme de nuvens com uma descarga dominante alcançando a carroça na resolução.",
+      "Cais de fortaleza em dia nublado, conjuradora pequena e legível apontando com calma.",
+      "Feito grandioso com poucas formas claras e luz vermelha localizada, sem criatura ou céu incendiado."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/tempestade-viva.png",
+        "papel": "forma original do feitiço"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "acabamento"
+      }
+    ]
+  },
+  {
+    "id": "base-dano-c4",
+    "nome": "Rasgo Faminto",
+    "tipo": "temporaria",
+    "valores": [
+      "primitivum"
+    ],
+    "texto": "Causa 5 de dano a um alvo.",
+    "arteDaCarta": "rasgo-faminto",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-c4.png",
+    "decisoesDaArte": [
+      "Nova câmera elevada em canal residencial à noite, evitando repetir arenas e forjas.",
+      "Rasgo preserva marfim, carvão e fendas magenta; aparece como forma de feitiço conectada à conjuradora.",
+      "Ação de dano mostrada mordendo a guarda metálica; sem ferimento gráfico.",
+      "Incomum com pontos metálicos quentes discretos."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/rasgo-faminto.png",
+        "papel": "Forma e identidade do feitiço; nova posição e contexto"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Apenas acabamento liso, iluminação e desenho da versão aprovada"
+      }
+    ]
+  },
+  {
+    "id": "base-dano-c4-repentina",
+    "nome": "Eco de Magia Morta",
+    "tipo": "temporaria",
+    "valores": [
+      "conflituo"
+    ],
+    "texto": "Causa 4 de dano a um alvo.",
+    "arteDaCarta": "eco-de-magia-morta",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-c4-repentina.png",
+    "decisoesDaArte": [
+      "Arte nova do feitiço em cenário integrado, sem converter referência em novo aliado persistente.",
+      "Dano conforme texto atual; nenhuma regra adicional atribuída."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/eco-de-magia-morta.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "base-dano-conjurador-c3",
+    "nome": "Olho de Dragão Pálido",
+    "tipo": "temporaria",
+    "valores": [
+      "conflituo"
+    ],
+    "texto": "Causa 3 de dano ao Conjurador inimigo.",
+    "arteDaCarta": "olho-de-dragao-palido",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Conjurador rival",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c3.png",
+    "decisoesDaArte": [
+      "Lente mantém couro castanho, aro de bronze, vidro verde e olho reptiliano; nova vista em mão e cena completa.",
+      "Feitiço atinge conjuradora rival em terraço de celeiro com jardim de água ao amanhecer.",
+      "Raio e silhueta óssea são projeções mágicas sobre roupa intacta; efeito de dano, não cura.",
+      "Ambiente pintado com planos claros, sem névoa opaca nem acabamento de raridade lendária."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/olho-de-dragao-palido.png",
+        "papel": "Forma e identidade do feitiço; nova posição e contexto"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Apenas acabamento liso, iluminação e desenho da versão aprovada"
+      }
+    ]
+  },
+  {
+    "id": "base-dano-conjurador-c5",
+    "nome": "Estilhaço de Disrupto",
+    "tipo": "temporaria",
+    "valores": [
+      "conflituo"
+    ],
+    "texto": "Causa 4 de dano ao Conjurador inimigo.",
+    "arteDaCarta": "estilhaco-de-disrupto",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Conjurador rival",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c5.png",
+    "decisoesDaArte": [
+      "Arte nova do feitiço em cenário integrado, sem converter referência em novo aliado persistente.",
+      "Dano conforme texto atual; nenhuma regra adicional atribuída."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/estilhaco-de-disrupto.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "base-comprar-c1",
+    "nome": "Baralho do Arquivo",
+    "tipo": "temporaria",
+    "valores": [
+      "persona"
+    ],
+    "texto": "Olhe as 3 cartas do topo do seu baralho. Ponha 1 na mão e as outras no fundo do baralho.",
+    "arteDaCarta": "baralho-do-arquivo",
+    "quando": "ao resolver da pilha",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-comprar-c1.png",
+    "decisoesDaArte": [
+      "Retirada da encruzilhada arruinada genérica: balcão de memórias aberto ao rio, durante o dia.",
+      "Baralho original reinterpretado aberto, com correia solta e três cartas de lembranças: uma selecionada e duas retornando.",
+      "Novo participante de cabelo curto encaracolado e sardas; sem reutilizar pose de conjurador.",
+      "Brilho azul e dourado limitado aos fios de magia; raridade comum."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/baralho-do-arquivo.png",
+        "papel": "Identidade do objeto mágico, com nova posição e interação"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento e desenho da versão lisa aprovada"
+      }
+    ]
+  },
+  {
+    "id": "base-comprar-c3",
+    "nome": "Livro Que Lê Você",
+    "tipo": "temporaria",
+    "valores": [
+      "alvorum",
+      "sublimeyn"
+    ],
+    "texto": "Compre 2 cartas.",
+    "arteDaCarta": "livro-que-le-voce",
+    "quando": "ao resolver da pilha",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-comprar-c3.png",
+    "decisoesDaArte": [
+      "Arquivo de farol à noite, mar azul visível pela janela e estantes integradas à cena.",
+      "Livro preserva olho de pupila vertical, costura, cantos metálicos e marcador azul; levita diante da leitora em nova perspectiva.",
+      "Duas lembranças projetadas correspondem visualmente à compra de duas cartas, sem alterar regras.",
+      "Concentração do dourado na magia e na lâmpada; mar e sombras ficam azuis."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/livro-que-le-voce.png",
+        "papel": "Identidade do objeto mágico, com nova posição e interação"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento e desenho da versão lisa aprovada"
+      }
+    ]
+  },
+  {
+    "id": "base-comprar-c2-repentina",
+    "nome": "Pensamento Solto",
+    "tipo": "temporaria",
+    "valores": [
+      "sublimeyn"
+    ],
+    "texto": "Compre 1 carta.",
+    "arteDaCarta": "pensamento-solto",
+    "quando": "ao resolver da pilha",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-comprar-c2-repentina.png",
+    "decisoesDaArte": [
+      "Novo observatório de cobertura sob céu claro, evitando repetir estante ou encruzilhada.",
+      "Pensamento Solto sussurra junto ao ouvido em nova posição, corpo incompleto e índigo mantidos.",
+      "Um pensamento entregue numa folha flutuante; não cria aliado nem efeito ofensivo.",
+      "Participante novo mais velho, careca, bigode branco e óculos discretos; expressão desconfiada."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/pensamento-solto.png",
+        "papel": "Identidade da forma mágica ou objeto; redesenho integrado ao evento"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento liso e iluminação controlada aprovados; não copiar composição"
+      }
+    ]
+  },
+  {
+    "id": "base-curar-c2",
+    "nome": "Sementes de Um Dia",
+    "tipo": "temporaria",
+    "valores": [
+      "morbidyum"
+    ],
+    "texto": "Cure 8 de dano de um alvo e ganhe 1 Arcano.",
+    "arteDaCarta": "sementes-de-um-dia",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-curar-c2.png",
+    "decisoesDaArte": [
+      "Nova aldeia de curandeira junto a dunas ao meio-dia, com sombra de varanda e fundos completos.",
+      "Bolsa de sementes mantém tecido remendado, corda azul e emblema de broto em novo gesto de uso.",
+      "Cura mostrada por ataduras de luz no braço intacto; só uma esfera representa o Arcano ganho.",
+      "Cenário de tons de barro e luz natural, brilho verde e âmbar localizado na cura."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/sementes-de-um-dia.png",
+        "papel": "Identidade da forma mágica ou objeto; redesenho integrado ao evento"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento liso e iluminação controlada aprovados; não copiar composição"
+      }
+    ]
+  },
+  {
+    "id": "base-curar-c4",
+    "nome": "Relicário da Terceira Vida",
+    "tipo": "temporaria",
+    "valores": [
+      "morbidyum"
+    ],
+    "texto": "Cure 15 de dano de um alvo e compre 1.",
+    "arteDaCarta": "relicario-da-terceira-vida",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-curar-c4.png",
+    "decisoesDaArte": [
+      "Novo Relicário aberto e segurado junto a receptora viva; recuperação, sem introduzir ressurreição nas regras.",
+      "Vila de pesca sobre o brejo em manhã clara, com ataduras substituídas por respiração armazenada ciano.",
+      "Uma imagem de barco materializa a compra de uma carta.",
+      "Participantes novos, mulher negra de rosto forte e cabelo curto em tranças e curandeiro idoso; dourado só no metal e luz natural."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/relicario-da-terceira-vida.png",
+        "papel": "Identidade do objeto mágico em uso, nova posição"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente desenho liso e iluminação aprovados"
+      }
+    ]
+  },
+  {
+    "id": "base-destruir-c3",
+    "nome": "Balança de Serath",
+    "tipo": "temporaria",
+    "valores": [
+      "alvorum",
+      "sublimeyn"
+    ],
+    "texto": "Destrua um Aliado ou Mística.",
+    "arteDaCarta": "balanca-de-serath",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-destruir-c3.png",
+    "decisoesDaArte": [
+      "Balança redesenhada de lado e inclinada sobre plinto; mantém dois pratos, correntes e contraposição azul/âmbar.",
+      "Lobo-de-Cinza reaparece em pose traseira voltando o olhar, no pátio de juramento de uma prisão.",
+      "Destruição de um único alvo demonstrada por desagregação índigo sem ferimento gráfico.",
+      "Nova conjuradora de cabelo ruivo curto, vista de costas; cenário quente contrasta com magia roxa."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/balanca-de-serath.png",
+        "papel": "Identidade do objeto mágico em uso, nova posição"
+      },
+      {
+        "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c2-agressivo.png",
+        "papel": "Identidade do Lobo-de-Cinza; cena e pose novas"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente desenho liso e iluminação aprovados"
+      }
+    ]
+  },
+  {
+    "id": "base-destruir-c4-repentina",
+    "nome": "Sombra Que Ficou",
+    "tipo": "temporaria",
+    "valores": [
+      "sublimeyn"
+    ],
+    "texto": "Destrua um Aliado ou Mística.",
+    "arteDaCarta": "sombra-que-ficou",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-destruir-c4-repentina.png",
+    "decisoesDaArte": [
+      "Sombra se desprende de parede e fenda, em nova postura, preservando placas negras, veios e olhos dourados.",
+      "Alvo é uma Jaula de Luz vazia, permitindo mostrar destruição de Mística sem vítima ou regra nova.",
+      "Pátio de posto urbano em manhã clara e câmera elevada diagonal; figurantes só contextualizam.",
+      "Incomum com brilhos metálicos pontuais; energia não representa fogo."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/sombra-que-ficou.png",
+        "papel": "Identidade da forma mágica ou jaula; nova posição"
+      },
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/jaula-de-luz.png",
+        "papel": "Identidade da Mística como alvo do feitiço de destruição"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação aprovados"
+      }
+    ]
+  },
+  {
+    "id": "base-estrutura-c1",
+    "nome": "Vila da Colheita",
+    "tipo": "estrutura",
+    "valores": [
+      "sublimeyn"
+    ],
+    "texto": "Suspenda: ganhe 1 Arcano.",
+    "arteDaCarta": "vila-da-colheita",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-estrutura-c1.png",
+    "decisoesDaArte": [
+      "Vila refeita como cena de rua em perspectiva, vista de dentro de carroça; não como recorte miniatura.",
+      "Arquitetura, campanário, bandeiras de trigo e colheita mantidos, atividades e poses novas.",
+      "Tarde clara, trigo com cor natural sem iluminação resplandecente; cenário de chão, céu e horizonte completos.",
+      "Uma esfera de Arcano se forma junto à colheita; estrutura em funcionamento sem ataque."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/vila-da-colheita.png",
+        "papel": "Identidade arquitetônica da criatura ou lugar; nova perspectiva e evento"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento liso e iluminação controlada, não copiar a cena"
+      }
+    ]
+  },
+  {
+    "id": "base-estrutura-c3",
+    "nome": "Biblioteca que Esquece",
+    "tipo": "estrutura",
+    "valores": [
+      "cognitium"
+    ],
+    "texto": "Suspenda e pague 1: compre 1.",
+    "arteDaCarta": "biblioteca-que-esquece",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-estrutura-c3.png",
+    "decisoesDaArte": [
+      "Biblioteca refeita como interior monumental com perspectiva da varanda e leitores em vários níveis, sem ilha de terreno recortada.",
+      "Estantes, arcos, escadas curvas, bandeiras azuis e páginas que perdem letras preservam a identidade.",
+      "Uma página chega à mão do arquivista; uso de conhecimento sem combate.",
+      "Luz diurna pela janela, índigo localizado nas páginas, paredes claras e madeira mate."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/biblioteca-que-esquece.png",
+        "papel": "Identidade do lugar ou objeto, refeita numa cena nova"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento e desenho da versão lisa aprovada, não copiar a cena"
+      }
+    ]
+  },
+  {
+    "id": "base-dano-conjurador-c1",
+    "nome": "Apito de Eco Longe",
+    "tipo": "temporaria",
+    "valores": [
+      "conflituo"
+    ],
+    "texto": "Causa 1 de dano ao Conjurador inimigo.",
+    "arteDaCarta": "apito-de-eco-longe",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Conjurador rival",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c1.png",
+    "decisoesDaArte": [
+      "Apito pequeno em uso, conectado a eco ciano que surge junto ao conjurador rival distante.",
+      "Salinas ao entardecer substituem campo de batalha genérico; duas figuras com escalas coerentes.",
+      "Reação breve ao som mantém foco no dano simples; sem explosão ou ferida.",
+      "Anatomia do rival corrigida para duas pernas: uma bota elevada e outra apoiada. V1 preservada sem seleção em Arcanoclisma/arte/cartas-site/variantes/base-dano-conjurador-c1-v1-anatomia-rival.png."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/apito-de-eco-longe.png",
+        "papel": "Identidade do lugar ou objeto, refeita numa cena nova"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento e desenho da versão lisa aprovada, não copiar a cena"
+      }
+    ]
+  },
+  {
+    "id": "base-dano-conjurador-c2",
+    "nome": "Garrafa de Voz",
+    "tipo": "temporaria",
+    "valores": [
+      "conflituo"
+    ],
+    "texto": "Causa 2 de dano ao Conjurador inimigo.",
+    "arteDaCarta": "garrafa-de-voz",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Conjurador rival",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c2.png",
+    "decisoesDaArte": [
+      "Objeto aprovado preservado e integrado à nova cena.",
+      "Ação de dano corresponde ao texto atual, sem poderes extras."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/garrafa-de-voz.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "base-dano-conjurador-c4",
+    "nome": "Luneta do Fim",
+    "tipo": "temporaria",
+    "valores": [
+      "conflituo"
+    ],
+    "texto": "Causa 4 de dano ao Conjurador inimigo.",
+    "arteDaCarta": "luneta-do-fim",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Conjurador rival",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c4-a745c23c.png",
+    "decisoesDaArte": [
+      "Perfil da cabeça e apoio da luneta corrigidos; feixe único reto até o rival.",
+      "Observatório, roupas, identidade, cenário e regra preservados.",
+      "Versão anterior e revisão intermediária preservadas; apenas revisão final entra no mapa corrente."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c4.png",
+        "papel": "Alvo da edição, versão anterior preservada"
+      },
+      {
+        "arquivo": "Arcanoclisma/arte/cartas-site/variantes/base-dano-conjurador-c4-alinhamento-intermediario.png",
+        "papel": "Primeira revisão de perfil, refinada no alinhamento"
+      }
+    ]
+  },
+  {
+    "id": "base-curar-c1",
+    "nome": "Lenço das Lágrimas",
+    "tipo": "temporaria",
+    "valores": [
+      "primitivum"
+    ],
+    "texto": "Cure 5 de dano de um alvo e ganhe 1 Arcano.",
+    "arteDaCarta": "lenco-das-lagrimas",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-curar-c1.png",
+    "decisoesDaArte": [
+      "Variação de ambiente conforme exemplos mais recentes do autor.",
+      "Figuras e criaturas de apoio são contexto visual, sem novas cartas ou habilidades.",
+      "Cura e recurso/compra seguem somente o texto atual."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/lenco-das-lagrimas.png",
+        "papel": "Identidade do objeto aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "base-curar-c3",
+    "nome": "Cálice do Primeiro Barro",
+    "tipo": "temporaria",
+    "valores": [
+      "primitivum"
+    ],
+    "texto": "Cure 11 de dano de um alvo e compre 1.",
+    "arteDaCarta": "calice-do-primeiro-barro",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-curar-c3.png",
+    "decisoesDaArte": [
+      "Variação de ambiente conforme exemplos mais recentes do autor.",
+      "Figuras e criaturas de apoio são contexto visual, sem novas cartas ou habilidades.",
+      "Cura e recurso/compra seguem somente o texto atual."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/calice-do-primeiro-barro.png",
+        "papel": "Identidade do objeto aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "base-curar-c6",
+    "nome": "Aurora Que Desceu",
+    "tipo": "temporaria",
+    "valores": [
+      "morbidyum"
+    ],
+    "texto": "Cure 20 de dano de um alvo e compre 2.",
+    "arteDaCarta": "aurora-que-desceu",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-curar-c6.png",
+    "decisoesDaArte": [
+      "Mantida a personificação feminina da imagem aprovada de Aurora, em vez de eliminar a identidade visual já existente; manto de energia sem corpo animal.",
+      "Nova pose ajoelhada e vista pelas costas, amparando viajante vivo em recuperação.",
+      "Hospício de peregrinos antes do amanhecer, iluminação fria no fundo e dourado concentrado no manto.",
+      "Duas visões pequenas acompanham a cura e compra de duas cartas; detalhes prateados/violetas da rara, sem arco-íris lendário."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/aurora-que-desceu.png",
+        "papel": "Identidade da referência visual aprovada; pose e enquadramento refeitos"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Apenas acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "base-curar-c8",
+    "nome": "Semente da Floresta Primeira",
+    "tipo": "temporaria",
+    "valores": [
+      "primitivum"
+    ],
+    "texto": "Cure 20 de dano de um alvo e compre 3.",
+    "arteDaCarta": "semente-da-floresta-primeira",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-curar-c8.png",
+    "decisoesDaArte": [
+      "Dimensão do Valor com vida e figuras contextuais conforme novo exemplo do autor.",
+      "Personagem/objeto aprovado preservado em nova composição.",
+      "Magnitude visual acompanha o efeito real, sem novas regras."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/semente-da-floresta-primeira.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "base-estrutura-c3-enfermaria",
+    "nome": "Aldeia da Curandeira",
+    "tipo": "estrutura",
+    "valores": [
+      "morbidyum"
+    ],
+    "texto": "Suspenda: cure 3 de um alvo.",
+    "arteDaCarta": "aldeia-da-curandeira",
+    "quando": "ao resolver a ativação",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Aliado escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-estrutura-c3-enfermaria.png",
+    "decisoesDaArte": [
+      "Aldeia redesenhada como cena completa vista através do portão da horta, com proporção de pessoas e edifícios.",
+      "Cabana de palha, ervas penduradas, medalhão, canteiros, cestos e poço preservam o lugar.",
+      "Dia nublado de outono e chão úmido, cura discreta no ombro do viajante junto à porta.",
+      "Magia verde localizada no tratamento; sem gerar esferas de recurso ou inventar efeito ofensivo."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/aldeia-da-curandeira.png",
+        "papel": "Identidade da referência visual aprovada; pose e enquadramento refeitos"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Apenas acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "base-estrutura-c4-torre",
+    "nome": "Torre dos Protetores",
+    "tipo": "estrutura",
+    "valores": [
+      "conflituo"
+    ],
+    "texto": "Suspenda e pague 1: cause 2 de dano a um alvo.",
+    "arteDaCarta": "torre-dos-protetores",
+    "quando": "ao resolver a ativação",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-estrutura-c4-torre.png",
+    "decisoesDaArte": [
+      "Nova vista da passagem abaixo da torre, com exterior rural contínuo, céu e cúpula completos.",
+      "Operador ativa selo para lançar um único projétil em alvo exterior; estrutura não ganha ação de ataque de aliado.",
+      "Revisão corrigiu escala e apoio do alvo distante, agora menor em caminho ligado à encosta.",
+      "Arquitetura, selos, armilar e bandeiras mantidos; metais só com brilhos pontuais. V1 preservada em Arcanoclisma/arte/cartas-site/variantes/base-estrutura-c4-torre-v1-escala-alvo.png."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/torre-dos-protetores.png",
+        "papel": "Identidade do lugar, com nova perspectiva e funcionamento"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "base-estrutura-c4-fonte",
+    "nome": "Porto de Vidro",
+    "tipo": "estrutura",
+    "valores": [
+      "primitivum",
+      "alvorum"
+    ],
+    "texto": "Conta como 1 carta no Grau. Suspenda: ganhe 2 Arcano.",
+    "arteDaCarta": "porto-de-vidro",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-estrutura-c4-fonte.png",
+    "decisoesDaArte": [
+      "Porto desenhado da proa de embarcação que chega, com cais e fachadas de vidro em profundidade.",
+      "Vidro azul-prata em reflexos legíveis, bordas de bronze, moradores descarregando caixas e navios proporcionais.",
+      "Duas esferas de Arcano junto ao trabalhador refletem a produção ativada da estrutura.",
+      "Manhã clara e água azul equilibrada; sem cidade inteira resplandecente nem efeito ofensivo."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/porto-de-vidro.png",
+        "papel": "Identidade do lugar, com nova perspectiva e funcionamento"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "base-aliado-recurso-c1",
+    "nome": "Estudante da Escola de Magia",
+    "tipo": "aliado",
+    "valores": [
+      "sublimeyn"
+    ],
+    "texto": "Suspenda: ganhe 1 Arcano.",
+    "arteDaCarta": "estudante-da-escola-de-magia",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-aliado-recurso-c1.png",
+    "decisoesDaArte": [
+      "Estudante sentada nos degraus, expressão concentrada, livro no colo e uma esfera; nova ação em vez da conversa em pé da fonte.",
+      "Traços de rosto, cabelo preso com fita azul, cachecol, casaco, bolsa e livro preservados.",
+      "Pátio de prática junto ao canal durante o dia, colega com atividade própria em segundo plano.",
+      "Um Arcano prata/branco com motivos azuis do livro; comum sem acabamento foil."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/estudante-da-escola-de-magia.png",
+        "papel": "Traços e identidade efetiva da imagem aprovada; pose e ação novas"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente desenho liso e luz controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "base-aliado-recurso-c3",
+    "nome": "Ferreira-Alquimista",
+    "tipo": "aliado",
+    "valores": [
+      "alvorum"
+    ],
+    "texto": "Conta como 1 carta no Grau. Suspenda: ganhe 1 Arcano.",
+    "arteDaCarta": "ferreira-alquimista",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-aliado-recurso-c3.png",
+    "decisoesDaArte": [
+      "Preservados os traços efetivos aprovados de Ferreira-Alquimista, inclusive cabelo encaracolado e barba curta, roupa de trabalho e frascos.",
+      "Martelo abaixado e mercúrio formado em roda de moldagem; nova postura de trabalho, sem repetir golpe sobre a cabeça.",
+      "Forja noturna com assistente observando, uma esfera de Arcano e trajetória contínua da roda à mão.",
+      "Luz quente do forno contrasta com prata da magia, fundo completo e integrado."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/ferreira-alquimista.png",
+        "papel": "Traços e identidade efetiva da imagem aprovada; pose e ação novas"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente desenho liso e luz controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "base-aliado-recurso-c5",
+    "nome": "Professora da Escola de Magia",
+    "tipo": "aliado",
+    "valores": [
+      "primitivum",
+      "alvorum"
+    ],
+    "texto": "Conta como 1 carta no Grau. Suspenda: ganhe 2 Arcano.",
+    "arteDaCarta": "professora-da-escola-de-magia",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-aliado-recurso-c5.png",
+    "decisoesDaArte": [
+      "Professora e Estudante já existentes redesenhadas juntas, sem reutilizar a arte isolada de nenhuma delas.",
+      "Aula à tarde chuvosa, nova postura de orientação e olhares relacionados entre si.",
+      "Duas esferas de Arcano sobre a bacia; bolsa, óculos e roupas preservam a identidade da professora.",
+      "Acabamento incomum discreto nos metais, sem brilho lendário ou magia ofensiva."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/professora-da-escola-de-magia.png",
+        "papel": "Identidade do protagonista ou lugar; cena nova"
+      },
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/estudante-da-escola-de-magia.png",
+        "papel": "Identidade da aluna já existente; nova interação"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "base-estrutura-c6-nucleo",
+    "nome": "Forja dos Mil Golpes",
+    "tipo": "estrutura",
+    "valores": [
+      "alvorum"
+    ],
+    "texto": "Conta como 1 carta no Grau. Suspenda: ganhe 3 Arcano.",
+    "arteDaCarta": "forja-dos-mil-golpes",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-estrutura-c6-nucleo.png",
+    "decisoesDaArte": [
+      "Forja refeita em vista interna de passarela, com bigornas monumentais, martelos mecânicos e rios de metal.",
+      "Três esferas coletadas em um recipiente, coerentes com a produção da estrutura.",
+      "Funcionários e máquinas dão escala, luz do entardecer entra por arcos laterais e calor fica nos canais.",
+      "Rara com reflexos prateados/violetas nos metais frios e corrimão; magia e metal líquido seguem o vermelho-ferrugem original."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/forja-dos-mil-golpes.png",
+        "papel": "Identidade do protagonista ou lugar; cena nova"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "base-estrutura-c8-reator",
+    "nome": "A boca da Voragem",
+    "tipo": "estrutura",
+    "valores": [
+      "alvorum"
+    ],
+    "texto": "Conta como 2 cartas no Grau. Suspenda: ganhe 4 Arcano.",
+    "arteDaCarta": "a-boca-da-voragem",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-estrutura-c8-reator.png",
+    "decisoesDaArte": [
+      "Boca da Voragem refeita a partir da rampa lateral em tarde pós-chuva, portal roxo/negro e participantes mantidos.",
+      "Garmhal ajoelhado junto ao colar, leão deitado e outro subindo escada; poses novas em interação.",
+      "Quatro esferas coalescem no portal, sem inventar ataque ou liberação da expansão.",
+      "Lendária com ouro e arco-íris integrados ao arco, colares e reflexos; cenário permanece escuro e frio."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/a-boca-da-voragem.png",
+        "papel": "Identidade de lugar e participantes ou personagem; novos gestos e contexto"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e luz controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "base-aliado-recurso-c7",
+    "nome": "O Antigo Bibliotecário",
+    "tipo": "aliado",
+    "valores": [
+      "primitivum"
+    ],
+    "texto": "Conta como 1 carta no Grau. Suspenda: ganhe 3 Arcano.",
+    "arteDaCarta": "o-antigo-bibliotecario",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/base-aliado-recurso-c7.png",
+    "decisoesDaArte": [
+      "Antigo Bibliotecário mantém aparência jovem, corpo baixo e robusto, franja ruiva, olhos verdes e roupa original.",
+      "Nova pose sentada no arquivo de conservação, cabeça apoiada na mão e expressão confusa.",
+      "Três esferas de Arcano na outra mão, índigo em torno da magia e livro; noite no porão com luz da lua.",
+      "Rara com brilho prateado/violeta localizado, sem arco-íris ou fundo dourado resplandecente."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/o-antigo-bibliotecario.png",
+        "papel": "Identidade de lugar e participantes ou personagem; novos gestos e contexto"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e luz controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "eternyr-comprar-c1",
+    "nome": "Tinteiro de Mapas",
+    "tipo": "temporaria",
+    "valores": [
+      "eternyr"
+    ],
+    "texto": "Compre 1 carta.",
+    "arteDaCarta": "tinteiro-de-mapas",
+    "quando": "ao resolver da pilha",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c1.png",
+    "decisoesDaArte": [
+      "Objeto redesenhado em uso dentro de uma caravana, com paisagem de estepe ao meio-dia.",
+      "Uma viajante nova recebe um mapa traçado pela tinta; a imagem ilustra comprar uma carta sem adicionar efeitos à regra.",
+      "Cena opaca com superfícies suaves e luz localizada; carta comum sem acabamento de raridade."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/tinteiro-de-mapas.png",
+        "papel": "Identidade do objeto, redesenhado em uso e com nova cena"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "eternyr-comprar-c2",
+    "nome": "Ampulheta de Um Minuto",
+    "tipo": "temporaria",
+    "valores": [
+      "eternyr"
+    ],
+    "texto": "Compre 2 cartas.",
+    "arteDaCarta": "ampulheta-de-um-minuto",
+    "quando": "ao resolver da pilha",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c2.png",
+    "decisoesDaArte": [
+      "Ampulheta redesenhada inclinada na mão, numa estação noturna de fantasia.",
+      "Duas janelas de memória remetem às duas cartas compradas, sem alterar a regra de jogo.",
+      "Personagem novo de cabeça raspada com trança, ajoelhado no banco, vestimenta coral e creme; luz azul da noite e lanternas suaves.",
+      "Carta comum sem textura de raridade."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/ampulheta-de-um-minuto.png",
+        "papel": "Identidade do objeto, redesenhado em uso e com nova cena"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "eternyr-comprar-c3",
+    "nome": "Anel de Tique",
+    "tipo": "temporaria",
+    "valores": [
+      "eternyr"
+    ],
+    "texto": "Compre 2 cartas.",
+    "arteDaCarta": "anel-de-tique",
+    "quando": "ao resolver da pilha",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c3.png",
+    "decisoesDaArte": [
+      "Anel preservado como peça de bronze com mostrador de tique, redesenhado no dedo e em uso.",
+      "Banca de mapas ao ar livre numa cidade costeira; duas folhas de mapa ilustram a compra de duas cartas.",
+      "Novo vendedor com cabelo preto e branco encaracolado, expressão astuta e lenço ao vento. Cena comum sem acabamento de raridade."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/anel-de-tique.png",
+        "papel": "Identidade do objeto ou lugar; composição integralmente nova"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "eternyr-comprar-c4",
+    "nome": "O Arquivo Sem Dono",
+    "tipo": "temporaria",
+    "valores": [
+      "eternyr"
+    ],
+    "texto": "Compre 3 cartas.",
+    "arteDaCarta": "o-arquivo-sem-dono",
+    "quando": "ao resolver da pilha",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c4.png",
+    "decisoesDaArte": [
+      "O lugar inteiro foi redesenhado como cena vertical desde uma passarela interna, com o Trono Vazio ao fundo.",
+      "Preservados arquitetura índigo, astrolábio, estantes suspensas e Esquecidos; a origem Cognitium não foi recolorida pelo Valor mecânico Eternyr.",
+      "Três páginas grandes saem de gavetas no primeiro plano, ilustrando a compra de três cartas. Incomum com brilho metálico discreto no bronze."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/o-arquivo-sem-dono.png",
+        "papel": "Identidade do objeto ou lugar; composição integralmente nova"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "eternyr-comprar-c2-repentina",
+    "nome": "Hora Solta",
+    "tipo": "temporaria",
+    "valores": [
+      "eternyr"
+    ],
+    "texto": "Compre 1 carta.",
+    "arteDaCarta": "hora-solta",
+    "quando": "ao resolver da pilha",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c2-repentina.png",
+    "decisoesDaArte": [
+      "Hora Solta foi redesenhada numa curva horizontal sobre a zeladora de um relógio, em telhado nevado ao amanhecer.",
+      "Uma única visão ilustra comprar uma carta em velocidade Repentina; sem poderes novos.",
+      "V1 preservada: a silhueta vertical ainda repetia o catálogo. Revisão mudou direção, postura e posição da visão.",
+      "Carta comum sem acabamento holográfico."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/hora-solta.png",
+        "papel": "Identidade da criatura, redesenhada com nova pose e ambiente"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "eternyr-comprar-c3-repentina",
+    "nome": "Menino de Dois Instantes",
+    "tipo": "temporaria",
+    "valores": [
+      "eternyr"
+    ],
+    "texto": "Compre 2 cartas.",
+    "arteDaCarta": "menino-de-dois-instantes",
+    "quando": "ao resolver da pilha",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c3-repentina.png",
+    "decisoesDaArte": [
+      "Dimensão do Valor com vida e figuras contextuais conforme novo exemplo do autor.",
+      "Personagem/objeto aprovado preservado em nova composição.",
+      "Magnitude visual acompanha o efeito real, sem novas regras."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/menino-de-dois-instantes.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "eternyr-dano-aliado-c4",
+    "nome": "Relógio Quebrado",
+    "tipo": "temporaria",
+    "valores": [
+      "eternyr"
+    ],
+    "texto": "Causa 6 de dano a um Aliado ou Mística.",
+    "arteDaCarta": "relogio-quebrado",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Aliado escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-dano-aliado-c4.png",
+    "decisoesDaArte": [
+      "Relógio Quebrado redesenhado em ataque no pátio de uma capela de barro durante a manhã.",
+      "Preservados mostrador rachado, olho único, placas creme, bronze e energia azul-noite.",
+      "Golpe atinge o escudo de um novo aliado inimigo e ilustra dano seis sem alterar a regra. Incomum com reflexos metálicos discretos."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/relogio-quebrado.png",
+        "papel": "Identidade da criatura, redesenhada com nova pose e ambiente"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "eternyr-dano-aliado-c5",
+    "nome": "Nó de Ímpares",
+    "tipo": "temporaria",
+    "valores": [
+      "eternyr"
+    ],
+    "texto": "Causa 8 de dano a um Aliado ou Mística.",
+    "arteDaCarta": "no-de-impares",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Aliado escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-dano-aliado-c5.png",
+    "decisoesDaArte": [
+      "Nó de Ímpares redesenhado arremessando um nó mágico de pedra numa pedreira ao meio-dia.",
+      "Mantidos corpo de fibras e placas rochosas e energia laranja do catálogo, sem recolorir pela classificação mecânica Eternyr.",
+      "Um alvo aliado novo reage ao impacto que ilustra dano oito; cena incomum sem brilho lendário."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/no-de-impares.png",
+        "papel": "Identidade da criatura, redesenhada com nova pose e ambiente"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "eternyr-dano-aliado-c6",
+    "nome": "Sala Que É Um Ano",
+    "tipo": "temporaria",
+    "valores": [
+      "eternyr"
+    ],
+    "texto": "Causa 9 de dano a um Aliado ou Mística.",
+    "arteDaCarta": "sala-que-e-um-ano",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Aliado escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-dano-aliado-c6.png",
+    "decisoesDaArte": [
+      "Arquitetura/lugar é o assunto, sem herói arbitrário em primeiro plano.",
+      "Impacto e alvo seguem o texto atual; componentes de tempo apenas narrativos."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/sala-que-e-um-ano.png",
+        "papel": "Identidade do lugar aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "eternyr-dano-jogador-c5",
+    "nome": "O Entretempo",
+    "tipo": "temporaria",
+    "valores": [
+      "eternyr"
+    ],
+    "texto": "Causa 4 de dano ao Conjurador inimigo.",
+    "arteDaCarta": "o-entretempo",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Conjurador rival",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-dano-jogador-c5.png",
+    "decisoesDaArte": [
+      "Arquitetura/lugar é o assunto, sem herói arbitrário em primeiro plano.",
+      "Impacto e alvo seguem o texto atual; componentes de tempo apenas narrativos."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/o-entretempo.png",
+        "papel": "Identidade do lugar aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "eternyr-destruir-c6-g8",
+    "nome": "A Voragem",
+    "tipo": "temporaria",
+    "valores": [
+      "eternyr"
+    ],
+    "texto": "Destrua um alvo e compre 4 cartas.",
+    "arteDaCarta": "a-voragem",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/eternyr-destruir-c6-g8.png",
+    "decisoesDaArte": [
+      "Voragem redesenhada desde uma passarela alta, com abismo em espiral preenchendo o cenário inteiro.",
+      "Um guardião novo é engolido por uma fenda e exatamente quatro páginas principais chegam à conjuradora, correspondendo a destruir um alvo e comprar quatro.",
+      "Mantidas cores roxo-sangue, seres acorrentados e arquitetura do plano Dominum, apesar do Valor mecânico Eternyr.",
+      "Acabamento lendário dourado e arco-íris integrado principalmente às páginas e detalhes de bronze; cenário permanece escuro."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/a-voragem.png",
+        "papel": "Identidade do lugar ou criaturas; composição e evento inteiramente novos"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "bal-varredura-c3",
+    "nome": "Enxame de Vespas",
+    "tipo": "temporaria",
+    "valores": [
+      "alvorum"
+    ],
+    "texto": "Causa 2 de dano a cada Aliado do oponente.",
+    "arteDaCarta": "enxame-de-vespas",
+    "quando": "ao resolver da pilha",
+    "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+    "alvo": "todos os Aliados afetados",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/bal-varredura-c3.png",
+    "decisoesDaArte": [
+      "Vespas redesenhadas voando em diferentes ângulos por um pomar outonal durante a manhã.",
+      "O enxame alcança três aliados novos com reações distintas, representando dano dois a cada aliado oponente.",
+      "Tamanho aparente dos insetos grandes vem da proximidade da câmera; cores naturais preservadas, sem aura dourada ou acabamento holográfico.",
+      "Cena comum integral, com fruta, caixas, barraca e profundidade do pomar."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/enxame-de-vespas.png",
+        "papel": "Identidade do lugar ou criaturas; composição e evento inteiramente novos"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "bal-varredura-c5",
+    "nome": "Redemoinho de Areia",
+    "tipo": "temporaria",
+    "valores": [
+      "alvorum"
+    ],
+    "texto": "Causa 3 de dano a cada Aliado do oponente.",
+    "arteDaCarta": "redemoinho-de-areia",
+    "quando": "ao resolver da pilha",
+    "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+    "alvo": "todos os Aliados afetados",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/bal-varredura-c5.png",
+    "decisoesDaArte": [
+      "Redemoinho redesenhado inclinado e varrendo o pátio de basalto, visto por cima do ombro de quem conjura.",
+      "Mantidos areia ocre e lâminas prata-mercúrio, sem transformar a magia em uma aura Alvorum.",
+      "Três aliados inimigos reagem de formas distintas ao dano em área; marcas curvas no chão registram o trajeto.",
+      "Incomum com metal visível nas lâminas, sem acabamento lendário."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/redemoinho-de-areia.png",
+        "papel": "Identidade da criatura ou fenômeno, redesenhados em ação e com novo ambiente"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "bal-remocao-grau-c3",
+    "nome": "Raiz Errada",
+    "tipo": "temporaria",
+    "valores": [
+      "dominum"
+    ],
+    "texto": "Causa 1 + o número de cartas no seu Grau de dano a um Aliado ou Mística.",
+    "arteDaCarta": "raiz-errada",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Aliado escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/bal-remocao-grau-c3.png",
+    "decisoesDaArte": [
+      "Raiz Errada redesenhada rastejando sobre um tronco e golpeando um alvo à esquerda, invertendo direção e postura da base.",
+      "Noite numa casa de chá sobre canal de irrigação, com luz de lanternas e paisagem de arrozais.",
+      "Preservados madeira, musgo, olho e seiva âmbar; dano variável por Grau ilustrado por um impacto, sem inventar veneno ou regeneração.",
+      "Carta comum sem brilho de raridade."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/raiz-errada.png",
+        "papel": "Identidade da criatura ou fenômeno, redesenhados em ação e com novo ambiente"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "bal-estrutura-cerco-c3",
+    "nome": "A Cidade-Muralha",
+    "tipo": "estrutura",
+    "valores": [
+      "dominum"
+    ],
+    "texto": "Suspenda: cause 1 de dano ao Conjurador inimigo.",
+    "arteDaCarta": "a-cidade-muralha",
+    "quando": "ao resolver a ativação",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Conjurador rival",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/bal-estrutura-cerco-c3.png",
+    "decisoesDaArte": [
+      "Cidade redesenhada desde a varanda do mercado olhando para portão, ponte e rio, preservando muralhas creme e estandartes azuis com sol.",
+      "Comércio e moradores armados contextualizam o lugar; operador ativa um único dispositivo que envia dano um a um conjurador fora da cidade.",
+      "A arquitetura não foi transformada numa prisão roxa pela indicação genérica do Valor.",
+      "Comum sem acabamento holográfico."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/a-cidade-muralha.png",
+        "papel": "Identidade da estrutura ou objeto; composição e evento novos"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "bal-devolver-c2-repentina",
+    "nome": "Porta de Bolso",
+    "tipo": "temporaria",
+    "valores": [
+      "sublimeyn"
+    ],
+    "texto": "Devolva um Aliado ou Mística à mão do dono.",
+    "arteDaCarta": "porta-de-bolso",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Aliado escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/bal-devolver-c2-repentina.png",
+    "decisoesDaArte": [
+      "Porta de Bolso redesenhada em uso desde o quarto interno, com painel aberto à direita, cortina azul-petróleo, livros e lanterna.",
+      "Uma cabra aliada de carga nova e sem identidade mecânica adicionada cruza do acampamento para o quarto, ilustrando a devolução de um aliado à mão em velocidade Repentina.",
+      "Mago idoso de rosto, cabelo e roupas novos contextualiza o efeito do lado de fora.",
+      "Cena comum, com traços ciano e dourados discretos da referência, sem brilho de raridade."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/porta-de-bolso.png",
+        "papel": "Identidade da estrutura ou objeto; composição e evento novos"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "bal-anular-c3-repentina",
+    "nome": "Olho-que-Fecha",
+    "tipo": "temporaria",
+    "valores": [
+      "cognitium",
+      "eternyr"
+    ],
+    "texto": "Anule uma carta na pilha.",
+    "arteDaCarta": "olho-que-fecha",
+    "quando": "ao resolver da pilha",
+    "forma": "corte, selo ou apagar sobre a carta inimiga na pilha (lateral direita)",
+    "alvo": "carta na pilha",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/bal-anular-c3-repentina.png",
+    "decisoesDaArte": [
+      "Olho redesenhado de lado com pálpebras quase fechadas, lacres vermelhos e a identidade metálica preservados.",
+      "Nova maga de pele escura e cabelos brancos permanece serena enquanto a magia do rival se desfaz.",
+      "V1 preservada; revisão reduziu o olho para respeitar o tamanho diminuto do catálogo.",
+      "Anulação de uma carta na pilha em velocidade Repentina, sem dano extra. Comum sem brilho holográfico."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/olho-que-fecha.png",
+        "papel": "Identidade da criatura; desenho novo com pose, ação e ambiente diferentes"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "r6-varredura-c2",
+    "nome": "Enxame de Palavras",
+    "tipo": "temporaria",
+    "valores": [
+      "alvorum"
+    ],
+    "texto": "Causa 1 de dano a cada Aliado do oponente.",
+    "arteDaCarta": "enxame-de-palavras",
+    "quando": "ao resolver da pilha",
+    "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+    "alvo": "todos os Aliados afetados",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/r6-varredura-c2.png",
+    "decisoesDaArte": [
+      "Valor atual Alvorum prevalece sobre múltiplos valores do briefing antigo.",
+      "Findante temporária: pequenos impactos em cada Aliado adversário, não invocação persistente.",
+      "Perspectiva elevada de oficina; acabamento comum sem foil lendário."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/enxame-de-palavras.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "r6-ira-c4",
+    "nome": "O Campo Sem Trégua",
+    "tipo": "temporaria",
+    "valores": [
+      "dominum"
+    ],
+    "texto": "Destrua todos os Aliados (os seus também).",
+    "arteDaCarta": "o-campo-sem-tregua",
+    "quando": "ao resolver da pilha",
+    "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+    "alvo": "todos os Aliados afetados",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/r6-ira-c4.png",
+    "decisoesDaArte": [
+      "Campo Sem Trégua redesenhado desde uma plataforma de forja olhando para o campo amplo e a colina com elmo colossal.",
+      "Seis aliados de duas fileiras diferentes se desfazem numa mesma onda vermelho-ferrugem, explicitando que a regra destrói os aliados de ambos os lados.",
+      "Preservada origem Conflitüo sem recolorir todo o plano de dourado; ruínas continuam inteiras.",
+      "Rara com reflexos prata e violeta nos metais em primeiro plano e nas armaduras, sem brilho arco-íris de lendária."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/o-campo-sem-tregua.png",
+        "papel": "Identidade do lugar; cena nova em escala ampla coerente com as regras"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "r6-por-do-sol-c7",
+    "nome": "Estrada do Crepúsculo",
+    "tipo": "temporaria",
+    "valores": [
+      "dominum"
+    ],
+    "texto": "Destrua todos os Aliados do oponente.",
+    "arteDaCarta": "estrada-do-crepusculo",
+    "quando": "ao resolver da pilha",
+    "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+    "alvo": "todos os Aliados afetados",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/r6-por-do-sol-c7.png",
+    "decisoesDaArte": [
+      "Estrada redesenhada desde o parapeito junto a duas testemunhas, preservando um mesmo lugar com dia e noite coexistindo.",
+      "Três aliados inimigos se desfazem na faixa crepuscular, enquanto as duas testemunhas do lado diurno permanecem inteiras.",
+      "Novos rostos, roupas e enquadramento, sem reaproveitar uma arte de personagem ou mudar a regra.",
+      "Lendária com dourado e arco-íris integrados à faixa mágica e às superfícies do caminho."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/estrada-do-crepusculo.png",
+        "papel": "Identidade do lugar; cena nova em escala ampla coerente com as regras"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "r6-furia-c3",
+    "nome": "Charco Fervente",
+    "tipo": "temporaria",
+    "valores": [
+      "alvorum"
+    ],
+    "texto": "Causa 3 de dano a cada Aliado (os seus também).",
+    "arteDaCarta": "charco-fervente",
+    "quando": "ao resolver da pilha",
+    "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+    "alvo": "todos os Aliados afetados",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/r6-furia-c3.png",
+    "decisoesDaArte": [
+      "Magia atual Alvorum; vapor prateado preservado como característica visual do lugar.",
+      "Dano em cada Aliado, inclusive próprios; não escolher apenas inimigos.",
+      "Cena comum sem acabamento lendário; pedra e lama em massas legíveis."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/charco-fervente.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "r6-espiao-c4",
+    "nome": "Wyvern-Correio",
+    "tipo": "aliado",
+    "valores": [
+      "persona"
+    ],
+    "texto": "Etéreo. Ao causar dano de combate ao Conjurador inimigo: compre 1 carta.",
+    "arteDaCarta": "wyvern-correio",
+    "quando": "ao entrar em campo / gatilho",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/r6-espiao-c4.png",
+    "decisoesDaArte": [
+      "Wyvern redesenhado em manobra num mercado de máscaras de manhã, com corpo parcialmente de costas e cauda estendida.",
+      "Preservados azul-marinho e marfim, olhos com pupilas e bolsa postal; anatomia tem apenas duas patas traseiras e asas como membros dianteiros.",
+      "Ataque físico genérico ao conjurador rival e uma carta-envelope no rastro contextualizam o efeito de compra após dano de combate.",
+      "Incomum com pequenos reflexos nos metais e rastros coral discretos, sem ataque mágico exclusivo."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/wyvern-correio.png",
+        "papel": "Identidade da criatura ou personagem, redesenhados em nova pose e ação"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "r6-piromante-c4",
+    "nome": "Aprendiz Descontrolado",
+    "tipo": "aliado",
+    "valores": [
+      "conflituo"
+    ],
+    "texto": "Ao entrar: cause 1 de dano a cada Aliado do oponente.",
+    "arteDaCarta": "aprendiz-descontrolado",
+    "quando": "ao entrar em campo / gatilho",
+    "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+    "alvo": "todos os Aliados afetados",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/r6-piromante-c4.png",
+    "decisoesDaArte": [
+      "Aprendiz redesenhado em postura baixa e torcida, mãos juntas tentando conter a magia, identidade e roupa remendada preservadas.",
+      "Incluído o feito grandioso solicitado pelo autor: Comprometido conjurando um grande construto arcano semelhante a buraco negro com detalhes galácticos.",
+      "O construto é interpretação visual do pulso de chegada; não cria habilidade, dano gravitacional, destruição do mundo, custo, Grau ou raridade novos. Regra permanece dano um a cada aliado do oponente ao entrar.",
+      "Magia prata-mercúrio original, observatório noturno e três alvos no pulso. Incomum sem acabamento arco-íris de lendária."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/aprendiz-descontrolado.png",
+        "papel": "Identidade da criatura ou personagem, redesenhados em nova pose e ação"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "r6-fera-cerco-c5",
+    "nome": "Mantícora",
+    "tipo": "aliado",
+    "valores": [
+      "conflituo"
+    ],
+    "texto": "Ao entrar: cause 2 de dano ao Conjurador inimigo e cure 2 do seu Conjurador.",
+    "arteDaCarta": "manticora",
+    "quando": "ao entrar em campo / gatilho",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Conjurador rival",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/r6-fera-cerco-c5.png",
+    "decisoesDaArte": [
+      "Mantícora redesenhada aterrissada junto à conjuradora em ruínas de pedágio, com cauda baixa e identidade de leão, asas vermelhas e cauda de escorpião preservada.",
+      "Magia violeta da referência causa dano ao rival à direita e envolve a bandagem da aliada à esquerda, ilustrando dano dois e cura dois ao entrar.",
+      "V1 preservada; revisão removeu braço e mão excedentes do rival.",
+      "Incomum sem brilho de lendária, sem nova habilidade recorrente de ataque."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/manticora.png",
+        "papel": "Identidade da criatura; nova pose e cena do efeito de entrada"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "r6-presa-trovao-c5",
+    "nome": "Ursa-Mãe",
+    "tipo": "aliado",
+    "valores": [
+      "dominum",
+      "conflituo"
+    ],
+    "texto": "Ao entrar: cure 5 do seu Conjurador.",
+    "arteDaCarta": "ursa-mae",
+    "quando": "ao entrar em campo / gatilho",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "seu Conjurador",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/r6-presa-trovao-c5.png",
+    "decisoesDaArte": [
+      "Ursa-Mãe redesenhada em contato protetor com conjurador vivo, boca fechada e olhar lateral atento, sem pose de investida do catálogo.",
+      "Cura cinco ao entrar ilustrada por fios de musgo e pequenas folhas âmbar junto à bandagem, sem ferimento gráfico ou ressurreição.",
+      "Acampamento de pinheiros sob chuva diurna, lona e equipamentos com desenho suave; magia verde e âmbar preservada.",
+      "Incomum com luz localizada e sem acabamento lendário."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/ursa-mae.png",
+        "papel": "Identidade da criatura; nova pose e cena do efeito de entrada"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Somente acabamento liso e iluminação controlada aprovados"
+      }
+    ]
+  },
+  {
+    "id": "r6-anjo-c6",
+    "nome": "Anjo do Fechamento",
+    "tipo": "aliado",
+    "valores": [
+      "alvorum"
+    ],
+    "texto": "Etéreo. Ao causar dano de combate ao Conjurador inimigo: cure 4 do seu Conjurador.",
+    "arteDaCarta": "anjo-do-fechamento",
+    "quando": "ao entrar em campo / gatilho",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "seu Conjurador",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/r6-anjo-c6.png",
+    "decisoesDaArte": [
+      "Combate etéreo em passarela de farol, céu encoberto de tarde.",
+      "Uma espada, duas mãos; cura de 4 representada após atingir a proteção do Conjurador rival.",
+      "Preservados rosto, asas brancas e armadura branca/naval com bronze.",
+      "Acabamento cosmético conservado na ilustração; sem aplicação automática de raridade no app."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/anjo-do-fechamento.png",
+        "papel": "identidade da criatura existente"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "acabamento liso aprovado; referência de estilo"
+      }
+    ]
+  },
+  {
+    "id": "r6-mercador-c7",
+    "nome": "Arquivista Sem Rosto",
+    "tipo": "aliado",
+    "valores": [
+      "cognitium"
+    ],
+    "texto": "Etéreo. Protegido 2. Ao entrar: compre 1 carta. Ao causar dano de combate ao Conjurador inimigo: compre 1 carta.",
+    "arteDaCarta": "arquivista-sem-rosto",
+    "quando": "ao entrar em campo / gatilho",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/r6-mercador-c7.png",
+    "decisoesDaArte": [
+      "Troca por posto de mapas em adobe à tarde; livro fechado no quadril, um único pergaminho entrando na bolsa.",
+      "Protegido 2 representado como custo adicional de duas pequenas luzes de Arcano para o rival; sem bloquear nem anular magia.",
+      "Criatura sem rosto, trajes de pergaminho, lacres vermelhos, livro e pena preservados em nova pose.",
+      "Acabamento cosmético conservado na ilustração; sem aplicação automática de raridade no app."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/arquivista-sem-rosto.png",
+        "papel": "identidade da criatura existente"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "acabamento liso aprovado; referência de estilo"
+      }
+    ]
+  },
+  {
+    "id": "r6-dragao-c8",
+    "nome": "Dragão Ancião",
+    "tipo": "aliado",
+    "valores": [
+      "alvorum"
+    ],
+    "texto": "Etéreo. Protegido 1. Ao entrar: cause 2 de dano a cada Aliado do oponente.",
+    "arteDaCarta": "dragao-anciao",
+    "quando": "ao entrar em campo / gatilho",
+    "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+    "alvo": "todos os Aliados afetados",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/r6-dragao-c8.png",
+    "decisoesDaArte": [
+      "Dragão ancião em voo baixo, duas patas dianteiras visíveis, boca fechada e pupilas legíveis.",
+      "Vale habitado com moinho em manhã de tempestade, sem reutilizar pose sentada ou fundo branco.",
+      "Chegada atinge três aliados rivais com duas ondas discretas; Conjurador rival permanece sem dano.",
+      "Etherealidade discreta em bordas, poucos espinhos e imponente anatomia; brilho de acabamento contido no corpo e magia."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/dragao-anciao.png",
+        "papel": "identidade original aprovada"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "acabamento liso aprovado"
+      }
+    ]
+  },
+  {
+    "id": "item-extra-pocao",
+    "nome": "Poção de cura",
+    "tipo": "item",
+    "valores": [],
+    "texto": "Extra. Consumível: cure 3 do seu Conjurador.",
+    "arteDaCarta": null,
+    "quando": "ao resolver a ativação",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "seu Conjurador",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-pocao.png",
+    "decisoesDaArte": [
+      "Poção vermelho-coral de vidro espesso consumida em apotecária rural durante chuva de dia.",
+      "Novo conjurador genérico pálido, ruivo e sardento, olhos fechados e expressão aliviada.",
+      "Três linhas suaves de cura no curativo representam cura3; sem ferida gráfica nem alteração de regra."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "acabamento liso aprovado; estilo, não identidade"
+      }
+    ]
+  },
+  {
+    "id": "item-extra-elixir",
+    "nome": "Elixir de foco",
+    "tipo": "item",
+    "valores": [],
+    "texto": "Extra. Consumível: ganhe 2 de Arcano.",
+    "arteDaCarta": null,
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-elixir.png",
+    "decisoesDaArte": [
+      "Cena completa com fundo integrado; preservar as regras atuais.",
+      "Raridade permanece sem definição no aplicativo."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento pictórico aprovado"
+      }
+    ]
+  },
+  {
+    "id": "col-ilusionista-do-labirinto",
+    "nome": "Ilusionista do Labirinto",
+    "tipo": "aliado",
+    "valores": [
+      "sublimeyn"
+    ],
+    "texto": "Ao entrar: devolva um Aliado ou Mística à mão do dono.",
+    "arteDaCarta": "ilusionista-do-labirinto",
+    "quando": "ao entrar em campo / gatilho",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Aliado escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-ilusionista-do-labirinto.png",
+    "decisoesDaArte": [
+      "Valor atual Sublimeyn: portais e vapor prateados; roupa mantém índigo físico.",
+      "Ao entrar devolve um Aliado ou Mística à mão; apenas uma criatura intacta atravessa o portal.",
+      "Raridade incomum apenas estética; não alterar texto ou custos."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/ilusionista-do-labirinto.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "col-ceifadora-da-peste",
+    "nome": "Ceifadora da Peste",
+    "tipo": "aliado",
+    "valores": [
+      "morbidyum"
+    ],
+    "texto": "Ao entrar: destrua um Aliado ou Mística.",
+    "arteDaCarta": "ceifadora-da-peste",
+    "quando": "ao entrar em campo / gatilho",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Aliado escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-ceifadora-da-peste.png",
+    "decisoesDaArte": [
+      "Ao entrar destrói um Aliado ou Mística: não ampliar para destruição de campo inteiro.",
+      "Morbidyum determina magia verde-pálida; rara é acabamento estético prateado/roxo discreto.",
+      "Corrigir direção de cabeça e pupilas em relação ao alvo, preservando composição.",
+      "Guardar o estudo anterior em variantes, fora do mapa corrente."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/ceifadora-da-peste.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/arte/cartas-site/variantes/col-ceifadora-da-peste-antes-alinhamento.png",
+        "papel": "Imagem gerada antes da revisão mínima da mira"
+      }
+    ]
+  },
+  {
+    "id": "col-contrabandista-de-porto",
+    "nome": "Contrabandista de Porto",
+    "tipo": "aliado",
+    "valores": [
+      "persona"
+    ],
+    "texto": "Etéreo. Ao causar dano de combate ao Conjurador inimigo: ganhe 1 de Arcano.",
+    "arteDaCarta": "contrabandista-de-porto",
+    "quando": "ao entrar em campo / gatilho",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-contrabandista-de-porto.png",
+    "decisoesDaArte": [
+      "Etéreo justifica transparência visual localizada, sem atribuir imunidade extra.",
+      "Regra ganha 1 Arcano ao causar dano de combate ao Conjurador inimigo; cena de aproximação não adiciona recompensa automática.",
+      "Valor atual Persona, comum, cena nova integrada."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/contrabandista-de-porto.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "col-curandeira-de-ervas",
+    "nome": "Curandeira de Ervas",
+    "tipo": "aliado",
+    "valores": [
+      "primitivum"
+    ],
+    "texto": "Suspenda: cure 2 de dano de um alvo.",
+    "arteDaCarta": "curandeira-de-ervas",
+    "quando": "ao resolver a ativação",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-curandeira-de-ervas.png",
+    "decisoesDaArte": [
+      "Valor atual Primitivum prevalece sobre Morbidyum do briefing antigo.",
+      "Suspenda: cure 2 de dano de um alvo; cuidado pontual em apenas um paciente.",
+      "Nova interação completa em estufa, acabamento comum, sem reutilizar autoemplastro do recorte."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/curandeira-de-ervas.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "col-ninho-de-estrelas",
+    "nome": "Ninho de Estrelas",
+    "tipo": "mistica",
+    "valores": [
+      "sublimeyn"
+    ],
+    "texto": "Suspenda e pague 1: cure 3 de dano de um alvo.",
+    "arteDaCarta": "ninho-de-estrelas",
+    "quando": "ao resolver a ativação",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-ninho-de-estrelas.png",
+    "decisoesDaArte": [
+      "Valor atual Sublimeyn prevalece sobre Alvorum do briefing antigo.",
+      "Suspenda e pague 1: cure 3 de dano de um alvo; somente um paciente em foco.",
+      "Não atribuir cura gratuita ou ressurreição ao objeto; acabamento comum."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/ninho-de-estrelas.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "col-coroa-sem-rei",
+    "nome": "Coroa sem Rei",
+    "tipo": "mistica",
+    "valores": [
+      "dominum"
+    ],
+    "texto": "Ao entrar: compre 1 carta.",
+    "arteDaCarta": "coroa-sem-rei",
+    "quando": "ao entrar em campo / gatilho",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-coroa-sem-rei.png",
+    "decisoesDaArte": [
+      "Valor atual Dominum com elos roxos; bronze dourado é material físico.",
+      "Ao entrar: compre 1 carta; pergaminho único é metáfora visual, sem habilidade de obediência do RPG.",
+      "Mística incomum, não equipamento nem nova regra."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/coroa-sem-rei.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "col-tapete-de-duas-casas",
+    "nome": "Tapete de Duas Casas",
+    "tipo": "estrutura",
+    "valores": [
+      "alvorum"
+    ],
+    "texto": "Suspenda: a primeira carta que você jogar neste turno custa 1 a menos.",
+    "arteDaCarta": "tapete-de-duas-casas",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-tapete-de-duas-casas.png",
+    "decisoesDaArte": [
+      "Estrutura permanece no lugar; não retratar ataque nem montaria.",
+      "Suspenda: primeira carta do turno custa 1 a menos; atalho é representação visual, não regra nova de teleporte.",
+      "Valor atual Alvorum, comum e fundo inteiro."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/tapete-de-duas-casas.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "col-primeira-moeda",
+    "nome": "A Primeira Moeda",
+    "tipo": "temporaria",
+    "valores": [
+      "persona"
+    ],
+    "texto": "Compre 2 cartas e o oponente ganha 1 de Arcano.",
+    "arteDaCarta": "a-primeira-moeda",
+    "quando": "ao resolver da pilha",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-primeira-moeda.png",
+    "decisoesDaArte": [
+      "Raridade atual comum prevalece sobre o rumor de artefato lendário do RPG.",
+      "Compre 2 cartas e o oponente ganha 1 de Arcano: duas formas de conhecimento e uma esfera do outro lado.",
+      "Valor Persona; não adicionar imunidade ou outra propriedade mecânica."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/a-primeira-moeda.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "col-sino-dos-juramentados",
+    "nome": "Sino dos Juramentados",
+    "tipo": "temporaria",
+    "valores": [
+      "conflituo"
+    ],
+    "texto": "Cause 5 de dano ao Conjurador inimigo. O oponente pode pagar 3 para anulá-la.",
+    "arteDaCarta": "sino-dos-juramentados",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Conjurador rival",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-sino-dos-juramentados.png",
+    "decisoesDaArte": [
+      "Conflitüo, dano de 5 apenas ao Conjurador inimigo.",
+      "Pagamento de 3 para anular continua opção da regra; imagem mostra uma resolução, não dano inevitável.",
+      "Não adicionar proibição de fuga do rumor RPG; comum sem foil."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/sino-dos-juramentados.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "col-ancora-do-mesmo-dia",
+    "nome": "Âncora do Mesmo Dia",
+    "tipo": "temporaria",
+    "valores": [
+      "cognitium"
+    ],
+    "texto": "Bana uma carta da sua mão; no seu próximo turno ela pode ser jogada custando 3 a menos.",
+    "arteDaCarta": "ancora-do-mesmo-dia",
+    "quando": "ao resolver da pilha",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-ancora-do-mesmo-dia.png",
+    "decisoesDaArte": [
+      "Valor atual Cognitium prevalece sobre Eternyr do briefing antigo.",
+      "Banir uma carta da própria mão para jogar no próximo turno com redução de 3; representar reserva, não uso imediato gratuito.",
+      "Rumor de artefato lendário não define raridade atual comum nem imunidade."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/ancora-do-mesmo-dia.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "col-cemiterio-que-respira",
+    "nome": "Cemitério que Respira",
+    "tipo": "temporaria",
+    "valores": [
+      "morbidyum"
+    ],
+    "texto": "Ponha no seu campo um Aliado de qualquer cemitério, pagando o custo dele + 0.",
+    "arteDaCarta": "cemiterio-que-respira",
+    "quando": "ao resolver da pilha",
+    "forma": "algo se ergue do cemitério e entra em campo",
+    "alvo": "Aliado no cemitério",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-cemiterio-que-respira.png",
+    "decisoesDaArte": [
+      "Valor atual Morbidyum, sem adicionar Cognitium do briefing antigo.",
+      "O Que Voltou serve de identidade de aliado já existente; foi redesenhado em nova pose dentro da cena.",
+      "O efeito põe um Aliado de qualquer cemitério no campo pagando o custo dele; a ilustração não altera esse pagamento.",
+      "Rareza apenas estética: reflexos locais prateados e violeta, sem novos Valores."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/cemiterio-que-respira.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/o-que-voltou.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "col-cadeado-ciumento",
+    "nome": "Cadeado Ciumento",
+    "tipo": "temporaria",
+    "valores": [
+      "dominum"
+    ],
+    "texto": "Neste turno você pode jogar do cemitério uma carta que anula outra (ela é banida ao resolver) e compre 1 carta.",
+    "arteDaCarta": "cadeado-ciumento",
+    "quando": "ao resolver da pilha",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-cadeado-ciumento.png",
+    "decisoesDaArte": [
+      "Valor atual Dominum prevalece sobre Eternyr do briefing antigo.",
+      "Repentina permite jogar neste turno uma carta do cemitério que anula outra; ela é banida ao resolver. O livro e a folha dissipando sugerem essa recuperação, sem criar anulação permanente.",
+      "Um único pergaminho representa a compra de uma carta; nenhuma regra nova.",
+      "Raridade comum, sem acabamento de lendária."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/cadeado-ciumento.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "col-frasco-de-mare",
+    "nome": "Frasco de Maré",
+    "tipo": "temporaria",
+    "valores": [
+      "primitivum"
+    ],
+    "texto": "Ganhe 3 de Arcano.",
+    "arteDaCarta": "frasco-de-mare",
+    "quando": "ao resolver da pilha",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-frasco-de-mare.png",
+    "decisoesDaArte": [
+      "Valor atual Primitivum prevalece sobre Alvorum e Eternyr do briefing antigo.",
+      "A água física do frasco continua azul; a magia ativa é verde-musgo e âmbar.",
+      "Três esferas representam ganhar 3 de Arcano, sem inventar ataque ou catástrofe.",
+      "Raridade comum; reflexos são materiais da cena, sem foil lendário."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/frasco-de-mare.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "col-chapeu-de-chuva",
+    "nome": "Chapéu de Chuva Particular",
+    "tipo": "temporaria",
+    "valores": [
+      "morbidyum"
+    ],
+    "texto": "Cure 4 de dano do seu Conjurador.",
+    "arteDaCarta": "chapeu-de-chuva-particular",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "seu Conjurador",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-chapeu-de-chuva.png",
+    "decisoesDaArte": [
+      "Valor atual Morbidyum, sem adicionar os Valores secundários do briefing antigo.",
+      "Cura de 4 de dano do próprio Conjurador, em velocidade Repentina; não representar cura de um grupo ou ressurreição.",
+      "Figura de ambientação redesenhada para esta carta, sem associar nome ou identidade não documentados.",
+      "Raridade comum e iluminação localizada."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/chapeu-de-chuva-particular.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "col-barco-dobravel",
+    "nome": "Barco Dobrável",
+    "tipo": "temporaria",
+    "valores": [
+      "sublimeyn"
+    ],
+    "texto": "Devolva um Aliado ou Mística seu à mão do dono.",
+    "arteDaCarta": "barco-dobravel",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Aliado seu escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-barco-dobravel.png",
+    "decisoesDaArte": [
+      "Valor atual Sublimeyn: vapor de mercúrio prateado, sem os Valores secundários do briefing antigo.",
+      "Devolve um único Aliado ou Mística próprio à mão do dono. A cena escolhe um aliado intacto, não rouba um inimigo nem representa morte.",
+      "As figuras de ambientação não recebem nomes, estatísticas ou novas habilidades.",
+      "Raridade comum; portal é efeito do feitiço, sem acabamento lendário."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/barco-dobravel.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "col-mapa-do-reino",
+    "nome": "Mapa do Reino",
+    "tipo": "temporaria",
+    "valores": [
+      "cognitium"
+    ],
+    "texto": "Olhe as 5 cartas do topo do seu baralho; ponha 2 na mão e as outras no fundo do baralho.",
+    "arteDaCarta": "mapa-do-reino",
+    "quando": "ao resolver da pilha",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-mapa-do-reino.png",
+    "decisoesDaArte": [
+      "Valor atual Cognitium. A rota antiga dourada vira desenho físico discreto, sem portal Alvorum ativo.",
+      "Regras atuais: olhar cinco cartas do topo, pôr duas na mão e três no fundo. O briefing antigo que selecionava uma não prevalece.",
+      "Memórias ilustram a seleção sem adicionar teleporte ou poderes das criaturas incidentais do vale.",
+      "Raridade comum e superfícies lisas; ambiente novo sem copiar a composição da referência de acabamento."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/mapa-do-reino.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "col-arqueira-da-ultima-flecha",
+    "nome": "Última Flecha",
+    "tipo": "temporaria",
+    "valores": [
+      "conflituo"
+    ],
+    "texto": "Cause 3 de dano a um Aliado ou Mística.",
+    "arteDaCarta": "arqueira-da-ultima-flecha",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Aliado escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-arqueira-da-ultima-flecha.png",
+    "decisoesDaArte": [
+      "Mira coerente entre rosto, arco, trajetória reta e um único alvo, seguindo a revisão solicitada para Luneta.",
+      "Regra atual causa 3 de dano a um Aliado ou Mística; não atingir Conjurador nem grupo.",
+      "Conflitüo atual: magia vermelho-ferrugem localizada no arco e flecha.",
+      "Pose e ambiente novos, preservando a identidade original; raridade comum."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/arqueira-da-ultima-flecha.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "col-mare-de-sobras",
+    "nome": "Maré de Sobras",
+    "tipo": "temporaria",
+    "valores": [
+      "morbidyum"
+    ],
+    "texto": "Cause 2 de dano a cada Aliado (inclusive os seus) e compre 1 carta.",
+    "arteDaCarta": "mare-de-sobras",
+    "quando": "ao resolver da pilha",
+    "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+    "alvo": "todos os Aliados afetados",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-mare-de-sobras.png",
+    "decisoesDaArte": [
+      "Valor atual Morbidyum; não adicionar poderes Eternyr do briefing antigo.",
+      "Causa 2 de dano a cada Aliado inclusive os próprios. Os dois pares são atingidos pela mesma onda, sem sugerir aliados imunes.",
+      "Uma memória pequena junto ao conjurador sugere comprar uma carta; não alterar efeitos ou adicionar destruição automática.",
+      "Incomum apenas estética, sem brilho lendário generalizado."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/mare-de-sobras.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "col-descartar-grau",
+    "nome": "Coroa Riscada",
+    "tipo": "temporaria",
+    "valores": [
+      "dominum"
+    ],
+    "texto": "Para jogar, descarte 1 carta do seu Grau. Destrua um alvo e compre 1 carta.",
+    "arteDaCarta": "coroa-riscada",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/col-descartar-grau.png",
+    "decisoesDaArte": [
+      "Regra atual exige descartar uma carta do próprio Grau, destruir um alvo e comprar uma carta. Não omitir o custo nem multiplicar alvos.",
+      "Valor Dominum atual determina o vínculo roxo; a aura dourada do RPG não torna a carta Alvorum.",
+      "Origem lendária no RPG não substitui raridade comum do TCG.",
+      "Cena unificada em pátio, sem colar o recorte antigo em um fundo."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/coroa-riscada.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "item-extra-sal",
+    "nome": "Sal do Viajante",
+    "tipo": "item",
+    "valores": [],
+    "texto": "Extra. Uso único. Use: olhe as 3 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+    "arteDaCarta": "sal-do-viajante",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-sal.png",
+    "decisoesDaArte": [
+      "Cena nova unificada com o item original reconhecível.",
+      "Efeitos narrativos locais; regras e valores atuais preservados."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/sal-do-viajante.png",
+        "papel": "Identidade do item aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "item-extra-dado",
+    "nome": "Dado Honesto",
+    "tipo": "item",
+    "valores": [],
+    "texto": "Extra. Uso único. Use: cause 2 de dano a um alvo.",
+    "arteDaCarta": "dado-honesto",
+    "quando": "ao resolver a ativação",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-dado.png",
+    "decisoesDaArte": [
+      "Cena nova unificada com o item original reconhecível.",
+      "Efeito local correspondente à regra atual, sem acrescentar habilidades."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/dado-honesto.png",
+        "papel": "Identidade do item aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "item-extra-lanterna",
+    "nome": "Lanterna do Véu",
+    "tipo": "item",
+    "valores": [
+      "sublimeyn",
+      "persona",
+      "eternyr"
+    ],
+    "texto": "Extra. Uso único. Use: devolva um Aliado ou Mística à mão do dono.",
+    "arteDaCarta": "lanterna-do-veu",
+    "quando": "ao resolver a ativação",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Aliado escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-lanterna.png",
+    "decisoesDaArte": [
+      "Cena nova unificada com o item original reconhecível.",
+      "Efeito local correspondente à regra atual, sem acrescentar habilidades."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/lanterna-do-veu.png",
+        "papel": "Identidade do item aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "item-extra-relogio",
+    "nome": "Relógio de Bolso Atrasado",
+    "tipo": "item",
+    "valores": [
+      "eternyr",
+      "cognitium",
+      "alvorum"
+    ],
+    "texto": "Extra. Uso único. Use: compre 1 carta e ganhe 1 de Arcano.",
+    "arteDaCarta": "relogio-de-bolso-atrasado",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-relogio.png",
+    "decisoesDaArte": [
+      "Referência de identidade preservada em cena nova.",
+      "Dados atuais prevalecem sobre Valores antigos do briefing; nenhuma habilidade inventada."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/relogio-de-bolso-atrasado.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "item-foco-espelho",
+    "nome": "Espelho da Cidade dos Rostos",
+    "tipo": "item",
+    "valores": [],
+    "texto": "Canal. Foco Arcano. Suspenda o Conjurador e pague 1: o próximo dano ou cura de uma Temporária sua neste turno tem +1.",
+    "arteDaCarta": "espelho-da-cidade-dos-rostos",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/item-foco-espelho.png",
+    "decisoesDaArte": [
+      "Equipamento genérico sem Valores, permitido pelas regras atuais; os rostos coloridos não significam cinco Valores de jogo.",
+      "Canal / Foco Arcano: suspender Conjurador e pagar 1 melhora em +1 o próximo dano OU cura de uma Temporária própria neste turno.",
+      "Ignorar Ataque undefined e batalha impostos pelo briefing antigo; este foco não recebe valor de ataque inventado.",
+      "Raridade comum, sem foil lendário; figuras de ambientação sem identidade de carta inventada."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/espelho-da-cidade-dos-rostos.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "item-foco-pedra",
+    "nome": "Pedra Parada",
+    "tipo": "item",
+    "valores": [],
+    "texto": "Canal. Foco Arcano. Suspenda o Conjurador e descarte 1 carta: o próximo dano ou cura de uma Temporária sua neste turno tem +2.",
+    "arteDaCarta": "pedra-parada",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/item-foco-pedra.png",
+    "decisoesDaArte": [
+      "Equipamento genérico, sem Valores; fissuras ciano são características do objeto e não definem afinidade.",
+      "Canal / Foco Arcano: suspender Conjurador e descartar uma carta para +2 no próximo dano OU cura de uma Temporária própria neste turno.",
+      "A função RPG de paralisar mudanças não adiciona estase às regras do TCG. Não inventar Ataque undefined.",
+      "Raridade comum, sem acabamento lendário."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/pedra-parada.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "item-foco-coroa",
+    "nome": "A Coroa de Vyal",
+    "tipo": "item",
+    "valores": [],
+    "texto": "Canal. Foco Arcano. Suspenda o Conjurador, pague 2 e seu Conjurador toma 2 de dano: o próximo dano ou cura de uma Temporária sua neste turno tem +4.",
+    "arteDaCarta": "a-coroa-de-vyal",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/item-foco-coroa.png",
+    "decisoesDaArte": [
+      "Equipamento genérico sem Valores; escama coral preserva identidade e não torna o item Persona.",
+      "Canal / Foco Arcano: suspender, pagar 2 e tomar 2 de dano próprio; próximo dano OU cura da Temporária própria tem +4 neste turno.",
+      "Esforço sugerido por gesto e expressão, sem dano gráfico nem ataque contra outro personagem.",
+      "Raridade comum e brilho apenas localizado na escama e foco."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/a-coroa-de-vyal.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "item-transcritor-pena",
+    "nome": "Pena de Idrael",
+    "tipo": "item",
+    "valores": [],
+    "texto": "Canal. Transcritor. Suspenda o Conjurador e pague 1: olhe as 2 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+    "arteDaCarta": "pena-de-idrael",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/item-transcritor-pena.png",
+    "decisoesDaArte": [
+      "Canal / Transcritor genérico, sem Valores e sem ataque.",
+      "Olhar duas do topo, levar uma à mão e a outra ao fundo; suspender Conjurador e pagar 1.",
+      "Azul da pena é característica física, não afinidade Eternyr ou Cognitium automática.",
+      "Raridade comum; ignorar o ataque undefined e o uso de acordar do RPG como regra nova."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/pena-de-idrael.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "item-transcritor-pagina",
+    "nome": "A Página Arrancada",
+    "tipo": "item",
+    "valores": [],
+    "texto": "Canal. Transcritor. Suspenda o Conjurador e seu Conjurador toma 1 de dano: compre 1 carta.",
+    "arteDaCarta": "a-pagina-arrancada",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/item-transcritor-pagina.png",
+    "decisoesDaArte": [
+      "Canal / Transcritor genérico sem Valores. A origem lendária RPG não define a raridade comum atual.",
+      "Suspender e tomar 1 de dano próprio para comprar uma carta, sem adicionar pagamento de Arcano.",
+      "Custo próprio sugerido por postura, sem feridas ou dano em outro personagem.",
+      "Preservar desenho dos duelistas como parte do artefato, sem identificar personagens ausentes do acesso."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/a-pagina-arrancada.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "item-transcritor-chave",
+    "nome": "Chave da Voragem",
+    "tipo": "item",
+    "valores": [],
+    "texto": "Canal. Transcritor. Suspenda o Conjurador, pague 2 e descarte 1 carta: compre 3 cartas.",
+    "arteDaCarta": "chave-da-voragem",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/item-transcritor-chave.png",
+    "decisoesDaArte": [
+      "Canal / Transcritor genérico, sem Valores ou ataque.",
+      "Suspender Conjurador, pagar 2 e descartar 1 para comprar 3. Os elementos representam quantidades diferentes, sem novas habilidades.",
+      "Abrir correntes e jaulas no RPG não adiciona remoção de prisões no TCG.",
+      "Raridade comum; bronze e luz local não definem Alvorum."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/chave-da-voragem.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "item-extra-ovo",
+    "nome": "Ovo de Wyvern",
+    "tipo": "item",
+    "valores": [],
+    "texto": "Extra de Invocador. Uso único. Suspenda o Conjurador e pague 2: invoque um Wyvern Filhote 2/2.",
+    "arteDaCarta": "ovo-de-wyvern",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-ovo.png",
+    "decisoesDaArte": [
+      "Extra de Invocador genérico sem Valores, uso único.",
+      "Suspender Conjurador e pagar 2 invoca um Wyvern Filhote 2/2; não inventar outros filhotes ou espera de 30 dias nas regras.",
+      "Anatomia de wyvern: duas pernas e duas asas, sem braços adicionais.",
+      "Âmbar do ovo é identidade do objeto, não afinidade Alvorum ou raridade lendária."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/ovo-de-wyvern.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "item-extra-luvas",
+    "nome": "Luvas de Força",
+    "tipo": "item",
+    "valores": [],
+    "texto": "Extra de Brigão. Uso único. Seu Conjurador toma 2 de dano: seu Conjurador ganha +2 de Ataque neste turno.",
+    "arteDaCarta": "cordao-de-rhu",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-luvas.png",
+    "decisoesDaArte": [
+      "Referência do briefing é Cordão de Rhu, incompatível com o nome atual Luvas de Força. Criar luvas novas e usar apenas couro, cordões e dente como motivos materiais; preservar o arquivo antigo.",
+      "Extra de Brigão genérico sem Valores e de uso único: próprio Conjurador toma 2 e ganha +2 de Ataque neste turno.",
+      "Não adicionar suspensão nem pagamento de Arcano ausentes da regra atual.",
+      "Não transferir a comunicação com lobos do Cordão de Rhu para esta carta. Raridade comum."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/cordao-de-rhu.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "item-extra-trono",
+    "nome": "Trono Dobrável",
+    "tipo": "item",
+    "valores": [],
+    "texto": "Extra de Parrudão da quebrada. Uso único. Suspenda o Conjurador e pague 1: cure 4 de dano do seu Conjurador.",
+    "arteDaCarta": "trono-dobravel",
+    "quando": "ao resolver a ativação",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "seu Conjurador",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-trono.png",
+    "decisoesDaArte": [
+      "Extra de Parrudão da quebrada, genérico sem Valores, uso único.",
+      "Suspender Conjurador e pagar 1 para curar 4 de dano do próprio Conjurador. Não representar cura de aliados ou grupo.",
+      "Símbolo dourado na lona é desenho físico; não define Valor Alvorum.",
+      "Não adicionar o efeito RPG de ser ouvido por toda a sala às regras do TCG; raridade comum."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/trono-dobravel.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "item-extra-pente",
+    "nome": "Pente das Mil Caras",
+    "tipo": "item",
+    "valores": [],
+    "texto": "Extra de Habilidoso. Uso único. Suspenda o Conjurador e descarte 1 carta: olhe as 3 cartas do topo do seu baralho; ponha 2 na mão e as outras no fundo do baralho.",
+    "arteDaCarta": "pente-das-mil-caras",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-pente.png",
+    "decisoesDaArte": [
+      "Extra de Habilidoso genérico, uso único, sem Valores.",
+      "Suspender e descartar uma carta; olhar três do topo, levar duas à mão e uma ao fundo. Sem pagamento de Arcano novo.",
+      "Os pássaros são mensagens de papel, sem novas criaturas ou habilidades de disfarce.",
+      "Coral da referência foi mantido apenas como caráter material discreto; magia de leitura neutra. Raridade comum."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/pente-das-mil-caras.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "item-extra-balde",
+    "nome": "Balde que Sobe",
+    "tipo": "item",
+    "valores": [],
+    "texto": "Extra de Preparado. Uso único. Suspenda o Conjurador e seu Conjurador toma 1 de dano: ganhe 2 de Arcano e compre 1 carta.",
+    "arteDaCarta": "balde-que-sobe",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/item-extra-balde.png",
+    "decisoesDaArte": [
+      "Extra de Preparado genérico sem Valores, uso único.",
+      "Suspender Conjurador e tomar 1 de dano próprio para ganhar 2 de Arcano e comprar uma carta.",
+      "Sem pagamento de Arcano adicional nem atribuição Alvorum por causa do metal e aura do RPG.",
+      "Trajetória de subida integrada ao poço real, sem setas de interface; raridade comum."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/balde-que-sobe.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-coveiro",
+    "nome": "Coveiro de Vau Grande",
+    "tipo": "aliado",
+    "valores": [
+      "morbidyum"
+    ],
+    "texto": "Ao entrar: olhe as 2 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+    "arteDaCarta": "coveiro-de-vau-grande",
+    "quando": "ao entrar em campo / gatilho",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-coveiro.png",
+    "decisoesDaArte": [
+      "Ao entrar: olhar duas do topo, levar uma à mão e uma ao fundo.",
+      "Aliado Morbidyum 1/2 comum; nenhuma proteção ou ataque mágico novo.",
+      "A figura trabalha e se desloca em vez de repetir o recorte cavando.",
+      "Magia verde-pálida nas memórias, cenário quente e chuva de dia com luz controlada."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/coveiro-de-vau-grande.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-embalsamador",
+    "nome": "Embalsamador",
+    "tipo": "aliado",
+    "valores": [
+      "morbidyum"
+    ],
+    "texto": "Suspenda e pague 2: ponha no seu campo um Aliado de qualquer cemitério, pagando o custo dele + 1.",
+    "arteDaCarta": "embalsamador",
+    "quando": "ao resolver a ativação",
+    "forma": "algo se ergue do cemitério e entra em campo",
+    "alvo": "Aliado no cemitério",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-embalsamador.png",
+    "decisoesDaArte": [
+      "Aliado Morbidyum 2/3 comum. Suspender e pagar 2 para trazer um Aliado de qualquer cemitério, ainda pagando o custo dele +1.",
+      "O quadrúpede é representação de um aliado retornando, sem nome, estatísticas ou cartas novas inventadas.",
+      "A arte não cria ressurreição grátis, invocação múltipla ou proteção automática.",
+      "Construto antigo da referência foi adaptado à ação atual em cena nova; materiais e magia verde-pálida mantidos."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/embalsamador.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-ossario",
+    "nome": "Velho Ossário, o Dragão Pálido",
+    "tipo": "aliado",
+    "valores": [
+      "morbidyum"
+    ],
+    "texto": "Ao entrar: ponha no seu campo um Aliado de qualquer cemitério, pagando o custo dele + 0.",
+    "arteDaCarta": "velho-ossario-dragao-palido",
+    "quando": "ao entrar em campo / gatilho",
+    "forma": "algo se ergue do cemitério e entra em campo",
+    "alvo": "Aliado no cemitério",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-ossario.png",
+    "decisoesDaArte": [
+      "Aliado Morbidyum 7/7 comum, não atribuir raridade lendária por ser dragão.",
+      "Ao entrar, trazer um Aliado de qualquer cemitério ainda pagando custo normal +0; não sugerir invocação grátis.",
+      "Manter os dois braços dianteiros separados das duas asas e as duas patas traseiras.",
+      "Cenário e ação novos; grandiosidade vem do porte, sem ataque adicional ou proteção inventados."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/velho-ossario-dragao-palido.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-rosto-sem-gente",
+    "nome": "Rosto sem Gente",
+    "tipo": "temporaria",
+    "valores": [
+      "persona"
+    ],
+    "texto": "Devolva um Aliado ou Mística à mão do dono.",
+    "arteDaCarta": "rosto-sem-gente",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Aliado escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-rosto-sem-gente.png",
+    "decisoesDaArte": [
+      "Temporária Findante de Persona conforme os dados atuais: devolve um Aliado ou Mística à mão do dono; pode afetar qualquer lado.",
+      "A criatura representa a forma do feitiço, não um novo aliado. Lobo com pelagem, sem petrificação ou destruição."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/rosto-sem-gente.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-leitura-de-sombras",
+    "nome": "Leitura de Sombras",
+    "tipo": "temporaria",
+    "valores": [
+      "cognitium"
+    ],
+    "texto": "Olhe as 4 cartas do topo do seu baralho; ponha 2 na mão e as outras no fundo do baralho.",
+    "arteDaCarta": "leitor-de-sombras",
+    "quando": "ao resolver da pilha",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-leitura-de-sombras.png",
+    "decisoesDaArte": [
+      "Cognitium Findante: olhar quatro, duas para a mão e duas para o fundo; sem criar regras de ataque ou invisibilidade.",
+      "Novo gesto e enquadramento lateral, cenário completo."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/leitor-de-sombras.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-sentenca-do-selo",
+    "nome": "Sentença do Selo",
+    "tipo": "temporaria",
+    "valores": [
+      "dominum"
+    ],
+    "texto": "Destrua um Aliado ou Mística.",
+    "arteDaCarta": "juiz-do-selo",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Aliado escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-sentenca-do-selo.png",
+    "decisoesDaArte": [
+      "Dominum Findante destrói um Aliado ou Mística; não representar anulação de feitiço só porque a base RPG descreve isso.",
+      "Manter selos, vestimenta azul e metal envelhecido sem transformar dourado em brilho geral."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/juiz-do-selo.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-luz-da-faroleira",
+    "nome": "Luz da Faroleira",
+    "tipo": "temporaria",
+    "valores": [
+      "alvorum"
+    ],
+    "texto": "Cure 4 de dano do seu Conjurador e compre 1 carta.",
+    "arteDaCarta": "faroleira-de-vau-grande",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "seu Conjurador",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-luz-da-faroleira.png",
+    "decisoesDaArte": [
+      "Alvorum Findante: curar o próprio Conjurador em quatro e comprar uma carta; não representar cura de aliado.",
+      "Nova pose calma, cenário completo com azul do mar equilibrando o dourado."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/faroleira-de-vau-grande.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-chamado-da-matilha",
+    "nome": "Chamado da Matilha",
+    "tipo": "temporaria",
+    "valores": [
+      "primitivum"
+    ],
+    "texto": "Cause 2 de dano a cada Aliado do oponente.",
+    "arteDaCarta": "matilha-da-voragem",
+    "quando": "ao resolver da pilha",
+    "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+    "alvo": "todos os Aliados afetados",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-chamado-da-matilha.png",
+    "decisoesDaArte": [
+      "Primitivum conforme os dados atuais, substituindo a magia roxo-sangue da base.",
+      "Causa dois a cada Aliado adversário, sem atingir próprios aliados ou Conjuradores.",
+      "Criaturas caninas preservadas, não acrescentar membros humanos."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/matilha-da-voragem.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-quebra-escudos",
+    "nome": "Golpe do Quebra-Escudos",
+    "tipo": "temporaria",
+    "valores": [
+      "conflituo"
+    ],
+    "texto": "Cause 4 de dano a um Aliado ou Mística.",
+    "arteDaCarta": "quebra-escudos",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Aliado escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-quebra-escudos.png",
+    "decisoesDaArte": [
+      "Conflituo Findante causa quatro a um Aliado ou Mística; não atingir Conjurador nem garantir destruição do alvo.",
+      "Arma, olhar e direção do efeito coerentes, sem raio curvado para corrigir uma mira errada."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/quebra-escudos.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-nuvem-triste",
+    "nome": "Nuvem Triste",
+    "tipo": "temporaria",
+    "valores": [
+      "sublimeyn"
+    ],
+    "texto": "Devolva um Aliado ou Mística à mão do dono e compre 1 carta.",
+    "arteDaCarta": "nuvem-triste",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Aliado escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-nuvem-triste.png",
+    "decisoesDaArte": [
+      "Sublimeyn conforme os dados atuais: corpo coral preserva a identidade, magia ativa é prata.",
+      "Devolver um Aliado ou Mística à mão do dono e comprar uma carta; não transformar a criatura devolvida em invocação nova."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/nuvem-triste.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-cadeira-de-espera",
+    "nome": "Cadeira de Espera",
+    "tipo": "temporaria",
+    "valores": [
+      "eternyr"
+    ],
+    "texto": "Bana uma carta da sua mão; no seu próximo turno ela pode ser jogada custando 2 a menos.",
+    "arteDaCarta": "cadeira-de-espera",
+    "quando": "ao resolver da pilha",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-cadeira-de-espera.png",
+    "decisoesDaArte": [
+      "Eternyr Findante bana uma carta da mão, jogável no próximo turno com redução de dois no custo; sem anular, devolver criaturas ou comprar.",
+      "Trocar os anéis dourados antigos pela magia azul e branca do Valor atual."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/cadeira-de-espera.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-ladrao-de-tumulos",
+    "nome": "Saque de Túmulos",
+    "tipo": "temporaria",
+    "valores": [
+      "morbidyum"
+    ],
+    "texto": "Compre 2 cartas.",
+    "arteDaCarta": "ladrao-de-tumulos",
+    "quando": "ao resolver da pilha",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-ladrao-de-tumulos.png",
+    "decisoesDaArte": [
+      "Morbidyum Findante apenas compra duas cartas; sem ressuscitar, causar dano ou exigir descarte.",
+      "Papéis trazem marcas de ambientação, sem caixa de regras ou texto de carta."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/ladrao-de-tumulos.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-mascara-do-outro",
+    "nome": "Máscara do Outro",
+    "tipo": "temporaria",
+    "valores": [
+      "persona"
+    ],
+    "texto": "Devolva um Aliado ou Mística à mão do dono.",
+    "arteDaCarta": "mascara-do-outro",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Aliado escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-mascara-do-outro.png",
+    "decisoesDaArte": [
+      "Persona Repentina apenas devolve um Aliado ou Mística; não aplicar a troca de rosto e voz do objeto RPG.",
+      "Enquadramento próximo do objeto, sem reutilizar uma figura inteira sobre um fundo."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/mascara-do-outro.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-refutacao",
+    "nome": "Refutação",
+    "tipo": "temporaria",
+    "valores": [
+      "cognitium"
+    ],
+    "texto": "Anule uma carta na pilha.",
+    "arteDaCarta": "professor-de-logica",
+    "quando": "ao resolver da pilha",
+    "forma": "corte, selo ou apagar sobre a carta inimiga na pilha (lateral direita)",
+    "alvo": "carta na pilha",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-refutacao.png",
+    "decisoesDaArte": [
+      "Cognitium Repentina anula uma carta na pilha; não reflete dano nem silencia todo o ambiente.",
+      "Os demais estudantes são ambientação, sem novas cartas ou efeitos."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/professor-de-logica.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-lamento-da-carpideira",
+    "nome": "Lamento da Carpideira",
+    "tipo": "temporaria",
+    "valores": [
+      "morbidyum"
+    ],
+    "texto": "Cause 2 de dano a um alvo.",
+    "arteDaCarta": "carpideira",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-lamento-da-carpideira.png",
+    "decisoesDaArte": [
+      "Morbidyum Repentina causa dois a um alvo; magia verde-pálida substitui o coral antigo.",
+      "Não sugerir cura, ressuscitação nem dano em área."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/carpideira.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-hora-roubada",
+    "nome": "Hora Roubada",
+    "tipo": "temporaria",
+    "valores": [
+      "eternyr"
+    ],
+    "texto": "Compre 1 carta.",
+    "arteDaCarta": "relojoeiro-fugitivo",
+    "quando": "ao resolver da pilha",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-hora-roubada.png",
+    "decisoesDaArte": [
+      "Eternyr Repentina apenas compra uma carta; não conceder turno extra, rebobinar o dia ou causar dano.",
+      "Cena discreta com uma folha, sem múltiplas cartas escolhidas ou ataque de pistola."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/relojoeiro-fugitivo.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-selo-subito",
+    "nome": "Selo Súbito",
+    "tipo": "temporaria",
+    "valores": [
+      "alvorum"
+    ],
+    "texto": "Cure 3 de dano de um alvo.",
+    "arteDaCarta": "sentinela-de-selo",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-selo-subito.png",
+    "decisoesDaArte": [
+      "Alvorum Repentina cura três de um alvo, sem ataque, escudo permanente ou invulnerabilidade.",
+      "A ação de martelo do catálogo foi adaptada para atendimento conforme o feitiço atual."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/sentinela-de-selo.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-tiro-de-aluguel",
+    "nome": "Tiro de Aluguel",
+    "tipo": "temporaria",
+    "valores": [
+      "conflituo"
+    ],
+    "texto": "Cause 2 de dano a um alvo.",
+    "arteDaCarta": "pistoleira-de-aluguel",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-tiro-de-aluguel.png",
+    "decisoesDaArte": [
+      "Conflituo Repentina causa dois a um alvo; sem explosão em área ou morte garantida.",
+      "Pose nova apoiada na carroça, com cenário unificado e brilho apenas no tiro."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/pistoleira-de-aluguel.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-espelho-da-serpente",
+    "nome": "Espelho da Serpente",
+    "tipo": "temporaria",
+    "valores": [
+      "sublimeyn"
+    ],
+    "texto": "Devolva um Aliado ou Mística à mão do dono.",
+    "arteDaCarta": "serpente-espelho",
+    "quando": "ao resolver da pilha",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Aliado escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-espelho-da-serpente.png",
+    "decisoesDaArte": [
+      "Sublimeyn Repentina apenas devolve um Aliado ou Mística à mão; sem veneno, dano, compra ou nova invocação.",
+      "Dourado é material do corpo; magia atual é prata, não a aura dourada antiga."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/serpente-espelho.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-dama-da-noite",
+    "nome": "A Dama da Noite de Fhim",
+    "tipo": "mistica",
+    "valores": [
+      "morbidyum"
+    ],
+    "texto": "Suspenda: cause 1 de dano ao Conjurador inimigo.",
+    "arteDaCarta": "a-dama-da-noite-de-fhim",
+    "quando": "ao resolver a ativação",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Conjurador rival",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-dama-da-noite.png",
+    "decisoesDaArte": [
+      "Mística Morbidyum: suspender para causar um ao Conjurador inimigo; não direcionar o efeito a um aliado.",
+      "Etéreo visual não significa keyword extra ou PNG transparente."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/a-dama-da-noite-de-fhim.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-canto-sem-cantor",
+    "nome": "Canto sem Cantor",
+    "tipo": "mistica",
+    "valores": [
+      "persona"
+    ],
+    "texto": "Suspenda e pague 2: compre 1 carta.",
+    "arteDaCarta": "canto-sem-cantor",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-canto-sem-cantor.png",
+    "decisoesDaArte": [
+      "Mística Persona: suspender e pagar dois para comprar uma; não tornar a compra automática ou gratuita.",
+      "Coral integral da entidade, mantendo os vazios visíveis dentro de uma cena opaca."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/canto-sem-cantor.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-o-sentido",
+    "nome": "O Sentido",
+    "tipo": "mistica",
+    "valores": [
+      "cognitium"
+    ],
+    "texto": "Suspenda e pague 1: olhe as 2 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+    "arteDaCarta": "sentido",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-o-sentido.png",
+    "decisoesDaArte": [
+      "Cognitium atual: suspender e pagar um, olhar duas, uma na mão e outra no fundo.",
+      "O coral físico dos tecidos não muda a afinidade para Persona; sem contágio ou debuff novo."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/sentido.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-tique",
+    "nome": "Tique, o Segundo a Mais",
+    "tipo": "mistica",
+    "valores": [
+      "eternyr"
+    ],
+    "texto": "Ao entrar: compre 1 carta. Suspenda: ganhe 1 de Arcano.",
+    "arteDaCarta": "tique",
+    "quando": "ao entrar em campo / gatilho",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-tique.png",
+    "decisoesDaArte": [
+      "Ao entrar compra uma; suspender gera um Arcano. A compra não se repete a cada geração de Arcano.",
+      "Manter proporções infantis e aura localizada, sem ataque ou dano."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/tique.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-hael",
+    "nome": "Hael, o Insone",
+    "tipo": "mistica",
+    "valores": [
+      "alvorum"
+    ],
+    "texto": "Suspenda e pague 1: cure 3 de dano de um alvo.",
+    "arteDaCarta": "hael-o-insone",
+    "quando": "ao resolver a ativação",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "carta ou Conjurador escolhido",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-hael.png",
+    "decisoesDaArte": [
+      "Alvorum Mística exige suspensão e pagamento de um para curar três de um alvo.",
+      "Grifo é ambientação, sem nova carta, invocação automática ou cura de grupo."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/hael-o-insone.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-estandarte-sem-exercito",
+    "nome": "Estandarte sem Exército",
+    "tipo": "mistica",
+    "valores": [
+      "dominum"
+    ],
+    "texto": "Protegido 1. Ao entrar: ganhe 1 de Arcano.",
+    "arteDaCarta": "estandarte-sem-exercito",
+    "quando": "ao entrar em campo / gatilho",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-estandarte-sem-exercito.png",
+    "decisoesDaArte": [
+      "Dominum atual; pano vermelho é material físico, não magia de Conflituo.",
+      "Protegido um exige custo adicional do adversário para escolher alvo, sem refletir ou garantir imunidade. Ao entrar ganha um Arcano."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/estandarte-sem-exercito.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-feira-das-mascaras",
+    "nome": "Feira das Máscaras",
+    "tipo": "estrutura",
+    "valores": [
+      "persona"
+    ],
+    "texto": "Suspenda: ganhe 1 de Arcano.",
+    "arteDaCarta": "feira-das-mascaras",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-feira-das-mascaras.png",
+    "decisoesDaArte": [
+      "Estrutura Persona suspende para ganhar um Arcano, sem atacar.",
+      "A feira é noturna conforme a descrição específica, que prevalece sobre a sugestão genérica de tarde."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/feira-das-mascaras.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-o-postulario",
+    "nome": "O Postulário",
+    "tipo": "estrutura",
+    "valores": [
+      "cognitium"
+    ],
+    "texto": "Suspenda e pague 1: compre 1 carta.",
+    "arteDaCarta": "o-postulario",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-o-postulario.png",
+    "decisoesDaArte": [
+      "Cognitium Estrutura: suspender e pagar um para comprar uma, sem ataque dos guardiões.",
+      "Ouro limitado aos materiais; magia ativa índigo, sem alterar regras por causa da aura RPG."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/o-postulario.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-patio-de-duelos",
+    "nome": "Pátio de Duelos",
+    "tipo": "estrutura",
+    "valores": [
+      "conflituo"
+    ],
+    "texto": "Suspenda: cause 1 de dano ao Conjurador inimigo.",
+    "arteDaCarta": "patio-de-duelos",
+    "quando": "ao resolver a ativação",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "Conjurador rival",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-patio-de-duelos.png",
+    "decisoesDaArte": [
+      "Conflituo Estrutura suspende para causar um ao Conjurador inimigo; cena de duelo representa essa ativação, sem atribuir ataque de combate à estrutura.",
+      "Alunos ao redor ficam fora do efeito."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/patio-de-duelos.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-porto-de-vidro",
+    "nome": "O Porto de Vidro",
+    "tipo": "estrutura",
+    "valores": [
+      "sublimeyn"
+    ],
+    "texto": "Suspenda: ganhe 1 de Arcano.",
+    "arteDaCarta": "o-porto-de-vidro",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-porto-de-vidro.png",
+    "decisoesDaArte": [
+      "Sublimeyn Estrutura suspende para gerar um Arcano; os demais objetos esféricos são peças de vidro, sem geração extra.",
+      "Preservar reciclagem e transformação do porto sem criar ataque ou personagem jogável novo."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/o-porto-de-vidro.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-mercado-de-feras",
+    "nome": "Mercado de Feras",
+    "tipo": "estrutura",
+    "valores": [
+      "primitivum"
+    ],
+    "texto": "Suspenda: a primeira carta que você jogar neste turno custa 1 a menos.",
+    "arteDaCarta": "mercado-de-feras",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-mercado-de-feras.png",
+    "decisoesDaArte": [
+      "Primitivum atual substitui a magia roxo-sangue do catálogo.",
+      "A primeira carta do turno custa um a menos, incluindo tipos além de feitiços; não reduzir todas nem invocar feras gratuitamente."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/mercado-de-feras.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-estalagem-de-vau",
+    "nome": "Estalagem de Vau Grande",
+    "tipo": "estrutura",
+    "valores": [
+      "dominum"
+    ],
+    "texto": "Suspenda e pague 1: cure 2 de dano do seu Conjurador.",
+    "arteDaCarta": "estalajadeiro-de-vau-grande",
+    "quando": "ao resolver a ativação",
+    "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+    "alvo": "seu Conjurador",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-estalagem-de-vau.png",
+    "decisoesDaArte": [
+      "Dominum Estrutura suspende e paga um para curar dois do próprio Conjurador, sem cura de todos os clientes.",
+      "O estalajadeiro comum permanece morador da estrutura, sem converter sua ficha RPG em mago de ataque."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/estalajadeiro-de-vau-grande.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-vila-do-mesmo-dia",
+    "nome": "Vila do Mesmo Dia",
+    "tipo": "estrutura",
+    "valores": [
+      "eternyr"
+    ],
+    "texto": "Suspenda e pague 2: olhe as 3 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+    "arteDaCarta": "vila-do-mesmo-dia",
+    "quando": "ao resolver a ativação",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-vila-do-mesmo-dia.png",
+    "decisoesDaArte": [
+      "Eternyr Estrutura suspende e paga dois, olha três e escolhe uma; duas vão ao fundo.",
+      "Sombras e relógio são ambientação, sem turno extra ou regra de repetição do dia."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/vila-do-mesmo-dia.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  },
+  {
+    "id": "nv-floresta-que-anda",
+    "nome": "Floresta que Anda",
+    "tipo": "estrutura",
+    "valores": [
+      "primitivum"
+    ],
+    "texto": "Conta como 1 carta no Grau. Ao entrar: ganhe 1 de Arcano.",
+    "arteDaCarta": "floresta-que-anda",
+    "quando": "ao entrar em campo / gatilho",
+    "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+    "alvo": "nenhum",
+    "duracaoMs": "600–1200",
+    "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto",
+    "arte": "Arcanoclisma/arte/cartas-site/nv-floresta-que-anda.png",
+    "decisoesDaArte": [
+      "Árvores atravessam o vale em nova composição, sem reutilizar o recorte do catálogo.",
+      "Regra lida: conta como 1 carta no Grau e concede 1 Arcano ao entrar; não representa ataque nem ativação repetida.",
+      "Cor Primitivum em verde-musgo/âmbar, com céu e montanhas frios."
+    ],
+    "referenciasDaArte": [
+      {
+        "arquivo": "Arcanoclisma/arte/imagens/floresta-que-anda.png",
+        "papel": "Identidade do sujeito aprovado"
+      },
+      {
+        "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+        "papel": "Acabamento de cenário aprovado"
+      }
+    ]
+  }
+]

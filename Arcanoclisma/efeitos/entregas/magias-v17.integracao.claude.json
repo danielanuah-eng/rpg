@@ -1,0 +1,18 @@
+{
+  "versao": 1,
+  "data": "2026-10-04",
+  "entrega": "Arcanoclisma/efeitos/entregas/magias-v17.visual.json",
+  "estado": "integrado_e_conferido_no_navegador",
+  "ganchos": "online/public/js/mesa-ganchos.js chama resolver({ item, defId, origemEl, alvoEl, alvoRect, meu, resultado, evento })",
+  "resultado": "do registro do motor: \"<nome> resolve.\" => resolvido (\"Efeito sem alvo legal\" logo depois => semAlvo); \"<nome> foi anulada.\" => anulado; gatilho/habilidade: \"Efeito de <fonte> resolve.\"",
+  "evento": "carta => resolucao; item de efeito => habilidade (efeitos iguais aos da ativacao da carta) ou gatilho",
+  "defIdDeHabilidade": "a pilha guarda so o nome da fonte; o Claude acha a carta pelo nome no campo/itens/cemiterio",
+  "alvoPilha": "elDe e os retangulos tambem procuram na lateral (.mesa-direita), para o Anular",
+  "correcao": "em partidas locais o motor muda o mesmo objeto de estado: o antes agora e uma copia do desenho anterior (antes disso nenhum efeito tocava contra o bot/tutorial)",
+  "conferido": [
+    "base-dano-c1-repentina (conjurar, trajeto, impacto) no tutorial Como a pilha funciona",
+    "bal-devolver-c2-repentina e base-dano-c1 sem alvo: corretamente nao tocaram"
+  ],
+  "depuracao": "motivo de um efeito nao tocar sai no console em nivel debug (\"efeito nao tocou\")",
+  "pendente": "conferir visualmente mais cartas (alvo-pilha, ambos-campos, campo-proprio) em partidas reais"
+}

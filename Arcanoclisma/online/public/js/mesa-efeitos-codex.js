@@ -1,6 +1,7 @@
 // Contrato: efeitos/pedidos/mesa-efeitos-v1.claude.json.
 // Anima somente apresentação. Não paga custos, envia comandos, aplica dano ou decide alvos.
 import { RITMO_VISUAL, duracaoVisual } from './ritmo-visual-v13.js';
+import '../kit/efeitos/magias-v17.js';
 const centro = (r) => ({ x: r.left + r.width / 2, y: r.top + r.height / 2 });
 const rectDe = (el) => el?.isConnected ? el.getBoundingClientRect() : null;
 const valido = (r) => r && r.width > 0 && r.height > 0;
@@ -125,14 +126,45 @@ export function criarEfeitosMesa(raiz) {
   }
 
   // Cada magia exige arquivo específico aprovado. Não substituir pendências por efeitos genéricos.
-  async function resolver({ item, defId, origemEl, alvoEl, alvoRect, meu, resultado = item?.resultado }) {
+  async function resolver({ item, defId, origemEl, alvoEl, alvoRect, meu, resultado = item?.resultado, evento = item?.tipo === 'carta' ? 'resolucao' : 'habilidade', alvosRect, skinId }) {
     if (fechado || reduzido() || item?.anulado || item?.resultado === 'anulado') return ignorar('sem resolucao visual');
     if (!/^[a-z0-9-]+$/.test(defId ?? '')) return ignorar('carta sem ID visual');
     manifestoPromise ??= fetch('/kit/efeitos/manifesto.json').then((r) => r.ok ? r.json() : {}).catch(() => ({}));
     const manifesto = await manifestoPromise;
-    const visual = Object.hasOwn(manifesto, defId) ? manifesto[defId] : null;
+    const baseVisual = Object.hasOwn(manifesto, defId) ? manifesto[defId] : null;
+    const visual = skinId ? baseVisual?.skins?.[skinId] : baseVisual;
     if (fechado || visual?.okGpt !== true || !visual.arquivos?.length) return ignorar('asset particular aguardando entrega');
     if (resultado !== 'resolvido') return ignorar('resultado real da pilha nao informado');
+    if (visual.versao >= 17) {
+      if (!visual.gatilhosAceitos?.includes(evento)) return ignorar('evento diferente da habilidade ilustrada');
+      const caster = raiz.querySelector(`${meu ? '.lado-eu' : '.lado-op'} .conj-bloco .cm`);
+      const outro = raiz.querySelector(`${meu ? '.lado-op' : '.lado-eu'} .conj-bloco .cm`);
+      const campoMeu = raiz.querySelector(meu ? '.campo-eu' : '.campo-op');
+      const campoRival = raiz.querySelector(meu ? '.campo-op' : '.campo-eu');
+      const geometria = () => {
+        let origem = rectDe(origemEl) ?? rectDe(caster), destinos;
+        const alvo = rectDe(alvoEl) ?? alvoRect;
+        switch (visual.destino) {
+          case 'origem': destinos = [origem]; break;
+          case 'conjurador-proprio': destinos = [rectDe(caster)]; break;
+          case 'conjurador-rival': destinos = [rectDe(outro)]; break;
+          case 'campo-rival': destinos = [rectDe(campoRival)]; break;
+          case 'ambos-campos': destinos = [rectDe(campoMeu),rectDe(campoRival)]; break;
+          case 'campo-proprio': {
+            const tumulo = raiz.querySelector(`${meu ? '.lado-eu' : '.lado-op'} [data-zona="cemiterio"]`);
+            origem = rectDe(tumulo) ?? origem;
+            destinos = [alvo ?? rectDe(campoMeu)]; break;
+          }
+          default: destinos = alvosRect?.length ? alvosRect : [alvo];
+        }
+        return { origem, destinos };
+      };
+      const g = geometria();
+      if (!valido(g.origem) || g.destinos.some(r => !valido(r))) return ignorar('alvo confirmado sem geometria');
+      const execucao = globalThis.ArcanoclismaMagias.conjurar({ camada, visual, ...g, geometria });
+      ativos.add(execucao.cancelar);
+      return execucao.finished.finally(() => ativos.delete(execucao.cancelar));
+    }
     const arquivo = visual.arquivos[0];
     const prefixo = `/kit/efeitos/${defId}/`;
     const caminho = typeof arquivo === 'string' && arquivo.startsWith(prefixo) ? arquivo : prefixo + arquivo;

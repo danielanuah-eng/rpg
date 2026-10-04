@@ -17,24 +17,34 @@ export function criarGanchosMesa({ raiz, conteudo, eu }) {
   let efeitos = null; // módulo do GPT (opcional)
   if (DADOS.efeitosCodex) import('./mesa-efeitos-codex.js').then((m) => { efeitos = m.criarEfeitosMesa?.(raiz) ?? null; }, () => { efeitos = null; });
 
-  const elDe = (id) => (id ? conteudo.querySelector(`.cm[data-id="${CSS.escape(id)}"]`) : null);
+  // o tabuleiro primeiro; depois a lateral (cartas na pilha, alvo de Anular)
+  const elDe = (id) => (id ? conteudo.querySelector(`.cm[data-id="${CSS.escape(id)}"]`) ?? raiz.querySelector(`.mesa-direita .cm[data-id="${CSS.escape(id)}"]`) : null);
   const reduzido = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const chamar = (nome, dados) => { try { efeitos?.[nome]?.(dados); } catch (err) { console.error('efeito', nome, err); } };
+  // o motivo de um efeito não tocar fica no console (nível debug) para conferir a integração
+  const chamar = (nome, dados) => { try { Promise.resolve(efeitos?.[nome]?.(dados)).then((r) => { if (r && !r.realizado) console.debug('efeito não tocou', nome, dados.defId ?? '', r.motivo); }, (err) => console.error('efeito', nome, err)); } catch (err) { console.error('efeito', nome, err); } };
 
-  /** Antes de redesenhar: o que estava na mesa e na pilha. */
+  // Partida local: o motor muda o MESMO objeto de estado; por isso o "antes" é uma cópia tirada no fim do desenho anterior
+  // (sem isso, contra o bot e no tutorial a pilha nunca "mudava" e nenhum efeito de magia tocava).
+  let ultimo = null;
+  const retrato = (e) => ({
+    campo: new Set(e.jogadores.flatMap((z) => z.campo)),
+    pilha: new Map(e.pilha.map((p) => [p.id, { ...p }])),
+    combate: e.combate ? { ...e.combate } : null,
+    logTotal: e.logTotal ?? e.log.length,
+  });
+  /** Antes de redesenhar: o que estava na mesa e na pilha (no desenho anterior) e onde cada carta estava na tela. */
   function antes(e) {
-    if (!e) return null;
+    if (!e || !ultimo) return null;
     return {
-      campo: new Set(e.jogadores.flatMap((z) => z.campo)),
-      pilha: new Map(e.pilha.map((p) => [p.id, p])),
-      combate: e.combate ? { ...e.combate } : null,
-      rects: new Map([...conteudo.querySelectorAll('.cm[data-id]')].map((el) => [el.dataset.id, el.getBoundingClientRect()])),
+      ...ultimo,
+      rects: new Map([...raiz.querySelectorAll('.mesa-direita .cm[data-id]'), ...conteudo.querySelectorAll('.cm[data-id]')].map((el) => [el.dataset.id, el.getBoundingClientRect()])),
     };
   }
 
   /** Depois de redesenhar: dispara movimentos e efeitos dos acontecimentos novos. */
   function depois(e, anterior) {
     if (!e) return;
+    ultimo = retrato(e);
     const agora = performance.now();
     // ataque e bloqueio declarados (movimento genérico do GPT)
     const c = e.combate;
@@ -53,11 +63,31 @@ export function criarGanchosMesa({ raiz, conteudo, eu }) {
       if (anterior.campo.has(id)) continue;
       chamar('entrarEmCampo', { el: elDe(id), id, defId: e.instancias[id]?.defId, dono: e.instancias[id]?.dono, meu: e.instancias[id]?.dono === eu });
     }
-    // magia/efeito que saiu da pilha (resolveu ou foi anulado)
+    // magia/efeito que saiu da pilha: o resultado real vem do registro do motor (resolveu, foi anulada ou ficou sem alvo);
+    // os efeitos v17 do GPT só tocam com resultado "resolvido"
+    const total = e.logTotal ?? e.log.length;
+    const novas = e.log.slice(-Math.min(e.log.length, Math.max(0, total - anterior.logTotal)));
+    const resultadoDe = (p, nome) => {
+      if (p.tipo === 'carta' && novas.some((l) => l === `${nome} foi anulada.`)) return 'anulado';
+      const marca = p.tipo === 'carta' ? `${nome} resolve.` : `Efeito de ${p.fonte} resolve.`;
+      const k = novas.indexOf(marca);
+      if (k < 0) return p.tipo === 'carta' && novas.some((l) => l === `${nome} entra em campo.`) ? 'resolvido' : 'desconhecido';
+      return /sem alvo legal/.test(novas[k + 1] ?? '') ? 'semAlvo' : 'resolvido';
+    };
+    // evento do GPT (gatilhosAceitos): carta = "resolucao"; item de efeito = "habilidade" (ativação) ou "gatilho" (ao entrar, ao atacar...)
+    const eventoDe = (p, defId) => {
+      if (p.tipo === 'carta') return 'resolucao';
+      const at = DADOS.catalogo.cartas[defId]?.ativacao;
+      return at && JSON.stringify(at.efeitos) === JSON.stringify(p.efeitos) ? 'habilidade' : 'gatilho';
+    };
     for (const [pid, p] of anterior.pilha) {
-      if (e.pilha.some((x) => x.id === pid)) continue;
-      const defId = p.tipo === 'carta' ? e.instancias[p.instId]?.defId : null;
-      chamar('resolver', { item: p, defId, origemEl: elDe(p.instId ?? p.atacante), alvoEl: elDe(p.alvo), alvoRect: p.alvo ? anterior.rects.get(p.alvo) ?? null : null, meu: p.controlador === eu });
+      if (e.pilha.some((x) => x.id === pid) || p.tipo === 'ataque') continue;
+      // habilidade/gatilho: a pilha guarda só o nome da fonte; acha a carta (campo, itens ou cemitério do controlador)
+      const fonteId = p.tipo === 'carta' ? p.instId : [...e.jogadores[p.controlador].campo, ...e.jogadores[p.controlador].itens, ...e.jogadores[p.controlador].cemiterio, ...e.jogadores[1 - p.controlador].campo]
+        .find((x) => { const i = e.instancias[x]; return i && !i.ehConjurador && DADOS.catalogo.cartas[i.defId]?.nome === p.fonte; });
+      const defId = fonteId ? e.instancias[fonteId]?.defId ?? null : null;
+      const nome = p.tipo === 'carta' ? DADOS.catalogo.cartas[defId]?.nome : p.fonte;
+      chamar('resolver', { item: p, defId, origemEl: elDe(fonteId), alvoEl: elDe(p.alvo), alvoRect: p.alvo ? anterior.rects.get(p.alvo) ?? null : null, meu: p.controlador === eu, resultado: resultadoDe(p, nome), evento: eventoDe(p, defId) });
     }
     // colisão: o dano de combate acabou de acontecer (o combate terminou)
     if (anterior.combate && !e.combate && anterior.combate.etapa === 'bloqueado') {
