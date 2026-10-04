@@ -44,9 +44,9 @@ const campeoes: [string, string, string][] = [
 export const cartasColecao: CartaColecao[] = [
   ...campeoes.map(([v, arte, nome]) => aliado(`col-campeao-${v}`, arte, nome, [v], 3, 4, 5, { custoValores: [v], subtipos: ['Ser dos Planos'] })),
 
-  // Aliados simples (decisão 21: Aliado nunca é Repentina pelo tipo; antes estes dois entravam em resposta)
-  aliado('col-gato-de-navio', 'gato-de-navio', 'Gato de Navio', ['persona', 'primitivum'], 1, 1, 1, { subtipos: ['Fera'] }),
-  aliado('col-menina-raposa', 'menina-raposa', 'Menina Raposa', ['persona', 'sublimeyn', 'primitivum'], 2, 2, 2),
+  // Aliados com a palavra-chave Repentino (decisão 21: Aliado só entra fora da fase principal com Repentino no texto)
+  aliado('col-gato-de-navio', 'gato-de-navio', 'Gato de Navio', ['persona', 'primitivum'], 1, 1, 1, { subtipos: ['Fera'], palavrasChave: ['Repentino'] }),
+  aliado('col-menina-raposa', 'menina-raposa', 'Menina Raposa', ['persona', 'sublimeyn', 'primitivum'], 2, 2, 2, { palavrasChave: ['Repentino'] }),
   // Gatilhos ao entrar e ao causar dano de combate ao Conjurador
   aliado('col-ilusionista-do-labirinto', 'ilusionista-do-labirinto', 'Ilusionista do Labirinto', ['sublimeyn', 'persona'], 4, 2, 3, { aoEntrar: [{ tipo: 'devolver', alvo: 'escolhidoAliado' }] }),
   aliado('col-ceifadora-da-peste', 'ceifadora-da-peste', 'Ceifadora da Peste', ['morbidyum', 'dominum'], 6, 3, 4, { aoEntrar: [{ tipo: 'destruir', alvo: 'escolhidoAliado' }] }),

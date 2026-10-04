@@ -7,7 +7,7 @@
 //   fonte.ouvir(fn)    chama fn a cada mudança
 //   fonte.versao       número que cresce a cada mudança
 //   opcionais: fonte.chat(texto), fonte.desistir(), fonte.tutorial (dicas, destaques e travas), fonte.prazo(), fonte.conectados()
-import { defCarta, custoEfetivo, custoProtecao, origemDaCarta, grauEfetivo, recemChegado, ataqueConjurador, distribuicaoPadrao } from '/jogo/motor.js';
+import { defCarta, custoEfetivo, custoProtecao, origemDaCarta, grauEfetivo, recemChegado, ataqueConjurador, distribuicaoPadrao, ehRepentina } from '/jogo/motor.js';
 import { $, $$, esc, DADOS, VALOR, TIPO, textoCarta, janela, local, avisar, conj as conjDefDe } from './base.js';
 import { desenharCarta, modeloCarta, modeloConjurador } from './carta.js';
 import { criarMovimentosMesa } from './mesa-movimentos-codex.js';
@@ -154,7 +154,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   function podeJogar(id) {
     if (!tenhoPrioridade() || !origemDaCarta(e, EU, id)) return false;
     const d = def(id);
-    if (d.velocidade !== 'repentina' && !minhaJanela()) return false;
+    if (!ehRepentina(d) && !minhaJanela()) return false;
     if (d.grau > grauEfetivo(e, EU)) return false;
     if ((d.custoValores ?? []).some((v) => !z(EU).grau.some((g) => def(g).valores.includes(v)))) return false;
     return custoEfetivo(e, EU, id) <= potencial(id);
@@ -184,7 +184,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   /** Você tem alguma resposta agora (carta Repentina, habilidade Repentina ou ativação)? */
   function possoResponder() {
     const m = z(EU);
-    for (const id of [...m.mao, ...m.banimento, ...m.cemiterio]) if (def(id).velocidade === 'repentina' && podeJogar(id)) return true;
+    for (const id of [...m.mao, ...m.banimento, ...m.cemiterio]) if (ehRepentina(def(id)) && podeJogar(id)) return true;
     const at = conjDef(EU).poder?.ativacao;
     if (at?.repentina && podeAtivar(m.conjuradorId)) return true;
     for (const id of [...m.campo, ...m.itens]) { const a = ativacaoDe(id); if (a && !soArcano(a) && podeAtivar(id)) return true; }
@@ -943,7 +943,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     if (ev.type !== 'pointerup' || !sobre(x, y, a.toque ? '.lado-eu' : '.mesa-palco') || sobre(x, y, '.mao-faixa')) return voltar();
     if (!podeJogar(a.id)) {
       const d = def(a.id);
-      avisar(!tenhoPrioridade() ? 'Agora não é a sua vez de jogar.' : d.velocidade !== 'repentina' && !minhaJanela() ? 'Esta carta só entra na sua fase principal (sem nada na pilha).' : d.grau > grauEfetivo(e, EU) ? `Precisa de Grau ${d.grau}.` : 'Arcano insuficiente para os custos.', 'erro', 3500);
+      avisar(!tenhoPrioridade() ? 'Agora não é a sua vez de jogar.' : !ehRepentina(d) && !minhaJanela() ? 'Esta carta só entra na sua fase principal (sem nada na pilha).' : d.grau > grauEfetivo(e, EU) ? `Precisa de Grau ${d.grau}.` : 'Arcano insuficiente para os custos.', 'erro', 3500);
       return voltar();
     }
     if (a.toque && !(await confirmarToque(`Jogar ${def(a.id).nome}?`, 'Jogar'))) return voltar();

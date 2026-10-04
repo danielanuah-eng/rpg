@@ -7,6 +7,7 @@ export const PALAVRAS_CHAVE = [
     ['Repentina', 'Pode ser jogada a qualquer momento em que você tiver prioridade, inclusive em resposta a outra carta ou durante um ataque.'],
   ] },
   { grupo: 'Aliados', itens: [
+    ['Repentino', 'Aliado que pode ser jogado a qualquer momento em que você tiver prioridade (em resposta, até no turno do oponente). Sem Repentino, Aliado só entra na sua fase principal.'],
     ['Proficiente', 'Ataca e usa efeitos de suspender no mesmo turno em que entra em campo (os outros Aliados esperam um turno).'],
     ['Etéreo', 'Só pode ser bloqueado por Aliados Etéreos.'],
     ['Protegido N', 'Quem mirar esta carta com uma carta ou ativação paga N de Arcano a mais (a sua própria não paga).'],
@@ -48,6 +49,7 @@ export const PALAVRAS_CHAVE = [
 
 /** Lembrete curto (em itálico na carta) do que cada palavra-chave faz; pedido do autor, 04/10. */
 export const LEMBRETES = {
+  Repentino: 'este Aliado pode ser jogado em resposta, até no turno do oponente.',
   Proficiente: 'ataca e usa ativações no turno em que entra.',
   Etéreo: 'só Aliados Etéreos o bloqueiam.',
   Protegido: (n) => `mirar esta carta custa ${n} a mais ao oponente.`,

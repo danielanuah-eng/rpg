@@ -1,5 +1,5 @@
 // Jogador guloso para simulações. Não é forte: serve para expor quais mecânicas são usadas, ignoradas ou abusadas.
-import { ataqueConjurador, custoEfetivo, custoProtecao, origemDaCarta, defCarta, defConjurador, GRAU_MAXIMO, grauEfetivo, recemChegado } from '../src/motor.ts';
+import { ataqueConjurador, custoEfetivo, custoProtecao, origemDaCarta, defCarta, defConjurador, ehRepentina, GRAU_MAXIMO, grauEfetivo, recemChegado } from '../src/motor.ts';
 import type { CartaDef, Comando, Estado, Jogador } from '../src/tipos.ts';
 
 export interface Estilo {
@@ -214,7 +214,7 @@ function planejarJogada(e: Estado, j: Jogador, est: Estilo, apenasRepentinas: bo
   let melhor: { i: Intencao; custo: number; pitch: string[]; nota: number } | null = null;
   for (const id of candidatas(e, j)) {
     const d = defCarta(e, id);
-    const rep = d.velocidade === 'repentina' && d.tipo !== 'aliado'; // Aliado nunca é Repentina pelo tipo (decisão 21)
+    const rep = ehRepentina(d); // Aliado só com a palavra-chave Repentino (decisão 21)
     if (apenasRepentinas && !rep) continue;
     if (!apenasRepentinas && rep && est.reservaInstantes) continue;
     if (d.grau > grauEfetivo(e, j) || (d.descartaGrau ?? 0) > z.grau.length) continue;
@@ -562,7 +562,7 @@ export function decidir(e: Estado, j: Jogador, est: Estilo): Comando {
     }
     let reserva = 0;
     if (est.reservaInstantes) {
-      const custos = z.mao.map((id) => defCarta(e, id)).filter((d) => d.velocidade === 'repentina' && d.tipo !== 'aliado' && d.grau <= z.grau.length).map((d) => d.custo);
+      const custos = z.mao.map((id) => defCarta(e, id)).filter((d) => ehRepentina(d) && d.grau <= z.grau.length).map((d) => d.custo);
       if (custos.length && Math.min(...custos) <= z.grau.length) reserva = Math.min(...custos);
     }
     return planejarDesconto(e, j, est) ?? planejarJogada(e, j, est, false, undefined, reserva) ?? planejarAtivacao(e, j, est) ?? planejarAtaque(e, j, est) ?? planejarAtaqueConj(e, j, est) ?? passar;

@@ -44,6 +44,14 @@ function novaInst(e: Estado, defId: string, dono: Jogador, ehConjurador: boolean
 
 // ---------- consultas ----------
 
+/**
+ * A carta pode ser jogada a qualquer momento com prioridade? Temporárias, Místicas e Estruturas: velocidade Repentina.
+ * Aliado nunca é Repentina pelo tipo (decisão 21); só entra fora da fase principal com a palavra-chave Repentino no texto.
+ */
+export function ehRepentina(d: CartaDef): boolean {
+  return d.tipo === 'aliado' ? !!d.palavrasChave?.includes('Repentino') : d.velocidade === 'repentina';
+}
+
 export function defCarta(e: Estado, instId: string): CartaDef {
   const inst = e.instancias[instId];
   if (!inst || inst.ehConjurador) falha(`Não é uma carta: ${instId}`);
@@ -149,7 +157,7 @@ export function custoEfetivo(e: Estado, j: Jogador, id: string): number {
   const p = defConjurador(e, j).poder;
   let menos = 0;
   if (p?.primeiraCartaMaisBarata && !e.habUsos[j].carta) menos += p.primeiraCartaMaisBarata;
-  if (p?.primeiraRepentinaMaisBarata && d.velocidade === 'repentina' && !e.habUsos[j].repentina) menos += p.primeiraRepentinaMaisBarata;
+  if (p?.primeiraRepentinaMaisBarata && ehRepentina(d) && !e.habUsos[j].repentina) menos += p.primeiraRepentinaMaisBarata;
   if (e.habUsos[j].desconto && !e.habUsos[j].carta) menos += e.habUsos[j].desconto;
   if (e.jogadores[j].banimento.includes(id)) menos += e.instancias[id].descontoBanimento;
   return Math.max(0, d.custo - menos);
@@ -851,9 +859,9 @@ function jogarCarta(e: Estado, c: Extract<Comando, { tipo: 'jogar' }>): void {
   if (!origem) falha('A carta não está na sua mão (nem pode ser jogada de outra zona agora).');
   const d = defCarta(e, c.carta);
   const z = e.jogadores[c.jogador];
-  // Unidade (Aliado) nunca é Repentina pelo tipo: só entra na sua fase principal, com a pilha vazia (decisão 21).
-  if ((d.velocidade === 'findante' || d.tipo === 'aliado') && !janelaFindante(e, c.jogador))
-    falha(d.tipo === 'aliado' ? 'Aliado: só na sua fase principal, com a pilha vazia.' : 'Carta findante: só na sua fase principal, com a pilha vazia.');
+  // Aliado só entra fora da fase principal com a palavra-chave Repentino (decisão 21).
+  if (!ehRepentina(d) && !janelaFindante(e, c.jogador))
+    falha(d.tipo === 'aliado' ? 'Aliado sem Repentino: só na sua fase principal, com a pilha vazia.' : 'Carta findante: só na sua fase principal, com a pilha vazia.');
   if (grauEfetivo(e, c.jogador) < d.grau) falha(`Precisa de Grau ${d.grau} (você tem ${grauEfetivo(e, c.jogador)}).`);
   for (const v of d.custoValores ?? []) {
     if (!z.grau.some((id) => defCarta(e, id).valores.includes(v))) falha(`Precisa de uma carta de ${v} no Grau.`);
@@ -869,7 +877,7 @@ function jogarCarta(e: Estado, c: Extract<Comando, { tipo: 'jogar' }>): void {
   pagarCusto(e, c.jogador, custo, c.enviarArcano ?? [], reserva);
   e.habUsos[c.jogador].carta = true;
   e.habUsos[c.jogador].desconto = 0;
-  if (d.velocidade === 'repentina' && d.tipo !== 'aliado') e.habUsos[c.jogador].repentina = true;
+  if (ehRepentina(d)) e.habUsos[c.jogador].repentina = true;
   for (const id of descarte) {
     tirar(z.grau, id);
     z.cemiterio.push(id);

@@ -12,6 +12,7 @@ const cartas: CartaDef[] = [
   { ...base, id: 'escudeiro', nome: 'Escudeiro', tipo: 'aliado', ataque: 2, vida: 2, palavrasChave: ['Proficiente'] },
   { ...base, id: 'torre', nome: 'Torre', tipo: 'estrutura', vida: 5 },
   { ...base, id: 'raposa', nome: 'Raposa', tipo: 'aliado', velocidade: 'repentina', ataque: 1, vida: 1 },
+  { ...base, id: 'gato', nome: 'Gato', tipo: 'aliado', ataque: 1, vida: 1, palavrasChave: ['Repentino'] },
   { ...base, id: 'nada', nome: 'Nada', tipo: 'temporaria', efeitos: [{ tipo: 'comprar', valor: 0 }] },
 ];
 const regras: Partial<Regras> = { primeiroSemGrauNoTurno1: false };
@@ -114,12 +115,15 @@ test('não se declara bloqueio de ataque a um Aliado', () => {
   assert.throws(() => executar(e, { tipo: 'bloquear', jogador: 1, bloqueadores: [alvo] }));
 });
 
-test('Aliado nunca é Repentina pelo tipo: só entra na fase principal com a pilha vazia', () => {
+test('Aliado nunca é Repentina pelo tipo; só entra fora da fase principal com a palavra-chave Repentino', () => {
   const e = criar();
   const r = poe(e, 1, 'raposa', 'mao');
+  const g = poe(e, 1, 'gato', 'mao');
   passar(e); // o jogador 1 recebe prioridade na fase principal do jogador 0
   assert.equal(e.prioridade, 1);
   assert.throws(() => executar(e, { tipo: 'jogar', jogador: 1, carta: r }), /fase principal/);
+  executar(e, { tipo: 'jogar', jogador: 1, carta: g });
+  assert.equal(e.pilha.at(-1)?.tipo, 'carta');
 });
 
 test('o Conjurador que bloqueou só levanta no Final do dono (regra conjuradorLevantaNoInicio desligada)', () => {

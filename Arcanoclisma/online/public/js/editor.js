@@ -144,8 +144,8 @@ export async function telaEditor(tela, partes, ctx) {
       ${conjur
         ? `<label class="campo">Comprometimento<select data-f="comprometimento">${COMPROMETIMENTOS.map((x) => `<option ${x === c.comprometimento ? 'selected' : ''}>${esc(x)}</option>`).join('')}</select></label>`
         : c.tipo === 'aliado'
-        ? `<label class="campo">Velocidade<select data-f="velocidade" disabled><option value="findante" selected>Findante (todo Aliado; Repentina só como parte de um efeito)</option></select></label>
-           <label class="campo">Palavras-chave (separadas por vírgula)<input type="text" data-f="palavrasChave" value="${esc((c.palavrasChave ?? []).join(', '))}" placeholder="Proficiente, Etéreo"></label>
+        ? `<label class="campo">Velocidade<select data-f="velocidade" disabled><option value="findante" selected>Findante (para entrar a qualquer momento, palavra-chave Repentino)</option></select></label>
+           <label class="campo">Palavras-chave (separadas por vírgula)<input type="text" data-f="palavrasChave" value="${esc((c.palavrasChave ?? []).join(', '))}" placeholder="Proficiente, Etéreo, Repentino"></label>
            <label class="campo">Subtipos (separados por vírgula)<input type="text" data-f="subtipos" value="${esc((c.subtipos ?? []).join(', '))}"></label>`
         : `<label class="campo">Velocidade<select data-f="velocidade"><option value="findante" ${c.velocidade === 'findante' ? 'selected' : ''}>Findante (na sua fase principal)</option><option value="repentina" ${c.velocidade === 'repentina' ? 'selected' : ''}>Repentina (a qualquer momento)</option></select></label>
            <label class="campo">Palavras-chave (separadas por vírgula)<input type="text" data-f="palavrasChave" value="${esc((c.palavrasChave ?? []).join(', '))}" placeholder="Proficiente, Etéreo"></label>
@@ -203,12 +203,17 @@ export async function telaEditor(tela, partes, ctx) {
       novo[k] = ['palavrasChave', 'subtipos'].includes(k) ? el.value.split(',').map((x) => x.trim()).filter(Boolean) : el.value;
     }
     const avisoAuto = [];
-    // Aliado nunca é Repentina pelo tipo, subtipo ou palavra-chave (decisão 21); só como parte de um efeito
+    // Aliado nunca é Repentina pelo tipo ou subtipo (decisão 21); para entrar fora da fase principal, a palavra-chave Repentino
     if (!conjur && base.tipo === 'aliado') {
       novo.velocidade = base.velocidade === 'repentina' ? 'findante' : base.velocidade;
-      for (const k of ['palavrasChave', 'subtipos']) {
+      if (novo.palavrasChave.some((x) => /^repentin[ao]$/i.test(x) && x !== 'Repentino')) {
+        novo.palavrasChave = novo.palavrasChave.map((x) => (/^repentin[ao]$/i.test(x) ? 'Repentino' : x));
+        $('[data-f="palavrasChave"]', form).value = novo.palavrasChave.join(', ');
+        avisoAuto.push('Em Aliado a palavra-chave é "Repentino".');
+      }
+      for (const k of ['subtipos']) {
         const sem = novo[k].filter((x) => !/^repentin/i.test(x));
-        if (sem.length !== novo[k].length) avisoAuto.push('Aliado não pode ser Repentina (só como parte de um efeito): tirei "Repentina" de ' + (k === 'subtipos' ? 'subtipos' : 'palavras-chave') + '.');
+        if (sem.length !== novo[k].length) avisoAuto.push('Aliado não pode ser Repentina no subtipo: tirei. Para entrar fora da fase principal, use a palavra-chave Repentino.');
         if (sem.length !== novo[k].length) $(`[data-f="${k}"]`, form).value = sem.join(', ');
         novo[k] = sem;
       }
