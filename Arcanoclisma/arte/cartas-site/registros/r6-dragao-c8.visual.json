@@ -1,0 +1,58 @@
+{
+  "id": "r6-dragao-c8",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-7bbc30e0-b5ad-4228-b8eb-af1b49c8d198.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/r6-dragao-c8.txt",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/arte/imagens/dragao-anciao.png",
+  "referenciaJogoAtual": "Arcanoclisma/online/public/arte/dragao-anciao.webp",
+  "textoRegraLido": "Etéreo. Protegido 1. Ao entrar: cause 2 de dano a cada Aliado do oponente.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/dragao-anciao.png",
+      "papel": "identidade original aprovada"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento liso aprovado"
+    }
+  ],
+  "decisoes": [
+    "Dragão ancião em voo baixo, duas patas dianteiras visíveis, boca fechada e pupilas legíveis.",
+    "Vale habitado com moinho em manhã de tempestade, sem reutilizar pose sentada ou fundo branco.",
+    "Chegada atinge três aliados rivais com duas ondas discretas; Conjurador rival permanece sem dano.",
+    "Etherealidade discreta em bordas, poucos espinhos e imponente anatomia; brilho de acabamento contido no corpo e magia."
+  ],
+  "avaliacaoVisual": "Voo em diagonal com duas mãos/garras dianteiras, focinho quadrangular fechado, olhos legíveis; nova cena de vale e magia focal sem fundo estourado.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/r6-dragao-c8.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "6da6a72acfc3a5b668dc59ec00d1711d9a28787d65116427fe641599bcda2806",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "lendaria",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

@@ -1,0 +1,27 @@
+{
+  "id": "r6-mercador-c7",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/online/public/arte/arquivista-sem-rosto.webp",
+  "textoRegraLido": "Etéreo. Protegido 2. Ao entrar: compre 1 carta. Ao causar dano de combate ao Conjurador inimigo: compre 1 carta.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/arquivista-sem-rosto.png",
+      "papel": "identidade da criatura existente"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento liso aprovado; referência de estilo"
+    }
+  ],
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-01c5eb41-a1ec-4d06-b3ce-de30450ea252.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nARQUIVISTA SEM ROSTO source identity: hooded human-shaped faceless keeper, deep NAVY layered robes with torn CREAM parchment-like streamers, red wax seals and gold/bronze round pauldrons/buckles, black gloved hands, one navy-bound bronze-edged book and glowing INDIGO quill. Face is entirely darkness under hood, NO human features, eyes or mask face suddenly added. TWO human arms and TWO legs only, no extra floating quill hands.\nNEW pose/event/environment: late sunny AFTERNOON at a modest high desert waystation that archives travelers' memories, not a vast repeat library or ornate cathedral. Smooth warm terracotta adobe, shaded open wooden shelf with rolled maps, quiet large matte pale cloth roof and flat peach-pink dune horizon, one indigo glass window. Camera above simple table at slight diagonal, watching keeper emerge floating through doorway in THREE-QUARTER BACK view facing left, head turns slightly back so dark face recess remains recognizable. Both feet off ground and lower cloth mildly etheric; one gloved hand holds its book CLOSED against hip and the other gloved hand lifts the indigo quill to guide ONE single blue-white parchment leaf into its open travel satchel. Not source writing in the open book with arms forward. One leaf only signifies draw1 on entry; another draw1 on later combat is a separate trigger, no two simultanous drawn cards implied.\nA discreet indigo broken veil remains close to its mantle, while a small opposing caster at the doorway hesitates with TWO small subdued Arcano lights held close together in one palm, visually suggesting an EXTRA payment to target this keeper. PROTEGIDO2 means targeting it costs the opponent 2 additional Arcano, not immunity or canceling incoming spells. No blocked or deflected projectile. A rival small adult silhouette in doorway with two arms/two legs, ordinary dusty gray clothes no flamboyant ornament, no attack motion from keeper, no new rule text. Protect context optional subtle, no large glowing shield or prison. Etéreo4/7, protected2, draw1 on entry and on combat damage to enemy Conjurador; no invented mechanical extras.\nRARE silver/violet finely reflective finish on selected actual bronze armor edges, navy book panels and indigo magic fibers, NO legendary gold/rainbow sparkle, environment gold remains muted clay not shining sand. Single coherent new environmental painting, smoother materials with creature's parchment streamers naturally in wind; full opaque scene at every edge.",
+  "decisoes": [
+    "Troca por posto de mapas em adobe à tarde; livro fechado no quadril, um único pergaminho entrando na bolsa.",
+    "Protegido 2 representado como custo adicional de duas pequenas luzes de Arcano para o rival; sem bloquear nem anular magia.",
+    "Criatura sem rosto, trajes de pergaminho, lacres vermelhos, livro e pena preservados em nova pose.",
+    "Acabamento cosmético conservado na ilustração; sem aplicação automática de raridade no app."
+  ],
+  "avaliacaoVisual": "Cena integrada com livro/pena e folha única; rosto sem feições preservado, postura flutuante de lado, rival com duas pequenas esferas; sem projétil anulado."
+}

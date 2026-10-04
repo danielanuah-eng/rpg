@@ -20,7 +20,7 @@
     "Contrato recebido de efeitos/pedidos/mesa-efeitos-v1.claude.json; Claude reconstrói para atualizar DADOS.efeitosCodex.",
     "O hook atual considera qualquer saída da pilha uma resolução, inclusive anulação. Claude deve passar resultado:'resolvido' apenas para resolução real (ou item.resultado com o mesmo valor); resultado não informado ou anulado não produz efeito de resolução.",
     "O módulo conserva snapshots de cartas já visíveis para colisões mesmo quando uma delas sai de campo; sem snapshot/rect válido retorna motivo, sem inventar uma face.",
-    "As imagens particulares das 88 resoluções seguem pendentes; manifesto vazio não declara aprovação nem fornece efeitos genéricos.",
+    "O pedido atualizado contempla 132 resoluções e 70 colisões. As imagens particulares das resoluções seguem pendentes; manifesto vazio não declara aprovação nem fornece efeitos genéricos.",
     "Codex limitou .campo do CSS v10 a .mesa .campo conforme pedido de Claude, evitando alterar campos do editor."
   ],
   "pushAutorizado": true

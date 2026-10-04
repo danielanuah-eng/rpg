@@ -1,0 +1,54 @@
+{
+  "id": "item-canal-lamina",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-5c6e00ac-deb0-495d-94d2-30e7fc3743e4.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-canal-lamina.txt",
+  "baseInspecionada": false,
+  "baseVisualExistente": false,
+  "motivoSemBase": "Pedido de Claude declara item sem arte de referência; design novo a partir da descrição autorizada.",
+  "descricaoLida": true,
+  "imagemBaseInspecionada": null,
+  "textoRegraLido": "Canal. Arma: Ataque 2.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento liso aprovado, não identidade do objeto ou pessoa"
+    }
+  ],
+  "decisoes": [
+    "Espada curta original em Bronze Arco com lâmina larga, intertravada em três planos e perfil assimétrico.",
+    "Nova mulher viajante sardenta de cabelos curtos ondulados e têmpora raspada, desembainhando no cais ao amanhecer.",
+    "Objeto integrado à ação e ambiente, dois braços, uma espada e uma bainha; runas geométricas sem letras legíveis."
+  ],
+  "avaliacaoVisual": "Lâmina modular singular, bronze e quatro marcas luminosas, mãos e bainha coerentes, direção de olhar baixa e cenário portuário de manhã.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-canal-lamina.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "40bbbc7d8046c8dda42fb12d71d9f65387f91641557ce2a4b73d90e9f3cd1063",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

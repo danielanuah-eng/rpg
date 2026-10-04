@@ -1,0 +1,25 @@
+{
+  "id": "item-armadura-gibao",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-39ef018f-5942-40d6-a961-d22d93919d21.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\n\nCARD ART — GIBÃO DE COURO. Supplied picture is STYLE only; design new item from authorized description: a patched PADDED LEATHER DOUBLET with small Bronze Arco shoulder plates. Item — Armadura; defense1 and wear life4. Armor is modest everyday protective equipment, not full plate cuirass, fantasy royal armor, enormous pauldron or a glowing magic forcefield. Warm matte chestnut/cocoa leather, rectangular padded stitches, three practical repair patches and a rubbed fastening belt, two modest bronze caps at shoulders. No printed numbers. Generic item, game frame grey and rarity unassigned; no foil.\nNEW person: broad stocky EAST-ASIAN-LOOKING adult man with square face, thick eyebrows, short straight black hair with one white lock, clean-shaven, sturdy body, wearing grey-blue shirt beneath the leather vest and ordinary charcoal trousers. THREE-QUARTER SIDE medium close view from slightly below his chest. Torso in foreground CENTER, turning sharply to his LEFT, both bent arms present: near forearm pulled tight against chest and far hand holds a plain small pack strap. New alert wide eyes looking OFF RIGHT, brief tense teeth-clenched expression, not an elegant mage posing or a copied conjurador. ONE small ordinary arrow strikes/grazes the left BRONZE SHOULDER PLATE obliquely and flies away, just a couple subdued material contact sparks and scuff, no gore/no wound. The padding and stitched leather remain well visible; depict protective material doing its job but no immunity/magic reflector, no added rule. Arrow shooter offscreen so it is not a big crowded event.\nScene RAINY NIGHT in an inhabited covered produce-market lane, ordinary wooden stalls with muted aubergines and squash, clay wall, closed dark navy shop shutter and copper lantern sheltered under awning. Small cool-blue rain visible at street opening behind man, warm lantern falls softly on leather seams only, background quiet plum/indigo and grey rather than resplendent gold. Foreground torso/item clarity dominates, bench and roof supports give genuine depth. No broken cataclysm temple, library, parade palace or storm-of-colored-orbs background. Smooth broad leather/fabric/wood shading with a few purposeful worn seams, not gritty impasto. Figure is within believable environment, lower text area simpler. One full opaque integrated NEW card illustration, not pasted cutout, no text/UI/card frame.",
+  "baseInspecionada": false,
+  "baseVisualExistente": false,
+  "motivoSemBase": "Item sem arte prévia no pedido; design novo a partir da descrição autorizada.",
+  "descricaoLida": true,
+  "imagemBaseInspecionada": null,
+  "textoRegraLido": "Armadura. Defesa 1, desgaste 4.",
+  "velocidade": "findante",
+  "valoresLidos": [],
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento liso aprovado, não copiar personagens"
+    }
+  ],
+  "decisoes": [
+    "Gibão remendado de couro acolchoado com pequenas placas de Bronze Arco nos ombros.",
+    "Novo homem corpulento de feições asiáticas e mecha branca, reação de alerta ao impacto de flecha no ombro.",
+    "Mercado habitado numa noite chuvosa, proteção material e brilho de contato pequeno, sem escudo mágico ou habilidade extra."
+  ],
+  "avaliacaoVisual": "Couro, costuras e remendos claros; dois braços coerentes e expressão distinta; flecha faz contato com placa, sem ferida gráfica."
+}

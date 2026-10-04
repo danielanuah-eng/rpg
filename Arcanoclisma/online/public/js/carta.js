@@ -41,7 +41,7 @@ export function modeloCarta(defId) {
   const v = DADOS.visual[defId] ?? {};
   return {
     id: defId, nome: d.nome, tipo: d.tipo, valores: (d.valores ?? []).map((x) => VALOR[x] ?? x), custo: d.custo, grau: d.grau, arcanoGerado: d.arcanoGerado,
-    ataque: d.tipo === 'aliado' || d.categoriaItem === 'canal' ? d.ataque ?? 0 : d.ataque, vida: d.vida, texto: d.texto, subtipos: d.subtipos,
+    ataque: d.tipo === 'aliado' ? d.ataque ?? 0 : d.ataque, vida: d.vida, texto: d.texto, subtipos: d.subtipos,
     categoriaItem: d.categoriaItem, defesa: d.defesa, vidaDesgaste: d.vidaDesgaste, velocidade: d.velocidade,
     // arte final do GPT (cena inteira, aprovada por ele) quando existe; senão, a arte do RPG recortada sobre um cenário
     ...(DADOS.artesFinais?.[defId] && !(EDICOES_ARTE.cartas?.[defId])

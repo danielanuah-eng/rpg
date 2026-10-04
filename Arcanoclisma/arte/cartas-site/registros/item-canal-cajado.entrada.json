@@ -1,0 +1,24 @@
+{
+  "id": "item-canal-cajado",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-74a26f85-72f7-4537-8c35-cc0bd58efded.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\n\nCARD ART — CAJADO DE APRENDIZ. The provided reference is ONLY the approved smooth painting style, not a person to reuse. NO pre-existing object image exists; invent its visual design consistently with this authorized description: simple pale wood apprentice staff, worn from practice, small Bronze Arco cap and very faint little geometric glowing runes. Long staff, not ornate scepter, branch maze, huge crystal or wand. Card Item — Canal; Arma attack1, no extra healing/draw or made-up ability. Generic equipment, game frame grey, no rarity foil.\nNEW scene: quiet upper-floor training courtyard on an ordinary pastel-blue tile roof, late AFTERNOON after rain. CLOSE OVERHEAD viewpoint of a new left-handed apprentice girl's hands, lower shoulder/back and instrument; her face is turned away and largely cropped. She has dark brown skin, a short tightly curled reddish-brown hair tuft, sturdy practical moss-green long-sleeved jacket with rolled cuffs and plum trousers, not Ciantia or another existing hero. Both hands grip ONE single staff at two points, moving it HORIZONTALLY across a simple hanging practice pad; one padded impact, no explosion. Wood shaft runs DIAGONAL lower-left to upper-right and is most prominent, clear Bronze Arco cap at top-right; tiny worn runes near cap barely shine. Two small shallow nicks and rubbed grip, smooth wood grain accents only, finger counts correct. A second tiny distant elderly male attendant with tan skin and white braid leans at roof stair in plain beige apron, observes patiently, not another casting mage. Full integrated quiet setting: small training pad suspended from timber rail, wet blue tiled floor reflecting diffuse sky, clay pot with rosemary, folded cloth and a plain wooden bench. No cathedral, battlefield rubble, dramatic sky split or portal. Low distant sun diffused behind grey clouds, soft cool ambient, warm wood and bronze focal without gold glare. Item genuinely in use and foreground, broader house roof milieu visible, lower third calm for later text. Matte smooth broad materials, soft painted volume, good detail at card scale, complete opaque scene, no lettering, card border, isolated transparent equipment or pasted cutout.",
+  "baseInspecionada": false,
+  "baseVisualExistente": false,
+  "motivoSemBase": "Pedido de Claude declara item sem arte de referência; design novo a partir da descrição autorizada.",
+  "descricaoLida": true,
+  "imagemBaseInspecionada": null,
+  "textoRegraLido": "Canal. Arma: Ataque 1.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento liso aprovado, não identidade do objeto ou pessoa"
+    }
+  ],
+  "decisoes": [
+    "Cajado simples de madeira clara e Bronze Arco usado em treino com almofada suspensa.",
+    "Nova aprendiz de pele escura, cabelo curto cacheado avermelhado, mão e costas em primeiro plano; tutor idoso distante.",
+    "Terraço de treino molhado após chuva; runas muito discretas; sem batalha devastada genérica."
+  ],
+  "avaliacaoVisual": "Madeira e ponteira legíveis, duas mãos no mesmo cajado, uso em treino tranquilo com cenário completo; personagem distinto e brilho pequeno."
+}

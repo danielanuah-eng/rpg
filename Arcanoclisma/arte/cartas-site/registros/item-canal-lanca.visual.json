@@ -1,0 +1,55 @@
+{
+  "id": "item-canal-lanca",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-cd17a4ef-d9c3-41eb-adf3-41826570670b.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-canal-lanca.txt",
+  "baseInspecionada": false,
+  "baseVisualExistente": false,
+  "motivoSemBase": "Item sem arte prévia no pedido; design novo a partir da descrição autorizada.",
+  "descricaoLida": true,
+  "imagemBaseInspecionada": null,
+  "textoRegraLido": "Canal. Arma: Ataque 3.",
+  "velocidade": "findante",
+  "valoresLidos": [],
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento liso aprovado, não copiar personagens"
+    }
+  ],
+  "decisoes": [
+    "Lança enorme com crescente negro de borda dourada, em confronto não gráfico numa comporta de inverno.",
+    "Homem de trança visto pelas costas, pernas abertas e dois braços em posições distintas; arma maior que o portador.",
+    "Luz focal na borda, ambiente frio de dia; sem cataclisma genérico ou novo efeito mecânico."
+  ],
+  "avaliacaoVisual": "Crescente escuro legível e haste longa em diagonal, duas mãos e postura de combate; escala da arma grande, cenário nevado completo.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-canal-lanca.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "37511d15031f6dd1b43757156e4906de2dfd3afa0b1fa7c2ccc3d8db13882be1",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

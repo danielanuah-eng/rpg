@@ -1,0 +1,28 @@
+{
+  "id": "r6-dragao-c8",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-7bbc30e0-b5ad-4228-b8eb-af1b49c8d198.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\n\nCARD ART — DRAGÃO ANCIÃO, existing wise patient dragon, FIRST image defines anatomy/colors. Rules read: Etéreo; Protegido1; on entering deal TWO damage to EACH opposing Ally. 7/10, cost8 degree7. Preserve rusty-red/terracotta scales, cream plated belly, heavy powerful muscular torso and broad shoulders, long neck subtly bent FORWARD, short QUADRANGULAR crocodilian snout with CLOSED mouth and small numerous teeth at seam, deep amber eyes with clearly visible dark pupils, ancient subtle scars, swept cream horns and FEW modest spines. EXACTLY TWO forearms, TWO hind legs, TWO separate membrane wings and ONE tail. Not a wyvern; don't hide or omit a forearm. No fuzzy beard, coral spikes, fire mane, goofy round face or gold/purple replacement body.\nNEW motion: immense dragon gliding LOW SIDEWAYS across a pine-covered terrace valley, viewer from a farmer's elevated wooden veranda at MID height, three-quarter SIDE facing LEFT with head angled DOWN to watch below, body in a clear sloping diagonal leftward. Both muscular forearms reach slightly FORWARD beneath the chest, spaced and visible, one nearer claw relaxed and far claw also unmistakably shown. Both rear feet trail beneath belly, near wing sweeps high and far wing is foreshortened but separate; tail curves BACK right in one slow arc. Closed mouth, wise calm patient expression, weight and majesty in anatomy, not wild roar. Etéreo means faintly softened lower limb edges and a few transparent seams in wing, not turning all its face/body into colored energy.\nScene: STORMY LATE MORNING, cool slate-blue cloud cover with one small distant lightning stroke, muted pine-green stepped hillside, smooth matte terraced clay roofs of a inhabited mill hamlet far below, wind bends two broad pine branches, foreground veranda rail/book crate quiet at bottom. Avoid repeated library/lighthouse/arch/portal background. Dragon fills 65–75% height, scene clear but subdued, full scene all the way to image edges. On its arrival a SINGLE gentle rusty-amber/moss arc flows along valley road below and touches THREE small opponent Allies in separated positions (shielded human guard, cloaked skeletal undead with no gore, ordinary small horned beast); TWO restrained ripples per impact indicate modest damage2. Enemy Conjurador farther up path remains untouched. No fire breath or huge glowing explosion, no damage to friendly characters. A single faint small Arcano mote held by distant opponent caster hints at the extra targeting cost1, never a shield reflecting magic.\nLegendary finish design retained as small gold/rainbow reflective notes INSIDE a few scale planes, wing veins and the restrained arrival magic; not on the whole landscape, not armor plating, a ring around picture, or blinding golden scenery. Game keeps rarity unassigned until the author chooses. Painted volume, smooth materials, natural ruggedness only a few purposeful accents; much less rough scenographic texture. One coherent NEW painting, no copy-paste body from reference, no lettering/card frames or background transparency.",
+  "baseInspecionada": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "Arcanoclisma/arte/imagens/dragao-anciao.png",
+  "referenciaJogoAtual": "Arcanoclisma/online/public/arte/dragao-anciao.webp",
+  "textoRegraLido": "Etéreo. Protegido 1. Ao entrar: cause 2 de dano a cada Aliado do oponente.",
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/dragao-anciao.png",
+      "papel": "identidade original aprovada"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento liso aprovado"
+    }
+  ],
+  "decisoes": [
+    "Dragão ancião em voo baixo, duas patas dianteiras visíveis, boca fechada e pupilas legíveis.",
+    "Vale habitado com moinho em manhã de tempestade, sem reutilizar pose sentada ou fundo branco.",
+    "Chegada atinge três aliados rivais com duas ondas discretas; Conjurador rival permanece sem dano.",
+    "Etherealidade discreta em bordas, poucos espinhos e imponente anatomia; brilho de acabamento contido no corpo e magia."
+  ],
+  "avaliacaoVisual": "Voo em diagonal com duas mãos/garras dianteiras, focinho quadrangular fechado, olhos legíveis; nova cena de vale e magia focal sem fundo estourado."
+}

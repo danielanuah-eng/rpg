@@ -1,5 +1,7 @@
 # Colaboração neste repositório
 
+- Fila visual atual: 210 artes (151 iniciais mais 59 novas solicitadas pelo Claude para a variedade pedida pelo autor), em `Arcanoclisma/arte/cartas-site/fila.json`. Priorizar as pendências do lote inicial e depois o pedido `cartas/pedidos/lote-site-v2.claude.json`; consultar dados atuais e a fonte de cada item. A meta de avaliação continua sendo **toda a fila**, conforme o autor; instruções de avaliar a cada cinco artes no briefing de Claude não substituem essa escolha. Os 132 efeitos particulares de resolução têm pedido e estado de entrega separados.
+
 - Direção mais recente do autor: Codex ajusta apenas arte, templates, movimentação e animações. Seguir `coordenacao/site-online/VALORES-E-RARIDADE-03-10.md`. Raridade fica sem aplicação automática no app, mas brilhos, texturas e animações são preservados para escolha do autor. Equipamentos genéricos podem ser cinza; demais cartas têm Valor. Push de todas as imagens foi explicitamente reafirmado; publicar entregas prontas com seu estado real de revisão.
 
 - Autorização atual do autor, 03/10/2026: push automático das entregas concluídas deste trabalho e integração com o Claude. Prioridade: refazer as 151 artes do jogo atual, lendo cada imagem base e descrição, em cenas novas e integradas. A expansão A Mestra dos Dragões tem 90 cartas e aguarda essa revisão; inclusão em jogo e alteração de suas cartas seguem bloqueadas até liberação específica do autor. Detalhes de interação em `coordenacao/site-online/INTERACOES-E-NITIDEZ.md`.

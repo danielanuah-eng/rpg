@@ -1,0 +1,55 @@
+{
+  "id": "item-armadura-gibao",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-39ef018f-5942-40d6-a961-d22d93919d21.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-armadura-gibao.txt",
+  "baseInspecionada": false,
+  "baseVisualExistente": false,
+  "motivoSemBase": "Item sem arte prévia no pedido; design novo a partir da descrição autorizada.",
+  "descricaoLida": true,
+  "imagemBaseInspecionada": null,
+  "textoRegraLido": "Armadura. Defesa 1, desgaste 4.",
+  "velocidade": "findante",
+  "valoresLidos": [],
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "acabamento liso aprovado, não copiar personagens"
+    }
+  ],
+  "decisoes": [
+    "Gibão remendado de couro acolchoado com pequenas placas de Bronze Arco nos ombros.",
+    "Novo homem corpulento de feições asiáticas e mecha branca, reação de alerta ao impacto de flecha no ombro.",
+    "Mercado habitado numa noite chuvosa, proteção material e brilho de contato pequeno, sem escudo mágico ou habilidade extra."
+  ],
+  "avaliacaoVisual": "Couro, costuras e remendos claros; dois braços coerentes e expressão distinta; flecha faz contato com placa, sem ferida gráfica.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-armadura-gibao.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "3767c37277c0bb75f183981c5e8905f93022e235033351947acb2291e25349d8",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

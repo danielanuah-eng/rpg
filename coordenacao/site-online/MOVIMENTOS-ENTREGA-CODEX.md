@@ -8,7 +8,7 @@ Claude reconstrói o site para atualizar a flag `DADOS.efeitosCodex`. O módulo 
 
 ## Resolução de magias: pendente por carta
 
-O executor visual está pronto, mas os 88 assets específicos solicitados ainda não foram produzidos. `kit/efeitos/manifesto.json` está vazio. Um efeito só aparece após arquivo real, aprovação `okGpt: true` e identificação exata da carta.
+O executor visual está pronto, mas os assets específicos solicitados ainda não foram produzidos. O pedido atualizado de Claude contempla 132 resoluções e 70 colisões; `kit/efeitos/manifesto.json` está vazio. Um efeito só aparece após arquivo real, aprovação `okGpt: true` e identificação exata da carta.
 
 **Corrigir no hook do motor antes de ativar esses assets:** desaparecer da pilha não significa resolver; também pode significar anulação. Passar `resultado: 'resolvido'` somente para uma resolução real (ou `item.resultado` com esse valor). Sem esse resultado, o módulo não apresenta uma resolução. Ele não decide anulação nem executa efeitos mecânicos.
 

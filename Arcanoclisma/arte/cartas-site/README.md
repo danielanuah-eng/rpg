@@ -1,6 +1,6 @@
 # Artes novas das cartas atuais
 
-Fila de 151 ilustrações com cena completa, criada a partir das identidades do RPG e descrições das cartas atuais do TCG. `progresso.json` informa quantas estão prontas e quais faltam. As artes novas aguardam avaliação final; autorização de push não equivale à aprovação visual de todas elas.
+Fila inicial de 151 ilustrações com cena completa, ampliada para 210 com 59 artes novas solicitadas por Claude conforme a variedade pedida pelo autor. `progresso.json` informa quantas estão prontas e quais faltam. As artes novas aguardam avaliação final; autorização de push não equivale à aprovação visual de todas elas. `incorporar-pedido-v2.mjs` registra o lote adicional preservando imagens e estados anteriores.
 
 - PNGs na raiz: originais da geração, sem redimensionar ou comprimir.
 - `prompts/` e `registros/`: instruções completas, imagem inspecionada, descrição/regra consultada, dimensões, alfa medido e decisões visuais.
