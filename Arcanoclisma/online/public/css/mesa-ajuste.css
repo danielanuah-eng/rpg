@@ -315,3 +315,27 @@ body.tela-cheia .mesa-direita { top: 0; height: 100dvh; }
   .tut-anatomia .tut-rotulo { max-width: 150px; font-size: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { .tut-parte, .mesa-menu-acao .tut-certo { animation: none; } }
+
+/* ---------- Tutorial no celular/tablet (04/10): balão primeiro, botões sempre à vista, foco mais leve ---------- */
+@media (max-width: 900px), (max-height: 560px) {
+  .mesa:has(.balao-tutorial) .lateral-corpo { display: flex; flex-direction: column; }
+  .mesa:has(.balao-tutorial) .lateral-corpo > .balao-tutorial { order: -2; }
+  .mesa:has(.balao-tutorial) .lateral-corpo > .barra-acao { order: -1; position: static !important; background: none; }
+  .mesa:has(.balao-tutorial) .lateral-topo .abas { display: none; }
+  .balao-tutorial { padding: 10px 12px; font-size: 14px; line-height: 1.4; }
+  .balao-tutorial h3 { font-size: 16px; }
+  .balao-tutorial .linha-botoes { position: sticky; bottom: -1px; z-index: 2; margin: 8px -12px -10px; padding: 8px 12px 10px; background: linear-gradient(#172a3f00, #172a3f 10px); border-radius: 0 0 14px 14px; }
+  .balao-tutorial .linha-botoes .botao { min-height: 40px; }
+  .tut-foco path { fill: #05040f80; }
+}
+/* deitado: a carta grande do tutorial fica à esquerda do tabuleiro, menor, sem cobrir o meio */
+@media (max-height: 560px) and (orientation: landscape) {
+  .tut-anatomia { left: 6px; top: 50%; translate: 0 -50%; flex-direction: column; padding: 6px; gap: 4px; max-width: 46%; }
+  .tut-anatomia .tcg-card { --card-w: 128px !important; }
+  .tut-anatomia .tut-rotulo { max-width: 140px; font-size: 11px; }
+  .balao-tutorial { font-size: 13px; }
+}
+/* em pé: a carta grande fica no topo do tabuleiro, lado a lado com o rótulo, e um pouco menor */
+@media (max-width: 900px) and (orientation: portrait) {
+  .tut-anatomia .tcg-card { --card-w: 130px !important; }
+}
