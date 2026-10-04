@@ -297,3 +297,21 @@ body.tela-cheia .mesa-direita { top: 0; height: 100dvh; }
 @media (max-width: 900px), (max-height: 560px) {
   .mesa-direita .lateral-corpo .barra-acao:has(.apagado-tutorial) { position: static; background: none; }
 }
+
+/* ---------- Tutorial: foco e anatomia da carta (04/10) ---------- */
+.tut-foco { position: fixed; inset: 0; z-index: 35; pointer-events: none; opacity: 0; transition: opacity .35s ease; }
+.tut-foco.ligado { opacity: 1; }
+.tut-foco svg { display: block; }
+.tut-foco path { fill: #05040fa6; }
+.tut-anatomia { position: absolute; z-index: 25; left: 12px; top: 50%; translate: 0 -50%; display: flex; flex-direction: column; align-items: center; gap: 8px;
+  padding: 10px; border-radius: 16px; background: #120e26ee; border: 1px solid #e0bd6a88; box-shadow: 0 10px 30px #000c; animation: aparecer .25s ease; }
+.tut-anatomia .tut-rotulo { max-width: 250px; text-align: center; font-size: 13px; line-height: 1.35; color: #f0dca0; }
+.tut-parte { outline: 3px solid #7fd1a0 !important; outline-offset: 2px; border-radius: 8px; box-shadow: 0 0 0 4px #7fd1a055, 0 0 22px #7fd1a0cc !important; animation: tutParte 1.1s ease-in-out infinite; z-index: 9 !important; }
+@keyframes tutParte { 50% { box-shadow: 0 0 0 7px #7fd1a033, 0 0 30px #7fd1a0 !important; } }
+.mesa-menu-acao .tut-certo { box-shadow: 0 0 0 3px #7fd1a0, 0 0 18px #7fd1a0cc; animation: tutParte 1.1s ease-in-out infinite; }
+.mesa-menu-acao .tut-apagado { opacity: .35; filter: grayscale(.7); }
+@media (max-width: 900px), (max-height: 560px) {
+  .tut-anatomia { left: 50%; top: 6px; translate: -50% 0; flex-direction: row; max-width: calc(100% - 12px); padding: 6px; }
+  .tut-anatomia .tut-rotulo { max-width: 150px; font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { .tut-parte, .mesa-menu-acao .tut-certo { animation: none; } }

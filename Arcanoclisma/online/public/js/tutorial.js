@@ -42,18 +42,43 @@ const danoConj = (e, j) => e.instancias[e.jogadores[j].conjuradorId].dano;
 
 const LICOES = [
   {
+    id: 'carta', titulo: 'Lendo uma carta', resumo: 'Do zero: o objetivo, o que é cada número da carta (custo, Grau, Arcano, Valor, Ataque, Vida, Economia), a mesa e as etapas do turno.',
+    cenario: () => montarCenario({
+      eu: { conj: 'lyandra', itens: ['item-canal-cajado', 'item-armadura-gibao'], mao: ['base-aliado-c2-agressivo', 'base-dano-c1', 'base-recurso'], grau: ['base-recurso'] },
+      bot: { conj: 'carmal', itens: ['item-canal-cajado', 'item-armadura-gibao'], campo: ['base-aliado-c2-defensivo'], grau: ['base-recurso'] },
+    }),
+    passos: [
+      { titulo: 'O objetivo', texto: 'No Arcanoclisma cada jogador é um <b>Conjurador</b>. Você vence quando a <b>Vida</b> do Conjurador do oponente chega a <b>0</b>. Embaixo está o seu (Lyandra); em cima, o do oponente.', anatomia: () => ({ conjurador: true, id: 'lyandra', parte: '.stat-vida', rotulo: '♥ Vida: quando chega a 0, o Conjurador perde' }), foco: () => ['.lado-eu .conj-bloco', '.lado-op .conj-bloco'], botao: true },
+      { titulo: 'Os Valores do Conjurador', texto: 'A esfera no alto da carta mostra os <b>2 Valores</b> do Conjurador (as cores de magia dele). O seu baralho só pode ter cartas desses Valores.', anatomia: () => ({ conjurador: true, id: 'lyandra', parte: '.conjurador-values', rotulo: 'Valores: as cores que o seu baralho pode usar' }), botao: true },
+      { titulo: 'Ataque, Vida e Economia', texto: 'Embaixo da carta: <b>♥ Vida</b> (quanto dano o Conjurador aguenta) e a <b>Economia</b> (quantas cartas ele compra no <b>Final</b> do seu turno). O <b>⚔ Ataque</b> do Conjurador vem da <b>arma</b> equipada e aparece sobre a carta dele na mesa.', anatomia: () => ({ conjurador: true, id: 'lyandra', parte: '.stats', rotulo: 'Vida · Economia' }), foco: () => ['.lado-eu .conj-bloco'], botao: true },
+      { titulo: 'A habilidade', texto: 'Cada Conjurador tem uma <b>habilidade</b> só dele, escrita no texto. Alguns usam a habilidade tocando no Conjurador ("Usar habilidade"); outros funcionam sozinhos.', anatomia: () => ({ conjurador: true, id: 'lyandra', parte: '.rules', rotulo: 'Habilidade do Conjurador' }), botao: true },
+      { titulo: 'Uma carta: nome e tipo', texto: 'Agora uma carta do baralho. No alto, o <b>nome</b>. Na faixa do meio, o <b>tipo</b>: <b>Aliado</b> (criatura que ataca e bloqueia), <b>Temporária</b> (magia de uso único), <b>Estrutura</b> e <b>Mística</b> (ficam em campo).', anatomia: () => ({ id: 'base-aliado-c2-agressivo', parte: '.name, .type-line', rotulo: 'Nome e tipo da carta' }), destaque: (e) => [maoDe(e, EU, 'base-aliado-c2-agressivo')], botao: true },
+      { titulo: 'O custo (Arcano)', texto: 'A <b>esfera colorida</b> no canto (a segunda de cima para baixo, com a cor do Valor) é o <b>custo</b>: quanto <b>Arcano</b> você paga para jogar a carta. A cor da esfera é o <b>Valor</b> da carta.', anatomia: () => ({ id: 'base-aliado-c2-agressivo', parte: '.badge.cost', rotulo: 'Custo: 2 de Arcano' }), destaque: (e) => [maoDe(e, EU, 'base-aliado-c2-agressivo')], parteNaMesa: () => '.badge.cost', botao: true },
+      { titulo: 'O Grau necessário', texto: 'O losango azul é o <b>Grau necessário</b>: quantas cartas você precisa ter na sua Zona de Grau para poder jogar esta carta. A próxima lição explica o Grau com calma.', anatomia: () => ({ id: 'base-aliado-c2-agressivo', parte: '.degree', rotulo: '◆ Grau necessário: 1' }), destaque: (e) => [maoDe(e, EU, 'base-aliado-c2-agressivo')], parteNaMesa: () => '.degree', botao: true },
+      { titulo: 'Quanto a carta gera', texto: 'O <b>círculo pequeno no topo</b>, acima do custo, diz quanto Arcano a carta gera se você a <b>enviar ao Arcano</b> em vez de jogá-la (um jeito de pagar custos com cartas da mão).', anatomia: () => ({ id: 'base-aliado-c2-agressivo', parte: '.badge.generated', rotulo: 'Gera Arcano ao ser enviada' }), botao: true },
+      { titulo: 'Ataque e Vida do Aliado', texto: 'Embaixo, <b>⚔ Ataque</b> (o dano que causa ao atacar ou bloquear) e <b>♥ Vida</b> (o dano que aguenta). O dano fica guardado até alguém curar.', anatomia: () => ({ id: 'base-aliado-c2-agressivo', parte: '.stats', rotulo: 'Ataque · Vida' }), botao: true },
+      { titulo: 'O texto e a velocidade', texto: `O quadro de baixo traz o <b>efeito</b>. Na faixa do tipo também vem a <b>velocidade</b>: <b>Findante</b> só se joga na sua fase Principal com a pilha vazia; <b>Repentina</b> se joga a qualquer momento em que você tem a vez, até no turno do oponente.`, anatomia: () => ({ id: 'base-dano-c1', parte: '.rules, .type-line', rotulo: 'Efeito e velocidade (Findante)' }), destaque: (e) => [maoDe(e, EU, 'base-dano-c1')], botao: true },
+      { titulo: 'A mesa', texto: 'Na mesa, do seu lado: a <b>esfera azul</b> é o Arcano guardado; a bandeja <b>◆ GRAU</b> guarda o seu Grau; ao lado ficam o <b>Baralho</b>, o <b>Cemitério</b> e as <b>Banidas</b> (toque para ver). Sua <b>mão</b> fica fora da mesa, embaixo. As decisões e a pilha ficam aqui na lateral.', foco: () => ['.lado-eu .esfera-arcano', '.lado-eu .zona-grau', '.lado-eu .pilhas-zona', '.mao-faixa'], botao: true },
+      { titulo: 'As etapas do turno', texto: 'Cada turno tem 4 etapas (a faixa aqui em cima): <b>Início</b> — seu Conjurador levanta; <b>Principal</b> — você joga cartas, põe Grau e ataca; <b>Cataclisma</b> — o Arcano que sobrou some; <b>Final</b> — tudo o que é seu levanta e você compra as cartas da Economia. Depois é a vez do oponente.', foco: () => ['.mesa-direita .fase'], botao: true },
+      { titulo: 'Lição concluída!', texto: 'Agora você sabe ler uma carta e a mesa. Próxima lição: o Grau e o Arcano, na prática.', fim: true },
+    ],
+    bot: () => ({ tipo: 'passar', jogador: BOT }),
+  },
+  {
     id: 'grau', titulo: 'Grau e Arcano', resumo: 'Pôr cartas no Grau, gerar Arcano e pagar custos (inclusive enviando cartas ao Arcano).',
     cenario: () => montarCenario({
       eu: { conj: 'lyandra', itens: ['item-canal-cajado', 'item-armadura-gibao'], mao: ['base-recurso', 'base-aliado-c2-agressivo', 'base-dano-c1', 'base-aliado-c4-agressivo', 'base-aliado-c1-equilibrado'], grau: ['base-aliado-c3-equilibrado'] },
       bot: { conj: 'carmal', itens: ['item-canal-cajado', 'item-armadura-gibao'], campo: ['base-aliado-c2-agressivo-proficiente'], grau: ['base-recurso', 'base-recurso'] },
     }),
     passos: [
-      { titulo: 'Bem-vindo à mesa', texto: 'Embaixo fica o seu Conjurador (Lyandra): a vida ♥ e o ataque ⚔ (que vem da arma) aparecem sobre a carta dele. A esfera azul ao lado é o seu Arcano. Em cima, o Conjurador do oponente. Vence quem zerar a vida do Conjurador do outro. Sua mão fica fora da mesa, embaixo; fases, decisões e a pilha ficam aqui na direita.' },
-      { titulo: 'A Zona de Grau', texto: `Uma vez por turno você põe uma carta da mão na Zona de Grau, onde ela fica virada (verso) no seu campo. O Grau decide quais cartas você pode jogar: uma carta de Grau 2 exige 2 cartas no seu Grau. Clique em <b>${N('base-recurso')}</b> na sua mão e escolha <b>Pôr no Grau</b>.`, objetivo: 'Ponha uma carta no Grau.', feito: (e) => e.jogadores[EU].grau.length >= 2, destaque: (e) => [maoDe(e, EU, 'base-recurso')], acoes: [{ tipo: 'colocarGrau', def: 'base-recurso' }] },
-      { titulo: 'Arcano para pagar', texto: `Cada carta do Grau pode ser suspensa (deitada) para gerar 1 Arcano. O <b>${N('base-aliado-c2-agressivo')}</b> custa 2 e exige Grau 1. Clique nele e escolha <b>Jogar</b>: a janela de pagamento já sugere suspender as duas cartas do Grau.`, objetivo: `Jogue o ${N('base-aliado-c2-agressivo')}.`, feito: (e) => !!campoDe(e, EU, 'base-aliado-c2-agressivo'), destaque: (e) => [maoDe(e, EU, 'base-aliado-c2-agressivo')], acoes: [{ tipo: 'jogar', def: 'base-aliado-c2-agressivo' }] },
-      { titulo: 'A pilha', texto: 'Viu a carta aqui na direita? Tudo que você joga vai para a pilha e o oponente pode responder antes de resolver. Quando os dois passam, a carta resolve. O Aliado entrou com "zZ": no turno em que entra ele não ataca.', botao: true },
-      { titulo: 'Enviar cartas ao Arcano', texto: `Seu Grau já está todo suspenso. Para pagar mais, envie cartas da mão ao Arcano: cada uma gera o número do círculo de cima (a ${N('base-recurso')} gera 3). Elas vão para o fundo do baralho no seu Final. Jogue <b>${N('base-dano-c1')}</b> (2 de dano) no Aliado do oponente e pague enviando uma carta.`, objetivo: `Destrua o Aliado do oponente com ${N('base-dano-c1')}.`, feito: (e) => e.jogadores[BOT].campo.length === 0, destaque: (e) => [maoDe(e, EU, 'base-dano-c1')], alvos: (e) => e.jogadores[BOT].campo, acoes: [{ tipo: 'jogar', def: 'base-dano-c1' }] },
-      { titulo: 'Grau limita o poder', texto: `O <b>${N('base-aliado-c4-agressivo')}</b> custa 4 e exige Grau 3: você só tem 2. As cartas fortes chegam quando o seu Grau cresce, um por turno. A sobra de Arcano fica na reserva até o seu Cataclisma, quando some.`, botao: true },
+      { titulo: 'O que é o Grau', texto: 'O <b>Grau</b> é o seu nível de poder. Ele é uma pilha de cartas <b>viradas para baixo</b> na sua <b>Zona de Grau</b> (a bandeja "◆ GRAU" ao lado do seu Conjurador). Quanto mais cartas lá, maior o seu Grau e mais fortes as cartas que você pode jogar.', foco: () => ['.lado-eu .zona-grau'], botao: true },
+      { titulo: 'O número do Grau na carta', texto: `Cada carta mostra no losango azul o <b>Grau necessário</b> para ser jogada. O <b>${N('base-aliado-c4-agressivo')}</b> pede Grau 3: você só pode jogá-lo com 3 cartas na sua Zona de Grau. A esfera colorida acima dele é outra coisa: é o <b>custo</b> em Arcano.`, anatomia: () => ({ id: 'base-aliado-c4-agressivo', parte: '.degree', rotulo: '◆ Grau necessário: 3' }), destaque: (e) => [maoDe(e, EU, 'base-aliado-c4-agressivo')], parteNaMesa: () => '.degree', botao: true },
+      { titulo: 'Ponha uma carta no Grau', texto: `Uma vez por turno você põe uma carta da mão na Zona de Grau. Ela fica virada e passa a ser um ponto de Grau (e uma fonte de Arcano). Toque ou clique em <b>${N('base-recurso')}</b> (a que está brilhando) e escolha <b>Pôr no Grau</b> — ou arraste-a até a bandeja do Grau.`, objetivo: 'Ponha uma carta no Grau.', feito: (e) => e.jogadores[EU].grau.length >= 2, destaque: (e) => [maoDe(e, EU, 'base-recurso')], foco: () => ['.lado-eu .zona-grau'], acoes: [{ tipo: 'colocarGrau', def: 'base-recurso' }] },
+      { titulo: 'Regras do Grau', texto: 'Agora o seu Grau é 2. Lembre: <b>1)</b> só <b>uma</b> carta por turno; <b>2)</b> só na <b>sua fase Principal</b>, com a pilha vazia; <b>3)</b> quem começa a partida não põe Grau no turno 1; <b>4)</b> no máximo 12. Escolha para o Grau as cartas que você não vai jogar logo: elas não voltam para a mão.', foco: () => ['.lado-eu .zona-grau'], botao: true },
+      { titulo: 'Arcano para pagar', texto: `O Arcano é a "mana" do jogo: com ele você paga o <b>custo</b> das cartas (a esfera colorida, que está brilhando na carta). Cada carta do seu Grau pode ser <b>suspensa</b> (deitada) para gerar 1 Arcano. O <b>${N('base-aliado-c2-agressivo')}</b> custa 2 e pede Grau 1. Toque nele e escolha <b>Jogar</b>: a janela de pagamento já sugere suspender as duas cartas do Grau.`, objetivo: `Jogue o ${N('base-aliado-c2-agressivo')}.`, feito: (e) => !!campoDe(e, EU, 'base-aliado-c2-agressivo'), destaque: (e) => [maoDe(e, EU, 'base-aliado-c2-agressivo')], parteNaMesa: () => '.badge.cost', acoes: [{ tipo: 'jogar', def: 'base-aliado-c2-agressivo' }] },
+      { titulo: 'A pilha', texto: 'Tudo que você joga vai para a <b>pilha</b> (aqui na direita) e o oponente pode responder antes de resolver. Quando os dois passam, a carta resolve. O Aliado entrou com "zZ": no turno em que entra ele não ataca.', foco: () => ['.lado-eu .campo'], botao: true },
+      { titulo: 'O que não funciona', texto: `O <b>${N('base-aliado-c4-agressivo')}</b> está apagado: ele pede Grau 3 e você tem 2. Também não dá para: pôr uma 2ª carta no Grau neste turno; jogar uma carta Findante fora da sua fase Principal ou com algo na pilha; pagar mais do que o seu Arcano. A sobra de Arcano fica na esfera azul até o seu <b>Cataclisma</b>, quando some. Seu Grau está todo suspenso agora: no próximo passo você vai pagar de outro jeito.`, destaque: (e) => [maoDe(e, EU, 'base-aliado-c4-agressivo')], parteNaMesa: () => '.degree', foco: () => ['.lado-eu .esfera-arcano'], botao: true },
+      { titulo: 'Enviar cartas ao Arcano', texto: `Seu Grau está todo suspenso. Para pagar mais, você pode <b>enviar cartas da mão ao Arcano</b>: cada uma gera o número do <b>círculo pequeno no topo</b> da carta (estas geram 1). Elas vão para o fundo do baralho no seu Final. Jogue <b>${N('base-dano-c1')}</b> (2 de dano) no Aliado do oponente e, na janela de pagamento, toque em "+1" no <b>${N('base-aliado-c1-equilibrado')}</b> para enviá-lo ao Arcano.`, objetivo: `Destrua o Aliado do oponente com ${N('base-dano-c1')}.`, feito: (e) => e.jogadores[BOT].campo.length === 0, destaque: (e) => [maoDe(e, EU, 'base-dano-c1')], parteNaMesa: () => '.badge.cost', alvos: (e) => e.jogadores[BOT].campo, acoes: [{ tipo: 'jogar', def: 'base-dano-c1' }] },
       { titulo: 'Lição concluída!', texto: 'Você aprendeu Grau, Arcano, pagamento e a pilha. Próxima: combate.', fim: true },
     ],
     bot: () => ({ tipo: 'passar', jogador: BOT }),
@@ -164,8 +189,8 @@ export async function telaTutorial(tela, partes, ctx) {
   const licao = LICOES.find((l) => l.id === id);
   if (!licao) {
     const p = progresso();
-    tela.innerHTML = `<h1>Tutorial</h1><p class="lema-peq">Cinco lições rápidas contra o bot e uma partida completa com dicas. Cada lição usa as regras de verdade.</p>
-      <div class="grade g2 licoes">${LICOES.map((l, i) => `<a class="cartao-modo licao ${p[l.id] ? 'feita' : ''}" href="#/tutorial/${l.id}" style="--cena:url('${cenario(['tutorial', 'mesa', 'saguao', 'baralhos', 'comunidade'][i % 5])}')"><div class="icone">${p[l.id] ? '✅' : `${i + 1}`}</div><h3>${esc(l.titulo)}</h3><p>${esc(l.resumo)}</p></a>`).join('')}
+    tela.innerHTML = `<h1>Tutorial</h1><p class="lema-peq">Seis lições rápidas contra o bot e uma partida completa com dicas. Cada lição usa as regras de verdade.</p>
+      <div class="grade g2 licoes">${LICOES.map((l, i) => `<a class="cartao-modo licao ${p[l.id] ? 'feita' : ''}" href="#/tutorial/${l.id}" style="--cena:url('${cenario(['tutorial', 'mesa', 'saguao', 'baralhos', 'comunidade', 'menu'][i % 6])}')"><div class="icone">${p[l.id] ? '✅' : `${i + 1}`}</div><h3>${esc(l.titulo)}</h3><p>${esc(l.resumo)}</p></a>`).join('')}
       <a class="cartao-modo licao" href="#/tutorial/partida" style="--cena:url('${cenario('menu')}')"><div class="icone">🎓</div><h3>Partida completa com dicas</h3><p>Lyandra contra Osmar, com dicas do que fazer a cada momento.</p></a></div>`;
     return;
   }
@@ -192,6 +217,21 @@ export async function telaTutorial(tela, partes, ctx) {
     /** Alvos aceitos no passo (null = qualquer). */
     alvos() { const a = atual().alvos?.(fonte.e); return a ? a.filter(Boolean) : null; },
     permitir(cmd) { return permitirTutorial(fonte.e, atual(), cmd, travado()); },
+    /** Escurece a tela e acende só o que importa no passo (fica desligado no fim da lição). */
+    focar() { return !atual().fim; },
+    foco() { return atual().foco?.() ?? []; },
+    anatomia() { return atual().anatomia?.() ?? null; },
+    parteNaMesa() { return atual().parteNaMesa?.() ?? null; },
+    /** Opções do menu da carta que o passo pede (brilham; as outras ficam apagadas). */
+    menuCerto(id) {
+      const e = fonte.e, p = atual();
+      const chave = { jogar: 'jogar', colocarGrau: 'grau', atacar: 'atacar', ativar: 'ativar' };
+      const z = e.jogadores[EU];
+      const certos = (p.acoes ?? []).filter((a) => chave[a.tipo] && (a.conj ? id === z.conjuradorId : !a.def || e.instancias[id]?.defId === a.def)).map((a) => chave[a.tipo]);
+      // itens (ex.: Poção) aparecem no menu do Conjurador como "usarItem:<id>"
+      if (id === z.conjuradorId) for (const a of p.acoes ?? []) if (a.tipo === 'ativar' && a.def) for (const it of z.itens) if (e.instancias[it]?.defId === a.def) certos.push('usarItem:' + it);
+      return certos;
+    },
     semAutoPasse() { return travado() || (temProximo(atual()) && fonte.e.ativo === EU); },
   };
   /** O passo pede uma resposta e a carta do oponente ainda está no topo da pilha. */

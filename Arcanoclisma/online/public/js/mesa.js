@@ -427,9 +427,13 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     ui.menu = id;
     const r = alvoEl.getBoundingClientRect();
     const rp = raiz.getBoundingClientRect();
-    menuAcao.innerHTML = `<div class="menu-titulo">${esc(nomeInst(id))}</div>${acoes.map(([k, rot, cls]) => `<button class="botao peq ${cls}" data-a="${k}">${esc(rot)}</button>`).join('')}`;
+    // tutorial (pedido do autor, 04/10): a opção que o passo pede brilha; as outras ficam apagadas (Ver carta sempre vale)
+    const certos = fonte.tutorial?.restrito ? fonte.tutorial.menuCerto?.(id) ?? [] : null;
+    const tutCls = (k) => (!certos ? '' : certos.includes(k) ? 'tut-certo' : k === 'ver' ? '' : 'tut-apagado');
+    menuAcao.innerHTML = `<div class="menu-titulo">${esc(nomeInst(id))}</div>${acoes.map(([k, rot, cls]) => `<button class="botao peq ${cls} ${tutCls(k)}" data-a="${k}">${esc(rot)}</button>`).join('')}`;
     menuAcao.style.left = Math.max(8, Math.min(rp.width - 200, r.left - rp.left + r.width / 2 - 95)) + 'px';
     menuAcao.classList.add('aberto');
+    atualizarFoco();
     const emCima = r.top - rp.top - menuAcao.offsetHeight - 14;
     menuAcao.style.top = (emCima > 8 ? emCima : Math.min(rp.height - menuAcao.offsetHeight - 8, r.bottom - rp.top + 8)) + 'px';
     menuAcao.onclick = async (ev) => {
@@ -446,7 +450,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
       return preparar(k, id);
     };
   }
-  function fecharMenu() { ui.menu = null; menuAcao.classList.remove('aberto'); menuAcao.innerHTML = ''; }
+  function fecharMenu() { ui.menu = null; menuAcao.classList.remove('aberto'); menuAcao.innerHTML = ''; atualizarFoco(); }
   function verCarta(id) {
     const i = inst(id);
     const m = i.ehConjurador ? modeloConjurador(i.defId) : modeloCarta(i.defId);
@@ -730,7 +734,63 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     movimentosMesa.animar(posicoesAnteriores);
     ganchos.depois(e, anteriorGanchos);
     abertura();
+    desenharAnatomia();
+    atualizarFoco();
   }
+
+  // ---------- tutorial: anatomia da carta e foco (pedido do autor, 04/10) ----------
+  // Anatomia: uma carta grande ao lado do tabuleiro com a parte explicada brilhando (custo, Grau, Arcano, Valor, tipo...).
+  function desenharAnatomia() {
+    const an = fonte.tutorial?.anatomia?.() ?? null;
+    let painel = $('.tut-anatomia', palco);
+    // a parte também brilha nas cartas de verdade (na mão ou na mesa) que o passo destaca
+    for (const el of $$('.tut-parte', raiz)) el.classList.remove('tut-parte');
+    const parteMesa = fonte.tutorial?.parteNaMesa?.();
+    if (parteMesa) for (const id of fonte.tutorial.destaques()) $(`.cm[data-id="${id}"]`, raiz)?.querySelector(parteMesa)?.classList.add('tut-parte');
+    if (!an) { painel?.remove(); return; }
+    if (!painel) { painel = document.createElement('div'); painel.className = 'tut-anatomia'; palco.append(painel); }
+    const chave = an.id + '|' + (an.parte ?? '') + '|' + an.rotulo;
+    if (painel.dataset.chave === chave) return;
+    painel.dataset.chave = chave;
+    const m = an.conjurador ? modeloConjurador(an.id) : modeloCarta(an.id);
+    const largura = Math.min(250, Math.max(150, palco.clientHeight * 0.62 / 1.4));
+    painel.innerHTML = `${desenharCarta(m, { width: largura }).outerHTML}${an.rotulo ? `<div class="tut-rotulo">${an.rotulo}</div>` : ''}`;
+    if (an.parte) for (const el of painel.querySelectorAll(an.parte)) el.classList.add('tut-parte');
+  }
+  // Foco: a tela escurece de leve e fica acesa só onde é para clicar, ler ou ver (buracos numa camada por cima da mesa).
+  const foco = document.createElement('div');
+  foco.className = 'tut-foco';
+  foco.setAttribute('aria-hidden', 'true');
+  document.body.append(foco);
+  let focoPendente = false;
+  function atualizarFoco() {
+    if (focoPendente) return;
+    focoPendente = true;
+    requestAnimationFrame(() => { focoPendente = false; desenharFoco(); });
+    setTimeout(() => { if (focoPendente) { focoPendente = false; desenharFoco(); } }, 120);
+  }
+  function desenharFoco() {
+    const tut = fonte.tutorial;
+    if (fechada || !tut?.restrito || !tut.focar?.() || $('#camada .janela-fundo')) { foco.classList.remove('ligado'); return; }
+    const sel = ['.destaque-tutorial', '.alvo-ok', '.alvo-mao', '.mesa-direita .balao-tutorial', '.tut-anatomia', '.mesa-menu-acao.aberto', '[data-cancelar-alvo]', '.pendencia', ...(tut.foco?.() ?? [])];
+    if (tut.permitir?.({ tipo: 'passar' }) == null) sel.push('.mesa-direita [data-passar]');
+    const els = [...new Set(sel.flatMap((s) => { try { return [...document.querySelectorAll(s)]; } catch { return []; } }))]
+      .map((el) => el.closest('.mao-slot') ?? el).filter((el) => el.isConnected && !el.closest('.tut-foco'));
+    const W = innerWidth, H = innerHeight, f = 6;
+    let d = `M0 0H${W}V${H}H0Z`;
+    for (const el of els) {
+      const r = el.getBoundingClientRect();
+      if (r.width < 2 || r.height < 2 || r.bottom < 0 || r.top > H) continue;
+      const x = Math.max(0, r.left - f), y = Math.max(0, r.top - f), w = Math.min(W, r.right + f) - x, h = Math.min(H, r.bottom + f) - y, k = Math.min(10, w / 4, h / 4);
+      d += `M${x + k} ${y}H${x + w - k}Q${x + w} ${y} ${x + w} ${y + k}V${y + h - k}Q${x + w} ${y + h} ${x + w - k} ${y + h}H${x + k}Q${x} ${y + h} ${x} ${y + h - k}V${y + k}Q${x} ${y} ${x + k} ${y}Z`;
+    }
+    foco.innerHTML = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><path d="${d}" fill-rule="evenodd"/></svg>`;
+    foco.classList.add('ligado');
+  }
+  addEventListener('resize', atualizarFoco);
+  raiz.addEventListener('scroll', atualizarFoco, true);
+  const observarJanelas = new MutationObserver(atualizarFoco);
+  observarJanelas.observe($('#camada') ?? document.body, { childList: true });
 
   let timerPrazo = null;
   function atualizarPrazo() {
@@ -1035,7 +1095,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   render();
   return {
     render,
-    fechar() { fechada = true; document.removeEventListener('click', aoAmpliar, true); document.body.classList.remove('em-mesa'); for (const d of dadosAbertura) try { d.destruir(); } catch { /* nada */ } globalThis.ArcanoclismaAbertura?.limparEntradaArena(raiz); clearTimeout(timerAuto); clearInterval(timerPrazo); movimentosMesa.limpar(); ganchos.limpar(); document.removeEventListener('fullscreenchange', aoTelaCheia); if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); document.body.classList.remove('tela-cheia'); window.removeEventListener('pointermove', moverArrasto); window.removeEventListener('pointerup', soltar); window.removeEventListener('pointercancel', soltar); arrasto?.fantasma?.remove(); raiz.innerHTML = ''; },
+    fechar() { fechada = true; foco.remove(); observarJanelas.disconnect(); removeEventListener('resize', atualizarFoco); document.removeEventListener('click', aoAmpliar, true); document.body.classList.remove('em-mesa'); for (const d of dadosAbertura) try { d.destruir(); } catch { /* nada */ } globalThis.ArcanoclismaAbertura?.limparEntradaArena(raiz); clearTimeout(timerAuto); clearInterval(timerPrazo); movimentosMesa.limpar(); ganchos.limpar(); document.removeEventListener('fullscreenchange', aoTelaCheia); if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); document.body.classList.remove('tela-cheia'); window.removeEventListener('pointermove', moverArrasto); window.removeEventListener('pointerup', soltar); window.removeEventListener('pointercancel', soltar); arrasto?.fantasma?.remove(); raiz.innerHTML = ''; },
     contexto,
   };
 }
