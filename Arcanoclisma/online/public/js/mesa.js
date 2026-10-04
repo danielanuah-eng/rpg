@@ -779,7 +779,21 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     const dx = para.left + para.width / 2 - (de.left + de.width / 2), dy = para.top + para.height / 2 - (de.top + de.height / 2);
     const k = para.width / de.width;
     const a = el.animate([{ transform: el.style.transform }, { transform: `${el.style.transform} translate(${dx}px, ${dy}px) rotate(0deg) scale(${k})` }], { duration: duracao, easing: 'cubic-bezier(.2,.75,.25,1)', fill: 'forwards' });
-    a.finished.then(() => { el.remove(); depois?.(); }, () => { el.remove(); depois?.(); });
+    // segurança: com a aba em segundo plano a animação pausa; a carta não pode ficar presa no meio do caminho
+    let feito = false;
+    const acabar = () => { if (feito) return; feito = true; el.remove(); depois?.(); };
+    a.finished.then(acabar, acabar);
+    setTimeout(acabar, duracao + 600);
+  }
+  /** Celular: confirmação antes de jogar ou pôr no Grau ao soltar uma carta arrastada (resolve true/false). */
+  function confirmarToque(pergunta, rotulo) {
+    return new Promise((ok) => {
+      let respondeu = false;
+      const fim = (v) => { if (respondeu) return; respondeu = true; j.fechar(); ok(v); };
+      const j = janela(`<h3>${esc(pergunta)}</h3><div class="linha-botoes"><button class="botao primario grande" data-sim>${esc(rotulo)}</button><button class="botao grande" data-nao>Cancelar</button></div>`, { aoFechar: () => { if (!respondeu) { respondeu = true; ok(false); } } });
+      $('[data-sim]', j.el).onclick = () => fim(true);
+      $('[data-nao]', j.el).onclick = () => fim(false);
+    });
   }
   const sobre = (x, y, sel) => document.elementsFromPoint(x, y).some((n) => n.closest?.(sel));
   function marcarAlvos(id, ligar) {
@@ -791,14 +805,23 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   faixaMao.addEventListener('pointerdown', (ev) => {
     const carta = ev.target.closest('.mao-slot .cm[data-id]');
     if (!carta || ev.button !== 0 || ui.modo || e.vencedor !== null) return;
-    arrasto = { id: carta.dataset.id, carta, x0: ev.clientX, y0: ev.clientY, ativo: false, ultimoX: ev.clientX, inclinacao: 0 };
+    arrasto = { id: carta.dataset.id, carta, x0: ev.clientX, y0: ev.clientY, ativo: false, ultimoX: ev.clientX, inclinacao: 0, toque: ev.pointerType !== 'mouse' };
   });
   window.addEventListener('pointermove', moverArrasto);
   function moverArrasto(ev) {
     const a = arrasto;
     if (!a) return;
     if (!a.ativo) {
-      if (Math.hypot(ev.clientX - a.x0, ev.clientY - a.y0) < 8) return;
+      const mx = ev.clientX - a.x0, my = ev.clientY - a.y0;
+      if (Math.hypot(mx, my) < (a.toque ? 14 : 8)) return;
+      if (a.toque) {
+        // celular (pedido do autor, 04/10): rolar a mão e arrastar para o campo não podem brigar.
+        // Só vale arrastar quando o movimento aponta para o tabuleiro; senão o navegador rola a faixa da mão.
+        const pr = palco.getBoundingClientRect();
+        const tx = pr.left + pr.width / 2 - a.x0, ty = pr.top + pr.height / 2 - a.y0;
+        const cos = (mx * tx + my * ty) / (Math.hypot(mx, my) * Math.hypot(tx, ty) || 1);
+        if (cos < 0.75) { arrasto = null; return; }
+      }
       a.ativo = true;
       zoom.classList.remove('visivel');
       const r = a.carta.getBoundingClientRect();
@@ -815,7 +838,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     a.ultimoX = ev.clientX;
     const subiu = Math.min(1, Math.max(0, (a.y0 - ev.clientY) / 160));
     a.fantasma.style.transform = `translate(${ev.clientX - a.dx - parseFloat(a.fantasma.style.left)}px, ${ev.clientY - a.dy - parseFloat(a.fantasma.style.top)}px) perspective(700px) rotateX(${8 * subiu}deg) rotate(${a.inclinacao}deg) scale(${1.08 + 0.1 * subiu})`;
-    a.fantasma.classList.toggle('sobre-campo', sobre(ev.clientX, ev.clientY, '.mesa-palco') && !sobre(ev.clientX, ev.clientY, '.mao-faixa'));
+    a.fantasma.classList.toggle('sobre-campo', sobre(ev.clientX, ev.clientY, a.toque ? '.lado-eu' : '.mesa-palco') && !sobre(ev.clientX, ev.clientY, '.mao-faixa'));
   }
   async function soltar(ev) {
     const a = arrasto;
@@ -832,16 +855,18 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     };
     const x = ev.clientX, y = ev.clientY;
     if (ev.type === 'pointerup' && sobre(x, y, '.lado-eu .zona-grau') && podeGrau()) {
+      if (a.toque && !(await confirmarToque(`Pôr ${def(a.id).nome} no Grau?`, 'Pôr no Grau'))) return voltar();
       await enviar({ tipo: 'colocarGrau', carta: a.id });
       const g = $(`.zona-grau .cm[data-id="${a.id}"]`, raiz);
       return g ? voar(f, g.getBoundingClientRect()) : voltar();
     }
-    if (ev.type !== 'pointerup' || !sobre(x, y, '.mesa-palco') || sobre(x, y, '.mao-faixa')) return voltar();
+    if (ev.type !== 'pointerup' || !sobre(x, y, a.toque ? '.lado-eu' : '.mesa-palco') || sobre(x, y, '.mao-faixa')) return voltar();
     if (!podeJogar(a.id)) {
       const d = def(a.id);
       avisar(!tenhoPrioridade() ? 'Agora não é a sua vez de jogar.' : d.velocidade !== 'repentina' && !minhaJanela() ? 'Esta carta só entra na sua fase principal (sem nada na pilha).' : d.grau > grauEfetivo(e, EU) ? `Precisa de Grau ${d.grau}.` : 'Arcano insuficiente para os custos.', 'erro', 3500);
       return voltar();
     }
+    if (a.toque && !(await confirmarToque(`Jogar ${def(a.id).nome}?`, 'Jogar'))) return voltar();
     f.classList.add('aguardando');
     await preparar('jogar', a.id);
     if (z(EU).mao.includes(a.id) || origemDaCarta(e, EU, a.id)) return voltar(); // cancelou ou não pagou: volta para a mão (ou a zona)

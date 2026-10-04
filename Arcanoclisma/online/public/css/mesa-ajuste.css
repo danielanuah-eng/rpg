@@ -280,3 +280,20 @@ body.tela-cheia .mesa-direita { top: 0; height: 100dvh; }
 /* janela de Repentinas depois do bloqueio e antes do dano */
 .janela-combate { margin: 6px 0; padding: 8px 10px; border-radius: 10px; border: 1px dashed #e0bd6a88; background: #2a1d0e66; font-size: 13px; line-height: 1.35; }
 .janela-combate.posso { border-style: solid; border-color: #7fd1a0; background: #0e2a1c99; box-shadow: 0 0 12px #7fd1a055; }
+
+/* celular: a mão rola com o dedo; arrastar uma carta para o tabuleiro continua (js/mesa.js, moverArrasto) */
+@media (pointer: coarse) {
+  .mao-faixa .mao-slot .cm { touch-action: pan-x; }
+}
+@media (pointer: coarse) and (max-height: 560px) and (orientation: landscape) {
+  .mao-faixa .mao-slot .cm { touch-action: pan-y; }
+}
+/* celular em pé, no tutorial: a lateral (com o balão da lição) ganha mais altura */
+@media (max-width: 900px) and (orientation: portrait) {
+  .mesa:has(.balao-tutorial) { grid-template-rows: minmax(0, 1fr) minmax(220px, 42%); }
+  .mesa-direita .balao-tutorial { font-size: 14px; }
+}
+/* botão apagado (o passo do tutorial pede outra coisa) não fica fixo por cima do texto da lição */
+@media (max-width: 900px), (max-height: 560px) {
+  .mesa-direita .lateral-corpo .barra-acao:has(.apagado-tutorial) { position: static; background: none; }
+}
