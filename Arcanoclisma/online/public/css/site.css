@@ -252,3 +252,26 @@ body:has(#tela.cheia) .opinar-flutuante { display: none; }
 .yesno .botao.nao.on { background: #a2465c; border-color: #e07a90; color: #fff; }
 /* construtor no toque: segurar a carta abre a carta grande sem o menu do navegador */
 .ct-pool .item-vitrine { -webkit-touch-callout: none; user-select: none; }
+
+/* ---------- Lore (04/10) ---------- */
+.lore-abas { margin: 8px 0 14px; flex-wrap: wrap; }
+.lore-valores { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.lore-valor { padding: 14px 16px; border-radius: 14px; background: linear-gradient(160deg, color-mix(in srgb, var(--cor) 28%, #14102a), #120e26); border: 1px solid color-mix(in srgb, var(--cor) 60%, transparent); }
+.lore-valor h3 { color: color-mix(in srgb, var(--cor) 45%, #fff); margin-bottom: 4px; }
+.lore-conjs { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); }
+.lore-conj { display: flex; gap: 14px; align-items: flex-start; padding: 12px; border-radius: 14px; background: #120e26cc; border: 1px solid var(--borda); }
+.lore-conj-carta { flex: none; }
+.lore-filtros { flex-wrap: wrap; }
+.lore-filtros input { flex: 1 1 240px; }
+.lore-cat { margin: 18px 0 8px; font-size: 20px; }
+.lore-atlas { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.lore-verbete { display: flex; flex-direction: column; gap: 4px; text-align: left; padding: 8px; border-radius: 12px; background: #120e26cc; border: 1px solid var(--borda); color: inherit; font: inherit; cursor: zoom-in; }
+.lore-verbete img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; background: #0b0918; }
+.lore-verbete span { font-size: 12px; line-height: 1.35; color: var(--texto-2, #cfc8e6); display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.lore-verbete:hover { border-color: var(--ouro); }
+.lore-zoom { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
+.lore-zoom img { width: min(420px, 100%); border-radius: 12px; }
+.lore-zoom > div { flex: 1 1 240px; font-size: 16px; line-height: 1.5; }
+.lore-novidades { display: grid; gap: 6px; padding-left: 22px; }
+.lore-novidades li { padding: 6px 10px; border-radius: 10px; background: #120e26aa; }
+@media (max-width: 600px) { .lore-conj { flex-direction: column; align-items: center; text-align: center; } .lore-conjs { grid-template-columns: 1fr; } .lore-atlas { grid-template-columns: repeat(2, 1fr); } }

@@ -21,6 +21,7 @@ const rotas = {
   bot: telaPartidaBot,
   conta: telaConta,
   editor: async (p) => (await import('./editor.js')).telaEditor(tela, p, ctx),
+  lore: async (p) => (await import('./lore.js')).telaLore(tela, p, ctx),
   'palavras-chave': async () => {
     const { palavrasChaveHTML } = await import('./palavras-chave.js');
     fundo(cenario('tutorial'));

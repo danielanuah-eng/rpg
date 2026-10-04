@@ -21,6 +21,7 @@ import type { CartaDef, Catalogo } from '../tcg/src/tipos.ts';
 // @ts-ignore: módulo JS do app de testes (textos gerados a partir da mecânica)
 import { textoCarta } from '../tcg/app/textos.js';
 import { aplicarValoresDoSite } from './valores.ts';
+import { gerarLore } from './lore.ts';
 
 const aqui = (p: string) => fileURLToPath(new URL(p, import.meta.url));
 const raizArcano = aqui('../');
@@ -207,6 +208,10 @@ export async function construirSite(): Promise<{ versao: string }> {
   writeFileSync(publico + 'jogo/dados.json', JSON.stringify(d));
   garantir(aqui('./src/gerado/'));
   writeFileSync(aqui('./src/gerado/dados.json'), JSON.stringify(d));
+  // aba Lore: Valores, atlas do mundo (só entradas com arte aprovada) e novidades do git
+  const lore = gerarLore(raizArcano, (id) => artes.has(id));
+  writeFileSync(publico + 'jogo/lore.json', JSON.stringify(lore));
+  console.log(`online/public: lore com ${lore.valores.length} Valores, ${lore.categorias.reduce((t, c) => t + c.itens.length, 0)} verbetes em ${lore.categorias.length} categorias e ${lore.novidades.length} novidades.`);
   writeFileSync(publico + 'jogo/artes.json', JSON.stringify([...artes.values()].map((a) => ({ id: a.id, titulo: a.titulo, numero: a.numero }))));
   const n = await artesDoSite(artes, d);
   await kit();
