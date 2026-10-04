@@ -1,0 +1,38 @@
+{
+  "id": "base-recurso--persona",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-e38e65df-0c76-433b-9483-55b8ddbe16e9.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nCARD Mina Funda da Cidade dos Rostos, COMMON Persona Structure. Same physical mine identity from reference 1: deep SILVER ore, wooden beam supports, curved rails, carts, very few lanterns; NOT another straight corridor or shaft view. Invent a NEW quiet mine workshop under the city of masks: camera at eye level ACROSS a wide stone sorting table foreground RIGHT toward a descending diagonal railway behind it. Big arched MIRROR survey panels fixed between wooden supports reflect physical portions of the gallery, no portals, no duplicate magical people; closed iron crates, smooth cool blue-gray walls with selected silver veins. Foreground LEFT a slender tall masked rabbitlike humanoid miner with long upright ears, cream half-mask, closed midnight-blue shirt and rust leather apron examines one SILVER ore sample between gloved hands, head DOWN toward it. A stocky brown older woman in a coral porcelain upper face mask, dark headwrap and plain navy dress carries a lantern down steps behind him; all identifiable faces masked, no borrowed Ciantia character. Little coral protective mask carvings hung on supports and a few soft CORAL wisps around one old mask establish Persona, no emotional mind-control attack. Through a tiny high barred ventilation window show twilight mauve over distant urban rooftops; rest is a real cave interior. Keep mirrors and masks spare, architectural functionality readable, broad smooth painting and limited stone texture, NOT a masquerade hall instead of a mine. Actual rules EMPTY, no copy mechanic, resource activation or 3 orbs; pitch count is data. Common finish NO foil/UI/type/frame/text or cutout, opaque environment to every portrait edge.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/mina-funda.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "persona"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Galeria sob a Cidade dos Rostos, bancada de seleção de minério, espelhos entre escoras e escada ao fundo.",
+  "momentoDoDia": "Entardecer, céu violeta e cidade visível pela abertura alta.",
+  "clima": "Interior protegido.",
+  "escala": "Trabalhador com máscara de orelhas longas em primeiro plano e colega na escada.",
+  "avaliacaoVisual": "Trabalhador olha para o minério nas mãos; todos os rostos visíveis usam máscaras. Espelhos refletem trilhos e vagões, névoa coral localizada.",
+  "decisoes": [
+    "Cena nova com bancada e reflexos materiais, sem portais ou duplicação de personagens.",
+    "Persona aparece nas máscaras e energia coral; prata é minério físico.",
+    "Regra vazia respeitada, sem cópia, ativação, compra ou dano.",
+    "Não representa as três unidades de pitch como uma habilidade."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

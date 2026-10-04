@@ -1,0 +1,68 @@
+{
+  "id": "base-recurso--persona",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-e38e65df-0c76-433b-9483-55b8ddbe16e9.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-recurso--persona.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/mina-funda.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "persona"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Galeria sob a Cidade dos Rostos, bancada de seleção de minério, espelhos entre escoras e escada ao fundo.",
+  "momentoDoDia": "Entardecer, céu violeta e cidade visível pela abertura alta.",
+  "clima": "Interior protegido.",
+  "escala": "Trabalhador com máscara de orelhas longas em primeiro plano e colega na escada.",
+  "avaliacaoVisual": "Trabalhador olha para o minério nas mãos; todos os rostos visíveis usam máscaras. Espelhos refletem trilhos e vagões, névoa coral localizada.",
+  "decisoes": [
+    "Cena nova com bancada e reflexos materiais, sem portais ou duplicação de personagens.",
+    "Persona aparece nas máscaras e energia coral; prata é minério físico.",
+    "Regra vazia respeitada, sem cópia, ativação, compra ou dano.",
+    "Não representa as três unidades de pitch como uma habilidade."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--persona.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "e21237e87f4e9e33c4617ebd9dc3ec4f80cf74de6a235317170de91aa140e661",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

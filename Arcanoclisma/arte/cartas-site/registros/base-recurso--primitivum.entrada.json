@@ -1,0 +1,38 @@
+{
+  "id": "base-recurso--primitivum",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-6516fee2-b92d-47af-a7ee-f59c60de6ca0.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nCARD Mina Funda da Floresta Primeira, COMMON Primitivum Structure. Preserve reference 1's SILVER ore in cool rock, timber braces, iron rail tracks, ore wagons and sparse warm lanterns; create an entirely NEW natural mine beneath a giant tree's exposed root hollow, rather than a copied hallway/shaft/crane. Camera OVER the shoulder of a tall dark-brown woman with short tight black curls in a cream closed mining shirt and moss-green jacket lower RIGHT: only head/shoulder edge visible as she looks LEFT/UP into the full scene. A very broad oval cavern fills the portrait, roots arching around its ceiling, rails tracing an S from lower left across a small pool to a mine gallery high center. A blue-gray oxlike horned beast with FOUR clear legs, fully harnessed and relaxed, pulls ONE silver-loaded wagon through shallow water on far middle platform. One small red-bearded dwarf guides the harness, gaze along the path. Upper LEFT daylight from a wide root opening shows ancient mossy forest and noon pale blue sky; small amber spores and moss-green organic root accents establish Primitivum. Natural ore remains silver; do not replace it with glowing amber gems. Very smooth large rock and leaf shapes, controlled soft blue water reflections, no dense leaf noise or rough all-over bark hatching. EMPTY rule text: no beast summon, buff, attack or Arcano activation, no three spheres. No foil, printed UI, card frame, lettering or isolated ground miniature. One continuous polished scene with visible environmental depth and restrained daylight.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/mina-funda.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "primitivum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Mina em uma cavidade de raízes gigantes, água em níveis, ponte e trilhos curvos, floresta ao alto.",
+  "momentoDoDia": "Dia, céu azul e luz natural pela abertura superior.",
+  "clima": "Interior úmido com riacho, exterior arborizado claro.",
+  "escala": "Vista por cima do ombro da trabalhadora para animal de carga e galeria.",
+  "avaliacaoVisual": "Trabalhadora em primeiro plano de costas observa anão conduzindo bovino com vagão de prata. Raízes e vegetação enquadram cena contínua.",
+  "decisoes": [
+    "Paisagem nova com raízes, ponte e curso de água, sem reutilizar a composição do catálogo.",
+    "Animal é trabalhador de carga, não invocação ou efeito mecânico inventado.",
+    "Primitivum em verde-musgo/âmbar, minério físico prateado preservado.",
+    "Regra vazia sem ativação de Arcano."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

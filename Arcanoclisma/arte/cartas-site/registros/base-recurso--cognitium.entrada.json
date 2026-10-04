@@ -1,0 +1,38 @@
+{
+  "id": "base-recurso--cognitium",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-bcac3957-7143-410c-8023-08e052eea7ed.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nCARD: Mina Funda do Arquivo sem Dono, common Cognitium Structure. Preserve reference 1's deep mine identity: weathered timber supports, rail tracks and ore carts, exposed SILVER METALLIC ore in cool blue-gray stone, very little lantern light. Build a NEW vertical complete interior composition viewed from a wooden upper landing looking diagonally DOWN into a DEEP open mining shaft with switchback stairs, a timber lift platform and tracks entering a side gallery below. Foreground upper LEFT sturdy middle-aged dwarf woman with short charcoal hair, closed cream shirt and rust apron rests a pick safely on her shoulder, face in clear profile looking DOWN RIGHT toward her thin brown elf coworker guiding ONE loaded cart on the lower platform. Sparse warm amber lanterns attached to structural beams define depth; cold physical silver veins reflect quiet patches, NEVER glow like neon. A faint broken INDIGO knowledge veil by a closed ledger can establish current Cognitium affinity; old source's silver magic is NOT the card's active Value. This actual card has NO rule text, so depict only ordinary mining work, NO damage, draw, healing, activation or three Arcano spheres. Its pitch resource count is metadata, do not illustrate it as an invented ability. Fully underground with NO visible sky, no invented moon or sun, weather/hour unspecified. Smooth broad rock planes with a few ore facets and grain on wood, no noisy all-over rugged brushwork. Entire portrait filled with coherent spacious mine architecture; no cutout, card border, typography, UI or foil.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/mina-funda.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "cognitium"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Mina profunda, poço vertical com elevador de carga, passarelas de madeira, trilhos e minério de prata.",
+  "momentoDoDia": "Não determinado: interior subterrâneo sem céu visível.",
+  "clima": "Interior protegido, sem clima externo visível.",
+  "escala": "Trabalhadores em níveis diferentes mostram a profundidade da estrutura.",
+  "avaliacaoVisual": "Mineradora de perfil olha para o colega e o vagão abaixo. Prata física nas rochas, lanternas contidas e livro em tecido índigo. Cena inteira opaca.",
+  "decisoes": [
+    "Preservado o minério prateado como material físico; valor atual Cognitium registrado.",
+    "Texto de regra vazio: não foram inventadas habilidades de compra, dano ou geração por ativação.",
+    "Arcano gerado 3 pertence ao pitch, sem representar três esferas de habilidade.",
+    "Não afirmar lua ou horário em uma galeria sem acesso visual ao exterior."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

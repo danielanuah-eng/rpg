@@ -1,0 +1,38 @@
+{
+  "id": "base-recurso--conflituo",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-dd0362ee-8b48-4904-ab98-32f0713c6790.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nCARD Mina Funda do Campo sem Trégua, COMMON Conflituo Structure. Reference 1 identifies a deep silver mine with timber supports, rails, ore carts and few warm lanterns. Design a completely NEW full environment: camera near GROUND beside the tracks, looking from a broad blue-gray mining gallery upward toward a tall narrow opening AFTER RAIN. At upper LEFT through the small opening see cold daylight, wet stone fortifications and a quiet smithy shelter (no active battle); rails curve from near lower left into the opening rather than straight down a repeated corridor. A BLACK muscular older orc worker with shaven temple, short white beard, closed rust shirt and dark apron, stands RIGHT levering a heavy silver-loaded cart forward with his shoulder, WHOLE face and eyes turned LEFT toward the cart. Behind him a small stocky red-haired woman sorts ore by a dark anvil, dressed in cream working clothes. Natural SILVER ore streaks in blue-gray cave walls retain the source material, NOT the magic affinity. Current Conflituo accents are controlled rusty RED banners and one thin hard-light rusty-red brace propping a beam, not orange fire everywhere. Smooth broad stone planes, careful facets only in ore seams, moderate wood grain, restrained reflective wet floor. This actual card has EMPTY rule text: ordinary work only, no attacks, buffs, draw or resource activation. 3 Arcano pitch metadata does NOT imply three magic spheres. No foil, lettering, frame or isolated miniature; all edges filled by the cave and structure. Faces and cart geometry clear, ambient narrative without grand explosion.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/mina-funda.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "conflituo"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Galeria de mina sob uma abertura para fortificações e forja; trilhos curvos, vagões e escoras vermelhas.",
+  "momentoDoDia": "Dia, luz natural entrando pela abertura.",
+  "clima": "Depois de chuva, pedras e trilhos molhados.",
+  "escala": "Trabalhador grande em primeiro plano, colega e edificações no fundo.",
+  "avaliacaoVisual": "Trabalhador de rosto voltado à esquerda junto ao vagão; colega seleciona minério. Cena completa com luz fria externa e lanternas quentes.",
+  "decisoes": [
+    "Nova composição com saída visível e forja ao fundo; não reutiliza o corredor do catálogo.",
+    "Minério físico continua prateado; Conflitüo aparece em vermelho-ferrugem.",
+    "Regra vazia preservada: não inventa ataque, ativação ou poderes para a Estrutura.",
+    "Arcano de pitch não é representado como habilidade."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

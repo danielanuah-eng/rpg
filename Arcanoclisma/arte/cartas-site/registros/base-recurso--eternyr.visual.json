@@ -1,0 +1,68 @@
+{
+  "id": "base-recurso--eternyr",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-6f496c3a-bff0-4bf0-b784-3885cb887432.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-recurso--eternyr.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/mina-funda.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "eternyr"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Estação de mineração subterrânea, plataforma giratória ferroviária, passarelas e relógio mecânico suspenso.",
+  "momentoDoDia": "Dia indicado pela abertura de ventilação iluminada no alto.",
+  "clima": "Interior úmido, pequena abertura externa visível.",
+  "escala": "Trabalhadores pequenos em relação à plataforma e ao relógio.",
+  "avaliacaoVisual": "Mulher sentada observa relógio de bolso; trabalhador guia vagão. Mostrador azul-noite e rastros brancos suspensos localizados; cenário completo.",
+  "decisoes": [
+    "Identidade Eternyr como detalhe atmosférico da estação, sem regras de turno extra ou compra.",
+    "Minério prateado físico mantido; iluminação principal restrita a lanternas e abertura.",
+    "Cena nova, sem reaproveitar poço vertical ou guindaste de outras versões.",
+    "Texto atual de regras vazio e Arcano de pitch não representado como ativação."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--eternyr.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "05956683180a252660fbbcede0bcb02b542f6ff85b5496b790461f9252271965",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

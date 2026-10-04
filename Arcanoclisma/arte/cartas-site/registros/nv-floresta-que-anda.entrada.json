@@ -1,0 +1,37 @@
+{
+  "id": "nv-floresta-que-anda",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-eab2cf1f-a469-4d79-b451-1992b380ff2b.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nCARD: Floresta que Anda, common Primitivum Structure. Read reference 1 only for the original dense teal/moss canopy, warm brown living trunks, long ROOT LEGS, modest amber flowers and old path; invent a completely NEW continuous scene. Camera LOW beside a traveller looking UP through a huge walking forest crossing a misty valley at dawn. Three massive trees march very slowly diagonally into the distance: one lifting a long root-foot over the curved stony trail in the middle, another rooted foot closer lower right, outer boughs forming a roof of foliage with blue morning sky glimpses high above. Their roots read as real twisted ROOTS, no human hands, human faces or giant combat monsters. Tall woman with copper braids in a closed navy/rust travel coat foreground LEFT holds a simple walking staff and looks up RIGHT at the raised root; one short companion far along the trail for enormous scale. Old trail partly bends and closes behind the moving trunks, moss-green vegetation and a few localized amber wisps, subdued rose morning light in upper sky. Keep canopy painted as broad smooth shapes with carefully selected leaf edges, not hundreds of noisy hatch marks. The structure counts as ONE Grau and grants ONE Arcano ON ENTRY; a single small amber/moss-green light between roots can suggest arrival, never show repeat activation or any attack. No cards, UI, numbers, text, foil, isolated ground patch or empty backdrop.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/floresta-que-anda.png",
+  "textoRegraLido": "Conta como 1 carta no Grau. Ao entrar: ganhe 1 de Arcano.",
+  "valoresLidos": [
+    "primitivum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/floresta-que-anda.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Vale de montanhas atravessado por uma floresta ambulante, trilha entre raízes e névoa baixa.",
+  "momentoDoDia": "Amanhecer, sol baixo visível à direita.",
+  "clima": "Céu parcialmente nublado e névoa no vale.",
+  "escala": "Árvores enormes em marcha, viajantes pequenos para referência de escala.",
+  "avaliacaoVisual": "Cena vertical completa. Raízes como pernas, viajante de perfil olhando para cima e companhia ao fundo. Luz âmbar localizada; original preservado.",
+  "decisoes": [
+    "Árvores atravessam o vale em nova composição, sem reutilizar o recorte do catálogo.",
+    "Regra lida: conta como 1 carta no Grau e concede 1 Arcano ao entrar; não representa ataque nem ativação repetida.",
+    "Cor Primitivum em verde-musgo/âmbar, com céu e montanhas frios."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

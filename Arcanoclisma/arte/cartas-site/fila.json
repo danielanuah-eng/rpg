@@ -7843,9 +7843,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/floresta-que-anda.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Floresta que Anda: personagem/objeto do catálogo aprovado (floresta-que-anda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Floresta que Anda como lugar vivo e em funcionamento. Estrutura não ataca: transmite permanência e poder.",
       "ambienteOriginal": "Ambiente do Valor Primitivum: a floresta primeira, florestas que andam, mercados de feras e montanhas. Magia na cor verde-musgo e âmbar, em construtos orgânicos: raízes, galhos e esporos soltos. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -7861,7 +7861,9 @@
         "arquivo": "Arcanoclisma/arte/imagens/floresta-que-anda.png",
         "descricao": "Transparent ALPHA cutout, SQUARE canvas. SIMPLE FLAT 2D animated-comic illustration. Clean expressive varied-weight ink, loose energetic accents, broad SOLID COLOR SHAPES, discrete HARD CEL SHADOW BLOCKS, printed HALFTONE DOT patches. Warm ochre/rust/browns balanced with cool muted blue/cyan/deep green. No realistic painting, 3D, gradients, airbrush or neon. Whole subject fully inside canvas with empty transparent margin, no text or watermark.\nIsolated environment VIGNETTE CUTOUT, compact irregular ground patch and structures. SKY AND EXTERIOR ARE FULLY TRANSPARENT. Environment can be wider than tall but canvas remains SQUARE. Keep the described activity and crowds when specified as small fully dressed human background figures. No opaque atmospheric backdrop or full screen landscape. Simplify details into bold graphic shapes.\nRPG catalogue 149 Floresta que Anda. EXACT SUBJECT: Floresta que Anda: floresta densa em que as árvores têm raízes como pernas e mudam de lugar, trilhas que se fecham, luz âmbar entre as folhas. Sinais de magia verde-musgo e âmbar no ar.\nMagic: flat uniform/overflowing aura with gaps, smoke wisps or hard-light constructs and printed dots. Value colors: Conflitüo rust red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal when appropriate is dark golden Bronze Arco drawn in flat tones. Non-graphic fantasy, no gore or victims, no sexualized people.",
         "nota": "o lugar vira a cena inteira da carta, em retrato vertical"
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/nv-floresta-que-anda.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-floresta-que-anda.visual.json"
     },
     {
       "id": "base-recurso--cognitium",
@@ -7877,9 +7879,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mina-funda.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Mina Funda: personagem/objeto do catálogo aprovado (mina-funda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Mina Funda como lugar vivo e em funcionamento. Estrutura não ataca: transmite permanência e poder.",
       "ambienteOriginal": "Ambiente do Valor Cognitium: o arquivo sem dono, bibliotecas que esquecem, observatórios. Magia na cor índigo, em véu de fumaça com falhas, como se faltassem pedaços. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -7895,7 +7897,9 @@
         "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
         "descricao": "SQUARE 1:1 TRANSPARENT ALPHA game illustration cutout. Simple modern independent comic + contemporary animation: expressive varied ink lines and loose energetic accents, SOLID FLAT COLORS, crisp HARD CEL SHADOW BLOCKS, visible printed HALFTONE DOT patches. Only 2-3 discrete tones per surface. Warm ochre/orange/rust/browns balanced with cool muted blue/cyan/deep green. Entire subject with EMPTY TRANSPARENT MARGIN around all sides, no rectangular backdrop, no sky, no haze, no painting, realistic render, 3D, gradients, airbrush or neon.\nA compact miniature ENVIRONMENT CUTOUT in a SQUARE silhouette on one irregular terrain patch, like an illustrated game terrain asset. Keep buildings, terrain, described activity and crowds of tiny fully clothed humans if specified. SKY and all exterior are transparent. No horizon or background panorama.\nCatalogue 165 Mina Funda. EXACT SUBJECT: Mina Funda: galeria de mina profunda, vigas de madeira, trilhos, minério prateado brilhando nas paredes, pouca luz de lanterna. Sinais de magia prata-mercúrio no ar.\nMagic is FLAT uniform/overflowing aura with gaps, wisps or hard-light shapes and printed dots. Value colors: Conflitüo rusty red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal is dark gold Bronze Arco in flat tones. No added text or watermark; non-graphic fantasy, no gore/victims, no sexualized figures.",
         "nota": "o lugar vira a cena inteira da carta, em retrato vertical"
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/base-recurso--cognitium.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--cognitium.visual.json"
     },
     {
       "id": "base-recurso--conflituo",
@@ -7911,9 +7915,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mina-funda.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Mina Funda: personagem/objeto do catálogo aprovado (mina-funda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Mina Funda como lugar vivo e em funcionamento. Estrutura não ataca: transmite permanência e poder.",
       "ambienteOriginal": "Ambiente do Valor Conflitüo: campos de batalha sem trégua, arenas, trincheiras e forjas de guerra. Magia na cor vermelho-ferrugem, em construtos sólidos de luz: lâminas, escudos, estandartes. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -7929,7 +7933,9 @@
         "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
         "descricao": "SQUARE 1:1 TRANSPARENT ALPHA game illustration cutout. Simple modern independent comic + contemporary animation: expressive varied ink lines and loose energetic accents, SOLID FLAT COLORS, crisp HARD CEL SHADOW BLOCKS, visible printed HALFTONE DOT patches. Only 2-3 discrete tones per surface. Warm ochre/orange/rust/browns balanced with cool muted blue/cyan/deep green. Entire subject with EMPTY TRANSPARENT MARGIN around all sides, no rectangular backdrop, no sky, no haze, no painting, realistic render, 3D, gradients, airbrush or neon.\nA compact miniature ENVIRONMENT CUTOUT in a SQUARE silhouette on one irregular terrain patch, like an illustrated game terrain asset. Keep buildings, terrain, described activity and crowds of tiny fully clothed humans if specified. SKY and all exterior are transparent. No horizon or background panorama.\nCatalogue 165 Mina Funda. EXACT SUBJECT: Mina Funda: galeria de mina profunda, vigas de madeira, trilhos, minério prateado brilhando nas paredes, pouca luz de lanterna. Sinais de magia prata-mercúrio no ar.\nMagic is FLAT uniform/overflowing aura with gaps, wisps or hard-light shapes and printed dots. Value colors: Conflitüo rusty red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal is dark gold Bronze Arco in flat tones. No added text or watermark; non-graphic fantasy, no gore/victims, no sexualized figures.",
         "nota": "o lugar vira a cena inteira da carta, em retrato vertical"
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/base-recurso--conflituo.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--conflituo.visual.json"
     },
     {
       "id": "base-recurso--dominum",
@@ -7945,9 +7951,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mina-funda.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Mina Funda: personagem/objeto do catálogo aprovado (mina-funda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Mina Funda como lugar vivo e em funcionamento. Estrutura não ataca: transmite permanência e poder.",
       "ambienteOriginal": "Ambiente do Valor Dominum: cidades-muralha, prisões, tronos e salões de juramento. Magia na cor roxo-sangue, em construtos de correntes, coleiras e elos. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -7963,7 +7969,9 @@
         "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
         "descricao": "SQUARE 1:1 TRANSPARENT ALPHA game illustration cutout. Simple modern independent comic + contemporary animation: expressive varied ink lines and loose energetic accents, SOLID FLAT COLORS, crisp HARD CEL SHADOW BLOCKS, visible printed HALFTONE DOT patches. Only 2-3 discrete tones per surface. Warm ochre/orange/rust/browns balanced with cool muted blue/cyan/deep green. Entire subject with EMPTY TRANSPARENT MARGIN around all sides, no rectangular backdrop, no sky, no haze, no painting, realistic render, 3D, gradients, airbrush or neon.\nA compact miniature ENVIRONMENT CUTOUT in a SQUARE silhouette on one irregular terrain patch, like an illustrated game terrain asset. Keep buildings, terrain, described activity and crowds of tiny fully clothed humans if specified. SKY and all exterior are transparent. No horizon or background panorama.\nCatalogue 165 Mina Funda. EXACT SUBJECT: Mina Funda: galeria de mina profunda, vigas de madeira, trilhos, minério prateado brilhando nas paredes, pouca luz de lanterna. Sinais de magia prata-mercúrio no ar.\nMagic is FLAT uniform/overflowing aura with gaps, wisps or hard-light shapes and printed dots. Value colors: Conflitüo rusty red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal is dark gold Bronze Arco in flat tones. No added text or watermark; non-graphic fantasy, no gore/victims, no sexualized figures.",
         "nota": "o lugar vira a cena inteira da carta, em retrato vertical"
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/base-recurso--dominum.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--dominum.visual.json"
     },
     {
       "id": "base-recurso--eternyr",
@@ -7979,9 +7987,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mina-funda.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Mina Funda: personagem/objeto do catálogo aprovado (mina-funda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Mina Funda como lugar vivo e em funcionamento. Estrutura não ataca: transmite permanência e poder.",
       "ambienteOriginal": "Ambiente do Valor Eternyr: o entretempo, vilas do mesmo dia, estações paradas e relógios gigantes. Magia na cor azul-noite com riscos brancos, em aura com falhas e rastros parados no ar. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -7997,7 +8005,9 @@
         "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
         "descricao": "SQUARE 1:1 TRANSPARENT ALPHA game illustration cutout. Simple modern independent comic + contemporary animation: expressive varied ink lines and loose energetic accents, SOLID FLAT COLORS, crisp HARD CEL SHADOW BLOCKS, visible printed HALFTONE DOT patches. Only 2-3 discrete tones per surface. Warm ochre/orange/rust/browns balanced with cool muted blue/cyan/deep green. Entire subject with EMPTY TRANSPARENT MARGIN around all sides, no rectangular backdrop, no sky, no haze, no painting, realistic render, 3D, gradients, airbrush or neon.\nA compact miniature ENVIRONMENT CUTOUT in a SQUARE silhouette on one irregular terrain patch, like an illustrated game terrain asset. Keep buildings, terrain, described activity and crowds of tiny fully clothed humans if specified. SKY and all exterior are transparent. No horizon or background panorama.\nCatalogue 165 Mina Funda. EXACT SUBJECT: Mina Funda: galeria de mina profunda, vigas de madeira, trilhos, minério prateado brilhando nas paredes, pouca luz de lanterna. Sinais de magia prata-mercúrio no ar.\nMagic is FLAT uniform/overflowing aura with gaps, wisps or hard-light shapes and printed dots. Value colors: Conflitüo rusty red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal is dark gold Bronze Arco in flat tones. No added text or watermark; non-graphic fantasy, no gore/victims, no sexualized figures.",
         "nota": "o lugar vira a cena inteira da carta, em retrato vertical"
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/base-recurso--eternyr.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--eternyr.visual.json"
     },
     {
       "id": "base-recurso--morbidyum",
@@ -8013,9 +8023,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mina-funda.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Mina Funda: personagem/objeto do catálogo aprovado (mina-funda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Mina Funda como lugar vivo e em funcionamento. Estrutura não ataca: transmite permanência e poder.",
       "ambienteOriginal": "Ambiente do Valor Morbidyum: cemitérios que respiram, brejos, criptas e aldeias de curandeiras. Magia na cor verde-pálido, em fumaça fria e fios que partem, como almas. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -8031,7 +8041,9 @@
         "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
         "descricao": "SQUARE 1:1 TRANSPARENT ALPHA game illustration cutout. Simple modern independent comic + contemporary animation: expressive varied ink lines and loose energetic accents, SOLID FLAT COLORS, crisp HARD CEL SHADOW BLOCKS, visible printed HALFTONE DOT patches. Only 2-3 discrete tones per surface. Warm ochre/orange/rust/browns balanced with cool muted blue/cyan/deep green. Entire subject with EMPTY TRANSPARENT MARGIN around all sides, no rectangular backdrop, no sky, no haze, no painting, realistic render, 3D, gradients, airbrush or neon.\nA compact miniature ENVIRONMENT CUTOUT in a SQUARE silhouette on one irregular terrain patch, like an illustrated game terrain asset. Keep buildings, terrain, described activity and crowds of tiny fully clothed humans if specified. SKY and all exterior are transparent. No horizon or background panorama.\nCatalogue 165 Mina Funda. EXACT SUBJECT: Mina Funda: galeria de mina profunda, vigas de madeira, trilhos, minério prateado brilhando nas paredes, pouca luz de lanterna. Sinais de magia prata-mercúrio no ar.\nMagic is FLAT uniform/overflowing aura with gaps, wisps or hard-light shapes and printed dots. Value colors: Conflitüo rusty red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal is dark gold Bronze Arco in flat tones. No added text or watermark; non-graphic fantasy, no gore/victims, no sexualized figures.",
         "nota": "o lugar vira a cena inteira da carta, em retrato vertical"
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/base-recurso--morbidyum.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--morbidyum.visual.json"
     },
     {
       "id": "base-recurso--persona",
@@ -8047,9 +8059,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mina-funda.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Mina Funda: personagem/objeto do catálogo aprovado (mina-funda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Mina Funda como lugar vivo e em funcionamento. Estrutura não ataca: transmite permanência e poder.",
       "ambienteOriginal": "Ambiente do Valor Persona: a cidade dos rostos, feiras de máscaras, ruas de espelhos e tavernas cheias. Magia na cor coral, em aura suave e uniforme que transborda quando a emoção é forte. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -8065,7 +8077,9 @@
         "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
         "descricao": "SQUARE 1:1 TRANSPARENT ALPHA game illustration cutout. Simple modern independent comic + contemporary animation: expressive varied ink lines and loose energetic accents, SOLID FLAT COLORS, crisp HARD CEL SHADOW BLOCKS, visible printed HALFTONE DOT patches. Only 2-3 discrete tones per surface. Warm ochre/orange/rust/browns balanced with cool muted blue/cyan/deep green. Entire subject with EMPTY TRANSPARENT MARGIN around all sides, no rectangular backdrop, no sky, no haze, no painting, realistic render, 3D, gradients, airbrush or neon.\nA compact miniature ENVIRONMENT CUTOUT in a SQUARE silhouette on one irregular terrain patch, like an illustrated game terrain asset. Keep buildings, terrain, described activity and crowds of tiny fully clothed humans if specified. SKY and all exterior are transparent. No horizon or background panorama.\nCatalogue 165 Mina Funda. EXACT SUBJECT: Mina Funda: galeria de mina profunda, vigas de madeira, trilhos, minério prateado brilhando nas paredes, pouca luz de lanterna. Sinais de magia prata-mercúrio no ar.\nMagic is FLAT uniform/overflowing aura with gaps, wisps or hard-light shapes and printed dots. Value colors: Conflitüo rusty red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal is dark gold Bronze Arco in flat tones. No added text or watermark; non-graphic fantasy, no gore/victims, no sexualized figures.",
         "nota": "o lugar vira a cena inteira da carta, em retrato vertical"
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/base-recurso--persona.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--persona.visual.json"
     },
     {
       "id": "base-recurso--primitivum",
@@ -8081,9 +8095,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mina-funda.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Mina Funda: personagem/objeto do catálogo aprovado (mina-funda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Mina Funda como lugar vivo e em funcionamento. Estrutura não ataca: transmite permanência e poder.",
       "ambienteOriginal": "Ambiente do Valor Primitivum: a floresta primeira, florestas que andam, mercados de feras e montanhas. Magia na cor verde-musgo e âmbar, em construtos orgânicos: raízes, galhos e esporos soltos. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -8099,7 +8113,9 @@
         "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
         "descricao": "SQUARE 1:1 TRANSPARENT ALPHA game illustration cutout. Simple modern independent comic + contemporary animation: expressive varied ink lines and loose energetic accents, SOLID FLAT COLORS, crisp HARD CEL SHADOW BLOCKS, visible printed HALFTONE DOT patches. Only 2-3 discrete tones per surface. Warm ochre/orange/rust/browns balanced with cool muted blue/cyan/deep green. Entire subject with EMPTY TRANSPARENT MARGIN around all sides, no rectangular backdrop, no sky, no haze, no painting, realistic render, 3D, gradients, airbrush or neon.\nA compact miniature ENVIRONMENT CUTOUT in a SQUARE silhouette on one irregular terrain patch, like an illustrated game terrain asset. Keep buildings, terrain, described activity and crowds of tiny fully clothed humans if specified. SKY and all exterior are transparent. No horizon or background panorama.\nCatalogue 165 Mina Funda. EXACT SUBJECT: Mina Funda: galeria de mina profunda, vigas de madeira, trilhos, minério prateado brilhando nas paredes, pouca luz de lanterna. Sinais de magia prata-mercúrio no ar.\nMagic is FLAT uniform/overflowing aura with gaps, wisps or hard-light shapes and printed dots. Value colors: Conflitüo rusty red; Sublimeyn mercury silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Metal is dark gold Bronze Arco in flat tones. No added text or watermark; non-graphic fantasy, no gore/victims, no sexualized figures.",
         "nota": "o lugar vira a cena inteira da carta, em retrato vertical"
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/base-recurso--primitivum.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--primitivum.visual.json"
     },
     {
       "id": "base-recurso--sublimeyn",

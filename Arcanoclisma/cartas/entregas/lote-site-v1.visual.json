@@ -3,16 +3,8 @@
   "pedidoVersao": 2,
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 200,
+  "concluidas": 208,
   "pendentes": [
-    "nv-floresta-que-anda",
-    "base-recurso--cognitium",
-    "base-recurso--conflituo",
-    "base-recurso--dominum",
-    "base-recurso--eternyr",
-    "base-recurso--morbidyum",
-    "base-recurso--persona",
-    "base-recurso--primitivum",
     "base-recurso--sublimeyn",
     "ficha-wyvern-filhote"
   ],
@@ -1615,6 +1607,70 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-vila-do-mesmo-dia.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-vila-do-mesmo-dia.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "nv-floresta-que-anda",
+      "nome": "Floresta que Anda",
+      "arquivo": "Arcanoclisma/arte/cartas-site/nv-floresta-que-anda.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/nv-floresta-que-anda.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-recurso--cognitium",
+      "nome": "Mina Funda do Arquivo sem Dono",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--cognitium.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--cognitium.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-recurso--conflituo",
+      "nome": "Mina Funda do Campo sem Trégua",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--conflituo.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--conflituo.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-recurso--dominum",
+      "nome": "Mina Funda da Cidade-Muralha",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--dominum.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--dominum.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-recurso--eternyr",
+      "nome": "Mina Funda do Entretempo",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--eternyr.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--eternyr.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-recurso--morbidyum",
+      "nome": "Mina Funda do Cemitério que Respira",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--morbidyum.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--morbidyum.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-recurso--persona",
+      "nome": "Mina Funda da Cidade dos Rostos",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--persona.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--persona.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "base-recurso--primitivum",
+      "nome": "Mina Funda da Floresta Primeira",
+      "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--primitivum.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--primitivum.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
     }
   ],

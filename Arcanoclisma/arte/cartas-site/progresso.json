@@ -1,16 +1,8 @@
 {
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 200,
+  "concluidas": 208,
   "pendentes": [
-    "nv-floresta-que-anda",
-    "base-recurso--cognitium",
-    "base-recurso--conflituo",
-    "base-recurso--dominum",
-    "base-recurso--eternyr",
-    "base-recurso--morbidyum",
-    "base-recurso--persona",
-    "base-recurso--primitivum",
     "base-recurso--sublimeyn",
     "ficha-wyvern-filhote"
   ],

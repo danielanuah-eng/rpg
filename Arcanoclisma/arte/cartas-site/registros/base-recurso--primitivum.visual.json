@@ -1,0 +1,68 @@
+{
+  "id": "base-recurso--primitivum",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-6516fee2-b92d-47af-a7ee-f59c60de6ca0.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-recurso--primitivum.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/mina-funda.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "primitivum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Mina em uma cavidade de raízes gigantes, água em níveis, ponte e trilhos curvos, floresta ao alto.",
+  "momentoDoDia": "Dia, céu azul e luz natural pela abertura superior.",
+  "clima": "Interior úmido com riacho, exterior arborizado claro.",
+  "escala": "Vista por cima do ombro da trabalhadora para animal de carga e galeria.",
+  "avaliacaoVisual": "Trabalhadora em primeiro plano de costas observa anão conduzindo bovino com vagão de prata. Raízes e vegetação enquadram cena contínua.",
+  "decisoes": [
+    "Paisagem nova com raízes, ponte e curso de água, sem reutilizar a composição do catálogo.",
+    "Animal é trabalhador de carga, não invocação ou efeito mecânico inventado.",
+    "Primitivum em verde-musgo/âmbar, minério físico prateado preservado.",
+    "Regra vazia sem ativação de Arcano."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--primitivum.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "42b916f2aa5e7a03ce5efc16f2b205cf22be6c73260a4431f9ebe949bd154620",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

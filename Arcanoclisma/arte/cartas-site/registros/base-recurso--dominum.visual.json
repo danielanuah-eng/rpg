@@ -1,0 +1,68 @@
+{
+  "id": "base-recurso--dominum",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-7c9ca81c-7eee-43d3-996f-96a28d8f56ce.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-recurso--dominum.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/mina-funda.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "dominum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Mina sob a Cidade-Muralha, arcos reforçados e passarelas em níveis com guindaste de correntes.",
+  "momentoDoDia": "Não determinado: interior sem céu visível.",
+  "clima": "Interior subterrâneo.",
+  "escala": "Câmera baixa com operários perto e níveis altos de galeria atrás.",
+  "avaliacaoVisual": "Anã idosa verifica vagão e homem orienta carga suspensa. Elos roxos discretos e minério de prata; lanternas localizadas.",
+  "decisoes": [
+    "Composição inédita de mina civil com guindaste e arquitetura da Cidade-Muralha.",
+    "Correntes roxas representam a identidade de Dominum, sem aprisionar pessoas.",
+    "Mantidas regras vazias, sem geração por ativação, compra ou dano.",
+    "Prata é material, não mudança do Valor atual."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--dominum.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "ec71264b76c7041e2839d7bb3516e4de7f9b1b749e51d6d9415f7a88b4e9252c",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

@@ -1,0 +1,68 @@
+{
+  "id": "base-recurso--morbidyum",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-2fd24f37-d9c6-45a3-a3fc-0af65507ba4d.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/base-recurso--morbidyum.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/mina-funda.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Mina sob arcos de cripta, ponte ferroviária e riacho subterrâneo.",
+  "momentoDoDia": "Não determinado: interior sem céu visível.",
+  "clima": "Umidade subterrânea e névoa verde-pálido discreta.",
+  "escala": "Vista ao nível da água com trabalhadores acima da ponte.",
+  "avaliacaoVisual": "Minerador morto-vivo vestido guia vagão; mulher de tranças grisalhas olha para ele com caderno e lanterna. Minério de prata nas paredes.",
+  "decisoes": [
+    "Variação espacial com ponte e curso de água, em vez de corredor frontal repetido.",
+    "Morto-vivo é habitante do cenário, sem inventar habilidade de ressurreição para a Estrutura.",
+    "Morbidyum em fumaça verde-pálido; prata permanece material físico.",
+    "Texto de regras vazio, sem ativação, compra ou dano."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--morbidyum.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "8b4b42cd4371def4bf5475df476aaca9ac5e26ac1b7c88350b5d3f81c6006e04",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

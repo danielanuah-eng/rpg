@@ -1,0 +1,38 @@
+{
+  "id": "base-recurso--eternyr",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-6f496c3a-bff0-4bf0-b784-3885cb887432.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nCARD: Mina Funda do Entretempo, COMMON Eternyr Structure. Preserve reference 1's deep mine with weathered timber, rail tracks, wooden carts and SILVER physical ore, but make a genuinely NEW spacious composition: camera HIGH diagonally across a vast underground railway turntable/loading station, whole round platform visible below and one tall brass mechanical clock suspended under timber rafters. A narrow ventilation shaft high right admits a pale cool patch of DAYLIGHT after rain; little drops on rock, no rainbow. Foreground upper left only part of a catwalk railing, scene centered on the place rather than large repeated miners. A stout olive older woman with shaved gray undercut, navy shawl and cream work clothes sits on a low crate by the turntable patiently checking a pocket watch; below-right a lean young black man with tied long locs and rust apron gently rolls one silver ore wagon. Add controlled MIDNIGHT BLUE aura with two fine WHITE suspended trails near the clock and tiny duplicated wheel shadows as atmospheric Entretempo identity; NO cosmic explosion, portals or complete time stopping, no magically immobilized victims. Sparse warm amber lanterns balance blue-gray rock, broad smooth stones and timber with limited texture. This actual Structure has NO rule text, so NO extra turns, card draw, buff, damage, activation or three Arcano spheres. Pitch resource count is metadata. Full continuous portrait interior to every edge, no printed digits/letters/UI/card frame, no foil, no isolated ground patch, no previous shaft/crane composition.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/mina-funda.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "eternyr"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/mina-funda.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Estação de mineração subterrânea, plataforma giratória ferroviária, passarelas e relógio mecânico suspenso.",
+  "momentoDoDia": "Dia indicado pela abertura de ventilação iluminada no alto.",
+  "clima": "Interior úmido, pequena abertura externa visível.",
+  "escala": "Trabalhadores pequenos em relação à plataforma e ao relógio.",
+  "avaliacaoVisual": "Mulher sentada observa relógio de bolso; trabalhador guia vagão. Mostrador azul-noite e rastros brancos suspensos localizados; cenário completo.",
+  "decisoes": [
+    "Identidade Eternyr como detalhe atmosférico da estação, sem regras de turno extra ou compra.",
+    "Minério prateado físico mantido; iluminação principal restrita a lanternas e abertura.",
+    "Cena nova, sem reaproveitar poço vertical ou guindaste de outras versões.",
+    "Texto atual de regras vazio e Arcano de pitch não representado como ativação."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}
