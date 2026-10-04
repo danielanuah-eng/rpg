@@ -184,3 +184,71 @@ body.tela-cheia .mesa-direita { top: 0; height: 100dvh; }
 @media (max-width: 900px), (max-height: 560px) {
   .mesa-direita .lateral-corpo .barra-acao { background: linear-gradient(#120e2400, #120e24 10px); }
 }
+
+/* ---------- PC: tabuleiro maior (pedido do autor, 04/10) ----------
+   Durante a partida o topo do site some (a mesa tem "Sair" e "Tela cheia") e as faixas das mãos ficam mais baixas:
+   a câmera ganha altura e TUDO no tabuleiro cresce junto (cartas, baralho, Grau, cemitério, esfera), na mesma proporção. */
+@media (min-width: 901px) and (min-height: 561px) {
+  body.em-mesa #topo { display: none; }
+  body.em-mesa .mesa { height: 100dvh; }
+  body.em-mesa .mesa-direita { top: 0; height: 100dvh; }
+  .mao-faixa { height: 104px; }
+  .mao-op-faixa { min-height: 30px; }
+  .verso-mini { width: 22px; height: 31px; }
+  .mesa-mundo .lado { gap: 4px; }
+  .mesa-mundo .campo { min-height: 166px; padding: 2px 16px; }
+  .mesa-mundo .conj-bloco { gap: 1px; }
+}
+/* zonas maiores sem aumentar a altura da fileira: baralho ao lado de cemitério/banidas (empilhados) */
+.pilhas-zona { flex-direction: row !important; align-items: center; gap: 8px; }
+.zp-linha { flex-direction: column; gap: 4px; }
+.zp-baralho .zp-carta { width: 72px; height: 100px; }
+.zona-pilha .zp-carta { width: 50px; height: 70px; }
+.zp-linha .zona-pilha small { font-size: 8px; }
+.mesa-mundo .grau-cartas .cm { --w: 66px !important; }
+.mesa-mundo .grau-cartas .tcg-card { --card-w: 66px !important; }
+.mesa-mundo .grau-cartas .cm + .cm { margin-left: -26px !important; }
+.mesa-mundo .grau-cartas { min-height: 96px; }
+.mesa-mundo .fileira-fundo { grid-template-columns: 92px minmax(0, 1fr) 140px minmax(0, 1fr) 150px; }
+
+/* Legenda com o nome das cartas em campo (da entrega v15 do GPT, js/mesa-legibilidade-v15.js). O autor escolheu (04/10)
+   manter o tabuleiro inteiro na tela: da v15 fica só a legenda; o tamanho fixo + rolagem (css/mesa-proxima-v15.css) não é carregado.
+   overflow: clip impede que a rolagem automática da v15 desloque a câmera. */
+.mesa-palco { overflow: clip !important; }
+.mesa .campo .cm { position: relative; }
+.mesa-card-nome {
+  position: absolute;
+  left: -5px;
+  right: -5px;
+  bottom: -29px;
+  min-height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f4f6fc;
+  text-align: center;
+  font: 800 12px/1.15 var(--corpo);
+  text-shadow: 0 1px 3px #000, 0 0 7px #07101f;
+  overflow-wrap: anywhere;
+  pointer-events: none;
+}
+/* A legenda permanece horizontal junto de uma carta suspensa. */
+.mesa .campo .cm.suspensa .mesa-card-nome {
+  bottom: auto;
+  top: 50%;
+  left: calc(100% + 8px);
+  right: auto;
+  width: calc(var(--w) * 1.28);
+  translate: -50% -50%;
+  rotate: calc(-1 * var(--mesa-turn));
+}
+/* a legenda fica DENTRO da carta, sobre a faixa do nome (não invade a fileira vizinha) */
+.mesa .campo .cm .mesa-card-nome, .mesa .campo .cm.suspensa .mesa-card-nome {
+  top: 3%; bottom: auto; left: 3%; right: 3%; width: auto; min-height: 0; translate: none; rotate: none;
+  padding: 3px 5px; border-radius: 6px; background: #0b0a18e0; border: 1px solid #e0bd6a55; font-size: 14px; line-height: 1.1; z-index: 3;
+}
+.mesa .campo .cm .mesa-card-nome, .mesa .campo .cm.suspensa .mesa-card-nome { display: block; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pilhas-zona, .zp-linha, .zona-pilha, .zona-pilha .zp-carta { flex: none; }
+.mesa-mundo .fileira-fundo { grid-template-columns: 92px minmax(0, 1fr) 140px minmax(0, 1fr) 160px; }
+.zona-pilha.zp-baralho .zp-carta { width: 72px; height: 100px; }
+.zona-pilha small { white-space: nowrap; }

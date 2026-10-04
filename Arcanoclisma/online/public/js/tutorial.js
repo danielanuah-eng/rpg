@@ -70,12 +70,40 @@ const LICOES = [
       { titulo: 'O Conjurador ataca com a arma', texto: 'O seu Conjurador também ataca, com o Ataque do Canal (aqui, o Cajado de aprendiz: 1). Ataque o Conjurador do oponente com Lyandra. Ele vai bloquear: quem bloqueia troca dano com o atacante.', objetivo: 'Ataque com o seu Conjurador.', feito: (e) => e.instancias[e.jogadores[EU].conjuradorId].suspensa && !e.combate, destaque: (e) => [e.jogadores[EU].conjuradorId], alvos: (e) => [e.jogadores[BOT].conjuradorId], acoes: [{ tipo: 'atacar', conj: true }] },
       { titulo: 'Encerrar o turno', texto: 'Clique em <b>Encerrar fase Principal</b>. Depois vêm o Cataclisma (o Arcano que sobrou some) e o Final (suas cartas levantam).', objetivo: 'Passe o turno.', feito: (e) => e.ativo === BOT, passar: true },
       { titulo: 'Bloquear', texto: `O oponente vai atacar. Quando um ataque resolve, você escolhe um bloqueador de pé: clique no <b>${N('base-aliado-c6-defensivo')}</b> (5/14) quando ele brilhar. Quem bloqueia fica suspenso; um Aliado só levanta no seu Final, então não ataca no seu próximo turno. O Conjurador levanta no Início do seu turno, e a Armadura dele evita dano quando ele bloqueia.`, objetivo: 'Bloqueie o ataque.', feito: (e) => noLog(e, 'Jogador 0 bloqueia com') && !e.combate, destaque: (e) => [campoDe(e, EU, 'base-aliado-c6-defensivo')], alvos: (e) => [campoDe(e, EU, 'base-aliado-c6-defensivo')], acoes: [{ tipo: 'bloquear', def: 'base-aliado-c6-defensivo' }] },
-      { titulo: 'Lição concluída!', texto: 'Dano fica guardado (memória de dano) até alguém curar. Etéreo: só é bloqueado por Aliados Etéreos. Próxima lição: responder na pilha.', fim: true },
+      { titulo: 'Lição concluída!', texto: 'Dano fica guardado (memória de dano) até alguém curar. Etéreo: só é bloqueado por Aliados Etéreos. Próxima lição: como a pilha funciona.', fim: true },
     ],
     bot: (e) => {
       if (e.pendencia?.tipo === 'bloqueio') return e.combate && e.instancias[e.combate.atacante].ehConjurador ? { tipo: 'bloquear', jogador: BOT, bloqueador: campoDe(e, BOT, 'base-aliado-c2-defensivo') ?? null } : { tipo: 'bloquear', jogador: BOT, bloqueador: null };
       const javali = campoDe(e, BOT, 'base-aliado-c4-agressivo');
       if (e.ativo === BOT && e.etapa === 'principal' && !e.pilha.length && !e.combate && javali && !e.instancias[javali].suspensa) return { tipo: 'atacar', jogador: BOT, atacante: javali, alvo: e.jogadores[EU].conjuradorId };
+      return { tipo: 'passar', jogador: BOT };
+    },
+  },
+  {
+    id: 'pilha-basico', titulo: 'Como a pilha funciona', resumo: 'Tudo entra na pilha: cartas, respostas e ataques. Prioridade, responder por cima e a ordem em que resolve.',
+    cenario: () => montarCenario({
+      eu: { conj: 'lyandra', itens: ['item-canal-cajado', 'item-armadura-gibao'], mao: ['base-dano-c1', 'base-dano-c1-repentina', 'base-recurso'], campo: ['base-aliado-c2-agressivo'], grau: ['base-recurso', 'base-recurso', 'base-recurso'] },
+      bot: { conj: 'carmal', itens: ['item-canal-cajado', 'item-armadura-gibao'], mao: ['bal-devolver-c2-repentina', 'base-dano-c1-repentina'], campo: ['base-aliado-c2-agressivo'], grau: ['base-recurso', 'base-recurso'], arcano: 4, dano: { 'base-aliado-c2-agressivo': 2 } },
+    }),
+    passos: [
+      { titulo: 'O que é a pilha', texto: 'A <b>pilha</b> é a fila do que está esperando para acontecer. Ela aparece aqui na direita. Toda carta jogada, toda habilidade ativada e todo <b>ataque</b> entram na pilha antes de fazer efeito. Enquanto algo está na pilha, os dois jogadores podem <b>responder</b> com cartas Repentinas.', botao: true },
+      { titulo: 'Jogue uma carta', texto: `O Lobo-de-Cinza do oponente está ferido: só lhe resta 1 de vida. Jogue <b>${N('base-dano-c1')}</b> (2 de dano) nele. Ela não resolve na hora: vai para a pilha e espera.`, objetivo: `Jogue ${N('base-dano-c1')} no Lobo do oponente.`, feito: (e) => e.pilha.some((p) => p.controlador === EU), destaque: (e) => [maoDe(e, EU, 'base-dano-c1')], alvos: (e) => [campoDe(e, BOT, 'base-aliado-c2-agressivo')], acoes: [{ tipo: 'jogar', def: 'base-dano-c1' }] },
+      { titulo: 'O oponente respondeu', texto: `Quem joga algo passa a <b>prioridade</b> (a vez de responder) para o outro. O oponente respondeu com <b>${N('bal-devolver-c2-repentina')}</b>: ela está <b>por cima</b> da sua carta e vai devolver o Lobo para a mão dele antes do seu dano chegar. Responda por cima com <b>${N('base-dano-c1-repentina')}</b> (1 de dano, Repentina) no Lobo.`, objetivo: `Responda com ${N('base-dano-c1-repentina')} no Lobo do oponente.`, feito: (e) => e.pilha.length >= 3, destaque: (e) => [maoDe(e, EU, 'base-dano-c1-repentina')], alvos: (e) => [campoDe(e, BOT, 'base-aliado-c2-agressivo')], acoes: [{ tipo: 'jogar', def: 'base-dano-c1-repentina' }], travaPassar: 'Responda primeiro: jogue a Faísca de Tempestade no Lobo, por cima da carta do oponente.' },
+      { titulo: 'De cima para baixo', texto: `Agora há 3 cartas na pilha. Quando os dois jogadores passam seguidos, a carta <b>de cima</b> resolve, e assim por diante. Ordem: 1º a sua Faísca (mata o Lobo), 2º a ${N('bal-devolver-c2-repentina')} (o alvo sumiu: não faz nada), 3º a sua ${N('base-dano-c1')} (também sem alvo). Clique em <b>Passar</b> até a pilha esvaziar.`, objetivo: 'Passe e veja a pilha resolver.', feito: (e) => !e.pilha.length && !campoDe(e, BOT, 'base-aliado-c2-agressivo'), passar: true },
+      { titulo: 'Ataques também usam a pilha', texto: `Ataque o Conjurador do oponente com o seu <b>Lobo-de-Cinza</b>. O ataque entra na pilha ("Ataque de Você") e o oponente ainda pode responder antes de escolher se bloqueia. Depois passe até o combate acabar.`, objetivo: 'Ataque o Conjurador do oponente e passe até o dano acontecer.', feito: (e) => danoConj(e, BOT) > 0 && !e.combate && !e.pilha.length, destaque: (e) => [campoDe(e, EU, 'base-aliado-c2-agressivo')], alvos: (e) => [e.jogadores[BOT].conjuradorId], acoes: [{ tipo: 'atacar', def: 'base-aliado-c2-agressivo' }] },
+      { titulo: 'Resumo da pilha', texto: 'O oponente respondeu ao ataque com uma Faísca no seu Lobo, e ela resolveu antes do ataque. Lembre: <b>1)</b> tudo entra na pilha; <b>2)</b> quem joga passa a prioridade; <b>3)</b> quando os dois passam seguidos, a de cima resolve; <b>4)</b> carta sem alvo quando vai resolver não faz nada. Cartas Findantes só entram com a pilha vazia na sua fase Principal; Repentinas entram a qualquer momento em que você tem a prioridade.', botao: true },
+      { titulo: 'Lição concluída!', texto: 'Próxima lição: anular cartas, pagar para anular e olhar o topo do baralho.', fim: true },
+    ],
+    bot: (e, passo) => {
+      if (e.pendencia?.tipo === 'bloqueio') return { tipo: 'bloquear', jogador: BOT, bloqueador: null };
+      const topo = e.pilha[e.pilha.length - 1];
+      const lobo = campoDe(e, BOT, 'base-aliado-c2-agressivo');
+      const porta = maoDe(e, BOT, 'bal-devolver-c2-repentina');
+      // responde à Chuva de Faíscas devolvendo o próprio Lobo
+      if (passo === 2 && porta && lobo && topo?.controlador === EU && e.pilha.length === 1) return { tipo: 'jogar', jogador: BOT, carta: porta, alvo: lobo, enviarArcano: [] };
+      // responde ao ataque com uma Faísca no Lobo de quem ataca
+      const faisca = maoDe(e, BOT, 'base-dano-c1-repentina');
+      if (passo === 4 && faisca && topo?.tipo === 'ataque' && topo.controlador === EU) return { tipo: 'jogar', jogador: BOT, carta: faisca, alvo: topo.atacante, enviarArcano: [] };
       return { tipo: 'passar', jogador: BOT };
     },
   },
@@ -136,8 +164,8 @@ export async function telaTutorial(tela, partes, ctx) {
   const licao = LICOES.find((l) => l.id === id);
   if (!licao) {
     const p = progresso();
-    tela.innerHTML = `<h1>Tutorial</h1><p class="lema-peq">Quatro lições rápidas contra o bot e uma partida completa com dicas. Cada lição usa as regras de verdade.</p>
-      <div class="grade g2 licoes">${LICOES.map((l, i) => `<a class="cartao-modo licao ${p[l.id] ? 'feita' : ''}" href="#/tutorial/${l.id}" style="--cena:url('${cenario(['tutorial', 'mesa', 'saguao', 'baralhos'][i])}')"><div class="icone">${p[l.id] ? '✅' : `${i + 1}`}</div><h3>${esc(l.titulo)}</h3><p>${esc(l.resumo)}</p></a>`).join('')}
+    tela.innerHTML = `<h1>Tutorial</h1><p class="lema-peq">Cinco lições rápidas contra o bot e uma partida completa com dicas. Cada lição usa as regras de verdade.</p>
+      <div class="grade g2 licoes">${LICOES.map((l, i) => `<a class="cartao-modo licao ${p[l.id] ? 'feita' : ''}" href="#/tutorial/${l.id}" style="--cena:url('${cenario(['tutorial', 'mesa', 'saguao', 'baralhos', 'comunidade'][i % 5])}')"><div class="icone">${p[l.id] ? '✅' : `${i + 1}`}</div><h3>${esc(l.titulo)}</h3><p>${esc(l.resumo)}</p></a>`).join('')}
       <a class="cartao-modo licao" href="#/tutorial/partida" style="--cena:url('${cenario('menu')}')"><div class="icone">🎓</div><h3>Partida completa com dicas</h3><p>Lyandra contra Osmar, com dicas do que fazer a cada momento.</p></a></div>`;
     return;
   }

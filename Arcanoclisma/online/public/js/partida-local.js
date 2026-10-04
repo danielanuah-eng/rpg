@@ -59,6 +59,7 @@ export function criarPartidaLocal(cfg) {
       if (ator() !== BOT) return;
       let erro = aplicar(cmd);
       if (erro) {
+        console.warn('bot: jogada recusada pelo motor', erro, cmd);
         // jogada inválida do bot: passa (ou a decisão mais segura da pendência)
         const p = e.pendencia;
         const seguro = p?.tipo === 'bloqueio' ? { tipo: 'bloquear', jogador: BOT, bloqueador: null }

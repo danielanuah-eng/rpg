@@ -47,5 +47,21 @@
     "d20EAbertura": "Integrados e conferidos no navegador; ver abertura-partida.integracao.claude.json.",
     "fichaWyvern": "Valores da ficha Wyvern Filhote continuam [] (ficha sem Valor, como as outras fichas); não deduzidos da cor.",
     "layout": "css/mesa-ajuste.css: a pilha da lateral estreita quebra o texto para baixo da carta."
+  },
+  "vistaProximaV15": {
+    "data": "2026-10-04",
+    "decisaoDoAutor": "Tabuleiro inteiro na tela (perguntado ao autor com as duas opções): a câmera encaixa o tabuleiro e TUDO cresce junto; sem tamanho fixo + rolagem.",
+    "integrado": [
+      "js/mesa-legibilidade-v15.js (legenda com o nome das cartas em campo), com a legenda DENTRO da carta, sobre a faixa do nome, em css/mesa-ajuste.css"
+    ],
+    "naoCarregado": "css/mesa-proxima-v15.css (o arquivo continua no repositório; não está no index.html). Ele forçava zoom 1, cartas de 148 px e rolagem: num PC 1366x768 só ~40% do tabuleiro aparecia.",
+    "pedido": "Não reativar a v15 nem forçar zoom/rolagem no .mesa-palco sem nova decisão do autor. A rolagem automática da v15 fica sem efeito (overflow: clip no palco).",
+    "medidas1366x768": {
+      "camera": 0.86,
+      "aliado": "98 px",
+      "conjurador": "101 px",
+      "baralho": "61 px",
+      "grau": "56 px"
+    }
   }
 }
