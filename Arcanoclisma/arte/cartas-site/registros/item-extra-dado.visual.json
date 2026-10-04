@@ -1,0 +1,64 @@
+{
+  "id": "item-extra-dado",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-3e646213-bab8-45e8-a351-2b1d3768f01e.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-extra-dado.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/dado-honesto.png",
+  "textoRegraLido": "Extra. Uso único. Use: cause 2 de dano a um alvo.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/dado-honesto.png",
+      "papel": "Identidade do item aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Cena nova unificada com o item original reconhecível.",
+    "Efeito local correspondente à regra atual, sem acrescentar habilidades."
+  ],
+  "avaliacaoVisual": "Cubo ocre com quatro/três pontos azuis e espiral preservado, perto do piso molhado de antigo banho; mão expressiva e um contato mágico pequeno no escudo distante. Arte identifica Dado Honesto, não o D20 de abertura.",
+  "ambiente": "Antigo banho de azulejos",
+  "momentoDoDia": "Dia",
+  "clima": "Luz natural pelas janelas",
+  "escala": "Cubo em primeiro plano e alvo afastado",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-dado.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "df783d439d31086a77256ff8e50d8983346c21744582c2371fb510287595c2f3",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

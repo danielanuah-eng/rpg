@@ -104,6 +104,11 @@
     }
   ],
   "ciantia": {
+    "estado": "retirada_do_uso_pelo_autor_em_2026-10-04",
+    "publicarNovamente": false,
+    "usarNoJogo": false,
+    "observacao": "O arquivo foi enviado no commit dceec35 antes da nova instrução. Não usar nem reenviar esta versão. Novo prompt lateral agachada reservado somente para a expansão.",
+    "promptReservado": "Arcanoclisma/expansoes/a-mestra-dos-dragoes/arte/prompts/ciantia-brincando-dimensao-transplanar.prompt.txt",
     "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-04-conjuradores/conjurador-ciantia-dimensao-transplanar.png",
     "manifesto": "Arcanoclisma/cartas/modelos-visuais/2026-10-04-conjuradores/manifesto.json",
     "dimensao": "Mesma dimensão da primeira carta do Dragão Transplanar, com dragões verde, coral e âmbar vistos de baixo.",

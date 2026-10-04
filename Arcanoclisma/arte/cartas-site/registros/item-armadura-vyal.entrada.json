@@ -1,0 +1,38 @@
+{
+  "id": "item-armadura-vyal",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-4c6c8f56-6849-4c62-8858-05965b1f773a.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nID item-armadura-vyal; rarity comum, arteAlternativa false; Values dominum, eternyr, conflituo. Actual rules: Armadura. Defesa 3, desgaste 4.\nImage1 identifies the relic: one large curved dragon scale plate, elongated leaf silhouette and hooked upper tip, blue-grey graphite overlapping segments with rusty patina and branching amber seams. Preserve this exact distinctive material/silhouette; adapt it as protective armor braced on the outside of a forearm, not an offensive blade. NEW unified scene: a tall dark-skinned older male conjurador with long narrow face and short salt-and-pepper hair crouches protectively under an old stone aqueduct crossing an arid canyon. His body is in profile and both hands are anatomically clear: the near forearm braces the scale upright at his chest, the other hand shields a small travel satchel. A blunt wooden weapon meets the scale at one tiny amber contact point, with scratches showing honest material wear; no reflection, invulnerability, new aura monster or whole-scene fire. The scale is foreground dominant and bright seams stay local, canyon and pale sky muted. Dusty late afternoon, cool aqueduct shadows, curved arches recede smoothly, no copied town alley/cliff composition. Current game identity ONLY Armadura Defesa3 desgaste4. Smooth large painted planes, crisp readable seams, no over-granular rocks.\nReference2 ONLY approved smooth illustration finish, never copy its figures. Full opaque vertical63:88,1260x1760 preferred if supported; no frame, text, UI or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/escama-do-vyal.png",
+  "textoRegraLido": "Armadura. Defesa 3, desgaste 4.",
+  "valoresLidos": [
+    "dominum",
+    "eternyr",
+    "conflituo"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/escama-do-vyal.png",
+      "papel": "Identidade do item aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Cena nova unificada com o item original reconhecível.",
+    "Efeitos narrativos locais; regras e valores atuais preservados."
+  ],
+  "avaliacaoVisual": "Escama azul-cinza com costuras âmbar preservada; proteção de antebraço em cena de impacto localizada, conjurador mais velho sob aqueduto. Mão distante parcialmente coberta pela placa; anatomia visível coerente.",
+  "ambiente": "Aqueduto sobre cânion seco",
+  "momentoDoDia": "Fim de tarde",
+  "clima": "Seco com poeira",
+  "escala": "Armadura e portador em primeiro plano; arcos recuados",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

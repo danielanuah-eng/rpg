@@ -1,0 +1,40 @@
+{
+  "id": "item-canal-badalo",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-137cc0ae-f19d-4ce9-8b2e-d576efec9ff2.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nCard ID item-canal-badalo; rarity comum, arteAlternativa false. Current actual Values: conflituo, dominum, primitivum. Actual rule: Canal. Arma: Ataque 3.. Do not change or add rules. RPG identity reference image1: the SAME enormous weathered flared Bronze Arco bell, oxidized turquoise patches and broad plain bronze bands, large top suspension ring and single visible heavy bronze clapper wrapped in old pale cloth. Preserve this exact recognizable relic design; do not replace it with a hammer, gemstone staff or a clean ornate church bell. NEW unified card scene: close low-angle view looking up from the timber floor of a rural bell tower on a cold clear winter noon. The bell is mounted securely to an old dark timber crossbeam, occupying most of the center foreground, tilted as it rings; its wrapped clapper swings visibly inside its mouth. Only part of the sineira appears near the lower side: an older brown-skinned woman's coarse sleeve and strong hand pulling the simple rope linked to the clapper; coherent mechanics, no severed/extra hand. Through the broad open tower opening, a quiet shallow river ford, low tiled houses and blue winter hills establish Vau Grande, modest believable scale. Original warm amber sound curls stay concentrated around the bell and one firmer rusty-red arc suggests a Canal attack; NO victims, reflected magic, immunity, large explosion or added mechanical ability. Wide graphic shapes and clear spatial support, bell and clapper sharply readable, soft cool sky light with restrained matte metal highlights. No glowing golden landscape, excessive worn texture on the scenery or huge cathedral.\nImage1 is object identity only; image2 is ONLY the approved smooth scenery finish, do not copy its characters, dragons or location. Full opaque integrated vertical card illustration, 63:88, preferred1260x1760 if supported. No card border, typography, title, stats, logo or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/o-badalo-de-vau-grande.png",
+  "textoRegraLido": "Canal. Arma: Ataque 3.",
+  "valoresLidos": [
+    "conflituo",
+    "dominum",
+    "primitivum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/o-badalo-de-vau-grande.png",
+      "papel": "Identidade do item aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Cenário liso aprovado, somente acabamento"
+    }
+  ],
+  "decisoes": [
+    "Cena unificada com cenário completo; regras e números preservados.",
+    "Nova ambientação e horário, sem repetir cenários do briefing."
+  ],
+  "avaliacaoVisual": "Sino de bronze oxidado e badalo envolto em pano preservados; torre de madeira e vila invernal vistos de baixo, mão puxa corda de forma coerente.",
+  "ambiente": "Torre de sino junto ao vau, vila e montanhas ao fundo",
+  "momentoDoDia": "Dia claro de inverno",
+  "clima": "Frio, neve e céu claro",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "liberdadesVisuais": [
+    "Composição e ambiente criados pelo Designer dentro da identidade do item."
+  ]
+}

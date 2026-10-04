@@ -24,3 +24,11 @@
 .tcg-card .valores-centrais-v12 .esfera-simbolos-v12 img { opacity: .88; }
 /* Sem escolha de raridade, apenas a identidade por Valor aparece. As texturas não são excluídas. */
 .tcg-card[data-finish="nenhuma"] :is(.foil-texture,.foil-reflection,.art-magic-glow-v9) { display: none; }
+/* Pedido do autor, 04/10: atributos agrupados no centro, números no centro de cada acabamento. */
+.tcg-card .stats {
+  left: 50%; right: auto; transform: translateX(-50%);
+  justify-content: center; width: max-content;
+}
+.tcg-card .stat { position: relative; display: grid; place-items: center; gap: 0; }
+.tcg-card .stat > span { position: relative; z-index: 1; text-align: center; font-variant-numeric: tabular-nums; }
+.tcg-card .stat > img { position: absolute; left: 12%; top: 12%; width: calc(var(--card-w) * .024); height: calc(var(--card-w) * .024); }

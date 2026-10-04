@@ -3763,9 +3763,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/o-badalo-de-vau-grande.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "O Badalo de Vau-Grande: personagem/objeto do catálogo aprovado (o-badalo-de-vau-grande). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "O Badalo de Vau-Grande em uso como arma ou foco de magia (Canal, Ataque 3), empunhado por um conjurador visto de modo parcial (mão, braço ou silhueta), no instante de um ataque, num cenário de batalha.",
       "ambienteOriginal": "Ambiente do Valor Conflitüo: campos de batalha sem trégua, arenas, trincheiras e forjas de guerra. Magia na cor vermelho-ferrugem, em construtos sólidos de luz: lâminas, escudos, estandartes. Dupla temperatura: a magia é quente, então o cenário puxa o frio. A carta também serve aos Valores Dominum, Primitivum: detalhes discretos dessas cores podem aparecer.",
@@ -3780,7 +3780,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/o-badalo-de-vau-grande.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 141 O Badalo de Vau-Grande. Subject: O Badalo de Vau-Grande: artefato lendário, antigo e único. Rumor: o sino é o que sobrou do marido da sineira; o badalo, dizem, é o que sobrou dele de verdade.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-canal-badalo.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-canal-badalo.visual.json"
     },
     {
       "id": "item-canal-violino",
@@ -3794,9 +3796,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/violino-do-ontem.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Violino do Ontem: personagem/objeto do catálogo aprovado (violino-do-ontem). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Violino do Ontem em uso como arma ou foco de magia (Canal, Ataque 2), empunhado por um conjurador visto de modo parcial (mão, braço ou silhueta), no instante de um ataque, num cenário de batalha.",
       "ambienteOriginal": "Ambiente do Valor Eternyr: o entretempo, vilas do mesmo dia, estações paradas e relógios gigantes. Magia na cor azul-noite com riscos brancos, em aura com falhas e rastros parados no ar. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Cognitium, Morbidyum: detalhes discretos dessas cores podem aparecer.",
@@ -3811,7 +3813,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/violino-do-ontem.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 105 Violino do Ontem. Subject: Violino do Ontem: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: quem ouve lembra de algo que tinha esquecido.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-canal-violino.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-canal-violino.visual.json"
     },
     {
       "id": "item-canal-coleira",
@@ -3825,9 +3829,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/coleira-de-kairvahnn.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Coleira de Kairvahnn: personagem/objeto do catálogo aprovado (coleira-de-kairvahnn). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Coleira de Kairvahnn em uso como arma ou foco de magia (Canal, Ataque 3), empunhado por um conjurador visto de modo parcial (mão, braço ou silhueta), no instante de um ataque, num cenário de batalha.",
       "ambienteOriginal": "Ambiente do Valor Primitivum: a floresta primeira, florestas que andam, mercados de feras e montanhas. Magia na cor verde-musgo e âmbar, em construtos orgânicos: raízes, galhos e esporos soltos. Dupla temperatura: a magia é quente, então o cenário puxa o frio. A carta também serve aos Valores Conflitüo, Alvorum: detalhes discretos dessas cores podem aparecer.",
@@ -3842,7 +3846,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/coleira-de-kairvahnn.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 146 Coleira de Kairvahnn. Subject: Coleira de Kairvahnn: artefato lendário, antigo e único. Rumor: uma das cem cabeças do Leão ainda está presa nela.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-canal-coleira.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-canal-coleira.visual.json"
     },
     {
       "id": "item-armadura-capa",
@@ -3856,9 +3862,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/capa-de-vento.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Capa de Vento: personagem/objeto do catálogo aprovado (capa-de-vento). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Capa de Vento protegendo um conjurador que bloqueia um golpe (Armadura: Defesa 1, desgaste 6), com marcas de uso e a magia de proteção visível, num cenário de batalha.",
       "ambienteOriginal": "Ambiente: uma encruzilhada arcana devastada pelo Cataclisma, com ruínas, céu dividido entre luz quente e sombra fria e restos de magia no chão.",
@@ -3873,7 +3879,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/capa-de-vento.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 104 Capa de Vento. Subject: Capa de Vento: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: voa enquanto houver vento.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-armadura-capa.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-armadura-capa.visual.json"
     },
     {
       "id": "item-armadura-escama",
@@ -3887,9 +3895,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/escama-do-dragao-mercurio.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Escama do Dragão-Mercúrio: personagem/objeto do catálogo aprovado (escama-do-dragao-mercurio). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Escama do Dragão-Mercúrio protegendo um conjurador que bloqueia um golpe (Armadura: Defesa 2, desgaste 5), com marcas de uso e a magia de proteção visível, num cenário de batalha.",
       "ambienteOriginal": "Ambiente do Valor Alvorum: faróis sem noite, auroras, campos dourados ao amanhecer e ao entardecer. Magia na cor dourado e preto, em aura dividida, com falhas entre a parte de luz e a de sombra. Dupla temperatura: a magia é quente, então o cenário puxa o frio. A carta também serve aos Valores Primitivum, Sublimeyn: detalhes discretos dessas cores podem aparecer.",
@@ -3904,7 +3912,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/escama-do-dragao-mercurio.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 110 Escama do Dragão-Mercúrio. Subject: Escama do Dragão-Mercúrio: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: muda de estado ao comando: faca, gota, fumaça.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-armadura-escama.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-armadura-escama.visual.json"
     },
     {
       "id": "item-armadura-manto",
@@ -3918,9 +3928,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/manto-de-cor-de-parede.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Manto de Cor de Parede: personagem/objeto do catálogo aprovado (manto-de-cor-de-parede). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Manto de Cor de Parede protegendo um conjurador que bloqueia um golpe (Armadura: Defesa 1, desgaste 7), com marcas de uso e a magia de proteção visível, num cenário de batalha.",
       "ambienteOriginal": "Ambiente do Valor Persona: a cidade dos rostos, feiras de máscaras, ruas de espelhos e tavernas cheias. Magia na cor coral, em aura suave e uniforme que transborda quando a emoção é forte. Dupla temperatura: a magia é quente, então o cenário puxa o frio. A carta também serve aos Valores Sublimeyn, Morbidyum: detalhes discretos dessas cores podem aparecer.",
@@ -3935,7 +3945,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/manto-de-cor-de-parede.png",
         "descricao": "Manto mágico que assume as cores do que está atrás, isolado sem personagem, com tecido usado ocre e azul-cinza, quadrinhos independentes e animação contemporânea, traço variado, cores chapadas, sombras em bloco e pontilhado. Composição quadrada. Remover totalmente o fundo branco e preservar o manto e os detalhes mágicos com canal alfa real. Sem texto, logotipo, mãos, manequim ou cenário."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-armadura-manto.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-armadura-manto.visual.json"
     },
     {
       "id": "item-armadura-vyal",
@@ -3949,9 +3961,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/escama-do-vyal.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Escama do Vyal: personagem/objeto do catálogo aprovado (escama-do-vyal). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Escama do Vyal protegendo um conjurador que bloqueia um golpe (Armadura: Defesa 3, desgaste 4), com marcas de uso e a magia de proteção visível, num cenário de batalha.",
       "ambienteOriginal": "Ambiente do Valor Dominum: cidades-muralha, prisões, tronos e salões de juramento. Magia na cor roxo-sangue, em construtos de correntes, coleiras e elos. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Eternyr, Conflitüo: detalhes discretos dessas cores podem aparecer.",
@@ -3966,7 +3978,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/escama-do-vyal.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 142 Escama do Vyal. Subject: Escama do Vyal: artefato lendário, antigo e único. Rumor: caiu numa briga com o pai; quem a carrega é amado, e nunca sabe se é por ele ou pela escama.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-armadura-vyal.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-armadura-vyal.visual.json"
     },
     {
       "id": "item-extra-sal",
@@ -3980,9 +3994,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/sal-do-viajante.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Sal do Viajante: personagem/objeto do catálogo aprovado (sal-do-viajante). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Sal do Viajante sendo usado uma única vez (Extra consumível): quem conjura espia o futuro: algumas imagens brilham e uma é puxada para a mão, as outras afundam, num lugar coerente com o item.",
       "ambienteOriginal": "Ambiente: uma encruzilhada arcana devastada pelo Cataclisma, com ruínas, céu dividido entre luz quente e sombra fria e restos de magia no chão.",
@@ -3997,7 +4011,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/sal-do-viajante.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 092 Sal do Viajante. Subject: Sal do Viajante: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: uma pitada e qualquer comida estragada fica boa.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-extra-sal.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-sal.visual.json"
     },
     {
       "id": "item-extra-dado",
@@ -4011,9 +4027,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/dado-honesto.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Dado Honesto: personagem/objeto do catálogo aprovado (dado-honesto). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Dado Honesto sendo usado uma única vez (Extra consumível): o chão onde o inimigo estava ainda queima ou brilha, marcado pelo golpe que acabou de cair, num lugar coerente com o item.",
       "ambienteOriginal": "Ambiente: uma encruzilhada arcana devastada pelo Cataclisma, com ruínas, céu dividido entre luz quente e sombra fria e restos de magia no chão.",
@@ -4028,7 +4044,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/dado-honesto.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 096 Dado Honesto. Subject: Dado Honesto: objeto mágico do dia a dia, com cara de coisa comum e um detalhe estranho. O que faz: quem joga não consegue mentir enquanto o dado gira.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-extra-dado.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-dado.visual.json"
     },
     {
       "id": "item-extra-lanterna",
@@ -4042,9 +4060,9 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/lanterna-do-veu.webp",
       "referenciasIdentidade": [],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Lanterna do Véu: personagem/objeto do catálogo aprovado (lanterna-do-veu). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Lanterna do Véu sendo usado uma única vez (Extra consumível): uma criatura é puxada de volta através de um portal, sumindo do campo, num lugar coerente com o item.",
       "ambienteOriginal": "Ambiente do Valor Sublimeyn: céus de duas pálpebras, mares de mercúrio, nuvens e torres flutuantes. Magia na cor prata-mercúrio, em fumaça e vapor que escorrem, pingam e cristalizam. Dupla temperatura: a magia é fria, então o cenário puxa o quente. A carta também serve aos Valores Persona, Eternyr: detalhes discretos dessas cores podem aparecer.",
@@ -4059,7 +4077,9 @@
       "objetoReferencia": {
         "arquivo": "Arcanoclisma/arte/imagens/lanterna-do-veu.png",
         "descricao": "SIMPLE FLAT 2D CEL-SHADED COMIC DRAWING, NOT a painting or realistic object render. Dynamic modern independent comic and contemporary animation illustration. Expressive organic confident varied-weight ink lines: heavier accents, thin interior strokes, a few loose energetic sketch marks. LARGE FLAT SOLID COLOR SHAPES, only 2 or 3 discrete color tones per surface; HARD-EDGED BLOCK CEL SHADOWS. Visible printed HALFTONE DOT patches within shadow blocks, not watercolor washes or grainy painterly shading. Warm earthy ochre/orange/rust/brown balanced with cool muted blue/cyan/deep green. Adventurous warm lively mood. NO soft color transitions, airbrush, smooth gradients, photographic lighting, embossed realistic metal, 3D, neon or glossy rendered surfaces.\nRPG catalog image 144 Lanterna do Véu. Subject: Lanterna do Véu: artefato lendário, antigo e único. Rumor: um pedaço da aurora de OulVeil preso num vidro; se apagar, a aurora apaga também.\nSquare 1:1. One entire isolated item centered, three-quarter view, iconic exaggerated voluminous shape, practical handmade ordinary-looking appearance with slight wear and ONE strange magical functional detail. No unnecessary ornament, jewelry or gemstones unless explicitly described. No wearer, hands, mannequin, floor or scene.\nMagic if requested: isolated bold FLAT graphic uniform aura, overflowing aura with gaps, smoke wisps or solid colored hard-light constructs, with halftone dotted glow, no fog halo. Value colors: Conflitüo rusty red; Sublimeyn silver; Dominum dark purple; Persona coral; Alvorum gold/black; Morbidyum pale green; Cognitium indigo; Eternyr midnight blue/white streaks; Primitivum moss green/amber. Contrast warm magic with cool details and cold magic with warm details. When metal is needed, Bronze Arco is dark golden bronze with SIMPLE FLAT tones, no rendered glints. Transparent ALPHA background with wide clear margins around full subject and transparent gaps between separate elements; no white background, checkerboard, backdrop haze or shadow floor. No text, letters, logos, signatures or watermark. No graphic injuries or gore, no victims; human figures wear appropriate practical clothing and are not sexualized."
-      }
+      },
+      "arteNova": "Arcanoclisma/arte/cartas-site/item-extra-lanterna.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-lanterna.visual.json"
     },
     {
       "id": "item-extra-relogio",

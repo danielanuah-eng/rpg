@@ -88,7 +88,9 @@
       activeMotions.set(target,()=>finish(true));
       void target.offsetWidth;
       target.classList.add(cls);target.addEventListener('animationend',end);
-      timer=setTimeout(()=>finish(false),reduced?0:1000);
+      const css=getComputedStyle(target),paraMs=v=>v.trim().endsWith('ms')?parseFloat(v):parseFloat(v)*1000;
+      const duracao=paraMs(css.animationDuration.split(',')[0])||1320,atraso=paraMs(css.animationDelay.split(',')[0])||0;
+      timer=setTimeout(()=>finish(false),reduced?0:Math.max(0,duracao+atraso)+160);
     });
   }
   window.ArcanoclismaCardVisual={create:card,animateMotion,setSuspended};

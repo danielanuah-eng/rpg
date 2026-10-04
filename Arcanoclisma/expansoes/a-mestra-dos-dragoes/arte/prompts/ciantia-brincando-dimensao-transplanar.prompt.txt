@@ -1,0 +1,13 @@
+ESTADO: somente prompt reservado pelo autor em 04/10/2026. Não gerar agora. Não reutilizar nem publicar novamente o modelo frontal de Ciantia enviado anteriormente. Nenhuma carta ou regra da expansão está liberada para o jogo.
+
+Criar uma nova ilustração de carta Arcanoclisma, vertical 63:88, cena opaca completa e unificada, sem moldura nem textos. Preservar a identidade aprovada de Ciantia: rosto, cabelo loiro, roupas pretas e roxas com detalhes de bronze, livro e identidades dos dois dragões da referência original ciantia-dragoes.png. Alterar a pose conforme o pedido.
+
+Ciantia de perfil lateral, olhos fechados e expressão afetuosa, agachada sobre os próprios joelhos, brincando com o dragãozinho e o dragãozão. As duas mãos participam de um gesto de carinho/brincadeira coerente. Os dois dragões estão voltados para o jogador, rostos e olhos legíveis; manter o pequeno dragão dourado de energia e o grande dragão azul/lilás aprovados, sem exagero de espinhos ou pelos. O livro dela está atrás de Ciantia, apoiado de forma natural e reconhecível. Proporção clara entre professora, filhote e dragão grande, sem esconder a figura dela.
+
+Mesmo mundo da primeira arte do Dragão Transplanar (dragao-da-travessia-arte-v1.png): terraços e estruturas suspensas entre nuvens, profundidade azul-violeta, fissuras e energia discretas. Dragões da mesma espécie, de outras cores, podem voar acima vistos de baixo, com escala e distância coerentes. Ambiente suave em luz de fim de tarde fria, dourado local contido. Cenário mais liso como Philgard V2, contornos seletivos confiantes, massas de cor limpas, textura pequena, sem rugosidade excessiva, anime resplandecente ou recorte colado.
+
+Raridade e arteAlternativa pendentes de briefing autorizado; não inventar custos, atributos, keywords ou efeitos. Caso o autor/briefing defina lendária ou alternativa, aplicar acabamento v9 localizado na magia e nos materiais, preservando rostos e detalhes.
+
+Referência de identidade: Arcanoclisma/arte/imagens/ciantia-dragoes.png
+Referência de dimensão: Arcanoclisma/cartas/modelos-visuais/2026-10-03-v1/dragao-da-travessia-arte-v1.png
+Referência somente de acabamento: Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png

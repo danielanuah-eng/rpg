@@ -1,5 +1,6 @@
 // Contrato: efeitos/pedidos/mesa-efeitos-v1.claude.json.
 // Anima somente apresentação. Não paga custos, envia comandos, aplica dano ou decide alvos.
+import { RITMO_VISUAL, duracaoVisual } from './ritmo-visual-v13.js';
 const centro = (r) => ({ x: r.left + r.width / 2, y: r.top + r.height / 2 });
 const rectDe = (el) => el?.isConnected ? el.getBoundingClientRect() : null;
 const valido = (r) => r && r.width > 0 && r.height > 0;
@@ -79,7 +80,7 @@ export function criarEfeitosMesa(raiz) {
     };
     const cancelar = () => { movimento?.cancel(); terminar(); };
     try {
-      movimento = node.animate(quadros, { duration: duracao, easing: 'linear', fill: 'both' });
+      movimento = node.animate(quadros, { duration: duracao, easing: 'cubic-bezier(.25,.1,.25,1)', fill: 'both' });
       ativos.add(cancelar);
       return movimento.finished.then(() => { terminar(); return { realizado: true }; }, () => { terminar(); return { realizado: false, motivo: 'cancelado' }; });
     } catch {
@@ -101,7 +102,7 @@ export function criarEfeitosMesa(raiz) {
       { transform: transformacao(dx * .83, dy * .83, snap.giro + (meu ? -7 : 7), 26, 1.14), opacity: 1, offset: .15 },
       { transform: transformacao(0, -8, snap.giro, 10, 1.04), opacity: 1, offset: .79 },
       { transform: transformacao(0, 0, snap.giro, 5, 1), opacity: 1, offset: 1 },
-    ], 620, el);
+    ], RITMO_VISUAL.entrarEmCampo, el);
   }
 
   function colidir({ atacanteEl, alvoEl, atacanteRect, alvoRect, bloqueio, meu }) {
@@ -120,7 +121,7 @@ export function criarEfeitosMesa(raiz) {
       { transform: transformacao(dx * .70, dy * .70, giroFinal + (bloqueio ? -4 : 4), 12), opacity: 1, offset: .57 },
       { transform: transformacao(0, -3, giroFinal, 8), opacity: 1, offset: .91 },
       { transform: transformacao(0, 0, giroFinal, 5), opacity: atacanteEl?.isConnected ? 1 : 0, offset: 1 },
-    ], 880, atacanteEl);
+    ], RITMO_VISUAL.ataqueBloqueio, atacanteEl);
   }
 
   // Cada magia exige arquivo específico aprovado. Não substituir pendências por efeitos genéricos.
@@ -158,7 +159,7 @@ export function criarEfeitosMesa(raiz) {
       { transform: trans(0, 0, 1), opacity: 1, offset: .13 },
       { transform: trans(area ? 0 : dx, area ? 0 : dy, 1.16), opacity: 1, offset: .78 },
       { transform: trans(area ? 0 : dx, area ? 0 : dy, 1.30), opacity: 0, offset: 1 },
-    ], Math.min(1200, Math.max(600, Number(visual.duracaoMs) || 900)));
+    ], duracaoVisual(visual.duracaoMs));
   }
 
   function limpar() {

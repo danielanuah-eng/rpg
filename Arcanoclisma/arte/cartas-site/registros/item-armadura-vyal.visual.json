@@ -1,0 +1,68 @@
+{
+  "id": "item-armadura-vyal",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-4c6c8f56-6849-4c62-8858-05965b1f773a.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-armadura-vyal.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/escama-do-vyal.png",
+  "textoRegraLido": "Armadura. Defesa 3, desgaste 4.",
+  "valoresLidos": [
+    "dominum",
+    "eternyr",
+    "conflituo"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/escama-do-vyal.png",
+      "papel": "Identidade do item aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Cena nova unificada com o item original reconhecível.",
+    "Efeitos narrativos locais; regras e valores atuais preservados."
+  ],
+  "avaliacaoVisual": "Escama azul-cinza com costuras âmbar preservada; proteção de antebraço em cena de impacto localizada, conjurador mais velho sob aqueduto. Mão distante parcialmente coberta pela placa; anatomia visível coerente.",
+  "ambiente": "Aqueduto sobre cânion seco",
+  "momentoDoDia": "Fim de tarde",
+  "clima": "Seco com poeira",
+  "escala": "Armadura e portador em primeiro plano; arcos recuados",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-armadura-vyal.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "8619281e5a0e2d3f64562f876833028c72ef41cfb99964b7644bc7dd203af2c3",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

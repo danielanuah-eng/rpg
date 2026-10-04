@@ -192,3 +192,8 @@
 .tcg-card[data-type="conjurador"] .type-line{white-space:normal;max-height:3.4%;font-size:calc(var(--card-w)*.035);line-height:1.18}
 .tcg-card .conjurador-detail{top:79.2%;max-height:4.7%;font-size:calc(var(--card-w)*.032);line-height:1.3}
 /* Fim do conjurador v8. */
+/* Atributos centrais — pedido do autor, 04/10/2026. */
+.tcg-card .stats{left:50%;right:auto;transform:translateX(-50%);justify-content:center;width:max-content}
+.tcg-card .stat{position:relative;display:grid;place-items:center;gap:0}
+.tcg-card .stat>span{position:relative;z-index:1;text-align:center;font-variant-numeric:tabular-nums}
+.tcg-card .stat>img{position:absolute;left:12%;top:12%;width:calc(var(--card-w)*.024);height:calc(var(--card-w)*.024)}

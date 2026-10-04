@@ -1,0 +1,70 @@
+{
+  "id": "item-canal-violino",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-640f603e-948f-4a3c-8e0d-10bd7a041f7e.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-canal-violino.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/violino-do-ontem.png",
+  "textoRegraLido": "Canal. Arma: Ataque 2.",
+  "valoresLidos": [
+    "eternyr",
+    "cognitium",
+    "morbidyum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/violino-do-ontem.png",
+      "papel": "Identidade do item aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Cenário liso aprovado, somente acabamento"
+    }
+  ],
+  "decisoes": [
+    "Cena unificada com cenário completo; regras e números preservados.",
+    "Nova ambientação e horário, sem repetir cenários do briefing."
+  ],
+  "avaliacaoVisual": "Violino de madeira gasto reconhecível, tocado por duas mãos em plataforma de estação ao amanhecer; magia azul localizada.",
+  "ambiente": "Plataforma de estação com carruagem parada",
+  "momentoDoDia": "Amanhecer interpretado pela luz",
+  "clima": "Tempo aberto",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "liberdadesVisuais": [
+    "Composição e ambiente criados pelo Designer dentro da identidade do item."
+  ],
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-canal-violino.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "f71a770ddbf0f0cae651e74f8391fbe0a87be727d873f5e5b1c1ebc4317b661b",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

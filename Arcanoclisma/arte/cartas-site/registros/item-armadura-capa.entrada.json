@@ -1,0 +1,34 @@
+{
+  "id": "item-armadura-capa",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-9066d805-cfd5-4f5d-b960-79edadb42b1f.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nID item-armadura-capa; rarity comum, arteAlternativa false; Values . Actual rules: Armadura. Defesa 1, desgaste 6.\nImage1 object identity: preserve the SAME olive-green hooded wind-cloak, warm burnt-orange lining, worn tan stitched edging and ONE bronze spiral clasp with its ties, local cyan-white wind ribbons. NEW scene: a lean adult East-Asian-faced woman with a low dark braided ponytail, focused narrow eyes and short brow scar, in a grounded low defensive stance on a windy cliff path, seen from a low side/front three-quarter view. The cloak occupies most of the main image as she twists its fabric forward with one hand, the other forearm bracing behind it, visibly absorbing a glancing blow from a simple practice staff entering from off-frame. Cloth shows one small fresh fray at contact and ordinary seams; no impenetrable energy shield, invulnerability or reflection. Both arms connect clearly to her shoulders, boots on the stone path, no detached hand or levitation. Cool sea and white-grey overcast sky, sparse tall grass, a small cliff watch hut far behind. Afternoon breeze is indicated by grasses and cloak movement; background broad smooth shapes and muted tones. Local wind glow only, clear original cloak color, face visible under hood. Current generic Item/Armadura: Defesa1, desgaste6; no additional game effect.\nImage2 ONLY smooth scenery finish, not characters/location. Full opaque vertical63:88 card illustration,1260x1760 requested if supported. No card border, UI, typography, numbers, logo or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/capa-de-vento.png",
+  "textoRegraLido": "Armadura. Defesa 1, desgaste 6.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/capa-de-vento.png",
+      "papel": "Identidade do item aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Cena unificada, fundo completo e identidade do item preservada.",
+    "Sem nova habilidade de jogo; raridade não definida no aplicativo."
+  ],
+  "avaliacaoVisual": "Capa verde/laranja com borda costurada e fecho espiral preservada; portadora em defesa numa trilha costeira, contato do bastão e desgaste local visíveis.",
+  "ambiente": "Trilha sobre falésia costeira",
+  "momentoDoDia": "Tarde sob céu nublado, conforme interpretação da luz",
+  "clima": "Vento costeiro",
+  "escala": "Item principal grande e cenário com profundidade",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

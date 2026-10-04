@@ -1,0 +1,38 @@
+{
+  "id": "item-armadura-escama",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-031d575c-4827-465f-a20a-fb76ff999331.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nID item-armadura-escama; rarity comum, arteAlternativa false; Values alvorum, primitivum, sublimeyn. Actual rules: Armadura. Defesa 2, desgaste 5.\nImage1 identity: the EXACT mercury-dragon scale artifact's blue-silver liquid/solid surface, dark gold overlapping dragon-scale ridge and a few small liquid drops/vapor curls. NEW scene representing its ARMOR use, not attacking: at a sheltered watermill doorway after rain, a freckled fair-skinned stocky adult man with closely cropped auburn hair and a sober face braces his LEFT forearm against a glancing wooden spear-shaft from outside the frame. The SAME single broad curved leaf-scale artifact spreads as a coherent blue-silver protective scale over the forearm, keeping the recognizable bronze scalloped ridge and white/teal swirling pattern. Show ONE artifact changing surface state along its edge to drops and soft smoke, not several duplicated weapons or a massive invulnerable shield. His right hand steadies his armored wrist; exactly two connected arms, both visible. Plain muted moss linen shirt and dark brown leather apron, no ornate golden armor. The scale occupies the center foreground, local small contact chip/fluid ripple suggests Defensa2 and wear5, no reflected attack or new ability. Background: calm mill pond, large quiet timber waterwheel, warm clay mill plaster and smooth wet ground under muted pearl cloud light. Item remains primary. Gold/bronze matte and aged, no blazing golden background.\nImage2 ONLY smooth scenery finish, not characters/location. Full opaque vertical63:88,1260x1760 requested if supported. No border, UI, text, stats or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/escama-do-dragao-mercurio.png",
+  "textoRegraLido": "Armadura. Defesa 2, desgaste 5.",
+  "valoresLidos": [
+    "alvorum",
+    "primitivum",
+    "sublimeyn"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/escama-do-dragao-mercurio.png",
+      "papel": "Identidade do item aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Fundo integrado e objeto reconhecível, sem nova habilidade de jogo.",
+    "Variação de portador, enquadramento e lugar; brilho restrito ao material/magia."
+  ],
+  "avaliacaoVisual": "Escama azul-prateada com crista de bronze se molda ao antebraço; duas mãos coerentes, bloqueio local diante de moinho.",
+  "ambiente": "Entrada de moinho junto à água",
+  "momentoDoDia": "Dia depois da chuva",
+  "clima": "Chão molhado sob céu claro",
+  "escala": "Personagem e item dominantes com fundo em proporção coerente",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

@@ -1,0 +1,68 @@
+{
+  "id": "item-canal-coleira",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-bb27b534-5145-45ec-9a33-00133a0f2924.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-canal-coleira.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/coleira-de-kairvahnn.png",
+  "textoRegraLido": "Canal. Arma: Ataque 3.",
+  "valoresLidos": [
+    "primitivum",
+    "conflituo",
+    "alvorum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/coleira-de-kairvahnn.png",
+      "papel": "Identidade do item aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Cena unificada, fundo completo e identidade do item preservada.",
+    "Sem nova habilidade de jogo; raridade não definida no aplicativo."
+  ],
+  "avaliacaoVisual": "Coleira de couro vermelho e bronze preservada, duas mãos a seguram num mercado de feras; eco mágico de leão localizado junto à peça.",
+  "ambiente": "Banca de mercado de feras em região campestre",
+  "momentoDoDia": "Dia claro sob toldo",
+  "clima": "Seco",
+  "escala": "Item principal grande e cenário com profundidade",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-canal-coleira.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "f14fdac3d56b0f5b637287041263bed957f26362458c0f0cc752e0efc3f263c4",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

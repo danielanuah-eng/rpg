@@ -36,6 +36,10 @@
 }
 @media(prefers-reduced-motion:reduce){.board-position.card-motion{transition:none!important}.board-position.card-motion.attack-generic,.board-position.card-motion.block-generic{animation:none!important}}
 .card-motion.motion-finalizing{transition:none!important}
+/* Ritmo visual do estudo da arena; o jogo online conecta o perfil v13 pelo Claude. */
+.board-position.card-motion{transition-duration:540ms}
+.board-position.card-motion.attack-generic,.board-position.card-motion.block-generic{animation-duration:1320ms}
+.hand-wrap .card-motion{transition-duration:360ms}
 
 /* Editor do conjurador v8 */
 .conjurador-editor{display:grid;gap:10px}.conjurador-editor label{display:grid;gap:5px}.conjurador-editor input{width:100%;padding:8px;background:#172e3a;color:#efe8d6;border:1px solid #63716f;border-radius:6px}.conjurador-editor[hidden],.resource-editor[hidden],.speed-editor[hidden],.symbol-key[hidden]{display:none}

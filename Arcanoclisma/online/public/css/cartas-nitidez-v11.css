@@ -31,4 +31,11 @@
 .mesa-zoom .tcg-card .portrait:not(.art-magic-glow-v9) {
   opacity: 1; filter: contrast(1.045) brightness(1.025) saturate(1.06);
 }
+/* Rotação da carta inteira e acomodação da mão com tempo para leitura. */
+.mesa .mesa-conteudo .cm { transition: transform .54s cubic-bezier(.25,.1,.25,1), filter .3s ease; }
+.mesa .mao-slot { transition: transform .36s cubic-bezier(.25,.1,.25,1); }
+.mesa .pilha-item.chegando { animation-duration: .75s; }
+@media (prefers-reduced-motion: reduce) {
+  .mesa .mesa-conteudo .cm, .mesa .mao-slot, .mesa .pilha-item.chegando { animation: none !important; transition: none !important; }
+}
 

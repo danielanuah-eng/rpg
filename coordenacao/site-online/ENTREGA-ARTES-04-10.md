@@ -15,7 +15,7 @@ Os retratos de conjurador do site estavam bons em traço, aparência, pose e det
 
 As nove cenas anteriores, que mudavam o personagem e a pose, foram guardadas por pedido do autor para cartas futuras. Imagens, prompts e registros estão preservados no catálogo `Arcanoclisma/arte/cartas-site/variantes/conjuradores-cenas-para-cartas-futuras/catalogo.json`. Não usá-las como retrato principal de conjurador.
 
-Ciantia preserva a pose frontal original e seus dois dragões. O fundo vigente é a mesma dimensão da primeira carta do Dragão Transplanar: pontes e torres suspensas entre nuvens, com três dragões da mesma espécie em verde, coral e âmbar, voando acima e vistos de baixo. O estudo anterior no lago permanece como variante não selecionada.
+Ciantia: **orientação posterior do autor, 04/10 — não usar nem reenviar o modelo frontal corrigido**. Essa imagem havia sido publicada no commit `dceec35` antes da nova instrução. Está retirada do uso; não integra o jogo. O prompt para uma futura cena lateral, de olhos fechados, agachada brincando com os dois dragões voltados para o jogador e livro atrás está reservado em `Arcanoclisma/expansoes/a-mestra-dos-dragoes/arte/prompts/ciantia-brincando-dimensao-transplanar.prompt.txt`. Não gerar essa revisão durante a fila prioritária.
 
 ## Estado da entrega
 

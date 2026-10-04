@@ -1,0 +1,68 @@
+{
+  "id": "item-extra-lanterna",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-c2062afe-c480-49d6-ae09-09856daaac1a.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-extra-lanterna.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/lanterna-do-veu.png",
+  "textoRegraLido": "Extra. Uso único. Use: devolva um Aliado ou Mística à mão do dono.",
+  "valoresLidos": [
+    "sublimeyn",
+    "persona",
+    "eternyr"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/lanterna-do-veu.png",
+      "papel": "Identidade do item aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Cena nova unificada com o item original reconhecível.",
+    "Efeito local correspondente à regra atual, sem acrescentar habilidades."
+  ],
+  "avaliacaoVisual": "Estrutura de bronze, fita vermelha, vidro de aurora e travessas preservados; jovem grifo recua pelo véu e testemunha distante alcança a passagem. Brilho concentrado no vidro e véu.",
+  "ambiente": "Entrada de aviário em encosta",
+  "momentoDoDia": "Amanhecer",
+  "clima": "Neblina leve entre colinas",
+  "escala": "Lanterna dominante, criatura média e paisagem distante",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-lanterna.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "74d34e153d7e2fbb25acb1b8298d5d4b80a45407f94de3c373ed84028362df50",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

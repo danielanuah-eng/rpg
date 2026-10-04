@@ -1,0 +1,34 @@
+{
+  "id": "item-extra-dado",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-3e646213-bab8-45e8-a351-2b1d3768f01e.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nID item-extra-dado; rarity comum, arteAlternativa false; Values . Actual rules: Extra. Uso único. Use: cause 2 de dano a um alvo.\nImage1 identity is the SAME ordinary weathered ochre/bronze CUBE with deep navy circular pips; visible faces four pips, three pips, and ONE small cyan spiral inside one pip. This is the consumable Dado Honesto card, NOT the future 20-sided opening die. NEW scene viewed close at ground level: the cube is caught mid-last bounce near the edge of a broad smoothly painted floor of an abandoned tiled bathhouse. One adult olive-brown woman's hand has just released it, rust sleeve; her partial expression is focused, no full portrait. A thin localized cyan wisp leads from the glowing pip toward a distant hostile shield, where a small bright contact mark and crack show the one-use hit. No blood, lethal dismemberment, giant explosion, extra healing or luck/stat powers; actual rule only deal2 damage to one target. Alternating dry teal and cream tile shapes, drained shallow pool, mild slanting daylight from high windows and subdued reflections. Emphasis cube shape/readable pips; background smooth and restrained, not over-textured crumbling ruin or dramatic cataclysm sky. Two hands if present must be anatomically coherent, no printed UI/text/card borders.\nReference2 ONLY approved smooth illustration finish, never copy its figures. Full opaque vertical63:88,1260x1760 preferred if supported; no frame, text, UI or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/dado-honesto.png",
+  "textoRegraLido": "Extra. Uso único. Use: cause 2 de dano a um alvo.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/dado-honesto.png",
+      "papel": "Identidade do item aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Cena nova unificada com o item original reconhecível.",
+    "Efeito local correspondente à regra atual, sem acrescentar habilidades."
+  ],
+  "avaliacaoVisual": "Cubo ocre com quatro/três pontos azuis e espiral preservado, perto do piso molhado de antigo banho; mão expressiva e um contato mágico pequeno no escudo distante. Arte identifica Dado Honesto, não o D20 de abertura.",
+  "ambiente": "Antigo banho de azulejos",
+  "momentoDoDia": "Dia",
+  "clima": "Luz natural pelas janelas",
+  "escala": "Cubo em primeiro plano e alvo afastado",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

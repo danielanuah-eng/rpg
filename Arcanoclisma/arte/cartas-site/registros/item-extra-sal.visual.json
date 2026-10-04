@@ -1,0 +1,64 @@
+{
+  "id": "item-extra-sal",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-d5ab1766-b560-4452-9333-c4a3eb46b861.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/item-extra-sal.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/sal-do-viajante.png",
+  "textoRegraLido": "Extra. Uso único. Use: olhe as 3 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+  "valoresLidos": [],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/sal-do-viajante.png",
+      "papel": "Identidade do item aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "decisoes": [
+    "Cena nova unificada com o item original reconhecível.",
+    "Efeitos narrativos locais; regras e valores atuais preservados."
+  ],
+  "avaliacaoVisual": "Bolsa, corda vermelha, medalhão perfurado e cristais preservados. Duas mãos legíveis e três visões pequenas ligadas ao sal; brilho localizado sobre mesa noturna.",
+  "ambiente": "Estalagem à margem de rio",
+  "momentoDoDia": "Noite azul",
+  "clima": "Noite calma",
+  "escala": "Objeto e mãos próximos; rio e povoado em escala distante",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-sal.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "22bf6a7544645eb60d4db659e2fd3948a0e64b5c507511840c4ac59240830758",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

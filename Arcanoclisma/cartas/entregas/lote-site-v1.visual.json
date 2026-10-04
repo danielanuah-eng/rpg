@@ -3,18 +3,8 @@
   "pedidoVersao": 2,
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 94,
+  "concluidas": 104,
   "pendentes": [
-    "item-canal-badalo",
-    "item-canal-violino",
-    "item-canal-coleira",
-    "item-armadura-capa",
-    "item-armadura-escama",
-    "item-armadura-manto",
-    "item-armadura-vyal",
-    "item-extra-sal",
-    "item-extra-dado",
-    "item-extra-lanterna",
     "item-extra-relogio",
     "base-aliado-c4-equilibrado-grau5",
     "base-dano-c4-repentina",
@@ -873,6 +863,86 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-canal-harpa.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-canal-harpa.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-canal-badalo",
+      "nome": "O Badalo de Vau Grande",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-canal-badalo.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-canal-badalo.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-canal-violino",
+      "nome": "Violino do Ontem",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-canal-violino.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-canal-violino.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-canal-coleira",
+      "nome": "Coleira de Kairvahnn",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-canal-coleira.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-canal-coleira.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-armadura-capa",
+      "nome": "Capa de Vento",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-armadura-capa.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-armadura-capa.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-armadura-escama",
+      "nome": "Escama do Dragão Mercúrio",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-armadura-escama.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-armadura-escama.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-armadura-manto",
+      "nome": "Manto de Cor de Parede",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-armadura-manto.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-armadura-manto.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-armadura-vyal",
+      "nome": "Escama do Vyal",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-armadura-vyal.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-armadura-vyal.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-extra-sal",
+      "nome": "Sal do Viajante",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-sal.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-sal.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-extra-dado",
+      "nome": "Dado Honesto",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-dado.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-dado.visual.json",
+      "estado": "gerada_aguardando_avaliacao_final"
+    },
+    {
+      "id": "item-extra-lanterna",
+      "nome": "Lanterna do Véu",
+      "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-lanterna.png",
+      "arteModo": "cena",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-lanterna.visual.json",
       "estado": "gerada_aguardando_avaliacao_final"
     }
   ],
