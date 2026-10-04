@@ -4,7 +4,7 @@
   "pedidoVersao": 2,
   "meta": 210,
   "origem": "Catálogo realmente servido pelo jogo atual e briefing do Claude",
-  "estado": "em_producao",
+  "estado": "aprovado",
   "prioridades": [
     "conjuradores",
     "cartas de baralhos prontos",
@@ -25,7 +25,7 @@
       "prioridade": 0,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/domadora-de-garmhal.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Lyandra, a Domadora de Guerra (Conflitüo + Primitivum, Brigão). Personagem NOVO e próprio: a arte provisória do site (domadora-de-garmhal) é só um marcador e não deve ser copiada.",
@@ -66,7 +66,7 @@
       "prioridade": 0,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/druida-de-tahwe.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Carmal, o Druida Crepuscular (Primitivum + Alvorum, Invocador). Personagem NOVO e próprio: a arte provisória do site (druida-de-tahwe) é só um marcador e não deve ser copiada.",
@@ -107,7 +107,7 @@
       "prioridade": 0,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/alquimista-naufrago.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Alquimista Ricardo (Alvorum + Sublimeyn, Habilidoso). Personagem NOVO e próprio: a arte provisória do site (alquimista-naufrago) é só um marcador e não deve ser copiada.",
@@ -148,7 +148,7 @@
       "prioridade": 0,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/rapaz-do-rosto-mutavel.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Roh, o Ilusionista das Máscaras (Sublimeyn + Persona, Habilidoso). Personagem NOVO e próprio: a arte provisória do site (rapaz-do-rosto-mutavel) é só um marcador e não deve ser copiada.",
@@ -189,7 +189,7 @@
       "prioridade": 0,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/duelista-da-lamina-vermelha.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Agnelo, o Duelista Sombrio (Persona + Morbidyum, Brigão). Personagem NOVO e próprio: a arte provisória do site (duelista-da-lamina-vermelha) é só um marcador e não deve ser copiada.",
@@ -230,7 +230,7 @@
       "prioridade": 0,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/medium-do-luto.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Diástaros, o Necromante Vidente (Morbidyum + Cognitium, Preparado). Personagem NOVO e próprio: a arte provisória do site (medium-do-luto) é só um marcador e não deve ser copiada.",
@@ -271,7 +271,7 @@
       "prioridade": 0,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/viajante-do-entretempo.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Ana, a Cronista do Tempo (Cognitium + Eternyr, Preparado). Personagem NOVO e próprio: a arte provisória do site (viajante-do-entretempo) é só um marcador e não deve ser copiada.",
@@ -312,7 +312,7 @@
       "prioridade": 0,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/carcereiro.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Mitonho, o Carcereiro Temporal (Eternyr + Dominum, Habilidoso). Personagem NOVO e próprio: a arte provisória do site (carcereiro) é só um marcador e não deve ser copiada.",
@@ -353,7 +353,7 @@
       "prioridade": 0,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/senhor-da-trincheira.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Osmar, o Capataz de Ferro (Dominum + Conflitüo, Parrudão da quebrada). Personagem NOVO e próprio: a arte provisória do site (senhor-da-trincheira) é só um marcador e não deve ser copiada.",
@@ -394,7 +394,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/mina-funda.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Mina Funda: personagem/objeto do catálogo aprovado (mina-funda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -430,7 +430,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/recruta-assustado.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Recruta Assustado: personagem/objeto do catálogo aprovado (recruta-assustado). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -474,7 +474,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/milicia-de-aldeia.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Milícia de Aldeia: personagem/objeto do catálogo aprovado (milicia-de-aldeia). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -518,7 +518,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/guarda-da-ponte.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Guarda da Ponte: personagem/objeto do catálogo aprovado (guarda-da-ponte). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -562,7 +562,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/cavaleiro-errante.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Cavaleiro Errante: personagem/objeto do catálogo aprovado (cavaleiro-errante). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -606,7 +606,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/veterana-de-guerra.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Veterana de Guerra: personagem/objeto do catálogo aprovado (veterana-de-guerra). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -650,7 +650,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/gladiador-da-arena.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Gladiador da Arena: personagem/objeto do catálogo aprovado (gladiador-da-arena). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -694,7 +694,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/touro-de-kairvahnn.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Touro de Kairvahnn: personagem/objeto do catálogo aprovado (touro-de-kairvahnn). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -738,7 +738,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/hidra-de-barro.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Hidra de Barro: personagem/objeto do catálogo aprovado (hidra-de-barro). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -782,7 +782,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/lobo-de-cinza.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Lobo-de-Cinza: personagem/objeto do catálogo aprovado (lobo-de-cinza). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -826,7 +826,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/tatu-de-couraca.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Tatu de Couraça: personagem/objeto do catálogo aprovado (tatu-de-couraca). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -870,7 +870,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/javali-de-ferro.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Javali de Ferro: personagem/objeto do catálogo aprovado (javali-de-ferro). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -914,7 +914,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/lutador-de-pele-de-pedra.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Lutador de Pele de Pedra: personagem/objeto do catálogo aprovado (lutador-de-pele-de-pedra). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -958,7 +958,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/leao-de-cem-dentes.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Leão de Cem Dentes: personagem/objeto do catálogo aprovado (leao-de-cem-dentes). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1002,7 +1002,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/gorila-de-pedra.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Gorila de Pedra: personagem/objeto do catálogo aprovado (gorila-de-pedra). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1046,7 +1046,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/lebre-relampago.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Lebre-Relâmpago: personagem/objeto do catálogo aprovado (lebre-relampago). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1090,7 +1090,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/salteador-a-cavalo.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Salteador a Cavalo: personagem/objeto do catálogo aprovado (salteador-a-cavalo). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1134,7 +1134,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/quimera-de-tres-fomes.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Quimera de Três Fomes: personagem/objeto do catálogo aprovado (quimera-de-tres-fomes). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1178,7 +1178,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/colosso-de-ferida.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Colosso de Ferida: personagem/objeto do catálogo aprovado (colosso-de-ferida). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1222,7 +1222,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/chuva-de-faiscas.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Chuva de Faíscas: personagem/objeto do catálogo aprovado (chuva-de-faiscas). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1266,7 +1266,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/faisca-de-tempestade.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Faísca de Tempestade: personagem/objeto do catálogo aprovado (faisca-de-tempestade). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1310,7 +1310,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/brasa-de-forja.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Brasa de Forja: personagem/objeto do catálogo aprovado (brasa-de-forja). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1354,7 +1354,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/vento-com-rancor.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Vento Com Rancor: personagem/objeto do catálogo aprovado (vento-com-rancor). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1398,7 +1398,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/chama-que-lembra.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Chama que Lembra: personagem/objeto do catálogo aprovado (chama-que-lembra). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1442,7 +1442,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/tempestade-viva.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Tempestade Viva: personagem/objeto do catálogo aprovado (tempestade-viva). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1486,7 +1486,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/rasgo-faminto.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Rasgo Faminto: personagem/objeto do catálogo aprovado (rasgo-faminto). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1528,7 +1528,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/olho-de-dragao-palido.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Olho de Dragão Pálido: personagem/objeto do catálogo aprovado (olho-de-dragao-palido). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1561,7 +1561,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/baralho-do-arquivo.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Baralho do Arquivo: personagem/objeto do catálogo aprovado (baralho-do-arquivo). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1594,7 +1594,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/livro-que-le-voce.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Livro Que Lê Você: personagem/objeto do catálogo aprovado (livro-que-le-voce). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1629,7 +1629,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/pensamento-solto.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Pensamento Solto: personagem/objeto do catálogo aprovado (pensamento-solto). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1671,7 +1671,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/sementes-de-um-dia.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Sementes de Um Dia: personagem/objeto do catálogo aprovado (sementes-de-um-dia). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1704,7 +1704,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/relicario-da-terceira-vida.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Relicário da Terceira Vida: personagem/objeto do catálogo aprovado (relicario-da-terceira-vida). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1737,7 +1737,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/balanca-de-serath.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Balança de Serath: personagem/objeto do catálogo aprovado (balanca-de-serath). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1772,7 +1772,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/sombra-que-ficou.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Sombra Que Ficou: personagem/objeto do catálogo aprovado (sombra-que-ficou). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1814,7 +1814,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/jaula-de-luz.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Jaula de Luz: personagem/objeto do catálogo aprovado (jaula-de-luz). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1849,7 +1849,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/muralha-viva.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Muralha Viva: personagem/objeto do catálogo aprovado (muralha-viva). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1891,7 +1891,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/vila-da-colheita.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Vila da Colheita: personagem/objeto do catálogo aprovado (vila-da-colheita). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1925,7 +1925,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/biblioteca-que-esquece.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Biblioteca que Esquece: personagem/objeto do catálogo aprovado (biblioteca-que-esquece). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1959,7 +1959,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/apito-de-eco-longe.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Apito de Eco Longe: personagem/objeto do catálogo aprovado (apito-de-eco-longe). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -1994,7 +1994,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/aurora-que-desceu.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Aurora Que Desceu: personagem/objeto do catálogo aprovado (aurora-que-desceu). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2036,7 +2036,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/aldeia-da-curandeira.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Aldeia da Curandeira: personagem/objeto do catálogo aprovado (aldeia-da-curandeira). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2070,7 +2070,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/torre-dos-protetores.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Torre dos Protetores: personagem/objeto do catálogo aprovado (torre-dos-protetores). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2104,7 +2104,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/porto-de-vidro.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Porto de Vidro: personagem/objeto do catálogo aprovado (porto-de-vidro). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2140,7 +2140,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/estudante-da-escola-de-magia.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Estudante da Escola de Magia: personagem/objeto do catálogo aprovado (estudante-da-escola-de-magia). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2184,7 +2184,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/ferreira-alquimista.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Ferreira-Alquimista: personagem/objeto do catálogo aprovado (ferreira-alquimista). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2228,7 +2228,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/professora-da-escola-de-magia.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Professora da Escola de Magia: personagem/objeto do catálogo aprovado (professora-da-escola-de-magia). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2270,7 +2270,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/forja-dos-mil-golpes.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Forja dos Mil Golpes: personagem/objeto do catálogo aprovado (forja-dos-mil-golpes). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2304,7 +2304,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/a-boca-da-voragem.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "A boca da Voragem: personagem/objeto do catálogo aprovado (a-boca-da-voragem). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2340,7 +2340,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/o-antigo-bibliotecario.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "O Antigo Bibliotecário: personagem/objeto do catálogo aprovado (o-antigo-bibliotecario). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2382,7 +2382,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/tinteiro-de-mapas.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Tinteiro de Mapas: personagem/objeto do catálogo aprovado (tinteiro-de-mapas). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2415,7 +2415,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/ampulheta-de-um-minuto.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Ampulheta de Um Minuto: personagem/objeto do catálogo aprovado (ampulheta-de-um-minuto). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2448,7 +2448,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/anel-de-tique.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Anel de Tique: personagem/objeto do catálogo aprovado (anel-de-tique). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2481,7 +2481,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/o-arquivo-sem-dono.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "O Arquivo Sem Dono: personagem/objeto do catálogo aprovado (o-arquivo-sem-dono). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2517,7 +2517,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/hora-solta.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Hora Solta: personagem/objeto do catálogo aprovado (hora-solta). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2561,7 +2561,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/relogio-quebrado.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Relógio Quebrado: personagem/objeto do catálogo aprovado (relogio-quebrado). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2605,7 +2605,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/no-de-impares.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Nó de Ímpares: personagem/objeto do catálogo aprovado (no-de-impares). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2649,7 +2649,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/ancia-do-tempo-lento.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Anciã do Tempo Lento: personagem/objeto do catálogo aprovado (ancia-do-tempo-lento). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2691,7 +2691,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/a-voragem.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "A Voragem: personagem/objeto do catálogo aprovado (a-voragem). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2727,7 +2727,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/enxame-de-vespas.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Enxame de Vespas: personagem/objeto do catálogo aprovado (enxame-de-vespas). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2771,7 +2771,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/redemoinho-de-areia.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Redemoinho de Areia: personagem/objeto do catálogo aprovado (redemoinho-de-areia). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2815,7 +2815,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/raiz-errada.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Raiz Errada: personagem/objeto do catálogo aprovado (raiz-errada). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2857,7 +2857,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/a-cidade-muralha.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "A Cidade-Muralha: personagem/objeto do catálogo aprovado (a-cidade-muralha). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2891,7 +2891,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/porta-de-bolso.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Porta de Bolso: personagem/objeto do catálogo aprovado (porta-de-bolso). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2926,7 +2926,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/olho-que-fecha.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Olho-que-Fecha: personagem/objeto do catálogo aprovado (olho-que-fecha). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -2970,7 +2970,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/fogo-fatuo.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Fogo-Fátuo: personagem/objeto do catálogo aprovado (fogo-fatuo). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3014,7 +3014,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/corvo-pressagio.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Corvo-Presságio: personagem/objeto do catálogo aprovado (corvo-pressagio). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3058,7 +3058,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/onca-das-sombras.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Onça-das-Sombras: personagem/objeto do catálogo aprovado (onca-das-sombras). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3100,7 +3100,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/o-campo-sem-tregua.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "O Campo Sem Trégua: personagem/objeto do catálogo aprovado (o-campo-sem-tregua). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3134,7 +3134,7 @@
       "prioridade": 1,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/estrada-do-crepusculo.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Estrada do Crepúsculo: personagem/objeto do catálogo aprovado (estrada-do-crepusculo). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3170,7 +3170,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/wyvern-correio.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Wyvern-Correio: personagem/objeto do catálogo aprovado (wyvern-correio). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3214,7 +3214,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/aprendiz-descontrolado.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Aprendiz Descontrolado: personagem/objeto do catálogo aprovado (aprendiz-descontrolado). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3258,7 +3258,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/manticora.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Mantícora: personagem/objeto do catálogo aprovado (manticora). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3302,7 +3302,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/ursa-mae.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Ursa-Mãe: personagem/objeto do catálogo aprovado (ursa-mae). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3346,7 +3346,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/anjo-do-fechamento.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Anjo do Fechamento: personagem/objeto do catálogo aprovado (anjo-do-fechamento). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3390,7 +3390,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/arquivista-sem-rosto.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Arquivista Sem Rosto: personagem/objeto do catálogo aprovado (arquivista-sem-rosto). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3434,7 +3434,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/tita-de-vapor.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Titã de Vapor: personagem/objeto do catálogo aprovado (tita-de-vapor). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3478,7 +3478,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/dragao-anciao.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Dragão Ancião: personagem/objeto do catálogo aprovado (dragao-anciao). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3520,7 +3520,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": null,
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": false,
       "descricaoLida": true,
       "identidade": "Item sem arte de referência: cajado de aprendiz simples, de madeira clara com ponteira de Bronze Arco e runas que mal acendem, gasto de tanto treino.",
@@ -3550,7 +3550,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": null,
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": false,
       "descricaoLida": true,
       "identidade": "Item sem arte de referência: lâmina rúnica de Bronze Arco, espada curta com runas acesas ao longo do fio.",
@@ -3580,7 +3580,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": null,
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": false,
       "descricaoLida": true,
       "identidade": "Item sem arte de referência: lança do eclipse, enorme, maior que o dono, com lâmina em meia-lua escura e borda de luz dourada.",
@@ -3610,7 +3610,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": null,
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": false,
       "descricaoLida": true,
       "identidade": "Item sem arte de referência: gibão de couro acolchoado e remendado, com placas pequenas de Bronze Arco nos ombros.",
@@ -3640,7 +3640,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": null,
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": false,
       "descricaoLida": true,
       "identidade": "Item sem arte de referência: couraça de placas de Bronze Arco, pesada, com rebites e runas de proteção.",
@@ -3670,7 +3670,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": null,
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": false,
       "descricaoLida": true,
       "identidade": "Item sem arte de referência: poção de cura num frasco grosso de vidro com rolha de cera, líquido vermelho-coral que brilha.",
@@ -3700,7 +3700,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": null,
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": false,
       "descricaoLida": true,
       "identidade": "Item sem arte de referência: elixir de foco num frasco fino e alto, líquido azul com pontos de luz que sobem.",
@@ -3730,7 +3730,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/harpa-de-vidro-de-liss.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Harpa de Vidro de Liss: personagem/objeto do catálogo aprovado (harpa-de-vidro-de-liss). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3763,7 +3763,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/o-badalo-de-vau-grande.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "O Badalo de Vau-Grande: personagem/objeto do catálogo aprovado (o-badalo-de-vau-grande). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3796,7 +3796,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/violino-do-ontem.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Violino do Ontem: personagem/objeto do catálogo aprovado (violino-do-ontem). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3829,7 +3829,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/coleira-de-kairvahnn.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Coleira de Kairvahnn: personagem/objeto do catálogo aprovado (coleira-de-kairvahnn). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3862,7 +3862,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/capa-de-vento.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Capa de Vento: personagem/objeto do catálogo aprovado (capa-de-vento). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3895,7 +3895,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/escama-do-dragao-mercurio.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Escama do Dragão-Mercúrio: personagem/objeto do catálogo aprovado (escama-do-dragao-mercurio). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3928,7 +3928,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/manto-de-cor-de-parede.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Manto de Cor de Parede: personagem/objeto do catálogo aprovado (manto-de-cor-de-parede). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3961,7 +3961,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/escama-do-vyal.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Escama do Vyal: personagem/objeto do catálogo aprovado (escama-do-vyal). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -3994,7 +3994,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/sal-do-viajante.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Sal do Viajante: personagem/objeto do catálogo aprovado (sal-do-viajante). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4027,7 +4027,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/dado-honesto.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Dado Honesto: personagem/objeto do catálogo aprovado (dado-honesto). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4060,7 +4060,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/lanterna-do-veu.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Lanterna do Véu: personagem/objeto do catálogo aprovado (lanterna-do-veu). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4093,7 +4093,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/relogio-de-bolso-atrasado.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Relógio de Bolso Atrasado: personagem/objeto do catálogo aprovado (relogio-de-bolso-atrasado). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4128,7 +4128,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/arquimaga-da-torre-inversa.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Arquimaga da Torre Inversa: personagem/objeto do catálogo aprovado (arquimaga-da-torre-inversa). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4172,7 +4172,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/eco-de-magia-morta.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Eco de Magia Morta: personagem/objeto do catálogo aprovado (eco-de-magia-morta). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4214,7 +4214,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/estilhaco-de-disrupto.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Estilhaço de Disrupto: personagem/objeto do catálogo aprovado (estilhaco-de-disrupto). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4247,7 +4247,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/garrafa-de-voz.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Garrafa de Voz: personagem/objeto do catálogo aprovado (garrafa-de-voz). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4280,7 +4280,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/luneta-do-fim.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Luneta do Fim: personagem/objeto do catálogo aprovado (luneta-do-fim). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4313,7 +4313,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/lenco-das-lagrimas.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Lenço das Lágrimas: personagem/objeto do catálogo aprovado (lenco-das-lagrimas). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4346,7 +4346,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/calice-do-primeiro-barro.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Cálice do Primeiro Barro: personagem/objeto do catálogo aprovado (calice-do-primeiro-barro). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4379,7 +4379,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/semente-da-floresta-primeira.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Semente da Floresta Primeira: personagem/objeto do catálogo aprovado (semente-da-floresta-primeira). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4414,7 +4414,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/menino-de-dois-instantes.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Menino de Dois Instantes: personagem/objeto do catálogo aprovado (menino-de-dois-instantes). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4458,7 +4458,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/sala-que-e-um-ano.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Sala Que É Um Ano: personagem/objeto do catálogo aprovado (sala-que-e-um-ano). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4500,7 +4500,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/o-entretempo.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "O Entretempo: personagem/objeto do catálogo aprovado (o-entretempo). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4536,7 +4536,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/dragao-ampulheta.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Dragão-Ampulheta: personagem/objeto do catálogo aprovado (dragao-ampulheta). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4580,7 +4580,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/enxame-de-palavras.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Enxame de Palavras: personagem/objeto do catálogo aprovado (enxame-de-palavras). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4622,7 +4622,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/charco-fervente.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Charco Fervente: personagem/objeto do catálogo aprovado (charco-fervente). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4658,7 +4658,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/ferreiro-de-guerra.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Ferreiro de Guerra: personagem/objeto do catálogo aprovado (ferreiro-de-guerra). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4702,7 +4702,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/sonhador-perdido.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Sonhador Perdido: personagem/objeto do catálogo aprovado (sonhador-perdido). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4746,7 +4746,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/juramentado.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Juramentado: personagem/objeto do catálogo aprovado (juramentado). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4790,7 +4790,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/o-seu-rosto.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "O Seu Rosto: personagem/objeto do catálogo aprovado (o-seu-rosto). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4834,7 +4834,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/o-ministrum.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "O Ministrum: personagem/objeto do catálogo aprovado (o-ministrum). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4878,7 +4878,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/o-que-voltou.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "O Que Voltou: personagem/objeto do catálogo aprovado (o-que-voltou). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4922,7 +4922,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/bibliotecaria-do-arquivo.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Bibliotecária do Arquivo: personagem/objeto do catálogo aprovado (bibliotecaria-do-arquivo). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -4966,7 +4966,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/repetido.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Repetido: personagem/objeto do catálogo aprovado (repetido). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5010,7 +5010,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/espirito-animal.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Espírito-Animal: personagem/objeto do catálogo aprovado (espirito-animal). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5054,7 +5054,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/gato-de-navio.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Gato de Navio: personagem/objeto do catálogo aprovado (gato-de-navio). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5098,7 +5098,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/menina-raposa.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Menina-Raposa: personagem/objeto do catálogo aprovado (menina-raposa). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5142,7 +5142,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/ilusionista-do-labirinto.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Ilusionista do Labirinto: personagem/objeto do catálogo aprovado (ilusionista-do-labirinto). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5186,7 +5186,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/ceifadora-da-peste.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Ceifadora da Peste: personagem/objeto do catálogo aprovado (ceifadora-da-peste). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5230,7 +5230,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/contrabandista-de-porto.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Contrabandista de Porto: personagem/objeto do catálogo aprovado (contrabandista-de-porto). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5274,7 +5274,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/vento-mensageiro.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Vento Mensageiro: personagem/objeto do catálogo aprovado (vento-mensageiro). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5318,7 +5318,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/guarda-costas-contratado.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Guarda-Costas Contratado: personagem/objeto do catálogo aprovado (guarda-costas-contratado). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5362,7 +5362,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/curandeira-de-ervas.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Curandeira de Ervas: personagem/objeto do catálogo aprovado (curandeira-de-ervas). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5404,7 +5404,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/ninho-de-estrelas.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Ninho de Estrelas: personagem/objeto do catálogo aprovado (ninho-de-estrelas). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5437,7 +5437,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/coroa-sem-rei.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Coroa Sem Rei: personagem/objeto do catálogo aprovado (coroa-sem-rei). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5470,7 +5470,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/tapete-de-duas-casas.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Tapete de Duas Casas: personagem/objeto do catálogo aprovado (tapete-de-duas-casas). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5503,7 +5503,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/a-primeira-moeda.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "A Primeira Moeda: personagem/objeto do catálogo aprovado (a-primeira-moeda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5536,7 +5536,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/sino-dos-juramentados.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Sino dos Juramentados: personagem/objeto do catálogo aprovado (sino-dos-juramentados). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5569,7 +5569,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/ancora-do-mesmo-dia.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Âncora do Mesmo Dia: personagem/objeto do catálogo aprovado (ancora-do-mesmo-dia). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5602,7 +5602,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/cemiterio-que-respira.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Cemitério que Respira: personagem/objeto do catálogo aprovado (cemiterio-que-respira). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5636,7 +5636,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/cadeado-ciumento.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Cadeado Ciumento: personagem/objeto do catálogo aprovado (cadeado-ciumento). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5669,7 +5669,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/frasco-de-mare.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Frasco de Maré: personagem/objeto do catálogo aprovado (frasco-de-mare). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5702,7 +5702,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/chapeu-de-chuva-particular.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Chapéu de Chuva Particular: personagem/objeto do catálogo aprovado (chapeu-de-chuva-particular). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5735,7 +5735,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/barco-dobravel.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Barco Dobrável: personagem/objeto do catálogo aprovado (barco-dobravel). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5768,7 +5768,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/mapa-do-reino.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Mapa do Reino: personagem/objeto do catálogo aprovado (mapa-do-reino). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5803,7 +5803,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/arqueira-da-ultima-flecha.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Arqueira da Última Flecha: personagem/objeto do catálogo aprovado (arqueira-da-ultima-flecha). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5847,7 +5847,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mare-de-sobras.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Maré de Sobras: personagem/objeto do catálogo aprovado (mare-de-sobras). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5889,7 +5889,7 @@
       "prioridade": 3,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/coroa-riscada.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Coroa Riscada: personagem/objeto do catálogo aprovado (coroa-riscada). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5924,7 +5924,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/espelho-da-cidade-dos-rostos.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Espelho da Cidade dos Rostos: personagem/objeto do catálogo aprovado (espelho-da-cidade-dos-rostos). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5959,7 +5959,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/pedra-parada.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Pedra Parada: personagem/objeto do catálogo aprovado (pedra-parada). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -5994,7 +5994,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/a-coroa-de-vyal.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "A Coroa de Vyal: personagem/objeto do catálogo aprovado (a-coroa-de-vyal). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6029,7 +6029,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/pena-de-idrael.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Pena de Idrael: personagem/objeto do catálogo aprovado (pena-de-idrael). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6064,7 +6064,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/a-pagina-arrancada.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "A Página Arrancada: personagem/objeto do catálogo aprovado (a-pagina-arrancada). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6099,7 +6099,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/chave-da-voragem.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Chave da Voragem: personagem/objeto do catálogo aprovado (chave-da-voragem). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6134,7 +6134,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/ovo-de-wyvern.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Ovo de Wyvern: personagem/objeto do catálogo aprovado (ovo-de-wyvern). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6169,7 +6169,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/cordao-de-rhu.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Cordão de Rhu: personagem/objeto do catálogo aprovado (cordao-de-rhu). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6204,7 +6204,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/trono-dobravel.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Trono Dobrável: personagem/objeto do catálogo aprovado (trono-dobravel). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6239,7 +6239,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/pente-das-mil-caras.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Pente das Mil Caras: personagem/objeto do catálogo aprovado (pente-das-mil-caras). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6274,7 +6274,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/balde-que-sobe.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Balde que Sobe: personagem/objeto do catálogo aprovado (balde-que-sobe). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6307,7 +6307,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/luz-de-velorio.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Luz de Velório: personagem/objeto do catálogo aprovado (luz-de-velorio). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6349,7 +6349,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/carcaca-andante.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Carcaça Andante: personagem/objeto do catálogo aprovado (carcaca-andante). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6391,7 +6391,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/coveiro-de-vau-grande.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Coveiro de Vau-Grande: personagem/objeto do catálogo aprovado (coveiro-de-vau-grande). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6433,7 +6433,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/embalsamador.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Embalsamador: personagem/objeto do catálogo aprovado (embalsamador). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6475,7 +6475,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/velho-ossario-dragao-palido.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Velho Ossário, Dragão-Pálido: personagem/objeto do catálogo aprovado (velho-ossario-dragao-palido). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6517,7 +6517,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/esquecido.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Esquecido: personagem/objeto do catálogo aprovado (esquecido). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6559,7 +6559,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/moca-que-nao-sangra.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Moça Que Não Sangra: personagem/objeto do catálogo aprovado (moca-que-nao-sangra). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6601,7 +6601,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/rosto-sem-gente.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Rosto Sem Gente: personagem/objeto do catálogo aprovado (rosto-sem-gente). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6643,7 +6643,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/leitor-de-sombras.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Leitor de Sombras: personagem/objeto do catálogo aprovado (leitor-de-sombras). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6685,7 +6685,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/juiz-do-selo.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Juiz do Selo: personagem/objeto do catálogo aprovado (juiz-do-selo). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6727,7 +6727,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/faroleira-de-vau-grande.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Faroleira de Vau-Grande: personagem/objeto do catálogo aprovado (faroleira-de-vau-grande). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6769,7 +6769,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/matilha-da-voragem.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Matilha da Voragem: personagem/objeto do catálogo aprovado (matilha-da-voragem). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6811,7 +6811,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/quebra-escudos.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Quebra-Escudos: personagem/objeto do catálogo aprovado (quebra-escudos). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6853,7 +6853,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/nuvem-triste.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Nuvem Triste: personagem/objeto do catálogo aprovado (nuvem-triste). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6897,7 +6897,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/cadeira-de-espera.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Cadeira de Espera: personagem/objeto do catálogo aprovado (cadeira-de-espera). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6930,7 +6930,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/ladrao-de-tumulos.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Ladrão de Túmulos: personagem/objeto do catálogo aprovado (ladrao-de-tumulos). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -6974,7 +6974,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mascara-do-outro.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Máscara do Outro: personagem/objeto do catálogo aprovado (mascara-do-outro). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7007,7 +7007,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/professor-de-logica.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Professor de Lógica: personagem/objeto do catálogo aprovado (professor-de-logica). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7049,7 +7049,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/carpideira.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Carpideira: personagem/objeto do catálogo aprovado (carpideira). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7091,7 +7091,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/relojoeiro-fugitivo.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Relojoeiro Fugitivo: personagem/objeto do catálogo aprovado (relojoeiro-fugitivo). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7133,7 +7133,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/sentinela-de-selo.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Sentinela de Selo: personagem/objeto do catálogo aprovado (sentinela-de-selo). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7175,7 +7175,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/pistoleira-de-aluguel.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Pistoleira de Aluguel: personagem/objeto do catálogo aprovado (pistoleira-de-aluguel). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7217,7 +7217,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/serpente-espelho.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Serpente-Espelho: personagem/objeto do catálogo aprovado (serpente-espelho). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7259,7 +7259,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/a-dama-da-noite-de-fhim.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "A Dama da Noite de Fhim: personagem/objeto do catálogo aprovado (a-dama-da-noite-de-fhim). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7301,7 +7301,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/canto-sem-cantor.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Canto Sem Cantor: personagem/objeto do catálogo aprovado (canto-sem-cantor). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7343,7 +7343,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/sentido.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Sentido: personagem/objeto do catálogo aprovado (sentido). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7385,7 +7385,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/tique.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Tique: personagem/objeto do catálogo aprovado (tique). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7427,7 +7427,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/hael-o-insone.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Hael, o Insone: personagem/objeto do catálogo aprovado (hael-o-insone). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7469,7 +7469,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/estandarte-sem-exercito.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Estandarte Sem Exército: personagem/objeto do catálogo aprovado (estandarte-sem-exercito). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7513,7 +7513,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/feira-das-mascaras.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Feira das Máscaras: personagem/objeto do catálogo aprovado (feira-das-mascaras). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7549,7 +7549,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/o-postulario.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "O Postulário: personagem/objeto do catálogo aprovado (o-postulario). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7585,7 +7585,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/brejo-alto.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Brejo-Alto: personagem/objeto do catálogo aprovado (brejo-alto). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7621,7 +7621,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/patio-de-duelos.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Pátio de Duelos: personagem/objeto do catálogo aprovado (patio-de-duelos). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7657,7 +7657,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/o-porto-de-vidro.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "O Porto de Vidro: personagem/objeto do catálogo aprovado (o-porto-de-vidro). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7693,7 +7693,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mercado-de-feras.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Mercado de Feras: personagem/objeto do catálogo aprovado (mercado-de-feras). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7729,7 +7729,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/sarn-das-escadas.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Sarn-das-Escadas: personagem/objeto do catálogo aprovado (sarn-das-escadas). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7763,7 +7763,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/estalajadeiro-de-vau-grande.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Estalajadeiro de Vau-Grande: personagem/objeto do catálogo aprovado (estalajadeiro-de-vau-grande). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7807,7 +7807,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/vila-do-mesmo-dia.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Vila do Mesmo Dia: personagem/objeto do catálogo aprovado (vila-do-mesmo-dia). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7843,7 +7843,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/floresta-que-anda.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Floresta que Anda: personagem/objeto do catálogo aprovado (floresta-que-anda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7879,7 +7879,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mina-funda.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Mina Funda: personagem/objeto do catálogo aprovado (mina-funda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7915,7 +7915,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mina-funda.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Mina Funda: personagem/objeto do catálogo aprovado (mina-funda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7951,7 +7951,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mina-funda.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Mina Funda: personagem/objeto do catálogo aprovado (mina-funda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -7987,7 +7987,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mina-funda.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Mina Funda: personagem/objeto do catálogo aprovado (mina-funda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -8023,7 +8023,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mina-funda.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Mina Funda: personagem/objeto do catálogo aprovado (mina-funda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -8059,7 +8059,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mina-funda.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Mina Funda: personagem/objeto do catálogo aprovado (mina-funda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -8095,7 +8095,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mina-funda.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Mina Funda: personagem/objeto do catálogo aprovado (mina-funda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -8131,7 +8131,7 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/mina-funda.png"
       ],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Mina Funda: personagem/objeto do catálogo aprovado (mina-funda). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -8165,7 +8165,7 @@
       "prioridade": 2,
       "referenciaJogoAtual": "Arcanoclisma/online/public/arte/dragonete.webp",
       "referenciasIdentidade": [],
-      "estado": "gerada_aguardando_avaliacao_final",
+      "estado": "aprovada_pelo_autor",
       "baseInspecionada": true,
       "descricaoLida": true,
       "identidade": "Dragonete: personagem/objeto do catálogo aprovado (dragonete). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
@@ -8526,5 +8526,11 @@
         "dominum"
       ]
     }
+  },
+  "aprovacaoAutor": {
+    "textoAutor": "aprovado, voce fez o dado e a animação que pedi?",
+    "registradaEm": "2026-10-04T11:32:52.241Z",
+    "origem": "Autor nesta conversa",
+    "escopo": "210 versões correntes do lote do site; não libera a expansão para jogo."
   }
 }

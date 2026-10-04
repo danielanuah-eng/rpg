@@ -1,6 +1,8 @@
 # Entrega visual para Claude — 04/10/2026
 
-## Atualização posterior: 210/210 — aguardando avaliação
+## Atualização posterior: 210/210 — aprovadas pelo autor
+
+O autor respondeu “aprovado, voce fez o dado e a animação que pedi?” em 04/10. As 210 versões correntes, seus registros e a galeria estão aprovados; Carlos foi pausado via ferramenta. Não aprova estudos anteriores nem libera a expansão para jogo. A próxima entrega de D20 e entrada gradual está em `ENTREGA-ABERTURA-D20-04-10.md`.
 
 O lote e a galeria agora têm 210 artes concluídas, sem IDs pendentes nesta fila. Consultar o mapa corrente em `lote-site-v1.visual.json`, não o número histórico da entrega inicial de conjuradores abaixo. Além das oito Estruturas anteriores, entraram Floresta que Anda, Minas de Cognitium, Conflitüo, Dominum, Eternyr, Morbidyum, Persona, Primitivum e Sublimeyn, e a ficha Wyvern Filhote. As 151 do pedido inicial estão entregues; as adicionais pertencem à mesma meta de 210. Cada ID tem cena e registro próprios, com dimensões e alfa medidos. Os Valores atuais determinam a cor da magia; aparência física e roupas dos personagens aprovados continuam preservadas. Os gestos e cenários não adicionam efeitos ao jogo.
 
@@ -8,7 +10,7 @@ Floresta conta como uma carta no Grau e ganha um Arcano apenas ao entrar. As Min
 
 A ficha Wyvern Filhote usa a identidade visual do Dragonete, adaptada à anatomia de wyvern: duas pernas e duas asas como membros dianteiros, sem braços adicionais. A pose nova é um salto atrás de mariposa; a cabeça e a pupila acompanham esse alvo. Enquadramento revisto para conter as duas asas inteiras. A ficha atual é 2/2, sem regras e com `valores: []`; a arte mantém o vermelho físico sem inventar afinidade. **Claude deve validar os Valores da ficha conforme as regras de criação de fichas e a diretriz do autor, sem deduzi-los da cor do animal.**
 
-Produção encerrada nesta meta em `aguardando_avaliacao`; o lock está liberado e a pergunta de avaliação registrada uma única vez. Não gerar nem repetir a pergunta enquanto aguarda resposta. O envio autorizado permite a integração dos arquivos; não equivale à aprovação visual final do autor. D20, entrada gradual da arena e efeitos individuais continuam na prioridade visual seguinte, conforme `Arcanoclisma/efeitos/PRIORIDADES-04-10.md`, após a avaliação desta etapa. A expansão permanece bloqueada para jogo até autorização específica.
+Produção desta fila encerrada e aprovada; o lock está liberado e o ciclo automático está pausado. Não refazer artes aprovadas sem pedido. O envio autorizado permite a integração dos arquivos. D20 e entrada gradual são a etapa visual seguinte já autorizada; efeitos individuais seguem em fila separada. A expansão permanece bloqueada para jogo até autorização específica.
 
 Estas Estruturas são cenas completas dos lugares, não terrenos recortados com céu colado atrás. Postulário exige um Arcano para comprar uma; Brejo e Casas contam como uma carta no Grau e não geram Arcano por ativação. Pátio representa a ativação de um dano ao Conjurador inimigo, sem ataque de combate da estrutura. Porto gera um Arcano; Mercado reduz em um a primeira carta do turno, não só feitiços e não todas as cartas. Estalagem exige um Arcano para curar dois do próprio Conjurador. Vila exige dois para olhar três, escolher uma e colocar duas no fundo. Horários e enquadramentos diferem entre os lugares; materiais dourados ficam localizados.
 
@@ -28,7 +30,7 @@ Cemitério que Respira mostra um único aliado retornando, ainda sujeito ao paga
 
 A Ceifadora passou por revisão mínima de rosto e pupilas para mirar o alvo da foice. Usar `col-ceifadora-da-peste.png` do mapa, não o estudo anterior em `variantes/`. O Ilusionista mostra uma criatura intacta atravessando um portal, enquanto a Ceifadora mostra um único alvo se dissipando. Protegido 2 do Guarda-costas continua sendo pagamento adicional de Arcano para escolhê-lo como alvo, sem imunidade ou reflexão. Curandeira: Valor atual Primitivum, cura pontual de 2 de dano em um alvo.
 
-A **Luneta do Fim** foi revista após o autor apontar cabeça/mira incoerentes e raio dobrado: arquivo corrente `Arcanoclisma/arte/cartas-site/base-dano-conjurador-c4-a745c23c.png`. A versão sem hash e o estudo intermediário são históricos, não devem prevalecer sobre o mapa. Os exemplos novos de ambientes e a coerência de mira estão em `DIRETRIZ-CENARIOS.md`. Nenhuma nova imagem de Ciantia faz parte desta publicação. A fila está concluída; avaliação final e confirmação da integração do Claude seguem pendentes.
+A **Luneta do Fim** foi revista após o autor apontar cabeça/mira incoerentes e raio dobrado: arquivo corrente `Arcanoclisma/arte/cartas-site/base-dano-conjurador-c4-a745c23c.png`. A versão sem hash e o estudo intermediário são históricos, não devem prevalecer sobre o mapa. Os exemplos novos de ambientes e a coerência de mira estão em `DIRETRIZ-CENARIOS.md`. Nenhuma nova imagem de Ciantia faz parte desta publicação. A fila está concluída e aprovada; a confirmação da integração do Claude segue pendente.
 
 O autor pediu o envio conjunto das artes concluídas e dos conjuradores com cenários corrigidos. Autorizou os pushes das imagens. Esta entrega não altera habilidades, custos ou regras.
 

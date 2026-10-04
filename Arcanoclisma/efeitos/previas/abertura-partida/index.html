@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arcanoclisma · D20 e abertura da arena</title>
+<link rel="stylesheet" href="../../assets/abertura-partida/v01/abertura.css">
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;color:#edf1ff;background:#0d1222}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 25% 5%,#29295b,transparent 50%),#0d1222}
+main{max-width:1280px;margin:auto;padding:32px 24px}h1{font:clamp(25px,4vw,38px) Georgia,serif;color:#f5e5b4;margin:0 0 8px}
+p{color:#b6c4dd;line-height:1.5;margin:8px 0 20px}.cabecalho{display:flex;justify-content:space-between;align-items:center;gap:24px}
+button,select{font:inherit;border:1px solid #65779b65;background:#223453;color:#eef2ff;border-radius:9px;padding:9px 13px}
+button{cursor:pointer;transition:background .2s}button:hover{background:#394b75}button:focus-visible,select:focus-visible{outline:2px solid #f7dc93;outline-offset:3px}button:disabled{opacity:.55;cursor:wait}
+.grade{display:grid;grid-template-columns:1fr 1.55fr;gap:24px;margin-top:24px}.painel{border:1px solid #a0b4dc26;border-radius:18px;background:#101a2ace;padding:20px;overflow:hidden}
+h2{font:22px Georgia,serif;color:#e5d6ab;margin:0 0 8px}.controles{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+#d20{background:radial-gradient(ellipse at 50% 75%,#3e4c8436,transparent 65%);height:370px;min-height:260px}
+#resultado{text-align:center;min-height:28px;color:#f8e9b3;font-size:18px}.vistas{margin-top:16px}.vistas button{font-size:12px;padding:7px 9px}
+.arena{position:relative;min-height:460px;border-radius:15px;isolation:isolate;overflow:hidden;background:#071525;perspective:1000px}
+.piso{position:absolute;inset:0;background:linear-gradient(#0d233eb0,#12344e66),url('../../../arena/raster/arena-jogador-1-ampla-larga-v2.png') center/cover;border-radius:15px}
+.zona{position:absolute;left:9%;width:82%;height:24%;border:1px solid #79b6cf38;background:linear-gradient(120deg,#27416b22,#4698c51f);border-radius:12px}
+.zona.rival{top:10%}.zona.local{bottom:14%}.zona span{font-size:11px;position:absolute;left:10px;top:8px;color:#a1bdcf}
+.carta{width:61px;height:86px;border:1px solid #d9c69875;border-radius:6px;background:#132844;box-shadow:0 5px 12px #0006;overflow:hidden;position:relative}
+.carta img{width:100%;height:100%;object-fit:cover}.conjuradores{position:absolute;left:calc(50% - 32px);top:30%;display:flex;flex-direction:column;align-items:center;gap:17px;z-index:2}
+.conjuradores .carta{width:63px;height:88px}.conjuradores .rival{transform:rotate(180deg)}
+#conjurador-rival{background:url('../../../arte/cartas-site/conjurador-carmal-92813aeb.png') center/cover}
+#conjurador-local{background:url('../../../arte/cartas-site/conjurador-lyandra-c92c861b.png') center/cover}
+.baralhos{position:absolute;left:3%;top:11%;height:75%;display:flex;flex-direction:column;justify-content:space-between}
+.baralhos .carta{box-shadow:3px 3px #20344f,5px 5px #8395a044,0 5px 14px #0008}
+.mao{position:absolute;display:flex;justify-content:center;gap:6px;left:20%;width:60%}.mao.rival{top:3%}.mao.local{bottom:-16px}
+.mao .carta:nth-child(1){transform:rotate(-11deg)}.mao .carta:nth-child(2){transform:translateY(-6px) rotate(-3deg)}
+.mao .carta:nth-child(3){transform:translateY(-6px) rotate(3deg)}.mao .carta:nth-child(4){transform:rotate(11deg)}
+.controles-arena{position:absolute;right:3%;top:37%;display:grid;gap:9px}.arcano{border-radius:50%;width:45px;height:45px;display:grid;place-items:center;background:radial-gradient(circle at 30% 22%,#719db2,#1c406f 55%,#131e3f);border:1px solid #b7cceb7a;box-shadow:0 0 15px #578db023}
+.fase{font-size:10px;padding:7px;border-radius:6px;border:1px solid #8ba6c549;color:#bbd0e2;background:#142638d6}
+.vida{position:absolute;right:6%;bottom:18%;font-weight:600;color:#f3e7cc;text-shadow:0 2px 6px #000}.vida.rival{top:16%;bottom:auto}
+.mini-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:7px;margin-top:18px}.mini-grid button{padding:0;background:#171e3b}.mini-grid img{width:100%;display:block}
+small{color:#a7b8d1;line-height:1.55;display:block;margin-top:10px}a{color:#bddaff}
+@media(max-width:850px){.grade{grid-template-columns:1fr}.cabecalho{display:block}.arena{min-height:470px}.mini-grid{grid-template-columns:repeat(5,1fr)}}
+@media(prefers-reduced-motion:reduce){button{transition:none}}
+</style>
+</head>
+<body><main>
+<div class="cabecalho"><div><h1>D20 Transplanar</h1><p>Azul, violeta e ouro claro. Rolagem fluida e abertura da arena por camadas.</p></div><button id="abrir">Reproduzir abertura</button></div>
+<div class="grade">
+<section class="painel"><h2>Vinte faces · rolagem</h2><div id="d20"></div>
+<div id="resultado" role="status" aria-live="polite">Face 20</div>
+<div class="controles"><label for="numero">Resultado</label><select id="numero"></select><button id="rolar">Rolar</button><button id="concluir">Concluir movimento</button></div>
+<div class="controles vistas" id="vistas"></div>
+<small>Na partida, o resultado é confirmado pelo jogo. A animação apresenta esse número.</small>
+</section>
+<section class="painel"><h2>Entrada da arena</h2><p>Piso, áreas dos jogadores, conjuradores, cartas e controles entram suavemente.</p>
+<div id="arena" class="arena">
+<div id="piso" class="piso"></div>
+<div class="zona rival"><span>Campo adversário</span></div><div class="zona local"><span>Seu campo</span></div>
+<div class="conjuradores" id="conjuradores"><div id="conjurador-rival" class="carta rival"></div><div id="conjurador-local" class="carta"></div></div>
+<div class="baralhos" id="baralhos"></div><div class="mao rival" id="mao-rival"></div><div class="mao local" id="mao-local"></div>
+<div class="controles-arena" id="controles-arena"><span class="arcano">3</span><span class="fase">Etapa principal</span></div>
+<span class="vida rival">20</span><span class="vida">20</span>
+</div><small>Prévia de apresentação. As cartas ocultas do adversário mantêm o mesmo verso.</small>
+</section></div>
+<section class="painel" style="margin-top:24px"><h2>Todas as faces</h2><div class="mini-grid" id="faces"></div>
+<small><a href="../../assets/abertura-partida/v01/d20-transplanar.glb">Modelo 3D GLB</a> · <a href="../../assets/abertura-partida/v01/todas-as-faces.svg">Folha das vinte faces</a></small></section>
+</main>
+<script src="../../assets/abertura-partida/v01/d20-modelo.js"></script>
+<script src="../../assets/abertura-partida/v01/abertura.js"></script>
+<script>
+const $=id=>document.getElementById(id),kit=ArcanoclismaAbertura;
+const dado=new kit.D20Transplanar($('d20'));
+const verso='../../../arena/raster/verso-arcano-v3.png';
+const costas=()=>{const card=document.createElement('div');card.className='carta';const img=document.createElement('img');img.src=verso;img.alt='Carta oculta';card.append(img);return card;};
+for(let i=0;i<2;i++)$('baralhos').append(costas());
+for(let i=0;i<4;i++){$('mao-rival').append(costas());$('mao-local').append(costas());}
+for(let n=1;n<=20;n++){
+ const o=document.createElement('option');o.value=n;o.textContent=n;$('numero').append(o);
+ const b=document.createElement('button');b.setAttribute('aria-label','Ver face '+n);
+ const img=document.createElement('img');img.src='../../assets/abertura-partida/v01/faces/face-'+String(n).padStart(2,'0')+'.png';img.alt='Face '+n;b.append(img);
+ b.onclick=()=>{dado.mostrarFace(n);$('numero').value=n;$('resultado').textContent='Face '+n;};$('faces').append(b);
+}
+$('numero').value=20;
+for(const [nome,label]of Object.entries({frente:'Frente',tras:'Trás',esquerda:'Esquerda',direita:'Direita',superior:'Cima',inferior:'Baixo'})){
+ const b=document.createElement('button');b.textContent=label;b.onclick=()=>{dado.mostrarVista(nome);$('resultado').textContent='Vista '+label.toLowerCase();};$('vistas').append(b);
+}
+let sequencia=0;
+const grupos={piso:$('piso'),zonas:document.querySelectorAll('.zona'),conjuradores:$('conjuradores'),baralhosMao:[$('baralhos'),$('mao-local'),$('mao-rival')],controles:[$('controles-arena'),...document.querySelectorAll('.vida')]};
+async function rolar(){
+ const n=Number($('numero').value);$('resultado').textContent='Rolando…';
+ const entrega=await dado.rolar(n);
+ if(entrega.apresentacaoConcluida)$('resultado').textContent='Resultado '+entrega.numero;
+}
+$('rolar').onclick=rolar;
+$('concluir').onclick=()=>dado.cancelar({concluir:true});
+$('abrir').onclick=async()=>{
+ $('abrir').disabled=true;
+ try{await Promise.all([rolar(),kit.entrarArena($('arena'),grupos,{partidaId:'previa-'+(++sequencia)})]);}
+ finally{$('abrir').disabled=false;}
+};
+globalThis.addEventListener('pagehide',()=>{dado.destruir();kit.limparEntradaArena($('arena'));},{once:true});
+</script></body></html>
+

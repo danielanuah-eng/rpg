@@ -58,6 +58,13 @@
   "raridade": "comum",
   "arteAlternativa": false,
   "fundo": "Cena completa opaca",
-  "estado": "gerada_aguardando_avaliacao_final",
-  "integracaoClaudeConfirmada": false
+  "estado": "aprovada_pelo_autor",
+  "integracaoClaudeConfirmada": false,
+  "estadoAntesDaAprovacao": "gerada_aguardando_avaliacao_final",
+  "aprovacaoAutor": {
+    "textoAutor": "aprovado, voce fez o dado e a animação que pedi?",
+    "registradaEm": "2026-10-04T11:32:52.241Z",
+    "origem": "Autor nesta conversa",
+    "escopo": "210 versões correntes do lote do site; não libera a expansão para jogo."
+  }
 }

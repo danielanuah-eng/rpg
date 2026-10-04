@@ -1,0 +1,967 @@
+{
+  "tarefaId": "abertura-partida",
+  "versao": 1,
+  "autor": "Codex — função Embelezador",
+  "criadaEm": "2026-10-04T12:00:39.855Z",
+  "origemPedido": "Autor nesta conversa; Arcanoclisma/efeitos/PRIORIDADES-04-10.md",
+  "estado": "produzida_aguardando_avaliacao_visual_e_integracao",
+  "integracaoClaudeConfirmada": false,
+  "previa": "Arcanoclisma/efeitos/previas/abertura-partida/index.html",
+  "referenciaVisual": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-v1/dragao-da-travessia-arte-v1.png",
+  "cores": {
+    "corpo": "#182252",
+    "azul": "#3869d7",
+    "violeta": "#7865d0",
+    "energia": "#8fbaff",
+    "numeros": "#fff0ad",
+    "ouroSombra": "#c79744"
+  },
+  "geometria": "icosaedro com 20 faces triangulares e rebaixo estreito entre placas",
+  "faces": [
+    {
+      "numero": 1,
+      "oposta": 20,
+      "indices": [
+        0,
+        11,
+        5
+      ],
+      "orientacaoFrontal": [
+        -0.029020022084583708,
+        0.4587839401323868,
+        0.6663526044550862,
+        0.5870684296832325
+      ]
+    },
+    {
+      "numero": 2,
+      "oposta": 19,
+      "indices": [
+        0,
+        5,
+        1
+      ],
+      "orientacaoFrontal": [
+        0.49111273281711115,
+        0.2835440684944119,
+        0.41182855804525775,
+        0.713307986542215
+      ]
+    },
+    {
+      "numero": 3,
+      "oposta": 18,
+      "indices": [
+        0,
+        1,
+        7
+      ],
+      "orientacaoFrontal": [
+        0.8236571160905155,
+        0,
+        0,
+        0.567088136988824
+      ]
+    },
+    {
+      "numero": 4,
+      "oposta": 17,
+      "indices": [
+        0,
+        7,
+        10
+      ],
+      "orientacaoFrontal": [
+        0.8415924760930608,
+        -0.28354406849441205,
+        -0.41182855804525764,
+        0.20425989372255834
+      ]
+    },
+    {
+      "numero": 5,
+      "oposta": 16,
+      "indices": [
+        0,
+        10,
+        11
+      ],
+      "orientacaoFrontal": [
+        -0.5380681149042401,
+        0.45878394013238655,
+        0.6663526044550862,
+        0.2365886864072829
+      ]
+    },
+    {
+      "numero": 6,
+      "oposta": 15,
+      "indices": [
+        1,
+        5,
+        9
+      ],
+      "orientacaoFrontal": [
+        0.41182855804525786,
+        0.20425989372255848,
+        0.8415924760930608,
+        0.28354406849441194
+      ]
+    },
+    {
+      "numero": 7,
+      "oposta": 14,
+      "indices": [
+        5,
+        11,
+        4
+      ],
+      "orientacaoFrontal": [
+        -0.17523987163797475,
+        0.04695538208712893,
+        0.9498966729494979,
+        0.2545240464098282
+      ]
+    },
+    {
+      "numero": 8,
+      "oposta": 13,
+      "indices": [
+        11,
+        10,
+        2
+      ],
+      "orientacaoFrontal": [
+        -0.6953726265396696,
+        -0.12828448955084576,
+        0.6953726265396697,
+        0.12828448955084593
+      ]
+    },
+    {
+      "numero": 9,
+      "oposta": 12,
+      "indices": [
+        10,
+        7,
+        6
+      ],
+      "orientacaoFrontal": [
+        0.949896672949498,
+        0.25452404640982823,
+        -0.17523987163797522,
+        0.04695538208712906
+      ]
+    },
+    {
+      "numero": 10,
+      "oposta": 11,
+      "indices": [
+        7,
+        1,
+        8
+      ],
+      "orientacaoFrontal": [
+        0.8415924760930608,
+        0.28354406849441205,
+        0.41182855804525764,
+        0.20425989372255834
+      ]
+    },
+    {
+      "numero": 17,
+      "oposta": 4,
+      "indices": [
+        3,
+        9,
+        4
+      ],
+      "orientacaoFrontal": [
+        -0.45878394013238677,
+        -0.02902002208458368,
+        -0.5870684296832325,
+        0.666352604455086
+      ]
+    },
+    {
+      "numero": 18,
+      "oposta": 3,
+      "indices": [
+        3,
+        4,
+        2
+      ],
+      "orientacaoFrontal": [
+        -0.2835440684944118,
+        0.4911127328171112,
+        -0.713307986542215,
+        0.41182855804525764
+      ]
+    },
+    {
+      "numero": 19,
+      "oposta": 2,
+      "indices": [
+        3,
+        2,
+        6
+      ],
+      "orientacaoFrontal": [
+        -5.043445254075949e-17,
+        -0.8236571160905155,
+        0.567088136988824,
+        3.472413358988995e-17
+      ]
+    },
+    {
+      "numero": 20,
+      "oposta": 1,
+      "indices": [
+        3,
+        6,
+        8
+      ],
+      "orientacaoFrontal": [
+        -0.28354406849441205,
+        -0.8415924760930608,
+        0.20425989372255834,
+        0.41182855804525764
+      ]
+    },
+    {
+      "numero": 16,
+      "oposta": 5,
+      "indices": [
+        3,
+        8,
+        9
+      ],
+      "orientacaoFrontal": [
+        -0.45878394013238666,
+        -0.5380681149042401,
+        -0.23658868640728298,
+        0.666352604455086
+      ]
+    },
+    {
+      "numero": 12,
+      "oposta": 9,
+      "indices": [
+        4,
+        9,
+        5
+      ],
+      "orientacaoFrontal": [
+        -0.04695538208712893,
+        -0.17523987163797475,
+        -0.2545240464098282,
+        0.9498966729494979
+      ]
+    },
+    {
+      "numero": 11,
+      "oposta": 10,
+      "indices": [
+        2,
+        4,
+        11
+      ],
+      "orientacaoFrontal": [
+        -0.20425989372255848,
+        0.41182855804525786,
+        -0.283544068494412,
+        0.8415924760930608
+      ]
+    },
+    {
+      "numero": 15,
+      "oposta": 6,
+      "indices": [
+        6,
+        2,
+        10
+      ],
+      "orientacaoFrontal": [
+        -0.28354406849441205,
+        0.8415924760930608,
+        -0.20425989372255834,
+        0.41182855804525764
+      ]
+    },
+    {
+      "numero": 14,
+      "oposta": 7,
+      "indices": [
+        8,
+        6,
+        7
+      ],
+      "orientacaoFrontal": [
+        0.2545240464098283,
+        -0.949896672949498,
+        0.046955382087129065,
+        0.17523987163797522
+      ]
+    },
+    {
+      "numero": 13,
+      "oposta": 8,
+      "indices": [
+        9,
+        8,
+        1
+      ],
+      "orientacaoFrontal": [
+        0.12828448955084581,
+        -0.6953726265396696,
+        -0.12828448955084587,
+        0.6953726265396697
+      ]
+    }
+  ],
+  "medicoesFaces": [
+    {
+      "numero": 1,
+      "arquivo": "faces/face-01.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 2,
+      "arquivo": "faces/face-02.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 3,
+      "arquivo": "faces/face-03.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 4,
+      "arquivo": "faces/face-04.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 5,
+      "arquivo": "faces/face-05.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 6,
+      "arquivo": "faces/face-06.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 7,
+      "arquivo": "faces/face-07.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 8,
+      "arquivo": "faces/face-08.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 9,
+      "arquivo": "faces/face-09.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 10,
+      "arquivo": "faces/face-10.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 11,
+      "arquivo": "faces/face-11.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 12,
+      "arquivo": "faces/face-12.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 13,
+      "arquivo": "faces/face-13.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 14,
+      "arquivo": "faces/face-14.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 15,
+      "arquivo": "faces/face-15.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 16,
+      "arquivo": "faces/face-16.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 17,
+      "arquivo": "faces/face-17.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 18,
+      "arquivo": "faces/face-18.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 19,
+      "arquivo": "faces/face-19.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    },
+    {
+      "numero": 20,
+      "arquivo": "faces/face-20.png",
+      "dimensoes": [
+        512,
+        512
+      ],
+      "alfa": {
+        "min": 0,
+        "max": 255,
+        "pixelsComAlfaMenor255": 179304
+      }
+    }
+  ],
+  "arquivos": [
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/abertura.css",
+      "bytes": 705,
+      "sha256": "b5ab0c7a9003d17fa217c206c7a56ff9f053b4afd5f137697fbf69b64d4d68f5"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/abertura.js",
+      "bytes": 16700,
+      "sha256": "b8d8ceed2c36176bb4470fbdaf53c435d24e76373ec9dfe00e5f6e4b66c64a4b"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/atlas-faces.png",
+      "bytes": 887220,
+      "sha256": "744d9cf8e41b69c46a17165b46ccd58b8345daef4fc6e3e8b2bae4d2f8054716"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/d20-malha.bin",
+      "bytes": 6560,
+      "sha256": "4e045087d6af1b9a384339084ffea7f9ad27f48cac815d5b828a83d3cf938f5b"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/d20-modelo.js",
+      "bytes": 22794,
+      "sha256": "42eac0d3143a9936ab5e9216b81330933daed9377eacebf3e5b9fb67371af45d"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/d20-modelo.json",
+      "bytes": 36731,
+      "sha256": "f358f638f12ac7e6510138f5ff6f150deef4076d519582ff60b895c31d6a8617"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/d20-transplanar.glb",
+      "bytes": 910132,
+      "sha256": "84f74167a16a9881906dfb95507894f64a83fe12ba747fd1a646917d455ca6d8"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/d20-transplanar.gltf",
+      "bytes": 29757,
+      "sha256": "ce7bed76024f4ac3ba7440560a32520f866543d88ed86a4c702e8013f36fc4ca"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-01.png",
+      "bytes": 35554,
+      "sha256": "71f22da3eeeb7afb6c34fb2f0ccf4134cf7baaeff5fad3f7b925eb34a2022a3b"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-01.svg",
+      "bytes": 1142,
+      "sha256": "082a9ffed334575212ace826475d4baad3e0e72803e76889999a70df99e7f736"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-02.png",
+      "bytes": 38989,
+      "sha256": "5ef210b971769878152a852e19d7a5397a08c7bc8eb95d1f57bfeaac8fedceff"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-02.svg",
+      "bytes": 1142,
+      "sha256": "47eab83c8c2db36342d1ee671d5ebfd4804ba2ec786a0f52238a6bf0176b92aa"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-03.png",
+      "bytes": 38661,
+      "sha256": "a5961feafbb2d32821bda08d44fa9b454f355bb38d0fe1b95aef9f266fce28e0"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-03.svg",
+      "bytes": 1142,
+      "sha256": "2fcd7475953c2a31e53b4e4b5430f133719f65233a7d7dec502e3642f09bca5d"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-04.png",
+      "bytes": 39788,
+      "sha256": "f7ac03bc9c408a04fe31a81f0c87c39c52ea8144304c8b95aa1ad0102d1fcf13"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-04.svg",
+      "bytes": 1142,
+      "sha256": "17b3c16dad96ffdfed4200c936c086ea83ff0b068b113c8d2b5050b64e661212"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-05.png",
+      "bytes": 38689,
+      "sha256": "55e50568bc73b693cc0b7011340bdc434994ee0a2954db0c301d528c157d63e3"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-05.svg",
+      "bytes": 1142,
+      "sha256": "8865b58ebf5bbe06d76567f2de56b79220a599f46d10730b58aa302a4a30eeb1"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-06.png",
+      "bytes": 41290,
+      "sha256": "c150a45d058f379665eb8190e7a487b855a979c2bac2d014aceee5dfae8679e6"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-06.svg",
+      "bytes": 1142,
+      "sha256": "2c123370e399212b1af9924aa6473ff980266a3cff1f2bf4343352772b4764a0"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-07.png",
+      "bytes": 35912,
+      "sha256": "bfb7ef2b6d5c4e7edf729570e39eb969f59b066f0c97a6d67337a23d6c0a35db"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-07.svg",
+      "bytes": 1142,
+      "sha256": "8b7ca8073e6f889b943e32296ee3765854b0677967db6745c459f41fa3fb8465"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-08.png",
+      "bytes": 43139,
+      "sha256": "a123f44bca7b889e809fb0a23ec0d05233f0be580534fadd45857643f5cb72be"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-08.svg",
+      "bytes": 1142,
+      "sha256": "333f85485d61209039a2cc7aaf268412969f127e468011c4ea822bd5633a42e9"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-09.png",
+      "bytes": 40330,
+      "sha256": "5c8c2029dceda5ed880556c79b3b81c8ee2fdb85ab32c7f9a487fa190cbd9db8"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-09.svg",
+      "bytes": 1142,
+      "sha256": "a38a6f802837e12fca171cac0ac5ecde559dfd3b48c85d1dfffe2b77b86d6d6c"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-10.png",
+      "bytes": 41799,
+      "sha256": "f0747e708d4d9bf3aa25ee8b3f546d4a2b57c91669417c7dbbd18780f1eac559"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-10.svg",
+      "bytes": 1143,
+      "sha256": "821c8af556aa04f1fa2bf843b19bc213f7b9c505e615d45f86009f19c59cd471"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-11.png",
+      "bytes": 37001,
+      "sha256": "21e34efecccac0e9324cb5577c9e5f7a03ac935b29d77be2023e0f076e39413b"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-11.svg",
+      "bytes": 1143,
+      "sha256": "cc4b3e4a73a3efe156db1494b6a85ff399f595fed2673a5d9b4edcc770b43178"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-12.png",
+      "bytes": 41732,
+      "sha256": "4f84e48669712b51fc3aae440ecc300639a352d065b6a235741303949cf6cea2"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-12.svg",
+      "bytes": 1143,
+      "sha256": "6abfccfa3029c336aff7d1e871bc54b66cd558bbf4f0a814929ea09ff36a9cac"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-13.png",
+      "bytes": 42052,
+      "sha256": "9b0f588148022e8d997ffffe3eaf47001a99f91cf9e5c2dd53ca461bfed41c16"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-13.svg",
+      "bytes": 1143,
+      "sha256": "a4cf6688932f673051101739f85bd9bc814e9f073520b420acffaefed8fbd832"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-14.png",
+      "bytes": 40120,
+      "sha256": "d4958809b3b2ff36d80022728a5af72aff5cfbd3a8280b5ebf6aba831d4cd620"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-14.svg",
+      "bytes": 1143,
+      "sha256": "7dab79ea74fac500d858449f1f3364877e346f6b108a14bdc6a16be3bb0389e4"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-15.png",
+      "bytes": 39101,
+      "sha256": "fea70b816f0fe9f9d18b37672d0f7573b62accd34debff6c1b021a49158197e3"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-15.svg",
+      "bytes": 1143,
+      "sha256": "fb1640ed958220c22f852c1d28d0639680f1ed0fc8c936eae317b362628d29da"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-16.png",
+      "bytes": 43167,
+      "sha256": "c8c4268bf3fa9667de5bafc4f4a596aeefaf763fe02962f4c3f97f9f878a8e6d"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-16.svg",
+      "bytes": 1143,
+      "sha256": "5fc023115ed2ab5e03b96479232f0bf5712e46f3bea9f03b961a790e06fc1015"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-17.png",
+      "bytes": 39487,
+      "sha256": "267b215635e347cce3cc94022ef85e0d86e4a124c0c3959225e62455d8ffa073"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-17.svg",
+      "bytes": 1143,
+      "sha256": "2fbdd4b73a466c59b3a25d7c3e3d978de216cb695001f3a75df255d515e30216"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-18.png",
+      "bytes": 43480,
+      "sha256": "b5003e16df9b0ec39b59d9ebdcb68f9be23d61e2c21fb09cafd298576b221409"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-18.svg",
+      "bytes": 1143,
+      "sha256": "dc2f988e0816dff53dd612b00046acbf051d3735cf15b0b7629bc557cc2cedbf"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-19.png",
+      "bytes": 39857,
+      "sha256": "b4e1396e1b6bdb75e3fee40851163bab191214fc689df231cd5223cc671267a9"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-19.svg",
+      "bytes": 1143,
+      "sha256": "a32f0260e52920e1c2448eb61e4112f39950384ef1e65f98c7f48269f6656621"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-20.png",
+      "bytes": 44335,
+      "sha256": "a41d2c88552b43a7f81e679d59501553512ca814c63cde40212b4ce10c5064c3"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/faces/face-20.svg",
+      "bytes": 1143,
+      "sha256": "ccb1c007487a21ed762818d165382c1d07c0144c9f707f52c2a25379b8ae7642"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/todas-as-faces.svg",
+      "bytes": 32438,
+      "sha256": "e4ff9d8f30b90b0fdf9b18e3daea79d5e9d2ed4df764ee1000a0607d00f02f63"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/vistas/direita.svg",
+      "bytes": 3087,
+      "sha256": "920361c023cff4c6fd007a17024c9f961ef2d79a69d3324eab82e54b5e64b042"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/vistas/esquerda.svg",
+      "bytes": 3105,
+      "sha256": "973e4404e2315718cd474ee2aa880baebecf927c72e5348c75d81d9727b07fdb"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/vistas/frente.svg",
+      "bytes": 2986,
+      "sha256": "7539d7b0f51d9f63e1132530a1a28cf72f56749a809173aab9bfd53eef890312"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/vistas/inferior.svg",
+      "bytes": 3850,
+      "sha256": "3697308e05726985aaecfbd4891799a3b4db488eafb39ca6434cc8b901e488d9"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/vistas/superior.svg",
+      "bytes": 3836,
+      "sha256": "21db31657a15d56de3cf2ecdef1cc9df00a5f2cc154503f06108bab837df3d28"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/assets/abertura-partida/v01/vistas/tras.svg",
+      "bytes": 3840,
+      "sha256": "360709711a7e93d85422a36d18c896f3d701ba56aa44127aad14c086d5e2b372"
+    },
+    {
+      "arquivo": "Arcanoclisma/online/public/kit/abertura-v14/abertura.css",
+      "bytes": 705,
+      "sha256": "b5ab0c7a9003d17fa217c206c7a56ff9f053b4afd5f137697fbf69b64d4d68f5"
+    },
+    {
+      "arquivo": "Arcanoclisma/online/public/kit/abertura-v14/abertura.js",
+      "bytes": 16700,
+      "sha256": "b8d8ceed2c36176bb4470fbdaf53c435d24e76373ec9dfe00e5f6e4b66c64a4b"
+    },
+    {
+      "arquivo": "Arcanoclisma/online/public/kit/abertura-v14/d20-modelo.js",
+      "bytes": 22794,
+      "sha256": "42eac0d3143a9936ab5e9216b81330933daed9377eacebf3e5b9fb67371af45d"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/construir-abertura.mjs",
+      "bytes": 13839,
+      "sha256": "7c9766b187627673e6f327079a75105513512f02b6d2e936d97f891d98ff90cf"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/empacotar-abertura.mjs",
+      "bytes": 4167,
+      "sha256": "339869e013a6f1d6d676ab8f4d69f35d05953c4e001bad0859ec616baa1ae0f6"
+    },
+    {
+      "arquivo": "Arcanoclisma/efeitos/previas/abertura-partida/index.html",
+      "bytes": 8799,
+      "sha256": "9ad56b7f8b0bd62db1682ca68ae9762cc70a694d7102f7a6cdf1d973d973265a"
+    }
+  ],
+  "animacoes": [
+    {
+      "id": "d20-rolagem-confirmada",
+      "tipo": "3D procedural executável",
+      "duracaoMs": 4200,
+      "fases": [
+        "preparação",
+        "giro e deslocamento",
+        "contatos na superfície",
+        "desaceleração",
+        "acomodação",
+        "leitura"
+      ],
+      "contatosNormalizados": [
+        0.48,
+        0.64,
+        0.78,
+        0.9
+      ],
+      "resultado": "número 1–20 fornecido pelo motor, nunca sorteado por este componente",
+      "clipeGLB": "rolagem-exemplo-20",
+      "regraDoClipe": "exemplo fixo em 20, não determina jogador inicial"
+    },
+    {
+      "id": "arena-entrada-gradual",
+      "tipo": "animação de wrappers pela Web Animations API",
+      "duracaoGrupoMs": 1600,
+      "intervaloGruposMs": 180,
+      "duracaoTotalMaximaMs": 2320,
+      "grupos": [
+        "piso",
+        "zonas",
+        "conjuradores",
+        "baralhosMao",
+        "controles"
+      ],
+      "repetirPorRedesenho": false,
+      "ocultas": "mesmo verso; sem acesso a identidade privada"
+    }
+  ],
+  "acessibilidade": {
+    "movimentoReduzido": "face/arena final direta",
+    "semWebGL": "face ilustrada final",
+    "audioAutomatico": false
+  },
+  "vinculosClaude": [
+    {
+      "acao": "d20-rolagem-confirmada",
+      "comandoReal": null,
+      "estado": "pendente_claude",
+      "integracao": "numero confirmado do motor -> D20Transplanar.rolar(numero)"
+    },
+    {
+      "acao": "arena-entrada-gradual",
+      "comandoReal": null,
+      "estado": "pendente_claude",
+      "integracao": "abertura real da tela/partida -> entrarArena(root,grupos,{partidaId})"
+    }
+  ],
+  "validacao": {
+    "construcaoLocal": "GLTF/GLB e PNGs construídos pelo script local",
+    "alfaFacesMedido": true,
+    "interfaceTestada": false,
+    "jogoIntegrado": false
+  },
+  "procedimentos": [
+    "construir-abertura.mjs",
+    "empacotar-abertura.mjs"
+  ],
+  "instrucoesClaude": "coordenacao/site-online/ENTREGA-ABERTURA-D20-04-10.md",
+  "restricoes": [
+    "Não alterar regras, custos, primeiro jogador ou timers.",
+    "Expansão A Mestra dos Dragões segue bloqueada para jogo."
+  ],
+  "usoIAExterna": false,
+  "pushAutorizado": true
+}

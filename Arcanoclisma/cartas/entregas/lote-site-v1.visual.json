@@ -1,7 +1,7 @@
 {
   "tarefaId": "lote-site-v1",
   "pedidoVersao": 2,
-  "estado": "aguardando_avaliacao",
+  "estado": "aprovado",
   "meta": 210,
   "concluidas": 210,
   "pendentes": [],
@@ -12,7 +12,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-lyandra-c92c861b.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-lyandra.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "conjurador-carmal",
@@ -20,7 +20,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-carmal-92813aeb.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-carmal.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "conjurador-ricardo",
@@ -28,7 +28,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ricardo-1b3ce846.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-ricardo.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "conjurador-roh",
@@ -36,7 +36,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-roh-0a552076.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-roh.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "conjurador-agnelo",
@@ -44,7 +44,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-agnelo-b4c81c4f.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-agnelo.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "conjurador-diastaros",
@@ -52,7 +52,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-diastaros-992f5b6d.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-diastaros.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "conjurador-ana",
@@ -60,7 +60,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-ana-f036e89f.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-ana.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "conjurador-mitonho",
@@ -68,7 +68,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-mitonho-158caaad.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-mitonho.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "conjurador-osmar",
@@ -76,7 +76,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/conjurador-osmar-183eb5f1.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/conjurador-osmar.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-recurso",
@@ -84,7 +84,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c1-equilibrado",
@@ -92,7 +92,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c1-equilibrado.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c1-equilibrado.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c2-equilibrado",
@@ -100,7 +100,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c2-equilibrado.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c2-equilibrado.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c3-equilibrado",
@@ -108,7 +108,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c3-equilibrado.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c3-equilibrado.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c4-equilibrado",
@@ -116,7 +116,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c4-equilibrado.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c4-equilibrado.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c5-equilibrado",
@@ -124,7 +124,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c5-equilibrado.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c5-equilibrado.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c6-equilibrado",
@@ -132,7 +132,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c6-equilibrado.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c6-equilibrado.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c7-equilibrado",
@@ -140,7 +140,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c7-equilibrado.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c7-equilibrado.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c8-equilibrado",
@@ -148,7 +148,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c8-equilibrado.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c8-equilibrado.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c2-agressivo",
@@ -156,7 +156,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c2-agressivo.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c2-agressivo.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c2-defensivo",
@@ -164,7 +164,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c2-defensivo.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c2-defensivo.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c4-agressivo",
@@ -172,7 +172,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c4-agressivo.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c4-agressivo.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c4-defensivo",
@@ -180,7 +180,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c4-defensivo.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c4-defensivo.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c6-agressivo",
@@ -188,7 +188,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c6-agressivo.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c6-agressivo.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c6-defensivo",
@@ -196,7 +196,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c6-defensivo.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c6-defensivo.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c2-agressivo-proficiente",
@@ -204,7 +204,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c2-agressivo-proficiente.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c2-agressivo-proficiente.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c4-agressivo-proficiente",
@@ -212,7 +212,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c4-agressivo-proficiente.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c4-agressivo-proficiente.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c6-equilibrado-descarta-grau",
@@ -220,7 +220,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c6-equilibrado-descarta-grau.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c6-equilibrado-descarta-grau.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c8-equilibrado-descarta-grau",
@@ -228,7 +228,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c8-equilibrado-descarta-grau.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c8-equilibrado-descarta-grau.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-dano-c1",
@@ -236,7 +236,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c1.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-c1.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-dano-c1-repentina",
@@ -244,7 +244,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c1-repentina.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-c1-repentina.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-dano-c2",
@@ -252,7 +252,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c2.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-c2.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-dano-c2-repentina",
@@ -260,7 +260,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c2-repentina.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-c2-repentina.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-dano-c3",
@@ -268,7 +268,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c3.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-c3.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-dano-c3-repentina",
@@ -276,7 +276,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c3-repentina.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-c3-repentina.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-dano-c4",
@@ -284,7 +284,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c4.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-c4.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-dano-conjurador-c3",
@@ -292,7 +292,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c3.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-conjurador-c3.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-comprar-c1",
@@ -300,7 +300,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-comprar-c1.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-comprar-c1.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-comprar-c3",
@@ -308,7 +308,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-comprar-c3.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-comprar-c3.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-comprar-c2-repentina",
@@ -316,7 +316,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-comprar-c2-repentina.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-comprar-c2-repentina.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-curar-c2",
@@ -324,7 +324,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-curar-c2.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-curar-c2.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-curar-c4",
@@ -332,7 +332,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-curar-c4.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-curar-c4.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-destruir-c3",
@@ -340,7 +340,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-destruir-c3.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-destruir-c3.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-destruir-c4-repentina",
@@ -348,7 +348,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-destruir-c4-repentina.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-destruir-c4-repentina.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-mistica-c2",
@@ -356,7 +356,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-mistica-c2.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-mistica-c2.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-mistica-c4",
@@ -364,7 +364,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-mistica-c4.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-mistica-c4.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-estrutura-c1",
@@ -372,7 +372,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c1.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-estrutura-c1.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-estrutura-c3",
@@ -380,7 +380,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c3.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-estrutura-c3.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-dano-conjurador-c1",
@@ -388,7 +388,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c1.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-conjurador-c1.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-curar-c6",
@@ -396,7 +396,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-curar-c6.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-curar-c6.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-estrutura-c3-enfermaria",
@@ -404,7 +404,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c3-enfermaria.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-estrutura-c3-enfermaria.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-estrutura-c4-torre",
@@ -412,7 +412,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c4-torre.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-estrutura-c4-torre.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-estrutura-c4-fonte",
@@ -420,7 +420,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c4-fonte.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-estrutura-c4-fonte.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-recurso-c1",
@@ -428,7 +428,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-recurso-c1.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-recurso-c1.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-recurso-c3",
@@ -436,7 +436,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-recurso-c3.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-recurso-c3.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-recurso-c5",
@@ -444,7 +444,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-recurso-c5.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-recurso-c5.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-estrutura-c6-nucleo",
@@ -452,7 +452,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c6-nucleo.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-estrutura-c6-nucleo.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-estrutura-c8-reator",
@@ -460,7 +460,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-estrutura-c8-reator.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-estrutura-c8-reator.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-recurso-c7",
@@ -468,7 +468,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-recurso-c7.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-recurso-c7.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "eternyr-comprar-c1",
@@ -476,7 +476,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c1.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-comprar-c1.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "eternyr-comprar-c2",
@@ -484,7 +484,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c2.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-comprar-c2.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "eternyr-comprar-c3",
@@ -492,7 +492,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c3.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-comprar-c3.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "eternyr-comprar-c4",
@@ -500,7 +500,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c4.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-comprar-c4.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "eternyr-comprar-c2-repentina",
@@ -508,7 +508,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c2-repentina.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-comprar-c2-repentina.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "eternyr-dano-aliado-c4",
@@ -516,7 +516,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-dano-aliado-c4.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-dano-aliado-c4.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "eternyr-dano-aliado-c5",
@@ -524,7 +524,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-dano-aliado-c5.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-dano-aliado-c5.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "eternyr-aliado-c6-g8",
@@ -532,7 +532,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-aliado-c6-g8.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-aliado-c6-g8.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "eternyr-destruir-c6-g8",
@@ -540,7 +540,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-destruir-c6-g8.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-destruir-c6-g8.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "bal-varredura-c3",
@@ -548,7 +548,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/bal-varredura-c3.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/bal-varredura-c3.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "bal-varredura-c5",
@@ -556,7 +556,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/bal-varredura-c5.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/bal-varredura-c5.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "bal-remocao-grau-c3",
@@ -564,7 +564,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/bal-remocao-grau-c3.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/bal-remocao-grau-c3.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "bal-estrutura-cerco-c3",
@@ -572,7 +572,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/bal-estrutura-cerco-c3.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/bal-estrutura-cerco-c3.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "bal-devolver-c2-repentina",
@@ -580,7 +580,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/bal-devolver-c2-repentina.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/bal-devolver-c2-repentina.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "bal-anular-c3-repentina",
@@ -588,7 +588,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/bal-anular-c3-repentina.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/bal-anular-c3-repentina.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "bal-etereo-c1",
@@ -596,7 +596,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/bal-etereo-c1.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/bal-etereo-c1.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "bal-etereo-c2",
@@ -604,7 +604,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/bal-etereo-c2.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/bal-etereo-c2.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "bal-etereo-c3",
@@ -612,7 +612,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/bal-etereo-c3.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/bal-etereo-c3.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "r6-ira-c4",
@@ -620,7 +620,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/r6-ira-c4.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/r6-ira-c4.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "r6-por-do-sol-c7",
@@ -628,7 +628,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/r6-por-do-sol-c7.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/r6-por-do-sol-c7.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "r6-espiao-c4",
@@ -636,7 +636,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/r6-espiao-c4.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/r6-espiao-c4.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "r6-piromante-c4",
@@ -644,7 +644,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/r6-piromante-c4.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/r6-piromante-c4.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "r6-fera-cerco-c5",
@@ -652,7 +652,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/r6-fera-cerco-c5.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/r6-fera-cerco-c5.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "r6-presa-trovao-c5",
@@ -660,7 +660,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/r6-presa-trovao-c5.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/r6-presa-trovao-c5.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "r6-anjo-c6",
@@ -668,7 +668,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/r6-anjo-c6.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/r6-anjo-c6.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "r6-mercador-c7",
@@ -676,7 +676,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/r6-mercador-c7.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/r6-mercador-c7.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "r6-colosso-c7",
@@ -684,7 +684,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/r6-colosso-c7.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/r6-colosso-c7.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "r6-dragao-c8",
@@ -692,7 +692,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/r6-dragao-c8.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/r6-dragao-c8.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-canal-cajado",
@@ -700,7 +700,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-canal-cajado.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-canal-cajado.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-canal-lamina",
@@ -708,7 +708,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-canal-lamina.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-canal-lamina.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-canal-lanca",
@@ -716,7 +716,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-canal-lanca.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-canal-lanca.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-armadura-gibao",
@@ -724,7 +724,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-armadura-gibao.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-armadura-gibao.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-armadura-couraca",
@@ -732,7 +732,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-armadura-couraca.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-armadura-couraca.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-extra-pocao",
@@ -740,7 +740,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-pocao.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-pocao.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-extra-elixir",
@@ -748,7 +748,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-elixir.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-elixir.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-canal-harpa",
@@ -756,7 +756,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-canal-harpa.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-canal-harpa.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-canal-badalo",
@@ -764,7 +764,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-canal-badalo.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-canal-badalo.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-canal-violino",
@@ -772,7 +772,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-canal-violino.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-canal-violino.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-canal-coleira",
@@ -780,7 +780,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-canal-coleira.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-canal-coleira.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-armadura-capa",
@@ -788,7 +788,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-armadura-capa.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-armadura-capa.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-armadura-escama",
@@ -796,7 +796,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-armadura-escama.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-armadura-escama.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-armadura-manto",
@@ -804,7 +804,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-armadura-manto.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-armadura-manto.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-armadura-vyal",
@@ -812,7 +812,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-armadura-vyal.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-armadura-vyal.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-extra-sal",
@@ -820,7 +820,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-sal.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-sal.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-extra-dado",
@@ -828,7 +828,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-dado.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-dado.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-extra-lanterna",
@@ -836,7 +836,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-lanterna.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-lanterna.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-extra-relogio",
@@ -844,7 +844,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-relogio.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-relogio.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-aliado-c4-equilibrado-grau5",
@@ -852,7 +852,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-aliado-c4-equilibrado-grau5.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-aliado-c4-equilibrado-grau5.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-dano-c4-repentina",
@@ -860,7 +860,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-c4-repentina.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-c4-repentina.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-dano-conjurador-c5",
@@ -868,7 +868,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c5.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-conjurador-c5.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-dano-conjurador-c2",
@@ -876,7 +876,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c2.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-conjurador-c2.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-dano-conjurador-c4",
@@ -884,7 +884,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-dano-conjurador-c4-a745c23c.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-dano-conjurador-c4.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-curar-c1",
@@ -892,7 +892,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-curar-c1.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-curar-c1.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-curar-c3",
@@ -900,7 +900,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-curar-c3.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-curar-c3.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-curar-c8",
@@ -908,7 +908,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-curar-c8.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-curar-c8.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "eternyr-comprar-c3-repentina",
@@ -916,7 +916,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-comprar-c3-repentina.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-comprar-c3-repentina.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "eternyr-dano-aliado-c6",
@@ -924,7 +924,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-dano-aliado-c6.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-dano-aliado-c6.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "eternyr-dano-jogador-c5",
@@ -932,7 +932,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-dano-jogador-c5.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-dano-jogador-c5.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "eternyr-aliado-c8-g10",
@@ -940,7 +940,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/eternyr-aliado-c8-g10.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/eternyr-aliado-c8-g10.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "r6-varredura-c2",
@@ -948,7 +948,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/r6-varredura-c2.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/r6-varredura-c2.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "r6-furia-c3",
@@ -956,7 +956,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/r6-furia-c3.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/r6-furia-c3.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-campeao-conflituo",
@@ -964,7 +964,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-campeao-conflituo.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-conflituo.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-campeao-sublimeyn",
@@ -972,7 +972,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-campeao-sublimeyn.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-sublimeyn.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-campeao-dominum",
@@ -980,7 +980,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-campeao-dominum.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-dominum.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-campeao-persona",
@@ -988,7 +988,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-campeao-persona.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-persona.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-campeao-alvorum",
@@ -996,7 +996,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-campeao-alvorum.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-alvorum.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-campeao-morbidyum",
@@ -1004,7 +1004,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-campeao-morbidyum.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-morbidyum.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-campeao-cognitium",
@@ -1012,7 +1012,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-campeao-cognitium.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-cognitium.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-campeao-eternyr",
@@ -1020,7 +1020,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-campeao-eternyr.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-eternyr.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-campeao-primitivum",
@@ -1028,7 +1028,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-campeao-primitivum.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-primitivum.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-gato-de-navio",
@@ -1036,7 +1036,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-gato-de-navio.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-gato-de-navio.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-menina-raposa",
@@ -1044,7 +1044,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-menina-raposa.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-menina-raposa.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-ilusionista-do-labirinto",
@@ -1052,7 +1052,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-ilusionista-do-labirinto.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-ilusionista-do-labirinto.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-ceifadora-da-peste",
@@ -1060,7 +1060,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-ceifadora-da-peste.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-ceifadora-da-peste.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-contrabandista-de-porto",
@@ -1068,7 +1068,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-contrabandista-de-porto.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-contrabandista-de-porto.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-vento-mensageiro",
@@ -1076,7 +1076,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-vento-mensageiro.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-vento-mensageiro.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-guarda-costas",
@@ -1084,7 +1084,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-guarda-costas.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-guarda-costas.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-curandeira-de-ervas",
@@ -1092,7 +1092,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-curandeira-de-ervas.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-curandeira-de-ervas.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-ninho-de-estrelas",
@@ -1100,7 +1100,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-ninho-de-estrelas.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-ninho-de-estrelas.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-coroa-sem-rei",
@@ -1108,7 +1108,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-coroa-sem-rei.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-coroa-sem-rei.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-tapete-de-duas-casas",
@@ -1116,7 +1116,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-tapete-de-duas-casas.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-tapete-de-duas-casas.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-primeira-moeda",
@@ -1124,7 +1124,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-primeira-moeda.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-primeira-moeda.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-sino-dos-juramentados",
@@ -1132,7 +1132,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-sino-dos-juramentados.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-sino-dos-juramentados.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-ancora-do-mesmo-dia",
@@ -1140,7 +1140,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-ancora-do-mesmo-dia.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-ancora-do-mesmo-dia.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-cemiterio-que-respira",
@@ -1148,7 +1148,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-cemiterio-que-respira.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-cemiterio-que-respira.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-cadeado-ciumento",
@@ -1156,7 +1156,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-cadeado-ciumento.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-cadeado-ciumento.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-frasco-de-mare",
@@ -1164,7 +1164,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-frasco-de-mare.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-frasco-de-mare.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-chapeu-de-chuva",
@@ -1172,7 +1172,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-chapeu-de-chuva.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-chapeu-de-chuva.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-barco-dobravel",
@@ -1180,7 +1180,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-barco-dobravel.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-barco-dobravel.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-mapa-do-reino",
@@ -1188,7 +1188,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-mapa-do-reino.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-mapa-do-reino.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-arqueira-da-ultima-flecha",
@@ -1196,7 +1196,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-arqueira-da-ultima-flecha.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-arqueira-da-ultima-flecha.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-mare-de-sobras",
@@ -1204,7 +1204,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-mare-de-sobras.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-mare-de-sobras.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "col-descartar-grau",
@@ -1212,7 +1212,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/col-descartar-grau.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/col-descartar-grau.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-foco-espelho",
@@ -1220,7 +1220,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-foco-espelho.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-foco-espelho.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-foco-pedra",
@@ -1228,7 +1228,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-foco-pedra.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-foco-pedra.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-foco-coroa",
@@ -1236,7 +1236,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-foco-coroa.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-foco-coroa.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-transcritor-pena",
@@ -1244,7 +1244,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-transcritor-pena.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-transcritor-pena.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-transcritor-pagina",
@@ -1252,7 +1252,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-transcritor-pagina.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-transcritor-pagina.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-transcritor-chave",
@@ -1260,7 +1260,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-transcritor-chave.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-transcritor-chave.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-extra-ovo",
@@ -1268,7 +1268,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-ovo.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-ovo.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-extra-luvas",
@@ -1276,7 +1276,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-luvas.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-luvas.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-extra-trono",
@@ -1284,7 +1284,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-trono.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-trono.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-extra-pente",
@@ -1292,7 +1292,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-pente.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-pente.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "item-extra-balde",
@@ -1300,7 +1300,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/item-extra-balde.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/item-extra-balde.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-luz-de-velorio",
@@ -1308,7 +1308,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-luz-de-velorio.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-luz-de-velorio.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-carcaca-andante",
@@ -1316,7 +1316,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-carcaca-andante.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-carcaca-andante.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-coveiro",
@@ -1324,7 +1324,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-coveiro.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-coveiro.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-embalsamador",
@@ -1332,7 +1332,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-embalsamador.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-embalsamador.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-ossario",
@@ -1340,7 +1340,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-ossario.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-ossario.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-esquecido",
@@ -1348,7 +1348,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-esquecido.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-esquecido.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-moca-que-nao-sangra",
@@ -1356,7 +1356,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-moca-que-nao-sangra.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-moca-que-nao-sangra.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-rosto-sem-gente",
@@ -1364,7 +1364,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-rosto-sem-gente.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-rosto-sem-gente.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-leitura-de-sombras",
@@ -1372,7 +1372,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-leitura-de-sombras.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-leitura-de-sombras.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-sentenca-do-selo",
@@ -1380,7 +1380,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-sentenca-do-selo.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-sentenca-do-selo.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-luz-da-faroleira",
@@ -1388,7 +1388,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-luz-da-faroleira.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-luz-da-faroleira.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-chamado-da-matilha",
@@ -1396,7 +1396,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-chamado-da-matilha.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-chamado-da-matilha.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-quebra-escudos",
@@ -1404,7 +1404,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-quebra-escudos.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-quebra-escudos.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-nuvem-triste",
@@ -1412,7 +1412,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-nuvem-triste.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-nuvem-triste.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-cadeira-de-espera",
@@ -1420,7 +1420,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-cadeira-de-espera.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-cadeira-de-espera.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-ladrao-de-tumulos",
@@ -1428,7 +1428,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-ladrao-de-tumulos.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-ladrao-de-tumulos.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-mascara-do-outro",
@@ -1436,7 +1436,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-mascara-do-outro.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-mascara-do-outro.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-refutacao",
@@ -1444,7 +1444,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-refutacao.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-refutacao.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-lamento-da-carpideira",
@@ -1452,7 +1452,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-lamento-da-carpideira.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-lamento-da-carpideira.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-hora-roubada",
@@ -1460,7 +1460,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-hora-roubada.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-hora-roubada.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-selo-subito",
@@ -1468,7 +1468,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-selo-subito.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-selo-subito.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-tiro-de-aluguel",
@@ -1476,7 +1476,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-tiro-de-aluguel.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-tiro-de-aluguel.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-espelho-da-serpente",
@@ -1484,7 +1484,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-espelho-da-serpente.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-espelho-da-serpente.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-dama-da-noite",
@@ -1492,7 +1492,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-dama-da-noite.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-dama-da-noite.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-canto-sem-cantor",
@@ -1500,7 +1500,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-canto-sem-cantor.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-canto-sem-cantor.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-o-sentido",
@@ -1508,7 +1508,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-o-sentido.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-o-sentido.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-tique",
@@ -1516,7 +1516,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-tique.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-tique.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-hael",
@@ -1524,7 +1524,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-hael.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-hael.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-estandarte-sem-exercito",
@@ -1532,7 +1532,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-estandarte-sem-exercito.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-estandarte-sem-exercito.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-feira-das-mascaras",
@@ -1540,7 +1540,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-feira-das-mascaras.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-feira-das-mascaras.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-o-postulario",
@@ -1548,7 +1548,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-o-postulario.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-o-postulario.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-brejo-alto",
@@ -1556,7 +1556,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-brejo-alto.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-brejo-alto.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-patio-de-duelos",
@@ -1564,7 +1564,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-patio-de-duelos.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-patio-de-duelos.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-porto-de-vidro",
@@ -1572,7 +1572,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-porto-de-vidro.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-porto-de-vidro.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-mercado-de-feras",
@@ -1580,7 +1580,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-mercado-de-feras.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-mercado-de-feras.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-casas-de-sarn",
@@ -1588,7 +1588,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-casas-de-sarn.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-casas-de-sarn.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-estalagem-de-vau",
@@ -1596,7 +1596,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-estalagem-de-vau.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-estalagem-de-vau.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-vila-do-mesmo-dia",
@@ -1604,7 +1604,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-vila-do-mesmo-dia.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-vila-do-mesmo-dia.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "nv-floresta-que-anda",
@@ -1612,7 +1612,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/nv-floresta-que-anda.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/nv-floresta-que-anda.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-recurso--cognitium",
@@ -1620,7 +1620,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--cognitium.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--cognitium.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-recurso--conflituo",
@@ -1628,7 +1628,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--conflituo.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--conflituo.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-recurso--dominum",
@@ -1636,7 +1636,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--dominum.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--dominum.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-recurso--eternyr",
@@ -1644,7 +1644,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--eternyr.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--eternyr.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-recurso--morbidyum",
@@ -1652,7 +1652,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--morbidyum.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--morbidyum.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-recurso--persona",
@@ -1660,7 +1660,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--persona.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--persona.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-recurso--primitivum",
@@ -1668,7 +1668,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--primitivum.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--primitivum.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "base-recurso--sublimeyn",
@@ -1676,7 +1676,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/base-recurso--sublimeyn.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/base-recurso--sublimeyn.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     },
     {
       "id": "ficha-wyvern-filhote",
@@ -1684,7 +1684,7 @@
       "arquivo": "Arcanoclisma/arte/cartas-site/ficha-wyvern-filhote.png",
       "arteModo": "cena",
       "registro": "Arcanoclisma/arte/cartas-site/registros/ficha-wyvern-filhote.visual.json",
-      "estado": "gerada_aguardando_avaliacao_final"
+      "estado": "aprovada_pelo_autor"
     }
   ],
   "integracaoClaudeConfirmada": false,
@@ -1696,5 +1696,11 @@
     "Manter verso idêntico para cartas ocultas; jamais colocar identidade/raridade privada no DOM.",
     "A Mestra dos Dragões permanece bloqueada até liberação explícita do autor."
   ],
-  "galeria": "Arcanoclisma/arte/cartas-site/galeria.html"
+  "galeria": "Arcanoclisma/arte/cartas-site/galeria.html",
+  "aprovacaoAutor": {
+    "textoAutor": "aprovado, voce fez o dado e a animação que pedi?",
+    "registradaEm": "2026-10-04T11:32:52.241Z",
+    "origem": "Autor nesta conversa",
+    "escopo": "210 versões correntes do lote do site; não libera a expansão para jogo."
+  }
 }
