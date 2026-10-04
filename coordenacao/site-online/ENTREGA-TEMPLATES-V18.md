@@ -50,3 +50,11 @@ Os efeitos de ambos os campos e de ressurgimento possuem cobertura de contrato/c
 Retirada a faixa ampla de cabeçalho em `online/public/css/cartas-cabecalho-v16.css`. A cena agora ocupa 100% da frente, inclusive abaixo do nome, eliminando também o espaço que expunha o fundo azulado da carta. O acabamento compacto do nome e os indicadores continuam nas posições atuais.
 
 Conferido na carta aberta Arquivista Sem Rosto no aplicativo local: a arte começa no topo da frente e preenche sua altura. Prévia em `evidencias-v18/carta-sem-faixa-azul.jpg`. Claude deve publicar o CSS atualizado junto desta revisão.
+
+## Revisão do autor — painel bege e nome centralizado
+
+O painel de regras em `online/public/css/cartas-leitura-v18.css` usa transparência suave (78%–82% de opacidade no fundo), mantendo os caracteres opacos. A camada de papel das oito molduras utilizadas foi reduzida para 10%–14%, evitando que o fundo antigo esconda a transparência do painel adaptável. As origens em `arena/templates/` e as cópias em `online/public/kit/templates/` estão sincronizadas para preservar a alteração no próximo build.
+
+O nome foi centralizado na horizontal e na vertical sobre a faixa de título existente, usando o centro geométrico do desenho SVG. A redução automática de fonte e os nomes em duas linhas continuam aplicáveis.
+
+Prévia conferida na carta aberta Arquivista Sem Rosto: regras completas, caracteres opacos e cenário visível suavemente através do bege. Evidência em `evidencias-v18/carta-painel-transparente-nome-central.jpg`. Incluir CSS e molduras na publicação.
