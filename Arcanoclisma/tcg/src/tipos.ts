@@ -33,7 +33,13 @@ export type Efeito =
   /** Rodada 7. Neste turno você pode jogar do seu cemitério uma carta cujo efeito anule outra, pagando o custo dela; ao resolver ela é banida. */
   | { tipo: 'permitirAnularDoCemiterio' }
   /** Olhe as N cartas do topo do seu baralho, ponha `pegar` delas na mão e o resto no fundo do baralho. */
-  | { tipo: 'olharTopo'; quantidade: number; pegar: number };
+  | { tipo: 'olharTopo'; quantidade: number; pegar: number }
+  /** Itens (03/10, noite). Foco Arcano: neste turno, o próximo efeito de dano ou cura de uma Temporária sua tem +N. */
+  | { tipo: 'potenciaMagia'; valor: number }
+  /** Itens (03/10, noite). Põe no seu campo uma ficha (carta do catálogo que não vai em baralho, ex.: Espírito Invocado). */
+  | { tipo: 'invocar'; carta: string; /** Nome para o texto da carta. */ nome?: string }
+  /** Itens (03/10, noite). Seu Conjurador ganha +N de Ataque neste turno. */
+  | { tipo: 'ataqueConjuradorTurno'; valor: number };
 
 /** Habilidade ativada de uma permanente: paga custo em Arcano e (opcionalmente) suspende. */
 export interface Ativacao {
@@ -42,6 +48,14 @@ export interface Ativacao {
   custo: number;
   suspende: boolean;
   efeitos: Efeito[];
+  /** Itens: usar suspende o Conjurador (que precisa estar de pé). */
+  suspendeConjurador?: boolean;
+  /** Custo extra: descartar N cartas da mão (escolhidas no comando, em descartarCusto). */
+  descartar?: number;
+  /** Custo extra: o seu Conjurador toma N de dano. */
+  danoNoConjurador?: number;
+  /** Itens: o item vai para o cemitério depois de usado (padrão: só o Extra). */
+  consome?: boolean;
 }
 
 export interface Regras {
@@ -104,6 +118,14 @@ export interface CartaDef {
   protegido?: number;
   /** Item: espaço que ocupa no Conjurador. O Ataque de Canal e Extra é o valor da arma. */
   categoriaItem?: CategoriaItem;
+  /** Canal: arma (dá Ataque ao Conjurador), foco arcano (melhora magias) ou transcritor (mexe no baralho e na mão). */
+  tipoCanal?: 'arma' | 'foco' | 'transcritor';
+  /** Item exclusivo de uma competência (Comprometimento do Conjurador), ex.: invocações para Invocador. */
+  competencia?: ConjuradorDef['comprometimento'];
+  /** Item exclusivo destes Conjuradores (ids). */
+  exclusivoDe?: string[];
+  /** Ficha: carta criada por efeito (invocar); não entra em baralho. */
+  ficha?: boolean;
   /** Armadura: dano de combate que ela evita quando o Conjurador bloqueia. */
   defesa?: number;
   /** Armadura: quanto dano ela ainda pode evitar antes de quebrar (vida de desgaste). */
@@ -187,6 +209,10 @@ export interface HabUsos {
   danoAliado: boolean;
   /** A Armadura já protegeu um ataque neste turno (nenhuma protege mais de um ataque por turno). */
   armadura: boolean;
+  /** Foco Arcano: bônus para o próximo efeito de dano ou cura de uma Temporária neste turno. */
+  potencia: number;
+  /** Ataque extra do Conjurador neste turno. */
+  ataqueExtra: number;
 }
 
 export interface ZonasJogador {
@@ -264,7 +290,7 @@ export type Comando =
   | { tipo: 'atacar'; jogador: Jogador; atacante: string; alvo: string; enviarArcano?: string[] }
   | { tipo: 'bloquear'; jogador: Jogador; bloqueador: string | null; /** Conjurador bloqueando: usar a Armadura? Sem o campo, usa. */ usarArmadura?: boolean }
   | { tipo: 'descartar'; jogador: Jogador; cartas: string[] }
-  | { tipo: 'ativar'; jogador: Jogador; carta: string; alvo?: string; enviarArcano?: string[] }
+  | { tipo: 'ativar'; jogador: Jogador; carta: string; alvo?: string; enviarArcano?: string[]; /** Cartas da mão descartadas como custo (Ativacao.descartar). */ descartarCusto?: string[] }
   | { tipo: 'pagarAnulacao'; jogador: Jogador; pagar: boolean; enviarArcano?: string[] }
   | { tipo: 'escolherDoTopo'; jogador: Jogador; cartas: string[] }
   | { tipo: 'passar'; jogador: Jogador };

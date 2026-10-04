@@ -1,5 +1,5 @@
 {
-  "versao": 1,
+  "versao": 3,
   "autor": "Claude",
   "data": "2026-10-03",
   "divisaoRecebida": true,
@@ -22,5 +22,30 @@
     "Arcanoclisma/cartas/pedidos/lote-site-v1.claude.json versão 2: campo variacao por carta (hora do dia com mais dia que noite, pose, perspectiva, enquadramento, olhar, acabamento e relação com o evento); eventos repetidos descritos de formas diferentes; Conjuradores sem hora fixa. Gerador: online/pedidos-visuais/gerar-lote-cartas.ts.",
     "Arcanoclisma/online/pedidos-visuais/site.claude.json versão 2: horaDoDia em cada cenário (maioria de dia)."
   ],
-  "bloqueios": []
+  "bloqueios": [],
+  "atualizacao1930": {
+    "mesa": "Câmera afastada: o tabuleiro inteiro fica dentro da área azul do piso arena-jogador-1-ampla-larga-v2 (12%–89% × 8,5%–79% da imagem, linha do meio a 44%); o conjunto .mesa-mundo é reduzido para caber (mín. 0,5). Conjuradores cabeça com cabeça na linha do meio, nomes para fora (pedido do autor). Tudo em online/public/css/mesa-ajuste.css e ajustarMesa (js/mesa.js).",
+    "movimentos": "Ataque e bloqueio genéricos do kit (cartas.css: .card-motion + .attack-generic/.block-generic) ligados ao combate do motor em online/public/js/mesa-ganchos.js; durante o movimento sai a classe .suspensa da mesa (o keyframe já termina em rotate 90deg). Conferido: a animação é aplicada (card-suspended-attack, 880 ms).",
+    "maoArrastavel": "Arrastar da mão para o campo abre o pagamento; sem poder pagar, a carta volta. Soltar na zona de Grau põe no Grau. A carta arrastada inclina com o movimento (interação do Claude); o efeito de entrada em campo fica para o GPT.",
+    "telaCheia": "Botão na lateral da mesa (Fullscreen API + mesa ocupando a janela).",
+    "pedidoNovo": "Arcanoclisma/efeitos/pedidos/mesa-efeitos-v1.claude.json: entrar em campo, resolução de cada magia (88 cartas) e colisão de cada carta (62: 9 Conjuradores + 53 Aliados), com o contrato de mesa-efeitos-codex.js. A colisão por carta é ordem nova do autor (03/10) e substitui a regra de movimento só genérico para Aliados.",
+    "artesFinais": "online/construir.ts usa Arcanoclisma/arte/cartas-site/<id>.png só quando fila.json marca o item como aprovado (estado começando com \"aprovad\" ou okGpt: true). Hoje: 46 geradas, todas aguardando avaliação final → nenhuma no site. Arte trocada pelo autor no Editor vale mais que a do GPT."
+  },
+  "pedidoAoCodex": [
+    "Para liberar uma arte final no site, marcar o item em arte/cartas-site/fila.json com estado \"aprovada\" ou okGpt: true."
+  ],
+  "pedidosNovos": [
+    "Arcanoclisma/cartas/pedidos/lote-site-v2.claude.json: 58 cartas novas (lote 2, 9 minas, itens v2) + 1 ficha; inclui valoresAtualizadosDoLote1 (100 cartas do lote 1 mudaram de Valor).",
+    "Arcanoclisma/online/pedidos-visuais/site.claude.json versão 3: templatesPorValor (moldura e esfera por Valor, cinza sem Valor, Item — tipo, sem raridade).",
+    "Arcanoclisma/efeitos/pedidos/mesa-efeitos-v1.claude.json regenerado: 132 resoluções e 70 colisões; efeito sempre ligado à arte da carta."
+  ],
+  "atualizacao0410": {
+    "data": "2026-10-04",
+    "artes": "Integradas as 210 artes aprovadas pelo mapa cartas/entregas/lote-site-v1.visual.json (campo arquivo, inclusive os 9 Conjuradores com hash e a Luneta a745c23c). Build: WebP de 1024 px em public/arte/finais/<arquivo>.webp, arteModo=cena. A Mestra dos Dragões e Ciantia não entram.",
+    "templatesValorV12": "identidade-valor-v12.js / templates-valor-v12.css carregados por carta.js (sem mudanças do Claude).",
+    "ritmoV13": "Ligado: ver Arcanoclisma/efeitos/entregas/abertura-partida.integracao.claude.json (ritmoV13).",
+    "d20EAbertura": "Integrados e conferidos no navegador; ver abertura-partida.integracao.claude.json.",
+    "fichaWyvern": "Valores da ficha Wyvern Filhote continuam [] (ficha sem Valor, como as outras fichas); não deduzidos da cor.",
+    "layout": "css/mesa-ajuste.css: a pilha da lateral estreita quebra o texto para baixo da carta."
+  }
 }

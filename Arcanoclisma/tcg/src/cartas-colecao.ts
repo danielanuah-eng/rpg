@@ -3,6 +3,7 @@
 // Nenhum baralho pronto usa estas cartas, então as simulações de balanceamento não mudam. Os números foram conferidos com
 // a régua de pontos (src/balanco.ts, teste em test/colecao.test.ts) e ficam abertos à revisão do autor.
 import type { CartaDef, CategoriaItem, Efeito } from './tipos.ts';
+import { cartasNovasV2 } from './cartas-novas-v2.ts';
 
 export type CartaColecao = CartaDef & { arte: string };
 
@@ -17,10 +18,15 @@ function temporaria(id: string, arte: string, nome: string, valores: string[], c
 function item(id: string, arte: string, nome: string, categoriaItem: CategoriaItem, valores: string[], campos: Partial<CartaDef>): CartaColecao {
   return {
     ...base, id, arte, nome, tipo: 'item', categoriaItem, subtipos: [categoriaItem === 'armadura' ? 'Proteção' : 'Equipamento'], valores,
-    custo: 0, grau: 0, arcanoGerado: 0, ...campos,
+    custo: 0, grau: 0, arcanoGerado: 0, ...(categoriaItem === 'canal' ? { tipoCanal: 'arma' as const, subtipos: ['Arma'] } : {}), ...campos,
   };
 }
 const consumivel = (efeitos: Efeito[]) => ({ ativacao: { custo: 0, suspende: false, efeitos } });
+/** Itens v2 (pedido do autor, 03/10, noite): todo uso suspende o Conjurador e tem um custo (Arcano, descartar, tomar dano). */
+const usar = (custo: number, efeitos: Efeito[], extra: Partial<NonNullable<CartaDef['ativacao']>> = {}) => ({ ativacao: { custo, suspende: false, suspendeConjurador: true, efeitos, ...extra } });
+const foco = { tipoCanal: 'foco' as const, subtipos: ['Foco Arcano'] };
+const transcritor = { tipoCanal: 'transcritor' as const, subtipos: ['Transcritor'] };
+const competencia = (c: NonNullable<CartaDef['competencia']>) => ({ competencia: c, subtipos: [c] });
 
 /** Campeões de Valor: exigem uma carta do próprio Valor no Grau (mecânica custoValores). Um por Valor. */
 const campeoes: [string, string, string][] = [
@@ -85,4 +91,23 @@ export const cartasColecao: CartaColecao[] = [
   item('item-extra-dado', 'dado-honesto', 'Dado Honesto', 'extra', [], consumivel([{ tipo: 'dano', valor: 2, alvo: 'escolhido' }])),
   item('item-extra-lanterna', 'lanterna-do-veu', 'Lanterna do Véu', 'extra', ['sublimeyn', 'persona', 'eternyr'], consumivel([{ tipo: 'devolver', alvo: 'escolhidoAliado' }])),
   item('item-extra-relogio', 'relogio-de-bolso-atrasado', 'Relógio de Bolso Atrasado', 'extra', ['eternyr', 'cognitium', 'alvorum'], consumivel([{ tipo: 'comprar', valor: 1 }, { tipo: 'arcano', valor: 1 }])),
+
+  // Itens v2 (03/10, noite). Canal Foco Arcano: melhora a próxima magia (início, meio e fim de jogo). Sem Ataque: o Conjurador não ataca com ele.
+  item('item-foco-espelho', 'espelho-da-cidade-dos-rostos', 'Espelho da Cidade dos Rostos', 'canal', [], { ...foco, ...usar(1, [{ tipo: 'potenciaMagia', valor: 1 }]) }),
+  item('item-foco-pedra', 'pedra-parada', 'Pedra Parada', 'canal', [], { ...foco, ...usar(0, [{ tipo: 'potenciaMagia', valor: 2 }], { descartar: 1 }) }),
+  item('item-foco-coroa', 'a-coroa-de-vyal', 'A Coroa de Vyal', 'canal', [], { ...foco, ...usar(2, [{ tipo: 'potenciaMagia', valor: 4 }], { danoNoConjurador: 2 }) }),
+  // Canal Transcritor: mexe no baralho e na mão.
+  item('item-transcritor-pena', 'pena-de-idrael', 'Pena de Idrael', 'canal', [], { ...transcritor, ...usar(1, [{ tipo: 'olharTopo', quantidade: 2, pegar: 1 }]) }),
+  item('item-transcritor-pagina', 'a-pagina-arrancada', 'A Página Arrancada', 'canal', [], { ...transcritor, ...usar(0, [{ tipo: 'comprar', valor: 1 }], { danoNoConjurador: 1 }) }),
+  item('item-transcritor-chave', 'chave-da-voragem', 'Chave da Voragem', 'canal', [], { ...transcritor, ...usar(2, [{ tipo: 'comprar', valor: 3 }], { descartar: 1 }) }),
+  // Extras por competência (Comprometimento do Conjurador), de uso único.
+  item('item-extra-ovo', 'ovo-de-wyvern', 'Ovo de Wyvern', 'extra', [], { ...competencia('Invocador'), ...usar(2, [{ tipo: 'invocar', carta: 'ficha-wyvern-filhote', nome: 'um Wyvern Filhote 2/2' }], { consome: true }) }),
+  item('item-extra-luvas', 'cordao-de-rhu', 'Luvas de Força', 'extra', [], { ...competencia('Brigão'), ativacao: { custo: 0, suspende: false, danoNoConjurador: 2, consome: true, efeitos: [{ tipo: 'ataqueConjuradorTurno', valor: 2 }] } }),
+  item('item-extra-trono', 'trono-dobravel', 'Trono Dobrável', 'extra', [], { ...competencia('Parrudão da quebrada'), ...usar(1, [{ tipo: 'curar', valor: 4, alvo: 'conjuradorProprio' }], { consome: true }) }),
+  item('item-extra-pente', 'pente-das-mil-caras', 'Pente das Mil Caras', 'extra', [], { ...competencia('Habilidoso'), ...usar(0, [{ tipo: 'olharTopo', quantidade: 3, pegar: 2 }], { descartar: 1, consome: true }) }),
+  item('item-extra-balde', 'balde-que-sobe', 'Balde que Sobe', 'extra', [], { ...competencia('Preparado'), ...usar(0, [{ tipo: 'arcano', valor: 2 }, { tipo: 'comprar', valor: 1 }], { danoNoConjurador: 1, consome: true }) }),
+  // Ficha (criada pelo Ovo de Wyvern; não entra em baralho)
+  aliado('ficha-wyvern-filhote', 'dragonete', 'Wyvern Filhote', [], 0, 2, 2, { ficha: true, subtipos: ['Ficha', 'Dragão'] }),
+  // Lote 2 (03/10, noite): mortos-vivos, Temporárias, Repentinas, Místicas, Estruturas e lugares
+  ...cartasNovasV2,
 ];

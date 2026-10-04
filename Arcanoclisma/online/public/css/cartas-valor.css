@@ -1,0 +1,13 @@
+/* Identidade por Valor (pedido do autor, 03/10/2026; Claude). Carregado por último.
+   Toda carta pertence a um Valor: a moldura toma a cor do Valor (faixas iguais quando tem mais de um) e a bolinha
+   do custo vira a esfera do(s) Valor(es), como no Conjurador. Sem Valor (só itens genéricos) = cinza.
+   Provisório até o GPT entregar os templates por Valor (pedido em pedidos-visuais/site.claude.json). */
+.tcg-card .frame-tinta {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  -webkit-mask: var(--moldura) center / 100% 100% no-repeat; mask: var(--moldura) center / 100% 100% no-repeat;
+  mix-blend-mode: color; opacity: .95;
+}
+.tcg-card .frame-tinta.sem-valor { mix-blend-mode: saturation; opacity: 1; }
+.tcg-card[data-type="conjurador"] .frame-tinta { opacity: .55; }
+.tcg-card .esfera-custo { box-shadow: inset 0 -3px 6px #0006, inset 0 2px 3px #fff4, 0 1px 3px #000a; text-shadow: 0 1px 2px #000, 0 0 4px #000a; }
+.tcg-card .esfera-custo .esfera-custo-aro { position: absolute; inset: -9%; width: 118%; height: 118%; pointer-events: none; }

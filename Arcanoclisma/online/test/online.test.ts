@@ -20,6 +20,7 @@ test('coleção nova: ids únicos, artes aprovadas e números dentro da régua',
     ids.add(c.id);
     assert.ok(artes.has(c.arte), `${c.id}: arte ${c.arte} fora do catálogo aprovado`);
     if (c.tipo === 'item') { assert.ok(['canal', 'armadura', 'extra'].includes(c.categoriaItem!)); continue; }
+    if (c.ficha) continue; // fichas são criadas por efeito (não se pagam)
     const a = avaliar(c);
     // Sino dos Juramentados passa da régua de propósito: o oponente pode pagar para anulá-lo (a régua não precifica isso)
     if (a.folga !== null && !Number.isNaN(a.folga) && c.id !== 'col-sino-dos-juramentados') assert.ok(a.folga >= -1.5, `${c.id} acima do orçamento (${a.folga})`);
@@ -29,7 +30,8 @@ test('coleção nova: ids únicos, artes aprovadas e números dentro da régua',
 test('identidade: toda carta tem arte, menos os 7 itens originais (pedido ao GPT)', () => {
   const sem = Object.entries(D.visual as Record<string, { arte: string | null }>).filter(([, v]) => !v.arte).map(([id]) => id).sort();
   assert.deepEqual(sem, ['item-armadura-couraca', 'item-armadura-gibao', 'item-canal-cajado', 'item-canal-lamina', 'item-canal-lanca', 'item-extra-elixir', 'item-extra-pocao']);
-  const usadas = Object.values(D.visual as Record<string, { arte: string | null }>).map((v) => v.arte).filter(Boolean);
+  // as 9 Minas Fundas (uma por Valor) dividem a arte provisória até o GPT fazer uma para cada
+  const usadas = Object.entries(D.visual as Record<string, { arte: string | null }>).filter(([id]) => !id.startsWith('base-recurso--')).map(([, v]) => v.arte).filter(Boolean);
   assert.equal(new Set(usadas).size, usadas.length, 'arte usada em duas cartas');
   for (const a of Object.values(D.conjuradoresArte as Record<string, string>)) assert.ok(!usadas.includes(a), `arte de Conjurador ${a} reaproveitada`);
 });
@@ -80,5 +82,17 @@ test('visão de um jogador: esconde mão do oponente, baralhos, Grau virado e a 
     // os apelidos não podem ser ids reais (a ordem dos ids revelaria a carta)
     for (const id of v.jogadores[op].mao) assert.ok(id.startsWith('x'));
     assert.equal(v.jogadores[op].mao.length, e.jogadores[op].mao.length);
+  }
+});
+
+test('Valores do site: nenhuma carta neutra (só itens), quase todas com 1 Valor, 9 minas e baralhos prontos só com os Valores do Conjurador', () => {
+  const cartas = Object.values(D.catalogo.cartas as Record<string, { id: string; tipo: string; valores: string[]; ficha?: boolean }>).filter((c) => !c.ficha);
+  assert.deepEqual(cartas.filter((c) => c.tipo !== 'item' && !c.valores.length).map((c) => c.id), []);
+  const multi = cartas.filter((c) => c.tipo !== 'item' && c.valores.length > 1).length;
+  assert.ok(multi <= Math.ceil(cartas.length / 8), `cartas com mais de um Valor demais: ${multi}`);
+  assert.equal(Object.keys(D.minas).length, 9);
+  for (const b of D.baralhos as { id: string; conjurador: string; lista: [string, number][] }[]) {
+    const V = D.catalogo.conjuradores[b.conjurador].valores as string[];
+    for (const [id] of b.lista) { const c = D.catalogo.cartas[id]; if (c.tipo !== 'item') assert.ok(c.valores.some((v: string) => V.includes(v)), `${b.id}: ${id}`); }
   }
 });

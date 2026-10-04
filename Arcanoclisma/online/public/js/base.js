@@ -114,9 +114,10 @@ export const local = {
 /** Itens que um Conjurador pode levar no side deck (sem Valor, ou de um dos Valores dele). */
 export function itensDoConjurador(conjId) {
   const c = conj(conjId);
-  return Object.values(DADOS.catalogo.cartas).filter((x) => x.tipo === 'item' && (!x.valores?.length || x.valores.some((v) => c.valores.includes(v))));
+  return Object.values(DADOS.catalogo.cartas).filter((x) => x.tipo === 'item' && (!x.valores?.length || x.valores.some((v) => c.valores.includes(v)))
+    && (!x.competencia || x.competencia === c.comprometimento) && (!x.exclusivoDe?.length || x.exclusivoDe.includes(conjId)));
 }
-/** A carta pode entrar no baralho deste Conjurador (sem Valor, ou com algum Valor dele)? */
+/** A carta pode entrar no baralho deste Conjurador (algum Valor dele; toda carta tem Valor, menos itens). */
 export const cartaServe = (c, conjId) => c.tipo !== 'item' && c.tipo !== 'oculta' && (!c.valores.length || c.valores.some((v) => conj(conjId).valores.includes(v)));
 export const listaParaCartas = (lista) => lista.flatMap(([id, n]) => Array.from({ length: n }, () => id));
 export const prontos = () => DADOS.baralhos;
@@ -132,6 +133,7 @@ const CAMPOS_TEXTO_AUTOMATICO = ['efeitos', 'aoEntrar', 'aoDanoConjurador', 'ati
 /** Aplica uma versão das edições por cima dos dados gerados, mudando DADOS no lugar (as telas leem DADOS na hora). */
 export function usarEdicoes(v) {
   const dados = { ...edicoesVazias(), ...(v?.dados ?? {}) };
+  dados.raridades = { cartas: {}, conjuradores: {}, ...(dados.raridades ?? {}) };
   const cat = aplicarCatalogo(BASE.catalogo, dados);
   for (const [id, p] of Object.entries(dados.cartas)) {
     // mudou a mecânica e o autor não escreveu o texto: texto gerado a partir da mecânica

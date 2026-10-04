@@ -11,9 +11,12 @@
                                                         
                                                                                        
                                                                                   
+                                                                                                  
+                                                                                      
  
+export const RARIDADES = ['comum', 'incomum', 'rara', 'lendaria'];
 
-export const edicoesVazias = ()              => ({ cartas: {}, conjuradores: {}, artes: { cartas: {}, conjuradores: {} } });
+export const edicoesVazias = ()              => ({ cartas: {}, conjuradores: {}, artes: { cartas: {}, conjuradores: {} }, raridades: { cartas: {}, conjuradores: {} } });
 
 /** Campos que o editor pode mudar (o resto é ignorado). */
 export const CAMPOS_CARTA = ['nome', 'texto', 'tipo', 'subtipos', 'valores', 'custo', 'grau', 'custoValores', 'descartaGrau', 'velocidade', 'arcanoGerado', 'palavrasChave', 'ataque', 'vida', 'grauExtra', 'ativacao', 'pagarParaAnular', 'efeitos', 'aoEntrar', 'aoDanoConjurador', 'protegido', 'categoriaItem', 'defesa', 'vidaDesgaste'];
@@ -39,6 +42,8 @@ export function sanitizarEdicoes(bruto         , cat          , artesValidas    
   const okArte = (a         ) => typeof a === 'string' && /^[\w-]{1,80}$/.test(a) && (!artesValidas || artesValidas.has(a));
   for (const [id, a] of Object.entries(b.artes?.cartas ?? {})) if (cat.cartas[id] && okArte(a)) r.artes.cartas[id] = a          ;
   for (const [id, a] of Object.entries(b.artes?.conjuradores ?? {})) if (cat.conjuradores[id] && okArte(a)) r.artes.conjuradores[id] = a          ;
+  for (const [id, x] of Object.entries(b.raridades?.cartas ?? {})) if (cat.cartas[id] && RARIDADES.includes(x          )) r.raridades.cartas[id] = x          ;
+  for (const [id, x] of Object.entries(b.raridades?.conjuradores ?? {})) if (cat.conjuradores[id] && RARIDADES.includes(x          )) r.raridades.conjuradores[id] = x          ;
   return r;
 }
 
@@ -63,4 +68,5 @@ export function aplicarCatalogo(cat          , ed                               
 
 /** Quantas mudanças há (para mostrar ao autor). */
 export const contarEdicoes = (ed             ) =>
-  Object.keys(ed.cartas).length + Object.keys(ed.conjuradores).length + Object.keys(ed.artes.cartas).length + Object.keys(ed.artes.conjuradores).length;
+  new Set([...Object.keys(ed.cartas), ...Object.keys(ed.artes?.cartas ?? {}), ...Object.keys(ed.raridades?.cartas ?? {})]).size
+  + new Set([...Object.keys(ed.conjuradores), ...Object.keys(ed.artes?.conjuradores ?? {}), ...Object.keys(ed.raridades?.conjuradores ?? {})]).size;

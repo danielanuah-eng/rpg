@@ -34,7 +34,13 @@
                                                                                                                                                   
                                          
                                                                                                            
-                                                             
+                                                            
+                                                                                                                       
+                                            
+                                                                                                                             
+                                                                                        
+                                                                             
+                                                     
 
 /** Habilidade ativada de uma permanente: paga custo em Arcano e (opcionalmente) suspende. */
                            
@@ -42,6 +48,14 @@
                       
                 
                     
+                    
+                                                                     
+                               
+                                                                                           
+                     
+                                                      
+                            
+                                                                                 
                     
  
 
@@ -105,6 +119,14 @@
                      
                                                                                            
                                 
+                                                                                                                       
+                                              
+                                                                                                           
+                                                 
+                                                  
+                         
+                                                                        
+                  
                                                                               
                   
                                                                                          
@@ -188,6 +210,10 @@
                       
                                                                                                     
                     
+                                                                                                
+                   
+                                                
+                      
  
 
                                
@@ -265,7 +291,7 @@
                                                                                                  
                                                                                                                                                               
                                                              
-                                                                                               
+                                                                                                                                                                                            
                                                                                         
                                                                   
                                          

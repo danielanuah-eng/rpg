@@ -25,6 +25,23 @@
         "127.0.0.1"
       ],
       "port": 8787
+    },
+    {
+      "name": "arcanoclisma-online-2",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "Arcanoclisma/online/node_modules/wrangler/bin/wrangler.js",
+        "dev",
+        "-c",
+        "Arcanoclisma/online/wrangler.jsonc",
+        "--port",
+        "8788",
+        "--persist-to",
+        "Arcanoclisma/online/.wrangler/state",
+        "--ip",
+        "127.0.0.1"
+      ],
+      "port": 8788
     }
   ]
 }

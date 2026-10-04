@@ -118,3 +118,47 @@ Servidor local: a configuração `arcanoclisma-online` (porta 8787) pode estar r
 2. Polir o texto que o autor escreve nas cartas (Editor do site ou envios) para ficar mais estético, sem mudar a regra; mostrar antes/depois.
 3. Todo efeito tem de estar automatizado: texto de carta sem mecânica correspondente no motor não pode existir; efeito novo vira código + teste.
 Primeiro passo sugerido: puxar `GET /api/edicoes` do site publicado e revisar texto e automação de cada carta editada.
+
+## Plano das 19:30 (03/10, combinado com o autor)
+O GPT/Codex está criando imagens novas para cartas que já existem. Quando o limite reiniciar (19:30), o autor chama o Claude para ajustar tudo e atualizar o site:
+1. Ler as entregas novas do Codex (`Arcanoclisma/cartas/entregas/`, `coordenacao/site-online/`, `Arcanoclisma/arte/`) e as regras de atualização acima.
+2. Atualizar `online/dados/identidade.json` (carta → arte) e o catálogo de artes; o build exporta todas as artes aprovadas (`node construir.ts`); conferir as artes no site e no editor.
+3. Publicar: `node construir.ts` e `node node_modules/wrangler/bin/wrangler.js deploy` em `Arcanoclisma/online` (login já feito); commit e push só com permissão do autor.
+Não há automação agendada: o autor precisa iniciar a conversa às 19:30.
+
+## Pedidos do autor para as 19:30 (03/10) — fazer nesta ordem (o agente Fimdomundo continua a partir daqui)
+Divisão: o GPT/Codex cria TODAS as animações, movimentos e assets; o Claude só conecta (código, gatilhos, integração). Os assets de movimentação já foram criados e testados pelo GPT (`Arcanoclisma/arena/`, `mesa-movimentos-codex.js`, `coordenacao/site-online/INTERFACE-MESA.md`). **Imagem só entra no site com o OK do GPT** (entrega do Codex marcando aprovação; sem OK, não usar a imagem).
+1. **Perspectiva da mesa**: olhar de um pouco mais afastado e por trás; hoje os Aliados e cartas do campo ficam FORA do tabuleiro. Eles devem ficar na parte azul do tabuleiro, abaixo do Conjurador (alinhar `.campo` ao piso `arena-piso`/`layout.json`; câmeras `jogador1`/`jogador2`).
+2. **Mão arrastável** (`mesa.js`): segurar a carta da mão com o mouse e movê-la (também toque); soltar no campo = jogar; ao soltar abre a escolha de pagar os custos (janela `pagar` existente, alvo se precisar); se não puder pagar ou cancelar, a carta volta para a mão (animação de volta). Cartas da mão "maleáveis": inclinação/leque/perspectiva ao mover.
+3. **Tela cheia**: botão para escolher tela cheia (Fullscreen API) na mesa.
+4. **Efeitos ao jogar a carta**: perspectiva de quando ela sai da mão e entra no campo; arrastar para o campo (item 2).
+5. **Efeito de resolução por magia**: a cada magia/efeito, uma animação na direção do alvo, ou acontecendo, ou entrando em campo, com uma imagem de efeito particular por carta. As imagens/animações vêm do GPT (registrar o pedido em `Arcanoclisma/online/pedidos-visuais/site.claude.json` com evento, alvo, duração e formato; o Claude só liga o gatilho do motor à animação). Sem asset aprovado, deixar o gatilho pronto sem imagem.
+6. Depois: reconstruir (`node construir.ts` em `Arcanoclisma/online`), testar (`npm test` em online e tcg, `node test/online-local.mjs`) e publicar (`node node_modules/wrangler/bin/wrangler.js deploy`). Sem commit e sem push (o autor decide).
+Regras fixas: seguir as orientações novas do GPT, polir textos, todo efeito automatizado (ver acima). Passagem: marcar aqui o que ficou feito.
+
+## Feito na atualização das 19:30 (03/10)
+1. Mesa: câmera afastada, tabuleiro dentro da área azul do piso (`AZUL` em `ajustarMesa`, `.mesa-mundo` com zoom, mín. 0,5); Conjuradores cabeça com cabeça na linha do meio. FEITO.
+2. Mão arrastável: arrastar até o campo abre o pagamento; sem pagar, volta; soltar no Grau põe no Grau; inclinação ao mover. FEITO e testado.
+3. Tela cheia: botão na lateral (Fullscreen API + mesa ocupando a janela). FEITO (no painel do app só maximiza; em navegador normal entra em tela cheia).
+4–5. Movimentos e efeitos: ataque/bloqueio genéricos do GPT ligados (`js/mesa-ganchos.js`). Entrar em campo, resolução por magia e colisão por carta: ganchos prontos, esperando o GPT entregar `js/mesa-efeitos-codex.js` + `kit/efeitos/` (pedido `Arcanoclisma/efeitos/pedidos/mesa-efeitos-v1.claude.json`, gerador `online/pedidos-visuais/gerar-pedido-efeitos.ts`). Depois da entrega: `node construir.ts` (liga `DADOS.efeitosCodex`) e publicar.
+6. Artes finais do GPT (`arte/cartas-site/`): o build usa só as aprovadas na `fila.json` (estado "aprovada" ou okGpt true). Hoje 46 geradas, nenhuma aprovada → nenhuma no site.
+- Expansão A Mestra dos Dragões: bloqueada para o Claude até liberação do autor.
+- O banco local mudou de id junto com o de produção (wrangler.jsonc); tabelas locais recriadas.
+
+## Feito depois (03/10, noite): Valores, raridade, itens v2, cartas novas
+- **Raridade**: sem raridade automática; o autor define no Editor (campo Raridade; `edicoes.raridades`).
+- **Template por Valor** (provisório, `online/public/css/cartas-valor.css` + `js/carta.js`): moldura tingida pela cor do Valor, bolinha do custo = esfera do(s) Valor(es), cinza sem Valor; "Item — tipo". Pedido dos templates finais ao GPT em `online/pedidos-visuais/site.claude.json` (templatesPorValor).
+- **Sem carta neutra** (`online/valores.ts`, só no site): 1 Valor quase sempre (16 com 2, 3 com 3), 9 Minas Fundas (uma por Valor), baralhos prontos só com os Valores do Conjurador (163 trocas, mesmo tipo e custo próximo). Construtor completa com as minas do Conjurador. Decisão 17 do livro.
+- **Itens v2** (motor + `cartas-colecao.ts`): Canal Arma / Foco Arcano / Transcritor, custos (Arcano, descartar, dano no Conjurador) e suspender o Conjurador; Extras por competência; ficha Wyvern Filhote; efeitos novos `potenciaMagia`, `invocar`, `ataqueConjuradorTurno`. Testes `tcg/test/itens-v2.test.ts`. Decisão 18.
+- **Cartas novas lote 2** (`tcg/src/cartas-novas-v2.ts`, 39 cartas): mortos-vivos, Temporárias, Repentinas, Místicas, Estruturas e casas, dentro da régua. Pedidos ao GPT: `cartas/pedidos/lote-site-v2.claude.json` (arte + efeito ligado à arte; Valores atualizados do lote 1) e `efeitos/pedidos/mesa-efeitos-v1.claude.json` (132 resoluções, 70 colisões).
+- **Palavras-chave**: aba no site (`#/palavras-chave`) e na ajuda da mesa.
+- Testes: tcg 81, online 7, partida online local 0 erros.
+
+## Feito em 04/10 (manhã)
+- **Artes do GPT no site**: o build (`online/construir.ts`, `artesFinaisAprovadas`) lê o mapa corrente `cartas/entregas/lote-site-v1.visual.json` (campo `arquivo`, com hash): 210 artes aprovadas pelo autor, incluindo os 9 Conjuradores com cenário novo. WebP 1024 px em `public/arte/finais/<arquivo>.webp` (o nome muda com a arte: sem cache velho).
+- **D20 + entrada da arena** (entrega `kit/abertura-v14`): `mesa.js` `abertura()` rola dois D20 com os dados que o motor já sorteou e mostra quem escolhe; a arena entra aos poucos. O bot espera 6 s antes de escolher quem começa. Conferido no navegador.
+- **Animações mais lentas** (pedido do autor + ritmo v13 do GPT): ataque/bloqueio 1320 ms, compra 780 ms, voltar à mão 540, arrastar 680; bot 450/750/1500 ms por jogada; passe automático 480 / 1400 (combate) / 2300 (magia do oponente).
+- **Yes/No no diagnóstico**: o autor (admin) marca Yes/No em cada comentário e ideia (`POST /api/opinioes|ideias/<id>/claude {ler}`), com filtro. **O Claude lê só os Yes**: `GET /api/diagnostico?formato=md` (https://arcanoclisma.arcanoclisma-online.workers.dev/api/diagnostico?formato=md). Coluna `claude` nova: `migracoes/0002-claude-yes-no.sql` (já rodada no local).
+- Pilha na lateral estreita não vira mais coluna de uma letra.
+- Integração confirmada ao Codex: `efeitos/entregas/abertura-partida.integracao.claude.json`, `coordenacao/site-online/resposta.claude.json` (atualizacao0410), `lote-site-v1.visual.json` (integracaoClaudeConfirmada).
+- O autor autorizou o push desta atualização (04/10).

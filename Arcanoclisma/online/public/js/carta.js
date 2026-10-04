@@ -45,7 +45,7 @@ export function modeloCarta(defId) {
     categoriaItem: d.categoriaItem, defesa: d.defesa, vidaDesgaste: d.vidaDesgaste, velocidade: d.velocidade,
     // arte final do GPT (cena inteira, aprovada por ele) quando existe; senão, a arte do RPG recortada sobre um cenário
     ...(DADOS.artesFinais?.[defId] && !(EDICOES_ARTE.cartas?.[defId])
-      ? { arte: `/arte/finais/${defId}.webp`, arteModo: 'cena' }
+      ? { arte: `/arte/finais/${DADOS.artesFinais[defId]}.webp`, arteModo: 'cena' }
       : { arte: v.arte ? `/arte/${v.arte}.webp` : `${K}raster/ornamento-arcano.webp`, arteModo: 'recorte', ...cenaDe(defId, d.valores, d.tipo === 'item' ? 'baralhos' : 'saguao') }),
     cosmetico: { raridade: EDICOES_RARIDADE.cartas?.[defId] ?? null },
   };
@@ -55,7 +55,7 @@ export function modeloConjurador(conjId) {
   return {
     id: conjId, nome: c.nome, tipo: 'conjurador', valores: c.valores.map((x) => VALOR[x] ?? x), comprometimento: c.comprometimento,
     texto: c.habilidade || textoPoder(c.poder), vida: c.vida, ...(DADOS.artesFinais?.['conjurador-' + conjId] && !(EDICOES_ARTE.conjuradores?.[conjId])
-      ? { arte: `/arte/finais/conjurador-${conjId}.webp`, arteModo: 'cena' }
+      ? { arte: `/arte/finais/${DADOS.artesFinais['conjurador-' + conjId]}.webp`, arteModo: 'cena' }
       : { arte: arteConj(conjId), arteModo: 'recorte', ...cenaDe(conjId, c.valores) }), cosmetico: { raridade: EDICOES_RARIDADE.conjuradores?.[conjId] ?? null },
   };
 }

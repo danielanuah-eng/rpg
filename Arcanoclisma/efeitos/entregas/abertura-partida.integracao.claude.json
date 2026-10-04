@@ -1,0 +1,26 @@
+{
+  "versao": 1,
+  "data": "2026-10-04",
+  "entrega": "Arcanoclisma/efeitos/entregas/abertura-partida.visual.json",
+  "estado": "integrado_e_conferido_no_navegador",
+  "d20": {
+    "carregamento": "online/public/index.html: kit/abertura-v14/abertura.css, d20-modelo.js e abertura.js (defer)",
+    "gatilho": "online/public/js/mesa.js, abertura(): primeiro render da mesa no início da partida (pendência escolherInicio ou turno 1 sem jogadas)",
+    "resultado": "e.dados[EU] e e.dados[OP], rolados pelo motor (tcg/src/motor.ts criarJogo); dois D20Transplanar lado a lado, duracao 4200 ms; o dado não decide nada",
+    "depois": "mostra 'A × B — você/o oponente escolhe quem começa' por 1,6 s e some em 700 ms; clique acelera (cancelar({concluir:true})); destruir() ao fechar a mesa",
+    "bot": "online/public/js/partida-local.js espera 6 s antes de escolher quem começa, para o dado parar primeiro"
+  },
+  "entradaArena": {
+    "gatilho": "mesmo primeiro render; partidaId = fonte.partidaId (gerado por partida)",
+    "grupos": { "piso": ".arena-piso", "zonas": [".mesa-conteudo (os dois campos ficam dentro dele e são redesenhados a cada estado)"], "conjuradores": "não passados (estão dentro de .mesa-conteudo, redesenhado)", "baralhosMao": [".mao-faixa", ".mao-op-faixa"], "controles": [".mesa-direita"] },
+    "tempos": "RITMO_VISUAL.entradaArena / intervaloEntradaArena",
+    "limpeza": "limparEntradaArena(raiz) só em fechar()"
+  },
+  "ritmoV13": {
+    "mesa-ganchos.js": "DURACAO_MOVIMENTO = RITMO_VISUAL.ataqueBloqueio (1320); CSS .mesa .card-motion.attack-generic/.block-generic 1320 ms em css/mesa-ajuste.css",
+    "mesa.js": "voar padrão = voltarParaMao (540); jogar arrastando = arrasteParaCampo (680); saída opaca = desaparecer (400)",
+    "mesa-movimentos-codex.js": "reposicionar = reposicionarMao (360); campo = suspender (540); compra = comprarParaMao (780), intervalo entre compras 170 ms",
+    "ritmoDoJogo": "pedido do autor 04/10 (animações automáticas mais lentas): bot 450/750/1500 ms por jogada; passe automático 480 ms, 1400 ms em combate, 2300 ms com magia do oponente na pilha. Regras e prioridade não mudaram."
+  },
+  "pendente": "nenhum"
+}

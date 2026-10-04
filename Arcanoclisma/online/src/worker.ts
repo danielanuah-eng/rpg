@@ -91,7 +91,31 @@ const ESTADOS_OPINIAO = ['novo', 'aprovado', 'revisar', 'recusado', 'feito'];
 const CATEGORIAS_IDEIA = ['expansao', 'personagem', 'carta', 'item', 'conjurador', 'mecanica', 'outro'];
 const ESTADOS_IDEIA = ['nova', 'aprovada', 'estudando', 'recusada', 'feita'];
 
+/** Diagnóstico: só as opiniões e ideias que o autor marcou "Yes" (claude = 1). É o que o Claude lê. */
+async function diagnostico(env: Env, formato: string | null): Promise<Response> {
+  const ops = (await env.DB.prepare('SELECT o.id, o.tipo, o.nota, o.texto, o.contexto, o.estado, o.resposta, o.criado, u.nome AS autor FROM opinioes o JOIN usuarios u ON u.id = o.usuario WHERE o.pai IS NULL AND o.claude = 1 ORDER BY o.criado').all()).results as Record<string, unknown>[];
+  const ids = ops.map((x) => x.id as string);
+  const resps = ids.length ? (await env.DB.prepare(`SELECT o.pai, o.texto, u.nome AS autor FROM opinioes o JOIN usuarios u ON u.id = o.usuario WHERE o.pai IN (${ids.map(() => '?').join(',')}) ORDER BY o.criado`).bind(...ids).all()).results as Record<string, unknown>[] : [];
+  const ideias = (await env.DB.prepare('SELECT i.id, i.categoria, i.titulo, i.texto, i.estado, i.resposta, i.votos, i.criado, u.nome AS autor FROM ideias i JOIN usuarios u ON u.id = i.usuario WHERE i.claude = 1 ORDER BY i.votos DESC, i.criado').all()).results as Record<string, unknown>[];
+  const opinioes = ops.map((o) => ({ ...o, contexto: o.contexto ? JSON.parse(o.contexto as string) : null, respostas: resps.filter((r) => r.pai === o.id) }));
+  if (formato !== 'md') return json({ opinioes, ideias });
+  const data = (t: unknown) => new Date(Number(t)).toISOString().slice(0, 10);
+  const md = ['# Diagnóstico — marcados "Yes" pelo autor', '', `## Opiniões (${opinioes.length})`, ''];
+  for (const o of opinioes) {
+    md.push(`### ${o.id} · ${o.tipo}${o.nota ? ` · nota ${o.nota}` : ''} · ${o.estado} · ${o.autor} · ${data(o.criado)}`, '', String(o.texto), '');
+    const c = o.contexto as Record<string, unknown> | null;
+    if (c) md.push(`Partida: ${c.modo ?? ''} turno ${c.turno} (${c.etapa}) ${c.eu} × ${c.oponente}; últimos acontecimentos: ${((c.registro as string[]) ?? []).slice(-12).join(' | ')}`, '');
+    if (o.resposta) md.push(`Resposta do autor: ${o.resposta}`, '');
+    for (const r of o.respostas) md.push(`- ${r.autor}: ${r.texto}`);
+    if (o.respostas.length) md.push('');
+  }
+  md.push(`## Ideias (${ideias.length})`, '');
+  for (const i of ideias) md.push(`### ${i.id} · ${i.categoria} · ${i.titulo} · ${i.votos} votos · ${i.estado} · ${i.autor}`, '', String(i.texto), ...(i.resposta ? ['', `Resposta do autor: ${i.resposta}`] : []), '');
+  return new Response(md.join('\n'), { headers: { 'content-type': 'text/markdown; charset=utf-8', 'cache-control': 'no-store' } });
+}
+
 async function rotasComunidade(req: Request, env: Env, u: Usuario | null, caminho: string): Promise<Response | null> {
+  if (caminho === '/api/diagnostico' && req.method === 'GET') return diagnostico(env, new URL(req.url).searchParams.get('formato'));
   if (caminho === '/api/opinioes' && req.method === 'GET') {
     const url = new URL(req.url);
     const estado = url.searchParams.get('estado');
@@ -99,6 +123,8 @@ async function rotasComunidade(req: Request, env: Env, u: Usuario | null, caminh
     const filtros: string[] = ['o.pai IS NULL'];
     const args: unknown[] = [];
     if (estado && ESTADOS_OPINIAO.includes(estado)) { filtros.push('o.estado = ?'); args.push(estado); }
+    const claude = url.searchParams.get('claude');
+    if (claude === 'sim') filtros.push('o.claude = 1'); else if (claude === 'nao') filtros.push('o.claude = 0'); else if (claude === 'pendente') filtros.push('o.claude IS NULL');
     if (tipo && TIPOS_OPINIAO.includes(tipo)) { filtros.push('o.tipo = ?'); args.push(tipo); }
     const r = await env.DB.prepare(`SELECT o.*, u.nome AS autor FROM opinioes o JOIN usuarios u ON u.id = o.usuario WHERE ${filtros.join(' AND ')} ORDER BY o.criado DESC LIMIT 300`).bind(...args).all();
     const ids = r.results.map((x: Record<string, unknown>) => x.id as string);
@@ -147,6 +173,14 @@ async function rotasComunidade(req: Request, env: Env, u: Usuario | null, caminh
     if (!ESTADOS_OPINIAO.includes(b.estado)) return erro('Estado inválido.');
     await env.DB.prepare('UPDATE opinioes SET estado = ?, resposta = ? WHERE id = ?').bind(b.estado, texto(b.resposta, 2000) || null, m[1]).run();
     return json({ ok: true });
+  }
+  m = caminho.match(/^\/api\/(opinioes|ideias)\/([\w-]+)\/claude$/);
+  if (m) {
+    if (!u.admin) return erro('Só o autor decide.', 403);
+    const b = await corpo<{ ler: boolean | null }>(req);
+    const v = b.ler === true ? 1 : b.ler === false ? 0 : null;
+    await env.DB.prepare(`UPDATE ${m[1]} SET claude = ? WHERE id = ?`).bind(v, m[2]).run();
+    return json({ ok: true, claude: v });
   }
   if (caminho === '/api/ideias') {
     const b = await corpo<{ categoria: string; titulo: string; texto: string }>(req);

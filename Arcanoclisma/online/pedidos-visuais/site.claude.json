@@ -3,7 +3,7 @@
   "autor": "Claude",
   "estado": "solicitado",
   "necessidadeAtual": true,
-  "versao": 2,
+  "versao": 3,
   "atualizadoEm": "2026-10-03",
   "objetivoAtual": "Arte do site jogável do Arcanoclisma (primeira versão online no Cloudflare): logotipo, fundos das telas, cenários de cada Valor, peças de interface que o jogador clica (botões, ícones, esfera de Arcano, painel da direita) e a mesa. A arte das cartas está em outro pedido: Arcanoclisma/cartas/pedidos/lote-site-v1.claude.json.",
   "pedidoDoAutor": [
@@ -206,5 +206,39 @@
     "Ataque e bloqueio: usar o movimento genérico compartilhado já entregue (arena/cartas.css), sem efeito específico por Aliado."
   ],
   "integracaoPrevista": "Os arquivos entram em Arcanoclisma/online/public (arte-site/ e kit/). O Claude troca os provisórios (cenários atuais em dados/identidade.json, CSS do painel e da esfera) pelos entregues e registra a integração.",
-  "mudancasVersao2": "Pedido do autor (03/10): HORA DO DIA em cada cenário, com mais dia que noite (\"todas as cartas parecem estar à noite\"). O campo horaDoDia define a luz da imagem inteira."
+  "mudancasVersao2": "Pedido do autor (03/10): HORA DO DIA em cada cenário, com mais dia que noite (\"todas as cartas parecem estar à noite\"). O campo horaDoDia define a luz da imagem inteira.",
+  "templatesPorValor": {
+    "pedidoDoAutor": [
+      "Toda carta pertence a um Valor; não existe carta neutra. O Valor é a cor da bolinha em que está o número do custo.",
+      "O template (moldura) da carta é da cor do Valor e tem a esfera com o Valor ou os Valores da carta, como na carta de Conjurador.",
+      "Cartas de 2 ou 3 Valores: a esfera e a moldura divididas em partes iguais (como a esfera do Conjurador).",
+      "Carta sem Valor (só itens genéricos) é cinza.",
+      "Equipamentos mostram \"Item — <tipo>\": Canal (Arma, Foco Arcano ou Transcritor), Armadura, Extra (genérico ou da competência).",
+      "Sem raridade por enquanto: o autor define a raridade no Editor; sem raridade, nada de brilho/foil nem ícone de raridade."
+    ],
+    "provisorioNoSite": "online/public/css/cartas-valor.css + js/carta.js: a moldura atual (templates/<tipo>-v4.svg) tingida pela cor do Valor (mix-blend-mode: color) e a bolinha do custo pintada com a(s) cor(es) e o aro esfera-conjurador-v8.svg. Substituir pelos templates do GPT quando aprovados.",
+    "coresDosValores": {
+      "conflituo": "#9a4633",
+      "sublimeyn": "#748e9d",
+      "dominum": "#62416a",
+      "persona": "#b76673",
+      "alvorum": "#927638",
+      "morbidyum": "#6b866d",
+      "cognitium": "#505b94",
+      "eternyr": "#304565",
+      "primitivum": "#65743b",
+      "semValor": "#8d9399"
+    },
+    "entrega": "Arcanoclisma/arena/templates/<tipo>-<valor>-v5.svg (ou um template por tipo com a cor em variável CSS) + esfera de custo por Valor; manifesto em online/entregas-visuais/site.codex.json com okGpt.",
+    "tipos": [
+      "aliado",
+      "temporaria",
+      "mistica",
+      "estrutura",
+      "canal",
+      "armadura",
+      "extra",
+      "conjurador"
+    ]
+  }
 }

@@ -142,12 +142,12 @@ test('olhar o topo: escolhe 1 entre 3, o resto vai para o fundo do baralho', () 
   assert.equal(e.pendencia, null);
 });
 
-test('Extra é consumível: usa uma vez, aplica o efeito e vai para o cemitério; só o Extra se usa', () => {
+test('Extra é consumível: usa uma vez, aplica o efeito e vai para o cemitério; item sem uso (arma) não se ativa', () => {
   const e = criar(['item-canal-cajado', 'item-armadura-gibao', 'item-extra-elixir']);
   const z = e.jogadores[0];
   const extra = z.itens.find((id) => e.instancias[id].defId === 'item-extra-elixir')!;
   const canal = z.itens.find((id) => e.instancias[id].defId === 'item-canal-cajado')!;
-  assert.throws(() => executar(e, { tipo: 'ativar', jogador: 0, carta: canal }), /Extra/);
+  assert.throws(() => executar(e, { tipo: 'ativar', jogador: 0, carta: canal }), /não tem uso/);
   executar(e, { tipo: 'ativar', jogador: 0, carta: extra });
   passarAte(e, () => e.pilha.length === 0);
   assert.equal(z.arcano, 2);

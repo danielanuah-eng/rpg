@@ -23,6 +23,9 @@ export function descEfeito(ef) {
     case 'reanimar': return `ponha no seu campo um Aliado de qualquer cemitério, pagando o custo dele + ${ef.custoExtra}`;
     case 'olharTopo': return `olhe as ${ef.quantidade} cartas do topo do seu baralho; ponha ${ef.pegar} na mão e as outras no fundo do baralho`;
     case 'permitirAnularDoCemiterio': return 'neste turno você pode jogar do cemitério uma carta que anula outra (ela é banida ao resolver)';
+    case 'potenciaMagia': return `o próximo dano ou cura de uma Temporária sua neste turno tem +${ef.valor}`;
+    case 'invocar': return `invoque ${ef.nome ?? 'uma criatura'}`;
+    case 'ataqueConjuradorTurno': return `seu Conjurador ganha +${ef.valor} de Ataque neste turno`;
     default: return ef.tipo;
   }
 }
@@ -34,7 +37,10 @@ export function textoCarta(d) {
   const p = [];
   if (d.tipo === 'item') {
     const esp = { canal: 'Canal', armadura: 'Armadura', extra: 'Extra' }[d.categoriaItem] ?? 'Item';
-    p.push(d.categoriaItem === 'armadura' ? `${esp}. Defesa ${d.defesa ?? 0}, desgaste ${d.vidaDesgaste ?? 0}.` : d.categoriaItem === 'canal' ? `${esp}. Arma: Ataque ${d.ataque ?? 0}.` : `${esp}. Consumível.`);
+    const canal = { arma: 'Arma', foco: 'Foco Arcano', transcritor: 'Transcritor' }[d.tipoCanal ?? (d.ataque ? 'arma' : '')] ?? 'Arma';
+    p.push(d.categoriaItem === 'armadura' ? `${esp}. Defesa ${d.defesa ?? 0}, desgaste ${d.vidaDesgaste ?? 0}.`
+      : d.categoriaItem === 'canal' ? (canal === 'Arma' ? `${esp}. Arma: Ataque ${d.ataque ?? 0}.` : `${esp}. ${canal}.`)
+      : `${esp}${d.competencia ? ` de ${d.competencia}` : ''}. Uso único.`);
   }
   if (d.palavrasChave?.length) p.push(d.palavrasChave.join(', ') + '.');
   if (d.protegido) p.push(`Protegido ${d.protegido}.`);
@@ -43,7 +49,12 @@ export function textoCarta(d) {
   if (d.efeitos?.length) p.push(frase(d.efeitos));
   if (d.aoEntrar?.length) p.push('Ao entrar: ' + fraseMin(d.aoEntrar));
   if (d.aoDanoConjurador?.length) p.push('Ao causar dano de combate ao Conjurador inimigo: ' + fraseMin(d.aoDanoConjurador));
-  if (d.ativacao) p.push(`${d.categoriaItem === 'extra' ? 'Use (consome o item)' : d.ativacao.suspende ? 'Suspenda' : 'Ative'}${d.ativacao.custo ? ` e pague ${d.ativacao.custo}` : ''}: ${fraseMin(d.ativacao.efeitos ?? [])}`);
+  if (d.ativacao) {
+    const a = d.ativacao;
+    const custos = [a.suspendeConjurador ? 'suspenda o Conjurador' : a.suspende ? 'suspenda' : '', a.custo ? `pague ${a.custo}` : '', a.descartar ? `descarte ${a.descartar} carta${a.descartar > 1 ? 's' : ''}` : '', a.danoNoConjurador ? `seu Conjurador toma ${a.danoNoConjurador} de dano` : ''].filter(Boolean);
+    const lista = custos.length > 1 ? custos.slice(0, -1).join(', ') + ' e ' + custos.at(-1) : custos[0] ?? (d.categoriaItem === 'extra' ? 'use' : 'ative');
+    p.push(`${lista.charAt(0).toUpperCase() + lista.slice(1)}: ${fraseMin(a.efeitos ?? [])}`);
+  }
   if (d.pagarParaAnular !== undefined) p.push(`O oponente pode pagar ${d.pagarParaAnular} para anulá-la.`);
   return p.join(' ');
 }

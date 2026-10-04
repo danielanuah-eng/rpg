@@ -7,7 +7,7 @@ import type { CartaDef, CategoriaItem } from './tipos.ts';
 
 function item(id: string, nome: string, categoriaItem: CategoriaItem, campos: Pick<CartaDef, 'ataque' | 'defesa' | 'vidaDesgaste'>, texto: string): CartaDef {
   return {
-    id, nome, tipo: 'item', categoriaItem, subtipos: [categoriaItem === 'armadura' ? 'Proteção' : 'Equipamento'], valores: [],
+    id, nome, tipo: 'item', categoriaItem, ...(categoriaItem === 'canal' ? { tipoCanal: 'arma' as const } : {}), subtipos: [categoriaItem === 'armadura' ? 'Proteção' : 'Equipamento'], valores: [],
     custo: 0, grau: 0, velocidade: 'findante', arcanoGerado: 0, ...campos, cenario: '', texto,
   };
 }

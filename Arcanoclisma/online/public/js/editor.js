@@ -24,7 +24,7 @@ export async function telaEditor(tela, partes, ctx) {
   if (!u.admin) { tela.innerHTML = '<div class="painel vazio">Só o autor edita as cartas. Entre com o e-mail do autor (Google ou "Sou o autor").</div>'; return; }
   // rascunho: o que foi salvo neste navegador, ou a versão em vigor
   let rascunho = local.ler(CHAVE_RASCUNHO, null) ?? structuredClone(EDICOES.dados);
-  rascunho = { ...edicoesVazias(), ...rascunho, artes: { cartas: {}, conjuradores: {}, ...(rascunho.artes ?? {}) } };
+  rascunho = { ...edicoesVazias(), ...rascunho, artes: { cartas: {}, conjuradores: {}, ...(rascunho.artes ?? {}) }, raridades: { cartas: {}, conjuradores: {}, ...(rascunho.raridades ?? {}) } };
   let sel = partes[0] ? decodeURIComponent(partes[0]) : null; // "c:<id>" (carta) ou "j:<id>" (Conjurador)
   let filtro = { busca: '', tipo: 'conjurador' };
 
@@ -32,7 +32,7 @@ export async function telaEditor(tela, partes, ctx) {
     usarEdicoes({ id: EDICOES.id, dados: rascunho, rascunho: difereDoSalvo() });
     local.gravar(CHAVE_RASCUNHO, rascunho);
   };
-  const mudancas = () => new Set([...Object.keys(rascunho.cartas).map((x) => 'c:' + x), ...Object.keys(rascunho.artes.cartas).map((x) => 'c:' + x), ...Object.keys(rascunho.conjuradores).map((x) => 'j:' + x), ...Object.keys(rascunho.artes.conjuradores).map((x) => 'j:' + x)]);
+  const mudancas = () => new Set([...Object.keys(rascunho.cartas).map((x) => 'c:' + x), ...Object.keys(rascunho.artes.cartas).map((x) => 'c:' + x), ...Object.keys(rascunho.raridades.cartas).map((x) => 'c:' + x), ...Object.keys(rascunho.conjuradores).map((x) => 'j:' + x), ...Object.keys(rascunho.artes.conjuradores).map((x) => 'j:' + x), ...Object.keys(rascunho.raridades.conjuradores).map((x) => 'j:' + x)]);
   const difereDoSalvo = () => !igual(rascunho, EDICOES.salvo ?? EDICOES.dados);
   EDICOES.salvo ??= structuredClone(EDICOES.dados);
   aplicarRascunho();
@@ -89,6 +89,7 @@ export async function telaEditor(tela, partes, ctx) {
       <label class="campo">${conjur ? 'Habilidade (texto)' : 'Texto de regras'}<textarea data-f="${conjur ? 'habilidade' : 'texto'}">${esc(conjur ? c.habilidade : c.texto)}</textarea></label>
       ${conjur ? '' : '<div class="linha-botoes"><button class="botao peq" data-texto-auto>Gerar o texto a partir da mecânica</button></div>'}
       <div class="campo"><span>Arte</span><div class="editor-arte"><img src="/arte/${esc(arteAtual)}.webp" alt=""><div><b>${esc(arteAtual ?? 'sem arte')}</b><div class="linha-botoes"><button class="botao peq" data-trocar-arte>Trocar arte</button></div></div></div></div>
+      <label class="campo">Raridade (só aparência; você decide)<select data-raridade>${[['', 'Sem raridade'], ['comum', 'Comum'], ['incomum', 'Incomum'], ['rara', 'Rara'], ['lendaria', 'Lendária']].map(([v, r]) => `<option value="${v}" ${(rascunho.raridades[conjur ? 'conjuradores' : 'cartas'][id] ?? '') === v ? 'selected' : ''}>${r}</option>`).join('')}</select></label>
       <div class="editor-nums">${(conjur ? NUM_CONJ : NUM_CARTA).map(([k, r]) => numCampo(k, r, c[k])).join('')}</div>
       <div class="campo"><span>Valores</span><div class="editor-valores">${VALORES.map((v) => `<label class="opcao-linha"><input type="checkbox" data-valor="${v}" ${c.valores.includes(v) ? 'checked' : ''}> ${esc(VALOR[v])}</label>`).join('')}</div></div>
       ${conjur
@@ -132,6 +133,9 @@ export async function telaEditor(tela, partes, ctx) {
       if (!(k in novo) || igual(v, base[k])) continue;
       if (v === undefined) { if (base[k] !== undefined) parcial[k] = null; } else parcial[k] = v;
     }
+    const rar = $('[data-raridade]', form)?.value;
+    const grupoRar = rascunho.raridades[conjur ? 'conjuradores' : 'cartas'];
+    if (rar) grupoRar[id] = rar; else delete grupoRar[id];
     // texto: se só mudou a mecânica, o texto continua automático (gerado na hora); se o autor escreveu, vale o dele
     const grupo = conjur ? rascunho.conjuradores : rascunho.cartas;
     if (Object.keys(parcial).length) grupo[id] = parcial; else delete grupo[id];
@@ -148,6 +152,7 @@ export async function telaEditor(tela, partes, ctx) {
     if (ev.target.closest('[data-desfazer]')) {
       delete (t === 'j' ? rascunho.conjuradores : rascunho.cartas)[id];
       delete (t === 'j' ? rascunho.artes.conjuradores : rascunho.artes.cartas)[id];
+      delete rascunho.raridades[t === 'j' ? 'conjuradores' : 'cartas'][id];
       aplicarRascunho(); desenharTudo(); return;
     }
     if (ev.target.closest('[data-texto-auto]')) {
@@ -227,7 +232,7 @@ export async function telaEditor(tela, partes, ctx) {
     if (v) {
       try {
         const r = await api('/edicoes?id=' + v.dataset.versao);
-        rascunho = { ...edicoesVazias(), ...r.dados };
+        rascunho = { ...edicoesVazias(), ...r.dados, raridades: { cartas: {}, conjuradores: {}, ...(r.dados.raridades ?? {}) } };
         aplicarRascunho(); desenharTudo(); avisar(`Versão #${r.id} aberta como rascunho. Salve para ela voltar a valer.`, 'info', 5000);
       } catch (err) { avisar(err.message, 'erro'); }
     }
@@ -237,7 +242,7 @@ export async function telaEditor(tela, partes, ctx) {
     if (!f) return;
     try {
       const d = JSON.parse(await f.text());
-      rascunho = { ...edicoesVazias(), cartas: d.cartas ?? {}, conjuradores: d.conjuradores ?? {}, artes: { cartas: {}, conjuradores: {}, ...(d.artes ?? {}) } };
+      rascunho = { ...edicoesVazias(), cartas: d.cartas ?? {}, conjuradores: d.conjuradores ?? {}, artes: { cartas: {}, conjuradores: {}, ...(d.artes ?? {}) }, raridades: { cartas: {}, conjuradores: {}, ...(d.raridades ?? {}) } };
       aplicarRascunho(); desenharTudo(); avisar('Edições carregadas no rascunho.', 'ok');
     } catch (err) { avisar('Arquivo inválido: ' + err.message, 'erro'); }
     ev.target.value = '';

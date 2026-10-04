@@ -288,5 +288,28 @@ const lote = {
   respostas: [],
   instrucoesAcabamento: 'Raridade só estética. Lendárias (Grau 7+) e os Conjuradores levam o bloco v9. Nenhuma carta é arte alternativa neste lote.',
 };
-writeFileSync(raiz + 'cartas/pedidos/lote-site-v1.claude.json', JSON.stringify(lote, null, 1) + '\n');
-console.log(`lote-site-v1: ${lote.conjuradores.length} Conjuradores + ${lote.cartas.length} cartas.`);
+// Lote 1 em produção pelo GPT: não regravar sem querer. Com --v2, gera só as cartas que não estão no lote 1 (cartas novas,
+// minas, itens novos) e a lista dos Valores atualizados das cartas do lote 1 (sem carta neutra; quase sempre 1 Valor).
+if (process.argv.includes('--v2')) {
+  type ComFicha = Carta & { ficha?: boolean };
+  const v1 = JSON.parse(readFileSync(raiz + 'cartas/pedidos/lote-site-v1.claude.json', 'utf8'));
+  const jaPedidas = new Set(v1.cartas.map((c: { id: string }) => c.id));
+  const novas = lote.cartas.filter((c) => !jaPedidas.has(c.id) && !(D.catalogo.cartas[c.id] as ComFicha).ficha);
+  const fichas = lote.cartas.filter((c) => (D.catalogo.cartas[c.id] as ComFicha).ficha);
+  const valoresAtualizados = Object.fromEntries(v1.cartas
+    .filter((c: { id: string; valores: string[] }) => D.catalogo.cartas[c.id] && D.catalogo.cartas[c.id].valores.join() !== c.valores.join())
+    .map((c: { id: string }) => [c.id, D.catalogo.cartas[c.id].valores]));
+  const v2: Record<string, unknown> = {
+    ...lote, tarefaId: 'lote-site-v2', versao: 1,
+    objetivoAtual: `Arte final (cena com cenário) e EFEITO DA MAGIA de cada carta nova do site: ${novas.length} cartas (mortos-vivos, Temporárias, Repentinas, Místicas, Estruturas e lugares/casas, as 9 Minas Fundas, uma por Valor, e os itens novos: Canal Foco Arcano e Transcritor, Extras por competência) e ${fichas.length} ficha(s).`,
+    pedidoDoAutor: [lote.pedidoDoAutor, 'Sempre fazer o efeito da magia de cada carta nova, adaptado e relacionado à arte dela (contrato em efeitos/pedidos/mesa-efeitos-v1.claude.json).', 'Toda carta pertence a um Valor (a cor da bolinha do custo); não existe carta neutra, só itens genéricos (cinza).'],
+    conjuradores: [], cartas: [...novas, ...fichas],
+    valoresAtualizadosDoLote1: { nota: 'As cartas do lote 1 mudaram de Valor (quase todas para 1 só). Adaptar o ambiente/cenário ao Valor novo nas que ainda não foram feitas; nas já feitas, o autor decide se refaz.', mapa: valoresAtualizados },
+  };
+  delete v2.mudancasVersao2;
+  writeFileSync(raiz + 'cartas/pedidos/lote-site-v2.claude.json', JSON.stringify(v2, null, 1) + '\n');
+  console.log(`lote-site-v2: ${novas.length} cartas novas e ${fichas.length} ficha(s); ${Object.keys(valoresAtualizados).length} cartas do lote 1 com Valor atualizado.`);
+} else {
+  writeFileSync(raiz + 'cartas/pedidos/lote-site-v1.claude.json', JSON.stringify(lote, null, 1) + '\n');
+  console.log(`lote-site-v1: ${lote.conjuradores.length} Conjuradores + ${lote.cartas.length} cartas.`);
+}

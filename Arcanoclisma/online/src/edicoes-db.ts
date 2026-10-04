@@ -10,7 +10,8 @@ const CACHE_MS = 10_000;
 
 function ler(r: { id: number; dados: string; criado: number; nota: string | null } | null): VersaoEdicoes | null {
   if (!r) return null;
-  return { id: r.id, dados: { ...edicoesVazias(), ...JSON.parse(r.dados) }, criado: r.criado, nota: r.nota ?? '' };
+  const d = JSON.parse(r.dados);
+  return { id: r.id, dados: { ...edicoesVazias(), ...d, raridades: { cartas: {}, conjuradores: {}, ...(d.raridades ?? {}) } }, criado: r.criado, nota: r.nota ?? '' };
 }
 
 /** A versão em vigor (a mais nova). Sem tabela ou sem edições: nenhuma edição. */

@@ -1687,7 +1687,7 @@
       "estado": "aprovada_pelo_autor"
     }
   ],
-  "integracaoClaudeConfirmada": false,
+  "integracaoClaudeConfirmada": true,
   "pushAutorizado": true,
   "instrucoesClaude": [
     "Substituir a arte provisória pelo PNG correspondente ao mesmo ID; arteModo=cena; sem fundo separado nem recorte colado.",
@@ -1702,5 +1702,10 @@
     "registradaEm": "2026-10-04T11:32:52.241Z",
     "origem": "Autor nesta conversa",
     "escopo": "210 versões correntes do lote do site; não libera a expansão para jogo."
+  },
+  "integracaoClaude": {
+    "data": "2026-10-04",
+    "arquivo": "online/construir.ts artesFinaisAprovadas",
+    "resultado": "210 artes no site"
   }
 }

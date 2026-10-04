@@ -11,6 +11,9 @@ import { defCarta, custoEfetivo, custoProtecao, origemDaCarta, grauEfetivo, rece
 import { $, $$, esc, DADOS, VALOR, TIPO, textoCarta, janela, local, avisar, conj as conjDefDe } from './base.js';
 import { desenharCarta, modeloCarta, modeloConjurador } from './carta.js';
 import { criarMovimentosMesa } from './mesa-movimentos-codex.js';
+import { RITMO_VISUAL } from './ritmo-visual-v13.js';
+import { criarGanchosMesa } from './mesa-ganchos.js';
+import { palavrasChaveHTML } from './palavras-chave.js';
 
 const ETAPAS = [['inicio', 'Início'], ['principal', 'Principal'], ['cataclisma', 'Cataclisma'], ['final', 'Final']];
 const CFG_PADRAO = { autoPassar: true, esperarPilha: false, pararFinalOponente: true, mostrarDicas: true };
@@ -29,8 +32,10 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     <div class="mesa-esq">
       <div class="mao-op-faixa"></div>
       <div class="mesa-palco">
-        <img class="arena-piso" src="/kit/raster/arena-jogador-1-ampla-larga-v2.webp" alt="">
-        <div class="mesa-conteudo"></div>
+        <div class="mesa-mundo">
+          <img class="arena-piso" src="/kit/raster/arena-jogador-1-ampla-larga-v2.webp" alt="">
+          <div class="mesa-conteudo"></div>
+        </div>
       </div>
       <div class="mao-faixa"></div>
     </div>
@@ -41,16 +46,32 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   const conteudo = $('.mesa-conteudo', raiz);
   const palco = $('.mesa-palco', raiz);
   const piso = $('.arena-piso', raiz);
-  /** O piso acompanha o tabuleiro, que rola dentro do palco quando não cabe (as cartas não diminuem). */
+  const mundo = $('.mesa-mundo', raiz);
+  /** Área azul (o chão) do piso arena-jogador-1-ampla-larga-v2, em fração da imagem: o tabuleiro inteiro fica dentro dela,
+   *  com a linha do meio da mesa sobre a linha do meio desenhada (44% da altura da imagem). */
+  const AZUL = { x0: 0.12, x1: 0.89, y0: 0.085, y1: 0.79 };
+  /** Menor redução da câmera; abaixo disso o palco rola. */
+  const ZOOM_MIN = 0.5;
   let centrou = false;
+  /** Câmera afastada (pedido do autor, 03/10): o piso envolve o tabuleiro, que fica dentro da área azul, e o conjunto
+   *  é reduzido para caber no palco. No celular, sem redução: rola. */
   function ajustarMesa() {
     if (!palco.isConnected) return;
-    if (!matchMedia('(min-width: 761px)').matches) { piso.style.cssText = ''; return; }
-    Object.assign(piso.style, { left: conteudo.offsetLeft + 'px', top: conteudo.offsetTop + 'px', width: conteudo.offsetWidth + 'px', height: conteudo.offsetHeight + 'px' });
+    mundo.style.zoom = '';
+    if (!matchMedia('(min-width: 761px)').matches) { mundo.style.cssText = ''; conteudo.style.left = conteudo.style.top = ''; return; }
+    const w = conteudo.offsetWidth, h = conteudo.offsetHeight;
+    const pw = w / (AZUL.x1 - AZUL.x0), ph = h / (AZUL.y1 - AZUL.y0);
+    Object.assign(mundo.style, { width: pw + 'px', height: ph + 'px' });
+    Object.assign(conteudo.style, { left: AZUL.x0 * pw + 'px', top: AZUL.y0 * ph + 'px' });
+    const k = Math.max(ZOOM_MIN, Math.min(1, palco.clientWidth / pw, palco.clientHeight / ph));
+    mundo.style.zoom = k;
     // na primeira vez, mostra o meio da mesa (os dois Conjuradores)
     if (!centrou && palco.scrollHeight > palco.clientHeight) { centrou = true; palco.scrollTop = (palco.scrollHeight - palco.clientHeight) / 2; }
   }
   new ResizeObserver(() => ajustarMesa()).observe(palco);
+  // tela cheia: some o topo do site e o botão troca de nome
+  const aoTelaCheia = () => { if (!document.fullscreenElement) document.body.classList.remove('tela-cheia'); if (!fechada && e) lateral.innerHTML = lateralHTML(); };
+  document.addEventListener('fullscreenchange', aoTelaCheia);
   const lateral = $('.mesa-direita', raiz);
   const faixaMao = $('.mao-faixa', raiz);
   const faixaMaoOp = $('.mao-op-faixa', raiz);
@@ -58,6 +79,42 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   const zoom = $('.mesa-zoom', raiz);
   const acontecimentos = [];
   const movimentosMesa = criarMovimentosMesa(raiz);
+  const ganchos = criarGanchosMesa({ raiz, conteudo, eu: EU });
+
+  // ---------- abertura da partida (entrega do GPT, kit/abertura-v14) ----------
+  // Entrada gradual da arena e o D20 Transplanar mostrando os dados que o MOTOR já rolou (e.dados); o dado não decide nada.
+  const partidaId = fonte.partidaId ?? (fonte.partidaId = 'p' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6));
+  let aberturaFeita = false, dadosAbertura = [];
+  function abertura() {
+    if (aberturaFeita) return;
+    aberturaFeita = true;
+    const A = globalThis.ArcanoclismaAbertura;
+    if (!A) return;
+    const inicio = e.pendencia?.tipo === 'escolherInicio' || (e.turno <= 1 && (e.logTotal ?? e.log.length) <= 12);
+    if (!inicio) return;
+    try {
+      A.entrarArena(raiz, { piso, zonas: [conteudo], baralhosMao: [faixaMao, faixaMaoOp], controles: [lateral] },
+        { partidaId, duracao: RITMO_VISUAL.entradaArena, intervalo: RITMO_VISUAL.intervaloEntradaArena }).catch(() => {});
+    } catch (err) { console.error('abertura', err); }
+    if (!(e.dados?.[0] > 0)) return;
+    const caixa = document.createElement('div');
+    caixa.className = 'abertura-dados';
+    caixa.innerHTML = `<div class="abertura-titulo">Quem começa?</div><div class="abertura-par">
+      <div class="abertura-lado"><div class="abertura-dado"></div><b>${esc(nome(EU))}</b></div>
+      <div class="abertura-lado"><div class="abertura-dado"></div><b>${esc(nome(OP))}</b></div></div><div class="abertura-resultado"></div>`;
+    palco.append(caixa);
+    const hosts = [...caixa.querySelectorAll('.abertura-dado')];
+    try { dadosAbertura = hosts.map((h) => new A.D20Transplanar(h)); } catch (err) { console.error('d20', err); caixa.remove(); return; }
+    const fim = () => { for (const d of dadosAbertura) try { d.destruir(); } catch { /* nada */ } dadosAbertura = []; caixa.remove(); };
+    Promise.all([dadosAbertura[0].rolar(e.dados[EU], { duracao: 4200 }), dadosAbertura[1].rolar(e.dados[OP], { duracao: 4200 })]).then(() => {
+      if (fechada) return fim();
+      const ganhei = e.dados[EU] > e.dados[OP];
+      $('.abertura-resultado', caixa).textContent = `${e.dados[EU]} × ${e.dados[OP]} — ${ganhei ? 'você escolhe quem começa' : 'o oponente escolhe quem começa'}`;
+      caixa.classList.add('resolvido');
+      setTimeout(() => caixa.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 700, easing: 'ease' }).finished.then(fim, fim), 1600);
+    }, fim);
+    caixa.addEventListener('click', () => { for (const d of dadosAbertura) try { d.cancelar({ concluir: true }); } catch { /* nada */ } });
+  }
 
   // ---------- consultas ----------
   const z = (j) => e.jogadores[j];
@@ -96,7 +153,13 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     if (!at || e.vencedor !== null || e.pendencia) return false;
     const conjurador = id === z(EU).conjuradorId;
     const item = z(EU).itens.includes(id);
-    if (item && def(id).categoriaItem !== 'extra') return false;
+    if (item) {
+      // itens v2: suspendem o Conjurador e podem pedir descarte ou dano no Conjurador
+      const cj = inst(z(EU).conjuradorId);
+      if (at.suspendeConjurador && cj.suspensa) return false;
+      if ((at.descartar ?? 0) > z(EU).mao.length) return false;
+      if (at.danoNoConjurador && conjDef(EU).vida - cj.dano <= at.danoNoConjurador) return false;
+    }
     if (at.suspende && (inst(id).suspensa || recemChegado(e, id))) return false;
     if (conjurador && !at.repentina && !minhaJanela()) return false;
     if ((!soArcano(at) || conjurador) && !tenhoPrioridade()) return false;
@@ -167,7 +230,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     } else if (tipo === 'ativar') {
       const at = ativacaoDe(id);
       efs = at.efeitos; custoBase = at.custo;
-      titulo = `Ativar ${nomeInst(id)}`;
+      titulo = `${z(EU).itens.includes(id) ? 'Usar' : 'Ativar'} ${nomeInst(id)}${at.danoNoConjurador ? ` (seu Conjurador toma ${at.danoNoConjurador} de dano)` : ''}`;
     } else titulo = `Atacar com ${nomeInst(id)}`;
     let alvo;
     const tipos = tipo === 'atacar' ? null : tiposDeAlvo(efs);
@@ -183,14 +246,21 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
       if (!descartarGrau) return;
     }
     if (tipo === 'atacar') { await enviar({ tipo: 'atacar', atacante: id, alvo, enviarArcano: [] }); return; }
+    // custo de descarte (itens v2): escolhe as cartas da mão antes de pagar
+    let descartarCusto = [];
+    const nDesc = tipo === 'ativar' ? ativacaoDe(id).descartar ?? 0 : 0;
+    if (nDesc) {
+      descartarCusto = await escolherCartas(`${titulo}: descarte ${nDesc} carta(s) da mão`, z(EU).mao.filter((x) => x !== alvo), nDesc);
+      if (!descartarCusto) return;
+    }
     let custo = custoBase + custoProtecao(e, EU, alvo);
     if (tipo === 'ativar') { const r = efs.find((ef) => ef.tipo === 'reanimar'); if (r && alvo) custo += r.custoExtra + def(alvo).custo; }
-    const pg = await pagar(titulo, custo, tipo === 'jogar' ? id : undefined, alvo);
+    const pg = await pagar(titulo, custo, tipo === 'jogar' ? id : undefined, alvo, { excluir: descartarCusto });
     if (!pg) return;
     for (const g of pg.grau) if (await enviar({ tipo: 'suspenderGrau', carta: g })) return;
     for (const f of pg.fontes) if (await enviar({ tipo: 'ativar', carta: f, enviarArcano: [] })) return;
     if (tipo === 'jogar') await enviar({ tipo: 'jogar', carta: id, alvo, descartarGrau, enviarArcano: pg.pitch });
-    else await enviar({ tipo: 'ativar', carta: id, alvo, enviarArcano: pg.pitch });
+    else await enviar({ tipo: 'ativar', carta: id, alvo, enviarArcano: pg.pitch, ...(descartarCusto.length ? { descartarCusto } : {}) });
   }
 
   function escolherAlvo(titulo, lista, instrucao) {
@@ -229,13 +299,13 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   }
 
   /** Pagamento: reserva, Grau, fontes de Arcano e envio de cartas da mão (pitch). Devolve o que usar ou null. */
-  function pagar(titulo, custo, jogada, alvo, { soPitch = false } = {}) {
+  function pagar(titulo, custo, jogada, alvo, { soPitch = false, excluir = [] } = {}) {
     const m = z(EU);
     const reserva = m.arcano;
     const grauLivre = soPitch ? [] : m.grau.filter((g) => !inst(g).suspensa);
     const fontes = soPitch ? [] : fontesArcano().filter((f) => f !== jogada && f !== alvo);
     const grauAuto = soPitch ? m.grau.filter((g) => !inst(g).suspensa).length : 0;
-    const mao = m.mao.filter((x) => x !== jogada && x !== alvo);
+    const mao = m.mao.filter((x) => x !== jogada && x !== alvo && !excluir.includes(x));
     if (reserva + grauAuto >= custo) return Promise.resolve({ grau: [], fontes: [], pitch: [] });
     // sugestão automática: Grau, fontes e depois as cartas que geram mais Arcano
     const sel = { grau: new Set(), fontes: new Set(), pitch: [] };
@@ -292,9 +362,9 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     } else if (id === m.conjuradorId || m.campo.includes(id) || m.itens.includes(id)) {
       if (podeAtacar(id)) a.push(['atacar', `Atacar (${ehConj(id) ? ataqueConjurador(e, EU) : def(id).ataque})`, 'rosa']);
       const at = ativacaoDe(id);
-      if (at && podeAtivar(id)) a.push(['ativar', m.itens.includes(id) ? 'Usar (consome)' : id === m.conjuradorId ? 'Usar habilidade' : soArcano(at) ? `Gerar Arcano (+${ganhoFonte(id)})` : 'Ativar', 'primario']);
-      const extra = id === m.conjuradorId && extraDe(EU);
-      if (extra && podeAtivar(extra)) a.push(['usarExtra', `Usar ${def(extra).nome} (consome)`, 'primario']);
+      if (at && podeAtivar(id)) a.push(['ativar', m.itens.includes(id) ? 'Usar' : id === m.conjuradorId ? 'Usar habilidade' : soArcano(at) ? `Gerar Arcano (+${ganhoFonte(id)})` : 'Ativar', 'primario']);
+      // itens com uso (Canal foco/transcritor e Extra) aparecem no menu do Conjurador
+      if (id === m.conjuradorId) for (const it of m.itens) if (ativacaoDe(it) && podeAtivar(it)) a.push([`usarItem:${it}`, `Usar ${def(it).nome}${(ativacaoDe(it).consome ?? def(it).categoriaItem === 'extra') ? ' (uso único)' : ''}`, 'primario']);
     }
     if (ehConj(id) && z(i.dono).itens.length) a.push(['equip', 'Ver equipamento', '']);
     a.push(['ver', 'Ver carta', '']);
@@ -311,8 +381,8 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
       const id = itemDe(j, cat);
       if (!id) return `<div class="equip-vitrine vazio"><b>${rot[cat]}</b><p class="peq">Vazio.</p></div>`;
       const d = def(id);
-      const st = cat === 'armadura' ? `Defesa ${d.defesa} · desgaste ${inst(id).dano}/${d.vidaDesgaste}${e.habUsos?.[j]?.armadura ? ' · já protegeu neste turno' : ''}` : cat === 'canal' ? `Ataque ${d.ataque}` : 'Uso único';
-      const usar = j === EU && cat === 'extra' && podeAtivar(id) ? `<button class="botao primario peq" data-usar="${id}">Usar</button>` : '';
+      const st = cat === 'armadura' ? `Defesa ${d.defesa} · desgaste ${inst(id).dano}/${d.vidaDesgaste}${e.habUsos?.[j]?.armadura ? ' · já protegeu neste turno' : ''}` : cat === 'canal' && (d.tipoCanal ?? 'arma') === 'arma' ? `Arma · Ataque ${d.ataque}` : d.texto;
+      const usar = j === EU && ativacaoDe(id) && podeAtivar(id) ? `<button class="botao primario peq" data-usar="${id}">Usar</button>` : '';
       return `<div class="equip-vitrine">${desenharCarta(modeloCarta(inst(id).defId), { width: 150 }).outerHTML}<b>${rot[cat]}: ${esc(d.nome)}</b><p class="peq">${esc(st)}</p>${usar}</div>`;
     }).join('');
     const jan = janela(`<h3>${j === EU ? "Seu equipamento" : `Equipamento de ${esc(nome(j))}`}</h3><div class="equip-linha">${blocos}</div>`, { classe: 'larga' });
@@ -356,7 +426,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
       fecharMenu();
       if (k === 'ver') return verCarta(id);
       if (k === 'equip') return verEquipamento(inst(id).dono);
-      if (k === 'usarExtra') return preparar('ativar', extraDe(EU));
+      if (k.startsWith('usarItem:')) return preparar('ativar', k.slice(9));
       if (k === 'grau') return enviar({ tipo: 'colocarGrau', carta: id });
       if (k === 'suspGrau') return enviar({ tipo: 'suspenderGrau', carta: id });
       if (k === 'ativar' && soArcano(ativacaoDe(id)) && id !== z(EU).conjuradorId && !z(EU).itens.includes(id)) return enviar({ tipo: 'ativar', carta: id, enviarArcano: [] });
@@ -549,6 +619,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
       <div class="lateral-corpo">${corpo}</div>
       <div class="lateral-pe">
         ${opinar ? '<button class="botao rosa peq" data-opinar>💬 Opinar / dúvida</button>' : ''}
+        <button class="botao peq" data-tela-cheia title="Tela cheia (Esc sai)">${document.body.classList.contains('tela-cheia') ? '🗗 Sair da tela cheia' : '⛶ Tela cheia'}</button>
         <button class="botao peq" data-config>⚙ Opções</button>
         ${fonte.desistir && e.vencedor === null ? '<button class="botao peq perigo" data-desistir>Desistir</button>' : ''}
         <button class="botao peq fantasma" data-sair>Sair</button>
@@ -583,7 +654,8 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
       <p><b>Combate:</b> atacar suspende. O defensor pode bloquear com um Aliado ou o Conjurador que esteja de pé. Aliados que acabaram de entrar (zZ) não atacam, salvo Proficiente.</p>
       <p><b>Etéreo:</b> só Aliados Etéreos o bloqueiam. <b>Protegido N:</b> mirar custa N a mais.</p>
       <p><b>Impasse:</b> 5 turnos seguidos sem agir e você perde.</p>
-      <p class="peq">Passe o mouse numa carta para ver; clique para agir.</p></div>`;
+      <p class="peq">Passe o mouse numa carta para ver; clique ou arraste para agir.</p>
+      <h3>Palavras-chave</h3>${palavrasChaveHTML(esc)}</div>`;
   }
 
   function fimHTML() {
@@ -600,6 +672,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   function render() {
     if (fechada) return;
     const posicoesAnteriores = movimentosMesa.capturar();
+    const anteriorGanchos = ganchos.antes(e);
     e = fonte.e;
     const total = e.logTotal ?? e.log.length;
     const nNovas = total - ui.logVisto;
@@ -626,6 +699,8 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     atualizarPrazo();
     agendarAutoPasse();
     movimentosMesa.animar(posicoesAnteriores);
+    ganchos.depois(e, anteriorGanchos);
+    abertura();
   }
 
   let timerPrazo = null;
@@ -657,12 +732,103 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     if (!deveAutoPassar()) return;
     const v = fonte.versao;
     const topo = e.pilha[e.pilha.length - 1];
-    const espera = topo && topo.controlador !== EU ? 1700 : e.combate ? 900 : 220;
+    // pausas um pouco mais longas (pedido do autor, 04/10): dá tempo de ver cada jogada e animação
+    const espera = topo && topo.controlador !== EU ? 2300 : e.combate ? 1400 : 480;
     timerAuto = setTimeout(() => { if (!fechada && fonte.versao === v && deveAutoPassar()) enviar({ tipo: 'passar' }, { silencioso: true }); }, espera);
   }
 
   // ---------- eventos ----------
+  // ---------- arrastar cartas da mão (pedido do autor, 03/10) ----------
+  // Segurar a carta da mão e soltar no campo: abre o pagamento (e o alvo, se houver); sem poder pagar ou cancelando,
+  // ela volta para a mão. Soltar na zona de Grau põe a carta no Grau. Clique sem arrastar continua abrindo o menu.
+  let arrasto = null;
+  let ignorarClique = false;
+  const reduzido = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function voar(el, para, { duracao = RITMO_VISUAL.voltarParaMao, depois } = {}) {
+    const de = el.getBoundingClientRect();
+    if (!para || reduzido()) { el.remove(); depois?.(); return; }
+    const dx = para.left + para.width / 2 - (de.left + de.width / 2), dy = para.top + para.height / 2 - (de.top + de.height / 2);
+    const k = para.width / de.width;
+    const a = el.animate([{ transform: el.style.transform }, { transform: `${el.style.transform} translate(${dx}px, ${dy}px) rotate(0deg) scale(${k})` }], { duration: duracao, easing: 'cubic-bezier(.2,.75,.25,1)', fill: 'forwards' });
+    a.finished.then(() => { el.remove(); depois?.(); }, () => { el.remove(); depois?.(); });
+  }
+  const sobre = (x, y, sel) => document.elementsFromPoint(x, y).some((n) => n.closest?.(sel));
+  function marcarAlvos(id, ligar) {
+    const pode = ligar && podeJogar(id);
+    palco.classList.toggle('alvo-jogar', !!pode);
+    palco.classList.toggle('alvo-negado', !!ligar && !pode);
+    $('.lado-eu .zona-grau', raiz)?.classList.toggle('alvo-grau', !!ligar && podeGrau());
+  }
+  faixaMao.addEventListener('pointerdown', (ev) => {
+    const carta = ev.target.closest('.mao-slot .cm[data-id]');
+    if (!carta || ev.button !== 0 || ui.modo || e.vencedor !== null) return;
+    arrasto = { id: carta.dataset.id, carta, x0: ev.clientX, y0: ev.clientY, ativo: false, ultimoX: ev.clientX, inclinacao: 0 };
+  });
+  window.addEventListener('pointermove', moverArrasto);
+  function moverArrasto(ev) {
+    const a = arrasto;
+    if (!a) return;
+    if (!a.ativo) {
+      if (Math.hypot(ev.clientX - a.x0, ev.clientY - a.y0) < 8) return;
+      a.ativo = true;
+      zoom.classList.remove('visivel');
+      const r = a.carta.getBoundingClientRect();
+      a.dx = a.x0 - r.left; a.dy = a.y0 - r.top;
+      a.fantasma = a.carta.cloneNode(true);
+      a.fantasma.classList.add('carta-arrastada');
+      Object.assign(a.fantasma.style, { left: r.left + 'px', top: r.top + 'px', width: r.width + 'px' });
+      document.body.append(a.fantasma);
+      a.carta.closest('.mao-slot')?.classList.add('arrastando');
+      marcarAlvos(a.id, true);
+    }
+    // a carta "maleável": inclina para o lado do movimento e levanta um pouco
+    a.inclinacao = Math.max(-16, Math.min(16, a.inclinacao * 0.7 + (ev.clientX - a.ultimoX) * 0.9));
+    a.ultimoX = ev.clientX;
+    const subiu = Math.min(1, Math.max(0, (a.y0 - ev.clientY) / 160));
+    a.fantasma.style.transform = `translate(${ev.clientX - a.dx - parseFloat(a.fantasma.style.left)}px, ${ev.clientY - a.dy - parseFloat(a.fantasma.style.top)}px) perspective(700px) rotateX(${8 * subiu}deg) rotate(${a.inclinacao}deg) scale(${1.08 + 0.1 * subiu})`;
+    a.fantasma.classList.toggle('sobre-campo', sobre(ev.clientX, ev.clientY, '.mesa-palco') && !sobre(ev.clientX, ev.clientY, '.mao-faixa'));
+  }
+  async function soltar(ev) {
+    const a = arrasto;
+    arrasto = null;
+    if (!a?.ativo) return;
+    ignorarClique = true;
+    setTimeout(() => { ignorarClique = false; }, 0);
+    marcarAlvos(a.id, false);
+    const f = a.fantasma;
+    f.style.pointerEvents = 'none';
+    const voltar = () => {
+      const slot = $(`.mao-slot .cm[data-id="${a.id}"]`, faixaMao);
+      voar(f, slot?.getBoundingClientRect(), { depois: () => slot?.closest('.mao-slot')?.classList.remove('arrastando') });
+    };
+    const x = ev.clientX, y = ev.clientY;
+    if (ev.type === 'pointerup' && sobre(x, y, '.lado-eu .zona-grau') && podeGrau()) {
+      await enviar({ tipo: 'colocarGrau', carta: a.id });
+      const g = $(`.zona-grau .cm[data-id="${a.id}"]`, raiz);
+      return g ? voar(f, g.getBoundingClientRect()) : voltar();
+    }
+    if (ev.type !== 'pointerup' || !sobre(x, y, '.mesa-palco') || sobre(x, y, '.mao-faixa')) return voltar();
+    if (!podeJogar(a.id)) {
+      const d = def(a.id);
+      avisar(!tenhoPrioridade() ? 'Agora não é a sua vez de jogar.' : d.velocidade !== 'repentina' && !minhaJanela() ? 'Esta carta só entra na sua fase principal (sem nada na pilha).' : d.grau > grauEfetivo(e, EU) ? `Precisa de Grau ${d.grau}.` : 'Arcano insuficiente para os custos.', 'erro', 3500);
+      return voltar();
+    }
+    f.classList.add('aguardando');
+    await preparar('jogar', a.id);
+    if (z(EU).mao.includes(a.id)) return voltar(); // cancelou ou não pagou: volta para a mão
+    // jogou: a carta vai do ponto onde foi solta até o lugar dela (campo, ou a pilha se for Temporária)
+    const destino = $(`.mesa-conteudo .cm[data-id="${a.id}"]`, raiz) ?? $(`.mesa-direita .cm[data-id="${a.id}"]`, raiz);
+    if (destino) {
+      destino.style.visibility = 'hidden';
+      voar(f, destino.getBoundingClientRect(), { duracao: RITMO_VISUAL.arrasteParaCampo, depois: () => { destino.style.visibility = ''; } });
+    } else f.animate([{ opacity: 1 }, { opacity: 0 }], { duration: RITMO_VISUAL.desaparecer }).finished.then(() => f.remove());
+  }
+  window.addEventListener('pointerup', soltar);
+  window.addEventListener('pointercancel', soltar);
+  faixaMao.addEventListener('dragstart', (ev) => ev.preventDefault());
+
   raiz.addEventListener('click', async (ev) => {
+    if (ignorarClique) { ev.stopPropagation(); return; }
     const alvo = ev.target;
     if (ev.target.closest('.mesa-menu-acao')) return;
     if (ui.menu && !alvo.closest('.cm')) fecharMenu();
@@ -679,6 +845,17 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     if (b.matches('[data-aba]')) { ui.aba = b.dataset.aba; lateral.innerHTML = lateralHTML(); return; }
     if (b.matches('[data-opinar]')) return opinar?.(contexto());
     if (b.matches('[data-config]')) return configurar();
+    if (b.matches('[data-tela-cheia]')) {
+      // a mesa ocupa a janela inteira mesmo onde o navegador não deixa a tela cheia de verdade (ex.: dentro de outro app)
+      const ligar = !document.body.classList.contains('tela-cheia');
+      document.body.classList.toggle('tela-cheia', ligar);
+      lateral.innerHTML = lateralHTML();
+      try {
+        if (ligar && !document.fullscreenElement) await document.documentElement.requestFullscreen({ navigationUI: 'hide' });
+        if (!ligar && document.fullscreenElement) await document.exitFullscreen();
+      } catch { /* sem tela cheia do navegador: fica só a mesa maximizada */ }
+      return;
+    }
     if (b.matches('[data-desistir]')) { if (confirm('Desistir desta partida?')) fonte.desistir(); return; }
     if (b.matches('[data-sair]')) return aoSair?.();
     if (b.matches('[data-revanche]')) return fonte.revanche();
@@ -787,7 +964,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   render();
   return {
     render,
-    fechar() { fechada = true; clearTimeout(timerAuto); clearInterval(timerPrazo); movimentosMesa.limpar(); raiz.innerHTML = ''; },
+    fechar() { fechada = true; for (const d of dadosAbertura) try { d.destruir(); } catch { /* nada */ } globalThis.ArcanoclismaAbertura?.limparEntradaArena(raiz); clearTimeout(timerAuto); clearInterval(timerPrazo); movimentosMesa.limpar(); ganchos.limpar(); document.removeEventListener('fullscreenchange', aoTelaCheia); if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); document.body.classList.remove('tela-cheia'); window.removeEventListener('pointermove', moverArrasto); window.removeEventListener('pointerup', soltar); window.removeEventListener('pointercancel', soltar); arrasto?.fantasma?.remove(); raiz.innerHTML = ''; },
     contexto,
   };
 }

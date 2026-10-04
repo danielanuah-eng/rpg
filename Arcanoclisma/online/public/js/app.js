@@ -21,6 +21,11 @@ const rotas = {
   bot: telaPartidaBot,
   conta: telaConta,
   editor: async (p) => (await import('./editor.js')).telaEditor(tela, p, ctx),
+  'palavras-chave': async () => {
+    const { palavrasChaveHTML } = await import('./palavras-chave.js');
+    fundo(cenario('tutorial'));
+    tela.innerHTML = `<div class="titulo-secao"><h1>Palavras-chave</h1></div><p class="peq">O que significa cada termo escrito nas cartas.</p><div class="painel pc-lista">${palavrasChaveHTML(esc)}</div>`;
+  },
 };
 async function navegar() {
   const [nome, ...partes] = (location.hash.replace(/^#\/?/, '') || 'inicio').split('/');
@@ -172,7 +177,7 @@ function resolverLocal(ref, meus, publicos, itens) {
 }
 function seletorItens(conjId, escolhidos) {
   const lista = itensDoConjurador(conjId);
-  return ['canal', 'armadura', 'extra'].map((esp) => `<label class="campo">${{ canal: 'Canal (arma)', armadura: 'Armadura', extra: 'Extra (consumível)' }[esp]}
+  return ['canal', 'armadura', 'extra'].map((esp) => `<label class="campo">${{ canal: 'Canal (arma, foco arcano ou transcritor)', armadura: 'Armadura', extra: 'Extra (da competência ou genérico)' }[esp]}
     <select data-item="${esp}"><option value="">nenhum</option>${lista.filter((x) => x.categoriaItem === esp).map((x) => `<option value="${x.id}" ${escolhidos.includes(x.id) ? 'selected' : ''}>${esc(x.nome)}: ${esc(x.texto.replace(/^[^.]+\.\s*/, ''))}</option>`).join('')}</select></label>`).join('');
 }
 

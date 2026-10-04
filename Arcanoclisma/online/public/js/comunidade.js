@@ -5,14 +5,21 @@ const TIPOS = { opiniao: 'Opinião', duvida: 'Dúvida', bug: 'Problema', balance
 const ESTADOS_OP = { novo: 'Novo', aprovado: 'Aprovado para mudar', revisar: 'Em revisão', recusado: 'Não vai mudar', feito: 'Feito' };
 const CATEGORIAS = { expansao: 'Expansão', personagem: 'Personagem', carta: 'Carta', item: 'Item', conjurador: 'Conjurador', mecanica: 'Mecânica', outro: 'Outro' };
 const ESTADOS_ID = { nova: 'Nova', aprovada: 'Aprovada', estudando: 'Estudando', recusada: 'Recusada', feita: 'Feita' };
+// Marcação do autor para o diagnóstico: Yes = o Claude lê, No = o Claude ignora (null = ainda não marcado).
+const yesNo = (rota, id, v) => (sessao.usuario?.admin ? `<span class="yesno" title="O Claude lê no diagnóstico só o que estiver Yes"><span class="peq">Claude:</span><button class="botao peq ${v === 1 ? 'sim on' : ''}" data-claude="${rota}/${id}" data-ler="1">Yes</button><button class="botao peq ${v === 0 ? 'nao on' : ''}" data-claude="${rota}/${id}" data-ler="0">No</button></span>` : '');
+async function marcarClaude(b, depois) {
+  const on = b.classList.contains('on');
+  try { await api(`/${b.dataset.claude}/claude`, { corpo: { ler: on ? null : b.dataset.ler === '1' } }); depois(); } catch (err) { avisar(err.message, 'erro'); }
+}
+const linkDiagnostico = () => (sessao.usuario?.admin ? '<a class="botao peq fantasma" href="/api/diagnostico?formato=md" target="_blank" rel="noopener">📋 O que o Claude vai ler (Yes)</a>' : '');
 const estrelas = (n) => (n ? `<span class="nota" title="${n} de 5">${'★'.repeat(n)}${'☆'.repeat(5 - n)}</span>` : '');
 
 export async function telaComentarios(tela, partes, ctx) {
   ctx.fundo(cenario('comunidade'));
-  const filtro = { estado: '', tipo: '' };
+  const filtro = { estado: '', tipo: '', claude: '' };
   tela.innerHTML = `<div class="titulo-secao"><h1>Comentários</h1><button class="botao rosa" data-novo>💬 Escrever</button></div>
     <p class="peq">Opiniões, notas, dúvidas e problemas mandados pelos jogadores (também de dentro das partidas). O autor marca o que passa para mudança ou revisão.</p>
-    <div class="filtros"><select id="f-estado"><option value="">Todos os estados</option>${Object.entries(ESTADOS_OP).map(([k, r]) => `<option value="${k}">${r}</option>`).join('')}</select><select id="f-tipo"><option value="">Todos os tipos</option>${Object.entries(TIPOS).filter(([k]) => k !== 'comentario').map(([k, r]) => `<option value="${k}">${r}</option>`).join('')}</select></div>
+    <div class="filtros"><select id="f-estado"><option value="">Todos os estados</option>${Object.entries(ESTADOS_OP).map(([k, r]) => `<option value="${k}">${r}</option>`).join('')}</select><select id="f-tipo"><option value="">Todos os tipos</option>${Object.entries(TIPOS).filter(([k]) => k !== 'comentario').map(([k, r]) => `<option value="${k}">${r}</option>`).join('')}</select>${sessao.usuario?.admin ? '<select id="f-claude"><option value="">Yes e No</option><option value="pendente">Sem marcar</option><option value="sim">Yes (Claude lê)</option><option value="nao">No</option></select>' : ''}${linkDiagnostico()}</div>
     <div id="contagem" class="peq"></div><div id="posts"><div class="girando"></div></div>`;
   const carregar = async () => {
     const q = new URLSearchParams(Object.entries(filtro).filter(([, v]) => v));
@@ -22,11 +29,12 @@ export async function telaComentarios(tela, partes, ctx) {
       $('#posts').innerHTML = r.opinioes.map(postOpiniao).join('') || '<div class="painel vazio">Nenhum comentário ainda.</div>';
     } catch (err) { $('#posts').innerHTML = `<div class="painel vazio">${esc(err.message)}</div>`; }
   };
-  tela.onchange = (ev) => { if (ev.target.id === 'f-estado') filtro.estado = ev.target.value; if (ev.target.id === 'f-tipo') filtro.tipo = ev.target.value; carregar(); };
+  tela.onchange = (ev) => { if (ev.target.id === 'f-estado') filtro.estado = ev.target.value; if (ev.target.id === 'f-tipo') filtro.tipo = ev.target.value; if (ev.target.id === 'f-claude') filtro.claude = ev.target.value; carregar(); };
   tela.onclick = async (ev) => {
     const b = ev.target.closest('button');
     if (!b) return;
     if (b.matches('[data-novo]')) return ctx.opinar(null);
+    if (b.dataset.claude) return marcarClaude(b, carregar);
     if (b.dataset.responder) {
       const u = await ctx.exigirConta('Entre para responder.');
       if (!u) return;
@@ -51,7 +59,7 @@ function postOpiniao(o) {
     <div class="corpo">${esc(o.texto)}</div>
     ${o.resposta ? `<div class="resposta-autor"><b>Autor:</b> ${esc(o.resposta)}</div>` : ''}
     ${o.respostas?.length ? `<div class="respostas">${o.respostas.map((r) => `<div><b>${esc(r.autor)}</b> <span class="peq">${dataCurta(r.criado)}</span><br>${esc(r.texto)}</div>`).join('')}</div>` : ''}
-    <div class="linha-botoes"><button class="botao peq" data-responder="${o.id}">Responder</button>${admin ? `<button class="botao peq primario" data-decidir="${o.id}">Decidir (autor)</button>` : ''}</div>
+    <div class="linha-botoes"><button class="botao peq" data-responder="${o.id}">Responder</button>${admin ? `<button class="botao peq primario" data-decidir="${o.id}">Decidir (autor)</button>` : ''}${yesNo('opinioes', o.id, o.claude)}</div>
   </article>`;
 }
 
@@ -77,7 +85,7 @@ export async function telaIdeias(tela, partes, ctx) {
       $('#ideias').innerHTML = r.ideias.map((i) => `<article class="post ideia"><div class="ideia-linha"><button class="voto ${votei.has(i.id) ? 'on' : ''}" data-votar="${i.id}" aria-label="Votar">▲<span>${i.votos}</span></button><div>
         <div class="cab"><span class="etiqueta">${esc(CATEGORIAS[i.categoria] ?? i.categoria)}</span><span class="etiqueta estado-${i.estado}">${esc(ESTADOS_ID[i.estado] ?? i.estado)}</span><b>${esc(i.autor)}</b><span>${dataCurta(i.criado)}</span></div>
         <h3>${esc(i.titulo)}</h3><div class="corpo">${esc(i.texto)}</div>${i.resposta ? `<div class="resposta-autor"><b>Autor:</b> ${esc(i.resposta)}</div>` : ''}
-        ${sessao.usuario?.admin ? `<div class="linha-botoes"><button class="botao peq primario" data-decidir-ideia="${i.id}">Decidir (autor)</button></div>` : ''}</div></div></article>`).join('') || '<div class="painel vazio">Nenhuma ideia nesta categoria ainda.</div>';
+        ${sessao.usuario?.admin ? `<div class="linha-botoes"><button class="botao peq primario" data-decidir-ideia="${i.id}">Decidir (autor)</button>${yesNo('ideias', i.id, i.claude)}${linkDiagnostico()}</div>` : ''}</div></div></article>`).join('') || '<div class="painel vazio">Nenhuma ideia nesta categoria ainda.</div>';
     } catch (err) { $('#ideias').innerHTML = `<div class="painel vazio">${esc(err.message)}</div>`; }
   };
   tela.onclick = async (ev) => {
@@ -85,6 +93,7 @@ export async function telaIdeias(tela, partes, ctx) {
     if (!b) return;
     if (b.dataset.cat !== undefined) { categoria = b.dataset.cat; for (const x of $$('#cats button')) x.classList.toggle('ativo', x === b); history.replaceState(null, '', '#/ideias' + (categoria ? '/' + categoria : '')); return carregar(); }
     if (b.dataset.votar) { const u = await ctx.exigirConta('Entre para votar.'); if (!u) return; await api(`/ideias/${b.dataset.votar}/votar`, { corpo: {} }); return carregar(); }
+    if (b.dataset.claude) return marcarClaude(b, carregar);
     if (b.dataset.decidirIdeia) return decidir(`/ideias/${b.dataset.decidirIdeia}/estado`, ESTADOS_ID, carregar);
     if (b.matches('[data-nova]')) {
       const u = await ctx.exigirConta('Entre para propor uma ideia.');

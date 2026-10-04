@@ -34,7 +34,7 @@ function anotar(e: Estado, msg: string): void {
   e.log.push(msg);
 }
 
-const novoHab = (): HabUsos => ({ gatilho: false, carta: false, repentina: false, desconto: 0, anularDoCemiterio: false, danoAliado: false, armadura: false });
+const novoHab = (): HabUsos => ({ gatilho: false, carta: false, repentina: false, desconto: 0, anularDoCemiterio: false, danoAliado: false, armadura: false, potencia: 0, ataqueExtra: 0 });
 
 function novaInst(e: Estado, defId: string, dono: Jogador, ehConjurador: boolean): Inst {
   const inst: Inst = { id: `i${e.proxId++}`, defId, ehConjurador, dono, suspensa: false, dano: 0, revelada: false, entrouNoTurno: 0, banidaDisponivel: 0, descontoBanimento: 0, banirAoResolver: false };
@@ -69,7 +69,7 @@ function ataqueDe(e: Estado, instId: string, bloqueando = false): number {
 export function ataqueConjurador(e: Estado, j: Jogador): number {
   const z = e.jogadores[j];
   const armas = (z.itens ?? []).reduce((s, id) => { const d = defCarta(e, id); return s + (d.categoriaItem === 'canal' ? (d.ataque ?? 0) : 0); }, 0);
-  return defConjurador(e, j).danoBasico + armas;
+  return defConjurador(e, j).danoBasico + armas + (e.habUsos?.[j]?.ataqueExtra ?? 0);
 }
 
 /** Armadura equipada no Conjurador (instância), se houver. */
@@ -213,7 +213,7 @@ function resolverAlvo(e: Estado, ef: Efeito, dono: Jogador, escolhido?: string):
   return e.jogadores[ef.alvo === 'conjuradorInimigo' ? outro(dono) : dono].conjuradorId;
 }
 
-function aplicarEfeitos(e: Estado, efeitos: Efeito[], dono: Jogador, escolhido?: string): void {
+function aplicarEfeitos(e: Estado, efeitos: Efeito[], dono: Jogador, escolhido?: string, bonus = 0): void {
   for (const ef of efeitos) {
     if (ef.tipo === 'comprar') { comprar(e, dono, ef.valor); anotar(e, `Jogador ${dono} compra ${ef.valor} carta(s).`); }
     else if (ef.tipo === 'olharTopo') {
@@ -224,6 +224,16 @@ function aplicarEfeitos(e: Estado, efeitos: Efeito[], dono: Jogador, escolhido?:
       anotar(e, `Jogador ${dono} olha as ${cartas.length} carta(s) do topo do baralho.`);
     }
     else if (ef.tipo === 'arcano') e.jogadores[dono].arcano += ef.valor;
+    else if (ef.tipo === 'potenciaMagia') { e.habUsos[dono].potencia += ef.valor; anotar(e, `O próximo dano ou cura de uma Temporária sua neste turno tem +${e.habUsos[dono].potencia}.`); }
+    else if (ef.tipo === 'ataqueConjuradorTurno') { e.habUsos[dono].ataqueExtra += ef.valor; anotar(e, `${defConjurador(e, dono).nome} ganha +${ef.valor} de Ataque neste turno.`); }
+    else if (ef.tipo === 'invocar') {
+      if (!e.catalogo.cartas[ef.carta]) { anotar(e, 'Invocar: ficha desconhecida.'); continue; }
+      const inst = novaInst(e, ef.carta, dono, false);
+      inst.revelada = true; inst.entrouNoTurno = e.turno;
+      e.jogadores[dono].campo.push(inst.id);
+      anotar(e, `${defCarta(e, inst.id).nome} é invocado no campo do jogador ${dono}.`);
+      gatilhoConjurador(e, dono, 'aliadoEntra');
+    }
     else if (ef.tipo === 'arcanoOponente') e.jogadores[outro(dono)].arcano += ef.valor;
     else if (ef.tipo === 'descontoProximaCarta') {
       if (e.habUsos[dono].carta) anotar(e, 'Você já jogou uma carta neste turno: sem desconto.');
@@ -262,7 +272,7 @@ function aplicarEfeitos(e: Estado, efeitos: Efeito[], dono: Jogador, escolhido?:
     } else if (ef.tipo === 'danoTodosAliados') {
       const adv = e.jogadores[outro(dono)];
       const ids = ef.ambos ? [...e.jogadores[dono].campo, ...adv.campo] : [...adv.campo];
-      for (const id of ids) if (defCarta(e, id).tipo === 'aliado') causarDano(e, id, ef.valor, 'efeito');
+      for (const id of ids) if (defCarta(e, id).tipo === 'aliado') causarDano(e, id, ef.valor + bonus, 'efeito');
     } else if (ef.tipo === 'destruirTodosAliados') {
       const quem: Jogador[] = ef.ambos ? [0, 1] : [outro(dono)];
       for (const j of quem) for (const id of [...e.jogadores[j].campo]) if (defCarta(e, id).tipo === 'aliado') destruir(e, id);
@@ -274,9 +284,9 @@ function aplicarEfeitos(e: Estado, efeitos: Efeito[], dono: Jogador, escolhido?:
         continue;
       }
       const inst = e.instancias[alvo];
-      if (ef.tipo === 'dano') causarDano(e, alvo, ef.valor + (ef.escalaGrau ? e.jogadores[dono].grau.length : 0), 'efeito');
+      if (ef.tipo === 'dano') causarDano(e, alvo, ef.valor + bonus + (ef.escalaGrau ? e.jogadores[dono].grau.length : 0), 'efeito');
       else if (ef.tipo === 'devolver' && !inst.ehConjurador) devolver(e, alvo);
-      else if (ef.tipo === 'curar') inst.dano = Math.max(0, inst.dano - ef.valor);
+      else if (ef.tipo === 'curar') inst.dano = Math.max(0, inst.dano - ef.valor - bonus);
       else if (ef.tipo === 'destruir' && !inst.ehConjurador) destruir(e, alvo);
     }
   }
@@ -324,6 +334,8 @@ export function validarBaralho(cat: Catalogo, b: BaralhoDef, tamanho = 60): stri
     const c = cat.cartas[id];
     if (!c) { erros.push(`Item desconhecido: ${id}`); continue; }
     if (c.tipo !== 'item' || !c.categoriaItem) { erros.push(`${c.nome} não é um item.`); continue; }
+    if (c.competencia && c.competencia !== conj.comprometimento) erros.push(`${c.nome} é só para Conjuradores ${c.competencia}.`);
+    if (c.exclusivoDe?.length && !c.exclusivoDe.includes(conj.id)) erros.push(`${c.nome} é exclusivo de outro Conjurador.`);
     if (espacos.has(c.categoriaItem)) erros.push(`Dois itens no mesmo espaço (${c.categoriaItem}).`);
     espacos.add(c.categoriaItem);
     if (c.valores.length > 0 && !c.valores.some((v) => conj.valores.includes(v))) erros.push(`${c.nome} não combina com os Valores de ${conj.nome}.`);
@@ -505,7 +517,11 @@ function resolverTopo(e: Estado): void {
     }
     if (d.tipo === 'temporaria') {
       anotar(e, `${d.nome} resolve.`);
-      aplicarEfeitos(e, d.efeitos ?? [], item.controlador, item.alvo);
+      // Foco Arcano: o bônus vale para a próxima Temporária de dano ou cura do dono e se gasta
+      const usaPotencia = (d.efeitos ?? []).some((ef) => ['dano', 'curar', 'danoTodosAliados'].includes(ef.tipo));
+      const bonus = usaPotencia ? e.habUsos[item.controlador].potencia : 0;
+      if (bonus) { e.habUsos[item.controlador].potencia = 0; anotar(e, `Foco Arcano: +${bonus}.`); }
+      aplicarEfeitos(e, d.efeitos ?? [], item.controlador, item.alvo, bonus);
       if (e.instancias[item.instId].banirAoResolver) {
         e.instancias[item.instId].banirAoResolver = false;
         e.instancias[item.instId].banidaDisponivel = 0;
@@ -752,24 +768,34 @@ function ativar(e: Estado, c: Extract<Comando, { tipo: 'ativar' }>): void {
   const ehConj = c.carta === z.conjuradorId;
   const ehItem = !ehConj && z.itens.includes(c.carta);
   if (!ehConj && !ehItem && !z.campo.includes(c.carta)) falha('A carta não está no seu campo.');
-  if (ehItem && defCarta(e, c.carta).categoriaItem !== 'extra') falha('Só o item Extra se usa.');
+  if (ehItem && !defCarta(e, c.carta).ativacao) falha('Este item não tem uso.');
   const at = ehConj ? defConjurador(e, c.jogador).poder?.ativacao : defCarta(e, c.carta).ativacao;
   if (!at) falha(ehConj ? 'Este Conjurador não tem habilidade ativada.' : 'Esta carta não tem ativação.');
   const inst = e.instancias[c.carta];
   if (at.suspende && inst.suspensa) falha('A carta está suspensa.');
   if (at.suspende && recemChegado(e, c.carta)) falha('Este Aliado acabou de entrar e não é Proficiente.');
   if (ehConj && !at.repentina && !janelaFindante(e, c.jogador)) falha('Habilidade do Conjurador: só na sua fase principal, com a pilha vazia (ou se ela for Repentina).');
-  const imediatos = ['arcano', 'descontoProximaCarta', 'permitirAnularDoCemiterio', 'banirDaMao'];
+  const imediatos = ['arcano', 'descontoProximaCarta', 'permitirAnularDoCemiterio', 'banirDaMao', 'potenciaMagia', 'ataqueConjuradorTurno'];
   const soArcano = at.efeitos.every((ef) => imediatos.includes(ef.tipo));
   if (!soArcano || ehConj) exigirPrioridade(e, c.jogador);
   if (exigeAlvo(at.efeitos) && !alvoServe(e, at.efeitos, c.alvo, c.jogador)) falha('Esta ativação precisa de um alvo legal.');
   const rean = at.efeitos.find((ef) => ef.tipo === 'reanimar');
   const extraRean = rean && rean.tipo === 'reanimar' && c.alvo ? rean.custoExtra + defCarta(e, c.alvo).custo : 0;
   const custo = at.custo + extraRean + custoProtecao(e, c.jogador, c.alvo);
+  const conjInst = e.instancias[z.conjuradorId];
+  if (at.suspendeConjurador && conjInst.suspensa) falha('O Conjurador está suspenso.');
+  const descarte = c.descartarCusto ?? [];
+  if ((at.descartar ?? 0) !== descarte.length) falha(`Descarte ${at.descartar ?? 0} carta(s) da mão para usar.`);
+  if (new Set(descarte).size !== descarte.length || descarte.some((id) => !z.mao.includes(id) || (c.enviarArcano ?? []).includes(id))) falha('Descarte cartas da sua mão (sem repetir as enviadas ao Arcano).');
+  if (at.danoNoConjurador && (vidaDe(e, z.conjuradorId) ?? 0) - conjInst.dano <= at.danoNoConjurador) falha('O Conjurador não aguenta esse dano.');
   const reserva = validarEnvio(e, c.jogador, custo, c.enviarArcano ?? []);
   pagarCusto(e, c.jogador, custo, c.enviarArcano ?? [], reserva);
+  for (const id of descarte) { tirar(z.mao, id); z.cemiterio.push(id); }
+  if (descarte.length) anotar(e, `Jogador ${c.jogador} descarta ${descarte.length} carta(s) para usar ${defCarta(e, c.carta).nome}.`);
+  if (at.danoNoConjurador) { conjInst.dano += at.danoNoConjurador; anotar(e, `${defConjurador(e, c.jogador).nome} toma ${at.danoNoConjurador} de dano para usar ${defCarta(e, c.carta).nome}.`); }
   if (at.suspende) inst.suspensa = true;
-  if (ehItem) { tirar(z.itens, c.carta); z.cemiterio.push(c.carta); anotar(e, `${defCarta(e, c.carta).nome} é consumido.`); }
+  if (at.suspendeConjurador) conjInst.suspensa = true;
+  if (ehItem && (at.consome ?? defCarta(e, c.carta).categoriaItem === 'extra')) { tirar(z.itens, c.carta); z.cemiterio.push(c.carta); anotar(e, `${defCarta(e, c.carta).nome} é consumido.`); }
   e.agiuNoTurno = true;
   if (soArcano) {
     if (ehConj) anotar(e, `Jogador ${c.jogador} ativa ${defConjurador(e, c.jogador).nome}.`);

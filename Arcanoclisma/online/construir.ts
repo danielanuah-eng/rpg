@@ -20,6 +20,7 @@ import { cartasColecao } from '../tcg/src/cartas-colecao.ts';
 import type { CartaDef, Catalogo } from '../tcg/src/tipos.ts';
 // @ts-ignore: módulo JS do app de testes (textos gerados a partir da mecânica)
 import { textoCarta } from '../tcg/app/textos.js';
+import { aplicarValoresDoSite } from './valores.ts';
 
 const aqui = (p: string) => fileURLToPath(new URL(p, import.meta.url));
 const raizArcano = aqui('../');
@@ -62,7 +63,7 @@ function dados(artes: Map<string, Arte>, ident: Identidade) {
   const ctx = contextoDe(v);
   const catalogo: Catalogo = { cartas: { ...ctx.catalogo.cartas }, conjuradores: {} };
   for (const [id, c] of Object.entries(ctx.catalogo.conjuradores)) if (id !== 'padrao') catalogo.conjuradores[id] = c;
-  const visual: Record<string, { arte: string | null; raridade: string; nomeMecanico?: string }> = {};
+  const visual: Record<string, { arte: string | null; raridade: string | null; nomeMecanico?: string }> = {};
   const usadas = new Map<string, string>();
   const usar = (arte: string, quem: string) => {
     if (!artes.has(arte)) throw new Error(`Arte desconhecida em ${quem}: ${arte}`);
@@ -75,22 +76,25 @@ function dados(artes: Map<string, Arte>, ident: Identidade) {
     const { arte, ...def } = c;
     catalogo.cartas[c.id] = def as CartaDef;
     usar(arte, c.id);
-    visual[c.id] = { arte, raridade: raridade(c, ident) };
+    visual[c.id] = { arte, raridade: null };
   }
   for (const [cid, c] of Object.entries(catalogo.cartas)) {
     if (visual[cid]) continue;
     const arte = ident.cartas[cid] ?? null;
     if (arte) {
       usar(arte, cid);
-      visual[cid] = { arte, raridade: raridade(c, ident), nomeMecanico: c.nome };
+      visual[cid] = { arte, raridade: null, nomeMecanico: c.nome };
       catalogo.cartas[cid] = { ...c, nome: artes.get(arte)!.titulo };
-    } else visual[cid] = { arte: null, raridade: c.tipo === 'item' ? 'comum' : raridade(c, ident) };
+    } else visual[cid] = { arte: null, raridade: null };
   }
   for (const [cid, c] of Object.entries(catalogo.cartas)) if (!c.texto) catalogo.cartas[cid] = { ...c, texto: textoCarta(c) };
   const baralhos = ctx.arqs.map((a) => ({
     id: `pronto-${a.conjurador}`, conjurador: a.conjurador, nome: `${catalogo.conjuradores[a.conjurador].nome.split(',')[0]} (pronto)`,
     estilo: estiloDe(a, v), lista: a.lista, itens: a.itens ?? [],
   }));
+  // Valores (pedido do autor, 03/10, noite): sem carta neutra, 1 Valor quase sempre, 9 minas; baralhos prontos só com os Valores do Conjurador
+  const valoresSite = aplicarValoresDoSite(catalogo, baralhos, visual);
+  console.log(`Valores: ${JSON.stringify(valoresSite.porQtd)} (nº de Valores → cartas); por Valor ${JSON.stringify(valoresSite.porValor)}; ${valoresSite.trocas.length} troca(s) nos baralhos prontos.`);
   // Limite de cópias (pedido do autor, 03/10: até 3): o excesso dos baralhos prontos passa para outras cartas do mesmo
   // baralho que ainda têm menos de 3, de preferência do mesmo tipo e custo próximo. As simulações (tcg/sim) não mudam.
   const ajustesCopias: string[] = [];
@@ -119,6 +123,11 @@ function dados(artes: Map<string, Arte>, ident: Identidade) {
   }
   const conteudo = {
     variante: v.id, regras: { ...REGRAS_PADRAO, ...regrasDe(v) }, catalogo, baralhos, visual,
+    artesFinais: artesFinaisAprovadas(catalogo),
+    /** Mina Funda de cada Valor (o construtor completa o baralho com as do Conjurador). */
+    minas: valoresSite.minas,
+    /** O GPT já entregou o módulo de efeitos da mesa (public/js/mesa-efeitos-codex.js)? */
+    efeitosCodex: existsSync(publico + 'js/mesa-efeitos-codex.js'),
     conjuradoresArte: ident.conjuradores, cenarios: ident.cenarios, maxCopias: MAX_COPIAS, semLimite: SEM_LIMITE, tamanhoBaralho: 60,
   };
   const versao = createHash('sha1').update(JSON.stringify(conteudo)).digest('hex').slice(0, 10);
@@ -129,6 +138,29 @@ async function reduzir(origem: string, destino: string, largura: number): Promis
   if (existsSync(destino) && statSync(destino).mtimeMs >= statSync(origem).mtimeMs) return;
   garantir(dirname(destino));
   await sharp(origem).resize({ width: largura, withoutEnlargement: true }).webp({ quality: 82, alphaQuality: 90 }).toFile(destino);
+}
+
+/** Artes finais das cartas feitas pelo GPT. Fonte: o mapa corrente do Codex (cartas/entregas/lote-site-v1.visual.json,
+ *  campo "arquivo", que pode ter hash no nome, p.ex. os Conjuradores com cenário de 04/10). Só entram as aprovadas
+ *  (estado "aprovada..." ou okGpt). Chave: id da carta, ou "conjurador-<id>"; valor: nome do arquivo sem extensão
+ *  (muda junto com a arte, então o navegador não fica com a imagem antiga no cache). */
+const PASTA_FINAIS = raizArcano + 'arte/cartas-site/';
+const MAPA_FINAIS = raizArcano + 'cartas/entregas/lote-site-v1.visual.json';
+const origemFinal = new Map<string, string>();
+function artesFinaisAprovadas(cat: Catalogo): Record<string, string> {
+  if (!existsSync(MAPA_FINAIS)) return {};
+  const itens = (JSON.parse(readFileSync(MAPA_FINAIS, 'utf8')).cartas ?? []) as { id: string; arquivo?: string; estado?: string; okGpt?: boolean }[];
+  const r: Record<string, string> = {};
+  for (const i of itens) {
+    const aprovada = i.okGpt === true || /^aprovad/.test(i.estado ?? '');
+    const existe = cat.cartas[i.id] || cat.conjuradores[i.id.replace(/^conjurador-/, '')];
+    const arquivo = i.arquivo ? raizArcano + '../' + i.arquivo : PASTA_FINAIS + i.id + '.png';
+    if (!aprovada || !existe || !existsSync(arquivo)) continue;
+    const nome = arquivo.replace(/^.*[\/]/, '').replace(/.png$/i, '');
+    r[i.id] = nome;
+    origemFinal.set(nome, arquivo);
+  }
+  return r;
 }
 
 async function artesDoSite(artes: Map<string, Arte>, d: ReturnType<typeof dados>): Promise<number> {
@@ -142,6 +174,8 @@ async function artesDoSite(artes: Map<string, Arte>, d: ReturnType<typeof dados>
   const deConj = new Set(Object.values(d.conjuradoresArte));
   for (const a of artes.keys()) if (!deConj.has(a)) add(a, 480);
   for (const a of Object.values(d.conjuradoresArte)) add(a, 640);
+  // 1024 px de largura: nítida na carta ampliada sem levar os PNG nativos (~3 MB cada) para o site
+  for (const nome of Object.values(d.artesFinais)) tarefas.push([origemFinal.get(nome)!, `${publico}arte/finais/${nome}.webp`, 1024]);
   const cen = d.cenarios;
   for (const id of new Set([...Object.entries(cen).filter(([k]) => k !== 'valores').map(([, x]) => x as string), ...Object.values(cen.valores)])) { add(id, 1600, 'arte/cenarios/'); add(id, 420, 'arte/cenarios/mini/'); }
   let feitas = 0;
@@ -177,6 +211,7 @@ export async function construirSite(): Promise<{ versao: string }> {
   const n = await artesDoSite(artes, d);
   await kit();
   const nCartas = Object.keys(d.catalogo.cartas).length;
+  console.log(`online/public: ${Object.keys(d.artesFinais).length} arte(s) final(is) aprovada(s) pelo GPT.`);
   console.log(`online/public: versão ${d.versao}, ${nCartas} cartas (${cartasColecao.length} da coleção nova), ${Object.keys(d.catalogo.conjuradores).length} Conjuradores, ${d.baralhos.length} baralhos prontos, ${n} artes.`);
   return { versao: d.versao };
 }

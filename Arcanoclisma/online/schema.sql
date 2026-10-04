@@ -18,13 +18,15 @@ CREATE TABLE IF NOT EXISTS partidas (
 CREATE INDEX IF NOT EXISTS partidas_fim ON partidas(fim);
 CREATE TABLE IF NOT EXISTS opinioes (
   id TEXT PRIMARY KEY, usuario TEXT NOT NULL, tipo TEXT NOT NULL, nota INTEGER, texto TEXT NOT NULL,
-  contexto TEXT, estado TEXT NOT NULL DEFAULT 'novo', resposta TEXT, pai TEXT, criado INTEGER NOT NULL
+  contexto TEXT, estado TEXT NOT NULL DEFAULT 'novo', resposta TEXT, pai TEXT, criado INTEGER NOT NULL,
+  claude INTEGER -- diagnóstico: 1 = Yes (o Claude lê), 0 = No, NULL = não marcado
 );
 CREATE INDEX IF NOT EXISTS opinioes_criado ON opinioes(criado);
 CREATE INDEX IF NOT EXISTS opinioes_pai ON opinioes(pai);
 CREATE TABLE IF NOT EXISTS ideias (
   id TEXT PRIMARY KEY, usuario TEXT NOT NULL, categoria TEXT NOT NULL, titulo TEXT NOT NULL, texto TEXT NOT NULL,
-  estado TEXT NOT NULL DEFAULT 'nova', resposta TEXT, votos INTEGER NOT NULL DEFAULT 0, criado INTEGER NOT NULL
+  estado TEXT NOT NULL DEFAULT 'nova', resposta TEXT, votos INTEGER NOT NULL DEFAULT 0, criado INTEGER NOT NULL,
+  claude INTEGER
 );
 CREATE TABLE IF NOT EXISTS votos (ideia TEXT NOT NULL, usuario TEXT NOT NULL, PRIMARY KEY (ideia, usuario));
 -- Edições do autor (tela Editor): uma linha por salvamento; a mais nova vale. A sala online guarda a versão do início da partida.

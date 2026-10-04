@@ -18,7 +18,7 @@ function cartaoBaralho(b, { autor, acoes = '' } = {}) {
 export async function telaBaralhos(tela, partes, ctx) {
   ctx.fundo(cenario('baralhos'));
   tela.innerHTML = `<div class="titulo-secao"><h1>Baralhos</h1><a class="botao primario" href="#/construtor/novo">+ Montar baralho</a></div>
-    <p class="peq">Regra das cores: o baralho tem ${TAM} cartas, só com cartas sem Valor ou de um dos 2 Valores do Conjurador, no máximo ${DADOS.maxCopias} cópias de cada carta. Antes da partida você escolhe um Canal, uma Armadura e um Extra.</p>
+    <p class="peq">Regra das cores: o baralho tem ${TAM} cartas, só com cartas dos 2 Valores do Conjurador (a cor da bolinha do custo), no máximo ${DADOS.maxCopias} cópias de cada carta. Antes da partida você escolhe um Canal, uma Armadura e um Extra.</p>
     <div class="abas"><button data-aba="meus" class="ativo">Meus</button><button data-aba="prontos">Prontos</button><button data-aba="comunidade">Comunidade</button><button data-aba="colecao">Coleção</button></div>
     <div id="lista-baralhos"><div class="girando"></div></div>`;
   const area = $('#lista-baralhos');
@@ -132,7 +132,7 @@ function montar(tela, b, ctx) {
       <h3>Side deck (itens)</h3><div class="ct-itens"></div>
       <label class="opcao-linha"><input type="checkbox" id="publico" ${b.publico ? 'checked' : ''}> Público (outros podem ver e enfrentar com o bot)</label>
       <div class="ct-erros peq"></div>
-      <div class="linha-botoes"><button class="botao primario" data-salvar>Salvar</button><button class="botao" data-completar>Completar com ${esc(carta('base-recurso').nome)}</button><button class="botao fantasma" data-limpar>Limpar</button></div>
+      <div class="linha-botoes"><button class="botao primario" data-salvar>Salvar</button><button class="botao" data-completar>Completar com Minas Fundas</button><button class="botao fantasma" data-limpar>Limpar</button></div>
     </div></div>`;
   const pode = (x) => cartaServe(x, b.conjurador);
   const limite = (idc) => (DADOS.semLimite.includes(idc) ? Infinity : DADOS.maxCopias);
@@ -150,7 +150,7 @@ function montar(tela, b, ctx) {
     $('.ct-curva', tela).innerHTML = curva.map((k, i) => `<div class="barra-curva" title="${k} carta(s) de custo ${i}${i === 8 ? '+' : ''}"><i style="height:${(k / max) * 100}%"></i><span>${i}${i === 8 ? '+' : ''}</span></div>`).join('');
     const itens = [...qtd].sort(([a], [z]) => carta(a).custo - carta(z).custo || carta(a).nome.localeCompare(carta(z).nome));
     $('.ct-lista', tela).innerHTML = itens.map(([idc, k]) => `<div class="ct-linha ${pode(carta(idc)) ? '' : 'invalida'}"><span class="ct-custo">${carta(idc).custo}</span><span class="ct-nome" data-zoom="${idc}">${esc(carta(idc).nome)}</span><button class="botao peq fantasma" data-menos="${idc}">−</button><b>${k}</b><button class="botao peq fantasma" data-mais="${idc}">+</button></div>`).join('') || '<p class="peq">Clique nas cartas à esquerda para adicionar.</p>';
-    $('.ct-itens', tela).innerHTML = ['canal', 'armadura', 'extra'].map((esp) => `<label class="campo">${{ canal: 'Canal (arma)', armadura: 'Armadura', extra: 'Extra' }[esp]}<select data-slot="${esp}"><option value="">nenhum</option>${itensDoConjurador(b.conjurador).filter((x) => x.categoriaItem === esp).map((x) => `<option value="${x.id}" ${b.itens.includes(x.id) ? 'selected' : ''}>${esc(x.nome)}: ${esc(x.texto.replace(/^[^.]+\.\s*/, ''))}</option>`).join('')}</select></label>`).join('');
+    $('.ct-itens', tela).innerHTML = ['canal', 'armadura', 'extra'].map((esp) => `<label class="campo">${{ canal: 'Canal (arma, foco arcano ou transcritor)', armadura: 'Armadura', extra: 'Extra' }[esp]}<select data-slot="${esp}"><option value="">nenhum</option>${itensDoConjurador(b.conjurador).filter((x) => x.categoriaItem === esp).map((x) => `<option value="${x.id}" ${b.itens.includes(x.id) ? 'selected' : ''}>${esc(x.nome)}: ${esc(x.texto.replace(/^[^.]+\.\s*/, ''))}</option>`).join('')}</select></label>`).join('');
     const erros = [];
     if (n !== TAM) erros.push(n < TAM ? `Faltam ${TAM - n} cartas.` : `Sobram ${n - TAM} cartas.`);
     for (const [idc, k] of qtd) { if (!pode(carta(idc))) erros.push(`${carta(idc).nome} não combina com os Valores.`); if (k > limite(idc)) erros.push(`${carta(idc).nome}: no máximo ${DADOS.maxCopias}.`); }
@@ -182,7 +182,18 @@ function montar(tela, b, ctx) {
     if (bt.matches('[data-voltar]')) return ctx.navegar('baralhos');
     if (bt.matches('[data-trocar]')) return escolherConjurador(tela, ctx, (novo) => { b.conjurador = novo; b.itens = prontoDe(novo).itens; b.lista = [...qtd]; montar(tela, b, ctx); });
     if (bt.matches('[data-limpar]')) { if (await confirmar('Tirar todas as cartas?')) { qtd.clear(); desenharLista(); } return; }
-    if (bt.matches('[data-completar]')) { const n = [...qtd.values()].reduce((s, k) => s + k, 0); if (n < TAM) { qtd.set('base-recurso', (qtd.get('base-recurso') ?? 0) + TAM - n); desenharLista(); } return; }
+    if (bt.matches('[data-completar]')) {
+      // as Minas Fundas dos Valores do Conjurador, até o limite de cópias de cada uma
+      let falta = TAM - [...qtd.values()].reduce((s, k) => s + k, 0);
+      for (const v of conj(b.conjurador).valores) {
+        const id = DADOS.minas?.[v];
+        if (!id || falta <= 0) continue;
+        const pode = Math.min(falta, DADOS.maxCopias - (qtd.get(id) ?? 0));
+        if (pode > 0) { qtd.set(id, (qtd.get(id) ?? 0) + pode); falta -= pode; }
+      }
+      if (falta > 0) avisar(`Faltam ${falta} carta(s): as Minas Fundas já estão no limite de ${DADOS.maxCopias} cópias.`, 'info', 5000);
+      desenharLista(); return;
+    }
     if (bt.matches('[data-salvar]')) {
       try {
         const r = await api('/baralhos', { corpo: { id: b.id, nome: $('#nome-bar', tela).value, conjurador: b.conjurador, lista: [...qtd], itens: b.itens, publico: $('#publico', tela).checked } });

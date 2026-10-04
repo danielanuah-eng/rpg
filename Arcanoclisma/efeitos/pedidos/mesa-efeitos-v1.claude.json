@@ -1,0 +1,2811 @@
+{
+ "tarefaId": "mesa-efeitos-v1",
+ "autor": "Claude",
+ "estado": "solicitado",
+ "necessidadeAtual": true,
+ "versao": 1,
+ "atualizadoEm": "2026-10-03",
+ "objetivoAtual": "Efeitos e movimentos da mesa do site online: entrada em campo, resolução de cada magia e colisão de cada carta.",
+ "pedidoDoAutor": [
+  "Efeitos de quando a carta é jogada: perspectiva de quando ela sai da mão e entra no campo (a carta pode ser arrastada até o campo).",
+  "Efeito de resolução para cada magia: o efeito indo na direção do alvo, ou acontecendo, ou entrando em campo, com uma imagem de efeito particular para cada carta.",
+  "Sempre que uma carta bater em outra: a imagem da animação da carta e da perspectiva dela se deitando e se movendo para acertar essa carta (vale para Aliados e Conjuradores; esta ordem do autor, de 03/10, substitui a regra antiga de movimento só genérico para Aliados).",
+  "O GPT cria todas as animações, movimentos e imagens; o Claude só conecta. Imagem só entra no site com o OK do GPT.",
+  "Toda carta nova vem com o efeito da magia dela, sempre adaptado e relacionado à arte da carta (mesmos elementos, cores do Valor, personagem ou objeto da arte)."
+ ],
+ "jaEntregueEUsado": "Ataque e bloqueio genéricos (kit/cartas.css: .card-motion + .attack-generic / .block-generic, 880 ms, terminando deitada) já estão ligados em online/public/js/mesa-ganchos.js.",
+ "contratoDeIntegracao": {
+  "arquivo": "Arcanoclisma/online/public/js/mesa-efeitos-codex.js (ES module)",
+  "exporta": "criarEfeitosMesa(raiz) → objeto com os métodos abaixo; cada um pode devolver uma Promise; nenhum envia comando ao jogo.",
+  "metodos": {
+   "entrarEmCampo": "{ el, id, defId, dono, meu } — el é a carta já desenhada no campo (wrapper .cm). Animar a carta saindo da mão (sua: faixa de baixo; rival: faixa de cima) e pousando no campo, com perspectiva.",
+   "resolver": "{ item, defId, origemEl, alvoEl, alvoRect, meu } — item é o item da pilha que acabou de sair (tipo carta/gatilho/ataque; item.alvo é o id do alvo). Mostrar o efeito de resolução da carta defId.",
+   "colidir": "{ atacanteEl, alvoEl, atacanteRect, alvoRect, atacanteDefId, alvoDefId, bloqueio, meu } — o dano de combate acabou de acontecer. Mostrar a carta se deitando e indo acertar a outra (perspectiva e imagem próprias de cada carta).",
+   "limpar": "() — a mesa fechou; cancelar o que estiver tocando."
+  },
+  "assets": "Arcanoclisma/online/public/kit/efeitos/<id da carta>/... com manifesto kit/efeitos/manifesto.json: { \"<id>\": { \"arquivos\": [...], \"okGpt\": true, \"duracaoMs\": n } }. Asset sem okGpt true não é usado.",
+  "geometria": "A mesa usa zoom no .mesa-mundo; use getBoundingClientRect() (já com zoom) e desenhe numa camada position:fixed acima da mesa e abaixo das janelas (z-index entre 40 e 59).",
+  "carregamento": "A mesa só importa o módulo quando ele existe no build (DADOS.efeitosCodex, calculado por online/construir.ts); depois da entrega, o Claude reconstrói e publica.",
+  "movimentoReduzido": "Respeitar prefers-reduced-motion (sem animação).",
+  "sigilo": "Cartas ocultas do rival usam só o verso; não ler o DOM de faces escondidas."
+ },
+ "entradaEmCampo": {
+  "cartas": "todas as permanentes (Aliado, Mística, Estrutura)",
+  "formato": "movimento por transformação da carta, com perspectiva; efeito de pouso opcional por Valor"
+ },
+ "resolucao": [
+  {
+   "id": "base-dano-c1",
+   "nome": "Chuva de Faíscas",
+   "tipo": "temporaria",
+   "valores": [
+    "primitivum"
+   ],
+   "texto": "Causa 2 de dano a um alvo.",
+   "arteDaCarta": "chuva-de-faiscas",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-dano-c1-repentina",
+   "nome": "Faísca de Tempestade",
+   "tipo": "temporaria",
+   "valores": [
+    "sublimeyn"
+   ],
+   "texto": "Causa 1 de dano a um alvo.",
+   "arteDaCarta": "faisca-de-tempestade",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-dano-c2",
+   "nome": "Brasa de Forja",
+   "tipo": "temporaria",
+   "valores": [
+    "conflituo"
+   ],
+   "texto": "Causa 3 de dano a um alvo.",
+   "arteDaCarta": "brasa-de-forja",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-dano-c2-repentina",
+   "nome": "Vento Com Rancor",
+   "tipo": "temporaria",
+   "valores": [
+    "cognitium",
+    "eternyr"
+   ],
+   "texto": "Causa 2 de dano a um alvo.",
+   "arteDaCarta": "vento-com-rancor",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-dano-c3",
+   "nome": "Chama que Lembra",
+   "tipo": "temporaria",
+   "valores": [
+    "primitivum"
+   ],
+   "texto": "Causa 4 de dano a um alvo.",
+   "arteDaCarta": "chama-que-lembra",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-dano-c3-repentina",
+   "nome": "Tempestade Viva",
+   "tipo": "temporaria",
+   "valores": [
+    "cognitium"
+   ],
+   "texto": "Causa 3 de dano a um alvo.",
+   "arteDaCarta": "tempestade-viva",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-dano-c4",
+   "nome": "Rasgo Faminto",
+   "tipo": "temporaria",
+   "valores": [
+    "primitivum"
+   ],
+   "texto": "Causa 5 de dano a um alvo.",
+   "arteDaCarta": "rasgo-faminto",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-dano-c4-repentina",
+   "nome": "Eco de Magia Morta",
+   "tipo": "temporaria",
+   "valores": [
+    "conflituo"
+   ],
+   "texto": "Causa 4 de dano a um alvo.",
+   "arteDaCarta": "eco-de-magia-morta",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-dano-conjurador-c3",
+   "nome": "Olho de Dragão Pálido",
+   "tipo": "temporaria",
+   "valores": [
+    "conflituo"
+   ],
+   "texto": "Causa 3 de dano ao Conjurador inimigo.",
+   "arteDaCarta": "olho-de-dragao-palido",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Conjurador rival",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-dano-conjurador-c5",
+   "nome": "Estilhaço de Disrupto",
+   "tipo": "temporaria",
+   "valores": [
+    "conflituo"
+   ],
+   "texto": "Causa 4 de dano ao Conjurador inimigo.",
+   "arteDaCarta": "estilhaco-de-disrupto",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Conjurador rival",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-comprar-c1",
+   "nome": "Baralho do Arquivo",
+   "tipo": "temporaria",
+   "valores": [
+    "persona"
+   ],
+   "texto": "Olhe as 3 cartas do topo do seu baralho. Ponha 1 na mão e as outras no fundo do baralho.",
+   "arteDaCarta": "baralho-do-arquivo",
+   "quando": "ao resolver da pilha",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-comprar-c3",
+   "nome": "Livro Que Lê Você",
+   "tipo": "temporaria",
+   "valores": [
+    "alvorum",
+    "sublimeyn"
+   ],
+   "texto": "Compre 2 cartas.",
+   "arteDaCarta": "livro-que-le-voce",
+   "quando": "ao resolver da pilha",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-comprar-c2-repentina",
+   "nome": "Pensamento Solto",
+   "tipo": "temporaria",
+   "valores": [
+    "sublimeyn"
+   ],
+   "texto": "Compre 1 carta.",
+   "arteDaCarta": "pensamento-solto",
+   "quando": "ao resolver da pilha",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-curar-c2",
+   "nome": "Sementes de Um Dia",
+   "tipo": "temporaria",
+   "valores": [
+    "morbidyum"
+   ],
+   "texto": "Cure 8 de dano de um alvo e ganhe 1 Arcano.",
+   "arteDaCarta": "sementes-de-um-dia",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-curar-c4",
+   "nome": "Relicário da Terceira Vida",
+   "tipo": "temporaria",
+   "valores": [
+    "morbidyum"
+   ],
+   "texto": "Cure 15 de dano de um alvo e compre 1.",
+   "arteDaCarta": "relicario-da-terceira-vida",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-destruir-c3",
+   "nome": "Balança de Serath",
+   "tipo": "temporaria",
+   "valores": [
+    "alvorum",
+    "sublimeyn"
+   ],
+   "texto": "Destrua um Aliado ou Mística.",
+   "arteDaCarta": "balanca-de-serath",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-destruir-c4-repentina",
+   "nome": "Sombra Que Ficou",
+   "tipo": "temporaria",
+   "valores": [
+    "sublimeyn"
+   ],
+   "texto": "Destrua um Aliado ou Mística.",
+   "arteDaCarta": "sombra-que-ficou",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-estrutura-c1",
+   "nome": "Vila da Colheita",
+   "tipo": "estrutura",
+   "valores": [
+    "sublimeyn"
+   ],
+   "texto": "Suspenda: ganhe 1 Arcano.",
+   "arteDaCarta": "vila-da-colheita",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-estrutura-c3",
+   "nome": "Biblioteca que Esquece",
+   "tipo": "estrutura",
+   "valores": [
+    "cognitium"
+   ],
+   "texto": "Suspenda e pague 1: compre 1.",
+   "arteDaCarta": "biblioteca-que-esquece",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-dano-conjurador-c1",
+   "nome": "Apito de Eco Longe",
+   "tipo": "temporaria",
+   "valores": [
+    "conflituo"
+   ],
+   "texto": "Causa 1 de dano ao Conjurador inimigo.",
+   "arteDaCarta": "apito-de-eco-longe",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Conjurador rival",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-dano-conjurador-c2",
+   "nome": "Garrafa de Voz",
+   "tipo": "temporaria",
+   "valores": [
+    "conflituo"
+   ],
+   "texto": "Causa 2 de dano ao Conjurador inimigo.",
+   "arteDaCarta": "garrafa-de-voz",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Conjurador rival",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-dano-conjurador-c4",
+   "nome": "Luneta do Fim",
+   "tipo": "temporaria",
+   "valores": [
+    "conflituo"
+   ],
+   "texto": "Causa 4 de dano ao Conjurador inimigo.",
+   "arteDaCarta": "luneta-do-fim",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Conjurador rival",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-curar-c1",
+   "nome": "Lenço das Lágrimas",
+   "tipo": "temporaria",
+   "valores": [
+    "primitivum"
+   ],
+   "texto": "Cure 5 de dano de um alvo e ganhe 1 Arcano.",
+   "arteDaCarta": "lenco-das-lagrimas",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-curar-c3",
+   "nome": "Cálice do Primeiro Barro",
+   "tipo": "temporaria",
+   "valores": [
+    "primitivum"
+   ],
+   "texto": "Cure 11 de dano de um alvo e compre 1.",
+   "arteDaCarta": "calice-do-primeiro-barro",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-curar-c6",
+   "nome": "Aurora Que Desceu",
+   "tipo": "temporaria",
+   "valores": [
+    "morbidyum"
+   ],
+   "texto": "Cure 20 de dano de um alvo e compre 2.",
+   "arteDaCarta": "aurora-que-desceu",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-curar-c8",
+   "nome": "Semente da Floresta Primeira",
+   "tipo": "temporaria",
+   "valores": [
+    "primitivum"
+   ],
+   "texto": "Cure 20 de dano de um alvo e compre 3.",
+   "arteDaCarta": "semente-da-floresta-primeira",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-estrutura-c3-enfermaria",
+   "nome": "Aldeia da Curandeira",
+   "tipo": "estrutura",
+   "valores": [
+    "morbidyum"
+   ],
+   "texto": "Suspenda: cure 3 de um alvo.",
+   "arteDaCarta": "aldeia-da-curandeira",
+   "quando": "ao resolver a ativação",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Aliado escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-estrutura-c4-torre",
+   "nome": "Torre dos Protetores",
+   "tipo": "estrutura",
+   "valores": [
+    "conflituo"
+   ],
+   "texto": "Suspenda e pague 1: cause 2 de dano a um alvo.",
+   "arteDaCarta": "torre-dos-protetores",
+   "quando": "ao resolver a ativação",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-estrutura-c4-fonte",
+   "nome": "Porto de Vidro",
+   "tipo": "estrutura",
+   "valores": [
+    "primitivum",
+    "alvorum"
+   ],
+   "texto": "Conta como 1 carta no Grau. Suspenda: ganhe 2 Arcano.",
+   "arteDaCarta": "porto-de-vidro",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-aliado-recurso-c1",
+   "nome": "Estudante da Escola de Magia",
+   "tipo": "aliado",
+   "valores": [
+    "sublimeyn"
+   ],
+   "texto": "Suspenda: ganhe 1 Arcano.",
+   "arteDaCarta": "estudante-da-escola-de-magia",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-aliado-recurso-c3",
+   "nome": "Ferreira-Alquimista",
+   "tipo": "aliado",
+   "valores": [
+    "alvorum"
+   ],
+   "texto": "Conta como 1 carta no Grau. Suspenda: ganhe 1 Arcano.",
+   "arteDaCarta": "ferreira-alquimista",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-aliado-recurso-c5",
+   "nome": "Professora da Escola de Magia",
+   "tipo": "aliado",
+   "valores": [
+    "primitivum",
+    "alvorum"
+   ],
+   "texto": "Conta como 1 carta no Grau. Suspenda: ganhe 2 Arcano.",
+   "arteDaCarta": "professora-da-escola-de-magia",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-estrutura-c6-nucleo",
+   "nome": "Forja dos Mil Golpes",
+   "tipo": "estrutura",
+   "valores": [
+    "alvorum"
+   ],
+   "texto": "Conta como 1 carta no Grau. Suspenda: ganhe 3 Arcano.",
+   "arteDaCarta": "forja-dos-mil-golpes",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-estrutura-c8-reator",
+   "nome": "A boca da Voragem",
+   "tipo": "estrutura",
+   "valores": [
+    "alvorum"
+   ],
+   "texto": "Conta como 2 cartas no Grau. Suspenda: ganhe 4 Arcano.",
+   "arteDaCarta": "a-boca-da-voragem",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "base-aliado-recurso-c7",
+   "nome": "O Antigo Bibliotecário",
+   "tipo": "aliado",
+   "valores": [
+    "primitivum"
+   ],
+   "texto": "Conta como 1 carta no Grau. Suspenda: ganhe 3 Arcano.",
+   "arteDaCarta": "o-antigo-bibliotecario",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "eternyr-comprar-c1",
+   "nome": "Tinteiro de Mapas",
+   "tipo": "temporaria",
+   "valores": [
+    "eternyr"
+   ],
+   "texto": "Compre 1 carta.",
+   "arteDaCarta": "tinteiro-de-mapas",
+   "quando": "ao resolver da pilha",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "eternyr-comprar-c2",
+   "nome": "Ampulheta de Um Minuto",
+   "tipo": "temporaria",
+   "valores": [
+    "eternyr"
+   ],
+   "texto": "Compre 2 cartas.",
+   "arteDaCarta": "ampulheta-de-um-minuto",
+   "quando": "ao resolver da pilha",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "eternyr-comprar-c3",
+   "nome": "Anel de Tique",
+   "tipo": "temporaria",
+   "valores": [
+    "eternyr"
+   ],
+   "texto": "Compre 2 cartas.",
+   "arteDaCarta": "anel-de-tique",
+   "quando": "ao resolver da pilha",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "eternyr-comprar-c4",
+   "nome": "O Arquivo Sem Dono",
+   "tipo": "temporaria",
+   "valores": [
+    "eternyr"
+   ],
+   "texto": "Compre 3 cartas.",
+   "arteDaCarta": "o-arquivo-sem-dono",
+   "quando": "ao resolver da pilha",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "eternyr-comprar-c2-repentina",
+   "nome": "Hora Solta",
+   "tipo": "temporaria",
+   "valores": [
+    "eternyr"
+   ],
+   "texto": "Compre 1 carta.",
+   "arteDaCarta": "hora-solta",
+   "quando": "ao resolver da pilha",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "eternyr-comprar-c3-repentina",
+   "nome": "Menino de Dois Instantes",
+   "tipo": "temporaria",
+   "valores": [
+    "eternyr"
+   ],
+   "texto": "Compre 2 cartas.",
+   "arteDaCarta": "menino-de-dois-instantes",
+   "quando": "ao resolver da pilha",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "eternyr-dano-aliado-c4",
+   "nome": "Relógio Quebrado",
+   "tipo": "temporaria",
+   "valores": [
+    "eternyr"
+   ],
+   "texto": "Causa 6 de dano a um Aliado ou Mística.",
+   "arteDaCarta": "relogio-quebrado",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Aliado escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "eternyr-dano-aliado-c5",
+   "nome": "Nó de Ímpares",
+   "tipo": "temporaria",
+   "valores": [
+    "eternyr"
+   ],
+   "texto": "Causa 8 de dano a um Aliado ou Mística.",
+   "arteDaCarta": "no-de-impares",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Aliado escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "eternyr-dano-aliado-c6",
+   "nome": "Sala Que É Um Ano",
+   "tipo": "temporaria",
+   "valores": [
+    "eternyr"
+   ],
+   "texto": "Causa 9 de dano a um Aliado ou Mística.",
+   "arteDaCarta": "sala-que-e-um-ano",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Aliado escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "eternyr-dano-jogador-c5",
+   "nome": "O Entretempo",
+   "tipo": "temporaria",
+   "valores": [
+    "eternyr"
+   ],
+   "texto": "Causa 4 de dano ao Conjurador inimigo.",
+   "arteDaCarta": "o-entretempo",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Conjurador rival",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "eternyr-destruir-c6-g8",
+   "nome": "A Voragem",
+   "tipo": "temporaria",
+   "valores": [
+    "eternyr"
+   ],
+   "texto": "Destrua um alvo e compre 4 cartas.",
+   "arteDaCarta": "a-voragem",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "bal-varredura-c3",
+   "nome": "Enxame de Vespas",
+   "tipo": "temporaria",
+   "valores": [
+    "alvorum"
+   ],
+   "texto": "Causa 2 de dano a cada Aliado do oponente.",
+   "arteDaCarta": "enxame-de-vespas",
+   "quando": "ao resolver da pilha",
+   "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+   "alvo": "todos os Aliados afetados",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "bal-varredura-c5",
+   "nome": "Redemoinho de Areia",
+   "tipo": "temporaria",
+   "valores": [
+    "alvorum"
+   ],
+   "texto": "Causa 3 de dano a cada Aliado do oponente.",
+   "arteDaCarta": "redemoinho-de-areia",
+   "quando": "ao resolver da pilha",
+   "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+   "alvo": "todos os Aliados afetados",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "bal-remocao-grau-c3",
+   "nome": "Raiz Errada",
+   "tipo": "temporaria",
+   "valores": [
+    "dominum"
+   ],
+   "texto": "Causa 1 + o número de cartas no seu Grau de dano a um Aliado ou Mística.",
+   "arteDaCarta": "raiz-errada",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Aliado escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "bal-estrutura-cerco-c3",
+   "nome": "A Cidade-Muralha",
+   "tipo": "estrutura",
+   "valores": [
+    "dominum"
+   ],
+   "texto": "Suspenda: cause 1 de dano ao Conjurador inimigo.",
+   "arteDaCarta": "a-cidade-muralha",
+   "quando": "ao resolver a ativação",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Conjurador rival",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "bal-devolver-c2-repentina",
+   "nome": "Porta de Bolso",
+   "tipo": "temporaria",
+   "valores": [
+    "sublimeyn"
+   ],
+   "texto": "Devolva um Aliado ou Mística à mão do dono.",
+   "arteDaCarta": "porta-de-bolso",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Aliado escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "bal-anular-c3-repentina",
+   "nome": "Olho-que-Fecha",
+   "tipo": "temporaria",
+   "valores": [
+    "cognitium",
+    "eternyr"
+   ],
+   "texto": "Anule uma carta na pilha.",
+   "arteDaCarta": "olho-que-fecha",
+   "quando": "ao resolver da pilha",
+   "forma": "corte, selo ou apagar sobre a carta inimiga na pilha (lateral direita)",
+   "alvo": "carta na pilha",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "r6-varredura-c2",
+   "nome": "Enxame de Palavras",
+   "tipo": "temporaria",
+   "valores": [
+    "alvorum"
+   ],
+   "texto": "Causa 1 de dano a cada Aliado do oponente.",
+   "arteDaCarta": "enxame-de-palavras",
+   "quando": "ao resolver da pilha",
+   "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+   "alvo": "todos os Aliados afetados",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "r6-ira-c4",
+   "nome": "O Campo Sem Trégua",
+   "tipo": "temporaria",
+   "valores": [
+    "dominum"
+   ],
+   "texto": "Destrua todos os Aliados (os seus também).",
+   "arteDaCarta": "o-campo-sem-tregua",
+   "quando": "ao resolver da pilha",
+   "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+   "alvo": "todos os Aliados afetados",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "r6-por-do-sol-c7",
+   "nome": "Estrada do Crepúsculo",
+   "tipo": "temporaria",
+   "valores": [
+    "dominum"
+   ],
+   "texto": "Destrua todos os Aliados do oponente.",
+   "arteDaCarta": "estrada-do-crepusculo",
+   "quando": "ao resolver da pilha",
+   "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+   "alvo": "todos os Aliados afetados",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "r6-furia-c3",
+   "nome": "Charco Fervente",
+   "tipo": "temporaria",
+   "valores": [
+    "alvorum"
+   ],
+   "texto": "Causa 3 de dano a cada Aliado (os seus também).",
+   "arteDaCarta": "charco-fervente",
+   "quando": "ao resolver da pilha",
+   "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+   "alvo": "todos os Aliados afetados",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "r6-espiao-c4",
+   "nome": "Wyvern-Correio",
+   "tipo": "aliado",
+   "valores": [
+    "persona"
+   ],
+   "texto": "Etéreo. Ao causar dano de combate ao Conjurador inimigo: compre 1 carta.",
+   "arteDaCarta": "wyvern-correio",
+   "quando": "ao entrar em campo / gatilho",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "r6-piromante-c4",
+   "nome": "Aprendiz Descontrolado",
+   "tipo": "aliado",
+   "valores": [
+    "conflituo"
+   ],
+   "texto": "Ao entrar: cause 1 de dano a cada Aliado do oponente.",
+   "arteDaCarta": "aprendiz-descontrolado",
+   "quando": "ao entrar em campo / gatilho",
+   "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+   "alvo": "todos os Aliados afetados",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "r6-fera-cerco-c5",
+   "nome": "Mantícora",
+   "tipo": "aliado",
+   "valores": [
+    "conflituo"
+   ],
+   "texto": "Ao entrar: cause 2 de dano ao Conjurador inimigo e cure 2 do seu Conjurador.",
+   "arteDaCarta": "manticora",
+   "quando": "ao entrar em campo / gatilho",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Conjurador rival",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "r6-presa-trovao-c5",
+   "nome": "Ursa-Mãe",
+   "tipo": "aliado",
+   "valores": [
+    "dominum",
+    "conflituo"
+   ],
+   "texto": "Ao entrar: cure 5 do seu Conjurador.",
+   "arteDaCarta": "ursa-mae",
+   "quando": "ao entrar em campo / gatilho",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "seu Conjurador",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "r6-anjo-c6",
+   "nome": "Anjo do Fechamento",
+   "tipo": "aliado",
+   "valores": [
+    "alvorum"
+   ],
+   "texto": "Etéreo. Ao causar dano de combate ao Conjurador inimigo: cure 4 do seu Conjurador.",
+   "arteDaCarta": "anjo-do-fechamento",
+   "quando": "ao entrar em campo / gatilho",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "seu Conjurador",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "r6-mercador-c7",
+   "nome": "Arquivista Sem Rosto",
+   "tipo": "aliado",
+   "valores": [
+    "cognitium"
+   ],
+   "texto": "Etéreo. Protegido 2. Ao entrar: compre 1 carta. Ao causar dano de combate ao Conjurador inimigo: compre 1 carta.",
+   "arteDaCarta": "arquivista-sem-rosto",
+   "quando": "ao entrar em campo / gatilho",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "r6-dragao-c8",
+   "nome": "Dragão Ancião",
+   "tipo": "aliado",
+   "valores": [
+    "alvorum"
+   ],
+   "texto": "Etéreo. Protegido 1. Ao entrar: cause 2 de dano a cada Aliado do oponente.",
+   "arteDaCarta": "dragao-anciao",
+   "quando": "ao entrar em campo / gatilho",
+   "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+   "alvo": "todos os Aliados afetados",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "item-extra-pocao",
+   "nome": "Poção de cura",
+   "tipo": "item",
+   "valores": [],
+   "texto": "Extra. Consumível: cure 3 do seu Conjurador.",
+   "arteDaCarta": null,
+   "quando": "ao resolver a ativação",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "seu Conjurador",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "item-extra-elixir",
+   "nome": "Elixir de foco",
+   "tipo": "item",
+   "valores": [],
+   "texto": "Extra. Consumível: ganhe 2 de Arcano.",
+   "arteDaCarta": null,
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-ilusionista-do-labirinto",
+   "nome": "Ilusionista do Labirinto",
+   "tipo": "aliado",
+   "valores": [
+    "sublimeyn"
+   ],
+   "texto": "Ao entrar: devolva um Aliado ou Mística à mão do dono.",
+   "arteDaCarta": "ilusionista-do-labirinto",
+   "quando": "ao entrar em campo / gatilho",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Aliado escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-ceifadora-da-peste",
+   "nome": "Ceifadora da Peste",
+   "tipo": "aliado",
+   "valores": [
+    "morbidyum"
+   ],
+   "texto": "Ao entrar: destrua um Aliado ou Mística.",
+   "arteDaCarta": "ceifadora-da-peste",
+   "quando": "ao entrar em campo / gatilho",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Aliado escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-contrabandista-de-porto",
+   "nome": "Contrabandista de Porto",
+   "tipo": "aliado",
+   "valores": [
+    "persona"
+   ],
+   "texto": "Etéreo. Ao causar dano de combate ao Conjurador inimigo: ganhe 1 de Arcano.",
+   "arteDaCarta": "contrabandista-de-porto",
+   "quando": "ao entrar em campo / gatilho",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-curandeira-de-ervas",
+   "nome": "Curandeira de Ervas",
+   "tipo": "aliado",
+   "valores": [
+    "primitivum"
+   ],
+   "texto": "Suspenda: cure 2 de dano de um alvo.",
+   "arteDaCarta": "curandeira-de-ervas",
+   "quando": "ao resolver a ativação",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-ninho-de-estrelas",
+   "nome": "Ninho de Estrelas",
+   "tipo": "mistica",
+   "valores": [
+    "sublimeyn"
+   ],
+   "texto": "Suspenda e pague 1: cure 3 de dano de um alvo.",
+   "arteDaCarta": "ninho-de-estrelas",
+   "quando": "ao resolver a ativação",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-coroa-sem-rei",
+   "nome": "Coroa sem Rei",
+   "tipo": "mistica",
+   "valores": [
+    "dominum"
+   ],
+   "texto": "Ao entrar: compre 1 carta.",
+   "arteDaCarta": "coroa-sem-rei",
+   "quando": "ao entrar em campo / gatilho",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-tapete-de-duas-casas",
+   "nome": "Tapete de Duas Casas",
+   "tipo": "estrutura",
+   "valores": [
+    "alvorum"
+   ],
+   "texto": "Suspenda: a primeira carta que você jogar neste turno custa 1 a menos.",
+   "arteDaCarta": "tapete-de-duas-casas",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-primeira-moeda",
+   "nome": "A Primeira Moeda",
+   "tipo": "temporaria",
+   "valores": [
+    "persona"
+   ],
+   "texto": "Compre 2 cartas e o oponente ganha 1 de Arcano.",
+   "arteDaCarta": "a-primeira-moeda",
+   "quando": "ao resolver da pilha",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-sino-dos-juramentados",
+   "nome": "Sino dos Juramentados",
+   "tipo": "temporaria",
+   "valores": [
+    "conflituo"
+   ],
+   "texto": "Cause 5 de dano ao Conjurador inimigo. O oponente pode pagar 3 para anulá-la.",
+   "arteDaCarta": "sino-dos-juramentados",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Conjurador rival",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-ancora-do-mesmo-dia",
+   "nome": "Âncora do Mesmo Dia",
+   "tipo": "temporaria",
+   "valores": [
+    "cognitium"
+   ],
+   "texto": "Bana uma carta da sua mão; no seu próximo turno ela pode ser jogada custando 3 a menos.",
+   "arteDaCarta": "ancora-do-mesmo-dia",
+   "quando": "ao resolver da pilha",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-cemiterio-que-respira",
+   "nome": "Cemitério que Respira",
+   "tipo": "temporaria",
+   "valores": [
+    "morbidyum"
+   ],
+   "texto": "Ponha no seu campo um Aliado de qualquer cemitério, pagando o custo dele + 0.",
+   "arteDaCarta": "cemiterio-que-respira",
+   "quando": "ao resolver da pilha",
+   "forma": "algo se ergue do cemitério e entra em campo",
+   "alvo": "Aliado no cemitério",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-cadeado-ciumento",
+   "nome": "Cadeado Ciumento",
+   "tipo": "temporaria",
+   "valores": [
+    "dominum"
+   ],
+   "texto": "Neste turno você pode jogar do cemitério uma carta que anula outra (ela é banida ao resolver) e compre 1 carta.",
+   "arteDaCarta": "cadeado-ciumento",
+   "quando": "ao resolver da pilha",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-frasco-de-mare",
+   "nome": "Frasco de Maré",
+   "tipo": "temporaria",
+   "valores": [
+    "primitivum"
+   ],
+   "texto": "Ganhe 3 de Arcano.",
+   "arteDaCarta": "frasco-de-mare",
+   "quando": "ao resolver da pilha",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-chapeu-de-chuva",
+   "nome": "Chapéu de Chuva Particular",
+   "tipo": "temporaria",
+   "valores": [
+    "morbidyum"
+   ],
+   "texto": "Cure 4 de dano do seu Conjurador.",
+   "arteDaCarta": "chapeu-de-chuva-particular",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "seu Conjurador",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-barco-dobravel",
+   "nome": "Barco Dobrável",
+   "tipo": "temporaria",
+   "valores": [
+    "sublimeyn"
+   ],
+   "texto": "Devolva um Aliado ou Mística seu à mão do dono.",
+   "arteDaCarta": "barco-dobravel",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Aliado seu escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-mapa-do-reino",
+   "nome": "Mapa do Reino",
+   "tipo": "temporaria",
+   "valores": [
+    "cognitium"
+   ],
+   "texto": "Olhe as 5 cartas do topo do seu baralho; ponha 2 na mão e as outras no fundo do baralho.",
+   "arteDaCarta": "mapa-do-reino",
+   "quando": "ao resolver da pilha",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-arqueira-da-ultima-flecha",
+   "nome": "Última Flecha",
+   "tipo": "temporaria",
+   "valores": [
+    "conflituo"
+   ],
+   "texto": "Cause 3 de dano a um Aliado ou Mística.",
+   "arteDaCarta": "arqueira-da-ultima-flecha",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Aliado escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-mare-de-sobras",
+   "nome": "Maré de Sobras",
+   "tipo": "temporaria",
+   "valores": [
+    "morbidyum"
+   ],
+   "texto": "Cause 2 de dano a cada Aliado (inclusive os seus) e compre 1 carta.",
+   "arteDaCarta": "mare-de-sobras",
+   "quando": "ao resolver da pilha",
+   "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+   "alvo": "todos os Aliados afetados",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "col-descartar-grau",
+   "nome": "Coroa Riscada",
+   "tipo": "temporaria",
+   "valores": [
+    "dominum"
+   ],
+   "texto": "Para jogar, descarte 1 carta do seu Grau. Destrua um alvo e compre 1 carta.",
+   "arteDaCarta": "coroa-riscada",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "item-extra-sal",
+   "nome": "Sal do Viajante",
+   "tipo": "item",
+   "valores": [],
+   "texto": "Extra. Uso único. Use: olhe as 3 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+   "arteDaCarta": "sal-do-viajante",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "item-extra-dado",
+   "nome": "Dado Honesto",
+   "tipo": "item",
+   "valores": [],
+   "texto": "Extra. Uso único. Use: cause 2 de dano a um alvo.",
+   "arteDaCarta": "dado-honesto",
+   "quando": "ao resolver a ativação",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "item-extra-lanterna",
+   "nome": "Lanterna do Véu",
+   "tipo": "item",
+   "valores": [
+    "sublimeyn",
+    "persona",
+    "eternyr"
+   ],
+   "texto": "Extra. Uso único. Use: devolva um Aliado ou Mística à mão do dono.",
+   "arteDaCarta": "lanterna-do-veu",
+   "quando": "ao resolver a ativação",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Aliado escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "item-extra-relogio",
+   "nome": "Relógio de Bolso Atrasado",
+   "tipo": "item",
+   "valores": [
+    "eternyr",
+    "cognitium",
+    "alvorum"
+   ],
+   "texto": "Extra. Uso único. Use: compre 1 carta e ganhe 1 de Arcano.",
+   "arteDaCarta": "relogio-de-bolso-atrasado",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "item-foco-espelho",
+   "nome": "Espelho da Cidade dos Rostos",
+   "tipo": "item",
+   "valores": [],
+   "texto": "Canal. Foco Arcano. Suspenda o Conjurador e pague 1: o próximo dano ou cura de uma Temporária sua neste turno tem +1.",
+   "arteDaCarta": "espelho-da-cidade-dos-rostos",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "item-foco-pedra",
+   "nome": "Pedra Parada",
+   "tipo": "item",
+   "valores": [],
+   "texto": "Canal. Foco Arcano. Suspenda o Conjurador e descarte 1 carta: o próximo dano ou cura de uma Temporária sua neste turno tem +2.",
+   "arteDaCarta": "pedra-parada",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "item-foco-coroa",
+   "nome": "A Coroa de Vyal",
+   "tipo": "item",
+   "valores": [],
+   "texto": "Canal. Foco Arcano. Suspenda o Conjurador, pague 2 e seu Conjurador toma 2 de dano: o próximo dano ou cura de uma Temporária sua neste turno tem +4.",
+   "arteDaCarta": "a-coroa-de-vyal",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "item-transcritor-pena",
+   "nome": "Pena de Idrael",
+   "tipo": "item",
+   "valores": [],
+   "texto": "Canal. Transcritor. Suspenda o Conjurador e pague 1: olhe as 2 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+   "arteDaCarta": "pena-de-idrael",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "item-transcritor-pagina",
+   "nome": "A Página Arrancada",
+   "tipo": "item",
+   "valores": [],
+   "texto": "Canal. Transcritor. Suspenda o Conjurador e seu Conjurador toma 1 de dano: compre 1 carta.",
+   "arteDaCarta": "a-pagina-arrancada",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "item-transcritor-chave",
+   "nome": "Chave da Voragem",
+   "tipo": "item",
+   "valores": [],
+   "texto": "Canal. Transcritor. Suspenda o Conjurador, pague 2 e descarte 1 carta: compre 3 cartas.",
+   "arteDaCarta": "chave-da-voragem",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "item-extra-ovo",
+   "nome": "Ovo de Wyvern",
+   "tipo": "item",
+   "valores": [],
+   "texto": "Extra de Invocador. Uso único. Suspenda o Conjurador e pague 2: invoque um Wyvern Filhote 2/2.",
+   "arteDaCarta": "ovo-de-wyvern",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "item-extra-luvas",
+   "nome": "Luvas de Força",
+   "tipo": "item",
+   "valores": [],
+   "texto": "Extra de Brigão. Uso único. Seu Conjurador toma 2 de dano: seu Conjurador ganha +2 de Ataque neste turno.",
+   "arteDaCarta": "cordao-de-rhu",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "item-extra-trono",
+   "nome": "Trono Dobrável",
+   "tipo": "item",
+   "valores": [],
+   "texto": "Extra de Parrudão da quebrada. Uso único. Suspenda o Conjurador e pague 1: cure 4 de dano do seu Conjurador.",
+   "arteDaCarta": "trono-dobravel",
+   "quando": "ao resolver a ativação",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "seu Conjurador",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "item-extra-pente",
+   "nome": "Pente das Mil Caras",
+   "tipo": "item",
+   "valores": [],
+   "texto": "Extra de Habilidoso. Uso único. Suspenda o Conjurador e descarte 1 carta: olhe as 3 cartas do topo do seu baralho; ponha 2 na mão e as outras no fundo do baralho.",
+   "arteDaCarta": "pente-das-mil-caras",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "item-extra-balde",
+   "nome": "Balde que Sobe",
+   "tipo": "item",
+   "valores": [],
+   "texto": "Extra de Preparado. Uso único. Suspenda o Conjurador e seu Conjurador toma 1 de dano: ganhe 2 de Arcano e compre 1 carta.",
+   "arteDaCarta": "balde-que-sobe",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-coveiro",
+   "nome": "Coveiro de Vau Grande",
+   "tipo": "aliado",
+   "valores": [
+    "morbidyum"
+   ],
+   "texto": "Ao entrar: olhe as 2 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+   "arteDaCarta": "coveiro-de-vau-grande",
+   "quando": "ao entrar em campo / gatilho",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-embalsamador",
+   "nome": "Embalsamador",
+   "tipo": "aliado",
+   "valores": [
+    "morbidyum"
+   ],
+   "texto": "Suspenda e pague 2: ponha no seu campo um Aliado de qualquer cemitério, pagando o custo dele + 1.",
+   "arteDaCarta": "embalsamador",
+   "quando": "ao resolver a ativação",
+   "forma": "algo se ergue do cemitério e entra em campo",
+   "alvo": "Aliado no cemitério",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-ossario",
+   "nome": "Velho Ossário, o Dragão Pálido",
+   "tipo": "aliado",
+   "valores": [
+    "morbidyum"
+   ],
+   "texto": "Ao entrar: ponha no seu campo um Aliado de qualquer cemitério, pagando o custo dele + 0.",
+   "arteDaCarta": "velho-ossario-dragao-palido",
+   "quando": "ao entrar em campo / gatilho",
+   "forma": "algo se ergue do cemitério e entra em campo",
+   "alvo": "Aliado no cemitério",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-rosto-sem-gente",
+   "nome": "Rosto sem Gente",
+   "tipo": "temporaria",
+   "valores": [
+    "persona"
+   ],
+   "texto": "Devolva um Aliado ou Mística à mão do dono.",
+   "arteDaCarta": "rosto-sem-gente",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Aliado escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-leitura-de-sombras",
+   "nome": "Leitura de Sombras",
+   "tipo": "temporaria",
+   "valores": [
+    "cognitium"
+   ],
+   "texto": "Olhe as 4 cartas do topo do seu baralho; ponha 2 na mão e as outras no fundo do baralho.",
+   "arteDaCarta": "leitor-de-sombras",
+   "quando": "ao resolver da pilha",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-sentenca-do-selo",
+   "nome": "Sentença do Selo",
+   "tipo": "temporaria",
+   "valores": [
+    "dominum"
+   ],
+   "texto": "Destrua um Aliado ou Mística.",
+   "arteDaCarta": "juiz-do-selo",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Aliado escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-luz-da-faroleira",
+   "nome": "Luz da Faroleira",
+   "tipo": "temporaria",
+   "valores": [
+    "alvorum"
+   ],
+   "texto": "Cure 4 de dano do seu Conjurador e compre 1 carta.",
+   "arteDaCarta": "faroleira-de-vau-grande",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "seu Conjurador",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-chamado-da-matilha",
+   "nome": "Chamado da Matilha",
+   "tipo": "temporaria",
+   "valores": [
+    "primitivum"
+   ],
+   "texto": "Cause 2 de dano a cada Aliado do oponente.",
+   "arteDaCarta": "matilha-da-voragem",
+   "quando": "ao resolver da pilha",
+   "forma": "onda que varre o campo inteiro (de um lado ou dos dois)",
+   "alvo": "todos os Aliados afetados",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-quebra-escudos",
+   "nome": "Golpe do Quebra-Escudos",
+   "tipo": "temporaria",
+   "valores": [
+    "conflituo"
+   ],
+   "texto": "Cause 4 de dano a um Aliado ou Mística.",
+   "arteDaCarta": "quebra-escudos",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Aliado escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-nuvem-triste",
+   "nome": "Nuvem Triste",
+   "tipo": "temporaria",
+   "valores": [
+    "sublimeyn"
+   ],
+   "texto": "Devolva um Aliado ou Mística à mão do dono e compre 1 carta.",
+   "arteDaCarta": "nuvem-triste",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Aliado escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-cadeira-de-espera",
+   "nome": "Cadeira de Espera",
+   "tipo": "temporaria",
+   "valores": [
+    "eternyr"
+   ],
+   "texto": "Bana uma carta da sua mão; no seu próximo turno ela pode ser jogada custando 2 a menos.",
+   "arteDaCarta": "cadeira-de-espera",
+   "quando": "ao resolver da pilha",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-ladrao-de-tumulos",
+   "nome": "Saque de Túmulos",
+   "tipo": "temporaria",
+   "valores": [
+    "morbidyum"
+   ],
+   "texto": "Compre 2 cartas.",
+   "arteDaCarta": "ladrao-de-tumulos",
+   "quando": "ao resolver da pilha",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-mascara-do-outro",
+   "nome": "Máscara do Outro",
+   "tipo": "temporaria",
+   "valores": [
+    "persona"
+   ],
+   "texto": "Devolva um Aliado ou Mística à mão do dono.",
+   "arteDaCarta": "mascara-do-outro",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Aliado escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-refutacao",
+   "nome": "Refutação",
+   "tipo": "temporaria",
+   "valores": [
+    "cognitium"
+   ],
+   "texto": "Anule uma carta na pilha.",
+   "arteDaCarta": "professor-de-logica",
+   "quando": "ao resolver da pilha",
+   "forma": "corte, selo ou apagar sobre a carta inimiga na pilha (lateral direita)",
+   "alvo": "carta na pilha",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-lamento-da-carpideira",
+   "nome": "Lamento da Carpideira",
+   "tipo": "temporaria",
+   "valores": [
+    "morbidyum"
+   ],
+   "texto": "Cause 2 de dano a um alvo.",
+   "arteDaCarta": "carpideira",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-hora-roubada",
+   "nome": "Hora Roubada",
+   "tipo": "temporaria",
+   "valores": [
+    "eternyr"
+   ],
+   "texto": "Compre 1 carta.",
+   "arteDaCarta": "relojoeiro-fugitivo",
+   "quando": "ao resolver da pilha",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-selo-subito",
+   "nome": "Selo Súbito",
+   "tipo": "temporaria",
+   "valores": [
+    "alvorum"
+   ],
+   "texto": "Cure 3 de dano de um alvo.",
+   "arteDaCarta": "sentinela-de-selo",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-tiro-de-aluguel",
+   "nome": "Tiro de Aluguel",
+   "tipo": "temporaria",
+   "valores": [
+    "conflituo"
+   ],
+   "texto": "Cause 2 de dano a um alvo.",
+   "arteDaCarta": "pistoleira-de-aluguel",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-espelho-da-serpente",
+   "nome": "Espelho da Serpente",
+   "tipo": "temporaria",
+   "valores": [
+    "sublimeyn"
+   ],
+   "texto": "Devolva um Aliado ou Mística à mão do dono.",
+   "arteDaCarta": "serpente-espelho",
+   "quando": "ao resolver da pilha",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Aliado escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-dama-da-noite",
+   "nome": "A Dama da Noite de Fhim",
+   "tipo": "mistica",
+   "valores": [
+    "morbidyum"
+   ],
+   "texto": "Suspenda: cause 1 de dano ao Conjurador inimigo.",
+   "arteDaCarta": "a-dama-da-noite-de-fhim",
+   "quando": "ao resolver a ativação",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Conjurador rival",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-canto-sem-cantor",
+   "nome": "Canto sem Cantor",
+   "tipo": "mistica",
+   "valores": [
+    "persona"
+   ],
+   "texto": "Suspenda e pague 2: compre 1 carta.",
+   "arteDaCarta": "canto-sem-cantor",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-o-sentido",
+   "nome": "O Sentido",
+   "tipo": "mistica",
+   "valores": [
+    "cognitium"
+   ],
+   "texto": "Suspenda e pague 1: olhe as 2 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+   "arteDaCarta": "sentido",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-tique",
+   "nome": "Tique, o Segundo a Mais",
+   "tipo": "mistica",
+   "valores": [
+    "eternyr"
+   ],
+   "texto": "Ao entrar: compre 1 carta. Suspenda: ganhe 1 de Arcano.",
+   "arteDaCarta": "tique",
+   "quando": "ao entrar em campo / gatilho",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-hael",
+   "nome": "Hael, o Insone",
+   "tipo": "mistica",
+   "valores": [
+    "alvorum"
+   ],
+   "texto": "Suspenda e pague 1: cure 3 de dano de um alvo.",
+   "arteDaCarta": "hael-o-insone",
+   "quando": "ao resolver a ativação",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "carta ou Conjurador escolhido",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-estandarte-sem-exercito",
+   "nome": "Estandarte sem Exército",
+   "tipo": "mistica",
+   "valores": [
+    "dominum"
+   ],
+   "texto": "Protegido 1. Ao entrar: ganhe 1 de Arcano.",
+   "arteDaCarta": "estandarte-sem-exercito",
+   "quando": "ao entrar em campo / gatilho",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-feira-das-mascaras",
+   "nome": "Feira das Máscaras",
+   "tipo": "estrutura",
+   "valores": [
+    "persona"
+   ],
+   "texto": "Suspenda: ganhe 1 de Arcano.",
+   "arteDaCarta": "feira-das-mascaras",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-o-postulario",
+   "nome": "O Postulário",
+   "tipo": "estrutura",
+   "valores": [
+    "cognitium"
+   ],
+   "texto": "Suspenda e pague 1: compre 1 carta.",
+   "arteDaCarta": "o-postulario",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-patio-de-duelos",
+   "nome": "Pátio de Duelos",
+   "tipo": "estrutura",
+   "valores": [
+    "conflituo"
+   ],
+   "texto": "Suspenda: cause 1 de dano ao Conjurador inimigo.",
+   "arteDaCarta": "patio-de-duelos",
+   "quando": "ao resolver a ativação",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "Conjurador rival",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-porto-de-vidro",
+   "nome": "O Porto de Vidro",
+   "tipo": "estrutura",
+   "valores": [
+    "sublimeyn"
+   ],
+   "texto": "Suspenda: ganhe 1 de Arcano.",
+   "arteDaCarta": "o-porto-de-vidro",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-mercado-de-feras",
+   "nome": "Mercado de Feras",
+   "tipo": "estrutura",
+   "valores": [
+    "primitivum"
+   ],
+   "texto": "Suspenda: a primeira carta que você jogar neste turno custa 1 a menos.",
+   "arteDaCarta": "mercado-de-feras",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-estalagem-de-vau",
+   "nome": "Estalagem de Vau Grande",
+   "tipo": "estrutura",
+   "valores": [
+    "dominum"
+   ],
+   "texto": "Suspenda e pague 1: cure 2 de dano do seu Conjurador.",
+   "arteDaCarta": "estalajadeiro-de-vau-grande",
+   "quando": "ao resolver a ativação",
+   "forma": "projétil ou raio que vai de quem conjura até o alvo e o atinge",
+   "alvo": "seu Conjurador",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-vila-do-mesmo-dia",
+   "nome": "Vila do Mesmo Dia",
+   "tipo": "estrutura",
+   "valores": [
+    "eternyr"
+   ],
+   "texto": "Suspenda e pague 2: olhe as 3 cartas do topo do seu baralho; ponha 1 na mão e as outras no fundo do baralho.",
+   "arteDaCarta": "vila-do-mesmo-dia",
+   "quando": "ao resolver a ativação",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  },
+  {
+   "id": "nv-floresta-que-anda",
+   "nome": "Floresta que Anda",
+   "tipo": "estrutura",
+   "valores": [
+    "primitivum"
+   ],
+   "texto": "Conta como 1 carta no Grau. Ao entrar: ganhe 1 de Arcano.",
+   "arteDaCarta": "floresta-que-anda",
+   "quando": "ao entrar em campo / gatilho",
+   "forma": "acontece no lugar, em volta de quem conjura (sem alvo)",
+   "alvo": "nenhum",
+   "duracaoMs": "600–1200",
+   "imagem": "efeito próprio desta carta (cor do Valor, elemento da arte), PNG/WebP com alfa ou sequência/sprite; sem texto"
+  }
+ ],
+ "colisao": [
+  {
+   "id": "lyandra",
+   "nome": "Lyandra, a Domadora de Guerra",
+   "tipo": "conjurador",
+   "valores": [
+    "conflituo",
+    "primitivum"
+   ],
+   "arteDaCarta": "domadora-de-garmhal"
+  },
+  {
+   "id": "carmal",
+   "nome": "Carmal, o Druida Crepuscular",
+   "tipo": "conjurador",
+   "valores": [
+    "primitivum",
+    "alvorum"
+   ],
+   "arteDaCarta": "druida-de-tahwe"
+  },
+  {
+   "id": "ricardo",
+   "nome": "Alquimista Ricardo",
+   "tipo": "conjurador",
+   "valores": [
+    "alvorum",
+    "sublimeyn"
+   ],
+   "arteDaCarta": "alquimista-naufrago"
+  },
+  {
+   "id": "roh",
+   "nome": "Roh, o Ilusionista das Máscaras",
+   "tipo": "conjurador",
+   "valores": [
+    "sublimeyn",
+    "persona"
+   ],
+   "arteDaCarta": "rapaz-do-rosto-mutavel"
+  },
+  {
+   "id": "agnelo",
+   "nome": "Agnelo, o Duelista Sombrio",
+   "tipo": "conjurador",
+   "valores": [
+    "persona",
+    "morbidyum"
+   ],
+   "arteDaCarta": "duelista-da-lamina-vermelha"
+  },
+  {
+   "id": "diastaros",
+   "nome": "Diástaros, o Necromante Vidente",
+   "tipo": "conjurador",
+   "valores": [
+    "morbidyum",
+    "cognitium"
+   ],
+   "arteDaCarta": "medium-do-luto"
+  },
+  {
+   "id": "ana",
+   "nome": "Ana, a Cronista do Tempo",
+   "tipo": "conjurador",
+   "valores": [
+    "cognitium",
+    "eternyr"
+   ],
+   "arteDaCarta": "viajante-do-entretempo"
+  },
+  {
+   "id": "mitonho",
+   "nome": "Mitonho, o Carcereiro Temporal",
+   "tipo": "conjurador",
+   "valores": [
+    "eternyr",
+    "dominum"
+   ],
+   "arteDaCarta": "carcereiro"
+  },
+  {
+   "id": "osmar",
+   "nome": "Osmar, o Capataz de Ferro",
+   "tipo": "conjurador",
+   "valores": [
+    "dominum",
+    "conflituo"
+   ],
+   "arteDaCarta": "senhor-da-trincheira"
+  },
+  {
+   "id": "base-aliado-c1-equilibrado",
+   "nome": "Recruta Assustado",
+   "tipo": "aliado",
+   "valores": [
+    "primitivum"
+   ],
+   "palavrasChave": [],
+   "ataque": 1,
+   "arteDaCarta": "recruta-assustado"
+  },
+  {
+   "id": "base-aliado-c2-equilibrado",
+   "nome": "Milícia de Aldeia",
+   "tipo": "aliado",
+   "valores": [
+    "primitivum"
+   ],
+   "palavrasChave": [],
+   "ataque": 2,
+   "arteDaCarta": "milicia-de-aldeia"
+  },
+  {
+   "id": "base-aliado-c3-equilibrado",
+   "nome": "Guarda da Ponte",
+   "tipo": "aliado",
+   "valores": [
+    "conflituo"
+   ],
+   "palavrasChave": [],
+   "ataque": 3,
+   "arteDaCarta": "guarda-da-ponte"
+  },
+  {
+   "id": "base-aliado-c4-equilibrado",
+   "nome": "Cavaleiro Errante",
+   "tipo": "aliado",
+   "valores": [
+    "sublimeyn"
+   ],
+   "palavrasChave": [],
+   "ataque": 4,
+   "arteDaCarta": "cavaleiro-errante"
+  },
+  {
+   "id": "base-aliado-c5-equilibrado",
+   "nome": "Veterana de Guerra",
+   "tipo": "aliado",
+   "valores": [
+    "alvorum"
+   ],
+   "palavrasChave": [],
+   "ataque": 6,
+   "arteDaCarta": "veterana-de-guerra"
+  },
+  {
+   "id": "base-aliado-c6-equilibrado",
+   "nome": "Gladiador da Arena",
+   "tipo": "aliado",
+   "valores": [
+    "alvorum",
+    "cognitium",
+    "morbidyum"
+   ],
+   "palavrasChave": [],
+   "ataque": 8,
+   "arteDaCarta": "gladiador-da-arena"
+  },
+  {
+   "id": "base-aliado-c7-equilibrado",
+   "nome": "Touro de Kairvahnn",
+   "tipo": "aliado",
+   "valores": [
+    "alvorum",
+    "sublimeyn",
+    "cognitium"
+   ],
+   "palavrasChave": [],
+   "ataque": 10,
+   "arteDaCarta": "touro-de-kairvahnn"
+  },
+  {
+   "id": "base-aliado-c8-equilibrado",
+   "nome": "Hidra de Barro",
+   "tipo": "aliado",
+   "valores": [
+    "alvorum",
+    "cognitium",
+    "morbidyum"
+   ],
+   "palavrasChave": [],
+   "ataque": 12,
+   "arteDaCarta": "hidra-de-barro"
+  },
+  {
+   "id": "base-aliado-c2-agressivo",
+   "nome": "Lobo-de-Cinza",
+   "tipo": "aliado",
+   "valores": [
+    "conflituo",
+    "primitivum"
+   ],
+   "palavrasChave": [],
+   "ataque": 3,
+   "arteDaCarta": "lobo-de-cinza"
+  },
+  {
+   "id": "base-aliado-c2-defensivo",
+   "nome": "Tatu de Couraça",
+   "tipo": "aliado",
+   "valores": [
+    "eternyr",
+    "dominum"
+   ],
+   "palavrasChave": [],
+   "ataque": 1,
+   "arteDaCarta": "tatu-de-couraca"
+  },
+  {
+   "id": "base-aliado-c4-agressivo",
+   "nome": "Javali de Ferro",
+   "tipo": "aliado",
+   "valores": [
+    "persona",
+    "morbidyum"
+   ],
+   "palavrasChave": [],
+   "ataque": 6,
+   "arteDaCarta": "javali-de-ferro"
+  },
+  {
+   "id": "base-aliado-c4-defensivo",
+   "nome": "Lutador de Pele de Pedra",
+   "tipo": "aliado",
+   "valores": [
+    "eternyr",
+    "dominum"
+   ],
+   "palavrasChave": [],
+   "ataque": 3,
+   "arteDaCarta": "lutador-de-pele-de-pedra"
+  },
+  {
+   "id": "base-aliado-c6-agressivo",
+   "nome": "Leão de Cem Dentes",
+   "tipo": "aliado",
+   "valores": [
+    "conflituo"
+   ],
+   "palavrasChave": [],
+   "ataque": 11,
+   "arteDaCarta": "leao-de-cem-dentes"
+  },
+  {
+   "id": "base-aliado-c6-defensivo",
+   "nome": "Gorila de Pedra",
+   "tipo": "aliado",
+   "valores": [
+    "dominum"
+   ],
+   "palavrasChave": [],
+   "ataque": 5,
+   "arteDaCarta": "gorila-de-pedra"
+  },
+  {
+   "id": "base-aliado-c2-agressivo-proficiente",
+   "nome": "Lebre-Relâmpago",
+   "tipo": "aliado",
+   "valores": [
+    "conflituo",
+    "primitivum"
+   ],
+   "palavrasChave": [
+    "Proficiente"
+   ],
+   "ataque": 2,
+   "arteDaCarta": "lebre-relampago"
+  },
+  {
+   "id": "base-aliado-c4-agressivo-proficiente",
+   "nome": "Salteador a Cavalo",
+   "tipo": "aliado",
+   "valores": [
+    "primitivum"
+   ],
+   "palavrasChave": [
+    "Proficiente"
+   ],
+   "ataque": 4,
+   "arteDaCarta": "salteador-a-cavalo"
+  },
+  {
+   "id": "base-aliado-c6-equilibrado-descarta-grau",
+   "nome": "Quimera de Três Fomes",
+   "tipo": "aliado",
+   "valores": [
+    "alvorum"
+   ],
+   "palavrasChave": [],
+   "ataque": 9,
+   "arteDaCarta": "quimera-de-tres-fomes"
+  },
+  {
+   "id": "base-aliado-c8-equilibrado-descarta-grau",
+   "nome": "Colosso de Ferida",
+   "tipo": "aliado",
+   "valores": [
+    "primitivum"
+   ],
+   "palavrasChave": [],
+   "ataque": 14,
+   "arteDaCarta": "colosso-de-ferida"
+  },
+  {
+   "id": "base-aliado-c4-equilibrado-grau5",
+   "nome": "Arquimaga da Torre Inversa",
+   "tipo": "aliado",
+   "valores": [
+    "primitivum"
+   ],
+   "palavrasChave": [],
+   "ataque": 7,
+   "arteDaCarta": "arquimaga-da-torre-inversa"
+  },
+  {
+   "id": "base-aliado-recurso-c1",
+   "nome": "Estudante da Escola de Magia",
+   "tipo": "aliado",
+   "valores": [
+    "sublimeyn"
+   ],
+   "palavrasChave": [],
+   "ataque": 0,
+   "arteDaCarta": "estudante-da-escola-de-magia"
+  },
+  {
+   "id": "base-aliado-recurso-c3",
+   "nome": "Ferreira-Alquimista",
+   "tipo": "aliado",
+   "valores": [
+    "alvorum"
+   ],
+   "palavrasChave": [],
+   "ataque": 1,
+   "arteDaCarta": "ferreira-alquimista"
+  },
+  {
+   "id": "base-aliado-recurso-c5",
+   "nome": "Professora da Escola de Magia",
+   "tipo": "aliado",
+   "valores": [
+    "primitivum",
+    "alvorum"
+   ],
+   "palavrasChave": [],
+   "ataque": 2,
+   "arteDaCarta": "professora-da-escola-de-magia"
+  },
+  {
+   "id": "base-aliado-recurso-c7",
+   "nome": "O Antigo Bibliotecário",
+   "tipo": "aliado",
+   "valores": [
+    "primitivum"
+   ],
+   "palavrasChave": [],
+   "ataque": 3,
+   "arteDaCarta": "o-antigo-bibliotecario"
+  },
+  {
+   "id": "eternyr-aliado-c6-g8",
+   "nome": "Anciã do Tempo Lento",
+   "tipo": "aliado",
+   "valores": [
+    "eternyr"
+   ],
+   "palavrasChave": [],
+   "ataque": 14,
+   "arteDaCarta": "ancia-do-tempo-lento"
+  },
+  {
+   "id": "eternyr-aliado-c8-g10",
+   "nome": "Dragão-Ampulheta",
+   "tipo": "aliado",
+   "valores": [
+    "eternyr"
+   ],
+   "palavrasChave": [],
+   "ataque": 15,
+   "arteDaCarta": "dragao-ampulheta"
+  },
+  {
+   "id": "bal-etereo-c1",
+   "nome": "Fogo-Fátuo",
+   "tipo": "aliado",
+   "valores": [
+    "sublimeyn",
+    "persona"
+   ],
+   "palavrasChave": [
+    "Etéreo"
+   ],
+   "ataque": 1,
+   "arteDaCarta": "fogo-fatuo"
+  },
+  {
+   "id": "bal-etereo-c2",
+   "nome": "Corvo-Presságio",
+   "tipo": "aliado",
+   "valores": [
+    "persona",
+    "morbidyum"
+   ],
+   "palavrasChave": [
+    "Etéreo"
+   ],
+   "ataque": 2,
+   "arteDaCarta": "corvo-pressagio"
+  },
+  {
+   "id": "bal-etereo-c3",
+   "nome": "Onça-das-Sombras",
+   "tipo": "aliado",
+   "valores": [
+    "sublimeyn",
+    "persona"
+   ],
+   "palavrasChave": [
+    "Etéreo"
+   ],
+   "ataque": 3,
+   "arteDaCarta": "onca-das-sombras"
+  },
+  {
+   "id": "r6-espiao-c4",
+   "nome": "Wyvern-Correio",
+   "tipo": "aliado",
+   "valores": [
+    "persona"
+   ],
+   "palavrasChave": [
+    "Etéreo"
+   ],
+   "ataque": 2,
+   "arteDaCarta": "wyvern-correio"
+  },
+  {
+   "id": "r6-piromante-c4",
+   "nome": "Aprendiz Descontrolado",
+   "tipo": "aliado",
+   "valores": [
+    "conflituo"
+   ],
+   "palavrasChave": [],
+   "ataque": 3,
+   "arteDaCarta": "aprendiz-descontrolado"
+  },
+  {
+   "id": "r6-fera-cerco-c5",
+   "nome": "Mantícora",
+   "tipo": "aliado",
+   "valores": [
+    "conflituo"
+   ],
+   "palavrasChave": [],
+   "ataque": 3,
+   "arteDaCarta": "manticora"
+  },
+  {
+   "id": "r6-presa-trovao-c5",
+   "nome": "Ursa-Mãe",
+   "tipo": "aliado",
+   "valores": [
+    "dominum",
+    "conflituo"
+   ],
+   "palavrasChave": [],
+   "ataque": 5,
+   "arteDaCarta": "ursa-mae"
+  },
+  {
+   "id": "r6-anjo-c6",
+   "nome": "Anjo do Fechamento",
+   "tipo": "aliado",
+   "valores": [
+    "alvorum"
+   ],
+   "palavrasChave": [
+    "Etéreo"
+   ],
+   "ataque": 6,
+   "arteDaCarta": "anjo-do-fechamento"
+  },
+  {
+   "id": "r6-mercador-c7",
+   "nome": "Arquivista Sem Rosto",
+   "tipo": "aliado",
+   "valores": [
+    "cognitium"
+   ],
+   "palavrasChave": [
+    "Etéreo"
+   ],
+   "ataque": 4,
+   "arteDaCarta": "arquivista-sem-rosto"
+  },
+  {
+   "id": "r6-colosso-c7",
+   "nome": "Titã de Vapor",
+   "tipo": "aliado",
+   "valores": [
+    "dominum",
+    "conflituo"
+   ],
+   "palavrasChave": [],
+   "ataque": 9,
+   "arteDaCarta": "tita-de-vapor"
+  },
+  {
+   "id": "r6-dragao-c8",
+   "nome": "Dragão Ancião",
+   "tipo": "aliado",
+   "valores": [
+    "alvorum"
+   ],
+   "palavrasChave": [
+    "Etéreo"
+   ],
+   "ataque": 7,
+   "arteDaCarta": "dragao-anciao"
+  },
+  {
+   "id": "col-campeao-conflituo",
+   "nome": "Ferreiro de Guerra",
+   "tipo": "aliado",
+   "valores": [
+    "conflituo"
+   ],
+   "palavrasChave": [],
+   "ataque": 4,
+   "arteDaCarta": "ferreiro-de-guerra"
+  },
+  {
+   "id": "col-campeao-sublimeyn",
+   "nome": "Sonhador Perdido",
+   "tipo": "aliado",
+   "valores": [
+    "sublimeyn"
+   ],
+   "palavrasChave": [],
+   "ataque": 4,
+   "arteDaCarta": "sonhador-perdido"
+  },
+  {
+   "id": "col-campeao-dominum",
+   "nome": "Juramentado",
+   "tipo": "aliado",
+   "valores": [
+    "dominum"
+   ],
+   "palavrasChave": [],
+   "ataque": 4,
+   "arteDaCarta": "juramentado"
+  },
+  {
+   "id": "col-campeao-persona",
+   "nome": "O Seu Rosto",
+   "tipo": "aliado",
+   "valores": [
+    "persona"
+   ],
+   "palavrasChave": [],
+   "ataque": 4,
+   "arteDaCarta": "o-seu-rosto"
+  },
+  {
+   "id": "col-campeao-alvorum",
+   "nome": "O Ministrum",
+   "tipo": "aliado",
+   "valores": [
+    "alvorum"
+   ],
+   "palavrasChave": [],
+   "ataque": 4,
+   "arteDaCarta": "o-ministrum"
+  },
+  {
+   "id": "col-campeao-morbidyum",
+   "nome": "O que Voltou",
+   "tipo": "aliado",
+   "valores": [
+    "morbidyum"
+   ],
+   "palavrasChave": [],
+   "ataque": 4,
+   "arteDaCarta": "o-que-voltou"
+  },
+  {
+   "id": "col-campeao-cognitium",
+   "nome": "Bibliotecária do Arquivo",
+   "tipo": "aliado",
+   "valores": [
+    "cognitium"
+   ],
+   "palavrasChave": [],
+   "ataque": 4,
+   "arteDaCarta": "bibliotecaria-do-arquivo"
+  },
+  {
+   "id": "col-campeao-eternyr",
+   "nome": "Repetido",
+   "tipo": "aliado",
+   "valores": [
+    "eternyr"
+   ],
+   "palavrasChave": [],
+   "ataque": 4,
+   "arteDaCarta": "repetido"
+  },
+  {
+   "id": "col-campeao-primitivum",
+   "nome": "Espírito Animal",
+   "tipo": "aliado",
+   "valores": [
+    "primitivum"
+   ],
+   "palavrasChave": [],
+   "ataque": 4,
+   "arteDaCarta": "espirito-animal"
+  },
+  {
+   "id": "col-gato-de-navio",
+   "nome": "Gato de Navio",
+   "tipo": "aliado",
+   "valores": [
+    "persona"
+   ],
+   "palavrasChave": [],
+   "ataque": 1,
+   "arteDaCarta": "gato-de-navio"
+  },
+  {
+   "id": "col-menina-raposa",
+   "nome": "Menina Raposa",
+   "tipo": "aliado",
+   "valores": [
+    "persona"
+   ],
+   "palavrasChave": [],
+   "ataque": 2,
+   "arteDaCarta": "menina-raposa"
+  },
+  {
+   "id": "col-ilusionista-do-labirinto",
+   "nome": "Ilusionista do Labirinto",
+   "tipo": "aliado",
+   "valores": [
+    "sublimeyn"
+   ],
+   "palavrasChave": [],
+   "ataque": 2,
+   "arteDaCarta": "ilusionista-do-labirinto"
+  },
+  {
+   "id": "col-ceifadora-da-peste",
+   "nome": "Ceifadora da Peste",
+   "tipo": "aliado",
+   "valores": [
+    "morbidyum"
+   ],
+   "palavrasChave": [],
+   "ataque": 3,
+   "arteDaCarta": "ceifadora-da-peste"
+  },
+  {
+   "id": "col-contrabandista-de-porto",
+   "nome": "Contrabandista de Porto",
+   "tipo": "aliado",
+   "valores": [
+    "persona"
+   ],
+   "palavrasChave": [
+    "Etéreo"
+   ],
+   "ataque": 1,
+   "arteDaCarta": "contrabandista-de-porto"
+  },
+  {
+   "id": "col-vento-mensageiro",
+   "nome": "Vento Mensageiro",
+   "tipo": "aliado",
+   "valores": [
+    "sublimeyn"
+   ],
+   "palavrasChave": [
+    "Etéreo",
+    "Proficiente"
+   ],
+   "ataque": 2,
+   "arteDaCarta": "vento-mensageiro"
+  },
+  {
+   "id": "col-guarda-costas",
+   "nome": "Guarda-costas Contratado",
+   "tipo": "aliado",
+   "valores": [
+    "dominum"
+   ],
+   "palavrasChave": [],
+   "ataque": 2,
+   "arteDaCarta": "guarda-costas-contratado"
+  },
+  {
+   "id": "col-curandeira-de-ervas",
+   "nome": "Curandeira de Ervas",
+   "tipo": "aliado",
+   "valores": [
+    "primitivum"
+   ],
+   "palavrasChave": [],
+   "ataque": 0,
+   "arteDaCarta": "curandeira-de-ervas"
+  },
+  {
+   "id": "ficha-wyvern-filhote",
+   "nome": "Wyvern Filhote",
+   "tipo": "aliado",
+   "valores": [],
+   "palavrasChave": [],
+   "ataque": 2,
+   "arteDaCarta": "dragonete"
+  },
+  {
+   "id": "nv-luz-de-velorio",
+   "nome": "Luz de Velório",
+   "tipo": "aliado",
+   "valores": [
+    "morbidyum"
+   ],
+   "palavrasChave": [
+    "Etéreo"
+   ],
+   "ataque": 1,
+   "arteDaCarta": "luz-de-velorio"
+  },
+  {
+   "id": "nv-carcaca-andante",
+   "nome": "Carcaça Andante",
+   "tipo": "aliado",
+   "valores": [
+    "morbidyum"
+   ],
+   "palavrasChave": [],
+   "ataque": 2,
+   "arteDaCarta": "carcaca-andante"
+  },
+  {
+   "id": "nv-coveiro",
+   "nome": "Coveiro de Vau Grande",
+   "tipo": "aliado",
+   "valores": [
+    "morbidyum"
+   ],
+   "palavrasChave": [],
+   "ataque": 1,
+   "arteDaCarta": "coveiro-de-vau-grande"
+  },
+  {
+   "id": "nv-embalsamador",
+   "nome": "Embalsamador",
+   "tipo": "aliado",
+   "valores": [
+    "morbidyum"
+   ],
+   "palavrasChave": [],
+   "ataque": 2,
+   "arteDaCarta": "embalsamador"
+  },
+  {
+   "id": "nv-ossario",
+   "nome": "Velho Ossário, o Dragão Pálido",
+   "tipo": "aliado",
+   "valores": [
+    "morbidyum"
+   ],
+   "palavrasChave": [],
+   "ataque": 7,
+   "arteDaCarta": "velho-ossario-dragao-palido"
+  },
+  {
+   "id": "nv-esquecido",
+   "nome": "O Esquecido",
+   "tipo": "aliado",
+   "valores": [
+    "cognitium"
+   ],
+   "palavrasChave": [
+    "Etéreo"
+   ],
+   "ataque": 2,
+   "arteDaCarta": "esquecido"
+  },
+  {
+   "id": "nv-moca-que-nao-sangra",
+   "nome": "Moça que Não Sangra",
+   "tipo": "aliado",
+   "valores": [
+    "persona"
+   ],
+   "palavrasChave": [],
+   "ataque": 3,
+   "arteDaCarta": "moca-que-nao-sangra"
+  }
+ ],
+ "formatoEntrega": "Embelezador: assets em Arcanoclisma/efeitos/assets/mesa-efeitos-v1/vNN/ e cópia para online/public/kit/efeitos/; entrega em Arcanoclisma/efeitos/entregas/mesa-efeitos-v1.visual.json (arquivos, dimensões, alfa, timings, okGpt). O Claude responde em entregas/mesa-efeitos-v1.integracao.claude.json.",
+ "prioridade": [
+  "colisão dos 9 Conjuradores e dos Aliados dos baralhos prontos",
+  "resolução das Temporárias dos baralhos prontos",
+  "entrada em campo",
+  "o resto da coleção"
+ ]
+}

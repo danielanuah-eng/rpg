@@ -52,8 +52,9 @@ export function criarPartidaLocal(cfg) {
     clearTimeout(timer);
     if (ator() !== BOT) return;
     const cmd = decidirBot();
-    if (cmd === 'esperar') { timer = setTimeout(agendarBot, 400); return; }
-    const pausa = cmd.tipo === 'passar' ? 120 : cmd.tipo === 'suspenderGrau' ? 250 : 750;
+    if (cmd === 'esperar') { timer = setTimeout(agendarBot, 600); return; }
+    // ritmo do bot mais calmo (pedido do autor, 04/10): cada jogada espera a animação anterior terminar
+    const pausa = cmd.tipo === 'passar' ? 450 : cmd.tipo === 'suspenderGrau' ? 750 : 1500;
     timer = setTimeout(() => {
       if (ator() !== BOT) return;
       let erro = aplicar(cmd);
@@ -80,7 +81,8 @@ export function criarPartidaLocal(cfg) {
   fonte.substituir = (novo) => { e = novo; comandos.length = 0; terminou = false; mudou(); };
   fonte.cutucar = () => agendarBot();
   fonte.comandos = comandos;
-  setTimeout(agendarBot, 400);
+  // na abertura o D20 rola por ~4,2 s: o bot espera o dado parar antes de escolher quem começa
+  setTimeout(agendarBot, e.pendencia?.tipo === 'escolherInicio' ? 6000 : 400);
   return fonte;
 }
 

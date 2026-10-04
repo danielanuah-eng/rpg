@@ -1,5 +1,6 @@
 // Animação somente visual: lê elementos já autorizados e não envia comandos do jogo.
 // Cartas em trânsito sempre usam o verso genérico, inclusive as do oponente.
+import { RITMO_VISUAL } from './ritmo-visual-v13.js';
 export function criarMovimentosMesa(raiz) {
   const ativos = new Set();
   const reduzido = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -43,7 +44,7 @@ export function criarMovimentosMesa(raiz) {
     ativos.add(encerrar);
     animation.finished.then(encerrar, encerrar);
   }
-  function reposicionar(anterior, atual, duracao = 320) {
+  function reposicionar(anterior, atual, duracao = RITMO_VISUAL.reposicionarMao) {
     const a = centro(anterior.rect), b = centro(atual.rect);
     const dx = a.x - b.x, dy = a.y - b.y;
     if (Math.abs(dx) < .5 && Math.abs(dy) < .5 && anterior.transform === atual.transform) return;
@@ -69,7 +70,7 @@ export function criarMovimentosMesa(raiz) {
     const animation = viajante.animate([
       { transform: `translate(${a.x - b.x}px, ${a.y - b.y}px) rotate(-9deg) scale(${origem.width / destino.rect.width})`, opacity: 1 },
       { transform: 'translate(0,0) rotate(0deg) scale(1)', opacity: 1 },
-    ], { duration: 480, delay: atraso, fill: 'both', easing: 'cubic-bezier(.2,.7,.2,1)' });
+    ], { duration: RITMO_VISUAL.comprarParaMao, delay: atraso, fill: 'both', easing: 'cubic-bezier(.2,.7,.2,1)' });
     acompanhar(animation, () => {
       viajante.remove();
       destino.el.style.visibility = visibilidade;
@@ -87,7 +88,7 @@ export function criarMovimentosMesa(raiz) {
     const novosVersos = [...raiz.querySelectorAll('.mao-op .verso-mini')].map(estadoEl);
     raiz.querySelectorAll('.mesa-conteudo .cm[data-id]').forEach(el => {
       const antiga = anterior.campo.get(el.dataset.id);
-      if (antiga) reposicionar(antiga, estadoEl(el), 380);
+      if (antiga) reposicionar(antiga, estadoEl(el), RITMO_VISUAL.suspender);
     });
     const deckEu = raiz.querySelector('.lado-eu [data-zona="baralho"]');
     const deckOp = raiz.querySelector('.lado-op [data-zona="baralho"]');
@@ -99,7 +100,7 @@ export function criarMovimentosMesa(raiz) {
       if (antiga) reposicionar(antiga, atual);
       else if (comprasEu > 0) {
         comprar(anterior.baralhoEu ?? rect(deckEu), atual, atrasoEu);
-        comprasEu--; atrasoEu += 75;
+        comprasEu--; atrasoEu += 170;
       } else {
         const origemCampo = anterior.campo.get(id);
         if (origemCampo) reposicionar(origemCampo, atual);
@@ -110,7 +111,7 @@ export function criarMovimentosMesa(raiz) {
       const antiga = anterior.versos[k];
       if (comprasOp > 0 && k >= inicioComprasOp) {
         comprar(anterior.baralhoOp ?? rect(deckOp), atual, atrasoOp);
-        comprasOp--; atrasoOp += 75;
+        comprasOp--; atrasoOp += 170;
       } else if (antiga) reposicionar(antiga, atual);
     });
   }
