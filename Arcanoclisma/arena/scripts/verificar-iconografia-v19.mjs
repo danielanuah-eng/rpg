@@ -29,5 +29,5 @@ for(const i of pedido.icones){
   medicoes.push({id:i.id,sha256:hash,alfaRasterizado:tamanhos});
 }
 const destino=path.join(arcano,'../coordenacao/site-online/evidencias-v19');await fs.mkdir(destino,{recursive:true});
-await fs.writeFile(path.join(destino,'alfa-31-icones.json'),JSON.stringify({total:medicoes.length,verificado:'SVG nativo rasterizado a 64, 20 e 16 px; nenhum PNG é necessário para a entrega',medicoes},null,2)+'\n');
+await fs.writeFile(path.join(destino,`alfa-${medicoes.length}-icones.json`),JSON.stringify({total:medicoes.length,verificado:'SVG nativo rasterizado a 64, 20 e 16 px; nenhum PNG é necessário para a entrega',medicoes},null,2)+'\n');
 console.log(`${medicoes.length} ícones aprovados: contrato, origem/cópia, hashes distintos e alfa em três tamanhos.`);

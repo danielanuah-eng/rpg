@@ -107,6 +107,10 @@
     "arquivo": "/kit/icones/etereo.svg",
     "okGpt": true
   },
+  "protessencia": {
+    "arquivo": "/kit/icones/protessencia.svg",
+    "okGpt": true
+  },
   "protegido": {
     "arquivo": "/kit/icones/protegido.svg",
     "okGpt": true

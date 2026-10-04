@@ -22,10 +22,13 @@
   },
   "achadoParaClaude": {
     "area": "geometria visivel da pilha no tutorial",
-    "estado": "ajuste de integracao necessario",
+    "estado": "corrigido_e_conferido_localmente_na_entrega_v19",
     "cenario": "tutorial/pilha: Olho-que-Fecha anulando Brasa de Forja",
     "problema": "alvoRect confirmado abaixo da tela; animacao ocorre fora da janela",
-    "evidencia": "coordenacao/site-online/evidencias-v18/anulacao-pilha.jpg"
+    "evidencia": "coordenacao/site-online/evidencias-v18/anulacao-pilha.jpg",
+    "correcao": "Claude corrigiu o retângulo visível; Codex reservou margem para o selo inteiro no runtime visual.",
+    "evidenciaAtual": "coordenacao/site-online/evidencias-v19/magia-anulacao-pilha.jpg",
+    "conferenciaAtual": "coordenacao/site-online/conferencia-v19.codex.json"
   },
   "pushAutorizadoPeloAutor": true
 }

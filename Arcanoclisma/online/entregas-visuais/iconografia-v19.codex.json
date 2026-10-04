@@ -3,7 +3,7 @@
   "versao": 19,
   "pedidoVersao": 2,
   "estado": "entregue",
-  "total": 31,
+  "total": 32,
   "manifesto": "Arcanoclisma/online/public/kit/icones/manifesto.json",
   "gerador": "Arcanoclisma/arena/scripts/gerar-iconografia-v19.mjs",
   "arquivos": [
@@ -376,6 +376,20 @@
       "nome": "Etéreo",
       "arquivo": "/kit/icones/etereo.svg",
       "sha256": "69192e75cf86f01675a504f4a78964c80c5971f596446f7e72879153702cafdc",
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "cor": "currentColor",
+      "fundo": "transparente"
+    },
+    {
+      "id": "protessencia",
+      "nome": "Protessência",
+      "arquivo": "/kit/icones/protessencia.svg",
+      "sha256": "74ae631ae4c629b1f9f6b57c8eaf2abc357d5871e26c62ab14ca894d264d676a",
       "viewBox": [
         0,
         0,

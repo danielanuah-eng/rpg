@@ -87,6 +87,20 @@
     "assetsMagias": 792,
     "economia": "compraFinal_ao_lado_da_vida",
     "camera": "tabuleiro_inteiro_conforme_escolha_do_autor",
-    "revisaoVisualCompletaDasMagias": false
+    "revisaoVisualCompletaDasMagias": false,
+    "iconografia": {
+      "estado": "32_icones_entregues_e_conferidos",
+      "entrega": "Arcanoclisma/online/entregas-visuais/iconografia-v19.codex.json",
+      "conferencia": "coordenacao/site-online/conferencia-v19.codex.json",
+      "simbolosNas201Cartas": 249,
+      "regrasCortadas": 0,
+      "nomesCortados": 0
+    },
+    "conferenciaMagiasPorDestino": {
+      "estado": "tres_cenas_aprovadas_localmente",
+      "cenas": ["anulacao_na_pilha", "ambos_os_campos", "ressurgimento"],
+      "testesContratoAprovados": 6,
+      "guia": "coordenacao/site-online/ENTREGA-ICONES-E-CONFERENCIA-V19.md"
+    }
   }
 }
