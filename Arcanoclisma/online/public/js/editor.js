@@ -5,18 +5,18 @@
 import { $, $$, esc, api, DADOS, BASE, EDICOES, VALOR, TIPO, textoCarta, textoPoder, sessao, avisar, janela, local, usarEdicoes, carregarEdicoes, dataCurta } from './base.js';
 import { desenharCarta, modeloCarta, modeloConjurador } from './carta.js';
 import { edicoesVazias } from '/jogo/edicoes.js';
-import { descEfeito } from '/jogo/textos.js';
+import { descEfeito, protegidoDe } from '/jogo/textos.js';
 import { montarConstrutor } from './construtor-efeitos.js';
 
 const VALORES = Object.keys(VALOR);
 const COMPROMETIMENTOS = ['Invocador', 'Brigão', 'Parrudão da quebrada', 'Habilidoso', 'Preparado'];
-const NUM_CARTA = [['custo', 'Custo'], ['grau', 'Grau'], ['arcanoGerado', 'Gera Arcano'], ['ataque', 'Ataque'], ['vida', 'Vida'], ['defesa', 'Defesa (armadura)'], ['vidaDesgaste', 'Desgaste (armadura)'], ['protegido', 'Protegido'], ['descartaGrau', 'Descarta do Grau'], ['pagarParaAnular', 'Pagar para anular'], ['grauExtra', 'Grau extra'], ['espinhos', 'Espinhos (armadura)']];
+const NUM_CARTA = [['custo', 'Custo'], ['grau', 'Grau'], ['arcanoGerado', 'Gera Arcano'], ['ataque', 'Ataque'], ['vida', 'Vida'], ['defesa', 'Defesa (armadura)'], ['vidaDesgaste', 'Desgaste (armadura)'], ['descartaGrau', 'Descarta do Grau'], ['pagarParaAnular', 'Pagar para anular'], ['grauExtra', 'Grau extra'], ['espinhos', 'Espinhos (armadura)']];
 const NUM_CONJ = [['vida', 'Vida'], ['maoInicial', 'Mão inicial'], ['compraFinal', 'Compra no Final'], ['danoBasico', 'Dano básico'], ['custoAtaque', 'Custo de ataque']];
-/** Campos de mecânica editados como JSON. */
-const MEC_CARTA = ['efeitos', 'aoEntrar', 'aoDanoConjurador', 'ativacao', 'custoValores', 'aoAtacar', 'aoProteger', 'habilidades', 'protecao'];
+/** Campos de mecânica editados como JSON. Protegido (04/10, noite) fica no construtor; `protecao` (nome antigo) só sai: é convertido em `protegido`. */
+const MEC_CARTA = ['efeitos', 'aoEntrar', 'aoDanoConjurador', 'ativacao', 'custoValores', 'aoAtacar', 'aoProteger', 'habilidades', 'protegido'];
 const igual = (a, b) => JSON.stringify(a ?? null) === JSON.stringify(b ?? null);
 /** Números citados no texto (efeitos, gatilhos, ativação, Protegido, pagar para anular, descarte do Grau; poder do Conjurador). */
-const NUM_TEXTO_CARTA = [...MEC_CARTA, 'protegido', 'pagarParaAnular', 'descartaGrau', 'grauExtra'];
+const NUM_TEXTO_CARTA = [...MEC_CARTA, 'pagarParaAnular', 'descartaGrau', 'grauExtra'];
 /** Caminho → número de cada valor numérico dentro dos campos indicados. */
 function numerosDe(obj, campos) {
   const r = new Map();
@@ -150,6 +150,8 @@ export async function telaEditor(tela, partes, ctx) {
     if (!c) { form.innerHTML = '<p class="vazio">Não encontrada.</p>'; return; }
     const arteAtual = conjur ? DADOS.conjuradoresArte[id] : DADOS.visual[id]?.arte;
     const mec = conjur ? { poder: c.poder ?? null } : Object.fromEntries(MEC_CARTA.filter((k) => c[k] !== undefined).map((k) => [k, c[k]]));
+    // nome antigo "Proteção mágica" (protecao): abre como parte do Protegido
+    if (!conjur && c.protecao) { const pr = protegidoDe(c); if (pr) mec.protegido = Object.keys(pr).length === 1 && pr.arcano ? pr.arcano : pr; }
     form.innerHTML = `<div class="titulo-secao"><h2>${esc(c.nome)}</h2><span class="etiqueta">${conjur ? 'Conjurador' : esc(TIPO[c.categoriaItem ?? c.tipo] ?? c.tipo)} · ${esc(id)}</span></div>
       <label class="campo">Nome<input type="text" data-f="nome" value="${esc(c.nome)}"></label>
       <label class="campo">${conjur ? 'Habilidade (texto)' : 'Texto de regras'}<textarea data-f="${conjur ? 'habilidade' : 'texto'}">${esc(conjur ? c.habilidade : c.texto)}</textarea></label>
@@ -254,6 +256,7 @@ export async function telaEditor(tela, partes, ctx) {
       const mec = JSON.parse($('[data-json]', form).value || '{}');
       if (typeof mec !== 'object' || Array.isArray(mec) || mec === null) throw new Error('use um objeto { }');
       for (const k of conjur ? ['poder'] : MEC_CARTA) novo[k] = mec[k] ?? undefined;
+      if (!conjur) novo.protecao = undefined; // nome antigo: convertido em `protegido` ao salvar
       erroJson.textContent = '';
     } catch (err) { erroJson.textContent = 'JSON inválido (a mecânica não foi aplicada): ' + err.message; for (const k of conjur ? ['poder'] : MEC_CARTA) delete novo[k]; }
     const parcial = {};

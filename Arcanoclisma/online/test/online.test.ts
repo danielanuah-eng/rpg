@@ -96,3 +96,37 @@ test('Valores do site: nenhuma carta neutra (só itens), quase todas com 1 Valor
     for (const [id] of b.lista) { const c = D.catalogo.cartas[id]; if (c.tipo !== 'item') assert.ok(c.valores.some((v: string) => V.includes(v)), `${b.id}: ${id}`); }
   }
 });
+
+test('sigilo do "tirar da mão" (04/10, noite): olhando, só quem controla o efeito vê a mão do oponente; o dono escolhe sem mostrar', () => {
+  const base = { subtipos: [] as string[], valores: [], grau: 0, custo: 0, velocidade: 'repentina' as const, arcanoGerado: 1, cenario: '', texto: '' };
+  const cat: Catalogo = {
+    cartas: {
+      nada: { ...base, id: 'nada', nome: 'Nada', tipo: 'temporaria', efeitos: [{ tipo: 'comprar', valor: 0 }] },
+      olhar: { ...base, id: 'olhar', nome: 'Olhar', tipo: 'temporaria', efeitos: [{ tipo: 'descartar', quem: 'oponente', valor: 1, acao: 'banir', modo: 'olhando' }] },
+      exigir: { ...base, id: 'exigir', nome: 'Exigir', tipo: 'temporaria', efeitos: [{ tipo: 'descartar', quem: 'oponente', valor: 1, modo: 'dono' }] },
+    },
+    conjuradores: { c: { id: 'c', nome: 'C', valores: [], comprometimento: 'Brigão', vida: 30, maoInicial: 5, compraFinal: 2, danoBasico: 0, custoAtaque: 0, habilidade: '' } },
+  };
+  const deck = { conjurador: 'c', cartas: Array.from({ length: 30 }, (_, i) => (i % 2 ? 'olhar' : 'exigir')) };
+  const e = criarJogo({ catalogo: cat, baralhos: [deck, deck], semente: 9, regras: { primeiroSemGrauNoTurno1: false } });
+  executar(e, { tipo: 'escolherInicio', jogador: e.pendencia!.jogador, primeiro: 0 });
+  while (e.etapa !== 'principal') executar(e, { tipo: 'passar', jogador: e.prioridade });
+  const jogar = (defId: string) => {
+    const id = e.jogadores[0].mao.find((x) => e.instancias[x].defId === defId)!;
+    executar(e, { tipo: 'jogar', jogador: 0, carta: id });
+    while (e.pilha.length && !e.pendencia) executar(e, { tipo: 'passar', jogador: e.prioridade });
+  };
+  const maoDele = [...e.jogadores[1].mao];
+  jogar('olhar');
+  const v0 = visaoDe(e, 0) as any, v1 = visaoDe(e, 1) as any;
+  assert.deepEqual(v0.pendencia.cartas, maoDele, 'quem jogou vê as cartas da mão do oponente');
+  for (const id of maoDele) assert.notEqual(v0.instancias[id]?.defId, 'oculta');
+  // o dono (que já conhece a própria mão) continua sem ver a mão de quem jogou
+  assert.ok(v1.jogadores[0].mao.every((id: string) => v1.instancias[id].defId === 'oculta'));
+  executar(e, { tipo: 'escolherCartas', jogador: 0, cartas: [maoDele[0]] });
+  jogar('exigir');
+  const w0 = visaoDe(e, 0) as any;
+  assert.equal(e.pendencia?.tipo === 'escolherCartas' && e.pendencia.jogador, 1);
+  assert.ok(w0.pendencia.cartas.every((id: string) => w0.instancias[id].defId === 'oculta'), 'quem jogou não vê a mão quando o dono escolhe');
+  for (const id of e.jogadores[1].mao) assert.ok(!w0.pendencia.cartas.includes(id), 'nem os ids reais');
+});

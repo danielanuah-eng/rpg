@@ -4,7 +4,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 // @ts-ignore: módulos JS do site
-import { CONDICOES_CONJURADOR, EFEITOS, PASSIVAS_CONJ, chaveDe, novoEfeito, efeitosDisponiveis, avisoEfeito } from '../public/js/construtor-tabelas.js';
+import { CONDICOES, CONDICOES_CONJURADOR, EFEITOS, PASSIVAS_CONJ, chaveDe, novoEfeito, efeitosDisponiveis, avisoEfeito, ehSecundario } from '../public/js/construtor-tabelas.js';
 // @ts-ignore
 import { poderParaConstrutor, construtorParaPoder, PASSIVAS_CONJURADOR } from '../public/jogo/poder-conjurador.js';
 // @ts-ignore
@@ -52,11 +52,14 @@ test('tabela de efeitos: cada linha cria um efeito que volta para a mesma linha 
   }
   // efeitos com alvo escolhido ao ativar só são oferecidos onde funcionam; os do formato antigo só aparecem quando já estão na carta
   const chaves = (q: string, atual?: string) => efeitosDisponiveis(q, atual).map(([k]: [string]) => k);
+  // reanimar (04/10, noite): o Aliado é escolhido ao resolver, então funciona em qualquer condição (gatilhos inclusive)
   assert.ok(chaves('ativada').includes('reanimar'));
-  assert.ok(!chaves('aliadoEntra').includes('reanimar'));
+  assert.ok(chaves('aliadoEntra').includes('reanimar'));
+  assert.equal(avisoEfeito('reanimar', 'aliadoEntra'), '');
+  assert.ok(!chaves('aliadoEntra').includes('banirDaMao'));
+  assert.notEqual(avisoEfeito('banirDaMao', 'aliadoEntra'), '');
   assert.ok(!chaves('ativada').includes('devolverAlvo'));
   assert.ok(chaves('ativada', 'devolverAlvo').includes('devolverAlvo'));
-  assert.notEqual(avisoEfeito('reanimar', 'aliadoEntra'), '');
 });
 
 test('efeitos das habilidades das cartas do site também abrem na tabela (o formato antigo não vira efeito de campo)', () => {
@@ -68,4 +71,28 @@ test('efeitos das habilidades das cartas do site também abrem na tabela (o form
   assert.equal(chaveDe({ tipo: 'campo', acao: 'devolver', alcance: 'alvo', lado: 'proprio', tipos: ['aliado'] }), 'devolver');
   assert.equal(chaveDe({ tipo: 'dano', valor: 2, alvo: 'escolhido' }), 'danoAlvo');
   void n;
+});
+
+test('04/10 (noite): efeitos secundários num grupo próprio; formato antigo abre na linha certa; gatilho do Cataclisma do oponente', () => {
+  // secundários: dano no Conjurador, tirar da própria mão, sacrificar, Grau ao cemitério
+  for (const k of ['secDano', 'secDescartar', 'secSacrificar', 'secGrau']) {
+    assert.ok(ehSecundario(k), k);
+    assert.equal(novoEfeito(k).secundario, true, k);
+    assert.ok(efeitosDisponiveis('jogar').some(([x]: [string]) => x === k), `${k} em cartas`);
+    assert.ok(efeitosDisponiveis('ativada').some(([x]: [string]) => x === k), `${k} em Conjuradores`);
+  }
+  assert.equal(chaveDe({ tipo: 'perderVida', valor: 1 }), 'perderVida');
+  assert.equal(chaveDe({ tipo: 'perderVida', valor: 1, secundario: true }), 'secDano');
+  assert.equal(chaveDe({ tipo: 'descartar', quem: 'oponente', valor: 1, aleatorio: true }), 'descartar');
+  assert.equal(chaveDe({ tipo: 'descartar', quem: 'voce', valor: 1, secundario: true }), 'secDescartar');
+  assert.equal(chaveDe({ tipo: 'sacrificar', valor: 1 }), 'secSacrificar');
+  // "tirar da mão": o formato antigo `aleatorio: true` abre como "ao acaso"
+  const modo = EFEITOS.descartar.campos.find((c: { k: string }) => c.k === 'modo');
+  assert.equal(modo.ler({ tipo: 'descartar', quem: 'oponente', valor: 1, aleatorio: true }), 'acaso');
+  // reanimar antigo (custo + 2, sem `pagamento`) abre como "custo + X"
+  const pg = EFEITOS.reanimar.campos.find((c: { k: string }) => c.k === 'pagamento');
+  assert.equal(pg.ler({ tipo: 'reanimar', custoExtra: 2 }), 'custoMais');
+  assert.equal(pg.ler({ tipo: 'reanimar', custoExtra: 0 }), 'custo');
+  assert.ok(CONDICOES.some(([k]: [string]) => k === 'cataclismaOponente'));
+  assert.ok(CONDICOES_CONJURADOR.some(([k]: [string]) => k === 'cataclismaOponente'));
 });

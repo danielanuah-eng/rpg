@@ -5,6 +5,7 @@
 // Nos testes automáticos (node --test) as edições não entram, para o motor ser testado sobre o jogo gerado.
 import { existsSync, readFileSync, statSync } from 'node:fs';
 import type { CartaDef, Catalogo, ConjuradorDef, Regras } from '../src/tipos.ts';
+import { normalizarProtegido } from '../src/motor.ts';
 import type { Precos } from '../src/balanco.ts';
 import type { Estilo } from './bot.ts';
 import type { Arquetipo } from './baralhos.ts';
@@ -69,7 +70,8 @@ export function aplicarCatalogo(cat: Catalogo, ed: Edicoes): Catalogo {
     const { nova, ...campos } = parcial;
     const base = cartas[id];
     if (!base && !nova) continue; // a carta gerada deixou de existir: a edição fica guardada, mas sem efeito
-    cartas[id] = { ...mesclar(base ?? ({} as CartaDef), campos as Parcial<CartaDef>), id };
+    // Protegido unificado (04/10, noite): edição antiga com `protecao` ("Proteção mágica") vira `protegido`
+    cartas[id] = normalizarProtegido({ ...mesclar(base ?? ({} as CartaDef), campos as Parcial<CartaDef>), id });
   }
   const conjuradores: Record<string, ConjuradorDef> = { ...cat.conjuradores };
   for (const [id, parcial] of Object.entries(ed.conjuradores)) {

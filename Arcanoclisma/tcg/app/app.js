@@ -1,7 +1,7 @@
 // App de testes do Arcanoclisma: jogar contra o jogador automático com os 9 Conjuradores, registrar tudo,
 // comentar durante as partidas e enviar os dados ao Claude (botão verde "Enviar").
 // Sem dependências: usa o motor real (dist/motor.js) e o jogador automático das simulações (dist/bot.js).
-import { criarJogo, executar, ErroRegra, defCarta, defConjurador, custoEfetivo, custoProtecao, origemDaCarta, grauEfetivo, recemChegado, ataqueConjurador } from './dist/motor.js';
+import { criarJogo, executar, ErroRegra, defCarta, defConjurador, custoEfetivo, custoProtecao, custoReanimar, origemDaCarta, grauEfetivo, recemChegado, ataqueConjurador } from './dist/motor.js';
 import { decidir } from './dist/bot.js';
 import { TIPO, frase, textoCarta, valoresTxt } from './textos.js';
 
@@ -222,7 +222,7 @@ function custoReal(tipo, id, alvo) {
   if (tipo === 'ativar') {
     const at = id === z.conjuradorId ? conjDef(partida.eu).poder.ativacao : defCarta(e, id).ativacao;
     const rean = at.efeitos.find((ef) => ef.tipo === 'reanimar');
-    return at.custo + custoProtecao(e, EU, alvo) + (rean && alvo ? rean.custoExtra + defCarta(e, alvo).custo : 0);
+    return at.custo + custoProtecao(e, EU, alvo) + (rean && alvo ? custoReanimar(rean, defCarta(e, alvo)) : 0);
   }
   return conjDef(partida.eu).custoAtaque;
 }
@@ -252,7 +252,7 @@ function preparar(tipo, id) {
     const at = ehConj ? conjDef(partida.eu).poder.ativacao : defCarta(e, id).ativacao;
     titulo = `Ativar ${nomeInst(id)}`;
     efs = at.efeitos; custo = at.custo;
-    if (efs.some((ef) => ef.tipo === 'reanimar')) obs = 'Custo final: o custo do Aliado escolhido + 2';
+    if (efs.some((ef) => ef.tipo === 'reanimar')) obs = 'Custo final: o que o reanimar pede pelo Aliado escolhido (nada, o custo dele ou o custo + X)';
   } else {
     titulo = `Atacar com ${nomeInst(id)}`;
     const adv = e.jogadores[BOT];

@@ -1,14 +1,14 @@
 // Construtor de efeitos do Editor (pedido do autor, 04/10): tabelas de condições e efeitos que se acumulam.
-// Cada escolha vira a mecânica real da carta (campo `habilidades` e `protecao`, lidos pelo motor tcg/src/motor.ts),
+// Cada escolha vira a mecânica real da carta (campos `habilidades` e `protegido`, lidos pelo motor tcg/src/motor.ts),
 // e o texto da carta é gerado sozinho (tcg/app/textos.js). O autor só polir o texto, se quiser.
 // Conjuradores (04/10): o poder abre no mesmo construtor (ativação, gatilho e habilidades viram linhas; passivas e
 // permissões ficam em blocos próprios) e volta ao formato do poder sem perder nada (tcg/src/poder-conjurador.ts).
 import { esc } from './base.js';
-import { textoHabilidade, textoProtecao, textoPoder } from '/jogo/textos.js';
+import { textoHabilidade, textoProtegido, protegidoDe, textoPoder } from '/jogo/textos.js';
 import { poderParaConstrutor, construtorParaPoder } from '/jogo/poder-conjurador.js';
 import {
   CONDICOES, CONDICOES_CONJURADOR, EFEITOS, PALAVRAS, PALAVRAS_CONCESSAO, DESTINO_SAIDA, PASSIVAS_CONJ, CAMPOS_PERMISSAO,
-  definirFichas, opcoesDe, chaveDe, novoEfeito, efeitosDisponiveis, avisoEfeito, novaPermissao,
+  definirFichas, opcoesDe, chaveDe, novoEfeito, efeitosDisponiveis, avisoEfeito, novaPermissao, ehSecundario,
 } from './construtor-tabelas.js';
 
 export { CONDICOES, CONDICOES_CONJURADOR, EFEITOS, PALAVRAS };
@@ -24,6 +24,8 @@ export function montarConstrutor(caixa, mecInicial, { conjur, tipoCarta, form, a
   /** Conjurador: `mec` é o poder no formato do construtor (habilidades + passivas + permissões). */
   const carregar = (m) => {
     mec = conjur ? poderParaConstrutor(m?.poder ?? null) : structuredClone(m ?? {});
+    // Protegido unificado (04/10, noite): o nome antigo `protecao` ("Proteção mágica") abre dentro do Protegido
+    if (!conjur && mec.protecao) { const pr = protegidoDe(mec); delete mec.protecao; gravarProtegido(pr ?? {}); }
     mec.habilidades ??= [];
     hs = mec.habilidades;
   };
@@ -32,6 +34,7 @@ export function montarConstrutor(caixa, mecInicial, { conjur, tipoCarta, form, a
   const opc = (lista, v) => lista.map(([k, r]) => `<option value="${k}" ${String(v) === String(k) ? 'selected' : ''}>${esc(r)}</option>`).join('');
   const campoHTML = (c, valor, cam) => {
     if (c.tipo === 'num') return `<label>${esc(c.rot)} <input type="number" min="0" step="1" data-cam="${cam}" data-k="${c.k}" data-t="num" value="${valor ?? ''}"></label>`;
+    if (c.tipo === 'txt') return `<label>${esc(c.rot)} <input type="text" data-cam="${cam}" data-k="${c.k}" data-t="txt" value="${esc(valor ?? '')}"></label>`;
     if (c.tipo === 'sel') return `<label>${esc(c.rot)} <select data-cam="${cam}" data-k="${c.k}" data-t="sel">${opc(opcoesDe(c), valor ?? c.padrao)}</select></label>`;
     if (c.tipo === 'conc') {
       const v = valor ?? {};
@@ -51,8 +54,11 @@ export function montarConstrutor(caixa, mecInicial, { conjur, tipoCarta, form, a
     if (!chave) return `<div class="cst-efeito"><span class="peq">Efeito fora da tabela (${esc(ef.tipo)}): edite no JSON.</span><button class="botao perigo peq" data-rm-ef="${h}.${i}">×</button></div>`;
     const t = EFEITOS[chave];
     const aviso = avisoEfeito(chave, hs[h].quando);
-    return `<div class="cst-efeito"><select data-tipo-ef="${h}.${i}">${opc(efeitosDisponiveis(hs[h].quando, chave).map(([k, v]) => [k, v.rot]), chave)}</select>
-      ${t.campos.map((c) => campoHTML(c, ef[c.k], `${h}.${i}`)).join('')}
+    // efeitos secundários (custos/consequências, 04/10 noite) num grupo à parte da lista
+    const disp = efeitosDisponiveis(hs[h].quando, chave).map(([k, v]) => [k, v.rot]);
+    const opcoes = opc(disp.filter(([k]) => !ehSecundario(k)), chave) + `<optgroup label="Efeito secundário">${opc(disp.filter(([k]) => ehSecundario(k)), chave)}</optgroup>`;
+    return `<div class="cst-efeito${ehSecundario(chave) ? ' cst-secundario' : ''}"><select data-tipo-ef="${h}.${i}">${opcoes}</select>
+      ${t.campos.map((c) => campoHTML(c, c.ler ? c.ler(ef) : ef[c.k], `${h}.${i}`)).join('')}
       ${aviso ? `<span class="peq falta">${esc(aviso)}</span>` : ''}
       <button class="botao perigo peq" data-rm-ef="${h}.${i}" title="Tirar este efeito">×</button></div>`;
   };
@@ -70,7 +76,13 @@ export function montarConstrutor(caixa, mecInicial, { conjur, tipoCarta, form, a
     return `<label class="opcao-linha"><input type="checkbox" data-uma="${idx}" ${h.umaVezPorTurno ? 'checked' : ''}> Uma vez por turno</label>
       ${conjur ? `<label class="opcao-linha"><input type="checkbox" data-flag="${idx}" data-k="soNoSeuTurno" ${h.soNoSeuTurno ? 'checked' : ''}> Só no seu turno</label>` : ''}`;
   };
-  const pr = () => mec.protecao ?? {};
+  /** Protegido da carta (04/10, noite: um conceito só): número quando só tem Arcano; objeto com as variações. */
+  const pr = () => protegidoDe(mec) ?? {};
+  function gravarProtegido(p) {
+    for (const k of Object.keys(p)) if (!p[k]) delete p[k];
+    if (!Object.keys(p).length) delete mec.protegido;
+    else mec.protegido = Object.keys(p).length === 1 && p.arcano ? p.arcano : p;
+  }
   const palavrasForm = () => ($('[data-f="palavrasChave"]')?.value ?? '').split(',').map((x) => x.trim()).filter(Boolean);
   function $(s) { return form.querySelector(s); }
   const condicoesDe = (q) => (condicoes.some(([k]) => k === q) ? condicoes : [...condicoes, [q, q]]);
@@ -81,6 +93,7 @@ export function montarConstrutor(caixa, mecInicial, { conjur, tipoCarta, form, a
         ${custoHTML(h, idx)}
         ${(h.efeitos ?? []).map((ef, i) => efHTML(ef, idx, i)).join('')}
         <button class="botao peq" data-add-ef="${idx}">+ efeito</button>
+        <button class="botao peq" data-add-sec="${idx}" title="Custo ou consequência depois dos efeitos (dano no seu Conjurador, descarte, sacrificar um Aliado, Grau ao cemitério)">+ efeito secundário</button>
         <p class="peq cst-previa">${esc(previa(h))}</p></div>`).join('')}`;
   const permHTML = () => (mec.permiteJogarDe ?? []).map((pm, i) => `<div class="cst-efeito">${CAMPOS_PERMISSAO.map((c) => campoHTML(c, pm[c.k], `perm.${i}`)).join('')}
         <button class="botao perigo peq" data-rm-perm="${i}" title="Tirar esta permissão">×</button></div>`).join('');
@@ -102,9 +115,9 @@ export function montarConstrutor(caixa, mecInicial, { conjur, tipoCarta, form, a
       <div class="cst-bloco"><b>Palavras-chave</b> ${PALAVRAS.filter(([k]) => k !== 'Repentino' || tipoCarta === 'aliado').map(([k, r]) => `<label class="opcao-linha"><input type="checkbox" data-palavra="${k}" ${pk.includes(k) ? 'checked' : ''}> ${esc(r)}</label>`).join('')}</div>
       ${habsHTML()}
       <button class="botao peq" data-add-hab>+ condição (habilidade)</button>
-      <div class="cst-bloco"><b>Proteção mágica</b> <span class="peq">(quem mirar esta carta paga)</span>
-        ${[['arcano', 'Arcano'], ['vida', 'Vida'], ['descartar', 'Descartar cartas'], ['grauParaCemiterio', 'Cartas do Grau ao cemitério'], ['grauMin', 'Grau mínimo']].map(([k, r]) => `<label>${r} <input type="number" min="0" data-prot="${k}" value="${pr()[k] ?? ''}"></label>`).join('')}
-        ${mec.protecao ? `<p class="peq cst-previa">${esc(textoProtecao(mec.protecao))}</p>` : ''}</div>`;
+      <div class="cst-bloco"><b>Protegido</b> <span class="peq">(o oponente que mirar esta carta paga; só Arcano = "Protegido N")</span>
+        ${[['arcano', 'Arcano (N)'], ['vida', 'Vida'], ['descartar', 'Descartar cartas'], ['grauParaCemiterio', 'Cartas do Grau ao cemitério'], ['grauMin', 'Grau mínimo']].map(([k, r]) => `<label>${r} <input type="number" min="0" data-prot="${k}" value="${pr()[k] ?? ''}"></label>`).join('')}
+        ${mec.protegido ? `<p class="peq cst-previa">${esc(textoProtegido(protegidoDe(mec)))}</p>` : ''}</div>`;
   }
   /** O que vai para o Editor: a mecânica da carta, ou `{ poder }` do Conjurador no formato do motor. */
   const saida = () => {
@@ -153,10 +166,9 @@ export function montarConstrutor(caixa, mecInicial, { conjur, tipoCarta, form, a
       return gravar(false);
     }
     if (t.dataset.prot) {
-      mec.protecao ??= {};
-      const v = Math.max(0, Math.trunc(+t.value || 0));
-      if (v) mec.protecao[t.dataset.prot] = v; else delete mec.protecao[t.dataset.prot];
-      if (!Object.keys(mec.protecao).length) delete mec.protecao;
+      const p = { ...pr() };
+      p[t.dataset.prot] = Math.max(0, Math.trunc(+t.value || 0));
+      gravarProtegido(p);
       return gravar(true);
     }
     if (t.dataset.cam) {
@@ -171,7 +183,8 @@ export function montarConstrutor(caixa, mecInicial, { conjur, tipoCarta, form, a
       }
       if (e.tipo === 'invocar' && k === 'carta') { e.nome = (opcoesDe(EFEITOS.invocar.campos[0]).find(([id]) => id === t.value) ?? [])[1] ?? e.nome; }
       if (t.dataset.t === 'num') { if (t.value === '') delete e[k]; else e[k] = Math.max(0, Math.trunc(+t.value)); }
-      else if (t.dataset.t === 'sel') e[k] = t.value;
+      else if (t.dataset.t === 'sel') { e[k] = t.value; if (k === 'modo') delete e.aleatorio; }
+      else if (t.dataset.t === 'txt') { if (t.value.trim()) e[k] = t.value.trim(); else delete e[k]; }
       else if (t.dataset.t === 'bool') { if (t.checked) e[k] = true; else delete e[k]; }
       else if (t.dataset.t === 'multi') { const s = new Set(e[k] ?? []); if (t.checked) s.add(t.dataset.v); else s.delete(t.dataset.v); e[k] = [...s]; if (t.dataset.cam.startsWith('perm.') && !e[k].length) delete e[k]; }
       return gravar(false);
@@ -190,6 +203,7 @@ export function montarConstrutor(caixa, mecInicial, { conjur, tipoCarta, form, a
     }
     if (b.dataset.rmHab !== undefined) { hs.splice(+b.dataset.rmHab, 1); return gravar(true); }
     if (b.dataset.addEf !== undefined) { hs[+b.dataset.addEf].efeitos.push(novoEfeito('comprar')); return gravar(true); }
+    if (b.dataset.addSec !== undefined) { hs[+b.dataset.addSec].efeitos.push(novoEfeito('secDano')); return gravar(true); }
     if (b.dataset.rmEf !== undefined) { const [h, i] = b.dataset.rmEf.split('.').map(Number); hs[h].efeitos.splice(i, 1); return gravar(true); }
     if (b.dataset.addPerm !== undefined) { (mec.permiteJogarDe ??= []).push(novaPermissao()); return gravar(true); }
     if (b.dataset.rmPerm !== undefined) { mec.permiteJogarDe.splice(+b.dataset.rmPerm, 1); if (!mec.permiteJogarDe.length) delete mec.permiteJogarDe; return gravar(true); }

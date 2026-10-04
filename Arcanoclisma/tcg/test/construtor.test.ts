@@ -283,7 +283,7 @@ test('Etéreo: só Etéreos atingem um Etéreo; arma Etérea ataca, Armadura Et�
 test('texto gerado: cada condição e efeito vira uma frase', () => {
   for (const c of cartas) assert.ok(typeof textoCarta(c) === 'string');
   assert.match(textoCarta(cartas.find((c) => c.id === 'vidente')!), /Quando entra em campo: olhe as 3 cartas.*no Grau.*no cemitério e compre 1 carta/);
-  assert.match(textoCarta(cartas.find((c) => c.id === 'reliquia')!), /Proteção mágica/);
+  assert.match(textoCarta(cartas.find((c) => c.id === 'reliquia')!), /^Proficiente\. Protegido: para mirar esta carta, o oponente precisa ter 1\+ no Grau, pagar 2 de Vida e descartar 1 carta\.$/);
 });
 
 test('Incomensurável numa magia: o dano que passa da Vida do Aliado vai para o Conjurador dele', () => {

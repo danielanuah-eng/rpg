@@ -332,7 +332,7 @@ function formCarta() {
       ${ehPerm ? campo('Ataque', 'ataque', 'int', c.ataque, { orig: g('ataque') }) : ''}
       ${ehPerm ? campo('Vida', 'vida', 'int', c.vida, { orig: g('vida') }) : ''}
       ${campo('Descarta do Grau', 'descartaGrau', 'int', c.descartaGrau, { orig: g('descartaGrau'), dica: 'Cartas do Grau que vão para o cemitério ao jogar.' })}
-      ${ehPerm ? campo('Protegido', 'protegido', 'int', c.protegido, { orig: g('protegido'), dica: 'O oponente paga este Arcano a mais para mirar a carta.' }) : ''}
+      ${ehPerm && (c.protegido === undefined || typeof c.protegido === 'number') ? campo('Protegido', 'protegido', 'int', c.protegido, { orig: g('protegido'), dica: 'O oponente paga este Arcano a mais para mirar a carta (as outras variações do Protegido ficam no Editor do site).' }) : ''}
       ${ehPerm ? campo('Conta como cartas no Grau', 'grauExtra', 'int', c.grauExtra, { orig: g('grauExtra') }) : ''}
       ${campo('Oponente paga para anular', 'pagarParaAnular', 'int', c.pagarParaAnular, { orig: g('pagarParaAnular'), dica: 'Burn: depois de jogada, o oponente pode pagar este Arcano para ela não resolver. Vazio = não tem.' })}
       ${campo('Palavras-chave', 'palavrasChave', 'lista', c.palavrasChave, { orig: g('palavrasChave'), dica: 'Separadas por vírgula. O motor entende: Proficiente, Etéreo.' })}

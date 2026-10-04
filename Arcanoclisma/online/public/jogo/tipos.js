@@ -13,7 +13,9 @@
 /** Quando uma habilidade acontece. */
                                                                                                                                             
                                                                                                                                                       
-                                                           
+                                                          
+                                                                                                                                              
+                         
 /** Custo de uma habilidade ativada ("virar/pagar"). */
                                                                                                                            
 /** Habilidade montada no Editor: condição + efeitos (que se acumulam, em ordem). */
@@ -24,8 +26,13 @@
                                                                                                                                                                
                                                                                                              
  
-/** Proteção mágica: quem mira esta carta (com carta ou ativação do oponente) paga isto; sem poder pagar, não pode mirar. */
-                                                                                                                              
+/**
+ * Protegido (unificado em 04/10, noite; antes havia "Protegido N" e "Proteção mágica"): quem mira esta carta com carta ou
+ * ativação do oponente paga isto; sem poder pagar, não pode mirar. `protegido: N` (número) é o mesmo que `{ arcano: N }`.
+ */
+                                                                                                                               
+/** @deprecated Nome antigo ("Proteção mágica"); use Protegido. */
+                                 
 /** Para onde vão as cartas escolhidas. */
                                                                                                                   
                                                                                               
@@ -50,7 +57,13 @@
  * ou ao acaso. Nada escolhe o alvo sozinho; "atinge tudo" é o alcance "todos".
  */
                                                                   
-                                                                                   
+/**
+ * Efeito secundário (pedido do autor, 04/10, noite): custo ou consequência que acompanha outro efeito, como linha extra
+ * ("...; depois, seu Conjurador toma 2 de dano"). Só muda o texto e a avaliação do bot; o motor resolve em ordem.
+ */
+                                                                                                         
+/** Quem sofre o "tirar da mão": quem jogou/ativou, o oponente ou os dois. */
+                                                      
                  
                                                                                                                   
                                                                            
@@ -72,7 +85,13 @@
                                                                                                                                                          
                                             
                                                                                                                                                                 
-                                                                   
+     
+                                                                                                                          
+                                                                                                                                 
+                                                                                                                           
+                                                                                                        
+     
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
                                                                                                                                                   
                                          
                                                                                                            
@@ -83,8 +102,12 @@
                                                                                                                                                  
                                                                              
                                                     
-                                                                                                            
-                                                                                        
+     
+                                                                                                                         
+                                                                                                                              
+                                                                                                                
+     
+                                                                                                                                                 
                                                                                            
                                                                 
                                                                                                         
@@ -96,7 +119,14 @@
                                                                                                
                                                                                                                                                                                                                                                                          
                                                                                          
-                                          
+                                                                                                                                      
+     
+                                                                                                                           
+                                                                                                                                
+     
+                                                                     
+                                                                                                                                              
+                                                                           
 
 /** Arma: efeitos ao atacar (pedido do autor, 04/10). */
                            
@@ -183,8 +213,11 @@
                       
                                                                                        
                               
-                                                                                                                                 
-                     
+     
+                                                                                                                          
+                                                                                                                                        
+     
+                                 
                                                                                            
                                 
                                                                                                                        
@@ -202,8 +235,8 @@
                       
                                                                            
                              
-                                                                              
-                      
+                                                                                                                                     
+                       
                                                                                           
                         
                                                                       
@@ -418,7 +451,7 @@
                                                                    
                                                             
                                                               
-                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                             
                                                                                                  
                                                                                                                                                                                                                                                                                                          
                                                                                                                                                                                                                        
@@ -426,5 +459,5 @@
                                                                                                                                                                                                                                                                                                                                                                                                         
                                                                                         
                                                                   
-                                                                  
+                                                                                                                                                                                                     
                                          

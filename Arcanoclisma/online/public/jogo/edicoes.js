@@ -5,6 +5,7 @@
 // Mesmo formato do editor do app de testes (tcg/data/edicoes.json: cartas e conjuradores com os campos mudados;
 // null apaga o campo), mais `artes` para trocar a imagem. Convertido para public/jogo/edicoes.js pelo construir.ts.
                                                                                 
+import { normalizarProtegido } from './motor.js';
 
                               
                                                   
@@ -60,7 +61,8 @@ function mesclar                  (base   , parcial                         )   
 export function aplicarCatalogo(cat          , ed                                )           {
   if (!ed) return cat;
   const cartas                           = { ...cat.cartas };
-  for (const [id, p] of Object.entries(ed.cartas ?? {})) if (cartas[id]) cartas[id] = { ...mesclar(cartas[id], p), id };
+  // Protegido unificado (04/10, noite): edição antiga com `protecao` ("Proteção mágica") vira `protegido`
+  for (const [id, p] of Object.entries(ed.cartas ?? {})) if (cartas[id]) cartas[id] = normalizarProtegido({ ...mesclar(cartas[id], p), id });
   const conjuradores                                = { ...cat.conjuradores };
   for (const [id, p] of Object.entries(ed.conjuradores ?? {})) if (conjuradores[id]) conjuradores[id] = { ...mesclar(conjuradores[id], p), id };
   return { cartas, conjuradores };

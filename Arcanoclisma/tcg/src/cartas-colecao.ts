@@ -68,7 +68,7 @@ export const cartasColecao: CartaColecao[] = [
   temporaria('col-primeira-moeda', 'a-primeira-moeda', 'A Primeira Moeda', ['persona', 'cognitium', 'alvorum'], 2, [{ tipo: 'comprar', valor: 2 }, { tipo: 'arcanoOponente', valor: 1 }], { velocidade: 'repentina' }),
   temporaria('col-sino-dos-juramentados', 'sino-dos-juramentados', 'Sino dos Juramentados', ['conflituo', 'primitivum', 'dominum'], 2, [{ tipo: 'dano', valor: 5, alvo: 'conjuradorInimigo' }], { pagarParaAnular: 3 }),
   temporaria('col-ancora-do-mesmo-dia', 'ancora-do-mesmo-dia', 'Âncora do Mesmo Dia', ['eternyr', 'cognitium'], 1, [{ tipo: 'banirDaMao', desconto: 3 }]),
-  temporaria('col-cemiterio-que-respira', 'cemiterio-que-respira', 'Cemitério que Respira', ['morbidyum', 'cognitium'], 6, [{ tipo: 'reanimar', custoExtra: 0 }]),
+  temporaria('col-cemiterio-que-respira', 'cemiterio-que-respira', 'Cemitério que Respira', ['morbidyum', 'cognitium'], 6, [{ tipo: 'reanimar', custoExtra: 0, pagamento: 'gratis' }]), // 04/10: o motor nunca cobrou o custo do Aliado ao jogar; 'gratis' mantém igual
   temporaria('col-cadeado-ciumento', 'cadeado-ciumento', 'Cadeado Ciumento', ['eternyr', 'dominum'], 1, [{ tipo: 'permitirAnularDoCemiterio' }, { tipo: 'comprar', valor: 1 }], { velocidade: 'repentina' }),
   temporaria('col-frasco-de-mare', 'frasco-de-mare', 'Frasco de Maré', ['alvorum', 'primitivum', 'eternyr'], 2, [{ tipo: 'arcano', valor: 3 }]),
   temporaria('col-chapeu-de-chuva', 'chapeu-de-chuva-particular', 'Chapéu de Chuva Particular', ['morbidyum', 'alvorum', 'dominum'], 2, [{ tipo: 'curar', valor: 4, alvo: 'conjuradorProprio' }], { velocidade: 'repentina' }),

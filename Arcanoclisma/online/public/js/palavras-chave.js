@@ -1,6 +1,7 @@
 // Palavras-chave e termos das cartas (aba "Palavras-chave" do site e ajuda da mesa). Texto ligado ao motor real
 // (tcg/src/motor.ts) e ao Livro de Regras (tcg/docs/LIVRO-DE-REGRAS.md, seções 5 a 9).
 import { ICONES, icone } from './icones.js';
+import { protegidoDe } from '/jogo/textos.js';
 export const PALAVRAS_CHAVE = [
   { grupo: 'Velocidade', itens: [
     ['Findante', 'Só pode ser jogada na sua fase principal, com a pilha vazia e fora de combate.'],
@@ -14,7 +15,7 @@ export const PALAVRAS_CHAVE = [
     ['Reanimum', 'Reanimum (pode ser jogada do seu cemitério; depois é banida): a carta pode ser jogada do cemitério do dono, pagando o custo normal, nas mesmas condições de velocidade e fase de uma carta da mão. Não é repetível: Temporária vai para o banimento ao resolver; Aliado, Mística ou Estrutura vai para o banimento quando sair do campo.'],
     ['Concessão', 'Efeito que dá palavras-chave, +/- Ataque e Vida e/ou um tempo em campo a uma carta (ex.: as unidades invocadas ganham Etéreo por 2 turnos). O turno em que a carta entra conta como o 1º (seja de quem for); depois contam só os turnos do controlador; ao acabar a carta vai para o destino indicado (padrão: cemitério).'],
     ['Protessência', 'Esta carta não pode ser escolhida como alvo de efeitos do oponente (cartas, ativações, habilidades, gatilhos, escolhas posteriores e sorteios), nem anulada por ele na pilha. Efeitos sem alvo (que atingem todos) e os seus próprios efeitos continuam a afetá-la. Ataques não são efeitos: um Aliado com Protessência pode ser atacado.'],
-    ['Protegido N', 'Quem mirar esta carta com uma carta ou ativação paga N de Arcano a mais (a sua própria não paga).'],
+    ['Protegido', 'Quem mirar esta carta com uma carta ou ativação do oponente paga o que o Protegido pede: "Protegido N" = N de Arcano a mais; algumas cartas pedem também Vida, descarte, cartas do Grau ao cemitério ou um Grau mínimo. Com dois Protegidos (o da carta e outro dado pelo Conjurador ou por uma Concessão), os dois valem: o oponente paga cada um, juntos. Sem poder pagar, não mira. O dono não paga; efeitos sem alvo e sacrifícios não pagam.'],
     ['Ao entrar', 'Efeito que acontece quando a carta entra em campo.'],
     ['Ao causar dano de combate ao Conjurador inimigo', 'Gatilho que acontece quando este Aliado acerta o Conjurador rival em combate.'],
   ] },
@@ -33,7 +34,11 @@ export const PALAVRAS_CHAVE = [
     ['Destruir', 'A carta vai para o cemitério.'],
     ['Varredura', 'Causa dano a cada Aliado do oponente (ou de todos, se disser "inclusive os seus").'],
     ['Banir', 'A carta vai para a zona de banimento; algumas podem ser jogadas de lá depois.'],
-    ['Reanimar', 'Um Aliado volta do cemitério para o campo.'],
+    ['Reanimar', 'Um Aliado volta do cemitério para o campo: quem controla o efeito o escolhe ao resolver e paga o que a carta pedir (nada, o custo dele ou o custo + X), com a reserva, o Grau e cartas da mão enviadas ao Arcano. Sem poder pagar, não traz nada.'],
+    ['Tirar da mão', 'Descartar (vai para o cemitério) ou banir cartas da mão: ao acaso, o dono escolhe sem mostrar, ou quem jogou olha a mão e escolhe (só ele vê).'],
+    ['Efeito secundário', 'Custo ou consequência que vem depois dos outros efeitos ("...; depois, seu Conjurador toma 2 de dano"): dano no Conjurador, descarte, sacrificar um Aliado ou cartas do Grau ao cemitério.'],
+    ['Sacrificar', 'O dono escolhe um Aliado dele (só Aliado; Místicas e Estruturas não) e o manda do campo para o cemitério, sem ganhar nada. Não mira: Protegido e Protessência não impedem. Conta como morte para gatilhos.'],
+    ['No Cataclisma do turno do oponente', 'Gatilho que acontece na etapa de Cataclisma (fim) de cada turno do oponente.'],
     ['Olhar o topo', 'Olhe as cartas do topo do baralho, ponha algumas na mão e o resto no fundo.'],
     ['Suspender (ativação)', 'Deite a carta para usar a habilidade dela; ela levanta no seu Final.'],
   ] },
@@ -59,7 +64,7 @@ export const LEMBRETES = {
   Reanimum: 'pode ser jogada do seu cemitério; depois é banida.',
   Incomensurável: 'o dano que passar da Vida da carta atingida vai para o Conjurador dela.',
   Protessência: 'não pode ser alvo de efeitos do oponente, nem anulada por eles.',
-  Protegido: (n) => `mirar esta carta custa ${n} a mais ao oponente.`,
+  Protegido: (n) => `mirar esta carta custa ${n} de Arcano a mais ao oponente.`,
   Repentina: 'pode ser jogada em resposta, até no turno do oponente.',
   'Pagar para anular': (n) => `o oponente pode pagar ${n} de Arcano para que ela não resolva.`,
 };
@@ -71,7 +76,9 @@ export function lembretesDe(d) {
   // o texto já explica a palavra entre parênteses ("Etéreo (só é bloqueado...)"): não repete
   const jaExplica = (k) => (d.texto ?? '').includes(k) && /^\s*(\d+\s*)?\(/.test((d.texto ?? '').split(k)[1] ?? '');
   for (const k of d.palavrasChave ?? []) if (typeof LEMBRETES[k] === 'string' && !jaExplica(k)) l.push(`${k}: ${LEMBRETES[k]}`);
-  if (d.protegido && !jaExplica('Protegido')) l.push(`Protegido ${d.protegido}: ${LEMBRETES.Protegido(d.protegido)}`);
+  // Protegido só de Arcano ("Protegido N") ganha lembrete; com as variações, o próprio texto já explica
+  const pr = protegidoDe(d);
+  if (pr && Object.keys(pr).length === 1 && pr.arcano && !jaExplica('Protegido')) l.push(`Protegido ${pr.arcano}: ${LEMBRETES.Protegido(pr.arcano)}`);
   if (d.velocidade === 'repentina' && d.tipo !== 'aliado') l.push(`Repentina: ${LEMBRETES.Repentina}`);
   if (d.pagarParaAnular) l.push(`Pagar para anular ${d.pagarParaAnular}: ${LEMBRETES['Pagar para anular'](d.pagarParaAnular)}`);
   return l;

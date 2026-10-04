@@ -1,6 +1,6 @@
 // Jogador guloso para simulações. Não é forte: serve para expor quais mecânicas são usadas, ignoradas ou abusadas.
-import { ataqueConjurador, ativacaoDeHabilidade, custoEfetivo, custoProtecao, origemDaCarta, defCarta, custoAtaqueConjurador, defConjurador, ehRepentina, etereo as etereoMotor, GRAU_MAXIMO, grauAtaqueConjurador, grauEfetivo, recemChegado, efeitoSemConjurador, protegidaDe } from '../src/motor.ts';
-import type { Ativacao, CartaDef, Comando, Estado, Jogador } from '../src/tipos.ts';
+import { ataqueConjurador, ativacaoDeHabilidade, custoEfetivo, custoProtecao, origemDaCarta, defCarta, custoAtaqueConjurador, defConjurador, ehRepentina, etereo as etereoMotor, GRAU_MAXIMO, grauAtaqueConjurador, grauEfetivo, recemChegado, efeitoSemConjurador, protegidaDe, protegidoDe, candidatosReanimar, custoReanimar, efeitosAoJogar, efeitosAoEntrar, arcanoNaHora } from '../src/motor.ts';
+import type { Ativacao, CartaDef, Comando, Efeito, Estado, Jogador } from '../src/tipos.ts';
 
 export interface Estilo {
   nome: string;
@@ -50,7 +50,39 @@ function valorPerm(e: Estado, id: string): number {
 
 /** Rodada 6: valor extra de um Aliado com gatilhos (ao entrar, ao causar dano ao Conjurador) e Protegido. 0 nas cartas antigas. */
 function extraAliado(d: CartaDef): number {
-  return 2 * (d.aoEntrar?.length ?? 0) + 2 * (d.aoDanoConjurador?.length ?? 0) + (d.protegido ?? 0);
+  return 2 * (d.aoEntrar?.length ?? 0) + 2 * (d.aoDanoConjurador?.length ?? 0) + (protegidoDe(d)?.arcano ?? 0)
+    + 2 * (d.habilidades ?? []).filter((h) => h.quando === 'cataclismaOponente').length;
+}
+
+/**
+ * Efeitos secundários (04/10, noite): quanto custam ao bot os que caem sobre ele (negativo = o oponente perde).
+ * null = não paga (o dano mataria ou quase mataria o próprio Conjurador).
+ */
+function custoSecundarios(e: Estado, j: Jogador, efeitos: Efeito[]): number | null {
+  const z = e.jogadores[j];
+  const adv = e.jogadores[outro(j)];
+  let t = 0;
+  for (const ef of efeitos) {
+    if (ef.tipo === 'perderVida') {
+      if (ef.quem === 'oponente') { t -= ef.valor * 0.7; continue; }
+      const resta = vidaRest(e, z.conjuradorId);
+      if (resta <= ef.valor + 2) return null;
+      t += ef.valor * (resta <= 10 ? 1.5 : 0.7);
+    } else if (ef.tipo === 'descartar') {
+      if (ef.quem !== 'oponente') t += 2 * Math.min(ef.valor, Math.max(0, z.mao.length - 1));
+      if (ef.quem !== 'voce') t -= 2 * Math.min(ef.valor, adv.mao.length) + (ef.modo === 'olhando' ? 1 : 0);
+    } else if (ef.tipo === 'sacrificar') {
+      const lado = ef.quem === 'oponente' ? adv : z;
+      const unid = lado.campo.filter((id) => ehAliado(e, id)).map((id) => valorPerm(e, id)).sort((a, b) => a - b); // só Aliado se sacrifica
+      const perda = unid.slice(0, ef.valor ?? 1).reduce((s, v) => s + v, 0);
+      t += ef.quem === 'oponente' ? -perda : perda;
+    } else if (ef.tipo === 'grauAoCemiterio') {
+      const lado = ef.quem === 'oponente' ? adv : z;
+      const n = Math.min(ef.valor, lado.grau.length) * 2.5;
+      t += ef.quem === 'oponente' ? -n : n;
+    }
+  }
+  return t;
 }
 
 /** Estilo do jogador que está decidindo agora (definido em decidir). */
@@ -165,6 +197,13 @@ function intencaoBase(e: Estado, j: Jogador, id: string, est: Estilo): Intencao 
     return (deles.length >= 3 && liquido >= 8) || liquido >= 14 ? { carta: id, utilidade: 4 + liquido / 2 } : null;
   }
   if (ef.tipo === 'comprar') return { carta: id, utilidade: z.mao.length <= 4 ? 3 * ef.valor : 1 };
+  // 04/10 (noite): tirar da mão, sacrificar, Grau ao cemitério e dano no Conjurador valem pelo que custam a cada lado (custoSecundarios)
+  if (ef.tipo === 'descartar' || ef.tipo === 'sacrificar' || ef.tipo === 'grauAoCemiterio' || ef.tipo === 'perderVida') return { carta: id, utilidade: 0.5 };
+  if (ef.tipo === 'reanimar') {
+    const disp = z.arcano + grauUsavel(e, j).length - custoEfetivo(e, j, id);
+    const melhor = candidatosReanimar(e, j, ef, false).filter((a) => custoReanimar(ef, defCarta(e, a)) <= disp).sort((a, b) => valorCarta(defCarta(e, b), 0) - valorCarta(defCarta(e, a), 0))[0];
+    return melhor ? { carta: id, utilidade: 2 + valorCarta(defCarta(e, melhor), z.grau.length) / 2 } : null;
+  }
   if (ef.tipo === 'olharTopo') return { carta: id, utilidade: z.mao.length <= 4 ? 3.5 * ef.pegar : 1 };
   if (ef.tipo === 'dano' && ef.alvo === 'conjuradorInimigo') {
     const letal = vidaRest(e, face) <= ef.valor;
@@ -239,6 +278,10 @@ function planejarJogada(e: Estado, j: Jogador, est: Estilo, apenasRepentinas: bo
       ? (efc?.tipo === 'dano' && efc.alvo !== 'conjuradorInimigo' && vidaRest(e, alvoCombate) <= efc.valor ? { carta: id, alvo: alvoCombate, utilidade: 4 + valorPerm(e, alvoCombate) / 2 } : null)
       : intencao(e, j, id, est);
     if (!it || it.utilidade <= 0 || (filtro && !filtro(it))) continue;
+    // efeitos secundários da carta (custos/consequências): descontam da utilidade
+    const sec = custoSecundarios(e, j, [...efeitosAoJogar(d), ...(d.tipo === 'temporaria' ? [] : efeitosAoEntrar(d))]);
+    if (sec === null || it.utilidade - sec <= 0) continue;
+    it.utilidade -= sec;
     if (it.alvo && protegidaDe(e, it.alvo, j)) continue; // Protessência: o alvo não serve
     const custo = custoEfetivo(e, j, id) + custoProtecao(e, j, it.alvo);
     let pitch: string[] = [];
@@ -308,6 +351,8 @@ function planejarAtivacao(e: Estado, j: Jogador, est: Estilo): Comando | null {
     const extras = id === z.conjuradorId ? custosExtrasConj(e, j, at) : {};
     if (!extras) continue;
     if (at.requisito?.grau && grauEfetivo(e, j) < at.requisito.grau) continue; // requisito do Editor (04/10)
+    const sec = custoSecundarios(e, j, at.efeitos);
+    if (sec === null || sec > 4) continue; // efeitos secundários caros demais para uma ativação
     const ef = at.efeitos[0];
     let alvo: string | undefined;
     let necessario = at.custo + (at.requisito?.arcano ?? 0);
@@ -331,10 +376,12 @@ function planejarAtivacao(e: Estado, j: Jogador, est: Estilo): Comando | null {
       alvo = z.mao.filter((a) => defCarta(e, a).custo >= 5 && defCarta(e, a).grau <= grauEfetivo(e, j) + 2).sort((a, b) => defCarta(e, b).custo - defCarta(e, a).custo)[0];
       if (!alvo) continue;
     } else if (ef.tipo === 'reanimar') {
-      const todos = [...e.jogadores[0].cemiterio, ...e.jogadores[1].cemiterio].filter((a) => defCarta(e, a).tipo === 'aliado' && defCarta(e, a).custo + ef.custoExtra <= z.arcano + grauUsavel(e, j).length + manaPerm(e, j).length);
+      // escolhe o Aliado já na ativação e paga junto (o motor aceita o alvo no comando); filtros e pagamento do efeito
+      const disp = z.arcano + grauUsavel(e, j).length + manaPerm(e, j).length - necessario;
+      const todos = candidatosReanimar(e, j, ef, false).filter((a) => custoReanimar(ef, defCarta(e, a)) <= disp);
       alvo = todos.sort((a, b) => valorCarta(defCarta(e, b), 0) - valorCarta(defCarta(e, a), 0))[0];
       if (!alvo || valorCarta(defCarta(e, alvo), 0) < 8) continue;
-      necessario += defCarta(e, alvo).custo + ef.custoExtra;
+      necessario += custoReanimar(ef, defCarta(e, alvo));
     }
     else if (ef.tipo === 'curar') {
       alvo = [...(ef.alvo === 'escolhidoAliado' ? [] : [z.conjuradorId]), ...z.campo.filter((a) => ef.alvo !== 'escolhidoAliado' || ehAliado(e, a))].filter((a) => e.instancias[a].dano >= 2).sort((a, b) => e.instancias[b].dano - e.instancias[a].dano)[0];
@@ -592,12 +639,28 @@ export function decidir(e: Estado, j: Jogador, est: Estilo): Comando {
       const nocivo = !!efA && (['dano', 'destruir', 'devolver'].includes(efA.tipo) || (efA.tipo === 'campo' && (['dano', 'destruir', 'devolver', 'paraBaralho', 'naoAtaca', 'suspender'].includes(efA.acao) || (efA.acao === 'conceder' && ((efA.concessao?.ataque ?? 0) < 0 || (efA.concessao?.vida ?? 0) < 0)))));
       const ruim = ['cemiterio', 'fundo', 'grau', 'banimento'].includes(pend.destino) || nocivo;
       const nota = (id: string) => { const i = e.instancias[id]; if (!i || i.defId === 'oculta') return 0; if (i.ehConjurador) return nocivo ? 3 : 8; return valorCarta(defCarta(e, id), z.grau.length); };
+      if (efA?.tipo === 'reanimar') {
+        // volta do cemitério: o Aliado mais valioso que dá para pagar sem gastar cartas; senão, envia as menos valiosas da mão
+        const ordem = [...pend.cartas].sort((a, b) => nota(b) - nota(a));
+        const semMao = ordem.filter((a) => !efA.cobrarNaHora || custoReanimar(efA, defCarta(e, a)) <= arcanoNaHora(e, j));
+        if (semMao.length || !efA.cobrarNaHora) return { tipo: 'escolherCartas', jogador: j, cartas: (semMao.length ? semMao : ordem).slice(0, 1) };
+        const alvo = ordem[ordem.length - 1];
+        let falta = custoReanimar(efA, defCarta(e, alvo)) - arcanoNaHora(e, j);
+        const pitch: string[] = [];
+        for (const c of ordemDeSacrificio(e, j, z.mao)) { if (falta <= 0) break; pitch.push(c); falta -= defCarta(e, c).arcanoGerado; }
+        return { tipo: 'escolherCartas', jogador: j, cartas: [alvo], ...(falta <= 0 ? { enviarArcano: pitch } : {}) };
+      }
       if (efA) {
         // alvo: efeito nocivo nas cartas do oponente = a melhor dele; nas suas = a menos valiosa; benéfico = a melhor sua
         // destruir/devolver nunca miram o Conjurador (decisão 28)
         const lista = [...pend.cartas].filter((id) => !(efeitoSemConjurador(efA) && e.instancias[id]?.ehConjurador)).sort((a, b) => nota(b) - nota(a));
         if (!lista.length) lista.push(...pend.cartas);
         const alvo = nocivo ? (lista.find((id) => e.instancias[id]?.dono !== j) ?? lista[lista.length - 1]) : (lista.find((id) => e.instancias[id]?.dono === j) ?? lista[0]);
+        if (pend.quantidade > 1) {
+          // várias (ex.: sacrificar 2 unidades suas): nocivo nas suas = as menos valiosas
+          const ordem = nocivo && minhas ? [...lista].reverse() : [alvo, ...lista.filter((id) => id !== alvo)];
+          return { tipo: 'escolherCartas', jogador: j, cartas: ordem.slice(0, pend.quantidade) };
+        }
         return { tipo: 'escolherCartas', jogador: j, cartas: [alvo] };
       }
       const ordem = minhas && ruim ? ordemDeSacrificio(e, j, pend.cartas) : [...pend.cartas].sort((a, b) => nota(b) - nota(a));

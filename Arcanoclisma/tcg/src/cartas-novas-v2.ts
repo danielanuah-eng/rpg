@@ -27,7 +27,7 @@ export const cartasNovasV2: CartaColecao[] = [
   aliado('nv-carcaca-andante', 'carcaca-andante', 'Carcaça Andante', 'morbidyum', 2, 2, 3, { subtipos: morto }),
   aliado('nv-coveiro', 'coveiro-de-vau-grande', 'Coveiro de Vau Grande', 'morbidyum', 2, 1, 2, { subtipos: ['Humano'], aoEntrar: [{ tipo: 'olharTopo', quantidade: 2, pegar: 1 }] }),
   aliado('nv-embalsamador', 'embalsamador', 'Embalsamador', 'morbidyum', 3, 2, 3, { subtipos: ['Humano'], ativacao: { custo: 2, suspende: true, efeitos: [{ tipo: 'reanimar', custoExtra: 1 }] } }),
-  aliado('nv-ossario', 'velho-ossario-dragao-palido', 'Velho Ossário, o Dragão Pálido', 'morbidyum', 7, 7, 7, { subtipos: [...morto, 'Dragão'], aoEntrar: [{ tipo: 'reanimar', custoExtra: 0 }] }),
+  aliado('nv-ossario', 'velho-ossario-dragao-palido', 'Velho Ossário, o Dragão Pálido', 'morbidyum', 7, 7, 7, { subtipos: [...morto, 'Dragão'], aoEntrar: [{ tipo: 'reanimar', custoExtra: 0, pagamento: 'gratis' }] }), // 04/10: sem cobrança, como antes
   aliado('nv-esquecido', 'esquecido', 'O Esquecido', 'cognitium', 2, 2, 1, { subtipos: morto, palavrasChave: ['Etéreo'] }),
   aliado('nv-moca-que-nao-sangra', 'moca-que-nao-sangra', 'Moça que Não Sangra', 'persona', 3, 3, 3, { subtipos: morto, protegido: 1 }),
 

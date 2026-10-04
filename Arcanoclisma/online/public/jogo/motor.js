@@ -1,7 +1,7 @@
 // Gerado por online/construir.ts a partir de tcg/src/motor.ts. Não edite: edite o .ts e reconstrua.
 // Motor de regras do Arcanoclisma TCG (fase 1). Muta o estado e lança ErroRegra se o comando for ilegal.
              
-                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                   
                     
 
 export const ARCANO_POR_GRAU = 1;
@@ -96,9 +96,34 @@ export function protegidaDe(e        , instId                    , controlador  
   const i = instId === undefined ? undefined : e.instancias[instId];
   return !!i && i.dono !== controlador && temPalavra(e, instId , PROTESSENCIA);
 }
-/** Protegido N concedido ("Protegido 2"): maior N entre as concessões. */
-function protegidoConcedido(i      )         {
-  return Math.max(0, ...palavrasConcedidas(i).map((p) => { const m = /^Protegido\s*(\d+)$/i.exec(p.trim()); return m ? Number(m[1]) : 0; }));
+/**
+ * Protegido da carta (unificado em 04/10, noite): número N = { arcano: N }; o nome antigo `protecao` ("Proteção mágica")
+ * ainda é lido e somado (o Arcano dos dois se soma, como antes). null = sem Protegido.
+ */
+export function protegidoDe(d                                                      )                   {
+  if (!d) return null;
+  const p = d.protegido;
+  const r            = typeof p === 'number' ? (p ? { arcano: p } : {}) : { ...(p ?? {}) };
+  for (const [k, v] of Object.entries(d.protecao ?? {})                                                ) {
+    if (!v) continue;
+    r[k] = k === 'grauMin' ? Math.max(r[k] ?? 0, v) : (r[k] ?? 0) + v;
+  }
+  for (const k of Object.keys(r)                          ) if (!r[k]) delete r[k];
+  return Object.keys(r).length ? r : null;
+}
+/** Converte o nome antigo: `protecao` vira parte de `protegido` (número quando só tem Arcano). Devolve a mesma carta se não há o que converter. */
+export function normalizarProtegido                                                    (d   )    {
+  if (!d || d.protecao === undefined) return d;
+  const pr = protegidoDe(d);
+  const { protecao: _velho, ...resto } = d;
+  const r = { ...resto }     ;
+  if (!pr) delete r.protegido;
+  else r.protegido = Object.keys(pr).length === 1 && pr.arcano ? pr.arcano : pr;
+  return r;
+}
+/** Protegidos concedidos ("Protegido 2"), cada um por si (fixos e por turnos). */
+function protegidosConcedidos(i      )           {
+  return palavrasConcedidas(i).map((p) => { const m = /^Protegido\s*(\d+)$/i.exec(p.trim()); return m ? Number(m[1]) : 0; }).filter((n) => n > 0);
 }
 
 /** Incomensurável (decisão 25): Aliado com a palavra-chave, ou Conjurador com arma Incomensurável. */
@@ -217,6 +242,7 @@ const QUANDO_LOG                         = {
   jogar: 'ao ser jogada', entrar: 'ao entrar', ativada: 'ativada', alvo: 'virou alvo', grau: 'foi para o Grau', atacar: 'atacou',
   bloquear: 'defendeu', cemiterio: 'caiu no cemitério', banimento: 'foi banida', danoConjurador: 'acertou o Conjurador',
   aliadoEntra: 'viu um Aliado entrar', aliadoMorre: 'viu um Aliado cair', aliadoDanoConjurador: 'viu um Aliado acertar o Conjurador',
+  cataclismaOponente: 'no Cataclisma do turno do oponente',
 };
 /** Habilidades do construtor de efeitos desta instância: as da carta, ou as do poder do Conjurador (Editor, 04/10). */
 export function habilidadesDe(e        , instId        )               {
@@ -610,16 +636,69 @@ function cumprirRequisito(e        , r                       , dono         )   
   if (r.grau && grauEfetivo(e, dono) < r.grau) { anotar(e, `Requisito não cumprido: precisa de Grau ${r.grau} (tem ${grauEfetivo(e, dono)}); a linha não acontece.`); return false; }
   const custo = r.arcano ?? 0;
   if (custo <= 0) return true;
-  const z = e.jogadores[dono];
-  const levantadas = z.grau.filter((id) => !e.instancias[id].suspensa);
-  if (z.arcano + levantadas.length * ARCANO_POR_GRAU < custo) { anotar(e, `Requisito não cumprido: precisa pagar ${custo} de Arcano; a linha não acontece.`); return false; }
-  const daReserva = Math.min(z.arcano, custo);
-  z.arcano -= daReserva;
-  let falta = custo - daReserva;
-  for (const id of levantadas) { if (falta <= 0) break; e.instancias[id].suspensa = true; falta -= ARCANO_POR_GRAU; }
+  if (!pagarNaHora(e, dono, custo)) { anotar(e, `Requisito não cumprido: precisa pagar ${custo} de Arcano; a linha não acontece.`); return false; }
   anotar(e, `Jogador ${dono} paga ${custo} de Arcano pelo requisito.`);
   return true;
 }
+/** Arcano que dá para pagar ao resolver um efeito: a reserva mais as cartas levantadas do Grau. */
+export function arcanoNaHora(e        , j         )         {
+  const z = e.jogadores[j];
+  return z.arcano + z.grau.filter((id) => !e.instancias[id].suspensa).length * ARCANO_POR_GRAU;
+}
+/** Paga ao resolver (requisito, reanimar): reserva primeiro, depois suspende cartas levantadas do Grau. false = não deu. */
+function pagarNaHora(e        , j         , custo        )          {
+  if (custo <= 0) return true;
+  if (arcanoNaHora(e, j) < custo) return false;
+  const z = e.jogadores[j];
+  const daReserva = Math.min(z.arcano, custo);
+  z.arcano -= daReserva;
+  let falta = custo - daReserva;
+  for (const id of z.grau) { if (falta <= 0) break; if (e.instancias[id].suspensa) continue; e.instancias[id].suspensa = true; falta -= ARCANO_POR_GRAU; }
+  return true;
+}
+
+/** Reanimar (04/10, noite): quanto custa trazer este Aliado (grátis, o custo dele, ou o custo + X; sem `pagamento` = custo + custoExtra). */
+export function custoReanimar(ef                                       , d          )         {
+  if (ef.pagamento === 'gratis') return 0;
+  if (ef.pagamento === 'custo') return d.custo;
+  return d.custo + (ef.custoExtra ?? 0);
+}
+const normal = (s        ) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').trim().toLowerCase();
+/** O Aliado serve para este reanimar (está no cemitério certo, é Aliado e passa nos filtros de custo e subtipo)? */
+export function reanimarServe(e        , controlador         , ef                                       , id        )          {
+  const dc = e.jogadores[0].cemiterio.includes(id) ? 0 : e.jogadores[1].cemiterio.includes(id) ? 1 : -1;
+  if (dc < 0) return false;
+  const de = ef.de ?? 'qualquer';
+  if ((de === 'seu' && dc !== controlador) || (de === 'oponente' && dc === controlador)) return false;
+  const d = defCarta(e, id);
+  if (d.tipo !== 'aliado') return false;
+  if (ef.custoMax !== undefined && d.custo > ef.custoMax) return false;
+  if (ef.subtipo && !(d.subtipos ?? []).some((s) => normal(s) === normal(ef.subtipo ))) return false;
+  return true;
+}
+/** Aliados que o reanimar pode trazer agora (e que dá para pagar ao resolver, contando as cartas da mão enviadas ao Arcano). */
+export function candidatosReanimar(e        , controlador         , ef                                       , pagando = true)           {
+  const disp = arcanoNaHora(e, controlador) + e.jogadores[controlador].mao.reduce((s, id) => s + defCarta(e, id).arcanoGerado, 0);
+  return [...e.jogadores[0].cemiterio, ...e.jogadores[1].cemiterio].filter((id) => reanimarServe(e, controlador, ef, id) && (!pagando || custoReanimar(ef, defCarta(e, id)) <= disp));
+}
+/** Põe o Aliado do cemitério no campo de `dono`: concessão, gatilho do Conjurador e "ao entrar". */
+function trazerDoCemiterio(e        , id        , dono         , concessao                       )       {
+  for (const z of e.jogadores) tirar(z.cemiterio, id);
+  const inst = e.instancias[id];
+  limparInst(inst);
+  inst.dono = dono; inst.entrouNoTurno = e.turno;
+  e.jogadores[dono].campo.push(id);
+  if (concessao) conceder(e, id, concessao);
+  const dr = defCarta(e, id);
+  anotar(e, `${dr.nome} volta do cemitério para o campo do jogador ${dono}.`);
+  gatilhoConjurador(e, dono, 'aliadoEntra');
+  const aoEntrarR = efeitosAoEntrar(dr);
+  if (aoEntrarR.length) e.pilha.push({ tipo: 'gatilho', id: `p${e.proxId++}`, controlador: dono, efeitos: aoEntrarR, fonte: dr.nome });
+}
+/** O que pode ser sacrificado (autor, 04/10 noite): só Aliados em campo; Místicas e Estruturas não. */
+const unidadesDe = (e        , j         ) => e.jogadores[j].campo.filter((id) => defCarta(e, id).tipo === 'aliado');
+/** Sacrifício (efeito secundário): o "destruir" do próprio dono, sem mirar; conta como morte (como a saída por tempo). */
+const EFEITO_SACRIFICIO         = { tipo: 'campo', acao: 'destruir', alcance: 'alvo', lado: 'proprio', tipos: ['aliado'] };
 
 function aplicarEfeitos(e        , efeitos          , dono         , escolhido         , bonus = 0, auto = false)       {
   for (let k = 0; k < efeitos.length; k++) {
@@ -627,23 +706,71 @@ function aplicarEfeitos(e        , efeitos          , dono         , escolhido  
     if (ef.requisito && !cumprirRequisito(e, ef.requisito, dono)) continue;
     const depois              = { efeitos: efeitos.slice(k + 1), dono, alvo: escolhido };
     if (ef.tipo === 'perderVida') {
-      const c = e.jogadores[dono].conjuradorId;
+      const j = ef.quem === 'oponente' ? outro(dono) : dono;
+      const c = e.jogadores[j].conjuradorId;
       e.instancias[c].dano += ef.valor;
-      anotar(e, `${defConjurador(e, dono).nome} perde ${ef.valor} de Vida.`);
+      anotar(e, `${defConjurador(e, j).nome} ${ef.secundario ? `toma ${ef.valor} de dano` : `perde ${ef.valor} de Vida`}.`);
       continue;
     }
     if (ef.tipo === 'descartar') {
+      // "tirar da mão" (04/10, noite): os dois jogadores = o efeito para você e depois para o oponente
+      if (ef.quem === 'ambos') { aplicarEfeitos(e, [{ ...ef, quem: 'voce', requisito: undefined }, { ...ef, quem: 'oponente', requisito: undefined }, ...efeitos.slice(k + 1)], dono, escolhido, bonus, auto); return; }
       const j = ef.quem === 'voce' ? dono : outro(dono);
       const z = e.jogadores[j];
+      const banir = ef.acao === 'banir';
+      const destino          = banir ? 'banimento' : 'cemiterio';
       const n = Math.min(ef.valor, z.mao.length);
-      if (!n) { anotar(e, `Jogador ${j} não tem cartas para descartar.`); continue; }
-      if (ef.aleatorio) {
-        for (let i = 0; i < n; i++) { const id = z.mao.splice(Math.floor(aleatorio(e) * z.mao.length), 1)[0]; z.cemiterio.push(id); }
-        anotar(e, `Jogador ${j} descarta ${n} carta(s) ao acaso.`);
+      if (!n) { anotar(e, `Jogador ${j} não tem cartas na mão para ${banir ? 'banir' : 'descartar'}.`); continue; }
+      const modo = ef.modo ?? (ef.aleatorio ? 'acaso' : 'dono');
+      if (modo === 'acaso') {
+        for (let i = 0; i < n; i++) moverPara(e, z.mao[Math.floor(aleatorio(e) * z.mao.length)], destino, j);
+        anotar(e, `Jogador ${j} ${banir ? 'bane' : 'descarta'} ${n} carta(s) da mão ao acaso.`);
         continue;
       }
-      pedirEscolha(e, j, [...z.mao], n, 'cemiterio', `Descarte ${n} carta(s)`, undefined, depois);
-      anotar(e, `Jogador ${j} escolhe ${n} carta(s) para descartar.`);
+      if (modo === 'olhando' && j !== dono) {
+        // quem controla o efeito vê a mão do oponente (só ele: a visão online mostra as cartas da escolha a quem escolhe)
+        pedirEscolha(e, dono, [...z.mao], n, destino, `Mão do oponente: escolha ${n} carta(s) para ${banir ? 'banir' : 'descartar'}`, undefined, depois);
+        anotar(e, `Jogador ${dono} olha a mão do jogador ${j} e escolhe ${n} carta(s) para ${banir ? 'banir' : 'descartar'}.`);
+        return;
+      }
+      pedirEscolha(e, j, [...z.mao], n, destino, `${banir ? 'Bana' : 'Descarte'} ${n} carta(s) da sua mão`, undefined, depois);
+      anotar(e, `Jogador ${j} escolhe ${n} carta(s) para ${banir ? 'banir' : 'descartar'}.`);
+      return;
+    }
+    if (ef.tipo === 'sacrificar') {
+      const j = ef.quem === 'oponente' ? outro(dono) : dono;
+      const unidades = unidadesDe(e, j);
+      const n = Math.min(ef.valor ?? 1, unidades.length);
+      if (!n) { anotar(e, `Jogador ${j} não tem Aliado para sacrificar.`); continue; }
+      if (n >= unidades.length) {
+        for (const id of unidades) { anotar(e, `Jogador ${j} sacrifica ${nomeReg(e, id)}.`); destruir(e, id); }
+        continue;
+      }
+      e.pendencia = { tipo: 'escolherCartas', jogador: j, cartas: unidades, quantidade: n, destino: 'nada', titulo: `Sacrifique ${n} Aliado(s) seu(s)`, aplicar: { efeito: EFEITO_SACRIFICIO, dono: j }, ...(depois.efeitos.length ? { depois } : {}) };
+      anotar(e, `Jogador ${j} escolhe ${n} Aliado(s) para sacrificar.`);
+      return;
+    }
+    if (ef.tipo === 'grauAoCemiterio') {
+      const j = ef.quem === 'oponente' ? outro(dono) : dono;
+      const z = e.jogadores[j];
+      const n = Math.min(ef.valor, z.grau.length);
+      if (!n) { anotar(e, `Jogador ${j} não tem cartas no Grau.`); continue; }
+      if (n >= z.grau.length) {
+        for (const id of [...z.grau]) moverPara(e, id, 'cemiterio', j);
+        anotar(e, `Jogador ${j} manda ${n} carta(s) do Grau ao cemitério.`);
+        continue;
+      }
+      pedirEscolha(e, j, [...z.grau], n, 'cemiterio', `Mande ${n} carta(s) do seu Grau ao cemitério`, undefined, depois);
+      anotar(e, `Jogador ${j} escolhe ${n} carta(s) do Grau para o cemitério.`);
+      return;
+    }
+    if (ef.tipo === 'reanimar' && !ef.alvoPago && !ef.cobrarNaHora) {
+      // 04/10 (noite): quem controla o efeito escolhe no cemitério ao resolver e paga na hora
+      const cands = candidatosReanimar(e, dono, ef);
+      if (!cands.length) { anotar(e, 'Reanimar: nenhum Aliado serve (ou não dá para pagar); nada acontece.'); continue; }
+      const pago = ef.pagamento === 'gratis' ? '' : ef.pagamento === 'custo' || !ef.custoExtra ? ' (paga o custo dele)' : ` (paga o custo dele + ${ef.custoExtra})`;
+      e.pendencia = { tipo: 'escolherCartas', jogador: dono, cartas: cands, quantidade: 1, destino: 'nada', titulo: `Escolha o Aliado que volta do cemitério${pago}`, aplicar: { efeito: { ...ef, cobrarNaHora: true, requisito: undefined }, dono }, ...(depois.efeitos.length ? { depois } : {}) };
+      anotar(e, `Jogador ${dono} escolhe um Aliado do cemitério.`);
       return;
     }
     if (ef.tipo === 'colocarNoGrau') {
@@ -737,19 +864,15 @@ function aplicarEfeitos(e        , efeitos          , dono         , escolhido  
       inst.banidaDisponivel = e.ativo === dono ? e.turno + 2 : e.turno + 1;
       anotar(e, `${defCarta(e, escolhido).nome} foi banida; só pode ser jogada no turno ${inst.banidaDisponivel}, custando ${ef.desconto} a menos.`);
     } else if (ef.tipo === 'reanimar') {
-      const dc = e.jogadores[0].cemiterio.includes(escolhido ?? '') ? 0 : e.jogadores[1].cemiterio.includes(escolhido ?? '') ? 1 : -1;
-      if (escolhido === undefined || dc < 0 || defCarta(e, escolhido).tipo !== 'aliado') { anotar(e, 'Reanimar: o Aliado saiu do cemitério; nada acontece.'); continue; }
-      tirar(e.jogadores[dc           ].cemiterio, escolhido);
-      const inst = e.instancias[escolhido];
-      limparInst(inst);
-      inst.dono = dono; inst.entrouNoTurno = e.turno;
-      e.jogadores[dono].campo.push(escolhido);
-      if (ef.concessao) conceder(e, escolhido, ef.concessao);
-      const dr = defCarta(e, escolhido);
-      anotar(e, `${dr.nome} volta do cemitério para o campo do jogador ${dono}.`);
-      gatilhoConjurador(e, dono, 'aliadoEntra');
-      const aoEntrarR = efeitosAoEntrar(dr);
-      if (aoEntrarR.length) e.pilha.push({ tipo: 'gatilho', id: `p${e.proxId++}`, controlador: dono, efeitos: aoEntrarR, fonte: dr.nome });
+      // escolhido ao resolver (cobrarNaHora) ou na ativação antiga (alvoPago, já pago)
+      if (escolhido === undefined || !reanimarServe(e, dono, ef, escolhido)) { anotar(e, 'Reanimar: o Aliado saiu do cemitério; nada acontece.'); continue; }
+      if (ef.cobrarNaHora) {
+        const custo = custoReanimar(ef, defCarta(e, escolhido));
+        if (ef.pagarCom?.length) pagarExtra(e, dono, custo, ef.pagarCom); // já validado na escolha
+        else if (!pagarNaHora(e, dono, custo)) { anotar(e, `Reanimar: não dá para pagar ${custo}; nada acontece.`); continue; }
+        if (custo) anotar(e, `Jogador ${dono} paga ${custo} de Arcano para reanimar.`);
+      }
+      trazerDoCemiterio(e, escolhido, dono, ef.concessao);
     }
     else if (ef.tipo === 'anular') {
       const i = e.pilha.findIndex((p) => p.tipo === 'carta' && p.instId === escolhido);
@@ -797,7 +920,8 @@ function alvoProtegido(e        , id        )       {
 }
 
 function exigeAlvo(efeitos                      )          {
-  return (efeitos ?? []).filter(alvoNaJogada).some((ef) => (ef.tipo === 'campo' && ef.alcance === 'alvo') || ef.tipo === 'banirDaMao' || ef.tipo === 'reanimar' || ('alvo' in ef && (ef.alvo === 'escolhido' || ef.alvo === 'escolhidoAliado' || ef.alvo === 'escolhidoProprio' || ef.alvo === 'pilha')));
+  // reanimar (04/10, noite) não pede alvo na jogada: o Aliado é escolhido no cemitério ao resolver
+  return (efeitos ?? []).filter(alvoNaJogada).some((ef) => (ef.tipo === 'campo' && ef.alcance === 'alvo') || ef.tipo === 'banirDaMao' || ('alvo' in ef && (ef.alvo === 'escolhido' || ef.alvo === 'escolhidoAliado' || ef.alvo === 'escolhidoProprio' || ef.alvo === 'pilha')));
 }
 
 /** O alvo escolhido serve para todos os efeitos que o exigem? */
@@ -805,7 +929,7 @@ function alvoServe(e        , efeitos          , alvo                    , dono 
   return efeitos.filter(alvoNaJogada).every((ef) => {
     if (ef.tipo === 'banirDaMao') return alvo !== undefined && e.jogadores[dono].mao.includes(alvo);
     if (ef.tipo === 'campo') return ef.alcance === 'todos' || (alvo !== undefined && alvosCampo(e, dono, ef).includes(alvo));
-    if (ef.tipo === 'reanimar') return alvo !== undefined && [0, 1].some((j) => e.jogadores[j           ].cemiterio.includes(alvo)) && defCarta(e, alvo).tipo === 'aliado';
+    if (ef.tipo === 'reanimar') return true;
     if (!('alvo' in ef)) return true;
     if ((ef.alvo === 'escolhido' || ef.alvo === 'escolhidoAliado' || ef.alvo === 'pilha') && protegidaDe(e, alvo, dono)) return false;
     if (ef.alvo === 'escolhidoProprio') return alvoLegal(e, alvo) && alvoDeAliado(e, alvo ) && e.instancias[alvo ].dono === dono;
@@ -969,6 +1093,10 @@ function entrarEtapa(e        , etapa       )       {
       }
     }
     if (z.mao.length > e.regras.limiteMao) e.pendencia = { tipo: 'descartar', jogador: e.ativo, quantidade: z.mao.length - e.regras.limiteMao };
+  } else if (etapa === 'cataclisma') {
+    // gatilho "no Cataclisma do turno do oponente" (04/10, noite): cartas em campo, itens e Conjurador de quem não está jogando
+    const zo = e.jogadores[outro(e.ativo)];
+    for (const id of [zo.conjuradorId, ...zo.campo, ...zo.itens]) disparar(e, id, 'cataclismaOponente');
   } else if (etapa === 'final') {
     if (!e.regras.reporMaoNoInicio) comprar(e, e.ativo, defConjurador(e, e.ativo).compraFinal);
     for (const id of [z.conjuradorId, ...z.campo, ...z.grau]) e.instancias[id].suspensa = false;
@@ -1082,8 +1210,21 @@ function podePagar(e        , j         , custo        )          {
   return z.arcano + grau + pitch >= custo;
 }
 
+/** Confere um pagamento extra (reserva, Grau levantado, cartas enviadas só as necessárias) sem mexer no estado. */
+function validarExtra(e        , j         , custo        , cartas          )       {
+  const z = e.jogadores[j];
+  let falta = custo - z.arcano - z.grau.filter((id) => !e.instancias[id].suspensa).length * ARCANO_POR_GRAU;
+  if (new Set(cartas).size !== cartas.length) falha('Carta repetida no envio ao Arcano.');
+  for (const id of cartas) {
+    if (!z.mao.includes(id)) falha('Carta inválida para enviar ao Arcano.');
+    if (falta <= 0) falha('Não envie mais cartas ao Arcano: o custo já está coberto.');
+    falta -= defCarta(e, id).arcanoGerado;
+  }
+  if (falta > 0) falha('Arcano insuficiente para pagar.');
+}
 /** Paga um custo extra usando a reserva, depois o Grau levantado, depois as cartas enviadas (necessárias). Valida antes de mexer. */
 function pagarExtra(e        , j         , custo        , cartas          )       {
+  validarExtra(e, j, custo, cartas);
   const z = e.jogadores[j];
   const levantadas = z.grau.filter((id) => !e.instancias[id].suspensa);
   let falta = custo - z.arcano;
@@ -1354,43 +1495,58 @@ function pagarCusto(e        , j         , custo        , cartas          , rese
   if (cartas.length) anotar(e, `Jogador ${j} envia ao Arcano: ${cartas.map((id) => `${defCarta(e, id).nome} (+${defCarta(e, id).arcanoGerado})`).join(', ')}.`);
 }
 
-/** Protegido N (rodada 6): mirar uma carta do oponente com Protegido custa N de Arcano a mais. */
+/**
+ * Protegido (rodada 6; unificado em 04/10): mirar uma carta do oponente com Protegido custa o Arcano dele a mais. Vários
+ * Protegidos na mesma carta (o dela, o dado pelo Conjurador, cada um concedido) valem ao mesmo tempo (autor, 04/10 noite:
+ * "não soma, trigga os dois"): não viram um Protegido maior; o oponente paga cada um, juntos na mesma janela.
+ */
 export function custoProtecao(e        , j         , alvo                    )         {
   if (alvo === undefined) return 0;
   const inst = e.instancias[alvo];
   if (!inst || inst.ehConjurador || inst.dono === j || !e.jogadores[inst.dono].campo.includes(alvo)) return 0;
-  const d = defCarta(e, alvo);
+  return protegidosDe(e, alvo).reduce((s, p) => s + p.arcano, 0);
+}
+/** Cada Protegido da carta em campo, separado: o dela, o do Conjurador do dono e cada um concedido (fixo ou por turnos). */
+export function protegidosDe(e        , instId        )                                                                         {
+  const inst = e.instancias[instId];
+  if (!inst || inst.ehConjurador) return [];
+  const d = defCarta(e, instId);
+  const r                                                                         = [];
+  const prop = protegidoDe(d);
+  if (prop) r.push({ fonte: 'carta', arcano: prop.arcano ?? 0 });
   const doConj = d.tipo === 'aliado' ? (defConjurador(e, inst.dono).poder?.aliadosProtegidos ?? 0) : 0;
-  return Math.max(d.protegido ?? 0, doConj, protegidoConcedido(inst)) + (d.protecao?.arcano ?? 0);
+  if (doConj) r.push({ fonte: 'conjurador', arcano: doConj });
+  for (const n of protegidosConcedidos(inst)) r.push({ fonte: 'concedido', arcano: n });
+  return r;
 }
 
-/** Proteção mágica do alvo (04/10): confere e escolhe o que pagar além do Arcano (vida, descarte, Grau ao cemitério, Grau mínimo). */
-function protecaoAPagar(e        , j         , alvo                    , c                                                                                                                              )                                                        {
+/** Protegido do alvo (04/10): confere e escolhe o que pagar além do Arcano (vida, descarte, Grau ao cemitério, Grau mínimo). */
+function protegidoAPagar(e        , j         , alvo                    , c                                                                                                                              )                                                        {
   const nada = { vida: 0, descartar: []            , grau: []             };
   if (alvo === undefined) return nada;
   const inst = e.instancias[alvo];
   if (!inst || inst.ehConjurador || inst.dono === j || !e.jogadores[inst.dono].campo.includes(alvo)) return nada;
-  const pr = defCarta(e, alvo).protecao;
+  const pr = protegidoDe(defCarta(e, alvo));
   if (!pr) return nada;
   const z = e.jogadores[j];
-  if (pr.grauMin && grauEfetivo(e, j) < pr.grauMin) falha(`Proteção mágica: para mirar esta carta precisa de Grau ${pr.grauMin}.`);
+  if (pr.grauMin && grauEfetivo(e, j) < pr.grauMin) falha(`Protegido: para mirar esta carta precisa de Grau ${pr.grauMin}.`);
   const vida = pr.vida ?? 0;
-  if (vida && (vidaDe(e, z.conjuradorId) ?? 0) - e.instancias[z.conjuradorId].dano <= vida) falha('Proteção mágica: o seu Conjurador não aguenta pagar essa Vida.');
+  if (vida && (vidaDe(e, z.conjuradorId) ?? 0) - e.instancias[z.conjuradorId].dano <= vida) falha('Protegido: o seu Conjurador não aguenta pagar essa Vida.');
   const ocupadas = new Set([c.carta, ...(c.enviarArcano ?? []), ...(c.descartarCusto ?? [])]);
   const nD = pr.descartar ?? 0;
   const descartar = c.protecaoDescartar ?? (nD ? z.mao.filter((id) => !ocupadas.has(id)).slice(-nD) : []);
-  if (descartar.length !== nD || descartar.some((id) => !z.mao.includes(id) || ocupadas.has(id))) falha(`Proteção mágica: descarte ${nD} carta(s) da mão.`);
+  if (descartar.length !== nD || descartar.some((id) => !z.mao.includes(id) || ocupadas.has(id))) falha(`Protegido: descarte ${nD} carta(s) da mão.`);
   const nG = pr.grauParaCemiterio ?? 0;
   const grau = c.protecaoGrau ?? z.grau.slice(0, nG);
-  if (grau.length !== nG || grau.some((id) => !z.grau.includes(id))) falha(`Proteção mágica: mande ${nG} carta(s) do seu Grau ao cemitério.`);
+  if (grau.length !== nG || grau.some((id) => !z.grau.includes(id))) falha(`Protegido: mande ${nG} carta(s) do seu Grau ao cemitério.`);
   return { vida, descartar, grau };
 }
-function pagarProtecao(e        , j         , pg                                                       )       {
+function pagarProtegido(e        , j         , pg                                                       )       {
   const z = e.jogadores[j];
-  if (pg.vida) { e.instancias[z.conjuradorId].dano += pg.vida; anotar(e, `Proteção mágica: jogador ${j} paga ${pg.vida} de Vida.`); }
+  if (pg.vida) { e.instancias[z.conjuradorId].dano += pg.vida; anotar(e, `Protegido: jogador ${j} paga ${pg.vida} de Vida.`); }
   for (const id of pg.descartar) { tirar(z.mao, id); z.cemiterio.push(id); }
   for (const id of pg.grau) { tirar(z.grau, id); e.instancias[id].suspensa = false; z.cemiterio.push(id); }
-  if (pg.descartar.length || pg.grau.length) anotar(e, `Proteção mágica: jogador ${j} paga com ${pg.descartar.length} carta(s) da mão e ${pg.grau.length} do Grau.`);
+  if (pg.descartar.length || pg.grau.length) anotar(e, `Protegido: jogador ${j} paga com ${pg.descartar.length} carta(s) da mão e ${pg.grau.length} do Grau.`);
 }
 
 function janelaFindante(e        , j         )          {
@@ -1420,9 +1576,9 @@ function jogarCarta(e        , c                                     )       {
   const efsAlvo = [...efeitosAoJogar(d), ...(d.tipo === 'temporaria' ? [] : efeitosAoEntrar(d))];
   const precisaAlvo = exigeAlvo(efsAlvo);
   if (precisaAlvo && !alvoServe(e, efsAlvo, c.alvo, c.jogador)) falha('Esta carta precisa de um alvo legal.');
-  const prot = protecaoAPagar(e, c.jogador, precisaAlvo ? c.alvo : undefined, c);
+  const prot = protegidoAPagar(e, c.jogador, precisaAlvo ? c.alvo : undefined, c);
   pagarCusto(e, c.jogador, custo, c.enviarArcano ?? [], reserva);
-  pagarProtecao(e, c.jogador, prot);
+  pagarProtegido(e, c.jogador, prot);
   e.habUsos[c.jogador].carta = true;
   e.habUsos[c.jogador].desconto = 0;
   if (ehRepentina(d)) e.habUsos[c.jogador].repentina = true;
@@ -1478,8 +1634,11 @@ function ativar(e        , c                                      )       {
   const soArcano = at.efeitos.every((ef) => imediatos.includes(ef.tipo));
   if (!soArcano || ehConj) exigirPrioridade(e, c.jogador);
   if (exigeAlvo(at.efeitos) && !alvoServe(e, at.efeitos, c.alvo, c.jogador)) falha('Esta ativação precisa de um alvo legal.');
+  // reanimar com o Aliado já escolhido no comando (formato antigo): paga o custo dele ao ativar; sem isso, escolhe e paga ao resolver
   const rean = at.efeitos.find((ef) => ef.tipo === 'reanimar');
-  const extraRean = rean && rean.tipo === 'reanimar' && c.alvo ? rean.custoExtra + defCarta(e, c.alvo).custo : 0;
+  const reanPago = rean?.tipo === 'reanimar' && c.alvo !== undefined && reanimarServe(e, c.jogador, rean, c.alvo) ? rean : undefined;
+  const extraRean = reanPago ? custoReanimar(reanPago, defCarta(e, c.alvo )) : 0;
+  const efeitosAt = reanPago ? at.efeitos.map((ef) => (ef === reanPago ? { ...ef, alvoPago: true } : ef)) : at.efeitos;
   const custo = at.custo + (at.requisito?.arcano ?? 0) + extraRean + custoProtecao(e, c.jogador, c.alvo);
   const conjInst = e.instancias[z.conjuradorId];
   if (at.suspendeConjurador && conjInst.suspensa) falha('O Conjurador está suspenso.');
@@ -1488,9 +1647,9 @@ function ativar(e        , c                                      )       {
   if (new Set(descarte).size !== descarte.length || descarte.some((id) => !z.mao.includes(id) || (c.enviarArcano ?? []).includes(id))) falha('Descarte cartas da sua mão (sem repetir as enviadas ao Arcano).');
   if (at.danoNoConjurador && (vidaDe(e, z.conjuradorId) ?? 0) - conjInst.dano <= at.danoNoConjurador) falha('O Conjurador não aguenta esse dano.');
   const reserva = validarEnvio(e, c.jogador, custo, c.enviarArcano ?? []);
-  const protA = protecaoAPagar(e, c.jogador, exigeAlvo(at.efeitos) ? c.alvo : undefined, c);
+  const protA = protegidoAPagar(e, c.jogador, exigeAlvo(at.efeitos) ? c.alvo : undefined, c);
   pagarCusto(e, c.jogador, custo, c.enviarArcano ?? [], reserva);
-  pagarProtecao(e, c.jogador, protA);
+  pagarProtegido(e, c.jogador, protA);
   for (const id of descarte) { tirar(z.mao, id); z.cemiterio.push(id); }
   if (descarte.length) anotar(e, `Jogador ${c.jogador} descarta ${descarte.length} carta(s) para usar ${defCarta(e, c.carta).nome}.`);
   if (at.danoNoConjurador) { conjInst.dano += at.danoNoConjurador; anotar(e, `${defConjurador(e, c.jogador).nome} toma ${at.danoNoConjurador} de dano para usar ${defCarta(e, c.carta).nome}.`); }
@@ -1503,7 +1662,7 @@ function ativar(e        , c                                      )       {
     aplicarEfeitos(e, at.efeitos, c.jogador, c.alvo);
     return;
   }
-  e.pilha.push({ tipo: 'gatilho', id: `p${e.proxId++}`, controlador: c.jogador, efeitos: at.efeitos, alvo: c.alvo, fonte: ehConj ? defConjurador(e, c.jogador).nome : defCarta(e, c.carta).nome, incomensuravel: !ehConj && temIncomensuravel(defCarta(e, c.carta)) });
+  e.pilha.push({ tipo: 'gatilho', id: `p${e.proxId++}`, controlador: c.jogador, efeitos: efeitosAt, alvo: c.alvo, fonte: ehConj ? defConjurador(e, c.jogador).nome : defCarta(e, c.carta).nome, incomensuravel: !ehConj && temIncomensuravel(defCarta(e, c.carta)) });
   e.passes = 0;
   e.prioridade = c.jogador;
   anotar(e, `Jogador ${c.jogador} ativa ${ehConj ? defConjurador(e, c.jogador).nome : defCarta(e, c.carta).nome}.`);
@@ -1616,8 +1775,15 @@ function executarComando(e        , c         )       {
       if (c.jogador !== p.jogador) falha('Outro jogador escolhe.');
       if (c.cartas.length !== p.quantidade || new Set(c.cartas).size !== c.cartas.length || !c.cartas.every((id) => p.cartas.includes(id)))
         falha(`Escolha exatamente ${p.quantidade} carta(s).`);
+      // reanimar com custo (autor, 04/10 noite): o custo do Aliado também pode ser pago enviando cartas da mão ao Arcano
+      let efA = p.aplicar?.efeito;
+      if (c.enviarArcano?.length) {
+        if (efA?.tipo !== 'reanimar' || !efA.cobrarNaHora || c.cartas.length !== 1) falha('Esta escolha não tem custo para pagar.');
+        validarExtra(e, c.jogador, custoReanimar(efA, defCarta(e, c.cartas[0])), c.enviarArcano);
+        efA = { ...efA, pagarCom: [...c.enviarArcano] };
+      }
       e.pendencia = null;
-      if (p.aplicar) for (const id of c.cartas) aplicarEfeitos(e, [p.aplicar.efeito], p.aplicar.dono, id);
+      if (p.aplicar) for (const id of c.cartas) aplicarEfeitos(e, [efA ], p.aplicar.dono, id);
       else for (const id of c.cartas) { moverPara(e, id, p.destino, c.jogador); if (p.concessao && p.destino === 'campo') conceder(e, id, p.concessao); }
       const resto = p.cartas.filter((id) => !c.cartas.includes(id));
       if (p.resto) for (const id of resto) moverPara(e, id, p.resto, c.jogador);

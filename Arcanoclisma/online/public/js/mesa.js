@@ -7,7 +7,7 @@
 //   fonte.ouvir(fn)    chama fn a cada mudança
 //   fonte.versao       número que cresce a cada mudança
 //   opcionais: fonte.chat(texto), fonte.desistir(), fonte.tutorial (dicas, destaques e travas), fonte.prazo(), fonte.conectados()
-import { defCarta, custoEfetivo, custoProtecao, origemDaCarta, grauEfetivo, recemChegado, ataqueConjurador, distribuicaoPadrao, ehRepentina, custoAtaqueConjurador, grauAtaqueConjurador, efeitosAoJogar, efeitosAoEntrar, ataqueAtualDe, vidaAtualDe, etereo as etereoDe, alvosCampo as alvosCampoMotor, efeitoSemConjurador, ativacaoDeHabilidade, protegidaDe, temPalavra } from '/jogo/motor.js';
+import { defCarta, custoEfetivo, custoProtecao, origemDaCarta, grauEfetivo, recemChegado, ataqueConjurador, distribuicaoPadrao, ehRepentina, custoAtaqueConjurador, grauAtaqueConjurador, efeitosAoJogar, efeitosAoEntrar, ataqueAtualDe, vidaAtualDe, etereo as etereoDe, alvosCampo as alvosCampoMotor, efeitoSemConjurador, ativacaoDeHabilidade, protegidaDe, temPalavra, protegidoDe, custoReanimar, arcanoNaHora } from '/jogo/motor.js';
 import { textoHabilidade } from '/jogo/textos.js';
 import { $, $$, esc, DADOS, VALOR, TIPO, textoCarta, janela, local, avisar, conj as conjDefDe } from './base.js';
 import { desenharCarta, modeloCarta, modeloConjurador } from './carta.js';
@@ -214,8 +214,8 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   function tiposDeAlvo(efs) {
     const s = new Set();
     for (const ef of efs ?? []) {
+      // reanimar (04/10, noite): o Aliado é escolhido no cemitério ao resolver (escolherCartas), não ao jogar
       if (ef.tipo === 'banirDaMao') s.add('mao');
-      else if (ef.tipo === 'reanimar') s.add('cemiterio');
       else if ('alvo' in ef && ['escolhido', 'escolhidoAliado', 'escolhidoProprio', 'pilha'].includes(ef.alvo)) { s.add(ef.alvo); if (ef.alvo === 'escolhido' && efeitoSemConjurador(ef)) s.semConjurador = true; }
       else if (ef.tipo === 'campo' && ef.alcance === 'alvo') { s.add('campo'); (s.campos ??= []).push(ef); }
     }
@@ -303,14 +303,13 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
       descartarCusto = await escolherCartas(`${titulo}: descarte ${nDesc} carta(s) da mão`, z(EU).mao.filter((x) => x !== alvo), nDesc);
       if (!descartarCusto) return;
     }
-    // proteção mágica do alvo (04/10): escolher as cartas da mão e do Grau que pagam
-    const pr = alvo && inst(alvo)?.dono === OP && !ehConj(alvo) ? def(alvo).protecao : null;
+    // Protegido do alvo (04/10): escolher as cartas da mão e do Grau que pagam
+    const pr = alvo && inst(alvo)?.dono === OP && !ehConj(alvo) ? protegidoDe(def(alvo)) : null;
     let protecaoDescartar, protecaoGrau;
-    if (pr?.descartar) { protecaoDescartar = await escolherCartas(`Proteção mágica de ${def(alvo).nome}: descarte ${pr.descartar} carta(s)`, z(EU).mao.filter((x) => x !== id && !descartarCusto.includes(x)), pr.descartar); if (!protecaoDescartar) return; }
-    if (pr?.grauParaCemiterio) { protecaoGrau = await escolherCartas(`Proteção mágica de ${def(alvo).nome}: mande ${pr.grauParaCemiterio} carta(s) do seu Grau ao cemitério`, z(EU).grau, pr.grauParaCemiterio); if (!protecaoGrau) return; }
+    if (pr?.descartar) { protecaoDescartar = await escolherCartas(`Protegido de ${def(alvo).nome}: descarte ${pr.descartar} carta(s)`, z(EU).mao.filter((x) => x !== id && !descartarCusto.includes(x)), pr.descartar); if (!protecaoDescartar) return; }
+    if (pr?.grauParaCemiterio) { protecaoGrau = await escolherCartas(`Protegido de ${def(alvo).nome}: mande ${pr.grauParaCemiterio} carta(s) do seu Grau ao cemitério`, z(EU).grau, pr.grauParaCemiterio); if (!protecaoGrau) return; }
     const extraProt = { ...(protecaoDescartar ? { protecaoDescartar } : {}), ...(protecaoGrau ? { protecaoGrau } : {}) };
     let custo = custoBase + custoProtecao(e, EU, alvo);
-    if (tipo === 'ativar') { const r = efs.find((ef) => ef.tipo === 'reanimar'); if (r && alvo) custo += r.custoExtra + def(alvo).custo; }
     const pg = await pagar(titulo, custo, tipo === 'jogar' ? id : undefined, alvo, { excluir: [...descartarCusto, ...(protecaoDescartar ?? [])] });
     if (!pg) return;
     for (const g of pg.grau) if (await enviar({ tipo: 'suspenderGrau', carta: g })) return;
@@ -355,7 +354,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   }
 
   /** Pagamento: reserva, Grau, fontes de Arcano e envio de cartas da mão (pitch). Devolve o que usar ou null. */
-  function pagar(titulo, custo, jogada, alvo, { soPitch = false, excluir = [] } = {}) {
+  function pagar(titulo, custo, jogada, alvo, { soPitch = false, excluir = [], rotulo } = {}) {
     const m = z(EU);
     const reserva = m.arcano;
     const grauLivre = soPitch ? [] : m.grau.filter((g) => !inst(g).suspensa);
@@ -388,7 +387,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
           ${fontes.length ? `<h4>Fontes de Arcano no campo</h4><div class="pag-linha">${fontes.map((f) => `<button class="pag-item ${sel.fontes.has(f) ? 'on' : ''}" data-f="${f}">${esc(def(f).nome)} <b>+${ganhoFonte(f)}</b></button>`).join('')}</div>` : ''}
           <h4>Enviar cartas da mão ao Arcano <span class="peq">(vão para o fundo do baralho no seu Final; só as necessárias)</span></h4>
           <div class="vitrine pag-mao">${mao.map((p) => `<div class="item-vitrine ${sel.pitch.includes(p) ? (c.usar.includes(p) ? 'marcada' : 'sobrando') : ''}" data-p="${p}">${desenharCarta(modeloCarta(inst(p).defId), { width: 104 }).outerHTML}<span class="gera">+${def(p).arcanoGerado}</span></div>`).join('') || '<p class="peq">Mão vazia.</p>'}</div>
-          <div class="linha-botoes"><button class="botao primario" data-ok ${coberto ? '' : 'disabled'}>Pagar e ${soPitch ? 'anular' : 'confirmar'}</button><button class="botao" data-cancelar>Cancelar</button></div>`;
+          <div class="linha-botoes"><button class="botao primario" data-ok ${coberto ? '' : 'disabled'}>${rotulo ?? `Pagar e ${soPitch ? 'anular' : 'confirmar'}`}</button><button class="botao" data-cancelar>Cancelar</button></div>`;
       };
       area.addEventListener('click', (ev) => {
         const b = ev.target.closest('[data-g],[data-f],[data-p],[data-ok],[data-cancelar]');
@@ -753,7 +752,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
       <p><b>Findante</b> só na sua fase Principal com a pilha vazia. <b>Repentina</b> sempre que você tiver a prioridade, até no turno do oponente.</p>
       <p><b>Pilha:</b> cartas, efeitos e ataques aparecem aqui na direita; cada jogador pode responder. Quando os dois passam, a de cima resolve.</p>
       <p><b>Combate:</b> atacar suspende. O defensor pode bloquear com um Aliado ou o Conjurador que esteja de pé. Aliados que acabaram de entrar (zZ) não atacam, salvo Proficiente.</p>
-      <p><b>Etéreo:</b> em combate, só Etéreos e armas Etéreas o atingem. <b>Incomensurável:</b> o dano que passar da Vida vai para o Conjurador. <b>Protegido N:</b> mirar custa N a mais. <b>Protessência (◈):</b> não pode ser alvo de efeitos do oponente nem anulada por ele; pode ser atacada.</p>
+      <p><b>Etéreo:</b> em combate, só Etéreos e armas Etéreas o atingem. <b>Incomensurável:</b> o dano que passar da Vida vai para o Conjurador. <b>Protegido:</b> mirar custa o que ele pede (N = Arcano a mais); dois Protegidos na mesma carta são pagos os dois. <b>Protessência (◈):</b> não pode ser alvo de efeitos do oponente nem anulada por ele; pode ser atacada.</p>
       <p><b>Impasse:</b> 5 turnos seguidos sem agir e você perde.</p>
       <p class="peq">Passe o mouse numa carta para ver; clique ou arraste para agir.</p>
       <h3>Palavras-chave</h3>${palavrasChaveHTML(esc)}</div>`;
@@ -1087,7 +1086,20 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
       if (k === 'distAuto') { ui.dist = null; return enviar({ tipo: 'distribuirDano' }); }
       if (k === 'descartar') return enviar({ tipo: 'descartar', cartas: [...ui.selecionadas] });
       if (k === 'topo') return enviar({ tipo: 'escolherDoTopo', cartas: [...ui.selecionadas] });
-      if (k === 'escolha') return enviar({ tipo: 'escolherCartas', cartas: [...ui.selecionadas] });
+      if (k === 'escolha') {
+        // reanimar com custo (autor, 04/10 noite): falta Arcano na reserva + Grau? abre a janela de pagamento (cartas da mão ao Arcano)
+        const ef = e.pendencia?.aplicar?.efeito;
+        const sel = [...ui.selecionadas];
+        if (ef?.tipo === 'reanimar' && ef.cobrarNaHora && sel.length === 1) {
+          const custo = custoReanimar(ef, def(sel[0]));
+          if (custo > arcanoNaHora(e, EU)) {
+            const pg = await pagar(`Trazer ${def(sel[0]).nome} do cemitério (custo ${custo})`, custo, undefined, undefined, { soPitch: true, rotulo: 'Pagar e trazer' });
+            if (!pg) return;
+            return enviar({ tipo: 'escolherCartas', cartas: sel, enviarArcano: pg.pitch });
+          }
+        }
+        return enviar({ tipo: 'escolherCartas', cartas: sel });
+      }
       if (k === 'naoPagar') return enviar({ tipo: 'pagarAnulacao', pagar: false });
       if (k === 'pagarAnul') {
         const p = e.pendencia;

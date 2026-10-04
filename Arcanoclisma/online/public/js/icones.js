@@ -32,7 +32,7 @@ export const ICONES = [
   { id: 'proficiente', nome: 'Proficiente', mostra: 'uma bota alada / seta dupla para a frente (age no turno em que entra)', gatilho: /\b(Proficiente)\b/ },
   { id: 'etereo', nome: 'Etéreo', mostra: 'uma silhueta translúcida com contorno tracejado e brilho fantasma', gatilho: /\b(Etéreos?)\b/ },
   { id: 'protessencia', nome: 'Protessência', mostra: 'uma carta envolta por um véu/aura fechada que desvia uma mira (retícula) riscada', gatilho: /(Protessência)/ },
-  { id: 'protegido', nome: 'Protegido', mostra: 'uma carta com uma redoma/escudo arredondado em volta e um número', gatilho: /\b(Protegido \d+)/ },
+  { id: 'protegido', nome: 'Protegido', mostra: 'uma carta com uma redoma/escudo arredondado em volta e um número', gatilho: /\b(Protegido(?: \d+)?)(?![\wÀ-ú])/ },
   { id: 'economia', nome: 'Economia', mostra: 'duas cartas entrando na mão no fim do turno (o mesmo símbolo da estatística da carta do Conjurador)', gatilho: /\b(Economia)\b/ },
   { id: 'cataclisma', nome: 'Cataclisma', mostra: 'uma esfera de Arcano rachando e se desfazendo (o Arcano que sobra some)', gatilho: /\b(Cataclisma)\b/ },
   { id: 'uso-unico', nome: 'Uso único', mostra: 'um frasco com o número 1 e um risco (consome ao usar)', gatilho: /\b(uso único|[Cc]onsumível)\b/ },

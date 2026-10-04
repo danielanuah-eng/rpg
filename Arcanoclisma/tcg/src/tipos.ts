@@ -12,7 +12,9 @@ export type AlvoEfeito = 'escolhido' | 'escolhidoAliado' | 'conjuradorInimigo' |
 /** Quando uma habilidade acontece. */
 export type Quando = 'jogar' | 'entrar' | 'ativada' | 'alvo' | 'grau' | 'atacar' | 'bloquear' | 'cemiterio' | 'banimento' | 'danoConjurador'
   /** Só de Conjurador (Editor, 04/10): um Aliado seu entra em campo / vai do campo para o cemitério / causa dano de combate ao Conjurador inimigo. */
-  | 'aliadoEntra' | 'aliadoMorre' | 'aliadoDanoConjurador';
+  | 'aliadoEntra' | 'aliadoMorre' | 'aliadoDanoConjurador'
+  /** Pedido do autor (04/10, noite): na etapa de Cataclisma do turno do oponente (fim do turno dele). Cartas em campo, itens e Conjurador. */
+  | 'cataclismaOponente';
 /** Custo de uma habilidade ativada ("virar/pagar"). */
 export interface CustoHabilidade { suspender?: boolean; arcano?: number; vida?: number; descartar?: number; grau?: number }
 /** Habilidade montada no Editor: condição + efeitos (que se acumulam, em ordem). */
@@ -23,8 +25,13 @@ export interface Habilidade {
   /** Ativada de Conjurador com velocidade Repentina: a qualquer momento, com prioridade (as demais: só na sua Principal, pilha vazia). */ repentina?: boolean;
   /** Requisito da habilidade ativada: Grau mínimo e Arcano a mais (soma ao custo). */ requisito?: Requisito;
 }
-/** Proteção mágica: quem mira esta carta (com carta ou ativação do oponente) paga isto; sem poder pagar, não pode mirar. */
-export interface Protecao { arcano?: number; vida?: number; descartar?: number; grauParaCemiterio?: number; grauMin?: number }
+/**
+ * Protegido (unificado em 04/10, noite; antes havia "Protegido N" e "Proteção mágica"): quem mira esta carta com carta ou
+ * ativação do oponente paga isto; sem poder pagar, não pode mirar. `protegido: N` (número) é o mesmo que `{ arcano: N }`.
+ */
+export interface Protegido { arcano?: number; vida?: number; descartar?: number; grauParaCemiterio?: number; grauMin?: number }
+/** @deprecated Nome antigo ("Proteção mágica"); use Protegido. */
+export type Protecao = Protegido;
 /** Para onde vão as cartas escolhidas. */
 export type Destino = 'mao' | 'roubar' | 'grau' | 'cemiterio' | 'fundo' | 'topo' | 'campo' | 'banimento' | 'nada';
 export type TipoAlvoCampo = 'aliado' | 'mistica' | 'estrutura' | 'conjurador' | 'equipamento';
@@ -49,7 +56,13 @@ export interface Requisito { grau?: number; arcano?: number }
  * ou ao acaso. Nada escolhe o alvo sozinho; "atinge tudo" é o alcance "todos".
  */
 export type QuemEscolhe = 'controlador' | 'afetado' | 'aleatorio';
-export type Efeito = EfeitoBase & { requisito?: Requisito; escolha?: QuemEscolhe };
+/**
+ * Efeito secundário (pedido do autor, 04/10, noite): custo ou consequência que acompanha outro efeito, como linha extra
+ * ("...; depois, seu Conjurador toma 2 de dano"). Só muda o texto e a avaliação do bot; o motor resolve em ordem.
+ */
+export type Efeito = EfeitoBase & { requisito?: Requisito; escolha?: QuemEscolhe; secundario?: boolean };
+/** Quem sofre o "tirar da mão": quem jogou/ativou, o oponente ou os dois. */
+export type QuemAfeta = 'voce' | 'oponente' | 'ambos';
 type EfeitoBase =
   /** escalaGrau: soma ao dano o número de cartas na Zona de Grau de quem joga (remoção que cresce com o jogo). */
   | { tipo: 'dano'; valor: number; alvo: AlvoEfeito; escalaGrau?: boolean }
@@ -71,7 +84,13 @@ type EfeitoBase =
   /** Rodada 7. Bane (zona de banimento) uma carta da sua mão; no seu próximo turno você pode jogá-la custando `desconto` a menos. Alvo: carta da mão. */
   | { tipo: 'banirDaMao'; desconto: number }
   /** Rodada 7. Põe no seu campo um Aliado do cemitério de qualquer jogador; você paga `custoExtra` a mais, além do custo dele. Alvo: Aliado em um cemitério. */
-  | { tipo: 'reanimar'; custoExtra: number; concessao?: Concessao }
+  /**
+   * Estendido em 04/10 (noite). pagamento: 'gratis', 'custo' (o custo do Aliado) ou 'custoMais' (custo + custoExtra); sem
+   * `pagamento` = custo + custoExtra (formato antigo). de: 'seu' | 'oponente' | 'qualquer' (padrão). Filtros: custoMax, subtipo.
+   * Quem controla o efeito escolhe ao resolver (escolherCartas) e paga na hora (reserva, depois Grau levantado); sem poder
+   * pagar, não traz nada. Ativação com o alvo já escolhido no comando (formato antigo): paga ao ativar.
+   */
+  | { tipo: 'reanimar'; custoExtra: number; pagamento?: 'gratis' | 'custo' | 'custoMais'; de?: 'seu' | 'oponente' | 'qualquer'; custoMax?: number; subtipo?: string; concessao?: Concessao; /** Interno: escolhido ao resolver, paga agora. */ cobrarNaHora?: boolean; /** Interno: alvo escolhido e pago ao ativar (formato antigo). */ alvoPago?: boolean; /** Interno: cartas da mão enviadas ao Arcano para pagar (escolherCartas.enviarArcano). */ pagarCom?: string[] }
   /** Rodada 7. Neste turno você pode jogar do seu cemitério uma carta cujo efeito anule outra, pagando o custo dela; ao resolver ela é banida. */
   | { tipo: 'permitirAnularDoCemiterio' }
   /** Olhe as N cartas do topo do seu baralho, ponha `pegar` delas na mão e o resto no fundo do baralho. */
@@ -82,8 +101,12 @@ type EfeitoBase =
   | { tipo: 'invocar'; carta: string; /** Nome para o texto da carta. */ nome?: string; /** A ficha já entra com isto. */ concessao?: Concessao }
   /** Itens (03/10, noite). Seu Conjurador ganha +N de Ataque neste turno. */
   | { tipo: 'ataqueConjuradorTurno'; valor: number }
-  /** Construtor (04/10). Um jogador descarta N (você ou o oponente); quem descarta escolhe, ou ao acaso. */
-  | { tipo: 'descartar'; quem: 'voce' | 'oponente'; valor: number; aleatorio?: boolean }
+  /**
+   * Construtor (04/10); "tirar da mão" (04/10, noite). Tira N cartas da mão de um jogador (você, o oponente ou os dois):
+   * acao 'descartar' (cemitério, padrão) ou 'banir' (banimento). modo: 'acaso'; 'dono' (o dono escolhe, sem mostrar; padrão);
+   * 'olhando' (quem controla o efeito olha a mão e escolhe). `aleatorio: true` (formato antigo) = modo 'acaso'.
+   */
+  | { tipo: 'descartar'; quem: QuemAfeta; valor: number; aleatorio?: boolean; acao?: 'descartar' | 'banir'; modo?: 'acaso' | 'dono' | 'olhando' }
   /** Construtor. Põe N cartas no seu Grau, do topo do baralho ou da mão (você escolhe). */
   | { tipo: 'colocarNoGrau'; de: 'topo' | 'mao'; valor: number }
   /** Construtor. Olha as N cartas do topo: escolhe `pegar` para `destino`; o resto vai para `resto`. */
@@ -95,7 +118,14 @@ type EfeitoBase =
   /** Construtor. Afeta o campo: um alvo escolhido ou todos de um lado, dos tipos indicados. */
   | { tipo: 'campo'; acao: AcaoCampo; valor?: number; alcance: 'alvo' | 'todos'; lado: 'inimigo' | 'proprio' | 'ambos'; tipos: TipoAlvoCampo[]; duracao?: 'turno' | 'permanente'; onde?: 'topo' | 'fundo' | 'embaralhar'; /** Ação 'conceder'. */ concessao?: Concessao }
   /** Construtor. Seu Conjurador perde N de Vida (custo de outro efeito, por exemplo). */
-  | { tipo: 'perderVida'; valor: number };
+  | { tipo: 'perderVida'; valor: number; /** Efeito secundário: 'oponente' = o Conjurador do oponente. */ quem?: 'voce' | 'oponente' }
+  /**
+   * Efeito secundário (04/10, noite). O jogador sacrifica N Aliados dele (só Aliado; autor, 04/10 noite), se tiver: o dono
+   * escolhe e elas vão do campo para o cemitério sem ganhar nada. Não mira (ignora Protegido e Protessência); conta como morte.
+   */
+  | { tipo: 'sacrificar'; valor: number; quem?: 'voce' | 'oponente' }
+  /** Efeito secundário (04/10, noite). O jogador manda N cartas do Grau dele ao cemitério (o dono escolhe; com menos, manda as que tiver). */
+  | { tipo: 'grauAoCemiterio'; valor: number; quem?: 'voce' | 'oponente' };
 
 /** Arma: efeitos ao atacar (pedido do autor, 04/10). */
 export interface AoAtacar {
@@ -182,8 +212,11 @@ export interface CartaDef {
   aoEntrar?: Efeito[];
   /** Rodada 6: gatilho "ao causar dano de combate ao Conjurador inimigo" (Aliados). */
   aoDanoConjurador?: Efeito[];
-  /** Rodada 6, palavra-chave Protegido N: o oponente paga N de Arcano a mais para mirar esta carta com uma carta ou ativação. */
-  protegido?: number;
+  /**
+   * Protegido (rodada 6; unificado em 04/10): número N = o oponente paga N de Arcano a mais para mirar esta carta com uma
+   * carta ou ativação; objeto = Arcano e/ou Vida, descarte, Grau ao cemitério e Grau mínimo (as variações da antiga "Proteção mágica").
+   */
+  protegido?: number | Protegido;
   /** Item: espaço que ocupa no Conjurador. O Ataque de Canal e Extra é o valor da arma. */
   categoriaItem?: CategoriaItem;
   /** Canal: arma (dá Ataque ao Conjurador), foco arcano (melhora magias) ou transcritor (mexe no baralho e na mão). */
@@ -201,8 +234,8 @@ export interface CartaDef {
   aoAtacar?: AoAtacar;
   /** Construtor de efeitos (04/10): habilidades com condição e efeitos. */
   habilidades?: Habilidade[];
-  /** Proteção mágica (04/10): o que o oponente paga para mirar esta carta. */
-  protecao?: Protecao;
+  /** @deprecated Nome antigo de Protegido ("Proteção mágica"): ainda carrega e é convertido em `protegido` (normalizarProtegido). */
+  protecao?: Protegido;
   /** Armadura: efeitos quando ela evita dano (ex.: ganhe 1 de Arcano, compre 1 carta). */
   aoProteger?: Efeito[];
   /** Armadura: quando ela evita dano, causa este dano ao atacante. */
@@ -417,7 +450,7 @@ export type Comando =
   | { tipo: 'escolherInicio'; jogador: Jogador; primeiro: Jogador }
   | { tipo: 'colocarGrau'; jogador: Jogador; carta: string }
   | { tipo: 'suspenderGrau'; jogador: Jogador; carta: string }
-  | { tipo: 'jogar'; jogador: Jogador; carta: string; alvo?: string; descartarGrau?: string[]; enviarArcano?: string[]; /** Proteção mágica do alvo. */ protecaoDescartar?: string[]; protecaoGrau?: string[] }
+  | { tipo: 'jogar'; jogador: Jogador; carta: string; alvo?: string; descartarGrau?: string[]; enviarArcano?: string[]; /** Protegido do alvo (nome antigo dos campos mantido): cartas da mão e do Grau que pagam. */ protecaoDescartar?: string[]; protecaoGrau?: string[] }
   | { tipo: 'atacar'; jogador: Jogador; atacante: string; alvo: string; enviarArcano?: string[] }
   | { tipo: 'bloquear'; jogador: Jogador; /** Um bloqueador (null: não bloqueia). */ bloqueador?: string | null; /** Vários bloqueadores (decisão 20); vale no lugar de bloqueador. */ bloqueadores?: string[]; /** Conjurador bloqueando: usar a Armadura? Sem o campo, usa. */ usarArmadura?: boolean }
   | { tipo: 'distribuirDano'; jogador: Jogador; /** Dano por bloqueador (soma = Ataque do atacante). Sem o campo: distribuição padrão, que derruba o máximo de bloqueadores. */ distribuicao?: Record<string, number> }
@@ -425,5 +458,5 @@ export type Comando =
   | { tipo: 'ativar'; jogador: Jogador; carta: string; alvo?: string; enviarArcano?: string[]; /** Cartas da mão descartadas como custo (Ativacao.descartar). */ descartarCusto?: string[]; /** Habilidade ativada do construtor (índice em habilidades). */ habilidade?: number; /** Proteção mágica do alvo: cartas da mão e do Grau pagas. */ protecaoDescartar?: string[]; protecaoGrau?: string[] }
   | { tipo: 'pagarAnulacao'; jogador: Jogador; pagar: boolean; enviarArcano?: string[] }
   | { tipo: 'escolherDoTopo'; jogador: Jogador; cartas: string[] }
-  | { tipo: 'escolherCartas'; jogador: Jogador; cartas: string[] }
+  | { tipo: 'escolherCartas'; jogador: Jogador; cartas: string[]; /** Reanimar com custo (04/10, noite): cartas da mão enviadas ao Arcano para pagar o Aliado escolhido. */ enviarArcano?: string[] }
   | { tipo: 'passar'; jogador: Jogador };

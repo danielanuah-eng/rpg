@@ -16,13 +16,15 @@ Ver `.claude/EQUIPE.md`: `triagem-feedback` (haiku), `motor-regras` (opus médio
 - Mecânicas: agentes motor-regras (Opus médio) e motor-regras-alto (Opus alto), pedido do autor.
 - Limite mensal de gasto atingido em 04/10 (reinicia 19:10 para a sessão).
 
+## Também publicado (04/10, noite, deploy 6f9bfab5)
+Protegido unificado (ex-proteção mágica; vários Protegidos cobrados juntos), efeitos secundários (dano no Conjurador, descartar, sacrificar Aliado, Grau ao cemitério), reanimar com pagamento (grátis/custo/custo+X, cartas da mão ao Arcano), gatilho cataclismaOponente, tirar da mão (descartar/banir; acaso/dono escolhe/olhando, com sigilo). Decisões 30–35. Testes tcg 181, online 13.
+
 ## Próximos passos
-1. Gatilho novo "no Cataclisma do turno do oponente" (fim do turno do adversário) no motor + construtor (cartas e Conjuradores) + bot + texto — motor-regras.
-2. Ligar a entrega iconografia v19 do Codex (online/entregas-visuais/iconografia-v19.codex.json, kit/icones, css/js iconografia-v19, qa/magias-v19) — integrador-visual. Usar ícones nos balões do tutorial.
+1. Ligar a entrega iconografia v19 do Codex (online/entregas-visuais/iconografia-v19.codex.json, kit/icones, css/js iconografia-v19, qa/magias-v19) — integrador-visual. Ícone de Protegido sem Arcano é com o Codex.
+2. Conferir na tela: Editor (Protegido, efeito secundário, reanimar, tirar da mão, Conjuradores) e mesa (sacrifício, reanimar com pagamento, olhar mão, ◈ Protessência, ⏳).
 3. Efeitos de magia v17: conferir pendências da integração.
 
 ## Esperando o autor
-- Perguntas da Protessência: ataque de unidade continua permitido (padrão adotado: sim); "pagar para anular" não mira, então não bloqueado; palavra permanente + por turnos: só a por turnos expira.
 
 - Novos comentários marcados Yes / novos ENVIAR.
 - Liberação da expansão "A Mestra dos Dragões" (até lá, não tocar).

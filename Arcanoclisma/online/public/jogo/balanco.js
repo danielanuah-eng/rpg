@@ -120,7 +120,7 @@ export function pontos(c          , p         = PRECO)         {
   for (const ef of [...(c.efeitos ?? []), ...(c.aoEntrar ?? [])]) t += precoEfeito(ef, p, c.valores);
   t += precoAtivacao(c, p);
   for (const ef of c.aoDanoConjurador ?? []) t += p.aoDanoConjurador * precoEfeito(ef, p, c.valores);
-  t += p.protegido * (c.protegido ?? 0);
+  t += p.protegido * (typeof c.protegido === 'number' ? c.protegido : c.protegido?.arcano ?? 0); // Protegido unificado (04/10): conta o Arcano, como antes
   if (c.velocidade === 'repentina') t += p.repentina;
   if (c.palavrasChave?.includes('Proficiente')) t += p.proficiente;
   if (c.palavrasChave?.includes('Etéreo')) t += p.etereo;
