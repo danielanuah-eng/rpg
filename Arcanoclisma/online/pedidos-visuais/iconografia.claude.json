@@ -1,0 +1,214 @@
+{
+  "tarefaId": "iconografia-mecanicas-v1",
+  "autor": "Claude",
+  "estado": "solicitado",
+  "necessidadeAtual": true,
+  "versao": 1,
+  "atualizadoEm": "2026-10-04",
+  "pedidoDoAutor": "Fazer a iconografia dos símbolos das mecânicas. Exemplo do autor: suspender uma carta = uma carta se deitando, com uma seta apontando para baixo e riscos atrás mostrando movimento. Ícones para pagar Arcano, suspender etc. facilitam a leitura.",
+  "objetivo": "Um ícone por mecânica, para aparecer ao lado da palavra no texto das cartas, na aba Palavras-chave e no tutorial do site.",
+  "formato": {
+    "arquivo": "SVG (vetor), um por ícone, viewBox 0 0 64 64, sem texto embutido (o número fica no texto da carta)",
+    "legibilidade": "precisa ser reconhecível a 16–20 px de altura dentro do texto da carta (silhueta simples, contorno grosso, poucos detalhes)",
+    "cor": "versão principal em currentColor (monocromática, herda a cor do texto); se quiser, versão colorida extra com sufixo -cor",
+    "estilo": "mesma família dos vetores atuais do kit (kit/vetores/icone-*-v5.svg e estatistica-*-v5.svg): contorno firme, dourado/azul do Arcano quando colorido, movimento sugerido por riscos/setas",
+    "fundo": "transparente"
+  },
+  "destino": "Arcanoclisma/online/public/kit/icones/<id>.svg",
+  "manifesto": {
+    "arquivo": "Arcanoclisma/online/public/kit/icones/manifesto.json",
+    "formato": {
+      "<id>": {
+        "arquivo": "/kit/icones/<id>.svg",
+        "okGpt": true
+      }
+    },
+    "nota": "Só ícones com okGpt: true aparecem no site. Ícone ausente = só o texto (nada quebra)."
+  },
+  "integracaoClaude": {
+    "estado": "pronta (aguardando os ícones)",
+    "codigo": "online/public/js/icones.js (lista, gatilhos e iconizar); carta.js (texto da carta) e palavras-chave.js",
+    "tutorial": "depois da entrega, o Claude também usa os ícones nos balões do tutorial"
+  },
+  "icones": [
+    {
+      "id": "suspender",
+      "nome": "Suspender",
+      "oQueMostra": "uma carta se deitando (girando 90°) com uma seta curva apontando para baixo e riscos de movimento atrás",
+      "ondeAparece": "no texto das cartas, antes de: Suspenda, suspenda, suspende, Suspende, suspensa, suspenso"
+    },
+    {
+      "id": "levantar",
+      "nome": "Levantar",
+      "oQueMostra": "uma carta deitada se erguendo com uma seta curva para cima e riscos de movimento",
+      "ondeAparece": "no texto das cartas, antes de: levanta, Levanta, levante, Levante"
+    },
+    {
+      "id": "pagar-arcano",
+      "nome": "Pagar Arcano",
+      "oQueMostra": "uma esfera de Arcano azul saindo (seta para fora) de uma mão aberta, com o número ao lado",
+      "ondeAparece": "no texto das cartas, antes de: Pague N"
+    },
+    {
+      "id": "ganhar-arcano",
+      "nome": "Ganhar Arcano",
+      "oQueMostra": "uma esfera de Arcano azul com brilho e uma seta entrando (para dentro), sinal de +",
+      "ondeAparece": "no texto das cartas, antes de: Ganhe N Arcano, Gera N Arcano"
+    },
+    {
+      "id": "enviar-arcano",
+      "nome": "Enviar ao Arcano",
+      "oQueMostra": "uma carta virando faíscas azuis que sobem para dentro de uma esfera de Arcano",
+      "ondeAparece": "no texto das cartas, antes de: enviar cartas ao Arcano, enviada ao Arcano"
+    },
+    {
+      "id": "grau",
+      "nome": "Grau",
+      "oQueMostra": "uma pilha de cartas viradas (verso) com um losango azul na frente",
+      "ondeAparece": "no texto das cartas, antes de: Zona de Grau, no Grau, do Grau"
+    },
+    {
+      "id": "comprar",
+      "nome": "Comprar",
+      "oQueMostra": "uma carta saindo do topo do baralho em direção a uma mão, seta curva",
+      "ondeAparece": "no texto das cartas, antes de: Compre N"
+    },
+    {
+      "id": "olhar-topo",
+      "nome": "Olhar o topo",
+      "oQueMostra": "um olho aberto sobre o topo de um baralho, com 3 cartas em leque",
+      "ondeAparece": "no texto das cartas, antes de: Olhe N"
+    },
+    {
+      "id": "fundo-baralho",
+      "nome": "Fundo do baralho",
+      "oQueMostra": "uma carta deslizando para baixo do baralho, seta para baixo",
+      "ondeAparece": "no texto das cartas, antes de: no fundo do baralho, para o fundo do baralho"
+    },
+    {
+      "id": "descartar",
+      "nome": "Descartar",
+      "oQueMostra": "uma carta caindo da mão em direção a uma lápide pequena",
+      "ondeAparece": "no texto das cartas, antes de: Descarte, descartar"
+    },
+    {
+      "id": "dano",
+      "nome": "Causar dano",
+      "oQueMostra": "uma faísca/estilhaço vermelho de impacto em forma de estrela pontiaguda",
+      "ondeAparece": "no texto das cartas, antes de: Cause N"
+    },
+    {
+      "id": "curar",
+      "nome": "Curar",
+      "oQueMostra": "uma gota verde-clara com uma pequena cruz de luz e brilho suave",
+      "ondeAparece": "no texto das cartas, antes de: Cure N"
+    },
+    {
+      "id": "destruir",
+      "nome": "Destruir",
+      "oQueMostra": "uma carta partida ao meio na diagonal, com fragmentos voando",
+      "ondeAparece": "no texto das cartas, antes de: Destrua"
+    },
+    {
+      "id": "devolver",
+      "nome": "Devolver à mão",
+      "oQueMostra": "uma carta voltando em arco (seta curva para trás) até uma mão",
+      "ondeAparece": "no texto das cartas, antes de: Devolva"
+    },
+    {
+      "id": "banir",
+      "nome": "Banir",
+      "oQueMostra": "uma carta sumindo num portal circular escuro, com contorno pontilhado",
+      "ondeAparece": "no texto das cartas, antes de: Bana, banida, Banimento"
+    },
+    {
+      "id": "cemiterio",
+      "nome": "Cemitério",
+      "oQueMostra": "uma lápide pequena com uma carta encostada",
+      "ondeAparece": "no texto das cartas, antes de: cemitério"
+    },
+    {
+      "id": "anular",
+      "nome": "Anular",
+      "oQueMostra": "uma carta com um círculo cortado (símbolo de proibido) dourado por cima",
+      "ondeAparece": "no texto das cartas, antes de: Anule, anula"
+    },
+    {
+      "id": "invocar",
+      "nome": "Invocar ficha",
+      "oQueMostra": "uma carta pequena brotando de um círculo mágico no chão",
+      "ondeAparece": "no texto das cartas, antes de: Invoque"
+    },
+    {
+      "id": "ao-entrar",
+      "nome": "Ao entrar",
+      "oQueMostra": "uma carta descendo até a mesa com uma onda de impacto embaixo",
+      "ondeAparece": "no texto das cartas, antes de: Ao entrar, ao entrar"
+    },
+    {
+      "id": "atacar",
+      "nome": "Atacar",
+      "oQueMostra": "duas lâminas cruzadas com riscos de movimento para a frente",
+      "ondeAparece": "no texto das cartas, antes de: atacar, ataca, Ataque"
+    },
+    {
+      "id": "bloquear",
+      "nome": "Bloquear",
+      "oQueMostra": "um escudo erguido recebendo um impacto",
+      "ondeAparece": "no texto das cartas, antes de: bloquear, bloqueia, bloqueio"
+    },
+    {
+      "id": "repentina",
+      "nome": "Repentina",
+      "oQueMostra": "um raio dourado rápido (velocidade de resposta)",
+      "ondeAparece": "no texto das cartas, antes de: Repentina"
+    },
+    {
+      "id": "findante",
+      "nome": "Findante",
+      "oQueMostra": "uma ampulheta com a areia descendo (só na sua fase principal)",
+      "ondeAparece": "no texto das cartas, antes de: Findante"
+    },
+    {
+      "id": "proficiente",
+      "nome": "Proficiente",
+      "oQueMostra": "uma bota alada / seta dupla para a frente (age no turno em que entra)",
+      "ondeAparece": "no texto das cartas, antes de: Proficiente"
+    },
+    {
+      "id": "etereo",
+      "nome": "Etéreo",
+      "oQueMostra": "uma silhueta translúcida com contorno tracejado e brilho fantasma",
+      "ondeAparece": "no texto das cartas, antes de: Etéreos"
+    },
+    {
+      "id": "protegido",
+      "nome": "Protegido",
+      "oQueMostra": "uma carta com uma redoma/escudo arredondado em volta e um número",
+      "ondeAparece": "no texto das cartas, antes de: Protegido N"
+    },
+    {
+      "id": "economia",
+      "nome": "Economia",
+      "oQueMostra": "duas cartas entrando na mão no fim do turno (o mesmo símbolo da estatística da carta do Conjurador)",
+      "ondeAparece": "no texto das cartas, antes de: Economia"
+    },
+    {
+      "id": "cataclisma",
+      "nome": "Cataclisma",
+      "oQueMostra": "uma esfera de Arcano rachando e se desfazendo (o Arcano que sobra some)",
+      "ondeAparece": "no texto das cartas, antes de: Cataclisma"
+    },
+    {
+      "id": "uso-unico",
+      "nome": "Uso único",
+      "oQueMostra": "um frasco com o número 1 e um risco (consome ao usar)",
+      "ondeAparece": "no texto das cartas, antes de: uso único, Consumível"
+    }
+  ],
+  "naoFazer": [
+    "Não mudar regras, custos ou textos das cartas.",
+    "Não incluir números nem letras dentro do ícone.",
+    "A expansão A Mestra dos Dragões continua bloqueada."
+  ]
+}

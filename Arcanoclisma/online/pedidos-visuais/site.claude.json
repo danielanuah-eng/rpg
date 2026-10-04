@@ -240,5 +240,10 @@
       "extra",
       "conjurador"
     ]
+  },
+  "iconografia": {
+    "pedido": "Arcanoclisma/online/pedidos-visuais/iconografia.claude.json",
+    "data": "2026-10-04",
+    "resumo": "29 ícones de mecânicas (suspender, pagar Arcano, comprar, dano, curar...) para o texto das cartas"
   }
 }

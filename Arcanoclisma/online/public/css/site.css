@@ -275,3 +275,7 @@ body:has(#tela.cheia) .opinar-flutuante { display: none; }
 .lore-novidades { display: grid; gap: 6px; padding-left: 22px; }
 .lore-novidades li { padding: 6px 10px; border-radius: 10px; background: #120e26aa; }
 @media (max-width: 600px) { .lore-conj { flex-direction: column; align-items: center; text-align: center; } .lore-conjs { grid-template-columns: 1fr; } .lore-atlas { grid-template-columns: repeat(2, 1fr); } }
+
+/* ícones das mecânicas no texto (js/icones.js; arte do GPT em /kit/icones/) */
+.icone-mecanica { display: inline-block; width: 1.25em; height: 1.25em; vertical-align: -0.28em; margin-right: .15em; object-fit: contain; }
+.tcg-card .rules .icone-mecanica { width: 1.35em; height: 1.35em; }

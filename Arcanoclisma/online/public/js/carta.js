@@ -3,6 +3,7 @@
 // Só recebe o modelo autorizado: carta escondida vira verso, sem nome, arte ou atributos no DOM.
 import { DADOS, VALOR, conj, arteConj, textoPoder, EDICOES } from './base.js';
 import { aplicarIdentidadeValor } from './identidade-valor-v12.js';
+import { iconizar, temIcones } from './icones.js';
 /** Arte trocada pelo autor no Editor vale mais que a arte final do GPT. */
 const EDICOES_ARTE = new Proxy({}, { get: (_, k) => EDICOES.dados?.artes?.[k] ?? {} });
 /** Raridade definida pelo autor no Editor (sem raridade automática; pedido do autor, 03/10). */
@@ -127,7 +128,10 @@ export function desenharCarta(model, { hidden = false, opponent = false, readabl
   const classification = '';
   const typeText = model.tipo === 'conjurador' ? [typeLabel, model.comprometimento].join(' · ') : [typeLabel, speed, classification].filter(Boolean).join(' · ');
   const detail = el('div', model.tipo === 'conjurador' ? 'subtype-line conjurador-detail' : 'subtype-line', [...new Set(subtypes)].join(' · '));
-  front.append(el('div', 'type-line', typeText), detail, el('div', 'rules', model.texto), el('div', 'flavour', ''));
+  // iconografia das mecânicas (ícones do GPT ao lado das palavras, quando aprovados); sem ícones, o texto fica igual
+  const regras = el('div', 'rules', model.texto);
+  if (temIcones()) regras.innerHTML = iconizar(model.texto);
+  front.append(el('div', 'type-line', typeText), detail, regras, el('div', 'flavour', ''));
   if (n.dataset.rarity !== 'nenhuma') front.append(img(`${K}vetores/raridade-${n.dataset.rarity}.svg`, 'rarity', `Raridade: ${n.dataset.rarity}`));
   const fields = model.categoriaItem === 'armadura' ? [['defesa', 'defesa'], ['vidaDesgaste', 'desgaste']]
     : model.tipo === 'conjurador' ? [['ataque', 'ataque'], ['vida', 'vida'], ['compraFinal', 'economia']]

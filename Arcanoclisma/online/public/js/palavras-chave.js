@@ -1,5 +1,6 @@
 // Palavras-chave e termos das cartas (aba "Palavras-chave" do site e ajuda da mesa). Texto ligado ao motor real
 // (tcg/src/motor.ts) e ao Livro de Regras (tcg/docs/LIVRO-DE-REGRAS.md, seções 5 a 9).
+import { ICONES, icone } from './icones.js';
 export const PALAVRAS_CHAVE = [
   { grupo: 'Velocidade', itens: [
     ['Findante', 'Só pode ser jogada na sua fase principal, com a pilha vazia e fora de combate.'],
@@ -47,5 +48,7 @@ export const PALAVRAS_CHAVE = [
 
 /** HTML da lista (com âncoras), para a aba do site e a ajuda da mesa. */
 export function palavrasChaveHTML(esc) {
-  return PALAVRAS_CHAVE.map((g) => `<section class="pc-grupo"><h3>${esc(g.grupo)}</h3><dl>${g.itens.map(([t, d]) => `<dt>${esc(t)}</dt><dd>${esc(d)}</dd>`).join('')}</dl></section>`).join('');
+  // ícone da mecânica antes do termo (quando o GPT já entregou), pelo mesmo gatilho do texto das cartas
+  const comIcone = (t) => { const i = ICONES.find((x) => x.gatilho.test(t)); return (i ? icone(i.id) : '') + esc(t); };
+  return PALAVRAS_CHAVE.map((g) => `<section class="pc-grupo"><h3>${esc(g.grupo)}</h3><dl>${g.itens.map(([t, d]) => `<dt>${comIcone(t)}</dt><dd>${esc(d)}</dd>`).join('')}</dl></section>`).join('');
 }
