@@ -1,0 +1,37 @@
+{
+  "id": "col-campeao-morbidyum",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-9247f74f-4ab5-455f-9a3b-e5f6626d6aa0.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nExact identity of OQueVoltou firstref: tall dry thin adult returned/deceased humanoid, pale skin, long gaunt face and long nose, tired red eyes with visible pupils, straight shoulderlength black hair, closed charcoal clothing with darkbrown leather shoulders/straps and burgundy lining, gloves and high boots. Broad asymmetrical chipped grey sword with bronze crossguard, faint palegreen Morbidyum energy wisps, not zombie gore or fresh wounds. New action: he takes a measured step over a low wooden bridge rail, one boot on damp stone, torso turned nearly sideprofile, sword held onehand LOW across foreground as a guard, free hand reaches backward to guide a small fullydressed adult traveler across. Head tilted slightlyUP and looks directly toward far end of the path, wary focused expression, NOT source frontal battlecrouch. Scene in a quiet Morbidyum curanderas village at drizzly late afternoon: warm clay and wood houses on short stilts among reeds, covered porch with driedherbs, narrow flooded cemetery path beyond, old rounded graves partly hidden under moss and a few linen memorial ribbons. Full environment with deep muted plum-brown shadows and grey-green reedwater, soft warm light through curtains. A healer awaits under porch, palegreen wisps only around sword and sleeve, not whole glowing landscape. Lowcamera near water shows long step and supporting leg clearly, complete two arms/two legs. Current Morbidyum ally4/5 cost3 grau2 generated1, EMPTYrules, assisting traveler is narrative only not protection/resurrection ability. Common smooth illustration finish, sparse texture, no bodies/gore.\nReference2 only smooth finish, no borrowing its characters or meadow. Edge-to-edge opaque63:88 upright scene; no card border, typography, UI, numbers, logo or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/o-que-voltou.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "morbidyum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/o-que-voltou.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Aldeia de curandeiras de Morbidyum, passarela sobre brejo junto a um cemitério",
+  "momentoDoDia": "Fim de tarde",
+  "clima": "Chuva leve e água acumulada",
+  "escala": "Retornado à frente, viajante e curandeira atrás, casas e sepulturas em profundidade",
+  "avaliacaoVisual": "Rosto pálido comprido, cabelo preto, olhos vermelhos cansados e roupas fechadas preservados. Passo largo em nova cena, espada baixa atravessando o primeiro plano. Energia verde-pálida localizada, chuva e casas com luz em janelas, sem feridas ou gore.",
+  "decisoes": [
+    "Narrativa de guarda e travessia sem inventar proteção ou ressurreição mecânica.",
+    "Morbidyum preservado nas pequenas linhas de energia.",
+    "Raridade comum, cenário unificado novo."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

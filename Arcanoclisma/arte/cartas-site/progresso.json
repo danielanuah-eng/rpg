@@ -1,16 +1,8 @@
 {
   "estado": "em_producao",
   "meta": 210,
-  "concluidas": 120,
+  "concluidas": 128,
   "pendentes": [
-    "col-campeao-sublimeyn",
-    "col-campeao-dominum",
-    "col-campeao-persona",
-    "col-campeao-alvorum",
-    "col-campeao-morbidyum",
-    "col-campeao-cognitium",
-    "col-campeao-eternyr",
-    "col-campeao-primitivum",
     "col-gato-de-navio",
     "col-menina-raposa",
     "col-ilusionista-do-labirinto",

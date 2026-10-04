@@ -1,0 +1,67 @@
+{
+  "id": "col-campeao-alvorum",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-6c060907-27bd-4b97-a50f-f78418d42476.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-campeao-alvorum.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/o-ministrum.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "alvorum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/o-ministrum.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Tribunal costeiro aberto de Alvorum, colunas, cais e farol distante",
+  "momentoDoDia": "Hora azul depois do pôr do sol",
+  "clima": "Brisa marítima e névoa baixa no horizonte",
+  "escala": "Juiz central, peticionária em primeiro plano e escrivão ao fundo",
+  "avaliacaoVisual": "Ministrum calvo de pele roxa e manto geométrico mantido, sentado em nova postura. Olhar e mão apontam para a peticionária; balança abaixada com pequenas formas douradas e pretas. Fundo azul costeiro, sem halo geral ou feitiço roxo.",
+  "decisoes": [
+    "Preservar pele e roupa roxas como identidade física; magia do Valor atual Alvorum.",
+    "Aliado com regras vazias; gesto de sentença não adiciona efeito mecânico.",
+    "Escala arquitetônica e luz noturna diferenciadas; raridade comum."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-campeao-alvorum.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "1e0626f127b3180346834fecf880f73d5ece88c648cdb13e8cc8591c0e2dc315",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

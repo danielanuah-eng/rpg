@@ -4702,9 +4702,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/sonhador-perdido.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Sonhador Perdido: personagem/objeto do catálogo aprovado (sonhador-perdido). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Sonhador Perdido em guarda firme, protegendo os aliados e segurando a linha; vindo diretamente do plano de Sublimeyn.",
       "ambienteOriginal": "Ambiente do Valor Sublimeyn: céus de duas pálpebras, mares de mercúrio, nuvens e torres flutuantes. Magia na cor prata-mercúrio, em fumaça e vapor que escorrem, pingam e cristalizam. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -4728,7 +4728,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-campeao-sublimeyn.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-sublimeyn.visual.json"
     },
     {
       "id": "col-campeao-dominum",
@@ -4744,9 +4746,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/juramentado.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Juramentado: personagem/objeto do catálogo aprovado (juramentado). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Juramentado em guarda firme, protegendo os aliados e segurando a linha; vindo diretamente do plano de Dominum.",
       "ambienteOriginal": "Ambiente do Valor Dominum: cidades-muralha, prisões, tronos e salões de juramento. Magia na cor roxo-sangue, em construtos de correntes, coleiras e elos. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -4770,7 +4772,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-campeao-dominum.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-dominum.visual.json"
     },
     {
       "id": "col-campeao-persona",
@@ -4786,9 +4790,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/o-seu-rosto.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "O Seu Rosto: personagem/objeto do catálogo aprovado (o-seu-rosto). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "O Seu Rosto em guarda firme, protegendo os aliados e segurando a linha; vindo diretamente do plano de Persona.",
       "ambienteOriginal": "Ambiente do Valor Persona: a cidade dos rostos, feiras de máscaras, ruas de espelhos e tavernas cheias. Magia na cor coral, em aura suave e uniforme que transborda quando a emoção é forte. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -4812,7 +4816,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-campeao-persona.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-persona.visual.json"
     },
     {
       "id": "col-campeao-alvorum",
@@ -4828,9 +4834,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/o-ministrum.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "O Ministrum: personagem/objeto do catálogo aprovado (o-ministrum). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "O Ministrum em guarda firme, protegendo os aliados e segurando a linha; vindo diretamente do plano de Alvorum.",
       "ambienteOriginal": "Ambiente do Valor Alvorum: faróis sem noite, auroras, campos dourados ao amanhecer e ao entardecer. Magia na cor dourado e preto, em aura dividida, com falhas entre a parte de luz e a de sombra. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -4854,7 +4860,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-campeao-alvorum.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-alvorum.visual.json"
     },
     {
       "id": "col-campeao-morbidyum",
@@ -4870,9 +4878,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/o-que-voltou.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "O Que Voltou: personagem/objeto do catálogo aprovado (o-que-voltou). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "O Que Voltou em guarda firme, protegendo os aliados e segurando a linha; vindo diretamente do plano de Morbidyum.",
       "ambienteOriginal": "Ambiente do Valor Morbidyum: cemitérios que respiram, brejos, criptas e aldeias de curandeiras. Magia na cor verde-pálido, em fumaça fria e fios que partem, como almas. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -4896,7 +4904,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-campeao-morbidyum.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-morbidyum.visual.json"
     },
     {
       "id": "col-campeao-cognitium",
@@ -4912,9 +4922,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/bibliotecaria-do-arquivo.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Bibliotecária do Arquivo: personagem/objeto do catálogo aprovado (bibliotecaria-do-arquivo). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Bibliotecária do Arquivo em guarda firme, protegendo os aliados e segurando a linha; vindo diretamente do plano de Cognitium.",
       "ambienteOriginal": "Ambiente do Valor Cognitium: o arquivo sem dono, bibliotecas que esquecem, observatórios. Magia na cor índigo, em véu de fumaça com falhas, como se faltassem pedaços. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -4938,7 +4948,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-campeao-cognitium.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-cognitium.visual.json"
     },
     {
       "id": "col-campeao-eternyr",
@@ -4954,9 +4966,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/repetido.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Repetido: personagem/objeto do catálogo aprovado (repetido). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Repetido em guarda firme, protegendo os aliados e segurando a linha; vindo diretamente do plano de Eternyr.",
       "ambienteOriginal": "Ambiente do Valor Eternyr: o entretempo, vilas do mesmo dia, estações paradas e relógios gigantes. Magia na cor azul-noite com riscos brancos, em aura com falhas e rastros parados no ar. Dupla temperatura: a magia é fria, então o cenário puxa o quente.",
@@ -4980,7 +4992,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-campeao-eternyr.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-eternyr.visual.json"
     },
     {
       "id": "col-campeao-primitivum",
@@ -4996,9 +5010,9 @@
       "referenciasIdentidade": [
         "Arcanoclisma/arte/imagens/espirito-animal.png"
       ],
-      "estado": "pendente",
-      "baseInspecionada": false,
-      "descricaoLida": false,
+      "estado": "gerada_aguardando_avaliacao_final",
+      "baseInspecionada": true,
+      "descricaoLida": true,
       "identidade": "Espírito-Animal: personagem/objeto do catálogo aprovado (espirito-animal). Preservar a identidade; a arte da carta é uma cena NOVA com fundo.",
       "cenaOriginal": "Espírito-Animal em guarda firme, protegendo os aliados e segurando a linha; vindo diretamente do plano de Primitivum.",
       "ambienteOriginal": "Ambiente do Valor Primitivum: a floresta primeira, florestas que andam, mercados de feras e montanhas. Magia na cor verde-musgo e âmbar, em construtos orgânicos: raízes, galhos e esporos soltos. Dupla temperatura: a magia é quente, então o cenário puxa o frio.",
@@ -5022,7 +5036,9 @@
           "papelNaCena": "protagonista da cena"
         }
       ],
-      "objetoReferencia": null
+      "objetoReferencia": null,
+      "arteNova": "Arcanoclisma/arte/cartas-site/col-campeao-primitivum.png",
+      "registro": "Arcanoclisma/arte/cartas-site/registros/col-campeao-primitivum.visual.json"
     },
     {
       "id": "col-gato-de-navio",

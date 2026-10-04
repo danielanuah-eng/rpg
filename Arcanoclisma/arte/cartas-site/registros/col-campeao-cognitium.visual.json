@@ -1,0 +1,67 @@
+{
+  "id": "col-campeao-cognitium",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-3591cada-1e41-41df-8f6d-2b09149a9677.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-campeao-cognitium.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/bibliotecaria-do-arquivo.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "cognitium"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/bibliotecaria-do-arquivo.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Sala de leitura do Arquivo Sem Dono em Cognitium, escada móvel, estantes e gavetas suspensas",
+  "momentoDoDia": "Fim da manhã",
+  "clima": "Céu claro e nuvens índigo vistas pela claraboia",
+  "escala": "Bibliotecária alta e robusta, pesquisador pequeno embaixo, arquivo amplo",
+  "avaliacaoVisual": "Mulher negra madura de cabelo curtíssimo prateado, óculos e bolsos de arquivo preservados. Nova postura de pé na escada, torção do tronco e olhar direcionado ao livro alto. Livro segurado junto ao corpo, vapor índigo discreto e fundo de madeira em planos suaves.",
+  "decisoes": [
+    "Aliado com regras vazias: busca do livro é visual, não habilidade de compra/tutor.",
+    "Nova pose e pesquisador incidental; não reaproveitar oferta de livro do recorte original.",
+    "Acabamento comum, metais em bronze controlado."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-campeao-cognitium.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "cc0662bc275be220d20a22f9a35f58257c4f1f014366c86d6fedc3875c86aeb5",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

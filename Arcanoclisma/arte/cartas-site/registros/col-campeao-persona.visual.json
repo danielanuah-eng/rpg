@@ -1,0 +1,67 @@
+{
+  "id": "col-campeao-persona",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-6b2e9ca2-ffbe-4693-bc28-ff3f57fcf8b7.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-campeao-persona.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/o-seu-rosto.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "persona"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/o-seu-rosto.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Pátio de mercado da Cidade dos Rostos, fonte azul e bancas de máscaras",
+  "momentoDoDia": "Meio do dia",
+  "clima": "Luz diurna difusa e clara",
+  "escala": "Duplo e reflexo em primeiro plano, vendedores em profundidade",
+  "avaliacaoVisual": "Personagem cobre com cabelo castanho ondulado e roupa original, agora agachado junto à fonte. Personagem e reflexo se encaram dentro do espelho coral fragmentado; mãos acompanham a conversa. Mercado e água criam cenário completo com luz controlada.",
+  "decisoes": [
+    "Rosto fictício genérico; não alegar semelhança a jogador real.",
+    "Valor Persona em coral; duplicação apenas narrativa, regras atuais vazias.",
+    "Nova pose e cenário, sem montagem do recorte."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-campeao-persona.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "bf20ed7ee8075eae588c26687d7438f63e346132031da793b938dce69038a208",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

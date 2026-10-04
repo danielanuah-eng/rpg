@@ -1,0 +1,67 @@
+{
+  "id": "col-campeao-eternyr",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-71a8a444-ea5c-4148-8502-809bccb770ee.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-campeao-eternyr.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/repetido.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "eternyr"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/repetido.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Eclusa de canal numa vila de Eternyr, moinho, casas de barro e ponte",
+  "momentoDoDia": "Fim da tarde",
+  "clima": "Tempo aberto, nuvens suaves no horizonte",
+  "escala": "Uma pessoa em três fases temporais sobre a passarela, vila em profundidade",
+  "avaliacaoVisual": "Identidade do Repetido preservada em três fases temporais: centro sólido e duas imagens azul-noite deslocadas. Nova ação junto à roda de eclusa, cabeça olha para mão e mecanismo. Roupa branca, lenço azul, cabelo castanho cacheado e linhas brancas mantidos; cenário de canal completo.",
+  "decisoes": [
+    "Três fases mostram um único personagem, não três Aliados adicionados ao jogo.",
+    "Regra atual vazia: não atribuir habilidade de parar o tempo à carta.",
+    "Ambiente de vila e ação cotidiana distinguem a composição; comum sem foil."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-campeao-eternyr.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "bc0b4c2c24e2fe638320c2c66f6e93723057039f883defc1f8b987c02824a4d1",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

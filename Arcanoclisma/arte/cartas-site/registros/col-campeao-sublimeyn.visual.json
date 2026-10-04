@@ -1,0 +1,67 @@
+{
+  "id": "col-campeao-sublimeyn",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-e69afba2-279f-4972-a208-e4edaba13943.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-campeao-sublimeyn.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/sonhador-perdido.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "sublimeyn"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/sonhador-perdido.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Porto onírico de Sublimeyn, passarelas de madeira, casas em nuvens e mar de mercúrio",
+  "momentoDoDia": "Noite de lua cheia",
+  "clima": "Nuvens suaves e tempo calmo",
+  "escala": "Sonhador e pássaro em primeiro plano, dois ouvintes e vila em profundidade",
+  "avaliacaoVisual": "Cabelos longos brancos, pele castanha clara, olhos dourados e roupa preta/marfim mantidos. Nova postura baixa e inclinada, olhar acompanha pássaro prateado. Porto iluminado por lanternas pontuais, nuvens com pálpebras e água prateada ao fundo.",
+  "decisoes": [
+    "Valor atual Sublimeyn: vapor e pássaro em prata, dourado apenas na roupa e iluminação física.",
+    "Gesto de contar um sonho é narrativo; regras vazias, não acrescentar habilidade.",
+    "Cena noturna inédita, acabamento comum."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-campeao-sublimeyn.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "48a413898e48a042fd49c0bffbfab7a07623e23ef1df360cafa760f8f3980205",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

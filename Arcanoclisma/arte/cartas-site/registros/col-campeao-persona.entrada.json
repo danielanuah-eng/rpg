@@ -1,0 +1,37 @@
+{
+  "id": "col-campeao-persona",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-6b2e9ca2-ffbe-4693-bc28-ff3f57fcf8b7.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPreserve \"O Seu Rosto\" from first ref as a fictional generic adult humanoid double: copper warm skin, round brown eyes with visible pupils, short wavy brown hair, straight nose, offwhite rolled sleeves, slate vest, rustyred shoulder scarf, dark loose trousers, leather crosswrapped boots and understated bronze clasp. NOT a specific real player face. Keep fragmented CORAL mirror around a reflected double of SAME character. New scene in a shaded market courtyard in Persona's CityofFaces under luminous overcast noon: blue plaster facades, smooth muted aquamarine tiled fountain, simple cloth awnings and small racks of handmade mask silhouettes. Main person crouches on one heel beside a fallen floating oval mirror, one hand pressed to mirror edge, the other raised open halfway; body turned away slightly and head looks BACK over shoulder toward his own reflected face. The reflection meets his gaze and mirrors the openhand gesture properly, NOT both looking at viewer or opposite direction. Low fountain lip foreground and a couple of muted adult vendors in distance create depth. Coral aura soft and contained around perforated mirror edges, no beam or giantcirclehalo. Current Persona ally4/5 cost3 grau2 generated1 with EMPTYrules: imitation is narrative, no invented copy gameplay. Clear large subject area, broad smooth understated marketplace architecture, controlled daylight, no collage of cutout, no noisy brokenrock ground, no gilded temple. Ordinary common finish.\nReference2 is ONLY smooth finish. New opaque fullenvironment upright63:88 scene; no cardframe, text, UI, numbers, watermark or logo.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/o-seu-rosto.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "persona"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/o-seu-rosto.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Pátio de mercado da Cidade dos Rostos, fonte azul e bancas de máscaras",
+  "momentoDoDia": "Meio do dia",
+  "clima": "Luz diurna difusa e clara",
+  "escala": "Duplo e reflexo em primeiro plano, vendedores em profundidade",
+  "avaliacaoVisual": "Personagem cobre com cabelo castanho ondulado e roupa original, agora agachado junto à fonte. Personagem e reflexo se encaram dentro do espelho coral fragmentado; mãos acompanham a conversa. Mercado e água criam cenário completo com luz controlada.",
+  "decisoes": [
+    "Rosto fictício genérico; não alegar semelhança a jogador real.",
+    "Valor Persona em coral; duplicação apenas narrativa, regras atuais vazias.",
+    "Nova pose e cenário, sem montagem do recorte."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

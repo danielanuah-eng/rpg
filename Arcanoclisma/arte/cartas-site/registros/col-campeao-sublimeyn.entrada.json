@@ -1,0 +1,37 @@
+{
+  "id": "col-campeao-sublimeyn",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-e69afba2-279f-4972-a208-e4edaba13943.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nIdentity first reference: androgynous adult, light warm brown skin, long thick ivory-white wavy curls with several small braids, distracted golden eyes with visible pupils, soft oval face and small nose. Black/deepnavy and cream loose robe, broad ribbons, bronze-gold circular medallions and tassels, bare feet. Retain identity and physical outfit colors. New gesture and view: crouching lightly on one knee on a floating wooden landing, torso leaning to whisper/storytell to a small translucent silver dream-bird, one hand near chin and other palm held outward low; NOT reference's cross-legged floating pose, head looking sideways DOWN at the bird, expressive gentle half-smile, deep curls blown upward. Scene at clear moonlit night in Sublimeyn's dream harbor: wooden landing over a softly rippled MERCURY sea, rounded ochre clay inns resting on cloud banks, suspended rope walkways, curving warm dark roofs, two distant closed-eyelid-shaped clouds over horizon, quiet softly lit windows. Two differently dressed travelers listen in background. Camera at child's eye level from far end of walkway, arching rope rail frames foreground, smooth illustrated broad surfaces. CURRENT playable Valor ONLY Sublimeyn, tiny silver-mercury vapor spirals from hand to dream-bird, no active gold/black spell; gold is matte bronze costume ornament. Ally4/5 cost3 grau2 generated1, EMPTY currentrules, story gesture conveys identity only, don't invent card draw/heal/defensive ability. Calm readable subject with cool soft moonlight and muted ochre architecture, not sky glowing fullwhite, common no foil.\nReference2 only smooth approved painted finish; never copy its people, meadow or dragon. Edge-to-edge opaque63:88 upright illustration; no text, card framing, UI, number or logo.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/sonhador-perdido.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "sublimeyn"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/sonhador-perdido.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Porto onírico de Sublimeyn, passarelas de madeira, casas em nuvens e mar de mercúrio",
+  "momentoDoDia": "Noite de lua cheia",
+  "clima": "Nuvens suaves e tempo calmo",
+  "escala": "Sonhador e pássaro em primeiro plano, dois ouvintes e vila em profundidade",
+  "avaliacaoVisual": "Cabelos longos brancos, pele castanha clara, olhos dourados e roupa preta/marfim mantidos. Nova postura baixa e inclinada, olhar acompanha pássaro prateado. Porto iluminado por lanternas pontuais, nuvens com pálpebras e água prateada ao fundo.",
+  "decisoes": [
+    "Valor atual Sublimeyn: vapor e pássaro em prata, dourado apenas na roupa e iluminação física.",
+    "Gesto de contar um sonho é narrativo; regras vazias, não acrescentar habilidade.",
+    "Cena noturna inédita, acabamento comum."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

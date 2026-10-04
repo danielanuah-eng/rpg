@@ -1,0 +1,67 @@
+{
+  "id": "col-campeao-primitivum",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-35541395-4845-4263-bd62-271b1449b82c.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-campeao-primitivum.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/espirito-animal.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "primitivum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/espirito-animal.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Margem de lago montanhoso de Primitivum, ponte de árvore oca e raízes",
+  "momentoDoDia": "Crepúsculo",
+  "clima": "Bruma baixa no vale, céu de entardecer",
+  "escala": "Lontra espiritual dominante, pequenos animais no tronco e montanhas distantes",
+  "avaliacaoVisual": "Espécie de lontra etérea, corpo sinuoso, quatro patas curtas e cauda longa preservados; apoio na pedra e olhar na mariposa azul. Energia verde-musgo e âmbar acompanha o corpo, água fria e vegetação escura equilibram o brilho, sem asas ou espinhos.",
+  "decisoes": [
+    "Espírito animal mantém anatomia não humana e comportamento atento.",
+    "Aliado Primitivum com regras vazias; presença espiritual não acrescenta invocação ou cura.",
+    "Cena de natureza com fundo inteiro, acabamento comum."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-campeao-primitivum.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "ee87e88e9ad506a4640eb24e7ba6486ac81c3b5f10d8858f40e30335a735e7e1",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

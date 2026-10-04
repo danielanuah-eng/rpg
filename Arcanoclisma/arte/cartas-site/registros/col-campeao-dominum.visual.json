@@ -1,0 +1,67 @@
+{
+  "id": "col-campeao-dominum",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-7491af2d-aeb7-4d63-8514-7361920257ab.png",
+  "prompt": "Arcanoclisma/arte/cartas-site/prompts/col-campeao-dominum.txt",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/juramentado.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "dominum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/juramentado.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Salão de juramentos de Dominum, escada de pedra, janelas altas e porta pesada",
+  "momentoDoDia": "Fim da manhã",
+  "clima": "Céu claro visto pelas janelas",
+  "escala": "Juramentado dominante, testemunhas pequenas em plano posterior",
+  "avaliacaoVisual": "Capacete fechado rachado, armadura fragmentada marfim e panos ferrugem preservados. Espada agora diagonal e magia roxa de Dominum, cabeça voltada para a porta, mão oposta apoiada no corrimão. Cena de guarda com luz lateral controlada e sem ferimentos.",
+  "decisoes": [
+    "Magia do Valor atual Dominum prevalece sobre energia ferrugem do recorte RPG; manter identidade e forma da espada.",
+    "Aliado com regras vazias; postura defensiva apenas narrativa.",
+    "Nova perspectiva baixa em ambiente completo, não repetir golpe horizontal antigo."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "arquivo": "Arcanoclisma/arte/cartas-site/col-campeao-dominum.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesSolicitadas": [
+    1260,
+    1760
+  ],
+  "dimensoesEntregues": "Saída nativa real; não redimensionada",
+  "sha256": "e1e6c3efd422a4786f7573bc0e4833a4a94f0627243b8a6b9d1e01aab6bfdef1",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "cantos": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "fundo": "Cena completa opaca",
+  "estado": "gerada_aguardando_avaliacao_final",
+  "integracaoClaudeConfirmada": false
+}

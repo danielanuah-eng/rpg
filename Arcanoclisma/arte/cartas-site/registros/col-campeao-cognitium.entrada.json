@@ -1,0 +1,37 @@
+{
+  "id": "col-campeao-cognitium",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-3591cada-1e41-41df-8f6d-2b09149a9677.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nPreserve Bibliotecaria doArquivo firstref: very tall robust mature BLACK woman with round darkbrown face, attentive broad eyes and visible pupils, tiny geometric brass spectacles, very short silverwhite curly hair, sly patient kind smile; creamshirt and loose creamtrousers under navy archivistcoat/vest with many brown leather bookpockets, small bronzeclasps, sturdyboots. New upright TWISTING pose inside the ArquivoSemDono: one boot on lowest rung of a rolling wooden shelf ladder, one hand reaches upward to find a CLOSED bluebook on shelf, other arm cradles a second navybook close to waist. Eyes actually focus on the high book she is grasping, not front. Hairshortunchanged, coat swings with bodyturn, no kneeling extendedoffering copy fromref. A short adult tortoise-like researcher wearing sensible mustardjacket waits below with blank parchmentroll. Scene Cognitium archive readingroom at clear late morning: towering warm walnut shelves recede around a circular raised readingdesk, high broad skylight and small unusual verticalwindows show indigo clouds, several archive drawers hover quietly at rear, subtly missing shelfsegments like erased memories. Foreground simple wooden handrail guides depth. Contained broken INDIGO vapor threads guide her wrist toward the book with gaps, not luminous electricstorm, gold only agedbronze bindings. Tallwoman scale strong and grounded, broad smooth surfaces, varied warm/coldcolorplanes, not noisy scribbletextures; manuscriptsspines no legibletext. Ally4/5 cost3 grau2 generated1 EMPTYrules, no invented drawtutorgameability, findingbookjustnarrative. Common no legendaryfoil.\nReference2 only smooth finish, no borrowing its characters or meadow. Edge-to-edge opaque63:88 upright scene; no card border, typography, UI, numbers, logo or watermark.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/bibliotecaria-do-arquivo.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "cognitium"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/bibliotecaria-do-arquivo.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Sala de leitura do Arquivo Sem Dono em Cognitium, escada móvel, estantes e gavetas suspensas",
+  "momentoDoDia": "Fim da manhã",
+  "clima": "Céu claro e nuvens índigo vistas pela claraboia",
+  "escala": "Bibliotecária alta e robusta, pesquisador pequeno embaixo, arquivo amplo",
+  "avaliacaoVisual": "Mulher negra madura de cabelo curtíssimo prateado, óculos e bolsos de arquivo preservados. Nova postura de pé na escada, torção do tronco e olhar direcionado ao livro alto. Livro segurado junto ao corpo, vapor índigo discreto e fundo de madeira em planos suaves.",
+  "decisoes": [
+    "Aliado com regras vazias: busca do livro é visual, não habilidade de compra/tutor.",
+    "Nova pose e pesquisador incidental; não reaproveitar oferta de livro do recorte original.",
+    "Acabamento comum, metais em bronze controlado."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

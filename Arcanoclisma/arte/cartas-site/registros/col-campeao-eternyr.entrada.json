@@ -1,0 +1,37 @@
+{
+  "id": "col-campeao-eternyr",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-71a8a444-ea5c-4148-8502-809bccb770ee.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nRepetido identity firstreference: adult HUMAN of olive skin, angular face, broad nose and small alert eyes, short brown curls on top with shorter sides, medium build, offwhite rolledsleeve shirt, deepmidnightblue scarf and long cloth tails with white triangular accents, darkbrown trousers, leatherboots, simple beltpocketwatch. He is ONE person appearing in THREE distinct TEMPORAL phases: central presentphase solid, earlierphase on left faint/navy, laterphase on right faint/navy with clean white disconnected traces; same face/clothing no unrelated actors. New central pose leans sideways over a wooden canalgate, one hand on iron latchingwheel and other hand held open just below it, eyes looking down precisely at that hand and latch. Earlier echo holds hand lower BEFORE closing latch; laterecho just turned away after same simpleaction. Don't copy original outward hands frontalpose. Newfullenvironment: Eternyr village canal locks during muted dusty lateafternoon, warm claybrick bakery and low bridges, a large stationary timber waterwheel at far side, mossy stone canaledge, reflected quiet lilacsky in water, one small paddleboat and unobtrusive traveler under awning. Higherdiagonal camera from opposite balcony reveals complete central legs plus ghostlegshapes, hands and railing geometry coherent. ONLY small midnightblue aura with white brokenstreaks around phaseedges, no giant galaxy/clock circle or boomingbeams. Current Eternyr ally4/5 cost3 grau2 generated1 EMPTYrules: temporalphases visualidentity only, not extra summoned allies, actual stop-time/buff/lock mechanic. Common no foil. Keep stagegraphically readable and calm, varied smooth surfaces and no busy repeated floatingbrick pattern.\nReference2 only approved smooth finish, not its characters, dragon or meadow. Full opaque upright63:88 unifiedenvironment. No cardborder, text, UI, numbers or logos.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/repetido.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "eternyr"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/repetido.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Eclusa de canal numa vila de Eternyr, moinho, casas de barro e ponte",
+  "momentoDoDia": "Fim da tarde",
+  "clima": "Tempo aberto, nuvens suaves no horizonte",
+  "escala": "Uma pessoa em três fases temporais sobre a passarela, vila em profundidade",
+  "avaliacaoVisual": "Identidade do Repetido preservada em três fases temporais: centro sólido e duas imagens azul-noite deslocadas. Nova ação junto à roda de eclusa, cabeça olha para mão e mecanismo. Roupa branca, lenço azul, cabelo castanho cacheado e linhas brancas mantidos; cenário de canal completo.",
+  "decisoes": [
+    "Três fases mostram um único personagem, não três Aliados adicionados ao jogo.",
+    "Regra atual vazia: não atribuir habilidade de parar o tempo à carta.",
+    "Ambiente de vila e ação cotidiana distinguem a composição; comum sem foil."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}

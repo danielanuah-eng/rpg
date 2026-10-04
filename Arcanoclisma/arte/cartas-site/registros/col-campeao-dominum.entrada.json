@@ -1,0 +1,37 @@
+{
+  "id": "col-campeao-dominum",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-7491af2d-aeb7-4d63-8514-7361920257ab.png",
+  "prompt": "Create one NEW finished Arcanoclisma TCG card illustration, upright 63:88 composition, full opaque edge-to-edge environmental art. Aim for 1260x1760 if supported, retain native output. Reference 1 identifies the subject; last reference is ONLY approved smooth illustration finish, NEVER reuse its characters, meadow, composition or golden dragon. Polished modern fantasy graphic illustration, confident clean selective contours, gently modeled broad smooth painted surfaces, restrained small texture, expressive believable anatomy. No rough impasto, heavy hatch, pixel art, photograph, 3D render, pasted cutout, decorative card frame, typography, watermark or white margins. Clear picture at small card size, with calm dark/light masses; effects localized, environmental light controlled, readable expressive character faces. Gold is muted aged bronze, never whole-image blazing yellow. Fill every edge with the coherent scene. Rarity changes ONLY aesthetic materials, not rules.\nIdentity first reference: very thin adult deceased otherplanar HUMANOID knight with hidden face behind cracked closed long angular pale steel helmet and narrow dark visor, fragmented displaced ivory/grey metal armor planes, dark underlying body and rusty-red tattered cloth. No exposed wounds or gore, no human bare face, preserve two arms/two legs. Preserve extraordinary serrated broad energy sword SHAPE from reference but active magic is CURRENT Valor Dominum dark blood-purple, not rustyred extra Valor. Bronze accents muted. New clear guarded pose: one firm foot forward on a short stair, body diagonal away from viewer, head turned RIGHT toward a dark doorway, sword held at an oblique descending angle in one hand and other hand steadies cracked stone rail; one armored knee half-bent, NOT floating horizontal slash from ref. Full subject low-angle view inside Dominum oath hall adjoining a fortress courtyard. Late morning narrow warm daylight strips enter tall rose-sandstone windows, dusty clay walls, heavy doors, a worn empty oath-table behind, two small distant cloaked witnesses. A short darkpurple chain-like wisp curls only around the sword's hilt, no binding otherpeople or supernatural immunity. Strong sculptural asymmetrical armor silhouette, broad smooth wall planes, airy depth, limited fine wear only on armor, not noisy rock rubble everywhere. Current ally4/5 cost3 grau2 generated1, EMPTYrules so stance narrative only, no added shield/buff mechanic. Common no rainbowglitter, controlled mutedmagical blade is visual focus.\nReference2 only smooth approved painted finish; never copy its people, meadow or dragon. Edge-to-edge opaque63:88 upright illustration; no text, card framing, UI, number or logo.",
+  "baseInspecionada": true,
+  "baseVisualExistente": true,
+  "descricaoLida": true,
+  "imagemBaseInspecionada": "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/arte/imagens/juramentado.png",
+  "textoRegraLido": "",
+  "valoresLidos": [
+    "dominum"
+  ],
+  "velocidade": "findante",
+  "referenciasGeracao": [
+    {
+      "arquivo": "Arcanoclisma/arte/imagens/juramentado.png",
+      "papel": "Identidade do sujeito aprovado"
+    },
+    {
+      "arquivo": "Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png",
+      "papel": "Acabamento de cenário aprovado"
+    }
+  ],
+  "ambiente": "Salão de juramentos de Dominum, escada de pedra, janelas altas e porta pesada",
+  "momentoDoDia": "Fim da manhã",
+  "clima": "Céu claro visto pelas janelas",
+  "escala": "Juramentado dominante, testemunhas pequenas em plano posterior",
+  "avaliacaoVisual": "Capacete fechado rachado, armadura fragmentada marfim e panos ferrugem preservados. Espada agora diagonal e magia roxa de Dominum, cabeça voltada para a porta, mão oposta apoiada no corrimão. Cena de guarda com luz lateral controlada e sem ferimentos.",
+  "decisoes": [
+    "Magia do Valor atual Dominum prevalece sobre energia ferrugem do recorte RPG; manter identidade e forma da espada.",
+    "Aliado com regras vazias; postura defensiva apenas narrativa.",
+    "Nova perspectiva baixa em ambiente completo, não repetir golpe horizontal antigo."
+  ],
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null
+}
