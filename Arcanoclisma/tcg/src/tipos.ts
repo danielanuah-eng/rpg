@@ -8,6 +8,20 @@ export type CategoriaItem = 'canal' | 'armadura' | 'extra';
 export type Velocidade = 'findante' | 'repentina';
 export type AlvoEfeito = 'escolhido' | 'escolhidoAliado' | 'conjuradorInimigo' | 'conjuradorProprio';
 
+// ---------- construtor de efeitos (pedido do autor, 04/10) ----------
+/** Quando uma habilidade acontece. */
+export type Quando = 'jogar' | 'entrar' | 'ativada' | 'alvo' | 'grau' | 'atacar' | 'bloquear' | 'cemiterio' | 'banimento' | 'danoConjurador';
+/** Custo de uma habilidade ativada ("virar/pagar"). */
+export interface CustoHabilidade { suspender?: boolean; arcano?: number; vida?: number; descartar?: number; grau?: number }
+/** Habilidade montada no Editor: condição + efeitos (que se acumulam, em ordem). */
+export interface Habilidade { quando: Quando; custo?: CustoHabilidade; efeitos: Efeito[]; /** Gatilho só na primeira vez em cada turno. */ umaVezPorTurno?: boolean }
+/** Proteção mágica: quem mira esta carta (com carta ou ativação do oponente) paga isto; sem poder pagar, não pode mirar. */
+export interface Protecao { arcano?: number; vida?: number; descartar?: number; grauParaCemiterio?: number; grauMin?: number }
+/** Para onde vão as cartas escolhidas. */
+export type Destino = 'mao' | 'roubar' | 'grau' | 'cemiterio' | 'fundo' | 'topo' | 'campo' | 'banimento' | 'nada';
+export type TipoAlvoCampo = 'aliado' | 'mistica' | 'estrutura' | 'conjurador' | 'equipamento';
+export type AcaoCampo = 'dano' | 'curar' | 'destruir' | 'devolver' | 'paraBaralho' | 'naoAtaca' | 'suspender' | 'levantar' | 'aumentarAtaque' | 'aumentarVida';
+
 /**
  * Requisito de uma linha de efeito, habilidade ou ação (pedido do autor, 04/10), definido no Editor:
  * grau = mínimo de cartas no seu Grau para acontecer; arcano = Arcano pago na hora (reserva, depois Grau levantado).
@@ -47,7 +61,21 @@ type EfeitoBase =
   /** Itens (03/10, noite). Põe no seu campo uma ficha (carta do catálogo que não vai em baralho, ex.: Espírito Invocado). */
   | { tipo: 'invocar'; carta: string; /** Nome para o texto da carta. */ nome?: string }
   /** Itens (03/10, noite). Seu Conjurador ganha +N de Ataque neste turno. */
-  | { tipo: 'ataqueConjuradorTurno'; valor: number };
+  | { tipo: 'ataqueConjuradorTurno'; valor: number }
+  /** Construtor (04/10). Um jogador descarta N (você ou o oponente); quem descarta escolhe, ou ao acaso. */
+  | { tipo: 'descartar'; quem: 'voce' | 'oponente'; valor: number; aleatorio?: boolean }
+  /** Construtor. Põe N cartas no seu Grau, do topo do baralho ou da mão (você escolhe). */
+  | { tipo: 'colocarNoGrau'; de: 'topo' | 'mao'; valor: number }
+  /** Construtor. Olha as N cartas do topo: escolhe `pegar` para `destino`; o resto vai para `resto`. */
+  | { tipo: 'olharTopoPara'; quantidade: number; pegar: number; destino: Destino; resto: Destino }
+  /** Construtor. Olha a mão do oponente e escolhe `pegar` cartas para `destino` (cemitério, fundo do baralho, roubar). */
+  | { tipo: 'olharMao'; pegar: number; destino: Destino }
+  /** Construtor. Põe em campo (sem pagar) até N cartas da zona, dos tipos e custo máximo indicados. */
+  | { tipo: 'jogarDe'; de: 'cemiterio' | 'mao' | 'baralho' | 'banimento'; valor: number; tipos?: TipoCarta[]; custoMax?: number }
+  /** Construtor. Afeta o campo: um alvo escolhido ou todos de um lado, dos tipos indicados. */
+  | { tipo: 'campo'; acao: AcaoCampo; valor?: number; alcance: 'alvo' | 'todos'; lado: 'inimigo' | 'proprio' | 'ambos'; tipos: TipoAlvoCampo[]; duracao?: 'turno' | 'permanente'; onde?: 'topo' | 'fundo' | 'embaralhar' }
+  /** Construtor. Seu Conjurador perde N de Vida (custo de outro efeito, por exemplo). */
+  | { tipo: 'perderVida'; valor: number };
 
 /** Arma: efeitos ao atacar (pedido do autor, 04/10). */
 export interface AoAtacar {
@@ -118,7 +146,7 @@ export interface CartaDef {
   velocidade: Velocidade;
   /** Arcano que gera ao ser enviada à Zona de Contador Arcano. */
   arcanoGerado: number;
-  /** Palavras-chave. 'Proficiente': ataca e usa ativações que suspendem no turno em que entra. 'Etéreo': só é bloqueado por Aliados Etéreos. */
+  /** Palavras-chave. 'Proficiente': ataca e usa ativações que suspendem no turno em que entra. 'Etéreo': só Etéreos (e armas Etéreas) o atingem e o bloqueiam em combate (decisão 24); 'Incomensurável': o dano que passa da Vida vai para o Conjurador (decisão 25). Antes: só é bloqueado por Aliados Etéreos. */
   palavrasChave?: string[];
   ataque?: number;
   vida?: number;
@@ -151,6 +179,10 @@ export interface CartaDef {
    * mínimo para atacar são o custo e o Grau da própria carta do item (podem ser 0).
    */
   aoAtacar?: AoAtacar;
+  /** Construtor de efeitos (04/10): habilidades com condição e efeitos. */
+  habilidades?: Habilidade[];
+  /** Proteção mágica (04/10): o que o oponente paga para mirar esta carta. */
+  protecao?: Protecao;
   /** Armadura: efeitos quando ela evita dano (ex.: ganhe 1 de Arcano, compre 1 carta). */
   aoProteger?: Efeito[];
   /** Armadura: quando ela evita dano, causa este dano ao atacante. */
@@ -222,6 +254,15 @@ export interface Inst {
   descontoBanimento: number;
   /** Quando resolver, vai para o banimento em vez do cemitério. */
   banirAoResolver: boolean;
+  /** Construtor (04/10): bônus permanentes e até o fim do turno. */
+  bonusAtaque?: number;
+  bonusVida?: number;
+  bonusAtaqueTurno?: number;
+  bonusVidaTurno?: number;
+  /** Não pode atacar enquanto e.turno <= este número. */
+  naoAtacaAte?: number;
+  /** Habilidades "uma vez por turno" já usadas: índice → turno. */
+  usosHab?: Record<number, number>;
 }
 
 /** Todo dano é dano; só muda a fonte. Efeitos podem ser anulados; combate não. */
@@ -261,7 +302,7 @@ export interface ZonasJogador {
 
 export type ItemPilha =
   | { tipo: 'carta'; id: string; controlador: Jogador; instId: string; alvo?: string }
-  | { tipo: 'gatilho'; id: string; controlador: Jogador; efeitos: Efeito[]; alvo?: string; /** Nome de quem gerou o gatilho (registro). */ fonte?: string }
+  | { tipo: 'gatilho'; id: string; controlador: Jogador; efeitos: Efeito[]; alvo?: string; /** Nome de quem gerou o gatilho (registro). */ fonte?: string; /** A fonte tem Incomensurável: o dano que passar da Vida vai para o Conjurador (decisão 25). */ incomensuravel?: boolean }
   | { tipo: 'ataque'; id: string; controlador: Jogador; atacante: string; alvo: string };
 
 export type Pendencia =
@@ -271,7 +312,12 @@ export type Pendencia =
   /** Vários bloqueadores: quem ataca distribui o dano entre eles (decisão 20). */
   | { tipo: 'distribuirDano'; jogador: Jogador }
   | { tipo: 'pagarAnulacao'; jogador: Jogador; custo: number; item: ItemPilha }
-  | { tipo: 'escolherDoTopo'; jogador: Jogador; cartas: string[]; pegar: number };
+  | { tipo: 'escolherDoTopo'; jogador: Jogador; cartas: string[]; pegar: number }
+  /** Construtor (04/10): escolher cartas de uma lista e mandá-las a um destino; o resto (se saiu da zona) vai para `resto`. */
+  | { tipo: 'escolherCartas'; jogador: Jogador; cartas: string[]; quantidade: number; destino: Destino; resto?: Destino; titulo: string; depois?: Continuacao };
+
+/** Efeitos que esperam uma escolha terminar para continuar (efeitos acumulados). */
+export interface Continuacao { efeitos: Efeito[]; dono: Jogador; alvo?: string }
 
 export interface Combate {
   atacante: string;
@@ -322,12 +368,13 @@ export type Comando =
   | { tipo: 'escolherInicio'; jogador: Jogador; primeiro: Jogador }
   | { tipo: 'colocarGrau'; jogador: Jogador; carta: string }
   | { tipo: 'suspenderGrau'; jogador: Jogador; carta: string }
-  | { tipo: 'jogar'; jogador: Jogador; carta: string; alvo?: string; descartarGrau?: string[]; enviarArcano?: string[] }
+  | { tipo: 'jogar'; jogador: Jogador; carta: string; alvo?: string; descartarGrau?: string[]; enviarArcano?: string[]; /** Proteção mágica do alvo. */ protecaoDescartar?: string[]; protecaoGrau?: string[] }
   | { tipo: 'atacar'; jogador: Jogador; atacante: string; alvo: string; enviarArcano?: string[] }
   | { tipo: 'bloquear'; jogador: Jogador; /** Um bloqueador (null: não bloqueia). */ bloqueador?: string | null; /** Vários bloqueadores (decisão 20); vale no lugar de bloqueador. */ bloqueadores?: string[]; /** Conjurador bloqueando: usar a Armadura? Sem o campo, usa. */ usarArmadura?: boolean }
   | { tipo: 'distribuirDano'; jogador: Jogador; /** Dano por bloqueador (soma = Ataque do atacante). Sem o campo: distribuição padrão, que derruba o máximo de bloqueadores. */ distribuicao?: Record<string, number> }
   | { tipo: 'descartar'; jogador: Jogador; cartas: string[] }
-  | { tipo: 'ativar'; jogador: Jogador; carta: string; alvo?: string; enviarArcano?: string[]; /** Cartas da mão descartadas como custo (Ativacao.descartar). */ descartarCusto?: string[] }
+  | { tipo: 'ativar'; jogador: Jogador; carta: string; alvo?: string; enviarArcano?: string[]; /** Cartas da mão descartadas como custo (Ativacao.descartar). */ descartarCusto?: string[]; /** Habilidade ativada do construtor (índice em habilidades). */ habilidade?: number; /** Proteção mágica do alvo: cartas da mão e do Grau pagas. */ protecaoDescartar?: string[]; protecaoGrau?: string[] }
   | { tipo: 'pagarAnulacao'; jogador: Jogador; pagar: boolean; enviarArcano?: string[] }
   | { tipo: 'escolherDoTopo'; jogador: Jogador; cartas: string[] }
+  | { tipo: 'escolherCartas'; jogador: Jogador; cartas: string[] }
   | { tipo: 'passar'; jogador: Jogador };

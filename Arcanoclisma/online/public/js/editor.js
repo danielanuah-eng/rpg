@@ -6,13 +6,14 @@ import { $, $$, esc, api, DADOS, BASE, EDICOES, VALOR, TIPO, textoCarta, sessao,
 import { desenharCarta, modeloCarta, modeloConjurador } from './carta.js';
 import { edicoesVazias } from '/jogo/edicoes.js';
 import { descEfeito } from '/jogo/textos.js';
+import { montarConstrutor } from './construtor-efeitos.js';
 
 const VALORES = Object.keys(VALOR);
 const COMPROMETIMENTOS = ['Invocador', 'Brigão', 'Parrudão da quebrada', 'Habilidoso', 'Preparado'];
 const NUM_CARTA = [['custo', 'Custo'], ['grau', 'Grau'], ['arcanoGerado', 'Gera Arcano'], ['ataque', 'Ataque'], ['vida', 'Vida'], ['defesa', 'Defesa (armadura)'], ['vidaDesgaste', 'Desgaste (armadura)'], ['protegido', 'Protegido'], ['descartaGrau', 'Descarta do Grau'], ['pagarParaAnular', 'Pagar para anular'], ['grauExtra', 'Grau extra'], ['espinhos', 'Espinhos (armadura)']];
 const NUM_CONJ = [['vida', 'Vida'], ['maoInicial', 'Mão inicial'], ['compraFinal', 'Compra no Final'], ['danoBasico', 'Dano básico'], ['custoAtaque', 'Custo de ataque']];
 /** Campos de mecânica editados como JSON. */
-const MEC_CARTA = ['efeitos', 'aoEntrar', 'aoDanoConjurador', 'ativacao', 'custoValores', 'aoAtacar', 'aoProteger'];
+const MEC_CARTA = ['efeitos', 'aoEntrar', 'aoDanoConjurador', 'ativacao', 'custoValores', 'aoAtacar', 'aoProteger', 'habilidades', 'protecao'];
 const igual = (a, b) => JSON.stringify(a ?? null) === JSON.stringify(b ?? null);
 /** Números citados no texto (efeitos, gatilhos, ativação, Protegido, pagar para anular, descarte do Grau; poder do Conjurador). */
 const NUM_TEXTO_CARTA = [...MEC_CARTA, 'protegido', 'pagarParaAnular', 'descartaGrau', 'grauExtra'];
@@ -58,6 +59,7 @@ function linhasComRequisito(mec, conjur) {
     efs(mec.aoEntrar, 'aoEntrar', 'Ao entrar');
     efs(mec.aoDanoConjurador, 'aoDanoConjurador', 'Ao causar dano ao Conjurador');
     if (mec.ativacao) { l.push({ cam: 'ativacao', rot: 'Ativação (inteira)', req: mec.ativacao.requisito }); efs(mec.ativacao.efeitos, 'ativacao.efeitos', 'Ativação, efeito'); }
+    (mec.habilidades ?? []).forEach((h, k) => efs(h.efeitos, `habilidades.${k}.efeitos`, `Habilidade ${k + 1}, efeito`));
     efs(mec.aoAtacar?.efeitos, 'aoAtacar.efeitos', 'Arma, ao atacar');
     efs(mec.aoProteger, 'aoProteger', 'Armadura, ao proteger');
   }
@@ -160,11 +162,16 @@ export async function telaEditor(tela, partes, ctx) {
         : `<label class="campo">Velocidade<select data-f="velocidade"><option value="findante" ${c.velocidade === 'findante' ? 'selected' : ''}>Findante (na sua fase principal)</option><option value="repentina" ${c.velocidade === 'repentina' ? 'selected' : ''}>Repentina (a qualquer momento)</option></select></label>
            <label class="campo">Palavras-chave (separadas por vírgula)<input type="text" data-f="palavrasChave" value="${esc((c.palavrasChave ?? []).join(', '))}" placeholder="Proficiente, Etéreo"></label>
            <label class="campo">Subtipos (separados por vírgula)<input type="text" data-f="subtipos" value="${esc((c.subtipos ?? []).join(', '))}"></label>`}
+      <div class="campo"><span>Construtor de efeitos <span class="peq">(condição + efeitos que se acumulam; vira a mecânica real e o texto da carta)</span></span><div class="editor-construtor" data-construtor></div></div>
       <label class="campo">Mecânica em JSON (${conjur ? 'poder' : MEC_CARTA.join(', ')})<textarea class="editor-json" data-json spellcheck="false">${esc(JSON.stringify(mec, null, 2))}</textarea></label>
       <p class="peq editor-json-erro" data-json-erro></p>
       <div class="campo"><span>Requisitos por linha (Grau mínimo e Arcano a pagar; sem cumprir, a linha não acontece)</span><div class="editor-req" data-req-lista></div></div>
       <p class="peq editor-auto" data-auto-aviso></p>
       <div class="linha-botoes"><button class="botao perigo peq" data-desfazer>Desfazer as mudanças desta ${conjur ? 'Conjurador' : 'carta'}</button></div>`;
+    montarConstrutor($('[data-construtor]', form), mec, {
+      conjur, tipoCarta: c.tipo, form,
+      aoMudar: (novo) => { $('[data-json]', form).value = JSON.stringify(novo, null, 2); desenharRequisitos(); clearTimeout(espera); lerForm(); },
+    });
     desenharRequisitos();
     desenharPreview();
   }

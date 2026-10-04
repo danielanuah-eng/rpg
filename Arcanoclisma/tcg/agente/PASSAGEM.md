@@ -195,3 +195,13 @@ Regras fixas: seguir as orientações novas do GPT, polir textos, todo efeito au
 - Bot: bloqueio em grupo, distribuição padrão, ataca Estruturas, respeita requisitos de ativação e custo de Valor.
 - Testes: tcg 89 (novo `test/envio-0410.test.ts`), online 7; simulação CONJ 40/confronto rodou sem erros (Ricardo 80,9%, Roh 18,4%; balancear é com a equipe).
 - **Não publicado e sem commit**: o autor disse que o push vem depois da entrega do GPT (template que ressalta o Arcano + ícones).
+
+## Feito em 04/10 (noite): itens v3, Etéreo, Incomensurável e construtor de efeitos
+- **Editor**: barra fixa "💾 Salvar edição" no topo (as edições ficavam só no rascunho do navegador; o botão antigo ficava escondido). Salvamento testado no servidor local com conta de teste (depois desfeito).
+- **Itens v3** (decisão 23): custo e Grau da carta do item = Arcano e Grau mínimo para atacar (arma), proteger (armadura) ou usar. Armas básicas 1/grátis, 2/Grau 1/custo 1, 3/Grau 3/custo 2. Itens não básicos com efeito (`aoAtacar`: efeitos, danoUnidades, desgasteArmadura; armadura: `aoProteger`, `espinhos`). Item com Valor só serve ao Conjurador com os dois Valores (`itemServe`). Testes `tcg/test/itens-v3.test.ts`.
+- **Etéreo** (decisão 24): só Etéreos e armas Etéreas atingem/bloqueiam Etéreos (`etereo()` no motor).
+- **Incomensurável** (decisão 25): o excedente só passa para o Conjurador com a palavra-chave (atacante, arma do Conjurador ou carta fonte do dano).
+- **Construtor de efeitos** (decisão 26): `habilidades` (condição + efeitos acumulados) e `protecao` no motor; pendência `escolherCartas` com continuação; gatilhos ao jogar/entrar/virar-pagar (ativar com `habilidade: i`)/alvo/Grau/atacar/defender/cemitério/banimento/dano ao Conjurador; efeito `campo` (ação × alcance × lado × tipos), olharTopoPara, descartar, colocarNoGrau, olharMao, jogarDe, perderVida. Editor: `public/js/construtor-efeitos.js` (tabelas CONDICOES/EFEITOS/PALAVRAS + proteção). Mesa: escolha de cartas, menu "Ativar: …", alvos do campo, pagamento da proteção. Testes `tcg/test/construtor.test.ts`.
+- ATENÇÃO: `public/js/construtor.js` é o construtor de BARALHOS (não confundir).
+- GPT entregando v18 (aros de custo/geração e selo de Grau em `public/kit/vetores/*-v18.svg`, evidências em `coordenacao/site-online/evidencias-v18`): ainda sem documento de entrega; integrar quando chegar.
+- Testes: tcg 110, online 7, partida online 0 erros.

@@ -546,6 +546,14 @@ export function decidir(e: Estado, j: Jogador, est: Estilo): Comando {
       return { tipo: 'escolherDoTopo', jogador: j, cartas: [...pend.cartas].sort((a, b) => nota(b) - nota(a)).slice(0, pend.pegar) };
     }
     if (pend.tipo === 'distribuirDano') return { tipo: 'distribuirDano', jogador: j }; // padrão: derruba o máximo de bloqueadores
+    if (pend.tipo === 'escolherCartas') {
+      // construtor (04/10): cartas suas indo para lugar ruim (cemitério, fundo, Grau) = as menos valiosas; o resto = as melhores
+      const minhas = pend.cartas.every((id) => e.instancias[id]?.dono === j);
+      const ruim = ['cemiterio', 'fundo', 'grau', 'banimento'].includes(pend.destino);
+      const nota = (id: string) => (e.instancias[id] && e.instancias[id].defId !== 'oculta' ? valorCarta(defCarta(e, id), z.grau.length) : 0);
+      const ordem = minhas && ruim ? ordemDeSacrificio(e, j, pend.cartas) : [...pend.cartas].sort((a, b) => nota(b) - nota(a));
+      return { tipo: 'escolherCartas', jogador: j, cartas: ordem.slice(0, pend.quantidade) };
+    }
     return decidirBloqueio(e, j);
   }
   const passar: Comando = { tipo: 'passar', jogador: j };

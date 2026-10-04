@@ -7,7 +7,8 @@ import type { CartaDef, Catalogo, ConjuradorDef, Estado, Jogador, Regras } from 
 
 const base = { subtipos: [], valores: [], grau: 0, custo: 0, velocidade: 'findante', arcanoGerado: 1, cenario: '', texto: '' } as const;
 const cartas: CartaDef[] = [
-  { ...base, id: 'gigante', nome: 'Gigante', tipo: 'aliado', ataque: 10, vida: 20, palavrasChave: ['Proficiente'] },
+  { ...base, id: 'gigante', nome: 'Gigante', tipo: 'aliado', ataque: 10, vida: 20, palavrasChave: ['Proficiente', 'Incomensurável'] },
+  { ...base, id: 'ogro', nome: 'Ogro', tipo: 'aliado', ataque: 10, vida: 20, palavrasChave: ['Proficiente'] },
   { ...base, id: 'soldado', nome: 'Soldado', tipo: 'aliado', ataque: 3, vida: 4, palavrasChave: ['Proficiente'] },
   { ...base, id: 'escudeiro', nome: 'Escudeiro', tipo: 'aliado', ataque: 2, vida: 2, palavrasChave: ['Proficiente'] },
   { ...base, id: 'torre', nome: 'Torre', tipo: 'estrutura', vida: 5 },
@@ -163,4 +164,22 @@ test('requisito por linha (Editor): Grau mínimo e Arcano pago na hora; sem cump
   passar(f); passar(f);
   assert.equal(f.jogadores[0].mao.length, mao2 - 1 + 3);
   assert.equal(f.jogadores[0].arcano, 5 + 1 - 5);
+});
+
+test('decisão 25: sem Incomensurável o excedente não passa para o Conjurador; com ele, passa também em ataque direto a uma unidade', () => {
+  const e = criar();
+  const o = poe(e, 0, 'ogro');
+  const s1 = poe(e, 1, 'soldado');
+  const conj1 = e.jogadores[1].conjuradorId;
+  atacar(e, o, conj1);
+  executar(e, { tipo: 'bloquear', jogador: 1, bloqueador: s1 });
+  passar(e); passar(e);
+  assert.equal(e.instancias[conj1].dano, 0);
+  assert.ok(e.jogadores[1].cemiterio.includes(s1));
+  const f = criar();
+  const g = poe(f, 0, 'gigante');
+  const s2 = poe(f, 1, 'soldado');
+  atacar(f, g, s2);
+  passar(f); passar(f);
+  assert.equal(f.instancias[f.jogadores[1].conjuradorId].dano, 6); // 10 - 4 de Vida do Soldado
 });

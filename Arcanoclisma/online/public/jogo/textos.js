@@ -37,11 +37,44 @@ function descEfeitoBase(ef) {
     case 'potenciaMagia': return `o próximo dano ou cura de uma Temporária sua neste turno tem +${ef.valor}`;
     case 'invocar': return `invoque ${ef.nome ?? 'uma criatura'}`;
     case 'ataqueConjuradorTurno': return `seu Conjurador ganha +${ef.valor} de Ataque neste turno`;
+    // construtor de efeitos (04/10)
+    case 'perderVida': return `seu Conjurador perde ${ef.valor} de Vida`;
+    case 'descartar': return `${ef.quem === 'voce' ? 'você descarta' : 'o oponente descarta'} ${ef.valor} carta${ef.valor > 1 ? 's' : ''}${ef.aleatorio ? ' ao acaso' : ''}`;
+    case 'colocarNoGrau': return `ponha ${ef.valor} carta${ef.valor > 1 ? 's' : ''} ${ef.de === 'topo' ? 'do topo do seu baralho' : 'da sua mão'} no seu Grau`;
+    case 'olharTopoPara': return `olhe as ${ef.quantidade} cartas do topo do seu baralho; ponha ${ef.pegar} ${DESTINO[ef.destino]} e as outras ${DESTINO[ef.resto]}`;
+    case 'olharMao': return ef.pegar > 0 && ef.destino !== 'nada' ? `olhe a mão do oponente e mande ${ef.pegar} carta${ef.pegar > 1 ? 's' : ''} dela ${PARA[ef.destino]}` : 'olhe a mão do oponente';
+    case 'jogarDe': return `ponha em campo, sem pagar, ${ef.valor > 1 ? `até ${ef.valor} cartas` : 'uma carta'} (${(ef.tipos?.length ? ef.tipos : ['aliado']).map((t) => TIPO_PL[t] ?? t).join(' ou ')}${ef.custoMax !== undefined ? `, custo até ${ef.custoMax}` : ''}) ${ORIGEM[ef.de]}`;
+    case 'campo': return textoCampo(ef);
     default: return ef.tipo;
   }
 }
 /** Maiúscula na primeira letra (depois do requisito entre parênteses, se houver). */
 const maiuscula = (t) => t.replace(/^(\([^)]*\)\s*)?(.)/, (m, p, c) => (p ?? '') + c.toUpperCase());
+const DESTINO = { mao: 'na mão', roubar: 'na sua mão', grau: 'no Grau', cemiterio: 'no cemitério', fundo: 'no fundo do baralho', topo: 'no topo do baralho', campo: 'em campo', banimento: 'no banimento', nada: 'onde estão' };
+const PARA = { mao: 'para a mão do dono', roubar: 'para a sua mão', grau: 'para o Grau', cemiterio: 'para o cemitério', fundo: 'para o fundo do baralho', topo: 'para o topo do baralho', campo: 'para o campo', banimento: 'para o banimento', nada: '' };
+const ORIGEM = { cemiterio: 'do seu cemitério', mao: 'da sua mão', baralho: 'do seu baralho', banimento: 'do seu banimento' };
+const TIPO_PL = { aliado: 'Aliado', mistica: 'Mística', estrutura: 'Estrutura', conjurador: 'Conjurador', equipamento: 'equipamento', temporaria: 'Temporária' };
+/** Texto do efeito "campo": ação + quem (um alvo ou todos, de que lado, de que tipos). */
+function textoCampo(ef) {
+  const tipos = ef.tipos.map((t) => TIPO_PL[t] ?? t);
+  const lista = tipos.length > 1 ? tipos.slice(0, -1).join(', ') + ' ou ' + tipos.at(-1) : tipos[0] ?? 'carta';
+  const lado = ef.lado === 'inimigo' ? (ef.alcance === 'todos' ? ' inimigos' : ' inimigo') : ef.lado === 'proprio' ? (ef.alcance === 'todos' ? ' seus' : ' seu') : '';
+  const quem = ef.alcance === 'todos' ? `cada ${lista}${lado ? lado.replace('inimigos', 'inimigo').replace('seus', 'seu') : ''}` : `um ${lista}${lado}`;
+  const tempo = ef.duracao === 'permanente' ? '' : ' neste turno';
+  switch (ef.acao) {
+    case 'dano': return `cause ${ef.valor ?? 0} de dano a ${quem}`;
+    case 'curar': return `cure ${ef.valor ?? 0} de dano de ${quem}`;
+    case 'destruir': return `destrua ${quem}`;
+    case 'devolver': return `devolva ${quem} à mão do dono`;
+    case 'paraBaralho': return `mande ${quem} ${ef.onde === 'topo' ? 'para o topo do baralho do dono' : ef.onde === 'fundo' ? 'para o fundo do baralho do dono' : 'de volta ao baralho do dono, que embaralha'}`;
+    case 'naoAtaca': return `${quem} não pode atacar até o fim do próximo turno do dono`;
+    case 'suspender': return `suspenda ${quem}`;
+    case 'levantar': return `levante ${quem}`;
+    case 'aumentarAtaque': return `${quem} ganha +${ef.valor ?? 0} de Ataque${tempo}`;
+    case 'aumentarVida': return `${quem} ganha +${ef.valor ?? 0} de Vida${tempo}`;
+    default: return ef.acao;
+  }
+}
 export const frase = (efs) => maiuscula(efs.map(descEfeito).join(' e ')) + '.';
 const reqAtivacao = (a) => (a.requisito?.grau ? `com ${a.requisito.grau}+ no Grau, ` : '');
 const custoAtivacao = (a) => (a.custo || a.requisito?.arcano ? `pague ${(a.custo ?? 0) + (a.requisito?.arcano ?? 0)}` : '');
@@ -83,7 +116,31 @@ export function textoCarta(d) {
     p.push(`${l2.charAt(0).toUpperCase() + l2.slice(1)}: ${fraseMin(a.efeitos ?? [])}`);
   }
   if (d.pagarParaAnular !== undefined) p.push(`O oponente pode pagar ${d.pagarParaAnular} para anulá-la.`);
+  for (const h of d.habilidades ?? []) p.push(textoHabilidade(h));
+  if (d.protecao) p.push(textoProtecao(d.protecao));
   return p.join(' ');
+}
+
+/** Condições do construtor de efeitos (o mesmo texto aparece no Editor). */
+export const QUANDO_TXT = {
+  jogar: 'Ao jogar', entrar: 'Quando entra em campo', ativada: '', alvo: 'Quando vira alvo', grau: 'Quando é colocada no Grau',
+  atacar: 'Quando ataca', bloquear: 'Quando defende', cemiterio: 'Quando cai no cemitério', banimento: 'Quando é banida', danoConjurador: 'Quando causa dano de combate ao Conjurador inimigo',
+};
+export function textoHabilidade(h) {
+  const efs = fraseMin(h.efeitos ?? []);
+  if (h.quando === 'ativada') {
+    const c = h.custo ?? {};
+    const partes = [c.suspender ? 'suspenda' : '', c.arcano ? `pague ${c.arcano}` : '', c.vida ? `pague ${c.vida} de Vida` : '', c.descartar ? `descarte ${c.descartar} carta${c.descartar > 1 ? 's' : ''}` : ''].filter(Boolean);
+    const lista = partes.length > 1 ? partes.slice(0, -1).join(', ') + ' e ' + partes.at(-1) : partes[0] ?? 'ative';
+    const pre = c.grau ? `Com ${c.grau}+ no Grau, ${lista}` : lista.charAt(0).toUpperCase() + lista.slice(1);
+    return `${pre}: ${efs}`;
+  }
+  return `${QUANDO_TXT[h.quando] ?? h.quando}${h.umaVezPorTurno ? ' (uma vez por turno)' : ''}: ${efs}`;
+}
+export function textoProtecao(pr) {
+  const partes = [pr.arcano ? `pagar ${pr.arcano} de Arcano` : '', pr.vida ? `pagar ${pr.vida} de Vida` : '', pr.descartar ? `descartar ${pr.descartar} carta${pr.descartar > 1 ? 's' : ''}` : '', pr.grauParaCemiterio ? `mandar ${pr.grauParaCemiterio} carta${pr.grauParaCemiterio > 1 ? 's' : ''} do Grau ao cemitério` : ''].filter(Boolean);
+  const lista = partes.length > 1 ? partes.slice(0, -1).join(', ') + ' e ' + partes.at(-1) : partes[0] ?? '';
+  return `Proteção mágica: para mirar esta carta, o oponente precisa${pr.grauMin ? ` ter ${pr.grauMin}+ no Grau${lista ? ' e' : ''}` : ''}${lista ? ` ${lista}` : ''}.`;
 }
 
 const QUANDO = { aliadoEntra: 'Quando o primeiro Aliado seu entra em campo em cada turno', aliadoMorre: 'Na primeira vez em cada turno que um Aliado seu vai do campo para o cemitério', aliadoDanoConjurador: 'Na primeira vez em cada turno que um Aliado seu causa dano de combate ao Conjurador inimigo' };

@@ -310,7 +310,7 @@ function aliadoEtereo(custo: number, p: Precos): CartaDef {
   const vida = Math.max(1, Math.ceil(corpo / 2));
   return {
     ...molde, id: `bal-etereo-c${custo}`, nome: `Aliado Etéreo (custo ${custo})`, tipo: 'aliado', custo, grau: grauPadrao(custo), velocidade: 'findante',
-    palavrasChave: ['Etéreo'], ataque: corpo - vida, vida, texto: 'Etéreo (só é bloqueado por Aliados Etéreos).',
+    palavrasChave: ['Etéreo'], ataque: corpo - vida, vida, texto: 'Etéreo.',
   };
 }
 

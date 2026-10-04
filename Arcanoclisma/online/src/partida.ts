@@ -253,6 +253,7 @@ export class Partida extends DurableObject<Env> {
     else if (p?.tipo === 'descartar') cmd = { tipo: 'descartar', jogador: a, cartas: z.mao.slice(-p.quantidade) };
     else if (p?.tipo === 'pagarAnulacao') cmd = { tipo: 'pagarAnulacao', jogador: a, pagar: false };
     else if (p?.tipo === 'escolherDoTopo') cmd = { tipo: 'escolherDoTopo', jogador: a, cartas: p.cartas.slice(0, p.pegar) };
+    else if (p?.tipo === 'escolherCartas') cmd = { tipo: 'escolherCartas', jogador: a, cartas: p.cartas.slice(0, p.quantidade) };
     else cmd = { tipo: 'passar', jogador: a };
     const falha = this.aplicar(cmd, true);
     if (falha) console.error('ação automática falhou', falha, cmd);

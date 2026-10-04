@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="metal" x1="18" y1="12" x2="99" y2="110" gradientUnits="userSpaceOnUse"><stop stop-color="#fff2cb"/><stop offset=".23" stop-color="#b8c7c9"/><stop offset=".48" stop-color="#8b7755"/><stop offset=".72" stop-color="#efd69a"/><stop offset="1" stop-color="#584434"/></linearGradient>
+    <linearGradient id="luz" x1="33" y1="13" x2="76" y2="100" gradientUnits="userSpaceOnUse"><stop stop-color="#fff7dc"/><stop offset="1" stop-color="#ceab70"/></linearGradient>
+  </defs>
+  <circle cx="60" cy="62" r="47" stroke="#071624" stroke-width="8" opacity=".8"/>
+  <circle cx="60" cy="60" r="46" stroke="url(#metal)" stroke-width="5"/>
+  <circle cx="60" cy="60" r="40" stroke="#142c3a" stroke-width="2"/>
+  <circle cx="60" cy="60" r="38.5" stroke="#f5e4b7" stroke-width=".8" opacity=".65"/>
+  <path d="M23 34A45 45 0 0 1 91 25M103 74A45 45 0 0 1 40 101" stroke="url(#luz)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M60 4l6 8-6 7-6-7ZM60 101l6 7-6 8-6-8ZM4 60l8-6 7 6-7 6ZM101 60l7-6 8 6-8 6Z" fill="url(#metal)" stroke="#19303c" stroke-width="1.3"/>
+  <path d="M60 8v6M60 106v5M8 60h6M106 60h5" stroke="#fff4d2" stroke-width="1"/>
+  <g stroke="#ecdaac" stroke-width="1.6" opacity=".8"><path d="M26 17l7 7M94 17l-7 7M26 103l7-7M94 103l-7-7"/></g>
+</svg>

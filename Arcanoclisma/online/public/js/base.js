@@ -129,7 +129,7 @@ export const BASE = { catalogo: structuredClone(DADOS.catalogo), visual: structu
 delete BASE.catalogo.cartas.oculta;
 /** Versão das edições em uso nesta página. */
 export const EDICOES = { id: 0, dados: edicoesVazias() };
-const CAMPOS_TEXTO_AUTOMATICO = ['efeitos', 'aoEntrar', 'aoDanoConjurador', 'ativacao', 'palavrasChave', 'protegido', 'descartaGrau', 'custoValores', 'pagarParaAnular', 'grauExtra', 'defesa', 'vidaDesgaste', 'ataque', 'vida'];
+const CAMPOS_TEXTO_AUTOMATICO = ['habilidades', 'protecao', 'aoAtacar', 'aoProteger', 'espinhos', 'efeitos', 'aoEntrar', 'aoDanoConjurador', 'ativacao', 'palavrasChave', 'protegido', 'descartaGrau', 'custoValores', 'pagarParaAnular', 'grauExtra', 'defesa', 'vidaDesgaste', 'ataque', 'vida'];
 /** Aplica uma versão das edições por cima dos dados gerados, mudando DADOS no lugar (as telas leem DADOS na hora). */
 export function usarEdicoes(v) {
   const dados = { ...edicoesVazias(), ...(v?.dados ?? {}) };

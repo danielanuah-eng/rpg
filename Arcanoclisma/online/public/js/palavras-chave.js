@@ -9,7 +9,8 @@ export const PALAVRAS_CHAVE = [
   { grupo: 'Aliados', itens: [
     ['Repentino', 'Aliado que pode ser jogado a qualquer momento em que você tiver prioridade (em resposta, até no turno do oponente). Sem Repentino, Aliado só entra na sua fase principal.'],
     ['Proficiente', 'Ataca e usa efeitos de suspender no mesmo turno em que entra em campo (os outros Aliados esperam um turno).'],
-    ['Etéreo', 'Só pode ser bloqueado por Aliados Etéreos.'],
+    ['Etéreo', 'Em combate, só Aliados Etéreos (ou um Conjurador com arma Etérea) atacam, bloqueiam ou atingem esta carta. Uma arma com Etéreo deixa o seu Conjurador atingir Etéreos.'],
+    ['Incomensurável', 'O dano que passar da Vida restante da carta atingida vai para o Conjurador dela (ao atacar, ao ser bloqueado ou com uma magia Incomensurável). Sem Incomensurável, o excedente se perde.'],
     ['Protegido N', 'Quem mirar esta carta com uma carta ou ativação paga N de Arcano a mais (a sua própria não paga).'],
     ['Ao entrar', 'Efeito que acontece quando a carta entra em campo.'],
     ['Ao causar dano de combate ao Conjurador inimigo', 'Gatilho que acontece quando este Aliado acerta o Conjurador rival em combate.'],
@@ -34,7 +35,7 @@ export const PALAVRAS_CHAVE = [
     ['Suspender (ativação)', 'Deite a carta para usar a habilidade dela; ela levanta no seu Final.'],
   ] },
   { grupo: 'Conjurador e itens', itens: [
-    ['Bloquear', 'Quando um inimigo ataca o seu Conjurador, Aliados de pé e o próprio Conjurador podem entrar na frente, um ou vários. Quem ataca distribui o dano entre eles e o que passar da Vida de cada um vai para o Conjurador; todos os bloqueadores causam dano ao atacante, mesmo os que morrem. Ataques a Aliados, Místicas e Estruturas não podem ser bloqueados. Quem bloqueia fica deitado até o seu Final.'],
+    ['Bloquear', 'Quando um inimigo ataca o seu Conjurador, Aliados de pé e o próprio Conjurador podem entrar na frente, um ou vários. Quem ataca distribui o dano entre eles; se o atacante for Incomensurável, o que passar da Vida de cada um vai para o Conjurador; todos os bloqueadores causam dano ao atacante, mesmo os que morrem. Ataques a Aliados, Místicas e Estruturas não podem ser bloqueados. Quem bloqueia fica deitado até o seu Final.'],
     ['Canal', 'Item do Conjurador: Arma, Foco Arcano ou Transcritor. Só a Arma dá Ataque ao Conjurador.'],
     ['Foco Arcano', 'Canal que fortalece magias: suspenda o Conjurador e pague o custo; o próximo dano ou cura de uma Temporária sua neste turno fica maior.'],
     ['Transcritor', 'Canal que mexe no baralho e na mão: suspenda o Conjurador e pague o custo para olhar o topo ou comprar cartas.'],
@@ -51,7 +52,8 @@ export const PALAVRAS_CHAVE = [
 export const LEMBRETES = {
   Repentino: 'este Aliado pode ser jogado em resposta, até no turno do oponente.',
   Proficiente: 'ataca e usa ativações no turno em que entra.',
-  Etéreo: 'só Aliados Etéreos o bloqueiam.',
+  Etéreo: 'em combate, só Etéreos e armas Etéreas o atingem.',
+  Incomensurável: 'o dano que passar da Vida da carta atingida vai para o Conjurador dela.',
   Protegido: (n) => `mirar esta carta custa ${n} a mais ao oponente.`,
   Repentina: 'pode ser jogada em resposta, até no turno do oponente.',
   'Pagar para anular': (n) => `o oponente pode pagar ${n} de Arcano para que ela não resolva.`,

@@ -1,0 +1,108 @@
+/* Acabamentos e leitura do template. Valores/textos continuam sendo dados do jogo. */
+.tcg-card.template-v18:not(.is-hidden) :is(.cost,.generated,.degree) {
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 1px 1px #040b17, 0 0 3px #040b17;
+  font-weight: 800;
+  color: #fff8df;
+}
+.tcg-card.template-v18 .generated {
+  top: 1.8%; left: 3.1%; width: 10.8%; border: 0;
+  background-image: none;
+  box-shadow: inset 0 calc(var(--card-w)*-.014) calc(var(--card-w)*.023) #03102588,
+    inset calc(var(--card-w)*.008) calc(var(--card-w)*.007) calc(var(--card-w)*.015) #efffff66,
+    0 calc(var(--card-w)*.008) calc(var(--card-w)*.017) #030a18b3;
+  font-size: calc(var(--card-w)*.067);
+}
+.tcg-card.template-v18 .generated::after {
+  content: ''; position: absolute; inset: -14%; pointer-events: none;
+  background: url('/kit/vetores/aro-geracao-v18.svg') center/contain no-repeat;
+}
+.tcg-card.template-v18 .cost {
+  top: 10.4%; left: 3.45%; width: 10.1%; border: 0; outline: 0;
+  box-shadow: inset 0 calc(var(--card-w)*-.014) calc(var(--card-w)*.02) #0009,
+    inset 0 calc(var(--card-w)*.01) calc(var(--card-w)*.012) #fff5,
+    0 calc(var(--card-w)*.008) calc(var(--card-w)*.02) #050c1ac2;
+  font-size: calc(var(--card-w)*.071);
+}
+.tcg-card.template-v18 .cost::before {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; z-index: 0; pointer-events: none;
+  background: radial-gradient(ellipse at 30% 12%,#eaffff75,transparent 42%),linear-gradient(145deg,transparent 58%,#05132266);
+}
+.tcg-card.template-v18:not(.is-hidden) .cost::after {
+  content: ''; position: absolute; inset: -22%; z-index: 2;
+  background: url('/kit/vetores/aro-custo-v18.svg') center/contain no-repeat;
+  border: 0; border-radius: 0; pointer-events: none;
+}
+.tcg-card.template-v18 .cost :is(.esfera-aro-v12,.esfera-custo-aro) { visibility: hidden; }
+.tcg-card.template-v18 .cost .esfera-numero-v12 { z-index: 3; }
+.tcg-card.template-v18 .cost .esfera-simbolos-v12 { z-index: 0; }
+.tcg-card.template-v18 .cost .esfera-simbolos-v12 img { opacity: .25; }
+.tcg-card.template-v18 .degree {
+  top: 19.5%; left: 1.05%; width: 14.9%; padding-bottom: 3%;
+  background: url('/kit/vetores/selo-grau-v18.svg') center/contain no-repeat;
+  clip-path: none; font-size: calc(var(--card-w)*.064);
+  filter: drop-shadow(0 1px 2px #02091699);
+}
+/* Uma única superfície de leitura cresce conforme o conteúdo real, sem cortar regras. */
+.tcg-card.template-v18 { --leitura-topo: 76%; --tipo-topo: 77.3%; --subtipo-topo: 80.5%; --regras-topo: 83.5%; }
+.tcg-card.template-v18 .painel-regras-v18 {
+  position: absolute; z-index: 3; left: 3.6%; right: 3.6%; top: var(--leitura-topo); bottom: 2.8%;
+  border-radius: calc(var(--card-w)*.025); pointer-events: none;
+  background: linear-gradient(165deg,#fff9e9ef,#e8e4d5f5);
+  border: calc(var(--card-w)*.003) solid #dac8a398;
+  box-shadow: inset 0 1px 0 #fff9,0 -2px 7px #18283d26;
+}
+.tcg-card.template-v18 .painel-regras-v18::before {
+  content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px;
+  background: linear-gradient(90deg,transparent,#b5a074,transparent);
+}
+.tcg-card.template-v18 .type-line {
+  top: var(--tipo-topo); left: 7%; right: 7%; max-height: none;
+  white-space: normal; overflow: visible; text-overflow: clip;
+  font: 650 calc(var(--card-w)*.037)/1.16 system-ui,sans-serif; color: #293943;
+  letter-spacing: .025em; text-align: center;
+}
+.tcg-card.template-v18 .subtype-line {
+  top: var(--subtipo-topo); left: 7%; right: 7%; max-height: none;
+  white-space: normal; overflow: visible;
+  font: 500 calc(var(--card-w)*.032)/1.18 system-ui,sans-serif; color: #54616a;
+}
+.tcg-card.template-v18 .rules {
+  top: var(--regras-topo); left: 7%; right: 7%; bottom: 4%; height: auto; max-height: none;
+  overflow: visible; text-align: center; text-wrap: pretty; overflow-wrap: anywhere;
+  font: 500 calc(var(--card-w)*.043)/1.28 system-ui,sans-serif; color: #182f3c;
+}
+.tcg-card.template-v18 .rules :is(.lembrete,i) { color: #52626b; opacity: 1; }
+.tcg-card.template-v18 .rules .lembrete { margin-top: .22em; font-size: .88em; line-height: 1.16; }
+.tcg-card.template-v18 .rules .icone-mecanica { width: 1.08em; height: 1.08em; vertical-align: -.12em; }
+.tcg-card.template-v18 .stats { top: calc(var(--leitura-topo) - 11.5%); }
+.tcg-card.template-v18 .flavour:empty { display: none; }
+.tcg-card.template-v18 .name.nome-duplo-v18 { white-space: normal; line-height: 1.08; text-wrap: balance; max-height: 5.7%; text-overflow: clip; }
+/* A carta aberta e as informações cabem na janela; o texto repetido fica dispensado. */
+.janela.carta-zoom:has(.template-v18) {
+  max-width: calc(100vw - 36px); max-height: calc(100dvh - 32px);
+  gap: 16px; flex-wrap: nowrap; overflow: visible; align-items: center;
+}
+.janela.carta-zoom .tcg-card.template-v18 {
+  --card-w: min(390px,calc((100dvh - 60px)*63/88),calc(100vw - 48px)) !important;
+}
+.janela.carta-zoom:has(.template-v18) .zoom-info {
+  width: min(290px,32vw); padding: 17px; font-size: 13px; line-height: 1.4;
+}
+.janela.carta-zoom:has(.template-v18) .zoom-info :is(h3,p:not(.peq)) { display: none; }
+.janela.carta-zoom:has(.template-v18) .zoom-info .peq { font-size: 12px; margin: .4em 0; }
+.janela.carta-zoom:has(.template-v18) .janela-x {
+  top: -12px; right: -10px; width: 32px; height: 32px; border-radius: 50%;
+  display: grid; place-items: center; background: #102137; border: 1px solid #bba878; color: #fff5dc; z-index: 15;
+}
+@media (max-width: 640px) and (min-height: 541px) {
+  .janela.carta-zoom:has(.template-v18) { flex-direction: column; gap: 10px; }
+  .janela.carta-zoom .tcg-card.template-v18 { --card-w: min(390px,calc((100dvh - 142px)*63/88),calc(100vw - 48px)) !important; }
+  .janela.carta-zoom:has(.template-v18) .zoom-info { width: 100%; padding: 8px 12px; }
+  .janela.carta-zoom:has(.template-v18) .zoom-info .peq { margin: .18em 0; font-size: 11px; line-height: 1.2; }
+}
+@media (max-height: 540px) {
+  .janela.carta-zoom .tcg-card.template-v18 { --card-w: min(300px,calc((100dvh - 42px)*63/88),36vw) !important; }
+  .janela.carta-zoom:has(.template-v18) .zoom-info { width: min(480px,54vw); padding: 13px; font-size: 13px; }
+  .janela.carta-zoom:has(.template-v18) .zoom-info p:not(.peq) { display: block; margin: .5em 0; line-height: 1.35; }
+}

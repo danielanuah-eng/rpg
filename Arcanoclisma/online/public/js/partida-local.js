@@ -68,6 +68,7 @@ export function criarPartidaLocal(cfg) {
           : p?.tipo === 'distribuirDano' ? { tipo: 'distribuirDano', jogador: BOT }
           : p?.tipo === 'pagarAnulacao' ? { tipo: 'pagarAnulacao', jogador: BOT, pagar: false }
           : p?.tipo === 'escolherDoTopo' ? { tipo: 'escolherDoTopo', jogador: BOT, cartas: p.cartas.slice(0, p.pegar) }
+          : p?.tipo === 'escolherCartas' ? { tipo: 'escolherCartas', jogador: BOT, cartas: p.cartas.slice(0, p.quantidade) }
           : p?.tipo === 'descartar' ? { tipo: 'descartar', jogador: BOT, cartas: e.jogadores[BOT].mao.slice(-p.quantidade) }
           : p?.tipo === 'escolherInicio' ? { tipo: 'escolherInicio', jogador: BOT, primeiro: BOT }
           : { tipo: 'passar', jogador: BOT };

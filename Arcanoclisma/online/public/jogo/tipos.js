@@ -9,6 +9,20 @@
                                                   
                                                                                                      
 
+// ---------- construtor de efeitos (pedido do autor, 04/10) ----------
+/** Quando uma habilidade acontece. */
+                                                                                                                                             
+/** Custo de uma habilidade ativada ("virar/pagar"). */
+                                                                                                                           
+/** Habilidade montada no Editor: condição + efeitos (que se acumulam, em ordem). */
+                                                                                                                                                                     
+/** Proteção mágica: quem mira esta carta (com carta ou ativação do oponente) paga isto; sem poder pagar, não pode mirar. */
+                                                                                                                              
+/** Para onde vão as cartas escolhidas. */
+                                                                                                                  
+                                                                                              
+                                                                                                                                                               
+
 /**
  * Requisito de uma linha de efeito, habilidade ou ação (pedido do autor, 04/10), definido no Editor:
  * grau = mínimo de cartas no seu Grau para acontecer; arcano = Arcano pago na hora (reserva, depois Grau levantado).
@@ -48,7 +62,21 @@
                                                                                                                              
                                                                                         
                                                                              
-                                                     
+                                                    
+                                                                                                            
+                                                                                        
+                                                                                           
+                                                                
+                                                                                                        
+                                                                                                  
+                                                                                                                          
+                                                         
+                                                                                                       
+                                                                                                                                 
+                                                                                               
+                                                                                                                                                                                                                          
+                                                                                         
+                                          
 
 /** Arma: efeitos ao atacar (pedido do autor, 04/10). */
                            
@@ -119,7 +147,7 @@
                          
                                                                   
                        
-                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                    
                            
                   
                 
@@ -151,6 +179,10 @@
                                                                                                                     
                                                                                     
      
+                      
+                                                                           
+                             
+                                                                              
                       
                                                                                           
                         
@@ -223,6 +255,15 @@
                             
                                                                    
                            
+                                                                    
+                       
+                     
+                            
+                          
+                                                         
+                       
+                                                                   
+                                   
  
 
 /** Todo dano é dano; só muda a fonte. Efeitos podem ser anulados; combate não. */
@@ -262,7 +303,7 @@
 
                        
                                                                                       
-                                                                                                                                                           
+                                                                                                                                                                                                                                                                                      
                                                                                          
 
                        
@@ -272,7 +313,12 @@
                                                                                   
                                                 
                                                                                
-                                                                                  
+                                                                                 
+                                                                                                                               
+                                                                                                                                                                
+
+/** Efeitos que esperam uma escolha terminar para continuar (efeitos acumulados). */
+                                                                                
 
                           
                    
@@ -323,12 +369,13 @@
                                                                    
                                                             
                                                               
-                                                                                                                        
+                                                                                                                                                                                                               
                                                                                                  
                                                                                                                                                                                                                                                                                                          
                                                                                                                                                                                                                        
                                                              
-                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                        
                                                                                         
+                                                                  
                                                                   
                                          
