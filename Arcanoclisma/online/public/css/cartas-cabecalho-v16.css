@@ -1,13 +1,7 @@
-/* Pedido do autor: esfera de Valor acima do personagem, nunca sobre o rosto.
-   Cabeçalho reservado; nenhuma imagem original, Valor ou número é alterado. */
+/* Nome e Valores mantêm sua posição. A arte ocupa também a área abaixo do
+   nome, sem a faixa azulada do cabeçalho (revisão pedida pelo autor). */
 .tcg-card:not(.is-hidden) .cabecalho-arte-v16 {
-  position: absolute;
-  inset: 0 0 auto;
-  height: 16%;
-  z-index: 3;
-  pointer-events: none;
-  background: linear-gradient(180deg, #101c2ff2, #182a3ddc 75%, #182a3d00);
-  border-top: 1px solid #d3bd7d70;
+  display: none;
 }
 .tcg-card:not(.is-hidden) .name {
   top: 2.8%;
@@ -19,18 +13,17 @@
   width: 8.89%;
   z-index: 5;
 }
-/* A arte inteira continua sendo uma cena. O enquadramento começa abaixo da
-   faixa dos metadados, com prioridade à parte superior da figura. */
+/* A cena preenche a frente, inclusive atrás dos elementos do cabeçalho. */
 .tcg-card:not(.is-hidden) .portrait {
-  inset: 16% 0 0;
+  inset: 0;
   width: 100%;
-  height: 84%;
+  height: 100%;
   object-position: var(--art-position, 50% 35%);
 }
 .tcg-card:not(.is-hidden).scene-art .portrait {
-  inset: 16% 0 0;
+  inset: 0;
   width: 100%;
-  height: 84%;
+  height: 100%;
   object-fit: cover;
   object-position: var(--art-position, 50% 35%);
 }

@@ -44,3 +44,9 @@ O motor registra corretamente `Olho-que-Fecha resolve` e `Brasa de Forja foi anu
 `mesa-ganchos.js` captura os retângulos da pilha lateral antes de redesenhar e envia `alvoRect` ao animador. Claude deve manter o alvo da pilha visível nesse fluxo e entregar sua geometria visível confirmada, inclusive quando a carta é removida por anulação. O Codex mantém os assets e o animador. A evidência `evidencias-v18/anulacao-pilha.jpg` mostra o estado da lição após a resolução; a medição acima foi feita enquanto as camadas existiam.
 
 Os efeitos de ambos os campos e de ressurgimento possuem cobertura de contrato/ciclo de vida na suíte; ainda não foram conferidos visualmente em uma partida nesta revisão. Não considerar esta entrega uma aprovação visual individual dos 132 efeitos.
+
+## Revisão do autor — remover faixa azul abaixo do nome
+
+Retirada a faixa ampla de cabeçalho em `online/public/css/cartas-cabecalho-v16.css`. A cena agora ocupa 100% da frente, inclusive abaixo do nome, eliminando também o espaço que expunha o fundo azulado da carta. O acabamento compacto do nome e os indicadores continuam nas posições atuais.
+
+Conferido na carta aberta Arquivista Sem Rosto no aplicativo local: a arte começa no topo da frente e preenche sua altura. Prévia em `evidencias-v18/carta-sem-faixa-azul.jpg`. Claude deve publicar o CSS atualizado junto desta revisão.
