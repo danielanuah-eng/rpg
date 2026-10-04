@@ -162,3 +162,5 @@ Regras fixas: seguir as orientações novas do GPT, polir textos, todo efeito au
 - Pilha na lateral estreita não vira mais coluna de uma letra.
 - Integração confirmada ao Codex: `efeitos/entregas/abertura-partida.integracao.claude.json`, `coordenacao/site-online/resposta.claude.json` (atualizacao0410), `lote-site-v1.visual.json` (integracaoClaudeConfirmada).
 - O autor autorizou o push desta atualização (04/10).
+- **Celular e tablet** (04/10, com relatório do DeepSeek): a câmera da mesa vale em toda tela (ajustarMesa sem retorno no celular; mínimo 0,12 no modo compacto `(max-width: 900px), (max-height: 560px)`); tabuleiro mínimo 760 px no compacto; mão numa faixa que rola de lado; em pé, lateral embaixo com o botão principal fixo no pé; deitado, lateral de 250 px à direita; o topo do site some durante a partida no celular; hover da mão só com mouse. Construtor: segurar a carta = ver (toque). Conferido no navegador em 375×812, 812×375, 768×1024 e 1366×768.
+- **Produção ainda NÃO publicada** (04/10 12h40): o autor precisa rodar a migração 0002 e o deploy (bloqueados para o Claude).

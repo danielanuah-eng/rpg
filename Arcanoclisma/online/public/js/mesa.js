@@ -28,6 +28,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
 
   // Layout (pedido do autor): o tabuleiro fica limpo, sem informação no meio; vida e ataque por cima das imagens;
   // Arcano numa esfera na lateral; Grau como cartas viradas no campo; a mão fora da mesa; fases, decisões e a pilha na direita.
+  document.body.classList.add('em-mesa');
   raiz.innerHTML = `<div class="mesa" style="--cena:url('${cena ?? '/arte/cenarios/' + DADOS.cenarios.mesa + '.webp'}')">
     <div class="mesa-esq">
       <div class="mao-op-faixa"></div>
@@ -52,18 +53,20 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   const AZUL = { x0: 0.12, x1: 0.89, y0: 0.085, y1: 0.79 };
   /** Menor redução da câmera; abaixo disso o palco rola. */
   const ZOOM_MIN = 0.5;
+  /** Celular e tablet estreito (04/10): o tabuleiro inteiro cabe na tela; tocar numa carta abre a carta grande. */
+  const compacto = () => matchMedia('(max-width: 900px), (max-height: 560px)').matches;
   let centrou = false;
   /** Câmera afastada (pedido do autor, 03/10): o piso envolve o tabuleiro, que fica dentro da área azul, e o conjunto
    *  é reduzido para caber no palco. No celular, sem redução: rola. */
   function ajustarMesa() {
     if (!palco.isConnected) return;
     mundo.style.zoom = '';
-    if (!matchMedia('(min-width: 761px)').matches) { mundo.style.cssText = ''; conteudo.style.left = conteudo.style.top = ''; return; }
     const w = conteudo.offsetWidth, h = conteudo.offsetHeight;
     const pw = w / (AZUL.x1 - AZUL.x0), ph = h / (AZUL.y1 - AZUL.y0);
     Object.assign(mundo.style, { width: pw + 'px', height: ph + 'px' });
     Object.assign(conteudo.style, { left: AZUL.x0 * pw + 'px', top: AZUL.y0 * ph + 'px' });
-    const k = Math.max(ZOOM_MIN, Math.min(1, palco.clientWidth / pw, palco.clientHeight / ph));
+    const k = Math.max(compacto() ? 0.12 : ZOOM_MIN, Math.min(1, palco.clientWidth / pw, palco.clientHeight / ph));
+    raiz.firstElementChild?.classList.toggle('compacta', compacto());
     mundo.style.zoom = k;
     // na primeira vez, mostra o meio da mesa (os dois Conjuradores)
     if (!centrou && palco.scrollHeight > palco.clientHeight) { centrou = true; palco.scrollTop = (palco.scrollHeight - palco.clientHeight) / 2; }
@@ -964,7 +967,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   render();
   return {
     render,
-    fechar() { fechada = true; for (const d of dadosAbertura) try { d.destruir(); } catch { /* nada */ } globalThis.ArcanoclismaAbertura?.limparEntradaArena(raiz); clearTimeout(timerAuto); clearInterval(timerPrazo); movimentosMesa.limpar(); ganchos.limpar(); document.removeEventListener('fullscreenchange', aoTelaCheia); if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); document.body.classList.remove('tela-cheia'); window.removeEventListener('pointermove', moverArrasto); window.removeEventListener('pointerup', soltar); window.removeEventListener('pointercancel', soltar); arrasto?.fantasma?.remove(); raiz.innerHTML = ''; },
+    fechar() { fechada = true; document.body.classList.remove('em-mesa'); for (const d of dadosAbertura) try { d.destruir(); } catch { /* nada */ } globalThis.ArcanoclismaAbertura?.limparEntradaArena(raiz); clearTimeout(timerAuto); clearInterval(timerPrazo); movimentosMesa.limpar(); ganchos.limpar(); document.removeEventListener('fullscreenchange', aoTelaCheia); if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); document.body.classList.remove('tela-cheia'); window.removeEventListener('pointermove', moverArrasto); window.removeEventListener('pointerup', soltar); window.removeEventListener('pointercancel', soltar); arrasto?.fantasma?.remove(); raiz.innerHTML = ''; },
     contexto,
   };
 }

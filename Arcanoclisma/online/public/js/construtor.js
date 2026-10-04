@@ -139,7 +139,7 @@ function montar(tela, b, ctx) {
   const desenharPool = () => {
     const lista = pool.filter((x) => (!filtros.so || pode(x)) && (!filtros.q || (x.nome + ' ' + x.texto).toLowerCase().includes(filtros.q)) && (!filtros.tipo || x.tipo === filtros.tipo) && (filtros.custo === '' || x.custo === Number(filtros.custo)))
       .sort((a, z) => a.custo - z.custo || a.tipo.localeCompare(z.tipo) || a.nome.localeCompare(z.nome));
-    $('.ct-pool', tela).innerHTML = lista.map((x) => `<div class="item-vitrine ${pode(x) ? '' : 'fora'}" data-add="${x.id}" title="${pode(x) ? 'Clique para adicionar · botão direito para ver' : 'Não combina com os Valores do Conjurador'}">${cartaHTML(x.id, { width: 132 })}${qtd.get(x.id) ? `<span class="contador-copias">${qtd.get(x.id)}</span>` : ''}</div>`).join('');
+    $('.ct-pool', tela).innerHTML = lista.map((x) => `<div class="item-vitrine ${pode(x) ? '' : 'fora'}" data-add="${x.id}" title="${pode(x) ? 'Clique para adicionar · botão direito (ou segurar, no celular) para ver' : 'Não combina com os Valores do Conjurador'}">${cartaHTML(x.id, { width: 132 })}${qtd.get(x.id) ? `<span class="contador-copias">${qtd.get(x.id)}</span>` : ''}</div>`).join('');
   };
   const desenharLista = () => {
     const n = [...qtd.values()].reduce((s, k) => s + k, 0);
@@ -172,6 +172,17 @@ function montar(tela, b, ctx) {
     if (['q', 'ft', 'fc', 'fso'].includes(ev.target.id)) desenharPool();
   };
   tela.oncontextmenu = (ev) => { const x = ev.target.closest('[data-add]'); if (x) { ev.preventDefault(); x.dataset.zoom = x.dataset.add; x.click(); delete x.dataset.zoom; } };
+  // toque (celular/tablet): segurar a carta ~0,5 s = ver a carta (o mesmo do botão direito); o toque curto adiciona
+  let segurar = null, segurou = false;
+  tela.onpointerdown = (ev) => {
+    const x = ev.target.closest('[data-add]');
+    if (!x || ev.pointerType === 'mouse') return;
+    segurou = false;
+    clearTimeout(segurar);
+    segurar = setTimeout(() => { segurou = true; x.dataset.zoom = x.dataset.add; x.click(); delete x.dataset.zoom; }, 480);
+  };
+  tela.onpointerup = tela.onpointercancel = tela.onpointermove = (ev) => { if (ev.type !== 'pointermove' || Math.abs(ev.movementX) + Math.abs(ev.movementY) > 6) clearTimeout(segurar); };
+  tela.addEventListener('click', (ev) => { if (segurou && ev.target.closest('[data-add]') && !ev.target.closest('[data-add]').dataset.zoom) { segurou = false; ev.stopImmediatePropagation(); ev.preventDefault(); } }, true);
   tela.onclick = async (ev) => {
     const add = ev.target.closest('[data-add]');
     if (add && !add.dataset.zoom) return mudar(add.dataset.add, 1);

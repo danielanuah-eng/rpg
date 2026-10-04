@@ -250,3 +250,5 @@ body:has(#tela.cheia) .opinar-flutuante { display: none; }
 .yesno { display: inline-flex; gap: 4px; align-items: center; margin-left: auto; }
 .yesno .botao.sim.on { background: #3f8a64; border-color: #6fd0a0; color: #fff; }
 .yesno .botao.nao.on { background: #a2465c; border-color: #e07a90; color: #fff; }
+/* construtor no toque: segurar a carta abre a carta grande sem o menu do navegador */
+.ct-pool .item-vitrine { -webkit-touch-callout: none; user-select: none; }

@@ -2,7 +2,8 @@
    A mesa cabe na tela e a faixa da mão fica sempre visível; o tabuleiro mantém os tamanhos do v10 (direção do autor em
    coordenacao/site-online/INTERFACE-MESA.md: não reduzir as cartas) e ROLA dentro do palco quando não cabe.
    O piso acompanha o tabuleiro (função ajustarMesa em js/mesa.js). Não muda a composição visual do v10. */
-@media (min-width: 761px) {
+/* Vale em todas as telas (04/10: celular e tablet também usam a câmera que encaixa o tabuleiro inteiro). */
+@media all {
   .mesa { height: calc(100dvh - 57px); min-height: 560px; overflow: hidden; align-items: stretch; }
   .mesa-esq { grid-template-rows: auto minmax(0, 1fr) auto; min-height: 0; height: 100%; }
   /* câmera afastada: .mesa-mundo = piso inteiro; o tabuleiro fica na área azul (ajustarMesa em js/mesa.js) */
@@ -20,7 +21,11 @@
   .verso-mini { width: 28px; height: 39px; }
   .mao-faixa { height: 122px; min-height: 0; overflow: visible; z-index: 20; }
   .mao { min-height: 0; padding: 10px 28px 0; flex-wrap: nowrap; align-items: start; align-content: start; }
+}
+@media (hover: hover) and (pointer: fine) {
   .mao-slot:hover { transform: translateY(-62px) scale(1.12); z-index: 30; }
+}
+@media all {
   .mao-slot.marcada .cm { transform: translateY(-24px); }
 }
 /* O ".campo" do v10 (campo de batalha) não tem escopo e pegava os formulários do site (label.campo): devolve o normal fora da mesa. */
@@ -36,7 +41,7 @@
 .mesa-palco.alvo-negado { box-shadow: inset 0 0 0 3px #ef6f7a66; }
 .zona-grau.alvo-grau { outline: 2px dashed #8db4f0; outline-offset: 4px; border-radius: 10px; }
 /* Conjuradores cabeça com cabeça na linha do meio (pedido do autor, 03/10): nomes para fora, sem vão no meio */
-@media (min-width: 761px) {
+@media all {
   .mesa-mundo .mesa-conteudo { grid-template-rows: minmax(330px, auto) 2px minmax(330px, auto); gap: 0; }
   .mesa-mundo .lado-op .fileira-fundo { align-items: end; }
   .mesa-mundo .lado-eu .fileira-fundo { align-items: start; }
@@ -70,3 +75,47 @@ body.tela-cheia .mesa-direita { top: 0; height: 100dvh; }
 /* Pilha na lateral estreita: o texto desce para baixo da carta em vez de virar uma coluna de uma letra. */
 .mesa-direita .pilha-item { flex-wrap: wrap; }
 .mesa-direita .pilha-info { flex: 1 1 130px; overflow-wrap: break-word; }
+
+/* ---------- Celular e tablet (04/10) ----------
+   O tabuleiro inteiro cabe na tela (ajustarMesa reduz a câmera), a mão fica numa faixa que rola de lado e a lateral
+   (fases, pilha, decisões e o botão principal) fica embaixo (retrato) ou à direita (paisagem), rolando por dentro.
+   Tocar numa carta abre o menu com "ver carta"; arrastar da mão para o tabuleiro joga. */
+@media (max-width: 900px), (max-height: 560px) {
+  .mesa { --mesa-min-w: 760px; }
+  .mesa-mundo .mesa-conteudo { min-height: 600px; padding: 8px 10px; grid-template-rows: minmax(260px, auto) 2px minmax(260px, auto); }
+  .mesa-mundo .lado { min-height: 260px; }
+  .mao-op-faixa { min-height: 30px; padding: 2px 10px; }
+  .verso-mini { width: 16px; height: 22px; }
+  .mao-faixa { height: auto; overflow-x: auto; overflow-y: hidden; overscroll-behavior: contain; scrollbar-width: thin; }
+  .mao { flex-wrap: nowrap; padding: 6px 10px; gap: 6px; width: max-content; }
+  .mao-slot { zoom: .78; flex: none; }
+  .mao-slot.marcada .cm { transform: translateY(-10px); }
+  .mesa-direita .botao, .mesa-direita .abas button { min-height: 40px; }
+  .mesa-palco { touch-action: pan-x pan-y; }
+}
+/* retrato: tabuleiro em cima, mão, e a lateral embaixo */
+@media (max-width: 900px) and (orientation: portrait) {
+  .mesa { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) minmax(170px, 36%); height: calc(100dvh - 57px); }
+  .mesa-direita { position: relative; top: auto; height: 100%; min-height: 0; max-height: none; border-left: none; border-top: 1px solid var(--borda); overflow: hidden; }
+  .mesa-direita .lateral-corpo { flex: 1 1 auto; min-height: 0; }
+}
+/* paisagem no celular: sem o topo do site, tabuleiro à esquerda e a lateral estreita à direita */
+@media (max-height: 560px) and (orientation: landscape) {
+  body.em-mesa #topo { display: none; }
+  .mesa { grid-template-columns: minmax(0, 1fr) 250px; grid-template-rows: minmax(0, 1fr); height: 100dvh; min-height: 0; }
+  .mesa-direita { top: 0; height: 100dvh; max-height: none; min-height: 0; }
+  .mao-slot { zoom: .62; }
+  .mesa-direita .lateral-pe .botao { padding: 4px 8px; }
+}
+/* celular/tablet: o botão principal (Passar / Encerrar fase) fica sempre à vista no pé da lateral; pilha menor */
+@media (max-width: 900px), (max-height: 560px) {
+  .mesa-direita .lateral-corpo .barra-acao { position: sticky; bottom: 0; z-index: 6; margin: 4px 0 0; padding: 6px 0; background: linear-gradient(#0000, #120e24 30%); }
+  .mesa-direita .pilha-item > .cm, .mesa-direita .pilha-item > div:first-child:not(.pilha-info) { zoom: .62; }
+  .mesa-direita .lateral-pe { flex-wrap: wrap; gap: 4px; padding: 4px 6px; }
+  .mesa-direita .lateral-pe .botao { min-height: 34px; padding: 4px 9px; font-size: 12px; }
+}
+/* celular em pé: durante a partida o topo do site some (a mesa tem "Sair"); mais espaço para o tabuleiro */
+@media (max-width: 900px) and (orientation: portrait) {
+  body.em-mesa #topo { display: none; }
+  body.em-mesa .mesa { height: 100dvh; }
+}
