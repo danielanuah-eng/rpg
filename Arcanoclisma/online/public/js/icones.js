@@ -6,8 +6,8 @@ export const ICONES = [
   { id: 'suspender', nome: 'Suspender', mostra: 'uma carta se deitando (girando 90°) com uma seta curva apontando para baixo e riscos de movimento atrás', gatilho: /\b(Suspenda|suspenda|[Ss]uspender|suspende|Suspende|suspensa|suspenso)\b/ },
   { id: 'levantar', nome: 'Levantar', mostra: 'uma carta deitada se erguendo com uma seta curva para cima e riscos de movimento', gatilho: /\b(levanta|Levanta|levante|Levante)\b/ },
   // requisitos por linha (04/10): "(3+ no Grau · Pague 2)" antes de um efeito ou habilidade
-  { id: 'requisito-grau', nome: 'Requisito de Grau', mostra: 'o losango azul do Grau com um sinal de + e o número ao lado (mínimo de cartas no Grau para a linha acontecer)', gatilho: /(d++ no Grau)/ },
-  { id: 'requisito-arcano', nome: 'Custo de Arcano da linha', mostra: 'uma esfera de Arcano pequena com moldura de selo (custo pago na hora para a linha acontecer), com o número ao lado', gatilho: /(Pague d+)(?=))/ },
+  { id: 'requisito-grau', nome: 'Requisito de Grau', mostra: 'o losango azul do Grau com um sinal de + e o número ao lado (mínimo de cartas no Grau para a linha acontecer)', gatilho: /(\d+\+ no Grau)/ },
+  { id: 'requisito-arcano', nome: 'Custo de Arcano da linha', mostra: 'uma esfera de Arcano pequena com moldura de selo (custo pago na hora para a linha acontecer), com o número ao lado', gatilho: /(Pague \d+)(?=\))/ },
   { id: 'pagar-arcano', nome: 'Pagar Arcano', mostra: 'uma esfera de Arcano azul saindo (seta para fora) de uma mão aberta, com o número ao lado', gatilho: /\b([Pp]ague \d+)/ },
   { id: 'ganhar-arcano', nome: 'Ganhar Arcano', mostra: 'uma esfera de Arcano azul com brilho e uma seta entrando (para dentro), sinal de +', gatilho: /\b([Gg]anhe \d+ Arcano|[Gg]era \d+ Arcano)/ },
   { id: 'enviar-arcano', nome: 'Enviar ao Arcano', mostra: 'uma carta virando faíscas azuis que sobem para dentro de uma esfera de Arcano', gatilho: /\b(enviar? (?:uma |as |a )?cartas? ao Arcano|enviada ao Arcano)/ },
