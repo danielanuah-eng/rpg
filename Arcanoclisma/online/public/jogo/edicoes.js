@@ -72,3 +72,116 @@ export function aplicarCatalogo(cat          , ed                               
 export const contarEdicoes = (ed             ) =>
   new Set([...Object.keys(ed.cartas), ...Object.keys(ed.artes?.cartas ?? {}), ...Object.keys(ed.raridades?.cartas ?? {})]).size
   + new Set([...Object.keys(ed.conjuradores), ...Object.keys(ed.artes?.conjuradores ?? {}), ...Object.keys(ed.raridades?.conjuradores ?? {})]).size;
+
+// ---------- salvar sem apagar o trabalho de outra aba (bug de 05/10: v117 apagou 37 cartas da v116) ----------
+// O Editor não manda mais o rascunho inteiro: manda a DIFERENÇA para a versão em que o rascunho se apoia (`base`),
+// por carta/Conjurador e por grupo (campos, arte, raridade). null = voltar ao original. O servidor só grava se a
+// base ainda for a versão em vigor (senão 409 com a atual); o navegador então reaplica a diferença sobre a atual
+// e, se a mesma carta mudou nos dois lados, pergunta ao autor qual manter.
+
+/** Mesma forma de EdicoesSite, com null para "tirar esta carta/Conjurador das edições" (volta ao original). */
+                                   
+                                                         
+                                                               
+                                                                                                
+                                                                                                    
+ 
+                                                                                                                
+const GRUPOS          = [['cartas'], ['conjuradores'], ['artes', 'cartas'], ['artes', 'conjuradores'], ['raridades', 'cartas'], ['raridades', 'conjuradores']];
+const PROIBIDOS = new Set(['__proto__', 'constructor', 'prototype']);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const mapaDe = (ed     , g       , criar = false)                          => {
+  if (!ed) return {};
+  if (g.length === 1) return criar ? (ed[g[0]] ??= {}) : (ed[g[0]] ?? {});
+  if (criar) return ((ed[g[0]] ??= {})[g[1]] ??= {});
+  return ed[g[0]]?.[g[1]] ?? {};
+};
+const tipoDo = (g       ) => (g[g.length - 1] === 'cartas' ? 'carta' : 'conjurador')                          ;
+const pegar = (m                         , id        ) => (Object.hasOwn(m, id) ? m[id] : undefined);
+
+function ordenado(v         )          {
+  if (Array.isArray(v)) return v.map(ordenado);
+  if (v && typeof v === 'object') return Object.fromEntries(Object.keys(v).sort().map((k) => [k, ordenado((v                           )[k])]));
+  return v;
+}
+/** Igualdade de JSON sem depender da ordem das chaves. */
+export const igualJson = (a         , b         ) => JSON.stringify(ordenado(a)) === JSON.stringify(ordenado(b));
+
+export const diferencaVazia = ()                   => edicoesVazias()                    ;
+
+/** O que mudou de `base` para `novo`. `semRemocoes`: não gera null (o que falta em `novo` fica como está). */
+export function diferencaEdicoes(base         , novo         , { semRemocoes = false } = {})                   {
+  const d = diferencaVazia();
+  for (const g of GRUPOS) {
+    const a = mapaDe(base, g), b = mapaDe(novo, g), saida = mapaDe(d, g, true);
+    for (const id of new Set([...Object.keys(a), ...Object.keys(b)])) {
+      if (PROIBIDOS.has(id)) continue;
+      const va = pegar(a, id), vb = pegar(b, id);
+      if (igualJson(va, vb)) continue;
+      if (vb === undefined || vb === null) { if (!semRemocoes && va !== undefined) saida[id] = null; }
+      else saida[id] = structuredClone(vb);
+    }
+  }
+  return d;
+}
+
+/** Edições `ed` com a diferença aplicada (cópia). */
+export function aplicarDiferenca(ed         , dif         )              {
+  const r = { ...edicoesVazias(), ...structuredClone((ed ?? {})               ) };
+  r.artes = { cartas: {}, conjuradores: {}, ...(r.artes ?? {}) };
+  r.raridades = { cartas: {}, conjuradores: {}, ...(r.raridades ?? {}) };
+  for (const g of GRUPOS) {
+    const m = mapaDe(r, g, true);
+    for (const [id, v] of Object.entries(mapaDe(dif, g))) {
+      if (PROIBIDOS.has(id) || v === undefined) continue;
+      if (v === null) delete m[id]; else m[id] = structuredClone(v);
+    }
+  }
+  return r;
+}
+
+/** Quantas cartas/Conjuradores a diferença mexe. */
+export function contarDiferenca(dif                  )         {
+  const s = new Set        ();
+  for (const g of GRUPOS) for (const id of Object.keys(mapaDe(dif, g))) s.add(tipoDo(g) + ':' + id);
+  return s.size;
+}
+
+                                                                                              
+/**
+ * A mesma carta mudou nos dois lados: de `base` para `atual` (outra aba/salvamento) e na diferença do rascunho,
+ * com resultados diferentes. Sem conflito, a diferença pode ser reaplicada sobre `atual` com segurança.
+ */
+export function conflitosEdicoes(base         , atual         , dif         )                   {
+  const por = new Map                        ();
+  for (const g of GRUPOS) {
+    const mb = mapaDe(base, g), ma = mapaDe(atual, g);
+    for (const [id, v] of Object.entries(mapaDe(dif, g))) {
+      const noSite = pegar(ma, id);
+      if (igualJson(pegar(mb, id), noSite)) continue; // ninguém mexeu nesta parte desde a base
+      if (igualJson(v ?? undefined, noSite)) continue; // os dois lados chegaram ao mesmo resultado
+      const k = tipoDo(g) + ':' + id;
+      if (!por.has(k)) por.set(k, { tipo: tipoDo(g), id, partes: [] });
+      por.get(k) .partes.push(g.length === 1 ? 'campos' : g[0] === 'artes' ? 'arte' : 'raridade');
+    }
+  }
+  return [...por.values()];
+}
+
+/** Tira uma carta/Conjurador da diferença (o autor escolheu manter a versão do site). */
+export function tirarDaDiferenca(dif                  , tipo                        , id        ) {
+  for (const g of GRUPOS) if (tipoDo(g) === tipo) delete mapaDe(dif, g, true)[id];
+}
+
+/**
+ * "Restaurar cartas perdidas": o que existia na versão `antiga` e não existe em `atual` (por carta/Conjurador e por
+ * grupo: campos, arte, raridade). Nada é apagado; o resultado vai para o rascunho, sem salvar sozinho.
+ */
+export function cartasPerdidas(antiga         , atual         )                   {
+  const d = diferencaVazia();
+  for (const g of GRUPOS) {
+    const ma = mapaDe(atual, g), saida = mapaDe(d, g, true);
+    for (const [id, v] of Object.entries(mapaDe(antiga, g))) if (!PROIBIDOS.has(id) && v != null && pegar(ma, id) === undefined) saida[id] = structuredClone(v);
+  }
+  return d;
+}

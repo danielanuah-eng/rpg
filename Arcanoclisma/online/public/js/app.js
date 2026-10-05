@@ -9,7 +9,7 @@ import { conectarPartida } from './partida-online.js';
 const tela = $('#tela');
 let limpar = null; // função para fechar a tela atual (mesa, conexões)
 /** Confirmação antes de sair da tela atual (Editor com mudanças não salvas): async () => true para sair. */
-let antesDeSair = null;
+let antesDeSair = null, perguntandoSaida = false;
 
 // ---------- rotas ----------
 const rotas = {
@@ -406,7 +406,12 @@ window.addEventListener('hashchange', async (ev) => {
   if (antesDeSair && rota(location.hash) !== rota(new URL(ev.oldURL).hash)) {
     const destino = location.hash;
     history.replaceState(null, '', ev.oldURL);
-    if (!(await antesDeSair())) return;
+    // uma pergunta de saída por vez (bug de 05/10: duas janelas de saída abriam dois "Salvar" ao mesmo tempo)
+    if (perguntandoSaida) return;
+    perguntandoSaida = true;
+    let pode = false;
+    try { pode = await antesDeSair(); } finally { perguntandoSaida = false; }
+    if (!pode) return;
     history.replaceState(null, '', destino);
   }
   navegar();

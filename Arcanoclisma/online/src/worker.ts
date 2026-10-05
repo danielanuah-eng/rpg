@@ -3,8 +3,8 @@ import { validarBaralho } from '../../tcg/src/motor.ts';
 import type { BaralhoDef, Catalogo } from '../../tcg/src/tipos.ts';
 import { agora, erro, json, novoId, rotasConta, usuarioDaSessao, type Env, type Usuario } from './conta.ts';
 import DADOS from './gerado/dados.json';
-import { aplicarCatalogo, contarEdicoes, sanitizarEdicoes, type EdicoesSite } from './edicoes.ts';
-import { edicoesAtuais, edicoesVersao, esquecerEdicoes } from './edicoes-db.ts';
+import { aplicarCatalogo, contarEdicoes } from './edicoes.ts';
+import { edicoesAtuais, edicoesVersao, salvarDiferenca } from './edicoes-db.ts';
 
 export { Partida } from './partida.ts';
 export { Saguao } from './saguao.ts';
@@ -234,16 +234,13 @@ async function rotasEdicoes(req: Request, env: Env, u: Usuario | null, caminho: 
   }
   if (!u?.admin) return erro('Só o autor edita as cartas.', 403);
   if (caminho === '/api/edicoes' && req.method === 'POST') {
-    const b = await corpo<{ dados?: unknown; nota?: string }>(req);
-    const bruto = JSON.stringify(b.dados ?? {});
-    if (bruto.length > 400_000) return erro('Edições grandes demais.');
-    const dados: EdicoesSite = sanitizarEdicoes(b.dados, catalogo);
+    // Concorrência otimista e só a diferença (bug de 05/10): ver salvarDiferenca em edicoes-db.ts
+    const r = await salvarDiferenca(env, catalogo, await corpo<{ base?: unknown; diff?: unknown; nota?: string }>(req), u.id);
+    if (!r.ok) return json(r.corpo, r.status);
     // Aviso (não bloqueia): baralhos prontos que deixam de valer com as edições (ex.: Valores trocados).
-    const cat = aplicarCatalogo(catalogo, dados);
+    const cat = aplicarCatalogo(catalogo, r.dados);
     const avisos = DADOS.baralhos.flatMap((p) => conferirBaralho(p.conjurador, p.lista as Lista, p.itens, cat).map((x) => `${p.nome}: ${x}`));
-    const r = await env.DB.prepare('INSERT INTO edicoes (dados, nota, usuario, criado) VALUES (?, ?, ?, ?)').bind(JSON.stringify(dados), texto(b.nota, 500), u.id, agora()).run();
-    esquecerEdicoes();
-    return json({ id: r.meta.last_row_id, mudancas: contarEdicoes(dados), avisos });
+    return json({ id: r.id, base: r.base, dados: r.dados, mudancas: contarEdicoes(r.dados), avisos });
   }
   if (caminho === '/api/edicoes/historico' && req.method === 'GET') {
     const r = await env.DB.prepare('SELECT e.id, e.nota, e.criado, e.dados, u.nome FROM edicoes e LEFT JOIN usuarios u ON u.id = e.usuario ORDER BY e.id DESC LIMIT 60').all<{ id: number; nota: string; criado: number; dados: string; nome: string }>();

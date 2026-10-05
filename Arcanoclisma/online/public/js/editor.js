@@ -4,7 +4,7 @@
 // continuam com a versão do início). Mesmo formato do editor do app de testes (tcg/data/edicoes.json).
 import { $, $$, esc, api, DADOS, BASE, EDICOES, VALOR, COR_VALOR, TIPO, textoCarta, textoPoder, sessao, avisar, janela, local, usarEdicoes, carregarEdicoes, dataCurta } from './base.js';
 import { desenharCarta, modeloCarta, modeloConjurador } from './carta.js';
-import { edicoesVazias } from '/jogo/edicoes.js';
+import { edicoesVazias, diferencaEdicoes, aplicarDiferenca, conflitosEdicoes, contarDiferenca, tirarDaDiferenca, cartasPerdidas, igualJson } from '/jogo/edicoes.js';
 import { descEfeito, protegidoDe } from '/jogo/textos.js';
 import { montarConstrutor } from './construtor-efeitos.js';
 import { cartaServeConjurador, itemServe } from '/jogo/motor.js';
@@ -71,6 +71,10 @@ function atualizarNumerosNoTexto(texto, antes, depois, campos) {
   return { texto: t, avisos };
 }
 const CHAVE_RASCUNHO = 'editor:rascunho';
+const CHAVE_ABERTO = 'editor:aberto', CHAVE_SALVO = 'editor:salvo';
+/** Identifica esta aba nos avisos entre abas (evento `storage`). */
+const ABA = Math.random().toString(36).slice(2);
+const normalizar = (d) => ({ ...edicoesVazias(), cartas: { ...(d?.cartas ?? {}) }, conjuradores: { ...(d?.conjuradores ?? {}) }, artes: { cartas: {}, conjuradores: {}, ...(d?.artes ?? {}) }, raridades: { cartas: {}, conjuradores: {}, ...(d?.raridades ?? {}) } });
 /** Linhas que aceitam requisito (Grau mínimo e Arcano): cada efeito, cada gatilho e cada habilidade ativada. */
 function linhasComRequisito(mec, conjur) {
   const l = [];
@@ -103,9 +107,35 @@ export async function telaEditor(tela, partes, ctx) {
   const u = await ctx.exigirConta('Entre com a conta do autor para editar as cartas.');
   if (!u) return ctx.navegar('inicio');
   if (!u.admin) { tela.innerHTML = '<div class="painel vazio">Só o autor edita as cartas. Entre com o e-mail do autor (Google ou "Sou o autor").</div>'; return; }
-  // rascunho: o que foi salvo neste navegador, ou a versão em vigor
-  let rascunho = local.ler(CHAVE_RASCUNHO, null) ?? structuredClone(EDICOES.dados);
-  rascunho = { ...edicoesVazias(), ...rascunho, artes: { cartas: {}, conjuradores: {}, ...(rascunho.artes ?? {}) }, raridades: { cartas: {}, conjuradores: {}, ...(rascunho.raridades ?? {}) } };
+  // Salvar sem apagar o trabalho de outra aba (bug de 05/10: v117 veio de um rascunho velho e apagou 37 cartas).
+  // `site`: a versão em vigor mais nova que esta aba conhece. `base`: a versão em que o rascunho se apoia.
+  // Salvar manda só a diferença base → rascunho; o servidor recusa (409) se a base não for mais a versão em vigor.
+  let site = { id: EDICOES.id, dados: normalizar(EDICOES.salvo ?? EDICOES.dados) };
+  try { const v = await api('/edicoes'); site = { id: v.id, dados: normalizar(v.dados) }; } catch { /* sem rede: usa a da página */ }
+  EDICOES.salvo = site.dados;
+  let base = site, rascunho = structuredClone(site.dados);
+  const guardado = local.ler(CHAVE_RASCUNHO, null);
+  let outraAba = false; // o Editor também está aberto em outra aba deste navegador
+  let rascunhoAntigo = null; // rascunho de antes da correção (sem a versão de origem): não entra sozinho
+  if (guardado?.v === 2) {
+    rascunho = normalizar(guardado.dados);
+    if (guardado.base !== site.id) {
+      let b = null;
+      try { b = await api('/edicoes?id=' + guardado.base); } catch { /* versão sumiu */ }
+      // a leitura da versão em vigor pode vir de um cache de até 10 s: nunca reaplica sobre uma versão mais velha
+      if (b) { base = { id: b.id, dados: normalizar(b.dados) }; if (b.id > site.id) { site = base; EDICOES.salvo = site.dados; } else rebasear(site); }
+      else { rascunhoAntigo = rascunho; rascunho = structuredClone(site.dados); }
+    }
+  } else if (guardado && !igualJson(normalizar(guardado), site.dados)) rascunhoAntigo = normalizar(guardado);
+  /** Reaplica as mudanças do rascunho sobre uma versão mais nova; com a mesma carta mudada nos dois lados, devolve os conflitos e não mexe. */
+  function rebasear(nova) {
+    const dif = diferencaEdicoes(base.dados, rascunho);
+    const confl = conflitosEdicoes(base.dados, nova.dados, dif);
+    if (confl.length) return confl;
+    rascunho = aplicarDiferenca(nova.dados, dif);
+    base = nova;
+    return [];
+  }
   let sel = partes[0] ? decodeURIComponent(partes[0]) : null; // "c:<id>" (carta) ou "j:<id>" (Conjurador)
   // filtros da lista, lembrados no navegador (pedido do autor, 04/10): tipo, Valores, modo, agrupar e Conjurador
   const filtroSalvo = local.ler(CHAVE_FILTRO, {});
@@ -119,22 +149,13 @@ export async function telaEditor(tela, partes, ctx) {
   let textoAuto = null;
 
   const aplicarRascunho = () => {
-    usarEdicoes({ id: EDICOES.id, dados: rascunho, rascunho: difereDoSalvo() });
-    local.gravar(CHAVE_RASCUNHO, rascunho);
+    usarEdicoes({ id: site.id, dados: rascunho, rascunho: difereDoSalvo() });
+    local.gravar(CHAVE_RASCUNHO, { v: 2, base: base.id, dados: rascunho, aba: ABA });
   };
   const mudancas = () => new Set([...Object.keys(rascunho.cartas).map((x) => 'c:' + x), ...Object.keys(rascunho.artes.cartas).map((x) => 'c:' + x), ...Object.keys(rascunho.raridades.cartas).map((x) => 'c:' + x), ...Object.keys(rascunho.conjuradores).map((x) => 'j:' + x), ...Object.keys(rascunho.artes.conjuradores).map((x) => 'j:' + x), ...Object.keys(rascunho.raridades.conjuradores).map((x) => 'j:' + x)]);
-  const difereDoSalvo = () => !igual(rascunho, EDICOES.salvo ?? EDICOES.dados);
-  EDICOES.salvo ??= structuredClone(EDICOES.dados);
-  /** Cartas/Conjuradores do rascunho diferentes da versão salva no site (contador do botão Salvar). */
-  const pendentes = () => {
-    const s = EDICOES.salvo ?? EDICOES.dados, r = new Set();
-    for (const [t, g] of [['c', 'cartas'], ['j', 'conjuradores']]) {
-      for (const [a, b] of [[rascunho[g], s[g]], [rascunho.artes[g], s.artes?.[g]], [rascunho.raridades[g], s.raridades?.[g]]]) {
-        for (const id of new Set([...Object.keys(a ?? {}), ...Object.keys(b ?? {})])) if (!igual(a?.[id], b?.[id])) r.add(t + ':' + id);
-      }
-    }
-    return r.size;
-  };
+  /** Cartas/Conjuradores do rascunho diferentes da base (o que o salvar vai mandar; contador do botão Salvar). */
+  const pendentes = () => contarDiferenca(diferencaEdicoes(base.dados, rascunho));
+  const difereDoSalvo = () => pendentes() > 0;
   // Mudança não salva impossível de ignorar (pedido do autor, 04/10): aviso ao fechar/recarregar e ao sair do Editor
   globalThis.editorPendente = pendentes;
   if (!globalThis.editorAvisoFechar) {
@@ -202,7 +223,7 @@ export async function telaEditor(tela, partes, ctx) {
       const np = pendentes();
       tela.querySelector('.editor-barra-salvar [data-salvar]').textContent = np ? `💾 Salvar edição (${np} não salva${np > 1 ? 's' : ''})` : '💾 Salvar edição';
     }
-    estado.innerHTML = `<p class="peq">Versão em vigor no site: <b>${EDICOES.id || 'nenhuma edição'}</b>. Rascunho: <b>${n}</b> carta(s)/Conjurador(es) mudados${difereDoSalvo() ? ' · <span class="falta">não salvo</span>' : ' · salvo'}.<br>O rascunho já vale nesta página (teste contra o bot); os outros jogadores só veem depois de salvar.</p>`;
+    estado.innerHTML = `<p class="peq">Versão em vigor no site: <b>${EDICOES.id || 'nenhuma edição'}</b>. Rascunho: <b>${n}</b> carta(s)/Conjurador(es) mudados${difereDoSalvo() ? ' · <span class="falta">não salvo</span>' : ' · salvo'}.<br>O rascunho já vale nesta página (teste contra o bot); os outros jogadores só veem depois de salvar.${base.id !== site.id ? ` <span class="falta">Rascunho apoiado na versão #${base.id}: ao salvar, junta com a #${site.id}.</span>` : ""}${outraAba ? "<br><b class=\"falta\">O Editor está aberto em outra aba.</b>" : ""}</p>`;
   }
   function desenharLista() {
     for (const b of $$('[data-tipo]', tela)) b.classList.toggle('ativo', b.dataset.tipo === filtro.tipo);
@@ -442,72 +463,176 @@ export async function telaEditor(tela, partes, ctx) {
   }
 
   // ---------- salvar, baixar, histórico ----------
+  const nomeDe = (tipo, id) => (tipo === 'carta' ? DADOS.catalogo.cartas[id]?.nome : DADOS.catalogo.conjuradores[id]?.nome) ?? id;
   async function desenharHistorico() {
     const h = $('.editor-historico', tela);
     try {
       const { versoes } = await api('/edicoes/historico');
-      h.innerHTML = versoes.length ? versoes.map((v) => `<div class="editor-versao"><b>#${v.id}</b> · ${dataCurta(v.criado)} · ${v.mudancas} mudança(s)${v.id === EDICOES.id ? ' · <span class="etiqueta">em vigor</span>' : ''}<br>${esc(v.nota || 'sem nota')}<div class="linha-botoes"><button class="botao peq" data-versao="${v.id}">Abrir como rascunho</button></div></div>`).join('') : 'Nenhuma versão salva ainda.';
+      h.innerHTML = versoes.length ? versoes.map((v) => `<div class="editor-versao"><b>#${v.id}</b> · ${dataCurta(v.criado)} · ${v.mudancas} mudança(s)${v.id === site.id ? ' · <span class="etiqueta">em vigor</span>' : ''}<br>${esc(v.nota || 'sem nota')}<div class="linha-botoes"><button class="botao peq" data-versao="${v.id}">Abrir como rascunho</button>${v.id === site.id ? '' : `<button class="botao peq" data-perdidas="${v.id}" title="Traz para o rascunho só as cartas/Conjuradores que existiam nesta versão e não existem na atual (não salva sozinho)">Restaurar cartas perdidas</button>`}</div></div>`).join('') : 'Nenhuma versão salva ainda.';
     } catch (err) { h.textContent = 'Não foi possível ler as versões: ' + err.message; }
   }
+  /** A mesma carta mudou aqui e no site: o autor escolhe, carta por carta. Tira da diferença as que ficam com o site. */
+  function resolverConflitos(confl, dif, atual) {
+    return new Promise((ok) => {
+      let feito = false;
+      const j = janela(`<h3>A mesma carta mudou em outro lugar</h3><p class="peq">Desde que este rascunho começou, a versão #${atual.id} foi salva (outra aba ou outro aparelho) e mudou estas cartas que você também mudou. Escolha qual manter; o resto das duas edições é juntado sem perder nada.</p>
+        <div class="editor-conflitos">${confl.map((c, i) => `<div class="editor-conflito"><b>${esc(nomeDe(c.tipo, c.id))}</b> <span class="peq">(${esc(c.partes.join(', '))})</span><br>
+          <label class="opcao-linha"><input type="radio" name="cf${i}" value="minha" checked> Manter a minha</label>
+          <label class="opcao-linha"><input type="radio" name="cf${i}" value="site"> Manter a do site</label></div>`).join('')}</div>
+        <div class="linha-botoes"><button class="botao primario" data-cf-ok>Continuar salvando</button><button class="botao" data-cf-nao>Cancelar</button></div>`, { aoFechar: () => { if (!feito) ok(false); } });
+      $('[data-cf-nao]', j.el).onclick = () => j.fechar();
+      $('[data-cf-ok]', j.el).onclick = () => {
+        confl.forEach((c, i) => { if ($(`input[name="cf${i}"]:checked`, j.el)?.value === 'site') tirarDaDiferenca(dif, c.tipo, c.id); });
+        feito = true; j.fechar(); ok(true);
+      };
+    });
+  }
+  /** Envia a diferença base → rascunho. 409 (o site mudou): reaplica sobre a versão nova e tenta de novo. null = cancelado. */
+  async function enviar(nota) {
+    for (let tentativa = 0; tentativa < 4; tentativa++) {
+      const enviado = structuredClone(rascunho), dif = diferencaEdicoes(base.dados, enviado);
+      try {
+        const r = await api('/edicoes', { corpo: { base: base.id, diff: dif, nota } });
+        return { r, enviado };
+      } catch (err) {
+        if (err.status !== 409 || !err.dados?.atual) throw err;
+        const atual = { id: err.dados.atual.id, dados: normalizar(err.dados.atual.dados) };
+        const confl = conflitosEdicoes(base.dados, atual.dados, dif);
+        if (confl.length && !(await resolverConflitos(confl, dif, atual))) return null;
+        // o que o autor mudou durante a espera também vai junto
+        rascunho = aplicarDiferenca(aplicarDiferenca(atual.dados, dif), diferencaEdicoes(enviado, rascunho));
+        base = site = atual; EDICOES.salvo = atual.dados;
+        aplicarRascunho();
+      }
+    }
+    throw new Error('O site mudou várias vezes durante o salvamento. Tente de novo.');
+  }
+  // Sem duplo envio (bug de 05/10: vários salvamentos no mesmo segundo): uma janela de salvar e um envio por vez.
+  let salvando = false, janelaSalvar = null;
+  const travarSalvar = (sim) => { salvando = sim; for (const b of $$('[data-salvar]', tela)) b.disabled = sim; };
   /** Janela de salvar no site. `aoSalvar`/`aoCancelar`: usados ao sair do Editor com mudanças pendentes. */
   function abrirSalvar(aoSalvar, aoCancelar) {
+    if (salvando || janelaSalvar) { avisar('Já há um salvamento em andamento.', 'info'); aoCancelar?.(); return; }
     // grava no rascunho a última mudança ainda esperando o intervalo de digitação
     if (sel) { clearTimeout(espera); lerForm(); }
     let salvou = false;
-    const j = janela(`<h3>Salvar no site</h3><p class="peq">A versão nova vale para todos a partir de agora (partidas online já começadas continuam com a versão do início).</p>
-      <label class="campo">Nota (o porquê da mudança)<textarea data-nota maxlength="500"></textarea></label><div class="linha-botoes"><button class="botao primario" data-ok>Salvar</button></div>`, { aoFechar: () => { if (!salvou) aoCancelar?.(); } });
-    $('[data-ok]', j.el).onclick = async () => {
+    const j = janelaSalvar = janela(`<h3>Salvar no site</h3><p class="peq">A versão nova vale para todos a partir de agora (partidas online já começadas continuam com a versão do início). Vão só as ${pendentes()} carta(s)/Conjurador(es) que você mudou; o resto do site fica como está.</p>
+      <label class="campo">Nota (o porquê da mudança)<textarea data-nota maxlength="500"></textarea></label><div class="linha-botoes"><button class="botao primario" data-ok>Salvar</button></div>`, { aoFechar: () => { janelaSalvar = null; if (!salvou) aoCancelar?.(); } });
+    const botaoOk = $('[data-ok]', j.el);
+    botaoOk.onclick = async () => {
+      if (salvando) return;
+      travarSalvar(true); botaoOk.disabled = true; botaoOk.textContent = 'Salvando…';
       try {
-        const r = await api('/edicoes', { corpo: { dados: rascunho, nota: $('[data-nota]', j.el).value } });
+        const env = await enviar($('[data-nota]', j.el).value);
+        if (!env) { avisar('Salvamento cancelado. Nada foi gravado.', 'info'); return; }
+        const { r, enviado } = env;
         salvou = true;
         j.fechar();
-        await carregarEdicoes();
-        EDICOES.salvo = structuredClone(EDICOES.dados);
-        rascunho = structuredClone(EDICOES.dados);
+        site = base = { id: r.id, dados: normalizar(r.dados) };
+        EDICOES.salvo = site.dados;
+        rascunho = aplicarDiferenca(site.dados, diferencaEdicoes(enviado, rascunho));
         aplicarRascunho();
-        avisar(`Versão #${r.id} salva (${r.mudancas} mudança(s)).`, 'ok', 5000);
+        local.gravar(CHAVE_SALVO, { id: r.id, aba: ABA, t: Date.now() }); // as outras abas recarregam a base
+        avisar(`Versão #${r.id} salva (${r.mudancas} mudança(s) no total).`, 'ok', 5000);
         if (r.avisos?.length) janela(`<h3>Atenção: baralhos prontos afetados</h3><p class="peq">As edições foram salvas, mas estes baralhos prontos deixaram de valer e não abrem partida até serem ajustados:</p><ul>${r.avisos.map((a) => `<li>${esc(a)}</li>`).join('')}</ul>`);
         if (aoSalvar) return aoSalvar();
         desenharTudo(); desenharHistorico();
-      } catch (err) { avisar(err.message, 'erro', 6000); }
+      } catch (err) { avisar(err.message, 'erro', 8000); }
+      finally { travarSalvar(false); if (!salvou) { botaoOk.disabled = false; botaoOk.textContent = 'Salvar'; } }
     };
   }
   // salvar: botão fixo no topo e o da coluna da direita (pedido do autor, 04/10: a edição só vale depois de salvar)
   tela.addEventListener('click', async (ev) => {
-    if (!ev.target.closest('[data-salvar], [data-baixar], [data-descartar], [data-versao]')) return;
+    if (!ev.target.closest('[data-salvar], [data-baixar], [data-descartar], [data-versao], [data-perdidas]')) return;
     if (ev.target.closest('[data-salvar]')) { abrirSalvar(); return; }
-    if (ev.target.closest('[data-baixar]')) {
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(new Blob([JSON.stringify(rascunho, null, 2)], { type: 'application/json' }));
-      a.download = `arcanoclisma-edicoes-${new Date().toISOString().slice(0, 10)}.json`;
-      a.click();
-      setTimeout(() => URL.revokeObjectURL(a.href), 2000);
-      return;
-    }
+    if (ev.target.closest('[data-baixar]')) { baixar(rascunho, base.id); return; }
     if (ev.target.closest('[data-descartar]')) {
-      rascunho = structuredClone(EDICOES.salvo);
+      base = site; rascunho = structuredClone(site.dados);
       aplicarRascunho(); desenharTudo(); avisar('Rascunho descartado: voltou à versão salva.', 'info');
       return;
     }
     const v = ev.target.closest('[data-versao]');
     if (v) {
       try {
+        // a versão inteira vira o rascunho: salvar desfaz o que veio depois dela (por isso o aviso com a contagem)
         const r = await api('/edicoes?id=' + v.dataset.versao);
-        rascunho = { ...edicoesVazias(), ...r.dados, raridades: { cartas: {}, conjuradores: {}, ...(r.dados.raridades ?? {}) } };
-        aplicarRascunho(); desenharTudo(); avisar(`Versão #${r.id} aberta como rascunho. Salve para ela voltar a valer.`, 'info', 5000);
+        rascunho = normalizar(r.dados);
+        aplicarRascunho(); desenharTudo(); avisar(`Versão #${r.id} aberta como rascunho (${pendentes()} carta(s)/Conjurador(es) diferentes da base). Salve para ela voltar a valer.`, 'info', 7000);
+      } catch (err) { avisar(err.message, 'erro'); }
+      return;
+    }
+    const p = ev.target.closest('[data-perdidas]');
+    if (p) {
+      try {
+        const r = await api('/edicoes?id=' + p.dataset.perdidas);
+        // o que existia lá e falta na versão em vigor, sem passar por cima do que já está no rascunho
+        const dif = cartasPerdidas(cartasPerdidas(r.dados, site.dados), rascunho);
+        const n = contarDiferenca(dif);
+        if (!n) { avisar(`Nenhuma carta da versão #${r.id} falta na versão em vigor.`, 'info'); return; }
+        rascunho = aplicarDiferenca(rascunho, dif);
+        aplicarRascunho(); desenharTudo();
+        const ids = (g) => [...new Set([...Object.keys(dif[g]), ...Object.keys(dif.artes[g]), ...Object.keys(dif.raridades[g])])];
+        const nomes = [...ids('cartas').map((id) => nomeDe('carta', id)), ...ids('conjuradores').map((id) => nomeDe('conjurador', id))];
+        janela(`<h3>Cartas recuperadas da versão #${r.id}</h3><p class="peq">${n} carta(s)/Conjurador(es) voltaram para o rascunho. Nada foi salvo ainda: confira e clique em Salvar.</p><ul>${nomes.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`);
       } catch (err) { avisar(err.message, 'erro'); }
     }
   });
+  function baixar(dados, idBase, nome = 'edicoes') {
+    const a = document.createElement('a');
+    // `base`: a versão em que estas edições se apoiam (Carregar JSON usa para juntar sem apagar nada)
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(idBase == null ? dados : { base: idBase, ...dados }, null, 2)], { type: 'application/json' }));
+    a.download = `arcanoclisma-${nome}-${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  }
+  // Carregar JSON vira uma diferença sobre o rascunho: com `base` no arquivo, só o que mudou desde ela;
+  // sem `base` (ex.: restauracao-edicoes.json), as cartas do arquivo entram e as que faltam nele ficam como estão.
   $('[data-carregar]', tela).onchange = async (ev) => {
     const f = ev.target.files?.[0];
     if (!f) return;
     try {
       const d = JSON.parse(await f.text());
-      rascunho = { ...edicoesVazias(), cartas: d.cartas ?? {}, conjuradores: d.conjuradores ?? {}, artes: { cartas: {}, conjuradores: {}, ...(d.artes ?? {}) }, raridades: { cartas: {}, conjuradores: {}, ...(d.raridades ?? {}) } };
-      aplicarRascunho(); desenharTudo(); avisar('Edições carregadas no rascunho.', 'ok');
+      let dif;
+      if (Number.isInteger(d.base) && d.base !== base.id) {
+        const b = await api('/edicoes?id=' + d.base);
+        dif = diferencaEdicoes(normalizar(b.dados), normalizar(d));
+      } else dif = diferencaEdicoes(rascunho, normalizar(d), { semRemocoes: !Number.isInteger(d.base) });
+      const n = contarDiferenca(dif);
+      rascunho = aplicarDiferenca(rascunho, dif);
+      aplicarRascunho(); desenharTudo();
+      avisar(n ? `Arquivo carregado: ${n} carta(s)/Conjurador(es) mudaram no rascunho. Confira e salve.` : 'O arquivo não muda nada no rascunho.', n ? 'ok' : 'info', 7000);
     } catch (err) { avisar('Arquivo inválido: ' + err.message, 'erro'); }
     ev.target.value = '';
   };
+
+  // ---------- várias abas (evento storage) ----------
+  const aoArmazenar = async (ev) => {
+    if (!ev.key?.startsWith('arc:editor:') || !ev.newValue) return;
+    let m; try { m = JSON.parse(ev.newValue); } catch { return; }
+    if (!m || m.aba === ABA) return;
+    if (!outraAba && (ev.key === 'arc:' + CHAVE_ABERTO || ev.key === 'arc:' + CHAVE_RASCUNHO)) {
+      outraAba = true; desenharEstado();
+      avisar('O Editor está aberto em outra aba. Dá para editar nas duas: ao salvar, só as cartas mudadas em cada uma vão para o site.', 'info', 8000);
+    }
+    if (ev.key === 'arc:' + CHAVE_ABERTO && !m.resposta) local.gravar(CHAVE_ABERTO, { aba: ABA, t: Date.now(), resposta: true });
+    if (ev.key === 'arc:' + CHAVE_SALVO && m.id > site.id) {
+      try {
+        const v = await api('/edicoes?id=' + m.id);
+        const nova = { id: v.id, dados: normalizar(v.dados) };
+        if (sel) { clearTimeout(espera); lerForm(); }
+        site = nova; EDICOES.salvo = nova.dados;
+        const confl = rebasear(nova);
+        aplicarRascunho(); desenharTudo(); desenharHistorico();
+        avisar(confl.length ? `Outra aba salvou a versão #${nova.id} mudando ${confl.length} carta(s) que você também mudou; ao salvar, você escolhe qual manter.` : `Outra aba salvou a versão #${nova.id}; seu rascunho agora se apoia nela (nada seu foi perdido).`, 'info', 8000);
+      } catch (err) { console.error('editor: versão salva em outra aba', err); }
+    }
+  };
+  window.addEventListener('storage', aoArmazenar);
+  local.gravar(CHAVE_ABERTO, { aba: ABA, t: Date.now() });
+  if (rascunhoAntigo) {
+    const j = janela(`<h3>Rascunho antigo guardado</h3><p class="peq">Este navegador tinha um rascunho de antes da correção do salvar, sem a versão de origem. Para não apagar edições salvas depois dele, o Editor começou da versão em vigor (#${site.id}). Se quiser recuperar algo dele, baixe o arquivo e use "Carregar JSON" (só as cartas do arquivo entram; nada é apagado).</p><div class="linha-botoes"><button class="botao" data-antigo-baixar>Baixar o rascunho antigo</button></div>`);
+    $('[data-antigo-baixar]', j.el).onclick = () => baixar(rascunhoAntigo, null, 'rascunho-antigo');
+  }
 
   // ---------- lista ----------
   $('[data-busca]', tela).oninput = (ev) => { filtro.busca = ev.target.value; desenharLista(); };
@@ -526,5 +651,5 @@ export async function telaEditor(tela, partes, ctx) {
   if (sel) filtro.tipo = sel.startsWith('j:') ? 'conjurador' : DADOS.catalogo.cartas[sel.slice(2)]?.tipo ?? 'aliado';
   desenharTudo();
   desenharHistorico();
-  ctx.definirLimpeza(() => tela.classList.remove('cheia'));
+  ctx.definirLimpeza(() => { tela.classList.remove('cheia'); window.removeEventListener('storage', aoArmazenar); });
 }
