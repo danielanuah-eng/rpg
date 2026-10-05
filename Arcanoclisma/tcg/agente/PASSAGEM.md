@@ -20,7 +20,7 @@ Ver `.claude/EQUIPE.md`: `triagem-feedback` (haiku), `motor-regras` (opus médio
 Protegido unificado (ex-proteção mágica; vários Protegidos cobrados juntos), efeitos secundários (dano no Conjurador, descartar, sacrificar Aliado, Grau ao cemitério), reanimar com pagamento (grátis/custo/custo+X, cartas da mão ao Arcano), gatilho cataclismaOponente, tirar da mão (descartar/banir; acaso/dono escolhe/olhando, com sigilo). Decisões 30–35. Testes tcg 181, online 13.
 
 ## Próximos passos
-1. Ligar a entrega iconografia v19 do Codex (online/entregas-visuais/iconografia-v19.codex.json, kit/icones, css/js iconografia-v19, qa/magias-v19) — integrador-visual. Ícone de Protegido sem Arcano é com o Codex.
+1. (feito 04/10) Iconografia v19 ligada; Editor auditado: texto congelado, clique indo para "Gerar texto" e aviso de edição não salva corrigidos.
 2. Conferir na tela: Editor (Protegido, efeito secundário, reanimar, tirar da mão, Conjuradores) e mesa (sacrifício, reanimar com pagamento, olhar mão, ◈ Protessência, ⏳).
 3. Efeitos de magia v17: conferir pendências da integração.
 

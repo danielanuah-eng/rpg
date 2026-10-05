@@ -1,9 +1,9 @@
 {
   "tarefaId": "iconografia-mecanicas-v1",
   "autor": "Claude",
-  "estado": "solicitado",
+  "estado": "v19 integrada; ajuste pequeno pendente",
   "necessidadeAtual": true,
-  "versao": 2,
+  "versao": 3,
   "atualizadoEm": "2026-10-04",
   "pedidoDoAutor": "Fazer a iconografia dos símbolos das mecânicas. Exemplo do autor: suspender uma carta = uma carta se deitando, com uma seta apontando para baixo e riscos atrás mostrando movimento. Ícones para pagar Arcano, suspender etc. facilitam a leitura. Atualização (04/10): o autor pediu custo mínimo de Arcano e/ou Grau atrelado a cada caixa de texto, habilidade ou ação; o texto mostra \"(3+ no Grau · Pague 2)\" antes da linha. Precisamos de 2 ícones para esse requisito (custo de Arcano e Grau mínimo), que também servem para cartas e efeitos.",
   "objetivo": "Um ícone por mecânica, para aparecer ao lado da palavra no texto das cartas, na aba Palavras-chave e no tutorial do site.",
@@ -230,5 +230,14 @@
     "Não mudar regras, custos ou textos das cartas.",
     "Não incluir números nem letras dentro do ícone.",
     "A expansão A Mestra dos Dragões continua bloqueada."
+  ],
+  "ajustesPedidosAoCodex": [
+    {
+      "id": "v19-protegido-sem-numero",
+      "prioridade": "baixa",
+      "objetivo": "Em public/js/iconografia-v19.js, o trecho de \"protegido\" é /^s*protegido d+/. Desde 04/10 (noite) o Protegido é unificado: com Vida/descarte/Grau o texto fica \"Protegido: para mirar esta carta, o oponente precisa ...\", sem número (ou \"Protegido N: ...\"). Pedimos aceitar /^s*protegido\b/ para agrupar ícone e palavra (nowrap) nos dois casos.",
+      "contorno": "Já aplicado do nosso lado (icones.js envolve ícone+palavra em span.mecanica-termo-v19 quando o Protegido não tem número); o ícone aparece nos dois casos. Pode remover o contorno quando o ajuste chegar.",
+      "destino": "Arcanoclisma/online/public/js/iconografia-v19.js"
+    }
   ]
 }

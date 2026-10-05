@@ -84,6 +84,12 @@ export async function telaEditor(tela, partes, ctx) {
   rascunho = { ...edicoesVazias(), ...rascunho, artes: { cartas: {}, conjuradores: {}, ...(rascunho.artes ?? {}) }, raridades: { cartas: {}, conjuradores: {}, ...(rascunho.raridades ?? {}) } };
   let sel = partes[0] ? decodeURIComponent(partes[0]) : null; // "c:<id>" (carta) ou "j:<id>" (Conjurador)
   let filtro = { busca: '', tipo: 'conjurador' };
+  /**
+   * Texto que o editor gerou sozinho da mecânica (não conta como texto do autor); null = texto do autor.
+   * Variável, não `form.dataset.textoAuto`: o atributo `data-texto-auto` no formulário fazia todo clique nele
+   * cair no botão "Gerar o texto" (bug de 04/10: a arte não trocava e clicar no texto o reescrevia).
+   */
+  let textoAuto = null;
 
   const aplicarRascunho = () => {
     usarEdicoes({ id: EDICOES.id, dados: rascunho, rascunho: difereDoSalvo() });
@@ -92,6 +98,39 @@ export async function telaEditor(tela, partes, ctx) {
   const mudancas = () => new Set([...Object.keys(rascunho.cartas).map((x) => 'c:' + x), ...Object.keys(rascunho.artes.cartas).map((x) => 'c:' + x), ...Object.keys(rascunho.raridades.cartas).map((x) => 'c:' + x), ...Object.keys(rascunho.conjuradores).map((x) => 'j:' + x), ...Object.keys(rascunho.artes.conjuradores).map((x) => 'j:' + x), ...Object.keys(rascunho.raridades.conjuradores).map((x) => 'j:' + x)]);
   const difereDoSalvo = () => !igual(rascunho, EDICOES.salvo ?? EDICOES.dados);
   EDICOES.salvo ??= structuredClone(EDICOES.dados);
+  /** Cartas/Conjuradores do rascunho diferentes da versão salva no site (contador do botão Salvar). */
+  const pendentes = () => {
+    const s = EDICOES.salvo ?? EDICOES.dados, r = new Set();
+    for (const [t, g] of [['c', 'cartas'], ['j', 'conjuradores']]) {
+      for (const [a, b] of [[rascunho[g], s[g]], [rascunho.artes[g], s.artes?.[g]], [rascunho.raridades[g], s.raridades?.[g]]]) {
+        for (const id of new Set([...Object.keys(a ?? {}), ...Object.keys(b ?? {})])) if (!igual(a?.[id], b?.[id])) r.add(t + ':' + id);
+      }
+    }
+    return r.size;
+  };
+  // Mudança não salva impossível de ignorar (pedido do autor, 04/10): aviso ao fechar/recarregar e ao sair do Editor
+  globalThis.editorPendente = pendentes;
+  if (!globalThis.editorAvisoFechar) {
+    globalThis.editorAvisoFechar = true;
+    window.addEventListener('beforeunload', (ev) => { if (globalThis.editorPendente?.()) { ev.preventDefault(); ev.returnValue = ''; } });
+  }
+  ctx.definirSaida?.(() => new Promise((ok) => {
+    clearTimeout(espera); if (sel) lerForm();
+    const n = pendentes();
+    if (!n) return ok(true);
+    const j = janela(`<h3>Edição não salva</h3><p>Você tem <b>${n}</b> mudança(s) não salva(s). Os outros jogadores só veem depois de salvar.</p>
+      <div class="linha-botoes"><button class="botao primario" data-s="salvar">💾 Salvar</button><button class="botao" data-s="testar">Testar sem salvar</button><button class="botao" data-s="cancelar">Cancelar</button></div>`, { aoFechar: () => { if (!escolha) ok(false); } });
+    let escolha = null;
+    j.el.addEventListener('click', (ev) => {
+      const b = ev.target.closest('[data-s]');
+      if (!b) return;
+      escolha = b.dataset.s;
+      j.fechar();
+      if (escolha === 'testar') return ok(true);
+      if (escolha === 'cancelar') return ok(false);
+      abrirSalvar(() => ok(true), () => ok(false));
+    });
+  }));
   aplicarRascunho();
 
   tela.classList.add('cheia');
@@ -125,6 +164,8 @@ export async function telaEditor(tela, partes, ctx) {
         ? `<b class="falta">Edição não salva</b> (${n} carta(s)/Conjurador(es) no rascunho). Só vale para todos depois de salvar.`
         : `<b class="ok-salvo">Tudo salvo</b> · versão em vigor no site: ${EDICOES.id || 'nenhuma edição'}.`;
       tela.querySelector('.editor-barra-salvar').classList.toggle('pendente', difereDoSalvo());
+      const np = pendentes();
+      tela.querySelector('.editor-barra-salvar [data-salvar]').textContent = np ? `💾 Salvar edição (${np} não salva${np > 1 ? 's' : ''})` : '💾 Salvar edição';
     }
     estado.innerHTML = `<p class="peq">Versão em vigor no site: <b>${EDICOES.id || 'nenhuma edição'}</b>. Rascunho: <b>${n}</b> carta(s)/Conjurador(es) mudados${difereDoSalvo() ? ' · <span class="falta">não salvo</span>' : ' · salvo'}.<br>O rascunho já vale nesta página (teste contra o bot); os outros jogadores só veem depois de salvar.</p>`;
   }
@@ -142,7 +183,7 @@ export async function telaEditor(tela, partes, ctx) {
   // ---------- formulário ----------
   const numCampo = (k, rot, v) => `<label class="campo campo-num">${rot}<input type="number" step="1" data-num="${k}" value="${v ?? ''}" placeholder="—"></label>`;
   function desenharForm() {
-    delete form.dataset.textoAuto;
+    textoAuto = null;
     if (!sel) { form.innerHTML = '<p class="vazio">Escolha uma carta ou um Conjurador na lista.</p>'; preview.innerHTML = ''; return; }
     const [t, id] = [sel.slice(0, 1), sel.slice(2)];
     const conjur = t === 'j';
@@ -175,6 +216,16 @@ export async function telaEditor(tela, partes, ctx) {
       <div class="campo"><span>Requisitos por linha (Grau mínimo e Arcano a pagar; sem cumprir, a linha não acontece)</span><div class="editor-req" data-req-lista></div></div>
       <p class="peq editor-auto" data-auto-aviso></p>
       <div class="linha-botoes"><button class="botao perigo peq" data-desfazer>Desfazer as mudanças desta ${conjur ? 'Conjurador' : 'carta'}</button></div>`;
+    // Texto automático (bug de 04/10: ao reabrir a carta, o texto gerado virava "texto do autor" e congelava;
+    // apagar efeitos no JSON não mudava mais a carta). Sem texto no rascunho, ou texto igual ao gerado da
+    // mecânica atual, o texto continua automático e acompanha a mecânica.
+    {
+      const campoTxt = conjur ? 'habilidade' : 'texto';
+      const atual = c[campoTxt];
+      let gerado = null;
+      try { gerado = conjur ? textoPoder(c.poder) : textoCarta({ ...c, texto: '' }); } catch { /* mecânica que o texto não descreve */ }
+      if (!(campoTxt in ((conjur ? rascunho.conjuradores : rascunho.cartas)[id] ?? {})) || atual === gerado) textoAuto = atual;
+    }
     construtor = montarConstrutor($('[data-construtor]', form), mec, {
       conjur, tipoCarta: c.tipo, form, fichas: Object.values(DADOS.catalogo.cartas).filter((x) => x.ficha).map((x) => [x.id, x.nome]),
       aoMudar: (novo) => { $('[data-json]', form).value = JSON.stringify(novo, null, 2); desenharRequisitos(); clearTimeout(espera); lerForm(); },
@@ -247,7 +298,7 @@ export async function telaEditor(tela, partes, ctx) {
     }
     // texto que o editor escreveu sozinho (gerado da mecânica) não conta como texto do autor
     const campoTxt = conjur ? 'habilidade' : 'texto';
-    if (form.dataset.textoAuto !== undefined && novo[campoTxt] === form.dataset.textoAuto) novo[campoTxt] = base[campoTxt];
+    if (textoAuto !== null && novo[campoTxt] === textoAuto) novo[campoTxt] = base[campoTxt];
     if (!conjur && !novo.palavrasChave.length) novo.palavrasChave = undefined;
     for (const el of $$('[data-num]', form)) novo[el.dataset.num] = el.value === '' ? undefined : Math.trunc(Number(el.value));
     novo.valores = $$('[data-valor]', form).filter((x) => x.checked).map((x) => x.dataset.valor);
@@ -258,7 +309,12 @@ export async function telaEditor(tela, partes, ctx) {
       for (const k of conjur ? ['poder'] : MEC_CARTA) novo[k] = mec[k] ?? undefined;
       if (!conjur) novo.protecao = undefined; // nome antigo: convertido em `protegido` ao salvar
       erroJson.textContent = '';
-    } catch (err) { erroJson.textContent = 'JSON inválido (a mecânica não foi aplicada): ' + err.message; for (const k of conjur ? ['poder'] : MEC_CARTA) delete novo[k]; }
+    } catch (err) {
+      // JSON inválido (no meio da digitação): mantém a mecânica atual do rascunho, sem voltar à da base
+      erroJson.textContent = 'JSON inválido (a mecânica não foi aplicada): ' + err.message;
+      for (const k of conjur ? ['poder'] : MEC_CARTA) novo[k] = antes[k] ?? undefined;
+      if (!conjur) novo.protecao = undefined;
+    }
     const parcial = {};
     for (const [k, v] of Object.entries(novo)) {
       if (!(k in novo) || igual(v, base[k])) continue;
@@ -279,10 +335,10 @@ export async function telaEditor(tela, partes, ctx) {
       const r = atualizarNumerosNoTexto(grupo[id][campoTxt], antes, depois, conjur ? ['poder'] : NUM_TEXTO_CARTA);
       if (r.texto !== grupo[id][campoTxt]) { grupo[id][campoTxt] = r.texto; caixa.value = r.texto; aplicarRascunho(); avisoAuto.push('Números do texto atualizados sozinhos.'); }
       if (r.avisos.length) avisoAuto.push('Confira o texto: ' + r.avisos.join('; ') + '.');
-      delete form.dataset.textoAuto;
+      textoAuto = null;
     } else if (caixa && caixa.value !== depois[campoTxt] && document.activeElement !== caixa) {
       // texto automático: mostra o texto novo gerado da mecânica (carta) ou do poder (Conjurador)
-      caixa.value = depois[campoTxt]; form.dataset.textoAuto = depois[campoTxt];
+      caixa.value = depois[campoTxt]; textoAuto = depois[campoTxt];
       avisoAuto.push('Texto gerado de novo a partir da mecânica.');
     }
     const av = $('[data-auto-aviso]', form);
@@ -302,9 +358,10 @@ export async function telaEditor(tela, partes, ctx) {
       delete rascunho.raridades[t === 'j' ? 'conjuradores' : 'cartas'][id];
       aplicarRascunho(); desenharTudo(); return;
     }
-    if (ev.target.closest('[data-texto-auto]')) {
-      if (t === 'j') $('[data-f="habilidade"]', form).value = textoPoder(DADOS.catalogo.conjuradores[id].poder);
-      else $('[data-f="texto"]', form).value = textoCarta({ ...DADOS.catalogo.cartas[id], texto: '' });
+    if (ev.target.closest('button[data-texto-auto]')) {
+      // o texto volta a ser automático (acompanha a mecânica daqui em diante)
+      const caixaTxt = $(t === 'j' ? '[data-f="habilidade"]' : '[data-f="texto"]', form);
+      caixaTxt.value = textoAuto = t === 'j' ? textoPoder(DADOS.catalogo.conjuradores[id].poder) : textoCarta({ ...DADOS.catalogo.cartas[id], texto: '' });
       lerForm(); return;
     }
     if (ev.target.closest('[data-trocar-arte]')) {
@@ -343,29 +400,33 @@ export async function telaEditor(tela, partes, ctx) {
       h.innerHTML = versoes.length ? versoes.map((v) => `<div class="editor-versao"><b>#${v.id}</b> · ${dataCurta(v.criado)} · ${v.mudancas} mudança(s)${v.id === EDICOES.id ? ' · <span class="etiqueta">em vigor</span>' : ''}<br>${esc(v.nota || 'sem nota')}<div class="linha-botoes"><button class="botao peq" data-versao="${v.id}">Abrir como rascunho</button></div></div>`).join('') : 'Nenhuma versão salva ainda.';
     } catch (err) { h.textContent = 'Não foi possível ler as versões: ' + err.message; }
   }
+  /** Janela de salvar no site. `aoSalvar`/`aoCancelar`: usados ao sair do Editor com mudanças pendentes. */
+  function abrirSalvar(aoSalvar, aoCancelar) {
+    // grava no rascunho a última mudança ainda esperando o intervalo de digitação
+    if (sel) { clearTimeout(espera); lerForm(); }
+    let salvou = false;
+    const j = janela(`<h3>Salvar no site</h3><p class="peq">A versão nova vale para todos a partir de agora (partidas online já começadas continuam com a versão do início).</p>
+      <label class="campo">Nota (o porquê da mudança)<textarea data-nota maxlength="500"></textarea></label><div class="linha-botoes"><button class="botao primario" data-ok>Salvar</button></div>`, { aoFechar: () => { if (!salvou) aoCancelar?.(); } });
+    $('[data-ok]', j.el).onclick = async () => {
+      try {
+        const r = await api('/edicoes', { corpo: { dados: rascunho, nota: $('[data-nota]', j.el).value } });
+        salvou = true;
+        j.fechar();
+        await carregarEdicoes();
+        EDICOES.salvo = structuredClone(EDICOES.dados);
+        rascunho = structuredClone(EDICOES.dados);
+        aplicarRascunho();
+        avisar(`Versão #${r.id} salva (${r.mudancas} mudança(s)).`, 'ok', 5000);
+        if (r.avisos?.length) janela(`<h3>Atenção: baralhos prontos afetados</h3><p class="peq">As edições foram salvas, mas estes baralhos prontos deixaram de valer e não abrem partida até serem ajustados:</p><ul>${r.avisos.map((a) => `<li>${esc(a)}</li>`).join('')}</ul>`);
+        if (aoSalvar) return aoSalvar();
+        desenharTudo(); desenharHistorico();
+      } catch (err) { avisar(err.message, 'erro', 6000); }
+    };
+  }
   // salvar: botão fixo no topo e o da coluna da direita (pedido do autor, 04/10: a edição só vale depois de salvar)
   tela.addEventListener('click', async (ev) => {
     if (!ev.target.closest('[data-salvar], [data-baixar], [data-descartar], [data-versao]')) return;
-    if (ev.target.closest('[data-salvar]')) {
-      // grava no rascunho a última mudança ainda esperando o intervalo de digitação
-      if (sel) { clearTimeout(espera); lerForm(); }
-      const j = janela(`<h3>Salvar no site</h3><p class="peq">A versão nova vale para todos a partir de agora (partidas online já começadas continuam com a versão do início).</p>
-        <label class="campo">Nota (o porquê da mudança)<textarea data-nota maxlength="500"></textarea></label><div class="linha-botoes"><button class="botao primario" data-ok>Salvar</button></div>`);
-      $('[data-ok]', j.el).onclick = async () => {
-        try {
-          const r = await api('/edicoes', { corpo: { dados: rascunho, nota: $('[data-nota]', j.el).value } });
-          j.fechar();
-          await carregarEdicoes();
-          EDICOES.salvo = structuredClone(EDICOES.dados);
-          rascunho = structuredClone(EDICOES.dados);
-          aplicarRascunho();
-          avisar(`Versão #${r.id} salva (${r.mudancas} mudança(s)).`, 'ok', 5000);
-          if (r.avisos?.length) janela(`<h3>Atenção: baralhos prontos afetados</h3><p class="peq">As edições foram salvas, mas estes baralhos prontos deixaram de valer e não abrem partida até serem ajustados:</p><ul>${r.avisos.map((a) => `<li>${esc(a)}</li>`).join('')}</ul>`);
-          desenharTudo(); desenharHistorico();
-        } catch (err) { avisar(err.message, 'erro', 6000); }
-      };
-      return;
-    }
+    if (ev.target.closest('[data-salvar]')) { abrirSalvar(); return; }
     if (ev.target.closest('[data-baixar]')) {
       const a = document.createElement('a');
       a.href = URL.createObjectURL(new Blob([JSON.stringify(rascunho, null, 2)], { type: 'application/json' }));

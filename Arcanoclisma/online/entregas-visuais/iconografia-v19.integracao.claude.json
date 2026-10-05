@@ -1,0 +1,27 @@
+{
+  "tarefaId": "iconografia-mecanicas-v1",
+  "versao": 19,
+  "atualizadoEm": "2026-10-04",
+  "confirmado": {
+    "caminho": "Um só desenho: public/js/icones.js (gatilhos e lista, lê kit/icones/manifesto.json, 32 ícones okGpt:true) gera <img class=\"icone-mecanica\">; o adaptador do Codex (iconografia-v19.css/js) só converte em máscara currentColor e agrupa ícone+palavra. Nenhum ícone é desenhado duas vezes.",
+    "ligado": [
+      "index.html carrega /css/iconografia-v19.css e /js/iconografia-v19.js",
+      "texto das cartas e Palavras-chave (via icones.js, já existentes)",
+      "tutorial: balões, objetivos e dicas da partida usam iconizarHtml/iconizar (icones.js) sobre os mesmos gatilhos; títulos ficam sem ícone"
+    ],
+    "protegido": "Ícone aparece em \"Protegido N\" e em \"Protegido: ...\"; para o segundo caso o agrupamento nowrap é feito em icones.js (contorno).",
+    "testes": "node construir.ts e npm test: 13 de 13 passam. iconizarHtml conferido por script (tags e entidades preservadas). Não conferido no navegador."
+  },
+  "qa": {
+    "pagina": "/qa/magias-v19.html",
+    "decisao": "É só QA do Codex (cenários falsos de mesa para conferir efeitos de magia), sem link no app. Não apagada; public/.assetsignore com \"qa/\" a tira do deploy do Worker. Local (online-local) continua servindo. Remover a linha se quiser publicá-la."
+  },
+  "planejado": [
+    "Aceitar \"Protegido\" sem número no trecho do adaptador v19 (pedido em online/pedidos-visuais/iconografia.claude.json)"
+  ],
+  "conferirNaTela": [
+    "Texto da carta na mão/campo com ícones em máscara na cor do texto (cartas claras e escuras)",
+    "Balões do tutorial: lições Grau e Arcano, pilha e habilidades",
+    "Protegido sem número em carta com Vida/descarte/Grau"
+  ]
+}

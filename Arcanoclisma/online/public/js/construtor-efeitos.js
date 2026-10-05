@@ -92,6 +92,7 @@ export function montarConstrutor(caixa, mecInicial, { conjur, tipoCarta, form, a
           <button class="botao perigo peq" data-rm-hab="${idx}">${conjur ? 'Tirar habilidade' : 'Tirar condição'}</button></div>
         ${custoHTML(h, idx)}
         ${(h.efeitos ?? []).map((ef, i) => efHTML(ef, idx, i)).join('')}
+        ${(h.efeitos ?? []).length ? '' : `<p class="peq falta">${conjur ? 'Habilidade' : 'Condição'} sem efeitos: não faz nada. Acrescente um efeito ou use "${conjur ? 'Tirar habilidade' : 'Tirar condição'}".</p>`}
         <button class="botao peq" data-add-ef="${idx}">+ efeito</button>
         <button class="botao peq" data-add-sec="${idx}" title="Custo ou consequência depois dos efeitos (dano no seu Conjurador, descarte, sacrificar um Aliado, Grau ao cemitério)">+ efeito secundário</button>
         <p class="peq cst-previa">${esc(previa(h))}</p></div>`).join('')}`;

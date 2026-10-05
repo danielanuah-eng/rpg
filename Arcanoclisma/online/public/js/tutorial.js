@@ -3,6 +3,7 @@
 import { criarJogo, executar, recemChegado, grauEfetivo } from '/jogo/motor.js';
 import { $, esc, DADOS, conj, carta, nomeCurto, cenario, local, avisar, prontoDe, listaParaCartas } from './base.js';
 import { conjuradorHTML } from './carta.js';
+import { iconizarHtml, iconizar } from './icones.js';
 import { abrirMesa } from './mesa.js';
 import { criarPartidaLocal } from './partida-local.js';
 
@@ -206,8 +207,8 @@ export async function telaTutorial(tela, partes, ctx) {
   fonte.tutorial = {
     balao() {
       const p = atual();
-      return `<div class="balao-tutorial"><div class="passo">Lição ${indice + 1} · passo ${passo + 1} de ${licao.passos.length}</div><h3>${esc(p.titulo)}</h3><div>${p.texto}</div>
-        ${p.objetivo ? `<div class="objetivo">🎯 ${esc(p.objetivo)}</div>` : ''}
+      return `<div class="balao-tutorial"><div class="passo">Lição ${indice + 1} · passo ${passo + 1} de ${licao.passos.length}</div><h3>${esc(p.titulo)}</h3><div>${iconizarHtml(p.texto)}</div>
+        ${p.objetivo ? `<div class="objetivo">🎯 ${iconizar(p.objetivo)}</div>` : ''}
         <div class="linha-botoes">${temProximo(p) ? '<button class="botao primario peq" data-tut-prox>Próximo ▸</button>' : ''}
         ${p.fim ? `${LICOES[indice + 1] ? `<a class="botao primario peq" href="#/tutorial/${LICOES[indice + 1].id}">Próxima lição ▸</a>` : '<a class="botao primario peq" href="#/tutorial/partida">Partida com dicas ▸</a>'}<a class="botao peq" href="#/tutorial">Lições</a>` : ''}
         <button class="botao peq fantasma" data-tut-reiniciar>Recomeçar lição</button></div></div>`;
@@ -262,7 +263,7 @@ function partidaComDicas(tela, ctx) {
   fonte.tutorial = {
     balao() {
       if (fechado) return '<button class="botao peq balao-reabrir" data-dicas>💡 Dicas</button>';
-      return `<div class="balao-tutorial"><div class="passo">Partida com dicas</div><h3>O que fazer agora</h3><div>${dica(fonte.e)}</div><div class="linha-botoes"><button class="botao peq fantasma" data-dicas>Esconder dicas</button></div></div>`;
+      return `<div class="balao-tutorial"><div class="passo">Partida com dicas</div><h3>O que fazer agora</h3><div>${iconizarHtml(dica(fonte.e))}</div><div class="linha-botoes"><button class="botao peq fantasma" data-dicas>Esconder dicas</button></div></div>`;
     },
   };
   const mesa = abrirMesa($('#mesa-raiz'), fonte, { aoSair: () => ctx.navegar('tutorial'), opinar: ctx.opinar });

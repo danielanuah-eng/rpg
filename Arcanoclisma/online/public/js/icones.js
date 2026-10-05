@@ -49,10 +49,9 @@ export function icone(id, titulo) {
   const nome = titulo ?? ICONES.find((i) => i.id === id)?.nome ?? id;
   return `<img class="icone-mecanica" src="${esc(arq)}" alt="" title="${esc(nome)}" aria-hidden="true">`;
 }
-/** Texto de carta com os ícones antes das palavras das mecânicas (texto escapado; só ícones aprovados). */
-export function iconizar(texto) {
-  const plano = String(texto ?? '');
-  if (!prontos.size) return esc(plano);
+/** Junta os gatilhos de um trecho de texto puro e devolve HTML: `fora` formata o texto entre os ícones (esc para texto puro, identidade para HTML já pronto). */
+function marcar(plano, fora) {
+  if (!prontos.size) return fora(plano);
   // uma passada só, sobre o texto original: junta as posições de todos os gatilhos e não sobrepõe
   const achados = [];
   for (const i of ICONES) {
@@ -63,9 +62,21 @@ export function iconizar(texto) {
   let html = '', pos = 0;
   for (const a of achados) {
     if (a.ini < pos) continue;
-    html += esc(plano.slice(pos, a.ini)) + icone(a.id) + esc(plano.slice(a.ini, a.fim));
+    const palavra = fora(plano.slice(a.ini, a.fim));
+    // "Protegido: ..." (sem número) não é agrupado pelo adaptador v19 (só reconhece "Protegido N"): agrupamos aqui para o ícone não ficar sozinho no fim da linha
+    const termo = a.id === 'protegido' ? `<span class="mecanica-termo-v19">${icone(a.id)}${palavra}</span>` : icone(a.id) + palavra;
+    html += fora(plano.slice(pos, a.ini)) + termo;
     pos = a.fim;
   }
-  return html + esc(plano.slice(pos));
+  return html + fora(plano.slice(pos));
+}
+/** Texto de carta com os ícones antes das palavras das mecânicas (texto escapado; só ícones aprovados). */
+export function iconizar(texto) {
+  return marcar(String(texto ?? ''), esc);
+}
+/** Igual a iconizar, mas para HTML já montado (ex.: balões do tutorial com <b>): só mexe nos trechos de texto, nunca nas tags. */
+export function iconizarHtml(html) {
+  if (!prontos.size) return String(html ?? '');
+  return String(html ?? '').split(/(<[^>]*>)/).map((p) => (p.startsWith('<') ? p : marcar(p, (t) => t))).join('');
 }
 export const temIcones = () => prontos.size > 0;

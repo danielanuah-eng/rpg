@@ -7,6 +7,8 @@ import { conectarPartida } from './partida-online.js';
 
 const tela = $('#tela');
 let limpar = null; // função para fechar a tela atual (mesa, conexões)
+/** Confirmação antes de sair da tela atual (Editor com mudanças não salvas): async () => true para sair. */
+let antesDeSair = null;
 
 // ---------- rotas ----------
 const rotas = {
@@ -32,6 +34,7 @@ async function navegar() {
   const [nome, ...partes] = (location.hash.replace(/^#\/?/, '') || 'inicio').split('/');
   limpar?.();
   limpar = null;
+  antesDeSair = null;
   $('#menu').classList.remove('aberto');
   for (const a of $$('#menu a')) a.classList.toggle('ativo', a.dataset.r === nome || (nome === 'construtor' && a.dataset.r === 'baralhos'));
   tela.classList.remove('cheia');
@@ -42,7 +45,7 @@ async function navegar() {
   tela.focus({ preventScroll: true });
 }
 const fundo = (url) => $('#fundo').style.setProperty('--cena', `url('${url}')`);
-export const ctx = { navegar: (r) => { location.hash = '#/' + r; }, fundo, exigirConta, opinar, definirLimpeza: (f) => { limpar = f; }, abrirPartidaBot };
+export const ctx = { navegar: (r) => { location.hash = '#/' + r; }, fundo, exigirConta, opinar, definirLimpeza: (f) => { limpar = f; }, definirSaida: (f) => { antesDeSair = f; }, abrirPartidaBot };
 
 // ---------- conta ----------
 function desenharConta() {
@@ -360,7 +363,17 @@ async function opinar(contexto) {
 document.body.insertAdjacentHTML('beforeend', '<button class="botao rosa opinar-flutuante" data-opinar-global title="Mandar opinião, nota ou dúvida">💬 Opinar</button>');
 document.addEventListener('click', (ev) => { if (ev.target.closest('[data-opinar-global]')) opinar(null); });
 
-window.addEventListener('hashchange', navegar);
+window.addEventListener('hashchange', async (ev) => {
+  // saída do Editor com mudanças não salvas (pedido do autor, 04/10): pergunta antes; cancelou → o endereço volta
+  const rota = (h) => (h.replace(/^#\/?/, '') || 'inicio').split('/')[0];
+  if (antesDeSair && rota(location.hash) !== rota(new URL(ev.oldURL).hash)) {
+    const destino = location.hash;
+    history.replaceState(null, '', ev.oldURL);
+    if (!(await antesDeSair())) return;
+    history.replaceState(null, '', destino);
+  }
+  navegar();
+});
 await carregarSessao();
 navegar();
 export { dataCurta, carta, CONJS };
