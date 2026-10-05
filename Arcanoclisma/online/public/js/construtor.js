@@ -1,10 +1,20 @@
 // Baralhos: os 9 prontos, os seus e os da comunidade; construtor com a regra das cores (Valores do Conjurador).
-import { $, $$, esc, api, DADOS, CONJS, conj, carta, nomeCurto, cenario, cenarioValor, COR_VALOR, VALOR, TIPO, sessao, avisar, janela, confirmar, itensDoConjurador, cartaServe, prontoDe, dataCurta } from './base.js';
+import { $, $$, esc, api, DADOS, CONJS, conj, carta, nomeCurto, cenario, cenarioValor, COR_VALOR, VALOR, TIPO, sessao, avisar, janela, confirmar, itensDoConjurador, cartaServe, prontoDe, dataCurta, errosBaralho, cartasForaDaRegra, corrigirBaralho, motivoCarta } from './base.js';
 import { cartaHTML, conjuradorHTML, desenharCarta, modeloCarta } from './carta.js';
 
 const TAM = DADOS.tamanhoBaralho;
 const total = (lista) => lista.reduce((s, [, n]) => s + n, 0);
 const chips = (vs) => `<div class="valores-chips">${vs.map((v) => `<span class="chip-valor" style="background:${COR_VALOR[v]}">${esc(VALOR[v])}</span>`).join('')}</div>`;
+
+/** Erros de um baralho salvo (o Worker manda `erros`; o site confere de novo com as regras atuais). */
+const errosDe = (b) => b.erros ?? errosBaralho(b);
+/** Aviso de baralho que ficou inválido (ex.: regra das cores, decisão 37): não é apagado, só não entra em partida. */
+function avisoInvalido(b) {
+  const fora = cartasForaDaRegra(b);
+  const erros = errosDe(b);
+  if (!erros.length) return '';
+  return `<div class="aviso-invalido peq"><b>Inválido: não pode ser usado em partida até ser corrigido.</b> ${fora.length ? `Saíram da regra das cores: ${fora.map((id) => esc(carta(id).nome)).join(', ')}.` : esc(erros.join(' '))}</div>`;
+}
 
 function cartaoBaralho(b, { autor, acoes = '' } = {}) {
   const c = conj(b.conjurador);
@@ -12,13 +22,13 @@ function cartaoBaralho(b, { autor, acoes = '' } = {}) {
     ${conjuradorHTML(b.conjurador, { width: 96 })}
     <div class="cb-info"><b>${esc(b.nome)}</b><span class="peq">${esc(nomeCurto(c))}${autor ? ` · de ${esc(autor)}` : ''}${b.atualizado ? ` · ${dataCurta(b.atualizado)}` : ''}</span>${chips(c.valores)}
       <span class="peq">${total(b.lista)} cartas · itens: ${(b.itens ?? []).map((i) => esc(carta(i)?.nome ?? i)).join(', ') || 'nenhum'}</span>
-      <div class="linha-botoes">${acoes}</div></div></div>`;
+      ${avisoInvalido(b)}<div class="linha-botoes">${acoes}</div></div></div>`;
 }
 
 export async function telaBaralhos(tela, partes, ctx) {
   ctx.fundo(cenario('baralhos'));
   tela.innerHTML = `<div class="titulo-secao"><h1>Baralhos</h1><a class="botao primario" href="#/construtor/novo">+ Montar baralho</a></div>
-    <p class="peq">Regra das cores: o baralho tem ${TAM} cartas, só com cartas dos 2 Valores do Conjurador (a cor da bolinha do custo), no máximo ${DADOS.maxCopias} cópias de cada carta. Antes da partida você escolhe um Canal, uma Armadura e um Extra.</p>
+    <p class="peq">Regra das cores: o baralho tem ${TAM} cartas dos Valores do Conjurador (a cor da bolinha do custo). Carta de 1 Valor: um dos 2 dele. Carta de 2 Valores: só se forem exatamente os 2 dele. Carta de 3 ou mais: os 2 dele precisam estar entre os da carta. No máximo ${DADOS.maxCopias} cópias de cada carta. Antes da partida você escolhe um Canal, uma Armadura e um Extra; itens com Valor seguem a mesma regra das cores (sem Valor, servem a todos).</p>
     <div class="abas"><button data-aba="meus" class="ativo">Meus</button><button data-aba="prontos">Prontos</button><button data-aba="comunidade">Comunidade</button><button data-aba="colecao">Coleção</button></div>
     <div id="lista-baralhos"><div class="girando"></div></div>`;
   const area = $('#lista-baralhos');
@@ -30,11 +40,11 @@ export async function telaBaralhos(tela, partes, ctx) {
     for (const b of $$('.abas [data-aba]', tela)) b.classList.toggle('ativo', b.dataset.aba === aba);
     if (aba === 'meus') {
       if (!sessao.usuario) { area.innerHTML = '<div class="painel vazio">Entre na sua conta para montar e guardar baralhos. <button class="botao primario" data-entrar>Entrar</button></div>'; return; }
-      area.innerHTML = meus.length ? `<div class="grade g2">${meus.map((b) => cartaoBaralho(b, { acoes: `<a class="botao peq primario" href="#/construtor/${b.id}">Editar</a><button class="botao peq" data-jogar="meu:${b.id}">Jogar contra o bot</button><button class="botao peq perigo" data-apagar="${b.id}">Apagar</button>${b.publico ? '<span class="etiqueta">público</span>' : ''}` })).join('')}</div>` : '<div class="painel vazio">Você ainda não montou nenhum baralho. Comece de um pronto ou do zero.</div>';
+      area.innerHTML = meus.length ? `<div class="grade g2">${meus.map((b) => cartaoBaralho(b, { acoes: `<a class="botao peq primario" href="#/construtor/${b.id}">Editar</a>${errosDe(b).length ? `<a class="botao peq" href="#/construtor/${b.id}">Corrigir</a>` : `<button class="botao peq" data-jogar="meu:${b.id}">Jogar contra o bot</button>`}<button class="botao peq perigo" data-apagar="${b.id}">Apagar</button>${b.publico ? '<span class="etiqueta">público</span>' : ''}` })).join('')}</div>` : '<div class="painel vazio">Você ainda não montou nenhum baralho. Comece de um pronto ou do zero.</div>';
     } else if (aba === 'prontos') {
       area.innerHTML = `<div class="grade g2">${DADOS.baralhos.map((b) => cartaoBaralho(b, { acoes: `<button class="botao peq" data-ver-pronto="${b.conjurador}">Ver cartas</button><a class="botao peq" href="#/construtor/copiar-${b.conjurador}">Copiar e editar</a><button class="botao peq primario" data-jogar="pronto:${b.conjurador}">Jogar contra o bot</button>` })).join('')}</div>`;
     } else if (aba === 'comunidade') {
-      area.innerHTML = publicos.length ? `<div class="grade g2">${publicos.map((b) => cartaoBaralho(b, { autor: b.autor, acoes: `<button class="botao peq" data-ver-pub="${b.id}">Ver cartas</button><button class="botao peq primario" data-enfrentar="${b.id}">Enfrentar com o bot</button>` })).join('')}</div>` : '<div class="painel vazio">Ninguém publicou um baralho ainda. Marque o seu como público no construtor!</div>';
+      area.innerHTML = publicos.length ? `<div class="grade g2">${publicos.map((b) => cartaoBaralho(b, { autor: b.autor, acoes: `<button class="botao peq" data-ver-pub="${b.id}">Ver cartas</button>${errosDe(b).length ? '' : `<button class="botao peq primario" data-enfrentar="${b.id}">Enfrentar com o bot</button>`}` })).join('')}</div>` : '<div class="painel vazio">Ninguém publicou um baralho ainda. Marque o seu como público no construtor!</div>';
     } else colecao(area);
   };
   tela.addEventListener('click', async (ev) => {
@@ -129,8 +139,9 @@ function montar(tela, b, ctx) {
       <h3>Baralho <span id="ct-total"></span></h3>
       <div class="ct-curva"></div>
       <div class="ct-lista"></div>
-      <h3>Side deck (itens)</h3><div class="ct-itens"></div>
+      <h3>Side deck (itens)</h3><p class="peq">Só aparecem os itens que servem ao Conjurador: mesma regra das cores das cartas.</p><div class="ct-itens"></div>
       <label class="opcao-linha"><input type="checkbox" id="publico" ${b.publico ? 'checked' : ''}> Público (outros podem ver e enfrentar com o bot)</label>
+      <div class="ct-regra"></div>
       <div class="ct-erros peq"></div>
       <div class="linha-botoes"><button class="botao primario" data-salvar>Salvar</button><button class="botao" data-completar>Completar com Minas Fundas</button><button class="botao fantasma" data-limpar>Limpar</button></div>
     </div></div>`;
@@ -139,7 +150,7 @@ function montar(tela, b, ctx) {
   const desenharPool = () => {
     const lista = pool.filter((x) => (!filtros.so || pode(x)) && (!filtros.q || (x.nome + ' ' + x.texto).toLowerCase().includes(filtros.q)) && (!filtros.tipo || x.tipo === filtros.tipo) && (filtros.custo === '' || x.custo === Number(filtros.custo)))
       .sort((a, z) => a.custo - z.custo || a.tipo.localeCompare(z.tipo) || a.nome.localeCompare(z.nome));
-    $('.ct-pool', tela).innerHTML = lista.map((x) => `<div class="item-vitrine ${pode(x) ? '' : 'fora'}" data-add="${x.id}" title="${pode(x) ? 'Clique para adicionar · botão direito (ou segurar, no celular) para ver' : 'Não combina com os Valores do Conjurador'}">${cartaHTML(x.id, { width: 132 })}${qtd.get(x.id) ? `<span class="contador-copias">${qtd.get(x.id)}</span>` : ''}</div>`).join('');
+    $('.ct-pool', tela).innerHTML = lista.map((x) => `<div class="item-vitrine ${pode(x) ? '' : 'fora'}" data-add="${x.id}" title="${esc(pode(x) ? 'Clique para adicionar · botão direito (ou segurar, no celular) para ver' : motivoCarta(x, b.conjurador))}">${cartaHTML(x.id, { width: 132 })}${qtd.get(x.id) ? `<span class="contador-copias">${qtd.get(x.id)}</span>` : ''}</div>`).join('');
   };
   const desenharLista = () => {
     const n = [...qtd.values()].reduce((s, k) => s + k, 0);
@@ -153,8 +164,10 @@ function montar(tela, b, ctx) {
     $('.ct-itens', tela).innerHTML = ['canal', 'armadura', 'extra'].map((esp) => `<label class="campo">${{ canal: 'Canal (arma, foco arcano ou transcritor)', armadura: 'Armadura', extra: 'Extra' }[esp]}<select data-slot="${esp}"><option value="">nenhum</option>${itensDoConjurador(b.conjurador).filter((x) => x.categoriaItem === esp).map((x) => `<option value="${x.id}" ${b.itens.includes(x.id) ? 'selected' : ''}>${esc(x.nome)}: ${esc(x.texto.replace(/^[^.]+\.\s*/, ''))}</option>`).join('')}</select></label>`).join('');
     const erros = [];
     if (n !== TAM) erros.push(n < TAM ? `Faltam ${TAM - n} cartas.` : `Sobram ${n - TAM} cartas.`);
-    for (const [idc, k] of qtd) { if (!pode(carta(idc))) erros.push(`${carta(idc).nome} não combina com os Valores.`); if (k > limite(idc)) erros.push(`${carta(idc).nome}: no máximo ${DADOS.maxCopias}.`); }
+    for (const [idc, k] of qtd) { if (!pode(carta(idc))) erros.push(motivoCarta(carta(idc), b.conjurador)); if (k > limite(idc)) erros.push(`${carta(idc).nome}: no máximo ${DADOS.maxCopias}.`); }
     $('.ct-erros', tela).innerHTML = erros.map(esc).join('<br>');
+    const fora = [...qtd.keys()].filter((idc) => !pode(carta(idc)));
+    $('.ct-regra', tela).innerHTML = fora.length ? `<div class="aviso-invalido peq"><b>Este baralho ficou inválido pela regra das cores</b> (2 Valores = exatamente os 2 do Conjurador; 3 ou mais = os 2 dele entre os da carta). Saíram: ${fora.map((idc) => esc(carta(idc).nome)).join(', ')}. Ele não entra em partida até ser corrigido. <button class="botao peq primario" data-corrigir>Corrigir automaticamente</button></div>` : '';
     desenharPool();
   };
   const mudar = (idc, d) => {
@@ -192,6 +205,13 @@ function montar(tela, b, ctx) {
     if (bt.dataset.menos) return mudar(bt.dataset.menos, -1);
     if (bt.matches('[data-voltar]')) return ctx.navegar('baralhos');
     if (bt.matches('[data-trocar]')) return escolherConjurador(tela, ctx, (novo) => { b.conjurador = novo; b.itens = prontoDe(novo).itens; b.lista = [...qtd]; montar(tela, b, ctx); });
+    if (bt.matches('[data-corrigir]')) {
+      const r = corrigirBaralho({ conjurador: b.conjurador, lista: [...qtd] });
+      qtd.clear();
+      for (const [idc, k] of r.lista) qtd.set(idc, k);
+      avisar(`${r.trocas.length} carta(s) trocada(s)${r.semSubstituto.length ? `; ${r.semSubstituto.length} sem substituta (complete à mão)` : ''}. Confira e salve.`, 'ok', 6000);
+      desenharLista(); return;
+    }
     if (bt.matches('[data-limpar]')) { if (await confirmar('Tirar todas as cartas?')) { qtd.clear(); desenharLista(); } return; }
     if (bt.matches('[data-completar]')) {
       // as Minas Fundas dos Valores do Conjurador, até o limite de cópias de cada uma

@@ -1,7 +1,42 @@
 // Gerado por online/construir.ts a partir de tcg/sim/bot.ts. Não edite: edite o .ts e reconstrua.
 // Jogador guloso para simulações. Não é forte: serve para expor quais mecânicas são usadas, ignoradas ou abusadas.
-import { ataqueConjurador, ativacaoDeHabilidade, custoEfetivo, custoProtecao, origemDaCarta, defCarta, custoAtaqueConjurador, defConjurador, ehRepentina, etereo as etereoMotor, GRAU_MAXIMO, grauAtaqueConjurador, grauEfetivo, recemChegado, efeitoSemConjurador, protegidaDe, protegidoDe, candidatosReanimar, custoReanimar, efeitosAoJogar, efeitosAoEntrar, arcanoNaHora } from './motor.js';
-                                                                                            
+import { ataqueConjurador, ativacaoDeHabilidade, custoEfetivo, custoProtecao, origemDaCarta, defCarta, custoAtaqueConjurador, defConjurador, ehRepentina, etereo as etereoMotor, GRAU_MAXIMO, grauAtaqueConjurador, grauEfetivo, recemChegado, efeitoSemConjurador, protegidaDe, protegidoDe, candidatosReanimar, custoReanimar, efeitosAoJogar, efeitosAoEntrar, arcanoNaHora, itemServe } from './motor.js';
+                                                                                                                     
+
+/** Itens básicos de cada espaço: o bot usa quando nenhum item do espaço serve ao Conjurador. */
+export const ITEM_BASICO                                = { canal: 'item-canal-cajado', armadura: 'item-armadura-gibao', extra: 'item-extra-pocao' };
+
+/**
+ * Equipamento aleatório do bot (pedido do autor, 04/10): um item de cada espaço (Canal, Armadura, Extra) entre os que servem
+ * ao Conjurador (`itemServe`), sorteado pela semente da partida (mesma semente = mesmo equipamento ao retomar).
+ * Peso (autor, 04/10; decisão 38): item com Valor do Conjurador vale 3, genérico/sem Valor vale 1. O id do Conjurador entra
+ * na semente, para os 9 bots não tirarem o mesmo item com a mesma semente.
+ */
+export const PESO_ITEM_DO_VALOR = 3;
+
+export function sortearItensBot(catalogo          , conjuradorId        , semente        )           {
+  const conj = catalogo.conjuradores[conjuradorId];
+  let h = 2166136261;
+  for (const ch of conjuradorId) h = Math.imul(h ^ ch.charCodeAt(0), 16777619);
+  let rng = (semente ^ 0x5bd1e995 ^ h) >>> 0;
+  const sorteio = ()         => {
+    rng = (rng + 0x6d2b79f5) >>> 0;
+    let t = rng;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  const todos = Object.values(catalogo.cartas).sort((a, b) => (a.id < b.id ? -1 : 1));
+  return (['canal', 'armadura', 'extra']                   ).map((esp) => {
+    const servem = conj ? todos.filter((d) => d.categoriaItem === esp && itemServe(conj, d)) : [];
+    const r = sorteio();
+    if (!servem.length) return ITEM_BASICO[esp];
+    const peso = (d          ) => (d.valores?.length ? PESO_ITEM_DO_VALOR : 1); // se serve e tem Valor, tem Valor do Conjurador
+    let alvo = r * servem.reduce((t, d) => t + peso(d), 0);
+    for (const d of servem) { alvo -= peso(d); if (alvo < 0) return d.id; }
+    return servem[servem.length - 1].id;
+  }).filter((id) => !!catalogo.cartas[id]);
+}
 
                          
                
@@ -406,6 +441,77 @@ function planejarAtivacao(e        , j         , est        )                 {
   return null;
 }
 
+/** Arcano que o jogador consegue juntar agora sem gastar cartas da mão (Arcano solto, Graus levantados, permanentes de mana). */
+function arcanoAlcancavel(e        , j         )         {
+  return e.jogadores[j].arcano + grauUsavel(e, j).length + manaPerm(e, j).reduce((s, id) => s + valorMana(e, id), 0);
+}
+
+/**
+ * Itens com uso (pedido do autor, 04/10): Extra consumível e Canal foco/transcritor. Uso simples e seguro:
+ * cura só com a Vida baixa; Arcano só quando destrava uma carta da mão; comprar/olhar com mão curta; dano só para matar;
+ * foco só com uma Temporária de dano/cura para jogar em seguida; o que suspende o Conjurador só quando ele não vai atacar.
+ * `antesDeJogar`: rodada do foco (precisa vir antes da Temporária).
+ */
+function planejarItem(e        , j         , est        , antesDeJogar         )                 {
+  const z = e.jogadores[j];
+  const adv = e.jogadores[outro(j)];
+  const conj = e.instancias[z.conjuradorId];
+  const g = grauEfetivo(e, j);
+  for (const id of z.itens ?? []) {
+    const d = defCarta(e, id);
+    const at = d.ativacao;
+    if (!at || !at.efeitos.length || g < d.grau) continue;
+    if (at.suspende && e.instancias[id]?.suspensa) continue;
+    if (at.suspendeConjurador && conj.suspensa) continue;
+    if (at.requisito?.grau && g < at.requisito.grau) continue;
+    const extras = custosExtrasConj(e, j, at);
+    if (!extras) continue;
+    const ef = at.efeitos[0];
+    const ehFoco = ef.tipo === 'potenciaMagia';
+    if (ehFoco !== antesDeJogar) continue;
+    // suspender o Conjurador tira o ataque dele neste turno
+    if (at.suspendeConjurador && ef.tipo !== 'curar' && planejarAtaqueConj(e, j, est)) continue;
+    let alvo                    ;
+    let necessario = at.custo + (at.requisito?.arcano ?? 0);
+    const disp = arcanoAlcancavel(e, j);
+    if (ef.tipo === 'curar') {
+      if (ef.alvo !== 'conjuradorProprio' && ef.alvo !== undefined) continue;
+      const max = vidaMax(e, z.conjuradorId);
+      if (conj.dano < ef.valor || vidaRest(e, z.conjuradorId) > max / 2) continue;
+    } else if (ef.tipo === 'arcano') {
+      const ganho = at.efeitos.reduce((s, x) => s + (x.tipo === 'arcano' ? x.valor : 0), 0);
+      const livre = disp - necessario;
+      const destrava = z.mao.some((c) => { const dc = defCarta(e, c); const ce = custoEfetivo(e, j, c); return dc.grau <= g && ce > livre && ce <= livre + ganho; });
+      if (!destrava) continue;
+    } else if (ef.tipo === 'comprar' || ef.tipo === 'olharTopo') {
+      if (z.mao.length > 3) continue;
+    } else if (ef.tipo === 'dano' && (ef.alvo === 'escolhido' || ef.alvo === 'escolhidoAliado')) {
+      alvo = alvosInimigos(e, j, est).filter((a) => vidaRest(e, a) <= ef.valor).sort((a, b) => valorPerm(e, b) - valorPerm(e, a))[0];
+      if (!alvo && ef.alvo === 'escolhido' && vidaRest(e, adv.conjuradorId) <= ef.valor) alvo = adv.conjuradorId;
+      if (!alvo) continue;
+    } else if (ef.tipo === 'potenciaMagia') {
+      const livre = disp - necessario;
+      const magia = z.mao.some((c) => { const dc = defCarta(e, c); return dc.tipo === 'temporaria' && dc.grau <= g && custoEfetivo(e, j, c) <= livre && (dc.efeitos ?? []).some((x) => x.tipo === 'dano' || x.tipo === 'curar'); });
+      if (!magia) continue;
+    } else if (ef.tipo === 'ataqueConjuradorTurno') {
+      if (!planejarAtaqueConj(e, j, est)) continue;
+    } else if (ef.tipo === 'invocar') {
+      // sempre vale uma ficha
+    } else continue;
+    if (alvo && protegidaDe(e, alvo, j)) continue;
+    if (alvo) necessario += custoProtecao(e, j, alvo);
+    if (z.arcano < necessario) {
+      const mana = manaPerm(e, j)[0];
+      if (mana) return { tipo: 'ativar', jogador: j, carta: mana };
+      const gr = grauUsavel(e, j)[0];
+      if (!gr) continue;
+      return { tipo: 'suspenderGrau', jogador: j, carta: gr };
+    }
+    return { tipo: 'ativar', jogador: j, carta: id, alvo, enviarArcano: [], ...extras };
+  }
+  return null;
+}
+
 /** Alquimista Ricardo: ativa o desconto antes de jogar quando há algo para jogar. */
 function planejarDesconto(e        , j         , est        )                 {
   const z = e.jogadores[j];
@@ -462,7 +568,15 @@ function planejarAtaqueConj(e        , j         , est        )                 
   if (e.instancias[z.conjuradorId].suspensa) return null;
   if (ataqueConjurador(e, j) <= 0) return null;
   if (grauEfetivo(e, j) < grauAtaqueConjurador(e, j)) return null; // arma pede Grau (04/10)
-  if (adv.campo.some((id) => ehAliado(e, id) && !e.instancias[id].suspensa)) return null;
+  // Conjurador atacante não recebe revide (decisão 36): ser bloqueado não custa Vida, então não espera o campo inimigo esvaziar.
+  // Com Aliados inimigos de pé, prefere matar uma unidade (ataque a unidade não pode ser bloqueado); senão ataca o Conjurador.
+  const conj = z.conjuradorId;
+  const unidade = adv.campo
+    .filter((id) => ['aliado', 'mistica', 'estrutura'].includes(defCarta(e, id).tipo) && (defCarta(e, id).vida ?? 0) > 0)
+    .filter((id) => (!etereo(e, id) || etereo(e, conj)) && atk(e, conj) >= vidaRest(e, id))
+    .sort((x, y) => valorPerm(e, y) - valorPerm(e, x))[0];
+  const temBloqueador = adv.campo.some((id) => ehAliado(e, id) && !e.instancias[id].suspensa);
+  const alvo = unidade && (temBloqueador || est.atacaAliados) ? unidade : adv.conjuradorId;
   const custo = custoAtaqueConjurador(e, j);
   if (z.arcano < custo) {
     const mana = manaPerm(e, j)[0];
@@ -471,7 +585,7 @@ function planejarAtaqueConj(e        , j         , est        )                 
     if (!g) return null;
     return { tipo: 'suspenderGrau', jogador: j, carta: g };
   }
-  return { tipo: 'atacar', jogador: j, atacante: z.conjuradorId, alvo: adv.conjuradorId, enviarArcano: [] };
+  return { tipo: 'atacar', jogador: j, atacante: conj, alvo, enviarArcano: [] };
 }
 
 function decidirAnulacao(e        , j         , custo        , instId        , alvoEscolhido         )          {
@@ -580,7 +694,7 @@ function escolherBloqueador(e        , j         , atacante        , alvo       
   const ehConj = (id        ) => id === z.conjuradorId;
   const pontuar = (b        )         => {
     const sobrevive = forca < vidaRest(e, b);
-    const mata = atk(e, b) >= vidaRest(e, atacante);
+    const mata = !e.instancias[atacante].ehConjurador && atk(e, b) >= vidaRest(e, atacante); // Conjurador atacante não recebe revide (decisão 36)
     if (ehConj(b)) return letal ? 1 : forca <= 1 ? 2 : -10;
     if (mata && sobrevive) return 10;
     if (mata && valorPerm(e, b) <= valorPerm(e, atacante)) return 6;
@@ -687,7 +801,7 @@ export function decidir(e        , j         , est        )          {
       const custos = z.mao.map((id) => defCarta(e, id)).filter((d) => ehRepentina(d) && d.grau <= z.grau.length).map((d) => d.custo);
       if (custos.length && Math.min(...custos) <= z.grau.length) reserva = Math.min(...custos);
     }
-    return planejarDesconto(e, j, est) ?? planejarJogada(e, j, est, false, undefined, reserva) ?? planejarAtivacao(e, j, est) ?? planejarAtaque(e, j, est) ?? planejarAtaqueConj(e, j, est) ?? passar;
+    return planejarDesconto(e, j, est) ?? planejarItem(e, j, est, true) ?? planejarJogada(e, j, est, false, undefined, reserva) ?? planejarItem(e, j, est, false) ?? planejarAtivacao(e, j, est) ?? planejarAtaque(e, j, est) ?? planejarAtaqueConj(e, j, est) ?? passar;
   }
   if (e.ativo !== j) {
     const topo = e.pilha[e.pilha.length - 1];

@@ -1,8 +1,9 @@
 // Site do Arcanoclisma: rotas, conta, início, escolha de partida, salas online e opiniões.
-import { $, $$, esc, api, DADOS, CONJS, conj, carta, nomeCurto, cenario, cenarioValor, COR_VALOR, VALOR, sessao, carregarSessao, aoMudarConta, definirUsuario, avisar, janela, local, itensDoConjurador, prontoDe, listaParaCartas, dataCurta } from './base.js';
+import { $, $$, esc, api, DADOS, CONJS, conj, carta, nomeCurto, cenario, cenarioValor, COR_VALOR, VALOR, sessao, carregarSessao, aoMudarConta, definirUsuario, avisar, janela, local, itensDoConjurador, prontoDe, listaParaCartas, dataCurta, errosBaralho } from './base.js';
 import { conjuradorHTML } from './carta.js';
 import { abrirMesa } from './mesa.js';
 import { criarPartidaLocal } from './partida-local.js';
+import { sortearItensBot } from '/jogo/bot.js';
 import { conectarPartida } from './partida-online.js';
 
 const tela = $('#tela');
@@ -167,8 +168,8 @@ async function baralhosPublicos() {
 }
 function opcoesBaralho(meus, publicos, selecionado) {
   return `<optgroup label="Prontos">${DADOS.baralhos.map((b) => `<option value="pronto:${b.conjurador}" ${selecionado === 'pronto:' + b.conjurador ? 'selected' : ''}>${esc(b.nome)}</option>`).join('')}</optgroup>
-    ${meus.length ? `<optgroup label="Meus baralhos">${meus.map((b) => `<option value="meu:${b.id}" ${selecionado === 'meu:' + b.id ? 'selected' : ''}>${esc(b.nome)} · ${esc(nomeCurto(conj(b.conjurador)))}</option>`).join('')}</optgroup>` : ''}
-    ${publicos.length ? `<optgroup label="Da comunidade">${publicos.map((b) => `<option value="publico:${b.id}">${esc(b.nome)} · ${esc(nomeCurto(conj(b.conjurador)))} (de ${esc(b.autor)})</option>`).join('')}</optgroup>` : ''}`;
+    ${meus.length ? `<optgroup label="Meus baralhos">${meus.map((b) => { const inv = (b.erros ?? errosBaralho(b)).length; return `<option value="meu:${b.id}" ${selecionado === 'meu:' + b.id && !inv ? 'selected' : ''} ${inv ? 'disabled' : ''}>${esc(b.nome)} · ${esc(nomeCurto(conj(b.conjurador)))}${inv ? ' (inválido: corrija no construtor)' : ''}</option>`; }).join('')}</optgroup>` : ''}
+    ${publicos.length ? `<optgroup label="Da comunidade">${publicos.filter((b) => !(b.erros ?? errosBaralho(b)).length).map((b) => `<option value="publico:${b.id}">${esc(b.nome)} · ${esc(nomeCurto(conj(b.conjurador)))} (de ${esc(b.autor)})</option>`).join('')}</optgroup>` : ''}`;
 }
 /** Resolve a escolha do <select> em { def, nome, conjurador, estilo }. */
 function resolverLocal(ref, meus, publicos, itens) {
@@ -214,21 +215,44 @@ async function telaJogar(partes) {
   $('#itens-meu').onchange = () => { itens = $$('#itens-meu select').map((s) => s.value).filter(Boolean); };
   atualizarMeu();
   const lerItens = () => $$('#itens-meu select').map((s) => s.value).filter(Boolean);
+  let modoItensBot = pref.itensBot?.modo === 'escolher' ? 'escolher' : 'aleatorio';
+  let itensBot = pref.itensBot?.itens ?? null;
   const direito = $('#lado-direito');
   const desenharDireito = (modo) => {
     for (const b of $$('[data-modo]', tela)) b.classList.toggle('ativo', b.dataset.modo === modo);
     if (modo === 'bot') {
       direito.innerHTML = `<h2>Oponente (bot)</h2>
         <label class="campo">Baralho do bot<select id="sel-op"><option value="aleatorio">Aleatório (um dos prontos)</option>${opcoesBaralho([], publicos, pref.op)}</select></label>
+        <h3>Equipamento do bot</h3>
+        <div class="linha-botoes" id="modo-itens-bot">
+          <label class="opcao-linha"><input type="radio" name="itens-bot" value="aleatorio" ${modoItensBot === 'aleatorio' ? 'checked' : ''}> Aleatório</label>
+          <label class="opcao-linha"><input type="radio" name="itens-bot" value="escolher" ${modoItensBot === 'escolher' ? 'checked' : ''}> Escolher</label>
+        </div>
+        <div id="itens-bot" class="grade g3 itens-grade"></div>
         <p class="peq">O bot usa o mesmo jogador automático das simulações de balanceamento. Baralhos da comunidade são os que outros jogadores tornaram públicos.</p>
         <div class="linha-botoes"><button class="botao primario grande" data-comecar-bot>Começar partida</button></div>`;
+      const lerItensBot = () => $$('#itens-bot select').map((s) => s.value).filter(Boolean);
+      const atualizarBot = () => {
+        const op = $('#sel-op').value;
+        const el = $('#itens-bot');
+        if (modoItensBot === 'aleatorio') { el.innerHTML = '<p class="peq">Um Canal, uma Armadura e um Extra sorteados entre os que servem ao Conjurador do bot (veja em "Ver equipamento" na partida).</p>'; return; }
+        if (op === 'aleatorio') { el.innerHTML = '<p class="peq">Escolha o baralho do bot para escolher o equipamento dele.</p>'; return; }
+        const r = resolverLocal(op, meus, publicos);
+        if (!itensBot || !itensBot.every((i) => itensDoConjurador(r.conjurador).some((x) => x.id === i))) itensBot = r.itensPadrao;
+        el.innerHTML = seletorItens(r.conjurador, itensBot);
+      };
+      $('#sel-op').onchange = () => { itensBot = null; atualizarBot(); };
+      $('#itens-bot').onchange = () => { itensBot = lerItensBot(); };
+      $('#modo-itens-bot').onchange = (ev) => { modoItensBot = ev.target.value; atualizarBot(); };
+      atualizarBot();
       $('[data-comecar-bot]', direito).onclick = () => {
         let op = $('#sel-op').value;
+        const escolher = modoItensBot === 'escolher' && op !== 'aleatorio';
         if (op === 'aleatorio') op = 'pronto:' + DADOS.baralhos[Math.floor(Math.random() * DADOS.baralhos.length)].conjurador;
-        local.gravar('pref-jogar', { meu: selMeu.value, op: $('#sel-op').value, itens: lerItens() });
+        local.gravar('pref-jogar', { meu: selMeu.value, op: $('#sel-op').value, itens: lerItens(), itensBot: { modo: modoItensBot, itens: escolher ? lerItensBot() : itensBot } });
         const eu = resolverLocal(selMeu.value, meus, publicos, lerItens());
-        const bot = resolverLocal(op, meus, publicos);
-        abrirPartidaBot({ eu: eu.def, bot: bot.def, estiloBot: bot.estilo, nomeBot: `Bot · ${nomeCurto(conj(bot.conjurador))}` });
+        const bot = resolverLocal(op, meus, publicos, escolher ? lerItensBot() : undefined);
+        abrirPartidaBot({ eu: eu.def, bot: bot.def, estiloBot: bot.estilo, nomeBot: `Bot · ${nomeCurto(conj(bot.conjurador))}`, itensBotAleatorio: !escolher });
       };
     } else desenharOnline(direito, () => ({ baralho: selMeu.value, itens: lerItens() }));
   };
@@ -304,7 +328,19 @@ async function telaSala([id]) {
 
 // ---------- partida contra o bot ----------
 let cfgBotAtual = null;
+/** Equipamento aleatório do bot: sorteado pela semente da partida (retomar dá o mesmo); a revanche sorteia de novo. */
+function sortearEquipBot(cfg) {
+  if (!cfg.itensBotAleatorio || cfg.comandos) return cfg;
+  const semente = cfg.semente ?? Math.floor(Math.random() * 2 ** 31);
+  return { ...cfg, semente, bot: { ...cfg.bot, itens: sortearItensBot(DADOS.catalogo, cfg.bot.conjurador, semente) } };
+}
 function abrirPartidaBot(cfg) {
+  cfg = sortearEquipBot(cfg);
+  // baralho inválido (ex.: regra das cores, decisão 37) não entra em partida; o bot também só joga com baralho válido
+  for (const [quem, d] of cfg.versao ? [] : [['Seu baralho', cfg.eu], ['O baralho do bot', cfg.bot]]) { // partida salva (retomar): já começou
+    const erros = errosBaralho({ conjurador: d.conjurador, lista: [...d.cartas.reduce((m, id) => m.set(id, (m.get(id) ?? 0) + 1), new Map())], itens: d.itens });
+    if (erros.length) { avisar(`${quem} não vale: ${erros.join(' ')} Corrija no construtor.`, 'erro', 8000); return; }
+  }
   cfgBotAtual = cfg;
   if (location.hash === '#/bot') iniciarBot(cfg); else ctx.navegar('bot');
 }
@@ -314,13 +350,14 @@ async function telaPartidaBot() {
 }
 function iniciarBot(cfg) {
   if (location.hash !== '#/bot') return;
+  cfg = sortearEquipBot(cfg);
   cfgBotAtual = cfg;
   limpar?.();
   tela.classList.add('cheia');
   tela.innerHTML = '<div id="mesa-raiz"></div>';
   const fonte = criarPartidaLocal({
     eu: cfg.eu, bot: cfg.bot, estiloBot: cfg.estiloBot, nomes: ['Você', cfg.nomeBot ?? 'Bot'], semente: cfg.semente, comandos: cfg.comandos,
-    chaveSalvar: 'partida-bot', salvar: { eu: cfg.eu, bot: cfg.bot, estiloBot: cfg.estiloBot, nomeBot: cfg.nomeBot },
+    chaveSalvar: 'partida-bot', salvar: { eu: cfg.eu, bot: cfg.bot, estiloBot: cfg.estiloBot, nomeBot: cfg.nomeBot, itensBotAleatorio: cfg.itensBotAleatorio },
     revanche: () => { cfgBotAtual = { ...cfg, semente: undefined, comandos: undefined }; iniciarBot(cfgBotAtual); },
     aoTerminar: (e) => { cfgBotAtual = null; if (sessao.usuario) api('/partidas/bot', { corpo: { conjurador: cfg.eu.conjurador, oponente: cfg.bot.conjurador, venci: e.vencedor === 'empate' ? null : e.vencedor === 0, turnos: e.turno, modo: 'bot' } }).catch(() => {}); },
   });

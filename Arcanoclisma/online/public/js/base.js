@@ -1,6 +1,7 @@
 // Utilidades comuns do site: dados do jogo, chamadas à API, conta, avisos e janelas.
 import { VALOR, TIPO, textoCarta, textoPoder, valoresTxt } from '/jogo/textos.js';
 import { aplicarCatalogo, edicoesVazias } from '/jogo/edicoes.js';
+import { cartaServeConjurador, corrigirCores, itemServe, motivoNaoServe, validarBaralho } from '/jogo/motor.js';
 
 export { VALOR, TIPO, textoCarta, textoPoder, valoresTxt };
 export const $ = (s, r = document) => r.querySelector(s);
@@ -111,14 +112,29 @@ export const local = {
 };
 
 // ---------- baralhos ----------
-/** Itens que um Conjurador pode levar no side deck: sem Valor (básicos/genéricos), ou com os DOIS Valores dele (pedido do autor, 04/10). */
+/** Itens que um Conjurador pode levar no side deck: a mesma regra de Valores das cartas (decisão 37: sem Valor, todos;
+ *  1 Valor, quem tem esse Valor; 2, exatamente os dele; 3+, o par dele entre eles), mais competência e exclusividade. */
 export function itensDoConjurador(conjId) {
   const c = conj(conjId);
-  return Object.values(DADOS.catalogo.cartas).filter((x) => x.tipo === 'item' && (!x.valores?.length || c.valores.every((v) => x.valores.includes(v)))
-    && (!x.competencia || x.competencia === c.comprometimento) && (!x.exclusivoDe?.length || x.exclusivoDe.includes(conjId)));
+  return Object.values(DADOS.catalogo.cartas).filter((x) => x.tipo === 'item' && itemServe(c, x));
 }
-/** A carta pode entrar no baralho deste Conjurador (algum Valor dele; toda carta tem Valor, menos itens). */
-export const cartaServe = (c, conjId) => c.tipo !== 'item' && c.tipo !== 'oculta' && (!c.valores.length || c.valores.some((v) => conj(conjId).valores.includes(v)));
+/** A carta pode entrar no baralho deste Conjurador? Regra das cores (decisão 37): 1 Valor = um dos 2 dele; 2 Valores =
+ *  exatamente os 2 dele; 3 ou mais = os 2 dele estão entre os da carta. A mesma função do motor e do Worker. */
+export const cartaServe = (c, conjId) => c.tipo !== 'oculta' && cartaServeConjurador(c, conj(conjId));
+/** Texto de por que a carta não serve (para avisos do construtor). */
+export const motivoCarta = (c, conjId) => motivoNaoServe(c, conj(conjId));
+/** Erros de um baralho { conjurador, lista, itens } com as regras atuais (as mesmas do Worker; [] = vale). */
+export function errosBaralho(b) {
+  const erros = [];
+  for (const [id, n] of b.lista) if (n > DADOS.maxCopias && !DADOS.semLimite.includes(id)) erros.push(`${carta(id)?.nome ?? id}: no máximo ${DADOS.maxCopias} cópias.`);
+  return [...erros, ...validarBaralho(DADOS.catalogo, { conjurador: b.conjurador, cartas: listaParaCartas(b.lista), itens: b.itens ?? [] }, DADOS.tamanhoBaralho)];
+}
+/** Cartas do baralho que saíram da regra das cores. */
+export const cartasForaDaRegra = (b) => b.lista.filter(([id]) => carta(id) && carta(id).tipo !== 'item' && !cartaServe(carta(id), b.conjurador)).map(([id]) => id);
+/** "Corrigir automaticamente": troca cada cópia fora da regra por carta do mesmo tipo e custo próximo (a mesma troca dos prontos). */
+export function corrigirBaralho(b) {
+  return corrigirCores(DADOS.catalogo, b.conjurador, b.lista, { max: DADOS.maxCopias, semLimite: DADOS.semLimite, semente: 'pronto-' + b.conjurador, aceitar: (x) => !x.id.startsWith('base-recurso') && x.tipo !== 'oculta' });
+}
 export const listaParaCartas = (lista) => lista.flatMap(([id, n]) => Array.from({ length: n }, () => id));
 export const prontos = () => DADOS.baralhos;
 export const prontoDe = (conjId) => DADOS.baralhos.find((b) => b.conjurador === conjId);

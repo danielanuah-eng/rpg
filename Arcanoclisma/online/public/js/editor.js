@@ -7,6 +7,16 @@ import { desenharCarta, modeloCarta, modeloConjurador } from './carta.js';
 import { edicoesVazias } from '/jogo/edicoes.js';
 import { descEfeito, protegidoDe } from '/jogo/textos.js';
 import { montarConstrutor } from './construtor-efeitos.js';
+import { cartaServeConjurador, itemServe } from '/jogo/motor.js';
+
+/** Quais Conjuradores podem usar a carta ou o item com estes Valores (regra das cores, decisão 37; a mesma para itens). */
+function quemUsa(c) {
+  const cs = Object.values(DADOS.catalogo.conjuradores);
+  const ok = cs.filter((j) => (c.tipo === 'item' ? itemServe(j, c) : cartaServeConjurador(c, j))).map((j) => j.nome.split(',')[0]);
+  const regra = c.valores.length === 1 ? ' (1 Valor: quem tem esse Valor)' : c.valores.length === 2 ? ' (2 Valores: só quem tem exatamente esse par)' : c.valores.length >= 3 ? ' (3+ Valores: quem tem um par entre eles)' : ' (sem Valor: todos)';
+  const extra = c.tipo === 'item' && (c.competencia || c.exclusivoDe?.length) ? ' Itens também respeitam competência e exclusividade.' : '';
+  return (ok.length ? `Podem usar${regra}: ${ok.join(', ')}.` : `Nenhum Conjurador pode usar esta carta com estes Valores${regra}.`) + extra;
+}
 
 const VALORES = Object.keys(VALOR);
 const COMPROMETIMENTOS = ['Invocador', 'Brigão', 'Parrudão da quebrada', 'Habilidoso', 'Preparado'];
@@ -200,7 +210,7 @@ export async function telaEditor(tela, partes, ctx) {
       <div class="campo"><span>Arte</span><div class="editor-arte"><img src="/arte/${esc(arteAtual)}.webp" alt=""><div><b>${esc(arteAtual ?? 'sem arte')}</b><div class="linha-botoes"><button class="botao peq" data-trocar-arte>Trocar arte</button></div></div></div></div>
       <label class="campo">Raridade (só aparência; você decide)<select data-raridade>${[['', 'Sem raridade'], ['comum', 'Comum'], ['incomum', 'Incomum'], ['rara', 'Rara'], ['lendaria', 'Lendária']].map(([v, r]) => `<option value="${v}" ${(rascunho.raridades[conjur ? 'conjuradores' : 'cartas'][id] ?? '') === v ? 'selected' : ''}>${r}</option>`).join('')}</select></label>
       <div class="editor-nums">${(conjur ? NUM_CONJ : NUM_CARTA).map(([k, r]) => numCampo(k, r, c[k])).join('')}</div>
-      <div class="campo"><span>Valores</span><div class="editor-valores">${VALORES.map((v) => `<label class="opcao-linha"><input type="checkbox" data-valor="${v}" ${c.valores.includes(v) ? 'checked' : ''}> ${esc(VALOR[v])}</label>`).join('')}</div></div>
+      <div class="campo"><span>Valores</span><div class="editor-valores">${VALORES.map((v) => `<label class="opcao-linha"><input type="checkbox" data-valor="${v}" ${c.valores.includes(v) ? 'checked' : ''}> ${esc(VALOR[v])}</label>`).join('')}</div>${conjur ? '' : `<p class="peq" data-quem-usa>${esc(quemUsa(c))}</p>`}</div>
       ${conjur
         ? `<label class="campo">Comprometimento<select data-f="comprometimento">${COMPROMETIMENTOS.map((x) => `<option ${x === c.comprometimento ? 'selected' : ''}>${esc(x)}</option>`).join('')}</select></label>`
         : c.tipo === 'aliado'
@@ -301,7 +311,8 @@ export async function telaEditor(tela, partes, ctx) {
     if (textoAuto !== null && novo[campoTxt] === textoAuto) novo[campoTxt] = base[campoTxt];
     if (!conjur && !novo.palavrasChave.length) novo.palavrasChave = undefined;
     for (const el of $$('[data-num]', form)) novo[el.dataset.num] = el.value === '' ? undefined : Math.trunc(Number(el.value));
-    novo.valores = $$('[data-valor]', form).filter((x) => x.checked).map((x) => x.dataset.valor);
+    novo.valores = $('[data-valor]', form).filter((x) => x.checked).map((x) => x.dataset.valor);
+    if (!conjur && $('[data-quem-usa]', form)) $('[data-quem-usa]', form).textContent = quemUsa({ ...base, ...novo, tipo: base.tipo });
     const erroJson = $('[data-json-erro]', form);
     try {
       const mec = JSON.parse($('[data-json]', form).value || '{}');

@@ -18,6 +18,8 @@ const cartas: CartaDef[] = [
   item('vyal', 'armadura', { defesa: 3, vidaDesgaste: 9, custo: 1, grau: 1, espinhos: 2 }),
   item('do-par', 'extra', { valores: ['a', 'b', 'c'] }),
   item('so-de-um', 'extra', { valores: ['a'] }),
+  item('so-de-c', 'extra', { valores: ['c'] }),
+  item('par-errado', 'extra', { valores: ['a', 'c'] }),
   ...itensBasicos,
 ];
 function criar(itens: [string[], string[]]): Estado {
@@ -95,13 +97,15 @@ test('armadura com custo/Grau, espinhos e efeito ao proteger; arma que desgasta 
   assert.equal(g.instancias[g.jogadores[1].conjuradorId].dano, 3); // sem Grau 1, a Vyal não protegeu
 });
 
-test('item com Valor só serve ao Conjurador que tem os dois Valores dele; sem Valor serve a todos', () => {
+test('item segue a regra das cores (decisão 37): 1 Valor = quem tem esse Valor; 2 = exatamente o par; 3+ = o par entre eles; sem Valor = todos', () => {
   const conj = { id: 'c', valores: ['a', 'b'], comprometimento: 'Brigão' } as ConjuradorDef;
   const d = (id: string) => cartas.find((x) => x.id === id)!;
   assert.equal(itemServe(conj, d('do-par')), true);
-  assert.equal(itemServe(conj, d('so-de-um')), false);
+  assert.equal(itemServe(conj, d('so-de-um')), true); // 1 Valor: quem tem esse Valor (decisão 37)
+  assert.equal(itemServe(conj, d('so-de-c')), false);
+  assert.equal(itemServe(conj, d('par-errado')), false); // 2 Valores: exatamente os do Conjurador
   assert.equal(itemServe(conj, d('item-canal-cajado')), true);
   const cat: Catalogo = { cartas: Object.fromEntries(cartas.map((c) => [c.id, c])), conjuradores: { c: { ...conj, nome: 'C', vida: 20, maoInicial: 5, compraFinal: 2, danoBasico: 0, custoAtaque: 0, habilidade: '' } } };
-  const erros = validarBaralho(cat, { conjurador: 'c', cartas: Array.from({ length: 60 }, () => 'nada'), itens: ['so-de-um'] });
+  const erros = validarBaralho(cat, { conjurador: 'c', cartas: Array.from({ length: 60 }, () => 'nada'), itens: ['so-de-c'] });
   assert.equal(erros.length, 1);
 });

@@ -50,7 +50,7 @@ export const PALAVRAS_CHAVE = [
     ['Custo de item', 'Além de suspender o Conjurador, cada item pede algo: pagar Arcano, descartar cartas da mão ou o Conjurador tomar dano.'],
     ['Extra de competência', 'Extra que só serve aos Conjuradores de um Comprometimento (Invocador, Brigão, Parrudão da quebrada, Habilidoso, Preparado).'],
     ['Ficha', 'Criatura criada por um efeito (ex.: Wyvern Filhote). Não vem do baralho.'],
-    ['Valor', 'Toda carta pertence a um Valor: a cor da bolinha do custo. O baralho só leva cartas dos 2 Valores do seu Conjurador.'],
+    ['Valor', 'Toda carta pertence a um Valor: a cor da bolinha do custo. O baralho só leva cartas dos 2 Valores do seu Conjurador: carta de 2 Valores só se forem exatamente os 2 dele; de 3 ou mais, se os 2 dele estiverem entre os da carta.'],
     ['Armadura', 'Quando o Conjurador bloqueia, você escolhe se a usa: ela evita até a Defesa de dano de um ataque por turno e se desgasta até quebrar.'],
     ['Extra', 'Item de apoio de uso único (ou temático da competência do Conjurador).'],
   ] },

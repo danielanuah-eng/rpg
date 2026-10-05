@@ -2,10 +2,12 @@
 // - Não existe carta neutra: toda carta (menos itens) pertence a um Valor, a cor da bolinha do custo.
 // - Normalmente 1 Valor; 1 a cada 10 cartas tem 2 (o par de um Conjurador); 1 a cada 50 tem 3.
 // - A Mina Funda (recurso básico) vira 9 minas, uma por Valor, como terrenos básicos.
-// - Os baralhos prontos só têm cartas dos Valores do Conjurador: a carta que deixa de servir é trocada por outra dos
+// - Os baralhos prontos seguem a regra das cores (decisão 37: 2 Valores = exatamente o par do Conjurador; 3+ = o par
+//   está entre os da carta): a carta que deixa de servir é trocada por outra dos
 //   Valores dele, do mesmo tipo e de custo próximo.
 // Escolha do Valor: o tema que a carta já tinha (seus Valores antigos), o uso nos baralhos prontos e o equilíbrio entre os 9.
 import type { CartaDef, Catalogo } from '../tcg/src/tipos.ts';
+import { cartaServeConjurador, corrigirCores } from '../tcg/src/motor.ts';
 
 type Lista = [string, number][];
 interface Pronto { id: string; conjurador: string; nome: string; lista: Lista; itens: string[] }
@@ -81,36 +83,34 @@ export function aplicarValoresDoSite(catalogo: Catalogo, baralhos: Pronto[], vis
     minas[v] = id;
   }
   // 5) baralhos prontos: só cartas dos Valores do Conjurador
-  const trocas: string[] = [];
+  const trocas: string[] = [], trocasCores: string[] = [];
   for (const b of baralhos) {
     const V = conjV(b);
     const qtd = new Map<string, number>();
     const add = (id: string, n: number) => qtd.set(id, (qtd.get(id) ?? 0) + n);
-    const serve = (id: string) => catalogo.cartas[id].valores.some((v) => V.includes(v));
+    const serve = (id: string) => cartaServeConjurador(catalogo.cartas[id], catalogo.conjuradores[b.conjurador]);
     const minasN = b.lista.filter(([id]) => id === RECURSO).reduce((s, [, n]) => s + n, 0);
     for (const [id, n] of b.lista) if (id !== RECURSO && (catalogo.cartas[id].tipo === 'item' || serve(id))) add(id, n);
     // minas: metade (para cima) do Valor com mais cartas no baralho, o resto do outro
     const peso = (v: string) => [...qtd].reduce((s, [id, n]) => s + (catalogo.cartas[id].valores.includes(v) ? n : 0), 0);
     const [vMaior, vMenor] = [...V].sort((a, c) => peso(c) - peso(a));
     if (minasN) { add(minas[vMaior], Math.ceil(minasN / 2)); if (minasN > 1) add(minas[vMenor], Math.floor(minasN / 2)); }
-    for (const [id, n] of b.lista) {
-      if (id === RECURSO || catalogo.cartas[id].tipo === 'item' || serve(id)) continue;
-      const c = catalogo.cartas[id];
-      for (let k = 0; k < n; k++) {
-        const opcoes = Object.values(catalogo.cartas)
-          .filter((x) => x.tipo !== 'item' && !x.ficha && !x.id.startsWith(RECURSO) && x.valores.some((v) => V.includes(v)) && (qtd.get(x.id) ?? 0) < 3)
-          .map((x) => ({ x, nota: (x.tipo === c.tipo ? 0 : 50) + Math.abs(x.custo - c.custo) * 3 + Math.abs(x.grau - c.grau) + (qtd.has(x.id) ? 1.5 : 0) + (hash(x.id + b.id) % 7) / 10 }))
-          .sort((a, z) => a.nota - z.nota);
-        const d = opcoes[0]?.x;
-        if (!d) throw new Error(`Baralho pronto ${b.id}: sem carta dos Valores ${V.join('+')} para trocar ${c.nome}`);
-        add(d.id, 1);
-        trocas.push(`${b.id}: ${c.nome} → ${d.nome}`);
-      }
+    // regra das cores (decisão 37): o que não serve vira carta do mesmo tipo e custo próximo (a mesma função do botão
+    // "Corrigir automaticamente" do construtor), sem Minas Fundas e até 3 cópias
+    const ruins: Lista = b.lista.filter(([id]) => id !== RECURSO && catalogo.cartas[id].tipo !== 'item' && !serve(id));
+    const r = corrigirCores(catalogo, b.conjurador, [...qtd, ...ruins], { max: 3, semente: b.id, aceitar: (x) => !x.id.startsWith(RECURSO) });
+    if (r.semSubstituto.length) throw new Error(`Baralho pronto ${b.id}: sem carta dos Valores ${V.join('+')} para trocar ${r.semSubstituto.join(', ')}`);
+    for (const t of r.trocas) {
+      const de = catalogo.cartas[t.de];
+      const nova = de.valores.some((v) => V.includes(v)); // só saiu pela decisão 37 (2+ Valores sem o par do Conjurador)
+      (nova ? trocasCores : trocas).push(`${b.id}: ${de.nome} (${de.valores.join('+')}) → ${catalogo.cartas[t.para].nome}`);
     }
+    qtd.clear();
+    for (const [id, n] of r.lista) add(id, n);
     b.lista = [...qtd].filter(([, n]) => n > 0);
   }
   const porValor = Object.fromEntries(VALORES.map((v) => [v, cartas.filter((c) => catalogo.cartas[c.id].valores.includes(v)).length]));
   const porQtd: Record<number, number> = {};
   for (const c of cartas) porQtd[novos[c.id].length] = (porQtd[novos[c.id].length] ?? 0) + 1;
-  return { minas, mudancas, trocas, porValor, porQtd };
+  return { minas, mudancas, trocas, trocasCores, porValor, porQtd };
 }

@@ -24,6 +24,14 @@ export function conferirBaralho(conjurador: string, lista: Lista, itens: string[
   return [...erros, ...validarBaralho(cat, b, DADOS.tamanhoBaralho)];
 }
 
+/** Baralho salvo como sai da API, com `erros` quando deixou de valer (ex.: regra das cores, decisão 37). Não apaga nada:
+ *  o site marca o baralho como inválido e o Worker recusa usá-lo em partida até ser corrigido. */
+function comErros(x: Record<string, unknown>, cat: Catalogo) {
+  const lista = JSON.parse(x.lista as string) as Lista, itens = JSON.parse(x.itens as string) as string[];
+  const erros = conferirBaralho(String(x.conjurador), lista, itens, cat);
+  return { ...x, lista, itens, erros: erros.length ? erros : undefined };
+}
+
 /** Resolve a referência de baralho escolhida no site: "pronto:<conjurador>", "meu:<id>" ou "publico:<id>". */
 export async function resolverBaralho(env: Env, u: Usuario, ref: string, itensEscolhidos?: string[]): Promise<{ def: BaralhoDef; nome: string; estilo?: unknown } | string> {
   const [tipo, id] = ref.split(':');
@@ -39,7 +47,7 @@ export async function resolverBaralho(env: Env, u: Usuario, ref: string, itensEs
   } else return 'Baralho inválido.';
   if (itensEscolhidos) itens = itensEscolhidos;
   const erros = conferirBaralho(conj, lista, itens, aplicarCatalogo(catalogo, (await edicoesAtuais(env)).dados));
-  if (erros.length) return erros.join(' ');
+  if (erros.length) return `${nome}: o baralho não vale (corrija no construtor). ${erros.join(' ')}`;
   return { def: { conjurador: conj, cartas: lista.flatMap(([c, n]) => Array(n).fill(c)), itens }, nome, estilo };
 }
 
@@ -50,13 +58,15 @@ async function corpo<T>(req: Request): Promise<T> {
 async function rotasBaralhos(req: Request, env: Env, u: Usuario | null, caminho: string): Promise<Response | null> {
   if (caminho === '/api/baralhos/publicos' && req.method === 'GET') {
     const r = await env.DB.prepare('SELECT b.id, b.nome, b.conjurador, b.lista, b.itens, b.atualizado, u.nome AS autor FROM baralhos b JOIN usuarios u ON u.id = b.usuario WHERE b.publico = 1 ORDER BY b.atualizado DESC LIMIT 200').all();
-    return json({ baralhos: r.results.map((x: Record<string, unknown>) => ({ ...x, lista: JSON.parse(x.lista as string), itens: JSON.parse(x.itens as string) })) });
+    const cat = aplicarCatalogo(catalogo, (await edicoesAtuais(env)).dados);
+    return json({ baralhos: r.results.map((x: Record<string, unknown>) => comErros(x, cat)) });
   }
   if (!caminho.startsWith('/api/baralhos')) return null;
   if (!u) return erro('Entre na sua conta.', 401);
   if (caminho === '/api/baralhos' && req.method === 'GET') {
     const r = await env.DB.prepare('SELECT id, nome, conjurador, lista, itens, publico, atualizado FROM baralhos WHERE usuario = ? ORDER BY atualizado DESC').bind(u.id).all();
-    return json({ baralhos: r.results.map((x: Record<string, unknown>) => ({ ...x, lista: JSON.parse(x.lista as string), itens: JSON.parse(x.itens as string), publico: !!x.publico })) });
+    const cat = aplicarCatalogo(catalogo, (await edicoesAtuais(env)).dados);
+    return json({ baralhos: r.results.map((x: Record<string, unknown>) => ({ ...comErros(x, cat), publico: !!x.publico })) });
   }
   if (caminho === '/api/baralhos' && req.method === 'POST') {
     const b = await corpo<{ id?: string; nome: string; conjurador: string; lista: Lista; itens: string[]; publico?: boolean }>(req);

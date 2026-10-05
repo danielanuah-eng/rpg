@@ -174,12 +174,37 @@ export function grauAtaqueConjurador(e        , j         )         {
 }
 
 /**
- * Item serve a este Conjurador? Itens sem Valor (básicos ou genéricos) servem a todos; um item com Valor só serve
- * se tiver os dois Valores do Conjurador (pedido do autor, 04/10). Competência e exclusividade continuam valendo.
+ * Regra das cores na construção de baralho (pedido do autor, 04/10; decisão 37). Cor = Valor; o Conjurador tem 2.
+ * Sem Valor: serve a todos. 1 Valor: um dos 2 do Conjurador. 2 Valores: exatamente os 2 do Conjurador.
+ * 3 ou mais: os 2 do Conjurador estão entre os da carta (o par dele é uma das duplas da carta).
+ */
+export function valoresServem(valoresCarta                   , valoresConj                   )          {
+  if (!valoresCarta.length) return true;
+  if (valoresCarta.length === 1) return valoresConj.includes(valoresCarta[0]);
+  return valoresConj.length > 0 && valoresConj.every((v) => valoresCarta.includes(v));
+}
+
+/** A carta (não item) pode entrar no baralho deste Conjurador? Itens usam `itemServe` (mesma regra de Valores). */
+export function cartaServeConjurador(d                                    , conj                                )          {
+  return d.tipo !== 'item' && valoresServem(d.valores ?? [], conj.valores);
+}
+
+/** Por que a carta não serve ao Conjurador (texto para o jogador). */
+export function motivoNaoServe(d                                    , conj                                         )         {
+  const n = d.valores.length;
+  return n === 2 ? `${d.nome} tem 2 Valores (${d.valores.join(' + ')}) e só serve a um Conjurador com exatamente esses 2.`
+    : n >= 3 ? `${d.nome} (${d.valores.join(' + ')}) só serve a um Conjurador cujos 2 Valores estejam entre os dela.`
+    : `${d.nome} não combina com os Valores de ${conj.nome}.`;
+}
+
+/**
+ * Item serve a este Conjurador? A mesma regra das cores das cartas (decisão 37, autor 04/10): sem Valor, todos; 1 Valor,
+ * quem tem esse Valor; 2, exatamente os do Conjurador; 3 ou mais, o par dele entre os do item. Competência e
+ * exclusividade continuam valendo.
  */
 export function itemServe(conj               , d          )          {
   if (d.tipo !== 'item') return false;
-  if (d.valores.length && !conj.valores.every((v) => d.valores.includes(v))) return false;
+  if (!valoresServem(d.valores ?? [], conj.valores)) return false; // mesma regra das cores das cartas (decisão 37)
   if (d.competencia && d.competencia !== conj.comprometimento) return false;
   if (d.exclusivoDe?.length && !d.exclusivoDe.includes(conj.id)) return false;
   return true;
@@ -948,6 +973,7 @@ export function grauEfetivo(e        , j         )         {
 
 // ---------- criação ----------
 
+/** Confere um baralho: tamanho, cartas conhecidas, regra das cores (decisão 37) e itens (um por espaço). */
 export function validarBaralho(cat          , b            , tamanho = 60)           {
   const erros           = [];
   const conj = cat.conjuradores[b.conjurador];
@@ -956,8 +982,7 @@ export function validarBaralho(cat          , b            , tamanho = 60)      
   for (const id of new Set(b.cartas)) {
     const c = cat.cartas[id];
     if (!c) erros.push(`Carta desconhecida: ${id}`);
-    else if (c.valores.length > 0 && !c.valores.some((v) => conj.valores.includes(v)))
-      erros.push(`${c.nome} não combina com os Valores de ${conj.nome}.`);
+    else if (c.tipo !== 'item' && !cartaServeConjurador(c, conj)) erros.push(motivoNaoServe(c, conj));
   }
   const espacos = new Set        ();
   for (const id of b.itens ?? []) {
@@ -968,10 +993,46 @@ export function validarBaralho(cat          , b            , tamanho = 60)      
     if (c.exclusivoDe?.length && !c.exclusivoDe.includes(conj.id)) erros.push(`${c.nome} é exclusivo de outro Conjurador.`);
     if (espacos.has(c.categoriaItem)) erros.push(`Dois itens no mesmo espaço (${c.categoriaItem}).`);
     espacos.add(c.categoriaItem);
-    if (c.valores.length > 0 && !conj.valores.every((v) => c.valores.includes(v))) erros.push(`${c.nome} não combina com os dois Valores de ${conj.nome}.`);
+    if (!valoresServem(c.valores ?? [], conj.valores)) erros.push(motivoNaoServe(c, conj));
   }
   if (b.cartas.some((id) => cat.cartas[id]?.tipo === 'item')) erros.push('Itens não entram no baralho: equipe-os no Conjurador.');
   return erros;
+}
+
+const hashTexto = (t        ) => { let h = 2166136261; for (const ch of t) h = Math.imul(h ^ ch.charCodeAt(0), 16777619); return h >>> 0; };
+
+/**
+ * Corrige a regra das cores (decisão 37): cada cópia de carta que não serve ao Conjurador vira uma carta que serve, do
+ * mesmo tipo e de custo/Grau próximos, respeitando o limite de cópias. Usada nos baralhos prontos (online/valores.ts) e
+ * no botão "Corrigir automaticamente" do construtor do site. `aceitar` filtra os candidatos (ex.: sem Minas Fundas).
+ */
+export function corrigirCores(cat          , conjId        , lista                         ,
+  opcoes                                                                                               = {},
+)                                                                                                           {
+  const conj = cat.conjuradores[conjId];
+  const max = opcoes.max ?? 3, semLimite = opcoes.semLimite ?? [], semente = opcoes.semente ?? conjId;
+  const qtd = new Map                ();
+  const ruins                          = [];
+  for (const [id, n] of lista) {
+    const c = cat.cartas[id];
+    if (c && conj && c.tipo !== 'item' && !cartaServeConjurador(c, conj)) ruins.push([id, n]);
+    else qtd.set(id, (qtd.get(id) ?? 0) + n);
+  }
+  const trocas                                      = [], semSubstituto           = [];
+  for (const [id, n] of ruins) {
+    const c = cat.cartas[id];
+    for (let k = 0; k < n; k++) {
+      const melhor = Object.values(cat.cartas)
+        .filter((x) => x.tipo !== 'item' && !x.ficha && cartaServeConjurador(x, conj) && (opcoes.aceitar?.(x) ?? true)
+          && (semLimite.includes(x.id) || (qtd.get(x.id) ?? 0) < max))
+        .map((x) => ({ x, nota: (x.tipo === c.tipo ? 0 : 50) + Math.abs(x.custo - c.custo) * 3 + Math.abs(x.grau - c.grau) + (qtd.has(x.id) ? 1.5 : 0) + (hashTexto(x.id + semente) % 7) / 10 }))
+        .sort((a, z) => a.nota - z.nota)[0]?.x;
+      if (!melhor) { semSubstituto.push(id); continue; }
+      qtd.set(melhor.id, (qtd.get(melhor.id) ?? 0) + 1);
+      trocas.push({ de: id, para: melhor.id });
+    }
+  }
+  return { lista: [...qtd].filter(([, n]) => n > 0), trocas, semSubstituto };
 }
 
 /**
@@ -1374,7 +1435,7 @@ function danoDeCombate(e        )       {
       if (dano > cabe) { recebido[conjAlvo] = (recebido[conjAlvo] ?? 0) + dano - cabe; anotar(e, `Incomensurável: ${dano - cabe} de dano passa para o Conjurador.`); }
     } else if (alvoOk) recebido[c.alvo] = dano;
     if (alvoOk && revida) danoAoAtacante = comPrimeiroDanoDeAliado(e, c.alvo, ataqueDe(e, c.alvo));
-    resumo = `${nomeReg(e, c.atacante)} causa ${dano} a ${nomeReg(e, c.alvo)}${revida && alvoOk ? `, que causa ${danoAoAtacante} de volta` : ''}`;
+    resumo = `${nomeReg(e, c.atacante)} causa ${dano} a ${nomeReg(e, c.alvo)}${revida && alvoOk && !atk.ehConjurador ? `, que causa ${danoAoAtacante} de volta` : ''}`;
   } else {
     // Decisão 20: vários bloqueadores. Quem ataca distribui o dano; o que passa da vida de cada bloqueador vai para o Conjurador.
     // Todo bloqueador na mesa causa dano ao atacante ao mesmo tempo, mesmo que morra no combate.
@@ -1409,13 +1470,14 @@ function danoDeCombate(e        )       {
       revide += v;
     }
     danoAoAtacante = revide;
-    resumo = `${nomeReg(e, c.atacante)} distribui ${dano} (${partes.join(', ')})${excedente > 0 ? `; Incomensurável: ${excedente} de excedente vai para ${nomeReg(e, conjAlvo)}` : ''}; os bloqueadores causam ${revide} de volta`;
+    resumo = `${nomeReg(e, c.atacante)} distribui ${dano} (${partes.join(', ')})${excedente > 0 ? `; Incomensurável: ${excedente} de excedente vai para ${nomeReg(e, conjAlvo)}` : ''}${atk.ehConjurador ? '; o Conjurador atacante não recebe dano de volta' : `; os bloqueadores causam ${revide} de volta`}`;
   }
   // Armadura: só quando o Conjurador está entre os bloqueadores (protege o dano recebido, inclusive o excedente).
   if (recebido[conjAlvo] && c.bloqueadores.includes(conjAlvo)) recebido[conjAlvo] = aplicarArmadura(e, conjAlvo, recebido[conjAlvo]);
   e.combate = null;
   for (const [id, v] of Object.entries(recebido)) causarDano(e, id, v, 'combate');
-  if (atacanteOk) causarDano(e, c.atacante, danoAoAtacante, 'combate');
+  // Conjurador atacante não recebe revide (autor, 04/10; decisão 36): nem do alvo atacado nem dos bloqueadores. Efeitos explícitos (espinhos, gatilhos) continuam valendo.
+  if (atacanteOk && !atk.ehConjurador) causarDano(e, c.atacante, danoAoAtacante, 'combate');
   anotar(e, `Combate: ${resumo}.`);
   // Gatilho "ao causar dano de combate ao Conjurador inimigo" (rodada 6): vai para a pilha como um gatilho de "ao entrar".
   if ((recebido[conjAlvo] ?? 0) > 0 && !atk.ehConjurador) {

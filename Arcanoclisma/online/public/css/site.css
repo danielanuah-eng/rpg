@@ -188,6 +188,7 @@ body:has(#tela.cheia) .opinar-flutuante { display: none; }
 .ct-lista { display: flex; flex-direction: column; gap: 2px; margin-bottom: 12px; }
 .ct-linha { display: grid; grid-template-columns: 26px 1fr auto 24px auto; gap: 6px; align-items: center; padding: 3px 6px; border-radius: 8px; background: #ffffff07; font-size: 14px; }
 .ct-linha.invalida { background: #a2465c44; }
+.aviso-invalido { background: #a2465c33; border: 1px solid #a2465c; border-radius: 6px; padding: 6px 8px; margin: 6px 0; }
 .ct-custo { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: #182b38; border: 1px solid var(--ouro); font-weight: 800; font-size: 12px; }
 .ct-nome { cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ct-erros { color: var(--ouro); margin: 8px 0; }

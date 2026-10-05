@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { criarJogo, executar, ErroRegra } from '../../tcg/src/motor.ts';
+import { cartaServeConjurador, corrigirCores, criarJogo, executar, ErroRegra, validarBaralho } from '../../tcg/src/motor.ts';
 import { decidir } from '../../tcg/sim/bot.ts';
 import { avaliar } from '../../tcg/src/balanco.ts';
 import { cartasColecao } from '../../tcg/src/cartas-colecao.ts';
@@ -94,6 +94,8 @@ test('Valores do site: nenhuma carta neutra (só itens), quase todas com 1 Valor
   for (const b of D.baralhos as { id: string; conjurador: string; lista: [string, number][] }[]) {
     const V = D.catalogo.conjuradores[b.conjurador].valores as string[];
     for (const [id] of b.lista) { const c = D.catalogo.cartas[id]; if (c.tipo !== 'item') assert.ok(c.valores.some((v: string) => V.includes(v)), `${b.id}: ${id}`); }
+    // regra das cores (decisão 37): 2 Valores = exatamente o par; 3+ = o par está entre os da carta
+    for (const [id] of b.lista) { const c = D.catalogo.cartas[id]; if (c.tipo !== 'item' && c.valores.length >= 2) assert.ok(V.every((v) => c.valores.includes(v)), `${b.id}: ${id} (${c.valores})`); }
   }
 });
 
@@ -129,4 +131,27 @@ test('sigilo do "tirar da mão" (04/10, noite): olhando, só quem controla o efe
   assert.equal(e.pendencia?.tipo === 'escolherCartas' && e.pendencia.jogador, 1);
   assert.ok(w0.pendencia.cartas.every((id: string) => w0.instancias[id].defId === 'oculta'), 'quem jogou não vê a mão quando o dono escolhe');
   for (const id of e.jogadores[1].mao) assert.ok(!w0.pendencia.cartas.includes(id), 'nem os ids reais');
+});
+
+test('regra das cores (decisão 37): os 9 prontos valem; o Worker (validarBaralho) recusa 2 Valores com só 1 em comum e "Corrigir automaticamente" conserta', () => {
+  const C = D.catalogo as Catalogo;
+  assert.equal(D.baralhos.length, 9);
+  for (const b of D.baralhos as { id: string; conjurador: string; lista: [string, number][]; itens: string[] }[]) {
+    assert.deepEqual(validarBaralho(C, { conjurador: b.conjurador, cartas: b.lista.flatMap(([id, n]) => Array(n).fill(id)), itens: b.itens }, D.tamanhoBaralho), [], b.id);
+    assert.ok(b.lista.every(([, n]) => n <= D.maxCopias), b.id);
+  }
+  // uma carta de 2 Valores num baralho de Conjurador que só tem 1 deles
+  const duas = Object.values(C.cartas).find((c) => c.tipo !== 'item' && !c.ficha && c.valores.length === 2)!;
+  const cj = Object.values(C.conjuradores).find((j) => j.valores.filter((v) => duas.valores.includes(v)).length === 1)!;
+  assert.equal(cartaServeConjurador(duas, cj), false);
+  const pronto = (D.baralhos as { conjurador: string; lista: [string, number][]; itens: string[] }[]).find((b) => b.conjurador === cj.id)!;
+  const lista: [string, number][] = pronto.lista.map(([id, n]) => [id, n]);
+  lista[0] = [lista[0][0], lista[0][1] - 1];
+  lista.push([duas.id, 1]);
+  const erros = validarBaralho(C, { conjurador: cj.id, cartas: lista.flatMap(([id, n]) => Array(n).fill(id)), itens: pronto.itens }, D.tamanhoBaralho);
+  assert.equal(erros.length, 1);
+  assert.match(erros[0], /exatamente esses 2/);
+  const r = corrigirCores(C, cj.id, lista, { max: D.maxCopias, aceitar: (x) => !x.id.startsWith('base-recurso') });
+  assert.equal(r.trocas.length, 1);
+  assert.deepEqual(validarBaralho(C, { conjurador: cj.id, cartas: r.lista.flatMap(([id, n]) => Array(n).fill(id)), itens: pronto.itens }, D.tamanhoBaralho), []);
 });

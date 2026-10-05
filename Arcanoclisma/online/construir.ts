@@ -96,7 +96,8 @@ function dados(artes: Map<string, Arte>, ident: Identidade) {
   }));
   // Valores (pedido do autor, 03/10, noite): sem carta neutra, 1 Valor quase sempre, 9 minas; baralhos prontos só com os Valores do Conjurador
   const valoresSite = aplicarValoresDoSite(catalogo, baralhos, visual);
-  console.log(`Valores: ${JSON.stringify(valoresSite.porQtd)} (nº de Valores → cartas); por Valor ${JSON.stringify(valoresSite.porValor)}; ${valoresSite.trocas.length} troca(s) nos baralhos prontos.`);
+  console.log(`Valores: ${JSON.stringify(valoresSite.porQtd)} (nº de Valores → cartas); por Valor ${JSON.stringify(valoresSite.porValor)}; ${valoresSite.trocas.length} troca(s) nos baralhos prontos por Valor de fora; ${valoresSite.trocasCores.length} pela regra das cores (decisão 37).`);
+  if (valoresSite.trocasCores.length) console.log('  ' + valoresSite.trocasCores.join('\n  '));
   // Limite de cópias (pedido do autor, 03/10: até 3): o excesso dos baralhos prontos passa para outras cartas do mesmo
   // baralho que ainda têm menos de 3, de preferência do mesmo tipo e custo próximo. As simulações (tcg/sim) não mudam.
   const ajustesCopias: string[] = [];

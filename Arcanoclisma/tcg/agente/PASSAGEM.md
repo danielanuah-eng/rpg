@@ -19,6 +19,10 @@ Ver `.claude/EQUIPE.md`: `triagem-feedback` (haiku), `motor-regras` (opus médio
 ## Também publicado (04/10, noite, deploy 6f9bfab5)
 Protegido unificado (ex-proteção mágica; vários Protegidos cobrados juntos), efeitos secundários (dano no Conjurador, descartar, sacrificar Aliado, Grau ao cemitério), reanimar com pagamento (grátis/custo/custo+X, cartas da mão ao Arcano), gatilho cataclismaOponente, tirar da mão (descartar/banir; acaso/dono escolhe/olhando, com sigilo). Decisões 30–35. Testes tcg 181, online 13.
 
+## Também publicado (04/10, madrugada, deploy 9934d90b)
+Conjurador atacante sem revide (dec. 36), regra das cores no deckbuilding (dec. 37; itens com a mesma regra; baralhos das simulações e prontos migrados), equipamento do bot aleatório com peso pelo Valor ou escolhido (dec. 38), bot usa Extras. Testes tcg 193, online 14.
+Simulação depois da migração: Ricardo 68,7, Diástaros 68,6, Lyandra 62,8, Agnelo 59,2, Roh 46,3, Osmar 46,3, Carmal 44,8, Mitonho 41,1, **Ana 12,2** — o autor vai editar as cartas da Ana ele mesmo no Editor; equipe de balanceamento ainda não chamada.
+
 ## Próximos passos
 1. (feito 04/10) Iconografia v19 ligada; Editor auditado: texto congelado, clique indo para "Gerar texto" e aviso de edição não salva corrigidos.
 2. Conferir na tela: Editor (Protegido, efeito secundário, reanimar, tirar da mão, Conjuradores) e mesa (sacrifício, reanimar com pagamento, olhar mão, ◈ Protessência, ⏳).
