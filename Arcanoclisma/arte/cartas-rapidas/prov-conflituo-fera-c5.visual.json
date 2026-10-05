@@ -1,0 +1,65 @@
+{
+  "id": "prov-conflituo-fera-c5",
+  "nome": "Cavalo de Guerra",
+  "tipo": "aliado",
+  "valor": "conflituo",
+  "referencia": "Arcanoclisma/online/public/arte/cavalo-de-guerra.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-fera-c5.prompt.txt",
+  "cena": "Cavalo de Guerra springs forward through a broad field path at dawn, reference armor and tack intact, mane flowing, both front legs positioned naturally in a short gallop, ears forward and eyes intensely focused. Small rust-red hard-light accents near its armor, restrained energy. Smooth green field balanced with ochre dust, distant camp fence, no rider unless shown in the reference, no battlefield clutter or casualties.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-conflituo-fera-c5",
+    "nome": "Cavalo de Guerra",
+    "valores": [
+      "conflituo"
+    ],
+    "tipo": "aliado",
+    "custo": 5,
+    "grau": 4,
+    "velocidade": "findante",
+    "ataque": 3,
+    "vida": 6,
+    "texto": "Ao entrar: cause 2 de dano ao Conjurador inimigo e cure 2 de dano do seu Conjurador.",
+    "aoEntrar": [
+      {
+        "tipo": "dano",
+        "valor": 2,
+        "alvo": "conjuradorInimigo"
+      },
+      {
+        "tipo": "curar",
+        "valor": 2,
+        "alvo": "conjuradorProprio"
+      }
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-fera-c5.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-fera-c5.visual.json",
+  "sha256": "798a130b324ef3ad7a645c831ab6a0d0d4c564a936061162384d77402c070393",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-afeb353f-96a5-49a7-b589-389ae594642a.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572402
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

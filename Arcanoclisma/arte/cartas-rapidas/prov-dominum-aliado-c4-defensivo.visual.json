@@ -1,0 +1,53 @@
+{
+  "id": "prov-dominum-aliado-c4-defensivo",
+  "nome": "Guarda da Cidade-Muralha",
+  "tipo": "aliado",
+  "valor": "dominum",
+  "referencia": "Arcanoclisma/online/public/arte/guarda-da-cidade-muralha.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-aliado-c4-defensivo.prompt.txt",
+  "cena": "Guarda da Cidade-Muralha braces at a narrow city gate during a cloudy day, shield or weapon from the reference held defensively, body in a low three-quarter stance and gaze toward a threat beyond the left edge. Small solid violet chain barrier beside him. Warm ochre gateway stone, cool blue pavement and a glimpse of a quiet street beyond. No new armor anatomy, no frontal idle pose.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-dominum-aliado-c4-defensivo",
+    "nome": "Guarda da Cidade-Muralha",
+    "valores": [
+      "dominum"
+    ],
+    "tipo": "aliado",
+    "custo": 4,
+    "grau": 3,
+    "velocidade": "findante",
+    "ataque": 3,
+    "vida": 8,
+    "texto": ""
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-aliado-c4-defensivo.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-aliado-c4-defensivo.visual.json",
+  "sha256": "59484c2cb06b6bf8982c0a8c4f38a7e6dbbf701df62af2ed95f81ea454ded2c3",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-15df6c0c-a78d-4911-b1f0-e33aeb14275c.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573884
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

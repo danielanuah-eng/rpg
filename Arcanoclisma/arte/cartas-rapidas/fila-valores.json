@@ -1277,7 +1277,14 @@
       },
       "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-destruir-c3.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-destruir-c3.visual.json",
+      "sha256": "ef8d61f3a7141b81dd49f7eec821c9e87139550162dc41c52724b15d2417dc19",
+      "dimensoes": [
+        1061,
+        1482
+      ]
     },
     {
       "id": "prov-sublimeyn-comprar-c2-repentina",
@@ -1312,7 +1319,14 @@
       },
       "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-comprar-c2-repentina.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-comprar-c2-repentina.visual.json",
+      "sha256": "e8bc2285a5d063c555539fd757223c4daaed2ccc7c66c5fbc21779194cd4aead",
+      "dimensoes": [
+        1061,
+        1482
+      ]
     },
     {
       "id": "prov-morbidyum-dano-c3",
@@ -1348,7 +1362,14 @@
       },
       "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-dano-c3.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-dano-c3.visual.json",
+      "sha256": "8ffa021ba45b8f265b082726a393ad99e9cd1793521bbc386c87b5dc0a510573",
+      "dimensoes": [
+        1061,
+        1482
+      ]
     },
     {
       "id": "prov-conflituo-fera-c5",
@@ -1391,7 +1412,14 @@
       },
       "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-fera-c5.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-fera-c5.visual.json",
+      "sha256": "798a130b324ef3ad7a645c831ab6a0d0d4c564a936061162384d77402c070393",
+      "dimensoes": [
+        1061,
+        1482
+      ]
     },
     {
       "id": "prov-eternyr-devolver-c2-repentina",
@@ -1426,7 +1454,14 @@
       },
       "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-devolver-c2-repentina.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-devolver-c2-repentina.visual.json",
+      "sha256": "4dd7501aee6c1f8af64c00e50edfc25ebca44e3d367cd5f201ba71499ffe3f91",
+      "dimensoes": [
+        1062,
+        1482
+      ]
     },
     {
       "id": "prov-alvorum-comprar-c3",
@@ -1434,9 +1469,9 @@
       "tipo": "temporaria",
       "valor": "alvorum",
       "referencia": "Arcanoclisma/online/public/arte/coruja-sabia.webp",
-      "prompt": "Use case: stylized-concept. NEW full illustration for Arcanoclisma TCG, one vertical portrait in 63:88 aspect ratio, native high resolution, fully opaque scene to every edge. No text, no writing, no lettering, no logos, no borders, no card UI. Reference image is approved IDENTITY and graphic STYLE only: preserve unique face/species, body type, age, hair, distinctive attire/materials/gear; NEVER paste or repeat its cutout or pose. Create a new unified coherent scene. Simple efficient composition, one clear main subject, few props, readable silhouettes, subject large, face below top12%, bottom17% less busy for editable rules. Modern independent comics and contemporary animation, organic confident varied linework, flat color shapes, simple BLOCKED cel shadows, sparse halftone. Surroundings smooth and broad, minimal grit or painterly detail. Diffuse contained lighting, strong magic only locally, complementary warm/cool color areas, matte restrained gold. Not a photograph, not 3D, not a painting, not glossy generic anime, no HDR, no broad bloom, no empty or transparent backdrop. Humans have human anatomy, expressive faces and individual character; keep reference identity. Directed magic follows gaze and gesture axis, not a bent beam. VALUE color and magic: muted gold merging with dark violet-black, no dazzling gold background. Scene: Coruja-Sábia rests on a low smooth branch by an open blank book on a scholar's outdoor window sill at early morning, head tilted in curious three-quarter view and one talon touching the book edge. Preserve reference owl markings, facial features and magical accents. A few subdued muted-gold and violet-black motes near the eyes, not a huge aura. Warm wood, simple dark teal foliage and a pale blue cloudy sky, no writing on the pages. Game identity/effect (context only, never write it): Coruja-Sábia; Compre 2 cartas.. Rarity is unspecified, no rarity foil filter.",
+      "prompt": "Use case: stylized-concept. NEW full illustration for Arcanoclisma TCG, one vertical portrait in 63:88 aspect ratio, native high resolution, fully opaque scene to every edge. No text, no writing, no lettering, no logos, no borders, no card UI. Reference image is approved IDENTITY and graphic STYLE only: preserve unique face/species, body type, age, hair, distinctive attire/materials/gear; NEVER paste or repeat its cutout or pose. Create a new unified coherent scene. Simple efficient composition, one clear main subject, few props, readable silhouettes, subject large, face below top12%, bottom17% less busy for editable rules. Modern independent comics and contemporary animation, organic confident varied linework, flat color shapes, simple BLOCKED cel shadows, sparse halftone. Surroundings smooth and broad, minimal grit or painterly detail. Diffuse contained lighting, strong magic only locally, complementary warm/cool color areas, matte restrained gold. Not a photograph, not 3D, not a painting, not glossy generic anime, no HDR, no broad bloom, no empty or transparent backdrop. Humans have human anatomy, expressive faces and individual character; keep reference identity. Directed magic follows gaze and gesture axis, not a bent beam. VALUE color and magic: muted gold merging with dark violet-black, no dazzling gold background. Scene: Coruja-Sábia rests on a low smooth branch by an open blank book on a scholar's outdoor window sill on a quiet moonlit night, head tilted in curious three-quarter view and one talon touching the book edge. Preserve reference owl markings, facial features and magical accents. A few subdued muted-gold and violet-black motes near the eyes, not a huge aura. Warm wood, simple dark teal foliage and a dark blue cloudy sky with soft moonlight, no writing on the pages. Game identity/effect (context only, never write it): Coruja-Sábia; Compre 2 cartas.. Rarity is unspecified, no rarity foil filter.",
       "promptArquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-comprar-c3.prompt.txt",
-      "cena": "Coruja-Sábia rests on a low smooth branch by an open blank book on a scholar's outdoor window sill at early morning, head tilted in curious three-quarter view and one talon touching the book edge. Preserve reference owl markings, facial features and magical accents. A few subdued muted-gold and violet-black motes near the eyes, not a huge aura. Warm wood, simple dark teal foliage and a pale blue cloudy sky, no writing on the pages.",
+      "cena": "Coruja-Sábia rests on a low smooth branch by an open blank book on a scholar's outdoor window sill on a quiet moonlit night, head tilted in curious three-quarter view and one talon touching the book edge. Preserve reference owl markings, facial features and magical accents. A few subdued muted-gold and violet-black motes near the eyes, not a huge aura. Warm wood, simple dark teal foliage and a dark blue cloudy sky with soft moonlight, no writing on the pages.",
       "definicaoAtualClaude": {
         "subtipos": [],
         "arcanoGerado": 1,
@@ -1461,7 +1496,14 @@
       },
       "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-comprar-c3.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-comprar-c3.visual.json",
+      "sha256": "f3fd4bdd5c5bada00af6e36f0a37363b1962a09ad621f2ba7577909ffbc4c633",
+      "dimensoes": [
+        1062,
+        1480
+      ]
     },
     {
       "id": "prov-cognitium-aliado-c4-defensivo",
@@ -1492,7 +1534,14 @@
       },
       "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-aliado-c4-defensivo.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-aliado-c4-defensivo.visual.json",
+      "sha256": "7de715daf0a0ed151c8a9d282ff9a44bed88b866dc860cb5e5a834b55d92ff85",
+      "dimensoes": [
+        1062,
+        1482
+      ]
     },
     {
       "id": "prov-dominum-aliado-c4-defensivo",
@@ -1523,7 +1572,14 @@
       },
       "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-aliado-c4-defensivo.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-aliado-c4-defensivo.visual.json",
+      "sha256": "59484c2cb06b6bf8982c0a8c4f38a7e6dbbf701df62af2ed95f81ea454ded2c3",
+      "dimensoes": [
+        1062,
+        1482
+      ]
     },
     {
       "id": "prov-morbidyum-aliado-c6-descarta-grau",
@@ -1555,7 +1611,14 @@
       },
       "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-aliado-c6-descarta-grau.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-aliado-c6-descarta-grau.visual.json",
+      "sha256": "4380263c7ce624a1426c2bff49e33b493ef9abed82a98bc6beda421ff6a5e818",
+      "dimensoes": [
+        1061,
+        1483
+      ]
     },
     {
       "id": "prov-conflituo-aliado-c2-agressivo",
@@ -1825,17 +1888,8 @@
     }
   ],
   "estado": "em_producao",
-  "concluidas": 27,
+  "concluidas": 36,
   "pendentes": [
-    "prov-dominum-destruir-c3",
-    "prov-sublimeyn-comprar-c2-repentina",
-    "prov-morbidyum-dano-c3",
-    "prov-conflituo-fera-c5",
-    "prov-eternyr-devolver-c2-repentina",
-    "prov-alvorum-comprar-c3",
-    "prov-cognitium-aliado-c4-defensivo",
-    "prov-dominum-aliado-c4-defensivo",
-    "prov-morbidyum-aliado-c6-descarta-grau",
     "prov-conflituo-aliado-c2-agressivo",
     "prov-morbidyum-comprar-c3",
     "prov-morbidyum-mistica-c2",

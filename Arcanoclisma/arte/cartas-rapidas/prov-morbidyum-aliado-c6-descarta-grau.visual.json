@@ -1,0 +1,54 @@
+{
+  "id": "prov-morbidyum-aliado-c6-descarta-grau",
+  "nome": "A Coisa Que Sobrou",
+  "tipo": "aliado",
+  "valor": "morbidyum",
+  "referencia": "Arcanoclisma/online/public/arte/a-coisa-que-sobrou.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-aliado-c6-descarta-grau.prompt.txt",
+  "cena": "A Coisa Que Sobrou crawls out of a quiet abandoned workshop doorway at night, several limbs arranged exactly according to its reference anatomy, weight visibly supported on the floor. Head or main expressive feature turns toward the viewer. A few pale-green smoke threads escape the creature, no gore. Warm low lamp, broad terracotta floor, dark teal workbench and one broken blank panel; preserve odd creature identity without adding arbitrary arms.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-morbidyum-aliado-c6-descarta-grau",
+    "nome": "A Coisa Que Sobrou",
+    "valores": [
+      "morbidyum"
+    ],
+    "tipo": "aliado",
+    "custo": 6,
+    "grau": 5,
+    "velocidade": "findante",
+    "ataque": 11,
+    "vida": 14,
+    "texto": "Para jogar, descarte 2 cartas do seu Grau.",
+    "descartaGrau": 2
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-aliado-c6-descarta-grau.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-aliado-c6-descarta-grau.visual.json",
+  "sha256": "4380263c7ce624a1426c2bff49e33b493ef9abed82a98bc6beda421ff6a5e818",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-6280fd9e-f217-4675-9898-6590b92209d3.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573463
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

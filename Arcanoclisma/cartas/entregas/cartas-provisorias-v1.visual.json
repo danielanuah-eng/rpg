@@ -3,7 +3,7 @@
   "versao": 2,
   "estado": "em_producao",
   "meta": 46,
-  "concluidas": 30,
+  "concluidas": 39,
   "escopo": "Todas as cartas do briefing atual, com as três cenas iniciais preservadas.",
   "ordem": [
     "prov-sublimeyn-etereo-c2",
@@ -300,73 +300,73 @@
       "id": "prov-dominum-destruir-c3",
       "nome": "Carrasco da Cidade-Muralha",
       "referencia": "Arcanoclisma/online/public/arte/carrasco-da-cidade-muralha.webp",
-      "arquivo": null,
-      "registro": null,
-      "estado": "pendente"
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-destruir-c3.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-destruir-c3.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
     },
     {
       "id": "prov-sublimeyn-comprar-c2-repentina",
       "nome": "Mercador de Sal",
       "referencia": "Arcanoclisma/online/public/arte/mercador-de-sal.webp",
-      "arquivo": null,
-      "registro": null,
-      "estado": "pendente"
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-comprar-c2-repentina.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-comprar-c2-repentina.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
     },
     {
       "id": "prov-morbidyum-dano-c3",
       "nome": "Abutre da Ferida",
       "referencia": "Arcanoclisma/online/public/arte/abutre-da-ferida.webp",
-      "arquivo": null,
-      "registro": null,
-      "estado": "pendente"
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-dano-c3.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-dano-c3.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
     },
     {
       "id": "prov-conflituo-fera-c5",
       "nome": "Cavalo de Guerra",
       "referencia": "Arcanoclisma/online/public/arte/cavalo-de-guerra.webp",
-      "arquivo": null,
-      "registro": null,
-      "estado": "pendente"
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-fera-c5.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-fera-c5.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
     },
     {
       "id": "prov-eternyr-devolver-c2-repentina",
       "nome": "Mensageira do Portal",
       "referencia": "Arcanoclisma/online/public/arte/mensageira-do-portal.webp",
-      "arquivo": null,
-      "registro": null,
-      "estado": "pendente"
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-devolver-c2-repentina.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-devolver-c2-repentina.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
     },
     {
       "id": "prov-alvorum-comprar-c3",
       "nome": "Coruja-Sábia",
       "referencia": "Arcanoclisma/online/public/arte/coruja-sabia.webp",
-      "arquivo": null,
-      "registro": null,
-      "estado": "pendente"
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-comprar-c3.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-comprar-c3.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
     },
     {
       "id": "prov-cognitium-aliado-c4-defensivo",
       "nome": "Inspetor de Escola",
       "referencia": "Arcanoclisma/online/public/arte/inspetor-de-escola.webp",
-      "arquivo": null,
-      "registro": null,
-      "estado": "pendente"
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-aliado-c4-defensivo.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-aliado-c4-defensivo.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
     },
     {
       "id": "prov-dominum-aliado-c4-defensivo",
       "nome": "Guarda da Cidade-Muralha",
       "referencia": "Arcanoclisma/online/public/arte/guarda-da-cidade-muralha.webp",
-      "arquivo": null,
-      "registro": null,
-      "estado": "pendente"
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-aliado-c4-defensivo.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-aliado-c4-defensivo.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
     },
     {
       "id": "prov-morbidyum-aliado-c6-descarta-grau",
       "nome": "A Coisa Que Sobrou",
       "referencia": "Arcanoclisma/online/public/arte/a-coisa-que-sobrou.webp",
-      "arquivo": null,
-      "registro": null,
-      "estado": "pendente"
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-aliado-c6-descarta-grau.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-aliado-c6-descarta-grau.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
     },
     {
       "id": "prov-conflituo-aliado-c2-agressivo",

@@ -1,0 +1,57 @@
+{
+  "id": "prov-dominum-destruir-c3",
+  "nome": "Carrasco da Cidade-Muralha",
+  "tipo": "temporaria",
+  "valor": "dominum",
+  "referencia": "Arcanoclisma/online/public/arte/carrasco-da-cidade-muralha.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-destruir-c3.prompt.txt",
+  "cena": "Carrasco da Cidade-Muralha pivots in a narrow city courtyard at dusk, watching directly the single distant armored magical construct he is striking. One clean dark-purple hard-light blade or chain, consistent with his reference weapon, runs along the same axis as his arm toward the construct; target shatters into harmless arcane fragments, no gore. Broad terracotta paving, blue shadows, one plain city wall; dynamic coherent aim.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-dominum-destruir-c3",
+    "nome": "Carrasco da Cidade-Muralha",
+    "valores": [
+      "dominum"
+    ],
+    "tipo": "temporaria",
+    "custo": 3,
+    "grau": 2,
+    "velocidade": "findante",
+    "efeitos": [
+      {
+        "tipo": "destruir",
+        "alvo": "escolhido"
+      }
+    ],
+    "texto": "Destrua um alvo."
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-destruir-c3.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-destruir-c3.visual.json",
+  "sha256": "ef8d61f3a7141b81dd49f7eec821c9e87139550162dc41c52724b15d2417dc19",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-4c66fb47-e334-4683-bcba-92ba3a511db3.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572402
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

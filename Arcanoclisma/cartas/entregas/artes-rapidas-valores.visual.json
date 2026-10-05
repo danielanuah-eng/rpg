@@ -4,17 +4,8 @@
   "data": "2026-10-04",
   "estado": "em_producao",
   "meta": 43,
-  "concluidas": 27,
+  "concluidas": 36,
   "pendentes": [
-    "prov-dominum-destruir-c3",
-    "prov-sublimeyn-comprar-c2-repentina",
-    "prov-morbidyum-dano-c3",
-    "prov-conflituo-fera-c5",
-    "prov-eternyr-devolver-c2-repentina",
-    "prov-alvorum-comprar-c3",
-    "prov-cognitium-aliado-c4-defensivo",
-    "prov-dominum-aliado-c4-defensivo",
-    "prov-morbidyum-aliado-c6-descarta-grau",
     "prov-conflituo-aliado-c2-agressivo",
     "prov-morbidyum-comprar-c3",
     "prov-morbidyum-mistica-c2",
@@ -474,6 +465,141 @@
       "dimensoes": [
         1062,
         1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-dominum-destruir-c3",
+      "nome": "Carrasco da Cidade-Muralha",
+      "valor": "dominum",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-destruir-c3.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-destruir-c3.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-destruir-c3.visual.json",
+      "arteModo": "cena",
+      "sha256": "ef8d61f3a7141b81dd49f7eec821c9e87139550162dc41c52724b15d2417dc19",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-sublimeyn-comprar-c2-repentina",
+      "nome": "Mercador de Sal",
+      "valor": "sublimeyn",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-comprar-c2-repentina.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-comprar-c2-repentina.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-comprar-c2-repentina.visual.json",
+      "arteModo": "cena",
+      "sha256": "e8bc2285a5d063c555539fd757223c4daaed2ccc7c66c5fbc21779194cd4aead",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-morbidyum-dano-c3",
+      "nome": "Abutre da Ferida",
+      "valor": "morbidyum",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-dano-c3.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-dano-c3.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-dano-c3.visual.json",
+      "arteModo": "cena",
+      "sha256": "8ffa021ba45b8f265b082726a393ad99e9cd1793521bbc386c87b5dc0a510573",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-conflituo-fera-c5",
+      "nome": "Cavalo de Guerra",
+      "valor": "conflituo",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-fera-c5.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-fera-c5.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-fera-c5.visual.json",
+      "arteModo": "cena",
+      "sha256": "798a130b324ef3ad7a645c831ab6a0d0d4c564a936061162384d77402c070393",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-eternyr-devolver-c2-repentina",
+      "nome": "Mensageira do Portal",
+      "valor": "eternyr",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-devolver-c2-repentina.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-devolver-c2-repentina.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-devolver-c2-repentina.visual.json",
+      "arteModo": "cena",
+      "sha256": "4dd7501aee6c1f8af64c00e50edfc25ebca44e3d367cd5f201ba71499ffe3f91",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-alvorum-comprar-c3",
+      "nome": "Coruja-Sábia",
+      "valor": "alvorum",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-comprar-c3.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-comprar-c3.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-comprar-c3.visual.json",
+      "arteModo": "cena",
+      "sha256": "f3fd4bdd5c5bada00af6e36f0a37363b1962a09ad621f2ba7577909ffbc4c633",
+      "dimensoes": [
+        1062,
+        1480
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-cognitium-aliado-c4-defensivo",
+      "nome": "Inspetor de Escola",
+      "valor": "cognitium",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-aliado-c4-defensivo.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-aliado-c4-defensivo.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-aliado-c4-defensivo.visual.json",
+      "arteModo": "cena",
+      "sha256": "7de715daf0a0ed151c8a9d282ff9a44bed88b866dc860cb5e5a834b55d92ff85",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-dominum-aliado-c4-defensivo",
+      "nome": "Guarda da Cidade-Muralha",
+      "valor": "dominum",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-aliado-c4-defensivo.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-aliado-c4-defensivo.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-aliado-c4-defensivo.visual.json",
+      "arteModo": "cena",
+      "sha256": "59484c2cb06b6bf8982c0a8c4f38a7e6dbbf701df62af2ed95f81ea454ded2c3",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-morbidyum-aliado-c6-descarta-grau",
+      "nome": "A Coisa Que Sobrou",
+      "valor": "morbidyum",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-aliado-c6-descarta-grau.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-aliado-c6-descarta-grau.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-aliado-c6-descarta-grau.visual.json",
+      "arteModo": "cena",
+      "sha256": "4380263c7ce624a1426c2bff49e33b493ef9abed82a98bc6beda421ff6a5e818",
+      "dimensoes": [
+        1061,
+        1483
       ],
       "estado": "entregue_aguardando_avaliacao_do_autor"
     }

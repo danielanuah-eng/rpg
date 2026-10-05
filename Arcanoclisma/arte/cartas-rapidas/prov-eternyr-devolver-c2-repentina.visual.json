@@ -1,0 +1,57 @@
+{
+  "id": "prov-eternyr-devolver-c2-repentina",
+  "nome": "Mensageira do Portal",
+  "tipo": "temporaria",
+  "valor": "eternyr",
+  "referencia": "Arcanoclisma/online/public/arte/mensageira-do-portal.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-devolver-c2-repentina.prompt.txt",
+  "cena": "Mensageira do Portal rushes down a calm school courtyard at dawn, side three-quarter body angle and one foot lifting into motion, looking directly at a small blue-night opening she has made in the air. One distant creature silhouette steps harmlessly back through that opening, white stopped time traces only around the aperture. Preserve her reference face, costume and carried item. Warm plaster, cool tiled floor, restrained portal scale.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-eternyr-devolver-c2-repentina",
+    "nome": "Mensageira do Portal",
+    "valores": [
+      "eternyr"
+    ],
+    "tipo": "temporaria",
+    "custo": 2,
+    "grau": 1,
+    "velocidade": "repentina",
+    "efeitos": [
+      {
+        "tipo": "devolver",
+        "alvo": "escolhidoAliado"
+      }
+    ],
+    "texto": "Devolva um Aliado ou Mística à mão do dono."
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-devolver-c2-repentina.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-devolver-c2-repentina.visual.json",
+  "sha256": "4dd7501aee6c1f8af64c00e50edfc25ebca44e3d367cd5f201ba71499ffe3f91",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-ee5558cb-9301-4ae9-b367-8b0e02b39816.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573884
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

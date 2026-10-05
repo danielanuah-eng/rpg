@@ -1,0 +1,57 @@
+{
+  "id": "prov-sublimeyn-comprar-c2-repentina",
+  "nome": "Mercador de Sal",
+  "tipo": "temporaria",
+  "valor": "sublimeyn",
+  "referencia": "Arcanoclisma/online/public/arte/mercador-de-sal.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-comprar-c2-repentina.prompt.txt",
+  "cena": "Mercador de Sal kneels beside a small open chest on a harbor landing during an overcast morning, lifting a single iridescent silver salt crystal toward the light with an interested satisfied expression. Three-quarter close-middle view, preserve reference face, physique and clothing. Warm clay jars and wooden planks, blue-gray sea beyond, little controlled silver vapor. Crate label and papers completely blank, no text.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-sublimeyn-comprar-c2-repentina",
+    "nome": "Mercador de Sal",
+    "valores": [
+      "sublimeyn"
+    ],
+    "tipo": "temporaria",
+    "custo": 2,
+    "grau": 1,
+    "velocidade": "repentina",
+    "efeitos": [
+      {
+        "tipo": "comprar",
+        "valor": 1
+      }
+    ],
+    "texto": "Compre 1 carta."
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-comprar-c2-repentina.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-comprar-c2-repentina.visual.json",
+  "sha256": "e8bc2285a5d063c555539fd757223c4daaed2ccc7c66c5fbc21779194cd4aead",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-49b1f999-5f91-4124-838f-4a9f6eed69ab.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572402
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

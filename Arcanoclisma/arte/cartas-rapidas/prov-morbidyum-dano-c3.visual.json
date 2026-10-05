@@ -1,0 +1,58 @@
+{
+  "id": "prov-morbidyum-dano-c3",
+  "nome": "Abutre da Ferida",
+  "tipo": "temporaria",
+  "valor": "morbidyum",
+  "referencia": "Arcanoclisma/online/public/arte/abutre-da-ferida.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-dano-c3.prompt.txt",
+  "cena": "Abutre da Ferida swoops low across a dry ochre valley at early morning, head and beak aimed at a dark distant arcane training target, wings banked asymmetrically and claws gathered under the body. Preserve its approved anatomy and pale-green ghostly smoke accents. A small sharp wisp trails toward the target, no blood, no carcasses. Smooth rocky walls, cool distant mountains, one main bird large and expressive.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-morbidyum-dano-c3",
+    "nome": "Abutre da Ferida",
+    "valores": [
+      "morbidyum"
+    ],
+    "tipo": "temporaria",
+    "custo": 3,
+    "grau": 2,
+    "velocidade": "findante",
+    "efeitos": [
+      {
+        "tipo": "dano",
+        "valor": 4,
+        "alvo": "escolhido"
+      }
+    ],
+    "texto": "Cause 4 de dano a um alvo."
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-dano-c3.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-dano-c3.visual.json",
+  "sha256": "8ffa021ba45b8f265b082726a393ad99e9cd1793521bbc386c87b5dc0a510573",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-aef68535-1248-4bb3-a63f-171ac9aae194.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572402
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

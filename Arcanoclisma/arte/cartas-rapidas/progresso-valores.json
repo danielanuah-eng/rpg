@@ -1,17 +1,8 @@
 {
   "estado": "em_producao",
   "meta": 43,
-  "concluidas": 27,
+  "concluidas": 36,
   "pendentes": [
-    "prov-dominum-destruir-c3",
-    "prov-sublimeyn-comprar-c2-repentina",
-    "prov-morbidyum-dano-c3",
-    "prov-conflituo-fera-c5",
-    "prov-eternyr-devolver-c2-repentina",
-    "prov-alvorum-comprar-c3",
-    "prov-cognitium-aliado-c4-defensivo",
-    "prov-dominum-aliado-c4-defensivo",
-    "prov-morbidyum-aliado-c6-descarta-grau",
     "prov-conflituo-aliado-c2-agressivo",
     "prov-morbidyum-comprar-c3",
     "prov-morbidyum-mistica-c2",

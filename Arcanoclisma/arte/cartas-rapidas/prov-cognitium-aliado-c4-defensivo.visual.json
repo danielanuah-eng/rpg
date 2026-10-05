@@ -1,0 +1,53 @@
+{
+  "id": "prov-cognitium-aliado-c4-defensivo",
+  "nome": "Inspetor de Escola",
+  "tipo": "aliado",
+  "valor": "cognitium",
+  "referencia": "Arcanoclisma/online/public/arte/inspetor-de-escola.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-aliado-c4-defensivo.prompt.txt",
+  "cena": "Inspetor de Escola pauses at a school corridor junction in daytime, torso facing three-quarter left, one hand holding a closed notebook against the hip and the other gesturing for someone to wait. Observant skeptical expression, eyes toward the unseen student at the left. Small controlled indigo veil on notebook edge. Broad warm plaster walls, cool tiled floor and one open classroom door; no repeated grand magic spectacle.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-cognitium-aliado-c4-defensivo",
+    "nome": "Inspetor de Escola",
+    "valores": [
+      "cognitium"
+    ],
+    "tipo": "aliado",
+    "custo": 4,
+    "grau": 3,
+    "velocidade": "findante",
+    "ataque": 3,
+    "vida": 8,
+    "texto": ""
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-aliado-c4-defensivo.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-aliado-c4-defensivo.visual.json",
+  "sha256": "7de715daf0a0ed151c8a9d282ff9a44bed88b866dc860cb5e5a834b55d92ff85",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-2e16635b-fbf5-4af8-84a0-d6c1febb68db.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573884
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

@@ -1,0 +1,57 @@
+{
+  "id": "prov-alvorum-comprar-c3",
+  "nome": "Coruja-Sábia",
+  "tipo": "temporaria",
+  "valor": "alvorum",
+  "referencia": "Arcanoclisma/online/public/arte/coruja-sabia.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-comprar-c3.prompt.txt",
+  "cena": "Coruja-Sábia rests on a low smooth branch by an open blank book on a scholar's outdoor window sill on a quiet moonlit night, head tilted in curious three-quarter view and one talon touching the book edge. Preserve reference owl markings, facial features and magical accents. A few subdued muted-gold and violet-black motes near the eyes, not a huge aura. Warm wood, simple dark teal foliage and a dark blue cloudy sky with soft moonlight, no writing on the pages.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-alvorum-comprar-c3",
+    "nome": "Coruja-Sábia",
+    "valores": [
+      "alvorum"
+    ],
+    "tipo": "temporaria",
+    "custo": 3,
+    "grau": 2,
+    "velocidade": "findante",
+    "efeitos": [
+      {
+        "tipo": "comprar",
+        "valor": 2
+      }
+    ],
+    "texto": "Compre 2 cartas."
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-comprar-c3.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-comprar-c3.visual.json",
+  "sha256": "f3fd4bdd5c5bada00af6e36f0a37363b1962a09ad621f2ba7577909ffbc4c633",
+  "dimensoes": [
+    1062,
+    1480
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-695a9163-5d48-4de0-b34b-cc13d44388c3.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1571760
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}
