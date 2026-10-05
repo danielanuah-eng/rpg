@@ -227,6 +227,8 @@ export interface CartaDef {
   exclusivoDe?: string[];
   /** Ficha: carta criada por efeito (invocar); não entra em baralho. */
   ficha?: boolean;
+  /** Carta provisória (04/10, madrugada): criada para devolver a identidade aos baralhos após a regra das cores; o autor revisa no Editor. */
+  provisoria?: boolean;
   /**
    * Arma (Canal): o que acontece quando o Conjurador ataca com ela (pedido do autor, 04/10). O Arcano pago e o Grau
    * mínimo para atacar são o custo e o Grau da própria carta do item (podem ser 0).

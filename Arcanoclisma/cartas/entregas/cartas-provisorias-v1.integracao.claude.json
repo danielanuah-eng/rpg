@@ -1,0 +1,9 @@
+{
+  "versao": 1,
+  "data": "2026-10-05",
+  "entrega": "Arcanoclisma/cartas/entregas/cartas-provisorias-v1.visual.json",
+  "estado": "integrado_e_publicado",
+  "como": "online/construir.ts lê também esta entrega (MAPAS_EXTRAS) com o mesmo critério do lote principal: estado aprovado e arquivo existente; WebP 1024 px em public/arte/finais/<arquivo>.webp",
+  "resultado": "46 artes das cartas provisórias no site (256 artes finais no total); conferidas Garça-de-Neblina, Grifo-de-Vidro e Cervo Branco com template v18 e ícones v19",
+  "testes": "tcg 197, online 14, partida online local 0 erros"
+}

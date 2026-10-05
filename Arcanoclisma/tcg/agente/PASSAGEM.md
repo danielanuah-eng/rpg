@@ -23,6 +23,13 @@ Protegido unificado (ex-proteção mágica; vários Protegidos cobrados juntos),
 Conjurador atacante sem revide (dec. 36), regra das cores no deckbuilding (dec. 37; itens com a mesma regra; baralhos das simulações e prontos migrados), equipamento do bot aleatório com peso pelo Valor ou escolhido (dec. 38), bot usa Extras. Testes tcg 193, online 14.
 Simulação depois da migração: Ricardo 68,7, Diástaros 68,6, Lyandra 62,8, Agnelo 59,2, Roh 46,3, Osmar 46,3, Carmal 44,8, Mitonho 41,1, **Ana 12,2** — o autor vai editar as cartas da Ana ele mesmo no Editor; equipe de balanceamento ainda não chamada.
 
+## Feito (05/10, madrugada) — publicado em 05/10 com as 46 artes aprovadas do GPT
+- 39 cartas provisórias (tcg/src/cartas-provisorias.ts, provisoria: true, arte aprovada fora da expansão, identidade.json) repõem as funções que saíram dos baralhos pela regra das cores; baralhos da simulação reescritos (sim/conjuradores-decks.ts); decisão 39. Simulação: Ricardo 69,7 · Diástaros 62,0 · Lyandra 60,6 · Agnelo 51,4 · Osmar 48,9 · Carmal 45,8 · Roh 38,0 · Ana 36,9 · Mitonho 36,7.
+- Editor: aba Provisórias, filtro por Valor (algum/exatamente), agrupar por Valor, atalho por Conjurador.
+- FEITO: +7 provisórias (5 Místicas, 2 Primitivum: cura da Lyandra e defensor do Carmal) = 46 cartas. Pedido ao GPT v2 em cartas/pedidos/cartas-provisorias-v1.claude.json com 46 artes e bloco `alinhamento`; o GPT deve confirmar em cartas/entregas/cartas-provisorias-v1.visual.json. O Codex já começou (arte/cartas-rapidas/prov-*). Testes NÃO rodados desde as 7 novas (ordem do autor): rodar uma vez antes de publicar (o limite do teste de provisórias subiu para 50).
+- Próximo: quando a entrega do GPT chegar aprovada, integrar (integrador-visual), rodar testes uma vez, publicar e comitar.
+- Ordens do autor: curas ele ajusta; prontos do site com mais provisórias ok; **parar testes/simulações nesta etapa — só design e efeitos**; **publicar só depois que o GPT entregar as artes aprovadas**; alinhar com o GPT quantas e quais artes.
+
 ## Próximos passos
 1. (feito 04/10) Iconografia v19 ligada; Editor auditado: texto congelado, clique indo para "Gerar texto" e aviso de edição não salva corrigidos.
 2. Conferir na tela: Editor (Protegido, efeito secundário, reanimar, tirar da mão, Conjuradores) e mesa (sacrifício, reanimar com pagamento, olhar mão, ◈ Protessência, ⏳).

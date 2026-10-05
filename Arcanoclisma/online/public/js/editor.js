@@ -2,7 +2,7 @@
 // e a mecânica em JSON). As mudanças vão para um rascunho que já vale nesta página (dá para testar contra o bot);
 // "Salvar no site" grava uma versão nova no D1 e ela passa a valer para todos (partidas online já começadas
 // continuam com a versão do início). Mesmo formato do editor do app de testes (tcg/data/edicoes.json).
-import { $, $$, esc, api, DADOS, BASE, EDICOES, VALOR, TIPO, textoCarta, textoPoder, sessao, avisar, janela, local, usarEdicoes, carregarEdicoes, dataCurta } from './base.js';
+import { $, $$, esc, api, DADOS, BASE, EDICOES, VALOR, COR_VALOR, TIPO, textoCarta, textoPoder, sessao, avisar, janela, local, usarEdicoes, carregarEdicoes, dataCurta } from './base.js';
 import { desenharCarta, modeloCarta, modeloConjurador } from './carta.js';
 import { edicoesVazias } from '/jogo/edicoes.js';
 import { descEfeito, protegidoDe } from '/jogo/textos.js';
@@ -19,6 +19,20 @@ function quemUsa(c) {
 }
 
 const VALORES = Object.keys(VALOR);
+const CHAVE_FILTRO = 'editor:filtro';
+/** Nome do conjunto de Valores (cabeçalho do agrupamento): "Alvorum + Primitivum", ou "Sem Valor". */
+const nomeConjunto = (vs) => (vs.length ? [...vs].sort((a, b) => VALORES.indexOf(a) - VALORES.indexOf(b)).map((v) => VALOR[v] ?? v).join(' + ') : 'Sem Valor');
+/**
+ * Filtro por Valor da lista (pedido do autor, 04/10): marcados = Valores escolhidos (e 'sem' = Sem Valor).
+ * 'algum': tem algum dos marcados; 'exato': o conjunto de Valores é exatamente o marcado (achar as cartas de um par).
+ */
+function passaValor(vs, marcados, modo) {
+  if (!marcados.length) return true;
+  const sem = marcados.includes('sem'), quais = marcados.filter((v) => v !== 'sem');
+  if (sem && !vs.length) return true;
+  if (!quais.length) return false;
+  return modo === 'exato' ? vs.length === quais.length && quais.every((v) => vs.includes(v)) : vs.some((v) => quais.includes(v));
+}
 const COMPROMETIMENTOS = ['Invocador', 'Brigão', 'Parrudão da quebrada', 'Habilidoso', 'Preparado'];
 const NUM_CARTA = [['custo', 'Custo'], ['grau', 'Grau'], ['arcanoGerado', 'Gera Arcano'], ['ataque', 'Ataque'], ['vida', 'Vida'], ['defesa', 'Defesa (armadura)'], ['vidaDesgaste', 'Desgaste (armadura)'], ['descartaGrau', 'Descarta do Grau'], ['pagarParaAnular', 'Pagar para anular'], ['grauExtra', 'Grau extra'], ['espinhos', 'Espinhos (armadura)']];
 const NUM_CONJ = [['vida', 'Vida'], ['maoInicial', 'Mão inicial'], ['compraFinal', 'Compra no Final'], ['danoBasico', 'Dano básico'], ['custoAtaque', 'Custo de ataque']];
@@ -93,7 +107,10 @@ export async function telaEditor(tela, partes, ctx) {
   let rascunho = local.ler(CHAVE_RASCUNHO, null) ?? structuredClone(EDICOES.dados);
   rascunho = { ...edicoesVazias(), ...rascunho, artes: { cartas: {}, conjuradores: {}, ...(rascunho.artes ?? {}) }, raridades: { cartas: {}, conjuradores: {}, ...(rascunho.raridades ?? {}) } };
   let sel = partes[0] ? decodeURIComponent(partes[0]) : null; // "c:<id>" (carta) ou "j:<id>" (Conjurador)
-  let filtro = { busca: '', tipo: 'conjurador' };
+  // filtros da lista, lembrados no navegador (pedido do autor, 04/10): tipo, Valores, modo, agrupar e Conjurador
+  const filtroSalvo = local.ler(CHAVE_FILTRO, {});
+  let filtro = { busca: '', tipo: 'conjurador', valores: [], modo: 'algum', agrupar: false, conj: '', ...filtroSalvo };
+  const guardarFiltro = () => { const { busca, ...resto } = filtro; void busca; local.gravar(CHAVE_FILTRO, resto); };
   /**
    * Texto que o editor gerou sozinho da mecânica (não conta como texto do autor); null = texto do autor.
    * Variável, não `form.dataset.textoAuto`: o atributo `data-texto-auto` no formulário fazia todo clique nele
@@ -149,7 +166,14 @@ export async function telaEditor(tela, partes, ctx) {
     <aside class="editor-lista painel">
       <div class="titulo-secao"><h2>Editor</h2></div>
       <input type="search" placeholder="Buscar" data-busca>
-      <div class="abas editor-tipos">${[['conjurador', 'Conjuradores'], ['aliado', 'Aliados'], ['temporaria', 'Temporárias'], ['mistica', 'Místicas'], ['estrutura', 'Estruturas'], ['item', 'Itens'], ['mudadas', 'Mudadas']].map(([k, r]) => `<button data-tipo="${k}">${r}</button>`).join('')}</div>
+      <div class="abas editor-tipos">${[['conjurador', 'Conjuradores'], ['aliado', 'Aliados'], ['temporaria', 'Temporárias'], ['mistica', 'Místicas'], ['estrutura', 'Estruturas'], ['item', 'Itens'], ['mudadas', 'Mudadas'], ['provisorias', 'Provisórias']].map(([k, r]) => `<button data-tipo="${k}">${r}</button>`).join('')}</div>
+      <div class="abas editor-tipos" title="Filtrar por Valor (vários ao mesmo tempo)">${[...VALORES.map((v) => [v, `<span class="chip-valor" style="background:${COR_VALOR[v]}">${esc(VALOR[v])}</span>`]), ['sem', 'Sem Valor']].map(([k, r]) => `<button data-valor="${k}">${r}</button>`).join('')}</div>
+      <div class="filtros">
+        <label class="opcao-linha"><input type="radio" name="editor-modo-valor" value="algum" data-modo-valor> Tem algum dos marcados</label>
+        <label class="opcao-linha"><input type="radio" name="editor-modo-valor" value="exato" data-modo-valor> Exatamente estes</label>
+        <label class="opcao-linha"><input type="checkbox" data-agrupar> Agrupar por Valor</label>
+        <select data-conj-filtro><option value="">Qualquer Conjurador</option>${Object.values(DADOS.catalogo.conjuradores).map((j) => `<option value="${esc(j.id)}">Cartas que ${esc(j.nome.split(',')[0])} pode usar</option>`).join('')}</select>
+      </div>
       <div class="editor-itens"></div>
     </aside>
     <section class="editor-form painel"></section>
@@ -181,13 +205,26 @@ export async function telaEditor(tela, partes, ctx) {
   }
   function desenharLista() {
     for (const b of $$('[data-tipo]', tela)) b.classList.toggle('ativo', b.dataset.tipo === filtro.tipo);
+    for (const b of $$('[data-valor]', tela)) b.classList.toggle('ativo', filtro.valores.includes(b.dataset.valor));
+    for (const r of $$('[data-modo-valor]', tela)) r.checked = r.value === filtro.modo;
+    $('[data-agrupar]', tela).checked = !!filtro.agrupar;
+    $('[data-conj-filtro]', tela).value = filtro.conj;
+    const conjF = filtro.conj ? DADOS.catalogo.conjuradores[filtro.conj] : null;
     const mud = mudancas();
     const busca = filtro.busca.toLowerCase();
     const itens = [
-      ...Object.values(DADOS.catalogo.conjuradores).map((c) => ({ k: 'j:' + c.id, nome: c.nome, tipo: 'conjurador', sub: c.valores.map((v) => VALOR[v]).join(' + ') })),
-      ...Object.values(DADOS.catalogo.cartas).filter((c) => c.tipo !== 'oculta').map((c) => ({ k: 'c:' + c.id, nome: c.nome, tipo: c.tipo, sub: `${TIPO[c.categoriaItem ?? c.tipo] ?? c.tipo} · custo ${c.custo} · Grau ${c.grau}` })),
-    ].filter((x) => (filtro.tipo === 'mudadas' ? mud.has(x.k) : x.tipo === filtro.tipo) && (!busca || x.nome.toLowerCase().includes(busca) || x.k.includes(busca)));
-    lista.innerHTML = itens.map((x) => `<button class="editor-item ${x.k === sel ? 'ativo' : ''}" data-k="${esc(x.k)}">${mud.has(x.k) ? '<span class="ponto-mudou" title="Mudada no rascunho">●</span> ' : ''}<b>${esc(x.nome)}</b><span class="peq">${esc(x.sub)}</span></button>`).join('') || '<p class="peq">Nada encontrado.</p>';
+      ...Object.values(DADOS.catalogo.conjuradores).map((c) => ({ k: 'j:' + c.id, nome: c.nome, tipo: 'conjurador', valores: c.valores, serve: !conjF || c.id === conjF.id, sub: c.valores.map((v) => VALOR[v]).join(' + ') })),
+      ...Object.values(DADOS.catalogo.cartas).filter((c) => c.tipo !== 'oculta').map((c) => ({ k: 'c:' + c.id, nome: c.nome, tipo: c.tipo, prov: !!c.provisoria, valores: c.valores ?? [], serve: !conjF || (c.tipo === 'item' ? itemServe(conjF, c) : cartaServeConjurador(c, conjF)), sub: `${TIPO[c.categoriaItem ?? c.tipo] ?? c.tipo} · custo ${c.custo} · Grau ${c.grau}` })),
+    ].filter((x) => (filtro.tipo === 'mudadas' ? mud.has(x.k) : filtro.tipo === 'provisorias' ? x.prov : x.tipo === filtro.tipo) && (!busca || x.nome.toLowerCase().includes(busca) || x.k.includes(busca))
+      && x.serve && passaValor(x.valores, filtro.valores, filtro.modo));
+    const botao = (x) => `<button class="editor-item ${x.k === sel ? 'ativo' : ''}" data-k="${esc(x.k)}">${mud.has(x.k) ? '<span class="ponto-mudou" title="Mudada no rascunho">●</span> ' : ''}<b>${esc(x.nome)}</b>${x.prov ? ' <span class="etiqueta" title="Carta provisória: criada para os baralhos após a regra das cores; revise efeito e números">provisória</span>' : ''}<span class="peq">${esc(x.sub)}</span></button>`;
+    if (!itens.length) { lista.innerHTML = '<p class="peq">Nada encontrado.</p>'; return; }
+    if (!filtro.agrupar) { lista.innerHTML = itens.map(botao).join(''); return; }
+    // agrupado por Valor: a carta de 2+ Valores fica no grupo do conjunto dela ("Alvorum + Primitivum")
+    const grupos = new Map();
+    for (const x of itens) { const g = nomeConjunto(x.valores); if (!grupos.has(g)) grupos.set(g, { n: x.valores.length, itens: [] }); grupos.get(g).itens.push(x); }
+    lista.innerHTML = [...grupos].sort(([a, ga], [b, gb]) => (ga.n || 9) - (gb.n || 9) || a.localeCompare(b))
+      .map(([g, { itens: xs }]) => `<p class="peq"><b>${esc(g)}</b> · ${xs.length}</p>${xs.map(botao).join('')}`).join('');
   }
 
   // ---------- formulário ----------
@@ -203,7 +240,7 @@ export async function telaEditor(tela, partes, ctx) {
     const mec = conjur ? { poder: c.poder ?? null } : Object.fromEntries(MEC_CARTA.filter((k) => c[k] !== undefined).map((k) => [k, c[k]]));
     // nome antigo "Proteção mágica" (protecao): abre como parte do Protegido
     if (!conjur && c.protecao) { const pr = protegidoDe(c); if (pr) mec.protegido = Object.keys(pr).length === 1 && pr.arcano ? pr.arcano : pr; }
-    form.innerHTML = `<div class="titulo-secao"><h2>${esc(c.nome)}</h2><span class="etiqueta">${conjur ? 'Conjurador' : esc(TIPO[c.categoriaItem ?? c.tipo] ?? c.tipo)} · ${esc(id)}</span></div>
+    form.innerHTML = `<div class="titulo-secao"><h2>${esc(c.nome)}</h2><span class="etiqueta">${conjur ? 'Conjurador' : esc(TIPO[c.categoriaItem ?? c.tipo] ?? c.tipo)} · ${esc(id)}</span>${!conjur && c.provisoria ? ' <span class="etiqueta">provisória</span>' : ''}</div>
       <label class="campo">Nome<input type="text" data-f="nome" value="${esc(c.nome)}"></label>
       <label class="campo">${conjur ? 'Habilidade (texto)' : 'Texto de regras'}<textarea data-f="${conjur ? 'habilidade' : 'texto'}">${esc(conjur ? c.habilidade : c.texto)}</textarea></label>
       <div class="linha-botoes"><button class="botao peq" data-texto-auto>Gerar o texto a partir da mecânica</button></div>
@@ -473,9 +510,14 @@ export async function telaEditor(tela, partes, ctx) {
 
   // ---------- lista ----------
   $('[data-busca]', tela).oninput = (ev) => { filtro.busca = ev.target.value; desenharLista(); };
+  for (const r of $$('[data-modo-valor]', tela)) r.onchange = () => { filtro.modo = r.value; guardarFiltro(); desenharLista(); };
+  $('[data-agrupar]', tela).onchange = (ev) => { filtro.agrupar = ev.target.checked; guardarFiltro(); desenharLista(); };
+  $('[data-conj-filtro]', tela).onchange = (ev) => { filtro.conj = ev.target.value; guardarFiltro(); desenharLista(); };
   $('.editor-lista', tela).addEventListener('click', (ev) => {
     const tp = ev.target.closest('[data-tipo]');
-    if (tp) { filtro.tipo = tp.dataset.tipo; desenharLista(); return; }
+    if (tp) { filtro.tipo = tp.dataset.tipo; guardarFiltro(); desenharLista(); return; }
+    const vb = ev.target.closest('[data-valor]');
+    if (vb) { const v = vb.dataset.valor; filtro.valores = filtro.valores.includes(v) ? filtro.valores.filter((x) => x !== v) : [...filtro.valores, v]; guardarFiltro(); desenharLista(); return; }
     const it = ev.target.closest('[data-k]');
     if (it) { sel = it.dataset.k; history.replaceState(null, '', '#/editor/' + encodeURIComponent(sel)); desenharLista(); desenharForm(); }
   });

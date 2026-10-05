@@ -27,7 +27,7 @@ export const ICONES = [
   { id: 'ao-entrar', nome: 'Ao entrar', mostra: 'uma carta descendo até a mesa com uma onda de impacto embaixo', gatilho: /\b(Ao entrar|ao entrar)\b/ },
   { id: 'atacar', nome: 'Atacar', mostra: 'duas lâminas cruzadas com riscos de movimento para a frente', gatilho: /\b(atacar|ataca|Ataque|Bloquear e atacar)\b/ },
   { id: 'bloquear', nome: 'Bloquear', mostra: 'um escudo erguido recebendo um impacto', gatilho: /\b([Bb]loquear|bloqueia|bloqueio)\b/ },
-  { id: 'repentina', nome: 'Repentina', mostra: 'um raio dourado rápido (velocidade de resposta)', gatilho: /\b(Repentina)\b/ },
+  { id: 'repentina', nome: 'Repentina', mostra: 'um raio dourado rápido (velocidade de resposta)', gatilho: /\b(Repentin[ao])\b/ },
   { id: 'findante', nome: 'Findante', mostra: 'uma ampulheta com a areia descendo (só na sua fase principal)', gatilho: /\b(Findante)\b/ },
   { id: 'proficiente', nome: 'Proficiente', mostra: 'uma bota alada / seta dupla para a frente (age no turno em que entra)', gatilho: /\b(Proficiente)\b/ },
   { id: 'etereo', nome: 'Etéreo', mostra: 'uma silhueta translúcida com contorno tracejado e brilho fantasma', gatilho: /\b(Etéreos?)\b/ },

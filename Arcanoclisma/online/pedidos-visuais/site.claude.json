@@ -245,5 +245,10 @@
     "pedido": "Arcanoclisma/online/pedidos-visuais/iconografia.claude.json",
     "data": "2026-10-04",
     "resumo": "29 ícones de mecânicas (suspender, pagar Arcano, comprar, dano, curar...) para o texto das cartas"
+  },
+  "cartasProvisorias": {
+    "pedido": "Arcanoclisma/cartas/pedidos/cartas-provisorias-v1.claude.json",
+    "data": "2026-10-04",
+    "resumo": "Arte final e efeito da magia das 46 cartas provisórias (prefixo prov-; versão 2 com 5 Místicas e 2 de Primitivum; confirmar quantas, quais e ordem em cartas/entregas/cartas-provisorias-v1.visual.json) que devolvem a identidade aos 9 baralhos após a regra das cores. Prioridade normal; o efeito pode mudar na revisão do autor, nome e identidade ficam. Sem Ciantia, Philgard ou A Mestra dos Dragões."
   }
 }

@@ -1,48 +1,48 @@
 # Conjuradores por par de Valores: simulação
 
-Variante CONJ; 2880 partidas (40 por confronto ordenado); duração média 24.3 turnos; quem começa vence 50.1%; fim: conjurador 98.7%, impasse 1.3%.
+Variante CONJ; 2880 partidas (40 por confronto ordenado); duração média 25.0 turnos; quem começa vence 51.8%; fim: conjurador 99.5%, impasse 0.5%.
 
 ## Vitória média e uso da habilidade
 
 | Conjurador | Valores | Vitória média | Vence partidas longas (18+) | Habilidade por partida |
 |---|---|---|---|---|
-| Alquimista Ricardo | alvorum + sublimeyn | 68.7% | 74.0% (546) | 2.25 |
-| Diástaros | morbidyum + cognitium | 68.6% | 71.1% (530) | 0.64 |
-| Lyandra | conflituo + primitivum | 62.8% | 46.6% (427) | 0.00 |
-| Agnelo | persona + morbidyum | 59.2% | 51.9% (509) | 1.86 |
-| Roh | sublimeyn + persona | 46.3% | 33.8% (402) | 0.07 |
-| Osmar | dominum + conflituo | 46.3% | 38.7% (527) | 0.00 |
-| Carmal | primitivum + alvorum | 44.8% | 45.4% (555) | 9.52 |
-| Mitonho | eternyr + dominum | 41.1% | 54.0% (467) | 1.14 |
-| Ana | cognitium + eternyr | 12.2% | 21.1% (369) | 1.07 |
+| Alquimista Ricardo | alvorum + sublimeyn | 69.7% | 73.7% (558) | 1.79 |
+| Diástaros | morbidyum + cognitium | 62.0% | 68.9% (537) | 0.17 |
+| Lyandra | conflituo + primitivum | 60.6% | 40.1% (411) | 0.00 |
+| Agnelo | persona + morbidyum | 51.4% | 45.2% (516) | 1.67 |
+| Osmar | dominum + conflituo | 48.9% | 42.4% (531) | 0.00 |
+| Carmal | primitivum + alvorum | 45.8% | 46.1% (553) | 9.56 |
+| Roh | sublimeyn + persona | 38.0% | 29.6% (351) | 0.01 |
+| Ana | cognitium + eternyr | 36.9% | 47.3% (497) | 0.98 |
+| Mitonho | eternyr + dominum | 36.7% | 45.9% (508) | 1.22 |
 
 ## Matriz (linha contra coluna)
 
 | | Lyandra | Carmal | Alquimista Ricardo | Roh | Agnelo | Diástaros | Ana | Mitonho | Osmar |
 |---|---|---|---|---|---|---|---|---|---|
-| **Lyandra** | — | 50.0% | 43.8% | 93.8% | 43.8% | 47.5% | 98.8% | 86.3% | 38.8% |
-| **Carmal** | 50.0% | — | 12.5% | 41.3% | 47.5% | 28.7% | 72.5% | 23.8% | 82.5% |
-| **Alquimista Ricardo** | 56.3% | 87.5% | — | 52.5% | 62.5% | 51.2% | 88.8% | 66.3% | 85.0% |
-| **Roh** | 6.3% | 58.8% | 47.5% | — | 18.8% | 50.0% | 82.5% | 90.0% | 16.3% |
-| **Agnelo** | 56.3% | 52.5% | 37.5% | 81.3% | — | 31.3% | 92.5% | 76.3% | 46.3% |
-| **Diástaros** | 52.5% | 71.3% | 48.8% | 50.0% | 68.8% | — | 91.3% | 72.5% | 93.8% |
-| **Ana** | 1.3% | 27.5% | 11.3% | 17.5% | 7.5% | 8.8% | — | 10.0% | 13.8% |
-| **Mitonho** | 13.8% | 76.3% | 33.8% | 10.0% | 23.8% | 27.5% | 90.0% | — | 53.8% |
-| **Osmar** | 61.3% | 17.5% | 15.0% | 83.8% | 53.8% | 6.3% | 86.3% | 46.3% | — |
+| **Lyandra** | — | 42.5% | 52.5% | 95.0% | 42.5% | 65.0% | 91.3% | 76.3% | 20.0% |
+| **Carmal** | 57.5% | — | 13.8% | 65.0% | 67.5% | 30.0% | 38.8% | 20.0% | 73.8% |
+| **Alquimista Ricardo** | 47.5% | 86.3% | — | 81.3% | 72.5% | 63.7% | 52.5% | 73.8% | 80.0% |
+| **Roh** | 5.0% | 35.0% | 18.8% | — | 32.5% | 40.0% | 66.3% | 90.0% | 16.3% |
+| **Agnelo** | 57.5% | 32.5% | 27.5% | 67.5% | — | 35.0% | 68.8% | 73.8% | 48.8% |
+| **Diástaros** | 35.0% | 70.0% | 36.3% | 60.0% | 65.0% | — | 52.5% | 95.0% | 82.5% |
+| **Ana** | 8.8% | 61.3% | 47.5% | 33.8% | 31.3% | 47.5% | — | 38.8% | 26.3% |
+| **Mitonho** | 23.8% | 80.0% | 26.3% | 10.0% | 26.3% | 5.0% | 61.3% | — | 61.3% |
+| **Osmar** | 80.0% | 26.3% | 20.0% | 83.8% | 51.2% | 17.5% | 73.8% | 38.8% | — |
 
 ## Duração média por confronto (turnos)
 
 | | Lyandra | Carmal | Alquimista Ricardo | Roh | Agnelo | Diástaros | Ana | Mitonho | Osmar |
 |---|---|---|---|---|---|---|---|---|---|
-| **Lyandra** | — | 25.0 | 22.2 | 18.6 | 24.4 | 21.9 | 14.9 | 18.4 | 26.5 |
-| **Carmal** | 25.0 | — | 27.7 | 20.1 | 26.6 | 28.9 | 27.0 | 30.1 | 31.7 |
-| **Alquimista Ricardo** | 22.2 | 27.7 | — | 19.7 | 25.4 | 29.0 | 28.3 | 34.4 | 26.0 |
-| **Roh** | 18.6 | 20.1 | 19.7 | — | 20.5 | 19.7 | 20.0 | 18.2 | 20.8 |
-| **Agnelo** | 24.4 | 26.6 | 25.4 | 20.5 | — | 25.2 | 19.1 | 21.2 | 29.3 |
-| **Diástaros** | 21.9 | 28.9 | 29.0 | 19.7 | 25.2 | — | 24.2 | 28.2 | 27.6 |
-| **Ana** | 14.9 | 27.0 | 28.3 | 20.0 | 19.1 | 24.2 | — | 32.0 | 19.1 |
-| **Mitonho** | 18.4 | 30.1 | 34.4 | 18.2 | 21.2 | 28.2 | 32.0 | — | 24.9 |
-| **Osmar** | 26.5 | 31.7 | 26.0 | 20.8 | 29.3 | 27.6 | 19.1 | 24.9 | — |
+| **Lyandra** | — | 24.7 | 22.1 | 15.8 | 26.2 | 20.3 | 17.7 | 20.4 | 24.3 |
+| **Carmal** | 24.7 | — | 25.6 | 18.2 | 26.8 | 29.9 | 28.9 | 31.2 | 29.8 |
+| **Alquimista Ricardo** | 22.1 | 25.6 | — | 19.8 | 23.3 | 27.8 | 34.6 | 28.9 | 25.9 |
+| **Roh** | 15.8 | 18.2 | 19.8 | — | 18.1 | 20.8 | 23.3 | 17.7 | 17.2 |
+| **Agnelo** | 26.2 | 26.8 | 23.3 | 18.1 | — | 25.3 | 24.5 | 22.5 | 28.8 |
+| **Diástaros** | 20.3 | 29.9 | 27.8 | 20.8 | 25.3 | — | 33.1 | 23.8 | 26.0 |
+| **Ana** | 17.7 | 28.9 | 34.6 | 23.3 | 24.5 | 33.1 | — | 43.3 | 23.9 |
+| **Mitonho** | 20.4 | 31.2 | 28.9 | 17.7 | 22.5 | 23.8 | 43.3 | — | 28.9 |
+| **Osmar** | 24.3 | 29.8 | 25.9 | 17.2 | 28.8 | 26.0 | 23.9 | 28.9 | — |
 
 ## Habilidades
 

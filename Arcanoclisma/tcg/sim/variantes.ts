@@ -2,6 +2,7 @@
 import { readFileSync } from 'node:fs';
 import { bonusGrau, grauPadrao, orcamento, PRECO, precoAtivacao, precoEfeito, type Precos } from '../src/balanco.ts';
 import { cartasBase } from '../src/cartas-base.ts';
+import { cartasProvisorias } from '../src/cartas-provisorias.ts';
 import type { CartaDef, Catalogo, ConjuradorDef, Efeito, Regras } from '../src/tipos.ts';
 import { conjuradoresPorValor } from '../src/conjuradores.ts';
 import { itensBasicos } from '../src/itens.ts';
@@ -450,6 +451,8 @@ export function catalogoGerado(v: Variante): Catalogo {
     const x = Math.floor(orcamento(3, 1, p) / p.danoTodosAmbos);
     mapa['r6-furia-c3'] = temporariaR6('r6-furia-c3', 'Fúria', 3, grauPadrao(3), [{ tipo: 'danoTodosAliados', valor: x, ambos: true }], `Causa ${x} de dano a cada Aliado (os seus também).`);
   }
+  // Cartas provisórias (04/10, madrugada): só na rodada 7, antes da curva (os Aliados ganham o bônus de Grau como os genéricos)
+  if (v.r7Conjuradores) for (const c of cartasProvisorias) mapa[c.id] = structuredClone(c);
   // Curva de Grau: os Aliados (sem habilidade de Arcano) ganham bonusGrau em Ataque e Vida, na proporção do perfil.
   if (v.r6CurvaGrau > 0) {
     for (const c of Object.values(mapa)) {

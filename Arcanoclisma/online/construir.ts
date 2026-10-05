@@ -149,10 +149,11 @@ async function reduzir(origem: string, destino: string, largura: number): Promis
  *  (muda junto com a arte, então o navegador não fica com a imagem antiga no cache). */
 const PASTA_FINAIS = raizArcano + 'arte/cartas-site/';
 const MAPA_FINAIS = raizArcano + 'cartas/entregas/lote-site-v1.visual.json';
+/** Outras entregas de artes finais no mesmo formato (cartas provisórias, 05/10). */
+const MAPAS_EXTRAS = [raizArcano + 'cartas/entregas/cartas-provisorias-v1.visual.json'];
 const origemFinal = new Map<string, string>();
 function artesFinaisAprovadas(cat: Catalogo): Record<string, string> {
-  if (!existsSync(MAPA_FINAIS)) return {};
-  const itens = (JSON.parse(readFileSync(MAPA_FINAIS, 'utf8')).cartas ?? []) as { id: string; arquivo?: string; estado?: string; okGpt?: boolean }[];
+  const itens = [MAPA_FINAIS, ...MAPAS_EXTRAS].filter((m) => existsSync(m)).flatMap((m) => (JSON.parse(readFileSync(m, 'utf8')).cartas ?? []) as { id: string; arquivo?: string; estado?: string; okGpt?: boolean }[]);
   const r: Record<string, string> = {};
   for (const i of itens) {
     const aprovada = i.okGpt === true || /^aprovad/.test(i.estado ?? '');

@@ -290,7 +290,58 @@ const lote = {
 };
 // Lote 1 em produção pelo GPT: não regravar sem querer. Com --v2, gera só as cartas que não estão no lote 1 (cartas novas,
 // minas, itens novos) e a lista dos Valores atualizados das cartas do lote 1 (sem carta neutra; quase sempre 1 Valor).
-if (process.argv.includes('--v2')) {
+// Com --provisorias: só as cartas provisórias (pedido do autor, 04/10, madrugada: "repasse pro GPT as artes necessárias").
+// Gera cartas/pedidos/cartas-provisorias-v1.claude.json, com a função de cada carta e quem a usa.
+const PAPEL: Array<[RegExp, string]> = [
+  [/mistica/, 'Mística: permanente no campo cujo efeito se repete (ver texto de regras)'],
+  [/varredura/, 'varredura: dano em todos os Aliados do oponente'], [/ira/, 'varredura total: destrói todos os Aliados, os do dono também'],
+  [/remocao-grau/, 'remoção que cresce com o Grau do dono'], [/destruir/, 'remoção: destrói um Aliado, Mística ou Estrutura'],
+  [/devolver/, 'tempo: devolve um Aliado ou Mística à mão do dono'], [/anular/, 'anulação: anula uma carta na pilha'],
+  [/comprar/, 'compra de cartas'], [/dano-c\d/, 'remoção pontual: dano num alvo'], [/curar/, 'cura'], [/enfermaria/, 'Estrutura de cura que se repete'],
+  [/torre/, 'Estrutura de dano que se repete'], [/cerco/, 'Estrutura que cutuca o Conjurador inimigo a cada turno'], [/fonte/, 'Estrutura de Arcano (ramp)'],
+  [/espiao/, 'Aliado Etéreo que compra carta quando acerta o Conjurador'], [/mercador/, 'Aliado Etéreo e Protegido que compra cartas'],
+  [/anjo/, 'Aliado Etéreo que cura o Conjurador quando acerta'], [/bomba/, 'bomba de fim de jogo: Etéreo, Protegido e varre ao entrar'],
+  [/colosso/, 'Aliado grande e Protegido'], [/piromante/, 'Aliado que fere todos os Aliados do oponente ao entrar'], [/fera/, 'Aliado que fere o Conjurador inimigo e cura o seu ao entrar'],
+  [/etereo/, 'Aliado Etéreo barato (evasão)'], [/descarta-grau/, 'Aliado enorme que paga descartando do Grau'], [/defensivo/, 'Aliado defensivo (muita Vida)'],
+  [/agressivo/, 'Aliado agressivo barato'],
+];
+if (process.argv.includes('--provisorias')) {
+  const ids = Object.entries(D.catalogo.cartas as Record<string, Carta & { provisoria?: boolean }>).filter(([, c]) => c.provisoria).map(([id]) => id);
+  const usam = (id: string) => D.baralhos.filter((b: { lista: [string, number][] }) => b.lista.some(([x]) => x === id)).map((b: { conjurador: string }) => D.catalogo.conjuradores[b.conjurador].nome.split(',')[0]);
+  const VAL = ['conflituo', 'sublimeyn', 'dominum', 'persona', 'alvorum', 'morbidyum', 'cognitium', 'eternyr', 'primitivum'];
+  const nosProntos = (id: string) => usam(id).length > 0;
+  const ordem = [...ids].sort((a, b) => Number(nosProntos(b)) - Number(nosProntos(a)) || usam(b).length - usam(a).length || a.localeCompare(b));
+  const v1 = new Set(['prov-primitivum-curar-c2', 'prov-primitivum-aliado-c4-defensivo']);
+  const pedido = {
+    alinhamento: {
+      totalDeArtes: ids.length,
+      resumo: `Pedimos ${ids.length} artes finais, uma por carta provisória (IDs abaixo). Nenhuma outra arte faz parte deste pedido.`,
+      porValor: Object.fromEntries(VAL.map((v) => [VALOR[v].nome, ids.filter((id) => D.catalogo.cartas[id].valores[0] === v)]).filter(([, l]) => l.length)),
+      prioridade: [
+        { nivel: 1, descricao: 'já estão nos baralhos prontos do site (aparecem em toda partida); dentro do nível, as usadas por mais Conjuradores primeiro', ids: ordem.filter(nosProntos) },
+        { nivel: 2, descricao: 'fora dos baralhos prontos (só na coleção e nas simulações)', ids: ordem.filter((id) => !nosProntos(id)) },
+      ],
+      novasNaVersao2: ids.filter((id) => /mistica/.test(id) || v1.has(id)),
+      pedidoDeConfirmacao: 'GPT/Codex: antes de produzir, confirme num arquivo de resposta cartas/entregas/cartas-provisorias-v1.visual.json quantas artes vai entregar, quais (IDs) e em que ordem, e avise se alguma ficar de fora ou mudar de referência. O Claude só integra o que estiver nessa confirmação.',
+      publicacao: 'O site só será publicado com estas cartas quando as artes chegarem APROVADAS (pelo autor). Até lá, as cartas usam a arte de referência atual no site local, sem publicar.',
+    },
+    tarefaId: 'cartas-provisorias-v1', autor: 'Claude', estado: 'solicitado', necessidadeAtual: true, versao: 2, atualizadoEm: '2026-10-04', prioridade: 'normal',
+    mudancasVersao2: 'Autor, 04/10: + 5 Místicas provisórias (no lugar das Místicas básicas dos baralhos) e + 2 cartas de Primitivum (cura da Lyandra e Aliado defensivo de custo 4 do Carmal); resumo de alinhamento no topo.',
+    objetivoAtual: `Arte final (cena com cenário próprio) e efeito da magia de ${ids.length} cartas PROVISÓRIAS, criadas para devolver a identidade aos 9 baralhos depois da regra das cores (decisão 37).`,
+    pedidoDoAutor: ['repasse pro GPT as artes necessárias.', lote.pedidoDoAutor],
+    provisorias: 'Cartas provisórias: o efeito e os números podem mudar quando o autor revisar no Editor, mas o NOME e a IDENTIDADE (o personagem/lugar da arte aprovada de referência) ficam. A arte deve mostrar a função descrita, sem depender dos números.',
+    restricoes: ['Nada de Ciantia, Philgard ou da expansão "A Mestra dos Dragões" (bloqueada): nenhuma referência, personagem, dragão ou cenário dela.', 'A arte aprovada citada em cada carta é só referência de identidade: a arte final é uma cena NOVA, inteira, com fundo (DIRETRIZ-CENARIOS).', 'Variar ambientes e horários entre as cartas; nem toda cena precisa ser grandiosa (retratos ambientados e situações calmas valem).'],
+    referenciasClaude: ['Arcanoclisma/cartas/DIRETRIZ-CENARIOS.md (obrigatória em todo briefing/prompt)', ...lote.referenciasClaude, 'Arcanoclisma/tcg/src/cartas-provisorias.ts (as cartas)'],
+    montagemDoPrompt: { ...lote.montagemDoPrompt, formatoEntrega: 'PNG opaco 1260 × 1760 (63:88), sem alfa, em destino de cada carta (arte/cartas-site/<id>.png), como nos lotes anteriores; registrar prompt completo, referência usada e decisão do autor no mapa corrente cartas/entregas/lote-site-v1.visual.json (chave = id da carta), que o site já lê.' },
+    efeitos: 'Fazer também o efeito da magia de cada carta, adaptado à arte (mesmo contrato dos lotes anteriores: efeitos/pedidos/mesa-efeitos-v1.claude.json).',
+    cartas: ids.map((id) => ({ ...entradaCarta(id, D.catalogo.cartas[id]), provisoria: true, funcao: PAPEL.find(([re]) => re.test(id))?.[1] ?? 'ver texto de regras', usadaPor: usam(id),
+      arteAtualReferencia: D.visual[id]?.arte ?? null, relacaoComEfeito: 'o efeito descrito em "textos.regras" tem de aparecer na arte (ver "cena" e "variacao").' })),
+    respostas: [],
+    instrucoesAcabamento: lote.instrucoesAcabamento,
+  };
+  writeFileSync(raiz + 'cartas/pedidos/cartas-provisorias-v1.claude.json', JSON.stringify(pedido, null, 1) + '\n');
+  console.log(`cartas-provisorias-v1 (versão 2): ${ids.length} cartas provisórias; ${ordem.filter(nosProntos).length} nos baralhos prontos.`);
+} else if (process.argv.includes('--v2')) {
   type ComFicha = Carta & { ficha?: boolean };
   const v1 = JSON.parse(readFileSync(raiz + 'cartas/pedidos/lote-site-v1.claude.json', 'utf8'));
   const jaPedidas = new Set(v1.cartas.map((c: { id: string }) => c.id));

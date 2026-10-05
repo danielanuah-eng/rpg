@@ -23,7 +23,8 @@ const hash = (t: string) => { let h = 2166136261; for (const ch of t) h = Math.i
 export function aplicarValoresDoSite(catalogo: Catalogo, baralhos: Pronto[], visual: Record<string, { arte: string | null; raridade: string | null; nomeMecanico?: string }>) {
   const VALORES = [...new Set(Object.values(catalogo.conjuradores).flatMap((c) => c.valores))].sort();
   const conjV = (b: Pronto) => catalogo.conjuradores[b.conjurador].valores;
-  const cartas = Object.values(catalogo.cartas).filter((c) => c.tipo !== 'item' && !c.ficha && c.id !== RECURSO);
+  // as cartas provisórias (04/10, madrugada) já nascem com o Valor escolhido para servir aos Conjuradores: ficam como estão
+  const cartas = Object.values(catalogo.cartas).filter((c) => c.tipo !== 'item' && !c.ficha && !c.provisoria && c.id !== RECURSO);
   // uso[carta][valor]: cópias nos baralhos prontos de Conjuradores com esse Valor (onde a carta serve hoje)
   const uso: Record<string, Record<string, number>> = {};
   for (const b of baralhos) for (const [id, n] of b.lista) {
