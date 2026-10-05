@@ -1,0 +1,58 @@
+{
+  "id": "prov-conflituo-dano-c2-repentina",
+  "nome": "Assassina Paga",
+  "tipo": "temporaria",
+  "valor": "conflituo",
+  "referencia": "Arcanoclisma/online/public/arte/assassina-paga.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-dano-c2-repentina.prompt.txt",
+  "cena": "Assassina Paga lunges from the side of a simple stone alley at blue hour, gaze locked onto a distant armored magical target. Her reference blade or small rust-red hard-light dagger is directed straight along the arm's axis toward that target, swift controlled action without blood or injury detail. Preserve face, hair, attire and body. Warm ochre street wall, deep blue shadows, one plain doorway and small warm lamp; not a frontal poster.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-conflituo-dano-c2-repentina",
+    "nome": "Assassina Paga",
+    "valores": [
+      "conflituo"
+    ],
+    "tipo": "temporaria",
+    "custo": 2,
+    "grau": 1,
+    "velocidade": "repentina",
+    "efeitos": [
+      {
+        "tipo": "dano",
+        "valor": 2,
+        "alvo": "escolhido"
+      }
+    ],
+    "texto": "Cause 2 de dano a um alvo."
+  },
+  "raridade": null,
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-dano-c2-repentina.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-dano-c2-repentina.visual.json",
+  "sha256": "e7e7e4fb393035f41370f3368110ac952eafa9fd4c8f93e1162ddf36c81374f7",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-73895290-ed52-4e56-bb40-2ac9c2d1969f.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572402
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

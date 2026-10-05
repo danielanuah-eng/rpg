@@ -1,0 +1,62 @@
+{
+  "id": "prov-persona-espiao-c4",
+  "nome": "Encantadora de Salão",
+  "tipo": "aliado",
+  "valor": "persona",
+  "referencia": "Arcanoclisma/online/public/arte/encantadora-de-salao.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-persona-espiao-c4.prompt.txt",
+  "cena": "In a quiet ballroom at dusk, Encantadora de Salão stands in three-quarter view, subtly turning toward a departing guest while holding an open folding fan at chest height. A small restrained coral aura threads from her fingers toward the guest's attention. Background: smooth tiled floor, two columns and a few distant softly drawn guests. She dominates the scene; intelligent playful expression and sideways gaze.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-persona-espiao-c4",
+    "nome": "Encantadora de Salão",
+    "valores": [
+      "persona"
+    ],
+    "tipo": "aliado",
+    "custo": 4,
+    "grau": 3,
+    "velocidade": "findante",
+    "ataque": 2,
+    "vida": 2,
+    "texto": "Etéreo. Ao causar dano de combate ao Conjurador inimigo: compre 1 carta.",
+    "palavrasChave": [
+      "Etéreo"
+    ],
+    "aoDanoConjurador": [
+      {
+        "tipo": "comprar",
+        "valor": 1
+      }
+    ]
+  },
+  "raridade": null,
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-persona-espiao-c4.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-persona-espiao-c4.visual.json",
+  "sha256": "790fa2e83576d5ce1a3db1c07f85ec449dde4f51b21905770ce46608584ae0a7",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-eedfc14c-af7f-4c4b-b60c-b49b415cc344.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573884
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

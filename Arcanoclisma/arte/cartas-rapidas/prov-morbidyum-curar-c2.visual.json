@@ -1,0 +1,58 @@
+{
+  "id": "prov-morbidyum-curar-c2",
+  "nome": "Curandeira de Beira de Estrada",
+  "tipo": "temporaria",
+  "valor": "morbidyum",
+  "referencia": "Arcanoclisma/online/public/arte/curandeira-de-beira-de-estrada.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c2.prompt.txt",
+  "cena": "Curandeira de Beira de Estrada kneels beside a tired seated traveler under a simple roadside shelter at twilight, gently directing a small PALE GREEN smoke healing ribbon from one hand toward the traveler's bandaged forearm. Main healer in three-quarter side view, caring concentrated expression, gaze on the forearm. No wounds or blood. Warm lantern, smooth earthen ground and cool green distant fields; just these two people, coherent human proportions.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-morbidyum-curar-c2",
+    "nome": "Curandeira de Beira de Estrada",
+    "valores": [
+      "morbidyum"
+    ],
+    "tipo": "temporaria",
+    "custo": 2,
+    "grau": 1,
+    "velocidade": "findante",
+    "efeitos": [
+      {
+        "tipo": "curar",
+        "valor": 6,
+        "alvo": "escolhido"
+      }
+    ],
+    "texto": "Cure 6 de dano de um alvo."
+  },
+  "raridade": null,
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c2.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c2.visual.json",
+  "sha256": "a160f3e271945aa499199d0d02143ca02efc5726f1637979caf0fd2b8a3ba219",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-a556c448-c778-4ee8-888d-d3f3f1f9adb0.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573884
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

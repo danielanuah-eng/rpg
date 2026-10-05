@@ -1,0 +1,57 @@
+{
+  "id": "prov-sublimeyn-devolver-c2-repentina",
+  "nome": "Menina de Pele de Mercúrio",
+  "tipo": "temporaria",
+  "valor": "sublimeyn",
+  "referencia": "Arcanoclisma/online/public/arte/menina-de-pele-de-mercurio.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-devolver-c2-repentina.prompt.txt",
+  "cena": "Menina de Pele de Mercúrio turns calmly on a smooth harbor quay on a pale morning, side three-quarter pose, one hand sweeping a small silver mist ribbon toward a distant creature's silhouette dissolving harmlessly into mist. Gaze and hand face the same direction; no bent beam. Preserve the reference's apparent age and clothes, modest practical dress, serene expression. Teal water and warm dock planks, one moored boat, quiet scene.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-sublimeyn-devolver-c2-repentina",
+    "nome": "Menina de Pele de Mercúrio",
+    "valores": [
+      "sublimeyn"
+    ],
+    "tipo": "temporaria",
+    "custo": 2,
+    "grau": 1,
+    "velocidade": "repentina",
+    "efeitos": [
+      {
+        "tipo": "devolver",
+        "alvo": "escolhidoAliado"
+      }
+    ],
+    "texto": "Devolva um Aliado ou Mística à mão do dono."
+  },
+  "raridade": null,
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-devolver-c2-repentina.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-devolver-c2-repentina.visual.json",
+  "sha256": "fe57b040debaa4a02ba568899d9901347d740d2b127cc4b2544e39ae29e2e5d1",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-356a105b-5370-4d35-b87a-8932cfd56a1c.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573884
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

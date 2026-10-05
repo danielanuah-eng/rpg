@@ -1,0 +1,53 @@
+{
+  "id": "prov-primitivum-aliado-c2-defensivo",
+  "nome": "Mula Teimosa",
+  "tipo": "aliado",
+  "valor": "primitivum",
+  "referencia": "Arcanoclisma/online/public/arte/mula-teimosa.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c2-defensivo.prompt.txt",
+  "cena": "Mula Teimosa plants all four hooves solidly on a narrow grassy trail at late afternoon and stubbornly refuses to move, ears alert, muzzle turned toward the viewer. Preserve reference species and unique gear. A simple pack or saddle only if it exists in the reference. Broad moss-green slope, small rustic fence and distant warm ochre farmhouse; a few tiny amber motes by the hooves, no large aura. Clear characterful silhouette and coherent scale.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-primitivum-aliado-c2-defensivo",
+    "nome": "Mula Teimosa",
+    "valores": [
+      "primitivum"
+    ],
+    "tipo": "aliado",
+    "custo": 2,
+    "grau": 1,
+    "velocidade": "findante",
+    "ataque": 1,
+    "vida": 5,
+    "texto": ""
+  },
+  "raridade": null,
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c2-defensivo.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c2-defensivo.visual.json",
+  "sha256": "bf33ea422a6d28091c2009890526377783920ec57b5a617708c9d954d29137ec",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-6465cf7a-9cdd-4849-a049-5ea49e951fd8.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572402
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

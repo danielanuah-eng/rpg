@@ -1,0 +1,62 @@
+{
+  "id": "prov-cognitium-espiao-c4",
+  "nome": "Espião da Coroa",
+  "tipo": "aliado",
+  "valor": "cognitium",
+  "referencia": "Arcanoclisma/online/public/arte/espiao-da-coroa.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-espiao-c4.prompt.txt",
+  "cena": "Espião da Coroa crouches on a tiled roof beside a palace's narrow open window at blue hour, listening and watching the light inside. New SIDE profile, body low, one gloved finger lifted near his lips, eyes aimed directly through the window. A little indigo veil of smoke curls around his shoulders. Muted ochre interior light balances cool rooftops; one distant tower establishes depth, minimal setting.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-cognitium-espiao-c4",
+    "nome": "Espião da Coroa",
+    "valores": [
+      "cognitium"
+    ],
+    "tipo": "aliado",
+    "custo": 4,
+    "grau": 3,
+    "velocidade": "findante",
+    "ataque": 2,
+    "vida": 2,
+    "texto": "Etéreo. Ao causar dano de combate ao Conjurador inimigo: compre 1 carta.",
+    "palavrasChave": [
+      "Etéreo"
+    ],
+    "aoDanoConjurador": [
+      {
+        "tipo": "comprar",
+        "valor": 1
+      }
+    ]
+  },
+  "raridade": null,
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-espiao-c4.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-espiao-c4.visual.json",
+  "sha256": "f529caef9aabeaa685f3a8bd21d7a4fd4ab6eb2166aa0668d9bfd68c1e9c36cf",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-b01aa24c-b1c2-4467-98fa-d571d86bb28f.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572822
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

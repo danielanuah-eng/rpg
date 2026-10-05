@@ -1,0 +1,63 @@
+{
+  "id": "prov-dominum-cerco-c3",
+  "nome": "Arena de Kairvahnn",
+  "tipo": "estrutura",
+  "valor": "dominum",
+  "referencia": "Arcanoclisma/online/public/arte/arena-de-kairvahnn.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-cerco-c3.prompt.txt",
+  "cena": "Arena de Kairvahnn is a compact circular sandstone dueling arena viewed from an oblique elevated angle in late afternoon. Focus on the central sandy floor and a few clean broad tiers; dark violet solid-light chain segments are set into three gateway arches, communicating control. Tiny distant people only to establish scale. Warm muted stone with cool purple shadows, simple coherent architecture, NOT a sprawling city or overdecorated palace.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-dominum-cerco-c3",
+    "nome": "Arena de Kairvahnn",
+    "valores": [
+      "dominum"
+    ],
+    "tipo": "estrutura",
+    "custo": 3,
+    "grau": 2,
+    "velocidade": "findante",
+    "vida": 3,
+    "ativacao": {
+      "custo": 0,
+      "suspende": true,
+      "efeitos": [
+        {
+          "tipo": "dano",
+          "valor": 1,
+          "alvo": "conjuradorInimigo"
+        }
+      ]
+    },
+    "texto": "Suspenda: cause 1 de dano ao Conjurador inimigo."
+  },
+  "raridade": null,
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-cerco-c3.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-cerco-c3.visual.json",
+  "sha256": "c6d0a41090bc4eeb61ea4f408b4c8907b7d1fea9c8d349e05d702fb80532f2e7",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-e39a9730-b48a-4180-9dae-7d1c5a9b04f7.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573884
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

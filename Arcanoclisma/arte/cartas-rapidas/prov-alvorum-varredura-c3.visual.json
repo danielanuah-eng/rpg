@@ -1,0 +1,57 @@
+{
+  "id": "prov-alvorum-varredura-c3",
+  "nome": "Olhos-de-Farol",
+  "tipo": "temporaria",
+  "valor": "alvorum",
+  "referencia": "Arcanoclisma/online/public/arte/olhos-de-farol.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-varredura-c3.prompt.txt",
+  "cena": "Olhos-de-Farol viewed from low three-quarter angle on a simple coastal bluff at dusk, preserve its exact reference species and unusual eyes. Eyes send two short coherent muted-gold light shapes through violet-black mist across the ground, suggesting a broad spell without dazzling the entire scene. Main subject large; smooth sea and one plain lighthouse silhouette in distance. Warm amber focal light balanced with dark teal coast, no HDR or giant flare.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-alvorum-varredura-c3",
+    "nome": "Olhos-de-Farol",
+    "valores": [
+      "alvorum"
+    ],
+    "tipo": "temporaria",
+    "custo": 3,
+    "grau": 2,
+    "velocidade": "findante",
+    "efeitos": [
+      {
+        "tipo": "danoTodosAliados",
+        "valor": 2
+      }
+    ],
+    "texto": "Cause 2 de dano a cada Aliado do oponente."
+  },
+  "raridade": null,
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-varredura-c3.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-varredura-c3.visual.json",
+  "sha256": "ab14c7dd0fb9c9e6a2bc185257b759635ef050e9f4657af1f7046a9d17223042",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-4952c89b-ea64-4312-8dfa-84be60262508.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572402
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

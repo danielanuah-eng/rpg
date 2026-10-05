@@ -1,0 +1,57 @@
+{
+  "id": "prov-eternyr-varredura-c3",
+  "nome": "Estação Parada",
+  "tipo": "temporaria",
+  "valor": "eternyr",
+  "referencia": "Arcanoclisma/online/public/arte/estacao-parada.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-varredura-c3.prompt.txt",
+  "cena": "Estação Parada: a small abandoned railway station in a fantastical world, oblique wide-middle view at twilight. A single platform canopy, one empty bench and a short visible track; pale blue-white time ripples pass along the platform while falling leaves are frozen at different heights. If the reference contains a train or particular station architecture, preserve it as the focal identity without copying the old view. Warm amber window, dark-blue sky, smooth broad surfaces.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-eternyr-varredura-c3",
+    "nome": "Estação Parada",
+    "valores": [
+      "eternyr"
+    ],
+    "tipo": "temporaria",
+    "custo": 3,
+    "grau": 2,
+    "velocidade": "findante",
+    "efeitos": [
+      {
+        "tipo": "danoTodosAliados",
+        "valor": 2
+      }
+    ],
+    "texto": "Cause 2 de dano a cada Aliado do oponente."
+  },
+  "raridade": null,
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-varredura-c3.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-varredura-c3.visual.json",
+  "sha256": "89ff8db480291fc1e31cf36204d4ece4b963a12382d9547aad1be6b652cdaf7f",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-e336b547-466d-4009-ab69-590d3546d68b.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572402
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}
