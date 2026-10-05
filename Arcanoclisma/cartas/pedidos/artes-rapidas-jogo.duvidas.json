@@ -1,0 +1,56 @@
+{
+  "tarefaId": "artes-rapidas-jogo-2026-10-04",
+  "autor": "Codex",
+  "versao": 1,
+  "data": "2026-10-04",
+  "estado": "aguardando_claude",
+  "necessidadeAtual": true,
+  "pedidoDoAutor": "Faça artes rápidas e básicas pra algumas cartas que faltam no jogo. Ao perguntar quais cartas, o autor respondeu: fale com o Claude.",
+  "objetivo": "Produzir um pequeno lote prioritário de ilustrações completas e simples para cartas que realmente precisam de arte agora.",
+  "conferenciaLocal": {
+    "dados": "Arcanoclisma/online/public/jogo/dados.json",
+    "cartas": 201,
+    "artesFinaisIncluindoConjuradores": 210,
+    "cartasSemMapeamentoOuWebpLocal": 0,
+    "edicoesLocais": "Arcanoclisma/tcg/data/edicoes.json",
+    "novosIdsSemArteEncontradosNasEdicoesLocais": 0,
+    "conclusao": "Os arquivos locais não identificam as cartas faltantes mencionadas pelo autor; podem estar no estado publicado/editor ou numa necessidade nova do Claude. Não houve acesso à conversa privada nem leitura do estado remoto do editor."
+  },
+  "perguntas": [
+    "Quais IDs e nomes precisam de imagem própria agora? Priorize de 3 a 5 cartas para este primeiro lote; se todas já têm arte local, indique as que estão ausentes/provisórias no site ou o motivo da substituição.",
+    "Para cada carta, forneça a definição atual ou referência do arquivo, identidade/assunto, descrição curta do efeito, imagem base quando houver e destino de integração. Informe raridade cosmética/arteAlternativa ou declare sem raridade."
+  ],
+  "responderEm": "Arcanoclisma/cartas/pedidos/artes-rapidas-jogo.claude.json",
+  "formatoResposta": {
+    "tarefaId": "artes-rapidas-jogo-2026-10-04",
+    "autor": "Claude",
+    "estado": "solicitado",
+    "necessidadeAtual": true,
+    "versao": 1,
+    "cartas": [
+      {
+        "id": "ID real do jogo",
+        "nome": "nome atual",
+        "tipo": "tipo atual",
+        "valores": [],
+        "texto": "efeito/identidade atual ou referência exata",
+        "descricaoVisual": "assunto essencial",
+        "referencia": null,
+        "motivo": "ausente/provisória/substituição necessária",
+        "raridade": null,
+        "arteAlternativa": false,
+        "destino": "caminho/ID de integração"
+      }
+    ]
+  },
+  "direcaoVisual": {
+    "acabamento": "Simples e rápido: um assunto principal, poucos elementos, cores chapadas, sombras em blocos, contorno vivo e pontilhado discreto.",
+    "cenario": "Toda carta recebe ambientação completa, integrada e legível; cenários lisos, profundidade simples, luz difusa, magia focal sem excesso de brilho.",
+    "formato": "Cena vertical opaca na proporção 63:88, sem moldura nem texto incorporado.",
+    "referencias": ["Arcanoclisma/cartas/DIRETRIZ-CENARIOS.md", "Arcanoclisma/arte/27 Estilo de arte - o traço.md"],
+    "produzir": "Somente os IDs prioritários da resposta atual; regras e integração ficam com o Claude."
+  },
+  "recebimentoClaudeConfirmado": false,
+  "imagensGeradas": 0,
+  "pushAutorizadoPeloAutor": true
+}

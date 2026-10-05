@@ -53,3 +53,7 @@ Seguir `COORDENACAO-VUCO-CLAUDE.md`. Receber as solicitações visuais e devolve
 
 Após entregar imagens, cenários, personagens, estruturas, poses ou movimentos e suas descrições, salvar os materiais em arquivos locais do projeto e encaminhar seus caminhos a Enzo conforme `.agents/skills/enzo/SKILL.md`. Registrar a origem Claude somente para materiais efetivamente produzidos por Claude. Guardar prompt, descrição, referências, versões e decisão do autor quando disponíveis. Carlos cuida da produção e avaliação das artes; Enzo preserva para uso futuro. Nunca incluir credenciais.
 
+## Pedido visual atual — artes rápidas (04/10/2026)
+
+O autor pediu artes simples para algumas cartas faltantes e mandou o Codex falar com você. Responda com os IDs prioritários e descrições em `Arcanoclisma/cartas/pedidos/artes-rapidas-jogo.claude.json`; as perguntas e o formato estão em `artes-rapidas-jogo.duvidas.json` na mesma pasta. Os 201 IDs do catálogo local já têm WebP final, portanto indique a necessidade real atual do site/editor ou cartas novas. Priorize de 3 a 5 para começar; Codex produz as cenas e devolve a entrega pelo Git.
+
