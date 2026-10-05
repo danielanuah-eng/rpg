@@ -1,0 +1,571 @@
+{
+  "tarefaId": "site-online-v1",
+  "autor": "Codex",
+  "versao": 20,
+  "pedidoVersao": 3,
+  "atualizadoEm": "2026-10-05T03:58:13.479Z",
+  "estado": "entrega_parcial",
+  "escopo": "Somente os três conjuntos de ícones da interface solicitados pelo Claude.",
+  "pedidosAtendidos": [
+    {
+      "id": "icones-etapas",
+      "estado": "entregue",
+      "total": 4
+    },
+    {
+      "id": "icones-zonas",
+      "estado": "entregue",
+      "total": 8
+    },
+    {
+      "id": "selos-comunidade",
+      "estado": "entregue",
+      "total": 11
+    }
+  ],
+  "total": 23,
+  "manifesto": "Arcanoclisma/online/public/kit/interface-v20/icones/manifesto.json",
+  "catalogo": "Arcanoclisma/online/public/kit/interface-v20/icones/catalogo.html",
+  "previa": "Arcanoclisma/online/public/kit/interface-v20/icones/previa.png",
+  "gerador": "Arcanoclisma/arena/scripts/gerar-icones-interface-v20.mjs",
+  "formato": "SVG com fundo transparente, contorno dourado #e0bd6a e interior veludo #0e0b1d; sem texto ou números embutidos.",
+  "conferenciaVisual": {
+    "estado": "conferida_pelo_codex",
+    "evidencia": "Arcanoclisma/online/public/kit/interface-v20/icones/previa.png",
+    "escopo": "Prancha dos 23 desenhos: ampliação, tamanho nominal e redução a 24 px em fundos escuro e claro.",
+    "noJogo": "Aguardando integração e conferência do Claude; o jogo não foi executado nesta entrega."
+  },
+  "arquivos": [
+    {
+      "id": "etapa-inicio",
+      "nome": "Início",
+      "grupo": "icones-etapas",
+      "arquivo": "/kit/interface-v20/icones/etapa-inicio.svg",
+      "largura": 48,
+      "altura": 48,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "21c23e6388252f8e6f692b304c5c79e9acdc55ea7a1b498431f7fccb9a2a62a1",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 1772,
+        "parciais": 280,
+        "opacos": 252,
+        "percentualTransparente": 76.91
+      }
+    },
+    {
+      "id": "etapa-principal",
+      "nome": "Principal",
+      "grupo": "icones-etapas",
+      "arquivo": "/kit/interface-v20/icones/etapa-principal.svg",
+      "largura": 48,
+      "altura": 48,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "589133a32020cc65d356fd0f4a78111b528fb746faf2c1d0c0c0a6eb783f3d1e",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 1456,
+        "parciais": 196,
+        "opacos": 652,
+        "percentualTransparente": 63.19
+      }
+    },
+    {
+      "id": "etapa-cataclisma",
+      "nome": "Cataclisma",
+      "grupo": "icones-etapas",
+      "arquivo": "/kit/interface-v20/icones/etapa-cataclisma.svg",
+      "largura": 48,
+      "altura": 48,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "fd3b38313e81386aeec77583ef59bdd2882c2e07bb13471054fe0c56039fa4fe",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 1252,
+        "parciais": 350,
+        "opacos": 702,
+        "percentualTransparente": 54.34
+      }
+    },
+    {
+      "id": "etapa-final",
+      "nome": "Final",
+      "grupo": "icones-etapas",
+      "arquivo": "/kit/interface-v20/icones/etapa-final.svg",
+      "largura": 48,
+      "altura": 48,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "633714d1c698cd0ccde4d6bab4ddce93824c33c31e9deb2fa8f17eed5f84217d",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 1392,
+        "parciais": 220,
+        "opacos": 692,
+        "percentualTransparente": 60.42
+      }
+    },
+    {
+      "id": "zona-baralho",
+      "nome": "Baralho",
+      "grupo": "icones-zonas",
+      "arquivo": "/kit/interface-v20/icones/zona-baralho.svg",
+      "largura": 32,
+      "altura": 32,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "077a14de95c0bc76b9eb5c75ccc6553171875b1eb5579bf233023e22292f4e5f",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 343,
+        "parciais": 141,
+        "opacos": 540,
+        "percentualTransparente": 33.5
+      }
+    },
+    {
+      "id": "zona-cemiterio",
+      "nome": "Cemitério",
+      "grupo": "icones-zonas",
+      "arquivo": "/kit/interface-v20/icones/zona-cemiterio.svg",
+      "largura": 32,
+      "altura": 32,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "bf7ecf6dca1567ad0254f840c37986f17a6712d917c18a21c122fa644169b20e",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 496,
+        "parciais": 128,
+        "opacos": 400,
+        "percentualTransparente": 48.44
+      }
+    },
+    {
+      "id": "zona-banimento",
+      "nome": "Banimento",
+      "grupo": "icones-zonas",
+      "arquivo": "/kit/interface-v20/icones/zona-banimento.svg",
+      "largura": 32,
+      "altura": 32,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "7cd9d4b00d1626267a43fd5046dec4e0c6e32863da52ed49a9aefea4e3eca7c6",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 532,
+        "parciais": 142,
+        "opacos": 350,
+        "percentualTransparente": 51.95
+      }
+    },
+    {
+      "id": "zona-arcano",
+      "nome": "Enviadas ao Arcano",
+      "grupo": "icones-zonas",
+      "arquivo": "/kit/interface-v20/icones/zona-arcano.svg",
+      "largura": 32,
+      "altura": 32,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "ed2c11c5309b16ea2fc7851543aa6c0071ae8e0bd80320d3421aaf7f8f961259",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 609,
+        "parciais": 145,
+        "opacos": 270,
+        "percentualTransparente": 59.47
+      }
+    },
+    {
+      "id": "zona-mao-oponente",
+      "nome": "Mão do oponente",
+      "grupo": "icones-zonas",
+      "arquivo": "/kit/interface-v20/icones/zona-mao-oponente.svg",
+      "largura": 32,
+      "altura": 32,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "6aa1add79bba93db08639d75db9d4b124852be30dfbc22a269b137e389f9cdbb",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 450,
+        "parciais": 166,
+        "opacos": 408,
+        "percentualTransparente": 43.95
+      }
+    },
+    {
+      "id": "slot-canal",
+      "nome": "Canal",
+      "grupo": "icones-zonas",
+      "arquivo": "/kit/interface-v20/icones/slot-canal.svg",
+      "largura": 32,
+      "altura": 32,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "e6e9cdacd59dc7ecb0b6f5fac7c4d99ad99af58595def3c5d17c3904d4925ae0",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 725,
+        "parciais": 164,
+        "opacos": 135,
+        "percentualTransparente": 70.8
+      }
+    },
+    {
+      "id": "slot-armadura",
+      "nome": "Armadura",
+      "grupo": "icones-zonas",
+      "arquivo": "/kit/interface-v20/icones/slot-armadura.svg",
+      "largura": 32,
+      "altura": 32,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "a8c1da94f1e845cd1bc4c5e6030267e54cc125a33d185a85310b19d5ab5e15df",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 528,
+        "parciais": 134,
+        "opacos": 362,
+        "percentualTransparente": 51.56
+      }
+    },
+    {
+      "id": "slot-extra",
+      "nome": "Extra",
+      "grupo": "icones-zonas",
+      "arquivo": "/kit/interface-v20/icones/slot-extra.svg",
+      "largura": 32,
+      "altura": 32,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "090e97866dcc3d111999770a9f508a3c650bb857921169602aea8f1b9819c6ac",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 660,
+        "parciais": 132,
+        "opacos": 232,
+        "percentualTransparente": 64.45
+      }
+    },
+    {
+      "id": "status-novo",
+      "nome": "Novo",
+      "grupo": "selos-comunidade",
+      "arquivo": "/kit/interface-v20/icones/status-novo.svg",
+      "largura": 64,
+      "altura": 64,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "d80715ce96b62f44f40069560780d7048854d9d27e19c94e961ddd5ef48dd407",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 3060,
+        "parciais": 300,
+        "opacos": 736,
+        "percentualTransparente": 74.71
+      }
+    },
+    {
+      "id": "status-aprovado",
+      "nome": "Aprovado para mudar",
+      "grupo": "selos-comunidade",
+      "arquivo": "/kit/interface-v20/icones/status-aprovado.svg",
+      "largura": 64,
+      "altura": 64,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "fb06cb76859fa898c1dc84b04c5e76b55c9a565f8917c7bc58afb4c265116d1e",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 2128,
+        "parciais": 204,
+        "opacos": 1764,
+        "percentualTransparente": 51.95
+      }
+    },
+    {
+      "id": "status-em-revisao",
+      "nome": "Em revisão",
+      "grupo": "selos-comunidade",
+      "arquivo": "/kit/interface-v20/icones/status-em-revisao.svg",
+      "largura": 64,
+      "altura": 64,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "5a177e248cd5180a00dc6595802844a4b402bcb503e89d1cb0bfa986f957e786",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 2076,
+        "parciais": 219,
+        "opacos": 1801,
+        "percentualTransparente": 50.68
+      }
+    },
+    {
+      "id": "status-nao-vai-mudar",
+      "nome": "Não vai mudar",
+      "grupo": "selos-comunidade",
+      "arquivo": "/kit/interface-v20/icones/status-nao-vai-mudar.svg",
+      "largura": 64,
+      "altura": 64,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "ab25178ff835577a309ccf248336777b85011bed8bacbd5928b6780aeae4ced3",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 2264,
+        "parciais": 188,
+        "opacos": 1644,
+        "percentualTransparente": 55.27
+      }
+    },
+    {
+      "id": "status-feito",
+      "nome": "Feito",
+      "grupo": "selos-comunidade",
+      "arquivo": "/kit/interface-v20/icones/status-feito.svg",
+      "largura": 64,
+      "altura": 64,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "05ea898b8f52b625b3e190cb2e883e7e07f25c226be44825bc75c00f2d6c456b",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 1780,
+        "parciais": 204,
+        "opacos": 2112,
+        "percentualTransparente": 43.46
+      }
+    },
+    {
+      "id": "categoria-expansao",
+      "nome": "Expansão",
+      "grupo": "selos-comunidade",
+      "arquivo": "/kit/interface-v20/icones/categoria-expansao.svg",
+      "largura": 64,
+      "altura": 64,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "b7acb3cddb07a6ed2f7c43184fcdbcdab99acde227c8e13b4c772e489d5b6e0f",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 2203,
+        "parciais": 186,
+        "opacos": 1707,
+        "percentualTransparente": 53.78
+      }
+    },
+    {
+      "id": "categoria-personagem",
+      "nome": "Personagem",
+      "grupo": "selos-comunidade",
+      "arquivo": "/kit/interface-v20/icones/categoria-personagem.svg",
+      "largura": 64,
+      "altura": 64,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "08a559e8aad02d610a4df0cbbad97db4baf6fd5fcf0710ac8ec752955ca4f99a",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 2317,
+        "parciais": 239,
+        "opacos": 1540,
+        "percentualTransparente": 56.57
+      }
+    },
+    {
+      "id": "categoria-carta",
+      "nome": "Carta",
+      "grupo": "selos-comunidade",
+      "arquivo": "/kit/interface-v20/icones/categoria-carta.svg",
+      "largura": 64,
+      "altura": 64,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "f331296dfd3da1621aafb5a87196dfeceac587eaf835134d83ed05c3c61d3dc7",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 1776,
+        "parciais": 192,
+        "opacos": 2128,
+        "percentualTransparente": 43.36
+      }
+    },
+    {
+      "id": "categoria-item",
+      "nome": "Item",
+      "grupo": "selos-comunidade",
+      "arquivo": "/kit/interface-v20/icones/categoria-item.svg",
+      "largura": 64,
+      "altura": 64,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "bf60ca9d76f9365d6149fced9b77f2e18ff1f5ee78ef68d078890def137aef4b",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 2704,
+        "parciais": 194,
+        "opacos": 1198,
+        "percentualTransparente": 66.02
+      }
+    },
+    {
+      "id": "categoria-conjurador",
+      "nome": "Conjurador",
+      "grupo": "selos-comunidade",
+      "arquivo": "/kit/interface-v20/icones/categoria-conjurador.svg",
+      "largura": 64,
+      "altura": 64,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "0a506fd857fb476503f3408fd8b0fbd8e6625b8de2b247a8ae1701c9599d5a4d",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 2808,
+        "parciais": 317,
+        "opacos": 971,
+        "percentualTransparente": 68.55
+      }
+    },
+    {
+      "id": "categoria-mecanica",
+      "nome": "Mecânica",
+      "grupo": "selos-comunidade",
+      "arquivo": "/kit/interface-v20/icones/categoria-mecanica.svg",
+      "largura": 64,
+      "altura": 64,
+      "viewBox": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "sha256": "b3d06eebfb3c973b6d76f690cd48cfa1d53908160580c756fc445ebb468e0cc6",
+      "alfa": {
+        "medidoCom": "sharp: SVG rasterizado no tamanho nominal, sem fundo",
+        "transparentes": 1894,
+        "parciais": 262,
+        "opacos": 1940,
+        "percentualTransparente": 46.24
+      }
+    }
+  ],
+  "integracao": {
+    "estado": "aguardando_claude",
+    "confirmada": false,
+    "orientacoes": [
+      "Ler o manifesto separado da interface; não mesclar estes IDs aos gatilhos de palavras-chave de icones.js.",
+      "Usar <img src=\"arquivo\" width=\"largura\" height=\"altura\" alt=\"\"> ao lado de um rótulo HTML; se o ícone estiver sozinho, dar nome acessível ao controle.",
+      "Os SVGs da interface têm cores próprias para manter a linha dourada e o preenchimento escuro. Não aplicar a máscara currentColor da iconografia de mecânicas.",
+      "Seleção, hover e desabilitado pertencem ao botão HTML; os SVGs não contêm lógica ou rótulos.",
+      "O kit anterior de 32 mecânicas permanece em /kit/icones/ e tem integração confirmada pelo Claude. O adaptador recebeu o ajuste de Protegido sem número."
+    ],
+    "respostaEsperada": "Arcanoclisma/online/pedidos-visuais/site-online-v1.integracao.claude.json"
+  },
+  "ajusteIconografia": {
+    "id": "v19-protegido-sem-numero",
+    "estado": "entregue",
+    "arquivo": "Arcanoclisma/online/public/js/iconografia-v19.js",
+    "expressao": "/^\\s*protegido\\b(?:\\s+\\d+)?/i",
+    "descricao": "Agrupa ícone com Protegido, com ou sem número; conserva o número no mesmo grupo quando existe.",
+    "integracaoClaudeConfirmada": false
+  },
+  "observacoes": [
+    "Esta entrega parcial não conclui os outros cenários, botões e peças do pedido geral do site.",
+    "Não executados testes, build ou simulações do jogo nesta etapa, conforme orientação atual do autor.",
+    "Push das entregas visuais autorizado pelo autor. Preservar arquivos concorrentes de Claude."
+  ]
+}

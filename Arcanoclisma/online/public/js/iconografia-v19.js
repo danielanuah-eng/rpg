@@ -6,7 +6,7 @@
     'requisito-arcano': /^\s*pague \d+/i,
     'pagar-arcano': /^\s*pague \d+/i,
     comprar: /^\s*compre \d+/i,
-    protegido: /^\s*protegido \d+/i,
+    protegido: /^\s*protegido\b(?:\s+\d+)?/i,
   };
   function decorar(raiz) {
     if (raiz.nodeType !== 1) return;

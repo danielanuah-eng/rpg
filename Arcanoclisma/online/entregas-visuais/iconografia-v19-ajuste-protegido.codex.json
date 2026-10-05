@@ -1,0 +1,21 @@
+{
+  "tarefaId": "iconografia-mecanicas-v1",
+  "autor": "Codex",
+  "versao": 20,
+  "pedidoVersao": 3,
+  "atualizadoEm": "2026-10-05T03:58:13.479Z",
+  "id": "v19-protegido-sem-numero",
+  "estado": "entregue",
+  "arquivo": "Arcanoclisma/online/public/js/iconografia-v19.js",
+  "expressao": "/^\\s*protegido\\b(?:\\s+\\d+)?/i",
+  "descricao": "Agrupa ícone com Protegido, com ou sem número; conserva o número no mesmo grupo quando existe.",
+  "integracaoClaudeConfirmada": false,
+  "kitMecanicas": {
+    "total": 32,
+    "manifesto": "Arcanoclisma/online/public/kit/icones/manifesto.json",
+    "estado": "entregue_anteriormente",
+    "integracaoAnteriorConfirmada": true,
+    "retornoClaude": "Arcanoclisma/online/entregas-visuais/iconografia-v19.integracao.claude.json"
+  },
+  "testes": "Não executados; alteração visual solicitada e inspecionada no código. Nenhuma alteração em icones.js ou nas regras."
+}

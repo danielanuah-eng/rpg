@@ -1,0 +1,186 @@
+{
+  "etapa-inicio": {
+    "arquivo": "/kit/interface-v20/icones/etapa-inicio.svg",
+    "nome": "Início",
+    "grupo": "icones-etapas",
+    "largura": 48,
+    "altura": 48,
+    "okGpt": true
+  },
+  "etapa-principal": {
+    "arquivo": "/kit/interface-v20/icones/etapa-principal.svg",
+    "nome": "Principal",
+    "grupo": "icones-etapas",
+    "largura": 48,
+    "altura": 48,
+    "okGpt": true
+  },
+  "etapa-cataclisma": {
+    "arquivo": "/kit/interface-v20/icones/etapa-cataclisma.svg",
+    "nome": "Cataclisma",
+    "grupo": "icones-etapas",
+    "largura": 48,
+    "altura": 48,
+    "okGpt": true
+  },
+  "etapa-final": {
+    "arquivo": "/kit/interface-v20/icones/etapa-final.svg",
+    "nome": "Final",
+    "grupo": "icones-etapas",
+    "largura": 48,
+    "altura": 48,
+    "okGpt": true
+  },
+  "zona-baralho": {
+    "arquivo": "/kit/interface-v20/icones/zona-baralho.svg",
+    "nome": "Baralho",
+    "grupo": "icones-zonas",
+    "largura": 32,
+    "altura": 32,
+    "okGpt": true
+  },
+  "zona-cemiterio": {
+    "arquivo": "/kit/interface-v20/icones/zona-cemiterio.svg",
+    "nome": "Cemitério",
+    "grupo": "icones-zonas",
+    "largura": 32,
+    "altura": 32,
+    "okGpt": true
+  },
+  "zona-banimento": {
+    "arquivo": "/kit/interface-v20/icones/zona-banimento.svg",
+    "nome": "Banimento",
+    "grupo": "icones-zonas",
+    "largura": 32,
+    "altura": 32,
+    "okGpt": true
+  },
+  "zona-arcano": {
+    "arquivo": "/kit/interface-v20/icones/zona-arcano.svg",
+    "nome": "Enviadas ao Arcano",
+    "grupo": "icones-zonas",
+    "largura": 32,
+    "altura": 32,
+    "okGpt": true
+  },
+  "zona-mao-oponente": {
+    "arquivo": "/kit/interface-v20/icones/zona-mao-oponente.svg",
+    "nome": "Mão do oponente",
+    "grupo": "icones-zonas",
+    "largura": 32,
+    "altura": 32,
+    "okGpt": true
+  },
+  "slot-canal": {
+    "arquivo": "/kit/interface-v20/icones/slot-canal.svg",
+    "nome": "Canal",
+    "grupo": "icones-zonas",
+    "largura": 32,
+    "altura": 32,
+    "okGpt": true
+  },
+  "slot-armadura": {
+    "arquivo": "/kit/interface-v20/icones/slot-armadura.svg",
+    "nome": "Armadura",
+    "grupo": "icones-zonas",
+    "largura": 32,
+    "altura": 32,
+    "okGpt": true
+  },
+  "slot-extra": {
+    "arquivo": "/kit/interface-v20/icones/slot-extra.svg",
+    "nome": "Extra",
+    "grupo": "icones-zonas",
+    "largura": 32,
+    "altura": 32,
+    "okGpt": true
+  },
+  "status-novo": {
+    "arquivo": "/kit/interface-v20/icones/status-novo.svg",
+    "nome": "Novo",
+    "grupo": "selos-comunidade",
+    "largura": 64,
+    "altura": 64,
+    "okGpt": true
+  },
+  "status-aprovado": {
+    "arquivo": "/kit/interface-v20/icones/status-aprovado.svg",
+    "nome": "Aprovado para mudar",
+    "grupo": "selos-comunidade",
+    "largura": 64,
+    "altura": 64,
+    "okGpt": true
+  },
+  "status-em-revisao": {
+    "arquivo": "/kit/interface-v20/icones/status-em-revisao.svg",
+    "nome": "Em revisão",
+    "grupo": "selos-comunidade",
+    "largura": 64,
+    "altura": 64,
+    "okGpt": true
+  },
+  "status-nao-vai-mudar": {
+    "arquivo": "/kit/interface-v20/icones/status-nao-vai-mudar.svg",
+    "nome": "Não vai mudar",
+    "grupo": "selos-comunidade",
+    "largura": 64,
+    "altura": 64,
+    "okGpt": true
+  },
+  "status-feito": {
+    "arquivo": "/kit/interface-v20/icones/status-feito.svg",
+    "nome": "Feito",
+    "grupo": "selos-comunidade",
+    "largura": 64,
+    "altura": 64,
+    "okGpt": true
+  },
+  "categoria-expansao": {
+    "arquivo": "/kit/interface-v20/icones/categoria-expansao.svg",
+    "nome": "Expansão",
+    "grupo": "selos-comunidade",
+    "largura": 64,
+    "altura": 64,
+    "okGpt": true
+  },
+  "categoria-personagem": {
+    "arquivo": "/kit/interface-v20/icones/categoria-personagem.svg",
+    "nome": "Personagem",
+    "grupo": "selos-comunidade",
+    "largura": 64,
+    "altura": 64,
+    "okGpt": true
+  },
+  "categoria-carta": {
+    "arquivo": "/kit/interface-v20/icones/categoria-carta.svg",
+    "nome": "Carta",
+    "grupo": "selos-comunidade",
+    "largura": 64,
+    "altura": 64,
+    "okGpt": true
+  },
+  "categoria-item": {
+    "arquivo": "/kit/interface-v20/icones/categoria-item.svg",
+    "nome": "Item",
+    "grupo": "selos-comunidade",
+    "largura": 64,
+    "altura": 64,
+    "okGpt": true
+  },
+  "categoria-conjurador": {
+    "arquivo": "/kit/interface-v20/icones/categoria-conjurador.svg",
+    "nome": "Conjurador",
+    "grupo": "selos-comunidade",
+    "largura": 64,
+    "altura": 64,
+    "okGpt": true
+  },
+  "categoria-mecanica": {
+    "arquivo": "/kit/interface-v20/icones/categoria-mecanica.svg",
+    "nome": "Mecânica",
+    "grupo": "selos-comunidade",
+    "largura": 64,
+    "altura": 64,
+    "okGpt": true
+  }
+}
