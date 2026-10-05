@@ -31,7 +31,7 @@
   },
   "raridade": "comum",
   "arteAlternativa": false,
-  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "estado": "aprovado_pelo_autor",
   "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-dano-c3.cena-v1.png",
   "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-dano-c3.visual.json",
   "sha256": "8ffa021ba45b8f265b082726a393ad99e9cd1793521bbc386c87b5dc0a510573",
@@ -54,5 +54,11 @@
   "dimensoesEntregues": "PNG nativo preservado",
   "proporcaoSolicitada": "63:88",
   "integracaoClaudeConfirmada": false,
-  "alteracoesMecanicas": false
+  "alteracoesMecanicas": false,
+  "aprovacao": {
+    "estado": "aprovado_pelo_autor",
+    "registradaEm": "2026-10-05T03:37:02.862Z",
+    "mensagemDoAutor": "aprovo",
+    "decisao": "Arcanoclisma/arte/cartas-rapidas/aprovacao-autor.json"
+  }
 }

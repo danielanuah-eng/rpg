@@ -32,7 +32,7 @@
   },
   "raridade": "comum",
   "arteAlternativa": false,
-  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "estado": "aprovado_pelo_autor",
   "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-mistica-c2.cena-v1.png",
   "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-mistica-c2.visual.json",
   "sha256": "a877cde8642844ae4baeda441cb4eee6f0af14d8378aac0ba081db210c3c04be",
@@ -55,5 +55,11 @@
   "dimensoesEntregues": "PNG nativo preservado",
   "proporcaoSolicitada": "63:88",
   "integracaoClaudeConfirmada": false,
-  "alteracoesMecanicas": false
+  "alteracoesMecanicas": false,
+  "aprovacao": {
+    "estado": "aprovado_pelo_autor",
+    "registradaEm": "2026-10-05T03:37:02.862Z",
+    "mensagemDoAutor": "aprovo",
+    "decisao": "Arcanoclisma/arte/cartas-rapidas/aprovacao-autor.json"
+  }
 }

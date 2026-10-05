@@ -30,7 +30,7 @@
   },
   "raridade": "comum",
   "arteAlternativa": false,
-  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "estado": "aprovado_pelo_autor",
   "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-destruir-c4-repentina.cena-v1.png",
   "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-destruir-c4-repentina.visual.json",
   "sha256": "c1ef76693998b22ecf47c2a500a89c6ed6753c99d78c128e6ed08e4e19daef21",
@@ -53,5 +53,11 @@
   "dimensoesEntregues": "PNG nativo preservado",
   "proporcaoSolicitada": "63:88",
   "integracaoClaudeConfirmada": false,
-  "alteracoesMecanicas": false
+  "alteracoesMecanicas": false,
+  "aprovacao": {
+    "estado": "aprovado_pelo_autor",
+    "registradaEm": "2026-10-05T03:37:02.862Z",
+    "mensagemDoAutor": "aprovo",
+    "decisao": "Arcanoclisma/arte/cartas-rapidas/aprovacao-autor.json"
+  }
 }

@@ -32,7 +32,7 @@
   },
   "raridade": null,
   "arteAlternativa": false,
-  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "estado": "aprovado_pelo_autor",
   "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-remocao-grau-c3.cena-v1.png",
   "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-remocao-grau-c3.visual.json",
   "sha256": "eadd321740d610d09b1b24e048469b639c4afe9a08193c91d9162cc9d7d6a1be",
@@ -55,5 +55,11 @@
   "dimensoesEntregues": "PNG nativo preservado",
   "proporcaoSolicitada": "63:88",
   "integracaoClaudeConfirmada": false,
-  "alteracoesMecanicas": false
+  "alteracoesMecanicas": false,
+  "aprovacao": {
+    "estado": "aprovado_pelo_autor",
+    "registradaEm": "2026-10-05T03:37:02.862Z",
+    "mensagemDoAutor": "aprovo",
+    "decisao": "Arcanoclisma/arte/cartas-rapidas/aprovacao-autor.json"
+  }
 }

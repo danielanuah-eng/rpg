@@ -26,7 +26,7 @@
   },
   "raridade": "comum",
   "arteAlternativa": false,
-  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "estado": "aprovado_pelo_autor",
   "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-aliado-c4-defensivo.cena-v1.png",
   "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-aliado-c4-defensivo.visual.json",
   "sha256": "59484c2cb06b6bf8982c0a8c4f38a7e6dbbf701df62af2ed95f81ea454ded2c3",
@@ -49,5 +49,11 @@
   "dimensoesEntregues": "PNG nativo preservado",
   "proporcaoSolicitada": "63:88",
   "integracaoClaudeConfirmada": false,
-  "alteracoesMecanicas": false
+  "alteracoesMecanicas": false,
+  "aprovacao": {
+    "estado": "aprovado_pelo_autor",
+    "registradaEm": "2026-10-05T03:37:02.862Z",
+    "mensagemDoAutor": "aprovo",
+    "decisao": "Arcanoclisma/arte/cartas-rapidas/aprovacao-autor.json"
+  }
 }

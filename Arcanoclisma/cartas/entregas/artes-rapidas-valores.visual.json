@@ -2,7 +2,7 @@
   "tarefaId": "artes-rapidas-valores-2026-10-04",
   "versao": 1,
   "data": "2026-10-04",
-  "estado": "aguardando_avaliacao",
+  "estado": "aprovado",
   "meta": 43,
   "concluidas": 43,
   "pendentes": [],
@@ -68,7 +68,8 @@
         1062,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-cognitium-espiao-c4",
@@ -83,7 +84,8 @@
         1062,
         1481
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-primitivum-aliado-c2-defensivo",
@@ -98,7 +100,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-dominum-cerco-c3",
@@ -113,7 +116,8 @@
         1062,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-sublimeyn-devolver-c2-repentina",
@@ -128,7 +132,8 @@
         1062,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-morbidyum-curar-c2",
@@ -143,7 +148,8 @@
         1062,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-conflituo-dano-c2-repentina",
@@ -158,7 +164,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-eternyr-varredura-c3",
@@ -173,7 +180,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-alvorum-varredura-c3",
@@ -188,7 +196,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-persona-aliado-c2-agressivo-proficiente",
@@ -203,7 +212,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-cognitium-mercador-c7",
@@ -218,7 +228,8 @@
         1061,
         1483
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-dominum-colosso-c7",
@@ -233,7 +244,8 @@
         1062,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-sublimeyn-dano-c2-repentina",
@@ -248,7 +260,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-morbidyum-curar-c4",
@@ -263,7 +276,8 @@
         1062,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-conflituo-torre-c4",
@@ -278,7 +292,8 @@
         1062,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-eternyr-remocao-grau-c3",
@@ -293,7 +308,8 @@
         1062,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-alvorum-bomba-c8",
@@ -308,7 +324,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-cognitium-comprar-c2-repentina",
@@ -323,7 +340,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-primitivum-curar-c2",
@@ -338,7 +356,8 @@
         1062,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-dominum-ira-c4",
@@ -353,7 +372,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-sublimeyn-dano-c1-repentina",
@@ -368,7 +388,8 @@
         1062,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-morbidyum-enfermaria-c3",
@@ -383,7 +404,8 @@
         1061,
         1483
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-primitivum-aliado-c4-defensivo",
@@ -398,7 +420,8 @@
         1061,
         1483
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-conflituo-piromante-c4",
@@ -413,7 +436,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-eternyr-destruir-c4-repentina",
@@ -428,7 +452,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-alvorum-fonte-c4",
@@ -443,7 +468,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-cognitium-anular-c3-repentina",
@@ -458,7 +484,8 @@
         1062,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-dominum-destruir-c3",
@@ -473,7 +500,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-sublimeyn-comprar-c2-repentina",
@@ -488,7 +516,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-morbidyum-dano-c3",
@@ -503,7 +532,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-conflituo-fera-c5",
@@ -518,7 +548,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-eternyr-devolver-c2-repentina",
@@ -533,7 +564,8 @@
         1062,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-alvorum-comprar-c3",
@@ -548,7 +580,8 @@
         1062,
         1480
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-cognitium-aliado-c4-defensivo",
@@ -563,7 +596,8 @@
         1062,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-dominum-aliado-c4-defensivo",
@@ -578,7 +612,8 @@
         1062,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-morbidyum-aliado-c6-descarta-grau",
@@ -593,7 +628,8 @@
         1061,
         1483
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-conflituo-aliado-c2-agressivo",
@@ -608,7 +644,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-morbidyum-comprar-c3",
@@ -623,7 +660,8 @@
         1062,
         1481
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-morbidyum-mistica-c2",
@@ -638,7 +676,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-morbidyum-mistica-c4",
@@ -653,7 +692,8 @@
         1062,
         1481
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-cognitium-mistica-c2",
@@ -668,7 +708,8 @@
         1061,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-eternyr-mistica-c2",
@@ -683,7 +724,8 @@
         1062,
         1482
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     },
     {
       "id": "prov-dominum-mistica-c2",
@@ -698,7 +740,8 @@
         1061,
         1483
       ],
-      "estado": "entregue_aguardando_avaliacao_do_autor"
+      "estado": "aprovado_pelo_autor",
+      "aprovacao": "2026-10-05T03:37:02.862Z"
     }
   ],
   "galeria": "Arcanoclisma/arte/cartas-rapidas/galeria.html",
@@ -710,15 +753,294 @@
     "Este lote completa artes das cartas provisórias já definidas em tcg/src/cartas-provisorias.ts; a expansão A Mestra dos Dragões não foi alterada.",
     "Preservar PNG nativo como fonte, converter no build quando necessário, e registrar a integração por arquivo."
   ],
-  "atualizadaEm": "2026-10-05T03:22:32.420Z",
+  "atualizadaEm": "2026-10-05T03:37:02.862Z",
   "avaliacao": {
-    "estado": "aguardando_resposta_do_autor",
-    "solicitadaEm": "2026-10-05T03:22:32.420Z",
-    "opcoes": [
-      "aprovar",
-      "refazer",
-      "parar"
+    "estado": "aprovado_pelo_autor",
+    "registradaEm": "2026-10-05T03:37:02.862Z",
+    "mensagemDoAutor": "aprovo",
+    "origem": "Conversa atual, após a apresentação da galeria completa.",
+    "escopo": "As 46 artes das cartas provisórias deste lote.",
+    "ids": [
+      "prov-sublimeyn-etereo-c2",
+      "prov-sublimeyn-etereo-c3",
+      "prov-alvorum-anjo-c6",
+      "prov-persona-espiao-c4",
+      "prov-cognitium-espiao-c4",
+      "prov-primitivum-aliado-c2-defensivo",
+      "prov-dominum-cerco-c3",
+      "prov-sublimeyn-devolver-c2-repentina",
+      "prov-morbidyum-curar-c2",
+      "prov-conflituo-dano-c2-repentina",
+      "prov-eternyr-varredura-c3",
+      "prov-alvorum-varredura-c3",
+      "prov-persona-aliado-c2-agressivo-proficiente",
+      "prov-cognitium-mercador-c7",
+      "prov-dominum-colosso-c7",
+      "prov-sublimeyn-dano-c2-repentina",
+      "prov-morbidyum-curar-c4",
+      "prov-conflituo-torre-c4",
+      "prov-eternyr-remocao-grau-c3",
+      "prov-alvorum-bomba-c8",
+      "prov-cognitium-comprar-c2-repentina",
+      "prov-primitivum-curar-c2",
+      "prov-dominum-ira-c4",
+      "prov-sublimeyn-dano-c1-repentina",
+      "prov-morbidyum-enfermaria-c3",
+      "prov-primitivum-aliado-c4-defensivo",
+      "prov-conflituo-piromante-c4",
+      "prov-eternyr-destruir-c4-repentina",
+      "prov-alvorum-fonte-c4",
+      "prov-cognitium-anular-c3-repentina",
+      "prov-dominum-destruir-c3",
+      "prov-sublimeyn-comprar-c2-repentina",
+      "prov-morbidyum-dano-c3",
+      "prov-conflituo-fera-c5",
+      "prov-eternyr-devolver-c2-repentina",
+      "prov-alvorum-comprar-c3",
+      "prov-cognitium-aliado-c4-defensivo",
+      "prov-dominum-aliado-c4-defensivo",
+      "prov-morbidyum-aliado-c6-descarta-grau",
+      "prov-conflituo-aliado-c2-agressivo",
+      "prov-morbidyum-comprar-c3",
+      "prov-morbidyum-mistica-c2",
+      "prov-morbidyum-mistica-c4",
+      "prov-cognitium-mistica-c2",
+      "prov-eternyr-mistica-c2",
+      "prov-dominum-mistica-c2"
     ],
-    "naoRepetirPergunta": true
+    "versoes": [
+      {
+        "id": "prov-sublimeyn-etereo-c2",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-etereo-c2.cena-v1.png",
+        "sha256": "b1ace5a80a3f1ae9bf460025660d8a3e47f6f548fe77d10a8719bd50ff8dab39"
+      },
+      {
+        "id": "prov-sublimeyn-etereo-c3",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-etereo-c3.cena-v1.png",
+        "sha256": "f33d952d3bc70e9250deaaa7e248277eec387d91c2024e59126b35cf128401e5"
+      },
+      {
+        "id": "prov-alvorum-anjo-c6",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-anjo-c6.cena-v1.png",
+        "sha256": "28920b32e840cb01eeb9fbc653b3507d64bb604043d830fb99f07bcb4fd2327a"
+      },
+      {
+        "id": "prov-persona-espiao-c4",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-persona-espiao-c4.cena-v1.png",
+        "sha256": "790fa2e83576d5ce1a3db1c07f85ec449dde4f51b21905770ce46608584ae0a7"
+      },
+      {
+        "id": "prov-cognitium-espiao-c4",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-espiao-c4.cena-v1.png",
+        "sha256": "f529caef9aabeaa685f3a8bd21d7a4fd4ab6eb2166aa0668d9bfd68c1e9c36cf"
+      },
+      {
+        "id": "prov-primitivum-aliado-c2-defensivo",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c2-defensivo.cena-v1.png",
+        "sha256": "bf33ea422a6d28091c2009890526377783920ec57b5a617708c9d954d29137ec"
+      },
+      {
+        "id": "prov-dominum-cerco-c3",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-cerco-c3.cena-v1.png",
+        "sha256": "c6d0a41090bc4eeb61ea4f408b4c8907b7d1fea9c8d349e05d702fb80532f2e7"
+      },
+      {
+        "id": "prov-sublimeyn-devolver-c2-repentina",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-devolver-c2-repentina.cena-v1.png",
+        "sha256": "fe57b040debaa4a02ba568899d9901347d740d2b127cc4b2544e39ae29e2e5d1"
+      },
+      {
+        "id": "prov-morbidyum-curar-c2",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c2.cena-v1.png",
+        "sha256": "a160f3e271945aa499199d0d02143ca02efc5726f1637979caf0fd2b8a3ba219"
+      },
+      {
+        "id": "prov-conflituo-dano-c2-repentina",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-dano-c2-repentina.cena-v1.png",
+        "sha256": "e7e7e4fb393035f41370f3368110ac952eafa9fd4c8f93e1162ddf36c81374f7"
+      },
+      {
+        "id": "prov-eternyr-varredura-c3",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-varredura-c3.cena-v1.png",
+        "sha256": "89ff8db480291fc1e31cf36204d4ece4b963a12382d9547aad1be6b652cdaf7f"
+      },
+      {
+        "id": "prov-alvorum-varredura-c3",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-varredura-c3.cena-v1.png",
+        "sha256": "ab14c7dd0fb9c9e6a2bc185257b759635ef050e9f4657af1f7046a9d17223042"
+      },
+      {
+        "id": "prov-persona-aliado-c2-agressivo-proficiente",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-persona-aliado-c2-agressivo-proficiente.cena-v1.png",
+        "sha256": "7b7bfcca2f81f47e94539988b162ea2a77c197726d4b02b39bb5d7347bcdd16e"
+      },
+      {
+        "id": "prov-cognitium-mercador-c7",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mercador-c7.cena-v1.png",
+        "sha256": "ed3fda050ed38be6b1c2495e71efd1dca01a1ec8e9046c12ac0016cbe63537fb"
+      },
+      {
+        "id": "prov-dominum-colosso-c7",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-colosso-c7.cena-v1.png",
+        "sha256": "63edec8ad4b2c27bce3208a86c6aea8132b5837229dc38805ee968e97a0d9321"
+      },
+      {
+        "id": "prov-sublimeyn-dano-c2-repentina",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c2-repentina.cena-v1.png",
+        "sha256": "b3dba7692363b687df46b2dc81df5fa1b38e8944fee12b124e71e26eaf3dfce3"
+      },
+      {
+        "id": "prov-morbidyum-curar-c4",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c4.cena-v1.png",
+        "sha256": "e3c8ad5fc46bdb6d68a08024ed2fecb9331ea8449e72bb6c8f24e4dfaba921f1"
+      },
+      {
+        "id": "prov-conflituo-torre-c4",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-torre-c4.cena-v1.png",
+        "sha256": "e80da6626c513a6c48b63def2ed9da173b97003d11aa589d15bfea18522cf798"
+      },
+      {
+        "id": "prov-eternyr-remocao-grau-c3",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-remocao-grau-c3.cena-v1.png",
+        "sha256": "eadd321740d610d09b1b24e048469b639c4afe9a08193c91d9162cc9d7d6a1be"
+      },
+      {
+        "id": "prov-alvorum-bomba-c8",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-bomba-c8.cena-v1.png",
+        "sha256": "5dc220e7183a1251c8b74ff5cc31d7532313d6be6ee83aef92078b644c2f7009"
+      },
+      {
+        "id": "prov-cognitium-comprar-c2-repentina",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-comprar-c2-repentina.cena-v1.png",
+        "sha256": "7f488a4c2e333b6b2364062169b4d9f607a520681f312fe555d6c2b6123c32b7"
+      },
+      {
+        "id": "prov-primitivum-curar-c2",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-curar-c2.cena-v1.png",
+        "sha256": "f33bc562e4652c31bd8ea84878206ec5df9e65ae89b3655c1feaefa633dc2896"
+      },
+      {
+        "id": "prov-dominum-ira-c4",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-ira-c4.cena-v1.png",
+        "sha256": "94d5185be8437942b3d5a52f5e7704e8142a45be746654577570fa94825db3d1"
+      },
+      {
+        "id": "prov-sublimeyn-dano-c1-repentina",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c1-repentina.cena-v1.png",
+        "sha256": "21941674874e93f5da0ecd6bfca00f376f3adb8aee9068526716d4ab1aafd417"
+      },
+      {
+        "id": "prov-morbidyum-enfermaria-c3",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-enfermaria-c3.cena-v1.png",
+        "sha256": "7fd395cc2f85248f56e44626fc1fe13263d821e9fa93d9e73c9b9735d2ee82f0"
+      },
+      {
+        "id": "prov-primitivum-aliado-c4-defensivo",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c4-defensivo.cena-v1.png",
+        "sha256": "161cccb62211773a55e9e97ddcc77b3a88b4bb14dcd5b99147fc8ac5447014f9"
+      },
+      {
+        "id": "prov-conflituo-piromante-c4",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-piromante-c4.cena-v1.png",
+        "sha256": "ea9d88d186224d8453ee14b96d2477d206371fd4fbca3260aa68a27b1ff13f46"
+      },
+      {
+        "id": "prov-eternyr-destruir-c4-repentina",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-destruir-c4-repentina.cena-v1.png",
+        "sha256": "c1ef76693998b22ecf47c2a500a89c6ed6753c99d78c128e6ed08e4e19daef21"
+      },
+      {
+        "id": "prov-alvorum-fonte-c4",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-fonte-c4.cena-v1.png",
+        "sha256": "6497110892aba7fc3910d2b13f1fea31096074f6c9929a13a5182b8579360293"
+      },
+      {
+        "id": "prov-cognitium-anular-c3-repentina",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-anular-c3-repentina.cena-v1.png",
+        "sha256": "44f1bb84228f264b3ef9a6e89da8fd068008a3ed8a2d0f698ba90991ed334695"
+      },
+      {
+        "id": "prov-dominum-destruir-c3",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-destruir-c3.cena-v1.png",
+        "sha256": "ef8d61f3a7141b81dd49f7eec821c9e87139550162dc41c52724b15d2417dc19"
+      },
+      {
+        "id": "prov-sublimeyn-comprar-c2-repentina",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-comprar-c2-repentina.cena-v1.png",
+        "sha256": "e8bc2285a5d063c555539fd757223c4daaed2ccc7c66c5fbc21779194cd4aead"
+      },
+      {
+        "id": "prov-morbidyum-dano-c3",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-dano-c3.cena-v1.png",
+        "sha256": "8ffa021ba45b8f265b082726a393ad99e9cd1793521bbc386c87b5dc0a510573"
+      },
+      {
+        "id": "prov-conflituo-fera-c5",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-fera-c5.cena-v1.png",
+        "sha256": "798a130b324ef3ad7a645c831ab6a0d0d4c564a936061162384d77402c070393"
+      },
+      {
+        "id": "prov-eternyr-devolver-c2-repentina",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-devolver-c2-repentina.cena-v1.png",
+        "sha256": "4dd7501aee6c1f8af64c00e50edfc25ebca44e3d367cd5f201ba71499ffe3f91"
+      },
+      {
+        "id": "prov-alvorum-comprar-c3",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-comprar-c3.cena-v1.png",
+        "sha256": "f3fd4bdd5c5bada00af6e36f0a37363b1962a09ad621f2ba7577909ffbc4c633"
+      },
+      {
+        "id": "prov-cognitium-aliado-c4-defensivo",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-aliado-c4-defensivo.cena-v1.png",
+        "sha256": "7de715daf0a0ed151c8a9d282ff9a44bed88b866dc860cb5e5a834b55d92ff85"
+      },
+      {
+        "id": "prov-dominum-aliado-c4-defensivo",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-aliado-c4-defensivo.cena-v1.png",
+        "sha256": "59484c2cb06b6bf8982c0a8c4f38a7e6dbbf701df62af2ed95f81ea454ded2c3"
+      },
+      {
+        "id": "prov-morbidyum-aliado-c6-descarta-grau",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-aliado-c6-descarta-grau.cena-v1.png",
+        "sha256": "4380263c7ce624a1426c2bff49e33b493ef9abed82a98bc6beda421ff6a5e818"
+      },
+      {
+        "id": "prov-conflituo-aliado-c2-agressivo",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-aliado-c2-agressivo.cena-v1.png",
+        "sha256": "d6ba18cc2497b0ebeeb0952f29327d5954696e6d8e10664ad0997c1b7f3cc08c"
+      },
+      {
+        "id": "prov-morbidyum-comprar-c3",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-comprar-c3.cena-v1.png",
+        "sha256": "a9e263ff9639c3f761437376804438a5e16dfbfaac7fecc1f2e77d97ee2f27b8"
+      },
+      {
+        "id": "prov-morbidyum-mistica-c2",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c2.cena-v1.png",
+        "sha256": "98a88ee8319798333e0a7b2127fdb608f61b95660d39bbf47e55ae2feabd377e"
+      },
+      {
+        "id": "prov-morbidyum-mistica-c4",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c4.cena-v1.png",
+        "sha256": "ca0cd05b9ff610894ed8e92f3e67dcb3be91310374c1dc614e6ca4fdf9ad7b03"
+      },
+      {
+        "id": "prov-cognitium-mistica-c2",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mistica-c2.cena-v1.png",
+        "sha256": "2532d71dd25a652a46d7a32497cea148db6aa16c9ddb15d97163f56e6134f249"
+      },
+      {
+        "id": "prov-eternyr-mistica-c2",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-mistica-c2.cena-v1.png",
+        "sha256": "7b6d2943c3be210af9279e7450033dee0f695ed19b6444803447d3f9a35e1e3c"
+      },
+      {
+        "id": "prov-dominum-mistica-c2",
+        "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-mistica-c2.cena-v1.png",
+        "sha256": "a877cde8642844ae4baeda441cb4eee6f0af14d8378aac0ba081db210c3c04be"
+      }
+    ],
+    "expansaoLiberada": false,
+    "integracaoClaudeConfirmada": false
   }
 }

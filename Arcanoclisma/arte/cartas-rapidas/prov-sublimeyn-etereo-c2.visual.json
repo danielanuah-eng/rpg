@@ -12,7 +12,7 @@
   "enriquecimentosVisuais": "Pouso no lago ao amanhecer, água e neblina com escala coerente; nova pose mantendo a identidade da referência.",
   "ferramenta": "image_gen.imagegen integrada",
   "modo": "built-in",
-  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "estado": "aprovado_pelo_autor",
   "baseInspecionada": true,
   "dimensoes": [
     1062,
@@ -57,5 +57,11 @@
   "fonteCodigoSha256": "76de58ad93ac2ae3ea71d9a7d9b9879025e455b833a66b7d2fe85925a4f37ea5",
   "alteracoesMecanicas": false,
   "integracaoClaudeConfirmada": false,
-  "movimento": "Aliado: reutilizar ataque/bloqueio genéricos existentes; nenhum projétil exclusivo foi inventado."
+  "movimento": "Aliado: reutilizar ataque/bloqueio genéricos existentes; nenhum projétil exclusivo foi inventado.",
+  "aprovacao": {
+    "estado": "aprovado_pelo_autor",
+    "registradaEm": "2026-10-05T03:37:02.862Z",
+    "mensagemDoAutor": "aprovo",
+    "decisao": "Arcanoclisma/arte/cartas-rapidas/aprovacao-autor.json"
+  }
 }

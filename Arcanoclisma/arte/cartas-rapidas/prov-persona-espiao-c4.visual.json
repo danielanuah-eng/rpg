@@ -35,7 +35,7 @@
   },
   "raridade": null,
   "arteAlternativa": false,
-  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "estado": "aprovado_pelo_autor",
   "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-persona-espiao-c4.cena-v1.png",
   "registro": "Arcanoclisma/arte/cartas-rapidas/prov-persona-espiao-c4.visual.json",
   "sha256": "790fa2e83576d5ce1a3db1c07f85ec449dde4f51b21905770ce46608584ae0a7",
@@ -58,5 +58,11 @@
   "dimensoesEntregues": "PNG nativo preservado",
   "proporcaoSolicitada": "63:88",
   "integracaoClaudeConfirmada": false,
-  "alteracoesMecanicas": false
+  "alteracoesMecanicas": false,
+  "aprovacao": {
+    "estado": "aprovado_pelo_autor",
+    "registradaEm": "2026-10-05T03:37:02.862Z",
+    "mensagemDoAutor": "aprovo",
+    "decisao": "Arcanoclisma/arte/cartas-rapidas/aprovacao-autor.json"
+  }
 }

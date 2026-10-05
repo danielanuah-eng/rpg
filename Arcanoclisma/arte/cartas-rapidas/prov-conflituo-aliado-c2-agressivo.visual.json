@@ -26,7 +26,7 @@
   },
   "raridade": "comum",
   "arteAlternativa": false,
-  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "estado": "aprovado_pelo_autor",
   "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-aliado-c2-agressivo.cena-v1.png",
   "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-aliado-c2-agressivo.visual.json",
   "sha256": "d6ba18cc2497b0ebeeb0952f29327d5954696e6d8e10664ad0997c1b7f3cc08c",
@@ -49,5 +49,11 @@
   "dimensoesEntregues": "PNG nativo preservado",
   "proporcaoSolicitada": "63:88",
   "integracaoClaudeConfirmada": false,
-  "alteracoesMecanicas": false
+  "alteracoesMecanicas": false,
+  "aprovacao": {
+    "estado": "aprovado_pelo_autor",
+    "registradaEm": "2026-10-05T03:37:02.862Z",
+    "mensagemDoAutor": "aprovo",
+    "decisao": "Arcanoclisma/arte/cartas-rapidas/aprovacao-autor.json"
+  }
 }

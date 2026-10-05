@@ -31,7 +31,7 @@
   },
   "raridade": null,
   "arteAlternativa": false,
-  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "estado": "aprovado_pelo_autor",
   "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c2.cena-v1.png",
   "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c2.visual.json",
   "sha256": "a160f3e271945aa499199d0d02143ca02efc5726f1637979caf0fd2b8a3ba219",
@@ -54,5 +54,11 @@
   "dimensoesEntregues": "PNG nativo preservado",
   "proporcaoSolicitada": "63:88",
   "integracaoClaudeConfirmada": false,
-  "alteracoesMecanicas": false
+  "alteracoesMecanicas": false,
+  "aprovacao": {
+    "estado": "aprovado_pelo_autor",
+    "registradaEm": "2026-10-05T03:37:02.862Z",
+    "mensagemDoAutor": "aprovo",
+    "decisao": "Arcanoclisma/arte/cartas-rapidas/aprovacao-autor.json"
+  }
 }

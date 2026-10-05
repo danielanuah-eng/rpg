@@ -31,7 +31,7 @@
   },
   "raridade": null,
   "arteAlternativa": false,
-  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "estado": "aprovado_pelo_autor",
   "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-dano-c2-repentina.cena-v1.png",
   "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-dano-c2-repentina.visual.json",
   "sha256": "e7e7e4fb393035f41370f3368110ac952eafa9fd4c8f93e1162ddf36c81374f7",
@@ -54,5 +54,11 @@
   "dimensoesEntregues": "PNG nativo preservado",
   "proporcaoSolicitada": "63:88",
   "integracaoClaudeConfirmada": false,
-  "alteracoesMecanicas": false
+  "alteracoesMecanicas": false,
+  "aprovacao": {
+    "estado": "aprovado_pelo_autor",
+    "registradaEm": "2026-10-05T03:37:02.862Z",
+    "mensagemDoAutor": "aprovo",
+    "decisao": "Arcanoclisma/arte/cartas-rapidas/aprovacao-autor.json"
+  }
 }
