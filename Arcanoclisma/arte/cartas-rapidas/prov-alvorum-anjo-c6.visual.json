@@ -1,0 +1,68 @@
+{
+  "id": "prov-alvorum-anjo-c6",
+  "nome": "Cervo Branco",
+  "valor": "alvorum",
+  "referencia": "Arcanoclisma/online/public/arte/cervo-branco.webp",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-6d6ca626-ed3b-4fb6-87ba-5fbc7130168e.png",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-anjo-c6.cena-v1.png",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-anjo-c6.prompt.txt",
+  "ambiente": "terraço de musgo junto a um riacho de floresta",
+  "horaDoDiaProposta": "fim da tarde com luz filtrada",
+  "descricaoVisivel": "Cervo branco de galhadas douradas repousando com as pernas dobradas sobre musgo, cabeça erguida, fitas escuras e douradas atrás; troncos e pequena cascata na floresta.",
+  "enriquecimentosVisuais": "Repouso na floresta, pernas recolhidas, magia Alvorum contida e riacho; nova pose mantendo marcas, galhadas e cores.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "baseInspecionada": true,
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "dimensoesEntregues": "PNG nativo preservado sem redimensionamento",
+  "proporcaoSolicitada": "63:88",
+  "proporcaoReal": 0.7170830519918974,
+  "sha256": "28920b32e840cb01eeb9fbc653b3507d64bb604043d830fb99f07bcb4fd2327a",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572822
+  },
+  "fundo": "Cena completa opaca",
+  "raridade": null,
+  "arteAlternativa": false,
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-alvorum-anjo-c6",
+    "nome": "Cervo Branco",
+    "valores": [
+      "alvorum"
+    ],
+    "tipo": "aliado",
+    "custo": 6,
+    "grau": 5,
+    "velocidade": "findante",
+    "ataque": 4,
+    "vida": 7,
+    "texto": "Etéreo. Ao causar dano de combate ao Conjurador inimigo: cure 4 de dano do seu Conjurador.",
+    "palavrasChave": [
+      "Etéreo"
+    ],
+    "aoDanoConjurador": [
+      {
+        "tipo": "curar",
+        "valor": 4,
+        "alvo": "conjuradorProprio"
+      }
+    ]
+  },
+  "referenciaCodigo": "Arcanoclisma/tcg/src/cartas-provisorias.ts",
+  "fonteCodigoSha256": "76de58ad93ac2ae3ea71d9a7d9b9879025e455b833a66b7d2fe85925a4f37ea5",
+  "alteracoesMecanicas": false,
+  "integracaoClaudeConfirmada": false,
+  "movimento": "Aliado: reutilizar ataque/bloqueio genéricos existentes; nenhum projétil exclusivo foi inventado."
+}

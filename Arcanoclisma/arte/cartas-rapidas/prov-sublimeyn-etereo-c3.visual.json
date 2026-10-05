@@ -1,0 +1,61 @@
+{
+  "id": "prov-sublimeyn-etereo-c3",
+  "nome": "Grifo-de-Vidro",
+  "valor": "sublimeyn",
+  "referencia": "Arcanoclisma/online/public/arte/grifo-de-vidro.webp",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-3c556f01-7ba4-47b5-8d3e-bf0fe7e2fd4d.png",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-etereo-c3.cena-v1.png",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-etereo-c3.prompt.txt",
+  "ambiente": "falésia de pedra sobre uma enseada costeira",
+  "horaDoDiaProposta": "fim da tarde sob nuvens",
+  "descricaoVisivel": "Grifo de vidro azul com bico de águia, asas parcialmente abertas e garras apoiadas numa falésia; mar, ilhota rochosa e construções distantes sob céu nublado.",
+  "enriquecimentosVisuais": "Apoio numa falésia com asa para equilíbrio e pequeno povoado distante; composição nova mantendo anatomia e materiais da referência.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "baseInspecionada": true,
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesEntregues": "PNG nativo preservado sem redimensionamento",
+  "proporcaoSolicitada": "63:88",
+  "proporcaoReal": 0.7165991902834008,
+  "sha256": "f33d952d3bc70e9250deaaa7e248277eec387d91c2024e59126b35cf128401e5",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573884
+  },
+  "fundo": "Cena completa opaca",
+  "raridade": null,
+  "arteAlternativa": false,
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-sublimeyn-etereo-c3",
+    "nome": "Grifo-de-Vidro",
+    "valores": [
+      "sublimeyn"
+    ],
+    "tipo": "aliado",
+    "custo": 3,
+    "grau": 2,
+    "velocidade": "findante",
+    "ataque": 3,
+    "vida": 3,
+    "texto": "Etéreo.",
+    "palavrasChave": [
+      "Etéreo"
+    ]
+  },
+  "referenciaCodigo": "Arcanoclisma/tcg/src/cartas-provisorias.ts",
+  "fonteCodigoSha256": "76de58ad93ac2ae3ea71d9a7d9b9879025e455b833a66b7d2fe85925a4f37ea5",
+  "alteracoesMecanicas": false,
+  "integracaoClaudeConfirmada": false,
+  "movimento": "Aliado: reutilizar ataque/bloqueio genéricos existentes; nenhum projétil exclusivo foi inventado."
+}

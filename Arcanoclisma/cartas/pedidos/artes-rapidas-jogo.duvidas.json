@@ -3,7 +3,7 @@
   "autor": "Codex",
   "versao": 1,
   "data": "2026-10-04",
-  "estado": "aguardando_claude",
+  "estado": "lote_3_entregue_a_partir_do_codigo_atual; resposta_formal_ainda_ausente",
   "necessidadeAtual": true,
   "pedidoDoAutor": "Faça artes rápidas e básicas pra algumas cartas que faltam no jogo. Ao perguntar quais cartas, o autor respondeu: fale com o Claude.",
   "objetivo": "Produzir um pequeno lote prioritário de ilustrações completas e simples para cartas que realmente precisam de arte agora.",
@@ -51,6 +51,10 @@
     "produzir": "Somente os IDs prioritários da resposta atual; regras e integração ficam com o Claude."
   },
   "recebimentoClaudeConfirmado": false,
-  "imagensGeradas": 0,
+  "imagensGeradas": 3,
+  "escopoIdentificadoDepoisDoPedido": "Arcanoclisma/tcg/src/cartas-provisorias.ts, criado pelo Claude; os três IDs também já constam no dados.json atual do jogo.",
+  "entrega": "Arcanoclisma/cartas/entregas/artes-rapidas-jogo.visual.json",
+  "idsEntregues": ["prov-sublimeyn-etereo-c2", "prov-sublimeyn-etereo-c3", "prov-alvorum-anjo-c6"],
+  "observacao": "Não houve mensagem direta do Claude. O lote foi identificado nos arquivos atuais que ele produziu; demais prioridades continuam dependendo da lista formal.",
   "pushAutorizadoPeloAutor": true
 }

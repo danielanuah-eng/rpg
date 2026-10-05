@@ -1,0 +1,61 @@
+{
+  "id": "prov-sublimeyn-etereo-c2",
+  "nome": "Garça-de-Neblina",
+  "valor": "sublimeyn",
+  "referencia": "Arcanoclisma/online/public/arte/garca-de-neblina.webp",
+  "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-1305313c-36b1-40ca-a67b-4886d9a4d532.png",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-etereo-c2.cena-v1.png",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-etereo-c2.prompt.txt",
+  "ambiente": "lago raso com juncos e margens arborizadas",
+  "horaDoDiaProposta": "amanhecer",
+  "descricaoVisivel": "Garça branca de pontas azuis tocando a água com uma pata, bico longo voltado à esquerda e pequeno sopro de neblina prateada; juncos, reflexos e sol baixo atrás.",
+  "enriquecimentosVisuais": "Pouso no lago ao amanhecer, água e neblina com escala coerente; nova pose mantendo a identidade da referência.",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "baseInspecionada": true,
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "dimensoesEntregues": "PNG nativo preservado sem redimensionamento",
+  "proporcaoSolicitada": "63:88",
+  "proporcaoReal": 0.7165991902834008,
+  "sha256": "b1ace5a80a3f1ae9bf460025660d8a3e47f6f548fe77d10a8719bd50ff8dab39",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573884
+  },
+  "fundo": "Cena completa opaca",
+  "raridade": null,
+  "arteAlternativa": false,
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-sublimeyn-etereo-c2",
+    "nome": "Garça-de-Neblina",
+    "valores": [
+      "sublimeyn"
+    ],
+    "tipo": "aliado",
+    "custo": 2,
+    "grau": 1,
+    "velocidade": "findante",
+    "ataque": 2,
+    "vida": 2,
+    "texto": "Etéreo.",
+    "palavrasChave": [
+      "Etéreo"
+    ]
+  },
+  "referenciaCodigo": "Arcanoclisma/tcg/src/cartas-provisorias.ts",
+  "fonteCodigoSha256": "76de58ad93ac2ae3ea71d9a7d9b9879025e455b833a66b7d2fe85925a4f37ea5",
+  "alteracoesMecanicas": false,
+  "integracaoClaudeConfirmada": false,
+  "movimento": "Aliado: reutilizar ataque/bloqueio genéricos existentes; nenhum projétil exclusivo foi inventado."
+}

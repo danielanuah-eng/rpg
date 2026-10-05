@@ -1,0 +1,51 @@
+{
+  "tarefaId": "artes-rapidas-jogo-2026-10-04",
+  "versao": 1,
+  "data": "2026-10-04",
+  "autor": "Codex",
+  "pedidoDoAutor": "Artes rápidas e básicas para algumas cartas que faltam no jogo; coordenação com Claude autorizada.",
+  "escopoIdentificadoEm": "Arcanoclisma/tcg/src/cartas-provisorias.ts",
+  "respostaFormalClaudeRecebida": false,
+  "meta": 3,
+  "cartas": [
+    {
+      "id": "prov-sublimeyn-etereo-c2",
+      "nome": "Garça-de-Neblina",
+      "valor": "sublimeyn",
+      "referencia": "Arcanoclisma/online/public/arte/garca-de-neblina.webp",
+      "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-1305313c-36b1-40ca-a67b-4886d9a4d532.png",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-etereo-c2.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-etereo-c2.prompt.txt",
+      "ambiente": "lago raso com juncos e margens arborizadas",
+      "horaDoDiaProposta": "amanhecer",
+      "descricaoVisivel": "Garça branca de pontas azuis tocando a água com uma pata, bico longo voltado à esquerda e pequeno sopro de neblina prateada; juncos, reflexos e sol baixo atrás.",
+      "enriquecimentosVisuais": "Pouso no lago ao amanhecer, água e neblina com escala coerente; nova pose mantendo a identidade da referência."
+    },
+    {
+      "id": "prov-sublimeyn-etereo-c3",
+      "nome": "Grifo-de-Vidro",
+      "valor": "sublimeyn",
+      "referencia": "Arcanoclisma/online/public/arte/grifo-de-vidro.webp",
+      "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-3c556f01-7ba4-47b5-8d3e-bf0fe7e2fd4d.png",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-etereo-c3.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-etereo-c3.prompt.txt",
+      "ambiente": "falésia de pedra sobre uma enseada costeira",
+      "horaDoDiaProposta": "fim da tarde sob nuvens",
+      "descricaoVisivel": "Grifo de vidro azul com bico de águia, asas parcialmente abertas e garras apoiadas numa falésia; mar, ilhota rochosa e construções distantes sob céu nublado.",
+      "enriquecimentosVisuais": "Apoio numa falésia com asa para equilíbrio e pequeno povoado distante; composição nova mantendo anatomia e materiais da referência."
+    },
+    {
+      "id": "prov-alvorum-anjo-c6",
+      "nome": "Cervo Branco",
+      "valor": "alvorum",
+      "referencia": "Arcanoclisma/online/public/arte/cervo-branco.webp",
+      "origem": "C:/Users/Anuah/.codex/generated_images/01a0f911-59e9-7d32-b27a-67ead45442f5/exec-6d6ca626-ed3b-4fb6-87ba-5fbc7130168e.png",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-anjo-c6.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-anjo-c6.prompt.txt",
+      "ambiente": "terraço de musgo junto a um riacho de floresta",
+      "horaDoDiaProposta": "fim da tarde com luz filtrada",
+      "descricaoVisivel": "Cervo branco de galhadas douradas repousando com as pernas dobradas sobre musgo, cabeça erguida, fitas escuras e douradas atrás; troncos e pequena cascata na floresta.",
+      "enriquecimentosVisuais": "Repouso na floresta, pernas recolhidas, magia Alvorum contida e riacho; nova pose mantendo marcas, galhadas e cores."
+    }
+  ]
+}

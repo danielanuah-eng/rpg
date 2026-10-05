@@ -1,0 +1,95 @@
+{
+  "tarefaId": "artes-rapidas-jogo-2026-10-04",
+  "versao": 1,
+  "data": "2026-10-04",
+  "autor": "Codex",
+  "estado": "entregue",
+  "escopo": "Pequeno lote de 3 cenas para cartas provisórias novas do Claude, fora das 210 artes já aprovadas.",
+  "escopoIdentificadoEm": "Arcanoclisma/tcg/src/cartas-provisorias.ts",
+  "respostaFormalClaudeRecebida": false,
+  "meta": 3,
+  "concluidas": 3,
+  "cartas": [
+    {
+      "id": "prov-sublimeyn-etereo-c2",
+      "nome": "Garça-de-Neblina",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-etereo-c2.cena-v1.png",
+      "arteModo": "cena",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-etereo-c2.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-etereo-c2.visual.json",
+      "sha256": "b1ace5a80a3f1ae9bf460025660d8a3e47f6f548fe77d10a8719bd50ff8dab39",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "alfa": {
+        "hasAlpha": false,
+        "min": 255,
+        "max": 255,
+        "pixelsTransparentes": 0,
+        "total": 1573884
+      },
+      "raridade": null,
+      "arteAlternativa": false,
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "integracaoClaudeConfirmada": false
+    },
+    {
+      "id": "prov-sublimeyn-etereo-c3",
+      "nome": "Grifo-de-Vidro",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-etereo-c3.cena-v1.png",
+      "arteModo": "cena",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-etereo-c3.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-etereo-c3.visual.json",
+      "sha256": "f33d952d3bc70e9250deaaa7e248277eec387d91c2024e59126b35cf128401e5",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "alfa": {
+        "hasAlpha": false,
+        "min": 255,
+        "max": 255,
+        "pixelsTransparentes": 0,
+        "total": 1573884
+      },
+      "raridade": null,
+      "arteAlternativa": false,
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "integracaoClaudeConfirmada": false
+    },
+    {
+      "id": "prov-alvorum-anjo-c6",
+      "nome": "Cervo Branco",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-anjo-c6.cena-v1.png",
+      "arteModo": "cena",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-anjo-c6.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-anjo-c6.visual.json",
+      "sha256": "28920b32e840cb01eeb9fbc653b3507d64bb604043d830fb99f07bcb4fd2327a",
+      "dimensoes": [
+        1062,
+        1481
+      ],
+      "alfa": {
+        "hasAlpha": false,
+        "min": 255,
+        "max": 255,
+        "pixelsTransparentes": 0,
+        "total": 1572822
+      },
+      "raridade": null,
+      "arteAlternativa": false,
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "integracaoClaudeConfirmada": false
+    }
+  ],
+  "galeria": "Arcanoclisma/arte/cartas-rapidas/galeria.html",
+  "pushAutorizadoPeloAutor": true,
+  "instrucoesClaude": [
+    "Integrar cada PNG somente à carta de mesmo ID; cenário já faz parte da imagem, sem montagem de recorte com fundo.",
+    "Preservar o PNG nativo como fonte de alta resolução; converter para WebP no build quando necessário.",
+    "Não alterar regras, custos, Grau, Valores, raridades ou o catálogo por causa desta entrega.",
+    "As 210 artes já aprovadas e a expansão A Mestra dos Dragões não foram modificadas.",
+    "Confirmar integração em cartas/entregas/artes-rapidas-jogo.integracao.claude.json; não há confirmação automática."
+  ]
+}
