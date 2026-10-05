@@ -1,0 +1,59 @@
+{
+  "id": "prov-eternyr-remocao-grau-c3",
+  "nome": "Guardião do Ciclo",
+  "tipo": "temporaria",
+  "valor": "eternyr",
+  "referencia": "Arcanoclisma/online/public/arte/guardiao-do-ciclo.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-remocao-grau-c3.prompt.txt",
+  "cena": "Guardião do Ciclo turns at the edge of a simple stone circular courtyard during a cloudy morning, reference staff or artifact held toward a distant magical training construct. A restrained blue-night time band with short WHITE DASHES links the aligned gesture to the target; gaze follows the band. Preserve face, body and costume. Muted warm sandstone, cool blue trees beyond, no giant clocks or galaxy spectacle.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-eternyr-remocao-grau-c3",
+    "nome": "Guardião do Ciclo",
+    "valores": [
+      "eternyr"
+    ],
+    "tipo": "temporaria",
+    "custo": 3,
+    "grau": 2,
+    "velocidade": "findante",
+    "efeitos": [
+      {
+        "tipo": "dano",
+        "valor": 1,
+        "alvo": "escolhidoAliado",
+        "escalaGrau": true
+      }
+    ],
+    "texto": "Cause 1 + o número de cartas no seu Grau de dano a um Aliado ou Mística."
+  },
+  "raridade": null,
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-remocao-grau-c3.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-remocao-grau-c3.visual.json",
+  "sha256": "eadd321740d610d09b1b24e048469b639c4afe9a08193c91d9162cc9d7d6a1be",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-66d53bac-bbb5-478a-be8c-f6d302b0a7a1.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573884
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

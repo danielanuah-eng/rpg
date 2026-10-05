@@ -1,0 +1,56 @@
+{
+  "id": "prov-persona-aliado-c2-agressivo-proficiente",
+  "nome": "Trapaceiro de Feira",
+  "tipo": "aliado",
+  "valor": "persona",
+  "referencia": "Arcanoclisma/online/public/arte/trapaceiro-de-feira.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-persona-aliado-c2-agressivo-proficiente.prompt.txt",
+  "cena": "Trapaceiro de Feira ducks lightly around a wooden market stall, weight low and one foot about to step forward, looking over his shoulder with a quick mischievous grin. One hand holds a small coin concealed near his sleeve, the other steadies the stall. Coral magic is a small graphic trail around the coin. Warm morning market, muted teal awnings, only two distant stalls and simple wooden crates.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-persona-aliado-c2-agressivo-proficiente",
+    "nome": "Trapaceiro de Feira",
+    "valores": [
+      "persona"
+    ],
+    "tipo": "aliado",
+    "custo": 2,
+    "grau": 1,
+    "velocidade": "findante",
+    "ataque": 2,
+    "vida": 2,
+    "texto": "Proficiente.",
+    "palavrasChave": [
+      "Proficiente"
+    ]
+  },
+  "raridade": null,
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-persona-aliado-c2-agressivo-proficiente.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-persona-aliado-c2-agressivo-proficiente.visual.json",
+  "sha256": "7b7bfcca2f81f47e94539988b162ea2a77c197726d4b02b39bb5d7347bcdd16e",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-76a15af3-6cc5-4126-92f5-e38d95fadb3f.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572402
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

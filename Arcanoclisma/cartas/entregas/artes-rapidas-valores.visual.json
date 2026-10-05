@@ -4,17 +4,8 @@
   "data": "2026-10-04",
   "estado": "em_producao",
   "meta": 36,
-  "concluidas": 9,
+  "concluidas": 18,
   "pendentes": [
-    "prov-persona-aliado-c2-agressivo-proficiente",
-    "prov-cognitium-mercador-c7",
-    "prov-dominum-colosso-c7",
-    "prov-sublimeyn-dano-c2-repentina",
-    "prov-morbidyum-curar-c4",
-    "prov-conflituo-torre-c4",
-    "prov-eternyr-remocao-grau-c3",
-    "prov-alvorum-bomba-c8",
-    "prov-cognitium-comprar-c2-repentina",
     "prov-dominum-ira-c4",
     "prov-sublimeyn-dano-c1-repentina",
     "prov-morbidyum-enfermaria-c3",
@@ -212,6 +203,141 @@
       "registro": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-varredura-c3.visual.json",
       "arteModo": "cena",
       "sha256": "ab14c7dd0fb9c9e6a2bc185257b759635ef050e9f4657af1f7046a9d17223042",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-persona-aliado-c2-agressivo-proficiente",
+      "nome": "Trapaceiro de Feira",
+      "valor": "persona",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-persona-aliado-c2-agressivo-proficiente.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-persona-aliado-c2-agressivo-proficiente.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-persona-aliado-c2-agressivo-proficiente.visual.json",
+      "arteModo": "cena",
+      "sha256": "7b7bfcca2f81f47e94539988b162ea2a77c197726d4b02b39bb5d7347bcdd16e",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-cognitium-mercador-c7",
+      "nome": "Taverneira que Vende Segredos",
+      "valor": "cognitium",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mercador-c7.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mercador-c7.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mercador-c7.visual.json",
+      "arteModo": "cena",
+      "sha256": "ed3fda050ed38be6b1c2495e71efd1dca01a1ec8e9046c12ac0016cbe63537fb",
+      "dimensoes": [
+        1061,
+        1483
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-dominum-colosso-c7",
+      "nome": "Autômato do Postulário",
+      "valor": "dominum",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-colosso-c7.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-colosso-c7.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-colosso-c7.visual.json",
+      "arteModo": "cena",
+      "sha256": "63edec8ad4b2c27bce3208a86c6aea8132b5837229dc38805ee968e97a0d9321",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-sublimeyn-dano-c2-repentina",
+      "nome": "Contrabandista de Mercúrio",
+      "valor": "sublimeyn",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c2-repentina.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c2-repentina.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c2-repentina.visual.json",
+      "arteModo": "cena",
+      "sha256": "b3dba7692363b687df46b2dc81df5fa1b38e8944fee12b124e71e26eaf3dfce3",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-morbidyum-curar-c4",
+      "nome": "Morwen Terceira-Vida",
+      "valor": "morbidyum",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c4.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c4.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c4.visual.json",
+      "arteModo": "cena",
+      "sha256": "e3c8ad5fc46bdb6d68a08024ed2fecb9331ea8449e72bb6c8f24e4dfaba921f1",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-conflituo-torre-c4",
+      "nome": "Cidade-Muralha",
+      "valor": "conflituo",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-torre-c4.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-torre-c4.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-torre-c4.visual.json",
+      "arteModo": "cena",
+      "sha256": "e80da6626c513a6c48b63def2ed9da173b97003d11aa589d15bfea18522cf798",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-eternyr-remocao-grau-c3",
+      "nome": "Guardião do Ciclo",
+      "valor": "eternyr",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-remocao-grau-c3.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-remocao-grau-c3.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-remocao-grau-c3.visual.json",
+      "arteModo": "cena",
+      "sha256": "eadd321740d610d09b1b24e048469b639c4afe9a08193c91d9162cc9d7d6a1be",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-alvorum-bomba-c8",
+      "nome": "Juiz-Feiticeiro",
+      "valor": "alvorum",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-bomba-c8.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-bomba-c8.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-bomba-c8.visual.json",
+      "arteModo": "cena",
+      "sha256": "5dc220e7183a1251c8b74ff5cc31d7532313d6be6ee83aef92078b644c2f7009",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-cognitium-comprar-c2-repentina",
+      "nome": "Contadora de Mentes",
+      "valor": "cognitium",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-comprar-c2-repentina.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-comprar-c2-repentina.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-comprar-c2-repentina.visual.json",
+      "arteModo": "cena",
+      "sha256": "7f488a4c2e333b6b2364062169b4d9f607a520681f312fe555d6c2b6123c32b7",
       "dimensoes": [
         1061,
         1482

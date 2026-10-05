@@ -1,0 +1,54 @@
+{
+  "id": "prov-dominum-colosso-c7",
+  "nome": "Autômato do Postulário",
+  "tipo": "aliado",
+  "valor": "dominum",
+  "referencia": "Arcanoclisma/online/public/arte/automato-do-postulario.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-colosso-c7.prompt.txt",
+  "cena": "Autômato do Postulário strides from a broad workshop gate at dawn, one heavy foot planted and the other about to advance, shoulders angled forward in a protective stance. Preserve the reference's material, limb construction, face and number of arms. Small closed dark-purple shield segments hover close to its shoulders. Smooth warm brick workshop, one workbench in shadow, no forest of debris; full body readable and grounded.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-dominum-colosso-c7",
+    "nome": "Autômato do Postulário",
+    "valores": [
+      "dominum"
+    ],
+    "tipo": "aliado",
+    "custo": 7,
+    "grau": 6,
+    "velocidade": "findante",
+    "ataque": 8,
+    "vida": 12,
+    "texto": "Protegido 2.",
+    "protegido": 2
+  },
+  "raridade": null,
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-colosso-c7.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-colosso-c7.visual.json",
+  "sha256": "63edec8ad4b2c27bce3208a86c6aea8132b5837229dc38805ee968e97a0d9321",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-da0db014-77a0-4f2c-99b8-fccd56c7d81e.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573884
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

@@ -1,0 +1,57 @@
+{
+  "id": "prov-cognitium-comprar-c2-repentina",
+  "nome": "Contadora de Mentes",
+  "tipo": "temporaria",
+  "valor": "cognitium",
+  "referencia": "Arcanoclisma/online/public/arte/contadora-de-mentes.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-comprar-c2-repentina.prompt.txt",
+  "cena": "Contadora de Mentes is the approved nonhuman four-armed indigo-and-ivory arcane creature from reference, with its long narrow muzzle, fin-like mane, curled tail, digitigrade legs and violet gems preserved. In a quiet school reading room on an overcast morning, it perches sideways at a broad desk, one lower forearm resting on the tabletop, the other lower hand holding open a blank book, and its two upper hands gently examining a single hovering indigo memory fragment. Its distinctive creature eyes look at the fragment. Preserve all four arms and creature anatomy; do not turn it into a human. Warm oak desk, muted blue window light, two simple shelves, uncluttered setting.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-cognitium-comprar-c2-repentina",
+    "nome": "Contadora de Mentes",
+    "valores": [
+      "cognitium"
+    ],
+    "tipo": "temporaria",
+    "custo": 2,
+    "grau": 1,
+    "velocidade": "repentina",
+    "efeitos": [
+      {
+        "tipo": "comprar",
+        "valor": 1
+      }
+    ],
+    "texto": "Compre 1 carta."
+  },
+  "raridade": null,
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-comprar-c2-repentina.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-comprar-c2-repentina.visual.json",
+  "sha256": "7f488a4c2e333b6b2364062169b4d9f607a520681f312fe555d6c2b6123c32b7",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-0365c508-d6db-4ca6-86dc-90e74045195c.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572402
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

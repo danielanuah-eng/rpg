@@ -1,0 +1,63 @@
+{
+  "id": "prov-alvorum-bomba-c8",
+  "nome": "Juiz-Feiticeiro",
+  "tipo": "aliado",
+  "valor": "alvorum",
+  "referencia": "Arcanoclisma/online/public/arte/juiz-feiticeiro.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-bomba-c8.prompt.txt",
+  "cena": "Juiz-Feiticeiro stands on a small stone courthouse balcony at cloudy noon, torso turning, one palm raised and the other pointing down toward the courtyard. Preserve reference face, age, costume and staff if present. A compact split muted-gold / violet-black arcane pulse moves along the courtyard floor beneath him; no bodies, no blood. Warm pale stone, cool deep teal shade, clean broad architecture and restrained authority.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-alvorum-bomba-c8",
+    "nome": "Juiz-Feiticeiro",
+    "valores": [
+      "alvorum"
+    ],
+    "tipo": "aliado",
+    "custo": 8,
+    "grau": 7,
+    "velocidade": "findante",
+    "ataque": 7,
+    "vida": 9,
+    "texto": "Etéreo. Protegido 1. Ao entrar: cause 2 de dano a cada Aliado do oponente.",
+    "palavrasChave": [
+      "Etéreo"
+    ],
+    "protegido": 1,
+    "aoEntrar": [
+      {
+        "tipo": "danoTodosAliados",
+        "valor": 2
+      }
+    ]
+  },
+  "raridade": null,
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-bomba-c8.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-bomba-c8.visual.json",
+  "sha256": "5dc220e7183a1251c8b74ff5cc31d7532313d6be6ee83aef92078b644c2f7009",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-44231d3f-ded0-460d-9739-9c6aabaa280b.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572402
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

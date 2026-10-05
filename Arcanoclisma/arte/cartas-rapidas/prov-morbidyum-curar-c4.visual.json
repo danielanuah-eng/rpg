@@ -1,0 +1,62 @@
+{
+  "id": "prov-morbidyum-curar-c4",
+  "nome": "Morwen Terceira-Vida",
+  "tipo": "temporaria",
+  "valor": "morbidyum",
+  "referencia": "Arcanoclisma/online/public/arte/morwen-terceira-vida.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c4.prompt.txt",
+  "cena": "Morwen Terceira-Vida sits beside a quiet garden spring on a cloudy afternoon, supporting a closed small notebook against her knee and extending the other hand in a soft pale-green restorative smoke gesture. Preserve her identity, hair and distinctive clothing from reference. Thoughtful tired smile, sideways gaze toward a resting bird or traveler only if justified by the reference; otherwise magic over the water. Warm muted brick ledge, deep teal plants, tranquil restrained environment.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-morbidyum-curar-c4",
+    "nome": "Morwen Terceira-Vida",
+    "valores": [
+      "morbidyum"
+    ],
+    "tipo": "temporaria",
+    "custo": 4,
+    "grau": 3,
+    "velocidade": "findante",
+    "efeitos": [
+      {
+        "tipo": "curar",
+        "valor": 7,
+        "alvo": "escolhido"
+      },
+      {
+        "tipo": "comprar",
+        "valor": 1
+      }
+    ],
+    "texto": "Cure 7 de dano de um alvo e compre 1 carta."
+  },
+  "raridade": null,
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c4.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c4.visual.json",
+  "sha256": "e3c8ad5fc46bdb6d68a08024ed2fecb9331ea8449e72bb6c8f24e4dfaba921f1",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-6fdc35db-0f61-47af-8f8c-3a21744e3af2.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573884
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

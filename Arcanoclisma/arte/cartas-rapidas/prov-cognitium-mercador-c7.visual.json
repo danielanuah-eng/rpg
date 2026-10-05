@@ -1,0 +1,69 @@
+{
+  "id": "prov-cognitium-mercador-c7",
+  "nome": "Taverneira que Vende Segredos",
+  "tipo": "aliado",
+  "valor": "cognitium",
+  "referencia": "Arcanoclisma/online/public/arte/taverneira-que-vende-segredos.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mercador-c7.prompt.txt",
+  "cena": "Taverneira que Vende Segredos leans across her inn's polished wooden counter late at night, passing a small folded note beneath a plain earthenware cup with one hand; the other rests on the counter. Amused knowing expression, looking sideways at the off-frame recipient. Restrained indigo smoke near the note, warm amber lamp, dark teal shelves and one rainy window. No text visible on the note.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-cognitium-mercador-c7",
+    "nome": "Taverneira que Vende Segredos",
+    "valores": [
+      "cognitium"
+    ],
+    "tipo": "aliado",
+    "custo": 7,
+    "grau": 6,
+    "velocidade": "findante",
+    "ataque": 4,
+    "vida": 6,
+    "texto": "Etéreo. Protegido 2. Ao entrar: compre 1 carta. Ao causar dano de combate ao Conjurador inimigo: compre 1 carta.",
+    "palavrasChave": [
+      "Etéreo"
+    ],
+    "protegido": 2,
+    "aoEntrar": [
+      {
+        "tipo": "comprar",
+        "valor": 1
+      }
+    ],
+    "aoDanoConjurador": [
+      {
+        "tipo": "comprar",
+        "valor": 1
+      }
+    ]
+  },
+  "raridade": null,
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mercador-c7.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mercador-c7.visual.json",
+  "sha256": "ed3fda050ed38be6b1c2495e71efd1dca01a1ec8e9046c12ac0016cbe63537fb",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-8f226c05-c055-495a-a54f-bc02c3c2145d.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573463
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

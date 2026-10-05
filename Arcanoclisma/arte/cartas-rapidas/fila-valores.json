@@ -476,7 +476,14 @@
       },
       "raridade": null,
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-persona-aliado-c2-agressivo-proficiente.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-persona-aliado-c2-agressivo-proficiente.visual.json",
+      "sha256": "7b7bfcca2f81f47e94539988b162ea2a77c197726d4b02b39bb5d7347bcdd16e",
+      "dimensoes": [
+        1061,
+        1482
+      ]
     },
     {
       "id": "prov-cognitium-mercador-c7",
@@ -523,7 +530,14 @@
       },
       "raridade": null,
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mercador-c7.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mercador-c7.visual.json",
+      "sha256": "ed3fda050ed38be6b1c2495e71efd1dca01a1ec8e9046c12ac0016cbe63537fb",
+      "dimensoes": [
+        1061,
+        1483
+      ]
     },
     {
       "id": "prov-dominum-colosso-c7",
@@ -555,7 +569,14 @@
       },
       "raridade": null,
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-colosso-c7.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-colosso-c7.visual.json",
+      "sha256": "63edec8ad4b2c27bce3208a86c6aea8132b5837229dc38805ee968e97a0d9321",
+      "dimensoes": [
+        1062,
+        1482
+      ]
     },
     {
       "id": "prov-sublimeyn-dano-c2-repentina",
@@ -591,7 +612,14 @@
       },
       "raridade": null,
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c2-repentina.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c2-repentina.visual.json",
+      "sha256": "b3dba7692363b687df46b2dc81df5fa1b38e8944fee12b124e71e26eaf3dfce3",
+      "dimensoes": [
+        1061,
+        1482
+      ]
     },
     {
       "id": "prov-morbidyum-curar-c4",
@@ -631,7 +659,14 @@
       },
       "raridade": null,
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c4.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c4.visual.json",
+      "sha256": "e3c8ad5fc46bdb6d68a08024ed2fecb9331ea8449e72bb6c8f24e4dfaba921f1",
+      "dimensoes": [
+        1062,
+        1482
+      ]
     },
     {
       "id": "prov-conflituo-torre-c4",
@@ -672,7 +707,14 @@
       },
       "raridade": null,
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-torre-c4.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-torre-c4.visual.json",
+      "sha256": "e80da6626c513a6c48b63def2ed9da173b97003d11aa589d15bfea18522cf798",
+      "dimensoes": [
+        1062,
+        1482
+      ]
     },
     {
       "id": "prov-eternyr-remocao-grau-c3",
@@ -709,7 +751,14 @@
       },
       "raridade": null,
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-remocao-grau-c3.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-remocao-grau-c3.visual.json",
+      "sha256": "eadd321740d610d09b1b24e048469b639c4afe9a08193c91d9162cc9d7d6a1be",
+      "dimensoes": [
+        1062,
+        1482
+      ]
     },
     {
       "id": "prov-alvorum-bomba-c8",
@@ -750,7 +799,14 @@
       },
       "raridade": null,
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-bomba-c8.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-bomba-c8.visual.json",
+      "sha256": "5dc220e7183a1251c8b74ff5cc31d7532313d6be6ee83aef92078b644c2f7009",
+      "dimensoes": [
+        1061,
+        1482
+      ]
     },
     {
       "id": "prov-cognitium-comprar-c2-repentina",
@@ -758,9 +814,9 @@
       "tipo": "temporaria",
       "valor": "cognitium",
       "referencia": "Arcanoclisma/online/public/arte/contadora-de-mentes.webp",
-      "prompt": "Use case: stylized-concept. NEW full illustration for Arcanoclisma TCG, one vertical portrait in 63:88 aspect ratio, native high resolution, fully opaque scene to every edge. No text, no writing, no lettering, no logos, no borders, no card UI. Reference image is approved IDENTITY and graphic STYLE only: preserve unique face/species, body type, age, hair, distinctive attire/materials/gear; NEVER paste or repeat its cutout or pose. Create a new unified coherent scene. Simple efficient composition, one clear main subject, few props, readable silhouettes, subject large, face below top12%, bottom17% less busy for editable rules. Modern independent comics and contemporary animation, organic confident varied linework, flat color shapes, simple BLOCKED cel shadows, sparse halftone. Surroundings smooth and broad, minimal grit or painterly detail. Diffuse contained lighting, strong magic only locally, complementary warm/cool color areas, matte restrained gold. Not a photograph, not 3D, not a painting, not glossy generic anime, no HDR, no broad bloom, no empty or transparent backdrop. Humans have human anatomy, expressive faces and individual character; keep reference identity. Directed magic follows gaze and gesture axis, not a bent beam. VALUE color and magic: indigo fragmented smoke veil. Scene: Contadora de Mentes sits sideways on a stool in a quiet school reading room during an overcast morning, one elbow on a broad desk and two fingers lightly raised near her temple. Intent thoughtful gaze toward one small hovering indigo memory fragment above an open blank book. Warm oak desk, muted blue window light, two simple shelves; avoid a large swarm of props. Game identity/effect (context only, never write it): Contadora de Mentes; Compre 1 carta.. Rarity is unspecified, no rarity foil filter.",
+      "prompt": "Use case: stylized-concept. NEW full illustration for Arcanoclisma TCG, one vertical portrait in 63:88 aspect ratio, native high resolution, fully opaque scene to every edge. No text, no writing, no lettering, no logos, no borders, no card UI. Reference image is approved IDENTITY and graphic STYLE only: preserve unique face/species, body type, age, hair, distinctive attire/materials/gear; NEVER paste or repeat its cutout or pose. Create a new unified coherent scene. Simple efficient composition, one clear main subject, few props, readable silhouettes, subject large, face below top12%, bottom17% less busy for editable rules. Modern independent comics and contemporary animation, organic confident varied linework, flat color shapes, simple BLOCKED cel shadows, sparse halftone. Surroundings smooth and broad, minimal grit or painterly detail. Diffuse contained lighting, strong magic only locally, complementary warm/cool color areas, matte restrained gold. Not a photograph, not 3D, not a painting, not glossy generic anime, no HDR, no broad bloom, no empty or transparent backdrop. Humans have human anatomy, expressive faces and individual character; keep reference identity. Directed magic follows gaze and gesture axis, not a bent beam. VALUE color and magic: indigo fragmented smoke veil. Scene: Contadora de Mentes is the approved nonhuman four-armed indigo-and-ivory arcane creature from reference, with its long narrow muzzle, fin-like mane, curled tail, digitigrade legs and violet gems preserved. In a quiet school reading room on an overcast morning, it perches sideways at a broad desk, one lower forearm resting on the tabletop, the other lower hand holding open a blank book, and its two upper hands gently examining a single hovering indigo memory fragment. Its distinctive creature eyes look at the fragment. Preserve all four arms and creature anatomy; do not turn it into a human. Warm oak desk, muted blue window light, two simple shelves, uncluttered setting. Game identity/effect (context only, never write it): Contadora de Mentes; Compre 1 carta.. Rarity is unspecified, no rarity foil filter.",
       "promptArquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-comprar-c2-repentina.prompt.txt",
-      "cena": "Contadora de Mentes sits sideways on a stool in a quiet school reading room during an overcast morning, one elbow on a broad desk and two fingers lightly raised near her temple. Intent thoughtful gaze toward one small hovering indigo memory fragment above an open blank book. Warm oak desk, muted blue window light, two simple shelves; avoid a large swarm of props.",
+      "cena": "Contadora de Mentes is the approved nonhuman four-armed indigo-and-ivory arcane creature from reference, with its long narrow muzzle, fin-like mane, curled tail, digitigrade legs and violet gems preserved. In a quiet school reading room on an overcast morning, it perches sideways at a broad desk, one lower forearm resting on the tabletop, the other lower hand holding open a blank book, and its two upper hands gently examining a single hovering indigo memory fragment. Its distinctive creature eyes look at the fragment. Preserve all four arms and creature anatomy; do not turn it into a human. Warm oak desk, muted blue window light, two simple shelves, uncluttered setting.",
       "definicaoAtualClaude": {
         "subtipos": [],
         "arcanoGerado": 1,
@@ -785,7 +841,14 @@
       },
       "raridade": null,
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-comprar-c2-repentina.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-comprar-c2-repentina.visual.json",
+      "sha256": "7f488a4c2e333b6b2364062169b4d9f607a520681f312fe555d6c2b6123c32b7",
+      "dimensoes": [
+        1061,
+        1482
+      ]
     },
     {
       "id": "prov-dominum-ira-c4",
@@ -1428,17 +1491,8 @@
     }
   ],
   "estado": "em_producao",
-  "concluidas": 9,
+  "concluidas": 18,
   "pendentes": [
-    "prov-persona-aliado-c2-agressivo-proficiente",
-    "prov-cognitium-mercador-c7",
-    "prov-dominum-colosso-c7",
-    "prov-sublimeyn-dano-c2-repentina",
-    "prov-morbidyum-curar-c4",
-    "prov-conflituo-torre-c4",
-    "prov-eternyr-remocao-grau-c3",
-    "prov-alvorum-bomba-c8",
-    "prov-cognitium-comprar-c2-repentina",
     "prov-dominum-ira-c4",
     "prov-sublimeyn-dano-c1-repentina",
     "prov-morbidyum-enfermaria-c3",

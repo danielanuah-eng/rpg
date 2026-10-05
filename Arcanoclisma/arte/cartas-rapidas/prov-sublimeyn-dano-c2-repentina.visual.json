@@ -1,0 +1,58 @@
+{
+  "id": "prov-sublimeyn-dano-c2-repentina",
+  "nome": "Contrabandista de Mercúrio",
+  "tipo": "temporaria",
+  "valor": "sublimeyn",
+  "referencia": "Arcanoclisma/online/public/arte/contrabandista-de-mercurio.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c2-repentina.prompt.txt",
+  "cena": "Contrabandista de Mercúrio steps from behind a low harbor crate at sunset, torso tilted and one hand or reference apparatus firing one SMALL straight silver-blue arcane dart at a clearly placed distant target. Eyes, gesture and dart axis align. Preserve the reference body and distinctive gear. Broad wooden dock, calm teal water and two warm ochre sail shapes in the far distance; uncluttered low-detail port.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-sublimeyn-dano-c2-repentina",
+    "nome": "Contrabandista de Mercúrio",
+    "valores": [
+      "sublimeyn"
+    ],
+    "tipo": "temporaria",
+    "custo": 2,
+    "grau": 1,
+    "velocidade": "repentina",
+    "efeitos": [
+      {
+        "tipo": "dano",
+        "valor": 2,
+        "alvo": "escolhido"
+      }
+    ],
+    "texto": "Cause 2 de dano a um alvo."
+  },
+  "raridade": null,
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c2-repentina.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c2-repentina.visual.json",
+  "sha256": "b3dba7692363b687df46b2dc81df5fa1b38e8944fee12b124e71e26eaf3dfce3",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-39506ee1-4446-4a89-9d35-b0232bad70fa.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572402
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

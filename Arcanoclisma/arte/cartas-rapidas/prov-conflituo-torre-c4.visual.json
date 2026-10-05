@@ -1,0 +1,63 @@
+{
+  "id": "prov-conflituo-torre-c4",
+  "nome": "Cidade-Muralha",
+  "tipo": "estrutura",
+  "valor": "conflituo",
+  "referencia": "Arcanoclisma/online/public/arte/cidade-muralha.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-torre-c4.prompt.txt",
+  "cena": "Cidade-Muralha: a compact strong city fortification seen from a low oblique view at cloudy noon. Main fortified gateway and two broad clean towers occupy most of the composition; a small rust-red hard-light defensive dart launcher above the gate suggests the structure's ability. Warm ochre masonry and cool blue-gray sky, tiny guards for scale, no huge glowing city skyline, no overwhelming decorative detail.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-conflituo-torre-c4",
+    "nome": "Cidade-Muralha",
+    "valores": [
+      "conflituo"
+    ],
+    "tipo": "estrutura",
+    "custo": 4,
+    "grau": 3,
+    "velocidade": "findante",
+    "vida": 2,
+    "ativacao": {
+      "custo": 1,
+      "suspende": true,
+      "efeitos": [
+        {
+          "tipo": "dano",
+          "valor": 2,
+          "alvo": "escolhido"
+        }
+      ]
+    },
+    "texto": "Suspenda e pague 1: cause 2 de dano a um alvo."
+  },
+  "raridade": null,
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-torre-c4.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-torre-c4.visual.json",
+  "sha256": "e80da6626c513a6c48b63def2ed9da173b97003d11aa589d15bfea18522cf798",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-a855484d-d06a-45e3-a2b5-f0ada4638a58.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573884
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}
