@@ -15,6 +15,7 @@ import { criarMovimentosMesa } from './mesa-movimentos-codex.js';
 import { RITMO_VISUAL } from './ritmo-visual-v13.js';
 import { criarGanchosMesa } from './mesa-ganchos.js';
 import { palavrasChaveHTML } from './palavras-chave.js';
+import { iconeUI } from './icones.js';
 
 const ETAPAS = [['inicio', 'Início'], ['principal', 'Principal'], ['cataclisma', 'Cataclisma'], ['final', 'Final']];
 const CFG_PADRAO = { autoPassar: true, esperarPilha: false, pararFinalOponente: true, mostrarDicas: true };
@@ -554,7 +555,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     // zonas (04/10): o baralho é uma pilha de versos; cemitério, banimento e Arcano mostram a carta de cima
     const topoArte = (lista) => { const id = lista[lista.length - 1]; const d = id && inst(id) && inst(id).defId !== 'oculta' ? modeloCarta(inst(id).defId) : null; return d?.arte ? `style="--topo:url('${d.arte}')"` : ''; };
     const zona = (k, lista, rot, icone, titulo) => `<button class="zona-pilha zp-${k} ${lista.length ? '' : 'vazia'} ${meu && lista.some((id) => origemDaCarta(e, EU, id)) ? 'tem-jogavel' : ''}" data-zona="${k}" data-j="${j}" title="${titulo}: ${lista.length}">
-        <span class="zp-carta" ${k === 'baralho' ? '' : topoArte(lista)}>${lista.length || k === 'baralho' ? '' : icone}</span><b>${lista.length}</b><small>${rot}</small></button>`;
+        <span class="zp-carta" ${k === 'baralho' ? '' : topoArte(lista)}>${lista.length || k === 'baralho' ? '' : (iconeUI('zona-' + (k === 'zonaArcano' ? 'arcano' : k)) || icone)}</span><b>${lista.length}</b><small>${rot}</small></button>`;
     const pilhas = `<div class="pilhas-zona">
       ${zona('baralho', m.baralho, 'Baralho', '🂠', 'Baralho')}
       <div class="zp-linha">${zona('cemiterio', m.cemiterio, 'Cemitério', '☠', 'Cemitério')}${zona('banimento', m.banimento, 'Banidas', '⊘', 'Banimento')}${m.zonaArcano.length ? zona('zonaArcano', m.zonaArcano, 'Arcano', '✧', 'Enviadas ao Arcano (vão para o fundo do baralho no Final)') : ''}</div>
@@ -577,7 +578,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     const meu = e.ativo === EU;
     return `<div class="fase">
       <div class="fase-topo"><span class="fase-turno">Turno ${e.turno || '–'}</span><span class="fase-vez ${meu ? 'minha' : ''}">${e.etapa === 'preparacao' ? 'Preparação' : meu ? 'Seu turno' : `Turno de ${esc(nome(e.ativo))}`}</span>${fonte.prazo?.() ? `<span class="fase-prazo" data-prazo="${fonte.prazo()}"></span>` : ''}</div>
-      <div class="fase-etapas">${ETAPAS.map(([k, r]) => `<span class="${e.etapa === k ? 'atual' : ''}">${r}</span>`).join('')}</div>
+      <div class="fase-etapas">${ETAPAS.map(([k, r]) => `<span class="${e.etapa === k ? 'atual' : ''}">${iconeUI('etapa-' + k)}${r}</span>`).join('')}</div>
     </div>`;
   }
   /** A carta que gerou um efeito na pilha (pelo nome guardado no gatilho). */

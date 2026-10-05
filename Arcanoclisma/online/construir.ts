@@ -150,7 +150,7 @@ async function reduzir(origem: string, destino: string, largura: number): Promis
 const PASTA_FINAIS = raizArcano + 'arte/cartas-site/';
 const MAPA_FINAIS = raizArcano + 'cartas/entregas/lote-site-v1.visual.json';
 /** Outras entregas de artes finais no mesmo formato (cartas provisórias, 05/10). */
-const MAPAS_EXTRAS = [raizArcano + 'cartas/entregas/cartas-provisorias-v1.visual.json'];
+const MAPAS_EXTRAS = ['cartas-provisorias-v1', 'artes-rapidas-jogo', 'artes-rapidas-valores'].map((n) => raizArcano + 'cartas/entregas/' + n + '.visual.json');
 const origemFinal = new Map<string, string>();
 function artesFinaisAprovadas(cat: Catalogo): Record<string, string> {
   const itens = [MAPA_FINAIS, ...MAPAS_EXTRAS].filter((m) => existsSync(m)).flatMap((m) => (JSON.parse(readFileSync(m, 'utf8')).cartas ?? []) as { id: string; arquivo?: string; estado?: string; okGpt?: boolean }[]);

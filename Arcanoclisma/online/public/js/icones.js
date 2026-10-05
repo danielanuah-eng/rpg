@@ -80,3 +80,11 @@ export function iconizarHtml(html) {
   return String(html ?? '').split(/(<[^>]*>)/).map((p) => (p.startsWith('<') ? p : marcar(p, (t) => t))).join('');
 }
 export const temIcones = () => prontos.size > 0;
+
+/** Ícones de interface (kit/interface-v20: etapas, zonas, slots, status, categorias). Só os com okGpt; vazio se faltar. */
+const manifestoUI = await fetch('/kit/interface-v20/icones/manifesto.json').then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
+export function iconeUI(id, titulo) {
+  const m = manifestoUI[id];
+  if (!m || m.okGpt !== true || !m.arquivo) return '';
+  return `<img class="icone-ui" src="${esc(m.arquivo)}" alt="" title="${esc(titulo ?? m.nome ?? id)}" aria-hidden="true">`;
+}

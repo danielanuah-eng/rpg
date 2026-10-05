@@ -1,0 +1,12 @@
+{
+  "entrega": "iconografia-v19-ajuste-protegido + icones interface-v20 + artes-rapidas-jogo/valores",
+  "data": "2026-10-05",
+  "ligadoETestado": {
+    "artes": "construir.ts: MAPAS_EXTRAS agora inclui artes-rapidas-jogo e artes-rapidas-valores (mesmo formato, estado aprovado_pelo_autor, so cartas existentes no catalogo). Build: 256 artes finais aprovadas.",
+    "iconesInterface": "icones.js exporta iconeUI(id) lendo kit/interface-v20/icones/manifesto.json (so okGpt). Ligados: 4 etapas (etapa-*) na barra de fases e 4 zonas (zona-baralho nao usado; cemiterio, banimento, arcano) no placeholder de pilha vazia em mesa.js; estilo em css/mesa-ajuste.css (.icone-ui).",
+    "protegido": "ajuste do iconografia-v19.js (Protegido sem numero) ja carregado por mesa-legibilidade-v15.js; nada a ligar."
+  },
+  "planejadoSemLigar": "slot-canal/armadura/extra, status-*, categoria-*, zona-mao-oponente: sem tela correspondente definida; iconeUI ja os serve quando houver gatilho.",
+  "naoConferidoNaTela": "aparencia dos icones nas etapas/pilhas, tamanho e alinhamento; Protegido sem numero na carta; as artes novas nas cartas provisorias.",
+  "testes": "online npm test 14/14; tcg npm test 197/197; online-local.mjs sem erros (erros: 0)."
+}
