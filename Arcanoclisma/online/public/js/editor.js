@@ -142,7 +142,8 @@ export async function telaEditor(tela, partes, ctx) {
     window.addEventListener('beforeunload', (ev) => { if (globalThis.editorPendente?.()) { ev.preventDefault(); ev.returnValue = ''; } });
   }
   ctx.definirSaida?.(() => new Promise((ok) => {
-    clearTimeout(espera); if (sel) lerForm();
+    // um erro ao ler o formulário nunca pode prender o autor no Editor
+    clearTimeout(espera); try { if (sel) lerForm(); } catch (err) { console.error('editor: lerForm', err); }
     const n = pendentes();
     if (!n) return ok(true);
     const j = janela(`<h3>Edição não salva</h3><p>Você tem <b>${n}</b> mudança(s) não salva(s). Os outros jogadores só veem depois de salvar.</p>
@@ -348,7 +349,7 @@ export async function telaEditor(tela, partes, ctx) {
     if (textoAuto !== null && novo[campoTxt] === textoAuto) novo[campoTxt] = base[campoTxt];
     if (!conjur && !novo.palavrasChave.length) novo.palavrasChave = undefined;
     for (const el of $$('[data-num]', form)) novo[el.dataset.num] = el.value === '' ? undefined : Math.trunc(Number(el.value));
-    novo.valores = $('[data-valor]', form).filter((x) => x.checked).map((x) => x.dataset.valor);
+    novo.valores = $$('[data-valor]', form).filter((x) => x.checked).map((x) => x.dataset.valor);
     if (!conjur && $('[data-quem-usa]', form)) $('[data-quem-usa]', form).textContent = quemUsa({ ...base, ...novo, tipo: base.tipo });
     const erroJson = $('[data-json-erro]', form);
     try {
