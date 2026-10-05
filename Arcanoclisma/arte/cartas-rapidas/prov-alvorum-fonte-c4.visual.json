@@ -1,0 +1,63 @@
+{
+  "id": "prov-alvorum-fonte-c4",
+  "nome": "AlvoMarfim",
+  "tipo": "estrutura",
+  "valor": "alvorum",
+  "referencia": "Arcanoclisma/online/public/arte/alvomarfim.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-fonte-c4.prompt.txt",
+  "cena": "AlvoMarfim: preserve the reference's main structure or place, reinterpret as a new calm oblique environmental view at late afternoon. Focus on the ivory-colored central structure or basin, a small contained matte-gold / violet-black arcane source, smooth supports and coherent surrounding ground. A simple shaded courtyard or grove according to the reference, muted warm ivory balanced with deep teal shadows, few details and no brilliant golden sky.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-alvorum-fonte-c4",
+    "nome": "AlvoMarfim",
+    "valores": [
+      "alvorum"
+    ],
+    "tipo": "estrutura",
+    "custo": 4,
+    "grau": 3,
+    "velocidade": "findante",
+    "vida": 1,
+    "ativacao": {
+      "custo": 0,
+      "suspende": true,
+      "efeitos": [
+        {
+          "tipo": "arcano",
+          "valor": 2
+        }
+      ]
+    },
+    "texto": "Conta como 1 carta no Grau. Suspenda: ganhe 2 de Arcano.",
+    "grauExtra": 1
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-fonte-c4.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-fonte-c4.visual.json",
+  "sha256": "6497110892aba7fc3910d2b13f1fea31096074f6c9929a13a5182b8579360293",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-85979109-74a8-4269-a5f3-b3b6d61ced31.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572402
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

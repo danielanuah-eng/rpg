@@ -1,0 +1,53 @@
+{
+  "id": "prov-primitivum-aliado-c4-defensivo",
+  "nome": "Urso-Raiz",
+  "tipo": "aliado",
+  "valor": "primitivum",
+  "referencia": "Arcanoclisma/online/public/arte/urso-raiz.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c4-defensivo.prompt.txt",
+  "cena": "Urso-Raiz from the approved reference plants its heavy forepaws across a narrow forest trail in a protective stance, head turned slightly toward a noise beyond the viewer. Preserve its exact creature anatomy, bark-and-fur materials and moss identity. Overcast midday, smooth broad tree trunks, soft green shade, a small stream and warm earth; a few restrained amber root motes, no oversized aura.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-primitivum-aliado-c4-defensivo",
+    "nome": "Urso-Raiz",
+    "valores": [
+      "primitivum"
+    ],
+    "tipo": "aliado",
+    "custo": 4,
+    "grau": 3,
+    "velocidade": "findante",
+    "ataque": 3,
+    "vida": 8,
+    "texto": ""
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c4-defensivo.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c4-defensivo.visual.json",
+  "sha256": "161cccb62211773a55e9e97ddcc77b3a88b4bb14dcd5b99147fc8ac5447014f9",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-0901559c-d6b1-4100-b72c-ef876d193f91.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573463
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

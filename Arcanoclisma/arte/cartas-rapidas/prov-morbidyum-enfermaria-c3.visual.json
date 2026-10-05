@@ -1,0 +1,63 @@
+{
+  "id": "prov-morbidyum-enfermaria-c3",
+  "nome": "Sacerdote da Porta",
+  "tipo": "estrutura",
+  "valor": "morbidyum",
+  "referencia": "Arcanoclisma/online/public/arte/sacerdote-da-porta.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-enfermaria-c3.prompt.txt",
+  "cena": "Sacerdote da Porta and his small roadside healing sanctuary: the scene is an architectural composition centered on the sanctuary's open doorway, a clean stone threshold and one bench, with the reference priest visible by the door, scale subordinate to the structure. Late afternoon, warm weathered plaster balanced with a restrained pale-green healing smoke from a small basin. No text, no mass of gravestones, no ornate cathedral.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-morbidyum-enfermaria-c3",
+    "nome": "Sacerdote da Porta",
+    "valores": [
+      "morbidyum"
+    ],
+    "tipo": "estrutura",
+    "custo": 3,
+    "grau": 2,
+    "velocidade": "findante",
+    "vida": 2,
+    "ativacao": {
+      "custo": 0,
+      "suspende": true,
+      "efeitos": [
+        {
+          "tipo": "curar",
+          "valor": 3,
+          "alvo": "escolhidoAliado"
+        }
+      ]
+    },
+    "texto": "Suspenda: cure 3 de dano de um Aliado ou Mística."
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-enfermaria-c3.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-enfermaria-c3.visual.json",
+  "sha256": "7fd395cc2f85248f56e44626fc1fe13263d821e9fa93d9e73c9b9735d2ee82f0",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-734b787d-8bf7-4d04-acda-c21f31cf6db4.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573463
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

@@ -1,0 +1,57 @@
+{
+  "id": "prov-cognitium-anular-c3-repentina",
+  "nome": "Carcereira de Palavras",
+  "tipo": "temporaria",
+  "valor": "cognitium",
+  "referencia": "Arcanoclisma/online/public/arte/carcereira-de-palavras.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-anular-c3-repentina.prompt.txt",
+  "cena": "Carcereira de Palavras stands firmly in a small archive doorway, body turned diagonally, one outstretched hand closing a compact translucent indigo lattice around a drifting magical scroll. Gaze and fingers aimed at the scroll, focused severe expression. No letters on the scroll. The captured spell loses its light gently. Broad stone wall, warm evening lamp and simple wooden shelves, NOT a gothic cathedral.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-cognitium-anular-c3-repentina",
+    "nome": "Carcereira de Palavras",
+    "valores": [
+      "cognitium"
+    ],
+    "tipo": "temporaria",
+    "custo": 3,
+    "grau": 2,
+    "velocidade": "repentina",
+    "efeitos": [
+      {
+        "tipo": "anular",
+        "alvo": "pilha"
+      }
+    ],
+    "texto": "Anule uma carta na pilha."
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-anular-c3-repentina.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-anular-c3-repentina.visual.json",
+  "sha256": "44f1bb84228f264b3ef9a6e89da8fd068008a3ed8a2d0f698ba90991ed334695",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-8d3bbd8f-feea-4bb2-9864-cf893a1acafd.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573884
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

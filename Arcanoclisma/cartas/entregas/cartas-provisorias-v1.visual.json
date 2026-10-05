@@ -1,0 +1,433 @@
+{
+  "tarefaId": "cartas-provisorias-v1",
+  "versao": 2,
+  "estado": "em_producao",
+  "meta": 46,
+  "concluidas": 30,
+  "escopo": "Todas as cartas do briefing atual, com as três cenas iniciais preservadas.",
+  "ordem": [
+    "prov-sublimeyn-etereo-c2",
+    "prov-sublimeyn-etereo-c3",
+    "prov-alvorum-anjo-c6",
+    "prov-persona-espiao-c4",
+    "prov-cognitium-espiao-c4",
+    "prov-primitivum-aliado-c2-defensivo",
+    "prov-dominum-cerco-c3",
+    "prov-sublimeyn-devolver-c2-repentina",
+    "prov-morbidyum-curar-c2",
+    "prov-conflituo-dano-c2-repentina",
+    "prov-eternyr-varredura-c3",
+    "prov-alvorum-varredura-c3",
+    "prov-persona-aliado-c2-agressivo-proficiente",
+    "prov-cognitium-mercador-c7",
+    "prov-dominum-colosso-c7",
+    "prov-sublimeyn-dano-c2-repentina",
+    "prov-morbidyum-curar-c4",
+    "prov-conflituo-torre-c4",
+    "prov-eternyr-remocao-grau-c3",
+    "prov-alvorum-bomba-c8",
+    "prov-cognitium-comprar-c2-repentina",
+    "prov-primitivum-curar-c2",
+    "prov-dominum-ira-c4",
+    "prov-sublimeyn-dano-c1-repentina",
+    "prov-morbidyum-enfermaria-c3",
+    "prov-primitivum-aliado-c4-defensivo",
+    "prov-conflituo-piromante-c4",
+    "prov-eternyr-destruir-c4-repentina",
+    "prov-alvorum-fonte-c4",
+    "prov-cognitium-anular-c3-repentina",
+    "prov-dominum-destruir-c3",
+    "prov-sublimeyn-comprar-c2-repentina",
+    "prov-morbidyum-dano-c3",
+    "prov-conflituo-fera-c5",
+    "prov-eternyr-devolver-c2-repentina",
+    "prov-alvorum-comprar-c3",
+    "prov-cognitium-aliado-c4-defensivo",
+    "prov-dominum-aliado-c4-defensivo",
+    "prov-morbidyum-aliado-c6-descarta-grau",
+    "prov-conflituo-aliado-c2-agressivo",
+    "prov-morbidyum-comprar-c3",
+    "prov-morbidyum-mistica-c2",
+    "prov-morbidyum-mistica-c4",
+    "prov-cognitium-mistica-c2",
+    "prov-eternyr-mistica-c2",
+    "prov-dominum-mistica-c2"
+  ],
+  "ficamDeFora": [],
+  "referenciasAlteradas": [],
+  "cartas": [
+    {
+      "id": "prov-sublimeyn-etereo-c2",
+      "nome": "Garça-de-Neblina",
+      "referencia": "Arcanoclisma/online/public/arte/garca-de-neblina.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-etereo-c2.cena-v1.png",
+      "registro": null,
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-sublimeyn-etereo-c3",
+      "nome": "Grifo-de-Vidro",
+      "referencia": "Arcanoclisma/online/public/arte/grifo-de-vidro.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-etereo-c3.cena-v1.png",
+      "registro": null,
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-alvorum-anjo-c6",
+      "nome": "Cervo Branco",
+      "referencia": "Arcanoclisma/online/public/arte/cervo-branco.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-anjo-c6.cena-v1.png",
+      "registro": null,
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-persona-espiao-c4",
+      "nome": "Encantadora de Salão",
+      "referencia": "Arcanoclisma/online/public/arte/encantadora-de-salao.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-persona-espiao-c4.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-persona-espiao-c4.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-cognitium-espiao-c4",
+      "nome": "Espião da Coroa",
+      "referencia": "Arcanoclisma/online/public/arte/espiao-da-coroa.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-espiao-c4.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-espiao-c4.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-primitivum-aliado-c2-defensivo",
+      "nome": "Mula Teimosa",
+      "referencia": "Arcanoclisma/online/public/arte/mula-teimosa.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c2-defensivo.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c2-defensivo.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-dominum-cerco-c3",
+      "nome": "Arena de Kairvahnn",
+      "referencia": "Arcanoclisma/online/public/arte/arena-de-kairvahnn.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-cerco-c3.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-cerco-c3.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-sublimeyn-devolver-c2-repentina",
+      "nome": "Menina de Pele de Mercúrio",
+      "referencia": "Arcanoclisma/online/public/arte/menina-de-pele-de-mercurio.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-devolver-c2-repentina.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-devolver-c2-repentina.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-morbidyum-curar-c2",
+      "nome": "Curandeira de Beira de Estrada",
+      "referencia": "Arcanoclisma/online/public/arte/curandeira-de-beira-de-estrada.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c2.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c2.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-conflituo-dano-c2-repentina",
+      "nome": "Assassina Paga",
+      "referencia": "Arcanoclisma/online/public/arte/assassina-paga.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-dano-c2-repentina.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-dano-c2-repentina.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-eternyr-varredura-c3",
+      "nome": "Estação Parada",
+      "referencia": "Arcanoclisma/online/public/arte/estacao-parada.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-varredura-c3.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-varredura-c3.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-alvorum-varredura-c3",
+      "nome": "Olhos-de-Farol",
+      "referencia": "Arcanoclisma/online/public/arte/olhos-de-farol.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-varredura-c3.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-varredura-c3.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-persona-aliado-c2-agressivo-proficiente",
+      "nome": "Trapaceiro de Feira",
+      "referencia": "Arcanoclisma/online/public/arte/trapaceiro-de-feira.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-persona-aliado-c2-agressivo-proficiente.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-persona-aliado-c2-agressivo-proficiente.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-cognitium-mercador-c7",
+      "nome": "Taverneira que Vende Segredos",
+      "referencia": "Arcanoclisma/online/public/arte/taverneira-que-vende-segredos.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mercador-c7.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mercador-c7.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-dominum-colosso-c7",
+      "nome": "Autômato do Postulário",
+      "referencia": "Arcanoclisma/online/public/arte/automato-do-postulario.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-colosso-c7.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-colosso-c7.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-sublimeyn-dano-c2-repentina",
+      "nome": "Contrabandista de Mercúrio",
+      "referencia": "Arcanoclisma/online/public/arte/contrabandista-de-mercurio.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c2-repentina.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c2-repentina.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-morbidyum-curar-c4",
+      "nome": "Morwen Terceira-Vida",
+      "referencia": "Arcanoclisma/online/public/arte/morwen-terceira-vida.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c4.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c4.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-conflituo-torre-c4",
+      "nome": "Cidade-Muralha",
+      "referencia": "Arcanoclisma/online/public/arte/cidade-muralha.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-torre-c4.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-torre-c4.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-eternyr-remocao-grau-c3",
+      "nome": "Guardião do Ciclo",
+      "referencia": "Arcanoclisma/online/public/arte/guardiao-do-ciclo.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-remocao-grau-c3.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-remocao-grau-c3.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-alvorum-bomba-c8",
+      "nome": "Juiz-Feiticeiro",
+      "referencia": "Arcanoclisma/online/public/arte/juiz-feiticeiro.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-bomba-c8.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-bomba-c8.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-cognitium-comprar-c2-repentina",
+      "nome": "Contadora de Mentes",
+      "referencia": "Arcanoclisma/online/public/arte/contadora-de-mentes.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-comprar-c2-repentina.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-comprar-c2-repentina.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-primitivum-curar-c2",
+      "nome": "Invocadora de Espíritos",
+      "referencia": "Arcanoclisma/online/public/arte/invocadora-de-espiritos.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-curar-c2.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-curar-c2.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-dominum-ira-c4",
+      "nome": "Juíza da Cidade",
+      "referencia": "Arcanoclisma/online/public/arte/juiza-da-cidade.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-ira-c4.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-ira-c4.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-sublimeyn-dano-c1-repentina",
+      "nome": "Polvo do Porto de Vidro",
+      "referencia": "Arcanoclisma/online/public/arte/polvo-do-porto-de-vidro.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c1-repentina.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c1-repentina.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-morbidyum-enfermaria-c3",
+      "nome": "Sacerdote da Porta",
+      "referencia": "Arcanoclisma/online/public/arte/sacerdote-da-porta.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-enfermaria-c3.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-enfermaria-c3.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-primitivum-aliado-c4-defensivo",
+      "nome": "Urso-Raiz",
+      "referencia": "Arcanoclisma/online/public/arte/urso-raiz.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c4-defensivo.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c4-defensivo.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-conflituo-piromante-c4",
+      "nome": "Arruaceiro de Taverna",
+      "referencia": "Arcanoclisma/online/public/arte/arruaceiro-de-taverna.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-piromante-c4.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-piromante-c4.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-eternyr-destruir-c4-repentina",
+      "nome": "O Eco que Come o Som",
+      "referencia": "Arcanoclisma/online/public/arte/eco-sobras.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-destruir-c4-repentina.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-destruir-c4-repentina.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-alvorum-fonte-c4",
+      "nome": "AlvoMarfim",
+      "referencia": "Arcanoclisma/online/public/arte/alvomarfim.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-fonte-c4.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-fonte-c4.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-cognitium-anular-c3-repentina",
+      "nome": "Carcereira de Palavras",
+      "referencia": "Arcanoclisma/online/public/arte/carcereira-de-palavras.webp",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-anular-c3-repentina.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-anular-c3-repentina.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-dominum-destruir-c3",
+      "nome": "Carrasco da Cidade-Muralha",
+      "referencia": "Arcanoclisma/online/public/arte/carrasco-da-cidade-muralha.webp",
+      "arquivo": null,
+      "registro": null,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-sublimeyn-comprar-c2-repentina",
+      "nome": "Mercador de Sal",
+      "referencia": "Arcanoclisma/online/public/arte/mercador-de-sal.webp",
+      "arquivo": null,
+      "registro": null,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-morbidyum-dano-c3",
+      "nome": "Abutre da Ferida",
+      "referencia": "Arcanoclisma/online/public/arte/abutre-da-ferida.webp",
+      "arquivo": null,
+      "registro": null,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-conflituo-fera-c5",
+      "nome": "Cavalo de Guerra",
+      "referencia": "Arcanoclisma/online/public/arte/cavalo-de-guerra.webp",
+      "arquivo": null,
+      "registro": null,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-eternyr-devolver-c2-repentina",
+      "nome": "Mensageira do Portal",
+      "referencia": "Arcanoclisma/online/public/arte/mensageira-do-portal.webp",
+      "arquivo": null,
+      "registro": null,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-alvorum-comprar-c3",
+      "nome": "Coruja-Sábia",
+      "referencia": "Arcanoclisma/online/public/arte/coruja-sabia.webp",
+      "arquivo": null,
+      "registro": null,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-cognitium-aliado-c4-defensivo",
+      "nome": "Inspetor de Escola",
+      "referencia": "Arcanoclisma/online/public/arte/inspetor-de-escola.webp",
+      "arquivo": null,
+      "registro": null,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-dominum-aliado-c4-defensivo",
+      "nome": "Guarda da Cidade-Muralha",
+      "referencia": "Arcanoclisma/online/public/arte/guarda-da-cidade-muralha.webp",
+      "arquivo": null,
+      "registro": null,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-morbidyum-aliado-c6-descarta-grau",
+      "nome": "A Coisa Que Sobrou",
+      "referencia": "Arcanoclisma/online/public/arte/a-coisa-que-sobrou.webp",
+      "arquivo": null,
+      "registro": null,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-conflituo-aliado-c2-agressivo",
+      "nome": "Mercenário de Serath",
+      "referencia": "Arcanoclisma/online/public/arte/mercenario-de-serath.webp",
+      "arquivo": null,
+      "registro": null,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-morbidyum-comprar-c3",
+      "nome": "Velho de Ossos Claros",
+      "referencia": "Arcanoclisma/online/public/arte/velho-de-ossos-claros.webp",
+      "arquivo": null,
+      "registro": null,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-morbidyum-mistica-c2",
+      "nome": "Porteira da Antessala",
+      "referencia": "Arcanoclisma/online/public/arte/porteira-da-antessala.webp",
+      "arquivo": null,
+      "registro": null,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-morbidyum-mistica-c4",
+      "nome": "Fantasma em Fila",
+      "referencia": "Arcanoclisma/online/public/arte/fantasma-em-fila.webp",
+      "arquivo": null,
+      "registro": null,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-cognitium-mistica-c2",
+      "nome": "Escriba do Porto",
+      "referencia": "Arcanoclisma/online/public/arte/escriba-do-porto.webp",
+      "arquivo": null,
+      "registro": null,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-eternyr-mistica-c2",
+      "nome": "Velho Relojoeiro da Vila do Mesmo Dia",
+      "referencia": "Arcanoclisma/online/public/arte/velho-relojoeiro-da-vila-do-mesmo-dia.webp",
+      "arquivo": null,
+      "registro": null,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-dominum-mistica-c2",
+      "nome": "Nostrum",
+      "referencia": "Arcanoclisma/online/public/arte/nostrum.webp",
+      "arquivo": null,
+      "registro": null,
+      "estado": "pendente"
+    }
+  ],
+  "aprovacaoDoAutor": "aguardando_avaliacao_visual",
+  "publicacaoSiteAutorizada": false,
+  "efeitos": "Produzir após concluir as cenas; não estão incluídos nestes PNGs.",
+  "raridade": "Somente estética; seguir o briefing.",
+  "integracaoClaudeConfirmada": false
+}

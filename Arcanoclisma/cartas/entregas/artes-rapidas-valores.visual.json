@@ -3,16 +3,9 @@
   "versao": 1,
   "data": "2026-10-04",
   "estado": "em_producao",
-  "meta": 36,
-  "concluidas": 18,
+  "meta": 43,
+  "concluidas": 27,
   "pendentes": [
-    "prov-dominum-ira-c4",
-    "prov-sublimeyn-dano-c1-repentina",
-    "prov-morbidyum-enfermaria-c3",
-    "prov-conflituo-piromante-c4",
-    "prov-eternyr-destruir-c4-repentina",
-    "prov-alvorum-fonte-c4",
-    "prov-cognitium-anular-c3-repentina",
     "prov-dominum-destruir-c3",
     "prov-sublimeyn-comprar-c2-repentina",
     "prov-morbidyum-dano-c3",
@@ -23,9 +16,14 @@
     "prov-dominum-aliado-c4-defensivo",
     "prov-morbidyum-aliado-c6-descarta-grau",
     "prov-conflituo-aliado-c2-agressivo",
-    "prov-morbidyum-comprar-c3"
+    "prov-morbidyum-comprar-c3",
+    "prov-morbidyum-mistica-c2",
+    "prov-morbidyum-mistica-c4",
+    "prov-cognitium-mistica-c2",
+    "prov-eternyr-mistica-c2",
+    "prov-dominum-mistica-c2"
   ],
-  "criterio": "Somente cartas provisórias existentes sem cena própria. Rodadas entre os Valores, priorizando os menos representados no catálogo; não inventa mecânicas.",
+  "criterio": "Cenas próprias das cartas provisórias solicitadas pelo Claude; preservar as três entregas iniciais e priorizar Valores menos representados, incluindo Primitivum e Místicas. Nenhuma mecânica nova.",
   "porValor": [
     {
       "valor": "persona",
@@ -34,28 +32,23 @@
     },
     {
       "valor": "cognitium",
-      "cartasNoCatalogo": 26,
-      "artesPendentesDesteLote": 5
-    },
-    {
-      "valor": "primitivum",
       "cartasNoCatalogo": 27,
-      "artesPendentesDesteLote": 1
+      "artesPendentesDesteLote": 6
     },
     {
       "valor": "dominum",
-      "cartasNoCatalogo": 28,
-      "artesPendentesDesteLote": 5
+      "cartasNoCatalogo": 29,
+      "artesPendentesDesteLote": 6
+    },
+    {
+      "valor": "primitivum",
+      "cartasNoCatalogo": 29,
+      "artesPendentesDesteLote": 3
     },
     {
       "valor": "sublimeyn",
       "cartasNoCatalogo": 29,
       "artesPendentesDesteLote": 4
-    },
-    {
-      "valor": "morbidyum",
-      "cartasNoCatalogo": 30,
-      "artesPendentesDesteLote": 6
     },
     {
       "valor": "conflituo",
@@ -64,8 +57,13 @@
     },
     {
       "valor": "eternyr",
-      "cartasNoCatalogo": 31,
-      "artesPendentesDesteLote": 4
+      "cartasNoCatalogo": 32,
+      "artesPendentesDesteLote": 5
+    },
+    {
+      "valor": "morbidyum",
+      "cartasNoCatalogo": 32,
+      "artesPendentesDesteLote": 8
     },
     {
       "valor": "alvorum",
@@ -340,6 +338,141 @@
       "sha256": "7f488a4c2e333b6b2364062169b4d9f607a520681f312fe555d6c2b6123c32b7",
       "dimensoes": [
         1061,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-primitivum-curar-c2",
+      "nome": "Invocadora de Espíritos",
+      "valor": "primitivum",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-curar-c2.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-curar-c2.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-curar-c2.visual.json",
+      "arteModo": "cena",
+      "sha256": "f33bc562e4652c31bd8ea84878206ec5df9e65ae89b3655c1feaefa633dc2896",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-dominum-ira-c4",
+      "nome": "Juíza da Cidade",
+      "valor": "dominum",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-ira-c4.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-ira-c4.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-ira-c4.visual.json",
+      "arteModo": "cena",
+      "sha256": "94d5185be8437942b3d5a52f5e7704e8142a45be746654577570fa94825db3d1",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-sublimeyn-dano-c1-repentina",
+      "nome": "Polvo do Porto de Vidro",
+      "valor": "sublimeyn",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c1-repentina.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c1-repentina.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c1-repentina.visual.json",
+      "arteModo": "cena",
+      "sha256": "21941674874e93f5da0ecd6bfca00f376f3adb8aee9068526716d4ab1aafd417",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-morbidyum-enfermaria-c3",
+      "nome": "Sacerdote da Porta",
+      "valor": "morbidyum",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-enfermaria-c3.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-enfermaria-c3.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-enfermaria-c3.visual.json",
+      "arteModo": "cena",
+      "sha256": "7fd395cc2f85248f56e44626fc1fe13263d821e9fa93d9e73c9b9735d2ee82f0",
+      "dimensoes": [
+        1061,
+        1483
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-primitivum-aliado-c4-defensivo",
+      "nome": "Urso-Raiz",
+      "valor": "primitivum",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c4-defensivo.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c4-defensivo.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c4-defensivo.visual.json",
+      "arteModo": "cena",
+      "sha256": "161cccb62211773a55e9e97ddcc77b3a88b4bb14dcd5b99147fc8ac5447014f9",
+      "dimensoes": [
+        1061,
+        1483
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-conflituo-piromante-c4",
+      "nome": "Arruaceiro de Taverna",
+      "valor": "conflituo",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-piromante-c4.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-piromante-c4.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-piromante-c4.visual.json",
+      "arteModo": "cena",
+      "sha256": "ea9d88d186224d8453ee14b96d2477d206371fd4fbca3260aa68a27b1ff13f46",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-eternyr-destruir-c4-repentina",
+      "nome": "O Eco que Come o Som",
+      "valor": "eternyr",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-destruir-c4-repentina.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-destruir-c4-repentina.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-destruir-c4-repentina.visual.json",
+      "arteModo": "cena",
+      "sha256": "c1ef76693998b22ecf47c2a500a89c6ed6753c99d78c128e6ed08e4e19daef21",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-alvorum-fonte-c4",
+      "nome": "AlvoMarfim",
+      "valor": "alvorum",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-fonte-c4.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-fonte-c4.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-fonte-c4.visual.json",
+      "arteModo": "cena",
+      "sha256": "6497110892aba7fc3910d2b13f1fea31096074f6c9929a13a5182b8579360293",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-cognitium-anular-c3-repentina",
+      "nome": "Carcereira de Palavras",
+      "valor": "cognitium",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-anular-c3-repentina.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-anular-c3-repentina.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-anular-c3-repentina.visual.json",
+      "arteModo": "cena",
+      "sha256": "44f1bb84228f264b3ef9a6e89da8fd068008a3ed8a2d0f698ba90991ed334695",
+      "dimensoes": [
+        1062,
         1482
       ],
       "estado": "entregue_aguardando_avaliacao_do_autor"

@@ -1,15 +1,8 @@
 {
   "estado": "em_producao",
-  "meta": 36,
-  "concluidas": 18,
+  "meta": 43,
+  "concluidas": 27,
   "pendentes": [
-    "prov-dominum-ira-c4",
-    "prov-sublimeyn-dano-c1-repentina",
-    "prov-morbidyum-enfermaria-c3",
-    "prov-conflituo-piromante-c4",
-    "prov-eternyr-destruir-c4-repentina",
-    "prov-alvorum-fonte-c4",
-    "prov-cognitium-anular-c3-repentina",
     "prov-dominum-destruir-c3",
     "prov-sublimeyn-comprar-c2-repentina",
     "prov-morbidyum-dano-c3",
@@ -20,7 +13,12 @@
     "prov-dominum-aliado-c4-defensivo",
     "prov-morbidyum-aliado-c6-descarta-grau",
     "prov-conflituo-aliado-c2-agressivo",
-    "prov-morbidyum-comprar-c3"
+    "prov-morbidyum-comprar-c3",
+    "prov-morbidyum-mistica-c2",
+    "prov-morbidyum-mistica-c4",
+    "prov-cognitium-mistica-c2",
+    "prov-eternyr-mistica-c2",
+    "prov-dominum-mistica-c2"
   ],
   "ordem": "rodadas_por_valor_menos_representado",
   "integracaoClaudeConfirmada": false

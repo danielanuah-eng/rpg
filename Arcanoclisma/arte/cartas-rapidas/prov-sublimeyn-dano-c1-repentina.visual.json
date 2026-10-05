@@ -1,0 +1,58 @@
+{
+  "id": "prov-sublimeyn-dano-c1-repentina",
+  "nome": "Polvo do Porto de Vidro",
+  "tipo": "temporaria",
+  "valor": "sublimeyn",
+  "referencia": "Arcanoclisma/online/public/arte/polvo-do-porto-de-vidro.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c1-repentina.prompt.txt",
+  "cena": "Polvo do Porto de Vidro perches on a wet dock post near shallow water at midday, two tentacles gripping the post and one tentacle making a small sharp silver mist splash at a nearby empty training target. Keep reference form and colors; clear expressive eyes, playful determined look, no blood. Cool teal lagoon, broad wooden dock surfaces and one warm weathered sail in distance. Tentacles arranged clearly, simple readable action.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-sublimeyn-dano-c1-repentina",
+    "nome": "Polvo do Porto de Vidro",
+    "valores": [
+      "sublimeyn"
+    ],
+    "tipo": "temporaria",
+    "custo": 1,
+    "grau": 0,
+    "velocidade": "repentina",
+    "efeitos": [
+      {
+        "tipo": "dano",
+        "valor": 1,
+        "alvo": "escolhido"
+      }
+    ],
+    "texto": "Cause 1 de dano a um alvo."
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c1-repentina.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c1-repentina.visual.json",
+  "sha256": "21941674874e93f5da0ecd6bfca00f376f3adb8aee9068526716d4ab1aafd417",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-4db43e51-a5b2-4bf9-ac6a-55cea5ce58fd.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573884
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

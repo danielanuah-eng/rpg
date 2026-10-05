@@ -1,9 +1,9 @@
 {
   "tarefaId": "artes-rapidas-valores-2026-10-04",
-  "versao": 1,
+  "versao": 2,
   "data": "2026-10-04",
-  "meta": 36,
-  "criterio": "Somente cartas provisórias existentes sem cena própria. Rodadas entre os Valores, priorizando os menos representados no catálogo; não inventa mecânicas.",
+  "meta": 43,
+  "criterio": "Cenas próprias das cartas provisórias solicitadas pelo Claude; preservar as três entregas iniciais e priorizar Valores menos representados, incluindo Primitivum e Místicas. Nenhuma mecânica nova.",
   "porValor": [
     {
       "valor": "persona",
@@ -12,28 +12,23 @@
     },
     {
       "valor": "cognitium",
-      "cartasNoCatalogo": 26,
-      "artesPendentesDesteLote": 5
-    },
-    {
-      "valor": "primitivum",
       "cartasNoCatalogo": 27,
-      "artesPendentesDesteLote": 1
+      "artesPendentesDesteLote": 6
     },
     {
       "valor": "dominum",
-      "cartasNoCatalogo": 28,
-      "artesPendentesDesteLote": 5
+      "cartasNoCatalogo": 29,
+      "artesPendentesDesteLote": 6
+    },
+    {
+      "valor": "primitivum",
+      "cartasNoCatalogo": 29,
+      "artesPendentesDesteLote": 3
     },
     {
       "valor": "sublimeyn",
       "cartasNoCatalogo": 29,
       "artesPendentesDesteLote": 4
-    },
-    {
-      "valor": "morbidyum",
-      "cartasNoCatalogo": 30,
-      "artesPendentesDesteLote": 6
     },
     {
       "valor": "conflituo",
@@ -42,8 +37,13 @@
     },
     {
       "valor": "eternyr",
-      "cartasNoCatalogo": 31,
-      "artesPendentesDesteLote": 4
+      "cartasNoCatalogo": 32,
+      "artesPendentesDesteLote": 5
+    },
+    {
+      "valor": "morbidyum",
+      "cartasNoCatalogo": 32,
+      "artesPendentesDesteLote": 8
     },
     {
       "valor": "alvorum",
@@ -88,7 +88,7 @@
           }
         ]
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "entregue_aguardando_avaliacao_do_autor",
       "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-persona-espiao-c4.cena-v1.png",
@@ -135,7 +135,7 @@
           }
         ]
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "entregue_aguardando_avaliacao_do_autor",
       "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-espiao-c4.cena-v1.png",
@@ -173,7 +173,7 @@
         "vida": 5,
         "texto": ""
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "entregue_aguardando_avaliacao_do_autor",
       "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c2-defensivo.cena-v1.png",
@@ -221,7 +221,7 @@
         },
         "texto": "Suspenda: cause 1 de dano ao Conjurador inimigo."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "entregue_aguardando_avaliacao_do_autor",
       "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-cerco-c3.cena-v1.png",
@@ -263,7 +263,7 @@
         ],
         "texto": "Devolva um Aliado ou Mística à mão do dono."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "entregue_aguardando_avaliacao_do_autor",
       "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-devolver-c2-repentina.cena-v1.png",
@@ -306,7 +306,7 @@
         ],
         "texto": "Cure 6 de dano de um alvo."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "entregue_aguardando_avaliacao_do_autor",
       "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c2.cena-v1.png",
@@ -349,7 +349,7 @@
         ],
         "texto": "Cause 2 de dano a um alvo."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "entregue_aguardando_avaliacao_do_autor",
       "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-dano-c2-repentina.cena-v1.png",
@@ -391,7 +391,7 @@
         ],
         "texto": "Cause 2 de dano a cada Aliado do oponente."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "entregue_aguardando_avaliacao_do_autor",
       "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-varredura-c3.cena-v1.png",
@@ -433,7 +433,7 @@
         ],
         "texto": "Cause 2 de dano a cada Aliado do oponente."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "entregue_aguardando_avaliacao_do_autor",
       "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-varredura-c3.cena-v1.png",
@@ -474,7 +474,7 @@
           "Proficiente"
         ]
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "entregue_aguardando_avaliacao_do_autor",
       "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-persona-aliado-c2-agressivo-proficiente.cena-v1.png",
@@ -528,7 +528,7 @@
           }
         ]
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "entregue_aguardando_avaliacao_do_autor",
       "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mercador-c7.cena-v1.png",
@@ -567,7 +567,7 @@
         "texto": "Protegido 2.",
         "protegido": 2
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "entregue_aguardando_avaliacao_do_autor",
       "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-colosso-c7.cena-v1.png",
@@ -610,7 +610,7 @@
         ],
         "texto": "Cause 2 de dano a um alvo."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "entregue_aguardando_avaliacao_do_autor",
       "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c2-repentina.cena-v1.png",
@@ -657,7 +657,7 @@
         ],
         "texto": "Cure 7 de dano de um alvo e compre 1 carta."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "entregue_aguardando_avaliacao_do_autor",
       "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-curar-c4.cena-v1.png",
@@ -705,7 +705,7 @@
         },
         "texto": "Suspenda e pague 1: cause 2 de dano a um alvo."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "entregue_aguardando_avaliacao_do_autor",
       "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-torre-c4.cena-v1.png",
@@ -749,7 +749,7 @@
         ],
         "texto": "Cause 1 + o número de cartas no seu Grau de dano a um Aliado ou Mística."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "entregue_aguardando_avaliacao_do_autor",
       "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-remocao-grau-c3.cena-v1.png",
@@ -797,7 +797,7 @@
           }
         ]
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "entregue_aguardando_avaliacao_do_autor",
       "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-bomba-c8.cena-v1.png",
@@ -839,7 +839,7 @@
         ],
         "texto": "Compre 1 carta."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "entregue_aguardando_avaliacao_do_autor",
       "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-comprar-c2-repentina.cena-v1.png",
@@ -847,6 +847,53 @@
       "sha256": "7f488a4c2e333b6b2364062169b4d9f607a520681f312fe555d6c2b6123c32b7",
       "dimensoes": [
         1061,
+        1482
+      ]
+    },
+    {
+      "id": "prov-primitivum-curar-c2",
+      "nome": "Invocadora de Espíritos",
+      "tipo": "temporaria",
+      "valor": "primitivum",
+      "referencia": "Arcanoclisma/online/public/arte/invocadora-de-espiritos.webp",
+      "prompt": "Use case: stylized-concept. NEW full illustration for Arcanoclisma TCG, one vertical portrait in 63:88 aspect ratio, native high resolution, fully opaque scene to every edge. No text, no writing, no lettering, no logos, no borders, no card UI. Reference image is approved IDENTITY and graphic STYLE only: preserve unique face/species, body type, age, hair, distinctive attire/materials/gear; NEVER paste or repeat its cutout or pose. Create a new unified coherent scene. Simple efficient composition, one clear main subject, few props, readable silhouettes, subject large, face below top12%, bottom17% less busy for editable rules. Modern independent comics and contemporary animation, organic confident varied linework, flat color shapes, simple BLOCKED cel shadows, sparse halftone. Surroundings smooth and broad, minimal grit or painterly detail. Diffuse contained lighting, strong magic only locally, complementary warm/cool color areas, matte restrained gold. Not a photograph, not 3D, not a painting, not glossy generic anime, no HDR, no broad bloom, no empty or transparent backdrop. Humans have human anatomy, expressive faces and individual character; keep reference identity. Directed magic follows gaze and gesture axis, not a bent beam. VALUE color and magic: moss green and muted amber organic constructs. Scene: Invocadora de Espíritos from the approved reference kneels in a sheltered woodland clearing at blue hour, gently directing a compact moss-green and amber animal-shaped healing spirit toward a resting clothed traveler with a bandaged forearm. No blood or wounds. Preserve her exact identity and attire. Her gaze follows the healing gesture. A fallen trunk, smooth ferns and the small ember of a camp lantern establish a quiet lived-in scene. Game identity/effect (context only, never write it): Invocadora de Espíritos; Cure 4 de dano de um alvo e ganhe 1 de Arcano.. Rarity is comum, aesthetic only; no rarity foil filter for common.",
+      "promptArquivo": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-curar-c2.prompt.txt",
+      "cena": "Invocadora de Espíritos from the approved reference kneels in a sheltered woodland clearing at blue hour, gently directing a compact moss-green and amber animal-shaped healing spirit toward a resting clothed traveler with a bandaged forearm. No blood or wounds. Preserve her exact identity and attire. Her gaze follows the healing gesture. A fallen trunk, smooth ferns and the small ember of a camp lantern establish a quiet lived-in scene.",
+      "definicaoAtualClaude": {
+        "subtipos": [],
+        "arcanoGerado": 1,
+        "cenario": "",
+        "provisoria": true,
+        "id": "prov-primitivum-curar-c2",
+        "nome": "Invocadora de Espíritos",
+        "valores": [
+          "primitivum"
+        ],
+        "tipo": "temporaria",
+        "custo": 2,
+        "grau": 1,
+        "velocidade": "findante",
+        "efeitos": [
+          {
+            "tipo": "curar",
+            "valor": 4,
+            "alvo": "escolhido"
+          },
+          {
+            "tipo": "arcano",
+            "valor": 1
+          }
+        ],
+        "texto": "Cure 4 de dano de um alvo e ganhe 1 de Arcano."
+      },
+      "raridade": "comum",
+      "arteAlternativa": false,
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-curar-c2.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-curar-c2.visual.json",
+      "sha256": "f33bc562e4652c31bd8ea84878206ec5df9e65ae89b3655c1feaefa633dc2896",
+      "dimensoes": [
+        1062,
         1482
       ]
     },
@@ -881,9 +928,16 @@
         ],
         "texto": "Destrua todos os Aliados."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-ira-c4.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-ira-c4.visual.json",
+      "sha256": "94d5185be8437942b3d5a52f5e7704e8142a45be746654577570fa94825db3d1",
+      "dimensoes": [
+        1061,
+        1482
+      ]
     },
     {
       "id": "prov-sublimeyn-dano-c1-repentina",
@@ -917,9 +971,16 @@
         ],
         "texto": "Cause 1 de dano a um alvo."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c1-repentina.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-sublimeyn-dano-c1-repentina.visual.json",
+      "sha256": "21941674874e93f5da0ecd6bfca00f376f3adb8aee9068526716d4ab1aafd417",
+      "dimensoes": [
+        1062,
+        1482
+      ]
     },
     {
       "id": "prov-morbidyum-enfermaria-c3",
@@ -958,9 +1019,54 @@
         },
         "texto": "Suspenda: cure 3 de dano de um Aliado ou Mística."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-enfermaria-c3.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-enfermaria-c3.visual.json",
+      "sha256": "7fd395cc2f85248f56e44626fc1fe13263d821e9fa93d9e73c9b9735d2ee82f0",
+      "dimensoes": [
+        1061,
+        1483
+      ]
+    },
+    {
+      "id": "prov-primitivum-aliado-c4-defensivo",
+      "nome": "Urso-Raiz",
+      "tipo": "aliado",
+      "valor": "primitivum",
+      "referencia": "Arcanoclisma/online/public/arte/urso-raiz.webp",
+      "prompt": "Use case: stylized-concept. NEW full illustration for Arcanoclisma TCG, one vertical portrait in 63:88 aspect ratio, native high resolution, fully opaque scene to every edge. No text, no writing, no lettering, no logos, no borders, no card UI. Reference image is approved IDENTITY and graphic STYLE only: preserve unique face/species, body type, age, hair, distinctive attire/materials/gear; NEVER paste or repeat its cutout or pose. Create a new unified coherent scene. Simple efficient composition, one clear main subject, few props, readable silhouettes, subject large, face below top12%, bottom17% less busy for editable rules. Modern independent comics and contemporary animation, organic confident varied linework, flat color shapes, simple BLOCKED cel shadows, sparse halftone. Surroundings smooth and broad, minimal grit or painterly detail. Diffuse contained lighting, strong magic only locally, complementary warm/cool color areas, matte restrained gold. Not a photograph, not 3D, not a painting, not glossy generic anime, no HDR, no broad bloom, no empty or transparent backdrop. Humans have human anatomy, expressive faces and individual character; keep reference identity. Directed magic follows gaze and gesture axis, not a bent beam. VALUE color and magic: moss green and muted amber organic constructs. Scene: Urso-Raiz from the approved reference plants its heavy forepaws across a narrow forest trail in a protective stance, head turned slightly toward a noise beyond the viewer. Preserve its exact creature anatomy, bark-and-fur materials and moss identity. Overcast midday, smooth broad tree trunks, soft green shade, a small stream and warm earth; a few restrained amber root motes, no oversized aura. Game identity/effect (context only, never write it): Urso-Raiz; . Rarity is comum, aesthetic only; no rarity foil filter for common.",
+      "promptArquivo": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c4-defensivo.prompt.txt",
+      "cena": "Urso-Raiz from the approved reference plants its heavy forepaws across a narrow forest trail in a protective stance, head turned slightly toward a noise beyond the viewer. Preserve its exact creature anatomy, bark-and-fur materials and moss identity. Overcast midday, smooth broad tree trunks, soft green shade, a small stream and warm earth; a few restrained amber root motes, no oversized aura.",
+      "definicaoAtualClaude": {
+        "subtipos": [],
+        "arcanoGerado": 1,
+        "cenario": "",
+        "provisoria": true,
+        "id": "prov-primitivum-aliado-c4-defensivo",
+        "nome": "Urso-Raiz",
+        "valores": [
+          "primitivum"
+        ],
+        "tipo": "aliado",
+        "custo": 4,
+        "grau": 3,
+        "velocidade": "findante",
+        "ataque": 3,
+        "vida": 8,
+        "texto": ""
+      },
+      "raridade": "comum",
+      "arteAlternativa": false,
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c4-defensivo.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-aliado-c4-defensivo.visual.json",
+      "sha256": "161cccb62211773a55e9e97ddcc77b3a88b4bb14dcd5b99147fc8ac5447014f9",
+      "dimensoes": [
+        1061,
+        1483
+      ]
     },
     {
       "id": "prov-conflituo-piromante-c4",
@@ -995,9 +1101,16 @@
           }
         ]
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-piromante-c4.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-piromante-c4.visual.json",
+      "sha256": "ea9d88d186224d8453ee14b96d2477d206371fd4fbca3260aa68a27b1ff13f46",
+      "dimensoes": [
+        1061,
+        1482
+      ]
     },
     {
       "id": "prov-eternyr-destruir-c4-repentina",
@@ -1030,9 +1143,16 @@
         ],
         "texto": "Destrua um alvo."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-destruir-c4-repentina.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-destruir-c4-repentina.visual.json",
+      "sha256": "c1ef76693998b22ecf47c2a500a89c6ed6753c99d78c128e6ed08e4e19daef21",
+      "dimensoes": [
+        1061,
+        1482
+      ]
     },
     {
       "id": "prov-alvorum-fonte-c4",
@@ -1071,9 +1191,16 @@
         "texto": "Conta como 1 carta no Grau. Suspenda: ganhe 2 de Arcano.",
         "grauExtra": 1
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-fonte-c4.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-alvorum-fonte-c4.visual.json",
+      "sha256": "6497110892aba7fc3910d2b13f1fea31096074f6c9929a13a5182b8579360293",
+      "dimensoes": [
+        1061,
+        1482
+      ]
     },
     {
       "id": "prov-cognitium-anular-c3-repentina",
@@ -1106,9 +1233,16 @@
         ],
         "texto": "Anule uma carta na pilha."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-anular-c3-repentina.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-anular-c3-repentina.visual.json",
+      "sha256": "44f1bb84228f264b3ef9a6e89da8fd068008a3ed8a2d0f698ba90991ed334695",
+      "dimensoes": [
+        1062,
+        1482
+      ]
     },
     {
       "id": "prov-dominum-destruir-c3",
@@ -1141,7 +1275,7 @@
         ],
         "texto": "Destrua um alvo."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "pendente"
     },
@@ -1176,7 +1310,7 @@
         ],
         "texto": "Compre 1 carta."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "pendente"
     },
@@ -1212,7 +1346,7 @@
         ],
         "texto": "Cause 4 de dano a um alvo."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "pendente"
     },
@@ -1255,7 +1389,7 @@
           }
         ]
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "pendente"
     },
@@ -1290,7 +1424,7 @@
         ],
         "texto": "Devolva um Aliado ou Mística à mão do dono."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "pendente"
     },
@@ -1325,7 +1459,7 @@
         ],
         "texto": "Compre 2 cartas."
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "pendente"
     },
@@ -1356,7 +1490,7 @@
         "vida": 8,
         "texto": ""
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "pendente"
     },
@@ -1387,7 +1521,7 @@
         "vida": 8,
         "texto": ""
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "pendente"
     },
@@ -1419,7 +1553,7 @@
         "texto": "Para jogar, descarte 2 cartas do seu Grau.",
         "descartaGrau": 2
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "pendente"
     },
@@ -1450,7 +1584,7 @@
         "vida": 3,
         "texto": ""
       },
-      "raridade": null,
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "pendente"
     },
@@ -1485,21 +1619,214 @@
         ],
         "texto": "Compre 2 cartas."
       },
-      "raridade": null,
+      "raridade": "comum",
+      "arteAlternativa": false,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-morbidyum-mistica-c2",
+      "nome": "Porteira da Antessala",
+      "tipo": "mistica",
+      "valor": "morbidyum",
+      "referencia": "Arcanoclisma/online/public/arte/porteira-da-antessala.webp",
+      "prompt": "Use case: stylized-concept. NEW full illustration for Arcanoclisma TCG, one vertical portrait in 63:88 aspect ratio, native high resolution, fully opaque scene to every edge. No text, no writing, no lettering, no logos, no borders, no card UI. Reference image is approved IDENTITY and graphic STYLE only: preserve unique face/species, body type, age, hair, distinctive attire/materials/gear; NEVER paste or repeat its cutout or pose. Create a new unified coherent scene. Simple efficient composition, one clear main subject, few props, readable silhouettes, subject large, face below top12%, bottom17% less busy for editable rules. Modern independent comics and contemporary animation, organic confident varied linework, flat color shapes, simple BLOCKED cel shadows, sparse halftone. Surroundings smooth and broad, minimal grit or painterly detail. Diffuse contained lighting, strong magic only locally, complementary warm/cool color areas, matte restrained gold. Not a photograph, not 3D, not a painting, not glossy generic anime, no HDR, no broad bloom, no empty or transparent backdrop. Humans have human anatomy, expressive faces and individual character; keep reference identity. Directed magic follows gaze and gesture axis, not a bent beam. VALUE color and magic: pale green cold smoke. Scene: Porteira da Antessala from the approved reference tends a quiet covered stone threshold in a twilight courtyard. Preserve its exact species, face and clothing. A gentle pale-green healing veil moves from its gesture toward a small resting animal near the doorway. Warm terracotta lamp, cool muted blue paving, a bench and a closed wooden door, clean uncluttered scene. Game identity/effect (context only, never write it): Porteira da Antessala; Suspenda: cure 2 de dano de um alvo.. Rarity is comum, aesthetic only; no rarity foil filter for common.",
+      "promptArquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c2.prompt.txt",
+      "cena": "Porteira da Antessala from the approved reference tends a quiet covered stone threshold in a twilight courtyard. Preserve its exact species, face and clothing. A gentle pale-green healing veil moves from its gesture toward a small resting animal near the doorway. Warm terracotta lamp, cool muted blue paving, a bench and a closed wooden door, clean uncluttered scene.",
+      "definicaoAtualClaude": {
+        "subtipos": [],
+        "arcanoGerado": 1,
+        "cenario": "",
+        "provisoria": true,
+        "id": "prov-morbidyum-mistica-c2",
+        "nome": "Porteira da Antessala",
+        "valores": [
+          "morbidyum"
+        ],
+        "tipo": "mistica",
+        "custo": 2,
+        "grau": 1,
+        "velocidade": "findante",
+        "vida": 2,
+        "ativacao": {
+          "custo": 0,
+          "suspende": true,
+          "efeitos": [
+            {
+              "tipo": "curar",
+              "valor": 2,
+              "alvo": "escolhido"
+            }
+          ]
+        },
+        "texto": "Suspenda: cure 2 de dano de um alvo."
+      },
+      "raridade": "comum",
+      "arteAlternativa": false,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-morbidyum-mistica-c4",
+      "nome": "Fantasma em Fila",
+      "tipo": "mistica",
+      "valor": "morbidyum",
+      "referencia": "Arcanoclisma/online/public/arte/fantasma-em-fila.webp",
+      "prompt": "Use case: stylized-concept. NEW full illustration for Arcanoclisma TCG, one vertical portrait in 63:88 aspect ratio, native high resolution, fully opaque scene to every edge. No text, no writing, no lettering, no logos, no borders, no card UI. Reference image is approved IDENTITY and graphic STYLE only: preserve unique face/species, body type, age, hair, distinctive attire/materials/gear; NEVER paste or repeat its cutout or pose. Create a new unified coherent scene. Simple efficient composition, one clear main subject, few props, readable silhouettes, subject large, face below top12%, bottom17% less busy for editable rules. Modern independent comics and contemporary animation, organic confident varied linework, flat color shapes, simple BLOCKED cel shadows, sparse halftone. Surroundings smooth and broad, minimal grit or painterly detail. Diffuse contained lighting, strong magic only locally, complementary warm/cool color areas, matte restrained gold. Not a photograph, not 3D, not a painting, not glossy generic anime, no HDR, no broad bloom, no empty or transparent backdrop. Humans have human anatomy, expressive faces and individual character; keep reference identity. Directed magic follows gaze and gesture axis, not a bent beam. VALUE color and magic: pale green cold smoke. Scene: Fantasma em Fila from the approved reference pauses along an ancient covered passage at late night, with a few distant translucent spirits awaiting entry beside a stone arch. Preserve its exact ghost anatomy and clothing. One compact pale-green arcane wisp leaves its extended gesture toward an unoccupied practice charm on the wall; no injured bodies. Soft moon-blue columns, warm dim lantern, clear depth and restrained haunting mood. Game identity/effect (context only, never write it): Fantasma em Fila; Suspenda e pague 1: cause 1 de dano a um alvo.. Rarity is comum, aesthetic only; no rarity foil filter for common.",
+      "promptArquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c4.prompt.txt",
+      "cena": "Fantasma em Fila from the approved reference pauses along an ancient covered passage at late night, with a few distant translucent spirits awaiting entry beside a stone arch. Preserve its exact ghost anatomy and clothing. One compact pale-green arcane wisp leaves its extended gesture toward an unoccupied practice charm on the wall; no injured bodies. Soft moon-blue columns, warm dim lantern, clear depth and restrained haunting mood.",
+      "definicaoAtualClaude": {
+        "subtipos": [],
+        "arcanoGerado": 1,
+        "cenario": "",
+        "provisoria": true,
+        "id": "prov-morbidyum-mistica-c4",
+        "nome": "Fantasma em Fila",
+        "valores": [
+          "morbidyum"
+        ],
+        "tipo": "mistica",
+        "custo": 4,
+        "grau": 3,
+        "velocidade": "findante",
+        "vida": 7,
+        "ativacao": {
+          "custo": 1,
+          "suspende": true,
+          "efeitos": [
+            {
+              "tipo": "dano",
+              "valor": 1,
+              "alvo": "escolhido"
+            }
+          ]
+        },
+        "texto": "Suspenda e pague 1: cause 1 de dano a um alvo."
+      },
+      "raridade": "comum",
+      "arteAlternativa": false,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-cognitium-mistica-c2",
+      "nome": "Escriba do Porto",
+      "tipo": "mistica",
+      "valor": "cognitium",
+      "referencia": "Arcanoclisma/online/public/arte/escriba-do-porto.webp",
+      "prompt": "Use case: stylized-concept. NEW full illustration for Arcanoclisma TCG, one vertical portrait in 63:88 aspect ratio, native high resolution, fully opaque scene to every edge. No text, no writing, no lettering, no logos, no borders, no card UI. Reference image is approved IDENTITY and graphic STYLE only: preserve unique face/species, body type, age, hair, distinctive attire/materials/gear; NEVER paste or repeat its cutout or pose. Create a new unified coherent scene. Simple efficient composition, one clear main subject, few props, readable silhouettes, subject large, face below top12%, bottom17% less busy for editable rules. Modern independent comics and contemporary animation, organic confident varied linework, flat color shapes, simple BLOCKED cel shadows, sparse halftone. Surroundings smooth and broad, minimal grit or painterly detail. Diffuse contained lighting, strong magic only locally, complementary warm/cool color areas, matte restrained gold. Not a photograph, not 3D, not a painting, not glossy generic anime, no HDR, no broad bloom, no empty or transparent backdrop. Humans have human anatomy, expressive faces and individual character; keep reference identity. Directed magic follows gaze and gesture axis, not a bent beam. VALUE color and magic: indigo fragmented smoke veil. Scene: Escriba do Porto from the approved reference works at a broad dockside desk inside an open wooden port office on a rainy afternoon. Preserve its exact species, age, face and clothing. One hand handles an open blank folio while a compact indigo memory fragment floats near the other. Looking intently at the fragment rather than at the viewer. Smooth teal rain outside, muted ochre crates and restrained warm desk lamp. Game identity/effect (context only, never write it): Escriba do Porto; Suspenda e pague 2: compre 1 carta.. Rarity is comum, aesthetic only; no rarity foil filter for common.",
+      "promptArquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mistica-c2.prompt.txt",
+      "cena": "Escriba do Porto from the approved reference works at a broad dockside desk inside an open wooden port office on a rainy afternoon. Preserve its exact species, age, face and clothing. One hand handles an open blank folio while a compact indigo memory fragment floats near the other. Looking intently at the fragment rather than at the viewer. Smooth teal rain outside, muted ochre crates and restrained warm desk lamp.",
+      "definicaoAtualClaude": {
+        "subtipos": [],
+        "arcanoGerado": 1,
+        "cenario": "",
+        "provisoria": true,
+        "id": "prov-cognitium-mistica-c2",
+        "nome": "Escriba do Porto",
+        "valores": [
+          "cognitium"
+        ],
+        "tipo": "mistica",
+        "custo": 2,
+        "grau": 1,
+        "velocidade": "findante",
+        "vida": 3,
+        "ativacao": {
+          "custo": 2,
+          "suspende": true,
+          "efeitos": [
+            {
+              "tipo": "comprar",
+              "valor": 1
+            }
+          ]
+        },
+        "texto": "Suspenda e pague 2: compre 1 carta."
+      },
+      "raridade": "comum",
+      "arteAlternativa": false,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-eternyr-mistica-c2",
+      "nome": "Velho Relojoeiro da Vila do Mesmo Dia",
+      "tipo": "mistica",
+      "valor": "eternyr",
+      "referencia": "Arcanoclisma/online/public/arte/velho-relojoeiro-da-vila-do-mesmo-dia.webp",
+      "prompt": "Use case: stylized-concept. NEW full illustration for Arcanoclisma TCG, one vertical portrait in 63:88 aspect ratio, native high resolution, fully opaque scene to every edge. No text, no writing, no lettering, no logos, no borders, no card UI. Reference image is approved IDENTITY and graphic STYLE only: preserve unique face/species, body type, age, hair, distinctive attire/materials/gear; NEVER paste or repeat its cutout or pose. Create a new unified coherent scene. Simple efficient composition, one clear main subject, few props, readable silhouettes, subject large, face below top12%, bottom17% less busy for editable rules. Modern independent comics and contemporary animation, organic confident varied linework, flat color shapes, simple BLOCKED cel shadows, sparse halftone. Surroundings smooth and broad, minimal grit or painterly detail. Diffuse contained lighting, strong magic only locally, complementary warm/cool color areas, matte restrained gold. Not a photograph, not 3D, not a painting, not glossy generic anime, no HDR, no broad bloom, no empty or transparent backdrop. Humans have human anatomy, expressive faces and individual character; keep reference identity. Directed magic follows gaze and gesture axis, not a bent beam. VALUE color and magic: night-blue broken aura with stopped short white traces. Scene: Velho Relojoeiro da Vila do Mesmo Dia from the approved reference leans over a low workbench in a small quiet clock workshop at late afternoon. Preserve exact age, face and practical attire. He steadies a small clock mechanism with one hand and directs a compact night-blue time pulse with interrupted short white traces toward a separate suspended cog with the other; gaze and gesture aligned. Smooth warm wood and cool window shadows, few large clock shapes, no written numbers. Game identity/effect (context only, never write it): Velho Relojoeiro da Vila do Mesmo Dia; Suspenda e pague 1: cause 1 de dano a um Aliado ou Mística.. Rarity is comum, aesthetic only; no rarity foil filter for common.",
+      "promptArquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-mistica-c2.prompt.txt",
+      "cena": "Velho Relojoeiro da Vila do Mesmo Dia from the approved reference leans over a low workbench in a small quiet clock workshop at late afternoon. Preserve exact age, face and practical attire. He steadies a small clock mechanism with one hand and directs a compact night-blue time pulse with interrupted short white traces toward a separate suspended cog with the other; gaze and gesture aligned. Smooth warm wood and cool window shadows, few large clock shapes, no written numbers.",
+      "definicaoAtualClaude": {
+        "subtipos": [],
+        "arcanoGerado": 1,
+        "cenario": "",
+        "provisoria": true,
+        "id": "prov-eternyr-mistica-c2",
+        "nome": "Velho Relojoeiro da Vila do Mesmo Dia",
+        "valores": [
+          "eternyr"
+        ],
+        "tipo": "mistica",
+        "custo": 2,
+        "grau": 1,
+        "velocidade": "findante",
+        "vida": 3,
+        "ativacao": {
+          "custo": 1,
+          "suspende": true,
+          "efeitos": [
+            {
+              "tipo": "dano",
+              "valor": 1,
+              "alvo": "escolhidoAliado"
+            }
+          ]
+        },
+        "texto": "Suspenda e pague 1: cause 1 de dano a um Aliado ou Mística."
+      },
+      "raridade": "comum",
+      "arteAlternativa": false,
+      "estado": "pendente"
+    },
+    {
+      "id": "prov-dominum-mistica-c2",
+      "nome": "Nostrum",
+      "tipo": "mistica",
+      "valor": "dominum",
+      "referencia": "Arcanoclisma/online/public/arte/nostrum.webp",
+      "prompt": "Use case: stylized-concept. NEW full illustration for Arcanoclisma TCG, one vertical portrait in 63:88 aspect ratio, native high resolution, fully opaque scene to every edge. No text, no writing, no lettering, no logos, no borders, no card UI. Reference image is approved IDENTITY and graphic STYLE only: preserve unique face/species, body type, age, hair, distinctive attire/materials/gear; NEVER paste or repeat its cutout or pose. Create a new unified coherent scene. Simple efficient composition, one clear main subject, few props, readable silhouettes, subject large, face below top12%, bottom17% less busy for editable rules. Modern independent comics and contemporary animation, organic confident varied linework, flat color shapes, simple BLOCKED cel shadows, sparse halftone. Surroundings smooth and broad, minimal grit or painterly detail. Diffuse contained lighting, strong magic only locally, complementary warm/cool color areas, matte restrained gold. Not a photograph, not 3D, not a painting, not glossy generic anime, no HDR, no broad bloom, no empty or transparent backdrop. Humans have human anatomy, expressive faces and individual character; keep reference identity. Directed magic follows gaze and gesture axis, not a bent beam. VALUE color and magic: dark blood-purple hard-light chains. Scene: Nostrum from the approved reference advances through a broad fortified arch at an overcast dawn, preserving its exact creature or person identity and anatomy. A few compact dark-purple hard-light plates or chains form a protective crescent beside the body, with one quiet new purple spark suggesting newly gathered arcane energy. Muted terracotta stone, cool blue-gray open courtyard, simple banners and clear silhouette; no other protagonist. Game identity/effect (context only, never write it): Nostrum; Protegido 1. Ao entrar: ganhe 1 de Arcano.. Rarity is comum, aesthetic only; no rarity foil filter for common.",
+      "promptArquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-mistica-c2.prompt.txt",
+      "cena": "Nostrum from the approved reference advances through a broad fortified arch at an overcast dawn, preserving its exact creature or person identity and anatomy. A few compact dark-purple hard-light plates or chains form a protective crescent beside the body, with one quiet new purple spark suggesting newly gathered arcane energy. Muted terracotta stone, cool blue-gray open courtyard, simple banners and clear silhouette; no other protagonist.",
+      "definicaoAtualClaude": {
+        "subtipos": [],
+        "arcanoGerado": 1,
+        "cenario": "",
+        "provisoria": true,
+        "id": "prov-dominum-mistica-c2",
+        "nome": "Nostrum",
+        "valores": [
+          "dominum"
+        ],
+        "tipo": "mistica",
+        "custo": 2,
+        "grau": 1,
+        "velocidade": "findante",
+        "vida": 2,
+        "texto": "Protegido 1. Ao entrar: ganhe 1 de Arcano.",
+        "protegido": 1,
+        "aoEntrar": [
+          {
+            "tipo": "arcano",
+            "valor": 1
+          }
+        ]
+      },
+      "raridade": "comum",
       "arteAlternativa": false,
       "estado": "pendente"
     }
   ],
   "estado": "em_producao",
-  "concluidas": 18,
+  "concluidas": 27,
   "pendentes": [
-    "prov-dominum-ira-c4",
-    "prov-sublimeyn-dano-c1-repentina",
-    "prov-morbidyum-enfermaria-c3",
-    "prov-conflituo-piromante-c4",
-    "prov-eternyr-destruir-c4-repentina",
-    "prov-alvorum-fonte-c4",
-    "prov-cognitium-anular-c3-repentina",
     "prov-dominum-destruir-c3",
     "prov-sublimeyn-comprar-c2-repentina",
     "prov-morbidyum-dano-c3",
@@ -1510,6 +1837,12 @@
     "prov-dominum-aliado-c4-defensivo",
     "prov-morbidyum-aliado-c6-descarta-grau",
     "prov-conflituo-aliado-c2-agressivo",
-    "prov-morbidyum-comprar-c3"
-  ]
+    "prov-morbidyum-comprar-c3",
+    "prov-morbidyum-mistica-c2",
+    "prov-morbidyum-mistica-c4",
+    "prov-cognitium-mistica-c2",
+    "prov-eternyr-mistica-c2",
+    "prov-dominum-mistica-c2"
+  ],
+  "briefing": "Arcanoclisma/cartas/pedidos/cartas-provisorias-v1.claude.json"
 }

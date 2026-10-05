@@ -1,0 +1,57 @@
+{
+  "id": "prov-eternyr-destruir-c4-repentina",
+  "nome": "O Eco que Come o Som",
+  "tipo": "temporaria",
+  "valor": "eternyr",
+  "referencia": "Arcanoclisma/online/public/arte/eco-sobras.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-destruir-c4-repentina.prompt.txt",
+  "cena": "O Eco que Come o Som appears in a narrow quiet canyon at dusk, preserve its strange reference creature form instead of inventing a human. It bends toward a nearby floating magical resonance shard that collapses into dark-blue silence. Small white stopped traces in the air, no lettering or music notes. Smooth warm ochre canyon planes balanced with midnight-blue shadows, uncluttered main creature, no gore or horror anatomy additions.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-eternyr-destruir-c4-repentina",
+    "nome": "O Eco que Come o Som",
+    "valores": [
+      "eternyr"
+    ],
+    "tipo": "temporaria",
+    "custo": 4,
+    "grau": 3,
+    "velocidade": "repentina",
+    "efeitos": [
+      {
+        "tipo": "destruir",
+        "alvo": "escolhido"
+      }
+    ],
+    "texto": "Destrua um alvo."
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-destruir-c4-repentina.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-destruir-c4-repentina.visual.json",
+  "sha256": "c1ef76693998b22ecf47c2a500a89c6ed6753c99d78c128e6ed08e4e19daef21",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-30715423-75fa-44f3-9a78-88078037a7c8.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572402
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

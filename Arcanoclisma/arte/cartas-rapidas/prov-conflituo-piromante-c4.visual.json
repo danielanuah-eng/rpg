@@ -1,0 +1,59 @@
+{
+  "id": "prov-conflituo-piromante-c4",
+  "nome": "Arruaceiro de Taverna",
+  "tipo": "aliado",
+  "valor": "conflituo",
+  "referencia": "Arcanoclisma/online/public/arte/arruaceiro-de-taverna.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-piromante-c4.prompt.txt",
+  "cena": "Arruaceiro de Taverna sweeps one arm with a boisterous grin while stepping around a sturdy tavern table late at night, weight shifted diagonally and gaze toward two surprised distant patrons. A compact arc of rust-red solid-light sparks sweeps across the floor as a magic pulse, no flames engulfing people, no injury. Preserve distinctive reference features and gear. Warm lamp, dark teal beams, plain mugs and simple tabletop.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-conflituo-piromante-c4",
+    "nome": "Arruaceiro de Taverna",
+    "valores": [
+      "conflituo"
+    ],
+    "tipo": "aliado",
+    "custo": 4,
+    "grau": 3,
+    "velocidade": "findante",
+    "ataque": 2,
+    "vida": 5,
+    "texto": "Ao entrar: cause 1 de dano a cada Aliado do oponente.",
+    "aoEntrar": [
+      {
+        "tipo": "danoTodosAliados",
+        "valor": 1
+      }
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-piromante-c4.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-piromante-c4.visual.json",
+  "sha256": "ea9d88d186224d8453ee14b96d2477d206371fd4fbca3260aa68a27b1ff13f46",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-c8e15d33-e60a-4a47-92a6-1b34afcea77c.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572402
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

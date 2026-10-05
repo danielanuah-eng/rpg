@@ -1,0 +1,62 @@
+{
+  "id": "prov-primitivum-curar-c2",
+  "nome": "Invocadora de Espíritos",
+  "tipo": "temporaria",
+  "valor": "primitivum",
+  "referencia": "Arcanoclisma/online/public/arte/invocadora-de-espiritos.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-curar-c2.prompt.txt",
+  "cena": "Invocadora de Espíritos from the approved reference kneels in a sheltered woodland clearing at blue hour, gently directing a compact moss-green and amber animal-shaped healing spirit toward a resting clothed traveler with a bandaged forearm. No blood or wounds. Preserve her exact identity and attire. Her gaze follows the healing gesture. A fallen trunk, smooth ferns and the small ember of a camp lantern establish a quiet lived-in scene.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-primitivum-curar-c2",
+    "nome": "Invocadora de Espíritos",
+    "valores": [
+      "primitivum"
+    ],
+    "tipo": "temporaria",
+    "custo": 2,
+    "grau": 1,
+    "velocidade": "findante",
+    "efeitos": [
+      {
+        "tipo": "curar",
+        "valor": 4,
+        "alvo": "escolhido"
+      },
+      {
+        "tipo": "arcano",
+        "valor": 1
+      }
+    ],
+    "texto": "Cure 4 de dano de um alvo e ganhe 1 de Arcano."
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-curar-c2.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-primitivum-curar-c2.visual.json",
+  "sha256": "f33bc562e4652c31bd8ea84878206ec5df9e65ae89b3655c1feaefa633dc2896",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-b9405026-b4ac-4488-9260-952cf7feae74.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573884
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}
