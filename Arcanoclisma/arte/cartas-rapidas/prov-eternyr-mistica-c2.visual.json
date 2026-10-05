@@ -1,0 +1,63 @@
+{
+  "id": "prov-eternyr-mistica-c2",
+  "nome": "Velho Relojoeiro da Vila do Mesmo Dia",
+  "tipo": "mistica",
+  "valor": "eternyr",
+  "referencia": "Arcanoclisma/online/public/arte/velho-relojoeiro-da-vila-do-mesmo-dia.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-mistica-c2.prompt.txt",
+  "cena": "Velho Relojoeiro da Vila do Mesmo Dia from the approved reference leans over a low workbench in a small quiet clock workshop at late afternoon. Preserve exact age, face and practical attire. He steadies a small clock mechanism with one hand and directs a compact night-blue time pulse with interrupted short white traces toward a separate suspended cog with the other; gaze and gesture aligned. Smooth warm wood and cool window shadows, few large clock shapes, no written numbers.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-eternyr-mistica-c2",
+    "nome": "Velho Relojoeiro da Vila do Mesmo Dia",
+    "valores": [
+      "eternyr"
+    ],
+    "tipo": "mistica",
+    "custo": 2,
+    "grau": 1,
+    "velocidade": "findante",
+    "vida": 3,
+    "ativacao": {
+      "custo": 1,
+      "suspende": true,
+      "efeitos": [
+        {
+          "tipo": "dano",
+          "valor": 1,
+          "alvo": "escolhidoAliado"
+        }
+      ]
+    },
+    "texto": "Suspenda e pague 1: cause 1 de dano a um Aliado ou Mística."
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-mistica-c2.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-mistica-c2.visual.json",
+  "sha256": "7b6d2943c3be210af9279e7450033dee0f695ed19b6444803447d3f9a35e1e3c",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-2842c2ee-cfc5-488b-a927-d58c32a540e0.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573884
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

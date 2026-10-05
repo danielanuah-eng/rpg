@@ -1649,7 +1649,14 @@
       },
       "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-aliado-c2-agressivo.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-aliado-c2-agressivo.visual.json",
+      "sha256": "d6ba18cc2497b0ebeeb0952f29327d5954696e6d8e10664ad0997c1b7f3cc08c",
+      "dimensoes": [
+        1061,
+        1482
+      ]
     },
     {
       "id": "prov-morbidyum-comprar-c3",
@@ -1657,9 +1664,9 @@
       "tipo": "temporaria",
       "valor": "morbidyum",
       "referencia": "Arcanoclisma/online/public/arte/velho-de-ossos-claros.webp",
-      "prompt": "Use case: stylized-concept. NEW full illustration for Arcanoclisma TCG, one vertical portrait in 63:88 aspect ratio, native high resolution, fully opaque scene to every edge. No text, no writing, no lettering, no logos, no borders, no card UI. Reference image is approved IDENTITY and graphic STYLE only: preserve unique face/species, body type, age, hair, distinctive attire/materials/gear; NEVER paste or repeat its cutout or pose. Create a new unified coherent scene. Simple efficient composition, one clear main subject, few props, readable silhouettes, subject large, face below top12%, bottom17% less busy for editable rules. Modern independent comics and contemporary animation, organic confident varied linework, flat color shapes, simple BLOCKED cel shadows, sparse halftone. Surroundings smooth and broad, minimal grit or painterly detail. Diffuse contained lighting, strong magic only locally, complementary warm/cool color areas, matte restrained gold. Not a photograph, not 3D, not a painting, not glossy generic anime, no HDR, no broad bloom, no empty or transparent backdrop. Humans have human anatomy, expressive faces and individual character; keep reference identity. Directed magic follows gaze and gesture axis, not a bent beam. VALUE color and magic: pale green cold smoke. Scene: Velho de Ossos Claros studies two small blank parchment sheets beneath a single warm lamp in a modest stone room at night, seated in side profile, one paper lifted and the other on the table. Preserve reference age, body and clothes, thoughtful slightly amused expression. Fine restrained pale-green mist curls from a bone charm only if present in the reference. Broad quiet background and warm wood, no glyph lettering. Game identity/effect (context only, never write it): Velho de Ossos Claros; Compre 2 cartas.. Rarity is unspecified, no rarity foil filter.",
+      "prompt": "Use case: stylized-concept. NEW full illustration for Arcanoclisma TCG, one vertical portrait in 63:88 aspect ratio, native high resolution, fully opaque scene to every edge. No text, no writing, no lettering, no logos, no borders, no card UI. Reference image is approved IDENTITY and graphic STYLE only: preserve unique face/species, body type, age, hair, distinctive attire/materials/gear; NEVER paste or repeat its cutout or pose. Create a new unified coherent scene. Simple efficient composition, one clear main subject, few props, readable silhouettes, subject large, face below top12%, bottom17% less busy for editable rules. Modern independent comics and contemporary animation, organic confident varied linework, flat color shapes, simple BLOCKED cel shadows, sparse halftone. Surroundings smooth and broad, minimal grit or painterly detail. Diffuse contained lighting, strong magic only locally, complementary warm/cool color areas, matte restrained gold. Not a photograph, not 3D, not a painting, not glossy generic anime, no HDR, no broad bloom, no empty or transparent backdrop. Humans have human anatomy, expressive faces and individual character; keep reference identity. Directed magic follows gaze and gesture axis, not a bent beam. VALUE color and magic: pale green cold smoke. Scene: Keep the approved NONHUMAN goat-like bony skull face, curved antlers, long white beard, skeletal hands and feet, and moss-green layered robe exactly recognizable; never make him a human elder. Velho de Ossos Claros studies two small blank parchment sheets beneath a single warm lamp in a modest stone room at night, seated in side profile, one paper lifted and the other on the table. Preserve reference age, body and clothes, thoughtful slightly amused expression. Fine restrained pale-green mist curls from a bone charm only if present in the reference. Broad quiet background and warm wood, no glyph lettering. Game identity/effect (context only, never write it): Velho de Ossos Claros; Compre 2 cartas.. Rarity is unspecified, no rarity foil filter.",
       "promptArquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-comprar-c3.prompt.txt",
-      "cena": "Velho de Ossos Claros studies two small blank parchment sheets beneath a single warm lamp in a modest stone room at night, seated in side profile, one paper lifted and the other on the table. Preserve reference age, body and clothes, thoughtful slightly amused expression. Fine restrained pale-green mist curls from a bone charm only if present in the reference. Broad quiet background and warm wood, no glyph lettering.",
+      "cena": "Keep the approved NONHUMAN goat-like bony skull face, curved antlers, long white beard, skeletal hands and feet, and moss-green layered robe exactly recognizable; never make him a human elder. Velho de Ossos Claros studies two small blank parchment sheets beneath a single warm lamp in a modest stone room at night, seated in side profile, one paper lifted and the other on the table. Preserve reference age, body and clothes, thoughtful slightly amused expression. Fine restrained pale-green mist curls from a bone charm only if present in the reference. Broad quiet background and warm wood, no glyph lettering.",
       "definicaoAtualClaude": {
         "subtipos": [],
         "arcanoGerado": 1,
@@ -1684,7 +1691,14 @@
       },
       "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-comprar-c3.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-comprar-c3.visual.json",
+      "sha256": "a9e263ff9639c3f761437376804438a5e16dfbfaac7fecc1f2e77d97ee2f27b8",
+      "dimensoes": [
+        1062,
+        1481
+      ]
     },
     {
       "id": "prov-morbidyum-mistica-c2",
@@ -1725,7 +1739,14 @@
       },
       "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c2.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c2.visual.json",
+      "sha256": "98a88ee8319798333e0a7b2127fdb608f61b95660d39bbf47e55ae2feabd377e",
+      "dimensoes": [
+        1061,
+        1482
+      ]
     },
     {
       "id": "prov-morbidyum-mistica-c4",
@@ -1766,7 +1787,14 @@
       },
       "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c4.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c4.visual.json",
+      "sha256": "ca0cd05b9ff610894ed8e92f3e67dcb3be91310374c1dc614e6ca4fdf9ad7b03",
+      "dimensoes": [
+        1062,
+        1481
+      ]
     },
     {
       "id": "prov-cognitium-mistica-c2",
@@ -1806,7 +1834,14 @@
       },
       "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mistica-c2.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mistica-c2.visual.json",
+      "sha256": "2532d71dd25a652a46d7a32497cea148db6aa16c9ddb15d97163f56e6134f249",
+      "dimensoes": [
+        1061,
+        1482
+      ]
     },
     {
       "id": "prov-eternyr-mistica-c2",
@@ -1847,7 +1882,14 @@
       },
       "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-mistica-c2.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-mistica-c2.visual.json",
+      "sha256": "7b6d2943c3be210af9279e7450033dee0f695ed19b6444803447d3f9a35e1e3c",
+      "dimensoes": [
+        1062,
+        1482
+      ]
     },
     {
       "id": "prov-dominum-mistica-c2",
@@ -1855,9 +1897,9 @@
       "tipo": "mistica",
       "valor": "dominum",
       "referencia": "Arcanoclisma/online/public/arte/nostrum.webp",
-      "prompt": "Use case: stylized-concept. NEW full illustration for Arcanoclisma TCG, one vertical portrait in 63:88 aspect ratio, native high resolution, fully opaque scene to every edge. No text, no writing, no lettering, no logos, no borders, no card UI. Reference image is approved IDENTITY and graphic STYLE only: preserve unique face/species, body type, age, hair, distinctive attire/materials/gear; NEVER paste or repeat its cutout or pose. Create a new unified coherent scene. Simple efficient composition, one clear main subject, few props, readable silhouettes, subject large, face below top12%, bottom17% less busy for editable rules. Modern independent comics and contemporary animation, organic confident varied linework, flat color shapes, simple BLOCKED cel shadows, sparse halftone. Surroundings smooth and broad, minimal grit or painterly detail. Diffuse contained lighting, strong magic only locally, complementary warm/cool color areas, matte restrained gold. Not a photograph, not 3D, not a painting, not glossy generic anime, no HDR, no broad bloom, no empty or transparent backdrop. Humans have human anatomy, expressive faces and individual character; keep reference identity. Directed magic follows gaze and gesture axis, not a bent beam. VALUE color and magic: dark blood-purple hard-light chains. Scene: Nostrum from the approved reference advances through a broad fortified arch at an overcast dawn, preserving its exact creature or person identity and anatomy. A few compact dark-purple hard-light plates or chains form a protective crescent beside the body, with one quiet new purple spark suggesting newly gathered arcane energy. Muted terracotta stone, cool blue-gray open courtyard, simple banners and clear silhouette; no other protagonist. Game identity/effect (context only, never write it): Nostrum; Protegido 1. Ao entrar: ganhe 1 de Arcano.. Rarity is comum, aesthetic only; no rarity foil filter for common.",
+      "prompt": "Use case: stylized-concept. NEW full illustration for Arcanoclisma TCG, one vertical portrait in 63:88 aspect ratio, native high resolution, fully opaque scene to every edge. No text, no writing, no lettering, no logos, no borders, no card UI. Reference image is approved IDENTITY and graphic STYLE only: preserve unique face/species, body type, age, hair, distinctive attire/materials/gear; NEVER paste or repeat its cutout or pose. Create a new unified coherent scene. Simple efficient composition, one clear main subject, few props, readable silhouettes, subject large, face below top12%, bottom17% less busy for editable rules. Modern independent comics and contemporary animation, organic confident varied linework, flat color shapes, simple BLOCKED cel shadows, sparse halftone. Surroundings smooth and broad, minimal grit or painterly detail. Diffuse contained lighting, strong magic only locally, complementary warm/cool color areas, matte restrained gold. Not a photograph, not 3D, not a painting, not glossy generic anime, no HDR, no broad bloom, no empty or transparent backdrop. Humans have human anatomy, expressive faces and individual character; keep reference identity. Directed magic follows gaze and gesture axis, not a bent beam. VALUE color and magic: dark blood-purple hard-light chains. Scene: Nostrum is the approved monumental civic-temple PLACE from reference, not a person or creature. Create a new ground-level oblique view across its broad paved courtyard toward the distinctive scale-bearing judicial statue with circular halo, stepped gateway, tall columns and deep blue banners trimmed with matte gold. Preserve its recognizable architecture; small townspeople only establish scale and never dominate. Overcast dawn, warm restrained terracotta and ivory stone, cool blue-gray shade. A few compact dark-purple hard-light chain links form a protective crescent beside the main entrance, with one tiny purple spark suggesting gathered arcane energy. No giant new human protagonist, no brilliant golden skyline. Game identity/effect (context only, never write it): Nostrum; Protegido 1. Ao entrar: ganhe 1 de Arcano.. Rarity is comum, aesthetic only; no rarity foil filter for common.",
       "promptArquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-mistica-c2.prompt.txt",
-      "cena": "Nostrum from the approved reference advances through a broad fortified arch at an overcast dawn, preserving its exact creature or person identity and anatomy. A few compact dark-purple hard-light plates or chains form a protective crescent beside the body, with one quiet new purple spark suggesting newly gathered arcane energy. Muted terracotta stone, cool blue-gray open courtyard, simple banners and clear silhouette; no other protagonist.",
+      "cena": "Nostrum is the approved monumental civic-temple PLACE from reference, not a person or creature. Create a new ground-level oblique view across its broad paved courtyard toward the distinctive scale-bearing judicial statue with circular halo, stepped gateway, tall columns and deep blue banners trimmed with matte gold. Preserve its recognizable architecture; small townspeople only establish scale and never dominate. Overcast dawn, warm restrained terracotta and ivory stone, cool blue-gray shade. A few compact dark-purple hard-light chain links form a protective crescent beside the main entrance, with one tiny purple spark suggesting gathered arcane energy. No giant new human protagonist, no brilliant golden skyline.",
       "definicaoAtualClaude": {
         "subtipos": [],
         "arcanoGerado": 1,
@@ -1884,19 +1926,29 @@
       },
       "raridade": "comum",
       "arteAlternativa": false,
-      "estado": "pendente"
+      "estado": "entregue_aguardando_avaliacao_do_autor",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-mistica-c2.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-mistica-c2.visual.json",
+      "sha256": "a877cde8642844ae4baeda441cb4eee6f0af14d8378aac0ba081db210c3c04be",
+      "dimensoes": [
+        1061,
+        1483
+      ]
     }
   ],
-  "estado": "em_producao",
-  "concluidas": 36,
-  "pendentes": [
-    "prov-conflituo-aliado-c2-agressivo",
-    "prov-morbidyum-comprar-c3",
-    "prov-morbidyum-mistica-c2",
-    "prov-morbidyum-mistica-c4",
-    "prov-cognitium-mistica-c2",
-    "prov-eternyr-mistica-c2",
-    "prov-dominum-mistica-c2"
-  ],
-  "briefing": "Arcanoclisma/cartas/pedidos/cartas-provisorias-v1.claude.json"
+  "estado": "aguardando_avaliacao",
+  "concluidas": 43,
+  "pendentes": [],
+  "briefing": "Arcanoclisma/cartas/pedidos/cartas-provisorias-v1.claude.json",
+  "atualizadaEm": "2026-10-05T03:22:32.420Z",
+  "avaliacao": {
+    "estado": "aguardando_resposta_do_autor",
+    "solicitadaEm": "2026-10-05T03:22:32.420Z",
+    "opcoes": [
+      "aprovar",
+      "refazer",
+      "parar"
+    ],
+    "naoRepetirPergunta": true
+  }
 }

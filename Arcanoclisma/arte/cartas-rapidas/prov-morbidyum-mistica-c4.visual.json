@@ -1,0 +1,63 @@
+{
+  "id": "prov-morbidyum-mistica-c4",
+  "nome": "Fantasma em Fila",
+  "tipo": "mistica",
+  "valor": "morbidyum",
+  "referencia": "Arcanoclisma/online/public/arte/fantasma-em-fila.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c4.prompt.txt",
+  "cena": "Fantasma em Fila from the approved reference pauses along an ancient covered passage at late night, with a few distant translucent spirits awaiting entry beside a stone arch. Preserve its exact ghost anatomy and clothing. One compact pale-green arcane wisp leaves its extended gesture toward an unoccupied practice charm on the wall; no injured bodies. Soft moon-blue columns, warm dim lantern, clear depth and restrained haunting mood.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-morbidyum-mistica-c4",
+    "nome": "Fantasma em Fila",
+    "valores": [
+      "morbidyum"
+    ],
+    "tipo": "mistica",
+    "custo": 4,
+    "grau": 3,
+    "velocidade": "findante",
+    "vida": 7,
+    "ativacao": {
+      "custo": 1,
+      "suspende": true,
+      "efeitos": [
+        {
+          "tipo": "dano",
+          "valor": 1,
+          "alvo": "escolhido"
+        }
+      ]
+    },
+    "texto": "Suspenda e pague 1: cause 1 de dano a um alvo."
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c4.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c4.visual.json",
+  "sha256": "ca0cd05b9ff610894ed8e92f3e67dcb3be91310374c1dc614e6ca4fdf9ad7b03",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-e78891f8-9eec-40c4-8b8a-a6a51974d782.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572822
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

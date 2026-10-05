@@ -1,0 +1,53 @@
+{
+  "id": "prov-conflituo-aliado-c2-agressivo",
+  "nome": "Mercenário de Serath",
+  "tipo": "aliado",
+  "valor": "conflituo",
+  "referencia": "Arcanoclisma/online/public/arte/mercenario-de-serath.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-aliado-c2-agressivo.prompt.txt",
+  "cena": "Mercenário de Serath advances down a quiet training yard at late afternoon, reference unusual blade angled low across the body and gaze toward an off-frame sparring partner. Body in dynamic three-quarter stance, confident challenging expression; preserve identity and weapon design. Warm muted stone ground, simple target posts, cool deep-blue shade, tiny restrained rust-red weapon glow. No generic stationary frontal stance.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-conflituo-aliado-c2-agressivo",
+    "nome": "Mercenário de Serath",
+    "valores": [
+      "conflituo"
+    ],
+    "tipo": "aliado",
+    "custo": 2,
+    "grau": 1,
+    "velocidade": "findante",
+    "ataque": 3,
+    "vida": 3,
+    "texto": ""
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-aliado-c2-agressivo.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-aliado-c2-agressivo.visual.json",
+  "sha256": "d6ba18cc2497b0ebeeb0952f29327d5954696e6d8e10664ad0997c1b7f3cc08c",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-3897f50d-846b-41cd-bf6a-58278775243c.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572402
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

@@ -1,0 +1,59 @@
+{
+  "id": "prov-dominum-mistica-c2",
+  "nome": "Nostrum",
+  "tipo": "mistica",
+  "valor": "dominum",
+  "referencia": "Arcanoclisma/online/public/arte/nostrum.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-mistica-c2.prompt.txt",
+  "cena": "Nostrum is the approved monumental civic-temple PLACE from reference, not a person or creature. Create a new ground-level oblique view across its broad paved courtyard toward the distinctive scale-bearing judicial statue with circular halo, stepped gateway, tall columns and deep blue banners trimmed with matte gold. Preserve its recognizable architecture; small townspeople only establish scale and never dominate. Overcast dawn, warm restrained terracotta and ivory stone, cool blue-gray shade. A few compact dark-purple hard-light chain links form a protective crescent beside the main entrance, with one tiny purple spark suggesting gathered arcane energy. No giant new human protagonist, no brilliant golden skyline.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-dominum-mistica-c2",
+    "nome": "Nostrum",
+    "valores": [
+      "dominum"
+    ],
+    "tipo": "mistica",
+    "custo": 2,
+    "grau": 1,
+    "velocidade": "findante",
+    "vida": 2,
+    "texto": "Protegido 1. Ao entrar: ganhe 1 de Arcano.",
+    "protegido": 1,
+    "aoEntrar": [
+      {
+        "tipo": "arcano",
+        "valor": 1
+      }
+    ]
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-mistica-c2.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-mistica-c2.visual.json",
+  "sha256": "a877cde8642844ae4baeda441cb4eee6f0af14d8378aac0ba081db210c3c04be",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-4d7f928e-9eb2-49db-bf87-20e6d38225a4.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1573463
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

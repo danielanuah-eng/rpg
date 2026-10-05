@@ -1,0 +1,57 @@
+{
+  "id": "prov-morbidyum-comprar-c3",
+  "nome": "Velho de Ossos Claros",
+  "tipo": "temporaria",
+  "valor": "morbidyum",
+  "referencia": "Arcanoclisma/online/public/arte/velho-de-ossos-claros.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-comprar-c3.prompt.txt",
+  "cena": "Keep the approved NONHUMAN goat-like bony skull face, curved antlers, long white beard, skeletal hands and feet, and moss-green layered robe exactly recognizable; never make him a human elder. Velho de Ossos Claros studies two small blank parchment sheets beneath a single warm lamp in a modest stone room at night, seated in side profile, one paper lifted and the other on the table. Preserve reference age, body and clothes, thoughtful slightly amused expression. Fine restrained pale-green mist curls from a bone charm only if present in the reference. Broad quiet background and warm wood, no glyph lettering.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-morbidyum-comprar-c3",
+    "nome": "Velho de Ossos Claros",
+    "valores": [
+      "morbidyum"
+    ],
+    "tipo": "temporaria",
+    "custo": 3,
+    "grau": 2,
+    "velocidade": "findante",
+    "efeitos": [
+      {
+        "tipo": "comprar",
+        "valor": 2
+      }
+    ],
+    "texto": "Compre 2 cartas."
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-comprar-c3.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-comprar-c3.visual.json",
+  "sha256": "a9e263ff9639c3f761437376804438a5e16dfbfaac7fecc1f2e77d97ee2f27b8",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-5aedae09-3a41-4afd-875d-2c002d0b31fa.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572822
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

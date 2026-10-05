@@ -2,18 +2,10 @@
   "tarefaId": "artes-rapidas-valores-2026-10-04",
   "versao": 1,
   "data": "2026-10-04",
-  "estado": "em_producao",
+  "estado": "aguardando_avaliacao",
   "meta": 43,
-  "concluidas": 36,
-  "pendentes": [
-    "prov-conflituo-aliado-c2-agressivo",
-    "prov-morbidyum-comprar-c3",
-    "prov-morbidyum-mistica-c2",
-    "prov-morbidyum-mistica-c4",
-    "prov-cognitium-mistica-c2",
-    "prov-eternyr-mistica-c2",
-    "prov-dominum-mistica-c2"
-  ],
+  "concluidas": 43,
+  "pendentes": [],
   "criterio": "Cenas próprias das cartas provisórias solicitadas pelo Claude; preservar as três entregas iniciais e priorizar Valores menos representados, incluindo Primitivum e Místicas. Nenhuma mecânica nova.",
   "porValor": [
     {
@@ -602,6 +594,111 @@
         1483
       ],
       "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-conflituo-aliado-c2-agressivo",
+      "nome": "Mercenário de Serath",
+      "valor": "conflituo",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-aliado-c2-agressivo.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-aliado-c2-agressivo.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-aliado-c2-agressivo.visual.json",
+      "arteModo": "cena",
+      "sha256": "d6ba18cc2497b0ebeeb0952f29327d5954696e6d8e10664ad0997c1b7f3cc08c",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-morbidyum-comprar-c3",
+      "nome": "Velho de Ossos Claros",
+      "valor": "morbidyum",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-comprar-c3.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-comprar-c3.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-comprar-c3.visual.json",
+      "arteModo": "cena",
+      "sha256": "a9e263ff9639c3f761437376804438a5e16dfbfaac7fecc1f2e77d97ee2f27b8",
+      "dimensoes": [
+        1062,
+        1481
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-morbidyum-mistica-c2",
+      "nome": "Porteira da Antessala",
+      "valor": "morbidyum",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c2.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c2.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c2.visual.json",
+      "arteModo": "cena",
+      "sha256": "98a88ee8319798333e0a7b2127fdb608f61b95660d39bbf47e55ae2feabd377e",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-morbidyum-mistica-c4",
+      "nome": "Fantasma em Fila",
+      "valor": "morbidyum",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c4.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c4.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c4.visual.json",
+      "arteModo": "cena",
+      "sha256": "ca0cd05b9ff610894ed8e92f3e67dcb3be91310374c1dc614e6ca4fdf9ad7b03",
+      "dimensoes": [
+        1062,
+        1481
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-cognitium-mistica-c2",
+      "nome": "Escriba do Porto",
+      "valor": "cognitium",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mistica-c2.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mistica-c2.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mistica-c2.visual.json",
+      "arteModo": "cena",
+      "sha256": "2532d71dd25a652a46d7a32497cea148db6aa16c9ddb15d97163f56e6134f249",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-eternyr-mistica-c2",
+      "nome": "Velho Relojoeiro da Vila do Mesmo Dia",
+      "valor": "eternyr",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-mistica-c2.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-mistica-c2.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-mistica-c2.visual.json",
+      "arteModo": "cena",
+      "sha256": "7b6d2943c3be210af9279e7450033dee0f695ed19b6444803447d3f9a35e1e3c",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
+    },
+    {
+      "id": "prov-dominum-mistica-c2",
+      "nome": "Nostrum",
+      "valor": "dominum",
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-mistica-c2.cena-v1.png",
+      "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-mistica-c2.prompt.txt",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-mistica-c2.visual.json",
+      "arteModo": "cena",
+      "sha256": "a877cde8642844ae4baeda441cb4eee6f0af14d8378aac0ba081db210c3c04be",
+      "dimensoes": [
+        1061,
+        1483
+      ],
+      "estado": "entregue_aguardando_avaliacao_do_autor"
     }
   ],
   "galeria": "Arcanoclisma/arte/cartas-rapidas/galeria.html",
@@ -612,5 +709,16 @@
     "Não criar cartas nem mudar regras, custos, Grau ou Valores por causa desta entrega.",
     "Este lote completa artes das cartas provisórias já definidas em tcg/src/cartas-provisorias.ts; a expansão A Mestra dos Dragões não foi alterada.",
     "Preservar PNG nativo como fonte, converter no build quando necessário, e registrar a integração por arquivo."
-  ]
+  ],
+  "atualizadaEm": "2026-10-05T03:22:32.420Z",
+  "avaliacao": {
+    "estado": "aguardando_resposta_do_autor",
+    "solicitadaEm": "2026-10-05T03:22:32.420Z",
+    "opcoes": [
+      "aprovar",
+      "refazer",
+      "parar"
+    ],
+    "naoRepetirPergunta": true
+  }
 }

@@ -1,0 +1,63 @@
+{
+  "id": "prov-morbidyum-mistica-c2",
+  "nome": "Porteira da Antessala",
+  "tipo": "mistica",
+  "valor": "morbidyum",
+  "referencia": "Arcanoclisma/online/public/arte/porteira-da-antessala.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c2.prompt.txt",
+  "cena": "Porteira da Antessala from the approved reference tends a quiet covered stone threshold in a twilight courtyard. Preserve its exact species, face and clothing. A gentle pale-green healing veil moves from its gesture toward a small resting animal near the doorway. Warm terracotta lamp, cool muted blue paving, a bench and a closed wooden door, clean uncluttered scene.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-morbidyum-mistica-c2",
+    "nome": "Porteira da Antessala",
+    "valores": [
+      "morbidyum"
+    ],
+    "tipo": "mistica",
+    "custo": 2,
+    "grau": 1,
+    "velocidade": "findante",
+    "vida": 2,
+    "ativacao": {
+      "custo": 0,
+      "suspende": true,
+      "efeitos": [
+        {
+          "tipo": "curar",
+          "valor": 2,
+          "alvo": "escolhido"
+        }
+      ]
+    },
+    "texto": "Suspenda: cure 2 de dano de um alvo."
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c2.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c2.visual.json",
+  "sha256": "98a88ee8319798333e0a7b2127fdb608f61b95660d39bbf47e55ae2feabd377e",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-dc171626-dd90-4635-95c0-d24cb752bd75.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572402
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

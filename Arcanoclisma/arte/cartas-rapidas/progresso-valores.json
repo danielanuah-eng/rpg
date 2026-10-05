@@ -1,16 +1,19 @@
 {
-  "estado": "em_producao",
+  "estado": "aguardando_avaliacao",
   "meta": 43,
-  "concluidas": 36,
-  "pendentes": [
-    "prov-conflituo-aliado-c2-agressivo",
-    "prov-morbidyum-comprar-c3",
-    "prov-morbidyum-mistica-c2",
-    "prov-morbidyum-mistica-c4",
-    "prov-cognitium-mistica-c2",
-    "prov-eternyr-mistica-c2",
-    "prov-dominum-mistica-c2"
-  ],
+  "concluidas": 43,
+  "pendentes": [],
   "ordem": "rodadas_por_valor_menos_representado",
-  "integracaoClaudeConfirmada": false
+  "integracaoClaudeConfirmada": false,
+  "atualizadaEm": "2026-10-05T03:22:32.420Z",
+  "avaliacao": {
+    "estado": "aguardando_resposta_do_autor",
+    "solicitadaEm": "2026-10-05T03:22:32.420Z",
+    "opcoes": [
+      "aprovar",
+      "refazer",
+      "parar"
+    ],
+    "naoRepetirPergunta": true
+  }
 }

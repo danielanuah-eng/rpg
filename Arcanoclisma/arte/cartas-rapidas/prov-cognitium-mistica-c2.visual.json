@@ -1,0 +1,62 @@
+{
+  "id": "prov-cognitium-mistica-c2",
+  "nome": "Escriba do Porto",
+  "tipo": "mistica",
+  "valor": "cognitium",
+  "referencia": "Arcanoclisma/online/public/arte/escriba-do-porto.webp",
+  "prompt": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mistica-c2.prompt.txt",
+  "cena": "Escriba do Porto from the approved reference works at a broad dockside desk inside an open wooden port office on a rainy afternoon. Preserve its exact species, age, face and clothing. One hand handles an open blank folio while a compact indigo memory fragment floats near the other. Looking intently at the fragment rather than at the viewer. Smooth teal rain outside, muted ochre crates and restrained warm desk lamp.",
+  "definicaoAtualClaude": {
+    "subtipos": [],
+    "arcanoGerado": 1,
+    "cenario": "",
+    "provisoria": true,
+    "id": "prov-cognitium-mistica-c2",
+    "nome": "Escriba do Porto",
+    "valores": [
+      "cognitium"
+    ],
+    "tipo": "mistica",
+    "custo": 2,
+    "grau": 1,
+    "velocidade": "findante",
+    "vida": 3,
+    "ativacao": {
+      "custo": 2,
+      "suspende": true,
+      "efeitos": [
+        {
+          "tipo": "comprar",
+          "valor": 1
+        }
+      ]
+    },
+    "texto": "Suspenda e pague 2: compre 1 carta."
+  },
+  "raridade": "comum",
+  "arteAlternativa": false,
+  "estado": "entregue_aguardando_avaliacao_do_autor",
+  "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mistica-c2.cena-v1.png",
+  "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mistica-c2.visual.json",
+  "sha256": "2532d71dd25a652a46d7a32497cea148db6aa16c9ddb15d97163f56e6134f249",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a0f911-59e9-7d32-b27a-67ead45442f5\\exec-d8363f33-89b0-4a96-8dee-4fa73ea690b8.png",
+  "ferramenta": "image_gen.imagegen integrada",
+  "modo": "built-in",
+  "baseInspecionada": true,
+  "fundo": "Cena completa opaca",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0,
+    "total": 1572402
+  },
+  "dimensoesEntregues": "PNG nativo preservado",
+  "proporcaoSolicitada": "63:88",
+  "integracaoClaudeConfirmada": false,
+  "alteracoesMecanicas": false
+}

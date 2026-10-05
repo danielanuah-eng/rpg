@@ -1,9 +1,9 @@
 {
   "tarefaId": "cartas-provisorias-v1",
   "versao": 2,
-  "estado": "em_producao",
+  "estado": "aguardando_avaliacao",
   "meta": 46,
-  "concluidas": 39,
+  "concluidas": 46,
   "escopo": "Todas as cartas do briefing atual, com as três cenas iniciais preservadas.",
   "ordem": [
     "prov-sublimeyn-etereo-c2",
@@ -372,62 +372,73 @@
       "id": "prov-conflituo-aliado-c2-agressivo",
       "nome": "Mercenário de Serath",
       "referencia": "Arcanoclisma/online/public/arte/mercenario-de-serath.webp",
-      "arquivo": null,
-      "registro": null,
-      "estado": "pendente"
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-aliado-c2-agressivo.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-conflituo-aliado-c2-agressivo.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
     },
     {
       "id": "prov-morbidyum-comprar-c3",
       "nome": "Velho de Ossos Claros",
       "referencia": "Arcanoclisma/online/public/arte/velho-de-ossos-claros.webp",
-      "arquivo": null,
-      "registro": null,
-      "estado": "pendente"
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-comprar-c3.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-comprar-c3.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
     },
     {
       "id": "prov-morbidyum-mistica-c2",
       "nome": "Porteira da Antessala",
       "referencia": "Arcanoclisma/online/public/arte/porteira-da-antessala.webp",
-      "arquivo": null,
-      "registro": null,
-      "estado": "pendente"
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c2.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c2.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
     },
     {
       "id": "prov-morbidyum-mistica-c4",
       "nome": "Fantasma em Fila",
       "referencia": "Arcanoclisma/online/public/arte/fantasma-em-fila.webp",
-      "arquivo": null,
-      "registro": null,
-      "estado": "pendente"
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c4.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-morbidyum-mistica-c4.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
     },
     {
       "id": "prov-cognitium-mistica-c2",
       "nome": "Escriba do Porto",
       "referencia": "Arcanoclisma/online/public/arte/escriba-do-porto.webp",
-      "arquivo": null,
-      "registro": null,
-      "estado": "pendente"
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mistica-c2.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-cognitium-mistica-c2.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
     },
     {
       "id": "prov-eternyr-mistica-c2",
       "nome": "Velho Relojoeiro da Vila do Mesmo Dia",
       "referencia": "Arcanoclisma/online/public/arte/velho-relojoeiro-da-vila-do-mesmo-dia.webp",
-      "arquivo": null,
-      "registro": null,
-      "estado": "pendente"
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-mistica-c2.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-eternyr-mistica-c2.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
     },
     {
       "id": "prov-dominum-mistica-c2",
       "nome": "Nostrum",
       "referencia": "Arcanoclisma/online/public/arte/nostrum.webp",
-      "arquivo": null,
-      "registro": null,
-      "estado": "pendente"
+      "arquivo": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-mistica-c2.cena-v1.png",
+      "registro": "Arcanoclisma/arte/cartas-rapidas/prov-dominum-mistica-c2.visual.json",
+      "estado": "entregue_aguardando_avaliacao_do_autor"
     }
   ],
   "aprovacaoDoAutor": "aguardando_avaliacao_visual",
   "publicacaoSiteAutorizada": false,
   "efeitos": "Produzir após concluir as cenas; não estão incluídos nestes PNGs.",
   "raridade": "Somente estética; seguir o briefing.",
-  "integracaoClaudeConfirmada": false
+  "integracaoClaudeConfirmada": false,
+  "atualizadaEm": "2026-10-05T03:22:32.420Z",
+  "avaliacao": {
+    "estado": "aguardando_resposta_do_autor",
+    "solicitadaEm": "2026-10-05T03:22:32.420Z",
+    "opcoes": [
+      "aprovar",
+      "refazer",
+      "parar"
+    ],
+    "naoRepetirPergunta": true
+  }
 }
