@@ -18,4 +18,6 @@ Conferência com Edge headless e o renderizador real da mesa, usando estado de t
 
 Nos cinco casos: tabuleiro dentro do palco em ambos os eixos, pilhas à esquerda, Grau à direita, página sem rolagem horizontal e zero erros JavaScript. 28 testes online passaram e o build completo terminou num checkout isolado. Capturas em `composicao-2026-10-09/pc.png` e `celular.png`. O painel inferior do celular conserva rolagem interna para chegar à pilha.
 
-Estado: corrigido e conferido localmente; publicação no serviço hospedado ainda não confirmada. Claude pode integrar/publicar esta entrega conforme a coordenação do projeto. A expansão continua bloqueada para jogo.
+Publicado pelo Codex em 09/10/2026, por pedido explícito do autor. Cloudflare confirmou o deploy no site https://arcanoclisma.arcanoclisma-online.workers.dev, versão `b3005a21-510b-4903-ac3c-8e3eb33bab64`. Publicação a partir do checkout isolado com os arquivos da entrega `d41fee1`; os 28 testes online também passaram nesse checkout. A expansão continua bloqueada para jogo.
+
+Conferência após publicação: CSS v21, `mesa.js` e `index.html` retornaram HTTP 200 e SHA-256 idêntico aos arquivos testados. Não foi realizada partida com duas contas reais em produção nesta etapa.
