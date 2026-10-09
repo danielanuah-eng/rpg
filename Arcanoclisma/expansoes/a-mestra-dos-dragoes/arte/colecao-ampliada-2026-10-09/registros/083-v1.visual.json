@@ -1,0 +1,37 @@
+{
+  "id": "083",
+  "nomeVisual": "Santuário da Muda",
+  "slug": "santuario-da-muda",
+  "categoriaVisual": "estrutura",
+  "cena": "Vista por dentro de um arco natural, dragões livres.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/083-v1.prompt.txt",
+  "arquivo": "imagens/083-santuario-da-muda-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-319331bd-b103-4954-93bf-b3a98f1620c5.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "sha256": "3d9d092a87669ba7b00a25b401b218c4dbff9544bba026faae841ae73c91ffd4",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 17.8,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

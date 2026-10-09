@@ -1,0 +1,38 @@
+{
+  "id": "068",
+  "nomeVisual": "Corrente Desfeita",
+  "slug": "corrente-desfeita",
+  "categoriaVisual": "magia_draconica",
+  "cena": "Dominum, Ciantia abre amarras numa arena vazia.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/068-v1.prompt.txt",
+  "referencias": [],
+  "arquivo": "imagens/068-corrente-desfeita-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-4f9f8d35-54a0-4066-b283-655961a60783.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "f8e3568f70d0d2ac281c392636c342017f1ea0e55602af934a3c146200f4ab43",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 21.6,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "075",
+  "nomeVisual": "Escudo da Muda",
+  "slug": "escudo-da-muda",
+  "categoriaVisual": "equipamento",
+  "cena": "Escudo usado numa escadaria durante invasão.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/075-v1.prompt.txt",
+  "arquivo": "imagens/075-escudo-da-muda-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-ccda6f74-0b4b-4e98-a865-76826054e442.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "829832454ff73b23fd018431f40e11ea52151319552b561a90410063e1008c71",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 32.4,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "082",
+  "nomeVisual": "Arquivo das Catástrofes",
+  "slug": "arquivo-das-catastrofes",
+  "categoriaVisual": "estrutura",
+  "cena": "Vista do mezanino sobre mapas da invasão.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/082-v1.prompt.txt",
+  "arquivo": "imagens/082-arquivo-das-catastrofes-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-79d389ba-4783-4006-992d-28567eaf4f1d.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "sha256": "ad0ad0e081f7c4e92ce8234fbea4f0d71970b0014cc1ab653807f9e49fbfc709",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 20.8,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

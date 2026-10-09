@@ -1,0 +1,37 @@
+{
+  "id": "089",
+  "nomeVisual": "Fronteira de Escamas",
+  "slug": "fronteira-de-escamas",
+  "categoriaVisual": "mistica",
+  "cena": "Dominum, restrição num limite territorial sem ferimento.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/089-v1.prompt.txt",
+  "arquivo": "imagens/089-fronteira-de-escamas-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-1534d305-2d55-4a21-aabd-61feb284f856.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "259344aabc6d52f7bb08743182047de8011692f6bfa15213c8ab5c475e985d18",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 20.4,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

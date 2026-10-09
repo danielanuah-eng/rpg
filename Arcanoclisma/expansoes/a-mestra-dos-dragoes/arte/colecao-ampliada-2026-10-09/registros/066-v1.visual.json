@@ -1,0 +1,38 @@
+{
+  "id": "066",
+  "nomeVisual": "Nove Correntes de um Céu",
+  "slug": "nove-correntes-de-um-ceu",
+  "categoriaVisual": "magia_draconica",
+  "cena": "Ciantia articula todos os Valores sem arco-íris saturado.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/066-v1.prompt.txt",
+  "referencias": [],
+  "arquivo": "imagens/066-nove-correntes-de-um-ceu-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-88dee578-9ae9-49e4-a6de-39b12f4f2abe.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "99ba714848ba92487f7f08dd32909155ee055f2943b745a44e20fd652a2d3614",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 21.4,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "085",
+  "nomeVisual": "Silêncio sobre o Viveiro",
+  "slug": "silencio-sobre-o-viveiro",
+  "categoriaVisual": "mistica",
+  "cena": "Véu de silêncio com oposição cautelosa aos dragões.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/085-v1.prompt.txt",
+  "arquivo": "imagens/085-silencio-sobre-o-viveiro-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-e63a0d94-2802-4713-840a-a4c972ac1cd4.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "sha256": "b6848ea5b4fb6536c81558fb4e17216ed5c9bc2d87a2cada6390a4db1d42211c",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 24.5,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

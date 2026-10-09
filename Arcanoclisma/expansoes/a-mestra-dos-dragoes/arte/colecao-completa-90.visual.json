@@ -1,0 +1,1315 @@
+{
+  "id": "mestra-dos-dragoes-90-artes-2026-10-09",
+  "estado": "aguardando_avaliacao",
+  "total": 90,
+  "origem": "25 anteriores + 65 novas",
+  "liberadaParaJogo": false,
+  "pushAutorizado": true,
+  "galeria": "colecao-ampliada-2026-10-09/galeria.html",
+  "escolhasDoAutor": {
+    "primitivum": "047-v1",
+    "alvorum": [
+      {
+        "estudo": "043",
+        "arte": "043-v1"
+      },
+      {
+        "estudo": "049",
+        "arte": "043-v2"
+      }
+    ]
+  },
+  "animacoes": "pendentes de efeito e integração autorizados; registros individuais mantêm ID e hash",
+  "itens": [
+    {
+      "id": "025",
+      "arquivo": "imagens/025-ciantia-infancia-e-gramael-v2.png",
+      "prompt": "prompts/025-v2.prompt.txt",
+      "registro": "registros/025-v2.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "026",
+      "arquivo": "imagens/026-gramael-e-o-limite-v2.png",
+      "prompt": "prompts/026-v2.prompt.txt",
+      "registro": "registros/026-v2.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "027",
+      "arquivo": "imagens/027-ciantia-escola-de-magia-v1.png",
+      "prompt": "prompts/027-v1.prompt.txt",
+      "registro": "registros/027-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "028",
+      "arquivo": "imagens/028-ciantia-e-valiant-v2.png",
+      "prompt": "prompts/028-v2.prompt.txt",
+      "registro": "registros/028-v2.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "029",
+      "arquivo": "imagens/029-valiant-cicatriz-v1.png",
+      "prompt": "prompts/029-v1.prompt.txt",
+      "registro": "registros/029-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "030",
+      "arquivo": "imagens/030-valiant-dominum-v1.png",
+      "prompt": "prompts/030-v1.prompt.txt",
+      "registro": "registros/030-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "031",
+      "arquivo": "imagens/031-ciantia-grande-conjuradora-v1.png",
+      "prompt": "prompts/031-v1.prompt.txt",
+      "registro": "registros/031-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "032",
+      "arquivo": "imagens/032-ciantia-invasao-v1.png",
+      "prompt": "prompts/032-v1.prompt.txt",
+      "registro": "registros/032-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "033",
+      "arquivo": "imagens/033-monstro-da-invasao-v1.png",
+      "prompt": "prompts/033-v1.prompt.txt",
+      "registro": "registros/033-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "034",
+      "arquivo": "imagens/034-ovos-runicos-v1.png",
+      "prompt": "prompts/034-v1.prompt.txt",
+      "registro": "registros/034-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "035",
+      "arquivo": "imagens/035-nova-conjuradora-draconica-v1.png",
+      "prompt": "prompts/035-v1.prompt.txt",
+      "registro": "registros/035-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "036",
+      "arquivo": "imagens/036-ciantia-dragao-antigo-v1.png",
+      "prompt": "prompts/036-v1.prompt.txt",
+      "registro": "registros/036-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "037",
+      "arquivo": "imagens/037-ciantia-magia-escondida-v1.png",
+      "prompt": "prompts/037-v1.prompt.txt",
+      "registro": "registros/037-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "038",
+      "arquivo": "imagens/038-ciantia-confianca-em-risco-v2.png",
+      "prompt": "prompts/038-v2.prompt.txt",
+      "registro": "registros/038-v2.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "039",
+      "arquivo": "imagens/039-dragao-conflituo-crista-v1.png",
+      "prompt": "prompts/039-v1.prompt.txt",
+      "registro": "registros/039-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "040",
+      "arquivo": "imagens/040-dragao-sublimeyn-fita-v1.png",
+      "prompt": "prompts/040-v1.prompt.txt",
+      "registro": "registros/040-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "041",
+      "arquivo": "imagens/041-dragao-dominum-coroa-v2.png",
+      "prompt": "prompts/041-v2.prompt.txt",
+      "registro": "registros/041-v2.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "042",
+      "arquivo": "imagens/042-dragao-persona-leque-v2.png",
+      "prompt": "prompts/042-v2.prompt.txt",
+      "registro": "registros/042-v2.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "043",
+      "arquivo": "imagens/043-dragao-alvorum-carvao-v1.png",
+      "prompt": "prompts/043-v1.prompt.txt",
+      "registro": "registros/043-v1.visual.json",
+      "estado": "selecionada_pelo_autor_aguardando_carta"
+    },
+    {
+      "id": "044",
+      "arquivo": "imagens/044-dragao-morbidyum-casulo-v1.png",
+      "prompt": "prompts/044-v1.prompt.txt",
+      "registro": "registros/044-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "045",
+      "arquivo": "imagens/045-dragao-cognitium-prisma-v2.png",
+      "prompt": "prompts/045-v2.prompt.txt",
+      "registro": "registros/045-v2.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "046",
+      "arquivo": "imagens/046-dragao-eternyr-antigo-v1.png",
+      "prompt": "prompts/046-v1.prompt.txt",
+      "registro": "registros/046-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "047",
+      "arquivo": "imagens/047-dragao-primitivum-raiz-v1.png",
+      "prompt": "prompts/047-v1.prompt.txt",
+      "registro": "registros/047-v1.visual.json",
+      "estado": "aprovada_pelo_autor"
+    },
+    {
+      "id": "048",
+      "arquivo": "imagens/048-criatura-casco-sino-v1.png",
+      "prompt": "prompts/048-v1.prompt.txt",
+      "registro": "registros/048-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "049",
+      "arquivo": "imagens/043-dragao-alvorum-carvao-v2.png",
+      "prompt": "prompts/043-v2.prompt.txt",
+      "registro": "registros/049-v2.visual.json",
+      "estado": "selecionada_pelo_autor_aguardando_carta"
+    },
+    {
+      "id": "050",
+      "nomeVisual": "Boca da Cisterna",
+      "categoriaVisual": "monstro",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/050-boca-da-cisterna-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/050-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/050-v1.visual.json",
+      "sha256": "700fe882212d210e56ffbdf8ea191d2bfdfc921e153dee36bae134e9adbf91a0",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "051",
+      "nomeVisual": "Rastejante de Vidro Fosco",
+      "categoriaVisual": "monstro",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/051-rastejante-de-vidro-fosco-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/051-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/051-v1.visual.json",
+      "sha256": "56ec32fd7af47169a38ed0c181642ab1dbabd51b8a4774824549e37d83961972",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "052",
+      "nomeVisual": "Vespa de Sino",
+      "categoriaVisual": "monstro",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/052-vespa-de-sino-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/052-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/052-v1.visual.json",
+      "sha256": "d7e109a591872477006844e2d055891f35e491486d49b84291862a7c8841f970",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "053",
+      "nomeVisual": "Caramujo de Basalto",
+      "categoriaVisual": "monstro",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/053-caramujo-de-basalto-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/053-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/053-v1.visual.json",
+      "sha256": "3f2ef6da6cfede7999cb9a9d8ad62e13eb4b054a81cc44c1245f3e15691e53e3",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "054",
+      "nomeVisual": "Mandíbula de Juncos",
+      "categoriaVisual": "monstro",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/054-mandibula-de-juncos-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/054-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/054-v1.visual.json",
+      "sha256": "f07d281d581274cae2844834726e0bca2482e529e45a96fed3cc7c679e131ff3",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "055",
+      "nomeVisual": "Gigante dos Degraus",
+      "categoriaVisual": "monstro",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/055-gigante-dos-degraus-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/055-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/055-v1.visual.json",
+      "sha256": "5923b9f7b3d38cd3c00ee48c2e6df7a02f3677d21fee505a4d65e6fe20c96283",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "056",
+      "nomeVisual": "Peixe de Telhado",
+      "categoriaVisual": "monstro",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/056-peixe-de-telhado-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/056-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/056-v1.visual.json",
+      "sha256": "2aac1d227735847ceefeaa8c1af3776b214ec681e6c7c4a8062cbf9f82077ba3",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "057",
+      "nomeVisual": "Coletor de Ovos",
+      "categoriaVisual": "monstro",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/057-coletor-de-ovos-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/057-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/057-v1.visual.json",
+      "sha256": "a7598a1001fa2d3557b4444f1ec7fdf8578a46b93a33c7fbdd1bef226375b1b9",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "058",
+      "nomeVisual": "Mariposa do Breu",
+      "categoriaVisual": "monstro",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/058-mariposa-do-breu-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/058-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/058-v1.visual.json",
+      "sha256": "a816b1e0995a5711a2fc400dd171199d5f11e69a5329e9b5e05cef455df07df1",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "059",
+      "nomeVisual": "Manta de Pedreira",
+      "categoriaVisual": "monstro",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/059-manta-de-pedreira-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/059-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/059-v1.visual.json",
+      "sha256": "eb75f9d86f0921ec7e1fc26485dca3a0316bac7886477b02818638220e7f5a64",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "060",
+      "nomeVisual": "Ninho Andarilho",
+      "categoriaVisual": "monstro",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/060-ninho-andarilho-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/060-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/060-v1.visual.json",
+      "sha256": "9b3db1693c4e16f9cb602ac3a5774741147e31eaf83085b9afbde3447c17067b",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "061",
+      "nomeVisual": "Devorador de Ecos",
+      "categoriaVisual": "monstro",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/061-devorador-de-ecos-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/061-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/061-v1.visual.json",
+      "sha256": "4e8130ee125650a7978510b737efe17a9e215154251b30038a02921444a7d7e7",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "062",
+      "nomeVisual": "Asas sobre a Inundação",
+      "categoriaVisual": "magia_draconica",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/062-asas-sobre-a-inundacao-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/062-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/062-v1.visual.json",
+      "sha256": "43b49b4983db58f19e876657323623f768e13b8832ab80634702491a0fae0a69",
+      "dimensoes": [
+        1061,
+        1483
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "063",
+      "nomeVisual": "Muralha de Escamas",
+      "categoriaVisual": "magia_draconica",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/063-muralha-de-escamas-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/063-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/063-v1.visual.json",
+      "sha256": "9577467571bdf24a881c0b5a21a292514b427f1882a19dd6345fdd015faa4c35",
+      "dimensoes": [
+        1061,
+        1483
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "064",
+      "nomeVisual": "A Escama que Floresce",
+      "categoriaVisual": "magia_draconica",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/064-a-escama-que-floresce-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/064-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/064-v1.visual.json",
+      "sha256": "f721c054e3f3c0a525aa93720de369d447ee920352983ed37de4c7949c85f50b",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "065",
+      "nomeVisual": "Memória da Primeira Asa",
+      "categoriaVisual": "magia_draconica",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/065-memoria-da-primeira-asa-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/065-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/065-v1.visual.json",
+      "sha256": "5f5af73ee6419afa0a8088e6961d01c3b83a60d1a1d53b1432033aa7a83687e5",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "066",
+      "nomeVisual": "Nove Correntes de um Céu",
+      "categoriaVisual": "magia_draconica",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/066-nove-correntes-de-um-ceu-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/066-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/066-v1.visual.json",
+      "sha256": "99ba714848ba92487f7f08dd32909155ee055f2943b745a44e20fd652a2d3614",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "067",
+      "nomeVisual": "Suspensão do Desabamento",
+      "categoriaVisual": "magia_draconica",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/067-suspensao-do-desabamento-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/067-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/067-v1.visual.json",
+      "sha256": "6f1cd7dd5d598a15251bcdff31adb6572bbb2a8c33f567de9c06f3630da26a5b",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "068",
+      "nomeVisual": "Corrente Desfeita",
+      "categoriaVisual": "magia_draconica",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/068-corrente-desfeita-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/068-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/068-v1.visual.json",
+      "sha256": "f8e3568f70d0d2ac281c392636c342017f1ea0e55602af934a3c146200f4ab43",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "069",
+      "nomeVisual": "O Vínculo que Atravessa",
+      "categoriaVisual": "magia_draconica",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/069-o-vinculo-que-atravessa-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/069-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/069-v1.visual.json",
+      "sha256": "4f43ecb4de92d7014a877242a5210f70401dc3c3c9938408c4f381e975b2801d",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "070",
+      "nomeVisual": "Lança de Escama",
+      "categoriaVisual": "equipamento",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/070-lanca-de-escama-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/070-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/070-v1.visual.json",
+      "sha256": "a97b5113c010e736e07f1bab6484eddcfab5fbee26f41f5b7bcbf935cdf54d83",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "071",
+      "nomeVisual": "Manto de Escamas Mudas",
+      "categoriaVisual": "equipamento",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/071-manto-de-escamas-mudas-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/071-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/071-v1.visual.json",
+      "sha256": "b57fede74a101f6c5de2df0b7e7dd72450f75e37420df811f852aeb30cd676a5",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "072",
+      "nomeVisual": "Lentes do Ovo",
+      "categoriaVisual": "equipamento",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/072-lentes-do-ovo-v2.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/072-v2.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/072-v2.visual.json",
+      "sha256": "42f4ffa0367c337fcf2ffd8480afd5bd28e26b145e54f5750c632d5f78991f3d",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "073",
+      "nomeVisual": "Incubadora Portátil",
+      "categoriaVisual": "equipamento",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/073-incubadora-portatil-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/073-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/073-v1.visual.json",
+      "sha256": "d58daa63043c095d416a45697266b0f0881dbb735a04b426ceead3bcaba4d655",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "074",
+      "nomeVisual": "Diapasão da Primeira Asa",
+      "categoriaVisual": "equipamento",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/074-diapasao-da-primeira-asa-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/074-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/074-v1.visual.json",
+      "sha256": "89d4c602a03c1c84cd1ecb9bee9d4903865209bab5b4176d47ad178365b61f86",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "075",
+      "nomeVisual": "Escudo da Muda",
+      "categoriaVisual": "equipamento",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/075-escudo-da-muda-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/075-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/075-v1.visual.json",
+      "sha256": "829832454ff73b23fd018431f40e11ea52151319552b561a90410063e1008c71",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "076",
+      "nomeVisual": "Luvas de Contenção",
+      "categoriaVisual": "equipamento",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/076-luvas-de-contencao-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/076-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/076-v1.visual.json",
+      "sha256": "55ccd73f346a5529ab011b4d57c9092c3512a27766c3c90453a3277e85e0650e",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "077",
+      "nomeVisual": "Compasso de Rotas Dracônicas",
+      "categoriaVisual": "equipamento",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/077-compasso-de-rotas-draconicas-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/077-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/077-v1.visual.json",
+      "sha256": "bfa746fdd7cbea059332af6b25f0b4ec86dfdc8fc02cf8892fba09c25933e727",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "078",
+      "nomeVisual": "Viveiro entre os Morros",
+      "categoriaVisual": "estrutura",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/078-viveiro-entre-os-morros-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/078-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/078-v1.visual.json",
+      "sha256": "96f151c5325cd2c56c19d105c550ee9e4af3bb7bfb20c03136baa4586b6d21b9",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "079",
+      "nomeVisual": "Tribunal das Asas",
+      "categoriaVisual": "estrutura",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/079-tribunal-das-asas-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/079-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/079-v1.visual.json",
+      "sha256": "5effbca348aeb389133670e1a3ea68189058b4555046dda77fe42de3adaafd18",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "080",
+      "nomeVisual": "Torre de Vigília Antidracônica",
+      "categoriaVisual": "estrutura",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/080-torre-de-vigilia-antidraconica-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/080-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/080-v1.visual.json",
+      "sha256": "6b0860cdf9bbf74d21237feace612512ad5cbd49b11729523ca6d722769bb5d2",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "081",
+      "nomeVisual": "Estufa das Cascas",
+      "categoriaVisual": "estrutura",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/081-estufa-das-cascas-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/081-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/081-v1.visual.json",
+      "sha256": "f765a6f1a2a12ae1e8f2555dc9095e4a8f81f79da0b67cf1a6dc9b7189d912cc",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "082",
+      "nomeVisual": "Arquivo das Catástrofes",
+      "categoriaVisual": "estrutura",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/082-arquivo-das-catastrofes-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/082-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/082-v1.visual.json",
+      "sha256": "ad0ad0e081f7c4e92ce8234fbea4f0d71970b0014cc1ab653807f9e49fbfc709",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "083",
+      "nomeVisual": "Santuário da Muda",
+      "categoriaVisual": "estrutura",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/083-santuario-da-muda-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/083-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/083-v1.visual.json",
+      "sha256": "3d9d092a87669ba7b00a25b401b218c4dbff9544bba026faae841ae73c91ffd4",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "084",
+      "nomeVisual": "Pacto das Cascas Vazias",
+      "categoriaVisual": "mistica",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/084-pacto-das-cascas-vazias-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/084-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/084-v1.visual.json",
+      "sha256": "11433a4bff0690aa28f375883bd98319bc568baef66980ecf53eccf1e9f65d5e",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "085",
+      "nomeVisual": "Silêncio sobre o Viveiro",
+      "categoriaVisual": "mistica",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/085-silencio-sobre-o-viveiro-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/085-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/085-v1.visual.json",
+      "sha256": "b6848ea5b4fb6536c81558fb4e17216ed5c9bc2d87a2cada6390a4db1d42211c",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "086",
+      "nomeVisual": "Sombra que Guarda o Ovo",
+      "categoriaVisual": "mistica",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/086-sombra-que-guarda-o-ovo-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/086-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/086-v1.visual.json",
+      "sha256": "040a0a09c3da478bedc22d5f3a48b70fb3cdece9ba794a33506fc1c69ff4a5d8",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "087",
+      "nomeVisual": "Estação que Não Termina",
+      "categoriaVisual": "mistica",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/087-estacao-que-nao-termina-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/087-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/087-v1.visual.json",
+      "sha256": "54a8e671d08a239fcffd2c12cc69b4b12f26709044df536859b427a58b67c730",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "088",
+      "nomeVisual": "Vigília das Escamas Mortas",
+      "categoriaVisual": "mistica",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/088-vigilia-das-escamas-mortas-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/088-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/088-v1.visual.json",
+      "sha256": "a440237cc15ac8051aadac6de0c682d310d1eea77caa72b55ef777fa8115bfbb",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "089",
+      "nomeVisual": "Fronteira de Escamas",
+      "categoriaVisual": "mistica",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/089-fronteira-de-escamas-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/089-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/089-v1.visual.json",
+      "sha256": "259344aabc6d52f7bb08743182047de8011692f6bfa15213c8ab5c475e985d18",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": null,
+      "postura": null,
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "090",
+      "nomeVisual": "Iria, Forjadora de Marés",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/090-iria-forjadora-de-mares-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/090-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/090-v1.visual.json",
+      "sha256": "a8ebdcb2cb35ac88ca5fa4117c5a536bea69f687b9a4b26173f4888fd41da49b",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": [
+        "conflituo",
+        "sublimeyn"
+      ],
+      "postura": "aliada",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "091",
+      "nomeVisual": "Serena, Voz das Barricadas",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/091-serena-voz-das-barricadas-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/091-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/091-v1.visual.json",
+      "sha256": "6fe048eb76ec60467ee8c390ddee54c27775585722713539a4c03c977308c13a",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": [
+        "conflituo",
+        "persona"
+      ],
+      "postura": "contra_dragoes",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "092",
+      "nomeVisual": "Darian, Vigia do Eclipse",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/092-darian-vigia-do-eclipse-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/092-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/092-v1.visual.json",
+      "sha256": "e4e9746477abb0e67eaefe77f89abeccb90ea78a8b5e30a6f53cddfaa3b5cbec",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": [
+        "conflituo",
+        "alvorum"
+      ],
+      "postura": "contra_dragoes",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "093",
+      "nomeVisual": "Maira, Guardiã dos Ausentes",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/093-maira-guardia-dos-ausentes-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/093-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/093-v1.visual.json",
+      "sha256": "61ac6868402ed264182906cac6e28cce0051c11d40883aa341f8968990b285bd",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": [
+        "conflituo",
+        "morbidyum"
+      ],
+      "postura": "ambivalente",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "094",
+      "nomeVisual": "Orven, Estrategista das Asas",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/094-orven-estrategista-das-asas-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/094-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/094-v1.visual.json",
+      "sha256": "5d74f8a3e54c8f5f9b84ccc180227516d4a18ef41fea45c643930c338adb4dac",
+      "dimensoes": [
+        1062,
+        1481
+      ],
+      "valores": [
+        "conflituo",
+        "cognitium"
+      ],
+      "postura": "contra_dragoes",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "095",
+      "nomeVisual": "Hestia, Duelista do Instante",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/095-hestia-duelista-do-instante-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/095-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/095-v1.visual.json",
+      "sha256": "b3496e6967275bc2b792d5687707b52072c6c5b779084bf456638366c73e2404",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "valores": [
+        "conflituo",
+        "eternyr"
+      ],
+      "postura": "aliada",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "096",
+      "nomeVisual": "Teren, Carcereiro de Mercúrio",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/096-teren-carcereiro-de-mercurio-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/096-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/096-v1.visual.json",
+      "sha256": "0eab2ca8d9bfff1f3fffe322461e98acdcb9ca218f628c569c91cc89e432a152",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "valores": [
+        "sublimeyn",
+        "dominum"
+      ],
+      "postura": "contra_dragoes",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "097",
+      "nomeVisual": "Nália, Alquimista do Luto",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/097-nalia-alquimista-do-luto-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/097-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/097-v1.visual.json",
+      "sha256": "09c7d866f15f6ad75bdbc4257c168aa3137922f6e096e9a8491922da02c1b11c",
+      "dimensoes": [
+        1062,
+        1481
+      ],
+      "valores": [
+        "sublimeyn",
+        "morbidyum"
+      ],
+      "postura": "aliada",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "098",
+      "nomeVisual": "Caldris, Pesquisador das Cascas",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/098-caldris-pesquisador-das-cascas-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/098-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/098-v1.visual.json",
+      "sha256": "77d8a9286a512e6c1d9810d9cebab7206de9418d5aaa8e238e73352d8e5b6652",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": [
+        "sublimeyn",
+        "cognitium"
+      ],
+      "postura": "contra_dragoes",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "099",
+      "nomeVisual": "Elda, Restauradora de Instantes",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/099-elda-restauradora-de-instantes-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/099-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/099-v1.visual.json",
+      "sha256": "bbf80370f22673fc33307d59d35af1e7adaaab7791eb2608ce74a0c71de6301e",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": [
+        "sublimeyn",
+        "eternyr"
+      ],
+      "postura": "aliada",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "100",
+      "nomeVisual": "Vesna, Tecelã do Mangue",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/100-vesna-tecela-do-mangue-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/100-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/100-v1.visual.json",
+      "sha256": "ced1952ded87852554649ce0caec80b67551d11279436bec0ecf41ce0003ba53",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": [
+        "sublimeyn",
+        "primitivum"
+      ],
+      "postura": "aliada",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "101",
+      "nomeVisual": "Amara, Porta-Voz do Limite",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/101-amara-porta-voz-do-limite-v2.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/101-v2.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/101-v2.visual.json",
+      "sha256": "f37d3edabdb4e57f49380ff9d74f37997466dc125d609346e121a300ca1a8c20",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": [
+        "dominum",
+        "persona"
+      ],
+      "postura": "contra_dragoes",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "102",
+      "nomeVisual": "Rudek, Guardião do Pórtico",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/102-rudek-guardiao-do-portico-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/102-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/102-v1.visual.json",
+      "sha256": "445f74c86c426978a85537416a870f29e688b045755bc3ac4369e4609ce61164",
+      "dimensoes": [
+        1061,
+        1483
+      ],
+      "valores": [
+        "dominum",
+        "alvorum"
+      ],
+      "postura": "contra_dragoes",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "103",
+      "nomeVisual": "Sáira, Custódia das Memórias",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/103-saira-custodia-das-memorias-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/103-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/103-v1.visual.json",
+      "sha256": "69a2d97dd618695fce6bd78575e33688c165fe944b3013e784458993edeb3c6d",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": [
+        "dominum",
+        "morbidyum"
+      ],
+      "postura": "ambivalente",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "104",
+      "nomeVisual": "Brann, Guarda da Reserva",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/104-brann-guarda-da-reserva-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/104-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/104-v1.visual.json",
+      "sha256": "859bdd0e15a33ccb7ed14bb11100a026e949daa7a163d4450ff8727b93111949",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": [
+        "dominum",
+        "primitivum"
+      ],
+      "postura": "ambivalente",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "105",
+      "nomeVisual": "Liora, Mediadora do Crepúsculo",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/105-liora-mediadora-do-crepusculo-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/105-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/105-v1.visual.json",
+      "sha256": "c5ce74e17eb6617d378a456443a8301b8eea9f6d909ac8e47110c4b592c9bbb9",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "valores": [
+        "persona",
+        "alvorum"
+      ],
+      "postura": "aliada",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "106",
+      "nomeVisual": "Iven, Professor de Vínculos",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/106-iven-professor-de-vinculos-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/106-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/106-v1.visual.json",
+      "sha256": "24b9f862177574ffa74dc1af776141d1abeb115d852839bd21ebdd7c58b68238",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": [
+        "persona",
+        "cognitium"
+      ],
+      "postura": "aliada",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "107",
+      "nomeVisual": "Naíma, Criadora dos Filhotes",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/107-naima-criadora-dos-filhotes-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/107-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/107-v1.visual.json",
+      "sha256": "7f918f234562affd0f9db32e3c51ea82d888ef5f82aef1ac40a50255ffc64d11",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": [
+        "persona",
+        "primitivum"
+      ],
+      "postura": "aliada",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "108",
+      "nomeVisual": "Odran, Vigia dos Vestígios",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/108-odran-vigia-dos-vestigios-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/108-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/108-v1.visual.json",
+      "sha256": "63444d5d8616af7c73b87758891649a60518bc6a15583095e6c65840c233e505",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "valores": [
+        "alvorum",
+        "morbidyum"
+      ],
+      "postura": "ambivalente",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "109",
+      "nomeVisual": "Tália, Leitura do Eclipse",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/109-talia-leitura-do-eclipse-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/109-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/109-v1.visual.json",
+      "sha256": "7033f70ba79983beb81978c8203898e17cd91772d0980b188017f2464af0de3e",
+      "dimensoes": [
+        1062,
+        1482
+      ],
+      "valores": [
+        "alvorum",
+        "cognitium"
+      ],
+      "postura": "ambivalente",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "110",
+      "nomeVisual": "Erian, Guardião do Ocaso",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/110-erian-guardiao-do-ocaso-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/110-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/110-v1.visual.json",
+      "sha256": "f93c1792ab6af04026d62135c1676cac5cfa780f1f42a63d48e584a0283f2635",
+      "dimensoes": [
+        1061,
+        1483
+      ],
+      "valores": [
+        "alvorum",
+        "eternyr"
+      ],
+      "postura": "aliada",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "111",
+      "nomeVisual": "Tessa, Cronista das Almas",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/111-tessa-cronista-das-almas-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/111-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/111-v1.visual.json",
+      "sha256": "c13b371838771cd8a8e52f8076a5d3f235ffa610668cbda1500d8bdb4c4705ec",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": [
+        "morbidyum",
+        "eternyr"
+      ],
+      "postura": "ambivalente",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "112",
+      "nomeVisual": "Mauro, Cuidador do Ciclo",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/112-mauro-cuidador-do-ciclo-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/112-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/112-v1.visual.json",
+      "sha256": "f8464fdb7247e5c2852c27cc26439dcf37b4cd909624b4a837f819fe67ef11a3",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": [
+        "morbidyum",
+        "primitivum"
+      ],
+      "postura": "aliada",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "113",
+      "nomeVisual": "Adira, Escutadora de Ninhos",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/113-adira-escutadora-de-ninhos-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/113-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/113-v1.visual.json",
+      "sha256": "e1e157494f75e169e4b57d5648a7eb19937f2c1f90d7a5d5a7128000c7addcba",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": [
+        "cognitium",
+        "primitivum"
+      ],
+      "postura": "aliada",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "114",
+      "nomeVisual": "Selmo, Jardineiro das Eras",
+      "categoriaVisual": "personagem",
+      "arquivo": "colecao-ampliada-2026-10-09/imagens/114-selmo-jardineiro-das-eras-v1.png",
+      "prompt": "colecao-ampliada-2026-10-09/prompts/114-v1.prompt.txt",
+      "registro": "colecao-ampliada-2026-10-09/registros/114-v1.visual.json",
+      "sha256": "07076cd13165445b06f14d04995ba7a938da13dd4bf9af8138dae44924edf5af",
+      "dimensoes": [
+        1061,
+        1482
+      ],
+      "valores": [
+        "eternyr",
+        "primitivum"
+      ],
+      "postura": "aliada",
+      "estado": "gerada_aguardando_avaliacao"
+    }
+  ]
+}

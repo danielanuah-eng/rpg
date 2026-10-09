@@ -1,0 +1,40 @@
+{
+  "id": "108",
+  "nomeVisual": "Odran, Vigia dos Vestígios",
+  "slug": "odran-vigia-dos-vestigios",
+  "categoriaVisual": "personagem",
+  "cena": "Homem humano idoso pele oliva com olhos fundos, cabelo branco curto, túnica carvão e forro verde pálido, pequeno broche bronze. De pé num memorial subterrâneo de escamas, abre janela estreita e a luz bronze dissolve uma sombra dracônica que fica espírito verde tênue ao redor de uma urna simples vazia. Vista ascendente a partir de degraus, dia cinza exterior. Guardião calmo sem clichê de necromante malvado, sem cadáver.",
+  "valores": [
+    "alvorum",
+    "morbidyum"
+  ],
+  "postura": "ambivalente",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/108-v1.prompt.txt",
+  "arquivo": "imagens/108-odran-vigia-dos-vestigios-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-fb580c6d-a37f-4ec4-825a-feaffbe0a274.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "sha256": "63444d5d8616af7c73b87758891649a60518bc6a15583095e6c65840c233e505",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 10.5,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

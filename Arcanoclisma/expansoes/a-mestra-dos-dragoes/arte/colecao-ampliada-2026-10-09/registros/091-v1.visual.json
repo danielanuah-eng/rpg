@@ -1,0 +1,40 @@
+{
+  "id": "091",
+  "nomeVisual": "Serena, Voz das Barricadas",
+  "slug": "serena-voz-das-barricadas",
+  "categoriaVisual": "personagem",
+  "cena": "Mulher negra alta, tranças curtas, casaco coral poeira e peças de armadura ferrugem, jovem adulta. No meio de uma rua estreita organiza moradores que erguem uma barricada CONTRA a entrada de dragões; um dragão distante aguarda em vez de atacar. Vista oblíqua da janela superior, Serena olha para cima, uma mão ergue estandarte sem emblema e a outra ampara um menino assustado. Manhã nublada. Motivo visível proteção civil, sem vilania.",
+  "valores": [
+    "conflituo",
+    "persona"
+  ],
+  "postura": "contra_dragoes",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/091-v1.prompt.txt",
+  "arquivo": "imagens/091-serena-voz-das-barricadas-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-50ed32b8-c696-43d1-b5d4-f6929306a84b.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "6fe048eb76ec60467ee8c390ddee54c27775585722713539a4c03c977308c13a",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 25,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

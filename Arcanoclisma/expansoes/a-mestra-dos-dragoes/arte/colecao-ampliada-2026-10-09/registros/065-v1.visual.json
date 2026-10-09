@@ -1,0 +1,38 @@
+{
+  "id": "065",
+  "nomeVisual": "Memória da Primeira Asa",
+  "slug": "memoria-da-primeira-asa",
+  "categoriaVisual": "magia_draconica",
+  "cena": "Cognitium, projeção de memória numa sala de aula.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/065-v1.prompt.txt",
+  "referencias": [],
+  "arquivo": "imagens/065-memoria-da-primeira-asa-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-ea534d92-c566-4b5b-84b9-c49b11e60f6d.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "sha256": "5f5af73ee6419afa0a8088e6961d01c3b83a60d1a1d53b1432033aa7a83687e5",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 29.6,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

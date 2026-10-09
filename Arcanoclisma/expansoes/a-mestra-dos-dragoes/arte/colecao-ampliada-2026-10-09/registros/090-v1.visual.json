@@ -1,0 +1,40 @@
+{
+  "id": "090",
+  "nomeVisual": "Iria, Forjadora de Marés",
+  "slug": "iria-forjadora-de-mares",
+  "categoriaVisual": "personagem",
+  "cena": "Mulher humana robusta de pele oliva, cabelo preto raspado de um lado, avental curto de cerâmica e calças ferrugem. Numa forja fria aberta ao cais, molda uma lâmina de metal líquido prateado com um martelo arcano ferrugem; vista rente à bigorna, forte escorço da mão. Ajuda reparar defesas contra monstros, escama oferecida por um dragão numa prateleira. Tarde de chuva.",
+  "valores": [
+    "conflituo",
+    "sublimeyn"
+  ],
+  "postura": "aliada",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/090-v1.prompt.txt",
+  "arquivo": "imagens/090-iria-forjadora-de-mares-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-3cee23f4-d0f9-4184-88de-1850f28fbece.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "a8ebdcb2cb35ac88ca5fa4117c5a536bea69f687b9a4b26173f4888fd41da49b",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 27.5,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

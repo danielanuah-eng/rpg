@@ -1,0 +1,40 @@
+{
+  "id": "093",
+  "nomeVisual": "Maira, Guardiã dos Ausentes",
+  "slug": "maira-guardia-dos-ausentes",
+  "categoriaVisual": "personagem",
+  "cena": "Mulher humana de meia idade pele clara sardenta, cabelo castanho num coque, postura rígida, capa verde pálido e armadura ferrugem. Agacha diante de memorial de escamas em jardim devastado, uma mão repousa em espada embainhada e a outra sente um espírito verde discreto sobre pedra vazia. Close lateral íntimo, manhã neblinosa, luto pela invasão, sem mortos visíveis. Não inimiga dos dragões por padrão, motivação ambivalente.",
+  "valores": [
+    "conflituo",
+    "morbidyum"
+  ],
+  "postura": "ambivalente",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/093-v1.prompt.txt",
+  "arquivo": "imagens/093-maira-guardia-dos-ausentes-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-8eb9edc6-8a71-4492-ba97-ad7c9435243a.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "61ac6868402ed264182906cac6e28cce0051c11d40883aa341f8968990b285bd",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 23.6,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

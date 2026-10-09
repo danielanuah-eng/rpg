@@ -1,0 +1,37 @@
+{
+  "id": "059",
+  "nomeVisual": "Manta de Pedreira",
+  "slug": "manta-de-pedreira",
+  "categoriaVisual": "monstro",
+  "cena": "Panorama vertical de criatura sobre paredão industrial.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/059-v1.prompt.txt",
+  "arquivo": "imagens/059-manta-de-pedreira-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-ed4c8ec6-007c-4f94-87c0-ec8944d77aa4.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "eb75f9d86f0921ec7e1fc26485dca3a0316bac7886477b02818638220e7f5a64",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 24.1,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

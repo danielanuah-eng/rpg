@@ -1,0 +1,37 @@
+{
+  "id": "055",
+  "nomeVisual": "Gigante dos Degraus",
+  "slug": "gigante-dos-degraus",
+  "categoriaVisual": "monstro",
+  "cena": "Plano aberto elevado sobre escadaria com invasor de pedra.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/055-v1.prompt.txt",
+  "arquivo": "imagens/055-gigante-dos-degraus-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-1214ab1d-9bdf-4f3a-8bef-e7fa341ffbbd.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "5923b9f7b3d38cd3c00ee48c2e6df7a02f3677d21fee505a4d65e6fe20c96283",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 19.7,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}
