@@ -1,0 +1,43 @@
+{
+  "id": "031",
+  "slug": "ciantia-grande-conjuradora",
+  "nomeVisual": "A grande conjuradora",
+  "cena": "Ciantia adulta conjura grandes dragões para resgatar pessoas num vale.",
+  "momentoDoDia": "manhã",
+  "estado": "gerada_aguardando_avaliacao",
+  "tipoDeCarta": null,
+  "raridade": null,
+  "liberadaParaJogo": false,
+  "arquivo": "imagens/031-ciantia-grande-conjuradora-v1.png",
+  "prompt": "prompts/031-v1.prompt.txt",
+  "versao": "v1",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-ba77e2ae-2c64-41fb-b5d2-8114cd29b139.png",
+  "ferramenta": "image_gen integrada",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "4023d99c02b913722f2bb8473bc1d4037fddc85c2dc76db511dcb9735b2cb1d2",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "fundo": "cenário completo opaco",
+  "saturacao": "reduzida conforme pedido do autor",
+  "futuroDeValiant": "obscuro, sem desfecho revelado",
+  "aparenciasNovas": "propostas visuais aguardando aprovação",
+  "revisaoVisual": "inspecionada pelo Codex; aprovação do autor pendente",
+  "ambiente": "Ciantia adulta conjura grandes dragões para resgatar pessoas num vale.",
+  "clima": "conforme imagem",
+  "escala": "personagens e objetos integrados ao ambiente",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "liberdadesVisuais": [
+    "Gramael aparece acompanhando o resgate como detalhe visual, sem fixar cronologia ou desfecho"
+  ],
+  "pushAutorizado": true,
+  "autorizacaoPush": "Instruções do autor: push de todas as imagens autorizado; escolhas de Primitivum e duas artes de Alvorum reafirmadas nesta conversa."
+}

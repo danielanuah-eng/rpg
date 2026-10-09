@@ -1,0 +1,43 @@
+{
+  "id": "027",
+  "slug": "ciantia-escola-de-magia",
+  "nomeVisual": "Talento na escola",
+  "cena": "Ciantia adolescente aprende a conjurar formas dracônicas numa aula.",
+  "momentoDoDia": "manhã",
+  "estado": "gerada_aguardando_avaliacao",
+  "tipoDeCarta": null,
+  "raridade": null,
+  "liberadaParaJogo": false,
+  "arquivo": "imagens/027-ciantia-escola-de-magia-v1.png",
+  "prompt": "prompts/027-v1.prompt.txt",
+  "versao": "v1",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-e3ed380a-1265-48ed-bd41-517f3e2a7442.png",
+  "ferramenta": "image_gen integrada",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "sha256": "a74a4b98bd6a2f462d4f1d54482555159e6b9e69c3aeadd827209d33305b288a",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "fundo": "cenário completo opaco",
+  "saturacao": "reduzida conforme pedido do autor",
+  "futuroDeValiant": "obscuro, sem desfecho revelado",
+  "aparenciasNovas": "propostas visuais aguardando aprovação",
+  "revisaoVisual": "inspecionada pelo Codex; aprovação do autor pendente",
+  "ambiente": "Ciantia adolescente aprende a conjurar formas dracônicas numa aula.",
+  "clima": "conforme imagem",
+  "escala": "personagens e objetos integrados ao ambiente",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "liberdadesVisuais": [
+    "composição e detalhes estéticos; sem novas regras"
+  ],
+  "pushAutorizado": true,
+  "autorizacaoPush": "Instruções do autor: push de todas as imagens autorizado; escolhas de Primitivum e duas artes de Alvorum reafirmadas nesta conversa."
+}

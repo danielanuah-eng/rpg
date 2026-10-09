@@ -1,0 +1,43 @@
+{
+  "id": "042",
+  "slug": "dragao-persona-leque",
+  "nomeVisual": "Dragão de Asas em Leque",
+  "cena": "Dragão de Persona voa sobre toldos e ruas, visto de cima em diagonal.",
+  "momentoDoDia": "tarde",
+  "estado": "gerada_aguardando_avaliacao",
+  "tipoDeCarta": null,
+  "raridade": null,
+  "liberadaParaJogo": false,
+  "arquivo": "imagens/042-dragao-persona-leque-v2.png",
+  "versao": "v2",
+  "prompt": "prompts/042-v2.prompt.txt",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-72eda00c-ccc0-44a4-a646-669618039b65.png",
+  "ferramenta": "image_gen integrada",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "sha256": "3be6896640421e290bcba1788ec4a31153fff9c3141834f717e580ed51acca1a",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "fundo": "cenário completo opaco",
+  "saturacao": "reduzida conforme pedido do autor",
+  "futuroDeValiant": "obscuro, sem desfecho revelado",
+  "aparenciasNovas": "propostas visuais aguardando aprovação",
+  "revisaoVisual": "inspecionada pelo Codex; aprovação do autor pendente",
+  "ambiente": "Dragão de Persona voa sobre toldos e ruas, visto de cima em diagonal.",
+  "clima": "conforme imagem",
+  "escala": "personagens e objetos integrados ao ambiente",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "liberdadesVisuais": [
+    "Revisão de câmera, pose e cenário após pedido do autor para evitar repetição; identidade da criatura e cor do Valor preservadas"
+  ],
+  "pushAutorizado": true,
+  "autorizacaoPush": "Instruções do autor: push de todas as imagens autorizado; escolhas de Primitivum e duas artes de Alvorum reafirmadas nesta conversa."
+}

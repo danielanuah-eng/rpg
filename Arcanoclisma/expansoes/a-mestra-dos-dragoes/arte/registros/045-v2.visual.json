@@ -1,0 +1,43 @@
+{
+  "id": "045",
+  "slug": "dragao-cognitium-prisma",
+  "nomeVisual": "Dragão de Chifres Prismáticos",
+  "cena": "Dragão de Cognitium pendura-se de cabeça para baixo num galho no teto da gruta.",
+  "momentoDoDia": "interior",
+  "estado": "gerada_aguardando_avaliacao",
+  "tipoDeCarta": null,
+  "raridade": null,
+  "liberadaParaJogo": false,
+  "arquivo": "imagens/045-dragao-cognitium-prisma-v2.png",
+  "versao": "v2",
+  "prompt": "prompts/045-v2.prompt.txt",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-78de80e5-9234-4b47-b55a-c084795c39d4.png",
+  "ferramenta": "image_gen integrada",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "sha256": "685134bf2447619da2f71f0d78a57af77aee5e93a137104f27fdd0859b3ea48a",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "fundo": "cenário completo opaco",
+  "saturacao": "reduzida conforme pedido do autor",
+  "futuroDeValiant": "obscuro, sem desfecho revelado",
+  "aparenciasNovas": "propostas visuais aguardando aprovação",
+  "revisaoVisual": "inspecionada pelo Codex; aprovação do autor pendente",
+  "ambiente": "Dragão de Cognitium pendura-se de cabeça para baixo num galho no teto da gruta.",
+  "clima": "conforme imagem",
+  "escala": "personagens e objetos integrados ao ambiente",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "liberdadesVisuais": [
+    "Revisão de câmera, pose e cenário após pedido do autor para evitar repetição; identidade da criatura e cor do Valor preservadas"
+  ],
+  "pushAutorizado": true,
+  "autorizacaoPush": "Instruções do autor: push de todas as imagens autorizado; escolhas de Primitivum e duas artes de Alvorum reafirmadas nesta conversa."
+}

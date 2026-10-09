@@ -1,0 +1,43 @@
+{
+  "id": "025",
+  "slug": "ciantia-infancia-e-gramael",
+  "nomeVisual": "Infância sob o olhar de Gramael",
+  "cena": "Ciantia criança brinca com dois dragões no jardim; Gramael observa preocupado.",
+  "momentoDoDia": "manhã",
+  "estado": "gerada_aguardando_avaliacao",
+  "tipoDeCarta": null,
+  "raridade": null,
+  "liberadaParaJogo": false,
+  "arquivo": "imagens/025-ciantia-infancia-e-gramael-v2.png",
+  "prompt": "prompts/025-v2.prompt.txt",
+  "versao": "v2",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-4009df36-c77e-4328-ac4f-bd2d06022a36.png",
+  "ferramenta": "image_gen integrada",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "sha256": "b7843d23e2e5cff2774c0215d50cd548e0aa2fe65b1908048f4eb676fe37d6cd",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "fundo": "cenário completo opaco",
+  "saturacao": "reduzida conforme pedido do autor",
+  "futuroDeValiant": "obscuro, sem desfecho revelado",
+  "aparenciasNovas": "propostas visuais aguardando aprovação",
+  "revisaoVisual": "inspecionada pelo Codex; aprovação do autor pendente",
+  "ambiente": "Jardim murado da casa, Gramael à porta",
+  "clima": "céu claro com iluminação suave",
+  "escala": "personagens e objetos integrados ao ambiente",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "liberdadesVisuais": [
+    "composição e detalhes estéticos; sem novas regras"
+  ],
+  "pushAutorizado": true,
+  "autorizacaoPush": "Instruções do autor: push de todas as imagens autorizado; escolhas de Primitivum e duas artes de Alvorum reafirmadas nesta conversa."
+}

@@ -1,0 +1,207 @@
+{
+  "id": "lore-ciantia-2026-10-09",
+  "estado": "aguardando_avaliacao",
+  "total": 25,
+  "escopo": "25 artes selecionadas para este pedido, incluindo ambas as artes de Alvorum para destinos distintos; não significa conclusão das 90 artes da expansão",
+  "ferramenta": "image_gen integrada",
+  "historia": "../HISTORIA-DO-AUTOR-2026-10-09.md",
+  "galeria": "galeria-lore-2026-10-09.html",
+  "direcoes": [
+    "saturacao reduzida",
+    "variedade de poses e cenarios",
+    "Ciantia extremamente poderosa, manipula todos os Valores",
+    "futuro sombrio de Valiant obscuro"
+  ],
+  "escolhasDoAutor": {
+    "primitivum": "047-v1",
+    "alvorum": [
+      {
+        "estudo": "043",
+        "arte": "043-v1"
+      },
+      {
+        "estudo": "049",
+        "arte": "043-v2"
+      }
+    ]
+  },
+  "liberadaParaJogo": false,
+  "pushAutorizado": true,
+  "itens": [
+    {
+      "id": "025",
+      "arquivo": "imagens/025-ciantia-infancia-e-gramael-v2.png",
+      "prompt": "prompts/025-v2.prompt.txt",
+      "registro": "registros/025-v2.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "026",
+      "arquivo": "imagens/026-gramael-e-o-limite-v2.png",
+      "prompt": "prompts/026-v2.prompt.txt",
+      "registro": "registros/026-v2.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "027",
+      "arquivo": "imagens/027-ciantia-escola-de-magia-v1.png",
+      "prompt": "prompts/027-v1.prompt.txt",
+      "registro": "registros/027-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "028",
+      "arquivo": "imagens/028-ciantia-e-valiant-v2.png",
+      "prompt": "prompts/028-v2.prompt.txt",
+      "registro": "registros/028-v2.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "029",
+      "arquivo": "imagens/029-valiant-cicatriz-v1.png",
+      "prompt": "prompts/029-v1.prompt.txt",
+      "registro": "registros/029-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "030",
+      "arquivo": "imagens/030-valiant-dominum-v1.png",
+      "prompt": "prompts/030-v1.prompt.txt",
+      "registro": "registros/030-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "031",
+      "arquivo": "imagens/031-ciantia-grande-conjuradora-v1.png",
+      "prompt": "prompts/031-v1.prompt.txt",
+      "registro": "registros/031-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "032",
+      "arquivo": "imagens/032-ciantia-invasao-v1.png",
+      "prompt": "prompts/032-v1.prompt.txt",
+      "registro": "registros/032-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "033",
+      "arquivo": "imagens/033-monstro-da-invasao-v1.png",
+      "prompt": "prompts/033-v1.prompt.txt",
+      "registro": "registros/033-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "034",
+      "arquivo": "imagens/034-ovos-runicos-v1.png",
+      "prompt": "prompts/034-v1.prompt.txt",
+      "registro": "registros/034-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "035",
+      "arquivo": "imagens/035-nova-conjuradora-draconica-v1.png",
+      "prompt": "prompts/035-v1.prompt.txt",
+      "registro": "registros/035-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "036",
+      "arquivo": "imagens/036-ciantia-dragao-antigo-v1.png",
+      "prompt": "prompts/036-v1.prompt.txt",
+      "registro": "registros/036-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "037",
+      "arquivo": "imagens/037-ciantia-magia-escondida-v1.png",
+      "prompt": "prompts/037-v1.prompt.txt",
+      "registro": "registros/037-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "038",
+      "arquivo": "imagens/038-ciantia-confianca-em-risco-v2.png",
+      "prompt": "prompts/038-v2.prompt.txt",
+      "registro": "registros/038-v2.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "039",
+      "arquivo": "imagens/039-dragao-conflituo-crista-v1.png",
+      "prompt": "prompts/039-v1.prompt.txt",
+      "registro": "registros/039-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "040",
+      "arquivo": "imagens/040-dragao-sublimeyn-fita-v1.png",
+      "prompt": "prompts/040-v1.prompt.txt",
+      "registro": "registros/040-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "041",
+      "arquivo": "imagens/041-dragao-dominum-coroa-v2.png",
+      "prompt": "prompts/041-v2.prompt.txt",
+      "registro": "registros/041-v2.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "042",
+      "arquivo": "imagens/042-dragao-persona-leque-v2.png",
+      "prompt": "prompts/042-v2.prompt.txt",
+      "registro": "registros/042-v2.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "043",
+      "arquivo": "imagens/043-dragao-alvorum-carvao-v1.png",
+      "prompt": "prompts/043-v1.prompt.txt",
+      "registro": "registros/043-v1.visual.json",
+      "estado": "selecionada_pelo_autor_aguardando_carta"
+    },
+    {
+      "id": "044",
+      "arquivo": "imagens/044-dragao-morbidyum-casulo-v1.png",
+      "prompt": "prompts/044-v1.prompt.txt",
+      "registro": "registros/044-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "045",
+      "arquivo": "imagens/045-dragao-cognitium-prisma-v2.png",
+      "prompt": "prompts/045-v2.prompt.txt",
+      "registro": "registros/045-v2.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "046",
+      "arquivo": "imagens/046-dragao-eternyr-antigo-v1.png",
+      "prompt": "prompts/046-v1.prompt.txt",
+      "registro": "registros/046-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "047",
+      "arquivo": "imagens/047-dragao-primitivum-raiz-v1.png",
+      "prompt": "prompts/047-v1.prompt.txt",
+      "registro": "registros/047-v1.visual.json",
+      "estado": "aprovada_pelo_autor"
+    },
+    {
+      "id": "048",
+      "arquivo": "imagens/048-criatura-casco-sino-v1.png",
+      "prompt": "prompts/048-v1.prompt.txt",
+      "registro": "registros/048-v1.visual.json",
+      "estado": "gerada_aguardando_avaliacao"
+    },
+    {
+      "id": "049",
+      "arquivo": "imagens/043-dragao-alvorum-carvao-v2.png",
+      "prompt": "prompts/043-v2.prompt.txt",
+      "registro": "registros/049-v2.visual.json",
+      "estado": "selecionada_pelo_autor_aguardando_carta"
+    }
+  ]
+}

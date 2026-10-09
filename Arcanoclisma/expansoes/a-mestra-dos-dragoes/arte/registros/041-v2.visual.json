@@ -1,0 +1,43 @@
+{
+  "id": "041",
+  "slug": "dragao-dominum-coroa",
+  "nomeVisual": "Dragão de Coroa Rubra",
+  "cena": "Dragão de Dominum aterrissa frontalmente num pátio coberto, visto junto ao chão.",
+  "momentoDoDia": "crepúsculo",
+  "estado": "gerada_aguardando_avaliacao",
+  "tipoDeCarta": null,
+  "raridade": null,
+  "liberadaParaJogo": false,
+  "arquivo": "imagens/041-dragao-dominum-coroa-v2.png",
+  "versao": "v2",
+  "prompt": "prompts/041-v2.prompt.txt",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-e1e91d80-3358-4312-9af3-0cdd1182a843.png",
+  "ferramenta": "image_gen integrada",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "e61351b28545d94c87cb6af32f491306d1b0785b5a9234841ede375561eb1016",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "fundo": "cenário completo opaco",
+  "saturacao": "reduzida conforme pedido do autor",
+  "futuroDeValiant": "obscuro, sem desfecho revelado",
+  "aparenciasNovas": "propostas visuais aguardando aprovação",
+  "revisaoVisual": "inspecionada pelo Codex; aprovação do autor pendente",
+  "ambiente": "Dragão de Dominum aterrissa frontalmente num pátio coberto, visto junto ao chão.",
+  "clima": "conforme imagem",
+  "escala": "personagens e objetos integrados ao ambiente",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "liberdadesVisuais": [
+    "Revisão de câmera, pose e cenário após pedido do autor para evitar repetição; identidade da criatura e cor do Valor preservadas"
+  ],
+  "pushAutorizado": true,
+  "autorizacaoPush": "Instruções do autor: push de todas as imagens autorizado; escolhas de Primitivum e duas artes de Alvorum reafirmadas nesta conversa."
+}
