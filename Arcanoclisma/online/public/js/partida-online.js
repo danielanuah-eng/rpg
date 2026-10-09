@@ -33,7 +33,7 @@ export function conectarPartida(id, { baralho, itens }, { aoEstado, aoErro, aoFe
     const proto = location.protocol === 'https:' ? 'wss' : 'ws';
     const q = new URLSearchParams({ baralho, ...(itens ? { itens: itens.join(',') } : {}) });
     ws = new WebSocket(`${proto}://${location.host}/api/partida/${id}/ws?${q}`);
-    ws.onopen = () => { tentativas = 0; };
+    // Abrir o socket não garante que as edições carregaram; manter o limite de reconexões.
     // Mensagens em fila: se a sala usa outra versão das edições do autor, ela é carregada antes de desenhar.
     let fila = Promise.resolve();
     ws.onmessage = (ev) => { fila = fila.then(() => tratar(JSON.parse(ev.data))); };
@@ -51,6 +51,7 @@ export function conectarPartida(id, { baralho, itens }, { aoEstado, aoErro, aoFe
         return;
       }
       if (m.t !== 'estado') return;
+      tentativas = 0;
       ultimo = m;
       fonte.eu = m.eu;
       fonte.nomes = m.nomes;
