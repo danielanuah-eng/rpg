@@ -10,7 +10,9 @@ Seu pai, **Gramael**, é ligado a **Dominum e Eternyr**. Ele não apoiava que a 
 
 Ciantia apaixona-se por **Valiant**, um mago sem talento, ligado a **Dominum e Cognium**. Ele observa o talento dela com inveja. Um monstro provoca uma cicatriz nele, lembrança que o acompanha por toda a vida e lhe recorda a própria fraqueza. Valiant descobre que sua palavra inata mais forte é **Dominum**, sobretudo a capacidade de roubar outras magias.
 
-**O futuro sombrio de Valiant deve permanecer obscuro.** As artes podem sugerir ambivalência com olhar, reflexo, gesto hesitante e contraste de luz. Não revelar destino, traição, transformação, crime, antagonismo final ou desfecho do romance. A cicatriz é cicatrizada e não gráfica; seu desenho e a aparência física de Valiant ainda são estudos visuais.
+Aparência de **Valiant** definida pelo autor nesta conversa: rapaz moreno, corte militar, óculos, alto, queixo fino, meio magro e desajeitado. O autor corrigiu expressamente a atribuição inicial dessa descrição a Gramael: ela pertence a Valiant.
+
+**O futuro sombrio de Valiant deve permanecer obscuro.** As artes podem sugerir ambivalência com olhar, reflexo, gesto hesitante e contraste de luz. Não revelar destino, traição, transformação, crime, antagonismo final ou desfecho do romance. A cicatriz é cicatrizada e não gráfica; seu desenho ainda é um estudo visual. A aparência de Valiant segue a definição expressa do autor acima.
 
 A expansão envolve a **grande invasão dos monstros**, com Ciantia invocando dragões e usando poderes para derrotar os invasores ou realizar outras ações. Também haverá escola de magia, criaturas, dragões, monstros e outros novos conjuradores. A identidade e os Valores desses outros conjuradores não foram definidos.
 
@@ -22,7 +24,7 @@ Ovos de dragão podem ser **brilhantes, lisos ou encrustados com runas arcanas**
 - Preservar a identidade da referência aprovada de Ciantia: cabelo loiro longo e ondulado, tranças, roupa preta com forro violeta e ornamentos dourados contidos; adaptar roupa, proporções e postura à idade.
 - Não usar o PNG frontal corrigido retirado de uso. Referência disponível: `Arcanoclisma/cartas/modelos-visuais/2026-10-03-philgard/ciantia-philgard-campo-adolescente-v2-liso.png`.
 - Alternar infância, estudo, intimidade, conflito familiar, descobertas, criaturas e grande ação. Mostrar crescimento pela segurança dos gestos, complexidade das conjurações e escala das cenas, sem impor idade exata ou cronologia não confirmada.
-- Gramael e Valiant recebem aparências propostas pelo desenho; não confundir escolhas estéticas com fatos canônicos aprovados.
+- Gramael recebe aparência proposta pelo desenho; Valiant segue a aparência definida pelo autor. Não confundir detalhes estéticos ainda não definidos com fatos canônicos aprovados.
 - Acabamento liso, linhas expressivas, cores legíveis, sombras em blocos e luz mágica localizada. Evitar brilho que apague personagens ou cenário.
 - Novos títulos são nomes de estudo visual. Valores informados pelo autor são identidade narrativa, sem regras ou raridade inferidas.
 
