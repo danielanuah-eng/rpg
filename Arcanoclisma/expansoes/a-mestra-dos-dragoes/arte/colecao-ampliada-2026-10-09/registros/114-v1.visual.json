@@ -1,0 +1,40 @@
+{
+  "id": "114",
+  "nomeVisual": "Selmo, Jardineiro das Eras",
+  "slug": "selmo-jardineiro-das-eras",
+  "categoriaVisual": "personagem",
+  "cena": "Homem humano muito velho pele morena, rosto enrugado, barba longa branca e cabelo preso, traje verde musgo com azul-noite. Numa varanda baixa cuida de uma muda que mostra etapas de crescimento em UMA espiral de galhos, linhas brancas temporais discretas; dragão pequeno repousa enrolado no vaso ao lado. Vista de perfil à distância por trás de regador, inverno de manhã cinza. Natureza e tempo serenos, sem múltiplos painéis.",
+  "valores": [
+    "eternyr",
+    "primitivum"
+  ],
+  "postura": "aliada",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/114-v1.prompt.txt",
+  "arquivo": "imagens/114-selmo-jardineiro-das-eras-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-82308ca9-dcfd-49af-ac03-3abe2f58ccf6.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "07076cd13165445b06f14d04995ba7a938da13dd4bf9af8138dae44924edf5af",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 19.1,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "025",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "liberadaParaJogo": false,
+  "arquivo": "imagens/025-ciantia-infancia-e-gramael-v1.png",
+  "estado": "substituida_preservada",
+  "motivo": "Redução de saturação pedida pelo autor",
+  "substituidaPor": "imagens/025-ciantia-infancia-e-gramael-v2.png"
+}

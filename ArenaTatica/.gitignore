@@ -1,0 +1,8 @@
+.godot/
+.tools/
+.sources/
+.artifacts/
+ds-logs/
+export/
+build/
+

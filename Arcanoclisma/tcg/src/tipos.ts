@@ -14,16 +14,67 @@ export type Quando = 'jogar' | 'entrar' | 'ativada' | 'alvo' | 'grau' | 'atacar'
   /** Só de Conjurador (Editor, 04/10): um Aliado seu entra em campo / vai do campo para o cemitério / causa dano de combate ao Conjurador inimigo. */
   | 'aliadoEntra' | 'aliadoMorre' | 'aliadoDanoConjurador'
   /** Pedido do autor (04/10, noite): na etapa de Cataclisma do turno do oponente (fim do turno dele). Cartas em campo, itens e Conjurador. */
-  | 'cataclismaOponente';
+  | 'cataclismaOponente'
+  /**
+   * Construtor ampliado (05/10, decisão 40): eventos de jogador, para cartas em campo, itens e Conjurador, com `quem`
+   * (de quem é o evento: você, o oponente ou qualquer um). compra = comprou cartas; conjuradorDano = o Conjurador tomou
+   * dano; ganhaVida = o Conjurador recuperou Vida (cura) ou ganhou +Vida; perdeVida = perdeu Vida (dano, pagar Vida,
+   * "perde Vida"); jogaAliado/jogaMistica/jogaPermanente = jogou essa carta (vai para a pilha); ativaHabilidade = ativou
+   * uma habilidade (comando ativar); pilha = jogou uma carta qualquer (só cartas jogadas; gatilhos não contam).
+   */
+  | 'compra' | 'conjuradorDano' | 'ganhaVida' | 'perdeVida' | 'jogaAliado' | 'jogaMistica' | 'jogaPermanente' | 'ativaHabilidade' | 'pilha'
+  /** Enquanto estiver em campo (05/10, decisão 40): `modo` passivo (aura/custo das cartas, sem pilha) ou recorrente (numa etapa). */
+  | 'emCampo';
+/** De quem é o evento que dispara a habilidade (eventos de jogador, 05/10). Sem o campo: qualquer jogador. */
+export type QuemEvento = 'voce' | 'oponente' | 'qualquer';
+/** Em qual turno: do dono da carta, do oponente ou em cada turno. */
+export type TurnoDe = 'seu' | 'oponente' | 'cada';
 /** Custo de uma habilidade ativada ("virar/pagar"). */
 export interface CustoHabilidade { suspender?: boolean; arcano?: number; vida?: number; descartar?: number; grau?: number }
+/**
+ * Custo pago numa decisão (05/10, decisão 40): Arcano (reserva, Grau levantado ou cartas da mão enviadas ao Arcano), Vida
+ * (o Conjurador perde), descartar cartas da mão, mandar cartas do Grau ao cemitério e sacrificar Aliados (o pagador escolhe).
+ */
+export interface CustoPagar { arcano?: number; vida?: number; descartar?: number; grauAoCemiterio?: number; sacrificar?: number }
+/**
+ * Custo condicional (05/10, decisão 40), em três lugares: no efeito (`Efeito.custo`, "pague para funcionar"), no gatilho
+ * (`Habilidade.pagar`) e na manutenção (`Habilidade.manutencao`). quem: 'voce' (padrão) paga para o efeito acontecer;
+ * 'oponente' paga para IMPEDIR ("a menos que o oponente pague X"). Pagar é sempre uma escolha (pendência pagarCusto).
+ * quando: 'resolver' (padrão) ou 'jogar' (decidido ao jogar a carta; só em efeitos ao jogar/ao entrar).
+ * senao = o que acontece quando o efeito é impedido (você não pagou / o oponente pagou): 'linha' (só esta linha não
+ * acontece; padrão), 'carta' (a carta é anulada: os efeitos seguintes não acontecem e, decidido ao jogar, ela sai da
+ * pilha), 'alternativo' (os `alternativos` acontecem no lugar); na manutenção também 'sai' (a carta vai para `destino`)
+ * e 'pula' (o efeito da habilidade não acontece neste turno).
+ */
+export interface CustoCondicional extends CustoPagar {
+  quem?: 'voce' | 'oponente';
+  quando?: 'jogar' | 'resolver';
+  senao?: 'linha' | 'carta' | 'alternativo' | 'sai' | 'pula';
+  alternativos?: Efeito[];
+  destino?: 'cemiterio' | 'banimento' | 'mao' | 'fundo';
+}
+/** Manutenção (05/10): custo cobrado numa etapa de um turno enquanto a carta está em campo (padrão: início do seu turno; sem pagar, sai para o cemitério). */
+export interface Manutencao extends CustoCondicional { etapa?: Etapa; turnoDe?: TurnoDe }
+/** Passivo "enquanto estiver em campo" (05/10): bônus e palavras-chave a um grupo, recalculados sempre (não gravados nas cartas). */
+export interface Aura { lado: 'proprio' | 'inimigo' | 'ambos'; /** Padrão: Aliado. */ tipos?: Array<'aliado' | 'mistica' | 'estrutura' | 'conjurador'>; ataque?: number; vida?: number; palavras?: string[]; /** A própria carta não recebe. */ excetoEsta?: boolean }
+/** Passivo (05/10): cartas de um jogador custam `valor` a mais (negativo = a menos), dos tipos indicados (vazio = todas). */
+export interface CustoCartas { de: 'voce' | 'oponente' | 'ambos'; tipos?: TipoCarta[]; valor: number }
 /** Habilidade montada no Editor: condição + efeitos (que se acumulam, em ordem). */
 export interface Habilidade {
   quando: Quando; custo?: CustoHabilidade; efeitos: Efeito[];
-  /** Gatilho só na primeira vez em cada turno. */ umaVezPorTurno?: boolean;
+  /** Gatilho só na primeira vez em cada turno (= vezesPorTurno 1). */ umaVezPorTurno?: boolean;
+  /** Gatilho no máximo N vezes em cada turno (05/10; generaliza umaVezPorTurno). */ vezesPorTurno?: number;
   /** Gatilho só no turno do dono (Editor de Conjuradores, 04/10). */ soNoSeuTurno?: boolean;
   /** Ativada de Conjurador com velocidade Repentina: a qualquer momento, com prioridade (as demais: só na sua Principal, pilha vazia). */ repentina?: boolean;
   /** Requisito da habilidade ativada: Grau mínimo e Arcano a mais (soma ao custo). */ requisito?: Requisito;
+  /** Eventos de jogador (05/10): de quem é o evento. Sem o campo: qualquer jogador. */ quem?: QuemEvento;
+  /** Gatilho com custo (05/10): quando dispara, quem paga decide; sem pagar (ou o oponente pagando), os efeitos não acontecem. */ pagar?: CustoCondicional;
+  /** emCampo (05/10): 'passivo' (padrão; aura e custo das cartas, sem pilha) ou 'recorrente' (dispara numa etapa). */ modo?: 'passivo' | 'recorrente';
+  /** emCampo passivo: bônus/palavras a um grupo. */ aura?: Aura;
+  /** emCampo passivo: cartas mais baratas/caras. */ custoCartas?: CustoCartas;
+  /** emCampo recorrente: etapa (padrão início) e de qual turno (padrão: seu). */ etapa?: Etapa; turnoDe?: TurnoDe;
+  /** emCampo recorrente: dispara só nas N primeiras vezes (N turnos que contam; vazio = enquanto estiver em campo). */ turnos?: number;
+  /** emCampo (passivo ou recorrente): custo de manutenção. */ manutencao?: Manutencao;
 }
 /**
  * Protegido (unificado em 04/10, noite; antes havia "Protegido N" e "Proteção mágica"): quem mira esta carta com carta ou
@@ -60,7 +111,11 @@ export type QuemEscolhe = 'controlador' | 'afetado' | 'aleatorio';
  * Efeito secundário (pedido do autor, 04/10, noite): custo ou consequência que acompanha outro efeito, como linha extra
  * ("...; depois, seu Conjurador toma 2 de dano"). Só muda o texto e a avaliação do bot; o motor resolve em ordem.
  */
-export type Efeito = EfeitoBase & { requisito?: Requisito; escolha?: QuemEscolhe; secundario?: boolean };
+export type Efeito = EfeitoBase & {
+  requisito?: Requisito; escolha?: QuemEscolhe; secundario?: boolean;
+  /** "Pague para funcionar" (05/10, decisão 40): custo condicional desta linha. */ custo?: CustoCondicional;
+  /** Interno: decisão do custo já tomada ('acontece' ou 'impedido'). */ _custo?: 'acontece' | 'impedido';
+};
 /** Quem sofre o "tirar da mão": quem jogou/ativou, o oponente ou os dois. */
 export type QuemAfeta = 'voce' | 'oponente' | 'ambos';
 type EfeitoBase =
@@ -125,7 +180,14 @@ type EfeitoBase =
    */
   | { tipo: 'sacrificar'; valor: number; quem?: 'voce' | 'oponente' }
   /** Efeito secundário (04/10, noite). O jogador manda N cartas do Grau dele ao cemitério (o dono escolhe; com menos, manda as que tiver). */
-  | { tipo: 'grauAoCemiterio'; valor: number; quem?: 'voce' | 'oponente' };
+  | { tipo: 'grauAoCemiterio'; valor: number; quem?: 'voce' | 'oponente' }
+  /**
+   * Interno (05/10): linha que só cobra o `custo` (gatilho com custo e manutenção). Impedida com senao 'linha', pula as
+   * `bloco` linhas seguintes (vazio = todas). fonteId/hab: a carta e a habilidade (manutenção: 'sai' e 'pula').
+   */
+  | { tipo: 'pagar'; bloco?: number; fonteId?: string; hab?: number }
+  /** Interno (05/10): depois de um custo pago ao jogar, pede a próxima decisão de custo da carta na pilha. */
+  | { tipo: 'proximoCusto'; item: string };
 
 /** Arma: efeitos ao atacar (pedido do autor, 04/10). */
 export interface AoAtacar {
@@ -345,6 +407,12 @@ export interface Inst {
   turnoEntradaConta?: number;
   /** Jogada pelo Reanimum: ao sair do campo vai para o banimento. */
   banirAoSair?: boolean;
+  /** Gatilhos com limite por turno (05/10): índice → [turno, vezes]. */
+  usosVezes?: Record<number, [number, number]>;
+  /** emCampo recorrente com N turnos: índice → vezes que já disparou. */
+  recorrencias?: Record<number, number>;
+  /** Manutenção não paga com 'pula': índice → turno em que o efeito está desligado. */
+  desligada?: Record<number, number>;
 }
 
 /** Todo dano é dano; só muda a fonte. Efeitos podem ser anulados; combate não. */
@@ -385,8 +453,11 @@ export interface ZonasJogador {
 }
 
 export type ItemPilha =
-  | { tipo: 'carta'; id: string; controlador: Jogador; instId: string; alvo?: string }
-  | { tipo: 'gatilho'; id: string; controlador: Jogador; efeitos: Efeito[]; alvo?: string; /** Nome de quem gerou o gatilho (registro). */ fonte?: string; /** A fonte tem Incomensurável: o dano que passar da Vida vai para o Conjurador (decisão 25). */ incomensuravel?: boolean }
+  | { tipo: 'carta'; id: string; controlador: Jogador; instId: string; alvo?: string; /** Custos decididos ao jogar (05/10): a lista de efeitos que resolve, com as decisões. */ decididos?: Efeito[] }
+  | { tipo: 'gatilho'; id: string; controlador: Jogador; efeitos: Efeito[]; alvo?: string; /** Nome de quem gerou o gatilho (registro). */ fonte?: string; /** A fonte tem Incomensurável: o dano que passar da Vida vai para o Conjurador (decisão 25). */ incomensuravel?: boolean;
+      /** Habilidades que levaram a este gatilho ("instância:índice"): nenhuma dispara de novo pela mesma cadeia (sem laço infinito). */ cadeia?: string[];
+      /** Carta e índice da habilidade que gerou o gatilho (05/10). */ fonteId?: string; hab?: number;
+      /** emCampo recorrente: não resolve se a habilidade foi desligada neste turno (manutenção 'pula') ou se a carta saiu. */ recorrente?: boolean }
   | { tipo: 'ataque'; id: string; controlador: Jogador; atacante: string; alvo: string };
 
 export type Pendencia =
@@ -398,7 +469,13 @@ export type Pendencia =
   | { tipo: 'pagarAnulacao'; jogador: Jogador; custo: number; item: ItemPilha }
   | { tipo: 'escolherDoTopo'; jogador: Jogador; cartas: string[]; pegar: number }
   /** Construtor (04/10): escolher cartas de uma lista e mandá-las a um destino; o resto (se saiu da zona) vai para `resto`. */
-  | { tipo: 'escolherCartas'; jogador: Jogador; cartas: string[]; quantidade: number; destino: Destino; resto?: Destino; titulo: string; depois?: Continuacao; /** Escolha de alvo: aplica este efeito em cada carta escolhida. */ aplicar?: { efeito: Efeito; dono: Jogador }; /** Concessão dada às cartas que entram em campo por esta escolha. */ concessao?: Concessao };
+  | { tipo: 'escolherCartas'; jogador: Jogador; cartas: string[]; quantidade: number; destino: Destino; resto?: Destino; titulo: string; depois?: Continuacao; /** Escolha de alvo: aplica este efeito em cada carta escolhida. */ aplicar?: { efeito: Efeito; dono: Jogador }; /** Concessão dada às cartas que entram em campo por esta escolha. */ concessao?: Concessao; /** Cadeia de gatilhos em curso (anti-laço). */ cadeia?: string[] }
+  /**
+   * Custo condicional (05/10, decisão 40): `jogador` decide pagar ou não `custo`. impede: pagar impede o efeito (o oponente
+   * paga); senão, pagar faz o efeito acontecer. `efeito` é a linha (ou a linha interna "pagar"); `depois`, o resto.
+   * naPilha: decisão tomada ao jogar a carta (guardada no item da pilha). fonte: instância que gerou (para a tela).
+   */
+  | { tipo: 'pagarCusto'; jogador: Jogador; custo: CustoPagar; impede: boolean; dono: Jogador; efeito: Efeito; depois?: Continuacao; naPilha?: { item: string; indice: number }; fonte?: string; cadeia?: string[] };
 
 /** Efeitos que esperam uma escolha terminar para continuar (efeitos acumulados). */
 export interface Continuacao { efeitos: Efeito[]; dono: Jogador; alvo?: string }
@@ -459,6 +536,8 @@ export type Comando =
   | { tipo: 'descartar'; jogador: Jogador; cartas: string[] }
   | { tipo: 'ativar'; jogador: Jogador; carta: string; alvo?: string; enviarArcano?: string[]; /** Cartas da mão descartadas como custo (Ativacao.descartar). */ descartarCusto?: string[]; /** Habilidade ativada do construtor (índice em habilidades). */ habilidade?: number; /** Proteção mágica do alvo: cartas da mão e do Grau pagas. */ protecaoDescartar?: string[]; protecaoGrau?: string[] }
   | { tipo: 'pagarAnulacao'; jogador: Jogador; pagar: boolean; enviarArcano?: string[] }
+  /** Responde a pendência pagarCusto (05/10). O Arcano sai da reserva, do Grau levantado e das cartas enviadas; descarte, Grau e sacrifício são escolhidos em seguida. */
+  | { tipo: 'pagarCusto'; jogador: Jogador; pagar: boolean; enviarArcano?: string[] }
   | { tipo: 'escolherDoTopo'; jogador: Jogador; cartas: string[] }
   | { tipo: 'escolherCartas'; jogador: Jogador; cartas: string[]; /** Reanimar com custo (04/10, noite): cartas da mão enviadas ao Arcano para pagar o Aliado escolhido. */ enviarArcano?: string[] }
   | { tipo: 'passar'; jogador: Jogador };

@@ -1,0 +1,40 @@
+{
+  "id": "101",
+  "nomeVisual": "Amara, Porta-Voz do Limite",
+  "slug": "amara-porta-voz-do-limite",
+  "categoriaVisual": "personagem",
+  "cena": "Mulher humana baixa de pele parda, cabelo preto grisalho num coque, túnica coral poeira com gola vinho, rosto severo mas cansado. Na entrada do viveiro explica aos pais e estudantes a necessidade de barreiras: mantém uma corrente mágica horizontal entre postes com uma mão e fala com gesto aberto da outra. Visão frontal próxima na altura de uma criança, manhã difusa, dragão curioso atrás. Conflito ético, não tirana.",
+  "valores": [
+    "dominum",
+    "persona"
+  ],
+  "postura": "contra_dragoes",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/101-v1.prompt.txt",
+  "arquivo": "imagens/101-amara-porta-voz-do-limite-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-bdf3f55d-2840-4c4d-8e78-897612302895.png",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "sha256": "5938421b3779b517a29073dab71c8eed1f36955c354d3071ddad6f8520c541db",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 24,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

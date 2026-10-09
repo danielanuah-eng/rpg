@@ -1,0 +1,44 @@
+{
+  "id": "026",
+  "slug": "gramael-e-o-limite",
+  "nomeVisual": "O cuidado e o limite",
+  "cena": "Ciantia adolescente e Gramael discutem diante de um viveiro dracônico.",
+  "momentoDoDia": "fim de tarde",
+  "estado": "substituida_preservada",
+  "tipoDeCarta": null,
+  "raridade": null,
+  "liberadaParaJogo": false,
+  "arquivo": "imagens/026-gramael-e-o-limite-v1.png",
+  "prompt": "prompts/026-v1.prompt.txt",
+  "versao": "v1",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-6ba4b2bc-7acb-4362-bc5e-5d13d1ee8c3c.png",
+  "ferramenta": "image_gen integrada",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "82e582bc58871943b2ac52bba340ca08daf8d907f754a5bdca37608479a1932c",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "fundo": "cenário completo opaco",
+  "saturacao": "reduzida conforme pedido do autor",
+  "futuroDeValiant": "obscuro, sem desfecho revelado",
+  "aparenciasNovas": "propostas visuais aguardando aprovação",
+  "revisaoVisual": "inspecionada pelo Codex; aprovação do autor pendente",
+  "ambiente": "Ciantia adolescente e Gramael discutem diante de um viveiro dracônico.",
+  "clima": "conforme imagem",
+  "escala": "personagens e objetos integrados ao ambiente",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "liberdadesVisuais": [
+    "composição e detalhes estéticos; sem novas regras"
+  ],
+  "pushAutorizado": false,
+  "motivo": "Conflito com Gramael mais explícito, conforme pedido do autor",
+  "substituidaPor": "imagens/026-gramael-e-o-limite-v2.png"
+}

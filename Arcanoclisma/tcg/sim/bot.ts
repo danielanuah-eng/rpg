@@ -1,6 +1,6 @@
 // Jogador guloso para simulações. Não é forte: serve para expor quais mecânicas são usadas, ignoradas ou abusadas.
-import { ataqueConjurador, ativacaoDeHabilidade, custoEfetivo, custoProtecao, origemDaCarta, defCarta, custoAtaqueConjurador, defConjurador, ehRepentina, etereo as etereoMotor, GRAU_MAXIMO, grauAtaqueConjurador, grauEfetivo, recemChegado, efeitoSemConjurador, protegidaDe, protegidoDe, candidatosReanimar, custoReanimar, efeitosAoJogar, efeitosAoEntrar, arcanoNaHora, itemServe } from '../src/motor.ts';
-import type { Ativacao, Catalogo, CartaDef, CategoriaItem, Comando, Efeito, Estado, Jogador } from '../src/tipos.ts';
+import { ataqueConjurador, ativacaoDeHabilidade, custoEfetivo, custoProtecao, origemDaCarta, defCarta, custoAtaqueConjurador, defConjurador, ehRepentina, etereo as etereoMotor, GRAU_MAXIMO, grauAtaqueConjurador, grauEfetivo, recemChegado, efeitoSemConjurador, protegidaDe, protegidoDe, candidatosReanimar, custoReanimar, efeitosAoJogar, efeitosAoEntrar, arcanoNaHora, itemServe, podePagarCusto } from '../src/motor.ts';
+import type { Ativacao, Catalogo, CartaDef, CategoriaItem, Comando, Efeito, Estado, Jogador, Pendencia } from '../src/tipos.ts';
 
 /** Itens básicos de cada espaço: o bot usa quando nenhum item do espaço serve ao Conjurador. */
 export const ITEM_BASICO: Record<CategoriaItem, string> = { canal: 'item-canal-cajado', armadura: 'item-armadura-gibao', extra: 'item-extra-pocao' };
@@ -86,7 +86,9 @@ function valorPerm(e: Estado, id: string): number {
 /** Rodada 6: valor extra de um Aliado com gatilhos (ao entrar, ao causar dano ao Conjurador) e Protegido. 0 nas cartas antigas. */
 function extraAliado(d: CartaDef): number {
   return 2 * (d.aoEntrar?.length ?? 0) + 2 * (d.aoDanoConjurador?.length ?? 0) + (protegidoDe(d)?.arcano ?? 0)
-    + 2 * (d.habilidades ?? []).filter((h) => h.quando === 'cataclismaOponente').length;
+    + 2 * (d.habilidades ?? []).filter((h) => h.quando === 'cataclismaOponente').length
+    // construtor ampliado (05/10): eventos e enquanto em campo valem um pouco; manutenção custa
+    + (d.habilidades ?? []).reduce((s, h) => s + (h.quando === 'emCampo' ? 2 + ((h.aura?.ataque ?? 0) + (h.aura?.vida ?? 0)) - (h.manutencao ? 1.5 : 0) : QUANDO_NOVOS.includes(h.quando) ? 1.5 : 0), 0);
 }
 
 /**
@@ -587,6 +589,64 @@ function planejarAtaqueConj(e: Estado, j: Jogador, est: Estilo): Comando | null 
   return { tipo: 'atacar', jogador: j, atacante: conj, alvo, enviarArcano: [] };
 }
 
+/** Eventos de jogador do construtor ampliado (05/10). */
+const QUANDO_NOVOS: string[] = ['compra', 'conjuradorDano', 'ganhaVida', 'perdeVida', 'jogaAliado', 'jogaMistica', 'jogaPermanente', 'ativaHabilidade', 'pilha'];
+
+/** Quanto estes efeitos valem para quem os controla (positivo = bom para ele). Estimativa simples, só para decidir pagar. */
+function valorEfeitos(e: Estado, dono: Jogador, efs: Efeito[]): number {
+  let v = 0;
+  for (const ef of efs) {
+    if (ef.tipo === 'comprar') v += 2 * ef.valor;
+    else if (ef.tipo === 'arcano') v += ef.valor;
+    else if (ef.tipo === 'arcanoOponente') v -= ef.valor;
+    else if (ef.tipo === 'dano') v += ef.alvo === 'conjuradorProprio' ? -ef.valor : ef.valor + 1;
+    else if (ef.tipo === 'curar') v += 1;
+    else if (ef.tipo === 'destruir' || ef.tipo === 'destruirTodosAliados') v += 5;
+    else if (ef.tipo === 'danoTodosAliados') v += 2 * ef.valor;
+    else if (ef.tipo === 'campo') v += (ef.lado === 'proprio' && ['dano', 'destruir', 'devolver', 'paraBaralho', 'naoAtaca', 'suspender'].includes(ef.acao) ? -1 : 1) * (ef.acao === 'destruir' ? 5 : 1 + (ef.valor ?? 1));
+    else if (ef.tipo === 'perderVida' || ef.tipo === 'descartar' || ef.tipo === 'sacrificar' || ef.tipo === 'grauAoCemiterio') v -= custoSecundarios(e, dono, [ef]) ?? 20;
+    else if (ef.tipo !== 'pagar' && ef.tipo !== 'proximoCusto') v += 1.5;
+  }
+  return v;
+}
+/** Quanto o custo pesa para o bot (null = não pode ou não deve: a Vida ficaria baixa demais). */
+function pesoDoCusto(e: Estado, j: Jogador, c: { arcano?: number; vida?: number; descartar?: number; grauAoCemiterio?: number; sacrificar?: number }): number | null {
+  if (!podePagarCusto(e, j, c)) return null;
+  const z = e.jogadores[j];
+  const resta = vidaRest(e, z.conjuradorId);
+  if ((c.vida ?? 0) && resta <= (c.vida ?? 0) + 3) return null;
+  const sac = z.campo.filter((id) => ehAliado(e, id)).map((id) => valorPerm(e, id)).sort((a, b) => a - b).slice(0, c.sacrificar ?? 0).reduce((s, x) => s + x, 0);
+  return (c.arcano ?? 0) * 0.8 + (c.vida ?? 0) * (resta <= 10 ? 1.5 : 0.6) + (c.descartar ?? 0) * 2 + (c.grauAoCemiterio ?? 0) * 2.5 + sac;
+}
+/**
+ * Custo condicional (05/10, decisão 40): paga quando pode e o efeito vale para o bot. Você paga para acontecer: vale se o
+ * efeito vale mais que o custo (manutenção: manter a carta vale o que ela vale em campo). O oponente paga para impedir:
+ * vale se o efeito dele dói mais que o custo.
+ */
+function decidirCusto(e: Estado, j: Jogador, p: Extract<Pendencia, { tipo: 'pagarCusto' }>): Comando {
+  const nao: Comando = { tipo: 'pagarCusto', jogador: j, pagar: false };
+  const peso = pesoDoCusto(e, j, p.custo);
+  if (peso === null) return nao;
+  const ef = p.efeito;
+  let valor: number;
+  if (ef.tipo === 'pagar') {
+    const sen = ef.custo?.senao ?? 'linha';
+    const fonte = ef.fonteId && e.instancias[ef.fonteId] && !e.instancias[ef.fonteId].ehConjurador && e.jogadores[e.instancias[ef.fonteId].dono].campo.includes(ef.fonteId) ? ef.fonteId : undefined;
+    if (sen === 'sai') valor = fonte ? 2 + valorPerm(e, fonte) : 2;
+    else if (sen === 'alternativo') valor = -valorEfeitos(e, p.dono, ef.custo?.alternativos ?? []) + 1;
+    else if (sen === 'pula') valor = 3;
+    else valor = valorEfeitos(e, p.dono, (p.depois?.efeitos ?? []).slice(0, ef.bloco ?? 99));
+  } else valor = valorEfeitos(e, p.dono, [{ ...ef, custo: undefined } as Efeito]) + (ef.custo?.senao === 'carta' ? 2 : 0);
+  const pagar = valor > peso && valor > 0;
+  if (!pagar) return nao;
+  // Arcano: reserva e Grau levantado primeiro; depois as cartas menos valiosas da mão
+  const pitch: string[] = [];
+  let falta = (p.custo.arcano ?? 0) - e.jogadores[j].arcano - grauUsavel(e, j).length;
+  for (const o of ordemDeSacrificio(e, j, e.jogadores[j].mao)) { if (falta <= 0) break; pitch.push(o); falta -= defCarta(e, o).arcanoGerado; }
+  if (falta > 0 || pitch.length + (p.custo.descartar ?? 0) > e.jogadores[j].mao.length) return nao;
+  return { tipo: 'pagarCusto', jogador: j, pagar: true, enviarArcano: pitch };
+}
+
 function decidirAnulacao(e: Estado, j: Jogador, custo: number, instId: string, alvoEscolhido?: string): Comando {
   const z = e.jogadores[j];
   // na visão online a carta pode não ter chegado (fora da pilha): sem saber o que é, não paga
@@ -739,6 +799,7 @@ export function decidir(e: Estado, j: Jogador, est: Estilo): Comando {
     if (pend.tipo === 'escolherInicio') return { tipo: 'escolherInicio', jogador: j, primeiro: j };
     if (pend.tipo === 'descartar') return { tipo: 'descartar', jogador: j, cartas: ordemDeSacrificio(e, j, z.mao).slice(0, pend.quantidade) };
     if (pend.tipo === 'pagarAnulacao' && pend.item.tipo === 'carta') return decidirAnulacao(e, j, pend.custo, pend.item.instId, pend.item.alvo);
+    if (pend.tipo === 'pagarCusto') return decidirCusto(e, j, pend);
     if (pend.tipo === 'escolherDoTopo') {
       // fica com a carta mais valiosa que dá para jogar logo (Grau até 1 acima do atual)
       const g = grauEfetivo(e, j);

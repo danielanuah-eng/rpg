@@ -1,0 +1,40 @@
+{
+  "id": "104",
+  "nomeVisual": "Brann, Guarda da Reserva",
+  "slug": "brann-guarda-da-reserva",
+  "categoriaVisual": "personagem",
+  "cena": "Homem humano de meia idade pele castanha, magro e alto, cabelo comprido preto com fios grisalhos, roupa de campo musgo e vinho. Entre árvores ergue uma cerca mágica de correntes junto à trilha para impedir que CAÇADORES atravessem a área de ninho; um dragão verde protege ovos ao fundo. Visto de trás dos caçadores desarmados, corpo inteiro do guardião, amanhecer em neblina. Proteção por restrição, sem violência.",
+  "valores": [
+    "dominum",
+    "primitivum"
+  ],
+  "postura": "ambivalente",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/104-v1.prompt.txt",
+  "arquivo": "imagens/104-brann-guarda-da-reserva-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-838e5ef1-f738-49eb-be27-0c539a6825d3.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "859bdd0e15a33ccb7ed14bb11100a026e949daa7a163d4450ff8727b93111949",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 24.6,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

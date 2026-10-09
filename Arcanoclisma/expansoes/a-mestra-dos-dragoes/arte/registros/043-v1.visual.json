@@ -1,0 +1,44 @@
+{
+  "id": "043",
+  "slug": "dragao-alvorum-carvao",
+  "nomeVisual": "Dragão de Carvão e Ouro",
+  "cena": "Primeira arte de Alvorum destinada à carta do estudo 043: dragão preto e dourado no exterior vulcânico.",
+  "momentoDoDia": "amanhecer",
+  "estado": "selecionada_pelo_autor_aguardando_carta",
+  "tipoDeCarta": null,
+  "raridade": null,
+  "liberadaParaJogo": false,
+  "arquivo": "imagens/043-dragao-alvorum-carvao-v1.png",
+  "versao": "v1",
+  "prompt": "prompts/043-v1.prompt.txt",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-2282290c-e7bf-4ae4-9d11-b3f1365f6f90.png",
+  "ferramenta": "image_gen integrada",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "sha256": "b1b9fc60dd53825250870441a9d3492efbe68968d1c6dc68b819aeb8674f9920",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "fundo": "cenário completo opaco",
+  "saturacao": "reduzida conforme pedido do autor",
+  "futuroDeValiant": "obscuro, sem desfecho revelado",
+  "aparenciasNovas": "propostas visuais aguardando aprovação",
+  "revisaoVisual": "Autor pediu usar ambas as artes de Alvorum em cartas diferentes.",
+  "ambiente": "Primeira arte de Alvorum destinada à carta do estudo 043: dragão preto e dourado no exterior vulcânico.",
+  "clima": "conforme imagem",
+  "escala": "personagens e objetos integrados ao ambiente",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "liberdadesVisuais": [
+    "composição e detalhes estéticos; sem novas regras"
+  ],
+  "pushAutorizado": true,
+  "autorizacaoPush": "Instruções do autor: push de todas as imagens autorizado; escolhas de Primitivum e duas artes de Alvorum reafirmadas nesta conversa.",
+  "cartaDestinoProvisoria": "Estudo 043 — Dragão de Carvão e Ouro, carta distinta do estudo 049"
+}

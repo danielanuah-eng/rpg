@@ -1,0 +1,136 @@
+{
+  "extra": [
+    {
+      "id": "037",
+      "slug": "ciantia-magia-escondida",
+      "nomeVisual": "O exercício escondido",
+      "cena": "Ciantia adolescente conjura escondida num sótão enquanto percebe a presença do pai no corredor.",
+      "momentoDoDia": "noite",
+      "estado": "pendente",
+      "tipoDeCarta": null,
+      "raridade": null,
+      "liberadaParaJogo": false
+    },
+    {
+      "id": "038",
+      "slug": "ciantia-confianca-em-risco",
+      "nomeVisual": "O passo que ela escolhe",
+      "cena": "Ciantia jovem decide continuar praticando com um dragão, consciente do desacordo do pai.",
+      "momentoDoDia": "amanhecer",
+      "estado": "pendente",
+      "tipoDeCarta": null,
+      "raridade": null,
+      "liberadaParaJogo": false
+    },
+    {
+      "id": "039",
+      "slug": "dragao-conflituo-crista",
+      "nomeVisual": "Dragão de Crista Ferrugem",
+      "cena": "Novo dragão de Conflitüo, ferrugem, robusto e alado, sozinho numa encosta.",
+      "momentoDoDia": "tarde",
+      "estado": "pendente",
+      "tipoDeCarta": null,
+      "raridade": null,
+      "liberadaParaJogo": false
+    },
+    {
+      "id": "040",
+      "slug": "dragao-sublimeyn-fita",
+      "nomeVisual": "Dragão de Fita Mercurial",
+      "cena": "Novo dragão de Sublimeyn, prata-mercúrio, corpo alongado, sozinho num estuário.",
+      "momentoDoDia": "manhã",
+      "estado": "pendente",
+      "tipoDeCarta": null,
+      "raridade": null,
+      "liberadaParaJogo": false
+    },
+    {
+      "id": "041",
+      "slug": "dragao-dominum-coroa",
+      "nomeVisual": "Dragão de Coroa Rubra",
+      "cena": "Novo dragão de Dominum, roxo-sangue apagado, sozinho num pátio abandonado.",
+      "momentoDoDia": "crepúsculo",
+      "estado": "pendente",
+      "tipoDeCarta": null,
+      "raridade": null,
+      "liberadaParaJogo": false
+    },
+    {
+      "id": "042",
+      "slug": "dragao-persona-leque",
+      "nomeVisual": "Dragão de Asas em Leque",
+      "cena": "Novo dragão de Persona, coral suave, sozinho num jardim de cerâmica.",
+      "momentoDoDia": "tarde",
+      "estado": "pendente",
+      "tipoDeCarta": null,
+      "raridade": null,
+      "liberadaParaJogo": false
+    },
+    {
+      "id": "043",
+      "slug": "dragao-alvorum-carvao",
+      "nomeVisual": "Dragão de Carvão e Ouro",
+      "cena": "Novo dragão de Alvorum, preto e dourado contido, sozinho numa caldeira.",
+      "momentoDoDia": "amanhecer",
+      "estado": "pendente",
+      "tipoDeCarta": null,
+      "raridade": null,
+      "liberadaParaJogo": false
+    },
+    {
+      "id": "044",
+      "slug": "dragao-morbidyum-casulo",
+      "nomeVisual": "Dragão de Casulo Pálido",
+      "cena": "Novo dragão de Morbidyum, verde-pálido, sozinho num brejo.",
+      "momentoDoDia": "dia nublado",
+      "estado": "pendente",
+      "tipoDeCarta": null,
+      "raridade": null,
+      "liberadaParaJogo": false
+    },
+    {
+      "id": "045",
+      "slug": "dragao-cognitium-prisma",
+      "nomeVisual": "Dragão de Chifres Prismáticos",
+      "cena": "Novo dragão de Cognitium, índigo acinzentado, sozinho numa gruta cristalina.",
+      "momentoDoDia": "interior",
+      "estado": "pendente",
+      "tipoDeCarta": null,
+      "raridade": null,
+      "liberadaParaJogo": false
+    },
+    {
+      "id": "046",
+      "slug": "dragao-eternyr-antigo",
+      "nomeVisual": "Dragão Antigo de Eternyr",
+      "cena": "Novo dragão de Eternyr, azul-noite com riscos brancos, sozinho num planalto.",
+      "momentoDoDia": "noite",
+      "estado": "pendente",
+      "tipoDeCarta": null,
+      "raridade": null,
+      "liberadaParaJogo": false
+    },
+    {
+      "id": "047",
+      "slug": "dragao-primitivum-raiz",
+      "nomeVisual": "Dragão de Raízes e Musgo",
+      "cena": "Novo dragão de Primitivum, verde-musgo e âmbar apagado, sozinho na floresta.",
+      "momentoDoDia": "manhã",
+      "estado": "pendente",
+      "tipoDeCarta": null,
+      "raridade": null,
+      "liberadaParaJogo": false
+    },
+    {
+      "id": "048",
+      "slug": "criatura-casco-sino",
+      "nomeVisual": "Criatura de Casco-Sino",
+      "cena": "Nova criatura de seis patas e carapaça oca, sozinha numa paisagem de ravina.",
+      "momentoDoDia": "tarde",
+      "estado": "pendente",
+      "tipoDeCarta": null,
+      "raridade": null,
+      "liberadaParaJogo": false
+    }
+  ]
+}

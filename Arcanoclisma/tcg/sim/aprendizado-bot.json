@@ -1,0 +1,24 @@
+{
+  "atualizado": "2026-10-09",
+  "geral": {},
+  "porConjurador": {
+    "mitonho": {
+      "lento": false,
+      "sobeGrau": true
+    }
+  },
+  "pedidosDeCodigo": [
+    "Bots devem aprender com registros de combates, jogadas e interações para repassar ensinamentos a cada conjurador, conforme ideia aprovada iacfc0d41a377489e.",
+    "Bots devem bloquear ataques de Aliados do jogador quando apropriado, conforme meta sobre NPCs não bloqueando esses ataques.",
+    "Bots não devem bloquear com armaduras fora do Grau correto, conforme meta sobre NPCs bloqueando armaduras sem estar no Grau certo.",
+    "Disponibilizar rematch e refazer jogada se ambos permitirem, conforme ideia aprovada id561d04fc4934d1e.",
+    "Tornar a aba de dúvidas escondível no celular, conforme ideia aprovada i5c2f7a6202e648b9."
+  ],
+  "observacoes": [
+    "Aprendizado anterior estava vazio e foi mantido.",
+    "As opiniões sobre bots indicam Carmal lenta para desenvolver e Mitonho jogando poucas cartas; ajustes para reduzir lentidão e subir Grau até jogar a mão.",
+    "A meta aponta correções de bloqueio dos NPCs, tratadas como pedidos de código por não terem campo específico.",
+    "As demais opiniões são bugs, UI ou balanceamento, sem alteração de estilo de bot.",
+    "Carmal retirado: o autor pediu (09/10) para não mexer no Carmal."
+  ]
+}

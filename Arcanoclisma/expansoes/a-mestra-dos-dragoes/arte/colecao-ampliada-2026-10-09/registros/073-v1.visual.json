@@ -1,0 +1,37 @@
+{
+  "id": "073",
+  "nomeVisual": "Incubadora Portátil",
+  "slug": "incubadora-portatil",
+  "categoriaVisual": "equipamento",
+  "cena": "Equipamento aberto numa carroça de viagem.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/073-v1.prompt.txt",
+  "arquivo": "imagens/073-incubadora-portatil-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-2e7a2f03-eddc-444a-8022-0e70a01f4d2c.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "d58daa63043c095d416a45697266b0f0881dbb735a04b426ceead3bcaba4d655",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 29.7,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

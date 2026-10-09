@@ -1,0 +1,37 @@
+{
+  "id": "056",
+  "nomeVisual": "Peixe de Telhado",
+  "slug": "peixe-de-telhado",
+  "categoriaVisual": "monstro",
+  "cena": "Vista aérea diagonal de criatura atravessando um telhado.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/056-v1.prompt.txt",
+  "arquivo": "imagens/056-peixe-de-telhado-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-6d7dd845-fdb3-4dcd-a385-fcd5ba65ac4b.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "2aac1d227735847ceefeaa8c1af3776b214ec681e6c7c4a8062cbf9f82077ba3",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 24.8,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

@@ -16,7 +16,51 @@ export function textoRequisito(r) {
 }
 const ESCOLHA_TXT = { afetado: ' (o dono da carta atingida escolhe qual)', aleatorio: ' (ao acaso)' };
 export function descEfeito(ef) {
-  return textoRequisito(ef.requisito) + descEfeitoBase(ef) + (ef.escolha && ef.escolha !== 'controlador' && (ef.alcance !== 'todos') ? ESCOLHA_TXT[ef.escolha] : '');
+  const base = descEfeitoBase(ef) + (ef.escolha && ef.escolha !== 'controlador' && (ef.alcance !== 'todos') ? ESCOLHA_TXT[ef.escolha] : '');
+  return textoRequisito(ef.requisito) + (temCusto(ef.custo) && ef.tipo !== 'pagar' ? textoComCusto(ef.custo, base) : base);
+}
+/** O custo tem algo a pagar? Custo vazio (ainda sendo montado no Editor) não aparece no texto nem é cobrado pelo motor. */
+export const temCusto = (c) => !!c && ['arcano', 'vida', 'descartar', 'grauAoCemiterio', 'sacrificar'].some((k) => (c[k] ?? 0) > 0);
+
+// ---------- custo condicional (05/10, decisão 40) ----------
+
+/** Partes do custo: no infinitivo ("pagar 1 de Arcano") ou no imperativo ("pague 1 de Arcano"). */
+function partesCusto(c, imp) {
+  const v = imp ? { pagar: 'pague', descartar: 'descarte', mandar: 'mande', sacrificar: 'sacrifique' } : { pagar: 'pagar', descartar: 'descartar', mandar: 'mandar', sacrificar: 'sacrificar' };
+  const pagos = [c.arcano ? `${c.arcano} de Arcano` : '', c.vida ? `${c.vida} de Vida` : ''].filter(Boolean);
+  return [pagos.length ? `${v.pagar} ${pagos.join(' e ')}` : '', c.descartar ? `${v.descartar} ${cartas(c.descartar)}` : '',
+    c.grauAoCemiterio ? `${v.mandar} ${cartas(c.grauAoCemiterio)} do Grau ao cemitério` : '', c.sacrificar ? `${v.sacrificar} ${c.sacrificar > 1 ? `${c.sacrificar} Aliados` : 'um Aliado'}` : ''].filter(Boolean);
+}
+const lista = (p) => (p.length > 1 ? p.slice(0, -1).join(', ') + ' e ' + p.at(-1) : p[0] ?? '');
+/** Custo para a tela e o texto: "pagar 1 de Arcano e descartar 1 carta" (imp: "pague 1 de Arcano e descarte 1 carta"). */
+export function textoCustoPagar(c, imp = false) { return lista(partesCusto(c ?? {}, imp)) || (imp ? 'não pague nada' : 'não pagar nada'); }
+const SAI_TXT = { cemiterio: 'o cemitério', banimento: 'o banimento', mao: 'a mão do dono', fundo: 'o fundo do baralho do dono' };
+/** O que acontece quando o efeito é impedido (texto curto). */
+function consequencia(c, quemSai = 'ela') {
+  switch (c.senao) {
+    case 'carta': return 'esta carta é anulada';
+    case 'alternativo': return c.alternativos?.length ? juntarEfeitos(c.alternativos) : 'nada acontece';
+    case 'sai': return `${quemSai} vai para ${SAI_TXT[c.destino ?? 'cemiterio']}`;
+    case 'pula': return 'o efeito não acontece neste turno';
+    default: return '';
+  }
+}
+/**
+ * Linha com custo: "você pode pagar 1 de Arcano; se pagar, compre 2 cartas" ou, pago pelo oponente,
+ * "cause 3 de dano ao Conjurador inimigo, a menos que o oponente pague 2 de Arcano".
+ */
+export function textoComCusto(c, acao) {
+  const custo = textoCustoPagar(c);
+  const ao = c.quando === 'jogar' ? ' ao jogar esta carta' : '';
+  const sen = consequencia(c);
+  if (c.quem === 'oponente') return `${acao}, a menos que o oponente ${textoCustoPagar(c, true)}${ao}${sen ? ` (se ele fizer isso, ${sen})` : ''}`;
+  return `você pode ${custo}${ao}; se fizer isso, ${acao}${sen ? `; se não, ${sen}` : ''}`;
+}
+/** Manutenção: "pague 1 de Arcano ou ela vai para o cemitério" / "o oponente pode pagar 2 de Arcano; se pagar, ela vai para o cemitério". */
+export function textoManutencao(m) {
+  const sen = consequencia({ senao: m.senao ?? 'sai', destino: m.destino, alternativos: m.alternativos }) || 'nada acontece';
+  if (m.quem === 'oponente') return `o oponente pode ${textoCustoPagar(m)}; se fizer isso, ${sen}`;
+  return `${textoCustoPagar(m, true)} ou ${sen}`;
 }
 function descEfeitoBase(ef) {
   switch (ef.tipo) {
@@ -49,6 +93,9 @@ function descEfeitoBase(ef) {
     case 'olharMao': return ef.pegar > 0 && ef.destino !== 'nada' ? `olhe a mão do oponente e mande ${ef.pegar} carta${ef.pegar > 1 ? 's' : ''} dela ${PARA[ef.destino]}` : 'olhe a mão do oponente';
     case 'jogarDe': return `ponha em campo, sem pagar, ${ef.valor > 1 ? `até ${ef.valor} cartas` : 'uma carta'} (${(ef.tipos?.length ? ef.tipos : ['aliado']).map((t) => TIPO_PL[t] ?? t).join(' ou ')}${ef.custoMax !== undefined ? `, custo até ${ef.custoMax}` : ''}) ${ORIGEM[ef.de]}${ef.concessao ? `; elas ${textoConcessao(ef.concessao, 'elas')}` : ''}`;
     case 'campo': return textoCampo(ef);
+    // internos (05/10): linha que só cobra o custo; continuação de custos ao jogar
+    case 'pagar': return ef.custo ? (ef.custo.quem === 'oponente' ? `o oponente pode ${textoCustoPagar(ef.custo)} para impedir` : `você pode ${textoCustoPagar(ef.custo)}`) : '';
+    case 'proximoCusto': return '';
     default: return ef.tipo;
   }
 }
@@ -81,9 +128,19 @@ function textoReanimar(ef) {
  * "...; depois, seu Conjurador toma 2 de dano e você sacrifica um Aliado".
  */
 export function juntarEfeitos(efs) {
+  // linha interna "pagar" (custo do gatilho ou manutenção, 05/10): o custo envolve as linhas do bloco dela
+  const ip = efs.findIndex((ef) => ef?.tipo === 'pagar');
+  if (ip >= 0) {
+    const c = efs[ip].custo ?? {};
+    const bloco = efs.slice(ip + 1, ip + 1 + (efs[ip].bloco ?? efs.length));
+    const depois = efs.slice(ip + 1 + bloco.length);
+    const meio = !bloco.length && efs[ip].fonteId ? textoManutencao(c) : textoComCusto(c, bloco.length ? juntarEfeitos(bloco) : 'nada acontece');
+    return [efs.slice(0, ip).length ? juntarEfeitos(efs.slice(0, ip)) : '', meio, depois.length ? juntarEfeitos(depois) : ''].filter(Boolean).join('; ');
+  }
   let k = efs.length;
   while (k > 0 && efs[k - 1]?.secundario) k--;
-  const txt = (l) => l.map(descEfeito).join(' e ');
+  // linhas com custo (05/10) ficam separadas por ponto e vírgula, para o custo não se misturar com a linha seguinte
+  const txt = (l) => l.map(descEfeito).join(l.some((ef) => ef.custo) ? '; ' : ' e ');
   if (k === 0 || k === efs.length) return txt(efs);
   return `${txt(efs.slice(0, k))}; depois, ${txt(efs.slice(k))}`;
 }
@@ -196,9 +253,69 @@ export function textoHabilidade(h, conj = false) {
     const pre = grau ? `Com ${grau}+ no Grau, ${lista}` : lista.charAt(0).toUpperCase() + lista.slice(1);
     return `${h.repentina ? 'Repentina: ' + pre.charAt(0).toLowerCase() + pre.slice(1) : pre}: ${efs}`;
   }
-  const quando = conj && QUANDO_CONJ_TXT[h.quando] ? QUANDO_CONJ_TXT[h.quando] : QUANDO_TXT[h.quando] ?? h.quando;
-  const extras = [h.umaVezPorTurno ? 'uma vez por turno' : '', h.soNoSeuTurno ? 'só no seu turno' : ''].filter(Boolean);
-  return `${quando}${extras.length ? ` (${extras.join(', ')})` : ''}: ${efs}`;
+  if (h.quando === 'emCampo') return textoEmCampo(h, conj);
+  const quando = EVENTO_TXT[h.quando] ? `Quando ${EVENTO_TXT[h.quando][h.quem ?? 'qualquer']}` : conj && QUANDO_CONJ_TXT[h.quando] ? QUANDO_CONJ_TXT[h.quando] : QUANDO_TXT[h.quando] ?? h.quando;
+  const vezes = h.vezesPorTurno ?? (h.umaVezPorTurno ? 1 : 0);
+  const extras = [vezes === 1 ? 'uma vez por turno' : vezes > 1 ? `até ${vezes} vezes por turno` : '', h.soNoSeuTurno ? 'só no seu turno' : ''].filter(Boolean);
+  const corpo = temCusto(h.pagar) ? textoComCusto(h.pagar, juntarEfeitos(h.efeitos ?? [])) + '.' : efs;
+  return `${quando}${extras.length ? ` (${extras.join(', ')})` : ''}: ${corpo}`;
+}
+/** Eventos de jogador (05/10): o texto depende de quem ('voce', 'oponente', 'qualquer'). */
+export const EVENTO_TXT = {
+  compra: { voce: 'você compra cartas', oponente: 'o oponente compra cartas', qualquer: 'um jogador compra cartas' },
+  conjuradorDano: { voce: 'seu Conjurador toma dano', oponente: 'o Conjurador do oponente toma dano', qualquer: 'um Conjurador toma dano' },
+  ganhaVida: { voce: 'seu Conjurador ganha Vida (cura)', oponente: 'o Conjurador do oponente ganha Vida (cura)', qualquer: 'um Conjurador ganha Vida (cura)' },
+  perdeVida: { voce: 'seu Conjurador perde Vida', oponente: 'o Conjurador do oponente perde Vida', qualquer: 'um Conjurador perde Vida' },
+  jogaAliado: { voce: 'você joga um Aliado', oponente: 'o oponente joga um Aliado', qualquer: 'um jogador joga um Aliado' },
+  jogaMistica: { voce: 'você joga uma Mística', oponente: 'o oponente joga uma Mística', qualquer: 'um jogador joga uma Mística' },
+  jogaPermanente: { voce: 'você joga uma permanente (Aliado, Mística ou Estrutura)', oponente: 'o oponente joga uma permanente (Aliado, Mística ou Estrutura)', qualquer: 'um jogador joga uma permanente (Aliado, Mística ou Estrutura)' },
+  ativaHabilidade: { voce: 'você ativa uma habilidade', oponente: 'o oponente ativa uma habilidade', qualquer: 'um jogador ativa uma habilidade' },
+  pilha: { voce: 'uma carta sua vai para a pilha', oponente: 'uma carta do oponente vai para a pilha', qualquer: 'uma carta vai para a pilha' },
+};
+const ETAPA_TXT = { inicio: 'no início', principal: 'na fase principal', cataclisma: 'no Cataclisma', final: 'no Final' };
+const TURNO_TXT = { seu: 'do seu turno', oponente: 'do turno do oponente', cada: 'de cada turno' };
+const LADO_AURA = { proprio: 'seus', inimigo: 'do oponente', ambos: 'de todos' };
+const TIPO_AURA = { aliado: 'Aliados', mistica: 'Místicas', estrutura: 'Estruturas', conjurador: 'Conjuradores' };
+/**
+ * "Enquanto estiver em campo" (05/10): passivo ("Enquanto estiver em campo, seus Aliados ganham +1/+1 e Etéreo.") ou
+ * recorrente ("Enquanto estiver em campo, no início do seu turno: compre 1 carta."), mais a manutenção
+ * ("Enquanto estiver em campo, no início do seu turno, pague 1 de Arcano ou ela vai para o cemitério.").
+ * No Conjurador, sem o "enquanto estiver em campo".
+ */
+export function textoEmCampo(h, conj = false) {
+  const pre = conj ? '' : 'Enquanto estiver em campo';
+  const junta = (t) => (pre ? `${pre}, ${t}` : t.charAt(0).toUpperCase() + t.slice(1));
+  const frases = [];
+  if ((h.modo ?? 'passivo') === 'passivo') {
+    const a = h.aura;
+    if (a && (a.ataque || a.vida || a.palavras?.length)) {
+      const tipos = (a.tipos?.length ? a.tipos : ['aliado']).map((t) => TIPO_AURA[t] ?? t);
+      const grupo = a.lado === 'proprio' ? `seus ${lista(tipos)}` : a.lado === 'inimigo' ? `os ${lista(tipos)} do oponente` : `todos os ${lista(tipos)}`;
+      const sinal = (v) => (v > 0 ? '+' : '') + v;
+      const ganhos = [a.ataque && a.vida ? `${sinal(a.ataque)}/${sinal(a.vida)}` : a.ataque ? `${sinal(a.ataque)} de Ataque` : a.vida ? `${sinal(a.vida)} de Vida` : '', ...(a.palavras ?? [])].filter(Boolean);
+      frases.push(`${grupo}${a.excetoEsta ? ' (menos esta carta)' : ''} ganham ${lista(ganhos)}`);
+    }
+    const c = h.custoCartas;
+    if (c?.valor) {
+      const tipos = (c.tipos ?? []).map((t) => TIPO_PL[t] ?? t);
+      const pl = tipos.map((t) => t + 's');
+      const quais = !tipos.length ? 'as cartas' : c.tipos.every((t) => t === 'aliado') ? 'os Aliados' : c.tipos.includes('aliado') ? `as cartas (${lista(pl)})` : `as ${lista(pl)}`;
+      const de = c.de === 'voce' ? ' que você joga' : c.de === 'oponente' ? ' do oponente' : ' de todos';
+      frases.push(`${quais}${de} custam ${Math.abs(c.valor)} a ${c.valor > 0 ? 'mais' : 'menos'}`);
+    }
+  } else if (h.efeitos?.length) {
+    const quando = `${ETAPA_TXT[h.etapa ?? 'inicio']} ${TURNO_TXT[h.turnoDe ?? 'seu']}${h.turnos ? `, por ${h.turnos} turno${h.turnos > 1 ? 's' : ''}` : ''}`;
+    frases.push(`${quando}: ${temCusto(h.pagar) ? textoComCusto(h.pagar, juntarEfeitos(h.efeitos)) : juntarEfeitos(h.efeitos)}`);
+  }
+  const t = [];
+  if (frases.length) t.push(junta(frases.join('; ')) + '.');
+  const m = h.manutencao;
+  if (temCusto(m)) {
+    const mt = `${ETAPA_TXT[m.etapa ?? 'inicio']} ${TURNO_TXT[m.turnoDe ?? 'seu']}, ${textoManutencao(m)}`;
+    // depois de um passivo/recorrente a manutenção não repete "Enquanto estiver em campo"
+    t.push((t.length ? mt.charAt(0).toUpperCase() + mt.slice(1) : junta(mt)) + '.');
+  }
+  return t.join(' ') || junta('nada acontece') + '.';
 }
 /** Condições do próprio Conjurador no texto do poder. */
 const QUANDO_CONJ_TXT = { atacar: 'Quando o Conjurador ataca', bloquear: 'Quando o Conjurador defende', alvo: 'Quando o Conjurador vira alvo', danoConjurador: 'Quando o Conjurador causa dano de combate ao Conjurador inimigo' };

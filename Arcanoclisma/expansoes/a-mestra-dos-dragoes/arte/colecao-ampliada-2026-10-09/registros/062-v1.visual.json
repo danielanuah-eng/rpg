@@ -1,0 +1,40 @@
+{
+  "id": "062",
+  "nomeVisual": "Asas sobre a Inundação",
+  "slug": "asas-sobre-a-inundacao",
+  "categoriaVisual": "magia_draconica",
+  "cena": "Magia de Sublimeyn, Ciantia altera o curso de uma enchente.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/062-v1.prompt.txt",
+  "referencias": [
+    "C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/Arcanoclisma/expansoes/a-mestra-dos-dragoes/arte/imagens/031-ciantia-grande-conjuradora-v1.png"
+  ],
+  "arquivo": "imagens/062-asas-sobre-a-inundacao-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-083945d2-b09d-4ad7-b558-7b14d4c71d5b.png",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "sha256": "43b49b4983db58f19e876657323623f768e13b8832ab80634702491a0fae0a69",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 19.1,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

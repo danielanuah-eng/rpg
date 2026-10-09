@@ -1,0 +1,37 @@
+{
+  "id": "054",
+  "nomeVisual": "Mandíbula de Juncos",
+  "slug": "mandibula-de-juncos",
+  "categoriaVisual": "monstro",
+  "cena": "Close de criatura camuflada entre canaviais.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/054-v1.prompt.txt",
+  "arquivo": "imagens/054-mandibula-de-juncos-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-4c2c20d0-f877-48b9-a3e1-0e584d6058bb.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "sha256": "f07d281d581274cae2844834726e0bca2482e529e45a96fed3cc7c679e131ff3",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 25.2,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

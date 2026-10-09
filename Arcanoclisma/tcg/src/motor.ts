@@ -1,6 +1,6 @@
 // Motor de regras do Arcanoclisma TCG (fase 1). Muta o estado e lança ErroRegra se o comando for ilegal.
 import type {
-  AcaoCampo, Ativacao, BaralhoDef, CartaDef, Concessao, TipoAlvoCampo, Catalogo, Comando, Continuacao, ConjuradorDef, Destino, Efeito, Estado, Etapa, FonteDano, Habilidade, HabUsos, Inst, ItemPilha, Jogador, PermissaoJogar, Protegido, Quando, Regras, Requisito, ZonasJogador,
+  AcaoCampo, Ativacao, BaralhoDef, CartaDef, Concessao, CustoCondicional, CustoPagar, TurnoDe, TipoAlvoCampo, Catalogo, Comando, Continuacao, ConjuradorDef, Destino, Efeito, Estado, Etapa, FonteDano, Habilidade, HabUsos, Inst, ItemPilha, Jogador, PermissaoJogar, Protegido, Quando, Regras, Requisito, ZonasJogador,
 } from './tipos.ts';
 
 export const ARCANO_POR_GRAU = 1;
@@ -65,7 +65,7 @@ export function defConjurador(e: Estado, j: Jogador): ConjuradorDef {
 function vidaDe(e: Estado, instId: string): number | undefined {
   const inst = e.instancias[instId];
   const base = inst.ehConjurador ? defConjurador(e, inst.dono).vida : defCarta(e, instId).vida;
-  return base === undefined ? undefined : base + (inst.bonusVida ?? 0) + (inst.bonusVidaTurno ?? 0);
+  return base === undefined ? undefined : base + (inst.bonusVida ?? 0) + (inst.bonusVidaTurno ?? 0) + auraDe(e, instId).vida;
 }
 
 /** Vida atual (com bônus do construtor de efeitos), para a interface. */
@@ -81,7 +81,7 @@ export function ataqueAtualDe(e: Estado, instId: string): number {
 export function temPalavra(e: Estado, instId: string, palavra: string): boolean {
   const i = e.instancias[instId];
   if (!i) return false;
-  if (palavrasConcedidas(i).includes(palavra)) return true;
+  if (palavrasConcedidas(i).includes(palavra) || auraDe(e, instId).palavras.includes(palavra)) return true;
   return !i.ehConjurador && !!defCarta(e, instId).palavrasChave?.includes(palavra);
 }
 /** Palavras-chave concedidas: permanentes e as que duram alguns turnos. */
@@ -122,20 +122,25 @@ export function normalizarProtegido<T extends Pick<CartaDef, 'protegido' | 'prot
 }
 /** Protegidos concedidos ("Protegido 2"), cada um por si (fixos e por turnos). */
 function protegidosConcedidos(i: Inst): number[] {
-  return palavrasConcedidas(i).map((p) => { const m = /^Protegido\s*(\d+)$/i.exec(p.trim()); return m ? Number(m[1]) : 0; }).filter((n) => n > 0);
+  return protegidosDePalavras(palavrasConcedidas(i));
+}
+function protegidosDePalavras(palavras: string[]): number[] {
+  return palavras.map((p) => { const m = /^Protegido\s*(\d+)$/i.exec(p.trim()); return m ? Number(m[1]) : 0; }).filter((n) => n > 0);
 }
 
 /** Incomensurável (decisão 25): Aliado com a palavra-chave, ou Conjurador com arma Incomensurável. */
 export function incomensuravel(e: Estado, instId: string): boolean {
   const i = e.instancias[instId];
   if (!i) return false;
-  if (palavrasConcedidas(i).includes('Incomensurável')) return true;
+  if (palavrasConcedidas(i).includes('Incomensurável') || auraDe(e, instId).palavras.includes('Incomensurável')) return true;
   if (i.ehConjurador) { const a = armaDe(e, i.dono); return !!a && !!defCarta(e, a).palavrasChave?.includes('Incomensurável'); }
   return !!defCarta(e, instId).palavrasChave?.includes('Incomensurável');
 }
 const temIncomensuravel = (d: CartaDef | undefined) => !!d?.palavrasChave?.includes('Incomensurável');
 /** Efeitos resolvendo agora vêm de uma fonte Incomensurável? (o dano que passar da Vida da carta vai para o Conjurador dela) */
 let fonteIncomensuravel = false;
+/** Carta cujos efeitos estão resolvendo agora (o painel Pagar / Não pagar mostra essa carta). */
+let fonteAtual: string | undefined;
 
 /**
  * Etéreo (decisão 24): só Etéreos atingem Etéreos em combate. Aliado: a palavra-chave. Conjurador: ao ATACAR vale a arma
@@ -144,7 +149,7 @@ let fonteIncomensuravel = false;
 export function etereo(e: Estado, instId: string, papel: 'ataque' | 'bloqueio' = 'ataque'): boolean {
   const i = e.instancias[instId];
   if (!i) return false;
-  if (palavrasConcedidas(i).includes('Etéreo')) return true;
+  if (palavrasConcedidas(i).includes('Etéreo') || auraDe(e, instId).palavras.includes('Etéreo')) return true;
   if (i.ehConjurador) { const a = papel === 'bloqueio' ? armaduraDe(e, i.dono) : armaDe(e, i.dono); return !!a && !!defCarta(e, a).palavrasChave?.includes('Etéreo'); }
   return !!defCarta(e, instId).palavrasChave?.includes('Etéreo');
 }
@@ -152,7 +157,62 @@ export function etereo(e: Estado, instId: string, papel: 'ataque' | 'bloqueio' =
 function ataqueDe(e: Estado, instId: string, bloqueando = false): number {
   const inst = e.instancias[instId];
   // Conjurador que bloqueia não devolve o dano da arma (só dano básico), salvo efeito da arma (futuro)
-  return inst.ehConjurador ? (bloqueando ? defConjurador(e, inst.dono).danoBasico : ataqueConjurador(e, inst.dono)) : (defCarta(e, instId).ataque ?? 0) + (inst.bonusAtaque ?? 0) + (inst.bonusAtaqueTurno ?? 0);
+  return inst.ehConjurador ? (bloqueando ? defConjurador(e, inst.dono).danoBasico : ataqueConjurador(e, inst.dono)) : (defCarta(e, instId).ataque ?? 0) + (inst.bonusAtaque ?? 0) + (inst.bonusAtaqueTurno ?? 0) + auraDe(e, instId).ataque;
+}
+
+// ---------- "enquanto estiver em campo" passivo (05/10, decisão 40) ----------
+
+/** Onde ficam as habilidades em jogo de um jogador: o Conjurador, as cartas em campo e os itens equipados. */
+function fontesEmJogo(e: Estado, j: Jogador): string[] {
+  const z = e.jogadores[j];
+  return [z.conjuradorId, ...z.campo, ...(z.itens ?? [])];
+}
+/** A habilidade "enquanto estiver em campo" vale neste turno (a manutenção não paga com "pula" desliga só o turno)? */
+const habLigada = (i: Inst, k: number, turno: number) => i.desligada?.[k] !== turno;
+/** Passivos "enquanto estiver em campo" valendo agora: cada um com a carta (ou Conjurador/item) e o dono. Sem pilha. */
+function passivosEmJogo(e: Estado): Array<{ fonte: string; dono: Jogador; h: Habilidade }> {
+  const r: Array<{ fonte: string; dono: Jogador; h: Habilidade }> = [];
+  if (!e.jogadores?.[0] || !e.jogadores[1]) return r;
+  for (const j of [0, 1] as Jogador[]) {
+    for (const id of fontesEmJogo(e, j)) {
+      const i = e.instancias[id];
+      if (!i) continue;
+      habilidadesDe(e, id).forEach((h, k) => { if (h.quando === 'emCampo' && (h.modo ?? 'passivo') === 'passivo' && habLigada(i, k, e.turno)) r.push({ fonte: id, dono: j, h }); });
+    }
+  }
+  return r;
+}
+/**
+ * Bônus que os passivos em jogo dão agora a esta carta em campo (ou Conjurador): Ataque, Vida e palavras-chave.
+ * Recalculado a cada consulta (nada fica gravado na carta): some quando a fonte sai do campo.
+ */
+export function auraDe(e: Estado, instId: string): { ataque: number; vida: number; palavras: string[] } {
+  const r = { ataque: 0, vida: 0, palavras: [] as string[] };
+  const alvo = e.instancias[instId];
+  if (!alvo || !e.jogadores?.[0] || !naMesa(e, instId)) return r;
+  const tipo = alvo.ehConjurador ? 'conjurador' : e.catalogo.cartas[alvo.defId]?.tipo;
+  for (const p of passivosEmJogo(e)) {
+    const a = p.h.aura;
+    if (!a || (a.excetoEsta && p.fonte === instId)) continue;
+    if ((a.lado === 'proprio' && alvo.dono !== p.dono) || (a.lado === 'inimigo' && alvo.dono === p.dono)) continue;
+    if (!(a.tipos?.length ? (a.tipos as string[]) : ['aliado']).includes(tipo as string)) continue;
+    r.ataque += a.ataque ?? 0;
+    r.vida += a.vida ?? 0;
+    for (const w of a.palavras ?? []) if (!r.palavras.includes(w)) r.palavras.push(w);
+  }
+  return r;
+}
+/** Passivo de custo (05/10): quanto esta carta custa a mais (negativo = a menos) para o jogador j agora. */
+export function ajusteCustoPassivo(e: Estado, j: Jogador, d: CartaDef): number {
+  let t = 0;
+  for (const p of passivosEmJogo(e)) {
+    const c = p.h.custoCartas;
+    if (!c?.valor) continue;
+    if ((c.de === 'voce' && j !== p.dono) || (c.de === 'oponente' && j === p.dono)) continue;
+    if (c.tipos?.length && !c.tipos.includes(d.tipo)) continue;
+    t += c.valor;
+  }
+  return t;
 }
 
 /** A arma do Conjurador (Canal do tipo Arma), se houver. */
@@ -214,7 +274,7 @@ export function ataqueConjurador(e: Estado, j: Jogador): number {
   const z = e.jogadores[j];
   const armas = (z.itens ?? []).reduce((s, id) => { const d = defCarta(e, id); return s + (d.categoriaItem === 'canal' ? (d.ataque ?? 0) : 0); }, 0);
   const ci = e.instancias[z.conjuradorId];
-  return defConjurador(e, j).danoBasico + armas + (e.habUsos?.[j]?.ataqueExtra ?? 0) + (ci?.bonusAtaque ?? 0) + (ci?.bonusAtaqueTurno ?? 0);
+  return defConjurador(e, j).danoBasico + armas + (e.habUsos?.[j]?.ataqueExtra ?? 0) + (ci?.bonusAtaque ?? 0) + (ci?.bonusAtaqueTurno ?? 0) + (ci ? auraDe(e, ci.id).ataque : 0);
 }
 
 /** Armadura equipada no Conjurador (instância), se houver. */
@@ -235,6 +295,11 @@ function naMesa(e: Estado, instId: string): boolean {
   const z = e.jogadores[inst.dono];
   return z.conjuradorId === instId || z.campo.includes(instId);
 }
+/** Em jogo: na mesa (Conjurador ou campo) ou equipado no Conjurador. */
+function emJogo(e: Estado, instId: string): boolean {
+  const inst = e.instancias[instId];
+  return !!inst && (naMesa(e, instId) || e.jogadores[inst.dono].itens.includes(instId));
+}
 
 // ---------- movimentação ----------
 
@@ -247,27 +312,73 @@ function tirar(v: string[], id: string): boolean {
 
 function comprar(e: Estado, j: Jogador, n: number): void {
   const z = e.jogadores[j];
+  let comprou = 0;
   for (let i = 0; i < n; i++) {
     const id = z.baralho.shift();
-    if (id === undefined) return; // baralho vazio não faz perder
+    if (id === undefined) break; // baralho vazio não faz perder
     z.mao.push(id);
+    comprou++;
   }
+  // evento "quando um jogador compra cartas" (05/10): uma vez por compra, fora da mão inicial
+  if (comprou && e.turno > 0) evento(e, 'compra', j);
 }
 
 // ---------- construtor de efeitos (pedido do autor, 04/10) ----------
 
 const habsDe = (d: CartaDef, q: Quando) => (d.habilidades ?? []).map((h, i) => ({ h, i })).filter((x) => x.h.quando === q);
+/**
+ * Efeitos de uma habilidade com o custo do gatilho (`pagar`, 05/10) na frente: a linha interna "pagar" cobra o custo e,
+ * sem ele, pula os efeitos da habilidade (bloco). fonteId/hab: de onde veio (manutenção e registro).
+ */
+export function comPagar(h: Habilidade, fonteId?: string, hab?: number): Efeito[] {
+  if (!temPagamento(h.pagar)) return h.efeitos ?? [];
+  return [{ tipo: 'pagar', bloco: (h.efeitos ?? []).length, custo: h.pagar, ...(fonteId ? { fonteId } : {}), ...(hab !== undefined ? { hab } : {}) }, ...(h.efeitos ?? [])];
+}
 /** Efeitos ao jogar: os da carta + habilidades "ao jogar". */
-export function efeitosAoJogar(d: CartaDef): Efeito[] { return [...(d.efeitos ?? []), ...habsDe(d, 'jogar').flatMap((x) => x.h.efeitos)]; }
+export function efeitosAoJogar(d: CartaDef): Efeito[] { return [...(d.efeitos ?? []), ...habsDe(d, 'jogar').flatMap((x) => comPagar(x.h))]; }
 /** Efeitos ao entrar em campo: aoEntrar + habilidades "ao entrar". */
-export function efeitosAoEntrar(d: CartaDef): Efeito[] { return [...(d.aoEntrar ?? []), ...habsDe(d, 'entrar').flatMap((x) => x.h.efeitos)]; }
+export function efeitosAoEntrar(d: CartaDef): Efeito[] { return [...(d.aoEntrar ?? []), ...habsDe(d, 'entrar').flatMap((x) => comPagar(x.h))]; }
 
 const QUANDO_LOG: Record<Quando, string> = {
   jogar: 'ao ser jogada', entrar: 'ao entrar', ativada: 'ativada', alvo: 'virou alvo', grau: 'foi para o Grau', atacar: 'atacou',
   bloquear: 'defendeu', cemiterio: 'caiu no cemitério', banimento: 'foi banida', danoConjurador: 'acertou o Conjurador',
   aliadoEntra: 'viu um Aliado entrar', aliadoMorre: 'viu um Aliado cair', aliadoDanoConjurador: 'viu um Aliado acertar o Conjurador',
   cataclismaOponente: 'no Cataclisma do turno do oponente',
+  compra: 'viu uma compra de cartas', conjuradorDano: 'viu um Conjurador tomar dano', ganhaVida: 'viu um Conjurador ganhar Vida',
+  perdeVida: 'viu um Conjurador perder Vida', jogaAliado: 'viu um Aliado ser jogado', jogaMistica: 'viu uma Mística ser jogada',
+  jogaPermanente: 'viu uma permanente ser jogada', ativaHabilidade: 'viu uma habilidade ser ativada', pilha: 'viu uma carta ir para a pilha',
+  emCampo: 'enquanto em campo',
 };
+/** Eventos de jogador (05/10, decisão 40): disparam habilidades das cartas em campo, itens e Conjurador dos dois lados. */
+export const QUANDO_EVENTO: Quando[] = ['compra', 'conjuradorDano', 'ganhaVida', 'perdeVida', 'jogaAliado', 'jogaMistica', 'jogaPermanente', 'ativaHabilidade', 'pilha'];
+/**
+ * Cadeia de gatilhos que está resolvendo agora ("instância:índice"). Uma habilidade não dispara de novo por algo que a
+ * própria cadeia causou (ex.: "quando você compra, compre 1" não vira laço infinito). Vai junto nas escolhas pendentes.
+ */
+let cadeiaAtual: string[] = [];
+/** Roda `fn` dentro de uma cadeia de gatilhos e guarda a cadeia na escolha que ficar pendente. */
+function comCadeia(e: Estado, cadeia: string[] | undefined, fn: () => void): void {
+  const antes = cadeiaAtual;
+  cadeiaAtual = cadeia ?? [];
+  try { fn(); } finally { cadeiaAtual = antes; }
+  const p = e.pendencia;
+  if (p && cadeia?.length && (p.tipo === 'escolherCartas' || p.tipo === 'pagarCusto') && !p.cadeia) p.cadeia = cadeia;
+}
+/** Avisa um evento de jogador (05/10): `j` é o jogador a quem ele aconteceu. */
+function evento(e: Estado, quando: Quando, j: Jogador): void {
+  if (e.etapa === 'preparacao' || e.vencedor !== null) return;
+  const antes = e.pilha.length;
+  for (const k of [e.ativo, outro(e.ativo)] as Jogador[]) for (const id of fontesEmJogo(e, k)) disparar(e, id, quando, undefined, j);
+  if (e.pilha.length > antes) e.passes = 0;
+}
+/** O Conjurador do jogador j perdeu Vida sem passar por causarDano (pagar Vida, "perde Vida", custo de dano). */
+function perdeuVida(e: Estado, j: Jogador, comoDano: boolean): void {
+  if (comoDano) evento(e, 'conjuradorDano', j);
+  evento(e, 'perdeVida', j);
+}
+const nomeFonte = (e: Estado, id: string) => { const i = e.instancias[id]; return i.ehConjurador ? e.catalogo.conjuradores[i.defId].nome : defCarta(e, id).nome; };
+/** O turno conta para esta habilidade (do dono, do oponente ou cada turno)? */
+const turnoServe = (t: TurnoDe | undefined, dono: Jogador, ativo: Jogador) => (t ?? 'seu') === 'cada' || ((t ?? 'seu') === 'seu') === (ativo === dono);
 /** Habilidades do construtor de efeitos desta instância: as da carta, ou as do poder do Conjurador (Editor, 04/10). */
 export function habilidadesDe(e: Estado, instId: string): Habilidade[] {
   const inst = e.instancias[instId];
@@ -288,7 +399,7 @@ export function ativacaoDeHabilidade(h: Habilidade): Ativacao {
   };
 }
 /** Dispara as habilidades da carta (ou do Conjurador) para esta condição: cada uma vai para a pilha como gatilho do dono. */
-function disparar(e: Estado, instId: string, quando: Quando, alvo?: string): void {
+function disparar(e: Estado, instId: string, quando: Quando, alvo?: string, quemEvento?: Jogador): void {
   const inst = e.instancias[instId];
   if (!inst) return;
   const conj = inst.ehConjurador ? e.catalogo.conjuradores[inst.defId] : undefined;
@@ -299,9 +410,54 @@ function disparar(e: Estado, instId: string, quando: Quando, alvo?: string): voi
   for (const [i, h] of habs.entries()) {
     if (h.quando !== quando) continue;
     if (h.soNoSeuTurno && e.ativo !== inst.dono) continue;
-    if (h.umaVezPorTurno) { inst.usosHab ??= {}; if (inst.usosHab[i] === e.turno) continue; inst.usosHab[i] = e.turno; }
-    e.pilha.push({ tipo: 'gatilho', id: `p${e.proxId++}`, controlador: inst.dono, efeitos: h.efeitos, alvo, fonte: nome, incomensuravel: conj ? false : temIncomensuravel(defCarta(e, instId)) });
+    // eventos de jogador (05/10): de quem é o evento
+    if (quemEvento !== undefined) {
+      const q = h.quem ?? 'qualquer';
+      if ((q === 'voce' && quemEvento !== inst.dono) || (q === 'oponente' && quemEvento === inst.dono)) continue;
+    }
+    // anti-laço: a habilidade não dispara de novo por algo causado pela própria cadeia de gatilhos
+    const chave = `${instId}:${i}`;
+    if (cadeiaAtual.includes(chave)) continue;
+    // vezes por turno (05/10): generaliza "uma vez por turno" (= 1); conta quando dispara, pagando ou não
+    const lim = h.vezesPorTurno ?? (h.umaVezPorTurno ? 1 : 0);
+    if (lim > 0) {
+      const usos = (inst.usosVezes ??= {});
+      const n = usos[i]?.[0] === e.turno ? usos[i][1] : 0;
+      if (n >= lim) continue;
+      usos[i] = [e.turno, n + 1];
+    }
+    e.pilha.push({ tipo: 'gatilho', id: `p${e.proxId++}`, controlador: inst.dono, efeitos: comPagar(h, instId, i), alvo, fonte: nome, incomensuravel: conj ? false : temIncomensuravel(defCarta(e, instId)), cadeia: [...cadeiaAtual, chave], fonteId: instId, hab: i });
     anotar(e, `${nome} ${QUANDO_LOG[quando]}: o efeito vai para a pilha.`);
+  }
+}
+/**
+ * "Enquanto estiver em campo" recorrente e manutenção (05/10, decisão 40): ao entrar numa etapa, cada habilidade que vale
+ * nesta etapa e neste turno vai para a pilha. A manutenção da mesma carta entra por cima (resolve antes do recorrente).
+ */
+function dispararEmCampo(e: Estado, etapa: Etapa): void {
+  for (const j of [e.ativo, outro(e.ativo)] as Jogador[]) {
+    for (const id of fontesEmJogo(e, j)) {
+      const inst = e.instancias[id];
+      if (!inst) continue;
+      habilidadesDe(e, id).forEach((h, k) => {
+        if (h.quando !== 'emCampo') return;
+        const nome = nomeFonte(e, id);
+        const inc = !inst.ehConjurador && temIncomensuravel(defCarta(e, id));
+        if (h.modo === 'recorrente' && (h.etapa ?? 'inicio') === etapa && turnoServe(h.turnoDe, inst.dono, e.ativo) && h.efeitos?.length) {
+          const n = inst.recorrencias?.[k] ?? 0;
+          if (!h.turnos || n < h.turnos) {
+            if (h.turnos) (inst.recorrencias ??= {})[k] = n + 1;
+            e.pilha.push({ tipo: 'gatilho', id: `p${e.proxId++}`, controlador: inst.dono, efeitos: comPagar(h, id, k), fonte: nome, incomensuravel: inc, cadeia: [`${id}:${k}`], fonteId: id, hab: k, recorrente: true });
+            anotar(e, `${nome}: o efeito de enquanto está em campo vai para a pilha.`);
+          }
+        }
+        const m = h.manutencao;
+        if (m && temPagamento(m) && (m.etapa ?? 'inicio') === etapa && turnoServe(m.turnoDe, inst.dono, e.ativo)) {
+          e.pilha.push({ tipo: 'gatilho', id: `p${e.proxId++}`, controlador: inst.dono, efeitos: [{ tipo: 'pagar', custo: { ...m, senao: m.senao ?? 'sai' }, fonteId: id, hab: k }], fonte: nome, cadeia: [`${id}:${k}`], fonteId: id, hab: k });
+          anotar(e, `${nome}: a manutenção vai para a pilha.`);
+        }
+      });
+    }
   }
 }
 
@@ -313,6 +469,7 @@ function tirarDeTudo(e: Estado, id: string): void {
 function limparInst(i: Inst): void {
   i.dano = 0; i.suspensa = false; i.bonusAtaque = 0; i.bonusVida = 0; i.bonusAtaqueTurno = 0; i.bonusVidaTurno = 0; i.naoAtacaAte = 0;
   i.palavrasExtra = undefined; i.palavrasTemp = undefined; i.turnosRestantes = undefined; i.destinoSaida = undefined; i.turnoEntradaConta = undefined; i.banirAoSair = undefined;
+  i.recorrencias = undefined; i.desligada = undefined;
 }
 /** Carta jogada pelo Reanimum (permanente): ao sair do campo, por qualquer motivo, vai para o banimento (decisão 27). */
 function saiDoCampoPara(e: Estado, id: string, padrao: 'cemiterio' | 'mao' | 'baralho'): 'cemiterio' | 'mao' | 'baralho' | 'banimento' {
@@ -341,7 +498,7 @@ function conceder(e: Estado, id: string, c: Concessao): void {
     partes.push(`${c.palavras.join(', ')} por ${c.palavrasTurnos} turno(s)`);
   } else if (c.palavras?.length) { inst.palavrasExtra = [...new Set([...(inst.palavrasExtra ?? []), ...c.palavras])]; partes.push(c.palavras.join(', ')); }
   if (c.ataque) { inst.bonusAtaque = (inst.bonusAtaque ?? 0) + c.ataque; partes.push(`${c.ataque > 0 ? '+' : ''}${c.ataque} de Ataque`); }
-  if (c.vida) { inst.bonusVida = (inst.bonusVida ?? 0) + c.vida; partes.push(`${c.vida > 0 ? '+' : ''}${c.vida} de Vida`); }
+  if (c.vida) { inst.bonusVida = (inst.bonusVida ?? 0) + c.vida; partes.push(`${c.vida > 0 ? '+' : ''}${c.vida} de Vida`); if (c.vida > 0 && inst.ehConjurador) evento(e, 'ganhaVida', inst.dono); }
   if (c.turnos && c.turnos > 0 && !inst.ehConjurador) {
     inst.turnosRestantes = c.turnos; inst.destinoSaida = c.destino ?? 'cemiterio';
     inst.turnoEntradaConta = e.ativo !== inst.dono ? e.turno : undefined; // entrou no turno do oponente: esse turno conta como o 1º
@@ -480,7 +637,7 @@ function aplicarAcaoCampo(e: Estado, id: string, ef: Extract<Efeito, { tipo: 'ca
   switch (ef.acao) {
     case 'conceder': if (ef.concessao) conceder(e, id, ef.concessao); break;
     case 'dano': danoDeEfeito(e, id, v); break;
-    case 'curar': inst.dano = Math.max(0, inst.dano - v); anotar(e, `${nomeReg(e, id)} recupera ${v}.`); break;
+    case 'curar': curarInst(e, id, v); break;
     case 'destruir': if (!inst.ehConjurador) destruir(e, id); break;
     case 'devolver': if (!inst.ehConjurador) devolver(e, id); break;
     case 'paraBaralho':
@@ -497,8 +654,16 @@ function aplicarAcaoCampo(e: Estado, id: string, ef: Extract<Efeito, { tipo: 'ca
     case 'suspender': inst.suspensa = true; break;
     case 'levantar': inst.suspensa = false; break;
     case 'aumentarAtaque': if (turno) inst.bonusAtaqueTurno = (inst.bonusAtaqueTurno ?? 0) + v; else inst.bonusAtaque = (inst.bonusAtaque ?? 0) + v; anotar(e, `${nomeReg(e, id)} ganha +${v} de Ataque${turno ? ' neste turno' : ''}.`); break;
-    case 'aumentarVida': if (turno) inst.bonusVidaTurno = (inst.bonusVidaTurno ?? 0) + v; else inst.bonusVida = (inst.bonusVida ?? 0) + v; anotar(e, `${nomeReg(e, id)} ganha +${v} de Vida${turno ? ' neste turno' : ''}.`); break;
+    case 'aumentarVida': if (turno) inst.bonusVidaTurno = (inst.bonusVidaTurno ?? 0) + v; else inst.bonusVida = (inst.bonusVida ?? 0) + v; anotar(e, `${nomeReg(e, id)} ganha +${v} de Vida${turno ? ' neste turno' : ''}.`); if (v > 0 && inst.ehConjurador) evento(e, 'ganhaVida', inst.dono); break;
   }
+}
+/** Cura (tira dano). No Conjurador, curar de fato dispara "ganha Vida" (05/10: cura e ganhar Vida são o mesmo evento). */
+function curarInst(e: Estado, id: string, v: number): void {
+  const inst = e.instancias[id];
+  const antes = inst.dano;
+  inst.dano = Math.max(0, inst.dano - v);
+  anotar(e, `${nomeReg(e, id)} recupera ${v}.`);
+  if (inst.ehConjurador && inst.dano < antes) evento(e, 'ganhaVida', inst.dono);
 }
 
 /** Abre a escolha de cartas; os efeitos seguintes esperam a escolha (efeitos acumulados). */
@@ -555,7 +720,7 @@ export function custoEfetivo(e: Estado, j: Jogador, id: string): number {
   if (p?.primeiraRepentinaMaisBarata && ehRepentina(d) && !e.habUsos[j].repentina) menos += p.primeiraRepentinaMaisBarata;
   if (e.habUsos[j].desconto && !e.habUsos[j].carta) menos += e.habUsos[j].desconto;
   if (e.jogadores[j].banimento.includes(id) && e.instancias[id].banidaDisponivel === e.turno && e.ativo === j) menos += e.instancias[id].descontoBanimento;
-  return Math.max(0, d.custo - menos);
+  return Math.max(0, d.custo - menos + ajusteCustoPassivo(e, j, d));
 }
 
 /** Permissão contínua do Conjurador (`permiteJogarDe`, Editor 04/10) que deixa jogar esta carta agora: índice, ou -1. */
@@ -629,6 +794,8 @@ function causarDano(e: Estado, alvoId: string, valor: number, fonte: FonteDano):
   const autor = outro(e.instancias[alvoId].dono);
   const t = e.turnosDano[autor];
   if (t[t.length - 1] !== e.turno) t.push(e.turno);
+  // eventos (05/10): o Conjurador tomou dano (e, com isso, perdeu Vida)
+  if (ia.ehConjurador) perdeuVida(e, ia.dono, true);
 }
 
 // ---------- efeitos ----------
@@ -726,14 +893,40 @@ const EFEITO_SACRIFICIO: Efeito = { tipo: 'campo', acao: 'destruir', alcance: 'a
 
 function aplicarEfeitos(e: Estado, efeitos: Efeito[], dono: Jogador, escolhido?: string, bonus = 0, auto = false): void {
   for (let k = 0; k < efeitos.length; k++) {
-    const ef = efeitos[k];
+    let ef = efeitos[k];
     if (ef.requisito && !cumprirRequisito(e, ef.requisito, dono)) continue;
     const depois: Continuacao = { efeitos: efeitos.slice(k + 1), dono, alvo: escolhido };
+    if (ef.tipo === 'proximoCusto') { pedirCustoAoJogar(e, ef.item); if (e.pendencia) return; continue; }
+    // custo condicional (05/10, decisão 40): quem paga decide; impedido (não pagou / o oponente pagou) → consequência
+    if (ef.custo && temPagamento(ef.custo)) {
+      let r = ef._custo;
+      if (r === undefined) {
+        const c = ef.custo;
+        const impede = c.quem === 'oponente';
+        const pagador = impede ? outro(dono) : dono;
+        if (podePagarCusto(e, pagador, c)) {
+          e.pendencia = { tipo: 'pagarCusto', jogador: pagador, custo: soCusto(c), impede, dono, efeito: { ...ef, requisito: undefined }, depois, ...((ef.tipo === 'pagar' && ef.fonteId) || fonteAtual ? { fonte: (ef.tipo === 'pagar' && ef.fonteId) || fonteAtual } : {}) };
+          anotar(e, `Jogador ${pagador} decide se paga ${custoTxt(c)}${impede ? ' para impedir o efeito' : ''}.`);
+          return;
+        }
+        anotar(e, `Jogador ${pagador} não tem como pagar ${custoTxt(c)}.`);
+        r = impede ? 'acontece' : 'impedido';
+      }
+      if (r === 'impedido') {
+        const pulo = consequenciaDoCusto(e, ef, efeitos.slice(k + 1), dono, escolhido, bonus, auto);
+        if (pulo < 0) return;
+        k += pulo;
+        continue;
+      }
+      if (ef.tipo === 'pagar') continue;
+      ef = { ...ef, custo: undefined, _custo: undefined } as Efeito;
+    } else if (ef.tipo === 'pagar') continue;
     if (ef.tipo === 'perderVida') {
       const j = ef.quem === 'oponente' ? outro(dono) : dono;
       const c = e.jogadores[j].conjuradorId;
       e.instancias[c].dano += ef.valor;
       anotar(e, `${defConjurador(e, j).nome} ${ef.secundario ? `toma ${ef.valor} de dano` : `perde ${ef.valor} de Vida`}.`);
+      if (ef.valor > 0) perdeuVida(e, j, !!ef.secundario);
       continue;
     }
     if (ef.tipo === 'descartar') {
@@ -932,10 +1125,114 @@ function aplicarEfeitos(e: Estado, efeitos: Efeito[], dono: Jogador, escolhido?:
       const inst = e.instancias[alvo];
       if (ef.tipo === 'dano') danoDeEfeito(e, alvo, ef.valor + bonus + (ef.escalaGrau ? e.jogadores[dono].grau.length : 0));
       else if (ef.tipo === 'devolver' && !inst.ehConjurador) devolver(e, alvo);
-      else if (ef.tipo === 'curar') inst.dano = Math.max(0, inst.dano - ef.valor - bonus);
+      else if (ef.tipo === 'curar') curarInst(e, alvo, ef.valor + bonus);
       else if (ef.tipo === 'destruir' && !inst.ehConjurador) destruir(e, alvo);
     }
   }
+}
+
+// ---------- custo condicional (05/10, decisão 40) ----------
+
+/** O custo tem algo a pagar? Custo vazio (só quem/quando/senão, ainda sendo montado no Editor) = sem custo. */
+export function temPagamento(c: CustoPagar | undefined): c is CustoPagar {
+  return !!c && (['arcano', 'vida', 'descartar', 'grauAoCemiterio', 'sacrificar'] as const).some((k) => (c[k] ?? 0) > 0);
+}
+/** Só o que se paga (sem quem/quando/senão). */
+export function soCusto(c: CustoPagar): CustoPagar {
+  const r: CustoPagar = {};
+  for (const k of ['arcano', 'vida', 'descartar', 'grauAoCemiterio', 'sacrificar'] as const) if (c[k]) r[k] = c[k];
+  return r;
+}
+/** Custo para o registro: "1 de Arcano, 2 de Vida e descartar 1 carta". */
+export function custoTxt(c: CustoPagar): string {
+  const p = [c.arcano ? `${c.arcano} de Arcano` : '', c.vida ? `${c.vida} de Vida` : '', c.descartar ? `descartar ${c.descartar} carta(s)` : '',
+    c.grauAoCemiterio ? `mandar ${c.grauAoCemiterio} carta(s) do Grau ao cemitério` : '', c.sacrificar ? `sacrificar ${c.sacrificar} Aliado(s)` : ''].filter(Boolean);
+  return p.length ? (p.length > 1 ? p.slice(0, -1).join(', ') + ' e ' + p.at(-1) : p[0]) : 'nada';
+}
+/** O jogador consegue pagar tudo isto agora? Arcano conta reserva, Grau levantado e cartas da mão; a Vida não pode zerar. */
+export function podePagarCusto(e: Estado, j: Jogador, c: CustoPagar): boolean {
+  const z = e.jogadores[j];
+  if ((c.arcano ?? 0) > 0 && !podePagar(e, j, c.arcano!)) return false;
+  if ((c.vida ?? 0) > 0 && (vidaDe(e, z.conjuradorId) ?? 0) - e.instancias[z.conjuradorId].dano <= c.vida!) return false;
+  if ((c.descartar ?? 0) > z.mao.length) return false;
+  if ((c.grauAoCemiterio ?? 0) > z.grau.length) return false;
+  if ((c.sacrificar ?? 0) > unidadesDe(e, j).length) return false;
+  return true;
+}
+/**
+ * O efeito foi impedido pelo custo. Devolve quantas linhas seguintes pular (a linha interna "pagar" pula o bloco dela),
+ * ou -1 quando a consequência já cuidou do resto (carta anulada, efeitos alternativos).
+ */
+function consequenciaDoCusto(e: Estado, ef: Efeito, resto: Efeito[], dono: Jogador, escolhido: string | undefined, bonus: number, auto: boolean): number {
+  const c = ef.custo!;
+  const bloco = ef.tipo === 'pagar' ? Math.min(ef.bloco ?? resto.length, resto.length) : 0;
+  const fonte = ef.tipo === 'pagar' ? ef.fonteId : undefined;
+  switch (c.senao ?? 'linha') {
+    case 'carta':
+      anotar(e, 'Custo: a carta é anulada; os demais efeitos dela não acontecem.');
+      return -1;
+    case 'alternativo':
+      anotar(e, 'Custo: acontece o efeito alternativo.');
+      aplicarEfeitos(e, [...(c.alternativos ?? []), ...resto.slice(bloco)], dono, escolhido, bonus, auto);
+      return -1;
+    case 'sai':
+      sairPorCusto(e, fonte, c.destino ?? 'cemiterio');
+      return bloco;
+    case 'pula': {
+      const i = fonte ? e.instancias[fonte] : undefined;
+      if (i && ef.tipo === 'pagar' && ef.hab !== undefined) { (i.desligada ??= {})[ef.hab] = e.turno; anotar(e, `${nomeFonte(e, fonte!)}: o efeito não acontece neste turno.`); }
+      return bloco;
+    }
+    default:
+      anotar(e, ef.tipo === 'pagar' ? 'Custo: o efeito não acontece.' : 'Custo: esta linha não acontece.');
+      return bloco;
+  }
+}
+/** Manutenção não paga com "a carta sai" (05/10): vai do campo (ou do Conjurador, se for item) para o destino. O Conjurador não sai. */
+function sairPorCusto(e: Estado, id: string | undefined, destino: 'cemiterio' | 'banimento' | 'mao' | 'fundo'): void {
+  const i = id ? e.instancias[id] : undefined;
+  if (!i) return;
+  if (i.ehConjurador) { anotar(e, 'Manutenção: o Conjurador não sai do jogo.'); return; }
+  const z = e.jogadores[i.dono];
+  const nome = defCarta(e, id!).nome;
+  if (z.itens.includes(id!)) { anotar(e, `${nome}: manutenção não paga.`); moverPara(e, id!, destino, i.dono); anotar(e, `${nome} sai do Conjurador.`); return; }
+  if (!z.campo.includes(id!)) return;
+  anotar(e, `${nome}: manutenção não paga.`);
+  if (destino === 'cemiterio') { destruir(e, id!); return; }
+  if (destino === 'mao') { devolver(e, id!); return; }
+  tirar(z.campo, id!);
+  const dest = saiDoCampoPara(e, id!, 'baralho');
+  limparInst(i);
+  if (dest === 'banimento' || destino === 'banimento') { z.banimento.push(id!); anotar(e, `${nome} é banida.`); }
+  else { z.baralho.push(id!); anotar(e, `${nome} vai para o fundo do baralho.`); }
+}
+/** Custos "ao jogar" (05/10): pede a próxima decisão pendente da carta na pilha; sem poder pagar, decide sozinho. */
+function pedirCustoAoJogar(e: Estado, itemId: string): void {
+  const item = e.pilha.find((x) => x.id === itemId);
+  if (!item || item.tipo !== 'carta' || !item.decididos) return;
+  for (const [k, ef] of item.decididos.entries()) {
+    const c = ef.custo;
+    if (!c || c.quando !== 'jogar' || ef._custo !== undefined || !temPagamento(c)) continue;
+    const impede = c.quem === 'oponente';
+    const pagador = impede ? outro(item.controlador) : item.controlador;
+    if (podePagarCusto(e, pagador, c)) {
+      e.pendencia = { tipo: 'pagarCusto', jogador: pagador, custo: soCusto(c), impede, dono: item.controlador, efeito: ef, naPilha: { item: itemId, indice: k }, fonte: item.instId };
+      anotar(e, `Jogador ${pagador} decide se paga ${custoTxt(c)}${impede ? ' para impedir o efeito' : ''} (${defCarta(e, item.instId).nome}).`);
+      return;
+    }
+    anotar(e, `Jogador ${pagador} não tem como pagar ${custoTxt(c)}.`);
+    const r = impede ? 'acontece' : 'impedido';
+    item.decididos[k] = { ...ef, _custo: r };
+    if (r === 'impedido' && c.senao === 'carta') { anularNaPilha(e, item); return; }
+  }
+}
+/** A carta sai da pilha sem resolver (custo "a carta é anulada" decidido ao jogar). */
+function anularNaPilha(e: Estado, item: Extract<ItemPilha, { tipo: 'carta' }>): void {
+  const i = e.pilha.indexOf(item);
+  if (i < 0) return;
+  e.pilha.splice(i, 1);
+  fimDaPilha(e, item.instId, item.controlador);
+  anotar(e, `${defCarta(e, item.instId).nome} é anulada pelo custo.`);
 }
 
 /** O alvo ganhou Protessência depois de escolhido (decisão 30): o efeito perde esse alvo. */
@@ -1167,6 +1464,8 @@ function entrarEtapa(e: Estado, etapa: Etapa): void {
     z.baralho.push(...z.zonaArcano);
     z.zonaArcano = [];
   }
+  // "enquanto estiver em campo" recorrente e manutenção (05/10, decisão 40)
+  if (e.vencedor === null) dispararEmCampo(e, etapa);
 }
 
 /** Existe alguma ação possível para o jogador (usada pela regra semAcaoPerde)? */
@@ -1215,14 +1514,15 @@ function resolverTopo(e: Estado): void {
     if (d.tipo === 'temporaria') {
       anotar(e, `${d.nome} resolve.`);
       // Foco Arcano: o bônus vale para a próxima Temporária de dano ou cura do dono e se gasta
-      const efs = efeitosAoJogar(d);
+      const efs = item.decididos ?? efeitosAoJogar(d);
       const usaPotencia = efs.some((ef) => ['dano', 'curar', 'danoTodosAliados'].includes(ef.tipo) || (ef.tipo === 'campo' && (ef.acao === 'dano' || ef.acao === 'curar')));
       const bonus = usaPotencia ? e.habUsos[item.controlador].potencia : 0;
       if (bonus) { e.habUsos[item.controlador].potencia = 0; anotar(e, `Foco Arcano: +${bonus}.`); }
       // a carta já sai da pilha para o cemitério; efeitos que pedem escolha continuam depois
       const pendAntes = e.pendencia;
       fonteIncomensuravel = temIncomensuravel(d);
-      try { aplicarEfeitos(e, efs, item.controlador, item.alvo, bonus); } finally { fonteIncomensuravel = false; }
+      const fa = fonteAtual; fonteAtual = item.instId;
+      try { aplicarEfeitos(e, efs, item.controlador, item.alvo, bonus); } finally { fonteIncomensuravel = false; fonteAtual = fa; }
       void pendAntes;
       if (e.instancias[item.instId].banirAoResolver) anotar(e, `${d.nome} é banida ao resolver.`);
       fimDaPilha(e, item.instId, item.controlador);
@@ -1233,16 +1533,22 @@ function resolverTopo(e: Estado): void {
       if (e.instancias[item.instId].banirAoResolver) { e.instancias[item.instId].banirAoResolver = false; e.instancias[item.instId].banirAoSair = true; }
       anotar(e, `${d.nome} entra em campo.`);
       if (d.tipo === 'aliado') gatilhoConjurador(e, item.controlador, 'aliadoEntra');
-      const aoEntrar = efeitosAoEntrar(d);
+      const aoEntrar = item.decididos ?? efeitosAoEntrar(d);
       if (aoEntrar.length) {
         e.pilha.push({ tipo: 'gatilho', id: `p${e.proxId++}`, controlador: item.controlador, efeitos: aoEntrar, alvo: item.alvo, fonte: d.nome, incomensuravel: temIncomensuravel(d) });
         anotar(e, `${d.nome}: gatilho ao entrar vai para a pilha.`);
       }
     }
   } else if (item.tipo === 'gatilho') {
-    if (item.fonte) anotar(e, `Efeito de ${item.fonte} resolve.`);
-    fonteIncomensuravel = !!item.incomensuravel;
-    try { aplicarEfeitos(e, item.efeitos, item.controlador, item.alvo, 0, item.alvo === undefined); } finally { fonteIncomensuravel = false; }
+    const fi = item.fonteId !== undefined ? e.instancias[item.fonteId] : undefined;
+    if (item.recorrente && (!fi || !emJogo(e, item.fonteId!))) anotar(e, `${item.fonte ?? 'A carta'} saiu do campo: o efeito não acontece.`);
+    else if (item.recorrente && fi && item.hab !== undefined && !habLigada(fi, item.hab, e.turno)) anotar(e, `${item.fonte ?? 'A carta'}: manutenção não paga, o efeito não acontece neste turno.`);
+    else {
+      if (item.fonte) anotar(e, `Efeito de ${item.fonte} resolve.`);
+      fonteIncomensuravel = !!item.incomensuravel;
+      const fa = fonteAtual; fonteAtual = item.fonteId;
+      try { comCadeia(e, item.cadeia, () => aplicarEfeitos(e, item.efeitos, item.controlador, item.alvo, 0, item.alvo === undefined)); } finally { fonteIncomensuravel = false; fonteAtual = fa; }
+    }
   } else if (e.combate && naMesa(e, item.atacante) && naMesa(e, item.alvo)) {
     if (e.instancias[item.alvo].ehConjurador) {
       e.combate.etapa = 'aguardandoBloqueio';
@@ -1578,6 +1884,7 @@ export function protegidosDe(e: Estado, instId: string): Array<{ fonte: 'carta' 
   const doConj = d.tipo === 'aliado' ? (defConjurador(e, inst.dono).poder?.aliadosProtegidos ?? 0) : 0;
   if (doConj) r.push({ fonte: 'conjurador', arcano: doConj });
   for (const n of protegidosConcedidos(inst)) r.push({ fonte: 'concedido', arcano: n });
+  for (const n of protegidosDePalavras(auraDe(e, instId).palavras)) r.push({ fonte: 'concedido', arcano: n });
   return r;
 }
 
@@ -1604,7 +1911,7 @@ function protegidoAPagar(e: Estado, j: Jogador, alvo: string | undefined, c: { c
 }
 function pagarProtegido(e: Estado, j: Jogador, pg: { vida: number; descartar: string[]; grau: string[] }): void {
   const z = e.jogadores[j];
-  if (pg.vida) { e.instancias[z.conjuradorId].dano += pg.vida; anotar(e, `Protegido: jogador ${j} paga ${pg.vida} de Vida.`); }
+  if (pg.vida) { e.instancias[z.conjuradorId].dano += pg.vida; anotar(e, `Protegido: jogador ${j} paga ${pg.vida} de Vida.`); perdeuVida(e, j, false); }
   for (const id of pg.descartar) { tirar(z.mao, id); z.cemiterio.push(id); }
   for (const id of pg.grau) { tirar(z.grau, id); e.instancias[id].suspensa = false; z.cemiterio.push(id); }
   if (pg.descartar.length || pg.grau.length) anotar(e, `Protegido: jogador ${j} paga com ${pg.descartar.length} carta(s) da mão e ${pg.grau.length} do Grau.`);
@@ -1663,11 +1970,20 @@ function jogarCarta(e: Estado, c: Extract<Comando, { tipo: 'jogar' }>): void {
     if (!d.palavrasChave?.includes('Reanimum')) e.habUsos[c.jogador].anularDoCemiterio = false;
   }
   e.agiuNoTurno = true;
-  e.pilha.push({ tipo: 'carta', id: `p${e.proxId++}`, controlador: c.jogador, instId: c.carta, alvo: c.alvo });
+  const item: Extract<ItemPilha, { tipo: 'carta' }> = { tipo: 'carta', id: `p${e.proxId++}`, controlador: c.jogador, instId: c.carta, alvo: c.alvo };
+  e.pilha.push(item);
   e.passes = 0;
   e.prioridade = c.jogador;
   anotar(e, `Jogador ${c.jogador} joga ${d.nome}.`);
   if (precisaAlvo && c.alvo) disparar(e, c.alvo, 'alvo');
+  // eventos (05/10): uma carta foi jogada (vai para a pilha); por tipo
+  evento(e, 'pilha', c.jogador);
+  if (d.tipo === 'aliado') evento(e, 'jogaAliado', c.jogador);
+  if (d.tipo === 'mistica') evento(e, 'jogaMistica', c.jogador);
+  if (d.tipo === 'aliado' || d.tipo === 'mistica' || d.tipo === 'estrutura') evento(e, 'jogaPermanente', c.jogador);
+  // custos "ao jogar" (05/10): decididos agora, um de cada vez, e guardados no item da pilha
+  const lista = d.tipo === 'temporaria' ? efeitosAoJogar(d) : efeitosAoEntrar(d);
+  if (lista.some((ef) => ef.custo?.quando === 'jogar' && temPagamento(ef.custo))) { item.decididos = lista.map((ef) => ({ ...ef })); pedirCustoAoJogar(e, item.id); }
 }
 
 function ativar(e: Estado, c: Extract<Comando, { tipo: 'ativar' }>): void {
@@ -1713,7 +2029,7 @@ function ativar(e: Estado, c: Extract<Comando, { tipo: 'ativar' }>): void {
   pagarProtegido(e, c.jogador, protA);
   for (const id of descarte) { tirar(z.mao, id); z.cemiterio.push(id); }
   if (descarte.length) anotar(e, `Jogador ${c.jogador} descarta ${descarte.length} carta(s) para usar ${defCarta(e, c.carta).nome}.`);
-  if (at.danoNoConjurador) { conjInst.dano += at.danoNoConjurador; anotar(e, `${defConjurador(e, c.jogador).nome} toma ${at.danoNoConjurador} de dano para usar ${defCarta(e, c.carta).nome}.`); }
+  if (at.danoNoConjurador) { conjInst.dano += at.danoNoConjurador; anotar(e, `${defConjurador(e, c.jogador).nome} toma ${at.danoNoConjurador} de dano para usar ${ehConj ? defConjurador(e, c.jogador).nome : defCarta(e, c.carta).nome}.`); perdeuVida(e, c.jogador, true); }
   if (at.suspende) inst.suspensa = true;
   if (at.suspendeConjurador) conjInst.suspensa = true;
   if (ehItem && (at.consome ?? defCarta(e, c.carta).categoriaItem === 'extra')) { tirar(z.itens, c.carta); z.cemiterio.push(c.carta); anotar(e, `${defCarta(e, c.carta).nome} é consumido.`); }
@@ -1721,6 +2037,7 @@ function ativar(e: Estado, c: Extract<Comando, { tipo: 'ativar' }>): void {
   if (soArcano) {
     if (ehConj) anotar(e, `Jogador ${c.jogador} ativa ${defConjurador(e, c.jogador).nome}.`);
     aplicarEfeitos(e, at.efeitos, c.jogador, c.alvo);
+    evento(e, 'ativaHabilidade', c.jogador);
     return;
   }
   e.pilha.push({ tipo: 'gatilho', id: `p${e.proxId++}`, controlador: c.jogador, efeitos: efeitosAt, alvo: c.alvo, fonte: ehConj ? defConjurador(e, c.jogador).nome : defCarta(e, c.carta).nome, incomensuravel: !ehConj && temIncomensuravel(defCarta(e, c.carta)) });
@@ -1728,6 +2045,7 @@ function ativar(e: Estado, c: Extract<Comando, { tipo: 'ativar' }>): void {
   e.prioridade = c.jogador;
   anotar(e, `Jogador ${c.jogador} ativa ${ehConj ? defConjurador(e, c.jogador).nome : defCarta(e, c.carta).nome}.`);
   if (exigeAlvo(at.efeitos) && c.alvo) disparar(e, c.alvo, 'alvo');
+  evento(e, 'ativaHabilidade', c.jogador);
 }
 
 /** Aliado que entrou neste turno e não é Proficiente: não ataca nem usa ativação que suspende. */
@@ -1826,10 +2144,48 @@ function executarComando(e: Estado, c: Comando): void {
         anotar(e, `Jogador ${c.jogador} paga ${p.custo} e anula ${defCarta(e, item.instId).nome}.`);
       } else {
         anotar(e, `${defCarta(e, item.instId).nome} resolve.`);
-        aplicarEfeitos(e, efeitosAoJogar(defCarta(e, item.instId)), item.controlador, item.alvo);
+        aplicarEfeitos(e, item.decididos ?? efeitosAoJogar(defCarta(e, item.instId)), item.controlador, item.alvo);
         fimDaPilha(e, item.instId, item.controlador);
       }
       finalizarAnulacao(e);
+      return;
+    }
+    if (c.tipo === 'pagarCusto' && p.tipo === 'pagarCusto') {
+      // custo condicional (05/10, decisão 40): Arcano e Vida pagos agora; descarte, Grau e sacrifício escolhidos em seguida
+      if (c.jogador !== p.jogador) falha('Outro jogador decide o pagamento.');
+      const j = p.jogador;
+      const z = e.jogadores[j];
+      const custoEfs: Efeito[] = [];
+      if (c.pagar) {
+        if (!podePagarCusto(e, j, p.custo)) falha('Não dá para pagar esse custo.');
+        if ((p.custo.descartar ?? 0) + (c.enviarArcano?.length ?? 0) > z.mao.length) falha('Faltam cartas na mão para descartar depois de enviar ao Arcano.');
+        if (p.custo.arcano) pagarExtra(e, j, p.custo.arcano, c.enviarArcano ?? []);
+        else if (c.enviarArcano?.length) falha('Este custo não tem Arcano.');
+        if (c.enviarArcano?.length) anotar(e, `Jogador ${j} envia ao Arcano: ${c.enviarArcano.map((id) => defCarta(e, id).nome).join(', ')}.`);
+        if (p.custo.vida) e.instancias[z.conjuradorId].dano += p.custo.vida;
+        const quem = j === p.dono ? 'voce' : 'oponente';
+        if (p.custo.descartar) custoEfs.push({ tipo: 'descartar', quem, valor: p.custo.descartar, modo: 'dono' });
+        if (p.custo.grauAoCemiterio) custoEfs.push({ tipo: 'grauAoCemiterio', quem, valor: p.custo.grauAoCemiterio });
+        if (p.custo.sacrificar) custoEfs.push({ tipo: 'sacrificar', quem, valor: p.custo.sacrificar });
+        anotar(e, `Jogador ${j} paga ${custoTxt(p.custo)}${p.impede ? ' e impede o efeito' : ''}.`);
+      } else anotar(e, `Jogador ${j} não paga ${custoTxt(p.custo)}.`);
+      const r: 'acontece' | 'impedido' = c.pagar !== p.impede ? 'acontece' : 'impedido';
+      e.pendencia = null;
+      if (c.pagar && p.custo.vida) perdeuVida(e, j, false);
+      if (p.naPilha) {
+        // decidido ao jogar: guarda no item da pilha; "a carta é anulada" tira a carta da pilha agora
+        const item = e.pilha.find((x) => x.id === p.naPilha!.item);
+        if (item?.tipo === 'carta' && item.decididos) {
+          item.decididos[p.naPilha.indice] = { ...item.decididos[p.naPilha.indice], _custo: r };
+          if (r === 'impedido' && p.efeito.custo?.senao === 'carta') anularNaPilha(e, item);
+        }
+        aplicarEfeitos(e, [...custoEfs, { tipo: 'proximoCusto', item: p.naPilha.item }], p.dono);
+        if (!e.pendencia) { e.passes = 0; e.prioridade = item?.controlador ?? e.ativo; acoesDeEstado(e); }
+        return;
+      }
+      const fa = fonteAtual; fonteAtual = p.fonte;
+      try { comCadeia(e, p.cadeia, () => aplicarEfeitos(e, [...custoEfs, { ...p.efeito, _custo: r } as Efeito, ...(p.depois?.efeitos ?? [])], p.dono, p.depois?.alvo)); } finally { fonteAtual = fa; }
+      if (!e.pendencia) finalizarAnulacao(e);
       return;
     }
     if (c.tipo === 'escolherCartas' && p.tipo === 'escolherCartas') {
@@ -1844,12 +2200,14 @@ function executarComando(e: Estado, c: Comando): void {
         efA = { ...efA, pagarCom: [...c.enviarArcano] };
       }
       e.pendencia = null;
-      if (p.aplicar) for (const id of c.cartas) aplicarEfeitos(e, [efA!], p.aplicar.dono, id);
-      else for (const id of c.cartas) { moverPara(e, id, p.destino, c.jogador); if (p.concessao && p.destino === 'campo') conceder(e, id, p.concessao); }
-      const resto = p.cartas.filter((id) => !c.cartas.includes(id));
-      if (p.resto) for (const id of resto) moverPara(e, id, p.resto, c.jogador);
-      if (c.cartas.length) anotar(e, `Jogador ${c.jogador}: ${c.cartas.length} carta(s) ${DESTINO_TXT[p.destino]}${p.resto && resto.length ? `, ${resto.length} ${DESTINO_TXT[p.resto]}` : ''}.`);
-      if (p.depois && !e.pendencia) aplicarEfeitos(e, p.depois.efeitos, p.depois.dono, p.depois.alvo);
+      comCadeia(e, p.cadeia, () => {
+        if (p.aplicar) for (const id of c.cartas) aplicarEfeitos(e, [efA!], p.aplicar.dono, id);
+        else for (const id of c.cartas) { moverPara(e, id, p.destino, c.jogador); if (p.concessao && p.destino === 'campo') conceder(e, id, p.concessao); }
+        const resto = p.cartas.filter((id) => !c.cartas.includes(id));
+        if (p.resto) for (const id of resto) moverPara(e, id, p.resto, c.jogador);
+        if (c.cartas.length) anotar(e, `Jogador ${c.jogador}: ${c.cartas.length} carta(s) ${DESTINO_TXT[p.destino]}${p.resto && resto.length ? `, ${resto.length} ${DESTINO_TXT[p.resto]}` : ''}.`);
+        if (p.depois && !e.pendencia) aplicarEfeitos(e, p.depois.efeitos, p.depois.dono, p.depois.alvo);
+      });
       if (!e.pendencia) finalizarAnulacao(e);
       return;
     }

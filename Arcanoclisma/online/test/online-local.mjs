@@ -37,7 +37,7 @@ function jogador(nome, cookie, salaId, baralho) {
         const e = ultimo?.estado; if (!e) return;
         const p = e.pendencia;
         const eu = ultimo.eu;
-        const cmd = p?.jogador === eu ? ({ bloqueio: { tipo: 'bloquear', bloqueador: null }, distribuirDano: { tipo: 'distribuirDano' }, escolherCartas: { tipo: 'escolherCartas', cartas: p.cartas?.slice(0, p.quantidade) }, pagarAnulacao: { tipo: 'pagarAnulacao', pagar: false }, escolherDoTopo: { tipo: 'escolherDoTopo', cartas: p.cartas?.slice(0, p.pegar) }, descartar: { tipo: 'descartar', cartas: e.jogadores[eu].mao.slice(-p.quantidade) }, escolherInicio: { tipo: 'escolherInicio', primeiro: eu } })[p.tipo] : { tipo: 'passar' };
+        const cmd = p?.jogador === eu ? ({ bloqueio: { tipo: 'bloquear', bloqueador: null }, distribuirDano: { tipo: 'distribuirDano' }, escolherCartas: { tipo: 'escolherCartas', cartas: p.cartas?.slice(0, p.quantidade) }, pagarAnulacao: { tipo: 'pagarAnulacao', pagar: false }, pagarCusto: { tipo: 'pagarCusto', pagar: false }, escolherDoTopo: { tipo: 'escolherDoTopo', cartas: p.cartas?.slice(0, p.pegar) }, descartar: { tipo: 'descartar', cartas: e.jogadores[eu].mao.slice(-p.quantidade) }, escolherInicio: { tipo: 'escolherInicio', primeiro: eu } })[p.tipo] : { tipo: 'passar' };
         ws.send(JSON.stringify({ t: 'cmd', cmd }));
         return;
       }

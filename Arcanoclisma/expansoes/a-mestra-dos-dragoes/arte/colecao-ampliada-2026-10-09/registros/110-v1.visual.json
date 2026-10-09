@@ -1,0 +1,40 @@
+{
+  "id": "110",
+  "nomeVisual": "Erian, Guardião do Ocaso",
+  "slug": "erian-guardiao-do-ocaso",
+  "categoriaVisual": "personagem",
+  "cena": "Homem humano jovem de pele escura, cabeça raspada, rosto arredondado, manto azul-noite com bronze e preto, corpo esguio. Numa oficina de relógios artesanais sem números legíveis detém a sombra de uma asa dracônica sobre um mostrador quebrado; fios brancos de tempo e luz bronze mínima nas mãos. Perfil completo, câmera ao lado de engrenagem grande em primeiro plano, crepúsculo. Poder delicado sem relógios gigantes voadores.",
+  "valores": [
+    "alvorum",
+    "eternyr"
+  ],
+  "postura": "aliada",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/110-v1.prompt.txt",
+  "arquivo": "imagens/110-erian-guardiao-do-ocaso-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-705109ad-b1d8-416b-a626-d1ed96579d0b.png",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "sha256": "f93c1792ab6af04026d62135c1676cac5cfa780f1f42a63d48e584a0283f2635",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 29.8,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

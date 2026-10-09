@@ -1,0 +1,38 @@
+{
+  "id": "067",
+  "nomeVisual": "Suspensão do Desabamento",
+  "slug": "suspensao-do-desabamento",
+  "categoriaVisual": "magia_draconica",
+  "cena": "Eternyr, pedra parada no tempo com dragão espiral.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/067-v1.prompt.txt",
+  "referencias": [],
+  "arquivo": "imagens/067-suspensao-do-desabamento-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-81d3ff3f-55b7-4add-8521-e194aecac529.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "6f1cd7dd5d598a15251bcdff31adb6572bbb2a8c33f567de9c06f3630da26a5b",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 18.3,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

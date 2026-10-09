@@ -1,0 +1,37 @@
+{
+  "id": "086",
+  "nomeVisual": "Sombra que Guarda o Ovo",
+  "slug": "sombra-que-guarda-o-ovo",
+  "categoriaVisual": "mistica",
+  "cena": "Alvorum, luz e sombra distribuídas numa incubação.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/086-v1.prompt.txt",
+  "arquivo": "imagens/086-sombra-que-guarda-o-ovo-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-c0a0931c-9c84-4847-98a8-7e22cb9cfaca.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "040a0a09c3da478bedc22d5f3a48b70fb3cdece9ba794a33506fc1c69ff4a5d8",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 20.7,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

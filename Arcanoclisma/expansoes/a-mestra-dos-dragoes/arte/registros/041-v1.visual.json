@@ -1,0 +1,44 @@
+{
+  "id": "041",
+  "slug": "dragao-dominum-coroa",
+  "nomeVisual": "Dragão de Coroa Rubra",
+  "cena": "Novo dragão de Dominum, roxo-sangue apagado, sozinho num pátio abandonado.",
+  "momentoDoDia": "crepúsculo",
+  "estado": "substituida_preservada",
+  "tipoDeCarta": null,
+  "raridade": null,
+  "liberadaParaJogo": false,
+  "arquivo": "imagens/041-dragao-dominum-coroa-v1.png",
+  "prompt": "prompts/041-v1.prompt.txt",
+  "versao": "v1",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-748b982d-42b0-4646-9822-a7d7c02f5c09.png",
+  "ferramenta": "image_gen integrada",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "7e4f66babdd6ba48690a89fcb4b5f4594aa14d5a60baba17759e5c8235792ce2",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "fundo": "cenário completo opaco",
+  "saturacao": "reduzida conforme pedido do autor",
+  "futuroDeValiant": "obscuro, sem desfecho revelado",
+  "aparenciasNovas": "propostas visuais aguardando aprovação",
+  "revisaoVisual": "inspecionada pelo Codex; aprovação do autor pendente",
+  "ambiente": "Novo dragão de Dominum, roxo-sangue apagado, sozinho num pátio abandonado.",
+  "clima": "conforme imagem",
+  "escala": "personagens e objetos integrados ao ambiente",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "liberdadesVisuais": [
+    "composição e detalhes estéticos; sem novas regras"
+  ],
+  "pushAutorizado": false,
+  "motivo": "Revisão da repetição de poses e cenários, conforme pedido do autor",
+  "substituidaPor": "imagens/041-dragao-dominum-coroa-v2.png"
+}

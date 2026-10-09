@@ -1,0 +1,40 @@
+{
+  "id": "098",
+  "nomeVisual": "Caldris, Pesquisador das Cascas",
+  "slug": "caldris-pesquisador-das-cascas",
+  "categoriaVisual": "personagem",
+  "cena": "Homem humano jovem pele clara com vitiligo, cabelo cacheado ruivo curto, túnica índigo e avental prata; corpo magro sem aparência de Valiant. Analisa fragmento de casca sobre um pequeno prato com duas lentes e vapor; segura porta entreaberta para impedir entrada de um filhote curioso no laboratório. Câmera vista de dentro de armário de vidraria, luz de tarde. Oposição acadêmica por receio, sem tortura nem final canônico.",
+  "valores": [
+    "sublimeyn",
+    "cognitium"
+  ],
+  "postura": "contra_dragoes",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/098-v1.prompt.txt",
+  "arquivo": "imagens/098-caldris-pesquisador-das-cascas-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-397024cd-cd3e-46e5-ae08-26f981618a58.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "77d8a9286a512e6c1d9810d9cebab7206de9418d5aaa8e238e73352d8e5b6652",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 25.9,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

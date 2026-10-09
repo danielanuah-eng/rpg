@@ -1,0 +1,43 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Arena Tática — Fase 10"
+run/main_scene="res://scenes/arena_interativa.tscn"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+
+[autoload]
+
+TurnManager="*res://scripts/TurnManager.gd"
+NetworkManager="*res://scripts/NetworkManager.gd"
+VisualSetup="*res://scripts/VisualSetup.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=6
+
+[layer_names]
+
+3d_physics/layer_1="Tabuleiro selecionavel"
+3d_physics/layer_2="Obstaculos de visao"
+3d_physics/layer_3="Unidades"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.1, 0.13, 0.18, 1)

@@ -1,0 +1,40 @@
+{
+  "id": "103",
+  "nomeVisual": "Sáira, Custódia das Memórias",
+  "slug": "saira-custodia-das-memorias",
+  "categoriaVisual": "personagem",
+  "cena": "Mulher humana velha pele clara, cabelo branco curto e assimétrico, sobrancelhas marcantes, roupa verde pálido e vinho apagado. Em arquivo memorial recolhe um vestígio de espírito dracônico verde em uma gaiola de fios mágicos aberta que segura na mesa; mão outra mantém porta aberta ao espírito, sem aprisionar violentamente. Vista próxima de três quartos de cima, tarde sombria de janela, relação de cuidado e limite.",
+  "valores": [
+    "dominum",
+    "morbidyum"
+  ],
+  "postura": "ambivalente",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/103-v1.prompt.txt",
+  "arquivo": "imagens/103-saira-custodia-das-memorias-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-01a7f438-c276-44e1-8ce0-131252c5add0.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "69a2d97dd618695fce6bd78575e33688c165fe944b3013e784458993edeb3c6d",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 22.7,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

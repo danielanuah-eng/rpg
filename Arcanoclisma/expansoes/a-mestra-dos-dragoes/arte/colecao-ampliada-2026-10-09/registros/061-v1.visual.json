@@ -1,0 +1,37 @@
+{
+  "id": "061",
+  "nomeVisual": "Devorador de Ecos",
+  "slug": "devorador-de-ecos",
+  "categoriaVisual": "monstro",
+  "cena": "Close lateral na nave de um salão destruído.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/061-v1.prompt.txt",
+  "arquivo": "imagens/061-devorador-de-ecos-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-1d7cde7f-c1cf-4849-b08b-c36e1057d3e8.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "4e8130ee125650a7978510b737efe17a9e215154251b30038a02921444a7d7e7",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 25.2,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

@@ -1,0 +1,1548 @@
+{
+ "cartas": {
+  "base-aliado-c1-equilibrado": {
+   "texto": "Um jovem soldado destemido(ou quase né?)"
+  },
+  "base-aliado-c2-equilibrado": {
+   "nome": "Camponeses Irritados",
+   "texto": "Abaixem as armas, ou vamos usar nossos.. furadores!"
+  },
+  "base-aliado-c3-equilibrado": {
+   "texto": "EEEEEIIIII, NÃO PASSA NÃO!!!!"
+  },
+  "base-aliado-c4-equilibrado": {
+   "habilidades": [
+    {
+     "quando": "entrar",
+     "efeitos": [
+      {
+       "tipo": "comprar",
+       "valor": 1
+      }
+     ]
+    }
+   ]
+  },
+  "base-aliado-c5-equilibrado": {
+   "palavrasChave": [
+    "Incomensurável"
+   ]
+  },
+  "base-aliado-c6-equilibrado": {
+   "texto": "Protessência.",
+   "palavrasChave": [
+    "Protessência"
+   ],
+   "arcanoGerado": 2,
+   "valores": [
+    "alvorum",
+    "morbidyum",
+    "cognitium"
+   ]
+  },
+  "base-aliado-c7-equilibrado": {
+   "palavrasChave": [
+    "Incomensurável"
+   ],
+   "arcanoGerado": 2,
+   "descartaGrau": 1,
+   "valores": [
+    "sublimeyn",
+    "alvorum",
+    "cognitium"
+   ],
+   "habilidades": [
+    {
+     "quando": "atacar",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "dano",
+       "valor": 2,
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "inimigo",
+       "tipos": [
+        "estrutura"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "base-aliado-c8-equilibrado": {
+   "palavrasChave": [
+    "Protessência"
+   ],
+   "valores": [
+    "alvorum",
+    "morbidyum",
+    "cognitium"
+   ],
+   "habilidades": [
+    {
+     "quando": "atacar",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "suspender",
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "inimigo",
+       "tipos": [
+        "aliado"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "base-aliado-c2-agressivo": {
+   "nome": "Luphen",
+   "palavrasChave": [
+    "Protessência"
+   ],
+   "ataque": 4,
+   "vida": 1
+  },
+  "base-aliado-c2-defensivo": {
+   "texto": "Quando defende: compre 1 carta.",
+   "valores": [
+    "dominum",
+    "eternyr"
+   ],
+   "habilidades": [
+    {
+     "quando": "bloquear",
+     "efeitos": [
+      {
+       "tipo": "comprar",
+       "valor": 1
+      }
+     ]
+    }
+   ]
+  },
+  "base-aliado-c4-agressivo": {
+   "nome": "Javali Ferhor",
+   "texto": "Incomensurável. Proteção mágica: para mirar esta carta, o oponente precisa descartar 1 carta.",
+   "palavrasChave": [
+    "Incomensurável"
+   ],
+   "arcanoGerado": 2,
+   "protecao": {
+    "descartar": 1
+   }
+  },
+  "base-aliado-c4-defensivo": {
+   "nome": "CAÍSTOLES",
+   "texto": "Quando causa dano de combate ao Conjurador inimigo: destrua um Estrutura inimigo.",
+   "valores": [
+    "dominum",
+    "eternyr"
+   ],
+   "habilidades": [
+    {
+     "quando": "danoConjurador",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "destruir",
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "inimigo",
+       "tipos": [
+        "estrutura"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "base-aliado-c6-agressivo": {
+   "nome": "Fihbal",
+   "texto": "Proficiente.",
+   "palavrasChave": [
+    "Proficiente"
+   ],
+   "ataque": 8,
+   "vida": 5
+  },
+  "base-aliado-c6-defensivo": {
+   "nome": "Yhmovu",
+   "palavrasChave": [
+    "Incomensurável"
+   ]
+  },
+  "base-aliado-c2-agressivo-proficiente": {
+   "nome": "Hebyn",
+   "custo": 1,
+   "grau": 0,
+   "arcanoGerado": 0
+  },
+  "base-aliado-c4-agressivo-proficiente": {
+   "nome": "Bandido Criminoso!",
+   "ataque": 3
+  },
+  "base-aliado-c6-equilibrado-descarta-grau": {
+   "nome": "Aldo, Baldo & Keleo"
+  },
+  "base-aliado-c8-equilibrado-descarta-grau": {
+   "nome": "Colosso Fernando",
+   "texto": "Incomensurável. Para jogar, descarte 3 cartas do seu Grau. Proteção mágica: para mirar esta carta, o oponente precisa pagar 3 de Arcano.",
+   "palavrasChave": [
+    "Incomensurável"
+   ],
+   "protecao": {
+    "arcano": 3
+   }
+  },
+  "base-aliado-c4-equilibrado-grau5": {
+   "texto": "Etéreo.",
+   "palavrasChave": [
+    "Etéreo"
+   ]
+  },
+  "base-aliado-recurso-c1": {
+   "arcanoGerado": 0
+  },
+  "base-aliado-recurso-c3": {
+   "nome": "Ferreira Alchium"
+  },
+  "base-aliado-recurso-c5": {
+   "custo": 4,
+   "valores": [
+    "alvorum",
+    "primitivum"
+   ]
+  },
+  "base-aliado-recurso-c7": {
+   "nome": "O Antigo Bibliotecário Phill",
+   "custo": 6,
+   "grau": 5,
+   "arcanoGerado": 2
+  },
+  "eternyr-aliado-c6-g8": {
+   "nome": "HUGOA",
+   "arcanoGerado": 2,
+   "ataque": 9,
+   "descartaGrau": 2,
+   "habilidades": [
+    {
+     "quando": "entrar",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "naoAtaca",
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "inimigo",
+       "tipos": [
+        "aliado"
+       ]
+      }
+     ]
+    },
+    {
+     "quando": "bloquear",
+     "efeitos": [
+      {
+       "tipo": "comprar",
+       "valor": 2
+      }
+     ]
+    }
+   ],
+   "protecao": {
+    "grauMin": 4
+   }
+  },
+  "eternyr-aliado-c8-g10": {
+   "nome": "Ampuryu",
+   "texto": "Etéreo, Protessência.",
+   "palavrasChave": [
+    "Etéreo",
+    "Protessência"
+   ]
+  },
+  "bal-etereo-c1": {
+   "arcanoGerado": 0,
+   "protecao": {
+    "arcano": 1
+   }
+  },
+  "bal-etereo-c2": {
+   "nome": "Kronos, o avino ",
+   "palavrasChave": null,
+   "arcanoGerado": 0,
+   "habilidades": [
+    {
+     "quando": "alvo",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "curar",
+       "valor": 2,
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "proprio",
+       "tipos": [
+        "aliado",
+        "conjurador"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "bal-etereo-c3": {
+   "nome": "Sombronça ",
+   "texto": "Repentino.",
+   "palavrasChave": [
+    "Repentino"
+   ]
+  },
+  "r6-espiao-c4": {
+   "palavrasChave": [
+    "Repentino"
+   ],
+   "custo": 3,
+   "vida": 2
+  },
+  "r6-piromante-c4": {
+   "palavrasChave": [
+    "Repentino"
+   ],
+   "vida": 2
+  },
+  "r6-fera-cerco-c5": {
+   "palavrasChave": [
+    "Incomensurável",
+    "Proficiente"
+   ],
+   "arcanoGerado": 0
+  },
+  "r6-presa-trovao-c5": {
+   "valores": [
+    "conflituo",
+    "dominum"
+   ]
+  },
+  "r6-anjo-c6": {
+   "nome": "Biribinha"
+  },
+  "r6-mercador-c7": {
+   "habilidades": [
+    {
+     "quando": "entrar",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "devolver",
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "inimigo",
+       "tipos": [
+        "aliado"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "r6-colosso-c7": {
+   "texto": "Protegido 2. Quando causa dano de combate ao Conjurador inimigo: destrua um Estrutura inimigo.",
+   "valores": [
+    "conflituo",
+    "dominum"
+   ],
+   "habilidades": [
+    {
+     "quando": "danoConjurador",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "destruir",
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "inimigo",
+       "tipos": [
+        "estrutura"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "r6-dragao-c8": {
+   "texto": "Repentino. Protegido 1. Quando entra em campo: cause 3 de dano a cada Aliado inimigo.",
+   "palavrasChave": [
+    "Repentino"
+   ],
+   "aoEntrar": null,
+   "habilidades": [
+    {
+     "quando": "entrar",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "dano",
+       "valor": 3,
+       "alcance": "todos",
+       "escolha": "controlador",
+       "lado": "inimigo",
+       "tipos": [
+        "aliado"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "col-campeao-conflituo": {
+   "habilidades": [
+    {
+     "quando": "grau",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "dano",
+       "valor": 1,
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "inimigo",
+       "tipos": [
+        "aliado",
+        "conjurador",
+        "estrutura"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "col-campeao-sublimeyn": {
+   "nome": "Blyel, o mago perdido",
+   "palavrasChave": [
+    "Etéreo",
+    "Repentino"
+   ],
+   "habilidades": [
+    {
+     "quando": "entrar",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "devolver",
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "inimigo",
+       "tipos": [
+        "aliado"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "col-campeao-dominum": {
+   "palavrasChave": [
+    "Repentino"
+   ],
+   "habilidades": [
+    {
+     "quando": "entrar",
+     "efeitos": [
+      {
+       "tipo": "anular",
+       "alvo": "pilha"
+      }
+     ]
+    }
+   ]
+  },
+  "col-campeao-persona": {
+   "nome": "Caba com magia de reflexo",
+   "habilidades": [
+    {
+     "quando": "cemiterio",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "devolver",
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "proprio",
+       "tipos": [
+        "aliado"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "col-campeao-alvorum": {
+   "custo": 5,
+   "grau": 5,
+   "habilidades": [
+    {
+     "quando": "entrar",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "conceder",
+       "alcance": "todos",
+       "escolha": "controlador",
+       "lado": "proprio",
+       "tipos": [
+        "aliado"
+       ],
+       "concessao": {
+        "palavras": [
+         "Etéreo"
+        ],
+        "palavrasTurnos": 1
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "col-campeao-morbidyum": {
+   "nome": "Andalgan,  o retornado",
+   "palavrasChave": [
+    "Reanimum"
+   ],
+   "grau": 3,
+   "arcanoGerado": 0
+  },
+  "col-campeao-cognitium": {
+   "texto": "Quando ataca: ganhe 2 de Arcano.",
+   "subtipos": [
+    "Famanda",
+    "bibliotecaria"
+   ],
+   "habilidades": [
+    {
+     "quando": "atacar",
+     "efeitos": [
+      {
+       "tipo": "arcano",
+       "valor": 2
+      }
+     ]
+    }
+   ]
+  },
+  "col-campeao-eternyr": {
+   "nome": "Cesinha faz de novo",
+   "texto": "Suspenda: o próximo dano ou cura de uma Temporária sua neste turno tem +2.",
+   "arcanoGerado": 2,
+   "ataque": 2,
+   "habilidades": [
+    {
+     "quando": "ativada",
+     "efeitos": [
+      {
+       "tipo": "potenciaMagia",
+       "valor": 2
+      }
+     ],
+     "custo": {
+      "suspender": true
+     }
+    }
+   ]
+  },
+  "col-campeao-primitivum": {
+   "nome": "Lontroso",
+   "habilidades": [
+    {
+     "quando": "entrar",
+     "efeitos": [
+      {
+       "tipo": "colocarNoGrau",
+       "de": "topo",
+       "valor": 1
+      }
+     ]
+    }
+   ]
+  },
+  "col-gato-de-navio": {
+   "nome": "Oncinho"
+  },
+  "col-ilusionista-do-labirinto": {
+   "nome": "IlusioMarcos"
+  },
+  "col-ceifadora-da-peste": {
+   "nome": "Byfried",
+   "palavrasChave": [
+    "Proficiente"
+   ],
+   "grau": 7,
+   "habilidades": [
+    {
+     "quando": "danoConjurador",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "curar",
+       "valor": 2,
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "proprio",
+       "tipos": [
+        "aliado"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "col-contrabandista-de-porto": {
+   "palavrasChave": null,
+   "protecao": {
+    "arcano": 1
+   }
+  },
+  "col-vento-mensageiro": {
+   "nome": "Phylphyr, o mensageiro ",
+   "texto": "Etéreo, Proficiente. Quando é colocada no Grau: levante um Conjurador seu.",
+   "habilidades": [
+    {
+     "quando": "grau",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "levantar",
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "proprio",
+       "tipos": [
+        "conjurador"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "col-guarda-costas": {
+   "nome": "Bob o bobo bom de briga",
+   "texto": "Protegido 2. Proteção mágica: para mirar esta carta, o oponente precisa mandar 2 cartas do Grau ao cemitério.",
+   "protecao": {
+    "grauParaCemiterio": 2
+   }
+  },
+  "col-curandeira-de-ervas": {
+   "grau": 4
+  },
+  "nv-luz-de-velorio": {
+   "arcanoGerado": 0
+  },
+  "nv-carcaca-andante": {
+   "nome": "Zezim mortim",
+   "palavrasChave": [
+    "Reanimum"
+   ]
+  },
+  "nv-coveiro": {
+   "texto": "Quando é colocada no Grau: o próximo dano ou cura de uma Temporária sua neste turno tem +1.",
+   "aoEntrar": null,
+   "habilidades": [
+    {
+     "quando": "grau",
+     "efeitos": [
+      {
+       "tipo": "potenciaMagia",
+       "valor": 1
+      }
+     ]
+    }
+   ]
+  },
+  "nv-ossario": {
+   "ataque": 6
+  },
+  "nv-esquecido": {
+   "habilidades": [
+    {
+     "quando": "entrar",
+     "efeitos": [
+      {
+       "tipo": "olharMao",
+       "pegar": 1,
+       "destino": "nada"
+      }
+     ]
+    }
+   ]
+  },
+  "nv-moca-que-nao-sangra": {
+   "nome": "Thelyna",
+   "palavrasChave": [
+    "Incomensurável"
+   ],
+   "ataque": 4
+  },
+  "prov-eternyr-varredura-c3": {
+   "nome": "Time Station",
+   "efeitos": null,
+   "habilidades": [
+    {
+     "quando": "jogar",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "naoAtaca",
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "inimigo",
+       "tipos": [
+        "aliado"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "prov-eternyr-remocao-grau-c3": {
+   "nome": "Disrupção Espacial",
+   "custo": 2
+  },
+  "prov-eternyr-destruir-c4-repentina": {
+   "nome": "EcoSorvedor",
+   "custo": 2,
+   "grau": 2,
+   "efeitos": null,
+   "habilidades": [
+    {
+     "quando": "jogar",
+     "efeitos": [
+      {
+       "tipo": "comprar",
+       "valor": 2
+      },
+      {
+       "tipo": "perderVida",
+       "secundario": true,
+       "valor": 2,
+       "quem": "voce"
+      }
+     ]
+    }
+   ]
+  },
+  "prov-eternyr-devolver-c2-repentina": {
+   "nome": "BlikAble",
+   "custo": 4,
+   "habilidades": [
+    {
+     "quando": "jogar",
+     "efeitos": [
+      {
+       "tipo": "arcanoOponente",
+       "valor": 1
+      }
+     ]
+    }
+   ]
+  },
+  "prov-eternyr-mistica-c2": {
+   "nome": "Um velho no Tempo",
+   "custo": 5,
+   "grau": 4,
+   "arcanoGerado": 3,
+   "ativacao": null,
+   "habilidades": [
+    {
+     "quando": "entrar",
+     "efeitos": [
+      {
+       "tipo": "olharTopoPara",
+       "quantidade": 7,
+       "pegar": 1,
+       "destino": "mao",
+       "resto": "topo"
+      },
+      {
+       "tipo": "descontoProximaCarta",
+       "valor": 5
+      }
+     ]
+    },
+    {
+     "quando": "ativada",
+     "efeitos": [
+      {
+       "tipo": "olharTopoPara",
+       "quantidade": 3,
+       "pegar": 1,
+       "destino": "mao",
+       "resto": "topo"
+      },
+      {
+       "tipo": "descontoProximaCarta",
+       "valor": 3
+      }
+     ],
+     "custo": {
+      "suspender": false,
+      "vida": 4
+     }
+    }
+   ]
+  },
+  "prov-primitivum-aliado-c2-defensivo": {
+   "nome": "Mulão Minino"
+  },
+  "prov-primitivum-curar-c2": {
+   "nome": "Trazer a paz",
+   "efeitos": [
+    {
+     "tipo": "curar",
+     "valor": 3,
+     "alvo": "escolhido"
+    },
+    {
+     "tipo": "arcano",
+     "valor": 1
+    }
+   ],
+   "habilidades": [
+    {
+     "quando": "jogar",
+     "efeitos": [
+      {
+       "tipo": "arcanoOponente",
+       "valor": 1
+      }
+     ]
+    }
+   ]
+  },
+  "prov-primitivum-aliado-c4-defensivo": {
+   "nome": "Ursávore",
+   "palavrasChave": [
+    "Incomensurável"
+   ],
+   "custo": 5,
+   "grau": 4,
+   "ataque": 5
+  },
+  "prov-conflituo-piromante-c4": {
+   "nome": "Brigão de Taverna",
+   "grau": 2,
+   "ataque": 4,
+   "vida": 3
+  },
+  "prov-conflituo-fera-c5": {
+   "nome": "Troteiro",
+   "palavrasChave": [
+    "Proficiente"
+   ],
+   "custo": 4,
+   "ataque": 6,
+   "vida": 4,
+   "aoEntrar": null
+  },
+  "prov-conflituo-aliado-c2-agressivo": {
+   "vida": 1,
+   "habilidades": [
+    {
+     "quando": "atacar",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "dano",
+       "valor": 1,
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "inimigo",
+       "tipos": [
+        "aliado"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "prov-conflituo-dano-c2-repentina": {
+   "nome": "BackStabbed"
+  },
+  "prov-conflituo-torre-c4": {
+   "ativacao": {
+    "custo": 2,
+    "suspende": true,
+    "efeitos": [
+     {
+      "tipo": "dano",
+      "valor": 2,
+      "alvo": "escolhido"
+     }
+    ]
+   }
+  },
+  "prov-sublimeyn-etereo-c2": {
+   "nome": "Garíntio Nebuloso",
+   "grau": 2,
+   "vida": 1,
+   "habilidades": [
+    {
+     "quando": "entrar",
+     "efeitos": [
+      {
+       "tipo": "comprar",
+       "valor": 1
+      }
+     ]
+    }
+   ]
+  },
+  "prov-sublimeyn-etereo-c3": {
+   "nome": "ViGryvo",
+   "palavrasChave": null,
+   "grau": 3,
+   "vida": 2,
+   "habilidades": [
+    {
+     "quando": "entrar",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "naoAtaca",
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "inimigo",
+       "tipos": [
+        "aliado"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "prov-sublimeyn-devolver-c2-repentina": {
+   "nome": "CeyCey Brincando com a brincadeira",
+   "grau": 4
+  },
+  "prov-sublimeyn-dano-c2-repentina": {
+   "nome": "Contrabando Legal",
+   "grau": 3,
+   "efeitos": null,
+   "habilidades": [
+    {
+     "quando": "jogar",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "conceder",
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "ambos",
+       "tipos": [
+        "aliado"
+       ],
+       "concessao": {
+        "palavras": [
+         "Protegido 1"
+        ],
+        "palavrasTurnos": 1
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "prov-sublimeyn-dano-c1-repentina": {
+   "nome": "Espera Povyro Impaciente!",
+   "custo": 3,
+   "grau": 2,
+   "efeitos": null,
+   "habilidades": [
+    {
+     "quando": "jogar",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "naoAtaca",
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "inimigo",
+       "tipos": [
+        "aliado",
+        "conjurador"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "prov-sublimeyn-comprar-c2-repentina": {
+   "nome": "Olha!Sal!",
+   "custo": 1,
+   "arcanoGerado": 0
+  },
+  "prov-dominum-cerco-c3": {
+   "custo": 5,
+   "grau": 3,
+   "arcanoGerado": 0,
+   "ativacao": null,
+   "habilidades": [
+    {
+     "quando": "cataclismaOponente",
+     "efeitos": [
+      {
+       "tipo": "grauAoCemiterio",
+       "secundario": true,
+       "valor": 1,
+       "quem": "oponente"
+      },
+      {
+       "tipo": "perderVida",
+       "secundario": true,
+       "valor": 3,
+       "quem": "voce"
+      }
+     ]
+    }
+   ]
+  },
+  "prov-dominum-colosso-c7": {
+   "custo": 9,
+   "grau": 5,
+   "ataque": 5,
+   "vida": 15
+  },
+  "prov-dominum-ira-c4": {
+   "nome": " Juiza de Nostrum em Serviço",
+   "custo": 3,
+   "efeitos": null,
+   "habilidades": [
+    {
+     "quando": "jogar",
+     "efeitos": [
+      {
+       "tipo": "anular",
+       "alvo": "pilha"
+      },
+      {
+       "tipo": "anular",
+       "alvo": "pilha"
+      }
+     ]
+    }
+   ]
+  },
+  "prov-dominum-destruir-c3": {
+   "nome": "Ás do Carrasco"
+  },
+  "prov-dominum-aliado-c4-defensivo": {
+   "nome": "Guarda Deuly",
+   "grau": 4,
+   "arcanoGerado": 0,
+   "habilidades": [
+    {
+     "quando": "atacar",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "conceder",
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "proprio",
+       "tipos": [
+        "aliado"
+       ],
+       "concessao": {
+        "palavras": [
+         "Protegido 1"
+        ],
+        "palavrasTurnos": 1
+       }
+      }
+     ]
+    }
+   ],
+   "protegido": 3
+  },
+  "prov-dominum-mistica-c2": {
+   "nome": "Grande Nostrum",
+   "palavrasChave": [
+    "Protessência"
+   ],
+   "custo": 6,
+   "grau": 5,
+   "arcanoGerado": 0,
+   "vida": 4,
+   "aoEntrar": null,
+   "habilidades": [
+    {
+     "quando": "ativada",
+     "efeitos": [
+      {
+       "tipo": "anular",
+       "alvo": "pilha"
+      }
+     ],
+     "custo": {
+      "suspender": true
+     }
+    }
+   ],
+   "protegido": null
+  },
+  "prov-persona-espiao-c4": {
+   "nome": "YYaria",
+   "palavrasChave": [
+    "Proficiente"
+   ],
+   "grau": 4,
+   "aoDanoConjurador": null,
+   "habilidades": [
+    {
+     "quando": "entrar",
+     "efeitos": [
+      {
+       "tipo": "ataqueConjuradorTurno",
+       "valor": 3
+      }
+     ]
+    }
+   ]
+  },
+  "prov-persona-aliado-c2-agressivo-proficiente": {
+   "nome": "Cael, o ladrão da feira",
+   "palavrasChave": null,
+   "grau": 3,
+   "habilidades": [
+    {
+     "quando": "entrar",
+     "efeitos": [
+      {
+       "tipo": "arcano",
+       "valor": 3
+      }
+     ]
+    }
+   ]
+  },
+  "prov-alvorum-varredura-c3": {
+   "nome": "Olhar de Vael",
+   "grau": 4
+  },
+  "prov-alvorum-anjo-c6": {
+   "nome": "Cervium Paciente",
+   "palavrasChave": [
+    "Protessência"
+   ],
+   "grau": 8,
+   "arcanoGerado": 2,
+   "ataque": 3,
+   "espinhos": 0,
+   "aoDanoConjurador": null,
+   "habilidades": [
+    {
+     "quando": "atacar",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "curar",
+       "valor": 4,
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "proprio",
+       "tipos": [
+        "aliado",
+        "conjurador"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "prov-alvorum-bomba-c8": {
+   "nome": "Feiticeiro Rei, Thitus",
+   "palavrasChave": [
+    "Repentino"
+   ],
+   "ataque": 6,
+   "vida": 7,
+   "aoEntrar": null,
+   "habilidades": [
+    {
+     "quando": "entrar",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "dano",
+       "valor": 12,
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "inimigo",
+       "tipos": [
+        "aliado"
+       ]
+      }
+     ]
+    }
+   ],
+   "protegido": null
+  },
+  "prov-alvorum-fonte-c4": {
+   "custo": 3,
+   "grau": 5,
+   "ativacao": null,
+   "habilidades": [
+    {
+     "quando": "ativada",
+     "efeitos": [
+      {
+       "tipo": "colocarNoGrau",
+       "de": "mao",
+       "valor": 1
+      }
+     ],
+     "custo": {
+      "suspender": true,
+      "arcano": 2
+     }
+    }
+   ]
+  },
+  "prov-alvorum-comprar-c3": {
+   "nome": "Arthrides violenta",
+   "efeitos": null,
+   "habilidades": [
+    {
+     "quando": "jogar",
+     "efeitos": [
+      {
+       "tipo": "campo",
+       "acao": "dano",
+       "valor": 2,
+       "alcance": "alvo",
+       "escolha": "controlador",
+       "lado": "inimigo",
+       "tipos": [
+        "aliado"
+       ]
+      },
+      {
+       "tipo": "comprar",
+       "valor": 1
+      }
+     ]
+    }
+   ]
+  },
+  "prov-morbidyum-curar-c2": {
+   "nome": "Rechaçar Ferimentos",
+   "grau": 3,
+   "efeitos": [
+    {
+     "tipo": "curar",
+     "valor": 3,
+     "alvo": "escolhido"
+    }
+   ]
+  },
+  "prov-morbidyum-curar-c4": {
+   "custo": 6,
+   "grau": 6
+  },
+  "prov-morbidyum-enfermaria-c3": {
+   "nome": "Porta pro Rinval",
+   "custo": 2,
+   "grau": 4
+  },
+  "prov-morbidyum-dano-c3": {
+   "nome": "Carcaçar",
+   "custo": 2,
+   "grau": 3,
+   "efeitos": null,
+   "habilidades": [
+    {
+     "quando": "jogar",
+     "efeitos": [
+      {
+       "tipo": "descartar",
+       "acao": "descartar",
+       "quem": "oponente",
+       "valor": 1,
+       "modo": "acaso"
+      }
+     ]
+    }
+   ]
+  },
+  "prov-morbidyum-aliado-c6-descarta-grau": {
+   "nome": "The Thing Remain",
+   "palavrasChave": [
+    "Reanimum"
+   ],
+   "ataque": 5,
+   "vida": 4,
+   "descartaGrau": 0,
+   "habilidades": [
+    {
+     "quando": "atacar",
+     "efeitos": [
+      {
+       "tipo": "descartar",
+       "acao": "descartar",
+       "quem": "oponente",
+       "valor": 1,
+       "modo": "dono"
+      }
+     ]
+    }
+   ]
+  },
+  "prov-morbidyum-comprar-c3": {
+   "nome": "Sabedoria do Velho de Ossos",
+   "custo": 2,
+   "habilidades": [
+    {
+     "quando": "jogar",
+     "efeitos": [
+      {
+       "tipo": "descartar",
+       "acao": "descartar",
+       "quem": "voce",
+       "valor": 1,
+       "modo": "olhando"
+      }
+     ]
+    }
+   ]
+  },
+  "prov-morbidyum-mistica-c2": {
+   "nome": "Curandeira da Antessala",
+   "vida": 1,
+   "ativacao": {
+    "custo": 0,
+    "suspende": true,
+    "efeitos": [
+     {
+      "tipo": "curar",
+      "valor": 1,
+      "alvo": "escolhido"
+     }
+    ]
+   }
+  },
+  "prov-morbidyum-mistica-c4": {
+   "nome": "Véu do outro lado",
+   "custo": 7,
+   "grau": 6,
+   "ativacao": null,
+   "habilidades": [
+    {
+     "quando": "ativada",
+     "efeitos": [
+      {
+       "tipo": "reanimar",
+       "pagamento": "gratis",
+       "custoExtra": 0,
+       "de": "qualquer",
+       "concessao": {
+        "palavras": [
+         "Reanimum",
+         "Etéreo"
+        ],
+        "palavrasTurnos": 1,
+        "turnos": 2,
+        "destino": "banimento"
+       }
+      }
+     ],
+     "custo": {
+      "suspender": true,
+      "arcano": 8
+     }
+    }
+   ]
+  },
+  "prov-cognitium-mercador-c7": {
+   "nome": "Samantha, SecretÁria",
+   "aoEntrar": null,
+   "aoDanoConjurador": null,
+   "habilidades": [
+    {
+     "quando": "entrar",
+     "efeitos": [
+      {
+       "tipo": "olharMao",
+       "pegar": 1,
+       "destino": "fundo"
+      }
+     ]
+    },
+    {
+     "quando": "atacar",
+     "efeitos": [
+      {
+       "tipo": "olharMao",
+       "pegar": 1,
+       "destino": "nada"
+      },
+      {
+       "tipo": "comprar",
+       "valor": 2
+      }
+     ]
+    }
+   ],
+   "protegido": null
+  },
+  "prov-cognitium-comprar-c2-repentina": {
+   "grau": 3,
+   "efeitos": null,
+   "habilidades": [
+    {
+     "quando": "jogar",
+     "efeitos": [
+      {
+       "tipo": "olharTopoPara",
+       "quantidade": 3,
+       "pegar": 1,
+       "destino": "mao",
+       "resto": "topo"
+      },
+      {
+       "tipo": "olharMao",
+       "pegar": 1,
+       "destino": "nada"
+      }
+     ]
+    }
+   ]
+  },
+  "prov-cognitium-anular-c3-repentina": {
+   "nome": "PrendePalavras",
+   "grau": 4,
+   "pagarParaAnular": 2
+  },
+  "prov-cognitium-aliado-c4-defensivo": {
+   "nome": "Inspetor Prymm",
+   "arcanoGerado": 2,
+   "vida": 4,
+   "habilidades": [
+    {
+     "quando": "entrar",
+     "efeitos": [
+      {
+       "tipo": "olharTopoPara",
+       "quantidade": 2,
+       "pegar": 1,
+       "destino": "mao",
+       "resto": "fundo"
+      }
+     ]
+    }
+   ]
+  },
+  "prov-cognitium-mistica-c2": {
+   "nome": "Ecandescência Arcânica",
+   "grau": 3,
+   "ativacao": null,
+   "habilidades": [
+    {
+     "quando": "ativada",
+     "efeitos": [
+      {
+       "tipo": "comprar",
+       "valor": 1
+      },
+      {
+       "tipo": "arcanoOponente",
+       "valor": 1
+      }
+     ],
+     "custo": {
+      "suspender": true,
+      "arcano": 2
+     }
+    }
+   ]
+  }
+ },
+ "conjuradores": {
+  "carmal": {
+   "valores": [
+    "alvorum",
+    "primitivum"
+   ],
+   "poder": {
+    "habilidades": [
+     {
+      "quando": "aliadoEntra",
+      "efeitos": [
+       {
+        "tipo": "arcano",
+        "valor": 2
+       }
+      ],
+      "soNoSeuTurno": true
+     }
+    ]
+   }
+  }
+ },
+ "artes": {
+  "cartas": {},
+  "conjuradores": {}
+ },
+ "raridades": {
+  "cartas": {
+   "base-aliado-c7-equilibrado": "rara",
+   "base-aliado-c6-equilibrado": "incomum",
+   "base-aliado-c8-equilibrado": "lendaria",
+   "base-aliado-c2-agressivo": "lendaria",
+   "base-aliado-c2-defensivo": "incomum",
+   "base-aliado-c4-defensivo": "rara",
+   "base-aliado-c4-agressivo": "rara",
+   "base-aliado-c6-agressivo": "rara",
+   "base-aliado-c6-defensivo": "incomum",
+   "base-aliado-c6-equilibrado-descarta-grau": "rara",
+   "base-aliado-c8-equilibrado-descarta-grau": "rara",
+   "base-aliado-c4-equilibrado-grau5": "rara",
+   "base-aliado-recurso-c3": "rara",
+   "base-aliado-recurso-c5": "incomum",
+   "eternyr-aliado-c6-g8": "lendaria",
+   "eternyr-aliado-c8-g10": "lendaria",
+   "bal-etereo-c1": "rara",
+   "bal-etereo-c2": "lendaria",
+   "bal-etereo-c3": "rara",
+   "r6-piromante-c4": "incomum",
+   "r6-fera-cerco-c5": "rara",
+   "r6-presa-trovao-c5": "rara",
+   "r6-anjo-c6": "lendaria",
+   "r6-mercador-c7": "lendaria",
+   "r6-colosso-c7": "rara",
+   "r6-dragao-c8": "rara",
+   "col-campeao-conflituo": "comum",
+   "col-campeao-sublimeyn": "lendaria",
+   "col-campeao-dominum": "incomum",
+   "col-campeao-alvorum": "lendaria",
+   "col-campeao-morbidyum": "rara",
+   "col-campeao-cognitium": "rara",
+   "col-campeao-eternyr": "rara",
+   "col-campeao-primitivum": "incomum",
+   "col-gato-de-navio": "comum",
+   "col-menina-raposa": "incomum",
+   "col-ceifadora-da-peste": "lendaria",
+   "col-contrabandista-de-porto": "comum",
+   "col-vento-mensageiro": "lendaria",
+   "ficha-wyvern-filhote": "incomum",
+   "nv-luz-de-velorio": "comum",
+   "nv-embalsamador": "rara",
+   "nv-ossario": "lendaria",
+   "nv-moca-que-nao-sangra": "incomum",
+   "prov-eternyr-mistica-c2": "rara",
+   "prov-primitivum-aliado-c4-defensivo": "rara"
+  },
+  "conjuradores": {}
+ }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "081",
+  "nomeVisual": "Estufa das Cascas",
+  "slug": "estufa-das-cascas",
+  "categoriaVisual": "estrutura",
+  "cena": "Perspectiva interior ao nível dos ovos.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/081-v1.prompt.txt",
+  "arquivo": "imagens/081-estufa-das-cascas-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-2a67913c-3608-450e-8e87-308d10da29c2.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "f765a6f1a2a12ae1e8f2555dc9095e4a8f81f79da0b67cf1a6dc9b7189d912cc",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 22.2,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

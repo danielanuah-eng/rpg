@@ -1,0 +1,19 @@
+{
+  "id": "ajuste-arte-thitus",
+  "data": "2026-10-05",
+  "origem": "pedido do autor ao GPT, repassado pelo Claude",
+  "prioridade": "alta",
+  "cartas": [
+    {
+      "id": "prov-alvorum-bomba-c8",
+      "nomeNoSite": "Feiticeiro Rei, Thitus",
+      "nomeOriginal": "Juiz-Feiticeiro",
+      "observacao": "O autor renomeou a carta no Editor do site para \"Feiticeiro Rei, Thitus\".",
+      "problema": "Na carta montada no site, o rosto do feiticeiro fica coberto pela faixa do nome.",
+      "pedido": "Ajustar a arte (recomposição ou nova versão da mesma cena) para que o rosto e a coroa fiquem abaixo da faixa do nome, na área livre da moldura. Manter cena, personagem, Valor (Alvorum) e ambientação aprovados.",
+      "formatoEsperado": "mesmo formato, dimensões e caminho da arte atual de prov-alvorum-bomba-c8 (entregas/artes-rapidas-valores.visual.json), com hash novo",
+      "entrega": "registrar a versão nova em cartas/entregas/artes-rapidas-valores.visual.json (ou num manifesto novo indicado), para o Claude integrar no site"
+    }
+  ],
+  "regras": "Nenhuma regra, custo ou texto da carta muda com este ajuste."
+}

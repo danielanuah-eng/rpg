@@ -1,0 +1,37 @@
+{
+  "id": "072",
+  "nomeVisual": "Lentes do Ovo",
+  "slug": "lentes-do-ovo",
+  "categoriaVisual": "equipamento",
+  "cena": "Óculos de inspeção em bancada de incubação.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/072-v1.prompt.txt",
+  "arquivo": "imagens/072-lentes-do-ovo-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-b3fc68cf-826c-44cd-aefb-6e33e439fbc6.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "sha256": "ebc6c0148526149252ffde4c21cdb5eab380652d024c79217a56ab20a3305c01",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 43.1,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

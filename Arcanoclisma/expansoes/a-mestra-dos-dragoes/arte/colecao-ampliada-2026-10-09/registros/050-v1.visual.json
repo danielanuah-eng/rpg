@@ -1,0 +1,37 @@
+{
+  "id": "050",
+  "nomeVisual": "Boca da Cisterna",
+  "slug": "boca-da-cisterna",
+  "categoriaVisual": "monstro",
+  "cena": "Interior de cisterna visto de baixo, anfíbio colossal rompe a cobertura circular.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/050-v1.prompt.txt",
+  "arquivo": "imagens/050-boca-da-cisterna-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-41f381b7-34ea-4f82-82ce-f90f4cf4e62a.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "sha256": "700fe882212d210e56ffbdf8ea191d2bfdfc921e153dee36bae134e9adbf91a0",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 18.7,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

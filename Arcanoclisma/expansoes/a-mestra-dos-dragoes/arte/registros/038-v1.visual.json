@@ -1,0 +1,44 @@
+{
+  "id": "038",
+  "slug": "ciantia-confianca-em-risco",
+  "nomeVisual": "O passo que ela escolhe",
+  "cena": "Ciantia jovem decide continuar praticando com um dragão, consciente do desacordo do pai.",
+  "momentoDoDia": "amanhecer",
+  "estado": "substituida_preservada",
+  "tipoDeCarta": null,
+  "raridade": null,
+  "liberadaParaJogo": false,
+  "arquivo": "imagens/038-ciantia-confianca-em-risco-v1.png",
+  "prompt": "prompts/038-v1.prompt.txt",
+  "versao": "v1",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-50e02e9e-5ef9-46a4-aa0e-fb7d52f17aee.png",
+  "ferramenta": "image_gen integrada",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "1bd4a8e97d7430ddf0f35fee508774084860aab27bd8db1e6e6782c1a3a40cc8",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "fundo": "cenário completo opaco",
+  "saturacao": "reduzida conforme pedido do autor",
+  "futuroDeValiant": "obscuro, sem desfecho revelado",
+  "aparenciasNovas": "propostas visuais aguardando aprovação",
+  "revisaoVisual": "inspecionada pelo Codex; aprovação do autor pendente",
+  "ambiente": "Ciantia jovem decide continuar praticando com um dragão, consciente do desacordo do pai.",
+  "clima": "conforme imagem",
+  "escala": "personagens e objetos integrados ao ambiente",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "liberdadesVisuais": [
+    "composição e detalhes estéticos; sem novas regras"
+  ],
+  "pushAutorizado": false,
+  "motivo": "Dragão corrigido para coral físico, evitando repetição dourada",
+  "substituidaPor": "imagens/038-ciantia-confianca-em-risco-v2.png"
+}

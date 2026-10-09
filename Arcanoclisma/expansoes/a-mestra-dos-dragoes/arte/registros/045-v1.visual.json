@@ -1,0 +1,44 @@
+{
+  "id": "045",
+  "slug": "dragao-cognitium-prisma",
+  "nomeVisual": "Dragão de Chifres Prismáticos",
+  "cena": "Novo dragão de Cognitium, índigo acinzentado, sozinho numa gruta cristalina.",
+  "momentoDoDia": "interior",
+  "estado": "substituida_preservada",
+  "tipoDeCarta": null,
+  "raridade": null,
+  "liberadaParaJogo": false,
+  "arquivo": "imagens/045-dragao-cognitium-prisma-v1.png",
+  "prompt": "prompts/045-v1.prompt.txt",
+  "versao": "v1",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-55d3f6a6-a33a-471f-91a3-22ce29fc5f0c.png",
+  "ferramenta": "image_gen integrada",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "sha256": "7ffb7865a7c8ee64c456095f1a94c6f3feee84fe3939c6d261929e01fbd90eb8",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "fundo": "cenário completo opaco",
+  "saturacao": "reduzida conforme pedido do autor",
+  "futuroDeValiant": "obscuro, sem desfecho revelado",
+  "aparenciasNovas": "propostas visuais aguardando aprovação",
+  "revisaoVisual": "inspecionada pelo Codex; aprovação do autor pendente",
+  "ambiente": "Novo dragão de Cognitium, índigo acinzentado, sozinho numa gruta cristalina.",
+  "clima": "conforme imagem",
+  "escala": "personagens e objetos integrados ao ambiente",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "liberdadesVisuais": [
+    "composição e detalhes estéticos; sem novas regras"
+  ],
+  "pushAutorizado": false,
+  "motivo": "Revisão da repetição de poses e cenários, conforme pedido do autor",
+  "substituidaPor": "imagens/045-dragao-cognitium-prisma-v2.png"
+}

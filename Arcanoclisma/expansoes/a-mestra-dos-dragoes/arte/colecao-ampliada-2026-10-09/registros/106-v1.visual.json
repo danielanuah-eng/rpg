@@ -1,0 +1,40 @@
+{
+  "id": "106",
+  "nomeVisual": "Iven, Professor de Vínculos",
+  "slug": "iven-professor-de-vinculos",
+  "categoriaVisual": "personagem",
+  "cena": "Homem humano idoso pele clara rosada, cabelo grisalho encaracolado, barba curta, corpo gordo, veste índigo e echarpe coral apagado. Sentado no chão de sala de aula com crianças de aparências variadas, mostra uma pequena lembrança mental de asa dracônica entre as mãos, fios coral leves unem atenção dos alunos. Vista na altura das crianças, fundo com janela e cerâmica, manhã nublada. Ensino caloroso sem telepatia agressiva.",
+  "valores": [
+    "persona",
+    "cognitium"
+  ],
+  "postura": "aliada",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/106-v1.prompt.txt",
+  "arquivo": "imagens/106-iven-professor-de-vinculos-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-a266519d-d60e-434b-befd-0180b351a994.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "24b9f862177574ffa74dc1af776141d1abeb115d852839bd21ebdd7c58b68238",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 28.2,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

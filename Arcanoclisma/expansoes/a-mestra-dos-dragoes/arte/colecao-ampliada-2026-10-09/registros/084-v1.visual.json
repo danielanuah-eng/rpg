@@ -1,0 +1,37 @@
+{
+  "id": "084",
+  "nomeVisual": "Pacto das Cascas Vazias",
+  "slug": "pacto-das-cascas-vazias",
+  "categoriaVisual": "mistica",
+  "cena": "Mística como fenômeno persistente ao redor de ovos e pessoas.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/084-v1.prompt.txt",
+  "arquivo": "imagens/084-pacto-das-cascas-vazias-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-1d6fe0cd-b572-4cbd-b548-10b682ca284b.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "sha256": "11433a4bff0690aa28f375883bd98319bc568baef66980ecf53eccf1e9f65d5e",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 24,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

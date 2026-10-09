@@ -1,0 +1,40 @@
+{
+  "id": "107",
+  "nomeVisual": "Naíma, Criadora dos Filhotes",
+  "slug": "naima-criadora-dos-filhotes",
+  "categoriaVisual": "personagem",
+  "cena": "Mulher humana jovem negra com cabelo crespo curto arredondado, corpo forte, vestes verde musgo e lenço coral. Agachada DENTRO de abrigo de ninho amplo, liga com fio emocional coral suave sua mão à cabeça de dois filhotes distintos, um robusto alado e outro comprido aquático. Câmera muito próxima ao chão por trás de ovo aberto, luz da tarde chega lateralmente por lona. Afeição e natureza, anatomia consistente.",
+  "valores": [
+    "persona",
+    "primitivum"
+  ],
+  "postura": "aliada",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/107-v1.prompt.txt",
+  "arquivo": "imagens/107-naima-criadora-dos-filhotes-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-2f2b9666-13df-4544-9700-b3a8e3b86f74.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "7f918f234562affd0f9db32e3c51ea82d888ef5f82aef1ac40a50255ffc64d11",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 23.6,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

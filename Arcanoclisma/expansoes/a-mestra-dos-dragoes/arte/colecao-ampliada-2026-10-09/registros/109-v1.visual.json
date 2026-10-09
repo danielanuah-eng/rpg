@@ -1,0 +1,40 @@
+{
+  "id": "109",
+  "nomeVisual": "Tália, Leitura do Eclipse",
+  "slug": "talia-leitura-do-eclipse",
+  "categoriaVisual": "personagem",
+  "cena": "Mulher humana madura pele parda, cabelo negro em tranças muito curtas, rosto largo, vestes índigo e preto bronze. No observatório mede sombra de uma asa distante sobre papel sem texto, pequena esfera mental índigo e lâmpada opaca. Vista no topo da escada olhando diagonalmente para baixo, ela inclinada sobre mesa redonda, noite encoberta. Conhecimento de luz e sombra, nada de constelações legíveis ou futuro de Valiant.",
+  "valores": [
+    "alvorum",
+    "cognitium"
+  ],
+  "postura": "ambivalente",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/109-v1.prompt.txt",
+  "arquivo": "imagens/109-talia-leitura-do-eclipse-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-887982af-e5f6-4b0c-b343-89e6943bc56e.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "sha256": "7033f70ba79983beb81978c8203898e17cd91772d0980b188017f2464af0de3e",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 30.3,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "051",
+  "nomeVisual": "Rastejante de Vidro Fosco",
+  "slug": "rastejante-de-vidro-fosco",
+  "categoriaVisual": "monstro",
+  "cena": "Vista rente ao chão de mercado abandonado numa tarde de chuva.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/051-v1.prompt.txt",
+  "arquivo": "imagens/051-rastejante-de-vidro-fosco-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-4dd0e2b4-5452-4d56-87fb-501d6d685b71.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "sha256": "56ec32fd7af47169a38ed0c181642ab1dbabd51b8a4774824549e37d83961972",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 35.2,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

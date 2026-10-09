@@ -1,0 +1,40 @@
+{
+  "id": "097",
+  "nomeVisual": "Nália, Alquimista do Luto",
+  "slug": "nalia-alquimista-do-luto",
+  "categoriaVisual": "personagem",
+  "cena": "Mulher humana idosa negra de cabelo cinza crespo e lenço verde suave, corpo baixo gordo, veste avental prata. Em enfermaria com vasos de vidro, prepara vapor prateado em que se desenha uma asa espiritual verde pálida; segura bacia junto à janela, uma família cansada aguarda ao fundo. Vista lateral por entre cortinas, tarde chuvosa. Cuidado em vez de morte; nenhum cadáver nem crânio.",
+  "valores": [
+    "sublimeyn",
+    "morbidyum"
+  ],
+  "postura": "aliada",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/097-v1.prompt.txt",
+  "arquivo": "imagens/097-nalia-alquimista-do-luto-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-15dd2ef9-51b4-406d-a430-97a92cb58063.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "sha256": "09c7d866f15f6ad75bdbc4257c168aa3137922f6e096e9a8491922da02c1b11c",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 18.3,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

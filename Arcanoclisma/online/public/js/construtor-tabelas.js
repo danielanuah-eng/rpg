@@ -25,7 +25,43 @@ export const CONDICOES = [
   ['banimento', 'Quando é banida'],
   ['danoConjurador', 'Quando causa dano de combate ao Conjurador inimigo'],
   ['cataclismaOponente', 'No Cataclisma do turno do oponente (fim do turno dele)'],
+  ...EVENTOS_JOGADOR(),
+  ['emCampo', 'Enquanto estiver em campo (passivo ou recorrente)'],
 ];
+/**
+ * Eventos de jogador (05/10, decisão 40): disparam as cartas em campo, os itens e o Conjurador. "De quem" escolhe se é
+ * você, o oponente ou qualquer jogador.
+ */
+function EVENTOS_JOGADOR() {
+  return [
+    ['compra', 'Quando um jogador compra cartas'],
+    ['conjuradorDano', 'Quando um Conjurador toma dano'],
+    ['ganhaVida', 'Quando um Conjurador ganha Vida (cura)'],
+    ['perdeVida', 'Quando um Conjurador perde Vida (dano, pagar Vida...)'],
+    ['jogaAliado', 'Quando um jogador joga um Aliado'],
+    ['jogaMistica', 'Quando um jogador joga uma Mística'],
+    ['jogaPermanente', 'Quando um jogador joga uma permanente (Aliado, Mística ou Estrutura)'],
+    ['ativaHabilidade', 'Quando um jogador ativa uma habilidade'],
+    ['pilha', 'Quando uma carta vai para a pilha (carta jogada)'],
+  ];
+}
+export const QUANDO_EVENTO = EVENTOS_JOGADOR().map(([k]) => k);
+export const QUEM_EVENTO = [['voce', 'Você'], ['oponente', 'O oponente'], ['qualquer', 'Qualquer jogador']];
+export const ETAPAS = [['inicio', 'Início'], ['principal', 'Fase principal'], ['cataclisma', 'Cataclisma'], ['final', 'Final']];
+export const TURNOS = [['seu', 'Do seu turno'], ['oponente', 'Do turno do oponente'], ['cada', 'De cada turno']];
+export const LADO_AURA = [['proprio', 'Seus'], ['inimigo', 'Do oponente'], ['ambos', 'Dos dois']];
+export const TIPOS_AURA = [['aliado', 'Aliado'], ['mistica', 'Mística'], ['estrutura', 'Estrutura'], ['conjurador', 'Conjurador']];
+export const DE_QUEM_CUSTO = [['oponente', 'Do oponente'], ['voce', 'Suas'], ['ambos', 'Dos dois']];
+export const TIPOS_CUSTO = TIPOS_JOGAVEIS;
+/** Campos de um custo (Arcano, Vida, descarte, Grau ao cemitério, sacrifício). */
+export const CAMPOS_CUSTO = [['arcano', 'Arcano'], ['vida', 'Vida'], ['descartar', 'Descartar cartas'], ['grauAoCemiterio', 'Cartas do Grau ao cemitério'], ['sacrificar', 'Sacrificar Aliados']];
+export const QUEM_PAGA = [['voce', 'Você (paga para acontecer)'], ['oponente', 'O oponente (paga para impedir)']];
+export const QUANDO_PAGA = [['resolver', 'Ao resolver'], ['jogar', 'Ao jogar a carta']];
+/** Sem o efeito (você não pagou / o oponente pagou): custo de efeito e de gatilho. */
+export const SENAO_EFEITO = [['linha', 'Só esta linha não acontece'], ['carta', 'A carta inteira é anulada'], ['alternativo', 'Acontecem outros efeitos no lugar']];
+/** Manutenção não paga (ou paga pelo oponente). */
+export const SENAO_MANUT = [['sai', 'A carta sai do campo'], ['pula', 'O efeito não acontece neste turno'], ['alternativo', 'Acontecem outros efeitos']];
+export const DESTINO_MANUT = [['cemiterio', 'Cemitério'], ['banimento', 'Banimento'], ['mao', 'Mão do dono'], ['fundo', 'Fundo do baralho']];
 /** Condições do poder de um Conjurador (Editor de Conjuradores, 04/10). */
 export const CONDICOES_CONJURADOR = [
   ['ativada', 'Suspender / pagar (habilidade ativada)'],
@@ -37,6 +73,8 @@ export const CONDICOES_CONJURADOR = [
   ['alvo', 'Quando o Conjurador vira alvo'],
   ['danoConjurador', 'Quando o Conjurador causa dano de combate ao Conjurador inimigo'],
   ['cataclismaOponente', 'No Cataclisma do turno do oponente (fim do turno dele)'],
+  ...EVENTOS_JOGADOR(),
+  ['emCampo', 'Sempre (passivo ou recorrente)'],
 ];
 
 /** Campo do formulário de um efeito: [chave, rótulo, tipo, opções/padrão]. */

@@ -1,0 +1,10 @@
+{
+  "id": "028",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "liberadaParaJogo": false,
+  "arquivo": "imagens/028-ciantia-e-valiant-v1.png",
+  "estado": "substituida_preservada",
+  "motivo": "Aparência de Valiant corrigida conforme definição do autor",
+  "substituidaPor": "imagens/028-ciantia-e-valiant-v2.png"
+}

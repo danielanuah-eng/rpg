@@ -1,0 +1,40 @@
+# Adicionar a variável e as funções novas; substituir _pass e _advance_turn.
+var _neutral_ai: WeakRef
+
+func register_neutral_ai(ai: Node) -> void:
+	_neutral_ai = weakref(ai)
+	if not ai.phase_finished.is_connected(_on_neutral_finished):
+		ai.phase_finished.connect(_on_neutral_finished)
+
+func _pass() -> void:
+	if not _authority() or str(_state["t"]) == "IA_NEUTRA":
+		return
+	if _moving:
+		_pass_pending = true
+		return
+	_advance_turn()
+
+func _advance_turn() -> void:
+	if not _authority() or str(_state["t"]) == "IA_NEUTRA":
+		return
+	_pass_pending = false
+	var next: int = (ORDER.find(str(_state["t"])) + 1) % ORDER.size()
+	_state = {"t": ORDER[next], "pm": MAX_PM}
+	_restore_active_pa()
+	_publish()
+	if str(_state["t"]) == "IA_NEUTRA":
+		var ai: Node = _neutral_ai.get_ref() if _neutral_ai != null else null
+		if ai == null:
+			push_error("IA_NEUTRA: AIManager não registrado")
+			return
+		ai.start_neutral_turn.call_deferred(revision)
+
+func _on_neutral_finished(version: int) -> void:
+	if not _authority() or version != revision or str(_state["t"]) != "IA_NEUTRA":
+		return
+	_moving = false
+	_remaining_steps = 0
+	_pass_pending = false
+	_state = {"t": "P1", "pm": MAX_PM}
+	_restore_active_pa()
+	_publish()

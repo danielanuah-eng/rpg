@@ -8,7 +8,7 @@
 //   fonte.versao       número que cresce a cada mudança
 //   opcionais: fonte.chat(texto), fonte.desistir(), fonte.tutorial (dicas, destaques e travas), fonte.prazo(), fonte.conectados()
 import { defCarta, custoEfetivo, custoProtecao, origemDaCarta, grauEfetivo, recemChegado, ataqueConjurador, distribuicaoPadrao, ehRepentina, custoAtaqueConjurador, grauAtaqueConjurador, efeitosAoJogar, efeitosAoEntrar, ataqueAtualDe, vidaAtualDe, etereo as etereoDe, alvosCampo as alvosCampoMotor, efeitoSemConjurador, ativacaoDeHabilidade, protegidaDe, temPalavra, protegidoDe, custoReanimar, arcanoNaHora } from '/jogo/motor.js';
-import { textoHabilidade } from '/jogo/textos.js';
+import { textoHabilidade, textoCustoPagar, juntarEfeitos } from '/jogo/textos.js';
 import { $, $$, esc, DADOS, VALOR, TIPO, textoCarta, janela, local, avisar, conj as conjDefDe } from './base.js';
 import { desenharCarta, modeloCarta, modeloConjurador } from './carta.js';
 import { criarMovimentosMesa } from './mesa-movimentos-codex.js';
@@ -617,7 +617,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     const p = e.pendencia;
     if (ui.modo?.tipo === 'alvo') partes.push(`<div class="pendencia modo-alvo"><b>${esc(ui.modo.titulo)}</b><span>${esc(ui.modo.instrucao)}: clique numa carta brilhando na mesa.</span><div class="linha-botoes"><button class="botao peq" data-lista-alvos>Ver lista de alvos</button><button class="botao peq" data-cancelar-alvo>Cancelar</button></div></div>`);
     if (p && p.jogador === EU) partes.push(pendenciaHTML(p));
-    else if (p) partes.push(`<div class="pendencia espera">${esc(nome(OP))} está decidindo${{ bloqueio: ' o bloqueio', descartar: ' o descarte', pagarAnulacao: ' se paga para anular', escolherDoTopo: ' as cartas do topo', escolherCartas: ' uma escolha de cartas', distribuirDano: ' como distribuir o dano', escolherInicio: ' quem começa' }[p.tipo] ?? ''}…</div>`);
+    else if (p) partes.push(`<div class="pendencia espera">${esc(nome(OP))} está decidindo${{ bloqueio: ' o bloqueio', descartar: ' o descarte', pagarAnulacao: ' se paga para anular', pagarCusto: p.impede ? ' se paga para impedir um efeito' : ' se paga um custo', escolherDoTopo: ' as cartas do topo', escolherCartas: ' uma escolha de cartas', distribuirDano: ' como distribuir o dano', escolherInicio: ' quem começa' }[p.tipo] ?? ''}…</div>`);
     if (e.combate && !e.pilha.some((x) => x.tipo === 'ataque')) {
       const c = e.combate;
       partes.push(`<div class="combate-faixa">⚔ <b>${esc(nomeInst(c.atacante))}</b> ataca <b>${esc(nomeInst(c.alvo))}</b>${c.bloqueadores?.length ? ` · bloqueado por <b>${c.bloqueadores.map((b) => esc(nomeInst(b))).join(' e ')}</b>` : c.etapa === 'bloqueado' ? (ehConj(c.alvo) ? ' · sem bloqueio' : ' · não pode ser bloqueado') : ''}</div>`);
@@ -665,12 +665,49 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     }
     if (p.tipo === 'descartar') return `<div class="pendencia urgente"><b>Limite de mão:</b> descarte ${p.quantidade} carta(s). Clique nelas na sua mão.<div class="linha-botoes"><button class="botao primario" data-pend="descartar" ${ui.selecionadas.size === p.quantidade ? '' : 'disabled'}>Descartar (${ui.selecionadas.size}/${p.quantidade})</button></div></div>`;
     if (p.tipo === 'pagarAnulacao') return `<div class="pendencia urgente"><div class="pilha-item">${cartaMesa(p.item.instId, { largura: 86 })}<div class="pilha-info"><b>${esc(def(p.item.instId).nome)}</b> pode ser anulada se você pagar <b>${p.custo}</b> de Arcano.<div class="pilha-efeito">${esc(def(p.item.instId).texto)}</div></div></div><div class="linha-botoes"><button class="botao primario" data-pend="pagarAnul">Pagar ${p.custo} e anular</button><button class="botao" data-pend="naoPagar">Deixar resolver</button></div></div>`;
+    if (p.tipo === 'pagarCusto') return pagarCustoHTML(p);
     if (p.tipo === 'escolherCartas') {
       const q = p.quantidade;
       return `<div class="pendencia urgente"><b>${esc(p.titulo)}</b>${q ? ` (${ui.selecionadas.size}/${q})` : ''}<div class="vitrine topo-cartas">${p.cartas.map((id) => `<div class="item-vitrine ${ui.selecionadas.has(id) ? 'marcada' : ''}" data-escolha="${id}">${inst(id)?.defId && inst(id).defId !== 'oculta' ? desenharCarta(modeloCarta(inst(id).defId), { width: 92 }).outerHTML : ''}<button class="lupa" data-ampliar="${id}" title="Ampliar a carta" aria-label="Ampliar a carta">🔍</button></div>`).join('')}</div><div class="linha-botoes"><button class="botao primario" data-pend="escolha" ${ui.selecionadas.size === q ? '' : 'disabled'}>${q ? 'Confirmar' : 'Ok'}</button></div></div>`;
     }
     if (p.tipo === 'escolherDoTopo') return `<div class="pendencia urgente"><b>Olhar o topo:</b> escolha ${p.pegar} carta(s) para a mão; as outras vão para o fundo do baralho.<div class="vitrine topo-cartas">${p.cartas.map((id) => `<div class="item-vitrine ${ui.selecionadas.has(id) ? 'marcada' : ''}" data-topo="${id}">${desenharCarta(modeloCarta(inst(id).defId), { width: 92 }).outerHTML}<button class="lupa" data-ampliar="${id}" title="Ampliar a carta" aria-label="Ampliar a carta">🔍</button></div>`).join('')}</div><div class="linha-botoes"><button class="botao primario" data-pend="topo" ${ui.selecionadas.size === p.pegar ? '' : 'disabled'}>Confirmar</button></div></div>`;
     return '';
+  }
+
+  /**
+   * Custo condicional (05/10, decisão 40): a carta que cobra, o custo e o que acontece pagando ou não. Arcano: reserva,
+   * Grau levantado e cartas da mão enviadas ao Arcano; descarte, Grau ao cemitério e sacrifício são escolhidos em seguida.
+   */
+  const SAI_PARA = { cemiterio: 'o cemitério', banimento: 'o banimento', mao: 'a mão do dono', fundo: 'o fundo do baralho do dono' };
+  function resumoCusto(p) {
+    const ef = p.efeito ?? {};
+    const c = ef.custo ?? {};
+    const nomeF = p.fonte && inst(p.fonte) && inst(p.fonte).defId !== 'oculta' ? nomeInst(p.fonte) : 'a carta';
+    // manutenção: a linha interna "pagar" sozinha (sem bloco de efeitos depois dela)
+    const manut = ef.tipo === 'pagar' && !ef.bloco && !(p.depois?.efeitos?.length);
+    const efs = ef.tipo === 'pagar' ? (p.depois?.efeitos ?? []).slice(0, ef.bloco ?? Infinity).filter((x) => x.tipo !== 'proximoCusto') : [{ ...ef, custo: undefined, _custo: undefined }];
+    const senao = c.senao ?? (manut ? 'sai' : 'linha');
+    const acao = manut ? (senao === 'sai' ? `${nomeF} continua em campo` : 'tudo segue normalmente') : efs.length ? juntarEfeitos(efs) : 'o efeito acontece';
+    const sem = senao === 'carta' ? `${nomeF} é anulada (os outros efeitos dela também não acontecem)`
+      : senao === 'alternativo' ? `no lugar, ${c.alternativos?.length ? juntarEfeitos(c.alternativos) : 'nada acontece'}`
+      : senao === 'sai' ? `${nomeF} vai para ${SAI_PARA[c.destino ?? 'cemiterio']}`
+      : senao === 'pula' ? `o efeito de ${nomeF} não acontece neste turno`
+      : ef.tipo === 'pagar' ? `o efeito não acontece (${acao})` : `esta linha não acontece (${acao})`;
+    return p.impede ? { pagar: sem, naoPagar: acao, manut } : { pagar: acao, naoPagar: sem, manut };
+  }
+  function pagarCustoHTML(p) {
+    const r = resumoCusto(p);
+    const cus = p.custo ?? {};
+    const depois = [cus.descartar ? `descartar ${cus.descartar} carta(s)` : '', cus.grauAoCemiterio ? `mandar ${cus.grauAoCemiterio} carta(s) do Grau ao cemitério` : '', cus.sacrificar ? `sacrificar ${cus.sacrificar} Aliado(s)` : ''].filter(Boolean);
+    const visivel = p.fonte && inst(p.fonte) && inst(p.fonte).defId !== 'oculta';
+    const quem = p.dono === EU ? 'Sua carta' : `Carta de ${esc(nome(p.dono))}`;
+    return `<div class="pendencia urgente pend-custo"><div class="pilha-item">${visivel ? cartaMesa(p.fonte, { largura: 86 }) : '<div class="pilha-sem-carta">✦</div>'}<div class="pilha-info"><div class="pilha-rot">${quem}</div><b>${visivel ? esc(nomeInst(p.fonte)) : 'Custo'}</b>
+      <div class="pilha-efeito">${p.impede ? 'Você pode' : r.manut ? 'Manutenção: você pode' : 'Para o efeito acontecer, você pode'} <b>${esc(textoCustoPagar(cus))}</b>${p.impede ? ' para impedir o efeito' : ''}.</div>
+      <div class="pilha-efeito"><b>Se pagar:</b> ${esc(r.pagar)}.</div>
+      <div class="pilha-efeito"><b>Se não pagar:</b> ${esc(r.naoPagar)}.</div>
+      ${p.dono !== EU ? `<p class="peq">O texto do efeito é do ponto de vista de ${esc(nome(p.dono))}: “o oponente” é você.</p>` : ''}
+      ${depois.length ? `<p class="peq">Pagando, você escolhe em seguida: ${esc(depois.join(', '))}.</p>` : ''}${cus.arcano ? '<p class="peq">O Arcano sai da reserva e do Grau levantado; se faltar, envie cartas da mão ao Arcano.</p>' : ''}${cus.vida ? `<p class="peq">Seu Conjurador perde ${cus.vida} de Vida.</p>` : ''}</div></div>
+      <div class="linha-botoes"><button class="botao primario" data-pend="pagarCusto">${p.impede ? 'Pagar e impedir' : 'Pagar'}</button><button class="botao" data-pend="naoPagarCusto">${p.impede ? 'Deixar acontecer' : 'Não pagar'}</button></div></div>`;
   }
 
   // ---------- mãos (fora da mesa) ----------
@@ -1100,6 +1137,17 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
           }
         }
         return enviar({ tipo: 'escolherCartas', cartas: sel });
+      }
+      if (k === 'naoPagarCusto') return enviar({ tipo: 'pagarCusto', pagar: false });
+      if (k === 'pagarCusto') {
+        // custo condicional (05/10): o Arcano que faltar sai de cartas da mão; descarte, Grau e sacrifício vêm depois
+        const p = e.pendencia;
+        const arc = p.custo?.arcano ?? 0;
+        if (!arc) return enviar({ tipo: 'pagarCusto', pagar: true });
+        const pg = await pagar(`Pagar ${arc} de Arcano (${textoCustoPagar(p.custo)})`, arc, undefined, undefined, { soPitch: true, rotulo: p.impede ? 'Pagar e impedir' : 'Pagar' });
+        if (!pg) return;
+        if ((p.custo.descartar ?? 0) + pg.pitch.length > z(EU).mao.length) { avisar(`Faltariam cartas na mão para descartar ${p.custo.descartar}: envie menos cartas ao Arcano.`, 'erro', 5000); return; }
+        return enviar({ tipo: 'pagarCusto', pagar: true, enviarArcano: pg.pitch });
       }
       if (k === 'naoPagar') return enviar({ tipo: 'pagarAnulacao', pagar: false });
       if (k === 'pagarAnul') {

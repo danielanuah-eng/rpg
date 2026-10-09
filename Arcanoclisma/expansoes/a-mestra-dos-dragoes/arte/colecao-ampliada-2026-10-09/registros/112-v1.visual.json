@@ -1,0 +1,40 @@
+{
+  "id": "112",
+  "nomeVisual": "Mauro, Cuidador do Ciclo",
+  "slug": "mauro-cuidador-do-ciclo",
+  "categoriaVisual": "personagem",
+  "cena": "Homem humano de meia idade pele clara sardenta, ruivo barbudo, baixo e robusto, vestes musgo e verde pálido. Numa estufa comunitária deixa fragmento de casca dracônica antiga virar nutriente: espírito verde discreto sobe enquanto raízes novas abraçam casca no solo. Visto de cima entre duas fileiras de mudas, joelhos sujos, manhã nublada. Natureza e memória de vida, nenhum gore ou cadáver.",
+  "valores": [
+    "morbidyum",
+    "primitivum"
+  ],
+  "postura": "aliada",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/112-v1.prompt.txt",
+  "arquivo": "imagens/112-mauro-cuidador-do-ciclo-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-6b06ee44-83d4-4158-8a1c-63252ddd1e02.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "f8464fdb7247e5c2852c27cc26439dcf37b4cd909624b4a837f819fe67ef11a3",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 24.6,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

@@ -78,7 +78,8 @@ function habilidadeParaGatilho(h                      )                         
 }
 /** Uma habilidade da lista que volta para `ativacao` (ainda é ativada) ou para `gatilho` (ainda é gatilho de Aliado, uma vez por turno). */
 const voltaComoAtivacao = (h                      ) => h._de === 'ativacao' && h.quando === 'ativada';
-const voltaComoGatilho = (h                      ) => h._de === 'gatilho' && (QUANDO_GATILHO_CONJURADOR                     ).includes(h.quando) && !!h.umaVezPorTurno;
+const voltaComoGatilho = (h                      ) => h._de === 'gatilho' && (QUANDO_GATILHO_CONJURADOR                     ).includes(h.quando) && !!h.umaVezPorTurno
+  && !h.pagar && !h.vezesPorTurno && !h.quem; // campos novos (05/10) só existem em habilidades
 /** Tira as marcas do construtor (habilidade que vai para `habilidades`). */
 function limpa(h                      )             {
   const { _de, _extra, _ordem, ...r } = h;

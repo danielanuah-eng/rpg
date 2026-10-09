@@ -1,0 +1,40 @@
+{
+  "id": "100",
+  "nomeVisual": "Vesna, Tecelã do Mangue",
+  "slug": "vesna-tecela-do-mangue",
+  "categoriaVisual": "personagem",
+  "cena": "Mulher humana muito alta pele castanha, cabelo castanho ondulado preso, capas sálvia com faixa prata. Dentro de um mangue, transforma sedimento em pequenas plataformas sólidas enquanto uma criatura jovem dracônica atravessa; mão levanta vapor prateado, outra segura galho. Vista AO NÍVEL DA ÁGUA sob raízes, corpo lateral completo no segundo plano, tarde úmida. Conexão matéria e natureza, sem ponte monumental.",
+  "valores": [
+    "sublimeyn",
+    "primitivum"
+  ],
+  "postura": "aliada",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/100-v1.prompt.txt",
+  "arquivo": "imagens/100-vesna-tecela-do-mangue-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-57d72284-e1ad-4820-a66d-0aa2b87a9fd5.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "ced1952ded87852554649ce0caec80b67551d11279436bec0ecf41ce0003ba53",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 19.5,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

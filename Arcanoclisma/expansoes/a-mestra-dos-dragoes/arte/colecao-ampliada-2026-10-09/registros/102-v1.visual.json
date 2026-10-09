@@ -1,0 +1,40 @@
+{
+  "id": "102",
+  "nomeVisual": "Rudek, Guardião do Pórtico",
+  "slug": "rudek-guardiao-do-portico",
+  "categoriaVisual": "personagem",
+  "cena": "Homem humano maduro negro, ombros largos, barba grisalha curta, traje preto carvão e faixas de bronze, luvas roxo vinho. Fecha com EL0S MÁGICOS um pórtico destinado a impedir passagem de dragões, alternando sombra e luz bronze sob arco de pedra. Vista lateral do outro lado da grade, nenhuma criatura presa ou ferida. Crepúsculo nublado, gesto físico coerente e chaves simples na cintura.",
+  "valores": [
+    "dominum",
+    "alvorum"
+  ],
+  "postura": "contra_dragoes",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/102-v1.prompt.txt",
+  "arquivo": "imagens/102-rudek-guardiao-do-portico-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-e90bd583-70e6-404b-8cb7-68a73842bf32.png",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "sha256": "445f74c86c426978a85537416a870f29e688b045755bc3ac4369e4609ce61164",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 25.6,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

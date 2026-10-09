@@ -1,0 +1,43 @@
+{
+  "id": "043",
+  "slug": "dragao-alvorum-carvao",
+  "nomeVisual": "Dragão de Carvão e Ouro",
+  "cena": "Dragão de Alvorum dorme enroscado no piso de uma forja antiga, visto de cima.",
+  "momentoDoDia": "amanhecer",
+  "estado": "realocada_para_estudo_049",
+  "tipoDeCarta": null,
+  "raridade": null,
+  "liberadaParaJogo": false,
+  "arquivo": "imagens/043-dragao-alvorum-carvao-v2.png",
+  "versao": "v2",
+  "prompt": "prompts/043-v2.prompt.txt",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-7ec6c8fc-61eb-4831-ba7b-92742781718a.png",
+  "ferramenta": "image_gen integrada",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "6403d50f2cc03b5343315c791ecd70d60c6b2af167c92f4dbd31c4324b794cd6",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "fundo": "cenário completo opaco",
+  "saturacao": "reduzida conforme pedido do autor",
+  "futuroDeValiant": "obscuro, sem desfecho revelado",
+  "aparenciasNovas": "propostas visuais aguardando aprovação",
+  "revisaoVisual": "inspecionada pelo Codex; aprovação do autor pendente",
+  "ambiente": "Dragão de Alvorum dorme enroscado no piso de uma forja antiga, visto de cima.",
+  "clima": "conforme imagem",
+  "escala": "personagens e objetos integrados ao ambiente",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "liberdadesVisuais": [
+    "Revisão de câmera, pose e cenário após pedido do autor para evitar repetição; identidade da criatura e cor do Valor preservadas"
+  ],
+  "pushAutorizado": true,
+  "cartaDestinoProvisoria": "Estudo 049 — Repouso na Forja"
+}

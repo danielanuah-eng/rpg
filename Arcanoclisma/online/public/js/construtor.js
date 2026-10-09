@@ -57,7 +57,7 @@ export async function telaBaralhos(tela, partes, ctx) {
       const [tipo, id] = b.dataset.jogar.split(':');
       const fonteB = tipo === 'pronto' ? { conjurador: id, lista: prontoDe(id).lista, itens: prontoDe(id).itens } : meus.find((x) => x.id === id);
       const op = DADOS.baralhos[Math.floor(Math.random() * DADOS.baralhos.length)];
-      return ctx.abrirPartidaBot({ eu: { conjurador: fonteB.conjurador, cartas: fonteB.lista.flatMap(([c, n]) => Array(n).fill(c)), itens: fonteB.itens }, bot: { conjurador: op.conjurador, cartas: op.lista.flatMap(([c, n]) => Array(n).fill(c)), itens: op.itens }, estiloBot: op.estilo, nomeBot: `Bot · ${nomeCurto(conj(op.conjurador))}` });
+      return ctx.abrirPartidaBot({ eu: { conjurador: fonteB.conjurador, cartas: fonteB.lista.flatMap(([c, n]) => Array(n).fill(c)), itens: fonteB.itens }, bot: { conjurador: op.conjurador, cartas: op.lista.flatMap(([c, n]) => Array(n).fill(c)), itens: op.itens }, estiloBot: op.estilo, nomeBot: `Bot · ${nomeCurto(conj(op.conjurador))}`, itensBotAleatorio: true });
     }
     if (b.dataset.enfrentar) {
       const p = publicos.find((x) => x.id === b.dataset.enfrentar);

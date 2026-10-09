@@ -1,0 +1,40 @@
+{
+  "id": "113",
+  "nomeVisual": "Adira, Escutadora de Ninhos",
+  "slug": "adira-escutadora-de-ninhos",
+  "categoriaVisual": "personagem",
+  "cena": "Mulher humana jovem pele oliva, cabelo castanho longo amarrado, olhos atentos, uniforme de campo musgo com echarpe índigo. Deitada de bruços em uma plataforma de madeira observa ovos num ninho abaixo, pequenos diagramas mentais índigo como linhas sem letras pairam junto aos olhos. Visão lateral através de galhos, um dragão adulto ao fundo aceita sua observação. Tarde fria, comportamento natural e conhecimento, pose rara e amistosa.",
+  "valores": [
+    "cognitium",
+    "primitivum"
+  ],
+  "postura": "aliada",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/113-v1.prompt.txt",
+  "arquivo": "imagens/113-adira-escutadora-de-ninhos-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-f16d16fc-1b1e-48d0-81ca-b2e16b0bfda8.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "e1e157494f75e169e4b57d5648a7eb19937f2c1f90d7a5d5a7128000c7addcba",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 26.7,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

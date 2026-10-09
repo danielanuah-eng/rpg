@@ -1,0 +1,37 @@
+{
+  "id": "060",
+  "nomeVisual": "Ninho Andarilho",
+  "slug": "ninho-andarilho",
+  "categoriaVisual": "monstro",
+  "cena": "Visão ao nível de crianças refugiadas sob criatura alta.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/060-v1.prompt.txt",
+  "arquivo": "imagens/060-ninho-andarilho-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-e42b49d3-2e1b-4cfc-99ea-5245be9cb0e1.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "sha256": "9b3db1693c4e16f9cb602ac3a5774741147e31eaf83085b9afbde3447c17067b",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 31.8,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

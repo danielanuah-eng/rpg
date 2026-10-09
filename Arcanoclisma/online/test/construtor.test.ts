@@ -96,3 +96,15 @@ test('04/10 (noite): efeitos secundários num grupo próprio; formato antigo abr
   assert.ok(CONDICOES.some(([k]: [string]) => k === 'cataclismaOponente'));
   assert.ok(CONDICOES_CONJURADOR.some(([k]: [string]) => k === 'cataclismaOponente'));
 });
+
+test('construtor ampliado (05/10, decisão 40): eventos de jogador e "enquanto estiver em campo" nas duas tabelas de condições', async () => {
+  // @ts-ignore: módulo JS do site
+  const t = await import('../public/js/construtor-tabelas.js');
+  for (const lista of [CONDICOES, CONDICOES_CONJURADOR]) {
+    const ks = lista.map(([k]: [string]) => k);
+    for (const q of [...t.QUANDO_EVENTO, 'emCampo']) assert.ok(ks.includes(q), q);
+  }
+  assert.deepEqual(t.QUEM_EVENTO.map(([k]: [string]) => k), ['voce', 'oponente', 'qualquer']);
+  assert.deepEqual(t.SENAO_EFEITO.map(([k]: [string]) => k), ['linha', 'carta', 'alternativo']);
+  assert.deepEqual(t.SENAO_MANUT.map(([k]: [string]) => k), ['sai', 'pula', 'alternativo']);
+});

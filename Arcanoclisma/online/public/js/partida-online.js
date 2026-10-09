@@ -1,5 +1,6 @@
 // Partida online: conversa com o Durable Object da sala por WebSocket. O servidor manda só a visão deste jogador.
 import { DADOS, EDICOES, carregarEdicoes } from './base.js';
+import { sincronizarEdicoesDaSala } from './sincronizar-edicoes.js';
 
 export function conectarPartida(id, { baralho, itens }, { aoEstado, aoErro, aoFechar }) {
   const ouvintes = new Set();
@@ -32,12 +33,17 @@ export function conectarPartida(id, { baralho, itens }, { aoEstado, aoErro, aoFe
     const proto = location.protocol === 'https:' ? 'wss' : 'ws';
     const q = new URLSearchParams({ baralho, ...(itens ? { itens: itens.join(',') } : {}) });
     ws = new WebSocket(`${proto}://${location.host}/api/partida/${id}/ws?${q}`);
-    ws.onopen = () => { tentativas = 0; };
+    // Abrir o socket não garante que as edições carregaram; manter o limite de reconexões.
     // Mensagens em fila: se a sala usa outra versão das edições do autor, ela é carregada antes de desenhar.
     let fila = Promise.resolve();
     ws.onmessage = (ev) => { fila = fila.then(() => tratar(JSON.parse(ev.data))); };
     const tratar = async (m) => {
-      if (m.t === 'estado' && m.edVersao !== undefined && (m.edVersao !== EDICOES.id || EDICOES.rascunho)) await carregarEdicoes(m.edVersao);
+      if (!await sincronizarEdicoesDaSala(m, EDICOES, carregarEdicoes)) {
+        aoErro?.('Não foi possível carregar as artes e edições desta sala. Reconectando.', false);
+        // Reconectar pede uma visão atual; não desenhar usando cosméticos de outra versão.
+        ws?.close();
+        return;
+      }
       if (m.t === 'erro') {
         if (pendente) { const p = pendente; pendente = null; p(m.msg); }
         else aoErro?.(m.msg, m.fatal);
@@ -45,6 +51,7 @@ export function conectarPartida(id, { baralho, itens }, { aoEstado, aoErro, aoFe
         return;
       }
       if (m.t !== 'estado') return;
+      tentativas = 0;
       ultimo = m;
       fonte.eu = m.eu;
       fonte.nomes = m.nomes;

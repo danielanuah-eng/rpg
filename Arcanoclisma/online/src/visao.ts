@@ -26,6 +26,8 @@ export function visaoDe(e: Estado, j: Jogador): Record<string, unknown> {
   // construtor (04/10): quem escolhe vê as cartas da escolha (inclusive a mão do oponente, em "olhar a mão")
   if (pend?.tipo === 'escolherCartas' && pend.jogador === j) ver(pend.cartas);
   if (pend?.tipo === 'pagarAnulacao' && pend.item.tipo === 'carta') visiveis.add(pend.item.instId);
+  // custo condicional (05/10): a carta que cobra (em campo ou na pilha) é pública
+  if (pend?.tipo === 'pagarCusto' && pend.fonte) visiveis.add(pend.fonte);
 
   let n = 0;
   const apelidos = new Map<string, string>();

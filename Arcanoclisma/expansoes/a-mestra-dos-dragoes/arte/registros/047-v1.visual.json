@@ -1,0 +1,43 @@
+{
+  "id": "047",
+  "slug": "dragao-primitivum-raiz",
+  "nomeVisual": "Dragão de Raízes e Musgo",
+  "cena": "Versão escolhida pelo autor: dragão de Primitivum na floresta, empurrando um tronco com o focinho.",
+  "momentoDoDia": "manhã",
+  "estado": "aprovada_pelo_autor",
+  "tipoDeCarta": null,
+  "raridade": null,
+  "liberadaParaJogo": false,
+  "arquivo": "imagens/047-dragao-primitivum-raiz-v1.png",
+  "versao": "v1",
+  "prompt": "prompts/047-v1.prompt.txt",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-9ea67e14-3f19-4f0c-beda-feffdb6d921b.png",
+  "ferramenta": "image_gen integrada",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "e07d80574e98bc34313ed1066360b5a043bb59cd04c29d64d8b56e3042f76c09",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "fundo": "cenário completo opaco",
+  "saturacao": "reduzida conforme pedido do autor",
+  "futuroDeValiant": "obscuro, sem desfecho revelado",
+  "aparenciasNovas": "propostas visuais aguardando aprovação",
+  "revisaoVisual": "Autor preferiu expressamente a primeira versão de Primitivum e pediu enviá-la.",
+  "ambiente": "Versão escolhida pelo autor: dragão de Primitivum na floresta, empurrando um tronco com o focinho.",
+  "clima": "conforme imagem",
+  "escala": "personagens e objetos integrados ao ambiente",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "liberdadesVisuais": [
+    "composição e detalhes estéticos; sem novas regras"
+  ],
+  "pushAutorizado": true,
+  "autorizacaoPush": "Instruções do autor: push de todas as imagens autorizado; escolhas de Primitivum e duas artes de Alvorum reafirmadas nesta conversa."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "105",
+  "nomeVisual": "Liora, Mediadora do Crepúsculo",
+  "slug": "liora-mediadora-do-crepusculo",
+  "categoriaVisual": "personagem",
+  "cena": "Mulher humana adulta pele morena, cabelo preto em tranças longas, traje coral poeira, preto e bronze contido. Num tribunal semicircular fica de pé entre dois grupos adversários, uma mão cria pequeno brilho claro, a outra sombra suave, ambos unidos por fio coral. Vista lateral desde arquibancada, grande estrutura ao fundo, tarde chuvosa. Media coexistência de humanos e dragões; um filhote espera tranquilo perto de um estudante.",
+  "valores": [
+    "persona",
+    "alvorum"
+  ],
+  "postura": "aliada",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/105-v1.prompt.txt",
+  "arquivo": "imagens/105-liora-mediadora-do-crepusculo-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-1662b47f-9ae0-487c-84d6-2a70da30bf4c.png",
+  "dimensoes": [
+    1062,
+    1482
+  ],
+  "sha256": "c5ce74e17eb6617d378a456443a8301b8eea9f6d909ac8e47110c4b592c9bbb9",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 18.7,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

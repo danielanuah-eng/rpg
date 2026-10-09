@@ -1,0 +1,40 @@
+{
+  "id": "094",
+  "nomeVisual": "Orven, Estrategista das Asas",
+  "slug": "orven-estrategista-das-asas",
+  "categoriaVisual": "personagem",
+  "cena": "Homem humano esguio pele parda, cabeça calva, bigode fino e pequena barba, traje ferrugem e índigo. Num posto de comando de madeira, planeja zonas onde dragões não devem entrar: move miniaturas de asas e barricadas sobre um mapa sem texto, projetando pequenos planos mentais índigo. Câmera por cima de seu ombro e mãos, janela mostra torre de vigília. Tarde cinza. Defesa racional, sem revelar destino de Valiant.",
+  "valores": [
+    "conflituo",
+    "cognitium"
+  ],
+  "postura": "contra_dragoes",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/094-v1.prompt.txt",
+  "arquivo": "imagens/094-orven-estrategista-das-asas-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-6cc2ea14-b856-46e8-9144-d7b925410da5.png",
+  "dimensoes": [
+    1062,
+    1481
+  ],
+  "sha256": "5d74f8a3e54c8f5f9b84ccc180227516d4a18ef41fea45c643930c338adb4dac",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 27.5,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

@@ -2,12 +2,18 @@
 
 Arquivo lido pela tarefa agendada "equipe-balanceamento-retomar". A tarefa **só age se `sessao: ativa` e o trabalho parou no meio** (por exemplo, limite de uso). Ela nunca começa trabalho novo.
 
-sessao: finalizada
+sessao: aguardando-autor
 etapa: balanceador
-rodada: 6
+rodada: 7
 variante: BAL
-objetivos: sim/objetivos-bal6b.json
-atualizado: 2026-10-03 (autor aprovou a rodada 6 e a BAL virou PADRAO; próximo projeto: Conjuradores por par de Valores)
+objetivos: (a definir pelo balanceador na rodada 7)
+atualizado: 2026-10-09 (autor religou a equipe; rodada 7 pronta para começar numa conversa nova)
+
+## Rodada 7 (pedido do autor, 09/10/2026)
+- Objetivos: mais efeitos de entrada (ao entrar), reduzir a vantagem de quem começa, mais geração de Arcano e mais Aliados baratos.
+- Sem penalidade nem cota (nada de custo extra em mecânica, nada de limite por tipo de carta).
+- **Não mexer em Carmal.**
+- Começar depois que os blocos A/B do construtor de efeitos estiverem no main (eles mudam o motor). Para iniciar: conversa nova com "preciso da minha equipe de balanceamento"; aí a sessão passa a `ativa`.
 
 ## Sessão (só o autor muda)
 - `ativa`: o autor mandou a equipe trabalhar ("preciso da minha equipe de balanceamento"). Se o trabalho for interrompido, a tarefa agendada retoma.

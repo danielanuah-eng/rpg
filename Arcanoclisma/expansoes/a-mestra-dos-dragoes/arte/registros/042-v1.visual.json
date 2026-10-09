@@ -1,0 +1,44 @@
+{
+  "id": "042",
+  "slug": "dragao-persona-leque",
+  "nomeVisual": "Dragão de Asas em Leque",
+  "cena": "Novo dragão de Persona, coral suave, sozinho num jardim de cerâmica.",
+  "momentoDoDia": "tarde",
+  "estado": "substituida_preservada",
+  "tipoDeCarta": null,
+  "raridade": null,
+  "liberadaParaJogo": false,
+  "arquivo": "imagens/042-dragao-persona-leque-v1.png",
+  "prompt": "prompts/042-v1.prompt.txt",
+  "versao": "v1",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-aa22ac69-bbe4-44be-9825-6f056632dd09.png",
+  "ferramenta": "image_gen integrada",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "d4bf679a332a72de64d2b270fb3c080c5e1facba99be35f5a3a8358e5af5989c",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "fundo": "cenário completo opaco",
+  "saturacao": "reduzida conforme pedido do autor",
+  "futuroDeValiant": "obscuro, sem desfecho revelado",
+  "aparenciasNovas": "propostas visuais aguardando aprovação",
+  "revisaoVisual": "inspecionada pelo Codex; aprovação do autor pendente",
+  "ambiente": "Novo dragão de Persona, coral suave, sozinho num jardim de cerâmica.",
+  "clima": "conforme imagem",
+  "escala": "personagens e objetos integrados ao ambiente",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "liberdadesVisuais": [
+    "composição e detalhes estéticos; sem novas regras"
+  ],
+  "pushAutorizado": false,
+  "motivo": "Revisão da repetição de poses e cenários, conforme pedido do autor",
+  "substituidaPor": "imagens/042-dragao-persona-leque-v2.png"
+}

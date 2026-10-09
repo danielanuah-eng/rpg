@@ -1,0 +1,40 @@
+{
+  "id": "092",
+  "nomeVisual": "Darian, Vigia do Eclipse",
+  "slug": "darian-vigia-do-eclipse",
+  "categoriaVisual": "personagem",
+  "cena": "Homem humano idoso de pele castanha, cabelo branco curto, corpulento, armadura de couro carvão e ombreira bronze. Guarda a passagem de dragões no alto de um muro, segura lança de energia ferrugem fraca e lamparina bronze que projeta uma sombra protetora no caminho. Perfil completo andando entre ameias, visto de trás do portão. Tarde encoberta, tensão defensiva sem ataque. Trajes autorais sem uniforme militar moderno.",
+  "valores": [
+    "conflituo",
+    "alvorum"
+  ],
+  "postura": "contra_dragoes",
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/092-v1.prompt.txt",
+  "arquivo": "imagens/092-darian-vigia-do-eclipse-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-778d5447-4650-4e38-9561-155104df52ea.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "e4e9746477abb0e67eaefe77f89abeccb90ea78a8b5e30a6f53cddfaa3b5cbec",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 23.8,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

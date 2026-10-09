@@ -1,0 +1,38 @@
+{
+  "id": "069",
+  "nomeVisual": "O Vínculo que Atravessa",
+  "slug": "o-vinculo-que-atravessa",
+  "categoriaVisual": "magia_draconica",
+  "cena": "Persona, vínculos numa multidão sob chuva.",
+  "valores": null,
+  "postura": null,
+  "raridade": null,
+  "tipoDeCarta": null,
+  "nomeDefinitivo": false,
+  "liberadaParaJogo": false,
+  "estado": "gerada_aguardando_avaliacao",
+  "prompt": "prompts/069-v1.prompt.txt",
+  "referencias": [],
+  "arquivo": "imagens/069-o-vinculo-que-atravessa-v1.png",
+  "versao": "v1",
+  "ferramenta": "image_gen integrada",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-2894b443-63c1-42c6-88ed-153f6b0212f5.png",
+  "dimensoes": [
+    1061,
+    1482
+  ],
+  "sha256": "4f43ecb4de92d7014a877242a5210f70401dc3c3c9938408c4f381e975b2801d",
+  "alfa": {
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "saturacaoMediaHSV": 22.9,
+  "revisaoVisual": "inspecionada pelo Codex; avaliação do autor pendente",
+  "pushAutorizado": true,
+  "enriquecimentosVisuais": "composição, criatura, aparência e nome propostos; sem mecânica",
+  "animacao": {
+    "estado": "aguardando_definicao_de_carta_e_efeito",
+    "nota": "Vínculo por ID, skin e hash reservado; nenhuma animação de resolução pode ser especificada antes do efeito autorizado."
+  }
+}

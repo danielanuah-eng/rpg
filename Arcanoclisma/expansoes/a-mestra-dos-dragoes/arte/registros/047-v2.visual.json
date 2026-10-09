@@ -1,0 +1,43 @@
+{
+  "id": "047",
+  "slug": "dragao-primitivum-raiz",
+  "nomeVisual": "Dragão de Raízes e Musgo",
+  "cena": "Dragão de Primitivum emerge frontalmente de um tronco gigante oco.",
+  "momentoDoDia": "manhã",
+  "estado": "alternativa_nao_selecionada",
+  "tipoDeCarta": null,
+  "raridade": null,
+  "liberadaParaJogo": false,
+  "arquivo": "imagens/047-dragao-primitivum-raiz-v2.png",
+  "versao": "v2",
+  "prompt": "prompts/047-v2.prompt.txt",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-edfe8162-cf6f-40c1-82e4-3de103bb7e4a.png",
+  "ferramenta": "image_gen integrada",
+  "dimensoes": [
+    1061,
+    1483
+  ],
+  "sha256": "e7c3aab088b8cd666314c00cc7e6523ad651dd456624fe9577d64fe0f27750a1",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "fundo": "cenário completo opaco",
+  "saturacao": "reduzida conforme pedido do autor",
+  "futuroDeValiant": "obscuro, sem desfecho revelado",
+  "aparenciasNovas": "propostas visuais aguardando aprovação",
+  "revisaoVisual": "inspecionada pelo Codex; aprovação do autor pendente",
+  "ambiente": "Dragão de Primitivum emerge frontalmente de um tronco gigante oco.",
+  "clima": "conforme imagem",
+  "escala": "personagens e objetos integrados ao ambiente",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "liberdadesVisuais": [
+    "Revisão de câmera, pose e cenário após pedido do autor para evitar repetição; identidade da criatura e cor do Valor preservadas"
+  ],
+  "pushAutorizado": false,
+  "motivo": "Autor escolheu expressamente 047-v1 para envio"
+}

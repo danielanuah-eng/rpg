@@ -1,0 +1,43 @@
+{
+  "id": "028",
+  "slug": "ciantia-e-valiant",
+  "nomeVisual": "Entre páginas e olhares",
+  "cena": "Ciantia jovem adulta e Valiant partilham um momento carinhoso na biblioteca.",
+  "momentoDoDia": "tarde",
+  "estado": "gerada_aguardando_avaliacao",
+  "tipoDeCarta": null,
+  "raridade": null,
+  "liberadaParaJogo": false,
+  "arquivo": "imagens/028-ciantia-e-valiant-v2.png",
+  "prompt": "prompts/028-v2.prompt.txt",
+  "versao": "v2",
+  "origem": "C:\\Users\\Anuah\\.codex\\generated_images\\01a12180-2df3-70e3-a1c1-25b105595d8b\\exec-2b8d03b6-912d-4726-a50b-9ed95763fe5f.png",
+  "ferramenta": "image_gen integrada",
+  "dimensoes": [
+    1063,
+    1480
+  ],
+  "sha256": "44f6ba8d1cf94b655b6d3c7f0c0f6fd2a6ee1d1501e752f7900e6c4bedcb1492",
+  "alfa": {
+    "hasAlpha": false,
+    "min": 255,
+    "max": 255,
+    "pixelsTransparentes": 0
+  },
+  "fundo": "cenário completo opaco",
+  "saturacao": "reduzida conforme pedido do autor",
+  "futuroDeValiant": "obscuro, sem desfecho revelado",
+  "aparenciasNovas": "propostas visuais aguardando aprovação",
+  "revisaoVisual": "inspecionada pelo Codex; aprovação do autor pendente",
+  "ambiente": "Ciantia jovem adulta e Valiant partilham um momento carinhoso na biblioteca.",
+  "clima": "conforme imagem",
+  "escala": "personagens e objetos integrados ao ambiente",
+  "eventoId": null,
+  "continuidadeCom": [],
+  "relacaoComEvento": null,
+  "liberdadesVisuais": [
+    "Valiant segue a descrição do autor; cena anterior à cicatriz"
+  ],
+  "pushAutorizado": true,
+  "autorizacaoPush": "Instruções do autor: push de todas as imagens autorizado; escolhas de Primitivum e duas artes de Alvorum reafirmadas nesta conversa."
+}
