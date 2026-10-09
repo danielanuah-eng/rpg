@@ -1,5 +1,6 @@
 // Partida online: conversa com o Durable Object da sala por WebSocket. O servidor manda só a visão deste jogador.
 import { DADOS, EDICOES, carregarEdicoes } from './base.js';
+import { sincronizarEdicoesDaSala } from './sincronizar-edicoes.js';
 
 export function conectarPartida(id, { baralho, itens }, { aoEstado, aoErro, aoFechar }) {
   const ouvintes = new Set();
@@ -37,7 +38,12 @@ export function conectarPartida(id, { baralho, itens }, { aoEstado, aoErro, aoFe
     let fila = Promise.resolve();
     ws.onmessage = (ev) => { fila = fila.then(() => tratar(JSON.parse(ev.data))); };
     const tratar = async (m) => {
-      if (m.t === 'estado' && m.edVersao !== undefined && (m.edVersao !== EDICOES.id || EDICOES.rascunho)) await carregarEdicoes(m.edVersao);
+      if (!await sincronizarEdicoesDaSala(m, EDICOES, carregarEdicoes)) {
+        aoErro?.('Não foi possível carregar as artes e edições desta sala. Reconectando.', false);
+        // Reconectar pede uma visão atual; não desenhar usando cosméticos de outra versão.
+        ws?.close();
+        return;
+      }
       if (m.t === 'erro') {
         if (pendente) { const p = pendente; pendente = null; p(m.msg); }
         else aoErro?.(m.msg, m.fatal);

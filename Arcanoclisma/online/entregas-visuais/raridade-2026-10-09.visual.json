@@ -1,0 +1,11 @@
+{
+  "pedido": "Corrigir templates de raridade roxos e divergência na visão de outros jogadores",
+  "estado": "corrigido_e_testado_localmente",
+  "causasConfirmadas": ["Textura prata-roxo aplicada com opacidade alta em incomuns e raras", "Sala em espera com edVersao zero carregava edições vazias", "Falha de carregamento permitia desenhar a edição visual anterior"],
+  "alteracoes": ["Acabamento neutro e discreto para incomum e rara", "Iridescência lendária e alternativa preservada com intensidade menor", "Retirada da amplificação automática de saturação da arte", "Versão zero da espera não substitui as edições carregadas", "Falha de sincronização pede reconexão antes de desenhar outra versão", "URL do CSS atualizada para renovar o cache"],
+  "raridadeAutomatica": false,
+  "regrasAlteradas": false,
+  "validacao": {"testesOnline": {"passaram":27,"falharam":0}, "build":"sucesso", "edgeHeadless": {"paresJogadorOponenteIdenticos":5,"errosJavaScript":0,"cartaOcultaSemRaridadeNoDOM":true}},
+  "captura": "raridade-2026-10-09/jogador-oponente.png",
+  "limites": ["Comparação local do renderizador, sem duas contas reais em produção", "Publicação no serviço hospedado não confirmada"]
+}
