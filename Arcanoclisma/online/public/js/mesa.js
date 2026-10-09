@@ -77,7 +77,11 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     Object.assign(mundo.style, { position: 'absolute', left: (palco.clientWidth / 2 - (AZUL.x0 * pw + w / 2) * k) / k + 'px', top: (palco.clientHeight / 2 - (AZUL.y0 * ph + h / 2) * k) / k + 'px' });
     // na primeira vez, mostra o meio da mesa (os dois Conjuradores)
   }
-  new ResizeObserver(() => ajustarMesa()).observe(palco);
+  // As folhas visuais e os rótulos podem mudar o tamanho do conteúdo depois
+  // da primeira montagem, mesmo sem alterar o palco. Reencaixar também aí.
+  const cameraObserver = new ResizeObserver(() => ajustarMesa());
+  cameraObserver.observe(palco);
+  cameraObserver.observe(conteudo);
   // tela cheia: some o topo do site e o botão troca de nome
   const aoTelaCheia = () => { if (!document.fullscreenElement) document.body.classList.remove('tela-cheia'); if (!fechada && e) lateral.innerHTML = lateralHTML(); };
   document.addEventListener('fullscreenchange', aoTelaCheia);
@@ -1246,7 +1250,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
   render();
   return {
     render,
-    fechar() { fechada = true; foco.remove(); observarJanelas.disconnect(); removeEventListener('resize', atualizarFoco); document.removeEventListener('click', aoAmpliar, true); document.body.classList.remove('em-mesa'); for (const d of dadosAbertura) try { d.destruir(); } catch { /* nada */ } globalThis.ArcanoclismaAbertura?.limparEntradaArena(raiz); clearTimeout(timerAuto); clearInterval(timerPrazo); movimentosMesa.limpar(); ganchos.limpar(); document.removeEventListener('fullscreenchange', aoTelaCheia); if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); document.body.classList.remove('tela-cheia'); window.removeEventListener('pointermove', moverArrasto); window.removeEventListener('pointerup', soltar); window.removeEventListener('pointercancel', soltar); arrasto?.fantasma?.remove(); raiz.innerHTML = ''; },
+    fechar() { fechada = true; cameraObserver.disconnect(); foco.remove(); observarJanelas.disconnect(); removeEventListener('resize', atualizarFoco); document.removeEventListener('click', aoAmpliar, true); document.body.classList.remove('em-mesa'); for (const d of dadosAbertura) try { d.destruir(); } catch { /* nada */ } globalThis.ArcanoclismaAbertura?.limparEntradaArena(raiz); clearTimeout(timerAuto); clearInterval(timerPrazo); movimentosMesa.limpar(); ganchos.limpar(); document.removeEventListener('fullscreenchange', aoTelaCheia); if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); document.body.classList.remove('tela-cheia'); window.removeEventListener('pointermove', moverArrasto); window.removeEventListener('pointerup', soltar); window.removeEventListener('pointercancel', soltar); arrasto?.fantasma?.remove(); raiz.innerHTML = ''; },
     contexto,
   };
 }

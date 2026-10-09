@@ -1,0 +1,78 @@
+/* Revisão do autor, 09/10: campo limpo, zonas distribuídas e cartas maiores.
+   Mantém a câmera que encaixa o tabuleiro inteiro e as ações do motor. */
+.mesa .mesa-palco {
+  background: radial-gradient(ellipse at center, #203342, #101d2a 78%);
+}
+.mesa .mesa-mundo .arena-piso {
+  opacity: .12;
+  filter: saturate(.35);
+}
+.mesa .mesa-mundo .mesa-conteudo {
+  min-width: 860px;
+  padding: 4px 8px;
+  gap: 0;
+}
+.mesa .mesa-mundo .fileira-fundo {
+  grid-template-columns: 150px minmax(70px, 1fr) 140px minmax(70px, 1fr) 150px;
+  gap: 8px;
+}
+/* Pilhas à esquerda, Arcano junto do Conjurador, Grau à direita. */
+.mesa .mesa-mundo .pilhas-zona { grid-column: 1; }
+.mesa .mesa-mundo .esfera-arcano { grid-column: 2; justify-self: end; }
+.mesa .mesa-mundo .zona-grau { grid-column: 4 / 6; }
+.mesa .pilhas-zona .zp-linha .zp-carta { width: 36px; height: 50px; }
+.mesa .mesa-mundo .lado { gap: 4px; }
+.mesa .mesa-mundo .campo {
+  min-height: 0;
+  padding: 4px 8px;
+  gap: 12px 16px;
+}
+.mesa .mesa-mundo .campo:empty { min-height: 148px; }
+.mesa .mesa-mundo .campo .cm { --w: 132px !important; }
+.mesa .mesa-mundo .campo .tcg-card { --card-w: 132px !important; }
+.mesa .pilhas-zona, .mesa .zona-grau {
+  background: #101d2ab3;
+  box-shadow: none;
+  border-color: #a8c1d42e;
+}
+.mesa .linha-meio { opacity: .2; }
+
+/* A carta do topo usa a largura da lateral, com a explicação abaixo. */
+.mesa .mesa-direita .pilha-item.topo {
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.mesa .mesa-direita .pilha-item.topo > .cm {
+  --w: 204px !important;
+  zoom: 1;
+  max-width: 100%;
+}
+.mesa .mesa-direita .pilha-item.topo .tcg-card { --card-w: 204px !important; }
+.mesa .mesa-direita .pilha-item.topo .pilha-info {
+  flex: 0 1 auto;
+  width: 100%;
+}
+
+@media (max-width: 900px), (max-height: 560px) {
+  .mesa .mesa-mundo .mesa-conteudo { min-width: 680px; }
+  .mesa .mesa-mundo .fileira-fundo {
+    grid-template-columns: 134px minmax(50px, 1fr) 126px minmax(50px, 1fr) 134px;
+    gap: 5px;
+  }
+  .mesa .mesa-mundo .campo { gap: 10px 12px; }
+  .mesa .mesa-direita .pilha-item.topo > .cm { --w: 168px !important; }
+  .mesa .mesa-direita .pilha-item.topo .tcg-card { --card-w: 168px !important; }
+}
+@media (max-width: 900px) and (orientation: portrait) {
+  .mesa .mesa-mundo .mesa-conteudo { min-width: 560px; }
+  .mesa .mesa-mundo .fileira-fundo {
+    grid-template-columns: 108px minmax(35px, 1fr) 126px minmax(35px, 1fr) 108px;
+  }
+  .mesa .mesa-mundo .esfera-arcano { width: 52px !important; height: 52px !important; }
+  .mesa .mesa-mundo .esfera-arcano b { font-size: 25px !important; }
+  .mesa .mesa-direita .pilha-item.topo { flex-direction: row; align-items: flex-start; flex-wrap: nowrap; }
+  .mesa .mesa-direita .pilha-item.topo > .cm { --w: 144px !important; }
+  .mesa .mesa-direita .pilha-item.topo .tcg-card { --card-w: 144px !important; }
+  .mesa .mesa-direita .pilha-item.topo .pilha-info { flex: 1; min-width: 0; }
+}
