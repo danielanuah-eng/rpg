@@ -4,9 +4,11 @@ Fonte: pedidos diretos do autor nesta conversa, em 09/10/2026. Produção de art
 
 ## História confirmada pelo autor
 
-Ciantia é ligada a **Persona e Eternyr**. Sua trajetória visual acompanha a infância, o crescimento, as brincadeiras com dragões, a formação na escola de magia e a evolução até tornar-se uma grande conjuradora. Sua relação com os dragões pode ser mostrada tanto em momentos delicados quanto em feitos de grande escala.
+Ciantia é ligada a **Persona e Eternyr**, mas, conforme reforçado pelo autor, é uma conjuradora **extremamente poderosa e capaz de manipular todos os Valores na lore**. Seus vínculos não limitam essa capacidade narrativa. Sua trajetória visual acompanha a infância, o crescimento, as brincadeiras com dragões, a formação na escola de magia e a evolução até tornar-se uma grande conjuradora. Sua relação com os dragões pode ser mostrada tanto em momentos delicados quanto em feitos de grande escala. As cenas adultas devem mostrar domínio extraordinário e variedade dos Valores, além das manifestações pequenas do aprendizado.
 
 Seu pai, **Gramael**, é ligado a **Dominum e Eternyr**. Ele não apoiava que a filha se tornasse uma maga que interagia com dragões, devido à periculosidade da situação naquela época. A oposição deve expressar preocupação e conflito familiar; não há autorização para estabelecer que ele seja um vilão. A expressão original sobre a periculosidade não determina uma causa mais específica.
+
+Direção adicional do autor: mostrar Gramael brigando com Ciantia e tentando impedir que ela usasse a magia; mostrar Ciantia praticando escondida e seguindo em frente apesar de saber que põe em risco a confiança do pai. Representar a discussão e a desobediência sem inventar violência física ou uma ruptura familiar definitiva.
 
 Ciantia apaixona-se por **Valiant**, um mago sem talento, ligado a **Dominum e Cognium**. Ele observa o talento dela com inveja. Um monstro provoca uma cicatriz nele, lembrança que o acompanha por toda a vida e lhe recorda a própria fraqueza. Valiant descobre que sua palavra inata mais forte é **Dominum**, sobretudo a capacidade de roubar outras magias.
 
@@ -17,6 +19,8 @@ Aparência de **Valiant** definida pelo autor nesta conversa: rapaz moreno, cort
 A expansão envolve a **grande invasão dos monstros**, com Ciantia invocando dragões e usando poderes para derrotar os invasores ou realizar outras ações. Também haverá escola de magia, criaturas, dragões, monstros e outros novos conjuradores. A identidade e os Valores desses outros conjuradores não foram definidos.
 
 Ovos de dragão podem ser **brilhantes, lisos ou encrustados com runas arcanas**, em cenas próprias. Nem toda imagem precisa mostrar Ciantia: lugares, objetos, criaturas, preparação e consequências podem contar partes da história.
+
+O autor também pediu criaturas novas e dragões como assunto único da arte, variando tipos, cores, formas e Valores. “Isolados” é tratado como ausência de outros protagonistas, com cenário próprio de carta. As cores dos Valores seguem os dados do projeto, com saturação reduzida conforme pedido posterior do autor. Nenhuma regra de carta é criada a partir desses estudos.
 
 ## Direção de composição
 
