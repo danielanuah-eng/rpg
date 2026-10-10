@@ -19,7 +19,7 @@ O Codex cria TODA arte, template, ícone, animação e movimento e decide os age
 6. Pedido visual novo (falta asset): acrescente em `Arcanoclisma/online/pedidos-visuais/site.claude.json` (objetivo, telas/assets, formato, dimensões, destino, gatilho, prioridade).
 
 ## Proibido
-Expansão "A Mestra dos Dragões" (bloqueada). Raridade automática. Commit, push ou deploy (quem decide é a conversa principal).
+Raridade automática. Commit, push ou deploy (quem decide é a conversa principal).
 
 ## Saída (máx. ~12 linhas)
 Arquivos ligados, o que ficou sem imagem e por quê, resultado do build/teste, o que conferir na tela.

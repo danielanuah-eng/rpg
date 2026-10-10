@@ -14,7 +14,7 @@ Você faz a triagem do que há para fazer. Não edite arquivos. Responda em port
 Se um arquivo passar de ~600 linhas, use Grep/tail em vez de ler tudo.
 
 ## Classifique cada item
-- `regra` → agente motor-regras · `visual`/entrega do Codex → integrador-visual · `pedido de arte` → registrar para o Codex (não é nosso) · `bug`/`tela` → conversa principal · `balanceamento` → só com "equipe de balanceamento" · expansão "A Mestra dos Dragões" → bloqueada, apenas anotar.
+- `regra` → agente motor-regras · `visual`/entrega do Codex → integrador-visual · `pedido de arte` → registrar para o Codex (não é nosso) · `bug`/`tela` → conversa principal · `balanceamento` → só com "equipe de balanceamento" · expansão "A Mestra dos Dragões" (liberada 09/10) → regra vai para motor-regras.
 - Itens que pedem decisão do autor: marque "PERGUNTAR".
 
 ## Saída (máx. ~20 linhas)
