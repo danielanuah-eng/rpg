@@ -15,8 +15,8 @@ const conjs = Object.values(D.catalogo.conjuradores) as Array<{ id: string; pode
 /** Campos que o formulário de um efeito mostra: os fixos da linha, os campos dela e o requisito/escolha (painel e campo). */
 const camposDaLinha = (k: string) => new Set([...Object.keys(EFEITOS[k].fixo), ...EFEITOS[k].campos.map((c: { k: string }) => c.k), 'requisito', 'escolha']);
 
-test('os Conjuradores do site (9 + 25 da expansão dos dragões): ida e volta pelo construtor dá o mesmo JSON', () => {
-  assert.equal(conjs.length, 34);
+test('os Conjuradores do site (9 + 27 da expansão dos dragões): ida e volta pelo construtor dá o mesmo JSON', () => {
+  assert.equal(conjs.length, 36);
   for (const c of conjs) {
     const v = JSON.parse(JSON.stringify(poderParaConstrutor(c.poder)));
     assert.equal(JSON.stringify(construtorParaPoder(v)), JSON.stringify(c.poder), c.id);

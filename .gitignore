@@ -24,3 +24,4 @@ Arcanoclisma/tcg/app/versoes/
 
 # Cache local do Wrangler (Cloudflare)
 .wrangler/
+agente/.vigia-marca

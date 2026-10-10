@@ -135,9 +135,9 @@ test('sigilo do "tirar da mão" (04/10, noite): olhando, só quem controla o efe
   for (const id of e.jogadores[1].mao) assert.ok(!w0.pendencia.cartas.includes(id), 'nem os ids reais');
 });
 
-test('regra das cores (decisão 37): os 34 prontos (9 + 25 da expansão) valem; o Worker (validarBaralho) recusa 2 Valores com só 1 em comum e "Corrigir automaticamente" conserta', () => {
+test('regra das cores (decisão 37): os 36 prontos (9 + 27 da expansão) valem; o Worker (validarBaralho) recusa 2 Valores com só 1 em comum e "Corrigir automaticamente" conserta', () => {
   const C = D.catalogo as Catalogo;
-  assert.equal(D.baralhos.length, 34);
+  assert.equal(D.baralhos.length, 36);
   for (const b of D.baralhos as { id: string; conjurador: string; lista: [string, number][]; itens: string[] }[]) {
     assert.deepEqual(validarBaralho(C, { conjurador: b.conjurador, cartas: b.lista.flatMap(([id, n]) => Array(n).fill(id)), itens: b.itens }, D.tamanhoBaralho), [], b.id);
     assert.ok(b.lista.every(([, n]) => n <= D.maxCopias), b.id);
