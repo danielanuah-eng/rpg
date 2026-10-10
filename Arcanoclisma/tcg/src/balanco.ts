@@ -58,6 +58,8 @@ export const PRECO = {
   aoDanoConjurador: 1.5,
   /** Olhar o topo: cada carta vista além das que vão para a mão (escolha). As que vão para a mão custam como comprar. */
   olharTopoExtra: 0.5,
+  /** Invocar uma ficha (09/10, Dragolize): o Ovo Iluminado (Mística 0/1 que recebe um Dragão) e fichas pequenas. */
+  invocar: 3,
 } as const;
 
 export type Precos = { [K in keyof typeof PRECO]: number };
@@ -89,6 +91,7 @@ export function precoEfeito(ef: Efeito, p: Precos = PRECO, valores: string[] = [
     case 'anular': return p.anular;
     case 'danoTodosAliados': return (ef.ambos ? p.danoTodosAmbos : p.danoTodos) * ef.valor;
     case 'destruirTodosAliados': return ef.ambos ? p.destruirTodosAmbos : p.destruirTodos;
+    case 'invocar': return p.invocar;
   }
 }
 

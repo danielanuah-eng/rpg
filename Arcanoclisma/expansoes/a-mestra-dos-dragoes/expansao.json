@@ -4,17 +4,17 @@
   "nomeProvisorio": false,
   "data": "2026-10-03",
   "origem": "pedido direto do autor nesta conversa",
-  "estado": "aguardando_revisao_visual_do_jogo_atual",
+  "estado": "liberada_para_jogo_em_implementacao",
   "liberacaoDoAutor": {
-    "concedida": false,
-    "texto": null,
-    "data": null
+    "concedida": true,
+    "texto": "pode lançar a expansão de dragões",
+    "data": "2026-10-09"
   },
   "restricoesClaude": {
-    "inserirEmJogo": false,
-    "criarOuAlterarCartas": false,
-    "balancearOuDefinirEfeitos": false,
-    "incluirEmBaralhosOuColecoesJogaveis": false
+    "inserirEmJogo": true,
+    "criarOuAlterarCartas": true,
+    "balancearOuDefinirEfeitos": true,
+    "incluirEmBaralhosOuColecoesJogaveis": true
   },
   "escopoAutorizado": "Criar e organizar somente as imagens e descrições visuais da expansão, introduzindo Ciantia",
   "quantidadeNova": {

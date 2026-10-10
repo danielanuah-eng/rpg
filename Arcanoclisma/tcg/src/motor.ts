@@ -392,11 +392,15 @@ export function habilidadesDe(e: Estado, instId: string): Habilidade[] {
  */
 export function ativacaoDeHabilidade(h: Habilidade): Ativacao {
   const grau = Math.max(h.custo?.grau ?? 0, h.requisito?.grau ?? 0);
-  const req = { ...(grau ? { grau } : {}), ...(h.requisito?.arcano ? { arcano: h.requisito.arcano } : {}) };
+  const req = { ...(grau ? { grau } : {}), ...(h.requisito?.arcano ? { arcano: h.requisito.arcano } : {}), ...(grau && h.requisito?.valor ? { valor: h.requisito.valor } : {}) };
   return {
     ...(h.repentina ? { repentina: true } : {}), custo: h.custo?.arcano ?? 0, suspende: !!h.custo?.suspender, efeitos: h.efeitos,
     descartar: h.custo?.descartar, danoNoConjurador: h.custo?.vida, ...(Object.keys(req).length ? { requisito: req } : {}), consome: false,
   };
+}
+/** Ativação de um item: o item não levanta, então "virar" (suspende) vira "suspenda o Conjurador" (decisão 41). */
+export function itemAtivacao(at: Ativacao): Ativacao {
+  return at.suspende ? { ...at, suspende: false, suspendeConjurador: true } : at;
 }
 /** Dispara as habilidades da carta (ou do Conjurador) para esta condição: cada uma vai para a pilha como gatilho do dono. */
 function disparar(e: Estado, instId: string, quando: Quando, alvo?: string, quemEvento?: Jogador): void {
@@ -824,7 +828,7 @@ function resolverAlvo(e: Estado, ef: Efeito, dono: Jogador, escolhido?: string):
  */
 function cumprirRequisito(e: Estado, r: Requisito | undefined, dono: Jogador): boolean {
   if (!r) return true;
-  if (r.grau && grauEfetivo(e, dono) < r.grau) { anotar(e, `Requisito não cumprido: precisa de Grau ${r.grau} (tem ${grauEfetivo(e, dono)}); a linha não acontece.`); return false; }
+  if (r.grau && grauDoRequisito(e, dono, r) < r.grau) { anotar(e, `Requisito não cumprido: precisa de Grau ${r.grau}${r.valor ? ` de ${r.valor}` : ''} (tem ${grauDoRequisito(e, dono, r)}); a linha não acontece.`); return false; }
   const custo = r.arcano ?? 0;
   if (custo <= 0) return true;
   if (!pagarNaHora(e, dono, custo)) { anotar(e, `Requisito não cumprido: precisa pagar ${custo} de Arcano; a linha não acontece.`); return false; }
@@ -1057,13 +1061,42 @@ function aplicarEfeitos(e: Estado, efeitos: Efeito[], dono: Jogador, escolhido?:
     else if (ef.tipo === 'potenciaMagia') { e.habUsos[dono].potencia += ef.valor; anotar(e, `O próximo dano ou cura de uma Temporária sua neste turno tem +${e.habUsos[dono].potencia}.`); }
     else if (ef.tipo === 'ataqueConjuradorTurno') { e.habUsos[dono].ataqueExtra += ef.valor; anotar(e, `${defConjurador(e, dono).nome} ganha +${ef.valor} de Ataque neste turno.`); }
     else if (ef.tipo === 'invocar') {
-      if (!e.catalogo.cartas[ef.carta]) { anotar(e, 'Invocar: ficha desconhecida.'); continue; }
+      const dFicha = e.catalogo.cartas[ef.carta];
+      if (!dFicha) { anotar(e, 'Invocar: ficha desconhecida.'); continue; }
+      // Dragolize (09/10, decisão 41): a ficha entra em cima de uma carta sua com o subtipo pedido (ex.: um Ovo), que sai do campo
+      const sobre = sobreDoInvocar(e, ef);
+      let sub: Substituicao | undefined;
+      if (sobre) {
+        const cands = candidatosSobre(e, dono, sobre);
+        if (!cands.length) { anotar(e, `${dFicha.nome} precisa entrar em cima de um ${sobre} seu; nada acontece.`); continue; }
+        const onde = escolhido !== undefined && cands.includes(escolhido) ? escolhido : cands.length === 1 ? cands[0] : undefined;
+        if (onde === undefined) {
+          e.pendencia = { tipo: 'escolherCartas', jogador: dono, cartas: cands, quantidade: 1, destino: 'nada', titulo: `Escolha o ${sobre} em que ${dFicha.nome} entra`, aplicar: { efeito: { ...ef, requisito: undefined }, dono }, ...(depois.efeitos.length ? { depois } : {}) };
+          anotar(e, `Jogador ${dono} escolhe o ${sobre} em que ${dFicha.nome} entra.`);
+          return;
+        }
+        sub = substituirSobre(e, onde, dFicha.nome);
+      }
       const inst = novaInst(e, ef.carta, dono, false);
       inst.revelada = true; inst.entrouNoTurno = e.turno;
-      e.jogadores[dono].campo.push(inst.id);
+      if (sub === undefined) e.jogadores[dono].campo.push(inst.id); else e.jogadores[dono].campo.splice(sub.pos, 0, inst.id);
       if (ef.concessao) conceder(e, inst.id, ef.concessao);
-      anotar(e, `${defCarta(e, inst.id).nome} é invocado no campo do jogador ${dono}.`);
-      gatilhoConjurador(e, dono, 'aliadoEntra');
+      if (sub?.conc) conceder(e, inst.id, sub.conc);
+      anotar(e, `${dFicha.nome} é invocado no campo do jogador ${dono}.`);
+      if (dFicha.tipo === 'aliado') gatilhoConjurador(e, dono, 'aliadoEntra');
+      // "ao entrar" da ficha (09/10): vai para a pilha como o de qualquer permanente
+      const efsFicha = efeitosAoEntrar(dFicha);
+      if (efsFicha.length) e.pilha.push({ tipo: 'gatilho', id: `p${e.proxId++}`, controlador: dono, efeitos: efsFicha, fonte: dFicha.nome, incomensuravel: temIncomensuravel(dFicha) });
+    }
+    else if (ef.tipo === 'entrarSobre') {
+      // a permanente que saiu da pilha entra em cima da carta escolhida (entraSobre com várias opções)
+      const d = defCarta(e, ef.instId);
+      if (escolhido === undefined || !candidatosSobre(e, dono, d.entraSobre ?? '').includes(escolhido)) {
+        anotar(e, `${d.nome}: o ${d.entraSobre} saiu do campo; a carta vai para o cemitério.`);
+        fimDaPilha(e, ef.instId, dono);
+        continue;
+      }
+      entrarDaPilha(e, ef.instId, dono, ef.alvo, ef.decididos, substituirSobre(e, escolhido, d.nome));
     }
     else if (ef.tipo === 'arcanoOponente') e.jogadores[outro(dono)].arcano += ef.valor;
     else if (ef.tipo === 'descontoProximaCarta') {
@@ -1096,7 +1129,14 @@ function aplicarEfeitos(e: Estado, efeitos: Efeito[], dono: Jogador, escolhido?:
       if (i < 0) { anotar(e, 'Anular: a carta já saiu da pilha.'); continue; }
       if (protegidaDe(e, escolhido, dono)) { alvoProtegido(e, escolhido!); continue; }
       const item = e.pilha.splice(i, 1)[0];
-      if (item.tipo === 'carta') {
+      if (item.tipo === 'carta' && ef.roubar && !e.instancias[item.instId].banirAoResolver) {
+        // Dragolize (09/10): "roubar a magia": a carta anulada vai para a mão de quem anulou
+        const inst = e.instancias[item.instId];
+        limparInst(inst);
+        inst.dono = dono;
+        e.jogadores[dono].mao.push(item.instId);
+        anotar(e, `${defCarta(e, item.instId).nome} foi anulada e vai para a mão do jogador ${dono}.`);
+      } else if (item.tipo === 'carta') {
         fimDaPilha(e, item.instId, item.controlador);
         anotar(e, `${defCarta(e, item.instId).nome} foi anulada.`);
       }
@@ -1265,6 +1305,55 @@ function alvoServe(e: Estado, efeitos: Efeito[], alvo: string | undefined, dono:
 export function grauEfetivo(e: Estado, j: Jogador): number {
   const z = e.jogadores[j];
   return z.grau.length + z.campo.reduce((s, id) => s + (defCarta(e, id).grauExtra ?? 0), 0);
+}
+
+// ---------- Dragolize (09/10, decisão 41): requisito por Valor e "entra em cima de" ----------
+
+/** A carta do Grau conta como deste Valor? */
+export function grauServeValor(e: Estado, j: Jogador, id: string, valor: string): boolean {
+  void j;
+  return defCarta(e, id).valores.includes(valor);
+}
+/** Grau que conta para um requisito: o Grau todo ou, com `valor`, só as cartas desse Valor (e o grauExtra das suas permanentes desse Valor). */
+export function grauDoRequisito(e: Estado, j: Jogador, r: Requisito | undefined): number {
+  if (!r?.valor) return grauEfetivo(e, j);
+  const z = e.jogadores[j];
+  const v = r.valor;
+  return z.grau.filter((id) => grauServeValor(e, j, id, v)).length
+    + z.campo.reduce((s, id) => s + (grauServeValor(e, j, id, v) ? defCarta(e, id).grauExtra ?? 0 : 0), 0);
+}
+/** Cartas suas em campo com este subtipo: onde uma carta com entraSobre (ou um invocar com `sobre`) pode entrar. */
+export function candidatosSobre(e: Estado, j: Jogador, subtipo: string): string[] {
+  if (!subtipo) return [];
+  return e.jogadores[j].campo.filter((id) => (defCarta(e, id).subtipos ?? []).some((s) => normal(s) === normal(subtipo)));
+}
+/** Subtipo em cima do qual este invocar entra: o do efeito ou o entraSobre da ficha (vazio = entra solto). */
+export function sobreDoInvocar(e: Pick<Estado, 'catalogo'>, ef: Extract<Efeito, { tipo: 'invocar' }>): string | undefined {
+  return ef.sobre || e.catalogo.cartas[ef.carta]?.entraSobre || undefined;
+}
+/** Algum invocar destes efeitos precisa de uma carta que você não tem em campo? Devolve o subtipo que falta. */
+export function faltaSobre(e: Estado, j: Jogador, efeitos: Efeito[]): string | null {
+  for (const ef of efeitos) {
+    if (ef.tipo !== 'invocar') continue;
+    const s = sobreDoInvocar(e, ef);
+    if (s && !candidatosSobre(e, j, s).length) return s;
+  }
+  return null;
+}
+/** Lugar deixado pela carta substituída: a posição no campo e o que ela concede a quem entra (concedeAoSubstituto). */
+type Substituicao = { pos: number; conc?: Concessao };
+/** Tira do campo a carta em que outra entra: ficha deixa de existir; carta comum vai para o cemitério. Devolve a posição dela e a concessão. */
+function substituirSobre(e: Estado, id: string, quem: string): Substituicao {
+  const inst = e.instancias[id];
+  const z = e.jogadores[inst.dono];
+  const k = z.campo.indexOf(id);
+  if (k < 0) return { pos: z.campo.length };
+  z.campo.splice(k, 1);
+  limparInst(inst);
+  const d = defCarta(e, id);
+  if (!d.ficha) z.cemiterio.push(id);
+  anotar(e, `${quem} entra em cima de ${d.nome}${d.ficha ? ', que deixa de existir' : ', que vai para o cemitério'}.`);
+  return { pos: k, conc: d.concedeAoSubstituto };
 }
 
 // ---------- criação ----------
@@ -1526,19 +1615,16 @@ function resolverTopo(e: Estado): void {
       void pendAntes;
       if (e.instancias[item.instId].banirAoResolver) anotar(e, `${d.nome} é banida ao resolver.`);
       fimDaPilha(e, item.instId, item.controlador);
-    } else {
-      z.campo.push(item.instId);
-      e.instancias[item.instId].entrouNoTurno = e.turno;
-      // jogada pelo Reanimum: quando sair do campo, vai para o banimento
-      if (e.instancias[item.instId].banirAoResolver) { e.instancias[item.instId].banirAoResolver = false; e.instancias[item.instId].banirAoSair = true; }
-      anotar(e, `${d.nome} entra em campo.`);
-      if (d.tipo === 'aliado') gatilhoConjurador(e, item.controlador, 'aliadoEntra');
-      const aoEntrar = item.decididos ?? efeitosAoEntrar(d);
-      if (aoEntrar.length) {
-        e.pilha.push({ tipo: 'gatilho', id: `p${e.proxId++}`, controlador: item.controlador, efeitos: aoEntrar, alvo: item.alvo, fonte: d.nome, incomensuravel: temIncomensuravel(d) });
-        anotar(e, `${d.nome}: gatilho ao entrar vai para a pilha.`);
+    } else if (d.entraSobre) {
+      // Dragolize (09/10, decisão 41): entra em cima de uma carta sua com o subtipo (ex.: um Ovo), que sai do campo
+      const cands = candidatosSobre(e, item.controlador, d.entraSobre);
+      if (!cands.length) { anotar(e, `${d.nome} precisa entrar em cima de um ${d.entraSobre} seu; vai para o cemitério.`); fimDaPilha(e, item.instId, item.controlador); }
+      else if (cands.length === 1) entrarDaPilha(e, item.instId, item.controlador, item.alvo, item.decididos, substituirSobre(e, cands[0], d.nome));
+      else {
+        e.pendencia = { tipo: 'escolherCartas', jogador: item.controlador, cartas: cands, quantidade: 1, destino: 'nada', titulo: `Escolha o ${d.entraSobre} em que ${d.nome} entra`, aplicar: { efeito: { tipo: 'entrarSobre', instId: item.instId, alvo: item.alvo, decididos: item.decididos }, dono: item.controlador } };
+        anotar(e, `Jogador ${item.controlador} escolhe o ${d.entraSobre} em que ${d.nome} entra.`);
       }
-    }
+    } else entrarDaPilha(e, item.instId, item.controlador, item.alvo, item.decididos);
   } else if (item.tipo === 'gatilho') {
     const fi = item.fonteId !== undefined ? e.instancias[item.fonteId] : undefined;
     if (item.recorrente && (!fi || !emJogo(e, item.fonteId!))) anotar(e, `${item.fonte ?? 'A carta'} saiu do campo: o efeito não acontece.`);
@@ -1566,6 +1652,24 @@ function resolverTopo(e: Estado): void {
     anotar(e, 'O ataque falhou: atacante ou alvo saiu do campo.');
   }
   acoesDeEstado(e);
+}
+
+/** Permanente que resolve na pilha entra em campo (na posição `pos`, quando substitui outra carta) e dispara "ao entrar". */
+function entrarDaPilha(e: Estado, instId: string, controlador: Jogador, alvo: string | undefined, decididos: Efeito[] | undefined, sub?: Substituicao): void {
+  const d = defCarta(e, instId);
+  const z = e.jogadores[controlador];
+  if (sub === undefined) z.campo.push(instId); else z.campo.splice(sub.pos, 0, instId);
+  e.instancias[instId].entrouNoTurno = e.turno;
+  if (sub?.conc) conceder(e, instId, sub.conc);
+  // jogada pelo Reanimum: quando sair do campo, vai para o banimento
+  if (e.instancias[instId].banirAoResolver) { e.instancias[instId].banirAoResolver = false; e.instancias[instId].banirAoSair = true; }
+  anotar(e, `${d.nome} entra em campo.`);
+  if (d.tipo === 'aliado') gatilhoConjurador(e, controlador, 'aliadoEntra');
+  const aoEntrar = decididos ?? efeitosAoEntrar(d);
+  if (aoEntrar.length) {
+    e.pilha.push({ tipo: 'gatilho', id: `p${e.proxId++}`, controlador, efeitos: aoEntrar, alvo, fonte: d.nome, incomensuravel: temIncomensuravel(d) });
+    anotar(e, `${d.nome}: gatilho ao entrar vai para a pilha.`);
+  }
 }
 
 /** Arcano que o jogador consegue juntar agora: reserva + Grau levantado + pitch de toda a mão. */
@@ -1933,8 +2037,9 @@ function jogarCarta(e: Estado, c: Extract<Comando, { tipo: 'jogar' }>): void {
     falha(d.tipo === 'aliado' ? 'Aliado sem Repentino: só na sua fase principal, com a pilha vazia.' : 'Carta findante: só na sua fase principal, com a pilha vazia.');
   if (grauEfetivo(e, c.jogador) < d.grau) falha(`Precisa de Grau ${d.grau} (você tem ${grauEfetivo(e, c.jogador)}).`);
   for (const v of d.custoValores ?? []) {
-    if (!z.grau.some((id) => defCarta(e, id).valores.includes(v))) falha(`Precisa de uma carta de ${v} no Grau.`);
+    if (!z.grau.some((id) => grauServeValor(e, c.jogador, id, v))) falha(`Precisa de uma carta de ${v} no Grau.`);
   }
+  if (d.entraSobre && !candidatosSobre(e, c.jogador, d.entraSobre).length) falha(`${d.nome} entra em cima de um ${d.entraSobre} seu: você não tem nenhum em campo.`);
   const custo = custoEfetivo(e, c.jogador, c.carta) + custoProtecao(e, c.jogador, c.alvo);
   const reserva = validarEnvio(e, c.jogador, custo, c.enviarArcano ?? [], c.carta);
   const descarte = c.descartarGrau ?? [];
@@ -2002,11 +2107,15 @@ function ativar(e: Estado, c: Extract<Comando, { tipo: 'ativar' }>): void {
     at = ativacaoDeHabilidade(h);
   }
   if (!at) falha(ehConj ? 'Este Conjurador não tem habilidade ativada.' : 'Esta carta não tem ativação.');
+  // itens nunca levantam: "virar" num item (habilidade do construtor) suspende o Conjurador (itens v2; decisão 41)
+  if (ehItem) at = itemAtivacao(at);
   const inst = e.instancias[c.carta];
   if (at.suspende && inst.suspensa) falha('A carta está suspensa.');
   if (at.suspende && recemChegado(e, c.carta)) falha('Este Aliado acabou de entrar e não é Proficiente.');
   if (ehConj && !at.repentina && !janelaFindante(e, c.jogador)) falha('Habilidade do Conjurador: só na sua fase principal, com a pilha vazia (ou se ela for Repentina).');
-  if (at.requisito?.grau && grauEfetivo(e, c.jogador) < at.requisito.grau) falha(`Precisa de Grau ${at.requisito.grau} para usar.`);
+  if (at.requisito?.grau && grauDoRequisito(e, c.jogador, at.requisito) < at.requisito.grau) falha(`Precisa de Grau ${at.requisito.grau}${at.requisito.valor ? ` de ${at.requisito.valor}` : ''} para usar.`);
+  const faltaOnde = faltaSobre(e, c.jogador, at.efeitos);
+  if (faltaOnde) falha(`Precisa de um ${faltaOnde} seu em campo.`);
   const imediatos = ['arcano', 'descontoProximaCarta', 'permitirAnularDoCemiterio', 'banirDaMao', 'potenciaMagia', 'ataqueConjuradorTurno'];
   const soArcano = at.efeitos.every((ef) => imediatos.includes(ef.tipo));
   if (!soArcano || ehConj) exigirPrioridade(e, c.jogador);

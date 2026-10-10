@@ -12,8 +12,10 @@ const de = (alvo) => (ALVO[alvo].startsWith('o ') ? 'do ' + ALVO[alvo].slice(2) 
  */
 export function textoRequisito(r) {
   if (!r || (!r.grau && !r.arcano)) return '';
-  return '(' + [r.grau ? `${r.grau}+ no Grau` : '', r.arcano ? `Pague ${r.arcano}` : ''].filter(Boolean).join(' · ') + ') ';
+  return '(' + [r.grau ? `${r.grau}+${deValor(r)} no Grau` : '', r.arcano ? `Pague ${r.arcano}` : ''].filter(Boolean).join(' · ') + ') ';
 }
+/** Requisito por Valor (09/10, Dragolize): " de Conflitüo" depois do número do Grau. */
+const deValor = (r) => (r?.valor ? ` de ${VALOR[r.valor] ?? r.valor}` : '');
 const ESCOLHA_TXT = { afetado: ' (o dono da carta atingida escolhe qual)', aleatorio: ' (ao acaso)' };
 export function descEfeito(ef) {
   const base = descEfeitoBase(ef) + (ef.escolha && ef.escolha !== 'controlador' && (ef.alcance !== 'todos') ? ESCOLHA_TXT[ef.escolha] : '');
@@ -70,7 +72,7 @@ function descEfeitoBase(ef) {
     case 'devolver': return `devolva ${ALVO[ef.alvo]} à mão do dono`;
     case 'danoTodosAliados': return `cause ${ef.valor} de dano a cada Aliado ${ef.ambos ? '(inclusive os seus)' : 'do oponente'}`;
     case 'destruirTodosAliados': return `destrua todos os Aliados${ef.ambos ? '' : ' do oponente'}`;
-    case 'anular': return 'anule uma carta na pilha';
+    case 'anular': return ef.roubar ? 'anule uma carta na pilha e ponha-a na sua mão' : 'anule uma carta na pilha';
     case 'comprar': return `compre ${ef.valor} carta${ef.valor > 1 ? 's' : ''}`;
     case 'arcano': return `ganhe ${ef.valor} de Arcano`;
     case 'arcanoOponente': return `o oponente ganha ${ef.valor} de Arcano`;
@@ -80,7 +82,7 @@ function descEfeitoBase(ef) {
     case 'olharTopo': return `olhe as ${ef.quantidade} cartas do topo do seu baralho; ponha ${ef.pegar} na mão e as outras no fundo do baralho`;
     case 'permitirAnularDoCemiterio': return 'neste turno você pode jogar do cemitério uma carta que anula outra (ela é banida ao resolver)';
     case 'potenciaMagia': return `o próximo dano ou cura de uma Temporária sua neste turno tem +${ef.valor}`;
-    case 'invocar': return `invoque ${ef.nome ?? 'uma criatura'}${ef.concessao ? ` (${textoConcessao(ef.concessao, 'ela')})` : ''}`;
+    case 'invocar': return `invoque ${ef.nome ?? 'uma criatura'}${ef.sobre ? ` em cima de um ${ef.sobre} seu (o ${ef.sobre} sai do campo)` : ''}${ef.concessao ? ` (${textoConcessao(ef.concessao, 'ela')})` : ''}`;
     case 'ataqueConjuradorTurno': return `seu Conjurador ganha +${ef.valor} de Ataque neste turno`;
     // construtor de efeitos (04/10)
     case 'perderVida': return `${ef.quem === 'oponente' ? 'o Conjurador do oponente' : 'seu Conjurador'} ${ef.secundario ? `toma ${ef.valor} de dano` : `perde ${ef.valor} de Vida`}`;
@@ -189,7 +191,7 @@ function textoCampo(ef) {
   }
 }
 export const frase = (efs) => maiuscula(juntarEfeitos(efs)) + '.';
-const reqAtivacao = (a) => (a.requisito?.grau ? `com ${a.requisito.grau}+ no Grau, ` : '');
+const reqAtivacao = (a) => (a.requisito?.grau ? `com ${a.requisito.grau}+${deValor(a.requisito)} no Grau, ` : '');
 const custoAtivacao = (a) => (a.custo || a.requisito?.arcano ? `pague ${(a.custo ?? 0) + (a.requisito?.arcano ?? 0)}` : '');
 /** Frase no meio do texto (depois de dois-pontos): começa com minúscula sem rebaixar nomes próprios como Arcano. */
 const fraseMin = (efs) => juntarEfeitos(efs) + '.';
@@ -201,7 +203,7 @@ export function textoCarta(d) {
     const canal = { arma: 'Arma', foco: 'Foco Arcano', transcritor: 'Transcritor' }[d.tipoCanal ?? (d.ataque ? 'arma' : '')] ?? 'Arma';
     p.push(d.categoriaItem === 'armadura' ? `${esp}. Defesa ${d.defesa ?? 0}, desgaste ${d.vidaDesgaste ?? 0}.`
       : d.categoriaItem === 'canal' ? (canal === 'Arma' ? `${esp}. Arma: Ataque ${d.ataque ?? 0}.` : `${esp}. ${canal}.`)
-      : `${esp}${d.competencia ? ` de ${d.competencia}` : ''}. Uso único.`);
+      : `${esp}${d.competencia ? ` de ${d.competencia}` : ''}.${!d.ativacao && d.habilidades?.some((h) => h.quando === 'ativada') ? '' : ' Uso único.'}`);
     // custo e Grau do item (pedido do autor, 04/10): para atacar (arma), para proteger (armadura) ou para usar
     const req = [d.grau ? `Grau ${d.grau}` : '', d.custo && !d.ativacao ? `pague ${d.custo}` : ''].filter(Boolean).join(' e ');
     if (canal === 'Arma' && d.categoriaItem === 'canal') p.push(req ? `Para atacar: ${req}.` : 'Atacar é de graça.');
@@ -215,6 +217,8 @@ export function textoCarta(d) {
     if (d.espinhos) p.push(`Ao proteger, causa ${d.espinhos} de dano ao atacante.`);
   }
   if (d.palavrasChave?.length) p.push(d.palavrasChave.join(', ') + '.');
+  if (d.entraSobre) p.push(`Entra em cima de um ${d.entraSobre} seu, que sai do campo.`);
+  if (d.concedeAoSubstituto) p.push(`A carta que entrar em cima desta ${textoConcessao(d.concedeAoSubstituto, 'ele')}.`);
   const prot = textoProtegido(protegidoDe(d));
   if (prot) p.push(prot);
   if (d.grauExtra) p.push(`Conta como ${d.grauExtra} carta${d.grauExtra > 1 ? 's' : ''} no Grau.`);
@@ -230,7 +234,8 @@ export function textoCarta(d) {
     p.push(`${l2.charAt(0).toUpperCase() + l2.slice(1)}: ${fraseMin(a.efeitos ?? [])}`);
   }
   if (d.pagarParaAnular !== undefined) p.push(`O oponente pode pagar ${d.pagarParaAnular} para anulá-la.`);
-  for (const h of d.habilidades ?? []) p.push(textoHabilidade(h));
+  // item (decisão 41): "virar" suspende o Conjurador (o item não levanta)
+  for (const h of d.habilidades ?? []) p.push(textoHabilidade(h, d.tipo === 'item' && h.quando === 'ativada'));
   return p.join(' ');
 }
 
@@ -250,7 +255,7 @@ export function textoHabilidade(h, conj = false) {
     const grau = Math.max(c.grau ?? 0, h.requisito?.grau ?? 0);
     const partes = [c.suspender ? (conj ? 'suspenda o Conjurador' : 'suspenda') : '', arcano ? `pague ${arcano}` : '', c.vida ? `pague ${c.vida} de Vida` : '', c.descartar ? `descarte ${c.descartar} carta${c.descartar > 1 ? 's' : ''}` : ''].filter(Boolean);
     const lista = partes.length > 1 ? partes.slice(0, -1).join(', ') + ' e ' + partes.at(-1) : partes[0] ?? 'ative';
-    const pre = grau ? `Com ${grau}+ no Grau, ${lista}` : lista.charAt(0).toUpperCase() + lista.slice(1);
+    const pre = grau ? `Com ${grau}+${deValor(h.requisito)} no Grau, ${lista}` : lista.charAt(0).toUpperCase() + lista.slice(1);
     return `${h.repentina ? 'Repentina: ' + pre.charAt(0).toLowerCase() + pre.slice(1) : pre}: ${efs}`;
   }
   if (h.quando === 'emCampo') return textoEmCampo(h, conj);

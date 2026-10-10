@@ -17,6 +17,8 @@ import { rodada3 } from '../tcg/sim/lista.ts';
 import { contextoDe } from '../tcg/sim/nucleo.ts';
 import { estiloDe, regrasDe } from '../tcg/sim/variantes.ts';
 import { cartasColecao } from '../tcg/src/cartas-colecao.ts';
+import { artesDaExpansao, cartasExpansaoDragoes, conjuradoresExpansaoDragoes } from '../tcg/src/expansao-dragoes.ts';
+import { cartaServeConjurador, itemServe } from '../tcg/src/motor.ts';
 import type { CartaDef, Catalogo } from '../tcg/src/tipos.ts';
 // @ts-ignore: módulo JS do app de testes (textos gerados a partir da mecânica)
 import { textoCarta } from '../tcg/app/textos.js';
@@ -120,13 +122,30 @@ function dados(artes: Map<string, Arte>, ident: Identidade) {
     b.lista = [...qtd].filter(([, n]) => n > 0);
   }
   if (ajustesCopias.length) console.log(`Limite de ${MAX_COPIAS} cópias: ${ajustesCopias.length} troca(s) nos baralhos prontos.\n  ${ajustesCopias.join('\n  ')}`);
+  // Expansão A Mestra dos Dragões (liberada em 09/10, decisão 41): entra depois dos Valores do site (os Valores vêm da carta)
+  // e dos baralhos prontos antigos (que não mudam). Cada Conjurador novo ganha um baralho pronto montado a partir das cartas
+  // da expansão e dos prontos dos Conjuradores que dividem um Valor com ele, com Durandis no Extra.
+  for (const c of cartasExpansaoDragoes) {
+    if (catalogo.cartas[c.id]) throw new Error(`Carta da expansão repete id: ${c.id}`);
+    const { arteExpansao, ...def } = c;
+    void arteExpansao;
+    catalogo.cartas[c.id] = def as CartaDef;
+    visual[c.id] = { arte: null, raridade: null };
+  }
+  for (const c of conjuradoresExpansaoDragoes) {
+    if (catalogo.conjuradores[c.id]) throw new Error(`Conjurador da expansão repete id: ${c.id}`);
+    const { arteExpansao, ...def } = c;
+    void arteExpansao;
+    catalogo.conjuradores[c.id] = def;
+  }
+  baralhos.push(...prontosDaExpansao(catalogo, baralhos, valoresSite.minas));
   for (const b of baralhos) {
     const erros = validarBaralho(catalogo, { conjurador: b.conjurador, cartas: b.lista.flatMap(([id, n]) => Array(n).fill(id)), itens: b.itens });
     if (erros.length) throw new Error(`Baralho pronto ${b.id} inválido: ${erros.join(' ')}`);
   }
   const conteudo = {
     variante: v.id, regras: { ...REGRAS_PADRAO, ...regrasDe(v) }, catalogo, baralhos, visual,
-    artesFinais: artesFinaisAprovadas(catalogo),
+    artesFinais: { ...artesFinaisAprovadas(catalogo), ...artesDaExpansaoNoSite(catalogo) },
     /** Mina Funda de cada Valor (o construtor completa o baralho com as do Conjurador). */
     minas: valoresSite.minas,
     /** O GPT já entregou o módulo de efeitos da mesa (public/js/mesa-efeitos-codex.js)? */
@@ -152,6 +171,45 @@ const MAPA_FINAIS = raizArcano + 'cartas/entregas/lote-site-v1.visual.json';
 /** Outras entregas de artes finais no mesmo formato (cartas provisórias, 05/10). */
 const MAPAS_EXTRAS = ['cartas-provisorias-v1', 'artes-rapidas-jogo', 'artes-rapidas-valores'].map((n) => raizArcano + 'cartas/entregas/' + n + '.visual.json');
 const origemFinal = new Map<string, string>();
+type Pronto = { id: string; conjurador: string; nome: string; estilo: unknown; lista: [string, number][]; itens: string[] };
+/** Baralhos prontos dos Conjuradores da expansão: 2 de cada carta da expansão que serve, depois as cartas dos prontos que dividem um Valor (até 3 cópias). */
+function prontosDaExpansao(cat: Catalogo, antigos: Pronto[], minas: Record<string, string>): Pronto[] {
+  const exp = cartasExpansaoDragoes.filter((c) => c.tipo !== 'item' && !c.ficha);
+  return conjuradoresExpansaoDragoes.map((cj) => {
+    const conj = cat.conjuradores[cj.id];
+    const qtd = new Map<string, number>();
+    const total = () => [...qtd.values()].reduce((s, n) => s + n, 0);
+    const add = (id: string, n: number) => { const t = Math.min(n, MAX_COPIAS - (qtd.get(id) ?? 0), 60 - total()); if (t > 0) qtd.set(id, (qtd.get(id) ?? 0) + t); };
+    for (const c of exp) if (cartaServeConjurador(c, conj)) add(c.id, 2);
+    for (const v of conj.valores) if (minas[v]) add(minas[v], 3);
+    const fontes = antigos.filter((b) => cat.conjuradores[b.conjurador].valores.some((v) => conj.valores.includes(v)));
+    // rodízio entre os prontos que dividem um Valor, uma cópia por vez, para o baralho misturar os dois Valores
+    for (let rodada = 0; rodada < MAX_COPIAS && total() < 60; rodada++)
+      for (let i = 0; total() < 60 && fontes.some((b) => i < b.lista.length); i++)
+        for (const b of fontes) { const x = b.lista[i]; if (x && x[1] > rodada && cartaServeConjurador(cat.cartas[x[0]], conj)) add(x[0], 1); }
+    if (total() < 60) throw new Error(`Pronto da expansão ${cj.id}: só ${total()} cartas`);
+    const base = fontes[0];
+    const item = (esp: string) => base.itens.find((id) => cat.cartas[id]?.categoriaItem === esp && itemServe(conj, cat.cartas[id])) ?? { canal: 'item-canal-cajado', armadura: 'item-armadura-gibao' }[esp]!;
+    return { id: `pronto-${cj.id}`, conjurador: cj.id, nome: `${conj.nome.split(',')[0]} (pronto)`, estilo: base.estilo, lista: [...qtd], itens: [item('canal'), item('armadura'), 'md-item-durandis'] };
+  });
+}
+
+/** Artes da expansão A Mestra dos Dragões (manifesto da coleção de 90 artes): todas as escolhidas pelo autor para a expansão. */
+const PASTA_EXPANSAO = raizArcano + 'expansoes/a-mestra-dos-dragoes/arte/';
+function artesDaExpansaoNoSite(cat: Catalogo): Record<string, string> {
+  const man = JSON.parse(readFileSync(PASTA_EXPANSAO + 'colecao-completa-90.visual.json', 'utf8')) as { itens: { id: string; arquivo: string; estado?: string }[] };
+  const porNumero = new Map(man.itens.filter((i) => !/rejeit|descart|retirad/i.test(i.estado ?? '')).map((i) => [i.id, i.arquivo]));
+  const r: Record<string, string> = {};
+  for (const [id, numero] of Object.entries(artesDaExpansao())) {
+    const arq = porNumero.get(numero);
+    const existe = cat.cartas[id] || cat.conjuradores[id.replace(/^conjurador-/, '')];
+    if (!arq || !existe || !existsSync(PASTA_EXPANSAO + arq)) continue;
+    const nome = arq.replace(/^.*[/]/, '').replace(/.png$/i, '');
+    r[id] = nome;
+    origemFinal.set(nome, PASTA_EXPANSAO + arq);
+  }
+  return r;
+}
 function artesFinaisAprovadas(cat: Catalogo): Record<string, string> {
   const itens = [MAPA_FINAIS, ...MAPAS_EXTRAS].filter((m) => existsSync(m)).flatMap((m) => (JSON.parse(readFileSync(m, 'utf8')).cartas ?? []) as { id: string; arquivo?: string; estado?: string; okGpt?: boolean }[]);
   const r: Record<string, string> = {};

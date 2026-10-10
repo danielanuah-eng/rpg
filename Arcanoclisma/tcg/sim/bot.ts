@@ -1,5 +1,5 @@
 // Jogador guloso para simulações. Não é forte: serve para expor quais mecânicas são usadas, ignoradas ou abusadas.
-import { ataqueConjurador, ativacaoDeHabilidade, custoEfetivo, custoProtecao, origemDaCarta, defCarta, custoAtaqueConjurador, defConjurador, ehRepentina, etereo as etereoMotor, GRAU_MAXIMO, grauAtaqueConjurador, grauEfetivo, recemChegado, efeitoSemConjurador, protegidaDe, protegidoDe, candidatosReanimar, custoReanimar, efeitosAoJogar, efeitosAoEntrar, arcanoNaHora, itemServe, podePagarCusto } from '../src/motor.ts';
+import { ataqueConjurador, ativacaoDeHabilidade, custoEfetivo, custoProtecao, origemDaCarta, defCarta, custoAtaqueConjurador, defConjurador, ehRepentina, etereo as etereoMotor, GRAU_MAXIMO, grauAtaqueConjurador, grauEfetivo, recemChegado, efeitoSemConjurador, protegidaDe, protegidoDe, candidatosReanimar, custoReanimar, efeitosAoJogar, efeitosAoEntrar, arcanoNaHora, itemServe, podePagarCusto, candidatosSobre, faltaSobre, grauDoRequisito, itemAtivacao } from '../src/motor.ts';
 import type { Ativacao, Catalogo, CartaDef, CategoriaItem, Comando, Efeito, Estado, Jogador, Pendencia } from '../src/tipos.ts';
 
 /** Itens básicos de cada espaço: o bot usa quando nenhum item do espaço serve ao Conjurador. */
@@ -309,6 +309,8 @@ function planejarJogada(e: Estado, j: Jogador, est: Estilo, apenasRepentinas: bo
     if (d.grau > grauEfetivo(e, j) || (d.descartaGrau ?? 0) > z.grau.length) continue;
     // custo de Valor: precisa de uma carta daquele Valor no Grau (senão o motor recusa a jogada)
     if ((d.custoValores ?? []).some((v) => !z.grau.some((g) => defCarta(e, g).valores.includes(v)))) continue;
+    // Dragolize (decisão 41): a carta só entra em cima de um Ovo (ou outra carta do subtipo) seu
+    if (d.entraSobre && !candidatosSobre(e, j, d.entraSobre).length) continue;
     // janela de combate: só serve dano que tira o inimigo do combate antes do dano (ele não chega a bater)
     const efc = d.efeitos?.[0];
     const it = alvoCombate
@@ -387,13 +389,25 @@ function planejarAtivacao(e: Estado, j: Jogador, est: Estilo): Comando | null {
     if ((at.suspende && (e.instancias[id].suspensa || recemChegado(e, id))) || at.efeitos.every((ef) => ef.tipo === 'arcano')) continue;
     const extras = id === z.conjuradorId ? custosExtrasConj(e, j, at) : {};
     if (!extras) continue;
-    if (at.requisito?.grau && grauEfetivo(e, j) < at.requisito.grau) continue; // requisito do Editor (04/10)
+    if (at.requisito?.grau && grauDoRequisito(e, j, at.requisito) < at.requisito.grau) continue; // requisito do Editor (04/10), por Valor (decisão 41)
+    if (faltaSobre(e, j, at.efeitos)) continue; // Dragolize: falta o Ovo
     const sec = custoSecundarios(e, j, at.efeitos);
     if (sec === null || sec > 4) continue; // efeitos secundários caros demais para uma ativação
     const ef = at.efeitos[0];
     let alvo: string | undefined;
     let necessario = at.custo + (at.requisito?.arcano ?? 0);
-    if (ef.tipo === 'comprar' || ef.tipo === 'olharTopo') { if (z.mao.length > 5) continue; }
+    if (ef.tipo === 'comprar' || ef.tipo === 'olharTopo' || ef.tipo === 'olharTopoPara') { if (z.mao.length > 5) continue; }
+    // Dragolize (decisão 41): Ovos e fichas valem enquanto houver espaço no campo; pôr carta no Grau, enquanto não chega ao máximo
+    else if (ef.tipo === 'invocar') { if (z.campo.length >= 8) continue; }
+    else if (ef.tipo === 'colocarNoGrau') { if (z.grau.length >= GRAU_MAXIMO - 1 || (ef.de === 'mao' && z.mao.length < 3)) continue; }
+    else if (ef.tipo === 'campo' && ef.alcance === 'alvo' && ef.lado === 'inimigo' && (ef.acao === 'naoAtaca' || ef.acao === 'suspender')) {
+      // contém o Aliado inimigo mais forte que ainda pode atacar
+      alvo = adv.campo.filter((a) => ehAliado(e, a) && !e.instancias[a].suspensa && atk(e, a) >= 3 && !protegidaDe(e, a, j)).sort((a, b) => atk(e, b) - atk(e, a))[0];
+      if (!alvo) continue;
+    } else if (ef.tipo === 'campo' && ef.alcance === 'alvo' && ef.lado === 'proprio' && (ef.acao === 'aumentarVida' || ef.acao === 'aumentarAtaque')) {
+      alvo = z.campo.filter((a) => ehAliado(e, a)).sort((a, b) => valorPerm(e, b) - valorPerm(e, a))[0];
+      if (!alvo) continue;
+    }
     else if (ef.tipo === 'devolver') {
       // piscar um Aliado seu: reaproveita "ao entrar" ou salva um Aliado valioso machucado
       alvo = z.campo.filter((a) => ehAliado(e, a) && (!!defCarta(e, a).aoEntrar?.length || (valorPerm(e, a) >= 5 && e.instancias[a].dano >= vidaMax(e, a) - 2 && e.instancias[a].dano > 0)))
@@ -484,8 +498,12 @@ function planejarItem(e: Estado, j: Jogador, est: Estilo, antesDeJogar: boolean)
       const livre = disp - necessario;
       const destrava = z.mao.some((c) => { const dc = defCarta(e, c); const ce = custoEfetivo(e, j, c); return dc.grau <= g && ce > livre && ce <= livre + ganho; });
       if (!destrava) continue;
-    } else if (ef.tipo === 'comprar' || ef.tipo === 'olharTopo') {
+    } else if (ef.tipo === 'comprar' || ef.tipo === 'olharTopo' || ef.tipo === 'olharTopoPara') {
       if (z.mao.length > 3) continue;
+    } else if (ef.tipo === 'campo' && ef.alcance === 'alvo' && ef.lado === 'inimigo' && (ef.acao === 'suspender' || ef.acao === 'naoAtaca')) {
+      // Luvas de Contenção (decisão 41): segura o Aliado inimigo mais forte, de pé
+      alvo = adv.campo.filter((a) => ehAliado(e, a) && !e.instancias[a].suspensa && atk(e, a) >= 4).sort((a, b) => atk(e, b) - atk(e, a))[0];
+      if (!alvo) continue;
     } else if (ef.tipo === 'dano' && (ef.alvo === 'escolhido' || ef.alvo === 'escolhidoAliado')) {
       alvo = alvosInimigos(e, j, est).filter((a) => vidaRest(e, a) <= ef.valor).sort((a, b) => valorPerm(e, b) - valorPerm(e, a))[0];
       if (!alvo && ef.alvo === 'escolhido' && vidaRest(e, adv.conjuradorId) <= ef.valor) alvo = adv.conjuradorId;
@@ -511,6 +529,43 @@ function planejarItem(e: Estado, j: Jogador, est: Estilo, antesDeJogar: boolean)
     return { tipo: 'ativar', jogador: j, carta: id, alvo, enviarArcano: [], ...extras };
   }
   return null;
+}
+
+/**
+ * Habilidades ativadas dos itens (decisão 41), como as de Durandis: invoca o maior Dragão que o Grau daquele Valor, o Arcano
+ * e um Ovo permitem. Suspende o Conjurador (o item não levanta), então só quando o Dragão vale mais que o ataque dele.
+ */
+function planejarHabilidadeDeItem(e: Estado, j: Jogador): Comando | null {
+  const z = e.jogadores[j];
+  if (e.instancias[z.conjuradorId].suspensa) return null;
+  let melhor: { id: string; hab: number; custo: number; valor: number } | null = null;
+  for (const id of z.itens ?? []) {
+    const d = defCarta(e, id);
+    if (grauEfetivo(e, j) < d.grau) continue;
+    (d.habilidades ?? []).forEach((h, i) => {
+      if (h.quando !== 'ativada') return;
+      const at = itemAtivacao(ativacaoDeHabilidade(h));
+      if (at.requisito?.grau && grauDoRequisito(e, j, at.requisito) < at.requisito.grau) return;
+      if (faltaSobre(e, j, at.efeitos) || (at.descartar ?? 0) > 0 || at.danoNoConjurador) return;
+      const custo = at.custo + (at.requisito?.arcano ?? 0);
+      if (custo > arcanoAlcancavel(e, j)) return;
+      const inv = at.efeitos.find((ef) => ef.tipo === 'invocar');
+      if (!inv || inv.tipo !== 'invocar' || z.campo.length >= 8) return;
+      const f = e.catalogo.cartas[inv.carta];
+      const valor = (f?.ataque ?? 0) + (f?.vida ?? 0) + custo;
+      if (!melhor || valor > melhor.valor) melhor = { id, hab: i, custo, valor };
+    });
+  }
+  if (!melhor) return null;
+  const m = melhor as { id: string; hab: number; custo: number; valor: number };
+  if (z.arcano < m.custo) {
+    const mana = manaPerm(e, j)[0];
+    if (mana) return { tipo: 'ativar', jogador: j, carta: mana };
+    const g = grauUsavel(e, j)[0];
+    if (!g) return null;
+    return { tipo: 'suspenderGrau', jogador: j, carta: g };
+  }
+  return { tipo: 'ativar', jogador: j, carta: m.id, habilidade: m.hab, enviarArcano: [] };
 }
 
 /** Alquimista Ricardo: ativa o desconto antes de jogar quando há algo para jogar. */
@@ -861,7 +916,7 @@ export function decidir(e: Estado, j: Jogador, est: Estilo): Comando {
       const custos = z.mao.map((id) => defCarta(e, id)).filter((d) => ehRepentina(d) && d.grau <= z.grau.length).map((d) => d.custo);
       if (custos.length && Math.min(...custos) <= z.grau.length) reserva = Math.min(...custos);
     }
-    return planejarDesconto(e, j, est) ?? planejarItem(e, j, est, true) ?? planejarJogada(e, j, est, false, undefined, reserva) ?? planejarItem(e, j, est, false) ?? planejarAtivacao(e, j, est) ?? planejarAtaque(e, j, est) ?? planejarAtaqueConj(e, j, est) ?? passar;
+    return planejarDesconto(e, j, est) ?? planejarItem(e, j, est, true) ?? planejarJogada(e, j, est, false, undefined, reserva) ?? planejarItem(e, j, est, false) ?? planejarHabilidadeDeItem(e, j) ?? planejarAtivacao(e, j, est) ?? planejarAtaque(e, j, est) ?? planejarAtaqueConj(e, j, est) ?? passar;
   }
   if (e.ativo !== j) {
     const topo = e.pilha[e.pilha.length - 1];

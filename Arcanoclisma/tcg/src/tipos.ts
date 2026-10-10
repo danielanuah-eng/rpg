@@ -100,7 +100,12 @@ export type AcaoCampo = 'conceder' | 'dano' | 'curar' | 'destruir' | 'devolver' 
  * grau = mínimo de cartas no seu Grau para acontecer; arcano = Arcano pago na hora (reserva, depois Grau levantado).
  * Sem cumprir, aquela linha não acontece (as outras da carta continuam).
  */
-export interface Requisito { grau?: number; arcano?: number }
+export interface Requisito { grau?: number; arcano?: number;
+  /**
+   * Dragolize (09/10, decisão 41): o Grau mínimo conta só as cartas deste Valor no seu Grau (mais o grauExtra das suas
+   * permanentes desse Valor). Vazio = qualquer carta do Grau.
+   */
+  valor?: string }
 
 /**
  * Quem escolhe o alvo de um efeito de alvo único (pedido do autor, 04/10): quem jogou/ativou (padrão), o jogador atingido
@@ -128,7 +133,7 @@ type EfeitoBase =
   /** Destrói todos os Aliados do oponente (ambos: false) ou de todos os jogadores (ambos: true). Rodada 6. */
   | { tipo: 'destruirTodosAliados'; ambos: boolean }
   /** Anula uma carta na pilha (vai para o cemitério do dono). */
-  | { tipo: 'anular'; alvo: 'pilha' }
+  | { tipo: 'anular'; alvo: 'pilha'; /** Dragolize (09/10): a carta anulada vai para a mão de quem anulou ("roubar a magia"). */ roubar?: boolean }
   | { tipo: 'curar'; valor: number; alvo: AlvoEfeito }
   | { tipo: 'destruir'; alvo: 'escolhido' | 'escolhidoAliado' }
   | { tipo: 'comprar'; valor: number }
@@ -153,7 +158,12 @@ type EfeitoBase =
   /** Itens (03/10, noite). Foco Arcano: neste turno, o próximo efeito de dano ou cura de uma Temporária sua tem +N. */
   | { tipo: 'potenciaMagia'; valor: number }
   /** Itens (03/10, noite). Põe no seu campo uma ficha (carta do catálogo que não vai em baralho, ex.: Espírito Invocado). */
-  | { tipo: 'invocar'; carta: string; /** Nome para o texto da carta. */ nome?: string; /** A ficha já entra com isto. */ concessao?: Concessao }
+  | { tipo: 'invocar'; carta: string; /** Nome para o texto da carta. */ nome?: string; /** A ficha já entra com isto. */ concessao?: Concessao;
+      /**
+       * Dragolize (09/10, decisão 41): a ficha entra em cima de uma carta sua em campo com este subtipo (ex.: "Ovo"), que sai
+       * do campo (a ficha deixa de existir; carta comum vai para o cemitério). Sem nenhuma, não acontece. Vazio: o entraSobre da ficha.
+       */
+      sobre?: string }
   /** Itens (03/10, noite). Seu Conjurador ganha +N de Ataque neste turno. */
   | { tipo: 'ataqueConjuradorTurno'; valor: number }
   /**
@@ -187,7 +197,9 @@ type EfeitoBase =
    */
   | { tipo: 'pagar'; bloco?: number; fonteId?: string; hab?: number }
   /** Interno (05/10): depois de um custo pago ao jogar, pede a próxima decisão de custo da carta na pilha. */
-  | { tipo: 'proximoCusto'; item: string };
+  | { tipo: 'proximoCusto'; item: string }
+  /** Interno (09/10): a permanente que saiu da pilha entra em campo em cima da carta escolhida (entraSobre com várias opções). */
+  | { tipo: 'entrarSobre'; instId: string; alvo?: string; decididos?: Efeito[] };
 
 /** Arma: efeitos ao atacar (pedido do autor, 04/10). */
 export interface AoAtacar {
@@ -289,8 +301,17 @@ export interface CartaDef {
   exclusivoDe?: string[];
   /** Ficha: carta criada por efeito (invocar); não entra em baralho. */
   ficha?: boolean;
+  /**
+   * Dragolize (09/10, decisão 41): a carta só entra em campo em cima de uma carta sua com este subtipo (ex.: "Ovo"), que sai do
+   * campo (a ficha deixa de existir). Vale ao ser jogada e ao ser invocada (efeito invocar). Sem nenhuma, não pode ser jogada.
+   */
+  entraSobre?: string;
+  /** Expansão da carta (ex.: 'a-mestra-dos-dragoes'): os Valores vêm da própria carta (o site não os redistribui). */
+  expansao?: string;
   /** Carta provisória (04/10, madrugada): criada para devolver a identidade aos baralhos após a regra das cores; o autor revisa no Editor. */
   provisoria?: boolean;
+  /** Dragolize (09/10, decisão 41): a carta que entra em campo em cima desta (substituindo-a, entraSobre/invocar sobre) ganha isto. */
+  concedeAoSubstituto?: Concessao;
   /**
    * Arma (Canal): o que acontece quando o Conjurador ataca com ela (pedido do autor, 04/10). O Arcano pago e o Grau
    * mínimo para atacar são o custo e o Grau da própria carta do item (podem ser 0).
@@ -356,6 +377,8 @@ export interface ConjuradorDef {
   habilidade: string;
   /** Versão mecânica da habilidade (o texto fica em `habilidade`). */
   poder?: PoderConjurador;
+  /** Expansão do Conjurador (ex.: 'a-mestra-dos-dragoes'). */
+  expansao?: string;
 }
 
 export interface Catalogo {
@@ -529,12 +552,12 @@ export type Comando =
   | { tipo: 'escolherInicio'; jogador: Jogador; primeiro: Jogador }
   | { tipo: 'colocarGrau'; jogador: Jogador; carta: string }
   | { tipo: 'suspenderGrau'; jogador: Jogador; carta: string }
-  | { tipo: 'jogar'; jogador: Jogador; carta: string; alvo?: string; descartarGrau?: string[]; enviarArcano?: string[]; /** Protegido do alvo (nome antigo dos campos mantido): cartas da mão e do Grau que pagam. */ protecaoDescartar?: string[]; protecaoGrau?: string[] }
+  | { tipo: 'jogar'; jogador: Jogador; carta: string; alvo?: string; descartarGrau?: string[]; enviarArcano?: string[]; /** Protegido do alvo (nome antigo dos campos mantido): cartas da mão e do Grau que pagam. */ protecaoDescartar?: string[]; protecaoGrau?: string[]; }
   | { tipo: 'atacar'; jogador: Jogador; atacante: string; alvo: string; enviarArcano?: string[] }
   | { tipo: 'bloquear'; jogador: Jogador; /** Um bloqueador (null: não bloqueia). */ bloqueador?: string | null; /** Vários bloqueadores (decisão 20); vale no lugar de bloqueador. */ bloqueadores?: string[]; /** Conjurador bloqueando: usar a Armadura? Sem o campo, usa. */ usarArmadura?: boolean }
   | { tipo: 'distribuirDano'; jogador: Jogador; /** Dano por bloqueador (soma = Ataque do atacante). Sem o campo: distribuição padrão, que derruba o máximo de bloqueadores. */ distribuicao?: Record<string, number> }
   | { tipo: 'descartar'; jogador: Jogador; cartas: string[] }
-  | { tipo: 'ativar'; jogador: Jogador; carta: string; alvo?: string; enviarArcano?: string[]; /** Cartas da mão descartadas como custo (Ativacao.descartar). */ descartarCusto?: string[]; /** Habilidade ativada do construtor (índice em habilidades). */ habilidade?: number; /** Proteção mágica do alvo: cartas da mão e do Grau pagas. */ protecaoDescartar?: string[]; protecaoGrau?: string[] }
+  | { tipo: 'ativar'; jogador: Jogador; carta: string; alvo?: string; enviarArcano?: string[]; /** Cartas da mão descartadas como custo (Ativacao.descartar). */ descartarCusto?: string[]; /** Habilidade ativada do construtor (índice em habilidades). */ habilidade?: number; /** Proteção mágica do alvo: cartas da mão e do Grau pagas. */ protecaoDescartar?: string[]; protecaoGrau?: string[]; }
   | { tipo: 'pagarAnulacao'; jogador: Jogador; pagar: boolean; enviarArcano?: string[] }
   /** Responde a pendência pagarCusto (05/10). O Arcano sai da reserva, do Grau levantado e das cartas enviadas; descarte, Grau e sacrifício são escolhidos em seguida. */
   | { tipo: 'pagarCusto'; jogador: Jogador; pagar: boolean; enviarArcano?: string[] }

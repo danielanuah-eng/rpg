@@ -27,9 +27,11 @@ test('coleção nova: ids únicos, artes aprovadas e números dentro da régua',
   }
 });
 
-test('identidade: toda carta tem arte, menos os 7 itens originais (pedido ao GPT)', () => {
-  const sem = Object.entries(D.visual as Record<string, { arte: string | null }>).filter(([, v]) => !v.arte).map(([id]) => id).sort();
-  assert.deepEqual(sem, ['item-armadura-couraca', 'item-armadura-gibao', 'item-canal-cajado', 'item-canal-lamina', 'item-canal-lanca', 'item-extra-elixir', 'item-extra-pocao']);
+test('identidade: toda carta tem arte, menos os 7 itens originais (pedido ao GPT) e Durandis (expansão, sem arte ainda)', () => {
+  // a expansão dos dragões (decisão 41) usa as artes finais do manifesto dela (artesFinais), não o catálogo de artes do RPG
+  const sem = Object.entries(D.visual as Record<string, { arte: string | null }>).filter(([id, v]) => !v.arte && !(D.catalogo.cartas[id]?.expansao && D.artesFinais[id])).map(([id]) => id).sort();
+  assert.deepEqual(sem, ['item-armadura-couraca', 'item-armadura-gibao', 'item-canal-cajado', 'item-canal-lamina', 'item-canal-lanca', 'item-extra-elixir', 'item-extra-pocao', 'md-item-durandis']);
+  for (const c of Object.values(D.catalogo.conjuradores as Record<string, { id: string; expansao?: string }>)) if (c.expansao) assert.ok(D.artesFinais['conjurador-' + c.id], c.id);
   // as 9 Minas Fundas (uma por Valor) dividem a arte provisória até o GPT fazer uma para cada
   const usadas = Object.entries(D.visual as Record<string, { arte: string | null }>).filter(([id]) => !id.startsWith('base-recurso--')).map(([, v]) => v.arte).filter(Boolean);
   assert.equal(new Set(usadas).size, usadas.length, 'arte usada em duas cartas');
@@ -133,9 +135,9 @@ test('sigilo do "tirar da mão" (04/10, noite): olhando, só quem controla o efe
   for (const id of e.jogadores[1].mao) assert.ok(!w0.pendencia.cartas.includes(id), 'nem os ids reais');
 });
 
-test('regra das cores (decisão 37): os 9 prontos valem; o Worker (validarBaralho) recusa 2 Valores com só 1 em comum e "Corrigir automaticamente" conserta', () => {
+test('regra das cores (decisão 37): os 34 prontos (9 + 25 da expansão) valem; o Worker (validarBaralho) recusa 2 Valores com só 1 em comum e "Corrigir automaticamente" conserta', () => {
   const C = D.catalogo as Catalogo;
-  assert.equal(D.baralhos.length, 9);
+  assert.equal(D.baralhos.length, 34);
   for (const b of D.baralhos as { id: string; conjurador: string; lista: [string, number][]; itens: string[] }[]) {
     assert.deepEqual(validarBaralho(C, { conjurador: b.conjurador, cartas: b.lista.flatMap(([id, n]) => Array(n).fill(id)), itens: b.itens }, D.tamanhoBaralho), [], b.id);
     assert.ok(b.lista.every(([, n]) => n <= D.maxCopias), b.id);

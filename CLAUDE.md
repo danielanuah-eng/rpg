@@ -6,11 +6,11 @@ Ler `coordenacao/site-online/VALORES-E-RARIDADE-03-10.md` e a entrega `Arcanocli
 
 ## Prioridade e autorização atuais (03/10/2026)
 
-Codex está refazendo as 151 artes do jogo atual, carta por carta, com cenas novas e integradas; consuma `Arcanoclisma/cartas/entregas/lote-site-v1.visual.json` por ID. Ler `coordenacao/site-online/INTERACOES-E-NITIDEZ.md` para o pedido de arraste, pagamento confirmado, retorno à mão, tela cheia, efeitos particulares de resolução e cartas dentro da área azul do campo. Codex cria arte e movimentos; você integra regras, alvos, custos e eventos. **O autor autorizou push automático das entregas concluídas e integração com você nesta conversa**, substituindo a exigência anterior de perguntar a cada push desse trabalho. A expansão de 90 cartas A Mestra dos Dragões ainda exige liberação específica para entrar em jogo ou ter suas cartas alteradas.
+Codex está refazendo as 151 artes do jogo atual, carta por carta, com cenas novas e integradas; consuma `Arcanoclisma/cartas/entregas/lote-site-v1.visual.json` por ID. Ler `coordenacao/site-online/INTERACOES-E-NITIDEZ.md` para o pedido de arraste, pagamento confirmado, retorno à mão, tela cheia, efeitos particulares de resolução e cartas dentro da área azul do campo. Codex cria arte e movimentos; você integra regras, alvos, custos e eventos. **O autor autorizou push automático das entregas concluídas e integração com você nesta conversa**, substituindo a exigência anterior de perguntar a cada push desse trabalho. A expansão A Mestra dos Dragões foi liberada pelo autor em 09/10/2026.
 
-## Expansão bloqueada: A Mestra dos Dragões (03/10/2026)
+## Expansão liberada: A Mestra dos Dragões (09/10/2026)
 
-Pedido atual do autor: Codex produz somente as artes desta expansão, que introduzirá Ciantia. **Você só poderá colocar a expansão em jogo ou criar/alterar suas cartas quando o autor liberar explicitamente.** A aprovação das imagens e uma eventual autorização de push não constituem essa liberação. Consulte `Arcanoclisma/expansoes/a-mestra-dos-dragoes/expansao.json` e `AGENTS.md`; inicialmente `liberacaoDoAutor.concedida` é false. Esta restrição aplica-se também às propostas de Ciantia/Philgard destinadas a essa expansão. Nomes, descrições e categorias visuais não autorizam regras, custos, raridades jogáveis, balanceamento ou inclusão em baralhos.
+O autor liberou em 09/10/2026: "pode lançar a expansão de dragões". Claude pode colocar a expansão em jogo e criar/alterar suas cartas. Ver `Arcanoclisma/expansoes/a-mestra-dos-dragoes/expansao.json` (`liberacaoDoAutor.concedida: true`). As artes não definem regras: custos, efeitos e balanceamento seguem as decisões do autor.
 
 ## Etapa atual: site online — gestão com Codex (03/10/2026)
 

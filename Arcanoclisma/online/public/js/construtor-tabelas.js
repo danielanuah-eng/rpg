@@ -119,7 +119,7 @@ export const EFEITOS = {
   aumentarAtaque: { rot: 'Aumentar Ataque', ...campoPadrao('aumentarAtaque', [n('valor', 'Quanto', 1), sel('duracao', 'Duração', DURACAO)]) },
   aumentarVida: { rot: 'Aumentar Vida', ...campoPadrao('aumentarVida', [n('valor', 'Quanto', 2), sel('duracao', 'Duração', DURACAO)]) },
   conceder: { rot: 'Conceder palavras-chave / condições', ...campoPadrao('conceder', [conc('concessao', 'Concede')]) },
-  invocar: { rot: 'Invocar uma ficha', fixo: { tipo: 'invocar' }, campos: [sel('carta', 'Ficha', () => FICHAS), conc('concessao', 'A ficha entra com')] },
+  invocar: { rot: 'Invocar uma ficha', fixo: { tipo: 'invocar' }, campos: [sel('carta', 'Ficha', () => FICHAS), conc('concessao', 'A ficha entra com'), txt('sobre', 'Entra em cima de (Dragolize: subtipo, ex.: Ovo; vazio = solta)'), txt('nome', 'Nome no texto da carta')] },
   comprar: { rot: 'Comprar cartas', fixo: { tipo: 'comprar' }, campos: [n('valor', 'Quantas', 1)] },
   arcano: { rot: 'Gerar Arcano', fixo: { tipo: 'arcano' }, campos: [n('valor', 'Quanto', 1)] },
   arcanoOponente: { rot: 'O oponente ganha Arcano', fixo: { tipo: 'arcanoOponente' }, campos: [n('valor', 'Quanto', 1)] },
@@ -135,7 +135,7 @@ export const EFEITOS = {
   secDescartar: { rot: 'Tirar cartas da própria mão (descartar ou banir)', grupo: 'secundario', fixo: { tipo: 'descartar', secundario: true }, campos: [ACAO_MAO, n('valor', 'Quantas', 1), comLeitura(sel('modo', 'Como', MODO_MAO.filter(([k]) => k !== 'olhando')), modoMao), sel('quem', 'Quem', [['voce', 'Quem jogou/ativou'], ['oponente', 'O oponente']])] },
   secSacrificar: { rot: 'Sacrifique um Aliado (o dono escolhe; não mira)', grupo: 'secundario', fixo: { tipo: 'sacrificar', secundario: true }, campos: [n('valor', 'Quantas', 1), QUEM_SEC] },
   secGrau: { rot: 'Mandar cartas do Grau ao cemitério (o dono escolhe)', grupo: 'secundario', fixo: { tipo: 'grauAoCemiterio', secundario: true }, campos: [n('valor', 'Quantas', 1), QUEM_SEC] },
-  anular: { rot: 'Anular uma carta na pilha', fixo: { tipo: 'anular', alvo: 'pilha' }, campos: [] },
+  anular: { rot: 'Anular uma carta na pilha', fixo: { tipo: 'anular', alvo: 'pilha' }, campos: [bool('roubar', 'A carta anulada vai para a sua mão (roubar a magia)')] },
   descontoProximaCarta: { rot: 'Desconto na próxima carta do turno', fixo: { tipo: 'descontoProximaCarta' }, campos: [n('valor', 'Quanto', 1)] },
   // Editor de Conjuradores (04/10): efeitos dos 9 Conjuradores e dos itens, que antes só existiam no JSON
   // reanimar (04/10, noite): quem controla escolhe no cemitério ao resolver e paga na hora; funciona em qualquer condição

@@ -37,7 +37,7 @@ const COMPROMETIMENTOS = ['Invocador', 'Brigão', 'Parrudão da quebrada', 'Habi
 const NUM_CARTA = [['custo', 'Custo'], ['grau', 'Grau'], ['arcanoGerado', 'Gera Arcano'], ['ataque', 'Ataque'], ['vida', 'Vida'], ['defesa', 'Defesa (armadura)'], ['vidaDesgaste', 'Desgaste (armadura)'], ['descartaGrau', 'Descarta do Grau'], ['pagarParaAnular', 'Pagar para anular'], ['grauExtra', 'Grau extra'], ['espinhos', 'Espinhos (armadura)']];
 const NUM_CONJ = [['vida', 'Vida'], ['maoInicial', 'Mão inicial'], ['compraFinal', 'Compra no Final'], ['danoBasico', 'Dano básico'], ['custoAtaque', 'Custo de ataque']];
 /** Campos de mecânica editados como JSON. Protegido (04/10, noite) fica no construtor; `protecao` (nome antigo) só sai: é convertido em `protegido`. */
-const MEC_CARTA = ['efeitos', 'aoEntrar', 'aoDanoConjurador', 'ativacao', 'custoValores', 'aoAtacar', 'aoProteger', 'habilidades', 'protegido'];
+const MEC_CARTA = ['efeitos', 'aoEntrar', 'aoDanoConjurador', 'ativacao', 'custoValores', 'aoAtacar', 'aoProteger', 'habilidades', 'protegido', 'concedeAoSubstituto'];
 const igual = (a, b) => JSON.stringify(a ?? null) === JSON.stringify(b ?? null);
 /** Números citados no texto (efeitos, gatilhos, ativação, Protegido, pagar para anular, descarte do Grau; poder do Conjurador). */
 const NUM_TEXTO_CARTA = [...MEC_CARTA, 'pagarParaAnular', 'descartaGrau', 'grauExtra'];
@@ -92,7 +92,10 @@ function linhasComRequisito(mec, conjur) {
     efs(mec.aoEntrar, 'aoEntrar', 'Ao entrar');
     efs(mec.aoDanoConjurador, 'aoDanoConjurador', 'Ao causar dano ao Conjurador');
     if (mec.ativacao) { l.push({ cam: 'ativacao', rot: 'Ativação (inteira)', req: mec.ativacao.requisito }); efs(mec.ativacao.efeitos, 'ativacao.efeitos', 'Ativação, efeito'); }
-    (mec.habilidades ?? []).forEach((h, k) => efs(h.efeitos, `habilidades.${k}.efeitos`, `Habilidade ${k + 1}, efeito`));
+    (mec.habilidades ?? []).forEach((h, k) => {
+      if (h.quando === 'ativada') l.push({ cam: `habilidades.${k}`, rot: `Habilidade ${k + 1} (inteira)`, req: h.requisito });
+      efs(h.efeitos, `habilidades.${k}.efeitos`, `Habilidade ${k + 1}, efeito`);
+    });
     efs(mec.aoAtacar?.efeitos, 'aoAtacar.efeitos', 'Arma, ao atacar');
     efs(mec.aoProteger, 'aoProteger', 'Armadura, ao proteger');
   }
@@ -188,7 +191,7 @@ export async function telaEditor(tela, partes, ctx) {
     <aside class="editor-lista painel">
       <div class="titulo-secao"><h2>Editor</h2></div>
       <input type="search" placeholder="Buscar" data-busca>
-      <div class="abas editor-tipos">${[['conjurador', 'Conjuradores'], ['aliado', 'Aliados'], ['temporaria', 'Temporárias'], ['mistica', 'Místicas'], ['estrutura', 'Estruturas'], ['item', 'Itens'], ['mudadas', 'Mudadas'], ['provisorias', 'Provisórias']].map(([k, r]) => `<button data-tipo="${k}">${r}</button>`).join('')}</div>
+      <div class="abas editor-tipos">${[['conjurador', 'Conjuradores'], ['aliado', 'Aliados'], ['temporaria', 'Temporárias'], ['mistica', 'Místicas'], ['estrutura', 'Estruturas'], ['item', 'Itens'], ['mudadas', 'Mudadas'], ['provisorias', 'Provisórias'], ['expansao', 'Expansão dos Dragões']].map(([k, r]) => `<button data-tipo="${k}">${r}</button>`).join('')}</div>
       <div class="abas editor-tipos" title="Filtrar por Valor (vários ao mesmo tempo)">${[...VALORES.map((v) => [v, `<span class="chip-valor" style="background:${COR_VALOR[v]}">${esc(VALOR[v])}</span>`]), ['sem', 'Sem Valor']].map(([k, r]) => `<button data-valor="${k}">${r}</button>`).join('')}</div>
       <div class="filtros">
         <label class="opcao-linha"><input type="radio" name="editor-modo-valor" value="algum" data-modo-valor> Tem algum dos marcados</label>
@@ -235,11 +238,11 @@ export async function telaEditor(tela, partes, ctx) {
     const mud = mudancas();
     const busca = filtro.busca.toLowerCase();
     const itens = [
-      ...Object.values(DADOS.catalogo.conjuradores).map((c) => ({ k: 'j:' + c.id, nome: c.nome, tipo: 'conjurador', valores: c.valores, serve: !conjF || c.id === conjF.id, sub: c.valores.map((v) => VALOR[v]).join(' + ') })),
-      ...Object.values(DADOS.catalogo.cartas).filter((c) => c.tipo !== 'oculta').map((c) => ({ k: 'c:' + c.id, nome: c.nome, tipo: c.tipo, prov: !!c.provisoria, valores: c.valores ?? [], serve: !conjF || (c.tipo === 'item' ? itemServe(conjF, c) : cartaServeConjurador(c, conjF)), sub: `${TIPO[c.categoriaItem ?? c.tipo] ?? c.tipo} · custo ${c.custo} · Grau ${c.grau}` })),
-    ].filter((x) => (filtro.tipo === 'mudadas' ? mud.has(x.k) : filtro.tipo === 'provisorias' ? x.prov : x.tipo === filtro.tipo) && (!busca || x.nome.toLowerCase().includes(busca) || x.k.includes(busca))
+      ...Object.values(DADOS.catalogo.conjuradores).map((c) => ({ k: 'j:' + c.id, nome: c.nome, tipo: 'conjurador', exp: c.expansao, valores: c.valores, serve: !conjF || c.id === conjF.id, sub: c.valores.map((v) => VALOR[v]).join(' + ') })),
+      ...Object.values(DADOS.catalogo.cartas).filter((c) => c.tipo !== 'oculta').map((c) => ({ k: 'c:' + c.id, nome: c.nome, tipo: c.tipo, prov: !!c.provisoria, exp: c.expansao, valores: c.valores ?? [], serve: !conjF || (c.tipo === 'item' ? itemServe(conjF, c) : cartaServeConjurador(c, conjF)), sub: `${TIPO[c.categoriaItem ?? c.tipo] ?? c.tipo} · custo ${c.custo} · Grau ${c.grau}` })),
+    ].filter((x) => (filtro.tipo === 'mudadas' ? mud.has(x.k) : filtro.tipo === 'provisorias' ? x.prov : filtro.tipo === 'expansao' ? !!x.exp : x.tipo === filtro.tipo) && (!busca || x.nome.toLowerCase().includes(busca) || x.k.includes(busca))
       && x.serve && passaValor(x.valores, filtro.valores, filtro.modo));
-    const botao = (x) => `<button class="editor-item ${x.k === sel ? 'ativo' : ''}" data-k="${esc(x.k)}">${mud.has(x.k) ? '<span class="ponto-mudou" title="Mudada no rascunho">●</span> ' : ''}<b>${esc(x.nome)}</b>${x.prov ? ' <span class="etiqueta" title="Carta provisória: criada para os baralhos após a regra das cores; revise efeito e números">provisória</span>' : ''}<span class="peq">${esc(x.sub)}</span></button>`;
+    const botao = (x) => `<button class="editor-item ${x.k === sel ? 'ativo' : ''}" data-k="${esc(x.k)}">${mud.has(x.k) ? '<span class="ponto-mudou" title="Mudada no rascunho">●</span> ' : ''}<b>${esc(x.nome)}</b>${x.prov ? ' <span class="etiqueta" title="Carta provisória: criada para os baralhos após a regra das cores; revise efeito e números">provisória</span>' : ''}${x.exp ? ' <span class="etiqueta" title="Expansão A Mestra dos Dragões (09/10): proposta do Claude; ajuste aqui">dragões</span>' : ''}<span class="peq">${esc(x.sub)}</span></button>`;
     if (!itens.length) { lista.innerHTML = '<p class="peq">Nada encontrado.</p>'; return; }
     if (!filtro.agrupar) { lista.innerHTML = itens.map(botao).join(''); return; }
     // agrupado por Valor: a carta de 2+ Valores fica no grupo do conjunto dela ("Alvorum + Primitivum")
@@ -275,10 +278,12 @@ export async function telaEditor(tela, partes, ctx) {
         : c.tipo === 'aliado'
         ? `<label class="campo">Velocidade<select data-f="velocidade" disabled><option value="findante" selected>Findante (para entrar a qualquer momento, palavra-chave Repentino)</option></select></label>
            <label class="campo">Palavras-chave (separadas por vírgula)<input type="text" data-f="palavrasChave" value="${esc((c.palavrasChave ?? []).join(', '))}" placeholder="Proficiente, Etéreo, Repentino"></label>
-           <label class="campo">Subtipos (separados por vírgula)<input type="text" data-f="subtipos" value="${esc((c.subtipos ?? []).join(', '))}"></label>`
+           <label class="campo">Subtipos (separados por vírgula)<input type="text" data-f="subtipos" value="${esc((c.subtipos ?? []).join(', '))}"></label>
+           <label class="campo">Entra em cima de (Dragolize: subtipo de uma carta sua em campo, ex.: Ovo; vazio = entra solto)<input type="text" data-f="entraSobre" value="${esc(c.entraSobre ?? '')}" placeholder="Ovo"></label>`
         : `<label class="campo">Velocidade<select data-f="velocidade"><option value="findante" ${c.velocidade === 'findante' ? 'selected' : ''}>Findante (na sua fase principal)</option><option value="repentina" ${c.velocidade === 'repentina' ? 'selected' : ''}>Repentina (a qualquer momento)</option></select></label>
            <label class="campo">Palavras-chave (separadas por vírgula)<input type="text" data-f="palavrasChave" value="${esc((c.palavrasChave ?? []).join(', '))}" placeholder="Proficiente, Etéreo"></label>
-           <label class="campo">Subtipos (separados por vírgula)<input type="text" data-f="subtipos" value="${esc((c.subtipos ?? []).join(', '))}"></label>`}
+           <label class="campo">Subtipos (separados por vírgula)<input type="text" data-f="subtipos" value="${esc((c.subtipos ?? []).join(', '))}"></label>
+           <label class="campo">Entra em cima de (Dragolize: subtipo de uma carta sua em campo, ex.: Ovo; vazio = entra solto)<input type="text" data-f="entraSobre" value="${esc(c.entraSobre ?? '')}" placeholder="Ovo"></label>`}
       <div class="campo"><span>Construtor de efeitos <span class="peq">${conjur ? '(habilidades ativadas e gatilhos com efeitos que se acumulam, passivas e permissões; vira o poder real e o texto da habilidade)' : '(condição + efeitos que se acumulam; vira a mecânica real e o texto da carta)'}</span></span><div class="editor-construtor" data-construtor></div></div>
       <label class="campo">Mecânica em JSON (${conjur ? 'poder; alternativa avançada ao construtor' : MEC_CARTA.join(', ')})<textarea class="editor-json" data-json spellcheck="false">${esc(JSON.stringify(mec, null, 2))}</textarea></label>
       <p class="peq editor-json-erro" data-json-erro></p>
@@ -313,7 +318,8 @@ export async function telaEditor(tela, partes, ctx) {
     const linhas = linhasComRequisito(mec, sel.startsWith('j:'));
     caixa.innerHTML = linhas.length ? linhas.map((x) => `<div class="editor-req-linha"><span class="peq">${esc(x.rot)}</span>
       <label>Grau <input type="number" min="0" step="1" data-req="${x.cam}" data-req-k="grau" value="${x.req?.grau ?? ''}" placeholder="—"></label>
-      <label>Arcano <input type="number" min="0" step="1" data-req="${x.cam}" data-req-k="arcano" value="${x.req?.arcano ?? ''}" placeholder="—"></label></div>`).join('') : '<p class="peq">Esta carta não tem efeitos nem habilidades.</p>';
+      <label>Arcano <input type="number" min="0" step="1" data-req="${x.cam}" data-req-k="arcano" value="${x.req?.arcano ?? ''}" placeholder="—"></label>
+      <label title="Dragolize (decisão 41): o Grau mínimo conta só as cartas deste Valor no seu Grau">Grau de <select data-req="${x.cam}" data-req-k="valor"><option value="">qualquer Valor</option>${VALORES.map((v) => `<option value="${v}" ${x.req?.valor === v ? 'selected' : ''}>${esc(VALOR[v])}</option>`).join('')}</select></label></div>`).join('') : '<p class="peq">Esta carta não tem efeitos nem habilidades.</p>';
   }
   /** Mudou um requisito: grava no JSON da mecânica (que o motor lê) e aplica na hora. */
   form.addEventListener('input', (ev) => {
@@ -326,7 +332,7 @@ export async function telaEditor(tela, partes, ctx) {
     const alvo = pegarCam(mec, inp.dataset.req);
     if (!alvo) return;
     const req = { ...(alvo.requisito ?? {}) };
-    const v = inp.value === '' ? 0 : Math.max(0, Math.trunc(Number(inp.value)));
+    const v = inp.dataset.reqK === 'valor' ? inp.value : inp.value === '' ? 0 : Math.max(0, Math.trunc(Number(inp.value)));
     if (v) req[inp.dataset.reqK] = v; else delete req[inp.dataset.reqK];
     if (Object.keys(req).length) alvo.requisito = req; else delete alvo.requisito;
     caixa.value = JSON.stringify(mec, null, 2);
@@ -349,6 +355,7 @@ export async function telaEditor(tela, partes, ctx) {
       const k = el.dataset.f;
       novo[k] = ['palavrasChave', 'subtipos'].includes(k) ? el.value.split(',').map((x) => x.trim()).filter(Boolean) : el.value;
     }
+    if ('entraSobre' in novo) novo.entraSobre = novo.entraSobre.trim() || undefined;
     const avisoAuto = [];
     // Aliado nunca é Repentina pelo tipo ou subtipo (decisão 21); para entrar fora da fase principal, a palavra-chave Repentino
     if (!conjur && base.tipo === 'aliado') {

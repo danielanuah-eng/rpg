@@ -100,7 +100,7 @@ export function montarConstrutor(caixa, mecInicial, { conjur, tipoCarta, form, a
       ${custo}</div>`;
   };
   const custoHTML = (h, idx) => h.quando !== 'ativada' ? '' : `<div class="cst-custo"><b>Custo:</b>
-      <label class="opcao-linha"><input type="checkbox" data-custo="${idx}" data-k="suspender" ${h.custo?.suspender ? 'checked' : ''}> ${conjur ? 'Suspender o Conjurador' : 'Virar (suspender)'}</label>
+      <label class="opcao-linha"><input type="checkbox" data-custo="${idx}" data-k="suspender" ${h.custo?.suspender ? 'checked' : ''}> ${conjur || tipoCarta === 'item' ? 'Suspender o Conjurador' : 'Virar (suspender)'}</label>
       <label>Arcano <input type="number" min="0" data-custo="${idx}" data-k="arcano" value="${h.custo?.arcano ?? ''}"></label>
       <label>Vida <input type="number" min="0" data-custo="${idx}" data-k="vida" value="${h.custo?.vida ?? ''}"></label>
       <label>Descartar <input type="number" min="0" data-custo="${idx}" data-k="descartar" value="${h.custo?.descartar ?? ''}"></label>

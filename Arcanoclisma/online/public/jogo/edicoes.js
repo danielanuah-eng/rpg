@@ -20,7 +20,7 @@ export const RARIDADES = ['comum', 'incomum', 'rara', 'lendaria'];
 export const edicoesVazias = ()              => ({ cartas: {}, conjuradores: {}, artes: { cartas: {}, conjuradores: {} }, raridades: { cartas: {}, conjuradores: {} } });
 
 /** Campos que o editor pode mudar (o resto é ignorado). */
-export const CAMPOS_CARTA = ['nome', 'texto', 'tipo', 'subtipos', 'valores', 'custo', 'grau', 'custoValores', 'descartaGrau', 'velocidade', 'arcanoGerado', 'palavrasChave', 'ataque', 'vida', 'grauExtra', 'ativacao', 'pagarParaAnular', 'efeitos', 'aoEntrar', 'aoDanoConjurador', 'protegido', 'categoriaItem', 'defesa', 'vidaDesgaste', 'aoAtacar', 'aoProteger', 'espinhos', 'tipoCanal', 'habilidades', 'protecao'];
+export const CAMPOS_CARTA = ['nome', 'texto', 'tipo', 'subtipos', 'valores', 'custo', 'grau', 'custoValores', 'descartaGrau', 'velocidade', 'arcanoGerado', 'palavrasChave', 'ataque', 'vida', 'grauExtra', 'ativacao', 'pagarParaAnular', 'efeitos', 'aoEntrar', 'aoDanoConjurador', 'protegido', 'categoriaItem', 'defesa', 'vidaDesgaste', 'aoAtacar', 'aoProteger', 'espinhos', 'tipoCanal', 'habilidades', 'protecao', 'entraSobre', 'concedeAoSubstituto'];
 export const CAMPOS_CONJURADOR = ['nome', 'valores', 'comprometimento', 'vida', 'maoInicial', 'compraFinal', 'danoBasico', 'custoAtaque', 'habilidade', 'poder'];
 /** Campos sem os quais a carta não funciona no motor (não podem ser apagados). */
 const OBRIGATORIOS = new Set(['nome', 'tipo', 'subtipos', 'valores', 'custo', 'grau', 'velocidade', 'arcanoGerado', 'texto', 'vida', 'maoInicial', 'compraFinal', 'danoBasico', 'custoAtaque', 'habilidade', 'comprometimento']);

@@ -144,7 +144,7 @@ async function telaInicio() {
       <a class="cartao-modo" href="#/tutorial" style="--cena:url('${cenario('tutorial')}')"><div class="icone">📜</div><h3>Tutorial</h3><p>Uma partida guiada contra o bot que ensina todas as mecânicas.</p></a>
       <a class="cartao-modo" href="#/jogar" style="--cena:url('${cenarioValor('conflituo')}')"><div class="icone">🤖</div><h3>Contra o bot</h3><p>Escolha seu baralho e enfrente um Conjurador ou o baralho de outro jogador.</p></a>
       <a class="cartao-modo" href="#/jogar/online" style="--cena:url('${cenario('saguao')}')"><div class="icone">⚔️</div><h3>Contra jogadores</h3><p>Partida rápida, salas abertas ou sala privada com código.</p></a>
-      <a class="cartao-modo" href="#/baralhos" style="--cena:url('${cenario('baralhos')}')"><div class="icone">🃏</div><h3>Baralhos</h3><p>Use os 9 baralhos prontos ou monte o seu com os Valores do Conjurador.</p></a>
+      <a class="cartao-modo" href="#/baralhos" style="--cena:url('${cenario('baralhos')}')"><div class="icone">🃏</div><h3>Baralhos</h3><p>Use os ${DADOS.baralhos.length} baralhos prontos ou monte o seu com os Valores do Conjurador.</p></a>
       <a class="cartao-modo" href="#/comentarios" style="--cena:url('${cenarioValor('persona')}')"><div class="icone">💬</div><h3>Comentários</h3><p>Opiniões, notas e dúvidas sobre o jogo. O autor lê e aprova o que vai mudar.</p></a>
       <a class="cartao-modo" href="#/ideias" style="--cena:url('${cenario('ideias')}')"><div class="icone">✨</div><h3>Ideias</h3><p>Proponha expansões, personagens, cartas, itens e Conjuradores.</p></a>
     </div>

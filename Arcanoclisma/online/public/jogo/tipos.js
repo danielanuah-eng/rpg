@@ -101,7 +101,12 @@
  * grau = mínimo de cartas no seu Grau para acontecer; arcano = Arcano pago na hora (reserva, depois Grau levantado).
  * Sem cumprir, aquela linha não acontece (as outras da carta continuam).
  */
-                                                             
+                                                            
+     
+                                                                                                                       
+                                                              
+     
+                  
 
 /**
  * Quem escolhe o alvo de um efeito de alvo único (pedido do autor, 04/10): quem jogou/ativou (padrão), o jogador atingido
@@ -129,7 +134,7 @@
                                                                                                               
                                                     
                                                                  
-                                     
+                                                                                                                                                   
                                                       
                                                                
                                       
@@ -154,7 +159,12 @@
                                                                                                                        
                                             
                                                                                                                              
-                                                                                                                                                 
+                                                                                                                                                
+         
+                                                                                                                              
+                                                                                                                                        
+         
+                      
                                                                              
                                                     
      
@@ -188,7 +198,9 @@
      
                                                                      
                                                                                                               
-                                           
+                                          
+                                                                                                                                  
+                                                                                 
 
 /** Arma: efeitos ao atacar (pedido do autor, 04/10). */
                            
@@ -290,8 +302,17 @@
                          
                                                                         
                   
+     
+                                                                                                                                
+                                                                                                                               
+     
+                      
+                                                                                                                      
+                    
                                                                                                                                               
                        
+                                                                                                                                       
+                                  
      
                                                                                                                     
                                                                                     
@@ -357,6 +378,8 @@
                      
                                                                       
                           
+                                                              
+                    
  
 
                            
@@ -530,12 +553,12 @@
                                                                    
                                                             
                                                               
-                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                              
                                                                                                  
                                                                                                                                                                                                                                                                                                          
                                                                                                                                                                                                                        
                                                              
-                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                         
                                                                                         
                                                                                                                                                                           
                                                                                      

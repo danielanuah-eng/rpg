@@ -7,7 +7,7 @@
 //   fonte.ouvir(fn)    chama fn a cada mudança
 //   fonte.versao       número que cresce a cada mudança
 //   opcionais: fonte.chat(texto), fonte.desistir(), fonte.tutorial (dicas, destaques e travas), fonte.prazo(), fonte.conectados()
-import { defCarta, custoEfetivo, custoProtecao, origemDaCarta, grauEfetivo, recemChegado, ataqueConjurador, distribuicaoPadrao, ehRepentina, custoAtaqueConjurador, grauAtaqueConjurador, efeitosAoJogar, efeitosAoEntrar, ataqueAtualDe, vidaAtualDe, etereo as etereoDe, alvosCampo as alvosCampoMotor, efeitoSemConjurador, ativacaoDeHabilidade, protegidaDe, temPalavra, protegidoDe, custoReanimar, arcanoNaHora } from '/jogo/motor.js';
+import { defCarta, custoEfetivo, custoProtecao, origemDaCarta, grauEfetivo, recemChegado, ataqueConjurador, distribuicaoPadrao, ehRepentina, custoAtaqueConjurador, grauAtaqueConjurador, efeitosAoJogar, efeitosAoEntrar, ataqueAtualDe, vidaAtualDe, etereo as etereoDe, alvosCampo as alvosCampoMotor, efeitoSemConjurador, ativacaoDeHabilidade, protegidaDe, temPalavra, protegidoDe, custoReanimar, arcanoNaHora, candidatosSobre, faltaSobre, grauDoRequisito, itemAtivacao } from '/jogo/motor.js';
 import { textoHabilidade, textoCustoPagar, juntarEfeitos } from '/jogo/textos.js';
 import { $, $$, esc, DADOS, VALOR, TIPO, textoCarta, janela, local, avisar, conj as conjDefDe } from './base.js';
 import { desenharCarta, modeloCarta, modeloConjurador } from './carta.js';
@@ -159,7 +159,8 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
       // habilidade "virar/pagar" do construtor de efeitos (04/10): o mesmo formato da ativação (no Conjurador, a do poder)
       const h = habsDe(id)[hab];
       if (!h || h.quando !== 'ativada') return null;
-      return ativacaoDeHabilidade(h);
+      // item (decisão 41): "virar" suspende o Conjurador, como no motor
+      return z(EU).itens.includes(id) ? itemAtivacao(ativacaoDeHabilidade(h)) : ativacaoDeHabilidade(h);
     }
     if (id === z(EU).conjuradorId) return conjDef(EU).poder?.ativacao ?? null;
     return def(id).ativacao ?? null;
@@ -175,12 +176,15 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     if (!ehRepentina(d) && !minhaJanela()) return false;
     if (d.grau > grauEfetivo(e, EU)) return false;
     if ((d.custoValores ?? []).some((v) => !z(EU).grau.some((g) => def(g).valores.includes(v)))) return false;
+    // Dragolize (decisão 41): só entra em cima de um Ovo (ou carta do subtipo) seu
+    if (d.entraSobre && !candidatosSobre(e, EU, d.entraSobre).length) return false;
     return custoEfetivo(e, EU, id) <= potencial(id);
   }
   function podeAtivar(id, hab) {
     const at = ativacaoDe(id, hab);
     if (!at || e.vencedor !== null || e.pendencia) return false;
-    if (at.requisito?.grau && grauEfetivo(e, EU) < at.requisito.grau) return false;
+    if (at.requisito?.grau && grauDoRequisito(e, EU, at.requisito) < at.requisito.grau) return false;
+    if (faltaSobre(e, EU, at.efeitos)) return false;
     if (hab !== undefined && ((at.descartar ?? 0) > z(EU).mao.length || (at.danoNoConjurador && conjDef(EU).vida - inst(z(EU).conjuradorId).dano <= at.danoNoConjurador))) return false;
     const conjurador = id === z(EU).conjuradorId;
     const item = z(EU).itens.includes(id);
@@ -426,6 +430,8 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
       // itens com uso (Canal foco/transcritor e Extra) aparecem no menu do Conjurador
       for (const h of habsAtivadas(id)) if (podeAtivar(id, h)) a.push([`hab:${h}`, `Ativar: ${textoHab(habsDe(id)[h], ehConj(id))}`, 'primario']);
       if (id === m.conjuradorId) for (const it of m.itens) if (ativacaoDe(it) && podeAtivar(it)) a.push([`usarItem:${it}`, `Usar ${def(it).nome}${(ativacaoDe(it).consome ?? def(it).categoriaItem === 'extra') ? ' (uso único)' : ''}`, 'primario']);
+      // habilidades "virar/pagar" dos itens (ex.: os Dragões de Durandis, decisão 41)
+      if (id === m.conjuradorId) for (const it of m.itens) for (const h of habsAtivadas(it)) if (podeAtivar(it, h)) a.push([`habItem:${it}:${h}`, `${def(it).nome.split(',')[0]}: ${textoHab(habsDe(it)[h], true)}`, 'primario']);
     }
     if (ehConj(id) && z(i.dono).itens.length) a.push(['equip', 'Ver equipamento', '']);
     a.push(['ver', 'Ver carta', '']);
@@ -495,6 +501,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
       if (k === 'equip') return verEquipamento(inst(id).dono);
       if (k.startsWith('usarItem:')) return preparar('ativar', k.slice(9));
       if (k.startsWith('hab:')) return preparar('ativar', id, Number(k.slice(4)));
+      if (k.startsWith('habItem:')) { const [, it, h] = k.split(':'); return preparar('ativar', it, Number(h)); }
       if (k === 'grau') return enviar({ tipo: 'colocarGrau', carta: id });
       if (k === 'suspGrau') return enviar({ tipo: 'suspenderGrau', carta: id });
       if (k === 'ativar' && soArcano(ativacaoDe(id)) && id !== z(EU).conjuradorId && !z(EU).itens.includes(id)) return enviar({ tipo: 'ativar', carta: id, enviarArcano: [] });
@@ -1095,7 +1102,7 @@ export function abrirMesa(raiz, fonte, { aoSair, opinar, cena } = {}) {
     if (b.matches('[data-revanche]')) return fonte.revanche();
     if (b.matches('[data-fechar-fim]')) { ui.fimFechado = true; render(); return; }
     if (b.matches('[data-zona]')) return verZona(b.dataset.zona, Number(b.dataset.j));
-    if (b.matches('.item-conj')) { const id = b.dataset.id; if (inst(id)?.dono === EU && podeAtivar(id)) return preparar('ativar', id); return verCarta(id); }
+    if (b.matches('.item-conj')) { const id = b.dataset.id; if (inst(id)?.dono === EU && podeAtivar(id)) return preparar('ativar', id); if (inst(id)?.dono === EU && habsAtivadas(id).some((h) => podeAtivar(id, h))) return abrirMenu(id, b); return verCarta(id); }
     if (b.matches('[data-escolha]')) {
       const id = b.dataset.escolha; const p = e.pendencia;
       if (ui.selecionadas.has(id)) ui.selecionadas.delete(id); else if (ui.selecionadas.size < p.quantidade) ui.selecionadas.add(id);
