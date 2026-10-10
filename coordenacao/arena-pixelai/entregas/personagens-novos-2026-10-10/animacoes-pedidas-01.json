@@ -1,0 +1,30 @@
+[
+  {
+    "asset": "edgar",
+    "name": "idle",
+    "action": "Subtle idle breathing in place, confident open toothy smile, slight shoulder and relaxed fist motion. Tiny pale cyan ghostly energy gently flickers tightly around knuckles, leather jacket and velvet trim remain stable, feet anchored; same stance and all clothing. A smooth slow seamless loop returning to original pose, no attack.",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "1 validation error for call[animate_character]\nai_freedom\n  Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=0.2, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_from_float"
+        }
+      ],
+      "isError": true
+    }
+  },
+  {
+    "asset": "edgar",
+    "name": "walk",
+    "action": "Walking forward in the indicated facing direction with a strong calm confident adult swagger, deliberate alternating military boot steps and natural opposite arm swing. Hair is slicked back and stable, jacket hem subtly follows motion, exposed belt remains visible, small spectral aura stays close to fists. Keep whole body scale and identity, no sliding. Seamless walking loop, return to first pose.",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "1 validation error for call[animate_character]\nai_freedom\n  Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=0.2, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_from_float"
+        }
+      ],
+      "isError": true
+    }
+  }
+]

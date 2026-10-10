@@ -1,0 +1,1366 @@
+[
+  {
+    "key": "damianHitNW",
+    "id": "0e585583-ec07-4831-9269-44b1b7fbd0b0",
+    "dir": "north-west",
+    "group": "c7c37d42-a2be-4f01-8b64-7a4f9f157109",
+    "clip": "hit",
+    "size": 168,
+    "sequence": [
+      1,
+      2,
+      3,
+      4,
+      3,
+      2,
+      1
+    ],
+    "source_image": "767236da-9fe8-437f-bb33-d286763b041e",
+    "image_id": "0c0b159b-ed87-4046-b1ec-c27e80a98c3d",
+    "undo": "saved: character:0e585583-ec07-4831-9269-44b1b7fbd0b0:north-west:c7c37d42-a2be-4f01-8b64-7a4f9f157109 (animation, 7 frames, 168x168)\nchanged: 22153 px\nundo: save_to_asset(image=\"36439cf6-78ac-4324-9f43-a5adf6492191\", target=\"character:0e585583-ec07-4831-9269-44b1b7fbd0b0:north-west:c7c37d42-a2be-4f01-8b64-7a4f9f157109\")\nnext: get_character(\"0e585583-ec07-4831-9269-44b1b7fbd0b0\")",
+    "urls": [
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0e585583-ec07-4831-9269-44b1b7fbd0b0/animations/410eeaf9-cdae-405f-87a3-b1c1e8d201c7/north-west/0.png?t=1791626909891",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0e585583-ec07-4831-9269-44b1b7fbd0b0/animations/410eeaf9-cdae-405f-87a3-b1c1e8d201c7/north-west/1.png?t=1791626909891",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0e585583-ec07-4831-9269-44b1b7fbd0b0/animations/410eeaf9-cdae-405f-87a3-b1c1e8d201c7/north-west/2.png?t=1791626909891",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0e585583-ec07-4831-9269-44b1b7fbd0b0/animations/410eeaf9-cdae-405f-87a3-b1c1e8d201c7/north-west/3.png?t=1791626909891",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0e585583-ec07-4831-9269-44b1b7fbd0b0/animations/410eeaf9-cdae-405f-87a3-b1c1e8d201c7/north-west/4.png?t=1791626909891",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0e585583-ec07-4831-9269-44b1b7fbd0b0/animations/410eeaf9-cdae-405f-87a3-b1c1e8d201c7/north-west/5.png?t=1791626909891",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0e585583-ec07-4831-9269-44b1b7fbd0b0/animations/410eeaf9-cdae-405f-87a3-b1c1e8d201c7/north-west/6.png?t=1791626909891"
+    ],
+    "source_file": "auditorias/sincronia-2026-10-10/fontes/Damian/hit_north-west.png"
+  },
+  {
+    "key": "ciantiaHitNW",
+    "id": "4bbf50ca-1983-4a53-8034-71639d574f18",
+    "dir": "north-west",
+    "group": "90ee1cd5-b501-43e6-8935-c46c72523c5a",
+    "clip": "hit",
+    "size": 168,
+    "sequence": [
+      1,
+      2,
+      3,
+      4,
+      3,
+      2,
+      1
+    ],
+    "source_image": "bc7f2737-3a30-495c-956e-7eac2d23474a",
+    "image_id": "aa19c22d-3d37-4014-998b-2be0ddfaf63d",
+    "undo": "saved: character:4bbf50ca-1983-4a53-8034-71639d574f18:north-west:90ee1cd5-b501-43e6-8935-c46c72523c5a (animation, 7 frames, 168x168)\nchanged: 22669 px\nundo: save_to_asset(image=\"aafb471c-f2d4-494a-b199-8a3338489efa\", target=\"character:4bbf50ca-1983-4a53-8034-71639d574f18:north-west:90ee1cd5-b501-43e6-8935-c46c72523c5a\")\nnext: get_character(\"4bbf50ca-1983-4a53-8034-71639d574f18\")",
+    "urls": [
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4bbf50ca-1983-4a53-8034-71639d574f18/animations/3ef017b0-e131-4ccc-b286-3cbf4b76c24f/north-west/0.png?t=1791626914634",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4bbf50ca-1983-4a53-8034-71639d574f18/animations/3ef017b0-e131-4ccc-b286-3cbf4b76c24f/north-west/1.png?t=1791626914634",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4bbf50ca-1983-4a53-8034-71639d574f18/animations/3ef017b0-e131-4ccc-b286-3cbf4b76c24f/north-west/2.png?t=1791626914634",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4bbf50ca-1983-4a53-8034-71639d574f18/animations/3ef017b0-e131-4ccc-b286-3cbf4b76c24f/north-west/3.png?t=1791626914634",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4bbf50ca-1983-4a53-8034-71639d574f18/animations/3ef017b0-e131-4ccc-b286-3cbf4b76c24f/north-west/4.png?t=1791626914634",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4bbf50ca-1983-4a53-8034-71639d574f18/animations/3ef017b0-e131-4ccc-b286-3cbf4b76c24f/north-west/5.png?t=1791626914634",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4bbf50ca-1983-4a53-8034-71639d574f18/animations/3ef017b0-e131-4ccc-b286-3cbf4b76c24f/north-west/6.png?t=1791626914634"
+    ],
+    "source_file": "auditorias/sincronia-2026-10-10/fontes/Ciantia/hit_north-west.png"
+  },
+  {
+    "key": "ezeHitNW",
+    "id": "161fac6b-50a2-415d-9799-6ae15690b00d",
+    "dir": "north-west",
+    "group": "cb952729-feae-4b7b-a21d-abf0169a7568",
+    "clip": "hit",
+    "size": 168,
+    "sequence": [
+      1,
+      2,
+      3,
+      4,
+      3,
+      2,
+      1
+    ],
+    "source_image": "2558bf5d-ca60-4fe3-9a16-1db69287a3b0",
+    "image_id": "005f01b1-3469-40f4-b5aa-0948a09c41b9",
+    "undo": "saved: character:161fac6b-50a2-415d-9799-6ae15690b00d:north-west:cb952729-feae-4b7b-a21d-abf0169a7568 (animation, 7 frames, 168x168)\nchanged: 22218 px\nundo: save_to_asset(image=\"bf506c7a-14cf-4e40-9d0e-9a76db999956\", target=\"character:161fac6b-50a2-415d-9799-6ae15690b00d:north-west:cb952729-feae-4b7b-a21d-abf0169a7568\")\nnext: get_character(\"161fac6b-50a2-415d-9799-6ae15690b00d\")",
+    "urls": [
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/161fac6b-50a2-415d-9799-6ae15690b00d/animations/d0b38d75-94e3-4578-a9f2-b15a1e486581/north-west/0.png?t=1791626921558",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/161fac6b-50a2-415d-9799-6ae15690b00d/animations/d0b38d75-94e3-4578-a9f2-b15a1e486581/north-west/1.png?t=1791626921558",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/161fac6b-50a2-415d-9799-6ae15690b00d/animations/d0b38d75-94e3-4578-a9f2-b15a1e486581/north-west/2.png?t=1791626921558",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/161fac6b-50a2-415d-9799-6ae15690b00d/animations/d0b38d75-94e3-4578-a9f2-b15a1e486581/north-west/3.png?t=1791626921558",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/161fac6b-50a2-415d-9799-6ae15690b00d/animations/d0b38d75-94e3-4578-a9f2-b15a1e486581/north-west/4.png?t=1791626921558",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/161fac6b-50a2-415d-9799-6ae15690b00d/animations/d0b38d75-94e3-4578-a9f2-b15a1e486581/north-west/5.png?t=1791626921558",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/161fac6b-50a2-415d-9799-6ae15690b00d/animations/d0b38d75-94e3-4578-a9f2-b15a1e486581/north-west/6.png?t=1791626921558"
+    ],
+    "source_file": "auditorias/sincronia-2026-10-10/fontes/Ezequiela/hit_north-west.png"
+  },
+  {
+    "key": "devonIdleNW",
+    "id": "aa403323-ced9-430c-9f44-fdf263d7f6a3",
+    "dir": "north-west",
+    "group": "3b4b0999-e051-4058-a31e-4a410d42baa7",
+    "clip": "idle",
+    "size": 172,
+    "sequence": [
+      1,
+      2,
+      3,
+      4,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "source_image": "e4944e68-3f35-4c74-86b9-aa2923e418c1",
+    "image_id": "7e55285c-c073-4fa4-a9c1-339e1a7aab82",
+    "undo": "saved: character:aa403323-ced9-430c-9f44-fdf263d7f6a3:north-west:3b4b0999-e051-4058-a31e-4a410d42baa7 (animation, 9 frames, 172x172)\nchanged: 38001 px\nundo: save_to_asset(image=\"e469d863-d3da-4066-86ac-4e660dcfa00e\", target=\"character:aa403323-ced9-430c-9f44-fdf263d7f6a3:north-west:3b4b0999-e051-4058-a31e-4a410d42baa7\")\nnext: get_character(\"aa403323-ced9-430c-9f44-fdf263d7f6a3\")",
+    "urls": [
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/aa403323-ced9-430c-9f44-fdf263d7f6a3/animations/0e5482ea-2e13-408c-b14a-a3edd56b725b/north-west/0.png?t=1791626927067",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/aa403323-ced9-430c-9f44-fdf263d7f6a3/animations/0e5482ea-2e13-408c-b14a-a3edd56b725b/north-west/1.png?t=1791626927067",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/aa403323-ced9-430c-9f44-fdf263d7f6a3/animations/0e5482ea-2e13-408c-b14a-a3edd56b725b/north-west/2.png?t=1791626927067",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/aa403323-ced9-430c-9f44-fdf263d7f6a3/animations/0e5482ea-2e13-408c-b14a-a3edd56b725b/north-west/3.png?t=1791626927067",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/aa403323-ced9-430c-9f44-fdf263d7f6a3/animations/0e5482ea-2e13-408c-b14a-a3edd56b725b/north-west/4.png?t=1791626927067",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/aa403323-ced9-430c-9f44-fdf263d7f6a3/animations/0e5482ea-2e13-408c-b14a-a3edd56b725b/north-west/5.png?t=1791626927067",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/aa403323-ced9-430c-9f44-fdf263d7f6a3/animations/0e5482ea-2e13-408c-b14a-a3edd56b725b/north-west/6.png?t=1791626927067",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/aa403323-ced9-430c-9f44-fdf263d7f6a3/animations/0e5482ea-2e13-408c-b14a-a3edd56b725b/north-west/7.png?t=1791626927067",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/aa403323-ced9-430c-9f44-fdf263d7f6a3/animations/0e5482ea-2e13-408c-b14a-a3edd56b725b/north-west/8.png?t=1791626927067"
+    ],
+    "source_file": "auditorias/sincronia-2026-10-10/fontes/Devon/idle_north-west.png"
+  },
+  {
+    "key": "jackUltSW",
+    "id": "a4a1aa93-271c-4a24-857a-a8ed16f5ac7f",
+    "dir": "south-west",
+    "group": "06b43d9e-15d4-4394-a76f-81bf9176e7e4",
+    "clip": "ultshot",
+    "size": 172,
+    "sequence": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      6,
+      8,
+      9
+    ],
+    "source_image": "b4bc0401-3fa1-4cd1-94b2-1f656d083ad5",
+    "image_id": "9f86d0f6-a597-4d46-9073-7c02d5e80191",
+    "undo": "saved: character:a4a1aa93-271c-4a24-857a-a8ed16f5ac7f:south-west:06b43d9e-15d4-4394-a76f-81bf9176e7e4 (animation, 9 frames, 172x172)\nchanged: 7101 px\nundo: save_to_asset(image=\"0315a274-1725-4e16-96bb-fe45e0b530ef\", target=\"character:a4a1aa93-271c-4a24-857a-a8ed16f5ac7f:south-west:06b43d9e-15d4-4394-a76f-81bf9176e7e4\")\nnext: get_character(\"a4a1aa93-271c-4a24-857a-a8ed16f5ac7f\")",
+    "urls": [
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a4a1aa93-271c-4a24-857a-a8ed16f5ac7f/animations/7c654212-c69c-4d58-9016-efcc650650f8/south-west/0.png?t=1791627054337",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a4a1aa93-271c-4a24-857a-a8ed16f5ac7f/animations/7c654212-c69c-4d58-9016-efcc650650f8/south-west/1.png?t=1791627054337",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a4a1aa93-271c-4a24-857a-a8ed16f5ac7f/animations/7c654212-c69c-4d58-9016-efcc650650f8/south-west/2.png?t=1791627054337",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a4a1aa93-271c-4a24-857a-a8ed16f5ac7f/animations/7c654212-c69c-4d58-9016-efcc650650f8/south-west/3.png?t=1791627054337",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a4a1aa93-271c-4a24-857a-a8ed16f5ac7f/animations/7c654212-c69c-4d58-9016-efcc650650f8/south-west/4.png?t=1791627054337",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a4a1aa93-271c-4a24-857a-a8ed16f5ac7f/animations/7c654212-c69c-4d58-9016-efcc650650f8/south-west/5.png?t=1791627054337",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a4a1aa93-271c-4a24-857a-a8ed16f5ac7f/animations/7c654212-c69c-4d58-9016-efcc650650f8/south-west/6.png?t=1791627054337",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a4a1aa93-271c-4a24-857a-a8ed16f5ac7f/animations/7c654212-c69c-4d58-9016-efcc650650f8/south-west/7.png?t=1791627054337",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a4a1aa93-271c-4a24-857a-a8ed16f5ac7f/animations/7c654212-c69c-4d58-9016-efcc650650f8/south-west/8.png?t=1791627054337"
+    ],
+    "source_file": "auditorias/sincronia-2026-10-10/fontes/ArqueiroJack/ultshot_south-west.png"
+  },
+  {
+    "key": "berserkIdleSW",
+    "id": "a82010d8-719a-4c04-bfb0-2caedc6a6cf5",
+    "dir": "south-west",
+    "group": "b0f1a224-479e-4a54-93a5-42436467edfc",
+    "clip": "idle",
+    "size": 180,
+    "sequence": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      7,
+      9
+    ],
+    "source_image": "30b224da-2164-4a69-8447-44aff1b0f9c8",
+    "image_id": "b97e8c41-04bb-4c4d-b59b-49560bbfee9b",
+    "undo": "saved: character:a82010d8-719a-4c04-bfb0-2caedc6a6cf5:south-west:b0f1a224-479e-4a54-93a5-42436467edfc (animation, 9 frames, 180x180)\nchanged: 6350 px\nundo: save_to_asset(image=\"c4d54310-679c-4f2c-8293-5e3b9240254b\", target=\"character:a82010d8-719a-4c04-bfb0-2caedc6a6cf5:south-west:b0f1a224-479e-4a54-93a5-42436467edfc\")\nnext: get_character(\"a82010d8-719a-4c04-bfb0-2caedc6a6cf5\")",
+    "urls": [
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/animations/e0c843e0-4771-4ba9-9f38-ee4b34ae0088/south-west/0.png?t=1791627063961",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/animations/e0c843e0-4771-4ba9-9f38-ee4b34ae0088/south-west/1.png?t=1791627063961",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/animations/e0c843e0-4771-4ba9-9f38-ee4b34ae0088/south-west/2.png?t=1791627063961",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/animations/e0c843e0-4771-4ba9-9f38-ee4b34ae0088/south-west/3.png?t=1791627063961",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/animations/e0c843e0-4771-4ba9-9f38-ee4b34ae0088/south-west/4.png?t=1791627063961",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/animations/e0c843e0-4771-4ba9-9f38-ee4b34ae0088/south-west/5.png?t=1791627063961",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/animations/e0c843e0-4771-4ba9-9f38-ee4b34ae0088/south-west/6.png?t=1791627063961",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/animations/e0c843e0-4771-4ba9-9f38-ee4b34ae0088/south-west/7.png?t=1791627063961",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/animations/e0c843e0-4771-4ba9-9f38-ee4b34ae0088/south-west/8.png?t=1791627063961"
+    ],
+    "source_file": "auditorias/sincronia-2026-10-10/fontes/TchuTchaBerserk/idle_south-west.png"
+  },
+  {
+    "key": "teanthaAttackNW",
+    "id": "4efddfc5-d4af-485a-8d54-96973d69b960",
+    "dir": "north-west",
+    "group": "5f21039d-d1d6-432d-b779-527be1e1aceb",
+    "clip": "attack",
+    "size": 172,
+    "sequence": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      3,
+      1
+    ],
+    "source_image": "99ad75e2-875c-4c9d-bd41-28920a745c98",
+    "image_id": "d592d84a-4c54-4bf6-8859-d0510b217a28",
+    "undo": "saved: character:4efddfc5-d4af-485a-8d54-96973d69b960:north-west:5f21039d-d1d6-432d-b779-527be1e1aceb (animation, 9 frames, 172x172)\nchanged: 11102 px\nundo: save_to_asset(image=\"bdb21322-9223-4529-af34-cf5c55a5607b\", target=\"character:4efddfc5-d4af-485a-8d54-96973d69b960:north-west:5f21039d-d1d6-432d-b779-527be1e1aceb\")\nnext: get_character(\"4efddfc5-d4af-485a-8d54-96973d69b960\")",
+    "urls": [
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4efddfc5-d4af-485a-8d54-96973d69b960/animations/7da553f1-415b-4866-b912-e4c6c915fafe/north-west/0.png?t=1791627071436",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4efddfc5-d4af-485a-8d54-96973d69b960/animations/7da553f1-415b-4866-b912-e4c6c915fafe/north-west/1.png?t=1791627071436",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4efddfc5-d4af-485a-8d54-96973d69b960/animations/7da553f1-415b-4866-b912-e4c6c915fafe/north-west/2.png?t=1791627071436",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4efddfc5-d4af-485a-8d54-96973d69b960/animations/7da553f1-415b-4866-b912-e4c6c915fafe/north-west/3.png?t=1791627071436",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4efddfc5-d4af-485a-8d54-96973d69b960/animations/7da553f1-415b-4866-b912-e4c6c915fafe/north-west/4.png?t=1791627071436",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4efddfc5-d4af-485a-8d54-96973d69b960/animations/7da553f1-415b-4866-b912-e4c6c915fafe/north-west/5.png?t=1791627071436",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4efddfc5-d4af-485a-8d54-96973d69b960/animations/7da553f1-415b-4866-b912-e4c6c915fafe/north-west/6.png?t=1791627071436",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4efddfc5-d4af-485a-8d54-96973d69b960/animations/7da553f1-415b-4866-b912-e4c6c915fafe/north-west/7.png?t=1791627071436",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4efddfc5-d4af-485a-8d54-96973d69b960/animations/7da553f1-415b-4866-b912-e4c6c915fafe/north-west/8.png?t=1791627071436"
+    ],
+    "source_file": "auditorias/sincronia-2026-10-10/fontes/Teantha/attack_north-west.png"
+  },
+  {
+    "key": "devonDeathSE",
+    "id": "aa403323-ced9-430c-9f44-fdf263d7f6a3",
+    "dir": "south-east",
+    "group": "52301d50-3aa6-40dd-8a2d-fcfc0e67acf3",
+    "clip": "death",
+    "size": 168,
+    "patch": {
+      "changes": [
+        {
+          "operation": "patch_pixels",
+          "layer": "image",
+          "frames": [
+            8
+          ],
+          "pixels": [
+            [
+              119,
+              83,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              120,
+              83,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              121,
+              83,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              122,
+              83,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              123,
+              83,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              119,
+              84,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              120,
+              84,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              121,
+              84,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              122,
+              84,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              123,
+              84,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              124,
+              84,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              119,
+              85,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              120,
+              85,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              121,
+              85,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              122,
+              85,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              123,
+              85,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              124,
+              85,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              118,
+              86,
+              "#e6041aff",
+              "#00000000"
+            ],
+            [
+              119,
+              86,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              120,
+              86,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              121,
+              86,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              122,
+              86,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              123,
+              86,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              124,
+              86,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              118,
+              87,
+              "#e6041aff",
+              "#00000000"
+            ],
+            [
+              119,
+              87,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              120,
+              87,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              121,
+              87,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              122,
+              87,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              123,
+              87,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              124,
+              87,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              118,
+              88,
+              "#e6041aff",
+              "#00000000"
+            ],
+            [
+              119,
+              88,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              120,
+              88,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              121,
+              88,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              122,
+              88,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              123,
+              88,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              124,
+              88,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              119,
+              89,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              120,
+              89,
+              "#fc2730ff",
+              "#00000000"
+            ],
+            [
+              121,
+              89,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              122,
+              89,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              123,
+              89,
+              "#fc2730ff",
+              "#00000000"
+            ],
+            [
+              124,
+              89,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              120,
+              90,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              121,
+              90,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              122,
+              90,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              123,
+              90,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              124,
+              90,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              121,
+              91,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              122,
+              91,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              123,
+              91,
+              "#f30303ff",
+              "#00000000"
+            ]
+          ],
+          "reason": "Apagar marcador vermelho isolado acima da cabeça, preservando todos os quadros de morte."
+        },
+        {
+          "operation": "patch_pixels",
+          "layer": "image",
+          "frames": [
+            9
+          ],
+          "pixels": [
+            [
+              117,
+              83,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              118,
+              83,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              119,
+              83,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              120,
+              83,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              121,
+              83,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              122,
+              83,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              123,
+              83,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              124,
+              83,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              125,
+              83,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              126,
+              83,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              127,
+              83,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              128,
+              83,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              116,
+              84,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              117,
+              84,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              118,
+              84,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              119,
+              84,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              120,
+              84,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              121,
+              84,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              122,
+              84,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              123,
+              84,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              124,
+              84,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              125,
+              84,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              126,
+              84,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              127,
+              84,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              128,
+              84,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              129,
+              84,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              116,
+              85,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              117,
+              85,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              118,
+              85,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              119,
+              85,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              120,
+              85,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              121,
+              85,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              122,
+              85,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              123,
+              85,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              124,
+              85,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              125,
+              85,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              126,
+              85,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              127,
+              85,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              128,
+              85,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              129,
+              85,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              116,
+              86,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              117,
+              86,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              118,
+              86,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              119,
+              86,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              120,
+              86,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              121,
+              86,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              122,
+              86,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              123,
+              86,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              124,
+              86,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              125,
+              86,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              126,
+              86,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              127,
+              86,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              128,
+              86,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              129,
+              86,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              116,
+              87,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              117,
+              87,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              118,
+              87,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              119,
+              87,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              120,
+              87,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              121,
+              87,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              122,
+              87,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              123,
+              87,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              124,
+              87,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              125,
+              87,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              126,
+              87,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              127,
+              87,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              128,
+              87,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              129,
+              87,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              116,
+              88,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              117,
+              88,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              118,
+              88,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              119,
+              88,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              120,
+              88,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              121,
+              88,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              122,
+              88,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              123,
+              88,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              124,
+              88,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              125,
+              88,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              126,
+              88,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              127,
+              88,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              128,
+              88,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              129,
+              88,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              116,
+              89,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              117,
+              89,
+              "#fc2730ff",
+              "#00000000"
+            ],
+            [
+              118,
+              89,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              119,
+              89,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              120,
+              89,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              121,
+              89,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              122,
+              89,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              123,
+              89,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              124,
+              89,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              125,
+              89,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              126,
+              89,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              127,
+              89,
+              "#fc5550ff",
+              "#00000000"
+            ],
+            [
+              128,
+              89,
+              "#fe4a49ff",
+              "#00000000"
+            ],
+            [
+              129,
+              89,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              117,
+              90,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              118,
+              90,
+              "#fc2730ff",
+              "#00000000"
+            ],
+            [
+              119,
+              90,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              120,
+              90,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              121,
+              90,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              122,
+              90,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              123,
+              90,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              124,
+              90,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              125,
+              90,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              126,
+              90,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              127,
+              90,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              128,
+              90,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              129,
+              90,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              118,
+              91,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              119,
+              91,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              120,
+              91,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              121,
+              91,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              122,
+              91,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              123,
+              91,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              124,
+              91,
+              "#f30303ff",
+              "#00000000"
+            ],
+            [
+              125,
+              91,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              126,
+              91,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              127,
+              91,
+              "#fe0506ff",
+              "#00000000"
+            ],
+            [
+              128,
+              91,
+              "#f30303ff",
+              "#00000000"
+            ]
+          ],
+          "reason": "Apagar marcador vermelho isolado acima da cabeça, preservando todos os quadros de morte."
+        }
+      ],
+      "report": [
+        {
+          "frame": 8,
+          "count": 52,
+          "bbox": [
+            118,
+            83,
+            124,
+            91
+          ]
+        },
+        {
+          "frame": 9,
+          "count": 120,
+          "bbox": [
+            116,
+            83,
+            129,
+            91
+          ]
+        }
+      ]
+    },
+    "source_image": "3b97aa84-9006-4c76-94da-df08d697ba9b",
+    "image_id": "ab066f69-d6b2-4ca1-8313-5ef30f33f515",
+    "undo": "saved: character:aa403323-ced9-430c-9f44-fdf263d7f6a3:south-east:52301d50-3aa6-40dd-8a2d-fcfc0e67acf3 (animation, 9 frames, 168x168)\nchanged: 172 px\nundo: save_to_asset(image=\"895b3539-269e-4620-8a6d-489eb1c1bc62\", target=\"character:aa403323-ced9-430c-9f44-fdf263d7f6a3:south-east:52301d50-3aa6-40dd-8a2d-fcfc0e67acf3\")\nnext: get_character(\"aa403323-ced9-430c-9f44-fdf263d7f6a3\")",
+    "urls": [
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/aa403323-ced9-430c-9f44-fdf263d7f6a3/animations/0c8d87c7-20c9-4c5d-803f-6db72fa5b49b/south-east/0.png?t=1791627213876",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/aa403323-ced9-430c-9f44-fdf263d7f6a3/animations/0c8d87c7-20c9-4c5d-803f-6db72fa5b49b/south-east/1.png?t=1791627213876",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/aa403323-ced9-430c-9f44-fdf263d7f6a3/animations/0c8d87c7-20c9-4c5d-803f-6db72fa5b49b/south-east/2.png?t=1791627213876",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/aa403323-ced9-430c-9f44-fdf263d7f6a3/animations/0c8d87c7-20c9-4c5d-803f-6db72fa5b49b/south-east/3.png?t=1791627213876",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/aa403323-ced9-430c-9f44-fdf263d7f6a3/animations/0c8d87c7-20c9-4c5d-803f-6db72fa5b49b/south-east/4.png?t=1791627213876",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/aa403323-ced9-430c-9f44-fdf263d7f6a3/animations/0c8d87c7-20c9-4c5d-803f-6db72fa5b49b/south-east/5.png?t=1791627213876",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/aa403323-ced9-430c-9f44-fdf263d7f6a3/animations/0c8d87c7-20c9-4c5d-803f-6db72fa5b49b/south-east/6.png?t=1791627213876",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/aa403323-ced9-430c-9f44-fdf263d7f6a3/animations/0c8d87c7-20c9-4c5d-803f-6db72fa5b49b/south-east/7.png?t=1791627213876",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/aa403323-ced9-430c-9f44-fdf263d7f6a3/animations/0c8d87c7-20c9-4c5d-803f-6db72fa5b49b/south-east/8.png?t=1791627213876"
+    ],
+    "source_file": "auditorias/sincronia-2026-10-10/fontes/Devon/death_south-east.png"
+  },
+  {
+    "key": "damianPistolSE",
+    "id": "0e585583-ec07-4831-9269-44b1b7fbd0b0",
+    "dir": "south-east",
+    "clip": "pistol",
+    "candidate": false,
+    "group": "3ecbdb23-1588-44ea-a810-b161a3689230",
+    "urls": [
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0e585583-ec07-4831-9269-44b1b7fbd0b0/animations/2b656280-cc21-4d00-a725-9327a16e882c/south-east/0.png?t=1791628080115",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0e585583-ec07-4831-9269-44b1b7fbd0b0/animations/2b656280-cc21-4d00-a725-9327a16e882c/south-east/1.png?t=1791628080115",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0e585583-ec07-4831-9269-44b1b7fbd0b0/animations/2b656280-cc21-4d00-a725-9327a16e882c/south-east/2.png?t=1791628080115",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0e585583-ec07-4831-9269-44b1b7fbd0b0/animations/2b656280-cc21-4d00-a725-9327a16e882c/south-east/3.png?t=1791628080115",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0e585583-ec07-4831-9269-44b1b7fbd0b0/animations/2b656280-cc21-4d00-a725-9327a16e882c/south-east/4.png?t=1791628080115",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0e585583-ec07-4831-9269-44b1b7fbd0b0/animations/2b656280-cc21-4d00-a725-9327a16e882c/south-east/5.png?t=1791628080115",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0e585583-ec07-4831-9269-44b1b7fbd0b0/animations/2b656280-cc21-4d00-a725-9327a16e882c/south-east/6.png?t=1791628080115",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0e585583-ec07-4831-9269-44b1b7fbd0b0/animations/2b656280-cc21-4d00-a725-9327a16e882c/south-east/7.png?t=1791628080115",
+      "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0e585583-ec07-4831-9269-44b1b7fbd0b0/animations/2b656280-cc21-4d00-a725-9327a16e882c/south-east/8.png?t=1791628080115"
+    ],
+    "source_file": "auditorias/sincronia-2026-10-10/fontes/Damian/pistol_south-east.png",
+    "size": 168,
+    "locked_final": true,
+    "selected_candidate_group": "734bdf40-97a8-43c1-8d5a-d5a5ab9b7afc",
+    "canonical_group": "3ecbdb23-1588-44ea-a810-b161a3689230",
+    "first_last_equal": true,
+    "final_canonical_export": "damian-canonico-final.zip",
+    "undo_original_image": "f7cf38ff-cce8-4cc7-80f4-8d4d4c433917",
+    "verification": "Exact RGBA all 9 frames against final official canonical export; 2 transparent columns trimmed on each side; final first frame copied to recovery frame9.",
+    "remote_other_directions_unchanged": {
+      "baseline": 32,
+      "changed": [
+        "3ecbdb23-1588-44ea-a810-b161a3689230/south-east",
+        "c7c37d42-a2be-4f01-8b64-7a4f9f157109/north-west"
+      ],
+      "unexpected": [],
+      "pistolURL": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0e585583-ec07-4831-9269-44b1b7fbd0b0/animations/2b656280-cc21-4d00-a725-9327a16e882c/south-east/{i}.png?t=1791628080115"
+    }
+  }
+]

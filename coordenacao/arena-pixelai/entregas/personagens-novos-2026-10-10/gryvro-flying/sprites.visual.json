@@ -1,0 +1,45 @@
+{
+  "actor_id": "4113eef1-555d-4e1a-9435-06c24d2e7ca5",
+  "owner": "gryvro",
+  "state_key": "flying",
+  "rotations": [
+    "east",
+    "north-east",
+    "north-west",
+    "north",
+    "south-east",
+    "south-west",
+    "south",
+    "west"
+  ],
+  "frame_size": [
+    220,
+    208
+  ],
+  "pivot": "cell-center",
+  "no_rescaling": true,
+  "clips": [
+    {
+      "name": "flight",
+      "direction": "south-east",
+      "frame_count": 9,
+      "frame_size": [
+        220,
+        208
+      ],
+      "fps": 8,
+      "loop": true,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "gryvro-flying/animacoes/flight/south-east.png",
+      "sha256": "34276addfa6dfb03619a82f6f27a8638912715e967abfbff1760e177579a9ea5",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "5c50e22d-bbcd-414e-b636-c4419f5980c8"
+    }
+  ],
+  "integration": "pendente_claude"
+}

@@ -1,0 +1,13 @@
+{
+  "provider": "PixelLab",
+  "tool": "create_tiles_pro",
+  "section": "Map",
+  "assetId": "969ac24a-abe9-4723-8531-baabde2c70e3",
+  "seed": 10102026,
+  "date": "2026-10-10",
+  "requested": 8,
+  "returned": 16,
+  "baseUrl": "https://backblaze.pixellab.ai/file/pixellab-tiles/79dfcb12-a74e-4f4e-87d1-a0307df21f74/969ac24a-abe9-4723-8531-baabde2c70e3/",
+  "map": "fontes/texturas-selecao.json",
+  "prompt": "Eight independent square seamless pixel art material textures for a low-poly 3D woodland HD-2D tactical arena, all perfectly FLAT top-down orthographic surfaces filling the entire square, no side faces, no baked shadows, no objects or cast shadows. Restrained earthy palette, crisp pixels, selective outlines only within textures. 1). moss grass A, muted sage and olive green short dense grass. 2). moss grass B, almost same value and hue, slightly warmer, subtle clover flecks. 3). ancient central zone mosaic, grey mossy cobblestones and a delicate circular pale turquoise woodland rune, no text. 4). side earth cross section, dark umber soil with embedded slate and tiny roots. 5). oak bark, vertical rugged russet dark-brown bark. 6). dense oak foliage, green clustered leaves, deep jade shadows and muted spring green. 7). old warm wooden planks, honey brown with dark seams and knots. 8). grey slate rock, desaturated blue-grey stone fissures and sparse olive moss."
+}

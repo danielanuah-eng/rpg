@@ -1,0 +1,45 @@
+{
+  "character": {
+    "id": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+    "name": "Idle",
+    "prompt": "Original full-body fantasy monster character named Brumak, a hulking bipedal minotaur elemental of basalt. Powerful bull head with broad muzzle, small intelligent amber eyes, enormous curved forward ivory-and-charcoal horns; thick stone-black body, shoulders and muscular arms made of large basalt slabs with a few muted burnt-orange seams. Lichen patches on shoulders, aged bronze collar and simple teal woven waistcloth, broad split stone hooves. Calm dignified standing idle, hands resting empty, no weapon. A squat powerful but readable tactical boardgame miniature silhouette, expressive dark fantasy character, inspired by tabletop dungeon monsters and magical rock peoples. Crisp pixel clusters, bold selective contours, saturated teal focal accents, controlled shading. No attack, no spell animation or defined abilities, full body inside frame, transparent background.",
+    "size": {
+      "width": 128,
+      "height": 128
+    },
+    "directions": 8,
+    "view": "high top-down"
+  },
+  "spritesheet": {
+    "path": "Brumak_Minotauro_de_Basa-Idle.png",
+    "cell_size": {
+      "width": 128,
+      "height": 128
+    },
+    "sheet_size": {
+      "width": 1024,
+      "height": 128
+    },
+    "columns": 8,
+    "pivot": "cell-center",
+    "rows": [
+      {
+        "row": 0,
+        "type": "rotations",
+        "frame_count": 8,
+        "directions": [
+          "south",
+          "south-east",
+          "east",
+          "north-east",
+          "north",
+          "north-west",
+          "west",
+          "south-west"
+        ]
+      }
+    ]
+  },
+  "export_version": "1.0",
+  "export_date": "2026-10-10T16:24:22.974247+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "args": {
+    "name": "Nixira — Goblin dos Cogumelos",
+    "description": "Original fantasy monster named Nixira, female goblin of a mushroom forest, full body bipedal character in a lively resting pose. Small slender moss-green goblin, oversized triangular ears, sharp mischievous amber eyes, crooked friendly grin. Rust-red broad mushroom-cap hat with a few cream spots, short dark moss hair and twig hairpins. Brown patchwork traveling poncho with leafy green trim, canvas waist bag, a small wicker backpack carrying clearly visible two bioluminescent turquoise mushrooms and glass terrarium. Bare green hands, wrapped ankles and tiny worn hiking shoes. Inventive spirited face, small agile silhouette, botanically textured but uncluttered outfit. Original design combining goblin and plant-folk fantasy with expressive tactical boardgame proportions. No weapon, no attack gesture, no spell or ability defined. Full body unobstructed on transparent background, strong clean pixel clusters.",
+    "body_type": "humanoid",
+    "mode": "pro",
+    "n_directions": 8,
+    "size": 128,
+    "view": "high top-down",
+    "style_character_id": "0e585583-ec07-4831-9269-44b1b7fbd0b0"
+  },
+  "result": "id: 7a2e16e2-980f-4030-99c2-0cbf82c82b7f\nname: Nixira — Goblin dos Cogumelos\nmode: pro (25 generations, 8 directions)\nbody: humanoid\nsize: 128x128px\nview: high top-down\nstyle character: 0e585583-ec07-4831-9269-44b1b7fbd0b0\nstatus: processing (~3-5 min)\n\nhint: get_character(character_id=\"7a2e16e2-980f-4030-99c2-0cbf82c82b7f\")",
+  "character_id": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f"
+}

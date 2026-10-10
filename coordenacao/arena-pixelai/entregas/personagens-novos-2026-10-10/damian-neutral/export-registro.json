@@ -1,0 +1,54 @@
+{
+  "actor": {
+    "character_id": "7beda37d-fc07-48df-a1cc-9215091c171e",
+    "state_name": "Camaleão no ombro, sem arma",
+    "ready": true,
+    "rotations": {
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7beda37d-fc07-48df-a1cc-9215091c171e/rotations/south.png?t=1791647325",
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7beda37d-fc07-48df-a1cc-9215091c171e/rotations/east.png?t=1791647325",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7beda37d-fc07-48df-a1cc-9215091c171e/rotations/north.png?t=1791647325",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7beda37d-fc07-48df-a1cc-9215091c171e/rotations/west.png?t=1791647325",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7beda37d-fc07-48df-a1cc-9215091c171e/rotations/south-east.png?t=1791647325",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7beda37d-fc07-48df-a1cc-9215091c171e/rotations/north-east.png?t=1791647325",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7beda37d-fc07-48df-a1cc-9215091c171e/rotations/north-west.png?t=1791647325",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7beda37d-fc07-48df-a1cc-9215091c171e/rotations/south-west.png?t=1791647325"
+    },
+    "folder": "damian-neutral",
+    "owner": "damian",
+    "stateKey": "neutral"
+  },
+  "clips": [
+    {
+      "plan": "damian-camaleao-mao",
+      "name": "camaleao-mao",
+      "direction": "south-east",
+      "count": 9,
+      "cell": [
+        152,
+        168
+      ],
+      "group_id": "5c71bfc4-8c05-4246-9ac3-d5fe4008ca2f",
+      "fps": 8,
+      "loop": false,
+      "reverse": null
+    },
+    {
+      "plan": "damian-camaleao-mao",
+      "name": "camaleao-mao",
+      "direction": "south-west",
+      "count": 9,
+      "cell": [
+        152,
+        168
+      ],
+      "group_id": "5c71bfc4-8c05-4246-9ac3-d5fe4008ca2f",
+      "fps": 8,
+      "loop": false,
+      "reverse": null
+    }
+  ],
+  "source_cell": [
+    152,
+    168
+  ]
+}

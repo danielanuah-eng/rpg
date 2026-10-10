@@ -1,0 +1,45 @@
+{
+  "character": {
+    "id": "ac23f5bd-f7c3-4fe0-b22b-e16684125653",
+    "name": "Modo martelo",
+    "prompt": "cowboy gunslinger, messy red hair, brown cowboy hat, brown short-sleeved shirt with leather suspenders, lean muscular forearms, cowboy boots, revolver in hand, small green chameleon on his shoulder",
+    "size": {
+      "width": 128,
+      "height": 128
+    },
+    "directions": 8,
+    "view": "high top-down"
+  },
+  "spritesheet": {
+    "path": "Damian-Modo_martelo.png",
+    "cell_size": {
+      "width": 128,
+      "height": 128
+    },
+    "sheet_size": {
+      "width": 1024,
+      "height": 128
+    },
+    "columns": 8,
+    "pivot": "cell-center",
+    "rows": [
+      {
+        "row": 0,
+        "type": "rotations",
+        "frame_count": 8,
+        "directions": [
+          "south",
+          "south-east",
+          "east",
+          "north-east",
+          "north",
+          "north-west",
+          "west",
+          "south-west"
+        ]
+      }
+    ]
+  },
+  "export_version": "1.0",
+  "export_date": "2026-10-10T16:24:31.054784+00:00"
+}

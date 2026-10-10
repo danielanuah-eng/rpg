@@ -1,0 +1,78 @@
+FBX version: 7400
+VALIDADO topo_a
+FBX version: 7400
+VALIDADO topo_b
+FBX version: 7400
+VALIDADO topo_zona
+FBX version: 7400
+VALIDADO coluna_a
+FBX version: 7400
+VALIDADO coluna_b
+FBX version: 7400
+VALIDADO beira_reta
+FBX version: 7400
+VALIDADO beira_canto
+FBX version: 7400
+VALIDADO arbusto
+FBX version: 7400
+VALIDADO arvore
+FBX version: 7400
+VALIDADO arvore_jovem
+FBX version: 7400
+VALIDADO arvore_palmeira
+FBX version: 7400
+VALIDADO caixa
+FBX version: 7400
+VALIDADO caixa_rachada
+FBX version: 7400
+VALIDADO caixa_quebrada
+FBX version: 7400
+VALIDADO pedra
+FBX version: 7400
+VALIDADO enfeite_cerca
+FBX version: 7400
+VALIDADO enfeite_cerca_canto
+FBX version: 7400
+VALIDADO enfeite_flores
+FBX version: 7400
+VALIDADO enfeite_cogumelos
+FBX version: 7400
+VALIDADO enfeite_seixos
+FBX version: 7400
+VALIDADO enfeite_capim
+FBX version: 7400
+VALIDADO enfeite_raiz_chao
+FBX version: 7400
+VALIDADO enfeite_pedra_baixa
+FBX version: 7400
+VALIDADO enfeite_lago
+FBX version: 7400
+VALIDADO moeda_chao
+FBX version: 7400
+VALIDADO enfeite_tocha
+FBX version: 7400
+VALIDADO enfeite_fogueira
+FBX version: 7400
+VALIDADO enfeite_placa
+FBX version: 7400
+VALIDADO bau_fechado
+FBX version: 7400
+VALIDADO pilar_galeao
+FBX version: 7400
+VALIDADO totem_dominio
+FBX version: 7400
+VALIDADO enfeite_cristal
+FBX version: 7400
+VALIDADO loja_mascate
+FBX version: 7400
+VALIDADO entorno
+FBX version: 7400
+VALIDADO entorno_16
+FBX version: 7400
+VALIDADO entorno_18
+00:05.000  blend            | Read blend: "C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\coordenacao\arena-pixelai\entregas\mapa-blender\v02\fontes\deserto.blend"
+00:05.031  blend            | Read blend: "C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\coordenacao\arena-pixelai\entregas\mapa-blender\v02\fontes\deserto.blend"
+VALIDACAO_OK 36 FBX e GLB
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

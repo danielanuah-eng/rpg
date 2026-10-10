@@ -1,0 +1,15 @@
+{
+  "origem": "PixelLab / Map",
+  "id": "3aa336a9-2ec0-4ca2-9049-0aeae3c18fee",
+  "description": "1). slate grey quarry cobblestone ground with small gravel and muted olive moss. 2). nearly identical quarry ground variation, subtle alternate grey. 3). grey granite central plaza mosaic with restrained cyan circular rune. 4). dark grey stone and earthy stratified cliff side. 5). rugged russet brown pine bark with vertical scales. 6). dense dark blue-green pine needles, limited forest green palette. 7). weathered honey-brown timber planks with iron-grey grain. 8). blue-grey granite with fissures and sparse moss.",
+  "selecao": {
+    "pedreira_grama_a": "fontes/pixellab-originais/pedreira/tile_0.png",
+    "pedreira_grama_b": "fontes/pixellab-originais/pedreira/tile_1.png",
+    "pedreira_zona": "fontes/pixellab-originais/pedreira/tile_5.png",
+    "pedreira_terra": "fontes/pixellab-originais/pedreira/tile_6.png",
+    "pedreira_casca": "fontes/pixellab-originais/pedreira/tile_8.png",
+    "pedreira_folhagem": "fontes/pixellab-originais/pedreira/tile_10.png",
+    "pedreira_madeira": "fontes/pixellab-originais/pedreira/tile_12.png",
+    "pedreira_pedra": "fontes/pixellab-originais/pedreira/tile_14.png"
+  }
+}

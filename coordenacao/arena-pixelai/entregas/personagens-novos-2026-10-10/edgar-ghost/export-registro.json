@@ -1,0 +1,40 @@
+{
+  "actor": {
+    "owner": "edgar",
+    "state_name": "Fantasma",
+    "character_id": "0b822833-fbf2-4c17-805c-8b67a0097116",
+    "ready": true,
+    "rotations": {
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0b822833-fbf2-4c17-805c-8b67a0097116/rotations/south.png?t=1791647723",
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0b822833-fbf2-4c17-805c-8b67a0097116/rotations/east.png?t=1791647723",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0b822833-fbf2-4c17-805c-8b67a0097116/rotations/north.png?t=1791647723",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0b822833-fbf2-4c17-805c-8b67a0097116/rotations/west.png?t=1791647723",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0b822833-fbf2-4c17-805c-8b67a0097116/rotations/south-east.png?t=1791647723",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0b822833-fbf2-4c17-805c-8b67a0097116/rotations/north-east.png?t=1791647723",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0b822833-fbf2-4c17-805c-8b67a0097116/rotations/north-west.png?t=1791647723",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0b822833-fbf2-4c17-805c-8b67a0097116/rotations/south-west.png?t=1791647723"
+    },
+    "folder": "edgar-ghost",
+    "stateKey": "ghost"
+  },
+  "clips": [
+    {
+      "plan": "edgar-ghost-walk",
+      "name": "walk",
+      "direction": "south-east",
+      "count": 9,
+      "cell": [
+        160,
+        180
+      ],
+      "group_id": "6f037a17-2ede-45b9-acf0-805bb8b92bc2",
+      "fps": 8,
+      "loop": true,
+      "reverse": null
+    }
+  ],
+  "source_cell": [
+    160,
+    180
+  ]
+}

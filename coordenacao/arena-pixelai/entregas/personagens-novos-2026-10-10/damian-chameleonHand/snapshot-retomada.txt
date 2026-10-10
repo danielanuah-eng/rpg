@@ -1,0 +1,36 @@
+status: completed
+id: 816a9e84-98fb-41c7-a2a6-f3ff694ba79f
+name: Damian
+state_name: Camaleão na mão
+directions: 8 (south, east, north, west, south-east, north-east, north-west, south-west)
+size: 128x128px
+view: high top-down
+style: -, -, -
+group: 6c1827ec-7a7c-42c7-87c4-2702e67fc0ab (7 states)
+  state: Idle (completed) — 0e585583-ec07-4831-9269-44b1b7fbd0b0
+  state: Modo martelo (completed) — ac23f5bd-f7c3-4fe0-b22b-e16684125653
+  state: Camaleão no ombro, sem arma (completed) — 7beda37d-fc07-48df-a1cc-9215091c171e
+  state: Camaleão na mão v2, apoio comum (completed) — 3899a0a1-263e-4102-86e2-917da9337927
+  state: Modo pistola (completed) — 52a7b01e-ca84-4722-ae86-b424e50cf8d3
+  state: Modo canhão (completed) — 20323703-7d5b-45ec-922a-4283e319bc97
+
+rotations:
+  south: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/south.png?t=1791647070
+  east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/east.png?t=1791647070
+  north: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/north.png?t=1791647070
+  west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/west.png?t=1791647070
+  south-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/south-east.png?t=1791647070
+  north-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/north-east.png?t=1791647070
+  north-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/north-west.png?t=1791647070
+  south-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/south-west.png?t=1791647070
+
+animations: none
+
+download: https://api.pixellab.ai/mcp/characters/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/download
+  (bundles all 7 states in the group, one <state-name>/ folder each — this one is 'Camaleao_na_mao/')
+spritesheet: https://api.pixellab.ai/mcp/characters/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/spritesheet (this state only — one uniform-grid sheet PNG + layout JSON, zipped; cells pivot-centred)
+
+available_animations: backflip, breathing-idle, cross-punch, crouched-walking, crouching, drinking, falling-back-death, fight-stance-idle-8-frames, fireball, flying-kick, front-flip, getting-up, high-kick, hurricane-kick, jumping-1, jumping-2, lead-jab, leg-sweep, picking-up, pull-heavy-object, pushing, roundhouse-kick, running-4-frames, running-6-frames, running-8-frames, running-jump, running-slide, sad-walk, scary-walk, surprise-uppercut, taking-punch, throw-object, two-footed-jump, walk, walk-1, walk-2, walking, walking-10, walking-2, walking-3, walking-4, walking-4-frames, walking-5, walking-6, walking-6-frames, walking-7, walking-8, walking-8-frames, walking-9
+
+actions: animate_character(character_id="816a9e84-98fb-41c7-a2a6-f3ff694ba79f", ...) | create_character_state(character_id="816a9e84-98fb-41c7-a2a6-f3ff694ba79f", ...) | delete_character(character_id="816a9e84-98fb-41c7-a2a6-f3ff694ba79f")
+hint: animate_character(character_id="816a9e84-98fb-41c7-a2a6-f3ff694ba79f", template_animation_id="backflip")

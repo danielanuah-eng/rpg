@@ -1,0 +1,97 @@
+{
+  "actor": {
+    "id": "gryvro",
+    "name": "Gryvro — Grifo de Vidro",
+    "body_type": "quadruped",
+    "character_id": "74642151-8059-4dfc-b56a-5f799926785e",
+    "ready": true,
+    "rotations": {
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/south.png?t=1791646778",
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/east.png?t=1791646778",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/north.png?t=1791646778",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/west.png?t=1791646778",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/south-east.png?t=1791646778",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/north-east.png?t=1791646778",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/north-west.png?t=1791646778",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/south-west.png?t=1791646778"
+    },
+    "folder": "gryvro",
+    "owner": "gryvro"
+  },
+  "clips": [
+    {
+      "plan": "gryvro-walk",
+      "name": "walk",
+      "direction": "south-east",
+      "count": 8,
+      "cell": [
+        128,
+        128
+      ],
+      "group_id": "0fa0eafd-a5e2-4f53-a92a-f35c6b3ecb9a",
+      "fps": 10,
+      "loop": true,
+      "reverse": null
+    },
+    {
+      "plan": "gryvro-idle",
+      "name": "idle",
+      "direction": "south-east",
+      "count": 9,
+      "cell": [
+        128,
+        128
+      ],
+      "group_id": "5a52d634-b5fe-4f94-9452-268eac57fafb",
+      "fps": 5,
+      "loop": true,
+      "reverse": null
+    },
+    {
+      "plan": "gryvro-idle",
+      "name": "idle",
+      "direction": "north-east",
+      "count": 9,
+      "cell": [
+        128,
+        128
+      ],
+      "group_id": "5a52d634-b5fe-4f94-9452-268eac57fafb",
+      "fps": 5,
+      "loop": true,
+      "reverse": null
+    },
+    {
+      "plan": "gryvro-idle",
+      "name": "idle",
+      "direction": "north-west",
+      "count": 9,
+      "cell": [
+        128,
+        128
+      ],
+      "group_id": "5a52d634-b5fe-4f94-9452-268eac57fafb",
+      "fps": 5,
+      "loop": true,
+      "reverse": null
+    },
+    {
+      "plan": "gryvro-idle",
+      "name": "idle",
+      "direction": "south-west",
+      "count": 9,
+      "cell": [
+        128,
+        128
+      ],
+      "group_id": "5a52d634-b5fe-4f94-9452-268eac57fafb",
+      "fps": 5,
+      "loop": true,
+      "reverse": null
+    }
+  ],
+  "source_cell": [
+    128,
+    128
+  ]
+}

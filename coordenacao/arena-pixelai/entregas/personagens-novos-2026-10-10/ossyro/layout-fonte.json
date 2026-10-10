@@ -1,0 +1,45 @@
+{
+  "character": {
+    "id": "6b27257d-819c-4d78-829c-0ca36f05d586",
+    "name": "Idle",
+    "prompt": "Full-body original quadrupedal ancient pale DRAGON named Ossyro. Long narrow elegant bony dragon skull with two backwards horns, long bent neck, slim ivory and grey organic scaled torso with exposed rib-like bone shapes, FOUR clawed reptilian legs, TWO leathery wing arms folded over its back showing aged torn lace-like pale membranes and visible long bone fingers, extremely long tapered thin tail curled inside the canvas. Ancient gaunt skeletal appearance but recognizable living/undead dragon anatomy, mournful intelligent lime-green eyes and tiny cold pale-green ghost flame at the mouth. Bone ivory, ash-grey and restrained phosphorescent pale-green highlights, not robotic metal, no armor. Grounded calm poised dragon idle, wings folded enough to leave canvas margin. Original interpretation of Arcanoclisma Velho Ossario Dragao-Palido adapted into expressive high-quality tactical boardgame pixel art matching spectral dragon style. Whole body/tail/wings uncropped, no breath attack in base, transparent background.",
+    "size": {
+      "width": 128,
+      "height": 128
+    },
+    "directions": 8,
+    "view": "high top-down"
+  },
+  "spritesheet": {
+    "path": "Ossyro_Dragao_do_Ossario-Idle.png",
+    "cell_size": {
+      "width": 128,
+      "height": 128
+    },
+    "sheet_size": {
+      "width": 1024,
+      "height": 128
+    },
+    "columns": 8,
+    "pivot": "cell-center",
+    "rows": [
+      {
+        "row": 0,
+        "type": "rotations",
+        "frame_count": 8,
+        "directions": [
+          "south",
+          "south-east",
+          "east",
+          "north-east",
+          "north",
+          "north-west",
+          "west",
+          "south-west"
+        ]
+      }
+    ]
+  },
+  "export_version": "1.0",
+  "export_date": "2026-10-10T16:24:29.851105+00:00"
+}

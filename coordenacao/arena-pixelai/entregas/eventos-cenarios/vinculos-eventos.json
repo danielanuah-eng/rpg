@@ -1,0 +1,227 @@
+{
+  "scope": "Apresentação sem mudança de regras; resolved targets/positions/values come from Core events.",
+  "ranged_skills": [
+    {
+      "skill_id": "dragao-dourado",
+      "source": "projeteis/dragao-dourado.png",
+      "reference_direction": "screen-right",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "target_rule": "Usar alvos, células, origem e endpoint reais da resolução, com alcance efetivo."
+    },
+    {
+      "skill_id": "foice-verde",
+      "source": "projeteis/foice-verde.png",
+      "reference_direction": "screen-right",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "target_rule": "Usar alvos, células, origem e endpoint reais da resolução, com alcance efetivo."
+    },
+    {
+      "skill_id": "tiro-de-pistola",
+      "source": "projeteis/bala-pistola.png",
+      "reference_direction": "screen-right",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "target_rule": "Usar alvos, células, origem e endpoint reais da resolução, com alcance efetivo."
+    },
+    {
+      "skill_id": "canhao-de-mao",
+      "source": "projeteis/bala-canhao.png",
+      "reference_direction": "screen-right",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "target_rule": "Usar alvos, células, origem e endpoint reais da resolução, com alcance efetivo."
+    },
+    {
+      "skill_id": "ilusao-confusa",
+      "source": "projeteis/ilusao-confusa.png",
+      "reference_direction": "screen-right",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "target_rule": "Usar alvos, células, origem e endpoint reais da resolução, com alcance efetivo."
+    },
+    {
+      "skill_id": "tiro-carregado",
+      "source": "projeteis/flecha.png",
+      "reference_direction": "screen-right",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "target_rule": "Usar alvos, células, origem e endpoint reais da resolução, com alcance efetivo."
+    },
+    {
+      "skill_id": "flecha-abissal",
+      "source": "projeteis/flecha-abissal.png",
+      "reference_direction": "screen-right",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "target_rule": "Usar alvos, células, origem e endpoint reais da resolução, com alcance efetivo."
+    },
+    {
+      "skill_id": "baforada",
+      "source": "projeteis/baforada.png",
+      "reference_direction": "screen-right",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "target_rule": "Usar alvos, células, origem e endpoint reais da resolução, com alcance efetivo."
+    },
+    {
+      "skill_id": "raio-arcano",
+      "source": "projeteis/raio-arcano.png",
+      "reference_direction": "screen-right",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "target_rule": "Usar alvos, células, origem e endpoint reais da resolução, com alcance efetivo."
+    }
+  ],
+  "events": {
+    "turno": {
+      "visual": "Foco suave no lutador ativo e transição no indicador da vez.",
+      "asset": "procedural/UI",
+      "status": "Claude: som confirmado; falta feedback visual"
+    },
+    "mover": {
+      "visual": "Walk com deslocamento por distância e aceleração/freio contínuos.",
+      "asset": "clipes walk",
+      "status": "Claude implementou; validar pivôs registrados"
+    },
+    "trava": {
+      "visual": "Pulso curto na borda da casa + rótulo do resultado.",
+      "asset": "procedural/material",
+      "status": "rótulo existente; ligar pulso"
+    },
+    "moeda": {
+      "visual": "Moeda gira e voa da casa até o lutador, contador recebe quantidade real.",
+      "asset": "efeitos/moeda.png",
+      "status": "Claude integrou fonte inicial"
+    },
+    "ataque": {
+      "visual": "Disparo da skill e impacto nos alvos/casas resolvidos, seguido de hit/dano.",
+      "asset": "projeteis/<source>.png; efeitos/impacto-area.png",
+      "status": "disparo integrado; adicionar efeitos/linhas finais"
+    },
+    "cura": {
+      "visual": "Anel verde em quem foi curado e número real.",
+      "asset": "efeitos/cura.png",
+      "status": "novo anel pronto"
+    },
+    "armadilha": {
+      "visual": "Burst sobre a casa, hit completo e valor do evento.",
+      "asset": "efeitos/impacto-area.png",
+      "status": "hit/texto existentes; ligar burst"
+    },
+    "armadilha-posta": {
+      "visual": "Ícone surge na casa com breve pulso.",
+      "asset": "../loja-v2/itens/armadilha-de-espinhos.png",
+      "status": "ícone pronto"
+    },
+    "teleporte": {
+      "visual": "Desaparecer/origem e surgir/destino com clipe teleport.",
+      "asset": "clipe teleport + efeitos/invocacao.png",
+      "status": "clipe existente, overlay opcional"
+    },
+    "salto": {
+      "visual": "Trajetória em arco e clipe leap, sombra no chão.",
+      "asset": "clipe leap + procedural",
+      "status": "Claude implementou trajetória"
+    },
+    "forma": {
+      "visual": "Transição de forma com glow e troca de estado no mesmo ponto do chão.",
+      "asset": "clipes morph/transform + novo Berserk",
+      "status": "nova forma aguarda entrega 008"
+    },
+    "esconder": {
+      "visual": "Fade conforme visibilidade e clipe hide.",
+      "asset": "clipe hide + material",
+      "status": "apresentação existente"
+    },
+    "revelar": {
+      "visual": "Retorno gradual da opacidade e pulso curto.",
+      "asset": "procedural/material",
+      "status": "flash existente"
+    },
+    "espelho": {
+      "visual": "Clipe mirror e entrada de unidade ilusória.",
+      "asset": "clipe mirror + efeitos/invocacao.png",
+      "status": "apresentação existente; overlay opcional"
+    },
+    "guarda": {
+      "visual": "Clipe guard + brilho curto no escudo e valor bloqueado.",
+      "asset": "clipe guard + procedural",
+      "status": "apresentação existente"
+    },
+    "roubo": {
+      "visual": "Moeda gira e voa do alvo ao ladrão, quantidade do evento.",
+      "asset": "efeitos/moeda.png",
+      "status": "Claude implementou"
+    },
+    "invocar": {
+      "visual": "Clipe summon e anel na casa de aparecimento.",
+      "asset": "efeitos/invocacao.png",
+      "status": "novo anel pronto"
+    },
+    "nocaute": {
+      "visual": "Death completo antes de retirar unidade, atualizar equipe.",
+      "asset": "clipe death",
+      "status": "apresentação existente"
+    },
+    "renascer": {
+      "visual": "Revive ou death reverso conforme clipe disponível, brilho e retorno em pé.",
+      "asset": "clipe revive/death + efeitos/cura.png",
+      "status": "fallback existente; não transformar hit em death"
+    },
+    "cataclisma": {
+      "visual": "Efeito segundo evento real e rebuild; chuva usa moedas.",
+      "asset": "efeitos/moeda.png + geometria/partículas",
+      "status": "Claude implementou moedas/cenário"
+    },
+    "compra": {
+      "visual": "Moedas saem e figura do produto aparece sobre o comprador.",
+      "asset": "efeitos/moeda.png + ../loja-v2/itens/<id>.png",
+      "status": "Claude implementou"
+    },
+    "rodada": {
+      "visual": "Transição curta no contador de rodada.",
+      "asset": "procedural/UI",
+      "status": "apenas log na leitura atual; tarefa 010"
+    },
+    "dominio": {
+      "visual": "Pulso nas casas da zona dominada na cor da equipe.",
+      "asset": "procedural/material",
+      "status": "apenas log na leitura atual; tarefa 010"
+    },
+    "eliminado": {
+      "visual": "Dissolver retrato da equipe e indicador visível.",
+      "asset": "procedural/UI",
+      "status": "apenas log na leitura atual; tarefa 010"
+    },
+    "vitoria": {
+      "visual": "Transição de encerramento e realce da equipe ou empate.",
+      "asset": "procedural/UI",
+      "status": "apenas log na leitura atual; tarefa 010"
+    },
+    "loja": {
+      "visual": "Pulso curto nos slots que receberam produtos novos.",
+      "asset": "../loja-v2/itens/<id>.png + UI",
+      "status": "apenas log na leitura atual; tarefa 010"
+    }
+  }
+}

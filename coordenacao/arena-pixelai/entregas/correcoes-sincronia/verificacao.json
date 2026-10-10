@@ -1,0 +1,411 @@
+[
+  {
+    "key": "damianHitNW",
+    "path": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\correcoes-sincronia\\damianHitNW\\hit_north-west.png",
+    "frames": 7,
+    "cell": 168,
+    "sha256": "a2cb62c7d3877e9fefac5543fd7a2cf918a48e96ab2e72d736f01ab821a6c3d0",
+    "verification": "exact pixel equality to approved edits",
+    "first_last_equal": true,
+    "alpha_zero": 156374,
+    "source_sizes": [
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ]
+    ]
+  },
+  {
+    "key": "ciantiaHitNW",
+    "path": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\correcoes-sincronia\\ciantiaHitNW\\hit_north-west.png",
+    "frames": 7,
+    "cell": 168,
+    "sha256": "6fbaf8b9bb7c74f8ec02ad5b4b0c969e899293f174f354fba1f0a4bb996beeba",
+    "verification": "exact pixel equality to approved edits",
+    "first_last_equal": true,
+    "alpha_zero": 156473,
+    "source_sizes": [
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ]
+    ]
+  },
+  {
+    "key": "ezeHitNW",
+    "path": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\correcoes-sincronia\\ezeHitNW\\hit_north-west.png",
+    "frames": 7,
+    "cell": 168,
+    "sha256": "6138cad491d95924ecf0727f67b11787e760be61814a15d939bd4f683b92ad15",
+    "verification": "exact pixel equality to approved edits",
+    "first_last_equal": true,
+    "alpha_zero": 157143,
+    "source_sizes": [
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ]
+    ]
+  },
+  {
+    "key": "devonIdleNW",
+    "path": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\correcoes-sincronia\\devonIdleNW\\idle_north-west.png",
+    "frames": 9,
+    "cell": 172,
+    "sha256": "cc2714c5eadeec648d637270d9188d88a6d0e5df9a71f1fb0c2494dee4601524",
+    "verification": "exact pixel equality to approved edits",
+    "first_last_equal": true,
+    "alpha_zero": 213443,
+    "source_sizes": [
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ]
+    ]
+  },
+  {
+    "key": "jackUltSW",
+    "path": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\correcoes-sincronia\\jackUltSW\\ultshot_south-west.png",
+    "frames": 9,
+    "cell": 172,
+    "sha256": "d55ffc8bd6b81503e1462c91eed55cc1ae3a8cf764be4920c2edc2ed437fa023",
+    "verification": "exact pixel equality to approved edits",
+    "first_last_equal": false,
+    "alpha_zero": 210465,
+    "source_sizes": [
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ]
+    ]
+  },
+  {
+    "key": "berserkIdleSW",
+    "path": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\correcoes-sincronia\\berserkIdleSW\\idle_south-west.png",
+    "frames": 9,
+    "cell": 180,
+    "sha256": "4927d94b45dc909423f209a3841d5f3c5147ec1139133a194c958c194417127c",
+    "verification": "exact pixel equality to approved edits",
+    "first_last_equal": false,
+    "alpha_zero": 227858,
+    "source_sizes": [
+      [
+        180,
+        180
+      ],
+      [
+        180,
+        180
+      ],
+      [
+        180,
+        180
+      ],
+      [
+        180,
+        180
+      ],
+      [
+        180,
+        180
+      ],
+      [
+        180,
+        180
+      ],
+      [
+        180,
+        180
+      ],
+      [
+        180,
+        180
+      ],
+      [
+        180,
+        180
+      ]
+    ]
+  },
+  {
+    "key": "teanthaAttackNW",
+    "path": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\correcoes-sincronia\\teanthaAttackNW\\attack_north-west.png",
+    "frames": 9,
+    "cell": 172,
+    "sha256": "585e5b378bbf65c8945ceb34ad03a1af9cde6bd0645dec7911d6fb55c44190fb",
+    "verification": "exact pixel equality to approved edits",
+    "first_last_equal": true,
+    "alpha_zero": 212673,
+    "source_sizes": [
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ],
+      [
+        172,
+        172
+      ]
+    ]
+  },
+  {
+    "key": "devonDeathSE",
+    "path": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\correcoes-sincronia\\devonDeathSE\\death_south-east.png",
+    "frames": 9,
+    "cell": 168,
+    "sha256": "baaea5a18cb35622bf859c30875e60b941e2e242108fba287c7d1d02cbdb4ea9",
+    "verification": "exact pixel equality to approved edits",
+    "first_last_equal": false,
+    "alpha_zero": 207401,
+    "source_sizes": [
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ],
+      [
+        168,
+        168
+      ]
+    ]
+  },
+  {
+    "key": "damianPistolSE",
+    "path": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\correcoes-sincronia\\damianPistolSE\\pistol_south-east.png",
+    "frames": 9,
+    "cell": 168,
+    "sha256": "8efd99119f2d73dc0df2c664043bbeeca8513fc278e1cea75b2747a457f5adb2",
+    "verification": "Exact RGBA all 9 frames against final official canonical export; 2 transparent columns trimmed on each side; final first frame copied to recovery frame9.",
+    "first_last_equal": true,
+    "alpha_zero": 214029,
+    "source_sizes": [
+      [
+        172,
+        168
+      ],
+      [
+        172,
+        168
+      ],
+      [
+        172,
+        168
+      ],
+      [
+        172,
+        168
+      ],
+      [
+        172,
+        168
+      ],
+      [
+        172,
+        168
+      ],
+      [
+        172,
+        168
+      ],
+      [
+        172,
+        168
+      ],
+      [
+        172,
+        168
+      ]
+    ],
+    "exact_rgba_all_frames": true
+  }
+]

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "character": "Talyssa",
+  "characterId": "82c08beb-13cf-406a-a5c9-f3826e535358",
+  "clip": "hit",
+  "direction": "north-west",
+  "animationGroupId": "2d8a3f66-2300-4d42-b016-f17df28455d8",
+  "status": "corrected-and-verified-in-pixellab",
+  "integrationStatus": "awaiting-claude-import",
+  "fixedImageId": "f3e473ea-3ef2-453f-8d35-664d96f7ff46",
+  "remoteVerifiedImageId": "ab309ef8-6424-4b52-9c7d-7c372d7a08f2",
+  "backupImageId": "46eeadea-3f08-4ad8-9add-3d51292e161f",
+  "undoTarget": "character:82c08beb-13cf-406a-a5c9-f3826e535358:north-west:2d8a3f66-2300-4d42-b016-f17df28455d8",
+  "frameOrderFromOriginalOneBased": [
+    1,
+    2,
+    3,
+    3,
+    2,
+    1,
+    1
+  ],
+  "frameCount": 7,
+  "frameSize": [
+    168,
+    168
+  ],
+  "fps": 10,
+  "unchangedOtherAnimationDirections": 19,
+  "sourceUrlTemplate": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/82c08beb-13cf-406a-a5c9-f3826e535358/animations/9d80f8da-74ed-4b71-a000-17aad5ad7f63/north-west/{i}.png?t=1791619538846",
+  "destination": "ArenaTaticaUnity/Assets/ArenaTatica/Resources/Sprites/Talyssa/hit_north-west.png",
+  "deliveredFile": "coordenacao/arena-pixelai/entregas/talyssa-hit-north-west/hit_north-west.png",
+  "packaging": "Unmodified Claude pixellab-import.ps1 copied and executed in isolated delivery folder. The project code and Assets were not edited.",
+  "extraGeneratedCandidate": {
+    "groupId": "d23f7dbc-acd5-4929-9c75-9f795c627888",
+    "name": "hit-nw-codex-review",
+    "frames": 9,
+    "status": "completed-unreviewed-unused",
+    "generationsCharged": 4,
+    "automaticUse": false
+  },
+  "operations": [
+    {
+      "operation": "copy_region",
+      "layer": "image",
+      "frames": [
+        4
+      ],
+      "source_layer": "image",
+      "source_frame": 3,
+      "region": [
+        0,
+        0,
+        167,
+        167
+      ],
+      "at": [
+        0,
+        0
+      ],
+      "reason": "Hold the upright impact pose instead of beginning a death fall."
+    },
+    {
+      "operation": "copy_region",
+      "layer": "image",
+      "frames": [
+        5
+      ],
+      "source_layer": "image",
+      "source_frame": 2,
+      "region": [
+        0,
+        0,
+        167,
+        167
+      ],
+      "at": [
+        0,
+        0
+      ],
+      "reason": "Recover from the impact while remaining standing."
+    },
+    {
+      "operation": "copy_region",
+      "layer": "image",
+      "frames": [
+        6,
+        7
+      ],
+      "source_layer": "image",
+      "source_frame": 1,
+      "region": [
+        0,
+        0,
+        167,
+        167
+      ],
+      "at": [
+        0,
+        0
+      ],
+      "reason": "Return upright to the exact starting pose, preserving hit timing and identity."
+    }
+  ],
+  "fileValidation": {
+    "width": 1176,
+    "height": 168,
+    "frameCount": 7,
+    "alphaZeroPixels": 161822,
+    "alphaPartialPixels": 0,
+    "alphaOpaquePixels": 35746,
+    "sha256": "ba9c5e26290b71a01003a65eed2660169b3161ca29038aab4b72da31a8e3a739",
+    "frameOrderVerifiedAgainstOriginal": [
+      1,
+      2,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "firstAndLastFrameEqual": true
+  }
+}

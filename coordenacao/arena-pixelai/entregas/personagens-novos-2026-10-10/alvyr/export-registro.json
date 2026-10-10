@@ -1,0 +1,26 @@
+{
+  "actor": {
+    "id": "alvyr",
+    "name": "Alvyr — Cervo Branco",
+    "body_type": "quadruped",
+    "character_id": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+    "ready": true,
+    "rotations": {
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/south.png?t=1791646847",
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/east.png?t=1791646847",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/north.png?t=1791646847",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/west.png?t=1791646847",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/south-east.png?t=1791646847",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/north-east.png?t=1791646847",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/north-west.png?t=1791646847",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/south-west.png?t=1791646847"
+    },
+    "folder": "alvyr",
+    "owner": "alvyr"
+  },
+  "clips": [],
+  "source_cell": [
+    128,
+    128
+  ]
+}

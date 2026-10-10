@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import { fileURLToPath } from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'manifesto.json'),'utf8'));
+const validation=JSON.parse(fs.readFileSync(path.join(root,'validacao.json'),'utf8'));
+if(validation.status!=='aprovado_tecnicamente' || validation.pecas!==29) throw new Error('Validação incompleta');
+const sha=file=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex');
+manifest.fonteSha256=sha(manifest.fonte);
+manifest.validacao={arquivo:'validacao.json',pecas:validation.pecas,fbxReimportados:29,glbConferidos:29,fonteBlenderReaberta:true,socketsPosicoesConferidas:true,centrosEntornosLivres:true,unityTestado:false};
+manifest.texturas.sha256=Object.fromEntries(Object.keys(JSON.parse(fs.readFileSync(path.join(root,'fontes','texturas-selecao.json'),'utf8')).selecao).map(name=>[name+'.png',sha('mapa/bosque/'+name+'.png')]));
+fs.writeFileSync(path.join(root,'manifesto.json'),JSON.stringify(manifest,null,2));
+console.log(JSON.stringify({status:validation.status,pecas:29,fbx:29,glb:29,maxTrisProp:Math.max(...manifest.pecas.filter(p=>!p.peca.startsWith('entorno')).map(p=>p.tris)),maxTrisEntorno:Math.max(...manifest.pecas.filter(p=>p.peca.startsWith('entorno')).map(p=>p.tris)),fonteBytes:fs.statSync(path.join(root,manifest.fonte)).size}));

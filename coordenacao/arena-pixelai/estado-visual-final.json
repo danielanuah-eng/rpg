@@ -1,0 +1,53 @@
+{
+  "status": "entregue",
+  "ready_for_claude": true,
+  "author_visual_approval": "pendente",
+  "integration_final": "pendente_claude",
+  "scope": "Images and technical asset preparation only; no game code, Assets, Tools or upload changed by Codex.",
+  "optional_not_in_import_plan": [
+    "correcoes-sincronia/berserkIdleSW/idle_south-west.png (old form repair superseded by new state)",
+    "loja-v2/loja.png",
+    "loja-v2/vendedor.png",
+    "loja-v2/vendedor-estabilizado/*.png",
+    "eventos-cenarios/terrenos/cristal.png",
+    "all previews, source frames, backup strips, ZIPs and review groups"
+  ],
+  "tasks": {
+    "codex_delivered": [
+      "003",
+      "004",
+      "007",
+      "008"
+    ],
+    "claude_initial_confirmed": [
+      "005",
+      "006"
+    ],
+    "claude_final_pending": [
+      "009",
+      "010",
+      "import final 168 pistol",
+      "import full animated shop scene",
+      "import new possessed Berserk",
+      "bind new effect clips and snow/volcano textures"
+    ]
+  },
+  "validation": {
+    "sprite_snapshot_characters": 12,
+    "sprite_snapshot_clips": 284,
+    "reference_pivots_registered": 284,
+    "imported_origins_different": 127,
+    "new_berserk_clips": 40,
+    "new_berserk_frames": 344,
+    "new_berserk_views": 8,
+    "new_berserk_return_clips_exact": 32,
+    "shop_scene_frames": 9,
+    "shop_product_icons": 10,
+    "ranged_skills_linked": 9,
+    "game_events_linked": 26,
+    "terrain_themes": 5,
+    "asset_checks_passed": true,
+    "unity_tests_by_codex": false,
+    "claude_previous_tests": "24/24 EditMode; ARENA_PREPARE_OK per prior response before final assets"
+  }
+}

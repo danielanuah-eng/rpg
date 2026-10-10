@@ -1,0 +1,809 @@
+{
+  "character_id": "215bb320-de53-44a1-bec7-f2e23f4e7265",
+  "reference_views": 8,
+  "clips": 40,
+  "frames": 344,
+  "first_visible_reference_equal": true,
+  "items": [
+    {
+      "action": "idle",
+      "direction": "north",
+      "frames": 9,
+      "cell": 176,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.16477272727272727
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0390625
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 209282,
+      "alpha_partial": 0,
+      "sha256": "488d150198569b762a31dacd6c45d854c127949e9fb6e8bfb7d5735e5fb0832e",
+      "file": "sprites\\idle_north.png"
+    },
+    {
+      "action": "walk",
+      "direction": "north",
+      "frames": 9,
+      "cell": 176,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.16477272727272727
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0390625
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 208332,
+      "alpha_partial": 0,
+      "sha256": "f437b2226cf38b77b6c4716976bb739c8f9edd7103424845732b55401ba9e469",
+      "file": "sprites\\walk_north.png"
+    },
+    {
+      "action": "attack",
+      "direction": "north",
+      "frames": 9,
+      "cell": 176,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.16477272727272727
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0390625
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 208496,
+      "alpha_partial": 0,
+      "sha256": "6d6298b3fc1a368c03a71bd01b7cf9d49f8a47578b409cc882aa78bd7b933fcf",
+      "file": "sprites\\attack_north.png"
+    },
+    {
+      "action": "hit",
+      "direction": "north",
+      "frames": 7,
+      "cell": 176,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.16477272727272727
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0390625
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 164402,
+      "alpha_partial": 0,
+      "sha256": "1b236eecdb2265989fa2c1c487955de42c4114d5a7f333bc58e9f4b6ad4a9a1e",
+      "file": "sprites\\hit_north.png"
+    },
+    {
+      "action": "death",
+      "direction": "north",
+      "frames": 9,
+      "cell": 176,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.16477272727272727
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0390625
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 217810,
+      "alpha_partial": 0,
+      "sha256": "3e3f24633c19453eece25a6d35b71dfc4145cedb0766b9c33b6a42f32cac855d",
+      "file": "sprites\\death_north.png"
+    },
+    {
+      "action": "idle",
+      "direction": "north-east",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "reference_pivot": [
+        0.5,
+        0.03125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 225650,
+      "alpha_partial": 0,
+      "sha256": "6af8c16dbbb69b9100893f9d2c9f5c0b6b6dad79f9778d8b25db042983162bfb",
+      "file": "sprites\\idle_north-east.png"
+    },
+    {
+      "action": "walk",
+      "direction": "north-east",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "reference_pivot": [
+        0.5,
+        0.03125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 232295,
+      "alpha_partial": 0,
+      "sha256": "7768c85700be9abcd4d472e261ab969406ee93f2b5cfa07f07e35944cb2fc96d",
+      "file": "sprites\\walk_north-east.png"
+    },
+    {
+      "action": "attack",
+      "direction": "north-east",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "reference_pivot": [
+        0.5,
+        0.03125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 242913,
+      "alpha_partial": 0,
+      "sha256": "29ce0457d7d0f4a617d19887d3fe90e2bf98379e49d5c7e62a8de924d5c18c4c",
+      "file": "sprites\\attack_north-east.png"
+    },
+    {
+      "action": "hit",
+      "direction": "north-east",
+      "frames": 7,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "reference_pivot": [
+        0.5,
+        0.03125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 173418,
+      "alpha_partial": 0,
+      "sha256": "27c313d070517a366ad03f6c12ea4236220e74a448ebeb45c7da9b137d3d83ad",
+      "file": "sprites\\hit_north-east.png"
+    },
+    {
+      "action": "death",
+      "direction": "north-east",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "reference_pivot": [
+        0.5,
+        0.03125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 237050,
+      "alpha_partial": 0,
+      "sha256": "04b1d01a214d5c2f81c7435a4e0d0cda703cf166b88c04d5235db7b7ce9df940",
+      "file": "sprites\\death_north-east.png"
+    },
+    {
+      "action": "idle",
+      "direction": "east",
+      "frames": 9,
+      "cell": 176,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.1534090909090909
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0234375
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 219736,
+      "alpha_partial": 0,
+      "sha256": "2c6531916f77a8d62311cb8d501fd630994ec16facb183e9edd64e8d41a340be",
+      "file": "sprites\\idle_east.png"
+    },
+    {
+      "action": "walk",
+      "direction": "east",
+      "frames": 9,
+      "cell": 176,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.1534090909090909
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0234375
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 222933,
+      "alpha_partial": 0,
+      "sha256": "b450077f0d026af6470a6cb247f3a66d1314ba6ca4ea168ae68b59df8ebc99ff",
+      "file": "sprites\\walk_east.png"
+    },
+    {
+      "action": "attack",
+      "direction": "east",
+      "frames": 9,
+      "cell": 176,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.1534090909090909
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0234375
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 219106,
+      "alpha_partial": 0,
+      "sha256": "97e2bcc09c05d5ffc859a1e51b6005f5027490df52a0bd4ee872cf82da223194",
+      "file": "sprites\\attack_east.png"
+    },
+    {
+      "action": "hit",
+      "direction": "east",
+      "frames": 7,
+      "cell": 176,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.1534090909090909
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0234375
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 170424,
+      "alpha_partial": 0,
+      "sha256": "ee1c1281364756e6f4e3b4533a399066b41f06941d5f0c9e1bc0b64be3a510f0",
+      "file": "sprites\\hit_east.png"
+    },
+    {
+      "action": "death",
+      "direction": "east",
+      "frames": 9,
+      "cell": 176,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.1534090909090909
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0234375
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 226159,
+      "alpha_partial": 0,
+      "sha256": "294808b57fc6e34a2d2b67e2c82f18facaf1f8f9e8b3ed0f702cf8a3722135f7",
+      "file": "sprites\\death_east.png"
+    },
+    {
+      "action": "idle",
+      "direction": "south-east",
+      "frames": 9,
+      "cell": 168,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "reference_pivot": [
+        0.5,
+        0.03125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 181291,
+      "alpha_partial": 0,
+      "sha256": "ba84b651603057e6cac4f40dedb699d298fe010609f72665958022d3c201569a",
+      "file": "sprites\\idle_south-east.png"
+    },
+    {
+      "action": "walk",
+      "direction": "south-east",
+      "frames": 9,
+      "cell": 168,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "reference_pivot": [
+        0.5,
+        0.03125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 182909,
+      "alpha_partial": 0,
+      "sha256": "dda97e5895e98ef0a6932129d77b15cb9c9cedc77b130a7534a54047530c39a1",
+      "file": "sprites\\walk_south-east.png"
+    },
+    {
+      "action": "attack",
+      "direction": "south-east",
+      "frames": 9,
+      "cell": 168,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "reference_pivot": [
+        0.5,
+        0.03125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 185701,
+      "alpha_partial": 0,
+      "sha256": "52e1677c338c496cbce845aa20695ea5bc6820649addbf2537717a6ba8ac8a64",
+      "file": "sprites\\attack_south-east.png"
+    },
+    {
+      "action": "hit",
+      "direction": "south-east",
+      "frames": 7,
+      "cell": 168,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "reference_pivot": [
+        0.5,
+        0.03125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 141104,
+      "alpha_partial": 0,
+      "sha256": "787bc7fdd2d7a0a5458ac7bb3338f72f403b4c986aa5f9ad05d9b76024514a84",
+      "file": "sprites\\hit_south-east.png"
+    },
+    {
+      "action": "death",
+      "direction": "south-east",
+      "frames": 9,
+      "cell": 168,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "reference_pivot": [
+        0.5,
+        0.03125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 189215,
+      "alpha_partial": 0,
+      "sha256": "e50856e803816b7d3de35cd231219d10225a6dd303ee29307442673719c03303",
+      "file": "sprites\\death_south-east.png"
+    },
+    {
+      "action": "idle",
+      "direction": "south",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0078125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 209960,
+      "alpha_partial": 0,
+      "sha256": "2abee37648a7259696a0012a87ae6a23a0881fe08f8b5e0826207bcbadaddaac",
+      "file": "sprites\\idle_south.png"
+    },
+    {
+      "action": "walk",
+      "direction": "south",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0078125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 209899,
+      "alpha_partial": 0,
+      "sha256": "943dbea2917728d011c595e75e81e3365f62b18345abd827537b88ee4c4b8b62",
+      "file": "sprites\\walk_south.png"
+    },
+    {
+      "action": "attack",
+      "direction": "south",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0078125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 220831,
+      "alpha_partial": 0,
+      "sha256": "eb47ea08d8648b0da738b98717efa291094337250c366f3266d2426190abf397",
+      "file": "sprites\\attack_south.png"
+    },
+    {
+      "action": "hit",
+      "direction": "south",
+      "frames": 7,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0078125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 163703,
+      "alpha_partial": 0,
+      "sha256": "50e032212746fa62227ca593867afdfa04638a2abab980922b5d94fa3fd34c9c",
+      "file": "sprites\\hit_south.png"
+    },
+    {
+      "action": "death",
+      "direction": "south",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0078125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 219665,
+      "alpha_partial": 0,
+      "sha256": "afe9d4b2f9010145f8af9b7040a7a44ae58d4efb1b34326502d9e14a961e9b3f",
+      "file": "sprites\\death_south.png"
+    },
+    {
+      "action": "idle",
+      "direction": "south-west",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "reference_pivot": [
+        0.5,
+        0.03125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 224006,
+      "alpha_partial": 0,
+      "sha256": "1bd601cbe6ef9859dad1c70bbd5a221d5bf3755c3893a1e15fdf6cdce026bb54",
+      "file": "sprites\\idle_south-west.png"
+    },
+    {
+      "action": "walk",
+      "direction": "south-west",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "reference_pivot": [
+        0.5,
+        0.03125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 223334,
+      "alpha_partial": 0,
+      "sha256": "558ca607438a5110e453c6c5eee00f1798015dc40890151ec3b00c5866f9060b",
+      "file": "sprites\\walk_south-west.png"
+    },
+    {
+      "action": "attack",
+      "direction": "south-west",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "reference_pivot": [
+        0.5,
+        0.03125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 223598,
+      "alpha_partial": 0,
+      "sha256": "ff7d9a2e7332aac437bc587985ea243889fc54fda6a4156cfa961d19cca5df76",
+      "file": "sprites\\attack_south-west.png"
+    },
+    {
+      "action": "hit",
+      "direction": "south-west",
+      "frames": 7,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "reference_pivot": [
+        0.5,
+        0.03125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 170583,
+      "alpha_partial": 0,
+      "sha256": "12bea57905a9df7b8e6407106923e72312a22fafc14a3ac574247669042cc63f",
+      "file": "sprites\\hit_south-west.png"
+    },
+    {
+      "action": "death",
+      "direction": "south-west",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "reference_pivot": [
+        0.5,
+        0.03125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 227362,
+      "alpha_partial": 0,
+      "sha256": "53446d57891ec301c7e89f3b92f12b4d63e84c72fb9ba443c77f09bedfecd8d6",
+      "file": "sprites\\death_south-west.png"
+    },
+    {
+      "action": "idle",
+      "direction": "west",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0078125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 238311,
+      "alpha_partial": 0,
+      "sha256": "d23783ffbe9e8915038a5a09bc672ace47098b2b3a40c7f826013e0d643b95cf",
+      "file": "sprites\\idle_west.png"
+    },
+    {
+      "action": "walk",
+      "direction": "west",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0078125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 238058,
+      "alpha_partial": 0,
+      "sha256": "f53ec35b1d387d000d7e315005cb4d3bd81305240af28c9d3b2c26f1d01b6fd2",
+      "file": "sprites\\walk_west.png"
+    },
+    {
+      "action": "attack",
+      "direction": "west",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0078125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 235798,
+      "alpha_partial": 0,
+      "sha256": "eeb593f59caa29de8af38b92df6e4368000042ad7f8ba9b5cac4650cae6de276",
+      "file": "sprites\\attack_west.png"
+    },
+    {
+      "action": "hit",
+      "direction": "west",
+      "frames": 7,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0078125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 179158,
+      "alpha_partial": 0,
+      "sha256": "058615ab17b998a54ade3f041246dc08c8cff162c3320751bfe69faf8125937e",
+      "file": "sprites\\hit_west.png"
+    },
+    {
+      "action": "death",
+      "direction": "west",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "reference_pivot": [
+        0.5,
+        0.0078125
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 245779,
+      "alpha_partial": 0,
+      "sha256": "fa380b1645bc17affac034d308b86590859e3f290d4dcdd37e92c249bb57b8bc",
+      "file": "sprites\\death_west.png"
+    },
+    {
+      "action": "idle",
+      "direction": "north-west",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.15555555555555556
+      ],
+      "reference_pivot": [
+        0.5,
+        0.015625
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 217063,
+      "alpha_partial": 0,
+      "sha256": "43ca5daf139898cf312b96f416d349ae7454fa1014965159589e5b8a6f4dfa52",
+      "file": "sprites\\idle_north-west.png"
+    },
+    {
+      "action": "walk",
+      "direction": "north-west",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.15555555555555556
+      ],
+      "reference_pivot": [
+        0.5,
+        0.015625
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 220854,
+      "alpha_partial": 0,
+      "sha256": "f4307ae55d623aa9e873538f4da51edb30d1447b33ee7f17bc073fa4fbeb8042",
+      "file": "sprites\\walk_north-west.png"
+    },
+    {
+      "action": "attack",
+      "direction": "north-west",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.15555555555555556
+      ],
+      "reference_pivot": [
+        0.5,
+        0.015625
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 214715,
+      "alpha_partial": 0,
+      "sha256": "7590acb3d1ce16e51090626fcfc13689d4a49a7bbe26d4718095dafbea0a36bc",
+      "file": "sprites\\attack_north-west.png"
+    },
+    {
+      "action": "hit",
+      "direction": "north-west",
+      "frames": 7,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.15555555555555556
+      ],
+      "reference_pivot": [
+        0.5,
+        0.015625
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 168631,
+      "alpha_partial": 0,
+      "sha256": "8ec0ce73796690e576e69c19ef2410c0fde2a2293431183f15d3d0006af32951",
+      "file": "sprites\\hit_north-west.png"
+    },
+    {
+      "action": "death",
+      "direction": "north-west",
+      "frames": 9,
+      "cell": 180,
+      "first_visible_rgba_equals_reference": true,
+      "pivot": [
+        0.5,
+        0.15555555555555556
+      ],
+      "reference_pivot": [
+        0.5,
+        0.015625
+      ],
+      "first_last_visible_equal": false,
+      "alpha_zero": 229104,
+      "alpha_partial": 0,
+      "sha256": "3d41cc3243cbb4433c2ed5cab7485fa1359378b3debca569359c1fe677c345ed",
+      "file": "sprites\\death_north-west.png"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "actor": {
+    "state_name": "Modo martelo",
+    "character_id": "ac23f5bd-f7c3-4fe0-b22b-e16684125653",
+    "ready": true,
+    "rotations": {
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/ac23f5bd-f7c3-4fe0-b22b-e16684125653/rotations/south.png?t=1791646823",
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/ac23f5bd-f7c3-4fe0-b22b-e16684125653/rotations/east.png?t=1791646823",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/ac23f5bd-f7c3-4fe0-b22b-e16684125653/rotations/north.png?t=1791646823",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/ac23f5bd-f7c3-4fe0-b22b-e16684125653/rotations/west.png?t=1791646823",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/ac23f5bd-f7c3-4fe0-b22b-e16684125653/rotations/south-east.png?t=1791646823",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/ac23f5bd-f7c3-4fe0-b22b-e16684125653/rotations/north-east.png?t=1791646823",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/ac23f5bd-f7c3-4fe0-b22b-e16684125653/rotations/north-west.png?t=1791646823",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/ac23f5bd-f7c3-4fe0-b22b-e16684125653/rotations/south-west.png?t=1791646823"
+    },
+    "folder": "damian-hammerMode",
+    "owner": "damian",
+    "stateKey": "hammerMode"
+  },
+  "clips": [],
+  "source_cell": [
+    128,
+    128
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "character": {
+    "id": "3899a0a1-263e-4102-86e2-917da9337927",
+    "name": "Camaleão na mão v2, apoio comum",
+    "prompt": "cowboy gunslinger, messy red hair, brown cowboy hat, brown short-sleeved shirt with leather suspenders, lean muscular forearms, cowboy boots, revolver in hand, small green chameleon on his shoulder",
+    "size": {
+      "width": 128,
+      "height": 128
+    },
+    "directions": 8,
+    "view": "high top-down"
+  },
+  "spritesheet": {
+    "path": "Damian-Camaleao_na_mao_v2_apoio.png",
+    "cell_size": {
+      "width": 192,
+      "height": 172
+    },
+    "sheet_size": {
+      "width": 1728,
+      "height": 1032
+    },
+    "columns": 9,
+    "pivot": "cell-center",
+    "rows": [
+      {
+        "row": 0,
+        "type": "rotations",
+        "frame_count": 8,
+        "directions": [
+          "south",
+          "south-east",
+          "east",
+          "north-east",
+          "north",
+          "north-west",
+          "west",
+          "south-west"
+        ]
+      },
+      {
+        "row": 1,
+        "type": "animation",
+        "frame_count": 9,
+        "animation": "transform-martelo",
+        "animation_group_id": "4680dce9-25a3-4396-b816-4ea2a7ee9ad4",
+        "direction": "south-east"
+      },
+      {
+        "row": 2,
+        "type": "animation",
+        "frame_count": 9,
+        "animation": "transform-martelo",
+        "animation_group_id": "4680dce9-25a3-4396-b816-4ea2a7ee9ad4",
+        "direction": "south-west"
+      },
+      {
+        "row": 3,
+        "type": "animation",
+        "frame_count": 9,
+        "animation": "transform-pistola",
+        "animation_group_id": "dc12069a-2875-400b-8ed4-69f4cf5a3272",
+        "direction": "south-east"
+      },
+      {
+        "row": 4,
+        "type": "animation",
+        "frame_count": 9,
+        "animation": "transform-pistola",
+        "animation_group_id": "dc12069a-2875-400b-8ed4-69f4cf5a3272",
+        "direction": "south-west"
+      },
+      {
+        "row": 5,
+        "type": "animation",
+        "frame_count": 9,
+        "animation": "transform-canhao",
+        "animation_group_id": "eeb6cc9e-6093-484a-9c2a-20cc695ff34a",
+        "direction": "south-east"
+      }
+    ]
+  },
+  "export_version": "1.0",
+  "export_date": "2026-10-10T16:24:35.068424+00:00"
+}

@@ -1,0 +1,150 @@
+{
+  "estado": "gerando_personagens",
+  "projeto": "ArenaTaticaUnity",
+  "data": "2026-10-10",
+  "itens": [
+    {
+      "id": "edgar",
+      "name": "Edgar",
+      "type": "humano",
+      "description": "A mature adult male human melee fighter named Edgar, full-body idle standing character sprite, tall and physically strong, broad shoulders and substantial muscular arms, confident relaxed posture. Medium-light skin. Distinct receding hairline, slightly balding at crown and temples; short sparse silver-white and grey hair completely slicked straight backward, lying flat with very little volume, reaching only the edge of the nape; never fluffy or spiky. Clean-shaven expressive mature face, a wide confident OPEN smile with visible white teeth. Open fitted black leather jacket with clearly contrasting dark burgundy velvet trim around its collar, lapels, cuffs and lower edges; plain grey shirt tucked into olive green camouflage military cargo trousers. Clearly exposed brown military belt and prominent metal buckle at the waist. Heavy black lace-up military combat boots. Bare uncovered hands at rest surrounded by SMALL coherent pale mint-cyan ghostly energy clinging to knuckles, not hiding hands or clothing. No weapon, no attack action, no ship in the character sprite. Rich readable pixel-art shapes, tactile leather and velvet, detailed face, warm skin versus cool spectral highlights. Retain adult masculine height and strength even within stylized tactical boardgame proportions. Entire body and boot soles within canvas, transparent background.",
+      "character_id": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+      "size": 128,
+      "body_type": "humanoid"
+    },
+    {
+      "id": "brumak",
+      "name": "Brumak — Minotauro de Basalto",
+      "type": "minotauro elemental",
+      "description": "Original full-body fantasy monster character named Brumak, a hulking bipedal minotaur elemental of basalt. Powerful bull head with broad muzzle, small intelligent amber eyes, enormous curved forward ivory-and-charcoal horns; thick stone-black body, shoulders and muscular arms made of large basalt slabs with a few muted burnt-orange seams. Lichen patches on shoulders, aged bronze collar and simple teal woven waistcloth, broad split stone hooves. Calm dignified standing idle, hands resting empty, no weapon. A squat powerful but readable tactical boardgame miniature silhouette, expressive dark fantasy character, inspired by tabletop dungeon monsters and magical rock peoples. Crisp pixel clusters, bold selective contours, saturated teal focal accents, controlled shading. No attack, no spell animation or defined abilities, full body inside frame, transparent background.",
+      "body_type": "humanoid",
+      "source": "povo-golias",
+      "adaptation": "Minotauro de basalto original: reinterpretacao nova da escala/forca, nao anatomia da arte de Golias.",
+      "character_id": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+      "createArgs": {
+        "name": "Brumak — Minotauro de Basalto",
+        "description": "Original full-body fantasy monster character named Brumak, a hulking bipedal minotaur elemental of basalt. Powerful bull head with broad muzzle, small intelligent amber eyes, enormous curved forward ivory-and-charcoal horns; thick stone-black body, shoulders and muscular arms made of large basalt slabs with a few muted burnt-orange seams. Lichen patches on shoulders, aged bronze collar and simple teal woven waistcloth, broad split stone hooves. Calm dignified standing idle, hands resting empty, no weapon. A squat powerful but readable tactical boardgame miniature silhouette, expressive dark fantasy character, inspired by tabletop dungeon monsters and magical rock peoples. Crisp pixel clusters, bold selective contours, saturated teal focal accents, controlled shading. No attack, no spell animation or defined abilities, full body inside frame, transparent background.",
+        "body_type": "humanoid",
+        "mode": "pro",
+        "n_directions": 8,
+        "size": 128,
+        "view": "high top-down",
+        "style_character_id": "0e585583-ec07-4831-9269-44b1b7fbd0b0"
+      },
+      "createResult": "id: 2d35da45-5786-43fb-99c3-3eccd984ac4c\nname: Brumak — Minotauro de Basalto\nmode: pro (25 generations, 8 directions)\nbody: humanoid\nsize: 128x128px\nview: high top-down\nstyle character: 0e585583-ec07-4831-9269-44b1b7fbd0b0\nstatus: processing (~3-5 min)\n\nhint: get_character(character_id=\"2d35da45-5786-43fb-99c3-3eccd984ac4c\")"
+    },
+    {
+      "id": "nixira",
+      "name": "Nixira — Goblin dos Cogumelos",
+      "type": "goblin verdejante",
+      "description": "Original fantasy monster named Nixira, female goblin of a mushroom forest, full body bipedal character in a lively resting pose. Small slender moss-green goblin, oversized triangular ears, sharp mischievous amber eyes, crooked friendly grin. Rust-red broad mushroom-cap hat with a few cream spots, short dark moss hair and twig hairpins. Brown patchwork traveling poncho with leafy green trim, canvas waist bag, a small wicker backpack carrying clearly visible two bioluminescent turquoise mushrooms and glass terrarium. Bare green hands, wrapped ankles and tiny worn hiking shoes. Inventive spirited face, small agile silhouette, botanically textured but uncluttered outfit. Original design combining goblin and plant-folk fantasy with expressive tactical boardgame proportions. No weapon, no attack gesture, no spell or ability defined. Full body unobstructed on transparent background, strong clean pixel clusters.",
+      "body_type": "humanoid",
+      "source": [
+        "povo-goblins",
+        "povo-verdejantes"
+      ],
+      "adaptation": "Fusao original das duas referencias.",
+      "character_id": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+      "createArgs": {
+        "name": "Nixira — Goblin dos Cogumelos",
+        "description": "Original fantasy monster named Nixira, female goblin of a mushroom forest, full body bipedal character in a lively resting pose. Small slender moss-green goblin, oversized triangular ears, sharp mischievous amber eyes, crooked friendly grin. Rust-red broad mushroom-cap hat with a few cream spots, short dark moss hair and twig hairpins. Brown patchwork traveling poncho with leafy green trim, canvas waist bag, a small wicker backpack carrying clearly visible two bioluminescent turquoise mushrooms and glass terrarium. Bare green hands, wrapped ankles and tiny worn hiking shoes. Inventive spirited face, small agile silhouette, botanically textured but uncluttered outfit. Original design combining goblin and plant-folk fantasy with expressive tactical boardgame proportions. No weapon, no attack gesture, no spell or ability defined. Full body unobstructed on transparent background, strong clean pixel clusters.",
+        "body_type": "humanoid",
+        "mode": "pro",
+        "n_directions": 8,
+        "size": 128,
+        "view": "high top-down",
+        "style_character_id": "0e585583-ec07-4831-9269-44b1b7fbd0b0"
+      },
+      "createResult": "id: 7a2e16e2-980f-4030-99c2-0cbf82c82b7f\nname: Nixira — Goblin dos Cogumelos\nmode: pro (25 generations, 8 directions)\nbody: humanoid\nsize: 128x128px\nview: high top-down\nstyle character: 0e585583-ec07-4831-9269-44b1b7fbd0b0\nstatus: processing (~3-5 min)\n\nhint: get_character(character_id=\"7a2e16e2-980f-4030-99c2-0cbf82c82b7f\")"
+    },
+    {
+      "id": "gryvro",
+      "name": "Gryvro — Grifo de Vidro",
+      "body_type": "quadruped",
+      "template": "lion",
+      "source": "grifo-de-vidro",
+      "description": "Full-body original quadrupedal fantasy creature Gryvro, a glass gryphon with anatomically recognizable eagle head and curved eagle beak, powerful feline lion body on FOUR legs, front eagle TALONS and rear feline paws, long crystalline tail, and TWO articulated feathered eagle wings. Entire creature is living translucent faceted glass, ice-blue clear surfaces with silvery mercury edges, milky white internal core and cyan reflections; no fur, no metal armor, no rider. Wings folded clearly along its back in calm standing grounded idle pose, ready to open for flight, razor-sharp clear front talons visible. Agile light fragile beautiful creature, expressive intelligent deep turquoise eyes. New original design interpreting Arcanoclisma Grifo-de-Vidro, readable charming tactical boardgame pixel art, small compact torso with enough canvas margin for tail and wings. Consistent top-down camera. No attack in base pose, transparent background, whole creature uncropped.",
+      "character_id": "74642151-8059-4dfc-b56a-5f799926785e",
+      "createArgs": {
+        "name": "Gryvro — Grifo de Vidro",
+        "description": "Full-body original quadrupedal fantasy creature Gryvro, a glass gryphon with anatomically recognizable eagle head and curved eagle beak, powerful feline lion body on FOUR legs, front eagle TALONS and rear feline paws, long crystalline tail, and TWO articulated feathered eagle wings. Entire creature is living translucent faceted glass, ice-blue clear surfaces with silvery mercury edges, milky white internal core and cyan reflections; no fur, no metal armor, no rider. Wings folded clearly along its back in calm standing grounded idle pose, ready to open for flight, razor-sharp clear front talons visible. Agile light fragile beautiful creature, expressive intelligent deep turquoise eyes. New original design interpreting Arcanoclisma Grifo-de-Vidro, readable charming tactical boardgame pixel art, small compact torso with enough canvas margin for tail and wings. Consistent top-down camera. No attack in base pose, transparent background, whole creature uncropped.",
+        "body_type": "quadruped",
+        "mode": "pro",
+        "n_directions": 8,
+        "size": 128,
+        "view": "high top-down",
+        "style_character_id": "0e585583-ec07-4831-9269-44b1b7fbd0b0",
+        "template": "lion"
+      },
+      "createResult": "id: 74642151-8059-4dfc-b56a-5f799926785e\nname: Gryvro — Grifo de Vidro\nmode: pro (25 generations, 8 directions)\nbody: quadruped (lion)\nsize: 128x128px\nview: high top-down\nstyle character: 0e585583-ec07-4831-9269-44b1b7fbd0b0\nstatus: processing (~3-5 min)\n\nhint: get_character(character_id=\"74642151-8059-4dfc-b56a-5f799926785e\")"
+    },
+    {
+      "id": "raizor",
+      "name": "Raizor — Urso-Raiz",
+      "body_type": "quadruped",
+      "template": "bear",
+      "source": "urso-raiz",
+      "description": "Full-body original quadrupedal fantasy creature Raizor, a huge powerful BEAR made of living tree roots and bark with four heavy legs and long pale wooden claw tips. Bear head with broad dark-brown wood muzzle, expressive amber eyes, thick green leafy mane and moss shoulders, interwoven ancient dark bark and thick roots forming stout muscular torso, a few clearly contained golden-lime sap highlights inside bark fissures. Brown branch ears, small leafy tail, fern tufts, no antlers and no wings. Weighty grounded calm standing bear on all four paws, large heavy readable silhouette. New original interpretation of Arcanoclisma Urso-Raiz, tactile dark wood and moss-green palette with amber accent, expressive tactical fantasy boardgame pixel art. Entire body and paws uncropped, no attack action in base, transparent background.",
+      "character_id": "8c800a83-a911-4b28-a8f6-2c9dd2958887",
+      "createArgs": {
+        "name": "Raizor — Urso-Raiz",
+        "description": "Full-body original quadrupedal fantasy creature Raizor, a huge powerful BEAR made of living tree roots and bark with four heavy legs and long pale wooden claw tips. Bear head with broad dark-brown wood muzzle, expressive amber eyes, thick green leafy mane and moss shoulders, interwoven ancient dark bark and thick roots forming stout muscular torso, a few clearly contained golden-lime sap highlights inside bark fissures. Brown branch ears, small leafy tail, fern tufts, no antlers and no wings. Weighty grounded calm standing bear on all four paws, large heavy readable silhouette. New original interpretation of Arcanoclisma Urso-Raiz, tactile dark wood and moss-green palette with amber accent, expressive tactical fantasy boardgame pixel art. Entire body and paws uncropped, no attack action in base, transparent background.",
+        "body_type": "quadruped",
+        "mode": "pro",
+        "n_directions": 8,
+        "size": 128,
+        "view": "high top-down",
+        "style_character_id": "0e585583-ec07-4831-9269-44b1b7fbd0b0",
+        "template": "bear"
+      },
+      "createResult": "id: 8c800a83-a911-4b28-a8f6-2c9dd2958887\nname: Raizor — Urso-Raiz\nmode: pro (25 generations, 8 directions)\nbody: quadruped (bear)\nsize: 128x128px\nview: high top-down\nstyle character: 0e585583-ec07-4831-9269-44b1b7fbd0b0\nstatus: processing (~3-5 min)\n\nhint: get_character(character_id=\"8c800a83-a911-4b28-a8f6-2c9dd2958887\")"
+    },
+    {
+      "id": "alvyr",
+      "name": "Alvyr — Cervo Branco",
+      "body_type": "quadruped",
+      "template": "horse",
+      "source": "cervo-branco",
+      "description": "Full-body original quadrupedal fantasy creature Alvyr, an elegant white spectral STAG with four long slender ungulate legs, split hooves, small deer tail, delicate elongated deer head, large pointed ears and magnificent branching GOLDEN ANTLERS. White and warm ivory fur, small pale gold eyes, subtle gold threadlike highlights around joints and hooves; light ethereal grace, not a horse, not a unicorn, no wings, no saddle. Alert noble calm standing base pose, head raised proudly, antlers completely inside the image with ample margin. Dark gold outlines let white body read on any terrain; controlled localized glow, no large halo. Original interpretation of Arcanoclisma Cervo Branco, expressive tactical fantasy boardgame pixel art, clean detailed clusters, body unobstructed, no action pose, transparent background.",
+      "character_id": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+      "createArgs": {
+        "name": "Alvyr — Cervo Branco",
+        "description": "Full-body original quadrupedal fantasy creature Alvyr, an elegant white spectral STAG with four long slender ungulate legs, split hooves, small deer tail, delicate elongated deer head, large pointed ears and magnificent branching GOLDEN ANTLERS. White and warm ivory fur, small pale gold eyes, subtle gold threadlike highlights around joints and hooves; light ethereal grace, not a horse, not a unicorn, no wings, no saddle. Alert noble calm standing base pose, head raised proudly, antlers completely inside the image with ample margin. Dark gold outlines let white body read on any terrain; controlled localized glow, no large halo. Original interpretation of Arcanoclisma Cervo Branco, expressive tactical fantasy boardgame pixel art, clean detailed clusters, body unobstructed, no action pose, transparent background.",
+        "body_type": "quadruped",
+        "mode": "pro",
+        "n_directions": 8,
+        "size": 128,
+        "view": "high top-down",
+        "style_character_id": "0e585583-ec07-4831-9269-44b1b7fbd0b0",
+        "template": "horse"
+      },
+      "createResult": "id: d4deca2a-dfe9-4233-b7f5-59a3efcc4d90\nname: Alvyr — Cervo Branco\nmode: pro (25 generations, 8 directions)\nbody: quadruped (horse)\nsize: 128x128px\nview: high top-down\nstyle character: 0e585583-ec07-4831-9269-44b1b7fbd0b0\nstatus: processing (~3-5 min)\n\nhint: get_character(character_id=\"d4deca2a-dfe9-4233-b7f5-59a3efcc4d90\")"
+    },
+    {
+      "id": "ossyro",
+      "name": "Ossyro — Dragão do Ossário",
+      "body_type": "quadruped",
+      "template": "lion",
+      "size": 192,
+      "style_character_id": "99aa2048-ba78-47f2-b767-0b74a5bbad1a",
+      "source": "velho-ossario-dragao-palido",
+      "description": "Full-body original quadrupedal ancient pale DRAGON named Ossyro. Long narrow elegant bony dragon skull with two backwards horns, long bent neck, slim ivory and grey organic scaled torso with exposed rib-like bone shapes, FOUR clawed reptilian legs, TWO leathery wing arms folded over its back showing aged torn lace-like pale membranes and visible long bone fingers, extremely long tapered thin tail curled inside the canvas. Ancient gaunt skeletal appearance but recognizable living/undead dragon anatomy, mournful intelligent lime-green eyes and tiny cold pale-green ghost flame at the mouth. Bone ivory, ash-grey and restrained phosphorescent pale-green highlights, not robotic metal, no armor. Grounded calm poised dragon idle, wings folded enough to leave canvas margin. Original interpretation of Arcanoclisma Velho Ossario Dragao-Palido adapted into expressive high-quality tactical boardgame pixel art matching spectral dragon style. Whole body/tail/wings uncropped, no breath attack in base, transparent background.",
+      "createArgs": {
+        "name": "Ossyro — Dragão do Ossário",
+        "description": "Full-body original quadrupedal ancient pale DRAGON named Ossyro. Long narrow elegant bony dragon skull with two backwards horns, long bent neck, slim ivory and grey organic scaled torso with exposed rib-like bone shapes, FOUR clawed reptilian legs, TWO leathery wing arms folded over its back showing aged torn lace-like pale membranes and visible long bone fingers, extremely long tapered thin tail curled inside the canvas. Ancient gaunt skeletal appearance but recognizable living/undead dragon anatomy, mournful intelligent lime-green eyes and tiny cold pale-green ghost flame at the mouth. Bone ivory, ash-grey and restrained phosphorescent pale-green highlights, not robotic metal, no armor. Grounded calm poised dragon idle, wings folded enough to leave canvas margin. Original interpretation of Arcanoclisma Velho Ossario Dragao-Palido adapted into expressive high-quality tactical boardgame pixel art matching spectral dragon style. Whole body/tail/wings uncropped, no breath attack in base, transparent background.",
+        "body_type": "quadruped",
+        "mode": "pro",
+        "n_directions": 8,
+        "size": 192,
+        "view": "high top-down",
+        "style_character_id": "99aa2048-ba78-47f2-b767-0b74a5bbad1a",
+        "template": "lion"
+      },
+      "createResult": "error: pro mode supports max 128px (got 192). Use mode=\"v3\" for sizes up to 256px."
+    }
+  ],
+  "damian": {
+    "character_id": "0e585583-ec07-4831-9269-44b1b7fbd0b0",
+    "pedido": "Camaleao para mao -> transformacao em martelo -> modo martelo; martelo retorna a camaleao na mao -> transforma na nova arma. Criar transformacao e destransformacao em vez de usar golpe hammer como mudanca de modo."
+  }
+}

@@ -1,0 +1,924 @@
+{
+  "schemaVersion": 1,
+  "capturedAtUtc": "2026-10-10T07:59:10.256432+00:00",
+  "importOwner": "claude",
+  "commandsAreUnexecutedSuggestions": true,
+  "summary": [
+    {
+      "folder": "Ciantia",
+      "id": "4bbf50ca-1983-4a53-8034-71639d574f18",
+      "localFiles": 32,
+      "readyAnimationDirections": 24,
+      "missingRotations": [],
+      "missingCompletedClips": [],
+      "frameAudit": [
+        {
+          "file": "death_north-west.png",
+          "frameSize": 168,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "death_south-east.png",
+          "frameSize": 172,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "death_north-east.png",
+          "frameSize": 168,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "death_south-west.png",
+          "frameSize": 172,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "hit_north-west.png",
+          "frameSize": 168,
+          "frameCount": 7,
+          "expectedFrameCount": 7,
+          "valid": true
+        },
+        {
+          "file": "hit_south-west.png",
+          "frameSize": 172,
+          "frameCount": 7,
+          "expectedFrameCount": 7,
+          "valid": true
+        },
+        {
+          "file": "hit_north-east.png",
+          "frameSize": 168,
+          "frameCount": 7,
+          "expectedFrameCount": 7,
+          "valid": true
+        },
+        {
+          "file": "hit_south-east.png",
+          "frameSize": 172,
+          "frameCount": 7,
+          "expectedFrameCount": 7,
+          "valid": true
+        },
+        {
+          "file": "summon_north-east.png",
+          "frameSize": 168,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "summon_north-west.png",
+          "frameSize": 168,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "summon_south-east.png",
+          "frameSize": 172,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "summon_south-west.png",
+          "frameSize": 172,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "attack_north-east.png",
+          "frameSize": 168,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "attack_north-west.png",
+          "frameSize": 168,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "attack_south-west.png",
+          "frameSize": 172,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "attack_south-east.png",
+          "frameSize": 172,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "walk_north-east.png",
+          "frameSize": 168,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "walk_north-west.png",
+          "frameSize": 168,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "walk_south-east.png",
+          "frameSize": 172,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "walk_south-west.png",
+          "frameSize": 172,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "idle_north-west.png",
+          "frameSize": 168,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "idle_north-east.png",
+          "frameSize": 168,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "idle_south-east.png",
+          "frameSize": 172,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "idle_south-west.png",
+          "frameSize": 172,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        }
+      ],
+      "invalidFrameGrids": [],
+      "missingMeta": [],
+      "pendingJobs": null
+    },
+    {
+      "folder": "DragaoEspectral",
+      "id": "99aa2048-ba78-47f2-b767-0b74a5bbad1a",
+      "localFiles": 16,
+      "readyAnimationDirections": 20,
+      "missingRotations": [],
+      "missingCompletedClips": [
+        {
+          "clip": "death",
+          "direction": "north-west",
+          "frames": 9,
+          "file": "death_north-west.png"
+        },
+        {
+          "clip": "death",
+          "direction": "south-east",
+          "frames": 9,
+          "file": "death_south-east.png"
+        },
+        {
+          "clip": "death",
+          "direction": "north-east",
+          "frames": 9,
+          "file": "death_north-east.png"
+        },
+        {
+          "clip": "death",
+          "direction": "south-west",
+          "frames": 9,
+          "file": "death_south-west.png"
+        },
+        {
+          "clip": "walk",
+          "direction": "north-east",
+          "frames": 9,
+          "file": "walk_north-east.png"
+        },
+        {
+          "clip": "walk",
+          "direction": "south-east",
+          "frames": 9,
+          "file": "walk_south-east.png"
+        },
+        {
+          "clip": "walk",
+          "direction": "north-west",
+          "frames": 9,
+          "file": "walk_north-west.png"
+        },
+        {
+          "clip": "walk",
+          "direction": "south-west",
+          "frames": 9,
+          "file": "walk_south-west.png"
+        },
+        {
+          "clip": "hit",
+          "direction": "south-west",
+          "frames": 7,
+          "file": "hit_south-west.png"
+        },
+        {
+          "clip": "hit",
+          "direction": "north-west",
+          "frames": 7,
+          "file": "hit_north-west.png"
+        },
+        {
+          "clip": "hit",
+          "direction": "north-east",
+          "frames": 7,
+          "file": "hit_north-east.png"
+        },
+        {
+          "clip": "hit",
+          "direction": "south-east",
+          "frames": 7,
+          "file": "hit_south-east.png"
+        }
+      ],
+      "frameAudit": [
+        {
+          "file": "idle_south-east.png",
+          "frameSize": 244,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "idle_north-west.png",
+          "frameSize": 244,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "idle_north-east.png",
+          "frameSize": 244,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "idle_south-west.png",
+          "frameSize": 236,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "attack_south-east.png",
+          "frameSize": 244,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "attack_north-east.png",
+          "frameSize": 244,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "attack_north-west.png",
+          "frameSize": 244,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "attack_south-west.png",
+          "frameSize": 236,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        }
+      ],
+      "invalidFrameGrids": [],
+      "missingMeta": [],
+      "pendingJobs": null
+    },
+    {
+      "folder": "Damian",
+      "id": "0e585583-ec07-4831-9269-44b1b7fbd0b0",
+      "localFiles": 8,
+      "readyAnimationDirections": 0,
+      "missingRotations": [],
+      "missingCompletedClips": [],
+      "frameAudit": [],
+      "invalidFrameGrids": [],
+      "missingMeta": [],
+      "pendingJobs": null
+    },
+    {
+      "folder": "Perry",
+      "id": "00feb798-edd2-4c3d-bfd6-fa383598933c",
+      "localFiles": 8,
+      "readyAnimationDirections": 0,
+      "missingRotations": [],
+      "missingCompletedClips": [],
+      "frameAudit": [],
+      "invalidFrameGrids": [],
+      "missingMeta": [],
+      "pendingJobs": null
+    },
+    {
+      "folder": "ArqueiroJack",
+      "id": "a4a1aa93-271c-4a24-857a-a8ed16f5ac7f",
+      "localFiles": 8,
+      "readyAnimationDirections": 0,
+      "missingRotations": [],
+      "missingCompletedClips": [],
+      "frameAudit": [],
+      "invalidFrameGrids": [],
+      "missingMeta": [],
+      "pendingJobs": null
+    },
+    {
+      "folder": "Diantus",
+      "id": "6bb16bf3-bec7-4e16-b360-1913102dca7d",
+      "localFiles": 8,
+      "readyAnimationDirections": 0,
+      "missingRotations": [],
+      "missingCompletedClips": [],
+      "frameAudit": [],
+      "invalidFrameGrids": [],
+      "missingMeta": [],
+      "pendingJobs": null
+    },
+    {
+      "folder": "Ezequiela",
+      "id": "161fac6b-50a2-415d-9799-6ae15690b00d",
+      "localFiles": 8,
+      "readyAnimationDirections": 0,
+      "missingRotations": [],
+      "missingCompletedClips": [],
+      "frameAudit": [],
+      "invalidFrameGrids": [],
+      "missingMeta": [],
+      "pendingJobs": null
+    },
+    {
+      "folder": "TchuTcha",
+      "id": "20ab2d03-8aa1-4b6a-9590-9345d764f279",
+      "localFiles": 8,
+      "readyAnimationDirections": 0,
+      "missingRotations": [],
+      "missingCompletedClips": [],
+      "frameAudit": [],
+      "invalidFrameGrids": [],
+      "missingMeta": [],
+      "pendingJobs": null
+    },
+    {
+      "folder": "Devon",
+      "id": "aa403323-ced9-430c-9f44-fdf263d7f6a3",
+      "localFiles": 8,
+      "readyAnimationDirections": 2,
+      "missingRotations": [],
+      "missingCompletedClips": [
+        {
+          "clip": "idle",
+          "direction": "north-east",
+          "frames": 9,
+          "file": "idle_north-east.png"
+        },
+        {
+          "clip": "idle",
+          "direction": "south-west",
+          "frames": 9,
+          "file": "idle_south-west.png"
+        }
+      ],
+      "frameAudit": [],
+      "invalidFrameGrids": [],
+      "missingMeta": [],
+      "pendingJobs": {
+        "count": 2,
+        "snapshot": [
+          "custom-idle breathing, greatsword res(north-west): 19% ~313s",
+          "custom-idle breathing, greatsword res(south-east): 92% ~60s"
+        ]
+      }
+    },
+    {
+      "folder": "Teantha",
+      "id": "4efddfc5-d4af-485a-8d54-96973d69b960",
+      "localFiles": 8,
+      "readyAnimationDirections": 8,
+      "missingRotations": [],
+      "missingCompletedClips": [
+        {
+          "clip": "walk",
+          "direction": "north-east",
+          "frames": 9,
+          "file": "walk_north-east.png"
+        },
+        {
+          "clip": "walk",
+          "direction": "south-east",
+          "frames": 9,
+          "file": "walk_south-east.png"
+        },
+        {
+          "clip": "walk",
+          "direction": "north-west",
+          "frames": 9,
+          "file": "walk_north-west.png"
+        },
+        {
+          "clip": "walk",
+          "direction": "south-west",
+          "frames": 9,
+          "file": "walk_south-west.png"
+        },
+        {
+          "clip": "idle",
+          "direction": "north-west",
+          "frames": 9,
+          "file": "idle_north-west.png"
+        },
+        {
+          "clip": "idle",
+          "direction": "south-east",
+          "frames": 9,
+          "file": "idle_south-east.png"
+        },
+        {
+          "clip": "idle",
+          "direction": "north-east",
+          "frames": 9,
+          "file": "idle_north-east.png"
+        },
+        {
+          "clip": "idle",
+          "direction": "south-west",
+          "frames": 9,
+          "file": "idle_south-west.png"
+        }
+      ],
+      "frameAudit": [],
+      "invalidFrameGrids": [],
+      "missingMeta": [],
+      "pendingJobs": {
+        "count": 1,
+        "snapshot": [
+          "custom-sweeping wide slash with the s(south-east): 1% ~473s"
+        ]
+      }
+    },
+    {
+      "folder": "Talyssa",
+      "id": "82c08beb-13cf-406a-a5c9-f3826e535358",
+      "localFiles": 24,
+      "readyAnimationDirections": 20,
+      "missingRotations": [],
+      "missingCompletedClips": [
+        {
+          "clip": "death",
+          "direction": "south-east",
+          "frames": 9,
+          "file": "death_south-east.png"
+        },
+        {
+          "clip": "death",
+          "direction": "south-west",
+          "frames": 9,
+          "file": "death_south-west.png"
+        },
+        {
+          "clip": "death",
+          "direction": "north-west",
+          "frames": 9,
+          "file": "death_north-west.png"
+        },
+        {
+          "clip": "death",
+          "direction": "north-east",
+          "frames": 9,
+          "file": "death_north-east.png"
+        }
+      ],
+      "frameAudit": [
+        {
+          "file": "attack_south-east.png",
+          "frameSize": 168,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "attack_north-west.png",
+          "frameSize": 168,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "attack_south-west.png",
+          "frameSize": 172,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "attack_north-east.png",
+          "frameSize": 180,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "hit_north-west.png",
+          "frameSize": 168,
+          "frameCount": 7,
+          "expectedFrameCount": 7,
+          "valid": true
+        },
+        {
+          "file": "hit_south-east.png",
+          "frameSize": 168,
+          "frameCount": 7,
+          "expectedFrameCount": 7,
+          "valid": true
+        },
+        {
+          "file": "hit_north-east.png",
+          "frameSize": 180,
+          "frameCount": 7,
+          "expectedFrameCount": 7,
+          "valid": true
+        },
+        {
+          "file": "hit_south-west.png",
+          "frameSize": 172,
+          "frameCount": 7,
+          "expectedFrameCount": 7,
+          "valid": true
+        },
+        {
+          "file": "walk_north-west.png",
+          "frameSize": 168,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "walk_south-east.png",
+          "frameSize": 168,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "walk_south-west.png",
+          "frameSize": 172,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "walk_north-east.png",
+          "frameSize": 180,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "idle_north-west.png",
+          "frameSize": 168,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "idle_north-east.png",
+          "frameSize": 180,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "idle_south-east.png",
+          "frameSize": 168,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        },
+        {
+          "file": "idle_south-west.png",
+          "frameSize": 172,
+          "frameCount": 9,
+          "expectedFrameCount": 9,
+          "valid": true
+        }
+      ],
+      "invalidFrameGrids": [],
+      "missingMeta": [
+        "attack_north-east.png",
+        "attack_north-west.png",
+        "attack_south-east.png",
+        "attack_south-west.png",
+        "hit_north-east.png",
+        "hit_north-west.png",
+        "hit_south-east.png",
+        "hit_south-west.png",
+        "idle_north-east.png",
+        "idle_north-west.png",
+        "idle_south-east.png",
+        "idle_south-west.png",
+        "walk_north-east.png",
+        "walk_north-west.png",
+        "walk_south-east.png",
+        "walk_south-west.png"
+      ],
+      "pendingJobs": null
+    }
+  ],
+  "queue": [
+    {
+      "id": "99aa2048-ba78-47f2-b767-0b74a5bbad1a",
+      "folder": "DragaoEspectral",
+      "status": "ready-for-claude-import",
+      "pendingJobs": null,
+      "missingCompletedClips": [
+        {
+          "clip": "death",
+          "direction": "north-west",
+          "frames": 9,
+          "file": "death_north-west.png"
+        },
+        {
+          "clip": "death",
+          "direction": "south-east",
+          "frames": 9,
+          "file": "death_south-east.png"
+        },
+        {
+          "clip": "death",
+          "direction": "north-east",
+          "frames": 9,
+          "file": "death_north-east.png"
+        },
+        {
+          "clip": "death",
+          "direction": "south-west",
+          "frames": 9,
+          "file": "death_south-west.png"
+        },
+        {
+          "clip": "walk",
+          "direction": "north-east",
+          "frames": 9,
+          "file": "walk_north-east.png"
+        },
+        {
+          "clip": "walk",
+          "direction": "south-east",
+          "frames": 9,
+          "file": "walk_south-east.png"
+        },
+        {
+          "clip": "walk",
+          "direction": "north-west",
+          "frames": 9,
+          "file": "walk_north-west.png"
+        },
+        {
+          "clip": "walk",
+          "direction": "south-west",
+          "frames": 9,
+          "file": "walk_south-west.png"
+        },
+        {
+          "clip": "hit",
+          "direction": "south-west",
+          "frames": 7,
+          "file": "hit_south-west.png"
+        },
+        {
+          "clip": "hit",
+          "direction": "north-west",
+          "frames": 7,
+          "file": "hit_north-west.png"
+        },
+        {
+          "clip": "hit",
+          "direction": "north-east",
+          "frames": 7,
+          "file": "hit_north-east.png"
+        },
+        {
+          "clip": "hit",
+          "direction": "south-east",
+          "frames": 7,
+          "file": "hit_south-east.png"
+        }
+      ],
+      "missingMeta": [],
+      "invalidFrameGrids": [],
+      "commandFromProjectRoot": "powershell -File Tools/pixellab-import.ps1 -Id 99aa2048-ba78-47f2-b767-0b74a5bbad1a -Pasta DragaoEspectral -Estado Idle",
+      "executed": false
+    },
+    {
+      "id": "aa403323-ced9-430c-9f44-fdf263d7f6a3",
+      "folder": "Devon",
+      "status": "wait-for-generation",
+      "pendingJobs": {
+        "count": 2,
+        "snapshot": [
+          "custom-idle breathing, greatsword res(north-west): 19% ~313s",
+          "custom-idle breathing, greatsword res(south-east): 92% ~60s"
+        ]
+      },
+      "missingCompletedClips": [
+        {
+          "clip": "idle",
+          "direction": "north-east",
+          "frames": 9,
+          "file": "idle_north-east.png"
+        },
+        {
+          "clip": "idle",
+          "direction": "south-west",
+          "frames": 9,
+          "file": "idle_south-west.png"
+        }
+      ],
+      "missingMeta": [],
+      "invalidFrameGrids": [],
+      "commandFromProjectRoot": "powershell -File Tools/pixellab-import.ps1 -Id aa403323-ced9-430c-9f44-fdf263d7f6a3 -Pasta Devon -Estado Idle",
+      "executed": false
+    },
+    {
+      "id": "4efddfc5-d4af-485a-8d54-96973d69b960",
+      "folder": "Teantha",
+      "status": "wait-for-generation",
+      "pendingJobs": {
+        "count": 1,
+        "snapshot": [
+          "custom-sweeping wide slash with the s(south-east): 1% ~473s"
+        ]
+      },
+      "missingCompletedClips": [
+        {
+          "clip": "walk",
+          "direction": "north-east",
+          "frames": 9,
+          "file": "walk_north-east.png"
+        },
+        {
+          "clip": "walk",
+          "direction": "south-east",
+          "frames": 9,
+          "file": "walk_south-east.png"
+        },
+        {
+          "clip": "walk",
+          "direction": "north-west",
+          "frames": 9,
+          "file": "walk_north-west.png"
+        },
+        {
+          "clip": "walk",
+          "direction": "south-west",
+          "frames": 9,
+          "file": "walk_south-west.png"
+        },
+        {
+          "clip": "idle",
+          "direction": "north-west",
+          "frames": 9,
+          "file": "idle_north-west.png"
+        },
+        {
+          "clip": "idle",
+          "direction": "south-east",
+          "frames": 9,
+          "file": "idle_south-east.png"
+        },
+        {
+          "clip": "idle",
+          "direction": "north-east",
+          "frames": 9,
+          "file": "idle_north-east.png"
+        },
+        {
+          "clip": "idle",
+          "direction": "south-west",
+          "frames": 9,
+          "file": "idle_south-west.png"
+        }
+      ],
+      "missingMeta": [],
+      "invalidFrameGrids": [],
+      "commandFromProjectRoot": "powershell -File Tools/pixellab-import.ps1 -Id 4efddfc5-d4af-485a-8d54-96973d69b960 -Pasta Teantha -Estado Idle",
+      "executed": false
+    },
+    {
+      "id": "82c08beb-13cf-406a-a5c9-f3826e535358",
+      "folder": "Talyssa",
+      "status": "ready-for-claude-import-with-hit-fix",
+      "pendingJobs": null,
+      "missingCompletedClips": [
+        {
+          "clip": "death",
+          "direction": "south-east",
+          "frames": 9,
+          "file": "death_south-east.png"
+        },
+        {
+          "clip": "death",
+          "direction": "south-west",
+          "frames": 9,
+          "file": "death_south-west.png"
+        },
+        {
+          "clip": "death",
+          "direction": "north-west",
+          "frames": 9,
+          "file": "death_north-west.png"
+        },
+        {
+          "clip": "death",
+          "direction": "north-east",
+          "frames": 9,
+          "file": "death_north-east.png"
+        }
+      ],
+      "missingMeta": [
+        "attack_north-east.png",
+        "attack_north-west.png",
+        "attack_south-east.png",
+        "attack_south-west.png",
+        "hit_north-east.png",
+        "hit_north-west.png",
+        "hit_south-east.png",
+        "hit_south-west.png",
+        "idle_north-east.png",
+        "idle_north-west.png",
+        "idle_south-east.png",
+        "idle_south-west.png",
+        "walk_north-east.png",
+        "walk_north-west.png",
+        "walk_south-east.png",
+        "walk_south-west.png"
+      ],
+      "invalidFrameGrids": [],
+      "commandFromProjectRoot": "powershell -File Tools/pixellab-import.ps1 -Id 82c08beb-13cf-406a-a5c9-f3826e535358 -Pasta Talyssa -Estado Idle",
+      "executed": false,
+      "priorityFile": "coordenacao/arena-pixelai/entregas/talyssa-hit-north-west/hit_north-west.png"
+    }
+  ],
+  "notes": [
+    "The horizontal strips may have larger square cells than the nominal rotation size; this is expected padding, not a corruption. Validate width/height and frame count.",
+    "Do not run a group download while pending jobs remain; PixelLab may return HTTP 423.",
+    "Tchu tcha contains two complete states both named Berserk. Staged individual rotations are separated by UUID.",
+    "The library is changing concurrently; refresh the selected character before a final import."
+  ],
+  "visualReviewBlocks": [],
+  "priorityDelivery": {
+    "character": "Talyssa",
+    "clip": "hit",
+    "direction": "north-west",
+    "status": "corrected-in-pixellab-awaiting-claude-import",
+    "file": "coordenacao/arena-pixelai/entregas/talyssa-hit-north-west/hit_north-west.png",
+    "destination": "ArenaTaticaUnity/Assets/ArenaTatica/Resources/Sprites/Talyssa/hit_north-west.png",
+    "preserveOtherClips": true
+  },
+  "latestVerifiedDelivery": {
+    "manifest": "entregas/plano-de-importacao.json",
+    "guide": "entregas/LEIA-ME-CLAUDE.md",
+    "updatedAtUtc": "2026-10-10T11:44:56.529985+00:00",
+    "note": "Original inventory/queue preserved as dated snapshot; final assets and Claude-confirmed states are in the new manifest."
+  }
+}

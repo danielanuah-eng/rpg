@@ -1,0 +1,15 @@
+{
+  "args": {
+    "name": "Gryvro — Grifo de Vidro",
+    "description": "Full-body original quadrupedal fantasy creature Gryvro, a glass gryphon with anatomically recognizable eagle head and curved eagle beak, powerful feline lion body on FOUR legs, front eagle TALONS and rear feline paws, long crystalline tail, and TWO articulated feathered eagle wings. Entire creature is living translucent faceted glass, ice-blue clear surfaces with silvery mercury edges, milky white internal core and cyan reflections; no fur, no metal armor, no rider. Wings folded clearly along its back in calm standing grounded idle pose, ready to open for flight, razor-sharp clear front talons visible. Agile light fragile beautiful creature, expressive intelligent deep turquoise eyes. New original design interpreting Arcanoclisma Grifo-de-Vidro, readable charming tactical boardgame pixel art, small compact torso with enough canvas margin for tail and wings. Consistent top-down camera. No attack in base pose, transparent background, whole creature uncropped.",
+    "body_type": "quadruped",
+    "mode": "pro",
+    "n_directions": 8,
+    "size": 128,
+    "view": "high top-down",
+    "style_character_id": "0e585583-ec07-4831-9269-44b1b7fbd0b0",
+    "template": "lion"
+  },
+  "result": "id: 74642151-8059-4dfc-b56a-5f799926785e\nname: Gryvro — Grifo de Vidro\nmode: pro (25 generations, 8 directions)\nbody: quadruped (lion)\nsize: 128x128px\nview: high top-down\nstyle character: 0e585583-ec07-4831-9269-44b1b7fbd0b0\nstatus: processing (~3-5 min)\n\nhint: get_character(character_id=\"74642151-8059-4dfc-b56a-5f799926785e\")",
+  "character_id": "74642151-8059-4dfc-b56a-5f799926785e"
+}

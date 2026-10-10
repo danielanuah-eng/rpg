@@ -1,0 +1,118 @@
+{
+  "id": "013-dados",
+  "versao": "v01",
+  "estado": "entregue-aguarda-importacao-e-teste-claude",
+  "origem": "desenho original deterministico com primitivas; sem copia do Krosmaster ou modelo remoto",
+  "destino": "ArenaTaticaUnity/Assets/ArenaTatica/Resources/Sprites/Dados/",
+  "arquivos": [
+    {
+      "arquivo": "Dados/cataclisma.png",
+      "sha256": "a0b37fd876c262d648c9268da44b199869d8f2ee2a9970a1e9fbbd5f3471e6a3",
+      "dimensoes": [
+        128,
+        128
+      ],
+      "alphaMinMax": [
+        0,
+        255
+      ]
+    },
+    {
+      "arquivo": "Dados/coringa-esquiva-trava.png",
+      "sha256": "9d0e818a5f2e9764db9fa03adcad90c749d3d70c6537e0d70d6dad14b17ad050",
+      "dimensoes": [
+        128,
+        128
+      ],
+      "alphaMinMax": [
+        0,
+        255
+      ]
+    },
+    {
+      "arquivo": "Dados/coringa.png",
+      "sha256": "9d8f88a48a51255d57e257e2d0a869743ab31bc267b560c8efa4795640fcfe3f",
+      "dimensoes": [
+        128,
+        128
+      ],
+      "alphaMinMax": [
+        0,
+        255
+      ]
+    },
+    {
+      "arquivo": "Dados/escudo.png",
+      "sha256": "ed0c78433ad793a91f8c100e6a8e18528c0dac6f901cdd2e09f92c51e9c5992d",
+      "dimensoes": [
+        128,
+        128
+      ],
+      "alphaMinMax": [
+        0,
+        255
+      ]
+    },
+    {
+      "arquivo": "Dados/esquiva.png",
+      "sha256": "232269f4591d9c5d0fc04bdf88caad85574d4bcfe3f65b8c2c61b0d586078108",
+      "dimensoes": [
+        128,
+        128
+      ],
+      "alphaMinMax": [
+        0,
+        255
+      ]
+    },
+    {
+      "arquivo": "Dados/rolagem.png",
+      "sha256": "d497f585bef7958fd15f2e7678537c26651e01483b76bc57d711d8b9010000f4",
+      "dimensoes": [
+        1280,
+        128
+      ],
+      "alphaMinMax": [
+        0,
+        255
+      ]
+    },
+    {
+      "arquivo": "Dados/trava.png",
+      "sha256": "ae907abecc60a806c01241c0a80affa760763b36dc5d12cc9dba08e09e979641",
+      "dimensoes": [
+        128,
+        128
+      ],
+      "alphaMinMax": [
+        0,
+        255
+      ]
+    }
+  ],
+  "rolagem": {
+    "quadros": 10,
+    "tamanhoQuadro": [
+      128,
+      128
+    ],
+    "ordem": "esquerda para direita",
+    "fps": 14,
+    "duracaoQuadros": 0.7142857142857143,
+    "duracaoLogicaAtual": 0.7,
+    "resultado": "face final definida pelo motor, nunca pela animacao"
+  },
+  "importacaoSugerida": {
+    "spritePixelsPerUnit": 128,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "compression": "None",
+    "filterMode": "Point",
+    "mipmaps": false,
+    "observacao": "dados da HUD; testar separadamente dos personagens minimizados em 3D"
+  },
+  "procedimento": "fontes/gerar_dados.py",
+  "revisao": "alfa e dimensoes verificados; conferir previa e quadros; jogo ainda nao testado"
+}

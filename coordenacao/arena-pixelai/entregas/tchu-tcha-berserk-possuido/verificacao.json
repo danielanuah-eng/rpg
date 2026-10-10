@@ -1,0 +1,173 @@
+{
+  "canonical_clips": 40,
+  "canonical_frames": 344,
+  "exact_native_repairs": 32,
+  "checks": [
+    {
+      "action": "idle",
+      "direction": "north",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "idle",
+      "direction": "north-east",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "idle",
+      "direction": "east",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "idle",
+      "direction": "south-east",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "idle",
+      "direction": "south",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "idle",
+      "direction": "south-west",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "idle",
+      "direction": "west",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "idle",
+      "direction": "north-west",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "hit",
+      "direction": "north",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "hit",
+      "direction": "north-east",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "hit",
+      "direction": "east",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "hit",
+      "direction": "south-east",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "hit",
+      "direction": "south",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "hit",
+      "direction": "south-west",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "hit",
+      "direction": "west",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "hit",
+      "direction": "north-west",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "walk",
+      "direction": "north",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "walk",
+      "direction": "north-east",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "walk",
+      "direction": "east",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "walk",
+      "direction": "south-east",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "walk",
+      "direction": "south",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "walk",
+      "direction": "south-west",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "walk",
+      "direction": "west",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "walk",
+      "direction": "north-west",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "attack",
+      "direction": "north",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "attack",
+      "direction": "north-east",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "attack",
+      "direction": "east",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "attack",
+      "direction": "south-east",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "attack",
+      "direction": "south",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "attack",
+      "direction": "south-west",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "attack",
+      "direction": "west",
+      "exact_visible_rgba": true
+    },
+    {
+      "action": "attack",
+      "direction": "north-west",
+      "exact_visible_rgba": true
+    }
+  ],
+  "nondeath_clips_first_last_equal": 32,
+  "unchanged_pngs_other_states_rotations_death": 476,
+  "old_states_preserved": true,
+  "first_pose_visible_rgba_equals_reference": 40,
+  "sha256_official_zip": "2dfbf4058ae71d7f5a5f50b63d073b55e26f5b88040994dac53b862c12e511b4",
+  "runtime_unity_test": false
+}

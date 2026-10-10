@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "data": "2026-10-10",
+  "estado": "aguardando_confirmacao_projeto",
+  "projeto": null,
+  "pedido": "Criar personagens novos no PixelLab IA inspirados em monstros de D&D, Arcadia Quest, TCG e RPG Arcanoclisma, sem golpes definidos; incluir Edgar conforme descricao do autor.",
+  "meta": {
+    "monstrosOriginais": 6,
+    "personagemDoAutor": 1,
+    "animacoes": 0
+  },
+  "formato": {
+    "mode": "pro",
+    "size": 128,
+    "n_directions": 8,
+    "view": "high top-down",
+    "style_character_id": "0e585583-ec07-4831-9269-44b1b7fbd0b0"
+  },
+  "referenciaEstilo": "Damian do catalogo atual, oito direcoes 128x128, como referencia de linguagem pixel art, sem copiar identidade",
+  "escopo": "Somente sprites em poses base, sem criar cartas jogaveis, dados de combate ou integrar ao motor; poderes de Edgar sao especificacoes recebidas do autor.",
+  "edgar": {
+    "aparencia": "Homem adulto alto e forte; cabelo branco/grisalho ralo, com entradas/calvicie parcial, todo penteado para tras, pouco volume, ate a borda da nuca. Sorriso confiante aberto mostrando dentes. Jaqueta de couro preta com veludo nas bordas, camisa cinza, calca e bota militar, cinto aparente.",
+    "interpretacoesVisuais": {
+      "corCouro": "preto",
+      "corVeludo": "vinho escuro",
+      "corCalca": "verde militar",
+      "energia": "verde-agua/ciano palido"
+    },
+    "poderesRecebidosDoAutor": {
+      "ataque": "Melee com golpes de mao cobertos de energia fantasmagorica.",
+      "transformacao": "Pode se transformar em fantasma por 1 turno. Ate voltar para sua forma, ninguem consegue acerta-lo com golpes.",
+      "ult": "Invoca um navio fantasma."
+    },
+    "regrasAdicionais": null,
+    "animacoes": "nao solicitadas nesta etapa",
+    "integracao": "pendente_claude"
+  },
+  "fontesConsultadas": {
+    "tcg": [
+      "src/cartas-novas-v2.ts:27 (Carcaca Andante), :30 (Velho Ossario, Dragao Palido)",
+      "src/cartas-provisorias.ts:64 (Grifo-de-Vidro), :86 (Urso-Raiz)"
+    ],
+    "rpg": [
+      "Arcanoclisma/arte/descricoes_das_imagens.md:1272 (Golias/rocha), :1284 (Verdejantes), :1294 (Goblins)"
+    ],
+    "nota": "Nome e familia do TCG sao referencias tematicas; nao atestam a aparencia das artes aprovadas. Novos designs sao originais."
+  },
+  "itens": [
+    {
+      "id": "edgar",
+      "name": "Edgar",
+      "type": "humano",
+      "description": "A mature adult male human melee fighter named Edgar, full-body idle standing character sprite, tall and physically strong, broad shoulders and substantial muscular arms, confident relaxed posture. Medium-light skin. Distinct receding hairline, slightly balding at crown and temples; short sparse silver-white and grey hair completely slicked straight backward, lying flat with very little volume, reaching only the edge of the nape; never fluffy or spiky. Clean-shaven expressive mature face, a wide confident OPEN smile with visible white teeth. Open fitted black leather jacket with clearly contrasting dark burgundy velvet trim around its collar, lapels, cuffs and lower edges; plain grey shirt tucked into olive green camouflage military cargo trousers. Clearly exposed brown military belt and prominent metal buckle at the waist. Heavy black lace-up military combat boots. Bare uncovered hands at rest surrounded by SMALL coherent pale mint-cyan ghostly energy clinging to knuckles, not hiding hands or clothing. No weapon, no attack action, no ship in the character sprite. Rich readable pixel-art shapes, tactile leather and velvet, detailed face, warm skin versus cool spectral highlights. Retain adult masculine height and strength even within stylized tactical boardgame proportions. Entire body and boot soles within canvas, transparent background.",
+      "estado": "conceito_preparado",
+      "character_id": null,
+      "golpesDefinidos": "somente descricoes recebidas do autor"
+    },
+    {
+      "id": "brumak",
+      "name": "Brumak — Minotauro de Basalto",
+      "type": "minotauro elemental",
+      "description": "Original full-body fantasy monster character named Brumak, a hulking bipedal minotaur elemental of basalt. Powerful bull head with broad muzzle, small intelligent amber eyes, enormous curved forward ivory-and-charcoal horns; thick stone-black body, shoulders and muscular arms made of large basalt slabs with a few muted burnt-orange seams. Lichen patches on shoulders, aged bronze collar and simple teal woven waistcloth, broad split stone hooves. Calm dignified standing idle, hands resting empty, no weapon. A squat powerful but readable tactical boardgame miniature silhouette, expressive dark fantasy character, inspired by tabletop dungeon monsters and magical rock peoples. Crisp pixel clusters, bold selective contours, saturated teal focal accents, controlled shading. No attack, no spell animation or defined abilities, full body inside frame, transparent background.",
+      "estado": "conceito_preparado",
+      "character_id": null,
+      "golpesDefinidos": false
+    },
+    {
+      "id": "nixira",
+      "name": "Nixira — Goblin dos Cogumelos",
+      "type": "goblin verdejante",
+      "description": "Original fantasy monster named Nixira, female goblin of a mushroom forest, full body bipedal character in a lively resting pose. Small slender moss-green goblin, oversized triangular ears, sharp mischievous amber eyes, crooked friendly grin. Rust-red broad mushroom-cap hat with a few cream spots, short dark moss hair and twig hairpins. Brown patchwork traveling poncho with leafy green trim, canvas waist bag, a small wicker backpack carrying clearly visible two bioluminescent turquoise mushrooms and glass terrarium. Bare green hands, wrapped ankles and tiny worn hiking shoes. Inventive spirited face, small agile silhouette, botanically textured but uncluttered outfit. Original design combining goblin and plant-folk fantasy with expressive tactical boardgame proportions. No weapon, no attack gesture, no spell or ability defined. Full body unobstructed on transparent background, strong clean pixel clusters.",
+      "estado": "conceito_preparado",
+      "character_id": null,
+      "golpesDefinidos": false
+    },
+    {
+      "id": "vhalcor",
+      "name": "Vhalcor — Draconato de Cristal",
+      "type": "draconato transplanar",
+      "description": "Original bipedal fantasy monster Vhalcor, full-body crystalline dragonkin adventurer. Lean athletic obsidian and midnight-purple scaled humanoid dragon, elongated reptilian snout, intelligent luminous ice-blue eyes, angular translucent cyan and amethyst crystal horns and shoulder ridges, small folded dark membranous shoulder wings, long curved tail with a crystalline fin. Worn bronze chest harness over a simple indigo cloth tunic, leather belt, pale stone bead necklace, clawed reptilian feet. Subtle prism colors ONLY within the crystals, no rainbow aura. Upright composed idle stance with empty relaxed clawed hands. A distinctly readable original magical dragonkin silhouette for a tactical fantasy boardgame, inspired by tabletop dragon monsters and transplanar fantasy. No attack, no casting, no specified skills, full body and tail inside canvas, transparent background, crisp detailed pixel art.",
+      "estado": "conceito_preparado",
+      "character_id": null,
+      "golpesDefinidos": false
+    },
+    {
+      "id": "ossirio",
+      "name": "Ossírio — Guardião do Ossuário",
+      "type": "morto-vivo arcano",
+      "description": "Original full-body skeletal fantasy monster Ossirio, an ancient silent ossuary guardian, bipedal neutral idle stance. Ivory bone skull with a cracked pale ceramic funerary half-mask over one side of face, two small cold turquoise eye lights, exposed ribcage partially protected by aged bronze rib-shaped armor, heavy deep-plum tattered tabard and dark teal short mantle, chain belt holding a small carved funerary bell. Empty articulated skeletal hands held at rest, sturdy bone legs and weathered bronze greaves. Dignified somber expression conveyed by tilted skull and mask, asymmetrical readable silhouette, localized ghostly blue highlights with no large effect. Original dungeon undead concept adapted to expressive tactical boardgame pixel art. No weapon, no attack pose, no ability defined, complete character within transparent canvas.",
+      "estado": "conceito_preparado",
+      "character_id": null,
+      "golpesDefinidos": false
+    },
+    {
+      "id": "ferrugor",
+      "name": "Ferrugor — Devorador de Relíquias",
+      "type": "insetoide",
+      "description": "Original bipedal monster Ferrugor, an insectoid scavenger of magical relics, full-body calm curious idle character sprite. Broad low-set beetle-like copper-rust segmented armored torso, compact tapered snout, two long curled flexible antennae, expressive dark shiny eyes, big asymmetrical chitin shoulder plates mottled with turquoise patina. Two thick articulated hind legs with dark claws, TWO forearms ending in rounded three-fingered chitin hands, small folded back shell visible, no extra limbs obscuring silhouette. A cloth sash and belt carry three tiny old gears and a smooth relic stone, but no weapons. Warm rusty orange, oxidized teal and dark brown palette, friendly strange dungeon-monster charm, strong tactile shell shapes. Original design inspired by rust-eating dungeon beasts and Arcadia-like expressive boardgame monsters. No action, attack or powers defined. Entire antennae and feet fit canvas, transparent background.",
+      "estado": "conceito_preparado",
+      "character_id": null,
+      "golpesDefinidos": false
+    },
+    {
+      "id": "lumora",
+      "name": "Lúmora — Mariposa do Véu",
+      "type": "feérica",
+      "description": "Original fantasy monster Lumora, a mysterious female moth-fey guardian, bipedal full-body standing idle sprite. Slender indigo humanoid with soft lavender short face fur, large reflective turquoise eyes, two elegant feathery antennae and a serene enigmatic small smile. Two wide folded moth wings extending behind shoulders, dark midnight-blue with clearly bounded pale violet moon markings and muted cream eye-like spots, all parts inside canvas. Layered moss-silk pale grey and plum traveling dress, bronze throat ornament, delicate gloves and small pointed dark boots. No staff, no weapon, hands resting relaxed. Magical fae and spectral visual identity without any defined ability or large emitted effects, expressive tactical fantasy boardgame proportions, clean detailed pixel clusters, complete character on transparent background.",
+      "estado": "conceito_preparado",
+      "character_id": null,
+      "golpesDefinidos": false
+    }
+  ],
+  "preservacao": "Nao substituir sprites, personagens ou cartas existentes. Destino definitivo depende da confirmacao do autor."
+}

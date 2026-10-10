@@ -1,0 +1,23 @@
+{
+  "actor_id": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+  "owner": "alvyr",
+  "state_key": null,
+  "rotations": [
+    "east",
+    "north-east",
+    "north-west",
+    "north",
+    "south-east",
+    "south-west",
+    "south",
+    "west"
+  ],
+  "frame_size": [
+    128,
+    128
+  ],
+  "pivot": "cell-center",
+  "no_rescaling": true,
+  "clips": [],
+  "integration": "pendente_claude"
+}

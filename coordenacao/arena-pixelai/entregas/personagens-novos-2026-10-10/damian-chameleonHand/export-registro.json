@@ -1,0 +1,25 @@
+{
+  "actor": {
+    "state_name": "Camaleão na mão",
+    "character_id": "816a9e84-98fb-41c7-a2a6-f3ff694ba79f",
+    "ready": true,
+    "rotations": {
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/south.png?t=1791647070",
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/east.png?t=1791647070",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/north.png?t=1791647070",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/west.png?t=1791647070",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/south-east.png?t=1791647070",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/north-east.png?t=1791647070",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/north-west.png?t=1791647070",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/south-west.png?t=1791647070"
+    },
+    "folder": "damian-chameleonHand",
+    "owner": "damian",
+    "stateKey": "chameleonHand"
+  },
+  "clips": [],
+  "source_cell": [
+    128,
+    128
+  ]
+}

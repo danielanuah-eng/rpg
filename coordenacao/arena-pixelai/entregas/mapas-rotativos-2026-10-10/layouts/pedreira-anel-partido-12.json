@@ -1,0 +1,294 @@
+{
+  "dimensao": 12,
+  "alturaPorNivel": 0.45,
+  "alturas": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "props": [
+    {
+      "peca": "arvore",
+      "casa": [
+        2,
+        4
+      ],
+      "rotacaoGraus": 0,
+      "regra": "existente"
+    },
+    {
+      "peca": "arvore",
+      "casa": [
+        9,
+        7
+      ],
+      "rotacaoGraus": 180,
+      "regra": "existente"
+    },
+    {
+      "peca": "arvore",
+      "casa": [
+        4,
+        2
+      ],
+      "rotacaoGraus": 0,
+      "regra": "existente"
+    },
+    {
+      "peca": "arvore",
+      "casa": [
+        7,
+        9
+      ],
+      "rotacaoGraus": 180,
+      "regra": "existente"
+    },
+    {
+      "peca": "arbusto",
+      "casa": [
+        3,
+        7
+      ],
+      "rotacaoGraus": 0,
+      "regra": "existente"
+    },
+    {
+      "peca": "arbusto",
+      "casa": [
+        8,
+        4
+      ],
+      "rotacaoGraus": 180,
+      "regra": "existente"
+    },
+    {
+      "peca": "caixa",
+      "casa": [
+        4,
+        4
+      ],
+      "rotacaoGraus": 0,
+      "regra": "existente"
+    },
+    {
+      "peca": "caixa",
+      "casa": [
+        7,
+        7
+      ],
+      "rotacaoGraus": 180,
+      "regra": "existente"
+    },
+    {
+      "peca": "relicario_solar",
+      "casa": [
+        2,
+        8
+      ],
+      "rotacaoGraus": 0,
+      "regra": "somente_decoracao"
+    },
+    {
+      "peca": "relicario_solar",
+      "casa": [
+        9,
+        3
+      ],
+      "rotacaoGraus": 180,
+      "regra": "somente_decoracao"
+    },
+    {
+      "peca": "barricada_partida",
+      "casa": [
+        3,
+        3
+      ],
+      "rotacaoGraus": 0,
+      "regra": "somente_decoracao"
+    },
+    {
+      "peca": "barricada_partida",
+      "casa": [
+        8,
+        8
+      ],
+      "rotacaoGraus": 180,
+      "regra": "somente_decoracao"
+    }
+  ],
+  "loja": {
+    "centroBlender": [
+      0,
+      0,
+      0.5
+    ],
+    "zonaCentral": "preservar_pedido_anterior_do_autor"
+  },
+  "mapaJogavelValidado": false,
+  "estado": "estudo_visual_para_importacao_claude"
+}

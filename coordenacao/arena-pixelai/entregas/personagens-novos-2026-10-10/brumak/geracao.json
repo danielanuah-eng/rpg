@@ -1,0 +1,14 @@
+{
+  "args": {
+    "name": "Brumak — Minotauro de Basalto",
+    "description": "Original full-body fantasy monster character named Brumak, a hulking bipedal minotaur elemental of basalt. Powerful bull head with broad muzzle, small intelligent amber eyes, enormous curved forward ivory-and-charcoal horns; thick stone-black body, shoulders and muscular arms made of large basalt slabs with a few muted burnt-orange seams. Lichen patches on shoulders, aged bronze collar and simple teal woven waistcloth, broad split stone hooves. Calm dignified standing idle, hands resting empty, no weapon. A squat powerful but readable tactical boardgame miniature silhouette, expressive dark fantasy character, inspired by tabletop dungeon monsters and magical rock peoples. Crisp pixel clusters, bold selective contours, saturated teal focal accents, controlled shading. No attack, no spell animation or defined abilities, full body inside frame, transparent background.",
+    "body_type": "humanoid",
+    "mode": "pro",
+    "n_directions": 8,
+    "size": 128,
+    "view": "high top-down",
+    "style_character_id": "0e585583-ec07-4831-9269-44b1b7fbd0b0"
+  },
+  "result": "id: 2d35da45-5786-43fb-99c3-3eccd984ac4c\nname: Brumak — Minotauro de Basalto\nmode: pro (25 generations, 8 directions)\nbody: humanoid\nsize: 128x128px\nview: high top-down\nstyle character: 0e585583-ec07-4831-9269-44b1b7fbd0b0\nstatus: processing (~3-5 min)\n\nhint: get_character(character_id=\"2d35da45-5786-43fb-99c3-3eccd984ac4c\")",
+  "character_id": "2d35da45-5786-43fb-99c3-3eccd984ac4c"
+}

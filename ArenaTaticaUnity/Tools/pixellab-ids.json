@@ -1,0 +1,15 @@
+{
+  "_comentario": "Personagens do PixelLab por pasta de Resources/Sprites. Reimportar: powershell -File Tools/pixellab-import.ps1 -Id <id> -Pasta <pasta>",
+  "Ciantia": "4bbf50ca-1983-4a53-8034-71639d574f18",
+  "DragaoEspectral": "99aa2048-ba78-47f2-b767-0b74a5bbad1a",
+  "Talyssa": "82c08beb-13cf-406a-a5c9-f3826e535358",
+  "Teantha": "4efddfc5-d4af-485a-8d54-96973d69b960",
+  "Devon": "aa403323-ced9-430c-9f44-fdf263d7f6a3",
+  "Diantus": "6bb16bf3-bec7-4e16-b360-1913102dca7d",
+  "Damian": "0e585583-ec07-4831-9269-44b1b7fbd0b0",
+  "Ezequiela": "161fac6b-50a2-415d-9799-6ae15690b00d",
+  "TchuTcha": "20ab2d03-8aa1-4b6a-9590-9345d764f279",
+  "TchuTchaBerserk": "a82010d8-719a-4c04-bfb0-2caedc6a6cf5",
+  "ArqueiroJack": "a4a1aa93-271c-4a24-857a-a8ed16f5ac7f",
+  "Perry": "00feb798-edd2-4c3d-bfd6-fa383598933c"
+}

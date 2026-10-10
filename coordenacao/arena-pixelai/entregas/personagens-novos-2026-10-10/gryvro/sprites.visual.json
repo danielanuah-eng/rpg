@@ -1,0 +1,129 @@
+{
+  "actor_id": "74642151-8059-4dfc-b56a-5f799926785e",
+  "owner": "gryvro",
+  "state_key": null,
+  "rotations": [
+    "east",
+    "north-east",
+    "north-west",
+    "north",
+    "south-east",
+    "south-west",
+    "south",
+    "west"
+  ],
+  "frame_size": [
+    220,
+    208
+  ],
+  "pivot": "cell-center",
+  "no_rescaling": true,
+  "clips": [
+    {
+      "name": "walk",
+      "direction": "south-east",
+      "frame_count": 8,
+      "frame_size": [
+        220,
+        208
+      ],
+      "fps": 10,
+      "loop": true,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "gryvro/animacoes/walk/south-east.png",
+      "sha256": "29e8fd721648bacd2b26e8222279fc2eda1f0d49a023b1d79358613b63c58b8e",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "0fa0eafd-a5e2-4f53-a92a-f35c6b3ecb9a"
+    },
+    {
+      "name": "idle",
+      "direction": "south-east",
+      "frame_count": 9,
+      "frame_size": [
+        220,
+        208
+      ],
+      "fps": 5,
+      "loop": true,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "gryvro/animacoes/idle/south-east.png",
+      "sha256": "40ee0eeb5e02d0ee410c2ab4f09578ff284b1b8096a6508764984267837ccb7b",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "5a52d634-b5fe-4f94-9452-268eac57fafb"
+    },
+    {
+      "name": "idle",
+      "direction": "north-east",
+      "frame_count": 9,
+      "frame_size": [
+        220,
+        208
+      ],
+      "fps": 5,
+      "loop": true,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "gryvro/animacoes/idle/north-east.png",
+      "sha256": "d93ec9b8fecc7b26c5a74d62a97d18566ad21d88f586ecb28a3af5d6e6a1d594",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "5a52d634-b5fe-4f94-9452-268eac57fafb"
+    },
+    {
+      "name": "idle",
+      "direction": "north-west",
+      "frame_count": 9,
+      "frame_size": [
+        220,
+        208
+      ],
+      "fps": 5,
+      "loop": true,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "gryvro/animacoes/idle/north-west.png",
+      "sha256": "57131d4af00809a9b3f7951d36297c406b714104abb43f5eedc3b7e7746bfefd",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "5a52d634-b5fe-4f94-9452-268eac57fafb"
+    },
+    {
+      "name": "idle",
+      "direction": "south-west",
+      "frame_count": 9,
+      "frame_size": [
+        220,
+        208
+      ],
+      "fps": 5,
+      "loop": true,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "gryvro/animacoes/idle/south-west.png",
+      "sha256": "c98dda52b604424988eabbb724df862f6cd3091641412707c0f697c56ba30be9",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "5a52d634-b5fe-4f94-9452-268eac57fafb"
+    }
+  ],
+  "integration": "pendente_claude"
+}

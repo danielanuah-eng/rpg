@@ -1,0 +1,29 @@
+status: completed
+id: 2d642607-f310-4e22-b3ae-384361338285
+name: Lobo de cinzas
+state_name: Idle
+directions: 8 (south, east, north, west, south-east, north-east, north-west, south-west)
+size: 128x128px
+view: high top-down
+style: , , 
+group: 6e53bf54-b528-4916-b195-4b8bdf5d0122 (1 state)
+
+rotations:
+  south: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d642607-f310-4e22-b3ae-384361338285/rotations/south.png?t=1791649395
+  east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d642607-f310-4e22-b3ae-384361338285/rotations/east.png?t=1791649395
+  north: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d642607-f310-4e22-b3ae-384361338285/rotations/north.png?t=1791649395
+  west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d642607-f310-4e22-b3ae-384361338285/rotations/west.png?t=1791649395
+  south-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d642607-f310-4e22-b3ae-384361338285/rotations/south-east.png?t=1791649395
+  north-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d642607-f310-4e22-b3ae-384361338285/rotations/north-east.png?t=1791649395
+  north-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d642607-f310-4e22-b3ae-384361338285/rotations/north-west.png?t=1791649395
+  south-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d642607-f310-4e22-b3ae-384361338285/rotations/south-west.png?t=1791649395
+
+animations: none
+
+download: https://api.pixellab.ai/mcp/characters/2d642607-f310-4e22-b3ae-384361338285/download
+spritesheet: https://api.pixellab.ai/mcp/characters/2d642607-f310-4e22-b3ae-384361338285/spritesheet (this state only — one uniform-grid sheet PNG + layout JSON, zipped; cells pivot-centred)
+
+available_animations: bark, fast-walk, idle, running-4-frames, running-6-frames, running-8-frames, sneaking, walk-4-frames, walk-6-frames, walk-8-frames
+
+actions: animate_character(character_id="2d642607-f310-4e22-b3ae-384361338285", ...) | create_character_state(character_id="2d642607-f310-4e22-b3ae-384361338285", ...) | delete_character(character_id="2d642607-f310-4e22-b3ae-384361338285")
+hint: animate_character(character_id="2d642607-f310-4e22-b3ae-384361338285", template_animation_id="bark")

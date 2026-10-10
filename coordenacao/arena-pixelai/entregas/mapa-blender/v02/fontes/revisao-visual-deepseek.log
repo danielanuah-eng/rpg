@@ -1,0 +1,27 @@
+  1. listar {"caminho":"."}
+  2. olhar {"caminhos":["bosque-tabuleiro-12x12.png","bosque-versao-02.png","bosque-versao-03.png","pedreira-tabuleiro-12x12.png"]}
+  3. olhar {"caminhos":["deserto-tabuleiro-12x12.png","neve-tabuleiro-12x12.png","vulcao-tabuleiro-12x12.png"]}
+  4. olhar {"caminhos":["bosque-versao-03.png"]}
+  5. terminar {"resumo":"Revisão visual das 7 imagens (abri todas; 1600x1200). Aprovação com uma ressalva.\n\nOK: (1) loja no centro e
+RESUMO: Revisão visual das 7 imagens (abri todas; 1600x1200). Aprovação com uma ressalva.
+
+OK: (1) loja no centro em todas as sete; (2) três composições do bosque realmente distintas (lago e árvores mudam de lugar); (3) lago presente nos sete temas, sem árvore/pedra em cima (no vulcão é poça de lava laranja); (4) moedas deitadas visíveis no piso em todos; (5) vegetação também nos pátios internos (muros) e nenhuma árvore/pedra caindo fora do tabuleiro; (6) vegetação muda por tema: folhosas no bosque, coníferas na pedreira e na neve, cactos e palmeira no deserto, árvores secas no vulcão.
+
+Ressalva: pedreira e neve usam a mesma conífera (mesma silhueta; na neve só ganha cobertura branca). Se a exigência for vegetação diferente entre todos os temas, essa é a exceção.
+
+Ponto de atenção: em bosque-versao-03.png o lago está colado ao canto direito da loja e sua ponta esquerda aparece encoberta pela loja (oclusão de tela). Por imagem não consigo afirmar se os footprints se sobrepõem.
+
+Limitação: juízo só visual sobre os PNGs; não verifiquei integração ao jogo, colisão, nomes nem exportação.
+✔ A loja (cabana de telhado vermelho com varanda) está no centro do tabuleiro nas sete imagens, inclusive nas versões 02 e 03 do bosque. [bosque-tabuleiro-12x12.png] — ok (arquivo existe)
+✔ As três cenas do bosque são composições diferentes entre si: na 12x12 o lago fica abaixo-esquerda da loja com árvores ao redor; na 02 o lago desce mais para a frente e a cerca mudou de canto; na 03 o lago fica atrás do canto direito da loja e as árvores se redistribuíram. [bosque-tabuleiro-12x12.png; bosque-versao-02.png; bosque-versao-03.png] — revisar: imagem não existe
+✔ Vegetação difere por tema (folhosas no bosque; coníferas na pedreira e na neve; cactos e uma palmeira no deserto; árvores secas sem folha no vulcão). [bosque-tabuleiro-12x12.png; pedreira-tabuleiro-12x12.png; deserto-tabuleiro-12x12.png; neve-tabuleiro-12x12.png; vulcao-tabuleiro-12x12.png] — revisar: imagem não existe
+✘ Exceção à variedade: pedreira e neve usam a mesma conífera (mesma silhueta em camadas, só com neve por cima na neve); são as duas cenas mais parecidas em vegetação. [pedreira-tabuleiro-12x12.png; neve-tabuleiro-12x12.png] — revisar: imagem não existe
+✔ Há lago/poça em todos os temas: água azul no bosque (três cenas), na pedreira, no deserto e gelo na neve; no vulcão é poça laranja de lava. Nenhuma árvore, pedra ou moeda aparece em cima da poça nas sete imagens. [bosque-tabuleiro-12x12.png; bosque-versao-02.png; bosque-versao-03.png; pedreira-tabuleiro-12x12.png; deserto-tabuleiro-12x12.png; neve-tabuleiro-12x12.png; vulcao-tabuleiro-12x12.png] — revisar: imagem não existe
+✘ Em bosque-versao-03.png o lago está encostado ao canto direito da loja e sua ponta esquerda é encoberta pela loja na tela; não consigo decidir por imagem se é só oclusão de câmera ou sobreposição real de volume. [bosque-versao-03.png] — visual (só o DeepSeek viu)
+✔ Moedas douradas deitadas no piso são visíveis em todos os sete temas (pares e trios próximos da loja ou no anel externo). [bosque-tabuleiro-12x12.png; bosque-versao-02.png; bosque-versao-03.png; pedreira-tabuleiro-12x12.png; deserto-tabuleiro-12x12.png; neve-tabuleiro-12x12.png; vulcao-tabuleiro-12x12.png] — revisar: imagem não existe
+✔ Árvores/pedras também aparecem no interior dos pátios murados (ex.: vegetação dentro do recinto do topo em todos os temas) e nada cai para fora do chão; todas as bordas do tabuleiro aparecem livres de props. [bosque-tabuleiro-12x12.png; pedreira-tabuleiro-12x12.png; deserto-tabuleiro-12x12.png; neve-tabuleiro-12x12.png; vulcao-tabuleiro-12x12.png] — revisar: imagem não existe
+? Não consigo confirmar por imagem se o footprint do lago intersecta a loja em bosque-versao-03.png (ponta esquerda do lago aparece encoberta pela loja). Precisaria de vista de topo ou dados de posição.
+? Dados medidos: as sete imagens são 1600x1200 com alfa 255 nos quatro cantos (opacas na borda), apesar de a ferramenta marcar transparencia=true; não avaliei uso de canal alfa.
+? Revisão só visual das prévias PNG: não vi código, cena, nomes de objetos nem integração ao jogo, e não afirmo que as cenas estão no jogo.
+? Pedreira e neve compartilham a mesma conífera; se isso for intencional (só muda a neve), ignorar a ressalva.
+(5 passos, 41486 tokens do DeepSeek; registro: ds-logs\2026-10-10T16-18-33-267Z-52752.json)

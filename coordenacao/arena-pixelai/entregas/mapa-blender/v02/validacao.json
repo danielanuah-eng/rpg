@@ -1,0 +1,78 @@
+{
+  "status": "aprovado_tecnicamente",
+  "fbxReimportados": 176,
+  "glbConferidos": 176,
+  "texturas64x64OriginaisOpacas": 40,
+  "fontesComposicaoReabertas": 7,
+  "maxTrisProp": 952,
+  "maxTrisEntorno": 2888,
+  "composicoes": [
+    {
+      "tema": "pedreira",
+      "fonte": "fontes/pedreira.blend",
+      "propsComApoioConferido": 44,
+      "moedasDeitadas": 12,
+      "margemMetros": 0.5,
+      "lojaCentral": true,
+      "lagoSeparadoDaLojaMetros": 0.7876
+    },
+    {
+      "tema": "bosque",
+      "fonte": "fontes/bosque.blend",
+      "propsComApoioConferido": 44,
+      "moedasDeitadas": 12,
+      "margemMetros": 0.5,
+      "lojaCentral": true,
+      "lagoSeparadoDaLojaMetros": 0.7876
+    },
+    {
+      "tema": "bosque",
+      "fonte": "fontes/bosque-versao-02.blend",
+      "propsComApoioConferido": 41,
+      "moedasDeitadas": 12,
+      "margemMetros": 0.5,
+      "lojaCentral": true,
+      "lagoSeparadoDaLojaMetros": 0.7876
+    },
+    {
+      "tema": "bosque",
+      "fonte": "fontes/bosque-versao-03.blend",
+      "propsComApoioConferido": 41,
+      "moedasDeitadas": 10,
+      "margemMetros": 0.5,
+      "lojaCentral": true,
+      "lagoSeparadoDaLojaMetros": 0.7492
+    },
+    {
+      "tema": "deserto",
+      "fonte": "fontes/deserto.blend",
+      "propsComApoioConferido": 45,
+      "moedasDeitadas": 12,
+      "margemMetros": 0.5,
+      "lojaCentral": true,
+      "lagoSeparadoDaLojaMetros": 0.7876
+    },
+    {
+      "tema": "neve",
+      "fonte": "fontes/neve.blend",
+      "propsComApoioConferido": 44,
+      "moedasDeitadas": 12,
+      "margemMetros": 0.5,
+      "lojaCentral": true,
+      "lagoSeparadoDaLojaMetros": 0.7876
+    },
+    {
+      "tema": "vulcao",
+      "fonte": "fontes/vulcao.blend",
+      "propsComApoioConferido": 44,
+      "moedasDeitadas": 12,
+      "margemMetros": 0.5,
+      "lojaCentral": true,
+      "lagoSeparadoDaLojaMetros": 0.7876
+    }
+  ],
+  "checks": "Escala, eixos, pivôs, UV, tris, hashes, vento, sockets, nearest, vão dos entornos, loja central, margem e apoio das bases, moedas deitadas",
+  "jogoUnityTestado": false,
+  "avaliacaoVisualAutor": "pendente",
+  "falhas": []
+}

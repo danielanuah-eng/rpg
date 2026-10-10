@@ -1,0 +1,26 @@
+{
+  "actor": {
+    "id": "brumak",
+    "name": "Brumak — Minotauro de Basalto",
+    "body_type": "humanoid",
+    "character_id": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+    "ready": true,
+    "rotations": {
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d35da45-5786-43fb-99c3-3eccd984ac4c/rotations/south.png?t=1791646836",
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d35da45-5786-43fb-99c3-3eccd984ac4c/rotations/east.png?t=1791646836",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d35da45-5786-43fb-99c3-3eccd984ac4c/rotations/north.png?t=1791646836",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d35da45-5786-43fb-99c3-3eccd984ac4c/rotations/west.png?t=1791646836",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d35da45-5786-43fb-99c3-3eccd984ac4c/rotations/south-east.png?t=1791646836",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d35da45-5786-43fb-99c3-3eccd984ac4c/rotations/north-east.png?t=1791646836",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d35da45-5786-43fb-99c3-3eccd984ac4c/rotations/north-west.png?t=1791646836",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d35da45-5786-43fb-99c3-3eccd984ac4c/rotations/south-west.png?t=1791646836"
+    },
+    "folder": "brumak",
+    "owner": "brumak"
+  },
+  "clips": [],
+  "source_cell": [
+    128,
+    128
+  ]
+}

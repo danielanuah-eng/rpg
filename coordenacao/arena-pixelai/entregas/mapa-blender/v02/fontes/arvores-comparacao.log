@@ -1,0 +1,22 @@
+C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\coordenacao\arena-pixelai\entregas\mapa-blender\v02\fontes\comparar_arvores.py:25: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  if mat.use_nodes:
+C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\coordenacao\arena-pixelai\entregas\mapa-blender\v02\fontes\comparar_arvores.py:32: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes=True
+C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\coordenacao\arena-pixelai\entregas\mapa-blender\v02\fontes\comparar_arvores.py:46: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  ink.use_nodes=True
+C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\coordenacao\arena-pixelai\entregas\mapa-blender\v02\fontes\comparar_arvores.py:57: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world.use_nodes=True
+00:08.719  image.write      | ERROR OpenImageIO write failed: Could not open file "C:\Users\Anuah\.thumbnails\large\blender_20852_ee90816855c819522be37d7ec7ff07e3.png.png"
+00:18.203  render           | Saved: 'C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\coordenacao\arena-pixelai\entregas\mapa-blender\v02\previews\arvores-cinco-temas.png'
+FBX version: 7400
+FBX version: 7400
+FBX version: 7400
+FBX version: 7400
+FBX version: 7400
+FBX version: 7400
+Info: Packed 20 file(s)
+Info: Saved as "arvores-cinco-temas.blend"
+GALERIA_ARVORES_OK
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

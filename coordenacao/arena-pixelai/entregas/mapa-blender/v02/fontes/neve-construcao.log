@@ -1,0 +1,370 @@
+C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\coordenacao\arena-pixelai\entregas\mapa-blender\v02\fontes\construir_cenarios.py:42: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True
+Warning: No mesh data to join
+Warning: No mesh data to join
+Warning: No mesh data to join
+Warning: No mesh data to join
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\topo_a.fbx'
+export finished in 0.0104 sec.
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+13:25:41 | INFO: Starting glTF 2.0 export
+13:25:41 | INFO: Extracting primitive: Cube.001
+13:25:41 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:41 | INFO: Primitives created: 1
+13:25:41 | INFO: Finished glTF 2.0 export in 0.188262939453125 s
+
+EXPORT_OK topo_a
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\topo_b.fbx'
+export finished in 0.0220 sec.
+13:25:41 | INFO: Starting glTF 2.0 export
+13:25:41 | INFO: Extracting primitive: Cube.002
+13:25:41 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:41 | INFO: Primitives created: 1
+13:25:41 | INFO: Finished glTF 2.0 export in 0.012746095657348633 s
+
+EXPORT_OK topo_b
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\topo_zona.fbx'
+export finished in 0.0086 sec.
+13:25:41 | INFO: Starting glTF 2.0 export
+13:25:41 | INFO: Extracting primitive: Cube.003
+13:25:41 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:41 | INFO: Primitives created: 1
+13:25:41 | INFO: Finished glTF 2.0 export in 0.01148223876953125 s
+
+EXPORT_OK topo_zona
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\coluna_a.fbx'
+export finished in 0.0091 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Cube.004
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 2
+13:25:42 | INFO: Finished glTF 2.0 export in 0.018255949020385742 s
+
+EXPORT_OK coluna_a
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\coluna_b.fbx'
+export finished in 0.0109 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Cube.005
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 2
+13:25:42 | INFO: Finished glTF 2.0 export in 0.014392375946044922 s
+
+EXPORT_OK coluna_b
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\beira_reta.fbx'
+export finished in 0.0083 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Cube.006
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 1
+13:25:42 | INFO: Finished glTF 2.0 export in 0.015686511993408203 s
+
+EXPORT_OK beira_reta
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\beira_canto.fbx'
+export finished in 0.0100 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Cube.007
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 1
+13:25:42 | INFO: Finished glTF 2.0 export in 0.012602567672729492 s
+
+EXPORT_OK beira_canto
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\arbusto.fbx'
+export finished in 0.0110 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Icosphere.008
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 3
+13:25:42 | INFO: Finished glTF 2.0 export in 0.024832487106323242 s
+
+EXPORT_OK arbusto
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\arvore.fbx'
+export finished in 0.0130 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Cone.012
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 3
+13:25:42 | INFO: Finished glTF 2.0 export in 0.0218503475189209 s
+
+EXPORT_OK arvore
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\arvore_jovem.fbx'
+export finished in 0.0140 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Cone.046
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 3
+13:25:42 | INFO: Finished glTF 2.0 export in 0.017239809036254883 s
+
+EXPORT_OK arvore_jovem
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\caixa.fbx'
+export finished in 0.0103 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Cube.009
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 3
+13:25:42 | INFO: Finished glTF 2.0 export in 0.015839338302612305 s
+
+EXPORT_OK caixa
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\caixa_rachada.fbx'
+export finished in 0.0101 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Cube.017
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 4
+13:25:42 | INFO: Finished glTF 2.0 export in 0.02409195899963379 s
+
+EXPORT_OK caixa_rachada
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\caixa_quebrada.fbx'
+export finished in 0.0164 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Cube.025
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 2
+13:25:42 | INFO: Finished glTF 2.0 export in 0.022220373153686523 s
+
+EXPORT_OK caixa_quebrada
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\pedra.fbx'
+export finished in 0.0454 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Icosphere.018
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 2
+13:25:42 | INFO: Finished glTF 2.0 export in 0.02373957633972168 s
+
+EXPORT_OK pedra
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\enfeite_cerca.fbx'
+export finished in 0.0208 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Cone.083
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 1
+13:25:42 | INFO: Finished glTF 2.0 export in 0.01202535629272461 s
+
+EXPORT_OK enfeite_cerca
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\enfeite_cerca_canto.fbx'
+export finished in 0.0188 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Cone.085
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 1
+13:25:42 | INFO: Finished glTF 2.0 export in 0.010821819305419922 s
+
+EXPORT_OK enfeite_cerca_canto
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\enfeite_flores.fbx'
+export finished in 0.0130 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Cone.088
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 4
+13:25:42 | INFO: Finished glTF 2.0 export in 0.020787954330444336 s
+
+EXPORT_OK enfeite_flores
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\enfeite_cogumelos.fbx'
+export finished in 0.0077 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Cone.093
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 2
+13:25:42 | INFO: Finished glTF 2.0 export in 0.011208534240722656 s
+
+EXPORT_OK enfeite_cogumelos
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\enfeite_seixos.fbx'
+export finished in 0.0133 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Icosphere.062
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 1
+13:25:42 | INFO: Finished glTF 2.0 export in 0.013607263565063477 s
+
+EXPORT_OK enfeite_seixos
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\enfeite_capim.fbx'
+export finished in 0.0120 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Cone.096
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 1
+13:25:42 | INFO: Finished glTF 2.0 export in 0.016982555389404297 s
+
+EXPORT_OK enfeite_capim
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\enfeite_raiz_chao.fbx'
+export finished in 0.0092 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Cone.103
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 1
+13:25:42 | INFO: Finished glTF 2.0 export in 0.011944770812988281 s
+
+EXPORT_OK enfeite_raiz_chao
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\enfeite_pedra_baixa.fbx'
+export finished in 0.0143 sec.
+13:25:42 | INFO: Starting glTF 2.0 export
+13:25:42 | INFO: Extracting primitive: Icosphere.067
+13:25:42 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:42 | INFO: Primitives created: 1
+13:25:42 | INFO: Finished glTF 2.0 export in 0.012167692184448242 s
+
+EXPORT_OK enfeite_pedra_baixa
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\enfeite_lago.fbx'
+export finished in 0.0109 sec.
+13:25:43 | INFO: Starting glTF 2.0 export
+13:25:43 | INFO: Extracting primitive: lago
+13:25:43 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:43 | INFO: Primitives created: 3
+13:25:43 | INFO: Finished glTF 2.0 export in 0.020462751388549805 s
+
+EXPORT_OK enfeite_lago
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\moeda_chao.fbx'
+export finished in 0.0118 sec.
+13:25:43 | INFO: Starting glTF 2.0 export
+13:25:43 | INFO: Extracting primitive: Cone.112
+13:25:43 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:43 | INFO: Primitives created: 3
+13:25:43 | INFO: Finished glTF 2.0 export in 0.03381919860839844 s
+
+EXPORT_OK moeda_chao
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\enfeite_tocha.fbx'
+export finished in 0.0170 sec.
+13:25:43 | INFO: Starting glTF 2.0 export
+13:25:43 | INFO: Extracting primitive: Cone.113
+13:25:43 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:43 | INFO: Primitives created: 2
+13:25:43 | INFO: Finished glTF 2.0 export in 0.05440473556518555 s
+
+EXPORT_OK enfeite_tocha
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\enfeite_fogueira.fbx'
+export finished in 0.0143 sec.
+13:25:43 | INFO: Starting glTF 2.0 export
+13:25:43 | INFO: Extracting primitive: Icosphere.077
+13:25:43 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:43 | INFO: Primitives created: 2
+13:25:43 | INFO: Finished glTF 2.0 export in 0.026228666305541992 s
+
+EXPORT_OK enfeite_fogueira
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\enfeite_placa.fbx'
+export finished in 0.0211 sec.
+13:25:43 | INFO: Starting glTF 2.0 export
+13:25:43 | INFO: Extracting primitive: Cone.114
+13:25:43 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:43 | INFO: Primitives created: 3
+13:25:43 | INFO: Finished glTF 2.0 export in 0.023665666580200195 s
+
+EXPORT_OK enfeite_placa
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\bau_fechado.fbx'
+export finished in 0.0913 sec.
+13:25:43 | INFO: Starting glTF 2.0 export
+13:25:43 | INFO: Extracting primitive: Cube.045
+13:25:43 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:43 | INFO: Primitives created: 2
+13:25:43 | INFO: Finished glTF 2.0 export in 0.01851630210876465 s
+
+EXPORT_OK bau_fechado
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\pilar_galeao.fbx'
+export finished in 0.0162 sec.
+13:25:43 | INFO: Starting glTF 2.0 export
+13:25:43 | INFO: Extracting primitive: Cube.050
+13:25:43 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:43 | INFO: Primitives created: 2
+13:25:43 | INFO: Finished glTF 2.0 export in 0.020109176635742188 s
+
+EXPORT_OK pilar_galeao
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\totem_dominio.fbx'
+export finished in 0.0215 sec.
+13:25:43 | INFO: Starting glTF 2.0 export
+13:25:43 | INFO: Extracting primitive: Cube.053
+13:25:43 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:43 | INFO: Primitives created: 2
+13:25:43 | INFO: Finished glTF 2.0 export in 0.015180826187133789 s
+
+EXPORT_OK totem_dominio
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\enfeite_cristal.fbx'
+export finished in 0.0149 sec.
+13:25:43 | INFO: Starting glTF 2.0 export
+13:25:43 | INFO: Extracting primitive: Cone.118
+13:25:43 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:43 | INFO: Primitives created: 1
+13:25:43 | INFO: Finished glTF 2.0 export in 0.012948274612426758 s
+
+EXPORT_OK enfeite_cristal
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\loja_mascate.fbx'
+export finished in 0.0195 sec.
+13:25:43 | INFO: Starting glTF 2.0 export
+13:25:43 | INFO: Extracting primitive: Cube.056
+13:25:43 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:43 | INFO: Primitives created: 10
+13:25:43 | INFO: Finished glTF 2.0 export in 0.10088276863098145 s
+
+EXPORT_OK loja_mascate
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\entorno.fbx'
+export finished in 0.0168 sec.
+13:25:43 | INFO: Starting glTF 2.0 export
+13:25:43 | INFO: Extracting primitive: clareira_anel
+13:25:43 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:43 | INFO: Primitives created: 7
+13:25:43 | INFO: Finished glTF 2.0 export in 0.053436279296875 s
+
+EXPORT_OK entorno
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\entorno_16.fbx'
+export finished in 0.0760 sec.
+13:25:43 | INFO: Starting glTF 2.0 export
+13:25:43 | INFO: Extracting primitive: clareira_anel.001
+13:25:43 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:43 | INFO: Primitives created: 7
+13:25:43 | INFO: Finished glTF 2.0 export in 0.047747135162353516 s
+
+EXPORT_OK entorno_16
+
+FBX export starting... 'C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\mapa-blender\\v02\\mapa\\neve\\entorno_18.fbx'
+export finished in 0.0177 sec.
+13:25:44 | INFO: Starting glTF 2.0 export
+13:25:44 | INFO: Extracting primitive: clareira_anel.002
+13:25:44 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+13:25:44 | INFO: Primitives created: 7
+13:25:44 | INFO: Finished glTF 2.0 export in 0.04223752021789551 s
+
+EXPORT_OK entorno_18
+KIT_OK 35 pecas
+C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\coordenacao\arena-pixelai\entregas\mapa-blender\v02\fontes\construir_cenarios.py:798: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world.use_nodes=True
+00:20.562  image.write      | ERROR OpenImageIO write failed: Could not open file "C:\Users\Anuah\.thumbnails\large\blender_9272_8bbc07b7339b2f245b3a679af237a146.png.png"
+00:47.000  render           | Saved: 'C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\coordenacao\arena-pixelai\entregas\mapa-blender\v02\previews\neve-tabuleiro-12x12.png'
+Info: Saved as "neve.blend"
+RENDER_OK neve-tabuleiro-12x12
+02:00.906  render           | Saved: 'C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\coordenacao\arena-pixelai\entregas\mapa-blender\v02\previews\neve-detalhe.png'
+RENDER_OK neve-detalhe
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

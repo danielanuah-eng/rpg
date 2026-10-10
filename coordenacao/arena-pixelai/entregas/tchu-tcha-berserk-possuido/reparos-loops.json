@@ -1,0 +1,466 @@
+[
+  {
+    "action": "idle",
+    "direction": "north",
+    "group": "6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a",
+    "seq": [
+      1,
+      2,
+      3,
+      2,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "source_image": "8e91d838-cdfd-43f9-b024-2968a6ecc99e",
+    "image_id": "398db834-5056-402b-866c-3255ef8a34d6",
+    "cell": 176,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:north:6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a (animation, 9 frames, 176x176)\nchanged: 33846 px\nundo: save_to_asset(image=\"3b66be20-6ae4-4a4a-bd24-8fcd0a4fd619\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:north:6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "idle",
+    "direction": "north-east",
+    "group": "6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a",
+    "seq": [
+      1,
+      2,
+      3,
+      2,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "source_image": "a49b0da2-7b83-489d-a7a9-34ee34bc0fd5",
+    "image_id": "b020a5ca-4dc9-42b5-8307-927e5448f745",
+    "cell": 180,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:north-east:6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a (animation, 9 frames, 180x180)\nchanged: 34137 px\nundo: save_to_asset(image=\"1e5e90d7-e6c0-4efe-8bfe-98fe55fb0e8b\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:north-east:6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "idle",
+    "direction": "east",
+    "group": "6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a",
+    "seq": [
+      1,
+      2,
+      3,
+      2,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "source_image": "ba03b06b-550a-4c48-a512-f662d7cb3691",
+    "image_id": "22b9c409-6dfc-4dce-9dd4-e7258f26c11e",
+    "cell": 176,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:east:6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a (animation, 9 frames, 176x176)\nchanged: 31888 px\nundo: save_to_asset(image=\"f25f2930-098b-4bb5-a367-5d9144d4fb38\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:east:6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "idle",
+    "direction": "south-east",
+    "group": "6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a",
+    "seq": [
+      1,
+      2,
+      3,
+      2,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "source_image": "3e2fd039-83d6-46f7-948e-339d88f91c80",
+    "image_id": "fb013b8e-d5d8-4dda-8715-3089ec29964b",
+    "cell": 168,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:south-east:6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a (animation, 9 frames, 168x168)\nchanged: 34739 px\nundo: save_to_asset(image=\"68c899af-d5b8-4ff2-9664-cff4d389e7c1\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:south-east:6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "idle",
+    "direction": "south",
+    "group": "6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a",
+    "seq": [
+      1,
+      2,
+      3,
+      2,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "source_image": "2ae73518-c065-4ad7-af05-b77558f5e78e",
+    "cell": 180,
+    "image_id": "276fc4bc-db33-48dd-8084-b55c0442f91f",
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:south:6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a (animation, 9 frames, 180x180)\nchanged: 43998 px\nundo: save_to_asset(image=\"7a510606-5dc0-400f-aa6b-e1a12f1a53f9\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:south:6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "idle",
+    "direction": "south-west",
+    "group": "6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a",
+    "seq": [
+      1,
+      2,
+      3,
+      2,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "source_image": "6a6b28a8-a0ae-4d7c-9161-d2fdaf00aea7",
+    "cell": 180,
+    "image_id": "c7bc0b47-0523-4099-bc7f-2a3c10ae03aa",
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:south-west:6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a (animation, 9 frames, 180x180)\nchanged: 29391 px\nundo: save_to_asset(image=\"843ad17d-8099-449d-8890-b79f4e2fa996\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:south-west:6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "idle",
+    "direction": "west",
+    "group": "6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a",
+    "seq": [
+      1,
+      2,
+      3,
+      2,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "source_image": "4e299706-d1d4-43e7-a59b-f3dfa1f2a6cd",
+    "cell": 180,
+    "image_id": "6a72ab23-d76f-4949-babf-977b1a4911d5",
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:west:6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a (animation, 9 frames, 180x180)\nchanged: 29525 px\nundo: save_to_asset(image=\"24a8c3f3-8cdc-499d-8665-916911eec2e1\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:west:6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "idle",
+    "direction": "north-west",
+    "group": "6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a",
+    "seq": [
+      1,
+      2,
+      3,
+      2,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "source_image": "6dc06f7b-5067-41d8-af12-415caf87c1f5",
+    "cell": 180,
+    "image_id": "dc861e60-6356-4c73-b8f9-bfebf2a2b75f",
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:north-west:6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a (animation, 9 frames, 180x180)\nchanged: 41309 px\nundo: save_to_asset(image=\"4e2f3e42-7e56-44de-a570-d65a9d01673b\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:north-west:6b45c58c-64d6-4eb4-bcc7-9020e27c5a9a\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "hit",
+    "direction": "north",
+    "group": "0ea5036c-fcab-4df3-8dc7-2d4858c04c40",
+    "seq": [
+      1,
+      2,
+      3,
+      4,
+      3,
+      2,
+      1
+    ],
+    "source_image": "786fc681-fa62-4bac-b029-9e4dad4aa253",
+    "image_id": "bfa00eb1-c423-49db-bf68-e1385053c63f",
+    "cell": 176,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:north:0ea5036c-fcab-4df3-8dc7-2d4858c04c40 (animation, 7 frames, 176x176)\nchanged: 17419 px\nundo: save_to_asset(image=\"196debd3-df21-4626-bac5-677367625ba8\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:north:0ea5036c-fcab-4df3-8dc7-2d4858c04c40\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "hit",
+    "direction": "north-east",
+    "group": "0ea5036c-fcab-4df3-8dc7-2d4858c04c40",
+    "seq": [
+      1,
+      2,
+      3,
+      4,
+      3,
+      2,
+      1
+    ],
+    "source_image": "a3520e9c-b690-449f-921b-1b156b8160a4",
+    "image_id": "a1d5c461-5f6c-4f0c-bca0-4c81bebf250c",
+    "cell": 180,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:north-east:0ea5036c-fcab-4df3-8dc7-2d4858c04c40 (animation, 7 frames, 180x180)\nchanged: 23689 px\nundo: save_to_asset(image=\"386e8d74-b546-4fc8-bc61-1f26f6e9982a\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:north-east:0ea5036c-fcab-4df3-8dc7-2d4858c04c40\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "hit",
+    "direction": "east",
+    "group": "0ea5036c-fcab-4df3-8dc7-2d4858c04c40",
+    "seq": [
+      1,
+      2,
+      3,
+      4,
+      3,
+      2,
+      1
+    ],
+    "source_image": "dc54f63f-d49a-42f6-a5a4-10775a0fda7e",
+    "image_id": "ea492a7c-3dc2-4fb2-922f-fe10bf739117",
+    "cell": 176,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:east:0ea5036c-fcab-4df3-8dc7-2d4858c04c40 (animation, 7 frames, 176x176)\nchanged: 21421 px\nundo: save_to_asset(image=\"2d83cacb-f5b1-40b5-9145-17bbff35847f\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:east:0ea5036c-fcab-4df3-8dc7-2d4858c04c40\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "hit",
+    "direction": "south-east",
+    "group": "0ea5036c-fcab-4df3-8dc7-2d4858c04c40",
+    "seq": [
+      1,
+      2,
+      3,
+      4,
+      3,
+      2,
+      1
+    ],
+    "source_image": "7c2cdbc5-1050-4c42-86dd-c2e7094e3da0",
+    "image_id": "8b9ba0c9-ad7f-4a7b-8d9e-84dd5a0549c2",
+    "cell": 168,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:south-east:0ea5036c-fcab-4df3-8dc7-2d4858c04c40 (animation, 7 frames, 168x168)\nchanged: 24290 px\nundo: save_to_asset(image=\"79e95a4b-38b6-43a8-af9c-e999ae141d2c\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:south-east:0ea5036c-fcab-4df3-8dc7-2d4858c04c40\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "hit",
+    "direction": "south",
+    "group": "0ea5036c-fcab-4df3-8dc7-2d4858c04c40",
+    "seq": [
+      1,
+      2,
+      3,
+      4,
+      3,
+      2,
+      1
+    ],
+    "source_image": "e3996868-e26b-43ec-ad0c-71af1539197c",
+    "image_id": "0a431ad7-33ec-44de-a2e3-27862eeb8960",
+    "cell": 180,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:south:0ea5036c-fcab-4df3-8dc7-2d4858c04c40 (animation, 7 frames, 180x180)\nchanged: 24550 px\nundo: save_to_asset(image=\"f444f969-b44b-45de-b46b-8712e7410240\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:south:0ea5036c-fcab-4df3-8dc7-2d4858c04c40\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "hit",
+    "direction": "south-west",
+    "group": "0ea5036c-fcab-4df3-8dc7-2d4858c04c40",
+    "seq": [
+      1,
+      2,
+      3,
+      4,
+      3,
+      2,
+      1
+    ],
+    "source_image": "43fbd72e-3bee-4d15-adad-4eea407c4036",
+    "image_id": "bd0b934b-d297-4d18-820b-2999dc3a4788",
+    "cell": 180,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:south-west:0ea5036c-fcab-4df3-8dc7-2d4858c04c40 (animation, 7 frames, 180x180)\nchanged: 22638 px\nundo: save_to_asset(image=\"12a18205-e255-40bb-9a54-302a82e2ee7d\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:south-west:0ea5036c-fcab-4df3-8dc7-2d4858c04c40\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "hit",
+    "direction": "west",
+    "group": "0ea5036c-fcab-4df3-8dc7-2d4858c04c40",
+    "seq": [
+      1,
+      2,
+      3,
+      4,
+      3,
+      2,
+      1
+    ],
+    "source_image": "43ad2ed2-88c9-4b1b-9882-8290a4bd2142",
+    "image_id": "c6d8368c-eb4b-4be7-bd23-82d0262486d4",
+    "cell": 180,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:west:0ea5036c-fcab-4df3-8dc7-2d4858c04c40 (animation, 7 frames, 180x180)\nchanged: 27862 px\nundo: save_to_asset(image=\"dd039525-fe4e-473b-9ed9-652d993b5370\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:west:0ea5036c-fcab-4df3-8dc7-2d4858c04c40\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "hit",
+    "direction": "north-west",
+    "group": "0ea5036c-fcab-4df3-8dc7-2d4858c04c40",
+    "seq": [
+      1,
+      2,
+      3,
+      4,
+      3,
+      2,
+      1
+    ],
+    "source_image": "10092dec-096f-4abf-97df-9cf02bd00a97",
+    "image_id": "6b8206e3-5191-4938-83b4-3ef7513b683f",
+    "cell": 180,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:north-west:0ea5036c-fcab-4df3-8dc7-2d4858c04c40 (animation, 7 frames, 180x180)\nchanged: 25503 px\nundo: save_to_asset(image=\"b9dc73a2-0292-4825-bde0-9027e41f1ba0\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:north-west:0ea5036c-fcab-4df3-8dc7-2d4858c04c40\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "walk",
+    "direction": "north",
+    "group": "f066e10c-b51c-4bf2-aad4-42c7aecdafb6",
+    "seq": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      1
+    ],
+    "source_image": "e5f52be7-e7fa-456c-96e4-96f3c89fde8e",
+    "image_id": "ddff8f10-c55a-4383-9e9b-d7111ed0d9ea",
+    "cell": 176,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:north:f066e10c-b51c-4bf2-aad4-42c7aecdafb6 (animation, 9 frames, 176x176)\nchanged: 7306 px\nundo: save_to_asset(image=\"52c43cea-1535-4036-bbc8-631b5454d394\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:north:f066e10c-b51c-4bf2-aad4-42c7aecdafb6\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "walk",
+    "direction": "north-east",
+    "group": "f066e10c-b51c-4bf2-aad4-42c7aecdafb6",
+    "seq": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      1
+    ],
+    "source_image": "e63a465e-69f5-4b63-a349-7a636e8afa5e",
+    "image_id": "908a1d9e-5ef2-4449-8630-5341008a2f3c",
+    "cell": 180,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:north-east:f066e10c-b51c-4bf2-aad4-42c7aecdafb6 (animation, 9 frames, 180x180)\nchanged: 6850 px\nundo: save_to_asset(image=\"7ede2f74-4fc4-42a9-9a7c-2f93cc589a5b\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:north-east:f066e10c-b51c-4bf2-aad4-42c7aecdafb6\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "walk",
+    "direction": "east",
+    "group": "f066e10c-b51c-4bf2-aad4-42c7aecdafb6",
+    "seq": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      1
+    ],
+    "source_image": "3ec994c4-d0cc-4bfc-813b-304f0b2143eb",
+    "image_id": "a8d97e61-1307-4ad6-8d33-4ccf3134c1e1",
+    "cell": 176,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:east:f066e10c-b51c-4bf2-aad4-42c7aecdafb6 (animation, 9 frames, 176x176)\nchanged: 6221 px\nundo: save_to_asset(image=\"876a016a-c810-41ea-8524-3ffced024194\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:east:f066e10c-b51c-4bf2-aad4-42c7aecdafb6\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "walk",
+    "direction": "south-east",
+    "group": "f066e10c-b51c-4bf2-aad4-42c7aecdafb6",
+    "seq": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      1
+    ],
+    "source_image": "58516da5-84e8-4c13-b856-fc9501feec2f",
+    "image_id": "79777bf8-d961-4881-b501-bc7e20a33677",
+    "cell": 168,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:south-east:f066e10c-b51c-4bf2-aad4-42c7aecdafb6 (animation, 9 frames, 168x168)\nchanged: 6721 px\nundo: save_to_asset(image=\"f4af86af-5e96-45f1-b45f-5d29f26c4803\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:south-east:f066e10c-b51c-4bf2-aad4-42c7aecdafb6\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "walk",
+    "direction": "south",
+    "group": "f066e10c-b51c-4bf2-aad4-42c7aecdafb6",
+    "seq": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      1
+    ],
+    "source_image": "2f429b1a-5e15-474c-a557-990c52159f52",
+    "image_id": "17c988ef-f049-4a37-8ca2-9cfaf117ffb3",
+    "cell": 180,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:south:f066e10c-b51c-4bf2-aad4-42c7aecdafb6 (animation, 9 frames, 180x180)\nchanged: 9426 px\nundo: save_to_asset(image=\"af2cb48a-98ed-4992-a07e-511a32188a93\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:south:f066e10c-b51c-4bf2-aad4-42c7aecdafb6\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "walk",
+    "direction": "south-west",
+    "group": "f066e10c-b51c-4bf2-aad4-42c7aecdafb6",
+    "seq": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      1
+    ],
+    "source_image": "5dc8739d-c019-4cd1-baa1-9d56d97f609c",
+    "image_id": "17fcaed9-bd25-44d3-961b-24235a34821e",
+    "cell": 180,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:south-west:f066e10c-b51c-4bf2-aad4-42c7aecdafb6 (animation, 9 frames, 180x180)\nchanged: 6852 px\nundo: save_to_asset(image=\"90d6c262-bf00-4149-a1cd-da4c8589b077\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:south-west:f066e10c-b51c-4bf2-aad4-42c7aecdafb6\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "walk",
+    "direction": "west",
+    "group": "f066e10c-b51c-4bf2-aad4-42c7aecdafb6",
+    "seq": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      1
+    ],
+    "source_image": "0026bde3-8c8f-4073-81de-fd7b9ef3da92",
+    "image_id": "bff1baaa-1472-40f4-8ef1-e5ba9e08de2d",
+    "cell": 180,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:west:f066e10c-b51c-4bf2-aad4-42c7aecdafb6 (animation, 9 frames, 180x180)\nchanged: 4858 px\nundo: save_to_asset(image=\"ea97e2cd-74cc-4507-8302-03c1be7308fa\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:west:f066e10c-b51c-4bf2-aad4-42c7aecdafb6\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "action": "walk",
+    "direction": "north-west",
+    "group": "f066e10c-b51c-4bf2-aad4-42c7aecdafb6",
+    "seq": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      1
+    ],
+    "source_image": "907bbb3c-af9c-44d7-bb68-1729e44f157a",
+    "image_id": "26e2a1ea-ffff-437f-87a7-d601f54fad6b",
+    "cell": 180,
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:north-west:f066e10c-b51c-4bf2-aad4-42c7aecdafb6 (animation, 9 frames, 180x180)\nchanged: 7886 px\nundo: save_to_asset(image=\"bdef3a24-04c7-47b0-895f-539c91b3b784\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:north-west:f066e10c-b51c-4bf2-aad4-42c7aecdafb6\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  }
+]

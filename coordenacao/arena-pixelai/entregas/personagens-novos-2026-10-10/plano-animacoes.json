@@ -1,0 +1,670 @@
+[
+  {
+    "key": "edgar-idle",
+    "asset": "edgar",
+    "character_id": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+    "name": "idle",
+    "action": "Subtle idle breathing in place, confident open toothy smile, slight shoulder and relaxed fist motion. Tiny pale cyan ghostly energy gently flickers tightly around knuckles, leather jacket and velvet trim remain stable, feet anchored; same stance and all clothing. A smooth slow seamless loop returning to original pose, no attack.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [
+      "south-east",
+      "south-west"
+    ],
+    "group_id": "e0606797-2c10-485a-ba3f-9f1eeb12efe4",
+    "frames": 8,
+    "loop": true,
+    "returnToBase": true,
+    "fps": 5
+  },
+  {
+    "key": "edgar-walk",
+    "asset": "edgar",
+    "character_id": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+    "name": "walk",
+    "action": "Walking forward in the indicated facing direction with a strong calm confident adult swagger, deliberate alternating military boot steps and natural opposite arm swing. Hair is slicked back and stable, jacket hem subtly follows motion, exposed belt remains visible, small spectral aura stays close to fists. Keep whole body scale and identity, no sliding. Seamless walking loop, return to first pose.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": true,
+    "returnToBase": true,
+    "fps": 10
+  },
+  {
+    "key": "edgar-attack",
+    "asset": "edgar",
+    "character_id": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+    "name": "attack",
+    "action": "One strong bare-hand close melee combination: raise guard, plant military boots, twist strong torso, extend a clearly readable forceful right straight punch toward the facing direction with pale mint-cyan GHOSTLY energy wrapped tightly around the hand, follow with a brief left palm strike, then both hands withdraw and recover to the exact original neutral pose. The hands remain visible inside short spectral trails. Stable hatless slicked-back sparse hair, exposed belt and jacket. No weapons, no ship, no teleporting, same adult face and clothes.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": false,
+    "returnToBase": true,
+    "fps": 7
+  },
+  {
+    "key": "edgar-hit",
+    "asset": "edgar",
+    "character_id": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+    "name": "hit",
+    "action": "One readable recoil from being struck from the front: brief tense anticipation, torso/head jerk backwards, limbs absorb impact then regain balance and recover to the exact original resting pose. No attack, no dismemberment, no new weapons or explosive effects.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 6,
+    "loop": false,
+    "returnToBase": true,
+    "fps": 8
+  },
+  {
+    "key": "edgar-death",
+    "asset": "edgar",
+    "character_id": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+    "name": "death",
+    "action": "A single collapse after defeat: lose balance, body lowers heavily onto the ground and comes completely to rest on its side. Keep every limb and material intact. No disintegration, no vanishing, no recovery, no looping; the last frame stays fallen.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": false,
+    "returnToBase": false,
+    "fps": 6
+  },
+  {
+    "key": "brumak-idle",
+    "asset": "brumak",
+    "character_id": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+    "name": "idle",
+    "action": "A subtle slow natural breathing idle loop in place with a tiny head/eye shift and balanced body weight, preserving the exact anatomy, material, clothing and silhouette. Feet remain planted, no attack, end in the exact initial pose.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": true,
+    "returnToBase": true,
+    "fps": 5
+  },
+  {
+    "key": "brumak-walk",
+    "asset": "brumak",
+    "character_id": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+    "name": "walk",
+    "action": "A heavy deliberate bipedal minotaur walk with two split basalt hooves, broad shoulders shifting weight, massive empty arms swinging slowly and huge curved horns steady, teal waistcloth responds subtly. Preserve all charcoal stone slabs and restrained orange seams. Seamless return to initial gait.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": true,
+    "returnToBase": true,
+    "fps": 10
+  },
+  {
+    "key": "brumak-attack",
+    "asset": "brumak",
+    "character_id": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+    "name": "attack",
+    "action": "One powerful close-range minotaur shoulder-and-horn bash: lower bull head and enormous curved horns slightly, plant one split basalt hoof firmly, twist bulky stone torso and make a compact forward shove toward the facing opponent with shoulder and horns, stop with a heavy stable plant, and recover to exact initial neutral pose. No hammer or weapon appears, no explosion, no long-distance movement, stone anatomy unchanged.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": false,
+    "returnToBase": true,
+    "fps": 7
+  },
+  {
+    "key": "brumak-hit",
+    "asset": "brumak",
+    "character_id": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+    "name": "hit",
+    "action": "One readable recoil from being struck from the front: brief tense anticipation, torso/head jerk backwards, limbs absorb impact then regain balance and recover to the exact original resting pose. No attack, no dismemberment, no new weapons or explosive effects.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 6,
+    "loop": false,
+    "returnToBase": true,
+    "fps": 8
+  },
+  {
+    "key": "brumak-death",
+    "asset": "brumak",
+    "character_id": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+    "name": "death",
+    "action": "A single collapse after defeat: lose balance, body lowers heavily onto the ground and comes completely to rest on its side. Keep every limb and material intact. No disintegration, no vanishing, no recovery, no looping; the last frame stays fallen.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": false,
+    "returnToBase": false,
+    "fps": 6
+  },
+  {
+    "key": "nixira-idle",
+    "asset": "nixira",
+    "character_id": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+    "name": "idle",
+    "action": "A subtle slow natural breathing idle loop in place with a tiny head/eye shift and balanced body weight, preserving the exact anatomy, material, clothing and silhouette. Feet remain planted, no attack, end in the exact initial pose.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": true,
+    "returnToBase": true,
+    "fps": 5
+  },
+  {
+    "key": "nixira-walk",
+    "asset": "nixira",
+    "character_id": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+    "name": "walk",
+    "action": "Walking forward in the indicated direction in a smooth repeating locomotion cycle, alternate limbs naturally and show clear weight transfer, preserve body anatomy and material, no sliding, end at the initial gait pose.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": true,
+    "returnToBase": true,
+    "fps": 10
+  },
+  {
+    "key": "nixira-attack",
+    "asset": "nixira",
+    "character_id": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+    "name": "attack",
+    "action": "One small goblin close-range quick claw/swipe: crouch lightly, take a short lateral step forward, slash with the right bare green hand toward its facing target, then pull the hand back and regain her exact initial playful upright idle. Hands clearly visible, no new daggers or weapons, mushroom hat and wicker mushroom backpack fixed to her body, no magical mushroom cloud. Small agile weight and mischievous face stable.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": false,
+    "returnToBase": true,
+    "fps": 7
+  },
+  {
+    "key": "nixira-hit",
+    "asset": "nixira",
+    "character_id": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+    "name": "hit",
+    "action": "One readable recoil from being struck from the front: brief tense anticipation, torso/head jerk backwards, limbs absorb impact then regain balance and recover to the exact original resting pose. No attack, no dismemberment, no new weapons or explosive effects.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 6,
+    "loop": false,
+    "returnToBase": true,
+    "fps": 8
+  },
+  {
+    "key": "nixira-death",
+    "asset": "nixira",
+    "character_id": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+    "name": "death",
+    "action": "A single collapse after defeat: lose balance, body lowers heavily onto the ground and comes completely to rest on its side. Keep every limb and material intact. No disintegration, no vanishing, no recovery, no looping; the last frame stays fallen.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": false,
+    "returnToBase": false,
+    "fps": 6
+  },
+  {
+    "key": "gryvro-idle",
+    "asset": "gryvro",
+    "character_id": "74642151-8059-4dfc-b56a-5f799926785e",
+    "name": "idle",
+    "action": "A subtle slow natural breathing idle loop in place with a tiny head/eye shift and balanced body weight, preserving the exact anatomy, material, clothing and silhouette. Feet remain planted, no attack, end in the exact initial pose.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": true,
+    "returnToBase": true,
+    "fps": 5
+  },
+  {
+    "key": "gryvro-walk",
+    "asset": "gryvro",
+    "character_id": "74642151-8059-4dfc-b56a-5f799926785e",
+    "name": "walk",
+    "action": "A grounded quadrupedal griffon walk with alternate FRONT EAGLE TALONS and REAR FELINE PAWS, all FOUR legs maintain proper floor contact and weight; TWO glass feathered wings stay folded along the back, eagle head counterbalances and crystalline tail sways gently. Clear fragile icy transparent glass material preserved, no takeoff. End to initial gait pose.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": true,
+    "returnToBase": true,
+    "fps": 10
+  },
+  {
+    "key": "gryvro-attack",
+    "asset": "gryvro",
+    "character_id": "74642151-8059-4dfc-b56a-5f799926785e",
+    "name": "attack",
+    "action": "One quick close-range front eagle TALON CLAW attack by this glass griffon: brace both feline hind paws, lean chest forward, lift the nearest FRONT talon, rake it down and forward in a short decisive tearing arc toward the facing target, glint briefly on glass claws, and retract that talon back to grounded idle. WINGS may lift slightly for balance but the griffon does not fly in this clip. FOUR legs plus TWO feathered wings remain consistent; no bite, no breath projectile, no human arms, no shattered body.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": false,
+    "returnToBase": true,
+    "fps": 7
+  },
+  {
+    "key": "gryvro-hit",
+    "asset": "gryvro",
+    "character_id": "74642151-8059-4dfc-b56a-5f799926785e",
+    "name": "hit",
+    "action": "One readable recoil from being struck from the front: brief tense anticipation, torso/head jerk backwards, limbs absorb impact then regain balance and recover to the exact original resting pose. No attack, no dismemberment, no new weapons or explosive effects.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 6,
+    "loop": false,
+    "returnToBase": true,
+    "fps": 8
+  },
+  {
+    "key": "gryvro-death",
+    "asset": "gryvro",
+    "character_id": "74642151-8059-4dfc-b56a-5f799926785e",
+    "name": "death",
+    "action": "A single collapse after defeat: lose balance, body lowers heavily onto the ground and comes completely to rest on its side. Keep every limb and material intact. No disintegration, no vanishing, no recovery, no looping; the last frame stays fallen.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": false,
+    "returnToBase": false,
+    "fps": 6
+  },
+  {
+    "key": "raizor-idle",
+    "asset": "raizor",
+    "character_id": "8c800a83-a911-4b28-a8f6-2c9dd2958887",
+    "name": "idle",
+    "action": "A subtle slow natural breathing idle loop in place with a tiny head/eye shift and balanced body weight, preserving the exact anatomy, material, clothing and silhouette. Feet remain planted, no attack, end in the exact initial pose.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": true,
+    "returnToBase": true,
+    "fps": 5
+  },
+  {
+    "key": "raizor-walk",
+    "asset": "raizor",
+    "character_id": "8c800a83-a911-4b28-a8f6-2c9dd2958887",
+    "name": "walk",
+    "action": "A slow heavy quadrupedal BEAR walk, four thick wooden legs alternate deliberately, shoulders and leafy mane rock with each solid plant, enormous body weight clearly shifts, living bark and root structure consistent, tiny moss tufts sway. No floating, no roots growing outside body, seamless gait loop.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": true,
+    "returnToBase": true,
+    "fps": 10
+  },
+  {
+    "key": "raizor-attack",
+    "asset": "raizor",
+    "character_id": "8c800a83-a911-4b28-a8f6-2c9dd2958887",
+    "name": "attack",
+    "action": "One heavy wooden BEAR forepaw smash: the bear lifts the nearest massive rooted front paw, shifts weight onto remaining three legs, claws spread, brings the paw strongly DOWN toward a nearby opponent in the indicated facing direction, then settles its full weight and recovers to its exact four-paw initial stance. Keep bulky bear anatomy and moss mane, a few amber sap glints, no human fists, no ranged spell or uprooted terrain.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": false,
+    "returnToBase": true,
+    "fps": 7
+  },
+  {
+    "key": "raizor-hit",
+    "asset": "raizor",
+    "character_id": "8c800a83-a911-4b28-a8f6-2c9dd2958887",
+    "name": "hit",
+    "action": "One readable recoil from being struck from the front: brief tense anticipation, torso/head jerk backwards, limbs absorb impact then regain balance and recover to the exact original resting pose. No attack, no dismemberment, no new weapons or explosive effects.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 6,
+    "loop": false,
+    "returnToBase": true,
+    "fps": 8
+  },
+  {
+    "key": "raizor-death",
+    "asset": "raizor",
+    "character_id": "8c800a83-a911-4b28-a8f6-2c9dd2958887",
+    "name": "death",
+    "action": "A single collapse after defeat: lose balance, body lowers heavily onto the ground and comes completely to rest on its side. Keep every limb and material intact. No disintegration, no vanishing, no recovery, no looping; the last frame stays fallen.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": false,
+    "returnToBase": false,
+    "fps": 6
+  },
+  {
+    "key": "alvyr-idle",
+    "asset": "alvyr",
+    "character_id": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+    "name": "idle",
+    "action": "A subtle slow natural breathing idle loop in place with a tiny head/eye shift and balanced body weight, preserving the exact anatomy, material, clothing and silhouette. Feet remain planted, no attack, end in the exact initial pose.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": true,
+    "returnToBase": true,
+    "fps": 5
+  },
+  {
+    "key": "alvyr-walk",
+    "asset": "alvyr",
+    "character_id": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+    "name": "walk",
+    "action": "An elegant light grounded deer trot using four slender legs and split hooves, diagonal leg pairs alternate, small chest bob and minimal antler sway, white stag identity and golden antler branches stable. No horse neck, no wings, no teleportation. Seamless return to initial gait pose.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": true,
+    "returnToBase": true,
+    "fps": 10
+  },
+  {
+    "key": "alvyr-attack",
+    "asset": "alvyr",
+    "character_id": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+    "name": "attack",
+    "action": "One short STAG antler jab at a close facing target: plant hind split hooves, lower the deer head and broad branching GOLDEN ANTLERS, take one compact forward foreleg step, thrust the antlers forward decisively and then raise head and recover backwards to the exact proud initial white-deer pose. No firing from antlers, no huge halo, preserve full antler shape and four legs.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": false,
+    "returnToBase": true,
+    "fps": 7
+  },
+  {
+    "key": "alvyr-hit",
+    "asset": "alvyr",
+    "character_id": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+    "name": "hit",
+    "action": "One readable recoil from being struck from the front: brief tense anticipation, torso/head jerk backwards, limbs absorb impact then regain balance and recover to the exact original resting pose. No attack, no dismemberment, no new weapons or explosive effects.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 6,
+    "loop": false,
+    "returnToBase": true,
+    "fps": 8
+  },
+  {
+    "key": "alvyr-death",
+    "asset": "alvyr",
+    "character_id": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+    "name": "death",
+    "action": "A single collapse after defeat: lose balance, body lowers heavily onto the ground and comes completely to rest on its side. Keep every limb and material intact. No disintegration, no vanishing, no recovery, no looping; the last frame stays fallen.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": false,
+    "returnToBase": false,
+    "fps": 6
+  },
+  {
+    "key": "ossyro-idle",
+    "asset": "ossyro",
+    "character_id": "6b27257d-819c-4d78-829c-0ca36f05d586",
+    "name": "idle",
+    "action": "A subtle slow natural breathing idle loop in place with a tiny head/eye shift and balanced body weight, preserving the exact anatomy, material, clothing and silhouette. Feet remain planted, no attack, end in the exact initial pose.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": true,
+    "returnToBase": true,
+    "fps": 5
+  },
+  {
+    "key": "ossyro-walk",
+    "asset": "ossyro",
+    "character_id": "6b27257d-819c-4d78-829c-0ca36f05d586",
+    "name": "walk",
+    "action": "A slow deliberate grounded FOUR-legged ancient dragon walk, bony reptilian claws plant in alternating pairs, long pale neck sways slightly and narrow tail counterbalances, TWO pale lace-like membranous wings remain folded. No extra legs, no human walking posture, no flight in this clip. Preserve bone-ivory scale/bone material and thin ancient silhouette.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": true,
+    "returnToBase": true,
+    "fps": 10
+  },
+  {
+    "key": "ossyro-attack",
+    "asset": "ossyro",
+    "character_id": "6b27257d-819c-4d78-829c-0ca36f05d586",
+    "name": "attack",
+    "action": "One close-range PALE DRAGON bite: coil the long thin neck back slightly, open the bony dragon jaw, lunge head and upper neck forward toward its facing opponent, snap jaws once without gore, pull head back and recover to exact initial pose. Four grounded clawed legs, folded TWO wings, long tail and ancient pale body remain stable, small green eye accent only; no huge breath projectile in this melee clip.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": false,
+    "returnToBase": true,
+    "fps": 7
+  },
+  {
+    "key": "ossyro-hit",
+    "asset": "ossyro",
+    "character_id": "6b27257d-819c-4d78-829c-0ca36f05d586",
+    "name": "hit",
+    "action": "One readable recoil from being struck from the front: brief tense anticipation, torso/head jerk backwards, limbs absorb impact then regain balance and recover to the exact original resting pose. No attack, no dismemberment, no new weapons or explosive effects.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 6,
+    "loop": false,
+    "returnToBase": true,
+    "fps": 8
+  },
+  {
+    "key": "ossyro-death",
+    "asset": "ossyro",
+    "character_id": "6b27257d-819c-4d78-829c-0ca36f05d586",
+    "name": "death",
+    "action": "A single collapse after defeat: lose balance, body lowers heavily onto the ground and comes completely to rest on its side. Keep every limb and material intact. No disintegration, no vanishing, no recovery, no looping; the last frame stays fallen.",
+    "directions": [
+      "south-east",
+      "south-west",
+      "north-east",
+      "north-west"
+    ],
+    "requested": [],
+    "group_id": null,
+    "frames": 8,
+    "loop": false,
+    "returnToBase": false,
+    "fps": 6
+  }
+]

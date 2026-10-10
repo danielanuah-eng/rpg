@@ -1,0 +1,154 @@
+{
+  "versao": 2,
+  "data": "2026-10-10",
+  "tarefa": "011",
+  "estado": "entregue_para_avaliacao",
+  "direcaoAutor": [
+    "Loja no meio em qualquer mapa",
+    "Props distribuídos também pelo interior",
+    "Árvores frondosas ou pinheiros e modelos próprios para cada mapa",
+    "Diferentes versões do mapa",
+    "Moedas deitadas no chão"
+  ],
+  "integracaoUnity": "pendente_do_Claude",
+  "kits": [
+    {
+      "tema": "pedreira",
+      "nome": "Pedreira",
+      "pecas": 35,
+      "manifesto": "manifestos/pedreira.json",
+      "validacao": "manifestos/pedreira-validacao.json",
+      "composicoes": [
+        {
+          "fonte": "fontes/pedreira.blend",
+          "preview": "previews/pedreira-tabuleiro-12x12.png"
+        }
+      ],
+      "origemTexturas": {
+        "origem": "PixelLab create_tiles_pro / Map",
+        "id": "3aa336a9-2ec0-4ca2-9049-0aeae3c18fee",
+        "filtro": "Point/Closest",
+        "mipmaps": false,
+        "wrap": "Repeat",
+        "pixelsPorCasa": 64
+      }
+    },
+    {
+      "tema": "bosque",
+      "nome": "Bosque",
+      "pecas": 35,
+      "manifesto": "manifestos/bosque.json",
+      "validacao": "manifestos/bosque-validacao.json",
+      "composicoes": [
+        {
+          "id": "v01",
+          "nome": "Clareira e colina",
+          "fonte": "fontes/bosque.blend",
+          "preview": "previews/bosque-tabuleiro-12x12.png"
+        },
+        {
+          "id": "v02",
+          "nome": "Trilhas cruzadas",
+          "fonte": "fontes/bosque-versao-02.blend",
+          "preview": "previews/bosque-versao-02.png"
+        },
+        {
+          "id": "v03",
+          "nome": "Terraços e lagoa",
+          "fonte": "fontes/bosque-versao-03.blend",
+          "preview": "previews/bosque-versao-03.png"
+        }
+      ],
+      "origemTexturas": {
+        "origem": "PixelLab create_tiles_pro / Map",
+        "id": "969ac24a-abe9-4723-8531-baabde2c70e3",
+        "filtro": "Point/Closest",
+        "mipmaps": false,
+        "wrap": "Repeat",
+        "pixelsPorCasa": 64
+      }
+    },
+    {
+      "tema": "deserto",
+      "nome": "Deserto",
+      "pecas": 36,
+      "manifesto": "manifestos/deserto.json",
+      "validacao": "manifestos/deserto-validacao.json",
+      "composicoes": [
+        {
+          "fonte": "fontes/deserto.blend",
+          "preview": "previews/deserto-tabuleiro-12x12.png"
+        }
+      ],
+      "origemTexturas": {
+        "origem": "PixelLab create_tiles_pro / Map",
+        "id": "a90a03b9-bf41-479c-9f49-cc2db75a958f",
+        "filtro": "Point/Closest",
+        "mipmaps": false,
+        "wrap": "Repeat",
+        "pixelsPorCasa": 64
+      }
+    },
+    {
+      "tema": "neve",
+      "nome": "Neve",
+      "pecas": 35,
+      "manifesto": "manifestos/neve.json",
+      "validacao": "manifestos/neve-validacao.json",
+      "composicoes": [
+        {
+          "fonte": "fontes/neve.blend",
+          "preview": "previews/neve-tabuleiro-12x12.png"
+        }
+      ],
+      "origemTexturas": {
+        "origem": "PixelLab create_tiles_pro / Map",
+        "id": "8929cc25-c07d-4868-b148-ebe60b9c377b",
+        "filtro": "Point/Closest",
+        "mipmaps": false,
+        "wrap": "Repeat",
+        "pixelsPorCasa": 64
+      }
+    },
+    {
+      "tema": "vulcao",
+      "nome": "Vulcão",
+      "pecas": 35,
+      "manifesto": "manifestos/vulcao.json",
+      "validacao": "manifestos/vulcao-validacao.json",
+      "composicoes": [
+        {
+          "fonte": "fontes/vulcao.blend",
+          "preview": "previews/vulcao-tabuleiro-12x12.png"
+        }
+      ],
+      "origemTexturas": {
+        "origem": "PixelLab create_tiles_pro / Map",
+        "id": "7170fdbd-dcfc-4407-bcc9-80797ec75e5a",
+        "filtro": "Point/Closest",
+        "mipmaps": false,
+        "wrap": "Repeat",
+        "pixelsPorCasa": 64
+      }
+    }
+  ],
+  "totalPecasPorFormato": 176,
+  "formatos": [
+    "FBX",
+    "GLB"
+  ],
+  "fontesComposicao": 7,
+  "comparacaoArvores": "previews/arvores-cinco-temas.png",
+  "comparacaoVersoes": "previews/bosque-tres-versoes.png",
+  "revisaoVisual": {
+    "primeiraRevisao": "DeepSeek via OpenRouter conferiu as sete imagens",
+    "registro": "fontes/revisao-visual-deepseek.log",
+    "ajustesPosteriores": [
+      "Abeto da Neve remodelado com ramos abertos para distinguir da Pedreira",
+      "Lago da terceira composição deslocado para melhor leitura; separação da loja medida"
+    ],
+    "avaliacaoAutor": "pendente"
+  },
+  "instrucoes": "LEIA-ME-CLAUDE.md",
+  "validacao": "validacao.json"
+}

@@ -1,0 +1,26 @@
+{
+  "actor": {
+    "id": "nixira",
+    "name": "Nixira — Goblin dos Cogumelos",
+    "body_type": "humanoid",
+    "character_id": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+    "ready": true,
+    "rotations": {
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7a2e16e2-980f-4030-99c2-0cbf82c82b7f/rotations/south.png?t=1791646873",
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7a2e16e2-980f-4030-99c2-0cbf82c82b7f/rotations/east.png?t=1791646873",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7a2e16e2-980f-4030-99c2-0cbf82c82b7f/rotations/north.png?t=1791646873",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7a2e16e2-980f-4030-99c2-0cbf82c82b7f/rotations/west.png?t=1791646873",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7a2e16e2-980f-4030-99c2-0cbf82c82b7f/rotations/south-east.png?t=1791646873",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7a2e16e2-980f-4030-99c2-0cbf82c82b7f/rotations/north-east.png?t=1791646873",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7a2e16e2-980f-4030-99c2-0cbf82c82b7f/rotations/north-west.png?t=1791646873",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7a2e16e2-980f-4030-99c2-0cbf82c82b7f/rotations/south-west.png?t=1791646873"
+    },
+    "folder": "nixira",
+    "owner": "nixira"
+  },
+  "clips": [],
+  "source_cell": [
+    128,
+    128
+  ]
+}

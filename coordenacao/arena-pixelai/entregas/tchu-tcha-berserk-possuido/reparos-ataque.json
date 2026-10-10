@@ -1,0 +1,1245 @@
+[
+  {
+    "direction": "north",
+    "cell": 176,
+    "source": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\tchu-tcha-berserk-possuido\\refinados\\north\\fonte-quadrada.gif",
+    "sequence": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "changes": [
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          6
+        ],
+        "source_layer": "image",
+        "source_frame": 4,
+        "region": [
+          0,
+          0,
+          175,
+          175
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          7
+        ],
+        "source_layer": "image",
+        "source_frame": 3,
+        "region": [
+          0,
+          0,
+          175,
+          175
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          8
+        ],
+        "source_layer": "image",
+        "source_frame": 2,
+        "region": [
+          0,
+          0,
+          175,
+          175
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          9
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          0,
+          0,
+          175,
+          175
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "map_colors",
+        "layer": "image",
+        "frames": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "region": [
+          0,
+          0,
+          175,
+          175
+        ],
+        "colors": {
+          "#d20d12ff": "#201020ff",
+          "#e0fdfbff": "#362736ff",
+          "#efeff0ff": "#362736ff",
+          "#fdd1d5ff": "#362736ff",
+          "#f8bcb6ff": "#362736ff",
+          "#f2e0d6ff": "#362736ff",
+          "#fe4237ff": "#201020ff",
+          "#fed2c8ff": "#362736ff",
+          "#f8eae8ff": "#362736ff",
+          "#effefeff": "#362736ff",
+          "#fde2daff": "#362736ff",
+          "#edd3cbff": "#362736ff",
+          "#ff2c2bff": "#201020ff",
+          "#fcfcfaff": "#362736ff",
+          "#fcf3edff": "#362736ff",
+          "#f6c6c2ff": "#362736ff",
+          "#e50a0aff": "#201020ff",
+          "#cccacdff": "#362736ff",
+          "#ced8dfff": "#362736ff",
+          "#b6b0b6ff": "#362736ff",
+          "#ef2c27ff": "#201020ff",
+          "#fb0203ff": "#201020ff",
+          "#e0dbdcff": "#362736ff"
+        },
+        "reason": "Generated white/red VFX colours absent from the reference become black-purple shadow trail; original visor and shield palette preserved."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          68,
+          24,
+          112,
+          80
+        ],
+        "at": [
+          68,
+          24
+        ],
+        "reason": "Preserve the original helmet and facing; generated strokes had added a frontal visor to back-facing helmets. Keep arms and sword motion outside this zone."
+      }
+    ],
+    "exact_rgba_gif_pack": true,
+    "canvas_registration_crop": [
+      28,
+      28,
+      176,
+      176
+    ],
+    "selected_frames_no_pixel_loss": true,
+    "source_group": "1a774d55-7c52-48fb-abbd-d272b055a6da",
+    "target_group": "b32eec9f-07de-4057-9171-be3ff653c476"
+  },
+  {
+    "direction": "north-east",
+    "cell": 180,
+    "source": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\tchu-tcha-berserk-possuido\\refinados\\north-east\\fonte-quadrada.gif",
+    "sequence": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      8,
+      1,
+      1
+    ],
+    "changes": [
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          4
+        ],
+        "source_layer": "image",
+        "source_frame": 5,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          5
+        ],
+        "source_layer": "image",
+        "source_frame": 6,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          6
+        ],
+        "source_layer": "image",
+        "source_frame": 8,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          7
+        ],
+        "source_layer": "image",
+        "source_frame": 8,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          8
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          9
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          70,
+          26,
+          114,
+          82
+        ],
+        "at": [
+          70,
+          26
+        ],
+        "reason": "Preserve the original helmet and facing; generated strokes had added a frontal visor to back-facing helmets. Keep arms and sword motion outside this zone."
+      }
+    ],
+    "exact_rgba_gif_pack": true,
+    "canvas_registration_crop": [
+      8,
+      8,
+      180,
+      180
+    ],
+    "selected_frames_no_pixel_loss": true,
+    "source_group": "1a774d55-7c52-48fb-abbd-d272b055a6da",
+    "target_group": "b32eec9f-07de-4057-9171-be3ff653c476"
+  },
+  {
+    "direction": "east",
+    "cell": 176,
+    "source": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\tchu-tcha-berserk-possuido\\refinados\\east\\fonte-quadrada.gif",
+    "sequence": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      1
+    ],
+    "changes": [
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          9
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          0,
+          0,
+          175,
+          175
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "map_colors",
+        "layer": "image",
+        "frames": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "region": [
+          0,
+          0,
+          175,
+          175
+        ],
+        "colors": {
+          "#fe3329ff": "#201020ff",
+          "#f7bdb7ff": "#362736ff",
+          "#f8cbc7ff": "#362736ff",
+          "#db2520ff": "#201020ff",
+          "#f7dbd5ff": "#362736ff",
+          "#fcfcfbff": "#362736ff",
+          "#fcb8b1ff": "#362736ff",
+          "#fbd4d0ff": "#362736ff",
+          "#d11412ff": "#201020ff",
+          "#faf3f1ff": "#362736ff",
+          "#d4b6b9ff": "#362736ff",
+          "#f6e5e0ff": "#362736ff"
+        },
+        "reason": "Generated white/red VFX colours absent from the reference become black-purple shadow trail; original visor and shield palette preserved."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          68,
+          24,
+          112,
+          80
+        ],
+        "at": [
+          68,
+          24
+        ],
+        "reason": "Preserve the original helmet and facing; generated strokes had added a frontal visor to back-facing helmets. Keep arms and sword motion outside this zone."
+      }
+    ],
+    "exact_rgba_gif_pack": true,
+    "canvas_registration_crop": [
+      14,
+      14,
+      176,
+      176
+    ],
+    "selected_frames_no_pixel_loss": true,
+    "source_group": "1a774d55-7c52-48fb-abbd-d272b055a6da",
+    "target_group": "b32eec9f-07de-4057-9171-be3ff653c476"
+  },
+  {
+    "direction": "south-east",
+    "cell": 168,
+    "source": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\tchu-tcha-berserk-possuido\\refinados\\south-east\\fonte-quadrada.gif",
+    "sequence": [
+      1,
+      2,
+      3,
+      4,
+      4,
+      7,
+      8,
+      1,
+      1
+    ],
+    "changes": [
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          5
+        ],
+        "source_layer": "image",
+        "source_frame": 4,
+        "region": [
+          0,
+          0,
+          167,
+          167
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          6
+        ],
+        "source_layer": "image",
+        "source_frame": 7,
+        "region": [
+          0,
+          0,
+          167,
+          167
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          7
+        ],
+        "source_layer": "image",
+        "source_frame": 8,
+        "region": [
+          0,
+          0,
+          167,
+          167
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          8
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          0,
+          0,
+          167,
+          167
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          9
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          0,
+          0,
+          167,
+          167
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          64,
+          20,
+          108,
+          76
+        ],
+        "at": [
+          64,
+          20
+        ],
+        "reason": "Preserve the original helmet and facing; generated strokes had added a frontal visor to back-facing helmets. Keep arms and sword motion outside this zone."
+      }
+    ],
+    "exact_rgba_gif_pack": true,
+    "canvas_registration_crop": [
+      24,
+      24,
+      168,
+      168
+    ],
+    "selected_frames_no_pixel_loss": true,
+    "source_group": "1a774d55-7c52-48fb-abbd-d272b055a6da",
+    "target_group": "b32eec9f-07de-4057-9171-be3ff653c476"
+  },
+  {
+    "direction": "south",
+    "cell": 180,
+    "source": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\tchu-tcha-berserk-possuido\\refinados\\south\\fonte-quadrada.gif",
+    "sequence": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      1,
+      1
+    ],
+    "changes": [
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          5
+        ],
+        "source_layer": "image",
+        "source_frame": 6,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          6
+        ],
+        "source_layer": "image",
+        "source_frame": 7,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          7
+        ],
+        "source_layer": "image",
+        "source_frame": 8,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          8
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          9
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          70,
+          26,
+          114,
+          82
+        ],
+        "at": [
+          70,
+          26
+        ],
+        "reason": "Preserve the original helmet and facing; generated strokes had added a frontal visor to back-facing helmets. Keep arms and sword motion outside this zone."
+      }
+    ],
+    "exact_rgba_gif_pack": true,
+    "canvas_registration_crop": [
+      22,
+      22,
+      180,
+      180
+    ],
+    "selected_frames_no_pixel_loss": true,
+    "source_group": "1a774d55-7c52-48fb-abbd-d272b055a6da",
+    "target_group": "b32eec9f-07de-4057-9171-be3ff653c476"
+  },
+  {
+    "direction": "south-west",
+    "cell": 180,
+    "source": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\tchu-tcha-berserk-possuido\\refinados\\south-west\\fonte-quadrada.gif",
+    "sequence": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      1
+    ],
+    "changes": [
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          9
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "map_colors",
+        "layer": "image",
+        "frames": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "colors": {
+          "#eeaeb1ff": "#362736ff",
+          "#c2b7baff": "#362736ff",
+          "#f7f7f5ff": "#362736ff",
+          "#d41617ff": "#201020ff",
+          "#e6dcdcff": "#362736ff"
+        },
+        "reason": "Generated white/red VFX colours absent from the reference become black-purple shadow trail; original visor and shield palette preserved."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          70,
+          26,
+          114,
+          82
+        ],
+        "at": [
+          70,
+          26
+        ],
+        "reason": "Preserve the original helmet and facing; generated strokes had added a frontal visor to back-facing helmets. Keep arms and sword motion outside this zone."
+      }
+    ],
+    "exact_rgba_gif_pack": true,
+    "canvas_registration_crop": [
+      8,
+      8,
+      180,
+      180
+    ],
+    "selected_frames_no_pixel_loss": true,
+    "source_group": "1a774d55-7c52-48fb-abbd-d272b055a6da",
+    "target_group": "b32eec9f-07de-4057-9171-be3ff653c476"
+  },
+  {
+    "direction": "west",
+    "cell": 180,
+    "source": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\tchu-tcha-berserk-possuido\\refinados\\west\\fonte-quadrada.gif",
+    "sequence": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      1,
+      1
+    ],
+    "changes": [
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          5
+        ],
+        "source_layer": "image",
+        "source_frame": 6,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          6
+        ],
+        "source_layer": "image",
+        "source_frame": 7,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          7
+        ],
+        "source_layer": "image",
+        "source_frame": 8,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          8
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          9
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "map_colors",
+        "layer": "image",
+        "frames": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "colors": {
+          "#e42e2fff": "#201020ff",
+          "#d40303ff": "#201020ff",
+          "#fe0a1cff": "#201020ff",
+          "#cb1322ff": "#201020ff",
+          "#d92820ff": "#201020ff",
+          "#fee9eeff": "#362736ff",
+          "#e3dfe1ff": "#362736ff",
+          "#fb393dff": "#201020ff",
+          "#f4bfbfff": "#362736ff",
+          "#ece8e8ff": "#362736ff",
+          "#fa1a3bff": "#201020ff",
+          "#f7d1daff": "#362736ff",
+          "#fe2b27ff": "#201020ff",
+          "#fd3c2cff": "#201020ff"
+        },
+        "reason": "Generated white/red VFX colours absent from the reference become black-purple shadow trail; original visor and shield palette preserved."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          70,
+          26,
+          114,
+          82
+        ],
+        "at": [
+          70,
+          26
+        ],
+        "reason": "Preserve the original helmet and facing; generated strokes had added a frontal visor to back-facing helmets. Keep arms and sword motion outside this zone."
+      }
+    ],
+    "exact_rgba_gif_pack": true,
+    "canvas_registration_crop": [
+      14,
+      14,
+      180,
+      180
+    ],
+    "selected_frames_no_pixel_loss": true,
+    "source_group": "1a774d55-7c52-48fb-abbd-d272b055a6da",
+    "target_group": "b32eec9f-07de-4057-9171-be3ff653c476"
+  },
+  {
+    "direction": "north-west",
+    "cell": 180,
+    "source": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\tchu-tcha-berserk-possuido\\refinados\\north-west\\fonte-quadrada.gif",
+    "sequence": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      1,
+      1
+    ],
+    "changes": [
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          5
+        ],
+        "source_layer": "image",
+        "source_frame": 6,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          6
+        ],
+        "source_layer": "image",
+        "source_frame": 7,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          7
+        ],
+        "source_layer": "image",
+        "source_frame": 8,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          8
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          9
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "at": [
+          0,
+          0
+        ],
+        "reason": "Preserve wind-up/slash/recovery while omitting generated full-body red flash; final returns to standing reference."
+      },
+      {
+        "operation": "map_colors",
+        "layer": "image",
+        "frames": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "region": [
+          0,
+          0,
+          179,
+          179
+        ],
+        "colors": {
+          "#bab4b5ff": "#362736ff",
+          "#f1f0eeff": "#362736ff",
+          "#e8e2e3ff": "#362736ff",
+          "#eaaeb4ff": "#362736ff",
+          "#d8cdcdff": "#362736ff",
+          "#d20710ff": "#201020ff",
+          "#fcfafaff": "#362736ff"
+        },
+        "reason": "Generated white/red VFX colours absent from the reference become black-purple shadow trail; original visor and shield palette preserved."
+      },
+      {
+        "operation": "copy_region",
+        "layer": "image",
+        "frames": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "source_layer": "image",
+        "source_frame": 1,
+        "region": [
+          70,
+          26,
+          114,
+          82
+        ],
+        "at": [
+          70,
+          26
+        ],
+        "reason": "Preserve the original helmet and facing; generated strokes had added a frontal visor to back-facing helmets. Keep arms and sword motion outside this zone."
+      }
+    ],
+    "exact_rgba_gif_pack": true,
+    "canvas_registration_crop": [
+      8,
+      8,
+      180,
+      180
+    ],
+    "selected_frames_no_pixel_loss": true,
+    "source_group": "1a774d55-7c52-48fb-abbd-d272b055a6da",
+    "target_group": "b32eec9f-07de-4057-9171-be3ff653c476"
+  }
+]

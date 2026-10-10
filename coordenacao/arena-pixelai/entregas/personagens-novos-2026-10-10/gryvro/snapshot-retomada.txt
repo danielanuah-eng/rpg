@@ -1,0 +1,38 @@
+status: completed
+id: 74642151-8059-4dfc-b56a-5f799926785e
+name: Gryvro — Grifo de Vidro
+state_name: Idle
+directions: 8 (south, east, north, west, south-east, north-east, north-west, south-west)
+size: 128x128px
+view: high top-down
+style: , , 
+group: 48edff0a-d9c5-4eac-a514-c10cbe29086d (2 states)
+  state: Voo (completed) — 4113eef1-555d-4e1a-9435-06c24d2e7ca5
+
+rotations:
+  south: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/south.png?t=1791646778
+  east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/east.png?t=1791646778
+  north: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/north.png?t=1791646778
+  west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/west.png?t=1791646778
+  south-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/south-east.png?t=1791646778
+  north-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/north-east.png?t=1791646778
+  north-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/north-west.png?t=1791646778
+  south-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/south-west.png?t=1791646778
+
+animations (2 groups, 5 total):
+  idle — 4 dir (north-east, south-west, north-west, south-east), 9f 2026-10-10 [group: 5a52d634-b5fe-4f94-9452-268eac57fafb]
+    north-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/animations/ed81581f-f4ba-41a8-a0a7-beae5564f897/north-east/{i}.png?t=1791648181759 (i=0..8)
+    south-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/animations/bd7c1120-31ba-47cd-8ba7-aff6f657d98b/south-west/{i}.png?t=1791648110184 (i=0..8)
+    north-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/animations/580ec6cd-72fb-4b2d-aa62-4231cfdf2983/north-west/{i}.png?t=1791648051532 (i=0..8)
+    south-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/animations/09c274cd-1f76-43b3-a2d7-9b610cbb6c69/south-east/{i}.png?t=1791648002081 (i=0..8)
+  walk — 1 dir (south-east), 8f 2026-10-10 [type=walk-8-frames] [group: 0fa0eafd-a5e2-4f53-a92a-f35c6b3ecb9a]
+    south-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/animations/b570a500-daf9-4725-9347-5085b0e4dd5b/south-east/{i}.png?t=1791647948736 (i=0..7)
+
+download: https://api.pixellab.ai/mcp/characters/74642151-8059-4dfc-b56a-5f799926785e/download
+  (bundles all 2 states in the group, one <state-name>/ folder each — this one is 'Idle/')
+spritesheet: https://api.pixellab.ai/mcp/characters/74642151-8059-4dfc-b56a-5f799926785e/spritesheet (this state only — one uniform-grid sheet PNG + layout JSON, zipped; cells pivot-centred)
+
+available_animations: attack, drinking, eating, idle, idle-sitting, jump, jump-attack, running-4-frames, running-6-frames, running-8-frames, sitting, standing, walk-4-frames, walk-6-frames, walk-8-frames
+
+actions: animate_character(character_id="74642151-8059-4dfc-b56a-5f799926785e", ...) | create_character_state(character_id="74642151-8059-4dfc-b56a-5f799926785e", ...) | delete_animation(character_id="74642151-8059-4dfc-b56a-5f799926785e", animation_group_id="<group>") | delete_character(character_id="74642151-8059-4dfc-b56a-5f799926785e")
+hint: get_character(character_id="4113eef1-555d-4e1a-9435-06c24d2e7ca5") to view sibling state

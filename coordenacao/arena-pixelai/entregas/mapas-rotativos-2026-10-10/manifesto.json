@@ -1,0 +1,211 @@
+{
+  "versao": 1,
+  "data": "2026-10-10",
+  "assets": [
+    {
+      "id": "relicario_solar",
+      "tipo": "prop",
+      "arquivo": "props/relicario_solar.fbx",
+      "glb": "props/relicario_solar.glb",
+      "dimensoes": [
+        0.7599999904632568,
+        0.7599999904632568,
+        0.7400000095367432
+      ],
+      "tris": 240,
+      "pivo": [
+        0,
+        0,
+        0
+      ],
+      "estado": "entregue",
+      "integracao": "pendente_claude",
+      "regra": "decoracao",
+      "emissivo": true
+    },
+    {
+      "id": "barricada_partida",
+      "tipo": "prop",
+      "arquivo": "props/barricada_partida.fbx",
+      "glb": "props/barricada_partida.glb",
+      "dimensoes": [
+        0.8999999761581421,
+        0.44999998807907104,
+        0.700482189655304
+      ],
+      "tris": 264,
+      "pivo": [
+        0,
+        0,
+        0
+      ],
+      "estado": "entregue",
+      "integracao": "pendente_claude",
+      "regra": "decoracao",
+      "emissivo": false
+    },
+    {
+      "id": "bosque-quatro-patios",
+      "tipo": "mapa",
+      "tema": "bosque",
+      "fonte": "fontes/bosque-quatro-patios.blend",
+      "layout": "layouts/bosque-quatro-patios-12.json",
+      "dimensoesSuportadas": [
+        12,
+        16,
+        18
+      ],
+      "previews": [
+        "previews\\bosque-quatro-patios-jogador-1.png",
+        "previews\\bosque-quatro-patios-jogador-2.png",
+        "previews\\bosque-quatro-patios-jogador-3.png",
+        "previews\\bosque-quatro-patios-jogador-4.png"
+      ],
+      "camerasBlender": [
+        [
+          19,
+          19,
+          19
+        ],
+        [
+          -19,
+          19,
+          19
+        ],
+        [
+          -19,
+          -19,
+          19
+        ],
+        [
+          19,
+          -19,
+          19
+        ]
+      ],
+      "cameraLocalPorJogador": true,
+      "estado": "entregue",
+      "integracao": "pendente_claude",
+      "mapaJogavelValidado": false
+    },
+    {
+      "id": "pedreira-anel-partido",
+      "tipo": "mapa",
+      "tema": "pedreira",
+      "fonte": "fontes/pedreira-anel-partido.blend",
+      "layout": "layouts/pedreira-anel-partido-12.json",
+      "dimensoesSuportadas": [
+        12,
+        16,
+        18
+      ],
+      "previews": [
+        "previews\\pedreira-anel-partido-jogador-1.png",
+        "previews\\pedreira-anel-partido-jogador-2.png",
+        "previews\\pedreira-anel-partido-jogador-3.png",
+        "previews\\pedreira-anel-partido-jogador-4.png"
+      ],
+      "camerasBlender": [
+        [
+          19,
+          19,
+          19
+        ],
+        [
+          -19,
+          19,
+          19
+        ],
+        [
+          -19,
+          -19,
+          19
+        ],
+        [
+          19,
+          -19,
+          19
+        ]
+      ],
+      "cameraLocalPorJogador": true,
+      "estado": "entregue",
+      "integracao": "pendente_claude",
+      "mapaJogavelValidado": false
+    },
+    {
+      "id": "neve-bastioes-diagonais",
+      "tipo": "mapa",
+      "tema": "neve",
+      "fonte": "fontes/neve-bastioes-diagonais.blend",
+      "layout": "layouts/neve-bastioes-diagonais-12.json",
+      "dimensoesSuportadas": [
+        12,
+        16,
+        18
+      ],
+      "previews": [
+        "previews\\neve-bastioes-diagonais-jogador-1.png",
+        "previews\\neve-bastioes-diagonais-jogador-2.png",
+        "previews\\neve-bastioes-diagonais-jogador-3.png",
+        "previews\\neve-bastioes-diagonais-jogador-4.png"
+      ],
+      "camerasBlender": [
+        [
+          19,
+          19,
+          19
+        ],
+        [
+          -19,
+          19,
+          19
+        ],
+        [
+          -19,
+          -19,
+          19
+        ],
+        [
+          19,
+          -19,
+          19
+        ]
+      ],
+      "cameraLocalPorJogador": true,
+      "estado": "entregue",
+      "integracao": "pendente_claude",
+      "mapaJogavelValidado": false
+    }
+  ],
+  "hashes": {
+    "fontes\\bosque-quatro-patios.blend": "3e05ad2beae580b5cf8d5d032d22d875684ef87ccfb46028166afb68890691cd",
+    "fontes\\neve-bastioes-diagonais.blend": "ac6f1d93e31c001b7996137958b6c4225e345497f60ebfef86a4f32e00c74a5d",
+    "fontes\\pedreira-anel-partido.blend": "5a59dcb890177948d1a44add89958ebc6cc2cac09710bd405ad07b75371b7386",
+    "layouts\\bosque-quatro-patios-12.json": "9b508df07216a6ebf4683833feb7da4b6cbe0159fb7d9409476d4c6de46cdd7d",
+    "layouts\\bosque-quatro-patios-16.json": "574ec1894ebf6480c4b0836e6cca2e78e03a000ba473ad8a5686eebf0f60ea40",
+    "layouts\\bosque-quatro-patios-18.json": "6f2bc6b9869cdeed8cb9c5c985196726b19d645f843442ab6379d8c420b88752",
+    "layouts\\neve-bastioes-diagonais-12.json": "a360eb57d74b586814bb3f5531e4dc750a8ec3137547317f7c2c5e2e243fd62e",
+    "layouts\\neve-bastioes-diagonais-16.json": "662b639549c270a05b6a3db5898c6f9c1640c1132351bdf53c33f20939f7b181",
+    "layouts\\neve-bastioes-diagonais-18.json": "6a5cba695015f452e9882ca03c4afa18fcfd2dfe4eb0442aa2862e894d7e8a7b",
+    "layouts\\pedreira-anel-partido-12.json": "13c2b5d52098963c041ecc69121ae92c24fb85b35f37c07cc130ca314d49b89b",
+    "layouts\\pedreira-anel-partido-16.json": "2dbdc7208a2b92984f68ded7a533dd1291aa39d022cbcfdbb20a146df7ec3deb",
+    "layouts\\pedreira-anel-partido-18.json": "9a173bd727726770d2ff84632cdf91012c64128955fcc4cf883205e48361a5ab",
+    "previews\\bosque-quatro-patios-jogador-1.png": "2ed98641fbca28da0f9ab3240ec3f1efc02dc68bc7d11d8d32cbfa6694047166",
+    "previews\\bosque-quatro-patios-jogador-2.png": "43f0f75af1314e441dc40bfe8d580876fd636053edce30d9ed1d0ddf826f2322",
+    "previews\\bosque-quatro-patios-jogador-3.png": "8a08e1a726d7171db1a9b2c40720b4ce454f2a7d1e81a7a8b9ddc012dadebc25",
+    "previews\\bosque-quatro-patios-jogador-4.png": "ca7ed9465d47f3d7c80471ad0e81a0ac599154bab5389bdb82bf1fe23dd4c40d",
+    "previews\\neve-bastioes-diagonais-jogador-1.png": "7352b1ab65e4b3b7e4d5608ff8bffef30b8729a5cddd38835c5c3decca83624d",
+    "previews\\neve-bastioes-diagonais-jogador-2.png": "548620bf612a5e8a90f082974258506dd3156a7ca67f358322e4a96e90ff5f62",
+    "previews\\neve-bastioes-diagonais-jogador-3.png": "e8d335927e72e9db5e49361c2c93ae9ceb53a91c0792b5d6bd4e0ef8eb8397e3",
+    "previews\\neve-bastioes-diagonais-jogador-4.png": "0a131ae06b1ceed39b47feb0c5566da7a42eef5fd7c5439742d77841b639a319",
+    "previews\\pedreira-anel-partido-jogador-1.png": "f20cb95a0cc69c103d120338fab32904a1e232721dac5104ffd91a051d75d9d1",
+    "previews\\pedreira-anel-partido-jogador-2.png": "2004793043451f362b58e1d0d602ac16fa471ca64c818354ceb36c0888717de3",
+    "previews\\pedreira-anel-partido-jogador-3.png": "bbd424ce88021639b95bb41e9d6c5b03ed2155633d903a53474493f765e42bf6",
+    "previews\\pedreira-anel-partido-jogador-4.png": "5a09f5443417196589880556b8ea154387442f226680c8bebfc00fc1e99124b4",
+    "props\\barricada_partida.fbx": "f89003b84dccbdf7e586b97aed6a53b3e5f754de2901b9aafbf6821b3b245c30",
+    "props\\barricada_partida.glb": "c55899e0e1ccfdd6b5ddb1af4a021dd0269d089de0cc03fe63e96c0c3844dd95",
+    "props\\relicario_solar.fbx": "97c553b5bb2bf02c2cd2bddd443e5273d1d499f2bf9564af696c1fff50d4622f",
+    "props\\relicario_solar.glb": "b2f8abe4b8373e846580402924df73f60fbf0342dbb3d3d2a0db6e3d8989dc39"
+  },
+  "nota": "Estudos visuais editaveis. Claude valida regras, colisao, spawns e alcance antes de incluir no jogo. Nao muda MapGen."
+}

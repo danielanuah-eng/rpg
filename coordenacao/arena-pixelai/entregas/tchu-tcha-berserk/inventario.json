@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "capturedAtUtc": "2026-10-10T07:59:10.388108+00:00",
+  "files": [
+    {
+      "path": "entregas/tchu-tcha-berserk/648a6700-8bd7-4db4-9a04-b9a4212156df/east.png",
+      "id": "648a6700-8bd7-4db4-9a04-b9a4212156df",
+      "direction": "east",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10193,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6191,
+      "bbox": [
+        36,
+        3,
+        109,
+        124
+      ],
+      "sha256": "2454e3725f602c2f030e0d6b579b85d20c1b25c8b7eb4d962d555ec9bd9afcad",
+      "bytes": 6562
+    },
+    {
+      "path": "entregas/tchu-tcha-berserk/648a6700-8bd7-4db4-9a04-b9a4212156df/north-east.png",
+      "id": "648a6700-8bd7-4db4-9a04-b9a4212156df",
+      "direction": "north-east",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 9784,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6600,
+      "bbox": [
+        17,
+        3,
+        99,
+        125
+      ],
+      "sha256": "dd521ae5959c51a0db280a268d5749436928a0397112c8c13ad6da34f2b787a4",
+      "bytes": 6781
+    },
+    {
+      "path": "entregas/tchu-tcha-berserk/648a6700-8bd7-4db4-9a04-b9a4212156df/north-west.png",
+      "id": "648a6700-8bd7-4db4-9a04-b9a4212156df",
+      "direction": "north-west",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 7947,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 8437,
+      "bbox": [
+        2,
+        3,
+        108,
+        124
+      ],
+      "sha256": "a9c6519a026081f3bb86130f468ae2c8ac46f9155574a5e9d87368526d7f96c7",
+      "bytes": 8674
+    },
+    {
+      "path": "entregas/tchu-tcha-berserk/648a6700-8bd7-4db4-9a04-b9a4212156df/north.png",
+      "id": "648a6700-8bd7-4db4-9a04-b9a4212156df",
+      "direction": "north",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 8256,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 8128,
+      "bbox": [
+        4,
+        5,
+        113,
+        123
+      ],
+      "sha256": "e9307059c3637e426536d5871f7f6d5c56edb59d74a0592ff7f1112a063bea4d",
+      "bytes": 8690
+    },
+    {
+      "path": "entregas/tchu-tcha-berserk/648a6700-8bd7-4db4-9a04-b9a4212156df/south-east.png",
+      "id": "648a6700-8bd7-4db4-9a04-b9a4212156df",
+      "direction": "south-east",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 8361,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 8023,
+      "bbox": [
+        18,
+        7,
+        125,
+        124
+      ],
+      "sha256": "604022b954232bad00884ad9fbdc1673df8973e9175f443f54abb07604d419a7",
+      "bytes": 9823
+    },
+    {
+      "path": "entregas/tchu-tcha-berserk/648a6700-8bd7-4db4-9a04-b9a4212156df/south-west.png",
+      "id": "648a6700-8bd7-4db4-9a04-b9a4212156df",
+      "direction": "south-west",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 9610,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6774,
+      "bbox": [
+        25,
+        7,
+        111,
+        125
+      ],
+      "sha256": "adf558dafc5d050780ba64259f5233e5d44cd1beb8e5335e327fc14fee31904f",
+      "bytes": 8477
+    },
+    {
+      "path": "entregas/tchu-tcha-berserk/648a6700-8bd7-4db4-9a04-b9a4212156df/south.png",
+      "id": "648a6700-8bd7-4db4-9a04-b9a4212156df",
+      "direction": "south",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 7466,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 8918,
+      "bbox": [
+        12,
+        9,
+        128,
+        125
+      ],
+      "sha256": "9e7e180ce79ddc26021739f13c16528061d38eee4818dec889f6eb642383dd8a",
+      "bytes": 10772
+    },
+    {
+      "path": "entregas/tchu-tcha-berserk/648a6700-8bd7-4db4-9a04-b9a4212156df/west.png",
+      "id": "648a6700-8bd7-4db4-9a04-b9a4212156df",
+      "direction": "west",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10858,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5526,
+      "bbox": [
+        21,
+        3,
+        88,
+        124
+      ],
+      "sha256": "75428cca37b4522b6dac8768872ea2a467413c2dc20004e72998abff47f413a7",
+      "bytes": 7409
+    },
+    {
+      "path": "entregas/tchu-tcha-berserk/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/east.png",
+      "id": "a82010d8-719a-4c04-bfb0-2caedc6a6cf5",
+      "direction": "east",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10350,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6034,
+      "bbox": [
+        33,
+        2,
+        116,
+        125
+      ],
+      "sha256": "4d80dfc56428094369cda2230f7c0d1f2d5985d43406d89965bb588a0bb47744",
+      "bytes": 10805
+    },
+    {
+      "path": "entregas/tchu-tcha-berserk/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/north-east.png",
+      "id": "a82010d8-719a-4c04-bfb0-2caedc6a6cf5",
+      "direction": "north-east",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 9314,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 7070,
+      "bbox": [
+        13,
+        2,
+        128,
+        124
+      ],
+      "sha256": "9e8be35d6746ec285f1270d485179567765b2066a9ca201f9694cbe3ef1bbce6",
+      "bytes": 10889
+    },
+    {
+      "path": "entregas/tchu-tcha-berserk/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/north-west.png",
+      "id": "a82010d8-719a-4c04-bfb0-2caedc6a6cf5",
+      "direction": "north-west",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 8376,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 8008,
+      "bbox": [
+        1,
+        2,
+        108,
+        124
+      ],
+      "sha256": "deec3a2d4ef3c4a015e4d6994080d7b31ede0b11f1dcc16f7afd58a4321c1cac",
+      "bytes": 12991
+    },
+    {
+      "path": "entregas/tchu-tcha-berserk/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/north.png",
+      "id": "a82010d8-719a-4c04-bfb0-2caedc6a6cf5",
+      "direction": "north",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 9029,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 7355,
+      "bbox": [
+        7,
+        2,
+        111,
+        123
+      ],
+      "sha256": "c0e3b1a794b322af948251c3c637205492231738d324874f8f3f052c230d2306",
+      "bytes": 11065
+    },
+    {
+      "path": "entregas/tchu-tcha-berserk/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/south-east.png",
+      "id": "a82010d8-719a-4c04-bfb0-2caedc6a6cf5",
+      "direction": "south-east",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 8654,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 7730,
+      "bbox": [
+        16,
+        6,
+        124,
+        124
+      ],
+      "sha256": "25bd9812de8b2f9d20fcf39668090a40bcbede0b1fb5944d293bd5c129be9081",
+      "bytes": 13837
+    },
+    {
+      "path": "entregas/tchu-tcha-berserk/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/south-west.png",
+      "id": "a82010d8-719a-4c04-bfb0-2caedc6a6cf5",
+      "direction": "south-west",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 9146,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 7238,
+      "bbox": [
+        0,
+        5,
+        110,
+        124
+      ],
+      "sha256": "0df07b52e93de0119795178074ae775dcc94ed5a3ae9f70f0bff1df155f0a7a6",
+      "bytes": 13509
+    },
+    {
+      "path": "entregas/tchu-tcha-berserk/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/south.png",
+      "id": "a82010d8-719a-4c04-bfb0-2caedc6a6cf5",
+      "direction": "south",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 7654,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 8730,
+      "bbox": [
+        1,
+        5,
+        127,
+        127
+      ],
+      "sha256": "f8c9a23192d00404e8402676b03f05341df9d4d647076dc222c47e4c9f39748d",
+      "bytes": 15098
+    },
+    {
+      "path": "entregas/tchu-tcha-berserk/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/west.png",
+      "id": "a82010d8-719a-4c04-bfb0-2caedc6a6cf5",
+      "direction": "west",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10602,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5782,
+      "bbox": [
+        0,
+        2,
+        89,
+        125
+      ],
+      "sha256": "979b77b43be981e25e28fec0698a255b84e84de5d99975141603a477578cac19",
+      "bytes": 11133
+    }
+  ]
+}

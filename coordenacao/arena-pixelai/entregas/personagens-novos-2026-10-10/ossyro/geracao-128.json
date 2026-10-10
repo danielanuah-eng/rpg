@@ -1,0 +1,5 @@
+{
+  "character_id": "6b27257d-819c-4d78-829c-0ca36f05d586",
+  "result": "id: 6b27257d-819c-4d78-829c-0ca36f05d586\nname: Ossyro — Dragão do Ossário\nmode: pro (25 generations, 8 directions)\nbody: quadruped (lion)\nsize: 128x128px\nview: high top-down\nstyle character: 0e585583-ec07-4831-9269-44b1b7fbd0b0\nstatus: processing (~3-5 min)\n\nhint: get_character(character_id=\"6b27257d-819c-4d78-829c-0ca36f05d586\")",
+  "retryReason": "pro max 128px; primeira chamada 192 rejeitada sem geracao"
+}

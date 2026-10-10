@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "owner": "codex",
+  "source": "PixelLab existing completed rotations; no new generation",
+  "destinationOwner": "claude",
+  "variants": [
+    {
+      "id": "648a6700-8bd7-4db4-9a04-b9a4212156df",
+      "targetFolder": "TchuTchaBerserk",
+      "rotations": [
+        {
+          "direction": "south",
+          "sourceUrl": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/648a6700-8bd7-4db4-9a04-b9a4212156df/rotations/south.png?t=1791617624",
+          "targetFile": "south.png"
+        },
+        {
+          "direction": "east",
+          "sourceUrl": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/648a6700-8bd7-4db4-9a04-b9a4212156df/rotations/east.png?t=1791617624",
+          "targetFile": "east.png"
+        },
+        {
+          "direction": "north",
+          "sourceUrl": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/648a6700-8bd7-4db4-9a04-b9a4212156df/rotations/north.png?t=1791617624",
+          "targetFile": "north.png"
+        },
+        {
+          "direction": "west",
+          "sourceUrl": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/648a6700-8bd7-4db4-9a04-b9a4212156df/rotations/west.png?t=1791617624",
+          "targetFile": "west.png"
+        },
+        {
+          "direction": "south-east",
+          "sourceUrl": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/648a6700-8bd7-4db4-9a04-b9a4212156df/rotations/south-east.png?t=1791617624",
+          "targetFile": "south-east.png"
+        },
+        {
+          "direction": "north-east",
+          "sourceUrl": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/648a6700-8bd7-4db4-9a04-b9a4212156df/rotations/north-east.png?t=1791617624",
+          "targetFile": "north-east.png"
+        },
+        {
+          "direction": "north-west",
+          "sourceUrl": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/648a6700-8bd7-4db4-9a04-b9a4212156df/rotations/north-west.png?t=1791617624",
+          "targetFile": "north-west.png"
+        },
+        {
+          "direction": "south-west",
+          "sourceUrl": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/648a6700-8bd7-4db4-9a04-b9a4212156df/rotations/south-west.png?t=1791617624",
+          "targetFile": "south-west.png"
+        }
+      ]
+    },
+    {
+      "id": "a82010d8-719a-4c04-bfb0-2caedc6a6cf5",
+      "targetFolder": "TchuTchaBerserk",
+      "rotations": [
+        {
+          "direction": "south",
+          "sourceUrl": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/rotations/south.png?t=1791618813",
+          "targetFile": "south.png"
+        },
+        {
+          "direction": "east",
+          "sourceUrl": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/rotations/east.png?t=1791618813",
+          "targetFile": "east.png"
+        },
+        {
+          "direction": "north",
+          "sourceUrl": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/rotations/north.png?t=1791618813",
+          "targetFile": "north.png"
+        },
+        {
+          "direction": "west",
+          "sourceUrl": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/rotations/west.png?t=1791618813",
+          "targetFile": "west.png"
+        },
+        {
+          "direction": "south-east",
+          "sourceUrl": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/rotations/south-east.png?t=1791618813",
+          "targetFile": "south-east.png"
+        },
+        {
+          "direction": "north-east",
+          "sourceUrl": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/rotations/north-east.png?t=1791618813",
+          "targetFile": "north-east.png"
+        },
+        {
+          "direction": "north-west",
+          "sourceUrl": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/rotations/north-west.png?t=1791618813",
+          "targetFile": "north-west.png"
+        },
+        {
+          "direction": "south-west",
+          "sourceUrl": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/a82010d8-719a-4c04-bfb0-2caedc6a6cf5/rotations/south-west.png?t=1791618813",
+          "targetFile": "south-west.png"
+        }
+      ]
+    }
+  ]
+}

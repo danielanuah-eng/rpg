@@ -1,0 +1,168 @@
+{
+  "actor": {
+    "id": "edgar",
+    "name": "Edgar",
+    "character_id": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+    "size": 128,
+    "body_type": "humanoid",
+    "ready": true,
+    "rotations": {
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/590cc7bc-3673-477c-aa23-f5655dd2d97a/rotations/south.png?t=1791646543",
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/590cc7bc-3673-477c-aa23-f5655dd2d97a/rotations/east.png?t=1791646543",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/590cc7bc-3673-477c-aa23-f5655dd2d97a/rotations/north.png?t=1791646543",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/590cc7bc-3673-477c-aa23-f5655dd2d97a/rotations/west.png?t=1791646543",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/590cc7bc-3673-477c-aa23-f5655dd2d97a/rotations/south-east.png?t=1791646543",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/590cc7bc-3673-477c-aa23-f5655dd2d97a/rotations/north-east.png?t=1791646543",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/590cc7bc-3673-477c-aa23-f5655dd2d97a/rotations/north-west.png?t=1791646543",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/590cc7bc-3673-477c-aa23-f5655dd2d97a/rotations/south-west.png?t=1791646543"
+    },
+    "folder": "edgar",
+    "owner": "edgar"
+  },
+  "clips": [
+    {
+      "plan": "edgar-attack",
+      "name": "attack",
+      "direction": "south-east",
+      "count": 9,
+      "cell": [
+        176,
+        176
+      ],
+      "group_id": "5a6a2513-0fcb-4a25-88dc-2e775c03fef2",
+      "fps": 7,
+      "loop": false,
+      "reverse": null
+    },
+    {
+      "plan": "edgar-attack",
+      "name": "attack",
+      "direction": "north-east",
+      "count": 9,
+      "cell": [
+        176,
+        176
+      ],
+      "group_id": "5a6a2513-0fcb-4a25-88dc-2e775c03fef2",
+      "fps": 7,
+      "loop": false,
+      "reverse": null
+    },
+    {
+      "plan": "edgar-attack",
+      "name": "attack",
+      "direction": "south-west",
+      "count": 9,
+      "cell": [
+        176,
+        176
+      ],
+      "group_id": "5a6a2513-0fcb-4a25-88dc-2e775c03fef2",
+      "fps": 7,
+      "loop": false,
+      "reverse": null
+    },
+    {
+      "plan": "edgar-idle",
+      "name": "idle",
+      "direction": "south-east",
+      "count": 9,
+      "cell": [
+        176,
+        176
+      ],
+      "group_id": "e0606797-2c10-485a-ba3f-9f1eeb12efe4",
+      "fps": 5,
+      "loop": true,
+      "reverse": null
+    },
+    {
+      "plan": "edgar-idle",
+      "name": "idle",
+      "direction": "north-east",
+      "count": 9,
+      "cell": [
+        176,
+        176
+      ],
+      "group_id": "e0606797-2c10-485a-ba3f-9f1eeb12efe4",
+      "fps": 5,
+      "loop": true,
+      "reverse": null
+    },
+    {
+      "plan": "edgar-idle",
+      "name": "idle",
+      "direction": "north-west",
+      "count": 9,
+      "cell": [
+        176,
+        176
+      ],
+      "group_id": "e0606797-2c10-485a-ba3f-9f1eeb12efe4",
+      "fps": 5,
+      "loop": true,
+      "reverse": null
+    },
+    {
+      "plan": "edgar-idle",
+      "name": "idle",
+      "direction": "south-west",
+      "count": 9,
+      "cell": [
+        176,
+        176
+      ],
+      "group_id": "e0606797-2c10-485a-ba3f-9f1eeb12efe4",
+      "fps": 5,
+      "loop": true,
+      "reverse": null
+    },
+    {
+      "plan": "edgar-walk",
+      "name": "walk",
+      "direction": "north-east",
+      "count": 6,
+      "cell": [
+        176,
+        176
+      ],
+      "group_id": "eee6dcd4-c73f-432a-acdd-9a8e73173fb8",
+      "fps": 10,
+      "loop": true,
+      "reverse": null
+    },
+    {
+      "plan": "edgar-walk",
+      "name": "walk",
+      "direction": "north-west",
+      "count": 6,
+      "cell": [
+        176,
+        176
+      ],
+      "group_id": "eee6dcd4-c73f-432a-acdd-9a8e73173fb8",
+      "fps": 10,
+      "loop": true,
+      "reverse": null
+    },
+    {
+      "plan": "edgar-walk",
+      "name": "walk",
+      "direction": "south-west",
+      "count": 6,
+      "cell": [
+        176,
+        176
+      ],
+      "group_id": "eee6dcd4-c73f-432a-acdd-9a8e73173fb8",
+      "fps": 10,
+      "loop": true,
+      "reverse": null
+    }
+  ],
+  "source_cell": [
+    176,
+    176
+  ]
+}

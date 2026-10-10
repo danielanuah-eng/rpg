@@ -1,0 +1,1603 @@
+{
+  "characters": [
+    {
+      "id": "edgar",
+      "name": "Edgar",
+      "character_id": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+      "size": 128,
+      "body_type": "humanoid",
+      "ready": true,
+      "rotations": {
+        "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/590cc7bc-3673-477c-aa23-f5655dd2d97a/rotations/south.png?t=1791646543",
+        "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/590cc7bc-3673-477c-aa23-f5655dd2d97a/rotations/east.png?t=1791646543",
+        "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/590cc7bc-3673-477c-aa23-f5655dd2d97a/rotations/north.png?t=1791646543",
+        "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/590cc7bc-3673-477c-aa23-f5655dd2d97a/rotations/west.png?t=1791646543",
+        "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/590cc7bc-3673-477c-aa23-f5655dd2d97a/rotations/south-east.png?t=1791646543",
+        "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/590cc7bc-3673-477c-aa23-f5655dd2d97a/rotations/north-east.png?t=1791646543",
+        "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/590cc7bc-3673-477c-aa23-f5655dd2d97a/rotations/north-west.png?t=1791646543",
+        "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/590cc7bc-3673-477c-aa23-f5655dd2d97a/rotations/south-west.png?t=1791646543"
+      }
+    },
+    {
+      "id": "brumak",
+      "name": "Brumak — Minotauro de Basalto",
+      "body_type": "humanoid",
+      "character_id": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+      "ready": true,
+      "rotations": {
+        "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d35da45-5786-43fb-99c3-3eccd984ac4c/rotations/south.png?t=1791646836",
+        "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d35da45-5786-43fb-99c3-3eccd984ac4c/rotations/east.png?t=1791646836",
+        "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d35da45-5786-43fb-99c3-3eccd984ac4c/rotations/north.png?t=1791646836",
+        "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d35da45-5786-43fb-99c3-3eccd984ac4c/rotations/west.png?t=1791646836",
+        "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d35da45-5786-43fb-99c3-3eccd984ac4c/rotations/south-east.png?t=1791646836",
+        "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d35da45-5786-43fb-99c3-3eccd984ac4c/rotations/north-east.png?t=1791646836",
+        "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d35da45-5786-43fb-99c3-3eccd984ac4c/rotations/north-west.png?t=1791646836",
+        "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d35da45-5786-43fb-99c3-3eccd984ac4c/rotations/south-west.png?t=1791646836"
+      }
+    },
+    {
+      "id": "nixira",
+      "name": "Nixira — Goblin dos Cogumelos",
+      "body_type": "humanoid",
+      "character_id": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+      "ready": true,
+      "rotations": {
+        "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7a2e16e2-980f-4030-99c2-0cbf82c82b7f/rotations/south.png?t=1791646873",
+        "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7a2e16e2-980f-4030-99c2-0cbf82c82b7f/rotations/east.png?t=1791646873",
+        "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7a2e16e2-980f-4030-99c2-0cbf82c82b7f/rotations/north.png?t=1791646873",
+        "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7a2e16e2-980f-4030-99c2-0cbf82c82b7f/rotations/west.png?t=1791646873",
+        "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7a2e16e2-980f-4030-99c2-0cbf82c82b7f/rotations/south-east.png?t=1791646873",
+        "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7a2e16e2-980f-4030-99c2-0cbf82c82b7f/rotations/north-east.png?t=1791646873",
+        "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7a2e16e2-980f-4030-99c2-0cbf82c82b7f/rotations/north-west.png?t=1791646873",
+        "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7a2e16e2-980f-4030-99c2-0cbf82c82b7f/rotations/south-west.png?t=1791646873"
+      }
+    },
+    {
+      "id": "gryvro",
+      "name": "Gryvro — Grifo de Vidro",
+      "body_type": "quadruped",
+      "character_id": "74642151-8059-4dfc-b56a-5f799926785e",
+      "ready": true,
+      "rotations": {
+        "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/south.png?t=1791646778",
+        "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/east.png?t=1791646778",
+        "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/north.png?t=1791646778",
+        "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/west.png?t=1791646778",
+        "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/south-east.png?t=1791646778",
+        "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/north-east.png?t=1791646778",
+        "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/north-west.png?t=1791646778",
+        "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/74642151-8059-4dfc-b56a-5f799926785e/rotations/south-west.png?t=1791646778"
+      }
+    },
+    {
+      "id": "raizor",
+      "name": "Raizor — Urso-Raiz",
+      "body_type": "quadruped",
+      "character_id": "8c800a83-a911-4b28-a8f6-2c9dd2958887",
+      "ready": true,
+      "rotations": {
+        "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/8c800a83-a911-4b28-a8f6-2c9dd2958887/rotations/south.png?t=1791646818",
+        "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/8c800a83-a911-4b28-a8f6-2c9dd2958887/rotations/east.png?t=1791646818",
+        "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/8c800a83-a911-4b28-a8f6-2c9dd2958887/rotations/north.png?t=1791646818",
+        "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/8c800a83-a911-4b28-a8f6-2c9dd2958887/rotations/west.png?t=1791646818",
+        "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/8c800a83-a911-4b28-a8f6-2c9dd2958887/rotations/south-east.png?t=1791646818",
+        "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/8c800a83-a911-4b28-a8f6-2c9dd2958887/rotations/north-east.png?t=1791646818",
+        "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/8c800a83-a911-4b28-a8f6-2c9dd2958887/rotations/north-west.png?t=1791646818",
+        "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/8c800a83-a911-4b28-a8f6-2c9dd2958887/rotations/south-west.png?t=1791646818"
+      }
+    },
+    {
+      "id": "alvyr",
+      "name": "Alvyr — Cervo Branco",
+      "body_type": "quadruped",
+      "character_id": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+      "ready": true,
+      "rotations": {
+        "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/south.png?t=1791646847",
+        "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/east.png?t=1791646847",
+        "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/north.png?t=1791646847",
+        "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/west.png?t=1791646847",
+        "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/south-east.png?t=1791646847",
+        "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/north-east.png?t=1791646847",
+        "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/north-west.png?t=1791646847",
+        "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/south-west.png?t=1791646847"
+      }
+    },
+    {
+      "id": "ossyro",
+      "name": "Ossyro — Dragão do Ossário",
+      "body_type": "quadruped",
+      "size": 128,
+      "character_id": "6b27257d-819c-4d78-829c-0ca36f05d586",
+      "ready": true,
+      "rotations": {
+        "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/6b27257d-819c-4d78-829c-0ca36f05d586/rotations/south.png?t=1791646853",
+        "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/6b27257d-819c-4d78-829c-0ca36f05d586/rotations/east.png?t=1791646853",
+        "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/6b27257d-819c-4d78-829c-0ca36f05d586/rotations/north.png?t=1791646853",
+        "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/6b27257d-819c-4d78-829c-0ca36f05d586/rotations/west.png?t=1791646853",
+        "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/6b27257d-819c-4d78-829c-0ca36f05d586/rotations/south-east.png?t=1791646853",
+        "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/6b27257d-819c-4d78-829c-0ca36f05d586/rotations/north-east.png?t=1791646853",
+        "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/6b27257d-819c-4d78-829c-0ca36f05d586/rotations/north-west.png?t=1791646853",
+        "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/6b27257d-819c-4d78-829c-0ca36f05d586/rotations/south-west.png?t=1791646853"
+      }
+    },
+    {
+      "id": "lobo-de-cinzas",
+      "name": "Lobo de cinzas",
+      "character_id": "2d642607-f310-4e22-b3ae-384361338285",
+      "body_type": "quadruped",
+      "ready": true,
+      "rotations": {
+        "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d642607-f310-4e22-b3ae-384361338285/rotations/south.png?t=1791649395",
+        "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d642607-f310-4e22-b3ae-384361338285/rotations/east.png?t=1791649395",
+        "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d642607-f310-4e22-b3ae-384361338285/rotations/north.png?t=1791649395",
+        "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d642607-f310-4e22-b3ae-384361338285/rotations/west.png?t=1791649395",
+        "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d642607-f310-4e22-b3ae-384361338285/rotations/south-east.png?t=1791649395",
+        "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d642607-f310-4e22-b3ae-384361338285/rotations/north-east.png?t=1791649395",
+        "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d642607-f310-4e22-b3ae-384361338285/rotations/north-west.png?t=1791649395",
+        "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/2d642607-f310-4e22-b3ae-384361338285/rotations/south-west.png?t=1791649395"
+      }
+    },
+    {
+      "id": "dragao-espectral",
+      "name": "Dragão espectral existente",
+      "character_id": "99aa2048-ba78-47f2-b767-0b74a5bbad1a",
+      "body_type": "quadruped",
+      "existing": true,
+      "ready": true,
+      "rotations": {
+        "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/99aa2048-ba78-47f2-b767-0b74a5bbad1a/rotations/south.png?t=1791616822",
+        "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/99aa2048-ba78-47f2-b767-0b74a5bbad1a/rotations/east.png?t=1791616822",
+        "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/99aa2048-ba78-47f2-b767-0b74a5bbad1a/rotations/north.png?t=1791616822",
+        "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/99aa2048-ba78-47f2-b767-0b74a5bbad1a/rotations/west.png?t=1791616822",
+        "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/99aa2048-ba78-47f2-b767-0b74a5bbad1a/rotations/south-east.png?t=1791616822",
+        "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/99aa2048-ba78-47f2-b767-0b74a5bbad1a/rotations/north-east.png?t=1791616822",
+        "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/99aa2048-ba78-47f2-b767-0b74a5bbad1a/rotations/north-west.png?t=1791616822",
+        "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/99aa2048-ba78-47f2-b767-0b74a5bbad1a/rotations/south-west.png?t=1791616822"
+      }
+    }
+  ],
+  "damian": {
+    "chameleonHand": {
+      "state_name": "Camaleão na mão",
+      "character_id": "816a9e84-98fb-41c7-a2a6-f3ff694ba79f",
+      "ready": true,
+      "rotations": {
+        "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/south.png?t=1791647070",
+        "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/east.png?t=1791647070",
+        "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/north.png?t=1791647070",
+        "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/west.png?t=1791647070",
+        "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/south-east.png?t=1791647070",
+        "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/north-east.png?t=1791647070",
+        "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/north-west.png?t=1791647070",
+        "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/816a9e84-98fb-41c7-a2a6-f3ff694ba79f/rotations/south-west.png?t=1791647070"
+      }
+    },
+    "hammerMode": {
+      "state_name": "Modo martelo",
+      "character_id": "ac23f5bd-f7c3-4fe0-b22b-e16684125653",
+      "ready": true,
+      "rotations": {
+        "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/ac23f5bd-f7c3-4fe0-b22b-e16684125653/rotations/south.png?t=1791646823",
+        "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/ac23f5bd-f7c3-4fe0-b22b-e16684125653/rotations/east.png?t=1791646823",
+        "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/ac23f5bd-f7c3-4fe0-b22b-e16684125653/rotations/north.png?t=1791646823",
+        "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/ac23f5bd-f7c3-4fe0-b22b-e16684125653/rotations/west.png?t=1791646823",
+        "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/ac23f5bd-f7c3-4fe0-b22b-e16684125653/rotations/south-east.png?t=1791646823",
+        "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/ac23f5bd-f7c3-4fe0-b22b-e16684125653/rotations/north-east.png?t=1791646823",
+        "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/ac23f5bd-f7c3-4fe0-b22b-e16684125653/rotations/north-west.png?t=1791646823",
+        "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/ac23f5bd-f7c3-4fe0-b22b-e16684125653/rotations/south-west.png?t=1791646823"
+      }
+    },
+    "neutral": {
+      "character_id": "7beda37d-fc07-48df-a1cc-9215091c171e",
+      "state_name": "Camaleão no ombro, sem arma",
+      "ready": true,
+      "rotations": {
+        "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7beda37d-fc07-48df-a1cc-9215091c171e/rotations/south.png?t=1791647325",
+        "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7beda37d-fc07-48df-a1cc-9215091c171e/rotations/east.png?t=1791647325",
+        "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7beda37d-fc07-48df-a1cc-9215091c171e/rotations/north.png?t=1791647325",
+        "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7beda37d-fc07-48df-a1cc-9215091c171e/rotations/west.png?t=1791647325",
+        "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7beda37d-fc07-48df-a1cc-9215091c171e/rotations/south-east.png?t=1791647325",
+        "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7beda37d-fc07-48df-a1cc-9215091c171e/rotations/north-east.png?t=1791647325",
+        "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7beda37d-fc07-48df-a1cc-9215091c171e/rotations/north-west.png?t=1791647325",
+        "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/7beda37d-fc07-48df-a1cc-9215091c171e/rotations/south-west.png?t=1791647325"
+      }
+    },
+    "chameleonHandV2": {
+      "state_name": "Camaleão na mão v2, apoio comum",
+      "character_id": "3899a0a1-263e-4102-86e2-917da9337927",
+      "ready": true,
+      "rotations": {
+        "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/3899a0a1-263e-4102-86e2-917da9337927/rotations/south.png?t=1791647471",
+        "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/3899a0a1-263e-4102-86e2-917da9337927/rotations/east.png?t=1791647471",
+        "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/3899a0a1-263e-4102-86e2-917da9337927/rotations/north.png?t=1791647471",
+        "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/3899a0a1-263e-4102-86e2-917da9337927/rotations/west.png?t=1791647471",
+        "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/3899a0a1-263e-4102-86e2-917da9337927/rotations/south-east.png?t=1791647471",
+        "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/3899a0a1-263e-4102-86e2-917da9337927/rotations/north-east.png?t=1791647471",
+        "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/3899a0a1-263e-4102-86e2-917da9337927/rotations/north-west.png?t=1791647471",
+        "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/3899a0a1-263e-4102-86e2-917da9337927/rotations/south-west.png?t=1791647471"
+      }
+    },
+    "pistolMode": {
+      "state_name": "Modo pistola",
+      "character_id": "52a7b01e-ca84-4722-ae86-b424e50cf8d3",
+      "ready": true,
+      "rotations": {
+        "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/52a7b01e-ca84-4722-ae86-b424e50cf8d3/rotations/south.png?t=1791647704",
+        "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/52a7b01e-ca84-4722-ae86-b424e50cf8d3/rotations/east.png?t=1791647704",
+        "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/52a7b01e-ca84-4722-ae86-b424e50cf8d3/rotations/north.png?t=1791647704",
+        "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/52a7b01e-ca84-4722-ae86-b424e50cf8d3/rotations/west.png?t=1791647704",
+        "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/52a7b01e-ca84-4722-ae86-b424e50cf8d3/rotations/south-east.png?t=1791647704",
+        "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/52a7b01e-ca84-4722-ae86-b424e50cf8d3/rotations/north-east.png?t=1791647704",
+        "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/52a7b01e-ca84-4722-ae86-b424e50cf8d3/rotations/north-west.png?t=1791647704",
+        "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/52a7b01e-ca84-4722-ae86-b424e50cf8d3/rotations/south-west.png?t=1791647704"
+      }
+    },
+    "cannonMode": {
+      "state_name": "Modo canhão",
+      "character_id": "20323703-7d5b-45ec-922a-4283e319bc97",
+      "ready": true,
+      "rotations": {
+        "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/20323703-7d5b-45ec-922a-4283e319bc97/rotations/south.png?t=1791647691",
+        "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/20323703-7d5b-45ec-922a-4283e319bc97/rotations/east.png?t=1791647691",
+        "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/20323703-7d5b-45ec-922a-4283e319bc97/rotations/north.png?t=1791647691",
+        "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/20323703-7d5b-45ec-922a-4283e319bc97/rotations/west.png?t=1791647691",
+        "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/20323703-7d5b-45ec-922a-4283e319bc97/rotations/south-east.png?t=1791647691",
+        "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/20323703-7d5b-45ec-922a-4283e319bc97/rotations/north-east.png?t=1791647691",
+        "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/20323703-7d5b-45ec-922a-4283e319bc97/rotations/north-west.png?t=1791647691",
+        "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/20323703-7d5b-45ec-922a-4283e319bc97/rotations/south-west.png?t=1791647691"
+      }
+    }
+  },
+  "special": {
+    "flying": {
+      "owner": "gryvro",
+      "state_name": "Voo",
+      "character_id": "4113eef1-555d-4e1a-9435-06c24d2e7ca5",
+      "ready": true,
+      "rotations": {
+        "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4113eef1-555d-4e1a-9435-06c24d2e7ca5/rotations/south.png?t=1791647747",
+        "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4113eef1-555d-4e1a-9435-06c24d2e7ca5/rotations/east.png?t=1791647747",
+        "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4113eef1-555d-4e1a-9435-06c24d2e7ca5/rotations/north.png?t=1791647747",
+        "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4113eef1-555d-4e1a-9435-06c24d2e7ca5/rotations/west.png?t=1791647747",
+        "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4113eef1-555d-4e1a-9435-06c24d2e7ca5/rotations/south-east.png?t=1791647747",
+        "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4113eef1-555d-4e1a-9435-06c24d2e7ca5/rotations/north-east.png?t=1791647747",
+        "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4113eef1-555d-4e1a-9435-06c24d2e7ca5/rotations/north-west.png?t=1791647747",
+        "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4113eef1-555d-4e1a-9435-06c24d2e7ca5/rotations/south-west.png?t=1791647747"
+      }
+    },
+    "ghost": {
+      "owner": "edgar",
+      "state_name": "Fantasma",
+      "character_id": "0b822833-fbf2-4c17-805c-8b67a0097116",
+      "ready": true,
+      "rotations": {
+        "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0b822833-fbf2-4c17-805c-8b67a0097116/rotations/south.png?t=1791647723",
+        "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0b822833-fbf2-4c17-805c-8b67a0097116/rotations/east.png?t=1791647723",
+        "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0b822833-fbf2-4c17-805c-8b67a0097116/rotations/north.png?t=1791647723",
+        "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0b822833-fbf2-4c17-805c-8b67a0097116/rotations/west.png?t=1791647723",
+        "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0b822833-fbf2-4c17-805c-8b67a0097116/rotations/south-east.png?t=1791647723",
+        "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0b822833-fbf2-4c17-805c-8b67a0097116/rotations/north-east.png?t=1791647723",
+        "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0b822833-fbf2-4c17-805c-8b67a0097116/rotations/north-west.png?t=1791647723",
+        "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/0b822833-fbf2-4c17-805c-8b67a0097116/rotations/south-west.png?t=1791647723"
+      }
+    }
+  },
+  "animationPlans": [
+    {
+      "key": "damian-camaleao-mao",
+      "asset": "damian",
+      "stateOwner": "damian",
+      "stateKey": "neutral",
+      "character_id": "7beda37d-fc07-48df-a1cc-9215091c171e",
+      "name": "camaleao-mao",
+      "depOwner": "damian",
+      "depState": "chameleonHandV2",
+      "action": "Damian keeps his exact stance and clothing, makes a small inviting gesture with the hand that holds the chameleon in the target frame. The ONE living green chameleon crawls down gently from shoulder along forearm into that open palm, its curled tail and four little legs clearly moving as a living animal. He smoothly lifts and accommodates the palm at its final stable grip anchor. No weapon, no striking, no teleporting, no duplicate animal. Finish exactly in the target hand-with-chameleon pose.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "group_id": "5c71bfc4-8c05-4246-9ac3-d5fe4008ca2f",
+      "frames": 8,
+      "loop": false,
+      "returnToBase": false,
+      "fps": 8,
+      "mode": "v3"
+    },
+    {
+      "key": "damian-transform-martelo",
+      "asset": "damian",
+      "stateOwner": "damian",
+      "stateKey": "chameleonHandV2",
+      "character_id": "3899a0a1-263e-4102-86e2-917da9337927",
+      "name": "transform-martelo",
+      "depOwner": "damian",
+      "depState": "hammerMode",
+      "action": "The SAME living green chameleon resting in Damian's palm transforms continuously into the large green HAMMER held in the SAME hand in the target image. The chameleon's curled tail extends into the handle, body and tiny legs fold and elongate into the weapon shape, little eye motif remains visible. Damian accommodates grip and weapon weight with a small wrist/elbow motion but keeps feet, face, clothing and body scale steady; his other hand only helps if the target cannon requires it. No attack, no swing, no firing, no projectile, no duplicate chameleon, no change of hand or direction. Finish exactly at the target weapon-at-rest state. This is a TRANSFORMATION into weapon mode, not an attack.",
+      "deriveReverse": "destransform-martelo",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "group_id": "4680dce9-25a3-4396-b816-4ea2a7ee9ad4",
+      "frames": 8,
+      "loop": false,
+      "returnToBase": false,
+      "fps": 8,
+      "mode": "v3"
+    },
+    {
+      "key": "damian-transform-pistola",
+      "asset": "damian",
+      "stateOwner": "damian",
+      "stateKey": "chameleonHandV2",
+      "character_id": "3899a0a1-263e-4102-86e2-917da9337927",
+      "name": "transform-pistola",
+      "depOwner": "damian",
+      "depState": "pistolMode",
+      "action": "The SAME living green chameleon resting in Damian's palm transforms continuously into the green PISTOL held in the SAME hand in the target image. The chameleon's curled tail extends into the handle, body and tiny legs fold and elongate into the weapon shape, little eye motif remains visible. Damian accommodates grip and weapon weight with a small wrist/elbow motion but keeps feet, face, clothing and body scale steady; his other hand only helps if the target cannon requires it. No attack, no swing, no firing, no projectile, no duplicate chameleon, no change of hand or direction. Finish exactly at the target weapon-at-rest state. This is a TRANSFORMATION into weapon mode, not an attack.",
+      "deriveReverse": "destransform-pistola",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "group_id": "dc12069a-2875-400b-8ed4-69f4cf5a3272",
+      "frames": 8,
+      "loop": false,
+      "returnToBase": false,
+      "fps": 8,
+      "mode": "v3"
+    },
+    {
+      "key": "damian-transform-canhao",
+      "asset": "damian",
+      "stateOwner": "damian",
+      "stateKey": "chameleonHandV2",
+      "character_id": "3899a0a1-263e-4102-86e2-917da9337927",
+      "name": "transform-canhao",
+      "depOwner": "damian",
+      "depState": "cannonMode",
+      "action": "The SAME living green chameleon resting in Damian's palm transforms continuously into the large green HAND CANNON held in the SAME hand in the target image. The chameleon's curled tail extends into the handle, body and tiny legs fold and elongate into the weapon shape, little eye motif remains visible. Damian accommodates grip and weapon weight with a small wrist/elbow motion but keeps feet, face, clothing and body scale steady; his other hand only helps if the target cannon requires it. No attack, no swing, no firing, no projectile, no duplicate chameleon, no change of hand or direction. Finish exactly at the target weapon-at-rest state. This is a TRANSFORMATION into weapon mode, not an attack.",
+      "deriveReverse": "destransform-canhao",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [
+        "south-east",
+        "south-west",
+        "north-east"
+      ],
+      "group_id": "eeb6cc9e-6093-484a-9c2a-20cc695ff34a",
+      "frames": 8,
+      "loop": false,
+      "returnToBase": false,
+      "fps": 8,
+      "mode": "v3"
+    },
+    {
+      "key": "gryvro-takeoff",
+      "asset": "gryvro",
+      "character_id": "74642151-8059-4dfc-b56a-5f799926785e",
+      "name": "takeoff",
+      "depOwner": "special",
+      "depState": "flying",
+      "action": "The SAME glass griffon prepares to fly: bend all four legs slightly, TWO glass feathered wings open smoothly, push up lightly on eagle talons and feline hind paws, one controlled wing downstroke lifts its body a short distance into a hovering airborne stance. FOUR legs fold gently beneath, eagle beak/head, crystalline body, tail and glass material remain unchanged. Stay centered, no horizontal travel; the game moves the actor along the path separately. Finish exactly at target wings-open hovering pose.",
+      "deriveReverse": "landing",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [
+        "south-east"
+      ],
+      "group_id": "313e370e-3fc1-478e-9649-0e482ac74a6e",
+      "frames": 8,
+      "loop": false,
+      "returnToBase": false,
+      "fps": 8,
+      "mode": "v3"
+    },
+    {
+      "key": "edgar-transform-ghost",
+      "asset": "edgar",
+      "character_id": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+      "name": "transform-ghost",
+      "depOwner": "special",
+      "depState": "ghost",
+      "action": "Edgar becomes a ghost in place while keeping his exact adult face, confident toothy smile, sparse slicked-back hair, strong body proportions, leather jacket/velvet trim, grey shirt, exposed belt and military clothes. Pale mint-cyan spectral energy begins at his fists and passes smoothly through arms, torso and legs, converting skin and clothing into the target hollow translucent spectral form. Small wisps trail near boot edges. Hands stay relaxed, feet and body anchor stable; no attack, no skeleton, no sudden character swap, no ship. End exactly at the target ghost pose.",
+      "deriveReverse": "return-ghost",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [
+        "south-east"
+      ],
+      "group_id": "ff56fd4f-3054-42af-a54a-7c68df8f6286",
+      "frames": 8,
+      "loop": false,
+      "returnToBase": false,
+      "fps": 8,
+      "mode": "v3"
+    },
+    {
+      "key": "gryvro-flight",
+      "asset": "gryvro",
+      "stateOwner": "special",
+      "stateKey": "flying",
+      "character_id": "4113eef1-555d-4e1a-9435-06c24d2e7ca5",
+      "name": "flight",
+      "depOwner": "special",
+      "depState": "flying",
+      "action": "The SAME glass griffon hovers and flies in place with smooth TWO feathered GLASS WING flaps: lift and open articulated feathers, controlled wing downstroke, small level torso bob, four legs stay tucked underneath and tail counterbalances. Eagle beak/head and icy translucent glass material stay identical, no missing or added limbs, no attack. Keep whole extended wings in frame. A fluid continuous airborne loop ending in the exact same initial wings-open hovering pose. Game movement along the board is applied externally.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [
+        "south-east",
+        "south-west"
+      ],
+      "group_id": "5c50e22d-bbcd-414e-b636-c4419f5980c8",
+      "frames": 8,
+      "loop": true,
+      "returnToBase": false,
+      "fps": 8,
+      "mode": "v3"
+    },
+    {
+      "key": "edgar-ghost-walk",
+      "asset": "edgar",
+      "stateOwner": "special",
+      "stateKey": "ghost",
+      "character_id": "0b822833-fbf2-4c17-805c-8b67a0097116",
+      "name": "walk",
+      "depOwner": "special",
+      "depState": "ghost",
+      "action": "The SAME spectral Edgar glides gently in place in the facing direction: small smooth up-down float, relaxed strong arms move slightly opposite each other, pale mint-cyan wisps softly trail down from boots, coat hem and slicked-back hair stay stable. Preserve his exact mature toothy smile, receding hair, jacket, belt, trousers and spectral color/material. No walking foot stomps, no attack, no ship, no vanishing. A seamless ethereal locomotion loop ending at the exact original spectral pose.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [
+        "south-east"
+      ],
+      "group_id": "6f037a17-2ede-45b9-acf0-805bb8b92bc2",
+      "frames": 8,
+      "loop": true,
+      "returnToBase": false,
+      "fps": 8,
+      "mode": "v3"
+    },
+    {
+      "key": "edgar-ultship",
+      "asset": "edgar",
+      "character_id": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+      "name": "ultship",
+      "action": "Edgar invokes his ghost ship: plant military boots, open his glowing fists into palms, sweep both strong arms outward and upward in one confident dramatic summoning gesture, raise the right open hand toward the facing direction to signal a large ship arriving elsewhere on the board, a brief narrow mint-cyan spectral arc wraps his forearms, then lower both hands smoothly and recover to original idle. Preserve exact mature smiling face, sparse slicked-back hair, leather jacket with velvet trim, grey shirt, exposed belt and cargo trousers. DO NOT draw the large ship inside this character sprite, it is a separate summon effect asset, no melee punch.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 8,
+      "mode": "v3"
+    },
+    {
+      "key": "ossyro-breath",
+      "asset": "ossyro",
+      "character_id": "6b27257d-819c-4d78-829c-0ca36f05d586",
+      "name": "breath",
+      "action": "The SAME ancient pale skeletal dragon inhales: neck arches slightly, rib-like chest expands, then head thrusts toward the facing direction with jaw OPEN and a short concentrated ribbon of COLD PALE GREEN GHOSTLY BREATH emerging from its mouth. Keep the breath compact so body remains readable; the game extends the effect separately. Four clawed legs grounded, two pale bony membrane wings braced and tail remains consistent. Exhale once, jaw closes and long neck recovers smoothly to exact initial pose. No fiery red explosion, no extra limbs, no disappearing dragon.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 8,
+      "mode": "v3"
+    },
+    {
+      "key": "gryvro-idle",
+      "asset": "gryvro",
+      "character_id": "74642151-8059-4dfc-b56a-5f799926785e",
+      "name": "idle",
+      "action": "A subtle slow natural breathing idle loop in place with a tiny head/eye shift and balanced body weight, preserving the exact anatomy, material, clothing and silhouette. Feet remain planted, no attack, end in the exact initial pose.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "group_id": "5a52d634-b5fe-4f94-9452-268eac57fafb",
+      "frames": 8,
+      "loop": true,
+      "returnToBase": true,
+      "fps": 5,
+      "mode": "template",
+      "template_animation_id": "idle"
+    },
+    {
+      "key": "gryvro-walk",
+      "asset": "gryvro",
+      "character_id": "74642151-8059-4dfc-b56a-5f799926785e",
+      "name": "walk",
+      "action": "A grounded quadrupedal griffon walk with alternate FRONT EAGLE TALONS and REAR FELINE PAWS, all FOUR legs maintain proper floor contact and weight; TWO glass feathered wings stay folded along the back, eagle head counterbalances and crystalline tail sways gently. Clear fragile icy transparent glass material preserved, no takeoff. End to initial gait pose.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [
+        "south-east"
+      ],
+      "group_id": "0fa0eafd-a5e2-4f53-a92a-f35c6b3ecb9a",
+      "frames": 8,
+      "loop": true,
+      "returnToBase": true,
+      "fps": 10,
+      "mode": "template",
+      "template_animation_id": "walk-8-frames"
+    },
+    {
+      "key": "gryvro-attack",
+      "asset": "gryvro",
+      "character_id": "74642151-8059-4dfc-b56a-5f799926785e",
+      "name": "attack",
+      "action": "One quick close-range front eagle TALON CLAW attack by this glass griffon: brace both feline hind paws, lean chest forward, lift the nearest FRONT talon, rake it down and forward in a short decisive tearing arc toward the facing target, glint briefly on glass claws, and retract that talon back to grounded idle. WINGS may lift slightly for balance but the griffon does not fly in this clip. FOUR legs plus TWO feathered wings remain consistent; no bite, no breath projectile, no human arms, no shattered body.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 7
+    },
+    {
+      "key": "gryvro-hit",
+      "asset": "gryvro",
+      "character_id": "74642151-8059-4dfc-b56a-5f799926785e",
+      "name": "hit",
+      "action": "One readable recoil from being struck from the front: brief tense anticipation, torso/head jerk backwards, limbs absorb impact then regain balance and recover to the exact original resting pose. No attack, no dismemberment, no new weapons or explosive effects.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 6,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 8
+    },
+    {
+      "key": "gryvro-death",
+      "asset": "gryvro",
+      "character_id": "74642151-8059-4dfc-b56a-5f799926785e",
+      "name": "death",
+      "action": "A single collapse after defeat: lose balance, body lowers heavily onto the ground and comes completely to rest on its side. Keep every limb and material intact. No disintegration, no vanishing, no recovery, no looping; the last frame stays fallen.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": false,
+      "returnToBase": false,
+      "fps": 6
+    },
+    {
+      "key": "edgar-idle",
+      "asset": "edgar",
+      "character_id": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+      "name": "idle",
+      "action": "Subtle idle breathing in place, confident open toothy smile, slight shoulder and relaxed fist motion. Tiny pale cyan ghostly energy gently flickers tightly around knuckles, leather jacket and velvet trim remain stable, feet anchored; same stance and all clothing. A smooth slow seamless loop returning to original pose, no attack.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "group_id": "e0606797-2c10-485a-ba3f-9f1eeb12efe4",
+      "frames": 8,
+      "loop": true,
+      "returnToBase": true,
+      "fps": 5
+    },
+    {
+      "key": "edgar-walk",
+      "asset": "edgar",
+      "character_id": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+      "name": "walk",
+      "action": "Walking forward in the indicated facing direction with a strong calm confident adult swagger, deliberate alternating military boot steps and natural opposite arm swing. Hair is slicked back and stable, jacket hem subtly follows motion, exposed belt remains visible, small spectral aura stays close to fists. Keep whole body scale and identity, no sliding. Seamless walking loop, return to first pose.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "group_id": "eee6dcd4-c73f-432a-acdd-9a8e73173fb8",
+      "frames": 8,
+      "loop": true,
+      "returnToBase": true,
+      "fps": 10,
+      "mode": "template",
+      "template_animation_id": "walk"
+    },
+    {
+      "key": "edgar-attack",
+      "asset": "edgar",
+      "character_id": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+      "name": "attack",
+      "action": "One strong bare-hand close melee combination: raise guard, plant military boots, twist strong torso, extend a clearly readable forceful right straight punch toward the facing direction with pale mint-cyan GHOSTLY energy wrapped tightly around the hand, follow with a brief left palm strike, then both hands withdraw and recover to the exact original neutral pose. The hands remain visible inside short spectral trails. Stable hatless slicked-back sparse hair, exposed belt and jacket. No weapons, no ship, no teleporting, same adult face and clothes.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [
+        "south-east",
+        "south-west",
+        "north-east"
+      ],
+      "group_id": "5a6a2513-0fcb-4a25-88dc-2e775c03fef2",
+      "frames": 8,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 7
+    },
+    {
+      "key": "edgar-hit",
+      "asset": "edgar",
+      "character_id": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+      "name": "hit",
+      "action": "One readable recoil from being struck from the front: brief tense anticipation, torso/head jerk backwards, limbs absorb impact then regain balance and recover to the exact original resting pose. No attack, no dismemberment, no new weapons or explosive effects.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 6,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 8,
+      "mode": "template",
+      "template_animation_id": "taking-punch"
+    },
+    {
+      "key": "edgar-death",
+      "asset": "edgar",
+      "character_id": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+      "name": "death",
+      "action": "A single collapse after defeat: lose balance, body lowers heavily onto the ground and comes completely to rest on its side. Keep every limb and material intact. No disintegration, no vanishing, no recovery, no looping; the last frame stays fallen.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": false,
+      "returnToBase": false,
+      "fps": 6,
+      "mode": "template",
+      "template_animation_id": "falling-back-death"
+    },
+    {
+      "key": "raizor-idle",
+      "asset": "raizor",
+      "character_id": "8c800a83-a911-4b28-a8f6-2c9dd2958887",
+      "name": "idle",
+      "action": "A subtle slow natural breathing idle loop in place with a tiny head/eye shift and balanced body weight, preserving the exact anatomy, material, clothing and silhouette. Feet remain planted, no attack, end in the exact initial pose.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": true,
+      "returnToBase": true,
+      "fps": 5,
+      "mode": "template",
+      "template_animation_id": "idle-long"
+    },
+    {
+      "key": "raizor-walk",
+      "asset": "raizor",
+      "character_id": "8c800a83-a911-4b28-a8f6-2c9dd2958887",
+      "name": "walk",
+      "action": "A slow heavy quadrupedal BEAR walk, four thick wooden legs alternate deliberately, shoulders and leafy mane rock with each solid plant, enormous body weight clearly shifts, living bark and root structure consistent, tiny moss tufts sway. No floating, no roots growing outside body, seamless gait loop.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": true,
+      "returnToBase": true,
+      "fps": 10,
+      "mode": "template",
+      "template_animation_id": "walk-8-frames"
+    },
+    {
+      "key": "raizor-attack",
+      "asset": "raizor",
+      "character_id": "8c800a83-a911-4b28-a8f6-2c9dd2958887",
+      "name": "attack",
+      "action": "One heavy wooden BEAR forepaw smash: the bear lifts the nearest massive rooted front paw, shifts weight onto remaining three legs, claws spread, brings the paw strongly DOWN toward a nearby opponent in the indicated facing direction, then settles its full weight and recovers to its exact four-paw initial stance. Keep bulky bear anatomy and moss mane, a few amber sap glints, no human fists, no ranged spell or uprooted terrain.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 7,
+      "mode": "template",
+      "template_animation_id": "attack-left"
+    },
+    {
+      "key": "raizor-hit",
+      "asset": "raizor",
+      "character_id": "8c800a83-a911-4b28-a8f6-2c9dd2958887",
+      "name": "hit",
+      "action": "One readable recoil from being struck from the front: brief tense anticipation, torso/head jerk backwards, limbs absorb impact then regain balance and recover to the exact original resting pose. No attack, no dismemberment, no new weapons or explosive effects.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 6,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 8
+    },
+    {
+      "key": "raizor-death",
+      "asset": "raizor",
+      "character_id": "8c800a83-a911-4b28-a8f6-2c9dd2958887",
+      "name": "death",
+      "action": "A single collapse after defeat: lose balance, body lowers heavily onto the ground and comes completely to rest on its side. Keep every limb and material intact. No disintegration, no vanishing, no recovery, no looping; the last frame stays fallen.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": false,
+      "returnToBase": false,
+      "fps": 6
+    },
+    {
+      "key": "alvyr-idle",
+      "asset": "alvyr",
+      "character_id": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+      "name": "idle",
+      "action": "A subtle slow natural breathing idle loop in place with a tiny head/eye shift and balanced body weight, preserving the exact anatomy, material, clothing and silhouette. Feet remain planted, no attack, end in the exact initial pose.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": true,
+      "returnToBase": true,
+      "fps": 5,
+      "mode": "template",
+      "template_animation_id": "idle-shaking-head"
+    },
+    {
+      "key": "alvyr-walk",
+      "asset": "alvyr",
+      "character_id": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+      "name": "walk",
+      "action": "An elegant light grounded deer trot using four slender legs and split hooves, diagonal leg pairs alternate, small chest bob and minimal antler sway, white stag identity and golden antler branches stable. No horse neck, no wings, no teleportation. Seamless return to initial gait pose.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": true,
+      "returnToBase": true,
+      "fps": 10,
+      "mode": "template",
+      "template_animation_id": "walk-8-frames"
+    },
+    {
+      "key": "alvyr-attack",
+      "asset": "alvyr",
+      "character_id": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+      "name": "attack",
+      "action": "One short STAG antler jab at a close facing target: plant hind split hooves, lower the deer head and broad branching GOLDEN ANTLERS, take one compact forward foreleg step, thrust the antlers forward decisively and then raise head and recover backwards to the exact proud initial white-deer pose. No firing from antlers, no huge halo, preserve full antler shape and four legs.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 7,
+      "mode": "template",
+      "template_animation_id": "running-headbutt"
+    },
+    {
+      "key": "alvyr-hit",
+      "asset": "alvyr",
+      "character_id": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+      "name": "hit",
+      "action": "One readable recoil from being struck from the front: brief tense anticipation, torso/head jerk backwards, limbs absorb impact then regain balance and recover to the exact original resting pose. No attack, no dismemberment, no new weapons or explosive effects.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 6,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 8,
+      "mode": "template",
+      "template_animation_id": "hit-left"
+    },
+    {
+      "key": "alvyr-death",
+      "asset": "alvyr",
+      "character_id": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+      "name": "death",
+      "action": "A single collapse after defeat: lose balance, body lowers heavily onto the ground and comes completely to rest on its side. Keep every limb and material intact. No disintegration, no vanishing, no recovery, no looping; the last frame stays fallen.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": false,
+      "returnToBase": false,
+      "fps": 6,
+      "mode": "template",
+      "template_animation_id": "dying"
+    },
+    {
+      "key": "brumak-idle",
+      "asset": "brumak",
+      "character_id": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+      "name": "idle",
+      "action": "A subtle slow natural breathing idle loop in place with a tiny head/eye shift and balanced body weight, preserving the exact anatomy, material, clothing and silhouette. Feet remain planted, no attack, end in the exact initial pose.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": true,
+      "returnToBase": true,
+      "fps": 5,
+      "mode": "template",
+      "template_animation_id": "breathing-idle"
+    },
+    {
+      "key": "brumak-walk",
+      "asset": "brumak",
+      "character_id": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+      "name": "walk",
+      "action": "A heavy deliberate bipedal minotaur walk with two split basalt hooves, broad shoulders shifting weight, massive empty arms swinging slowly and huge curved horns steady, teal waistcloth responds subtly. Preserve all charcoal stone slabs and restrained orange seams. Seamless return to initial gait.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": true,
+      "returnToBase": true,
+      "fps": 10,
+      "mode": "template",
+      "template_animation_id": "walk"
+    },
+    {
+      "key": "brumak-attack",
+      "asset": "brumak",
+      "character_id": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+      "name": "attack",
+      "action": "One powerful close-range minotaur shoulder-and-horn bash: lower bull head and enormous curved horns slightly, plant one split basalt hoof firmly, twist bulky stone torso and make a compact forward shove toward the facing opponent with shoulder and horns, stop with a heavy stable plant, and recover to exact initial neutral pose. No hammer or weapon appears, no explosion, no long-distance movement, stone anatomy unchanged.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 7
+    },
+    {
+      "key": "brumak-hit",
+      "asset": "brumak",
+      "character_id": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+      "name": "hit",
+      "action": "One readable recoil from being struck from the front: brief tense anticipation, torso/head jerk backwards, limbs absorb impact then regain balance and recover to the exact original resting pose. No attack, no dismemberment, no new weapons or explosive effects.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 6,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 8,
+      "mode": "template",
+      "template_animation_id": "taking-punch"
+    },
+    {
+      "key": "brumak-death",
+      "asset": "brumak",
+      "character_id": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+      "name": "death",
+      "action": "A single collapse after defeat: lose balance, body lowers heavily onto the ground and comes completely to rest on its side. Keep every limb and material intact. No disintegration, no vanishing, no recovery, no looping; the last frame stays fallen.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": false,
+      "returnToBase": false,
+      "fps": 6,
+      "mode": "template",
+      "template_animation_id": "falling-back-death"
+    },
+    {
+      "key": "nixira-idle",
+      "asset": "nixira",
+      "character_id": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+      "name": "idle",
+      "action": "A subtle slow natural breathing idle loop in place with a tiny head/eye shift and balanced body weight, preserving the exact anatomy, material, clothing and silhouette. Feet remain planted, no attack, end in the exact initial pose.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": true,
+      "returnToBase": true,
+      "fps": 5,
+      "mode": "template",
+      "template_animation_id": "breathing-idle"
+    },
+    {
+      "key": "nixira-walk",
+      "asset": "nixira",
+      "character_id": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+      "name": "walk",
+      "action": "Walking forward in the indicated direction in a smooth repeating locomotion cycle, alternate limbs naturally and show clear weight transfer, preserve body anatomy and material, no sliding, end at the initial gait pose.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": true,
+      "returnToBase": true,
+      "fps": 10,
+      "mode": "template",
+      "template_animation_id": "walk"
+    },
+    {
+      "key": "nixira-attack",
+      "asset": "nixira",
+      "character_id": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+      "name": "attack",
+      "action": "One small goblin close-range quick claw/swipe: crouch lightly, take a short lateral step forward, slash with the right bare green hand toward its facing target, then pull the hand back and regain her exact initial playful upright idle. Hands clearly visible, no new daggers or weapons, mushroom hat and wicker mushroom backpack fixed to her body, no magical mushroom cloud. Small agile weight and mischievous face stable.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 7
+    },
+    {
+      "key": "nixira-hit",
+      "asset": "nixira",
+      "character_id": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+      "name": "hit",
+      "action": "One readable recoil from being struck from the front: brief tense anticipation, torso/head jerk backwards, limbs absorb impact then regain balance and recover to the exact original resting pose. No attack, no dismemberment, no new weapons or explosive effects.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 6,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 8,
+      "mode": "template",
+      "template_animation_id": "taking-punch"
+    },
+    {
+      "key": "nixira-death",
+      "asset": "nixira",
+      "character_id": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+      "name": "death",
+      "action": "A single collapse after defeat: lose balance, body lowers heavily onto the ground and comes completely to rest on its side. Keep every limb and material intact. No disintegration, no vanishing, no recovery, no looping; the last frame stays fallen.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": false,
+      "returnToBase": false,
+      "fps": 6,
+      "mode": "template",
+      "template_animation_id": "falling-back-death"
+    },
+    {
+      "key": "ossyro-idle",
+      "asset": "ossyro",
+      "character_id": "6b27257d-819c-4d78-829c-0ca36f05d586",
+      "name": "idle",
+      "action": "A subtle slow natural breathing idle loop in place with a tiny head/eye shift and balanced body weight, preserving the exact anatomy, material, clothing and silhouette. Feet remain planted, no attack, end in the exact initial pose.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": true,
+      "returnToBase": true,
+      "fps": 5,
+      "mode": "template",
+      "template_animation_id": "idle"
+    },
+    {
+      "key": "ossyro-walk",
+      "asset": "ossyro",
+      "character_id": "6b27257d-819c-4d78-829c-0ca36f05d586",
+      "name": "walk",
+      "action": "A slow deliberate grounded FOUR-legged ancient dragon walk, bony reptilian claws plant in alternating pairs, long pale neck sways slightly and narrow tail counterbalances, TWO pale lace-like membranous wings remain folded. No extra legs, no human walking posture, no flight in this clip. Preserve bone-ivory scale/bone material and thin ancient silhouette.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": true,
+      "returnToBase": true,
+      "fps": 10,
+      "mode": "template",
+      "template_animation_id": "walk-8-frames"
+    },
+    {
+      "key": "ossyro-attack",
+      "asset": "ossyro",
+      "character_id": "6b27257d-819c-4d78-829c-0ca36f05d586",
+      "name": "attack",
+      "action": "One close-range PALE DRAGON bite: coil the long thin neck back slightly, open the bony dragon jaw, lunge head and upper neck forward toward its facing opponent, snap jaws once without gore, pull head back and recover to exact initial pose. Four grounded clawed legs, folded TWO wings, long tail and ancient pale body remain stable, small green eye accent only; no huge breath projectile in this melee clip.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 7
+    },
+    {
+      "key": "ossyro-hit",
+      "asset": "ossyro",
+      "character_id": "6b27257d-819c-4d78-829c-0ca36f05d586",
+      "name": "hit",
+      "action": "One readable recoil from being struck from the front: brief tense anticipation, torso/head jerk backwards, limbs absorb impact then regain balance and recover to the exact original resting pose. No attack, no dismemberment, no new weapons or explosive effects.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 6,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 8
+    },
+    {
+      "key": "ossyro-death",
+      "asset": "ossyro",
+      "character_id": "6b27257d-819c-4d78-829c-0ca36f05d586",
+      "name": "death",
+      "action": "A single collapse after defeat: lose balance, body lowers heavily onto the ground and comes completely to rest on its side. Keep every limb and material intact. No disintegration, no vanishing, no recovery, no looping; the last frame stays fallen.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": false,
+      "returnToBase": false,
+      "fps": 6
+    },
+    {
+      "key": "lobo-idle",
+      "asset": "lobo-de-cinzas",
+      "character_id": "2d642607-f310-4e22-b3ae-384361338285",
+      "name": "idle",
+      "mode": "template",
+      "template_animation_id": "idle",
+      "action": "Subtle alert ash wolf breathing, paws anchored.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": true,
+      "returnToBase": true,
+      "fps": 5
+    },
+    {
+      "key": "lobo-walk",
+      "asset": "lobo-de-cinzas",
+      "character_id": "2d642607-f310-4e22-b3ae-384361338285",
+      "name": "walk",
+      "mode": "template",
+      "template_animation_id": "walk-8-frames",
+      "action": "Natural four-legged ash wolf walking.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": true,
+      "returnToBase": true,
+      "fps": 10
+    },
+    {
+      "key": "lobo-attack",
+      "asset": "lobo-de-cinzas",
+      "character_id": "2d642607-f310-4e22-b3ae-384361338285",
+      "name": "attack",
+      "mode": "v3",
+      "template_animation_id": null,
+      "action": "The SAME ash wolf performs one fierce forward jaw bite: crouch slightly, head and shoulders thrust forward, mouth opens then jaws snap CLOSED once, no blood, no new limbs or flames, then withdraw head and recover exactly to its starting ready stance. FOUR dog-like legs and ONE bushy tail stay anatomically consistent. Keep body centered; the game moves the actor separately.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 8
+    },
+    {
+      "key": "lobo-hit",
+      "asset": "lobo-de-cinzas",
+      "character_id": "2d642607-f310-4e22-b3ae-384361338285",
+      "name": "hit",
+      "mode": "v3",
+      "template_animation_id": null,
+      "action": "The SAME ash wolf recoils from one impact: shoulders and head jerk backwards, paws bend to absorb it, ears briefly flatten, then recover to the exact original standing ready pose. Four intact paws, one tail, no gore, no new flame.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 6,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 8
+    },
+    {
+      "key": "lobo-death",
+      "asset": "lobo-de-cinzas",
+      "character_id": "2d642607-f310-4e22-b3ae-384361338285",
+      "name": "death",
+      "mode": "v3",
+      "template_animation_id": null,
+      "action": "The SAME ash wolf loses strength after defeat: four legs bend, body lowers slowly and rolls onto one side, head rests on the ground and tail goes still. Finish lying defeated, no recovery or loop, no blood, no extra limbs or vaporization.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": false,
+      "returnToBase": false,
+      "fps": 8
+    },
+    {
+      "key": "lobo-spawn",
+      "asset": "lobo-de-cinzas",
+      "character_id": "2d642607-f310-4e22-b3ae-384361338285",
+      "name": "spawn",
+      "mode": "v3",
+      "template_animation_id": null,
+      "action": "The SAME ash wolf materializes from a small subtle ash-grey smoky curl at its paws: head rises, shoulders lift, all four paws plant, small ember sparks fade, then settles into its exact ready standing pose. Keep full animal visible, same fur and anatomy, no large fire or landscape.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "loop": false,
+      "returnToBase": true,
+      "fps": 8,
+      "emptyStart": 128
+    },
+    {
+      "key": "dragon-spawn",
+      "asset": "dragao-espectral",
+      "character_id": "99aa2048-ba78-47f2-b767-0b74a5bbad1a",
+      "name": "spawn",
+      "mode": "v3",
+      "emptyStart": 192,
+      "action": "The SAME small spectral dragon appears gradually in place from empty transparency: a faint cyan spectral silhouette coalesces into its exact original creature, head, four legs, two wings and one tail become solid luminous translucent material, claws settle lightly and wings fold into the exact target resting stance. Preserve the original young dragon proportions, colors and facing direction. No new body parts, no scenery, no breath attack, no movement across screen. End exactly at the target original dragon image.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "fps": 8,
+      "loop": false,
+      "returnToBase": true
+    },
+    {
+      "key": "edgar-ghost-idle",
+      "asset": "edgar",
+      "stateOwner": "special",
+      "stateKey": "ghost",
+      "character_id": "0b822833-fbf2-4c17-805c-8b67a0097116",
+      "name": "idle",
+      "mode": "template",
+      "template_animation_id": "breathing-idle",
+      "action": "Gentle breathing in the same resting ghost form.",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "requested": [],
+      "group_id": null,
+      "frames": 8,
+      "fps": 5,
+      "loop": true,
+      "returnToBase": true
+    }
+  ],
+  "shopPlans": [
+    {
+      "id": "amuleto-vital",
+      "action": "The small gemstone pulses softly once, tiny highlights shimmer; the amulet body remains anchored in the exact same position and shape. Seamless stationary idle loop, no spin.",
+      "job_id": "abb98f06-c1c3-4d81-ac15-7517b3716f3f",
+      "asset_id": "d988402b-9906-5096-8330-24af0a2b48a6",
+      "fps": 5,
+      "frames": 4,
+      "loop": true
+    },
+    {
+      "id": "armadilha-de-espinhos",
+      "action": "One very slight mechanical tension twitch in the folded thorn spikes, small metal highlight glints; remain ARMED and closed at rest, no activation, no damage, no object translation. Seamless anchored idle loop.",
+      "job_id": "dd66249d-4af0-4306-9332-929d83cbda49",
+      "asset_id": "332e17c5-9b2f-507c-b260-2ee1acc59f60",
+      "fps": 5,
+      "frames": 4,
+      "loop": true
+    },
+    {
+      "id": "botas-aladas",
+      "action": "The little attached wings flutter gently twice while the boots stay planted, restrained white highlight glints. Same boot shape and exact resting position, seamless idle loop.",
+      "job_id": "0374c592-4952-4786-82ee-a64834d85b62",
+      "asset_id": "2ebcf0f3-9320-56ef-9ec1-622773c96937",
+      "fps": 5,
+      "frames": 4,
+      "loop": true
+    },
+    {
+      "id": "escudo-de-bronze",
+      "action": "One soft bronze glint moves along the shield rim, minute settled sway less than two pixels. Exact same stationary shield, no defensive swing, seamless idle loop.",
+      "job_id": "21f19a9f-88ad-4570-87ad-f3828a9f0291",
+      "asset_id": "4d14476b-beb2-5b5f-ab5c-623508e3d03a",
+      "fps": 5,
+      "frames": 4,
+      "loop": true
+    },
+    {
+      "id": "furia",
+      "action": "The red-orange aura gently flickers inward and outward around the unchanged central emblem, slow restrained brightness pulse. Stationary seamless loop, no attack.",
+      "job_id": "7bdca2a6-a356-4bb3-b834-4fe5eff57e22",
+      "asset_id": "433080c5-3dfe-5043-b942-8a6305b807df",
+      "fps": 5,
+      "frames": 4,
+      "loop": true
+    },
+    {
+      "id": "lobo-de-cinzas",
+      "action": "The same little wolf in this icon breathes softly and its ears twitch once, tiny ember glint in the eye; keep paws anchored and the exact wolf shape. Stationary seamless idle loop, no howl or bite.",
+      "job_id": "a6e948bf-6457-4dab-b362-3535f83e67b3",
+      "asset_id": "113578c3-2781-52b2-8934-42a0d7b87eb3",
+      "fps": 5,
+      "frames": 4,
+      "loop": true
+    },
+    {
+      "id": "luneta",
+      "action": "Tiny glass highlight glints once, minute settled tilt without changing silhouette, no extending the tube, no spin. Exact stationary telescope icon seamless loop.",
+      "job_id": "091aadab-57be-41da-b3c4-566681dfd955",
+      "asset_id": "973917ce-0a88-5b6d-83ed-3d69556c73bb",
+      "fps": 5,
+      "frames": 4,
+      "loop": true,
+      "failed_job_id": "a39aca49-5488-4edf-bd4d-00e22fff4a58",
+      "mode": "pixminimax"
+    },
+    {
+      "id": "passo-leve",
+      "action": "The gentle speed wisps flutter slightly around the unchanged boots/emblem, restrained brightness shimmer. Stationary anchored seamless idle loop, no translating the object.",
+      "job_id": "8fda72b4-1689-4585-ba6b-301a5c815c0c",
+      "asset_id": "6dfc5ba8-437b-5347-aec1-16500ad40661",
+      "fps": 5,
+      "frames": 4,
+      "loop": true
+    },
+    {
+      "id": "pocao-de-cura",
+      "action": "The liquid inside the unchanged glass bottle gently bubbles and softly glows; the cork and bottle remain perfectly anchored. Stationary seamless idle loop, no drinking or opening.",
+      "job_id": "19a35a55-841c-4500-b31c-9404d5e77528",
+      "asset_id": "534a4232-fa54-5df7-89d4-7515bba1c628",
+      "fps": 5,
+      "frames": 4,
+      "loop": true
+    },
+    {
+      "id": "raio-arcano",
+      "action": "Tiny restrained cyan electrical arcs flicker around the unchanged icon center, mild glow pulses once. Stationary seamless idle loop, no projectile being fired.",
+      "job_id": "41a5de36-949c-4486-96b4-636740dc9ae7",
+      "asset_id": "e032057d-a5fb-5885-b1b2-fe860f343016",
+      "fps": 5,
+      "frames": 4,
+      "loop": true
+    }
+  ],
+  "ship": {
+    "content": [
+      {
+        "type": "text",
+        "text": "id: 5234edf2-2d26-4f73-8045-c3449d5830d7\njob_id: 5234edf2-2d26-4f73-8045-c3449d5830d7\nmode: text\nframes: 1\nsize: 256x192px\ntransparent: True\nedit: Keep this same sailing ghost ship, its geometry, masts, ropes, torn sails, camera and pixel-art details. REMOVE all sea, wake, reflections, stray stars and blue textured backdrop. Put ONLY the isolated ship on a flat SOLID PURE WHITE featureless background so background removal finds it. Change the opaque hull into pale mint-cyan spectral ghost material. No ocean, land or scene. Return the ship cut out with TRUE ALPHA TRANSPARENCY, including gaps between ropes and sails.\nasset_id: 7475d274-1049-5275-a8ab-30ea791def98\nasset_status: pending (saved when generation completes)\ncost: ~10 generations\nstatus: processing (~30-90s)\n\nhint: get_image(job_id=\"5234edf2-2d26-4f73-8045-c3449d5830d7\")"
+      }
+    ],
+    "isError": false
+  },
+  "shipPlans": [
+    {
+      "name": "idle",
+      "frames": 4,
+      "loop": true,
+      "action": "The ghost ship stays exactly in place. Torn sails and little pennants ripple very gently once, pale spectral hull glow slowly pulses, a few tiny wisps cling to the hull then fade. NO water or reflection, no added objects, same ship shape, all masts ropes and outline stable. Finish at the exact first pose for a seamless calm idle loop.",
+      "job_id": "7d721ec4-2c6e-4a7c-9359-44375eff9978",
+      "fps": 8,
+      "asset_id": "390141b4-9d2a-50df-b22e-7a0441df0777"
+    },
+    {
+      "name": "walk",
+      "frames": 8,
+      "loop": true,
+      "action": "The ghost ship glides IN PLACE: gentle rhythmic hull bob no more than two pixels, sails billow mildly then relax, small spectral wisps stream from stern. Keep ship centered, same scale and exact outline and mast count; no screen translation, no sea or wake. The game moves it on the board. Finish exactly at the starting pose, seamless sailing loop.",
+      "job_id": "26d97953-cd0d-455e-b184-413271fe3b9d",
+      "fps": 8,
+      "asset_id": "0acce7a7-1a2a-5c90-807b-3bae266a2865"
+    },
+    {
+      "name": "attack",
+      "frames": 8,
+      "loop": false,
+      "action": "The SAME ghost ship gathers pale mint spectral light at its prow, inclines the bow slightly in one forward surge gesture without changing position, sails tense briefly, a small narrow spectral flash emerges at the bow and subsides, then returns exactly to the resting ship pose. No cannon, no projectiles, no weapons or crew added, no sea or reflection. This is a generic visual impact gesture for the summoned ghost ship, not a new game mechanic.",
+      "job_id": "0af90db9-1bd9-430b-8f82-7ee87a78fadd",
+      "fps": 8,
+      "asset_id": "5ce2289a-5c4c-50ee-bb8a-19765891141e"
+    },
+    {
+      "name": "hit",
+      "frames": 4,
+      "loop": false,
+      "action": "The SAME ghost ship briefly shudders from a spectral impact: hull leans back one to two pixels, sails and ropes twitch, a small pale cyan flicker crosses the hull, then returns exactly to the starting pose. No destruction or new objects, no water, transparent background.",
+      "job_id": "7bf0d21b-bc8c-4f60-9567-e3219fb6746e",
+      "fps": 8,
+      "asset_id": "178c95c0-5f8a-5760-b264-03a435349b2e"
+    },
+    {
+      "name": "death",
+      "frames": 8,
+      "loop": false,
+      "emptyEnd": "ship",
+      "deriveReverse": "spawn",
+      "action": "The SAME ghost ship dematerializes in place: the pale spectral hull, masts, ropes and torn sails dissolve together smoothly into thin mint-cyan wisps, the wisps fade until COMPLETELY EMPTY transparent canvas at the target end. Keep the shape recognizable while fading, no sinking water or sea, no explosions or new objects. No recovery. This is its defeat/dismissal clip; reversed playback is its summoning appearance.",
+      "job_id": "cf01b7ab-7059-4391-a72c-73f6b67908b6",
+      "fps": 8,
+      "asset_id": "9d703711-fc35-5712-92a9-b3bf4ae8f014"
+    }
+  ]
+}

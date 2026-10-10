@@ -1,0 +1,45 @@
+{
+  "character": {
+    "id": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+    "name": "Idle",
+    "prompt": "Original fantasy monster named Nixira, female goblin of a mushroom forest, full body bipedal character in a lively resting pose. Small slender moss-green goblin, oversized triangular ears, sharp mischievous amber eyes, crooked friendly grin. Rust-red broad mushroom-cap hat with a few cream spots, short dark moss hair and twig hairpins. Brown patchwork traveling poncho with leafy green trim, canvas waist bag, a small wicker backpack carrying clearly visible two bioluminescent turquoise mushrooms and glass terrarium. Bare green hands, wrapped ankles and tiny worn hiking shoes. Inventive spirited face, small agile silhouette, botanically textured but uncluttered outfit. Original design combining goblin and plant-folk fantasy with expressive tactical boardgame proportions. No weapon, no attack gesture, no spell or ability defined. Full body unobstructed on transparent background, strong clean pixel clusters.",
+    "size": {
+      "width": 128,
+      "height": 128
+    },
+    "directions": 8,
+    "view": "high top-down"
+  },
+  "spritesheet": {
+    "path": "Nixira_Goblin_dos_Cogume-Idle.png",
+    "cell_size": {
+      "width": 128,
+      "height": 128
+    },
+    "sheet_size": {
+      "width": 1024,
+      "height": 128
+    },
+    "columns": 8,
+    "pivot": "cell-center",
+    "rows": [
+      {
+        "row": 0,
+        "type": "rotations",
+        "frame_count": 8,
+        "directions": [
+          "south",
+          "south-east",
+          "east",
+          "north-east",
+          "north",
+          "north-west",
+          "west",
+          "south-west"
+        ]
+      }
+    ]
+  },
+  "export_version": "1.0",
+  "export_date": "2026-10-10T16:24:25.178290+00:00"
+}

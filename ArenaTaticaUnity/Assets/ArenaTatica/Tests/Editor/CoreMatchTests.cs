@@ -157,6 +157,61 @@ namespace ArenaTatica.Core.Tests
             Round(); Assert.AreSame(me,A); Assert.AreEqual(8,me.pa,"segundo turno");
             Round(); Assert.AreEqual(6,me.pa,"acabou");
         }
+        Fighter Solo(string def) { var f=S.fighters.First(x=>x.def==def); S.active=S.timeline.IndexOf(f.id); f.pa=6; return f; }
+        bool Use(Fighter f,string skill,Cell c) => m.Apply(new Command{kind="skill",cell=c,skill=skill,fighter=f.id,revision=S.revision},f.team,out _,out _);
+        [Test] public void ScytheHitsAdjacentAndTwoAway()
+        {
+            m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"teantha"}, team2=new[]{"ciantia"} });
+            var t=Solo("teantha"); var foe=S.fighters.First(f=>f.team!=t.team);
+            Put(t,5,5); Put(foe,5,6); Assert.IsTrue(Use(t,"foice-verde",foe.cell),"colado");
+            Put(foe,5,7); Assert.IsTrue(Use(t,"foice-verde",foe.cell),"a 2 casas");
+        }
+        // Lutadores não bloqueiam a visão: o tiro sai e, às vezes, acerta quem está no caminho (nunca quem atira).
+        [Test] public void ShotsPassOverFightersAndMayHitWhoIsInTheWay()
+        {
+            int hitWay=0,hitTarget=0;
+            for(uint seed=1;seed<=30;seed++) {
+                m=Match.New(new MatchSetup{ seed=seed, flatMap=true, team1=new[]{"damian","ciantia"}, team2=new[]{"ciantia"} });
+                var d=Solo("damian"); var ally=S.fighters.First(f=>f.team==d.team&&f!=d); var foe=S.fighters.First(f=>f.team!=d.team);
+                d.form="canhao"; Put(d,5,5); Put(ally,5,6); Put(foe,5,8);
+                int allyHp=ally.hp,foeHp=foe.hp,dHp=d.hp;
+                Assert.IsTrue(Use(d,"canhao-de-mao",foe.cell),"aliado no caminho não bloqueia");
+                Assert.AreEqual(dHp,d.hp,"quem atira não se acerta");
+                if(ally.hp<allyHp) hitWay++; if(foe.hp<foeHp) hitTarget++;
+            }
+            Assert.Greater(hitWay,0); Assert.Greater(hitTarget,0);
+        }
+        [Test] public void MirrorReflectsTheLastAttackAndHasCooldown()
+        {
+            m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"ezequiela"}, team2=new[]{"devon"} });
+            var e=Solo("ezequiela"); var foe=S.fighters.First(f=>f.def=="devon");
+            Put(e,5,5); Put(foe,5,8);
+            Assert.IsFalse(Use(e,"espelho-primordial",foe.cell),"inimigo ainda não atacou");
+            foe.lastAttack="golpe-necrotico"; int hp=foe.hp;
+            m.Forced.Enqueue(Face.Trava); m.Forced.Enqueue(Face.Esquiva);
+            Assert.IsTrue(Use(e,"espelho-primordial",foe.cell));
+            Assert.AreEqual(hp-4,foe.hp,"golpe necrótico (4) refletido");
+            e.pa=6; Assert.IsFalse(Use(e,"espelho-primordial",foe.cell),"recarga");
+            Assert.AreEqual(3,S.fighters.First(f=>f.def=="ezequiela").cooldowns[0].uses);
+        }
+        [Test] public void EveryUltimateHasALimit()
+        {
+            var ults=Content.Fighters.Values.SelectMany(d=>d.skills).Where(k=>k.ultimate).ToList();
+            Assert.GreaterOrEqual(ults.Count,4);
+            foreach(var k in ults) Assert.IsTrue(k.perTurn>0||k.perMatch>0||k.cooldown>0,k.id);
+        }
+        // Dano em área acerta aliados na área, mas nunca quem ataca (sem auto-hit).
+        [Test] public void AreaDamageHitsAlliesButNotTheCaster()
+        {
+            m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"talyssa","ciantia"}, team2=new[]{"ciantia"} });
+            var tal=S.fighters.First(f=>f.def=="talyssa"); var ally=S.fighters.First(f=>f.team==tal.team&&f!=tal); var foe=S.fighters.First(f=>f.team!=tal.team);
+            S.active=S.timeline.IndexOf(tal.id); tal.pa=6;
+            Put(tal,5,5); Put(foe,5,6); Put(ally,6,6);
+            int talHp=tal.hp, allyHp=ally.hp, foeHp=foe.hp;
+            m.Forced.Enqueue(Face.Trava); m.Forced.Enqueue(Face.Esquiva);
+            Assert.IsTrue(m.Apply(new Command{kind="skill",cell=foe.cell,skill="corte-em-arco",fighter=tal.id,revision=S.revision},tal.team,out _,out _));
+            Assert.Less(foe.hp,foeHp,"alvo"); Assert.Less(ally.hp,allyHp,"aliado na área"); Assert.AreEqual(talHp,tal.hp,"quem ataca não se acerta");
+        }
         // Até 6 jogadores: todos contra todos (time 0) ou times (mesmo número = mesmo time).
         Match Players(params int[] teams) => Match.New(new MatchSetup{ flatMap=true, galeoes=4, players=teams.Select(t=>new PlayerSetup{team=t}).ToArray() });
 

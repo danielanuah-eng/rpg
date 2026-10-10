@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 5234edf2-2d26-4f73-8045-c3449d5830d7\njob_id: 5234edf2-2d26-4f73-8045-c3449d5830d7\nmode: text\nframes: 1\nsize: 256x192px\ntransparent: True\nedit: Keep this same sailing ghost ship, its geometry, masts, ropes, torn sails, camera and pixel-art details. REMOVE all sea, wake, reflections, stray stars and blue textured backdrop. Put ONLY the isolated ship on a flat SOLID PURE WHITE featureless background so background removal finds it. Change the opaque hull into pale mint-cyan spectral ghost material. No ocean, land or scene. Return the ship cut out with TRUE ALPHA TRANSPARENCY, including gaps between ropes and sails.\nasset_id: 7475d274-1049-5275-a8ab-30ea791def98\nasset_status: pending (saved when generation completes)\ncost: ~10 generations\nstatus: processing (~30-90s)\n\nhint: get_image(job_id=\"5234edf2-2d26-4f73-8045-c3449d5830d7\")"
+    }
+  ],
+  "isError": false
+}

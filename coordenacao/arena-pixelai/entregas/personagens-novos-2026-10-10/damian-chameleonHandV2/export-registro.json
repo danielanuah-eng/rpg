@@ -1,0 +1,96 @@
+{
+  "actor": {
+    "state_name": "Camaleão na mão v2, apoio comum",
+    "character_id": "3899a0a1-263e-4102-86e2-917da9337927",
+    "ready": true,
+    "rotations": {
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/3899a0a1-263e-4102-86e2-917da9337927/rotations/south.png?t=1791647471",
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/3899a0a1-263e-4102-86e2-917da9337927/rotations/east.png?t=1791647471",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/3899a0a1-263e-4102-86e2-917da9337927/rotations/north.png?t=1791647471",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/3899a0a1-263e-4102-86e2-917da9337927/rotations/west.png?t=1791647471",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/3899a0a1-263e-4102-86e2-917da9337927/rotations/south-east.png?t=1791647471",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/3899a0a1-263e-4102-86e2-917da9337927/rotations/north-east.png?t=1791647471",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/3899a0a1-263e-4102-86e2-917da9337927/rotations/north-west.png?t=1791647471",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/3899a0a1-263e-4102-86e2-917da9337927/rotations/south-west.png?t=1791647471"
+    },
+    "folder": "damian-chameleonHandV2",
+    "owner": "damian",
+    "stateKey": "chameleonHandV2"
+  },
+  "clips": [
+    {
+      "plan": "damian-transform-martelo",
+      "name": "transform-martelo",
+      "direction": "south-east",
+      "count": 9,
+      "cell": [
+        192,
+        172
+      ],
+      "group_id": "4680dce9-25a3-4396-b816-4ea2a7ee9ad4",
+      "fps": 8,
+      "loop": false,
+      "reverse": "destransform-martelo"
+    },
+    {
+      "plan": "damian-transform-martelo",
+      "name": "transform-martelo",
+      "direction": "south-west",
+      "count": 9,
+      "cell": [
+        192,
+        172
+      ],
+      "group_id": "4680dce9-25a3-4396-b816-4ea2a7ee9ad4",
+      "fps": 8,
+      "loop": false,
+      "reverse": "destransform-martelo"
+    },
+    {
+      "plan": "damian-transform-pistola",
+      "name": "transform-pistola",
+      "direction": "south-east",
+      "count": 9,
+      "cell": [
+        192,
+        172
+      ],
+      "group_id": "dc12069a-2875-400b-8ed4-69f4cf5a3272",
+      "fps": 8,
+      "loop": false,
+      "reverse": "destransform-pistola"
+    },
+    {
+      "plan": "damian-transform-pistola",
+      "name": "transform-pistola",
+      "direction": "south-west",
+      "count": 9,
+      "cell": [
+        192,
+        172
+      ],
+      "group_id": "dc12069a-2875-400b-8ed4-69f4cf5a3272",
+      "fps": 8,
+      "loop": false,
+      "reverse": "destransform-pistola"
+    },
+    {
+      "plan": "damian-transform-canhao",
+      "name": "transform-canhao",
+      "direction": "south-east",
+      "count": 9,
+      "cell": [
+        192,
+        172
+      ],
+      "group_id": "eeb6cc9e-6093-484a-9c2a-20cc695ff34a",
+      "fps": 8,
+      "loop": false,
+      "reverse": "destransform-canhao"
+    }
+  ],
+  "source_cell": [
+    192,
+    172
+  ]
+}

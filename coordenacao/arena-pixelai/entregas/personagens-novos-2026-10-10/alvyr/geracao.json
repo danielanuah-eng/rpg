@@ -1,0 +1,15 @@
+{
+  "args": {
+    "name": "Alvyr — Cervo Branco",
+    "description": "Full-body original quadrupedal fantasy creature Alvyr, an elegant white spectral STAG with four long slender ungulate legs, split hooves, small deer tail, delicate elongated deer head, large pointed ears and magnificent branching GOLDEN ANTLERS. White and warm ivory fur, small pale gold eyes, subtle gold threadlike highlights around joints and hooves; light ethereal grace, not a horse, not a unicorn, no wings, no saddle. Alert noble calm standing base pose, head raised proudly, antlers completely inside the image with ample margin. Dark gold outlines let white body read on any terrain; controlled localized glow, no large halo. Original interpretation of Arcanoclisma Cervo Branco, expressive tactical fantasy boardgame pixel art, clean detailed clusters, body unobstructed, no action pose, transparent background.",
+    "body_type": "quadruped",
+    "mode": "pro",
+    "n_directions": 8,
+    "size": 128,
+    "view": "high top-down",
+    "style_character_id": "0e585583-ec07-4831-9269-44b1b7fbd0b0",
+    "template": "horse"
+  },
+  "result": "id: d4deca2a-dfe9-4233-b7f5-59a3efcc4d90\nname: Alvyr — Cervo Branco\nmode: pro (25 generations, 8 directions)\nbody: quadruped (horse)\nsize: 128x128px\nview: high top-down\nstyle character: 0e585583-ec07-4831-9269-44b1b7fbd0b0\nstatus: processing (~3-5 min)\n\nhint: get_character(character_id=\"d4deca2a-dfe9-4233-b7f5-59a3efcc4d90\")",
+  "character_id": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90"
+}

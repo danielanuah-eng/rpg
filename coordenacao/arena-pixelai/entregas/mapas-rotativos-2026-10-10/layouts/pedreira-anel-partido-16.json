@@ -1,0 +1,414 @@
+{
+  "dimensao": 16,
+  "alturaPorNivel": 0.45,
+  "alturas": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "props": [
+    {
+      "peca": "arvore",
+      "casa": [
+        3,
+        5
+      ],
+      "rotacaoGraus": 0,
+      "regra": "existente"
+    },
+    {
+      "peca": "arvore",
+      "casa": [
+        12,
+        10
+      ],
+      "rotacaoGraus": 180,
+      "regra": "existente"
+    },
+    {
+      "peca": "arvore",
+      "casa": [
+        5,
+        3
+      ],
+      "rotacaoGraus": 0,
+      "regra": "existente"
+    },
+    {
+      "peca": "arvore",
+      "casa": [
+        10,
+        12
+      ],
+      "rotacaoGraus": 180,
+      "regra": "existente"
+    },
+    {
+      "peca": "arbusto",
+      "casa": [
+        4,
+        10
+      ],
+      "rotacaoGraus": 0,
+      "regra": "existente"
+    },
+    {
+      "peca": "arbusto",
+      "casa": [
+        11,
+        5
+      ],
+      "rotacaoGraus": 180,
+      "regra": "existente"
+    },
+    {
+      "peca": "caixa",
+      "casa": [
+        5,
+        5
+      ],
+      "rotacaoGraus": 0,
+      "regra": "existente"
+    },
+    {
+      "peca": "caixa",
+      "casa": [
+        10,
+        10
+      ],
+      "rotacaoGraus": 180,
+      "regra": "existente"
+    },
+    {
+      "peca": "relicario_solar",
+      "casa": [
+        3,
+        11
+      ],
+      "rotacaoGraus": 0,
+      "regra": "somente_decoracao"
+    },
+    {
+      "peca": "relicario_solar",
+      "casa": [
+        12,
+        4
+      ],
+      "rotacaoGraus": 180,
+      "regra": "somente_decoracao"
+    },
+    {
+      "peca": "barricada_partida",
+      "casa": [
+        4,
+        4
+      ],
+      "rotacaoGraus": 0,
+      "regra": "somente_decoracao"
+    },
+    {
+      "peca": "barricada_partida",
+      "casa": [
+        11,
+        11
+      ],
+      "rotacaoGraus": 180,
+      "regra": "somente_decoracao"
+    }
+  ],
+  "loja": {
+    "centroBlender": [
+      0,
+      0,
+      0.5
+    ],
+    "zonaCentral": "preservar_pedido_anterior_do_autor"
+  },
+  "mapaJogavelValidado": false,
+  "estado": "estudo_visual_para_importacao_claude"
+}

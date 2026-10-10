@@ -17,11 +17,18 @@ namespace ArenaTatica
             return f.cell;
         }
         IEnumerator Idle(float limit=10) { float end=Time.realtimeSinceStartup+limit; while(game.View.Busy&&Time.realtimeSinceStartup<end) yield return null; yield return new WaitForSeconds(.3f); }
+        IEnumerator Confirmed(System.Action submit)
+        {
+            int revision=game.State.revision; submit();
+            float end=Time.realtimeSinceStartup+5; while(game.State.revision==revision&&Time.realtimeSinceStartup<end) yield return null;
+            yield return Idle();
+        }
         IEnumerator MoveAndPass()
         {
             var f=game.Active; var to=Step(f);
-            game.Submit("mover",to); yield return Idle();
-            game.Submit("passar"); yield return Idle();
+            // No cliente o estado volta pela rede: espera a resposta do host antes de esperar a animação.
+            yield return Confirmed(()=>game.Submit("mover",to));
+            yield return Confirmed(()=>game.Submit("passar"));
         }
         IEnumerator Start()
         {
@@ -36,7 +43,7 @@ namespace ArenaTatica
                 yield return MoveAndPass();
                 deadline=Time.realtimeSinceStartup+40;
                 while((game.Active?.team!=1||game.State.round<2)&&Time.realtimeSinceStartup<deadline) yield return null;
-                Finish(game.State.round>=2&&game.State.F(guest.id).cell!=start,"Host: turno próprio, comando do cliente e volta do turno");
+                Finish(game.State.round>=2&&game.State.F(guest.id).cell!=start,$"Host: turno próprio, comando do cliente e volta do turno (rodada {game.State.round}, ativo P{game.Active?.team}, convidado {start.x},{start.z}→{game.State.F(guest.id)?.cell.x},{game.State.F(guest.id)?.cell.z}, status {game.Status})");
             } else if(game.Client) {
                 float deadline=Time.realtimeSinceStartup+25;
                 while((!game.Synced||game.Active?.team!=2)&&Time.realtimeSinceStartup<deadline) yield return null;

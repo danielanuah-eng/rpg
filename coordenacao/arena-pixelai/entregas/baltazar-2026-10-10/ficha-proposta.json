@@ -1,0 +1,30 @@
+{
+  "id": "baltazar",
+  "nome": "Baltazar",
+  "tipo": "draconato paladino",
+  "projeto": "ArenaTaticaUnity",
+  "estado": "proposta_para_claude; arte_em_producao",
+  "pixelLabCharacterId": "e6148923-ecab-4e29-8da1-6d52cd46c535",
+  "identidade": {"armadura": "kevlar prateado", "arma": "martelo de guerra", "funcao": "tanque e suporte", "vida": "boa", "dano": "moderado"},
+  "valoresIniciaisParaTeste": {"vida": 14, "pa": 6, "movimento": 3, "iniciativa": 2, "nivel": 4},
+  "ataque": {"id": "baltazar-martelo", "nome": "Martelo de guerra", "custoPA": 3, "alcanceMin": 1, "alcanceMax": 1, "dano": 2},
+  "aura": {
+    "id": "baltazar-dualidade",
+    "nome": "Dualidade guardiã",
+    "alcanceCasas": 2,
+    "metrica": "distancia de casas usada pelo motor; manter desenho da area coerente com a regra",
+    "custoPorTurno": 1,
+    "recursoProposto": "PA",
+    "manutencao": "escolha do jogador a cada turno de Baltazar; cobrar uma vez; sem PA negativo",
+    "curaAliado": 1,
+    "danoInimigo": 1,
+    "curaPropriaProposta": false,
+    "limitePorAlvo": "uma aplicacao por turno de Baltazar, incluindo ativacao/entrada/permanencia; desligar e religar nao reinicia a contagem",
+    "contato": "resolucao logica dentro da aura; a orbita visual nao determina repeticao de dano ou cura",
+    "desligaQuando": ["manutencao recusada", "recurso insuficiente", "Baltazar nocauteado", "partida encerrada"],
+    "visual": {"anjo": "cura verde-azulada discreta", "demonio": "brasa vermelha discreta", "orbita": "companheiros separados, suaves, defasados em 180 graus", "profundidade": "alternar frente/tras do personagem conforme camera"}
+  },
+  "eventosPropostos": ["baltazar-martelo", "baltazar-aura-ativar", "baltazar-aura-manter", "baltazar-aura-curar", "baltazar-aura-ferir", "baltazar-aura-desligar"],
+  "integracao": "pendente_claude",
+  "numeros": "propostos pelo Codex a partir da escala atual; Claude testa antes de considerar balanceado; expor no editor"
+}

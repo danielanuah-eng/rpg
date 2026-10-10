@@ -1,0 +1,435 @@
+{
+  "cenario": "Montanha rochosa",
+  "estado": "especificacao_visual_para_Claude",
+  "loja": {
+    "posicaoBlender": [
+      0,
+      0,
+      0.5
+    ],
+    "posicaoUnity": [
+      0,
+      0.5,
+      0
+    ],
+    "independenteDoTemaETamanho": true,
+    "footprintMetros": [
+      2,
+      2
+    ],
+    "regrasColisaoZonaCentral": "Claude deve conciliar centro da loja, zona central e casas acessíveis; esta entrega visual não altera MapGen."
+  },
+  "pontosPrincipais": {
+    "lago": {
+      "peca": "enfeite_lago",
+      "posicaoBlender": [
+        2.5,
+        0.5,
+        0.05
+      ]
+    },
+    "pedras": [
+      [
+        -3.5,
+        -1.5,
+        1.4000000000000001
+      ],
+      [
+        1.5,
+        -3.5,
+        0.9500000000000001
+      ],
+      [
+        -1.5,
+        0.5,
+        0.9500000000000001
+      ],
+      [
+        -1.5,
+        2.5,
+        0.5
+      ]
+    ],
+    "outros": [
+      {
+        "peca": "enfeite_pedra_baixa",
+        "casaExemplo": [
+          2,
+          4
+        ],
+        "posicaoBlender": [
+          -3.5,
+          -1.5,
+          1.4000000000000001
+        ]
+      },
+      {
+        "peca": "enfeite_pedra_baixa",
+        "casaExemplo": [
+          7,
+          2
+        ],
+        "posicaoBlender": [
+          1.5,
+          -3.5,
+          0.9500000000000001
+        ]
+      },
+      {
+        "peca": "enfeite_pedra_baixa",
+        "casaExemplo": [
+          4,
+          6
+        ],
+        "posicaoBlender": [
+          -1.5,
+          0.5,
+          0.9500000000000001
+        ]
+      },
+      {
+        "peca": "enfeite_pedra_baixa",
+        "casaExemplo": [
+          4,
+          8
+        ],
+        "posicaoBlender": [
+          -1.5,
+          2.5,
+          0.5
+        ]
+      },
+      {
+        "peca": "enfeite_cristal",
+        "casaExemplo": [
+          7,
+          8
+        ],
+        "posicaoBlender": [
+          1.5,
+          2.5,
+          0.05
+        ]
+      },
+      {
+        "peca": "enfeite_fogueira",
+        "casaExemplo": [
+          3,
+          7
+        ],
+        "posicaoBlender": [
+          -2.5,
+          1.5,
+          0.5
+        ]
+      },
+      {
+        "peca": "pedra",
+        "casaExemplo": [
+          2,
+          5
+        ],
+        "posicaoBlender": [
+          -3.5,
+          -0.5,
+          0.9500000000000001
+        ]
+      },
+      {
+        "peca": "pedra",
+        "casaExemplo": [
+          3,
+          4
+        ],
+        "posicaoBlender": [
+          -2.5,
+          -1.5,
+          1.4000000000000001
+        ]
+      },
+      {
+        "peca": "pedra",
+        "casaExemplo": [
+          4,
+          4
+        ],
+        "posicaoBlender": [
+          -1.5,
+          -1.5,
+          1.4000000000000001
+        ]
+      },
+      {
+        "peca": "pedra",
+        "casaExemplo": [
+          6,
+          8
+        ],
+        "posicaoBlender": [
+          0.5,
+          2.5,
+          0.05
+        ]
+      },
+      {
+        "peca": "pedra",
+        "casaExemplo": [
+          8,
+          2
+        ],
+        "posicaoBlender": [
+          2.5,
+          -3.5,
+          1.4000000000000001
+        ]
+      },
+      {
+        "peca": "pedra",
+        "casaExemplo": [
+          9,
+          8
+        ],
+        "posicaoBlender": [
+          3.5,
+          2.5,
+          0.05
+        ]
+      }
+    ],
+    "arvores": [
+      [
+        -2.5,
+        -2.5,
+        1.4000000000000001
+      ],
+      [
+        2.5,
+        -2.5,
+        1.4000000000000001
+      ],
+      [
+        -3.5,
+        1.5,
+        0.5
+      ],
+      [
+        2.5,
+        2.5,
+        0.05
+      ],
+      [
+        -1.5,
+        3.5,
+        0.5
+      ]
+    ]
+  },
+  "moedasChao": {
+    "modelo": "moeda_chao",
+    "deitadas": true,
+    "estado": "exemplo visual; instanciar onde o jogo indicar moedas",
+    "exemplo12x12": [
+      {
+        "casaExemplo": [
+          4,
+          5
+        ],
+        "posicaoBlender": [
+          -1.5,
+          -0.5,
+          0.9510000000000001
+        ]
+      },
+      {
+        "casaExemplo": [
+          5,
+          4
+        ],
+        "posicaoBlender": [
+          -0.5,
+          -1.5,
+          0.051
+        ]
+      },
+      {
+        "casaExemplo": [
+          6,
+          7
+        ],
+        "posicaoBlender": [
+          0.5,
+          1.5,
+          0.051
+        ]
+      },
+      {
+        "casaExemplo": [
+          8,
+          9
+        ],
+        "posicaoBlender": [
+          2.5,
+          3.5,
+          0.051
+        ]
+      },
+      {
+        "casaExemplo": [
+          7,
+          3
+        ],
+        "posicaoBlender": [
+          1.5,
+          -2.5,
+          0.9510000000000001
+        ]
+      },
+      {
+        "casaExemplo": [
+          2,
+          6
+        ],
+        "posicaoBlender": [
+          -3.5,
+          0.5,
+          0.9510000000000001
+        ]
+      },
+      {
+        "casaExemplo": [
+          6,
+          9
+        ],
+        "posicaoBlender": [
+          0.5,
+          3.5,
+          0.051
+        ]
+      },
+      {
+        "casaExemplo": [
+          9,
+          4
+        ],
+        "posicaoBlender": [
+          3.5,
+          -1.5,
+          0.9510000000000001
+        ]
+      }
+    ]
+  },
+  "decoracao": {
+    "distribuicao": "Loja, lago, pedras e árvores distribuídos pelo INTERIOR; entorno sem grandes props na extremidade.",
+    "somenteCasasLivres": true,
+    "evitarLojaEPontosDeInteracao": true,
+    "margemSegura": "Grande prop: no mínimo 0,5 casa entre bounds da peça e contorno da ilha; conferir suporte por baixo da base.",
+    "naoAplicarColisaoAEnfeitesBaixos": true,
+    "exemplo12x12": [
+      {
+        "peca": "enfeite_seixos",
+        "casaExemplo": [
+          1,
+          3
+        ],
+        "posicaoBlender": [
+          -4.5,
+          -2.4,
+          0.9500000000000001
+        ],
+        "colisao": false
+      },
+      {
+        "peca": "enfeite_raiz_chao",
+        "casaExemplo": [
+          3,
+          8
+        ],
+        "posicaoBlender": [
+          -2.4090702573174316,
+          2.458385316345286,
+          0.5
+        ],
+        "colisao": false
+      },
+      {
+        "peca": "enfeite_capim",
+        "casaExemplo": [
+          9,
+          3
+        ],
+        "posicaoBlender": [
+          3.4720584501801075,
+          -2.403982971334963,
+          1.4000000000000001
+        ],
+        "colisao": false
+      },
+      {
+        "peca": "enfeite_capim",
+        "casaExemplo": [
+          2,
+          9
+        ],
+        "posicaoBlender": [
+          -3.5999990206550705,
+          3.500442569798805,
+          0.5
+        ],
+        "colisao": false
+      },
+      {
+        "peca": "enfeite_seixos",
+        "casaExemplo": [
+          4,
+          2
+        ],
+        "posicaoBlender": [
+          -1.4579832963173358,
+          -3.4092553218549804,
+          1.4000000000000001
+        ],
+        "colisao": false
+      },
+      {
+        "peca": "enfeite_cogumelos",
+        "casaExemplo": [
+          6,
+          3
+        ],
+        "posicaoBlender": [
+          0.599060735569487,
+          -2.4863262781792166,
+          0.5
+        ],
+        "colisao": false
+      },
+      {
+        "peca": "enfeite_seixos",
+        "casaExemplo": [
+          5,
+          3
+        ],
+        "posicaoBlender": [
+          -0.5750987246771676,
+          -2.433968329175592,
+          0.5
+        ],
+        "colisao": false
+      },
+      {
+        "peca": "enfeite_cogumelos",
+        "casaExemplo": [
+          7,
+          9
+        ],
+        "posicaoBlender": [
+          1.5149877209662952,
+          3.598870461818667,
+          0.05
+        ],
+        "colisao": false
+      }
+    ]
+  }
+}

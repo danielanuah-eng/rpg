@@ -13,6 +13,7 @@ namespace ArenaTatica
     {
         public int protocol=3;
         public string kind, text, token;
+        public string[] fighters; // hello: time escolhido no aparelho do jogador
         public int seat, seats;
         public MatchState state;
         public Command command;
@@ -34,6 +35,8 @@ namespace ArenaTatica
         // Sala: assentos (2..6), formato e se ainda espera o início. Seat = assento deste aparelho na rede.
         public int Seats { get; private set; }=2;
         public string Format { get; private set; }="todos";
+        // Cenário escolhido no menu; -1 = aleatório.
+        public int Theme { get; private set; }=-1;
         public bool Lobby { get; private set; }
         public int Seat { get; private set; }
         public int Filled => 1+tokenSeat.Count;
@@ -54,6 +57,29 @@ namespace ArenaTatica
         readonly Dictionary<string,int> tokenSeat=new Dictionary<string,int>();
         readonly Dictionary<int,int> seatPeer=new Dictionary<int,int>(), peerSeat=new Dictionary<int,int>();
         string room, tokenOverride;
+        // Times escolhidos: Picks por assento na partida local; tokenPick pelo token na sala de rede.
+        public string[][] Picks;
+        readonly Dictionary<string,string[]> tokenPick=new Dictionary<string,string[]>();
+        // Regra do Krosmaster: soma de Nível até 12, sem repetir lutador; no máximo 4 (casas de início).
+        public const int TeamLevel=12, TeamSize=4;
+        public static string[] ValidTeam(IEnumerable<string> ids)
+        {
+            var team=new List<string>(); int level=0;
+            foreach(string id in ids??Array.Empty<string>()) {
+                if(team.Count>=TeamSize||team.Contains(id)||!Content.Roster.Contains(id)) continue;
+                int l=Content.Fighters[id].level; if(level+l>TeamLevel) continue;
+                team.Add(id); level+=l;
+            }
+            return team.Count>0?team.ToArray():new[]{"ciantia"};
+        }
+        // Time deste aparelho (usado na rede e como sugestão no seletor), salvo entre sessões.
+        public static string[] MyTeam
+        {
+            get => ValidTeam(PlayerPrefs.GetString("arena-time","ciantia").Split(','));
+            set { PlayerPrefs.SetString("arena-time",string.Join(",",ValidTeam(value))); PlayerPrefs.Save(); }
+        }
+        // Seletor: times de cada assento local; a partida recomeça com eles.
+        public void StartLocal(string[][] picks) { Picks=picks.Select(ValidTeam).ToArray(); MyTeam=Picks[0]; NewLocal(); }
         float lastPing,pingSent; long pingId; bool pingWaiting;
         int expired;
 
@@ -69,7 +95,7 @@ namespace ArenaTatica
             Network.Connected+=peer=> {
                 if(Network.IsHost) return; // o assento só sai depois do hello
                 Recovery=false; throttle.Clear(); Synced=false; Status="Conectado. Entrando na sala…";
-                Send(0,new WireMessage{kind="hello",token=Token()});
+                Send(0,new WireMessage{kind="hello",token=Token(),fighters=MyTeam});
             };
             Network.Disconnected+=peer=> {
                 if(Network.IsHost) { Left(peer); return; }
@@ -86,11 +112,12 @@ namespace ArenaTatica
         }
         public static bool FormatFits(string format,int players) => format=="todos"||FormatTeams(format,players)!=null;
         public static string FormatName(string format) => format=="todos"?"Todos contra todos":format;
-        void NewMatch(int players,bool flat=false)
+        void NewMatch(int players,bool flat=false,Func<int,string[]> pick=null)
         {
             var teams=FormatTeams(Format,players);
-            var setup=new MatchSetup{ seed=(uint)Environment.TickCount|1, flatMap=flat,
-                players=Enumerable.Range(0,players).Select(i=>new PlayerSetup{team=teams?[i]??0}).ToArray() };
+            pick??=seat=>Picks!=null&&seat<=Picks.Length?Picks[seat-1]:MyTeam;
+            var setup=new MatchSetup{ seed=(uint)Environment.TickCount|1, flatMap=flat, theme=Theme,
+                players=Enumerable.Range(0,players).Select(i=>new PlayerSetup{team=teams?[i]??0,fighters=ValidTeam(pick(i+1))}).ToArray() };
             Match=Match.New(setup);
             State=Match.S; preview=null; Mode="";
         }
@@ -104,7 +131,7 @@ namespace ArenaTatica
         }
         void RecordProbe(bool lost) { probes.Enqueue(lost); if(lost) expired++; if(probes.Count>60&&probes.Dequeue()) expired--; }
         void ResetMetrics() { Rtt=0; Filtered=0; expired=0; probes.Clear(); pingWaiting=false; lastPing=Time.unscaledTime; }
-        void ResetRoom() { tokenSeat.Clear(); seatPeer.Clear(); peerSeat.Clear(); Lobby=false; Seat=0; }
+        void ResetRoom() { tokenPick.Clear(); tokenSeat.Clear(); seatPeer.Clear(); peerSeat.Clear(); Lobby=false; Seat=0; }
         public void Notify(string text) { Status=text; }
         public void NewLocal()
         {
@@ -125,6 +152,13 @@ namespace ArenaTatica
             var fits=Formats.Where(f=>FormatFits(f,Seats)).ToList();
             Format=fits[(fits.IndexOf(Format)+1)%fits.Count];
             if(Network.IsHost) { BroadcastLobby(); LobbyStatus(); } else NewLocal();
+        }
+        public static string ThemeName(int theme) => theme<0?"Cenário aleatório":MapGen.Themes[theme];
+        public void CycleTheme()
+        {
+            if(Client||(Network.IsHost&&!Lobby)) { Status="O cenário só muda antes de a partida começar."; return; }
+            Theme=Theme+1>=MapGen.Themes.Length?-1:Theme+1;
+            if(Network.IsHost) LobbyStatus(); else NewLocal();
         }
         public void ResumeLocal()
         {
@@ -163,9 +197,10 @@ namespace ArenaTatica
         {
             foreach(var kv in seatPeer) Send(kv.Value,new WireMessage{kind="lobby",seat=kv.Key,seats=Seats,text=$"{Filled}/{Seats} jogadores · {FormatName(Format)}"});
         }
-        void Hello(int peer,string token)
+        void Hello(int peer,string token,string[] fighters)
         {
             if(string.IsNullOrEmpty(token)||token.Length>64||peerSeat.ContainsKey(peer)) return;
+            if(Lobby) tokenPick[token]=ValidTeam(fighters);
             if(!tokenSeat.TryGetValue(token,out int seat))
             {
                 if(Lobby) for(int s=2;s<=Seats&&seat==0;s++) if(!tokenSeat.ContainsValue(s)) seat=s;
@@ -200,7 +235,7 @@ namespace ArenaTatica
                 int seat=i+2; tokenSeat[order[i].Key]=seat;
                 if(oldPeer.TryGetValue(order[i].Value,out int peer)) { seatPeer[seat]=peer; peerSeat[peer]=seat; }
             }
-            Lobby=false; NewMatch(n); throttle.Clear(); View.ResetView(State);
+            Lobby=false; NewMatch(n,pick:seat=>seat==1?MyTeam:tokenPick.TryGetValue(tokenSeat.FirstOrDefault(kv=>kv.Value==seat).Key??"",out var t)?t:null); throttle.Clear(); View.ResetView(State);
             foreach(var kv in seatPeer) {
                 Send(kv.Value,new WireMessage{kind="welcome",seat=kv.Key,seats=n});
                 Send(kv.Value,new WireMessage{kind="snapshot",seat=kv.Key,state=Match.ViewFor(State,kv.Key)});
@@ -255,7 +290,7 @@ namespace ArenaTatica
             if(m.kind=="ping") { if(Allow("remote:ping:"+peer)) Send(peer,new WireMessage{kind="pong",ping=m.ping}); return; }
             if(m.kind=="pong") { if(pingWaiting&&m.ping==pingId) { Rtt=Mathf.RoundToInt((Time.unscaledTime-pingSent)*1000); RecordProbe(false); pingWaiting=false; } return; }
             if(Network.IsHost) {
-                if(m.kind=="hello") { Hello(peer,m.token); return; }
+                if(m.kind=="hello") { Hello(peer,m.token,m.fighters); return; }
                 if(!Lobby&&peerSeat.TryGetValue(peer,out int seat)&&m.kind=="command"&&m.command!=null&&new[]{"mover","skill","comprar","passar"}.Contains(m.command.kind)&&Allow("remote:"+seat+":"+m.command.kind)) Execute(m.command,seat);
                 return;
             }
@@ -279,6 +314,7 @@ namespace ArenaTatica
             for(int i=0;i<args.Length-1;i++) {
                 if(args[i]=="--arena-seats"&&int.TryParse(args[i+1],out int seats)) Seats=Mathf.Clamp(seats,2,MatchState.MaxPlayers);
                 if(args[i]=="--arena-format"&&Formats.Contains(args[i+1])) Format=args[i+1];
+                if(args[i]=="--arena-theme"&&int.TryParse(args[i+1],out int th)) Theme=Mathf.Clamp(th,-1,MapGen.Themes.Length-1);
                 if(args[i]=="--arena-token") tokenOverride=args[i+1];
             }
             for(int i=0;i<args.Length;i++) {

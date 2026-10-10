@@ -1,0 +1,23 @@
+{
+  "actor_id": "6b27257d-819c-4d78-829c-0ca36f05d586",
+  "owner": "ossyro",
+  "state_key": null,
+  "rotations": [
+    "east",
+    "north-east",
+    "north-west",
+    "north",
+    "south-east",
+    "south-west",
+    "south",
+    "west"
+  ],
+  "frame_size": [
+    128,
+    128
+  ],
+  "pivot": "cell-center",
+  "no_rescaling": true,
+  "clips": [],
+  "integration": "pendente_claude"
+}

@@ -1,0 +1,29 @@
+status: completed
+id: 8c800a83-a911-4b28-a8f6-2c9dd2958887
+name: Raizor — Urso-Raiz
+state_name: Idle
+directions: 8 (south, east, north, west, south-east, north-east, north-west, south-west)
+size: 128x128px
+view: high top-down
+style: , , 
+group: 8ee3224f-2a1d-4c1b-bb56-b1a86f224bf0 (1 state)
+
+rotations:
+  south: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/8c800a83-a911-4b28-a8f6-2c9dd2958887/rotations/south.png?t=1791646818
+  east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/8c800a83-a911-4b28-a8f6-2c9dd2958887/rotations/east.png?t=1791646818
+  north: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/8c800a83-a911-4b28-a8f6-2c9dd2958887/rotations/north.png?t=1791646818
+  west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/8c800a83-a911-4b28-a8f6-2c9dd2958887/rotations/west.png?t=1791646818
+  south-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/8c800a83-a911-4b28-a8f6-2c9dd2958887/rotations/south-east.png?t=1791646818
+  north-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/8c800a83-a911-4b28-a8f6-2c9dd2958887/rotations/north-east.png?t=1791646818
+  north-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/8c800a83-a911-4b28-a8f6-2c9dd2958887/rotations/north-west.png?t=1791646818
+  south-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/8c800a83-a911-4b28-a8f6-2c9dd2958887/rotations/south-west.png?t=1791646818
+
+animations: none
+
+download: https://api.pixellab.ai/mcp/characters/8c800a83-a911-4b28-a8f6-2c9dd2958887/download
+spritesheet: https://api.pixellab.ai/mcp/characters/8c800a83-a911-4b28-a8f6-2c9dd2958887/spritesheet (this state only — one uniform-grid sheet PNG + layout JSON, zipped; cells pivot-centred)
+
+available_animations: angry, attack-left, attack-right, drinking, eating, going-to-sleep, idle-long, idle-resting, idle-sitting, jump, jump-attack, running-4-frames, running-6-frames, running-8-frames, sitting-down, stand-on-hind-legs, standing-up, waking-getting-up, walk-4-frames, walk-6-frames, walk-8-frames
+
+actions: animate_character(character_id="8c800a83-a911-4b28-a8f6-2c9dd2958887", ...) | create_character_state(character_id="8c800a83-a911-4b28-a8f6-2c9dd2958887", ...) | delete_character(character_id="8c800a83-a911-4b28-a8f6-2c9dd2958887")
+hint: animate_character(character_id="8c800a83-a911-4b28-a8f6-2c9dd2958887", template_animation_id="angry")

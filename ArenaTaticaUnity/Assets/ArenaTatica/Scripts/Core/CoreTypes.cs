@@ -24,7 +24,10 @@ namespace ArenaTatica.Core
     // A face de crítico do Krosmaster virou Cataclisma (decisão 11); o coringa Crítico/Esquiva virou Esquiva/Trava.
     public enum Face { Cataclisma, Escudo, Trava, Esquiva, CoringaEsquivaTrava, Coringa }
     public enum VictoryMode { Galeoes, Eliminacao, Tesouro, Dominio }
-    public enum SkillKind { Dano, Invocacao, Cura, Armadilha }
+    // Teleporte: vai para casa livre sem caminho. Salto: alvo inimigo, cai na casa livre vizinha a ele mais perto de quem salta.
+    // Forma: muda a forma do próprio lutador (arma, transformação). Esconder: fica invisível junto a relevo mais alto, árvore ou caixa.
+    // Espelho: ganha 1 uso da última skill que o alvo usou.
+    public enum SkillKind { Dano, Invocacao, Cura, Armadilha, Teleporte, Salto, Forma, Esconder, Espelho }
     public enum ShopKind { Item, Magia, Pet, Armadilha, Buff }
 
     [Serializable] public class Tile { public int height, coins, trap, trapDamage; public Terrain terrain; public bool zone; }
@@ -35,13 +38,31 @@ namespace ArenaTatica.Core
         public SkillKind kind;
         public int pa, minRange=1, maxRange=1, damage, perTurn;
         public bool line, sight=true, modifiable;
+        // perMatch: usos na partida (ultimates). form: só nessa forma (vazio = sempre). toForm/turns: a skill de Forma leva a essa forma
+        // (turns 0 = até trocar). endsForm: usar a skill encerra a forma. area: atinge inimigos até essa distância do alvo.
+        // drain: cura quem acerta. precise: ignora o Escudo do defensor. wild: erra com Esquiva no dado de ataque. pmLoss: alvo perde PM no próximo turno.
+        // anim: clipe da apresentação (padrão "attack").
+        public int perMatch, turns, area, drain, pmLoss;
+        // cooldown: depois de usar, volta a cada N turnos do lutador. ultimate: precisa ter limite (perTurn, perMatch ou cooldown).
+        public int cooldown;
+        public bool ultimate;
+        public string form, toForm, anim;
+        public bool endsForm, precise, wild;
     }
+    // Forma do lutador (arma do Damian, Berserk do Tchu tcha): bônus enquanto dura e a pasta de sprites dela.
+    [Serializable] public class FormDef { public string id, name, sprites; public int pa, pm, armor; public bool noGuard; }
     [Serializable] public class FighterDef
     {
-        public string id, name;
+        public string id, name, sprites;
         public int hp, pa=6, pm=3, initiative, level;
         public bool flying;
         public SkillDef[] skills;
+        // Passivas: allyBonus = dano a mais dos aliados até auraRange casas; revive = volta com esses PV no 1º nocaute;
+        // guard = aliados até 2 casas levam 1 a menos e ele leva esse 1; steal = % de roubar 1 moeda ao acertar; illusion = começa com uma cópia ilusória.
+        public int allyBonus, auraRange, revive, steal;
+        public bool guard, illusion, picker=true;
+        public string startForm;
+        public FormDef[] forms;
     }
     // Loja: Item e Buff valem na hora; Magia, Pet e Armadilha dão skills de uso limitado (cargas).
     [Serializable] public class ShopDef
@@ -60,8 +81,15 @@ namespace ArenaTatica.Core
         public string def;
         public Cell cell;
         public bool bought;
+        // form/formTurns: forma atual. disguise: como os inimigos veem a ilusão. lastSkill: última skill usada (Espelho primordial).
+        public string form, disguise, lastSkill, lastAttack;
+        public int formTurns;
+        public bool hidden, revived;
+        public List<string> usedMatch=new List<string>();
         public List<string> used=new List<string>();
         public List<Charge> charges=new List<Charge>();
+        // Recargas: skill e turnos que faltam (uses).
+        public List<Charge> cooldowns=new List<Charge>();
         public List<Buff> buffs=new List<Buff>();
         public bool Alive => hp>0;
     }
@@ -73,6 +101,8 @@ namespace ArenaTatica.Core
         public VictoryMode mode=VictoryMode.Galeoes;
         public int galeoes=12, target;
         public bool flatMap;
+        // Cenário (MapGen.Themes); -1 = sorteado pela seed, igual em todos os aparelhos.
+        public int theme=-1;
         // Vazio = duelo com team1 e team2.
         public PlayerSetup[] players;
         public string[] team1={"ciantia"}, team2={"ciantia"};
@@ -82,6 +112,8 @@ namespace ArenaTatica.Core
         public const int MaxPlayers=6;
         public int width=Board.Size, height=Board.Size, round=1, active, revision=1, winner, nextId=1, target, players=2;
         public uint rng;
+        // Só visual: paleta e enfeites do cenário (MapGen.Themes).
+        public int theme;
         public bool over;
         public VictoryMode mode;
         public Tile[] tiles;

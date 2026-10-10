@@ -1,0 +1,53 @@
+{
+  "character": {
+    "id": "4113eef1-555d-4e1a-9435-06c24d2e7ca5",
+    "name": "Voo",
+    "prompt": "Full-body original quadrupedal fantasy creature Gryvro, a glass gryphon with anatomically recognizable eagle head and curved eagle beak, powerful feline lion body on FOUR legs, front eagle TALONS and rear feline paws, long crystalline tail, and TWO articulated feathered eagle wings. Entire creature is living translucent faceted glass, ice-blue clear surfaces with silvery mercury edges, milky white internal core and cyan reflections; no fur, no metal armor, no rider. Wings folded clearly along its back in calm standing grounded idle pose, ready to open for flight, razor-sharp clear front talons visible. Agile light fragile beautiful creature, expressive intelligent deep turquoise eyes. New original design interpreting Arcanoclisma Grifo-de-Vidro, readable charming tactical boardgame pixel art, small compact torso with enough canvas margin for tail and wings. Consistent top-down camera. No attack in base pose, transparent background, whole creature uncropped.",
+    "size": {
+      "width": 160,
+      "height": 160
+    },
+    "directions": 8,
+    "view": "high top-down"
+  },
+  "spritesheet": {
+    "path": "Gryvro_Grifo_de_Vidro-Voo.png",
+    "cell_size": {
+      "width": 220,
+      "height": 208
+    },
+    "sheet_size": {
+      "width": 1980,
+      "height": 416
+    },
+    "columns": 9,
+    "pivot": "cell-center",
+    "rows": [
+      {
+        "row": 0,
+        "type": "rotations",
+        "frame_count": 8,
+        "directions": [
+          "south",
+          "south-east",
+          "east",
+          "north-east",
+          "north",
+          "north-west",
+          "west",
+          "south-west"
+        ]
+      },
+      {
+        "row": 1,
+        "type": "animation",
+        "frame_count": 9,
+        "animation": "flight",
+        "animation_group_id": "5c50e22d-bbcd-414e-b636-c4419f5980c8",
+        "direction": "south-east"
+      }
+    ]
+  },
+  "export_version": "1.0",
+  "export_date": "2026-10-10T16:24:36.503735+00:00"
+}

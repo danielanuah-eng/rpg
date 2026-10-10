@@ -1,0 +1,1411 @@
+{
+  "status": "entregue",
+  "ready_for_claude": true,
+  "author_visual_approval": "pendente",
+  "integration_final": "pendente_claude",
+  "scope": "Images and technical asset preparation only; no game code, Assets, Tools or upload changed by Codex.",
+  "files": [
+    {
+      "source": "correcoes-sincronia/damianHitNW/hit_north-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Damian/hit_north-west.png",
+      "state": "primeira_importacao_confirmada_claude",
+      "size": [
+        1176,
+        168
+      ],
+      "sha256": "a2cb62c7d3877e9fefac5543fd7a2cf918a48e96ab2e72d736f01ab821a6c3d0",
+      "frames": 7
+    },
+    {
+      "source": "correcoes-sincronia/ciantiaHitNW/hit_north-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Ciantia/hit_north-west.png",
+      "state": "primeira_importacao_confirmada_claude",
+      "size": [
+        1176,
+        168
+      ],
+      "sha256": "6fbaf8b9bb7c74f8ec02ad5b4b0c969e899293f174f354fba1f0a4bb996beeba",
+      "frames": 7
+    },
+    {
+      "source": "correcoes-sincronia/ezeHitNW/hit_north-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Ezequiela/hit_north-west.png",
+      "state": "primeira_importacao_confirmada_claude",
+      "size": [
+        1176,
+        168
+      ],
+      "sha256": "6138cad491d95924ecf0727f67b11787e760be61814a15d939bd4f683b92ad15",
+      "frames": 7
+    },
+    {
+      "source": "correcoes-sincronia/devonIdleNW/idle_north-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Devon/idle_north-west.png",
+      "state": "primeira_importacao_confirmada_claude",
+      "size": [
+        1548,
+        172
+      ],
+      "sha256": "cc2714c5eadeec648d637270d9188d88a6d0e5df9a71f1fb0c2494dee4601524",
+      "frames": 9
+    },
+    {
+      "source": "correcoes-sincronia/jackUltSW/ultshot_south-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/ArqueiroJack/ultshot_south-west.png",
+      "state": "primeira_importacao_confirmada_claude",
+      "size": [
+        1548,
+        172
+      ],
+      "sha256": "d55ffc8bd6b81503e1462c91eed55cc1ae3a8cf764be4920c2edc2ed437fa023",
+      "frames": 9
+    },
+    {
+      "source": "correcoes-sincronia/teanthaAttackNW/attack_north-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Teantha/attack_north-west.png",
+      "state": "primeira_importacao_confirmada_claude",
+      "size": [
+        1548,
+        172
+      ],
+      "sha256": "585e5b378bbf65c8945ceb34ad03a1af9cde6bd0645dec7911d6fb55c44190fb",
+      "frames": 9
+    },
+    {
+      "source": "correcoes-sincronia/devonDeathSE/death_south-east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Devon/death_south-east.png",
+      "state": "primeira_importacao_confirmada_claude",
+      "size": [
+        1512,
+        168
+      ],
+      "sha256": "baaea5a18cb35622bf859c30875e60b941e2e242108fba287c7d1d02cbdb4ea9",
+      "frames": 9
+    },
+    {
+      "source": "correcoes-sincronia/damianPistolSE/pistol_south-east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Damian/pistol_south-east.png",
+      "state": "reimportar_final_168",
+      "size": [
+        1512,
+        168
+      ],
+      "sha256": "8efd99119f2d73dc0df2c664043bbeeca8513fc278e1cea75b2747a457f5adb2",
+      "frames": 9
+    },
+    {
+      "source": "talyssa-hit-north-west/hit_north-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Talyssa/hit_north-west.png",
+      "state": "integrado_confirmado_claude",
+      "size": [
+        1176,
+        168
+      ],
+      "sha256": "ba9c5e26290b71a01003a65eed2660169b3161ca29038aab4b72da31a8e3a739",
+      "frames": 7
+    },
+    {
+      "source": "loja-v2/cenario/frame-01.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Vendedor/frame-01.png",
+      "state": "substituir_fonte_inicial_recortada_por_cena_completa",
+      "size": [
+        384,
+        216
+      ],
+      "sha256": "93a14bee5bcb767901d7dafbca7e778ab3a5544c1b6bc23f702cd2ac9d1d3626",
+      "fps": 5
+    },
+    {
+      "source": "loja-v2/cenario/frame-02.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Vendedor/frame-02.png",
+      "state": "substituir_fonte_inicial_recortada_por_cena_completa",
+      "size": [
+        384,
+        216
+      ],
+      "sha256": "7bf8154e30644df8fd606cc61751964baf9092f0aad3998137b46531605cf8e4",
+      "fps": 5
+    },
+    {
+      "source": "loja-v2/cenario/frame-03.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Vendedor/frame-03.png",
+      "state": "substituir_fonte_inicial_recortada_por_cena_completa",
+      "size": [
+        384,
+        216
+      ],
+      "sha256": "2942524eeeb5efaedcb16a987aaf15096c78df6baf48ebd159ee59cc89006bc1",
+      "fps": 5
+    },
+    {
+      "source": "loja-v2/cenario/frame-04.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Vendedor/frame-04.png",
+      "state": "substituir_fonte_inicial_recortada_por_cena_completa",
+      "size": [
+        384,
+        216
+      ],
+      "sha256": "f84895df34d35fde39656d0f28be22c422e9561fb71c7f96206dba4bc253107d",
+      "fps": 5
+    },
+    {
+      "source": "loja-v2/cenario/frame-05.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Vendedor/frame-05.png",
+      "state": "substituir_fonte_inicial_recortada_por_cena_completa",
+      "size": [
+        384,
+        216
+      ],
+      "sha256": "bb4a8a3eff91b415c527482e23e6f7047cb4ac196f1734f47d17ddabd0f28c92",
+      "fps": 5
+    },
+    {
+      "source": "loja-v2/cenario/frame-06.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Vendedor/frame-06.png",
+      "state": "substituir_fonte_inicial_recortada_por_cena_completa",
+      "size": [
+        384,
+        216
+      ],
+      "sha256": "b6d025b87e59a042ee66238336c0f88089eb8e1af48476614a845ff41b257332",
+      "fps": 5
+    },
+    {
+      "source": "loja-v2/cenario/frame-07.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Vendedor/frame-07.png",
+      "state": "substituir_fonte_inicial_recortada_por_cena_completa",
+      "size": [
+        384,
+        216
+      ],
+      "sha256": "198fcf8b1a45cbd8f87aec9189ebeaa6f6146be14d0b6d5f5574a8740be50c2e",
+      "fps": 5
+    },
+    {
+      "source": "loja-v2/cenario/frame-08.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Vendedor/frame-08.png",
+      "state": "substituir_fonte_inicial_recortada_por_cena_completa",
+      "size": [
+        384,
+        216
+      ],
+      "sha256": "e20fc8076eec64abcef02e445a35061be043f76d5139e12d32c57928053ebf25",
+      "fps": 5
+    },
+    {
+      "source": "loja-v2/cenario/frame-09.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Vendedor/frame-09.png",
+      "state": "substituir_fonte_inicial_recortada_por_cena_completa",
+      "size": [
+        384,
+        216
+      ],
+      "sha256": "93a14bee5bcb767901d7dafbca7e778ab3a5544c1b6bc23f702cd2ac9d1d3626",
+      "fps": 5
+    },
+    {
+      "source": "loja-v2/itens/amuleto-vital.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/amuleto-vital.png",
+      "state": "integrado_confirmado_claude",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "fbfea1dd75206c3fb99b8b613f69c20a2b46866b7fc7dcb6fb4994dfb2f9a135"
+    },
+    {
+      "source": "loja-v2/itens/armadilha-de-espinhos.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/armadilha-de-espinhos.png",
+      "state": "integrado_confirmado_claude",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "bba83cfae13a4aa1ac134b7f7bba7e6f124c756f676d0c587a236917eb105188"
+    },
+    {
+      "source": "loja-v2/itens/botas-aladas.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/botas-aladas.png",
+      "state": "integrado_confirmado_claude",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "f0f5a8338bf8422ad0fbec1b01bcd9391a6dc922f2c1d530e32ed5c07f7304e8"
+    },
+    {
+      "source": "loja-v2/itens/escudo-de-bronze.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/escudo-de-bronze.png",
+      "state": "integrado_confirmado_claude",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "3053703d04f64919b621ba24e3e4873010291691bcfe6669fe685832c1eb2e87"
+    },
+    {
+      "source": "loja-v2/itens/furia.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/furia.png",
+      "state": "integrado_confirmado_claude",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "13a6da5330020d5da37161b6a9a869543871495ed783ec0aaf5b368d54adb24b"
+    },
+    {
+      "source": "loja-v2/itens/lobo-de-cinzas.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/lobo-de-cinzas.png",
+      "state": "integrado_confirmado_claude",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "2344c686bcb1b023207ecd378a87ff6b12aaa3e1a87abe30f2c5cf7dcb2f4753"
+    },
+    {
+      "source": "loja-v2/itens/luneta.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/luneta.png",
+      "state": "integrado_confirmado_claude",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "2eef2749bc5360ed4c4bd1503a655bfff27ef4d007931323d903cc66b80eef88"
+    },
+    {
+      "source": "loja-v2/itens/passo-leve.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/passo-leve.png",
+      "state": "integrado_confirmado_claude",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "9e754f7f9af2ae38350c34a6a44547638cc9304e93a99917d0c01788bf01b137"
+    },
+    {
+      "source": "loja-v2/itens/pocao-de-cura.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/pocao-de-cura.png",
+      "state": "integrado_confirmado_claude",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "ad5f7d201ddfe64f70b246932a2a2ff1e750c9125e984b5bfb4c72aaeeb23eca"
+    },
+    {
+      "source": "loja-v2/itens/raio-arcano.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/raio-arcano.png",
+      "state": "integrado_confirmado_claude",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "06d99749234a30452bc25816d73e9296a2c6785c25d60f628c563b86306cd769"
+    },
+    {
+      "source": "eventos-cenarios/terrenos/grama.png",
+      "destination": "Assets/ArenaTatica/Resources/Textures/tile_grama.png",
+      "state": "primeiro_lote_integrado_confirmado_claude",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "94c5d5b3b46572b3bb1366de5ccc6a25e781edbd6c83c795f59ff31c35c6f449"
+    },
+    {
+      "source": "eventos-cenarios/terrenos/neve.png",
+      "destination": "Assets/ArenaTatica/Resources/Textures/tile_neve.png",
+      "state": "substituir_lookup_tema",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "c9f9ed1c46153b8d7e657d1aa3dacf6792c4306c83abcbc811a2180d8238b2f2"
+    },
+    {
+      "source": "eventos-cenarios/terrenos/pedra.png",
+      "destination": "Assets/ArenaTatica/Resources/Textures/tile_pedreira.png",
+      "state": "primeiro_lote_integrado_confirmado_claude",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "cee54a7de14a570c0481b89cc336a9a8ae4beb896c669a67b8100b29cdf37850"
+    },
+    {
+      "source": "eventos-cenarios/terrenos/ruinas.png",
+      "destination": "Assets/ArenaTatica/Resources/Textures/tile_ruinas.png",
+      "state": "primeiro_lote_integrado_confirmado_claude",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "28072656252600cd100d457927a5ae379d721d6bbec852693926f1f66ea98fc2"
+    },
+    {
+      "source": "eventos-cenarios/terrenos/vulcao.png",
+      "destination": "Assets/ArenaTatica/Resources/Textures/tile_vulcao.png",
+      "state": "substituir_lookup_tema",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "e007fc355614be363be7030da140845666ef9ea4d5c9b3f4561946618d9143c2"
+    },
+    {
+      "source": "eventos-cenarios/projeteis/baforada.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Projeteis/baforada.png",
+      "state": "primeiro_lote_integrado_confirmado_claude",
+      "size": [
+        128,
+        32
+      ],
+      "sha256": "4682ef99c117cc010f8adf30227d2f9eb5e38e811c713083487e32bf6f48e813"
+    },
+    {
+      "source": "eventos-cenarios/projeteis/bala-canhao.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Projeteis/canhao-de-mao.png",
+      "state": "primeiro_lote_integrado_confirmado_claude",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "43bbbc63a9b37e2243c31368c2ee921cc974c3a67bee648b8611142311288140"
+    },
+    {
+      "source": "eventos-cenarios/projeteis/bala-pistola.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Projeteis/tiro-de-pistola.png",
+      "state": "primeiro_lote_integrado_confirmado_claude",
+      "size": [
+        64,
+        32
+      ],
+      "sha256": "b23c157b4e2239d6e1989b4ba3ef521efc1850e002a50f05ba54833ad3d80d6e"
+    },
+    {
+      "source": "eventos-cenarios/projeteis/dragao-dourado.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Projeteis/dragao-dourado.png",
+      "state": "primeiro_lote_integrado_confirmado_claude",
+      "size": [
+        64,
+        32
+      ],
+      "sha256": "250f3070b679d25ef7fe856cd92fa184d1e43e470ace8800bae2a403bcde9685"
+    },
+    {
+      "source": "eventos-cenarios/projeteis/flecha-abissal.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Projeteis/flecha-abissal.png",
+      "state": "primeiro_lote_integrado_confirmado_claude",
+      "size": [
+        64,
+        32
+      ],
+      "sha256": "53ed82248ac2d8a72aeb6e06245512e10ba8fea1b08dff58b1fd4307568f8a3c"
+    },
+    {
+      "source": "eventos-cenarios/projeteis/flecha.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Projeteis/tiro-carregado.png",
+      "state": "primeiro_lote_integrado_confirmado_claude",
+      "size": [
+        64,
+        32
+      ],
+      "sha256": "0d5395cd2f07c36066edac5bdaa5183a9decd74011ae8e4cbb20c33cffbd5342"
+    },
+    {
+      "source": "eventos-cenarios/projeteis/foice-verde.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Projeteis/foice-verde.png",
+      "state": "primeiro_lote_integrado_confirmado_claude",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "74ea490f18bd466de57b9b21add9ce94c53cc7cc46159c3bb48b59d589088438"
+    },
+    {
+      "source": "eventos-cenarios/projeteis/ilusao-confusa.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Projeteis/ilusao-confusa.png",
+      "state": "primeiro_lote_integrado_confirmado_claude",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "f47a80185eb6edc81e1f3149aa9dddfce9c5618e3c0249391f91322ba92d1614"
+    },
+    {
+      "source": "eventos-cenarios/projeteis/raio-arcano.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Projeteis/raio-arcano.png",
+      "state": "primeiro_lote_integrado_confirmado_claude",
+      "size": [
+        128,
+        32
+      ],
+      "sha256": "d93ba06dcc25a11c5308ba3f0ee0af0bc2db2b210459b3a57dd028f125b07e00"
+    },
+    {
+      "source": "eventos-cenarios/efeitos/baforada.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Efeitos/baforada.png",
+      "state": "nova_animacao_pronta",
+      "size": [
+        640,
+        128
+      ],
+      "sha256": "9eb759925e49cc1a47bdc45133925fd6c169b9feb66c34dffdec795383619f4f",
+      "frames": 5,
+      "cell": 128,
+      "suggested_fps": 10
+    },
+    {
+      "source": "eventos-cenarios/efeitos/raio-arcano.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Efeitos/raio-arcano.png",
+      "state": "nova_animacao_pronta",
+      "size": [
+        640,
+        128
+      ],
+      "sha256": "15c88383d073becb13db29e0990cd3640524ff84b482bd55ee8b3f28776f9742",
+      "frames": 5,
+      "cell": 128,
+      "suggested_fps": 10
+    },
+    {
+      "source": "eventos-cenarios/efeitos/cura.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Efeitos/cura.png",
+      "state": "nova_animacao_pronta",
+      "size": [
+        320,
+        64
+      ],
+      "sha256": "d9c6e9ebc16f44a81b8175c55726f2595a145aea0de8da448a9e237abda51acd",
+      "frames": 5,
+      "cell": 64,
+      "suggested_fps": 10
+    },
+    {
+      "source": "eventos-cenarios/efeitos/impacto-area.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Efeitos/impacto-area.png",
+      "state": "nova_animacao_pronta",
+      "size": [
+        320,
+        64
+      ],
+      "sha256": "08f61958a76aeec578da25124451de25ca498f884651f58713c0bbb3d57c260e",
+      "frames": 5,
+      "cell": 64,
+      "suggested_fps": 10
+    },
+    {
+      "source": "eventos-cenarios/efeitos/invocacao.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Efeitos/invocacao.png",
+      "state": "nova_animacao_pronta",
+      "size": [
+        320,
+        64
+      ],
+      "sha256": "37bc903370a935f141d382dba4b390e9d45e567a9695ad8213b4bf304396841d",
+      "frames": 5,
+      "cell": 64,
+      "suggested_fps": 10
+    },
+    {
+      "source": "eventos-cenarios/efeitos/moeda.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Efeitos/moeda.png",
+      "state": "primeira_tira_integrada_confirmada_claude",
+      "size": [
+        288,
+        32
+      ],
+      "sha256": "237f517f37f99172dab484d31c41ff027627e4b41f2f97144c1b535266206474",
+      "frames": 9,
+      "cell": 32,
+      "suggested_fps": 6
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/east.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "cd8dc22a0918328ddc264ae3f22068d50618666ce42d55a83b0068e0c1296061",
+      "pivot": [
+        0.5,
+        0.0234375
+      ],
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/north-east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/north-east.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "1c990ca706b9823fd33324b2e347b785235ab647c7df3a7e1df022a2565ed6c8",
+      "pivot": [
+        0.5,
+        0.03125
+      ],
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/north-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/north-west.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "135a14fd476a7684368e46b9b43fbb21e116406c5c39dc254d329348bf0220ff",
+      "pivot": [
+        0.5,
+        0.015625
+      ],
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/north.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/north.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "883da5ed690ccc1655673e8514ce6023ae6b4e22315a7d435a74569b30175f07",
+      "pivot": [
+        0.5,
+        0.0390625
+      ],
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/south-east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/south-east.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "6c3d3ad95b4a74009a96666fb72fd794cc2f470199c9a569a670bebbefd1df3d",
+      "pivot": [
+        0.5,
+        0.03125
+      ],
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/south-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/south-west.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "3284fcd63ccc0278bba7905fa5141cc19781f1512a9bc29c63fd423557146a9c",
+      "pivot": [
+        0.5,
+        0.03125
+      ],
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/south.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/south.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "21e2dc0ad4dba53e6c18efa781ce0584d0d649cfce05cc1bdc6721a4a0a254b1",
+      "pivot": [
+        0.5,
+        0.0078125
+      ],
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/west.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "ea5f3bcbdeb7345c750fd8d27c6657d2bf80075eec759d8c85ab5d2b7db5f5dd",
+      "pivot": [
+        0.5,
+        0.0078125
+      ],
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/idle_north.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/idle_north.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1584,
+        176
+      ],
+      "sha256": "d6cdcbdfbb37ac7d897c76a591ecb30a39702f1211f3368a3acf6aaa003c0806",
+      "frames": 9,
+      "cell": 176,
+      "pivot": [
+        0.5,
+        0.16477272727272727
+      ],
+      "fps": 5,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/walk_north.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/walk_north.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1584,
+        176
+      ],
+      "sha256": "c75e4e921f01f7aaacb0bca4dcb3d16dc40a39bb2df8a86ae354be163d14c3b7",
+      "frames": 9,
+      "cell": 176,
+      "pivot": [
+        0.5,
+        0.16477272727272727
+      ],
+      "fps": 10,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/attack_north.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/attack_north.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1584,
+        176
+      ],
+      "sha256": "5396aef02095c402d0a7ba2032926c7ee7c474507e9c08465d51c8a2f20fdce7",
+      "frames": 9,
+      "cell": 176,
+      "pivot": [
+        0.5,
+        0.16477272727272727
+      ],
+      "fps": 7,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/hit_north.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/hit_north.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1232,
+        176
+      ],
+      "sha256": "05c4702db8e08ffb17c43c0804ddb9d733ddbbbdb94f1a6def6d2ba0de85a134",
+      "frames": 7,
+      "cell": 176,
+      "pivot": [
+        0.5,
+        0.16477272727272727
+      ],
+      "fps": 8,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/death_north.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/death_north.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1584,
+        176
+      ],
+      "sha256": "3e3f24633c19453eece25a6d35b71dfc4145cedb0766b9c33b6a42f32cac855d",
+      "frames": 9,
+      "cell": 176,
+      "pivot": [
+        0.5,
+        0.16477272727272727
+      ],
+      "fps": 6,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/idle_north-east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/idle_north-east.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "ef393cd2c490a620861858a58b82062860de9a64e98b70f5ff5907a6d0f78e80",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "fps": 5,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/walk_north-east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/walk_north-east.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "dd3e846429adbc7c1508ddaa63bf02b2349fb2adc5376dee4fffd90ac432e141",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "fps": 10,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/attack_north-east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/attack_north-east.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "16460904139112c8c66a5981944d9f1dcaaadcd16238b904b6984fac72ca8fa5",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "fps": 7,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/hit_north-east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/hit_north-east.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1260,
+        180
+      ],
+      "sha256": "d96d1e25e722b7799f040aa1f6eff365fac7c28d42b1cda0a90cfb35fac520d2",
+      "frames": 7,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "fps": 8,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/death_north-east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/death_north-east.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "04b1d01a214d5c2f81c7435a4e0d0cda703cf166b88c04d5235db7b7ce9df940",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "fps": 6,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/idle_east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/idle_east.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1584,
+        176
+      ],
+      "sha256": "18d6ba6b2e16c5c867e02f4e5f099dceace345f651403c4cc41c30b448186833",
+      "frames": 9,
+      "cell": 176,
+      "pivot": [
+        0.5,
+        0.1534090909090909
+      ],
+      "fps": 5,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/walk_east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/walk_east.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1584,
+        176
+      ],
+      "sha256": "dfea9ed852c6c2ac3369ffd6cbf01c6516f9c9f0699929e9fd10febe27cfb0c4",
+      "frames": 9,
+      "cell": 176,
+      "pivot": [
+        0.5,
+        0.1534090909090909
+      ],
+      "fps": 10,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/attack_east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/attack_east.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1584,
+        176
+      ],
+      "sha256": "b39a8fd178a92d2eb26270a4a1579918de76a387ff3cab8ed24fd3227f1e9bb1",
+      "frames": 9,
+      "cell": 176,
+      "pivot": [
+        0.5,
+        0.1534090909090909
+      ],
+      "fps": 7,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/hit_east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/hit_east.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1232,
+        176
+      ],
+      "sha256": "4ea67798a7bb159ea1e6963f97a1bad0138a5941d2fbb1c5d3db3f310023d655",
+      "frames": 7,
+      "cell": 176,
+      "pivot": [
+        0.5,
+        0.1534090909090909
+      ],
+      "fps": 8,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/death_east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/death_east.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1584,
+        176
+      ],
+      "sha256": "294808b57fc6e34a2d2b67e2c82f18facaf1f8f9e8b3ed0f702cf8a3722135f7",
+      "frames": 9,
+      "cell": 176,
+      "pivot": [
+        0.5,
+        0.1534090909090909
+      ],
+      "fps": 6,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/idle_south-east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/idle_south-east.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1512,
+        168
+      ],
+      "sha256": "98f7cda4b88f1f2b56f6b4106e70fd1466b2aecf975cab06367a0e24b4875374",
+      "frames": 9,
+      "cell": 168,
+      "pivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "fps": 5,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/walk_south-east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/walk_south-east.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1512,
+        168
+      ],
+      "sha256": "2649af191e6276bdecadd0f9c10b21ca2d0c01120c0ba830939ebc74be1fda47",
+      "frames": 9,
+      "cell": 168,
+      "pivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "fps": 10,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/attack_south-east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/attack_south-east.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1512,
+        168
+      ],
+      "sha256": "93107058bb5fc05782275f39541dedc34f66d2a128c16c99200c93dd11a78974",
+      "frames": 9,
+      "cell": 168,
+      "pivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "fps": 7,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/hit_south-east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/hit_south-east.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1176,
+        168
+      ],
+      "sha256": "4c6fe85ac37fca8638c693e9e8773df82ecc359a9d3314b23e73a74a94a62caa",
+      "frames": 7,
+      "cell": 168,
+      "pivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "fps": 8,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/death_south-east.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/death_south-east.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1512,
+        168
+      ],
+      "sha256": "e50856e803816b7d3de35cd231219d10225a6dd303ee29307442673719c03303",
+      "frames": 9,
+      "cell": 168,
+      "pivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "fps": 6,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/idle_south.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/idle_south.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "73c1a757e7b868a5ac0152a0a83c136377cd8912695250406b46956403755b4d",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "fps": 5,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/walk_south.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/walk_south.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "6b821e23cc77b6ffb2ddf43f3bcfc77e4b9004c0d9444ba9f1994a49440cb9ff",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "fps": 10,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/attack_south.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/attack_south.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "d72487e705a14ef4db9e0aa6b2988c2876d0e3b0d4617edc67f0ea827b2469de",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "fps": 7,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/hit_south.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/hit_south.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1260,
+        180
+      ],
+      "sha256": "a7c7cf7006e984b5468635e7ec5b7e6b5929edeb15f19b9447483adb6e67254c",
+      "frames": 7,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "fps": 8,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/death_south.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/death_south.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "afe9d4b2f9010145f8af9b7040a7a44ae58d4efb1b34326502d9e14a961e9b3f",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "fps": 6,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/idle_south-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/idle_south-west.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "031d1a6ef3258394575c63d65c3273c2c8f768f27a34fc3fca179935be014904",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "fps": 5,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/walk_south-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/walk_south-west.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "4a2f3d2697e8b4c25d8601a4dc8cc59b84b7cfbe36fd25ad896371996fe89c47",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "fps": 10,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/attack_south-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/attack_south-west.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "04c2b4a37b79a8ecc23f9be8dfc34be264691035298709150d8f1ed7e4fadfd0",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "fps": 7,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/hit_south-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/hit_south-west.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1260,
+        180
+      ],
+      "sha256": "c6db0a3db70956dedbbcddee80da393b8910a430dd56adc989ae03f3c004dfff",
+      "frames": 7,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "fps": 8,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/death_south-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/death_south-west.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "53446d57891ec301c7e89f3b92f12b4d63e84c72fb9ba443c77f09bedfecd8d6",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.16666666666666666
+      ],
+      "fps": 6,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/idle_west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/idle_west.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "bf1e6fdd91bc4d65e721de1929a8ef6a8f1695cce7d990c03feab302a05e6fa5",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "fps": 5,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/walk_west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/walk_west.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "dee44ec45a0aa712dad19c50a1d4ac895c9e0cb9cdcb323921ccb4c1adfadfb7",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "fps": 10,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/attack_west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/attack_west.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "83624b80fe61dacd9b4e38645c78376eb85a8db2db9852e958c9096dd9ef572e",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "fps": 7,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/hit_west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/hit_west.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1260,
+        180
+      ],
+      "sha256": "0a4afd5061ed849bbb7f209d36548de109df9caf6856b398b61bbea056187fc9",
+      "frames": 7,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "fps": 8,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/death_west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/death_west.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "fa380b1645bc17affac034d308b86590859e3f290d4dcdd37e92c249bb57b8bc",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "fps": 6,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/idle_north-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/idle_north-west.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "48d2a94fcace151186882a945f92820ad04ed4a4fe247268a15e7b42276fadac",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.15555555555555556
+      ],
+      "fps": 5,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/walk_north-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/walk_north-west.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "8f125e2afdd860099a9175a552c038b6a0bc697760f924fad78c2220be255e21",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.15555555555555556
+      ],
+      "fps": 10,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/attack_north-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/attack_north-west.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "ece87eb1264f827fb9b273c01d4a189834bcfa4d9775642f4e8f274084c99e7d",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.15555555555555556
+      ],
+      "fps": 7,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/hit_north-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/hit_north-west.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1260,
+        180
+      ],
+      "sha256": "e7ea9b9da51fb40fd5596b2f6d8cfac0ff2852f5f579073f4b8cdf6c9e18921e",
+      "frames": 7,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.15555555555555556
+      ],
+      "fps": 8,
+      "ppu": 128
+    },
+    {
+      "source": "tchu-tcha-berserk-possuido/sprites/death_north-west.png",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/TchuTchaBerserk/death_north-west.png",
+      "state": "novo_estado_pronto",
+      "size": [
+        1620,
+        180
+      ],
+      "sha256": "3d41cc3243cbb4433c2ed5cab7485fa1359378b3debca569359c1fe677c345ed",
+      "frames": 9,
+      "cell": 180,
+      "pivot": [
+        0.5,
+        0.15555555555555556
+      ],
+      "fps": 6,
+      "ppu": 128
+    }
+  ],
+  "optional_not_in_import_plan": [
+    "correcoes-sincronia/berserkIdleSW/idle_south-west.png (old form repair superseded by new state)",
+    "loja-v2/loja.png",
+    "loja-v2/vendedor.png",
+    "loja-v2/vendedor-estabilizado/*.png",
+    "eventos-cenarios/terrenos/cristal.png",
+    "all previews, source frames, backup strips, ZIPs and review groups"
+  ],
+  "tasks": {
+    "codex_delivered": [
+      "003",
+      "004",
+      "007",
+      "008"
+    ],
+    "claude_initial_confirmed": [
+      "005",
+      "006"
+    ],
+    "claude_final_pending": [
+      "009",
+      "010",
+      "import final 168 pistol",
+      "import full animated shop scene",
+      "import new possessed Berserk",
+      "bind new effect clips and snow/volcano textures"
+    ]
+  },
+  "validation": {
+    "sprite_snapshot_characters": 12,
+    "sprite_snapshot_clips": 284,
+    "reference_pivots_registered": 284,
+    "imported_origins_different": 127,
+    "new_berserk_clips": 40,
+    "new_berserk_frames": 344,
+    "new_berserk_views": 8,
+    "new_berserk_return_clips_exact": 32,
+    "shop_scene_frames": 9,
+    "shop_product_icons": 10,
+    "ranged_skills_linked": 9,
+    "game_events_linked": 26,
+    "terrain_themes": 5,
+    "asset_checks_passed": true,
+    "unity_tests_by_codex": false,
+    "claude_previous_tests": "24/24 EditMode; ARENA_PREPARE_OK per prior response before final assets"
+  }
+}

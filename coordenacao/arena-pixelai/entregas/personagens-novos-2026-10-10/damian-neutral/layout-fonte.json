@@ -1,0 +1,61 @@
+{
+  "character": {
+    "id": "7beda37d-fc07-48df-a1cc-9215091c171e",
+    "name": "Camaleão no ombro, sem arma",
+    "prompt": "cowboy gunslinger, messy red hair, brown cowboy hat, brown short-sleeved shirt with leather suspenders, lean muscular forearms, cowboy boots, revolver in hand, small green chameleon on his shoulder",
+    "size": {
+      "width": 128,
+      "height": 128
+    },
+    "directions": 8,
+    "view": "high top-down"
+  },
+  "spritesheet": {
+    "path": "Damian-Camaleao_no_ombro_sem_ar.png",
+    "cell_size": {
+      "width": 152,
+      "height": 168
+    },
+    "sheet_size": {
+      "width": 1368,
+      "height": 504
+    },
+    "columns": 9,
+    "pivot": "cell-center",
+    "rows": [
+      {
+        "row": 0,
+        "type": "rotations",
+        "frame_count": 8,
+        "directions": [
+          "south",
+          "south-east",
+          "east",
+          "north-east",
+          "north",
+          "north-west",
+          "west",
+          "south-west"
+        ]
+      },
+      {
+        "row": 1,
+        "type": "animation",
+        "frame_count": 9,
+        "animation": "camaleao-mao",
+        "animation_group_id": "5c71bfc4-8c05-4246-9ac3-d5fe4008ca2f",
+        "direction": "south-east"
+      },
+      {
+        "row": 2,
+        "type": "animation",
+        "frame_count": 9,
+        "animation": "camaleao-mao",
+        "animation_group_id": "5c71bfc4-8c05-4246-9ac3-d5fe4008ca2f",
+        "direction": "south-west"
+      }
+    ]
+  },
+  "export_version": "1.0",
+  "export_date": "2026-10-10T16:24:32.474875+00:00"
+}

@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "character: 590cc7bc-3673-477c-aa23-f5655dd2d97a\nanimation: v3 custom (Subtle idle breathing in place, confident open toothy smile, slight shoulder and relaxed fist motion. Tiny pale cyan ghostly energy gently flickers tightly around knuckles, leather jacket and velvet trim remain stable, feet anchored; same stance and all clothing. A smooth slow seamless loop returning to original pose, no attack.)\ndirections: south-east, south-west (2 jobs)\ngroup: e0606797-2c10-485a-ba3f-9f1eeb12efe4\nframes: 9 (1 reference + 8 animated)\ncost: 8 generations (4/dir x 2)\neta: ~30-60s/direction\n\nhint: get_character(character_id=\"590cc7bc-3673-477c-aa23-f5655dd2d97a\")\nadd more directions to this group: animate_character(character_id=\"590cc7bc-3673-477c-aa23-f5655dd2d97a\", action_description=\"Subtle idle breathing in place, confident open toothy smile, slight shoulder and relaxed fist motion. Tiny pale cyan ghostly energy gently flickers tightly around knuckles, leather jacket and velvet trim remain stable, feet anchored; same stance and all clothing. A smooth slow seamless loop returning to original pose, no attack.\", animation_group_id=\"e0606797-2c10-485a-ba3f-9f1eeb12efe4\", directions=[...])"
+    }
+  ],
+  "isError": false
+}

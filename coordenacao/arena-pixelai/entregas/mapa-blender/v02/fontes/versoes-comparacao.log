@@ -1,0 +1,15 @@
+C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\coordenacao\arena-pixelai\entregas\mapa-blender\v02\fontes\comparar_versoes.py:19: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes=True
+C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\coordenacao\arena-pixelai\entregas\mapa-blender\v02\fontes\comparar_versoes.py:36: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  ink.use_nodes=True
+C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\coordenacao\arena-pixelai\entregas\mapa-blender\v02\fontes\comparar_versoes.py:47: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world.use_nodes=True
+00:03.750  image.write      | ERROR OpenImageIO write failed: Could not open file "C:\Users\Anuah\.thumbnails\large\blender_53420_6c50ef1c8ecc0b138bd0d390849bb5d0.png.png"
+00:09.796  render           | Saved: 'C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\coordenacao\arena-pixelai\entregas\mapa-blender\v02\previews\bosque-tres-versoes.png'
+Info: Packed 3 file(s)
+Info: Saved as "bosque-tres-versoes.blend"
+COMPARACAO_VERSOES_OK
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit
+Error: Not freed memory blocks: 1, total unfreed memory 0.000023 MB

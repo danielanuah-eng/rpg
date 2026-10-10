@@ -1,0 +1,14 @@
+{
+  "selecao": {
+    "bosque_grama_a": "fontes/pixellab-originais/bosque/tile_0.png",
+    "bosque_grama_b": "fontes/pixellab-originais/bosque/tile_1.png",
+    "bosque_zona": "fontes/pixellab-originais/bosque/tile_5.png",
+    "bosque_terra": "fontes/pixellab-originais/bosque/tile_6.png",
+    "bosque_casca": "fontes/pixellab-originais/bosque/tile_8.png",
+    "bosque_folhagem": "fontes/pixellab-originais/bosque/tile_10.png",
+    "bosque_madeira": "fontes/pixellab-originais/bosque/tile_12.png",
+    "bosque_pedra": "fontes/pixellab-originais/bosque/tile_14.png"
+  },
+  "id": "969ac24a-abe9-4723-8531-baabde2c70e3",
+  "origem": "PixelLab"
+}

@@ -1,0 +1,23 @@
+{
+  "actor_id": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+  "owner": "nixira",
+  "state_key": null,
+  "rotations": [
+    "east",
+    "north-east",
+    "north-west",
+    "north",
+    "south-east",
+    "south-west",
+    "south",
+    "west"
+  ],
+  "frame_size": [
+    128,
+    128
+  ],
+  "pivot": "cell-center",
+  "no_rescaling": true,
+  "clips": [],
+  "integration": "pendente_claude"
+}

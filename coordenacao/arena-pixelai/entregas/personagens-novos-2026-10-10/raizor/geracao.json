@@ -1,0 +1,15 @@
+{
+  "args": {
+    "name": "Raizor — Urso-Raiz",
+    "description": "Full-body original quadrupedal fantasy creature Raizor, a huge powerful BEAR made of living tree roots and bark with four heavy legs and long pale wooden claw tips. Bear head with broad dark-brown wood muzzle, expressive amber eyes, thick green leafy mane and moss shoulders, interwoven ancient dark bark and thick roots forming stout muscular torso, a few clearly contained golden-lime sap highlights inside bark fissures. Brown branch ears, small leafy tail, fern tufts, no antlers and no wings. Weighty grounded calm standing bear on all four paws, large heavy readable silhouette. New original interpretation of Arcanoclisma Urso-Raiz, tactile dark wood and moss-green palette with amber accent, expressive tactical fantasy boardgame pixel art. Entire body and paws uncropped, no attack action in base, transparent background.",
+    "body_type": "quadruped",
+    "mode": "pro",
+    "n_directions": 8,
+    "size": 128,
+    "view": "high top-down",
+    "style_character_id": "0e585583-ec07-4831-9269-44b1b7fbd0b0",
+    "template": "bear"
+  },
+  "result": "id: 8c800a83-a911-4b28-a8f6-2c9dd2958887\nname: Raizor — Urso-Raiz\nmode: pro (25 generations, 8 directions)\nbody: quadruped (bear)\nsize: 128x128px\nview: high top-down\nstyle character: 0e585583-ec07-4831-9269-44b1b7fbd0b0\nstatus: processing (~3-5 min)\n\nhint: get_character(character_id=\"8c800a83-a911-4b28-a8f6-2c9dd2958887\")",
+  "character_id": "8c800a83-a911-4b28-a8f6-2c9dd2958887"
+}

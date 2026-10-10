@@ -1,0 +1,15 @@
+{
+  "origem": "PixelLab / Map",
+  "id": "8929cc25-c07d-4868-b148-ebe60b9c377b",
+  "description": "1). snowy cold pale blue-white ground with tiny granular pixels, no cast shadows. 2). very similar packed snowy ground with sparse muted blue flecks. 3). pale frozen stone mosaic with restrained icy blue circular rune. 4). blue-grey frozen cliff and icy stratified rock. 5). dark desaturated spruce brown bark. 6). dense blue-green spruce needles with restrained snow flecks. 7). grey-brown wooden planks with frost flecks. 8). blue-grey ice rock with fissures.",
+  "selecao": {
+    "neve_grama_a": "fontes/pixellab-originais/neve/tile_0.png",
+    "neve_grama_b": "fontes/pixellab-originais/neve/tile_1.png",
+    "neve_zona": "fontes/pixellab-originais/neve/tile_5.png",
+    "neve_terra": "fontes/pixellab-originais/neve/tile_6.png",
+    "neve_casca": "fontes/pixellab-originais/neve/tile_8.png",
+    "neve_folhagem": "fontes/pixellab-originais/neve/tile_10.png",
+    "neve_madeira": "fontes/pixellab-originais/neve/tile_12.png",
+    "neve_pedra": "fontes/pixellab-originais/neve/tile_14.png"
+  }
+}

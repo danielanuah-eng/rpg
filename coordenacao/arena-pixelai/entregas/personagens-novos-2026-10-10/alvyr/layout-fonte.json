@@ -1,0 +1,45 @@
+{
+  "character": {
+    "id": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+    "name": "Idle",
+    "prompt": "Full-body original quadrupedal fantasy creature Alvyr, an elegant white spectral STAG with four long slender ungulate legs, split hooves, small deer tail, delicate elongated deer head, large pointed ears and magnificent branching GOLDEN ANTLERS. White and warm ivory fur, small pale gold eyes, subtle gold threadlike highlights around joints and hooves; light ethereal grace, not a horse, not a unicorn, no wings, no saddle. Alert noble calm standing base pose, head raised proudly, antlers completely inside the image with ample margin. Dark gold outlines let white body read on any terrain; controlled localized glow, no large halo. Original interpretation of Arcanoclisma Cervo Branco, expressive tactical fantasy boardgame pixel art, clean detailed clusters, body unobstructed, no action pose, transparent background.",
+    "size": {
+      "width": 128,
+      "height": 128
+    },
+    "directions": 8,
+    "view": "high top-down"
+  },
+  "spritesheet": {
+    "path": "Alvyr_Cervo_Branco-Idle.png",
+    "cell_size": {
+      "width": 128,
+      "height": 128
+    },
+    "sheet_size": {
+      "width": 1024,
+      "height": 128
+    },
+    "columns": 8,
+    "pivot": "cell-center",
+    "rows": [
+      {
+        "row": 0,
+        "type": "rotations",
+        "frame_count": 8,
+        "directions": [
+          "south",
+          "south-east",
+          "east",
+          "north-east",
+          "north",
+          "north-west",
+          "west",
+          "south-west"
+        ]
+      }
+    ]
+  },
+  "export_version": "1.0",
+  "export_date": "2026-10-10T16:24:29.003750+00:00"
+}

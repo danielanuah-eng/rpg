@@ -1,0 +1,564 @@
+{
+  "status": "pronto_para_integrar",
+  "animations": [
+    {
+      "id": "baforada",
+      "job_id": "0efb8559-e8ed-43bc-a86c-ead0e39a5b14",
+      "file": "eventos-cenarios\\efeitos\\baforada.png",
+      "size": [
+        640,
+        128
+      ],
+      "sha256": "9eb759925e49cc1a47bdc45133925fd6c169b9feb66c34dffdec795383619f4f",
+      "alpha_zero": 77913,
+      "alpha_partial": 0,
+      "alpha_opaque": 4007,
+      "frames": 5,
+      "frame_size": [
+        128,
+        128
+      ],
+      "original_frame_size": [
+        128,
+        32
+      ],
+      "transparent_padding_only": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "suggested_fps": 10,
+      "loop": true,
+      "native_frame_files": [
+        "eventos-cenarios\\baforada\\frame-01.png",
+        "eventos-cenarios\\baforada\\frame-02.png",
+        "eventos-cenarios\\baforada\\frame-03.png",
+        "eventos-cenarios\\baforada\\frame-04.png",
+        "eventos-cenarios\\baforada\\frame-05.png"
+      ],
+      "duration_seconds": 0.5,
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Efeitos/baforada.png"
+    },
+    {
+      "id": "raio-arcano",
+      "job_id": "4b253912-9df2-40cc-a500-3a1b11a47891",
+      "file": "eventos-cenarios\\efeitos\\raio-arcano.png",
+      "size": [
+        640,
+        128
+      ],
+      "sha256": "15c88383d073becb13db29e0990cd3640524ff84b482bd55ee8b3f28776f9742",
+      "alpha_zero": 78623,
+      "alpha_partial": 0,
+      "alpha_opaque": 3297,
+      "frames": 5,
+      "frame_size": [
+        128,
+        128
+      ],
+      "original_frame_size": [
+        128,
+        32
+      ],
+      "transparent_padding_only": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "suggested_fps": 10,
+      "loop": true,
+      "native_frame_files": [
+        "eventos-cenarios\\raio-arcano\\frame-01.png",
+        "eventos-cenarios\\raio-arcano\\frame-02.png",
+        "eventos-cenarios\\raio-arcano\\frame-03.png",
+        "eventos-cenarios\\raio-arcano\\frame-04.png",
+        "eventos-cenarios\\raio-arcano\\frame-05.png"
+      ],
+      "duration_seconds": 0.5,
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Efeitos/raio-arcano.png"
+    },
+    {
+      "id": "cura",
+      "job_id": "312ddcee-5b87-494b-b29c-67e154054a77",
+      "file": "eventos-cenarios\\efeitos\\cura.png",
+      "size": [
+        320,
+        64
+      ],
+      "sha256": "d9c6e9ebc16f44a81b8175c55726f2595a145aea0de8da448a9e237abda51acd",
+      "alpha_zero": 16374,
+      "alpha_partial": 0,
+      "alpha_opaque": 4106,
+      "frames": 5,
+      "frame_size": [
+        64,
+        64
+      ],
+      "original_frame_size": [
+        64,
+        64
+      ],
+      "transparent_padding_only": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "suggested_fps": 10,
+      "loop": false,
+      "native_frame_files": [
+        "eventos-cenarios\\cura\\frame-01.png",
+        "eventos-cenarios\\cura\\frame-02.png",
+        "eventos-cenarios\\cura\\frame-03.png",
+        "eventos-cenarios\\cura\\frame-04.png",
+        "eventos-cenarios\\cura\\frame-05.png"
+      ],
+      "duration_seconds": 0.5,
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Efeitos/cura.png"
+    },
+    {
+      "id": "impacto-area",
+      "job_id": "0fbc45ae-956f-4c68-92d4-f22be1fa83e3",
+      "file": "eventos-cenarios\\efeitos\\impacto-area.png",
+      "size": [
+        320,
+        64
+      ],
+      "sha256": "08f61958a76aeec578da25124451de25ca498f884651f58713c0bbb3d57c260e",
+      "alpha_zero": 12420,
+      "alpha_partial": 0,
+      "alpha_opaque": 8060,
+      "frames": 5,
+      "frame_size": [
+        64,
+        64
+      ],
+      "original_frame_size": [
+        64,
+        64
+      ],
+      "transparent_padding_only": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "suggested_fps": 10,
+      "loop": false,
+      "native_frame_files": [
+        "eventos-cenarios\\impacto-area\\frame-01.png",
+        "eventos-cenarios\\impacto-area\\frame-02.png",
+        "eventos-cenarios\\impacto-area\\frame-03.png",
+        "eventos-cenarios\\impacto-area\\frame-04.png",
+        "eventos-cenarios\\impacto-area\\frame-05.png"
+      ],
+      "duration_seconds": 0.5,
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Efeitos/impacto-area.png"
+    },
+    {
+      "id": "invocacao",
+      "job_id": "39b2d4ea-c4ca-441d-a0af-87372f2f4d6c",
+      "file": "eventos-cenarios\\efeitos\\invocacao.png",
+      "size": [
+        320,
+        64
+      ],
+      "sha256": "37bc903370a935f141d382dba4b390e9d45e567a9695ad8213b4bf304396841d",
+      "alpha_zero": 13635,
+      "alpha_partial": 0,
+      "alpha_opaque": 6845,
+      "frames": 5,
+      "frame_size": [
+        64,
+        64
+      ],
+      "original_frame_size": [
+        64,
+        64
+      ],
+      "transparent_padding_only": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "suggested_fps": 10,
+      "loop": false,
+      "native_frame_files": [
+        "eventos-cenarios\\invocacao\\frame-01.png",
+        "eventos-cenarios\\invocacao\\frame-02.png",
+        "eventos-cenarios\\invocacao\\frame-03.png",
+        "eventos-cenarios\\invocacao\\frame-04.png",
+        "eventos-cenarios\\invocacao\\frame-05.png"
+      ],
+      "duration_seconds": 0.5,
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Efeitos/invocacao.png"
+    },
+    {
+      "id": "moeda",
+      "job_id": "235a0b7c-18ed-4e0b-9151-f8fb47bab479",
+      "file": "eventos-cenarios\\efeitos\\moeda.png",
+      "size": [
+        288,
+        32
+      ],
+      "sha256": "237f517f37f99172dab484d31c41ff027627e4b41f2f97144c1b535266206474",
+      "alpha_zero": 4494,
+      "alpha_partial": 0,
+      "alpha_opaque": 4722,
+      "frames": 9,
+      "frame_size": [
+        32,
+        32
+      ],
+      "original_frame_size": [
+        32,
+        32
+      ],
+      "transparent_padding_only": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "suggested_fps": 6,
+      "loop": true,
+      "native_frame_files": [
+        "eventos-cenarios\\moeda\\frame-01.png",
+        "eventos-cenarios\\moeda\\frame-02.png",
+        "eventos-cenarios\\moeda\\frame-03.png",
+        "eventos-cenarios\\moeda\\frame-04.png",
+        "eventos-cenarios\\moeda\\frame-05.png",
+        "eventos-cenarios\\moeda\\frame-06.png",
+        "eventos-cenarios\\moeda\\frame-07.png",
+        "eventos-cenarios\\moeda\\frame-08.png",
+        "eventos-cenarios\\moeda\\frame-09.png"
+      ],
+      "duration_seconds": 1.5,
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Efeitos/moeda.png"
+    }
+  ],
+  "projectiles": [
+    {
+      "file": "eventos-cenarios\\projeteis\\baforada.png",
+      "size": [
+        128,
+        32
+      ],
+      "sha256": "4682ef99c117cc010f8adf30227d2f9eb5e38e811c713083487e32bf6f48e813",
+      "alpha_zero": 3279,
+      "alpha_partial": 0,
+      "alpha_opaque": 817,
+      "id": "baforada",
+      "job_id": "14d820ec-acf8-411d-9fb5-8dda4f58a1d4",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "consumer_skill_ids": [
+        "baforada"
+      ],
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Projeteis/baforada.png"
+    },
+    {
+      "file": "eventos-cenarios\\projeteis\\bala-canhao.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "43bbbc63a9b37e2243c31368c2ee921cc974c3a67bee648b8611142311288140",
+      "alpha_zero": 2359,
+      "alpha_partial": 0,
+      "alpha_opaque": 1737,
+      "id": "bala-canhao",
+      "job_id": "51aaccbf-51d8-49e1-b559-e68360d61c9e",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "consumer_skill_ids": [
+        "canhao-de-mao"
+      ],
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Projeteis/canhao-de-mao.png"
+    },
+    {
+      "file": "eventos-cenarios\\projeteis\\bala-pistola.png",
+      "size": [
+        64,
+        32
+      ],
+      "sha256": "b23c157b4e2239d6e1989b4ba3ef521efc1850e002a50f05ba54833ad3d80d6e",
+      "alpha_zero": 1809,
+      "alpha_partial": 0,
+      "alpha_opaque": 239,
+      "id": "bala-pistola",
+      "job_id": "fb5f6716-55ae-45b2-a03b-815bddde095a",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "consumer_skill_ids": [
+        "tiro-de-pistola"
+      ],
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Projeteis/tiro-de-pistola.png"
+    },
+    {
+      "file": "eventos-cenarios\\projeteis\\dragao-dourado.png",
+      "size": [
+        64,
+        32
+      ],
+      "sha256": "250f3070b679d25ef7fe856cd92fa184d1e43e470ace8800bae2a403bcde9685",
+      "alpha_zero": 1314,
+      "alpha_partial": 0,
+      "alpha_opaque": 734,
+      "id": "dragao-dourado",
+      "job_id": "885d68e1-efdf-41f5-99f4-80e5221ab4e8",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "consumer_skill_ids": [
+        "dragao-dourado"
+      ],
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Projeteis/dragao-dourado.png"
+    },
+    {
+      "file": "eventos-cenarios\\projeteis\\flecha-abissal.png",
+      "size": [
+        64,
+        32
+      ],
+      "sha256": "53ed82248ac2d8a72aeb6e06245512e10ba8fea1b08dff58b1fd4307568f8a3c",
+      "alpha_zero": 1086,
+      "alpha_partial": 0,
+      "alpha_opaque": 962,
+      "id": "flecha-abissal",
+      "job_id": "e7df46b3-5b99-4916-bd62-9d3158bb95f8",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "consumer_skill_ids": [
+        "flecha-abissal"
+      ],
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Projeteis/flecha-abissal.png"
+    },
+    {
+      "file": "eventos-cenarios\\projeteis\\flecha.png",
+      "size": [
+        64,
+        32
+      ],
+      "sha256": "0d5395cd2f07c36066edac5bdaa5183a9decd74011ae8e4cbb20c33cffbd5342",
+      "alpha_zero": 1737,
+      "alpha_partial": 0,
+      "alpha_opaque": 311,
+      "id": "flecha",
+      "job_id": "347508b7-a1bd-442a-8aa3-071f31031ad1",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "consumer_skill_ids": [
+        "tiro-carregado"
+      ],
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Projeteis/tiro-carregado.png"
+    },
+    {
+      "file": "eventos-cenarios\\projeteis\\foice-verde.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "74ea490f18bd466de57b9b21add9ce94c53cc7cc46159c3bb48b59d589088438",
+      "alpha_zero": 3342,
+      "alpha_partial": 0,
+      "alpha_opaque": 754,
+      "id": "foice-verde",
+      "job_id": "5e3c24e0-9ab3-447c-85fe-622846e2da2b",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "consumer_skill_ids": [
+        "foice-verde"
+      ],
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Projeteis/foice-verde.png"
+    },
+    {
+      "file": "eventos-cenarios\\projeteis\\ilusao-confusa.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "f47a80185eb6edc81e1f3149aa9dddfce9c5618e3c0249391f91322ba92d1614",
+      "alpha_zero": 3497,
+      "alpha_partial": 0,
+      "alpha_opaque": 599,
+      "id": "ilusao-confusa",
+      "job_id": "6536a704-27c5-4ab7-9c85-5793d848853d",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "consumer_skill_ids": [
+        "ilusao-confusa"
+      ],
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Projeteis/ilusao-confusa.png"
+    },
+    {
+      "file": "eventos-cenarios\\projeteis\\moeda.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "088e3eeebef464aa8b0e4f35a9c9956e3e1ddb29b4516f77979c40fc040dcf0a",
+      "alpha_zero": 411,
+      "alpha_partial": 0,
+      "alpha_opaque": 613,
+      "id": "moeda",
+      "job_id": "887560b9-1c7c-46c8-9e4c-43b8cf140105",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "consumer_skill_ids": [],
+      "status": "reference_only_animated_coin_replaces_static"
+    },
+    {
+      "file": "eventos-cenarios\\projeteis\\raio-arcano.png",
+      "size": [
+        128,
+        32
+      ],
+      "sha256": "d93ba06dcc25a11c5308ba3f0ee0af0bc2db2b210459b3a57dd028f125b07e00",
+      "alpha_zero": 3424,
+      "alpha_partial": 0,
+      "alpha_opaque": 672,
+      "id": "raio-arcano",
+      "job_id": "e9d7d940-9352-4b7f-b2f6-f5dc39e0f556",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "consumer_skill_ids": [
+        "raio-arcano"
+      ],
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Projeteis/raio-arcano.png"
+    }
+  ],
+  "terrain": [
+    {
+      "file": "eventos-cenarios\\terrenos\\cristal.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "3f41c5fd044e91fa1c694697515ca1e64e34b561ccb98542c47bee425555648c",
+      "alpha_zero": 0,
+      "alpha_partial": 0,
+      "alpha_opaque": 4096,
+      "wrap_edge_mean_rgb_delta": 21.224,
+      "internal_mean_rgb_delta": 23.296,
+      "seamless_certified": false,
+      "id": "cristal",
+      "job_id": "6ec40b3f-3b76-4a8b-8e49-5e0fe02eb9d1",
+      "theme": null,
+      "destination": null,
+      "status": "optional_crystal_cave_not_snow"
+    },
+    {
+      "file": "eventos-cenarios\\terrenos\\grama.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "94c5d5b3b46572b3bb1366de5ccc6a25e781edbd6c83c795f59ff31c35c6f449",
+      "alpha_zero": 0,
+      "alpha_partial": 0,
+      "alpha_opaque": 4096,
+      "wrap_edge_mean_rgb_delta": 49.51,
+      "internal_mean_rgb_delta": 40.821,
+      "seamless_certified": false,
+      "id": "grama",
+      "job_id": "0171b0d3-4b90-4d20-908c-669ec351f748",
+      "theme": "bosque",
+      "destination": "Assets/ArenaTatica/Resources/Textures/tile_grama.png",
+      "status": "theme_ready"
+    },
+    {
+      "file": "eventos-cenarios\\terrenos\\neve.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "c9f9ed1c46153b8d7e657d1aa3dacf6792c4306c83abcbc811a2180d8238b2f2",
+      "alpha_zero": 0,
+      "alpha_partial": 0,
+      "alpha_opaque": 4096,
+      "wrap_edge_mean_rgb_delta": 57.758,
+      "internal_mean_rgb_delta": 23.575,
+      "seamless_certified": false,
+      "id": "neve",
+      "job_id": "7d386321-4a3a-4df7-8005-ec0f0286fb6c",
+      "theme": "neve",
+      "destination": "Assets/ArenaTatica/Resources/Textures/tile_neve.png",
+      "status": "theme_ready"
+    },
+    {
+      "file": "eventos-cenarios\\terrenos\\pedra.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "cee54a7de14a570c0481b89cc336a9a8ae4beb896c669a67b8100b29cdf37850",
+      "alpha_zero": 0,
+      "alpha_partial": 0,
+      "alpha_opaque": 4096,
+      "wrap_edge_mean_rgb_delta": 36.133,
+      "internal_mean_rgb_delta": 21.103,
+      "seamless_certified": false,
+      "id": "pedra",
+      "job_id": "853b9e50-6abe-4928-a7d3-f108d2241ebf",
+      "theme": "pedreira",
+      "destination": "Assets/ArenaTatica/Resources/Textures/tile_pedreira.png",
+      "status": "theme_ready"
+    },
+    {
+      "file": "eventos-cenarios\\terrenos\\ruinas.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "28072656252600cd100d457927a5ae379d721d6bbec852693926f1f66ea98fc2",
+      "alpha_zero": 0,
+      "alpha_partial": 0,
+      "alpha_opaque": 4096,
+      "wrap_edge_mean_rgb_delta": 41.107,
+      "internal_mean_rgb_delta": 54.263,
+      "seamless_certified": false,
+      "id": "ruinas",
+      "job_id": "aa5e6f99-06cf-4896-b2c5-32f1c86b6fbd",
+      "theme": "deserto",
+      "destination": "Assets/ArenaTatica/Resources/Textures/tile_ruinas.png",
+      "status": "theme_ready"
+    },
+    {
+      "file": "eventos-cenarios\\terrenos\\vulcao.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "e007fc355614be363be7030da140845666ef9ea4d5c9b3f4561946618d9143c2",
+      "alpha_zero": 0,
+      "alpha_partial": 0,
+      "alpha_opaque": 4096,
+      "wrap_edge_mean_rgb_delta": 29.883,
+      "internal_mean_rgb_delta": 25.877,
+      "seamless_certified": false,
+      "id": "vulcao",
+      "job_id": "828bbafe-5f55-4d6a-874c-572f8e0b985a",
+      "theme": "vulcao",
+      "destination": "Assets/ArenaTatica/Resources/Textures/tile_vulcao.png",
+      "status": "theme_ready"
+    }
+  ],
+  "preview_is_game_asset": false
+}

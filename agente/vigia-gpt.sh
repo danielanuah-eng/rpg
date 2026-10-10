@@ -9,7 +9,7 @@ ULT=$(git rev-parse origin/main 2>/dev/null)
 while true; do
   git fetch -q origin 2>/dev/null || true
   NOVO=$(git rev-parse origin/main 2>/dev/null)
-  ARQ=$(find $PASTAS -type f -newer "$MARCA" 2>/dev/null | grep -v '\.claude\.json$' | head -20)
+  ARQ=$(find $PASTAS -type f -newer "$MARCA" 2>/dev/null | grep -v -e '\.claude\.json$' -e arena-pixelai | head -20)
   if [ "$NOVO" != "$ULT" ] || [ -n "$ARQ" ]; then
     echo "=== CHEGOU ALGO $(date '+%d/%m %H:%M') ==="
     [ "$NOVO" != "$ULT" ] && git log --format='%h %an %s' "$ULT..$NOVO" | head -15

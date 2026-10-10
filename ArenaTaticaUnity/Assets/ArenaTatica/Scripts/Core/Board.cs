@@ -66,11 +66,24 @@ namespace ArenaTatica.Core
         }
         public static int Index(MatchState s,Cell c) => c.z*s.width+c.x;
         // Supercover como no port Godot. Bloqueiam: árvore, caixa, lutador e relevo 2+ acima do mais baixo dos dois.
+        // Casas entre a e b (sem as pontas), no mesmo traçado da linha de visão. Lutadores não bloqueiam a visão
+        // (decisão do autor, 10/10): um tiro que passa por cima de alguém pode acertá-lo (Match.Intercept).
+        public static List<Cell> Between(MatchState s,Cell a,Cell b)
+        {
+            var cells=new List<Cell>(); int nx=Math.Abs(b.x-a.x), nz=Math.Abs(b.z-a.z), sx=Math.Sign(b.x-a.x), sz=Math.Sign(b.z-a.z), ix=0, iz=0; var cur=a;
+            while(ix<nx||iz<nz)
+            {
+                int h=(2*ix+1)*nz, v=(2*iz+1)*nx;
+                if(h==v) { cur+=new Cell(sx,sz); ix++; iz++; } else if(h<v) { cur+=new Cell(sx,0); ix++; } else { cur+=new Cell(0,sz); iz++; }
+                if(cur!=b) cells.Add(cur);
+            }
+            return cells;
+        }
         public static bool LineOfSight(MatchState s,Cell a,Cell b)
         {
             if(a==b||!Contains(s,a)||!Contains(s,b)) return false;
             int low=Math.Min(s.At(a).height,s.At(b).height);
-            bool Blocked(Cell c) { if(c==b) return false; if(!Contains(s,c)) return true; var t=s.At(c); return t.terrain==Terrain.Arvore||t.terrain==Terrain.Caixa||t.height>=low+2||At(s,c)!=null; }
+            bool Blocked(Cell c) { if(c==b) return false; if(!Contains(s,c)) return true; var t=s.At(c); return t.terrain==Terrain.Arvore||t.terrain==Terrain.Caixa||t.height>=low+2; }
             int nx=Math.Abs(b.x-a.x), nz=Math.Abs(b.z-a.z), sx=Math.Sign(b.x-a.x), sz=Math.Sign(b.z-a.z), ix=0, iz=0;
             var cur=a;
             while(ix<nx||iz<nz)

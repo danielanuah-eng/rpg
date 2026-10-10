@@ -1,0 +1,12 @@
+{
+  "key": "flying",
+  "owner": "gryvro",
+  "source": "74642151-8059-4dfc-b56a-5f799926785e",
+  "state_name": "Voo",
+  "edit_description": "Keep the exact same Gryvro glass griffon identity, crystalline eagle beak/head, glass feline torso, FOUR legs, clear ice-blue and mercury glass material and crystalline tail, same camera. Spread its TWO FEATHERED GLASS WINGS outward and slightly upward in a strong readable flight pose, wing tips fully inside image. Body is hovering level, two front eagle talons and two rear feline paws tuck slightly underneath but remain anatomically distinct, no ground. This is a stable flying state ready for flapping, no attack, no new colors, full transparent sprite.",
+  "override_width": 160,
+  "override_height": 160,
+  "character_id": "4113eef1-555d-4e1a-9435-06c24d2e7ca5",
+  "result": "id: 4113eef1-555d-4e1a-9435-06c24d2e7ca5\nsource: 74642151-8059-4dfc-b56a-5f799926785e\nedit: Keep the exact same Gryvro glass griffon identity, crystalline eagle beak/head, glass feline torso, FOUR legs, clear ice-blue and mercury glass material and crystalline tail, same camera. Spread its TWO FEATHERED GLASS WINGS outward and slightly upward in a strong readable flight pose, wing tips fully inside image. Body is hovering level, two front eagle talons and two rear feline paws tuck slightly underneath but remain anatomically distinct, no ground. This is a stable flying state ready for flapping, no attack, no new colors, full transparent sprite.\ncost: ~10-25 generations (Gemini tier by canvas size)\nstatus: processing (~30-90s)\nnote: linked via group_id, inherits skeleton for animations\n\nhint: get_character(character_id=\"4113eef1-555d-4e1a-9435-06c24d2e7ca5\")",
+  "ready": false
+}

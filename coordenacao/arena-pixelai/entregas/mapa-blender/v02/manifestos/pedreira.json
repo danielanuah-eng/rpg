@@ -1,0 +1,1690 @@
+{
+  "versao": 2,
+  "tarefa": "011",
+  "data": "2026-10-10",
+  "estado": "revisao_entregue_para_avaliacao",
+  "avaliacaoAutor": "v1_aprovada_com_ajustes; v2_pendente",
+  "integracaoClaude": "pendente",
+  "cenario": "Montanha rochosa",
+  "unidadeMetros": 1,
+  "alturaPorNivel": 0.45,
+  "eixosOrigem": "Blender Z-up, planta XY",
+  "eixosExportacao": "Y-up, FBX forward -Z; conversão de (x,y,z) Blender para (x,z,-y)",
+  "texturas": {
+    "origem": "PixelLab create_tiles_pro / Map",
+    "id": "3aa336a9-2ec0-4ca2-9049-0aeae3c18fee",
+    "filtro": "Point/Closest",
+    "mipmaps": false,
+    "wrap": "Repeat",
+    "pixelsPorCasa": 64
+  },
+  "vento": {
+    "atributo": "vento",
+    "fbx": "COLOR_0",
+    "glb": "COLOR_1",
+    "glbColor0": "branco neutro",
+    "canal": "R",
+    "base": 0,
+    "pontas": 1,
+    "shader": "Claude integra; entrega contém pesos, não shader executável"
+  },
+  "animacao": "Materiais emissivos e fx_fogo são pontos de integração. Não contém animação Unity pronta.",
+  "fonte": "fontes/pedreira.blend",
+  "script": "fontes/construir_cenarios.py",
+  "previews": [
+    "previews/pedreira-tabuleiro-12x12.png",
+    "previews/pedreira-detalhe.png"
+  ],
+  "revisaoAutor": [
+    "Loja no meio em todos os mapas.",
+    "Props também distribuídos pelo interior.",
+    "Árvores com silhueta própria de cada tema; Bosque mais frondoso."
+  ],
+  "moedasChao": "Modelo moeda_chao deitado sobre o piso; prévia com distribuição de exemplo.",
+  "versoesBosque": [],
+  "divergenciasBriefing": [
+    "Código atual usa 12/16/18 casas; entorno e variantes entorno_16/entorno_18 entregues sem mudar regras."
+  ],
+  "pecas": [
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "topo_a",
+      "arquivo": "mapa/pedreira/topo_a.fbx",
+      "glb": "mapa/pedreira/topo_a.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_grama_a.png"
+      ],
+      "materiais": [
+        "pedreira_grama_a"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.05
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.05
+        ]
+      },
+      "tris": 44,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "piso:a",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "b775d284c15fd414bb1a436252956682a9a2d3c596a5188a2c6e037033f39865",
+        "glb": "8dff50d010226b900f22b1b6eab6b187c9a5759f721b0431c747754fc13ac98b"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "topo_b",
+      "arquivo": "mapa/pedreira/topo_b.fbx",
+      "glb": "mapa/pedreira/topo_b.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_grama_b.png"
+      ],
+      "materiais": [
+        "pedreira_grama_b"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.05
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.05
+        ]
+      },
+      "tris": 44,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "piso:b",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "ea2987df2d069dbc88da17662f3e91c22db1a9a21a4b470abc841af571b75b79",
+        "glb": "3e525753ad4ad24ce9e7b35a91d4c12938c8ae42f8e57699b5099d19fbb74ee9"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "topo_zona",
+      "arquivo": "mapa/pedreira/topo_zona.fbx",
+      "glb": "mapa/pedreira/topo_zona.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_zona.png"
+      ],
+      "materiais": [
+        "pedreira_zona"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.05
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.05
+        ]
+      },
+      "tris": 44,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "piso:zona",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "0a3f9745d4b7d02309dfad46895463c866c43d9bb2a0a934c1753f9f1b26b35c",
+        "glb": "d9778ed0c6ac03e388dd433318df6aadc677529102554fcc97daaf8f2a8eeb5b"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "coluna_a",
+      "arquivo": "mapa/pedreira/coluna_a.fbx",
+      "glb": "mapa/pedreira/coluna_a.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_terra.png",
+        "mapa/pedreira/pedreira_pedra.png"
+      ],
+      "materiais": [
+        "pedreira_terra",
+        "pedreira_pedra"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.45
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.45
+        ]
+      },
+      "tris": 124,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "coluna",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Segmento empilhável de 0,45 m; faces de terra, pedra e raízes.",
+      "sha256": {
+        "arquivo": "7b4eb3c93924786f33170fd6967dfbe087bfa3ba2818f983d8b0b590e4988c66",
+        "glb": "20020bcd2704002d0e0dcd5259ba53850e02964274ca1d16337c1f5b87ff9a55"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "coluna_b",
+      "arquivo": "mapa/pedreira/coluna_b.fbx",
+      "glb": "mapa/pedreira/coluna_b.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_terra.png",
+        "mapa/pedreira/pedreira_pedra.png"
+      ],
+      "materiais": [
+        "pedreira_terra",
+        "pedreira_pedra"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.45
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.45
+        ]
+      },
+      "tris": 124,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "coluna",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Segmento empilhável de 0,45 m; faces de terra, pedra e raízes.",
+      "sha256": {
+        "arquivo": "90a9127e59f691ff40c900299801965606e7e318608766c6a9b024bbf41abe44",
+        "glb": "a6d3c0ab6dc618d82681fbd632807b81ded0d0e41bc2d4bb6b726e73a8eb93c5"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "beira_reta",
+      "arquivo": "mapa/pedreira/beira_reta.fbx",
+      "glb": "mapa/pedreira/beira_reta.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_casca.png"
+      ],
+      "materiais": [
+        "pedreira_casca"
+      ],
+      "dimensoes": [
+        1.0,
+        0.17,
+        0.4671
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.085,
+          -0.4221
+        ],
+        "max": [
+          0.5,
+          0.085,
+          0.045
+        ]
+      },
+      "tris": 108,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "beira",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Pivô de encaixe no topo da borda; raízes pendem abaixo de Z=0.",
+      "sha256": {
+        "arquivo": "70c92642a10efcea16f5e3adb950ecb87ad4506eff0db26135a6260118218fe0",
+        "glb": "a7eafbecc3c71d8e915b1c3107566df9f6c5af76a6cdd08a0610dbbe9e9a7486"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "beira_canto",
+      "arquivo": "mapa/pedreira/beira_canto.fbx",
+      "glb": "mapa/pedreira/beira_canto.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_casca.png"
+      ],
+      "materiais": [
+        "pedreira_casca"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.4671
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          -0.4221
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.045
+        ]
+      },
+      "tris": 172,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "beira",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Pivô de encaixe no topo da borda; raízes pendem abaixo de Z=0.",
+      "sha256": {
+        "arquivo": "42c36963e52ffb8df08333c507c1d5a20e2da462ce599e542ae1c9a010c5b195",
+        "glb": "9476c42f2ca5e016d741150f03354d2bf7dde282e4f173e424b3db43a9144c16"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "arbusto",
+      "arquivo": "mapa/pedreira/arbusto.fbx",
+      "glb": "mapa/pedreira/arbusto.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_folhagem.png",
+        "mapa/pedreira/pedreira_casca.png"
+      ],
+      "materiais": [
+        "pedreira_folhagem",
+        "pedreira_casca",
+        "pedreira_fruta"
+      ],
+      "dimensoes": [
+        0.6892,
+        0.6839,
+        0.5252
+      ],
+      "bounds": {
+        "min": [
+          -0.3395,
+          -0.3312,
+          0.0
+        ],
+        "max": [
+          0.3496,
+          0.3527,
+          0.5252
+        ]
+      },
+      "tris": 232,
+      "vento": "sim",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Arbusto",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "3e618fd86e9450396585f73037b860050fcb7477465d655f79bbb4ef3557ecff",
+        "glb": "d4e2cad722248381a229f801a7840c889438a3f302eaa254ba2ab409b5acb152"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "arvore",
+      "arquivo": "mapa/pedreira/arvore.fbx",
+      "glb": "mapa/pedreira/arvore.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_casca.png",
+        "mapa/pedreira/pedreira_folhagem.png"
+      ],
+      "materiais": [
+        "pedreira_casca",
+        "pedreira_folhagem"
+      ],
+      "dimensoes": [
+        1.1637,
+        1.1818,
+        2.1654
+      ],
+      "bounds": {
+        "min": [
+          -0.5708,
+          -0.5909,
+          0.0
+        ],
+        "max": [
+          0.5929,
+          0.5909,
+          2.1654
+        ]
+      },
+      "tris": 156,
+      "vento": "sim",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Arvore",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Pinheiro da pedreira com quatro níveis e tronco ligeiramente inclinado.",
+      "sha256": {
+        "arquivo": "7ab2bc3e2104a4d3846dc758e6259b33cda803c444a12865c2d125ba5f4dfaa0",
+        "glb": "dcd0b5581872b0463f35e3bc6d0022525ef5a5da0fa1e7aef6fed417dc7cd277"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "arvore_jovem",
+      "arquivo": "mapa/pedreira/arvore_jovem.fbx",
+      "glb": "mapa/pedreira/arvore_jovem.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_casca.png",
+        "mapa/pedreira/pedreira_folhagem.png"
+      ],
+      "materiais": [
+        "pedreira_casca",
+        "pedreira_folhagem"
+      ],
+      "dimensoes": [
+        0.861,
+        0.8745,
+        1.6057
+      ],
+      "bounds": {
+        "min": [
+          -0.4148,
+          -0.4373,
+          0.0
+        ],
+        "max": [
+          0.4463,
+          0.4373,
+          1.6057
+        ]
+      },
+      "tris": 156,
+      "vento": "sim",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Pinheiro da pedreira com quatro níveis e tronco ligeiramente inclinado.",
+      "sha256": {
+        "arquivo": "181dc41fcdec17fa45f26ed742d1cea60759ec51fd8bc18866302dd76870849b",
+        "glb": "5abdc651c3d52d5a8b0621711b67463fcc4696a8bad7ff97258946ac956bc5b0"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "caixa",
+      "arquivo": "mapa/pedreira/caixa.fbx",
+      "glb": "mapa/pedreira/caixa.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_madeira.png"
+      ],
+      "materiais": [
+        "pedreira_madeira",
+        "pedreira_ferro",
+        "pedreira_fruta"
+      ],
+      "dimensoes": [
+        0.842,
+        0.8433,
+        0.832
+      ],
+      "bounds": {
+        "min": [
+          -0.421,
+          -0.41,
+          0.0
+        ],
+        "max": [
+          0.421,
+          0.4333,
+          0.832
+        ]
+      },
+      "tris": 372,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Caixa",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Estado só visual; destrutibilidade depende das regras do autor.",
+      "sha256": {
+        "arquivo": "c949d19109d35c173552b55482bb9188461443332fd5ea9180698ac51f4c34c9",
+        "glb": "37a5f937880fbf2a2ccc043eac8776a0ec2471e0b430b6c853a4d953b4957e59"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "caixa_rachada",
+      "arquivo": "mapa/pedreira/caixa_rachada.fbx",
+      "glb": "mapa/pedreira/caixa_rachada.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_madeira.png"
+      ],
+      "materiais": [
+        "pedreira_madeira",
+        "pedreira_ferro",
+        "pedreira_fruta",
+        "pedreira_sombra"
+      ],
+      "dimensoes": [
+        0.842,
+        0.8433,
+        0.832
+      ],
+      "bounds": {
+        "min": [
+          -0.421,
+          -0.41,
+          0.0
+        ],
+        "max": [
+          0.421,
+          0.4333,
+          0.832
+        ]
+      },
+      "tris": 408,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Caixa",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Estado só visual; destrutibilidade depende das regras do autor.",
+      "sha256": {
+        "arquivo": "4dda7e912bbdbf7fe0ac0239015e6ccbe0809b3bc63f79d7c33338f0c8758f50",
+        "glb": "3d935f7d927adec0c5aa2f24058af8b6e33700da31f3a47da0aed85c3daab9bc"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "caixa_quebrada",
+      "arquivo": "mapa/pedreira/caixa_quebrada.fbx",
+      "glb": "mapa/pedreira/caixa_quebrada.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_madeira.png"
+      ],
+      "materiais": [
+        "pedreira_madeira",
+        "pedreira_ferro"
+      ],
+      "dimensoes": [
+        0.85,
+        0.7492,
+        0.1575
+      ],
+      "bounds": {
+        "min": [
+          -0.4257,
+          -0.3417,
+          0.0
+        ],
+        "max": [
+          0.4243,
+          0.4075,
+          0.1575
+        ]
+      },
+      "tris": 352,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Caixa",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Estado só visual; destrutibilidade depende das regras do autor.",
+      "sha256": {
+        "arquivo": "bedcb20410fc080413da64122710ed1982bffaf1edff5905af333f6ef121710c",
+        "glb": "82df7f5a436ca33668106ac6d6e29c51217f5624360614dafe27552533252c51"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "pedra",
+      "arquivo": "mapa/pedreira/pedra.fbx",
+      "glb": "mapa/pedreira/pedra.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_pedra.png"
+      ],
+      "materiais": [
+        "pedreira_pedra"
+      ],
+      "dimensoes": [
+        0.797,
+        0.6342,
+        1.3033
+      ],
+      "bounds": {
+        "min": [
+          -0.3653,
+          -0.3295,
+          0.0
+        ],
+        "max": [
+          0.4317,
+          0.3047,
+          1.3033
+        ]
+      },
+      "tris": 60,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Afloramento angular da Montanha Rochosa, base dentro de uma casa. Decoração modular; integração e colisão ficam com Claude.",
+      "sha256": {
+        "arquivo": "d03e237e4b4a94b1445ffa7133c7f491dc19d070f408a16ef83a8a516b6f935b",
+        "glb": "3a65f235d0675e6801327e46d5e3feb0010febddd265e137623c351dcc0f2b2e"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "enfeite_cerca",
+      "arquivo": "mapa/pedreira/enfeite_cerca.fbx",
+      "glb": "mapa/pedreira/enfeite_cerca.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_madeira.png"
+      ],
+      "materiais": [
+        "pedreira_madeira"
+      ],
+      "dimensoes": [
+        0.9389,
+        0.0941,
+        0.65
+      ],
+      "bounds": {
+        "min": [
+          -0.4695,
+          -0.052,
+          0.0
+        ],
+        "max": [
+          0.4695,
+          0.0421,
+          0.65
+        ]
+      },
+      "tris": 120,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "3769393835a76cc123c97ef76447d172041176200d9e805bcd10c0e5e5b0c91e",
+        "glb": "e0848dce0a2a91d10a897d5b13f67a6e1f0d96ce3a371b86a23bd0f634338490"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "enfeite_cerca_canto",
+      "arquivo": "mapa/pedreira/enfeite_cerca_canto.fbx",
+      "glb": "mapa/pedreira/enfeite_cerca_canto.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_madeira.png"
+      ],
+      "materiais": [
+        "pedreira_madeira"
+      ],
+      "dimensoes": [
+        0.9389,
+        0.9341,
+        0.65
+      ],
+      "bounds": {
+        "min": [
+          -0.4695,
+          -0.467,
+          0.0
+        ],
+        "max": [
+          0.4695,
+          0.467,
+          0.65
+        ]
+      },
+      "tris": 224,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "6cee944a9af2c685ed85a8cf6866868741d6b7111102ebbb9af00b1e04181c10",
+        "glb": "73608c985e16a68dfe5c2d9f1d016e2300c7ba4556e5403e78497fcb23984dcf"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "enfeite_flores",
+      "arquivo": "mapa/pedreira/enfeite_flores.fbx",
+      "glb": "mapa/pedreira/enfeite_flores.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_folhagem.png"
+      ],
+      "materiais": [
+        "pedreira_folhagem",
+        "pedreira_flor_clara",
+        "pedreira_ouro",
+        "pedreira_flor"
+      ],
+      "dimensoes": [
+        0.366,
+        0.339,
+        0.211
+      ],
+      "bounds": {
+        "min": [
+          -0.1795,
+          -0.1837,
+          0.0
+        ],
+        "max": [
+          0.1865,
+          0.1553,
+          0.211
+        ]
+      },
+      "tris": 660,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "56fda900fedf3af2abc8f78a877c8f2a584cb06294d3f3b61f60d3502ea7f178",
+        "glb": "b72bacdc972fa2747ec59fd0ad984e99ddcaf2338680c3e6aa72dbae07cff9fb"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "enfeite_cogumelos",
+      "arquivo": "mapa/pedreira/enfeite_cogumelos.fbx",
+      "glb": "mapa/pedreira/enfeite_cogumelos.glb",
+      "textura": [],
+      "materiais": [
+        "pedreira_creme",
+        "pedreira_fruta"
+      ],
+      "dimensoes": [
+        0.3436,
+        0.297,
+        0.242
+      ],
+      "bounds": {
+        "min": [
+          -0.1702,
+          -0.169,
+          0.0
+        ],
+        "max": [
+          0.1735,
+          0.128,
+          0.242
+        ]
+      },
+      "tris": 300,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "084f4ad116d01ebcdbebee891194252ec0f3a21fe6d5aec417b7ec1ab6354335",
+        "glb": "a898ad951ef0da3b27b1c49cc77fd5b1b4754bac7024f26896941084f45c9239"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "enfeite_seixos",
+      "arquivo": "mapa/pedreira/enfeite_seixos.fbx",
+      "glb": "mapa/pedreira/enfeite_seixos.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_pedra.png"
+      ],
+      "materiais": [
+        "pedreira_pedra"
+      ],
+      "dimensoes": [
+        0.4473,
+        0.3027,
+        0.0523
+      ],
+      "bounds": {
+        "min": [
+          -0.2189,
+          -0.1647,
+          0.0
+        ],
+        "max": [
+          0.2284,
+          0.1381,
+          0.0523
+        ]
+      },
+      "tris": 100,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Detalhe baixo, sem colisão, para distribuição também no interior.",
+      "sha256": {
+        "arquivo": "2875cfe07d6d5272bd9f3585fabfcc8b716de124428018bc3ba12ae5571d7aa1",
+        "glb": "c676b503616b9eaba0224432a2c56917efbd31aeb79480356362eb04de0350b2"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "enfeite_capim",
+      "arquivo": "mapa/pedreira/enfeite_capim.fbx",
+      "glb": "mapa/pedreira/enfeite_capim.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_folhagem.png"
+      ],
+      "materiais": [
+        "pedreira_folhagem"
+      ],
+      "dimensoes": [
+        0.2797,
+        0.2765,
+        0.1784
+      ],
+      "bounds": {
+        "min": [
+          -0.1388,
+          -0.1404,
+          0.0
+        ],
+        "max": [
+          0.1409,
+          0.1361,
+          0.1784
+        ]
+      },
+      "tris": 84,
+      "vento": "sim",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Tufo baixo decorativo, sem colisão; espalhar entre áreas livres.",
+      "sha256": {
+        "arquivo": "d1a61078a101a579a8904e6954496003d01c029e77bf51e6fb009b5bbf42ba6e",
+        "glb": "d34717218ae1975f6d1fa2ef0fd75156f0317d9e6cb6b944fc0d9c7f7c9cceb3"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "enfeite_raiz_chao",
+      "arquivo": "mapa/pedreira/enfeite_raiz_chao.fbx",
+      "glb": "mapa/pedreira/enfeite_raiz_chao.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_casca.png"
+      ],
+      "materiais": [
+        "pedreira_casca"
+      ],
+      "dimensoes": [
+        0.3489,
+        0.3301,
+        0.0344
+      ],
+      "bounds": {
+        "min": [
+          -0.1824,
+          -0.1532,
+          0.0
+        ],
+        "max": [
+          0.1665,
+          0.1769,
+          0.0344
+        ]
+      },
+      "tris": 48,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Raízes baixas decorativas, não representam obstáculo.",
+      "sha256": {
+        "arquivo": "fafc4185c43e26380f9e93c88cd449f3a6b03955be2aad4a08a63b4f647d7f41",
+        "glb": "47781bb1961ba4a12fed708a1f8094739cf23eb64547d9cb36275f831db6c020"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "enfeite_pedra_baixa",
+      "arquivo": "mapa/pedreira/enfeite_pedra_baixa.fbx",
+      "glb": "mapa/pedreira/enfeite_pedra_baixa.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_pedra.png"
+      ],
+      "materiais": [
+        "pedreira_pedra"
+      ],
+      "dimensoes": [
+        0.4304,
+        0.3754,
+        0.2264
+      ],
+      "bounds": {
+        "min": [
+          -0.2083,
+          -0.1902,
+          0.0
+        ],
+        "max": [
+          0.2221,
+          0.1853,
+          0.2264
+        ]
+      },
+      "tris": 20,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Pedra baixa de ambientação, sem colisão; usar grupos também no interior, longe das bordas.",
+      "sha256": {
+        "arquivo": "c3d3b8fbc45b69f8e798a953fafc2c98fb81cc2250eb09292030805234467372",
+        "glb": "ab6126b0c3372d4312ef31280d1e40dc86eebbcc4a177109e8586a291c9c7468"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "enfeite_lago",
+      "arquivo": "mapa/pedreira/enfeite_lago.fbx",
+      "glb": "mapa/pedreira/enfeite_lago.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_pedra.png"
+      ],
+      "materiais": [
+        "pedreira_agua_emissivo",
+        "pedreira_pedra",
+        "pedreira_creme"
+      ],
+      "dimensoes": [
+        1.5432,
+        1.0856,
+        0.0951
+      ],
+      "bounds": {
+        "min": [
+          -0.7524,
+          -0.5454,
+          0.0
+        ],
+        "max": [
+          0.7908,
+          0.5402,
+          0.0951
+        ]
+      },
+      "tris": 262,
+      "vento": "não",
+      "emissivo": "sim",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Lagoa rasa decorativa para o INTERIOR do mapa; material de água/gelo/lava separado. Sem nova regra ou colisão definida pela arte.",
+      "sha256": {
+        "arquivo": "a6e0833b414659f690f650907ea8c655243c965eeb6724e9df3c964c27dbe8b4",
+        "glb": "b2ca5575377c20bf496aa01d61eb5b07afec82a3c7c36dbd894735a64da661f9"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "moeda_chao",
+      "arquivo": "mapa/pedreira/moeda_chao.fbx",
+      "glb": "mapa/pedreira/moeda_chao.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_madeira.png"
+      ],
+      "materiais": [
+        "pedreira_ouro",
+        "pedreira_madeira",
+        "pedreira_creme"
+      ],
+      "dimensoes": [
+        0.24,
+        0.24,
+        0.031
+      ],
+      "bounds": {
+        "min": [
+          -0.12,
+          -0.12,
+          0.0
+        ],
+        "max": [
+          0.12,
+          0.12,
+          0.031
+        ]
+      },
+      "tris": 122,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "moeda:chao",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Moeda deitada, pivô na face inferior; apresentar no piso onde a lógica do jogo indicar moedas. Preview só demonstra a distribuição.",
+      "sha256": {
+        "arquivo": "07b20a986588b616a74e0c2909ed2ee670914bf7edd81f3d03a68eb405d51621",
+        "glb": "751f1f06ea79641127a3db72a1c587cb0ae242ef4f358c5096fa42abe1e38574"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "enfeite_tocha",
+      "arquivo": "mapa/pedreira/enfeite_tocha.fbx",
+      "glb": "mapa/pedreira/enfeite_tocha.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_casca.png"
+      ],
+      "materiais": [
+        "pedreira_casca",
+        "pedreira_ferro"
+      ],
+      "dimensoes": [
+        0.2,
+        0.2,
+        0.81
+      ],
+      "bounds": {
+        "min": [
+          -0.1,
+          -0.1,
+          0.0
+        ],
+        "max": [
+          0.1,
+          0.1,
+          0.81
+        ]
+      },
+      "tris": 64,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [
+        {
+          "nome": "fx_fogo",
+          "nomeNoBlend": "fx_fogo",
+          "posicaoBlender": [
+            0.0,
+            0.0,
+            0.8399999737739563
+          ]
+        }
+      ],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "fx_fogo recebe chama em sprite; sem fogo sólido no FBX.",
+      "sha256": {
+        "arquivo": "bbf11ff8dc0ede201ae25c8bb12a07433c983f41e66dcf56a8e123c020ba2466",
+        "glb": "1f976a0e983265c0f698fded4626b8d560db32910e96357d11dc5ef75f789bbe"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "enfeite_fogueira",
+      "arquivo": "mapa/pedreira/enfeite_fogueira.fbx",
+      "glb": "mapa/pedreira/enfeite_fogueira.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_pedra.png",
+        "mapa/pedreira/pedreira_casca.png"
+      ],
+      "materiais": [
+        "pedreira_pedra",
+        "pedreira_casca"
+      ],
+      "dimensoes": [
+        0.624,
+        0.5853,
+        0.1841
+      ],
+      "bounds": {
+        "min": [
+          -0.3066,
+          -0.2909,
+          0.0
+        ],
+        "max": [
+          0.3174,
+          0.2945,
+          0.1841
+        ]
+      },
+      "tris": 292,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [
+        {
+          "nome": "fx_fogo",
+          "nomeNoBlend": "fx_fogo.001",
+          "posicaoBlender": [
+            0.0,
+            0.0,
+            0.1541043221950531
+          ]
+        }
+      ],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "83d0daf5a27047f69e5d37c9255fba95f19a04d855419476b221885b40c42b76",
+        "glb": "2ba6438972bc3cc68371cb8056fd950051d263d041386b48a3e0243bd80f60c2"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "enfeite_placa",
+      "arquivo": "mapa/pedreira/enfeite_placa.fbx",
+      "glb": "mapa/pedreira/enfeite_placa.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_casca.png",
+        "mapa/pedreira/pedreira_madeira.png"
+      ],
+      "materiais": [
+        "pedreira_casca",
+        "pedreira_madeira",
+        "pedreira_ouro"
+      ],
+      "dimensoes": [
+        0.55,
+        0.099,
+        1.0
+      ],
+      "bounds": {
+        "min": [
+          -0.255,
+          -0.051,
+          0.0
+        ],
+        "max": [
+          0.295,
+          0.048,
+          1.0
+        ]
+      },
+      "tris": 140,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "aaa545a17125d1b0c7c3882ff514023ac33a824112f2b21c27df765c70f9e466",
+        "glb": "51d317b1755d442b706a74227b2d57e29695219c1ec6c822bd99e37ff2977605"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "bau_fechado",
+      "arquivo": "mapa/pedreira/bau_fechado.fbx",
+      "glb": "mapa/pedreira/bau_fechado.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_madeira.png"
+      ],
+      "materiais": [
+        "pedreira_madeira",
+        "pedreira_ouro"
+      ],
+      "dimensoes": [
+        0.68,
+        0.5025,
+        0.555
+      ],
+      "bounds": {
+        "min": [
+          -0.34,
+          -0.24,
+          0.0
+        ],
+        "max": [
+          0.34,
+          0.2625,
+          0.555
+        ]
+      },
+      "tris": 220,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "modo:Tesouro",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "f335ef74d16a873e2ff14e5626a5a86323a017ff31703241b90757bfe5271c17",
+        "glb": "096f0732d622ee07e0f77c31ea3b48792077f88529f5a27d2750e85d61a0d199"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "pilar_galeao",
+      "arquivo": "mapa/pedreira/pilar_galeao.fbx",
+      "glb": "mapa/pedreira/pilar_galeao.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_pedra.png"
+      ],
+      "materiais": [
+        "pedreira_pedra",
+        "pedreira_ouro"
+      ],
+      "dimensoes": [
+        0.68,
+        0.68,
+        1.05
+      ],
+      "bounds": {
+        "min": [
+          -0.34,
+          -0.34,
+          0.0
+        ],
+        "max": [
+          0.34,
+          0.34,
+          1.05
+        ]
+      },
+      "tris": 176,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "modo:Galeoes",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "5c85ddfb9274cfc695b055950e487ba06e03df95d14574630d9d30a2146d5570",
+        "glb": "7edd6396ecb1d4bcb69486c4a10030cf97bfce6f383cc9f2140604115f68f027"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "totem_dominio",
+      "arquivo": "mapa/pedreira/totem_dominio.fbx",
+      "glb": "mapa/pedreira/totem_dominio.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_pedra.png"
+      ],
+      "materiais": [
+        "pedreira_pedra",
+        "pedreira_runa_emissivo"
+      ],
+      "dimensoes": [
+        0.68,
+        0.68,
+        0.61
+      ],
+      "bounds": {
+        "min": [
+          -0.34,
+          -0.34,
+          0.0
+        ],
+        "max": [
+          0.34,
+          0.34,
+          0.61
+        ]
+      },
+      "tris": 152,
+      "vento": "não",
+      "emissivo": "sim",
+      "empties": [],
+      "substitui": "modo:Dominio",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Runa em material separado para cor e pulso do jogador.",
+      "sha256": {
+        "arquivo": "1550f00945b65e39562634f408cd9c476a444f81c6a84e78ac81ddaefb78d193",
+        "glb": "48873eb53ae31cc40d116cff8f9816a5d590bc1ef2e6641faff39d09ea85a3ab"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "enfeite_cristal",
+      "arquivo": "mapa/pedreira/enfeite_cristal.fbx",
+      "glb": "mapa/pedreira/enfeite_cristal.glb",
+      "textura": [],
+      "materiais": [
+        "pedreira_cristal_emissivo"
+      ],
+      "dimensoes": [
+        0.3712,
+        0.3528,
+        0.43
+      ],
+      "bounds": {
+        "min": [
+          -0.1656,
+          -0.21,
+          0.0
+        ],
+        "max": [
+          0.2056,
+          0.1428,
+          0.43
+        ]
+      },
+      "tris": 72,
+      "vento": "não",
+      "emissivo": "sim",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "1f94c7da19952a32aaf7d92861895989939a82aa5d785db06281bf3539612422",
+        "glb": "ab3a6b874cac1a683580239752dff6fdec13b1814a59fd0b16d3db7695c6703f"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "loja_mascate",
+      "arquivo": "mapa/pedreira/loja_mascate.fbx",
+      "glb": "mapa/pedreira/loja_mascate.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_pedra.png",
+        "mapa/pedreira/pedreira_madeira.png",
+        "mapa/pedreira/pedreira_casca.png"
+      ],
+      "materiais": [
+        "pedreira_pedra",
+        "pedreira_madeira",
+        "pedreira_casca",
+        "pedreira_telha",
+        "pedreira_vinho",
+        "pedreira_creme",
+        "pedreira_ouro",
+        "pedreira_ferro",
+        "pedreira_lanterna_emissivo"
+      ],
+      "dimensoes": [
+        1.92,
+        1.93,
+        2.255
+      ],
+      "bounds": {
+        "min": [
+          -0.96,
+          -0.93,
+          0.0
+        ],
+        "max": [
+          0.96,
+          1.0,
+          2.255
+        ]
+      },
+      "tris": 484,
+      "vento": "não",
+      "emissivo": "sim",
+      "empties": [
+        {
+          "nome": "fx_fumaca",
+          "nomeNoBlend": "fx_fumaca",
+          "posicaoBlender": [
+            -0.550000011920929,
+            -0.3499999940395355,
+            2.2699999809265137
+          ]
+        }
+      ],
+      "substitui": "loja:estrutura",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Fonte 3D; vendedor continua sprite. Frente +Y Blender = -Z Unity após exportação.",
+      "sha256": {
+        "arquivo": "09b05f2877423dc7b0a3568a8e937f25a3d48803d9c0441902f770a8c46a02d2",
+        "glb": "2bc0ff0aca550a7c67ea6f243e00ae3c6c6b6e9f373668e0fa413fe6aed7a8f8"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "entorno",
+      "arquivo": "mapa/pedreira/entorno.fbx",
+      "glb": "mapa/pedreira/entorno.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_grama_a.png",
+        "mapa/pedreira/pedreira_terra.png",
+        "mapa/pedreira/pedreira_pedra.png",
+        "mapa/pedreira/pedreira_folhagem.png",
+        "mapa/pedreira/pedreira_madeira.png"
+      ],
+      "materiais": [
+        "pedreira_grama_a",
+        "pedreira_terra",
+        "pedreira_pedra",
+        "pedreira_folhagem",
+        "pedreira_creme",
+        "pedreira_fruta",
+        "pedreira_madeira"
+      ],
+      "dimensoes": [
+        16.3133,
+        16.5185,
+        1.686
+      ],
+      "bounds": {
+        "min": [
+          -8.2852,
+          -8.3561,
+          -1.036
+        ],
+        "max": [
+          8.0281,
+          8.1624,
+          0.65
+        ]
+      },
+      "tris": 2888,
+      "vento": "sim",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "entorno",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Entorno de 12×12 m com vão central livre, sem loja incorporada. Props internos são módulos separados, posicionados pelo jogo.",
+      "sha256": {
+        "arquivo": "650e66fa06879c91eb59a61aa8c02d210a20ad6232b2e308fe270931708c69e1",
+        "glb": "9a0b665a972f221fd36a02640b7468410d7fda9ca2f20df744a911e2dc816d81"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "entorno_16",
+      "arquivo": "mapa/pedreira/entorno_16.fbx",
+      "glb": "mapa/pedreira/entorno_16.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_grama_a.png",
+        "mapa/pedreira/pedreira_terra.png",
+        "mapa/pedreira/pedreira_pedra.png",
+        "mapa/pedreira/pedreira_folhagem.png",
+        "mapa/pedreira/pedreira_madeira.png"
+      ],
+      "materiais": [
+        "pedreira_grama_a",
+        "pedreira_terra",
+        "pedreira_pedra",
+        "pedreira_folhagem",
+        "pedreira_creme",
+        "pedreira_fruta",
+        "pedreira_madeira"
+      ],
+      "dimensoes": [
+        20.5852,
+        20.3933,
+        1.6988
+      ],
+      "bounds": {
+        "min": [
+          -10.2808,
+          -10.1594,
+          -1.0488
+        ],
+        "max": [
+          10.3044,
+          10.2339,
+          0.65
+        ]
+      },
+      "tris": 2888,
+      "vento": "sim",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "entorno",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Entorno de 16×16 m com vão central livre, sem loja incorporada. Props internos são módulos separados, posicionados pelo jogo.",
+      "sha256": {
+        "arquivo": "df724b36740dc4db42ef3f009a47b4345761a836d166094ebf9050f2ec7b3b73",
+        "glb": "4ccebf4da36f56b88e4c2df790b4aa884916f98e8b4e58f3bfd9cd01d93b7ca4"
+      }
+    },
+    {
+      "cenario": "Montanha rochosa",
+      "peca": "entorno_18",
+      "arquivo": "mapa/pedreira/entorno_18.fbx",
+      "glb": "mapa/pedreira/entorno_18.glb",
+      "textura": [
+        "mapa/pedreira/pedreira_grama_a.png",
+        "mapa/pedreira/pedreira_terra.png",
+        "mapa/pedreira/pedreira_pedra.png",
+        "mapa/pedreira/pedreira_folhagem.png",
+        "mapa/pedreira/pedreira_madeira.png"
+      ],
+      "materiais": [
+        "pedreira_grama_a",
+        "pedreira_terra",
+        "pedreira_pedra",
+        "pedreira_folhagem",
+        "pedreira_creme",
+        "pedreira_fruta",
+        "pedreira_madeira"
+      ],
+      "dimensoes": [
+        22.6035,
+        22.4873,
+        1.6922
+      ],
+      "bounds": {
+        "min": [
+          -11.3698,
+          -11.0849,
+          -1.0422
+        ],
+        "max": [
+          11.2336,
+          11.4024,
+          0.65
+        ]
+      },
+      "tris": 2888,
+      "vento": "sim",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "entorno",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Entorno de 18×18 m com vão central livre, sem loja incorporada. Props internos são módulos separados, posicionados pelo jogo.",
+      "sha256": {
+        "arquivo": "6a0bf4b062c5ded9919dcb67e2ef693bc0dbd31d83cd7afa21817d10f51c1407",
+        "glb": "bcb5bc7a94e25d35862f3a44742f8c54b2d256821fe4dc6bff89eb8ef8fb383e"
+      }
+    }
+  ]
+}

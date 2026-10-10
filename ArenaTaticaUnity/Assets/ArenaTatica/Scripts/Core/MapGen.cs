@@ -4,6 +4,9 @@ namespace ArenaTatica.Core
     // O tamanho vem de Board.SizeFor(jogadores); os grupos de spawn ficam em pares espelhados (0↔1, 2↔3, 4↔5).
     public static class MapGen
     {
+        // Cenários só mudam o visual; o sorteio usa a seed sem consumir o rng (o mapa da seed continua o mesmo).
+        public static readonly string[] Themes={"Pedreira","Bosque","Deserto","Neve","Vulcão"};
+        public static int Theme(MatchSetup setup) => setup.theme>=0?setup.theme%Themes.Length:(int)((setup.seed*2654435761u)>>16)%Themes.Length;
         public static void Generate(MatchState s,bool flat)
         {
             float k=s.width*s.height/144f;

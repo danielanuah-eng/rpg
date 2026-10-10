@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: 26b0b333-9150-4718-a798-057debec1dd2\njob_id: 26b0b333-9150-4718-a798-057debec1dd2\ndescription: A large full isolated GHOST SHIP sprite for Edgar's ultimate in a tactical fantasy boardgame, an ancient spectral sailing galleon seen in three-quarter HIGH TOP-DOWN view facing south-east. Long curved hull, two tall masts with elegantly tattered translucent sails, bow figurehead, ropes and old deck railings, a few small eerie ghost lights, absolutely no living sailor or human. Entire vessel looks made of pale mint-cyan ghostly energy with hollow dark-teal inner shadows, old bone-white sail highlights and narrow flowing spectral wisps below keel; no opaque brown wood mass, no ordinary blue ocean. Crisp professional pixel-art clusters and clean selective dark teal outlines, limited ghostly turquoise palette, readable strong silhouette, not a photorealistic painting. All sails, masts, bow and keel fully inside canvas with empty transparent margin. No ocean, ground, island, clouds, scene, text or logo. One coherent magical ship on TRANSPARENT background, no cannon firing.\nsize: 256x192px\ntransparent: True\nasset_id: 03ed757e-7e6a-5679-9bb2-14e3e6f37128\nasset_status: pending (saved when generation completes)\ncost: 1 generation\nstatus: processing (~10-40s)\n\nhint: get_image(job_id=\"26b0b333-9150-4718-a798-057debec1dd2\")"
+    }
+  ],
+  "isError": false
+}

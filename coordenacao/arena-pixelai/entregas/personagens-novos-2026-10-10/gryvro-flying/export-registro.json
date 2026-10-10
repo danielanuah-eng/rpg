@@ -1,0 +1,40 @@
+{
+  "actor": {
+    "owner": "gryvro",
+    "state_name": "Voo",
+    "character_id": "4113eef1-555d-4e1a-9435-06c24d2e7ca5",
+    "ready": true,
+    "rotations": {
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4113eef1-555d-4e1a-9435-06c24d2e7ca5/rotations/south.png?t=1791647747",
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4113eef1-555d-4e1a-9435-06c24d2e7ca5/rotations/east.png?t=1791647747",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4113eef1-555d-4e1a-9435-06c24d2e7ca5/rotations/north.png?t=1791647747",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4113eef1-555d-4e1a-9435-06c24d2e7ca5/rotations/west.png?t=1791647747",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4113eef1-555d-4e1a-9435-06c24d2e7ca5/rotations/south-east.png?t=1791647747",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4113eef1-555d-4e1a-9435-06c24d2e7ca5/rotations/north-east.png?t=1791647747",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4113eef1-555d-4e1a-9435-06c24d2e7ca5/rotations/north-west.png?t=1791647747",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/4113eef1-555d-4e1a-9435-06c24d2e7ca5/rotations/south-west.png?t=1791647747"
+    },
+    "folder": "gryvro-flying",
+    "stateKey": "flying"
+  },
+  "clips": [
+    {
+      "plan": "gryvro-flight",
+      "name": "flight",
+      "direction": "south-east",
+      "count": 9,
+      "cell": [
+        220,
+        208
+      ],
+      "group_id": "5c50e22d-bbcd-414e-b636-c4419f5980c8",
+      "fps": 8,
+      "loop": true,
+      "reverse": null
+    }
+  ],
+  "source_cell": [
+    220,
+    208
+  ]
+}

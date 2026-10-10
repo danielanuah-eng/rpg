@@ -1,0 +1,11 @@
+00:12.265  blend            | Read blend: "C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\coordenacao\arena-pixelai\entregas\mapa-blender\v02\fontes\bosque.blend"
+C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\coordenacao\arena-pixelai\entregas\mapa-blender\v02\fontes\construir_cenarios.py:798: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world.use_nodes=True
+00:14.828  image.write      | ERROR OpenImageIO write failed: Could not open file "C:\Users\Anuah\.thumbnails\large\blender_36180_72884628e71215defa8dda2baff7e502.png.png"
+00:57.406  render           | Saved: 'C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\coordenacao\arena-pixelai\entregas\mapa-blender\v02\previews\bosque-versao-03.png'
+Info: Saved as "bosque-versao-03.blend"
+RENDER_OK bosque-tabuleiro-12x12
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit
+Error: Not freed memory blocks: 1, total unfreed memory 0.000023 MB

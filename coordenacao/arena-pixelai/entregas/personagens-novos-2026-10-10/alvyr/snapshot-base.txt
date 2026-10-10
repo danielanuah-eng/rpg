@@ -1,0 +1,29 @@
+status: completed
+id: d4deca2a-dfe9-4233-b7f5-59a3efcc4d90
+name: Alvyr — Cervo Branco
+state_name: Idle
+directions: 8 (south, east, north, west, south-east, north-east, north-west, south-west)
+size: 128x128px
+view: high top-down
+style: , , 
+group: 91c1caf5-2f4a-4025-9561-73cc321d3174 (1 state)
+
+rotations:
+  south: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/south.png?t=1791646847
+  east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/east.png?t=1791646847
+  north: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/north.png?t=1791646847
+  west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/west.png?t=1791646847
+  south-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/south-east.png?t=1791646847
+  north-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/north-east.png?t=1791646847
+  north-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/north-west.png?t=1791646847
+  south-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/rotations/south-west.png?t=1791646847
+
+animations: none
+
+download: https://api.pixellab.ai/mcp/characters/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/download
+spritesheet: https://api.pixellab.ai/mcp/characters/d4deca2a-dfe9-4233-b7f5-59a3efcc4d90/spritesheet (this state only — one uniform-grid sheet PNG + layout JSON, zipped; cells pivot-centred)
+
+available_animations: attack, attack-back, dying, eat-end, eat-start, eating, hit-left, hit-right, idle-shaking-head, lie-down, rest-cycle, rest-idle, running-4-frames, running-6-frames, running-8-frames, running-headbutt, running-turn-left, running-turn-right, sleep-cycle, stand-up, start-sleep, swimming, wake-up, walk-4-frames, walk-6-frames, walk-8-frames, walk-turn-left, walk-turn-right
+
+actions: animate_character(character_id="d4deca2a-dfe9-4233-b7f5-59a3efcc4d90", ...) | create_character_state(character_id="d4deca2a-dfe9-4233-b7f5-59a3efcc4d90", ...) | delete_character(character_id="d4deca2a-dfe9-4233-b7f5-59a3efcc4d90")
+hint: animate_character(character_id="d4deca2a-dfe9-4233-b7f5-59a3efcc4d90", template_animation_id="attack")

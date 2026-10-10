@@ -1,0 +1,370 @@
+[
+  {
+    "direction": "north",
+    "frames": 9,
+    "cell": 232,
+    "source_sizes": [
+      [
+        196,
+        232
+      ],
+      [
+        196,
+        232
+      ],
+      [
+        196,
+        232
+      ],
+      [
+        196,
+        232
+      ],
+      [
+        196,
+        232
+      ],
+      [
+        196,
+        232
+      ],
+      [
+        196,
+        232
+      ],
+      [
+        196,
+        232
+      ],
+      [
+        196,
+        232
+      ]
+    ],
+    "first_last_visible_equal": false,
+    "unique_visible_colors": 82,
+    "alpha_partial": 0
+  },
+  {
+    "direction": "north-east",
+    "frames": 9,
+    "cell": 196,
+    "source_sizes": [
+      [
+        196,
+        180
+      ],
+      [
+        196,
+        180
+      ],
+      [
+        196,
+        180
+      ],
+      [
+        196,
+        180
+      ],
+      [
+        196,
+        180
+      ],
+      [
+        196,
+        180
+      ],
+      [
+        196,
+        180
+      ],
+      [
+        196,
+        180
+      ],
+      [
+        196,
+        180
+      ]
+    ],
+    "first_last_visible_equal": false,
+    "unique_visible_colors": 28,
+    "alpha_partial": 0
+  },
+  {
+    "direction": "east",
+    "frames": 9,
+    "cell": 204,
+    "source_sizes": [
+      [
+        204,
+        180
+      ],
+      [
+        204,
+        180
+      ],
+      [
+        204,
+        180
+      ],
+      [
+        204,
+        180
+      ],
+      [
+        204,
+        180
+      ],
+      [
+        204,
+        180
+      ],
+      [
+        204,
+        180
+      ],
+      [
+        204,
+        180
+      ],
+      [
+        204,
+        180
+      ]
+    ],
+    "first_last_visible_equal": false,
+    "unique_visible_colors": 57,
+    "alpha_partial": 0
+  },
+  {
+    "direction": "south-east",
+    "frames": 9,
+    "cell": 216,
+    "source_sizes": [
+      [
+        216,
+        196
+      ],
+      [
+        216,
+        196
+      ],
+      [
+        216,
+        196
+      ],
+      [
+        216,
+        196
+      ],
+      [
+        216,
+        196
+      ],
+      [
+        216,
+        196
+      ],
+      [
+        216,
+        196
+      ],
+      [
+        216,
+        196
+      ],
+      [
+        216,
+        196
+      ]
+    ],
+    "first_last_visible_equal": false,
+    "unique_visible_colors": 31,
+    "alpha_partial": 0
+  },
+  {
+    "direction": "south",
+    "frames": 9,
+    "cell": 224,
+    "source_sizes": [
+      [
+        216,
+        224
+      ],
+      [
+        216,
+        224
+      ],
+      [
+        216,
+        224
+      ],
+      [
+        216,
+        224
+      ],
+      [
+        216,
+        224
+      ],
+      [
+        216,
+        224
+      ],
+      [
+        216,
+        224
+      ],
+      [
+        216,
+        224
+      ],
+      [
+        216,
+        224
+      ]
+    ],
+    "first_last_visible_equal": false,
+    "unique_visible_colors": 31,
+    "alpha_partial": 0
+  },
+  {
+    "direction": "south-west",
+    "frames": 9,
+    "cell": 196,
+    "source_sizes": [
+      [
+        196,
+        188
+      ],
+      [
+        196,
+        188
+      ],
+      [
+        196,
+        188
+      ],
+      [
+        196,
+        188
+      ],
+      [
+        196,
+        188
+      ],
+      [
+        196,
+        188
+      ],
+      [
+        196,
+        188
+      ],
+      [
+        196,
+        188
+      ],
+      [
+        196,
+        188
+      ]
+    ],
+    "first_last_visible_equal": false,
+    "unique_visible_colors": 50,
+    "alpha_partial": 0
+  },
+  {
+    "direction": "west",
+    "frames": 9,
+    "cell": 208,
+    "source_sizes": [
+      [
+        208,
+        204
+      ],
+      [
+        208,
+        204
+      ],
+      [
+        208,
+        204
+      ],
+      [
+        208,
+        204
+      ],
+      [
+        208,
+        204
+      ],
+      [
+        208,
+        204
+      ],
+      [
+        208,
+        204
+      ],
+      [
+        208,
+        204
+      ],
+      [
+        208,
+        204
+      ]
+    ],
+    "first_last_visible_equal": false,
+    "unique_visible_colors": 72,
+    "alpha_partial": 0
+  },
+  {
+    "direction": "north-west",
+    "frames": 9,
+    "cell": 196,
+    "source_sizes": [
+      [
+        196,
+        188
+      ],
+      [
+        196,
+        188
+      ],
+      [
+        196,
+        188
+      ],
+      [
+        196,
+        188
+      ],
+      [
+        196,
+        188
+      ],
+      [
+        196,
+        188
+      ],
+      [
+        196,
+        188
+      ],
+      [
+        196,
+        188
+      ],
+      [
+        196,
+        188
+      ]
+    ],
+    "first_last_visible_equal": false,
+    "unique_visible_colors": 63,
+    "alpha_partial": 0
+  }
+]

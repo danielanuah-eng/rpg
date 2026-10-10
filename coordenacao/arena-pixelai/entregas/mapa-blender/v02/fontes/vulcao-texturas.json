@@ -1,0 +1,15 @@
+{
+  "origem": "PixelLab / Map",
+  "id": "7170fdbd-dcfc-4407-bcc9-80797ec75e5a",
+  "description": "Eight independent square seamless pixel art texture materials for an HD-2D low-poly 3D tactical arena. Perfect flat orthographic TOP DOWN surface fills square fully; no side faces, no fixed cast shadows, no baked directional lighting, no objects, opaque. Crisp pixels, restrained limited palette. 1). dark charcoal basalt ground with tiny dull rust-red ash flecks, no glowing whole floor. 2). similar basalt ground slightly warmer charcoal. 3). obsidian central mosaic with circular muted ember-orange rune. 4). stratified dark basalt cliff with sparse orange fissures. 5). carbonized black tree bark with sparse ember-red grain. 6). charcoal dried foliage and grey ash with sparse dull ember flecks. 7). charred timber planks. 8). rough basalt rock with restrained thin orange fissures.",
+  "selecao": {
+    "vulcao_grama_a": "fontes/pixellab-originais/vulcao/tile_0.png",
+    "vulcao_grama_b": "fontes/pixellab-originais/vulcao/tile_1.png",
+    "vulcao_zona": "fontes/pixellab-originais/vulcao/tile_5.png",
+    "vulcao_terra": "fontes/pixellab-originais/vulcao/tile_6.png",
+    "vulcao_casca": "fontes/pixellab-originais/vulcao/tile_8.png",
+    "vulcao_folhagem": "fontes/pixellab-originais/vulcao/tile_10.png",
+    "vulcao_madeira": "fontes/pixellab-originais/vulcao/tile_12.png",
+    "vulcao_pedra": "fontes/pixellab-originais/vulcao/tile_14.png"
+  }
+}

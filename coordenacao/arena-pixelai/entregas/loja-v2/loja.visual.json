@@ -1,0 +1,236 @@
+{
+  "status": "pronto_para_integrar",
+  "integration": "Claude confirmou ícones e fonte inicial de vendedor; reimportar cenário/vendedor estabilizados deste manifesto.",
+  "scene": {
+    "file": "loja-v2\\loja.png",
+    "size": [
+      3456,
+      216
+    ],
+    "sha256": "deaf92fa0fb5f3d6f5b032f3eff6185373bb91c21bf3d3e53f9f0f38cf9d3dda",
+    "alpha_zero": 0,
+    "alpha_partial": 0,
+    "alpha_opaque": 746496,
+    "destination": null,
+    "status": "optional_strip_requires_custom_384x216_slicing"
+  },
+  "frames": 9,
+  "frame_size": [
+    384,
+    216
+  ],
+  "fps": 5,
+  "loop": true,
+  "first_last_identical": true,
+  "shop_open_only": true,
+  "vendor_overlay": {
+    "file": "loja-v2\\vendedor.png",
+    "size": [
+      1440,
+      128
+    ],
+    "sha256": "9082ae8f95e4f1917e318846342e8e9b9e11b70aa97f576a5ee4dee841caa20c",
+    "alpha_zero": 0,
+    "alpha_partial": 0,
+    "alpha_opaque": 184320,
+    "frame_size": [
+      160,
+      128
+    ],
+    "origin_in_scene": [
+      112,
+      56
+    ]
+  },
+  "native_source_job": "fe3c9585-0fa0-4ca0-b1c4-1c5048bc705f",
+  "native_stabilized_image": "a8155ff9-20aa-49f8-b521-b06ad7db4046",
+  "moving_regions_in_vendor": [
+    [
+      64,
+      41,
+      94,
+      71
+    ],
+    [
+      8,
+      46,
+      60,
+      95
+    ]
+  ],
+  "background_exact_outside_regions": true,
+  "changed_pixels_by_frame": [
+    0,
+    1383,
+    1561,
+    1356,
+    1142,
+    1257,
+    1447,
+    1206,
+    0
+  ],
+  "items": [
+    {
+      "file": "loja-v2\\itens\\amuleto-vital.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "fbfea1dd75206c3fb99b8b613f69c20a2b46866b7fc7dcb6fb4994dfb2f9a135",
+      "alpha_zero": 2734,
+      "alpha_partial": 0,
+      "alpha_opaque": 1362,
+      "id": "amuleto-vital",
+      "job_id": "0e156975-7568-414f-8b4f-fd8f52374352",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/amuleto-vital.png",
+      "status": "integrado_confirmado_pelo_claude"
+    },
+    {
+      "file": "loja-v2\\itens\\armadilha-de-espinhos.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "bba83cfae13a4aa1ac134b7f7bba7e6f124c756f676d0c587a236917eb105188",
+      "alpha_zero": 2737,
+      "alpha_partial": 0,
+      "alpha_opaque": 1359,
+      "id": "armadilha-de-espinhos",
+      "job_id": "eadd848d-3318-4b17-b731-044c18ca3bf3",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/armadilha-de-espinhos.png",
+      "status": "integrado_confirmado_pelo_claude"
+    },
+    {
+      "file": "loja-v2\\itens\\botas-aladas.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "f0f5a8338bf8422ad0fbec1b01bcd9391a6dc922f2c1d530e32ed5c07f7304e8",
+      "alpha_zero": 2237,
+      "alpha_partial": 0,
+      "alpha_opaque": 1859,
+      "id": "botas-aladas",
+      "job_id": "8ce05403-d9ac-44f6-98a3-ea3dc2947e57",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/botas-aladas.png",
+      "status": "integrado_confirmado_pelo_claude"
+    },
+    {
+      "file": "loja-v2\\itens\\escudo-de-bronze.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "3053703d04f64919b621ba24e3e4873010291691bcfe6669fe685832c1eb2e87",
+      "alpha_zero": 742,
+      "alpha_partial": 0,
+      "alpha_opaque": 3354,
+      "id": "escudo-de-bronze",
+      "job_id": "45f6ebc6-d9e6-4ea1-a3f8-883cea014f4f",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/escudo-de-bronze.png",
+      "status": "integrado_confirmado_pelo_claude"
+    },
+    {
+      "file": "loja-v2\\itens\\furia.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "13a6da5330020d5da37161b6a9a869543871495ed783ec0aaf5b368d54adb24b",
+      "alpha_zero": 2709,
+      "alpha_partial": 0,
+      "alpha_opaque": 1387,
+      "id": "furia",
+      "job_id": "1193eed8-47bd-4b1d-a738-e8009683e8d8",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/furia.png",
+      "status": "integrado_confirmado_pelo_claude"
+    },
+    {
+      "file": "loja-v2\\itens\\lobo-de-cinzas.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "2344c686bcb1b023207ecd378a87ff6b12aaa3e1a87abe30f2c5cf7dcb2f4753",
+      "alpha_zero": 2887,
+      "alpha_partial": 0,
+      "alpha_opaque": 1209,
+      "id": "lobo-de-cinzas",
+      "job_id": "d437004d-f233-4ebd-a469-fb96e024e669",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/lobo-de-cinzas.png",
+      "status": "integrado_confirmado_pelo_claude"
+    },
+    {
+      "file": "loja-v2\\itens\\luneta.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "2eef2749bc5360ed4c4bd1503a655bfff27ef4d007931323d903cc66b80eef88",
+      "alpha_zero": 3183,
+      "alpha_partial": 0,
+      "alpha_opaque": 913,
+      "id": "luneta",
+      "job_id": "446c9ff4-ef2b-48a0-9d9d-c1de87a3aaa2",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/luneta.png",
+      "status": "integrado_confirmado_pelo_claude"
+    },
+    {
+      "file": "loja-v2\\itens\\passo-leve.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "9e754f7f9af2ae38350c34a6a44547638cc9304e93a99917d0c01788bf01b137",
+      "alpha_zero": 3130,
+      "alpha_partial": 0,
+      "alpha_opaque": 966,
+      "id": "passo-leve",
+      "job_id": "feab9734-eb9f-47c4-93c6-a1f3b7371d56",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/passo-leve.png",
+      "status": "integrado_confirmado_pelo_claude"
+    },
+    {
+      "file": "loja-v2\\itens\\pocao-de-cura.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "ad5f7d201ddfe64f70b246932a2a2ff1e750c9125e984b5bfb4c72aaeeb23eca",
+      "alpha_zero": 3053,
+      "alpha_partial": 0,
+      "alpha_opaque": 1043,
+      "id": "pocao-de-cura",
+      "job_id": "618d0780-364b-4fc8-b03a-ed8acc56971c",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/pocao-de-cura.png",
+      "status": "integrado_confirmado_pelo_claude"
+    },
+    {
+      "file": "loja-v2\\itens\\raio-arcano.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "06d99749234a30452bc25816d73e9296a2c6785c25d60f628c563b86306cd769",
+      "alpha_zero": 3450,
+      "alpha_partial": 0,
+      "alpha_opaque": 646,
+      "id": "raio-arcano",
+      "job_id": "fee7b05d-506a-48b6-bc82-076253239d3a",
+      "destination": "Assets/ArenaTatica/Resources/Sprites/Loja/raio-arcano.png",
+      "status": "integrado_confirmado_pelo_claude"
+    }
+  ],
+  "preview_is_game_asset": false,
+  "recommended_import": {
+    "source": "loja-v2/cenario/frame-01..09.png",
+    "destination": "Assets/ArenaTatica/Resources/Sprites/Vendedor/frame-01..09.png",
+    "frame_size": [
+      384,
+      216
+    ],
+    "fps": 5,
+    "reason": "ArenaHud replaces whole scene sprite. Full scene frames keep all environment visible without adding overlay composition."
+  }
+}

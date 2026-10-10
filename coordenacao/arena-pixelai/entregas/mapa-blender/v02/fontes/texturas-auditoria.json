@@ -1,0 +1,402 @@
+[
+  {
+    "material": "pedreira_grama_a",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "pedreira_grama_b",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "pedreira_zona",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "pedreira_terra",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "pedreira_casca",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "pedreira_folhagem",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "pedreira_madeira",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "pedreira_pedra",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "bosque_grama_a",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "bosque_grama_b",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "bosque_zona",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "bosque_terra",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "bosque_casca",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "bosque_folhagem",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "bosque_madeira",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "bosque_pedra",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "deserto_grama_a",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "deserto_grama_b",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "deserto_zona",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "deserto_terra",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "deserto_casca",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "deserto_folhagem",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "deserto_madeira",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "deserto_pedra",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "neve_grama_a",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "neve_grama_b",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "neve_zona",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "neve_terra",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "neve_casca",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "neve_folhagem",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "neve_madeira",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "neve_pedra",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "vulcao_grama_a",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "vulcao_grama_b",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "vulcao_zona",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "vulcao_terra",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "vulcao_casca",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "vulcao_folhagem",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "vulcao_madeira",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  },
+  {
+    "material": "vulcao_pedra",
+    "size": [
+      64,
+      64
+    ],
+    "alphaMin": 1.0,
+    "alphaMax": 1.0,
+    "originalConfirmado": true
+  }
+]

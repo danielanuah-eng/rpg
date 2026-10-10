@@ -1,0 +1,45 @@
+{
+  "actor_id": "0b822833-fbf2-4c17-805c-8b67a0097116",
+  "owner": "edgar",
+  "state_key": "ghost",
+  "rotations": [
+    "east",
+    "north-east",
+    "north-west",
+    "north",
+    "south-east",
+    "south-west",
+    "south",
+    "west"
+  ],
+  "frame_size": [
+    176,
+    180
+  ],
+  "pivot": "cell-center",
+  "no_rescaling": true,
+  "clips": [
+    {
+      "name": "walk",
+      "direction": "south-east",
+      "frame_count": 9,
+      "frame_size": [
+        176,
+        180
+      ],
+      "fps": 8,
+      "loop": true,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "edgar-ghost/animacoes/walk/south-east.png",
+      "sha256": "79ddd96731a8485fdba14fd6241f8a17a8afbe5a38184a137007dcf8f48d932a",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "6f037a17-2ede-45b9-acf0-805bb8b92bc2"
+    }
+  ],
+  "integration": "pendente_claude"
+}

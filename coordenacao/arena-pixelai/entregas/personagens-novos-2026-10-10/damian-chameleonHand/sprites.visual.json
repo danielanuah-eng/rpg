@@ -1,0 +1,23 @@
+{
+  "actor_id": "816a9e84-98fb-41c7-a2a6-f3ff694ba79f",
+  "owner": "damian",
+  "state_key": "chameleonHand",
+  "rotations": [
+    "east",
+    "north-east",
+    "north-west",
+    "north",
+    "south-east",
+    "south-west",
+    "south",
+    "west"
+  ],
+  "frame_size": [
+    192,
+    172
+  ],
+  "pivot": "cell-center",
+  "no_rescaling": true,
+  "clips": [],
+  "integration": "pendente_claude"
+}

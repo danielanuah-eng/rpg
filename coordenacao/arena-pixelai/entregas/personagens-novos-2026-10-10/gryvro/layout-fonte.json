@@ -1,0 +1,85 @@
+{
+  "character": {
+    "id": "74642151-8059-4dfc-b56a-5f799926785e",
+    "name": "Idle",
+    "prompt": "Full-body original quadrupedal fantasy creature Gryvro, a glass gryphon with anatomically recognizable eagle head and curved eagle beak, powerful feline lion body on FOUR legs, front eagle TALONS and rear feline paws, long crystalline tail, and TWO articulated feathered eagle wings. Entire creature is living translucent faceted glass, ice-blue clear surfaces with silvery mercury edges, milky white internal core and cyan reflections; no fur, no metal armor, no rider. Wings folded clearly along its back in calm standing grounded idle pose, ready to open for flight, razor-sharp clear front talons visible. Agile light fragile beautiful creature, expressive intelligent deep turquoise eyes. New original design interpreting Arcanoclisma Grifo-de-Vidro, readable charming tactical boardgame pixel art, small compact torso with enough canvas margin for tail and wings. Consistent top-down camera. No attack in base pose, transparent background, whole creature uncropped.",
+    "size": {
+      "width": 128,
+      "height": 128
+    },
+    "directions": 8,
+    "view": "high top-down"
+  },
+  "spritesheet": {
+    "path": "Gryvro_Grifo_de_Vidro-Idle.png",
+    "cell_size": {
+      "width": 128,
+      "height": 128
+    },
+    "sheet_size": {
+      "width": 1152,
+      "height": 768
+    },
+    "columns": 9,
+    "pivot": "cell-center",
+    "rows": [
+      {
+        "row": 0,
+        "type": "rotations",
+        "frame_count": 8,
+        "directions": [
+          "south",
+          "south-east",
+          "east",
+          "north-east",
+          "north",
+          "north-west",
+          "west",
+          "south-west"
+        ]
+      },
+      {
+        "row": 1,
+        "type": "animation",
+        "frame_count": 8,
+        "animation": "walk",
+        "animation_group_id": "0fa0eafd-a5e2-4f53-a92a-f35c6b3ecb9a",
+        "direction": "south-east"
+      },
+      {
+        "row": 2,
+        "type": "animation",
+        "frame_count": 9,
+        "animation": "idle",
+        "animation_group_id": "5a52d634-b5fe-4f94-9452-268eac57fafb",
+        "direction": "south-east"
+      },
+      {
+        "row": 3,
+        "type": "animation",
+        "frame_count": 9,
+        "animation": "idle",
+        "animation_group_id": "5a52d634-b5fe-4f94-9452-268eac57fafb",
+        "direction": "north-east"
+      },
+      {
+        "row": 4,
+        "type": "animation",
+        "frame_count": 9,
+        "animation": "idle",
+        "animation_group_id": "5a52d634-b5fe-4f94-9452-268eac57fafb",
+        "direction": "north-west"
+      },
+      {
+        "row": 5,
+        "type": "animation",
+        "frame_count": 9,
+        "animation": "idle",
+        "animation_group_id": "5a52d634-b5fe-4f94-9452-268eac57fafb",
+        "direction": "south-west"
+      }
+    ]
+  },
+  "export_version": "1.0",
+  "export_date": "2026-10-10T16:24:28.070663+00:00"
+}

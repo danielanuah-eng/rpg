@@ -1,0 +1,15 @@
+{
+  "origem": "PixelLab / Map",
+  "id": "a90a03b9-bf41-479c-9f49-cc2db75a958f",
+  "description": "1). warm pale ochre sand with fine pixel ripples. 2). very similar sandy ground slightly darker cream ochre. 3). old sandstone mosaic with restrained turquoise central circular rune. 4). stratified ochre sandstone cliff and dry earth. 5). palm tree fibrous tan trunk bark. 6). green olive cactus skin with ribs and scattered little thorns, also usable on palm leaves. 7). weathered desert tan wooden planks. 8). pale old sandstone with worn cracks.",
+  "selecao": {
+    "deserto_grama_a": "fontes/pixellab-originais/deserto/tile_0.png",
+    "deserto_grama_b": "fontes/pixellab-originais/deserto/tile_1.png",
+    "deserto_zona": "fontes/pixellab-originais/deserto/tile_5.png",
+    "deserto_terra": "fontes/pixellab-originais/deserto/tile_6.png",
+    "deserto_casca": "fontes/pixellab-originais/deserto/tile_8.png",
+    "deserto_folhagem": "fontes/pixellab-originais/deserto/tile_10.png",
+    "deserto_madeira": "fontes/pixellab-originais/deserto/tile_12.png",
+    "deserto_pedra": "fontes/pixellab-originais/deserto/tile_14.png"
+  }
+}

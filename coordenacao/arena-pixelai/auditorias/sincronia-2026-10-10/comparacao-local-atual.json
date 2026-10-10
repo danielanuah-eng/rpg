@@ -1,0 +1,50 @@
+{
+  "snapshot_files": 380,
+  "changed": [
+    {
+      "character": "Damian",
+      "file": "hit_north-west.png",
+      "current_exists": true
+    },
+    {
+      "character": "Damian",
+      "file": "pistol_south-east.png",
+      "current_exists": true
+    },
+    {
+      "character": "Ciantia",
+      "file": "hit_north-west.png",
+      "current_exists": true
+    },
+    {
+      "character": "Teantha",
+      "file": "attack_north-west.png",
+      "current_exists": true
+    },
+    {
+      "character": "Devon",
+      "file": "death_south-east.png",
+      "current_exists": true
+    },
+    {
+      "character": "Devon",
+      "file": "idle_north-west.png",
+      "current_exists": true
+    },
+    {
+      "character": "Ezequiela",
+      "file": "hit_north-west.png",
+      "current_exists": true
+    },
+    {
+      "character": "TchuTchaBerserk",
+      "file": "idle_south-west.png",
+      "current_exists": true
+    },
+    {
+      "character": "ArqueiroJack",
+      "file": "ultshot_south-west.png",
+      "current_exists": true
+    }
+  ]
+}

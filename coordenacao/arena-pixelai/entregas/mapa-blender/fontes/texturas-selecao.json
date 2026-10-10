@@ -1,0 +1,18 @@
+{
+  "origem": "PixelLab Map / create_tiles_pro",
+  "assetId": "969ac24a-abe9-4723-8531-baabde2c70e3",
+  "dimensoes": [64, 64],
+  "alfaMedido": {"min": 1, "max": 1},
+  "semEdicaoDePixels": true,
+  "selecao": {
+    "bosque_grama_a": "tile_0.png",
+    "bosque_grama_b": "tile_1.png",
+    "bosque_zona": "tile_5.png",
+    "bosque_terra": "tile_6.png",
+    "bosque_casca": "tile_8.png",
+    "bosque_folhagem": "tile_10.png",
+    "bosque_madeira": "tile_12.png",
+    "bosque_pedra": "tile_14.png"
+  },
+  "observacao": "O serviço devolveu 16 tiles, dois por material descrito. Selecionados manualmente após inspeção da folha de contato; alternativas preservadas nos originais. A grama B usa a segunda variação verde para manter o xadrez discreto."
+}

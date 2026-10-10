@@ -1,0 +1,2693 @@
+{
+  "schemaVersion": 1,
+  "capturedAtUtc": "2026-10-10T07:53:42.550706+00:00",
+  "project": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\ArenaTaticaUnity",
+  "method": "PNG decoded with Pillow; exact alpha histogram and SHA256; source files unchanged",
+  "files": [
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/ArqueiroJack/east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11898,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 4486,
+      "bbox": [
+        33,
+        5,
+        95,
+        124
+      ],
+      "sha256": "a2be055d9cc53b554f04c37ef6877f57c72b3baff71df45419636e7115132a88",
+      "bytes": 4309,
+      "modifiedUtc": "2026-10-10T07:50:01.786480+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/ArqueiroJack/north-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10270,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6114,
+      "bbox": [
+        23,
+        3,
+        99,
+        123
+      ],
+      "sha256": "20e121c215545aa9c871695f0e9b0070cba16f9068ee3a99a8a7baa272a127b8",
+      "bytes": 4527,
+      "modifiedUtc": "2026-10-10T07:50:01.789926+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/ArqueiroJack/north-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10256,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6128,
+      "bbox": [
+        26,
+        3,
+        108,
+        123
+      ],
+      "sha256": "ccc9c094b662b4653c656aa9a25dd94e3524b922fb13251ebd72f5ba4ec2fa72",
+      "bytes": 4711,
+      "modifiedUtc": "2026-10-10T07:50:02.872750+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/ArqueiroJack/north.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 9721,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6663,
+      "bbox": [
+        11,
+        5,
+        103,
+        122
+      ],
+      "sha256": "bd71fbedb0a41e60c16a4d0cb0ca3e53cebfd8643a5944310091dabdfce1ed23",
+      "bytes": 4672,
+      "modifiedUtc": "2026-10-10T07:50:02.869051+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/ArqueiroJack/south-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10208,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6176,
+      "bbox": [
+        21,
+        4,
+        103,
+        124
+      ],
+      "sha256": "08436d56c6c2aeda8ea18562dbb6b6ed7fe98a3d09221c80ff5b243a67861bab",
+      "bytes": 6357,
+      "modifiedUtc": "2026-10-10T07:50:01.783384+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/ArqueiroJack/south-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10361,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6023,
+      "bbox": [
+        25,
+        4,
+        106,
+        125
+      ],
+      "sha256": "667a95711ed01b713be6ab908108daf05ecc40936e2099d7c4b6275f2777650a",
+      "bytes": 6248,
+      "modifiedUtc": "2026-10-10T07:50:02.888951+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/ArqueiroJack/south.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 9657,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6727,
+      "bbox": [
+        24,
+        4,
+        116,
+        124
+      ],
+      "sha256": "ea759e5d109f42efd99b42a67e09714b4ce4b67eff3f4f601216e58cc208304b",
+      "bytes": 6448,
+      "modifiedUtc": "2026-10-10T07:50:01.777871+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/ArqueiroJack/west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11850,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 4534,
+      "bbox": [
+        19,
+        5,
+        95,
+        124
+      ],
+      "sha256": "6ac1457cff1fae7ba944eeac78e014c53ddf6aa9b786bdc10b289fed9d2d12eb",
+      "bytes": 4289,
+      "modifiedUtc": "2026-10-10T07:50:02.881658+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Cenarios/loja.png",
+      "width": 384,
+      "height": 216,
+      "alphaZeroPixels": 0,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 82944,
+      "bbox": [
+        0,
+        0,
+        384,
+        216
+      ],
+      "sha256": "2ba8a7b11448d416b9c9613b6a48dde9bef63f9ff6fbab448af24e157933b660",
+      "bytes": 103239,
+      "modifiedUtc": "2026-10-10T07:28:18.871002+00:00",
+      "metaExists": false,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/attack_north-east.png",
+      "width": 1512,
+      "height": 168,
+      "alphaZeroPixels": 202716,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 51300,
+      "bbox": [
+        44,
+        24,
+        1490,
+        144
+      ],
+      "sha256": "e17917c5931d4e8e3be512eaa15bf38531d99a26297d2af284753ba44fc417bc",
+      "bytes": 36177,
+      "modifiedUtc": "2026-10-10T07:45:14.793827+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/attack_north-west.png",
+      "width": 1512,
+      "height": 168,
+      "alphaZeroPixels": 202542,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 51474,
+      "bbox": [
+        42,
+        23,
+        1465,
+        144
+      ],
+      "sha256": "ce759197f5ade025c789346b2d202fad98a44954e595f1ca703cf6bf5be58528",
+      "bytes": 40819,
+      "modifiedUtc": "2026-10-10T07:45:14.770188+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/attack_south-east.png",
+      "width": 1548,
+      "height": 172,
+      "alphaZeroPixels": 213486,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 52770,
+      "bbox": [
+        42,
+        26,
+        1509,
+        147
+      ],
+      "sha256": "9fde571561667d5973e644f83d433d04faf008702bdfbd8bb035e15140cc739a",
+      "bytes": 46851,
+      "modifiedUtc": "2026-10-10T07:45:14.815739+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/attack_south-west.png",
+      "width": 1548,
+      "height": 172,
+      "alphaZeroPixels": 215564,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 50692,
+      "bbox": [
+        56,
+        25,
+        1517,
+        147
+      ],
+      "sha256": "8f5eb504b3ed781cf3494bd8114c9e39176908492e5595251d0b1da12bbc6bcb",
+      "bytes": 50341,
+      "modifiedUtc": "2026-10-10T07:45:14.737082+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/death_north-east.png",
+      "width": 1512,
+      "height": 168,
+      "alphaZeroPixels": 210390,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 43626,
+      "bbox": [
+        44,
+        24,
+        1484,
+        148
+      ],
+      "sha256": "9786622af22766cbb4878209063a4fa2f4c62c59fd06519dda29ecc6f8f40452",
+      "bytes": 42633,
+      "modifiedUtc": "2026-10-10T07:45:14.864918+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/death_north-west.png",
+      "width": 1512,
+      "height": 168,
+      "alphaZeroPixels": 209617,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 44399,
+      "bbox": [
+        42,
+        24,
+        1493,
+        149
+      ],
+      "sha256": "886b9c4128d414ff0a4d43543d3169a447efddd1422a4c85e1a54c56dcdd148c",
+      "bytes": 44806,
+      "modifiedUtc": "2026-10-10T07:45:14.903455+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/death_south-east.png",
+      "width": 1548,
+      "height": 172,
+      "alphaZeroPixels": 219553,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 46703,
+      "bbox": [
+        42,
+        26,
+        1511,
+        149
+      ],
+      "sha256": "41d73265c650df35504cf7eaec2bc9a2e699c24c314e3e1132e407e9931bed68",
+      "bytes": 50439,
+      "modifiedUtc": "2026-10-10T07:45:14.927027+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/death_south-west.png",
+      "width": 1548,
+      "height": 172,
+      "alphaZeroPixels": 223272,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 42984,
+      "bbox": [
+        56,
+        26,
+        1525,
+        149
+      ],
+      "sha256": "d3202dc6091c480d47b5c113b2c0bcd1d4d83954e3757b980ab5f1ca45aaa463",
+      "bytes": 48559,
+      "modifiedUtc": "2026-10-10T07:45:14.840821+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11090,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5294,
+      "bbox": [
+        21,
+        5,
+        101,
+        124
+      ],
+      "sha256": "006ad07ceec999a81be9ce5d2958280746764105a0aff638a90b09c15bf2f62e",
+      "bytes": 5309,
+      "modifiedUtc": "2026-10-10T07:45:14.365995+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/hit_north-east.png",
+      "width": 1176,
+      "height": 168,
+      "alphaZeroPixels": 159715,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 37853,
+      "bbox": [
+        44,
+        24,
+        1132,
+        144
+      ],
+      "sha256": "7421d54648f553481510af007cbc054f8883b83757501604f7954c80e832590e",
+      "bytes": 32786,
+      "modifiedUtc": "2026-10-10T07:45:14.945030+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/hit_north-west.png",
+      "width": 1176,
+      "height": 168,
+      "alphaZeroPixels": 160169,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 37399,
+      "bbox": [
+        42,
+        24,
+        1150,
+        148
+      ],
+      "sha256": "4c89f40c6ea70bfc3b6e6ce1ebe19493905905abd1a4d11663f00567aa3969bf",
+      "bytes": 38045,
+      "modifiedUtc": "2026-10-10T07:45:14.966480+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/hit_south-east.png",
+      "width": 1204,
+      "height": 172,
+      "alphaZeroPixels": 166189,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 40899,
+      "bbox": [
+        42,
+        25,
+        1160,
+        147
+      ],
+      "sha256": "d159ca164090886d00a823efc5cbc113a91d4875ec9792c3c87428fb3b87c942",
+      "bytes": 41340,
+      "modifiedUtc": "2026-10-10T07:45:14.989512+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/hit_south-west.png",
+      "width": 1204,
+      "height": 172,
+      "alphaZeroPixels": 167847,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 39241,
+      "bbox": [
+        56,
+        26,
+        1172,
+        147
+      ],
+      "sha256": "40005daa87b7a95d79bfdf80cc5c1d1171a397c1173e98eba109739d2ebbd7e0",
+      "bytes": 41534,
+      "modifiedUtc": "2026-10-10T07:45:15.008794+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/idle_north-east.png",
+      "width": 1512,
+      "height": 168,
+      "alphaZeroPixels": 205116,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 48900,
+      "bbox": [
+        44,
+        22,
+        1470,
+        148
+      ],
+      "sha256": "538ac8fa886e7cfe710027e9c33ddb06cceef0f7a19eaddf7ee0b1945235aa56",
+      "bytes": 39616,
+      "modifiedUtc": "2026-10-10T07:45:14.573311+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/idle_north-west.png",
+      "width": 1512,
+      "height": 168,
+      "alphaZeroPixels": 202805,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 51211,
+      "bbox": [
+        42,
+        24,
+        1468,
+        144
+      ],
+      "sha256": "ceadfef1a57ac8727053ca2059abf143838bb85f43ef3ca09de7a034aecac555",
+      "bytes": 36923,
+      "modifiedUtc": "2026-10-10T07:45:14.620837+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/idle_south-east.png",
+      "width": 1548,
+      "height": 172,
+      "alphaZeroPixels": 212442,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 53814,
+      "bbox": [
+        42,
+        25,
+        1508,
+        147
+      ],
+      "sha256": "607e1e6b69f6d22fac4abf3e9c9bb941a2a1a296c55f38714c554d86c8ad8dc0",
+      "bytes": 45529,
+      "modifiedUtc": "2026-10-10T07:45:14.642560+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/idle_south-west.png",
+      "width": 1548,
+      "height": 172,
+      "alphaZeroPixels": 216942,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 49314,
+      "bbox": [
+        56,
+        26,
+        1493,
+        147
+      ],
+      "sha256": "7a82c15711f8183c4f7a55ef0dcc116bc8933b6fc98f476422e987decca74809",
+      "bytes": 46595,
+      "modifiedUtc": "2026-10-10T07:45:14.600342+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/north-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10931,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5453,
+      "bbox": [
+        24,
+        4,
+        95,
+        124
+      ],
+      "sha256": "90a42b51afffc76a53781f13a36e5242f1394f8780ac505e6e76758c3e9b09c2",
+      "bytes": 5183,
+      "modifiedUtc": "2026-10-10T07:45:14.370553+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/north-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10514,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5870,
+      "bbox": [
+        22,
+        4,
+        108,
+        124
+      ],
+      "sha256": "abbd04aef95fe100d240cc8e9dae71d8b62f3e581f6cf4f8841b0e58df1944a4",
+      "bytes": 5805,
+      "modifiedUtc": "2026-10-10T07:45:14.384324+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/north.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10055,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6329,
+      "bbox": [
+        25,
+        5,
+        104,
+        122
+      ],
+      "sha256": "48b569d932a343a3203e45d5172419ac1f15eeba4b6f0437dd6ced6e1a852a6f",
+      "bytes": 5455,
+      "modifiedUtc": "2026-10-10T07:45:14.380806+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/south-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10555,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5829,
+      "bbox": [
+        20,
+        4,
+        108,
+        125
+      ],
+      "sha256": "a523b52c170a105046f89a1be9d143499ab19f16c31ab0b84c36c316f1b02cff",
+      "bytes": 6345,
+      "modifiedUtc": "2026-10-10T07:45:14.359079+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/south-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11058,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5326,
+      "bbox": [
+        34,
+        4,
+        103,
+        125
+      ],
+      "sha256": "3902a1f3db70aae90b750e890f5236b862082add9aa83af455bf238d29114fcb",
+      "bytes": 5848,
+      "modifiedUtc": "2026-10-10T07:45:14.393493+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/south.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 9990,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6394,
+      "bbox": [
+        25,
+        4,
+        104,
+        124
+      ],
+      "sha256": "2f2590ab19e1f76e6e9c5a8ed7b75f0659caa6a71b288cc39ebd9710b3b38a43",
+      "bytes": 6269,
+      "modifiedUtc": "2026-10-10T07:45:14.349366+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/summon_north-east.png",
+      "width": 1512,
+      "height": 168,
+      "alphaZeroPixels": 201398,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 52618,
+      "bbox": [
+        44,
+        23,
+        1477,
+        144
+      ],
+      "sha256": "24358f6927a93a058dcf2a505f7ce65eccd8523c4615f4050e54c60d351b6be4",
+      "bytes": 37552,
+      "modifiedUtc": "2026-10-10T07:45:15.105203+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/summon_north-west.png",
+      "width": 1512,
+      "height": 168,
+      "alphaZeroPixels": 198015,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 56001,
+      "bbox": [
+        42,
+        23,
+        1477,
+        145
+      ],
+      "sha256": "d05b8d7c73be850e221a7db436f4154a03273912314b46706f050c5285ac2493",
+      "bytes": 43024,
+      "modifiedUtc": "2026-10-10T07:45:15.081811+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/summon_south-east.png",
+      "width": 1548,
+      "height": 172,
+      "alphaZeroPixels": 202164,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 64092,
+      "bbox": [
+        42,
+        22,
+        1508,
+        151
+      ],
+      "sha256": "4b9a4c24f9f446d23f0e31d40d64f308365871d568f75f1564f8a22cea2a1fcb",
+      "bytes": 55913,
+      "modifiedUtc": "2026-10-10T07:45:15.035217+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/summon_south-west.png",
+      "width": 1548,
+      "height": 172,
+      "alphaZeroPixels": 208255,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 58001,
+      "bbox": [
+        56,
+        26,
+        1512,
+        149
+      ],
+      "sha256": "c454dbe85836433fa3a6276164a07a313755432f78aca6254f7374bd9713dd5f",
+      "bytes": 52357,
+      "modifiedUtc": "2026-10-10T07:45:15.062738+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/walk_north-east.png",
+      "width": 1512,
+      "height": 168,
+      "alphaZeroPixels": 206512,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 47504,
+      "bbox": [
+        44,
+        20,
+        1458,
+        147
+      ],
+      "sha256": "967513c3c00e51f3a555dc646d48018ac7ab7cfc2b4c528f1b89b1a605d72cd3",
+      "bytes": 38423,
+      "modifiedUtc": "2026-10-10T07:45:15.172394+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/walk_north-west.png",
+      "width": 1512,
+      "height": 168,
+      "alphaZeroPixels": 202840,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 51176,
+      "bbox": [
+        42,
+        23,
+        1470,
+        145
+      ],
+      "sha256": "fab536cd1134a20564c73b5248605e35766424bded180ee69b4fc0576610cdbf",
+      "bytes": 44741,
+      "modifiedUtc": "2026-10-10T07:45:15.191762+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/walk_south-east.png",
+      "width": 1548,
+      "height": 172,
+      "alphaZeroPixels": 213847,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 52409,
+      "bbox": [
+        42,
+        25,
+        1508,
+        148
+      ],
+      "sha256": "59600e301710583098c10aa76675e7838ee36c0f077283f28485d7f1d53ad2a0",
+      "bytes": 51386,
+      "modifiedUtc": "2026-10-10T07:45:15.151937+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/walk_south-west.png",
+      "width": 1548,
+      "height": 172,
+      "alphaZeroPixels": 217115,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 49141,
+      "bbox": [
+        56,
+        26,
+        1501,
+        151
+      ],
+      "sha256": "bf28e7f6b9a8fec2f0b711e323e113441e3e0fad7676140f6cbb90f2ca27f180",
+      "bytes": 50360,
+      "modifiedUtc": "2026-10-10T07:45:15.128837+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ciantia/west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11172,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5212,
+      "bbox": [
+        33,
+        5,
+        105,
+        124
+      ],
+      "sha256": "974139714ce1550124e5f49a97e57ce15004dc97eed00d57daaf2412033d186e",
+      "bytes": 5087,
+      "modifiedUtc": "2026-10-10T07:45:14.389190+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Damian/east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11015,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5369,
+      "bbox": [
+        20,
+        4,
+        101,
+        125
+      ],
+      "sha256": "75f74873b49f2d72206b33dbf67e659b55ad55142972df4354063bfe76e3b4aa",
+      "bytes": 4911,
+      "modifiedUtc": "2026-10-10T07:49:47.732479+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Damian/north-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11367,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5017,
+      "bbox": [
+        20,
+        5,
+        99,
+        124
+      ],
+      "sha256": "593598d0995af507bcf4501fa2623da216c0b4d2fc0be52871beafab5212e7ff",
+      "bytes": 4885,
+      "modifiedUtc": "2026-10-10T07:49:47.736496+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Damian/north-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10481,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5903,
+      "bbox": [
+        22,
+        4,
+        106,
+        123
+      ],
+      "sha256": "005ae2079469af4622b0ec9f0b1ca21bc66cd84df7eae16d935f3d9149279307",
+      "bytes": 5556,
+      "modifiedUtc": "2026-10-10T07:49:47.744758+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Damian/north.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10352,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6032,
+      "bbox": [
+        21,
+        6,
+        107,
+        124
+      ],
+      "sha256": "8820c154f9215955141604adfb3f6d4e40102d0f36318eb0342e51eedbf59df5",
+      "bytes": 5167,
+      "modifiedUtc": "2026-10-10T07:49:47.740101+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Damian/south-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10311,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6073,
+      "bbox": [
+        20,
+        4,
+        104,
+        124
+      ],
+      "sha256": "52712ebb873e5a186a6ff38c6147dd70dceeb157fa6ae14d9c83af20e580a60e",
+      "bytes": 6210,
+      "modifiedUtc": "2026-10-10T07:49:47.727814+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Damian/south-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10918,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5466,
+      "bbox": [
+        27,
+        4,
+        107,
+        124
+      ],
+      "sha256": "f71bc5b4952102b5e67b9d797468e1154183e2b6f576f0bc76d5158d1047bcb0",
+      "bytes": 5395,
+      "modifiedUtc": "2026-10-10T07:49:47.753038+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Damian/south.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 9911,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6473,
+      "bbox": [
+        19,
+        4,
+        108,
+        124
+      ],
+      "sha256": "133391be70adfc4f2d3461f7d6f4c2ae587cddfc85ff3c3668c6b996d7308a92",
+      "bytes": 5967,
+      "modifiedUtc": "2026-10-10T07:49:47.722795+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Damian/west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11404,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 4980,
+      "bbox": [
+        26,
+        5,
+        107,
+        124
+      ],
+      "sha256": "fb59012b2a030f4f555319ff39369efe93d3e0dbdd7ff2d620503792e5da634a",
+      "bytes": 4226,
+      "modifiedUtc": "2026-10-10T07:49:47.749512+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Devon/east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11421,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 4963,
+      "bbox": [
+        32,
+        5,
+        97,
+        124
+      ],
+      "sha256": "6ed0f883ae3a6a7c306fc9512c703a3010b7d6d95b7e3a5651e0c6f30ec3ef9d",
+      "bytes": 5033,
+      "modifiedUtc": "2026-10-10T07:49:42.012506+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Devon/north-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11015,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5369,
+      "bbox": [
+        27,
+        5,
+        106,
+        124
+      ],
+      "sha256": "64156af410bbfd349bbeb5b465b8f3a4d475504c9266a0f5af3447a2db3b21d3",
+      "bytes": 4504,
+      "modifiedUtc": "2026-10-10T07:49:42.015014+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Devon/north-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10501,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5883,
+      "bbox": [
+        3,
+        5,
+        100,
+        124
+      ],
+      "sha256": "7244b6eb818f11f273b2ae32c567e7ffc8e56a74af447027baa11db08645d06a",
+      "bytes": 5072,
+      "modifiedUtc": "2026-10-10T07:49:42.024842+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Devon/north.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 9914,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6470,
+      "bbox": [
+        8,
+        5,
+        108,
+        123
+      ],
+      "sha256": "13a6c51f19a25b221572fd3a541a1db03080807a894dad59cda89961066efa24",
+      "bytes": 5011,
+      "modifiedUtc": "2026-10-10T07:49:42.020634+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Devon/south-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10517,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5867,
+      "bbox": [
+        29,
+        6,
+        122,
+        124
+      ],
+      "sha256": "fcbc74e8a1437b4f5be1ac9e7472d28c5a3058a579f0deb19779f71da78da063",
+      "bytes": 6443,
+      "modifiedUtc": "2026-10-10T07:49:42.007982+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Devon/south-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11002,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5382,
+      "bbox": [
+        20,
+        6,
+        102,
+        124
+      ],
+      "sha256": "c9876088737f2d72c767889c30204706669e38c333ac20f890e4da4f1a85a58e",
+      "bytes": 6053,
+      "modifiedUtc": "2026-10-10T07:49:42.032624+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Devon/south.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 9887,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6497,
+      "bbox": [
+        24,
+        5,
+        122,
+        124
+      ],
+      "sha256": "ac742a6f30c2b770f7af3ca1482ae2df0258d393443768c426e6269ea9625405",
+      "bytes": 6533,
+      "modifiedUtc": "2026-10-10T07:49:42.001710+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Devon/west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11735,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 4649,
+      "bbox": [
+        28,
+        6,
+        95,
+        124
+      ],
+      "sha256": "22df089da613a7d00e6630804d5078c65aff4125d5b937090cc645374af402da",
+      "bytes": 4609,
+      "modifiedUtc": "2026-10-10T07:49:42.028732+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Diantus/east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11151,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5233,
+      "bbox": [
+        19,
+        6,
+        128,
+        124
+      ],
+      "sha256": "116f5e3cf645182bf6bf87b6b1905143066dc92b05f9df2ca270599a3257efff",
+      "bytes": 5825,
+      "modifiedUtc": "2026-10-10T07:49:45.239504+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Diantus/north-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11160,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5224,
+      "bbox": [
+        19,
+        4,
+        128,
+        123
+      ],
+      "sha256": "bb9d72b0127091c6f56f7d6bad67ef9971b415d1c958d4800cdbe2b9ec931fe1",
+      "bytes": 5408,
+      "modifiedUtc": "2026-10-10T07:49:45.257678+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Diantus/north-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10333,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6051,
+      "bbox": [
+        3,
+        4,
+        128,
+        123
+      ],
+      "sha256": "bd9162934c26b708fac0df9221a49f0055ec6ca12b7cbec138e11ff1f9d60985",
+      "bytes": 6291,
+      "modifiedUtc": "2026-10-10T07:49:45.268245+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Diantus/north.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10218,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6166,
+      "bbox": [
+        1,
+        4,
+        128,
+        122
+      ],
+      "sha256": "b2fc829ecca7141b63f56e96d59a810383f506200fd7fd8bdbbf4039c02201da",
+      "bytes": 5923,
+      "modifiedUtc": "2026-10-10T07:49:45.263825+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Diantus/south-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10091,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6293,
+      "bbox": [
+        6,
+        5,
+        128,
+        124
+      ],
+      "sha256": "1eab31d0ed661a55e5ea44afcc5c3eabd56d74b63c9165613dcba3a75ec0b5a1",
+      "bytes": 7129,
+      "modifiedUtc": "2026-10-10T07:49:45.235910+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Diantus/south-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10724,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5660,
+      "bbox": [
+        23,
+        5,
+        128,
+        125
+      ],
+      "sha256": "4030fb6e5dfceac78b0e4e6beaae3ebaa22f192bc9f893d1b29c2f0f37b3298f",
+      "bytes": 6483,
+      "modifiedUtc": "2026-10-10T07:49:45.276344+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Diantus/south.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 9485,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6899,
+      "bbox": [
+        5,
+        3,
+        128,
+        124
+      ],
+      "sha256": "4621125fc78d73b2b92e5ae231c6803b63f1d7d943e6c322f46b2f135d9b1b60",
+      "bytes": 7316,
+      "modifiedUtc": "2026-10-10T07:49:44.718824+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Diantus/west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11653,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 4731,
+      "bbox": [
+        36,
+        6,
+        128,
+        124
+      ],
+      "sha256": "44f583be237ed13766a0f21007127ebbfd1559cab14f8e387a19d0df34242cbf",
+      "bytes": 5178,
+      "modifiedUtc": "2026-10-10T07:49:45.272163+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/DragaoEspectral/attack_north-east.png",
+      "width": 2196,
+      "height": 244,
+      "alphaZeroPixels": 416363,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 119461,
+      "bbox": [
+        36,
+        42,
+        2153,
+        196
+      ],
+      "sha256": "04b11dcb9e8d662b044256913c23f3be67f5a4abe458890039602ec34b3f1efe",
+      "bytes": 134938,
+      "modifiedUtc": "2026-10-10T07:31:55.298017+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/DragaoEspectral/attack_north-west.png",
+      "width": 2196,
+      "height": 244,
+      "alphaZeroPixels": 419621,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 116203,
+      "bbox": [
+        56,
+        42,
+        2162,
+        196
+      ],
+      "sha256": "e54421bda4d10506ff83d0201653491513758d7b8ee0e6e4070b45b66d836354",
+      "bytes": 116002,
+      "modifiedUtc": "2026-10-10T07:31:55.392582+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/DragaoEspectral/attack_south-east.png",
+      "width": 2196,
+      "height": 244,
+      "alphaZeroPixels": 414575,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 121249,
+      "bbox": [
+        35,
+        47,
+        2169,
+        213
+      ],
+      "sha256": "c5a2c39be4bf3ee894eebfe59a349b9f7fd23fe6f4360d13b86e304d709690dc",
+      "bytes": 125282,
+      "modifiedUtc": "2026-10-10T07:31:55.330404+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/DragaoEspectral/attack_south-west.png",
+      "width": 2124,
+      "height": 236,
+      "alphaZeroPixels": 384797,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 116467,
+      "bbox": [
+        47,
+        34,
+        2087,
+        204
+      ],
+      "sha256": "3cc7cae98d691873da12f687b834726ce1b1683dd27b153a19312937ce67dad5",
+      "bytes": 127851,
+      "modifiedUtc": "2026-10-10T07:31:55.359879+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/DragaoEspectral/east.png",
+      "width": 192,
+      "height": 192,
+      "alphaZeroPixels": 25842,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 11022,
+      "bbox": [
+        8,
+        20,
+        158,
+        172
+      ],
+      "sha256": "0467273166f9db22b50821c38ba965759ec29056b49a2606085b1bda077049e7",
+      "bytes": 13832,
+      "modifiedUtc": "2026-10-10T07:31:54.977161+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/DragaoEspectral/idle_north-east.png",
+      "width": 2196,
+      "height": 244,
+      "alphaZeroPixels": 413407,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 122417,
+      "bbox": [
+        36,
+        42,
+        2153,
+        196
+      ],
+      "sha256": "ae0455e4a46723cf421ad359afe30b693cb23ff76bb530a344e98bf7aa25d3d8",
+      "bytes": 118209,
+      "modifiedUtc": "2026-10-10T07:31:55.266151+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/DragaoEspectral/idle_north-west.png",
+      "width": 2196,
+      "height": 244,
+      "alphaZeroPixels": 419091,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 116733,
+      "bbox": [
+        56,
+        44,
+        2161,
+        196
+      ],
+      "sha256": "caa53bf19b1fd96f888062a702aae7d12db3f4873d2d359750f54012a171b234",
+      "bytes": 120560,
+      "modifiedUtc": "2026-10-10T07:31:55.141653+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/DragaoEspectral/idle_south-east.png",
+      "width": 2196,
+      "height": 244,
+      "alphaZeroPixels": 426171,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 109653,
+      "bbox": [
+        35,
+        50,
+        2146,
+        199
+      ],
+      "sha256": "8b15095a7ca7fc7e0a9ae91c40d91b531fcea27eab4241e171a04e23a3d920d0",
+      "bytes": 110998,
+      "modifiedUtc": "2026-10-10T07:31:55.180246+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/DragaoEspectral/idle_south-west.png",
+      "width": 2124,
+      "height": 236,
+      "alphaZeroPixels": 389338,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 111926,
+      "bbox": [
+        47,
+        39,
+        2090,
+        196
+      ],
+      "sha256": "31992ad020e1fa41f1bcf4ec23d34750de162f5712ae23a9b3af18347e1187ca",
+      "bytes": 121401,
+      "modifiedUtc": "2026-10-10T07:31:55.226100+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/DragaoEspectral/north-east.png",
+      "width": 192,
+      "height": 192,
+      "alphaZeroPixels": 23004,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 13860,
+      "bbox": [
+        10,
+        17,
+        175,
+        169
+      ],
+      "sha256": "f769da42c8a651d9d4b2fc5f5270cd244c406f4fc2cd8dcd4bac6f0624a2c8b4",
+      "bytes": 16672,
+      "modifiedUtc": "2026-10-10T07:31:54.982202+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/DragaoEspectral/north-west.png",
+      "width": 192,
+      "height": 192,
+      "alphaZeroPixels": 24061,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 12803,
+      "bbox": [
+        30,
+        18,
+        182,
+        170
+      ],
+      "sha256": "4602c40f59efe67900df50d548b61051ebb7155fe2d31c73479a406ef7196ea3",
+      "bytes": 15762,
+      "modifiedUtc": "2026-10-10T07:31:54.993425+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/DragaoEspectral/north.png",
+      "width": 192,
+      "height": 192,
+      "alphaZeroPixels": 21477,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 15387,
+      "bbox": [
+        8,
+        18,
+        184,
+        171
+      ],
+      "sha256": "ce7b987f4a84589c537ce123bea80f248c771697c9dd347b968148938bbf06ca",
+      "bytes": 18287,
+      "modifiedUtc": "2026-10-10T07:31:54.988894+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/DragaoEspectral/south-east.png",
+      "width": 192,
+      "height": 192,
+      "alphaZeroPixels": 23895,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 12969,
+      "bbox": [
+        9,
+        24,
+        167,
+        173
+      ],
+      "sha256": "ddef417e5acaf08691648c2fae1d057ecf7800230722a4eb1db6cbce184503ad",
+      "bytes": 16339,
+      "modifiedUtc": "2026-10-10T07:31:54.970498+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/DragaoEspectral/south-west.png",
+      "width": 192,
+      "height": 192,
+      "alphaZeroPixels": 23781,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 13083,
+      "bbox": [
+        25,
+        24,
+        180,
+        174
+      ],
+      "sha256": "2f88327e32fb092379926d7bd105abf43cf473d4003fcfb5e6a44fd8ec0b1afa",
+      "bytes": 16547,
+      "modifiedUtc": "2026-10-10T07:31:55.006399+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/DragaoEspectral/south.png",
+      "width": 192,
+      "height": 192,
+      "alphaZeroPixels": 21213,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 15651,
+      "bbox": [
+        2,
+        26,
+        191,
+        174
+      ],
+      "sha256": "1d93a581ce8d00e7ad7b64c7e0caecfe6670e089324878c2e76b225e14423cf3",
+      "bytes": 17392,
+      "modifiedUtc": "2026-10-10T07:31:54.963986+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/DragaoEspectral/west.png",
+      "width": 192,
+      "height": 192,
+      "alphaZeroPixels": 25817,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 11047,
+      "bbox": [
+        32,
+        20,
+        184,
+        172
+      ],
+      "sha256": "4450d419c5eeef9ecfa0a43501234ef8a09685d7e87c00d754072c916821687b",
+      "bytes": 14013,
+      "modifiedUtc": "2026-10-10T07:31:54.998551+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ezequiela/east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11514,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 4870,
+      "bbox": [
+        32,
+        3,
+        96,
+        125
+      ],
+      "sha256": "9d774d07924059d41f8b26d1811a9abf6ca2ed165e8830a09d8d7522aa363987",
+      "bytes": 4616,
+      "modifiedUtc": "2026-10-10T07:49:51.630213+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ezequiela/north-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10552,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5832,
+      "bbox": [
+        27,
+        4,
+        110,
+        123
+      ],
+      "sha256": "f0fcd2feceb18465a803648ddab1077cd090d99c5d75ac68defe1eae369907b2",
+      "bytes": 4727,
+      "modifiedUtc": "2026-10-10T07:49:51.634402+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ezequiela/north-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10405,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5979,
+      "bbox": [
+        15,
+        4,
+        101,
+        123
+      ],
+      "sha256": "70273879953952fe48d8803e355f40e1f904c1c17cdcbd78b9d8e00cded151e9",
+      "bytes": 4725,
+      "modifiedUtc": "2026-10-10T07:49:51.939400+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ezequiela/north.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 9730,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6654,
+      "bbox": [
+        14,
+        4,
+        113,
+        122
+      ],
+      "sha256": "23c423ffb0c62f08c0def7a5413db60e067d45f5d1532b2e2387c6c4fbdbc1f3",
+      "bytes": 4860,
+      "modifiedUtc": "2026-10-10T07:49:51.935956+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ezequiela/south-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10208,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6176,
+      "bbox": [
+        27,
+        4,
+        113,
+        125
+      ],
+      "sha256": "f9b0dd7318f6f526265728abd615ce3c08477978dac3c76e73ffd465187b9ac3",
+      "bytes": 6260,
+      "modifiedUtc": "2026-10-10T07:49:51.627202+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ezequiela/south-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10451,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5933,
+      "bbox": [
+        18,
+        4,
+        100,
+        125
+      ],
+      "sha256": "a0123013765fde424152b6ce14731bd47878c4b259814fd348fe36f8a7684d7b",
+      "bytes": 6065,
+      "modifiedUtc": "2026-10-10T07:49:51.957415+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ezequiela/south.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 9445,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6939,
+      "bbox": [
+        15,
+        5,
+        112,
+        124
+      ],
+      "sha256": "3aad37dd3f60a23fb115c2768ae1cd4be369e921d243c3261166ee14ae682b59",
+      "bytes": 6151,
+      "modifiedUtc": "2026-10-10T07:49:51.621625+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Ezequiela/west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11826,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 4558,
+      "bbox": [
+        34,
+        3,
+        94,
+        125
+      ],
+      "sha256": "abf23afb0a31cf5caca1aac5fcb36bcaf01976898963c8de5246e2f7432e9f41",
+      "bytes": 4121,
+      "modifiedUtc": "2026-10-10T07:49:51.953855+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Perry/east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11806,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 4578,
+      "bbox": [
+        36,
+        4,
+        99,
+        126
+      ],
+      "sha256": "cad2b2c8e0e64ea3c18a202d4042425a7f14dd2711831fa831b3bdd458d4260a",
+      "bytes": 4982,
+      "modifiedUtc": "2026-10-10T07:50:05.745936+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Perry/north-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11837,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 4547,
+      "bbox": [
+        37,
+        3,
+        103,
+        123
+      ],
+      "sha256": "8031f2e4310d76839bf4f1d2e1cec1b5f12f857424b17f7c601097c6248a9a91",
+      "bytes": 4318,
+      "modifiedUtc": "2026-10-10T07:50:05.750055+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Perry/north-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11041,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5343,
+      "bbox": [
+        14,
+        4,
+        100,
+        123
+      ],
+      "sha256": "0ee6217b1ac95b215a71983d177ca26c92d71c381510b7f295547c621aeade19",
+      "bytes": 4531,
+      "modifiedUtc": "2026-10-10T07:50:05.758104+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Perry/north.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10798,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5586,
+      "bbox": [
+        18,
+        5,
+        110,
+        123
+      ],
+      "sha256": "8250899e160294feca74b724d712fbe0b70583443604e157fb580f2846dbf1d6",
+      "bytes": 4418,
+      "modifiedUtc": "2026-10-10T07:50:05.754106+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Perry/south-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10973,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5411,
+      "bbox": [
+        30,
+        5,
+        114,
+        126
+      ],
+      "sha256": "d4eac664a88ffb5e4575a7e5948b70a4318e4be4f354befb79fc0382fb308337",
+      "bytes": 5895,
+      "modifiedUtc": "2026-10-10T07:50:05.739785+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Perry/south-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11549,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 4835,
+      "bbox": [
+        25,
+        4,
+        94,
+        126
+      ],
+      "sha256": "8e62450779ff16fb6ed24d4c11c76427d5c0831783ba0334f467e4a1405fc97b",
+      "bytes": 5360,
+      "modifiedUtc": "2026-10-10T07:50:05.766491+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Perry/south.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10523,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5861,
+      "bbox": [
+        16,
+        4,
+        111,
+        124
+      ],
+      "sha256": "9d4c845459d54fd3ad9a5c0705e8944572519d27b87768a2d8fec0f5d3c9dc9d",
+      "bytes": 5992,
+      "modifiedUtc": "2026-10-10T07:50:05.733746+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Perry/west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 12101,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 4283,
+      "bbox": [
+        30,
+        6,
+        91,
+        125
+      ],
+      "sha256": "8859331c2b496c39af3f3998962fd05bf746a299ba43e0bcccebe52b25e1bb88",
+      "bytes": 4067,
+      "modifiedUtc": "2026-10-10T07:50:05.761107+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/attack_north-east.png",
+      "width": 1620,
+      "height": 180,
+      "alphaZeroPixels": 242874,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 48726,
+      "bbox": [
+        35,
+        30,
+        1597,
+        151
+      ],
+      "sha256": "7de2f22ed33832ead21fbd0875b5587a8d735a219238a39c940bebcf8c3d5255",
+      "bytes": 38557,
+      "modifiedUtc": "2026-10-10T07:49:36.244375+00:00",
+      "metaExists": false,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/attack_north-west.png",
+      "width": 1512,
+      "height": 168,
+      "alphaZeroPixels": 207032,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 46984,
+      "bbox": [
+        49,
+        23,
+        1464,
+        142
+      ],
+      "sha256": "a2763c42fd42923ccab83265adbb3e26fc13d2b1f30cf453664245155f3b768a",
+      "bytes": 28881,
+      "modifiedUtc": "2026-10-10T07:49:36.264860+00:00",
+      "metaExists": false,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/attack_south-east.png",
+      "width": 1512,
+      "height": 168,
+      "alphaZeroPixels": 210536,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 43480,
+      "bbox": [
+        51,
+        24,
+        1488,
+        144
+      ],
+      "sha256": "e33c948f01f8ae1e1685d324bf6998e347b15b07b87eb95198ebe4e0a613c81c",
+      "bytes": 39211,
+      "modifiedUtc": "2026-10-10T07:49:36.283846+00:00",
+      "metaExists": false,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/attack_south-west.png",
+      "width": 1548,
+      "height": 172,
+      "alphaZeroPixels": 219058,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 47198,
+      "bbox": [
+        25,
+        26,
+        1524,
+        148
+      ],
+      "sha256": "fb06e96a589625235d8465cc830f9982e7c5f4bc22d3dd25b74eac1f98686a02",
+      "bytes": 50765,
+      "modifiedUtc": "2026-10-10T07:49:36.306523+00:00",
+      "metaExists": false,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11292,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5092,
+      "bbox": [
+        23,
+        4,
+        101,
+        125
+      ],
+      "sha256": "dece5784ec33d2f867765c7b032d8bebac4fd8518416296f2d2fc3b9d549e980",
+      "bytes": 5357,
+      "modifiedUtc": "2026-10-10T07:49:36.131948+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/hit_north-east.png",
+      "width": 1260,
+      "height": 180,
+      "alphaZeroPixels": 191580,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 35220,
+      "bbox": [
+        35,
+        30,
+        1228,
+        150
+      ],
+      "sha256": "e595b06290fc54d28e098a663621ecee95a51ebb2ad0b3ea41a724c318be0dfc",
+      "bytes": 29071,
+      "modifiedUtc": "2026-10-10T07:49:36.478936+00:00",
+      "metaExists": false,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/hit_north-west.png",
+      "width": 1176,
+      "height": 168,
+      "alphaZeroPixels": 163944,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 33624,
+      "bbox": [
+        49,
+        24,
+        1152,
+        144
+      ],
+      "sha256": "69be736a33b2bd4b65f7cc7d37af4ba96b7a6d491691c8d19de7d681eca4492d",
+      "bytes": 25374,
+      "modifiedUtc": "2026-10-10T07:49:36.426294+00:00",
+      "metaExists": false,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/hit_south-east.png",
+      "width": 1176,
+      "height": 168,
+      "alphaZeroPixels": 163630,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 33938,
+      "bbox": [
+        51,
+        24,
+        1121,
+        144
+      ],
+      "sha256": "238de14f9542711d769816ed0ab8890d80e3fac512147a18a6414b92dd684c54",
+      "bytes": 31414,
+      "modifiedUtc": "2026-10-10T07:49:36.496877+00:00",
+      "metaExists": false,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/hit_south-west.png",
+      "width": 1204,
+      "height": 172,
+      "alphaZeroPixels": 170821,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 36267,
+      "bbox": [
+        25,
+        26,
+        1173,
+        147
+      ],
+      "sha256": "37b924e29af7f93faeae43187d8323f84b9a9eaf2ed86486e6446c49ef631b29",
+      "bytes": 34634,
+      "modifiedUtc": "2026-10-10T07:49:36.460558+00:00",
+      "metaExists": false,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/idle_north-east.png",
+      "width": 1620,
+      "height": 180,
+      "alphaZeroPixels": 244103,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 47497,
+      "bbox": [
+        35,
+        30,
+        1598,
+        150
+      ],
+      "sha256": "d59ce4eece7118d69db65963337c73bf7d95f76ee93115b9f594bee35b5bfa81",
+      "bytes": 33270,
+      "modifiedUtc": "2026-10-10T07:49:36.523872+00:00",
+      "metaExists": false,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/idle_north-west.png",
+      "width": 1512,
+      "height": 168,
+      "alphaZeroPixels": 208758,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 45258,
+      "bbox": [
+        49,
+        24,
+        1468,
+        142
+      ],
+      "sha256": "9cecf8d1b6336c15724b5bc89dad5e206a696acbc6b45d4a8f73a94842ab69cc",
+      "bytes": 24284,
+      "modifiedUtc": "2026-10-10T07:49:36.609931+00:00",
+      "metaExists": false,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/idle_south-east.png",
+      "width": 1512,
+      "height": 168,
+      "alphaZeroPixels": 211023,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 42993,
+      "bbox": [
+        51,
+        24,
+        1464,
+        144
+      ],
+      "sha256": "c6b2408e42a1d094da168c97225a4ec305f2a758687b06361151f0afb1d63093",
+      "bytes": 36859,
+      "modifiedUtc": "2026-10-10T07:49:36.555609+00:00",
+      "metaExists": false,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/idle_south-west.png",
+      "width": 1548,
+      "height": 172,
+      "alphaZeroPixels": 219452,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 46804,
+      "bbox": [
+        25,
+        26,
+        1513,
+        147
+      ],
+      "sha256": "db45c7834b15b6e354b7f324491613540c699f73974b2faa01893f7c5004fecc",
+      "bytes": 37544,
+      "modifiedUtc": "2026-10-10T07:49:36.583124+00:00",
+      "metaExists": false,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/north-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11019,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5365,
+      "bbox": [
+        9,
+        4,
+        127,
+        124
+      ],
+      "sha256": "c88ba5c5ee1746fbf0d8a5e5ee18bf129799237df297b381ba874fd6819d2537",
+      "bytes": 4877,
+      "modifiedUtc": "2026-10-10T07:49:36.136647+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/north-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11352,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5032,
+      "bbox": [
+        29,
+        4,
+        108,
+        122
+      ],
+      "sha256": "9c017f19d33a96e3b89ad9cb5ef7221eda583b5f96b1e31009e8d762f02fd8fd",
+      "bytes": 3968,
+      "modifiedUtc": "2026-10-10T07:49:36.142823+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/north.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10813,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5571,
+      "bbox": [
+        5,
+        5,
+        122,
+        124
+      ],
+      "sha256": "91fcc5d7c2d37a881533e6206f4d628806af458fc4fe6a8ac6f078a306a03a9e",
+      "bytes": 4531,
+      "modifiedUtc": "2026-10-10T07:49:36.140338+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/south-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11435,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 4949,
+      "bbox": [
+        31,
+        4,
+        101,
+        124
+      ],
+      "sha256": "e96400caf792b2e361bcb6b16ec4b200c8df9d7011153f12a20fb5d5f25e8632",
+      "bytes": 5567,
+      "modifiedUtc": "2026-10-10T07:49:36.108637+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/south-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11117,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5267,
+      "bbox": [
+        3,
+        4,
+        116,
+        125
+      ],
+      "sha256": "85a90a057d621ee353a241d338e2ff5ac932cd095c0f141e2b60c0e22f26631c",
+      "bytes": 5623,
+      "modifiedUtc": "2026-10-10T07:49:36.149701+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/south.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10660,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5724,
+      "bbox": [
+        3,
+        5,
+        122,
+        124
+      ],
+      "sha256": "39f7e0567e8eccadf13a1fb8eaefe9096b2ad7dd2567516d63878909bba44ecc",
+      "bytes": 5450,
+      "modifiedUtc": "2026-10-10T07:49:36.101516+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/walk_north-east.png",
+      "width": 1620,
+      "height": 180,
+      "alphaZeroPixels": 247305,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 44295,
+      "bbox": [
+        35,
+        28,
+        1583,
+        151
+      ],
+      "sha256": "e0e393a7ca319ae6d93eb500d25977b19d8e7e65a8913471936adcaf093b76f7",
+      "bytes": 36059,
+      "modifiedUtc": "2026-10-10T07:49:36.334658+00:00",
+      "metaExists": false,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/walk_north-west.png",
+      "width": 1512,
+      "height": 168,
+      "alphaZeroPixels": 207917,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 46099,
+      "bbox": [
+        49,
+        23,
+        1470,
+        143
+      ],
+      "sha256": "42a31dba72cd8e09bb8679df115e94edf6959dcc546bbcce7734ae197c836f52",
+      "bytes": 26380,
+      "modifiedUtc": "2026-10-10T07:49:36.403681+00:00",
+      "metaExists": false,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/walk_south-east.png",
+      "width": 1512,
+      "height": 168,
+      "alphaZeroPixels": 209378,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 44638,
+      "bbox": [
+        51,
+        22,
+        1466,
+        145
+      ],
+      "sha256": "c3991492f7f364144c0b955a7a51bd27f6cc0cc432e1a3f7e52b4f03c932b3db",
+      "bytes": 42577,
+      "modifiedUtc": "2026-10-10T07:49:36.356400+00:00",
+      "metaExists": false,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/walk_south-west.png",
+      "width": 1548,
+      "height": 172,
+      "alphaZeroPixels": 218729,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 47527,
+      "bbox": [
+        25,
+        25,
+        1515,
+        147
+      ],
+      "sha256": "c4bb68e99619c3002919e06d6d8fb09b7046dd2d567eceb602777f6a7b50ba63",
+      "bytes": 44423,
+      "modifiedUtc": "2026-10-10T07:49:36.383109+00:00",
+      "metaExists": false,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Talyssa/west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11517,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 4867,
+      "bbox": [
+        36,
+        5,
+        109,
+        125
+      ],
+      "sha256": "0786f314450bddd56c597049e4d56d63ad068d189c4589420adb4527ce9166b5",
+      "bytes": 4475,
+      "modifiedUtc": "2026-10-10T07:49:36.146346+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/TchuTcha/east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10211,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6173,
+      "bbox": [
+        40,
+        4,
+        106,
+        124
+      ],
+      "sha256": "e79b0176096774461421d86802e5989f56d17669e8aeee2e275e2dea32dc7347",
+      "bytes": 5683,
+      "modifiedUtc": "2026-10-10T07:49:55.686913+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/TchuTcha/north-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10391,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5993,
+      "bbox": [
+        27,
+        4,
+        96,
+        124
+      ],
+      "sha256": "418d6b9391d9278a45f4890a12de740f4b85c07d21f32fda5c6c2d68ec1ab6fc",
+      "bytes": 6419,
+      "modifiedUtc": "2026-10-10T07:49:55.690448+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/TchuTcha/north-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 7985,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 8399,
+      "bbox": [
+        3,
+        4,
+        102,
+        123
+      ],
+      "sha256": "17efa88c68c5e26c190605a187c82381029dce4dcd13e0956f3f003aa459485e",
+      "bytes": 8516,
+      "modifiedUtc": "2026-10-10T07:49:55.700035+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/TchuTcha/north.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 8770,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 7614,
+      "bbox": [
+        4,
+        6,
+        107,
+        123
+      ],
+      "sha256": "aa830cf4ae976609cbb7c1507f88b0e4a8262d2d18f1fef65b3b13368726a8fe",
+      "bytes": 8032,
+      "modifiedUtc": "2026-10-10T07:49:55.694939+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/TchuTcha/south-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 8450,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 7934,
+      "bbox": [
+        24,
+        4,
+        121,
+        124
+      ],
+      "sha256": "9dd22fd14c9d8a111dfd41b082854bd98a1f1356f4fc721100626ef67561f2b9",
+      "bytes": 8811,
+      "modifiedUtc": "2026-10-10T07:49:55.499046+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/TchuTcha/south-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10058,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6326,
+      "bbox": [
+        28,
+        4,
+        100,
+        124
+      ],
+      "sha256": "c74c0f93420946c3ab4c3bc7e3ce7f1b82457999e31aefcee966dde2ad2b941f",
+      "bytes": 7121,
+      "modifiedUtc": "2026-10-10T07:49:55.708579+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/TchuTcha/south.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 7344,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 9040,
+      "bbox": [
+        19,
+        6,
+        126,
+        124
+      ],
+      "sha256": "5c473fae6e5975f1b9a7c8d6ceccc7620464032e30f6257fa6967c687da03636",
+      "bytes": 9079,
+      "modifiedUtc": "2026-10-10T07:49:55.492978+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/TchuTcha/west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10817,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5567,
+      "bbox": [
+        25,
+        4,
+        85,
+        124
+      ],
+      "sha256": "15f3d0128da5e28c3a21ca9f6a59ccb1413976ec89dbaf8346ec01409ca0570d",
+      "bytes": 5975,
+      "modifiedUtc": "2026-10-10T07:49:55.705053+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Teantha/east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11200,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5184,
+      "bbox": [
+        14,
+        5,
+        88,
+        126
+      ],
+      "sha256": "bf10b7e25e0c0814fc2ccbdaf637bfbd10c433b363cb485a214d17e7cbcbf903",
+      "bytes": 5424,
+      "modifiedUtc": "2026-10-10T07:49:39.145396+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Teantha/north-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10346,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6038,
+      "bbox": [
+        13,
+        6,
+        124,
+        125
+      ],
+      "sha256": "9eec978dd52a9d535c0bb2f86c9a94e43154079de575e7d7c5b8e913e90bd9ba",
+      "bytes": 6402,
+      "modifiedUtc": "2026-10-10T07:49:39.149601+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Teantha/north-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10371,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6013,
+      "bbox": [
+        10,
+        7,
+        116,
+        125
+      ],
+      "sha256": "488652ecd0523790d674155df2fca3781ca60c14dfdb12917c48fc6d1e08f218",
+      "bytes": 6111,
+      "modifiedUtc": "2026-10-10T07:49:39.160474+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Teantha/north.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 9690,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6694,
+      "bbox": [
+        4,
+        7,
+        116,
+        125
+      ],
+      "sha256": "dd8ec95bd6f329a0eccf6609ed71a3774ce2a37b0cd38abf7a50363ebc5dec5b",
+      "bytes": 6442,
+      "modifiedUtc": "2026-10-10T07:49:39.154778+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Teantha/south-east.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10062,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6322,
+      "bbox": [
+        12,
+        4,
+        115,
+        126
+      ],
+      "sha256": "5ddf49d3d6748f9c2b7e686932fedfd382bb251134669c953dc32b617c45b11e",
+      "bytes": 7047,
+      "modifiedUtc": "2026-10-10T07:49:39.138748+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Teantha/south-west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 10106,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 6278,
+      "bbox": [
+        14,
+        7,
+        120,
+        127
+      ],
+      "sha256": "2a1488b69f6693a14ce7bc4cd3e7cc05217ea7b0a748c9f5ab1dfccff0dfafe0",
+      "bytes": 6937,
+      "modifiedUtc": "2026-10-10T07:49:39.172853+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Teantha/south.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 9282,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 7102,
+      "bbox": [
+        6,
+        3,
+        124,
+        126
+      ],
+      "sha256": "2660f0256c5b08b6044fdba6c0ddf52c6f65d7db1094e526e37c23dce9d473d4",
+      "bytes": 7224,
+      "modifiedUtc": "2026-10-10T07:49:39.132165+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Sprites/Teantha/west.png",
+      "width": 128,
+      "height": 128,
+      "alphaZeroPixels": 11189,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 5195,
+      "bbox": [
+        37,
+        6,
+        113,
+        126
+      ],
+      "sha256": "810cf92b7e8fd4c75e89e8f6ff88615f695d1ec135f5d1965f8f8a541f29ef78",
+      "bytes": 5672,
+      "modifiedUtc": "2026-10-10T07:49:39.167333+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Textures/dragao_grande.png",
+      "width": 1369,
+      "height": 1149,
+      "alphaZeroPixels": 743390,
+      "alphaPartialPixels": 829349,
+      "alphaOpaquePixels": 242,
+      "bbox": [
+        0,
+        17,
+        1369,
+        1149
+      ],
+      "sha256": "94b6c0a4cf39719e225c240db9be885a7d2cec3a278c73cf8705d61bd6037ab2",
+      "bytes": 1736647,
+      "modifiedUtc": "2026-10-08T22:59:45.796162+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Textures/dragao_pequeno.png",
+      "width": 1305,
+      "height": 1205,
+      "alphaZeroPixels": 884373,
+      "alphaPartialPixels": 686269,
+      "alphaOpaquePixels": 1883,
+      "bbox": [
+        0,
+        17,
+        1291,
+        1205
+      ],
+      "sha256": "1419d27dc8fe97fcfe0770409db03abdd7eff69abf49855b80d76b0520c2d625",
+      "bytes": 1146475,
+      "modifiedUtc": "2026-10-08T22:56:26.438987+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Textures/maga_chibi.png",
+      "width": 1254,
+      "height": 1254,
+      "alphaZeroPixels": 868148,
+      "alphaPartialPixels": 703347,
+      "alphaOpaquePixels": 1021,
+      "bbox": [
+        0,
+        8,
+        1253,
+        1254
+      ],
+      "sha256": "8dfac705ea6b3425e8503d0cb3328cb776557be32bd36a80cb7f8097b3a15844",
+      "bytes": 1235112,
+      "modifiedUtc": "2026-10-08T22:55:15.651385+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    },
+    {
+      "path": "Assets/ArenaTatica/Resources/Textures/tile_pedra.png",
+      "width": 1254,
+      "height": 1254,
+      "alphaZeroPixels": 0,
+      "alphaPartialPixels": 0,
+      "alphaOpaquePixels": 1572516,
+      "bbox": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sha256": "6a58a46226a99d612e917b791fb3023bcb30d93687dc16ad046e1ca4121a4b5f",
+      "bytes": 2370037,
+      "modifiedUtc": "2026-10-08T22:58:49.095086+00:00",
+      "metaExists": true,
+      "changedDuringAudit": false
+    }
+  ],
+  "latestVerifiedDelivery": {
+    "manifest": "entregas/plano-de-importacao.json",
+    "guide": "entregas/LEIA-ME-CLAUDE.md",
+    "updatedAtUtc": "2026-10-10T11:44:56.529985+00:00",
+    "note": "Original inventory/queue preserved as dated snapshot; final assets and Claude-confirmed states are in the new manifest."
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "character": {
+    "id": "0b822833-fbf2-4c17-805c-8b67a0097116",
+    "name": "Fantasma",
+    "prompt": "A mature adult male human melee fighter named Edgar, full-body idle standing character sprite, tall and physically strong, broad shoulders and substantial muscular arms, confident relaxed posture. Medium-light skin. Distinct receding hairline, slightly balding at crown and temples; short sparse silver-white and grey hair completely slicked straight backward, lying flat with very little volume, reaching only the edge of the nape; never fluffy or spiky. Clean-shaven expressive mature face, a wide confident OPEN smile with visible white teeth. Open fitted black leather jacket with clearly contrasting dark burgundy velvet trim around its collar, lapels, cuffs and lower edges; plain grey shirt tucked into olive green camouflage military cargo trousers. Clearly exposed brown military belt and prominent metal buckle at the waist. Heavy black lace-up military combat boots. Bare uncovered hands at rest surrounded by SMALL coherent pale mint-cyan ghostly energy clinging to knuckles, not hiding hands or clothing. No weapon, no attack action, no ship in the character sprite. Rich readable pixel-art shapes, tactile leather and velvet, detailed face, warm skin versus cool spectral highlights. Retain adult masculine height and strength even within stylized tactical boardgame proportions. Entire body and boot soles within canvas, transparent background.",
+    "size": {
+      "width": 128,
+      "height": 128
+    },
+    "directions": 8,
+    "view": "high top-down"
+  },
+  "spritesheet": {
+    "path": "Edgar-Fantasma.png",
+    "cell_size": {
+      "width": 160,
+      "height": 180
+    },
+    "sheet_size": {
+      "width": 1440,
+      "height": 360
+    },
+    "columns": 9,
+    "pivot": "cell-center",
+    "rows": [
+      {
+        "row": 0,
+        "type": "rotations",
+        "frame_count": 8,
+        "directions": [
+          "south",
+          "south-east",
+          "east",
+          "north-east",
+          "north",
+          "north-west",
+          "west",
+          "south-west"
+        ]
+      },
+      {
+        "row": 1,
+        "type": "animation",
+        "frame_count": 9,
+        "animation": "walk",
+        "animation_group_id": "6f037a17-2ede-45b9-acf0-805bb8b92bc2",
+        "direction": "south-east"
+      }
+    ]
+  },
+  "export_version": "1.0",
+  "export_date": "2026-10-10T16:24:38.454224+00:00"
+}

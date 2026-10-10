@@ -1,0 +1,10 @@
+{
+  "key": "pistolMode",
+  "owner": "damian",
+  "source": "ac23f5bd-f7c3-4fe0-b22b-e16684125653",
+  "state_name": "Modo pistola",
+  "edit_description": "Keep SAME Damian exact face, cowboy hat, red hair, brown outfit, proportions, camera and resting stance. RIGHT hand holds a green chameleon-derived PISTOL clearly at rest with muzzle safely lowered, the same green tail curl and little eye motif on the pistol. NO LIVING CHAMELEON remains on shoulder or anywhere else: the animal IS this weapon. Left hand empty at rest. Same right hand grip/palm location at waist/chest height as Camaleao na mao variant. No firing, no attack, no muzzle flash. Full character and weapon inside transparent canvas. CRITICAL: keep the EXACT SAME hand and wrist grip position that holds the green HAMMER in the source image. Replace that hammer with this new weapon in the SAME hand, without changing sides, body stance or elbow. No hammer remains.",
+  "character_id": "52a7b01e-ca84-4722-ae86-b424e50cf8d3",
+  "result": "id: 52a7b01e-ca84-4722-ae86-b424e50cf8d3\nsource: ac23f5bd-f7c3-4fe0-b22b-e16684125653\nedit: Keep SAME Damian exact face, cowboy hat, red hair, brown outfit, proportions, camera and resting stance. RIGHT hand holds a green chameleon-derived PISTOL clearly at rest with muzzle safely lowered, the same green tail curl and little eye motif on the pistol. NO LIVING CHAMELEON remains on shoulder or anywhere else: the animal IS this weapon. Left hand empty at rest. Same right hand grip/palm location at waist/chest height as Camaleao na mao variant. No firing, no attack, no muzzle flash. Full character and weapon inside transparent canvas. CRITICAL: keep the EXACT SAME hand and wrist grip position that holds the green HAMMER in the source image. Replace that hammer with this new weapon in the SAME hand, without changing sides, body stance or elbow. No hammer remains.\ncost: ~10-25 generations (Gemini tier by canvas size)\nstatus: processing (~30-90s)\nnote: linked via group_id, inherits skeleton for animations\n\nhint: get_character(character_id=\"52a7b01e-ca84-4722-ae86-b424e50cf8d3\")",
+  "ready": false
+}

@@ -1,0 +1,10 @@
+{
+  "key": "ghost",
+  "owner": "edgar",
+  "source": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+  "state_name": "Fantasma",
+  "edit_description": "Keep the SAME Edgar exact face, sparse receding slicked-back hair, open confident toothy smile, strong adult proportions, leather jacket with burgundy velvet edges, grey tucked shirt, exposed belt, military cargo trousers and boots. Turn his whole visible body into a clearly spectral pale mint-cyan ghost: material appears translucent, inner highlights look hollow/ethereal, garment and hair shapes remain identifiable in a limited icy turquoise palette; feet still exist but their bottom edges trail into two narrow soft spectral wisps. Subtle small aura near hands. No skeleton, no skull, no new clothes, no ship, no weapon, no attack. Same stationary full-body neutral pose and size on transparent background.",
+  "character_id": "0b822833-fbf2-4c17-805c-8b67a0097116",
+  "result": "id: 0b822833-fbf2-4c17-805c-8b67a0097116\nsource: 590cc7bc-3673-477c-aa23-f5655dd2d97a\nedit: Keep the SAME Edgar exact face, sparse receding slicked-back hair, open confident toothy smile, strong adult proportions, leather jacket with burgundy velvet edges, grey tucked shirt, exposed belt, military cargo trousers and boots. Turn his whole visible body into a clearly spectral pale mint-cyan ghost: material appears translucent, inner highlights look hollow/ethereal, garment and hair shapes remain identifiable in a limited icy turquoise palette; feet still exist but their bottom edges trail into two narrow soft spectral wisps. Subtle small aura near hands. No skeleton, no skull, no new clothes, no ship, no weapon, no attack. Same stationary full-body neutral pose and size on transparent background.\ncost: ~10-25 generations (Gemini tier by canvas size)\nstatus: processing (~30-90s)\nnote: linked via group_id, inherits skeleton for animations\n\nhint: get_character(character_id=\"0b822833-fbf2-4c17-805c-8b67a0097116\")",
+  "ready": false
+}

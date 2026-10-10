@@ -1,0 +1,23 @@
+{
+  "actor_id": "20323703-7d5b-45ec-922a-4283e319bc97",
+  "owner": "damian",
+  "state_key": "cannonMode",
+  "rotations": [
+    "east",
+    "north-east",
+    "north-west",
+    "north",
+    "south-east",
+    "south-west",
+    "south",
+    "west"
+  ],
+  "frame_size": [
+    192,
+    172
+  ],
+  "pivot": "cell-center",
+  "no_rescaling": true,
+  "clips": [],
+  "integration": "pendente_claude"
+}

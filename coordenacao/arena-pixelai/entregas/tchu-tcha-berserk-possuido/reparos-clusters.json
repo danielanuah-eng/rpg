@@ -1,0 +1,431 @@
+[
+  {
+    "direction": "north-east",
+    "image_id": "793161c6-9e5a-4f68-a4f0-a5ddb8eba8e3",
+    "cell": 180,
+    "changes": [
+      {
+        "operation": "flood_fill",
+        "layer": "image",
+        "frames": [
+          3
+        ],
+        "seed": [
+          50,
+          76
+        ],
+        "expected": "#f0faf1ff",
+        "color": "#362736ff",
+        "reason": "Measured large connected VFX cluster becomes shadow. Tiny armor glints and red eye/visor clusters stay below this size threshold."
+      }
+    ],
+    "components": [
+      {
+        "frame": 3,
+        "color": "#f0faf1ff",
+        "pixels": 1672,
+        "seed": [
+          50,
+          76
+        ]
+      }
+    ],
+    "target_group": "b32eec9f-07de-4057-9171-be3ff653c476",
+    "source_image": "4969fe30-8dbb-4934-a487-a5c4551e133e",
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:north-east:b32eec9f-07de-4057-9171-be3ff653c476 (animation, 9 frames, 180x180)\nchanged: 1672 px\nundo: save_to_asset(image=\"3ad346e4-0139-443a-b448-bbf668879e9a\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:north-east:b32eec9f-07de-4057-9171-be3ff653c476\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "direction": "east",
+    "image_id": "3c6eedd9-19b3-459b-a566-9b58215fa523",
+    "cell": 176,
+    "changes": [
+      {
+        "operation": "flood_fill",
+        "layer": "image",
+        "frames": [
+          5
+        ],
+        "seed": [
+          113,
+          33
+        ],
+        "expected": "#f00d0dff",
+        "color": "#201020ff",
+        "reason": "Measured large connected VFX cluster becomes shadow. Tiny armor glints and red eye/visor clusters stay below this size threshold."
+      }
+    ],
+    "components": [
+      {
+        "frame": 5,
+        "color": "#f00d0dff",
+        "pixels": 2766,
+        "seed": [
+          113,
+          33
+        ]
+      }
+    ],
+    "target_group": "b32eec9f-07de-4057-9171-be3ff653c476",
+    "source_image": "19dc5ec7-59be-4c03-91c8-26abc99dd413",
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:east:b32eec9f-07de-4057-9171-be3ff653c476 (animation, 9 frames, 176x176)\nchanged: 2766 px\nundo: save_to_asset(image=\"70bf98e1-ea65-4893-beec-25a6d66426c1\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:east:b32eec9f-07de-4057-9171-be3ff653c476\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "direction": "south-east",
+    "image_id": "c4666e34-5d56-451e-b87e-0ccbb4508fb9",
+    "cell": 168,
+    "changes": [
+      {
+        "operation": "flood_fill",
+        "layer": "image",
+        "frames": [
+          4
+        ],
+        "seed": [
+          14,
+          36
+        ],
+        "expected": "#f0faf1ff",
+        "color": "#362736ff",
+        "reason": "Measured large connected VFX cluster becomes shadow. Tiny armor glints and red eye/visor clusters stay below this size threshold."
+      },
+      {
+        "operation": "flood_fill",
+        "layer": "image",
+        "frames": [
+          5
+        ],
+        "seed": [
+          14,
+          36
+        ],
+        "expected": "#f0faf1ff",
+        "color": "#362736ff",
+        "reason": "Measured large connected VFX cluster becomes shadow. Tiny armor glints and red eye/visor clusters stay below this size threshold."
+      }
+    ],
+    "components": [
+      {
+        "frame": 4,
+        "color": "#f0faf1ff",
+        "pixels": 4139,
+        "seed": [
+          14,
+          36
+        ]
+      },
+      {
+        "frame": 5,
+        "color": "#f0faf1ff",
+        "pixels": 4139,
+        "seed": [
+          14,
+          36
+        ]
+      }
+    ],
+    "target_group": "b32eec9f-07de-4057-9171-be3ff653c476",
+    "source_image": "9dee8432-61b3-4e97-ab71-7db710262f30",
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:south-east:b32eec9f-07de-4057-9171-be3ff653c476 (animation, 9 frames, 168x168)\nchanged: 8278 px\nundo: save_to_asset(image=\"ee5423bd-4c15-428c-bdb7-b82102095001\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:south-east:b32eec9f-07de-4057-9171-be3ff653c476\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "direction": "south",
+    "image_id": "fcc0ccec-350a-4e77-ac0f-b7c2016ea5e2",
+    "cell": 180,
+    "changes": [
+      {
+        "operation": "flood_fill",
+        "layer": "image",
+        "frames": [
+          4
+        ],
+        "seed": [
+          27,
+          30
+        ],
+        "expected": "#f00d0dff",
+        "color": "#201020ff",
+        "reason": "Measured large connected VFX cluster becomes shadow. Tiny armor glints and red eye/visor clusters stay below this size threshold."
+      },
+      {
+        "operation": "flood_fill",
+        "layer": "image",
+        "frames": [
+          4
+        ],
+        "seed": [
+          23,
+          39
+        ],
+        "expected": "#f0faf1ff",
+        "color": "#362736ff",
+        "reason": "Measured large connected VFX cluster becomes shadow. Tiny armor glints and red eye/visor clusters stay below this size threshold."
+      }
+    ],
+    "components": [
+      {
+        "frame": 4,
+        "color": "#f00d0dff",
+        "pixels": 2189,
+        "seed": [
+          27,
+          30
+        ]
+      },
+      {
+        "frame": 4,
+        "color": "#f0faf1ff",
+        "pixels": 3494,
+        "seed": [
+          23,
+          39
+        ]
+      }
+    ],
+    "target_group": "b32eec9f-07de-4057-9171-be3ff653c476",
+    "source_image": "b9744382-1cc3-442f-9e91-a37b1c1e7bbf",
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:south:b32eec9f-07de-4057-9171-be3ff653c476 (animation, 9 frames, 180x180)\nchanged: 5683 px\nundo: save_to_asset(image=\"d95652d0-5902-4f13-91ed-5935571d2c9f\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:south:b32eec9f-07de-4057-9171-be3ff653c476\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "direction": "south-west",
+    "image_id": "ff0b2a9c-56fd-4d80-bc09-dd1d69a73bf9",
+    "cell": 180,
+    "changes": [
+      {
+        "operation": "flood_fill",
+        "layer": "image",
+        "frames": [
+          4
+        ],
+        "seed": [
+          33,
+          37
+        ],
+        "expected": "#f0faf1ff",
+        "color": "#362736ff",
+        "reason": "Measured large connected VFX cluster becomes shadow. Tiny armor glints and red eye/visor clusters stay below this size threshold."
+      },
+      {
+        "operation": "flood_fill",
+        "layer": "image",
+        "frames": [
+          5
+        ],
+        "seed": [
+          24,
+          61
+        ],
+        "expected": "#f00d0dff",
+        "color": "#201020ff",
+        "reason": "Measured large connected VFX cluster becomes shadow. Tiny armor glints and red eye/visor clusters stay below this size threshold."
+      },
+      {
+        "operation": "flood_fill",
+        "layer": "image",
+        "frames": [
+          5
+        ],
+        "seed": [
+          130,
+          112
+        ],
+        "expected": "#f0faf1ff",
+        "color": "#362736ff",
+        "reason": "Measured large connected VFX cluster becomes shadow. Tiny armor glints and red eye/visor clusters stay below this size threshold."
+      }
+    ],
+    "components": [
+      {
+        "frame": 4,
+        "color": "#f0faf1ff",
+        "pixels": 4035,
+        "seed": [
+          33,
+          37
+        ]
+      },
+      {
+        "frame": 5,
+        "color": "#f00d0dff",
+        "pixels": 1897,
+        "seed": [
+          24,
+          61
+        ]
+      },
+      {
+        "frame": 5,
+        "color": "#f0faf1ff",
+        "pixels": 802,
+        "seed": [
+          130,
+          112
+        ]
+      }
+    ],
+    "target_group": "b32eec9f-07de-4057-9171-be3ff653c476",
+    "source_image": "492ea6a2-3a65-4bff-b118-eba7d4914160",
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:south-west:b32eec9f-07de-4057-9171-be3ff653c476 (animation, 9 frames, 180x180)\nchanged: 6734 px\nundo: save_to_asset(image=\"f11f3966-397b-46f0-ba9e-4b6ea8bc4fa9\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:south-west:b32eec9f-07de-4057-9171-be3ff653c476\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "direction": "west",
+    "image_id": "ddefe8e8-7c12-4af5-a76c-63f6eece2b35",
+    "cell": 180,
+    "changes": [
+      {
+        "operation": "flood_fill",
+        "layer": "image",
+        "frames": [
+          4
+        ],
+        "seed": [
+          32,
+          27
+        ],
+        "expected": "#f00d0dff",
+        "color": "#201020ff",
+        "reason": "Measured large connected VFX cluster becomes shadow. Tiny armor glints and red eye/visor clusters stay below this size threshold."
+      },
+      {
+        "operation": "flood_fill",
+        "layer": "image",
+        "frames": [
+          4
+        ],
+        "seed": [
+          26,
+          36
+        ],
+        "expected": "#f0faf1ff",
+        "color": "#362736ff",
+        "reason": "Measured large connected VFX cluster becomes shadow. Tiny armor glints and red eye/visor clusters stay below this size threshold."
+      }
+    ],
+    "components": [
+      {
+        "frame": 4,
+        "color": "#f00d0dff",
+        "pixels": 1186,
+        "seed": [
+          32,
+          27
+        ]
+      },
+      {
+        "frame": 4,
+        "color": "#f0faf1ff",
+        "pixels": 2994,
+        "seed": [
+          26,
+          36
+        ]
+      }
+    ],
+    "target_group": "b32eec9f-07de-4057-9171-be3ff653c476",
+    "source_image": "bae920f9-5e09-43d4-9dc2-bbfb51dbe371",
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:west:b32eec9f-07de-4057-9171-be3ff653c476 (animation, 9 frames, 180x180)\nchanged: 4180 px\nundo: save_to_asset(image=\"4ab1d780-163c-4811-a654-fe46236357c0\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:west:b32eec9f-07de-4057-9171-be3ff653c476\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  },
+  {
+    "direction": "north-west",
+    "image_id": "5dda07ce-dd98-493e-a201-0239d0b96dec",
+    "cell": 180,
+    "changes": [
+      {
+        "operation": "flood_fill",
+        "layer": "image",
+        "frames": [
+          2
+        ],
+        "seed": [
+          119,
+          38
+        ],
+        "expected": "#cbc3ceff",
+        "color": "#362736ff",
+        "reason": "Measured large connected VFX cluster becomes shadow. Tiny armor glints and red eye/visor clusters stay below this size threshold."
+      },
+      {
+        "operation": "flood_fill",
+        "layer": "image",
+        "frames": [
+          3
+        ],
+        "seed": [
+          132,
+          28
+        ],
+        "expected": "#cbc3ceff",
+        "color": "#362736ff",
+        "reason": "Measured large connected VFX cluster becomes shadow. Tiny armor glints and red eye/visor clusters stay below this size threshold."
+      },
+      {
+        "operation": "flood_fill",
+        "layer": "image",
+        "frames": [
+          5
+        ],
+        "seed": [
+          92,
+          107
+        ],
+        "expected": "#cbc3ceff",
+        "color": "#362736ff",
+        "reason": "Measured large connected VFX cluster becomes shadow. Tiny armor glints and red eye/visor clusters stay below this size threshold."
+      },
+      {
+        "operation": "flood_fill",
+        "layer": "image",
+        "frames": [
+          6
+        ],
+        "seed": [
+          112,
+          114
+        ],
+        "expected": "#cbc3ceff",
+        "color": "#362736ff",
+        "reason": "Measured large connected VFX cluster becomes shadow. Tiny armor glints and red eye/visor clusters stay below this size threshold."
+      }
+    ],
+    "components": [
+      {
+        "frame": 2,
+        "color": "#cbc3ceff",
+        "pixels": 204,
+        "seed": [
+          119,
+          38
+        ]
+      },
+      {
+        "frame": 3,
+        "color": "#cbc3ceff",
+        "pixels": 202,
+        "seed": [
+          132,
+          28
+        ]
+      },
+      {
+        "frame": 5,
+        "color": "#cbc3ceff",
+        "pixels": 266,
+        "seed": [
+          92,
+          107
+        ]
+      },
+      {
+        "frame": 6,
+        "color": "#cbc3ceff",
+        "pixels": 213,
+        "seed": [
+          112,
+          114
+        ]
+      }
+    ],
+    "target_group": "b32eec9f-07de-4057-9171-be3ff653c476",
+    "source_image": "73dcad57-aa96-4db3-84c3-93b26f26798b",
+    "saved": "saved: character:215bb320-de53-44a1-bec7-f2e23f4e7265:north-west:b32eec9f-07de-4057-9171-be3ff653c476 (animation, 9 frames, 180x180)\nchanged: 885 px\nundo: save_to_asset(image=\"7e86f772-f4f2-4b00-b3a0-152a584614c5\", target=\"character:215bb320-de53-44a1-bec7-f2e23f4e7265:north-west:b32eec9f-07de-4057-9171-be3ff653c476\")\nnext: get_character(\"215bb320-de53-44a1-bec7-f2e23f4e7265\")"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "actor_id": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+  "owner": "brumak",
+  "state_key": null,
+  "rotations": [
+    "east",
+    "north-east",
+    "north-west",
+    "north",
+    "south-east",
+    "south-west",
+    "south",
+    "west"
+  ],
+  "frame_size": [
+    128,
+    128
+  ],
+  "pivot": "cell-center",
+  "no_rescaling": true,
+  "clips": [],
+  "integration": "pendente_claude"
+}

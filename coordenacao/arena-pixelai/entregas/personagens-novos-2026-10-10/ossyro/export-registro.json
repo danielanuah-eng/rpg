@@ -1,0 +1,27 @@
+{
+  "actor": {
+    "id": "ossyro",
+    "name": "Ossyro — Dragão do Ossário",
+    "body_type": "quadruped",
+    "size": 128,
+    "character_id": "6b27257d-819c-4d78-829c-0ca36f05d586",
+    "ready": true,
+    "rotations": {
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/6b27257d-819c-4d78-829c-0ca36f05d586/rotations/south.png?t=1791646853",
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/6b27257d-819c-4d78-829c-0ca36f05d586/rotations/east.png?t=1791646853",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/6b27257d-819c-4d78-829c-0ca36f05d586/rotations/north.png?t=1791646853",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/6b27257d-819c-4d78-829c-0ca36f05d586/rotations/west.png?t=1791646853",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/6b27257d-819c-4d78-829c-0ca36f05d586/rotations/south-east.png?t=1791646853",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/6b27257d-819c-4d78-829c-0ca36f05d586/rotations/north-east.png?t=1791646853",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/6b27257d-819c-4d78-829c-0ca36f05d586/rotations/north-west.png?t=1791646853",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/6b27257d-819c-4d78-829c-0ca36f05d586/rotations/south-west.png?t=1791646853"
+    },
+    "folder": "ossyro",
+    "owner": "ossyro"
+  },
+  "clips": [],
+  "source_cell": [
+    128,
+    128
+  ]
+}

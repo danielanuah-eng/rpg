@@ -1,0 +1,66 @@
+{
+  "actor_id": "7beda37d-fc07-48df-a1cc-9215091c171e",
+  "owner": "damian",
+  "state_key": "neutral",
+  "rotations": [
+    "east",
+    "north-east",
+    "north-west",
+    "north",
+    "south-east",
+    "south-west",
+    "south",
+    "west"
+  ],
+  "frame_size": [
+    192,
+    172
+  ],
+  "pivot": "cell-center",
+  "no_rescaling": true,
+  "clips": [
+    {
+      "name": "camaleao-mao",
+      "direction": "south-east",
+      "frame_count": 9,
+      "frame_size": [
+        192,
+        172
+      ],
+      "fps": 8,
+      "loop": false,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "damian-neutral/animacoes/camaleao-mao/south-east.png",
+      "sha256": "e5fd39e911598fe4592379e0eb12b770c9555efaccd60e8d63c66a2c092d1904",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "5c71bfc4-8c05-4246-9ac3-d5fe4008ca2f"
+    },
+    {
+      "name": "camaleao-mao",
+      "direction": "south-west",
+      "frame_count": 9,
+      "frame_size": [
+        192,
+        172
+      ],
+      "fps": 8,
+      "loop": false,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "damian-neutral/animacoes/camaleao-mao/south-west.png",
+      "sha256": "71a31e53c7b1a1507ca9aeb71025a0c2cc56d541926217fdf887261858ab51d1",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "5c71bfc4-8c05-4246-9ac3-d5fe4008ca2f"
+    }
+  ],
+  "integration": "pendente_claude"
+}

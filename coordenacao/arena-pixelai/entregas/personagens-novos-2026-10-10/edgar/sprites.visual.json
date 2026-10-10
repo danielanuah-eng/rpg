@@ -1,0 +1,234 @@
+{
+  "actor_id": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+  "owner": "edgar",
+  "state_key": null,
+  "rotations": [
+    "east",
+    "north-east",
+    "north-west",
+    "north",
+    "south-east",
+    "south-west",
+    "south",
+    "west"
+  ],
+  "frame_size": [
+    176,
+    180
+  ],
+  "pivot": "cell-center",
+  "no_rescaling": true,
+  "clips": [
+    {
+      "name": "attack",
+      "direction": "south-east",
+      "frame_count": 9,
+      "frame_size": [
+        176,
+        180
+      ],
+      "fps": 7,
+      "loop": false,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "edgar/animacoes/attack/south-east.png",
+      "sha256": "e8656a28b65079820d9c3c87817f118913d55eec1c32b77ab4f6e5b8ed48a871",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "5a6a2513-0fcb-4a25-88dc-2e775c03fef2"
+    },
+    {
+      "name": "attack",
+      "direction": "north-east",
+      "frame_count": 9,
+      "frame_size": [
+        176,
+        180
+      ],
+      "fps": 7,
+      "loop": false,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "edgar/animacoes/attack/north-east.png",
+      "sha256": "38f753031a2668b12ff83042302a6323532370da54011bc6c280510a565f5595",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "5a6a2513-0fcb-4a25-88dc-2e775c03fef2"
+    },
+    {
+      "name": "attack",
+      "direction": "south-west",
+      "frame_count": 9,
+      "frame_size": [
+        176,
+        180
+      ],
+      "fps": 7,
+      "loop": false,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "edgar/animacoes/attack/south-west.png",
+      "sha256": "45925665eb1aa28a2e8f74e47c6344188042d40dd8b06258330f9fdc13fa67b3",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "5a6a2513-0fcb-4a25-88dc-2e775c03fef2"
+    },
+    {
+      "name": "idle",
+      "direction": "south-east",
+      "frame_count": 9,
+      "frame_size": [
+        176,
+        180
+      ],
+      "fps": 5,
+      "loop": true,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "edgar/animacoes/idle/south-east.png",
+      "sha256": "ca9edef45f88b88a6db59d9a5dbd71121bf7b66b5112f41be479b6c3f14a7797",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "e0606797-2c10-485a-ba3f-9f1eeb12efe4"
+    },
+    {
+      "name": "idle",
+      "direction": "north-east",
+      "frame_count": 9,
+      "frame_size": [
+        176,
+        180
+      ],
+      "fps": 5,
+      "loop": true,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "edgar/animacoes/idle/north-east.png",
+      "sha256": "bd23816d1373f1353745f2fd1cf92a32d227bd7f0efea4e749495ba939aee18f",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "e0606797-2c10-485a-ba3f-9f1eeb12efe4"
+    },
+    {
+      "name": "idle",
+      "direction": "north-west",
+      "frame_count": 9,
+      "frame_size": [
+        176,
+        180
+      ],
+      "fps": 5,
+      "loop": true,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "edgar/animacoes/idle/north-west.png",
+      "sha256": "dd059d42baac23b5a8536466f2c77821c3e5007c16422d79bb39e8e71233d330",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "e0606797-2c10-485a-ba3f-9f1eeb12efe4"
+    },
+    {
+      "name": "idle",
+      "direction": "south-west",
+      "frame_count": 9,
+      "frame_size": [
+        176,
+        180
+      ],
+      "fps": 5,
+      "loop": true,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "edgar/animacoes/idle/south-west.png",
+      "sha256": "8f9e1664c6454ebcfaf19dbe33133892b95197632a72e510ca445df7f470e907",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "e0606797-2c10-485a-ba3f-9f1eeb12efe4"
+    },
+    {
+      "name": "walk",
+      "direction": "north-east",
+      "frame_count": 6,
+      "frame_size": [
+        176,
+        180
+      ],
+      "fps": 10,
+      "loop": true,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "edgar/animacoes/walk/north-east.png",
+      "sha256": "f2cd4691df4e9aed4ed01125bc8154b88fce4f91ebacaa6455c463c96d379467",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "eee6dcd4-c73f-432a-acdd-9a8e73173fb8"
+    },
+    {
+      "name": "walk",
+      "direction": "north-west",
+      "frame_count": 6,
+      "frame_size": [
+        176,
+        180
+      ],
+      "fps": 10,
+      "loop": true,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "edgar/animacoes/walk/north-west.png",
+      "sha256": "45d90d6e16821ba6aa9cb1ab0048212e6b4a6a72b5de210836a83556c81ec36b",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "eee6dcd4-c73f-432a-acdd-9a8e73173fb8"
+    },
+    {
+      "name": "walk",
+      "direction": "south-west",
+      "frame_count": 6,
+      "frame_size": [
+        176,
+        180
+      ],
+      "fps": 10,
+      "loop": true,
+      "derived_reverse": false,
+      "pivot": "cell-center",
+      "png": "edgar/animacoes/walk/south-west.png",
+      "sha256": "5b2cad966d366bfbbf6aa64ef058a308943dc1d189144d8edee5851ab512ab5f",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edge_frames": 0,
+      "source_group": "eee6dcd4-c73f-432a-acdd-9a8e73173fb8"
+    }
+  ],
+  "integration": "pendente_claude"
+}
