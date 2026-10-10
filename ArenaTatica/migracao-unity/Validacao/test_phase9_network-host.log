@@ -1,0 +1,11 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+NET Modo local
+NET Host P1 · porta 19099
+PEER 1186739670
+NET Host P1 · P2 sincronizado
+NET P2 desconectado; entidade removida. Host continua ativo.
+PEER 1975576744
+NET Host P1 · P2 sincronizado
+NET P2 desconectado; entidade removida. Host continua ativo.
+FASE9 RPC ["--host"]: 12 verificacoes, 0 falhas

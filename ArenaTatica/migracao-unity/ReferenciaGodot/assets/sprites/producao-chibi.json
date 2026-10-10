@@ -1,0 +1,66 @@
+{
+  "project": "ArenaTatica",
+  "style": "Chibi 2.5D, sprites com alfa e filtro Nearest",
+  "generator": "image_gen built-in",
+  "review_status": "aguardando_avaliacao",
+  "references": [
+    "C:/Users/Anuah/OneDrive/Área de Trabalho/Enz/ciantia-dragoes.png",
+    "C:/Users/Anuah/OneDrive/Área de Trabalho/Enz/Imagem do ChatGPT 6 de out. de 2026, 12_52_10.png",
+    "C:/Users/Anuah/OneDrive/Área de Trabalho/RPG-Maker.jpg"
+  ],
+  "assets": [
+    {
+      "file": "maga_chibi.png",
+      "prompt": "Use case: stylized-concept. Asset type: maga_chibi.png, a SINGLE playable character sprite in a Godot 2.5D tactical RPG. Reference image 1 supplies ONLY the identity of Ciantia: adult woman with long wavy blonde hair, emerald green eyes, black fitted clothes and boots, black long coat with tasteful antique-gold edging and purple lining. Reference image 2 supplies ONLY the game sprite presentation: very small chibi characters with oversized heads and compact 2.5D pixel-RPG bodies, crisp clustered pixel shading and readable silhouettes. Create a NEW independent full-body chibi Ciantia, head roughly half her standing height, compact boots/body, front-facing slightly three-quarter standing idle pose, confident friendly expression, one hand raised to summon a small golden spark. Translate her coat and hair into broad simple shapes rather than tiny filigree. Deliberately simplified chunky pixel-game appearance, NOT a high-detail anime poster. Virtual low-resolution pixel-art structure enlarged without blurring, dark clean outlines, few shaded color clusters; soft upper-left illumination. Black/gold/purple clothes, blonde hair, green eyes. NO wizard hat, NO staff, NO dragons beside or behind her. Transparent alpha background, no rectangle, no scene, no ground, no ambient aura/background glow, no cast ground shadow, no text. Character must fit wholly within canvas with 8 percent transparent padding on every side; feet aligned near bottom; full coat, both feet and hair visible. Single character only, one idle frame, no sheet. This is a newly drawn chibi interpretation of the reference, not reuse of the reference PNG.",
+      "sha256": "8dfac705ea6b3425e8503d0cb3328cb776557be32bd36a80cb7f8097b3a15844",
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent_pixels": 868148
+    },
+    {
+      "file": "dragao_pequeno.png",
+      "prompt": "Use case: stylized-concept. Asset type: dragao_pequeno.png, single small dragon sprite for a Godot 2.5D tactical chibi RPG. Reference 1 supplies ONLY the SMALL GOLDEN DRAGON on Ciantia's hand, not the blue giant dragon or human: warm golden body, elegant curling tail, two wings, horns, tiny greenish eyes, glowing pale gold contours. Reference 2 supplies ONLY the compact chibi pixel-game sprite style. Create a NEW standalone baby golden dragon: oversized expressive head roughly half body height, stout cute body, small paired wings opened halfway, four visible legs, curled tail, small horns, friendly battle-ready expression. Front view with slight three-quarter turn, upright grounded stance, whole dragon entirely visible and centered with 8 percent transparent margin. Simplify identity into crisp broad golden/amber/pale yellow pixel clusters, dark warm outlines and restrained focal glow INSIDE silhouette. Match small chibi RPG character scale, not a detailed illustration poster. Soft upper-left lighting, virtual low-resolution pixel structure enlarged cleanly without blur. Actual transparent alpha background, empty outside silhouette, no background glow, no environment, no human, no blue dragon, no ground plane or ground shadow, no text, no labels, no watermark. One creature, one idle frame, no sprite sheet.",
+      "sha256": "1419d27dc8fe97fcfe0770409db03abdd7eff69abf49855b80d76b0520c2d625",
+      "size": [
+        1305,
+        1205
+      ],
+      "transparent_pixels": 884373
+    },
+    {
+      "file": "dragao_grande.png",
+      "prompt": "Use case: stylized-concept. Asset type: dragao_grande.png, single large dragon sprite for a Godot 2.5D tactical chibi RPG. Reference 1 defines the BLUE-VIOLET TRANSPLANAR DRAGON ONLY: luminous periwinkle violet/cyan contours, crystalline translucent-looking magical body with swirling internal patterns, cyan eyes, elegant swept horns, paired batlike wings, four clawed limbs, long curling tail. Reference 2 defines the clean compact CHIBI 2.5D PIXEL-GAME presentation, not the scene to recreate. Draw a NEW standalone chibi interpretation of this large dragon, oversized expressive head, sturdy compact body, paired wings lifted and spread in a readable symmetrical silhouette, four clawed feet, a curled tail. Friendly yet powerful alert battle-ready stance facing the camera with slight three-quarter turn. Whole dragon, tail, feet, horns and both wings completely visible, centered with generous 8 percent transparent margin. Simplified pixel game art, chunky clean outlines and clustered lavender/periwinkle/cyan/white shading, broad readable details, virtual low-resolution pixels enlarged cleanly, no smooth anime poster. Internal semi-translucency can convey magic but dragon remains clearly visible on gray stone; strong alpha within main body and transparent exterior. Very restrained contour light, NO broad aura or glow cloud. Upper-left illumination. Actual transparent alpha background, no buildings, no portal, no woman, no golden dragon, no background, no ground plane, no cast ground shadow, no text, no watermark. One dragon, one idle frame, not a sprite sheet.",
+      "framing_edit_prompt": "Edit this game sprite only: preserve the same chibi blue-violet transplanar dragon design, colors, pixel-art outlines, expression, four legs, wings and curling tail. Fix framing: expand transparent canvas around the dragon and redraw the tiny portions of wing tips, top horns and lowest front claws currently cut off at the image boundary. Entire silhouette must be complete. Dragon should occupy only 75 percent of image width and height, centered with a CLEAR EMPTY TRANSPARENT BORDER of at least 12 percent on all four sides. No part of the dragon may touch canvas edges. Preserve actual alpha transparency everywhere outside the character, and remove stray detached colored pixels. No scene, no ground, no external shadow, no text. Retain pixel-game finish rather than smoothing.",
+      "sha256": "94b6c0a4cf39719e225c240db9be885a7d2cec3a278c73cf8705d61bd6037ab2",
+      "size": [
+        1369,
+        1149
+      ],
+      "transparent_pixels": 743390
+    },
+    {
+      "file": "tile_pedra.png",
+      "sha256": "6a58a46226a99d612e917b791fb3023bcb30d93687dc16ad046e1ca4121a4b5f",
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent_pixels": 0
+    }
+  ],
+  "integration": {
+    "autoload": "VisualSetup",
+    "billboard": "BILLBOARD_FIXED_Y",
+    "texture_filter": "TEXTURE_FILTER_NEAREST",
+    "sprite_import_size_limit": 64,
+    "visual_heights": {
+      "Player1": 1.6,
+      "Player2": 1.6,
+      "Monster1": 1,
+      "Monster2": 2.2
+    },
+    "Monster2_visual_large": true
+  }
+}

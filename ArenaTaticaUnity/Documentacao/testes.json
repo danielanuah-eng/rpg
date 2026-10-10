@@ -1,0 +1,133 @@
+{
+  "unity": "6000.6.4f1",
+  "validatedAt": "2026-10-10T00:01:04.1184759-03:00",
+  "editMode": {
+    "total": 26,
+    "cases": [
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.AiAttacksNearestAndUsesItsOwnDamage",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.AiPathBudgetAndOccupation",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.AttackSpendsOnePaAndDealsFifteen",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.CannotAttackSelfOrWithoutPa",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.DeadUnitsNoLongerOccupyCells",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.InitialStateMatchesGodot",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.MalformedSnapshotsAreRejected",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.MovementCostsPmAndLocksActions",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.NoArtificialAttackRangeCap",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.NoHumansEndsWithoutWinner",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.RejectsExcessMovementAndOccupiedDestinations",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.RejectsWrongOwnerTurnAndStaleRevision",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.ResetRestoresDeadUnitsAndAdvancesRevision",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.ShortestPathAvoidsOccupiedCells",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.SightIgnoresOriginAndIsSymmetricOnClearMap",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.SightRejectsOutOfBoundsAndSameCell",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.SnapshotCopyIsIndependent",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.SupercoverBlocksBothCornerEdges",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.TurnOrderAndRestoration",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.UrlPolicy(\"ws://127.0.0.1:9080\",True)",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.UrlPolicy(\"ws://192.168.1.5:9080\",True)",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.UrlPolicy(\"wss://example.org\",True)",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.UrlPolicy(\"ws://example.org\",False)",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.UrlPolicy(\"https://example.org\",False)",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.UrlPolicy(\"wss://name:password@example.org\",False)",
+        "result": "Passed"
+      },
+      {
+        "name": "ArenaTatica.Tests.ArenaRulesTests.VictoryRequiresOneHumanAndNoMonsters",
+        "result": "Passed"
+      }
+    ],
+    "passed": 26,
+    "failed": 0
+  },
+  "playerSmoke": {
+    "client": "PASS",
+    "local": "PASS",
+    "host": "PASS"
+  },
+  "websocket": {
+    "passed": true,
+    "checks": 7,
+    "scenarios": [
+      "ownership",
+      "stale revision",
+      "authoritative movement",
+      "death",
+      "reconnection",
+      "no replayed VFX",
+      "forged snapshot rejected"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "ArenaTatica.Tests",
+  "references": ["ArenaTatica.Runtime"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}
