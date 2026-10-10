@@ -82,7 +82,7 @@ function descEfeitoBase(ef) {
     case 'olharTopo': return `olhe as ${ef.quantidade} cartas do topo do seu baralho; ponha ${ef.pegar} na mão e as outras no fundo do baralho`;
     case 'permitirAnularDoCemiterio': return 'neste turno você pode jogar do cemitério uma carta que anula outra (ela é banida ao resolver)';
     case 'potenciaMagia': return `o próximo dano ou cura de uma Temporária sua neste turno tem +${ef.valor}`;
-    case 'invocar': return `invoque ${ef.nome ?? 'uma criatura'}${ef.sobre ? ` em cima de um ${ef.sobre} seu (o ${ef.sobre} sai do campo)` : ''}${ef.concessao ? ` (${textoConcessao(ef.concessao, 'ela')})` : ''}`;
+    case 'invocar': return `invoque ${ef.nome ?? 'uma criatura'}${ef.sobre === 'Ovo' ? ' com Dracolize' : ef.sobre ? ` em cima de um ${ef.sobre} seu (o ${ef.sobre} sai do campo)` : ''}${ef.concessao ? ` (${textoConcessao(ef.concessao, 'ela')})` : ''}`;
     case 'ataqueConjuradorTurno': return `seu Conjurador ganha +${ef.valor} de Ataque neste turno`;
     // construtor de efeitos (04/10)
     case 'perderVida': return `${ef.quem === 'oponente' ? 'o Conjurador do oponente' : 'seu Conjurador'} ${ef.secundario ? `toma ${ef.valor} de dano` : `perde ${ef.valor} de Vida`}`;
@@ -216,8 +216,10 @@ export function textoCarta(d) {
     if (d.aoProteger?.length) p.push('Ao proteger: ' + fraseMin(d.aoProteger));
     if (d.espinhos) p.push(`Ao proteger, causa ${d.espinhos} de dano ao atacante.`);
   }
-  if (d.palavrasChave?.length) p.push(d.palavrasChave.join(', ') + '.');
-  if (d.entraSobre) p.push(`Entra em cima de um ${d.entraSobre} seu, que sai do campo.`);
+  // Dracolize (09/10, pedido do autor): palavra-chave de "entra em cima de um Ovo seu, que sai do campo"
+  const pcs = [...(d.palavrasChave ?? []), ...(d.entraSobre === 'Ovo' ? ['Dracolize'] : [])];
+  if (pcs.length) p.push(pcs.join(', ') + '.');
+  if (d.entraSobre && d.entraSobre !== 'Ovo') p.push(`Entra em cima de um ${d.entraSobre} seu, que sai do campo.`);
   if (d.concedeAoSubstituto) p.push(`A carta que entrar em cima desta ${textoConcessao(d.concedeAoSubstituto, 'ele')}.`);
   const prot = textoProtegido(protegidoDe(d));
   if (prot) p.push(prot);

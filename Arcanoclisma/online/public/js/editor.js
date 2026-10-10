@@ -279,11 +279,11 @@ export async function telaEditor(tela, partes, ctx) {
         ? `<label class="campo">Velocidade<select data-f="velocidade" disabled><option value="findante" selected>Findante (para entrar a qualquer momento, palavra-chave Repentino)</option></select></label>
            <label class="campo">Palavras-chave (separadas por vírgula)<input type="text" data-f="palavrasChave" value="${esc((c.palavrasChave ?? []).join(', '))}" placeholder="Proficiente, Etéreo, Repentino"></label>
            <label class="campo">Subtipos (separados por vírgula)<input type="text" data-f="subtipos" value="${esc((c.subtipos ?? []).join(', '))}"></label>
-           <label class="campo">Entra em cima de (Dragolize: subtipo de uma carta sua em campo, ex.: Ovo; vazio = entra solto)<input type="text" data-f="entraSobre" value="${esc(c.entraSobre ?? '')}" placeholder="Ovo"></label>`
+           <label class="campo">Entra em cima de (Ovo = Dracolize; outro subtipo de carta sua em campo; vazio = entra solto)<input type="text" data-f="entraSobre" value="${esc(c.entraSobre ?? '')}" placeholder="Ovo"></label>`
         : `<label class="campo">Velocidade<select data-f="velocidade"><option value="findante" ${c.velocidade === 'findante' ? 'selected' : ''}>Findante (na sua fase principal)</option><option value="repentina" ${c.velocidade === 'repentina' ? 'selected' : ''}>Repentina (a qualquer momento)</option></select></label>
            <label class="campo">Palavras-chave (separadas por vírgula)<input type="text" data-f="palavrasChave" value="${esc((c.palavrasChave ?? []).join(', '))}" placeholder="Proficiente, Etéreo"></label>
            <label class="campo">Subtipos (separados por vírgula)<input type="text" data-f="subtipos" value="${esc((c.subtipos ?? []).join(', '))}"></label>
-           <label class="campo">Entra em cima de (Dragolize: subtipo de uma carta sua em campo, ex.: Ovo; vazio = entra solto)<input type="text" data-f="entraSobre" value="${esc(c.entraSobre ?? '')}" placeholder="Ovo"></label>`}
+           <label class="campo">Entra em cima de (Ovo = Dracolize; outro subtipo de carta sua em campo; vazio = entra solto)<input type="text" data-f="entraSobre" value="${esc(c.entraSobre ?? '')}" placeholder="Ovo"></label>`}
       <div class="campo"><span>Construtor de efeitos <span class="peq">${conjur ? '(habilidades ativadas e gatilhos com efeitos que se acumulam, passivas e permissões; vira o poder real e o texto da habilidade)' : '(condição + efeitos que se acumulam; vira a mecânica real e o texto da carta)'}</span></span><div class="editor-construtor" data-construtor></div></div>
       <label class="campo">Mecânica em JSON (${conjur ? 'poder; alternativa avançada ao construtor' : MEC_CARTA.join(', ')})<textarea class="editor-json" data-json spellcheck="false">${esc(JSON.stringify(mec, null, 2))}</textarea></label>
       <p class="peq editor-json-erro" data-json-erro></p>
@@ -356,6 +356,8 @@ export async function telaEditor(tela, partes, ctx) {
       novo[k] = ['palavrasChave', 'subtipos'].includes(k) ? el.value.split(',').map((x) => x.trim()).filter(Boolean) : el.value;
     }
     if ('entraSobre' in novo) novo.entraSobre = novo.entraSobre.trim() || undefined;
+    // Dracolize escrita nas palavras-chave = entra em cima de um Ovo (09/10)
+    if (novo.palavrasChave?.some((p) => p.toLowerCase() === 'dracolize')) { novo.palavrasChave = novo.palavrasChave.filter((p) => p.toLowerCase() !== 'dracolize'); novo.entraSobre = 'Ovo'; }
     const avisoAuto = [];
     // Aliado nunca é Repentina pelo tipo ou subtipo (decisão 21); para entrar fora da fase principal, a palavra-chave Repentino
     if (!conjur && base.tipo === 'aliado') {

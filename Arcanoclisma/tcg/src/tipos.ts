@@ -235,6 +235,8 @@ export interface Regras {
   semAcaoPerde: boolean;
   /** Quem começa não pode pôr carta no Grau no turno 1. */
   primeiroSemGrauNoTurno1: boolean;
+  /** Quem começa não compra no Final do turno 1 (09/10, pedido do autor: põe Grau, mas não compra). */
+  primeiroSemCompraNoTurno1?: boolean;
   /** Pôr carta no Grau não suspende o Conjurador (1 por turno), então ele ainda pode atacar. */
   grauSemSuspender: boolean;
   /** O Conjurador de quem começa não pode atacar no turno 1. */

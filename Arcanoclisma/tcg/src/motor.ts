@@ -1544,7 +1544,8 @@ function entrarEtapa(e: Estado, etapa: Etapa): void {
     const zo = e.jogadores[outro(e.ativo)];
     for (const id of [zo.conjuradorId, ...zo.campo, ...zo.itens]) disparar(e, id, 'cataclismaOponente');
   } else if (etapa === 'final') {
-    if (!e.regras.reporMaoNoInicio) comprar(e, e.ativo, defConjurador(e, e.ativo).compraFinal);
+    if (e.regras.primeiroSemCompraNoTurno1 && e.ativo === e.primeiro && e.turno === 1) anotar(e, `Jogador ${e.ativo} começou a partida: não compra no turno 1.`);
+    else if (!e.regras.reporMaoNoInicio) comprar(e, e.ativo, defConjurador(e, e.ativo).compraFinal);
     for (const id of [z.conjuradorId, ...z.campo, ...z.grau]) e.instancias[id].suspensa = false;
     // bônus "neste turno" do construtor acabam no Final
     for (const i of Object.values(e.instancias)) { i.bonusAtaqueTurno = 0; i.bonusVidaTurno = 0; }

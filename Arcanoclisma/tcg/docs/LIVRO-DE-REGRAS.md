@@ -26,7 +26,7 @@ Meta de ritmo: partidas de cerca de 20 turnos, com early, mid e late game bem de
 | Pilha | todos | resolve de cima para baixo (LIFO) |
 
 ### 2.1 Zona de Grau
-- 1 vez por turno, o jogador põe uma carta da mão na Zona de Grau (quem começa não pode no turno 1). **Não suspende o Conjurador** (ele ainda pode atacar no mesmo turno). Entra **virada para cima** e **não abre pilha**. No fim do turno vira para baixo.
+- 1 vez por turno, o jogador põe uma carta da mão na Zona de Grau (quem começa pode no turno 1, mas não compra no Final do turno 1; decisão 42). **Não suspende o Conjurador** (ele ainda pode atacar no mesmo turno). Entra **virada para cima** e **não abre pilha**. No fim do turno vira para baixo.
 - Cada carta no Grau pode ser **suspensa para gerar 1 Arcano**, em qualquer turno (como velocidade repentina que **não usa a pilha** e não pode ser respondida).
 - Grau vai de 0 a 12 por enquanto.
 - Para jogar uma carta de **grau X**, o jogador precisa ter **pelo menos X cartas** na Zona de Grau. Cartas poderosas ainda exigem **descartar N cartas do Grau** para o cemitério.
@@ -243,11 +243,14 @@ Fora desta fase: equipamentos, Extras, tokens, texto de efeitos em linguagem nat
 41. **Expansão A Mestra dos Dragões e Dragolize (09/10, liberada pelo autor: "pode lançar a expansão de dragões")**: o Claude propôs e pôs em jogo as cartas; o autor ajusta no Editor (filtro "Expansão dos Dragões", campo `expansao: 'a-mestra-dos-dragoes'`). Dados em `tcg/src/expansao-dragoes.ts` (só no site, fora das simulações); testes em `tcg/test/expansao-dragoes.test.ts`.
    - **65 cartas** das artes 050–114: 12 monstros (Aliados), 8 magias dracônicas (Temporárias), 8 equipamentos (um por Comprometimento, mais genéricos), 6 Estruturas, 6 Místicas e **25 Conjuradores** (um par de Valores cada, Vida 20, mão 5, compra 2, uma habilidade no nível dos 9). Valores das cartas equilibrados (3 ou 4 por Valor); **Nove Correntes de um Céu** tem os 9 Valores (serve a todos). Sem raridade. As 25 cenas 025–049 não viram cartas: 039–047 (um dragão por Valor) e 034 (ovos) são só a arte das fichas. Cada Conjurador novo tem um baralho pronto (cartas da expansão que servem + cartas dos prontos que dividem um Valor), com Durandis no Extra.
    - **Ovo** (ficha, Mística): **Ovo Iluminado** (Vida 2) e **Ovo Etéreo** (Vida 1), criados por várias cartas (`invocar`). Campo genérico **`concedeAoSubstituto`** (Concessão): quem entra em cima do Ovo Iluminado ganha +1/+1; do Ovo Etéreo, Etéreo.
+   - **Dracolize** (palavra-chave, 09/10, pedido do autor): o texto "entra em cima de um Ovo seu, que sai do campo" vira a palavra-chave **Dracolize**; no Editor, escrever Dracolize nas palavras-chave = `entraSobre: 'Ovo'`.
    - **Entra em cima de** (`entraSobre: 'Ovo'` na carta ou na ficha; `sobre` no efeito invocar): só é jogada/invocada se você tiver em campo uma carta sua desse subtipo; ao resolver, ela sai do campo (ficha deixa de existir; carta comum vai ao cemitério) e a nova entra no lugar. Com mais de uma, o jogador escolhe. Sem nenhuma, a carta não pode ser jogada (e a ativação não pode ser usada).
    - **Grau de um Valor** (`requisito.valor`): o Grau mínimo conta só as cartas daquele Valor no seu Grau (e o grauExtra das suas permanentes desse Valor).
    - **Durandis, o Receptáculo Dracono** (Extra, genérico, sem arte ainda): 9 habilidades, um Dragão por Valor; cada uma pede **X cartas daquele Valor no Grau e X de Arcano**, suspende o Conjurador e põe o Dragão em cima de um Ovo seu. Não é consumido. **Habilidade "virar" de item suspende o Conjurador** (o item não levanta).
    - **Dragões** (fichas Aliado, 1 por Valor) usam habilidades ativadas pagando Arcano. **Anular e roubar** (`anular` com `roubar`): a carta anulada vai para a mão de quem anulou (Corrente Desfeita). Fichas invocadas disparam o "ao entrar" delas e só contam como Aliado que entra se forem Aliados (Ovo não dispara Carmal).
    - Bot: só joga carta de Ovo com Ovo; usa Durandis (o maior Dragão que o Grau do Valor, o Arcano e um Ovo permitem) e as ativações novas (invocar, pôr no Grau, segurar Aliado inimigo).
+
+42. **Turno 1 de quem começa (09/10, pedido do autor)**: quem começa **pode pôr carta no Grau** no turno 1, mas **não compra** no Final do turno 1 (regras `primeiroSemGrauNoTurno1: false` e `primeiroSemCompraNoTurno1: true` em `tcg/data/edicoes.json`). Substitui a parte de Grau da decisão 11.
 
 **Ainda abertas:**
 - Cada carta do Grau gera 1 Arcano na fase 1. Recomendo manter.

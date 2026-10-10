@@ -45,7 +45,9 @@
  "regras": {
   "reporMaoNoInicio": false,
   "conjuradorLevantaNoInicio": false,
-  "conjuradorSoAtacaComArma": true
+  "conjuradorSoAtacaComArma": true,
+  "primeiroSemGrauNoTurno1": false,
+  "primeiroSemCompraNoTurno1": true
  },
  "precos": {},
  "baralhos": {

@@ -234,3 +234,25 @@ test('bot: usa Durandis quando tem Ovo, Arcano e Grau do Valor; não joga carta 
   // o maior Dragão possível: o de Conflitüo (X = 3, as 3 cartas de teste do Grau são de Conflitüo) vale mais que o de Persona
   assert.equal(noCampo(e, 0, idDragao('conflituo')).length, 1);
 });
+
+test('Dracolize: o texto usa a palavra-chave em vez de "entra em cima de um Ovo"', () => {
+  for (const c of cartasExpansaoDragoes) assert.ok(!/em cima de um Ovo/.test(c.texto), c.id);
+  const mand = cartasExpansaoDragoes.find((c) => c.id === 'md-mandibula-de-juncos')!;
+  assert.match(mand.texto, /Dracolize/);
+  assert.match(cartasExpansaoDragoes.find((c) => c.id === 'md-item-durandis')!.texto, /com Dracolize/);
+});
+
+test('Turno 1 (decisão 42): quem começa põe Grau, mas não compra no Final; o segundo compra normalmente', () => {
+  const cartas = [...DECK, ...DECK, ...Array.from({ length: 40 }, () => 'nada')];
+  const e = criarJogo({ catalogo, baralhos: [{ conjurador: 'md-naima', cartas, itens: [] }, { conjurador: 'md-elda', cartas, itens: [] }], semente: 3, regras: { primeiroSemGrauNoTurno1: false, primeiroSemCompraNoTurno1: true } });
+  executar(e, { tipo: 'escolherInicio', jogador: e.pendencia!.jogador, primeiro: 0 });
+  while (e.etapa !== 'principal') executar(e, { tipo: 'passar', jogador: e.prioridade });
+  executar(e, { tipo: 'colocarGrau', jogador: 0, carta: e.jogadores[0].mao[0] });
+  assert.equal(e.jogadores[0].grau.length, 1);
+  const mao0 = e.jogadores[0].mao.length;
+  while (e.ativo === 0) { if (e.pendencia) break; executar(e, { tipo: 'passar', jogador: e.prioridade }); }
+  assert.equal(e.jogadores[0].mao.length, mao0);
+  const mao1 = e.jogadores[1].mao.length;
+  while (e.ativo === 1) { if (e.pendencia) break; executar(e, { tipo: 'passar', jogador: e.prioridade }); }
+  assert.equal(e.jogadores[1].mao.length, mao1 + 2);
+});

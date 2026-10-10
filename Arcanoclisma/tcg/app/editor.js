@@ -169,6 +169,7 @@ const REGRAS = {
   limiteMao: ['Limite de mão', 'int', 'Máximo de cartas na mão no fim do turno; o excesso é descartado.'],
   impasseTurnos: ['Relógio de impasse (turnos)', 'int', 'Perde quem passa este número de turnos seguidos sem jogar carta, ativar ou atacar. 0 desliga.'],
   primeiroSemGrauNoTurno1: ['Quem começa não põe Grau no turno 1', 'bool', ''],
+  primeiroSemCompraNoTurno1: ['Quem começa não compra no turno 1', 'bool', 'Não compra no Final do primeiro turno.'],
   grauSemSuspender: ['Pôr carta no Grau não suspende o Conjurador', 'bool', 'Uma vez por turno; o Conjurador ainda pode atacar.'],
   primeiroConjSemAtacarTurno1: ['O Conjurador de quem começa não ataca no turno 1', 'bool', ''],
   segundoCartaExtra: ['Cartas a mais para o segundo jogador', 'int', 'Compradas na preparação.'],

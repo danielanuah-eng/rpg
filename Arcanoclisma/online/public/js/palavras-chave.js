@@ -16,6 +16,7 @@ export const PALAVRAS_CHAVE = [
     ['Concessão', 'Efeito que dá palavras-chave, +/- Ataque e Vida e/ou um tempo em campo a uma carta (ex.: as unidades invocadas ganham Etéreo por 2 turnos). O turno em que a carta entra conta como o 1º (seja de quem for); depois contam só os turnos do controlador; ao acabar a carta vai para o destino indicado (padrão: cemitério).'],
     ['Protessência', 'Esta carta não pode ser escolhida como alvo de efeitos do oponente (cartas, ativações, habilidades, gatilhos, escolhas posteriores e sorteios), nem anulada por ele na pilha. Efeitos sem alvo (que atingem todos) e os seus próprios efeitos continuam a afetá-la. Ataques não são efeitos: um Aliado com Protessência pode ser atacado.'],
     ['Protegido', 'Quem mirar esta carta com uma carta ou ativação do oponente paga o que o Protegido pede: "Protegido N" = N de Arcano a mais; algumas cartas pedem também Vida, descarte, cartas do Grau ao cemitério ou um Grau mínimo. Com dois Protegidos (o da carta e outro dado pelo Conjurador ou por uma Concessão), os dois valem: o oponente paga cada um, juntos. Sem poder pagar, não mira. O dono não paga; efeitos sem alvo e sacrifícios não pagam.'],
+    ['Dracolize', 'A carta (ou ficha) entra em cima de um Ovo seu em campo, que sai do campo; com mais de um, você escolhe. Sem Ovo seu em campo, ela não pode ser jogada (nem invocada). Os Ovos (Iluminado e Etéreo) são fichas criadas por cartas da expansão A Mestra dos Dragões.'],
     ['Ao entrar', 'Efeito que acontece quando a carta entra em campo.'],
     ['Ao causar dano de combate ao Conjurador inimigo', 'Gatilho que acontece quando este Aliado acerta o Conjurador rival em combate.'],
   ] },
@@ -65,6 +66,7 @@ export const LEMBRETES = {
   Incomensurável: 'o dano que passar da Vida da carta atingida vai para o Conjurador dela.',
   Protessência: 'não pode ser alvo de efeitos do oponente, nem anulada por eles.',
   Protegido: (n) => `mirar esta carta custa ${n} de Arcano a mais ao oponente.`,
+  Dracolize: 'entra em cima de um Ovo seu, que sai do campo.',
   Repentina: 'pode ser jogada em resposta, até no turno do oponente.',
   'Pagar para anular': (n) => `o oponente pode pagar ${n} de Arcano para que ela não resolva.`,
 };
@@ -75,7 +77,7 @@ export function lembretesDe(d) {
   const l = [];
   // o texto já explica a palavra entre parênteses ("Etéreo (só é bloqueado...)"): não repete
   const jaExplica = (k) => (d.texto ?? '').includes(k) && /^\s*(\d+\s*)?\(/.test((d.texto ?? '').split(k)[1] ?? '');
-  for (const k of d.palavrasChave ?? []) if (typeof LEMBRETES[k] === 'string' && !jaExplica(k)) l.push(`${k}: ${LEMBRETES[k]}`);
+  for (const k of [...(d.palavrasChave ?? []), ...(d.entraSobre === 'Ovo' ? ['Dracolize'] : [])]) if (typeof LEMBRETES[k] === 'string' && !jaExplica(k)) l.push(`${k}: ${LEMBRETES[k]}`);
   // Protegido só de Arcano ("Protegido N") ganha lembrete; com as variações, o próprio texto já explica
   const pr = protegidoDe(d);
   if (pr && Object.keys(pr).length === 1 && pr.arcano && !jaExplica('Protegido')) l.push(`Protegido ${pr.arcano}: ${LEMBRETES.Protegido(pr.arcano)}`);
