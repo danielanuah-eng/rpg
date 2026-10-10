@@ -1,0 +1,50 @@
+{
+  "tarefaId": "enzo-biblioteca-visual",
+  "autor": "Enzo / Codex",
+  "estado": "meta_concluida",
+  "registradoEm": "2026-10-10T20:30:22.629Z",
+  "escopo": "Materiais autorizados em Rpg/Arcanoclisma/arte",
+  "biblioteca": "Biblioteca-Enzo",
+  "indice": "indices/arcanoclisma.json",
+  "novosAssets": 279,
+  "novosDocumentos": 841,
+  "totalVersoesAssets": 780,
+  "totalVersoesDocumentos": 1595,
+  "definicoesSincronizadas": [
+    "carlos",
+    "enzo"
+  ],
+  "definicoesAlteradas": [
+    "carlos"
+  ],
+  "cobertura": {
+    "cartasSiteAprovadas": 210,
+    "cartasSiteSemCopia": [],
+    "cartasRapidasAprovadas": 46,
+    "cartasRapidasSemCopia": []
+  },
+  "procedimento": {
+    "arquivo": "coordenacao/enzo/arquivar.mjs",
+    "sha256": "d77046af19f4eb36a61e977d46130132d686027e3fc09ae196e91dcedadb0ff4",
+    "instaladoNaBiblioteca": true,
+    "melhorias": [
+      "Percorre as subpastas de cartas e preserva seus registros.",
+      "Bloqueio exclusivo de arquivamento por projeto.",
+      "Sincroniza as definições de Carlos e Enzo."
+    ]
+  },
+  "publicacao": {
+    "autorizadaPeloAutor": true,
+    "branch": "enzo-biblioteca-2026-10-10",
+    "base": "origin/main",
+    "integracaoNaMain": "aguardando",
+    "escopo": "Somente o procedimento, a documentação e este relatório; os objetos permanecem na biblioteca local."
+  },
+  "estadoCarlos": {
+    "filaAtual": 210,
+    "estado": "aprovado",
+    "pendentes": 0
+  },
+  "geracaoDeImagensNestaExecucao": 0,
+  "codigoDeJogoAlterado": false
+}
