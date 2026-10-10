@@ -1,0 +1,25 @@
+{
+  "tarefaId": "expansao-dragoes-faltantes",
+  "autor": "Claude",
+  "estado": "solicitado",
+  "necessidadeAtual": true,
+  "atualizadoEm": "2026-10-10",
+  "contexto": "Expansão A Mestra dos Dragões em jogo no site (decisões 41 e 42). Diretriz de cenários: Arcanoclisma/cartas/DIRETRIZ-CENARIOS.md. Regras não dependem das artes.",
+  "itens": [
+    {
+      "id": "md-item-durandis",
+      "nome": "Durandis, o Receptáculo Dracono",
+      "tipo": "item (Extra), sem Valor",
+      "uso": "Receptáculo que invoca um Dragão de cada Valor em cima de um Ovo (Dracolize). Hoje está SEM arte no site.",
+      "cena": "Arma/receptáculo dracônico ambientado (oficina, altar ou mão de Ciantia), com 9 brilhos discretos das cores dos Valores; sem texto.",
+      "formato": "PNG 63x88 mm de carta (mesmo padrão das artes 050–114), destino Arcanoclisma/expansoes/a-mestra-dos-dragoes/arte/imagens/, registrar no colecao-completa-90.visual.json com id novo",
+      "prioridade": 1
+    }
+  ],
+  "jaIntegradasSemPedido": {
+    "conjurador-md-ciantia": "001-ciantia-a-mestra-dos-dragoes-v1 (Ciantia, Persona + Eternyr)",
+    "conjurador-md-valiant": "030-valiant-dominum-v1 (Valiant, Dominum + Cognitium)",
+    "md-repouso-na-forja": "049 / 043-dragao-alvorum-carvao-v2 (Estrutura de Alvorum, escolha do autor)"
+  },
+  "observacao": "As artes 002–024 da fila continuam pendentes do Codex; quando forem entregues, o Claude decide se viram cartas."
+}

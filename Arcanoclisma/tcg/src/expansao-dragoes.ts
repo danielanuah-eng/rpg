@@ -128,6 +128,8 @@ const cartas: CartaExpansao[] = [
   permanente('estrutura', '080', 'torre-de-vigilia-antidraconica', 'Torre de Vigília Antidracônica', C, 3, 4, ativ(0, [{ tipo: 'dano', valor: 1, alvo: 'escolhidoAliado' }])),
   permanente('estrutura', '081', 'estufa-das-cascas', 'Estufa das Cascas', A, 4, 3, { grauExtra: 1, ...ativ(1, [ovoEtereo]) }),
   permanente('estrutura', '082', 'arquivo-das-catastrofes', 'Arquivo das Catástrofes', G, 3, 4, ativ(1, [{ tipo: 'comprar', valor: 1 }])),
+  // arte 049 (043-v2, o dragão dormindo na forja): segunda carta de Alvorum pedida pelo autor
+  permanente('estrutura', '049', 'repouso-na-forja', 'Repouso na Forja', A, 4, 5, ativ(4, [{ tipo: 'invocar', carta: idDragao(A), nome: 'o Dragão de Carvão e Ouro (4/6)', sobre: 'Ovo' }])),
   permanente('estrutura', '083', 'santuario-da-muda', 'Santuário da Muda', S, 2, 2, ativ(2, [{ tipo: 'devolver', alvo: 'escolhidoProprio' }])),
 
   // ---------- Místicas ----------
@@ -142,7 +144,7 @@ const cartas: CartaExpansao[] = [
 /** As cartas e fichas da expansão, com o texto gerado da mecânica (app/textos.js). */
 export const cartasExpansaoDragoes: CartaExpansao[] = [...fichas, ...cartas].map((c) => ({ ...c, texto: textoCarta(c) }));
 
-// ---------- Conjuradores (25 personagens, 090–114) ----------
+// ---------- Conjuradores (25 personagens, 090–114, mais Ciantia 001 e Valiant 030) ----------
 const padrao = { vida: 20, maoInicial: 5, compraFinal: 2, danoBasico: 1, custoAtaque: 0 } as const;
 type ConjExpansao = ConjuradorDef & { arteExpansao: string };
 function conj(arte: string, id: string, nome: string, valores: [string, string], comprometimento: ConjuradorDef['comprometimento'], poder: PoderConjurador): ConjExpansao {
@@ -175,6 +177,9 @@ export const conjuradoresExpansaoDragoes: ConjExpansao[] = [
   conj('111', 'tessa', 'Tessa, Cronista das Almas', [M, E], 'Preparado', { gatilho: { quando: 'aliadoMorre', efeitos: [{ tipo: 'olharTopo', quantidade: 2, pegar: 1 }] } }),
   conj('112', 'mauro', 'Mauro, Cuidador do Ciclo', [M, R], 'Invocador', { gatilho: { quando: 'aliadoMorre', efeitos: [ovoIluminado] } }),
   conj('113', 'adira', 'Adira, Escutadora de Ninhos', [G, R], 'Invocador', { gatilho: { quando: 'aliadoEntra', efeitos: [{ tipo: 'olharTopo', quantidade: 2, pegar: 1 }], soNoSeuTurno: true } }),
+  // os 2 pares que faltavam: Ciantia (Persona + Eternyr) e Valiant (Dominum + Cognitium), da história do autor
+  conj('001', 'ciantia', 'Ciantia, a Mestra dos Dragões', [P, E], 'Invocador', suspPague(2, [ovoIluminado])),
+  conj('030', 'valiant', 'Valiant, a Palavra que Responde', [D, G], 'Preparado', suspPague(5, [{ tipo: 'anular', alvo: 'pilha', roubar: true }], { repentina: true })),
   conj('114', 'selmo', 'Selmo, Jardineiro das Eras', [E, R], 'Habilidoso', suspPague(2, [{ tipo: 'colocarNoGrau', de: 'topo', valor: 1 }])),
 ];
 

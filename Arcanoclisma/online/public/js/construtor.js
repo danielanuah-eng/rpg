@@ -80,11 +80,12 @@ function verLista(nome, lista) {
 }
 
 function colecao(area) {
-  const todas = Object.values(DADOS.catalogo.cartas).filter((c) => c.tipo !== 'oculta');
-  area.innerHTML = `<div class="filtros"><input type="search" placeholder="Buscar carta" id="busca-col"><select id="tipo-col"><option value="">Todos os tipos</option>${Object.entries(TIPO).map(([k, r]) => `<option value="${k}">${r}</option>`).join('')}</select><select id="valor-col"><option value="">Todos os Valores</option><option value="-">Sem Valor</option>${Object.entries(VALOR).map(([k, r]) => `<option value="${k}">${r}</option>`).join('')}</select></div><p class="peq" id="n-col"></p><div class="vitrine" id="vit-col"></div>`;
+  // fichas (Ovos, Dragões de Durandis) não vêm do baralho: ficam fora da Coleção (10/10)
+  const todas = Object.values(DADOS.catalogo.cartas).filter((c) => c.tipo !== 'oculta' && !c.ficha);
+  area.innerHTML = `<div class="filtros"><input type="search" placeholder="Buscar carta" id="busca-col"><select id="tipo-col"><option value="">Todos os tipos</option>${Object.entries(TIPO).map(([k, r]) => `<option value="${k}">${r}</option>`).join('')}</select><select id="valor-col"><option value="">Todos os Valores</option><option value="-">Sem Valor</option>${Object.entries(VALOR).map(([k, r]) => `<option value="${k}">${r}</option>`).join('')}</select><select id="exp-col"><option value="">Todas as coleções</option><option value="base">Jogo base</option><option value="a-mestra-dos-dragoes">Expansão dos Dragões</option></select></div><p class="peq" id="n-col"></p><div class="vitrine" id="vit-col"></div>`;
   const f = () => {
-    const q = $('#busca-col').value.toLowerCase(), t = $('#tipo-col').value, v = $('#valor-col').value;
-    const lista = todas.filter((c) => (!q || (c.nome + ' ' + c.texto).toLowerCase().includes(q)) && (!t || c.tipo === t) && (!v || (v === '-' ? !c.valores.length : c.valores.includes(v)))).sort((a, b) => a.custo - b.custo || a.nome.localeCompare(b.nome));
+    const q = $('#busca-col').value.toLowerCase(), t = $('#tipo-col').value, v = $('#valor-col').value, x = $('#exp-col').value;
+    const lista = todas.filter((c) => (!q || (c.nome + ' ' + c.texto).toLowerCase().includes(q)) && (!t || c.tipo === t) && (!v || (v === '-' ? !c.valores.length : c.valores.includes(v))) && (!x || (x === 'base' ? !c.expansao : c.expansao === x))).sort((a, b) => a.custo - b.custo || a.nome.localeCompare(b.nome));
     $('#n-col').textContent = `${lista.length} cartas`;
     $('#vit-col').innerHTML = lista.map((c) => `<div class="item-vitrine" data-zoom="${c.id}">${cartaHTML(c.id, { width: 150 })}</div>`).join('');
   };

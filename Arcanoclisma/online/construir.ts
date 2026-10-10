@@ -199,6 +199,8 @@ const PASTA_EXPANSAO = raizArcano + 'expansoes/a-mestra-dos-dragoes/arte/';
 function artesDaExpansaoNoSite(cat: Catalogo): Record<string, string> {
   const man = JSON.parse(readFileSync(PASTA_EXPANSAO + 'colecao-completa-90.visual.json', 'utf8')) as { itens: { id: string; arquivo: string; estado?: string }[] };
   const porNumero = new Map(man.itens.filter((i) => !/rejeit|descart|retirad/i.test(i.estado ?? '')).map((i) => [i.id, i.arquivo]));
+  // Ciantia (arte 001 da fila da expansão, fora do manifesto das 90)
+  if (!porNumero.has('001')) porNumero.set('001', 'imagens/001-ciantia-a-mestra-dos-dragoes-v1.png');
   const r: Record<string, string> = {};
   for (const [id, numero] of Object.entries(artesDaExpansao())) {
     const arq = porNumero.get(numero);

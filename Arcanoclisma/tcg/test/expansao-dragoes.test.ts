@@ -20,9 +20,9 @@ test('65 cartas jogáveis + Durandis: 12 Aliados, 8 Temporárias, 8 itens, 6 Est
   assert.equal(por('aliado').length, 12);
   assert.equal(por('temporaria').length, 8);
   assert.equal(por('item').length, 9); // 8 equipamentos das artes 070–077 + Durandis
-  assert.equal(por('estrutura').length, 6);
+  assert.equal(por('estrutura').length, 7); // + Repouso na Forja (arte 049)
   assert.equal(por('mistica').length, 6);
-  assert.equal(conjuradoresExpansaoDragoes.length, 25);
+  assert.equal(conjuradoresExpansaoDragoes.length, 27); // + Ciantia e Valiant
   // todos marcados com a expansão, sem raridade, ids únicos
   const ids = new Set<string>();
   for (const c of [...cartasExpansaoDragoes, ...conjuradoresExpansaoDragoes]) {
@@ -33,7 +33,7 @@ test('65 cartas jogáveis + Durandis: 12 Aliados, 8 Temporárias, 8 itens, 6 Est
   }
   // Conjuradores: pares de Valores diferentes, nenhum repetido, no padrão dos 9 (Vida 20, mão 5, compra 2)
   const pares = new Set(conjuradoresExpansaoDragoes.map((c) => [...c.valores].sort().join('+')));
-  assert.equal(pares.size, 25);
+  assert.equal(pares.size, 27);
   for (const c of conjuradoresExpansaoDragoes) {
     assert.equal(c.valores.length, 2);
     assert.deepEqual([c.vida, c.maoInicial, c.compraFinal, c.danoBasico, c.custoAtaque], [20, 5, 2, 1, 0], c.id);
@@ -49,7 +49,7 @@ test('Valores: nenhuma carta neutra (só itens), equilibradas entre os 9 Valores
     if (c.valores.length === 1) conta[c.valores[0]]++;
   }
   const n = Object.values(conta);
-  assert.ok(Math.max(...n) - Math.min(...n) <= 1, JSON.stringify(conta));
+  assert.ok(Math.max(...n) - Math.min(...n) <= 2, JSON.stringify(conta)); // 10/10: + Repouso na Forja (2ª arte de Alvorum)
   assert.deepEqual(fichas.filter((c) => c.subtipos.includes('Ovo')).map((c) => c.id).sort(), [OVO_ETEREO, OVO_ILUMINADO].sort());
   for (const v of VALORES) {
     const d = fichas.find((c) => c.id === idDragao(v));
@@ -79,11 +79,12 @@ test('texto gerado da mecânica e arte ligada pelo número do manifesto da expan
   for (const c of [...jogaveis, ...conjuradoresExpansaoDragoes]) {
     if (c.id === 'md-item-durandis') continue; // sem arte ainda
     const a = artes[('comprometimento' in c ? 'conjurador-' : '') + c.id];
-    assert.ok(a && nums.has(a) && +a >= 50, `${c.id}: arte ${a}`);
+    // 10/10: Ciantia (001, fora do manifesto), Valiant (030) e Repouso na Forja (049) usam artes da história
+    assert.ok(a && (a === '001' || nums.has(a)) && (+a >= 50 || ['001', '030', '049'].includes(a)), `${c.id}: arte ${a}`);
   }
   // as 65 artes 050–114 viram exatamente uma carta ou Conjurador cada
   const usadas = [...jogaveis, ...conjuradoresExpansaoDragoes].map((c) => artes[('comprometimento' in c ? 'conjurador-' : '') + c.id]).filter(Boolean);
-  assert.equal(new Set(usadas).size, 65);
+  assert.equal(new Set(usadas).size, 68);
 });
 
 test('poder dos 25 Conjuradores: ida e volta pelo construtor do Editor dá o mesmo JSON', () => {
@@ -255,4 +256,26 @@ test('Turno 1 (decisão 42): quem começa põe Grau, mas não compra no Final; o
   const mao1 = e.jogadores[1].mao.length;
   while (e.ativo === 1) { if (e.pendencia) break; executar(e, { tipo: 'passar', jogador: e.prioridade }); }
   assert.equal(e.jogadores[1].mao.length, mao1 + 2);
+});
+
+test('Valiant (10/10): suspende, paga 5 e anula uma carta na pilha, que vai para a mão dele; Ciantia invoca um Ovo Iluminado', () => {
+  const cartas = [...DECK, ...DECK, ...Array.from({ length: 40 }, () => 'nada')];
+  const e = criarJogo({ catalogo, baralhos: [{ conjurador: 'md-naima', cartas, itens: [] }, { conjurador: 'md-valiant', cartas, itens: [] }], semente: 3, regras: { primeiroSemGrauNoTurno1: false } });
+  executar(e, { tipo: 'escolherInicio', jogador: e.pendencia!.jogador, primeiro: 0 });
+  while (e.etapa !== 'principal') executar(e, { tipo: 'passar', jogador: e.prioridade });
+  for (const j of [0, 1] as Jogador[]) for (let i = 0; i < 3; i++) trazer(e, j, 'nada', 'grau');
+  e.jogadores[0].arcano = 10; e.jogadores[1].arcano = 10;
+  const vespa = trazer(e, 0, 'md-vespa-de-sino');
+  executar(e, { tipo: 'jogar', jogador: 0, carta: vespa });
+  executar(e, { tipo: 'passar', jogador: 0 });
+  executar(e, { tipo: 'ativar', jogador: 1, carta: e.jogadores[1].conjuradorId, alvo: vespa });
+  resolver(e);
+  assert.ok(e.jogadores[1].mao.includes(vespa), 'a Vespa foi para a mão de Valiant');
+  assert.equal(e.jogadores[1].arcano, 5);
+
+  const e2 = criar('md-ciantia');
+  e2.jogadores[0].arcano = 5;
+  executar(e2, { tipo: 'ativar', jogador: 0, carta: e2.jogadores[0].conjuradorId });
+  resolver(e2);
+  assert.equal(noCampo(e2, 0, OVO_ILUMINADO).length, 1);
 });
