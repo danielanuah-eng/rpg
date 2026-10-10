@@ -53,6 +53,8 @@ namespace ArenaTatica
                 yield return MoveAndPass();
                 yield return new WaitForSeconds(2);
                 Finish(game.State.F(me.id).cell==to&&game.State.rng==0,"Cliente: comando autoritativo e estado filtrado");
+            } else if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-shots")>=0) {
+                yield return Shots();
             } else {
                 Physics.SyncTransforms();
                 var me=game.Active;
@@ -82,6 +84,27 @@ namespace ArenaTatica
                 if(!bought||!summoned||!moved||!switched) { Finish(false,$"Local: compra {bought}, invocação {summoned}, movimento {moved}, troca de time {switched}"); yield break; }
                 Finish(game.State.round==2&&File.Exists(capture),"Local: seleção, compra, skill, movimento, turnos, rodada e captura");
             }
+        }
+        // Capturas para conferência visual (--arena-shots): um inimigo é posto ao lado do ativo, que ataca;
+        // fotos durante a rolagem dos dados, na face final e no impacto (Artifacts/shots-<largura>x<altura>-<n>.png).
+        IEnumerator Shots()
+        {
+            var me=game.Active; var foe=game.State.fighters.Find(x=>x.team!=me.team&&x.Alive&&x.summoner==0);
+            var costs=Board.Costs(game.State,me); SkillDef attack=null; Cell spot=me.cell;
+            for(int i=0;i<costs.Length&&attack==null;i++) {
+                if(costs[i]!=1) continue; var c=new Cell(i%game.State.width,i/game.State.width); var old=foe.cell; foe.cell=c;
+                foreach(var sk in Content.Def(me).skills) if(sk.damage>0&&Content.Skill(me,sk.id)!=null&&game.Preview.CanTarget(me,sk,c,out _)) { attack=sk; spot=c; break; }
+                if(attack==null) foe.cell=old;
+            }
+            if(attack==null) { Finish(false,"Capturas: nenhum ataque possível"); yield break; }
+            game.View.Sync(game.State,true); yield return new WaitForSeconds(1);
+            Directory.CreateDirectory("Artifacts"); string prefix=Path.GetFullPath($"Artifacts/shots-{Screen.width}x{Screen.height}-");
+            ScreenCapture.CaptureScreenshot(prefix+"0.png"); yield return new WaitForSeconds(.3f);
+            game.Submit("skill",spot,attack.id);
+            float start=Time.time; int n=1;
+            foreach(float at in new[]{.25f,.5f,.8f,1.1f,1.4f,1.8f,2.4f}) { while(Time.time-start<at) yield return null; ScreenCapture.CaptureScreenshot(prefix+(n++)+".png"); }
+            yield return new WaitForSeconds(1);
+            Finish(true,$"Capturas: {me.def} ataca {foe.def} com {attack.id}");
         }
         // Espera 1 s antes de fechar: o último estado ainda precisa sair pela rede.
         void Finish(bool success,string message) { Debug.Log("ARENA_SMOKE_"+(success?"PASS: ":"FAIL: ")+message); StartCoroutine(Quit(success?0:1)); }

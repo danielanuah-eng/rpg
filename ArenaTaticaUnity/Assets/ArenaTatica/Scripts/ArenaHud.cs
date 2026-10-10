@@ -75,6 +75,8 @@ namespace ArenaTatica
             start=Button("Iniciar",networkPanel,Game.StartRoom,66);
             resume=Button("Retomar local",networkPanel,Game.ResumeLocal,104);
             fullscreen=Button("Tela cheia",networkPanel,ToggleFullScreen,88); fullscreen.gameObject.SetActive(!Application.isMobilePlatform);
+            // Em 1280 px a barra não cabia (Retomar/Tela cheia saíam da tela): os botões encolhem até 60% e o texto quebra.
+            foreach(var le in networkPanel.GetComponentsInChildren<LayoutElement>()) le.minWidth=le.preferredWidth>0?le.preferredWidth*.6f:100;
             mobileStats=Text("",root.transform,14,ink);
             Anchors(mobileStats.rectTransform,new Vector2(0,.87f),new Vector2(1,.935f),new Vector2(20,0),new Vector2(-20,0));
             BuildShopWindow(root.transform);
@@ -289,6 +291,8 @@ namespace ArenaTatica
             turn.text=f==null?$"RODADA {s.round}":$"RODADA {s.round}   •   {Content.Fighters[f.def].name} {Team(f.team)}   •   {f.pa} PA   •   {f.pm} PM";
             string Goal(int t) => s.eliminated[t]?"fora":s.mode==VictoryMode.Galeoes?$"{s.galeoes[t]} Galeões":s.mode==VictoryMode.Tesouro?$"{s.collected[t]}/{s.target} moedas":s.mode==VictoryMode.Dominio?$"domínio {s.domain[t]}/{s.target}":"eliminação";
             // Placar por time: em todos contra todos, um item por jogador; em times, os jogadores de cada time juntos.
+            // PV, moedas e placar esperam a animação: não mostram o dano antes de os dados caírem.
+            if(Game.View==null||!Game.View.Busy) {
             score.text=string.Join("     ",s.Teams().Select(t=>{
                 var members=Enumerable.Range(1,s.players).Where(p=>s.alliance[p]==t).Select(Team);
                 return s.TeamPlay?$"Time {t} ({string.Join(" ",members)}) {Goal(t)}":$"{Team(t)} {Goal(t)}";
@@ -298,6 +302,7 @@ namespace ArenaTatica
                 return $"{(on?"▶ ":"")}{Team(x.team)} {n}  {(x.Alive?$"{x.hp}/{Content.MaxHp(x)} PV":"nocauteado")}{(x.summoner==0?$" · {s.coins[x.team]} moedas":"")}";
             }));
             mobileStats.text=score.text;
+            }
             var skills=f==null?new List<SkillDef>():Match.Skills(f);
             for(int i=0;i<skillButtons.Count;i++) {
                 var b=skillButtons[i]; bool show=i<skills.Count; b.gameObject.SetActive(show); if(!show) continue;
