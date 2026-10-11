@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "data": "2026-10-11",
+  "timezone": "America/Fortaleza",
+  "tipo": "planejamento; nao e comprovante de producao ou integracao",
+  "projeto": "Arena Tatica",
+  "responsaveis": {
+    "planejamento_avaliacao": "Astra",
+    "execucao_visual": "Sol 6.1 xhigh",
+    "conversa_execucao": "01a12c36-88f8-7db3-9760-df681b263fa3",
+    "codigo_integracao": "Claude",
+    "enzo": "pausado"
+  },
+  "custos": {
+    "fonte": "PixelLab.get_balance consultado diretamente em 2026-10-11",
+    "saldo_snapshot": 165,
+    "usadas_snapshot": 4835,
+    "cota_snapshot": 5000,
+    "saldo_usd_snapshot": 0,
+    "renovacao_informada": "2026-11-10",
+    "compra_autorizada": false,
+    "limites_de_planejamento": {
+      "reparos": 12,
+      "damian": 36,
+      "lacunas_elenco": 64,
+      "eventos_locais_e_blender_pixellab": 0,
+      "reserva": 53
+    },
+    "formula": "direcoes ausentes confirmadas * custo observado por direcao, mais tentativas cobradas",
+    "observacao": "Saldo dinamico. Nao representa fila aprovada para gastar os tetos. Tokens de modelos e creditos OpenRouter sao custos separados."
+  },
+  "eventos": {
+    "fonte_ids": "ArenaTaticaUnity/Assets/ArenaTatica/Scripts/Core/Match.cs:797",
+    "metodo": "arte pixelada e animacao local, fora do PixelLab",
+    "proposta_tecnica": {
+      "frame": [128, 128],
+      "frames": 20,
+      "fps": 12,
+      "pivot": [0.5, 0.5],
+      "atlas_horizontal": [2560, 128],
+      "loop": false,
+      "filtro": "Point/nearest",
+      "nota": "Adaptar se necessario ao contrato real de importacao; manter manifesto consistente."
+    },
+    "itens": [
+      {"id":"chuva-de-moedas","simbolo":"tres moedas caindo e estrela curta","cores":["#DFA92F","#B66A2B","#F8E7AD"]},
+      {"id":"queda-de-pedras","simbolo":"rocha angular e duas lascas","cores":["#68717D","#AB6549","#C8A45D"]},
+      {"id":"terremoto","simbolo":"blocos separados por fissura","cores":["#8A6042","#DAB64D","#D87A3B"]},
+      {"id":"mare-de-lava","simbolo":"onda de lava sobre basalto","cores":["#BC3F47","#E67C36","#F1C75D"]},
+      {"id":"portal-caotico","simbolo":"aro oval e espiral","cores":["#7650B1","#B64D9D","#62C6C7"]},
+      {"id":"eco-ancestral","simbolo":"runa vertical e halo","cores":["#BC9B48","#EADBAB","#69ADA3"]},
+      {"id":"mare-de-energia","simbolo":"raio entre ondas ascendentes","cores":["#4F7DB8","#60BEC8","#76BA79"]},
+      {"id":"festival-de-fogos","simbolo":"tres explosoes em leque","cores":["#B855A1","#E4BD58","#5DB9C8"]},
+      {"id":"nevoeiro","simbolo":"faixas de nevoa e silhueta","cores":["#879EAD","#B4ABC8","#D0DFDC"]},
+      {"id":"vendaval","simbolo":"espiral aberta e folhas","cores":["#67966B","#63ACA0","#CDCD8B"]},
+      {"id":"papa-moedas","simbolo":"referencia do Papa e moeda","cores":["#956444","#DBAB4E","#8FAA70"]},
+      {"id":"errante","simbolo":"referencia do chefe em portal de pedra","cores":["#555567","#C99A50","#B95A53"]}
+    ]
+  },
+  "fila": [
+    {"id":"urgente-baltazar","etapa":0,"executor":"Sol","estado":"correcao_solicitada_em_execucao","escopo":"Clipes afetados west/south-west no PixelLab","evidencia":"Pedido direto do autor; selecao exata pelo Sol"},
+    {"id":"urgente-guardiao","etapa":0,"executor":"Sol","estado":"correcao_solicitada_em_execucao","escopo":"idle north-west no PixelLab","evidencia":"Pedido direto do autor"},
+    {"id":"auditoria-cobertura","etapa":1,"executor":"Sol","estado":"em_conferencia","escopo":"Uniao grupos/direcoes e comparacao selecao/importacao/fallback","evidencia":"Relatos recentes superam auditoria-remota-inicial.json"},
+    {"id":"avisos-cataclisma","etapa":2,"executor":"Sol","estado":"planejado","escopo":"12 artes centrais locais animadas, por ID","evidencia":"Match.Cataclysms e pedido direto"},
+    {"id":"props-blender-animados","etapa":3,"executor":"Sol","estado":"proposta_de_lote","escopo":"5 props decorativos, um por tema, com animacao exportada","evidencia":"Pedido direto; verificar duplicatas no kit"},
+    {"id":"brumak","etapa":4,"executor":"Sol","estado":"revisao_de_selecao","escopo":"Hit SW e confirmacao dos corretivos walk SW/death NE","evidencia":"fechamento-arena-2026-10-11/personagens/brumak/ e notas posteriores"},
+    {"id":"lobo-ossyro","etapa":4,"executor":"Sol","estado":"reconciliar_fontes_e_importacao","escopo":"Acoes basicas, spawn Lobo e baforada Ossyro","evidencia":"Jobs existentes; importacoes relatadas"},
+    {"id":"alvyr-nixira","etapa":4,"executor":"Sol","estado":"reconciliar_fontes_e_importacao","escopo":"Revisar selecao e lacunas reais; espelho Alvyr hit NW","evidencia":"respostas/016-codex.md"},
+    {"id":"damian-armas","etapa":4,"executor":"Sol","estado":"parcial_com_selecao_aprovada","escopo":"Martelo, pistola, canhao, camaleao; idles, golpes e transicoes separadas","evidencia":"martelo-v3-aprovado e nota de fluxo ombro-mao-arma"},
+    {"id":"edgar-fantasma","etapa":4,"executor":"Sol","estado":"versao_importada_a_confirmar","escopo":"Correcoes norte, transformacao, ataques e navio","evidencia":"Nota antiga diverge de relato posterior de importacao"},
+    {"id":"gryvro","etapa":4,"executor":"Sol","estado":"fallback_especifico_relatado","escopo":"Takeoff em uma direcao, solo/voo e espelhos existentes","evidencia":"respostas/016-codex.md"},
+    {"id":"colosso","etapa":4,"executor":"Sol","estado":"fallback_especifico_relatado","escopo":"stomp, steal-reach, steal-slam, steal-cast; espelhos NW","evidencia":"respostas/016-codex.md"},
+    {"id":"gatos-asamyh","etapa":4,"executor":"Sol","estado":"cobertura_atual_a_confirmar","escopo":"4 variantes; idle walk attack hit death zap spawn","evidencia":"tarefas/015 e 016; producao posterior existente"},
+    {"id":"demais-personagens","etapa":4,"executor":"Sol","estado":"revisar_sem_regenerar_em_bloco","escopo":"Raizor, Asamyh, Cheiro, Kellen, ReiBobett, Vespa, Viuva, Domador, Ogro, Papa, Brutamontes, Totem","evidencia":"respostas/016 e monitor-personagens-importados-1813"},
+    {"id":"teantha-legado","etapa":4,"executor":"Sol","estado":"integracao_da_selecao_a_confirmar","escopo":"Teantha aprovada; conferir demais selecoes antigas sem refazer","evidencia":"respostas/015-codex.md"},
+    {"id":"fx-cinco-prioritarios","etapa":5,"executor":"Sol","estado":"exports_existentes_a_empacotar","escopo":"Brumak, Ossyro, Lobo, Alvyr, Nixira","evidencia":"fechamento-arena-2026-10-11/efeitos"},
+    {"id":"fx-projeteis-habilidades","etapa":5,"executor":"Sol","estado":"cobertura_a_conferir","escopo":"Projeteis, impactos, gestos especificos e invocacoes","evidencia":"tarefas/015-codex-eventos-elenco-cenarios.md"},
+    {"id":"loja-itens","etapa":5,"executor":"Sol","estado":"parcial_a_reconciliar","escopo":"Icone e idle por item; efeitos de uso aplicaveis; loja animada existente","evidencia":"tarefas/004, 015 e notas de direcao"},
+    {"id":"fx-status-desejos","etapa":5,"executor":"Sol","estado":"cobertura_a_conferir","escopo":"Estados visuais, seis desejos Kellen, devorar Colosso","evidencia":"tarefas/015-codex-eventos-elenco-cenarios.md"},
+    {"id":"fx-eventos-persistentes","etapa":5,"executor":"Sol","estado":"separado_dos_avisos_centrais","escopo":"Chao, marcadores, spawn de neutros, ceus e inicio-loop-fim","evidencia":"tarefas/015; novo aviso central nao encerra estes efeitos"},
+    {"id":"catalogo-editor","etapa":6,"executor":"Claude","estado":"pendencia_confirmada_em_resposta","escopo":"Preview, ID, versao, estados e novas entregas","evidencia":"respostas/012-claude-editor-baltazar.md"},
+    {"id":"oclusao-arvores","etapa":6,"executor":"Claude","estado":"pendencia_confirmada_em_resposta","escopo":"Lutadores visiveis nas quatro cameras","evidencia":"respostas/013-claude-edgar-mapas-rotativos.md"},
+    {"id":"cenario-animado","etapa":6,"executor":"Claude","estado":"pendencia_confirmada_em_resposta","escopo":"Vento, agua/lava, fogo/fumaca, modelos de modo, caixa quebrada","evidencia":"respostas/011-claude-integracao.md"},
+    {"id":"mapas-posteriores","etapa":6,"executor":"Claude","estado":"integracao_individual_a_confirmar","escopo":"Lotes Deserto e Vulcao posteriores aos mapas confirmados","evidencia":"nota vulcao-passarela-e-confirmacoes"},
+    {"id":"nitidez-runtime","etapa":6,"executor":"Claude","estado":"avaliacao_visual_pendente","escopo":"Proporcao, filtro, pivos, loops, 4 cameras e tamanhos12/16/18","evidencia":"respostas/014-codex-monitoramento-unity.md"},
+    {"id":"legado-reconciliacao","etapa":6,"executor":"Claude","estado":"historico_nao_prova_lacuna_atual","escopo":"Devon, Talyssa, Dragao espectral, Berserk possuido, cena loja e efeitos/terrenos antigos","evidencia":"estado-visual-final.json e respostas historicas; conferir versao atual antes de abrir retrabalho"},
+    {"id":"aceite-final","etapa":6,"executor":"Astra e Claude","estado":"pendente","escopo":"Evidencias de selecao, importacao e reproducao; aceite visual do autor","evidencia":"Metas gerais014/015/016 abertas"},
+    {"id":"conversao-completa-3d","etapa":7,"executor":"a organizar","estado":"posterior_ao_fechamento_arena","escopo":"Comparar modelos Blender de todo elenco, ataques e efeitos","evidencia":"Pedido anterior; props animados atuais autorizados antes disso"},
+    {"id":"pvpve-krosarcano","etapa":7,"executor":"a organizar","estado":"posterior_ao_fechamento_arena","escopo":"Novo projeto baseado em KrosArcano/Arcadia Quest; critico e armadura","evidencia":"tarefas/012-claude-editor-baltazar-balanceamento.md"}
+  ]
+}
