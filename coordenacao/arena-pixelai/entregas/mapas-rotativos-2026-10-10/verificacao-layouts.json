@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "layouts": [
+    {
+      "file": "bosque-quatro-patios-12.json",
+      "dimension": 12,
+      "centralZone2x2": true,
+      "uniqueProps": 12,
+      "mapaJogavelValidado": false,
+      "sha256": "9b508df07216a6ebf4683833feb7da4b6cbe0159fb7d9409476d4c6de46cdd7d"
+    },
+    {
+      "file": "bosque-quatro-patios-16.json",
+      "dimension": 16,
+      "centralZone2x2": true,
+      "uniqueProps": 12,
+      "mapaJogavelValidado": false,
+      "sha256": "3b514fc3c160e82e77e40e3c5bba5cc7612b30f4a9d0d6833258db546277cc74"
+    },
+    {
+      "file": "bosque-quatro-patios-18.json",
+      "dimension": 18,
+      "centralZone2x2": true,
+      "uniqueProps": 12,
+      "mapaJogavelValidado": false,
+      "sha256": "6f52567a1494b22cf13aaded8544d395a146278e3281ec84caf2bafded57c9df"
+    },
+    {
+      "file": "neve-bastioes-diagonais-12.json",
+      "dimension": 12,
+      "centralZone2x2": true,
+      "uniqueProps": 12,
+      "mapaJogavelValidado": false,
+      "sha256": "a360eb57d74b586814bb3f5531e4dc750a8ec3137547317f7c2c5e2e243fd62e"
+    },
+    {
+      "file": "neve-bastioes-diagonais-16.json",
+      "dimension": 16,
+      "centralZone2x2": true,
+      "uniqueProps": 12,
+      "mapaJogavelValidado": false,
+      "sha256": "4fa703f79ca40bac95c6a50e695d0d90f5ae74e8b27a17aaf1233c13f7f5beed"
+    },
+    {
+      "file": "neve-bastioes-diagonais-18.json",
+      "dimension": 18,
+      "centralZone2x2": true,
+      "uniqueProps": 12,
+      "mapaJogavelValidado": false,
+      "sha256": "641d5aaf5ee3a7cce446c5e540c12a5431c95bc0693a5285cf13d2803d1be721"
+    },
+    {
+      "file": "pedreira-anel-partido-12.json",
+      "dimension": 12,
+      "centralZone2x2": true,
+      "uniqueProps": 12,
+      "mapaJogavelValidado": false,
+      "sha256": "13c2b5d52098963c041ecc69121ae92c24fb85b35f37c07cc130ca314d49b89b"
+    },
+    {
+      "file": "pedreira-anel-partido-16.json",
+      "dimension": 16,
+      "centralZone2x2": true,
+      "uniqueProps": 12,
+      "mapaJogavelValidado": false,
+      "sha256": "7c89be94ed16e066dc3065877c240280ab867efa6f0f353793fb2b58948c86e5"
+    },
+    {
+      "file": "pedreira-anel-partido-18.json",
+      "dimension": 18,
+      "centralZone2x2": true,
+      "uniqueProps": 12,
+      "mapaJogavelValidado": false,
+      "sha256": "20b133134ff4e39c2789ffda82a00ccd1caaa5398889a878a6fa651cc1bcf809"
+    }
+  ],
+  "gameplayValidated": false,
+  "passed": true,
+  "centralZone2x2": true
+}

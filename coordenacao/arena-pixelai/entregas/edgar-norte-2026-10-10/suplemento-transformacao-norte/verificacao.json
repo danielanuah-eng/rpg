@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "modifiedFrames": [
+    "Idle/animations/transform-ghost/north-east/frame_000.png",
+    "Idle/animations/transform-ghost/north-east/frame_001.png",
+    "Idle/animations/transform-ghost/north-east/frame_002.png",
+    "Idle/animations/transform-ghost/north-east/frame_003.png",
+    "Idle/animations/transform-ghost/north-east/frame_004.png"
+  ],
+  "modifiedPixels": 1091,
+  "otherPngUnchanged": 164,
+  "additionalEntries": [],
+  "alphaUnchanged": true,
+  "frameCount": 9,
+  "nativeFrameSize": [
+    136,
+    180
+  ],
+  "frameSize": [
+    180,
+    180
+  ],
+  "nativePaddingOffset": [
+    22,
+    0
+  ],
+  "sha256": "2f29a1280a8c1d324a59197b90e43de959a8887ef13532e87c3f58effff09820",
+  "visualReview": "Coroas dos cinco quadros humanos aprovadas; quadros espectrais e efeito original preservados, revisão da transformação completa cabe ao Claude."
+}

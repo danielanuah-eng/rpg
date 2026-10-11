@@ -1,0 +1,126 @@
+{
+  "data": "2026-10-10",
+  "projeto": "ArenaTaticaUnity",
+  "arenaFinalizada": false,
+  "integracao": "parcial_confirmada_claude_012",
+  "automacao": {
+    "id": "arena-t-tica-her-is-e-mapas",
+    "frequencia": "a cada hora",
+    "lote": "pequeno; priorizar novos comandos; conferir jobs existentes"
+  },
+  "edgar": {
+    "characterId": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+    "estado": "47 quadros corrigidos e conferidos: 42 originais e cinco humanos da nova transformacao NE; entrega atualizada na tarefa 013",
+    "proximo": "conferir novas animacoes norte apenas quando chegarem; nao repetir correcoes salvas",
+    "manifesto": "../edgar-norte-2026-10-10/verificacao.json",
+    "suplemento": "../edgar-norte-2026-10-10/suplemento-transformacao-norte/manifesto.json",
+    "transformationNEGroup": "ff56fd4f-3054-42af-a54a-7c68df8f6286",
+    "nativeSupplementImageId": "5997daa1-bb65-4d3d-be33-cf10a3a1ed80",
+    "latestMonitoredBundle": "../edgar-norte-2026-10-10/suplemento-transformacao-norte/edgar-depois-suplemento.zip"
+  },
+  "baltazar": {
+    "characterId": "e6148923-ecab-4e29-8da1-6d52cd46c535",
+    "bases": "8 prontas e transparentes",
+    "walkGroup": "2e791df3-cf33-47e2-b61f-c83d9d071dc5",
+    "walkDirectionsRequested": [
+      "south",
+      "south-east",
+      "east",
+      "north-east",
+      "north",
+      "north-west",
+      "west",
+      "south-west"
+    ],
+    "attackGroup": "bb5036c6-0a52-45b8-b97b-3f80e9d55fbb",
+    "attackDirectionsRequested": [
+      "south-east",
+      "north-east",
+      "north-west",
+      "south-west",
+      "south",
+      "north",
+      "east",
+      "west"
+    ],
+    "attackPrompt": "One clear heavy warhammer attack by Baltazar, the silver kevlar-armored indigo dragonborn paladin. Stay facing the SAME direction as the starting sprite throughout the full animation, fixed high top-down camera. Lift the warhammer using both hands, plant the feet, swing diagonally DOWN into the target in front, show one weighty impact pause, then recover to the starting guard. Stay centered in the same grid cell. Hammer remains connected to the hands; keep horns, short tail, face and silver woven kevlar armor identical. No spinning, no turn toward camera, no ghost limbs, no particles covering the head.",
+    "idleGroup": "9e2189d7-02e2-442b-b32a-9389955e834d",
+    "angelImageJob": "54491ec7-8b0c-4814-8e8b-d000b4dcbb82",
+    "demonImageJob": "71c0dc73-8640-457e-9de0-b4c8b7ef9162",
+    "angelHoverJob": "c9d02e54-2403-4c7f-b541-bac5002ccfde",
+    "demonHoverJob": "7b7eb063-4b50-4c00-8ca2-832752db06fd",
+    "proximo": "Aguardar integracao Claude; nao gerar novamente. Seguir para novos mapas/props quando nao houver comandos do autor.",
+    "idleDirectionsRequested": [
+      "south",
+      "south-east",
+      "east",
+      "north-east",
+      "north",
+      "north-west",
+      "west",
+      "south-west"
+    ],
+    "replacementAttackSEGroup": "99610ab1-96e2-4daa-a468-30b90f10cf7c",
+    "rejectedSource": "attack/south-east original",
+    "estado": "arte_concluida_32_clips_160_quadros_mais_10_companheiros",
+    "review": "../baltazar-2026-10-10/revisao-codex.md",
+    "nativeAssemblyImageId": "9dcb620d-bf89-46ed-9795-abe52408a484",
+    "integracao": "importado_claude; ficha_aura_editor implementados; numeros provisorios"
+  },
+  "mapas": {
+    "entregues": [
+      "bosque-quatro-patios",
+      "pedreira-anel-partido",
+      "neve-bastioes-diagonais",
+      "deserto-galerias-deslocadas"
+    ],
+    "props": [
+      "relicario_solar",
+      "barricada_partida"
+    ],
+    "manifesto": "../mapas-rotativos-2026-10-10/manifesto.json",
+    "proximosTemas": [
+      "vulcao"
+    ],
+    "proximo": "Novo desenho no vulcao, distinto dos quatro entregues; conferir respostas Claude e assets/jobs existentes antes de produzir.",
+    "manifestos": [
+      "../mapas-rotativos-2026-10-10/manifesto.json",
+      "../mapas-rotativos-lote-02-2026-10-10/manifesto.json"
+    ]
+  },
+  "editor": {
+    "tarefa": "../../tarefas/012-claude-editor-baltazar-balanceamento.md",
+    "catalogo": "catalogo.json",
+    "atualizacao": "executar atualizar-catalogo.py apos cada entrega",
+    "valores": [
+      "movimento",
+      "vida",
+      "alcance",
+      "dano"
+    ],
+    "implementado": [
+      "edicao de fichas e skills",
+      "edicao de mapas",
+      "persistencia e configuracao do host"
+    ],
+    "pendente": [
+      "catalogo e previews de assets",
+      "camera local rotativa",
+      "props decorativos"
+    ],
+    "resposta": "../../respostas/012-claude-editor-baltazar.md"
+  },
+  "etapasPosteriores": {
+    "requeremFinalizacaoArena": true,
+    "blenderComparativo": "todos os assets PixelLab",
+    "PvEvP": "documentos KrosArcano, mapas, modelos e balanceamento de critico/armadura",
+    "naoMudarCriticoArmaduraArena": true
+  },
+  "ultimoLote": {
+    "id": "edgar-norte-suplemento-e-deserto-galerias-deslocadas",
+    "estado": "arte_concluida_integracao_pendente",
+    "nota": "../../notas/2026-10-10_retomada-edgar-deserto.codex.md",
+    "dataConclusao": "2026-10-11",
+    "verificacoes": "correcao Edgard por replay RGBA; 12 layouts, zona central, texturas e quatro cameras; revisao visual Codex e DeepSeek"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "resumo": "Revisão só-leitura das 5 folhas de conferência e do manifesto de Baltazar. Identidade do personagem (dragão roxo/indigo, armadura prateada, chifres, cauda, martelo com cabo branco) mantida em idle (8 direções, 4 quadros), walk (8 direções, 6 quadros) e na maioria dos quadros de attack (8 direções, 9 quadros); anjo e demônio mantêm identidade nos 5 quadros cada, sem deslocamento global grande. Achado principal: nos quadros 5 e 6 de attack/south-east há uma região branca sólida, grande e irregular sobre tronco/braço/martelo, confirmada no PNG nativo. Também há dúvidas menores em attack/south-west quadro 6 (pontos brancos isolados) e na silhueta de walk/north-west quadros 4-5. Não avaliei integração nem Unity.",
+  "achados": [
+    {
+      "afirmacao": "Identidade e equipamento consistentes nas 8 vistas da folha de vistas (armadura prateada, escamas roxas/indigo, chifres, cauda e martelo presentes em todas).",
+      "ok": true,
+      "arquivo": "baltazar-oito-vistas.png",
+      "imagem": "baltazar-oito-vistas.png (4 cantos alfa=0,0,0,0 quando medido nos PNGs nativos)"
+    },
+    {
+      "afirmacao": "Idle: 8 direções x 4 quadros, sem troca de direção, identidade ou membros extras; martelo permanece na mesma mão e lado.",
+      "ok": true,
+      "arquivo": "idle-conferencia.png",
+      "imagem": "idle-conferencia.png"
+    },
+    {
+      "afirmacao": "Walk: 8 direções x 6 quadros, direção constante em cada linha e martelo conectado à mão; conferido tambem em 1:1 no PNG nativo do east, onde o cabo branco fica dentro da mão em todos os 6 quadros.",
+      "ok": true,
+      "arquivo": "sprites/walk/east.png",
+      "imagem": "sprites/walk/east.png e walk-conferencia.png"
+    },
+    {
+      "afirmacao": "Attack/south-east: nos quadros zero-based 5 e 6 existe uma forma branca solida, grande e irregular (delta de paleta) cobrindo tronco/braco/martelo, ausente nos demais quadros e nas outras direcoes; parece silhueta nao texturizada, nao um membro a mais.",
+      "ok": false,
+      "arquivo": "sprites/attack/south-east.png",
+      "imagem": "sprites/attack/south-east.png (quadros 6 e 7 da esquerda, contando do 1) e attack-conferencia.png linha south-east",
+      "trecho": "manifesto.json linha 107: action attack / direction south-east / frames 9"
+    },
+    {
+      "afirmacao": "Attack/south-west quadro 6: corpo escurecido com o martelo no chao e alguns pontos brancos isolados pequenos no corpo; nao afirmo que seja artefato, pode ser efeito do impacto.",
+      "ok": false,
+      "arquivo": "sprites/attack/south-west.png",
+      "imagem": "sprites/attack/south-west.png quadro 7 e attack-conferencia.png linha south-west"
+    },
+    {
+      "afirmacao": "Demais direcoes de attack seguem a base: levantamento normal com o martelo passando atras da cabeca (north 3-6, north-west 3-5, north-east 3-4) e recuperacao final voltando a pose base; nao tratei isso como falha.",
+      "ok": true,
+      "arquivo": "attack-conferencia.png",
+      "imagem": "attack-conferencia.png"
+    },
+    {
+      "afirmacao": "Anjo e demonio: 5 quadros cada, com halo/asa/túnica e orbe verde no anjo e chifres/asa roxa e orbe amarelo no demonio, mesma identidade e sem deslocamento global grande.",
+      "ok": true,
+      "arquivo": "companheiros/companheiros-quadros.png",
+      "imagem": "companheiros/companheiros-quadros.png"
+    },
+    {
+      "afirmacao": "As pastas fontes/conferencia/attack/* e fontes/conferencia/walk/* estao vazias (a listagem recursiva devolveu apenas diretorios, nenhum frame nativo solto), portanto nao havia quadros nativos de conferencia para comparar.",
+      "ok": false,
+      "arquivo": "fontes/conferencia",
+      "trecho": "fontes/conferencia/attack/north-east/ (sem arquivos listados); fontes/conferencia/walk/east/ (sem arquivos listados)"
+    }
+  ],
+  "pendencias": [
+    "Nao medi nem comparei pivots/ancoras (manifesto: pivot pendente_claude em todas as entradas).",
+    "Nao abri em 1:1 todos os PNGs nativos; so walk/east, walk/north-west, attack/south-east e attack/south-west. As demais direcoes foram vistas apenas pela folha de conferencia reduzida.",
+    "Alpha nos proprios sheets: olhar devolveu transparencia=true e alfa 0 nos cantos para sprites/attack/south-east.png, sprites/attack/south-west.png, sprites/walk/east.png e sprites/walk/north-west.png; nao medi os demais PNGs nem os sheets de conferencia (que sao opacos, transparencia=false).",
+    "Nao avaliei clips de rotation (1 quadro por direcao) por nao fazerem parte do pedido.",
+    "Nao declarei nem testei integracao/Unity (manifesto: integration pendente_claude)."
+  ]
+}

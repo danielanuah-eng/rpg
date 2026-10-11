@@ -1,0 +1,1078 @@
+{
+  "id": "baltazar",
+  "characterId": "e6148923-ecab-4e29-8da1-6d52cd46c535",
+  "view": "high top-down",
+  "assets": [
+    {
+      "id": "baltazar-attack-east",
+      "action": "attack",
+      "sourceAction": "attack",
+      "direction": "east",
+      "file": "sprites/attack/east.png",
+      "frameSize": [
+        176,
+        176
+      ],
+      "nativeFrameSize": [
+        176,
+        176
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 9,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 218732,
+        "opaque": 60052,
+        "partial": 0
+      },
+      "sha256": "031cd82b96f03a9741e1120bcc9dbae04c6bd2b614e4356017b7bcc6c7709efb",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "bb5036c6-0a52-45b8-b97b-3f80e9d55fbb",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-attack-north",
+      "action": "attack",
+      "sourceAction": "attack",
+      "direction": "north",
+      "file": "sprites/attack/north.png",
+      "frameSize": [
+        172,
+        172
+      ],
+      "nativeFrameSize": [
+        172,
+        172
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 9,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 203569,
+        "opaque": 62687,
+        "partial": 0
+      },
+      "sha256": "6b137dec30129dce8d6410a3fee6dac303f01bb8771e18505f2fb436a5e99af0",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "bb5036c6-0a52-45b8-b97b-3f80e9d55fbb",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-attack-north-east",
+      "action": "attack",
+      "sourceAction": "attack",
+      "direction": "north-east",
+      "file": "sprites/attack/north-east.png",
+      "frameSize": [
+        172,
+        172
+      ],
+      "nativeFrameSize": [
+        172,
+        172
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 9,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 206097,
+        "opaque": 60159,
+        "partial": 0
+      },
+      "sha256": "ebe6c7eec1b476106a4ef9bfd9754625f32a243fe925cef74fd0265a80a8d30f",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "bb5036c6-0a52-45b8-b97b-3f80e9d55fbb",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-attack-north-west",
+      "action": "attack",
+      "sourceAction": "attack",
+      "direction": "north-west",
+      "file": "sprites/attack/north-west.png",
+      "frameSize": [
+        172,
+        172
+      ],
+      "nativeFrameSize": [
+        172,
+        172
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 9,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 205414,
+        "opaque": 60842,
+        "partial": 0
+      },
+      "sha256": "b27676fcaf463b0d5169ce3f8f6846cd65066b36fec98bf3c4cc85ff1a951186",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "bb5036c6-0a52-45b8-b97b-3f80e9d55fbb",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-attack-south",
+      "action": "attack",
+      "sourceAction": "attack",
+      "direction": "south",
+      "file": "sprites/attack/south.png",
+      "frameSize": [
+        172,
+        172
+      ],
+      "nativeFrameSize": [
+        172,
+        172
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 9,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 202857,
+        "opaque": 63399,
+        "partial": 0
+      },
+      "sha256": "6bf367ea27f4f3982be27e2572e86c39cbd03a14892fb28d584a4b81b4adb42f",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "bb5036c6-0a52-45b8-b97b-3f80e9d55fbb",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-attack-south-east",
+      "action": "attack",
+      "sourceAction": "attack-v2",
+      "direction": "south-east",
+      "file": "sprites/attack/south-east.png",
+      "frameSize": [
+        188,
+        188
+      ],
+      "nativeFrameSize": [
+        176,
+        188
+      ],
+      "paddingOrigin": [
+        6,
+        0
+      ],
+      "frames": 9,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 258827,
+        "opaque": 59269,
+        "partial": 0
+      },
+      "sha256": "8c4e91404740f79604c9f8787d46dcb90a4d137d77879322fc7c64ba400687eb",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "99610ab1-96e2-4daa-a468-30b90f10cf7c",
+      "impactFrameZeroBased": 5
+    },
+    {
+      "id": "baltazar-attack-south-west",
+      "action": "attack",
+      "sourceAction": "attack",
+      "direction": "south-west",
+      "file": "sprites/attack/south-west.png",
+      "frameSize": [
+        172,
+        172
+      ],
+      "nativeFrameSize": [
+        172,
+        172
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 9,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 202260,
+        "opaque": 63996,
+        "partial": 0
+      },
+      "sha256": "70668e1d92fbb0317b9d2dacd83c9d26346be1389fa0ce7733c5702fc4b83b86",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "bb5036c6-0a52-45b8-b97b-3f80e9d55fbb",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-attack-west",
+      "action": "attack",
+      "sourceAction": "attack",
+      "direction": "west",
+      "file": "sprites/attack/west.png",
+      "frameSize": [
+        168,
+        168
+      ],
+      "nativeFrameSize": [
+        168,
+        168
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 9,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 197868,
+        "opaque": 56148,
+        "partial": 0
+      },
+      "sha256": "9fe109affe945e09bbbd7834a38a24c46cde00cc41c314f98cf6383baf2de59f",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "bb5036c6-0a52-45b8-b97b-3f80e9d55fbb",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-idle-east",
+      "action": "idle",
+      "sourceAction": "idle",
+      "direction": "east",
+      "file": "sprites/idle/east.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 4,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 45012,
+        "opaque": 20524,
+        "partial": 0
+      },
+      "sha256": "103d1757a50e86c9d7f57cde4bd3cdeb56931b0a04e92c89fba6e91017bc88ed",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "9e2189d7-02e2-442b-b32a-9389955e834d",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-idle-north",
+      "action": "idle",
+      "sourceAction": "idle",
+      "direction": "north",
+      "file": "sprites/idle/north.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 4,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 40191,
+        "opaque": 25345,
+        "partial": 0
+      },
+      "sha256": "5bd93499606b7309bba76b807ae604c999f7d85dd169bc89b864a7eab052d1c7",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "9e2189d7-02e2-442b-b32a-9389955e834d",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-idle-north-east",
+      "action": "idle",
+      "sourceAction": "idle",
+      "direction": "north-east",
+      "file": "sprites/idle/north-east.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 4,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 44102,
+        "opaque": 21434,
+        "partial": 0
+      },
+      "sha256": "06d3f0609c844daa55400f519a646cf936f6a7b8263cecfdfb3dbdd24b27f94d",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "9e2189d7-02e2-442b-b32a-9389955e834d",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-idle-north-west",
+      "action": "idle",
+      "sourceAction": "idle",
+      "direction": "north-west",
+      "file": "sprites/idle/north-west.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 4,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 41358,
+        "opaque": 24178,
+        "partial": 0
+      },
+      "sha256": "32e6389ec9f8ca99aba6a52af6c49af51064f45e9620340dc9c692d3f5376915",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "9e2189d7-02e2-442b-b32a-9389955e834d",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-idle-south",
+      "action": "idle",
+      "sourceAction": "idle",
+      "direction": "south",
+      "file": "sprites/idle/south.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 4,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 43318,
+        "opaque": 22218,
+        "partial": 0
+      },
+      "sha256": "661a5a9c8474f4c4445fdce561131453230a81d9c570ac21c1a2b52efcf9a95e",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "9e2189d7-02e2-442b-b32a-9389955e834d",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-idle-south-east",
+      "action": "idle",
+      "sourceAction": "idle",
+      "direction": "south-east",
+      "file": "sprites/idle/south-east.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 4,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 39531,
+        "opaque": 26005,
+        "partial": 0
+      },
+      "sha256": "523585b704aa7249dd85172e9461b44505169a9e32f800050db5d7a82a6942f1",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "9e2189d7-02e2-442b-b32a-9389955e834d",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-idle-south-west",
+      "action": "idle",
+      "sourceAction": "idle",
+      "direction": "south-west",
+      "file": "sprites/idle/south-west.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 4,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 42075,
+        "opaque": 23461,
+        "partial": 0
+      },
+      "sha256": "638b77244b470c57ebd928748cd3f1ee08c1a1c3ccd29a564ce794f8c8d60a11",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "9e2189d7-02e2-442b-b32a-9389955e834d",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-idle-west",
+      "action": "idle",
+      "sourceAction": "idle",
+      "direction": "west",
+      "file": "sprites/idle/west.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 4,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 51788,
+        "opaque": 13748,
+        "partial": 0
+      },
+      "sha256": "4cdbc48e0024784a6d609690fec2f3020f469cd208bf0ab9d602c4131041b8fb",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "9e2189d7-02e2-442b-b32a-9389955e834d",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-rotation-east",
+      "action": "rotation",
+      "sourceAction": "rotation",
+      "direction": "east",
+      "file": "sprites/rotation/east.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 1,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 10878,
+        "opaque": 5506,
+        "partial": 0
+      },
+      "sha256": "63f08a03765e30da25fcaf5f61dcbfea34bd82529e1cde8a339b422bd9ea337d",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": null,
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-rotation-north",
+      "action": "rotation",
+      "sourceAction": "rotation",
+      "direction": "north",
+      "file": "sprites/rotation/north.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 1,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 8915,
+        "opaque": 7469,
+        "partial": 0
+      },
+      "sha256": "9953974ab4b32410114eeda84bacb21049336bc0c08fd09a539b11722ce9fb9a",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": null,
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-rotation-north-east",
+      "action": "rotation",
+      "sourceAction": "rotation",
+      "direction": "north-east",
+      "file": "sprites/rotation/north-east.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 1,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 9180,
+        "opaque": 7204,
+        "partial": 0
+      },
+      "sha256": "64e1d41dd815a6297cd4cc870b1ba978fd9afd4a65ebc602330806ce2080be6f",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": null,
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-rotation-north-west",
+      "action": "rotation",
+      "sourceAction": "rotation",
+      "direction": "north-west",
+      "file": "sprites/rotation/north-west.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 1,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 9179,
+        "opaque": 7205,
+        "partial": 0
+      },
+      "sha256": "5b3c61a76480fcc7fa266d9e80be9d81ba64f336ea2aa356a180c1d01380a01f",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": null,
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-rotation-south",
+      "action": "rotation",
+      "sourceAction": "rotation",
+      "direction": "south",
+      "file": "sprites/rotation/south.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 1,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 8818,
+        "opaque": 7566,
+        "partial": 0
+      },
+      "sha256": "6b5be470719235d10f2b2a84f0b030f476bf34bab49e9bcd1188ab9bda209863",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": null,
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-rotation-south-east",
+      "action": "rotation",
+      "sourceAction": "rotation",
+      "direction": "south-east",
+      "file": "sprites/rotation/south-east.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 1,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 9169,
+        "opaque": 7215,
+        "partial": 0
+      },
+      "sha256": "ee7aba48209b932d0817f06f1e50ec95bd202854d08efa5600a266930587c3d1",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": null,
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-rotation-south-west",
+      "action": "rotation",
+      "sourceAction": "rotation",
+      "direction": "south-west",
+      "file": "sprites/rotation/south-west.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 1,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 9170,
+        "opaque": 7214,
+        "partial": 0
+      },
+      "sha256": "f6777bc273297ce26037452f5b4fb5c78eb2c164619e196f5086665e817677ab",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": null,
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-rotation-west",
+      "action": "rotation",
+      "sourceAction": "rotation",
+      "direction": "west",
+      "file": "sprites/rotation/west.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 1,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 9697,
+        "opaque": 6687,
+        "partial": 0
+      },
+      "sha256": "f3654dfc339dc1869554628ec110dcac0fbd4bb09acac7e3657ebca1b4273374",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": null,
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-walk-east",
+      "action": "walk",
+      "sourceAction": "walk",
+      "direction": "east",
+      "file": "sprites/walk/east.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 6,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 68708,
+        "opaque": 29596,
+        "partial": 0
+      },
+      "sha256": "dfd0ccdaf3cb1d5604e131bf65e2f0e7da0a04faa548e1ddd41d8d97f1f2384e",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "2e791df3-cf33-47e2-b61f-c83d9d071dc5",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-walk-north",
+      "action": "walk",
+      "sourceAction": "walk",
+      "direction": "north",
+      "file": "sprites/walk/north.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 6,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 60285,
+        "opaque": 38019,
+        "partial": 0
+      },
+      "sha256": "19e15aaba52effa015fcbf9b4307ddfa9328d892279bdff898d8e17ad9e2ee7c",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "2e791df3-cf33-47e2-b61f-c83d9d071dc5",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-walk-north-east",
+      "action": "walk",
+      "sourceAction": "walk",
+      "direction": "north-east",
+      "file": "sprites/walk/north-east.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 6,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 63020,
+        "opaque": 35284,
+        "partial": 0
+      },
+      "sha256": "a2c6219b27e22938bcd5c0e74a7bb31868d5a4a0324149e303ab5ba8453fc1f5",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "2e791df3-cf33-47e2-b61f-c83d9d071dc5",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-walk-north-west",
+      "action": "walk",
+      "sourceAction": "walk",
+      "direction": "north-west",
+      "file": "sprites/walk/north-west.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 6,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 62713,
+        "opaque": 35591,
+        "partial": 0
+      },
+      "sha256": "483363ffe5016ebe4e53af45a4f09dfb69d7a978a8d2903d835cff500b11b180",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "2e791df3-cf33-47e2-b61f-c83d9d071dc5",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-walk-south",
+      "action": "walk",
+      "sourceAction": "walk",
+      "direction": "south",
+      "file": "sprites/walk/south.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 6,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 58607,
+        "opaque": 39697,
+        "partial": 0
+      },
+      "sha256": "ee29be0369a072e272106b6eef5265a5589383867c9bf0b22838f41a39489ada",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "2e791df3-cf33-47e2-b61f-c83d9d071dc5",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-walk-south-east",
+      "action": "walk",
+      "sourceAction": "walk",
+      "direction": "south-east",
+      "file": "sprites/walk/south-east.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 6,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 62057,
+        "opaque": 36247,
+        "partial": 0
+      },
+      "sha256": "d434b0aa0681afc0454c4570e10b81bb9d87632b754ca0360b0452cac9d3b29e",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "2e791df3-cf33-47e2-b61f-c83d9d071dc5",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-walk-south-west",
+      "action": "walk",
+      "sourceAction": "walk",
+      "direction": "south-west",
+      "file": "sprites/walk/south-west.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 6,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 66846,
+        "opaque": 31458,
+        "partial": 0
+      },
+      "sha256": "2967c30d8e1ce3df7d632e7db758ef958f94690644dc751a446dfae25a364cef",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "2e791df3-cf33-47e2-b61f-c83d9d071dc5",
+      "impactFrameZeroBased": null
+    },
+    {
+      "id": "baltazar-walk-west",
+      "action": "walk",
+      "sourceAction": "walk",
+      "direction": "west",
+      "file": "sprites/walk/west.png",
+      "frameSize": [
+        128,
+        128
+      ],
+      "nativeFrameSize": [
+        128,
+        128
+      ],
+      "paddingOrigin": [
+        0,
+        0
+      ],
+      "frames": 6,
+      "layout": "horizontal",
+      "alpha": {
+        "transparent": 76057,
+        "opaque": 22247,
+        "partial": 0
+      },
+      "sha256": "6b8de10ef2761afa0ba18a16a98911da4b17a4900c8347509f48f4341068a232",
+      "pivot": "pendente_claude; conservar ancora do sprite nativo com padding informado",
+      "integration": "pendente_claude",
+      "visualReview": "approved_codex",
+      "importAllowed": true,
+      "sourceGroupId": "2e791df3-cf33-47e2-b61f-c83d9d071dc5",
+      "impactFrameZeroBased": null
+    }
+  ],
+  "integration": "pendente_claude",
+  "source": "baltazar-completo.zip",
+  "selection": "selecao.json",
+  "technicalVerification": "verificacao-tecnica.json",
+  "anchors": "ancoras-medidas.json",
+  "review": "revisao-codex.md",
+  "excludedSources": [
+    {
+      "action": "attack",
+      "direction": "south-east",
+      "reason": "Mancha branca opaca nos quadros 5/6; preservar fonte, nao importar."
+    }
+  ],
+  "visualReview": "approved_codex_32_clips",
+  "nativeAssemblyImageId": "9dcb620d-bf89-46ed-9795-abe52408a484"
+}

@@ -1,0 +1,129 @@
+{
+  "assets": [
+    {
+      "id": "baltazar-anjo-hover",
+      "file": "anjo-hover.png",
+      "frameSize": [
+        64,
+        64
+      ],
+      "frames": 5,
+      "layout": "horizontal",
+      "playbackFrames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        3,
+        2,
+        1
+      ],
+      "fpsProposed": 6,
+      "motion": "hover suave; ping-pong evita salto na emenda",
+      "sourceJob": "c9d02e54-2403-4c7f-b541-bac5002ccfde",
+      "alphaPerFrame": [
+        {
+          "transparent": 3378,
+          "opaque": 718,
+          "partial": 0
+        },
+        {
+          "transparent": 3393,
+          "opaque": 703,
+          "partial": 0
+        },
+        {
+          "transparent": 3404,
+          "opaque": 692,
+          "partial": 0
+        },
+        {
+          "transparent": 3383,
+          "opaque": 713,
+          "partial": 0
+        },
+        {
+          "transparent": 3343,
+          "opaque": 753,
+          "partial": 0
+        }
+      ],
+      "sha256": "86835da6f306e460ede128ccf11f0aaa0a818ffb4c0769d3c3cc592e81d9b876",
+      "eventProposed": "baltazar-aura-curar",
+      "integration": "pendente_claude",
+      "orbit": "motor; dois companheiros separados 180 graus; centro em Baltazar; fase frente/tras conforme camera; colisao visual nao repete efeito",
+      "technicalVerified": true,
+      "visualReview": "approved_codex",
+      "pivotPixels": [
+        32,
+        32
+      ]
+    },
+    {
+      "id": "baltazar-demonio-hover",
+      "file": "demonio-hover.png",
+      "frameSize": [
+        64,
+        64
+      ],
+      "frames": 5,
+      "layout": "horizontal",
+      "playbackFrames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        3,
+        2,
+        1
+      ],
+      "fpsProposed": 6,
+      "motion": "hover suave; ping-pong evita salto na emenda",
+      "sourceJob": "7b7eb063-4b50-4c00-8ca2-832752db06fd",
+      "alphaPerFrame": [
+        {
+          "transparent": 2936,
+          "opaque": 1160,
+          "partial": 0
+        },
+        {
+          "transparent": 2947,
+          "opaque": 1149,
+          "partial": 0
+        },
+        {
+          "transparent": 2942,
+          "opaque": 1154,
+          "partial": 0
+        },
+        {
+          "transparent": 2927,
+          "opaque": 1169,
+          "partial": 0
+        },
+        {
+          "transparent": 2921,
+          "opaque": 1175,
+          "partial": 0
+        }
+      ],
+      "sha256": "88714c537eaa9ce88c978f726c92eccd05b07d3271a3dd88a22229ab6270d59c",
+      "eventProposed": "baltazar-aura-ferir",
+      "integration": "pendente_claude",
+      "orbit": "motor; dois companheiros separados 180 graus; centro em Baltazar; fase frente/tras conforme camera; colisao visual nao repete efeito",
+      "technicalVerified": true,
+      "visualReview": "approved_codex",
+      "pivotPixels": [
+        32,
+        32
+      ]
+    }
+  ],
+  "orbitRangeCells": 2,
+  "maintenancePerTurn": 1,
+  "resource": "PA proposto; confirmar com Claude",
+  "implementation": "pendente_claude",
+  "logic": "Uma aplicacao por alvo por turno de Baltazar; conforme ficha proposta, independente da animacao."
+}

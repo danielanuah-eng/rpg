@@ -68,7 +68,7 @@ def props():
         assert o.dimensions.x<=1 and o.dimensions.y<=1
         out=ROOT/'props'/name
         bpy.ops.export_scene.gltf(filepath=str(out.with_suffix('.glb')),export_format='GLB',use_selection=True,export_yup=True)
-        bpy.ops.export_scene.fbx(filepath=str(out.with_suffix('.fbx')),use_selection=True,axis_forward='-Z',axis_up='Y',apply_scale_options='FBX_SCALE_UNITS',add_leaf_bones=False)
+        bpy.ops.export_scene.fbx(filepath=str(out.with_suffix('.fbx')),use_selection=True,axis_forward='-Z',axis_up='Y',apply_scale_options='FBX_SCALE_UNITS',add_leaf_bones=False,path_mode='COPY',embed_textures=True)
         result[name]=o
     return result
 
@@ -87,7 +87,7 @@ def layout(kind, n):
             else:
                 distance=min(math.hypot(u-a,v-b) for a,b in ((1,1),(1,10),(10,1),(10,10)))
                 level=max(0,min(3,int(3-distance/1.5)))
-            if abs(u-5.5)<1.2 and abs(v-5.5)<1.2: level=1
+            if x in (n//2-1,n//2) and y in (n//2-1,n//2): level=1
             row.append(level)
         h.append(row)
     placements=[]
@@ -171,6 +171,7 @@ def main():
             print('VISTA_OK',map_id,seat+1,flush=True)
         manifests.append({'id':map_id,'tipo':'mapa','tema':theme,'fonte':'fontes/'+map_id+'.blend',
                           'layout':'layouts/'+map_id+'-12.json','dimensoesSuportadas':[12,16,18],
+                          'dimensaoFonte':12,'dimensoesLayouts':[12,16,18],'dimensaoPreviews':12,
                           'previews':previews,'camerasBlender':CAMERAS,'cameraLocalPorJogador':True,
                           'estado':'entregue','integracao':'pendente_claude','mapaJogavelValidado':False})
     files={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in ROOT.rglob('*') if p.is_file() and p.suffix in ('.png','.blend','.json','.glb','.fbx')}

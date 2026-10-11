@@ -1,0 +1,107 @@
+{
+  "resumo": "Revisão só-leitura dos 4 PNGs, do manifesto.json e de construir.py. Resultado: os quatro previews são o mesmo tabuleiro (12x12) inteiro e dentro do quadro, sob as quatro câmeras ortográficas rotativas declaradas; não vi textura ausente nem artefato por vista; as duas galerias elevadas existem e são distinguíveis (duas plataformas de 1 nível com crista de 2 níveis ladeando a loja, cada crista coroada por um saguaro grande), mas o topo delas usa a mesma textura de areia do chão e altura baixa (0.45/0.9), então a leitura é fraca. IDs, fonte, nomes de arquivos e câmeras do manifesto batem com construir.py. Achei duas incoerências reais: (1) a zona central declarada como 'preservar' é alterada (elevada a nível 1 e com peça de topo trocada); (2) o formato das galerias/da zona central não é o mesmo entre 12/16/18, e a geometria só é construída para 12 embora os 3 layouts sejam exportados.",
+  "achados": [
+    {
+      "afirmacao": "As 4 câmeras declaradas no manifesto são idênticas às do script (4 vistas locais, mesma altura, mesma mira), o que já garante mesma cena vista de 4 ângulos.",
+      "arquivo": "construir.py",
+      "linha": 8,
+      "trecho": "CAMERAS=[(19,19,19),(-19,19,19),(-19,-19,19),(19,-19,19)]",
+      "ok": true
+    },
+    {
+      "afirmacao": "Câmeras ortográficas com ortho_scale=27 mirando (0,0,0.4): o tabuleiro completo (losango de diagonal ~21.9) cabe no quadro. Nos 4 PNGs os 4 cantos do losango aparecem inteiros, com a loja centrada.",
+      "arquivo": "construir.py",
+      "linha": 74,
+      "trecho": "camera.data.type='ORTHO'; camera.data.ortho_scale=27; aim(camera); cameras.append(camera)",
+      "imagem": "previews/deserto-galerias-deslocadas-jogador-1.png",
+      "ok": true
+    },
+    {
+      "afirmacao": "Mesmo tabuleiro sob 4 câmeras rotativas de 90 graus: a cerca de madeira do entorno aparece no canto superior-direito na vista 1, inferior-direito na 2, inferior-esquerdo na 3 e superior-esquerdo na 4; os 4 cactos grandes, 2 caixas e 2 arbustos reaparecem nas 4 vistas em posições giradas coerentes com 90 graus, e a loja de teto branco fica centrada nas 4.",
+      "arquivo": "manifesto.json",
+      "linha": 44,
+      "trecho": "\"cameraLocalPorJogador\": true,",
+      "imagem": "previews/deserto-galerias-deslocadas-jogador-1.png a -4.png",
+      "ok": true
+    },
+    {
+      "afirmacao": "Os 4 previews existem, são 1000x750 (resolução igual à do script) e estão listados no manifesto na mesma ordem em que o script os gera (jogador-1..4).",
+      "arquivo": "manifesto.json",
+      "linha": 16,
+      "trecho": "\"previews\": [",
+      "ok": true
+    },
+    {
+      "afirmacao": "Fonte, layout e ID coerentes: manifest.id/fonte/layout correspondem a arquivos que existem na pasta e ao ID do script; as dimensões suportadas 12/16/18 batem com os 3 JSONs presentes.",
+      "arquivo": "manifesto.json",
+      "linha": 6,
+      "trecho": "\"id\": \"deserto-galerias-deslocadas\",",
+      "ok": true
+    },
+    {
+      "afirmacao": "Transparência (por medida, não aparência): os PNGs têm canal alfa (transparência=true) mas os 4 cantos medidos têm alfa=255, ou seja, fundo opaco; coerente com film_transparent=False e com o fundo azul-acinzentado renderizado.",
+      "arquivo": "construir.py",
+      "linha": 67,
+      "trecho": "scene.render.image_settings.file_format='PNG'; scene.render.film_transparent=False",
+      "imagem": "previews/deserto-galerias-deslocadas-jogador-*.png (alfa nos cantos=255,255,255,255)",
+      "ok": true
+    },
+    {
+      "afirmacao": "Sem textura ausente/artefato por vista: não há regiões magenta/placeholder; areia com linhas de grade, falésia em camadas, madeira na loja/caixas, teto branco, cactos verdes. Elementos pequenos (pontinhos vermelho-escuros em anel junto à borda e hastes finas no topo da falésia distante) giram junto com o tabuleiro, logo são decoração do entorno, não artefato de vista.",
+      "arquivo": "construir.py",
+      "linha": 55,
+      "trecho": "data=layout(12); inst(originals['entorno'],demo,(0,0,0))",
+      "imagem": "previews/deserto-galerias-deslocadas-jogador-3.png",
+      "ok": true
+    },
+    {
+      "afirmacao": "As duas galerias elevadas são distinguíveis: o layout tem duas cristas de nível 2 (x=3 e x=8) sobre plataformas de nível 1, e cada crista recebe um saguaro grande (props em (3,4) e (8,7)); nas vistas veem-se duas plataformas com borda de tijolo ladeando a loja central. Ressalva: o topo das plataformas usa a mesma textura de areia do chão (topo_a/topo_b) e a altura é baixa (0.45 por nível), então a elevação lê fraca (parece mais muro baixo que galeria).",
+      "arquivo": "construir.py",
+      "linha": 27,
+      "trecho": "if abs(u-cx)<=.5 and abs(v-cy)<=1: level=2",
+      "imagem": "previews/deserto-galerias-deslocadas-jogador-4.png",
+      "ok": true
+    },
+    {
+      "afirmacao": "Incoerência: o layout declara a zona central como 'preservar_pedido_anterior_do_autor', mas o gerador eleva a zona central (2x2 no caso 12) para nível 1 e troca a peça de topo para 'topo_zona' — ou seja, o centro é alterado, não apenas preservado.",
+      "arquivo": "construir.py",
+      "linha": 28,
+      "trecho": "if abs(u-5.5)<1.2 and abs(v-5.5)<1.2: level=1",
+      "ok": false
+    },
+    {
+      "afirmacao": "Mesma incoerência confirmada pelo lado do layout que promete preservar o centro.",
+      "arquivo": "layouts/deserto-galerias-deslocadas-12.json",
+      "linha": 256,
+      "trecho": "    \"zonaCentral\": \"preservar_pedido_anterior_do_autor\"",
+      "ok": false
+    },
+    {
+      "afirmacao": "Incoerência/latente: o formato das galerias muda com a dimensão. Crista de nível 2 (células '2') = 3 no 12 (1 largura x 3), 2 no 16 (1 x 2) e 6 no 18 (2 x 3); a zona central elevada também muda (2x2 no 12, 4x4 no 16 e no 18). Logo a mesma peça não sai geometricamente igual em 12/16/18.",
+      "arquivo": "layouts/deserto-galerias-deslocadas-16.json",
+      "linha": 102,
+      "trecho": "      2,",
+      "ok": false
+    },
+    {
+      "afirmacao": "Incoerência de pipeline: o script constrói a geometria só para n=12 (previews e blend), mas exporta os 3 layouts (12/16/18) no mesmo loop; os JSONs 16 e 18 não têm geometria nem preview correspondente. Além disso a peça de topo central 'topo_zona' está fixa em x,y in (5,6), o que só coincide com a zona central de 2x2 no caso 12 — nos casos 16/18 (centro 4x4) o mapeamento não fecharia se a geometria fosse gerada.",
+      "arquivo": "construir.py",
+      "linha": 59,
+      "trecho": "kind='topo_zona' if x in (5,6) and y in (5,6) else 'topo_a' if (x+y)%2==0 else 'topo_b'",
+      "ok": false
+    },
+    {
+      "afirmacao": "Os hashes do manifesto cobrem exatamente os 8 arquivos produzidos (blend, 3 layouts, 4 pngs), sem auto-hash do manifesto — estruturalmente coerente (valores não conferidos).",
+      "arquivo": "manifesto.json",
+      "linha": 50,
+      "trecho": "\"hashes\": {",
+      "ok": true
+    }
+  ],
+  "pendencias": [
+    "Não rodei o Blender (não disponível aqui), então não verifiquei que os asserts de construir.py:43 passam, que as peças deserto_<peca> existem no .blend nem como o 'entorno' e seus filhos são montados.",
+    "Não consegui conferir os sha256 do manifesto (sem ferramenta de hash liberada); a integridade dos arquivos é só estrutural.",
+    "A leitura de artefatos finos é limitada pela resolução 1000x750 e pelo tamanho pequeno de props; dois elementos que notei (pequeno volume marrom no ápice do teto branco da loja e hastes finas na falésia distante) não pude identificar com certeza — parecem ser parte do asset loja_mascate/entorno e aparecem em todas as vistas.",
+    "Não avaliei integração no Unity nem jogabilidade (fora do escopo pedido)."
+  ]
+}

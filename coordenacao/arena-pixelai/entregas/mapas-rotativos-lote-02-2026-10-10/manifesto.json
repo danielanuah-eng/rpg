@@ -1,0 +1,73 @@
+{
+  "versao": 1,
+  "data": "2026-10-10",
+  "assets": [
+    {
+      "id": "deserto-galerias-deslocadas",
+      "tipo": "mapa",
+      "tema": "deserto",
+      "fonte": "fontes/deserto-galerias-deslocadas.blend",
+      "layout": "layouts/deserto-galerias-deslocadas-12.json",
+      "dimensoesSuportadas": [
+        12,
+        16,
+        18
+      ],
+      "previews": [
+        "previews/deserto-galerias-deslocadas-jogador-1.png",
+        "previews/deserto-galerias-deslocadas-jogador-2.png",
+        "previews/deserto-galerias-deslocadas-jogador-3.png",
+        "previews/deserto-galerias-deslocadas-jogador-4.png"
+      ],
+      "camerasBlender": [
+        [
+          19,
+          19,
+          19
+        ],
+        [
+          -19,
+          19,
+          19
+        ],
+        [
+          -19,
+          -19,
+          19
+        ],
+        [
+          19,
+          -19,
+          19
+        ]
+      ],
+      "cameraLocalPorJogador": true,
+      "estado": "entregue",
+      "integracao": "pendente_claude",
+      "mapaJogavelValidado": false,
+      "dimensaoFonte": 12,
+      "dimensoesLayouts": [
+        12,
+        16,
+        18
+      ],
+      "dimensaoPreviews": 12
+    }
+  ],
+  "hashes": {
+    "fontes/deserto-galerias-deslocadas.blend": "337ccb217b8375ebe939eb847b9d2bad3ae6ffafb2d03a6cce30867f38bf3049",
+    "layouts/deserto-galerias-deslocadas-12.json": "95364adc8bb41a66393118923dbb844dc12dc2982f158f061fa9685307c2803e",
+    "layouts/deserto-galerias-deslocadas-16.json": "04200f74176a75609fe469e9f21d3317115815e9608c24dfdb385746609e38b7",
+    "layouts/deserto-galerias-deslocadas-18.json": "0047c8deab28a6d4afb19b81113a3a9d1f0bf52b70bedf8e5c8286bf53698429",
+    "previews/deserto-galerias-deslocadas-jogador-1.png": "0405403cc73f555ad9f2d40af0d976024b8765723170386a51d34bec65b7dfbb",
+    "previews/deserto-galerias-deslocadas-jogador-2.png": "647d84ae847e1b1c8c000428f77c9623ce177b0edd613a5e7c72af3d3e44c879",
+    "previews/deserto-galerias-deslocadas-jogador-3.png": "745d9fdc1e674c09967768f90bb1a57fca437d8422888ee5fd19352df91c2203",
+    "previews/deserto-galerias-deslocadas-jogador-4.png": "c8f12e46d0dafb4bf8c498b6c7e37db7f9fb4230a4cbc446b0c8d90b4eaee3ad"
+  },
+  "sourceKit": "mapa-blender/v02/fontes/deserto.blend",
+  "sourceKitSha256": "d0c9c01326bd1e81302b2bc56d4c32b36d3b2141ac38de7cdf9b90922404af83",
+  "prompt": "Duas galerias elevadas e deslocadas no deserto, ligadas por rotas baixas alternativas. Loja central preservada; quatro vistas locais mostram o mesmo tabuleiro inteiro. Fontes, terreno e props editáveis; nenhuma regra nova.",
+  "nota": "Estudo visual; Claude valida mobilidade, colisao, spawns e linhas de visao.",
+  "visualReview": "approved_codex; revisao independente DeepSeek; centro 2x2 confirmado e layouts grandes corrigidos",
+  "productionCompletedDate": "2026-10-11"
+}

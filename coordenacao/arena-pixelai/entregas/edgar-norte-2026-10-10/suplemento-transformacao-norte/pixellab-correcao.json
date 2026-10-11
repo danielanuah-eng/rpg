@@ -1,0 +1,14 @@
+{
+  "target": "character:590cc7bc-3673-477c-aa23-f5655dd2d97a:north-east:ff56fd4f-3054-42af-a54a-7c68df8f6286",
+  "inspectedImageId": "c1bb5665-628b-4f0d-89e8-5e1ee685c52c",
+  "correctedImageId": "5997daa1-bb65-4d3d-be33-cf10a3a1ed80",
+  "undoImageId": "6d1a7081-c6b9-418d-b1dd-b5a128bd5e61",
+  "savedToNativeAsset": true,
+  "nativeFrameCount": 9,
+  "nativeFrameSize": [136, 180],
+  "changedFramesOneBased": [1, 2, 3, 4, 5],
+  "changedPixels": 1091,
+  "durationPerFrameMs": 100,
+  "scope": "somente cabelo da coroa; brilho e alfa preservados",
+  "integration": "pendente_confirmacao_claude"
+}

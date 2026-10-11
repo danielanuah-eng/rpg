@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "assets": 32,
+  "frames": 160,
+  "counts": {
+    "attack": 8,
+    "idle": 8,
+    "rotation": 8,
+    "walk": 8
+  },
+  "assembly": {
+    "source": "baltazar-completo-v2-antes-da-montagem.zip",
+    "framesReplacedZeroBased": {
+      "4": "copy of 3",
+      "6": "copy of 5"
+    },
+    "otherNativeFramesUnchanged": 167
+  },
+  "checks": [
+    "exact replay of native frame assembly",
+    "pixel/alpha-identical transparent padding",
+    "square cells for importer",
+    "eight directions per action",
+    "expected native frame counts",
+    "hashes"
+  ],
+  "unityIntegration": "pendente_claude"
+}

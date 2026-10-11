@@ -1,0 +1,36 @@
+{
+  "group_id": "95e46a0e-24bc-4fb3-9523-ad3ad8a3dc52",
+  "states": [
+    {
+      "character": {
+        "id": "e6148923-ecab-4e29-8da1-6d52cd46c535",
+        "name": "Idle",
+        "prompt": "Heroic dragonborn paladin, silver woven kevlar tactical armor and silver warhammer, indigo scales, noble horns and dragon muzzle, sturdy tank body, no wings, full body 128 pixel sprite, transparent background.",
+        "size": {
+          "width": 128,
+          "height": 128
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "high top-down",
+        "created_at": "2026-10-10T16:04:59.363422+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-10-10T16:30:41.444463"
+}

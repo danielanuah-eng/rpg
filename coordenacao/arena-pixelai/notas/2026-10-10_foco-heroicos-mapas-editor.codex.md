@@ -14,7 +14,7 @@ Autor: pedido direto nesta conversa, 10/10/2026. Projeto atual: Arena Tática / 
 
 Draconato paladino heroico, armadura de kevlar prateada e martelo de guerra. Boa vida, dano moderado. Anjo e demônio orbitam ao redor dele numa aura de aproximadamente duas casas; pode gastar um ponto por turno para mantê-la ligada. O contato com aliado cura um pouco e com inimigo causa um dano pequeno. O tipo de ponto, os valores e a métrica das duas casas precisam ser expressos na ficha e implementados por Claude. O movimento visual não pode multiplicar a frequência de cura/dano.
 
-## Balanceamento autorizado agora
+## Balanceamento do futuro PvEvP
 
 O autor esclareceu nesta conversa: **o rebalanceamento de crítico e armadura é para o futuro PvEvP/PvPvE**, baseado em Arcadia Quest. A implementação e a leitura dos documentos para definir os números finais esperam a conclusão da Arena Tática. Registrar agora a intenção: reduzir explosões de dano e defesa que anula builds de dano baixo, mantendo escolhas de equipamento e tanque úteis. A auditoria da Arena serve apenas para distinguir os modos; não mudar suas fórmulas, nem reintroduzir crítico no seu núcleo, nem transferir a alteração para Arcanoclisma.
 

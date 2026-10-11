@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "props": [
+    {
+      "id": "relicario_solar",
+      "format": "glb",
+      "dimensions": [
+        0.7599999904632568,
+        0.7599999904632568,
+        0.7400000095367432
+      ],
+      "tris": 240,
+      "texturesLoaded": 1,
+      "sha256": "b2f8abe4b8373e846580402924df73f60fbf0342dbb3d3d2a0db6e3d8989dc39"
+    },
+    {
+      "id": "relicario_solar",
+      "format": "fbx",
+      "dimensions": [
+        0.7599999904632568,
+        0.7600000202655792,
+        0.740000067373586
+      ],
+      "tris": 240,
+      "texturesLoaded": 2,
+      "sha256": "33f32ce824d5c078ffb53135779b2383e521888ab2bbd6d4e4b4f5424986cb41"
+    },
+    {
+      "id": "barricada_partida",
+      "format": "glb",
+      "dimensions": [
+        0.8999999761581421,
+        0.44999998807907104,
+        0.700482189655304
+      ],
+      "tris": 264,
+      "texturesLoaded": 2,
+      "sha256": "c55899e0e1ccfdd6b5ddb1af4a021dd0269d089de0cc03fe63e96c0c3844dd95"
+    },
+    {
+      "id": "barricada_partida",
+      "format": "fbx",
+      "dimensions": [
+        0.8999999761581421,
+        0.45000000298023224,
+        0.7004822222394402
+      ],
+      "tris": 264,
+      "texturesLoaded": 4,
+      "sha256": "e3c331689cb4568a29c41165f50b132f45e97f5edb6afa1bec54ba990a54a673"
+    }
+  ],
+  "maps": [
+    {
+      "file": "fontes/bosque-quatro-patios.blend",
+      "orthographicCameras": [
+        "VISTA_JOGADOR_1",
+        "VISTA_JOGADOR_2",
+        "VISTA_JOGADOR_3",
+        "VISTA_JOGADOR_4"
+      ],
+      "wholeBoardFits": true
+    },
+    {
+      "file": "fontes/neve-bastioes-diagonais.blend",
+      "orthographicCameras": [
+        "VISTA_JOGADOR_1",
+        "VISTA_JOGADOR_2",
+        "VISTA_JOGADOR_3",
+        "VISTA_JOGADOR_4"
+      ],
+      "wholeBoardFits": true
+    },
+    {
+      "file": "fontes/pedreira-anel-partido.blend",
+      "orthographicCameras": [
+        "VISTA_JOGADOR_1",
+        "VISTA_JOGADOR_2",
+        "VISTA_JOGADOR_3",
+        "VISTA_JOGADOR_4"
+      ],
+      "wholeBoardFits": true
+    }
+  ],
+  "gameplayValidated": false
+}

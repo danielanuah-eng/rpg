@@ -1,0 +1,260 @@
+{
+  "id": "deserto-galerias-deslocadas",
+  "tema": "deserto",
+  "dimensao": 12,
+  "alturaPorNivel": 0.45,
+  "alturas": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      2,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      2,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "props": [
+    {
+      "peca": "arvore",
+      "casa": [
+        3,
+        4
+      ],
+      "rotacaoGraus": 0,
+      "regra": "existente"
+    },
+    {
+      "peca": "arvore",
+      "casa": [
+        8,
+        7
+      ],
+      "rotacaoGraus": 180,
+      "regra": "existente"
+    },
+    {
+      "peca": "arvore",
+      "casa": [
+        2,
+        9
+      ],
+      "rotacaoGraus": 0,
+      "regra": "existente"
+    },
+    {
+      "peca": "arvore",
+      "casa": [
+        9,
+        2
+      ],
+      "rotacaoGraus": 180,
+      "regra": "existente"
+    },
+    {
+      "peca": "arbusto",
+      "casa": [
+        1,
+        2
+      ],
+      "rotacaoGraus": 0,
+      "regra": "existente"
+    },
+    {
+      "peca": "arbusto",
+      "casa": [
+        10,
+        9
+      ],
+      "rotacaoGraus": 180,
+      "regra": "existente"
+    },
+    {
+      "peca": "caixa",
+      "casa": [
+        4,
+        9
+      ],
+      "rotacaoGraus": 0,
+      "regra": "existente"
+    },
+    {
+      "peca": "caixa",
+      "casa": [
+        7,
+        2
+      ],
+      "rotacaoGraus": 180,
+      "regra": "existente"
+    }
+  ],
+  "loja": {
+    "centroBlender": [
+      0,
+      0,
+      0.5
+    ],
+    "zonaCentral": "preservar_pedido_anterior_do_autor"
+  },
+  "mapaJogavelValidado": false,
+  "estado": "estudo_visual_para_importacao_claude"
+}

@@ -1,0 +1,161 @@
+{
+  "status": "passed",
+  "framesCorrected": 42,
+  "assets": [
+    {
+      "key": "attack_north-east",
+      "file": "sprites/edgar-attack_north-east.png",
+      "frames": 9,
+      "frameSize": [
+        176,
+        176
+      ],
+      "layout": "horizontal",
+      "sha256": "bf81b90f65b08018db3d5aaaf904dbb6d44599413f5e8aecde862fff9f3eb45a",
+      "alpha": {
+        "transparent": 222895,
+        "opaque": 55889,
+        "partial": 0
+      },
+      "pixelsChanged": 2228
+    },
+    {
+      "key": "idle_north-east",
+      "file": "sprites/edgar-idle_north-east.png",
+      "frames": 9,
+      "frameSize": [
+        176,
+        176
+      ],
+      "layout": "horizontal",
+      "sha256": "2e942d6c894e5f28ecf6987f9a86b1703a56f389244d797eefb7975a40a44882",
+      "alpha": {
+        "transparent": 228666,
+        "opaque": 50118,
+        "partial": 0
+      },
+      "pixelsChanged": 2068
+    },
+    {
+      "key": "idle_north-west",
+      "file": "sprites/edgar-idle_north-west.png",
+      "frames": 9,
+      "frameSize": [
+        176,
+        176
+      ],
+      "layout": "horizontal",
+      "sha256": "b24f03a5e357664266b26e3c1fdf34ae8589ec8a04a1cebd7f928301a3396bec",
+      "alpha": {
+        "transparent": 226915,
+        "opaque": 51869,
+        "partial": 0
+      },
+      "pixelsChanged": 1881
+    },
+    {
+      "key": "rotation_north",
+      "file": "sprites/edgar-rotation_north.png",
+      "frames": 1,
+      "frameSize": [
+        128,
+        128
+      ],
+      "layout": "horizontal",
+      "sha256": "4c60a0e1ba0a7172ac5f240b98b43e58bcfaef014f8dd70ea6edd5597a48aaca",
+      "alpha": {
+        "transparent": 9853,
+        "opaque": 6531,
+        "partial": 0
+      },
+      "pixelsChanged": 212
+    },
+    {
+      "key": "rotation_north-east",
+      "file": "sprites/edgar-rotation_north-east.png",
+      "frames": 1,
+      "frameSize": [
+        128,
+        128
+      ],
+      "layout": "horizontal",
+      "sha256": "a1be1c49205eafa7bd9e99460f1f40977808df951c96a8793e126d75cc952aaa",
+      "alpha": {
+        "transparent": 10564,
+        "opaque": 5820,
+        "partial": 0
+      },
+      "pixelsChanged": 222
+    },
+    {
+      "key": "rotation_north-west",
+      "file": "sprites/edgar-rotation_north-west.png",
+      "frames": 1,
+      "frameSize": [
+        128,
+        128
+      ],
+      "layout": "horizontal",
+      "sha256": "378411e8645472c43b21f4b3d85b6566f63b319498f2f3fc7284827dea874505",
+      "alpha": {
+        "transparent": 10544,
+        "opaque": 5840,
+        "partial": 0
+      },
+      "pixelsChanged": 218
+    },
+    {
+      "key": "walk_north-east",
+      "file": "sprites/edgar-walk_north-east.png",
+      "frames": 6,
+      "frameSize": [
+        128,
+        128
+      ],
+      "layout": "horizontal",
+      "sha256": "c9f2825acc071bff6c3b06b1a076587fc1117c00b71c916c1dcbccb6910769c1",
+      "alpha": {
+        "transparent": 68459,
+        "opaque": 29845,
+        "partial": 0
+      },
+      "pixelsChanged": 1275
+    },
+    {
+      "key": "walk_north-west",
+      "file": "sprites/edgar-walk_north-west.png",
+      "frames": 6,
+      "frameSize": [
+        128,
+        128
+      ],
+      "layout": "horizontal",
+      "sha256": "c0386cd7f1c7758165c837b53115e94a36f5fcac9fac3d7df968f7dfefb4bd1c",
+      "alpha": {
+        "transparent": 69612,
+        "opaque": 28692,
+        "partial": 0
+      },
+      "pixelsChanged": 1240
+    }
+  ],
+  "otherFramesUnchanged": 64,
+  "addedFrames": [
+    "Idle/animations/transform-ghost/south-east/frame_000.png",
+    "Idle/animations/transform-ghost/south-east/frame_001.png",
+    "Idle/animations/transform-ghost/south-east/frame_002.png",
+    "Idle/animations/transform-ghost/south-east/frame_003.png",
+    "Idle/animations/transform-ghost/south-east/frame_004.png",
+    "Idle/animations/transform-ghost/south-east/frame_005.png",
+    "Idle/animations/transform-ghost/south-east/frame_006.png",
+    "Idle/animations/transform-ghost/south-east/frame_007.png",
+    "Idle/animations/transform-ghost/south-east/frame_008.png"
+  ],
+  "integration": "pendente_claude",
+  "checks": [
+    "exact guarded pixel changes",
+    "identical alpha",
+    "original frame dimensions and order",
+    "other original frames unchanged"
+  ]
+}

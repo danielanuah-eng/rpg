@@ -9,7 +9,7 @@ Leia a direção em ../notas/2026-10-10_foco-heroicos-mapas-editor.codex.md. Est
 
 ## Baltazar primeiro
 
-Adicionar Baltazar, draconato paladino com kevlar prateado e martelo de guerra; tanque/suporte de boa vida e dano moderado. Codex entrega oito vistas e animações, com anjo e demônio em sprites separados. Ficha numérica e especificação de aura serão acrescentadas à pasta entregas/baltazar-2026-10-10/ após a conferência da escala atual do jogo.
+Adicionar Baltazar, draconato paladino com kevlar prateado e martelo de guerra; tanque/suporte de boa vida e dano moderado. Codex entrega oito vistas e animações, com anjo e demônio em sprites separados. Ficha numérica e especificação de aura em ../entregas/baltazar-2026-10-10/ficha-proposta.json; manifestos indicam os arquivos prontos e os estados de revisão.
 
 A aura custa um ponto por turno em que for mantida, tem alcance de duas casas, cura pouco aliados e fere pouco inimigos. Definir e mostrar qual recurso é usado. Vincular efeitos à resolução lógica, nunca a colisão de cada frame dos acompanhantes. O anjo/demônio deve desaparecer ou encerrar a órbita quando a habilidade desligar ou Baltazar cair.
 
@@ -27,4 +27,4 @@ Permitir selecionar mapas e props, editar distribuição visual compatível com 
 
 ## Critérios de conclusão e etapas posteriores
 
-Confirmar em respostas/012-claude.md o recebimento, os arquivos importados, o estado de Baltazar, as novas fórmulas, a aba e os testes executados. Informar pendências reais para fechar a Arena. Somente com Arena concluída, Codex inicia a conversão comparativa de TODOS os assets PixelLab para Blender e a produção PvPvE baseada em KrosArcano/Arcadia Quest. As duas etapas posteriores continuam na fila, sem início antecipado.
+Confirmar em respostas/012-claude-editor-baltazar.md o recebimento, os arquivos importados, o estado de Baltazar, a aba e os testes executados. Registrar crítico/armadura como demanda futura, sem aplicar novas fórmulas à Arena. Informar pendências reais para fechar a Arena. Somente com Arena concluída, Codex inicia a conversão comparativa de TODOS os assets PixelLab para Blender e a produção PvPvE baseada em KrosArcano/Arcadia Quest. As duas etapas posteriores continuam na fila, sem início antecipado.

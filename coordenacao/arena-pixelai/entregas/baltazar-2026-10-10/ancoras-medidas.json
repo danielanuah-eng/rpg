@@ -1,0 +1,485 @@
+{
+  "clips": [
+    {
+      "id": "baltazar-attack-east",
+      "baseAlpha40": [
+        147,
+        147,
+        145,
+        146,
+        147,
+        147,
+        147,
+        147,
+        147
+      ],
+      "span": 2,
+      "frameSize": [
+        176,
+        176
+      ]
+    },
+    {
+      "id": "baltazar-attack-north",
+      "baseAlpha40": [
+        145,
+        145,
+        147,
+        147,
+        145,
+        145,
+        145,
+        145,
+        147
+      ],
+      "span": 2,
+      "frameSize": [
+        172,
+        172
+      ]
+    },
+    {
+      "id": "baltazar-attack-north-east",
+      "baseAlpha40": [
+        144,
+        144,
+        144,
+        144,
+        144,
+        144,
+        146,
+        144,
+        144
+      ],
+      "span": 2,
+      "frameSize": [
+        172,
+        172
+      ]
+    },
+    {
+      "id": "baltazar-attack-north-west",
+      "baseAlpha40": [
+        144,
+        144,
+        144,
+        144,
+        144,
+        144,
+        144,
+        144,
+        144
+      ],
+      "span": 0,
+      "frameSize": [
+        172,
+        172
+      ]
+    },
+    {
+      "id": "baltazar-attack-south",
+      "baseAlpha40": [
+        144,
+        144,
+        144,
+        144,
+        144,
+        144,
+        144,
+        144,
+        144
+      ],
+      "span": 0,
+      "frameSize": [
+        172,
+        172
+      ]
+    },
+    {
+      "id": "baltazar-attack-south-east",
+      "baseAlpha40": [
+        154,
+        154,
+        154,
+        154,
+        154,
+        156,
+        156,
+        154,
+        154
+      ],
+      "span": 2,
+      "frameSize": [
+        188,
+        188
+      ]
+    },
+    {
+      "id": "baltazar-attack-south-west",
+      "baseAlpha40": [
+        146,
+        146,
+        146,
+        141,
+        145,
+        146,
+        153,
+        145,
+        145
+      ],
+      "span": 12,
+      "frameSize": [
+        172,
+        172
+      ]
+    },
+    {
+      "id": "baltazar-attack-west",
+      "baseAlpha40": [
+        142,
+        142,
+        142,
+        142,
+        142,
+        142,
+        143,
+        142,
+        142
+      ],
+      "span": 1,
+      "frameSize": [
+        168,
+        168
+      ]
+    },
+    {
+      "id": "baltazar-idle-east",
+      "baseAlpha40": [
+        123,
+        123,
+        123,
+        123
+      ],
+      "span": 0,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-idle-north",
+      "baseAlpha40": [
+        124,
+        124,
+        124,
+        122
+      ],
+      "span": 2,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-idle-north-east",
+      "baseAlpha40": [
+        124,
+        122,
+        122,
+        121
+      ],
+      "span": 3,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-idle-north-west",
+      "baseAlpha40": [
+        123,
+        122,
+        122,
+        122
+      ],
+      "span": 1,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-idle-south",
+      "baseAlpha40": [
+        120,
+        119,
+        118,
+        118
+      ],
+      "span": 2,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-idle-south-east",
+      "baseAlpha40": [
+        123,
+        122,
+        121,
+        122
+      ],
+      "span": 2,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-idle-south-west",
+      "baseAlpha40": [
+        122,
+        122,
+        122,
+        120
+      ],
+      "span": 2,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-idle-west",
+      "baseAlpha40": [
+        122,
+        122,
+        122,
+        122
+      ],
+      "span": 0,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-rotation-east",
+      "baseAlpha40": [
+        123
+      ],
+      "span": 0,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-rotation-north",
+      "baseAlpha40": [
+        123
+      ],
+      "span": 0,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-rotation-north-east",
+      "baseAlpha40": [
+        122
+      ],
+      "span": 0,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-rotation-north-west",
+      "baseAlpha40": [
+        122
+      ],
+      "span": 0,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-rotation-south",
+      "baseAlpha40": [
+        122
+      ],
+      "span": 0,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-rotation-south-east",
+      "baseAlpha40": [
+        124
+      ],
+      "span": 0,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-rotation-south-west",
+      "baseAlpha40": [
+        124
+      ],
+      "span": 0,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-rotation-west",
+      "baseAlpha40": [
+        122
+      ],
+      "span": 0,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-walk-east",
+      "baseAlpha40": [
+        123,
+        123,
+        124,
+        127,
+        123,
+        126
+      ],
+      "span": 4,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-walk-north",
+      "baseAlpha40": [
+        124,
+        127,
+        127,
+        120,
+        120,
+        118
+      ],
+      "span": 9,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-walk-north-east",
+      "baseAlpha40": [
+        123,
+        125,
+        126,
+        123,
+        121,
+        121
+      ],
+      "span": 5,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-walk-north-west",
+      "baseAlpha40": [
+        123,
+        122,
+        120,
+        124,
+        127,
+        125
+      ],
+      "span": 7,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-walk-south",
+      "baseAlpha40": [
+        121,
+        123,
+        122,
+        118,
+        118,
+        117
+      ],
+      "span": 6,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-walk-south-east",
+      "baseAlpha40": [
+        123,
+        122,
+        121,
+        122,
+        122,
+        121
+      ],
+      "span": 2,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-walk-south-west",
+      "baseAlpha40": [
+        123,
+        123,
+        122,
+        122,
+        122,
+        121
+      ],
+      "span": 2,
+      "frameSize": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "baltazar-walk-west",
+      "baseAlpha40": [
+        123,
+        123,
+        123,
+        124,
+        124,
+        124
+      ],
+      "span": 1,
+      "frameSize": [
+        128,
+        128
+      ]
+    }
+  ],
+  "note": "Pivo constante por clipe, levando em conta padding. Nao recortar quadros individualmente."
+}
