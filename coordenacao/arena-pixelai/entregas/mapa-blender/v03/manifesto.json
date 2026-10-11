@@ -1,0 +1,172 @@
+{
+  "versao": 3,
+  "data": "2026-10-10",
+  "tarefa": "011",
+  "estado": "entregue_para_avaliacao",
+  "direcaoAutor": [
+    "Dividir os props em grupos menores e setores distintos",
+    "Design e relevo diferentes entre os mapas",
+    "Loja central preservada",
+    "Moedas no chão",
+    "Manter modelos próprios de cada bioma"
+  ],
+  "integracaoUnity": "pendente_do_Claude",
+  "baseModelos": "../v02/",
+  "kits": [
+    {
+      "tema": "pedreira",
+      "nome": "Montanha rochosa",
+      "pecasReutilizadas": 32,
+      "entornosLimpos": 3,
+      "manifesto": "manifestos/pedreira.json",
+      "validacao": "manifestos/pedreira-validacao.json",
+      "composicoes": [
+        {
+          "fonte": "fontes/pedreira.blend",
+          "preview": "previews/pedreira-tabuleiro-12x12.png",
+          "distribuicao": "manifestos/pedreira-distribuicao.json"
+        }
+      ],
+      "origemTexturas": {
+        "origem": "PixelLab create_tiles_pro / Map",
+        "id": "3aa336a9-2ec0-4ca2-9049-0aeae3c18fee",
+        "filtro": "Point/Closest",
+        "mipmaps": false,
+        "wrap": "Repeat",
+        "pixelsPorCasa": 64
+      }
+    },
+    {
+      "tema": "bosque",
+      "nome": "Bosque",
+      "pecasReutilizadas": 32,
+      "entornosLimpos": 3,
+      "manifesto": "manifestos/bosque.json",
+      "validacao": "manifestos/bosque-validacao.json",
+      "composicoes": [
+        {
+          "id": "v01",
+          "nome": "Clareira entre bosquetes",
+          "fonte": "fontes/bosque.blend",
+          "preview": "previews/bosque-tabuleiro-12x12.png",
+          "distribuicao": "manifestos/bosque-distribuicao.json"
+        },
+        {
+          "id": "v02",
+          "nome": "Trilha entre clareiras",
+          "fonte": "fontes/bosque-versao-02.blend",
+          "preview": "previews/bosque-versao-02.png",
+          "distribuicao": "manifestos/bosque-versao-02-distribuicao.json"
+        },
+        {
+          "id": "v03",
+          "nome": "Encosta e clareira",
+          "fonte": "fontes/bosque-versao-03.blend",
+          "preview": "previews/bosque-versao-03.png",
+          "distribuicao": "manifestos/bosque-versao-03-distribuicao.json"
+        }
+      ],
+      "origemTexturas": {
+        "origem": "PixelLab create_tiles_pro / Map",
+        "id": "969ac24a-abe9-4723-8531-baabde2c70e3",
+        "filtro": "Point/Closest",
+        "mipmaps": false,
+        "wrap": "Repeat",
+        "pixelsPorCasa": 64
+      }
+    },
+    {
+      "tema": "deserto",
+      "nome": "Deserto",
+      "pecasReutilizadas": 33,
+      "entornosLimpos": 3,
+      "manifesto": "manifestos/deserto.json",
+      "validacao": "manifestos/deserto-validacao.json",
+      "composicoes": [
+        {
+          "fonte": "fontes/deserto.blend",
+          "preview": "previews/deserto-tabuleiro-12x12.png",
+          "distribuicao": "manifestos/deserto-distribuicao.json"
+        }
+      ],
+      "origemTexturas": {
+        "origem": "PixelLab create_tiles_pro / Map",
+        "id": "a90a03b9-bf41-479c-9f49-cc2db75a958f",
+        "filtro": "Point/Closest",
+        "mipmaps": false,
+        "wrap": "Repeat",
+        "pixelsPorCasa": 64
+      }
+    },
+    {
+      "tema": "neve",
+      "nome": "Neve",
+      "pecasReutilizadas": 32,
+      "entornosLimpos": 3,
+      "manifesto": "manifestos/neve.json",
+      "validacao": "manifestos/neve-validacao.json",
+      "composicoes": [
+        {
+          "fonte": "fontes/neve.blend",
+          "preview": "previews/neve-tabuleiro-12x12.png",
+          "distribuicao": "manifestos/neve-distribuicao.json"
+        }
+      ],
+      "origemTexturas": {
+        "origem": "PixelLab create_tiles_pro / Map",
+        "id": "8929cc25-c07d-4868-b148-ebe60b9c377b",
+        "filtro": "Point/Closest",
+        "mipmaps": false,
+        "wrap": "Repeat",
+        "pixelsPorCasa": 64
+      }
+    },
+    {
+      "tema": "vulcao",
+      "nome": "Vulcão",
+      "pecasReutilizadas": 32,
+      "entornosLimpos": 3,
+      "manifesto": "manifestos/vulcao.json",
+      "validacao": "manifestos/vulcao-validacao.json",
+      "composicoes": [
+        {
+          "fonte": "fontes/vulcao.blend",
+          "preview": "previews/vulcao-tabuleiro-12x12.png",
+          "distribuicao": "manifestos/vulcao-distribuicao.json"
+        }
+      ],
+      "origemTexturas": {
+        "origem": "PixelLab create_tiles_pro / Map",
+        "id": "7170fdbd-dcfc-4407-bcc9-80797ec75e5a",
+        "filtro": "Point/Closest",
+        "mipmaps": false,
+        "wrap": "Repeat",
+        "pixelsPorCasa": 64
+      }
+    }
+  ],
+  "modelosPorFormato": 176,
+  "modelosReutilizadosPorFormato": 161,
+  "entornosLimposPorFormato": 15,
+  "formatos": [
+    "FBX",
+    "GLB"
+  ],
+  "fontesComposicao": 7,
+  "comparacaoArvores": "../v02/previews/arvores-cinco-temas.png",
+  "comparacaoVersoes": "previews/bosque-tres-versoes.png",
+  "quatroCenariosPedidos": "previews/quatro-cenarios.png",
+  "revisaoVisual": {
+    "registro": "fontes/revisao-visual-deepseek.log",
+    "reconferencia": "fontes/revisao-visual-final-deepseek.log",
+    "ajustesAposRevisao": [
+      "Removidas cercas e decorações dos entornos de todos os temas",
+      "Neve reduzida a três abetos em pontos mais separados; abeto inferior afastado da parede em clareira plana",
+      "Todas as composições passam a ter nove moedas no piso"
+    ],
+    "limiteReconferencia": "Reconferência visual antecede o último deslocamento do abeto inferior; folga final conferida geometricamente e pelo Codex",
+    "avaliacaoAutor": "pendente"
+  },
+  "instrucoes": "LEIA-ME-CLAUDE.md",
+  "validacao": "validacao.json"
+}

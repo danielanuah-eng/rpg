@@ -1,0 +1,14 @@
+  1. olhar {"caminhos":["bosque-tabuleiro-12x12.png","bosque-versao-02.png","bosque-versao-03.png","deserto-tabuleiro-12x12.png","p
+  2. terminar {"resumo":"Revisão visual das 7 imagens (bosque x3, deserto, pedreira, neve, vulcão). Biomas bem distintos entre si e lo
+RESUMO: Revisão visual das 7 imagens (bosque x3, deserto, pedreira, neve, vulcão). Biomas bem distintos entre si e loja central em todos; moedas no chão presentes. Falhas concretas: cerca solta no canto, props decorativos nas pontas, poucas moedas no deserto e aglomeração de árvores junto à loja na neve. Concentração de palmeiras/lagoa no deserto e de rochas na pedreira leem como intencional, não aglomeração.
+✔ Relevos/design distintos entre biomas: pedreira tem terraços de cobble em degraus, deserto tem mesas elevadas, neve tem muros baixos, vulcão tem muros sobre basalto com brilho de lava. Cumpre o pedido de relevos diferentes. [pedreira-tabuleiro-12x12.png] — visual (só o DeepSeek viu)
+✔ Loja fica no centro do tabuleiro e props internos ficam em grupos pequenos, não todos juntos, no deserto. [deserto-tabuleiro-12x12.png] — visual (só o DeepSeek viu)
+✔ Concentração de palmeiras com lagoa à direita do deserto lê como oásis intencional (grupo único e coeso), não como aglomeração em volta da loja. [deserto-tabuleiro-12x12.png] — visual (só o DeepSeek viu)
+✘ A cerca aparece isolada no canto superior direito, solta e sem conexão com muros ou loja, nas versões do bosque (falha de distribuição). [bosque-versao-03.png] — visual (só o DeepSeek viu)
+✘ Props decorativos pequenos (cogumelos/pedrinhas) caem nas pontas/bordas externas do tabuleiro, contrariando o pedido de props internos sem cair nas pontas. [bosque-tabuleiro-12x12.png] — visual (só o DeepSeek viu)
+✘ No deserto as moedas no chão são raras e pequenas, bem menos densas que nos outros mapas. [deserto-tabuleiro-12x12.png] — visual (só o DeepSeek viu)
+✘ Na neve vários pinheiros ficam colados em volta da loja, lendo como aglomeração junto à loja (diferente do oásis concentrado e distante do deserto). [neve-tabuleiro-12x12.png] — visual (só o DeepSeek viu)
+✔ Moedas no chão estão presentes e legíveis no vulcão, com brilho, junto às trilhas internas. [vulcao-tabuleiro-12x12.png] — visual (só o DeepSeek viu)
+? Não inspecionei arquivos de cena/código; conclusões são só visuais das 7 imagens.
+? Não sei se cogumelos nas bordas do bosque são intencionais; podem ser decor planejado.
+(2 passos, 14606 tokens do DeepSeek; registro: ds-logs\2026-10-11T02-04-33-816Z-53792.json)

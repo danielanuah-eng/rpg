@@ -1,0 +1,1733 @@
+{
+  "versao": 3,
+  "tarefa": "011",
+  "data": "2026-10-10",
+  "estado": "revisao_de_composicao_entregue_para_avaliacao",
+  "avaliacaoAutor": "v1_aprovada_com_ajustes; v2_pendente",
+  "integracaoClaude": "pendente",
+  "cenario": "Deserto",
+  "unidadeMetros": 1,
+  "alturaPorNivel": 0.45,
+  "eixosOrigem": "Blender Z-up, planta XY",
+  "eixosExportacao": "Y-up, FBX forward -Z; conversão de (x,y,z) Blender para (x,z,-y)",
+  "texturas": {
+    "origem": "PixelLab create_tiles_pro / Map",
+    "id": "a90a03b9-bf41-479c-9f49-cc2db75a958f",
+    "filtro": "Point/Closest",
+    "mipmaps": false,
+    "wrap": "Repeat",
+    "pixelsPorCasa": 64
+  },
+  "vento": {
+    "atributo": "vento",
+    "fbx": "COLOR_0",
+    "glb": "COLOR_1",
+    "glbColor0": "branco neutro",
+    "canal": "R",
+    "base": 0,
+    "pontas": 1,
+    "shader": "Claude integra; entrega contém pesos, não shader executável"
+  },
+  "animacao": "Materiais emissivos e fx_fogo são pontos de integração. Não contém animação Unity pronta.",
+  "fonte": "fontes/deserto.blend",
+  "script": "fontes/recompor_cenarios.py",
+  "previews": [
+    "previews/deserto-tabuleiro-12x12.png"
+  ],
+  "revisaoAutor": [
+    "Relevo e distribuicao distintos por tema",
+    "Props em quatro setores",
+    "Centro com mais espaço livre"
+  ],
+  "moedasChao": "Modelo moeda_chao deitado sobre o piso; prévia com distribuição de exemplo.",
+  "versoesBosque": [],
+  "divergenciasBriefing": [
+    "Código atual usa 12/16/18 casas; entorno e variantes entorno_16/entorno_18 entregues sem mudar regras."
+  ],
+  "pecas": [
+    {
+      "cenario": "Deserto",
+      "peca": "topo_a",
+      "arquivo": "../v02/mapa/deserto/topo_a.fbx",
+      "glb": "../v02/mapa/deserto/topo_a.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_grama_a.png"
+      ],
+      "materiais": [
+        "deserto_grama_a"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.05
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.05
+        ]
+      },
+      "tris": 44,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "piso:a",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "d6a66ec9d60866aef58a6d48a4ca39d8931ce3a2929603b33813c651c61119b7",
+        "glb": "9bbfe7b93fc13847521579ac891fa6fdff3dff23ce8dfb0e1d455b6ad2045edb"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "topo_b",
+      "arquivo": "../v02/mapa/deserto/topo_b.fbx",
+      "glb": "../v02/mapa/deserto/topo_b.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_grama_b.png"
+      ],
+      "materiais": [
+        "deserto_grama_b"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.05
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.05
+        ]
+      },
+      "tris": 44,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "piso:b",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "a3bf788e7406aae6d08ba5a2770c29d6530fdf5c2e7055cf4e86288a4cb32b73",
+        "glb": "cb823401f01de58c8b54db3558c76a1e8fff7d193249fcbf6bb2b02982b1f80a"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "topo_zona",
+      "arquivo": "../v02/mapa/deserto/topo_zona.fbx",
+      "glb": "../v02/mapa/deserto/topo_zona.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_zona.png"
+      ],
+      "materiais": [
+        "deserto_zona"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.05
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.05
+        ]
+      },
+      "tris": 44,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "piso:zona",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "04fdc856b4a10a76d8002f7d4e194d895f726d0a92fae90fb4689a4a353d201e",
+        "glb": "88328a761a6d5ae3dd430ca0542afcc54131cae49208ebf973079019c8ad53b1"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "coluna_a",
+      "arquivo": "../v02/mapa/deserto/coluna_a.fbx",
+      "glb": "../v02/mapa/deserto/coluna_a.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_terra.png",
+        "../v02/mapa/deserto/deserto_pedra.png"
+      ],
+      "materiais": [
+        "deserto_terra",
+        "deserto_pedra"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.45
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.45
+        ]
+      },
+      "tris": 124,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "coluna",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Segmento empilhável de 0,45 m; faces de terra, pedra e raízes.",
+      "sha256": {
+        "arquivo": "369db6725aa00ed34152479e91ae2d96eb69c10530454fbf6ceaf640aa9975d0",
+        "glb": "ff3b8f23cf1b6287e8827163d81e1cc95501d6d4b2a7865221c3321fdbe0fc4d"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "coluna_b",
+      "arquivo": "../v02/mapa/deserto/coluna_b.fbx",
+      "glb": "../v02/mapa/deserto/coluna_b.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_terra.png",
+        "../v02/mapa/deserto/deserto_pedra.png"
+      ],
+      "materiais": [
+        "deserto_terra",
+        "deserto_pedra"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.45
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.45
+        ]
+      },
+      "tris": 124,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "coluna",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Segmento empilhável de 0,45 m; faces de terra, pedra e raízes.",
+      "sha256": {
+        "arquivo": "1bd8319e8c221660b4826d39db0486f8ea515396838bccd75ec6f2fdd1ff342d",
+        "glb": "dfc669198884236fe7b2757972d044745b215f8b23cd6f52043d49717df2c35f"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "beira_reta",
+      "arquivo": "../v02/mapa/deserto/beira_reta.fbx",
+      "glb": "../v02/mapa/deserto/beira_reta.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_casca.png"
+      ],
+      "materiais": [
+        "deserto_casca"
+      ],
+      "dimensoes": [
+        1.0,
+        0.17,
+        0.4671
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.085,
+          -0.4221
+        ],
+        "max": [
+          0.5,
+          0.085,
+          0.045
+        ]
+      },
+      "tris": 108,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "beira",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Pivô de encaixe no topo da borda; raízes pendem abaixo de Z=0.",
+      "sha256": {
+        "arquivo": "f08bd528a529a763bf2c54674cf84785542cc3d72b4cc82339e481b70a5587ff",
+        "glb": "11328ef691d351d8c1e7a783345b4f1b34b96c6b602fe68571b02feda22046ce"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "beira_canto",
+      "arquivo": "../v02/mapa/deserto/beira_canto.fbx",
+      "glb": "../v02/mapa/deserto/beira_canto.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_casca.png"
+      ],
+      "materiais": [
+        "deserto_casca"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.4671
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          -0.4221
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.045
+        ]
+      },
+      "tris": 172,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "beira",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Pivô de encaixe no topo da borda; raízes pendem abaixo de Z=0.",
+      "sha256": {
+        "arquivo": "3db6b0a6be037f01d3fa45b4758f80d68c6b3a7e90c5f98f6f6d2d3b4d8fa2d6",
+        "glb": "aaea2473b979d4f71f257516d5e5ee63bdd9aa8c1945dd4b738bd020a1e7d0dd"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "arbusto",
+      "arquivo": "../v02/mapa/deserto/arbusto.fbx",
+      "glb": "../v02/mapa/deserto/arbusto.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_folhagem.png",
+        "../v02/mapa/deserto/deserto_casca.png"
+      ],
+      "materiais": [
+        "deserto_folhagem",
+        "deserto_casca",
+        "deserto_fruta"
+      ],
+      "dimensoes": [
+        0.6892,
+        0.6839,
+        0.5252
+      ],
+      "bounds": {
+        "min": [
+          -0.3395,
+          -0.3312,
+          0.0
+        ],
+        "max": [
+          0.3496,
+          0.3527,
+          0.5252
+        ]
+      },
+      "tris": 232,
+      "vento": "sim",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Arbusto",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "9b25c4680bd911aa5105349313cd73f7088763f4c1d6f3dfab998c80753d8bd8",
+        "glb": "66b59f95146d0a2eccc357fd90d673a763b5a8bf9d0c09d5aed466f07cf8dcc9"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "arvore",
+      "arquivo": "../v02/mapa/deserto/arvore.fbx",
+      "glb": "../v02/mapa/deserto/arvore.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_folhagem.png"
+      ],
+      "materiais": [
+        "deserto_folhagem"
+      ],
+      "dimensoes": [
+        0.866,
+        0.26,
+        1.8991
+      ],
+      "bounds": {
+        "min": [
+          -0.428,
+          -0.13,
+          0.0
+        ],
+        "max": [
+          0.438,
+          0.13,
+          1.8991
+        ]
+      },
+      "tris": 208,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Arvore",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Cacto saguaro do Deserto; silhueta exclusiva, braços eretos e base de uma casa.",
+      "sha256": {
+        "arquivo": "ab01aff0262095dfeba3ffed2523cb42b3915865337d08bd291ef56f2361894d",
+        "glb": "234ea8e119557c2012c9bd8ea2f80a618ff28bd828d9f84577c832948451624e"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "arvore_jovem",
+      "arquivo": "../v02/mapa/deserto/arvore_jovem.fbx",
+      "glb": "../v02/mapa/deserto/arvore_jovem.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_folhagem.png"
+      ],
+      "materiais": [
+        "deserto_folhagem"
+      ],
+      "dimensoes": [
+        0.866,
+        0.26,
+        1.4212
+      ],
+      "bounds": {
+        "min": [
+          -0.428,
+          -0.13,
+          0.0
+        ],
+        "max": [
+          0.438,
+          0.13,
+          1.4212
+        ]
+      },
+      "tris": 208,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Cacto saguaro do Deserto; silhueta exclusiva, braços eretos e base de uma casa.",
+      "sha256": {
+        "arquivo": "45fe9d5a051fc53f97da190fc89edc52bafe2706bdd5d18ac0e7ea31001c996d",
+        "glb": "b5b0ff8f78033992967768e2ccc9839f887bd3fa1daa0a543fca53b32c9bb6d4"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "arvore_palmeira",
+      "arquivo": "../v02/mapa/deserto/arvore_palmeira.fbx",
+      "glb": "../v02/mapa/deserto/arvore_palmeira.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_casca.png",
+        "../v02/mapa/deserto/deserto_folhagem.png"
+      ],
+      "materiais": [
+        "deserto_casca",
+        "deserto_folhagem"
+      ],
+      "dimensoes": [
+        1.4742,
+        1.4969,
+        1.8328
+      ],
+      "bounds": {
+        "min": [
+          -0.5792,
+          -0.7485,
+          0.0
+        ],
+        "max": [
+          0.895,
+          0.7485,
+          1.8328
+        ]
+      },
+      "tris": 176,
+      "vento": "sim",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Palmeira de oásis para a ambientação do Deserto; não substitui automaticamente o cacto do tabuleiro.",
+      "sha256": {
+        "arquivo": "a902a1c03d111d19fe8daed4d188342889e96d22ab4c8b8fc7a0665ba8482a05",
+        "glb": "7f8adf080d3946eaf2ee1116fb3ddd5861ebc21da1348c372c778983bb6b3479"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "caixa",
+      "arquivo": "../v02/mapa/deserto/caixa.fbx",
+      "glb": "../v02/mapa/deserto/caixa.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_madeira.png"
+      ],
+      "materiais": [
+        "deserto_madeira",
+        "deserto_ferro",
+        "deserto_fruta"
+      ],
+      "dimensoes": [
+        0.842,
+        0.8433,
+        0.832
+      ],
+      "bounds": {
+        "min": [
+          -0.421,
+          -0.41,
+          0.0
+        ],
+        "max": [
+          0.421,
+          0.4333,
+          0.832
+        ]
+      },
+      "tris": 372,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Caixa",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Estado só visual; destrutibilidade depende das regras do autor.",
+      "sha256": {
+        "arquivo": "cba9ce42a8c7ad157924fc4d29d6289f642e2465d70f1f13e1334fe8c95405cd",
+        "glb": "7ed0126f51c973de4a75a6642fe1334cf621f62e7ab07856d7d369a3334d6639"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "caixa_rachada",
+      "arquivo": "../v02/mapa/deserto/caixa_rachada.fbx",
+      "glb": "../v02/mapa/deserto/caixa_rachada.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_madeira.png"
+      ],
+      "materiais": [
+        "deserto_madeira",
+        "deserto_ferro",
+        "deserto_fruta",
+        "deserto_sombra"
+      ],
+      "dimensoes": [
+        0.842,
+        0.8433,
+        0.832
+      ],
+      "bounds": {
+        "min": [
+          -0.421,
+          -0.41,
+          0.0
+        ],
+        "max": [
+          0.421,
+          0.4333,
+          0.832
+        ]
+      },
+      "tris": 408,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Caixa",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Estado só visual; destrutibilidade depende das regras do autor.",
+      "sha256": {
+        "arquivo": "475d2e1abf332c11b53c7d9541842c09e065cc27afb92088a3fe2c9db95331f3",
+        "glb": "6abbf62d50f9426e97f9eaa25340bc05233b3c051e52e9a7c2792bfd7c724a32"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "caixa_quebrada",
+      "arquivo": "../v02/mapa/deserto/caixa_quebrada.fbx",
+      "glb": "../v02/mapa/deserto/caixa_quebrada.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_madeira.png"
+      ],
+      "materiais": [
+        "deserto_madeira",
+        "deserto_ferro"
+      ],
+      "dimensoes": [
+        0.85,
+        0.7492,
+        0.1575
+      ],
+      "bounds": {
+        "min": [
+          -0.4257,
+          -0.3417,
+          0.0
+        ],
+        "max": [
+          0.4243,
+          0.4075,
+          0.1575
+        ]
+      },
+      "tris": 352,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Caixa",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Estado só visual; destrutibilidade depende das regras do autor.",
+      "sha256": {
+        "arquivo": "a38ffe787fdeda69eddbe0891879fdbff652e5084d1b59ec05ff864c8c13fa5e",
+        "glb": "2e94db715002c85c5a0dca8e0e4de9c987152638c28cd05e930eac5456b4a075"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "pedra",
+      "arquivo": "../v02/mapa/deserto/pedra.fbx",
+      "glb": "../v02/mapa/deserto/pedra.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_pedra.png",
+        "../v02/mapa/deserto/deserto_grama_a.png"
+      ],
+      "materiais": [
+        "deserto_pedra",
+        "deserto_grama_a"
+      ],
+      "dimensoes": [
+        0.7353,
+        0.5782,
+        0.6037
+      ],
+      "bounds": {
+        "min": [
+          -0.3554,
+          -0.2824,
+          0.0
+        ],
+        "max": [
+          0.3799,
+          0.2958,
+          0.6037
+        ]
+      },
+      "tris": 40,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "58db8252ede8c7bc3422f0f483c4bf50a9e5d4fd7f2fa0624880e4b43652ab21",
+        "glb": "fbc7dbfe753133b7c2e0ff85b5cc48df1f8b1375ce09ca6dca3cbcdbf4246474"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "enfeite_cerca",
+      "arquivo": "../v02/mapa/deserto/enfeite_cerca.fbx",
+      "glb": "../v02/mapa/deserto/enfeite_cerca.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_madeira.png"
+      ],
+      "materiais": [
+        "deserto_madeira"
+      ],
+      "dimensoes": [
+        0.9389,
+        0.0941,
+        0.65
+      ],
+      "bounds": {
+        "min": [
+          -0.4695,
+          -0.052,
+          0.0
+        ],
+        "max": [
+          0.4695,
+          0.0421,
+          0.65
+        ]
+      },
+      "tris": 120,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "94a101efcab3492f5fa6277c69047ea96315bc33b148e156021f61b8dacf82b6",
+        "glb": "20d5f52b547547075e900023ae6827d8e07af3ddb91d95ad3aefcf6b323bcc81"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "enfeite_cerca_canto",
+      "arquivo": "../v02/mapa/deserto/enfeite_cerca_canto.fbx",
+      "glb": "../v02/mapa/deserto/enfeite_cerca_canto.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_madeira.png"
+      ],
+      "materiais": [
+        "deserto_madeira"
+      ],
+      "dimensoes": [
+        0.9389,
+        0.9341,
+        0.65
+      ],
+      "bounds": {
+        "min": [
+          -0.4695,
+          -0.467,
+          0.0
+        ],
+        "max": [
+          0.4695,
+          0.467,
+          0.65
+        ]
+      },
+      "tris": 224,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "e1b535fcc443a7cd590044b23ac4fd545fa1635303eb9753e0075a1c3007a15e",
+        "glb": "91a3f50b087bb49c08d7e79a7557e1ca13edfaf437aba2cf6c9030bc52296cda"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "enfeite_flores",
+      "arquivo": "../v02/mapa/deserto/enfeite_flores.fbx",
+      "glb": "../v02/mapa/deserto/enfeite_flores.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_folhagem.png"
+      ],
+      "materiais": [
+        "deserto_folhagem",
+        "deserto_flor_clara",
+        "deserto_ouro",
+        "deserto_flor"
+      ],
+      "dimensoes": [
+        0.366,
+        0.339,
+        0.211
+      ],
+      "bounds": {
+        "min": [
+          -0.1795,
+          -0.1837,
+          0.0
+        ],
+        "max": [
+          0.1865,
+          0.1553,
+          0.211
+        ]
+      },
+      "tris": 660,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "7a6421d856bc86febc48f8b61a8ba8edc7d5910faa2a0cb376a084da58944198",
+        "glb": "63b4a22da21525917c36eb24261f970a62bcd8ece47edfc3568f1c3ce09f2e85"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "enfeite_cogumelos",
+      "arquivo": "../v02/mapa/deserto/enfeite_cogumelos.fbx",
+      "glb": "../v02/mapa/deserto/enfeite_cogumelos.glb",
+      "textura": [],
+      "materiais": [
+        "deserto_creme",
+        "deserto_fruta"
+      ],
+      "dimensoes": [
+        0.3436,
+        0.297,
+        0.242
+      ],
+      "bounds": {
+        "min": [
+          -0.1702,
+          -0.169,
+          0.0
+        ],
+        "max": [
+          0.1735,
+          0.128,
+          0.242
+        ]
+      },
+      "tris": 300,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "f70f4bf981342766ec43374fa820fb36021dd4276afbc385b707c69223997dcf",
+        "glb": "c11aa58e1abe8fa7e58d281a4637336b2c5fb85545b7a34b38688cb2ac9c4810"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "enfeite_seixos",
+      "arquivo": "../v02/mapa/deserto/enfeite_seixos.fbx",
+      "glb": "../v02/mapa/deserto/enfeite_seixos.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_pedra.png"
+      ],
+      "materiais": [
+        "deserto_pedra"
+      ],
+      "dimensoes": [
+        0.4473,
+        0.3027,
+        0.0523
+      ],
+      "bounds": {
+        "min": [
+          -0.2189,
+          -0.1647,
+          0.0
+        ],
+        "max": [
+          0.2284,
+          0.1381,
+          0.0523
+        ]
+      },
+      "tris": 100,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Detalhe baixo, sem colisão, para distribuição também no interior.",
+      "sha256": {
+        "arquivo": "11c73c981975dc51a8e2a39d93db29019fd2434c868a687beefdba33dd21bf88",
+        "glb": "355d1a7173bb0d3d50ecc5424c28555dc02789249177fa05fa9c8d3458b47a08"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "enfeite_capim",
+      "arquivo": "../v02/mapa/deserto/enfeite_capim.fbx",
+      "glb": "../v02/mapa/deserto/enfeite_capim.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_folhagem.png"
+      ],
+      "materiais": [
+        "deserto_folhagem"
+      ],
+      "dimensoes": [
+        0.2797,
+        0.2765,
+        0.1784
+      ],
+      "bounds": {
+        "min": [
+          -0.1388,
+          -0.1404,
+          0.0
+        ],
+        "max": [
+          0.1409,
+          0.1361,
+          0.1784
+        ]
+      },
+      "tris": 84,
+      "vento": "sim",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Tufo baixo decorativo, sem colisão; espalhar entre áreas livres.",
+      "sha256": {
+        "arquivo": "d6f053c8fd2fa4e4662f7b38a73a6f1860cb2239a5e14eae21b9e5908e1cbb55",
+        "glb": "de29021fb6b06a28afc861226d66fed301f2604d0f069ee3baf8586959e646a7"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "enfeite_raiz_chao",
+      "arquivo": "../v02/mapa/deserto/enfeite_raiz_chao.fbx",
+      "glb": "../v02/mapa/deserto/enfeite_raiz_chao.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_casca.png"
+      ],
+      "materiais": [
+        "deserto_casca"
+      ],
+      "dimensoes": [
+        0.3489,
+        0.3301,
+        0.0344
+      ],
+      "bounds": {
+        "min": [
+          -0.1824,
+          -0.1532,
+          0.0
+        ],
+        "max": [
+          0.1665,
+          0.1769,
+          0.0344
+        ]
+      },
+      "tris": 48,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Raízes baixas decorativas, não representam obstáculo.",
+      "sha256": {
+        "arquivo": "0d48df1dc38042ba71c0c52306b3a455988a40c31ca38d49fb6f2cb63dfc9646",
+        "glb": "72c8238e9188f6a2082f7a52040447e1e4e8156ce15a599006cf38d0b8847ae5"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "enfeite_pedra_baixa",
+      "arquivo": "../v02/mapa/deserto/enfeite_pedra_baixa.fbx",
+      "glb": "../v02/mapa/deserto/enfeite_pedra_baixa.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_pedra.png"
+      ],
+      "materiais": [
+        "deserto_pedra"
+      ],
+      "dimensoes": [
+        0.4304,
+        0.3754,
+        0.2264
+      ],
+      "bounds": {
+        "min": [
+          -0.2083,
+          -0.1902,
+          0.0
+        ],
+        "max": [
+          0.2221,
+          0.1853,
+          0.2264
+        ]
+      },
+      "tris": 20,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Pedra baixa de ambientação, sem colisão; usar grupos também no interior, longe das bordas.",
+      "sha256": {
+        "arquivo": "221706aace0c4eaf6ea0ef89d61d98f22b6aead91f6d940bc139684ba7ec65ec",
+        "glb": "3efbf8696e29e472c51219dfaff085b63795d62e0630de203727a87f18464946"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "enfeite_lago",
+      "arquivo": "../v02/mapa/deserto/enfeite_lago.fbx",
+      "glb": "../v02/mapa/deserto/enfeite_lago.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_pedra.png"
+      ],
+      "materiais": [
+        "deserto_agua_emissivo",
+        "deserto_pedra",
+        "deserto_creme"
+      ],
+      "dimensoes": [
+        1.5432,
+        1.0856,
+        0.0951
+      ],
+      "bounds": {
+        "min": [
+          -0.7524,
+          -0.5454,
+          0.0
+        ],
+        "max": [
+          0.7908,
+          0.5402,
+          0.0951
+        ]
+      },
+      "tris": 262,
+      "vento": "não",
+      "emissivo": "sim",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Lagoa rasa decorativa para o INTERIOR do mapa; material de água/gelo/lava separado. Sem nova regra ou colisão definida pela arte.",
+      "sha256": {
+        "arquivo": "e79e5bc03e897c5d5a5ebf0e40fe0b8894fc3a81493365aaaedf8bdef06828cf",
+        "glb": "e22938d132cb354d0d7bbcfdbb139eb2a68aa1001f82e0e2cd9ba2259e90f90f"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "moeda_chao",
+      "arquivo": "../v02/mapa/deserto/moeda_chao.fbx",
+      "glb": "../v02/mapa/deserto/moeda_chao.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_madeira.png"
+      ],
+      "materiais": [
+        "deserto_ouro",
+        "deserto_madeira",
+        "deserto_creme"
+      ],
+      "dimensoes": [
+        0.24,
+        0.24,
+        0.031
+      ],
+      "bounds": {
+        "min": [
+          -0.12,
+          -0.12,
+          0.0
+        ],
+        "max": [
+          0.12,
+          0.12,
+          0.031
+        ]
+      },
+      "tris": 122,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "moeda:chao",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Moeda deitada, pivô na face inferior; apresentar no piso onde a lógica do jogo indicar moedas. Preview só demonstra a distribuição.",
+      "sha256": {
+        "arquivo": "eed0431ebe62c37651223faeda1fef492d34b33433cf357d9f1e2dfeec5da1c5",
+        "glb": "4d4c98c17c598e0c0527d1efd2a4f01c11e35d39c33e4567d08a0071d923c22f"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "enfeite_tocha",
+      "arquivo": "../v02/mapa/deserto/enfeite_tocha.fbx",
+      "glb": "../v02/mapa/deserto/enfeite_tocha.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_casca.png"
+      ],
+      "materiais": [
+        "deserto_casca",
+        "deserto_ferro"
+      ],
+      "dimensoes": [
+        0.2,
+        0.2,
+        0.81
+      ],
+      "bounds": {
+        "min": [
+          -0.1,
+          -0.1,
+          0.0
+        ],
+        "max": [
+          0.1,
+          0.1,
+          0.81
+        ]
+      },
+      "tris": 64,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [
+        {
+          "nome": "fx_fogo",
+          "nomeNoBlend": "fx_fogo",
+          "posicaoBlender": [
+            0.0,
+            0.0,
+            0.8399999737739563
+          ]
+        }
+      ],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "fx_fogo recebe chama em sprite; sem fogo sólido no FBX.",
+      "sha256": {
+        "arquivo": "d2a6bedee3e5a6d2ca361977c03c931486bd5d760fbcdeedc2660754790e787e",
+        "glb": "43ef43933de76c4898690a051c86d01086ba51adefba642110d02ab2288ae4fa"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "enfeite_fogueira",
+      "arquivo": "../v02/mapa/deserto/enfeite_fogueira.fbx",
+      "glb": "../v02/mapa/deserto/enfeite_fogueira.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_pedra.png",
+        "../v02/mapa/deserto/deserto_casca.png"
+      ],
+      "materiais": [
+        "deserto_pedra",
+        "deserto_casca"
+      ],
+      "dimensoes": [
+        0.624,
+        0.5853,
+        0.1841
+      ],
+      "bounds": {
+        "min": [
+          -0.3066,
+          -0.2909,
+          0.0
+        ],
+        "max": [
+          0.3174,
+          0.2945,
+          0.1841
+        ]
+      },
+      "tris": 292,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [
+        {
+          "nome": "fx_fogo",
+          "nomeNoBlend": "fx_fogo.001",
+          "posicaoBlender": [
+            0.0,
+            0.0,
+            0.1541043221950531
+          ]
+        }
+      ],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "54b6b5ce8a2459615ff137688822b40ded8d1e73a56d81f35648485815b82911",
+        "glb": "e1b4cb4b5ea8438250fbefd85f52857e74839832fa5641726e47e21a4f0fe27d"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "enfeite_placa",
+      "arquivo": "../v02/mapa/deserto/enfeite_placa.fbx",
+      "glb": "../v02/mapa/deserto/enfeite_placa.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_casca.png",
+        "../v02/mapa/deserto/deserto_madeira.png"
+      ],
+      "materiais": [
+        "deserto_casca",
+        "deserto_madeira",
+        "deserto_ouro"
+      ],
+      "dimensoes": [
+        0.55,
+        0.099,
+        1.0
+      ],
+      "bounds": {
+        "min": [
+          -0.255,
+          -0.051,
+          0.0
+        ],
+        "max": [
+          0.295,
+          0.048,
+          1.0
+        ]
+      },
+      "tris": 140,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "12fef4418435a4c493ce36baf91779f76ca1719aa90f046ba84f0cb3650b05f9",
+        "glb": "32f262d85e6a26f19b4d11cc68a93b29d47e1b0b238ddc3351ed5c4feec5b21b"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "bau_fechado",
+      "arquivo": "../v02/mapa/deserto/bau_fechado.fbx",
+      "glb": "../v02/mapa/deserto/bau_fechado.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_madeira.png"
+      ],
+      "materiais": [
+        "deserto_madeira",
+        "deserto_ouro"
+      ],
+      "dimensoes": [
+        0.68,
+        0.5025,
+        0.555
+      ],
+      "bounds": {
+        "min": [
+          -0.34,
+          -0.24,
+          0.0
+        ],
+        "max": [
+          0.34,
+          0.2625,
+          0.555
+        ]
+      },
+      "tris": 220,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "modo:Tesouro",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "4e851767ec29716b2225a6c2c3ac1f374ccc8f61b95bb042492c633f3b835b37",
+        "glb": "f22a00552f31f70950863d33d0b4d35de74c13e92859786a61599d1cb27dcfbd"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "pilar_galeao",
+      "arquivo": "../v02/mapa/deserto/pilar_galeao.fbx",
+      "glb": "../v02/mapa/deserto/pilar_galeao.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_pedra.png"
+      ],
+      "materiais": [
+        "deserto_pedra",
+        "deserto_ouro"
+      ],
+      "dimensoes": [
+        0.68,
+        0.68,
+        1.05
+      ],
+      "bounds": {
+        "min": [
+          -0.34,
+          -0.34,
+          0.0
+        ],
+        "max": [
+          0.34,
+          0.34,
+          1.05
+        ]
+      },
+      "tris": 176,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "modo:Galeoes",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "c8b717ea08796a9dfee045ee15c2f2f11d8b73d18389d874ac593e5e3bef12ce",
+        "glb": "851e3c4a593c751f063ef5708c34feca4e7260b2b93a715353e0fbcf26a51dfa"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "totem_dominio",
+      "arquivo": "../v02/mapa/deserto/totem_dominio.fbx",
+      "glb": "../v02/mapa/deserto/totem_dominio.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_pedra.png"
+      ],
+      "materiais": [
+        "deserto_pedra",
+        "deserto_runa_emissivo"
+      ],
+      "dimensoes": [
+        0.68,
+        0.68,
+        0.61
+      ],
+      "bounds": {
+        "min": [
+          -0.34,
+          -0.34,
+          0.0
+        ],
+        "max": [
+          0.34,
+          0.34,
+          0.61
+        ]
+      },
+      "tris": 152,
+      "vento": "não",
+      "emissivo": "sim",
+      "empties": [],
+      "substitui": "modo:Dominio",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Runa em material separado para cor e pulso do jogador.",
+      "sha256": {
+        "arquivo": "e61a2b72cf958fba8190e001899441e76f36759b71d8b51ff70c0d14fa822082",
+        "glb": "c2e91218c866e787ca5208ba8fc61abca668e2165a3b7f97617e7d7b2e5d65a6"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "enfeite_cristal",
+      "arquivo": "../v02/mapa/deserto/enfeite_cristal.fbx",
+      "glb": "../v02/mapa/deserto/enfeite_cristal.glb",
+      "textura": [],
+      "materiais": [
+        "deserto_cristal_emissivo"
+      ],
+      "dimensoes": [
+        0.3712,
+        0.3528,
+        0.43
+      ],
+      "bounds": {
+        "min": [
+          -0.1656,
+          -0.21,
+          0.0
+        ],
+        "max": [
+          0.2056,
+          0.1428,
+          0.43
+        ]
+      },
+      "tris": 72,
+      "vento": "não",
+      "emissivo": "sim",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "0049aeb902119a329c8674d4234ebdd5b8e4716dd3fe27e7da7aa798f8845aad",
+        "glb": "d0cc0118c8017280ba4cd83f06c33da2c6fbf972c256f93dee820a65b1da20f1"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "loja_mascate",
+      "arquivo": "../v02/mapa/deserto/loja_mascate.fbx",
+      "glb": "../v02/mapa/deserto/loja_mascate.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_pedra.png",
+        "../v02/mapa/deserto/deserto_madeira.png",
+        "../v02/mapa/deserto/deserto_casca.png"
+      ],
+      "materiais": [
+        "deserto_pedra",
+        "deserto_madeira",
+        "deserto_casca",
+        "deserto_creme",
+        "deserto_vinho",
+        "deserto_ouro",
+        "deserto_ferro",
+        "deserto_lanterna_emissivo"
+      ],
+      "dimensoes": [
+        1.92,
+        1.93,
+        2.255
+      ],
+      "bounds": {
+        "min": [
+          -0.96,
+          -0.93,
+          0.0
+        ],
+        "max": [
+          0.96,
+          1.0,
+          2.255
+        ]
+      },
+      "tris": 484,
+      "vento": "não",
+      "emissivo": "sim",
+      "empties": [
+        {
+          "nome": "fx_fumaca",
+          "nomeNoBlend": "fx_fumaca",
+          "posicaoBlender": [
+            -0.550000011920929,
+            -0.3499999940395355,
+            2.2699999809265137
+          ]
+        }
+      ],
+      "substitui": "loja:estrutura",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Fonte 3D; vendedor continua sprite. Frente +Y Blender = -Z Unity após exportação.",
+      "sha256": {
+        "arquivo": "fa150b41e7c4d4628ec4d3057ff0f18a96c1f3f4aa3e95e42f5de360b54343fb",
+        "glb": "b245dfad459b280e40e734b2ab981332d9b1845366edc6765e4a63eb6201b2d6"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "entorno",
+      "arquivo": "mapa/deserto/entorno.fbx",
+      "glb": "mapa/deserto/entorno.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_grama_a.png",
+        "../v02/mapa/deserto/deserto_terra.png",
+        "../v02/mapa/deserto/deserto_pedra.png",
+        "../v02/mapa/deserto/deserto_folhagem.png",
+        "../v02/mapa/deserto/deserto_madeira.png"
+      ],
+      "materiais": [
+        "deserto_grama_a",
+        "deserto_terra",
+        "deserto_pedra",
+        "deserto_folhagem",
+        "deserto_creme",
+        "deserto_fruta",
+        "deserto_madeira"
+      ],
+      "dimensoes": [
+        16.3133,
+        16.5185,
+        1.0635
+      ],
+      "bounds": {
+        "min": [
+          -8.2852,
+          -8.3561,
+          -1.036
+        ],
+        "max": [
+          8.0281,
+          8.1624,
+          0.0276
+        ]
+      },
+      "tris": 192,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "entorno",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Revisão 03: anel externo sem cerca nem props decorativos incorporados; detalhes posicionados no interior.",
+      "sha256": {
+        "arquivo": "89b4020e0f1b9afa66bda5da4f88f398fe4c90d588f39d8248859b886cb5a817",
+        "glb": "81a44de21538fb86874538d83b17e4ed03eb969364a4c63c1ae9972a062ad3ca"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "entorno_16",
+      "arquivo": "mapa/deserto/entorno_16.fbx",
+      "glb": "mapa/deserto/entorno_16.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_grama_a.png",
+        "../v02/mapa/deserto/deserto_terra.png",
+        "../v02/mapa/deserto/deserto_pedra.png",
+        "../v02/mapa/deserto/deserto_folhagem.png",
+        "../v02/mapa/deserto/deserto_madeira.png"
+      ],
+      "materiais": [
+        "deserto_grama_a",
+        "deserto_terra",
+        "deserto_pedra",
+        "deserto_folhagem",
+        "deserto_creme",
+        "deserto_fruta",
+        "deserto_madeira"
+      ],
+      "dimensoes": [
+        20.5852,
+        20.3933,
+        1.0652
+      ],
+      "bounds": {
+        "min": [
+          -10.2808,
+          -10.1594,
+          -1.0488
+        ],
+        "max": [
+          10.3044,
+          10.2339,
+          0.0164
+        ]
+      },
+      "tris": 192,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "entorno",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Revisão 03: anel externo sem cerca nem props decorativos incorporados; detalhes posicionados no interior.",
+      "sha256": {
+        "arquivo": "4531d0aa1d885e09052152743ec9ad3cd4a053bec707466b52886f09c99ab7ac",
+        "glb": "50e1621d865ab2766fdbd397a0ea7a60ded7f8cacde40bb0fc488ae7a71be4e9"
+      }
+    },
+    {
+      "cenario": "Deserto",
+      "peca": "entorno_18",
+      "arquivo": "mapa/deserto/entorno_18.fbx",
+      "glb": "mapa/deserto/entorno_18.glb",
+      "textura": [
+        "../v02/mapa/deserto/deserto_grama_a.png",
+        "../v02/mapa/deserto/deserto_terra.png",
+        "../v02/mapa/deserto/deserto_pedra.png",
+        "../v02/mapa/deserto/deserto_folhagem.png",
+        "../v02/mapa/deserto/deserto_madeira.png"
+      ],
+      "materiais": [
+        "deserto_grama_a",
+        "deserto_terra",
+        "deserto_pedra",
+        "deserto_folhagem",
+        "deserto_creme",
+        "deserto_fruta",
+        "deserto_madeira"
+      ],
+      "dimensoes": [
+        22.6035,
+        22.4873,
+        1.0675
+      ],
+      "bounds": {
+        "min": [
+          -11.3698,
+          -11.0849,
+          -1.0422
+        ],
+        "max": [
+          11.2336,
+          11.4024,
+          0.0253
+        ]
+      },
+      "tris": 192,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "entorno",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Revisão 03: anel externo sem cerca nem props decorativos incorporados; detalhes posicionados no interior.",
+      "sha256": {
+        "arquivo": "eeebfb7db3acdc1415f9fe42d333544391cd064c5f1ff5509739e34194513635",
+        "glb": "901f9cb6eec6cdcc34f7cb1010c9da0de413fe1a860243b13ed28c0784823481"
+      }
+    }
+  ],
+  "modelosReutilizadosDaVersao": "v02; somente os tres entornos por tema foram limpos e reexportados na v03"
+}

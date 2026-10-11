@@ -1,0 +1,1257 @@
+{
+  "status": "aprovado_tecnicamente",
+  "pecas": 35,
+  "fbxReimportados": 35,
+  "glbConferidos": 35,
+  "texturasOriginais": 8,
+  "checks": "escala, eixos, pivôs, tris, UV, hashes, pesos R, COLOR_0 neutro no GLB, nearest, sockets, vão central dos entornos",
+  "fonteBlenderReaberta": true,
+  "lojaCentralConferida": true,
+  "previewsConferidas": [
+    {
+      "fonte": "fontes/vulcao.blend",
+      "propsComApoioConferido": 30,
+      "moedasDeitadas": 9,
+      "margemMetros": 0.5,
+      "lojaCentral": true,
+      "lagoSeparadoDaLojaMetros": 2.1762,
+      "propsPrincipaisPorSetor": [
+        2,
+        3,
+        3,
+        4
+      ],
+      "raioLivreCentroMetros": 2
+    }
+  ],
+  "jogoUnityTestado": false,
+  "avaliacaoVisualAutor": "pendente",
+  "resultados": [
+    {
+      "peca": "topo_a",
+      "status": "ok",
+      "fbx": {
+        "tris": 44,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          1.0,
+          1.0,
+          0.05
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 44,
+        "dimensoesYup": [
+          1.0,
+          0.05,
+          1.0
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "topo_b",
+      "status": "ok",
+      "fbx": {
+        "tris": 44,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          1.0,
+          1.0,
+          0.05
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 44,
+        "dimensoesYup": [
+          1.0,
+          0.05,
+          1.0
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "topo_zona",
+      "status": "ok",
+      "fbx": {
+        "tris": 44,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          1.0,
+          1.0,
+          0.05
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 44,
+        "dimensoesYup": [
+          1.0,
+          0.05,
+          1.0
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "coluna_a",
+      "status": "ok",
+      "fbx": {
+        "tris": 124,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          1.0,
+          1.0,
+          0.45
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 124,
+        "dimensoesYup": [
+          1.0,
+          0.45,
+          1.0
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "coluna_b",
+      "status": "ok",
+      "fbx": {
+        "tris": 124,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          1.0,
+          1.0,
+          0.45
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 124,
+        "dimensoesYup": [
+          1.0,
+          0.45,
+          1.0
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "beira_reta",
+      "status": "ok",
+      "fbx": {
+        "tris": 108,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          1.0,
+          0.17,
+          0.4671
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 108,
+        "dimensoesYup": [
+          1.0,
+          0.4671,
+          0.17
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "beira_canto",
+      "status": "ok",
+      "fbx": {
+        "tris": 172,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          1.0,
+          1.0,
+          0.4671
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 172,
+        "dimensoesYup": [
+          1.0,
+          0.4671,
+          1.0
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "arbusto",
+      "status": "ok",
+      "fbx": {
+        "tris": 232,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.6892,
+          0.6839,
+          0.5252
+        ],
+        "ventoR": [
+          0.0,
+          1.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 232,
+        "dimensoesYup": [
+          0.6892,
+          0.5252,
+          0.6839
+        ],
+        "ventoR": [
+          0.0,
+          1.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "arvore",
+      "status": "ok",
+      "fbx": {
+        "tris": 352,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.9999,
+          0.8829,
+          1.9451
+        ],
+        "ventoR": [
+          0.0,
+          1.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 352,
+        "dimensoesYup": [
+          0.9999,
+          1.9451,
+          0.8829
+        ],
+        "ventoR": [
+          0.0,
+          1.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "arvore_jovem",
+      "status": "ok",
+      "fbx": {
+        "tris": 352,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.9999,
+          0.8829,
+          1.4728
+        ],
+        "ventoR": [
+          0.0,
+          1.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 352,
+        "dimensoesYup": [
+          0.9999,
+          1.4728,
+          0.8829
+        ],
+        "ventoR": [
+          0.0,
+          1.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "caixa",
+      "status": "ok",
+      "fbx": {
+        "tris": 372,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.842,
+          0.8433,
+          0.832
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 372,
+        "dimensoesYup": [
+          0.842,
+          0.832,
+          0.8433
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "caixa_rachada",
+      "status": "ok",
+      "fbx": {
+        "tris": 408,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.842,
+          0.8433,
+          0.832
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 408,
+        "dimensoesYup": [
+          0.842,
+          0.832,
+          0.8433
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "caixa_quebrada",
+      "status": "ok",
+      "fbx": {
+        "tris": 352,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.85,
+          0.7492,
+          0.1575
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 352,
+        "dimensoesYup": [
+          0.85,
+          0.1575,
+          0.7492
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "pedra",
+      "status": "ok",
+      "fbx": {
+        "tris": 40,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.7353,
+          0.5782,
+          0.6037
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 40,
+        "dimensoesYup": [
+          0.7353,
+          0.6037,
+          0.5782
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "enfeite_cerca",
+      "status": "ok",
+      "fbx": {
+        "tris": 120,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.9389,
+          0.0941,
+          0.65
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 120,
+        "dimensoesYup": [
+          0.9389,
+          0.65,
+          0.0941
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "enfeite_cerca_canto",
+      "status": "ok",
+      "fbx": {
+        "tris": 224,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.9389,
+          0.9341,
+          0.65
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 224,
+        "dimensoesYup": [
+          0.9389,
+          0.65,
+          0.9341
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "enfeite_flores",
+      "status": "ok",
+      "fbx": {
+        "tris": 660,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.366,
+          0.339,
+          0.211
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 660,
+        "dimensoesYup": [
+          0.366,
+          0.211,
+          0.339
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "enfeite_cogumelos",
+      "status": "ok",
+      "fbx": {
+        "tris": 300,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.3436,
+          0.297,
+          0.242
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 300,
+        "dimensoesYup": [
+          0.3436,
+          0.242,
+          0.297
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "enfeite_seixos",
+      "status": "ok",
+      "fbx": {
+        "tris": 100,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.4473,
+          0.3027,
+          0.0523
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 100,
+        "dimensoesYup": [
+          0.4473,
+          0.0523,
+          0.3027
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "enfeite_capim",
+      "status": "ok",
+      "fbx": {
+        "tris": 84,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.2797,
+          0.2765,
+          0.1784
+        ],
+        "ventoR": [
+          0.0,
+          1.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 84,
+        "dimensoesYup": [
+          0.2797,
+          0.1784,
+          0.2765
+        ],
+        "ventoR": [
+          0.0,
+          1.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "enfeite_raiz_chao",
+      "status": "ok",
+      "fbx": {
+        "tris": 48,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.3489,
+          0.3301,
+          0.0344
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 48,
+        "dimensoesYup": [
+          0.3489,
+          0.0344,
+          0.3301
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "enfeite_pedra_baixa",
+      "status": "ok",
+      "fbx": {
+        "tris": 20,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.4304,
+          0.3754,
+          0.2264
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 20,
+        "dimensoesYup": [
+          0.4304,
+          0.2264,
+          0.3754
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "enfeite_lago",
+      "status": "ok",
+      "fbx": {
+        "tris": 262,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          1.5432,
+          1.0856,
+          0.0951
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 262,
+        "dimensoesYup": [
+          1.5432,
+          0.0951,
+          1.0856
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "moeda_chao",
+      "status": "ok",
+      "fbx": {
+        "tris": 122,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.24,
+          0.24,
+          0.031
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 122,
+        "dimensoesYup": [
+          0.24,
+          0.031,
+          0.24
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "enfeite_tocha",
+      "status": "ok",
+      "fbx": {
+        "tris": 64,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.2,
+          0.2,
+          0.81
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 1
+      },
+      "glb": {
+        "tris": 64,
+        "dimensoesYup": [
+          0.2,
+          0.81,
+          0.2
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 1
+      }
+    },
+    {
+      "peca": "enfeite_fogueira",
+      "status": "ok",
+      "fbx": {
+        "tris": 292,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.624,
+          0.5853,
+          0.1841
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 1
+      },
+      "glb": {
+        "tris": 292,
+        "dimensoesYup": [
+          0.624,
+          0.1841,
+          0.5853
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 1
+      }
+    },
+    {
+      "peca": "enfeite_placa",
+      "status": "ok",
+      "fbx": {
+        "tris": 140,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.55,
+          0.099,
+          1.0
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 140,
+        "dimensoesYup": [
+          0.55,
+          1.0,
+          0.099
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "bau_fechado",
+      "status": "ok",
+      "fbx": {
+        "tris": 220,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.68,
+          0.5025,
+          0.555
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 220,
+        "dimensoesYup": [
+          0.68,
+          0.555,
+          0.5025
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "pilar_galeao",
+      "status": "ok",
+      "fbx": {
+        "tris": 176,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.68,
+          0.68,
+          1.05
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 176,
+        "dimensoesYup": [
+          0.68,
+          1.05,
+          0.68
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "totem_dominio",
+      "status": "ok",
+      "fbx": {
+        "tris": 152,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.68,
+          0.68,
+          0.61
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 152,
+        "dimensoesYup": [
+          0.68,
+          0.61,
+          0.68
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "enfeite_cristal",
+      "status": "ok",
+      "fbx": {
+        "tris": 72,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          0.3712,
+          0.3528,
+          0.43
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 72,
+        "dimensoesYup": [
+          0.3712,
+          0.43,
+          0.3528
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "loja_mascate",
+      "status": "ok",
+      "fbx": {
+        "tris": 484,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          1.92,
+          1.93,
+          2.255
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 1
+      },
+      "glb": {
+        "tris": 484,
+        "dimensoesYup": [
+          1.92,
+          2.255,
+          1.93
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 1
+      }
+    },
+    {
+      "peca": "entorno",
+      "status": "ok",
+      "fbx": {
+        "tris": 192,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          16.3133,
+          16.5185,
+          1.0635
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 192,
+        "dimensoesYup": [
+          16.3133,
+          1.0635,
+          16.5185
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "entorno_16",
+      "status": "ok",
+      "fbx": {
+        "tris": 192,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          20.5852,
+          20.3933,
+          1.0652
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 192,
+        "dimensoesYup": [
+          20.5852,
+          1.0652,
+          20.3933
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    },
+    {
+      "peca": "entorno_18",
+      "status": "ok",
+      "fbx": {
+        "tris": 192,
+        "pivo": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dimensoesZup": [
+          22.6034,
+          22.4873,
+          1.0675
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      },
+      "glb": {
+        "tris": 192,
+        "dimensoesYup": [
+          22.6034,
+          1.0675,
+          22.4873
+        ],
+        "ventoR": [
+          0.0,
+          0.0
+        ],
+        "sockets": 0
+      }
+    }
+  ],
+  "falhas": []
+}

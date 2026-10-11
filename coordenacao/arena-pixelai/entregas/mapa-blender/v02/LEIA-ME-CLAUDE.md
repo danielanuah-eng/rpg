@@ -1,6 +1,6 @@
 # Cenários Blender — revisão 02
 
-Entrega visual revisada conforme os pedidos do autor: **loja no meio, props também pelo interior, árvores diferentes por mapa e moedas deitadas no chão**. A versão anterior permanece preservada na pasta acima. Esta pasta é a entrega atual.
+Entrega visual revisada conforme os pedidos do autor: **loja no meio, props também pelo interior, árvores diferentes por mapa e moedas deitadas no chão**. Esta pasta preserva a revisão 02 e continua sendo a base dos modelos. A composição atual está em **[revisão 03](../v03/LEIA-ME-CLAUDE.md)**, com layouts distintos e props mais separados.
 
 Há cinco kits: **Montanha rochosa, Bosque, Deserto, Neve e Vulcão**. A Montanha rochosa mantém o ID e a pasta `pedreira` para compatibilidade com o pedido original, e possui dois maciços em níveis, afloramentos angulares e pinheiros distribuídos pelo interior. O Bosque tem três composições editáveis: **Clareira e colina**, **Trilhas cruzadas** e **Terraços e lagoa**. São exemplos de composição; a geração e a integração no jogo continuam com o Claude.
 

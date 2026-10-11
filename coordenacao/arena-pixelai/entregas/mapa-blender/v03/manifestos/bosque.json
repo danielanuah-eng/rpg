@@ -1,0 +1,1711 @@
+{
+  "versao": 3,
+  "tarefa": "011",
+  "data": "2026-10-10",
+  "estado": "revisao_de_composicao_entregue_para_avaliacao",
+  "avaliacaoAutor": "v1_aprovada_com_ajustes; v2_pendente",
+  "integracaoClaude": "pendente",
+  "cenario": "Bosque",
+  "unidadeMetros": 1,
+  "alturaPorNivel": 0.45,
+  "eixosOrigem": "Blender Z-up, planta XY",
+  "eixosExportacao": "Y-up, FBX forward -Z; conversão de (x,y,z) Blender para (x,z,-y)",
+  "texturas": {
+    "origem": "PixelLab create_tiles_pro / Map",
+    "id": "969ac24a-abe9-4723-8531-baabde2c70e3",
+    "filtro": "Point/Closest",
+    "mipmaps": false,
+    "wrap": "Repeat",
+    "pixelsPorCasa": 64
+  },
+  "vento": {
+    "atributo": "vento",
+    "fbx": "COLOR_0",
+    "glb": "COLOR_1",
+    "glbColor0": "branco neutro",
+    "canal": "R",
+    "base": 0,
+    "pontas": 1,
+    "shader": "Claude integra; entrega contém pesos, não shader executável"
+  },
+  "animacao": "Materiais emissivos e fx_fogo são pontos de integração. Não contém animação Unity pronta.",
+  "fonte": "fontes/bosque.blend",
+  "script": "fontes/recompor_cenarios.py",
+  "previews": [
+    "previews/bosque-tabuleiro-12x12.png"
+  ],
+  "revisaoAutor": [
+    "Relevo e distribuicao distintos por tema",
+    "Props em quatro setores",
+    "Centro com mais espaço livre"
+  ],
+  "moedasChao": "Modelo moeda_chao deitado sobre o piso; prévia com distribuição de exemplo.",
+  "versoesBosque": [
+    {
+      "id": "v01",
+      "nome": "Clareira entre bosquetes",
+      "fonte": "fontes/bosque.blend",
+      "preview": "previews/bosque-tabuleiro-12x12.png"
+    },
+    {
+      "id": "v02",
+      "nome": "Trilha entre clareiras",
+      "fonte": "fontes/bosque-versao-02.blend",
+      "preview": "previews/bosque-versao-02.png"
+    },
+    {
+      "id": "v03",
+      "nome": "Encosta e clareira",
+      "fonte": "fontes/bosque-versao-03.blend",
+      "preview": "previews/bosque-versao-03.png"
+    }
+  ],
+  "divergenciasBriefing": [
+    "Código atual usa 12/16/18 casas; entorno e variantes entorno_16/entorno_18 entregues sem mudar regras."
+  ],
+  "pecas": [
+    {
+      "cenario": "Bosque",
+      "peca": "topo_a",
+      "arquivo": "../v02/mapa/bosque/topo_a.fbx",
+      "glb": "../v02/mapa/bosque/topo_a.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_grama_a.png"
+      ],
+      "materiais": [
+        "bosque_grama_a"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.05
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.05
+        ]
+      },
+      "tris": 44,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "piso:a",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "88991ce78ca7489be4f0d05663c5e7189085a4531f44a9aa37d6c8ff1b21f43c",
+        "glb": "857d2b0436dc66873449cd708bb727678b37d713a4dcb10238fb0dd7555a5901"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "topo_b",
+      "arquivo": "../v02/mapa/bosque/topo_b.fbx",
+      "glb": "../v02/mapa/bosque/topo_b.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_grama_b.png"
+      ],
+      "materiais": [
+        "bosque_grama_b"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.05
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.05
+        ]
+      },
+      "tris": 44,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "piso:b",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "6df7220eec917c1b72818f622f7333d069ebbb1ade80fd566bbb1bd7b55fb023",
+        "glb": "c3f935ea9322323defd05ea330cbc0cdc07cb2dc90a07df24fe2c454f4e570f7"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "topo_zona",
+      "arquivo": "../v02/mapa/bosque/topo_zona.fbx",
+      "glb": "../v02/mapa/bosque/topo_zona.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_zona.png"
+      ],
+      "materiais": [
+        "bosque_zona"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.05
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.05
+        ]
+      },
+      "tris": 44,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "piso:zona",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "e19ab4272908adf20cad934461b47389ee6bcb68786dc292225742e0d608433d",
+        "glb": "31592fecbe039b464ba5c6be427b71866a7022335a3ed1ccc988c6d506d5544f"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "coluna_a",
+      "arquivo": "../v02/mapa/bosque/coluna_a.fbx",
+      "glb": "../v02/mapa/bosque/coluna_a.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_terra.png",
+        "../v02/mapa/bosque/bosque_pedra.png"
+      ],
+      "materiais": [
+        "bosque_terra",
+        "bosque_pedra"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.45
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.45
+        ]
+      },
+      "tris": 124,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "coluna",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Segmento empilhável de 0,45 m; faces de terra, pedra e raízes.",
+      "sha256": {
+        "arquivo": "737e4b26627813cb992cf7c96b328d134e4abf3c01dc3c145d4bae3b7089ff37",
+        "glb": "7a90167144e82e0b5de8dd66d4631e196717935d1c99bd66d75af87585080a7b"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "coluna_b",
+      "arquivo": "../v02/mapa/bosque/coluna_b.fbx",
+      "glb": "../v02/mapa/bosque/coluna_b.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_terra.png",
+        "../v02/mapa/bosque/bosque_pedra.png"
+      ],
+      "materiais": [
+        "bosque_terra",
+        "bosque_pedra"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.45
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.45
+        ]
+      },
+      "tris": 124,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "coluna",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Segmento empilhável de 0,45 m; faces de terra, pedra e raízes.",
+      "sha256": {
+        "arquivo": "a177a6458554691892c22aec7cbc66feec81ef9c88694e1fe1932d290798ea0d",
+        "glb": "1a0f820056e1e907fef4c8257749e6f68db54ad0051d64d07d8bcfb4f92fe21d"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "beira_reta",
+      "arquivo": "../v02/mapa/bosque/beira_reta.fbx",
+      "glb": "../v02/mapa/bosque/beira_reta.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_casca.png"
+      ],
+      "materiais": [
+        "bosque_casca"
+      ],
+      "dimensoes": [
+        1.0,
+        0.17,
+        0.4671
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.085,
+          -0.4221
+        ],
+        "max": [
+          0.5,
+          0.085,
+          0.045
+        ]
+      },
+      "tris": 108,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "beira",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Pivô de encaixe no topo da borda; raízes pendem abaixo de Z=0.",
+      "sha256": {
+        "arquivo": "b65f4e16da8176592fa07ff7a070adfe640b7fb08c342eac2e0a8782926dfae4",
+        "glb": "b7eb092700b083e3beb6d1441b2bcd0ef12f2f8c5911b4bd04316c6764918811"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "beira_canto",
+      "arquivo": "../v02/mapa/bosque/beira_canto.fbx",
+      "glb": "../v02/mapa/bosque/beira_canto.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_casca.png"
+      ],
+      "materiais": [
+        "bosque_casca"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.4671
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          -0.4221
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.045
+        ]
+      },
+      "tris": 172,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "beira",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Pivô de encaixe no topo da borda; raízes pendem abaixo de Z=0.",
+      "sha256": {
+        "arquivo": "a4a729103c324c7e4f48be710007282b0354abff09f5a36bf34cebff76b2de94",
+        "glb": "08d383d1fd5a8a146adc74f935920e339422fe36bfc3f0f58cbfd323d693278f"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "arbusto",
+      "arquivo": "../v02/mapa/bosque/arbusto.fbx",
+      "glb": "../v02/mapa/bosque/arbusto.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_folhagem.png",
+        "../v02/mapa/bosque/bosque_casca.png"
+      ],
+      "materiais": [
+        "bosque_folhagem",
+        "bosque_casca",
+        "bosque_fruta"
+      ],
+      "dimensoes": [
+        0.6892,
+        0.6839,
+        0.5252
+      ],
+      "bounds": {
+        "min": [
+          -0.3395,
+          -0.3312,
+          0.0
+        ],
+        "max": [
+          0.3496,
+          0.3527,
+          0.5252
+        ]
+      },
+      "tris": 232,
+      "vento": "sim",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Arbusto",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "02d0ba6a38d3f7f5ff62289a85271e6b5c759e3746717c2a1273e819f3ff976e",
+        "glb": "c7331edfca5fd5ed9752e4537650698e45756bacf4d477e440143cb32a39fe61"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "arvore",
+      "arquivo": "../v02/mapa/bosque/arvore.fbx",
+      "glb": "../v02/mapa/bosque/arvore.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_casca.png",
+        "../v02/mapa/bosque/bosque_folhagem.png"
+      ],
+      "materiais": [
+        "bosque_casca",
+        "bosque_folhagem"
+      ],
+      "dimensoes": [
+        1.5668,
+        1.4504,
+        2.1923
+      ],
+      "bounds": {
+        "min": [
+          -0.7711,
+          -0.7201,
+          0.0
+        ],
+        "max": [
+          0.7957,
+          0.7303,
+          2.1923
+        ]
+      },
+      "tris": 952,
+      "vento": "sim",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Arvore",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Carvalho frondoso, copa cheia e baixa, nove volumes com mais folhas; modelo próprio do Bosque.",
+      "sha256": {
+        "arquivo": "efac0c7a2fd51f4a9f6f6682463f21f2425b0cc6cf274cadd6b1ec7074b43952",
+        "glb": "40a6178262bb0e830d564d51c8d87508402062741c2c5424ef138f1fd3188174"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "arvore_jovem",
+      "arquivo": "../v02/mapa/bosque/arvore_jovem.fbx",
+      "glb": "../v02/mapa/bosque/arvore_jovem.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_casca.png",
+        "../v02/mapa/bosque/bosque_folhagem.png"
+      ],
+      "materiais": [
+        "bosque_casca",
+        "bosque_folhagem"
+      ],
+      "dimensoes": [
+        1.1281,
+        1.0443,
+        1.5818
+      ],
+      "bounds": {
+        "min": [
+          -0.5552,
+          -0.5185,
+          0.0
+        ],
+        "max": [
+          0.5729,
+          0.5258,
+          1.5818
+        ]
+      },
+      "tris": 952,
+      "vento": "sim",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Carvalho frondoso, copa cheia e baixa, nove volumes com mais folhas; modelo próprio do Bosque.",
+      "sha256": {
+        "arquivo": "91aa4d6ced7df354777c7856a79ed42db0dd403851ca11d042c262893d37ee7c",
+        "glb": "b302e89ab293f1d945b05e09cf5877ed701fb13e087b57982f12857c4111d0ed"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "caixa",
+      "arquivo": "../v02/mapa/bosque/caixa.fbx",
+      "glb": "../v02/mapa/bosque/caixa.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_madeira.png"
+      ],
+      "materiais": [
+        "bosque_madeira",
+        "bosque_ferro",
+        "bosque_fruta"
+      ],
+      "dimensoes": [
+        0.842,
+        0.8433,
+        0.832
+      ],
+      "bounds": {
+        "min": [
+          -0.421,
+          -0.41,
+          0.0
+        ],
+        "max": [
+          0.421,
+          0.4333,
+          0.832
+        ]
+      },
+      "tris": 372,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Caixa",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Estado só visual; destrutibilidade depende das regras do autor.",
+      "sha256": {
+        "arquivo": "6bbec9438504b3d1036fdd1797a2e3fce0e611bf629e5bbe5e576bd1b9668e70",
+        "glb": "0a58f1fede1492b526c6bf62549cd835f5854a12c27d206cb0c30be5ae4a4a20"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "caixa_rachada",
+      "arquivo": "../v02/mapa/bosque/caixa_rachada.fbx",
+      "glb": "../v02/mapa/bosque/caixa_rachada.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_madeira.png"
+      ],
+      "materiais": [
+        "bosque_madeira",
+        "bosque_ferro",
+        "bosque_fruta",
+        "bosque_sombra"
+      ],
+      "dimensoes": [
+        0.842,
+        0.8433,
+        0.832
+      ],
+      "bounds": {
+        "min": [
+          -0.421,
+          -0.41,
+          0.0
+        ],
+        "max": [
+          0.421,
+          0.4333,
+          0.832
+        ]
+      },
+      "tris": 408,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Caixa",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Estado só visual; destrutibilidade depende das regras do autor.",
+      "sha256": {
+        "arquivo": "95fab209554d8f12758a0fa9fa024be1100cd1fa4a8dbf1030362175e0f91b5d",
+        "glb": "b689edcfe7e0eb791b58085237dce24a3775a9d9faaf8297fee34fb20543392d"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "caixa_quebrada",
+      "arquivo": "../v02/mapa/bosque/caixa_quebrada.fbx",
+      "glb": "../v02/mapa/bosque/caixa_quebrada.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_madeira.png"
+      ],
+      "materiais": [
+        "bosque_madeira",
+        "bosque_ferro"
+      ],
+      "dimensoes": [
+        0.85,
+        0.7492,
+        0.1575
+      ],
+      "bounds": {
+        "min": [
+          -0.4257,
+          -0.3417,
+          0.0
+        ],
+        "max": [
+          0.4243,
+          0.4075,
+          0.1575
+        ]
+      },
+      "tris": 352,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Caixa",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Estado só visual; destrutibilidade depende das regras do autor.",
+      "sha256": {
+        "arquivo": "f6d683a3c9f6787272e8be17295cf00fca5fe78341816a6095b1869ae5fee3fe",
+        "glb": "646913d480a96fba6fd6d5ba5d6cde6338536b661af5a037d4e8a9db752fada5"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "pedra",
+      "arquivo": "../v02/mapa/bosque/pedra.fbx",
+      "glb": "../v02/mapa/bosque/pedra.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_pedra.png",
+        "../v02/mapa/bosque/bosque_grama_a.png"
+      ],
+      "materiais": [
+        "bosque_pedra",
+        "bosque_grama_a"
+      ],
+      "dimensoes": [
+        0.7353,
+        0.5782,
+        0.6037
+      ],
+      "bounds": {
+        "min": [
+          -0.3554,
+          -0.2824,
+          0.0
+        ],
+        "max": [
+          0.3799,
+          0.2958,
+          0.6037
+        ]
+      },
+      "tris": 40,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "5b85a794d588f7b57984f4fa219dbb25219d884ad2f9f4f3f79d458adc5aa820",
+        "glb": "e4c2b544b9bbba1114c01713d6c0f3ac574efd8a53e4e62545edf62280fb3ddb"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "enfeite_cerca",
+      "arquivo": "../v02/mapa/bosque/enfeite_cerca.fbx",
+      "glb": "../v02/mapa/bosque/enfeite_cerca.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_madeira.png"
+      ],
+      "materiais": [
+        "bosque_madeira"
+      ],
+      "dimensoes": [
+        0.9389,
+        0.0941,
+        0.65
+      ],
+      "bounds": {
+        "min": [
+          -0.4695,
+          -0.052,
+          0.0
+        ],
+        "max": [
+          0.4695,
+          0.0421,
+          0.65
+        ]
+      },
+      "tris": 120,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "d731b1994b598fbfcabf118354fd1c81834dc241c1b50075a2ab72321e306c3e",
+        "glb": "679c7e0b2d278fab5e70a7066ce19ca2f732ca945092938865901afcdd485242"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "enfeite_cerca_canto",
+      "arquivo": "../v02/mapa/bosque/enfeite_cerca_canto.fbx",
+      "glb": "../v02/mapa/bosque/enfeite_cerca_canto.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_madeira.png"
+      ],
+      "materiais": [
+        "bosque_madeira"
+      ],
+      "dimensoes": [
+        0.9389,
+        0.9341,
+        0.65
+      ],
+      "bounds": {
+        "min": [
+          -0.4695,
+          -0.467,
+          0.0
+        ],
+        "max": [
+          0.4695,
+          0.467,
+          0.65
+        ]
+      },
+      "tris": 224,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "0f22649395d30a9bfb16b46404cc20cea1ad4ce050dba560860b9055fec6587b",
+        "glb": "ca603bfaf44b22cde1302b097b05b1e9b9f24ccaf5dd38424a792fe08ffbce86"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "enfeite_flores",
+      "arquivo": "../v02/mapa/bosque/enfeite_flores.fbx",
+      "glb": "../v02/mapa/bosque/enfeite_flores.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_folhagem.png"
+      ],
+      "materiais": [
+        "bosque_folhagem",
+        "bosque_flor_clara",
+        "bosque_ouro",
+        "bosque_flor"
+      ],
+      "dimensoes": [
+        0.366,
+        0.339,
+        0.211
+      ],
+      "bounds": {
+        "min": [
+          -0.1795,
+          -0.1837,
+          0.0
+        ],
+        "max": [
+          0.1865,
+          0.1553,
+          0.211
+        ]
+      },
+      "tris": 660,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "5cd65e5906cb7c75ea9c65397a31e922280f5381891b1cf7da0f3a77231e7ea0",
+        "glb": "d95a3893d1277416f9622d32d09517f9ded6f239ec7eaaa5a2bc524660a027d6"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "enfeite_cogumelos",
+      "arquivo": "../v02/mapa/bosque/enfeite_cogumelos.fbx",
+      "glb": "../v02/mapa/bosque/enfeite_cogumelos.glb",
+      "textura": [],
+      "materiais": [
+        "bosque_creme",
+        "bosque_fruta"
+      ],
+      "dimensoes": [
+        0.3436,
+        0.297,
+        0.242
+      ],
+      "bounds": {
+        "min": [
+          -0.1702,
+          -0.169,
+          0.0
+        ],
+        "max": [
+          0.1735,
+          0.128,
+          0.242
+        ]
+      },
+      "tris": 300,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "3b8340ad7d09dca57e1ce46598bbe575d9c4fb993cf4810bba416bbeea9d750e",
+        "glb": "fc3426334377a7e8c82d9dd197f2d176e2f27bf8b737b305bb2aaea5c32b2f08"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "enfeite_seixos",
+      "arquivo": "../v02/mapa/bosque/enfeite_seixos.fbx",
+      "glb": "../v02/mapa/bosque/enfeite_seixos.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_pedra.png"
+      ],
+      "materiais": [
+        "bosque_pedra"
+      ],
+      "dimensoes": [
+        0.4473,
+        0.3027,
+        0.0523
+      ],
+      "bounds": {
+        "min": [
+          -0.2189,
+          -0.1647,
+          0.0
+        ],
+        "max": [
+          0.2284,
+          0.1381,
+          0.0523
+        ]
+      },
+      "tris": 100,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Detalhe baixo, sem colisão, para distribuição também no interior.",
+      "sha256": {
+        "arquivo": "497d28b729b4b9fe9aadc079459a475f14e27f82f768f6433489905eff3f9b35",
+        "glb": "d12c23091de9e34a841509e450deedcd5423b81503b7cecc85bbcc9658788496"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "enfeite_capim",
+      "arquivo": "../v02/mapa/bosque/enfeite_capim.fbx",
+      "glb": "../v02/mapa/bosque/enfeite_capim.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_folhagem.png"
+      ],
+      "materiais": [
+        "bosque_folhagem"
+      ],
+      "dimensoes": [
+        0.2797,
+        0.2765,
+        0.1784
+      ],
+      "bounds": {
+        "min": [
+          -0.1388,
+          -0.1404,
+          0.0
+        ],
+        "max": [
+          0.1409,
+          0.1361,
+          0.1784
+        ]
+      },
+      "tris": 84,
+      "vento": "sim",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Tufo baixo decorativo, sem colisão; espalhar entre áreas livres.",
+      "sha256": {
+        "arquivo": "1158366d13762c5e263dfafb5c2c260a3287a40f9166f99345b9441ad7cc2305",
+        "glb": "149150ad0cbc067eb1c9bf0926050e5f1abd4651d5ff148a6353049e56d34394"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "enfeite_raiz_chao",
+      "arquivo": "../v02/mapa/bosque/enfeite_raiz_chao.fbx",
+      "glb": "../v02/mapa/bosque/enfeite_raiz_chao.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_casca.png"
+      ],
+      "materiais": [
+        "bosque_casca"
+      ],
+      "dimensoes": [
+        0.3489,
+        0.3301,
+        0.0344
+      ],
+      "bounds": {
+        "min": [
+          -0.1824,
+          -0.1532,
+          0.0
+        ],
+        "max": [
+          0.1665,
+          0.1769,
+          0.0344
+        ]
+      },
+      "tris": 48,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Raízes baixas decorativas, não representam obstáculo.",
+      "sha256": {
+        "arquivo": "0f48b71ddcf0e74d68adf898fa80320bc6a1350ff0efdeabd02f7dc7112847f8",
+        "glb": "ae2cd682849c588c8c6c5871e7370d9746c7ec0f22c2bb560a425d7c61cfa10f"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "enfeite_pedra_baixa",
+      "arquivo": "../v02/mapa/bosque/enfeite_pedra_baixa.fbx",
+      "glb": "../v02/mapa/bosque/enfeite_pedra_baixa.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_pedra.png"
+      ],
+      "materiais": [
+        "bosque_pedra"
+      ],
+      "dimensoes": [
+        0.4304,
+        0.3754,
+        0.2264
+      ],
+      "bounds": {
+        "min": [
+          -0.2083,
+          -0.1902,
+          0.0
+        ],
+        "max": [
+          0.2221,
+          0.1853,
+          0.2264
+        ]
+      },
+      "tris": 20,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Pedra baixa de ambientação, sem colisão; usar grupos também no interior, longe das bordas.",
+      "sha256": {
+        "arquivo": "c437f4b4855b9122ac219102ad009343f92f9b634517d0ea0e3bc918164eb2b4",
+        "glb": "445730762725c2f11343cb17e431d61c19371b25cd621796f93173ffc2d43a09"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "enfeite_lago",
+      "arquivo": "../v02/mapa/bosque/enfeite_lago.fbx",
+      "glb": "../v02/mapa/bosque/enfeite_lago.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_pedra.png"
+      ],
+      "materiais": [
+        "bosque_agua_emissivo",
+        "bosque_pedra",
+        "bosque_creme"
+      ],
+      "dimensoes": [
+        1.5432,
+        1.0856,
+        0.0951
+      ],
+      "bounds": {
+        "min": [
+          -0.7524,
+          -0.5454,
+          0.0
+        ],
+        "max": [
+          0.7908,
+          0.5402,
+          0.0951
+        ]
+      },
+      "tris": 262,
+      "vento": "não",
+      "emissivo": "sim",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Lagoa rasa decorativa para o INTERIOR do mapa; material de água/gelo/lava separado. Sem nova regra ou colisão definida pela arte.",
+      "sha256": {
+        "arquivo": "6aaaad5d0f86627a9af36a433a2c146f10658a56c6874095de774d7902268c4f",
+        "glb": "4bde3c2fb9807aad450e7b3eef7d8a7625528a2d2d1e6cc0f1cf96c411410440"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "moeda_chao",
+      "arquivo": "../v02/mapa/bosque/moeda_chao.fbx",
+      "glb": "../v02/mapa/bosque/moeda_chao.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_madeira.png"
+      ],
+      "materiais": [
+        "bosque_ouro",
+        "bosque_madeira",
+        "bosque_creme"
+      ],
+      "dimensoes": [
+        0.24,
+        0.24,
+        0.031
+      ],
+      "bounds": {
+        "min": [
+          -0.12,
+          -0.12,
+          0.0
+        ],
+        "max": [
+          0.12,
+          0.12,
+          0.031
+        ]
+      },
+      "tris": 122,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "moeda:chao",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Moeda deitada, pivô na face inferior; apresentar no piso onde a lógica do jogo indicar moedas. Preview só demonstra a distribuição.",
+      "sha256": {
+        "arquivo": "4a745a3192ebb2310ed27ad38cb1efae3c7e2155d8e234e0cae239a87f5ec570",
+        "glb": "79d48956b1c210b1eb8db3fc293dbe27705d133ab046645599635e5d272f4dd9"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "enfeite_tocha",
+      "arquivo": "../v02/mapa/bosque/enfeite_tocha.fbx",
+      "glb": "../v02/mapa/bosque/enfeite_tocha.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_casca.png"
+      ],
+      "materiais": [
+        "bosque_casca",
+        "bosque_ferro"
+      ],
+      "dimensoes": [
+        0.2,
+        0.2,
+        0.81
+      ],
+      "bounds": {
+        "min": [
+          -0.1,
+          -0.1,
+          0.0
+        ],
+        "max": [
+          0.1,
+          0.1,
+          0.81
+        ]
+      },
+      "tris": 64,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [
+        {
+          "nome": "fx_fogo",
+          "nomeNoBlend": "fx_fogo",
+          "posicaoBlender": [
+            0.0,
+            0.0,
+            0.8399999737739563
+          ]
+        }
+      ],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "fx_fogo recebe chama em sprite; sem fogo sólido no FBX.",
+      "sha256": {
+        "arquivo": "b91225b7020d772cbce37f4c198904c65ced33bc77ce62a092864184eb6f8139",
+        "glb": "df888b6bb2b6faf63f75ddca9d0b7ccb42991179c4fbdf9a681da9b2a85fb92b"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "enfeite_fogueira",
+      "arquivo": "../v02/mapa/bosque/enfeite_fogueira.fbx",
+      "glb": "../v02/mapa/bosque/enfeite_fogueira.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_pedra.png",
+        "../v02/mapa/bosque/bosque_casca.png"
+      ],
+      "materiais": [
+        "bosque_pedra",
+        "bosque_casca"
+      ],
+      "dimensoes": [
+        0.624,
+        0.5853,
+        0.1841
+      ],
+      "bounds": {
+        "min": [
+          -0.3066,
+          -0.2909,
+          0.0
+        ],
+        "max": [
+          0.3174,
+          0.2945,
+          0.1841
+        ]
+      },
+      "tris": 292,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [
+        {
+          "nome": "fx_fogo",
+          "nomeNoBlend": "fx_fogo.001",
+          "posicaoBlender": [
+            0.0,
+            0.0,
+            0.1541043221950531
+          ]
+        }
+      ],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "96dbb7043984b3ce1b5b4c882ea1613f64316f7352b1e43f6992c1aad21cbe08",
+        "glb": "285f028701c5b177931692da81dcc1344a184b72621f374a494e07171bebe2ed"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "enfeite_placa",
+      "arquivo": "../v02/mapa/bosque/enfeite_placa.fbx",
+      "glb": "../v02/mapa/bosque/enfeite_placa.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_casca.png",
+        "../v02/mapa/bosque/bosque_madeira.png"
+      ],
+      "materiais": [
+        "bosque_casca",
+        "bosque_madeira",
+        "bosque_ouro"
+      ],
+      "dimensoes": [
+        0.55,
+        0.099,
+        1.0
+      ],
+      "bounds": {
+        "min": [
+          -0.255,
+          -0.051,
+          0.0
+        ],
+        "max": [
+          0.295,
+          0.048,
+          1.0
+        ]
+      },
+      "tris": 140,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "c777b1651baab79edc4c3914def50b47bca76cb24a06cf5b9765a7e07e3a9bd7",
+        "glb": "a07dc5727ea1376a88ff426ce83dfb5a190efe8c7cfcef629a79436e1fdf58f2"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "bau_fechado",
+      "arquivo": "../v02/mapa/bosque/bau_fechado.fbx",
+      "glb": "../v02/mapa/bosque/bau_fechado.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_madeira.png"
+      ],
+      "materiais": [
+        "bosque_madeira",
+        "bosque_ouro"
+      ],
+      "dimensoes": [
+        0.68,
+        0.5025,
+        0.555
+      ],
+      "bounds": {
+        "min": [
+          -0.34,
+          -0.24,
+          0.0
+        ],
+        "max": [
+          0.34,
+          0.2625,
+          0.555
+        ]
+      },
+      "tris": 220,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "modo:Tesouro",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "b121b98c46b401c349501026c740443f7d435cf468aefff5c1585bed186f63cb",
+        "glb": "73863bbe8eb8e38659d647304b99bb481a1bb60908075cfebc6a124f4d5cb8d7"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "pilar_galeao",
+      "arquivo": "../v02/mapa/bosque/pilar_galeao.fbx",
+      "glb": "../v02/mapa/bosque/pilar_galeao.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_pedra.png"
+      ],
+      "materiais": [
+        "bosque_pedra",
+        "bosque_ouro"
+      ],
+      "dimensoes": [
+        0.68,
+        0.68,
+        1.05
+      ],
+      "bounds": {
+        "min": [
+          -0.34,
+          -0.34,
+          0.0
+        ],
+        "max": [
+          0.34,
+          0.34,
+          1.05
+        ]
+      },
+      "tris": 176,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "modo:Galeoes",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "3afb76f029fc52da3d2190ee08cf05663f2be58a72eb4e78224f28dc25887bcc",
+        "glb": "0cc7352624f1cf99f760465aa62be64cab9f99c010a0b9184273a3062ee2a735"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "totem_dominio",
+      "arquivo": "../v02/mapa/bosque/totem_dominio.fbx",
+      "glb": "../v02/mapa/bosque/totem_dominio.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_pedra.png"
+      ],
+      "materiais": [
+        "bosque_pedra",
+        "bosque_runa_emissivo"
+      ],
+      "dimensoes": [
+        0.68,
+        0.68,
+        0.61
+      ],
+      "bounds": {
+        "min": [
+          -0.34,
+          -0.34,
+          0.0
+        ],
+        "max": [
+          0.34,
+          0.34,
+          0.61
+        ]
+      },
+      "tris": 152,
+      "vento": "não",
+      "emissivo": "sim",
+      "empties": [],
+      "substitui": "modo:Dominio",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Runa em material separado para cor e pulso do jogador.",
+      "sha256": {
+        "arquivo": "a046abb81f38cf68c581a4c18fedc13a7c7637a57f7b12288820eebbc93b5475",
+        "glb": "1a971dfd4071b9eec793bccc6ed8544f23162b5e38d2756731cdca9621a5ebfb"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "enfeite_cristal",
+      "arquivo": "../v02/mapa/bosque/enfeite_cristal.fbx",
+      "glb": "../v02/mapa/bosque/enfeite_cristal.glb",
+      "textura": [],
+      "materiais": [
+        "bosque_cristal_emissivo"
+      ],
+      "dimensoes": [
+        0.3712,
+        0.3528,
+        0.43
+      ],
+      "bounds": {
+        "min": [
+          -0.1656,
+          -0.21,
+          0.0
+        ],
+        "max": [
+          0.2056,
+          0.1428,
+          0.43
+        ]
+      },
+      "tris": 72,
+      "vento": "não",
+      "emissivo": "sim",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "e4eaad31d39ef039a85fb33f77fc2296b80f6daf8b16f3c83a7de7d057e0411e",
+        "glb": "c88af0f93a3dac3351703dd618dced38eb3ec8959e0ec7daf00b9bd20d423abe"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "loja_mascate",
+      "arquivo": "../v02/mapa/bosque/loja_mascate.fbx",
+      "glb": "../v02/mapa/bosque/loja_mascate.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_pedra.png",
+        "../v02/mapa/bosque/bosque_madeira.png",
+        "../v02/mapa/bosque/bosque_casca.png"
+      ],
+      "materiais": [
+        "bosque_pedra",
+        "bosque_madeira",
+        "bosque_casca",
+        "bosque_telha",
+        "bosque_vinho",
+        "bosque_creme",
+        "bosque_ouro",
+        "bosque_ferro",
+        "bosque_lanterna_emissivo"
+      ],
+      "dimensoes": [
+        1.92,
+        1.93,
+        2.255
+      ],
+      "bounds": {
+        "min": [
+          -0.96,
+          -0.93,
+          0.0
+        ],
+        "max": [
+          0.96,
+          1.0,
+          2.255
+        ]
+      },
+      "tris": 484,
+      "vento": "não",
+      "emissivo": "sim",
+      "empties": [
+        {
+          "nome": "fx_fumaca",
+          "nomeNoBlend": "fx_fumaca",
+          "posicaoBlender": [
+            -0.550000011920929,
+            -0.3499999940395355,
+            2.2699999809265137
+          ]
+        }
+      ],
+      "substitui": "loja:estrutura",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Fonte 3D; vendedor continua sprite. Frente +Y Blender = -Z Unity após exportação.",
+      "sha256": {
+        "arquivo": "716e5885174a0b6b798e970e8c00d24ab89084792a12c6bba9aed11c6a148056",
+        "glb": "9c51c65d90030a94f129c82a322fb07dbc6ef6395bc71ac421bc35da6bb41812"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "entorno",
+      "arquivo": "mapa/bosque/entorno.fbx",
+      "glb": "mapa/bosque/entorno.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_grama_a.png",
+        "../v02/mapa/bosque/bosque_terra.png",
+        "../v02/mapa/bosque/bosque_pedra.png",
+        "../v02/mapa/bosque/bosque_folhagem.png",
+        "../v02/mapa/bosque/bosque_madeira.png"
+      ],
+      "materiais": [
+        "bosque_grama_a",
+        "bosque_terra",
+        "bosque_pedra",
+        "bosque_folhagem",
+        "bosque_creme",
+        "bosque_fruta",
+        "bosque_madeira"
+      ],
+      "dimensoes": [
+        16.3133,
+        16.5185,
+        1.0635
+      ],
+      "bounds": {
+        "min": [
+          -8.2852,
+          -8.3561,
+          -1.036
+        ],
+        "max": [
+          8.0281,
+          8.1624,
+          0.0276
+        ]
+      },
+      "tris": 192,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "entorno",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Revisão 03: anel externo sem cerca nem props decorativos incorporados; detalhes posicionados no interior.",
+      "sha256": {
+        "arquivo": "53d90f60e992cbb7fae163e2a16c3a6f18fac3dab02940e9099375303eeee440",
+        "glb": "fbfec68b857142ead4b2563cf2004bf88a6416a7032d20483e294d3c4b66e866"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "entorno_16",
+      "arquivo": "mapa/bosque/entorno_16.fbx",
+      "glb": "mapa/bosque/entorno_16.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_grama_a.png",
+        "../v02/mapa/bosque/bosque_terra.png",
+        "../v02/mapa/bosque/bosque_pedra.png",
+        "../v02/mapa/bosque/bosque_folhagem.png",
+        "../v02/mapa/bosque/bosque_madeira.png"
+      ],
+      "materiais": [
+        "bosque_grama_a",
+        "bosque_terra",
+        "bosque_pedra",
+        "bosque_folhagem",
+        "bosque_creme",
+        "bosque_fruta",
+        "bosque_madeira"
+      ],
+      "dimensoes": [
+        20.5852,
+        20.3933,
+        1.0652
+      ],
+      "bounds": {
+        "min": [
+          -10.2808,
+          -10.1594,
+          -1.0488
+        ],
+        "max": [
+          10.3044,
+          10.2339,
+          0.0164
+        ]
+      },
+      "tris": 192,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "entorno",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Revisão 03: anel externo sem cerca nem props decorativos incorporados; detalhes posicionados no interior.",
+      "sha256": {
+        "arquivo": "ae4955bb07b8574e240e6229550046fff472760d844f63aea551b089e2a3a588",
+        "glb": "2438a30fe8d1b13b190b5e6a285586d6c7f48f856640c389c525ecb40d01f81e"
+      }
+    },
+    {
+      "cenario": "Bosque",
+      "peca": "entorno_18",
+      "arquivo": "mapa/bosque/entorno_18.fbx",
+      "glb": "mapa/bosque/entorno_18.glb",
+      "textura": [
+        "../v02/mapa/bosque/bosque_grama_a.png",
+        "../v02/mapa/bosque/bosque_terra.png",
+        "../v02/mapa/bosque/bosque_pedra.png",
+        "../v02/mapa/bosque/bosque_folhagem.png",
+        "../v02/mapa/bosque/bosque_madeira.png"
+      ],
+      "materiais": [
+        "bosque_grama_a",
+        "bosque_terra",
+        "bosque_pedra",
+        "bosque_folhagem",
+        "bosque_creme",
+        "bosque_fruta",
+        "bosque_madeira"
+      ],
+      "dimensoes": [
+        22.6035,
+        22.4873,
+        1.0675
+      ],
+      "bounds": {
+        "min": [
+          -11.3698,
+          -11.0849,
+          -1.0422
+        ],
+        "max": [
+          11.2336,
+          11.4024,
+          0.0253
+        ]
+      },
+      "tris": 192,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "entorno",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Revisão 03: anel externo sem cerca nem props decorativos incorporados; detalhes posicionados no interior.",
+      "sha256": {
+        "arquivo": "d149050602cd92bfc0fa6a50d3ba1675d30206695cc0d2df8db8a80ea534d56a",
+        "glb": "727f5d9fd5445432de3098ddc7755306cfc9603491e5eed82bb1787eaa4d908f"
+      }
+    }
+  ],
+  "modelosReutilizadosDaVersao": "v02; somente os tres entornos por tema foram limpos e reexportados na v03"
+}

@@ -1,0 +1,298 @@
+{
+  "status": "aprovado_tecnicamente",
+  "fbxReimportados": 176,
+  "glbConferidos": 176,
+  "texturas64x64OriginaisOpacasReutilizadas": 40,
+  "fontesComposicaoReabertas": 7,
+  "maxTrisProp": 952,
+  "maxTrisEntorno": 192,
+  "composicoes": [
+    {
+      "tema": "pedreira",
+      "fonte": "fontes/pedreira.blend",
+      "propsComApoioConferido": 31,
+      "moedasDeitadas": 9,
+      "margemMetros": 0.5,
+      "lojaCentral": true,
+      "lagoSeparadoDaLojaMetros": 0.9546,
+      "propsPrincipaisPorSetor": [
+        4,
+        4,
+        2,
+        3
+      ],
+      "raioLivreCentroMetros": 2
+    },
+    {
+      "tema": "bosque",
+      "fonte": "fontes/bosque.blend",
+      "propsComApoioConferido": 33,
+      "moedasDeitadas": 9,
+      "margemMetros": 0.5,
+      "lojaCentral": true,
+      "lagoSeparadoDaLojaMetros": 0.7876,
+      "propsPrincipaisPorSetor": [
+        4,
+        3,
+        4,
+        4
+      ],
+      "raioLivreCentroMetros": 2
+    },
+    {
+      "tema": "bosque",
+      "fonte": "fontes/bosque-versao-02.blend",
+      "propsComApoioConferido": 31,
+      "moedasDeitadas": 9,
+      "margemMetros": 0.5,
+      "lojaCentral": true,
+      "lagoSeparadoDaLojaMetros": 0.7492,
+      "propsPrincipaisPorSetor": [
+        3,
+        4,
+        4,
+        4
+      ],
+      "raioLivreCentroMetros": 2
+    },
+    {
+      "tema": "bosque",
+      "fonte": "fontes/bosque-versao-03.blend",
+      "propsComApoioConferido": 33,
+      "moedasDeitadas": 9,
+      "margemMetros": 0.5,
+      "lojaCentral": true,
+      "lagoSeparadoDaLojaMetros": 1.0298,
+      "propsPrincipaisPorSetor": [
+        3,
+        3,
+        4,
+        5
+      ],
+      "raioLivreCentroMetros": 2
+    },
+    {
+      "tema": "deserto",
+      "fonte": "fontes/deserto.blend",
+      "propsComApoioConferido": 30,
+      "moedasDeitadas": 9,
+      "margemMetros": 0.5,
+      "lojaCentral": true,
+      "lagoSeparadoDaLojaMetros": 0.7792,
+      "propsPrincipaisPorSetor": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "raioLivreCentroMetros": 2
+    },
+    {
+      "tema": "neve",
+      "fonte": "fontes/neve.blend",
+      "propsComApoioConferido": 30,
+      "moedasDeitadas": 9,
+      "margemMetros": 0.5,
+      "lojaCentral": true,
+      "lagoSeparadoDaLojaMetros": 0.9946,
+      "propsPrincipaisPorSetor": [
+        3,
+        5,
+        2,
+        2
+      ],
+      "raioLivreCentroMetros": 2,
+      "folgaAbetosDeTerracosAltos": 0.6368
+    },
+    {
+      "tema": "vulcao",
+      "fonte": "fontes/vulcao.blend",
+      "propsComApoioConferido": 30,
+      "moedasDeitadas": 9,
+      "margemMetros": 0.5,
+      "lojaCentral": true,
+      "lagoSeparadoDaLojaMetros": 2.1762,
+      "propsPrincipaisPorSetor": [
+        2,
+        3,
+        3,
+        4
+      ],
+      "raioLivreCentroMetros": 2
+    }
+  ],
+  "diferencasEntreLayouts": [
+    {
+      "composicoes": [
+        "pedreira",
+        "bosque"
+      ],
+      "casasComAlturaDiferente": 120,
+      "casasComOcupacaoPrincipalDiferente": 20
+    },
+    {
+      "composicoes": [
+        "pedreira",
+        "bosque-versao-02"
+      ],
+      "casasComAlturaDiferente": 99,
+      "casasComOcupacaoPrincipalDiferente": 16
+    },
+    {
+      "composicoes": [
+        "pedreira",
+        "bosque-versao-03"
+      ],
+      "casasComAlturaDiferente": 108,
+      "casasComOcupacaoPrincipalDiferente": 18
+    },
+    {
+      "composicoes": [
+        "pedreira",
+        "deserto"
+      ],
+      "casasComAlturaDiferente": 123,
+      "casasComOcupacaoPrincipalDiferente": 19
+    },
+    {
+      "composicoes": [
+        "pedreira",
+        "neve"
+      ],
+      "casasComAlturaDiferente": 117,
+      "casasComOcupacaoPrincipalDiferente": 15
+    },
+    {
+      "composicoes": [
+        "pedreira",
+        "vulcao"
+      ],
+      "casasComAlturaDiferente": 93,
+      "casasComOcupacaoPrincipalDiferente": 13
+    },
+    {
+      "composicoes": [
+        "bosque",
+        "bosque-versao-02"
+      ],
+      "casasComAlturaDiferente": 66,
+      "casasComOcupacaoPrincipalDiferente": 16
+    },
+    {
+      "composicoes": [
+        "bosque",
+        "bosque-versao-03"
+      ],
+      "casasComAlturaDiferente": 102,
+      "casasComOcupacaoPrincipalDiferente": 24
+    },
+    {
+      "composicoes": [
+        "bosque",
+        "deserto"
+      ],
+      "casasComAlturaDiferente": 38,
+      "casasComOcupacaoPrincipalDiferente": 15
+    },
+    {
+      "composicoes": [
+        "bosque",
+        "neve"
+      ],
+      "casasComAlturaDiferente": 65,
+      "casasComOcupacaoPrincipalDiferente": 25
+    },
+    {
+      "composicoes": [
+        "bosque",
+        "vulcao"
+      ],
+      "casasComAlturaDiferente": 71,
+      "casasComOcupacaoPrincipalDiferente": 19
+    },
+    {
+      "composicoes": [
+        "bosque-versao-02",
+        "bosque-versao-03"
+      ],
+      "casasComAlturaDiferente": 86,
+      "casasComOcupacaoPrincipalDiferente": 22
+    },
+    {
+      "composicoes": [
+        "bosque-versao-02",
+        "deserto"
+      ],
+      "casasComAlturaDiferente": 47,
+      "casasComOcupacaoPrincipalDiferente": 21
+    },
+    {
+      "composicoes": [
+        "bosque-versao-02",
+        "neve"
+      ],
+      "casasComAlturaDiferente": 81,
+      "casasComOcupacaoPrincipalDiferente": 15
+    },
+    {
+      "composicoes": [
+        "bosque-versao-02",
+        "vulcao"
+      ],
+      "casasComAlturaDiferente": 44,
+      "casasComOcupacaoPrincipalDiferente": 19
+    },
+    {
+      "composicoes": [
+        "bosque-versao-03",
+        "deserto"
+      ],
+      "casasComAlturaDiferente": 74,
+      "casasComOcupacaoPrincipalDiferente": 13
+    },
+    {
+      "composicoes": [
+        "bosque-versao-03",
+        "neve"
+      ],
+      "casasComAlturaDiferente": 100,
+      "casasComOcupacaoPrincipalDiferente": 19
+    },
+    {
+      "composicoes": [
+        "bosque-versao-03",
+        "vulcao"
+      ],
+      "casasComAlturaDiferente": 85,
+      "casasComOcupacaoPrincipalDiferente": 21
+    },
+    {
+      "composicoes": [
+        "deserto",
+        "neve"
+      ],
+      "casasComAlturaDiferente": 67,
+      "casasComOcupacaoPrincipalDiferente": 20
+    },
+    {
+      "composicoes": [
+        "deserto",
+        "vulcao"
+      ],
+      "casasComAlturaDiferente": 64,
+      "casasComOcupacaoPrincipalDiferente": 18
+    },
+    {
+      "composicoes": [
+        "neve",
+        "vulcao"
+      ],
+      "casasComAlturaDiferente": 72,
+      "casasComOcupacaoPrincipalDiferente": 24
+    }
+  ],
+  "checks": "FBX/GLB, hashes, escala/eixos, pivôs, UV, vento, sockets, entornos; apoio e margem de todos os props; loja central, moedas deitadas, quatro setores, centro livre de props grandes e layouts distintos",
+  "jogoUnityTestado": false,
+  "avaliacaoVisualAutor": "pendente",
+  "falhas": []
+}

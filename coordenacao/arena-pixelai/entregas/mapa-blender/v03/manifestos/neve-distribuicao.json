@@ -1,0 +1,816 @@
+{
+  "versao": 3,
+  "cenario": "Neve",
+  "nomeComposicao": "Vale diagonal de gelo",
+  "direcao": "Vale diagonal entre bancos de neve, lago congelado elevado e abetos afastados. Refúgio separado dos cristais.",
+  "loja": {
+    "posicaoBlender": [
+      0,
+      0,
+      0.5
+    ],
+    "rotacaoZBlender": 1.5707963267948966,
+    "sempreCentral": true
+  },
+  "apoioLago": {
+    "casasReservadas": [
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        4,
+        9
+      ]
+    ],
+    "nivel": 1
+  },
+  "alturaExemplo12x12": [
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      2,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      2
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      2,
+      2,
+      2
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      2
+    ]
+  ],
+  "propsPrincipaisPorSetor": [
+    3,
+    5,
+    2,
+    2
+  ],
+  "raioSemPropsGrandesAoRedorDoCentro": 2,
+  "colocacoes": [
+    {
+      "peca": "arvore",
+      "casaExemplo": [
+        2,
+        2
+      ],
+      "posicaoBlender": [
+        -3.5,
+        -3.5,
+        0.05
+      ],
+      "posicaoUnity": [
+        -3.5,
+        0.05,
+        3.5
+      ],
+      "rotacaoZBlender": 3.28,
+      "escala": 1,
+      "principal": true
+    },
+    {
+      "peca": "arvore",
+      "casaExemplo": [
+        8,
+        2
+      ],
+      "posicaoBlender": [
+        2.5,
+        -3.5,
+        0.5
+      ],
+      "posicaoUnity": [
+        2.5,
+        0.5,
+        3.5
+      ],
+      "rotacaoZBlender": 10.66,
+      "escala": 1,
+      "principal": true
+    },
+    {
+      "peca": "arvore",
+      "casaExemplo": [
+        9,
+        7
+      ],
+      "posicaoBlender": [
+        3.5,
+        1.5,
+        0.05
+      ],
+      "posicaoUnity": [
+        3.5,
+        0.05,
+        -1.5
+      ],
+      "rotacaoZBlender": 13.94,
+      "escala": 1,
+      "principal": true
+    },
+    {
+      "peca": "arbusto",
+      "casaExemplo": [
+        6,
+        2
+      ],
+      "posicaoBlender": [
+        0.5,
+        -3.5,
+        0.05
+      ],
+      "posicaoUnity": [
+        0.5,
+        0.05,
+        3.5
+      ],
+      "rotacaoZBlender": 0,
+      "escala": 1,
+      "principal": true
+    },
+    {
+      "peca": "arbusto",
+      "casaExemplo": [
+        5,
+        9
+      ],
+      "posicaoBlender": [
+        -0.5,
+        3.5,
+        0.9500000000000001
+      ],
+      "posicaoUnity": [
+        -0.5,
+        0.9500000000000001,
+        -3.5
+      ],
+      "rotacaoZBlender": 0,
+      "escala": 1,
+      "principal": true
+    },
+    {
+      "peca": "caixa",
+      "casaExemplo": [
+        9,
+        4
+      ],
+      "posicaoBlender": [
+        3.5,
+        -1.5,
+        0.5
+      ],
+      "posicaoUnity": [
+        3.5,
+        0.5,
+        1.5
+      ],
+      "rotacaoZBlender": 0,
+      "escala": 1,
+      "principal": true
+    },
+    {
+      "peca": "enfeite_pedra_baixa",
+      "casaExemplo": [
+        2,
+        5
+      ],
+      "posicaoBlender": [
+        -3.5,
+        -0.5,
+        0.5
+      ],
+      "posicaoUnity": [
+        -3.5,
+        0.5,
+        0.5
+      ],
+      "rotacaoZBlender": 0.0,
+      "escala": 1,
+      "principal": true
+    },
+    {
+      "peca": "enfeite_pedra_baixa",
+      "casaExemplo": [
+        8,
+        5
+      ],
+      "posicaoBlender": [
+        2.5,
+        -0.5,
+        0.5
+      ],
+      "posicaoUnity": [
+        2.5,
+        0.5,
+        0.5
+      ],
+      "rotacaoZBlender": 0.62,
+      "escala": 1,
+      "principal": true
+    },
+    {
+      "peca": "enfeite_cristal",
+      "casaExemplo": [
+        4,
+        3
+      ],
+      "posicaoBlender": [
+        -1.5,
+        -2.5,
+        0.05
+      ],
+      "posicaoUnity": [
+        -1.5,
+        0.05,
+        2.5
+      ],
+      "rotacaoZBlender": 1.24,
+      "escala": 1,
+      "principal": true
+    },
+    {
+      "peca": "enfeite_cristal",
+      "casaExemplo": [
+        7,
+        8
+      ],
+      "posicaoBlender": [
+        1.5,
+        2.5,
+        0.05
+      ],
+      "posicaoUnity": [
+        1.5,
+        0.05,
+        -2.5
+      ],
+      "rotacaoZBlender": 1.8599999999999999,
+      "escala": 1,
+      "principal": true
+    },
+    {
+      "peca": "enfeite_fogueira",
+      "casaExemplo": [
+        7,
+        3
+      ],
+      "posicaoBlender": [
+        1.5,
+        -2.5,
+        0.05
+      ],
+      "posicaoUnity": [
+        1.5,
+        0.05,
+        2.5
+      ],
+      "rotacaoZBlender": 2.48,
+      "escala": 1,
+      "principal": true
+    },
+    {
+      "peca": "enfeite_placa",
+      "casaExemplo": [
+        4,
+        6
+      ],
+      "posicaoBlender": [
+        -1.5,
+        0.5,
+        0.05
+      ],
+      "posicaoUnity": [
+        -1.5,
+        0.05,
+        -0.5
+      ],
+      "rotacaoZBlender": 1.5707963267948966,
+      "escala": 1,
+      "principal": false
+    },
+    {
+      "peca": "enfeite_lago",
+      "casaExemplo": [
+        3,
+        8
+      ],
+      "posicaoBlender": [
+        -2.5,
+        2.5,
+        0.5
+      ],
+      "posicaoUnity": [
+        -2.5,
+        0.5,
+        -2.5
+      ],
+      "rotacaoZBlender": 0,
+      "escala": 1,
+      "principal": true
+    },
+    {
+      "peca": "moeda_chao",
+      "casaExemplo": [
+        2,
+        4
+      ],
+      "posicaoBlender": [
+        -3.5,
+        -1.5,
+        0.051000000000000004
+      ],
+      "posicaoUnity": [
+        -3.5,
+        0.051000000000000004,
+        1.5
+      ],
+      "rotacaoZBlender": 0.0,
+      "escala": 1,
+      "principal": false
+    },
+    {
+      "peca": "moeda_chao",
+      "casaExemplo": [
+        8,
+        4
+      ],
+      "posicaoBlender": [
+        2.5,
+        -1.5,
+        0.501
+      ],
+      "posicaoUnity": [
+        2.5,
+        0.501,
+        1.5
+      ],
+      "rotacaoZBlender": 1.4,
+      "escala": 1,
+      "principal": false
+    },
+    {
+      "peca": "moeda_chao",
+      "casaExemplo": [
+        3,
+        2
+      ],
+      "posicaoBlender": [
+        -2.5,
+        -3.5,
+        0.051000000000000004
+      ],
+      "posicaoUnity": [
+        -2.5,
+        0.051000000000000004,
+        3.5
+      ],
+      "rotacaoZBlender": 4.8999999999999995,
+      "escala": 1,
+      "principal": false
+    },
+    {
+      "peca": "moeda_chao",
+      "casaExemplo": [
+        5,
+        8
+      ],
+      "posicaoBlender": [
+        -0.5,
+        2.5,
+        0.9510000000000001
+      ],
+      "posicaoUnity": [
+        -0.5,
+        0.9510000000000001,
+        -2.5
+      ],
+      "rotacaoZBlender": 5.6,
+      "escala": 1,
+      "principal": false
+    },
+    {
+      "peca": "moeda_chao",
+      "casaExemplo": [
+        8,
+        9
+      ],
+      "posicaoBlender": [
+        2.5,
+        3.5,
+        0.9510000000000001
+      ],
+      "posicaoUnity": [
+        2.5,
+        0.9510000000000001,
+        -3.5
+      ],
+      "rotacaoZBlender": 6.3,
+      "escala": 1,
+      "principal": false
+    },
+    {
+      "peca": "moeda_chao",
+      "casaExemplo": [
+        4,
+        4
+      ],
+      "posicaoBlender": [
+        -1.5,
+        -1.5,
+        0.051000000000000004
+      ],
+      "posicaoUnity": [
+        -1.5,
+        0.051000000000000004,
+        1.5
+      ],
+      "rotacaoZBlender": 7.0,
+      "escala": 1,
+      "principal": false
+    },
+    {
+      "peca": "moeda_chao",
+      "casaExemplo": [
+        7,
+        2
+      ],
+      "posicaoBlender": [
+        1.5,
+        -3.5,
+        0.051000000000000004
+      ],
+      "posicaoUnity": [
+        1.5,
+        0.051000000000000004,
+        3.5
+      ],
+      "rotacaoZBlender": 7.699999999999999,
+      "escala": 1,
+      "principal": false
+    },
+    {
+      "peca": "moeda_chao",
+      "casaExemplo": [
+        2,
+        6
+      ],
+      "posicaoBlender": [
+        -3.5,
+        0.5,
+        0.501
+      ],
+      "posicaoUnity": [
+        -3.5,
+        0.501,
+        -0.5
+      ],
+      "rotacaoZBlender": 8.399999999999999,
+      "escala": 1,
+      "principal": false
+    },
+    {
+      "peca": "moeda_chao",
+      "casaExemplo": [
+        9,
+        8
+      ],
+      "posicaoBlender": [
+        3.5,
+        2.5,
+        0.051000000000000004
+      ],
+      "posicaoUnity": [
+        3.5,
+        0.051000000000000004,
+        -2.5
+      ],
+      "rotacaoZBlender": 9.1,
+      "escala": 1,
+      "principal": false
+    },
+    {
+      "peca": "enfeite_capim",
+      "casaExemplo": [
+        4,
+        2
+      ],
+      "posicaoBlender": [
+        -1.5,
+        -3.5,
+        0.05
+      ],
+      "posicaoUnity": [
+        -1.5,
+        0.05,
+        3.5
+      ],
+      "rotacaoZBlender": 0.5,
+      "escala": 1,
+      "principal": false
+    },
+    {
+      "peca": "enfeite_raiz_chao",
+      "casaExemplo": [
+        7,
+        9
+      ],
+      "posicaoBlender": [
+        1.5,
+        3.5,
+        0.9500000000000001
+      ],
+      "posicaoUnity": [
+        1.5,
+        0.9500000000000001,
+        -3.5
+      ],
+      "rotacaoZBlender": 1.0,
+      "escala": 1,
+      "principal": false
+    },
+    {
+      "peca": "enfeite_flores",
+      "casaExemplo": [
+        3,
+        5
+      ],
+      "posicaoBlender": [
+        -2.5,
+        -0.5,
+        0.05
+      ],
+      "posicaoUnity": [
+        -2.5,
+        0.05,
+        0.5
+      ],
+      "rotacaoZBlender": 4.0,
+      "escala": 1,
+      "principal": false
+    },
+    {
+      "peca": "enfeite_cogumelos",
+      "casaExemplo": [
+        6,
+        3
+      ],
+      "posicaoBlender": [
+        0.5,
+        -2.5,
+        0.05
+      ],
+      "posicaoUnity": [
+        0.5,
+        0.05,
+        2.5
+      ],
+      "rotacaoZBlender": 4.5,
+      "escala": 1,
+      "principal": false
+    },
+    {
+      "peca": "enfeite_capim",
+      "casaExemplo": [
+        7,
+        4
+      ],
+      "posicaoBlender": [
+        1.5,
+        -1.5,
+        0.05
+      ],
+      "posicaoUnity": [
+        1.5,
+        0.05,
+        1.5
+      ],
+      "rotacaoZBlender": 5.5,
+      "escala": 1,
+      "principal": false
+    },
+    {
+      "peca": "enfeite_raiz_chao",
+      "casaExemplo": [
+        8,
+        6
+      ],
+      "posicaoBlender": [
+        2.5,
+        0.5,
+        0.05
+      ],
+      "posicaoUnity": [
+        2.5,
+        0.05,
+        -0.5
+      ],
+      "rotacaoZBlender": 6.0,
+      "escala": 1,
+      "principal": false
+    },
+    {
+      "peca": "enfeite_cogumelos",
+      "casaExemplo": [
+        9,
+        2
+      ],
+      "posicaoBlender": [
+        3.5,
+        -3.5,
+        0.5
+      ],
+      "posicaoUnity": [
+        3.5,
+        0.5,
+        3.5
+      ],
+      "rotacaoZBlender": 7.0,
+      "escala": 1,
+      "principal": false
+    }
+  ],
+  "estado": "composicao_visual; MapGen e integracao ficam com Claude"
+}

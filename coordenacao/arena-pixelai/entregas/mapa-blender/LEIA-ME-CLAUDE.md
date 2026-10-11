@@ -1,8 +1,8 @@
-# Cenários 3D — entrega atual na revisão 02
+# Cenários 3D — entrega atual na revisão 03
 
-A entrega atual está em **[v02/LEIA-ME-CLAUDE.md](v02/LEIA-ME-CLAUDE.md)**: cinco temas, três composições do bosque, loja central, props no interior, árvores próprias de cada tema e moedas deitadas no chão. São **176 modelos por formato**, fontes Blender e 40 texturas. Conferência consolidada: `v02/validacao.json`.
+A entrega atual está em **[v03/LEIA-ME-CLAUDE.md](v03/LEIA-ME-CLAUDE.md)**: sete composições com relevo e distribuição próprios, props em grupos menores nos quatro setores, espaço livre ao redor da loja central e moedas deitadas no chão. Dos **176 modelos por formato**, 161 são compartilhados com `v02/` e 15 entornos foram limpos/reexportados em `v03/`. As 40 texturas são compartilhadas. Conferência consolidada: `v03/validacao.json`.
 
-O registro abaixo e os arquivos desta pasta são o **piloto anterior, preservado**. Para integrar o cenário revisado, usar `v02/`.
+O registro abaixo e os arquivos desta pasta são o **piloto anterior, preservado**. Para integrar a composição revisada, usar `v03/` com os modelos de `v02/`.
 
 ## Registro do piloto da tarefa 011
 

@@ -1,0 +1,1689 @@
+{
+  "versao": 3,
+  "tarefa": "011",
+  "data": "2026-10-10",
+  "estado": "revisao_de_composicao_entregue_para_avaliacao",
+  "avaliacaoAutor": "v1_aprovada_com_ajustes; v2_pendente",
+  "integracaoClaude": "pendente",
+  "cenario": "Vulcão",
+  "unidadeMetros": 1,
+  "alturaPorNivel": 0.45,
+  "eixosOrigem": "Blender Z-up, planta XY",
+  "eixosExportacao": "Y-up, FBX forward -Z; conversão de (x,y,z) Blender para (x,z,-y)",
+  "texturas": {
+    "origem": "PixelLab create_tiles_pro / Map",
+    "id": "7170fdbd-dcfc-4407-bcc9-80797ec75e5a",
+    "filtro": "Point/Closest",
+    "mipmaps": false,
+    "wrap": "Repeat",
+    "pixelsPorCasa": 64
+  },
+  "vento": {
+    "atributo": "vento",
+    "fbx": "COLOR_0",
+    "glb": "COLOR_1",
+    "glbColor0": "branco neutro",
+    "canal": "R",
+    "base": 0,
+    "pontas": 1,
+    "shader": "Claude integra; entrega contém pesos, não shader executável"
+  },
+  "animacao": "Materiais emissivos e fx_fogo são pontos de integração. Não contém animação Unity pronta.",
+  "fonte": "fontes/vulcao.blend",
+  "script": "fontes/recompor_cenarios.py",
+  "previews": [
+    "previews/vulcao-tabuleiro-12x12.png"
+  ],
+  "revisaoAutor": [
+    "Relevo e distribuicao distintos por tema",
+    "Props em quatro setores",
+    "Centro com mais espaço livre"
+  ],
+  "moedasChao": "Modelo moeda_chao deitado sobre o piso; prévia com distribuição de exemplo.",
+  "versoesBosque": [],
+  "divergenciasBriefing": [
+    "Código atual usa 12/16/18 casas; entorno e variantes entorno_16/entorno_18 entregues sem mudar regras."
+  ],
+  "pecas": [
+    {
+      "cenario": "Vulcão",
+      "peca": "topo_a",
+      "arquivo": "../v02/mapa/vulcao/topo_a.fbx",
+      "glb": "../v02/mapa/vulcao/topo_a.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_grama_a.png"
+      ],
+      "materiais": [
+        "vulcao_grama_a"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.05
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.05
+        ]
+      },
+      "tris": 44,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "piso:a",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "0797aeddcd89f3c9b30aab79180bf576167c83a19606ac8dca71736a4521f146",
+        "glb": "9755049a29dc5dbeb8636a39b28f01fa29105ca6a4586f9fad07467f6630439d"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "topo_b",
+      "arquivo": "../v02/mapa/vulcao/topo_b.fbx",
+      "glb": "../v02/mapa/vulcao/topo_b.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_grama_b.png"
+      ],
+      "materiais": [
+        "vulcao_grama_b"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.05
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.05
+        ]
+      },
+      "tris": 44,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "piso:b",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "2b9f101e089a6dc47aba8a3d2f85bef33f07ff421a2aefd335872c80dd870eb3",
+        "glb": "fb3ec78a4d2c2b709b1ef7e867ed1585f8283a293f3312cc35f7af3aaadb6ae9"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "topo_zona",
+      "arquivo": "../v02/mapa/vulcao/topo_zona.fbx",
+      "glb": "../v02/mapa/vulcao/topo_zona.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_zona.png"
+      ],
+      "materiais": [
+        "vulcao_zona"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.05
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.05
+        ]
+      },
+      "tris": 44,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "piso:zona",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "466bdad7fb31b78b7fa3c3d05de095692f4c4780d97da97a3c0cedad804e4f97",
+        "glb": "c519e4e0c35595642389e281265f3b4ac617f2b06d9b030f06723a4b01820182"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "coluna_a",
+      "arquivo": "../v02/mapa/vulcao/coluna_a.fbx",
+      "glb": "../v02/mapa/vulcao/coluna_a.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_terra.png",
+        "../v02/mapa/vulcao/vulcao_pedra.png"
+      ],
+      "materiais": [
+        "vulcao_terra",
+        "vulcao_pedra"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.45
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.45
+        ]
+      },
+      "tris": 124,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "coluna",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Segmento empilhável de 0,45 m; faces de terra, pedra e raízes.",
+      "sha256": {
+        "arquivo": "c8604b040f87caceb37ba5b7fdab987468e508d53e332283ed36bd88787c5987",
+        "glb": "28d1cb2c59b299dac862956d80e9b6351b1f64ae92b489bcc5573b213bfc11eb"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "coluna_b",
+      "arquivo": "../v02/mapa/vulcao/coluna_b.fbx",
+      "glb": "../v02/mapa/vulcao/coluna_b.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_terra.png",
+        "../v02/mapa/vulcao/vulcao_pedra.png"
+      ],
+      "materiais": [
+        "vulcao_terra",
+        "vulcao_pedra"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.45
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.45
+        ]
+      },
+      "tris": 124,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "coluna",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Segmento empilhável de 0,45 m; faces de terra, pedra e raízes.",
+      "sha256": {
+        "arquivo": "0c5e596c29de80eef6c013127fd787c9e3fe414d17571086cfedb51eb8f689c0",
+        "glb": "eadf00a7c62738f674f73f418828d32a902ba2445bb9c64d06de33ae43801666"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "beira_reta",
+      "arquivo": "../v02/mapa/vulcao/beira_reta.fbx",
+      "glb": "../v02/mapa/vulcao/beira_reta.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_casca.png"
+      ],
+      "materiais": [
+        "vulcao_casca"
+      ],
+      "dimensoes": [
+        1.0,
+        0.17,
+        0.4671
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.085,
+          -0.4221
+        ],
+        "max": [
+          0.5,
+          0.085,
+          0.045
+        ]
+      },
+      "tris": 108,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "beira",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Pivô de encaixe no topo da borda; raízes pendem abaixo de Z=0.",
+      "sha256": {
+        "arquivo": "d1b6ec8fc6c20c00b95ec6f1d9c24e65fea2e8a02c7a35d04e176e23bc32b6c2",
+        "glb": "61b9553ef2fec0575e80ef92a90ff6902bf1bfd422f737fdda8599888f2fee4e"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "beira_canto",
+      "arquivo": "../v02/mapa/vulcao/beira_canto.fbx",
+      "glb": "../v02/mapa/vulcao/beira_canto.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_casca.png"
+      ],
+      "materiais": [
+        "vulcao_casca"
+      ],
+      "dimensoes": [
+        1.0,
+        1.0,
+        0.4671
+      ],
+      "bounds": {
+        "min": [
+          -0.5,
+          -0.5,
+          -0.4221
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.045
+        ]
+      },
+      "tris": 172,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "beira",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Pivô de encaixe no topo da borda; raízes pendem abaixo de Z=0.",
+      "sha256": {
+        "arquivo": "264249d959bb8bb23f74d2e8a9c935df4c69edb49eb0e3e73e972557de92eec4",
+        "glb": "2acd972b133d36bf7b1e571eb69006b7c56913bb512b84d3af16407c38cdef84"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "arbusto",
+      "arquivo": "../v02/mapa/vulcao/arbusto.fbx",
+      "glb": "../v02/mapa/vulcao/arbusto.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_folhagem.png",
+        "../v02/mapa/vulcao/vulcao_casca.png"
+      ],
+      "materiais": [
+        "vulcao_folhagem",
+        "vulcao_casca",
+        "vulcao_fruta"
+      ],
+      "dimensoes": [
+        0.6892,
+        0.6839,
+        0.5252
+      ],
+      "bounds": {
+        "min": [
+          -0.3395,
+          -0.3312,
+          0.0
+        ],
+        "max": [
+          0.3496,
+          0.3527,
+          0.5252
+        ]
+      },
+      "tris": 232,
+      "vento": "sim",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Arbusto",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "62a3f573cc2f9cf3e8c7dc9e4e236d5e0a7f6601e54de90b8b2cb21abd79ed5e",
+        "glb": "7f4e29bf4b6b38d0799860e7903255aa128c96080d54a7fc636d4e0e5972b19e"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "arvore",
+      "arquivo": "../v02/mapa/vulcao/arvore.fbx",
+      "glb": "../v02/mapa/vulcao/arvore.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_casca.png"
+      ],
+      "materiais": [
+        "vulcao_casca",
+        "vulcao_brasa_emissivo"
+      ],
+      "dimensoes": [
+        0.9999,
+        0.8829,
+        1.9451
+      ],
+      "bounds": {
+        "min": [
+          -0.4938,
+          -0.5022,
+          0.0
+        ],
+        "max": [
+          0.5061,
+          0.3807,
+          1.9451
+        ]
+      },
+      "tris": 352,
+      "vento": "sim",
+      "emissivo": "sim",
+      "empties": [],
+      "substitui": "terreno:Arvore",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Árvore carbonizada do Vulcão, tronco torto, ramos desnudos e pontas com brasas discretas.",
+      "sha256": {
+        "arquivo": "e32c438040a68612a42d7a4fd73c32e26b8d0795765905884f8a302410dd16f8",
+        "glb": "d31cb034b2b6d04c3ef171d8129b5a492dfcb6f46b90f0963d23f28276e4d286"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "arvore_jovem",
+      "arquivo": "../v02/mapa/vulcao/arvore_jovem.fbx",
+      "glb": "../v02/mapa/vulcao/arvore_jovem.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_casca.png"
+      ],
+      "materiais": [
+        "vulcao_casca",
+        "vulcao_brasa_emissivo"
+      ],
+      "dimensoes": [
+        0.9999,
+        0.8829,
+        1.4728
+      ],
+      "bounds": {
+        "min": [
+          -0.4938,
+          -0.5022,
+          0.0
+        ],
+        "max": [
+          0.5061,
+          0.3807,
+          1.4728
+        ]
+      },
+      "tris": 352,
+      "vento": "sim",
+      "emissivo": "sim",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Árvore carbonizada do Vulcão, tronco torto, ramos desnudos e pontas com brasas discretas.",
+      "sha256": {
+        "arquivo": "829252369da00b2a65e08bfd3a52f0f8e6c1de2ae4b304b42a50d1a6b8c4e250",
+        "glb": "9deba233722f650c2bf12f41bc04383bbde71c61183d1e7dfdeb8cf1b102fa09"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "caixa",
+      "arquivo": "../v02/mapa/vulcao/caixa.fbx",
+      "glb": "../v02/mapa/vulcao/caixa.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_madeira.png"
+      ],
+      "materiais": [
+        "vulcao_madeira",
+        "vulcao_ferro",
+        "vulcao_fruta"
+      ],
+      "dimensoes": [
+        0.842,
+        0.8433,
+        0.832
+      ],
+      "bounds": {
+        "min": [
+          -0.421,
+          -0.41,
+          0.0
+        ],
+        "max": [
+          0.421,
+          0.4333,
+          0.832
+        ]
+      },
+      "tris": 372,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Caixa",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Estado só visual; destrutibilidade depende das regras do autor.",
+      "sha256": {
+        "arquivo": "e566c259f84da89dfe6a8b76917fcf6ba5bd85c4f7dd56b43c7dad8164ce7caf",
+        "glb": "19ce800f9b44efac78b3c6fb209079fcf0a3b641832f97010856e59b5f14f300"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "caixa_rachada",
+      "arquivo": "../v02/mapa/vulcao/caixa_rachada.fbx",
+      "glb": "../v02/mapa/vulcao/caixa_rachada.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_madeira.png"
+      ],
+      "materiais": [
+        "vulcao_madeira",
+        "vulcao_ferro",
+        "vulcao_fruta",
+        "vulcao_sombra"
+      ],
+      "dimensoes": [
+        0.842,
+        0.8433,
+        0.832
+      ],
+      "bounds": {
+        "min": [
+          -0.421,
+          -0.41,
+          0.0
+        ],
+        "max": [
+          0.421,
+          0.4333,
+          0.832
+        ]
+      },
+      "tris": 408,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Caixa",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Estado só visual; destrutibilidade depende das regras do autor.",
+      "sha256": {
+        "arquivo": "cadec7c51d832626e855d41a044eccb203d39621169ecd9b90e4d86298fd6688",
+        "glb": "1876a1caed6b981895e15ef9234b7dec7e226a1434e89c23a25f3b2a0e5e20e3"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "caixa_quebrada",
+      "arquivo": "../v02/mapa/vulcao/caixa_quebrada.fbx",
+      "glb": "../v02/mapa/vulcao/caixa_quebrada.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_madeira.png"
+      ],
+      "materiais": [
+        "vulcao_madeira",
+        "vulcao_ferro"
+      ],
+      "dimensoes": [
+        0.85,
+        0.7492,
+        0.1575
+      ],
+      "bounds": {
+        "min": [
+          -0.4257,
+          -0.3417,
+          0.0
+        ],
+        "max": [
+          0.4243,
+          0.4075,
+          0.1575
+        ]
+      },
+      "tris": 352,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "terreno:Caixa",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Estado só visual; destrutibilidade depende das regras do autor.",
+      "sha256": {
+        "arquivo": "412272a1c8a4e72b10ebf0ce04a14fede0f21a698ff918124e05176ae309797f",
+        "glb": "5d22047a4a852e3f1f92611f968086f1ed54a9bf5556141177f1795de0ef33f5"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "pedra",
+      "arquivo": "../v02/mapa/vulcao/pedra.fbx",
+      "glb": "../v02/mapa/vulcao/pedra.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_pedra.png",
+        "../v02/mapa/vulcao/vulcao_grama_a.png"
+      ],
+      "materiais": [
+        "vulcao_pedra",
+        "vulcao_grama_a"
+      ],
+      "dimensoes": [
+        0.7353,
+        0.5782,
+        0.6037
+      ],
+      "bounds": {
+        "min": [
+          -0.3554,
+          -0.2824,
+          0.0
+        ],
+        "max": [
+          0.3799,
+          0.2958,
+          0.6037
+        ]
+      },
+      "tris": 40,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "a14ec9d23c6eb56206b7f5af9f9f7ec66f9b0e896f6e0b57d24df01f35d1e164",
+        "glb": "06266b035edea452054214998274f8b542ed6e4e72307b893ece1721526a85ed"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "enfeite_cerca",
+      "arquivo": "../v02/mapa/vulcao/enfeite_cerca.fbx",
+      "glb": "../v02/mapa/vulcao/enfeite_cerca.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_madeira.png"
+      ],
+      "materiais": [
+        "vulcao_madeira"
+      ],
+      "dimensoes": [
+        0.9389,
+        0.0941,
+        0.65
+      ],
+      "bounds": {
+        "min": [
+          -0.4695,
+          -0.052,
+          0.0
+        ],
+        "max": [
+          0.4695,
+          0.0421,
+          0.65
+        ]
+      },
+      "tris": 120,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "bc3f1de31235514ca54df5ded932b9be1bb22f589735b21fd9c4ca344248d431",
+        "glb": "7505483f676ec92d03c6235ba7ef6b01ea1c97ca56facf95719fc63c73aca177"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "enfeite_cerca_canto",
+      "arquivo": "../v02/mapa/vulcao/enfeite_cerca_canto.fbx",
+      "glb": "../v02/mapa/vulcao/enfeite_cerca_canto.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_madeira.png"
+      ],
+      "materiais": [
+        "vulcao_madeira"
+      ],
+      "dimensoes": [
+        0.9389,
+        0.9341,
+        0.65
+      ],
+      "bounds": {
+        "min": [
+          -0.4695,
+          -0.467,
+          0.0
+        ],
+        "max": [
+          0.4695,
+          0.467,
+          0.65
+        ]
+      },
+      "tris": 224,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "cda91b9a3e6fc9ce48ff028e6c6396e367caa70cc3252b5b81dba1de8f7f03a0",
+        "glb": "560cc56d753538b21e657ffdaa983023b3b3f385250bb2c50d115ecfe84bcf3d"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "enfeite_flores",
+      "arquivo": "../v02/mapa/vulcao/enfeite_flores.fbx",
+      "glb": "../v02/mapa/vulcao/enfeite_flores.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_folhagem.png"
+      ],
+      "materiais": [
+        "vulcao_folhagem",
+        "vulcao_flor_clara",
+        "vulcao_ouro",
+        "vulcao_flor"
+      ],
+      "dimensoes": [
+        0.366,
+        0.339,
+        0.211
+      ],
+      "bounds": {
+        "min": [
+          -0.1795,
+          -0.1837,
+          0.0
+        ],
+        "max": [
+          0.1865,
+          0.1553,
+          0.211
+        ]
+      },
+      "tris": 660,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "f2a2e877934738a82012c436672c0022de597f24edd42522b92796454567375e",
+        "glb": "684366dd0136173584b0ba77c56ca598d041051c9d08e9c49c15c262b08358bc"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "enfeite_cogumelos",
+      "arquivo": "../v02/mapa/vulcao/enfeite_cogumelos.fbx",
+      "glb": "../v02/mapa/vulcao/enfeite_cogumelos.glb",
+      "textura": [],
+      "materiais": [
+        "vulcao_creme",
+        "vulcao_fruta"
+      ],
+      "dimensoes": [
+        0.3436,
+        0.297,
+        0.242
+      ],
+      "bounds": {
+        "min": [
+          -0.1702,
+          -0.169,
+          0.0
+        ],
+        "max": [
+          0.1735,
+          0.128,
+          0.242
+        ]
+      },
+      "tris": 300,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "022ed076a6784fa5c874fab880aed58358fefba86cce18e58f2d631ea45da02f",
+        "glb": "dbe1e33297d9ddefaebd777a176ef010461bbbbc303ae64de0a8bd2ea3da4563"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "enfeite_seixos",
+      "arquivo": "../v02/mapa/vulcao/enfeite_seixos.fbx",
+      "glb": "../v02/mapa/vulcao/enfeite_seixos.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_pedra.png"
+      ],
+      "materiais": [
+        "vulcao_pedra"
+      ],
+      "dimensoes": [
+        0.4473,
+        0.3027,
+        0.0523
+      ],
+      "bounds": {
+        "min": [
+          -0.2189,
+          -0.1647,
+          0.0
+        ],
+        "max": [
+          0.2284,
+          0.1381,
+          0.0523
+        ]
+      },
+      "tris": 100,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Detalhe baixo, sem colisão, para distribuição também no interior.",
+      "sha256": {
+        "arquivo": "e0237c111bfcbb614d8a0e72df54b7af3240d43cd475150553fc395e394a1d75",
+        "glb": "a41653320399d103bb6ee60f291a518789112883ddb409cf41515700b8fd8b3f"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "enfeite_capim",
+      "arquivo": "../v02/mapa/vulcao/enfeite_capim.fbx",
+      "glb": "../v02/mapa/vulcao/enfeite_capim.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_folhagem.png"
+      ],
+      "materiais": [
+        "vulcao_folhagem"
+      ],
+      "dimensoes": [
+        0.2797,
+        0.2765,
+        0.1784
+      ],
+      "bounds": {
+        "min": [
+          -0.1388,
+          -0.1404,
+          0.0
+        ],
+        "max": [
+          0.1409,
+          0.1361,
+          0.1784
+        ]
+      },
+      "tris": 84,
+      "vento": "sim",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Tufo baixo decorativo, sem colisão; espalhar entre áreas livres.",
+      "sha256": {
+        "arquivo": "d566b4f2514610202c27c55fd8cab42f9b4914f65b9b55e9e1818e30869d53ff",
+        "glb": "e88655993cb4896efd699129416d3e481e1533d10599be3f402ac12efd40b67f"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "enfeite_raiz_chao",
+      "arquivo": "../v02/mapa/vulcao/enfeite_raiz_chao.fbx",
+      "glb": "../v02/mapa/vulcao/enfeite_raiz_chao.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_casca.png"
+      ],
+      "materiais": [
+        "vulcao_casca"
+      ],
+      "dimensoes": [
+        0.3489,
+        0.3301,
+        0.0344
+      ],
+      "bounds": {
+        "min": [
+          -0.1824,
+          -0.1532,
+          0.0
+        ],
+        "max": [
+          0.1665,
+          0.1769,
+          0.0344
+        ]
+      },
+      "tris": 48,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Raízes baixas decorativas, não representam obstáculo.",
+      "sha256": {
+        "arquivo": "607c5b69d4fa3afac94e3f4a55d294eef014953ab844ffe5752a95e8085415b1",
+        "glb": "82557f2e5254100079ffa1a89e024ec16952c42bdbf951d208348c11424ed113"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "enfeite_pedra_baixa",
+      "arquivo": "../v02/mapa/vulcao/enfeite_pedra_baixa.fbx",
+      "glb": "../v02/mapa/vulcao/enfeite_pedra_baixa.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_pedra.png"
+      ],
+      "materiais": [
+        "vulcao_pedra"
+      ],
+      "dimensoes": [
+        0.4304,
+        0.3754,
+        0.2264
+      ],
+      "bounds": {
+        "min": [
+          -0.2083,
+          -0.1902,
+          0.0
+        ],
+        "max": [
+          0.2221,
+          0.1853,
+          0.2264
+        ]
+      },
+      "tris": 20,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Pedra baixa de ambientação, sem colisão; usar grupos também no interior, longe das bordas.",
+      "sha256": {
+        "arquivo": "1772f2f7b379d8adc262c3a1b6368a15008546b0d0a54696a9719d7c4f28da67",
+        "glb": "49e9a04b8f2652373ff318ff7864e5efb47601c6688c7ac74db22805c82910a2"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "enfeite_lago",
+      "arquivo": "../v02/mapa/vulcao/enfeite_lago.fbx",
+      "glb": "../v02/mapa/vulcao/enfeite_lago.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_pedra.png"
+      ],
+      "materiais": [
+        "vulcao_lava_emissivo",
+        "vulcao_pedra",
+        "vulcao_creme"
+      ],
+      "dimensoes": [
+        1.5432,
+        1.0856,
+        0.0951
+      ],
+      "bounds": {
+        "min": [
+          -0.7524,
+          -0.5454,
+          0.0
+        ],
+        "max": [
+          0.7908,
+          0.5402,
+          0.0951
+        ]
+      },
+      "tris": 262,
+      "vento": "não",
+      "emissivo": "sim",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Lagoa rasa decorativa para o INTERIOR do mapa; material de água/gelo/lava separado. Sem nova regra ou colisão definida pela arte.",
+      "sha256": {
+        "arquivo": "76a80a6ceebbb8a1929340b157a073c5409d4656c1c038f464caddcd1d9de3c8",
+        "glb": "9e4c0ccb8eaeda4f35303b1b1d4b28ab833ff8be868aeafcefcfe36c288081e7"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "moeda_chao",
+      "arquivo": "../v02/mapa/vulcao/moeda_chao.fbx",
+      "glb": "../v02/mapa/vulcao/moeda_chao.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_madeira.png"
+      ],
+      "materiais": [
+        "vulcao_ouro",
+        "vulcao_madeira",
+        "vulcao_creme"
+      ],
+      "dimensoes": [
+        0.24,
+        0.24,
+        0.031
+      ],
+      "bounds": {
+        "min": [
+          -0.12,
+          -0.12,
+          0.0
+        ],
+        "max": [
+          0.12,
+          0.12,
+          0.031
+        ]
+      },
+      "tris": 122,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "moeda:chao",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Moeda deitada, pivô na face inferior; apresentar no piso onde a lógica do jogo indicar moedas. Preview só demonstra a distribuição.",
+      "sha256": {
+        "arquivo": "cfec7f9a635ccf8fe9ad550a2106cc62890e9ef41713a7aa53c85819f8db014b",
+        "glb": "14a05c5fa0def74cad6286f9686e93f65bfca3b3fd2577fed013a97b1478f4fe"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "enfeite_tocha",
+      "arquivo": "../v02/mapa/vulcao/enfeite_tocha.fbx",
+      "glb": "../v02/mapa/vulcao/enfeite_tocha.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_casca.png"
+      ],
+      "materiais": [
+        "vulcao_casca",
+        "vulcao_ferro"
+      ],
+      "dimensoes": [
+        0.2,
+        0.2,
+        0.81
+      ],
+      "bounds": {
+        "min": [
+          -0.1,
+          -0.1,
+          0.0
+        ],
+        "max": [
+          0.1,
+          0.1,
+          0.81
+        ]
+      },
+      "tris": 64,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [
+        {
+          "nome": "fx_fogo",
+          "nomeNoBlend": "fx_fogo",
+          "posicaoBlender": [
+            0.0,
+            0.0,
+            0.8399999737739563
+          ]
+        }
+      ],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "fx_fogo recebe chama em sprite; sem fogo sólido no FBX.",
+      "sha256": {
+        "arquivo": "ba3a0cb1fdfb7571ec21493552e6629a40e0bb4a73cc2367dd115a3400e514a7",
+        "glb": "3b8d0bbf060742164e5d1c3ccd332afa0351eb1949243f9f2b3c27b85d2b1751"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "enfeite_fogueira",
+      "arquivo": "../v02/mapa/vulcao/enfeite_fogueira.fbx",
+      "glb": "../v02/mapa/vulcao/enfeite_fogueira.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_pedra.png",
+        "../v02/mapa/vulcao/vulcao_casca.png"
+      ],
+      "materiais": [
+        "vulcao_pedra",
+        "vulcao_casca"
+      ],
+      "dimensoes": [
+        0.624,
+        0.5853,
+        0.1841
+      ],
+      "bounds": {
+        "min": [
+          -0.3066,
+          -0.2909,
+          0.0
+        ],
+        "max": [
+          0.3174,
+          0.2945,
+          0.1841
+        ]
+      },
+      "tris": 292,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [
+        {
+          "nome": "fx_fogo",
+          "nomeNoBlend": "fx_fogo.001",
+          "posicaoBlender": [
+            0.0,
+            0.0,
+            0.1541043221950531
+          ]
+        }
+      ],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "4e1d69584b031a3e7bcb00a633bab130fe27f99860b7ff186857e18fd5e6136f",
+        "glb": "af24bfa4c15d7ab3f9c796e1ba240a80760b8301b659af216d4efc9e67b61bd2"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "enfeite_placa",
+      "arquivo": "../v02/mapa/vulcao/enfeite_placa.fbx",
+      "glb": "../v02/mapa/vulcao/enfeite_placa.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_casca.png",
+        "../v02/mapa/vulcao/vulcao_madeira.png"
+      ],
+      "materiais": [
+        "vulcao_casca",
+        "vulcao_madeira",
+        "vulcao_ouro"
+      ],
+      "dimensoes": [
+        0.55,
+        0.099,
+        1.0
+      ],
+      "bounds": {
+        "min": [
+          -0.255,
+          -0.051,
+          0.0
+        ],
+        "max": [
+          0.295,
+          0.048,
+          1.0
+        ]
+      },
+      "tris": 140,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "581e66c719f93987aa591eab2f225db6f804a224e967b2e7f90ed102240f8f65",
+        "glb": "88faadf4e9375476b8b603346d3233c916dd9e106f27559c038d77fe23cab354"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "bau_fechado",
+      "arquivo": "../v02/mapa/vulcao/bau_fechado.fbx",
+      "glb": "../v02/mapa/vulcao/bau_fechado.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_madeira.png"
+      ],
+      "materiais": [
+        "vulcao_madeira",
+        "vulcao_ouro"
+      ],
+      "dimensoes": [
+        0.68,
+        0.5025,
+        0.555
+      ],
+      "bounds": {
+        "min": [
+          -0.34,
+          -0.24,
+          0.0
+        ],
+        "max": [
+          0.34,
+          0.2625,
+          0.555
+        ]
+      },
+      "tris": 220,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "modo:Tesouro",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "43193e9e9e389c4f73ae188b4fb1594fb2eba3c0678926ec2e9d30e55375b547",
+        "glb": "ea66619accf27100a56af059ac606076a12e1323f85347a291c6415bf31d2aab"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "pilar_galeao",
+      "arquivo": "../v02/mapa/vulcao/pilar_galeao.fbx",
+      "glb": "../v02/mapa/vulcao/pilar_galeao.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_pedra.png"
+      ],
+      "materiais": [
+        "vulcao_pedra",
+        "vulcao_ouro"
+      ],
+      "dimensoes": [
+        0.68,
+        0.68,
+        1.05
+      ],
+      "bounds": {
+        "min": [
+          -0.34,
+          -0.34,
+          0.0
+        ],
+        "max": [
+          0.34,
+          0.34,
+          1.05
+        ]
+      },
+      "tris": 176,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "modo:Galeoes",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "93fd3395d0717e67d92dbdb6bfca0d2035aa59f3cd5e854ecfe890fab389c33e",
+        "glb": "920bfded050564b95fd334280591e526e31b9d87cfda6086e7944d7423c9cf1e"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "totem_dominio",
+      "arquivo": "../v02/mapa/vulcao/totem_dominio.fbx",
+      "glb": "../v02/mapa/vulcao/totem_dominio.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_pedra.png"
+      ],
+      "materiais": [
+        "vulcao_pedra",
+        "vulcao_runa_emissivo"
+      ],
+      "dimensoes": [
+        0.68,
+        0.68,
+        0.61
+      ],
+      "bounds": {
+        "min": [
+          -0.34,
+          -0.34,
+          0.0
+        ],
+        "max": [
+          0.34,
+          0.34,
+          0.61
+        ]
+      },
+      "tris": 152,
+      "vento": "não",
+      "emissivo": "sim",
+      "empties": [],
+      "substitui": "modo:Dominio",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Runa em material separado para cor e pulso do jogador.",
+      "sha256": {
+        "arquivo": "4e339d251de651109513b5745d01ce6de0a21e8ce8b509c3622fbe5d12ebdf4c",
+        "glb": "9e3ce6ad042d8a1feda169dcf3565c78858f9d506845bb7f78855c6e6cfa8cfb"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "enfeite_cristal",
+      "arquivo": "../v02/mapa/vulcao/enfeite_cristal.fbx",
+      "glb": "../v02/mapa/vulcao/enfeite_cristal.glb",
+      "textura": [],
+      "materiais": [
+        "vulcao_cristal_emissivo"
+      ],
+      "dimensoes": [
+        0.3712,
+        0.3528,
+        0.43
+      ],
+      "bounds": {
+        "min": [
+          -0.1656,
+          -0.21,
+          0.0
+        ],
+        "max": [
+          0.2056,
+          0.1428,
+          0.43
+        ]
+      },
+      "tris": 72,
+      "vento": "não",
+      "emissivo": "sim",
+      "empties": [],
+      "substitui": "",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "",
+      "sha256": {
+        "arquivo": "83b47b67acf6a82454a0f00a545ebe0b07407498d17dad263ce11a890ccb9f89",
+        "glb": "d7242e21d30fa495819149b900396e47e0e44c8ad69313c9998e5770a78af04a"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "loja_mascate",
+      "arquivo": "../v02/mapa/vulcao/loja_mascate.fbx",
+      "glb": "../v02/mapa/vulcao/loja_mascate.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_pedra.png",
+        "../v02/mapa/vulcao/vulcao_madeira.png",
+        "../v02/mapa/vulcao/vulcao_casca.png"
+      ],
+      "materiais": [
+        "vulcao_pedra",
+        "vulcao_madeira",
+        "vulcao_casca",
+        "vulcao_vinho",
+        "vulcao_creme",
+        "vulcao_ouro",
+        "vulcao_ferro",
+        "vulcao_lanterna_emissivo"
+      ],
+      "dimensoes": [
+        1.92,
+        1.93,
+        2.255
+      ],
+      "bounds": {
+        "min": [
+          -0.96,
+          -0.93,
+          0.0
+        ],
+        "max": [
+          0.96,
+          1.0,
+          2.255
+        ]
+      },
+      "tris": 484,
+      "vento": "não",
+      "emissivo": "sim",
+      "empties": [
+        {
+          "nome": "fx_fumaca",
+          "nomeNoBlend": "fx_fumaca",
+          "posicaoBlender": [
+            -0.550000011920929,
+            -0.3499999940395355,
+            2.2699999809265137
+          ]
+        }
+      ],
+      "substitui": "loja:estrutura",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Fonte 3D; vendedor continua sprite. Frente +Y Blender = -Z Unity após exportação.",
+      "sha256": {
+        "arquivo": "9838fa4c56848a9827b375517056bd7a468d5e92e41dd6c4a097d97fd48a1660",
+        "glb": "8d0ae52f1cac57a1538259f0f16ba2ea2a5ab28566531c20ca89388fb354416d"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "entorno",
+      "arquivo": "mapa/vulcao/entorno.fbx",
+      "glb": "mapa/vulcao/entorno.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_grama_a.png",
+        "../v02/mapa/vulcao/vulcao_terra.png",
+        "../v02/mapa/vulcao/vulcao_pedra.png",
+        "../v02/mapa/vulcao/vulcao_folhagem.png",
+        "../v02/mapa/vulcao/vulcao_madeira.png"
+      ],
+      "materiais": [
+        "vulcao_grama_a",
+        "vulcao_terra",
+        "vulcao_pedra",
+        "vulcao_folhagem",
+        "vulcao_creme",
+        "vulcao_fruta",
+        "vulcao_madeira"
+      ],
+      "dimensoes": [
+        16.3133,
+        16.5185,
+        1.0635
+      ],
+      "bounds": {
+        "min": [
+          -8.2852,
+          -8.3561,
+          -1.036
+        ],
+        "max": [
+          8.0281,
+          8.1624,
+          0.0276
+        ]
+      },
+      "tris": 192,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "entorno",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Revisão 03: anel externo sem cerca nem props decorativos incorporados; detalhes posicionados no interior.",
+      "sha256": {
+        "arquivo": "d8c9104b43b34db4b9dd479aa4f6ec07363886d03df2a18d53ac644f45e72ded",
+        "glb": "2c4e54845e298344c723928905eb3d785aff6f32c947700f11e9d2fc73518dd1"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "entorno_16",
+      "arquivo": "mapa/vulcao/entorno_16.fbx",
+      "glb": "mapa/vulcao/entorno_16.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_grama_a.png",
+        "../v02/mapa/vulcao/vulcao_terra.png",
+        "../v02/mapa/vulcao/vulcao_pedra.png",
+        "../v02/mapa/vulcao/vulcao_folhagem.png",
+        "../v02/mapa/vulcao/vulcao_madeira.png"
+      ],
+      "materiais": [
+        "vulcao_grama_a",
+        "vulcao_terra",
+        "vulcao_pedra",
+        "vulcao_folhagem",
+        "vulcao_creme",
+        "vulcao_fruta",
+        "vulcao_madeira"
+      ],
+      "dimensoes": [
+        20.5852,
+        20.3933,
+        1.0652
+      ],
+      "bounds": {
+        "min": [
+          -10.2808,
+          -10.1594,
+          -1.0488
+        ],
+        "max": [
+          10.3044,
+          10.2339,
+          0.0164
+        ]
+      },
+      "tris": 192,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "entorno",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Revisão 03: anel externo sem cerca nem props decorativos incorporados; detalhes posicionados no interior.",
+      "sha256": {
+        "arquivo": "1f077b9553a6b467e60f9c74cf371cfa034b277aa32f9f4235365a1b95ccf85f",
+        "glb": "39c72e497c41ba8a32bf1013c9947a0b2356dcc93d4a2a18cd5e9d53d4f5b64d"
+      }
+    },
+    {
+      "cenario": "Vulcão",
+      "peca": "entorno_18",
+      "arquivo": "mapa/vulcao/entorno_18.fbx",
+      "glb": "mapa/vulcao/entorno_18.glb",
+      "textura": [
+        "../v02/mapa/vulcao/vulcao_grama_a.png",
+        "../v02/mapa/vulcao/vulcao_terra.png",
+        "../v02/mapa/vulcao/vulcao_pedra.png",
+        "../v02/mapa/vulcao/vulcao_folhagem.png",
+        "../v02/mapa/vulcao/vulcao_madeira.png"
+      ],
+      "materiais": [
+        "vulcao_grama_a",
+        "vulcao_terra",
+        "vulcao_pedra",
+        "vulcao_folhagem",
+        "vulcao_creme",
+        "vulcao_fruta",
+        "vulcao_madeira"
+      ],
+      "dimensoes": [
+        22.6035,
+        22.4873,
+        1.0675
+      ],
+      "bounds": {
+        "min": [
+          -11.3698,
+          -11.0849,
+          -1.0422
+        ],
+        "max": [
+          11.2336,
+          11.4024,
+          0.0253
+        ]
+      },
+      "tris": 192,
+      "vento": "não",
+      "emissivo": "não",
+      "empties": [],
+      "substitui": "entorno",
+      "pivoBlender": [
+        0,
+        0,
+        0
+      ],
+      "observacao": "Revisão 03: anel externo sem cerca nem props decorativos incorporados; detalhes posicionados no interior.",
+      "sha256": {
+        "arquivo": "69d355d17118b542bdf0bb46c66c28da0ea607a757076bb9d9972361c7e42895",
+        "glb": "9191ce40b26de0d895bf522cb85e656cb818ba56856e596574da9db884d99526"
+      }
+    }
+  ],
+  "modelosReutilizadosDaVersao": "v02; somente os tres entornos por tema foram limpos e reexportados na v03"
+}
