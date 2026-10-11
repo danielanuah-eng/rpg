@@ -1,0 +1,381 @@
+{
+  "id": "vulcao-passarela-em-s",
+  "tema": "vulcao",
+  "dimensao": 16,
+  "alturaPorNivel": 0.45,
+  "alturas": [
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "props": [
+    {
+      "peca": "arvore",
+      "casa": [
+        1,
+        3
+      ],
+      "rotacaoGraus": 0,
+      "regra": "existente"
+    },
+    {
+      "peca": "arvore",
+      "casa": [
+        14,
+        12
+      ],
+      "rotacaoGraus": 180,
+      "regra": "existente"
+    },
+    {
+      "peca": "arvore",
+      "casa": [
+        3,
+        11
+      ],
+      "rotacaoGraus": 0,
+      "regra": "existente"
+    },
+    {
+      "peca": "arvore",
+      "casa": [
+        12,
+        4
+      ],
+      "rotacaoGraus": 180,
+      "regra": "existente"
+    },
+    {
+      "peca": "arbusto",
+      "casa": [
+        1,
+        7
+      ],
+      "rotacaoGraus": 0,
+      "regra": "existente"
+    },
+    {
+      "peca": "arbusto",
+      "casa": [
+        14,
+        8
+      ],
+      "rotacaoGraus": 180,
+      "regra": "existente"
+    },
+    {
+      "peca": "caixa",
+      "casa": [
+        8,
+        3
+      ],
+      "rotacaoGraus": 180,
+      "regra": "existente"
+    },
+    {
+      "peca": "caixa",
+      "casa": [
+        7,
+        12
+      ],
+      "rotacaoGraus": 0,
+      "regra": "existente"
+    }
+  ],
+  "loja": {
+    "centroBlender": [
+      0,
+      0,
+      0.5
+    ],
+    "zonaCentral": "quatro_casas_centrais_nivel_1_preservadas"
+  },
+  "lava": "somente_visual_do_kit_existente_sem_dano_ou_regra_nova",
+  "mapaJogavelValidado": false,
+  "estado": "estudo_visual_para_importacao_claude"
+}

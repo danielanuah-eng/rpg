@@ -1,0 +1,107 @@
+{
+  "passed": true,
+  "layouts": [
+    {
+      "dimension": 12,
+      "uniqueProps": 8,
+      "propsOnLowGround": true,
+      "connectedHighPlatforms": [
+        4,
+        4
+      ],
+      "cornerConnectivityWithOneLevelSteps": true,
+      "centralZoneClear": true,
+      "terrainSymmetric180": true,
+      "mapaJogavelValidado": false
+    },
+    {
+      "dimension": 16,
+      "uniqueProps": 8,
+      "propsOnLowGround": true,
+      "connectedHighPlatforms": [
+        4,
+        4
+      ],
+      "cornerConnectivityWithOneLevelSteps": true,
+      "centralZoneClear": true,
+      "terrainSymmetric180": true,
+      "mapaJogavelValidado": false
+    },
+    {
+      "dimension": 18,
+      "uniqueProps": 8,
+      "propsOnLowGround": true,
+      "connectedHighPlatforms": [
+        6,
+        6
+      ],
+      "cornerConnectivityWithOneLevelSteps": true,
+      "centralZoneClear": true,
+      "terrainSymmetric180": true,
+      "mapaJogavelValidado": false
+    }
+  ],
+  "tileCount": 144,
+  "packedTextures": 8,
+  "framing": [
+    {
+      "camera": "VISTA_JOGADOR_1",
+      "location": [
+        19.0,
+        19.0,
+        19.0
+      ],
+      "projectedBounds": [
+        0.18573029339313507,
+        0.24526497721672058,
+        0.8142696022987366,
+        0.7435576319694519
+      ]
+    },
+    {
+      "camera": "VISTA_JOGADOR_2",
+      "location": [
+        -19.0,
+        19.0,
+        19.0
+      ],
+      "projectedBounds": [
+        0.18573039770126343,
+        0.24526497721672058,
+        0.8142697215080261,
+        0.7242822051048279
+      ]
+    },
+    {
+      "camera": "VISTA_JOGADOR_3",
+      "location": [
+        -19.0,
+        -19.0,
+        19.0
+      ],
+      "projectedBounds": [
+        0.18573026359081268,
+        0.24526497721672058,
+        0.8142696619033813,
+        0.7435576319694519
+      ]
+    },
+    {
+      "camera": "VISTA_JOGADOR_4",
+      "location": [
+        19.0,
+        -19.0,
+        19.0
+      ],
+      "projectedBounds": [
+        0.18573033809661865,
+        0.24526497721672058,
+        0.8142697215080261,
+        0.7242822051048279
+      ]
+    }
+  ],
+  "sameBoardFourViews": true,
+  "integration": "pendente_claude",
+  "gameplayValidation": "Somente conectividade abstrata: Claude verifica regras reais, colisão, spawns, alcance, câmera local e mobilidade no Unity."
+}

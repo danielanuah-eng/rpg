@@ -37,11 +37,17 @@ def main():
         for a in read(companions)['assets']:
             add(companions.parent/a['file'],{**a,'type':'efeito','hero':'baltazar','integration':'importado_reportado_claude_012' if partial else a.get('integration','pendente_claude'),'importedVersionHashVerified':False})
     maps=[]
+    reportedIds=set(state.get('mapas',{}).get('confirmadosClaude',[])) | set(state.get('mapas',{}).get('propsConfirmadosClaude',[]))
     for manifest in sorted(DELIVERY.glob('mapas-rotativos*/manifesto.json')):
         for a in read(manifest)['assets']:
-            maps.append({**a,'deliveryRoot':manifest.parent.relative_to(DELIVERY).as_posix()})
+            reported=a['id'] in reportedIds
+            metadata={**a,'integration':'importado_reportado_claude_013' if reported else 'pendente_claude',
+                      'editorAvailabilityReported':reported,'importedVersionHashVerified':False,
+                      'integrationEvidence':state.get('editor',{}).get('respostaCameraProps') if reported else None,
+                      'gameplayValidationReported':reported and a['tipo']=='mapa'}
+            maps.append({**metadata,'deliveryRoot':manifest.parent.relative_to(DELIVERY).as_posix()})
             paths=[a[k] for k in ('arquivo','glb','fonte') if a.get(k)]
-            for f in paths: add(manifest.parent/f,{**a,'type':a['tipo'],'integration':'pendente_claude','origin':manifest.relative_to(DELIVERY).as_posix()})
+            for f in paths: add(manifest.parent/f,{**metadata,'type':a['tipo'],'origin':manifest.relative_to(DELIVERY).as_posix()})
     # Descobrir entregas novas sem listas fechadas: mantém referências separadas de imports.
     for p in sorted(DELIVERY.rglob('*')):
         if not p.is_file() or p.suffix.lower() not in ('.png','.fbx','.glb','.blend'): continue

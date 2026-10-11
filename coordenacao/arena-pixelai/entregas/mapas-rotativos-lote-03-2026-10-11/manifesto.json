@@ -1,0 +1,83 @@
+{
+  "versao": 1,
+  "data": "2026-10-11",
+  "assets": [
+    {
+      "id": "vulcao-passarela-em-s",
+      "tipo": "mapa",
+      "tema": "vulcao",
+      "fonte": "fontes/vulcao-passarela-em-s.blend",
+      "layout": "layouts/vulcao-passarela-em-s-12.json",
+      "dimensoesSuportadas": [
+        12,
+        16,
+        18
+      ],
+      "dimensaoFonte": 12,
+      "dimensoesLayouts": [
+        12,
+        16,
+        18
+      ],
+      "dimensaoPreviews": 12,
+      "previews": [
+        "previews/vulcao-passarela-em-s-jogador-1.png",
+        "previews/vulcao-passarela-em-s-jogador-2.png",
+        "previews/vulcao-passarela-em-s-jogador-3.png",
+        "previews/vulcao-passarela-em-s-jogador-4.png"
+      ],
+      "camerasBlender": [
+        [
+          19,
+          19,
+          19
+        ],
+        [
+          -19,
+          19,
+          19
+        ],
+        [
+          -19,
+          -19,
+          19
+        ],
+        [
+          19,
+          -19,
+          19
+        ]
+      ],
+      "cameraLocalPorJogador": true,
+      "estado": "entregue",
+      "integracao": "pendente_claude",
+      "mapaJogavelValidado": false
+    }
+  ],
+  "hashes": {
+    "fontes/vulcao-passarela-em-s.blend": "0e0f1589f3a2c45db7f6c080f843cd111dbdb08907a76ee4e94955e61bb2fb5a",
+    "layouts/vulcao-passarela-em-s-12.json": "15745e17d459d4a4c6b5ce0c7bb6325c2c99fc531061dbbf580e80aa2c6f7d10",
+    "layouts/vulcao-passarela-em-s-16.json": "4a4914745744cf25431670900bae6edf6db706fc6791957d831ce94475b8fa61",
+    "layouts/vulcao-passarela-em-s-18.json": "b30eeec937cb92fd6e6de36ffd5785a1422c05ad952dc6122185b90ce3c3a68e",
+    "previews/vulcao-passarela-em-s-jogador-1.png": "0b1d2832052dd428f6c504ecc1a3e1b300436ef486cf1e615cba08a0cb520b08",
+    "previews/vulcao-passarela-em-s-jogador-2.png": "e7923164c96b4951f5551db72c42da2d434ce10c9e3ab2aa5408347af583691c",
+    "previews/vulcao-passarela-em-s-jogador-3.png": "376437f60abf29289b4e7cf99e3c060145a1f037d35dcc4c6b33bcc0d7550aa1",
+    "previews/vulcao-passarela-em-s-jogador-4.png": "d90da78663d19268e57c42fddefd8d5ffafd4be2d7c2306fa82412675039cd21"
+  },
+  "sourceKit": "mapa-blender/v02/fontes/vulcao.blend",
+  "sourceKitSha256": "b0e4d3f6abd657c03d9c87609c06e8e460e3557a41f475a01c22c6cb27344fc2",
+  "prompt": "Uma passarela sinuosa de basalto em S, com dois patamares contíguos de nível 2 e rotas baixas alternativas em um vulcão. Lava decorativa do kit existente, sem dano nem regra nova. Loja central preservada; quatro vistas locais mostram o mesmo tabuleiro inteiro. Fontes, terreno e props editáveis; nenhuma regra nova.",
+  "nota": "Estudo visual; Claude valida mobilidade, colisao, spawns e linhas de visao.",
+  "visualReview": "approved_codex_after_deepseek_final_review",
+  "technicalReview": "passed_verificacao.json",
+  "reviewFiles": [
+    "revisao-codex.md",
+    "revisao-deepseek-v1.relatorio.json",
+    "revisao-deepseek-final.relatorio.json",
+    "verificacao.json"
+  ],
+  "revision": 2,
+  "previousRevision": "fontes/vulcao-v1-antes-da-revisao.zip",
+  "previousRevisionSha256": "a6ae6b6c01c752199341a4ea748b65828ee6ce3573b29c9891ff57011c71a85c",
+  "productionCompletedDate": "2026-10-11"
+}

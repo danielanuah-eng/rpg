@@ -1,0 +1,133 @@
+{
+  "resumo": "Revisão somente leitura do estudo vulcao-passarela-em-s (lote 03). As quatro prévias (1000x750) mostram o tabuleiro inteiro, opaco, com câmeras nos quatro cantos (90° entre si), texturas presentes (xadrez do piso + moldura de espirais), loja no centro sobre quatro casas centrais de nível 1, e lava só declarada como visual (nenhum objeto/regra de lava no script). Achei três problemas concretos: (1) no layout 12 o nível 2 são 4 casas isoladas em dois pares diagonais não adjacentes, não dois trechos contíguos; (2) duas árvores ficam plantadas em cima da passarela de nível 1 (casas (2,2) e (9,9)); (3) a passarela é larga (até 3 casas) e baixa (0,45), o que enfraquece a leitura do S, sobretudo nas vistas 1 e 3. Como o tabuleiro é simétrico por 180°, as vistas 1 e 3 (e 2 e 4) ficam praticamente iguais. Não editei nada. Não avaliei integração/jogabilidade.",
+  "achados": [
+    {
+      "afirmacao": "As quatro prévias existem, medem 1000x750 e são opacas: alfa 255 nos quatro cantos medidos; o script desliga a transparência, então não há recorte de fundo.",
+      "ok": true,
+      "arquivo": "construir.py",
+      "linha": 67,
+      "trecho": "scene.render.film_transparent=False",
+      "imagem": "previews/vulcao-passarela-em-s-jogador-1.png (medida: 1000x750, alfa 255,255,255,255)"
+    },
+    {
+      "afirmacao": "As quatro câmeras ficam nos quatro cantos, a 90 graus entre si em torno do eixo vertical do centro do tabuleiro; declarado também no manifesto (camerasBlender, cameraLocalPorJogador).",
+      "ok": true,
+      "arquivo": "construir.py",
+      "linha": 8,
+      "trecho": "CAMERAS=[(19,19,19),(-19,19,19),(-19,-19,19),(19,-19,19)]"
+    },
+    {
+      "afirmacao": "Nas quatro imagens o tabuleiro completo aparece inteiro, sem corte: piso em xadrez, moldura com espirais laranja, loja, 2 caixas, 2 arbustos, 4 árvores e a banda elevada, todos dentro do quadro.",
+      "ok": true,
+      "imagem": "previews/vulcao-passarela-em-s-jogador-1.png, -2.png, -3.png, -4.png"
+    },
+    {
+      "afirmacao": "A loja escura está no centro do tabuleiro nas quatro vistas, instanciada no pivô (0,0,0.5) do kit.",
+      "ok": true,
+      "arquivo": "construir.py",
+      "linha": 63,
+      "trecho": "inst(originals['loja_mascate'],demo,(0,0,.5))",
+      "imagem": "previews/vulcao-passarela-em-s-jogador-1.png"
+    },
+    {
+      "afirmacao": "As quatro casas centrais são forçadas a nível 1 na geração (e no layout 12 também já são 1 nas linhas 83, 84, 97 e 98), coerente com centro preservado.",
+      "ok": true,
+      "arquivo": "construir.py",
+      "linha": 27,
+      "trecho": "if x in (n//2-1,n//2) and y in (n//2-1,n//2): level=1"
+    },
+    {
+      "afirmacao": "Texturas do kit estão empacotadas (o script empacota toda imagem de arquivo) e aparecem nas prévias: xadrez de duas casas alternadas e moldura de espirais.",
+      "ok": true,
+      "arquivo": "construir.py",
+      "linha": 76,
+      "trecho": "if im.source=='FILE' and not im.packed_file: im.pack()",
+      "imagem": "previews/vulcao-passarela-em-s-jogador-3.png"
+    },
+    {
+      "afirmacao": "Lava é apenas visual existente: o script não instancia nenhum objeto nem cria regra de lava, só grava a string no layout.",
+      "ok": true,
+      "arquivo": "construir.py",
+      "linha": 36,
+      "trecho": "'lava':'somente_visual_do_kit_existente_sem_dano_ou_regra_nova',"
+    },
+    {
+      "afirmacao": "Fonte e prévias são 12x12 (constrói só layout(12) e renderiza); os layouts 16 e 18 são apenas gravados como JSON, sem montagem no Blender por estes arquivos.",
+      "ok": true,
+      "arquivo": "construir.py",
+      "linha": 55,
+      "trecho": "data=layout(12); inst(originals['entorno'],demo,(0,0,0))"
+    },
+    {
+      "afirmacao": "Problema: no layout 12 o nível 2 são 4 casas isoladas, em dois pares diagonais NÃO adjacentes: (3,2) linha 39, (4,4) linha 68, (7,7) linha 113 e (8,9) linha 141; não forma dois trechos contíguos, aparece como 4 blocos altos soltos ao longo do S.",
+      "ok": false,
+      "arquivo": "layouts/vulcao-passarela-em-s-12.json",
+      "linha": 39,
+      "trecho": "2"
+    },
+    {
+      "afirmacao": "Comparação: no layout 16 o nível 2 chega a formar par adjacente (5,4) linha 85 e (5,5) linha 103, e no 18 forma par de 2 casas lado a lado (5,5) linha 113 e (6,5) linha 114; só o 12 fica fragmentado.",
+      "ok": false,
+      "arquivo": "layouts/vulcao-passarela-em-s-16.json",
+      "linha": 85,
+      "trecho": "2"
+    },
+    {
+      "afirmacao": "Problema: a árvore de (2,2) fica plantada em cima da passarela, porque a casa (2,2) tem altura 1 no layout 12 e o script coloca o prop no topo da casa (z = altura*0,45+0,05).",
+      "ok": false,
+      "arquivo": "layouts/vulcao-passarela-em-s-12.json",
+      "linha": 38,
+      "trecho": "1"
+    },
+    {
+      "afirmacao": "Problema: a árvore de (9,9) também fica em cima da passarela, pois a casa (9,9) tem altura 1 no layout 12.",
+      "ok": false,
+      "arquivo": "layouts/vulcao-passarela-em-s-12.json",
+      "linha": 142,
+      "trecho": "1"
+    },
+    {
+      "afirmacao": "O prop é posto exatamente na altura da casa, o que confirma as duas árvores sobre a banda elevada.",
+      "ok": true,
+      "arquivo": "construir.py",
+      "linha": 62,
+      "trecho": "x,y=p['casa']; inst(originals[p['peca']],demo,(x-5.5,y-5.5,data['alturas'][y][x]*.45+.05),math.radians(p['rotacaoGraus']))"
+    },
+    {
+      "afirmacao": "A banda de basalto em S vem de uma senoide e vai de borda a borda; a altura da casa (3,2)=2 (linha 39) é igual à da casa oposta (8,9)=2 (linha 141), ou seja o S tem simetria de 180 graus, como esperado.",
+      "ok": true,
+      "arquivo": "construir.py",
+      "linha": 24,
+      "trecho": "distance=abs(u-(5.5+2.5*math.sin((v-5.5)*math.pi/8)))"
+    },
+    {
+      "afirmacao": "Atenção: a passarela é larga, até 3 casas (y=1: x=2,3,4 nas linhas 24-26; y=10: x=7,8,9 nas linhas 155-157), e a altura é só 0,45 (alturaPorNivel) com o topo usando a mesma textura do piso; isso enfraquece a leitura do S nas vistas 1 e 3, onde ela lê como pilha de blocos e não como passarela.",
+      "ok": false,
+      "arquivo": "construir.py",
+      "linha": 25,
+      "trecho": "level=1 if distance<=1.05 else 0",
+      "imagem": "previews/vulcao-passarela-em-s-jogador-1.png e -3.png"
+    },
+    {
+      "afirmacao": "As props vêm em pares opostos por 180 graus (arvore (2,2) linha 180 e (9,9) linha 189, 2+9=11 nas duas coordenadas), então as vistas 1 e 3 saem praticamente iguais e as 2 e 4 também; as quatro prévias mostram só duas composições distintas.",
+      "ok": true,
+      "arquivo": "layouts/vulcao-passarela-em-s-12.json",
+      "linha": 180,
+      "trecho": "2"
+    },
+    {
+      "afirmacao": "Possível artefato: em todas as quatro prévias há uma linha clara reta sobre o piso formando um V ao longo de duas bordas; aparece igual nas quatro, mas não dá para dizer pelo PNG se é guia/trilho do kit ou emenda de geometria.",
+      "ok": false,
+      "imagem": "previews/vulcao-passarela-em-s-jogador-2.png e -4.png"
+    }
+  ],
+  "pendencias": [
+    "? Não consegui recomputar os sha256 do manifesto (não há comando de hash liberado); a conferência de hashes ficou só no verificar.py (linha 11).",
+    "? Não abri o .blend (sem Blender liberado) e também não pude listar fora da pasta da entrega: não conferi as 144 casas, o empacotamento real das texturas nem sobreposição/z-fighting.",
+    "? A cerca/guarda-corpo do kit aparece nítida nas prévias 1, 2 e 4 e eu não a identifiquei na prévia 3 (o lado voltado para a câmera fica na sombra do sol em (-6,-7,12)); não confirmei se é só iluminação ou peça ausente.",
+    "? De qual peça vem a lava não dá para saber pelo script: nenhum objeto de lava é instanciado, só a string declarada; nas prévias vejo só pequenos pontos laranja soltos no piso.",
+    "? Alguns desses pontos claros pequenos parecem um pouco acima do piso (ex.: prévia 1 por volta de x=525,y=205; prévia 4 por volta de x=390,y=228); não confirmei se estão no piso ou flutuando.",
+    "? Leitura do S é julgamento visual meu nas imagens estáticas; não medi relevo nem comparei pixel a pixel entre vistas.",
+    "? Fora do escopo, não avaliei: mobilidade, colisão, spawns, linhas de visão, integração no Unity e jogabilidade."
+  ]
+}

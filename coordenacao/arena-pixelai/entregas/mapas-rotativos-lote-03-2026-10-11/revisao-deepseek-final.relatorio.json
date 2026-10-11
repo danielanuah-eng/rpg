@@ -1,0 +1,83 @@
+{
+  "resumo": "Uma única leitura de previews/quatro-perspectivas.png (1400x1100, transparência=false, medida pela ferramenta) e leitura de verificacao.json e manifesto.json. Os quatro painéis (Jogador 1 a 4) mostram o mesmo tabuleiro inteiro, com as quatro bordas rochosas e margens de sobra; 1 e 3 assim como 2 e 4 se parecem por rotação de 180 graus, o que o JSON confirma (terrainSymmetric180=true em 12/16/18). A passarela em S com dois patamares claros e o recuo da loja central se leem bem, não há árvore em cima do piso elevado, as faixas de casa aparecem espelhadas e a iluminação está clara o bastante para ler o percurso. A linha clara em V e os pequenos pontos quentes aparecem deitados no chão/ao longo das bordas, sem geometria nova em pé, coerentes com o entorno original. Itens de integração/jogabilidade ficam como pendência do Claude, fora do escopo.",
+  "achados": [
+    {
+      "afirmacao": "A imagem é uma montagem única com quatro painéis rotulados Jogador 1, 2, 3 e 4, e não tem transparência (dado medido, não visual).",
+      "imagem": "previews/quatro-perspectivas.png",
+      "ok": true
+    },
+    {
+      "afirmacao": "As quatro vistas mostram o mesmo tabuleiro inteiro: as quatro bordas rochosas aparecem completas e com sobra de margem em todos os painéis.",
+      "arquivo": "verificacao.json",
+      "linha": 104,
+      "trecho": "  \"sameBoardFourViews\": true,",
+      "imagem": "previews/quatro-perspectivas.png",
+      "ok": true
+    },
+    {
+      "afirmacao": "O enquadramento fecha o tabuleiro dentro do quadro nas quatro câmeras, com folga (x de ~0.186 a ~0.814 e y de ~0.245 a ~0.744), e as quatro medidas são praticamente idênticas, o que sustenta o mesmo enquadramento nas quatro vistas.",
+      "arquivo": "verificacao.json",
+      "linha": 54,
+      "trecho": "      \"projectedBounds\": [\n        0.18573029339313507,\n        0.24526497721672058,\n        0.8142696022987366,\n        0.7435576319694519\n      ]",
+      "imagem": "previews/quatro-perspectivas.png",
+      "ok": true
+    },
+    {
+      "afirmacao": "Vistas opostas semelhantes são simetria intencional: no PNG os painéis 1 e 3 se parecem, assim como 2 e 4, e o JSON marca terreno simétrico em 180 graus para todas as dimensões.",
+      "arquivo": "verificacao.json",
+      "linha": 14,
+      "trecho": "      \"terrainSymmetric180\": true,",
+      "imagem": "previews/quatro-perspectivas.png",
+      "ok": true
+    },
+    {
+      "afirmacao": "Existem dois patamares elevados contíguos e ligados por degrau de um nível; no PNG eles aparecem como o piso elevado escuro em S, com a loja central recuando sobre ele, ora à esquerda do centro (1 e 3), ora à direita (2 e 4), junto de blocos/caixas no piso alto.",
+      "arquivo": "verificacao.json",
+      "linha": 8,
+      "trecho": "      \"connectedHighPlatforms\": [\n        4,\n        4\n      ],",
+      "imagem": "previews/quatro-perspectivas.png",
+      "ok": true
+    },
+    {
+      "afirmacao": "Na dimensão 18 os dois patamares contíguos são maiores (6 e 6), mantendo o mesmo desenho de percurso.",
+      "arquivo": "verificacao.json",
+      "linha": 34,
+      "trecho": "      \"connectedHighPlatforms\": [\n        6,\n        6\n      ],",
+      "ok": true
+    },
+    {
+      "afirmacao": "Props e árvores ficam no chão baixo, fora do piso elevado: no PNG as árvores mortas e as caixas estão em manchas planas, nenhuma em cima do patamar, e o JSON confirma props no terreno baixo e zona central livre.",
+      "arquivo": "verificacao.json",
+      "linha": 7,
+      "trecho": "      \"propsOnLowGround\": true,\n      \"connectedHighPlatforms\": [",
+      "imagem": "previews/quatro-perspectivas.png",
+      "ok": true
+    },
+    {
+      "afirmacao": "A zona central está livre e o caminho é legível nas quatro vistas, sem área escura que impeça ler o percurso.",
+      "arquivo": "verificacao.json",
+      "linha": 13,
+      "trecho": "      \"centralZoneClear\": true,",
+      "imagem": "previews/quatro-perspectivas.png",
+      "ok": true
+    },
+    {
+      "afirmacao": "A linha clara em V e os pequenos motivos quentes aparecem deitados no terreno e nas bordas do tabuleiro (traço fino no chão e pontos minúsculos), sem geometria nova em pé, coerente com o entorno original e não com props novos.",
+      "imagem": "previews/quatro-perspectivas.png",
+      "ok": true
+    },
+    {
+      "afirmacao": "Não há divergência entre previews declarados e medidos: os quatro PNGs de jogador são os listados no manifesto e o conjunto é marcado como aprovado (passed=true).",
+      "arquivo": "verificacao.json",
+      "linha": 2,
+      "trecho": "  \"passed\": true,",
+      "ok": true
+    }
+  ],
+  "pendencias": [
+    "mapaJogavelValidado=false nos três layouts e integracao=pendente_claude; validação real de regras, colisão, spawns e alcance dos patamares fica fora desta revisão (verificacao.json, linhas 15, 28, 41, 105).",
+    "A leitura do percurso feita aqui é visual e estática: não medi alturas nem alcance. Nível 2 dos patamares vem do JSON (connectedHighPlatforms 4/4 e 6/6), não de medição própria.",
+    "Não reabri as fontes .blend nem os previews individuais jogador-1..4 (por instrução), então não confirmei origem/hash dos materiais e das marcas quentes; apenas constatei que não formam props em pé.",
+    "A contagem exata de props por vista (uniqueProps 8) não foi conferida item a item no PNG, só a distribuição no chão baixo."
+  ]
+}

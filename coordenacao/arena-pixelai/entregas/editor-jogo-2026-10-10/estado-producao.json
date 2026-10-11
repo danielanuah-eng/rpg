@@ -16,7 +16,16 @@
     "suplemento": "../edgar-norte-2026-10-10/suplemento-transformacao-norte/manifesto.json",
     "transformationNEGroup": "ff56fd4f-3054-42af-a54a-7c68df8f6286",
     "nativeSupplementImageId": "5997daa1-bb65-4d3d-be33-cf10a3a1ed80",
-    "latestMonitoredBundle": "../edgar-norte-2026-10-10/suplemento-transformacao-norte/edgar-depois-suplemento.zip"
+    "latestMonitoredBundle": "../edgar-norte-2026-10-10/suplemento-transformacao-norte/edgar-depois-suplemento.zip",
+    "integracao": "pendente_importacao_confirmada_claude_013",
+    "monitoramentoAtual": {
+      "data": "2026-10-11",
+      "normalGroups": 5,
+      "normalClips": 15,
+      "ghostGroups": 1,
+      "ghostClips": 3,
+      "newGroupsOrDirections": false
+    }
   },
   "baltazar": {
     "characterId": "e6148923-ecab-4e29-8da1-6d52cd46c535",
@@ -49,7 +58,7 @@
     "demonImageJob": "71c0dc73-8640-457e-9de0-b4c8b7ef9162",
     "angelHoverJob": "c9d02e54-2403-4c7f-b541-bac5002ccfde",
     "demonHoverJob": "7b7eb063-4b50-4c00-8ca2-832752db06fd",
-    "proximo": "Aguardar integracao Claude; nao gerar novamente. Seguir para novos mapas/props quando nao houver comandos do autor.",
+    "proximo": "Conferir SHA importado, especialmente ataque SE; arte concluída, sem gerar novamente. Seguir pequenos lotes de mapas/props se não houver comandos.",
     "idleDirectionsRequested": [
       "south",
       "south-east",
@@ -65,27 +74,47 @@
     "estado": "arte_concluida_32_clips_160_quadros_mais_10_companheiros",
     "review": "../baltazar-2026-10-10/revisao-codex.md",
     "nativeAssemblyImageId": "9dcb620d-bf89-46ed-9795-abe52408a484",
-    "integracao": "importado_claude; ficha_aura_editor implementados; numeros provisorios"
+    "integracao": "importado_claude; ficha_aura_editor implementados; numeros provisorios",
+    "monitoramentoAtual": {
+      "data": "2026-10-11",
+      "groups": 4,
+      "clips": 25,
+      "newGroupsOrDirections": false
+    }
   },
   "mapas": {
     "entregues": [
       "bosque-quatro-patios",
       "pedreira-anel-partido",
       "neve-bastioes-diagonais",
-      "deserto-galerias-deslocadas"
+      "deserto-galerias-deslocadas",
+      "vulcao-passarela-em-s"
     ],
     "props": [
       "relicario_solar",
       "barricada_partida"
     ],
     "manifesto": "../mapas-rotativos-2026-10-10/manifesto.json",
-    "proximosTemas": [
-      "vulcao"
-    ],
-    "proximo": "Novo desenho no vulcao, distinto dos quatro entregues; conferir respostas Claude e assets/jobs existentes antes de produzir.",
+    "proximosTemas": [],
+    "proximo": "Conferir comandos e respostas Claude. Próximo lote pequeno: um prop decorativo editável para os cinco temas existentes, com ID novo e sem nova regra.",
     "manifestos": [
       "../mapas-rotativos-2026-10-10/manifesto.json",
-      "../mapas-rotativos-lote-02-2026-10-10/manifesto.json"
+      "../mapas-rotativos-lote-02-2026-10-10/manifesto.json",
+      "../mapas-rotativos-lote-03-2026-10-11/manifesto.json"
+    ],
+    "confirmadosClaude": [
+      "bosque-quatro-patios",
+      "pedreira-anel-partido",
+      "neve-bastioes-diagonais"
+    ],
+    "propsConfirmadosClaude": [
+      "relicario_solar",
+      "barricada_partida"
+    ],
+    "validacaoReportada": "nove layouts jogaveis segundo Claude; versao por SHA ainda nao discriminada na resposta",
+    "integracaoPendente": [
+      "deserto-galerias-deslocadas",
+      "vulcao-passarela-em-s"
     ]
   },
   "editor": {
@@ -101,14 +130,16 @@
     "implementado": [
       "edicao de fichas e skills",
       "edicao de mapas",
-      "persistencia e configuracao do host"
+      "persistencia e configuracao do host",
+      "camera local em quatro vistas, Q/E e botao Girar",
+      "props e modelos no editor de mapas"
     ],
     "pendente": [
       "catalogo e previews de assets",
-      "camera local rotativa",
-      "props decorativos"
+      "oclusao das arvores diante dos lutadores"
     ],
-    "resposta": "../../respostas/012-claude-editor-baltazar.md"
+    "resposta": "../../respostas/012-claude-editor-baltazar.md",
+    "respostaCameraProps": "../../respostas/013-claude-edgar-mapas-rotativos.md"
   },
   "etapasPosteriores": {
     "requeremFinalizacaoArena": true,
@@ -117,10 +148,16 @@
     "naoMudarCriticoArmaduraArena": true
   },
   "ultimoLote": {
-    "id": "edgar-norte-suplemento-e-deserto-galerias-deslocadas",
+    "id": "vulcao-passarela-em-s",
     "estado": "arte_concluida_integracao_pendente",
-    "nota": "../../notas/2026-10-10_retomada-edgar-deserto.codex.md",
-    "dataConclusao": "2026-10-11",
-    "verificacoes": "correcao Edgard por replay RGBA; 12 layouts, zona central, texturas e quatro cameras; revisao visual Codex e DeepSeek"
-  }
+    "nota": "../../notas/2026-10-11_vulcao-passarela-e-confirmacoes.codex.md",
+    "data": "2026-10-11",
+    "generation": "Blender com kit existente; nenhum novo job PixelLab",
+    "verificacoes": "hashes, fonte, texturas, câmeras, 12/16/18 e revisão visual final Codex/DeepSeek aprovados; jogo e importação pendentes Claude",
+    "dataConclusao": "2026-10-11"
+  },
+  "respostasConfirmadas": [
+    "../../respostas/012-claude-editor-baltazar.md",
+    "../../respostas/013-claude-edgar-mapas-rotativos.md"
+  ]
 }

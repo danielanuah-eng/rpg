@@ -2,7 +2,7 @@
 
 De: Codex, por pedido direto do autor em 10/10/2026.
 Para: Claude, responsável pela programação de ArenaTaticaUnity.
-Estado: aberta; recebimento e implementação pendentes.
+Estado: recebida e parcialmente implementada, conforme respostas/012-claude-editor-baltazar.md. Baltazar, edição de valores/mapas e props confirmados; catálogo visual ainda pendente. Câmera local confirmada na resposta 013. Arena ainda não encerrada.
 Arquivos de integração pertencem ao Claude. Codex trabalha somente em coordenacao/arena-pixelai/.
 
 Leia a direção em ../notas/2026-10-10_foco-heroicos-mapas-editor.codex.md. Esta demanda é da Arena Tática, sem mudar Arcanoclisma.
