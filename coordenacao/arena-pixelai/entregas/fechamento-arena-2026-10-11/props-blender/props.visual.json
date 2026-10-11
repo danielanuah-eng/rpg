@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "project": "Arena Tatica",
+  "generationCostPixelLab": 0,
+  "status": "lote_tecnico_pronto; aguardando_avaliacao_astra",
+  "source": "fontes/props-cinco-temas.blend",
+  "producer": "construir.py",
+  "assets": [
+    {
+      "id": "estandarte_da_clareira",
+      "theme": "bosque",
+      "file": "modelos/estandarte_da_clareira.glb",
+      "sha256": "7e7429001ae518dc6dd9c68ec0f9273e040cc72122c636d83be74c79ad5180b5",
+      "trianglesSource": 144,
+      "bboxAllFramesBlender": [
+        [
+          -0.25602614879608154,
+          -0.20000000298023224,
+          0.0
+        ],
+        [
+          0.304999977350235,
+          0.20000000298023224,
+          1.5199999809265137
+        ]
+      ],
+      "pivotBlender": [
+        0,
+        0,
+        0
+      ],
+      "axes": "Blender Z-up; GLB Y-up",
+      "unitMeters": 1,
+      "collision": "decoracao; nao aplicar regra de obstaculo sem Claude",
+      "loop": {
+        "name": "AmbientLoop",
+        "fps": 24,
+        "frames": [
+          1,
+          49
+        ],
+        "durationSeconds": 2,
+        "gltf": true
+      },
+      "note": "pano segmentado; movimento suave junto a haste fixa",
+      "integration": "pendente_claude",
+      "visualReview": "revisado_sol; aguardando_avaliacao_astra",
+      "technicalValidation": "passed"
+    },
+    {
+      "id": "braseiro_de_obsidiana",
+      "theme": "vulcao",
+      "file": "modelos/braseiro_de_obsidiana.glb",
+      "sha256": "9a17f0130dacb2bc448d3f7d9960a195e582b0a6607223823f6b53f4122d39cc",
+      "trianglesSource": 188,
+      "bboxAllFramesBlender": [
+        [
+          -0.3499999940395355,
+          -0.3400000035762787,
+          0.0
+        ],
+        [
+          0.3499999940395355,
+          0.3400000035762787,
+          1.2000694274902344
+        ]
+      ],
+      "pivotBlender": [
+        0,
+        0,
+        0
+      ],
+      "axes": "Blender Z-up; GLB Y-up",
+      "unitMeters": 1,
+      "collision": "decoracao; nao aplicar regra de obstaculo sem Claude",
+      "loop": {
+        "name": "AmbientLoop",
+        "fps": 24,
+        "frames": [
+          1,
+          49
+        ],
+        "durationSeconds": 2,
+        "gltf": true
+      },
+      "note": "tres chamas facetadas com variacao de volume; socket opcional fx_fumaca",
+      "integration": "pendente_claude",
+      "visualReview": "revisado_sol; aguardando_avaliacao_astra",
+      "technicalValidation": "passed"
+    },
+    {
+      "id": "fonte_de_geada",
+      "theme": "gelo",
+      "file": "modelos/fonte_de_geada.glb",
+      "sha256": "02d8198b46313bc3028ed822ad4fc59c12606fb68249410f807f9ec589354ae6",
+      "trianglesSource": 240,
+      "bboxAllFramesBlender": [
+        [
+          -0.4300000071525574,
+          -0.4300000071525574,
+          0.0
+        ],
+        [
+          0.4300000071525574,
+          0.4300000071525574,
+          0.9700000286102295
+        ]
+      ],
+      "pivotBlender": [
+        0,
+        0,
+        0
+      ],
+      "axes": "Blender Z-up; GLB Y-up",
+      "unitMeters": 1,
+      "collision": "decoracao; nao aplicar regra de obstaculo sem Claude",
+      "loop": {
+        "name": "AmbientLoop",
+        "fps": 24,
+        "frames": [
+          1,
+          49
+        ],
+        "durationSeconds": 2,
+        "gltf": true
+      },
+      "note": "quatro gotas em ciclos defasados; coroa gira discretamente",
+      "integration": "pendente_claude",
+      "visualReview": "revisado_sol; aguardando_avaliacao_astra",
+      "technicalValidation": "passed"
+    },
+    {
+      "id": "cata_vento_solar",
+      "theme": "deserto",
+      "file": "modelos/cata_vento_solar.glb",
+      "sha256": "c258dbbd192b4ea40cfa6cfaeebac5ee88f2d0da2f78b63f36f9337fc3a5c87e",
+      "trianglesSource": 188,
+      "bboxAllFramesBlender": [
+        [
+          -0.3514176905155182,
+          -0.3514176905155182,
+          0.0
+        ],
+        [
+          0.3514176905155182,
+          0.3514176905155182,
+          1.1699999570846558
+        ]
+      ],
+      "pivotBlender": [
+        0,
+        0,
+        0
+      ],
+      "axes": "Blender Z-up; GLB Y-up",
+      "unitMeters": 1,
+      "collision": "decoracao; nao aplicar regra de obstaculo sem Claude",
+      "loop": {
+        "name": "AmbientLoop",
+        "fps": 24,
+        "frames": [
+          1,
+          49
+        ],
+        "durationSeconds": 2,
+        "gltf": true
+      },
+      "note": "rotor faz uma volta completa; base fixa",
+      "integration": "pendente_claude",
+      "visualReview": "revisado_sol; aguardando_avaliacao_astra",
+      "technicalValidation": "passed"
+    },
+    {
+      "id": "ampulheta_das_ruinas",
+      "theme": "ruinas",
+      "file": "modelos/ampulheta_das_ruinas.glb",
+      "sha256": "c11c4ee2fd021846c5aba3011a31b4116237b12ba682b0de8195594be85332ed",
+      "trianglesSource": 288,
+      "bboxAllFramesBlender": [
+        [
+          -0.3400000035762787,
+          -0.3400000035762787,
+          0.0
+        ],
+        [
+          0.3400000035762787,
+          0.3400000035762787,
+          1.1800000667572021
+        ]
+      ],
+      "pivotBlender": [
+        0,
+        0,
+        0
+      ],
+      "axes": "Blender Z-up; GLB Y-up",
+      "unitMeters": 1,
+      "collision": "decoracao; nao aplicar regra de obstaculo sem Claude",
+      "loop": {
+        "name": "AmbientLoop",
+        "fps": 24,
+        "frames": [
+          1,
+          49
+        ],
+        "durationSeconds": 2,
+        "gltf": true
+      },
+      "note": "runa levita e graos luminosos oscilam dentro da estrutura",
+      "integration": "pendente_claude",
+      "visualReview": "revisado_sol; aguardando_avaliacao_astra",
+      "technicalValidation": "passed"
+    }
+  ]
+}

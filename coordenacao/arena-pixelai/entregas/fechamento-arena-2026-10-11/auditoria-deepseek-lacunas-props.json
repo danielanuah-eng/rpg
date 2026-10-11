@@ -1,0 +1,210 @@
+{
+  "resumo": "Li os arquivos do fechamento da arena (planos-restantes.json, auditoria-remota-inicial.json, planos-damian.json, planos.json), os registros/notas/respostas recentes da produção e as entregas Blender (mapa-blender/v02, v03, mapas-rotativos-2026-10-10, tarefas/011). Relatei as lacunas de animação distinguindo gerado, revisado, integrado e rejeitado, agrupei por direção (o north-west é a diagonal que mais falta; os três gatos novos não têm nenhum clipe), e resumi o estado do Blender: versão instalada registrada, scripts fonte reutilizáveis, estilo/paleta, props existentes e uma proposta de 4 props novos. Nada foi editado.",
+  "achados": [
+    {
+      "afirmacao": "planos-restantes.json é a lista autoritativa de clipes faltantes; cada plano marca 'completed' (direções já geradas), 'requested' (pedido ativo) e 'group_id' (null = nada gerado). Cabeçalho confirma a base.",
+      "arquivo": "entregas/fechamento-arena-2026-10-11/planos-restantes.json",
+      "linha": 2,
+      "trecho": "\"basis\": \"Auditoria remota PixelLab e tarefas 014/015/016; registros jobs são estado autoritativo\"",
+      "ok": true
+    },
+    {
+      "afirmacao": "auditoria-remota-inicial.json é um retrato remoto ANTERIOR às gerações, não prova de integração. Contém 'results' com resumos get_character por personagem.",
+      "arquivo": "entregas/fechamento-arena-2026-10-11/auditoria-remota-inicial.json",
+      "linha": 2,
+      "trecho": "\"status\": \"snapshot-inicial-antes-das-geracoes\"",
+      "ok": true
+    },
+    {
+      "afirmacao": "Gatos novos sem NENHUMA animação (remoto diz animations: none): em planos-restantes os 7 clipes de cada um têm completed vazio e group_id null = nada gerado.",
+      "arquivo": "entregas/fechamento-arena-2026-10-11/auditoria-remota-inicial.json",
+      "linha": 46,
+      "trecho": "\"name\": \"Raizor\",\n        \"id\": \"8c800a83-a911-4b28-a8f6-2c9dd2958887\",\n        \"isError\": false,\n        \"summary\": \"animations: none",
+      "ok": false
+    },
+    {
+      "afirmacao": "GatoBranco, GatoMalhado e GatoManchado: todos os 7 clipes (idle, walk, attack, hit, death, zap, spawn) estão por fazer; exemplo do GatoManchado zap com grupo nulo e completed vazio.",
+      "arquivo": "entregas/fechamento-arena-2026-10-11/planos-restantes.json",
+      "linha": 1465,
+      "trecho": "\"name\": \"zap\",",
+      "ok": false
+    },
+    {
+      "afirmacao": "raizor: idle, walk, attack, hit e death inteiramente por gerar (5 clipes, completed vazio).",
+      "arquivo": "entregas/fechamento-arena-2026-10-11/planos-restantes.json",
+      "linha": 652,
+      "trecho": "\"completed\": []",
+      "ok": false
+    },
+    {
+      "afirmacao": "Colosso: steal-reach, steal-slam, steal-cast e stomp (4 clipes, prioridade 1) sem direção alguma gerada.",
+      "arquivo": "entregas/fechamento-arena-2026-10-11/planos-restantes.json",
+      "linha": 199,
+      "trecho": "\"completed\": []",
+      "ok": false
+    },
+    {
+      "afirmacao": "edgar: ghost-attack, hit, death e ghost-idle por gerar; edgar-ultship tem só SW e SE, falta NE e NW.",
+      "arquivo": "entregas/fechamento-arena-2026-10-11/planos-restantes.json",
+      "linha": 398,
+      "trecho": "\"completed\": [\n        \"south-west\",\n        \"south-east\"\n      ],",
+      "ok": false
+    },
+    {
+      "afirmacao": "A diagonal que mais falta é north-west: Colosso-idle/walk/attack prontos só em NE, SW, SE e missing NW (idle exemplo).",
+      "arquivo": "entregas/fechamento-arena-2026-10-11/planos-restantes.json",
+      "linha": 62,
+      "trecho": "\"completed\": [\n        \"north-east\",\n        \"south-west\",\n        \"south-east\"\n      ],",
+      "ok": false
+    },
+    {
+      "afirmacao": "Tamém falta NW em DomadorCorrentes-idle (feitos SW, NE, SE) e em TotemCura-death (feitos SE, NE, SW).",
+      "arquivo": "entregas/fechamento-arena-2026-10-11/planos-restantes.json",
+      "linha": 899,
+      "trecho": "\"completed\": [\n        \"south-east\",\n        \"north-east\",\n        \"south-west\"\n      ]",
+      "ok": false
+    },
+    {
+      "afirmacao": "Falta NW em gryvro-takeoff (feitos NE, SW, SE), edgar-transform-ghost (NE, SW, SE) e edgar-ghost-walk (NE, SW, SE).",
+      "arquivo": "entregas/fechamento-arena-2026-10-11/planos-restantes.json",
+      "linha": 368,
+      "trecho": "\"completed\": [\n        \"north-east\",\n        \"south-west\",\n        \"south-east\"\n      ]",
+      "ok": false
+    },
+    {
+      "afirmacao": "Padrões de direção parcial: gryvro-walk só tem SE (faltam SW, NE, NW); edgar-walk tem NW, SW, NE e falta só SE; Colosso-hit tem SW, SE e faltam NE e NW.",
+      "arquivo": "entregas/fechamento-arena-2026-10-11/planos-restantes.json",
+      "linha": 453,
+      "trecho": "\"completed\": [\n        \"south-east\"\n      ],",
+      "ok": false
+    },
+    {
+      "afirmacao": "REJEITADO (não é gerado válido): Colosso-idle teve template rejeitado por não haver rig, com motivo explícito 'use custom V3'.",
+      "arquivo": "entregas/fechamento-arena-2026-10-11/planos-restantes.json",
+      "linha": 72,
+      "trecho": "\"reason_override\": \"Native custom Pro Flash character has no rig/template animations; use custom V3.\"",
+      "ok": false
+    },
+    {
+      "afirmacao": "REJEITADO: candidatos Damian v2-v5 reprovados; v6 aprovado visualmente apenas como candidato, não integrado. Nenhum Damian importado.",
+      "arquivo": "respostas/015-codex.md",
+      "linha": 45,
+      "trecho": "Não importar v2/v3/v4/v5 reprovadas. Não antepor Idle à v6 nem reamostrar seus nove quadros.",
+      "ok": false
+    },
+    {
+      "afirmacao": "REJEITADO na prática: canhão idle v1 do Damian reprovado (16 clipes/80 quadros) apesar do manifesto técnico dizer pendente_revisao_e_integracao. Não confundir com revisado.",
+      "arquivo": "notas/2026-10-11_monitor-passagem-016-e-damian-1304.codex.md",
+      "linha": 11,
+      "trecho": "Damian: v1 de idle-cannon/idle-hammer foi **REPROVADO**, com 16 clipes/80 quadros; não importar nem publicar como entrega aprovada, mesmo que o manifesto técnico genérico diga 'pendente_revisao_e_integracao'.",
+      "ok": false
+    },
+    {
+      "afirmacao": "GERADO mas pendente de revisão visual (não integrado): os quatro grupos do retomada json de Damian seams e GatoLaranja walk/attack.",
+      "arquivo": "entregas/retomada-codex-pixellab-2026-10-11.json",
+      "linha": 14,
+      "trecho": "\"status\": \"gerado; pendente revisao visual\"",
+      "ok": true
+    },
+    {
+      "afirmacao": "INTEGRADO no Unity (Claude, 11/10): importados ReiBobett, BrutamontesErrante, PrincipeKellen, OgroPedra, VespaCinzenta, ViuvaAgulha, PapaMoedas, DomadorCorrentes e GuardiaoMusgo.",
+      "arquivo": "tarefas/016-codex-animacoes-restantes.md",
+      "linha": 67,
+      "trecho": "Importados em `Resources/Sprites/`: ReiBobett, BrutamontesErrante, PrincipeKellen, OgroPedra, VespaCinzenta, ViuvaAgulha, PapaMoedas, DomadorCorrentes e GuardiaoMusgo.",
+      "ok": true
+    },
+    {
+      "afirmacao": "REVISADO não é o mesmo que GERADO: os 5 últimos (PrincipeKellen, OgroPedra, VespaCinzenta, ViuvaAgulha, PapaMoedas) têm exportação/manifesto, sem campo que prove aprovação visual; só ReiBobett e BrutamontesErrante têm revisão registrada (e o attack SE do Brutamontes precisa reconferência).",
+      "arquivo": "notas/2026-10-11_monitor-passagem-016-e-damian-1304.codex.md",
+      "linha": 13,
+      "trecho": "Os cinco novos manifestos de tiras (PrincipeKellen, OgroPedra, VespaCinzenta, ViuvaAgulha e PapaMoedas) comprovam exportação, sem campos que confirmem aprovação visual.",
+      "ok": false
+    },
+    {
+      "afirmacao": "Espelhos usados no lugar de direções reprovadas/ausentes: CheiroPneu death NE reprovado virou espelho do NW; Gryvro death SW reprovado virou SE espelhado; Alvyr hit NW ausente virou NE espelhado; Colosso NW = NE espelhado. São atalhos de direção, distintos de clipe gerado próprio.",
+      "arquivo": "respostas/016-codex.md",
+      "linha": 14,
+      "trecho": "Gryvro `death_south-west`: espelho do SE. O SW gerado foi reprovado porque o grifo não caía.",
+      "ok": true
+    },
+    {
+      "afirmacao": "Loja: 21 itens no catálogo, 10 ícones originais existem e 11 do pedido 015 faltam; os 21 loops são entrega separada para o Claude ligar à HUD (nada integrado).",
+      "arquivo": "entregas/personagens-novos-2026-10-10/auditoria-pendencias-resumo.md",
+      "linha": 1,
+      "trecho": "O catálogo atual tem 21 itens: os 10 ícones originais já existem e os 11 do pedido 015 faltam.",
+      "ok": false
+    },
+    {
+      "afirmacao": "Blender instalado registrado: Blender 5.2.2 LTS (hash d13f752e3b9c), instalado em C:\\Program Files\\Blender Foundation\\Blender 5.2\\. A tarefa 011 confirma 'Blender 5.2 instalado neste PC'.",
+      "arquivo": "entregas/mapa-blender/fontes/construcao.log",
+      "linha": 307,
+      "trecho": "Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)",
+      "ok": true
+    },
+    {
+      "afirmacao": "Scripts fonte reutilizáveis (Blender em background): piloto usar construir_bosque.py + validar_entrega.py; v02 construir_cenarios.py + validar_cenarios.py + contato_texturas.py + comparar_arvores.py + comparar_versoes.py + consolidar_entrega.py; v03 recompor_cenarios.py; lotes rotativos construir.py + verificar.py.",
+      "arquivo": "entregas/mapa-blender/v03/LEIA-ME-CLAUDE.md",
+      "linha": 32,
+      "trecho": "Blender 5.2.2: executar `--background --threads 6 --python-exit-code 1 --python fontes/recompor_cenarios.py -- --theme <tema>`, depois `fontes/validar_cenarios.py` com o mesmo argumento.",
+      "ok": true
+    },
+    {
+      "afirmacao": "Estilo/paleta: pixel art de 32 a 64 px por casa, na aba Map do PixelLab, sem suavização, paleta limitada; nada de textura fotográfica/PBR; 64 px por casa na v02. Sombra vem da luz do Unity, não pintada no piso.",
+      "arquivo": "tarefas/011-codex-mapa-blender.md",
+      "linha": 40,
+      "trecho": "**Texturas em pixel art** de 32 a 64 px por casa, feitas na **aba Map do PixelLab**: tiles de piso, faces laterais e casca/folhagem.",
+      "ok": true
+    },
+    {
+      "afirmacao": "PNG configurados como Point/Closest, Repeat, sem mipmaps no piloto; 40 PNGs opacos (alfa 1). Movimento por cor de vértice: canal R=0 na base e R=1 nas pontas; FBX usa primeira cor de vértice e GLB usa COLOR_1.",
+      "arquivo": "entregas/mapa-blender/LEIA-ME-CLAUDE.md",
+      "linha": 34,
+      "trecho": "**FBX: primeira cor de vértice, linear. GLB: COLOR_1**, pois COLOR_0 branco preserva a aparência nos leitores glTF comuns.",
+      "ok": true
+    },
+    {
+      "afirmacao": "Props existentes (v02, por tema): topo_a/topo_b/topo_zona, coluna_a/coluna_b, beira_reta/beira_canto, arbusto, arvore, arvore_jovem, caixa/caixa_rachada/caixa_quebrada, pedra, loja_mascate, pilar_galeao, totem_dominio, bau_fechado, moeda_chao, entorno/entorno_16/entorno_18 e os enfeites capim, cerca, cerca_canto, cogumelos, cristal, flores, fogueira, lago, pedra_baixa, placa, raiz_chao, seixos, tocha (deserto tem ainda arvore_palmeira).",
+      "arquivo": "entregas/mapa-blender/v02/manifesto.json",
+      "linha": 135,
+      "trecho": "\"totalPecasPorFormato\": 176,",
+      "ok": true
+    },
+    {
+      "afirmacao": "Props novos já feitos nos rotativos: relicario_solar (240 tris, emissivo) e barricada_partida (264 tris), pivô na base, decoração, entrega 'entregue' com integração 'pendente_claude' no manifesto (mas Claude já declarou importados).",
+      "arquivo": "entregas/mapas-rotativos-2026-10-10/LEIA-ME-CLAUDE.md",
+      "linha": 9,
+      "trecho": "Props novos: relicário solar (240 triângulos) e barricada partida (264 triângulos), ambos menores que uma casa e com pivô na base.",
+      "ok": true
+    },
+    {
+      "afirmacao": "Integração do kit Blender (Claude, 11/10): 176 GLB v02 + entornos v03 em Resources/Models/Mapa; os FBX não são usados. Ainda não integrados: shader de vento, água/lava emissivas, fogo/fumaça nos sockets fx_fogo/fx_fumaca, bau_fechado, pilar_galeao, totem_dominio e caixa_quebrada.",
+      "arquivo": "respostas/011-claude-integracao.md",
+      "linha": 25,
+      "trecho": "Shader de vento (a cor de vértice está no GLB, como COLOR_1).\n- Animação da água e da lava (`*_emissivo`).\n- Fogo e fumaça nos sockets `fx_fogo`/`fx_fumaca`.",
+      "ok": false
+    },
+    {
+      "afirmacao": "Mapas rotativos são estudos visuais, não mapas jogáveis aprovados: manifesto marca mapaJogavelValidado false e verificacao-layouts gamePlayValidated false; no Blender só prova conectividade abstrata, não regras do motor.",
+      "arquivo": "entregas/mapas-rotativos-2026-10-10/verificacao-layouts.json",
+      "linha": 77,
+      "trecho": "\"gameplayValidated\": false,",
+      "ok": false
+    },
+    {
+      "afirmacao": "PROPOSTA (não é fato; Codex decidirá), baseada nas pendências de loop (vento, água/lava emissiva, fogo e fumaça) e no padrão do kit 1 casa/pivô na base/≤3k tris: primeiro lote de 4 props NOVOS para as arenas — 1) enfeite_fonte com material *_emissivo (loop de água), 2) enfeite_braseiro menor que enfeite_fogueira com socket fx_fogo (loop de fogo), 3) enfeite_estandarte com cor de vértice vento R=1 na ponta (loop de bandeira), 4) enfeite_chamine com socket fx_fumaca (loop de fumaça). Os quatro reaproveitam os cinco temas atuais e os mesmos ganchos de shader já deixados por v02.",
+      "arquivo": "entregas/mapa-blender/LEIA-ME-CLAUDE.md",
+      "linha": 36,
+      "trecho": "`enfeite_tocha` e `enfeite_fogueira` têm socket **fx_fogo**; a loja tem **fx_fumaca**.",
+      "ok": true
+    }
+  ],
+  "pendencias": [
+    "Não abri ZIPs grandes (fonte.zip/fonte-v2.zip de damian-idles, vulcao-v1-antes-da-revisao.zip, *.game.zip) nem os renders PNG/JPG enormes; esses arquivos não foram avaliados visualmente.",
+    "auditoria-remota-inicial.json é snapshot anterior às gerações; não confirmei o estado remoto ATUAL (get_character agora), então 'completed' em planos-restantes pode estar desatualizado frente a esta rodada.",
+    "Não verifiquei o estado-pixellab-fila-claude.json nem o fila-para-claude.json a fundo (grandes); não sei se divergem de planos-restantes.json.",
+    "Não li o estado-pixellab nem o log completo progresso-claude (180 registros); conferi só início e fim. Pode haver clipes gerados depois do snapshot que já preenchem lacunas aqui listadas.",
+    "A proposta dos 4 props novos é minha sugestão, não uma decisão do autor nem do Codex; precisa de aprovação antes de gerar.",
+    "Não consegui garantir que planos-damian.json (damian-canhao/pistola) esteja refletido na auditoria remota: o id 20323703-7d5b não aparece no snapshot, então não sei se esses grupos já existem.",
+    "Não abri os .blend nem os .fbx/.glb para medir tris/ventana/emissivo; usei manifesto e LEIA-ME como prova, não reimportei os modelos."
+  ]
+}

@@ -1,0 +1,1263 @@
+{
+  "version": 1,
+  "project": "Arena Tatica",
+  "request": "2026-10-11; aviso central conforme evento do dado Cataclisma",
+  "method": "desenho original procedural local; sem PixelLab ou API de imagem",
+  "generationCost": 0,
+  "source": "ArenaTaticaUnity/Assets/ArenaTatica/Scripts/Core/Match.cs:797",
+  "trigger": {
+    "type": "cataclisma",
+    "idField": "info"
+  },
+  "integrationStatus": "pendente_claude",
+  "events": [
+    {
+      "id": "chuva-de-moedas",
+      "nome": "Chuva de moedas",
+      "frames": 12,
+      "frameSize": [
+        96,
+        96
+      ],
+      "layout": {
+        "columns": 4,
+        "rows": 3,
+        "order": "left-to-right, top-to-bottom"
+      },
+      "durationsMs": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "cycleMs": 1920,
+      "loop": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "presentation": {
+        "anchor": "screen-center",
+        "sampling": "Point",
+        "mipmaps": false,
+        "oneCycleOnCataclisma": true,
+        "suggestedLogicalSizePx": 192,
+        "staticForReducedMotion": "chuva-de-moedas/estatico.png"
+      },
+      "atlas": "chuva-de-moedas/atlas.png",
+      "preview": "chuva-de-moedas/preview.gif",
+      "files": [
+        {
+          "path": "chuva-de-moedas/00.png",
+          "sha256": "d62eee6c9dfd9bdd9733b75ae7a762ecd2243483e6ff488cd55b7e639a8b1a96"
+        },
+        {
+          "path": "chuva-de-moedas/01.png",
+          "sha256": "cf3b7994ff401f14a44466aa7cef31512344a64b0301eafa2f122e95fc6451de"
+        },
+        {
+          "path": "chuva-de-moedas/02.png",
+          "sha256": "b20a0ea844ee35cff5d3a1cdb8af1242d2c93f4feb182aff04b27215ae4bb6cf"
+        },
+        {
+          "path": "chuva-de-moedas/03.png",
+          "sha256": "273062013f7e4f2753f4993667722cbec47b552dde908c7746c89a084fff1105"
+        },
+        {
+          "path": "chuva-de-moedas/04.png",
+          "sha256": "d5b3566a9f9238444d9e08467b8ab545368f05c4ea8048ada74f70e15110b4b8"
+        },
+        {
+          "path": "chuva-de-moedas/05.png",
+          "sha256": "8c6c4758eeae0118e46003b5c7cc48d63e0475365fbc8c0686c27cd5accbaa42"
+        },
+        {
+          "path": "chuva-de-moedas/06.png",
+          "sha256": "6a028e491f14e5cd52b5a821b92687967a2cdad3c83cdb627ed0a8053c34fcd0"
+        },
+        {
+          "path": "chuva-de-moedas/07.png",
+          "sha256": "4f03fa49baea403f42194a454cd1879d1a60d3060189d161b4b0193b5f00a871"
+        },
+        {
+          "path": "chuva-de-moedas/08.png",
+          "sha256": "2f07e054f8739085dc9a3e4643b1211ce287174f426a81617c2f13ad006f14a8"
+        },
+        {
+          "path": "chuva-de-moedas/09.png",
+          "sha256": "4892b8c30d437bc15e117b51dc5d8ed0b8b38a1711859072c351b402f9e3ab75"
+        },
+        {
+          "path": "chuva-de-moedas/10.png",
+          "sha256": "06fb746eed8dd79e8da695ecb2eff3d98327f0c756b0fb35471aa721235c7014"
+        },
+        {
+          "path": "chuva-de-moedas/11.png",
+          "sha256": "3c6ddcf744333091a6c8f1b97345b856eb4d9c45cc7110a8555500a6d477b296"
+        },
+        {
+          "path": "chuva-de-moedas/atlas.png",
+          "sha256": "9d7f3774291ef29837da77ddf8977eaad6e4d2a1600f7270a7e07067ce38338f"
+        },
+        {
+          "path": "chuva-de-moedas/estatico.png",
+          "sha256": "d62eee6c9dfd9bdd9733b75ae7a762ecd2243483e6ff488cd55b7e639a8b1a96"
+        }
+      ],
+      "alpha": "binary; verified separately",
+      "integration": "pendente_claude"
+    },
+    {
+      "id": "queda-de-pedras",
+      "nome": "Queda de pedras",
+      "frames": 12,
+      "frameSize": [
+        96,
+        96
+      ],
+      "layout": {
+        "columns": 4,
+        "rows": 3,
+        "order": "left-to-right, top-to-bottom"
+      },
+      "durationsMs": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "cycleMs": 1920,
+      "loop": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "presentation": {
+        "anchor": "screen-center",
+        "sampling": "Point",
+        "mipmaps": false,
+        "oneCycleOnCataclisma": true,
+        "suggestedLogicalSizePx": 192,
+        "staticForReducedMotion": "queda-de-pedras/estatico.png"
+      },
+      "atlas": "queda-de-pedras/atlas.png",
+      "preview": "queda-de-pedras/preview.gif",
+      "files": [
+        {
+          "path": "queda-de-pedras/00.png",
+          "sha256": "92f23070478dfdb24f9448d9c25a740655c970f27c571d560462e34378a408b9"
+        },
+        {
+          "path": "queda-de-pedras/01.png",
+          "sha256": "b0ab3b7c052fe9758b2a9769aa1ea691c0bb4cb8ee66b8beea1cb95a26632ce7"
+        },
+        {
+          "path": "queda-de-pedras/02.png",
+          "sha256": "d5a56cc782aea57346bd0e305df437387f266b4c05ffdcc22319ffb92aa98c03"
+        },
+        {
+          "path": "queda-de-pedras/03.png",
+          "sha256": "6b6c1e72c572f11070a500497b756dbf50094c708aea04f407487904e7657082"
+        },
+        {
+          "path": "queda-de-pedras/04.png",
+          "sha256": "9fa21cca75490b924210a2031e50bc57b1bdeb43e8d2491684cda5dde6f78a4d"
+        },
+        {
+          "path": "queda-de-pedras/05.png",
+          "sha256": "d21cb57b46cbd1bb1434c69b5d9607f03c58d83a804fade243331e74b46b5b2c"
+        },
+        {
+          "path": "queda-de-pedras/06.png",
+          "sha256": "55e17ac88d0639b3daa18ec2207969dceb6f92f11da9cb222d5e7a6e37bdd34e"
+        },
+        {
+          "path": "queda-de-pedras/07.png",
+          "sha256": "90b451c73531cba9fd6cb8f3a467a5783aff5ef87de06a52d0aba512c23f7922"
+        },
+        {
+          "path": "queda-de-pedras/08.png",
+          "sha256": "72dd8d3751f47bc7308ce61043776c499a6a829c4c2f205fcd948d4f094bf084"
+        },
+        {
+          "path": "queda-de-pedras/09.png",
+          "sha256": "eaf1cbe6a2705b5a97207596132b080cf62afe24eece6f07e6eae15ed51b38a2"
+        },
+        {
+          "path": "queda-de-pedras/10.png",
+          "sha256": "9930651964dfecef3cea3b17a7fd8aeb35a4505fba1a57038f1389cde78b4c88"
+        },
+        {
+          "path": "queda-de-pedras/11.png",
+          "sha256": "80e10049dd06ec43d93831618d428b1f09e6c9104869399afc9a8293cb725d05"
+        },
+        {
+          "path": "queda-de-pedras/atlas.png",
+          "sha256": "213d6c85a89b5b2a267a6206ecbb1b391ce4683bbed4276b3f975c6c59a61c65"
+        },
+        {
+          "path": "queda-de-pedras/estatico.png",
+          "sha256": "92f23070478dfdb24f9448d9c25a740655c970f27c571d560462e34378a408b9"
+        }
+      ],
+      "alpha": "binary; verified separately",
+      "integration": "pendente_claude"
+    },
+    {
+      "id": "terremoto",
+      "nome": "Terremoto",
+      "frames": 12,
+      "frameSize": [
+        96,
+        96
+      ],
+      "layout": {
+        "columns": 4,
+        "rows": 3,
+        "order": "left-to-right, top-to-bottom"
+      },
+      "durationsMs": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "cycleMs": 1920,
+      "loop": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "presentation": {
+        "anchor": "screen-center",
+        "sampling": "Point",
+        "mipmaps": false,
+        "oneCycleOnCataclisma": true,
+        "suggestedLogicalSizePx": 192,
+        "staticForReducedMotion": "terremoto/estatico.png"
+      },
+      "atlas": "terremoto/atlas.png",
+      "preview": "terremoto/preview.gif",
+      "files": [
+        {
+          "path": "terremoto/00.png",
+          "sha256": "499bdc5b8d546007ce785f28a01edc0f9930930d74b4815ac6de644dbbfb5841"
+        },
+        {
+          "path": "terremoto/01.png",
+          "sha256": "53abee84beffcaabd8420547228ccd7fbef821ee30133566cbaa843ea09669e0"
+        },
+        {
+          "path": "terremoto/02.png",
+          "sha256": "196c2b6a65654f7b12385900fcf77fe0b82c2a6c4e2b277439c5f6ef24c8f086"
+        },
+        {
+          "path": "terremoto/03.png",
+          "sha256": "28a3c93f4ba48500e163cb3d79ea05b4c9eba4973dde1dc036ee690a2148c2ba"
+        },
+        {
+          "path": "terremoto/04.png",
+          "sha256": "2e5ab24405c9bb1b26a0406c9482e53d3b4c3908a3b6f00fef76eeecd5348d35"
+        },
+        {
+          "path": "terremoto/05.png",
+          "sha256": "3f4206e173abcb9dc27bc71377f7e4785f0b09bdb1a5245be419bf2565f0c1bb"
+        },
+        {
+          "path": "terremoto/06.png",
+          "sha256": "3d458c498b8571eef5db3a94b639876be38895192e1436d4223ab1bfc9628fff"
+        },
+        {
+          "path": "terremoto/07.png",
+          "sha256": "469f58789fd564a8d57c8e975b5794936cdf81c60a0bc947b64e3c4b27d21c8d"
+        },
+        {
+          "path": "terremoto/08.png",
+          "sha256": "aa3552da7fe31adb47e55c5158328bbc6aaa51ff3df9e58e7cf60d95155d0806"
+        },
+        {
+          "path": "terremoto/09.png",
+          "sha256": "e4f036ceb54252b44f0354dbc57c643928b302b70851e14008f0204134cba909"
+        },
+        {
+          "path": "terremoto/10.png",
+          "sha256": "b3634d9c65778cda96d94dc7879730d7d799af954a1c4bfa542bc8d2ca04925a"
+        },
+        {
+          "path": "terremoto/11.png",
+          "sha256": "d47ddca0e4dad5df9ad3f7cdb8221023efa56347c1c97a71d71e6c6146092a3a"
+        },
+        {
+          "path": "terremoto/atlas.png",
+          "sha256": "62b8dbc397e82883884f6ce238758c6a79efb7e461d2f0e418fea58c824a213f"
+        },
+        {
+          "path": "terremoto/estatico.png",
+          "sha256": "499bdc5b8d546007ce785f28a01edc0f9930930d74b4815ac6de644dbbfb5841"
+        }
+      ],
+      "alpha": "binary; verified separately",
+      "integration": "pendente_claude"
+    },
+    {
+      "id": "mare-de-lava",
+      "nome": "Mare de lava",
+      "frames": 12,
+      "frameSize": [
+        96,
+        96
+      ],
+      "layout": {
+        "columns": 4,
+        "rows": 3,
+        "order": "left-to-right, top-to-bottom"
+      },
+      "durationsMs": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "cycleMs": 1920,
+      "loop": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "presentation": {
+        "anchor": "screen-center",
+        "sampling": "Point",
+        "mipmaps": false,
+        "oneCycleOnCataclisma": true,
+        "suggestedLogicalSizePx": 192,
+        "staticForReducedMotion": "mare-de-lava/estatico.png"
+      },
+      "atlas": "mare-de-lava/atlas.png",
+      "preview": "mare-de-lava/preview.gif",
+      "files": [
+        {
+          "path": "mare-de-lava/00.png",
+          "sha256": "fc95c6fc28ff7e84e721535890e03f4efe104f4f8f80020732af476446351ea2"
+        },
+        {
+          "path": "mare-de-lava/01.png",
+          "sha256": "afc36868d8d3854d2c60633f8033817932c7c0c148285f7f8a9df54901b37ae5"
+        },
+        {
+          "path": "mare-de-lava/02.png",
+          "sha256": "f0d340b7c225c6fb969734dcb530d0a86b96022592fa5b96978edcfdbb4a217d"
+        },
+        {
+          "path": "mare-de-lava/03.png",
+          "sha256": "3e4b1395d7fb3148aabf5fd8b326a1acb6e06f3df9682480285db6bb4090439a"
+        },
+        {
+          "path": "mare-de-lava/04.png",
+          "sha256": "68363ab2bc996f128dfdaf89f7278294e6d1c726d5de9cf47d889f1459cedf54"
+        },
+        {
+          "path": "mare-de-lava/05.png",
+          "sha256": "24304519c3e23c02b41af1a097d09f78d613d8ff641d80a39a2397368861339e"
+        },
+        {
+          "path": "mare-de-lava/06.png",
+          "sha256": "40a21ca928c4747ed3e3a374b238d369e0102f23961c70ec2ec9548266739d60"
+        },
+        {
+          "path": "mare-de-lava/07.png",
+          "sha256": "8dbee2321ac5aa646612df34e4bc6e51f01da0ad42abacf813cdde95d8f2626f"
+        },
+        {
+          "path": "mare-de-lava/08.png",
+          "sha256": "42de3d51b14a3e3706d5da9ba817a161a939480b78bff4f869065c14b756c9e1"
+        },
+        {
+          "path": "mare-de-lava/09.png",
+          "sha256": "07798963fd7efa4f2c3e054026fe105837c189dab6b9d2b5e5ff38608121bf56"
+        },
+        {
+          "path": "mare-de-lava/10.png",
+          "sha256": "b913e842d1b406d15160bc32362911cb2d4af59e4874d000bbfa423acb9782a6"
+        },
+        {
+          "path": "mare-de-lava/11.png",
+          "sha256": "6f26d539d2a8d3f0041192393900d19beaf9adc7147df7b2afda7464617ca84c"
+        },
+        {
+          "path": "mare-de-lava/atlas.png",
+          "sha256": "9fad52ed34160708a292ddcf63a4913bae2b6d328471ed494af40b42876c9196"
+        },
+        {
+          "path": "mare-de-lava/estatico.png",
+          "sha256": "fc95c6fc28ff7e84e721535890e03f4efe104f4f8f80020732af476446351ea2"
+        }
+      ],
+      "alpha": "binary; verified separately",
+      "integration": "pendente_claude"
+    },
+    {
+      "id": "portal-caotico",
+      "nome": "Portal caotico",
+      "frames": 12,
+      "frameSize": [
+        96,
+        96
+      ],
+      "layout": {
+        "columns": 4,
+        "rows": 3,
+        "order": "left-to-right, top-to-bottom"
+      },
+      "durationsMs": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "cycleMs": 1920,
+      "loop": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "presentation": {
+        "anchor": "screen-center",
+        "sampling": "Point",
+        "mipmaps": false,
+        "oneCycleOnCataclisma": true,
+        "suggestedLogicalSizePx": 192,
+        "staticForReducedMotion": "portal-caotico/estatico.png"
+      },
+      "atlas": "portal-caotico/atlas.png",
+      "preview": "portal-caotico/preview.gif",
+      "files": [
+        {
+          "path": "portal-caotico/00.png",
+          "sha256": "17f670bb613b94f016f66dd7e89adb607fadb39c79c0113b80003ca0d08101be"
+        },
+        {
+          "path": "portal-caotico/01.png",
+          "sha256": "23ed60798e201180e5e7ef93f72b032aab3c84ef28c5806cc383e4a706898968"
+        },
+        {
+          "path": "portal-caotico/02.png",
+          "sha256": "1532227cf9179aad3351cd5474dabb998a7e8116dde1bfa62d0df58e05e9a09d"
+        },
+        {
+          "path": "portal-caotico/03.png",
+          "sha256": "40b73a206ad168e266c64c41a611014b1595f0133ab14a735095ca3e1ea83e6f"
+        },
+        {
+          "path": "portal-caotico/04.png",
+          "sha256": "3bbee228b3020b32779b11c9a4a505cc8c38dac9ecb021aea19c49f03aa08134"
+        },
+        {
+          "path": "portal-caotico/05.png",
+          "sha256": "1aaad9a9910477794821cf24de3ab0ddb51299b9e00197a47b5549ab83ca5a07"
+        },
+        {
+          "path": "portal-caotico/06.png",
+          "sha256": "70c84c95ccbf573ad6b23d128ea3a187d4fb3d1fa158e21ea3a5abbe11d79522"
+        },
+        {
+          "path": "portal-caotico/07.png",
+          "sha256": "809a771beadc8e9d28e41ea6ad415210c724a6595e2451f7fc757b88d9c3d071"
+        },
+        {
+          "path": "portal-caotico/08.png",
+          "sha256": "2f259048f83f351762c92c2c109ae8fba7061e764cedcd17a41738af90a9b54a"
+        },
+        {
+          "path": "portal-caotico/09.png",
+          "sha256": "b4309564eb4026f645733eeabc844a73a0f4276539290bfc64c3abe4dd1500d5"
+        },
+        {
+          "path": "portal-caotico/10.png",
+          "sha256": "a3739296a0aa62949f713e3665500d1d85b6bfbc6f837aad7bec56a6c5843830"
+        },
+        {
+          "path": "portal-caotico/11.png",
+          "sha256": "cd3623d863ac062bb5758b144e3cac25eab510a765b4084a71265c725d3e2d5a"
+        },
+        {
+          "path": "portal-caotico/atlas.png",
+          "sha256": "ede425416fe172d5931281d3d2d24c4d868fc4cb1448c8c27b3b0c609b4f7b3b"
+        },
+        {
+          "path": "portal-caotico/estatico.png",
+          "sha256": "17f670bb613b94f016f66dd7e89adb607fadb39c79c0113b80003ca0d08101be"
+        }
+      ],
+      "alpha": "binary; verified separately",
+      "integration": "pendente_claude"
+    },
+    {
+      "id": "eco-ancestral",
+      "nome": "Eco ancestral",
+      "frames": 12,
+      "frameSize": [
+        96,
+        96
+      ],
+      "layout": {
+        "columns": 4,
+        "rows": 3,
+        "order": "left-to-right, top-to-bottom"
+      },
+      "durationsMs": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "cycleMs": 1920,
+      "loop": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "presentation": {
+        "anchor": "screen-center",
+        "sampling": "Point",
+        "mipmaps": false,
+        "oneCycleOnCataclisma": true,
+        "suggestedLogicalSizePx": 192,
+        "staticForReducedMotion": "eco-ancestral/estatico.png"
+      },
+      "atlas": "eco-ancestral/atlas.png",
+      "preview": "eco-ancestral/preview.gif",
+      "files": [
+        {
+          "path": "eco-ancestral/00.png",
+          "sha256": "05efc4fb664dc470795454b968749a255b21437f9ef37d26937d390e700d348f"
+        },
+        {
+          "path": "eco-ancestral/01.png",
+          "sha256": "a0dec6a066d66bd2f0dcf964003fde7018c88494ab47b617861cefc8064e1d66"
+        },
+        {
+          "path": "eco-ancestral/02.png",
+          "sha256": "e4641c5ead982785d83c208eea1d1d1b8c596834a7b1fd946bbfeb0b96e01363"
+        },
+        {
+          "path": "eco-ancestral/03.png",
+          "sha256": "e01eaba4a42b4aba90eab10e1781d3f14eca96bebca20f09f8df5af029f8e0a7"
+        },
+        {
+          "path": "eco-ancestral/04.png",
+          "sha256": "87b97c9ca802c980e232b3f92fcc15ef3c8398979fa8a1b34cf1846a6527c4ad"
+        },
+        {
+          "path": "eco-ancestral/05.png",
+          "sha256": "da3f6106595d416f9a6a1b51479261670845585e6bddd822e67f01e887dbf6bf"
+        },
+        {
+          "path": "eco-ancestral/06.png",
+          "sha256": "e45ab7f6351270875a0e3a618a6013052ea698bcd6f0a46ecdb1a616f373634b"
+        },
+        {
+          "path": "eco-ancestral/07.png",
+          "sha256": "8d12e89c28570f372e0cf0aacbc1c67b68b170deae7bc3da408bed436f5e3f52"
+        },
+        {
+          "path": "eco-ancestral/08.png",
+          "sha256": "cc1b9f7f8660a018c49e0974e6e4762c175a6593bc904b22854f557f31f20145"
+        },
+        {
+          "path": "eco-ancestral/09.png",
+          "sha256": "2795b3b280f55ace8d66563f489bb7f4d3a572378bb359891850864fb479d38c"
+        },
+        {
+          "path": "eco-ancestral/10.png",
+          "sha256": "49f04408a1e59393bcf764c0a457381ce7bc76b915c41f8588f0c64101c03a13"
+        },
+        {
+          "path": "eco-ancestral/11.png",
+          "sha256": "db00629a2a7da0ae26e0f542167617d6558b3da692e9b756ee410ade5492b118"
+        },
+        {
+          "path": "eco-ancestral/atlas.png",
+          "sha256": "c6d6cde3a97dcd9338371ac2ff4c45b2f00b4db3f2b5cac63261692ecb5fa216"
+        },
+        {
+          "path": "eco-ancestral/estatico.png",
+          "sha256": "05efc4fb664dc470795454b968749a255b21437f9ef37d26937d390e700d348f"
+        }
+      ],
+      "alpha": "binary; verified separately",
+      "integration": "pendente_claude"
+    },
+    {
+      "id": "mare-de-energia",
+      "nome": "Mare de energia",
+      "frames": 12,
+      "frameSize": [
+        96,
+        96
+      ],
+      "layout": {
+        "columns": 4,
+        "rows": 3,
+        "order": "left-to-right, top-to-bottom"
+      },
+      "durationsMs": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "cycleMs": 1920,
+      "loop": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "presentation": {
+        "anchor": "screen-center",
+        "sampling": "Point",
+        "mipmaps": false,
+        "oneCycleOnCataclisma": true,
+        "suggestedLogicalSizePx": 192,
+        "staticForReducedMotion": "mare-de-energia/estatico.png"
+      },
+      "atlas": "mare-de-energia/atlas.png",
+      "preview": "mare-de-energia/preview.gif",
+      "files": [
+        {
+          "path": "mare-de-energia/00.png",
+          "sha256": "4d955ba07b420ad34a83e3cf5c39064c7e4e7498c869ef3b7ee88663cf47df95"
+        },
+        {
+          "path": "mare-de-energia/01.png",
+          "sha256": "38f6ca6885b5c9c0d280c7348b179f64a1f13edcee35b33ccb73e66b237a9e6d"
+        },
+        {
+          "path": "mare-de-energia/02.png",
+          "sha256": "dcb8324c06659d6355cb61f228b4ed223b349008a0b09c54d4e16e862e043b1e"
+        },
+        {
+          "path": "mare-de-energia/03.png",
+          "sha256": "1f74ceb5c8555c58cac983d1ebdc9a9c3cbae363863916ead076d7f7e5dec757"
+        },
+        {
+          "path": "mare-de-energia/04.png",
+          "sha256": "6b04c481cdc4f5d8477116c6983602973375fafa668a7e03ef712b592273bb9b"
+        },
+        {
+          "path": "mare-de-energia/05.png",
+          "sha256": "4b0121bef5e2311bac12f2b7507d3348d01a801119912550dd548e85bca9f8c4"
+        },
+        {
+          "path": "mare-de-energia/06.png",
+          "sha256": "da84c18c817e8e31a99eb39fa7726bf428ceeaa85b6754871131cc1e074fc078"
+        },
+        {
+          "path": "mare-de-energia/07.png",
+          "sha256": "bf6a002043867cc2a6b6b40209f1c8588923a257ff1937737430e6c625bf3c82"
+        },
+        {
+          "path": "mare-de-energia/08.png",
+          "sha256": "514ac7adcab2902c2c41a7413ce9a2bfcae1c16c97334e44b546ab27fbac65e9"
+        },
+        {
+          "path": "mare-de-energia/09.png",
+          "sha256": "46ffb76cafe36401b00d6bb9dfe788c06e3edbce7636203c156a2e666a731ddd"
+        },
+        {
+          "path": "mare-de-energia/10.png",
+          "sha256": "1230ec97209b92280693398c9fbce56287ceb37bc621b9b31d52e04c3b22addb"
+        },
+        {
+          "path": "mare-de-energia/11.png",
+          "sha256": "038f67a47f09572fd969090e1e88526bc6e848827179e0c7da6d704f7c51cd68"
+        },
+        {
+          "path": "mare-de-energia/atlas.png",
+          "sha256": "297ea8e565882de49e1941eae6bfba1d79eea6196cd5bea0cbf4bb0d1085c19f"
+        },
+        {
+          "path": "mare-de-energia/estatico.png",
+          "sha256": "4d955ba07b420ad34a83e3cf5c39064c7e4e7498c869ef3b7ee88663cf47df95"
+        }
+      ],
+      "alpha": "binary; verified separately",
+      "integration": "pendente_claude"
+    },
+    {
+      "id": "festival-de-fogos",
+      "nome": "Festival de fogos",
+      "frames": 12,
+      "frameSize": [
+        96,
+        96
+      ],
+      "layout": {
+        "columns": 4,
+        "rows": 3,
+        "order": "left-to-right, top-to-bottom"
+      },
+      "durationsMs": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "cycleMs": 1920,
+      "loop": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "presentation": {
+        "anchor": "screen-center",
+        "sampling": "Point",
+        "mipmaps": false,
+        "oneCycleOnCataclisma": true,
+        "suggestedLogicalSizePx": 192,
+        "staticForReducedMotion": "festival-de-fogos/estatico.png"
+      },
+      "atlas": "festival-de-fogos/atlas.png",
+      "preview": "festival-de-fogos/preview.gif",
+      "files": [
+        {
+          "path": "festival-de-fogos/00.png",
+          "sha256": "803f364d56fb48584465c0e6a83dffca4fa430ed0a3911de877ec38f10c31b29"
+        },
+        {
+          "path": "festival-de-fogos/01.png",
+          "sha256": "4b80e2c228399e149ad61d6b4f7fc89e6f5f2f081cf42950391ecdeda6623f2e"
+        },
+        {
+          "path": "festival-de-fogos/02.png",
+          "sha256": "54188d9837658b6ff0c330124bb158ba0f65943a6ba690d4dbf7e393ac44c500"
+        },
+        {
+          "path": "festival-de-fogos/03.png",
+          "sha256": "593ed85b7172cea856f1b81ab9dd072d41d1205e4fe1c086e9017eb2428bb568"
+        },
+        {
+          "path": "festival-de-fogos/04.png",
+          "sha256": "d5037b371c4d6271e54a779c2065a55492f26ea56ef38a2a20864d108ef6b4e8"
+        },
+        {
+          "path": "festival-de-fogos/05.png",
+          "sha256": "36cb197ed9de45a03fd56e21d2349a5edbd009678206a6b437d9b07decd82d64"
+        },
+        {
+          "path": "festival-de-fogos/06.png",
+          "sha256": "f98cbe37f775e42620d50d0f74a66dc7f637316e4cf6f8d75037a67476e1fcd2"
+        },
+        {
+          "path": "festival-de-fogos/07.png",
+          "sha256": "79cac142aad9fd3997e2f93d6b5449e770731e6360f017e15a490142608c0236"
+        },
+        {
+          "path": "festival-de-fogos/08.png",
+          "sha256": "7eb0157a5658aae33e44164f92fc65805f7b281cbd99c5d3e21c7a0c948d5c36"
+        },
+        {
+          "path": "festival-de-fogos/09.png",
+          "sha256": "f20352485c7d154900999c1ccebb36bc973b22fe425bb99e5053dcd331e6bcba"
+        },
+        {
+          "path": "festival-de-fogos/10.png",
+          "sha256": "6e785c0815ec5a50962995aa833bba0a9c7a122587a302885b74535813de8196"
+        },
+        {
+          "path": "festival-de-fogos/11.png",
+          "sha256": "253b8dabceff1e13cf8d6bc8144d4ba55de3e4429ed349e1ef8ce37bb9212f60"
+        },
+        {
+          "path": "festival-de-fogos/atlas.png",
+          "sha256": "257cfb15179c521cacd9f1c04622193db632fd023dca5ae6cfc5e67a505f95cd"
+        },
+        {
+          "path": "festival-de-fogos/estatico.png",
+          "sha256": "803f364d56fb48584465c0e6a83dffca4fa430ed0a3911de877ec38f10c31b29"
+        }
+      ],
+      "alpha": "binary; verified separately",
+      "integration": "pendente_claude"
+    },
+    {
+      "id": "nevoeiro",
+      "nome": "Nevoeiro",
+      "frames": 12,
+      "frameSize": [
+        96,
+        96
+      ],
+      "layout": {
+        "columns": 4,
+        "rows": 3,
+        "order": "left-to-right, top-to-bottom"
+      },
+      "durationsMs": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "cycleMs": 1920,
+      "loop": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "presentation": {
+        "anchor": "screen-center",
+        "sampling": "Point",
+        "mipmaps": false,
+        "oneCycleOnCataclisma": true,
+        "suggestedLogicalSizePx": 192,
+        "staticForReducedMotion": "nevoeiro/estatico.png"
+      },
+      "atlas": "nevoeiro/atlas.png",
+      "preview": "nevoeiro/preview.gif",
+      "files": [
+        {
+          "path": "nevoeiro/00.png",
+          "sha256": "e50deff056b517ad36b98231368a2fe2ed9c654f31332e9750ecf6104032deb5"
+        },
+        {
+          "path": "nevoeiro/01.png",
+          "sha256": "b02cd7dfbe04300571d4553286a9d7e3488ce8bc9e390911051d2b7dc9b5dcce"
+        },
+        {
+          "path": "nevoeiro/02.png",
+          "sha256": "1cec2f2a99d9104c640fe05a511f92905b3b5b06ec3b9febf927f4b5abc3a650"
+        },
+        {
+          "path": "nevoeiro/03.png",
+          "sha256": "c31f0dc323ed0beb0517fc0ead7c2cce46b51e8023b41d9be2b8987b08669a23"
+        },
+        {
+          "path": "nevoeiro/04.png",
+          "sha256": "eed1f495417e30f4c9dc1b526eab6622425e786dec3a8321978ca6c00e161c44"
+        },
+        {
+          "path": "nevoeiro/05.png",
+          "sha256": "538170d70494d566192d487d97984d39c1f0409fa3d8d2ca4a4f2ec5272b1fa6"
+        },
+        {
+          "path": "nevoeiro/06.png",
+          "sha256": "e494c9e4514a4fc24f73db112697554998d6eb8d4c74a0b6dc2de87d043928ba"
+        },
+        {
+          "path": "nevoeiro/07.png",
+          "sha256": "5b3a1c95c0e904267853e43d836aaf0ff3742d7fba5e3c69ccc6f5582b11fe8c"
+        },
+        {
+          "path": "nevoeiro/08.png",
+          "sha256": "ed578f40808aef6572097a5830940e9f3014205b15a28192e24ef061689fc6d2"
+        },
+        {
+          "path": "nevoeiro/09.png",
+          "sha256": "55b55431654234e8bf3b93eabd9bab4cb9227f38148da9e29919102ea2cb604d"
+        },
+        {
+          "path": "nevoeiro/10.png",
+          "sha256": "4630a02776fc7f39640ec8be1e72d1db5d632861aea717e2ed0b3cf4cd4a8fc0"
+        },
+        {
+          "path": "nevoeiro/11.png",
+          "sha256": "a0a770fcc66aa9bc08fd0e56a525900bf15acf095fcbc4b1c1d52cbf6d03ce15"
+        },
+        {
+          "path": "nevoeiro/atlas.png",
+          "sha256": "23df4275c0b4950b6d3498aaa587600b871701d6cc2418d4ee005e14716c583b"
+        },
+        {
+          "path": "nevoeiro/estatico.png",
+          "sha256": "e50deff056b517ad36b98231368a2fe2ed9c654f31332e9750ecf6104032deb5"
+        }
+      ],
+      "alpha": "binary; verified separately",
+      "integration": "pendente_claude"
+    },
+    {
+      "id": "vendaval",
+      "nome": "Vendaval",
+      "frames": 12,
+      "frameSize": [
+        96,
+        96
+      ],
+      "layout": {
+        "columns": 4,
+        "rows": 3,
+        "order": "left-to-right, top-to-bottom"
+      },
+      "durationsMs": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "cycleMs": 1920,
+      "loop": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "presentation": {
+        "anchor": "screen-center",
+        "sampling": "Point",
+        "mipmaps": false,
+        "oneCycleOnCataclisma": true,
+        "suggestedLogicalSizePx": 192,
+        "staticForReducedMotion": "vendaval/estatico.png"
+      },
+      "atlas": "vendaval/atlas.png",
+      "preview": "vendaval/preview.gif",
+      "files": [
+        {
+          "path": "vendaval/00.png",
+          "sha256": "4c454adb249a275f0548fbafa26944a9d72f0ae70c529bddaf326df87d9d5110"
+        },
+        {
+          "path": "vendaval/01.png",
+          "sha256": "599c86b30857508bd580ab44254c86f9d10459efa1bdd9c801ebd4cbcf794472"
+        },
+        {
+          "path": "vendaval/02.png",
+          "sha256": "bb664c537e338e00fd7873f04a0b3e1209ddf1dd40d20e1fb4ed09ca71b7535f"
+        },
+        {
+          "path": "vendaval/03.png",
+          "sha256": "3744346d5ce8110c6aed72cb1a74a28312a83aa78dd58ca7b06bd34dff7840be"
+        },
+        {
+          "path": "vendaval/04.png",
+          "sha256": "1bc946b3774514e200542258aef9523b90a695b197a3ae5ef40dffbae58a75ee"
+        },
+        {
+          "path": "vendaval/05.png",
+          "sha256": "097feaecb9003e59c1c01b1546b820adb30ad6d343ded5f9e9a43e08047124cd"
+        },
+        {
+          "path": "vendaval/06.png",
+          "sha256": "4e0e2fabf30e9b51527eb28b50512346ca6694843908c25905d976b8680a8470"
+        },
+        {
+          "path": "vendaval/07.png",
+          "sha256": "1de33d8ffe2ed4ab991f59f7ef24ca5a858e588d53bbc6dc802ac627aad3e96a"
+        },
+        {
+          "path": "vendaval/08.png",
+          "sha256": "633cafc05aa7b0bd9eacb4fbcc7d1e0f961f94ba852ceaa79e635c714716dfe4"
+        },
+        {
+          "path": "vendaval/09.png",
+          "sha256": "18e97eb9529f289993403304913379f052b5943ab0d93f1e8fde4e6e477338d4"
+        },
+        {
+          "path": "vendaval/10.png",
+          "sha256": "690f1cbfb4aeced634258f156551b6543fdf98bc81f79daeff122d6977f0e652"
+        },
+        {
+          "path": "vendaval/11.png",
+          "sha256": "e5b3c5be2453c2ce98edde9f510b7d111954e18176af9db5cfdd00e09c2334af"
+        },
+        {
+          "path": "vendaval/atlas.png",
+          "sha256": "9635c711b17bd6b5e1dd5a698554e677031a737f823d6e8bb4a3905c03f50567"
+        },
+        {
+          "path": "vendaval/estatico.png",
+          "sha256": "4c454adb249a275f0548fbafa26944a9d72f0ae70c529bddaf326df87d9d5110"
+        }
+      ],
+      "alpha": "binary; verified separately",
+      "integration": "pendente_claude"
+    },
+    {
+      "id": "papa-moedas",
+      "nome": "Papa-moedas",
+      "frames": 12,
+      "frameSize": [
+        96,
+        96
+      ],
+      "layout": {
+        "columns": 4,
+        "rows": 3,
+        "order": "left-to-right, top-to-bottom"
+      },
+      "durationsMs": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "cycleMs": 1920,
+      "loop": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "presentation": {
+        "anchor": "screen-center",
+        "sampling": "Point",
+        "mipmaps": false,
+        "oneCycleOnCataclisma": true,
+        "suggestedLogicalSizePx": 192,
+        "staticForReducedMotion": "papa-moedas/estatico.png"
+      },
+      "atlas": "papa-moedas/atlas.png",
+      "preview": "papa-moedas/preview.gif",
+      "files": [
+        {
+          "path": "papa-moedas/00.png",
+          "sha256": "ddd97debf37b874ce1e10f878d2867aff648b7e419ec3e3a94b9364cd08d4549"
+        },
+        {
+          "path": "papa-moedas/01.png",
+          "sha256": "7eaba98835d52b247b78761da0ca4711a84dc72da9d02fc00376b987962bca5a"
+        },
+        {
+          "path": "papa-moedas/02.png",
+          "sha256": "aa4bc5d8f1cb3e0105b3855babd2305fa832ff72a665cfe889223aa70b41e42a"
+        },
+        {
+          "path": "papa-moedas/03.png",
+          "sha256": "cd5d65e32b7473ccb50095b020bc7a4a6c9847cb328ce982e220116d14dcb6de"
+        },
+        {
+          "path": "papa-moedas/04.png",
+          "sha256": "1a573042a8934ef2703412842f75a380f1123f7d0ed2e40fd1bb4268328bfa2a"
+        },
+        {
+          "path": "papa-moedas/05.png",
+          "sha256": "bc053f66e634721b0847544d402ee82d4353f87e4e7d40e2935216cd38acea21"
+        },
+        {
+          "path": "papa-moedas/06.png",
+          "sha256": "af6b0f2d41d9c3dea9f489734de7e1774ea2e1aedc8718c5bcaf9ea368c27b6c"
+        },
+        {
+          "path": "papa-moedas/07.png",
+          "sha256": "c28724a8bb46b11caca2ef540aaeaa0f53cdb6ede913cc23fcc7c23b5940adeb"
+        },
+        {
+          "path": "papa-moedas/08.png",
+          "sha256": "e9cc778d95492bb960a70109e344843e3091d3a589ca576b36fff04878a1de14"
+        },
+        {
+          "path": "papa-moedas/09.png",
+          "sha256": "1dc2599dba9fc799b8f353505b2b3a600716427bd6d8c0eaad11204045e31207"
+        },
+        {
+          "path": "papa-moedas/10.png",
+          "sha256": "9007d4a5a2cc58355758aa12a51ac7b6bcf7a9d9a4f98ae1240094969935f14a"
+        },
+        {
+          "path": "papa-moedas/11.png",
+          "sha256": "b501e64033ec257ed596d93a7c05f0620bb846352cb9c785256fbce646b47aba"
+        },
+        {
+          "path": "papa-moedas/atlas.png",
+          "sha256": "c17aa89d4145330ca0a5a9d4537963e62509050f3d27122885a18d29e7b7c5f6"
+        },
+        {
+          "path": "papa-moedas/estatico.png",
+          "sha256": "ddd97debf37b874ce1e10f878d2867aff648b7e419ec3e3a94b9364cd08d4549"
+        }
+      ],
+      "alpha": "binary; verified separately",
+      "integration": "pendente_claude"
+    },
+    {
+      "id": "errante",
+      "nome": "Errante",
+      "frames": 12,
+      "frameSize": [
+        96,
+        96
+      ],
+      "layout": {
+        "columns": 4,
+        "rows": 3,
+        "order": "left-to-right, top-to-bottom"
+      },
+      "durationsMs": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "cycleMs": 1920,
+      "loop": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "presentation": {
+        "anchor": "screen-center",
+        "sampling": "Point",
+        "mipmaps": false,
+        "oneCycleOnCataclisma": true,
+        "suggestedLogicalSizePx": 192,
+        "staticForReducedMotion": "errante/estatico.png"
+      },
+      "atlas": "errante/atlas.png",
+      "preview": "errante/preview.gif",
+      "files": [
+        {
+          "path": "errante/00.png",
+          "sha256": "210625df0ef659fac518dbe31f9e2ed6dc6be335d152747af390aba3db5ddac9"
+        },
+        {
+          "path": "errante/01.png",
+          "sha256": "1cc8b5289fa3bfd87492a92149f1acbe03324cf767dd677a7969f8a7bbd64f7a"
+        },
+        {
+          "path": "errante/02.png",
+          "sha256": "624de224758e4c724c4f6cf55ed02a192bc8a3b905a86a81de2bfdbc8a0b25ea"
+        },
+        {
+          "path": "errante/03.png",
+          "sha256": "11fb1993fca39c5433b38d9484528f924edd91ae3555a390749fc9695028b759"
+        },
+        {
+          "path": "errante/04.png",
+          "sha256": "e27c1529329adc1ef224f08750b4e0870000a5af6afd0aaed0575ab0a744326f"
+        },
+        {
+          "path": "errante/05.png",
+          "sha256": "8df4369a929d629cb0d638c0127a01ff04e438ce71471ad17d96c94d7bec89cd"
+        },
+        {
+          "path": "errante/06.png",
+          "sha256": "db4455ab838d435834ff15e9acba59420d2f5354f65ce9accbf69fee01e7bb50"
+        },
+        {
+          "path": "errante/07.png",
+          "sha256": "2541b3cf8aa6a226d0739f5350d419e2d3f5318c7fdb8156d3a4e37bc3e8c893"
+        },
+        {
+          "path": "errante/08.png",
+          "sha256": "31d6185d692ff67a588dc0e816f5dd774b60898e644ee414f45b9726867c6769"
+        },
+        {
+          "path": "errante/09.png",
+          "sha256": "cfc7da38298e14bc15553645b038cefa6058f957fafed001c7b15e4abdd52ca7"
+        },
+        {
+          "path": "errante/10.png",
+          "sha256": "8635806c694a1c827cf40e4d9c5510b4ec2af949d74496f05cfaba31b2d7a51c"
+        },
+        {
+          "path": "errante/11.png",
+          "sha256": "741d96038df0aee3b936bbf91b3ce6771b3dffd0433bd752e7da55f5e05ed490"
+        },
+        {
+          "path": "errante/atlas.png",
+          "sha256": "50e0a151fd8f879e646903ae2cae49a9037649929c5fd274ce702f741da8b15a"
+        },
+        {
+          "path": "errante/estatico.png",
+          "sha256": "210625df0ef659fac518dbe31f9e2ed6dc6be335d152747af390aba3db5ddac9"
+        }
+      ],
+      "alpha": "binary; verified separately",
+      "integration": "pendente_claude"
+    }
+  ]
+}

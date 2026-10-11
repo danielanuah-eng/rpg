@@ -1,0 +1,1199 @@
+{
+  "sources": [
+    {
+      "path": "planos.json",
+      "sha256": "0bfa269baeab8ddd3548c0df7f9cfa8c4001db2510fbda84e1705e653ce0a8b7",
+      "note": "arquivo concorrente existente; apenas campos de pedido copiados"
+    },
+    {
+      "path": "planos-restantes.json",
+      "sha256": "7c86f60c16e00eacf4fe081c20bc75725253d32654103ebc78256c724c8a9d85",
+      "note": "arquivo concorrente existente; apenas campos de pedido copiados"
+    },
+    {
+      "path": "planos-damian.json",
+      "sha256": "527d31ea4e307e6020b98f0f9ab6b8106af98b344d5f08458dc84097cfc5ef5c",
+      "note": "arquivo concorrente existente; apenas campos de pedido copiados"
+    }
+  ],
+  "requests": [
+    {
+      "source": "planos.json",
+      "key": "brumak-idle",
+      "characterId": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+      "action": "idle",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "brumak-walk",
+      "characterId": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+      "action": "walk",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "brumak-attack",
+      "characterId": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+      "action": "attack",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "brumak-hit",
+      "characterId": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+      "action": "hit",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "brumak-death",
+      "characterId": "2d35da45-5786-43fb-99c3-3eccd984ac4c",
+      "action": "death",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "lobo-idle",
+      "characterId": "2d642607-f310-4e22-b3ae-384361338285",
+      "action": "idle",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "lobo-walk",
+      "characterId": "2d642607-f310-4e22-b3ae-384361338285",
+      "action": "walk",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "lobo-attack",
+      "characterId": "2d642607-f310-4e22-b3ae-384361338285",
+      "action": "attack",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "lobo-hit",
+      "characterId": "2d642607-f310-4e22-b3ae-384361338285",
+      "action": "hit",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "lobo-death",
+      "characterId": "2d642607-f310-4e22-b3ae-384361338285",
+      "action": "death",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "lobo-spawn",
+      "characterId": "2d642607-f310-4e22-b3ae-384361338285",
+      "action": "spawn",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "ossyro-breath",
+      "characterId": "6b27257d-819c-4d78-829c-0ca36f05d586",
+      "action": "breath",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "ossyro-idle",
+      "characterId": "6b27257d-819c-4d78-829c-0ca36f05d586",
+      "action": "idle",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "ossyro-walk",
+      "characterId": "6b27257d-819c-4d78-829c-0ca36f05d586",
+      "action": "walk",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "ossyro-attack",
+      "characterId": "6b27257d-819c-4d78-829c-0ca36f05d586",
+      "action": "attack",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "ossyro-hit",
+      "characterId": "6b27257d-819c-4d78-829c-0ca36f05d586",
+      "action": "hit",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "ossyro-death",
+      "characterId": "6b27257d-819c-4d78-829c-0ca36f05d586",
+      "action": "death",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "alvyr-idle",
+      "characterId": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+      "action": "idle",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "alvyr-walk",
+      "characterId": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+      "action": "walk",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "alvyr-attack",
+      "characterId": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+      "action": "attack",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "alvyr-hit",
+      "characterId": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+      "action": "hit",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "alvyr-death",
+      "characterId": "d4deca2a-dfe9-4233-b7f5-59a3efcc4d90",
+      "action": "death",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "nixira-idle",
+      "characterId": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+      "action": "idle",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "nixira-walk",
+      "characterId": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+      "action": "walk",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "nixira-attack",
+      "characterId": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+      "action": "attack",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "nixira-hit",
+      "characterId": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+      "action": "hit",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos.json",
+      "key": "nixira-death",
+      "characterId": "7a2e16e2-980f-4030-99c2-0cbf82c82b7f",
+      "action": "death",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "CheiroPneu-death",
+      "characterId": "fc89abf9-cecd-4ad1-9e2e-af3f43656cd1",
+      "action": "death",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": "bc81be94-3556-4512-a100-0b1729f44233"
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "Colosso-idle",
+      "characterId": "b8e6be47-f60c-4557-b2b6-e9bc44ca42bc",
+      "action": "idle",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": "1b7e7dee-19b4-44ac-a0d8-fd81873a0426"
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "Colosso-walk",
+      "characterId": "b8e6be47-f60c-4557-b2b6-e9bc44ca42bc",
+      "action": "walk",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": "de19ccb8-7654-42e5-b80d-c0a57cb93bd0"
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "Colosso-attack",
+      "characterId": "b8e6be47-f60c-4557-b2b6-e9bc44ca42bc",
+      "action": "attack",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": "aea03ee2-d6a3-40ae-8d0b-f47a5b20c051"
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "Colosso-hit",
+      "characterId": "b8e6be47-f60c-4557-b2b6-e9bc44ca42bc",
+      "action": "hit",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": "d0f49510-eee9-4de2-9b92-09d8148ff653"
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "Colosso-steal-reach",
+      "characterId": "b8e6be47-f60c-4557-b2b6-e9bc44ca42bc",
+      "action": "steal-reach",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "Colosso-steal-slam",
+      "characterId": "b8e6be47-f60c-4557-b2b6-e9bc44ca42bc",
+      "action": "steal-slam",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "Colosso-steal-cast",
+      "characterId": "b8e6be47-f60c-4557-b2b6-e9bc44ca42bc",
+      "action": "steal-cast",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "Colosso-stomp",
+      "characterId": "b8e6be47-f60c-4557-b2b6-e9bc44ca42bc",
+      "action": "stomp",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "gryvro-takeoff",
+      "characterId": "74642151-8059-4dfc-b56a-5f799926785e",
+      "action": "takeoff",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": "313e370e-3fc1-478e-9649-0e482ac74a6e"
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "edgar-transform-ghost",
+      "characterId": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+      "action": "transform-ghost",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": "ff56fd4f-3054-42af-a54a-7c68df8f6286"
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "edgar-ghost-walk",
+      "characterId": "0b822833-fbf2-4c17-805c-8b67a0097116",
+      "action": "walk",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": "6f037a17-2ede-45b9-acf0-805bb8b92bc2"
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "edgar-ultship",
+      "characterId": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+      "action": "ultship",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": "46604202-c831-455d-a991-b340b1e8e486"
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "edgar-ghost-attack",
+      "characterId": "0b822833-fbf2-4c17-805c-8b67a0097116",
+      "action": "attack",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "gryvro-walk",
+      "characterId": "74642151-8059-4dfc-b56a-5f799926785e",
+      "action": "walk",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": "0fa0eafd-a5e2-4f53-a92a-f35c6b3ecb9a"
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "gryvro-attack",
+      "characterId": "74642151-8059-4dfc-b56a-5f799926785e",
+      "action": "attack",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "gryvro-hit",
+      "characterId": "74642151-8059-4dfc-b56a-5f799926785e",
+      "action": "hit",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "gryvro-death",
+      "characterId": "74642151-8059-4dfc-b56a-5f799926785e",
+      "action": "death",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "edgar-walk",
+      "characterId": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+      "action": "walk",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": "eee6dcd4-c73f-432a-acdd-9a8e73173fb8"
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "edgar-attack",
+      "characterId": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+      "action": "attack",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": "5a6a2513-0fcb-4a25-88dc-2e775c03fef2"
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "edgar-hit",
+      "characterId": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+      "action": "hit",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "edgar-death",
+      "characterId": "590cc7bc-3673-477c-aa23-f5655dd2d97a",
+      "action": "death",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "raizor-idle",
+      "characterId": "8c800a83-a911-4b28-a8f6-2c9dd2958887",
+      "action": "idle",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "raizor-walk",
+      "characterId": "8c800a83-a911-4b28-a8f6-2c9dd2958887",
+      "action": "walk",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "raizor-attack",
+      "characterId": "8c800a83-a911-4b28-a8f6-2c9dd2958887",
+      "action": "attack",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "raizor-hit",
+      "characterId": "8c800a83-a911-4b28-a8f6-2c9dd2958887",
+      "action": "hit",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "raizor-death",
+      "characterId": "8c800a83-a911-4b28-a8f6-2c9dd2958887",
+      "action": "death",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "dragon-spawn",
+      "characterId": "99aa2048-ba78-47f2-b767-0b74a5bbad1a",
+      "action": "spawn",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "edgar-ghost-idle",
+      "characterId": "0b822833-fbf2-4c17-805c-8b67a0097116",
+      "action": "idle",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GuardiaoMusgo-walk",
+      "characterId": "87238f14-352a-4691-9f74-9c95bf4ab077",
+      "action": "walk",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "DomadorCorrentes-idle",
+      "characterId": "26e7a4e8-22cc-4ec6-bfab-6f1d19b04101",
+      "action": "idle",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": "d6e53fdf-a44a-43e0-b407-88e997265c2b"
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "DomadorCorrentes-walk",
+      "characterId": "26e7a4e8-22cc-4ec6-bfab-6f1d19b04101",
+      "action": "walk",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "TotemCura-death",
+      "characterId": "ac6e264a-46f0-4fae-bc75-a402bcf3f736",
+      "action": "death",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": "78e2a83a-5ff2-4006-a4cc-7e13da9332b4"
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoLaranja-hit",
+      "characterId": "4e4f11bc-8e64-4b8b-af4c-fccf8d293e9a",
+      "action": "hit",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoLaranja-death",
+      "characterId": "4e4f11bc-8e64-4b8b-af4c-fccf8d293e9a",
+      "action": "death",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoLaranja-zap",
+      "characterId": "4e4f11bc-8e64-4b8b-af4c-fccf8d293e9a",
+      "action": "zap",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoLaranja-spawn",
+      "characterId": "4e4f11bc-8e64-4b8b-af4c-fccf8d293e9a",
+      "action": "spawn",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoBranco-idle",
+      "characterId": "41aa8f37-59de-4259-a302-edae82071f0f",
+      "action": "idle",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoBranco-walk",
+      "characterId": "41aa8f37-59de-4259-a302-edae82071f0f",
+      "action": "walk",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoBranco-attack",
+      "characterId": "41aa8f37-59de-4259-a302-edae82071f0f",
+      "action": "attack",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoBranco-hit",
+      "characterId": "41aa8f37-59de-4259-a302-edae82071f0f",
+      "action": "hit",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoBranco-death",
+      "characterId": "41aa8f37-59de-4259-a302-edae82071f0f",
+      "action": "death",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoBranco-zap",
+      "characterId": "41aa8f37-59de-4259-a302-edae82071f0f",
+      "action": "zap",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoBranco-spawn",
+      "characterId": "41aa8f37-59de-4259-a302-edae82071f0f",
+      "action": "spawn",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoMalhado-idle",
+      "characterId": "83e65760-5e47-4a09-a9fe-f1215d0f379e",
+      "action": "idle",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoMalhado-walk",
+      "characterId": "83e65760-5e47-4a09-a9fe-f1215d0f379e",
+      "action": "walk",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoMalhado-attack",
+      "characterId": "83e65760-5e47-4a09-a9fe-f1215d0f379e",
+      "action": "attack",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoMalhado-hit",
+      "characterId": "83e65760-5e47-4a09-a9fe-f1215d0f379e",
+      "action": "hit",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoMalhado-death",
+      "characterId": "83e65760-5e47-4a09-a9fe-f1215d0f379e",
+      "action": "death",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoMalhado-zap",
+      "characterId": "83e65760-5e47-4a09-a9fe-f1215d0f379e",
+      "action": "zap",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoMalhado-spawn",
+      "characterId": "83e65760-5e47-4a09-a9fe-f1215d0f379e",
+      "action": "spawn",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoManchado-idle",
+      "characterId": "f9fdad65-9a92-418b-9379-407d443722f2",
+      "action": "idle",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoManchado-walk",
+      "characterId": "f9fdad65-9a92-418b-9379-407d443722f2",
+      "action": "walk",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoManchado-attack",
+      "characterId": "f9fdad65-9a92-418b-9379-407d443722f2",
+      "action": "attack",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoManchado-hit",
+      "characterId": "f9fdad65-9a92-418b-9379-407d443722f2",
+      "action": "hit",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoManchado-death",
+      "characterId": "f9fdad65-9a92-418b-9379-407d443722f2",
+      "action": "death",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoManchado-zap",
+      "characterId": "f9fdad65-9a92-418b-9379-407d443722f2",
+      "action": "zap",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-restantes.json",
+      "key": "GatoManchado-spawn",
+      "characterId": "f9fdad65-9a92-418b-9379-407d443722f2",
+      "action": "spawn",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-damian.json",
+      "key": "damian-canhao-idle",
+      "characterId": "20323703-7d5b-45ec-922a-4283e319bc97",
+      "action": "idle-canhao-v3-pose",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "previousGroupId": "14e65a4f-a7d4-4575-be4e-330fdb026c0c"
+    },
+    {
+      "source": "planos-damian.json",
+      "key": "damian-canhao-attack",
+      "characterId": "20323703-7d5b-45ec-922a-4283e319bc97",
+      "action": "canhao-attack-codex-v1",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-damian.json",
+      "key": "damian-pistola-idle",
+      "characterId": "52a7b01e-ca84-4722-ae86-b424e50cf8d3",
+      "action": "idle-pistola-v3-pose",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-damian.json",
+      "key": "damian-pistola-attack",
+      "characterId": "52a7b01e-ca84-4722-ae86-b424e50cf8d3",
+      "action": "pistola-attack-codex-v1",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    },
+    {
+      "source": "planos-damian.json",
+      "key": "damian-martelo-attack",
+      "characterId": "ac23f5bd-f7c3-4fe0-b22b-e16684125653",
+      "action": "martelo-attack-codex-v1",
+      "directions": [
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "previousGroupId": null
+    }
+  ]
+}

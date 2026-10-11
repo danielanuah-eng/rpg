@@ -1,0 +1,153 @@
+{
+  "resumo": "Auditei Documentacao/EVENTOS-LOJA-ELENCO.md e os 4 scripts pedidos (Core/Events.cs NÃO existe). Não li binários nem editei nada.\n\nPonto-chave 1: o arquivo Core/Events.cs citado no doc (linha 13) não existe. A tabela real dos eventos está em Core/Match.cs, linhas 797-800, campo Cataclysms.\n\nPonto-chave 2: o gatilho único de todos os 12 eventos é a face Cataclisma do dado de ataque, em Match.cs:631 (if(a==Face.Cataclisma) Cataclysm();). O sorteio com peso e o efeito de cada ID ficam no switch de Cataclysm (Match.cs:804-879).\n\nPonto-chave 3 (a pergunta): SIM, papa-moedas e errante também precisam de ícone/aviso central. O plano de 11/10 (coordenacao/arena-pixelai/planejamento-astra-2026-10-11/README.md, seção 5, 'Eventos: 12 artes centrais') pede 12 avisos centrais animados, um por ID real, e a tabela dessa seção lista papa-moedas e errante com silhueta e cores próprias. O CONFERENCIA.md confirma literalmente: 'Papa-moedas e Errante entram no lote de avisos.'\n\nTabela dos 12 IDs reais (nome = ArenaPresentation.cs:90-94; gatilho comum = Match.cs:631; implementação = case no switch de Cataclysm):\n\n| ID real | Nome | Gatilho (arquivo:linha) | Estado | Assets relacionados |\n|---|---|---|---|---|\n| chuva-de-moedas | Chuva de moedas | Match.cs:631 / case 815 | Implementado | céu EventSkies ceu-dourado (ArenaPresentation.cs:88) |\n| queda-de-pedras | Queda de pedras | 631 / case 816 | Implementado | nenhum sprite próprio (usa caixas do kit) |\n| terremoto | Terremoto | 631 / case 816 | Implementado | nenhum sprite próprio |\n| mare-de-lava | Maré de lava | 631 / case 817 | Implementado | céu cinzas-vulcanicas (linha 88); marcador lava = material (linha 333) |\n| portal-caotico | Portal caótico | 631 / case 826 | Implementado | nenhum |\n| eco-ancestral | Eco ancestral | 631 / case 837 | Implementado | nenhum |\n| mare-de-energia | Maré de energia | 631 / case 840 | Implementado | nenhum |\n| festival-de-fogos | Festival de fogos | 631 / case 843 | Implementado | céu noite-festiva (linha 89); efeito Sprites/Efeitos/festival-de-fogos/explosao (linha 693) |\n| nevoeiro | Nevoeiro | 631 / case 851 | Implementado | céu nuvens-densas (linha 88); efeito de regra em Match.cs:218 |\n| vendaval | Vendaval | 631 / case 852 | Implementado | nenhum |\n| papa-moedas | Papa-moedas | 631 / case 860 | Implementado | Sprites/PapaMoedas (pastas existem); neutro Content.cs:164 |\n| errante | Brutamontes Errante | 631 / case 868 | Implementado | Sprites/BrutamontesErrante; céu tempestade (linha 89); neutro Content.cs:165 |\n\nTodos os 12 estão implementados no núcleo (não planejados). O que falta é arte: a pasta Resources/Sprites/Ceus NÃO existe (o código carrega Sprites/Ceus/<id>/fundo em ArenaPresentation.cs:311), e a pasta Efeitos só tem baltazar-anjo, baltazar-demonio e moeda. Ou seja, céu e explosão dos fogos caem no fallback de cor/placa. Os 12 avisos centrais são etapa 2 do plano, ainda pendentes de produção e integração.\n\nNão há conceito de 'ícone central' no código dos 4 scripts; o termo 'aviso central' só aparece no plano do Astra (em git). No runtime, o que existe de 'central' é o Float com o nome do evento no centro do tabuleiro (ArenaPresentation.cs:598).",
+  "achados": [
+    {
+      "afirmacao": "Core/Events.cs não existe; o doc aponta para ele mas a tabela real está em Match.cs",
+      "arquivo": "Documentacao/EVENTOS-LOJA-ELENCO.md",
+      "linha": 13,
+      "trecho": "- **Sorteio:** com peso, numa tabela única (`Core/Events.cs`). Os 3 atuais (chuva de moedas, queda de pedras e terremoto) continuam na tabela.",
+      "ok": false
+    },
+    {
+      "afirmacao": "A tabela Cataclysms tem 12 IDs reais, com peso e rodadas",
+      "arquivo": "Assets/ArenaTatica/Scripts/Core/Match.cs",
+      "linha": 797,
+      "trecho": "public static readonly (string id,int weight,int rounds)[] Cataclysms=",
+      "ok": true
+    },
+    {
+      "afirmacao": "Os 12 IDs em ordem: chuva-de-moedas, queda-de-pedras, terremoto, mare-de-lava, portal-caotico, eco-ancestral, mare-de-energia, festival-de-fogos, nevoeiro, vendaval, papa-moedas, errante",
+      "arquivo": "Assets/ArenaTatica/Scripts/Core/Match.cs",
+      "linha": 799,
+      "trecho": "(\"chuva-de-moedas\",3,0), (\"queda-de-pedras\",2,0), (\"terremoto\",2,0), (\"mare-de-lava\",2,3), (\"portal-caotico\",2,0), (\"eco-ancestral\",1,0),\n            (\"mare-de-energia\",2,0), (\"festival-de-fogos\",2,1), (\"nevoeiro\",2,1), (\"vendaval\",2,0), (\"papa-moedas\",2,0), (\"errante\",1,5),",
+      "ok": true
+    },
+    {
+      "afirmacao": "Gatilho único: face Cataclisma no dado de ataque",
+      "arquivo": "Assets/ArenaTatica/Scripts/Core/Match.cs",
+      "linha": 631,
+      "trecho": "if(a==Face.Cataclisma) Cataclysm();",
+      "ok": true
+    },
+    {
+      "afirmacao": "Cada ID tem um case no switch de Cataclysm, ou seja, está implementado (não planejado)",
+      "arquivo": "Assets/ArenaTatica/Scripts/Core/Match.cs",
+      "linha": 813,
+      "trecho": "switch(kind)",
+      "ok": true
+    },
+    {
+      "afirmacao": "papa-moedas invoca 2 neutros Papa-moedas no time Neutral",
+      "arquivo": "Assets/ArenaTatica/Scripts/Core/Match.cs",
+      "linha": 865,
+      "trecho": "foreach(var x in new[]{c,m}) { var p=Spawn(\"papa-moedas\",MatchState.Neutral,x,0); Emit(new GameEvent{kind=\"invocar\",target=p.id,info=p.def,cell=x}); cells.Add(x); }",
+      "ok": true
+    },
+    {
+      "afirmacao": "errante invoca o chefe Brutamontes Errante no time Neutral",
+      "arquivo": "Assets/ArenaTatica/Scripts/Core/Match.cs",
+      "linha": 872,
+      "trecho": "var b=Spawn(\"brutamontes-errante\",MatchState.Neutral,spot[0],0);",
+      "ok": true
+    },
+    {
+      "afirmacao": "Nomes legíveis dos 12 IDs",
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaPresentation.cs",
+      "linha": 91,
+      "trecho": "\"chuva-de-moedas\"=>\"Chuva de moedas\", \"queda-de-pedras\"=>\"Queda de pedras\", \"terremoto\"=>\"Terremoto\", \"mare-de-lava\"=>\"Maré de lava\",",
+      "ok": true
+    },
+    {
+      "afirmacao": "Nomes de papa-moedas e errante",
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaPresentation.cs",
+      "linha": 93,
+      "trecho": "\"festival-de-fogos\"=>\"Festival de fogos\", \"nevoeiro\"=>\"Nevoeiro (alcance −2)\", \"vendaval\"=>\"Vendaval\", \"papa-moedas\"=>\"Papa-moedas\", \"errante\"=>\"Brutamontes Errante\",",
+      "ok": true
+    },
+    {
+      "afirmacao": "Só 5 eventos têm céu próprio (chuva-de-moedas, nevoeiro, mare-de-lava, errante, festival-de-fogos); papa-moedas NÃO tem céu",
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaPresentation.cs",
+      "linha": 87,
+      "trecho": "static readonly Dictionary<string,(string sky,Color tint)> EventSkies=new Dictionary<string,(string,Color)>{",
+      "ok": true
+    },
+    {
+      "afirmacao": "O céu é carregado de Sprites/Ceus/<id>/fundo, pasta que NÃO existe em Resources/Sprites (verificado na listagem)",
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaPresentation.cs",
+      "linha": 311,
+      "trecho": "var art=Resources.Load<Sprite>(\"Sprites/Ceus/\"+id+\"/fundo\");",
+      "ok": false
+    },
+    {
+      "afirmacao": "Os 12 avisos centrais animados de Cataclisma, um por ID real, são etapa 2 do plano do Astra e incluem papa-moedas e errante",
+      "arquivo": "coordenacao/arena-pixelai/planejamento-astra-2026-10-11/README.md (via git show 4f19c15e)",
+      "linha": 0,
+      "trecho": "| 2 — prioridade visual | **12 avisos centrais animados de Cataclisma**, feitos localmente | Sol; Astra avalia | Um por ID real, arte e cores distintas, previews, atlas/quadros, metadados e alfa conferidos. Lote completo pronto para Claude. |",
+      "ok": true
+    },
+    {
+      "afirmacao": "A tabela do plano lista silhueta e cores centrais também para papa-moedas e errante",
+      "arquivo": "coordenacao/arena-pixelai/planejamento-astra-2026-10-11/README.md (via git show)",
+      "linha": 0,
+      "trecho": "| `papa-moedas` | Silhueta reconhecível do Papa diante de moeda | Marrom, ouro, verde suave; identidade pela referência |\n| `errante` | Cabeça/silhueta do chefe em portal de pedra | Basalto, âmbar, vermelho; identidade pela referência |",
+      "ok": true
+    },
+    {
+      "afirmacao": "Confirmação explícita: papa-moedas e errante entram no lote de avisos",
+      "arquivo": "coordenacao/arena-pixelai/planejamento-astra-2026-10-11/CONFERENCIA.md (via git show 4f19c15e)",
+      "linha": 0,
+      "trecho": "- `Match.Cataclysms` contém 12 IDs, não só os dez listados na seção antiga de efeitos. Papa-moedas e Errante entram no lote de avisos.",
+      "ok": true
+    },
+    {
+      "afirmacao": "No runtime o único 'central' é o nome do evento flutuando no centro do tabuleiro; não há ícone central implementado no código",
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaPresentation.cs",
+      "linha": 598,
+      "trecho": "Float(Vector3.up*2,EventName(e.info),Violet);",
+      "ok": true
+    },
+    {
+      "afirmacao": "O efeito dos fogos carrega Sprites/Efeitos/festival-de-fogos/explosao, pasta que não existe (Efeitos só tem baltazar-anjo, baltazar-demonio e moeda)",
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaPresentation.cs",
+      "linha": 693,
+      "trecho": "if(EffectFrames(\"festival-de-fogos/explosao\") is Sprite[] boom) StartCoroutine(PlayEffect(boom,at,12));",
+      "ok": false
+    },
+    {
+      "afirmacao": "Sprites dos neutros existem: pastas PapaMoedas e BrutamontesErrante com vistas e clipes (idle/walk/attack/hit/death/spawn/roar)",
+      "arquivo": "Assets/ArenaTatica/Resources/Sprites/BrutamontesErrante/spawn_south-east.png",
+      "linha": 0,
+      "trecho": "spawn_south-east.png",
+      "ok": true
+    },
+    {
+      "afirmacao": "Neutros definidos no Content.cs: papa-moedas (hp 3, neutro) e brutamontes-errante (hp 20, neutro, armor 1)",
+      "arquivo": "Assets/ArenaTatica/Scripts/Core/Content.cs",
+      "linha": 164,
+      "trecho": "[\"papa-moedas\"]=new FighterDef { id=\"papa-moedas\", name=\"Papa-moedas\", sprites=\"PapaMoedas\", hp=3, pa=0, pm=3, level=0, picker=false, neutral=true, noLock=true, skills=new SkillDef[0] },",
+      "ok": true
+    },
+    {
+      "afirmacao": "Estado do evento com duração no CoreTypes.cs: S.ev (id) e S.evRounds",
+      "arquivo": "Assets/ArenaTatica/Scripts/Core/CoreTypes.cs",
+      "linha": 167,
+      "trecho": "public string ev=\"\";",
+      "ok": true
+    },
+    {
+      "afirmacao": "Pasta Resources/Sprites/Ceus não existe na listagem (nenhum dos 40+ subdiretórios de Sprites é Ceus)",
+      "arquivo": "Assets/ArenaTatica/Resources/Sprites",
+      "linha": 0,
+      "trecho": "Assets/ArenaTatica/Resources/Sprites/Alvyr/ ... Assets/ArenaTatica/Resources/Sprites/ViuvaAgulha/ (sem Ceus)",
+      "ok": false
+    }
+  ],
+  "pendencias": [
+    "A pasta coordenacao/ não existe no disco desta cópia; li README.md e CONFERENCIA.md do plano via git show 4f19c15e. Não pude listar as outras tarefas/notas citadas por eles (ex.: tarefas/015-codex-eventos-elenco-cenarios.md).",
+    "Não confirmei visualmente (olhar) nenhum PNG; não abri imagens. Portanto não afirmo nada sobre o conteúdo/alfa dos sprites de PapaMoedas e BrutamontesErrante além da existência dos arquivos.",
+    "Não rodei o jogo nem testes; 'implementado' significa que existe o case no switch de Cataclysm em Match.cs, não que o efeito foi validado em Play.",
+    "O doc EVENTOS-LOJA-ELENCO.md diz que os avisos/sky do Codex estão pendentes de arte; não há pasta Ceus nem efeito festival-de-fogos/explosao. Não sei se existe entrega equivalente fora de Resources (ex.: na pasta de entregas do Codex, que não está aqui).",
+    "Os 11 ícones de itens novos da loja (seção 2 do doc) não estão em Resources/Sprites/Loja (só há os 10 antigos); não faz parte do foco de eventos, mas ficou sem verificação de onde estariam.",
+    "git log local para no commit 4f19c15e (11/10/2026); não verifiquei se há commits/entregas mais recentes fora desta cópia."
+  ]
+}

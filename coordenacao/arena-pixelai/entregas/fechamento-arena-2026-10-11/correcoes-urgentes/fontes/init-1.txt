@@ -1,0 +1,66 @@
+status: completed
+id: 87238f14-352a-4691-9f74-9c95bf4ab077
+name: Guardião de Musgo
+state_name: Idle
+directions: 8 (south, east, north, west, south-east, north-east, north-west, south-west)
+size: 128x128px
+view: high top-down
+style: , ,
+group: 66b4e6af-6716-4577-9c3e-b7bc3711fb70 (1 state)
+
+rotations:
+  south: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/rotations/south.png?t=1791684470
+  east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/rotations/east.png?t=1791684470
+  north: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/rotations/north.png?t=1791684470
+  west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/rotations/west.png?t=1791684470
+  south-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/rotations/south-east.png?t=1791684470
+  north-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/rotations/north-east.png?t=1791684470
+  north-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/rotations/north-west.png?t=1791684470
+  south-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/rotations/south-west.png?t=1791684470
+
+animations (10 groups, 28 total):
+  walk — 4 dir (north-west, south-west, north-east, south-east), 7f 2026-10-11 [type=custom-The SAME moss-covered walking ] [group: 78e675db-6535-415c-8cfe-e080a5d89bbf]
+    north-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/d1b14329-79af-4b5c-b9e5-0e58d67bf649/north-west/{i}.png?t=1791742547362 (i=0..6)
+    south-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/64c6ff4f-405c-47c1-90ce-b7d27f83ad46/south-west/{i}.png?t=1791742468186 (i=0..6)
+    north-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/77aae97d-84ea-457e-9a08-8b3079d470c0/north-east/{i}.png?t=1791742292512 (i=0..6)
+    south-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/cf707bc6-44ea-4144-abdf-15e1a9df1f60/south-east/{i}.png?t=1791741254889 (i=0..6)
+  idle — 4 dir (south-west, north-east, south-east, north-west), 4f 2026-10-11 [type=breathing-idle] [group: aa7ea27d-1641-4cd4-994b-f17c3abb08d2]
+    south-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/e1c59d16-3559-46ba-ab2d-f49bd2a05865/south-west/{i}.png?t=1791691963780 (i=0..3)
+    north-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/c3deed9e-d561-4c78-8d32-8c8a0bc21c23/north-east/{i}.png?t=1791691895185 (i=0..3)
+    south-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/02c1d203-4114-465a-9b9a-b09647a3e27d/south-east/{i}.png?t=1791691892473 (i=0..3)
+    north-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/d0b30d98-23d8-4475-a10c-6cfbccd662ca/north-west/{i}.png?t=1791691882616 (i=0..3)
+  death — 2 dir (north-west, south-east), 9f 2026-10-11 [type=custom-The SAME mossy wooden guardian] [group: 863d0dfb-700b-4cae-acac-7bba006cac81]
+    north-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/58b5a885-1159-4df3-8e57-8f6f98882df8/north-west/{i}.png?t=1791691889814 (i=0..8)
+    south-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/3f440eaa-6499-4d53-8a68-64f235c148ea/south-east/{i}.png?t=1791691835053 (i=0..8)
+  death — 1 dir (south-west), 9f 2026-10-11 [type=custom-The SAME mossy wooden guardian] [group: d417771d-9212-42b3-885e-d67d8bf7bee7]
+    south-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/0f9e0cc7-caaf-4ff5-821c-f4c676e3ff58/south-west/{i}.png?t=1791691823286 (i=0..8)
+  death — 1 dir (north-east), 9f 2026-10-11 [type=custom-The SAME mossy wooden guardian] [group: 7c20dd63-aee8-4ae6-8d0b-6bf62eeb1915]
+    north-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/52ce0685-638e-47cf-809e-a63b55a10ec3/north-east/{i}.png?t=1791691815076 (i=0..8)
+  hit — 4 dir (north-west, south-west, north-east, south-east), 5f 2026-10-11 [type=custom-One small flinch from an unsee] [group: bd04d724-d974-4067-acd2-95ef85af86c0]
+    north-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/e31e5023-6aab-42e1-a77d-65787f60cf1c/north-west/{i}.png?t=1791691795999 (i=0..4)
+    south-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/02d9ee2a-b982-4ea3-a133-dc18fdb5f0cf/south-west/{i}.png?t=1791691781642 (i=0..4)
+    north-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/315f0861-65a8-4251-8c05-557dcb350108/north-east/{i}.png?t=1791691739452 (i=0..4)
+    south-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/93d56f89-a34f-402f-baeb-ecfde7e7f718/south-east/{i}.png?t=1791691721832 (i=0..4)
+  roots — 3 dir (north-east, north-west, south-east), 9f 2026-10-11 [type=custom-The SAME mossy wooden guardian] [group: 67b51431-7eaf-4638-81ea-a1f7a5ce2547]
+    north-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/89ac7c6e-f5e3-4921-91af-b1e4d29f50cd/north-east/{i}.png?t=1791691746267 (i=0..8)
+    north-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/ddb765b5-e496-4031-bb1d-ec34eccf6297/north-west/{i}.png?t=1791691744476 (i=0..8)
+    south-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/b7cc23b9-6abd-4795-ad02-033bcedc02f6/south-east/{i}.png?t=1791691744441 (i=0..8)
+  bark — 4 dir (south-west, north-east, north-west, south-east), 9f 2026-10-11 [type=custom-The SAME mossy wooden guardian] [group: cc9cc50f-2cb5-42e8-bede-63ce2600b62a]
+    south-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/39f8c0f9-8d15-439b-a2b3-7a0008bd473f/south-west/{i}.png?t=1791691724179 (i=0..8)
+    north-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/0ade0ff3-0603-48ea-97b9-0b6a2b82fcc3/north-east/{i}.png?t=1791691722430 (i=0..8)
+    north-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/12873e5c-704f-4348-babc-11af5da10cac/north-west/{i}.png?t=1791691722241 (i=0..8)
+    south-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/4244b39a-2c2a-42be-a2fb-7bbc54ab4046/south-east/{i}.png?t=1791691679471 (i=0..8)
+  roots — 1 dir (south-west), 9f 2026-10-11 [type=custom-The SAME mossy wooden guardian] [group: 1ccec8d5-8096-48c9-a53f-64e142d77616]
+    south-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/e235ec09-e95a-438c-88b5-a6b88cf2bab6/south-west/{i}.png?t=1791691702728 (i=0..8)
+  attack — 4 dir (north-west, north-east, south-west, south-east), 9f 2026-10-11 [type=custom-The SAME mossy bark guardian w] [group: 13a1e9f2-7f35-420e-a7ba-1451d8508fa8]
+    north-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/83a8ecd1-3e15-4345-8395-d12c4a88a93b/north-west/{i}.png?t=1791691602657 (i=0..8)
+    north-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/40f547d8-db72-4710-a398-7042dbde7006/north-east/{i}.png?t=1791691591687 (i=0..8)
+    south-west: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/05e89133-ef43-44b7-892c-1dc93fd7850a/south-west/{i}.png?t=1791691521531 (i=0..8)
+    south-east: https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/animations/77abcfef-19db-4a83-8172-2f4364cdf0b5/south-east/{i}.png?t=1791691485531 (i=0..8)
+
+download: https://api.pixellab.ai/mcp/characters/87238f14-352a-4691-9f74-9c95bf4ab077/download
+spritesheet: https://api.pixellab.ai/mcp/characters/87238f14-352a-4691-9f74-9c95bf4ab077/spritesheet (this state only — one uniform-grid sheet PNG + layout JSON, zipped; cells pivot-centred)
+
+available_animations: backflip, breathing-idle, cross-punch, crouched-walking, crouching, drinking, falling-back-death, fight-stance-idle-8-frames, fireball, flying-kick, front-flip, getting-up, high-kick, hurricane-kick, jumping-1, jumping-2, lead-jab, leg-sweep, picking-up, pull-heavy-object, pushing, roundhouse-kick, running-4-frames, running-6-frames, running-8-frames, running-jump, running-slide, sad-walk, scary-walk, surprise-uppercut, taking-punch, throw-object, two-footed-jump, walk, walk-1, walk-2, walking, walking-10, walking-2, walking-3, walking-4, walking-4-frames, walking-5, walking-6, walking-6-frames, walking-7, walking-8, walking-8-frames, walking-9
+
+actions: animate_character(character_id="87238f14-352a-4691-9f74-9c95bf4ab077", ...) | create_character_state(character_id="87238f14-352a-4691-9f74-9c95bf4ab077", ...) | delete_animation(character_id="87238f14-352a-4691-9f74-9c95bf4ab077", animation_group_id="<group>") | delete_character(character_id="87238f14-352a-4691-9f74-9c95bf4ab077")

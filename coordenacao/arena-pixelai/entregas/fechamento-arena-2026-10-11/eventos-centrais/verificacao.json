@@ -1,0 +1,155 @@
+{
+  "status": "passed",
+  "events": 12,
+  "frames": 144,
+  "generationCost": 0,
+  "coverage": "12 IDs presentes no Match.cs",
+  "checks": [
+    {
+      "id": "chuva-de-moedas",
+      "frames": 12,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "minMarginPx": 9,
+      "maxMeanRgbStep": 0.497,
+      "gifReplayExact": true,
+      "atlasExact": true
+    },
+    {
+      "id": "queda-de-pedras",
+      "frames": 12,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "minMarginPx": 7,
+      "maxMeanRgbStep": 0.834,
+      "gifReplayExact": true,
+      "atlasExact": true
+    },
+    {
+      "id": "terremoto",
+      "frames": 12,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "minMarginPx": 8,
+      "maxMeanRgbStep": 0.525,
+      "gifReplayExact": true,
+      "atlasExact": true
+    },
+    {
+      "id": "mare-de-lava",
+      "frames": 12,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "minMarginPx": 9,
+      "maxMeanRgbStep": 0.501,
+      "gifReplayExact": true,
+      "atlasExact": true
+    },
+    {
+      "id": "portal-caotico",
+      "frames": 12,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "minMarginPx": 9,
+      "maxMeanRgbStep": 0.894,
+      "gifReplayExact": true,
+      "atlasExact": true
+    },
+    {
+      "id": "eco-ancestral",
+      "frames": 12,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "minMarginPx": 9,
+      "maxMeanRgbStep": 0.522,
+      "gifReplayExact": true,
+      "atlasExact": true
+    },
+    {
+      "id": "mare-de-energia",
+      "frames": 12,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "minMarginPx": 9,
+      "maxMeanRgbStep": 0.966,
+      "gifReplayExact": true,
+      "atlasExact": true
+    },
+    {
+      "id": "festival-de-fogos",
+      "frames": 12,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "minMarginPx": 9,
+      "maxMeanRgbStep": 0.521,
+      "gifReplayExact": true,
+      "atlasExact": true
+    },
+    {
+      "id": "nevoeiro",
+      "frames": 12,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "minMarginPx": 9,
+      "maxMeanRgbStep": 1.27,
+      "gifReplayExact": true,
+      "atlasExact": true
+    },
+    {
+      "id": "vendaval",
+      "frames": 12,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "minMarginPx": 9,
+      "maxMeanRgbStep": 0.643,
+      "gifReplayExact": true,
+      "atlasExact": true
+    },
+    {
+      "id": "papa-moedas",
+      "frames": 12,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "minMarginPx": 9,
+      "maxMeanRgbStep": 0.648,
+      "gifReplayExact": true,
+      "atlasExact": true
+    },
+    {
+      "id": "errante",
+      "frames": 12,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "minMarginPx": 9,
+      "maxMeanRgbStep": 0.877,
+      "gifReplayExact": true,
+      "atlasExact": true
+    }
+  ],
+  "visualReview": "contato visto pelo Sol; formas distintas e contornos preservados",
+  "integration": "pendente_claude"
+}

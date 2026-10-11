@@ -1,0 +1,141 @@
+{
+  "status": "passed",
+  "assets": 5,
+  "allGlbsHaveMovingAnimation": true,
+  "loopsClosed": true,
+  "generationCostPixelLab": 0,
+  "checks": [
+    {
+      "id": "estandarte_da_clareira",
+      "trianglesExported": 144,
+      "animations": 1,
+      "movingChannels": [
+        {
+          "node": "pano_0",
+          "property": "rotation",
+          "keys": 49
+        },
+        {
+          "node": "pano_1",
+          "property": "rotation",
+          "keys": 49
+        },
+        {
+          "node": "pano_2",
+          "property": "rotation",
+          "keys": 49
+        }
+      ],
+      "durationSeconds": 2.0,
+      "loopClosed": true,
+      "previewGeometryNotExported": true
+    },
+    {
+      "id": "braseiro_de_obsidiana",
+      "trianglesExported": 188,
+      "animations": 1,
+      "movingChannels": [
+        {
+          "node": "chama_0",
+          "property": "scale",
+          "keys": 49
+        },
+        {
+          "node": "chama_1",
+          "property": "scale",
+          "keys": 49
+        },
+        {
+          "node": "chama_2",
+          "property": "scale",
+          "keys": 49
+        }
+      ],
+      "durationSeconds": 2.0,
+      "loopClosed": true,
+      "previewGeometryNotExported": true
+    },
+    {
+      "id": "fonte_de_geada",
+      "trianglesExported": 240,
+      "animations": 1,
+      "movingChannels": [
+        {
+          "node": "coroa_geada",
+          "property": "rotation",
+          "keys": 49
+        },
+        {
+          "node": "gota_0",
+          "property": "translation",
+          "keys": 49
+        },
+        {
+          "node": "gota_1",
+          "property": "translation",
+          "keys": 49
+        },
+        {
+          "node": "gota_2",
+          "property": "translation",
+          "keys": 49
+        },
+        {
+          "node": "gota_3",
+          "property": "translation",
+          "keys": 49
+        }
+      ],
+      "durationSeconds": 2.0,
+      "loopClosed": true,
+      "previewGeometryNotExported": true
+    },
+    {
+      "id": "cata_vento_solar",
+      "trianglesExported": 188,
+      "animations": 1,
+      "movingChannels": [
+        {
+          "node": "rotor",
+          "property": "rotation",
+          "keys": 49
+        }
+      ],
+      "durationSeconds": 2.0,
+      "loopClosed": true,
+      "previewGeometryNotExported": true
+    },
+    {
+      "id": "ampulheta_das_ruinas",
+      "trianglesExported": 288,
+      "animations": 1,
+      "movingChannels": [
+        {
+          "node": "grao_luz_0",
+          "property": "translation",
+          "keys": 49
+        },
+        {
+          "node": "grao_luz_1",
+          "property": "translation",
+          "keys": 49
+        },
+        {
+          "node": "grao_luz_2",
+          "property": "translation",
+          "keys": 49
+        },
+        {
+          "node": "runa_flutuante",
+          "property": "translation",
+          "keys": 49
+        }
+      ],
+      "durationSeconds": 2.0,
+      "loopClosed": true,
+      "previewGeometryNotExported": true
+    }
+  ],
+  "integration": "pendente_claude",
+  "limitation": "Nao testado no runtime Unity; arte/GLB e curvas validados."
+}
