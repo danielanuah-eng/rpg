@@ -2,7 +2,7 @@
 
 Entrega visual revisada conforme os pedidos do autor: **loja no meio, props também pelo interior, árvores diferentes por mapa e moedas deitadas no chão**. A versão anterior permanece preservada na pasta acima. Esta pasta é a entrega atual.
 
-Há cinco kits: **Pedreira, Bosque, Deserto, Neve e Vulcão**. O Bosque tem três composições editáveis: **Clareira e colina**, **Trilhas cruzadas** e **Terraços e lagoa**. São exemplos de composição; a geração e a integração no jogo continuam com o Claude.
+Há cinco kits: **Montanha rochosa, Bosque, Deserto, Neve e Vulcão**. A Montanha rochosa mantém o ID e a pasta `pedreira` para compatibilidade com o pedido original, e possui dois maciços em níveis, afloramentos angulares e pinheiros distribuídos pelo interior. O Bosque tem três composições editáveis: **Clareira e colina**, **Trilhas cruzadas** e **Terraços e lagoa**. São exemplos de composição; a geração e a integração no jogo continuam com o Claude.
 
 ## Arquivos
 
@@ -15,7 +15,7 @@ Há cinco kits: **Pedreira, Bosque, Deserto, Neve e Vulcão**. O Bosque tem trê
 - `manifestos/<tema>-distribuicao.json`: posições de exemplo e orientação para distribuição. O Bosque tem mais dois arquivos de distribuição, correspondentes às versões.
 - `manifestos/<tema>-validacao.json`: conferência dos arquivos exportados e das fontes reais.
 - `manifesto.json` e `validacao.json`: índice e resultados consolidados dos cinco kits.
-- `previews/`: renders de cada tema, versões do bosque, detalhes e comparação das árvores. `bosque-tres-versoes.png` mostra as três composições lado a lado.
+- `previews/`: renders de cada tema, versões do bosque, detalhes e comparação das árvores. `bosque-tres-versoes.png` mostra as três composições lado a lado. `quatro-cenarios.png` compara Deserto, Vulcão, Montanha rochosa e Neve.
 
 ## Composição solicitada pelo autor
 
@@ -45,4 +45,4 @@ Os relatórios registram reimportação real dos FBX, leitura dos GLB, escala/ei
 
 **Revisão visual 02: entregue para avaliação. Integração e testes no Unity: pendentes do Claude.** Nenhum código ou Asset do jogo foi alterado nesta entrega.
 
-Reprodução: Blender em background com `fontes/construir_cenarios.py -- --theme <tema>`, seguido de `fontes/validar_cenarios.py -- --theme <tema>`. `--preview-only` refaz somente as composições a partir do `.blend` existente; `--layout 2` restringe à terceira composição. Executar também `contato_texturas.py`, `comparar_arvores.py`, `comparar_versoes.py` e `consolidar_entrega.py`. Usar `--python-exit-code 1` para falhas interromperem o processo.
+Reprodução: Blender em background com `fontes/construir_cenarios.py -- --theme <tema>`, seguido de `fontes/validar_cenarios.py -- --theme <tema>`. `--preview-only` refaz somente as composições a partir do `.blend` existente; `--layout 2` restringe à terceira composição. Executar também `contato_texturas.py`, `comparar_arvores.py`, `comparar_versoes.py` e `consolidar_entrega.py`. `comparar_versoes.py -- --temas` gera a comparação dos quatro temas adicionais. Usar `--python-exit-code 1` para falhas interromperem o processo.

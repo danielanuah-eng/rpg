@@ -14,7 +14,7 @@
   "kits": [
     {
       "tema": "pedreira",
-      "nome": "Pedreira",
+      "nome": "Montanha rochosa",
       "pecas": 35,
       "manifesto": "manifestos/pedreira.json",
       "validacao": "manifestos/pedreira-validacao.json",
@@ -140,6 +140,7 @@
   "fontesComposicao": 7,
   "comparacaoArvores": "previews/arvores-cinco-temas.png",
   "comparacaoVersoes": "previews/bosque-tres-versoes.png",
+  "quatroCenariosPedidos": "previews/quatro-cenarios.png",
   "revisaoVisual": {
     "primeiraRevisao": "DeepSeek via OpenRouter conferiu as sete imagens",
     "registro": "fontes/revisao-visual-deepseek.log",

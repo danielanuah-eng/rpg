@@ -34,7 +34,8 @@ for theme in themes:
 alpha=json.loads((ROOT/'fontes'/'texturas-auditoria.json').read_text(encoding='utf-8'))
 assert len(alpha)==40 and all(c['alphaMin']==c['alphaMax']==1 and c['originalConfirmado'] for c in alpha)
 for path in ['previews/arvores-cinco-temas.png','fontes/arvores-cinco-temas.blend',
-             'previews/bosque-tres-versoes.png','fontes/bosque-tres-versoes.blend']:
+             'previews/bosque-tres-versoes.png','fontes/bosque-tres-versoes.blend',
+             'previews/quatro-cenarios.png','fontes/quatro-cenarios.blend']:
     assert (ROOT/path).is_file(),path
 manifest={'versao':2,'data':'2026-10-10','tarefa':'011','estado':'entregue_para_avaliacao',
           'direcaoAutor':['Loja no meio em qualquer mapa','Props distribuídos também pelo interior',
@@ -43,6 +44,7 @@ manifest={'versao':2,'data':'2026-10-10','tarefa':'011','estado':'entregue_para_
           'integracaoUnity':'pendente_do_Claude','kits':kits,'totalPecasPorFormato':total,
           'formatos':['FBX','GLB'],'fontesComposicao':len(checks),'comparacaoArvores':'previews/arvores-cinco-temas.png',
           'comparacaoVersoes':'previews/bosque-tres-versoes.png',
+          'quatroCenariosPedidos':'previews/quatro-cenarios.png',
           'revisaoVisual':{'primeiraRevisao':'DeepSeek via OpenRouter conferiu as sete imagens',
                           'registro':'fontes/revisao-visual-deepseek.log',
                           'ajustesPosteriores':['Abeto da Neve remodelado com ramos abertos para distinguir da Pedreira',

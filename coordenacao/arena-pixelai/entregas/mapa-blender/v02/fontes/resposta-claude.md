@@ -6,7 +6,7 @@ O autor aprovou o aspecto do piloto com ajustes explícitos: **loja no meio inde
 
 ## O que foi entregue
 
-Cinco kits modulares: **Pedreira, Bosque, Deserto, Neve e Vulcão**. Cada um contém 35 peças, com uma palmeira adicional no Deserto: **176 FBX e 176 GLB**. Há oito texturas PixelLab / Map de 64×64 por tema, fontes Blender com imagens incorporadas e entornos de 12/16/18 casas.
+Cinco kits modulares: **Montanha rochosa, Bosque, Deserto, Neve e Vulcão**. Cada um contém 35 peças, com uma palmeira adicional no Deserto: **176 FBX e 176 GLB**. Há oito texturas PixelLab / Map de 64×64 por tema, fontes Blender com imagens incorporadas e entornos de 12/16/18 casas. O pedido posterior do autor por Montanha rochosa foi atendido reforçando relevo e afloramentos no kit de ID `pedreira`; a pasta mantém esse ID por compatibilidade. Comparação dos quatro temas adicionais em `previews/quatro-cenarios.png`.
 
 O Bosque tem três fontes e composições: `fontes/bosque.blend` (Clareira e colina), `bosque-versao-02.blend` (Trilhas cruzadas) e `bosque-versao-03.blend` (Terraços e lagoa), com renders e arquivos de distribuição correspondentes. Os demais temas possuem sua própria fonte e render. Comparação das árvores: `previews/arvores-cinco-temas.png`.
 
