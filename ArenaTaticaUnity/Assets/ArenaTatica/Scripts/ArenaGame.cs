@@ -27,6 +27,14 @@ namespace ArenaTatica
         public ArenaTransport Network { get; private set; }
         public ArenaPresentation View { get; private set; }
         public ArenaHud Hud { get; private set; }
+        public ArenaMenu Menu { get; private set; }
+        public ArenaMapEditor MapEditor { get; private set; }
+        // Mapa salvo usado nas próximas partidas (aba Mapas); vazio = sorteado.
+        public string MapName="";
+        public bool EditingMap => MapEditor!=null&&MapEditor.Active;
+        // Modo de vitória e Galeões escolhidos no menu (Jogar).
+        public VictoryMode Victory=VictoryMode.Galeoes;
+        public int Galeoes=12;
         public string Status { get; private set; }="Escolha Mover ou uma skill e clique no tabuleiro.";
         // "" = Mover; senão o id da skill escolhida.
         public string Mode="";
@@ -46,8 +54,13 @@ namespace ArenaTatica
         public Fighter Active => State?.Active;
         // Armadilhas visíveis: Host vê as do P1 e aliados, cliente já recebe filtrado, jogo local mostra todas (0).
         public int ViewerTeam => Client?Seat:Network.IsHost?1:0;
-        public int LocalTeam => Client?Seat:Network.IsHost?1:(Active?.team??1);
-        public bool CanAct => Synced&&!Recovery&&!Lobby&&State!=null&&!State.over&&Active!=null&&Active.team==LocalTeam&&View.Ready&&!View.Busy;
+        public int LocalTeam => Client?Seat:Network.IsHost||BotsPlaying?1:(Active?.team??1);
+        public bool CanAct => Synced&&!Recovery&&!Lobby&&State!=null&&!State.over&&Active!=null&&Active.team==LocalTeam&&!IsBot(Active.team)&&View.Ready&&!View.Busy;
+        // Partida local contra bots (menu Jogar): P1 é a pessoa; P2 em diante, bots (Core.Bot). Em rede ainda não há bots.
+        public bool VsBots;
+        bool BotsPlaying => VsBots&&Network!=null&&Network.Role=="Local";
+        public bool IsBot(int seat) => BotsPlaying&&seat>=2&&seat<=MatchState.MaxPlayers;
+        float botWait; int botActions, botFighter=-1, botRevision=-1;
         // Regras de leitura (alcance, alvos) também no cliente, sobre o estado recebido.
         public Match Preview => Match??(preview!=null&&preview.S==State?preview:preview=Match.FromState(State));
         Match preview;
@@ -60,13 +73,14 @@ namespace ArenaTatica
         // Times escolhidos: Picks por assento na partida local; tokenPick pelo token na sala de rede.
         public string[][] Picks;
         readonly Dictionary<string,string[]> tokenPick=new Dictionary<string,string[]>();
-        // Regra do Krosmaster: soma de Nível até 12, sem repetir lutador; no máximo 4 (casas de início).
+        // Regra do Krosmaster: soma de Nível até 12, sem repetir lutador; no máximo 4 (casas de início); 1 Lendária por time.
         public const int TeamLevel=12, TeamSize=4;
         public static string[] ValidTeam(IEnumerable<string> ids)
         {
             var team=new List<string>(); int level=0;
             foreach(string id in ids??Array.Empty<string>()) {
                 if(team.Count>=TeamSize||team.Contains(id)||!Content.Roster.Contains(id)) continue;
+                if(Content.Fighters[id].legendary&&team.Any(x=>Content.Fighters[x].legendary)) continue;
                 int l=Content.Fighters[id].level; if(level+l>TeamLevel) continue;
                 team.Add(id); level+=l;
             }
@@ -79,17 +93,25 @@ namespace ArenaTatica
             set { PlayerPrefs.SetString("arena-time",string.Join(",",ValidTeam(value))); PlayerPrefs.Save(); }
         }
         // Seletor: times de cada assento local; a partida recomeça com eles.
-        public void StartLocal(string[][] picks) { Picks=picks.Select(ValidTeam).ToArray(); MyTeam=Picks[0]; NewLocal(); }
+        public void StartLocal(string[][] picks)
+        {
+            Picks=picks.Select(ValidTeam).ToArray(); MyTeam=Picks[0];
+            // Bots sem time escolhido: times aleatórios dentro da regra de Nível.
+            if(VsBots&&Picks.Length<Seats) Picks=Picks.Concat(Enumerable.Range(0,Seats-Picks.Length).Select(_=>ValidTeam(Content.Roster.OrderBy(__=>UnityEngine.Random.value)))).ToArray();
+            NewLocal();
+        }
         float lastPing,pingSent; long pingId; bool pingWaiting;
         int expired;
 
         void Awake()
         {
-            Application.targetFrameRate=60; Application.runInBackground=true;
+            Application.targetFrameRate=60; Application.runInBackground=true; ArenaMaps.Reset();
             NewMatch(Seats);
             Network=gameObject.AddComponent<ArenaTransport>();
             View=gameObject.AddComponent<ArenaPresentation>(); View.Game=this;
             Hud=gameObject.AddComponent<ArenaHud>(); Hud.Game=this;
+            Menu=gameObject.AddComponent<ArenaMenu>(); Menu.Game=this;
+            MapEditor=gameObject.AddComponent<ArenaMapEditor>(); MapEditor.Game=this;
             Network.Message+=Receive;
             Network.RoomReady+=code=> { GUIUtility.systemCopyBuffer=code; Hud.ShowRoom(code); room=code; LobbyStatus(); };
             Network.Connected+=peer=> {
@@ -115,12 +137,24 @@ namespace ArenaTatica
         void NewMatch(int players,bool flat=false,Func<int,string[]> pick=null)
         {
             var teams=FormatTeams(Format,players);
+            // As edições salvas neste aparelho valem para a partida local e para a sala que ele hospeda.
+            Content.ApplyEdits(ArenaEdits.Saved);
             pick??=seat=>Picks!=null&&seat<=Picks.Length?Picks[seat-1]:MyTeam;
-            var setup=new MatchSetup{ seed=(uint)Environment.TickCount|1, flatMap=flat, theme=Theme,
+            // Mapa salvo escolhido no menu: só vale se for do tamanho deste número de jogadores.
+            // Sorteado: um dos mapas do Codex do tamanho certo; ArenaMaps.Generated: o gerador do MapGen.
+            uint seed=(uint)Environment.TickCount|1; int size=Board.SizeFor(players);
+            var map=flat||MapName==ArenaMaps.Generated?null:MapName==""?ArenaMaps.Pick(size,seed):ArenaMaps.Find(MapName);
+            if(map!=null&&!MapGen.Fits(map,size)) { Debug.LogWarning($"Mapa {MapName} é para {MapGen.PlayersFor(map.width)} jogadores; usando um dos mapas do Codex."); map=ArenaMaps.Pick(size,seed); }
+            var setup=new MatchSetup{ seed=seed, flatMap=flat, theme=Theme, mode=Victory, galeoes=Galeoes, map=map,
                 players=Enumerable.Range(0,players).Select(i=>new PlayerSetup{team=teams?[i]??0,fighters=ValidTeam(pick(i+1))}).ToArray() };
             Match=Match.New(setup);
             State=Match.S; preview=null; Mode="";
+            ArenaStats.Begin();
         }
+        // Menu (Jogar): escolhas que valem para a próxima partida local ou sala.
+        public void SetSeats(int n) { if(Network.Role!="Local") { Status="Feche a sala para mudar o número de jogadores."; return; } Seats=Mathf.Clamp(n,2,MatchState.MaxPlayers); if(!FormatFits(Format,Seats)) Format="todos"; }
+        public void SetFormat(string f) { if(FormatFits(f,Seats)) Format=f; }
+        public void SetTheme(int t) { Theme=Mathf.Clamp(t,-1,MapGen.Themes.Length-1); }
         void Start() { View.Sync(State,true); StartCoroutine(CommandLineRun()); }
         void Update()
         {
@@ -128,17 +162,44 @@ namespace ArenaTatica
                 if(pingWaiting&&Time.unscaledTime-pingSent>3) { RecordProbe(true); pingWaiting=false; }
                 if(!pingWaiting&&Time.unscaledTime-lastPing>1) { lastPing=pingSent=Time.unscaledTime; pingId++; pingWaiting=true; Send(0,new WireMessage{kind="ping",ping=pingId}); }
             }
+            DriveBot();
+        }
+        // Turno do bot: uma ação por vez, depois da animação da anterior; no máximo 16 por turno (depois passa).
+        void DriveBot()
+        {
+            var f=Active;
+            if(Match==null||State==null||State.over||f==null||!IsBot(f.team)||!View.Ready||View.Busy) { botWait=0; return; }
+            if(f.id!=botFighter||State.revision<botRevision) { botFighter=f.id; botActions=0; }
+            botWait+=Time.deltaTime; if(botWait<.35f) return; botWait=0;
+            var cmd=botActions++>=16?new Command{kind="passar"}:Bot.Decide(Match);
+            cmd.fighter=f.id; cmd.revision=State.revision; botRevision=State.revision;
+            if(!Match.Apply(cmd,f.team,out var events,out var reason)) {
+                Debug.LogWarning($"Bot P{f.team} ({f.def}) {cmd.kind} {cmd.skill} recusado: {reason}");
+                cmd=new Command{kind="passar",fighter=f.id,revision=State.revision};
+                if(!Match.Apply(cmd,f.team,out events,out reason)) return;
+            }
+            State=Match.S; Mode="";
+            View.Play(events,State); ArenaStats.Record(events,State);
+            if(f!=Active) botFighter=-1;
         }
         void RecordProbe(bool lost) { probes.Enqueue(lost); if(lost) expired++; if(probes.Count>60&&probes.Dequeue()) expired--; }
         void ResetMetrics() { Rtt=0; Filtered=0; expired=0; probes.Clear(); pingWaiting=false; lastPing=Time.unscaledTime; }
         void ResetRoom() { tokenPick.Clear(); tokenSeat.Clear(); seatPeer.Clear(); peerSeat.Clear(); Lobby=false; Seat=0; }
         public void Notify(string text) { Status=text; }
+        // Editor de mapas: o tabuleiro mostra o mapa sendo editado, sem lutadores nem partida.
+        public void BeginMapEdit(MatchState board)
+        {
+            StopAllCoroutines(); Network.Close(); ResetRoom(); Recovery=false; Synced=true;
+            Match=null; preview=null; State=board; Mode=""; View.ResetView(State);
+            Status="Editor de mapas: escolha uma ferramenta e toque nas casas.";
+        }
         public void NewLocal()
         {
+            if(EditingMap) MapEditor.Close(false);
             StopAllCoroutines(); Network.Close(); ResetRoom(); Recovery=false; Synced=true;
             if(!FormatFits(Format,Seats)) Format="todos";
             NewMatch(Seats); throttle.Clear(); ResetMetrics(); View.ResetView(State);
-            Status=$"Partida local: {Seats} jogadores neste aparelho ({FormatName(Format)}).";
+            Status=VsBots?$"Partida contra {Seats-1} bot{(Seats>2?"s":"")} ({FormatName(Format)}). Você é o P1.":$"Partida local: {Seats} jogadores neste aparelho ({FormatName(Format)}).";
         }
         // Número de jogadores só muda fora da rede (as vagas do Relay são fixadas ao criar a sala).
         public void CycleSeats()
@@ -177,7 +238,7 @@ namespace ArenaTatica
             Leave(); room=code.Trim().ToUpperInvariant();
             Status="Entrando na sala "+room+"…"; Network.JoinRoom(code);
         }
-        void Leave() { StopAllCoroutines(); throttle.Clear(); ResetMetrics(); ResetRoom(); Recovery=false; Synced=false; Match=null; preview=null; View.CancelAnimations(); }
+        void Leave() { if(EditingMap) MapEditor.Close(false); StopAllCoroutines(); throttle.Clear(); ResetMetrics(); ResetRoom(); Recovery=false; Synced=false; Match=null; preview=null; View.CancelAnimations(); }
         // Token salvo por sala: quem fecha e reabre o jogo volta ao mesmo assento.
         string Token()
         {
@@ -261,7 +322,7 @@ namespace ArenaTatica
             if(Match.Apply(cmd,seat,out var events,out var reason)) {
                 State=Match.S; Mode="";
                 Status=cmd.kind=="passar"?"Turno encerrado.":cmd.kind=="comprar"?"Compra feita.":"Ação confirmada.";
-                View.Play(events,State);
+                View.Play(events,State); ArenaStats.Record(events,State);
                 if(Network.IsHost) foreach(var kv in seatPeer)
                     Send(kv.Value,new WireMessage{kind="state",state=Match.ViewFor(State,kv.Key),events=Match.EventsFor(events,State,kv.Key).ToArray()});
             } else { Status=reason; if(Network.IsHost&&seatPeer.TryGetValue(seat,out int peer)) Send(peer,new WireMessage{kind="reject",text=reason}); }
@@ -276,7 +337,7 @@ namespace ArenaTatica
             for(int p=1;p<=s.players;p++) if(s.alliance[p]<1||s.alliance[p]>s.players) return false;
             var ids=new HashSet<int>(); var cells=new HashSet<Cell>();
             foreach(var f in s.fighters) {
-                if(f==null||!ids.Add(f.id)||f.team<1||f.team>s.players||f.def==null||!Content.Fighters.ContainsKey(f.def)) return false;
+                if(f==null||!ids.Add(f.id)||(f.team<1||f.team>s.players)&&f.team!=MatchState.Neutral||f.def==null||!Content.Fighters.ContainsKey(f.def)) return false;
                 if(f.hp<0||f.hp>Content.MaxHp(f)||f.pa<0||f.pm<0||!Board.Contains(s,f.cell)) return false;
                 if(f.Alive&&!cells.Add(f.cell)) return false;
             }
@@ -300,10 +361,12 @@ namespace ArenaTatica
             if(m.kind=="lobby") { if(m.seat>=2&&m.seat<=MatchState.MaxPlayers) Seat=m.seat; Lobby=true; Status=$"Na sala como P{Seat} · {m.text}. Aguardando o Host iniciar."; return; }
             if(m.kind=="reject") { Status=m.text??"Ação recusada."; return; }
             if(m.kind!="snapshot"&&m.kind!="state") return;
+            // Fichas do Host valem na sala (o cliente confere PV máximos e skills com elas).
+            if(m.state!=null) Content.ApplyEdits(m.state.edits);
             if(Seat==0||!ValidState(m.state)||Seat>m.state.players||(!Synced&&m.kind!="snapshot")||(Synced&&State!=null&&m.state.revision<=State.revision&&m.kind!="snapshot")) return;
             bool initial=m.kind=="snapshot";
             State=m.state; preview=null; Synced=true; Recovery=false; Lobby=false; Mode="";
-            if(initial) View.ResetView(State); else View.Play(m.events?.ToList()??new List<GameEvent>(),State);
+            if(initial) { View.ResetView(State); ArenaStats.Begin(); } else { var list=m.events?.ToList()??new List<GameEvent>(); View.Play(list,State); ArenaStats.Record(list,State); }
             Status=$"Partida sincronizada. Você é P{Seat}.";
         }
         IEnumerator CommandLineRun()

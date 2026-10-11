@@ -9,4 +9,4 @@
   - a barra de cima cabe em 1280 px.
 - Evento `trava`: usa o mesmo `RollDice`, com as legendas Trava/Esquiva. Ainda não há captura.
 - Regras: o manual foi lido e registrado no DESIGN, sem mudanças. As diferenças (Cataclisma, coringa Esquiva/Trava, Escudo −1, Trava tira todo PA e PM) são escolhas nossas. A comparação crítico/armadura fica para o PvPvE.
-- 012 (nitidez): ainda não há capturas em retrato nem em 2400 px, porque o monitor limita a janela a 1080 px de altura. Medida em 1280×720: a Ciantia tem cerca de 45 px visíveis, e em 1920×1080 cerca de 90 px. Próximo passo: retrato da unidade selecionada na HUD, com 96 a 128 px.
+- 012 (nitidez): ainda não há capturas em retrato nem em 2400 px, porque o monitor limita a janela a 1080 px de altura. Medida em 1280×720: a Ciantia tem cerca de 45 px visíveis, e em 1920×1080 cerca de 90 px. O retrato do lutador ativo está pronto: fica no canto inferior esquerdo da mesa (paisagem), com cerca de 120 px de arte e nome e PV embaixo. Captura: `Artifacts/shots-1280x720-5.png`. Ainda falta decidir o multiplicador de 1,15 no sprite da mesa.

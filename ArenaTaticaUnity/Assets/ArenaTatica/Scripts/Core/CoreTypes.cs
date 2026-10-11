@@ -20,17 +20,24 @@ namespace ArenaTatica
 // Núcleo estilo Krosmaster (Documentacao/DESIGN-KROSMASTER.md). C# puro, determinístico, roda no Host.
 namespace ArenaTatica.Core
 {
-    public enum Terrain { Livre, Arbusto, Arvore, Caixa }
+    // Loja: as 4 casas do meio são a barraca do mascate (decisão do autor, 11/10): ninguém entra e ela tapa a visão.
+    public enum Terrain { Livre, Arbusto, Arvore, Caixa, Loja }
     // A face de crítico do Krosmaster virou Cataclisma (decisão 11); o coringa Crítico/Esquiva virou Esquiva/Trava.
     public enum Face { Cataclisma, Escudo, Trava, Esquiva, CoringaEsquivaTrava, Coringa }
     public enum VictoryMode { Galeoes, Eliminacao, Tesouro, Dominio }
     // Teleporte: vai para casa livre sem caminho. Salto: alvo inimigo, cai na casa livre vizinha a ele mais perto de quem salta.
     // Forma: muda a forma do próprio lutador (arma, transformação). Esconder: fica invisível junto a relevo mais alto, árvore ou caixa.
     // Espelho: ganha 1 uso da última skill que o alvo usou.
-    public enum SkillKind { Dano, Invocacao, Cura, Armadilha, Teleporte, Salto, Forma, Esconder, Espelho }
+    // Suporte: cura e/ou buff em aliados (alvo, área ou em volta de si) e pode invocar. Zona: efeito nas casas (chão de gelo).
+    // Comando: ordem a uma invocação sem turno (gatos da Asamyh): step = andar; senão ela usa a 1ª skill dela e some.
+    // Reviver: volta um aliado nocauteado numa casa vizinha. Desejo: canaliza 2 turnos e escolhe uma opção (wish a..f).
+    // Aura (Baltazar): liga/desliga em si; ligada, cobra pa no começo de cada turno do dono e cura heal nos aliados e fere damage nos
+    // inimigos até area casas, 1 vez por alvo por turno do dono. Sem PA para manter, desliga. Novos tipos sempre no fim (as edições guardam o número).
+    public enum SkillKind { Dano, Invocacao, Cura, Armadilha, Teleporte, Salto, Forma, Esconder, Espelho, Suporte, Zona, Comando, Reviver, Desejo, Aura }
     public enum ShopKind { Item, Magia, Pet, Armadilha, Buff }
 
-    [Serializable] public class Tile { public int height, coins, trap, trapDamage; public Terrain terrain; public bool zone; }
+    // lava/mark: eventos (maré de lava, fogos). frozenBy: lutador que congelou a casa (+1 PM para entrar). trapPa: mina de gelo.
+    [Serializable] public class Tile { public int height, coins, trap, trapDamage, trapPa, frozenBy; public Terrain terrain; public bool zone, lava, mark; }
 
     [Serializable] public class SkillDef
     {
@@ -48,9 +55,20 @@ namespace ArenaTatica.Core
         public bool ultimate;
         public string form, toForm, anim;
         public bool endsForm, precise, wild;
+        // Efeitos genéricos (editor de skills): pierce ignora armadura e Escudo; push empurra N casas; pull puxa até colar;
+        // paLoss: alvo perde PA no próximo turno; prison: preso N turnos (não age nem é alvo; escapa com Esquiva);
+        // selfArea: área em volta de quem usa (square = as 8 casas); foes: a área só pega inimigos; isolatedBonus: dano a mais
+        // se o alvo não tem aliado colado; minRound: só a partir dessa rodada. Suporte: heal e buffPa/Pm/Armor/Range por turns.
+        // freeze (Zona): casas congeladas. noCover (Esconder): esconde sem relevo. maxActive: invocações ativas do mesmo grupo
+        // (summon pode sortear entre "a|b|c"); summonCount: quantas invoca de uma vez. step (Comando): casas que a invocação anda.
+        public bool pierce, pull, selfArea, square, foes, freeze, noCover;
+        public int push, paLoss, prison, isolatedBonus, minRound, heal, buffPa, buffPm, buffArmor, buffRange, maxActive, summonCount, step;
+        public string wish;
+        public SkillDef Clone() => (SkillDef)MemberwiseClone();
     }
     // Forma do lutador (arma do Damian, Berserk do Tchu tcha): bônus enquanto dura e a pasta de sprites dela.
-    [Serializable] public class FormDef { public string id, name, sprites; public int pa, pm, armor; public bool noGuard; }
+    // pose: clipe cujo último quadro vira a pose parada nessa forma (Damian segurando o canhão ou o martelo), enquanto não há idle próprio.
+    [Serializable] public class FormDef { public string id, name, sprites, pose; public int pa, pm, armor; public bool noGuard; }
     [Serializable] public class FighterDef
     {
         public string id, name, sprites;
@@ -61,6 +79,11 @@ namespace ArenaTatica.Core
         // guard = aliados até 2 casas levam 1 a menos e ele leva esse 1; steal = % de roubar 1 moeda ao acertar; illusion = começa com uma cópia ilusória.
         public int allyBonus, auraRange, revive, steal;
         public bool guard, illusion, picker=true;
+        // armor: armadura fixa (Rei Bobett). legendary: 1 por time. immovable: não é empurrado, puxado nem trocado. devour: rouba a
+        // skill de quem nocauteia (Colosso). noTurn: invocação sem turno (gatos, totem). noLock: não trava. neutral: time neutro.
+        // healAura: no turno do dono, cura aliados até 2 casas.
+        public int armor, healAura;
+        public bool legendary, immovable, devour, noTurn, noLock, neutral;
         public string startForm;
         public FormDef[] forms;
     }
@@ -69,12 +92,16 @@ namespace ArenaTatica.Core
     {
         public string id, name;
         public ShopKind kind;
-        public int price, weight=1, pa, pm, hp, armor, range, turns, uses=1;
+        public int price, weight=1, pa, pm, hp, armor, range, turns, uses=1, thorns;
+        public bool anchor, climb, focus;
         public SkillDef skill;
     }
-    [Serializable] public class Buff { public string id; public int turns, pa, pm, armor, range; }
+    // extra: +1 uso de cada skill por turno (Desejo C).
+    [Serializable] public class Buff { public string id; public int turns, pa, pm, armor, range, extra; }
     [Serializable] public class Charge { public string skill; public int uses; }
     [Serializable] public class TeamShop { public string[] slots=new string[0]; }
+    // Fichas editadas pelo autor (Content.ApplyEdits).
+    [Serializable] public class GameEdits { public List<FighterDef> fighters=new List<FighterDef>(); }
     [Serializable] public class Fighter
     {
         public int id, team, hp, pa, pm, summoner, bonusPa, bonusPm, bonusHp, armor, bonusRange;
@@ -85,6 +112,15 @@ namespace ArenaTatica.Core
         public string form, disguise, lastSkill, lastAttack;
         public int formTurns;
         public bool hidden, revived;
+        // prisoned: turnos preso. channel: turnos de canalização do Desejo; wishReady: escolhe a opção. carried: moedas comidas
+        // (papa-moedas). ai: contador da IA neutra. Itens: anchored (âncora), climber (gancho), focused (cristal), thorns (manto).
+        public int prisoned, channel, carried, ai, thorns;
+        public bool wishReady, anchored, climber, focused, focusUsed;
+        // Aura do Baltazar: ligada e já paga neste turno (desligar e religar no mesmo turno não cobra nem aplica de novo).
+        public bool auraOn, auraPaid;
+        // stolen: skills devoradas (Colosso, +1 PA). learned: skills copiadas pelo Desejo.
+        public List<string> stolen=new List<string>();
+        public List<string> learned=new List<string>();
         public List<string> usedMatch=new List<string>();
         public List<string> used=new List<string>();
         public List<Charge> charges=new List<Charge>();
@@ -105,18 +141,35 @@ namespace ArenaTatica.Core
         public int theme=-1;
         // Vazio = duelo com team1 e team2.
         public PlayerSetup[] players;
+        // Mapa feito no editor (aba Mapas); null ou de outro tamanho = mapa sorteado.
+        public MapDef map;
         public string[] team1={"ciantia"}, team2={"ciantia"};
     }
+    // Mapa do editor: relevo, peças (árvore, arbusto, caixa) e zona central de cada casa. width = Board.SizeFor(jogadores).
+    // theme -1 = cenário sorteado. As casas de início ficam sempre livres (MapGen.Load).
+    [Serializable] public class MapDef { public string name=""; public int width=Board.Size, theme=-1; public Tile[] tiles; public List<Decor> decor=new List<Decor>(); }
+    // Peça do kit Blender do Codex (Models/Mapa/<cenário>/<piece>) em coordenadas de casa (x,z podem ter fração); rot em graus.
+    // Só visual. Numa casa com árvore/arbusto/caixa, a peça do mesmo tipo (MapGen.SkinTerrain) troca o modelo padrão;
+    // as demais (enfeite_*, relicario_solar...) são enfeites por cima do piso.
+    [Serializable] public class Decor { public string piece=""; public float x, z, rot, scale=1; }
     [Serializable] public class MatchState
     {
-        public const int MaxPlayers=6;
+        // Neutral: time dos neutros dos eventos (papa-moedas, Brutamontes Errante); não tem moedas, loja nem Galeões.
+        public const int MaxPlayers=6, Neutral=7;
         public int width=Board.Size, height=Board.Size, round=1, active, revision=1, winner, nextId=1, target, players=2;
         public uint rng;
         // Só visual: paleta e enfeites do cenário (MapGen.Themes).
         public int theme;
         public bool over;
         public VictoryMode mode;
+        // Evento com duração ativo (EVENTOS-LOJA-ELENCO.md): id e rodadas que faltam; vazio = nenhum.
+        public string ev="";
+        public int evRounds;
+        // Edições do autor em vigor nesta partida (as do Host valem para todos).
+        public string edits="";
         public Tile[] tiles;
+        // Enfeites e modelos do mapa (só visual, iguais em todos os aparelhos).
+        public List<Decor> decor=new List<Decor>();
         public List<Fighter> fighters=new List<Fighter>();
         public List<int> timeline=new List<int>();
         // Índice 0 sem uso. Fighter.team, coins e shops são por jogador; galeoes, collected, domain e eliminated por time (alliance[jogador]).
@@ -130,6 +183,7 @@ namespace ArenaTatica.Core
         public Cell Mirror(Cell c) => new Cell(width-1-c.x,height-1-c.z);
         public int Team(int player) => player>=1&&player<=MaxPlayers?alliance[player]:0;
         public bool Ally(int a,int b) => a==b||(Team(a)!=0&&Team(a)==Team(b));
+        public static bool Player(int team) => team>=1&&team<=MaxPlayers;
         // Times ainda na partida, na ordem dos assentos.
         public List<int> Teams() { var list=new List<int>(); for(int p=1;p<=players;p++) if(!list.Contains(alliance[p])) list.Add(alliance[p]); return list; }
         // Times de verdade (3v3, 2v2v2) ou todos contra todos.

@@ -15,17 +15,19 @@ namespace ArenaTatica.Core
         public static bool Contains(MatchState s,Cell c) => c.x>=0&&c.z>=0&&c.x<s.width&&c.z<s.height;
         public static Fighter At(MatchState s,Cell c) => s.fighters.Find(f=>f.Alive&&f.cell==c);
         public static bool Walkable(MatchState s,Cell c,bool flying) { var t=s.At(c).terrain; return t==Terrain.Livre||(flying&&t==Terrain.Arbusto); }
-        public static int StepCost(MatchState s,Cell a,Cell b,bool flying)
+        // Gancho de escalada (climber): subir 2 custa 1 e dá para subir 3 (2 PM). Casa congelada: +1 PM (voador não sente).
+        public static int StepCost(MatchState s,Cell a,Cell b,bool flying,bool climber=false)
         {
             if(!Contains(s,b)||!Walkable(s,b,flying)) return -1;
             if(flying) return 1;
-            int up=s.At(b).height-s.At(a).height;
-            return up>=3?-1:up==2?2:1;
+            int up=s.At(b).height-s.At(a).height, ice=s.At(b).frozenBy!=0?1:0;
+            if(climber) return up>=4?-1:(up==3?2:1)+ice;
+            return up>=3?-1:(up==2?2:1)+ice;
         }
         // Custo mínimo em PM até cada casa (Dijkstra); int.MaxValue = inalcançável. Lutadores são obstáculos.
         public static int[] Costs(MatchState s,Fighter f,bool ignoreFighters=false)
         {
-            bool flying=Content.Def(f).flying;
+            bool flying=Content.Def(f).flying, climber=f.climber;
             int n=s.width*s.height; var dist=new int[n]; var done=new bool[n];
             for(int i=0;i<n;i++) dist[i]=int.MaxValue;
             dist[Index(s,f.cell)]=0;
@@ -37,7 +39,7 @@ namespace ArenaTatica.Core
                 done[best]=true; var c=new Cell(best%s.width,best/s.width);
                 foreach(var d in Dirs)
                 {
-                    var nb=c+d; int cost=StepCost(s,c,nb,flying);
+                    var nb=c+d; int cost=StepCost(s,c,nb,flying,climber);
                     if(cost<0||(!ignoreFighters&&At(s,nb)!=null)) continue;
                     int i=Index(s,nb); if(dist[best]+cost<dist[i]) dist[i]=dist[best]+cost;
                 }
@@ -56,7 +58,7 @@ namespace ArenaTatica.Core
                 foreach(var d in Dirs)
                 {
                     var p=c+d; if(!Contains(s,p)||dist[Index(s,p)]==int.MaxValue) continue;
-                    int cost=StepCost(s,p,c,flying);
+                    int cost=StepCost(s,p,c,flying,f.climber);
                     if(cost>0&&dist[Index(s,p)]+cost==dist[Index(s,c)]) { prev=p; found=true; break; }
                 }
                 if(!found) return null;
@@ -83,7 +85,7 @@ namespace ArenaTatica.Core
         {
             if(a==b||!Contains(s,a)||!Contains(s,b)) return false;
             int low=Math.Min(s.At(a).height,s.At(b).height);
-            bool Blocked(Cell c) { if(c==b) return false; if(!Contains(s,c)) return true; var t=s.At(c); return t.terrain==Terrain.Arvore||t.terrain==Terrain.Caixa||t.height>=low+2; }
+            bool Blocked(Cell c) { if(c==b) return false; if(!Contains(s,c)) return true; var t=s.At(c); return t.terrain==Terrain.Arvore||t.terrain==Terrain.Caixa||t.terrain==Terrain.Loja||t.height>=low+2; }
             int nx=Math.Abs(b.x-a.x), nz=Math.Abs(b.z-a.z), sx=Math.Sign(b.x-a.x), sz=Math.Sign(b.z-a.z), ix=0, iz=0;
             var cur=a;
             while(ix<nx||iz<nz)

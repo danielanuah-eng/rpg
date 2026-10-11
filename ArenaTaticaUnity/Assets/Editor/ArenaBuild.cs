@@ -58,7 +58,8 @@ public static class ArenaBuild
             var importer=(TextureImporter)AssetImporter.GetAtPath(path); if(importer==null) continue;
             var pixels=new Texture2D(2,2); pixels.LoadImage(File.ReadAllBytes(path));
             // Projeteis/<skill>.png é uma imagem única (pode ser larga); o resto, tira de quadros quadrados.
-            bool single=path.Contains("/Projeteis/");
+            // Ceus/<id>/fundo.png e nuvens.png (tarefa 015) também são imagens únicas e largas.
+            bool single=path.Contains("/Projeteis/")||path.Contains("/Ceus/");
             int w=pixels.width,h=pixels.height,frames=w>h&&!single?w/h:1,size=frames>1?h:w;
             int foot=h; var data=pixels.GetPixels32();
             for(int i=0;i<data.Length;i++) if(data[i].a>40) { foot=i/w; break; }
@@ -120,6 +121,42 @@ public static class ArenaBuild
         Debug.Log($"ARENA_BUILD_{report.summary.result}: {target}; {report.summary.totalErrors} erros");
         if(report.summary.result!=BuildResult.Succeeded) throw new Exception("Build falhou: "+target);
     }
+}
+// Atalhos de conferência no Play (o eval do MCP falha no Play por causa do Á no caminho): partida montada e ação do lutador ativo.
+static class ArenaTestMenu
+{
+    static ArenaGame Game => UnityEngine.Object.FindFirstObjectByType<ArenaGame>();
+    static void Start(bool bots,params string[][] teams) { var g=Game; if(!g) return; g.Menu?.Close(); g.VsBots=bots; g.StartLocal(teams); }
+    [MenuItem("Arena Tática/Teste/Damian e Baltazar contra bot")] static void DamianBaltazar() => Start(true,new[]{"damian","baltazar"},new[]{"ogro-de-pedra","perry"});
+    [MenuItem("Arena Tática/Teste/Baltazar contra bot")] static void Baltazar() => Start(true,new[]{"baltazar"},new[]{"ogro-de-pedra"});
+    [MenuItem("Arena Tática/Teste/Tchu tcha contra bot")] static void TchuTcha() => Start(true,new[]{"tchu-tcha"},new[]{"ciantia"});
+    [MenuItem("Arena Tática/Teste/Bots contra bots")] static void BotsOnly() { Start(true,new[]{"baltazar","perry"},new[]{"damian","teantha"}); }
+    static void Self(string skill) { var g=Game; var f=g?.Active; if(f!=null) g.Submit("skill",f.cell,skill); }
+    [MenuItem("Arena Tática/Teste/Ativo: martelo (Damian)")] static void Hammer() => Self("camaleao-martelo");
+    [MenuItem("Arena Tática/Teste/Ativo: canhão (Damian)")] static void Cannon() => Self("camaleao-canhao");
+    [MenuItem("Arena Tática/Teste/Ativo: aura (Baltazar)")] static void Aura() => Self("baltazar-dualidade");
+    [MenuItem("Arena Tática/Teste/Ativo: Olho abissal (Tchu tcha)")] static void Berserk() => Self("olho-abissal");
+    [MenuItem("Arena Tática/Teste/Editor de mapas (sorteado 12×12)")] static void MapEditor() => Game?.MapEditor.Open(ArenaTatica.Core.MapGen.NewMap(12,7));
+    [MenuItem("Arena Tática/Teste/Editor: árvores no meio e caixa movida")] static void MapEdits()
+    {
+        var e=Game?.MapEditor; if(e==null||!e.Active) return;
+        e.SetTool("arvore"); e.Tap(new Cell(5,3)); e.Tap(new Cell(6,3));
+        e.SetTool("subir"); e.Tap(new Cell(3,4)); e.Tap(new Cell(3,4));
+        e.SetTool("mover"); e.Tap(new Cell(5,3)); e.Tap(new Cell(8,4));
+        e.SetTool("modelo"); e.Tap(new Cell(6,3)); e.Tap(new Cell(6,3));
+        e.SetTool("enfeite"); e.Tap(new Cell(3,6)); e.Tap(new Cell(2,6));
+    }
+    [MenuItem("Arena Tática/Teste/Editor: salvar e jogar")] static void MapSavePlay() => Game?.MapEditor.Save(true);
+    // Percorre os mapas do Codex (Resources/Mapas/codex.json) numa partida contra bot, e gira a vista.
+    static int codexMap=-1;
+    [MenuItem("Arena Tática/Teste/Mapa do Codex: próximo")] static void NextCodexMap()
+    {
+        var g=Game; if(!g) return; var list=ArenaMaps.Builtin; if(list.Count==0) return;
+        codexMap=(codexMap+1)%list.Count; var map=list[codexMap]; g.MapName=map.name; g.SetSeats(ArenaTatica.Core.MapGen.PlayersFor(map.width));
+        Start(true,Enumerable.Range(0,g.Seats).Select(i=>i==0?new[]{"baltazar","damian"}:new[]{"ogro-de-pedra"}).ToArray()); Debug.Log("Mapa: "+map.name);
+    }
+    [MenuItem("Arena Tática/Teste/Girar vista")] static void Rotate() => Game?.View.RotateView(1);
+    [MenuItem("Arena Tática/Teste/Ativo: passar")] static void Pass() => Game?.Submit("passar");
 }
 // O Play do editor sempre começa pela Arena, mesmo com outra cena (ou uma vazia) aberta.
 [InitializeOnLoad]

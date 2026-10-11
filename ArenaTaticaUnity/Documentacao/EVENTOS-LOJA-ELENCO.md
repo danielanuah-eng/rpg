@@ -158,7 +158,7 @@ Gnomo baixinho e branco, de roupa real, com cachimbo de ouro, anéis, bigodinho,
   - Se não escapar, fica preso numa estrutura durante **o próximo turno dele**: não anda, não usa skills e **não pode ser alvo**.
 
 **Ultimate — Desejo ⚙**
-- **Disponibilidade:** 1 vez por partida, a partir da **rodada 15** (`minRound`).
+- **Disponibilidade:** 1 vez por partida, a partir da **rodada 10** (`minRound`; decisão do autor em 10/10, antes 15).
 - **Uso:**
   1. No 1º turno, o Kellen usa todo o PA para começar o Desejo.
   2. No 2º turno, segue canalizando e só pode passar.
@@ -168,10 +168,9 @@ Gnomo baixinho e branco, de roupa real, com cachimbo de ouro, anéis, bigodinho,
   - **A:** revive um aliado com metade dos PV numa casa vizinha.
   - **B:** cura 100% de qualquer lutador.
   - **C:** um aliado ganha PA dobrado e +1 uso de cada skill por turno no próximo turno.
-  - **D:** copia para sempre uma skill de qualquer lutador do elenco, menos o Desejo.
-  - **E:** dois itens quaisquer do catálogo, de graça e à distância, para ele ou um aliado.
+  - **D:** copia para sempre a skill mais forte (não ultimate) de um lutador do mapa, menos o Desejo.
+  - **E:** os 2 produtos mais caros da loja dele, de graça e à distância, para ele ou um aliado (a loja se renova).
   - **F:** cancela o evento com duração ativo. A opção F fica indisponível se não houver evento.
-- **Atenção:** com 12 Galeões, muitas partidas acabam antes da rodada 15. Se o Desejo quase nunca aparecer, dá para baixar para a rodada 10. Decisão do autor.
 
 ### Fichas extras (variedade de mecânicas)
 | Lutador | Nível | Atributos | Mecânica |
@@ -204,3 +203,45 @@ Gnomo baixinho e branco, de roupa real, com cachimbo de ouro, anéis, bigodinho,
 5. **Mecânicas únicas:** prisão (Kellen), Devorar técnica (Colosso), gatos comandados (Asamyh), Lendária no seletor e, por último, o Desejo, que tem um comando com opção.
 
 Cada passo leva testes em `CoreMatchTests.cs`, além de smoke e contrato de rede. O estado novo (`event`, neutros, casas congeladas e presos) entra no snapshot filtrado.
+
+---
+
+## Estado da implementação (10/10, autorizado pelo autor; Desejo na rodada 10)
+
+**Validação:** tudo implementado no núcleo, na apresentação, na HUD e no menu.
+- 49/49 EditMode, sendo 20 testes novos.
+- Build Windows, fumaça (local, host e cliente) e contrato de rede (10 cenários) passando.
+
+**Núcleo (`Core/`)**
+- **Eventos:** `Match.Cataclysms` traz id, peso e rodadas. O estado guarda `S.ev`/`S.evRounds`. `TickEvent` roda no fim da rodada e `EndEvent` desfaz o que o evento deixou.
+- **Neutros:** ficam no time `MatchState.Neutral` (7), fora da linha do tempo, e agem em `Neutrals()`. Quem nocauteia um neutro recebe a recompensa.
+- **Skills genéricas, as mesmas do editor:** `pierce`, `push`, `pull`, `paLoss`, `prison`, `selfArea`, `square`, `foes`, `isolatedBonus`, `minRound`, `heal`, `buffPa`/`buffPm`/`buffArmor`/`buffRange`/`turns`, `maxActive`, `summonCount`, `step`, `freeze` e `noCover`.
+- **Tipos novos:** `Suporte`, `Zona`, `Comando`, `Reviver` e `Desejo`.
+- **Lutador:** `armor` fixa, `legendary`, `immovable`, `devour`, `noTurn`, `noLock`, `neutral` e `healAura`.
+- **Itens:** `anchor`, `climb`, `focus` e `thorns`.
+- **Edições do autor:** `Content.ApplyEdits`, gravadas no aparelho em `arena-edicoes.json`. O estado leva `edits`, então as fichas do Host valem para toda a sala.
+- **Ajuste dos dados:** nas skills em volta de si, os dados aparecem no evento `area`.
+
+**Apresentação**
+- **Eventos novos:** `area`, `zona`, `comando`, `sumir`, `empurrao`/`puxao`, `colisao`, `firme`, `prisao`, `preso`, `escapou`, `buff`, `suporte`, `reviver`, `desejo`, `canalizar`, `desejo-pronto`, `aprender`, `devorar`, `recompensa`, `lava`, `espinhos`, `explosao`, `dano-evento`, `comer`, `evento-tick` e `evento-fim`.
+- **Marcadores:** casas de lava, gelo e fogos, e a gaiola da prisão.
+- **Céu:** um por cenário e um por evento.
+- **Sem a arte do Codex:** aparecem placas coloridas e clarões no lugar.
+
+**HUD**
+- 8 botões de skill, que passam a 2 colunas quando há mais de 4.
+- Skill gasta aparece como "usada" e a que ainda não liberou mostra "rodada N".
+- Botão Menu.
+- Seletor com 20 lutadores e regra de 1 Lendária.
+
+**Menu (`ArenaMenu.cs`, frontend do APK)**
+- **Abas:** Início, Jogar, Personagens, Loja e eventos, Editor, Estatísticas, Regras e Opções.
+- **Jogar:** jogadores, formato, vitória, quantidade de Galeões, cenário, partida local ou rápida, sala pela internet, LAN e código.
+- **Editor:** muda a ficha e cada skill. Também cria skills a partir de modelos: dano, disparo, cura, suporte, aura em grupo, empurrão, puxão, prisão, grito em grupo e zona de gelo.
+- **Estatísticas:** contadas por aparelho.
+- **Capturas de todas as abas:** `ArenaTatica.exe --arena-menu-shot <caminho absoluto>`.
+
+**Limites conhecidos**
+- **Desejo D:** copia a skill mais forte, que não seja ultimate, do lutador clicado. Não há uma lista para escolher.
+- **Desejo A e Pena de fênix:** revivem o aliado nocauteado de maior Nível.
+- **Baú do chefe:** o item cai direto em quem o derrotou.

@@ -285,5 +285,277 @@ namespace ArenaTatica.Core.Tests
             Assert.IsTrue(Buy()); Assert.IsTrue(Do("skill",new Cell(6,5),"chamar-lobo"));
             Assert.AreEqual(2,S.fighters.Count(x=>x.Alive&&x.summoner==A.id));
         }
+
+        // ── Eventos, controle, suporte e elenco de 10/10 (EVENTOS-LOJA-ELENCO.md) ──
+        void Duel(string a,string b) { m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{a}, team2=new[]{b} }); }
+        void Hit(Face attack=Face.Trava,Face defense=Face.Trava) { m.Forced.Enqueue(attack); m.Forced.Enqueue(defense); }
+        void PassRound() { int round=S.round; for(int i=0;i<20&&S.round==round&&!S.over;i++) Do("passar"); }
+
+        [Test] public void DrillHookPushesUntilObstacleAndBumpHurts()
+        {
+            Duel("cheiro-pneu","ogro-de-pedra"); Put(A,5,5); Put(Enemy,5,6); S.At(new Cell(5,9)).terrain=Terrain.Arvore;
+            Hit(); Assert.IsTrue(Do("skill",new Cell(5,6),"gancho-broca"));
+            Assert.AreEqual(new Cell(5,8),Enemy.cell); Assert.AreEqual(16-4-1,Enemy.hp,"4 do golpe + 1 da batida");
+            Assert.IsFalse(Do("skill",new Cell(5,7),"gancho-broca"),"recarga");
+        }
+        [Test] public void ImmovableAndAnchorResistPush()
+        {
+            Duel("cheiro-pneu","colosso"); Put(A,5,5); Put(Enemy,5,6);
+            Hit(); Assert.IsTrue(Do("skill",new Cell(5,6),"gancho-broca"));
+            Assert.AreEqual(new Cell(5,6),Enemy.cell);
+        }
+        [Test] public void PrisonSkipsTurnBlocksTargetingAndDodgeEscapes()
+        {
+            Duel("principe-kellen","rei-bobett"); var kellen=A; var king=Enemy; Put(kellen,5,5); Put(king,5,7);
+            Hit(Face.Trava,Face.Esquiva); Assert.IsTrue(Do("skill",new Cell(5,7),"prisao-dos-pesadelos"));
+            Assert.AreEqual(0,king.prisoned,"Esquiva escapa");
+            kellen.cooldowns.Clear();
+            Hit(Face.Trava,Face.Escudo); Assert.IsTrue(Do("skill",new Cell(5,7),"prisao-dos-pesadelos"));
+            Assert.AreEqual(1,king.prisoned);
+            Put(king,5,6); Assert.IsFalse(Do("skill",new Cell(5,6),"pauzinho"),"preso não é alvo");
+            Do("passar");
+            Assert.AreEqual(kellen.id,A.id,"o turno do preso foi pulado"); Assert.AreEqual(0,king.prisoned); Assert.AreEqual(2,S.round);
+        }
+        [Test] public void IceCostsOneMoreMovementUntilCastersNextTurn()
+        {
+            Duel("principe-kellen","rei-bobett"); var king=Enemy; Put(A,5,5); Put(king,5,9);
+            Assert.IsTrue(Do("skill",new Cell(5,8),"chao-de-gelo"));
+            Assert.AreNotEqual(0,S.At(new Cell(5,8)).frozenBy);
+            Assert.IsNull(Board.Path(S,king,new Cell(5,7),2),"5,8 e 5,7 congeladas: 4 PM");
+            Assert.IsNotNull(Board.Path(S,king,new Cell(5,8),2));
+            PassRound();
+            Assert.AreEqual(0,S.At(new Cell(5,8)).frozenBy,"derrete no turno seguinte de quem congelou");
+        }
+        [Test] public void KingIgnoresOneDamage()
+        {
+            Duel("principe-kellen","rei-bobett"); Put(A,5,5); Put(Enemy,5,8);
+            Hit(); Assert.IsTrue(Do("skill",new Cell(5,8),"bola-de-fogo"));
+            Assert.AreEqual(12-2,Enemy.hp);
+        }
+        [Test] public void NeedlePiercesArmorAndShieldAndPunishesIsolation()
+        {
+            Duel("viuva-da-agulha","rei-bobett"); Put(A,5,5); Put(Enemy,5,6);
+            Hit(Face.Trava,Face.Escudo); Assert.IsTrue(Do("skill",new Cell(5,6),"agulha"));
+            Assert.AreEqual(12-4,Enemy.hp,"2 + 2 (isolado), ignora Escudo e a armadura do rei");
+        }
+        [Test] public void ColossusDevoursTheMainSkillWithOneMorePa()
+        {
+            m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"colosso"}, team2=new[]{"talyssa","ogro-de-pedra"} });
+            var victim=S.fighters.First(f=>f.def=="talyssa"); if(A.def!="colosso") Do("passar"); Put(A,5,5); Put(victim,5,6); victim.hp=1;
+            Hit(); Assert.IsTrue(Do("skill",new Cell(5,6),"pancada-colossal"));
+            Assert.IsFalse(victim.Alive); CollectionAssert.Contains(A.stolen,"lamina-rosa");
+            var stolen=Match.Skills(A).First(s=>s.id==Content.Stolen+"lamina-rosa");
+            Assert.AreEqual(4,stolen.pa); Assert.AreEqual("steal-slam",stolen.anim);
+        }
+        [Test] public void CatsHaveNoTurnObeyAndVanishAfterShooting()
+        {
+            Duel("asamyh","ogro-de-pedra"); Put(A,5,5); Put(Enemy,5,9);
+            Assert.IsTrue(Do("skill",new Cell(5,6),"chamar-gato"));
+            var cat=S.fighters.Last(); cat.def="gato-laranja";
+            CollectionAssert.DoesNotContain(S.timeline,cat.id);
+            Assert.IsTrue(Do("skill",new Cell(5,8),"mover-gato")); Assert.AreEqual(new Cell(5,8),cat.cell);
+            Hit(); Assert.IsTrue(Do("skill",new Cell(5,9),"faisca-da-varinha"));
+            Assert.AreEqual(16-2,Enemy.hp); Assert.IsFalse(cat.Alive);
+            Assert.IsFalse(Do("skill",new Cell(5,9),"faisca-da-varinha"),"sem gatos");
+        }
+        [Test] public void NightOfCatsHealsShieldsAndFillsCats()
+        {
+            Duel("asamyh","ogro-de-pedra"); Put(A,5,5); A.hp=5;
+            Assert.IsTrue(Do("skill",A.cell,"noite-dos-gatos"));
+            Assert.AreEqual(7,A.hp); Assert.AreEqual(2,S.fighters.Count(x=>x.Alive&&x.summoner==A.id));
+            Assert.IsTrue(A.buffs.Any(b=>b.armor==1));
+        }
+        [Test] public void BarkGivesArmorToAnAlly()
+        {
+            m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"guardiao-de-musgo","rei-bobett"}, team2=new[]{"ogro-de-pedra"} });
+            var ally=S.fighters.First(f=>f.def=="rei-bobett"); Put(A,5,5); Put(ally,5,7);
+            Assert.IsTrue(Do("skill",new Cell(5,7),"casca"));
+            Assert.IsTrue(ally.buffs.Any(b=>b.armor==2));
+            Assert.IsFalse(Do("skill",Enemy.cell,"casca"),"só aliado");
+        }
+        [Test] public void WishNeedsRoundTenChannelsTwoTurnsThenGrantsAChoice()
+        {
+            Duel("principe-kellen","rei-bobett"); var kellen=A; Put(kellen,5,5);
+            Assert.IsFalse(Do("skill",kellen.cell,"desejo"),"antes da rodada 10");
+            S.round=10; Assert.IsTrue(Do("skill",kellen.cell,"desejo")); Assert.AreEqual(0,kellen.pa);
+            PassRound(); Assert.AreEqual(kellen.id,A.id); Assert.AreEqual(0,A.pa,"2º turno só canaliza");
+            Assert.IsFalse(Match.Skills(A).Any(s=>s.kind==SkillKind.Desejo));
+            PassRound(); Assert.IsTrue(kellen.wishReady);
+            kellen.hp=2; Assert.IsTrue(Do("skill",kellen.cell,"desejo-b")); Assert.AreEqual(7,kellen.hp);
+            Assert.IsFalse(kellen.wishReady); Assert.IsFalse(Do("skill",kellen.cell,"desejo"),"uso único");
+        }
+        [Test] public void WishCanCancelTheActiveEvent()
+        {
+            Duel("principe-kellen","rei-bobett"); A.wishReady=true; m.Trigger("nevoeiro");
+            Assert.AreEqual("nevoeiro",S.ev);
+            Assert.IsTrue(Do("skill",A.cell,"desejo-f")); Assert.AreEqual("",S.ev);
+        }
+        [Test] public void LavaSpreadsBurnsAndCoolsDown()
+        {
+            m.Trigger("mare-de-lava");
+            Assert.AreEqual("mare-de-lava",S.ev); Assert.AreEqual(2,S.tiles.Count(t=>t.lava));
+            PassRound(); Assert.Greater(S.tiles.Count(t=>t.lava),2,"espalha");
+            var lava=Enumerable.Range(0,S.tiles.Length).First(i=>S.tiles[i].lava);
+            int hp=A.hp; A.cell=new Cell(lava%S.width,lava/S.width); Put(Enemy,0,0);
+            var cell=A.cell; var free=Board.Dirs.Select(d=>cell+d).First(c=>Board.Contains(S,c)&&!S.At(c).lava&&Board.At(S,c)==null);
+            A.cell=free; Assert.IsTrue(Do("mover",cell)); Assert.AreEqual(hp-2,A.hp,"entrar na lava queima");
+            PassRound(); PassRound();
+            Assert.AreEqual("",S.ev); Assert.AreEqual(0,S.tiles.Count(t=>t.lava));
+        }
+        [Test] public void FireworksExplodeAtTheEndOfTheRound()
+        {
+            m.Trigger("festival-de-fogos");
+            var mark=Enumerable.Range(0,S.tiles.Length).First(i=>S.tiles[i].mark);
+            var target=Enemy; Put(target,mark%S.width,mark/S.width); int hp=target.hp;
+            m.Forced.Enqueue(Face.Trava); PassRound();
+            Assert.Less(target.hp,hp); Assert.AreEqual(0,S.tiles.Count(t=>t.mark)); Assert.AreEqual("",S.ev);
+        }
+        [Test] public void WanderingBossHuntsAndLeaves()
+        {
+            m.Trigger("errante");
+            var boss=S.fighters.Single(f=>f.def=="brutamontes-errante"); Assert.AreEqual(MatchState.Neutral,boss.team);
+            CollectionAssert.DoesNotContain(S.timeline,boss.id);
+            int d0=S.fighters.Where(f=>f.team!=MatchState.Neutral).Min(f=>f.cell.Distance(boss.cell));
+            PassRound();
+            Assert.Less(S.fighters.Where(f=>f.team!=MatchState.Neutral&&f.Alive).Min(f=>f.cell.Distance(boss.cell)),d0);
+            for(int i=0;i<5&&!S.over;i++) PassRound();
+            Assert.IsFalse(boss.Alive); Assert.AreEqual("",S.ev);
+        }
+        [Test] public void KillingTheCoinEaterPaysItsStomach()
+        {
+            m.Trigger("papa-moedas");
+            var eater=S.fighters.First(f=>f.def=="papa-moedas"); eater.carried=3; Put(A,5,5); Put(eater,5,6);
+            int coins=S.coins[A.team];
+            Hit(); Assert.IsTrue(Do("skill",new Cell(5,6),"dragao-dourado"));
+            Hit(); Do("skill",new Cell(5,6),"dragao-dourado");
+            Assert.IsFalse(eater.Alive); Assert.AreEqual(coins+5,S.coins[A.team]);
+        }
+        [Test] public void EveryEventRunsForSixRoundsWithoutBreaking()
+        {
+            foreach(var e in Match.Cataclysms)
+            {
+                Setup(); m=Match.New(new MatchSetup{ seed=7, team1=new[]{"ciantia","colosso"}, team2=new[]{"principe-kellen","asamyh"} });
+                m.Trigger(e.id);
+                for(int i=0;i<6&&!S.over;i++) PassRound();
+                Assert.IsTrue(e.rounds==0||S.ev!=e.id,e.id);
+            }
+        }
+        [Test] public void NewShopItemsApply()
+        {
+            S.coins[A.team]=20;
+            foreach(var id in new[]{"ancora","gancho-de-escalada","cristal-de-foco","manto-de-espinhos"})
+            { S.shops[A.team].slots[0]=id; A.bought=false; Assert.IsTrue(Buy(),id); }
+            Assert.IsTrue(A.anchored); Assert.IsTrue(A.climber); Assert.IsTrue(A.focused); Assert.AreEqual(1,A.thorns);
+            Put(A,5,5); S.At(new Cell(5,6)).height=3; A.pm=3;
+            Assert.IsNotNull(Board.Path(S,A,new Cell(5,6),2),"gancho sobe 3 com 2 PM");
+        }
+        [Test] public void IceMineTakesMovementAndAction()
+        {
+            S.coins[A.team]=20; S.shops[A.team].slots[0]="mina-de-gelo"; Assert.IsTrue(Buy());
+            Put(A,5,5); Assert.IsTrue(Do("skill",new Cell(5,7),"mina-de-gelo"));
+            Do("passar"); Put(A,5,8); Assert.IsTrue(Do("mover",new Cell(5,7)));
+            Assert.AreEqual(0,A.pm); var enemy=A;
+            Do("passar"); Do("passar"); Assert.AreEqual(enemy.id,A.id); Assert.AreEqual(4,A.pa,"−2 PA no turno seguinte");
+        }
+        [Test] public void PhoenixFeatherRevivesAnAlly()
+        {
+            m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"ciantia","talyssa"}, team2=new[]{"ogro-de-pedra"} });
+            var ally=S.fighters.First(f=>f.def=="talyssa"); ally.hp=0; Put(A,5,5);
+            S.coins[A.team]=20; S.shops[A.team].slots[0]="pena-de-fenix"; Assert.IsTrue(Buy());
+            Assert.IsTrue(Do("skill",new Cell(5,6),"pena-de-fenix"));
+            Assert.AreEqual(4,ally.hp); Assert.AreEqual(new Cell(5,6),ally.cell);
+        }
+        [Test] public void BaltazarAuraCostsOnePaPerTurnHealsAlliesAndHurtsFoes()
+        {
+            m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"baltazar","ogro-de-pedra"}, team2=new[]{"ogro-de-pedra"} });
+            var b=A; Assert.AreEqual("baltazar",b.def);
+            var ally=S.fighters.First(f=>f.team==b.team&&f!=b); var foe=Enemy;
+            Put(b,5,5); Put(ally,5,7); Put(foe,7,5); ally.hp=10; int foeHp=foe.hp;
+            Assert.IsTrue(Do("skill",b.cell,"baltazar-dualidade"));
+            Assert.IsTrue(b.auraOn); Assert.AreEqual(5,b.pa); Assert.AreEqual(11,ally.hp); Assert.AreEqual(foeHp-1,foe.hp);
+            // Desligar e religar no mesmo turno: sem custo e sem aplicar de novo.
+            Assert.IsTrue(Do("skill",b.cell,"baltazar-dualidade")); Assert.IsFalse(b.auraOn);
+            Assert.IsTrue(Do("skill",b.cell,"baltazar-dualidade")); Assert.IsTrue(b.auraOn);
+            Assert.AreEqual(5,b.pa); Assert.AreEqual(11,ally.hp); Assert.AreEqual(foeHp-1,foe.hp);
+            // Próximo turno dele: cobra 1 PA e aplica de novo; fora do alcance, nada.
+            Put(ally,5,9); PassRound();
+            Assert.AreSame(b,A); Assert.IsTrue(b.auraOn); Assert.AreEqual(5,b.pa); Assert.AreEqual(11,ally.hp); Assert.AreEqual(foeHp-2,foe.hp);
+            // Sem PA para manter: desliga.
+            b.buffs.Add(new Buff{id="teste",turns=3,pa=-6}); PassRound();
+            Assert.AreSame(b,A); Assert.IsFalse(b.auraOn); Assert.AreEqual(foeHp-2,foe.hp);
+        }
+        [Test] public void WishCopyLetsThePlayerPickWhichSkill()
+        {
+            Duel("principe-kellen","ogro-de-pedra"); A.wishReady=true; Put(A,5,5); Put(Enemy,5,8);
+            CollectionAssert.AreEqual(new[]{"clava","arremessar-pedra"},Match.Copyables(A,Enemy).Select(x=>x.id).ToArray());
+            Command Copy(int slot) => new Command{kind="skill",skill="desejo-d",cell=Enemy.cell,slot=slot,fighter=A.id,revision=S.revision};
+            Assert.IsFalse(m.Apply(Copy(5),A.team,out _,out _),"opção que não existe");
+            Assert.IsTrue(m.Apply(Copy(1),A.team,out _,out _));
+            CollectionAssert.AreEqual(new[]{"arremessar-pedra"},A.learned);
+        }
+        [Test] public void DamianFormsHoldTheirWeaponPose()
+        {
+            Duel("damian","ogro-de-pedra");
+            Assert.IsNull(Content.Form(A).pose,"pistola usa o idle normal");
+            Assert.IsTrue(Do("skill",A.cell,"camaleao-martelo")); Assert.AreEqual("hammer",Content.Form(A).pose);
+            Assert.IsTrue(Do("skill",A.cell,"camaleao-canhao")); Assert.AreEqual("cannon",Content.Form(A).pose);
+        }
+        [Test] public void SavedMapIsUsedAndKeepsSpawnsFree()
+        {
+            var map=MapGen.NewMap(12);
+            Tile T(int x,int z) => map.tiles[z*12+x];
+            T(4,3).terrain=Terrain.Arvore; T(4,3).height=2; T(2,1).terrain=Terrain.Caixa; T(6,6).zone=true; T(3,8).zone=true;
+            Assert.IsNull(MapGen.Problem(map));
+            m=Match.New(new MatchSetup{ map=map, team1=new[]{"ciantia"}, team2=new[]{"ciantia"} });
+            Assert.AreEqual(Terrain.Arvore,S.At(new Cell(4,3)).terrain); Assert.AreEqual(2,S.At(new Cell(4,3)).height);
+            Assert.AreEqual(Terrain.Livre,S.At(new Cell(2,1)).terrain,"casa de início fica livre");
+            // O meio é a loja (bloqueia); a zona marcada no mapa continua valendo fora dela.
+            Assert.AreEqual(Terrain.Loja,S.At(new Cell(6,6)).terrain); Assert.IsFalse(S.At(new Cell(6,6)).zone); Assert.IsTrue(S.At(new Cell(3,8)).zone);
+            // Mapa de outro tamanho é ignorado (3 jogadores usam 16×16).
+            m=Match.New(new MatchSetup{ map=map, players=new[]{ new PlayerSetup(), new PlayerSetup(), new PlayerSetup() } });
+            Assert.AreEqual(16,S.width);
+            // Muralha de árvores separando os lados: não dá para jogar.
+            for(int x=0;x<12;x++) T(x,3).terrain=Terrain.Arvore;
+            Assert.IsNotNull(MapGen.Problem(map));
+        }
+        // Decisão do autor (11/10): a loja ocupa as 4 casas do meio, ninguém entra e ela tapa a visão; a zona são as 8 casas encostadas.
+        [Test] public void ShopBlocksTheMiddleAndZoneIsTheRing()
+        {
+            m=Match.New(new MatchSetup{ seed=5, team1=new[]{"ciantia"}, team2=new[]{"ciantia"} });
+            foreach(var c in MapGen.ShopCells(S)) { Assert.AreEqual(Terrain.Loja,S.At(c).terrain); Assert.IsFalse(Board.Walkable(S,c,true)); Assert.IsFalse(S.At(c).zone); }
+            Assert.AreEqual(8,S.tiles.Count(t=>t.zone)); foreach(var c in MapGen.ZoneRing(S)) Assert.IsTrue(S.At(c).zone);
+            Assert.IsFalse(Board.LineOfSight(S,new Cell(4,5),new Cell(7,5)),"a loja tapa a visão");
+            Assert.Greater(S.decor.Count,0,"mapa gerado ganha enfeites");
+        }
+        // Os 16 mapas do Codex (Resources/Mapas/codex.json) passam na validação e entram na partida com a loja no meio.
+        [Test] public void CodexMapsAreAllPlayable()
+        {
+            ArenaMaps.Reset();
+            Assert.AreEqual(16,ArenaMaps.Builtin.Count,"algum mapa do Codex não passou em MapGen.Problem");
+            foreach(var map in ArenaMaps.Builtin)
+            {
+                int players=MapGen.PlayersFor(map.width);
+                m=Match.New(new MatchSetup{ map=map, players=Enumerable.Range(0,players).Select(_=>new PlayerSetup()).ToArray() });
+                Assert.AreEqual(map.width,S.width,map.name); Assert.AreEqual(map.theme,S.theme,map.name);
+                Assert.IsTrue(MapGen.ShopCells(S).All(c=>S.At(c).terrain==Terrain.Loja),map.name);
+                Assert.Greater(S.decor.Count,0,map.name); Assert.IsTrue(Board.Connected(S),map.name);
+            }
+        }
+        [Test] public void BotsPlayOnlyLegalActionsAndFight()
+        {
+            foreach(var (a,b) in new[]{ ("baltazar","damian"), ("tchu-tcha","principe-kellen"), ("asamyh","arqueiro-jack"), ("colosso","ezequiela") })
+            {
+                m=Match.New(new MatchSetup{ seed=7, team1=new[]{a,"perry"}, team2=new[]{b,"teantha"} });
+                int actions=0;
+                while(!S.over&&S.round<8&&actions<800)
+                {
+                    var cmd=Bot.Decide(m); cmd.fighter=A.id; cmd.revision=S.revision; actions++; string who=A.def;
+                    bool ok=m.Apply(cmd,A.team,out _,out var reason);
+                    Assert.IsTrue(ok,$"{a}×{b}: {who} {cmd.kind} {cmd.skill} recusado: {reason}");
+                }
+                Assert.IsTrue(S.over||S.round>=8,$"{a}×{b}: travou na rodada {S.round}");
+                Assert.IsTrue(S.fighters.Any(f=>f.summoner==0&&f.hp<Content.MaxHp(f)),$"{a}×{b}: ninguém se feriu");
+            }
+        }
     }
 }

@@ -24,6 +24,24 @@ namespace ArenaTatica.Core
                 skill=new SkillDef { id="armadilha-de-espinhos", name="Armadilha de espinhos", kind=SkillKind.Armadilha, pa=1, minRange=1, maxRange=3, damage=2 } },
             new ShopDef { id="furia", name="Fúria", kind=ShopKind.Buff, price=3, weight=2, pa=2, turns=2 },
             new ShopDef { id="passo-leve", name="Passo leve", kind=ShopKind.Buff, price=2, weight=2, pm=2, turns=2 },
+            // Itens de 10/10 (EVENTOS-LOJA-ELENCO.md, seção 2).
+            new ShopDef { id="martelo-perfurante", name="Martelo perfurante", kind=ShopKind.Magia, price=4, weight=2,
+                skill=new SkillDef { id="martelo-perfurante", name="Martelo perfurante", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=3, pierce=true } },
+            new ShopDef { id="corrente-de-ferro", name="Corrente de ferro", kind=ShopKind.Magia, price=3, weight=2,
+                skill=new SkillDef { id="corrente-de-ferro", name="Corrente de ferro", kind=SkillKind.Dano, pa=2, minRange=2, maxRange=4, damage=0, line=true, pull=true } },
+            new ShopDef { id="bomba-de-fumaca", name="Bomba de fumaça", kind=ShopKind.Magia, price=3, weight=2,
+                skill=new SkillDef { id="bomba-de-fumaca", name="Bomba de fumaça", kind=SkillKind.Esconder, pa=1, minRange=0, maxRange=0, sight=false, noCover=true, anim="hide" } },
+            new ShopDef { id="pena-de-fenix", name="Pena de fênix", kind=ShopKind.Magia, price=6, weight=1,
+                skill=new SkillDef { id="pena-de-fenix", name="Pena de fênix", kind=SkillKind.Reviver, pa=2, minRange=1, maxRange=1, sight=false, heal=4 } },
+            new ShopDef { id="totem-de-cura", name="Totem de cura", kind=ShopKind.Pet, price=4, weight=2,
+                skill=new SkillDef { id="erguer-totem", name="Erguer totem", kind=SkillKind.Invocacao, pa=2, minRange=1, maxRange=1, sight=false, summon="totem-de-cura" } },
+            new ShopDef { id="mina-de-gelo", name="Mina de gelo", kind=ShopKind.Armadilha, price=3, weight=2,
+                skill=new SkillDef { id="mina-de-gelo", name="Mina de gelo", kind=SkillKind.Armadilha, pa=1, minRange=1, maxRange=3, damage=0, paLoss=2 } },
+            new ShopDef { id="gancho-de-escalada", name="Gancho de escalada", kind=ShopKind.Item, price=3, weight=2, climb=true },
+            new ShopDef { id="cristal-de-foco", name="Cristal de foco", kind=ShopKind.Item, price=5, weight=1, focus=true },
+            new ShopDef { id="manto-de-espinhos", name="Manto de espinhos", kind=ShopKind.Item, price=4, weight=2, thorns=1 },
+            new ShopDef { id="ancora", name="Âncora", kind=ShopKind.Item, price=3, weight=2, anchor=true },
+            new ShopDef { id="bencao-de-pedra", name="Bênção de pedra", kind=ShopKind.Buff, price=3, weight=2, armor=2, turns=2 },
         };
         public static ShopDef Def(string id) => Array.Find(Catalog,d=>d.id==id);
         public static ShopDef BySkill(string skill) => Array.Find(Catalog,d=>d.skill!=null&&d.skill.id==skill);

@@ -190,3 +190,43 @@ O efeito de absorver a skill do nocauteado: uma essência saindo do corpo e entr
 - **Tudo da lista é obrigatório.** A ordem é só a de entrega.
 
 **Resposta:** `respostas/015-codex.md`, com o que mudou, os caminhos, os hashes, o tamanho do quadro e o quadro do impacto de cada clipe de ataque e evento, além das pendências.
+
+## Integração já pronta no Unity (Claude, 10/10): caminhos que o código procura
+Sem arte, o jogo usa placas e clarões coloridos. Basta salvar nos caminhos abaixo e o jogo usa a arte, sem mudar código. Tiras de quadros quadrados, com exceção dos céus.
+
+**Céus**
+- `Sprites/Ceus/<id>/fundo.png` para os ids `ceu-aberto`, `ceu-dourado`, `deserto-poente`, `nuvens-densas`, `cinzas-vulcanicas`, `tempestade` e `noite-festiva`.
+- O importador trata esses arquivos como imagem única, sem fatiar.
+- `nuvens.png` ainda não é usado.
+
+**Eventos**
+- `Sprites/Efeitos/<evento>/inicio.png`: toca no meio do tabuleiro quando o evento sai.
+- `mare-de-lava/inicio.png`: toca também em cada casa nova de lava.
+- `festival-de-fogos/explosao.png`: toca em cada casa que explode.
+- `desejo/inicio.png`: toca quando o Kellen começa a canalizar o Desejo.
+
+**Casas**
+- `Sprites/Efeitos/lava/loop.png`, `Sprites/Efeitos/gelo/loop.png` e `Sprites/Efeitos/fogos/loop.png`.
+- Hoje o jogo mostra só o 1º quadro, deitado no chão.
+
+**Skills**
+- `Sprites/Efeitos/<skill-id>/`: toca no impacto ou na conjuração (Pisão, Tentáculo de óleo, chão de gelo, prisão etc.).
+- `Sprites/Efeitos/<item-id>/uso.png`: toca no buff.
+- `Sprites/Efeitos/desejo-a` até `desejo-f`.
+- `Sprites/Efeitos/devorar`.
+- `Sprites/Projeteis/<skill-id>.png`: imagem única do projétil.
+
+**Lutadores**
+- Pastas `Sprites/<Pasta>`, exatamente como na tabela da seção 5.
+- Os 4 gatos ficam nas pastas `GatoLaranja`, `GatoBranco`, `GatoMalhado` e `GatoManchado`.
+- Totem: `TotemCura`.
+- Clipes extras: `zap`, `stomp`, `tentacle`, `charge`, `cannon`, `drill`, `ice`, `fireball`, `prison`, `wish-channel`, `wish`, `bark`, `roots`, `chain`, `shout`, `throw`, `roar`, `heal`, `ult`, `steal-reach`, `steal-slam` e `steal-cast`.
+
+**Ícones da loja:** `Sprites/Loja/<item-id>.png`. Também servem de figura para invocações sem sprite.
+
+## Pedido do Claude — idle do Damian por forma (10/10/2026)
+
+No jogo, o Damian (`camaleao`) troca de forma com um clique e fica **parado segurando a arma** da forma atual (`FormDef.pose`). Hoje o parado de cada forma usa o primeiro quadro do clipe da arma. Pedido: um **idle em loop** por forma, nas 8 direções, mesma base e escala dos sprites atuais.
+- Pastas esperadas: `Sprites/Personagens/Damian/idle-cannon/<dir>/` e `Sprites/Personagens/Damian/idle-hammer/<dir>/` (a forma Pistola continua no `idle` atual).
+- Respiração leve com a arma em punho; sem disparo nem golpe. 4–6 quadros.
+- Ao entregar, informar quadros, tamanho, alfa e hashes; o Claude liga cada idle à pose da forma.

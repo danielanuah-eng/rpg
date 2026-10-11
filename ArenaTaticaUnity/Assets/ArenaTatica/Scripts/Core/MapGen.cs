@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 namespace ArenaTatica.Core
 {
     // Mapa simétrico pelo centro (giro de 180°): platôs, árvores, arbustos, caixas, zona central e moedas.
@@ -16,11 +20,51 @@ namespace ArenaTatica.Core
                 if(flat) return;
                 for(int i=0;i<UnityEngine.Mathf.RoundToInt(2*k);i++) Plateau(s);
                 Scatter(s,Terrain.Arvore,UnityEngine.Mathf.RoundToInt(3*k)); Scatter(s,Terrain.Arbusto,UnityEngine.Mathf.RoundToInt(3*k)); Scatter(s,Terrain.Caixa,UnityEngine.Mathf.RoundToInt(2*k));
-                for(int x=s.width/2-1;x<=s.width/2;x++) for(int z=s.height/2-1;z<=s.height/2;z++) { var t=s.At(new Cell(x,z)); t.terrain=Terrain.Livre; t.height=1; t.zone=true; }
+                foreach(var c in ShopCells(s)) s.At(c).height=1;
+                foreach(var c in ZoneRing(s)) s.At(c).height=1;
+                Center(s,true);
                 for(int slot=0;slot<s.players;slot++) foreach(var c in Spawns(s,slot)) ClearAround(s,c);
                 if(SpawnsConnected(s)) return;
             }
-            Clear(s);
+            Clear(s); Center(s,true);
+        }
+        // Meio do mapa: a loja nas 4 casas centrais e a zona central nas 8 casas encostadas nela (dois por lado).
+        public static Cell[] ShopCells(MatchState s) { int x=s.width/2-1, z=s.height/2-1; return new[]{ new Cell(x,z), new Cell(x+1,z), new Cell(x,z+1), new Cell(x+1,z+1) }; }
+        public static Cell[] ZoneRing(MatchState s)
+        {
+            int x=s.width/2-1, z=s.height/2-1;
+            return new[]{ new Cell(x,z-1), new Cell(x+1,z-1), new Cell(x,z+2), new Cell(x+1,z+2), new Cell(x-1,z), new Cell(x-1,z+1), new Cell(x+2,z), new Cell(x+2,z+1) };
+        }
+        // Põe a loja (as casas dela nunca são zona) e deixa o anel livre; ring=true também marca o anel como zona.
+        static void Center(MatchState s,bool ring)
+        {
+            foreach(var c in ShopCells(s)) { var t=s.At(c); t.terrain=Terrain.Loja; t.zone=false; t.coins=0; }
+            foreach(var c in ZoneRing(s)) { var t=s.At(c); t.terrain=Terrain.Livre; if(ring) t.zone=true; }
+        }
+        // Loja no meio; mapa sem zona fora dela (os antigos tinham a zona nas 4 casas do meio) ganha a zona no anel.
+        public static void Center(MatchState s) { Center(s,false); if(!s.tiles.Any(t=>t.zone)) Center(s,true); }
+        // Peça do kit que faz o papel de um terreno (árvore, arbusto, caixa); Livre = enfeite só visual.
+        public static Terrain SkinTerrain(string piece)
+        {
+            if(string.IsNullOrEmpty(piece)) return Terrain.Livre;
+            if(piece.StartsWith("arvore")) return Terrain.Arvore;
+            if(piece=="arbusto") return Terrain.Arbusto;
+            if(piece=="caixa"||piece=="caixa_rachada"||piece=="pedra") return Terrain.Caixa;
+            return Terrain.Livre;
+        }
+        // Enfeites baixos espalhados em pares espelhados nas casas livres. Sorteio próprio pela seed: não mexe no rng da partida.
+        public static readonly string[] SmallDecor={"enfeite_capim","enfeite_flores","enfeite_seixos","enfeite_pedra_baixa","enfeite_cogumelos","enfeite_raiz_chao"};
+        public static void Decorate(MatchState s,uint seed)
+        {
+            s.decor.Clear(); var rng=new System.Random((int)(seed%int.MaxValue)); int pairs=s.width*s.height/24;
+            for(int tries=0;tries<pairs*6&&s.decor.Count<pairs*2;tries++)
+            {
+                var c=new Cell(rng.Next(s.width),rng.Next(s.height)); var m=s.Mirror(c);
+                if(c==m||s.At(c).terrain!=Terrain.Livre||s.At(c).zone||s.decor.Exists(d=>(int)Math.Round(d.x)==c.x&&(int)Math.Round(d.z)==c.z)) continue;
+                string piece=SmallDecor[rng.Next(SmallDecor.Length)]; float rot=rng.Next(360), dx=(float)(rng.NextDouble()-.5)*.4f, dz=(float)(rng.NextDouble()-.5)*.4f;
+                s.decor.Add(new Decor{ piece=piece, x=c.x+dx, z=c.z+dz, rot=rot });
+                s.decor.Add(new Decor{ piece=piece, x=m.x-dx, z=m.z-dz, rot=rot+180 });
+            }
         }
         // Casas de um grupo de spawn (até 4 lutadores). Slots pares embaixo, ímpares no espelho de cima.
         public static Cell[] Spawns(MatchState s,int slot)
@@ -35,6 +79,34 @@ namespace ArenaTatica.Core
             }
             if(slot%2==1) for(int i=0;i<c.Length;i++) c[i]=s.Mirror(c[i]);
             return c;
+        }
+        // ── Mapas do editor ──
+        public static int PlayersFor(int size) => size<=Board.Size?2:size<=16?4:6;
+        public static bool Fits(MapDef m,int size) => m?.tiles!=null&&m.width==size&&m.tiles.Length==size*size;
+        // Copia relevo, peças e zona; as casas de início de todos os grupos ficam livres.
+        public static void Load(MatchState s,MapDef m)
+        {
+            for(int i=0;i<s.tiles.Length;i++) { var t=m.tiles[i]; s.tiles[i]=new Tile{ height=UnityEngine.Mathf.Clamp(t.height,0,Board.MaxHeight), terrain=t.terrain==Terrain.Loja?Terrain.Livre:t.terrain, zone=t.zone }; }
+            Center(s);
+            for(int slot=0;slot<PlayersFor(s.width);slot++) foreach(var c in Spawns(s,slot)) s.At(c).terrain=Terrain.Livre;
+            s.decor=m.decor==null?new List<Decor>():m.decor.Select(d=>new Decor{ piece=d.piece, x=d.x, z=d.z, rot=d.rot, scale=d.scale }).ToList();
+        }
+        // Mapa novo: plano, ou o sorteado de uma seed (para partir de algo pronto).
+        public static MapDef NewMap(int size,uint seed=0)
+        {
+            var s=new MatchState{ width=size, height=size, players=PlayersFor(size), rng=seed==0?1:seed };
+            Generate(s,seed==0); if(seed!=0) Decorate(s,seed);
+            return new MapDef{ width=size, tiles=s.tiles, decor=s.decor };
+        }
+        // Problema que impede jogar no mapa (null = pode jogar): casas de início presas ou a zona central inalcançável.
+        public static string Problem(MapDef m)
+        {
+            if(m?.tiles==null||!Board.ValidSize(m.width)||m.tiles.Length!=m.width*m.width) return "Tamanho inválido.";
+            var s=new MatchState{ width=m.width, height=m.width, players=PlayersFor(m.width) }; s.tiles=new Tile[m.tiles.Length]; Load(s,m);
+            var probe=new Fighter{ def="ciantia", cell=Spawns(s,0)[0], hp=1 }; var dist=Board.Costs(s,probe,true);
+            for(int slot=0;slot<s.players;slot++) foreach(var c in Spawns(s,slot)) if(dist[Board.Index(s,c)]==int.MaxValue) return "Há casas de início sem caminho até as outras.";
+            for(int i=0;i<s.tiles.Length;i++) if(s.tiles[i].zone&&dist[i]==int.MaxValue) return "A zona central não tem caminho.";
+            return null;
         }
         static void Clear(MatchState s) { s.tiles=new Tile[s.width*s.height]; for(int i=0;i<s.tiles.Length;i++) s.tiles[i]=new Tile(); }
         static Cell Random(MatchState s) => new Cell(Dice.Range(s,s.width),Dice.Range(s,s.height/2));
@@ -55,7 +127,8 @@ namespace ArenaTatica.Core
             var probe=new Fighter{ def="ciantia", cell=Spawns(s,0)[0], hp=1 };
             var dist=Board.Costs(s,probe,true);
             for(int slot=0;slot<s.players;slot++) foreach(var c in Spawns(s,slot)) if(dist[Board.Index(s,c)]==int.MaxValue) return false;
-            return dist[Board.Index(s,new Cell(s.width/2-1,s.height/2-1))]!=int.MaxValue;
+            foreach(var c in ZoneRing(s)) if(dist[Board.Index(s,c)]==int.MaxValue) return false;
+            return true;
         }
         // Moedas em pares espelhados, só em casas livres e vazias.
         public static int SpawnCoins(MatchState s,int pairs)
