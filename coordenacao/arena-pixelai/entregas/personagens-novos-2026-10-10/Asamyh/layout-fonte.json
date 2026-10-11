@@ -1,0 +1,45 @@
+{
+  "character": {
+    "id": "d0744019-2e8c-4ba0-82f2-5d4a64be69de",
+    "name": "Autor — bruxa preta e roxa",
+    "prompt": "Asamyh, original fantasy witch support heroine for Arena Tatica. A beautiful confident adult brown-skinned brunette woman wearing clearly visible round spectacles, a pointed small witch hat, and a fitted GREEN and SILVER witch outfit with silver trim and a short green cape. Warm expressive brown eyes behind glasses, dark brown hair, kind clever smile. She holds ONE short magic wand in her RIGHT hand lowered at rest; wand emits a tiny restrained silver-green star glint. Full body standing ready, both boots visible, correct two arms and two legs. Readable stylish chibi tactical RPG miniature proportions, crisp pixel art with strong outline and volumetric shading matching Edgar and Arena Tatica. Preserve brown skin, glasses, witch hat, green/silver costume. No cats inside the sprite (they are separate summons), no background, no ground, no text.",
+    "size": {
+      "width": 128,
+      "height": 128
+    },
+    "directions": 8,
+    "view": "high top-down"
+  },
+  "spritesheet": {
+    "path": "Asamyh-Autor_bruxa_preta_e_roxa.png",
+    "cell_size": {
+      "width": 128,
+      "height": 128
+    },
+    "sheet_size": {
+      "width": 1024,
+      "height": 128
+    },
+    "columns": 8,
+    "pivot": "cell-center",
+    "rows": [
+      {
+        "row": 0,
+        "type": "rotations",
+        "frame_count": 8,
+        "directions": [
+          "south",
+          "south-east",
+          "east",
+          "north-east",
+          "north",
+          "north-west",
+          "west",
+          "south-west"
+        ]
+      }
+    ]
+  },
+  "export_version": "1.0",
+  "export_date": "2026-10-11T02:14:47.220984+00:00"
+}

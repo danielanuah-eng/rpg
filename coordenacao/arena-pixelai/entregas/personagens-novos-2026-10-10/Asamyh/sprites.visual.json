@@ -1,0 +1,248 @@
+{
+  "actor_id": "d0744019-2e8c-4ba0-82f2-5d4a64be69de",
+  "owner": "Asamyh",
+  "rotations": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "native_size": [
+    128,
+    128
+  ],
+  "frame_size": [
+    132,
+    132
+  ],
+  "pivot": "lowest-opaque-foot-pixel",
+  "foot_pixel_y": 127,
+  "reference_pixels_per_unit": 128,
+  "no_rescaling": true,
+  "clips": [],
+  "status": "base_corrigida_conferida",
+  "animations": "em_producao",
+  "integration": "pendente_claude",
+  "frames": [
+    {
+      "actor": "Asamyh",
+      "character_id": "d0744019-2e8c-4ba0-82f2-5d4a64be69de",
+      "direction": "south",
+      "source": "Asamyh/celulas/rotations/south.png",
+      "png": "Asamyh/sprites/south.png",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        13,
+        1,
+        98,
+        125
+      ],
+      "native_size": [
+        128,
+        128
+      ],
+      "frame_size": [
+        132,
+        132
+      ],
+      "foot_pixel_y": 127,
+      "sha256": "9466e0e0d09888f60fb6a53720d7efc1e1a624e656f9358fc6a84130616759d1"
+    },
+    {
+      "actor": "Asamyh",
+      "character_id": "d0744019-2e8c-4ba0-82f2-5d4a64be69de",
+      "direction": "south-east",
+      "source": "Asamyh/celulas/rotations/south-east.png",
+      "png": "Asamyh/sprites/south-east.png",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        24,
+        2,
+        114,
+        125
+      ],
+      "native_size": [
+        128,
+        128
+      ],
+      "frame_size": [
+        132,
+        132
+      ],
+      "foot_pixel_y": 127,
+      "sha256": "95e0f9244d03147f18fcdbc07f67fea2da81f3a36b1984712a62bbede7e8787a"
+    },
+    {
+      "actor": "Asamyh",
+      "character_id": "d0744019-2e8c-4ba0-82f2-5d4a64be69de",
+      "direction": "east",
+      "source": "Asamyh/celulas/rotations/east.png",
+      "png": "Asamyh/sprites/east.png",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        24,
+        2,
+        94,
+        124
+      ],
+      "native_size": [
+        128,
+        128
+      ],
+      "frame_size": [
+        132,
+        132
+      ],
+      "foot_pixel_y": 127,
+      "sha256": "7a9149329f0d9c642f7d1daa53d82ff033acaf43a5be8c77a8e3a8a4c9c38cf6"
+    },
+    {
+      "actor": "Asamyh",
+      "character_id": "d0744019-2e8c-4ba0-82f2-5d4a64be69de",
+      "direction": "north-east",
+      "source": "Asamyh/celulas/rotations/north-east.png",
+      "png": "Asamyh/sprites/north-east.png",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        18,
+        2,
+        113,
+        124
+      ],
+      "native_size": [
+        128,
+        128
+      ],
+      "frame_size": [
+        132,
+        132
+      ],
+      "foot_pixel_y": 127,
+      "sha256": "4be43e1b7c46fbe9a19f84c784db5842ebfdcc4a6e310e174190c1f600008013"
+    },
+    {
+      "actor": "Asamyh",
+      "character_id": "d0744019-2e8c-4ba0-82f2-5d4a64be69de",
+      "direction": "north",
+      "source": "Asamyh/celulas/rotations/north.png",
+      "png": "Asamyh/sprites/north.png",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        23,
+        2,
+        103,
+        124
+      ],
+      "native_size": [
+        128,
+        128
+      ],
+      "frame_size": [
+        132,
+        132
+      ],
+      "foot_pixel_y": 127,
+      "sha256": "0739bef0346dba1d0ea093fe36882ffa0b907c79737ef980a058f4ea3ca32176"
+    },
+    {
+      "actor": "Asamyh",
+      "character_id": "d0744019-2e8c-4ba0-82f2-5d4a64be69de",
+      "direction": "north-west",
+      "source": "Asamyh/celulas/rotations/north-west.png",
+      "png": "Asamyh/sprites/north-west.png",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        13,
+        1,
+        108,
+        124
+      ],
+      "native_size": [
+        128,
+        128
+      ],
+      "frame_size": [
+        132,
+        132
+      ],
+      "foot_pixel_y": 127,
+      "sha256": "4a649dbdb1a65b46aef689ba2f468834a312d6e88564d47718050778b3ff252e"
+    },
+    {
+      "actor": "Asamyh",
+      "character_id": "d0744019-2e8c-4ba0-82f2-5d4a64be69de",
+      "direction": "west",
+      "source": "Asamyh/celulas/rotations/west.png",
+      "png": "Asamyh/sprites/west.png",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        32,
+        2,
+        102,
+        125
+      ],
+      "native_size": [
+        128,
+        128
+      ],
+      "frame_size": [
+        132,
+        132
+      ],
+      "foot_pixel_y": 127,
+      "sha256": "0840a9dc578d2f1a6ecceb8c63f599d95b6c90d89c04f05e865fec18d9f5c354"
+    },
+    {
+      "actor": "Asamyh",
+      "character_id": "d0744019-2e8c-4ba0-82f2-5d4a64be69de",
+      "direction": "south-west",
+      "source": "Asamyh/celulas/rotations/south-west.png",
+      "png": "Asamyh/sprites/south-west.png",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        12,
+        1,
+        102,
+        125
+      ],
+      "native_size": [
+        128,
+        128
+      ],
+      "frame_size": [
+        132,
+        132
+      ],
+      "foot_pixel_y": 127,
+      "sha256": "a3d1cebf5a9fd0a1a663bdd365a4841e7a8d689c71f519e17021e3f9fef5edbc"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "request": {
+    "id": "CheiroPneu",
+    "name": "Cheiro D.Pneu Queimado",
+    "body_type": "humanoid",
+    "size": 128,
+    "mode": "pro",
+    "description": "Cheiro D.Pneu Queimado, a bizarre imposing original fantasy pirate bruiser for Arena Tatica. Tall body with an ENORMOUS very broad heavy upper torso and very THIN SHORT legs. Split vertically into TWO halves: one half is burnt charred human flesh coated with glossy black oil, the other half is exposed ivory SKELETON ribs skull jaw arm and leg, NO blood. A small clearly readable TRUCK passes HORIZONTALLY THROUGH his belly, cab and wheels visible at waist. ONE arm ends in a GIANT hooked metal pirate hook, other hand is intact. Wear Kuma-inspired white rounded cap with black bear-like spots and small rounded bear ear shapes, and Doflamingo-inspired sharp pink wing-shaped sunglasses. Oily scorched pirate costume remnants around enormous torso, thin boots below. All unusual requested traits visible simultaneously: half burnt flesh/half skeleton, embedded truck, giant hook, white spotted cap, pink pointed sunglasses. Full body ready standing pose, hook lowered, high top-down crisp outlined chibi fantasy tactical pixel art consistent with Arena Tatica. No extra limbs, no background, no scenery, no text.",
+    "character_id": "103c7cc0-da9e-4586-8d79-5fb9613eea9c",
+    "requested": true
+  },
+  "response": "id: 103c7cc0-da9e-4586-8d79-5fb9613eea9c\nname: Cheiro D.Pneu Queimado\nmode: pro (25 generations, 8 directions)\nbody: humanoid\nsize: 128x128px\nview: high top-down\nstyle character: 590cc7bc-3673-477c-aa23-f5655dd2d97a\nstatus: processing (~3-5 min)\n\nhint: get_character(character_id=\"103c7cc0-da9e-4586-8d79-5fb9613eea9c\")",
+  "status": "referencia_anterior_rejeitada_pelo_autor",
+  "superseded_by": "correcao-autor.json"
+}

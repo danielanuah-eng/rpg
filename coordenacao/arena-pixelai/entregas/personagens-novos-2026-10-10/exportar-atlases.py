@@ -12,7 +12,7 @@ def actors():
   if value.get("ready"):result.append(dict(value,folder=value["owner"]+"-"+key,owner=value["owner"],stateKey=key))
  return result
 def belongs(p,a):
- if p["character_id"]!=a["character_id"]:return False
+ if p.get("character_id")!=a["character_id"]:return False
  return bool(p.get("group_id"))
 def fetch_actor(a):
  folder=HERE/a["folder"];folder.mkdir(parents=True,exist_ok=True)
@@ -81,10 +81,10 @@ def normalize():
  (HERE/"exportacao-atual.json").write_text(json.dumps(manifests,ensure_ascii=False,indent=2),encoding="utf8")
  return dict(actors=len(manifests),clips=sum(len(m["clips"]) for m in manifests))
 if __name__=="__main__":
- parser=argparse.ArgumentParser();parser.add_argument("--download",action="store_true");parser.add_argument("--normalize",action="store_true");args=parser.parse_args()
+ parser=argparse.ArgumentParser();parser.add_argument("--download",action="store_true");parser.add_argument("--normalize",action="store_true");parser.add_argument("--only",nargs="*");args=parser.parse_args()
  if args.download:
   with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
-   jobs={pool.submit(fetch_actor,a):a for a in actors()}
+   jobs={pool.submit(fetch_actor,a):a for a in actors() if not args.only or a["folder"] in args.only}
    for future in concurrent.futures.as_completed(jobs):
     try:print(json.dumps(future.result(),ensure_ascii=False),flush=True)
     except Exception as exc:print(json.dumps(dict(asset=jobs[future]["folder"],error=str(exc)),ensure_ascii=False),flush=True)

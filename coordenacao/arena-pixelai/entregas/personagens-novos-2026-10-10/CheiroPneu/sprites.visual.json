@@ -1,0 +1,248 @@
+{
+  "actor_id": "fc89abf9-cecd-4ad1-9e2e-af3f43656cd1",
+  "owner": "CheiroPneu",
+  "rotations": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "native_size": [
+    128,
+    128
+  ],
+  "frame_size": [
+    132,
+    132
+  ],
+  "pivot": "lowest-opaque-foot-pixel",
+  "foot_pixel_y": 127,
+  "reference_pixels_per_unit": 128,
+  "no_rescaling": true,
+  "clips": [],
+  "status": "base_corrigida_conferida",
+  "animations": "em_producao",
+  "integration": "pendente_claude",
+  "frames": [
+    {
+      "actor": "CheiroPneu",
+      "character_id": "fc89abf9-cecd-4ad1-9e2e-af3f43656cd1",
+      "direction": "south",
+      "source": "CheiroPneu/celulas/rotations/south.png",
+      "png": "CheiroPneu/sprites/south.png",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        9,
+        2,
+        117,
+        124
+      ],
+      "native_size": [
+        128,
+        128
+      ],
+      "frame_size": [
+        132,
+        132
+      ],
+      "foot_pixel_y": 127,
+      "sha256": "dafce6e6746d354d614b88bcfa0d5ce8124e357b08513214a1b72c116a171d75"
+    },
+    {
+      "actor": "CheiroPneu",
+      "character_id": "fc89abf9-cecd-4ad1-9e2e-af3f43656cd1",
+      "direction": "south-east",
+      "source": "CheiroPneu/celulas/rotations/south-east.png",
+      "png": "CheiroPneu/sprites/south-east.png",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        16,
+        2,
+        117,
+        125
+      ],
+      "native_size": [
+        128,
+        128
+      ],
+      "frame_size": [
+        132,
+        132
+      ],
+      "foot_pixel_y": 127,
+      "sha256": "0b7cd21b64fa6be7f4458f8819003b643d6e53f6324554222151691217f2a7a1"
+    },
+    {
+      "actor": "CheiroPneu",
+      "character_id": "fc89abf9-cecd-4ad1-9e2e-af3f43656cd1",
+      "direction": "east",
+      "source": "CheiroPneu/celulas/rotations/east.png",
+      "png": "CheiroPneu/sprites/east.png",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        21,
+        1,
+        99,
+        125
+      ],
+      "native_size": [
+        128,
+        128
+      ],
+      "frame_size": [
+        132,
+        132
+      ],
+      "foot_pixel_y": 127,
+      "sha256": "5ea583fb972cf89d120d9a53ce677450ef6f6d8afbe1f14e2d9df4eafc30a51c"
+    },
+    {
+      "actor": "CheiroPneu",
+      "character_id": "fc89abf9-cecd-4ad1-9e2e-af3f43656cd1",
+      "direction": "north-east",
+      "source": "CheiroPneu/celulas/rotations/north-east.png",
+      "png": "CheiroPneu/sprites/north-east.png",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        20,
+        1,
+        106,
+        124
+      ],
+      "native_size": [
+        128,
+        128
+      ],
+      "frame_size": [
+        132,
+        132
+      ],
+      "foot_pixel_y": 127,
+      "sha256": "66ed54895cf6483b397636c6cc8e66cb154cb6cbea26138b9f928fc0fc4a41eb"
+    },
+    {
+      "actor": "CheiroPneu",
+      "character_id": "fc89abf9-cecd-4ad1-9e2e-af3f43656cd1",
+      "direction": "north",
+      "source": "CheiroPneu/celulas/rotations/north.png",
+      "png": "CheiroPneu/sprites/north.png",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        13,
+        2,
+        116,
+        124
+      ],
+      "native_size": [
+        128,
+        128
+      ],
+      "frame_size": [
+        132,
+        132
+      ],
+      "foot_pixel_y": 127,
+      "sha256": "dee6a6fc68d76da32ea9db09ca6715da8270dd47c7e4d0804db3831b4d68a482"
+    },
+    {
+      "actor": "CheiroPneu",
+      "character_id": "fc89abf9-cecd-4ad1-9e2e-af3f43656cd1",
+      "direction": "north-west",
+      "source": "CheiroPneu/celulas/rotations/north-west.png",
+      "png": "CheiroPneu/sprites/north-west.png",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        10,
+        1,
+        106,
+        124
+      ],
+      "native_size": [
+        128,
+        128
+      ],
+      "frame_size": [
+        132,
+        132
+      ],
+      "foot_pixel_y": 127,
+      "sha256": "b80ed663af29e950440c4c8c0069517d6c31390a3264177698b907e132ed886c"
+    },
+    {
+      "actor": "CheiroPneu",
+      "character_id": "fc89abf9-cecd-4ad1-9e2e-af3f43656cd1",
+      "direction": "west",
+      "source": "CheiroPneu/celulas/rotations/west.png",
+      "png": "CheiroPneu/sprites/west.png",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        27,
+        1,
+        105,
+        125
+      ],
+      "native_size": [
+        128,
+        128
+      ],
+      "frame_size": [
+        132,
+        132
+      ],
+      "foot_pixel_y": 127,
+      "sha256": "4a107187974e18ef9903209fc218eb9e001fc7c355bcd3f7c422391417609375"
+    },
+    {
+      "actor": "CheiroPneu",
+      "character_id": "fc89abf9-cecd-4ad1-9e2e-af3f43656cd1",
+      "direction": "south-west",
+      "source": "CheiroPneu/celulas/rotations/south-west.png",
+      "png": "CheiroPneu/sprites/south-west.png",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        16,
+        2,
+        110,
+        125
+      ],
+      "native_size": [
+        128,
+        128
+      ],
+      "frame_size": [
+        132,
+        132
+      ],
+      "foot_pixel_y": 127,
+      "sha256": "0daacbfb1e0fd8600e4621bfb5165fad784cb91067bc6bd586c0f708b75b7c5a"
+    }
+  ]
+}

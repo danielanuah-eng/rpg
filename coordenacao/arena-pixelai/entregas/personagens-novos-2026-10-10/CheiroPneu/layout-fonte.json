@@ -1,0 +1,45 @@
+{
+  "character": {
+    "id": "fc89abf9-cecd-4ad1-9e2e-af3f43656cd1",
+    "name": "Autor — pele queimada, sem barba",
+    "prompt": "Cheiro D.Pneu Queimado, a bizarre imposing original fantasy pirate bruiser for Arena Tatica. Tall body with an ENORMOUS very broad heavy upper torso and very THIN SHORT legs. Split vertically into TWO halves: one half is burnt charred human flesh coated with glossy black oil, the other half is exposed ivory SKELETON ribs skull jaw arm and leg, NO blood. A small clearly readable TRUCK passes HORIZONTALLY THROUGH his belly, cab and wheels visible at waist. ONE arm ends in a GIANT hooked metal pirate hook, other hand is intact. Wear Kuma-inspired white rounded cap with black bear-like spots and small rounded bear ear shapes, and Doflamingo-inspired sharp pink wing-shaped sunglasses. Oily scorched pirate costume remnants around enormous torso, thin boots below. All unusual requested traits visible simultaneously: half burnt flesh/half skeleton, embedded truck, giant hook, white spotted cap, pink pointed sunglasses. Full body ready standing pose, hook lowered, high top-down crisp outlined chibi fantasy tactical pixel art consistent with Arena Tatica. No extra limbs, no background, no scenery, no text.",
+    "size": {
+      "width": 128,
+      "height": 128
+    },
+    "directions": 8,
+    "view": "high top-down"
+  },
+  "spritesheet": {
+    "path": "Cheiro_D.Pneu_Queimado-Autor_pele_queimada_sem.png",
+    "cell_size": {
+      "width": 128,
+      "height": 128
+    },
+    "sheet_size": {
+      "width": 1024,
+      "height": 128
+    },
+    "columns": 8,
+    "pivot": "cell-center",
+    "rows": [
+      {
+        "row": 0,
+        "type": "rotations",
+        "frame_count": 8,
+        "directions": [
+          "south",
+          "south-east",
+          "east",
+          "north-east",
+          "north",
+          "north-west",
+          "west",
+          "south-west"
+        ]
+      }
+    ]
+  },
+  "export_version": "1.0",
+  "export_date": "2026-10-11T02:18:49.208493+00:00"
+}

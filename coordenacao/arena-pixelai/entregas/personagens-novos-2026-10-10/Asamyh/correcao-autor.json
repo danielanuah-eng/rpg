@@ -1,0 +1,13 @@
+{
+  "original_id": "3dad3369-de58-48ca-a7cf-bc6e0e41a44e",
+  "new_id": "d0744019-2e8c-4ba0-82f2-5d4a64be69de",
+  "state_name": "Autor — bruxa preta e roxa",
+  "instructions": "CORRECTION explicitly requested by the author. Keep the SAME adult Asamyh's general identity and body proportions, but change ALL these traits consistently across every view: WHITE / PALE FAIR SKIN, straight BLACK hair, a clearly slender THIN NOSE, very DISCREET thin-frame small spectacles (not bulky round thick goggles), BLACK witch clothing with restrained dark accents, and a distinctly PURPLE pointed witch HAT. A refined adult witch face, graceful slight smile, dark eyes behind subtle glasses. Keep her single small magic WAND in the same RIGHT hand. Remove ALL green and silver costume color blocks, no brown skin, no brown hair. Black witch dress/tunic and boots, purple hat remain readable as separate materials with dark-grey/purple highlights. No cats, no new accessories or weapons, no pose change, no background. Same crisp pixel style and camera as the reference, complete full body.",
+  "response": "id: d0744019-2e8c-4ba0-82f2-5d4a64be69de\nsource: 3dad3369-de58-48ca-a7cf-bc6e0e41a44e\nedit: CORRECTION explicitly requested by the author. Keep the SAME adult Asamyh's general identity and body proportions, but change ALL these traits consistently across every view: WHITE / PALE FAIR SKIN, straight BLACK hair, a clearly slender THIN NOSE, very DISCREET thin-frame small spectacles (not bulky round thick goggles), BLACK witch clothing with restrained dark accents, and a distinctly PURPLE pointed witch HAT. A refined adult witch face, graceful slight smile, dark eyes behind subtle glasses. Keep her single small magic WAND in the same RIGHT hand. Remove ALL green and silver costume color blocks, no brown skin, no brown hair. Black witch dress/tunic and boots, purple hat remain readable as separate materials with dark-grey/purple highlights. No cats, no new accessories or weapons, no pose change, no background. Same crisp pixel style and camera as the reference, complete full body.\ncost: ~10-25 generations (Gemini tier by canvas size)\nstatus: processing (~30-90s)\nnote: linked via group_id, inherits skeleton for animations\n\nhint: get_character(character_id=\"d0744019-2e8c-4ba0-82f2-5d4a64be69de\")",
+  "status": "base_corrigida_conferida",
+  "directions": 8,
+  "alpha_measured": true,
+  "manifest": "sprites.visual.json",
+  "animations": "em_producao",
+  "integration": "pendente_claude"
+}

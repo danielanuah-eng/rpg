@@ -1,0 +1,15 @@
+{
+  "request": {
+    "id": "Asamyh",
+    "name": "Asamyh",
+    "body_type": "humanoid",
+    "size": 128,
+    "mode": "pro",
+    "description": "Asamyh, original fantasy witch support heroine for Arena Tatica. A beautiful confident adult brown-skinned brunette woman wearing clearly visible round spectacles, a pointed small witch hat, and a fitted GREEN and SILVER witch outfit with silver trim and a short green cape. Warm expressive brown eyes behind glasses, dark brown hair, kind clever smile. She holds ONE short magic wand in her RIGHT hand lowered at rest; wand emits a tiny restrained silver-green star glint. Full body standing ready, both boots visible, correct two arms and two legs. Readable stylish chibi tactical RPG miniature proportions, crisp pixel art with strong outline and volumetric shading matching Edgar and Arena Tatica. Preserve brown skin, glasses, witch hat, green/silver costume. No cats inside the sprite (they are separate summons), no background, no ground, no text.",
+    "character_id": "3dad3369-de58-48ca-a7cf-bc6e0e41a44e",
+    "requested": true
+  },
+  "response": "id: 3dad3369-de58-48ca-a7cf-bc6e0e41a44e\nname: Asamyh\nmode: pro (25 generations, 8 directions)\nbody: humanoid\nsize: 128x128px\nview: high top-down\nstyle character: 590cc7bc-3673-477c-aa23-f5655dd2d97a\nstatus: processing (~3-5 min)\n\nhint: get_character(character_id=\"3dad3369-de58-48ca-a7cf-bc6e0e41a44e\")",
+  "status": "referencia_anterior_rejeitada_pelo_autor",
+  "superseded_by": "correcao-autor.json"
+}

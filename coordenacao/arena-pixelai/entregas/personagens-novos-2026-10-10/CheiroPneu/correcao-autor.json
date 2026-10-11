@@ -1,0 +1,12 @@
+{
+  "source": "103c7cc0-da9e-4586-8d79-5fb9613eea9c",
+  "character_id": "fc89abf9-cecd-4ad1-9e2e-af3f43656cd1",
+  "failed_attempt": "84cf27d9-b7bb-4a3d-951a-387528afd0a5",
+  "description": "AUTHOR CORRECTION. Keep the SAME Cheiro D.Pneu Queimado, pose, huge broad upper torso, thin short legs, belly truck, giant metal hook, white spotted bear-ear cap and pink pointed sunglasses. REMOVE ALL BEARD AND MOUSTACHE: completely clean-shaven face, no facial hair. REPLACE EVERY exposed skeleton area with burned HUMAN SKIN, including face, jaw, chest, ribs, arms and legs. Entire body is covered in intact charred/scorched dark human skin, oily black patches and healed burn texture; no exposed bones, skull, skeletal jaw or visible ribs, no gore, no open wounds. Both halves have SKIN; retain visual burnt-oil contrast only through skin texture and shades. Preserve truck visibly embedded horizontally at his waist, one giant hooked arm and one intact hand, tiny boots, proportions and all eight directions. Crisp same pixel art and high top-down camera, complete full body, transparent background.",
+  "status": "base_corrigida_conferida",
+  "directions": 8,
+  "alpha_measured": true,
+  "manifest": "sprites.visual.json",
+  "animations": "em_producao",
+  "integration": "pendente_claude"
+}
