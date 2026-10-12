@@ -31,6 +31,10 @@ if (-not (Test-Path -LiteralPath (Join-Path $out 'ArenaTatica.exe'))) { throw 'O
 $destination = Join-Path $arenaRoot 'Builds/Windows'
 & robocopy $out $destination /MIR /NFL /NDL /NJH /NJS /NP /R:2 /W:2 | Out-Null
 if ($LASTEXITCODE -ge 8) { throw "Falha ao copiar o build (robocopy $LASTEXITCODE)." }
-$files = Get-ChildItem -LiteralPath $destination | Where-Object { $_.Name -notmatch 'BackUpThisFolder|BurstDebugInformation' } | Select-Object -ExpandProperty FullName
-Compress-Archive -LiteralPath $files -DestinationPath (Join-Path $arenaRoot 'Builds/ArenaTatica-Windows.zip') -Force
+# tar do Windows em vez de Compress-Archive: este gravava pastas vazias (Plugins) também como arquivo, e o itch recusa o zip.
+$names = Get-ChildItem -LiteralPath $destination | Where-Object { $_.Name -notmatch 'BackUpThisFolder|BurstDebugInformation' } | Select-Object -ExpandProperty Name
+$zip = Join-Path $arenaRoot 'Builds/ArenaTatica-Windows.zip'
+if (Test-Path -LiteralPath $zip) { Remove-Item -LiteralPath $zip -Force }
+& tar.exe -a -c -f $zip -C $destination @names
+if ($LASTEXITCODE -ne 0) { throw 'Falha ao gerar o zip.' }
 Write-Output "Versão de PC pronta: $(Join-Path $arenaRoot 'Builds/ArenaTatica-Windows.zip')"
