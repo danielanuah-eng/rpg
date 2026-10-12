@@ -62,3 +62,9 @@
 - APK gerado (`Builds/Android/ArenaTatica.apk`, 213 MB, ARM64/IL2CPP) com o intent-filter `arenatatica://sala` no manifesto. Build limpo 48 min; incremental 18 min. Teste em aparelho ainda não feito.
 - `Tools/build-android.ps1`: cópia fixa ASCII em `%LOCALAPPDATA%\ArenaTaticaAndroid` (robocopy /MIR, Library preservada), encerra o VBCSCompiler compartilhado (causava CS2011) e não aborta mais com stderr do Unity. Menu Exportar Android chama o script quando o caminho tem acento.
 - Play: os 5 props ambientais tocam em laço (`Teste/Props animados: estado`); silhueta do time atrás das árvores nas quatro vistas.
+
+## Atualizacao 12/10 — celular (commits dd1b5577 e 0c1ab105)
+- Tabuleiro em tela inteira; ceu em degrade por tema ate chegar `Sprites/Ceus/<id>/fundo.png` (pedido aberto ao Codex).
+- Um so painel lateral recolhivel (abas Acoes/Partida, botao ◀; recolhido vira a aba ☰). Topo e rodape sao faixas finas translucidas.
+- Loja: cada cartao mostra nome, preco e a descricao do item embaixo. Itens sem figura na loja: so Lobo de cinzas e Pocao de cura tem icone hoje.
+- Toque corrigido; Android travado em paisagem.
