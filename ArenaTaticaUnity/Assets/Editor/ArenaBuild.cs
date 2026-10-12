@@ -173,6 +173,9 @@ static class ArenaTestMenu
     [MenuItem("Arena Tática/Teste/Baltazar contra bot")] static void Baltazar() => Start(true,new[]{"baltazar"},new[]{"ogro-de-pedra"});
     [MenuItem("Arena Tática/Teste/Tchu tcha contra bot")] static void TchuTcha() => Start(true,new[]{"tchu-tcha"},new[]{"ciantia"});
     [MenuItem("Arena Tática/Teste/Bots contra bots")] static void BotsOnly() { Start(true,new[]{"baltazar","perry"},new[]{"damian","teantha"}); }
+    [MenuItem("Arena Tática/Teste/Painel: abrir ou recolher")] static void Side() => Game?.Hud?.ToggleSide();
+    [MenuItem("Arena Tática/Teste/Painel: Ações ou Partida")] static void Page() => Game?.Hud?.TogglePage();
+    [MenuItem("Arena Tática/Teste/Loja: espiar")] static void Shop() => Game?.Hud?.ToggleShopPeek();
     static void Self(string skill) { var g=Game; var f=g?.Active; if(f!=null) g.Submit("skill",f.cell,skill); }
     [MenuItem("Arena Tática/Teste/Ativo: martelo (Damian)")] static void Hammer() => Self("camaleao-martelo");
     [MenuItem("Arena Tática/Teste/Ativo: canhão (Damian)")] static void Cannon() => Self("camaleao-canhao");

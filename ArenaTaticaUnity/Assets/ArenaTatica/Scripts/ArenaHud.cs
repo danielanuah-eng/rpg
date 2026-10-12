@@ -44,7 +44,7 @@ namespace ArenaTatica
             var layout=side.gameObject.AddComponent<VerticalLayoutGroup>(); layout.padding=new RectOffset(12,12,8,10); layout.spacing=6; layout.childControlWidth=true; layout.childControlHeight=true; layout.childForceExpandHeight=false;
             // Abas do painel: Ações (lutadores, skills, loja, registro) e Partida (nova partida, salas, vista, menu); ◀ recolhe.
             var tabs=new GameObject("Abas",typeof(RectTransform),typeof(HorizontalLayoutGroup),typeof(LayoutElement)).GetComponent<RectTransform>(); tabs.SetParent(side,false);
-            var tabRow=tabs.GetComponent<HorizontalLayoutGroup>(); tabRow.spacing=5; tabRow.childControlWidth=tabRow.childControlHeight=true; tabRow.childForceExpandWidth=false; tabs.GetComponent<LayoutElement>().preferredHeight=34;
+            var tabRow=tabs.GetComponent<HorizontalLayoutGroup>(); tabRow.spacing=5; tabRow.childControlWidth=tabRow.childControlHeight=true; tabRow.childForceExpandWidth=false; var tabSize=tabs.GetComponent<LayoutElement>(); tabSize.preferredHeight=tabSize.minHeight=34; tabSize.flexibleHeight=0;
             actionsTab=Button("Ações",tabs,()=>ShowPage(false)); actionsTab.GetComponent<LayoutElement>().flexibleWidth=1;
             matchTab=Button("Partida",tabs,()=>ShowPage(true)); matchTab.GetComponent<LayoutElement>().flexibleWidth=1;
             Button("◀",tabs,()=>SetSideOpen(false),40);
@@ -132,9 +132,9 @@ namespace ArenaTatica
             for(int i=0;i<Shop.Slots;i++) {
                 int k=i; var b=Button("",items,()=>Game.Submit("comprar",slot:k)); shopButtons.Add(b);
                 var icon=new GameObject("Icone",typeof(RectTransform),typeof(Image)).GetComponent<Image>(); icon.transform.SetParent(b.transform,false); icon.preserveAspect=true; icon.raycastTarget=false;
-                Anchors(icon.rectTransform,new Vector2(0,1),new Vector2(0,1),new Vector2(6,-60),new Vector2(58,-6)); shopIcons.Add(icon);
-                var label=b.GetComponentInChildren<Text>(); label.alignment=TextAnchor.UpperLeft; label.fontSize=12; label.verticalOverflow=VerticalWrapMode.Truncate;
-                Anchors(label.rectTransform,Vector2.zero,Vector2.one,new Vector2(64,6),new Vector2(-6,-6));
+                Anchors(icon.rectTransform,new Vector2(0,.5f),new Vector2(0,.5f),new Vector2(8,-44),new Vector2(94,44)); shopIcons.Add(icon);
+                var label=b.GetComponentInChildren<Text>(); label.alignment=TextAnchor.MiddleLeft; label.fontSize=16; label.verticalOverflow=VerticalWrapMode.Truncate;
+                Anchors(label.rectTransform,Vector2.zero,Vector2.one,new Vector2(100,8),new Vector2(-10,-8));
             }
             shopHelp=Text("",shopWindow,13,muted); shopHelp.alignment=TextAnchor.MiddleCenter; shopHelp.horizontalOverflow=HorizontalWrapMode.Wrap;
             Anchors(shopHelp.rectTransform,new Vector2(0,.36f),new Vector2(1,.44f),new Vector2(16,0),new Vector2(-16,0));
@@ -352,6 +352,11 @@ namespace ArenaTatica
             SideOpen=open; side.gameObject.SetActive(open); sideTab.gameObject.SetActive(!open);
             Layout(); Game.View?.FitCamera();
         }
+        // Atalhos dos menus de teste do editor (conferir painel, aba e loja sem clicar).
+        public static bool PeekShop;
+        public void ToggleSide() => SetSideOpen(!SideOpen);
+        public void TogglePage() => ShowPage(!matchPage);
+        public void ToggleShopPeek() { PeekShop=!PeekShop; shopWindow.gameObject.SetActive(PeekShop); }
         void ShowPage(bool match)
         {
             matchPage=match; actionsPage.gameObject.SetActive(!match); networkPanel.gameObject.SetActive(match);
@@ -474,15 +479,17 @@ namespace ArenaTatica
             shopTitle.text=$"Loja do Castor  ·  P{team}  ·  {s.coins[team]} moedas";
             // Só dá para abrir a loja numa casa ao lado dela; saindo dali, a janela fecha.
             bool atShop=f!=null&&Board.NextToShop(s,f.cell);
-            if(!atShop) shopWindow.gameObject.SetActive(false);
+            if(!atShop&&!PeekShop) shopWindow.gameObject.SetActive(false);
             openShop.interactable=atShop;
             SetLabel(openShop,!atShop?"Loja: fique ao lado dela":shopWindow.gameObject.activeSelf?"Fechar loja":"Abrir loja");
             if(UnityEngine.InputSystem.Keyboard.current?.escapeKey.wasPressedThisFrame==true) shopWindow.gameObject.SetActive(false);
             for(int i=0;i<shopButtons.Count;i++) {
                 var d=i<slots.Length?Shop.Def(slots[i]):null; var b=shopButtons[i];
-                SetLabel(b,d==null?"—":$"<b>{d.name}</b>  <color=#{ArenaTema.Html(ArenaPresentation.Gold)}>{d.price} moedas</color>\n<size=11><color=#{ArenaTema.Html(muted)}>{ItemEffect(d)}</color></size>");
+                SetLabel(b,d==null?"—":$"<b>{d.name}</b>\n<color=#{ArenaTema.Html(ArenaPresentation.Gold)}>{d.price} moedas</color>\n<size=14><color=#{ArenaTema.Html(muted)}>{ItemEffect(d)}</color></size>");
                 b.interactable=d!=null&&Game.CanAct&&atShop&&f.summoner==0&&s.coins[team]>=d.price;
                 var sp=ShopIcon(d?.id); shopIcons[i].sprite=sp; shopIcons[i].enabled=sp; shopIcons[i].color=b.interactable||d==null?Color.white:new Color(1,1,1,.5f);
+                // Sem figura, o texto usa a largura toda do cartão.
+                b.GetComponentInChildren<Text>().rectTransform.offsetMin=new Vector2(sp?100:12,8);
             }
             // Muitas skills (gatos, Desejo do Kellen): 2 colunas no painel lateral para não passar da tela.
             FitGrid(actions,Portrait?4:skills.Count>4?2:1); FitGrid(shopGrid,Portrait?3:1);
