@@ -86,5 +86,60 @@ namespace ArenaTatica.Tests
             var frames=ArenaEfeitos.Frames("Sprites/Efeitos/"+id+"/loop");
             Assert.IsNotNull(frames,id); Assert.Greater(frames.Length,1,id);
         }
+
+        [Test] public void DamageWaitsForTheCollisionFrameNotThePeak()
+        {
+            // Martelo perfurante: colide no quadro 6 a 12 FPS; peakFrame0 (1) não decide o instante.
+            Assert.AreEqual(.5f,ArenaEfeitos.ImpactTime("Sprites/Efeitos/martelo-perfurante/uso"),1e-4f);
+            Assert.AreEqual(0,ArenaEfeitos.ImpactTime("Sprites/Efeitos/nao-existe/impacto"));
+        }
+
+        [Test] public void ContinuousStatesFollowTheFighterAndEndWithIt()
+        {
+            var f=new Fighter{hp=5,prisoned=1,hidden=true,channel=1};
+            CollectionAssert.AreEquivalent(new[]{"Estados/escondido/loop","Estados/preso/loop","Estados/desejo-canalizando/loop"},ArenaEfeitos.StateLoops(f));
+            f=new Fighter{hp=5}; f.buffs.Add(new Buff{id="bencao",turns=1,armor=1,pa=1});
+            CollectionAssert.AreEquivalent(new[]{"Estados/armadura/loop","Estados/buff-pa-pm/loop"},ArenaEfeitos.StateLoops(f));
+            // Noite dos Gatos usa a aura própria em vez do genérico de armadura.
+            f.buffs.Clear(); f.buffs.Add(new Buff{id="noite-dos-gatos",turns=1,armor=1});
+            CollectionAssert.AreEqual(new[]{"noite-dos-gatos/aura"},ArenaEfeitos.StateLoops(f));
+            f.buffs.Clear(); f.buffs.Add(new Buff{id="confusao",from="tentaculo-de-oleo",turns=2,pm=-2}); f.buffs.Add(new Buff{id="confusao",from="ferrao",turns=2,pm=-1});
+            CollectionAssert.AreEquivalent(new[]{"Estados/sem-pm-oleo/loop","Estados/sem-pm/loop"},ArenaEfeitos.StateLoops(f));
+            f.hp=0; Assert.IsEmpty(ArenaEfeitos.StateLoops(f));
+            foreach(var id in new[]{"Estados/escondido/loop","Estados/preso/loop","Estados/sem-pm-oleo/loop","noite-dos-gatos/aura"}) Assert.IsNotNull(ArenaEfeitos.Frames("Sprites/Efeitos/"+id),id);
+        }
+
+        [Test] public void RoomPathAcceptsCodePageLinkAndDeepLink()
+        {
+            Assert.AreEqual("ABC123",ArenaGame.RoomFromLink(" abc123 "));
+            Assert.AreEqual("QWERTY",ArenaGame.RoomFromLink("https://site.example/arena/?sala=qwerty"));
+            Assert.AreEqual("QWE9TY",ArenaGame.RoomFromLink("https://site.example/arena/index.html?v=2&sala=QWE9TY#x"));
+            Assert.AreEqual("ZZZZ11",ArenaGame.RoomFromLink("arenatatica://sala/ZZZZ11"));
+            Assert.IsNull(ArenaGame.RoomFromLink("ws://192.168.0.2:9080"));
+            Assert.IsNull(ArenaGame.RoomFromLink("https://site.example/?sala=ABC1234"));
+            Assert.IsNull(ArenaGame.RoomFromLink(""));
+            Assert.AreEqual("https://site.example/arena/?sala=ABC123",ArenaGame.InviteLink("https://site.example/arena/?sala=OLD111#t","ABC123"));
+            Assert.AreEqual("arenatatica://sala/ABC123",ArenaGame.InviteLink("","ABC123"));
+            Assert.AreEqual("ABC123",ArenaGame.RoomFromLink(ArenaGame.InviteLink("https://a.b/c","ABC123")));
+        }
+
+        [Test] public void FloatingTextsOnTheSameSpotStack()
+        {
+            var active=new System.Collections.Generic.List<(Vector3 at,float until)>();
+            Assert.AreEqual(0,ArenaHud.FloatSlot(active,Vector3.zero,0));
+            Assert.AreEqual(1,ArenaHud.FloatSlot(active,new Vector3(.2f,0,0),.1f));
+            Assert.AreEqual(0,ArenaHud.FloatSlot(active,new Vector3(3,0,0),.1f));
+            Assert.AreEqual(0,ArenaHud.FloatSlot(active,Vector3.zero,5));
+        }
+
+        [Test] public void TeamPickerCardsFitTheWholeRosterInBothOrientations()
+        {
+            int n=Content.Roster.Count();
+            foreach(var (w,h) in new[]{(1280f-332,720f-78),(720f-20,1280f-308)}) {
+                var cell=ArenaHud.CardSize(n,w,h); int cols=Mathf.Max(1,(int)((w+6)/(cell.x+6)));
+                Assert.LessOrEqual(Mathf.CeilToInt(n/(float)cols)*(cell.y+6)-6,h+.01f,$"{w}x{h}");
+                Assert.GreaterOrEqual(cell.x,77-.01f);
+            }
+        }
     }
 }

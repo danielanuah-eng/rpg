@@ -32,6 +32,40 @@ namespace ArenaTatica
         // resource = caminho Resources do manifesto, ex.: Sprites/Efeitos/mare-de-lava/inicio.
         public static EfeitoEntrada Entrada(string resource) { Load(); return resource!=null&&manifest.TryGetValue(resource,out var e)?e:null; }
         public static float Fps(string resource,float fallback) { var e=Entrada(resource); return e!=null&&e.fps>0?e.fps:fallback; }
+        // Segundos do início da fase até a colisão visual (impactFrame0). peakFrame0 mede só a maior área de alfa e não serve aqui.
+        public static float ImpactTime(string resource,float fallbackFps=10)
+        {
+            var e=Entrada(resource); if(e==null) return 0;
+            return Mathf.Clamp(e.impactFrame0,0,Mathf.Max(0,e.frames-1))/(e.fps>0?e.fps:fallbackFps);
+        }
+
+        // Estados contínuos de um lutador, como fases em Sprites/Efeitos (relativas). Um laço por estado, retirado quando ele acaba.
+        // Buff com aura própria (noite-dos-gatos/aura, aura-*/loop) usa a dela; os outros caem nos laços genéricos de Estados/.
+        static readonly Dictionary<string,string> PmLossLoops=new Dictionary<string,string>{ ["tentaculo-de-oleo"]="Estados/sem-pm-oleo/loop" };
+        public static List<string> StateLoops(Core.Fighter f)
+        {
+            var list=new List<string>();
+            void Add(string id) { if(!list.Contains(id)) list.Add(id); }
+            if(f==null||!f.Alive) return list;
+            if(f.hidden) Add("Estados/escondido/loop");
+            if(f.prisoned>0) Add("Estados/preso/loop");
+            if(f.channel>0) Add("Estados/desejo-canalizando/loop");
+            foreach(var b in f.buffs) {
+                if(b==null||b.turns<=0) continue;
+                if(OwnLoop(b.id) is string own) { Add(own); continue; }
+                if(b.armor>0) Add("Estados/armadura/loop");
+                if(b.pa>0||b.pm>0||b.range>0) Add("Estados/buff-pa-pm/loop");
+                if(b.pm<0) Add(b.from!=null&&PmLossLoops.TryGetValue(b.from,out var oil)?oil:"Estados/sem-pm/loop");
+            }
+            return list;
+        }
+        static string OwnLoop(string id)
+        {
+            if(string.IsNullOrEmpty(id)) return null;
+            if(Entrada("Sprites/Efeitos/"+id+"/aura")!=null) return id+"/aura";
+            if(id.StartsWith("aura")&&Entrada("Sprites/Efeitos/"+id+"/loop")!=null) return id+"/loop";
+            return null;
+        }
 
         // Carrega UMA fase (um arquivo) e só os quadros dela: Resources.LoadAll num caminho que também é pasta traria as outras fases.
         public static Sprite[] Frames(string resource)

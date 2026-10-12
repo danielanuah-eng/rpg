@@ -107,7 +107,8 @@ namespace ArenaTatica.Core
         public SkillDef skill;
     }
     // extra: +1 uso de cada skill por turno (Desejo C).
-    [Serializable] public class Buff { public string id; public int turns, pa, pm, armor, range, extra; }
+    // from: skill que causou (perda de PA/PM), só para a apresentação escolher o laço do estado.
+    [Serializable] public class Buff { public string id, from; public int turns, pa, pm, armor, range, extra; }
     [Serializable] public class Charge { public string skill; public int uses; }
     [Serializable] public class TeamShop { public string[] slots=new string[0]; }
     // Fichas editadas pelo autor (Content.ApplyEdits).

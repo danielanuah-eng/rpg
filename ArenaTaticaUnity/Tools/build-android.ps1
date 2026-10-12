@@ -13,7 +13,7 @@ $artifacts = Join-Path $arenaRoot 'Artifacts'
 New-Item -ItemType Directory -Force $artifacts | Out-Null
 Set-Content -LiteralPath (Join-Path $artifacts 'android-stage.txt') -Value $StagePath
 Write-Output "Cópia temporária Android: $StagePath"
-& unity build $StagePath --editor-version 6000.6.4f1 --target Android --execute-method ArenaBuild.Android --timeout 2400 --format json *> (Join-Path $artifacts 'android-cli.log')
+& unity build $StagePath --editor-version 6000.6.4f1 --target Android --execute-method ArenaBuild.Android --timeout 5400 --format json *> (Join-Path $artifacts 'android-cli.log')
 if ($LASTEXITCODE -ne 0) { throw 'Build Android falhou; consultar Artifacts/android-cli.log.' }
 $destination = Join-Path $arenaRoot 'Builds/Android'
 New-Item -ItemType Directory -Force $destination | Out-Null

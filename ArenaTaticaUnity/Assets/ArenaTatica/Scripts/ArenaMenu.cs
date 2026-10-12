@@ -122,6 +122,16 @@ namespace ArenaTatica
         {
             if(IsOpen&&UnityEngine.InputSystem.Keyboard.current?.escapeKey.wasPressedThisFrame==true) Close();
             if(title) title.gameObject.SetActive(!Portrait);
+            // Girou o aparelho (ou a janela): remonta a aba aberta no arranjo da orientação nova.
+            if(IsOpen&&shownPortrait!=Portrait) Show(tab);
+        }
+        bool shownPortrait;
+        // Texto que quebra linha mede a altura com a largura do quadro anterior: um segundo passe no quadro seguinte
+        // evita cortar a última linha dos painéis (Novidades em 16:9).
+        IEnumerator Relayout()
+        {
+            yield return null;
+            if(body) foreach(RectTransform r in body) LayoutRebuilder.ForceRebuildLayoutImmediate(r);
         }
         // Capturas de todas as abas (--arena-menu-shot <prefixo>): conferência visual sem clicar.
         IEnumerator Shots(string prefix)
@@ -135,7 +145,7 @@ namespace ArenaTatica
 
         void Show(string t)
         {
-            tab=t; refreshers.Clear();
+            tab=t; refreshers.Clear(); shownPortrait=Portrait; StartCoroutine(Relayout());
             foreach(Transform c in body) Destroy(c.gameObject);
             foreach(var kv in tabButtons) kv.Value.color=kv.Key==t?Chosen:Idle;
             switch(t)
@@ -156,20 +166,23 @@ namespace ArenaTatica
         void Home()
         {
             var c=Scroll(body);
-            // Modelo 017: texto e CTA à esquerda (~45%), tabuleiro transparente inteiro à direita.
-            var cols=Row(c,430); cols.GetComponent<HorizontalLayoutGroup>().spacing=24; cols.GetComponent<HorizontalLayoutGroup>().childAlignment=TextAnchor.UpperLeft;
+            // Modelo 017: texto e CTA à esquerda (~45%), tabuleiro transparente inteiro à direita. Retrato: texto em cima, tabuleiro embaixo.
+            RectTransform cols;
+            if(Portrait) { cols=Column(c); cols.GetComponent<VerticalLayoutGroup>().spacing=16; cols.GetComponent<VerticalLayoutGroup>().childForceExpandWidth=true; }
+            else { cols=Row(c,430); cols.GetComponent<HorizontalLayoutGroup>().spacing=24; cols.GetComponent<HorizontalLayoutGroup>().childAlignment=TextAnchor.UpperLeft; }
             var left=Column(cols); Layout(left.gameObject,0,0,45); var lle=left.GetComponent<LayoutElement>(); lle.preferredWidth=0; lle.minWidth=0; left.GetComponent<VerticalLayoutGroup>().spacing=12; left.GetComponent<VerticalLayoutGroup>().childAlignment=TextAnchor.MiddleLeft;
             var kicker=Label(left,"MINIATURAS TÁTICAS",13,Gold); kicker.fontStyle=FontStyle.Bold;
             var big=Label(left,"ARENA TÁTICA",52,Ink); big.fontStyle=FontStyle.Bold; Layout(big.gameObject,0,70);
             Label(left,"Miniaturas táticas no estilo Krosmaster · de 2 a 6 jogadores · no mesmo aparelho ou pela internet",17,Muted);
             var cta=Btn(left,"Jogar",()=>Show("jogar"),0,60,22); cta.GetComponent<Image>().color=Gold; cta.GetComponentInChildren<Text>().color=Bg; cta.GetComponentInChildren<Text>().fontStyle=FontStyle.Bold;
-            var row=Row(left,48);
+            // Retrato: os atalhos empilham para não espremer os rótulos.
+            var row=Portrait?left:Row(left,48);
             Btn(row,"Personagens",()=>Show("personagens"),0,44,16);
             Btn(row,"Editor de fichas e skills",()=>Show("editor"),0,44,15);
             Btn(row,"Voltar à partida",Close,0,44,16);
             var art=New("Arena",cols,typeof(Image)).GetComponent<Image>(); art.preserveAspect=true; art.raycastTarget=false;
             art.sprite=Resources.Load<Sprite>("Sprites/Menu/mapa-bosque"); if(!art.sprite) art.color=Color.clear;
-            Layout(art.gameObject,0,420,55); var ale=art.GetComponent<LayoutElement>(); ale.preferredWidth=0; ale.minWidth=0;
+            Layout(art.gameObject,0,Portrait?360:420,55); var ale=art.GetComponent<LayoutElement>(); ale.preferredWidth=0; ale.minWidth=0;
             Section(c,"Novidades");
             var card=Card(c);
             Para(card,"• <b>12 eventos de mapa</b> saem da face Cataclisma do dado: maré de lava, portal caótico, eco ancestral, maré de energia, festival de fogos, nevoeiro, vendaval, papa-moedas, o chefe Brutamontes Errante e mais.");

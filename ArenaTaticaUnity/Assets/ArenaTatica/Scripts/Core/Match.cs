@@ -528,7 +528,7 @@ namespace ArenaTatica.Core
             if(sk.step>0)
             {
                 var path=Board.Path(S,u,c,sk.step); u.cell=c;
-                Emit(new GameEvent{kind="mover",actor=u.id,path=path.ToArray()});
+                Emit(new GameEvent{kind="mover",actor=u.id,info=sk.id,path=path.ToArray()});
                 Collect(u);
                 return;
             }
@@ -618,8 +618,8 @@ namespace ArenaTatica.Core
                 Emit(new GameEvent{kind="ataque",actor=f.id,target=v.id,value=missed||ghost?-1:dmg,info=sk.id,cell=v.cell,dice=v==first&&!sk.selfArea?new[]{a,d}:null});
                 Hurt(v,dmg,log); dealt+=dmg;
                 bool hit=!missed&&!ghost&&(dmg>0||sk.damage<=0);
-                if(hit&&sk.pmLoss>0) v.buffs.Add(new Buff{id="confusao",turns=2,pm=-sk.pmLoss});
-                if(hit&&sk.paLoss>0) v.buffs.Add(new Buff{id="atordoado",turns=2,pa=-sk.paLoss});
+                if(hit&&sk.pmLoss>0) v.buffs.Add(new Buff{id="confusao",from=sk.id,turns=2,pm=-sk.pmLoss});
+                if(hit&&sk.paLoss>0) v.buffs.Add(new Buff{id="atordoado",from=sk.id,turns=2,pa=-sk.paLoss});
                 if(dmg>0&&v==main&&!S.Ally(v.team,f.team)&&Content.Def(f).steal>0&&MatchState.Player(v.team)&&MatchState.Player(f.team)&&S.coins[v.team]>0&&Dice.Range(S,100)<Content.Def(f).steal*(ambush?2:1))
                 {
                     S.coins[v.team]--; S.coins[f.team]++;

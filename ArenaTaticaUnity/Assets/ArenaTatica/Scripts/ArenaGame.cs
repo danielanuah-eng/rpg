@@ -113,7 +113,9 @@ namespace ArenaTatica
             Menu=gameObject.AddComponent<ArenaMenu>(); Menu.Game=this;
             MapEditor=gameObject.AddComponent<ArenaMapEditor>(); MapEditor.Game=this;
             Network.Message+=Receive;
-            Network.RoomReady+=code=> { GUIUtility.systemCopyBuffer=code; Hud.ShowRoom(code); room=code; LobbyStatus(); };
+            // Na Web copia o link de convite (abre o jogo já entrando); nos outros, o código (o campo aceita os dois).
+            Network.RoomReady+=code=> { GUIUtility.systemCopyBuffer=Application.platform==RuntimePlatform.WebGLPlayer?InviteLink(Application.absoluteURL,code):code; Hud.ShowRoom(code); room=code; LobbyStatus(); };
+            Application.deepLinkActivated+=url=> { if(RoomFromLink(url) is string linked) Join(linked); };
             Network.Connected+=peer=> {
                 if(Network.IsHost) return; // o assento só sai depois do hello
                 Recovery=false; throttle.Clear(); Synced=false; Status="Conectado. Entrando na sala…";
@@ -228,9 +230,20 @@ namespace ArenaTatica
         }
         public void Host() { NewLocal(); Network.Host(); if(!Network.IsHost) { Status="Não foi possível iniciar Host."; return; } Lobby=true; Seat=1; room="LAN"; LobbyStatus(); }
         public void HostRoom() { NewLocal(); Network.HostRoom(Seats); Lobby=true; Seat=1; Status="Criando sala na internet…"; }
+        // Caminho até a sala do Relay: código de 6 letras, link da página (?sala=CÓDIGO) ou deep link (arenatatica://sala/CÓDIGO),
+        // vindo do campo Entrar, da URL ao abrir na Web, do deep link no Android ou de --arena-room-join.
+        public static string RoomFromLink(string text)
+        {
+            text=text?.Trim(); if(string.IsNullOrEmpty(text)) return null;
+            if(ArenaTransport.ValidRoomCode(text)) return text.ToUpperInvariant();
+            var m=System.Text.RegularExpressions.Regex.Match(text,@"(?:[?&#]sala=|^arenatatica://sala/)([A-Za-z0-9]{6})(?![A-Za-z0-9])",System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+            return m.Success?m.Groups[1].Value.ToUpperInvariant():null;
+        }
+        public static string InviteLink(string page,string code) =>
+            string.IsNullOrEmpty(page)||!page.StartsWith("http",StringComparison.OrdinalIgnoreCase)?"arenatatica://sala/"+code:page.Split('?','#')[0]+"?sala="+code;
         public void Join(string address)
         {
-            if(ArenaTransport.ValidRoomCode(address)) { JoinRoom(address); return; }
+            if(RoomFromLink(address) is string code) { JoinRoom(code); return; }
             Leave(); room=address?.Trim(); Status="Conectando ao Host…"; Network.Join(address);
         }
         void JoinRoom(string code)
@@ -387,6 +400,8 @@ namespace ArenaTatica
                 if(args[i]=="--arena-room-join"&&i+1<args.Length) Join(args[++i]);
                 if(args[i]=="--arena-smoke") gameObject.AddComponent<ArenaSmoke>();
             }
+            // Aberto por um convite: página com ?sala= ou deep link que iniciou o app.
+            if(RoomFromLink(Application.absoluteURL) is string invited) { Menu.Close(); Join(invited); }
         }
     }
 }

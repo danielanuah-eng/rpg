@@ -123,6 +123,32 @@ public static class ArenaBuild
         if(report.summary.result!=BuildResult.Succeeded) throw new Exception("Build falhou: "+target);
     }
 }
+// Convite da sala no Android: arenatatica://sala/CÓDIGO abre o jogo (ArenaGame trata em Application.deepLinkActivated).
+// Injeta o intent-filter na activity de entrada do projeto Gradle gerado, sem manter um AndroidManifest próprio.
+class ArenaAndroidDeepLink : UnityEditor.Android.IPostGenerateGradleAndroidProject
+{
+    public const string Scheme="arenatatica";
+    public int callbackOrder => 1;
+    public void OnPostGenerateGradleAndroidProject(string unityLibrary)
+    {
+        const string ns="http://schemas.android.com/apk/res/android";
+        foreach(string path in new[]{Path.Combine(unityLibrary,"src/main/AndroidManifest.xml"),Path.Combine(unityLibrary,"../launcher/src/main/AndroidManifest.xml")}) {
+            if(!File.Exists(path)) continue;
+            var doc=new System.Xml.XmlDocument(); doc.Load(path);
+            var nsm=new System.Xml.XmlNamespaceManager(doc.NameTable); nsm.AddNamespace("android",ns);
+            var activity=doc.SelectSingleNode("//activity[intent-filter/action[@android:name='android.intent.action.MAIN']]",nsm) as System.Xml.XmlElement;
+            if(activity==null||activity.SelectSingleNode($"intent-filter/data[@android:scheme='{Scheme}']",nsm)!=null) continue;
+            var filter=doc.CreateElement("intent-filter");
+            System.Xml.XmlElement Child(string name,string value) { var e=doc.CreateElement(name); e.SetAttribute("name",ns,value); filter.AppendChild(e); return e; }
+            Child("action","android.intent.action.VIEW"); Child("category","android.intent.category.DEFAULT"); Child("category","android.intent.category.BROWSABLE");
+            var data=doc.CreateElement("data"); data.SetAttribute("scheme",ns,Scheme); data.SetAttribute("host",ns,"sala"); filter.AppendChild(data);
+            activity.AppendChild(filter); doc.Save(path);
+            Debug.Log("ARENA_DEEPLINK: "+Scheme+"://sala em "+path);
+            return;
+        }
+        throw new Exception("Activity de entrada não encontrada para registrar "+Scheme+"://sala");
+    }
+}
 // Atalhos de conferência no Play (o eval do MCP falha no Play por causa do Á no caminho): partida montada e ação do lutador ativo.
 static class ArenaTestMenu
 {

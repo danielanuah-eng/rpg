@@ -519,7 +519,12 @@ namespace ArenaTatica
             switch(e.kind)
             {
                 case "turno": Sound("turn"); RefreshHidden(s); break;
-                case "mover": if(actor&&e.path!=null&&e.path.Length>1) yield return Walk(actor,s,e.path); break;
+                case "mover":
+                    // Comando de andar (Mover gato): conjuração em quem manda, impacto onde a invocação chega.
+                    if(e.info!=null&&s.F(e.actor) is Fighter walker&&units.TryGetValue(walker.summoner,out var boss)&&boss) PhaseFx(e.info+"/conjuracao",boss.position+Vector3.up*.9f);
+                    if(actor&&e.path!=null&&e.path.Length>1) yield return Walk(actor,s,e.path);
+                    if(actor&&e.info!=null) PhaseFx(e.info+"/impacto",actor.position+Vector3.up*.3f);
+                    break;
                 case "trava":
                     if(e.dice!=null) {
                         // Primeiro os dados dos inimigos vizinhos; depois uma Esquiva para cada Trava tirada.
@@ -546,7 +551,13 @@ namespace ArenaTatica
                         var dealt=Content.AnySkill(e.info);
                         // Skill devorada pelo Colosso usa o projétil e as partículas da original.
                         string look=Content.BaseSkill(e.info);
+                        bool burstStart=main||burst!=(e.actor,e.info); burst=(e.actor,e.info);
                         if(main&&Vector3.Distance(Flat(actor.position),Flat(target.position))>1.5f) yield return Shot(look,actor.position,target.position,dealt?.area??0);
+                        // Corpo a corpo e área: a fase de impacto toca no alvo e o dano entra no quadro da colisão (impactFrame0).
+                        else if(e.value>=0&&ImpactPhase(look,out var blowRes) is Sprite[] blow) {
+                            StartCoroutine(PlayEffect(blow,target.position+Vector3.up*.7f,ArenaEfeitos.Fps(blowRes,12)));
+                            if(burstStart&&ArenaEfeitos.ImpactTime(blowRes) is float lag&&lag>0) yield return Wait(lag);
+                        }
                         Sound("attack");
                         if(e.value<0) Float(target.position,"Errou!",Blue);
                         else if(e.value>0||(dealt?.damage??1)>0) { Hit(target,actor.position,e.value,Shots.TryGetValue(look??"",out var hue)?hue.color:C(1,.85f,.6f)); Float(target.position,"−"+e.value,Gold); Turn(target,actor.position-target.position); PlayClip(target,"hit"); }
@@ -615,7 +626,16 @@ namespace ArenaTatica
                     break;
                 case "cura":
                     if(actor&&e.info=="totem-de-cura"&&!Playing(actor,"heal")) PlayClip(actor,"heal"); // um pulso do totem cura vários aliados
-                    if(target) { Flash(target.position+Vector3.up,Green); Float(target.position,"+"+e.value,Green); } yield return Wait(.4f); break;
+                    // Aura de gatinho e curas com arte: conjuração em quem cura, impacto no alvo; o número entra na colisão.
+                    if(target) {
+                        // Dreno (cura vinda de golpe) não repete a arte do golpe.
+                        bool mendArt=e.info!=null&&Content.AnySkill(e.info) is SkillDef mendSkill&&mendSkill.kind!=SkillKind.Dano;
+                        if(mendArt&&actor&&actor!=target&&e.info!="totem-de-cura") PhaseFx(e.info+"/conjuracao",actor.position+Vector3.up*.9f);
+                        if(mendArt&&PhaseFx(e.info+"/impacto",target.position+Vector3.up*.6f)>0&&ArenaEfeitos.ImpactTime("Sprites/Efeitos/"+e.info+"/impacto") is float mend&&mend>0) yield return Wait(mend);
+                        else Flash(target.position+Vector3.up,Green);
+                        Float(target.position,"+"+e.value,Green);
+                    }
+                    yield return Wait(.4f); break;
                 case "armadilha":
                     if(target) { Hit(target,target.position+Vector3.back,e.value,Red); Float(target.position,"−"+e.value,Red); PlayClip(target,"hit"); }
                     Game.Hud?.Log($"{Name(s,e.target)} pisou numa armadilha: {e.value} de dano");
@@ -625,7 +645,10 @@ namespace ArenaTatica
                     var f=s.F(e.target);
                     if(f!=null&&!units.ContainsKey(f.id)) {
                         float cast=0; if(actor) { Turn(actor,Position(s,f.cell)-actor.position); cast=PlayClip(actor,"summon"); }
-                        if(cast>0) yield return Wait(cast*.6f);
+                        // Skill que invocou (Chamar gato, Noite dos Gatos): conjuração no lançador e impacto na casa, antes de surgir.
+                        string by=s.F(e.actor)?.lastSkill; float call=0;
+                        if(actor&&by!=null) { PhaseFx(by+"/conjuracao",actor.position+Vector3.up*.9f); if(EffectFrames(by+"/impacto")!=null) { PhaseFx(by+"/impacto",Position(s,f.cell)+Vector3.up*.4f); call=ArenaEfeitos.ImpactTime("Sprites/Efeitos/"+by+"/impacto"); } }
+                        cast=Mathf.Max(cast*.6f,call); if(cast>0) yield return Wait(cast);
                         var u=units[f.id]=CreateUnit(f); u.position=Position(s,f.cell); if(actor) Turn(u,u.position-actor.position);
                         float rise=PlayClip(u,"spawn"); // quem tem arte de surgimento usa a arte; os outros pulsam
                         if(rise>0) yield return Wait(rise); else yield return Pulse(u);
@@ -657,6 +680,7 @@ namespace ArenaTatica
                     Game.Hud?.Log($"{Name(s,e.actor)} comprou {Shop.Def(e.info)?.name} por {e.value}"); break;
                 // ── Eventos de 10/10: área em volta de si, zonas, comandos, controle, suporte, Desejo, neutros e eventos de mapa ──
                 case "area":
+                    burst=default;
                     if(actor) {
                         if(e.dice!=null) { Game.Hud?.RollDice(e.dice,new[]{"Ataque","Defesa"}); yield return Wait(ArenaHud.DiceLand); }
                         var sk=Content.AnySkill(e.info); float sw=PlayClip(actor,sk?.anim??"attack"); if(sw==0) sw=PlayClip(actor,"attack");
@@ -673,8 +697,16 @@ namespace ArenaTatica
                     Game.Hud?.Log($"{Name(s,e.actor)}: {Content.AnySkill(e.info)?.name}");
                     break;
                 case "comando":
-                    if(target) { Flash(target.position+Vector3.up*.4f,Violet,10); if(actor) PlayClip(actor,"summon"); }
-                    yield return Wait(.2f); break;
+                {
+                    // Faísca da varinha: conjuração em quem manda e impacto no gato; o disparo do gato sai no quadro da colisão.
+                    string order=s.F(e.actor)?.lastSkill; float spark=0;
+                    if(target) {
+                        if(actor) { PlayClip(actor,"summon"); if(order!=null) PhaseFx(order+"/conjuracao",actor.position+Vector3.up*.9f); }
+                        if(order!=null&&PhaseFx(order+"/impacto",target.position+Vector3.up*.5f)>0) spark=ArenaEfeitos.ImpactTime("Sprites/Efeitos/"+order+"/impacto");
+                        else Flash(target.position+Vector3.up*.4f,Violet,10);
+                    }
+                    yield return Wait(Mathf.Max(.2f,spark)); break;
+                }
                 case "sumir":
                     if(target) { Flash(target.position+Vector3.up*.5f,Violet,12); yield return Wait(.2f); target.gameObject.SetActive(false); }
                     break;
@@ -694,7 +726,13 @@ namespace ArenaTatica
                     if(target) { var tf=s.F(e.target); if(tf==null||ArenaEfeitos.Visible("Sprites/Efeitos/"+e.info+"/uso",true,tf.hidden,s.Ally(tf.team,Game.LocalTeam))) StartCoroutine(Fx(e.info+"/uso",target.position+Vector3.up*.7f,Green,.1f)); Float(target.position,e.value>0?$"+{e.value} armadura":"Fortalecido",Green); }
                     yield return Wait(.3f); break;
                 case "suporte":
-                    if(actor) { float sp=PlayClip(actor,Content.AnySkill(e.info)?.anim??"summon"); if(e.value>0) StartCoroutine(Ring(Position(s,e.cell)+Vector3.up*.05f,e.value,Green)); yield return Wait(sp>0?sp*.5f:.3f); }
+                    if(actor) {
+                        float sp=PlayClip(actor,Content.AnySkill(e.info)?.anim??"summon"); if(e.value>0) StartCoroutine(Ring(Position(s,e.cell)+Vector3.up*.05f,e.value,Green));
+                        // Noite dos Gatos e outros suportes com arte: conjuração em si, impacto no centro da área.
+                        PhaseFx(e.info+"/conjuracao",actor.position+Vector3.up*.9f);
+                        float land=PhaseFx(e.info+"/impacto",Position(s,e.cell)+Vector3.up*.3f)>0?ArenaEfeitos.ImpactTime("Sprites/Efeitos/"+e.info+"/impacto"):0;
+                        yield return Wait(Mathf.Max(sp>0?sp*.5f:.3f,land));
+                    }
                     Game.Hud?.Log($"{Name(s,e.actor)}: {Content.AnySkill(e.info)?.name}");
                     break;
                 case "reviver":
@@ -891,6 +929,50 @@ namespace ArenaTatica
                 Place(pair.angel,angelFrames,t); Place(pair.demon,demonFrames,t+Mathf.PI);
             }
         }
+        // Estados contínuos (entrega 017): laço sobre o lutador enquanto o estado durar, retirado quando acaba. Acompanha a
+        // visibilidade do alvo: o inimigo não vê o laço de quem está escondido. Vários estados se empilham acima da cabeça.
+        readonly Dictionary<(int id,string fx),SpriteRenderer> stateLoops=new Dictionary<(int,string),SpriteRenderer>();
+        void UpdateStates(MatchState s)
+        {
+            var want=new List<(int id,string fx)>();
+            foreach(var f in s.fighters) {
+                if(!f.Alive||(f.hidden&&!s.Ally(f.team,Game.LocalTeam))||!units.TryGetValue(f.id,out var unit)||!unit||!unit.gameObject.activeSelf) continue;
+                foreach(var fx in ArenaEfeitos.StateLoops(f)) if(EffectFrames(fx)!=null) want.Add((f.id,fx));
+            }
+            foreach(var key in stateLoops.Keys.ToList()) if(!want.Contains(key)||!stateLoops[key]) { if(stateLoops[key]) Destroy(stateLoops[key].gameObject); stateLoops.Remove(key); }
+            var stack=new Dictionary<int,int>();
+            foreach(var key in want) {
+                if(!stateLoops.TryGetValue(key,out var r)) {
+                    var frames=EffectFrames(key.fx);
+                    r=new GameObject("Estado_"+key.fx,typeof(SpriteRenderer)).GetComponent<SpriteRenderer>(); r.transform.SetParent(effectRoot,false);
+                    if(spriteMaterial) r.sharedMaterial=spriteMaterial; r.sprite=frames[0];
+                    // Do tamanho da casa: a tira não é reamostrada, só a escala do objeto.
+                    r.transform.localScale=Vector3.one*(1.1f/Mathf.Max(.01f,frames[0].bounds.size.x));
+                    var loop=r.gameObject.AddComponent<SpriteLoop>(); loop.frames=frames; loop.fps=ArenaEfeitos.Fps("Sprites/Efeitos/"+key.fx,12); loop.billboard=true;
+                    stateLoops[key]=r;
+                }
+                var f=s.F(key.id); float h=f!=null&&Heights.TryGetValue(f.def,out float hh)?hh:.75f;
+                // Aura e escondido envolvem o corpo; os demais ficam em fila acima da cabeça.
+                bool body=key.fx.EndsWith("/aura")||key.fx.StartsWith("aura")||key.fx.Contains("escondido")||key.fx.Contains("preso");
+                int n=body?0:(stack.TryGetValue(key.id,out int k)?k:0); if(!body) stack[key.id]=n+1;
+                r.transform.position=units[key.id].position+Vector3.up*(body?h*.55f:h+.35f+.38f*n);
+            }
+        }
+        // Fase de efeito sem bloquear (conjuração no lançador, impacto no destino): devolve a duração, ou 0 sem arte.
+        float PhaseFx(string fx,Vector3 at)
+        {
+            var frames=EffectFrames(fx); if(frames==null) return 0;
+            float fps=ArenaEfeitos.Fps("Sprites/Efeitos/"+fx,12); StartCoroutine(PlayEffect(frames,at,fps)); return frames.Length/fps;
+        }
+        // Fase que leva o golpe ao alvo (impacto, uso ou arquivo único) e seu caminho no manifesto.
+        static Sprite[] ImpactPhase(string skill,out string res)
+        {
+            res=null; if(string.IsNullOrEmpty(skill)) return null;
+            foreach(var p in new[]{skill+"/impacto",skill+"/uso",skill}) if(EffectFrames(p) is Sprite[] f) { res="Sprites/Efeitos/"+p; return f; }
+            return null;
+        }
+        // Golpe de área: o dano espera a colisão só no primeiro alvo; os outros aparecem junto.
+        (int actor,string skill) burst;
         void AdvanceRigs()
         {
             foreach(var rig in rigs.Values) {
@@ -1042,14 +1124,15 @@ namespace ArenaTatica
             (ShotKind kind,Color color) style=skill!=null&&Shots.TryGetValue(skill,out var st)?st:(ShotKind.Orbe,Gold);
             from+=Vector3.up*.9f; var hit=to+Vector3.up*.8f;
             // Fases do disparo: conjuração no lançador, projétil (tira animada ou imagem estática) pela trajetória, impacto no destino.
-            var cast=EffectFrames(skill+"/conjuracao"); var frames=EffectFrames(skill)??EffectFrames(skill+"/impacto"); var image=ProjectileImage(skill);
+            var cast=EffectFrames(skill+"/conjuracao"); var frames=ImpactPhase(skill,out var impactRes); var image=ProjectileImage(skill);
             var flight=ProjectileFrames(skill);
             if(cast!=null) StartCoroutine(PlayEffect(cast,from,ArenaEfeitos.Fps("Sprites/Efeitos/"+skill+"/conjuracao",12)));
             // Projeteis/<skill>.png do Codex: imagem larga (128 px) estica como raio; as menores voam como projétil.
             bool beam=style.kind==ShotKind.Raio||style.kind==ShotKind.Sopro; if(image&&image.rect.width<128) beam=false;
-            if(beam) { yield return Beam(from,hit,style.color,style.kind==ShotKind.Sopro,image); if(frames!=null) StartCoroutine(PlayEffect(frames,hit,14)); }
+            if(beam) yield return Beam(from,hit,style.color,style.kind==ShotKind.Sopro,image);
             else yield return Missile(from,hit,style.kind,style.color,flight,image);
-            if(!beam&&frames!=null) StartCoroutine(PlayEffect(frames,hit,ArenaEfeitos.Fps("Sprites/Efeitos/"+skill+"/impacto",14)));
+            // O dano (depois do Shot) entra no quadro de colisão da fase de impacto, não no fim do voo.
+            if(frames!=null) { StartCoroutine(PlayEffect(frames,hit,ArenaEfeitos.Fps(impactRes,14))); float lag=ArenaEfeitos.ImpactTime(impactRes,14); if(lag>0) yield return Wait(lag); }
             Flash(hit,style.color,area>0?40:20);
             if(area>0) StartCoroutine(Ring(to+Vector3.up*.05f,area,style.color));
         }
@@ -1237,7 +1320,7 @@ namespace ArenaTatica
             if(!Ready||s==null) return;
             if(Screen.width!=screenWidth||Screen.height!=screenHeight) FitCamera();
             FitSky();
-            AdvanceRigs(); SyncGhosts(); UpdateBars(s); UpdateCompanions(s);
+            AdvanceRigs(); SyncGhosts(); UpdateBars(s); UpdateCompanions(s); UpdateStates(s);
             for(int i=wings.Count-1;i>=0;i--) { var wing=wings[i]; if(!wing) { wings.RemoveAt(i); continue; } wing.localRotation=wingRest[wing]*Quaternion.Euler(0,0,Mathf.Sin(Time.time*1.8f)*3.15f); }
             string key=s.revision+"|"+Game.Mode+"|"+Game.CanAct;
             if(key!=shownKey) UpdateHighlights(key);

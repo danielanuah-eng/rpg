@@ -42,3 +42,18 @@
 - Console: sem erros do jogo; o unico erro foi o timeout da propria ferramenta de automacao.
 - Reparos: 168/176/176 px, Point, sem mip (.meta + RepairedStripsSliceIntoTheRightCells). O recorte visual em partida nao foi observado.
 - Fases e ancoras dos efeitos, terreno em laco, visibilidade por dono e tabuleiro inteiro em partida: cobertos so por testes EditMode; conferencia visual fica para o autor jogar.
+
+## Atualizacao 12/10/2026 (Claude)
+- Estados persistentes ligados a lacos (`ArenaEfeitos.StateLoops` + `ArenaPresentation.UpdateStates`): escondido, preso, desejo-canalizando, armadura, buff-pa-pm, sem-pm, sem-pm-oleo (`Buff.from`), aura propria de buff (noite-dos-gatos/aura). Seguem a visibilidade do alvo e saem quando o estado acaba.
+- Asamyh: chamar-gato e noite-dos-gatos (conjuracao + impacto na casa), mover-gato (evento `mover` com info), faisca-da-varinha (conjuracao + impacto no gato; disparo do gato no quadro de colisao), aura-de-gatinho (cura com conjuracao/impacto).
+- Dano no `impactFrame0` (`ArenaEfeitos.ImpactTime`): corpo a corpo, area (primeiro alvo) e projeteis; martelo perfurante = quadro 6 (0,5 s).
+- Textos de dano empilhados, contorno e presos a tela. Seletor de equipe em retrato (faixa inferior) e cartoes ajustados ao elenco; menu Inicio em retrato e segundo passe de layout (Novidades sem corte).
+- Relay: entrada aceita codigo, `?sala=CODIGO` (Web, abre ja entrando) e `arenatatica://sala/CODIGO` (deepLinkActivated). Manifest Android do esquema ainda nao criado.
+- EditMode 77/77. Play Mode destas mudancas nao conferido.
+- Android: `ArenaAndroidDeepLink` (IPostGenerateGradleAndroidProject em `Assets/Editor/ArenaBuild.cs`) injeta o intent-filter `arenatatica://sala` na activity de entrada; ainda não testado num build Android.
+
+## Polimento Blender — mapas (12/10/2026, Claude)
+- Os 183 GLB de `entregas/polimento-blender-2026-10-12/models/` substituíram os de `Resources/Models/Mapa/` (mesmos caminhos; nenhum .meta alterado). Regras, layouts e câmera intocados.
+- Play: Bosque 12×12 e 18×18 (6 jogadores), Deserto, Neve (vista girada), Montanha/pedreira e Vulcão renderizaram com cores sólidas e sem ruído; barras de vida, botões Girar e props ambientais (estandarte, cata-vento, fonte, braseiro) visíveis; Console sem erros. EditMode 77/77 antes da troca.
+- Não conferido: animação em laço dos props e oclusão/silhueta atrás das árvores novas em todas as quatro vistas.
+- Elenco Blender V1: **não integrado** (autor rejeitou a aparência; direção Talyssa V2 aguarda amostra 3D). Sprites continuam no cliente.
