@@ -1,0 +1,39 @@
+{
+  "estado": "verificacao_estrutural_ok",
+  "falhas": [],
+  "objetos": 530,
+  "verticesAvaliados": 1319018,
+  "triangulosAvaliados": 2550974,
+  "limites": [
+    [
+      -0.35248762369155884,
+      -0.16540171205997467,
+      0.004734443034976721
+    ],
+    [
+      0.49504247307777405,
+      0.174125537276268,
+      1.7850416898727417
+    ]
+  ],
+  "arquivos": {
+    "Talyssa-v2-amostra.blend": {
+      "bytes": 5501614,
+      "sha256": "ea606bf3d0c390113455af17450b4bda905e3da4d516e4367fb57d34ef3b74e9"
+    },
+    "talyssa-corpo-final.png": {
+      "bytes": 1630186,
+      "sha256": "e0e2fcbdee212d8a86b242cb4342b7d8106ed8cfeb1277de8db3e52d952ca9e6"
+    },
+    "talyssa-rosto-final.png": {
+      "bytes": 1571658,
+      "sha256": "065eb93b5f91a823008fb35bdfc9e9546c659ffbd492895c531de0391216af38"
+    }
+  },
+  "observacoes": [
+    "Amostra estatica de modelagem; sem rig, clipes ou integracao.",
+    "Renderiza geometria real com materiais Blender; conceito nao usado como textura ou plano.",
+    "Contagem de geometria nao comprova qualidade artistica nem aptidao para jogo.",
+    "Retopologia e otimizacao de curvas ainda pendentes para producao."
+  ]
+}

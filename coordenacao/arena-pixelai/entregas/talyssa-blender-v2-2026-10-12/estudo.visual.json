@@ -1,0 +1,26 @@
+{
+  "projeto": "ArenaTaticaUnity",
+  "id": "Talyssa",
+  "versao": "v2-amostra",
+  "tipo": "amostra_3d_estatica_real",
+  "estado": "estudo_para_revisao_visual",
+  "conceito": "../talyssa-direcao-v2-2026-10-12/talyssa-estudo-visual-v2.png",
+  "aprovacaoConceito": "Autor respondeu isso em 12/10/2026",
+  "aprovacaoModelo3D": "pendente",
+  "fonte": "Talyssa-v2-amostra.blend",
+  "previews": ["talyssa-corpo-final.png", "talyssa-rosto-final.png"],
+  "verificacao": "verificacao.json",
+  "origemAnatomia": "base-cc0/origem.json",
+  "licencaBaseAnatomica": "CC0-1.0",
+  "software": "Blender 5.2.2 LTS",
+  "rig": "pendente",
+  "clipes": [],
+  "integracao": "nao_integrar_amostra",
+  "limites": [
+    "O conceito aprovado nao foi usado como imagem plana ou textura para simular modelagem.",
+    "Amostra de geometria real; acabamento ainda mais simples que o conceito aprovado.",
+    "Rig, animacoes, retopologia, otimizacao, bake de materiais e exportacao de jogo pendentes.",
+    "Sprites atuais e versoes anteriores preservados.",
+    "Aprovacao da imagem conceitual nao e aprovacao deste modelo ou do restante do elenco."
+  ]
+}

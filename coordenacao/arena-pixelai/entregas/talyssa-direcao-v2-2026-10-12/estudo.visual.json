@@ -1,0 +1,22 @@
+{
+  "projeto": "ArenaTaticaUnity",
+  "personagem": "Talyssa",
+  "tipo": "estudo_de_direcao_visual",
+  "estado": "direcao_visual_aprovada_pelo_autor",
+  "data": "2026-10-12",
+  "imagem": "talyssa-estudo-visual-v2.png",
+  "fonteIdentidade": "ArenaTaticaUnity/Assets/ArenaTatica/Resources/Sprites/Talyssa/south-east.png",
+  "gerador": "image_gen integrado",
+  "prompt": "prompt.txt",
+  "motivo": "Autor rejeitou a aparência dos modelos anteriores: parecem de massinha. Autorizou uma amostra de nova direção antes de repetir no elenco.",
+  "avaliacaoCodex": "Conceito aprovado pelo autor: proporcoes adultas, rosto definido, cabelo branco, pele morena, capa verde, couro marrom e lamina magenta. A avaliacao do modelo 3D real continua pendente.",
+  "limites": [
+    "Imagem conceitual gerada; não é render de arquivo Blender.",
+    "Não contém modelo 3D, rig ou animação.",
+    "Não substituir os sprites nem integrar no Unity.",
+    "Elenco Blender v1 permanece preservado como histórico, visual rejeitado pelo autor.",
+    "Modelagem Blender revisada e reprodução deste nível de acabamento ainda pendentes."
+  ],
+  "proximoPasso": "Criar amostra real no Blender; avaliar o resultado 3D antes de refazer o elenco.",
+  "aprovacao": "Autor respondeu isso à proposta visual em 12/10/2026."
+}
