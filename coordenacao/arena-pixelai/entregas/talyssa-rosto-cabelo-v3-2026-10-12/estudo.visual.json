@@ -1,0 +1,19 @@
+{
+  "projeto": "ArenaTaticaUnity",
+  "id": "Talyssa",
+  "versao": "v3-rosto-cabelo",
+  "estado": "amostra_para_revisao_visual",
+  "feedbackAnterior": "Autor: rosto esquisito e cabelo esquisito, mas esta no rumo.",
+  "aprovacaoFinal": "pendente",
+  "fonte": "Talyssa-rosto-cabelo-v3.blend",
+  "previews": ["rosto-v3.png", "corpo-v3.png"],
+  "escopo": ["rosto", "olhos", "sobrancelhas", "expressao", "cabelo"],
+  "preservados": ["corpo", "roupas", "equipamento", "cameras", "luzes"],
+  "verificacao": "verificacao.json",
+  "origemAnatomia": "../talyssa-blender-v2-2026-10-12/base-cc0/origem.json",
+  "licencaBaseAnatomica": "CC0-1.0",
+  "rig": "pendente",
+  "clipes": [],
+  "integracao": "nao_integrar_amostra",
+  "observacoes": ["O feedback de estar no rumo nao e aprovacao final do modelo.", "Conferir a imagem obtida do Blender antes de repetir esta direcao no elenco.", "Otimizacao, rig, animacoes e integracao continuam pendentes."]
+}

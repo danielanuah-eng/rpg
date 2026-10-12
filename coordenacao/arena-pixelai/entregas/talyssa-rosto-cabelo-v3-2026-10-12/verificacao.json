@@ -1,0 +1,44 @@
+{
+  "estado": "verificacao_estrutural_ok",
+  "falhas": [],
+  "arquivoReaberto": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\talyssa-rosto-cabelo-v3-2026-10-12\\Talyssa-rosto-cabelo-v3.blend",
+  "verticesFonteVisiveis": 112457,
+  "pontosCurvasVisiveis": 242063,
+  "preservacao": {
+    "corpoRoupaPreservados": true,
+    "objetosComparados": 168,
+    "camerasLuzesPreservadas": true,
+    "fonte": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\coordenacao\\arena-pixelai\\entregas\\talyssa-blender-v2-2026-10-12\\Talyssa-v2-amostra.blend",
+    "sha256Fonte": "ea606bf3d0c390113455af17450b4bda905e3da4d516e4367fb57d34ef3b74e9"
+  },
+  "arquivos": {
+    "Talyssa-rosto-cabelo-v3.blend": {
+      "bytes": 8188861,
+      "sha256": "2d57db64e3cbabe76601587c0df96d8653d1b7464be02e3a84c6a7630a9abfc8"
+    },
+    "rosto-v3.png": {
+      "bytes": 1544157,
+      "sha256": "afb49fa5ff17c27c760c22b735a9194256cdddbf8070ea67836e997e6ba28c21",
+      "dimensoes": [
+        1100,
+        1100
+      ]
+    },
+    "corpo-v3.png": {
+      "bytes": 1631559,
+      "sha256": "471d24a2e1d871bb2c9a76e38c002c3c8d4e62afd186f52a08bcad058c464a25",
+      "dimensoes": [
+        1050,
+        1400
+      ]
+    }
+  },
+  "revisaoArtistica": "pendente_autor",
+  "rig": "pendente",
+  "animacoes": [],
+  "observacoes": [
+    "Render de geometria real; sem imagem conceitual aplicada ao modelo.",
+    "Corpo, roupas, equipamento e matrizes de camera/luz iguais aos da V2.",
+    "Amostra de alta resolucao para direcao visual; nao esta otimizada para jogo."
+  ]
+}
