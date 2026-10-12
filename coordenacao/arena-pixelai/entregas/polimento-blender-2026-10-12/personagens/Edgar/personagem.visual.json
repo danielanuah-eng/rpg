@@ -1,0 +1,169 @@
+{
+  "id": "Edgar",
+  "estado": "exportado_para_revisao",
+  "integracao": "pendente_claude",
+  "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\south-east.png",
+  "sha256Referencia": "7c79de9cac886710c84dcbed05e3ac7fe3e36bbf7278faace03752c9e9217e8a",
+  "modelo": "Edgar.glb",
+  "fonte": "Edgar.blend",
+  "preview": "previa.png",
+  "sha256": "98ac94f8ec572fc7062967962ddd25ea82fe735da1bdcc676ce2566decc7ccc4",
+  "unidade": "metro",
+  "frenteBlender": "-Y",
+  "frenteGLB": "+Z",
+  "pivo": "origem na base, sem root motion de deslocamento",
+  "dimensoesRestBlender": [
+    0.9426586627960205,
+    0.5717852115631104,
+    1.7049999237060547
+  ],
+  "ossos": 15,
+  "triangulos": 2492,
+  "clipes": [
+    {
+      "id": "attack",
+      "duracaoSegundos": 0.8,
+      "quadrosFonte": 20,
+      "loop": false,
+      "descricao": "Preparação, golpe do equipamento/corpo e recuperação."
+    },
+    {
+      "id": "death",
+      "duracaoSegundos": 1.5,
+      "quadrosFonte": 37,
+      "loop": false,
+      "descricao": "Perda de sustentação e queda, mantendo a orientação até a queda."
+    },
+    {
+      "id": "hit",
+      "duracaoSegundos": 0.8,
+      "quadrosFonte": 20,
+      "loop": false,
+      "descricao": "Recuo curto, mesma direção, recuperação."
+    },
+    {
+      "id": "idle",
+      "duracaoSegundos": 2.0,
+      "quadrosFonte": 49,
+      "loop": true,
+      "descricao": "Respiração e ajuste curto de postura; retorna à pose inicial."
+    },
+    {
+      "id": "transformghost",
+      "duracaoSegundos": 1.5,
+      "quadrosFonte": 37,
+      "loop": false,
+      "descricao": "Preparar a troca para EdgarFantasma, modelo separado."
+    },
+    {
+      "id": "ultship",
+      "duracaoSegundos": 1.5,
+      "quadrosFonte": 37,
+      "loop": false,
+      "descricao": "Chamar o navio com os dois braços erguidos."
+    },
+    {
+      "id": "walk",
+      "duracaoSegundos": 1.0,
+      "quadrosFonte": 25,
+      "loop": true,
+      "descricao": "Ciclo de marcha no lugar, apoios alternados; deslocamento pertence ao motor."
+    }
+  ],
+  "observacoes": [
+    "Modelo estilizado em volumes de malha, materiais sem textura ruidosa.",
+    "Rig articulado com pesos rígidos por segmento; conferência no Unity ainda pendente.",
+    "Projéteis e efeitos de campo continuam assets separados; não mudam regras.",
+    "Transformações entre personagens usam clipe de preparação + modelo de destino, a ligar pelo Claude."
+  ],
+  "ligacoes": [
+    {
+      "idAcao": "attack",
+      "modelo": "Edgar.glb",
+      "clipeGLB": "attack",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\attack_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "death",
+      "modelo": "Edgar.glb",
+      "clipeGLB": "death",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\death_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "hit",
+      "modelo": "Edgar.glb",
+      "clipeGLB": "hit",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\hit_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "idle",
+      "modelo": "Edgar.glb",
+      "clipeGLB": "idle",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\idle_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "transformghost",
+      "modelo": "Edgar.glb",
+      "clipeGLB": "transformghost",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\transformghost_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\transformghost_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\transformghost_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\transformghost_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "ultship",
+      "modelo": "Edgar.glb",
+      "clipeGLB": "ultship",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\ultship_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\ultship_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\ultship_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\ultship_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "walk",
+      "modelo": "Edgar.glb",
+      "clipeGLB": "walk",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\walk_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    }
+  ],
+  "transicao": {
+    "transformghost": "../EdgarFantasma/EdgarFantasma.glb",
+    "gatilho": "pendente_claude"
+  }
+}

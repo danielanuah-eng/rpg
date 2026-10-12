@@ -1,0 +1,222 @@
+{
+  "id": "PrincipeKellen",
+  "estado": "exportado_para_revisao",
+  "integracao": "pendente_claude",
+  "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\south-east.png",
+  "sha256Referencia": "4251537a9404b21a41883c24b5a8bf1c3f110b192e398f0ca43f3aa4d00f7190",
+  "modelo": "PrincipeKellen.glb",
+  "fonte": "PrincipeKellen.blend",
+  "preview": "previa.png",
+  "sha256": "1f0c1b20db16e1677445d2fb661cdbd4aa55731ded6915ad5a5f4bbbb9f7c158",
+  "unidade": "metro",
+  "frenteBlender": "-Y",
+  "frenteGLB": "+Z",
+  "pivo": "origem na base, sem root motion de deslocamento",
+  "dimensoesRestBlender": [
+    0.8299703001976013,
+    0.5031709671020508,
+    1.5003999471664429
+  ],
+  "ossos": 15,
+  "triangulos": 2808,
+  "clipes": [
+    {
+      "id": "attack",
+      "duracaoSegundos": 0.8,
+      "quadrosFonte": 20,
+      "loop": false,
+      "descricao": "Preparação, golpe do equipamento/corpo e recuperação."
+    },
+    {
+      "id": "death",
+      "duracaoSegundos": 1.5,
+      "quadrosFonte": 37,
+      "loop": false,
+      "descricao": "Perda de sustentação e queda, mantendo a orientação até a queda."
+    },
+    {
+      "id": "fireball",
+      "duracaoSegundos": 0.8,
+      "quadrosFonte": 20,
+      "loop": false,
+      "descricao": "Recolher a mão, preparar a bola de fogo e lançá-la."
+    },
+    {
+      "id": "hit",
+      "duracaoSegundos": 0.8,
+      "quadrosFonte": 20,
+      "loop": false,
+      "descricao": "Recuo curto, mesma direção, recuperação."
+    },
+    {
+      "id": "ice",
+      "duracaoSegundos": 0.8,
+      "quadrosFonte": 20,
+      "loop": false,
+      "descricao": "Apontar o cajado para o chão."
+    },
+    {
+      "id": "idle",
+      "duracaoSegundos": 2.0,
+      "quadrosFonte": 49,
+      "loop": true,
+      "descricao": "Respiração e ajuste curto de postura; retorna à pose inicial."
+    },
+    {
+      "id": "prison",
+      "duracaoSegundos": 0.8,
+      "quadrosFonte": 20,
+      "loop": false,
+      "descricao": "Fechar os braços para a prisão."
+    },
+    {
+      "id": "walk",
+      "duracaoSegundos": 1.0,
+      "quadrosFonte": 25,
+      "loop": true,
+      "descricao": "Ciclo de marcha no lugar, apoios alternados; deslocamento pertence ao motor."
+    },
+    {
+      "id": "wish",
+      "duracaoSegundos": 0.8,
+      "quadrosFonte": 20,
+      "loop": false,
+      "descricao": "Abrir o cajado e concluir a conjuração de desejo."
+    },
+    {
+      "id": "wishchannel",
+      "duracaoSegundos": 2.0,
+      "quadrosFonte": 49,
+      "loop": true,
+      "descricao": "Canalização sustentada, em ciclo."
+    }
+  ],
+  "observacoes": [
+    "Modelo estilizado em volumes de malha, materiais sem textura ruidosa.",
+    "Rig articulado com pesos rígidos por segmento; conferência no Unity ainda pendente.",
+    "Projéteis e efeitos de campo continuam assets separados; não mudam regras.",
+    "Transformações entre personagens usam clipe de preparação + modelo de destino, a ligar pelo Claude."
+  ],
+  "ligacoes": [
+    {
+      "idAcao": "attack",
+      "modelo": "PrincipeKellen.glb",
+      "clipeGLB": "attack",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\attack_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "death",
+      "modelo": "PrincipeKellen.glb",
+      "clipeGLB": "death",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\death_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "fireball",
+      "modelo": "PrincipeKellen.glb",
+      "clipeGLB": "fireball",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\fireball_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\fireball_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\fireball_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\fireball_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "hit",
+      "modelo": "PrincipeKellen.glb",
+      "clipeGLB": "hit",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\hit_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "ice",
+      "modelo": "PrincipeKellen.glb",
+      "clipeGLB": "ice",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\ice_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\ice_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\ice_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\ice_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "idle",
+      "modelo": "PrincipeKellen.glb",
+      "clipeGLB": "idle",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\idle_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "prison",
+      "modelo": "PrincipeKellen.glb",
+      "clipeGLB": "prison",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\prison_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\prison_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\prison_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\prison_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "walk",
+      "modelo": "PrincipeKellen.glb",
+      "clipeGLB": "walk",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\walk_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "wish",
+      "modelo": "PrincipeKellen.glb",
+      "clipeGLB": "wish",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\wish_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\wish_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\wish_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\wish_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "wishchannel",
+      "modelo": "PrincipeKellen.glb",
+      "clipeGLB": "wishchannel",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\wishchannel_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\wishchannel_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\wishchannel_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\wishchannel_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    }
+  ]
+}

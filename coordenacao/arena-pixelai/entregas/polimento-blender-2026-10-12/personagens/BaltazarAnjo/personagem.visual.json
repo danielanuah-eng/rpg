@@ -1,0 +1,48 @@
+{
+  "id": "BaltazarAnjo",
+  "estado": "exportado_para_revisao",
+  "integracao": "pendente_claude",
+  "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Efeitos\\baltazar-anjo.png",
+  "sha256Referencia": "86835da6f306e460ede128ccf11f0aaa0a818ffb4c0769d3c3cc592e81d9b876",
+  "modelo": "BaltazarAnjo.glb",
+  "fonte": "BaltazarAnjo.blend",
+  "preview": "previa.png",
+  "sha256": "1d33f229398f6793b82be6e3d3355bf97132e5ffa8b82356375fe0c81c9bde4b",
+  "unidade": "metro",
+  "frenteBlender": "-Y",
+  "frenteGLB": "+Z",
+  "pivo": "origem na base, sem root motion de deslocamento",
+  "dimensoesRestBlender": [
+    0.6640402674674988,
+    0.2743072807788849,
+    0.6185568571090698
+  ],
+  "ossos": 17,
+  "triangulos": 2832,
+  "clipes": [
+    {
+      "id": "idle",
+      "duracaoSegundos": 2.0,
+      "quadrosFonte": 49,
+      "loop": true,
+      "descricao": "Respiração e ajuste curto de postura; retorna à pose inicial."
+    }
+  ],
+  "observacoes": [
+    "Modelo estilizado em volumes de malha, materiais sem textura ruidosa.",
+    "Rig articulado com pesos rígidos por segmento; conferência no Unity ainda pendente.",
+    "Projéteis e efeitos de campo continuam assets separados; não mudam regras.",
+    "Transformações entre personagens usam clipe de preparação + modelo de destino, a ligar pelo Claude."
+  ],
+  "ligacoes": [
+    {
+      "idAcao": "idle",
+      "modelo": "BaltazarAnjo.glb",
+      "clipeGLB": "idle",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Efeitos\\baltazar-anjo.png"
+      ],
+      "integracao": "pendente_claude"
+    }
+  ]
+}

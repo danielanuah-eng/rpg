@@ -1,0 +1,127 @@
+{
+  "id": "VespaCinzenta",
+  "estado": "exportado_para_revisao",
+  "integracao": "pendente_claude",
+  "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\south-east.png",
+  "sha256Referencia": "4cd105e0c19b5ac0818c7602b452eaccb215e04e102f60802386c229f1b7176e",
+  "modelo": "VespaCinzenta.glb",
+  "fonte": "VespaCinzenta.blend",
+  "preview": "previa.png",
+  "sha256": "b0e72f4cf36123df98a4f3cc581b64075c03e2e96a94b1aa5676b1795c5518c4",
+  "unidade": "metro",
+  "frenteBlender": "-Y",
+  "frenteGLB": "+Z",
+  "pivo": "origem na base, sem root motion de deslocamento",
+  "dimensoesRestBlender": [
+    1.9620890617370605,
+    1.1799999475479126,
+    1.1702438592910767
+  ],
+  "ossos": 17,
+  "triangulos": 1374,
+  "clipes": [
+    {
+      "id": "attack",
+      "duracaoSegundos": 0.8,
+      "quadrosFonte": 20,
+      "loop": false,
+      "descricao": "Preparação, golpe do equipamento/corpo e recuperação."
+    },
+    {
+      "id": "death",
+      "duracaoSegundos": 1.5,
+      "quadrosFonte": 37,
+      "loop": false,
+      "descricao": "Perda de sustentação e queda, mantendo a orientação até a queda."
+    },
+    {
+      "id": "hit",
+      "duracaoSegundos": 0.8,
+      "quadrosFonte": 20,
+      "loop": false,
+      "descricao": "Recuo curto, mesma direção, recuperação."
+    },
+    {
+      "id": "idle",
+      "duracaoSegundos": 2.0,
+      "quadrosFonte": 49,
+      "loop": true,
+      "descricao": "Respiração e ajuste curto de postura; retorna à pose inicial."
+    },
+    {
+      "id": "walk",
+      "duracaoSegundos": 1.0,
+      "quadrosFonte": 25,
+      "loop": true,
+      "descricao": "Ciclo de marcha no lugar, apoios alternados; deslocamento pertence ao motor."
+    }
+  ],
+  "observacoes": [
+    "Modelo estilizado em volumes de malha, materiais sem textura ruidosa.",
+    "Rig articulado com pesos rígidos por segmento; conferência no Unity ainda pendente.",
+    "Projéteis e efeitos de campo continuam assets separados; não mudam regras.",
+    "Transformações entre personagens usam clipe de preparação + modelo de destino, a ligar pelo Claude."
+  ],
+  "ligacoes": [
+    {
+      "idAcao": "attack",
+      "modelo": "VespaCinzenta.glb",
+      "clipeGLB": "attack",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\attack_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "death",
+      "modelo": "VespaCinzenta.glb",
+      "clipeGLB": "death",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\death_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "hit",
+      "modelo": "VespaCinzenta.glb",
+      "clipeGLB": "hit",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\hit_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "idle",
+      "modelo": "VespaCinzenta.glb",
+      "clipeGLB": "idle",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\idle_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "walk",
+      "modelo": "VespaCinzenta.glb",
+      "clipeGLB": "walk",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\walk_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "id": "BrutamontesErrante",
+  "estado": "exportado_para_revisao",
+  "integracao": "pendente_claude",
+  "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\south-east.png",
+  "sha256Referencia": "23887b5293885125539ad81719b0e4365495f544e0401e212213c1a279059e29",
+  "modelo": "BrutamontesErrante.glb",
+  "fonte": "BrutamontesErrante.blend",
+  "preview": "previa.png",
+  "sha256": "8db5fdab0eb8ba81df89d2c7c9d6d1fee5af85b940649285b709030847b16a52",
+  "unidade": "metro",
+  "frenteBlender": "-Y",
+  "frenteGLB": "+Z",
+  "pivo": "origem na base, sem root motion de deslocamento",
+  "dimensoesRestBlender": [
+    1.3913015127182007,
+    0.6381422281265259,
+    2.2200000286102295
+  ],
+  "ossos": 15,
+  "triangulos": 2762,
+  "clipes": [
+    {
+      "id": "attack",
+      "duracaoSegundos": 0.8,
+      "quadrosFonte": 20,
+      "loop": false,
+      "descricao": "Preparação, golpe do equipamento/corpo e recuperação."
+    },
+    {
+      "id": "death",
+      "duracaoSegundos": 1.5,
+      "quadrosFonte": 37,
+      "loop": false,
+      "descricao": "Perda de sustentação e queda, mantendo a orientação até a queda."
+    },
+    {
+      "id": "hit",
+      "duracaoSegundos": 0.8,
+      "quadrosFonte": 20,
+      "loop": false,
+      "descricao": "Recuo curto, mesma direção, recuperação."
+    },
+    {
+      "id": "idle",
+      "duracaoSegundos": 2.0,
+      "quadrosFonte": 49,
+      "loop": true,
+      "descricao": "Respiração e ajuste curto de postura; retorna à pose inicial."
+    },
+    {
+      "id": "roar",
+      "duracaoSegundos": 0.8,
+      "quadrosFonte": 20,
+      "loop": false,
+      "descricao": "Abaixar o tronco e erguer cabeça/peito para o rugido."
+    },
+    {
+      "id": "spawn",
+      "duracaoSegundos": 0.8,
+      "quadrosFonte": 20,
+      "loop": false,
+      "descricao": "Entrada de baixo para cima e crescimento até a escala normal."
+    },
+    {
+      "id": "walk",
+      "duracaoSegundos": 1.0,
+      "quadrosFonte": 25,
+      "loop": true,
+      "descricao": "Ciclo de marcha no lugar, apoios alternados; deslocamento pertence ao motor."
+    }
+  ],
+  "observacoes": [
+    "Modelo estilizado em volumes de malha, materiais sem textura ruidosa.",
+    "Rig articulado com pesos rígidos por segmento; conferência no Unity ainda pendente.",
+    "Projéteis e efeitos de campo continuam assets separados; não mudam regras.",
+    "Transformações entre personagens usam clipe de preparação + modelo de destino, a ligar pelo Claude."
+  ],
+  "ligacoes": [
+    {
+      "idAcao": "attack",
+      "modelo": "BrutamontesErrante.glb",
+      "clipeGLB": "attack",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\attack_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "death",
+      "modelo": "BrutamontesErrante.glb",
+      "clipeGLB": "death",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\death_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "hit",
+      "modelo": "BrutamontesErrante.glb",
+      "clipeGLB": "hit",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\hit_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "idle",
+      "modelo": "BrutamontesErrante.glb",
+      "clipeGLB": "idle",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\idle_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "roar",
+      "modelo": "BrutamontesErrante.glb",
+      "clipeGLB": "roar",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\roar_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\roar_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\roar_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\roar_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "spawn",
+      "modelo": "BrutamontesErrante.glb",
+      "clipeGLB": "spawn",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\spawn_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\spawn_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\spawn_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\spawn_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "walk",
+      "modelo": "BrutamontesErrante.glb",
+      "clipeGLB": "walk",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\walk_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    }
+  ]
+}

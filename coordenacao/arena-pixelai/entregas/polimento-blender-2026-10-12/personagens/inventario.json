@@ -1,0 +1,1915 @@
+[
+  {
+    "pasta": "Ciantia",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\south-east.png",
+    "sha256": "a523b52c170a105046f89a1be9d143499ab19f16c31ab0b84c36c316f1b02cff",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\idle_south-west.png"
+      ],
+      "summon": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\summon_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\summon_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\summon_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\summon_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ciantia\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Ciantia\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "Talyssa",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\south-east.png",
+    "sha256": "e96400caf792b2e361bcb6b16ec4b200c8df9d7011153f12a20fb5d5f25e8632",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\idle_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Talyssa\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Talyssa\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "Teantha",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\south-east.png",
+    "sha256": "5ddf49d3d6748f9c2b7e686932fedfd382bb251134669c953dc32b617c45b11e",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\idle_south-west.png"
+      ],
+      "teleport": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\teleport_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\teleport_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\teleport_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\teleport_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Teantha\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Teantha\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "Devon",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\south-east.png",
+    "sha256": "fcbc74e8a1437b4f5be1ac9e7472d28c5a3058a579f0deb19779f71da78da063",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\idle_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Devon\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Devon\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "Diantus",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\south-east.png",
+    "sha256": "1eab31d0ed661a55e5ea44afcc5c3eabd56d74b63c9165613dcba3a75ec0b5a1",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\idle_south-west.png"
+      ],
+      "leap": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\leap_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\leap_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\leap_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\leap_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Diantus\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Diantus\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "Damian",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\south-east.png",
+    "sha256": "52712ebb873e5a186a6ff38c6147dd70dceeb157fa6ae14d9c83af20e580a60e",
+    "acoes": {
+      "cannon": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\cannon_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\cannon_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\cannon_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\cannon_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\death_south-west.png"
+      ],
+      "hammer": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\hammer_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\hammer_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\hammer_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\hammer_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idle_south-west.png"
+      ],
+      "idlecannon": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idlecannon_east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idlecannon_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idlecannon_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idlecannon_north.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idlecannon_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idlecannon_south-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idlecannon_south.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idlecannon_west.png"
+      ],
+      "idlehammer": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idlehammer_east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idlehammer_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idlehammer_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idlehammer_north.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idlehammer_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idlehammer_south-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idlehammer_south.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\idlehammer_west.png"
+      ],
+      "morph": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\morph_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\morph_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\morph_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\morph_south-west.png"
+      ],
+      "pistol": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\pistol_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\pistol_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\pistol_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\pistol_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Damian\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Damian\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "Ezequiela",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\south-east.png",
+    "sha256": "f9b0dd7318f6f526265728abd615ce3c08477978dac3c76e73ffd465187b9ac3",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\idle_south-west.png"
+      ],
+      "mirror": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\mirror_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\mirror_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\mirror_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\mirror_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ezequiela\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Ezequiela\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "TchuTcha",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\south-east.png",
+    "sha256": "9dd22fd14c9d8a111dfd41b082854bd98a1f1356f4fc721100626ef67561f2b9",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\idle_south-west.png"
+      ],
+      "transform": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\transform_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\transform_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\transform_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\transform_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTcha\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\TchuTcha\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "TchuTchaBerserk",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\south-east.png",
+    "sha256": "173a5d165a5eb8a56455ba89daa40a374518b4427f5acb65ae7daa3d701acd35",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\idle_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TchuTchaBerserk\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\TchuTchaBerserk\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "ArqueiroJack",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\south-east.png",
+    "sha256": "08436d56c6c2aeda8ea18562dbb6b6ed7fe98a3d09221c80ff5b243a67861bab",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\idle_south-west.png"
+      ],
+      "ultcharge": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\ultcharge_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\ultcharge_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\ultcharge_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\ultcharge_south-west.png"
+      ],
+      "ultshot": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\ultshot_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\ultshot_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\ultshot_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\ultshot_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ArqueiroJack\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\ArqueiroJack\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "Perry",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\south-east.png",
+    "sha256": "d4eac664a88ffb5e4575a7e5948b70a4318e4be4f354befb79fc0382fb308337",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\death_south-west.png"
+      ],
+      "hide": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\hide_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\hide_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\hide_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\hide_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\idle_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Perry\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Perry\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "DragaoEspectral",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\south-east.png",
+    "sha256": "ddef417e5acaf08691648c2fae1d057ecf7800230722a4eb1db6cbce184503ad",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\idle_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DragaoEspectral\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\DragaoEspectral\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "LoboCinzas",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\south-east.png",
+    "sha256": "bb5a34fff88c2db444eaf0bb24c2d6cca9db79918db8e3ab1192e8a6c38ad9a6",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\idle_south-west.png"
+      ],
+      "spawn": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\spawn_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\spawn_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\spawn_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\spawn_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\LoboCinzas\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\LoboCinzas\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "Asamyh",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\south-east.png",
+    "sha256": "2e20d27a33ad1fe4c3f96ad610930d136315e8a1a9b43f6f303d4c7ea0ab2fc4",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\death_south-west.png"
+      ],
+      "heal": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\heal_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\heal_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\heal_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\heal_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\idle_south-west.png"
+      ],
+      "summon": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\summon_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\summon_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\summon_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\summon_south-west.png"
+      ],
+      "ult": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\ult_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\ult_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\ult_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\ult_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Asamyh\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Asamyh\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "GatoLaranja",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\south-east.png",
+    "sha256": "b4afc44399998f3daed5d612cb9d6791e35f5d0cafd5eedf0e56e871d16e872f",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\idle_south-west.png"
+      ],
+      "spawn": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\spawn_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\spawn_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\spawn_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\spawn_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\walk_south-west.png"
+      ],
+      "zap": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\zap_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\zap_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\zap_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoLaranja\\zap_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\GatoLaranja\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "GatoBranco",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\south-east.png",
+    "sha256": "3f7b366a8077522f6302cf9329e277ab41c6d93c077cb3caa51e19d802f73dfa",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\idle_south-west.png"
+      ],
+      "spawn": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\spawn_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\spawn_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\spawn_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\spawn_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\walk_south-west.png"
+      ],
+      "zap": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\zap_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\zap_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\zap_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoBranco\\zap_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\GatoBranco\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "GatoMalhado",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\south-east.png",
+    "sha256": "e80d07b0e46b864e8f71eb08f6d13252072630684064d04a93805ff9cd5373c7",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\idle_south-west.png"
+      ],
+      "spawn": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\spawn_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\spawn_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\spawn_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\spawn_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\walk_south-west.png"
+      ],
+      "zap": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\zap_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\zap_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\zap_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoMalhado\\zap_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\GatoMalhado\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "GatoManchado",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\south-east.png",
+    "sha256": "a3d227014953f8306f56a87ac8e57ade6cc5ad61395bb5a63dc7a5625fa5adae",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\idle_south-west.png"
+      ],
+      "spawn": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\spawn_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\spawn_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\spawn_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\spawn_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\walk_south-west.png"
+      ],
+      "zap": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\zap_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\zap_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\zap_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GatoManchado\\zap_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\GatoManchado\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "Colosso",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\south-east.png",
+    "sha256": "8893602dac1491209dbee2f9ba91afee649bd866a3b3e6779a45d5f3309d2748",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\idle_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Colosso\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Colosso\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "CheiroPneu",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\south-east.png",
+    "sha256": "ac03a8663d47311990b58bccf07a0076f3a7f694f933f66ca378aeebe82655d6",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\attack_south-west.png"
+      ],
+      "cannon": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\cannon_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\cannon_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\cannon_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\cannon_south-west.png"
+      ],
+      "charge": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\charge_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\charge_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\charge_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\charge_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\death_south-west.png"
+      ],
+      "drill": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\drill_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\drill_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\drill_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\drill_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\idle_south-west.png"
+      ],
+      "tentacle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\tentacle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\tentacle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\tentacle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\tentacle_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\CheiroPneu\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\CheiroPneu\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "ReiBobett",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\south-east.png",
+    "sha256": "313b6f53b00ecccc4a54dff25ce9c608e16f25ab4f7d62d170eba2669b403e93",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\idle_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ReiBobett\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\ReiBobett\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "PrincipeKellen",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\south-east.png",
+    "sha256": "4251537a9404b21a41883c24b5a8bf1c3f110b192e398f0ca43f3aa4d00f7190",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\death_south-west.png"
+      ],
+      "fireball": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\fireball_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\fireball_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\fireball_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\fireball_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\hit_south-west.png"
+      ],
+      "ice": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\ice_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\ice_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\ice_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\ice_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\idle_south-west.png"
+      ],
+      "prison": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\prison_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\prison_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\prison_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\prison_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\walk_south-west.png"
+      ],
+      "wish": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\wish_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\wish_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\wish_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\wish_south-west.png"
+      ],
+      "wishchannel": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\wishchannel_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\wishchannel_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\wishchannel_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PrincipeKellen\\wishchannel_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\PrincipeKellen\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "Baltazar",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\south-east.png",
+    "sha256": "ee7aba48209b932d0817f06f1e50ec95bd202854d08efa5600a266930587c3d1",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\attack_east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\attack_north.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\attack_south-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\attack_south.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\attack_west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\idle_east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\idle_north.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\idle_south-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\idle_south.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\idle_west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\walk_east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\walk_north.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\walk_south-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\walk_south.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Baltazar\\walk_west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Baltazar\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "VespaCinzenta",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\south-east.png",
+    "sha256": "4cd105e0c19b5ac0818c7602b452eaccb215e04e102f60802386c229f1b7176e",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\idle_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\VespaCinzenta\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\VespaCinzenta\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "ViuvaAgulha",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\south-east.png",
+    "sha256": "aecb920d28167037a443980d9b4403aae84ea8072ff3948a16317e964873e697",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\idle_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\ViuvaAgulha\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\ViuvaAgulha\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "GuardiaoMusgo",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\south-east.png",
+    "sha256": "f944b685105224c3912abe030a56017630b3e3bd1d87390c16cb9f889199dfa2",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\attack_south-west.png"
+      ],
+      "bark": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\bark_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\bark_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\bark_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\bark_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\idle_south-west.png"
+      ],
+      "roots": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\roots_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\roots_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\roots_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\roots_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\GuardiaoMusgo\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\GuardiaoMusgo\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "DomadorCorrentes",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\south-east.png",
+    "sha256": "3dd5c2c9a0a4c0fabb34ce4d1a4be763736bdf978ac3a9aab453a1e0dad8592e",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\attack_south-west.png"
+      ],
+      "chain": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\chain_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\chain_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\chain_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\chain_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\idle_south-west.png"
+      ],
+      "shout": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\shout_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\shout_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\shout_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\shout_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\DomadorCorrentes\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\DomadorCorrentes\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "OgroPedra",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\south-east.png",
+    "sha256": "8be5a5f10cbde1d021298dae6cbf15ecdbf93fa975dcb4bb8c9e0f7736ba367e",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\idle_south-west.png"
+      ],
+      "throw": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\throw_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\throw_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\throw_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\throw_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\OgroPedra\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\OgroPedra\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "Edgar",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\south-east.png",
+    "sha256": "7c79de9cac886710c84dcbed05e3ac7fe3e36bbf7278faace03752c9e9217e8a",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\idle_south-west.png"
+      ],
+      "transformghost": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\transformghost_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\transformghost_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\transformghost_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\transformghost_south-west.png"
+      ],
+      "ultship": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\ultship_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\ultship_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\ultship_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\ultship_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Edgar\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Edgar\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "EdgarFantasma",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarFantasma\\south-east.png",
+    "sha256": "ff319f5387ebff2e86636502c3fab1c9846c89e8e220e3806691523d720a0516",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarFantasma\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarFantasma\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarFantasma\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarFantasma\\attack_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarFantasma\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarFantasma\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarFantasma\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarFantasma\\idle_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarFantasma\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarFantasma\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarFantasma\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarFantasma\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\EdgarFantasma\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "EdgarNavio",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\south-east.png",
+    "sha256": "d5bc7b6a8a51c665486949a311276f05c25259e79b6ac2955e230702306e24da",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\idle_south-west.png"
+      ],
+      "spawn": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\spawn_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\spawn_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\spawn_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\spawn_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\EdgarNavio\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\EdgarNavio\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "Brumak",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\south-east.png",
+    "sha256": "858641864bf7bb7bcea1c7e39b5f79311f19aafc859d054663d4ac2c0079630c",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\idle_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Brumak\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Brumak\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "Ossyro",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\south-east.png",
+    "sha256": "001ecff56b85e21040653f9fdb77216ef8d593d1b3e273f833a03af65fb9f814",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\attack_south-west.png"
+      ],
+      "breath": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\breath_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\breath_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\breath_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\breath_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\idle_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Ossyro\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Ossyro\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "Gryvro",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\south-east.png",
+    "sha256": "35d367e5383ceaf180c1ead5a87bfa4ef6381763534451ed103f6dd9ed3fd184",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\idle_south-west.png"
+      ],
+      "takeoff": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\takeoff_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\takeoff_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\takeoff_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Gryvro\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Gryvro\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "Alvyr",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\south-east.png",
+    "sha256": "1b7ce6e93f251ab297736b8c5c183e5907e69fd20912dcd354fec6f5dcc942ac",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\idle_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Alvyr\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "Raizor",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\south-east.png",
+    "sha256": "28a1ee5544cec6529683aab1982e7da1fbdef06e7cf08f2915ffd9902cf9a378",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\idle_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Raizor\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Raizor\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "Nixira",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\south-east.png",
+    "sha256": "117da8eb1684f2d5c0368ee421a81176a13bf6ed66cfd5e51623f768d458ec58",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\idle_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Nixira\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Nixira\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "TotemCura",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\south-east.png",
+    "sha256": "824e1f4c74a999d44451210afd1f2f71a7ed9dc186640353f9cb8a418aee35d5",
+    "acoes": {
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\death_south-west.png"
+      ],
+      "heal": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\heal_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\heal_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\heal_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\heal_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\idle_south-west.png"
+      ],
+      "spawn": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\spawn_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\spawn_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\spawn_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\TotemCura\\spawn_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\TotemCura\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "PapaMoedas",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\south-east.png",
+    "sha256": "bed23f59b8e22603050dd4fa5653bc25457aa5595b216e0723f843446ecbb3ad",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\idle_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\PapaMoedas\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\PapaMoedas\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "BrutamontesErrante",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\south-east.png",
+    "sha256": "23887b5293885125539ad81719b0e4365495f544e0401e212213c1a279059e29",
+    "acoes": {
+      "attack": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\attack_south-west.png"
+      ],
+      "death": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\death_south-west.png"
+      ],
+      "hit": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\hit_south-west.png"
+      ],
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\idle_south-west.png"
+      ],
+      "roar": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\roar_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\roar_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\roar_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\roar_south-west.png"
+      ],
+      "spawn": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\spawn_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\spawn_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\spawn_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\spawn_south-west.png"
+      ],
+      "walk": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\BrutamontesErrante\\walk_south-west.png"
+      ]
+    },
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\BrutamontesErrante\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "BaltazarAnjo",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Efeitos\\baltazar-anjo.png",
+    "sha256": "86835da6f306e460ede128ccf11f0aaa0a818ffb4c0769d3c3cc592e81d9b876",
+    "acoes": {
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Efeitos\\baltazar-anjo.png"
+      ]
+    },
+    "tipo": "companheiro_visual",
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\BaltazarAnjo\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "BaltazarDemonio",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Efeitos\\baltazar-demonio.png",
+    "sha256": "88714c537eaa9ce88c978f726c92eccd05b07d3271a3dd88a22229ab6270d59c",
+    "acoes": {
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Efeitos\\baltazar-demonio.png"
+      ]
+    },
+    "tipo": "companheiro_visual",
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\BaltazarDemonio\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  },
+  {
+    "pasta": "Vendedor",
+    "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Vendedor\\frame-01.png",
+    "sha256": "d58c29d73a970668855c7ef48b8041bd7b370769cac386e0abf7e9f0f064688b",
+    "acoes": {
+      "idle": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Vendedor\\frame-01.png"
+      ]
+    },
+    "tipo": "npc_loja",
+    "estado": "exportado_validado_para_avaliacao",
+    "manifesto": "personagens\\Vendedor\\personagem.visual.json",
+    "integracao": "pendente_claude"
+  }
+]

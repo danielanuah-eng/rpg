@@ -1,0 +1,127 @@
+{
+  "id": "Alvyr",
+  "estado": "exportado_para_revisao",
+  "integracao": "pendente_claude",
+  "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\south-east.png",
+  "sha256Referencia": "1b7ce6e93f251ab297736b8c5c183e5907e69fd20912dcd354fec6f5dcc942ac",
+  "modelo": "Alvyr.glb",
+  "fonte": "Alvyr.blend",
+  "preview": "previa.png",
+  "sha256": "82419fba6fa1d7b04edc7de52e0d52ebe486a5c36f295e161f0767db161736e7",
+  "unidade": "metro",
+  "frenteBlender": "-Y",
+  "frenteGLB": "+Z",
+  "pivo": "origem na base, sem root motion de deslocamento",
+  "dimensoesRestBlender": [
+    0.8153167963027954,
+    1.214400053024292,
+    1.729398488998413
+  ],
+  "ossos": 16,
+  "triangulos": 1424,
+  "clipes": [
+    {
+      "id": "attack",
+      "duracaoSegundos": 0.8,
+      "quadrosFonte": 20,
+      "loop": false,
+      "descricao": "Preparação, golpe do equipamento/corpo e recuperação."
+    },
+    {
+      "id": "death",
+      "duracaoSegundos": 1.5,
+      "quadrosFonte": 37,
+      "loop": false,
+      "descricao": "Perda de sustentação e queda, mantendo a orientação até a queda."
+    },
+    {
+      "id": "hit",
+      "duracaoSegundos": 0.8,
+      "quadrosFonte": 20,
+      "loop": false,
+      "descricao": "Recuo curto, mesma direção, recuperação."
+    },
+    {
+      "id": "idle",
+      "duracaoSegundos": 2.0,
+      "quadrosFonte": 49,
+      "loop": true,
+      "descricao": "Respiração e ajuste curto de postura; retorna à pose inicial."
+    },
+    {
+      "id": "walk",
+      "duracaoSegundos": 1.0,
+      "quadrosFonte": 25,
+      "loop": true,
+      "descricao": "Ciclo de marcha no lugar, apoios alternados; deslocamento pertence ao motor."
+    }
+  ],
+  "observacoes": [
+    "Modelo estilizado em volumes de malha, materiais sem textura ruidosa.",
+    "Rig articulado com pesos rígidos por segmento; conferência no Unity ainda pendente.",
+    "Projéteis e efeitos de campo continuam assets separados; não mudam regras.",
+    "Transformações entre personagens usam clipe de preparação + modelo de destino, a ligar pelo Claude."
+  ],
+  "ligacoes": [
+    {
+      "idAcao": "attack",
+      "modelo": "Alvyr.glb",
+      "clipeGLB": "attack",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\attack_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\attack_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\attack_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\attack_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "death",
+      "modelo": "Alvyr.glb",
+      "clipeGLB": "death",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\death_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\death_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\death_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\death_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "hit",
+      "modelo": "Alvyr.glb",
+      "clipeGLB": "hit",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\hit_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\hit_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\hit_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\hit_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "idle",
+      "modelo": "Alvyr.glb",
+      "clipeGLB": "idle",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\idle_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\idle_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\idle_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\idle_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    },
+    {
+      "idAcao": "walk",
+      "modelo": "Alvyr.glb",
+      "clipeGLB": "walk",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\walk_north-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\walk_north-west.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\walk_south-east.png",
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Alvyr\\walk_south-west.png"
+      ],
+      "integracao": "pendente_claude"
+    }
+  ]
+}

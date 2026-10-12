@@ -1,0 +1,1556 @@
+{
+  "estado": "aprovado_tecnicamente",
+  "personagensConferidos": 43,
+  "clipesConferidos": 249,
+  "falhas": [],
+  "personagens": [
+    {
+      "id": "Alvyr",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 11,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 16,
+      "sha256": "82419fba6fa1d7b04edc7de52e0d52ebe486a5c36f295e161f0767db161736e7"
+    },
+    {
+      "id": "ArqueiroJack",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 6,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "ultcharge",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "ultshot",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 10,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 17,
+      "sha256": "011b2ec8bbb1ca8889060dbde8881f5d0d27238919c6e86a44496eab17c0d4c0"
+    },
+    {
+      "id": "Asamyh",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "heal",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "summon",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "ult",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "4ae8009cbbdcf88f6953d997ae8563977e8b105159179d6e830446ad94a93f0e"
+    },
+    {
+      "id": "Baltazar",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 9,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 16,
+      "sha256": "664e24f94d792e79c8851ad1dbdd6f54a81a741512bedc58848423d75ab37f70"
+    },
+    {
+      "id": "BaltazarAnjo",
+      "clipes": [
+        {
+          "id": "idle",
+          "canaisComMovimento": 6,
+          "duracaoExportada": 2.0
+        }
+      ],
+      "ossosReimportados": 17,
+      "sha256": "1d33f229398f6793b82be6e3d3355bf97132e5ffa8b82356375fe0c81c9bde4b"
+    },
+    {
+      "id": "BaltazarDemonio",
+      "clipes": [
+        {
+          "id": "idle",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 2.0
+        }
+      ],
+      "ossosReimportados": 18,
+      "sha256": "fc3f6d5b10e9f910e7a0c60a5829024a063e2ab65f103815037c1601558c0fef"
+    },
+    {
+      "id": "Brumak",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 9,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 16,
+      "sha256": "e4d302f91eeb7d697eb7294103650605f8c364d126ef719fb757fac3611f43eb"
+    },
+    {
+      "id": "BrutamontesErrante",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "roar",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "spawn",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "8db5fdab0eb8ba81df89d2c7c9d6d1fee5af85b940649285b709030847b16a52"
+    },
+    {
+      "id": "CheiroPneu",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "cannon",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "charge",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "drill",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "tentacle",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 18,
+      "sha256": "df02ab48d6dc1d18d207eaa9fbeba53af1482dbab12dc00b366d25d8c6f84c86"
+    },
+    {
+      "id": "Ciantia",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "summon",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "160043c038e0c34449dea83d39ce56bd1ce4d894aebe462331c7baa9d014574a"
+    },
+    {
+      "id": "Colosso",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "steal-cast",
+          "canaisComMovimento": 1,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "steal-reach",
+          "canaisComMovimento": 6,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "steal-slam",
+          "canaisComMovimento": 6,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "stomp",
+          "canaisComMovimento": 6,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 11,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 16,
+      "sha256": "1fe921d257d3291be70d79bcd6005b8f0382811778529ec434238fe43411caec"
+    },
+    {
+      "id": "Damian",
+      "clipes": [
+        {
+          "id": "cannon",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hammer",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "idlecannon",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "idlehammer",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "morph",
+          "canaisComMovimento": 6,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "pistol",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 19,
+      "sha256": "86141a00ad5b23c22242de6463f08f9b6825964dabacc3a1415e34bd27dc57d0"
+    },
+    {
+      "id": "Devon",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "19934abc8fd309bc573c8ce2fb26f1e4f7d7bb35d696838bb51c9831900ef4fd"
+    },
+    {
+      "id": "Diantus",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "leap",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "0da0bc7425015277a9b7aef136b5122cad8974125b7639fed54adb2bc9abff88"
+    },
+    {
+      "id": "DomadorCorrentes",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "chain",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "shout",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "eeb33a80c76426fc3013f84d58c018e124929dff300650e880eade69ca02bebc"
+    },
+    {
+      "id": "DragaoEspectral",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 13,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 18,
+      "sha256": "4fed45956c6ccd94af1ec8c7771327cb459e405e77a08a3de1addda784ec657a"
+    },
+    {
+      "id": "Edgar",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "transformghost",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "ultship",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "98ac94f8ec572fc7062967962ddd25ea82fe735da1bdcc676ce2566decc7ccc4"
+    },
+    {
+      "id": "EdgarFantasma",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "c8210ccc4bf7299fe8d76fd89bf35eda67de49fa8c9e805152ab18f4fac79d53"
+    },
+    {
+      "id": "EdgarNavio",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "spawn",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 2,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 4,
+      "sha256": "73eddfdfd5e1bc91e9371d4550d19cee31f90fbb9253a10292a3e57d855b0b20"
+    },
+    {
+      "id": "Ezequiela",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 2,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "mirror",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "bbfa0beae4bb760ced1c09356a1bdc9b95b945c1f5230e7f84c0de811811f7f1"
+    },
+    {
+      "id": "GatoBranco",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "spawn",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 11,
+          "duracaoExportada": 1.0
+        },
+        {
+          "id": "zap",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        }
+      ],
+      "ossosReimportados": 16,
+      "sha256": "de709d5917953cbc88b51a3476f2fb41e3d8117304a5b9ce1a023f38dfe06ccf"
+    },
+    {
+      "id": "GatoLaranja",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "spawn",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 11,
+          "duracaoExportada": 1.0
+        },
+        {
+          "id": "zap",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        }
+      ],
+      "ossosReimportados": 16,
+      "sha256": "af133537cc6905df7537a1a1116dc676549b123d1eb42bf14161dba56a212748"
+    },
+    {
+      "id": "GatoMalhado",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "spawn",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 11,
+          "duracaoExportada": 1.0
+        },
+        {
+          "id": "zap",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        }
+      ],
+      "ossosReimportados": 16,
+      "sha256": "df44a2cb2db646eb890e6ea4f5d16bccf4074c1099100ec97edd5f27fe234e9d"
+    },
+    {
+      "id": "GatoManchado",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "spawn",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 11,
+          "duracaoExportada": 1.0
+        },
+        {
+          "id": "zap",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        }
+      ],
+      "ossosReimportados": 16,
+      "sha256": "684df05291e66bb377d2c1c3c0535e1fea82234a869e34e157661c6ab7949ffa"
+    },
+    {
+      "id": "Gryvro",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "takeoff",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 13,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 18,
+      "sha256": "b1202ecb9f89fdadde5755b1e7fee3f48f3c32540d5103da0d8b547b12c5f00e"
+    },
+    {
+      "id": "GuardiaoMusgo",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "bark",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "roots",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "91ee0917dbe2a7804ec7dbc9cb97dbf6a79bdf09ebbe87066c3fe55c178c9ba5"
+    },
+    {
+      "id": "LoboCinzas",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "spawn",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 11,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 16,
+      "sha256": "0c3dd6ed0d2ee29f4376c1911fa8310c761dd1b24b4407a66b5c0aa17e0b73e7"
+    },
+    {
+      "id": "Nixira",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "f6429a89f94ef4749dc638e0ef8836c450f99167ad05eecb706c890b337dcf7b"
+    },
+    {
+      "id": "OgroPedra",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "throw",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "2834f6cbe3c9a615a0e75c962f6ec59b03f13401bae6dd01c410c4dce75369b6"
+    },
+    {
+      "id": "Ossyro",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "breath",
+          "canaisComMovimento": 2,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 13,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 18,
+      "sha256": "bde3d48ec5e849798ea3f28c4bfaa1dee14ffa7d192ad6b98ff75dbb99b20170"
+    },
+    {
+      "id": "PapaMoedas",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 11,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 16,
+      "sha256": "3466c66999c771f18603fa67cc1f43a2f03e52283e53dc0e5d31bbe1d9d45ffa"
+    },
+    {
+      "id": "Perry",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hide",
+          "canaisComMovimento": 6,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "5ebfbee64a32f2af6c5bee43a4caca0003ac63b6ed537d7cbccbbd4ff268f52f"
+    },
+    {
+      "id": "PrincipeKellen",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "fireball",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "ice",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "prison",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        },
+        {
+          "id": "wish",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "wishchannel",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "1f0c1b20db16e1677445d2fb661cdbd4aa55731ded6915ad5a5f4bbbb9f7c158"
+    },
+    {
+      "id": "Raizor",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 11,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 16,
+      "sha256": "5b2ce947ba457f2f262ec5c458b4c678afa1000efb7b95ed6d657d5a378e4463"
+    },
+    {
+      "id": "ReiBobett",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 5,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "28f6a053122e06758d33c63eee7f1375dd2d3fa1472967feb3344a17719ff0ad"
+    },
+    {
+      "id": "Talyssa",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "6e81e41d1d7d720241add7dbeafe29490430729d9d74e9bbd69a09fd41cb6518"
+    },
+    {
+      "id": "TchuTcha",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "transform",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "c045ed748ddd0b62be2af02d83ee483a99da14ab4b4278a164b3e7f25abdf4bd"
+    },
+    {
+      "id": "TchuTchaBerserk",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "11751f448d086ed721d05c1932d42d7ab560c0bb64b2bef6a6a2ebdb0a906835"
+    },
+    {
+      "id": "Teantha",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "teleport",
+          "canaisComMovimento": 7,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 8,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 15,
+      "sha256": "f3270edd4d2f822a076d3c518450ca85d500ba664b3c3f904abfd45f3008e7c4"
+    },
+    {
+      "id": "TotemCura",
+      "clipes": [
+        {
+          "id": "death",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "heal",
+          "canaisComMovimento": 1,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 2,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "spawn",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        }
+      ],
+      "ossosReimportados": 3,
+      "sha256": "be93f6d8f52c3ee5cbbf91cbdf80ade60e13b0b3d2617b5dd20222966bb5467b"
+    },
+    {
+      "id": "Vendedor",
+      "clipes": [
+        {
+          "id": "idle",
+          "canaisComMovimento": 6,
+          "duracaoExportada": 2.0
+        }
+      ],
+      "ossosReimportados": 16,
+      "sha256": "8a02327db4be5a6af3d31b05a9d4baed40f0780dbe52f9bdd26b9e520731581f"
+    },
+    {
+      "id": "VespaCinzenta",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 9,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 4,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 16,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 17,
+      "sha256": "b0e72f4cf36123df98a4f3cc581b64075c03e2e96a94b1aa5676b1795c5518c4"
+    },
+    {
+      "id": "ViuvaAgulha",
+      "clipes": [
+        {
+          "id": "attack",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "death",
+          "canaisComMovimento": 11,
+          "duracaoExportada": 1.5
+        },
+        {
+          "id": "hit",
+          "canaisComMovimento": 3,
+          "duracaoExportada": 0.7917
+        },
+        {
+          "id": "idle",
+          "canaisComMovimento": 2,
+          "duracaoExportada": 2.0
+        },
+        {
+          "id": "walk",
+          "canaisComMovimento": 18,
+          "duracaoExportada": 1.0
+        }
+      ],
+      "ossosReimportados": 19,
+      "sha256": "8be6a46ac5caa33b7e06532fdbfe610f5824edee4f1cf5c6f5236ea9a084fd9e"
+    }
+  ],
+  "avaliacaoAutor": "pendente",
+  "integracaoUnity": "pendente_claude"
+}

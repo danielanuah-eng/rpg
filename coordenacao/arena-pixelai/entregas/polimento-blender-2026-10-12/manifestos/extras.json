@@ -1,0 +1,34 @@
+[
+  {
+    "arquivo": "models\\bosque\\estandarte_da_clareira.glb",
+    "sha256": "4944c61b7625fb108f1c4a4a62ab50c9064c4e7d3cbeca230255e5701a2b6bbf",
+    "triangulos": 144,
+    "animacoes": [
+      "AmbientLoop"
+    ],
+    "texturas": 0,
+    "id": "estandarte_da_clareira",
+    "tema": "bosque",
+    "fonte": "fontes\\extras\\bosque-estandarte_da_clareira.blend"
+  },
+  {
+    "arquivo": "models\\comum\\barricada_partida.glb",
+    "sha256": "0a8b98cfe636fd3b9576687d64f3cdc3aabf8d15bfa4131d3714a0c77aae506e",
+    "triangulos": 264,
+    "animacoes": [],
+    "texturas": 0,
+    "id": "barricada_partida",
+    "tema": "comum",
+    "fonte": "fontes\\extras\\comum-barricada_partida.blend"
+  },
+  {
+    "arquivo": "models\\comum\\relicario_solar.glb",
+    "sha256": "f0a35c4662b5d079b11673ec32399c4fab2f85c2a4dbd2e2790974a26eb14622",
+    "triangulos": 240,
+    "animacoes": [],
+    "texturas": 0,
+    "id": "relicario_solar",
+    "tema": "comum",
+    "fonte": "fontes\\extras\\comum-relicario_solar.blend"
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "id": "BaltazarDemonio",
+  "estado": "exportado_para_revisao",
+  "integracao": "pendente_claude",
+  "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Efeitos\\baltazar-demonio.png",
+  "sha256Referencia": "88714c537eaa9ce88c978f726c92eccd05b07d3271a3dd88a22229ab6270d59c",
+  "modelo": "BaltazarDemonio.glb",
+  "fonte": "BaltazarDemonio.blend",
+  "preview": "previa.png",
+  "sha256": "fc3f6d5b10e9f910e7a0c60a5829024a063e2ab65f103815037c1601558c0fef",
+  "unidade": "metro",
+  "frenteBlender": "-Y",
+  "frenteGLB": "+Z",
+  "pivo": "origem na base, sem root motion de deslocamento",
+  "dimensoesRestBlender": [
+    0.6598684787750244,
+    0.2708553075790405,
+    0.5953788757324219
+  ],
+  "ossos": 18,
+  "triangulos": 2492,
+  "clipes": [
+    {
+      "id": "idle",
+      "duracaoSegundos": 2.0,
+      "quadrosFonte": 49,
+      "loop": true,
+      "descricao": "Respiração e ajuste curto de postura; retorna à pose inicial."
+    }
+  ],
+  "observacoes": [
+    "Modelo estilizado em volumes de malha, materiais sem textura ruidosa.",
+    "Rig articulado com pesos rígidos por segmento; conferência no Unity ainda pendente.",
+    "Projéteis e efeitos de campo continuam assets separados; não mudam regras.",
+    "Transformações entre personagens usam clipe de preparação + modelo de destino, a ligar pelo Claude."
+  ],
+  "ligacoes": [
+    {
+      "idAcao": "idle",
+      "modelo": "BaltazarDemonio.glb",
+      "clipeGLB": "idle",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Efeitos\\baltazar-demonio.png"
+      ],
+      "integracao": "pendente_claude"
+    }
+  ]
+}

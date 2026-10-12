@@ -1,0 +1,1028 @@
+{
+  "tema": "deserto",
+  "estado": "exportado_para_revisao",
+  "integracao": "pendente_claude",
+  "fonte": "fontes/deserto.blend",
+  "preview": "previews/deserto-clean.png",
+  "materiais": [
+    {
+      "material": "deserto_agua_emissivo",
+      "antes": [
+        0.1599999964237213,
+        0.4300000071525574,
+        0.46000000834465027,
+        1.0
+      ],
+      "depois": [
+        0.1599999964237213,
+        0.4300000071525574,
+        0.46000000834465027,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_casca",
+      "antes": [
+        0.3499999940395355,
+        0.20000000298023224,
+        0.11999999731779099,
+        1.0
+      ],
+      "depois": [
+        0.36000001430511475,
+        0.20999999344348907,
+        0.09000000357627869,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_creme",
+      "antes": [
+        0.800000011920929,
+        0.75,
+        0.5899999737739563,
+        1.0
+      ],
+      "depois": [
+        0.8799999952316284,
+        0.7699999809265137,
+        0.5600000023841858,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_cristal_emissivo",
+      "antes": [
+        0.25,
+        0.6399999856948853,
+        0.5899999737739563,
+        1.0
+      ],
+      "depois": [
+        0.25,
+        0.6399999856948853,
+        0.5899999737739563,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_ferro",
+      "antes": [
+        0.1899999976158142,
+        0.23999999463558197,
+        0.23999999463558197,
+        1.0
+      ],
+      "depois": [
+        0.18000000715255737,
+        0.23999999463558197,
+        0.28999999165534973,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_flor",
+      "antes": [
+        0.5699999928474426,
+        0.3400000035762787,
+        0.6499999761581421,
+        1.0
+      ],
+      "depois": [
+        0.5699999928474426,
+        0.3400000035762787,
+        0.6499999761581421,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_flor_clara",
+      "antes": [
+        0.9200000166893005,
+        0.8299999833106995,
+        0.5400000214576721,
+        1.0
+      ],
+      "depois": [
+        0.9200000166893005,
+        0.8299999833106995,
+        0.5400000214576721,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_folhagem",
+      "antes": [
+        0.23000000417232513,
+        0.4099999964237213,
+        0.18000000715255737,
+        1.0
+      ],
+      "depois": [
+        0.18000000715255737,
+        0.3199999928474426,
+        0.11999999731779099,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_fruta",
+      "antes": [
+        0.6299999952316284,
+        0.1899999976158142,
+        0.1599999964237213,
+        1.0
+      ],
+      "depois": [
+        0.6299999952316284,
+        0.1899999976158142,
+        0.1599999964237213,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_grama_a",
+      "antes": [
+        0.30000001192092896,
+        0.4300000071525574,
+        0.20000000298023224,
+        1.0
+      ],
+      "depois": [
+        0.7200000286102295,
+        0.5199999809265137,
+        0.2800000011920929,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_grama_b",
+      "antes": [
+        0.3199999928474426,
+        0.44999998807907104,
+        0.20999999344348907,
+        1.0
+      ],
+      "depois": [
+        0.75,
+        0.550000011920929,
+        0.3100000023841858,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_lanterna_emissivo",
+      "antes": [
+        1.0,
+        0.6299999952316284,
+        0.1599999964237213,
+        1.0
+      ],
+      "depois": [
+        1.0,
+        0.6299999952316284,
+        0.1599999964237213,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_madeira",
+      "antes": [
+        0.5199999809265137,
+        0.3400000035762787,
+        0.18000000715255737,
+        1.0
+      ],
+      "depois": [
+        0.41999998688697815,
+        0.23000000417232513,
+        0.09000000357627869,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_ouro",
+      "antes": [
+        0.7799999713897705,
+        0.5799999833106995,
+        0.20999999344348907,
+        1.0
+      ],
+      "depois": [
+        0.949999988079071,
+        0.5600000023841858,
+        0.10999999940395355,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_pedra",
+      "antes": [
+        0.3700000047683716,
+        0.4300000071525574,
+        0.4399999976158142,
+        1.0
+      ],
+      "depois": [
+        0.5600000023841858,
+        0.38999998569488525,
+        0.23999999463558197,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_runa_emissivo",
+      "antes": [
+        0.23000000417232513,
+        0.6399999856948853,
+        0.5600000023841858,
+        1.0
+      ],
+      "depois": [
+        0.23000000417232513,
+        0.6399999856948853,
+        0.5600000023841858,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_sombra",
+      "antes": [
+        0.07999999821186066,
+        0.10000000149011612,
+        0.07000000029802322,
+        1.0
+      ],
+      "depois": [
+        0.03500000014901161,
+        0.05000000074505806,
+        0.054999999701976776,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_terra",
+      "antes": [
+        0.27000001072883606,
+        0.20000000298023224,
+        0.12999999523162842,
+        1.0
+      ],
+      "depois": [
+        0.38999998569488525,
+        0.2199999988079071,
+        0.10999999940395355,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_vinho",
+      "antes": [
+        0.4399999976158142,
+        0.11999999731779099,
+        0.18000000715255737,
+        1.0
+      ],
+      "depois": [
+        0.4399999976158142,
+        0.11999999731779099,
+        0.18000000715255737,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "deserto_zona",
+      "antes": [
+        0.4000000059604645,
+        0.5299999713897705,
+        0.44999998807907104,
+        1.0
+      ],
+      "depois": [
+        0.8299999833106995,
+        0.6499999761581421,
+        0.4000000059604645,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    }
+  ],
+  "pecas": [
+    {
+      "arquivo": "models\\deserto\\topo_a.glb",
+      "sha256": "060f37f2b226c54d2b653907c9d11dc58c84cdf40d29b2b4655c1e46e8d7fa54",
+      "triangulos": 44,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "topo_a",
+      "dimensoesBlender": [
+        1.0,
+        1.0,
+        0.05000000074505806
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\topo_b.glb",
+      "sha256": "fa9f56c483b8d7a7d3f8e8610d7ae67ab83af828a92aa989d5c93772d9bce276",
+      "triangulos": 44,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "topo_b",
+      "dimensoesBlender": [
+        1.0,
+        1.0,
+        0.05000000074505806
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\topo_zona.glb",
+      "sha256": "a6dbb8113196b9739f4f6862c9e791e1b9f78dbf3999e9aadcb960bf74159e2d",
+      "triangulos": 44,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "topo_zona",
+      "dimensoesBlender": [
+        1.0,
+        1.0,
+        0.05000000074505806
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\coluna_a.glb",
+      "sha256": "8c7090ff7c503dc6f0c3d3b4fd7abd210b29f5f1052e7913515c9f0f9814c5ba",
+      "triangulos": 124,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "coluna_a",
+      "dimensoesBlender": [
+        1.0,
+        1.0,
+        0.44999998807907104
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\coluna_b.glb",
+      "sha256": "4ef088f690f5344a1e51f5061503bca76faa0bfd5cbf56d4160b1f237bf6a9ee",
+      "triangulos": 124,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "coluna_b",
+      "dimensoesBlender": [
+        1.0,
+        1.0,
+        0.44999998807907104
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\beira_reta.glb",
+      "sha256": "d5dd1be2684e4aeaaf2578bce79146d87381c49e68721c2317bc8af01cf4f1ae",
+      "triangulos": 108,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "beira_reta",
+      "dimensoesBlender": [
+        1.0,
+        0.17000000178813934,
+        0.4671053886413574
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\beira_canto.glb",
+      "sha256": "fb8a0cb329463799a91cb9ff6df1b1809770f5d7822fae71eaa53372bfa0a64e",
+      "triangulos": 172,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "beira_canto",
+      "dimensoesBlender": [
+        1.0,
+        1.0,
+        0.4671053886413574
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\arbusto.glb",
+      "sha256": "9eb31613a849b07d0adfbe617d94c115aa1f6a3cdbae1d6c7425f6a9e4301812",
+      "triangulos": 232,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "arbusto",
+      "dimensoesBlender": [
+        0.6891979575157166,
+        0.683896541595459,
+        0.5252339243888855
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\arvore.glb",
+      "sha256": "d0f6f130f95bc4d086140f50bffc61459e284826ce5047d68952ad1e5d9ab67b",
+      "triangulos": 208,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "arvore",
+      "dimensoesBlender": [
+        0.8660000562667847,
+        0.25999999046325684,
+        1.8991117477416992
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\arvore_jovem.glb",
+      "sha256": "9ac9af2c31d3caea5bda510e0d91cb8e4934fc7178f537950cd0435b8d2e434b",
+      "triangulos": 208,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "arvore_jovem",
+      "dimensoesBlender": [
+        0.8660000562667847,
+        0.25999999046325684,
+        1.4212117195129395
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\arvore_palmeira.glb",
+      "sha256": "5d0537e094240b0548ad2cba18b793ea5034ce08d244ecd0b07894bde6c98ebf",
+      "triangulos": 176,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "arvore_palmeira",
+      "dimensoesBlender": [
+        1.4741663932800293,
+        1.4969077110290527,
+        1.8328090906143188
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\caixa.glb",
+      "sha256": "7488cf4a7e04c619722fdbcdb431a8f7c55f1f9433fc8d333bb978d9208671c6",
+      "triangulos": 372,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "caixa",
+      "dimensoesBlender": [
+        0.8420000076293945,
+        0.8433115482330322,
+        0.8319999575614929
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\caixa_rachada.glb",
+      "sha256": "38a41dfa10ebcd5370a04f4e131f109267b3fcdae9e41fb2b1399d538a74d6d8",
+      "triangulos": 408,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "caixa_rachada",
+      "dimensoesBlender": [
+        0.8420000076293945,
+        0.8433115482330322,
+        0.8319999575614929
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\caixa_quebrada.glb",
+      "sha256": "073ce1c43adbcd5599b4c07b740490ae4e19d7c6338a43730c9fd11711ff476d",
+      "triangulos": 352,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "caixa_quebrada",
+      "dimensoesBlender": [
+        0.8500000238418579,
+        0.749205470085144,
+        0.1574999988079071
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\pedra.glb",
+      "sha256": "3c8c58ceaa74a6f0647acdb0946a7972c1fe3f02e10f944e90398d5934607819",
+      "triangulos": 40,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "pedra",
+      "dimensoesBlender": [
+        0.7352973222732544,
+        0.5782100558280945,
+        0.6037191152572632
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\enfeite_cerca.glb",
+      "sha256": "ec75f60a867e2bc247b3453b33f9b6d314504088e9f3c291e9a7423fb64ccc70",
+      "triangulos": 120,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_cerca",
+      "dimensoesBlender": [
+        0.9389098882675171,
+        0.09406888484954834,
+        0.6499999761581421
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\enfeite_cerca_canto.glb",
+      "sha256": "1f9baf86c618cf6a3ee7b9896568d9e7de53faae74dafebf4ed486775750c292",
+      "triangulos": 224,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_cerca_canto",
+      "dimensoesBlender": [
+        0.9389098882675171,
+        0.9340688586235046,
+        0.6499999761581421
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\enfeite_flores.glb",
+      "sha256": "70b1b2dac2ec9cdaf2ca5ed98ea175333878ed4a929431fea0e846d45d7d16bf",
+      "triangulos": 660,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_flores",
+      "dimensoesBlender": [
+        0.36601412296295166,
+        0.33896011114120483,
+        0.210999995470047
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\enfeite_cogumelos.glb",
+      "sha256": "3d7452b3e1e260ca677b4b84de9bdc67e6e7c8f9e22a96cef3546c45de956957",
+      "triangulos": 300,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_cogumelos",
+      "dimensoesBlender": [
+        0.3436499834060669,
+        0.29700160026550293,
+        0.2420157492160797
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\enfeite_seixos.glb",
+      "sha256": "2f74901c72091e124674b289b819b841e79e8aaf6005814b5e73205d4ac8237f",
+      "triangulos": 100,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_seixos",
+      "dimensoesBlender": [
+        0.4472505748271942,
+        0.3027399778366089,
+        0.052303608506917953
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\enfeite_capim.glb",
+      "sha256": "63b740d031132947ec7908da37d9c3c7b0dd75113e2c8f8d2261ec8fbd51e706",
+      "triangulos": 84,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_capim",
+      "dimensoesBlender": [
+        0.27966058254241943,
+        0.2764582335948944,
+        0.17838266491889954
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\enfeite_raiz_chao.glb",
+      "sha256": "3ae0e4ce292ccb36c92c19555d234976b2e0772cb119e21a290a7576c666b67d",
+      "triangulos": 48,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_raiz_chao",
+      "dimensoesBlender": [
+        0.3489106297492981,
+        0.3301273584365845,
+        0.03436829894781113
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\enfeite_pedra_baixa.glb",
+      "sha256": "7ac23156c93dca5f9d5b487d26eb3ba774c79a38fb72f5c0f18618dcb369b457",
+      "triangulos": 20,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_pedra_baixa",
+      "dimensoesBlender": [
+        0.43040651082992554,
+        0.37544023990631104,
+        0.22636732459068298
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\enfeite_lago.glb",
+      "sha256": "a005e8014181911bfcaae4d52814b43e229411808efe07501eb5460d03903ca5",
+      "triangulos": 262,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_lago",
+      "dimensoesBlender": [
+        1.5432054996490479,
+        1.0855501890182495,
+        0.09514106810092926
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\moeda_chao.glb",
+      "sha256": "203cc690101dfcf9c55ccd1b5b8b62d0a14ac6d7325e89909c98808e381fc297",
+      "triangulos": 122,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "moeda_chao",
+      "dimensoesBlender": [
+        0.23999999463558197,
+        0.23999999463558197,
+        0.03099999949336052
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\enfeite_tocha.glb",
+      "sha256": "ea472659766574e64f7bc5cc82c82f531a328734cedc10b794c71b87a0afaa36",
+      "triangulos": 64,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_tocha",
+      "dimensoesBlender": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.8100000023841858
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\enfeite_fogueira.glb",
+      "sha256": "7b4ef7f57c2feb159c84f0c8aa7112bba33812d7f58fbb65abbf3c45a945bc6e",
+      "triangulos": 292,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_fogueira",
+      "dimensoesBlender": [
+        0.6240108013153076,
+        0.5853487253189087,
+        0.1841043084859848
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\enfeite_placa.glb",
+      "sha256": "c5e79893981bb74f2b5739fbd1a6dc088314270fdc08ef30b5637cd0a41cc1f3",
+      "triangulos": 140,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_placa",
+      "dimensoesBlender": [
+        0.550000011920929,
+        0.09897942841053009,
+        1.0
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\bau_fechado.glb",
+      "sha256": "2f68e31f2ba92b7bc4ff78ea3e2019ff9c170f13977e596036a7f9eb753f8760",
+      "triangulos": 220,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "bau_fechado",
+      "dimensoesBlender": [
+        0.6800000071525574,
+        0.5024999976158142,
+        0.5550000071525574
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\pilar_galeao.glb",
+      "sha256": "f7a6f5c4ccae612f572e373e0e71cba6843aaff69e48fd81f3ba1260ed10504d",
+      "triangulos": 176,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "pilar_galeao",
+      "dimensoesBlender": [
+        0.6800000071525574,
+        0.6800000071525574,
+        1.0499999523162842
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\totem_dominio.glb",
+      "sha256": "9cbe48c539cf2c3383ceabf2d1bccbdb1caee3afe567ebd81aea217f9ab0edae",
+      "triangulos": 152,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "totem_dominio",
+      "dimensoesBlender": [
+        0.6800000071525574,
+        0.6800000071525574,
+        0.6100000143051147
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\enfeite_cristal.glb",
+      "sha256": "fbe87bdd0055e4a53bfc16458e20997836131d50d099c799f84cb64aba206ddc",
+      "triangulos": 72,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_cristal",
+      "dimensoesBlender": [
+        0.3711901903152466,
+        0.3528115451335907,
+        0.4300000071525574
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\loja_mascate.glb",
+      "sha256": "889f4b950f0b4ddb1ce8cb2980409e000d63bcdbea9135e01eb9c489b874337a",
+      "triangulos": 484,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "loja_mascate",
+      "dimensoesBlender": [
+        1.9199999570846558,
+        1.9300000667572021,
+        2.255000114440918
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\entorno.glb",
+      "sha256": "9abfcd6d5d394d53e3e44b1abb8d062c55f0505a181f47b0cf8dceda789eb563",
+      "triangulos": 192,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "entorno",
+      "dimensoesBlender": [
+        16.31332015991211,
+        16.518545150756836,
+        1.06354558467865
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\entorno_16.glb",
+      "sha256": "ef22378a3c7f6be2cfbc6b5b1d7629559bae2b0224823c55c9d829a08501031a",
+      "triangulos": 192,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "entorno_16",
+      "dimensoesBlender": [
+        20.58517074584961,
+        20.39328384399414,
+        1.0651881694793701
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\entorno_18.glb",
+      "sha256": "a4908e76ed792fa1275bfb0b988d11bd15d5754cc2ff9c9067e764482deb7b85",
+      "triangulos": 192,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "entorno_18",
+      "dimensoesBlender": [
+        22.603450775146484,
+        22.487342834472656,
+        1.067471981048584
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\deserto.blend"
+    },
+    {
+      "arquivo": "models\\deserto\\cata_vento_solar.glb",
+      "sha256": "1cfb9c39046a649f20c142ed5ad6bc97f874b47b23d2a36454046a68ce7d5459",
+      "triangulos": 188,
+      "animacoes": [
+        "AmbientLoop"
+      ],
+      "texturas": 0,
+      "id": "cata_vento_solar",
+      "origem": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Models\\Mapa\\deserto\\cata_vento_solar.glb"
+    }
+  ],
+  "geometria": "kit original preservado",
+  "regraDoMapa": "inalterada"
+}

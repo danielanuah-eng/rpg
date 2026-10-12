@@ -1,0 +1,1026 @@
+{
+  "tema": "vulcao",
+  "estado": "exportado_para_revisao",
+  "integracao": "pendente_claude",
+  "fonte": "fontes/vulcao.blend",
+  "preview": "previews/vulcao-clean.png",
+  "materiais": [
+    {
+      "material": "vulcao_brasa_emissivo",
+      "antes": [
+        0.6499999761581421,
+        0.11999999731779099,
+        0.02500000037252903,
+        1.0
+      ],
+      "depois": [
+        0.6499999761581421,
+        0.11999999731779099,
+        0.02500000037252903,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_casca",
+      "antes": [
+        0.3499999940395355,
+        0.20000000298023224,
+        0.11999999731779099,
+        1.0
+      ],
+      "depois": [
+        0.03999999910593033,
+        0.03200000151991844,
+        0.03999999910593033,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_creme",
+      "antes": [
+        0.800000011920929,
+        0.75,
+        0.5899999737739563,
+        1.0
+      ],
+      "depois": [
+        0.8799999952316284,
+        0.7699999809265137,
+        0.5600000023841858,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_cristal_emissivo",
+      "antes": [
+        0.25,
+        0.6399999856948853,
+        0.5899999737739563,
+        1.0
+      ],
+      "depois": [
+        0.25,
+        0.6399999856948853,
+        0.5899999737739563,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_ferro",
+      "antes": [
+        0.1899999976158142,
+        0.23999999463558197,
+        0.23999999463558197,
+        1.0
+      ],
+      "depois": [
+        0.18000000715255737,
+        0.23999999463558197,
+        0.28999999165534973,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_flor",
+      "antes": [
+        0.5699999928474426,
+        0.3400000035762787,
+        0.6499999761581421,
+        1.0
+      ],
+      "depois": [
+        0.5699999928474426,
+        0.3400000035762787,
+        0.6499999761581421,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_flor_clara",
+      "antes": [
+        0.9200000166893005,
+        0.8299999833106995,
+        0.5400000214576721,
+        1.0
+      ],
+      "depois": [
+        0.9200000166893005,
+        0.8299999833106995,
+        0.5400000214576721,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_folhagem",
+      "antes": [
+        0.23000000417232513,
+        0.4099999964237213,
+        0.18000000715255737,
+        1.0
+      ],
+      "depois": [
+        0.054999999701976776,
+        0.06499999761581421,
+        0.08500000089406967,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_fruta",
+      "antes": [
+        0.6299999952316284,
+        0.1899999976158142,
+        0.1599999964237213,
+        1.0
+      ],
+      "depois": [
+        0.6299999952316284,
+        0.1899999976158142,
+        0.1599999964237213,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_grama_a",
+      "antes": [
+        0.30000001192092896,
+        0.4300000071525574,
+        0.20000000298023224,
+        1.0
+      ],
+      "depois": [
+        0.0949999988079071,
+        0.11500000208616257,
+        0.1599999964237213,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_grama_b",
+      "antes": [
+        0.3199999928474426,
+        0.44999998807907104,
+        0.20999999344348907,
+        1.0
+      ],
+      "depois": [
+        0.11500000208616257,
+        0.13500000536441803,
+        0.18000000715255737,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_lanterna_emissivo",
+      "antes": [
+        1.0,
+        0.6299999952316284,
+        0.1599999964237213,
+        1.0
+      ],
+      "depois": [
+        1.0,
+        0.6299999952316284,
+        0.1599999964237213,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_lava_emissivo",
+      "antes": [
+        0.8999999761581421,
+        0.1899999976158142,
+        0.02500000037252903,
+        1.0
+      ],
+      "depois": [
+        1.0,
+        0.1599999964237213,
+        0.014999999664723873,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_madeira",
+      "antes": [
+        0.5199999809265137,
+        0.3400000035762787,
+        0.18000000715255737,
+        1.0
+      ],
+      "depois": [
+        0.41999998688697815,
+        0.23000000417232513,
+        0.09000000357627869,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_ouro",
+      "antes": [
+        0.7799999713897705,
+        0.5799999833106995,
+        0.20999999344348907,
+        1.0
+      ],
+      "depois": [
+        0.949999988079071,
+        0.5600000023841858,
+        0.10999999940395355,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_pedra",
+      "antes": [
+        0.3700000047683716,
+        0.4300000071525574,
+        0.4399999976158142,
+        1.0
+      ],
+      "depois": [
+        0.3400000035762787,
+        0.3700000047683716,
+        0.4300000071525574,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_runa_emissivo",
+      "antes": [
+        0.23000000417232513,
+        0.6399999856948853,
+        0.5600000023841858,
+        1.0
+      ],
+      "depois": [
+        0.23000000417232513,
+        0.6399999856948853,
+        0.5600000023841858,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_sombra",
+      "antes": [
+        0.07999999821186066,
+        0.10000000149011612,
+        0.07000000029802322,
+        1.0
+      ],
+      "depois": [
+        0.03500000014901161,
+        0.05000000074505806,
+        0.054999999701976776,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_terra",
+      "antes": [
+        0.27000001072883606,
+        0.20000000298023224,
+        0.12999999523162842,
+        1.0
+      ],
+      "depois": [
+        0.03500000014901161,
+        0.04500000178813934,
+        0.06499999761581421,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_vinho",
+      "antes": [
+        0.4399999976158142,
+        0.11999999731779099,
+        0.18000000715255737,
+        1.0
+      ],
+      "depois": [
+        0.4399999976158142,
+        0.11999999731779099,
+        0.18000000715255737,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "vulcao_zona",
+      "antes": [
+        0.4000000059604645,
+        0.5299999713897705,
+        0.44999998807907104,
+        1.0
+      ],
+      "depois": [
+        0.23000000417232513,
+        0.25999999046325684,
+        0.33000001311302185,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    }
+  ],
+  "pecas": [
+    {
+      "arquivo": "models\\vulcao\\topo_a.glb",
+      "sha256": "0d67f77f522ea045d171b744cb2a5022459b0e2673f5c393a80a97964f3b1d9e",
+      "triangulos": 44,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "topo_a",
+      "dimensoesBlender": [
+        1.0,
+        1.0,
+        0.05000000074505806
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\topo_b.glb",
+      "sha256": "8e43ba7fc6b96147906e320298e2d77836ed1aed58011e825e6e46a3ec39ccd4",
+      "triangulos": 44,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "topo_b",
+      "dimensoesBlender": [
+        1.0,
+        1.0,
+        0.05000000074505806
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\topo_zona.glb",
+      "sha256": "23afc7fd019ef4af991ceb6533f36fd455000f0e023d62266b2f5c8291562ad7",
+      "triangulos": 44,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "topo_zona",
+      "dimensoesBlender": [
+        1.0,
+        1.0,
+        0.05000000074505806
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\coluna_a.glb",
+      "sha256": "2ef657cd753faa485bdc31df0128b919c4133649fd4710208f826d18c6329d62",
+      "triangulos": 124,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "coluna_a",
+      "dimensoesBlender": [
+        1.0,
+        1.0,
+        0.44999998807907104
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\coluna_b.glb",
+      "sha256": "50ee3fc8279a56c91d14cca186f2d3aa0413089a957773051a8e259cd05dd05d",
+      "triangulos": 124,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "coluna_b",
+      "dimensoesBlender": [
+        1.0,
+        1.0,
+        0.44999998807907104
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\beira_reta.glb",
+      "sha256": "8ad89dd752331641ff55d4aa9474c9e449e0536dba1b17545325b62e72d200a6",
+      "triangulos": 108,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "beira_reta",
+      "dimensoesBlender": [
+        1.0,
+        0.17000000178813934,
+        0.4671053886413574
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\beira_canto.glb",
+      "sha256": "d79b971bb8c4d04d8dc5768a8f7b34cc2763f434d60a2f05a46c0c660d23612b",
+      "triangulos": 172,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "beira_canto",
+      "dimensoesBlender": [
+        1.0,
+        1.0,
+        0.4671053886413574
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\arbusto.glb",
+      "sha256": "748400c0cbc64a09ee92b2b3c763dedda29416b943abbd293f78c210db4629a5",
+      "triangulos": 232,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "arbusto",
+      "dimensoesBlender": [
+        0.6891979575157166,
+        0.683896541595459,
+        0.5252339243888855
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\arvore.glb",
+      "sha256": "3d30ed6ee8c5c6cc56827a1730f03db319dceccd314b16b7bcd7eb400d726d87",
+      "triangulos": 352,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "arvore",
+      "dimensoesBlender": [
+        0.9998726844787598,
+        0.8829271793365479,
+        1.9451031684875488
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\arvore_jovem.glb",
+      "sha256": "f71b4ddfe3e0c061113097af9ba83b8feba9d21b6a73f846d92e1c1390b5ffd9",
+      "triangulos": 352,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "arvore_jovem",
+      "dimensoesBlender": [
+        0.9998726844787598,
+        0.8829271793365479,
+        1.4728130102157593
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\caixa.glb",
+      "sha256": "1a5664f93fb2f9ba9d742f3df2e7b4d3fe1745769c6352acb71aa70c209bd85f",
+      "triangulos": 372,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "caixa",
+      "dimensoesBlender": [
+        0.8420000076293945,
+        0.8433115482330322,
+        0.8319999575614929
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\caixa_rachada.glb",
+      "sha256": "1e1c0f61485f00900b0ab9a9e0e00f98a723198635291ebf7d9f61ed95a4eecc",
+      "triangulos": 408,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "caixa_rachada",
+      "dimensoesBlender": [
+        0.8420000076293945,
+        0.8433115482330322,
+        0.8319999575614929
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\caixa_quebrada.glb",
+      "sha256": "9d49ae3e76d67e3ee38d64e6f9ae676f0e6139ecd647339b41e4fdfe7f5fa14d",
+      "triangulos": 352,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "caixa_quebrada",
+      "dimensoesBlender": [
+        0.8500000238418579,
+        0.749205470085144,
+        0.1574999988079071
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\pedra.glb",
+      "sha256": "2bc899e322da74173f5f00b962f8071a51ef273b31301a2597bec7e61c22ef99",
+      "triangulos": 40,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "pedra",
+      "dimensoesBlender": [
+        0.7352973222732544,
+        0.5782100558280945,
+        0.6037191152572632
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\enfeite_cerca.glb",
+      "sha256": "1e00e15e38fb2bcc91c3f67d0dca5e87364cd8808de0efded9dbf24dcbf384a0",
+      "triangulos": 120,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_cerca",
+      "dimensoesBlender": [
+        0.9389098882675171,
+        0.09406888484954834,
+        0.6499999761581421
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\enfeite_cerca_canto.glb",
+      "sha256": "b4a00db599034dffc37401ff98030d5031a9c3a7775495b51d63938a1ca6dfa4",
+      "triangulos": 224,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_cerca_canto",
+      "dimensoesBlender": [
+        0.9389098882675171,
+        0.9340688586235046,
+        0.6499999761581421
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\enfeite_flores.glb",
+      "sha256": "4a1cf7cc73f009dd97ceb6c53f3787119c5afa8ba6e716bef525f12b3ec9a55e",
+      "triangulos": 660,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_flores",
+      "dimensoesBlender": [
+        0.36601412296295166,
+        0.33896011114120483,
+        0.210999995470047
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\enfeite_cogumelos.glb",
+      "sha256": "292e1dc900fa20fe5300f7d80dcef9ea53d5b82718a505c79f6eddaee137fd2b",
+      "triangulos": 300,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_cogumelos",
+      "dimensoesBlender": [
+        0.3436499834060669,
+        0.29700160026550293,
+        0.2420157492160797
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\enfeite_seixos.glb",
+      "sha256": "ca8a03526aba27c7820ec80cc5f1fb423cf944efef16b00cd8c8a2116018c169",
+      "triangulos": 100,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_seixos",
+      "dimensoesBlender": [
+        0.4472505748271942,
+        0.3027399778366089,
+        0.052303608506917953
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\enfeite_capim.glb",
+      "sha256": "b7fa33e84f4a0f2da6d722c8b8788fc1785a32f0760e2ccb8f65bc9f1faeb7f6",
+      "triangulos": 84,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_capim",
+      "dimensoesBlender": [
+        0.27966058254241943,
+        0.2764582335948944,
+        0.17838266491889954
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\enfeite_raiz_chao.glb",
+      "sha256": "64c203d3b2d91f2a6bff412782097ef4996174da34a4b7704f65ea684314daa1",
+      "triangulos": 48,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_raiz_chao",
+      "dimensoesBlender": [
+        0.3489106297492981,
+        0.3301273584365845,
+        0.03436829894781113
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\enfeite_pedra_baixa.glb",
+      "sha256": "4dd74d9bc479b5ef9036e0e4458b27f414973952b72844ac1c321361c4c3f187",
+      "triangulos": 20,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_pedra_baixa",
+      "dimensoesBlender": [
+        0.43040651082992554,
+        0.37544023990631104,
+        0.22636732459068298
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\enfeite_lago.glb",
+      "sha256": "d35a6b2a0d24ffc92f7763a5bbc18e653e5b73671cb53c5ce27945359611ae90",
+      "triangulos": 262,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_lago",
+      "dimensoesBlender": [
+        1.5432054996490479,
+        1.0855501890182495,
+        0.09514106810092926
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\moeda_chao.glb",
+      "sha256": "66d56cd9627784884e736b261cb31865844389e54ad9ac09e75456a20d4022d9",
+      "triangulos": 122,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "moeda_chao",
+      "dimensoesBlender": [
+        0.23999999463558197,
+        0.23999999463558197,
+        0.03099999949336052
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\enfeite_tocha.glb",
+      "sha256": "e2e43bd659b46a678cd1a6c5a7022daaad28b49d83144a0cb10a69d1846fef4c",
+      "triangulos": 64,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_tocha",
+      "dimensoesBlender": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.8100000023841858
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\enfeite_fogueira.glb",
+      "sha256": "171cbf8e9464c473383af992411590ac05615623c57f0ffbeb56c2943607c181",
+      "triangulos": 292,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_fogueira",
+      "dimensoesBlender": [
+        0.6240108013153076,
+        0.5853487253189087,
+        0.1841043084859848
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\enfeite_placa.glb",
+      "sha256": "45ab4eae8c48490bda996e992f2bf894b392dc7d230f920cd33175e55d0a5726",
+      "triangulos": 140,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_placa",
+      "dimensoesBlender": [
+        0.550000011920929,
+        0.09897942841053009,
+        1.0
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\bau_fechado.glb",
+      "sha256": "c412f35a6b18616a4c90536f00a0a7188a86603a1774de9597289ce913ffe4b0",
+      "triangulos": 220,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "bau_fechado",
+      "dimensoesBlender": [
+        0.6800000071525574,
+        0.5024999976158142,
+        0.5550000071525574
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\pilar_galeao.glb",
+      "sha256": "8e499ad280bc4eb5ce8c71c9d83dc75f2f8675460b7c468e1a5414f8bac4d5eb",
+      "triangulos": 176,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "pilar_galeao",
+      "dimensoesBlender": [
+        0.6800000071525574,
+        0.6800000071525574,
+        1.0499999523162842
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\totem_dominio.glb",
+      "sha256": "176a2e339303826cf8e434f41097f4b66f43b2471fbc671792e7b921fdd8f3e4",
+      "triangulos": 152,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "totem_dominio",
+      "dimensoesBlender": [
+        0.6800000071525574,
+        0.6800000071525574,
+        0.6100000143051147
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\enfeite_cristal.glb",
+      "sha256": "dcb8648605cad8d8aa3b731a660ac8e94483d247e7307c01317ad1a61894160b",
+      "triangulos": 72,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_cristal",
+      "dimensoesBlender": [
+        0.3711901903152466,
+        0.3528115451335907,
+        0.4300000071525574
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\loja_mascate.glb",
+      "sha256": "17c4bb09adc64c6cf95ff1a3f6a6281a9b469feafaa68168f5f0882a289050be",
+      "triangulos": 484,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "loja_mascate",
+      "dimensoesBlender": [
+        1.9199999570846558,
+        1.9300000667572021,
+        2.255000114440918
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\entorno.glb",
+      "sha256": "ba0d8ba0dc8285ca29ac6fb730d1a9c37f698261f2e1f530804d46922a64180c",
+      "triangulos": 192,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "entorno",
+      "dimensoesBlender": [
+        16.31332015991211,
+        16.518545150756836,
+        1.06354558467865
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\entorno_16.glb",
+      "sha256": "5a1695d6c8bb5cbb18bdb51517e250c2958c3349c52c1d26c6c5194a597495c9",
+      "triangulos": 192,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "entorno_16",
+      "dimensoesBlender": [
+        20.58517074584961,
+        20.39328384399414,
+        1.0651881694793701
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\entorno_18.glb",
+      "sha256": "fd326ba5bb081f1cccc40e302b42273581f5c01a59fda6a71ef096807e49f52c",
+      "triangulos": 192,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "entorno_18",
+      "dimensoesBlender": [
+        22.603450775146484,
+        22.487342834472656,
+        1.067471981048584
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\vulcao.blend"
+    },
+    {
+      "arquivo": "models\\vulcao\\braseiro_de_obsidiana.glb",
+      "sha256": "317083b116acc993afab17b85a27010f3d07d7b7e20cf5cff3fcc71eee25de81",
+      "triangulos": 188,
+      "animacoes": [
+        "AmbientLoop"
+      ],
+      "texturas": 0,
+      "fonte": "fontes\\extras\\vulcao-braseiro_de_obsidiana.blend",
+      "id": "braseiro_de_obsidiana",
+      "origem": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Models\\Mapa\\vulcao\\braseiro_de_obsidiana.glb"
+    }
+  ],
+  "geometria": "kit original preservado",
+  "regraDoMapa": "inalterada"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "Vendedor",
+  "estado": "exportado_para_revisao",
+  "integracao": "pendente_claude",
+  "referencia": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Vendedor\\frame-01.png",
+  "sha256Referencia": "d58c29d73a970668855c7ef48b8041bd7b370769cac386e0abf7e9f0f064688b",
+  "modelo": "Vendedor.glb",
+  "fonte": "Vendedor.blend",
+  "preview": "previa.png",
+  "sha256": "8a02327db4be5a6af3d31b05a9d4baed40f0780dbe52f9bdd26b9e520731581f",
+  "unidade": "metro",
+  "frenteBlender": "-Y",
+  "frenteGLB": "+Z",
+  "pivo": "origem na base, sem root motion de deslocamento",
+  "dimensoesRestBlender": [
+    0.9507226347923279,
+    0.8754549026489258,
+    1.411198616027832
+  ],
+  "ossos": 16,
+  "triangulos": 3428,
+  "clipes": [
+    {
+      "id": "idle",
+      "duracaoSegundos": 2.0,
+      "quadrosFonte": 49,
+      "loop": true,
+      "descricao": "Respiração e ajuste curto de postura; retorna à pose inicial."
+    }
+  ],
+  "observacoes": [
+    "Modelo estilizado em volumes de malha, materiais sem textura ruidosa.",
+    "Rig articulado com pesos rígidos por segmento; conferência no Unity ainda pendente.",
+    "Projéteis e efeitos de campo continuam assets separados; não mudam regras.",
+    "Transformações entre personagens usam clipe de preparação + modelo de destino, a ligar pelo Claude."
+  ],
+  "ligacoes": [
+    {
+      "idAcao": "idle",
+      "modelo": "Vendedor.glb",
+      "clipeGLB": "idle",
+      "referenciasEstadoAtual": [
+        "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Sprites\\Vendedor\\frame-01.png"
+      ],
+      "integracao": "pendente_claude"
+    }
+  ]
+}

@@ -1,0 +1,4672 @@
+[
+  {
+    "tema": "bosque",
+    "colecoes": [
+      {
+        "nome": "Collection",
+        "objetos": 0,
+        "oculta": false
+      },
+      {
+        "nome": "KIT_BOSQUE_ORIGINAIS_PIVO_ZERO",
+        "objetos": 38,
+        "oculta": true
+      },
+      {
+        "nome": "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO",
+        "objetos": 248,
+        "oculta": false
+      }
+    ],
+    "pecas": [
+      {
+        "nome": "bosque_arbusto",
+        "peca": "arbusto",
+        "colecoes": [
+          "KIT_BOSQUE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.6891979575157166,
+          0.683896541595459,
+          0.5252339243888855
+        ]
+      },
+      {
+        "nome": "bosque_arbusto.001",
+        "peca": "arbusto",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.6891979575157166,
+          0.683896541595459,
+          0.5252339243888855
+        ]
+      },
+      {
+        "nome": "bosque_arbusto.002",
+        "peca": "arbusto",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.6891979575157166,
+          0.683896541595459,
+          0.5252339243888855
+        ]
+      },
+      {
+        "nome": "bosque_arbusto.003",
+        "peca": "arbusto",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.6891979575157166,
+          0.683896541595459,
+          0.5252339243888855
+        ]
+      },
+      {
+        "nome": "bosque_arvore",
+        "peca": "arvore",
+        "colecoes": [
+          "KIT_BOSQUE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.5667994022369385,
+          1.4503792524337769,
+          2.1923131942749023
+        ]
+      },
+      {
+        "nome": "bosque_arvore.001",
+        "peca": "arvore",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.5667994022369385,
+          1.4503792524337769,
+          2.1923131942749023
+        ]
+      },
+      {
+        "nome": "bosque_arvore.002",
+        "peca": "arvore",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.5667994022369385,
+          1.4503792524337769,
+          2.1923131942749023
+        ]
+      },
+      {
+        "nome": "bosque_arvore.003",
+        "peca": "arvore",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.566799283027649,
+          1.4503791332244873,
+          2.1923131942749023
+        ]
+      },
+      {
+        "nome": "bosque_arvore.004",
+        "peca": "arvore",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.5667994022369385,
+          1.4503792524337769,
+          2.1923131942749023
+        ]
+      },
+      {
+        "nome": "bosque_arvore_jovem",
+        "peca": "arvore_jovem",
+        "colecoes": [
+          "KIT_BOSQUE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.1280956268310547,
+          1.0442731380462646,
+          1.581756353378296
+        ]
+      },
+      {
+        "nome": "bosque_arvore_jovem.001",
+        "peca": "arvore_jovem",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.1280956268310547,
+          1.0442731380462646,
+          1.581756353378296
+        ]
+      },
+      {
+        "nome": "bosque_bau_fechado",
+        "peca": "bau_fechado",
+        "colecoes": [
+          "KIT_BOSQUE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.6800000071525574,
+          0.5024999976158142,
+          0.5550000071525574
+        ]
+      },
+      {
+        "nome": "bosque_beira_canto",
+        "peca": "beira_canto",
+        "colecoes": [
+          "KIT_BOSQUE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta",
+        "peca": "beira_reta",
+        "colecoes": [
+          "KIT_BOSQUE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.001",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.002",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.003",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.004",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.005",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.006",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.007",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.008",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.009",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.010",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.011",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.012",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.013",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.014",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.015",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.016",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.017",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.018",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.019",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.020",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.021",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.022",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.023",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_beira_reta.024",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "bosque_caixa",
+        "peca": "caixa",
+        "colecoes": [
+          "KIT_BOSQUE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "bosque_caixa.001",
+        "peca": "caixa",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "bosque_caixa.002",
+        "peca": "caixa",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "bosque_caixa_quebrada",
+        "peca": "caixa_quebrada",
+        "colecoes": [
+          "KIT_BOSQUE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.8500000238418579,
+          0.749205470085144,
+          0.1574999988079071
+        ]
+      },
+      {
+        "nome": "bosque_caixa_rachada",
+        "peca": "caixa_rachada",
+        "colecoes": [
+          "KIT_BOSQUE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "bosque_coluna_a",
+        "peca": "coluna_a",
+        "colecoes": [
+          "KIT_BOSQUE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "bosque_coluna_a.001",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "bosque_coluna_a.002",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "bosque_coluna_a.003",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "bosque_coluna_a.004",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "bosque_coluna_a.005",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "bosque_coluna_a.006",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "bosque_coluna_a.007",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "bosque_coluna_a.008",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "bosque_coluna_a.009",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "bosque_coluna_a.010",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "bosque_coluna_a.011",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "bosque_coluna_a.012",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "bosque_coluna_a.013",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "bosque_coluna_a.014",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "bosque_coluna_a.015",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "bosque_coluna_a.016",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      }
+    ],
+    "materiais": [
+      {
+        "nome": "bosque_agua_emissivo",
+        "cor": [
+          0.1599999964237213,
+          0.4300000071525574,
+          0.46000000834465027,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_casca",
+        "cor": [
+          0.3499999940395355,
+          0.20000000298023224,
+          0.11999999731779099,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_creme",
+        "cor": [
+          0.800000011920929,
+          0.75,
+          0.5899999737739563,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_cristal_emissivo",
+        "cor": [
+          0.25,
+          0.6399999856948853,
+          0.5899999737739563,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_ferro",
+        "cor": [
+          0.1899999976158142,
+          0.23999999463558197,
+          0.23999999463558197,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_flor",
+        "cor": [
+          0.5699999928474426,
+          0.3400000035762787,
+          0.6499999761581421,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_flor_clara",
+        "cor": [
+          0.9200000166893005,
+          0.8299999833106995,
+          0.5400000214576721,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_folhagem",
+        "cor": [
+          0.23000000417232513,
+          0.4099999964237213,
+          0.18000000715255737,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_fruta",
+        "cor": [
+          0.6299999952316284,
+          0.1899999976158142,
+          0.1599999964237213,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_grama_a",
+        "cor": [
+          0.30000001192092896,
+          0.4300000071525574,
+          0.20000000298023224,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_grama_b",
+        "cor": [
+          0.3199999928474426,
+          0.44999998807907104,
+          0.20999999344348907,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_lanterna_emissivo",
+        "cor": [
+          1.0,
+          0.6299999952316284,
+          0.1599999964237213,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_madeira",
+        "cor": [
+          0.5199999809265137,
+          0.3400000035762787,
+          0.18000000715255737,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_ouro",
+        "cor": [
+          0.7799999713897705,
+          0.5799999833106995,
+          0.20999999344348907,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_pedra",
+        "cor": [
+          0.3700000047683716,
+          0.4300000071525574,
+          0.4399999976158142,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_runa_emissivo",
+        "cor": [
+          0.23000000417232513,
+          0.6399999856948853,
+          0.5600000023841858,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_sombra",
+        "cor": [
+          0.07999999821186066,
+          0.10000000149011612,
+          0.07000000029802322,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_telha",
+        "cor": [
+          0.5099999904632568,
+          0.1899999976158142,
+          0.14000000059604645,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_terra",
+        "cor": [
+          0.27000001072883606,
+          0.20000000298023224,
+          0.12999999523162842,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_vinho",
+        "cor": [
+          0.4399999976158142,
+          0.11999999731779099,
+          0.18000000715255737,
+          1.0
+        ]
+      },
+      {
+        "nome": "bosque_zona",
+        "cor": [
+          0.4000000059604645,
+          0.5299999713897705,
+          0.44999998807907104,
+          1.0
+        ]
+      }
+    ],
+    "camera": "Camera"
+  },
+  {
+    "tema": "pedreira",
+    "colecoes": [
+      {
+        "nome": "Collection",
+        "objetos": 0,
+        "oculta": false
+      },
+      {
+        "nome": "KIT_PEDREIRA_ORIGINAIS_PIVO_ZERO",
+        "objetos": 38,
+        "oculta": true
+      },
+      {
+        "nome": "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO",
+        "objetos": 470,
+        "oculta": false
+      }
+    ],
+    "pecas": [
+      {
+        "nome": "pedreira_arbusto",
+        "peca": "arbusto",
+        "colecoes": [
+          "KIT_PEDREIRA_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.6891979575157166,
+          0.683896541595459,
+          0.5252339243888855
+        ]
+      },
+      {
+        "nome": "pedreira_arvore",
+        "peca": "arvore",
+        "colecoes": [
+          "KIT_PEDREIRA_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.163679838180542,
+          1.1817693710327148,
+          2.1654372215270996
+        ]
+      },
+      {
+        "nome": "pedreira_arvore.001",
+        "peca": "arvore",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.1636797189712524,
+          1.1817692518234253,
+          2.1654372215270996
+        ]
+      },
+      {
+        "nome": "pedreira_arvore.002",
+        "peca": "arvore",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.163679838180542,
+          1.1817693710327148,
+          2.1654372215270996
+        ]
+      },
+      {
+        "nome": "pedreira_arvore_jovem",
+        "peca": "arvore_jovem",
+        "colecoes": [
+          "KIT_PEDREIRA_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.8610401153564453,
+          0.8745092749595642,
+          1.6057385206222534
+        ]
+      },
+      {
+        "nome": "pedreira_arvore_jovem.001",
+        "peca": "arvore_jovem",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.8610401153564453,
+          0.8745092749595642,
+          1.6057385206222534
+        ]
+      },
+      {
+        "nome": "pedreira_bau_fechado",
+        "peca": "bau_fechado",
+        "colecoes": [
+          "KIT_PEDREIRA_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.6800000071525574,
+          0.5024999976158142,
+          0.5550000071525574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_canto",
+        "peca": "beira_canto",
+        "colecoes": [
+          "KIT_PEDREIRA_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta",
+        "peca": "beira_reta",
+        "colecoes": [
+          "KIT_PEDREIRA_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.001",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.002",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.003",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.004",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.005",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.006",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.007",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.008",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.009",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.010",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.011",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.012",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.013",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.014",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.015",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.016",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.017",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.018",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.019",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.020",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.021",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.022",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.023",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_beira_reta.024",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "pedreira_caixa",
+        "peca": "caixa",
+        "colecoes": [
+          "KIT_PEDREIRA_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "pedreira_caixa.001",
+        "peca": "caixa",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "pedreira_caixa.002",
+        "peca": "caixa",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "pedreira_caixa_quebrada",
+        "peca": "caixa_quebrada",
+        "colecoes": [
+          "KIT_PEDREIRA_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.8500000238418579,
+          0.749205470085144,
+          0.1574999988079071
+        ]
+      },
+      {
+        "nome": "pedreira_caixa_rachada",
+        "peca": "caixa_rachada",
+        "colecoes": [
+          "KIT_PEDREIRA_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a",
+        "peca": "coluna_a",
+        "colecoes": [
+          "KIT_PEDREIRA_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.001",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.002",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.003",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.004",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.005",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.006",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.007",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.008",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.009",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.010",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.011",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.012",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.013",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.014",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.015",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.016",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.017",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.018",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.019",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.020",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "pedreira_coluna_a.021",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      }
+    ],
+    "materiais": [
+      {
+        "nome": "pedreira_agua_emissivo",
+        "cor": [
+          0.1599999964237213,
+          0.4300000071525574,
+          0.46000000834465027,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_casca",
+        "cor": [
+          0.3499999940395355,
+          0.20000000298023224,
+          0.11999999731779099,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_creme",
+        "cor": [
+          0.800000011920929,
+          0.75,
+          0.5899999737739563,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_cristal_emissivo",
+        "cor": [
+          0.25,
+          0.6399999856948853,
+          0.5899999737739563,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_ferro",
+        "cor": [
+          0.1899999976158142,
+          0.23999999463558197,
+          0.23999999463558197,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_flor",
+        "cor": [
+          0.5699999928474426,
+          0.3400000035762787,
+          0.6499999761581421,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_flor_clara",
+        "cor": [
+          0.9200000166893005,
+          0.8299999833106995,
+          0.5400000214576721,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_folhagem",
+        "cor": [
+          0.23000000417232513,
+          0.4099999964237213,
+          0.18000000715255737,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_fruta",
+        "cor": [
+          0.6299999952316284,
+          0.1899999976158142,
+          0.1599999964237213,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_grama_a",
+        "cor": [
+          0.30000001192092896,
+          0.4300000071525574,
+          0.20000000298023224,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_grama_b",
+        "cor": [
+          0.3199999928474426,
+          0.44999998807907104,
+          0.20999999344348907,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_lanterna_emissivo",
+        "cor": [
+          1.0,
+          0.6299999952316284,
+          0.1599999964237213,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_madeira",
+        "cor": [
+          0.5199999809265137,
+          0.3400000035762787,
+          0.18000000715255737,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_ouro",
+        "cor": [
+          0.7799999713897705,
+          0.5799999833106995,
+          0.20999999344348907,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_pedra",
+        "cor": [
+          0.3700000047683716,
+          0.4300000071525574,
+          0.4399999976158142,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_runa_emissivo",
+        "cor": [
+          0.23000000417232513,
+          0.6399999856948853,
+          0.5600000023841858,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_sombra",
+        "cor": [
+          0.07999999821186066,
+          0.10000000149011612,
+          0.07000000029802322,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_telha",
+        "cor": [
+          0.5099999904632568,
+          0.1899999976158142,
+          0.14000000059604645,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_terra",
+        "cor": [
+          0.27000001072883606,
+          0.20000000298023224,
+          0.12999999523162842,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_vinho",
+        "cor": [
+          0.4399999976158142,
+          0.11999999731779099,
+          0.18000000715255737,
+          1.0
+        ]
+      },
+      {
+        "nome": "pedreira_zona",
+        "cor": [
+          0.4000000059604645,
+          0.5299999713897705,
+          0.44999998807907104,
+          1.0
+        ]
+      }
+    ],
+    "camera": "Camera"
+  },
+  {
+    "tema": "deserto",
+    "colecoes": [
+      {
+        "nome": "Collection",
+        "objetos": 0,
+        "oculta": false
+      },
+      {
+        "nome": "KIT_DESERTO_ORIGINAIS_PIVO_ZERO",
+        "objetos": 39,
+        "oculta": true
+      },
+      {
+        "nome": "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO",
+        "objetos": 239,
+        "oculta": false
+      }
+    ],
+    "pecas": [
+      {
+        "nome": "deserto_arbusto",
+        "peca": "arbusto",
+        "colecoes": [
+          "KIT_DESERTO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.6891979575157166,
+          0.683896541595459,
+          0.5252339243888855
+        ]
+      },
+      {
+        "nome": "deserto_arbusto.001",
+        "peca": "arbusto",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.6891979575157166,
+          0.683896541595459,
+          0.5252339243888855
+        ]
+      },
+      {
+        "nome": "deserto_arvore",
+        "peca": "arvore",
+        "colecoes": [
+          "KIT_DESERTO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.8660000562667847,
+          0.25999999046325684,
+          1.8991117477416992
+        ]
+      },
+      {
+        "nome": "deserto_arvore.001",
+        "peca": "arvore",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.8659999966621399,
+          0.25999996066093445,
+          1.8991117477416992
+        ]
+      },
+      {
+        "nome": "deserto_arvore.002",
+        "peca": "arvore",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.8659999966621399,
+          0.25999996066093445,
+          1.8991117477416992
+        ]
+      },
+      {
+        "nome": "deserto_arvore.003",
+        "peca": "arvore",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.8660000562667847,
+          0.25999999046325684,
+          1.8991117477416992
+        ]
+      },
+      {
+        "nome": "deserto_arvore_jovem",
+        "peca": "arvore_jovem",
+        "colecoes": [
+          "KIT_DESERTO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.8660000562667847,
+          0.25999999046325684,
+          1.4212117195129395
+        ]
+      },
+      {
+        "nome": "deserto_arvore_palmeira",
+        "peca": "arvore_palmeira",
+        "colecoes": [
+          "KIT_DESERTO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.4741663932800293,
+          1.4969077110290527,
+          1.8328090906143188
+        ]
+      },
+      {
+        "nome": "deserto_arvore_palmeira.001",
+        "peca": "arvore_palmeira",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.4741663932800293,
+          1.4969077110290527,
+          1.8328090906143188
+        ]
+      },
+      {
+        "nome": "deserto_arvore_palmeira.002",
+        "peca": "arvore_palmeira",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.4741663932800293,
+          1.4969077110290527,
+          1.8328090906143188
+        ]
+      },
+      {
+        "nome": "deserto_bau_fechado",
+        "peca": "bau_fechado",
+        "colecoes": [
+          "KIT_DESERTO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.6800000071525574,
+          0.5024999976158142,
+          0.5550000071525574
+        ]
+      },
+      {
+        "nome": "deserto_beira_canto",
+        "peca": "beira_canto",
+        "colecoes": [
+          "KIT_DESERTO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta",
+        "peca": "beira_reta",
+        "colecoes": [
+          "KIT_DESERTO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.001",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.002",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.003",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.004",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.005",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.006",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.007",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.008",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.009",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.010",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.011",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.012",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.013",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.014",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.015",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.016",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.017",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.018",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.019",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.020",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.021",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.022",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.023",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_beira_reta.024",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "deserto_caixa",
+        "peca": "caixa",
+        "colecoes": [
+          "KIT_DESERTO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "deserto_caixa.001",
+        "peca": "caixa",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "deserto_caixa_quebrada",
+        "peca": "caixa_quebrada",
+        "colecoes": [
+          "KIT_DESERTO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.8500000238418579,
+          0.749205470085144,
+          0.1574999988079071
+        ]
+      },
+      {
+        "nome": "deserto_caixa_rachada",
+        "peca": "caixa_rachada",
+        "colecoes": [
+          "KIT_DESERTO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "deserto_caixa_rachada.001",
+        "peca": "caixa_rachada",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "deserto_coluna_a",
+        "peca": "coluna_a",
+        "colecoes": [
+          "KIT_DESERTO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "deserto_coluna_a.001",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "deserto_coluna_a.002",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "deserto_coluna_a.003",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "deserto_coluna_a.004",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "deserto_coluna_a.005",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "deserto_coluna_a.006",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "deserto_coluna_a.007",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "deserto_coluna_a.008",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "deserto_coluna_a.009",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "deserto_coluna_a.010",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "deserto_coluna_a.011",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "deserto_coluna_a.012",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "deserto_coluna_a.013",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "deserto_coluna_a.014",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "deserto_coluna_a.015",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "deserto_coluna_a.016",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "deserto_coluna_a.017",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      }
+    ],
+    "materiais": [
+      {
+        "nome": "deserto_agua_emissivo",
+        "cor": [
+          0.1599999964237213,
+          0.4300000071525574,
+          0.46000000834465027,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_casca",
+        "cor": [
+          0.3499999940395355,
+          0.20000000298023224,
+          0.11999999731779099,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_creme",
+        "cor": [
+          0.800000011920929,
+          0.75,
+          0.5899999737739563,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_cristal_emissivo",
+        "cor": [
+          0.25,
+          0.6399999856948853,
+          0.5899999737739563,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_ferro",
+        "cor": [
+          0.1899999976158142,
+          0.23999999463558197,
+          0.23999999463558197,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_flor",
+        "cor": [
+          0.5699999928474426,
+          0.3400000035762787,
+          0.6499999761581421,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_flor_clara",
+        "cor": [
+          0.9200000166893005,
+          0.8299999833106995,
+          0.5400000214576721,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_folhagem",
+        "cor": [
+          0.23000000417232513,
+          0.4099999964237213,
+          0.18000000715255737,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_fruta",
+        "cor": [
+          0.6299999952316284,
+          0.1899999976158142,
+          0.1599999964237213,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_grama_a",
+        "cor": [
+          0.30000001192092896,
+          0.4300000071525574,
+          0.20000000298023224,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_grama_b",
+        "cor": [
+          0.3199999928474426,
+          0.44999998807907104,
+          0.20999999344348907,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_lanterna_emissivo",
+        "cor": [
+          1.0,
+          0.6299999952316284,
+          0.1599999964237213,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_madeira",
+        "cor": [
+          0.5199999809265137,
+          0.3400000035762787,
+          0.18000000715255737,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_ouro",
+        "cor": [
+          0.7799999713897705,
+          0.5799999833106995,
+          0.20999999344348907,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_pedra",
+        "cor": [
+          0.3700000047683716,
+          0.4300000071525574,
+          0.4399999976158142,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_runa_emissivo",
+        "cor": [
+          0.23000000417232513,
+          0.6399999856948853,
+          0.5600000023841858,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_sombra",
+        "cor": [
+          0.07999999821186066,
+          0.10000000149011612,
+          0.07000000029802322,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_terra",
+        "cor": [
+          0.27000001072883606,
+          0.20000000298023224,
+          0.12999999523162842,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_vinho",
+        "cor": [
+          0.4399999976158142,
+          0.11999999731779099,
+          0.18000000715255737,
+          1.0
+        ]
+      },
+      {
+        "nome": "deserto_zona",
+        "cor": [
+          0.4000000059604645,
+          0.5299999713897705,
+          0.44999998807907104,
+          1.0
+        ]
+      }
+    ],
+    "camera": "Camera"
+  },
+  {
+    "tema": "neve",
+    "colecoes": [
+      {
+        "nome": "Collection",
+        "objetos": 0,
+        "oculta": false
+      },
+      {
+        "nome": "KIT_NEVE_ORIGINAIS_PIVO_ZERO",
+        "objetos": 38,
+        "oculta": true
+      },
+      {
+        "nome": "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO",
+        "objetos": 318,
+        "oculta": false
+      }
+    ],
+    "pecas": [
+      {
+        "nome": "neve_arbusto",
+        "peca": "arbusto",
+        "colecoes": [
+          "KIT_NEVE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.6891979575157166,
+          0.683896541595459,
+          0.5252339243888855
+        ]
+      },
+      {
+        "nome": "neve_arbusto.001",
+        "peca": "arbusto",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.6891979575157166,
+          0.683896541595459,
+          0.5252339243888855
+        ]
+      },
+      {
+        "nome": "neve_arbusto.002",
+        "peca": "arbusto",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.6891979575157166,
+          0.683896541595459,
+          0.5252339243888855
+        ]
+      },
+      {
+        "nome": "neve_arvore",
+        "peca": "arvore",
+        "colecoes": [
+          "KIT_NEVE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.3686976432800293,
+          1.4038962125778198,
+          2.180861234664917
+        ]
+      },
+      {
+        "nome": "neve_arvore.001",
+        "peca": "arvore",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.3686975240707397,
+          1.4038960933685303,
+          2.180861234664917
+        ]
+      },
+      {
+        "nome": "neve_arvore.002",
+        "peca": "arvore",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.3686976432800293,
+          1.4038962125778198,
+          2.180861234664917
+        ]
+      },
+      {
+        "nome": "neve_arvore.003",
+        "peca": "arvore",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.3686976432800293,
+          1.4038962125778198,
+          2.180861234664917
+        ]
+      },
+      {
+        "nome": "neve_arvore_jovem",
+        "peca": "arvore_jovem",
+        "colecoes": [
+          "KIT_NEVE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.012836217880249,
+          1.0388832092285156,
+          1.614363670349121
+        ]
+      },
+      {
+        "nome": "neve_bau_fechado",
+        "peca": "bau_fechado",
+        "colecoes": [
+          "KIT_NEVE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.6800000071525574,
+          0.5024999976158142,
+          0.5550000071525574
+        ]
+      },
+      {
+        "nome": "neve_beira_canto",
+        "peca": "beira_canto",
+        "colecoes": [
+          "KIT_NEVE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta",
+        "peca": "beira_reta",
+        "colecoes": [
+          "KIT_NEVE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.001",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.002",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.003",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.004",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.005",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.006",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.007",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.008",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.009",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.010",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.011",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.012",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.013",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.014",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.015",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.016",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.017",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.018",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.019",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.020",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.021",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.022",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.023",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_beira_reta.024",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "neve_caixa",
+        "peca": "caixa",
+        "colecoes": [
+          "KIT_NEVE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "neve_caixa.001",
+        "peca": "caixa",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "neve_caixa_quebrada",
+        "peca": "caixa_quebrada",
+        "colecoes": [
+          "KIT_NEVE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.8500000238418579,
+          0.749205470085144,
+          0.1574999988079071
+        ]
+      },
+      {
+        "nome": "neve_caixa_rachada",
+        "peca": "caixa_rachada",
+        "colecoes": [
+          "KIT_NEVE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "neve_coluna_a",
+        "peca": "coluna_a",
+        "colecoes": [
+          "KIT_NEVE_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.001",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.002",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.003",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.004",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.005",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.006",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.007",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.008",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.009",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.010",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.011",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.012",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.013",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.014",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.015",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.016",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.017",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.018",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.019",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "neve_coluna_a.020",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      }
+    ],
+    "materiais": [
+      {
+        "nome": "neve_agua_emissivo",
+        "cor": [
+          0.36000001430511475,
+          0.5799999833106995,
+          0.699999988079071,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_casca",
+        "cor": [
+          0.3499999940395355,
+          0.20000000298023224,
+          0.11999999731779099,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_creme",
+        "cor": [
+          0.800000011920929,
+          0.75,
+          0.5899999737739563,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_cristal_emissivo",
+        "cor": [
+          0.25,
+          0.6399999856948853,
+          0.5899999737739563,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_ferro",
+        "cor": [
+          0.1899999976158142,
+          0.23999999463558197,
+          0.23999999463558197,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_flor",
+        "cor": [
+          0.5699999928474426,
+          0.3400000035762787,
+          0.6499999761581421,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_flor_clara",
+        "cor": [
+          0.9200000166893005,
+          0.8299999833106995,
+          0.5400000214576721,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_folhagem",
+        "cor": [
+          0.23000000417232513,
+          0.4099999964237213,
+          0.18000000715255737,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_fruta",
+        "cor": [
+          0.6299999952316284,
+          0.1899999976158142,
+          0.1599999964237213,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_grama_a",
+        "cor": [
+          0.30000001192092896,
+          0.4300000071525574,
+          0.20000000298023224,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_grama_b",
+        "cor": [
+          0.3199999928474426,
+          0.44999998807907104,
+          0.20999999344348907,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_lanterna_emissivo",
+        "cor": [
+          1.0,
+          0.6299999952316284,
+          0.1599999964237213,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_madeira",
+        "cor": [
+          0.5199999809265137,
+          0.3400000035762787,
+          0.18000000715255737,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_neve",
+        "cor": [
+          0.7699999809265137,
+          0.8600000143051147,
+          0.9100000262260437,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_ouro",
+        "cor": [
+          0.7799999713897705,
+          0.5799999833106995,
+          0.20999999344348907,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_pedra",
+        "cor": [
+          0.3700000047683716,
+          0.4300000071525574,
+          0.4399999976158142,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_runa_emissivo",
+        "cor": [
+          0.23000000417232513,
+          0.6399999856948853,
+          0.5600000023841858,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_sombra",
+        "cor": [
+          0.07999999821186066,
+          0.10000000149011612,
+          0.07000000029802322,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_telha",
+        "cor": [
+          0.5099999904632568,
+          0.1899999976158142,
+          0.14000000059604645,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_terra",
+        "cor": [
+          0.27000001072883606,
+          0.20000000298023224,
+          0.12999999523162842,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_vinho",
+        "cor": [
+          0.4399999976158142,
+          0.11999999731779099,
+          0.18000000715255737,
+          1.0
+        ]
+      },
+      {
+        "nome": "neve_zona",
+        "cor": [
+          0.4000000059604645,
+          0.5299999713897705,
+          0.44999998807907104,
+          1.0
+        ]
+      }
+    ],
+    "camera": "Camera"
+  },
+  {
+    "tema": "vulcao",
+    "colecoes": [
+      {
+        "nome": "Collection",
+        "objetos": 0,
+        "oculta": false
+      },
+      {
+        "nome": "KIT_VULCAO_ORIGINAIS_PIVO_ZERO",
+        "objetos": 38,
+        "oculta": true
+      },
+      {
+        "nome": "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO",
+        "objetos": 309,
+        "oculta": false
+      }
+    ],
+    "pecas": [
+      {
+        "nome": "vulcao_arbusto",
+        "peca": "arbusto",
+        "colecoes": [
+          "KIT_VULCAO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.6891979575157166,
+          0.683896541595459,
+          0.5252339243888855
+        ]
+      },
+      {
+        "nome": "vulcao_arvore",
+        "peca": "arvore",
+        "colecoes": [
+          "KIT_VULCAO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.9998726844787598,
+          0.8829271793365479,
+          1.9451031684875488
+        ]
+      },
+      {
+        "nome": "vulcao_arvore.001",
+        "peca": "arvore",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.9998726844787598,
+          0.8829271793365479,
+          1.9451031684875488
+        ]
+      },
+      {
+        "nome": "vulcao_arvore.002",
+        "peca": "arvore",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.9998726844787598,
+          0.8829271793365479,
+          1.9451031684875488
+        ]
+      },
+      {
+        "nome": "vulcao_arvore.003",
+        "peca": "arvore",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.9998726844787598,
+          0.8829271793365479,
+          1.9451031684875488
+        ]
+      },
+      {
+        "nome": "vulcao_arvore_jovem",
+        "peca": "arvore_jovem",
+        "colecoes": [
+          "KIT_VULCAO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.9998726844787598,
+          0.8829271793365479,
+          1.4728130102157593
+        ]
+      },
+      {
+        "nome": "vulcao_bau_fechado",
+        "peca": "bau_fechado",
+        "colecoes": [
+          "KIT_VULCAO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.6800000071525574,
+          0.5024999976158142,
+          0.5550000071525574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_canto",
+        "peca": "beira_canto",
+        "colecoes": [
+          "KIT_VULCAO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta",
+        "peca": "beira_reta",
+        "colecoes": [
+          "KIT_VULCAO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.001",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.002",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.003",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.004",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.005",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.006",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.007",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.008",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.009",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.010",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.011",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.012",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.013",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.014",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.015",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.016",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.017",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.018",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.019",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.020",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.021",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.022",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.023",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_beira_reta.024",
+        "peca": "beira_reta",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          0.17000000178813934,
+          0.4671053886413574
+        ]
+      },
+      {
+        "nome": "vulcao_caixa",
+        "peca": "caixa",
+        "colecoes": [
+          "KIT_VULCAO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "vulcao_caixa.001",
+        "peca": "caixa",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "vulcao_caixa_quebrada",
+        "peca": "caixa_quebrada",
+        "colecoes": [
+          "KIT_VULCAO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.8500000238418579,
+          0.749205470085144,
+          0.1574999988079071
+        ]
+      },
+      {
+        "nome": "vulcao_caixa_rachada",
+        "peca": "caixa_rachada",
+        "colecoes": [
+          "KIT_VULCAO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "vulcao_caixa_rachada.001",
+        "peca": "caixa_rachada",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          0.8420000076293945,
+          0.8433115482330322,
+          0.8319999575614929
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a",
+        "peca": "coluna_a",
+        "colecoes": [
+          "KIT_VULCAO_ORIGINAIS_PIVO_ZERO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.001",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.002",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.003",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.004",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.005",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.006",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.007",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.008",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.009",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.010",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.011",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.012",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.013",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.014",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.015",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.016",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.017",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.018",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.019",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.020",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      },
+      {
+        "nome": "vulcao_coluna_a.021",
+        "peca": "coluna_a",
+        "colecoes": [
+          "PREVIA_TABULEIRO_12x12_APENAS_EXEMPLO"
+        ],
+        "dimensoes": [
+          1.0,
+          1.0,
+          0.44999998807907104
+        ]
+      }
+    ],
+    "materiais": [
+      {
+        "nome": "vulcao_brasa_emissivo",
+        "cor": [
+          0.6499999761581421,
+          0.11999999731779099,
+          0.02500000037252903,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_casca",
+        "cor": [
+          0.3499999940395355,
+          0.20000000298023224,
+          0.11999999731779099,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_creme",
+        "cor": [
+          0.800000011920929,
+          0.75,
+          0.5899999737739563,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_cristal_emissivo",
+        "cor": [
+          0.25,
+          0.6399999856948853,
+          0.5899999737739563,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_ferro",
+        "cor": [
+          0.1899999976158142,
+          0.23999999463558197,
+          0.23999999463558197,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_flor",
+        "cor": [
+          0.5699999928474426,
+          0.3400000035762787,
+          0.6499999761581421,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_flor_clara",
+        "cor": [
+          0.9200000166893005,
+          0.8299999833106995,
+          0.5400000214576721,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_folhagem",
+        "cor": [
+          0.23000000417232513,
+          0.4099999964237213,
+          0.18000000715255737,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_fruta",
+        "cor": [
+          0.6299999952316284,
+          0.1899999976158142,
+          0.1599999964237213,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_grama_a",
+        "cor": [
+          0.30000001192092896,
+          0.4300000071525574,
+          0.20000000298023224,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_grama_b",
+        "cor": [
+          0.3199999928474426,
+          0.44999998807907104,
+          0.20999999344348907,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_lanterna_emissivo",
+        "cor": [
+          1.0,
+          0.6299999952316284,
+          0.1599999964237213,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_lava_emissivo",
+        "cor": [
+          0.8999999761581421,
+          0.1899999976158142,
+          0.02500000037252903,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_madeira",
+        "cor": [
+          0.5199999809265137,
+          0.3400000035762787,
+          0.18000000715255737,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_ouro",
+        "cor": [
+          0.7799999713897705,
+          0.5799999833106995,
+          0.20999999344348907,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_pedra",
+        "cor": [
+          0.3700000047683716,
+          0.4300000071525574,
+          0.4399999976158142,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_runa_emissivo",
+        "cor": [
+          0.23000000417232513,
+          0.6399999856948853,
+          0.5600000023841858,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_sombra",
+        "cor": [
+          0.07999999821186066,
+          0.10000000149011612,
+          0.07000000029802322,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_terra",
+        "cor": [
+          0.27000001072883606,
+          0.20000000298023224,
+          0.12999999523162842,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_vinho",
+        "cor": [
+          0.4399999976158142,
+          0.11999999731779099,
+          0.18000000715255737,
+          1.0
+        ]
+      },
+      {
+        "nome": "vulcao_zona",
+        "cor": [
+          0.4000000059604645,
+          0.5299999713897705,
+          0.44999998807907104,
+          1.0
+        ]
+      }
+    ],
+    "camera": "Camera"
+  }
+]

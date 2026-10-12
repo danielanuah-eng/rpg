@@ -1,0 +1,1026 @@
+{
+  "tema": "pedreira",
+  "estado": "exportado_para_revisao",
+  "integracao": "pendente_claude",
+  "fonte": "fontes/pedreira.blend",
+  "preview": "previews/pedreira-clean.png",
+  "materiais": [
+    {
+      "material": "pedreira_agua_emissivo",
+      "antes": [
+        0.1599999964237213,
+        0.4300000071525574,
+        0.46000000834465027,
+        1.0
+      ],
+      "depois": [
+        0.1599999964237213,
+        0.4300000071525574,
+        0.46000000834465027,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_casca",
+      "antes": [
+        0.3499999940395355,
+        0.20000000298023224,
+        0.11999999731779099,
+        1.0
+      ],
+      "depois": [
+        0.2199999988079071,
+        0.1599999964237213,
+        0.11999999731779099,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_creme",
+      "antes": [
+        0.800000011920929,
+        0.75,
+        0.5899999737739563,
+        1.0
+      ],
+      "depois": [
+        0.8799999952316284,
+        0.7699999809265137,
+        0.5600000023841858,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_cristal_emissivo",
+      "antes": [
+        0.25,
+        0.6399999856948853,
+        0.5899999737739563,
+        1.0
+      ],
+      "depois": [
+        0.25,
+        0.6399999856948853,
+        0.5899999737739563,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_ferro",
+      "antes": [
+        0.1899999976158142,
+        0.23999999463558197,
+        0.23999999463558197,
+        1.0
+      ],
+      "depois": [
+        0.18000000715255737,
+        0.23999999463558197,
+        0.28999999165534973,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_flor",
+      "antes": [
+        0.5699999928474426,
+        0.3400000035762787,
+        0.6499999761581421,
+        1.0
+      ],
+      "depois": [
+        0.5699999928474426,
+        0.3400000035762787,
+        0.6499999761581421,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_flor_clara",
+      "antes": [
+        0.9200000166893005,
+        0.8299999833106995,
+        0.5400000214576721,
+        1.0
+      ],
+      "depois": [
+        0.9200000166893005,
+        0.8299999833106995,
+        0.5400000214576721,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_folhagem",
+      "antes": [
+        0.23000000417232513,
+        0.4099999964237213,
+        0.18000000715255737,
+        1.0
+      ],
+      "depois": [
+        0.054999999701976776,
+        0.1899999976158142,
+        0.18000000715255737,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_fruta",
+      "antes": [
+        0.6299999952316284,
+        0.1899999976158142,
+        0.1599999964237213,
+        1.0
+      ],
+      "depois": [
+        0.6299999952316284,
+        0.1899999976158142,
+        0.1599999964237213,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_grama_a",
+      "antes": [
+        0.30000001192092896,
+        0.4300000071525574,
+        0.20000000298023224,
+        1.0
+      ],
+      "depois": [
+        0.3100000023841858,
+        0.36000001430511475,
+        0.4000000059604645,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_grama_b",
+      "antes": [
+        0.3199999928474426,
+        0.44999998807907104,
+        0.20999999344348907,
+        1.0
+      ],
+      "depois": [
+        0.33000001311302185,
+        0.3799999952316284,
+        0.41999998688697815,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_lanterna_emissivo",
+      "antes": [
+        1.0,
+        0.6299999952316284,
+        0.1599999964237213,
+        1.0
+      ],
+      "depois": [
+        1.0,
+        0.6299999952316284,
+        0.1599999964237213,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_madeira",
+      "antes": [
+        0.5199999809265137,
+        0.3400000035762787,
+        0.18000000715255737,
+        1.0
+      ],
+      "depois": [
+        0.41999998688697815,
+        0.23000000417232513,
+        0.09000000357627869,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_ouro",
+      "antes": [
+        0.7799999713897705,
+        0.5799999833106995,
+        0.20999999344348907,
+        1.0
+      ],
+      "depois": [
+        0.949999988079071,
+        0.5600000023841858,
+        0.10999999940395355,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_pedra",
+      "antes": [
+        0.3700000047683716,
+        0.4300000071525574,
+        0.4399999976158142,
+        1.0
+      ],
+      "depois": [
+        0.15000000596046448,
+        0.20999999344348907,
+        0.2800000011920929,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_runa_emissivo",
+      "antes": [
+        0.23000000417232513,
+        0.6399999856948853,
+        0.5600000023841858,
+        1.0
+      ],
+      "depois": [
+        0.23000000417232513,
+        0.6399999856948853,
+        0.5600000023841858,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_sombra",
+      "antes": [
+        0.07999999821186066,
+        0.10000000149011612,
+        0.07000000029802322,
+        1.0
+      ],
+      "depois": [
+        0.03500000014901161,
+        0.05000000074505806,
+        0.054999999701976776,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_telha",
+      "antes": [
+        0.5099999904632568,
+        0.1899999976158142,
+        0.14000000059604645,
+        1.0
+      ],
+      "depois": [
+        0.5299999713897705,
+        0.15000000596046448,
+        0.0949999988079071,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_terra",
+      "antes": [
+        0.27000001072883606,
+        0.20000000298023224,
+        0.12999999523162842,
+        1.0
+      ],
+      "depois": [
+        0.11999999731779099,
+        0.15000000596046448,
+        0.1899999976158142,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_vinho",
+      "antes": [
+        0.4399999976158142,
+        0.11999999731779099,
+        0.18000000715255737,
+        1.0
+      ],
+      "depois": [
+        0.4399999976158142,
+        0.11999999731779099,
+        0.18000000715255737,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    },
+    {
+      "material": "pedreira_zona",
+      "antes": [
+        0.4000000059604645,
+        0.5299999713897705,
+        0.44999998807907104,
+        1.0
+      ],
+      "depois": [
+        0.4000000059604645,
+        0.47999998927116394,
+        0.5099999904632568,
+        1.0
+      ],
+      "texturaRepetitivaRemovida": true
+    }
+  ],
+  "pecas": [
+    {
+      "arquivo": "models\\pedreira\\topo_a.glb",
+      "sha256": "9a18789be2179e76286bb7fb22470277a584b70a84362d1376a496efc498cf90",
+      "triangulos": 44,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "topo_a",
+      "dimensoesBlender": [
+        1.0,
+        1.0,
+        0.05000000074505806
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\topo_b.glb",
+      "sha256": "66074069c207bb582ca0c04fde49a8972a878f350f639db487f2c9b3921f167c",
+      "triangulos": 44,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "topo_b",
+      "dimensoesBlender": [
+        1.0,
+        1.0,
+        0.05000000074505806
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\topo_zona.glb",
+      "sha256": "ca9eaa33cd0fb7e344de2dd08a87f44031b40789fe14b4e639d3fdcd45c34a77",
+      "triangulos": 44,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "topo_zona",
+      "dimensoesBlender": [
+        1.0,
+        1.0,
+        0.05000000074505806
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\coluna_a.glb",
+      "sha256": "1bdee47c1dc751ae71fcf89493a3a18822158ca3483e0d40c205456f158c7135",
+      "triangulos": 124,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "coluna_a",
+      "dimensoesBlender": [
+        1.0,
+        1.0,
+        0.44999998807907104
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\coluna_b.glb",
+      "sha256": "88b681b72a18d4d6e6a41e9e60f7fc6a504c5b7a929221d982d55a33c1f5397d",
+      "triangulos": 124,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "coluna_b",
+      "dimensoesBlender": [
+        1.0,
+        1.0,
+        0.44999998807907104
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\beira_reta.glb",
+      "sha256": "bbfab6572804ddc7806ed2374ea7fc12485271251afd83bad6940dda9d46be4d",
+      "triangulos": 108,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "beira_reta",
+      "dimensoesBlender": [
+        1.0,
+        0.17000000178813934,
+        0.4671053886413574
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\beira_canto.glb",
+      "sha256": "f22cd8f69f420688ab932d421b2d7fc7f00dbf9ffdbe6642579c814e33377bc5",
+      "triangulos": 172,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "beira_canto",
+      "dimensoesBlender": [
+        1.0,
+        1.0,
+        0.4671053886413574
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\arbusto.glb",
+      "sha256": "8f57c8b4b388a378d02af24ab0d4162718056e2293cb421761161eb510acc45b",
+      "triangulos": 232,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "arbusto",
+      "dimensoesBlender": [
+        0.6891979575157166,
+        0.683896541595459,
+        0.5252339243888855
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\arvore.glb",
+      "sha256": "7b1516ac2384f56ce8f0fcd8a83190bdb8493d586495802515baf133800e7332",
+      "triangulos": 156,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "arvore",
+      "dimensoesBlender": [
+        1.163679838180542,
+        1.1817693710327148,
+        2.1654372215270996
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\arvore_jovem.glb",
+      "sha256": "994fe714fce282ab194d69bf6d80422c61796b5a676f1bfab52f18638cba92e7",
+      "triangulos": 156,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "arvore_jovem",
+      "dimensoesBlender": [
+        0.8610401153564453,
+        0.8745092749595642,
+        1.6057385206222534
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\caixa.glb",
+      "sha256": "ad7b88aa6b4c9ff7ffcdbf43eca11eeb222ff7d94c4c624b88a7e38c6967ca13",
+      "triangulos": 372,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "caixa",
+      "dimensoesBlender": [
+        0.8420000076293945,
+        0.8433115482330322,
+        0.8319999575614929
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\caixa_rachada.glb",
+      "sha256": "196870f195598844a1153d65a9e30ee0d6a0826370dfe12a3c65cbb8e2969661",
+      "triangulos": 408,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "caixa_rachada",
+      "dimensoesBlender": [
+        0.8420000076293945,
+        0.8433115482330322,
+        0.8319999575614929
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\caixa_quebrada.glb",
+      "sha256": "586cc88e9e3e97ede8988ba2ad7c491b173958181eba995ae308d3106314fca9",
+      "triangulos": 352,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "caixa_quebrada",
+      "dimensoesBlender": [
+        0.8500000238418579,
+        0.749205470085144,
+        0.1574999988079071
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\pedra.glb",
+      "sha256": "a331150a284b0d75dd319bae0f39bad35fbf2aa1378c46857629e344ac92e612",
+      "triangulos": 60,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "pedra",
+      "dimensoesBlender": [
+        0.7970123291015625,
+        0.6341768503189087,
+        1.3032917976379395
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\enfeite_cerca.glb",
+      "sha256": "422bea037360cb62bd55a5292d34593feecb4503d74e7c9a162fb094d634b7c6",
+      "triangulos": 120,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_cerca",
+      "dimensoesBlender": [
+        0.9389098882675171,
+        0.09406888484954834,
+        0.6499999761581421
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\enfeite_cerca_canto.glb",
+      "sha256": "c6a48d8955a4849f90642575b7e6eceed0355f8abdd6f0d5b18f9543142842a1",
+      "triangulos": 224,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_cerca_canto",
+      "dimensoesBlender": [
+        0.9389098882675171,
+        0.9340688586235046,
+        0.6499999761581421
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\enfeite_flores.glb",
+      "sha256": "95dddc201abedf435aab0bff8e09687d7ab8346fff25584ce3e29f6bba719536",
+      "triangulos": 660,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_flores",
+      "dimensoesBlender": [
+        0.36601412296295166,
+        0.33896011114120483,
+        0.210999995470047
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\enfeite_cogumelos.glb",
+      "sha256": "8e755c818bd914bec1beb02f6c244e7d21aceb605e7d5a50876750cdb298faf6",
+      "triangulos": 300,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_cogumelos",
+      "dimensoesBlender": [
+        0.3436499834060669,
+        0.29700160026550293,
+        0.2420157492160797
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\enfeite_seixos.glb",
+      "sha256": "33cc8209e90376047917d37ad74d4c8739bc91537bee7b07f687be9a72bbc3c9",
+      "triangulos": 100,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_seixos",
+      "dimensoesBlender": [
+        0.4472505748271942,
+        0.3027399778366089,
+        0.052303608506917953
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\enfeite_capim.glb",
+      "sha256": "4f3672051cf042bb0233a135743b9f0cc875e11f247654a7d60581a5436c2db2",
+      "triangulos": 84,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_capim",
+      "dimensoesBlender": [
+        0.27966058254241943,
+        0.2764582335948944,
+        0.17838266491889954
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\enfeite_raiz_chao.glb",
+      "sha256": "1f238f03d9bf8b704a07faf8464487ea379ba2df1ef32ae9bd3606f2c6cfd920",
+      "triangulos": 48,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_raiz_chao",
+      "dimensoesBlender": [
+        0.3489106297492981,
+        0.3301273584365845,
+        0.03436829894781113
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\enfeite_pedra_baixa.glb",
+      "sha256": "130c13e0893e00acf7bc9c6ffa4b02d7c3ea6f4cc07ef72fc21cd1a8a1cfcd03",
+      "triangulos": 20,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_pedra_baixa",
+      "dimensoesBlender": [
+        0.43040651082992554,
+        0.37544023990631104,
+        0.22636732459068298
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\enfeite_lago.glb",
+      "sha256": "ee5026536af305413b9310d2378e8c53bb0a7c0620c25a9fa3a92b32a1e68d02",
+      "triangulos": 262,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_lago",
+      "dimensoesBlender": [
+        1.5432054996490479,
+        1.0855501890182495,
+        0.09514106810092926
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\moeda_chao.glb",
+      "sha256": "7da0b94c3f8013a09fab7ca3340c6a4016c3ddc920f827e798619893b7c0d05d",
+      "triangulos": 122,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "moeda_chao",
+      "dimensoesBlender": [
+        0.23999999463558197,
+        0.23999999463558197,
+        0.03099999949336052
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\enfeite_tocha.glb",
+      "sha256": "504202eb236a0a39a2d115065f2d35e558689b4e2f6b6cf8ab66471e2f191b5d",
+      "triangulos": 64,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_tocha",
+      "dimensoesBlender": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.8100000023841858
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\enfeite_fogueira.glb",
+      "sha256": "62b7c40d53d6c419f1eb435e7e691e8ed2b42a6e33ee9b003659b4cfbb919bd9",
+      "triangulos": 292,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_fogueira",
+      "dimensoesBlender": [
+        0.6240108013153076,
+        0.5853487253189087,
+        0.1841043084859848
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\enfeite_placa.glb",
+      "sha256": "ea2a79b08b44504026d75eda94b06c9ceb006269fde1257f97a704beb9affbfb",
+      "triangulos": 140,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_placa",
+      "dimensoesBlender": [
+        0.550000011920929,
+        0.09897942841053009,
+        1.0
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\bau_fechado.glb",
+      "sha256": "7ed2f0ee44f49800ff9141fea8e6383f090d04d6900734b429a8851b03e29f01",
+      "triangulos": 220,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "bau_fechado",
+      "dimensoesBlender": [
+        0.6800000071525574,
+        0.5024999976158142,
+        0.5550000071525574
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\pilar_galeao.glb",
+      "sha256": "3ce1305fab6d88a0aa670c0df286ec94cdf5739c29ea788240d8f3d6207c3738",
+      "triangulos": 176,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "pilar_galeao",
+      "dimensoesBlender": [
+        0.6800000071525574,
+        0.6800000071525574,
+        1.0499999523162842
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\totem_dominio.glb",
+      "sha256": "3e95b9a0c0003f7aa1cc33a869de52c538506e4b33615b5ab471087383aee7b3",
+      "triangulos": 152,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "totem_dominio",
+      "dimensoesBlender": [
+        0.6800000071525574,
+        0.6800000071525574,
+        0.6100000143051147
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\enfeite_cristal.glb",
+      "sha256": "0fcee308375da2e4bd402d6b38de5b382a02e3cf7779454e0b541bfed988b4f8",
+      "triangulos": 72,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "enfeite_cristal",
+      "dimensoesBlender": [
+        0.3711901903152466,
+        0.3528115451335907,
+        0.4300000071525574
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\loja_mascate.glb",
+      "sha256": "0770473a6fe1a5458ec10be1f8ff783078894fe9984f1b83d66e92cbdab3182b",
+      "triangulos": 484,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "loja_mascate",
+      "dimensoesBlender": [
+        1.9199999570846558,
+        1.9300000667572021,
+        2.255000114440918
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\entorno.glb",
+      "sha256": "020af68d59c0b3d545eb95719b49f3f3e8fa192be6183e4ebe943aaa360d16fc",
+      "triangulos": 192,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "entorno",
+      "dimensoesBlender": [
+        16.31332015991211,
+        16.518545150756836,
+        1.06354558467865
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\entorno_16.glb",
+      "sha256": "18336c91687ca10469b007851781fdc8ffbc1b1b5a24b921898c99a3658aba5d",
+      "triangulos": 192,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "entorno_16",
+      "dimensoesBlender": [
+        20.58517074584961,
+        20.39328384399414,
+        1.0651881694793701
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\entorno_18.glb",
+      "sha256": "0ef4776495ff958272145e9e7f987811a170bbbe59895887fcc43944d974c4b5",
+      "triangulos": 192,
+      "animacoes": [],
+      "texturas": 0,
+      "id": "entorno_18",
+      "dimensoesBlender": [
+        22.603450775146484,
+        22.487342834472656,
+        1.067471981048584
+      ],
+      "pivo": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origem": "mapa-blender\\v03\\fontes\\pedreira.blend"
+    },
+    {
+      "arquivo": "models\\pedreira\\ampulheta_das_ruinas.glb",
+      "sha256": "8781cec596c7e62b78adcc30725beae031397d81247cff718056c83f005cb5f8",
+      "triangulos": 288,
+      "animacoes": [
+        "AmbientLoop"
+      ],
+      "texturas": 0,
+      "fonte": "fontes\\extras\\pedreira-ampulheta_das_ruinas.blend",
+      "id": "ampulheta_das_ruinas",
+      "origem": "ArenaTaticaUnity\\Assets\\ArenaTatica\\Resources\\Models\\Mapa\\pedreira\\ampulheta_das_ruinas.glb"
+    }
+  ],
+  "geometria": "kit original preservado",
+  "regraDoMapa": "inalterada"
+}
