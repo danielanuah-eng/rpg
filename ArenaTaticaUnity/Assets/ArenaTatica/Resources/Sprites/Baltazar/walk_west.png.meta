@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 1
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 2
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -45,9 +45,9 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 9
-  spritePivot: {x: 0.5, y: 0.0234375}
+  spritePivot: {x: 0.5, y: 0.16477273}
   spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -130,17 +130,17 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 176
+        height: 176
       alignment: 9
-      pivot: {x: 0.5, y: 0.0234375}
+      pivot: {x: 0.5, y: 0.16477273}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6709965931fdb774e9b842f17bbaf5eb
+      spriteID: de9aec2f0d44f4a4b918fe978caded5d
       internalID: -8205237953483185738
       vertices: []
       indices: 
@@ -150,19 +150,19 @@ TextureImporter:
       name: walk_west_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 176
         y: 0
-        width: 128
-        height: 128
+        width: 176
+        height: 176
       alignment: 9
-      pivot: {x: 0.5, y: 0.0234375}
+      pivot: {x: 0.5, y: 0.16477273}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e24393f477d96e42b76132fd034c693
+      spriteID: d1d60284469038a4f805433963328d81
       internalID: -246393439454568853
       vertices: []
       indices: 
@@ -172,19 +172,19 @@ TextureImporter:
       name: walk_west_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 352
         y: 0
-        width: 128
-        height: 128
+        width: 176
+        height: 176
       alignment: 9
-      pivot: {x: 0.5, y: 0.0234375}
+      pivot: {x: 0.5, y: 0.16477273}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0a60f11516027442b1522bcbd4dfb4c
+      spriteID: 67c5d6308f3739a42b242174229d90f7
       internalID: -6842453320258789584
       vertices: []
       indices: 
@@ -194,19 +194,19 @@ TextureImporter:
       name: walk_west_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 528
         y: 0
-        width: 128
-        height: 128
+        width: 176
+        height: 176
       alignment: 9
-      pivot: {x: 0.5, y: 0.0234375}
+      pivot: {x: 0.5, y: 0.16477273}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd10c5b0b4e9da3488e271028018a91c
+      spriteID: 72644dc88c73f3e4a9c5d5e40315d82e
       internalID: 5767549709241297270
       vertices: []
       indices: 
@@ -216,19 +216,19 @@ TextureImporter:
       name: walk_west_4
       rect:
         serializedVersion: 2
-        x: 512
+        x: 704
         y: 0
-        width: 128
-        height: 128
+        width: 176
+        height: 176
       alignment: 9
-      pivot: {x: 0.5, y: 0.0234375}
+      pivot: {x: 0.5, y: 0.16477273}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61eb86f739ac78f4fa4cc506d953582c
+      spriteID: 60b2bffbd46621c46b2c69700a111e74
       internalID: -4210368479097470595
       vertices: []
       indices: 
@@ -238,19 +238,19 @@ TextureImporter:
       name: walk_west_5
       rect:
         serializedVersion: 2
-        x: 640
+        x: 880
         y: 0
-        width: 128
-        height: 128
+        width: 176
+        height: 176
       alignment: 9
-      pivot: {x: 0.5, y: 0.0234375}
+      pivot: {x: 0.5, y: 0.16477273}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f40126b6b7516c3478004c78c4504616
+      spriteID: 2de36bf033aa5a14ab3b6db680103762
       internalID: -592823905408630932
       vertices: []
       indices: 

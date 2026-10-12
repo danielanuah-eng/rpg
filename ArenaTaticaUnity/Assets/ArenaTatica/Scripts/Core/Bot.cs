@@ -24,10 +24,13 @@ namespace ArenaTatica.Core
         }
         static Command Pass() => new Command{kind="passar"};
 
-        // Loja: o produto mais caro que der para pagar (invocações não compram).
+        // Tem compra possível: lutador de jogador e há produto que dá para pagar.
+        static bool WantsShop(MatchState s,Fighter me) =>
+            me.summoner==0&&MatchState.Player(me.team)&&s.shops[me.team].slots.Any(x=>!string.IsNullOrEmpty(x)&&Shop.Def(x).price<=s.coins[me.team]);
+        // Loja: o produto mais caro que der para pagar, só numa casa ao lado da loja (invocações não compram).
         static Command Buy(MatchState s,Fighter me)
         {
-            if(me.summoner!=0||me.bought||!MatchState.Player(me.team)) return null;
+            if(!Board.NextToShop(s,me.cell)||!WantsShop(s,me)) return null;
             var slots=s.shops[me.team].slots; int pick=-1, price=0;
             for(int i=0;i<slots.Length;i++)
             {
@@ -85,7 +88,7 @@ namespace ArenaTatica.Core
             // Distância a pé de cada inimigo até cada casa (ignorando lutadores no caminho).
             var fields=foes.Select(e=>Board.Costs(s,new Fighter{def=me.def,cell=e.cell,climber=me.climber},true)).ToList();
             int reach=Reach(me), want=reach<=1?1:Math.Max(2,reach-1);
-            double coinWeight=s.mode==VictoryMode.Tesouro?3:1.2;
+            double coinWeight=s.mode==VictoryMode.Tesouro?3:1.2, shopWeight=WantsShop(s,me)?1.5:0;
             double Score(Cell c,int cost)
             {
                 int i=Board.Index(s,c);
@@ -93,6 +96,8 @@ namespace ArenaTatica.Core
                 if(fields.Count>0) { int d=fields.Min(f=>f[i]==int.MaxValue?99:f[i]); sc-=Math.Abs(d-want)*(d<want?.6:1); }
                 if(s.mode==VictoryMode.Dominio&&s.At(c).zone) sc+=2;
                 if(s.At(c).lava) sc-=3;
+                // Com compra possível, puxa de leve para o meio e premia a casa ao lado da loja.
+                if(shopWeight>0) sc+=Board.NextToShop(s,c)?shopWeight:-.1*MapGen.ShopCells(s).Min(x=>x.Distance(c));
                 return sc;
             }
             Cell best=me.cell; double top=Score(me.cell,0)+.01;

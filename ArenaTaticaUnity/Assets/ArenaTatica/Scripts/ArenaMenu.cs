@@ -85,8 +85,8 @@ namespace ArenaTatica
         public ArenaGame Game;
         public bool IsOpen => root&&root.gameObject.activeSelf;
         // Paleta do site (Arcanoclisma/online/public/css): fundo, painel, borda, texto, apagado, ouro, azul, verde, vermelho, rosa.
-        static readonly Color Bg=Hex(0x0e0b1d), Panel=Hex(0x1b1638), Edge=Hex(0x3e3470), Ink=Hex(0xefe9ff), Muted=Hex(0x8a82ad),
-            Gold=Hex(0xe0bd6a), Blue=Hex(0x6f9be0), Green=Hex(0x7fd1a0), Red=Hex(0xef6f7a), Pink=Hex(0xd27aa6), Idle=Hex(0x2a2352), Chosen=Hex(0x5a4420);
+        static readonly Color Bg=ArenaTema.Background, Panel=ArenaTema.Panel, Edge=ArenaTema.Border, Ink=ArenaTema.Ink, Muted=ArenaTema.Muted,
+            Gold=ArenaTema.Selected, Blue=ArenaTema.Pm, Green=ArenaTema.Healing, Red=ArenaTema.Hp, Pink=Hex(0xd27aa6), Idle=ArenaTema.Raised, Chosen=ArenaTema.SelectedFill;
         static Color Hex(int rgb) => new Color((rgb>>16&255)/255f,(rgb>>8&255)/255f,(rgb&255)/255f);
         static readonly (string id,string name)[] Tabs={("inicio","Início"),("jogar","Jogar"),("personagens","Personagens"),("loja","Loja e eventos"),
             ("editor","Editor"),("mapas","Mapas"),("estatisticas","Estatísticas"),("regras","Regras"),("opcoes","Opções")};
@@ -156,19 +156,27 @@ namespace ArenaTatica
         void Home()
         {
             var c=Scroll(body);
-            Label(c,"ARENA TÁTICA",40,Gold,TextAnchor.MiddleCenter);
-            Label(c,"Miniaturas táticas no estilo Krosmaster · de 2 a 6 jogadores · no mesmo aparelho ou pela internet",16,Muted,TextAnchor.MiddleCenter);
-            var row=Row(c,64);
-            Btn(row,"Jogar",()=>Show("jogar"),0,60,20).GetComponent<Image>().color=Chosen;
-            Btn(row,"Personagens",()=>Show("personagens"),0,60,18);
-            Btn(row,"Editor de fichas e skills",()=>Show("editor"),0,60,18);
-            Btn(row,"Voltar à partida",Close,0,60,18);
+            // Modelo 017: texto e CTA à esquerda (~45%), tabuleiro transparente inteiro à direita.
+            var cols=Row(c,430); cols.GetComponent<HorizontalLayoutGroup>().spacing=24; cols.GetComponent<HorizontalLayoutGroup>().childAlignment=TextAnchor.UpperLeft;
+            var left=Column(cols); Layout(left.gameObject,0,0,45); var lle=left.GetComponent<LayoutElement>(); lle.preferredWidth=0; lle.minWidth=0; left.GetComponent<VerticalLayoutGroup>().spacing=12; left.GetComponent<VerticalLayoutGroup>().childAlignment=TextAnchor.MiddleLeft;
+            var kicker=Label(left,"MINIATURAS TÁTICAS",13,Gold); kicker.fontStyle=FontStyle.Bold;
+            var big=Label(left,"ARENA TÁTICA",52,Ink); big.fontStyle=FontStyle.Bold; Layout(big.gameObject,0,70);
+            Label(left,"Miniaturas táticas no estilo Krosmaster · de 2 a 6 jogadores · no mesmo aparelho ou pela internet",17,Muted);
+            var cta=Btn(left,"Jogar",()=>Show("jogar"),0,60,22); cta.GetComponent<Image>().color=Gold; cta.GetComponentInChildren<Text>().color=Bg; cta.GetComponentInChildren<Text>().fontStyle=FontStyle.Bold;
+            var row=Row(left,48);
+            Btn(row,"Personagens",()=>Show("personagens"),0,44,16);
+            Btn(row,"Editor de fichas e skills",()=>Show("editor"),0,44,15);
+            Btn(row,"Voltar à partida",Close,0,44,16);
+            var art=New("Arena",cols,typeof(Image)).GetComponent<Image>(); art.preserveAspect=true; art.raycastTarget=false;
+            art.sprite=Resources.Load<Sprite>("Sprites/Menu/mapa-bosque"); if(!art.sprite) art.color=Color.clear;
+            Layout(art.gameObject,0,420,55); var ale=art.GetComponent<LayoutElement>(); ale.preferredWidth=0; ale.minWidth=0;
             Section(c,"Novidades");
-            Para(c,"• <b>12 eventos de mapa</b> saem da face Cataclisma do dado: maré de lava, portal caótico, eco ancestral, maré de energia, festival de fogos, nevoeiro, vendaval, papa-moedas, o chefe Brutamontes Errante e mais.");
-            Para(c,"• <b>10 lutadores novos</b>: Asamyh (Lendária, gatos comandados), O Colosso (devora skills), Cheiro D.Pneu Queimado, Rei Bobett, Príncipe Kellen (Desejo na rodada 10), Vespa Cinzenta, Viúva da Agulha, Guardião de Musgo, Domador de Correntes e Ogro de Pedra.");
-            Para(c,"• <b>11 itens novos na loja</b>: martelo perfurante, corrente, bomba de fumaça, pena de fênix, totem de cura, mina de gelo, gancho, cristal de foco, manto de espinhos, âncora e bênção de pedra.");
-            Para(c,"• <b>Editor</b>: mude PV, PA, PM, Nível e cada skill, e crie skills novas de dano, suporte e controle de grupo (empurrar, puxar, prender, congelar, tirar PA/PM).");
-            Para(c,"<color=#8a82ad>Algumas artes ainda estão sendo feitas pelo Codex (tarefa 015). Enquanto isso, o lutador aparece como uma figura simples.</color>");
+            var card=Card(c);
+            Para(card,"• <b>12 eventos de mapa</b> saem da face Cataclisma do dado: maré de lava, portal caótico, eco ancestral, maré de energia, festival de fogos, nevoeiro, vendaval, papa-moedas, o chefe Brutamontes Errante e mais.");
+            Para(card,"• <b>10 lutadores novos</b>: Asamyh (Lendária, gatos comandados), O Colosso (devora skills), Cheiro D.Pneu Queimado, Rei Bobett, Príncipe Kellen (Desejo na rodada 10), Vespa Cinzenta, Viúva da Agulha, Guardião de Musgo, Domador de Correntes e Ogro de Pedra.");
+            Para(card,"• <b>11 itens novos na loja</b>: martelo perfurante, corrente, bomba de fumaça, pena de fênix, totem de cura, mina de gelo, gancho, cristal de foco, manto de espinhos, âncora e bênção de pedra.");
+            Para(card,"• <b>Editor</b>: mude PV, PA, PM, Nível e cada skill, e crie skills novas de dano, suporte e controle de grupo (empurrar, puxar, prender, congelar, tirar PA/PM).");
+            Para(card,"<color=#a7b4c2>Algumas artes ainda estão sendo feitas pelo Codex (tarefa 015). Enquanto isso, o lutador aparece como uma figura simples.</color>");
         }
 
         // ── Jogar ──
@@ -207,7 +215,7 @@ namespace ArenaTatica
             row=Row(c,52);
             var input=Input(row,code,"Código da sala (6 letras) ou ws://IP:9080"); input.onValueChanged.AddListener(v=>code=v);
             Btn(row,"Entrar",()=>{ if(string.IsNullOrWhiteSpace(code)) return; Close(); Game.Join(code.Trim()); },140,48,16);
-            Para(c,"<color=#8a82ad>A sala usa as fichas e as edições do Host. O número de jogadores e o formato valem ao criar a sala.</color>");
+            Para(c,"<color=#a7b4c2>A sala usa as fichas e as edições do Host. O número de jogadores e o formato valem ao criar a sala.</color>");
         }
         // ── Mapas: escolher o mapa das próximas partidas, editar, apagar e criar (editor dentro do jogo, ArenaMapEditor) ──
         void Maps()
@@ -222,16 +230,16 @@ namespace ArenaTatica
             foreach(var m in ArenaMaps.Builtin)
             {
                 var map=m; row=Row(c,44);
-                var title=Label(row,$"{map.name}  <color=#8a82ad>{map.width}×{map.width} · {MapGen.PlayersFor(map.width)} jog. · {MapGen.Themes[Mathf.Max(0,map.theme)]}</color>",15,Ink,TextAnchor.MiddleLeft); Layout(title.gameObject,0,40,1);
+                var title=Label(row,$"{map.name}  <color=#a7b4c2>{map.width}×{map.width} · {MapGen.PlayersFor(map.width)} jog. · {MapGen.Themes[Mathf.Max(0,map.theme)]}</color>",15,Ink,TextAnchor.MiddleLeft); Layout(title.gameObject,0,40,1);
                 Pick(Btn(row,"Usar",()=>{ Game.MapName=map.name; Game.SetSeats(MapGen.PlayersFor(map.width)); Show("mapas"); },110,40),Game.MapName==map.name);
                 Btn(row,"Editar cópia",()=>Game.MapEditor.Open(map),140,40);
             }
             Section(c,"Seus mapas");
-            if(ArenaMaps.All.Count==0) Para(c,"<color=#8a82ad>Nenhum mapa salvo ainda. Crie um abaixo.</color>");
+            if(ArenaMaps.All.Count==0) Para(c,"<color=#a7b4c2>Nenhum mapa salvo ainda. Crie um abaixo.</color>");
             foreach(var m in ArenaMaps.All.ToList())
             {
                 var map=m; row=Row(c,44);
-                var name=Label(row,$"{map.name}  <color=#8a82ad>{map.width}×{map.width} · {MapGen.PlayersFor(map.width)} jog.{(MapGen.Problem(map) is string p?" · "+p:"")}</color>",15,Ink,TextAnchor.MiddleLeft); Layout(name.gameObject,0,40,1);
+                var name=Label(row,$"{map.name}  <color=#a7b4c2>{map.width}×{map.width} · {MapGen.PlayersFor(map.width)} jog.{(MapGen.Problem(map) is string p?" · "+p:"")}</color>",15,Ink,TextAnchor.MiddleLeft); Layout(name.gameObject,0,40,1);
                 Pick(Btn(row,"Usar",()=>{ Game.MapName=map.name; Game.SetSeats(MapGen.PlayersFor(map.width)); Show("mapas"); },110,40),Game.MapName==map.name);
                 Btn(row,"Editar",()=>Game.MapEditor.Open(map),110,40);
                 Btn(row,"Apagar",()=>{ ArenaMaps.Delete(map.name); if(Game.MapName==map.name) Game.MapName=""; Show("mapas"); },110,40);
@@ -270,11 +278,11 @@ namespace ArenaTatica
             Label(info,$"Nível {f.level}  ·  {f.hp} PV  ·  {f.pa} PA  ·  {f.pm} PM  ·  Iniciativa {f.initiative}",17,Ink);
             string traits=Content.Traits(f); if(traits!="") Label(info,traits,14,Pink);
             if(!art) Label(info,"Arte pendente: o Codex está fazendo os sprites (tarefa 015).",13,Muted);
-            if(f.picker)
             {
+                // Toda ficha é editável (PV, PM, custo e alcance das skills, passivas), inclusive invocações e chefes.
                 var row=Row(info,44); bool mine=ArenaGame.MyTeam.Contains(f.id);
-                Btn(row,mine?"Tirar do meu time":"Pôr no meu time",()=>{ ToggleMine(f.id); Show("personagens"); },190,40);
-                Btn(row,"Editar ficha",()=>{ editorId=f.id; Show("editor"); },150,40);
+                if(f.picker) Btn(row,mine?"Tirar do meu time":"Pôr no meu time",()=>{ ToggleMine(f.id); Show("personagens"); },190,40);
+                Btn(row,"Editar ficha e skills",()=>{ editorId=f.id; Show("editor"); },200,40).GetComponent<Image>().color=Chosen;
             }
             Section(c,"Skills");
             foreach(var s in f.skills) Para(c,"• "+Content.Describe(s));
@@ -295,7 +303,7 @@ namespace ArenaTatica
             var b=Btn(list,"",click,0,48); Pick(b,on);
             var icon=Art(d); var img=New("Icone",b.transform,typeof(Image)).GetComponent<Image>(); img.sprite=icon; img.preserveAspect=true; img.raycastTarget=false; if(!icon) img.color=new Color(1,1,1,0);
             var r=(RectTransform)img.transform; r.anchorMin=Vector2.zero; r.anchorMax=new Vector2(0,1); r.offsetMin=new Vector2(4,3); r.offsetMax=new Vector2(46,-3);
-            var t=b.GetComponentInChildren<Text>(); t.alignment=TextAnchor.MiddleLeft; t.text=$"{d.name}{(d.legendary?" ★":"")}{(edited?" <color=#7fd1a0>●</color>":"")}\n<size=11><color=#8a82ad>Nv {d.level} · {d.hp} PV · {d.pa} PA · {d.pm} PM</color></size>";
+            var t=b.GetComponentInChildren<Text>(); t.alignment=TextAnchor.MiddleLeft; t.text=$"{d.name}{(d.legendary?" ★":"")}{(edited?" <color=#7fd1a0>●</color>":"")}\n<size=11><color=#a7b4c2>Nv {d.level} · {d.hp} PV · {d.pa} PA · {d.pm} PM</color></size>";
             ((RectTransform)t.transform).offsetMin=new Vector2(52,0);
         }
         static Sprite Art(FighterDef d) => string.IsNullOrEmpty(d.sprites)?Resources.Load<Sprite>("Sprites/Loja/"+d.id):Resources.Load<Sprite>("Sprites/"+d.sprites+"/south")??Resources.Load<Sprite>("Sprites/Loja/"+d.id);
@@ -324,17 +332,17 @@ namespace ArenaTatica
         {
             var c=Scroll(body);
             Section(c,"Loja do Castor");
-            Para(c,"<color=#8a82ad>A loja sorteia 3 produtos por jogador (peso maior aparece mais). 1 compra por turno, sem custo de PA.</color>");
+            Para(c,"<color=#a7b4c2>A loja sorteia 3 produtos por jogador (peso maior aparece mais). Compre quantos puder pagar no turno, sem custo de PA.</color>");
             foreach(var d in Shop.Catalog)
             {
                 var row=Row(c,0); var icon=Resources.Load<Sprite>("Sprites/Loja/"+d.id);
                 var img=New("Icone",row,typeof(Image)).GetComponent<Image>(); img.sprite=icon; img.preserveAspect=true; if(!icon) img.color=Idle; Layout(img.gameObject,44,44);
-                var t=Label(row,$"<b>{d.name}</b>  <color=#e0bd6a>{d.price} moedas</color>  <color=#8a82ad>{KindName(d.kind)} · peso {d.weight}</color>\n{Content.Describe(d)}",14,Ink); Layout(t.gameObject,0,0,1);
+                var t=Label(row,$"<b>{d.name}</b>  <color=#e8c278>{d.price} moedas</color>  <color=#a7b4c2>{KindName(d.kind)} · peso {d.weight}</color>\n{Content.Describe(d)}",14,Ink); Layout(t.gameObject,0,0,1);
             }
             Section(c,"Eventos de mapa (Cataclisma)");
-            Para(c,"<color=#8a82ad>Saem quando o dado de ataque mostra Cataclisma. Só 1 evento com duração fica ativo por vez.</color>");
+            Para(c,"<color=#a7b4c2>Saem quando o dado de ataque mostra Cataclisma. Só 1 evento com duração fica ativo por vez.</color>");
             foreach(var e in Match.Cataclysms)
-                Para(c,$"• <b>{ArenaPresentation.EventName(e.id)}</b> <color=#8a82ad>({(e.rounds>0?$"{e.rounds} rodada{(e.rounds>1?"s":"")}":"na hora")} · peso {e.weight})</color>: {(EventHelp.TryGetValue(e.id,out var h)?h:"")}");
+                Para(c,$"• <b>{ArenaPresentation.EventName(e.id)}</b> <color=#a7b4c2>({(e.rounds>0?$"{e.rounds} rodada{(e.rounds>1?"s":"")}":"na hora")} · peso {e.weight})</color>: {(EventHelp.TryGetValue(e.id,out var h)?h:"")}");
         }
         static string KindName(ShopKind k) => k==ShopKind.Item?"item permanente":k==ShopKind.Magia?"magia":k==ShopKind.Pet?"pet":k==ShopKind.Armadilha?"armadilha":"buff";
 
@@ -360,16 +368,31 @@ namespace ArenaTatica
             Btn(row,"Descartar",()=>{ Load(editorId); Show("editor"); },0,40);
             Btn(row,"Padrão desta ficha",()=>{ ArenaEdits.Reset(editorId); Load(editorId); Show("editor"); },0,40);
             Btn(row,"Restaurar tudo",()=>{ ArenaEdits.ResetAll(); Load(editorId); Show("editor"); },0,40);
-            editorStatus=Label(c,dirty?"<color=#e0bd6a>Alterações não salvas.</color>":"Mude os números com − e +. Alcance e movimento contam em casas.",13,Muted);
+            editorStatus=Label(c,dirty?"<color=#e8c278>Alterações não salvas.</color>":"Mude os números com − e +. Alcance e movimento contam em casas.",13,Muted);
             Section(c,"Ficha");
             var grid=Grid(c);
             Stepper(grid,"PV",()=>e.hp,v=>e.hp=v); Stepper(grid,"PA",()=>e.pa,v=>e.pa=v); Stepper(grid,"PM (casas)",()=>e.pm,v=>e.pm=v);
             Stepper(grid,"Iniciativa",()=>e.initiative,v=>e.initiative=v); Stepper(grid,"Nível",()=>e.level,v=>e.level=v); Stepper(grid,"Armadura fixa",()=>e.armor,v=>e.armor=v);
             Flag(grid,"Voa",()=>e.flying,v=>e.flying=v); Flag(grid,"Lendária",()=>e.legendary,v=>e.legendary=v); Flag(grid,"Imóvel",()=>e.immovable,v=>e.immovable=v);
             Flag(grid,"Devora skills",()=>e.devour,v=>e.devour=v);
+            Section(c,"Skills");
+            Para(c,"<color=#a7b4c2>Em cada skill: PA = custo; Alcance mínimo/máximo = distância do ataque em casas.</color>");
             for(int i=0;i<e.skills.Length;i++) SkillEditor(c,e.skills[i],i);
+            Section(c,"Passivas");
+            var pg=Grid(c);
+            Stepper(pg,"Dano extra dos aliados",()=>e.allyBonus,v=>e.allyBonus=v); Stepper(pg,"Distância desse bônus",()=>e.auraRange,v=>e.auraRange=v);
+            Stepper(pg,"Renasce com PV",()=>e.revive,v=>e.revive=v); Stepper(pg,"Rouba moeda (%)",()=>e.steal,v=>e.steal=v);
+            Flag(pg,"Protege aliados (2 casas)",()=>e.guard,v=>e.guard=v); Flag(pg,"Começa com ilusão",()=>e.illusion,v=>e.illusion=v);
+            Para(c,"<color=#a7b4c2>Passivas livres: escolha o atributo, quem é afetado (si, aliados, inimigos, todos) e a distância em casas (0 = mapa todo, global). Valem enquanto este lutador estiver vivo. Até 6.</color>");
+            e.passives??=new PassiveDef[0];
+            foreach(var p in e.passives) PassiveEditor(c,p);
+            var pr=Row(c,44);
+            PassiveTemplate(pr,"Aura de armadura",new PassiveDef{ name="Aura de armadura", stat=PassiveStat.Armadura, who=PassiveWho.Aliados, amount=1, range=2 });
+            PassiveTemplate(pr,"Fúria (+dano em si)",new PassiveDef{ name="Fúria", stat=PassiveStat.Dano, who=PassiveWho.Si, amount=1 });
+            PassiveTemplate(pr,"Lentidão nos inimigos",new PassiveDef{ name="Lentidão", stat=PassiveStat.PM, who=PassiveWho.Inimigos, amount=-1, range=3 });
+            PassiveTemplate(pr,"Bênção global",new PassiveDef{ name="Bênção", stat=PassiveStat.CuraPorTurno, who=PassiveWho.AliadosESi, amount=1, range=0 });
             Section(c,"Criar skill");
-            Para(c,"<color=#8a82ad>Comece de um modelo e ajuste os números e efeitos. Até 8 skills por ficha.</color>");
+            Para(c,"<color=#a7b4c2>Comece de um modelo e ajuste os números e efeitos. Até 8 skills por ficha.</color>");
             var t1=Row(c,44); var t2=Row(c,44);
             Template(t1,"Dano",new SkillDef{ kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=2 });
             Template(t1,"Disparo",new SkillDef{ kind=SkillKind.Dano, pa=3, minRange=2, maxRange=5, damage=2, modifiable=true });
@@ -384,7 +407,7 @@ namespace ArenaTatica
             Refresh();
         }
         void Load(string id) { editing=Content.Copy(ArenaEdits.Get(id)??Content.Default(id)??Content.Fighters[id]); editorId=id; dirty=false; }
-        void Changed() { dirty=true; if(editorStatus) editorStatus.text="<color=#e0bd6a>Alterações não salvas.</color>"; Refresh(); }
+        void Changed() { dirty=true; if(editorStatus) editorStatus.text="<color=#e8c278>Alterações não salvas.</color>"; Refresh(); }
         void Refresh() { foreach(var r in refreshers) r(); }
         void Template(Transform row,string label,SkillDef model)
         {
@@ -394,6 +417,32 @@ namespace ArenaTatica
                 s.id=$"{editing.id}-nova-{n}"; s.name=$"{label} {n}"; s.anim="attack";
                 editing.skills=editing.skills.Append(s).ToArray(); dirty=true; Show("editor");
             },0,40,14);
+        }
+        void PassiveTemplate(Transform row,string label,PassiveDef model)
+        {
+            Btn(row,label,()=>{
+                if(editing.passives.Length>=6) { editorStatus.text="<color=#ef6f7a>Limite de 6 passivas.</color>"; return; }
+                editing.passives=editing.passives.Append(model.Clone()).ToArray(); dirty=true; Show("editor");
+            },0,40,14);
+        }
+        static readonly int StatCount=Enum.GetValues(typeof(PassiveStat)).Length, WhoCount=Enum.GetValues(typeof(PassiveWho)).Length;
+        static string StatLabel(PassiveStat s) => s switch { PassiveStat.Dano=>"Dano", PassiveStat.Armadura=>"Armadura", PassiveStat.PA=>"PA", PassiveStat.PM=>"PM (movimento)",
+            PassiveStat.Alcance=>"Alcance", PassiveStat.CuraPorTurno=>"Cura por turno", _=>"Dano por turno" };
+        static string WhoLabel(PassiveWho w) => w switch { PassiveWho.Si=>"só ele", PassiveWho.Aliados=>"aliados", PassiveWho.AliadosESi=>"ele e aliados", PassiveWho.Inimigos=>"inimigos", _=>"todos" };
+        void PassiveEditor(Transform c,PassiveDef p)
+        {
+            var box=Box("Passiva",c,Idle); var v=box.gameObject.AddComponent<VerticalLayoutGroup>(); v.padding=new RectOffset(12,12,10,10); v.spacing=6;
+            v.childControlWidth=v.childControlHeight=true; v.childForceExpandHeight=false;
+            var head=Row(box,40);
+            var name=Input(head,p.name,"Nome da passiva"); name.onValueChanged.AddListener(x=>{ p.name=x; Changed(); });
+            Btn(head,"Remover",()=>{ editing.passives=editing.passives.Where(x=>x!=p).ToArray(); dirty=true; Show("editor"); },100,36,13).GetComponent<Image>().color=Hex(0x4a2030);
+            var desc=Label(box,"",13,Ink); refreshers.Add(()=>desc.text=Content.Describe(p));
+            var row=Row(box,40);
+            var stat=Btn(row,"",()=>{ p.stat=(PassiveStat)(((int)p.stat+1)%StatCount); Changed(); },0,36,13);
+            var who=Btn(row,"",()=>{ p.who=(PassiveWho)(((int)p.who+1)%WhoCount); Changed(); },0,36,13);
+            refreshers.Add(()=>{ stat.GetComponentInChildren<Text>().text="Atributo: "+StatLabel(p.stat); who.GetComponentInChildren<Text>().text="Afeta: "+WhoLabel(p.who); });
+            var grid=Grid(box);
+            Stepper(grid,"Quanto (+ ou −)",()=>p.amount,x=>p.amount=Mathf.Clamp(x,-5,5)); Stepper(grid,"Distância (0 = global)",()=>p.range,x=>p.range=Mathf.Clamp(x,0,12));
         }
         void SkillEditor(Transform c,SkillDef s,int index)
         {
@@ -448,7 +497,7 @@ namespace ArenaTatica
                 foreach(var (v,w) in new[]{(Content.Fighters[f.id].name,0f),(f.games.ToString(),90f),(f.wins.ToString(),90f),(f.games>0?$"{100f*f.wins/f.games:0}%":"—",80f),(f.damage.ToString(),80f),(f.kos.ToString(),90f),(f.heal.ToString(),70f)})
                 { var l=Label(row,v,14,Ink,w==0?TextAnchor.MiddleLeft:TextAnchor.MiddleCenter); Layout(l.gameObject,w,0,w==0?1:0); }
             }
-            if(d.fighters.Count==0) Para(c,"<color=#8a82ad>Ainda não há partidas jogadas neste aparelho.</color>");
+            if(d.fighters.Count==0) Para(c,"<color=#a7b4c2>Ainda não há partidas jogadas neste aparelho.</color>");
             if(d.events.Count>0) { Section(c,"Eventos que já saíram"); Para(c,string.Join("  ·  ",d.events.OrderByDescending(x=>x.n).Select(x=>$"{ArenaPresentation.EventName(x.id)} {x.n}"))); }
             var row2=Row(c,44); Btn(row2,"Zerar estatísticas",()=>{ ArenaStats.Reset(); Show("estatisticas"); },220,40).GetComponent<Image>().color=Hex(0x4a2030);
         }
@@ -468,7 +517,7 @@ namespace ArenaTatica
             Section(c,"Controle e suporte");
             Para(c,"Empurrão: o alvo anda em linha; se bater, leva 1 (e quem foi atingido também). Puxão: traz o alvo até colar. Prisão: o alvo perde o próximo turno e não pode ser alvo (Esquiva escapa). Gelo: entrar na casa custa +1 PM. Buffs de armadura duram até o próximo turno do alvo.");
             Section(c,"Loja");
-            Para(c,"Moedas ficam no mapa e são pegas ao passar. A loja mostra 3 produtos por jogador; 1 compra por turno, sem gastar PA.");
+            Para(c,"Moedas ficam no mapa e são pegas ao passar. A loja mostra 3 produtos por jogador; compre quantos puder pagar no turno, sem gastar PA.");
             Section(c,"Vitória");
             Para(c,"Galeões, Eliminação, Tesouro ou Domínio, escolhidos na aba Jogar.");
         }
@@ -487,7 +536,7 @@ namespace ArenaTatica
             row=Row(c,48);
             Btn(row,"Voltar à partida",Close,0,44);
             Btn(row,"Sair do jogo",Application.Quit,0,44).GetComponent<Image>().color=Hex(0x4a2030);
-            Para(c,$"<color=#8a82ad>Edições salvas em {Application.persistentDataPath}</color>");
+            Para(c,$"<color=#a7b4c2>Edições salvas em {Application.persistentDataPath}</color>");
         }
         void Awake() { AudioListener.volume=PlayerPrefs.GetFloat("arena-volume",1); }
 
@@ -513,13 +562,13 @@ namespace ArenaTatica
         Button Btn(Transform parent,string text,Action action,float w=0,float h=38,int size=15)
         {
             var r=Box(text,parent,Idle); var b=r.gameObject.AddComponent<Button>(); b.targetGraphic=r.GetComponent<Image>();
-            var colors=b.colors; colors.highlightedColor=new Color(.85f,.85f,1); colors.pressedColor=Gold; b.colors=colors; b.onClick.AddListener(()=>action());
+            ArenaTema.StyleFocus(b); b.onClick.AddListener(()=>action());
             var t=Label(r,text,size,Ink,TextAnchor.MiddleCenter); Fill(t.rectTransform,4); t.verticalOverflow=VerticalWrapMode.Truncate;
             var le=r.gameObject.AddComponent<LayoutElement>(); le.preferredHeight=le.minHeight=h;
             if(w>0) { le.preferredWidth=w; le.minWidth=w*.6f; } else { le.flexibleWidth=1; le.minWidth=60; }
             return b;
         }
-        static void Pick(Button b,bool on) { if(on) b.GetComponent<Image>().color=Chosen; }
+        static void Pick(Button b,bool on) { if(on) { b.GetComponent<Image>().color=Chosen; var o=b.GetComponent<Outline>()??b.gameObject.AddComponent<Outline>(); o.effectColor=Gold; o.effectDistance=new Vector2(ArenaTema.FocusOutline,-ArenaTema.FocusOutline); } }
         InputField Input(Transform parent,string value,string hint)
         {
             var r=Box("Campo",parent,Hex(0x110d24)); var input=r.gameObject.AddComponent<InputField>();
@@ -537,6 +586,13 @@ namespace ArenaTatica
         RectTransform Column(Transform parent)
         {
             var r=New("Coluna",parent,typeof(VerticalLayoutGroup)); var g=r.GetComponent<VerticalLayoutGroup>(); g.spacing=6; g.childControlWidth=g.childControlHeight=true; g.childForceExpandHeight=false; return r;
+        }
+        // Painel do modelo 017: fundo, borda e respiro dos tokens.
+        RectTransform Card(Transform parent)
+        {
+            var r=Box("Painel",parent,Panel); var g=r.gameObject.AddComponent<VerticalLayoutGroup>(); g.padding=new RectOffset(18,18,14,14); g.spacing=8;
+            g.childControlWidth=g.childControlHeight=true; g.childForceExpandWidth=true; g.childForceExpandHeight=false;
+            var o=r.gameObject.AddComponent<Outline>(); o.effectColor=Edge; o.effectDistance=new Vector2(2,-2); return r;
         }
         RectTransform Grid(Transform parent)
         {

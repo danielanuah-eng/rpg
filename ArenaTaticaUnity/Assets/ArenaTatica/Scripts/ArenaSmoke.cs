@@ -61,9 +61,12 @@ namespace ArenaTatica
                 var screen=game.View.BoardCamera.WorldToScreenPoint(ArenaPresentation.Position(game.State,me.cell)+Vector3.up*.8f);
                 if(!game.View.Pick(screen,out _,out int picked)||picked!=me.id) { Finish(false,"Seleção da miniatura por raycast"); yield break; }
                 // Loja: moedas de teste (o jogo local tem autoridade) e compra do slot 0.
+                // Compra só ao lado da loja: uma casa vizinha vira loja durante a compra.
                 game.State.coins[me.team]=10; var item=Shop.Def(game.State.shops[me.team].slots[0]);
+                Tile next=null; foreach(var d in Board.Dirs) if(next==null&&Board.Contains(game.State,me.cell+d)) next=game.State.At(me.cell+d);
+                var ground=next.terrain; next.terrain=ArenaTatica.Core.Terrain.Loja;
                 game.Submit("comprar",slot:0); yield return Idle();
-                bool bought=game.State.coins[me.team]==10-item.price&&me.bought;
+                next.terrain=ground; bool bought=game.State.coins[me.team]==10-item.price&&me.bought;
                 // Skill: área de alcance desenhada e invocação numa casa válida.
                 Directory.CreateDirectory("Artifacts");
                 game.Mode="invocacao-dragao"; yield return new WaitForSeconds(.5f);

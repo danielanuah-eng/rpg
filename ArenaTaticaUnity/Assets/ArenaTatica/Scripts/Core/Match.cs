@@ -74,15 +74,19 @@ namespace ArenaTatica.Core
                 S.timeline.Insert(S.timeline.IndexOf(f.id)+1,copy.id);
             }
         }
-        // Krosmaster: times alternam em rodízio; dentro do time, maior Iniciativa primeiro; começa o time com a maior Iniciativa
-        // (empate: o assento menor). Todos contra todos = cada jogador é um time.
+        // Krosmaster (livro de regras): no turno de um jogador, TODOS os lutadores dele jogam em sequência, da maior Iniciativa para a menor
+        // (a "linha do tempo"); depois passa a vez. Começa o time com a maior soma de Iniciativa (empate: o lutador de maior Iniciativa;
+        // depois o assento menor). Em times (2v2, 3v3) os jogadores se revezam entre os times. Todos contra todos = cada jogador é um time.
         void BuildTimeline()
         {
             int Init(Fighter f) => Content.Def(f).initiative;
-            var groups=S.Teams().Select(t=>S.fighters.Where(f=>S.Team(f.team)==t&&f.summoner==0).OrderByDescending(Init).ThenBy(f=>f.id).ToList())
-                .Where(g=>g.Count>0).OrderByDescending(g=>Init(g[0])).ToList();
+            List<Fighter> Own(int seat) => S.fighters.Where(f=>f.team==seat&&f.summoner==0).OrderByDescending(Init).ThenBy(f=>f.id).ToList();
+            (int sum,int top) Score(IEnumerable<Fighter> g) => (g.Sum(Init),g.Select(Init).DefaultIfEmpty(0).Max());
+            var seats=S.fighters.Where(f=>f.summoner==0&&MatchState.Player(f.team)).Select(f=>f.team).Distinct().ToList();
+            var teams=seats.GroupBy(S.Team).Select(g=>g.OrderByDescending(p=>Score(Own(p)).sum).ThenByDescending(p=>Score(Own(p)).top).ThenBy(p=>p).ToList())
+                .OrderByDescending(g=>Score(g.SelectMany(Own)).sum).ThenByDescending(g=>Score(g.SelectMany(Own)).top).ThenBy(g=>S.Team(g[0])).ToList();
             S.timeline.Clear();
-            for(int i=0;i<groups.Max(g=>g.Count);i++) foreach(var g in groups) if(i<g.Count) S.timeline.Add(g[i].id);
+            for(int i=0;i<teams.Max(g=>g.Count);i++) foreach(var g in teams) if(i<g.Count) S.timeline.AddRange(Own(g[i]).Select(f=>f.id));
             S.active=0;
         }
 
@@ -152,7 +156,22 @@ namespace ArenaTatica.Core
             log.Add(new GameEvent{kind="lava",target=f.id,cell=f.cell,value=dmg});
             Hurt(f,dmg,log);
         }
-        int Armor(Fighter f) => f.armor+Content.Def(f).armor+f.buffs.Sum(b=>b.armor)+(Content.Form(f)?.armor??0);
+        // Forma fantasma (Edgar): golpes de inimigos não o acertam.
+        static bool Ghost(Fighter v) => Content.Form(v)?.intangible??false;
+        int Armor(Fighter f) => f.armor+Content.Def(f).armor+f.buffs.Sum(b=>b.armor)+(Content.Form(f)?.armor??0)+Passive(f,PassiveStat.Armadura);
+        // Passivas do editor (FighterDef.passives): soma do que os donos vivos dão a v.
+        public int Passive(Fighter v,PassiveStat stat)
+        {
+            int sum=0;
+            foreach(var o in S.fighters) { if(!o.Alive) continue; foreach(var p in Content.Def(o).passives??new PassiveDef[0]) if(p!=null&&p.stat==stat&&PassiveHits(o,p,v)) sum+=p.amount; }
+            return sum;
+        }
+        bool PassiveHits(Fighter o,PassiveDef p,Fighter v)
+        {
+            bool self=o==v, ally=S.Ally(o.team,v.team);
+            bool who=p.who switch { PassiveWho.Si=>self, PassiveWho.Aliados=>!self&&ally, PassiveWho.AliadosESi=>ally, PassiveWho.Inimigos=>!ally, _=>!self };
+            return who&&(self||p.range<=0||o.cell.Distance(v.cell)<=p.range);
+        }
         // Dano já calculado chega ao lutador: guarda do Tchu tcha (aliado até 2 casas absorve 1), revela quem estava escondido.
         // O nocaute (e o renascer) fica para quem chamou, depois do evento do golpe.
         void Hurt(Fighter v,int dmg,List<GameEvent> log)
@@ -165,13 +184,13 @@ namespace ArenaTatica.Core
             if(guard!=null&&!guard.Alive) KO(guard,log);
         }
 
-        // 1 compra por turno do lutador; Item e Buff valem na hora, o resto vira carga de skill.
+        // Compras à vontade enquanto houver moedas (autor, 11/10), numa casa ao lado da loja; a loja renova no fim do turno de quem comprou; Item e Buff valem na hora, o resto vira carga de skill.
         bool Buy(Fighter f,int slot,out string reason)
         {
             reason="";
             var shop=S.shops[f.team].slots;
             if(f.summoner!=0) { reason="Invocações não compram."; return false; }
-            if(f.bought) { reason="Já comprou neste turno."; return false; }
+            if(!Board.NextToShop(S,f.cell)) { reason="Fique numa casa ao lado da loja para comprar."; return false; }
             if(slot<0||slot>=shop.Length||string.IsNullOrEmpty(shop[slot])) { reason="Espaço vazio."; return false; }
             var d=Shop.Def(shop[slot]);
             if(S.coins[f.team]<d.price) { reason="Moedas insuficientes."; return false; }
@@ -214,6 +233,7 @@ namespace ArenaTatica.Core
         {
             int r=sk.maxRange+(sk.modifiable?(S.At(f.cell).height>S.At(target).height?1:0)+f.bonusRange+f.buffs.Sum(b=>b.range):0);
             if(S.ev=="nevoeiro"&&sk.maxRange>1) r=Math.Max(Math.Max(1,sk.minRange),r-2);
+            if(sk.maxRange>1&&!sk.selfArea) r=Math.Max(Math.Max(1,sk.minRange),r+Passive(f,PassiveStat.Alcance));
             return r;
         }
         // Só geometria (alcance, linha reta, visão): usado também para desenhar a área da skill.
@@ -284,6 +304,7 @@ namespace ArenaTatica.Core
                 case SkillKind.Dano:
                     if(sk.selfArea) { if(c!=f.cell) { reason="Use em si mesmo."; return false; } break; }
                     if(v==null||S.Ally(v.team,f.team)) { reason="Alvo inválido."; return false; }
+                    if(Ghost(v)) { reason="Forma fantasma: golpes não o acertam."; return false; }
                     break;
                 case SkillKind.Cura: if(v==null||!S.Ally(v.team,f.team)) { reason="Alvo inválido."; return false; } break;
                 case SkillKind.Suporte:
@@ -577,6 +598,7 @@ namespace ArenaTatica.Core
             bool missed=sk.wild&&(a==Face.Esquiva||a==Face.CoringaEsquivaTrava);
             bool ambush=f.hidden;
             int bonus=S.fighters.Where(g=>g.Alive&&g.id!=f.id&&S.Ally(g.team,f.team)&&Content.Def(g).allyBonus>0&&g.cell.Distance(f.cell)<=Content.Def(g).auraRange).Select(g=>Content.Def(g).allyBonus).DefaultIfEmpty(0).Max();
+            bonus+=Passive(f,PassiveStat.Dano);
             if(ambush) { bonus++; f.hidden=false; }
             if(f.focused&&!f.focusUsed&&sk.damage>0) { bonus++; f.focusUsed=true; }
             var targets=new List<Fighter>(); if(main!=null) targets.Add(main);
@@ -589,12 +611,13 @@ namespace ArenaTatica.Core
             if(sk.selfArea) Emit(new GameEvent{kind="area",actor=f.id,info=sk.id,cell=f.cell,value=sk.area,dice=new[]{a,d}});
             foreach(var v in targets)
             {
+                bool ghost=Ghost(v)&&!S.Ally(v.team,f.team);
                 bool shield=Dice.Armor(d)&&!sk.precise&&!sk.pierce;
                 int alone=sk.isolatedBonus>0&&!S.fighters.Any(x=>x.Alive&&x!=v&&S.Ally(x.team,v.team)&&x.cell.Distance(v.cell)==1)?sk.isolatedBonus:0;
-                int dmg=missed||sk.damage<=0?0:Math.Max(0,sk.damage+bonus+alone-(shield?1:0)-(sk.pierce?0:Armor(v)));
-                Emit(new GameEvent{kind="ataque",actor=f.id,target=v.id,value=missed?-1:dmg,info=sk.id,cell=v.cell,dice=v==first&&!sk.selfArea?new[]{a,d}:null});
+                int dmg=missed||ghost||sk.damage<=0?0:Math.Max(0,sk.damage+bonus+alone-(shield?1:0)-(sk.pierce?0:Armor(v)));
+                Emit(new GameEvent{kind="ataque",actor=f.id,target=v.id,value=missed||ghost?-1:dmg,info=sk.id,cell=v.cell,dice=v==first&&!sk.selfArea?new[]{a,d}:null});
                 Hurt(v,dmg,log); dealt+=dmg;
-                bool hit=!missed&&(dmg>0||sk.damage<=0);
+                bool hit=!missed&&!ghost&&(dmg>0||sk.damage<=0);
                 if(hit&&sk.pmLoss>0) v.buffs.Add(new Buff{id="confusao",turns=2,pm=-sk.pmLoss});
                 if(hit&&sk.paLoss>0) v.buffs.Add(new Buff{id="atordoado",turns=2,pa=-sk.paLoss});
                 if(dmg>0&&v==main&&!S.Ally(v.team,f.team)&&Content.Def(f).steal>0&&MatchState.Player(v.team)&&MatchState.Player(f.team)&&S.coins[v.team]>0&&Dice.Range(S,100)<Content.Def(f).steal*(ambush?2:1))
@@ -617,7 +640,7 @@ namespace ArenaTatica.Core
             foreach(var v in targets) if(!v.Alive) { KO(v); if(!v.Alive) Devour(f,v); }
             if(!f.Alive) KO(f);
             // Empurrão e puxão depois do dano, em quem continua de pé.
-            if(!missed) foreach(var v in targets.Where(x=>x.Alive&&x.prisoned==0))
+            if(!missed) foreach(var v in targets.Where(x=>x.Alive&&x.prisoned==0&&!(Ghost(x)&&!S.Ally(x.team,f.team))))
             {
                 if(sk.push>0) { var dir=Dir(v==main||sk.selfArea?f.cell:c,v.cell); if(dir==default) dir=Dir(f.cell,v.cell); Push(v,dir,sk.push,f); }
                 if(sk.pull&&v==main) Pull(v,f);
@@ -734,7 +757,7 @@ namespace ArenaTatica.Core
             var d=Content.Def(f); var form=Content.Form(f);
             foreach(var w in f.cooldowns) w.uses--;
             f.cooldowns.RemoveAll(w=>w.uses<=0);
-            f.pa=Math.Max(0,d.pa+f.bonusPa+f.buffs.Sum(b=>b.pa)+(form?.pa??0)); f.pm=Math.Max(0,d.pm+f.bonusPm+f.buffs.Sum(b=>b.pm)+(form?.pm??0)); f.used.Clear(); f.bought=false; f.focusUsed=false;
+            f.pa=Math.Max(0,d.pa+f.bonusPa+f.buffs.Sum(b=>b.pa)+(form?.pa??0)+Passive(f,PassiveStat.PA)); f.pm=Math.Max(0,d.pm+f.bonusPm+f.buffs.Sum(b=>b.pm)+(form?.pm??0)+Passive(f,PassiveStat.PM)); f.used.Clear(); f.bought=false; f.focusUsed=false;
             // Chão de gelo dura até o próximo turno de quem congelou.
             foreach(var t in S.tiles) if(t.frozenBy==f.id) t.frozenBy=0;
             Emit(new GameEvent{kind="turno",actor=f.id,value=S.round});
@@ -756,6 +779,11 @@ namespace ArenaTatica.Core
                 foreach(var a in S.fighters.Where(x=>x.Alive&&S.Ally(x.team,f.team)&&x.cell.Distance(t.cell)<=2).ToList()) Heal(a,Content.Def(t).healAura,t,"totem-de-cura");
             // Lava: quem começa o turno nela queima.
             if(S.At(f.cell).lava&&!d.flying) { var log=new List<GameEvent>(); Burn(f,log); events.AddRange(log); if(!f.Alive) KO(f); }
+            // Passivas de cura/dano por turno (editor), no começo do turno de quem é pego.
+            if(!f.Alive) return;
+            int regen=Passive(f,PassiveStat.CuraPorTurno), bleed=Passive(f,PassiveStat.DanoPorTurno);
+            if(regen>0) Heal(f,regen,f,"passiva");
+            if(bleed>0) { var log=new List<GameEvent>{ new GameEvent{kind="dano-evento",actor=f.id,target=f.id,value=bleed,info="passiva",cell=f.cell} }; Hurt(f,bleed,log); events.AddRange(log); if(!f.Alive) KO(f); }
         }
         void Advance()
         {

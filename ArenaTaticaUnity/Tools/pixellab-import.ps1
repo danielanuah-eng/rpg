@@ -24,8 +24,12 @@ try {
   $n=0
   if($st.frames.animations){
     foreach($clip in $st.frames.animations.PSObject.Properties){
-      $nome=($Prefixo+$clip.Name) -replace '[^A-Za-z0-9]',''
+      # Grupo extra do mesmo clipe (direção reenviada) vem como "<clipe>-<8 hex>": junta ao principal.
+      $base=$clip.Name -replace '-[0-9a-f]{8}$',''
+      $extra=$base -ne $clip.Name
+      $nome=($Prefixo+$base) -replace '[^A-Za-z0-9]',''
       foreach($dir in $clip.Value.PSObject.Properties){
+        if($extra -and $st.frames.animations.$base.($dir.Name)){ continue }
         $quadros=@($dir.Value | ForEach-Object { Abrir $_ })
         $lado=($quadros | ForEach-Object { [Math]::Max($_.Width,$_.Height) } | Measure-Object -Maximum).Maximum
         $tira=New-Object Drawing.Bitmap ($lado*$quadros.Count),$lado,([Drawing.Imaging.PixelFormat]::Format32bppArgb)

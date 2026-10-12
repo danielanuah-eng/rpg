@@ -32,9 +32,11 @@ for(const f of fs.readdirSync(man).filter(f=>f.endsWith('-distribuicao.json')).s
   build(`${j.cenario.replace('Montanha rochosa','Montanha')} · ${j.nomeComposicao}`,theme,n,(c,r)=>j.alturaExemplo12x12[c][r],props);
 }
 // Mapas rotativos: layouts de 12, 16 e 18 casas (casa = [coluna, linha]).
-const NAMES={'bosque-quatro-patios':'Bosque dos Quatro Pátios','neve-bastioes-diagonais':'Neve dos Bastiões Diagonais','pedreira-anel-partido':'Pedreira do Anel Partido'};
-const lay=path.join(ent,'mapas-rotativos-2026-10-10/layouts');
-for(const f of fs.readdirSync(lay).filter(f=>f.endsWith('.json')).sort()){
+const NAMES={'bosque-quatro-patios':'Bosque dos Quatro Pátios','neve-bastioes-diagonais':'Neve dos Bastiões Diagonais','pedreira-anel-partido':'Pedreira do Anel Partido',
+  'deserto-galerias-deslocadas':'Deserto das Galerias Deslocadas','vulcao-passarela-em-s':'Vulcão da Passarela em S'};
+// Todos os lotes (mapas-rotativos-*, lote-02, lote-03…), na ordem das pastas.
+const lays=fs.readdirSync(ent).filter(d=>d.startsWith('mapas-rotativos')&&fs.existsSync(path.join(ent,d,'layouts'))).sort().map(d=>path.join(ent,d,'layouts'));
+for(const lay of lays) for(const f of fs.readdirSync(lay).filter(f=>f.endsWith('.json')).sort()){
   const j=JSON.parse(fs.readFileSync(path.join(lay,f),'utf8')), n=j.dimensao, id=f.replace(/-\d+\.json$/,'');
   const props=j.props.map(p=>({piece:p.peca,x:p.casa[0],z:n-1-p.casa[1],rot:-(p.rotacaoGraus||0)}));
   build(`${NAMES[id]??id} ${n}×${n}`,THEMES[id.split('-')[0]],n,(c,r)=>j.alturas[r][c],props);

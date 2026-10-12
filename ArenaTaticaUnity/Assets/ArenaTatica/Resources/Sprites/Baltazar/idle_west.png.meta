@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 1
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 2
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -45,9 +45,9 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 9
-  spritePivot: {x: 0.5, y: 0.0390625}
+  spritePivot: {x: 0.5, y: 0.14880952}
   spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -130,17 +130,17 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 168
+        height: 168
       alignment: 9
-      pivot: {x: 0.5, y: 0.0390625}
+      pivot: {x: 0.5, y: 0.14880952}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b145e7e71a6f1d4fb2bbd646f201eed
+      spriteID: 5b8b0631ff488034f97999451fd680eb
       internalID: -7764832408887065827
       vertices: []
       indices: 
@@ -150,19 +150,19 @@ TextureImporter:
       name: idle_west_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 168
         y: 0
-        width: 128
-        height: 128
+        width: 168
+        height: 168
       alignment: 9
-      pivot: {x: 0.5, y: 0.0390625}
+      pivot: {x: 0.5, y: 0.14880952}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e758d6f7392ee00419441c2114491b9d
+      spriteID: 036b111d21155de44807e713263ad513
       internalID: -887936064498221542
       vertices: []
       indices: 
@@ -172,19 +172,19 @@ TextureImporter:
       name: idle_west_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 336
         y: 0
-        width: 128
-        height: 128
+        width: 168
+        height: 168
       alignment: 9
-      pivot: {x: 0.5, y: 0.0390625}
+      pivot: {x: 0.5, y: 0.14880952}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f449f7f4ca2a3084d87b3bdd7a8de817
+      spriteID: 31ec867330270b34b91fa9be784072d5
       internalID: -4517908674925161929
       vertices: []
       indices: 
@@ -194,19 +194,19 @@ TextureImporter:
       name: idle_west_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 504
         y: 0
-        width: 128
-        height: 128
+        width: 168
+        height: 168
       alignment: 9
-      pivot: {x: 0.5, y: 0.0390625}
+      pivot: {x: 0.5, y: 0.14880952}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 189f95d6e77d3db4c915f9dbaa51c085
+      spriteID: 54695f7eb5ad4454cb929cdb92b62566
       internalID: -1046038684983447836
       vertices: []
       indices: 

@@ -13,7 +13,7 @@ namespace ArenaTatica
     {
         public ArenaGame Game;
         Canvas canvas;
-        RectTransform side,top,footer,networkPanel,logPanel,actions,shopGrid,shopWindow;
+        RectTransform side,top,footer,networkPanel,logPanel,actions,shopGrid,shopWindow,viewPanel;
         Text turn,score,status,metrics,result,help,mobileStats,fighters,shopLabel,log,shopTitle,shopHelp,portraitText;
         RectTransform portrait; Image portraitArt; string portraitDef;
         readonly List<Text> labels=new List<Text>();
@@ -79,6 +79,10 @@ namespace ArenaTatica
             fullscreen=Button("Tela cheia",networkPanel,ToggleFullScreen,88); fullscreen.gameObject.SetActive(!Application.isMobilePlatform);
             Button("Girar",networkPanel,()=>Game.View.RotateView(1),56);
             Button("Menu",networkPanel,()=>Game.Menu?.Open(),64);
+            // Girar a vista: sempre à mão no canto do tabuleiro (também: botão direito arrastado, segurar e arrastar, dois dedos, Q/E).
+            viewPanel=Panel("Vista",root.transform);
+            var viewRow=viewPanel.gameObject.AddComponent<HorizontalLayoutGroup>(); viewRow.spacing=6; viewRow.padding=new RectOffset(6,6,4,4); viewRow.childControlHeight=true; viewRow.childControlWidth=true; viewRow.childForceExpandWidth=false;
+            Button("◄ Girar",viewPanel,()=>Game.View.RotateView(-1),80); Button("Girar ►",viewPanel,()=>Game.View.RotateView(1),80);
             // Em 1280 px a barra não cabia (Retomar/Tela cheia saíam da tela): os botões encolhem até 60% e o texto quebra.
             foreach(var le in networkPanel.GetComponentsInChildren<LayoutElement>()) le.minWidth=le.preferredWidth>0?le.preferredWidth*.6f:100;
             // Retrato do lutador ativo (tarefa 012 de nitidez): na mesa ele tem ~45 px em 1280×720; aqui, 120 px de arte.
@@ -162,23 +166,28 @@ namespace ArenaTatica
             picker=Panel("Seletor",root); picker.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.97f); Anchors(picker,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero);
             pickerTitle=Text("",picker,22,ArenaPresentation.Gold); pickerTitle.alignment=TextAnchor.MiddleCenter; Anchors(pickerTitle.rectTransform,new Vector2(0,1),Vector2.one,new Vector2(16,-56),new Vector2(-16,-12));
             var grid=new GameObject("Lutadores",typeof(RectTransform),typeof(GridLayoutGroup)).GetComponent<RectTransform>(); grid.SetParent(picker,false);
-            // 20 lutadores: cartas menores para caber em 1280×720.
-            var g=grid.GetComponent<GridLayoutGroup>(); g.cellSize=new Vector2(128,138); g.spacing=new Vector2(8,8); g.childAlignment=TextAnchor.UpperCenter;
-            Anchors(grid,Vector2.zero,Vector2.one,new Vector2(16,110),new Vector2(-16,-64));
+            // Cartões do modelo 017: retrato, nome, custo, Vida/PA/PM; a equipe fica no painel lateral à direita.
+            var g=grid.GetComponent<GridLayoutGroup>(); g.cellSize=new Vector2(110,132); g.spacing=new Vector2(6,6); g.childAlignment=TextAnchor.UpperLeft;
+            Anchors(grid,Vector2.zero,Vector2.one,new Vector2(16,14),new Vector2(-316,-64));
+            string hp=ArenaTema.Html(ArenaTema.Hp), pm=ArenaTema.Html(ArenaTema.Pm), mu=ArenaTema.Html(ArenaTema.Muted);
             foreach(string id in Content.Roster) {
-                var d=Content.Fighters[id]; var b=Button("",grid,()=>TogglePick(id)); pickButtons.Add(b);
+                var d=Content.Fighters[id]; var b=Button("",grid,()=>TogglePick(id)); ArenaTema.StyleFocus(b); pickButtons.Add(b);
                 var icon=new GameObject("Retrato",typeof(RectTransform),typeof(Image)).GetComponent<Image>(); icon.transform.SetParent(b.transform,false); icon.preserveAspect=true; icon.raycastTarget=false;
                 icon.sprite=d.sprites==null?null:Resources.Load<Sprite>("Sprites/"+d.sprites+"/south"); if(!icon.sprite) icon.color=Color.clear;
-                Anchors(icon.rectTransform,new Vector2(0,.3f),Vector2.one,new Vector2(6,0),new Vector2(-6,-4));
-                var label=b.GetComponentInChildren<Text>(); label.text=$"{d.name}{(d.legendary?" ★":"")}\n<size=11>Nv {d.level} · {d.hp} PV · {d.pa} PA · {d.pm} PM</size>"; label.alignment=TextAnchor.LowerCenter;
-                Anchors(label.rectTransform,Vector2.zero,new Vector2(1,.32f),new Vector2(4,4),new Vector2(-4,0));
+                Anchors(icon.rectTransform,new Vector2(0,.42f),Vector2.one,new Vector2(6,0),new Vector2(-6,-4));
+                var label=b.GetComponentInChildren<Text>(); label.fontSize=12; label.alignment=TextAnchor.LowerCenter;
+                label.text=$"{d.name}{(d.legendary?" ★":"")}\n<size=10><color=#{mu}>Custo {d.level}</color>\n<color=#{hp}>{d.hp} PV</color> · <color=#{pm}>{d.pa} PA · {d.pm} PM</color></size>";
+                Anchors(label.rectTransform,Vector2.zero,new Vector2(1,.44f),new Vector2(3,3),new Vector2(-3,0));
             }
-            pickerInfo=Text("",picker,15,ink); pickerInfo.alignment=TextAnchor.MiddleCenter; Anchors(pickerInfo.rectTransform,Vector2.zero,new Vector2(1,0),new Vector2(16,62),new Vector2(-16,104));
-            var row=new GameObject("Botoes",typeof(RectTransform),typeof(HorizontalLayoutGroup)).GetComponent<RectTransform>(); row.SetParent(picker,false);
-            var h=row.GetComponent<HorizontalLayoutGroup>(); h.spacing=10; h.childAlignment=TextAnchor.MiddleCenter; h.childControlWidth=h.childControlHeight=true; h.childForceExpandWidth=false;
-            Anchors(row,Vector2.zero,new Vector2(1,0),new Vector2(16,14),new Vector2(-16,54));
-            Button("Aleatório",row,RandomPick,120); Button("Limpar",row,()=>{ picking.Clear(); RefreshPicker(); },100);
-            pickerNext=Button("",row,NextPick,160);
+            // Painel lateral: equipe, custo total e avanço (desabilitado com a equipe vazia).
+            var side=Panel("Equipe",picker); side.GetComponent<Image>().color=ArenaTema.Panel; Anchors(side,new Vector2(1,0),Vector2.one,new Vector2(-300,14),new Vector2(-16,-64));
+            var sideTitle=Text("EQUIPE",side,14,ArenaTema.Selected); sideTitle.fontStyle=FontStyle.Bold; Anchors(sideTitle.rectTransform,new Vector2(0,1),Vector2.one,new Vector2(14,-36),new Vector2(-14,-10));
+            pickerInfo=Text("",side,15,ink); pickerInfo.alignment=TextAnchor.UpperLeft; pickerInfo.verticalOverflow=VerticalWrapMode.Overflow; Anchors(pickerInfo.rectTransform,Vector2.zero,Vector2.one,new Vector2(14,200),new Vector2(-14,-42));
+            var row=new GameObject("Botoes",typeof(RectTransform),typeof(VerticalLayoutGroup)).GetComponent<RectTransform>(); row.SetParent(side,false);
+            var h=row.GetComponent<VerticalLayoutGroup>(); h.spacing=8; h.childAlignment=TextAnchor.LowerCenter; h.childControlWidth=h.childControlHeight=true; h.childForceExpandWidth=true; h.childForceExpandHeight=false;
+            Anchors(row,Vector2.zero,new Vector2(1,0),new Vector2(14,14),new Vector2(-14,190));
+            Button("Aleatório",row,RandomPick); Button("Limpar",row,()=>{ picking.Clear(); RefreshPicker(); });
+            pickerNext=Button("",row,NextPick); pickerNext.GetComponent<LayoutElement>().preferredHeight=48; ArenaTema.StyleFocus(pickerNext);
             picker.gameObject.SetActive(false);
         }
         public void OpenPicker()
@@ -212,9 +221,11 @@ namespace ArenaTatica
         {
             int level=picking.Sum(id=>Content.Fighters[id].level);
             pickerTitle.text=OnlineSession?"SEU TIME":$"TIME DE P{pickSeat+1}  <size=15>({pickSeat+1} de {picked.Length})</size>";
-            pickerInfo.text=(picking.Count==0?"Toque nos lutadores para montar o time.":string.Join("  +  ",picking.Select(id=>Content.Fighters[id].name)))+$"\n<size=13>Nível {level}/{ArenaGame.TeamLevel} · até {ArenaGame.TeamSize} lutadores · sem repetir</size>";
-            for(int i=0;i<pickButtons.Count;i++) pickButtons[i].GetComponent<Image>().color=picking.Contains(Content.Roster[i])?chosen:idle;
-            SetLabel(pickerNext,pickSeat+1<picked.Length?"Próximo jogador":"Começar");
+            pickerInfo.text=(picking.Count==0?"Toque nos lutadores para montar o time.":string.Join("\n",picking.Select(id=>$"• {Content.Fighters[id].name} <color=#{ArenaTema.Html(ArenaTema.Muted)}>· custo {Content.Fighters[id].level}</color>")))+$"\n\n<b>Custo total {level}/{ArenaGame.TeamLevel}</b>\n<size=13>até {ArenaGame.TeamSize} lutadores · sem repetir</size>";
+            for(int i=0;i<pickButtons.Count;i++) ArenaTema.MarkSelected(pickButtons[i],picking.Contains(Content.Roster[i]),font);
+            // Equipe vazia: avanço desabilitado e indicando o que fazer.
+            pickerNext.interactable=ArenaTema.CanAdvance(picking.Count);
+            SetLabel(pickerNext,ArenaTema.AdvanceLabel(picking.Count,pickSeat+1<picked.Length?"Próximo jogador":"Começar"));
         }
         void ChooseSkill(int index)
         {
@@ -226,6 +237,26 @@ namespace ArenaTatica
             Game.Mode=Game.Mode==sk.id?"":sk.id;
         }
         public static bool SelfOnly(SkillDef sk) => sk.kind==SkillKind.Forma||sk.kind==SkillKind.Esconder||sk.kind==SkillKind.Aura||(sk.kind==SkillKind.Desejo&&string.IsNullOrEmpty(sk.wish));
+        // Aviso do Cataclisma (entrega do Sol, 11/10): tira Sprites/Avisos/<id>, 12 quadros de 160 ms, um ciclo no centro do tabuleiro.
+        public void ShowWarning(string id)
+        {
+            if(!canvas||string.IsNullOrEmpty(id)) return;
+            var frames=Resources.LoadAll<Sprite>("Sprites/Avisos/"+id).OrderBy(x=>int.TryParse(x.name.Substring(x.name.LastIndexOf('_')+1),out int n)?n:0).ToArray();
+            if(frames.Length>0) StartCoroutine(Warning(frames));
+        }
+        IEnumerator Warning(Sprite[] frames)
+        {
+            var go=new GameObject("AvisoCataclisma",typeof(RectTransform),typeof(Image),typeof(CanvasGroup)); var rect=go.GetComponent<RectTransform>(); rect.SetParent(canvas.transform,false);
+            rect.anchorMin=rect.anchorMax=Vector2.zero; rect.anchoredPosition=BoardArea().center/UiScale; rect.sizeDelta=new Vector2(192,192);
+            var image=go.GetComponent<Image>(); image.raycastTarget=false; image.preserveAspect=true; var group=go.GetComponent<CanvasGroup>();
+            const float frame=.16f; float cycle=frames.Length*frame;
+            for(float t=0;t<cycle;t+=Time.deltaTime) {
+                image.sprite=frames[Mathf.Min((int)(t/frame),frames.Length-1)];
+                group.alpha=Mathf.Clamp01(Mathf.Min(t/.15f,(cycle-t)/.25f));
+                yield return null;
+            }
+            Destroy(go);
+        }
         RectTransform Panel(string name,Transform parent)
         {
             var go=new GameObject(name,typeof(RectTransform),typeof(Image)); go.transform.SetParent(parent,false); go.GetComponent<Image>().color=panel; return go.GetComponent<RectTransform>();
@@ -284,6 +315,7 @@ namespace ArenaTatica
                 v.padding=new RectOffset(10,10,6,6);
                 Anchors(networkPanel,new Vector2(0,.81f),new Vector2(1,.81f),new Vector2(8,-38),new Vector2(-8,0));
                 Anchors(shopWindow,new Vector2(0,.3f),new Vector2(1,.8f),new Vector2(8,0),new Vector2(-8,0));
+                Anchors(viewPanel,new Vector2(1,0),new Vector2(1,0),new Vector2(-190,242),new Vector2(-8,284));
                 address.GetComponent<LayoutElement>().minWidth=90; host.GetComponent<LayoutElement>().minWidth=45; room.GetComponent<LayoutElement>().minWidth=45; resume.gameObject.SetActive(false); format.gameObject.SetActive(false); theme.gameObject.SetActive(false);
             } else {
                 Anchors(side,new Vector2(0,0),new Vector2(0,1),new Vector2(18,75),new Vector2(292,-98));
@@ -292,6 +324,7 @@ namespace ArenaTatica
                 Anchors(shopWindow,new Vector2(.25f,.12f),new Vector2(.98f,.86f),Vector2.zero,Vector2.zero);
                 // Canto inferior esquerdo da área do tabuleiro: o losango da mesa deixa esse canto vazio.
                 Anchors(portrait,Vector2.zero,Vector2.zero,new Vector2(310,80),new Vector2(438,232));
+                Anchors(viewPanel,new Vector2(1,0),new Vector2(1,0),new Vector2(-194,74),new Vector2(-12,116));
                 resume.gameObject.SetActive(true); format.gameObject.SetActive(true); theme.gameObject.SetActive(true);
             }
         }
@@ -334,9 +367,11 @@ namespace ArenaTatica
                 var members=Enumerable.Range(1,s.players).Where(p=>s.alliance[p]==t).Select(Team);
                 return s.TeamPlay?$"Time {t} ({string.Join(" ",members)}) {Goal(t)}":$"{Team(t)} {Goal(t)}";
             }));
-            fighters.text=string.Join("\n",s.fighters.Where(x=>x.Alive||x.summoner==0).Select(x=>{
+            // Na ordem da linha do tempo (Krosmaster: cada jogador joga o time inteiro, da maior Iniciativa para a menor).
+            int Order(Fighter x) { int i=s.timeline.IndexOf(x.id); return i<0?999:i; }
+            fighters.text=string.Join("\n",s.fighters.Where(x=>x.Alive||x.summoner==0).OrderBy(Order).Select(x=>{
                 string n=Content.Fighters[x.def].name; bool on=f!=null&&x.id==f.id;
-                return $"{(on?"▶ ":"")}{(MatchState.Player(x.team)?Team(x.team):"Neutro")} {n}  {(x.Alive?$"{x.hp}/{Content.MaxHp(x)} PV":"nocauteado")}{(x.summoner==0&&MatchState.Player(x.team)?$" · {s.coins[x.team]} moedas":"")}{(x.prisoned>0?" · preso":"")}";
+                return $"{(on?"▶ ":"")}{(MatchState.Player(x.team)?Team(x.team):"Neutro")} {n}{(x.summoner==0&&MatchState.Player(x.team)?$" <color=#a7b4c2>Ini {Content.Def(x).initiative}</color>":"")}  {(x.Alive?$"{x.hp}/{Content.MaxHp(x)} PV":"nocauteado")}{(x.summoner==0&&MatchState.Player(x.team)?$" · {s.coins[x.team]} moedas":"")}{(x.prisoned>0?" · preso":"")}";
             }));
             mobileStats.text=score.text;
             var art=f==null?null:Content.Form(f)?.sprites??Content.Fighters[f.def].sprites;
@@ -360,21 +395,25 @@ namespace ArenaTatica
             move.interactable=pass.interactable=Game.CanAct;
             move.GetComponent<Image>().color=Game.Mode==""?new Color(.21f,.36f,.43f):idle;
             int team=f?.team??1; var slots=s.shops[team].slots;
-            shopLabel.text=$"LOJA DE P{team} · {s.coins[team]} MOEDAS{(f!=null&&f.bought?" · já comprou":"")}";
-            shopTitle.text=$"Loja do Castor  ·  P{team}  ·  {s.coins[team]} moedas{(f!=null&&f.bought?"  ·  já comprou neste turno":"")}";
-            SetLabel(openShop,shopWindow.gameObject.activeSelf?"Fechar loja":"Abrir loja");
+            shopLabel.text=$"LOJA DE P{team} · {s.coins[team]} MOEDAS";
+            shopTitle.text=$"Loja do Castor  ·  P{team}  ·  {s.coins[team]} moedas";
+            // Só dá para abrir a loja numa casa ao lado dela; saindo dali, a janela fecha.
+            bool atShop=f!=null&&Board.NextToShop(s,f.cell);
+            if(!atShop) shopWindow.gameObject.SetActive(false);
+            openShop.interactable=atShop;
+            SetLabel(openShop,!atShop?"Loja: fique ao lado dela":shopWindow.gameObject.activeSelf?"Fechar loja":"Abrir loja");
             if(UnityEngine.InputSystem.Keyboard.current?.escapeKey.wasPressedThisFrame==true) shopWindow.gameObject.SetActive(false);
             for(int i=0;i<shopButtons.Count;i++) {
                 var d=i<slots.Length?Shop.Def(slots[i]):null; var b=shopButtons[i];
                 SetLabel(b,d==null?"—":$"{d.name} ({d.price})");
-                b.interactable=d!=null&&Game.CanAct&&f.summoner==0&&!f.bought&&s.coins[team]>=d.price;
+                b.interactable=d!=null&&Game.CanAct&&atShop&&f.summoner==0&&s.coins[team]>=d.price;
                 var sp=ShopIcon(d?.id); shopIcons[i].sprite=sp; shopIcons[i].enabled=sp; shopIcons[i].color=b.interactable||d==null?Color.white:new Color(1,1,1,.5f);
             }
             // Muitas skills (gatos, Desejo do Kellen): 2 colunas no painel lateral para não passar da tela.
             FitGrid(actions,Portrait?4:skills.Count>4?2:1); FitGrid(shopGrid,Portrait?3:1);
             var chosenSkill=skills.FirstOrDefault(x=>x.id==Game.Mode);
             help.text=chosenSkill!=null?Describe(chosenSkill)+"\nClique num alvo laranja.":"Casas azuis: alcance dos PM. Clique para mover.";
-            shopHelp.text=HoveredShop()??(f!=null&&f.summoner!=0?"Invocações não compram.":"Passe o cursor num item para ver o efeito. 1 compra por turno.");
+            shopHelp.text=HoveredShop()??(f!=null&&f.summoner!=0?"Invocações não compram.":"Passe o cursor num item para ver o efeito. Compre quantos puder pagar.");
             result.text=s.over?(s.winner==0?"EMPATE":$"VITÓRIA · {ArenaPresentation.TeamName(s,s.winner).ToUpperInvariant()}"):Game.Recovery?"CONEXÃO INTERROMPIDA":Game.Lobby?"AGUARDANDO JOGADORES":"";
             status.text=Game.Status;
             log.text=string.Join("\n",logLines);

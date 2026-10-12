@@ -13,6 +13,8 @@ namespace ArenaTatica.Core
         public static bool ValidSize(int size) => size==12||size==16||size==18;
         public static readonly Cell[] Dirs={ new Cell(-1,0), new Cell(1,0), new Cell(0,-1), new Cell(0,1) };
         public static bool Contains(MatchState s,Cell c) => c.x>=0&&c.z>=0&&c.x<s.width&&c.z<s.height;
+        // Casa encostada (lado, sem diagonal) numa casa da loja: só dali se compra.
+        public static bool NextToShop(MatchState s,Cell c) { foreach(var d in Dirs) if(Contains(s,c+d)&&s.At(c+d).terrain==Terrain.Loja) return true; return false; }
         public static Fighter At(MatchState s,Cell c) => s.fighters.Find(f=>f.Alive&&f.cell==c);
         public static bool Walkable(MatchState s,Cell c,bool flying) { var t=s.At(c).terrain; return t==Terrain.Livre||(flying&&t==Terrain.Arbusto); }
         // Gancho de escalada (climber): subir 2 custa 1 e dá para subir 3 (2 PM). Casa congelada: +1 PM (voador não sente).

@@ -35,6 +35,7 @@ public static class ArenaBuild
     {
         EnsureMaterial("Assets/ArenaTatica/Resources/Materials/ArenaLit.mat","Universal Render Pipeline/Lit");
         EnsureMaterial("Assets/ArenaTatica/Resources/Materials/ArenaSprite.mat","Universal Render Pipeline/2D/Sprite-Unlit-Default");
+        EnsureMaterial("Assets/ArenaTatica/Resources/Materials/ArenaSilhueta.mat","Arena/Silhueta");
         EnsureSprites(); EnsureTiles();
     }
     static void EnsureMaterial(string path,string shaderName)
@@ -54,12 +55,12 @@ public static class ArenaBuild
         if(!Directory.Exists("Assets/ArenaTatica/Resources/Sprites")) return;
         var factory=new SpriteDataProviderFactories(); factory.Init();
         foreach(string file in Directory.GetFiles("Assets/ArenaTatica/Resources/Sprites","*.png",SearchOption.AllDirectories)) {
-            string path=file.Replace('\\','/');
+            string path=file.Replace('\\','/'); if(ArenaEfeitosImport.IsManaged(path)) continue;
             var importer=(TextureImporter)AssetImporter.GetAtPath(path); if(importer==null) continue;
             var pixels=new Texture2D(2,2); pixels.LoadImage(File.ReadAllBytes(path));
             // Projeteis/<skill>.png é uma imagem única (pode ser larga); o resto, tira de quadros quadrados.
             // Ceus/<id>/fundo.png e nuvens.png (tarefa 015) também são imagens únicas e largas.
-            bool single=path.Contains("/Projeteis/")||path.Contains("/Ceus/");
+            bool single=path.Contains("/Projeteis/")||path.Contains("/Ceus/")||path.Contains("/Menu/");
             int w=pixels.width,h=pixels.height,frames=w>h&&!single?w/h:1,size=frames>1?h:w;
             int foot=h; var data=pixels.GetPixels32();
             for(int i=0;i<data.Length;i++) if(data[i].a>40) { foot=i/w; break; }
@@ -67,7 +68,7 @@ public static class ArenaBuild
             UnityEngine.Object.DestroyImmediate(pixels);
             // Efeitos (projéteis, raios, moedas) giram em torno do centro; lutadores e ícones apoiam no pé.
             // Dados da HUD (tarefa 013): pixel duro, sem mipmaps, centro; aparecem perto do tamanho original.
-            bool hud=path.Contains("/Dados/"); var filter=hud?FilterMode.Point:FilterMode.Trilinear;
+            bool hud=path.Contains("/Dados/")||path.Contains("/Avisos/"); var filter=hud?FilterMode.Point:FilterMode.Trilinear;
             var pivot=path.Contains("/Efeitos/")||single||hud?new Vector2(.5f,.5f):new Vector2(.5f,foot/(float)h);
             string name=Path.GetFileNameWithoutExtension(path);
             var mode=frames>1?SpriteImportMode.Multiple:SpriteImportMode.Single;

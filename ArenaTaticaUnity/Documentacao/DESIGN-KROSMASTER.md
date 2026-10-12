@@ -40,7 +40,7 @@ TURNO(lutador)
                       ao entrar em casa com moeda -> coleta; com armadilha inimiga -> dispara
     SKILL(skill, alvo): valida PA, alcance, linha reta, linha de visão, usos por turno
                       -> RESOLVE_EFEITOS
-    COMPRAR(slot):    custo em moedas; 1 compra por turno do lutador
+    COMPRAR(slot):    custo em moedas; quantas compras puder pagar no turno (autor, 11/10)
     PASSAR
   fim: renova a loja só para slots comprados; checa VITÓRIA
 
@@ -91,7 +91,7 @@ VITÓRIA (escolhida no lobby, regras plugáveis)
 
 ## Estado da implementação
 - Núcleo em `Assets/ArenaTatica/Scripts/Core/`, testes em `Tests/Editor/CoreMatchTests.cs` (18 testes do núcleo).
-- **Loja (`Core/Shop.cs`, padrões provisórios do Claude):** 3 slots por time, sorteio com peso e sem repetir; comando `comprar` (campo `slot`), sem custo de PA, 1 compra por turno do lutador, invocações não compram; o slot comprado renova no fim do turno.
+- **Loja (`Core/Shop.cs`, padrões provisórios do Claude):** 3 slots por time, sorteio com peso e sem repetir; comando `comprar` (campo `slot`), sem custo de PA, várias compras por turno enquanto houver moedas (autor, 11/10), invocações não compram; o slot comprado renova no fim do turno.
   - Item (permanente, vale na hora): Botas aladas +1 PM (4), Escudo de bronze +1 armadura (5), Amuleto vital +3 PV (3), Luneta +1 alcance em skills modificáveis (4).
   - Magia (1 uso): Raio arcano 2 PA, 1–5, 3 de dano (3); Poção de cura 1 PA, 0–1, cura 4 até o máximo (2).
   - Pet: Lobo de cinzas (4): skill de 1 uso, 2 PA, invoca lobo PV 3/PA 3/PM 3, Mordida 1. Limite de invocação é por tipo (lobo convive com o dragão).
@@ -132,6 +132,14 @@ VITÓRIA (escolhida no lobby, regras plugáveis)
     - Os mapas ficam em `persistentDataPath/arena-mapas.json`, e o mapa escolhido vale nas próximas partidas (`MatchSetup.map`), só no tamanho dele. Na sala, vale o do Host, que já vai no estado.
     - Props decorativos sem regra entram com o kit Blender (tarefa 011).
   - **Atalhos de conferência** (menu do Editor do Unity "Arena Tática/Teste/…"): partidas montadas e ações do lutador ativo no Play. Servem porque o eval do MCP falha no Play por causa do Á no caminho.
+- **Passo 10 (11/10): feedback do autor.** Validação: 60/60 EditMode, `ArenaBuild.Prepare` e conferência no Play (mapas do Codex nos temas bosque e neve, nas 4 vistas).
+  - **Turnos do Krosmaster** (`Match.BuildTimeline`): cada jogador joga o time inteiro, um lutador depois do outro, na ordem de Iniciativa. Começa quem tem a maior soma de Iniciativa. No empate, decide a maior Iniciativa individual e, depois, o assento menor. A lista de lutadores da HUD segue essa ordem e mostra a Ini. Fontes: https://rulespal.com/krosmaster-arena/rulebook e https://en.doc.boardgamearena.com/Gamehelpkrosmasterarena.
+  - **Passivas configuráveis** (`PassiveDef`, `Match.Passive`): atributo (dano, armadura, PA, PM, alcance, cura ou dano por turno), quem é afetado (o próprio lutador, aliados, inimigos ou todos), quanto e distância (0 = mapa todo). O Editor ("Editar ficha e skills", para qualquer lutador) muda PV, PM, custo e alcance das skills e tem modelos prontos de passiva. Teste: `EditorPassivesFollowTargetAndRange`.
+  - **Girar sem teclado:** botões ◄ Girar / Girar ► na HUD, arrastar com o botão direito, segurar 0,45 s e arrastar, ou dois dedos. Q/E continuam.
+  - **Lutador atrás de prop:** silhueta na cor do time (shader `Arena/Silhueta`, ZTest Greater; a cor vem de `SpriteRenderer.color`, que no URP chega por `unity_SpriteColor`).
+  - **Barras de vida** sobre todos os lutadores. Chefe neutro (PV ≥ 12, como o Brutamontes) tem barra larga, com nome e PV.
+  - **Props do Blender** (lote do Sol): 5 GLB animados, um por tema, em `Resources/Models/Mapa/<tema>/`. São só enfeite e ficam em par espelhado fora do tabuleiro (`AmbientProps`).
+  - **Mapas:** 22 em `Resources/Mapas/codex.json`, incluindo Deserto Galerias Deslocadas e Vulcão Passarela em S (12/16/18).
 
 ## Passo 4: ligar o núcleo (pseudocódigo, 10/10)
 ```

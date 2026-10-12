@@ -66,7 +66,7 @@ namespace ArenaTatica.Core
                 new SkillDef { id="esconder", name="Esconder-se", kind=SkillKind.Esconder, pa=1, minRange=0, maxRange=0, sight=false, perTurn=1, anim="hide" } } },
             ["dragao-espectral"]=new FighterDef { id="dragao-espectral", name="Dragão espectral", sprites="DragaoEspectral", hp=6, pa=4, pm=4, level=0, flying=true, picker=false, skills=new[] {
                 new SkillDef { id="baforada", name="Baforada estelar", kind=SkillKind.Dano, pa=2, minRange=1, maxRange=2, damage=2, line=true } } },
-            ["lobo-de-cinzas"]=new FighterDef { id="lobo-de-cinzas", name="Lobo de cinzas", hp=3, pa=3, pm=3, level=0, picker=false, skills=new[] {
+            ["lobo-de-cinzas"]=new FighterDef { id="lobo-de-cinzas", name="Lobo de cinzas", sprites="LoboCinzas", hp=3, pa=3, pm=3, level=0, picker=false, skills=new[] {
                 new SkillDef { id="mordida", name="Mordida", kind=SkillKind.Dano, pa=2, minRange=1, maxRange=1, damage=1 } } },
 
             // ── Elenco de 10/10 (EVENTOS-LOJA-ELENCO.md). Números provisórios. ──
@@ -103,7 +103,7 @@ namespace ArenaTatica.Core
                 new SkillDef { id="chao-de-gelo", name="Chão de gelo", kind=SkillKind.Zona, pa=3, minRange=1, maxRange=4, area=1, freeze=true, perTurn=1, anim="ice" },
                 new SkillDef { id="bola-de-fogo", name="Bola de fogo", kind=SkillKind.Dano, pa=4, minRange=2, maxRange=5, damage=3, area=1, modifiable=true, anim="fireball" },
                 new SkillDef { id="prisao-dos-pesadelos", name="Prisão dos pesadelos", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=0, prison=1, cooldown=3, anim="prison" },
-                new SkillDef { id="desejo", name="Desejo", kind=SkillKind.Desejo, pa=0, minRange=0, maxRange=0, sight=false, minRound=10, perMatch=1, ultimate=true, anim="wish-channel" } } },
+                new SkillDef { id="desejo", name="Desejo", kind=SkillKind.Desejo, pa=0, minRange=0, maxRange=0, sight=false, minRound=10, perMatch=1, ultimate=true, anim="wishchannel" } } },
             // Draconato paladino (tarefa 012, ficha proposta do Codex): tanque/suporte. A Dualidade guardiã liga um anjo e um demônio
             // em órbita; mantida, custa 1 PA por turno, cura 1 nos aliados e fere 1 nos inimigos até 2 casas.
             ["baltazar"]=new FighterDef { id="baltazar", name="Baltazar", sprites="Baltazar", hp=14, pa=6, pm=3, initiative=2, level=4, skills=new[] {
@@ -123,6 +123,42 @@ namespace ArenaTatica.Core
             ["ogro-de-pedra"]=new FighterDef { id="ogro-de-pedra", name="Ogro de Pedra", sprites="OgroPedra", hp=16, pa=6, pm=1, initiative=0, level=3, skills=new[] {
                 new SkillDef { id="clava", name="Clava", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=3 },
                 new SkillDef { id="arremessar-pedra", name="Arremessar pedra", kind=SkillKind.Dano, pa=4, minRange=2, maxRange=4, damage=2, anim="throw" } } },
+            // ── Personagens novos de 10/10 (DIRECAO-DO-AUTOR.md). Números provisórios. ──
+            // Edgar (autor, 11/10): corpo a corpo, bate e aguenta na medida. Punhos de energia fantasmagórica; a forma fantasma dura
+            // 1 turno (golpes inimigos não o acertam) e a ultimate chama o navio fantasma.
+            ["edgar"]=new FighterDef { id="edgar", name="Edgar", sprites="Edgar", hp=13, pa=6, pm=3, initiative=4, level=4, startForm="normal",
+                forms=new[] { new FormDef { id="normal", name="Normal" }, new FormDef { id="fantasma", name="Fantasma", sprites="EdgarFantasma", intangible=true } },
+                skills=new[] {
+                    new SkillDef { id="punho-espectral", name="Punho espectral", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=3 },
+                    new SkillDef { id="forma-fantasma", name="Forma fantasma", kind=SkillKind.Forma, pa=2, minRange=0, maxRange=0, sight=false, toForm="fantasma", turns=1, cooldown=3, form="normal", anim="transformghost" },
+                    new SkillDef { id="navio-fantasma", name="Navio fantasma", kind=SkillKind.Invocacao, pa=5, minRange=1, maxRange=2, sight=false, summon="navio-fantasma", perMatch=1, ultimate=true, anim="ultship" } } },
+            ["navio-fantasma"]=new FighterDef { id="navio-fantasma", name="Navio fantasma", sprites="EdgarNavio", hp=8, pa=6, pm=3, level=0, flying=true, picker=false, skills=new[] {
+                new SkillDef { id="canhonaco-fantasma", name="Canhonaço fantasma", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=4, damage=3, line=true } } },
+            // Kits genéricos do Claude (autor liberou, 11/10), só com os clipes que existem: ataque, andar, golpe sofrido e morte.
+            // Minotauro de basalto: tanque de choque; a chifrada empurra e a investida cobre a distância.
+            ["brumak"]=new FighterDef { id="brumak", name="Brumak", sprites="Brumak", hp=16, pa=6, pm=3, initiative=2, level=5, skills=new[] {
+                new SkillDef { id="chifrada", name="Chifrada", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=3, push=2 },
+                new SkillDef { id="investida", name="Investida", kind=SkillKind.Salto, pa=2, minRange=2, maxRange=4, cooldown=2, anim="walk" } } },
+            // Dragão do ossário: voa, morde colado e sopra ossos em linha que devolvem vida.
+            ["ossyro"]=new FighterDef { id="ossyro", name="Ossyro", sprites="Ossyro", hp=12, pa=6, pm=4, initiative=5, level=5, flying=true, skills=new[] {
+                new SkillDef { id="mordida-ossea", name="Mordida óssea", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=3 },
+                new SkillDef { id="sopro-do-ossario", name="Sopro do ossário", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=3, damage=2, line=true, area=1, drain=1, perTurn=1, anim="breath" } } },
+            // Grifo de vidro: voa entre pontos do tabuleiro gastando PM (voo), garra afiada e mergulho sobre o inimigo.
+            ["gryvro"]=new FighterDef { id="gryvro", name="Gryvro", sprites="Gryvro", hp=9, pa=6, pm=5, initiative=7, level=4, flying=true, skills=new[] {
+                new SkillDef { id="garra-de-vidro", name="Garra de vidro", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=2, isolatedBonus=2 },
+                new SkillDef { id="mergulho", name="Mergulho", kind=SkillKind.Salto, pa=2, minRange=2, maxRange=5, cooldown=2, anim="walk" } } },
+            // Cervo branco: suporte que cura à distância e afasta quem chega perto com a galhada.
+            ["alvyr"]=new FighterDef { id="alvyr", name="Alvyr", sprites="Alvyr", hp=10, pa=6, pm=4, initiative=5, level=4, skills=new[] {
+                new SkillDef { id="galhada", name="Galhada", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=2, push=1 },
+                new SkillDef { id="luz-da-clareira", name="Luz da clareira", kind=SkillKind.Cura, pa=3, minRange=0, maxRange=3, damage=3, perTurn=1, anim="idle" } } },
+            // Urso-raiz: casca grossa (ignora 1 de dano) e o abraço de raiz que segura o alvo.
+            ["raizor"]=new FighterDef { id="raizor", name="Raizor", sprites="Raizor", hp=14, pa=6, pm=2, initiative=1, level=5, armor=1, skills=new[] {
+                new SkillDef { id="patada", name="Patada", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=3 },
+                new SkillDef { id="abraco-de-raiz", name="Abraço de raiz", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=1, pmLoss=2, paLoss=1, perTurn=1 } } },
+            // Goblin dos cogumelos: atiradora de área frágil; esporos tiram PA.
+            ["nixira"]=new FighterDef { id="nixira", name="Nixira", sprites="Nixira", hp=8, pa=6, pm=4, initiative=6, level=3, skills=new[] {
+                new SkillDef { id="cogumelo-explosivo", name="Cogumelo explosivo", kind=SkillKind.Dano, pa=4, minRange=2, maxRange=4, damage=2, area=1, modifiable=true },
+                new SkillDef { id="esporos", name="Esporos", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=1, paLoss=1, perTurn=1 } } },
             // Loja e eventos.
             ["totem-de-cura"]=new FighterDef { id="totem-de-cura", name="Totem de cura", sprites="TotemCura", hp=4, pa=0, pm=0, level=0, picker=false, noTurn=true, noLock=true, healAura=1, skills=new SkillDef[0] },
             ["papa-moedas"]=new FighterDef { id="papa-moedas", name="Papa-moedas", sprites="PapaMoedas", hp=3, pa=0, pm=3, level=0, picker=false, neutral=true, noLock=true, skills=new SkillDef[0] },
@@ -189,6 +225,9 @@ namespace ArenaTatica.Core
                 if(s.ultimate&&s.perTurn==0&&s.perMatch==0&&s.cooldown==0) s.perMatch=1;
                 if(s.kind==SkillKind.Invocacao&&(string.IsNullOrEmpty(s.summon)||!s.summon.Split('|').All(Fighters.ContainsKey))) s.kind=SkillKind.Dano;
             }
+            d.allyBonus=Clamp(d.allyBonus,0,5); d.auraRange=Clamp(d.auraRange,0,12); d.revive=Clamp(d.revive,0,40); d.steal=Clamp(d.steal,0,100); d.healAura=Clamp(d.healAura,0,10);
+            d.passives=(d.passives??new PassiveDef[0]).Where(x=>x!=null).Take(6).ToArray();
+            foreach(var x in d.passives) { x.amount=Clamp(x.amount,-5,5); x.range=Clamp(x.range,0,12); }
             return d;
         }
 
@@ -206,7 +245,10 @@ namespace ArenaTatica.Core
                 case SkillKind.Invocacao: e.Add("invoca "+string.Join(" ou ",(sk.summon??"").Split('|').Where(Fighters.ContainsKey).Select(x=>Fighters[x].name))); break;
                 case SkillKind.Teleporte: e.Add("teleporte"); break;
                 case SkillKind.Salto: e.Add("salta até o inimigo"); break;
-                case SkillKind.Forma: e.Add("muda de forma"+(sk.turns>0?$" por {sk.turns} turnos":"")); break;
+                case SkillKind.Forma:
+                    e.Add("muda de forma"+(sk.turns>0?$" por {sk.turns} turno{(sk.turns>1?"s":"")}":""));
+                    if(Fighters.Values.Where(x=>x.forms!=null).SelectMany(x=>x.forms).Any(x=>x.id==sk.toForm&&x.intangible)) e.Add("golpes inimigos não o acertam");
+                    break;
                 case SkillKind.Esconder: e.Add(sk.noCover?"fica escondido em qualquer lugar":"esconde-se junto a cobertura"); break;
                 case SkillKind.Espelho: e.Add("reflete o último ataque do alvo"); break;
                 case SkillKind.Zona: e.Add(sk.freeze?"congela as casas (+1 PM para entrar)":"marca as casas"); break;
@@ -258,8 +300,15 @@ namespace ArenaTatica.Core
             if(d.revive>0) t.Add($"renasce com {d.revive} PV no 1º nocaute"); if(d.steal>0) t.Add($"{d.steal}% de roubar 1 moeda ao acertar");
             if(d.illusion) t.Add("começa com uma ilusão de 4 PV"); if(d.noTurn) t.Add("sem turno próprio"); if(d.noLock) t.Add("não trava");
             if(d.healAura>0) t.Add($"cura {d.healAura} aliados até 2 casas no turno do dono"); if(d.neutral) t.Add("neutro (evento)");
+            foreach(var p in d.passives??new PassiveDef[0]) if(p!=null) t.Add(Describe(p));
             return string.Join(" · ",t);
         }
+        public static string StatName(PassiveStat s) => s switch { PassiveStat.Dano=>"de dano", PassiveStat.Armadura=>"de armadura", PassiveStat.PA=>"PA", PassiveStat.PM=>"PM",
+            PassiveStat.Alcance=>"de alcance", PassiveStat.CuraPorTurno=>"de cura por turno", _=>"de dano por turno" };
+        public static string WhoName(PassiveWho w) => w switch { PassiveWho.Si=>"em si", PassiveWho.Aliados=>"nos aliados", PassiveWho.AliadosESi=>"em si e nos aliados",
+            PassiveWho.Inimigos=>"nos inimigos", _=>"em todos" };
+        public static string Describe(PassiveDef p) =>
+            $"{(string.IsNullOrEmpty(p.name)?"Passiva":p.name)}: {Sign(p.amount)} {StatName(p.stat)} {WhoName(p.who)}{(p.who==PassiveWho.Si?"":p.range<=0?" (mapa todo)":$" até {p.range} casa{(p.range>1?"s":"")}")}";
         // Lutadores que dá para escolher (sem invocações), na ordem do seletor.
         public static readonly string[] Roster=Fighters.Values.Where(d=>d.picker).Select(d=>d.id).ToArray();
         public static FighterDef Def(Fighter f) => Fighters[f.def];

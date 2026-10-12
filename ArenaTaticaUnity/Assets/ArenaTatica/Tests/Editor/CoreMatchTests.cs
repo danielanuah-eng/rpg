@@ -24,12 +24,32 @@ namespace ArenaTatica.Core.Tests
                 Assert.IsTrue(Board.Connected(s),"seed "+seed);
             }
         }
-        [Test] public void TimelineAlternatesTeamsAndStartsWithFullStats()
+        // Krosmaster: o jogador joga o time inteiro em sequência (maior Iniciativa primeiro); começa a maior soma de Iniciativa.
+        [Test] public void KrosmasterTimelinePlaysWholeTeamAndStartsWithFullStats()
         {
             m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"ciantia","ciantia"}, team2=new[]{"ciantia","ciantia"} });
-            var teams=S.timeline.Select(id=>S.F(id).team).ToArray();
-            CollectionAssert.AreEqual(new[]{1,2,1,2},teams);
+            CollectionAssert.AreEqual(new[]{1,1,2,2},S.timeline.Select(id=>S.F(id).team).ToArray());
             Assert.AreEqual(6,A.pa); Assert.AreEqual(3,A.pm);
+            m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"devon","gryvro"}, team2=new[]{"teantha","diantus"} });
+            CollectionAssert.AreEqual(new[]{2,2,1,1},S.timeline.Select(id=>S.F(id).team).ToArray(),"soma 12 contra 9 começa, mesmo sem o mais rápido");
+            CollectionAssert.AreEqual(new[]{"gryvro","devon"},S.timeline.Skip(2).Select(id=>S.F(id).def).ToArray(),"dentro do time, maior Iniciativa primeiro");
+        }
+        [Test] public void EditorPassivesFollowTargetAndRange()
+        {
+            var def=Content.Copy(Content.Fighters["ciantia"]);
+            def.passives=new[]{ new PassiveDef{stat=PassiveStat.Armadura,who=PassiveWho.Aliados,amount=1,range=2}, new PassiveDef{stat=PassiveStat.Dano,who=PassiveWho.Si,amount=2},
+                new PassiveDef{stat=PassiveStat.PM,who=PassiveWho.Inimigos,amount=-1} };
+            Content.ApplyEdits(JsonUtility.ToJson(new GameEdits{ fighters=new System.Collections.Generic.List<FighterDef>{def} }));
+            try {
+                m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"ciantia","talyssa"}, team2=new[]{"teantha"} });
+                var cia=S.fighters.First(f=>f.def=="ciantia"); var tal=S.fighters.First(f=>f.def=="talyssa"); var foe=S.fighters.First(f=>f.def=="teantha");
+                Put(cia,5,5); Put(tal,5,7); Put(foe,10,10);
+                Assert.AreEqual(2,m.Passive(cia,PassiveStat.Dano)); Assert.AreEqual(0,m.Passive(tal,PassiveStat.Dano),"Si só vale para o dono");
+                Assert.AreEqual(1,m.Passive(tal,PassiveStat.Armadura)); Assert.AreEqual(0,m.Passive(cia,PassiveStat.Armadura),"Aliados não inclui o dono");
+                Put(tal,5,8); Assert.AreEqual(0,m.Passive(tal,PassiveStat.Armadura),"fora do alcance");
+                Assert.AreEqual(-1,m.Passive(foe,PassiveStat.PM),"alcance 0 = mapa todo");
+                cia.hp=0; Assert.AreEqual(0,m.Passive(foe,PassiveStat.PM),"dono nocauteado não dá passiva");
+            } finally { Content.ApplyEdits(""); }
         }
         [Test] public void ClimbingCostsAndCoinPickup()
         {
@@ -107,21 +127,35 @@ namespace ArenaTatica.Core.Tests
             Assert.AreEqual(Run(),Run());
         }
         void Stock(string item,int coins=10) { S.shops[A.team].slots[0]=item; S.coins[A.team]=coins; }
-        bool Buy(int slot=0) { var c=Cmd("comprar"); c.slot=slot; return m.Apply(c,A.team,out _,out _); }
+        // Compra numa casa ao lado da loja: põe uma casa de loja vizinha ao lutador só durante o comando.
+        bool Buy(int slot=0)
+        {
+            var n=Board.Dirs.Select(d=>A.cell+d).First(x=>Board.Contains(S,x)); var t=S.At(n); var old=t.terrain; t.terrain=Terrain.Loja;
+            var c=Cmd("comprar"); c.slot=slot; bool ok=m.Apply(c,A.team,out _,out _); t.terrain=old; return ok;
+        }
+        [Test] public void BuyingOnlyNextToTheShop()
+        {
+            m=Match.New(new MatchSetup{ seed=3 }); Stock("botas-aladas");
+            var c=Cmd("comprar"); c.slot=0; Assert.IsFalse(m.Apply(c,A.team,out _,out _),"longe da loja");
+            var ring=MapGen.ZoneRing(S); Assert.IsTrue(ring.All(x=>Board.NextToShop(S,x)),"as 8 casas encostadas");
+            Assert.IsFalse(Board.NextToShop(S,MapGen.ShopCells(S)[0]+new Cell(-1,-1)),"diagonal não vale");
+            Put(A,ring[0].x,ring[0].z); c=Cmd("comprar"); c.slot=0; Assert.IsTrue(m.Apply(c,A.team,out _,out _));
+        }
 
         [Test] public void ShopStartsWithThreeDistinctSlotsPerTeam()
         {
             foreach(int t in new[]{1,2}) { var slots=S.shops[t].slots; Assert.AreEqual(Shop.Slots,slots.Length); Assert.IsTrue(slots.All(x=>Shop.Def(x)!=null)); Assert.AreEqual(slots.Length,slots.Distinct().Count()); }
         }
-        [Test] public void BuyingCostsCoinsOncePerTurnAndRefillsAtTurnEnd()
+        [Test] public void BuyingCostsCoinsAllowsSeveralAndRefillsAtTurnEnd()
         {
             Stock("botas-aladas",3); Assert.IsFalse(Buy(),"moedas insuficientes");
             S.coins[A.team]=10; var me=A;
             Assert.IsTrue(Buy()); Assert.AreEqual(6,S.coins[me.team]); Assert.AreEqual(4,me.pm,"+1 PM na hora");
             Assert.IsNull(S.shops[me.team].slots[0]);
-            Assert.IsFalse(Buy(1),"1 compra por turno");
+            S.shops[me.team].slots[1]="botas-aladas"; Assert.IsTrue(Buy(1),"mais de uma compra no turno"); Assert.AreEqual(2,S.coins[me.team]);
+            S.shops[me.team].slots[2]="botas-aladas"; Assert.IsFalse(Buy(2),"sem moedas");
             Assert.IsTrue(Do("passar")); Assert.IsNotNull(S.shops[me.team].slots[0],"renova no fim do turno");
-            Assert.IsTrue(Do("passar")); Assert.AreSame(me,A); Assert.AreEqual(4,me.pm,"item é permanente");
+            Assert.IsTrue(Do("passar")); Assert.AreSame(me,A); Assert.AreEqual(5,me.pm,"item é permanente");
         }
         [Test] public void SpellIsSingleUse()
         {
@@ -298,6 +332,22 @@ namespace ArenaTatica.Core.Tests
             Assert.AreEqual(new Cell(5,8),Enemy.cell); Assert.AreEqual(16-4-1,Enemy.hp,"4 do golpe + 1 da batida");
             Assert.IsFalse(Do("skill",new Cell(5,7),"gancho-broca"),"recarga");
         }
+        [Test] public void GhostFormDodgesBlowsForOneTurn()
+        {
+            Duel("edgar","rei-bobett"); var edgar=A; var king=Enemy; Put(edgar,5,5); Put(king,5,6);
+            Assert.IsTrue(Do("skill",new Cell(5,5),"forma-fantasma")); Assert.AreEqual("fantasma",edgar.form);
+            Do("passar"); Assert.AreSame(king,A);
+            Assert.IsFalse(Do("skill",new Cell(5,5),"coroada"),"fantasma não é alvo");
+            Do("passar"); Assert.AreSame(edgar,A); Assert.AreEqual("normal",edgar.form,"dura 1 turno");
+            Do("passar"); Hit(); Assert.IsTrue(Do("skill",new Cell(5,5),"coroada")); Assert.AreEqual(13-2,edgar.hp);
+        }
+        [Test] public void GhostShipUltimateSummonsOnce()
+        {
+            Duel("edgar","rei-bobett"); Put(A,5,5); Put(Enemy,9,9);
+            Assert.IsTrue(Do("skill",new Cell(5,6),"navio-fantasma"));
+            Assert.AreEqual("navio-fantasma",Board.At(S,new Cell(5,6)).def);
+            Assert.IsFalse(Do("skill",new Cell(6,5),"navio-fantasma"),"1 por partida");
+        }
         [Test] public void ImmovableAndAnchorResistPush()
         {
             Duel("cheiro-pneu","colosso"); Put(A,5,5); Put(Enemy,5,6);
@@ -341,7 +391,7 @@ namespace ArenaTatica.Core.Tests
         [Test] public void ColossusDevoursTheMainSkillWithOneMorePa()
         {
             m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"colosso"}, team2=new[]{"talyssa","ogro-de-pedra"} });
-            var victim=S.fighters.First(f=>f.def=="talyssa"); if(A.def!="colosso") Do("passar"); Put(A,5,5); Put(victim,5,6); victim.hp=1;
+            var victim=S.fighters.First(f=>f.def=="talyssa"); while(A.def!="colosso") Do("passar"); Put(A,5,5); Put(victim,5,6); victim.hp=1;
             Hit(); Assert.IsTrue(Do("skill",new Cell(5,6),"pancada-colossal"));
             Assert.IsFalse(victim.Alive); CollectionAssert.Contains(A.stolen,"lamina-rosa");
             var stolen=Match.Skills(A).First(s=>s.id==Content.Stolen+"lamina-rosa");
@@ -531,7 +581,7 @@ namespace ArenaTatica.Core.Tests
         [Test] public void CodexMapsAreAllPlayable()
         {
             ArenaMaps.Reset();
-            Assert.AreEqual(16,ArenaMaps.Builtin.Count,"algum mapa do Codex não passou em MapGen.Problem");
+            Assert.AreEqual(22,ArenaMaps.Builtin.Count,"algum mapa do Codex não passou em MapGen.Problem");
             foreach(var map in ArenaMaps.Builtin)
             {
                 int players=MapGen.PlayersFor(map.width);
@@ -543,7 +593,7 @@ namespace ArenaTatica.Core.Tests
         }
         [Test] public void BotsPlayOnlyLegalActionsAndFight()
         {
-            foreach(var (a,b) in new[]{ ("baltazar","damian"), ("tchu-tcha","principe-kellen"), ("asamyh","arqueiro-jack"), ("colosso","ezequiela") })
+            foreach(var (a,b) in new[]{ ("baltazar","damian"), ("tchu-tcha","principe-kellen"), ("asamyh","arqueiro-jack"), ("colosso","ezequiela"), ("edgar","brumak"), ("ossyro","gryvro"), ("alvyr","raizor"), ("nixira","edgar") })
             {
                 m=Match.New(new MatchSetup{ seed=7, team1=new[]{a,"perry"}, team2=new[]{b,"teantha"} });
                 int actions=0;

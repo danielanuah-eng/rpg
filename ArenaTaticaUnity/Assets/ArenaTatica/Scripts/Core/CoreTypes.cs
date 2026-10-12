@@ -68,7 +68,8 @@ namespace ArenaTatica.Core
     }
     // Forma do lutador (arma do Damian, Berserk do Tchu tcha): bônus enquanto dura e a pasta de sprites dela.
     // pose: clipe cujo último quadro vira a pose parada nessa forma (Damian segurando o canhão ou o martelo), enquanto não há idle próprio.
-    [Serializable] public class FormDef { public string id, name, sprites, pose; public int pa, pm, armor; public bool noGuard; }
+    // intangible: golpes inimigos não o acertam nessa forma (forma fantasma do Edgar).
+    [Serializable] public class FormDef { public string id, name, sprites, pose; public int pa, pm, armor; public bool noGuard, intangible; }
     [Serializable] public class FighterDef
     {
         public string id, name, sprites;
@@ -86,7 +87,16 @@ namespace ArenaTatica.Core
         public bool legendary, immovable, devour, noTurn, noLock, neutral;
         public string startForm;
         public FormDef[] forms;
+        // Passivas do editor: valem enquanto o dono está vivo (ver PassiveDef).
+        public PassiveDef[] passives=new PassiveDef[0];
     }
+    // Passiva genérica (editor de fichas): muda um atributo de quem ela pega. who: Si, Aliados (sem ele), AliadosESi, Inimigos
+    // (neutros contam), Todos (menos ele). range: até N casas do dono; 0 = o mapa todo. amount pode ser negativo (ex.: −1 armadura nos inimigos).
+    // Dano: dano a mais nos golpes. Armadura: dano a menos recebido. PA/PM: a mais no começo do turno. Alcance: +alcance máximo das skills
+    // de distância. CuraPorTurno/DanoPorTurno: no começo do turno de quem é pego.
+    public enum PassiveStat { Dano, Armadura, PA, PM, Alcance, CuraPorTurno, DanoPorTurno }
+    public enum PassiveWho { Si, Aliados, AliadosESi, Inimigos, Todos }
+    [Serializable] public class PassiveDef { public string name; public PassiveStat stat; public PassiveWho who; public int amount=1, range; public PassiveDef Clone() => (PassiveDef)MemberwiseClone(); }
     // Loja: Item e Buff valem na hora; Magia, Pet e Armadilha dão skills de uso limitado (cargas).
     [Serializable] public class ShopDef
     {
