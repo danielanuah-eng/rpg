@@ -36,35 +36,46 @@ namespace ArenaTatica
             root.transform.SetParent(transform); canvas=root.GetComponent<Canvas>(); canvas.renderMode=RenderMode.ScreenSpaceOverlay;
             var scaler=root.GetComponent<CanvasScaler>(); scaler.uiScaleMode=CanvasScaler.ScaleMode.ConstantPixelSize;
             if(!EventSystem.current) new GameObject("EventSystem",typeof(EventSystem),typeof(InputSystemUIInputModule));
-            top=Panel("Cabecalho",root.transform); Anchors(top,new Vector2(0,1),Vector2.one,new Vector2(0,-82),Vector2.zero);
-            var title=Text("ARENA TÁTICA",top,26,ArenaPresentation.Gold); Anchors(title.rectTransform,new Vector2(0,0),new Vector2(.43f,1),new Vector2(26,28),new Vector2(-4,-12));
-            var subtitle=Text("MINIATURAS • ESTRATÉGIA • DUELO",top,11,muted); Anchors(subtitle.rectTransform,Vector2.zero,new Vector2(.5f,0),new Vector2(28,12),new Vector2(0,27));
-            turn=Text("",top,17,ink); turn.alignment=TextAnchor.MiddleRight; Anchors(turn.rectTransform,new Vector2(.4f,.45f),Vector2.one,Vector2.zero,new Vector2(-26,-6));
-            score=Text("",top,13,muted); score.alignment=TextAnchor.MiddleRight; Anchors(score.rectTransform,new Vector2(.4f,0),new Vector2(1,.45f),new Vector2(0,6),new Vector2(-26,0));
-            side=Panel("Comandos",root.transform);
-            var layout=side.gameObject.AddComponent<VerticalLayoutGroup>(); layout.padding=new RectOffset(16,16,12,12); layout.spacing=5; layout.childControlWidth=true; layout.childControlHeight=true; layout.childForceExpandHeight=false;
-            labels.Add(LabelRow("LUTADORES",side,12,muted,18));
-            fighters=LabelRow("",side,13,ink,112); labels.Add(fighters);
-            labels.Add(LabelRow("AÇÕES",side,12,muted,18));
-            actions=Grid("Acoes",side);
+            // Tabuleiro na tela inteira: cabeçalho e rodapé são faixas finas translúcidas; o resto fica no painel lateral recolhível.
+            top=Panel("Cabecalho",root.transform); top.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.55f);
+            turn=Text("",top,15,ink); turn.alignment=TextAnchor.MiddleLeft; Anchors(turn.rectTransform,Vector2.zero,new Vector2(.55f,1),new Vector2(14,0),new Vector2(0,0));
+            score=Text("",top,13,muted); score.alignment=TextAnchor.MiddleRight; Anchors(score.rectTransform,new Vector2(.45f,0),Vector2.one,Vector2.zero,new Vector2(-14,0));
+            side=Panel("Comandos",root.transform); side.GetComponent<Image>().color=new Color(panel.r,panel.g,panel.b,.93f);
+            var layout=side.gameObject.AddComponent<VerticalLayoutGroup>(); layout.padding=new RectOffset(12,12,8,10); layout.spacing=6; layout.childControlWidth=true; layout.childControlHeight=true; layout.childForceExpandHeight=false;
+            // Abas do painel: Ações (lutadores, skills, loja, registro) e Partida (nova partida, salas, vista, menu); ◀ recolhe.
+            var tabs=new GameObject("Abas",typeof(RectTransform),typeof(HorizontalLayoutGroup),typeof(LayoutElement)).GetComponent<RectTransform>(); tabs.SetParent(side,false);
+            var tabRow=tabs.GetComponent<HorizontalLayoutGroup>(); tabRow.spacing=5; tabRow.childControlWidth=tabRow.childControlHeight=true; tabRow.childForceExpandWidth=false; tabs.GetComponent<LayoutElement>().preferredHeight=34;
+            actionsTab=Button("Ações",tabs,()=>ShowPage(false)); actionsTab.GetComponent<LayoutElement>().flexibleWidth=1;
+            matchTab=Button("Partida",tabs,()=>ShowPage(true)); matchTab.GetComponent<LayoutElement>().flexibleWidth=1;
+            Button("◀",tabs,()=>SetSideOpen(false),40);
+            actionsPage=new GameObject("PaginaAcoes",typeof(RectTransform),typeof(VerticalLayoutGroup),typeof(LayoutElement)).GetComponent<RectTransform>(); actionsPage.SetParent(side,false);
+            var pageLayout=actionsPage.GetComponent<VerticalLayoutGroup>(); pageLayout.spacing=5; pageLayout.childControlWidth=pageLayout.childControlHeight=true; pageLayout.childForceExpandHeight=false;
+            actionsPage.GetComponent<LayoutElement>().flexibleHeight=1;
+            labels.Add(LabelRow("LUTADORES",actionsPage,12,muted,18));
+            fighters=LabelRow("",actionsPage,13,ink,112); labels.Add(fighters);
+            labels.Add(LabelRow("AÇÕES",actionsPage,12,muted,18));
+            actions=Grid("Acoes",actionsPage);
             move=Button("Mover",actions,()=>Game.Mode="");
             // 8 botões: Asamyh tem 5 skills e o Desejo do Kellen abre 6 opções.
             for(int i=0;i<8;i++) { int k=i; skillButtons.Add(Button("",actions,()=>ChooseSkill(k))); }
             pass=Button("Passar  [Espaço]",actions,()=>Game.Submit("passar"));
-            shopLabel=LabelRow("LOJA",side,12,muted,18); labels.Add(shopLabel);
-            shopGrid=Grid("Loja",side);
+            shopLabel=LabelRow("LOJA",actionsPage,12,muted,18); labels.Add(shopLabel);
+            shopGrid=Grid("Loja",actionsPage);
             openShop=Button("Abrir loja",shopGrid,()=>shopWindow.gameObject.SetActive(!shopWindow.gameObject.activeSelf));
-            help=LabelRow("",side,12,muted,44); labels.Add(help);
-            result=LabelRow("",side,16,ArenaPresentation.Gold,28);
+            help=LabelRow("",actionsPage,12,muted,44); labels.Add(help);
+            result=LabelRow("",actionsPage,16,ArenaPresentation.Gold,28);
             // Registro no fim do painel lateral, ocupando o que sobra: não cobre mais o tabuleiro.
-            logPanel=Panel("Registro",side); logPanel.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.6f);
+            logPanel=Panel("Registro",actionsPage); logPanel.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.6f);
             var logSize=logPanel.gameObject.AddComponent<LayoutElement>(); logSize.flexibleHeight=1; logSize.minHeight=40;
             log=Text("",logPanel,12,ink); log.verticalOverflow=VerticalWrapMode.Truncate; log.alignment=TextAnchor.LowerLeft; Anchors(log.rectTransform,Vector2.zero,Vector2.one,new Vector2(10,6),new Vector2(-10,-6));
-            footer=Panel("Rodape",root.transform); Anchors(footer,Vector2.zero,new Vector2(1,0),Vector2.zero,new Vector2(0,62));
-            status=Text("",footer,14,ink); Anchors(status.rectTransform,Vector2.zero,Vector2.one,new Vector2(22,26),new Vector2(-22,-6));
-            metrics=Text("",footer,11,muted); Anchors(metrics.rectTransform,Vector2.zero,Vector2.one,new Vector2(22,7),new Vector2(-22,-33));
-            networkPanel=Panel("Conexao",root.transform);
-            var row=networkPanel.gameObject.AddComponent<HorizontalLayoutGroup>(); row.spacing=7; row.padding=new RectOffset(8,8,4,4); row.childControlHeight=true; row.childControlWidth=true; row.childForceExpandWidth=false;
+            footer=Panel("Rodape",root.transform); footer.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.55f); footer.GetComponent<Image>().raycastTarget=false;
+            status=Text("",footer,13,ink); status.alignment=TextAnchor.MiddleLeft; Anchors(status.rectTransform,Vector2.zero,new Vector2(.62f,1),new Vector2(12,0),Vector2.zero);
+            metrics=Text("",footer,10,muted); metrics.alignment=TextAnchor.MiddleRight; Anchors(metrics.rectTransform,new Vector2(.62f,0),Vector2.one,Vector2.zero,new Vector2(-12,0));
+            metrics.gameObject.SetActive(!Application.isMobilePlatform);
+            // Barra da partida: página "Partida" do painel lateral, em 2 colunas.
+            networkPanel=Panel("Conexao",side); networkPanel.GetComponent<Image>().color=Color.clear;
+            var row=networkPanel.gameObject.AddComponent<GridLayoutGroup>(); row.spacing=new Vector2(6,6); row.constraint=GridLayoutGroup.Constraint.FixedColumnCount; row.constraintCount=2;
+            networkPanel.gameObject.AddComponent<LayoutElement>().flexibleHeight=1;
             Button("Nova local",networkPanel,Game.NewLocal,84);
             Button("Lutadores",networkPanel,OpenPicker,84);
             seats=Button("",networkPanel,Game.CycleSeats,92);
@@ -83,8 +94,9 @@ namespace ArenaTatica
             viewPanel=Panel("Vista",root.transform);
             var viewRow=viewPanel.gameObject.AddComponent<HorizontalLayoutGroup>(); viewRow.spacing=6; viewRow.padding=new RectOffset(6,6,4,4); viewRow.childControlHeight=true; viewRow.childControlWidth=true; viewRow.childForceExpandWidth=false;
             Button("◄ Girar",viewPanel,()=>Game.View.RotateView(-1),80); Button("Girar ►",viewPanel,()=>Game.View.RotateView(1),80);
-            // Em 1280 px a barra não cabia (Retomar/Tela cheia saíam da tela): os botões encolhem até 60% e o texto quebra.
-            foreach(var le in networkPanel.GetComponentsInChildren<LayoutElement>()) le.minWidth=le.preferredWidth>0?le.preferredWidth*.6f:100;
+            // Painel recolhido: só esta aba na borda esquerda, abaixo da faixa do topo.
+            sideTab=Button("☰",root.transform,()=>SetSideOpen(true)); sideTab.GetComponentInChildren<Text>().fontSize=20;
+            networkPanel.gameObject.SetActive(false);
             // Retrato do lutador ativo (tarefa 012 de nitidez): na mesa ele tem ~45 px em 1280×720; aqui, 120 px de arte.
             portrait=Panel("Retrato",root.transform); var frame=portrait.GetComponent<Image>(); frame.color=new Color(.03f,.04f,.07f,.72f); frame.raycastTarget=false;
             portraitArt=new GameObject("Arte",typeof(RectTransform),typeof(Image)).GetComponent<Image>(); portraitArt.transform.SetParent(portrait,false);
@@ -108,22 +120,24 @@ namespace ArenaTatica
             // Cena animada do castor (Sprites/Vendedor/frame-NN, tarefa 004); sem ela, a imagem parada.
             vendor=Resources.LoadAll<Sprite>("Sprites/Vendedor").OrderBy(x=>x.name).ToArray(); shopScene=scene;
             scene.sprite=vendor.Length>0?vendor[0]:Resources.Load<Sprite>("Sprites/Cenarios/loja"); scene.preserveAspect=true; scene.raycastTarget=false; if(!scene.sprite) scene.color=Color.clear;
-            Anchors(scene.rectTransform,new Vector2(0,.27f),Vector2.one,new Vector2(10,0),new Vector2(-10,-42));
+            Anchors(scene.rectTransform,new Vector2(0,.44f),Vector2.one,new Vector2(10,0),new Vector2(-10,-42));
             shopTitle=Text("",shopWindow,17,ArenaPresentation.Gold); shopTitle.alignment=TextAnchor.MiddleLeft;
             Anchors(shopTitle.rectTransform,new Vector2(0,1),Vector2.one,new Vector2(16,-38),new Vector2(-60,-6));
             var close=Button("✕",shopWindow,()=>shopWindow.gameObject.SetActive(false));
             Anchors((RectTransform)close.transform,Vector2.one,Vector2.one,new Vector2(-46,-38),new Vector2(-8,-6));
             var items=new GameObject("Itens",typeof(RectTransform),typeof(HorizontalLayoutGroup)).GetComponent<RectTransform>(); items.SetParent(shopWindow,false);
             var row=items.GetComponent<HorizontalLayoutGroup>(); row.spacing=8; row.childControlWidth=row.childControlHeight=true; row.childForceExpandWidth=true; row.childForceExpandHeight=true;
-            Anchors(items,new Vector2(0,.13f),new Vector2(1,.26f),new Vector2(16,0),new Vector2(-16,0));
+            // Cada item: figura à esquerda, nome e preço em cima e, embaixo, a descrição do que ele faz (no celular não há cursor).
+            Anchors(items,new Vector2(0,0),new Vector2(1,.36f),new Vector2(16,12),new Vector2(-16,0));
             for(int i=0;i<Shop.Slots;i++) {
                 int k=i; var b=Button("",items,()=>Game.Submit("comprar",slot:k)); shopButtons.Add(b);
                 var icon=new GameObject("Icone",typeof(RectTransform),typeof(Image)).GetComponent<Image>(); icon.transform.SetParent(b.transform,false); icon.preserveAspect=true; icon.raycastTarget=false;
-                Anchors(icon.rectTransform,Vector2.zero,new Vector2(0,1),new Vector2(6,4),new Vector2(62,-4)); shopIcons.Add(icon);
-                var label=b.GetComponentInChildren<Text>(); Anchors(label.rectTransform,Vector2.zero,Vector2.one,new Vector2(66,0),new Vector2(-4,0));
+                Anchors(icon.rectTransform,new Vector2(0,1),new Vector2(0,1),new Vector2(6,-60),new Vector2(58,-6)); shopIcons.Add(icon);
+                var label=b.GetComponentInChildren<Text>(); label.alignment=TextAnchor.UpperLeft; label.fontSize=12; label.verticalOverflow=VerticalWrapMode.Truncate;
+                Anchors(label.rectTransform,Vector2.zero,Vector2.one,new Vector2(64,6),new Vector2(-6,-6));
             }
             shopHelp=Text("",shopWindow,13,muted); shopHelp.alignment=TextAnchor.MiddleCenter; shopHelp.horizontalOverflow=HorizontalWrapMode.Wrap;
-            Anchors(shopHelp.rectTransform,Vector2.zero,new Vector2(1,.13f),new Vector2(16,4),new Vector2(-16,0));
+            Anchors(shopHelp.rectTransform,new Vector2(0,.36f),new Vector2(1,.44f),new Vector2(16,0),new Vector2(-16,0));
             shopWindow.gameObject.SetActive(false);
         }
         // Desejo D: depois de tocar no lutador, a lista das skills dele que dá para copiar; o botão manda a escolhida (Command.slot).
@@ -330,39 +344,61 @@ namespace ArenaTatica
         }
         static void Anchors(RectTransform rect,Vector2 min,Vector2 max,Vector2 offsetMin,Vector2 offsetMax) { rect.anchorMin=min; rect.anchorMax=max; rect.offsetMin=offsetMin; rect.offsetMax=offsetMax; }
         bool Portrait => width<height;
+        // Painel lateral: aberto ou recolhido (só a aba ☰). O tabuleiro ocupa a tela inteira e se centraliza na parte livre.
+        RectTransform actionsPage; Button actionsTab,matchTab,sideTab; bool matchPage;
+        public static bool SideOpen=true;
+        void SetSideOpen(bool open)
+        {
+            SideOpen=open; side.gameObject.SetActive(open); sideTab.gameObject.SetActive(!open);
+            Layout(); Game.View?.FitCamera();
+        }
+        void ShowPage(bool match)
+        {
+            matchPage=match; actionsPage.gameObject.SetActive(!match); networkPanel.gameObject.SetActive(match);
+            actionsTab.GetComponent<Image>().color=match?idle:chosen; matchTab.GetComponent<Image>().color=match?chosen:idle;
+        }
         // Escala da interface: a mesma do CanvasScaler (referência 1280×720, meio a meio), mas no PC não passa de 1,
         // para que em tela grande os botões não inchem e o espaço ganho vá para o tabuleiro.
         public static float UiScale => Mathf.Max(.5f,Mathf.Min(Application.isMobilePlatform?4:1,Mathf.Sqrt(Screen.width/1280f*Screen.height/720f)));
         // Área livre para o tabuleiro em pixels, entre os painéis montados em Layout (mesmas medidas).
+        // Faixas fixas (unidades do Canvas): topo, rodapé e largura do painel lateral aberto.
+        public const float TopBar=40,BottomBar=28,SideWidth=288,SideBand=222;
+        // Parte da tela que o tabuleiro tem livre (pixels). A câmera cobre a tela toda; o tabuleiro se centraliza aqui.
         public static Rect BoardArea()
         {
-            float k=UiScale,w=Screen.width,h=Screen.height;
-            if(w<h) { float bottom=243*k,top=h*.81f-46*k; return new Rect(8*k,bottom,w-16*k,Mathf.Max(10,top-bottom)); }
-            float left=304*k,low=70*k,high=h-134*k; return new Rect(left,low,Mathf.Max(10,w-left-12*k),Mathf.Max(10,high-low));
+            float k=UiScale,w=Screen.width,h=Screen.height,top=h-TopBar*k,low=BottomBar*k;
+            if(w<h) { if(SideOpen) low=(BottomBar+SideBand+8)*k; return new Rect(0,low,w,Mathf.Max(10,top-low)); }
+            float left=SideOpen?(SideWidth+8)*k:0; return new Rect(left,low,Mathf.Max(10,w-left),Mathf.Max(10,top-low));
         }
         void Layout()
         {
             width=Screen.width; height=Screen.height; canvas.GetComponent<CanvasScaler>().scaleFactor=UiScale;
-            mobileStats.gameObject.SetActive(Portrait); logPanel.gameObject.SetActive(!Portrait);
+            mobileStats.gameObject.SetActive(Portrait); score.gameObject.SetActive(!Portrait); logPanel.gameObject.SetActive(!Portrait);
             foreach(var l in labels) l.gameObject.SetActive(!Portrait);
+            Anchors(top,new Vector2(0,1),Vector2.one,new Vector2(0,-TopBar),Vector2.zero);
+            Anchors(footer,Vector2.zero,new Vector2(1,0),Vector2.zero,new Vector2(0,BottomBar));
             var v=side.GetComponent<VerticalLayoutGroup>();
+            var board=BoardArea(); float k=UiScale, freeLeft=board.xMin/k, freeLow=board.yMin/k;
             if(Portrait) {
-                Anchors(side,Vector2.zero,new Vector2(1,0),new Vector2(10,65),new Vector2(-10,235));
+                Anchors(side,Vector2.zero,new Vector2(1,0),new Vector2(8,BottomBar+4),new Vector2(-8,BottomBar+SideBand));
                 v.padding=new RectOffset(10,10,6,6);
-                Anchors(networkPanel,new Vector2(0,.81f),new Vector2(1,.81f),new Vector2(8,-38),new Vector2(-8,0));
+                Anchors((RectTransform)sideTab.transform,Vector2.zero,Vector2.zero,new Vector2(8,BottomBar+6),new Vector2(56,BottomBar+54));
                 Anchors(shopWindow,new Vector2(0,.3f),new Vector2(1,.8f),new Vector2(8,0),new Vector2(-8,0));
-                Anchors(viewPanel,new Vector2(1,0),new Vector2(1,0),new Vector2(-190,242),new Vector2(-8,284));
-                address.GetComponent<LayoutElement>().minWidth=90; host.GetComponent<LayoutElement>().minWidth=45; room.GetComponent<LayoutElement>().minWidth=45; resume.gameObject.SetActive(false); format.gameObject.SetActive(false); theme.gameObject.SetActive(false);
+                Anchors(viewPanel,new Vector2(1,0),new Vector2(1,0),new Vector2(-190,freeLow+6),new Vector2(-8,freeLow+48));
             } else {
-                Anchors(side,new Vector2(0,0),new Vector2(0,1),new Vector2(18,75),new Vector2(292,-98));
-                v.padding=new RectOffset(16,16,12,12);
-                Anchors(networkPanel,new Vector2(0,1),Vector2.one,new Vector2(304,-126),new Vector2(-12,-88));
-                Anchors(shopWindow,new Vector2(.25f,.12f),new Vector2(.98f,.86f),Vector2.zero,Vector2.zero);
-                // Canto inferior esquerdo da área do tabuleiro: o losango da mesa deixa esse canto vazio.
-                Anchors(portrait,Vector2.zero,Vector2.zero,new Vector2(310,80),new Vector2(438,232));
-                Anchors(viewPanel,new Vector2(1,0),new Vector2(1,0),new Vector2(-194,74),new Vector2(-12,116));
-                resume.gameObject.SetActive(true); format.gameObject.SetActive(true); theme.gameObject.SetActive(true);
+                Anchors(side,Vector2.zero,new Vector2(0,1),new Vector2(0,BottomBar),new Vector2(SideWidth,-TopBar));
+                v.padding=new RectOffset(12,12,8,10);
+                Anchors((RectTransform)sideTab.transform,new Vector2(0,1),new Vector2(0,1),new Vector2(8,-TopBar-54),new Vector2(56,-TopBar-6));
+                Anchors(shopWindow,new Vector2(.25f,.1f),new Vector2(.98f,.9f),Vector2.zero,Vector2.zero);
+                // Canto inferior esquerdo da parte livre: o losango da mesa deixa esse canto vazio.
+                Anchors(portrait,Vector2.zero,Vector2.zero,new Vector2(freeLeft+8,BottomBar+6),new Vector2(freeLeft+120,BottomBar+150));
+                Anchors(viewPanel,new Vector2(1,0),new Vector2(1,0),new Vector2(-190,BottomBar+6),new Vector2(-8,BottomBar+48));
             }
+            side.gameObject.SetActive(SideOpen); sideTab.gameObject.SetActive(!SideOpen);
+            ShowPage(matchPage);
+            float inner=(Portrait?width/k-16:SideWidth)-v.padding.left-v.padding.right;
+            var net=networkPanel.GetComponent<GridLayoutGroup>(); net.constraintCount=Portrait?4:2;
+            net.cellSize=new Vector2((inner-net.spacing.x*(net.constraintCount-1))/net.constraintCount,36);
             LayoutPicker();
         }
         void FitGrid(RectTransform grid,int columns)
@@ -377,6 +413,8 @@ namespace ArenaTatica
         }
         static string Describe(SkillDef sk) => Content.Describe(sk);
         static string Describe(ShopDef d) => Content.Describe(d);
+        // Descrição sob o item: o texto da loja sem repetir o nome que já está na primeira linha do botão.
+        public static string ItemEffect(ShopDef d) { string text=Describe(d); return text.StartsWith(d.name+": ")?text.Substring(d.name.Length+2):text; }
         Sprite[] vendor; Image shopScene;
         // Tela cheia: botão ou F11 (Alt+Enter também funciona no Windows). No celular o jogo já ocupa a tela.
         Button fullscreen;
@@ -442,7 +480,7 @@ namespace ArenaTatica
             if(UnityEngine.InputSystem.Keyboard.current?.escapeKey.wasPressedThisFrame==true) shopWindow.gameObject.SetActive(false);
             for(int i=0;i<shopButtons.Count;i++) {
                 var d=i<slots.Length?Shop.Def(slots[i]):null; var b=shopButtons[i];
-                SetLabel(b,d==null?"—":$"{d.name} ({d.price})");
+                SetLabel(b,d==null?"—":$"<b>{d.name}</b>  <color=#{ArenaTema.Html(ArenaPresentation.Gold)}>{d.price} moedas</color>\n<size=11><color=#{ArenaTema.Html(muted)}>{ItemEffect(d)}</color></size>");
                 b.interactable=d!=null&&Game.CanAct&&atShop&&f.summoner==0&&s.coins[team]>=d.price;
                 var sp=ShopIcon(d?.id); shopIcons[i].sprite=sp; shopIcons[i].enabled=sp; shopIcons[i].color=b.interactable||d==null?Color.white:new Color(1,1,1,.5f);
             }
@@ -450,7 +488,7 @@ namespace ArenaTatica
             FitGrid(actions,Portrait?4:skills.Count>4?2:1); FitGrid(shopGrid,Portrait?3:1);
             var chosenSkill=skills.FirstOrDefault(x=>x.id==Game.Mode);
             help.text=chosenSkill!=null?Describe(chosenSkill)+"\nClique num alvo laranja.":"Casas azuis: alcance dos PM. Clique para mover.";
-            shopHelp.text=HoveredShop()??(f!=null&&f.summoner!=0?"Invocações não compram.":"Passe o cursor num item para ver o efeito. Compre quantos puder pagar.");
+            shopHelp.text=f!=null&&f.summoner!=0?"Invocações não compram.":"Toque num item para comprar. Compre quantos puder pagar.";
             result.text=s.over?(s.winner==0?"EMPATE":$"VITÓRIA · {ArenaPresentation.TeamName(s,s.winner).ToUpperInvariant()}"):Game.Recovery?"CONEXÃO INTERROMPIDA":Game.Lobby?"AGUARDANDO JOGADORES":"";
             status.text=Game.Status;
             log.text=string.Join("\n",logLines);
@@ -463,16 +501,6 @@ namespace ArenaTatica
 #if UNITY_WEBGL && !UNITY_EDITOR
             host.interactable=false;
 #endif
-        }
-        // Descrição do item da loja sob o cursor.
-        string HoveredShop()
-        {
-            var es=EventSystem.current; if(!es) return null;
-            var pointer=UnityEngine.InputSystem.Pointer.current; if(pointer==null) return null;
-            var results=new List<RaycastResult>(); es.RaycastAll(new PointerEventData(es){position=pointer.position.ReadValue()},results);
-            var s=Game.State; int team=Game.Active?.team??1;
-            foreach(var r in results) { int i=shopButtons.FindIndex(b=>b.gameObject==r.gameObject); if(i>=0) { var d=Shop.Def(s.shops[team].slots[i]); return d==null?null:Describe(d); } }
-            return null;
         }
         public void ShowRoom(string code) { address.text=code; }
         public void Log(string line) { logLines.Add(line); if(logLines.Count>7) logLines.RemoveAt(0); }

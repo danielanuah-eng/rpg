@@ -118,6 +118,10 @@ public static class ArenaBuild
     }
     public static void Android()
     {
+        // Celular só deitado (a mesa e a HUD foram feitas para paisagem); gira entre os dois lados.
+        PlayerSettings.defaultInterfaceOrientation=UIOrientation.AutoRotation;
+        PlayerSettings.allowedAutorotateToPortrait=false; PlayerSettings.allowedAutorotateToPortraitUpsideDown=false;
+        PlayerSettings.allowedAutorotateToLandscapeLeft=true; PlayerSettings.allowedAutorotateToLandscapeRight=true;
         PlayerSettings.Android.forceInternetPermission=true;
         PlayerSettings.Android.targetArchitectures=AndroidArchitecture.ARM64;
         PlayerSettings.SetScriptingBackend(UnityEditor.Build.NamedBuildTarget.Android,ScriptingImplementation.IL2CPP);
@@ -194,6 +198,30 @@ static class ArenaTestMenu
         Start(true,Enumerable.Range(0,g.Seats).Select(i=>i==0?new[]{"baltazar","damian"}:new[]{"ogro-de-pedra"}).ToArray()); Debug.Log("Mapa: "+map.name);
     }
     [MenuItem("Arena Tática/Teste/Girar vista")] static void Rotate() => Game?.View.RotateView(1);
+    // Toque de celular simulado (Touchscreen virtual): dedo desce e sobe numa casa vizinha do lutador ativo; loga se ele andou.
+    [MenuItem("Arena Tática/Teste/Toque: mover para casa vizinha")] static void TouchMove()
+    {
+        var g=Game; var f=g?.Active; var s=g?.State; if(f==null) return;
+        if(!g.CanAct) { Debug.Log("ARENA_TOQUE: não é a vez de um lutador do jogador; passe a vez do bot e tente de novo"); return; }
+        var screen=UnityEngine.InputSystem.Touchscreen.current??UnityEngine.InputSystem.InputSystem.AddDevice<UnityEngine.InputSystem.Touchscreen>();
+        var from=f.cell; var targets=new[]{new Cell(from.x+1,from.z),new Cell(from.x-1,from.z),new Cell(from.x,from.z+1),new Cell(from.x,from.z-1)}
+            .Where(c=>c.x>=0&&c.z>=0&&c.x<s.width&&c.z<s.height).ToArray();
+        int step=0,target=0; Vector2 pos=default;
+        void Touch(UnityEngine.InputSystem.TouchPhase phase) => UnityEngine.InputSystem.InputSystem.QueueStateEvent(screen,new UnityEngine.InputSystem.LowLevel.TouchState{touchId=1,phase=phase,position=pos});
+        void Tick()
+        {
+            if(!Game||target>=targets.Length) { EditorApplication.update-=Tick; Debug.Log("ARENA_TOQUE: nenhuma casa vizinha aceitou o movimento"); return; }
+            if(step==0) { var c=targets[target]; Vector3 p=Game.View.BoardCamera.WorldToScreenPoint(ArenaTatica.ArenaPresentation.Position(Game.State,c)); pos=new Vector2(p.x,p.y); Touch(UnityEngine.InputSystem.TouchPhase.Began); }
+            else if(step==4) Touch(UnityEngine.InputSystem.TouchPhase.Ended);
+            else if(step==12) {
+                var moved=Game.State.fighters.FirstOrDefault(x=>x.id==f.id);
+                if(moved!=null&&moved.cell.Equals(targets[target])) { EditorApplication.update-=Tick; Debug.Log($"ARENA_TOQUE: {f.def} andou de {from.x},{from.z} para a casa tocada {moved.cell.x},{moved.cell.z}"); return; }
+                target++; step=-1;
+            }
+            step++;
+        }
+        EditorApplication.update+=Tick;
+    }
     // Props ambientais (GLB com clipe Legacy): confirma no Play que cada Animation está tocando em laço.
     [MenuItem("Arena Tática/Teste/Props animados: estado")] static void AmbientState()
     {

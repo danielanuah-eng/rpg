@@ -80,7 +80,9 @@ namespace ArenaTatica
         // Vista: 4 lados (90° cada), só neste aparelho; girar não muda casas, alcance nem turno (tarefa 012/013).
         public int View { get; private set; }
         Vector3 CameraHome => Quaternion.Euler(0,90*View,0)*new Vector3(36,36,36);
-        float fitSize=1,pinchDistance; bool pressing,pressOnBoard,dragged,pinching; Vector2 pressStart,lastDrag,pinchCenter;
+        // Posição de repouso: CameraHome deslocada para o tabuleiro ficar no centro da parte livre da tela (FitCamera).
+        Vector3 homeShift; Vector3 Home => CameraHome+homeShift;
+        float fitSize=1,pinchDistance; bool pressing,pressOnBoard,dragged,pinching,touchPress; Vector2 pressStart,lastDrag,pinchCenter;
         // Girar a vista sem teclado: botão direito arrastado, segurar parado ~0,45 s e arrastar para o lado, ou girar dois dedos.
         bool rotating,rotateButton; float rotateAcc,pressTime,pinchAngle,twist;
         Material silhouetteMaterial;
@@ -324,12 +326,28 @@ namespace ArenaTatica
             BoardCamera.backgroundColor=backdrop.backgroundColor=ev?EventSkies[s.ev].tint:Palettes[theme].sky;
             if(id==shownSky) return; shownSky=id;
             var art=Resources.Load<Sprite>("Sprites/Ceus/"+id+"/fundo");
+            // Sem arte do céu: degradê do tema (antes era a cor lisa do fundo, marrom no deserto).
+            skyGradient=!art; if(!art) art=GradientSky(ev?EventSkies[s.ev].tint*3.2f:SkyTops[theme],ev?EventSkies[s.ev].tint:SkyBottoms[theme]);
             sky.sprite=art; sky.enabled=art; if(art&&spriteMaterial) sky.sharedMaterial=spriteMaterial; FitSky();
+        }
+        // Céu de dia por tema (topo → horizonte): montanha, bosque, deserto ao poente, neve e cinzas do vulcão.
+        static readonly Color[] SkyTops={C(.36f,.5f,.7f),C(.4f,.62f,.82f),C(.3f,.45f,.72f),C(.52f,.66f,.84f),C(.16f,.07f,.09f)};
+        static readonly Color[] SkyBottoms={C(.72f,.8f,.88f),C(.78f,.88f,.86f),C(.98f,.74f,.5f),C(.88f,.92f,.97f),C(.55f,.2f,.09f)};
+        bool skyGradient; readonly Dictionary<string,Sprite> gradients=new Dictionary<string,Sprite>();
+        Sprite GradientSky(Color top,Color bottom)
+        {
+            string key=ColorUtility.ToHtmlStringRGB(top)+ColorUtility.ToHtmlStringRGB(bottom);
+            if(gradients.TryGetValue(key,out var cached)) return cached;
+            var tex=new Texture2D(4,64,TextureFormat.RGBA32,false){ wrapMode=TextureWrapMode.Clamp, filterMode=FilterMode.Bilinear };
+            for(int y=0;y<64;y++) { var c=Color.Lerp(bottom,top,Mathf.SmoothStep(0,1,y/63f)); c.a=1; for(int x=0;x<4;x++) tex.SetPixel(x,y,c); }
+            tex.Apply(); return gradients[key]=Sprite.Create(tex,new Rect(0,0,4,64),new Vector2(.5f,.5f),64);
         }
         void FitSky()
         {
             if(!sky||!sky.enabled||!sky.sprite) return;
             float h=BoardCamera.orthographicSize*2, w=h*BoardCamera.aspect; var size=sky.sprite.bounds.size;
+            // Degradê estica para a tela toda; arte do Codex mantém a proporção e cobre a tela.
+            if(skyGradient) { sky.transform.localScale=new Vector3(w/size.x*1.02f,h/size.y*1.02f,1); return; }
             float k=Mathf.Max(w/size.x,h/size.y)*1.02f; sky.transform.localScale=new Vector3(k,k,1);
         }
         // Moedas, armadilhas visíveis para quem olha esta tela, lava, gelo, marcas dos fogos e a prisão dos pesadelos.
@@ -413,13 +431,18 @@ namespace ArenaTatica
         {
             if(!BoardCamera) return;
             BoardCamera.transform.position=CameraHome; BoardCamera.transform.LookAt(Vector3.zero);
-            BoardCamera.pixelRect=ArenaHud.BoardArea();
-            float aspect=BoardCamera.pixelRect.width/Mathf.Max(1,BoardCamera.pixelRect.height);
+            // A câmera desenha a tela inteira (o céu vai até as bordas); o tabuleiro cabe na parte livre e é deslocado
+            // para o centro dela, já que painel e faixas ficam por cima.
+            BoardCamera.rect=new Rect(0,0,1,1);
+            var area=ArenaHud.BoardArea();
+            float aspect=area.width/Mathf.Max(1,area.height);
             float halfW=0,halfH=0;
             for(int x=-1;x<=1;x+=2) for(int z=-1;z<=1;z+=2) for(int y=0;y<=1;y++) {
                 var p=BoardCamera.transform.InverseTransformPoint(new Vector3(x*(boardSize*.5f+.4f),y*3.2f,z*(boardSize*.5f+.4f))); halfW=Mathf.Max(halfW,Mathf.Abs(p.x)); halfH=Mathf.Max(halfH,Mathf.Abs(p.y));
             }
-            BoardCamera.orthographicSize=fitSize=Mathf.Max(halfH,halfW/aspect)*1.06f; BoardCamera.transform.position=CameraHome;
+            BoardCamera.orthographicSize=fitSize=Mathf.Max(halfH,halfW/aspect)*1.06f;
+            var cam=BoardCamera.transform; Vector2 d=area.center-new Vector2(Screen.width,Screen.height)*.5f;
+            homeShift=-(cam.right*d.x+cam.up*d.y)*(2*fitSize/Mathf.Max(1,Screen.height)); cam.position=Home;
             screenWidth=Screen.width; screenHeight=Screen.height;
         }
 
@@ -1330,6 +1353,8 @@ namespace ArenaTatica
             if(touches!=null&&touches.Length>=2) { Pinch(touches[0].position.ReadValue(),touches[1].position.ReadValue()); point=lastDrag; hasPointer=down=true; }
             else {
                 if(touches!=null&&touches.Length==1) { point=touches[0].position.ReadValue(); hasPointer=down=true; }
+                // Dedo levantado: o toque não tem mais posição (no celular nem há mouse); o toque vale onde o dedo estava.
+                else if(pressing&&touchPress) { point=lastDrag; hasPointer=true; }
                 else if(mouse!=null) { point=mouse.position.ReadValue(); hasPointer=true; down=mouse.leftButton.isPressed||mouse.rightButton.isPressed||mouse.middleButton.isPressed; }
                 if(pinching) { pinching=false; lastDrag=point; } // sobrou um dedo da pinça: segue arrastando dali, sem salto
             }
@@ -1337,6 +1362,7 @@ namespace ArenaTatica
             if(down) {
                 if(!pressing) {
                     pressing=true; pressOnBoard=overBoard; dragged=pinching; pressStart=lastDrag=point; pressTime=Time.unscaledTime; rotating=false; rotateAcc=0;
+                    touchPress=touches!=null&&touches.Length>0;
                     rotateButton=mouse!=null&&mouse.rightButton.isPressed&&(touches==null||touches.Length==0);
                 }
                 else if(!pinching) {
@@ -1357,7 +1383,7 @@ namespace ArenaTatica
             } else if(pressing) {
                 pressing=false;
                 // Só o toque/botão esquerdo age; o direito e o do meio servem apenas para arrastar.
-                tap=pressOnBoard&&!dragged&&(mouse==null||!mouse.rightButton.wasReleasedThisFrame&&!mouse.middleButton.wasReleasedThisFrame);
+                tap=pressOnBoard&&!dragged&&(touchPress||mouse==null||!mouse.rightButton.wasReleasedThisFrame&&!mouse.middleButton.wasReleasedThisFrame);
             }
             float wheel=mouse!=null?mouse.scroll.ReadValue().y:0;
             if(overBoard&&Mathf.Abs(wheel)>.01f) ZoomAt(point,wheel>0?.87f:1/.87f);
@@ -1401,7 +1427,7 @@ namespace ArenaTatica
             pinchCenter=lastDrag=center; pinchDistance=distance;
         }
         // O tabuleiro nunca sai de vista; afastado de todo, a câmera volta ao centro.
-        void ClampCamera() { var cam=BoardCamera.transform; cam.position=CameraHome+Vector3.ClampMagnitude(cam.position-CameraHome,(fitSize-BoardCamera.orthographicSize)*1.5f); }
+        void ClampCamera() { var cam=BoardCamera.transform; cam.position=Home+Vector3.ClampMagnitude(cam.position-Home,(fitSize-BoardCamera.orthographicSize)*1.5f); }
         // Mover: casas ao alcance dos PM. Skill: área de alcance (clara) e alvos válidos (forte).
         void UpdateHighlights(string key)
         {
