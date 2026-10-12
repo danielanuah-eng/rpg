@@ -104,7 +104,18 @@ public static class ArenaBuild
     public static void Windows() { Build(BuildTarget.StandaloneWindows64,"Builds/Windows/ArenaTatica.exe"); }
     [MenuItem("Arena Tática/Exportar Web")]
     public static void Web() { Build(BuildTarget.WebGL,"Builds/Web"); }
+    // Com acento no caminho do projeto o Unity recusa o Android: o menu chama Tools/build-android.ps1 (cópia fixa em
+    // caminho ASCII, build incremental) numa janela própria; o APK chega em Builds/Android/ArenaTatica.apk.
     [MenuItem("Arena Tática/Exportar Android")]
+    static void AndroidMenu()
+    {
+        string root=Path.GetFullPath(Path.Combine(Application.dataPath,".."));
+        if(!root.Any(c=>c>127)) { Android(); return; }
+        AssetDatabase.SaveAssets();
+        string script=Path.Combine(root,"Tools","build-android.ps1");
+        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("powershell.exe",$"-NoExit -ExecutionPolicy Bypass -File \"{script}\"") { UseShellExecute=true, WorkingDirectory=root });
+        Debug.Log("ARENA_ANDROID: build iniciado numa cópia em caminho ASCII (janela do PowerShell); log em Artifacts/android-cli.log.");
+    }
     public static void Android()
     {
         PlayerSettings.Android.forceInternetPermission=true;
@@ -183,6 +194,14 @@ static class ArenaTestMenu
         Start(true,Enumerable.Range(0,g.Seats).Select(i=>i==0?new[]{"baltazar","damian"}:new[]{"ogro-de-pedra"}).ToArray()); Debug.Log("Mapa: "+map.name);
     }
     [MenuItem("Arena Tática/Teste/Girar vista")] static void Rotate() => Game?.View.RotateView(1);
+    // Props ambientais (GLB com clipe Legacy): confirma no Play que cada Animation está tocando em laço.
+    [MenuItem("Arena Tática/Teste/Props animados: estado")] static void AmbientState()
+    {
+        foreach(var a in UnityEngine.Object.FindObjectsByType<Animation>(FindObjectsSortMode.None)) {
+            var s=a.clip?a[a.clip.name]:null;
+            Debug.Log($"ARENA_PROP: {a.gameObject.name} tocando={a.isPlaying} laco={s?.wrapMode} t={s?.time:0.00}");
+        }
+    }
     [MenuItem("Arena Tática/Teste/Ativo: passar")] static void Pass() => Game?.Submit("passar");
 }
 // O Play do editor sempre começa pela Arena, mesmo com outra cena (ou uma vazia) aberta.

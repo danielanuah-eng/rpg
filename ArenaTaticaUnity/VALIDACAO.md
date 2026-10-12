@@ -19,7 +19,7 @@ Projeto: Unity 6000.6.4f1, URP, cena `Assets/ArenaTatica/Scenes/Arena.unity`.
 - Concluir a build Web com a limpeza da tela completa para a HUD vertical.
 - Gerar APK Android. Teste físico em celular ainda não realizado.
 
-O Android recusou o caminho original com acentos. `Tools/build-android.ps1` exporta a partir de uma cópia temporária ASCII e traz o APK para Builds/Android; o projeto original permanece no lugar.
+O Android recusou o caminho original com acentos. `Tools/build-android.ps1` exporta a partir de uma cópia fixa ASCII (`%LOCALAPPDATA%\ArenaTaticaAndroid`, build incremental) e traz o APK para Builds/Android; o projeto original permanece no lugar.
 
 ## Limites da verificação
 

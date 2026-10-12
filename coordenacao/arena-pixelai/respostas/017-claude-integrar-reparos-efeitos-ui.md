@@ -57,3 +57,8 @@
 - Play: Bosque 12×12 e 18×18 (6 jogadores), Deserto, Neve (vista girada), Montanha/pedreira e Vulcão renderizaram com cores sólidas e sem ruído; barras de vida, botões Girar e props ambientais (estandarte, cata-vento, fonte, braseiro) visíveis; Console sem erros. EditMode 77/77 antes da troca.
 - Não conferido: animação em laço dos props e oclusão/silhueta atrás das árvores novas em todas as quatro vistas.
 - Elenco Blender V1: **não integrado** (autor rejeitou a aparência; direção Talyssa V2 aguarda amostra 3D). Sprites continuam no cliente.
+
+## Android e conferências (12/10/2026, Claude)
+- APK gerado (`Builds/Android/ArenaTatica.apk`, 213 MB, ARM64/IL2CPP) com o intent-filter `arenatatica://sala` no manifesto. Build limpo 48 min; incremental 18 min. Teste em aparelho ainda não feito.
+- `Tools/build-android.ps1`: cópia fixa ASCII em `%LOCALAPPDATA%\ArenaTaticaAndroid` (robocopy /MIR, Library preservada), encerra o VBCSCompiler compartilhado (causava CS2011) e não aborta mais com stderr do Unity. Menu Exportar Android chama o script quando o caminho tem acento.
+- Play: os 5 props ambientais tocam em laço (`Teste/Props animados: estado`); silhueta do time atrás das árvores nas quatro vistas.

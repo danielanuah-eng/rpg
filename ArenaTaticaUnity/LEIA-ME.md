@@ -7,7 +7,7 @@ Port da Arena Tática Godot para **Unity 6000.6.4f1 / URP**, iniciado em 09/10/2
 - **Editor:** execute `ABRIR-UNITY.cmd`. A cena é `Assets/ArenaTatica/Scenes/Arena.unity`; pressione Play.
 - **Windows:** execute `JOGAR.cmd`. O executável fica em `Builds/Windows/ArenaTatica.exe`.
 - **Web:** execute `SERVIR-WEB.cmd` e abra `http://127.0.0.1:8080`. Requer Node.js e a build em `Builds/Web`. Abrir o HTML diretamente pelo Explorador não serve os arquivos WASM corretamente.
-- **Android:** `powershell -ExecutionPolicy Bypass -File Tools/build-android.ps1` gera `Builds/Android/ArenaTatica.apk`. Usa uma cópia temporária sem acentos, exigida pelas ferramentas Android. O módulo, SDK, NDK e JDK precisam estar instalados. Conferir o estado real da entrega em `VALIDACAO.md`.
+- **Android:** `powershell -ExecutionPolicy Bypass -File Tools/build-android.ps1` gera `Builds/Android/ArenaTatica.apk`. Também pelo menu **Arena Tática → Exportar Android** (abre o script numa janela). Usa uma cópia fixa sem acentos em `%LOCALAPPDATA%\ArenaTaticaAndroid`, sincronizada a cada execução; a Library dessa cópia fica guardada, então o primeiro build é completo (~48 min) e os seguintes são incrementais (~18 min). O script encerra antes o servidor de compilação C# compartilhado (VBCSCompiler), que, vindo do editor aberto no caminho com acento, não lê os arquivos da cópia (erro CS2011). Log em `Artifacts/android-cli.log`. O módulo, SDK, NDK e JDK precisam estar instalados. Conferir o estado real da entrega em `VALIDACAO.md`.
 
 Em partida local, a mesma pessoa controla P1 e P2 por turnos. Escolha **Mover** e clique em uma casa alcançável, ou **Atacar** e clique numa miniatura adversária. **Encerrar turno** ou Espaço passa a vez; os dragões agem automaticamente após P2.
 
