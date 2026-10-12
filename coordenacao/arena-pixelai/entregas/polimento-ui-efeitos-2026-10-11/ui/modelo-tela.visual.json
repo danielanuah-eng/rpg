@@ -1,0 +1,42 @@
+{
+  "schema": "arena-ui-model-v1",
+  "date": "2026-10-11",
+  "status": "modelo pronto; aplicação no Unity pendente Claude",
+  "entry": "ui/index.html#inicio",
+  "screens": ["inicio", "selecao", "personagens", "mapas", "arena", "efeitos"],
+  "tokens": {
+    "background": "#10151d",
+    "panel": "#19222e",
+    "raised": "#202c3a",
+    "border": "#344252",
+    "text": "#ede7d9",
+    "muted": "#a7b4c2",
+    "selected": "#e8c278",
+    "healing": "#8cccb3",
+    "hp": "#ea9d98",
+    "pm": "#a3cae6",
+    "radius": 14,
+    "focusOutline": 3,
+    "fontBody": "Segoe UI ou fonte atual do jogo com acentuação",
+    "fontTitle": "Georgia ou serifada equivalente disponível no Unity"
+  },
+  "layout": {
+    "initial": "Título e CTA à esquerda; arena transparente por inteiro à direita; três atalhos abaixo.",
+    "selection": "Busca, cartões com retrato/custo/Vida/PA/PM, check e borda dourada; equipe/custo/avanço em painel lateral.",
+    "mobile": "Navegação em linha própria, equipe abaixo dos cartões; arena integral e equipe em faixa acessível.",
+    "arena": "Tabuleiro inteiro com object-fit contain equivalente; atributos centralizados por personagem; equipe em painel lateral.",
+    "effects": "Entrada, permanência e encerramento por evento, com controle de pausa."
+  },
+  "integration": {
+    "target": "ArenaTaticaUnity Canvas/uGUI existentes",
+    "menuCanvas": "Manter ScaleWithScreenSize e referência 1280x720 do menu atual.",
+    "hudCanvas": "Manter ConstantPixelSize + UiScale do HUD atual; adaptar layout dentro desse fluxo.",
+    "preserve": ["nove abas existentes e callbacks", "elenco completo vindo dos dados atuais", "TeamColor/PlayerColors", "câmera do tabuleiro inteiro", "regras e valores atuais"],
+    "selectedState": "check + borda e fundo; não comunicar seleção apenas por cor",
+    "keyboard": "botões focáveis, Space/Enter, foco restaurado após remoção",
+    "emptyTeam": "avanço desabilitado e indicação para escolher lutador",
+    "sampleOnly": "seis lutadores e três mapas exemplificam o layout; não substituir o catálogo completo",
+    "prototypeAction": "Ver arena abre apenas prévia; conectar a ação real somente ao fluxo já existente do jogo"
+  },
+  "proof": ["ui/capturas/inicio-desktop.jpg", "ui/capturas/selecao-desktop.jpg", "ui/capturas/selecao-mobile.jpg", "ui/capturas/arena-mobile.jpg"]
+}

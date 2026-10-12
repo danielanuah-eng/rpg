@@ -1,0 +1,85 @@
+{
+  "requestedByAuthor": "corrigir somente Baltazar e Guardiao; demais correcoes de personagens excluidas",
+  "reportedCostGenerations": 7,
+  "attempts": [
+    {
+      "spec": {
+        "key": "baltazar-idle-west-v2",
+        "character_id": "e6148923-ecab-4e29-8da1-6d52cd46c535",
+        "directions": [
+          "west"
+        ],
+        "frame_count": 4,
+        "animation_name": "idle-sol-reparo-v2",
+        "custom_start_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/e6148923-ecab-4e29-8da1-6d52cd46c535/rotations/west.png?t=1791744193",
+        "end_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/e6148923-ecab-4e29-8da1-6d52cd46c535/rotations/west.png?t=1791744193",
+        "keep_first_frame": true,
+        "mode": "v3",
+        "action_description": "Four-frame subtle planted breathing idle of the EXACT reference purple dragonborn paladin. Keep the two visible curved tan horns, compact dragon skull, short muscular neck, bulky silver plate armor, violet scaled tail, and the same metal hammer firmly in the SAME hand. Maintain the reference WEST facing and the identical camera angle throughout. The existing idle wrongfully elongated the neck and removed the horns: never do that. Tiny breathing only. Feet planted at a common baseline; no horizontal drift, no turn, no weapon switching, no cuts. Entire character, horns, tail and hammer remain inside transparent canvas with clear margins. Finish in EXACT initial pose.",
+        "subject_description": "The precise reference purple dragonborn paladin Baltazar, compact horned head and heavy silver armor; do not redesign."
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "character: e6148923-ecab-4e29-8da1-6d52cd46c535\nanimation: v3 custom (Four-frame subtle planted breathing idle of the EXACT reference purple dragonborn paladin. Keep the two visible curved tan horns, compact dragon skull, short muscular neck, bulky silver plate armor, violet scaled tail, and the same metal hammer firmly in the SAME hand. Maintain the reference WEST facing and the identical camera angle throughout. The existing idle wrongfully elongated the neck and removed the horns: never do that. Tiny breathing only. Feet planted at a common baseline; no horizontal drift, no turn, no weapon switching, no cuts. Entire character, horns, tail and hammer remain inside transparent canvas with clear margins. Finish in EXACT initial pose.)\ndirections: west (1 jobs)\ngroup: 49ad8798-ebc4-4ff5-a308-faecf83b851b\nframes: 5 (1 reference + 4 animated)\ncost: 2 generations (2/dir x 1)\neta: ~30-60s/direction\n\nhint: get_character(character_id=\"e6148923-ecab-4e29-8da1-6d52cd46c535\")\nadd more directions to this group: animate_character(character_id=\"e6148923-ecab-4e29-8da1-6d52cd46c535\", action_description=\"Four-frame subtle planted breathing idle of the EXACT reference purple dragonborn paladin. Keep the two visible curved tan horns, compact dragon skull, short muscular neck, bulky silver plate armor, violet scaled tail, and the same metal hammer firmly in the SAME hand. Maintain the reference WEST facing and the identical camera angle throughout. The existing idle wrongfully elongated the neck and removed the horns: never do that. Tiny breathing only. Feet planted at a common baseline; no horizontal drift, no turn, no weapon switching, no cuts. Entire character, horns, tail and hammer remain inside transparent canvas with clear margins. Finish in EXACT initial pose.\", animation_group_id=\"49ad8798-ebc4-4ff5-a308-faecf83b851b\", directions=[...])"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "spec": {
+        "key": "baltazar-walk-west-v2",
+        "character_id": "e6148923-ecab-4e29-8da1-6d52cd46c535",
+        "directions": [
+          "west"
+        ],
+        "frame_count": 6,
+        "animation_name": "walk-sol-reparo-v2",
+        "custom_start_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/e6148923-ecab-4e29-8da1-6d52cd46c535/rotations/west.png?t=1791744193",
+        "end_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/e6148923-ecab-4e29-8da1-6d52cd46c535/rotations/west.png?t=1791744193",
+        "keep_first_frame": true,
+        "mode": "v3",
+        "action_description": "Six-frame smooth in-place WEST walking cycle of the EXACT reference purple dragonborn paladin. Keep the reference fixed WEST facing and fixed camera angle on ALL six frames: NO turn toward southwest in the second half. Compact horned dragon skull with tan curved horns, short muscular neck, bulky silver plate armor, purple tail, same metal hammer in SAME hand and visible on every frame. Alternate feet in a readable gentle step, foot contacts share one fixed ground baseline. No gliding across the canvas, no changing body scale, no missing limbs. Keep every extremity, both horns, tail and hammer within transparent canvas with margins. End in exact initial pose.",
+        "subject_description": "Exact Baltazar reference, heavy purple dragonborn paladin; fixed west view."
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "character: e6148923-ecab-4e29-8da1-6d52cd46c535\nanimation: v3 custom (Six-frame smooth in-place WEST walking cycle of the EXACT reference purple dragonborn paladin. Keep the reference fixed WEST facing and fixed camera angle on ALL six frames: NO turn toward southwest in the second half. Compact horned dragon skull with tan curved horns, short muscular neck, bulky silver plate armor, purple tail, same metal hammer in SAME hand and visible on every frame. Alternate feet in a readable gentle step, foot contacts share one fixed ground baseline. No gliding across the canvas, no changing body scale, no missing limbs. Keep every extremity, both horns, tail and hammer within transparent canvas with margins. End in exact initial pose.)\ndirections: west (1 jobs)\ngroup: 9c18c339-46d7-4ea8-a5f9-68ee4a5f6b28\nframes: 7 (1 reference + 6 animated)\ncost: 3 generations (3/dir x 1)\neta: ~30-60s/direction\n\nhint: get_character(character_id=\"e6148923-ecab-4e29-8da1-6d52cd46c535\")\nadd more directions to this group: animate_character(character_id=\"e6148923-ecab-4e29-8da1-6d52cd46c535\", action_description=\"Six-frame smooth in-place WEST walking cycle of the EXACT reference purple dragonborn paladin. Keep the reference fixed WEST facing and fixed camera angle on ALL six frames: NO turn toward southwest in the second half. Compact horned dragon skull with tan curved horns, short muscular neck, bulky silver plate armor, purple tail, same metal hammer in SAME hand and visible on every frame. Alternate feet in a readable gentle step, foot contacts share one fixed ground baseline. No gliding across the canvas, no changing body scale, no missing limbs. Keep every extremity, both horns, tail and hammer within transparent canvas with margins. End in exact initial pose.\", animation_group_id=\"9c18c339-46d7-4ea8-a5f9-68ee4a5f6b28\", directions=[...])"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "spec": {
+        "key": "guardiao-idle-north-west-v2",
+        "character_id": "87238f14-352a-4691-9f74-9c95bf4ab077",
+        "directions": [
+          "north-west"
+        ],
+        "frame_count": 4,
+        "animation_name": "idle-sol-reparo-v2",
+        "custom_start_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/rotations/north-west.png?t=1791744206",
+        "end_frame_url": "https://backblaze.pixellab.ai/file/pixellab-characters/79dfcb12-a74e-4f4e-87d1-a0307df21f74/87238f14-352a-4691-9f74-9c95bf4ab077/rotations/north-west.png?t=1791744206",
+        "keep_first_frame": true,
+        "mode": "v3",
+        "action_description": "Four-frame tiny idle of the EXACT reference Moss Guardian, stationary NORTHWEST view. Preserve the bark trunk head, its visible shape and top tuft, branch arms with intact wooden hands, feet, original brown bark textures and restrained dark moss GREEN palette. DO NOT grow a wide neon green shoulder cape or hide/cut the head. Tiny leaf sway and a subtle breath only; body scale and camera remain fixed. Every foot contact stays on the reference ground baseline. Keep head tuft, shoulders and both hands entirely inside the transparent canvas with generous margins. No walking, attacking, turning, recoloring, new growth or limb changes. End in the EXACT reference starting pose.",
+        "subject_description": "Exact reference brown wooden golem Moss Guardian with modest dark green moss collar, not a neon leaf cape."
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "character: 87238f14-352a-4691-9f74-9c95bf4ab077\nanimation: v3 custom (Four-frame tiny idle of the EXACT reference Moss Guardian, stationary NORTHWEST view. Preserve the bark trunk head, its visible shape and top tuft, branch arms with intact wooden hands, feet, original brown bark textures and restrained dark moss GREEN palette. DO NOT grow a wide neon green shoulder cape or hide/cut the head. Tiny leaf sway and a subtle breath only; body scale and camera remain fixed. Every foot contact stays on the reference ground baseline. Keep head tuft, shoulders and both hands entirely inside the transparent canvas with generous margins. No walking, attacking, turning, recoloring, new growth or limb changes. End in the EXACT reference starting pose.)\ndirections: north-west (1 jobs)\ngroup: c0120fc2-bb9e-47f9-b1ec-e401d53d5251\nframes: 5 (1 reference + 4 animated)\ncost: 2 generations (2/dir x 1)\neta: ~30-60s/direction\n\nhint: get_character(character_id=\"87238f14-352a-4691-9f74-9c95bf4ab077\")\nadd more directions to this group: animate_character(character_id=\"87238f14-352a-4691-9f74-9c95bf4ab077\", action_description=\"Four-frame tiny idle of the EXACT reference Moss Guardian, stationary NORTHWEST view. Preserve the bark trunk head, its visible shape and top tuft, branch arms with intact wooden hands, feet, original brown bark textures and restrained dark moss GREEN palette. DO NOT grow a wide neon green shoulder cape or hide/cut the head. Tiny leaf sway and a subtle breath only; body scale and camera remain fixed. Every foot contact stays on the reference ground baseline. Keep head tuft, shoulders and both hands entirely inside the transparent canvas with generous margins. No walking, attacking, turning, recoloring, new growth or limb changes. End in the EXACT reference starting pose.\", animation_group_id=\"c0120fc2-bb9e-47f9-b1ec-e401d53d5251\", directions=[...])"
+          }
+        ],
+        "isError": false
+      }
+    }
+  ],
+  "status": "produção concluída, conferência técnica passou; importação Unity pendente Claude"
+}

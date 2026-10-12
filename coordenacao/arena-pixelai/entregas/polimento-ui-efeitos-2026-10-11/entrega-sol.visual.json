@@ -1,0 +1,2832 @@
+{
+  "schema": "arena-delivery-v1",
+  "status": "produção conferida; integração pendente",
+  "approval": "automática autorizada pelo autor",
+  "files": [
+    {
+      "file": "assets.visual.json",
+      "bytes": 129974,
+      "sha256": "78df76df71fc9784d63a6d75491a7e387b6008c8913eb569b0ce6ddffceddaf5"
+    },
+    {
+      "file": "auditoria-efeitos.md",
+      "bytes": 1431,
+      "sha256": "b2b41ae72d85e9510671b52b0fb1e240faf7367a7cc8082a3614aad059f71c79"
+    },
+    {
+      "file": "auditoria-final-deepseek.md",
+      "bytes": 1145,
+      "sha256": "b4ed6a43e852d4a1b0285b3315097d43661258053ed3a216e1458092c6505735"
+    },
+    {
+      "file": "AUDITORIA-SOL.md",
+      "bytes": 2835,
+      "sha256": "3626fb771849ca33b6d1b29add9bc1e7b63fd19b3c3e50e9d1fc529b50224794"
+    },
+    {
+      "file": "auditoria-ui.md",
+      "bytes": 1061,
+      "sha256": "bb777f11c3a99cb233251e345f650359d4718fb97a7dad72ef8a67b92c177153"
+    },
+    {
+      "file": "baixar.py",
+      "bytes": 1520,
+      "sha256": "b8e8925f9d9ea80ce00a818a21c2087baa2714dfbb578e9260a206f1534e0b1e"
+    },
+    {
+      "file": "downloads-efeitos-baixados.json",
+      "bytes": 3978,
+      "sha256": "9ca302d216f43736dbd38798ca5467b27738b5d4b149a045fbaae43f7397083f"
+    },
+    {
+      "file": "downloads-efeitos.json",
+      "bytes": 4575,
+      "sha256": "4cfe84d7b8b50fab34746327beb004521a7a4390c0f5ac75cfc965da3da1536e"
+    },
+    {
+      "file": "downloads-objetos-baixados.json",
+      "bytes": 1314,
+      "sha256": "9086daa325fd39e9798a4ea7e8450a1d3289dadcd9244d98096698aa5503ecc5"
+    },
+    {
+      "file": "downloads-objetos.json",
+      "bytes": 1568,
+      "sha256": "28059e9f04b7bf0a694957a43c064185d130c7ef6655aa980e51641744d9cefb"
+    },
+    {
+      "file": "downloads-reparos-baixados.json",
+      "bytes": 2939,
+      "sha256": "0b8cb62b894a36dd52ecdc01312123c2bcbfd69605cce0349cc2985f3f3b5780"
+    },
+    {
+      "file": "downloads-reparos.json",
+      "bytes": 4942,
+      "sha256": "9d4395926c38b954b007173c6d171baf6c010dee5a62cf6bfe136db0aee23186"
+    },
+    {
+      "file": "efeitos/ancoras-bibliotecas.json",
+      "bytes": 2779,
+      "sha256": "6347a7e57c98a83e2acc54cfbe25226597b096268c8a06eaa941fd6640a27879"
+    },
+    {
+      "file": "efeitos/fontes/chuva-de-moedas.zip",
+      "bytes": 6277,
+      "sha256": "f6c38326979176f5124ce96143fbf66b6fbb31f6fd7c0dad8f905a79ace58609"
+    },
+    {
+      "file": "efeitos/fontes/eco-ancestral.zip",
+      "bytes": 34370,
+      "sha256": "10a5b07d6bb94d04c406b1cc5525a6da8d2d19cb7829bc1a9ba2c738108a2918"
+    },
+    {
+      "file": "efeitos/fontes/festival-de-fogos.zip",
+      "bytes": 32690,
+      "sha256": "910768ece3ae76b6ee00e8dda458f73fec971139466f8f9de374fa0cd5836e78"
+    },
+    {
+      "file": "efeitos/fontes/glyph-ancora-fantasma.zip",
+      "bytes": 10877,
+      "sha256": "612b83d9b0007b3049b9f80eb29eb3b01fcbf9a067fcaf83dfb9b326ad5888b4"
+    },
+    {
+      "file": "efeitos/fontes/glyph-corrente-fisica.zip",
+      "bytes": 4657,
+      "sha256": "0d48a707f3b9d888bdccfeace0373f76115f17b0daed946b64f8fefb8c4b7bda"
+    },
+    {
+      "file": "efeitos/fontes/glyph-desejo-apagar.zip",
+      "bytes": 11989,
+      "sha256": "1d03b9463f91b5b87c8423181f81f728eb1d595eb232e4103c2e3221bb245f59"
+    },
+    {
+      "file": "efeitos/fontes/glyph-desejo-itens.zip",
+      "bytes": 2463,
+      "sha256": "8ca3fa45aa31f757f8c624df1024b6d4145e9b3c60fb81619c0925d011aeba2c"
+    },
+    {
+      "file": "efeitos/fontes/glyph-devorar-essencia.zip",
+      "bytes": 3734,
+      "sha256": "23361534559a0ca1597289a6feab1c67165bfff105d1f9e29ec756e9c5d13db7"
+    },
+    {
+      "file": "efeitos/fontes/glyph-martelo-cristal.zip",
+      "bytes": 9261,
+      "sha256": "18f11b24aa52f79454943aabe424130d69efd8fb149271f735dd63bcb6fa6e18"
+    },
+    {
+      "file": "efeitos/fontes/glyph-pena-fenix.zip",
+      "bytes": 8848,
+      "sha256": "3a1df20d011ae832a17e6facf88efe8e33eb0b4be99b1b89519afe924a014dcd"
+    },
+    {
+      "file": "efeitos/fontes/lib-conjuracao.zip",
+      "bytes": 24944,
+      "sha256": "a4a35ad8e6c24e5b8336729fa58b8e2d2255c897f0387667d125b6c460e218db"
+    },
+    {
+      "file": "efeitos/fontes/lib-desejos.zip",
+      "bytes": 225817,
+      "sha256": "0346361fb92a7f3f9ddc8667e9426cd5d9e045f9f93f359cb73bcb3cfaf7e3ce"
+    },
+    {
+      "file": "efeitos/fontes/lib-estados.zip",
+      "bytes": 109816,
+      "sha256": "c2f1d162ce2a38f9c74e600a9f4ce80860a42b5b8f1684e4f0cc1d60a910e91b"
+    },
+    {
+      "file": "efeitos/fontes/lib-golpes.zip",
+      "bytes": 107859,
+      "sha256": "65ba9376b35509afe26b88efda31c2f5467efaaf79a2158fde9d25cb3dd7b785"
+    },
+    {
+      "file": "efeitos/fontes/lib-loja.zip",
+      "bytes": 118120,
+      "sha256": "34b888bf41a5c9df21869a7c5061c9ec2261e1d6edd074499245e9ca68801543"
+    },
+    {
+      "file": "efeitos/fontes/lib-magias.zip",
+      "bytes": 150597,
+      "sha256": "10ae011101e2821f5d2396e23272a77d1997074904cd19ab0bc0f67b49a76da7"
+    },
+    {
+      "file": "efeitos/fontes/lib-natureza.zip",
+      "bytes": 64369,
+      "sha256": "096a57aa58f16f9418bca8a08e97e00581fa958e8297f7b872451aba4f8eb8ac"
+    },
+    {
+      "file": "efeitos/fontes/lib-projeteis.zip",
+      "bytes": 17373,
+      "sha256": "f4cdfb6aaed177da8d348b65146ea65ef58827fcfa38a0038cbdc564640d3395"
+    },
+    {
+      "file": "efeitos/fontes/mare-de-energia.zip",
+      "bytes": 40202,
+      "sha256": "cfc86140e231c9cc43239fe187216a7ca86cfc509425fbacb483dfa78d727bcc"
+    },
+    {
+      "file": "efeitos/fontes/mare-de-lava.zip",
+      "bytes": 21901,
+      "sha256": "8ecea93f645d3896565bc66ebff1682c8b05a01894d02f07700c53d3174fb441"
+    },
+    {
+      "file": "efeitos/fontes/nevoeiro.zip",
+      "bytes": 58054,
+      "sha256": "9c5942ce95ce563c57c4d78cd1ffa1356f2e2ec25e51425c7135302229d778e8"
+    },
+    {
+      "file": "efeitos/fontes/obj-aura-gatinho.zip",
+      "bytes": 3126,
+      "sha256": "5e4f37f59d2c4fb0b52d585852741bfff1f3bf90a03bcc0f11d9cfabea6f1a16"
+    },
+    {
+      "file": "efeitos/fontes/obj-bau-recompensa.zip",
+      "bytes": 7102,
+      "sha256": "d450db6e1f0217f8a5bae3aacc9a0329af9f7d47b0ef5bf0595b03f8733ecedf"
+    },
+    {
+      "file": "efeitos/fontes/obj-buraco-papa-moedas.zip",
+      "bytes": 9275,
+      "sha256": "54f8494e907057369eaafe4547a5f2a27f6942cc8c1fef2c0e8352638d7efcea"
+    },
+    {
+      "file": "efeitos/fontes/obj-casa-congelada.zip",
+      "bytes": 8404,
+      "sha256": "c7dfa6711b7c375de94b7066a9fe34473755795447bbba0f5bc889679ec2443b"
+    },
+    {
+      "file": "efeitos/fontes/obj-casa-resfriada.zip",
+      "bytes": 7716,
+      "sha256": "e4b9c683bb1828edc466ef63d63962338d22870ae9360760a715b06c20e126b8"
+    },
+    {
+      "file": "efeitos/fontes/obj-mina-de-gelo-armada.zip",
+      "bytes": 8626,
+      "sha256": "a7af82ba832b4b587e0695037c895485bee5af67bd3ed5699672f6f88da1a326"
+    },
+    {
+      "file": "efeitos/fontes/obj-portal-de-rocha.zip",
+      "bytes": 22969,
+      "sha256": "279879a95f943a31ad6e4bb89a98d96fa393557b9c8dcae8335595382bc2c3cf"
+    },
+    {
+      "file": "efeitos/fontes/obj-prisao-dos-pesadelos.zip",
+      "bytes": 10452,
+      "sha256": "cab34de8d01d699b1c0790e05224e9a935bba60a52fbc4497651cc7ffda7aeb0"
+    },
+    {
+      "file": "efeitos/fontes/portal-caotico.zip",
+      "bytes": 88327,
+      "sha256": "bdcd877343fba1f514e51ad6ddaac3f16ff6a6ac22acdf5becf98ea4035546dc"
+    },
+    {
+      "file": "efeitos/fontes/queda-de-pedras.zip",
+      "bytes": 7801,
+      "sha256": "7df701cf068b57036df8794625cd5d0485e1d9934e5ce06fa0916291f6901b4d"
+    },
+    {
+      "file": "efeitos/fontes/terremoto.zip",
+      "bytes": 24953,
+      "sha256": "1d1c6ed1829131587f5ae0c6772a1d6ebd3f7d448345ae786cbf0907ad6e9cda"
+    },
+    {
+      "file": "efeitos/fontes/vendaval.zip",
+      "bytes": 14558,
+      "sha256": "fbdebd551e67a53c9c458f7b15cea91c17f2b2ed5388f86ba3e9045aa3b70b4a"
+    },
+    {
+      "file": "efeitos/plano-bibliotecas.json",
+      "bytes": 7780,
+      "sha256": "02e2b0234ee667a9d4bebb663e9d0dc98ee3bf71d43f105b74bc0b7d92b85e83"
+    },
+    {
+      "file": "efeitos/receitas-objetos.json",
+      "bytes": 125377,
+      "sha256": "38fdba593cd1a9551f6eacd70a848857a9c02c5106ba41638968be6f8722efe2"
+    },
+    {
+      "file": "empacotar.py",
+      "bytes": 16631,
+      "sha256": "6cf4e1ea239c62d01f4cc333ae4f123ffcdcac16b35426a3b1cffe23b52aba18"
+    },
+    {
+      "file": "exports-objetos-pixellab.json",
+      "bytes": 10187,
+      "sha256": "3ce716166c5368781f112008cbeea76050ff78cf5e558b003729c9b35715f040"
+    },
+    {
+      "file": "exports-pixellab.json",
+      "bytes": 30247,
+      "sha256": "3b7735b93ba8894aa46af10fb3e46ffa207b36ea80af1a9961898e18e6acc88d"
+    },
+    {
+      "file": "finalizar.py",
+      "bytes": 3527,
+      "sha256": "c488a9243039e66b1c98be717b55ea4f2007198f31aba4829c718fa931b9d1be"
+    },
+    {
+      "file": "inventario.json",
+      "bytes": 11134,
+      "sha256": "4300f6fd3c8e25f7054d399974e9dcb1d95456672c76963afdf4f46124b95b63"
+    },
+    {
+      "file": "LEIA-ME-SOL.md",
+      "bytes": 5290,
+      "sha256": "5ba4fa56f24fab205df01b36106ca834da345d76a33ba8e014463c6e357b53fd"
+    },
+    {
+      "file": "previews/Biblioteca/conjuracao/cura.gif",
+      "bytes": 1925,
+      "sha256": "10061aad7d2ab566d33bf9370f15c40e373266e35187441e296803426e9af63b"
+    },
+    {
+      "file": "previews/Biblioteca/conjuracao/fisico.gif",
+      "bytes": 1545,
+      "sha256": "d05432934263da0ad252d0fed45246ef85094be6543da714f8455e2035378016"
+    },
+    {
+      "file": "previews/Biblioteca/conjuracao/fogo.gif",
+      "bytes": 1808,
+      "sha256": "b8d2005fedcdff4e716bd12f777bd004ae352e74ff7b08c4178694ba39f57453"
+    },
+    {
+      "file": "previews/Biblioteca/conjuracao/magia.gif",
+      "bytes": 1690,
+      "sha256": "15602c5911e62c8678e8657b664d7930efa2269f6623f806660e2746fec51e83"
+    },
+    {
+      "file": "previews/Biblioteca/conjuracao/metal.gif",
+      "bytes": 1596,
+      "sha256": "737a8467fa7f8aaf4ebb7ca4822175cfb65a09d29f9d4c5140a868112c7a76fa"
+    },
+    {
+      "file": "previews/Biblioteca/conjuracao/natureza.gif",
+      "bytes": 1608,
+      "sha256": "1852c3827fb94e12b635cb5372ff603c12c8171204e0b5da426222d67b7dbdae"
+    },
+    {
+      "file": "previews/Biblioteca/desejos/apagar.gif",
+      "bytes": 39373,
+      "sha256": "e942e9495ff7540d6bcc06ab4607f359f1bdd206e76284dedab2584687afd0b2"
+    },
+    {
+      "file": "previews/Biblioteca/desejos/copiar.gif",
+      "bytes": 5921,
+      "sha256": "35c0477607f14d6de8aa907a814fbe7237bfdcb1b35f5c1f2f03ef9d29c66465"
+    },
+    {
+      "file": "previews/Biblioteca/desejos/cura.gif",
+      "bytes": 4527,
+      "sha256": "6eb73b03d799cc0c68beafc7b15ec68e770a4da8624241c65e3c8229f63abc7f"
+    },
+    {
+      "file": "previews/Biblioteca/desejos/devorar.gif",
+      "bytes": 4386,
+      "sha256": "0abcd0b7749ce731506d368788dfa304c86a76c42f112aab744c1f0ed2286532"
+    },
+    {
+      "file": "previews/Biblioteca/desejos/itens.gif",
+      "bytes": 7696,
+      "sha256": "a207a244550e2bd761a38016319140d4f4273f2ffab5a4c6f7593194f1763de3"
+    },
+    {
+      "file": "previews/Biblioteca/desejos/pa.gif",
+      "bytes": 9534,
+      "sha256": "9acf468e22289c703c9f2c0965f821e62e9573c092b25880036e1dbc2681a9b2"
+    },
+    {
+      "file": "previews/Biblioteca/desejos/reviver.gif",
+      "bytes": 12589,
+      "sha256": "b51e4124a1d2c51f3c3a39d8c055d560e504e6917d46b31dc4a93deeed2e0b51"
+    },
+    {
+      "file": "previews/Biblioteca/estados/armadura.gif",
+      "bytes": 8757,
+      "sha256": "9f6903f58bd5ac862489384795709923b63c62d4d73a85e4b920c6f4666f1e67"
+    },
+    {
+      "file": "previews/Biblioteca/estados/buff.gif",
+      "bytes": 6667,
+      "sha256": "a29581c7772cfd78a4b1ece9ee6fd1ef6f608505d41a4bee8df94d875bcca917"
+    },
+    {
+      "file": "previews/Biblioteca/estados/desejo.gif",
+      "bytes": 5832,
+      "sha256": "bab6fc468d46993d8d37595d9096d8dfa7cccc40b932da0e0f38c9044774b28a"
+    },
+    {
+      "file": "previews/Biblioteca/estados/escondido.gif",
+      "bytes": 10053,
+      "sha256": "a795da65d527e1814f8d466a44913df9d4afb16a290da4e37a459b28ac56ba55"
+    },
+    {
+      "file": "previews/Biblioteca/estados/preso.gif",
+      "bytes": 5700,
+      "sha256": "9ee5111d0637a3817a47be347fbdab2046e6507be2cab860d579f0191c77eccc"
+    },
+    {
+      "file": "previews/Biblioteca/estados/sem_pm.gif",
+      "bytes": 4143,
+      "sha256": "956bb99e9df02de04be2920a08658a7ffea3a75d55eff296ea3b34de113e8069"
+    },
+    {
+      "file": "previews/Biblioteca/golpes/clava.gif",
+      "bytes": 1533,
+      "sha256": "50ef0b4e053ea60faed24d998a14b481ba471167f8ec089fed847d486825cd64"
+    },
+    {
+      "file": "previews/Biblioteca/golpes/coroada.gif",
+      "bytes": 2990,
+      "sha256": "c0b5d2087422c8d8dc02a245fa1401cdb4b33bb06b75f9ba9dba7c6a7a70ac3b"
+    },
+    {
+      "file": "previews/Biblioteca/golpes/errante.gif",
+      "bytes": 5863,
+      "sha256": "28815f2d5bf5e0da0ed6aae354d6b0140d53013313e654ce26a7f440e21be209"
+    },
+    {
+      "file": "previews/Biblioteca/golpes/gancho.gif",
+      "bytes": 2034,
+      "sha256": "9032ee5d5263c9f0fdf7f65e278d7053fcbfa16f3c5b3808526b84a46617ec95"
+    },
+    {
+      "file": "previews/Biblioteca/golpes/pancada.gif",
+      "bytes": 4826,
+      "sha256": "9b67f8d89b013f998eaac2d15c6dc7e76774b7c17b5cd2a2fa52f8587ef58b69"
+    },
+    {
+      "file": "previews/Biblioteca/golpes/pauzinho.gif",
+      "bytes": 1172,
+      "sha256": "f2a9c48975a9e976894fc47d6fc475e244c7845512374b26b1065e3417a6d212"
+    },
+    {
+      "file": "previews/Biblioteca/golpes/pedra.gif",
+      "bytes": 1458,
+      "sha256": "4d3ede727fe57cd3acf0188d8e7a358d155da298302e50477a9559013fb45b6e"
+    },
+    {
+      "file": "previews/Biblioteca/golpes/pisao.gif",
+      "bytes": 6771,
+      "sha256": "ead740777d6907d0388d1adef77e7fcc5f9ff3217a09099776af91871eee8ffe"
+    },
+    {
+      "file": "previews/Biblioteca/golpes/rugido.gif",
+      "bytes": 8946,
+      "sha256": "9ee68382fdb054b26d1948fe366a606d1415570ada57dc3630fb2859ae620007"
+    },
+    {
+      "file": "previews/Biblioteca/loja/ancora.gif",
+      "bytes": 4651,
+      "sha256": "51f2f730d32146c6b19f531807ce1b8da1b4fd0b9212ba84bd1561bca007a6c5"
+    },
+    {
+      "file": "previews/Biblioteca/loja/bencao.gif",
+      "bytes": 6682,
+      "sha256": "8b599820b58cf51387bf5a3d6d324bb13e13c4473e9fe567152c85c9aac11c2a"
+    },
+    {
+      "file": "previews/Biblioteca/loja/corrente.gif",
+      "bytes": 1553,
+      "sha256": "4142435a845f3c8a5ceb3cfd5b4de5d370c0a186aaedc5c1a4c95c560f80aa27"
+    },
+    {
+      "file": "previews/Biblioteca/loja/espinhos.gif",
+      "bytes": 2558,
+      "sha256": "83ba6536076244447a4cd805974aade533408bb1303127d64acde430e3639498"
+    },
+    {
+      "file": "previews/Biblioteca/loja/fenix.gif",
+      "bytes": 6628,
+      "sha256": "4497ab31d856a64ba5560a2fe20c16c66d5579004820732c28644dd9a43851fd"
+    },
+    {
+      "file": "previews/Biblioteca/loja/foco.gif",
+      "bytes": 833,
+      "sha256": "c341c9ac3a8e822b0ac3cfa00ba9b70023487ad302191493d457176de3acab72"
+    },
+    {
+      "file": "previews/Biblioteca/loja/fumaca.gif",
+      "bytes": 5027,
+      "sha256": "2287392dd49ed6c03ac5156a574e9ca2cd1cda260f2d158d1a12a4576a21e2fb"
+    },
+    {
+      "file": "previews/Biblioteca/loja/martelo.gif",
+      "bytes": 3694,
+      "sha256": "66c0283a8570896f8366b512f0cd7e7f7d413ffb5b05965cb3006d9ac756648b"
+    },
+    {
+      "file": "previews/Biblioteca/loja/mina.gif",
+      "bytes": 4250,
+      "sha256": "b73f37aab97f49f278f241566ad2ec3df87e018f3f9fce6dad10e0ca5b9720fa"
+    },
+    {
+      "file": "previews/Biblioteca/loja/totem.gif",
+      "bytes": 9110,
+      "sha256": "1f5a17e4c1ce133183ec1ab4c2827b03a08348696df4167576c72b1168b40826"
+    },
+    {
+      "file": "previews/Biblioteca/magias/branca.gif",
+      "bytes": 2989,
+      "sha256": "35f6538c16b3bbc73f9db5227219e6bdc820afa65f2d3c0a17b9c24d1355cf3f"
+    },
+    {
+      "file": "previews/Biblioteca/magias/canhao.gif",
+      "bytes": 1673,
+      "sha256": "4ef685d4ff747e16d16eea7f9c363760998820123b47376f70e142a3dc9f6bdd"
+    },
+    {
+      "file": "previews/Biblioteca/magias/fogo.gif",
+      "bytes": 10371,
+      "sha256": "993efca46a7f39544ed07c8892d3b4e610ad0feff836eccd56883c9779e54b9f"
+    },
+    {
+      "file": "previews/Biblioteca/magias/gelo.gif",
+      "bytes": 6221,
+      "sha256": "65a6cadad45d351dd2d0987aba84dba06d4a94ed18b229daee62a354bb66cacf"
+    },
+    {
+      "file": "previews/Biblioteca/magias/laranja.gif",
+      "bytes": 2995,
+      "sha256": "ee53cff0fc20921beef2653b57789021e2243fc2dd07694ef55c266ba333259a"
+    },
+    {
+      "file": "previews/Biblioteca/magias/malhada.gif",
+      "bytes": 3174,
+      "sha256": "c2e66d4d66d97333b075ec24cd96ec021c4aa6d8f95933f6284ad68886ef3d9d"
+    },
+    {
+      "file": "previews/Biblioteca/magias/manchada.gif",
+      "bytes": 3036,
+      "sha256": "98cfe93b3fe295b34435f573c624e9d08f8cf143b572eba5f70894a945c18248"
+    },
+    {
+      "file": "previews/Biblioteca/magias/noite.gif",
+      "bytes": 10467,
+      "sha256": "a53afd7344dee8944479bb57f8614e42714e8f0f95f084480d46f92a60bfd89c"
+    },
+    {
+      "file": "previews/Biblioteca/magias/oleo.gif",
+      "bytes": 3305,
+      "sha256": "225cec21dcd135f7a660f022919426212ef42b096415e10edb7982b8b18da912"
+    },
+    {
+      "file": "previews/Biblioteca/magias/prisao.gif",
+      "bytes": 10348,
+      "sha256": "3fd088ccf5377f53c64705787c93a9cc259f69bddb137d5e3e8a10604a239155"
+    },
+    {
+      "file": "previews/Biblioteca/natureza/agulha.gif",
+      "bytes": 1648,
+      "sha256": "97ad905ef3dcb465e5824196868bf5577496e85b673fb9bf128ecd6efd81f146"
+    },
+    {
+      "file": "previews/Biblioteca/natureza/casca.gif",
+      "bytes": 6348,
+      "sha256": "1a931d05a2019ff53ac237b5d245fd4e446b03f6f3a42a1184b7d3b50e303548"
+    },
+    {
+      "file": "previews/Biblioteca/natureza/corrente.gif",
+      "bytes": 1935,
+      "sha256": "0efe0f3c2c1151eb31e61a1ff48d7fe2add804d8cc4beca5216c8afaba6f0e90"
+    },
+    {
+      "file": "previews/Biblioteca/natureza/ferrao.gif",
+      "bytes": 1146,
+      "sha256": "c94054d74c8885216414c82fddde4b0a6b41e7c008c3325fcf16bfd92b899518"
+    },
+    {
+      "file": "previews/Biblioteca/natureza/grito.gif",
+      "bytes": 8646,
+      "sha256": "764309b05908507081de41840d3495eb81238365c0eab4f9b4a35e0fa0b4e072"
+    },
+    {
+      "file": "previews/Biblioteca/natureza/raizes.gif",
+      "bytes": 3348,
+      "sha256": "0f6e1f2daa635f80babed5b19c7222e227d5c8f6b0ddc7ca4859e5e71534d8d2"
+    },
+    {
+      "file": "previews/Biblioteca/projeteis/branca.gif",
+      "bytes": 1295,
+      "sha256": "a46ee6d4144a017b31fc041f2bfd617012e2fea2e7f5c8fc48cf3cbcc9956ebc"
+    },
+    {
+      "file": "previews/Biblioteca/projeteis/canhao.gif",
+      "bytes": 1151,
+      "sha256": "62882b18e5586c256ff8bfb26ff167d11ac4dca08eb045ced64166f7fa259f5f"
+    },
+    {
+      "file": "previews/Biblioteca/projeteis/fogo.gif",
+      "bytes": 1576,
+      "sha256": "ac91daf8924ca9bab63406d89c432f257c162c0634bb58d5b8c119f351cb70ea"
+    },
+    {
+      "file": "previews/Biblioteca/projeteis/laranja.gif",
+      "bytes": 1212,
+      "sha256": "12f605d7aa817a0922af4f363102ea5055167791eebe5a8625f2cf43cb9085d0"
+    },
+    {
+      "file": "previews/Biblioteca/projeteis/malhada.gif",
+      "bytes": 1263,
+      "sha256": "deddf3a3b9ce7dd686c934e9e2c354b02e7138f157c09f978bdf5ce9652682b3"
+    },
+    {
+      "file": "previews/Biblioteca/projeteis/manchada.gif",
+      "bytes": 1245,
+      "sha256": "2185aecf6f512aceb82281898fc9d4a47ccb011fd1eb2bc46f74c22c040e2664"
+    },
+    {
+      "file": "previews/contact-01.png",
+      "bytes": 35740,
+      "sha256": "cf2c56b46d809815adf272566b5c965bc558a86e8844993bd1d17f1a2c18a199"
+    },
+    {
+      "file": "previews/contact-02.png",
+      "bytes": 32898,
+      "sha256": "5a7ed9f9e9ebc761401b6ff44ea2819f3e5555146a59bd5a388cc2937a109c9e"
+    },
+    {
+      "file": "previews/contact-03.png",
+      "bytes": 31573,
+      "sha256": "7d6f108cecd86a874e14dfc4bd45a9132abbf2bd40b33444a76bc41a87846603"
+    },
+    {
+      "file": "previews/Sprites/Baltazar/idle_west.gif",
+      "bytes": 17672,
+      "sha256": "a05725ea6ce42d6007915f7771edb148b71d238cb7088fa7637ac6c03afbca9e"
+    },
+    {
+      "file": "previews/Sprites/Baltazar/walk_west.gif",
+      "bytes": 25863,
+      "sha256": "d8b05b905be9be02395dd67c44c32629af6cc14c1e88684ea3b247bd5e8ddda2"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/agulha/conjuracao.gif",
+      "bytes": 1608,
+      "sha256": "1852c3827fb94e12b635cb5372ff603c12c8171204e0b5da426222d67b7dbdae"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/agulha/impacto.gif",
+      "bytes": 1648,
+      "sha256": "97ad905ef3dcb465e5824196868bf5577496e85b673fb9bf128ecd6efd81f146"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/ancora/uso.gif",
+      "bytes": 5537,
+      "sha256": "18bd5ba70dd1321fa4c48bee923fa9e889afbaba2d951b861b6b1f975ab15b10"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/aquecer-motor/conjuracao.gif",
+      "bytes": 1808,
+      "sha256": "b8d2005fedcdff4e716bd12f777bd004ae352e74ff7b08c4178694ba39f57453"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/aquecer-motor/impacto.gif",
+      "bytes": 1808,
+      "sha256": "b8d2005fedcdff4e716bd12f777bd004ae352e74ff7b08c4178694ba39f57453"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/arremessar-pedra/conjuracao.gif",
+      "bytes": 1545,
+      "sha256": "d05432934263da0ad252d0fed45246ef85094be6543da714f8455e2035378016"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/arremessar-pedra/impacto.gif",
+      "bytes": 1458,
+      "sha256": "4d3ede727fe57cd3acf0188d8e7a358d155da298302e50477a9559013fb45b6e"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/aura-de-gatinho/conjuracao.gif",
+      "bytes": 1925,
+      "sha256": "10061aad7d2ab566d33bf9370f15c40e373266e35187441e296803426e9af63b"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/aura-de-gatinho/impacto.gif",
+      "bytes": 2262,
+      "sha256": "12369302089e19ca9243a61db47005d2b5d1adfdfcb73df728501b96ad825934"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/aura-de-gatinho/loop.gif",
+      "bytes": 2262,
+      "sha256": "590fbfb5665f9164834c0982a786868360f900bee31527e5aebf167555736489"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/aura-gatinho/loop.gif",
+      "bytes": 2262,
+      "sha256": "590fbfb5665f9164834c0982a786868360f900bee31527e5aebf167555736489"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/baltazar-martelo/conjuracao.gif",
+      "bytes": 1596,
+      "sha256": "737a8467fa7f8aaf4ebb7ca4822175cfb65a09d29f9d4c5140a868112c7a76fa"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/baltazar-martelo/impacto.gif",
+      "bytes": 4826,
+      "sha256": "9b67f8d89b013f998eaac2d15c6dc7e76774b7c17b5cd2a2fa52f8587ef58b69"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/bencao-de-pedra/uso.gif",
+      "bytes": 6682,
+      "sha256": "8b599820b58cf51387bf5a3d6d324bb13e13c4473e9fe567152c85c9aac11c2a"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/bola-de-fogo/conjuracao.gif",
+      "bytes": 1808,
+      "sha256": "b8d2005fedcdff4e716bd12f777bd004ae352e74ff7b08c4178694ba39f57453"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/bola-de-fogo/impacto.gif",
+      "bytes": 10371,
+      "sha256": "993efca46a7f39544ed07c8892d3b4e610ad0feff836eccd56883c9779e54b9f"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/bomba-de-fumaca/uso.gif",
+      "bytes": 5027,
+      "sha256": "2287392dd49ed6c03ac5156a574e9ca2cd1cda260f2d158d1a12a4576a21e2fb"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/canhao-de-peito/conjuracao.gif",
+      "bytes": 1808,
+      "sha256": "b8d2005fedcdff4e716bd12f777bd004ae352e74ff7b08c4178694ba39f57453"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/canhao-de-peito/impacto.gif",
+      "bytes": 1673,
+      "sha256": "4ef685d4ff747e16d16eea7f9c363760998820123b47376f70e142a3dc9f6bdd"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/casca/conjuracao.gif",
+      "bytes": 1608,
+      "sha256": "1852c3827fb94e12b635cb5372ff603c12c8171204e0b5da426222d67b7dbdae"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/casca/impacto.gif",
+      "bytes": 6348,
+      "sha256": "1a931d05a2019ff53ac237b5d245fd4e446b03f6f3a42a1184b7d3b50e303548"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/chamar-gato/conjuracao.gif",
+      "bytes": 1690,
+      "sha256": "15602c5911e62c8678e8657b664d7930efa2269f6623f806660e2746fec51e83"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/chamar-gato/impacto.gif",
+      "bytes": 11915,
+      "sha256": "89cfec94d21679a3a7bffd8ae018f76cb15a806ea484af045bf2671a44d22d20"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/chao-de-gelo/conjuracao.gif",
+      "bytes": 1690,
+      "sha256": "15602c5911e62c8678e8657b664d7930efa2269f6623f806660e2746fec51e83"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/chao-de-gelo/impacto.gif",
+      "bytes": 6221,
+      "sha256": "65a6cadad45d351dd2d0987aba84dba06d4a94ed18b229daee62a354bb66cacf"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/chuva-de-moedas/fim.gif",
+      "bytes": 806,
+      "sha256": "b77f90d65e33ce63bc88a662b94b54c0c48b60afa555246949e34d39700c1ed5"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/chuva-de-moedas/inicio.gif",
+      "bytes": 1446,
+      "sha256": "ae710befbe12bcd4f888f8ccf1452c3ceec71fea19a70e50aa30a079a3b7d5e4"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/chuva-de-moedas/loop.gif",
+      "bytes": 2708,
+      "sha256": "c7850acc60dd95ad8393b95ea24a1983fc511ec2d9d2ca8e46a94012275c6bc1"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/clava/conjuracao.gif",
+      "bytes": 1545,
+      "sha256": "d05432934263da0ad252d0fed45246ef85094be6543da714f8455e2035378016"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/clava/impacto.gif",
+      "bytes": 1533,
+      "sha256": "50ef0b4e053ea60faed24d998a14b481ba471167f8ec089fed847d486825cd64"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/coroada/conjuracao.gif",
+      "bytes": 1545,
+      "sha256": "d05432934263da0ad252d0fed45246ef85094be6543da714f8455e2035378016"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/coroada/impacto.gif",
+      "bytes": 2990,
+      "sha256": "c0b5d2087422c8d8dc02a245fa1401cdb4b33bb06b75f9ba9dba7c6a7a70ac3b"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/corrente/conjuracao.gif",
+      "bytes": 1596,
+      "sha256": "737a8467fa7f8aaf4ebb7ca4822175cfb65a09d29f9d4c5140a868112c7a76fa"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/corrente/impacto.gif",
+      "bytes": 3791,
+      "sha256": "47b2f1eb924ebeaca3677cf48af65c06ee04644853f842b7cb7de67888347113"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/corrente-de-ferro/uso.gif",
+      "bytes": 3791,
+      "sha256": "47b2f1eb924ebeaca3677cf48af65c06ee04644853f842b7cb7de67888347113"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/cristal-de-foco/uso.gif",
+      "bytes": 833,
+      "sha256": "c341c9ac3a8e822b0ac3cfa00ba9b70023487ad302191493d457176de3acab72"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/desejo/inicio.gif",
+      "bytes": 5832,
+      "sha256": "bab6fc468d46993d8d37595d9096d8dfa7cccc40b932da0e0f38c9044774b28a"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/desejo-a/impacto.gif",
+      "bytes": 12589,
+      "sha256": "b51e4124a1d2c51f3c3a39d8c055d560e504e6917d46b31dc4a93deeed2e0b51"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/desejo-b/impacto.gif",
+      "bytes": 4527,
+      "sha256": "6eb73b03d799cc0c68beafc7b15ec68e770a4da8624241c65e3c8229f63abc7f"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/desejo-c/impacto.gif",
+      "bytes": 9534,
+      "sha256": "9acf468e22289c703c9f2c0965f821e62e9573c092b25880036e1dbc2681a9b2"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/desejo-d/impacto.gif",
+      "bytes": 5921,
+      "sha256": "35c0477607f14d6de8aa907a814fbe7237bfdcb1b35f5c1f2f03ef9d29c66465"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/desejo-e/impacto.gif",
+      "bytes": 1678,
+      "sha256": "69f01cdac3d423e942213ce11504c8dbc96be92f45edc83342f4243c2b66b8f8"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/desejo-f/impacto.gif",
+      "bytes": 5560,
+      "sha256": "8f131832a64deb6c3ae4ec807a1cde3a1adc00f36795010d6f95adde112beef3"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/devorar/impacto.gif",
+      "bytes": 2523,
+      "sha256": "d80a53f6ec387d66913b7b65fd00caa1cc68de6e049ab6a40052c5da00ff89dc"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/eco-ancestral/fim.gif",
+      "bytes": 1966,
+      "sha256": "56bb5399f651eebac17b8733ab803ccc38ff3d0c96bd23acf84735d1289ef688"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/eco-ancestral/inicio.gif",
+      "bytes": 6435,
+      "sha256": "6a02a0b89b9174b165e45088a8ff4dcf940617ed99821ef12deb220df28b89a1"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/eco-ancestral/loop.gif",
+      "bytes": 12612,
+      "sha256": "f9eb1a54d7a3bad024ffff92d2ad4329eb9cfdc74162ec78418939029ef01668"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/Estados/armadura/loop.gif",
+      "bytes": 8757,
+      "sha256": "9f6903f58bd5ac862489384795709923b63c62d4d73a85e4b920c6f4666f1e67"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/Estados/buff-pa-pm/loop.gif",
+      "bytes": 6667,
+      "sha256": "a29581c7772cfd78a4b1ece9ee6fd1ef6f608505d41a4bee8df94d875bcca917"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/Estados/desejo-canalizando/loop.gif",
+      "bytes": 5832,
+      "sha256": "bab6fc468d46993d8d37595d9096d8dfa7cccc40b932da0e0f38c9044774b28a"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/Estados/escondido/loop.gif",
+      "bytes": 10053,
+      "sha256": "a795da65d527e1814f8d466a44913df9d4afb16a290da4e37a459b28ac56ba55"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/Estados/preso/loop.gif",
+      "bytes": 5700,
+      "sha256": "9ee5111d0637a3817a47be347fbdab2046e6507be2cab860d579f0191c77eccc"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/Estados/sem-pm/loop.gif",
+      "bytes": 3802,
+      "sha256": "028541edc6ee6f7d637e3596931eb25683c4d8839f293f1ee7a1596838965193"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/Estados/sem-pm-oleo/loop.gif",
+      "bytes": 3249,
+      "sha256": "ee4e996bd2a7750b9618a410279539b5a6d095519cc90ba334b6df12ef504444"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/faisca-branca/conjuracao.gif",
+      "bytes": 1925,
+      "sha256": "10061aad7d2ab566d33bf9370f15c40e373266e35187441e296803426e9af63b"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/faisca-branca/impacto.gif",
+      "bytes": 2989,
+      "sha256": "35f6538c16b3bbc73f9db5227219e6bdc820afa65f2d3c0a17b9c24d1355cf3f"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/faisca-da-varinha/conjuracao.gif",
+      "bytes": 1690,
+      "sha256": "15602c5911e62c8678e8657b664d7930efa2269f6623f806660e2746fec51e83"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/faisca-da-varinha/impacto.gif",
+      "bytes": 1690,
+      "sha256": "15602c5911e62c8678e8657b664d7930efa2269f6623f806660e2746fec51e83"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/faisca-laranja/conjuracao.gif",
+      "bytes": 1690,
+      "sha256": "15602c5911e62c8678e8657b664d7930efa2269f6623f806660e2746fec51e83"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/faisca-laranja/impacto.gif",
+      "bytes": 2995,
+      "sha256": "ee53cff0fc20921beef2653b57789021e2243fc2dd07694ef55c266ba333259a"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/faisca-malhada/conjuracao.gif",
+      "bytes": 1690,
+      "sha256": "15602c5911e62c8678e8657b664d7930efa2269f6623f806660e2746fec51e83"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/faisca-malhada/impacto.gif",
+      "bytes": 3174,
+      "sha256": "c2e66d4d66d97333b075ec24cd96ec021c4aa6d8f95933f6284ad68886ef3d9d"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/faisca-manchada/conjuracao.gif",
+      "bytes": 1690,
+      "sha256": "15602c5911e62c8678e8657b664d7930efa2269f6623f806660e2746fec51e83"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/faisca-manchada/impacto.gif",
+      "bytes": 3036,
+      "sha256": "98cfe93b3fe295b34435f573c624e9d08f8cf143b572eba5f70894a945c18248"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/ferrao/conjuracao.gif",
+      "bytes": 1608,
+      "sha256": "1852c3827fb94e12b635cb5372ff603c12c8171204e0b5da426222d67b7dbdae"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/ferrao/impacto.gif",
+      "bytes": 1146,
+      "sha256": "c94054d74c8885216414c82fddde4b0a6b41e7c008c3325fcf16bfd92b899518"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/festival-de-fogos/explosao.gif",
+      "bytes": 3485,
+      "sha256": "b6399bc7cdf61b8dd06df1cbca34006aa4d3c9eeb56b301104804e2eb321e0d0"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/festival-de-fogos/fim.gif",
+      "bytes": 3796,
+      "sha256": "efda7b37967d29bfe1659c5b95ae989df31e6a11c41f0f6f9238a12b2ada6729"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/festival-de-fogos/inicio.gif",
+      "bytes": 2503,
+      "sha256": "599b36b26d7b7f95d4aeeb5e3aa8612af812859177923438ff6baf824a65a2fe"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/festival-de-fogos/loop.gif",
+      "bytes": 4386,
+      "sha256": "2495e3986e6b0d7199233762c3be8c4d1c6812466670a243b419ee39211b14d7"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/fogos/loop.gif",
+      "bytes": 4316,
+      "sha256": "b966127c92792df85a7795eaa78a1d7b701fb9681a101d4cb30513ae8bebc581"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/gancho/conjuracao.gif",
+      "bytes": 1545,
+      "sha256": "d05432934263da0ad252d0fed45246ef85094be6543da714f8455e2035378016"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/gancho/impacto.gif",
+      "bytes": 2034,
+      "sha256": "9032ee5d5263c9f0fdf7f65e278d7053fcbfa16f3c5b3808526b84a46617ec95"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/gancho-broca/conjuracao.gif",
+      "bytes": 1545,
+      "sha256": "d05432934263da0ad252d0fed45246ef85094be6543da714f8455e2035378016"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/gancho-broca/impacto.gif",
+      "bytes": 2034,
+      "sha256": "9032ee5d5263c9f0fdf7f65e278d7053fcbfa16f3c5b3808526b84a46617ec95"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/gelo/loop.gif",
+      "bytes": 3825,
+      "sha256": "a3501569b51d6840c124de13a5ecce548fbb679aaca96880a55bad8612f926b6"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/grito-de-comando/conjuracao.gif",
+      "bytes": 1608,
+      "sha256": "1852c3827fb94e12b635cb5372ff603c12c8171204e0b5da426222d67b7dbdae"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/grito-de-comando/impacto.gif",
+      "bytes": 8646,
+      "sha256": "764309b05908507081de41840d3495eb81238365c0eab4f9b4a35e0fa0b4e072"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/lava/loop.gif",
+      "bytes": 3808,
+      "sha256": "8ee2ab288dfe1553a088538d8109dc27255f0afae6976658c525b3307823c4bb"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/manto-de-espinhos/uso.gif",
+      "bytes": 2558,
+      "sha256": "83ba6536076244447a4cd805974aade533408bb1303127d64acde430e3639498"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/mare-de-energia/fim.gif",
+      "bytes": 1376,
+      "sha256": "750e392eb2d746c01b81ebae05a412557249ad996405030710d243105d971a83"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/mare-de-energia/inicio.gif",
+      "bytes": 2160,
+      "sha256": "207863f2fcb6e11e748b64a8bab718c70a0cb8922860fef272ee6de22182d841"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/mare-de-energia/loop.gif",
+      "bytes": 12378,
+      "sha256": "0fe11de99a753be4486c142aaa3968fc688f95a4dcb9e9d8b937ad857c7798aa"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/mare-de-lava/fim.gif",
+      "bytes": 1835,
+      "sha256": "d31b267ebf286d9ccd8fb01c458160defe0e5ab1a8a330afb7ecc51b774a270c"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/mare-de-lava/inicio.gif",
+      "bytes": 3073,
+      "sha256": "c544a345c765dee4c5187a40039e3ae81315c1a094666188f7b60999bd35f83d"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/mare-de-lava/loop.gif",
+      "bytes": 3808,
+      "sha256": "8ee2ab288dfe1553a088538d8109dc27255f0afae6976658c525b3307823c4bb"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/martelo-perfurante/uso.gif",
+      "bytes": 9297,
+      "sha256": "87d5efeb272aa52b18ad26d4774106e5bdae3b3863d38d905684e9ce3643e3bb"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/mina-de-gelo/uso.gif",
+      "bytes": 4250,
+      "sha256": "b73f37aab97f49f278f241566ad2ec3df87e018f3f9fce6dad10e0ca5b9720fa"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/mover-gato/conjuracao.gif",
+      "bytes": 1690,
+      "sha256": "15602c5911e62c8678e8657b664d7930efa2269f6623f806660e2746fec51e83"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/mover-gato/impacto.gif",
+      "bytes": 2262,
+      "sha256": "12369302089e19ca9243a61db47005d2b5d1adfdfcb73df728501b96ad825934"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/nevoeiro/fim.gif",
+      "bytes": 3742,
+      "sha256": "5e6f74c7f9d373c76bc71908db2aa4bee2059e8bf4ed582422e3c9dd620145e4"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/nevoeiro/inicio.gif",
+      "bytes": 5927,
+      "sha256": "50d98ab477f2bb671662a1ebb45ae105088cee2d50d35d733e4db36fa8725e49"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/nevoeiro/loop.gif",
+      "bytes": 15302,
+      "sha256": "fe0091f280a708fa62ec534afeacade2a431af9aa7949a24de94bb45463a9076"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/noite-dos-gatos/aura.gif",
+      "bytes": 2262,
+      "sha256": "590fbfb5665f9164834c0982a786868360f900bee31527e5aebf167555736489"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/noite-dos-gatos/conjuracao.gif",
+      "bytes": 1925,
+      "sha256": "10061aad7d2ab566d33bf9370f15c40e373266e35187441e296803426e9af63b"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/noite-dos-gatos/impacto.gif",
+      "bytes": 10467,
+      "sha256": "a53afd7344dee8944479bb57f8614e42714e8f0f95f084480d46f92a60bfd89c"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/pancada-colossal/conjuracao.gif",
+      "bytes": 1545,
+      "sha256": "d05432934263da0ad252d0fed45246ef85094be6543da714f8455e2035378016"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/pancada-colossal/impacto.gif",
+      "bytes": 4826,
+      "sha256": "9b67f8d89b013f998eaac2d15c6dc7e76774b7c17b5cd2a2fa52f8587ef58b69"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/pancada-do-errante/conjuracao.gif",
+      "bytes": 1545,
+      "sha256": "d05432934263da0ad252d0fed45246ef85094be6543da714f8455e2035378016"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/pancada-do-errante/impacto.gif",
+      "bytes": 5863,
+      "sha256": "28815f2d5bf5e0da0ed6aae354d6b0140d53013313e654ce26a7f440e21be209"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/pauzinho/conjuracao.gif",
+      "bytes": 1545,
+      "sha256": "d05432934263da0ad252d0fed45246ef85094be6543da714f8455e2035378016"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/pauzinho/impacto.gif",
+      "bytes": 1172,
+      "sha256": "f2a9c48975a9e976894fc47d6fc475e244c7845512374b26b1065e3417a6d212"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/pena-de-fenix/uso.gif",
+      "bytes": 10348,
+      "sha256": "a02b676bddb571defe36c1b4a38133948ed99103f3acad4fce64e765382932e3"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/pisao/conjuracao.gif",
+      "bytes": 1545,
+      "sha256": "d05432934263da0ad252d0fed45246ef85094be6543da714f8455e2035378016"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/pisao/impacto.gif",
+      "bytes": 6771,
+      "sha256": "ead740777d6907d0388d1adef77e7fcc5f9ff3217a09099776af91871eee8ffe"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/portal-caotico/fim.gif",
+      "bytes": 3498,
+      "sha256": "81c7cd02ef0961d08184b42d1f1000b7614a58b627a23ef138f4d4991934ec9e"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/portal-caotico/inicio.gif",
+      "bytes": 11946,
+      "sha256": "12f61893554dee5e48f2b66a8bd25bc05546d9d6372d761058cefd993eb38e62"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/portal-caotico/loop.gif",
+      "bytes": 24570,
+      "sha256": "bcd36f0a8626dc34ad4f3cb994d031357d44c28044f4a8d1bcb3ad0267ac6cc2"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/prisao-dos-pesadelos/conjuracao.gif",
+      "bytes": 1690,
+      "sha256": "15602c5911e62c8678e8657b664d7930efa2269f6623f806660e2746fec51e83"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/prisao-dos-pesadelos/impacto.gif",
+      "bytes": 10348,
+      "sha256": "3fd088ccf5377f53c64705787c93a9cc259f69bddb137d5e3e8a10604a239155"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/queda-de-pedras/fim.gif",
+      "bytes": 904,
+      "sha256": "a5aa46cc7ea5d4f2a95f9c364985b0923d3eb0a1ab510e26eb7749ee4eb6efe2"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/queda-de-pedras/inicio.gif",
+      "bytes": 2698,
+      "sha256": "82690819fa8d0e5acf322dff4be17432f2f37da488f47b7a54ce2852c620da0c"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/queda-de-pedras/loop.gif",
+      "bytes": 2129,
+      "sha256": "e4dc1eba98660119cb34b95bbc782b9f0649aa3652e1e1a33619569fa9fe09c3"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/raizes/conjuracao.gif",
+      "bytes": 1608,
+      "sha256": "1852c3827fb94e12b635cb5372ff603c12c8171204e0b5da426222d67b7dbdae"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/raizes/impacto.gif",
+      "bytes": 3348,
+      "sha256": "0f6e1f2daa635f80babed5b19c7222e227d5c8f6b0ddc7ca4859e5e71534d8d2"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/rugido/conjuracao.gif",
+      "bytes": 1545,
+      "sha256": "d05432934263da0ad252d0fed45246ef85094be6543da714f8455e2035378016"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/rugido/impacto.gif",
+      "bytes": 8946,
+      "sha256": "9ee68382fdb054b26d1948fe366a606d1415570ada57dc3630fb2859ae620007"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/tentaculo-de-oleo/conjuracao.gif",
+      "bytes": 1690,
+      "sha256": "15602c5911e62c8678e8657b664d7930efa2269f6623f806660e2746fec51e83"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/tentaculo-de-oleo/impacto.gif",
+      "bytes": 3305,
+      "sha256": "225cec21dcd135f7a660f022919426212ef42b096415e10edb7982b8b18da912"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/terremoto/fim.gif",
+      "bytes": 4657,
+      "sha256": "69433f3e19d8ae1bf49c2e47204b60094801232b9fab0db8095c4bdcd092bbea"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/terremoto/inicio.gif",
+      "bytes": 4346,
+      "sha256": "960f8684a52f16035c20073cde5a05f054ad112397966abb25b1a7357f8f2e63"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/terremoto/loop.gif",
+      "bytes": 1638,
+      "sha256": "c46d232edc8bb1bc25ba61c46e38513c1a416b2bdbffcfd8e49955ef54c7bad7"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/totem-de-cura/uso.gif",
+      "bytes": 9110,
+      "sha256": "25e69d7cab6946f91482526ce02e5a7dc45260065785ee09f9244029be204b33"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/vendaval/fim.gif",
+      "bytes": 1884,
+      "sha256": "eba33add7d15451eb829671d5093b140ca01458d50cc315df0e82c4d2c01ff0e"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/vendaval/inicio.gif",
+      "bytes": 2045,
+      "sha256": "5d114075e49a3050f1ebabff484cb4e11566486123004586ab7c22170e91794f"
+    },
+    {
+      "file": "previews/Sprites/Efeitos/vendaval/loop.gif",
+      "bytes": 3057,
+      "sha256": "d25ea7b42d73447bddd3c5d98d3b21446e1fb56f49ec50637e2999fa4de005f7"
+    },
+    {
+      "file": "previews/Sprites/GuardiaoMusgo/idle_north-west.gif",
+      "bytes": 18873,
+      "sha256": "a3bf3c39755ee1e4526dcef76cbe1db6ba6b5f2a289fbbc817810c4945f1d98a"
+    },
+    {
+      "file": "previews/Sprites/Objetos/bau-recompensa/idle.gif",
+      "bytes": 4304,
+      "sha256": "c5da1999d7425a1e73863edf407b0a70def4862db00bcf182bee44cea5f1b350"
+    },
+    {
+      "file": "previews/Sprites/Objetos/bau-recompensa/quebrar.gif",
+      "bytes": 2107,
+      "sha256": "566deb199e8ebe2e1133de7f5f80e9ebcf087aeb3bf8221baab82555c67593c0"
+    },
+    {
+      "file": "previews/Sprites/Objetos/bau-recompensa/surgir.gif",
+      "bytes": 2843,
+      "sha256": "4047a4acbb662a8eeeb06d64a7fc7bc5fda674fbb57713985e2f8dc19e29b261"
+    },
+    {
+      "file": "previews/Sprites/Objetos/buraco-papa-moedas/idle.gif",
+      "bytes": 4366,
+      "sha256": "0a8c585bde1e39538d6bdc5f2a9cb73b6b9483017dc78cb7255ae8e21ebca24b"
+    },
+    {
+      "file": "previews/Sprites/Objetos/buraco-papa-moedas/quebrar.gif",
+      "bytes": 2623,
+      "sha256": "cf7afb84688c41723aa435c498fe9dd2cd1d3d4702fa66578e76c2d0f999b2b6"
+    },
+    {
+      "file": "previews/Sprites/Objetos/buraco-papa-moedas/surgir.gif",
+      "bytes": 2927,
+      "sha256": "c7cd36f1cc7f146111c27cac4968edeba8e3333a802642847558d5a3f19208f9"
+    },
+    {
+      "file": "previews/Sprites/Objetos/casa-congelada/idle.gif",
+      "bytes": 3825,
+      "sha256": "a3501569b51d6840c124de13a5ecce548fbb679aaca96880a55bad8612f926b6"
+    },
+    {
+      "file": "previews/Sprites/Objetos/casa-congelada/quebrar.gif",
+      "bytes": 1598,
+      "sha256": "34e0415e50c1edf941cf3e5c1724e8d86dc83bb2b5ce9225af9b879973104f86"
+    },
+    {
+      "file": "previews/Sprites/Objetos/casa-congelada/surgir.gif",
+      "bytes": 2328,
+      "sha256": "ee0f2875624534387eb6f8570c250dfb2b1bab07c17cd3316e0002d4eb7d3cf3"
+    },
+    {
+      "file": "previews/Sprites/Objetos/casa-de-lava/idle.gif",
+      "bytes": 3808,
+      "sha256": "8ee2ab288dfe1553a088538d8109dc27255f0afae6976658c525b3307823c4bb"
+    },
+    {
+      "file": "previews/Sprites/Objetos/casa-de-lava/sumir.gif",
+      "bytes": 1835,
+      "sha256": "d31b267ebf286d9ccd8fb01c458160defe0e5ab1a8a330afb7ecc51b774a270c"
+    },
+    {
+      "file": "previews/Sprites/Objetos/casa-de-lava/surgir.gif",
+      "bytes": 3073,
+      "sha256": "c544a345c765dee4c5187a40039e3ae81315c1a094666188f7b60999bd35f83d"
+    },
+    {
+      "file": "previews/Sprites/Objetos/casa-resfriada/idle.gif",
+      "bytes": 3631,
+      "sha256": "c00be8e10da42c9ac8db0e1b63f6d97aa4bc607b554f138bde78b6c805c08620"
+    },
+    {
+      "file": "previews/Sprites/Objetos/casa-resfriada/quebrar.gif",
+      "bytes": 1631,
+      "sha256": "ae082a4655fb620046ead3ae231881190f0ca27e8d45c47ed3eb2553aedd5ee6"
+    },
+    {
+      "file": "previews/Sprites/Objetos/casa-resfriada/surgir.gif",
+      "bytes": 2255,
+      "sha256": "ee2f163c3d7843be64bf41b44da5cb93f80d138b04da1f20552ccbdf7a3c4a8e"
+    },
+    {
+      "file": "previews/Sprites/Objetos/marcador-de-fogos/idle.gif",
+      "bytes": 4316,
+      "sha256": "b966127c92792df85a7795eaa78a1d7b701fb9681a101d4cb30513ae8bebc581"
+    },
+    {
+      "file": "previews/Sprites/Objetos/marcador-de-fogos/sumir.gif",
+      "bytes": 3800,
+      "sha256": "e29d59d0757e4fb0fc841508b09c4a773229d25e603f044fb6f1d0143c66c0c4"
+    },
+    {
+      "file": "previews/Sprites/Objetos/marcador-de-fogos/surgir.gif",
+      "bytes": 2503,
+      "sha256": "9d54bab760e9ea6ff3d211f1b6d606c0dc0b604d6c590df2a86e41ebcfb75943"
+    },
+    {
+      "file": "previews/Sprites/Objetos/mina-de-gelo-armada/idle.gif",
+      "bytes": 4722,
+      "sha256": "eff102f7b31937f88aa28ba4a649c332cd23dd9e9dfda3a54924975372a69299"
+    },
+    {
+      "file": "previews/Sprites/Objetos/mina-de-gelo-armada/quebrar.gif",
+      "bytes": 2356,
+      "sha256": "6b07f66267261a83cbacd333b4b405f14734555711ae1286592e41547f5c401d"
+    },
+    {
+      "file": "previews/Sprites/Objetos/mina-de-gelo-armada/surgir.gif",
+      "bytes": 2718,
+      "sha256": "dcc8e026cc6f982f2087294d2cce47a2c784d4636b6542bc8ea19a1510836cfc"
+    },
+    {
+      "file": "previews/Sprites/Objetos/portal-de-rocha/idle.gif",
+      "bytes": 9795,
+      "sha256": "4f4b8687fb18bb3e57913b630633b96588c7701e0bc38d4a0d4b758852689b77"
+    },
+    {
+      "file": "previews/Sprites/Objetos/portal-de-rocha/quebrar.gif",
+      "bytes": 4250,
+      "sha256": "ca41d816e3c0ab1f4e118b69cb1d5c314b7f919b50a4f42d59b6de4d8db1dec1"
+    },
+    {
+      "file": "previews/Sprites/Objetos/portal-de-rocha/surgir.gif",
+      "bytes": 5671,
+      "sha256": "4400fad30a1e6d19c12c6c612dc6d466235eee08c761b2845a1c7fdd1978a9e3"
+    },
+    {
+      "file": "previews/Sprites/Objetos/prisao-dos-pesadelos/idle.gif",
+      "bytes": 8032,
+      "sha256": "23da376dc668edd14884082796ca8aa34c5a645260f591bacd01f87766a65fc2"
+    },
+    {
+      "file": "previews/Sprites/Objetos/prisao-dos-pesadelos/quebrar.gif",
+      "bytes": 2307,
+      "sha256": "dca4ef039b0ea2c01c25f1616b1dce84ae2e6eb5271920205cc55a0d3553ab6d"
+    },
+    {
+      "file": "previews/Sprites/Objetos/prisao-dos-pesadelos/surgir.gif",
+      "bytes": 4433,
+      "sha256": "6630de0a61147992aa8afdb3c7f6047a458955ac64464c86d3eb4970d3899fc2"
+    },
+    {
+      "file": "previews/Sprites/Objetos/totem-de-cura/idle.gif",
+      "bytes": 11782,
+      "sha256": "4a0ddf31f87f4c1209b86d5889f621eb55709a4b47363ae00a34620c56d9b350"
+    },
+    {
+      "file": "previews/Sprites/Objetos/totem-de-cura/quebrar.gif",
+      "bytes": 19375,
+      "sha256": "60ee353dcf719cf972e8e767c7477b7ab5c3840ca3d786bf068d412fdf32ed5f"
+    },
+    {
+      "file": "previews/Sprites/Objetos/totem-de-cura/surgir.gif",
+      "bytes": 18175,
+      "sha256": "4a1d9cf333e77edc4243c14bc9657f042b038eb2eea27df4601535344508b933"
+    },
+    {
+      "file": "previews/Sprites/Projeteis/bola-de-fogo.gif",
+      "bytes": 278,
+      "sha256": "a3018b91e898254ae6028f50aef516fdfa8a95363bc34b3edb9723582ea3b6d1"
+    },
+    {
+      "file": "previews/Sprites/Projeteis/canhao-de-peito.gif",
+      "bytes": 236,
+      "sha256": "1ebdd1e3a4bf68394883565746e5ef814ed6f1e5f6ad8e9e163f983e03b90ccb"
+    },
+    {
+      "file": "previews/Sprites/Projeteis/faisca-branca.gif",
+      "bytes": 248,
+      "sha256": "a436f72a0d3ce01fa1906bd592833c0cd7e40a89253fcee4fd0fb40affc88ce1"
+    },
+    {
+      "file": "previews/Sprites/Projeteis/faisca-laranja.gif",
+      "bytes": 234,
+      "sha256": "1bdc64e7ded8a9c4c1a43526dba6dd11c6050e6b99fd9e8ebcc83fa1bdab9b15"
+    },
+    {
+      "file": "previews/Sprites/Projeteis/faisca-malhada.gif",
+      "bytes": 238,
+      "sha256": "7afa9241dad097f697a5e00d3fb1a1220304e4cf1c25c6e6fbeefe939c3250b9"
+    },
+    {
+      "file": "previews/Sprites/Projeteis/faisca-manchada.gif",
+      "bytes": 238,
+      "sha256": "4506ca1f9a991d62e0e8219e3634438b10b754f29d045c42cff007924ec596f1"
+    },
+    {
+      "file": "previews/Sprites/ProjeteisAnimados/bola-de-fogo.gif",
+      "bytes": 1576,
+      "sha256": "ac91daf8924ca9bab63406d89c432f257c162c0634bb58d5b8c119f351cb70ea"
+    },
+    {
+      "file": "previews/Sprites/ProjeteisAnimados/canhao-de-peito.gif",
+      "bytes": 1151,
+      "sha256": "62882b18e5586c256ff8bfb26ff167d11ac4dca08eb045ced64166f7fa259f5f"
+    },
+    {
+      "file": "previews/Sprites/ProjeteisAnimados/faisca-branca.gif",
+      "bytes": 1295,
+      "sha256": "a46ee6d4144a017b31fc041f2bfd617012e2fea2e7f5c8fc48cf3cbcc9956ebc"
+    },
+    {
+      "file": "previews/Sprites/ProjeteisAnimados/faisca-laranja.gif",
+      "bytes": 1212,
+      "sha256": "12f605d7aa817a0922af4f363102ea5055167791eebe5a8625f2cf43cb9085d0"
+    },
+    {
+      "file": "previews/Sprites/ProjeteisAnimados/faisca-malhada.gif",
+      "bytes": 1263,
+      "sha256": "deddf3a3b9ce7dd686c934e9e2c354b02e7138f157c09f978bdf5ce9652682b3"
+    },
+    {
+      "file": "previews/Sprites/ProjeteisAnimados/faisca-manchada.gif",
+      "bytes": 1245,
+      "sha256": "2185aecf6f512aceb82281898fc9d4a47ccb011fd1eb2bc46f74c22c040e2664"
+    },
+    {
+      "file": "receitas-especiais.json",
+      "bytes": 25778,
+      "sha256": "519f4853f83b8d61708a9653483528fbfea959c5fa87fead877a6899ffd652a1"
+    },
+    {
+      "file": "relatorio-efeitos-deepseek.json",
+      "bytes": 14429,
+      "sha256": "ebe210040da10e335f1ddaae656cd4ed5a111e72fbe2cf2dd8a6c0a60b10756a"
+    },
+    {
+      "file": "relatorio-final-deepseek.json",
+      "bytes": 8419,
+      "sha256": "5f1026f09a7f003743452ef1dc34388d6acd61d338dd824e6dbe8f0272301947"
+    },
+    {
+      "file": "relatorio-ui-deepseek.json",
+      "bytes": 11876,
+      "sha256": "380e976eeb771d8b1394dca7a579c6ecc75e6000e962862ac6aeac5ea1a06276"
+    },
+    {
+      "file": "reparos/baltazar-idle-west-v2/originais/0.png",
+      "bytes": 11675,
+      "sha256": "c7a057383e63ce6731dc26420f8eb67d28d217ab219740579ac0875478f42e58"
+    },
+    {
+      "file": "reparos/baltazar-idle-west-v2/originais/1.png",
+      "bytes": 12347,
+      "sha256": "49f18dc2a0c47643f0d616f32c4b3cdd6ea1129d4a531332be6c12337e7794b6"
+    },
+    {
+      "file": "reparos/baltazar-idle-west-v2/originais/2.png",
+      "bytes": 11823,
+      "sha256": "f0f48b42c0d00df5d3dc348ccb1b8b7f309aa90d03971aaf4e347b2732c4d226"
+    },
+    {
+      "file": "reparos/baltazar-idle-west-v2/originais/3.png",
+      "bytes": 12079,
+      "sha256": "c2aa386002bdfd386da16c4d7e41832a24c1f1d6cd812ae1fc2c5184b4199930"
+    },
+    {
+      "file": "reparos/baltazar-idle-west-v2/originais/4.png",
+      "bytes": 11919,
+      "sha256": "8de4876b04c2117da10843704da5577995363bd2e2f04b0abe7c118f0a2f13e9"
+    },
+    {
+      "file": "reparos/baltazar-walk-west-v2/originais/0.png",
+      "bytes": 11726,
+      "sha256": "9474e8f5955d02b4a84d0da18cf66181fa1bafb6d90311bf2f27eadee2295d3b"
+    },
+    {
+      "file": "reparos/baltazar-walk-west-v2/originais/1.png",
+      "bytes": 12438,
+      "sha256": "3116afd5f8b86255afe1942fcfab27211c3c7a4fe5ae165f117c48033c093b0f"
+    },
+    {
+      "file": "reparos/baltazar-walk-west-v2/originais/2.png",
+      "bytes": 11597,
+      "sha256": "31ea025aaa33354cfcd75daf4185e7a94339093fd2697b0675568e1d445db04e"
+    },
+    {
+      "file": "reparos/baltazar-walk-west-v2/originais/3.png",
+      "bytes": 11555,
+      "sha256": "4a75c365ea304b008bd1d2da3e7449dcac1fd591b151e6a654d76ce96a7dbd77"
+    },
+    {
+      "file": "reparos/baltazar-walk-west-v2/originais/4.png",
+      "bytes": 11251,
+      "sha256": "770390bc8a04d0bf80e24bf2eb2838f8509eab2a4e014332b247218888ed2ed0"
+    },
+    {
+      "file": "reparos/baltazar-walk-west-v2/originais/5.png",
+      "bytes": 12146,
+      "sha256": "3fdf74c802a64afe9b28e61b2162abba3ba7c620fa631d38a16e3fd73454e6b5"
+    },
+    {
+      "file": "reparos/baltazar-walk-west-v2/originais/6.png",
+      "bytes": 11781,
+      "sha256": "07c9ce1b2d5ee397996be2824d8efd989c35e2f82d0b3659198725b48bcbd2e5"
+    },
+    {
+      "file": "reparos/guardiao-idle-north-west-v2/originais/0.png",
+      "bytes": 11077,
+      "sha256": "c891a5c0952209cd76661dd7d1d8b389c2bc1bc25cc809dacb125b24b392c5aa"
+    },
+    {
+      "file": "reparos/guardiao-idle-north-west-v2/originais/1.png",
+      "bytes": 11974,
+      "sha256": "f862ee05f78ece8901fc0447a5d9027f660c3544f967d7ae09f5d1b940dbd08d"
+    },
+    {
+      "file": "reparos/guardiao-idle-north-west-v2/originais/2.png",
+      "bytes": 11965,
+      "sha256": "6029158c136ecc86027dbba551f985a08a936219f8a1f143b36a14628a2b157c"
+    },
+    {
+      "file": "reparos/guardiao-idle-north-west-v2/originais/3.png",
+      "bytes": 11889,
+      "sha256": "e850fa4b2f21d672da6429ca80fbcc981e956400abc04b15cf9b1f96ff645d72"
+    },
+    {
+      "file": "reparos/guardiao-idle-north-west-v2/originais/4.png",
+      "bytes": 11694,
+      "sha256": "4d7d352434bdfb214cbd5c627fe1628756831b24e8482d96f220df0d60104382"
+    },
+    {
+      "file": "reparos-pixellab-v2.json",
+      "bytes": 11048,
+      "sha256": "c078a398f7d26338bc4de545f3d39b5003e82d9414b701086ddeab221d4a3e0c"
+    },
+    {
+      "file": "ui/arena.css",
+      "bytes": 13275,
+      "sha256": "ea5d05ba240f73aa7a2e94e3eaaf124126cfec5bf0a77159b526ba583b4ab737"
+    },
+    {
+      "file": "ui/arena.js",
+      "bytes": 6591,
+      "sha256": "be3d74a2040d795c53f7e47cb70658f028cb3c59a35ebcded4c71fe461333de6"
+    },
+    {
+      "file": "ui/arenas-renderizadas.json",
+      "bytes": 1234,
+      "sha256": "16f08cf2873500312f158d6c538a04930602688b941adbabb11e4e5cc8e9099a"
+    },
+    {
+      "file": "ui/art/asamyh.png",
+      "bytes": 4284,
+      "sha256": "6cff89c94a1616417028d6b19965f00521900332990d1e3936b3c5b065c65862"
+    },
+    {
+      "file": "ui/art/baltazar.png",
+      "bytes": 11411,
+      "sha256": "6b5be470719235d10f2b2a84f0b030f476bf34bab49e9bcd1188ab9bda209863"
+    },
+    {
+      "file": "ui/art/cheiro-pneu.png",
+      "bytes": 6016,
+      "sha256": "193f76410f1a896eda2472991fc1d3a5979a2e5641d4780e273023e8e0e7cb0a"
+    },
+    {
+      "file": "ui/art/colosso.png",
+      "bytes": 9492,
+      "sha256": "5b4d1c31c66a79baa1b8697b03f438ca80311b538e4ff959636efebf47b2944f"
+    },
+    {
+      "file": "ui/art/guardiao-de-musgo.png",
+      "bytes": 7631,
+      "sha256": "7629e013ea80018c90969a9ac4d5f5d3ba7f0c7d2cd89df97192e9921d4e2f4b"
+    },
+    {
+      "file": "ui/art/mapa-bosque.png",
+      "bytes": 822047,
+      "sha256": "2333655c4353080037cb09990f92e12e847841319f4029dbd3f6a72e60f7e53d"
+    },
+    {
+      "file": "ui/art/mapa-neve.png",
+      "bytes": 800671,
+      "sha256": "affb1a5db75f1fdf6683644e3253dead60a5bb37c50bd11d79c6febba5a30302"
+    },
+    {
+      "file": "ui/art/mapa-pedreira.png",
+      "bytes": 866548,
+      "sha256": "b7514a4e7daa041de568ba09aa655dfe1c3ba6df51ce524b4f9f890d553575fb"
+    },
+    {
+      "file": "ui/art/principe-kellen.png",
+      "bytes": 4840,
+      "sha256": "666bf942d94541ac112dfe8e40820da9413b19cdfd2192148f601d4d89c365c3"
+    },
+    {
+      "file": "ui/capturas/arena-mobile.jpg",
+      "bytes": 33823,
+      "sha256": "38063cec5a2ebca432d8f55da002394b3aace4a099f398d8a4003439394924be"
+    },
+    {
+      "file": "ui/capturas/inicio-desktop.jpg",
+      "bytes": 90593,
+      "sha256": "a46dad1bec9f9beaff2f4aa8bac846ddcf0a41c0a55a875d9ae87baf31e42fc9"
+    },
+    {
+      "file": "ui/capturas/selecao-desktop.jpg",
+      "bytes": 109087,
+      "sha256": "f5a28f4675b35d108750e9f679c5ee7bb0b71d7538501a12d1f6591abfd45537"
+    },
+    {
+      "file": "ui/capturas/selecao-mobile.jpg",
+      "bytes": 96159,
+      "sha256": "415d1a7e28202f9fe40972e965d393529d274c8205224d0caa10a04a63a6ebe7"
+    },
+    {
+      "file": "ui/conteudo.js",
+      "bytes": 1289,
+      "sha256": "9503a84d3230030b2e9c59934dea700179f77e16906437340d910d754a646f41"
+    },
+    {
+      "file": "ui/fontes.json",
+      "bytes": 3748,
+      "sha256": "cb6342f61bcd8dd3c38e30f3be80b91a9953b682a2deb39aed874f18444bb592"
+    },
+    {
+      "file": "ui/index.html",
+      "bytes": 6106,
+      "sha256": "2cb8739cf32cb6043a2e407fa7379a31f5d9006e5adb3424665d59828a77da76"
+    },
+    {
+      "file": "ui/modelo-tela.visual.json",
+      "bytes": 2366,
+      "sha256": "ff8924a3ca726d6e542abcce8782c7f7c9e53250915ba96a78fae183e8cd822c"
+    },
+    {
+      "file": "ui/preparar.py",
+      "bytes": 2512,
+      "sha256": "2a9f8a4087420f9635ede656e578be571e3c923613580d9bd12f7777fb654908"
+    },
+    {
+      "file": "ui/renderizar-arenas.py",
+      "bytes": 1394,
+      "sha256": "413f1d2577a76bc5a264d4124d464197154ff7618eb04a6ddf4a69ada4f97711"
+    },
+    {
+      "file": "unity/Biblioteca/conjuracao/cura.png",
+      "bytes": 2164,
+      "sha256": "f4f0903e28f7acce4d61b901e50274e63c6c1a7ebfc7eca179a55fec07adb5dc"
+    },
+    {
+      "file": "unity/Biblioteca/conjuracao/fisico.png",
+      "bytes": 1374,
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a"
+    },
+    {
+      "file": "unity/Biblioteca/conjuracao/fogo.png",
+      "bytes": 958,
+      "sha256": "1a4f4d96d748cfbf1ce6f8b16390e0e4af7b18432dbde2ec07f4e099420243c6"
+    },
+    {
+      "file": "unity/Biblioteca/conjuracao/magia.png",
+      "bytes": 896,
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c"
+    },
+    {
+      "file": "unity/Biblioteca/conjuracao/metal.png",
+      "bytes": 1305,
+      "sha256": "553e3a14744412ce2b5a98fc826499507c1b280dd9d1752cb45df01d4502cddc"
+    },
+    {
+      "file": "unity/Biblioteca/conjuracao/natureza.png",
+      "bytes": 957,
+      "sha256": "f78b518ad5a040624b390bb0b8ba3adf1aa1243297851c0e6e4b479741c7f265"
+    },
+    {
+      "file": "unity/Biblioteca/desejos/apagar.png",
+      "bytes": 35140,
+      "sha256": "55ba282d577c87d0336d0237469e9e42a654cc6537674c6035751edf00ea4160"
+    },
+    {
+      "file": "unity/Biblioteca/desejos/copiar.png",
+      "bytes": 4661,
+      "sha256": "8e7bad1484a9f3167f696a2629cc8f6150a83b236977e68ebca38028b2883a0d"
+    },
+    {
+      "file": "unity/Biblioteca/desejos/cura.png",
+      "bytes": 4969,
+      "sha256": "7d99a46dcfb4b0b4e95cc6ae522eede36c5dbd507e505d083ff0ea11d7c63c47"
+    },
+    {
+      "file": "unity/Biblioteca/desejos/devorar.png",
+      "bytes": 2804,
+      "sha256": "7483872cd8b7b4488a93a46924073d9fa0c688ffd3bdbd58ebb020f913eb2b46"
+    },
+    {
+      "file": "unity/Biblioteca/desejos/itens.png",
+      "bytes": 9548,
+      "sha256": "6ddb5e900ec0605ad2b1915f25ad7f908391940d7cdd4d65d25a3709be8527ba"
+    },
+    {
+      "file": "unity/Biblioteca/desejos/pa.png",
+      "bytes": 15323,
+      "sha256": "8cd1a3fa019f96d1af11f98d687dbe17362ef7fa3e84581d2234de1c6754f540"
+    },
+    {
+      "file": "unity/Biblioteca/desejos/reviver.png",
+      "bytes": 9242,
+      "sha256": "6d7f691c3eb5eb9f1b9d745e27044ecc63af959a8e196ef7521a09b335120761"
+    },
+    {
+      "file": "unity/Biblioteca/estados/armadura.png",
+      "bytes": 4592,
+      "sha256": "be0f00c861d393521618d32a6dc72573aa319235eb0dff7b2d82a56f31276532"
+    },
+    {
+      "file": "unity/Biblioteca/estados/buff.png",
+      "bytes": 3836,
+      "sha256": "a896b34bfff77563fb6ffb303bf34a55bda29bef9d6be7eaebf07107571b8983"
+    },
+    {
+      "file": "unity/Biblioteca/estados/desejo.png",
+      "bytes": 4386,
+      "sha256": "7666bdd1720c9a1b5ebdba3f9ee41ee654d62e9ea59bdf4690e4744732a95e9f"
+    },
+    {
+      "file": "unity/Biblioteca/estados/escondido.png",
+      "bytes": 10976,
+      "sha256": "64bb81f4124dbfafa2e09d33bd1045b822445f4ed9da13e03aabec9e4c8d7610"
+    },
+    {
+      "file": "unity/Biblioteca/estados/preso.png",
+      "bytes": 3720,
+      "sha256": "c0994ba6eab94343865cc91bf30455d3073e6c3d2cdb7f0dc5a125e69c5b940d"
+    },
+    {
+      "file": "unity/Biblioteca/estados/sem_pm.png",
+      "bytes": 3280,
+      "sha256": "83e63d63ed606a83d628149248f0c2e80a811f90611c1d0dfcd3c23cf84f1496"
+    },
+    {
+      "file": "unity/Biblioteca/golpes/clava.png",
+      "bytes": 1294,
+      "sha256": "5204a2ba5909c94eeef2896d52529be20c4c70bbf4738fd3a341feadc0822b28"
+    },
+    {
+      "file": "unity/Biblioteca/golpes/coroada.png",
+      "bytes": 3263,
+      "sha256": "351ca9a015006938c336f786ace3c32de1a7890edcaa04cc745aee0114c042e4"
+    },
+    {
+      "file": "unity/Biblioteca/golpes/errante.png",
+      "bytes": 8478,
+      "sha256": "ec69fcd8b866b3c7b89bfdc4c5e624730a85e2ce75b5d40642a7ae58db04289b"
+    },
+    {
+      "file": "unity/Biblioteca/golpes/gancho.png",
+      "bytes": 2051,
+      "sha256": "61370c61a5414bae72dcb528aea6b9ae836cbebd6649f630478a1660f036f340"
+    },
+    {
+      "file": "unity/Biblioteca/golpes/pancada.png",
+      "bytes": 6861,
+      "sha256": "b7b01cd20f41b77146cd9d2ae1fc5bf5f462fe65b2ddbcc97865dd8eb6ecaad0"
+    },
+    {
+      "file": "unity/Biblioteca/golpes/pauzinho.png",
+      "bytes": 988,
+      "sha256": "68d86c5e68b309b1fe4a9ce1df1717544487fdcce67e01c73324cc1867b7d6e5"
+    },
+    {
+      "file": "unity/Biblioteca/golpes/pedra.png",
+      "bytes": 1204,
+      "sha256": "622999b76bbf9b7b0c044712a5c1b725ba14dc99e3d8f03f2b055ad4230ca33d"
+    },
+    {
+      "file": "unity/Biblioteca/golpes/pisao.png",
+      "bytes": 8066,
+      "sha256": "ed8a34d1b6da2771eff200376e05b0cfb652e2c6ee9c9cc11388ec83a76219b3"
+    },
+    {
+      "file": "unity/Biblioteca/golpes/rugido.png",
+      "bytes": 10873,
+      "sha256": "ec1252c2192045d82a9441e8a8f28094a450080afb86deaa9efd5bff8d117a71"
+    },
+    {
+      "file": "unity/Biblioteca/loja/ancora.png",
+      "bytes": 3808,
+      "sha256": "bfed0de0e1b722a037ebad0c41285f2cf9b4636fbf2f56542cad5e2b3fde5897"
+    },
+    {
+      "file": "unity/Biblioteca/loja/bencao.png",
+      "bytes": 3929,
+      "sha256": "aaf583b51f0c1153c3495d4bfe703aadefe31d482df6b97dbcc881c49b62f93f"
+    },
+    {
+      "file": "unity/Biblioteca/loja/corrente.png",
+      "bytes": 987,
+      "sha256": "8f6df83307741011016b16afb6cd95f93ea33b0ce024bd3969afe34a33c01c62"
+    },
+    {
+      "file": "unity/Biblioteca/loja/espinhos.png",
+      "bytes": 2480,
+      "sha256": "8184b03a636a32ee169ff840e7c239525e422bfbbbb521515414d066afca8edd"
+    },
+    {
+      "file": "unity/Biblioteca/loja/fenix.png",
+      "bytes": 4996,
+      "sha256": "9a19a3ad0608f64c44b55858b6faa947e8e390d391b223ea343b0a70727dc8e7"
+    },
+    {
+      "file": "unity/Biblioteca/loja/foco.png",
+      "bytes": 391,
+      "sha256": "ebb6868c6e4cad8d10c85b8ab7a90f7e7fec1ae1b030fb8cfa02526dbd5d9928"
+    },
+    {
+      "file": "unity/Biblioteca/loja/fumaca.png",
+      "bytes": 6027,
+      "sha256": "4789b27fb756d2cab58aafdbe2ed806a7bac9b0a6b37c59c2a45f7fb1014b56e"
+    },
+    {
+      "file": "unity/Biblioteca/loja/martelo.png",
+      "bytes": 4859,
+      "sha256": "b111753698f7167b5652a4ea4e04143ab009129b6df2cdd8083b0facae64891e"
+    },
+    {
+      "file": "unity/Biblioteca/loja/mina.png",
+      "bytes": 3677,
+      "sha256": "819f6cf79b33406597bcd46c30d2579d300de0fdbd878eb23ceff418fb8ab090"
+    },
+    {
+      "file": "unity/Biblioteca/loja/totem.png",
+      "bytes": 5601,
+      "sha256": "9a28245f88652ff99c3853b99efe0ceaec8d4cc280abb11e626ff93f0f957708"
+    },
+    {
+      "file": "unity/Biblioteca/magias/branca.png",
+      "bytes": 1974,
+      "sha256": "86bb08f3419e01463f1641c2ebd57407c0eeda28c9c9d342bed1126ead694592"
+    },
+    {
+      "file": "unity/Biblioteca/magias/canhao.png",
+      "bytes": 1711,
+      "sha256": "e13955201d0d8d46c55906ba9bf21005ff972685bdc1e2542fecdf6c9f49d11e"
+    },
+    {
+      "file": "unity/Biblioteca/magias/fogo.png",
+      "bytes": 15811,
+      "sha256": "d963b544420f69945459e399cb2792a0d9cadad4501380e29aed561edfbb4691"
+    },
+    {
+      "file": "unity/Biblioteca/magias/gelo.png",
+      "bytes": 5107,
+      "sha256": "fcd82216a927da09f7d428ba7e029362db5dcc08037a240f3afcb0a4baf090cb"
+    },
+    {
+      "file": "unity/Biblioteca/magias/laranja.png",
+      "bytes": 1885,
+      "sha256": "d85f7f6ab4bbd0abb38e14a38c35199bae75a61eeb5a40d04fb123555753334c"
+    },
+    {
+      "file": "unity/Biblioteca/magias/malhada.png",
+      "bytes": 2266,
+      "sha256": "9e34cbf1dcc4413b879836cb151a954f79c69ae99c0d1243f7bdbb989c97cc1d"
+    },
+    {
+      "file": "unity/Biblioteca/magias/manchada.png",
+      "bytes": 2080,
+      "sha256": "d24f9ffb38c093de6188ae1848b7bf700d8c276b8dfdcf913911e28b2095b3d0"
+    },
+    {
+      "file": "unity/Biblioteca/magias/noite.png",
+      "bytes": 5835,
+      "sha256": "f85775eaa06bb6d309527974533be635bdb00439409c8955036a7cb985d1f73e"
+    },
+    {
+      "file": "unity/Biblioteca/magias/oleo.png",
+      "bytes": 3847,
+      "sha256": "250ed432fcb92c3bcd8dedab5e60cbd69eec360f6337de827171dc81c5496db6"
+    },
+    {
+      "file": "unity/Biblioteca/magias/prisao.png",
+      "bytes": 11856,
+      "sha256": "bb939b3c037b49ee668d5dfaaaf7774566e50136170cd6fb2d9ee10c7553f359"
+    },
+    {
+      "file": "unity/Biblioteca/natureza/agulha.png",
+      "bytes": 1191,
+      "sha256": "7879e100cc4bdb0c9663a4f490f6b950ee0ca224124802fa03a4c411fa2cf4f4"
+    },
+    {
+      "file": "unity/Biblioteca/natureza/casca.png",
+      "bytes": 4237,
+      "sha256": "9ad651aeb4d8082ac853cfed30f5a4f16f78e6dee6f5dbe0642f0a46785c68e9"
+    },
+    {
+      "file": "unity/Biblioteca/natureza/corrente.png",
+      "bytes": 1260,
+      "sha256": "b07321ae02f8db31e25f3f6f7479de99369a919544f31ba4bf8104e6247124de"
+    },
+    {
+      "file": "unity/Biblioteca/natureza/ferrao.png",
+      "bytes": 696,
+      "sha256": "5ef4886284f8dc715ff9f3e42e38f448705384c205eb6ba95e492dc1fb7d742a"
+    },
+    {
+      "file": "unity/Biblioteca/natureza/grito.png",
+      "bytes": 10379,
+      "sha256": "b7387d1ebd0f96a0a65b8c517c3b78fb94076b7f809a4e9d8d6f534c8abe5242"
+    },
+    {
+      "file": "unity/Biblioteca/natureza/raizes.png",
+      "bytes": 3012,
+      "sha256": "53fadb036a3353d10e42756223032e65e7b1fefb6bffbfde8f53455dc2525157"
+    },
+    {
+      "file": "unity/Biblioteca/projeteis/branca.png",
+      "bytes": 927,
+      "sha256": "2af1c2af075dee14292435b5ec473ae94e3963b9948a9c8a8be0b7a7e5616cfd"
+    },
+    {
+      "file": "unity/Biblioteca/projeteis/canhao.png",
+      "bytes": 562,
+      "sha256": "29beacdee094862ea7fd0c96ac99b5440378ecb62019bf65ed1fb240b8afab55"
+    },
+    {
+      "file": "unity/Biblioteca/projeteis/fogo.png",
+      "bytes": 948,
+      "sha256": "64d290107d4298e94abe001818cda2879d736b8fcc6749a9db8d894d96780399"
+    },
+    {
+      "file": "unity/Biblioteca/projeteis/laranja.png",
+      "bytes": 781,
+      "sha256": "979624b858cc837b552a06c41fca1bfde8536d6a487d42d9f446629d589f959e"
+    },
+    {
+      "file": "unity/Biblioteca/projeteis/malhada.png",
+      "bytes": 853,
+      "sha256": "f40731a12442dbca33cc033c5e4a1f94d9350079f998facc4ede09d4693b9c8b"
+    },
+    {
+      "file": "unity/Biblioteca/projeteis/manchada.png",
+      "bytes": 804,
+      "sha256": "87aeac63ba6dd84af3fa98ce60688c3b44c41c40442206a8992e061f54b5dee7"
+    },
+    {
+      "file": "unity/Sprites/Baltazar/idle_west.png",
+      "bytes": 31295,
+      "sha256": "409421f367abcb4c61a2073238da081548ddf31bd157eb65f7782b8b97625ab6"
+    },
+    {
+      "file": "unity/Sprites/Baltazar/walk_west.png",
+      "bytes": 51525,
+      "sha256": "bc35be497aa0a052872ca5194d0b28f42dc69add19f0bd2791083d104ce74995"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/agulha/conjuracao.png",
+      "bytes": 957,
+      "sha256": "f78b518ad5a040624b390bb0b8ba3adf1aa1243297851c0e6e4b479741c7f265"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/agulha/impacto.png",
+      "bytes": 1191,
+      "sha256": "7879e100cc4bdb0c9663a4f490f6b950ee0ca224124802fa03a4c411fa2cf4f4"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/ancora/uso.png",
+      "bytes": 9375,
+      "sha256": "0ea649a93e150d65142b481a92172421b68953e82e900e1506ac1bf569274a07"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/aquecer-motor/conjuracao.png",
+      "bytes": 958,
+      "sha256": "1a4f4d96d748cfbf1ce6f8b16390e0e4af7b18432dbde2ec07f4e099420243c6"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/aquecer-motor/impacto.png",
+      "bytes": 958,
+      "sha256": "1a4f4d96d748cfbf1ce6f8b16390e0e4af7b18432dbde2ec07f4e099420243c6"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/arremessar-pedra/conjuracao.png",
+      "bytes": 1374,
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/arremessar-pedra/impacto.png",
+      "bytes": 1204,
+      "sha256": "622999b76bbf9b7b0c044712a5c1b725ba14dc99e3d8f03f2b055ad4230ca33d"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/aura-de-gatinho/conjuracao.png",
+      "bytes": 2164,
+      "sha256": "f4f0903e28f7acce4d61b901e50274e63c6c1a7ebfc7eca179a55fec07adb5dc"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/aura-de-gatinho/impacto.png",
+      "bytes": 1441,
+      "sha256": "92bbf236d7a95fd5e33b2bfb89e79fcb75d91d8f79b50e685f5fc3e33f876e07"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/aura-de-gatinho/loop.png",
+      "bytes": 1441,
+      "sha256": "92bbf236d7a95fd5e33b2bfb89e79fcb75d91d8f79b50e685f5fc3e33f876e07"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/aura-gatinho/loop.png",
+      "bytes": 1441,
+      "sha256": "92bbf236d7a95fd5e33b2bfb89e79fcb75d91d8f79b50e685f5fc3e33f876e07"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/baltazar-martelo/conjuracao.png",
+      "bytes": 1305,
+      "sha256": "553e3a14744412ce2b5a98fc826499507c1b280dd9d1752cb45df01d4502cddc"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/baltazar-martelo/impacto.png",
+      "bytes": 6861,
+      "sha256": "b7b01cd20f41b77146cd9d2ae1fc5bf5f462fe65b2ddbcc97865dd8eb6ecaad0"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/bencao-de-pedra/uso.png",
+      "bytes": 3929,
+      "sha256": "aaf583b51f0c1153c3495d4bfe703aadefe31d482df6b97dbcc881c49b62f93f"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/bola-de-fogo/conjuracao.png",
+      "bytes": 958,
+      "sha256": "1a4f4d96d748cfbf1ce6f8b16390e0e4af7b18432dbde2ec07f4e099420243c6"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/bola-de-fogo/impacto.png",
+      "bytes": 15811,
+      "sha256": "d963b544420f69945459e399cb2792a0d9cadad4501380e29aed561edfbb4691"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/bomba-de-fumaca/uso.png",
+      "bytes": 6027,
+      "sha256": "4789b27fb756d2cab58aafdbe2ed806a7bac9b0a6b37c59c2a45f7fb1014b56e"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/canhao-de-peito/conjuracao.png",
+      "bytes": 958,
+      "sha256": "1a4f4d96d748cfbf1ce6f8b16390e0e4af7b18432dbde2ec07f4e099420243c6"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/canhao-de-peito/impacto.png",
+      "bytes": 1711,
+      "sha256": "e13955201d0d8d46c55906ba9bf21005ff972685bdc1e2542fecdf6c9f49d11e"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/casca/conjuracao.png",
+      "bytes": 957,
+      "sha256": "f78b518ad5a040624b390bb0b8ba3adf1aa1243297851c0e6e4b479741c7f265"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/casca/impacto.png",
+      "bytes": 4237,
+      "sha256": "9ad651aeb4d8082ac853cfed30f5a4f16f78e6dee6f5dbe0642f0a46785c68e9"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/chamar-gato/conjuracao.png",
+      "bytes": 896,
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/chamar-gato/impacto.png",
+      "bytes": 11988,
+      "sha256": "8263b006ca224dd6f173178d70a788e12628231390dd593d5b5c5f82e4c8b170"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/chao-de-gelo/conjuracao.png",
+      "bytes": 896,
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/chao-de-gelo/impacto.png",
+      "bytes": 5107,
+      "sha256": "fcd82216a927da09f7d428ba7e029362db5dcc08037a240f3afcb0a4baf090cb"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/chuva-de-moedas/fim.png",
+      "bytes": 1063,
+      "sha256": "a2b9406c89f5a8786a2efbb3e9f9fb0d1992463814a5de405d5b5089c2e4cef3"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/chuva-de-moedas/inicio.png",
+      "bytes": 1413,
+      "sha256": "6a6627cd5887be3d07dab3777f6c5f31105b2a00da9f1e6afabe513566ab7e8e"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/chuva-de-moedas/loop.png",
+      "bytes": 2593,
+      "sha256": "9df3fcf779f1ad839534bf5ad9351fe615552f032c14d0a8d381ea9bf57ea873"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/clava/conjuracao.png",
+      "bytes": 1374,
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/clava/impacto.png",
+      "bytes": 1294,
+      "sha256": "5204a2ba5909c94eeef2896d52529be20c4c70bbf4738fd3a341feadc0822b28"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/coroada/conjuracao.png",
+      "bytes": 1374,
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/coroada/impacto.png",
+      "bytes": 3263,
+      "sha256": "351ca9a015006938c336f786ace3c32de1a7890edcaa04cc745aee0114c042e4"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/corrente/conjuracao.png",
+      "bytes": 1305,
+      "sha256": "553e3a14744412ce2b5a98fc826499507c1b280dd9d1752cb45df01d4502cddc"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/corrente/impacto.png",
+      "bytes": 3637,
+      "sha256": "9ca53e0f2b3acdee76dcac11e7ac4684569664cd3901d38f433d37f45447bd83"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/corrente-de-ferro/uso.png",
+      "bytes": 3637,
+      "sha256": "9ca53e0f2b3acdee76dcac11e7ac4684569664cd3901d38f433d37f45447bd83"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/cristal-de-foco/uso.png",
+      "bytes": 391,
+      "sha256": "ebb6868c6e4cad8d10c85b8ab7a90f7e7fec1ae1b030fb8cfa02526dbd5d9928"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/desejo/inicio.png",
+      "bytes": 4386,
+      "sha256": "7666bdd1720c9a1b5ebdba3f9ee41ee654d62e9ea59bdf4690e4744732a95e9f"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/desejo-a/impacto.png",
+      "bytes": 9242,
+      "sha256": "6d7f691c3eb5eb9f1b9d745e27044ecc63af959a8e196ef7521a09b335120761"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/desejo-b/impacto.png",
+      "bytes": 4969,
+      "sha256": "7d99a46dcfb4b0b4e95cc6ae522eede36c5dbd507e505d083ff0ea11d7c63c47"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/desejo-c/impacto.png",
+      "bytes": 15323,
+      "sha256": "8cd1a3fa019f96d1af11f98d687dbe17362ef7fa3e84581d2234de1c6754f540"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/desejo-d/impacto.png",
+      "bytes": 4661,
+      "sha256": "8e7bad1484a9f3167f696a2629cc8f6150a83b236977e68ebca38028b2883a0d"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/desejo-e/impacto.png",
+      "bytes": 1613,
+      "sha256": "19d1b46fe7889c5cb636c3d322abc388f7faf972db82d464ed619bf841602bd3"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/desejo-f/impacto.png",
+      "bytes": 9771,
+      "sha256": "e301ba9a94de8d14f458cc5da050d220fc6883c2138c2f58620ffdc6206fafc5"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/devorar/impacto.png",
+      "bytes": 2760,
+      "sha256": "4f861e4f6addc21f4bb481b1cdbefa28370f629fce6259a95f76cb978c530d9b"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/eco-ancestral/fim.png",
+      "bytes": 2850,
+      "sha256": "ab262f4a11f24223a0b3e3154518782673486adee8797eb4e2d2c13a69097fda"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/eco-ancestral/inicio.png",
+      "bytes": 4803,
+      "sha256": "2e86d0848c5b60da31bfc29576a2a2cf177451f9fc1aeb6794ae14e83150aa2c"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/eco-ancestral/loop.png",
+      "bytes": 8333,
+      "sha256": "0a038394c8f1064b9a0f2ea6948d114e851c35196536ac4f9a76d20cacc86376"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/Estados/armadura/loop.png",
+      "bytes": 4592,
+      "sha256": "be0f00c861d393521618d32a6dc72573aa319235eb0dff7b2d82a56f31276532"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/Estados/buff-pa-pm/loop.png",
+      "bytes": 3836,
+      "sha256": "a896b34bfff77563fb6ffb303bf34a55bda29bef9d6be7eaebf07107571b8983"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/Estados/desejo-canalizando/loop.png",
+      "bytes": 4386,
+      "sha256": "7666bdd1720c9a1b5ebdba3f9ee41ee654d62e9ea59bdf4690e4744732a95e9f"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/Estados/escondido/loop.png",
+      "bytes": 10976,
+      "sha256": "64bb81f4124dbfafa2e09d33bd1045b822445f4ed9da13e03aabec9e4c8d7610"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/Estados/preso/loop.png",
+      "bytes": 3720,
+      "sha256": "c0994ba6eab94343865cc91bf30455d3073e6c3d2cdb7f0dc5a125e69c5b940d"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/Estados/sem-pm/loop.png",
+      "bytes": 2722,
+      "sha256": "db5dcb7715c0a874d07033e0e5fc70f45daf229f969feca791e616d6f35365be"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/Estados/sem-pm-oleo/loop.png",
+      "bytes": 2723,
+      "sha256": "db2fcbd6274512058279474a87c453c089867429ca5c61c7c38b74b82be8e768"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/faisca-branca/conjuracao.png",
+      "bytes": 2164,
+      "sha256": "f4f0903e28f7acce4d61b901e50274e63c6c1a7ebfc7eca179a55fec07adb5dc"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/faisca-branca/impacto.png",
+      "bytes": 1974,
+      "sha256": "86bb08f3419e01463f1641c2ebd57407c0eeda28c9c9d342bed1126ead694592"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/faisca-da-varinha/conjuracao.png",
+      "bytes": 896,
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/faisca-da-varinha/impacto.png",
+      "bytes": 896,
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/faisca-laranja/conjuracao.png",
+      "bytes": 896,
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/faisca-laranja/impacto.png",
+      "bytes": 1885,
+      "sha256": "d85f7f6ab4bbd0abb38e14a38c35199bae75a61eeb5a40d04fb123555753334c"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/faisca-malhada/conjuracao.png",
+      "bytes": 896,
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/faisca-malhada/impacto.png",
+      "bytes": 2266,
+      "sha256": "9e34cbf1dcc4413b879836cb151a954f79c69ae99c0d1243f7bdbb989c97cc1d"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/faisca-manchada/conjuracao.png",
+      "bytes": 896,
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/faisca-manchada/impacto.png",
+      "bytes": 2080,
+      "sha256": "d24f9ffb38c093de6188ae1848b7bf700d8c276b8dfdcf913911e28b2095b3d0"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/ferrao/conjuracao.png",
+      "bytes": 957,
+      "sha256": "f78b518ad5a040624b390bb0b8ba3adf1aa1243297851c0e6e4b479741c7f265"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/ferrao/impacto.png",
+      "bytes": 696,
+      "sha256": "5ef4886284f8dc715ff9f3e42e38f448705384c205eb6ba95e492dc1fb7d742a"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/festival-de-fogos/explosao.png",
+      "bytes": 4102,
+      "sha256": "beae428ac09aa7e9110dd623376ce612919b4cd1efe615d9bf7bb9573b695fdf"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/festival-de-fogos/fim.png",
+      "bytes": 4178,
+      "sha256": "8dc25a43d727bf8f634bb45b4bc1063aa141d4ee726d615c1c68e70c27b5afda"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/festival-de-fogos/inicio.png",
+      "bytes": 2505,
+      "sha256": "ccc8aa837bddfc108932b8ae2da0c1f46542e0e1f146e83ed1a2f1579354b6a8"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/festival-de-fogos/loop.png",
+      "bytes": 4117,
+      "sha256": "acd114d9c1d1c1a17cd421bad4b3ab0b3530b65b3f71db759de73fc039f44de4"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/fogos/loop.png",
+      "bytes": 3363,
+      "sha256": "16806b4aa5c7f4d6180166910acb6e5ceebd4035a57a8293ec69c8a0d8e57f75"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/gancho/conjuracao.png",
+      "bytes": 1374,
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/gancho/impacto.png",
+      "bytes": 2051,
+      "sha256": "61370c61a5414bae72dcb528aea6b9ae836cbebd6649f630478a1660f036f340"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/gancho-broca/conjuracao.png",
+      "bytes": 1374,
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/gancho-broca/impacto.png",
+      "bytes": 2051,
+      "sha256": "61370c61a5414bae72dcb528aea6b9ae836cbebd6649f630478a1660f036f340"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/gelo/loop.png",
+      "bytes": 3051,
+      "sha256": "396dd5d8c3333e4a0ecb0c4be807102112a06b4184a3b979f9c1625cfea0482a"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/grito-de-comando/conjuracao.png",
+      "bytes": 957,
+      "sha256": "f78b518ad5a040624b390bb0b8ba3adf1aa1243297851c0e6e4b479741c7f265"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/grito-de-comando/impacto.png",
+      "bytes": 10379,
+      "sha256": "b7387d1ebd0f96a0a65b8c517c3b78fb94076b7f809a4e9d8d6f534c8abe5242"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/lava/loop.png",
+      "bytes": 4392,
+      "sha256": "151450fb8ee7ed6196be9125b73dc6d79635cb8199deda4011de414b33a63135"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/manto-de-espinhos/uso.png",
+      "bytes": 2480,
+      "sha256": "8184b03a636a32ee169ff840e7c239525e422bfbbbb521515414d066afca8edd"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/mare-de-energia/fim.png",
+      "bytes": 1203,
+      "sha256": "c89357a367e8ed0d64865d2c1028ebdd645e2f38db6001e8e48a7050991367f9"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/mare-de-energia/inicio.png",
+      "bytes": 1975,
+      "sha256": "dc4b806aa0a7ed313cdc133f235075dc2cddc6a26894f53a905e43d6f41e5c21"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/mare-de-energia/loop.png",
+      "bytes": 16684,
+      "sha256": "f002c50268487d4f21ae5dbe40f9795953bc638c771f2f4e47f61321a2fd6f4c"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/mare-de-lava/fim.png",
+      "bytes": 2213,
+      "sha256": "0a81cd1304e97c04a11b3dc7c04c017419d277b76878d1f314180a6e0df9ae01"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/mare-de-lava/inicio.png",
+      "bytes": 3788,
+      "sha256": "1fa401e9e5ff55cd1e78a32f64b6c25441897b1b41c9e735fc5599b32d103fbf"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/mare-de-lava/loop.png",
+      "bytes": 4392,
+      "sha256": "151450fb8ee7ed6196be9125b73dc6d79635cb8199deda4011de414b33a63135"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/martelo-perfurante/uso.png",
+      "bytes": 11777,
+      "sha256": "206bff4c8bdc500afbec7ed851de65f37ddc42f078097a3c8d44beb3c1d687dd"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/mina-de-gelo/uso.png",
+      "bytes": 3677,
+      "sha256": "819f6cf79b33406597bcd46c30d2579d300de0fdbd878eb23ceff418fb8ab090"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/mover-gato/conjuracao.png",
+      "bytes": 896,
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/mover-gato/impacto.png",
+      "bytes": 1441,
+      "sha256": "92bbf236d7a95fd5e33b2bfb89e79fcb75d91d8f79b50e685f5fc3e33f876e07"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/nevoeiro/fim.png",
+      "bytes": 6597,
+      "sha256": "08ae1f6b534a3a370c9753977ef94e75caf36d3a5948dd02ef3978b3dbaaf07e"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/nevoeiro/inicio.png",
+      "bytes": 9804,
+      "sha256": "ce16c19b9bb0e44cff4f599409e9894fcf43014fc269dcd4bf1bb1a3de3d2786"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/nevoeiro/loop.png",
+      "bytes": 19704,
+      "sha256": "fb91d748ee60feac3d9239b5d974edea96926a6b98bfca4afb45244e1bd23713"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/noite-dos-gatos/aura.png",
+      "bytes": 1441,
+      "sha256": "92bbf236d7a95fd5e33b2bfb89e79fcb75d91d8f79b50e685f5fc3e33f876e07"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/noite-dos-gatos/conjuracao.png",
+      "bytes": 2164,
+      "sha256": "f4f0903e28f7acce4d61b901e50274e63c6c1a7ebfc7eca179a55fec07adb5dc"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/noite-dos-gatos/impacto.png",
+      "bytes": 5835,
+      "sha256": "f85775eaa06bb6d309527974533be635bdb00439409c8955036a7cb985d1f73e"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/pancada-colossal/conjuracao.png",
+      "bytes": 1374,
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/pancada-colossal/impacto.png",
+      "bytes": 6861,
+      "sha256": "b7b01cd20f41b77146cd9d2ae1fc5bf5f462fe65b2ddbcc97865dd8eb6ecaad0"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/pancada-do-errante/conjuracao.png",
+      "bytes": 1374,
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/pancada-do-errante/impacto.png",
+      "bytes": 8478,
+      "sha256": "ec69fcd8b866b3c7b89bfdc4c5e624730a85e2ce75b5d40642a7ae58db04289b"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/pauzinho/conjuracao.png",
+      "bytes": 1374,
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/pauzinho/impacto.png",
+      "bytes": 988,
+      "sha256": "68d86c5e68b309b1fe4a9ce1df1717544487fdcce67e01c73324cc1867b7d6e5"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/pena-de-fenix/uso.png",
+      "bytes": 12505,
+      "sha256": "9dc9fd004c1daa8e5997ab2f4428538eaaab94bbf8e0fb1108740d96b57cf6a5"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/pisao/conjuracao.png",
+      "bytes": 1374,
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/pisao/impacto.png",
+      "bytes": 8066,
+      "sha256": "ed8a34d1b6da2771eff200376e05b0cfb652e2c6ee9c9cc11388ec83a76219b3"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/portal-caotico/fim.png",
+      "bytes": 5620,
+      "sha256": "a11fc5253aa46d9eab6d1143c882691c40ae45fc3ab4b7dfa7a9e1c3ca3a4b7d"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/portal-caotico/inicio.png",
+      "bytes": 12431,
+      "sha256": "10a8b7757c05130e9b6a9167fe86dd87ee35636070d749d8c864f9c70d8c71e8"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/portal-caotico/loop.png",
+      "bytes": 25922,
+      "sha256": "d13542420ace9a72472140e3e5e9cbde713f0b9a34ae8b6152278ef595432db9"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/prisao-dos-pesadelos/conjuracao.png",
+      "bytes": 896,
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/prisao-dos-pesadelos/impacto.png",
+      "bytes": 11856,
+      "sha256": "bb939b3c037b49ee668d5dfaaaf7774566e50136170cd6fb2d9ee10c7553f359"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/queda-de-pedras/fim.png",
+      "bytes": 1275,
+      "sha256": "38175260280be99299b1cc8805f03b10d7bf1c7669267551dbcdef526168749f"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/queda-de-pedras/inicio.png",
+      "bytes": 3384,
+      "sha256": "ca364b43010530767c4cb9b781844ca501ea54021024e5450a2ae7afd47776e5"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/queda-de-pedras/loop.png",
+      "bytes": 2856,
+      "sha256": "a4104c5f52a16004b180c9849f2319580328e573768ed268e09e3a3e6b08140e"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/raizes/conjuracao.png",
+      "bytes": 957,
+      "sha256": "f78b518ad5a040624b390bb0b8ba3adf1aa1243297851c0e6e4b479741c7f265"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/raizes/impacto.png",
+      "bytes": 3012,
+      "sha256": "53fadb036a3353d10e42756223032e65e7b1fefb6bffbfde8f53455dc2525157"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/rugido/conjuracao.png",
+      "bytes": 1374,
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/rugido/impacto.png",
+      "bytes": 10873,
+      "sha256": "ec1252c2192045d82a9441e8a8f28094a450080afb86deaa9efd5bff8d117a71"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/tentaculo-de-oleo/conjuracao.png",
+      "bytes": 896,
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/tentaculo-de-oleo/impacto.png",
+      "bytes": 3847,
+      "sha256": "250ed432fcb92c3bcd8dedab5e60cbd69eec360f6337de827171dc81c5496db6"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/terremoto/fim.png",
+      "bytes": 6762,
+      "sha256": "b38b284439e9f99236982b1308d27f48aef52c209a90ab694200c7fad14fc889"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/terremoto/inicio.png",
+      "bytes": 3995,
+      "sha256": "ccf05e8463de557fdf3581488ea654161631471961afa5a851604caa6feaf4c1"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/terremoto/loop.png",
+      "bytes": 1639,
+      "sha256": "54adbd50d7866d995b62d03be79f66893658cefc8411f28f86b43f86084ee5ad"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/totem-de-cura/uso.png",
+      "bytes": 5601,
+      "sha256": "9a28245f88652ff99c3853b99efe0ceaec8d4cc280abb11e626ff93f0f957708"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/vendaval/fim.png",
+      "bytes": 2710,
+      "sha256": "903bffbfa08b62e1213d6aea16970b540ee53b0b8ce726b5343129de58367a50"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/vendaval/inicio.png",
+      "bytes": 2805,
+      "sha256": "a63764082c1351864e2a02567c2c43039d16203c82494781825ce71bf8f26be0"
+    },
+    {
+      "file": "unity/Sprites/Efeitos/vendaval/loop.png",
+      "bytes": 3030,
+      "sha256": "7f7afc91daa98224186c0688b7c179b0e08441c4c45d3fe7b9dfa35c7d5fb559"
+    },
+    {
+      "file": "unity/Sprites/GuardiaoMusgo/idle_north-west.png",
+      "bytes": 29643,
+      "sha256": "8d5f05bc3af80393f6a31a7a0d797b28a092bc76665de1c5d8fb03a6137e7132"
+    },
+    {
+      "file": "unity/Sprites/Objetos/bau-recompensa/idle.png",
+      "bytes": 2319,
+      "sha256": "2871b78715410dfccaf85f2df6eff2a73fdfdd34497909587bac5c2877a17fca"
+    },
+    {
+      "file": "unity/Sprites/Objetos/bau-recompensa/quebrar.png",
+      "bytes": 1931,
+      "sha256": "2be12ad1b22002f151f20adb83c7a1c9103cbf1678aee332735027376937e341"
+    },
+    {
+      "file": "unity/Sprites/Objetos/bau-recompensa/surgir.png",
+      "bytes": 2521,
+      "sha256": "e3f2c7a03d94003716f77021adaa5830bdd29f973f47aa437b92ea5e3d19b8d8"
+    },
+    {
+      "file": "unity/Sprites/Objetos/buraco-papa-moedas/idle.png",
+      "bytes": 3101,
+      "sha256": "cd022d01caae697ca64c338f8a144d49616b32bd5f8f3e83694c7265a0d43542"
+    },
+    {
+      "file": "unity/Sprites/Objetos/buraco-papa-moedas/quebrar.png",
+      "bytes": 2895,
+      "sha256": "3a573f2d48799e9c16a214972d86b5067b734468c76c7bd2143bd840fb53acd4"
+    },
+    {
+      "file": "unity/Sprites/Objetos/buraco-papa-moedas/surgir.png",
+      "bytes": 3343,
+      "sha256": "6ea537ca0bd448114378a211990bf6c1c57a16560d4d0e791f74c5a31ddd3398"
+    },
+    {
+      "file": "unity/Sprites/Objetos/casa-congelada/idle.png",
+      "bytes": 3051,
+      "sha256": "396dd5d8c3333e4a0ecb0c4be807102112a06b4184a3b979f9c1625cfea0482a"
+    },
+    {
+      "file": "unity/Sprites/Objetos/casa-congelada/quebrar.png",
+      "bytes": 1798,
+      "sha256": "19404288db865452560f8a7c237c68c0938990ba1691ee92163b0bda12ea73d0"
+    },
+    {
+      "file": "unity/Sprites/Objetos/casa-congelada/surgir.png",
+      "bytes": 2977,
+      "sha256": "2394181a43ccf8ddd63df8ab01f391a738b48dc54ba6f78c2b083e8a8643f3c0"
+    },
+    {
+      "file": "unity/Sprites/Objetos/casa-de-lava/idle.png",
+      "bytes": 4392,
+      "sha256": "151450fb8ee7ed6196be9125b73dc6d79635cb8199deda4011de414b33a63135"
+    },
+    {
+      "file": "unity/Sprites/Objetos/casa-de-lava/sumir.png",
+      "bytes": 2213,
+      "sha256": "0a81cd1304e97c04a11b3dc7c04c017419d277b76878d1f314180a6e0df9ae01"
+    },
+    {
+      "file": "unity/Sprites/Objetos/casa-de-lava/surgir.png",
+      "bytes": 3788,
+      "sha256": "1fa401e9e5ff55cd1e78a32f64b6c25441897b1b41c9e735fc5599b32d103fbf"
+    },
+    {
+      "file": "unity/Sprites/Objetos/casa-resfriada/idle.png",
+      "bytes": 2824,
+      "sha256": "d409b21660d3db589210452c279a708534689af00a72d290a677447cf39d027b"
+    },
+    {
+      "file": "unity/Sprites/Objetos/casa-resfriada/quebrar.png",
+      "bytes": 2016,
+      "sha256": "6f24cefed914bc5f917f9751f07b9a81e5986c7cd05f14ab5eadbf6d419a9ff4"
+    },
+    {
+      "file": "unity/Sprites/Objetos/casa-resfriada/surgir.png",
+      "bytes": 2665,
+      "sha256": "b1e75c86b16fcc9058d2cb6d00a7452c828d2089b36e955e32c7f4638fd70eff"
+    },
+    {
+      "file": "unity/Sprites/Objetos/marcador-de-fogos/idle.png",
+      "bytes": 3363,
+      "sha256": "16806b4aa5c7f4d6180166910acb6e5ceebd4035a57a8293ec69c8a0d8e57f75"
+    },
+    {
+      "file": "unity/Sprites/Objetos/marcador-de-fogos/sumir.png",
+      "bytes": 4178,
+      "sha256": "370b35b3fef23358de42dd9ec33b8a38bda50cc20ddbacc12378abb3127a121e"
+    },
+    {
+      "file": "unity/Sprites/Objetos/marcador-de-fogos/surgir.png",
+      "bytes": 2506,
+      "sha256": "05adb82c30c61f6b7a123444bb08a072f97b82b81b1d07f5bc4d0e8f41da0c04"
+    },
+    {
+      "file": "unity/Sprites/Objetos/mina-de-gelo-armada/idle.png",
+      "bytes": 3168,
+      "sha256": "28c45bca2ed4e0ab5eee31154f5d873a4d7be249a8fbf35189c40226fd7ee656"
+    },
+    {
+      "file": "unity/Sprites/Objetos/mina-de-gelo-armada/quebrar.png",
+      "bytes": 2901,
+      "sha256": "df6dfe7f25563ca0e255c53e81376cf9d4674324590ae28eb0faceca3a5f7297"
+    },
+    {
+      "file": "unity/Sprites/Objetos/mina-de-gelo-armada/surgir.png",
+      "bytes": 3160,
+      "sha256": "1a5ef60f45759e4a60365cd8b17c71832a9933ac8cd051a268c9f5b089c71ad8"
+    },
+    {
+      "file": "unity/Sprites/Objetos/portal-de-rocha/idle.png",
+      "bytes": 7946,
+      "sha256": "e9312205948d9ab0402949e0c0dc27e91d332c6f859e42cd60a8cb4c2fffa13a"
+    },
+    {
+      "file": "unity/Sprites/Objetos/portal-de-rocha/quebrar.png",
+      "bytes": 6124,
+      "sha256": "404f05a5e18b8a61f3aa9eb93a9b45531d71d087938fad9955cb2a5a120c8aa2"
+    },
+    {
+      "file": "unity/Sprites/Objetos/portal-de-rocha/surgir.png",
+      "bytes": 8497,
+      "sha256": "c936baca6160c7e4c7dd81401642e32a39bd5154de0260bb776a0f2e04ec3f13"
+    },
+    {
+      "file": "unity/Sprites/Objetos/prisao-dos-pesadelos/idle.png",
+      "bytes": 3481,
+      "sha256": "81fcbc6c20cbec562553c286622151fb9ba533c718d4427376f7aec4f0cb143a"
+    },
+    {
+      "file": "unity/Sprites/Objetos/prisao-dos-pesadelos/quebrar.png",
+      "bytes": 1938,
+      "sha256": "f63b0b4361957b927c19f91b83243d25a6a694d2fa50fc956603905b7601285b"
+    },
+    {
+      "file": "unity/Sprites/Objetos/prisao-dos-pesadelos/surgir.png",
+      "bytes": 3964,
+      "sha256": "2acd67115e2b638b49fd7bed5a0bf6659f3876f95f709b0561cb492f1035b376"
+    },
+    {
+      "file": "unity/Sprites/Objetos/totem-de-cura/idle.png",
+      "bytes": 21077,
+      "sha256": "046a6adb32248d6fa6d2a7d98e418f3bff7bb2caa7724686a72f65c04b592023"
+    },
+    {
+      "file": "unity/Sprites/Objetos/totem-de-cura/quebrar.png",
+      "bytes": 37974,
+      "sha256": "6c614f036f8ca9579380bd45ffca345dcc8282af9f80ed341b8ebdedf5fb0c71"
+    },
+    {
+      "file": "unity/Sprites/Objetos/totem-de-cura/surgir.png",
+      "bytes": 33650,
+      "sha256": "76da991462a58432d628a46b270a58285793feb7b94e3a55d72e45791a485eaa"
+    },
+    {
+      "file": "unity/Sprites/Projeteis/bola-de-fogo.png",
+      "bytes": 359,
+      "sha256": "d15477dd21a9d7f1bfbda2aee95d68050c50b4e775ea059cc5032749b9770c65"
+    },
+    {
+      "file": "unity/Sprites/Projeteis/canhao-de-peito.png",
+      "bytes": 283,
+      "sha256": "9ccc21218d1301146a5d937f189b74192f80c65ad2e2b508176747e8b18c4ba0"
+    },
+    {
+      "file": "unity/Sprites/Projeteis/faisca-branca.png",
+      "bytes": 361,
+      "sha256": "984385b300d134ddbee58f03000368dab98d13d19f49a0404514c4ec00ae8e24"
+    },
+    {
+      "file": "unity/Sprites/Projeteis/faisca-laranja.png",
+      "bytes": 339,
+      "sha256": "9b567dacfccab1306fa72ffb2b56810dd7132e906f785fe91231789d38326906"
+    },
+    {
+      "file": "unity/Sprites/Projeteis/faisca-malhada.png",
+      "bytes": 344,
+      "sha256": "a36abdd926190d8afc443da261c6f25d52fe34bd376910b799a8803942f2f088"
+    },
+    {
+      "file": "unity/Sprites/Projeteis/faisca-manchada.png",
+      "bytes": 354,
+      "sha256": "49924c9dc519038c68e1aac0dffa12a0246108d5e05c6b7ea074094a295eabc5"
+    },
+    {
+      "file": "unity/Sprites/ProjeteisAnimados/bola-de-fogo.png",
+      "bytes": 948,
+      "sha256": "64d290107d4298e94abe001818cda2879d736b8fcc6749a9db8d894d96780399"
+    },
+    {
+      "file": "unity/Sprites/ProjeteisAnimados/canhao-de-peito.png",
+      "bytes": 562,
+      "sha256": "29beacdee094862ea7fd0c96ac99b5440378ecb62019bf65ed1fb240b8afab55"
+    },
+    {
+      "file": "unity/Sprites/ProjeteisAnimados/faisca-branca.png",
+      "bytes": 927,
+      "sha256": "2af1c2af075dee14292435b5ec473ae94e3963b9948a9c8a8be0b7a7e5616cfd"
+    },
+    {
+      "file": "unity/Sprites/ProjeteisAnimados/faisca-laranja.png",
+      "bytes": 781,
+      "sha256": "979624b858cc837b552a06c41fca1bfde8536d6a487d42d9f446629d589f959e"
+    },
+    {
+      "file": "unity/Sprites/ProjeteisAnimados/faisca-malhada.png",
+      "bytes": 853,
+      "sha256": "f40731a12442dbca33cc033c5e4a1f94d9350079f998facc4ede09d4693b9c8b"
+    },
+    {
+      "file": "unity/Sprites/ProjeteisAnimados/faisca-manchada.png",
+      "bytes": 804,
+      "sha256": "87aeac63ba6dd84af3fa98ce60688c3b44c41c40442206a8992e061f54b5dee7"
+    },
+    {
+      "file": "verificacao.json",
+      "bytes": 165,
+      "sha256": "d919a833576925460830f424a74db3859c6e9508d167b0a17c05e1c9d784862d"
+    },
+    {
+      "file": "verificar.py",
+      "bytes": 3456,
+      "sha256": "90cf5e00a61b3c64c109cf0189552db03e6c4abd5a26d05984f2f27d55884b36"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+[
+  {
+    "file": "efeitos/fontes/mare-de-lava.zip",
+    "bytes": 21901,
+    "sha256": "8ecea93f645d3896565bc66ebff1682c8b05a01894d02f07700c53d3174fb441"
+  },
+  {
+    "file": "efeitos/fontes/eco-ancestral.zip",
+    "bytes": 34370,
+    "sha256": "10a5b07d6bb94d04c406b1cc5525a6da8d2d19cb7829bc1a9ba2c738108a2918"
+  },
+  {
+    "file": "efeitos/fontes/portal-caotico.zip",
+    "bytes": 88327,
+    "sha256": "bdcd877343fba1f514e51ad6ddaac3f16ff6a6ac22acdf5becf98ea4035546dc"
+  },
+  {
+    "file": "efeitos/fontes/mare-de-energia.zip",
+    "bytes": 40202,
+    "sha256": "cfc86140e231c9cc43239fe187216a7ca86cfc509425fbacb483dfa78d727bcc"
+  },
+  {
+    "file": "efeitos/fontes/vendaval.zip",
+    "bytes": 14558,
+    "sha256": "fbdebd551e67a53c9c458f7b15cea91c17f2b2ed5388f86ba3e9045aa3b70b4a"
+  },
+  {
+    "file": "efeitos/fontes/terremoto.zip",
+    "bytes": 24953,
+    "sha256": "1d1c6ed1829131587f5ae0c6772a1d6ebd3f7d448345ae786cbf0907ad6e9cda"
+  },
+  {
+    "file": "efeitos/fontes/festival-de-fogos.zip",
+    "bytes": 32690,
+    "sha256": "910768ece3ae76b6ee00e8dda458f73fec971139466f8f9de374fa0cd5836e78"
+  },
+  {
+    "file": "efeitos/fontes/nevoeiro.zip",
+    "bytes": 58054,
+    "sha256": "9c5942ce95ce563c57c4d78cd1ffa1356f2e2ec25e51425c7135302229d778e8"
+  },
+  {
+    "file": "efeitos/fontes/chuva-de-moedas.zip",
+    "bytes": 6277,
+    "sha256": "f6c38326979176f5124ce96143fbf66b6fbb31f6fd7c0dad8f905a79ace58609"
+  },
+  {
+    "file": "efeitos/fontes/queda-de-pedras.zip",
+    "bytes": 7801,
+    "sha256": "7df701cf068b57036df8794625cd5d0485e1d9934e5ce06fa0916291f6901b4d"
+  },
+  {
+    "file": "efeitos/fontes/lib-natureza.zip",
+    "bytes": 64369,
+    "sha256": "096a57aa58f16f9418bca8a08e97e00581fa958e8297f7b872451aba4f8eb8ac"
+  },
+  {
+    "file": "efeitos/fontes/lib-golpes.zip",
+    "bytes": 107859,
+    "sha256": "65ba9376b35509afe26b88efda31c2f5467efaaf79a2158fde9d25cb3dd7b785"
+  },
+  {
+    "file": "efeitos/fontes/lib-estados.zip",
+    "bytes": 109816,
+    "sha256": "c2f1d162ce2a38f9c74e600a9f4ce80860a42b5b8f1684e4f0cc1d60a910e91b"
+  },
+  {
+    "file": "efeitos/fontes/lib-desejos.zip",
+    "bytes": 225817,
+    "sha256": "0346361fb92a7f3f9ddc8667e9426cd5d9e045f9f93f359cb73bcb3cfaf7e3ce"
+  },
+  {
+    "file": "efeitos/fontes/lib-magias.zip",
+    "bytes": 150597,
+    "sha256": "10ae011101e2821f5d2396e23272a77d1997074904cd19ab0bc0f67b49a76da7"
+  },
+  {
+    "file": "efeitos/fontes/lib-loja.zip",
+    "bytes": 118120,
+    "sha256": "34b888bf41a5c9df21869a7c5061c9ec2261e1d6edd074499245e9ca68801543"
+  },
+  {
+    "file": "efeitos/fontes/lib-conjuracao.zip",
+    "bytes": 24944,
+    "sha256": "a4a35ad8e6c24e5b8336729fa58b8e2d2255c897f0387667d125b6c460e218db"
+  },
+  {
+    "file": "efeitos/fontes/lib-projeteis.zip",
+    "bytes": 17373,
+    "sha256": "f4cdfb6aaed177da8d348b65146ea65ef58827fcfa38a0038cbdc564640d3395"
+  },
+  {
+    "file": "efeitos/fontes/glyph-martelo-cristal.zip",
+    "bytes": 9261,
+    "sha256": "18f11b24aa52f79454943aabe424130d69efd8fb149271f735dd63bcb6fa6e18"
+  },
+  {
+    "file": "efeitos/fontes/glyph-corrente-fisica.zip",
+    "bytes": 4657,
+    "sha256": "0d48a707f3b9d888bdccfeace0373f76115f17b0daed946b64f8fefb8c4b7bda"
+  },
+  {
+    "file": "efeitos/fontes/glyph-pena-fenix.zip",
+    "bytes": 8848,
+    "sha256": "3a1df20d011ae832a17e6facf88efe8e33eb0b4be99b1b89519afe924a014dcd"
+  },
+  {
+    "file": "efeitos/fontes/glyph-ancora-fantasma.zip",
+    "bytes": 10877,
+    "sha256": "612b83d9b0007b3049b9f80eb29eb3b01fcbf9a067fcaf83dfb9b326ad5888b4"
+  },
+  {
+    "file": "efeitos/fontes/glyph-desejo-itens.zip",
+    "bytes": 2463,
+    "sha256": "8ca3fa45aa31f757f8c624df1024b6d4145e9b3c60fb81619c0925d011aeba2c"
+  },
+  {
+    "file": "efeitos/fontes/glyph-desejo-apagar.zip",
+    "bytes": 11989,
+    "sha256": "1d03b9463f91b5b87c8423181f81f728eb1d595eb232e4103c2e3221bb245f59"
+  },
+  {
+    "file": "efeitos/fontes/glyph-devorar-essencia.zip",
+    "bytes": 3734,
+    "sha256": "23361534559a0ca1597289a6feab1c67165bfff105d1f9e29ec756e9c5d13db7"
+  }
+]

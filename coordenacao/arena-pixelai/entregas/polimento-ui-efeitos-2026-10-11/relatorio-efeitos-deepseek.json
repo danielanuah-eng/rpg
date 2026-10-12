@@ -1,0 +1,145 @@
+{
+  "resumo": "Auditoria somente leitura de efeitos ainda faltantes na Arena Tática, comparando entregue x integrado.\n\nEstado por frente:\n\n1) Correções pedidas pelo autor (prioridade imediata): Baltazar (idle, walk, attack em W e SW) e Guardião de Musgo (idle NW) JÁ estão entregues como 7 tiras/42 quadros em correcoes-urgentes\\ . A integração no Unity continua pendente (falta de importação, não de entrega). Formato: tiras horizontais, quadro 168x168 preservado, mesmo número de quadros e timing do PixelLab, sem centralizar por quadro; pivô existente + deltas no manifesto.\n\n2) 12 avisos centrais do Cataclisma: PRODUZIDOS em eventos-centrais (144 quadros, atlas 384x288, 4 col x 3 lin, quadro 96x96, 160 ms, ciclo 1,92 s, pivô central, Point/sem mipmap). O próprio produtor declara que NÃO substituem efeitos de campo/céu/habilidades. Não repetir.\n\n3) Props Blender (5 GLB, um por tema) prontos. Não repetir.\n\nTabela de pendências acionáveis (ID | tipo | reuso | formato pedido | prio | evidência):\n\n| ID | tipo | arquivos p/ reuso | formato/frames/fps/pivô/impacto | prio | evidência |\n|---|---|---|---|---|---|\n| Baltazar W/SW + GuardiaoMusgo idle NW | correção personagem | correcoes-urgentes/tiras/* | tiras 168x168, timing original, pivô por delta | P0 (importar) | LEIA-ME-SOL.md:9 |\n| ceu-aberto, ceu-dourado, nuvens-densas, cinzas-vulcanicas, deserto-poente, tempestade, noite-festiva | evento de campo/cenário | nenhum | fundo 2048x1024 + nuvens 2048x512 alfa | P2 | tarefas/015:33 |\n| mare-de-lava, chuva-de-moedas, queda-de-pedras, terremoto, portal-caotico, eco-ancestral, mare-de-energia, festival-de-fogos(explosao), nevoeiro, vendaval | evento de campo | eventos-centrais/* (só aviso central) ? | inicio/loop/fim.png por casa; informar tamanho e quadro de impacto | P3 | tarefas/015:48-66 |\n| uso.png dos 11 itens novos (martelo-perfurante, corrente-de-ferro, bomba-de-fumaca, pena-de-fenix, totem-de-cura, mina-de-gelo, gancho-de-escalada, cristal-de-foco, manto-de-espinhos, ancora, bencao-de-pedra) | uso de item | loja-animada/<id>/idle.png (existe; uso NÃO) | Efeitos/<id>/uso.png, tiras de quadros quadrados | P4 | tarefas/015:71 |\n| 11 icones Loja/<id>.png | ícone | loja-animada/<id>/idle.png ? | 64x64 | P5 | auditoria-pendencias-resumo.md:1 |\n| projéteis de skill nova (bola de fogo, disparo do gato, tentaculo de oleo, canhao de peito, corrente) | projétil | eventos-cenarios/projeteis/* (só 9 antigos) | Projeteis/<skill-id>.png imagem única, pivô 0.5,0.5 | P5 | tarefas/015:107 |\n| efeitos/impactos de skill nova (chao de gelo, prisao, casca/raizes, tentáculo, chain, island) | impacto/skill | eventos-cenarios/efeitos/* (só baforada, cura, impacto-area, invocacao, moeda, raio-arcano) | Efeitos/<skill-id>/, quadro quadrado | P5 | tarefas/015:135-156 |\n| objetos de mapa (casa lava, casa resfriada, casa congelada, marcador festival, mina de gelo, prisao, bau, portal rocha, buraco papa-moedas) | objeto animado | TotemCura existe como unidade | Objetos/<id>/ idle+surge+break/some | P6 | tarefas/015:123-133 |\n| estados no lutador (escondido, preso, sem PM, +armadura, desejo, buff PA/PM) | status | nenhum | loop sobre sprite | P6 | tarefas/015:158-165 |\n| desejo-a..f (6) + devorar | efeito skill | nenhum | Efeitos/desejo-a..f, Efeitos/devorar | P5 | tarefas/015:167-177 |\n\nDiferencas entrega x importação: correções Baltazar/Guardião e idles dos 11 itens novos = ENTREGUES, falta só importar (lacuna local). Céus, uso.png, projéteis/efeitos de skill, objetos, status, desejo, devorar = FALTA NA ENTREGA (sem fonte).\n\nRegistros mais novos que contradizem tarefas antigas: (a) tarefas/016:59 dizia que Asamyh/Cheiro/Colosso tinham só as 8 bases, mas Asamyh já tem tiras completas (idle/walk/attack/hit/death/heal/summon/ult) e respostas/016:9 confirma importação; (b) tarefas/016:14 sugeria 3 gatos sem animação, mas AUDITORIA-SOL.md:26 registra 28 clipes por gato (desatualizado).\n\nCréditos/coordenação: saldo PixelLab 165 (renovação 10/11); RESERVA-PIXELLAB.json marca Sol em-produção — não iniciar gerações concorrentes; Blender como alternativa.",
+  "achados": [
+    {
+      "afirmacao": "Baltazar (idle/walk/attack W e SW) e Guardião de Musgo (idle NW) foram entregues como 7 tiras e 42 quadros no lote do Sol. A entrega existe; falta a importação/integração.",
+      "arquivo": "entregas/fechamento-arena-2026-10-11/LEIA-ME-SOL.md",
+      "linha": 9,
+      "trecho": "| Baltazar: idle, walk e attack W/SW; Guardião de Musgo: idle NW | `correcoes-urgentes/enquadramentos.visual.json` | 7 tiras, 42 quadros, RGBA idêntico à fonte após deslocamento constante.",
+      "ok": true
+    },
+    {
+      "afirmacao": "A integração de todo o lote do Sol (correções, eventos, props) está marcada pendente_claude = falta de importação, não de entrega.",
+      "arquivo": "respostas/2026-10-11-sol-enquadramentos-eventos-props.md",
+      "linha": 18,
+      "trecho": "Toda integração deste lote está marcada `pendente_claude`.",
+      "ok": true
+    },
+    {
+      "afirmacao": "Os 12 avisos centrais do Cataclisma estão produzidos, mas não substituem efeitos de campo, céu, habilidades ou regras — os efeitos de campo seguem faltando na entrega.",
+      "arquivo": "entregas/fechamento-arena-2026-10-11/LEIA-ME-SOL.md",
+      "linha": 28,
+      "trecho": "Esses avisos não substituem os efeitos de campo, céu, habilidades ou regras do evento.",
+      "ok": true
+    },
+    {
+      "afirmacao": "Formato dos avisos centrais: atlas 384x288, 4 col x 3 lin, quadro 96x96, 160 ms, ciclo 1,92 s, pivô central, Point sem mipmaps.",
+      "arquivo": "entregas/fechamento-arena-2026-10-11/LEIA-ME-SOL.md",
+      "linha": 28,
+      "trecho": "Cada atlas tem 384×288, com 4 colunas e 3 linhas, em ordem de leitura. Cada quadro tem 96×96 e dura 160 ms; um ciclo dura 1,92 s. Proposta: um ciclo no centro da tela, amostragem Point, sem mipmaps, pivô central.",
+      "ok": true
+    },
+    {
+      "afirmacao": "Os 10 ícones originais da loja já existem; os 11 do pedido 015 faltam como ícone (mas há idle.png em loja-animada que serve de consumível).",
+      "arquivo": "entregas/personagens-novos-2026-10-10/auditoria-pendencias-resumo.md",
+      "linha": 1,
+      "trecho": "O catálogo atual tem 21 itens: os 10 ícones originais já existem e os 11 do pedido 015 faltam.",
+      "ok": false
+    },
+    {
+      "afirmacao": "O diretório de ícones integrados loja-v2/itens tem apenas 10 PNGs (amuleto-vital, armadilha-de-espinhos, botas-aladas, escudo-de-bronze, furia, lobo-de-cinzas, luneta, passo-leve, pocao-de-cura, raio-arcano); os 11 itens novos não estão lá.",
+      "arquivo": "entregas/loja-v2/itens",
+      "linha": 1,
+      "trecho": "amuleto-vital.png ... raio-arcano.png (10 arquivos)",
+      "ok": false
+    },
+    {
+      "afirmacao": "Os 21 itens da loja têm idle em loop entregue (loja-animada/<id>/idle.png + idle.gif), inclusive os 11 novos — reutilizáveis como loop/ícone, mas o uso.png pedido não aparece.",
+      "arquivo": "entregas/personagens-novos-2026-10-10/auditoria-pendencias-resumo.md",
+      "linha": 3,
+      "trecho": "Os 21 loops serão entregues para o Claude ligar à HUD.",
+      "ok": true
+    },
+    {
+      "afirmacao": "Nenhum arquivo uso.png de efeito de item foi encontrado na árvore de entregas; só uma nota admitindo que não foi verificado idle/uso dos 11 itens novos.",
+      "arquivo": "entregas/damian-idles-2026-10-11/revisao-pilotos-1330/relatorio-2026-10-11T13-35-43-590Z-23692.json",
+      "linha": 147,
+      "trecho": "Não confirmei quais dos 11 itens novos da loja já tiveram idle/uso exportados para o Unity (shopPlans marca base_ready/ready, mas não verifiquei os arquivos em Resources/Sprites/Loja nem Efeitos/<id>",
+      "ok": false
+    },
+    {
+      "afirmacao": "A DeepSeek achou ausentes, na pasta integrada, Resources/Sprites/Ceus, as explosões novas do Festival de Fogos e 11 ícones novos de loja — tratados como lacuna de integração/localização, não prova de ausência global.",
+      "arquivo": "entregas/fechamento-arena-2026-10-11/AUDITORIA-SOL.md",
+      "linha": 41,
+      "trecho": "A auditoria DeepSeek encontrou ausência de `Resources/Sprites/Ceus` e das novas explosões do Festival de Fogos na pasta integrada examinada. Também apontou 11 ícones novos de loja sem correspondência na pasta integrada consultada. Esses achados são **lacunas locais de integração ou localização**",
+      "ok": true
+    },
+    {
+      "afirmacao": "Existem apenas 6 efeitos em eventos-cenarios/efeitos (baforada, cura, impacto-area, invocacao, moeda, raio-arcano) e 9 projéteis antigos; os efeitos/projéteis das skills novas do pedido 015 não estão entregues.",
+      "arquivo": "entregas/eventos-cenarios",
+      "linha": 1,
+      "trecho": "efeitos/baforada.png, cura.png, impacto-area.png, invocacao.png, moeda.png, raio-arcano.png; projeteis/bala-pistola.png, flecha.png ... (9)",
+      "ok": false
+    },
+    {
+      "afirmacao": "Os efeitos já entregues estão em status pronto_para_integrar, com formato quadro 128x128, 5 frames, 10 FPS, pivô 0.5/0.5 (ex.: baforada) — modelo de formato a reusar nos faltantes.",
+      "arquivo": "entregas/eventos-cenarios/assets.visual.json",
+      "linha": 2,
+      "trecho": "status\": \"pronto_para_integrar\"",
+      "ok": true
+    },
+    {
+      "afirmacao": "Tarefa 015 pede para cada skill nova (Pisão, Pancada colossal, Gancho, Coroada, Pauzinho, Ferrão, Agulha, Casca, Raízes, Corrente, Grito, Clava, Arremessar pedra, Rugido/Pancada) conjuração, projétil e impacto; nada disso está entregue.",
+      "arquivo": "tarefas/015-codex-eventos-elenco-cenarios.md",
+      "linha": 135,
+      "trecho": "**Cada skill nova**\nCada skill dos lutadores novos, extras e neutros tem:\n- clipe de conjuração;\n- projétil, se houver;\n- impacto.",
+      "ok": false
+    },
+    {
+      "afirmacao": "Tarefa 015 pede objetos de mapa com idle/surge/quebrar (casa de lava, casa congelada, marcador do festival, mina de gelo, totem de cura, prisão, baú, portal, buraco do papa-moedas) — faltam na entrega; só TotemCura existe como unidade.",
+      "arquivo": "tarefas/015-codex-eventos-elenco-cenarios.md",
+      "linha": 124,
+      "trecho": "`Resources/Sprites/Objetos/<id>/` com idle (loop), surgir e quebrar ou sumir:",
+      "ok": false
+    },
+    {
+      "afirmacao": "Tarefa 015 pede estados no lutador (escondido, preso, sem PM, +armadura, desejo canalizando, buff PA/PM), desejo-a..f e devorar — todos ausentes na entrega.",
+      "arquivo": "tarefas/015-codex-eventos-elenco-cenarios.md",
+      "linha": 167,
+      "trecho": "## Desejo do Kellen\nUm efeito para cada uma das 6 opções:",
+      "ok": false
+    },
+    {
+      "afirmacao": "Registro mais novo contradiz a tarefa 016 sobre os gatos: Sol registra 28 clipes por gato nas 4 diagonais, contra a conclusão antiga de três sem animação.",
+      "arquivo": "entregas/fechamento-arena-2026-10-11/AUDITORIA-SOL.md",
+      "linha": 26,
+      "trecho": "Os quatro gatos da Asamyh têm idle, walk, attack, hit, death, zap e spawn nas quatro diagonais: 28 clipes por estado. A conclusão antiga de que três deles estavam sem animação ficou desatualizada.",
+      "ok": true
+    },
+    {
+      "afirmacao": "A tarefa 016 dizia que Asamyh/CheiroPneu/Colosso tinham só as 8 bases; Asamyh já tem tiras completas e respostas/016 confirma importação — contradição com a tarefa antiga.",
+      "arquivo": "respostas/016-codex.md",
+      "linha": 9,
+      "trecho": "Importados nesta rodada: Asamyh, CheiroPneu, Alvyr, TotemCura, GuardiaoMusgo, Gryvro e Colosso.",
+      "ok": true
+    },
+    {
+      "afirmacao": "Saldo PixelLab confirmado em 165 ao fechar o lote do Sol; a reserva marca Sol em-produção e pede para não iniciar gerações concorrentes.",
+      "arquivo": "entregas/fechamento-arena-2026-10-11/LEIA-ME-SOL.md",
+      "linha": 34,
+      "trecho": "Saldo confirmado ao fechar a produção: **165**, crédito monetário PixelLab **US$ 0**, renovação em **10/11/2026**.",
+      "ok": true
+    },
+    {
+      "afirmacao": "A reserva PixelLab está em-producao por Sol, com efeitos pendentes listados por último na prioridade; orienta não iniciar gerações concorrentes.",
+      "arquivo": "RESERVA-PIXELLAB.json",
+      "linha": 3,
+      "trecho": "\"orientacao\": \"Não iniciar gerações concorrentes enquanto esta reserva estiver em-producao",
+      "ok": true
+    },
+    {
+      "afirmacao": "Registros anteriores indicam efeitos de eventos prontos para integração (ranged_skills_linked=9, game_events_linked=26), o que é o conjunto legado, não os efeitos das skills novas.",
+      "arquivo": "estado-visual-final.json",
+      "linha": 46,
+      "trecho": "\"ranged_skills_linked\": 9,\n    \"game_events_linked\": 26,",
+      "ok": true
+    }
+  ],
+  "pendencias": [
+    "Conflito ? entre o aviso central do Cataclisma e efeito de campo: os IDs da pasta eventos-centrais (mare-de-lava, chuva-de-moedas, festival-de-fogos etc.) coincidem com os IDs de evento da tarefa 015 §3, e a tarefa 015:203 pede Efeitos/<evento>/inicio.png no meio do tabuleiro — mas o LEIA-ME-SOL.md:28 diz que os avisos centrais não substituem efeitos de campo. Não ficou claro se dá para reusar o aviso central como inicio.png. Precisa decisão do Claude/Astra.",
+    "Conflito ? nos 11 itens novos da loja: a auditoria diz que faltam ícones (auditoria-pendencias-resumo.md:1), mas há idle.png em loja-animada/<id>/; não confirmei por medição se esse idle atende ao tamanho 64x64 de Resources/Sprites/Loja exigido em tarefas/015:70.",
+    "Não consegui verificar a pasta Runtime do Unity (Resources/Sprites/Efeitos, Loja, Ceus, Objetos) porque a tarefa proíbe varredura fora desta pasta de código; a existência de recursos integrados vem só de registros (AUDITORIA-SOL.md:41) e não de inspeção direta.",
+    "Não calculei frame/fps/impacto quadro-a-quadro dos efeitos faltantes porque não há fonte entregue; os valores do pedido estão na tarefa 015 (inicio/loop/fim, tamanho a critério, informar quadro de impacto).",
+    "Não abri ZIPs grandes (correcoes-sincronia/*.zip, personagens/*/fonte.zip) nem estado-atual.json (346 KB) para não despejar JSON grande; campos de shopPlans/animationPlans não foram lidos diretamente."
+  ]
+}

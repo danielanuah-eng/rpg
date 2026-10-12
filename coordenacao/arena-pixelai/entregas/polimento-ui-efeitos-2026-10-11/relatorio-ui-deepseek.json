@@ -1,0 +1,158 @@
+{
+  "resumo": "Auditoria somente leitura do frontend. Toda a UI e gerada em codigo com o Unity uGUI (UnityEngine.UI): nao ha prefabs nem assets de layout. ArenaMenu monta um Canvas proprio (ScaleWithScreenSize, ref 1280x720) por cima do jogo; ArenaHud monta um Canvas em ConstantPixelSize com escala manual. Descobri a arvore de objetos, nomes, as 9 abas e o fluxo de abrir/fechar, como os botoes de selecao e retratos sao criados e carregados, resolucoes/pivos e os pontos exatos onde um tema visual separado poderia entrar sem tocar nas regras. Tambem listei assets de arena e retratos reais disponiveis para a previa. Nao editei nada e nao executei Unity, compilacao nem testes.",
+  "achados": [
+    {
+      "afirmacao": "Framework de UI e uGUI (UnityEngine.UI) montado em codigo; o menu cria Canvas ScreenSpaceOverlay com sortingOrder 100 e CanvasScaler ScaleWithScreenSize ref 1280x720, matchWidthOrHeight .5.",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaMenu.cs",
+      "linha": 103,
+      "trecho": "var scaler=go.GetComponent<CanvasScaler>(); scaler.uiScaleMode=CanvasScaler.ScaleMode.ScaleWithScreenSize; scaler.referenceResolution=new Vector2(1280,720); scaler.matchWidthOrHeight=.5f;"
+    },
+    {
+      "afirmacao": "A HUD usa outro esquema: CanvasScaler ConstantPixelSize com scaleFactor manual e metodo estatico UiScale (minimo .5, no PC nao passa de 1).",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaHud.cs",
+      "linha": 272,
+      "trecho": "public static float UiScale => Mathf.Max(.5f,Mathf.Min(Application.isMobilePlatform?4:1,Mathf.Sqrt(Screen.width/1280f*Screen.height/720f)));"
+    },
+    {
+      "afirmacao": "Arvore/nomes gerados pelo menu: objeto raiz 'Menu'; dentro dele 'Fundo'(root) com 'Topo'(barra de abas, contem 'Borda') e 'Conteudo'(body). O conteudo e montado em 'Rolagem' > 'Itens'.",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaMenu.cs",
+      "linha": 104,
+      "trecho": "root=Box(\"Fundo\",go.transform,Bg); Fill(root);"
+    },
+    {
+      "afirmacao": "As abas (9 telas) e o fluxo: array Tabs define inicio, jogar, personagens, loja, editor, mapas, estatisticas, regras, opcoes; Show() faz o switch e troca a cor do botao ativo.",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaMenu.cs",
+      "linha": 91,
+      "trecho": "static readonly (string id,string name)[] Tabs={(\"inicio\",\"Início\"),(\"jogar\",\"Jogar\"),(\"personagens\",\"Personagens\"),(\"loja\",\"Loja e eventos\"),\n            (\"editor\",\"Editor\"),(\"mapas\",\"Mapas\"),(\"estatisticas\",\"Estatísticas\"),(\"regras\",\"Regras\"),(\"opcoes\",\"Opções\")};"
+    },
+    {
+      "afirmacao": "Fluxo de abertura: o menu abre sozinho na tela 'inicio' quando nao ha argumentos --arena-*; Open(t)/Close() alternam a visibilidade; Esc fecha.",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaMenu.cs",
+      "linha": 116,
+      "trecho": "if(shot>=0) StartCoroutine(Shots(shot+1<args.Length?args[shot+1]:\"Artifacts/menu\"));\n            else if(!args.Any(a=>a.StartsWith(\"--arena-\"))) Open(\"inicio\");"
+    },
+    {
+      "afirmacao": "A HUD chama o menu pelo botao 'Menu' no painel de conexao (Game.Menu.Open).",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaHud.cs",
+      "linha": 81,
+      "trecho": "Button(\"Menu\",networkPanel,()=>Game.Menu?.Open(),64);"
+    },
+    {
+      "afirmacao": "Tela inicial (aba inicio) e Home(): titulo grande, subtitulo, uma linha de botoes (Jogar, Personagens, Editor de fichas e skills, Voltar a partida) e secoes Novidades com Paragrafos ricos. E o melhor alvo para o modelo visual.",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaMenu.cs",
+      "linha": 159,
+      "trecho": "Label(c,\"ARENA TÁTICA\",40,Gold,TextAnchor.MiddleCenter);"
+    },
+    {
+      "afirmacao": "Botoes sao criados por um helper unico Btn() (fundo Idle + Button + Texto + LayoutElement); o estado selecionado e so a cor Chosen via Pick(). Btn cria Image+Button+Text.",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaMenu.cs",
+      "linha": 554,
+      "trecho": "Button Btn(Transform parent,string text,Action action,float w=0,float h=38,int size=15)\n        {\n            var r=Box(text,parent,Idle); var b=r.gameObject.AddComponent<Button>(); b.targetGraphic=r.GetComponent<Image>();"
+    },
+    {
+      "afirmacao": "Selecao por retrato no menu (aba Personagens): FighterButton() cria um botao com Image de icone (preserveAspect) a esquerda + nome/custo a direita; a selecao e o realce Pick(b,on).",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaMenu.cs",
+      "linha": 296,
+      "trecho": "var icon=Art(d); var img=New(\"Icone\",b.transform,typeof(Image)).GetComponent<Image>(); img.sprite=icon; img.preserveAspect=true; img.raycastTarget=false; if(!icon) img.color=new Color(1,1,1,0);"
+    },
+    {
+      "afirmacao": "Selecao por retrato na HUD (seletor de lutadores): BuildPicker cria grade 128x138, cada celula e um Button com Image 'Retrato' carregando o sprite 'Sprites/<sprites>/south' e texto nome+custos embaixo.",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaHud.cs",
+      "linha": 175,
+      "trecho": "icon.sprite=d.sprites==null?null:Resources.Load<Sprite>(\"Sprites/\"+d.sprites+\"/south\"); if(!icon.sprite) icon.color=Color.clear;"
+    },
+    {
+      "afirmacao": "Carregamento dos retratos no menu passa por Art(): prioriza 'Sprites/<sprites>/south' e cai para 'Sprites/Loja/<id>'; Portrait2D monta moldura + imagem com preserveAspect.",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaMenu.cs",
+      "linha": 301,
+      "trecho": "static Sprite Art(FighterDef d) => string.IsNullOrEmpty(d.sprites)?Resources.Load<Sprite>(\"Sprites/Loja/\"+d.id):Resources.Load<Sprite>(\"Sprites/\"+d.sprites+\"/south\")??Resources.Load<Sprite>(\"Sprites/Loja/\"+d.id);"
+    },
+    {
+      "afirmacao": "Retratos reais existem: pastas de sprite por lutador, cada uma com south.png (e outras direcoes). Confirmados Ciantia, Asamyh, PrincipeKellen, Alvyr, Kellen etc.",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Resources/Sprites",
+      "trecho": "Assets/ArenaTatica/Resources/Sprites/Ciantia/ ... Asamyh/ ... PrincipeKellen/ (pasta de Sprites com um subdiretorio por lutador)"
+    },
+    {
+      "afirmacao": "Os sprites sul sao 128x128 px, pixelsToUnits 128, alignment bottom-center (9), pivot x .5 y .03125, com alphaIsTransparency=1. Importante para a previa de retrato.",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Resources/Sprites/Ciantia/south.png.meta",
+      "linha": 53,
+      "trecho": "spritePivot: {x: 0.5, y: 0.03125}"
+    },
+    {
+      "afirmacao": "Resolucao/pivo de layout da HUD: retrato do lutador ativo e ancorado em 310,80 a 438,232 px (128x152) no canto inferior esquerdo da area do tabuleiro; arte ~120 px (comentario).",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaHud.cs",
+      "linha": 299,
+      "trecho": "Anchors(portrait,Vector2.zero,Vector2.zero,new Vector2(310,80),new Vector2(438,232));"
+    },
+    {
+      "afirmacao": "Pontos minimos para um tema visual separado (menus): a paleta inteira esta num unico campo static readonly (Bg, Panel, Edge, Ink, Muted, Gold, Blue, Green, Red, Pink, Idle, Chosen) + funcao Hex. Trocar por uma fonte de tema aqui muda todas as telas sem tocar em regras.",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaMenu.cs",
+      "linha": 88,
+      "trecho": "static readonly Color Bg=Hex(0x0e0b1d), Panel=Hex(0x1b1638), Edge=Hex(0x3e3470), Ink=Hex(0xefe9ff), Muted=Hex(0x8a82ad),\n            Gold=Hex(0xe0bd6a), Blue=Hex(0x6f9be0), Green=Hex(0x7fd1a0), Red=Hex(0xef6f7a), Pink=Hex(0xd27aa6), Idle=Hex(0x2a2352), Chosen=Hex(0x5a4420);"
+    },
+    {
+      "afirmacao": "Pontos minimos para tema separado (HUD): outra paleta fixa em campos ink/muted/panel/idle/chosen; e as cores de equipe/ouro usadas pela HUD vivem em ArenaPresentation (Gold e PlayerColors/TeamColor). Nao ha arquivo de tema: sao constantes em cada classe.",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaHud.cs",
+      "linha": 30,
+      "trecho": "readonly Color ink=new Color(.91f,.93f,.98f),muted=new Color(.65f,.7f,.8f),panel=new Color(.065f,.085f,.13f,.97f),idle=new Color(.14f,.19f,.27f),chosen=new Color(.45f,.29f,.16f);"
+    },
+    {
+      "afirmacao": "Cores de equipe/ouro (compartilhadas por HUD e tabuleiro) em ArenaPresentation: Gold estatico e PlayerColors[6] com TeamColor(). Tema nao deve sobrescrever este arquivo (codigo concorrente/regras visuais do jogo).",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaPresentation.cs",
+      "linha": 87,
+      "trecho": "public static Color Gold=new Color(.93f,.72f,.35f), Blue=new Color(.3f,.73f,.95f), Violet=new Color(.64f,.5f,.98f), Red=new Color(.9f,.32f,.28f), Green=new Color(.45f,.85f,.5f);"
+    },
+    {
+      "afirmacao": "Nenhum asset de fonte/tema esta em Resources: a UI usa a fonte embutida LegacyRuntime.ttf. O tema nao pode depender de fonte custom sem criar o asset.",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Scripts/ArenaMenu.cs",
+      "linha": 100,
+      "trecho": "font=Resources.GetBuiltinResource<Font>(\"LegacyRuntime.ttf\");"
+    },
+    {
+      "afirmacao": "Assets de arena reais para a previa: modelos GLB de cenario por tema (bosque, deserto, neve, pedreira, vulcao) com loja_mascate, beira, entorno, bau, moeda; e modelos de personagem CiantiaChibi3D/DragaoDourado3D/DragaoTransplanar3D.",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Resources/Models",
+      "trecho": "Models/Mapa/bosque/loja_mascate.glb, Models/Mapa/deserto/arvore_palmeira.glb, Models/CiantiaChibi3D.glb, Models/DragaoDourado3D.glb"
+    },
+    {
+      "afirmacao": "Recursos de previa de loja/dados/retratos: 10 icones em Sprites/Loja (pocao-de-cura, raio-arcano, lobo-de-cinzas...), 6 faces de dado + tira rolagem em Sprites/Dados, cena Sprites/Cenarios/loja.png e quadros em Sprites/Vendedor.",
+      "ok": true,
+      "arquivo": "Assets/ArenaTatica/Resources/Sprites/Loja",
+      "trecho": "Loja/pocao-de-cura.png, raio-arcano.png ... Dados/cataclisma.png ... rolagem.png; Cenarios/loja.png"
+    },
+    {
+      "afirmacao": "Comandos de validacao citados no projeto: testes EditMode em Artifacts/editmode.xml e script Tools/build-android.ps1 (conforme VALIDACAO.md). Ha ainda JOGAR.cmd, SERVIR-WEB.cmd e ABRIR-UNITY.cmd na raiz.",
+      "ok": true,
+      "arquivo": "VALIDACAO.md",
+      "linha": 8,
+      "trecho": "26 testes EditMode aprovados, zero falhas (`Artifacts/editmode.xml`)."
+    }
+  ],
+  "pendencias": [
+    "Nao executei Unity, compilacao nem testes (proibido na tarefa); nao afirmo que o tema visual funciona integrado.",
+    "A integracao Codex/Claude (tarefa 015 de sprites e outros assets) esta pendente segundo comentarios no proprio codigo: ArenaMenu.cs:171 e ArenaMenu.cs:272 falam de 'artes ainda sendo feitas pelo Codex' e 'Arte pendente'.",
+    "Nao verifiquei se ha package.json nem se ha teste automatizado npm aplicavel ao frontend; existem Tools/build-android.ps1 (VALIDACAO.md:22) mas nao o li.",
+    "Nao abri os PNG de retrato para conferir transparencia real; so li o meta (alphaIsTransparency=1 no .meta).",
+    "Nao confirmei os nomes de campo 'sprites' de cada FighterDef (Content.Roster) alem do uso em Art()/BuildPicker; ? : todos os lutadores do Roster tem sprite em Sprites/<sprites>/south ou caem no fallback de Loja?",
+    "? : um tema separado deve virar ScriptableObject de tema (paleta) lido por ArenaMenu/ArenaHud, ou basta trocar as constantes? Isso muda o escopo de integracao.",
+    "? : a tela inicial deve reaproveitar Home() (ArenaMenu.cs:156) ou criar uma cena/prefab propria? Hoje nao ha prefab de UI."
+  ]
+}

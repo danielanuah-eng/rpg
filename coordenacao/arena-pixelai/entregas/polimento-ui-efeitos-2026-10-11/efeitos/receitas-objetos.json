@@ -1,0 +1,6269 @@
+[
+  {
+    "id": "bau-recompensa",
+    "ownerOnly": false,
+    "recipe": {
+      "canvas": {
+        "w": 160,
+        "h": 160
+      },
+      "frames": 24,
+      "fps": 12,
+      "loop": false,
+      "origin": [
+        80,
+        120
+      ],
+      "camera": {
+        "tilt": 0.6,
+        "height": 1,
+        "lean": 0
+      },
+      "ramps": {
+        "green": [
+          "#173b33",
+          "#356747",
+          "#62a957",
+          "#b1d77b",
+          "#eef5bc"
+        ],
+        "bone": [
+          "#3d3440",
+          "#79646b",
+          "#b49a83",
+          "#e8d6b5",
+          "#ffefda"
+        ],
+        "silver": [
+          "#252b3e",
+          "#53677d",
+          "#95aeb8",
+          "#cddcda",
+          "#f7fff0"
+        ],
+        "gold": [
+          "#452735",
+          "#916139",
+          "#d3ac4f",
+          "#f5db8a",
+          "#fff6d0"
+        ],
+        "stone": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "wood": [
+          "#38293b",
+          "#73513a",
+          "#a77d4e",
+          "#d7b17c",
+          "#f4dfae"
+        ],
+        "red": [
+          "#3d2035",
+          "#8f343b",
+          "#db6140",
+          "#ffb956",
+          "#fff3c2"
+        ],
+        "smoke": [
+          "#252f3e",
+          "#566575",
+          "#8b9aa5",
+          "#c4cec9",
+          "#e5ede5"
+        ],
+        "purple": [
+          "#272640",
+          "#534573",
+          "#9270b0",
+          "#cba0df",
+          "#f3dbfc"
+        ],
+        "teal": [
+          "#183647",
+          "#317385",
+          "#63bfae",
+          "#b4e6cc",
+          "#edfff1"
+        ],
+        "pink": [
+          "#40273d",
+          "#975b79",
+          "#d58baa",
+          "#ffd4d8",
+          "#fff6e0"
+        ],
+        "ice": [
+          "#243d57",
+          "#487e9f",
+          "#7fbacc",
+          "#b8e8e4",
+          "#f1ffff"
+        ],
+        "oil": [
+          "#121d29",
+          "#2d3141",
+          "#4e4257",
+          "#7b6580",
+          "#bc97af"
+        ],
+        "wood_top": [
+          "#38293b",
+          "#73513a",
+          "#a77d4e",
+          "#d7b17c",
+          "#f4dfae"
+        ],
+        "wood_side": [
+          "#38293b",
+          "#4b332c",
+          "#634731",
+          "#7e5d3f",
+          "#9f7957"
+        ],
+        "stone_top": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "ice_top": [
+          "#243d57",
+          "#487e9f",
+          "#7fbacc",
+          "#b8e8e4",
+          "#f1ffff"
+        ],
+        "main": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "hole": [
+          "#101620",
+          "#111823",
+          "#151b29",
+          "#1a2230",
+          "#242b38"
+        ]
+      },
+      "tones": 5,
+      "dither": 0,
+      "detail": 0.3,
+      "outline": {
+        "mode": "selective"
+      },
+      "seed": 191,
+      "layers": [
+        {
+          "id": "entra_frente",
+          "type": "shape",
+          "points": [
+            [
+              -31,
+              -5
+            ],
+            [
+              0,
+              8
+            ],
+            [
+              31,
+              -5
+            ],
+            [
+              31,
+              -32
+            ],
+            [
+              0,
+              -18
+            ],
+            [
+              -31,
+              -32
+            ]
+          ],
+          "ramp": "wood",
+          "fill": "flat",
+          "level": 0.42,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.42
+        },
+        {
+          "id": "entra_tampa",
+          "type": "shape",
+          "points": [
+            [
+              -31,
+              -32
+            ],
+            [
+              0,
+              -47
+            ],
+            [
+              31,
+              -32
+            ],
+            [
+              0,
+              -18
+            ]
+          ],
+          "ramp": "wood_top",
+          "fill": "flat",
+          "level": 0.7,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "entra_lado",
+          "type": "shape",
+          "points": [
+            [
+              0,
+              -18
+            ],
+            [
+              31,
+              -32
+            ],
+            [
+              31,
+              -5
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "ramp": "wood_side",
+          "fill": "flat",
+          "level": 0.3,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 1
+        },
+        {
+          "id": "entra_faixa",
+          "type": "shape",
+          "points": [
+            [
+              -24,
+              -28
+            ],
+            [
+              -19,
+              -26
+            ],
+            [
+              -19,
+              -1
+            ],
+            [
+              -24,
+              -3
+            ]
+          ],
+          "ramp": "gold",
+          "fill": "flat",
+          "level": 0.7,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "entra_faixa2",
+          "type": "shape",
+          "points": [
+            [
+              18,
+              -26
+            ],
+            [
+              23,
+              -28
+            ],
+            [
+              23,
+              -3
+            ],
+            [
+              18,
+              -1
+            ]
+          ],
+          "ramp": "gold",
+          "fill": "flat",
+          "level": 0.7,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "entra_fecho",
+          "type": "shape",
+          "points": [
+            [
+              -4,
+              -18
+            ],
+            [
+              4,
+              -18
+            ],
+            [
+              4,
+              -7
+            ],
+            [
+              -4,
+              -7
+            ]
+          ],
+          "ramp": "gold",
+          "fill": "flat",
+          "level": 0.85,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.85
+        },
+        {
+          "id": "idle_frente",
+          "type": "shape",
+          "points": [
+            [
+              -31,
+              -5
+            ],
+            [
+              0,
+              8
+            ],
+            [
+              31,
+              -5
+            ],
+            [
+              31,
+              -32
+            ],
+            [
+              0,
+              -18
+            ],
+            [
+              -31,
+              -32
+            ]
+          ],
+          "ramp": "wood",
+          "fill": "flat",
+          "level": 0.42,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.42
+        },
+        {
+          "id": "idle_tampa",
+          "type": "shape",
+          "points": [
+            [
+              -31,
+              -32
+            ],
+            [
+              0,
+              -47
+            ],
+            [
+              31,
+              -32
+            ],
+            [
+              0,
+              -18
+            ]
+          ],
+          "ramp": "wood_top",
+          "fill": "flat",
+          "level": 0.7,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "idle_lado",
+          "type": "shape",
+          "points": [
+            [
+              0,
+              -18
+            ],
+            [
+              31,
+              -32
+            ],
+            [
+              31,
+              -5
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "ramp": "wood_side",
+          "fill": "flat",
+          "level": 0.3,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 1
+        },
+        {
+          "id": "idle_faixa",
+          "type": "shape",
+          "points": [
+            [
+              -24,
+              -28
+            ],
+            [
+              -19,
+              -26
+            ],
+            [
+              -19,
+              -1
+            ],
+            [
+              -24,
+              -3
+            ]
+          ],
+          "ramp": "gold",
+          "fill": "flat",
+          "level": 0.7,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "idle_faixa2",
+          "type": "shape",
+          "points": [
+            [
+              18,
+              -26
+            ],
+            [
+              23,
+              -28
+            ],
+            [
+              23,
+              -3
+            ],
+            [
+              18,
+              -1
+            ]
+          ],
+          "ramp": "gold",
+          "fill": "flat",
+          "level": 0.7,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "idle_fecho",
+          "type": "shape",
+          "points": [
+            [
+              -4,
+              -18
+            ],
+            [
+              4,
+              -18
+            ],
+            [
+              4,
+              -7
+            ],
+            [
+              -4,
+              -7
+            ]
+          ],
+          "ramp": "gold",
+          "fill": "flat",
+          "level": 0.85,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.85
+        },
+        {
+          "id": "quebra_frente",
+          "type": "shape",
+          "points": [
+            [
+              -31,
+              -5
+            ],
+            [
+              0,
+              8
+            ],
+            [
+              31,
+              -5
+            ],
+            [
+              31,
+              -32
+            ],
+            [
+              0,
+              -18
+            ],
+            [
+              -31,
+              -32
+            ]
+          ],
+          "ramp": "wood",
+          "fill": "flat",
+          "level": 0.42,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 73
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.42
+        },
+        {
+          "id": "quebra_tampa",
+          "type": "shape",
+          "points": [
+            [
+              -31,
+              -32
+            ],
+            [
+              0,
+              -47
+            ],
+            [
+              31,
+              -32
+            ],
+            [
+              0,
+              -18
+            ]
+          ],
+          "ramp": "wood_top",
+          "fill": "flat",
+          "level": 0.7,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 88.7
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "quebra_lado",
+          "type": "shape",
+          "points": [
+            [
+              0,
+              -18
+            ],
+            [
+              31,
+              -32
+            ],
+            [
+              31,
+              -5
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "ramp": "wood_side",
+          "fill": "flat",
+          "level": 0.3,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 69.6
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 1
+        },
+        {
+          "id": "quebra_faixa",
+          "type": "shape",
+          "points": [
+            [
+              -24,
+              -28
+            ],
+            [
+              -19,
+              -26
+            ],
+            [
+              -19,
+              -1
+            ],
+            [
+              -24,
+              -3
+            ]
+          ],
+          "ramp": "gold",
+          "fill": "flat",
+          "level": 0.7,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 92.1
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "quebra_faixa2",
+          "type": "shape",
+          "points": [
+            [
+              18,
+              -26
+            ],
+            [
+              23,
+              -28
+            ],
+            [
+              23,
+              -3
+            ],
+            [
+              18,
+              -1
+            ]
+          ],
+          "ramp": "gold",
+          "fill": "flat",
+          "level": 0.7,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 66.2
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "quebra_fecho",
+          "type": "shape",
+          "points": [
+            [
+              -4,
+              -18
+            ],
+            [
+              4,
+              -18
+            ],
+            [
+              4,
+              -7
+            ],
+            [
+              -4,
+              -7
+            ]
+          ],
+          "ramp": "gold",
+          "fill": "flat",
+          "level": 0.85,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 95.5
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.85
+        }
+      ]
+    }
+  },
+  {
+    "id": "prisao-dos-pesadelos",
+    "ownerOnly": false,
+    "recipe": {
+      "canvas": {
+        "w": 160,
+        "h": 160
+      },
+      "frames": 24,
+      "fps": 12,
+      "loop": false,
+      "origin": [
+        80,
+        120
+      ],
+      "camera": {
+        "tilt": 0.6,
+        "height": 1,
+        "lean": 0
+      },
+      "ramps": {
+        "green": [
+          "#173b33",
+          "#356747",
+          "#62a957",
+          "#b1d77b",
+          "#eef5bc"
+        ],
+        "bone": [
+          "#3d3440",
+          "#79646b",
+          "#b49a83",
+          "#e8d6b5",
+          "#ffefda"
+        ],
+        "silver": [
+          "#252b3e",
+          "#53677d",
+          "#95aeb8",
+          "#cddcda",
+          "#f7fff0"
+        ],
+        "gold": [
+          "#452735",
+          "#916139",
+          "#d3ac4f",
+          "#f5db8a",
+          "#fff6d0"
+        ],
+        "stone": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "wood": [
+          "#38293b",
+          "#73513a",
+          "#a77d4e",
+          "#d7b17c",
+          "#f4dfae"
+        ],
+        "red": [
+          "#3d2035",
+          "#8f343b",
+          "#db6140",
+          "#ffb956",
+          "#fff3c2"
+        ],
+        "smoke": [
+          "#252f3e",
+          "#566575",
+          "#8b9aa5",
+          "#c4cec9",
+          "#e5ede5"
+        ],
+        "purple": [
+          "#272640",
+          "#534573",
+          "#9270b0",
+          "#cba0df",
+          "#f3dbfc"
+        ],
+        "teal": [
+          "#183647",
+          "#317385",
+          "#63bfae",
+          "#b4e6cc",
+          "#edfff1"
+        ],
+        "pink": [
+          "#40273d",
+          "#975b79",
+          "#d58baa",
+          "#ffd4d8",
+          "#fff6e0"
+        ],
+        "ice": [
+          "#243d57",
+          "#487e9f",
+          "#7fbacc",
+          "#b8e8e4",
+          "#f1ffff"
+        ],
+        "oil": [
+          "#121d29",
+          "#2d3141",
+          "#4e4257",
+          "#7b6580",
+          "#bc97af"
+        ],
+        "wood_top": [
+          "#38293b",
+          "#73513a",
+          "#a77d4e",
+          "#d7b17c",
+          "#f4dfae"
+        ],
+        "wood_side": [
+          "#38293b",
+          "#4b332c",
+          "#634731",
+          "#7e5d3f",
+          "#9f7957"
+        ],
+        "stone_top": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "ice_top": [
+          "#243d57",
+          "#487e9f",
+          "#7fbacc",
+          "#b8e8e4",
+          "#f1ffff"
+        ],
+        "main": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "hole": [
+          "#101620",
+          "#111823",
+          "#151b29",
+          "#1a2230",
+          "#242b38"
+        ]
+      },
+      "tones": 5,
+      "dither": 0,
+      "detail": 0.3,
+      "outline": {
+        "mode": "selective"
+      },
+      "seed": 191,
+      "layers": [
+        {
+          "id": "entra_sombra",
+          "type": "glow",
+          "plane": "ground",
+          "radius": {
+            "from": 1,
+            "to": 34
+          },
+          "squash": 1,
+          "ramp": "purple",
+          "shape": "hard",
+          "outline": false,
+          "intensity": 0.25,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120
+        },
+        {
+          "id": "entra_topo",
+          "type": "shape",
+          "points": [
+            [
+              -29,
+              -66
+            ],
+            [
+              0,
+              -83
+            ],
+            [
+              29,
+              -66
+            ],
+            [
+              0,
+              -49
+            ]
+          ],
+          "ramp": "oil",
+          "fill": "flat",
+          "level": 0.4,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.4
+        },
+        {
+          "id": "entra_base",
+          "type": "shape",
+          "points": [
+            [
+              -36,
+              0
+            ],
+            [
+              0,
+              17
+            ],
+            [
+              36,
+              0
+            ],
+            [
+              0,
+              -17
+            ]
+          ],
+          "ramp": "purple",
+          "fill": "flat",
+          "level": 0.35,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.35
+        },
+        {
+          "id": "entra_barra0",
+          "type": "shape",
+          "points": [
+            [
+              -30,
+              -67
+            ],
+            [
+              -26,
+              -67
+            ],
+            [
+              -26,
+              0
+            ],
+            [
+              -30,
+              0
+            ]
+          ],
+          "ramp": "oil",
+          "fill": "flat",
+          "level": 0.45,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.45
+        },
+        {
+          "id": "entra_barra1",
+          "type": "shape",
+          "points": [
+            [
+              -16,
+              -67
+            ],
+            [
+              -12,
+              -67
+            ],
+            [
+              -12,
+              0
+            ],
+            [
+              -16,
+              0
+            ]
+          ],
+          "ramp": "oil",
+          "fill": "flat",
+          "level": 0.65,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.65
+        },
+        {
+          "id": "entra_barra2",
+          "type": "shape",
+          "points": [
+            [
+              -2,
+              -67
+            ],
+            [
+              2,
+              -67
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              -2,
+              0
+            ]
+          ],
+          "ramp": "oil",
+          "fill": "flat",
+          "level": 0.45,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.45
+        },
+        {
+          "id": "entra_barra3",
+          "type": "shape",
+          "points": [
+            [
+              12,
+              -67
+            ],
+            [
+              16,
+              -67
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              12,
+              0
+            ]
+          ],
+          "ramp": "oil",
+          "fill": "flat",
+          "level": 0.65,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.65
+        },
+        {
+          "id": "entra_barra4",
+          "type": "shape",
+          "points": [
+            [
+              26,
+              -67
+            ],
+            [
+              30,
+              -67
+            ],
+            [
+              30,
+              0
+            ],
+            [
+              26,
+              0
+            ]
+          ],
+          "ramp": "oil",
+          "fill": "flat",
+          "level": 0.45,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.45
+        },
+        {
+          "id": "entra_runa",
+          "type": "shape",
+          "points": [
+            [
+              -7,
+              -34
+            ],
+            [
+              0,
+              -42
+            ],
+            [
+              7,
+              -34
+            ],
+            [
+              0,
+              -26
+            ]
+          ],
+          "ramp": "purple",
+          "fill": "flat",
+          "level": 0.9,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.9
+        },
+        {
+          "id": "idle_sombra",
+          "type": "glow",
+          "plane": "ground",
+          "radius": {
+            "wave": {
+              "mid": 34,
+              "amp": 0.5,
+              "cycles": 1
+            }
+          },
+          "squash": 1,
+          "ramp": "purple",
+          "shape": "hard",
+          "outline": false,
+          "intensity": 0.25,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120
+        },
+        {
+          "id": "idle_topo",
+          "type": "shape",
+          "points": [
+            [
+              -29,
+              -66
+            ],
+            [
+              0,
+              -83
+            ],
+            [
+              29,
+              -66
+            ],
+            [
+              0,
+              -49
+            ]
+          ],
+          "ramp": "oil",
+          "fill": "flat",
+          "level": 0.4,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.4
+        },
+        {
+          "id": "idle_base",
+          "type": "shape",
+          "points": [
+            [
+              -36,
+              0
+            ],
+            [
+              0,
+              17
+            ],
+            [
+              36,
+              0
+            ],
+            [
+              0,
+              -17
+            ]
+          ],
+          "ramp": "purple",
+          "fill": "flat",
+          "level": 0.35,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.35
+        },
+        {
+          "id": "idle_barra0",
+          "type": "shape",
+          "points": [
+            [
+              -30,
+              -67
+            ],
+            [
+              -26,
+              -67
+            ],
+            [
+              -26,
+              0
+            ],
+            [
+              -30,
+              0
+            ]
+          ],
+          "ramp": "oil",
+          "fill": "flat",
+          "level": 0.45,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.45
+        },
+        {
+          "id": "idle_barra1",
+          "type": "shape",
+          "points": [
+            [
+              -16,
+              -67
+            ],
+            [
+              -12,
+              -67
+            ],
+            [
+              -12,
+              0
+            ],
+            [
+              -16,
+              0
+            ]
+          ],
+          "ramp": "oil",
+          "fill": "flat",
+          "level": 0.65,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.65
+        },
+        {
+          "id": "idle_barra2",
+          "type": "shape",
+          "points": [
+            [
+              -2,
+              -67
+            ],
+            [
+              2,
+              -67
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              -2,
+              0
+            ]
+          ],
+          "ramp": "oil",
+          "fill": "flat",
+          "level": 0.45,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.45
+        },
+        {
+          "id": "idle_barra3",
+          "type": "shape",
+          "points": [
+            [
+              12,
+              -67
+            ],
+            [
+              16,
+              -67
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              12,
+              0
+            ]
+          ],
+          "ramp": "oil",
+          "fill": "flat",
+          "level": 0.65,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.65
+        },
+        {
+          "id": "idle_barra4",
+          "type": "shape",
+          "points": [
+            [
+              26,
+              -67
+            ],
+            [
+              30,
+              -67
+            ],
+            [
+              30,
+              0
+            ],
+            [
+              26,
+              0
+            ]
+          ],
+          "ramp": "oil",
+          "fill": "flat",
+          "level": 0.45,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.45
+        },
+        {
+          "id": "idle_runa",
+          "type": "shape",
+          "points": [
+            [
+              -7,
+              -34
+            ],
+            [
+              0,
+              -42
+            ],
+            [
+              7,
+              -34
+            ],
+            [
+              0,
+              -26
+            ]
+          ],
+          "ramp": "purple",
+          "fill": "flat",
+          "level": 0.9,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.9
+        },
+        {
+          "id": "quebra_sombra",
+          "type": "glow",
+          "plane": "ground",
+          "radius": {
+            "from": 34,
+            "to": 0
+          },
+          "squash": 1,
+          "ramp": "purple",
+          "shape": "hard",
+          "outline": false,
+          "intensity": 0.25,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 73
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          }
+        },
+        {
+          "id": "quebra_topo",
+          "type": "shape",
+          "points": [
+            [
+              -29,
+              -66
+            ],
+            [
+              0,
+              -83
+            ],
+            [
+              29,
+              -66
+            ],
+            [
+              0,
+              -49
+            ]
+          ],
+          "ramp": "oil",
+          "fill": "flat",
+          "level": 0.4,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 88.7
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.4
+        },
+        {
+          "id": "quebra_base",
+          "type": "shape",
+          "points": [
+            [
+              -36,
+              0
+            ],
+            [
+              0,
+              17
+            ],
+            [
+              36,
+              0
+            ],
+            [
+              0,
+              -17
+            ]
+          ],
+          "ramp": "purple",
+          "fill": "flat",
+          "level": 0.35,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 69.6
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.35
+        },
+        {
+          "id": "quebra_barra0",
+          "type": "shape",
+          "points": [
+            [
+              -30,
+              -67
+            ],
+            [
+              -26,
+              -67
+            ],
+            [
+              -26,
+              0
+            ],
+            [
+              -30,
+              0
+            ]
+          ],
+          "ramp": "oil",
+          "fill": "flat",
+          "level": 0.45,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 92.1
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.45
+        },
+        {
+          "id": "quebra_barra1",
+          "type": "shape",
+          "points": [
+            [
+              -16,
+              -67
+            ],
+            [
+              -12,
+              -67
+            ],
+            [
+              -12,
+              0
+            ],
+            [
+              -16,
+              0
+            ]
+          ],
+          "ramp": "oil",
+          "fill": "flat",
+          "level": 0.65,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 66.2
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.65
+        },
+        {
+          "id": "quebra_barra2",
+          "type": "shape",
+          "points": [
+            [
+              -2,
+              -67
+            ],
+            [
+              2,
+              -67
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              -2,
+              0
+            ]
+          ],
+          "ramp": "oil",
+          "fill": "flat",
+          "level": 0.45,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 95.5
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.45
+        },
+        {
+          "id": "quebra_barra3",
+          "type": "shape",
+          "points": [
+            [
+              12,
+              -67
+            ],
+            [
+              16,
+              -67
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              12,
+              0
+            ]
+          ],
+          "ramp": "oil",
+          "fill": "flat",
+          "level": 0.65,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 62.8
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.65
+        },
+        {
+          "id": "quebra_barra4",
+          "type": "shape",
+          "points": [
+            [
+              26,
+              -67
+            ],
+            [
+              30,
+              -67
+            ],
+            [
+              30,
+              0
+            ],
+            [
+              26,
+              0
+            ]
+          ],
+          "ramp": "oil",
+          "fill": "flat",
+          "level": 0.45,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 98.9
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.45
+        },
+        {
+          "id": "quebra_runa",
+          "type": "shape",
+          "points": [
+            [
+              -7,
+              -34
+            ],
+            [
+              0,
+              -42
+            ],
+            [
+              7,
+              -34
+            ],
+            [
+              0,
+              -26
+            ]
+          ],
+          "ramp": "purple",
+          "fill": "flat",
+          "level": 0.9,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 59.4
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.9
+        }
+      ]
+    }
+  },
+  {
+    "id": "portal-de-rocha",
+    "ownerOnly": false,
+    "recipe": {
+      "canvas": {
+        "w": 160,
+        "h": 160
+      },
+      "frames": 24,
+      "fps": 12,
+      "loop": false,
+      "origin": [
+        80,
+        120
+      ],
+      "camera": {
+        "tilt": 0.6,
+        "height": 1,
+        "lean": 0
+      },
+      "ramps": {
+        "green": [
+          "#173b33",
+          "#356747",
+          "#62a957",
+          "#b1d77b",
+          "#eef5bc"
+        ],
+        "bone": [
+          "#3d3440",
+          "#79646b",
+          "#b49a83",
+          "#e8d6b5",
+          "#ffefda"
+        ],
+        "silver": [
+          "#252b3e",
+          "#53677d",
+          "#95aeb8",
+          "#cddcda",
+          "#f7fff0"
+        ],
+        "gold": [
+          "#452735",
+          "#916139",
+          "#d3ac4f",
+          "#f5db8a",
+          "#fff6d0"
+        ],
+        "stone": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "wood": [
+          "#38293b",
+          "#73513a",
+          "#a77d4e",
+          "#d7b17c",
+          "#f4dfae"
+        ],
+        "red": [
+          "#3d2035",
+          "#8f343b",
+          "#db6140",
+          "#ffb956",
+          "#fff3c2"
+        ],
+        "smoke": [
+          "#252f3e",
+          "#566575",
+          "#8b9aa5",
+          "#c4cec9",
+          "#e5ede5"
+        ],
+        "purple": [
+          "#272640",
+          "#534573",
+          "#9270b0",
+          "#cba0df",
+          "#f3dbfc"
+        ],
+        "teal": [
+          "#183647",
+          "#317385",
+          "#63bfae",
+          "#b4e6cc",
+          "#edfff1"
+        ],
+        "pink": [
+          "#40273d",
+          "#975b79",
+          "#d58baa",
+          "#ffd4d8",
+          "#fff6e0"
+        ],
+        "ice": [
+          "#243d57",
+          "#487e9f",
+          "#7fbacc",
+          "#b8e8e4",
+          "#f1ffff"
+        ],
+        "oil": [
+          "#121d29",
+          "#2d3141",
+          "#4e4257",
+          "#7b6580",
+          "#bc97af"
+        ],
+        "wood_top": [
+          "#38293b",
+          "#73513a",
+          "#a77d4e",
+          "#d7b17c",
+          "#f4dfae"
+        ],
+        "wood_side": [
+          "#38293b",
+          "#4b332c",
+          "#634731",
+          "#7e5d3f",
+          "#9f7957"
+        ],
+        "stone_top": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "ice_top": [
+          "#243d57",
+          "#487e9f",
+          "#7fbacc",
+          "#b8e8e4",
+          "#f1ffff"
+        ],
+        "main": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "hole": [
+          "#101620",
+          "#111823",
+          "#151b29",
+          "#1a2230",
+          "#242b38"
+        ]
+      },
+      "tones": 5,
+      "dither": 0,
+      "detail": 0.3,
+      "outline": {
+        "mode": "selective"
+      },
+      "seed": 191,
+      "layers": [
+        {
+          "id": "entra_vazio",
+          "type": "glow",
+          "x": 80,
+          "y": 78,
+          "radius": {
+            "from": 1,
+            "to": 28
+          },
+          "squash": 1.55,
+          "ramp": "purple",
+          "shape": "hard",
+          "outline": false,
+          "life": [
+            0,
+            0.30434782608695654
+          ]
+        },
+        {
+          "id": "entra_aura",
+          "type": "ring",
+          "x": 80,
+          "y": 78,
+          "radius": {
+            "from": 1,
+            "to": 28
+          },
+          "squash": 1.5,
+          "width": 3,
+          "soft": 1,
+          "ramp": "purple",
+          "life": [
+            0,
+            0.30434782608695654
+          ]
+        },
+        {
+          "id": "entra_rocha0",
+          "type": "shape",
+          "points": [
+            [
+              25.45307910843949,
+              -29.287131548350473
+            ],
+            [
+              30.45307910843949,
+              -34.28713154835047
+            ],
+            [
+              44.45307910843949,
+              -31.287131548350473
+            ],
+            [
+              46.45307910843949,
+              -14.287131548350473
+            ],
+            [
+              27.45307910843949,
+              -11.287131548350473
+            ]
+          ],
+          "ramp": "stone",
+          "fill": "flat",
+          "level": 0.4,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.4
+        },
+        {
+          "id": "entra_rocha1",
+          "type": "shape",
+          "points": [
+            [
+              21.176914536239792,
+              -50.49999999999999
+            ],
+            [
+              26.176914536239792,
+              -55.49999999999999
+            ],
+            [
+              40.17691453623979,
+              -52.49999999999999
+            ],
+            [
+              42.17691453623979,
+              -35.49999999999999
+            ],
+            [
+              23.176914536239792,
+              -32.49999999999999
+            ]
+          ],
+          "ramp": "stone_top",
+          "fill": "flat",
+          "level": 0.6,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.6
+        },
+        {
+          "id": "entra_rocha2",
+          "type": "shape",
+          "points": [
+            [
+              13.140353948715418,
+              -67.79288880273357
+            ],
+            [
+              18.14035394871542,
+              -72.79288880273357
+            ],
+            [
+              32.140353948715415,
+              -69.79288880273357
+            ],
+            [
+              34.140353948715415,
+              -52.79288880273357
+            ],
+            [
+              15.140353948715418,
+              -49.79288880273357
+            ]
+          ],
+          "ramp": "stone",
+          "fill": "flat",
+          "level": 0.4,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.4
+        },
+        {
+          "id": "entra_rocha3",
+          "type": "shape",
+          "points": [
+            [
+              2.312725159724078,
+              -79.08002035108404
+            ],
+            [
+              7.312725159724078,
+              -84.08002035108404
+            ],
+            [
+              21.312725159724078,
+              -81.08002035108404
+            ],
+            [
+              23.312725159724078,
+              -64.08002035108404
+            ],
+            [
+              4.312725159724078,
+              -61.080020351084045
+            ]
+          ],
+          "ramp": "stone_top",
+          "fill": "flat",
+          "level": 0.6,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.6
+        },
+        {
+          "id": "entra_rocha4",
+          "type": "shape",
+          "points": [
+            [
+              -9.999999999999998,
+              -83
+            ],
+            [
+              -4.999999999999998,
+              -88
+            ],
+            [
+              9.000000000000002,
+              -85
+            ],
+            [
+              11.000000000000002,
+              -68
+            ],
+            [
+              -7.999999999999998,
+              -65
+            ]
+          ],
+          "ramp": "stone",
+          "fill": "flat",
+          "level": 0.4,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.4
+        },
+        {
+          "id": "entra_rocha5",
+          "type": "shape",
+          "points": [
+            [
+              -22.312725159724074,
+              -79.08002035108404
+            ],
+            [
+              -17.312725159724074,
+              -84.08002035108404
+            ],
+            [
+              -3.3127251597240743,
+              -81.08002035108404
+            ],
+            [
+              -1.3127251597240743,
+              -64.08002035108404
+            ],
+            [
+              -20.312725159724074,
+              -61.080020351084045
+            ]
+          ],
+          "ramp": "stone_top",
+          "fill": "flat",
+          "level": 0.6,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.6
+        },
+        {
+          "id": "entra_rocha6",
+          "type": "shape",
+          "points": [
+            [
+              -33.140353948715415,
+              -67.79288880273357
+            ],
+            [
+              -28.14035394871542,
+              -72.79288880273357
+            ],
+            [
+              -14.140353948715418,
+              -69.79288880273357
+            ],
+            [
+              -12.140353948715418,
+              -52.79288880273357
+            ],
+            [
+              -31.14035394871542,
+              -49.79288880273357
+            ]
+          ],
+          "ramp": "stone",
+          "fill": "flat",
+          "level": 0.4,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.4
+        },
+        {
+          "id": "entra_rocha7",
+          "type": "shape",
+          "points": [
+            [
+              -41.17691453623979,
+              -50.49999999999999
+            ],
+            [
+              -36.17691453623979,
+              -55.49999999999999
+            ],
+            [
+              -22.176914536239792,
+              -52.49999999999999
+            ],
+            [
+              -20.176914536239792,
+              -35.49999999999999
+            ],
+            [
+              -39.17691453623979,
+              -32.49999999999999
+            ]
+          ],
+          "ramp": "stone_top",
+          "fill": "flat",
+          "level": 0.6,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.6
+        },
+        {
+          "id": "entra_rocha8",
+          "type": "shape",
+          "points": [
+            [
+              -45.45307910843949,
+              -29.287131548350466
+            ],
+            [
+              -40.45307910843949,
+              -34.287131548350466
+            ],
+            [
+              -26.45307910843949,
+              -31.287131548350466
+            ],
+            [
+              -24.45307910843949,
+              -14.287131548350466
+            ],
+            [
+              -43.45307910843949,
+              -11.287131548350466
+            ]
+          ],
+          "ramp": "stone",
+          "fill": "flat",
+          "level": 0.4,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.4
+        },
+        {
+          "id": "idle_vazio",
+          "type": "glow",
+          "x": 80,
+          "y": 78,
+          "radius": {
+            "wave": {
+              "mid": 28,
+              "amp": 0.5,
+              "cycles": 1
+            }
+          },
+          "squash": 1.55,
+          "ramp": "purple",
+          "shape": "hard",
+          "outline": false,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ]
+        },
+        {
+          "id": "idle_aura",
+          "type": "ring",
+          "x": 80,
+          "y": 78,
+          "radius": {
+            "wave": {
+              "mid": 28,
+              "amp": 0.5,
+              "cycles": 1
+            }
+          },
+          "squash": 1.5,
+          "width": 3,
+          "soft": 1,
+          "ramp": "purple",
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ]
+        },
+        {
+          "id": "idle_rocha0",
+          "type": "shape",
+          "points": [
+            [
+              25.45307910843949,
+              -29.287131548350473
+            ],
+            [
+              30.45307910843949,
+              -34.28713154835047
+            ],
+            [
+              44.45307910843949,
+              -31.287131548350473
+            ],
+            [
+              46.45307910843949,
+              -14.287131548350473
+            ],
+            [
+              27.45307910843949,
+              -11.287131548350473
+            ]
+          ],
+          "ramp": "stone",
+          "fill": "flat",
+          "level": 0.4,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.4
+        },
+        {
+          "id": "idle_rocha1",
+          "type": "shape",
+          "points": [
+            [
+              21.176914536239792,
+              -50.49999999999999
+            ],
+            [
+              26.176914536239792,
+              -55.49999999999999
+            ],
+            [
+              40.17691453623979,
+              -52.49999999999999
+            ],
+            [
+              42.17691453623979,
+              -35.49999999999999
+            ],
+            [
+              23.176914536239792,
+              -32.49999999999999
+            ]
+          ],
+          "ramp": "stone_top",
+          "fill": "flat",
+          "level": 0.6,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.6
+        },
+        {
+          "id": "idle_rocha2",
+          "type": "shape",
+          "points": [
+            [
+              13.140353948715418,
+              -67.79288880273357
+            ],
+            [
+              18.14035394871542,
+              -72.79288880273357
+            ],
+            [
+              32.140353948715415,
+              -69.79288880273357
+            ],
+            [
+              34.140353948715415,
+              -52.79288880273357
+            ],
+            [
+              15.140353948715418,
+              -49.79288880273357
+            ]
+          ],
+          "ramp": "stone",
+          "fill": "flat",
+          "level": 0.4,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.4
+        },
+        {
+          "id": "idle_rocha3",
+          "type": "shape",
+          "points": [
+            [
+              2.312725159724078,
+              -79.08002035108404
+            ],
+            [
+              7.312725159724078,
+              -84.08002035108404
+            ],
+            [
+              21.312725159724078,
+              -81.08002035108404
+            ],
+            [
+              23.312725159724078,
+              -64.08002035108404
+            ],
+            [
+              4.312725159724078,
+              -61.080020351084045
+            ]
+          ],
+          "ramp": "stone_top",
+          "fill": "flat",
+          "level": 0.6,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.6
+        },
+        {
+          "id": "idle_rocha4",
+          "type": "shape",
+          "points": [
+            [
+              -9.999999999999998,
+              -83
+            ],
+            [
+              -4.999999999999998,
+              -88
+            ],
+            [
+              9.000000000000002,
+              -85
+            ],
+            [
+              11.000000000000002,
+              -68
+            ],
+            [
+              -7.999999999999998,
+              -65
+            ]
+          ],
+          "ramp": "stone",
+          "fill": "flat",
+          "level": 0.4,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.4
+        },
+        {
+          "id": "idle_rocha5",
+          "type": "shape",
+          "points": [
+            [
+              -22.312725159724074,
+              -79.08002035108404
+            ],
+            [
+              -17.312725159724074,
+              -84.08002035108404
+            ],
+            [
+              -3.3127251597240743,
+              -81.08002035108404
+            ],
+            [
+              -1.3127251597240743,
+              -64.08002035108404
+            ],
+            [
+              -20.312725159724074,
+              -61.080020351084045
+            ]
+          ],
+          "ramp": "stone_top",
+          "fill": "flat",
+          "level": 0.6,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.6
+        },
+        {
+          "id": "idle_rocha6",
+          "type": "shape",
+          "points": [
+            [
+              -33.140353948715415,
+              -67.79288880273357
+            ],
+            [
+              -28.14035394871542,
+              -72.79288880273357
+            ],
+            [
+              -14.140353948715418,
+              -69.79288880273357
+            ],
+            [
+              -12.140353948715418,
+              -52.79288880273357
+            ],
+            [
+              -31.14035394871542,
+              -49.79288880273357
+            ]
+          ],
+          "ramp": "stone",
+          "fill": "flat",
+          "level": 0.4,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.4
+        },
+        {
+          "id": "idle_rocha7",
+          "type": "shape",
+          "points": [
+            [
+              -41.17691453623979,
+              -50.49999999999999
+            ],
+            [
+              -36.17691453623979,
+              -55.49999999999999
+            ],
+            [
+              -22.176914536239792,
+              -52.49999999999999
+            ],
+            [
+              -20.176914536239792,
+              -35.49999999999999
+            ],
+            [
+              -39.17691453623979,
+              -32.49999999999999
+            ]
+          ],
+          "ramp": "stone_top",
+          "fill": "flat",
+          "level": 0.6,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.6
+        },
+        {
+          "id": "idle_rocha8",
+          "type": "shape",
+          "points": [
+            [
+              -45.45307910843949,
+              -29.287131548350466
+            ],
+            [
+              -40.45307910843949,
+              -34.287131548350466
+            ],
+            [
+              -26.45307910843949,
+              -31.287131548350466
+            ],
+            [
+              -24.45307910843949,
+              -14.287131548350466
+            ],
+            [
+              -43.45307910843949,
+              -11.287131548350466
+            ]
+          ],
+          "ramp": "stone",
+          "fill": "flat",
+          "level": 0.4,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.4
+        },
+        {
+          "id": "quebra_vazio",
+          "type": "glow",
+          "x": {
+            "from": 80,
+            "to": 73
+          },
+          "y": {
+            "from": 78,
+            "to": 92
+          },
+          "radius": {
+            "from": 28,
+            "to": 0
+          },
+          "squash": 1.55,
+          "ramp": "purple",
+          "shape": "hard",
+          "outline": false,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          }
+        },
+        {
+          "id": "quebra_aura",
+          "type": "ring",
+          "x": {
+            "from": 80,
+            "to": 88.7
+          },
+          "y": {
+            "from": 78,
+            "to": 92
+          },
+          "radius": {
+            "from": 28,
+            "to": 0
+          },
+          "squash": 1.5,
+          "width": 3,
+          "soft": 1,
+          "ramp": "purple",
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          }
+        },
+        {
+          "id": "quebra_rocha0",
+          "type": "shape",
+          "points": [
+            [
+              25.45307910843949,
+              -29.287131548350473
+            ],
+            [
+              30.45307910843949,
+              -34.28713154835047
+            ],
+            [
+              44.45307910843949,
+              -31.287131548350473
+            ],
+            [
+              46.45307910843949,
+              -14.287131548350473
+            ],
+            [
+              27.45307910843949,
+              -11.287131548350473
+            ]
+          ],
+          "ramp": "stone",
+          "fill": "flat",
+          "level": 0.4,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 69.6
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.4
+        },
+        {
+          "id": "quebra_rocha1",
+          "type": "shape",
+          "points": [
+            [
+              21.176914536239792,
+              -50.49999999999999
+            ],
+            [
+              26.176914536239792,
+              -55.49999999999999
+            ],
+            [
+              40.17691453623979,
+              -52.49999999999999
+            ],
+            [
+              42.17691453623979,
+              -35.49999999999999
+            ],
+            [
+              23.176914536239792,
+              -32.49999999999999
+            ]
+          ],
+          "ramp": "stone_top",
+          "fill": "flat",
+          "level": 0.6,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 92.1
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.6
+        },
+        {
+          "id": "quebra_rocha2",
+          "type": "shape",
+          "points": [
+            [
+              13.140353948715418,
+              -67.79288880273357
+            ],
+            [
+              18.14035394871542,
+              -72.79288880273357
+            ],
+            [
+              32.140353948715415,
+              -69.79288880273357
+            ],
+            [
+              34.140353948715415,
+              -52.79288880273357
+            ],
+            [
+              15.140353948715418,
+              -49.79288880273357
+            ]
+          ],
+          "ramp": "stone",
+          "fill": "flat",
+          "level": 0.4,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 66.2
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.4
+        },
+        {
+          "id": "quebra_rocha3",
+          "type": "shape",
+          "points": [
+            [
+              2.312725159724078,
+              -79.08002035108404
+            ],
+            [
+              7.312725159724078,
+              -84.08002035108404
+            ],
+            [
+              21.312725159724078,
+              -81.08002035108404
+            ],
+            [
+              23.312725159724078,
+              -64.08002035108404
+            ],
+            [
+              4.312725159724078,
+              -61.080020351084045
+            ]
+          ],
+          "ramp": "stone_top",
+          "fill": "flat",
+          "level": 0.6,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 95.5
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.6
+        },
+        {
+          "id": "quebra_rocha4",
+          "type": "shape",
+          "points": [
+            [
+              -9.999999999999998,
+              -83
+            ],
+            [
+              -4.999999999999998,
+              -88
+            ],
+            [
+              9.000000000000002,
+              -85
+            ],
+            [
+              11.000000000000002,
+              -68
+            ],
+            [
+              -7.999999999999998,
+              -65
+            ]
+          ],
+          "ramp": "stone",
+          "fill": "flat",
+          "level": 0.4,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 62.8
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.4
+        },
+        {
+          "id": "quebra_rocha5",
+          "type": "shape",
+          "points": [
+            [
+              -22.312725159724074,
+              -79.08002035108404
+            ],
+            [
+              -17.312725159724074,
+              -84.08002035108404
+            ],
+            [
+              -3.3127251597240743,
+              -81.08002035108404
+            ],
+            [
+              -1.3127251597240743,
+              -64.08002035108404
+            ],
+            [
+              -20.312725159724074,
+              -61.080020351084045
+            ]
+          ],
+          "ramp": "stone_top",
+          "fill": "flat",
+          "level": 0.6,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 98.9
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.6
+        },
+        {
+          "id": "quebra_rocha6",
+          "type": "shape",
+          "points": [
+            [
+              -33.140353948715415,
+              -67.79288880273357
+            ],
+            [
+              -28.14035394871542,
+              -72.79288880273357
+            ],
+            [
+              -14.140353948715418,
+              -69.79288880273357
+            ],
+            [
+              -12.140353948715418,
+              -52.79288880273357
+            ],
+            [
+              -31.14035394871542,
+              -49.79288880273357
+            ]
+          ],
+          "ramp": "stone",
+          "fill": "flat",
+          "level": 0.4,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 59.4
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.4
+        },
+        {
+          "id": "quebra_rocha7",
+          "type": "shape",
+          "points": [
+            [
+              -41.17691453623979,
+              -50.49999999999999
+            ],
+            [
+              -36.17691453623979,
+              -55.49999999999999
+            ],
+            [
+              -22.176914536239792,
+              -52.49999999999999
+            ],
+            [
+              -20.176914536239792,
+              -35.49999999999999
+            ],
+            [
+              -39.17691453623979,
+              -32.49999999999999
+            ]
+          ],
+          "ramp": "stone_top",
+          "fill": "flat",
+          "level": 0.6,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 102.3
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.6
+        },
+        {
+          "id": "quebra_rocha8",
+          "type": "shape",
+          "points": [
+            [
+              -45.45307910843949,
+              -29.287131548350466
+            ],
+            [
+              -40.45307910843949,
+              -34.287131548350466
+            ],
+            [
+              -26.45307910843949,
+              -31.287131548350466
+            ],
+            [
+              -24.45307910843949,
+              -14.287131548350466
+            ],
+            [
+              -43.45307910843949,
+              -11.287131548350466
+            ]
+          ],
+          "ramp": "stone",
+          "fill": "flat",
+          "level": 0.4,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 56
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "id": "buraco-papa-moedas",
+    "ownerOnly": false,
+    "recipe": {
+      "canvas": {
+        "w": 160,
+        "h": 160
+      },
+      "frames": 24,
+      "fps": 12,
+      "loop": false,
+      "origin": [
+        80,
+        100
+      ],
+      "camera": {
+        "tilt": 0.6,
+        "height": 1,
+        "lean": 0
+      },
+      "ramps": {
+        "green": [
+          "#173b33",
+          "#356747",
+          "#62a957",
+          "#b1d77b",
+          "#eef5bc"
+        ],
+        "bone": [
+          "#3d3440",
+          "#79646b",
+          "#b49a83",
+          "#e8d6b5",
+          "#ffefda"
+        ],
+        "silver": [
+          "#252b3e",
+          "#53677d",
+          "#95aeb8",
+          "#cddcda",
+          "#f7fff0"
+        ],
+        "gold": [
+          "#452735",
+          "#916139",
+          "#d3ac4f",
+          "#f5db8a",
+          "#fff6d0"
+        ],
+        "stone": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "wood": [
+          "#38293b",
+          "#73513a",
+          "#a77d4e",
+          "#d7b17c",
+          "#f4dfae"
+        ],
+        "red": [
+          "#3d2035",
+          "#8f343b",
+          "#db6140",
+          "#ffb956",
+          "#fff3c2"
+        ],
+        "smoke": [
+          "#252f3e",
+          "#566575",
+          "#8b9aa5",
+          "#c4cec9",
+          "#e5ede5"
+        ],
+        "purple": [
+          "#272640",
+          "#534573",
+          "#9270b0",
+          "#cba0df",
+          "#f3dbfc"
+        ],
+        "teal": [
+          "#183647",
+          "#317385",
+          "#63bfae",
+          "#b4e6cc",
+          "#edfff1"
+        ],
+        "pink": [
+          "#40273d",
+          "#975b79",
+          "#d58baa",
+          "#ffd4d8",
+          "#fff6e0"
+        ],
+        "ice": [
+          "#243d57",
+          "#487e9f",
+          "#7fbacc",
+          "#b8e8e4",
+          "#f1ffff"
+        ],
+        "oil": [
+          "#121d29",
+          "#2d3141",
+          "#4e4257",
+          "#7b6580",
+          "#bc97af"
+        ],
+        "wood_top": [
+          "#38293b",
+          "#73513a",
+          "#a77d4e",
+          "#d7b17c",
+          "#f4dfae"
+        ],
+        "wood_side": [
+          "#38293b",
+          "#4b332c",
+          "#634731",
+          "#7e5d3f",
+          "#9f7957"
+        ],
+        "stone_top": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "ice_top": [
+          "#243d57",
+          "#487e9f",
+          "#7fbacc",
+          "#b8e8e4",
+          "#f1ffff"
+        ],
+        "main": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "hole": [
+          "#101620",
+          "#111823",
+          "#151b29",
+          "#1a2230",
+          "#242b38"
+        ]
+      },
+      "tones": 5,
+      "dither": 0,
+      "detail": 0.3,
+      "outline": {
+        "mode": "selective"
+      },
+      "seed": 191,
+      "layers": [
+        {
+          "id": "entra_terra",
+          "type": "glow",
+          "plane": "ground",
+          "radius": {
+            "from": 1,
+            "to": 32
+          },
+          "shape": "hard",
+          "ramp": "wood",
+          "outline": false,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 100
+        },
+        {
+          "id": "entra_borda",
+          "type": "ring",
+          "plane": "ground",
+          "radius": {
+            "from": 1,
+            "to": 27
+          },
+          "width": 7,
+          "soft": 0,
+          "ramp": "wood_top",
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 100
+        },
+        {
+          "id": "entra_buraco",
+          "type": "glow",
+          "plane": "ground",
+          "radius": {
+            "from": 1,
+            "to": 22
+          },
+          "shape": "hard",
+          "ramp": "hole",
+          "intensity": 1,
+          "outline": false,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 100
+        },
+        {
+          "id": "idle_terra",
+          "type": "glow",
+          "plane": "ground",
+          "radius": {
+            "wave": {
+              "mid": 32,
+              "amp": 0.5,
+              "cycles": 1
+            }
+          },
+          "shape": "hard",
+          "ramp": "wood",
+          "outline": false,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 100
+        },
+        {
+          "id": "idle_borda",
+          "type": "ring",
+          "plane": "ground",
+          "radius": {
+            "wave": {
+              "mid": 27,
+              "amp": 0.5,
+              "cycles": 1
+            }
+          },
+          "width": 7,
+          "soft": 0,
+          "ramp": "wood_top",
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 100
+        },
+        {
+          "id": "idle_buraco",
+          "type": "glow",
+          "plane": "ground",
+          "radius": {
+            "wave": {
+              "mid": 22,
+              "amp": 0.5,
+              "cycles": 1
+            }
+          },
+          "shape": "hard",
+          "ramp": "hole",
+          "intensity": 1,
+          "outline": false,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 100
+        },
+        {
+          "id": "quebra_terra",
+          "type": "glow",
+          "plane": "ground",
+          "radius": {
+            "from": 32,
+            "to": 0
+          },
+          "shape": "hard",
+          "ramp": "wood",
+          "outline": false,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 73
+          },
+          "y": {
+            "from": 100,
+            "to": 114
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          }
+        },
+        {
+          "id": "quebra_borda",
+          "type": "ring",
+          "plane": "ground",
+          "radius": {
+            "from": 27,
+            "to": 0
+          },
+          "width": 7,
+          "soft": 0,
+          "ramp": "wood_top",
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 88.7
+          },
+          "y": {
+            "from": 100,
+            "to": 114
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          }
+        },
+        {
+          "id": "quebra_buraco",
+          "type": "glow",
+          "plane": "ground",
+          "radius": {
+            "from": 22,
+            "to": 0
+          },
+          "shape": "hard",
+          "ramp": "hole",
+          "intensity": 1,
+          "outline": false,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 69.6
+          },
+          "y": {
+            "from": 100,
+            "to": 114
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "casa-resfriada",
+    "ownerOnly": false,
+    "recipe": {
+      "canvas": {
+        "w": 160,
+        "h": 160
+      },
+      "frames": 24,
+      "fps": 12,
+      "loop": false,
+      "origin": [
+        80,
+        120
+      ],
+      "camera": {
+        "tilt": 0.6,
+        "height": 1,
+        "lean": 0
+      },
+      "ramps": {
+        "green": [
+          "#173b33",
+          "#356747",
+          "#62a957",
+          "#b1d77b",
+          "#eef5bc"
+        ],
+        "bone": [
+          "#3d3440",
+          "#79646b",
+          "#b49a83",
+          "#e8d6b5",
+          "#ffefda"
+        ],
+        "silver": [
+          "#252b3e",
+          "#53677d",
+          "#95aeb8",
+          "#cddcda",
+          "#f7fff0"
+        ],
+        "gold": [
+          "#452735",
+          "#916139",
+          "#d3ac4f",
+          "#f5db8a",
+          "#fff6d0"
+        ],
+        "stone": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "wood": [
+          "#38293b",
+          "#73513a",
+          "#a77d4e",
+          "#d7b17c",
+          "#f4dfae"
+        ],
+        "red": [
+          "#3d2035",
+          "#8f343b",
+          "#db6140",
+          "#ffb956",
+          "#fff3c2"
+        ],
+        "smoke": [
+          "#252f3e",
+          "#566575",
+          "#8b9aa5",
+          "#c4cec9",
+          "#e5ede5"
+        ],
+        "purple": [
+          "#272640",
+          "#534573",
+          "#9270b0",
+          "#cba0df",
+          "#f3dbfc"
+        ],
+        "teal": [
+          "#183647",
+          "#317385",
+          "#63bfae",
+          "#b4e6cc",
+          "#edfff1"
+        ],
+        "pink": [
+          "#40273d",
+          "#975b79",
+          "#d58baa",
+          "#ffd4d8",
+          "#fff6e0"
+        ],
+        "ice": [
+          "#243d57",
+          "#487e9f",
+          "#7fbacc",
+          "#b8e8e4",
+          "#f1ffff"
+        ],
+        "oil": [
+          "#121d29",
+          "#2d3141",
+          "#4e4257",
+          "#7b6580",
+          "#bc97af"
+        ],
+        "wood_top": [
+          "#38293b",
+          "#73513a",
+          "#a77d4e",
+          "#d7b17c",
+          "#f4dfae"
+        ],
+        "wood_side": [
+          "#38293b",
+          "#4b332c",
+          "#634731",
+          "#7e5d3f",
+          "#9f7957"
+        ],
+        "stone_top": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "ice_top": [
+          "#243d57",
+          "#487e9f",
+          "#7fbacc",
+          "#b8e8e4",
+          "#f1ffff"
+        ],
+        "main": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "hole": [
+          "#101620",
+          "#111823",
+          "#151b29",
+          "#1a2230",
+          "#242b38"
+        ],
+        "cool": [
+          "#202734",
+          "#35404b",
+          "#4a5258",
+          "#6c7074",
+          "#9a9992"
+        ]
+      },
+      "tones": 5,
+      "dither": 0,
+      "detail": 0.3,
+      "outline": {
+        "mode": "selective"
+      },
+      "seed": 191,
+      "layers": [
+        {
+          "id": "entra_crosta",
+          "type": "shape",
+          "points": [
+            [
+              -42,
+              0
+            ],
+            [
+              -30,
+              -19
+            ],
+            [
+              16,
+              -22
+            ],
+            [
+              41,
+              -5
+            ],
+            [
+              30,
+              21
+            ],
+            [
+              -23,
+              20
+            ]
+          ],
+          "ramp": "cool",
+          "fill": "flat",
+          "level": 0.25,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 1
+        },
+        {
+          "id": "entra_fissura",
+          "type": "shape",
+          "points": [
+            [
+              -31,
+              2
+            ],
+            [
+              -12,
+              -8
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              18,
+              -8
+            ],
+            [
+              32,
+              -3
+            ]
+          ],
+          "closed": false,
+          "width": 2,
+          "ramp": "hole",
+          "level": 0.15,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 1
+        },
+        {
+          "id": "idle_crosta",
+          "type": "shape",
+          "points": [
+            [
+              -42,
+              0
+            ],
+            [
+              -30,
+              -19
+            ],
+            [
+              16,
+              -22
+            ],
+            [
+              41,
+              -5
+            ],
+            [
+              30,
+              21
+            ],
+            [
+              -23,
+              20
+            ]
+          ],
+          "ramp": "cool",
+          "fill": "flat",
+          "level": 0.25,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 1
+        },
+        {
+          "id": "idle_fissura",
+          "type": "shape",
+          "points": [
+            [
+              -31,
+              2
+            ],
+            [
+              -12,
+              -8
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              18,
+              -8
+            ],
+            [
+              32,
+              -3
+            ]
+          ],
+          "closed": false,
+          "width": 2,
+          "ramp": "hole",
+          "level": 0.15,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 1
+        },
+        {
+          "id": "quebra_crosta",
+          "type": "shape",
+          "points": [
+            [
+              -42,
+              0
+            ],
+            [
+              -30,
+              -19
+            ],
+            [
+              16,
+              -22
+            ],
+            [
+              41,
+              -5
+            ],
+            [
+              30,
+              21
+            ],
+            [
+              -23,
+              20
+            ]
+          ],
+          "ramp": "cool",
+          "fill": "flat",
+          "level": 0.25,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 73
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 1
+        },
+        {
+          "id": "quebra_fissura",
+          "type": "shape",
+          "points": [
+            [
+              -31,
+              2
+            ],
+            [
+              -12,
+              -8
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              18,
+              -8
+            ],
+            [
+              32,
+              -3
+            ]
+          ],
+          "closed": false,
+          "width": 2,
+          "ramp": "hole",
+          "level": 0.15,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 88.7
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "casa-congelada",
+    "ownerOnly": false,
+    "recipe": {
+      "canvas": {
+        "w": 160,
+        "h": 160
+      },
+      "frames": 24,
+      "fps": 12,
+      "loop": false,
+      "origin": [
+        80,
+        120
+      ],
+      "camera": {
+        "tilt": 0.6,
+        "height": 1,
+        "lean": 0
+      },
+      "ramps": {
+        "green": [
+          "#173b33",
+          "#356747",
+          "#62a957",
+          "#b1d77b",
+          "#eef5bc"
+        ],
+        "bone": [
+          "#3d3440",
+          "#79646b",
+          "#b49a83",
+          "#e8d6b5",
+          "#ffefda"
+        ],
+        "silver": [
+          "#252b3e",
+          "#53677d",
+          "#95aeb8",
+          "#cddcda",
+          "#f7fff0"
+        ],
+        "gold": [
+          "#452735",
+          "#916139",
+          "#d3ac4f",
+          "#f5db8a",
+          "#fff6d0"
+        ],
+        "stone": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "wood": [
+          "#38293b",
+          "#73513a",
+          "#a77d4e",
+          "#d7b17c",
+          "#f4dfae"
+        ],
+        "red": [
+          "#3d2035",
+          "#8f343b",
+          "#db6140",
+          "#ffb956",
+          "#fff3c2"
+        ],
+        "smoke": [
+          "#252f3e",
+          "#566575",
+          "#8b9aa5",
+          "#c4cec9",
+          "#e5ede5"
+        ],
+        "purple": [
+          "#272640",
+          "#534573",
+          "#9270b0",
+          "#cba0df",
+          "#f3dbfc"
+        ],
+        "teal": [
+          "#183647",
+          "#317385",
+          "#63bfae",
+          "#b4e6cc",
+          "#edfff1"
+        ],
+        "pink": [
+          "#40273d",
+          "#975b79",
+          "#d58baa",
+          "#ffd4d8",
+          "#fff6e0"
+        ],
+        "ice": [
+          "#243d57",
+          "#487e9f",
+          "#7fbacc",
+          "#b8e8e4",
+          "#f1ffff"
+        ],
+        "oil": [
+          "#121d29",
+          "#2d3141",
+          "#4e4257",
+          "#7b6580",
+          "#bc97af"
+        ],
+        "wood_top": [
+          "#38293b",
+          "#73513a",
+          "#a77d4e",
+          "#d7b17c",
+          "#f4dfae"
+        ],
+        "wood_side": [
+          "#38293b",
+          "#4b332c",
+          "#634731",
+          "#7e5d3f",
+          "#9f7957"
+        ],
+        "stone_top": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "ice_top": [
+          "#243d57",
+          "#487e9f",
+          "#7fbacc",
+          "#b8e8e4",
+          "#f1ffff"
+        ],
+        "main": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "hole": [
+          "#101620",
+          "#111823",
+          "#151b29",
+          "#1a2230",
+          "#242b38"
+        ]
+      },
+      "tones": 5,
+      "dither": 0,
+      "detail": 0.3,
+      "outline": {
+        "mode": "selective"
+      },
+      "seed": 191,
+      "layers": [
+        {
+          "id": "entra_placa",
+          "type": "shape",
+          "points": [
+            [
+              -40,
+              0
+            ],
+            [
+              -22,
+              -22
+            ],
+            [
+              20,
+              -21
+            ],
+            [
+              41,
+              0
+            ],
+            [
+              21,
+              23
+            ],
+            [
+              -22,
+              20
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.5,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.5
+        },
+        {
+          "id": "entra_reflexo",
+          "type": "shape",
+          "points": [
+            [
+              -20,
+              -16
+            ],
+            [
+              8,
+              -18
+            ],
+            [
+              29,
+              -1
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "ramp": "ice_top",
+          "fill": "flat",
+          "level": 0.85,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.85
+        },
+        {
+          "id": "entra_fenda",
+          "type": "shape",
+          "points": [
+            [
+              -27,
+              4
+            ],
+            [
+              -9,
+              -5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              18,
+              -3
+            ],
+            [
+              30,
+              8
+            ]
+          ],
+          "closed": false,
+          "width": 1,
+          "ramp": "silver",
+          "level": 0.8,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.8
+        },
+        {
+          "id": "idle_placa",
+          "type": "shape",
+          "points": [
+            [
+              -40,
+              0
+            ],
+            [
+              -22,
+              -22
+            ],
+            [
+              20,
+              -21
+            ],
+            [
+              41,
+              0
+            ],
+            [
+              21,
+              23
+            ],
+            [
+              -22,
+              20
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.5,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.5
+        },
+        {
+          "id": "idle_reflexo",
+          "type": "shape",
+          "points": [
+            [
+              -20,
+              -16
+            ],
+            [
+              8,
+              -18
+            ],
+            [
+              29,
+              -1
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "ramp": "ice_top",
+          "fill": "flat",
+          "level": 0.85,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.85
+        },
+        {
+          "id": "idle_fenda",
+          "type": "shape",
+          "points": [
+            [
+              -27,
+              4
+            ],
+            [
+              -9,
+              -5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              18,
+              -3
+            ],
+            [
+              30,
+              8
+            ]
+          ],
+          "closed": false,
+          "width": 1,
+          "ramp": "silver",
+          "level": 0.8,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.8
+        },
+        {
+          "id": "quebra_placa",
+          "type": "shape",
+          "points": [
+            [
+              -40,
+              0
+            ],
+            [
+              -22,
+              -22
+            ],
+            [
+              20,
+              -21
+            ],
+            [
+              41,
+              0
+            ],
+            [
+              21,
+              23
+            ],
+            [
+              -22,
+              20
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.5,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 73
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.5
+        },
+        {
+          "id": "quebra_reflexo",
+          "type": "shape",
+          "points": [
+            [
+              -20,
+              -16
+            ],
+            [
+              8,
+              -18
+            ],
+            [
+              29,
+              -1
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "ramp": "ice_top",
+          "fill": "flat",
+          "level": 0.85,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 88.7
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.85
+        },
+        {
+          "id": "quebra_fenda",
+          "type": "shape",
+          "points": [
+            [
+              -27,
+              4
+            ],
+            [
+              -9,
+              -5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              18,
+              -3
+            ],
+            [
+              30,
+              8
+            ]
+          ],
+          "closed": false,
+          "width": 1,
+          "ramp": "silver",
+          "level": 0.8,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 69.6
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.8
+        }
+      ]
+    }
+  },
+  {
+    "id": "mina-de-gelo-armada",
+    "ownerOnly": true,
+    "recipe": {
+      "canvas": {
+        "w": 160,
+        "h": 160
+      },
+      "frames": 24,
+      "fps": 12,
+      "loop": false,
+      "origin": [
+        80,
+        120
+      ],
+      "camera": {
+        "tilt": 0.6,
+        "height": 1,
+        "lean": 0
+      },
+      "ramps": {
+        "green": [
+          "#173b33",
+          "#356747",
+          "#62a957",
+          "#b1d77b",
+          "#eef5bc"
+        ],
+        "bone": [
+          "#3d3440",
+          "#79646b",
+          "#b49a83",
+          "#e8d6b5",
+          "#ffefda"
+        ],
+        "silver": [
+          "#252b3e",
+          "#53677d",
+          "#95aeb8",
+          "#cddcda",
+          "#f7fff0"
+        ],
+        "gold": [
+          "#452735",
+          "#916139",
+          "#d3ac4f",
+          "#f5db8a",
+          "#fff6d0"
+        ],
+        "stone": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "wood": [
+          "#38293b",
+          "#73513a",
+          "#a77d4e",
+          "#d7b17c",
+          "#f4dfae"
+        ],
+        "red": [
+          "#3d2035",
+          "#8f343b",
+          "#db6140",
+          "#ffb956",
+          "#fff3c2"
+        ],
+        "smoke": [
+          "#252f3e",
+          "#566575",
+          "#8b9aa5",
+          "#c4cec9",
+          "#e5ede5"
+        ],
+        "purple": [
+          "#272640",
+          "#534573",
+          "#9270b0",
+          "#cba0df",
+          "#f3dbfc"
+        ],
+        "teal": [
+          "#183647",
+          "#317385",
+          "#63bfae",
+          "#b4e6cc",
+          "#edfff1"
+        ],
+        "pink": [
+          "#40273d",
+          "#975b79",
+          "#d58baa",
+          "#ffd4d8",
+          "#fff6e0"
+        ],
+        "ice": [
+          "#243d57",
+          "#487e9f",
+          "#7fbacc",
+          "#b8e8e4",
+          "#f1ffff"
+        ],
+        "oil": [
+          "#121d29",
+          "#2d3141",
+          "#4e4257",
+          "#7b6580",
+          "#bc97af"
+        ],
+        "wood_top": [
+          "#38293b",
+          "#73513a",
+          "#a77d4e",
+          "#d7b17c",
+          "#f4dfae"
+        ],
+        "wood_side": [
+          "#38293b",
+          "#4b332c",
+          "#634731",
+          "#7e5d3f",
+          "#9f7957"
+        ],
+        "stone_top": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "ice_top": [
+          "#243d57",
+          "#487e9f",
+          "#7fbacc",
+          "#b8e8e4",
+          "#f1ffff"
+        ],
+        "main": [
+          "#292b3a",
+          "#515263",
+          "#8a8788",
+          "#beb6a8",
+          "#e9ddc5"
+        ],
+        "hole": [
+          "#101620",
+          "#111823",
+          "#151b29",
+          "#1a2230",
+          "#242b38"
+        ]
+      },
+      "tones": 5,
+      "dither": 0,
+      "detail": 0.3,
+      "outline": {
+        "mode": "selective"
+      },
+      "seed": 191,
+      "layers": [
+        {
+          "id": "entra_placa",
+          "type": "glow",
+          "plane": "ground",
+          "radius": {
+            "from": 1,
+            "to": 24
+          },
+          "shape": "hard",
+          "ramp": "silver",
+          "outline": false,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120
+        },
+        {
+          "id": "entra_cristal0",
+          "type": "shape",
+          "points": [
+            [
+              10,
+              -5
+            ],
+            [
+              16,
+              -27
+            ],
+            [
+              23,
+              -5
+            ],
+            [
+              16,
+              -1
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.9,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.9
+        },
+        {
+          "id": "entra_cristal1",
+          "type": "shape",
+          "points": [
+            [
+              2.0000000000000018,
+              3.6602540378443855
+            ],
+            [
+              8.000000000000002,
+              -18.339745962155614
+            ],
+            [
+              15.000000000000002,
+              3.6602540378443855
+            ],
+            [
+              8.000000000000002,
+              7.6602540378443855
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.7,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "entra_cristal2",
+          "type": "shape",
+          "points": [
+            [
+              -13.999999999999996,
+              3.6602540378443873
+            ],
+            [
+              -7.9999999999999964,
+              -18.33974596215561
+            ],
+            [
+              -0.9999999999999964,
+              3.6602540378443873
+            ],
+            [
+              -7.9999999999999964,
+              7.660254037844387
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.9,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.9
+        },
+        {
+          "id": "entra_cristal3",
+          "type": "shape",
+          "points": [
+            [
+              -22,
+              -4.999999999999999
+            ],
+            [
+              -16,
+              -27
+            ],
+            [
+              -9,
+              -4.999999999999999
+            ],
+            [
+              -16,
+              -0.9999999999999991
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.7,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "entra_cristal4",
+          "type": "shape",
+          "points": [
+            [
+              -14.000000000000007,
+              -13.660254037844384
+            ],
+            [
+              -8.000000000000007,
+              -35.66025403784438
+            ],
+            [
+              -1.000000000000007,
+              -13.660254037844384
+            ],
+            [
+              -8.000000000000007,
+              -9.660254037844384
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.9,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.9
+        },
+        {
+          "id": "entra_cristal5",
+          "type": "shape",
+          "points": [
+            [
+              2.0000000000000018,
+              -13.660254037844386
+            ],
+            [
+              8.000000000000002,
+              -35.66025403784438
+            ],
+            [
+              15.000000000000002,
+              -13.660254037844386
+            ],
+            [
+              8.000000000000002,
+              -9.660254037844386
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.7,
+          "outline": true,
+          "life": [
+            0,
+            0.30434782608695654
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "from": 0.03,
+            "to": 1
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "idle_placa",
+          "type": "glow",
+          "plane": "ground",
+          "radius": {
+            "wave": {
+              "mid": 24,
+              "amp": 0.5,
+              "cycles": 1
+            }
+          },
+          "shape": "hard",
+          "ramp": "silver",
+          "outline": false,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120
+        },
+        {
+          "id": "idle_cristal0",
+          "type": "shape",
+          "points": [
+            [
+              10,
+              -5
+            ],
+            [
+              16,
+              -27
+            ],
+            [
+              23,
+              -5
+            ],
+            [
+              16,
+              -1
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.9,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.9
+        },
+        {
+          "id": "idle_cristal1",
+          "type": "shape",
+          "points": [
+            [
+              2.0000000000000018,
+              3.6602540378443855
+            ],
+            [
+              8.000000000000002,
+              -18.339745962155614
+            ],
+            [
+              15.000000000000002,
+              3.6602540378443855
+            ],
+            [
+              8.000000000000002,
+              7.6602540378443855
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.7,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "idle_cristal2",
+          "type": "shape",
+          "points": [
+            [
+              -13.999999999999996,
+              3.6602540378443873
+            ],
+            [
+              -7.9999999999999964,
+              -18.33974596215561
+            ],
+            [
+              -0.9999999999999964,
+              3.6602540378443873
+            ],
+            [
+              -7.9999999999999964,
+              7.660254037844387
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.9,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.9
+        },
+        {
+          "id": "idle_cristal3",
+          "type": "shape",
+          "points": [
+            [
+              -22,
+              -4.999999999999999
+            ],
+            [
+              -16,
+              -27
+            ],
+            [
+              -9,
+              -4.999999999999999
+            ],
+            [
+              -16,
+              -0.9999999999999991
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.7,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "idle_cristal4",
+          "type": "shape",
+          "points": [
+            [
+              -14.000000000000007,
+              -13.660254037844384
+            ],
+            [
+              -8.000000000000007,
+              -35.66025403784438
+            ],
+            [
+              -1.000000000000007,
+              -13.660254037844384
+            ],
+            [
+              -8.000000000000007,
+              -9.660254037844384
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.9,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.9
+        },
+        {
+          "id": "idle_cristal5",
+          "type": "shape",
+          "points": [
+            [
+              2.0000000000000018,
+              -13.660254037844386
+            ],
+            [
+              8.000000000000002,
+              -35.66025403784438
+            ],
+            [
+              15.000000000000002,
+              -13.660254037844386
+            ],
+            [
+              8.000000000000002,
+              -9.660254037844386
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.7,
+          "outline": true,
+          "life": [
+            0.34782608695652173,
+            0.6521739130434783
+          ],
+          "x": 80,
+          "y": 120,
+          "scale": {
+            "wave": {
+              "mid": 1,
+              "amp": 0.015,
+              "cycles": 1
+            }
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "quebra_placa",
+          "type": "glow",
+          "plane": "ground",
+          "radius": {
+            "from": 24,
+            "to": 0
+          },
+          "shape": "hard",
+          "ramp": "silver",
+          "outline": false,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 73
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          }
+        },
+        {
+          "id": "quebra_cristal0",
+          "type": "shape",
+          "points": [
+            [
+              10,
+              -5
+            ],
+            [
+              16,
+              -27
+            ],
+            [
+              23,
+              -5
+            ],
+            [
+              16,
+              -1
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.9,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 88.7
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.9
+        },
+        {
+          "id": "quebra_cristal1",
+          "type": "shape",
+          "points": [
+            [
+              2.0000000000000018,
+              3.6602540378443855
+            ],
+            [
+              8.000000000000002,
+              -18.339745962155614
+            ],
+            [
+              15.000000000000002,
+              3.6602540378443855
+            ],
+            [
+              8.000000000000002,
+              7.6602540378443855
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.7,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 69.6
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "quebra_cristal2",
+          "type": "shape",
+          "points": [
+            [
+              -13.999999999999996,
+              3.6602540378443873
+            ],
+            [
+              -7.9999999999999964,
+              -18.33974596215561
+            ],
+            [
+              -0.9999999999999964,
+              3.6602540378443873
+            ],
+            [
+              -7.9999999999999964,
+              7.660254037844387
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.9,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 92.1
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.9
+        },
+        {
+          "id": "quebra_cristal3",
+          "type": "shape",
+          "points": [
+            [
+              -22,
+              -4.999999999999999
+            ],
+            [
+              -16,
+              -27
+            ],
+            [
+              -9,
+              -4.999999999999999
+            ],
+            [
+              -16,
+              -0.9999999999999991
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.7,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 66.2
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.7
+        },
+        {
+          "id": "quebra_cristal4",
+          "type": "shape",
+          "points": [
+            [
+              -14.000000000000007,
+              -13.660254037844384
+            ],
+            [
+              -8.000000000000007,
+              -35.66025403784438
+            ],
+            [
+              -1.000000000000007,
+              -13.660254037844384
+            ],
+            [
+              -8.000000000000007,
+              -9.660254037844384
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.9,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 95.5
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.9
+        },
+        {
+          "id": "quebra_cristal5",
+          "type": "shape",
+          "points": [
+            [
+              2.0000000000000018,
+              -13.660254037844386
+            ],
+            [
+              8.000000000000002,
+              -35.66025403784438
+            ],
+            [
+              15.000000000000002,
+              -13.660254037844386
+            ],
+            [
+              8.000000000000002,
+              -9.660254037844386
+            ]
+          ],
+          "ramp": "ice",
+          "fill": "flat",
+          "level": 0.7,
+          "outline": true,
+          "life": [
+            0.6956521739130435,
+            1
+          ],
+          "x": {
+            "from": 80,
+            "to": 62.8
+          },
+          "y": {
+            "from": 120,
+            "to": 134
+          },
+          "scale": {
+            "from": 1,
+            "to": 0
+          },
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "intensity": 0.7
+        }
+      ]
+    }
+  },
+  {
+    "id": "aura-gatinho",
+    "recipe": {
+      "canvas": {
+        "w": 128,
+        "h": 128
+      },
+      "frames": 8,
+      "fps": 10,
+      "loop": true,
+      "origin": [
+        64,
+        86
+      ],
+      "ramps": {
+        "main": [
+          "#40273d",
+          "#975b79",
+          "#d58baa",
+          "#ffd4d8",
+          "#fff6e0"
+        ]
+      },
+      "dither": 0,
+      "detail": 0.2,
+      "tones": 5,
+      "outline": {
+        "mode": "none"
+      },
+      "layers": [
+        {
+          "id": "gatinho",
+          "type": "shape",
+          "x": 64,
+          "y": {
+            "wave": {
+              "mid": 45,
+              "amp": 2,
+              "cycles": 1
+            }
+          },
+          "points": [
+            [
+              -16,
+              -4
+            ],
+            [
+              -13,
+              -18
+            ],
+            [
+              -4,
+              -9
+            ],
+            [
+              4,
+              -9
+            ],
+            [
+              13,
+              -18
+            ],
+            [
+              16,
+              -4
+            ],
+            [
+              15,
+              5
+            ],
+            [
+              7,
+              12
+            ],
+            [
+              -7,
+              12
+            ],
+            [
+              -15,
+              5
+            ],
+            [
+              -16,
+              -4
+            ]
+          ],
+          "closed": false,
+          "width": 2,
+          "fill": "flat",
+          "level": 0.85
+        },
+        {
+          "id": "olho_l",
+          "type": "shape",
+          "x": 64,
+          "y": {
+            "wave": {
+              "mid": 45,
+              "amp": 2,
+              "cycles": 1
+            }
+          },
+          "points": [
+            [
+              -10,
+              -1
+            ],
+            [
+              -7,
+              -3
+            ],
+            [
+              -4,
+              -1
+            ]
+          ],
+          "closed": false,
+          "width": 1,
+          "fill": "flat",
+          "level": 0.8
+        },
+        {
+          "id": "olho_r",
+          "type": "shape",
+          "x": 64,
+          "y": {
+            "wave": {
+              "mid": 45,
+              "amp": 2,
+              "cycles": 1
+            }
+          },
+          "points": [
+            [
+              4,
+              -1
+            ],
+            [
+              7,
+              -3
+            ],
+            [
+              10,
+              -1
+            ]
+          ],
+          "closed": false,
+          "width": 1,
+          "fill": "flat",
+          "level": 0.8
+        },
+        {
+          "id": "nariz",
+          "type": "shape",
+          "x": 64,
+          "y": {
+            "wave": {
+              "mid": 45,
+              "amp": 2,
+              "cycles": 1
+            }
+          },
+          "points": [
+            [
+              -2,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              0,
+              6
+            ]
+          ],
+          "fill": "flat",
+          "level": 1
+        },
+        {
+          "id": "cura",
+          "type": "particles",
+          "mode": "rise",
+          "x": 64,
+          "y": 86,
+          "count": 5,
+          "radius": 25,
+          "speed": 25,
+          "size": [
+            1,
+            3
+          ],
+          "shape": "sparkle",
+          "spacing": "even",
+          "cycles": 1
+        }
+      ]
+    }
+  }
+]

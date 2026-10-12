@@ -1,0 +1,29 @@
+[
+  {
+    "theme": "bosque",
+    "source": "coordenacao/arena-pixelai/entregas/mapas-rotativos-2026-10-10/fontes/bosque-quatro-patios.blend",
+    "sourceSha256": "3e05ad2beae580b5cf8d5d032d22d875684ef87ccfb46028166afb68890691cd",
+    "output": "art/mapa-bosque.png",
+    "alpha": true,
+    "camera": "VISTA_JOGADOR_1",
+    "outputSha256": "2333655c4353080037cb09990f92e12e847841319f4029dbd3f6a72e60f7e53d"
+  },
+  {
+    "theme": "pedreira",
+    "source": "coordenacao/arena-pixelai/entregas/mapas-rotativos-2026-10-10/fontes/pedreira-anel-partido.blend",
+    "sourceSha256": "5a59dcb890177948d1a44add89958ebc6cc2cac09710bd405ad07b75371b7386",
+    "output": "art/mapa-pedreira.png",
+    "alpha": true,
+    "camera": "VISTA_JOGADOR_1",
+    "outputSha256": "b7514a4e7daa041de568ba09aa655dfe1c3ba6df51ce524b4f9f890d553575fb"
+  },
+  {
+    "theme": "neve",
+    "source": "coordenacao/arena-pixelai/entregas/mapas-rotativos-2026-10-10/fontes/neve-bastioes-diagonais.blend",
+    "sourceSha256": "ac6f1d93e31c001b7996137958b6c4225e345497f60ebfef86a4f32e00c74a5d",
+    "output": "art/mapa-neve.png",
+    "alpha": true,
+    "camera": "VISTA_JOGADOR_1",
+    "outputSha256": "affb1a5db75f1fdf6683644e3253dead60a5bb37c50bd11d79c6febba5a30302"
+  }
+]

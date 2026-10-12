@@ -1,0 +1,1423 @@
+[
+  {
+    "id": "martelo-cristal",
+    "recipe": {
+      "canvas": {
+        "w": 160,
+        "h": 160
+      },
+      "frames": 16,
+      "fps": 12,
+      "loop": false,
+      "origin": [
+        80,
+        102
+      ],
+      "ramps": {
+        "main": [
+          "#243d57",
+          "#487e9f",
+          "#7fbacc",
+          "#b8e8e4",
+          "#f1ffff"
+        ],
+        "wood": [
+          "#38293b",
+          "#73513a",
+          "#a77d4e",
+          "#d7b17c",
+          "#f4dfae"
+        ]
+      },
+      "tones": 5,
+      "dither": 0,
+      "detail": 0.25,
+      "outline": {
+        "mode": "selective"
+      },
+      "shading": "lit",
+      "shade_depth": 6,
+      "seed": 73,
+      "layers": [
+        {
+          "id": "cabo",
+          "type": "shape",
+          "x": 80,
+          "y": {
+            "keys": [
+              [
+                0,
+                38
+              ],
+              [
+                0.43,
+                100
+              ],
+              [
+                0.6,
+                100
+              ],
+              [
+                1,
+                105
+              ]
+            ],
+            "ease": "in_out"
+          },
+          "points": [
+            [
+              -3,
+              -5
+            ],
+            [
+              4,
+              -5
+            ],
+            [
+              5,
+              39
+            ],
+            [
+              -3,
+              39
+            ]
+          ],
+          "fill": "linear",
+          "ramp": "wood",
+          "rotation": {
+            "keys": [
+              [
+                0,
+                -35
+              ],
+              [
+                0.43,
+                65
+              ],
+              [
+                0.6,
+                65
+              ],
+              [
+                1,
+                65
+              ]
+            ],
+            "ease": "in_out"
+          },
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0.75,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "cristal",
+          "type": "shape",
+          "x": 80,
+          "y": {
+            "keys": [
+              [
+                0,
+                38
+              ],
+              [
+                0.43,
+                100
+              ],
+              [
+                0.6,
+                100
+              ],
+              [
+                1,
+                105
+              ]
+            ],
+            "ease": "in_out"
+          },
+          "points": [
+            [
+              -22,
+              -14
+            ],
+            [
+              -13,
+              -20
+            ],
+            [
+              17,
+              -18
+            ],
+            [
+              25,
+              -7
+            ],
+            [
+              20,
+              5
+            ],
+            [
+              -18,
+              7
+            ],
+            [
+              -24,
+              -2
+            ]
+          ],
+          "fill": "linear",
+          "fill_angle": -135,
+          "rotation": {
+            "keys": [
+              [
+                0,
+                -35
+              ],
+              [
+                0.43,
+                65
+              ],
+              [
+                0.6,
+                65
+              ],
+              [
+                1,
+                65
+              ]
+            ],
+            "ease": "in_out"
+          },
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0.75,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "corrente-fisica",
+    "recipe": {
+      "canvas": {
+        "w": 160,
+        "h": 160
+      },
+      "frames": 16,
+      "fps": 12,
+      "loop": false,
+      "origin": [
+        25,
+        80
+      ],
+      "ramps": {
+        "main": [
+          "#252b3e",
+          "#53677d",
+          "#95aeb8",
+          "#cddcda",
+          "#f7fff0"
+        ],
+        "wood": [
+          "#38293b",
+          "#73513a",
+          "#a77d4e",
+          "#d7b17c",
+          "#f4dfae"
+        ]
+      },
+      "tones": 5,
+      "dither": 0,
+      "detail": 0.25,
+      "outline": {
+        "mode": "selective"
+      },
+      "shading": "lit",
+      "shade_depth": 6,
+      "seed": 73,
+      "layers": [
+        {
+          "id": "elo_0",
+          "type": "ring",
+          "x": {
+            "keys": [
+              [
+                0,
+                25
+              ],
+              [
+                0.43,
+                25
+              ],
+              [
+                0.6,
+                25
+              ],
+              [
+                1,
+                25
+              ]
+            ],
+            "ease": "in_out"
+          },
+          "y": 80,
+          "radius": 5,
+          "width": 2,
+          "soft": 0,
+          "squash": 0.65,
+          "outline": true,
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                1
+              ],
+              [
+                0.15,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "elo_1",
+          "type": "ring",
+          "x": {
+            "keys": [
+              [
+                0,
+                25
+              ],
+              [
+                0.43,
+                37
+              ],
+              [
+                0.6,
+                37
+              ],
+              [
+                1,
+                25
+              ]
+            ],
+            "ease": "in_out"
+          },
+          "y": 80,
+          "radius": 5,
+          "width": 2,
+          "soft": 0,
+          "squash": 1.2,
+          "outline": true,
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                1
+              ],
+              [
+                0.15,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "elo_2",
+          "type": "ring",
+          "x": {
+            "keys": [
+              [
+                0,
+                25
+              ],
+              [
+                0.43,
+                49
+              ],
+              [
+                0.6,
+                49
+              ],
+              [
+                1,
+                25
+              ]
+            ],
+            "ease": "in_out"
+          },
+          "y": 80,
+          "radius": 5,
+          "width": 2,
+          "soft": 0,
+          "squash": 0.65,
+          "outline": true,
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                1
+              ],
+              [
+                0.15,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "elo_3",
+          "type": "ring",
+          "x": {
+            "keys": [
+              [
+                0,
+                25
+              ],
+              [
+                0.43,
+                61
+              ],
+              [
+                0.6,
+                61
+              ],
+              [
+                1,
+                25
+              ]
+            ],
+            "ease": "in_out"
+          },
+          "y": 80,
+          "radius": 5,
+          "width": 2,
+          "soft": 0,
+          "squash": 1.2,
+          "outline": true,
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                1
+              ],
+              [
+                0.15,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "elo_4",
+          "type": "ring",
+          "x": {
+            "keys": [
+              [
+                0,
+                25
+              ],
+              [
+                0.43,
+                73
+              ],
+              [
+                0.6,
+                73
+              ],
+              [
+                1,
+                25
+              ]
+            ],
+            "ease": "in_out"
+          },
+          "y": 80,
+          "radius": 5,
+          "width": 2,
+          "soft": 0,
+          "squash": 0.65,
+          "outline": true,
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                1
+              ],
+              [
+                0.15,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "elo_5",
+          "type": "ring",
+          "x": {
+            "keys": [
+              [
+                0,
+                25
+              ],
+              [
+                0.43,
+                85
+              ],
+              [
+                0.6,
+                85
+              ],
+              [
+                1,
+                25
+              ]
+            ],
+            "ease": "in_out"
+          },
+          "y": 80,
+          "radius": 5,
+          "width": 2,
+          "soft": 0,
+          "squash": 1.2,
+          "outline": true,
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                1
+              ],
+              [
+                0.15,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "elo_6",
+          "type": "ring",
+          "x": {
+            "keys": [
+              [
+                0,
+                25
+              ],
+              [
+                0.43,
+                97
+              ],
+              [
+                0.6,
+                97
+              ],
+              [
+                1,
+                25
+              ]
+            ],
+            "ease": "in_out"
+          },
+          "y": 80,
+          "radius": 5,
+          "width": 2,
+          "soft": 0,
+          "squash": 0.65,
+          "outline": true,
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                1
+              ],
+              [
+                0.15,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "elo_7",
+          "type": "ring",
+          "x": {
+            "keys": [
+              [
+                0,
+                25
+              ],
+              [
+                0.43,
+                109
+              ],
+              [
+                0.6,
+                109
+              ],
+              [
+                1,
+                25
+              ]
+            ],
+            "ease": "in_out"
+          },
+          "y": 80,
+          "radius": 5,
+          "width": 2,
+          "soft": 0,
+          "squash": 1.2,
+          "outline": true,
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                1
+              ],
+              [
+                0.15,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "pena-fenix",
+    "recipe": {
+      "canvas": {
+        "w": 160,
+        "h": 160
+      },
+      "frames": 16,
+      "fps": 12,
+      "loop": false,
+      "origin": [
+        80,
+        102
+      ],
+      "ramps": {
+        "main": [
+          "#3d2035",
+          "#8f343b",
+          "#db6140",
+          "#ffb956",
+          "#fff3c2"
+        ],
+        "veia": [
+          "#452735",
+          "#916139",
+          "#d3ac4f",
+          "#f5db8a",
+          "#fff6d0"
+        ]
+      },
+      "tones": 5,
+      "dither": 0,
+      "detail": 0.25,
+      "outline": {
+        "mode": "selective"
+      },
+      "shading": "lit",
+      "shade_depth": 6,
+      "seed": 73,
+      "layers": [
+        {
+          "id": "pena",
+          "type": "shape",
+          "x": 80,
+          "y": {
+            "from": 103,
+            "to": 34
+          },
+          "points": [
+            [
+              0,
+              23
+            ],
+            [
+              -8,
+              11
+            ],
+            [
+              -5,
+              12
+            ],
+            [
+              -13,
+              1
+            ],
+            [
+              -9,
+              3
+            ],
+            [
+              -15,
+              -10
+            ],
+            [
+              -11,
+              -7
+            ],
+            [
+              -10,
+              -19
+            ],
+            [
+              -4,
+              -26
+            ],
+            [
+              1,
+              -30
+            ],
+            [
+              7,
+              -24
+            ],
+            [
+              12,
+              -15
+            ],
+            [
+              8,
+              -13
+            ],
+            [
+              10,
+              -3
+            ],
+            [
+              5,
+              -5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "fill": "linear",
+          "fill_angle": -135,
+          "rotation": {
+            "from": -30,
+            "to": 15
+          },
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "brasas",
+          "type": "particles",
+          "x": 80,
+          "y": {
+            "from": 100,
+            "to": 34
+          },
+          "mode": "rise",
+          "emit": "trail",
+          "count": 10,
+          "radius": 8,
+          "speed": 12,
+          "shape": "sparkle",
+          "size": [
+            1,
+            3
+          ],
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          }
+        },
+        {
+          "id": "veia",
+          "type": "shape",
+          "x": 80,
+          "y": {
+            "from": 103,
+            "to": 34
+          },
+          "points": [
+            [
+              0,
+              20
+            ],
+            [
+              -1,
+              -23
+            ]
+          ],
+          "closed": false,
+          "width": 2,
+          "ramp": "veia",
+          "rotation": {
+            "from": -30,
+            "to": 15
+          },
+          "fill": "flat",
+          "level": 0.9,
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "ancora-fantasma",
+    "recipe": {
+      "canvas": {
+        "w": 160,
+        "h": 160
+      },
+      "frames": 16,
+      "fps": 12,
+      "loop": false,
+      "origin": [
+        80,
+        102
+      ],
+      "ramps": {
+        "main": [
+          "#252b3e",
+          "#53677d",
+          "#95aeb8",
+          "#cddcda",
+          "#f7fff0"
+        ],
+        "wood": [
+          "#38293b",
+          "#73513a",
+          "#a77d4e",
+          "#d7b17c",
+          "#f4dfae"
+        ]
+      },
+      "tones": 5,
+      "dither": 0,
+      "detail": 0.25,
+      "outline": {
+        "mode": "selective"
+      },
+      "shading": "lit",
+      "shade_depth": 6,
+      "seed": 73,
+      "layers": [
+        {
+          "id": "argola",
+          "type": "ring",
+          "x": 80,
+          "y": {
+            "keys": [
+              [
+                0,
+                24
+              ],
+              [
+                0.43,
+                67
+              ],
+              [
+                0.6,
+                67
+              ],
+              [
+                1,
+                67
+              ]
+            ],
+            "ease": "in_out"
+          },
+          "radius": 7,
+          "width": 3,
+          "soft": 0,
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                0.6
+              ],
+              [
+                0.35,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "ancora",
+          "type": "shape",
+          "x": 80,
+          "y": {
+            "keys": [
+              [
+                0,
+                50
+              ],
+              [
+                0.43,
+                94
+              ],
+              [
+                0.6,
+                94
+              ],
+              [
+                1,
+                94
+              ]
+            ],
+            "ease": "in_out"
+          },
+          "points": [
+            [
+              0,
+              -21
+            ],
+            [
+              0,
+              18
+            ],
+            [
+              -17,
+              10
+            ],
+            [
+              -25,
+              1
+            ],
+            [
+              -20,
+              16
+            ],
+            [
+              0,
+              26
+            ],
+            [
+              20,
+              16
+            ],
+            [
+              25,
+              1
+            ],
+            [
+              17,
+              10
+            ],
+            [
+              0,
+              18
+            ]
+          ],
+          "closed": false,
+          "width": 4,
+          "fill": "edge",
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                0.6
+              ],
+              [
+                0.35,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "desejo-itens",
+    "recipe": {
+      "canvas": {
+        "w": 160,
+        "h": 160
+      },
+      "frames": 16,
+      "fps": 12,
+      "loop": false,
+      "origin": [
+        80,
+        102
+      ],
+      "ramps": {
+        "main": [
+          "#272640",
+          "#534573",
+          "#9270b0",
+          "#cba0df",
+          "#f3dbfc"
+        ],
+        "gold": [
+          "#452735",
+          "#916139",
+          "#d3ac4f",
+          "#f5db8a",
+          "#fff6d0"
+        ]
+      },
+      "tones": 5,
+      "dither": 0,
+      "detail": 0.25,
+      "outline": {
+        "mode": "selective"
+      },
+      "shading": "lit",
+      "shade_depth": 6,
+      "seed": 73,
+      "layers": [
+        {
+          "id": "cristal",
+          "type": "particles",
+          "mode": "fall",
+          "count": 1,
+          "x": 63,
+          "y": 24,
+          "speed": 68,
+          "gravity": 20,
+          "floor": 86,
+          "bounce": 0.18,
+          "spacing": "even",
+          "shrink": 0,
+          "shape": "custom",
+          "pixels": [
+            "...3...",
+            "..343..",
+            ".34443.",
+            "3445443",
+            "3445443",
+            ".34443.",
+            "..343..",
+            "...3..."
+          ],
+          "pixel_ramp": 5,
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "frasco",
+          "type": "particles",
+          "mode": "fall",
+          "count": 1,
+          "x": 106,
+          "y": 22,
+          "speed": 70,
+          "gravity": 20,
+          "floor": 88,
+          "bounce": 0.2,
+          "spacing": "even",
+          "shrink": 0,
+          "ramp": "gold",
+          "shape": "custom",
+          "pixels": [
+            "..333..",
+            "..343..",
+            "..343..",
+            ".34443.",
+            "3445443",
+            "3445443",
+            ".34443."
+          ],
+          "pixel_ramp": 5,
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "desejo-apagar",
+    "recipe": {
+      "canvas": {
+        "w": 160,
+        "h": 160
+      },
+      "frames": 16,
+      "fps": 12,
+      "loop": false,
+      "origin": [
+        80,
+        102
+      ],
+      "ramps": {
+        "main": [
+          "#252b3e",
+          "#53677d",
+          "#95aeb8",
+          "#cddcda",
+          "#f7fff0"
+        ],
+        "wood": [
+          "#38293b",
+          "#73513a",
+          "#a77d4e",
+          "#d7b17c",
+          "#f4dfae"
+        ]
+      },
+      "tones": 5,
+      "dither": 0,
+      "detail": 0.25,
+      "outline": {
+        "mode": "selective"
+      },
+      "shading": "lit",
+      "shade_depth": 6,
+      "seed": 73,
+      "layers": [
+        {
+          "id": "evento",
+          "type": "ring",
+          "radius": 38,
+          "width": 3,
+          "soft": 2,
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          },
+          "breakup": "scan",
+          "ramp": "main"
+        },
+        {
+          "id": "scan",
+          "type": "shape",
+          "x": 80,
+          "y": {
+            "from": 58,
+            "to": 141
+          },
+          "points": [
+            [
+              -42,
+              0
+            ],
+            [
+              42,
+              0
+            ]
+          ],
+          "closed": false,
+          "width": 2,
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0.7,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          },
+          "ramp": "main"
+        }
+      ]
+    }
+  },
+  {
+    "id": "devorar-essencia",
+    "recipe": {
+      "canvas": {
+        "w": 160,
+        "h": 160
+      },
+      "frames": 16,
+      "fps": 12,
+      "loop": false,
+      "origin": [
+        25,
+        100
+      ],
+      "ramps": {
+        "main": [
+          "#272640",
+          "#534573",
+          "#9270b0",
+          "#cba0df",
+          "#f3dbfc"
+        ]
+      },
+      "tones": 5,
+      "dither": 0,
+      "detail": 0.25,
+      "outline": {
+        "mode": "selective"
+      },
+      "shading": "lit",
+      "shade_depth": 6,
+      "seed": 73,
+      "layers": [
+        {
+          "id": "essencia",
+          "type": "glow",
+          "x": {
+            "from": 25,
+            "to": 128
+          },
+          "y": {
+            "keys": [
+              [
+                0,
+                100
+              ],
+              [
+                0.5,
+                54
+              ],
+              [
+                1,
+                91
+              ]
+            ],
+            "ease": "in_out"
+          },
+          "radius": {
+            "keys": [
+              [
+                0,
+                3
+              ],
+              [
+                0.4,
+                9
+              ],
+              [
+                1,
+                2
+              ]
+            ]
+          },
+          "shape": "linear",
+          "outline": false,
+          "dissolve": {
+            "keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0.8,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "rastro",
+          "type": "particles",
+          "mode": "rise",
+          "x": {
+            "from": 25,
+            "to": 128
+          },
+          "y": {
+            "keys": [
+              [
+                0,
+                100
+              ],
+              [
+                0.5,
+                54
+              ],
+              [
+                1,
+                91
+              ]
+            ],
+            "ease": "in_out"
+          },
+          "emit": "trail",
+          "speed": 3,
+          "radius": 4,
+          "count": 18,
+          "shape": "sparkle",
+          "size": [
+            1,
+            2
+          ],
+          "dissolve": {
+            "from": 0,
+            "to": 1
+          }
+        }
+      ]
+    }
+  }
+]

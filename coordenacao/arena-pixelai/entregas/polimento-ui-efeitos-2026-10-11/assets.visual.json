@@ -1,0 +1,4997 @@
+{
+  "schema": "arena-visual-v2",
+  "date": "2026-10-11",
+  "review": "aprovação automática solicitada pelo autor; integração pendente de confirmação Claude",
+  "entries": [
+    {
+      "resource": "Sprites/Baltazar/idle_west",
+      "file": "unity/Sprites/Baltazar/idle_west.png",
+      "frameSize": 168,
+      "frames": 4,
+      "fps": 10,
+      "loop": true,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        84,
+        143
+      ],
+      "unityPivot": [
+        0.5,
+        0.14880952380952384
+      ],
+      "pixelsPerUnit": 128,
+      "source": "baltazar-idle-west-v2",
+      "sha256": "409421f367abcb4c61a2073238da081548ddf31bd157eb65f7782b8b97625ab6",
+      "removedReferenceFrame0": true,
+      "sourceIndices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "nativeFrameSize": [
+        160,
+        168
+      ]
+    },
+    {
+      "resource": "Sprites/Baltazar/walk_west",
+      "file": "unity/Sprites/Baltazar/walk_west.png",
+      "frameSize": 176,
+      "frames": 6,
+      "fps": 10,
+      "loop": true,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        88,
+        147
+      ],
+      "unityPivot": [
+        0.5,
+        0.1647727272727273
+      ],
+      "pixelsPerUnit": 128,
+      "source": "baltazar-walk-west-v2",
+      "sha256": "bc35be497aa0a052872ca5194d0b28f42dc69add19f0bd2791083d104ce74995",
+      "removedReferenceFrame0": true,
+      "sourceIndices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "nativeFrameSize": [
+        168,
+        176
+      ]
+    },
+    {
+      "resource": "Sprites/GuardiaoMusgo/idle_north-west",
+      "file": "unity/Sprites/GuardiaoMusgo/idle_north-west.png",
+      "frameSize": 176,
+      "frames": 4,
+      "fps": 10,
+      "loop": true,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        88,
+        149
+      ],
+      "unityPivot": [
+        0.5,
+        0.15340909090909094
+      ],
+      "pixelsPerUnit": 128,
+      "source": "guardiao-idle-north-west-v2",
+      "sha256": "8d5f05bc3af80393f6a31a7a0d797b28a092bc76665de1c5d8fb03a6137e7132",
+      "removedReferenceFrame0": true,
+      "sourceIndices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "nativeFrameSize": [
+        132,
+        176
+      ]
+    },
+    {
+      "resource": "Sprites/Efeitos/mare-de-lava/inicio",
+      "file": "unity/Sprites/Efeitos/mare-de-lava/inicio.png",
+      "frameSize": 160,
+      "frames": 6,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        80,
+        84
+      ],
+      "unityPivot": [
+        0.5,
+        0.475
+      ],
+      "pixelsPerUnit": 128,
+      "source": "mare-de-lava:timeline",
+      "sha256": "1fa401e9e5ff55cd1e78a32f64b6c25441897b1b41c9e735fc5599b32d103fbf"
+    },
+    {
+      "resource": "Sprites/Efeitos/mare-de-lava/loop",
+      "file": "unity/Sprites/Efeitos/mare-de-lava/loop.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 1,
+      "impactFrame0": 1,
+      "anchorPixelsTopLeft": [
+        80,
+        84
+      ],
+      "unityPivot": [
+        0.5,
+        0.475
+      ],
+      "pixelsPerUnit": 128,
+      "source": "mare-de-lava:timeline",
+      "sha256": "151450fb8ee7ed6196be9125b73dc6d79635cb8199deda4011de414b33a63135"
+    },
+    {
+      "resource": "Sprites/Efeitos/mare-de-lava/fim",
+      "file": "unity/Sprites/Efeitos/mare-de-lava/fim.png",
+      "frameSize": 160,
+      "frames": 6,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        80,
+        84
+      ],
+      "unityPivot": [
+        0.5,
+        0.475
+      ],
+      "pixelsPerUnit": 128,
+      "source": "mare-de-lava:timeline",
+      "sha256": "0a81cd1304e97c04a11b3dc7c04c017419d277b76878d1f314180a6e0df9ae01"
+    },
+    {
+      "resource": "Sprites/Efeitos/chuva-de-moedas/inicio",
+      "file": "unity/Sprites/Efeitos/chuva-de-moedas/inicio.png",
+      "frameSize": 160,
+      "frames": 7,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        80,
+        114
+      ],
+      "unityPivot": [
+        0.5,
+        0.2875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "chuva-de-moedas:timeline",
+      "sha256": "6a6627cd5887be3d07dab3777f6c5f31105b2a00da9f1e6afabe513566ab7e8e"
+    },
+    {
+      "resource": "Sprites/Efeitos/chuva-de-moedas/loop",
+      "file": "unity/Sprites/Efeitos/chuva-de-moedas/loop.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        80,
+        114
+      ],
+      "unityPivot": [
+        0.5,
+        0.2875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "chuva-de-moedas:timeline",
+      "sha256": "9df3fcf779f1ad839534bf5ad9351fe615552f032c14d0a8d381ea9bf57ea873"
+    },
+    {
+      "resource": "Sprites/Efeitos/chuva-de-moedas/fim",
+      "file": "unity/Sprites/Efeitos/chuva-de-moedas/fim.png",
+      "frameSize": 160,
+      "frames": 5,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        80,
+        114
+      ],
+      "unityPivot": [
+        0.5,
+        0.2875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "chuva-de-moedas:timeline",
+      "sha256": "a2b9406c89f5a8786a2efbb3e9f9fb0d1992463814a5de405d5b5089c2e4cef3"
+    },
+    {
+      "resource": "Sprites/Efeitos/queda-de-pedras/inicio",
+      "file": "unity/Sprites/Efeitos/queda-de-pedras/inicio.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        80,
+        114
+      ],
+      "unityPivot": [
+        0.5,
+        0.2875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "queda-de-pedras:timeline",
+      "sha256": "ca364b43010530767c4cb9b781844ca501ea54021024e5450a2ae7afd47776e5"
+    },
+    {
+      "resource": "Sprites/Efeitos/queda-de-pedras/loop",
+      "file": "unity/Sprites/Efeitos/queda-de-pedras/loop.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        80,
+        114
+      ],
+      "unityPivot": [
+        0.5,
+        0.2875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "queda-de-pedras:timeline",
+      "sha256": "a4104c5f52a16004b180c9849f2319580328e573768ed268e09e3a3e6b08140e"
+    },
+    {
+      "resource": "Sprites/Efeitos/queda-de-pedras/fim",
+      "file": "unity/Sprites/Efeitos/queda-de-pedras/fim.png",
+      "frameSize": 160,
+      "frames": 4,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        80,
+        114
+      ],
+      "unityPivot": [
+        0.5,
+        0.2875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "queda-de-pedras:timeline",
+      "sha256": "38175260280be99299b1cc8805f03b10d7bf1c7669267551dbcdef526168749f"
+    },
+    {
+      "resource": "Sprites/Efeitos/eco-ancestral/inicio",
+      "file": "unity/Sprites/Efeitos/eco-ancestral/inicio.png",
+      "frameSize": 136,
+      "frames": 11,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        45,
+        111
+      ],
+      "unityPivot": [
+        0.33088235294117646,
+        0.18382352941176472
+      ],
+      "pixelsPerUnit": 128,
+      "source": "eco-ancestral:inicio",
+      "sha256": "2e86d0848c5b60da31bfc29576a2a2cf177451f9fc1aeb6794ae14e83150aa2c",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/eco-ancestral/loop",
+      "file": "unity/Sprites/Efeitos/eco-ancestral/loop.png",
+      "frameSize": 136,
+      "frames": 14,
+      "fps": 14,
+      "loop": true,
+      "peakFrame0": 8,
+      "impactFrame0": 8,
+      "anchorPixelsTopLeft": [
+        45,
+        111
+      ],
+      "unityPivot": [
+        0.33088235294117646,
+        0.18382352941176472
+      ],
+      "pixelsPerUnit": 128,
+      "source": "eco-ancestral:loop",
+      "sha256": "0a038394c8f1064b9a0f2ea6948d114e851c35196536ac4f9a76d20cacc86376",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/eco-ancestral/fim",
+      "file": "unity/Sprites/Efeitos/eco-ancestral/fim.png",
+      "frameSize": 136,
+      "frames": 12,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 4,
+      "impactFrame0": 4,
+      "anchorPixelsTopLeft": [
+        45,
+        111
+      ],
+      "unityPivot": [
+        0.33088235294117646,
+        0.18382352941176472
+      ],
+      "pixelsPerUnit": 128,
+      "source": "eco-ancestral:fim",
+      "sha256": "ab262f4a11f24223a0b3e3154518782673486adee8797eb4e2d2c13a69097fda",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/portal-caotico/inicio",
+      "file": "unity/Sprites/Efeitos/portal-caotico/inicio.png",
+      "frameSize": 176,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        77,
+        85
+      ],
+      "unityPivot": [
+        0.4375,
+        0.5170454545454546
+      ],
+      "pixelsPerUnit": 128,
+      "source": "portal-caotico:inicio",
+      "sha256": "10a8b7757c05130e9b6a9167fe86dd87ee35636070d749d8c864f9c70d8c71e8",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/portal-caotico/loop",
+      "file": "unity/Sprites/Efeitos/portal-caotico/loop.png",
+      "frameSize": 176,
+      "frames": 12,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        77,
+        85
+      ],
+      "unityPivot": [
+        0.4375,
+        0.5170454545454546
+      ],
+      "pixelsPerUnit": 128,
+      "source": "portal-caotico:loop",
+      "sha256": "d13542420ace9a72472140e3e5e9cbde713f0b9a34ae8b6152278ef595432db9",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/portal-caotico/fim",
+      "file": "unity/Sprites/Efeitos/portal-caotico/fim.png",
+      "frameSize": 176,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        77,
+        85
+      ],
+      "unityPivot": [
+        0.4375,
+        0.5170454545454546
+      ],
+      "pixelsPerUnit": 128,
+      "source": "portal-caotico:fim",
+      "sha256": "a11fc5253aa46d9eab6d1143c882691c40ae45fc3ab4b7dfa7a9e1c3ca3a4b7d",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/mare-de-energia/inicio",
+      "file": "unity/Sprites/Efeitos/mare-de-energia/inicio.png",
+      "frameSize": 136,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        40,
+        98
+      ],
+      "unityPivot": [
+        0.29411764705882354,
+        0.27941176470588236
+      ],
+      "pixelsPerUnit": 128,
+      "source": "mare-de-energia:inicio",
+      "sha256": "dc4b806aa0a7ed313cdc133f235075dc2cddc6a26894f53a905e43d6f41e5c21",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/mare-de-energia/loop",
+      "file": "unity/Sprites/Efeitos/mare-de-energia/loop.png",
+      "frameSize": 136,
+      "frames": 12,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 9,
+      "impactFrame0": 9,
+      "anchorPixelsTopLeft": [
+        40,
+        98
+      ],
+      "unityPivot": [
+        0.29411764705882354,
+        0.27941176470588236
+      ],
+      "pixelsPerUnit": 128,
+      "source": "mare-de-energia:loop",
+      "sha256": "f002c50268487d4f21ae5dbe40f9795953bc638c771f2f4e47f61321a2fd6f4c",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/mare-de-energia/fim",
+      "file": "unity/Sprites/Efeitos/mare-de-energia/fim.png",
+      "frameSize": 136,
+      "frames": 10,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 4,
+      "impactFrame0": 4,
+      "anchorPixelsTopLeft": [
+        40,
+        98
+      ],
+      "unityPivot": [
+        0.29411764705882354,
+        0.27941176470588236
+      ],
+      "pixelsPerUnit": 128,
+      "source": "mare-de-energia:fim",
+      "sha256": "c89357a367e8ed0d64865d2c1028ebdd645e2f38db6001e8e48a7050991367f9",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/vendaval/inicio",
+      "file": "unity/Sprites/Efeitos/vendaval/inicio.png",
+      "frameSize": 144,
+      "frames": 11,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        72,
+        36
+      ],
+      "unityPivot": [
+        0.5,
+        0.75
+      ],
+      "pixelsPerUnit": 128,
+      "source": "vendaval:inicio",
+      "sha256": "a63764082c1351864e2a02567c2c43039d16203c82494781825ce71bf8f26be0",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/vendaval/loop",
+      "file": "unity/Sprites/Efeitos/vendaval/loop.png",
+      "frameSize": 144,
+      "frames": 12,
+      "fps": 14,
+      "loop": true,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        72,
+        36
+      ],
+      "unityPivot": [
+        0.5,
+        0.75
+      ],
+      "pixelsPerUnit": 128,
+      "source": "vendaval:loop",
+      "sha256": "7f7afc91daa98224186c0688b7c179b0e08441c4c45d3fe7b9dfa35c7d5fb559",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/vendaval/fim",
+      "file": "unity/Sprites/Efeitos/vendaval/fim.png",
+      "frameSize": 144,
+      "frames": 11,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        72,
+        36
+      ],
+      "unityPivot": [
+        0.5,
+        0.75
+      ],
+      "pixelsPerUnit": 128,
+      "source": "vendaval:fim",
+      "sha256": "903bffbfa08b62e1213d6aea16970b540ee53b0b8ce726b5343129de58367a50",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/terremoto/inicio",
+      "file": "unity/Sprites/Efeitos/terremoto/inicio.png",
+      "frameSize": 112,
+      "frames": 9,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 4,
+      "impactFrame0": 4,
+      "anchorPixelsTopLeft": [
+        54,
+        34
+      ],
+      "unityPivot": [
+        0.48214285714285715,
+        0.6964285714285714
+      ],
+      "pixelsPerUnit": 128,
+      "source": "terremoto:inicio",
+      "sha256": "ccf05e8463de557fdf3581488ea654161631471961afa5a851604caa6feaf4c1",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/terremoto/loop",
+      "file": "unity/Sprites/Efeitos/terremoto/loop.png",
+      "frameSize": 112,
+      "frames": 9,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        54,
+        34
+      ],
+      "unityPivot": [
+        0.48214285714285715,
+        0.6964285714285714
+      ],
+      "pixelsPerUnit": 128,
+      "source": "terremoto:loop",
+      "sha256": "54adbd50d7866d995b62d03be79f66893658cefc8411f28f86b43f86084ee5ad",
+      "repeatPulse": true
+    },
+    {
+      "resource": "Sprites/Efeitos/terremoto/fim",
+      "file": "unity/Sprites/Efeitos/terremoto/fim.png",
+      "frameSize": 112,
+      "frames": 11,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        54,
+        34
+      ],
+      "unityPivot": [
+        0.48214285714285715,
+        0.6964285714285714
+      ],
+      "pixelsPerUnit": 128,
+      "source": "terremoto:fim",
+      "sha256": "b38b284439e9f99236982b1308d27f48aef52c209a90ab694200c7fad14fc889",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/festival-de-fogos/inicio",
+      "file": "unity/Sprites/Efeitos/festival-de-fogos/inicio.png",
+      "frameSize": 104,
+      "frames": 15,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        48,
+        47
+      ],
+      "unityPivot": [
+        0.46153846153846156,
+        0.5480769230769231
+      ],
+      "pixelsPerUnit": 128,
+      "source": "festival-de-fogos:inicio",
+      "sha256": "ccc8aa837bddfc108932b8ae2da0c1f46542e0e1f146e83ed1a2f1579354b6a8",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/festival-de-fogos/loop",
+      "file": "unity/Sprites/Efeitos/festival-de-fogos/loop.png",
+      "frameSize": 104,
+      "frames": 16,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        48,
+        47
+      ],
+      "unityPivot": [
+        0.46153846153846156,
+        0.5480769230769231
+      ],
+      "pixelsPerUnit": 128,
+      "source": "festival-de-fogos:loop",
+      "sha256": "acd114d9c1d1c1a17cd421bad4b3ab0b3530b65b3f71db759de73fc039f44de4",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/festival-de-fogos/fim",
+      "file": "unity/Sprites/Efeitos/festival-de-fogos/fim.png",
+      "frameSize": 104,
+      "frames": 15,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 11,
+      "impactFrame0": 11,
+      "anchorPixelsTopLeft": [
+        48,
+        47
+      ],
+      "unityPivot": [
+        0.46153846153846156,
+        0.5480769230769231
+      ],
+      "pixelsPerUnit": 128,
+      "source": "festival-de-fogos:fim",
+      "sha256": "8dc25a43d727bf8f634bb45b4bc1063aa141d4ee726d615c1c68e70c27b5afda",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/nevoeiro/inicio",
+      "file": "unity/Sprites/Efeitos/nevoeiro/inicio.png",
+      "frameSize": 208,
+      "frames": 15,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 8,
+      "impactFrame0": 8,
+      "anchorPixelsTopLeft": [
+        103,
+        40
+      ],
+      "unityPivot": [
+        0.4951923076923077,
+        0.8076923076923077
+      ],
+      "pixelsPerUnit": 128,
+      "source": "nevoeiro:inicio",
+      "sha256": "ce16c19b9bb0e44cff4f599409e9894fcf43014fc269dcd4bf1bb1a3de3d2786",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/nevoeiro/loop",
+      "file": "unity/Sprites/Efeitos/nevoeiro/loop.png",
+      "frameSize": 208,
+      "frames": 16,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        103,
+        40
+      ],
+      "unityPivot": [
+        0.4951923076923077,
+        0.8076923076923077
+      ],
+      "pixelsPerUnit": 128,
+      "source": "nevoeiro:loop",
+      "sha256": "fb91d748ee60feac3d9239b5d974edea96926a6b98bfca4afb45244e1bd23713",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/nevoeiro/fim",
+      "file": "unity/Sprites/Efeitos/nevoeiro/fim.png",
+      "frameSize": 208,
+      "frames": 15,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 8,
+      "impactFrame0": 8,
+      "anchorPixelsTopLeft": [
+        103,
+        40
+      ],
+      "unityPivot": [
+        0.4951923076923077,
+        0.8076923076923077
+      ],
+      "pixelsPerUnit": 128,
+      "source": "nevoeiro:fim",
+      "sha256": "08ae1f6b534a3a370c9753977ef94e75caf36d3a5948dd02ef3978b3dbaaf07e",
+      "repeatPulse": false
+    },
+    {
+      "resource": "Sprites/Efeitos/festival-de-fogos/explosao",
+      "file": "unity/Sprites/Efeitos/festival-de-fogos/explosao.png",
+      "frameSize": 144,
+      "frames": 10,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        52,
+        66
+      ],
+      "unityPivot": [
+        0.3611111111111111,
+        0.5416666666666667
+      ],
+      "pixelsPerUnit": 128,
+      "source": "festival-de-fogos:explosao, sem os primeiros cinco quadros",
+      "sha256": "beae428ac09aa7e9110dd623376ce612919b4cd1efe615d9bf7bb9573b695fdf"
+    },
+    {
+      "resource": "Biblioteca/natureza/casca",
+      "file": "unity/Biblioteca/natureza/casca.png",
+      "frameSize": 72,
+      "frames": 14,
+      "fps": 10,
+      "loop": false,
+      "peakFrame0": 9,
+      "impactFrame0": 9,
+      "anchorPixelsTopLeft": [
+        33,
+        33
+      ],
+      "unityPivot": [
+        0.4583333333333333,
+        0.5416666666666667
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-natureza:casca",
+      "sha256": "9ad651aeb4d8082ac853cfed30f5a4f16f78e6dee6f5dbe0642f0a46785c68e9"
+    },
+    {
+      "resource": "Biblioteca/natureza/raizes",
+      "file": "unity/Biblioteca/natureza/raizes.png",
+      "frameSize": 72,
+      "frames": 14,
+      "fps": 10,
+      "loop": false,
+      "peakFrame0": 9,
+      "impactFrame0": 9,
+      "anchorPixelsTopLeft": [
+        33,
+        39
+      ],
+      "unityPivot": [
+        0.4583333333333333,
+        0.45833333333333337
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-natureza:raizes",
+      "sha256": "53fadb036a3353d10e42756223032e65e7b1fefb6bffbfde8f53455dc2525157"
+    },
+    {
+      "resource": "Biblioteca/natureza/ferrao",
+      "file": "unity/Biblioteca/natureza/ferrao.png",
+      "frameSize": 40,
+      "frames": 14,
+      "fps": 10,
+      "loop": false,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        10,
+        10
+      ],
+      "unityPivot": [
+        0.25,
+        0.75
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-natureza:ferrao",
+      "sha256": "5ef4886284f8dc715ff9f3e42e38f448705384c205eb6ba95e492dc1fb7d742a"
+    },
+    {
+      "resource": "Biblioteca/natureza/agulha",
+      "file": "unity/Biblioteca/natureza/agulha.png",
+      "frameSize": 64,
+      "frames": 14,
+      "fps": 10,
+      "loop": false,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        15,
+        11
+      ],
+      "unityPivot": [
+        0.234375,
+        0.828125
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-natureza:agulha",
+      "sha256": "7879e100cc4bdb0c9663a4f490f6b950ee0ca224124802fa03a4c411fa2cf4f4"
+    },
+    {
+      "resource": "Biblioteca/natureza/corrente",
+      "file": "unity/Biblioteca/natureza/corrente.png",
+      "frameSize": 56,
+      "frames": 14,
+      "fps": 10,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        22,
+        26
+      ],
+      "unityPivot": [
+        0.39285714285714285,
+        0.5357142857142857
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-natureza:corrente",
+      "sha256": "b07321ae02f8db31e25f3f6f7479de99369a919544f31ba4bf8104e6247124de"
+    },
+    {
+      "resource": "Biblioteca/natureza/grito",
+      "file": "unity/Biblioteca/natureza/grito.png",
+      "frameSize": 136,
+      "frames": 14,
+      "fps": 10,
+      "loop": false,
+      "peakFrame0": 8,
+      "impactFrame0": 8,
+      "anchorPixelsTopLeft": [
+        68,
+        31
+      ],
+      "unityPivot": [
+        0.5,
+        0.7720588235294118
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-natureza:grito",
+      "sha256": "b7387d1ebd0f96a0a65b8c517c3b78fb94076b7f809a4e9d8d6f534c8abe5242"
+    },
+    {
+      "resource": "Biblioteca/golpes/pisao",
+      "file": "unity/Biblioteca/golpes/pisao.png",
+      "frameSize": 144,
+      "frames": 11,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        69,
+        32
+      ],
+      "unityPivot": [
+        0.4791666666666667,
+        0.7777777777777778
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:pisao",
+      "sha256": "ed8a34d1b6da2771eff200376e05b0cfb652e2c6ee9c9cc11388ec83a76219b3"
+    },
+    {
+      "resource": "Biblioteca/golpes/pancada",
+      "file": "unity/Biblioteca/golpes/pancada.png",
+      "frameSize": 104,
+      "frames": 11,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        52,
+        36
+      ],
+      "unityPivot": [
+        0.5,
+        0.6538461538461539
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:pancada",
+      "sha256": "b7b01cd20f41b77146cd9d2ae1fc5bf5f462fe65b2ddbcc97865dd8eb6ecaad0"
+    },
+    {
+      "resource": "Biblioteca/golpes/gancho",
+      "file": "unity/Biblioteca/golpes/gancho.png",
+      "frameSize": 64,
+      "frames": 9,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 4,
+      "impactFrame0": 4,
+      "anchorPixelsTopLeft": [
+        9,
+        28
+      ],
+      "unityPivot": [
+        0.140625,
+        0.5625
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:gancho",
+      "sha256": "61370c61a5414bae72dcb528aea6b9ae836cbebd6649f630478a1660f036f340"
+    },
+    {
+      "resource": "Biblioteca/golpes/coroada",
+      "file": "unity/Biblioteca/golpes/coroada.png",
+      "frameSize": 72,
+      "frames": 11,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        29,
+        28
+      ],
+      "unityPivot": [
+        0.4027777777777778,
+        0.6111111111111112
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:coroada",
+      "sha256": "351ca9a015006938c336f786ace3c32de1a7890edcaa04cc745aee0114c042e4"
+    },
+    {
+      "resource": "Biblioteca/golpes/pauzinho",
+      "file": "unity/Biblioteca/golpes/pauzinho.png",
+      "frameSize": 48,
+      "frames": 9,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        20,
+        20
+      ],
+      "unityPivot": [
+        0.4166666666666667,
+        0.5833333333333333
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:pauzinho",
+      "sha256": "68d86c5e68b309b1fe4a9ce1df1717544487fdcce67e01c73324cc1867b7d6e5"
+    },
+    {
+      "resource": "Biblioteca/golpes/errante",
+      "file": "unity/Biblioteca/golpes/errante.png",
+      "frameSize": 120,
+      "frames": 11,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        59,
+        39
+      ],
+      "unityPivot": [
+        0.49166666666666664,
+        0.675
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:errante",
+      "sha256": "ec69fcd8b866b3c7b89bfdc4c5e624730a85e2ce75b5d40642a7ae58db04289b"
+    },
+    {
+      "resource": "Biblioteca/golpes/rugido",
+      "file": "unity/Biblioteca/golpes/rugido.png",
+      "frameSize": 176,
+      "frames": 11,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        85,
+        38
+      ],
+      "unityPivot": [
+        0.48295454545454547,
+        0.7840909090909091
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:rugido",
+      "sha256": "ec1252c2192045d82a9441e8a8f28094a450080afb86deaa9efd5bff8d117a71"
+    },
+    {
+      "resource": "Biblioteca/golpes/clava",
+      "file": "unity/Biblioteca/golpes/clava.png",
+      "frameSize": 80,
+      "frames": 9,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        33,
+        23
+      ],
+      "unityPivot": [
+        0.4125,
+        0.7125
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:clava",
+      "sha256": "5204a2ba5909c94eeef2896d52529be20c4c70bbf4738fd3a341feadc0822b28"
+    },
+    {
+      "resource": "Biblioteca/golpes/pedra",
+      "file": "unity/Biblioteca/golpes/pedra.png",
+      "frameSize": 80,
+      "frames": 9,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        35,
+        22
+      ],
+      "unityPivot": [
+        0.4375,
+        0.725
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:pedra",
+      "sha256": "622999b76bbf9b7b0c044712a5c1b725ba14dc99e3d8f03f2b055ad4230ca33d"
+    },
+    {
+      "resource": "Biblioteca/estados/escondido",
+      "file": "unity/Biblioteca/estados/escondido.png",
+      "frameSize": 72,
+      "frames": 24,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 22,
+      "impactFrame0": 22,
+      "anchorPixelsTopLeft": [
+        23,
+        50
+      ],
+      "unityPivot": [
+        0.3194444444444444,
+        0.3055555555555556
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-estados:escondido",
+      "sha256": "64bb81f4124dbfafa2e09d33bd1045b822445f4ed9da13e03aabec9e4c8d7610"
+    },
+    {
+      "resource": "Biblioteca/estados/preso",
+      "file": "unity/Biblioteca/estados/preso.png",
+      "frameSize": 64,
+      "frames": 24,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        29,
+        18
+      ],
+      "unityPivot": [
+        0.453125,
+        0.71875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-estados:preso",
+      "sha256": "c0994ba6eab94343865cc91bf30455d3073e6c3d2cdb7f0dc5a125e69c5b940d"
+    },
+    {
+      "resource": "Biblioteca/estados/sem_pm",
+      "file": "unity/Biblioteca/estados/sem_pm.png",
+      "frameSize": 56,
+      "frames": 24,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 15,
+      "impactFrame0": 15,
+      "anchorPixelsTopLeft": [
+        26,
+        31
+      ],
+      "unityPivot": [
+        0.4642857142857143,
+        0.4464285714285714
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-estados:sem_pm",
+      "sha256": "83e63d63ed606a83d628149248f0c2e80a811f90611c1d0dfcd3c23cf84f1496"
+    },
+    {
+      "resource": "Biblioteca/estados/armadura",
+      "file": "unity/Biblioteca/estados/armadura.png",
+      "frameSize": 64,
+      "frames": 24,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        28,
+        28
+      ],
+      "unityPivot": [
+        0.4375,
+        0.5625
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-estados:armadura",
+      "sha256": "be0f00c861d393521618d32a6dc72573aa319235eb0dff7b2d82a56f31276532"
+    },
+    {
+      "resource": "Biblioteca/estados/desejo",
+      "file": "unity/Biblioteca/estados/desejo.png",
+      "frameSize": 72,
+      "frames": 24,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 15,
+      "impactFrame0": 15,
+      "anchorPixelsTopLeft": [
+        33,
+        17
+      ],
+      "unityPivot": [
+        0.4583333333333333,
+        0.7638888888888888
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-estados:desejo",
+      "sha256": "7666bdd1720c9a1b5ebdba3f9ee41ee654d62e9ea59bdf4690e4744732a95e9f"
+    },
+    {
+      "resource": "Biblioteca/estados/buff",
+      "file": "unity/Biblioteca/estados/buff.png",
+      "frameSize": 72,
+      "frames": 24,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 21,
+      "impactFrame0": 21,
+      "anchorPixelsTopLeft": [
+        28,
+        47
+      ],
+      "unityPivot": [
+        0.3888888888888889,
+        0.3472222222222222
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-estados:buff",
+      "sha256": "a896b34bfff77563fb6ffb303bf34a55bda29bef9d6be7eaebf07107571b8983"
+    },
+    {
+      "resource": "Biblioteca/desejos/reviver",
+      "file": "unity/Biblioteca/desejos/reviver.png",
+      "frameSize": 144,
+      "frames": 20,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 9,
+      "impactFrame0": 9,
+      "anchorPixelsTopLeft": [
+        44,
+        121
+      ],
+      "unityPivot": [
+        0.3055555555555556,
+        0.1597222222222222
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-desejos:reviver",
+      "sha256": "6d7f691c3eb5eb9f1b9d745e27044ecc63af959a8e196ef7521a09b335120761"
+    },
+    {
+      "resource": "Biblioteca/desejos/cura",
+      "file": "unity/Biblioteca/desejos/cura.png",
+      "frameSize": 80,
+      "frames": 21,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        25,
+        50
+      ],
+      "unityPivot": [
+        0.3125,
+        0.375
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-desejos:cura",
+      "sha256": "7d99a46dcfb4b0b4e95cc6ae522eede36c5dbd507e505d083ff0ea11d7c63c47"
+    },
+    {
+      "resource": "Biblioteca/desejos/pa",
+      "file": "unity/Biblioteca/desejos/pa.png",
+      "frameSize": 112,
+      "frames": 20,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        34,
+        91
+      ],
+      "unityPivot": [
+        0.30357142857142855,
+        0.1875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-desejos:pa",
+      "sha256": "8cd1a3fa019f96d1af11f98d687dbe17362ef7fa3e84581d2234de1c6754f540"
+    },
+    {
+      "resource": "Biblioteca/desejos/copiar",
+      "file": "unity/Biblioteca/desejos/copiar.png",
+      "frameSize": 72,
+      "frames": 24,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 15,
+      "impactFrame0": 15,
+      "anchorPixelsTopLeft": [
+        35,
+        18
+      ],
+      "unityPivot": [
+        0.4861111111111111,
+        0.75
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-desejos:copiar",
+      "sha256": "8e7bad1484a9f3167f696a2629cc8f6150a83b236977e68ebca38028b2883a0d"
+    },
+    {
+      "resource": "Biblioteca/desejos/itens",
+      "file": "unity/Biblioteca/desejos/itens.png",
+      "frameSize": 104,
+      "frames": 22,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        43,
+        41
+      ],
+      "unityPivot": [
+        0.41346153846153844,
+        0.6057692307692308
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-desejos:itens",
+      "sha256": "6ddb5e900ec0605ad2b1915f25ad7f908391940d7cdd4d65d25a3709be8527ba"
+    },
+    {
+      "resource": "Biblioteca/desejos/apagar",
+      "file": "unity/Biblioteca/desejos/apagar.png",
+      "frameSize": 152,
+      "frames": 24,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 8,
+      "impactFrame0": 8,
+      "anchorPixelsTopLeft": [
+        52,
+        72
+      ],
+      "unityPivot": [
+        0.34210526315789475,
+        0.5263157894736843
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-desejos:apagar",
+      "sha256": "55ba282d577c87d0336d0237469e9e42a654cc6537674c6035751edf00ea4160"
+    },
+    {
+      "resource": "Biblioteca/desejos/devorar",
+      "file": "unity/Biblioteca/desejos/devorar.png",
+      "frameSize": 88,
+      "frames": 24,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 10,
+      "impactFrame0": 10,
+      "anchorPixelsTopLeft": [
+        42,
+        41
+      ],
+      "unityPivot": [
+        0.4772727272727273,
+        0.5340909090909092
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-desejos:devorar",
+      "sha256": "7483872cd8b7b4488a93a46924073d9fa0c688ffd3bdbd58ebb020f913eb2b46"
+    },
+    {
+      "resource": "Biblioteca/magias/fogo",
+      "file": "unity/Biblioteca/magias/fogo.png",
+      "frameSize": 104,
+      "frames": 15,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        50,
+        50
+      ],
+      "unityPivot": [
+        0.4807692307692308,
+        0.5192307692307692
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:fogo",
+      "sha256": "d963b544420f69945459e399cb2792a0d9cadad4501380e29aed561edfbb4691"
+    },
+    {
+      "resource": "Biblioteca/magias/gelo",
+      "file": "unity/Biblioteca/magias/gelo.png",
+      "frameSize": 72,
+      "frames": 16,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        38,
+        51
+      ],
+      "unityPivot": [
+        0.5277777777777778,
+        0.29166666666666663
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:gelo",
+      "sha256": "fcd82216a927da09f7d428ba7e029362db5dcc08037a240f3afcb0a4baf090cb"
+    },
+    {
+      "resource": "Biblioteca/magias/prisao",
+      "file": "unity/Biblioteca/magias/prisao.png",
+      "frameSize": 88,
+      "frames": 16,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        29,
+        67
+      ],
+      "unityPivot": [
+        0.32954545454545453,
+        0.23863636363636365
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:prisao",
+      "sha256": "bb939b3c037b49ee668d5dfaaaf7774566e50136170cd6fb2d9ee10c7553f359"
+    },
+    {
+      "resource": "Biblioteca/magias/noite",
+      "file": "unity/Biblioteca/magias/noite.png",
+      "frameSize": 96,
+      "frames": 16,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        38,
+        72
+      ],
+      "unityPivot": [
+        0.3958333333333333,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:noite",
+      "sha256": "f85775eaa06bb6d309527974533be635bdb00439409c8955036a7cb985d1f73e"
+    },
+    {
+      "resource": "Biblioteca/magias/laranja",
+      "file": "unity/Biblioteca/magias/laranja.png",
+      "frameSize": 64,
+      "frames": 16,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 9,
+      "impactFrame0": 9,
+      "anchorPixelsTopLeft": [
+        41,
+        15
+      ],
+      "unityPivot": [
+        0.640625,
+        0.765625
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:laranja",
+      "sha256": "d85f7f6ab4bbd0abb38e14a38c35199bae75a61eeb5a40d04fb123555753334c"
+    },
+    {
+      "resource": "Biblioteca/magias/branca",
+      "file": "unity/Biblioteca/magias/branca.png",
+      "frameSize": 56,
+      "frames": 16,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        37,
+        16
+      ],
+      "unityPivot": [
+        0.6607142857142857,
+        0.7142857142857143
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:branca",
+      "sha256": "86bb08f3419e01463f1641c2ebd57407c0eeda28c9c9d342bed1126ead694592"
+    },
+    {
+      "resource": "Biblioteca/magias/malhada",
+      "file": "unity/Biblioteca/magias/malhada.png",
+      "frameSize": 64,
+      "frames": 16,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        44,
+        16
+      ],
+      "unityPivot": [
+        0.6875,
+        0.75
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:malhada",
+      "sha256": "9e34cbf1dcc4413b879836cb151a954f79c69ae99c0d1243f7bdbb989c97cc1d"
+    },
+    {
+      "resource": "Biblioteca/magias/manchada",
+      "file": "unity/Biblioteca/magias/manchada.png",
+      "frameSize": 64,
+      "frames": 16,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 1,
+      "impactFrame0": 1,
+      "anchorPixelsTopLeft": [
+        42,
+        15
+      ],
+      "unityPivot": [
+        0.65625,
+        0.765625
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:manchada",
+      "sha256": "d24f9ffb38c093de6188ae1848b7bf700d8c276b8dfdcf913911e28b2095b3d0"
+    },
+    {
+      "resource": "Biblioteca/magias/oleo",
+      "file": "unity/Biblioteca/magias/oleo.png",
+      "frameSize": 56,
+      "frames": 15,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 8,
+      "impactFrame0": 8,
+      "anchorPixelsTopLeft": [
+        27,
+        25
+      ],
+      "unityPivot": [
+        0.48214285714285715,
+        0.5535714285714286
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:oleo",
+      "sha256": "250ed432fcb92c3bcd8dedab5e60cbd69eec360f6337de827171dc81c5496db6"
+    },
+    {
+      "resource": "Biblioteca/magias/canhao",
+      "file": "unity/Biblioteca/magias/canhao.png",
+      "frameSize": 56,
+      "frames": 12,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        8,
+        17
+      ],
+      "unityPivot": [
+        0.14285714285714285,
+        0.6964285714285714
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:canhao",
+      "sha256": "e13955201d0d8d46c55906ba9bf21005ff972685bdc1e2542fecdf6c9f49d11e"
+    },
+    {
+      "resource": "Biblioteca/loja/martelo",
+      "file": "unity/Biblioteca/loja/martelo.png",
+      "frameSize": 96,
+      "frames": 16,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        40,
+        34
+      ],
+      "unityPivot": [
+        0.4166666666666667,
+        0.6458333333333333
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-loja:martelo",
+      "sha256": "b111753698f7167b5652a4ea4e04143ab009129b6df2cdd8083b0facae64891e"
+    },
+    {
+      "resource": "Biblioteca/loja/corrente",
+      "file": "unity/Biblioteca/loja/corrente.png",
+      "frameSize": 56,
+      "frames": 16,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        14,
+        12
+      ],
+      "unityPivot": [
+        0.25,
+        0.7857142857142857
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-loja:corrente",
+      "sha256": "8f6df83307741011016b16afb6cd95f93ea33b0ce024bd3969afe34a33c01c62"
+    },
+    {
+      "resource": "Biblioteca/loja/fumaca",
+      "file": "unity/Biblioteca/loja/fumaca.png",
+      "frameSize": 72,
+      "frames": 15,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 8,
+      "impactFrame0": 8,
+      "anchorPixelsTopLeft": [
+        37,
+        34
+      ],
+      "unityPivot": [
+        0.5138888888888888,
+        0.5277777777777778
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-loja:fumaca",
+      "sha256": "4789b27fb756d2cab58aafdbe2ed806a7bac9b0a6b37c59c2a45f7fb1014b56e"
+    },
+    {
+      "resource": "Biblioteca/loja/fenix",
+      "file": "unity/Biblioteca/loja/fenix.png",
+      "frameSize": 120,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        38,
+        100
+      ],
+      "unityPivot": [
+        0.31666666666666665,
+        0.16666666666666663
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-loja:fenix",
+      "sha256": "9a19a3ad0608f64c44b55858b6faa947e8e390d391b223ea343b0a70727dc8e7"
+    },
+    {
+      "resource": "Biblioteca/loja/totem",
+      "file": "unity/Biblioteca/loja/totem.png",
+      "frameSize": 88,
+      "frames": 16,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 9,
+      "impactFrame0": 9,
+      "anchorPixelsTopLeft": [
+        34,
+        64
+      ],
+      "unityPivot": [
+        0.38636363636363635,
+        0.2727272727272727
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-loja:totem",
+      "sha256": "9a28245f88652ff99c3853b99efe0ceaec8d4cc280abb11e626ff93f0f957708"
+    },
+    {
+      "resource": "Biblioteca/loja/mina",
+      "file": "unity/Biblioteca/loja/mina.png",
+      "frameSize": 64,
+      "frames": 16,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        31,
+        40
+      ],
+      "unityPivot": [
+        0.484375,
+        0.375
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-loja:mina",
+      "sha256": "819f6cf79b33406597bcd46c30d2579d300de0fdbd878eb23ceff418fb8ab090"
+    },
+    {
+      "resource": "Biblioteca/loja/foco",
+      "file": "unity/Biblioteca/loja/foco.png",
+      "frameSize": 48,
+      "frames": 16,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 12,
+      "impactFrame0": 12,
+      "anchorPixelsTopLeft": [
+        13,
+        22
+      ],
+      "unityPivot": [
+        0.2708333333333333,
+        0.5416666666666667
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-loja:foco",
+      "sha256": "ebb6868c6e4cad8d10c85b8ab7a90f7e7fec1ae1b030fb8cfa02526dbd5d9928"
+    },
+    {
+      "resource": "Biblioteca/loja/espinhos",
+      "file": "unity/Biblioteca/loja/espinhos.png",
+      "frameSize": 56,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        20,
+        27
+      ],
+      "unityPivot": [
+        0.35714285714285715,
+        0.5178571428571428
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-loja:espinhos",
+      "sha256": "8184b03a636a32ee169ff840e7c239525e422bfbbbb521515414d066afca8edd"
+    },
+    {
+      "resource": "Biblioteca/loja/ancora",
+      "file": "unity/Biblioteca/loja/ancora.png",
+      "frameSize": 64,
+      "frames": 16,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        32,
+        20
+      ],
+      "unityPivot": [
+        0.5,
+        0.6875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-loja:ancora",
+      "sha256": "bfed0de0e1b722a037ebad0c41285f2cf9b4636fbf2f56542cad5e2b3fde5897"
+    },
+    {
+      "resource": "Biblioteca/loja/bencao",
+      "file": "unity/Biblioteca/loja/bencao.png",
+      "frameSize": 64,
+      "frames": 16,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 9,
+      "impactFrame0": 9,
+      "anchorPixelsTopLeft": [
+        31,
+        31
+      ],
+      "unityPivot": [
+        0.484375,
+        0.515625
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-loja:bencao",
+      "sha256": "aaf583b51f0c1153c3495d4bfe703aadefe31d482df6b97dbcc881c49b62f93f"
+    },
+    {
+      "resource": "Biblioteca/conjuracao/cura",
+      "file": "unity/Biblioteca/conjuracao/cura.png",
+      "frameSize": 56,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        18,
+        35
+      ],
+      "unityPivot": [
+        0.32142857142857145,
+        0.375
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:cura",
+      "sha256": "f4f0903e28f7acce4d61b901e50274e63c6c1a7ebfc7eca179a55fec07adb5dc"
+    },
+    {
+      "resource": "Biblioteca/conjuracao/fisico",
+      "file": "unity/Biblioteca/conjuracao/fisico.png",
+      "frameSize": 48,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        24,
+        15
+      ],
+      "unityPivot": [
+        0.5,
+        0.6875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:fisico",
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a"
+    },
+    {
+      "resource": "Biblioteca/conjuracao/metal",
+      "file": "unity/Biblioteca/conjuracao/metal.png",
+      "frameSize": 48,
+      "frames": 14,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 4,
+      "impactFrame0": 4,
+      "anchorPixelsTopLeft": [
+        13,
+        23
+      ],
+      "unityPivot": [
+        0.2708333333333333,
+        0.5208333333333333
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:metal",
+      "sha256": "553e3a14744412ce2b5a98fc826499507c1b280dd9d1752cb45df01d4502cddc"
+    },
+    {
+      "resource": "Biblioteca/conjuracao/magia",
+      "file": "unity/Biblioteca/conjuracao/magia.png",
+      "frameSize": 56,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        27,
+        27
+      ],
+      "unityPivot": [
+        0.48214285714285715,
+        0.5178571428571428
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:magia",
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c"
+    },
+    {
+      "resource": "Biblioteca/conjuracao/natureza",
+      "file": "unity/Biblioteca/conjuracao/natureza.png",
+      "frameSize": 56,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        26,
+        26
+      ],
+      "unityPivot": [
+        0.4642857142857143,
+        0.5357142857142857
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:natureza",
+      "sha256": "f78b518ad5a040624b390bb0b8ba3adf1aa1243297851c0e6e4b479741c7f265"
+    },
+    {
+      "resource": "Biblioteca/conjuracao/fogo",
+      "file": "unity/Biblioteca/conjuracao/fogo.png",
+      "frameSize": 64,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        28,
+        29
+      ],
+      "unityPivot": [
+        0.4375,
+        0.546875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:fogo",
+      "sha256": "1a4f4d96d748cfbf1ce6f8b16390e0e4af7b18432dbde2ec07f4e099420243c6"
+    },
+    {
+      "resource": "Biblioteca/projeteis/fogo",
+      "file": "unity/Biblioteca/projeteis/fogo.png",
+      "frameSize": 56,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 1,
+      "impactFrame0": 1,
+      "anchorPixelsTopLeft": [
+        38,
+        15
+      ],
+      "unityPivot": [
+        0.6785714285714286,
+        0.7321428571428572
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-projeteis:fogo",
+      "sha256": "64d290107d4298e94abe001818cda2879d736b8fcc6749a9db8d894d96780399"
+    },
+    {
+      "resource": "Biblioteca/projeteis/laranja",
+      "file": "unity/Biblioteca/projeteis/laranja.png",
+      "frameSize": 48,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 1,
+      "impactFrame0": 1,
+      "anchorPixelsTopLeft": [
+        27,
+        13
+      ],
+      "unityPivot": [
+        0.5625,
+        0.7291666666666667
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-projeteis:laranja",
+      "sha256": "979624b858cc837b552a06c41fca1bfde8536d6a487d42d9f446629d589f959e"
+    },
+    {
+      "resource": "Biblioteca/projeteis/branca",
+      "file": "unity/Biblioteca/projeteis/branca.png",
+      "frameSize": 56,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 1,
+      "impactFrame0": 1,
+      "anchorPixelsTopLeft": [
+        35,
+        13
+      ],
+      "unityPivot": [
+        0.625,
+        0.7678571428571428
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-projeteis:branca",
+      "sha256": "2af1c2af075dee14292435b5ec473ae94e3963b9948a9c8a8be0b7a7e5616cfd"
+    },
+    {
+      "resource": "Biblioteca/projeteis/malhada",
+      "file": "unity/Biblioteca/projeteis/malhada.png",
+      "frameSize": 48,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 1,
+      "impactFrame0": 1,
+      "anchorPixelsTopLeft": [
+        34,
+        13
+      ],
+      "unityPivot": [
+        0.7083333333333334,
+        0.7291666666666667
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-projeteis:malhada",
+      "sha256": "f40731a12442dbca33cc033c5e4a1f94d9350079f998facc4ede09d4693b9c8b"
+    },
+    {
+      "resource": "Biblioteca/projeteis/manchada",
+      "file": "unity/Biblioteca/projeteis/manchada.png",
+      "frameSize": 48,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 1,
+      "impactFrame0": 1,
+      "anchorPixelsTopLeft": [
+        30,
+        13
+      ],
+      "unityPivot": [
+        0.625,
+        0.7291666666666667
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-projeteis:manchada",
+      "sha256": "87aeac63ba6dd84af3fa98ce60688c3b44c41c40442206a8992e061f54b5dee7"
+    },
+    {
+      "resource": "Biblioteca/projeteis/canhao",
+      "file": "unity/Biblioteca/projeteis/canhao.png",
+      "frameSize": 48,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 1,
+      "impactFrame0": 1,
+      "anchorPixelsTopLeft": [
+        34,
+        12
+      ],
+      "unityPivot": [
+        0.7083333333333334,
+        0.75
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-projeteis:canhao",
+      "sha256": "29beacdee094862ea7fd0c96ac99b5440378ecb62019bf65ed1fb240b8afab55"
+    },
+    {
+      "resource": "Sprites/Efeitos/pisao/impacto",
+      "file": "unity/Sprites/Efeitos/pisao/impacto.png",
+      "frameSize": 144,
+      "frames": 11,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        69,
+        32
+      ],
+      "unityPivot": [
+        0.4791666666666667,
+        0.7777777777777778
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:pisao",
+      "sha256": "ed8a34d1b6da2771eff200376e05b0cfb652e2c6ee9c9cc11388ec83a76219b3"
+    },
+    {
+      "resource": "Sprites/Efeitos/pisao/conjuracao",
+      "file": "unity/Sprites/Efeitos/pisao/conjuracao.png",
+      "frameSize": 48,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        24,
+        15
+      ],
+      "unityPivot": [
+        0.5,
+        0.6875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:fisico",
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/pancada-colossal/impacto",
+      "file": "unity/Sprites/Efeitos/pancada-colossal/impacto.png",
+      "frameSize": 104,
+      "frames": 11,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        52,
+        36
+      ],
+      "unityPivot": [
+        0.5,
+        0.6538461538461539
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:pancada",
+      "sha256": "b7b01cd20f41b77146cd9d2ae1fc5bf5f462fe65b2ddbcc97865dd8eb6ecaad0"
+    },
+    {
+      "resource": "Sprites/Efeitos/pancada-colossal/conjuracao",
+      "file": "unity/Sprites/Efeitos/pancada-colossal/conjuracao.png",
+      "frameSize": 48,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        24,
+        15
+      ],
+      "unityPivot": [
+        0.5,
+        0.6875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:fisico",
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/gancho/impacto",
+      "file": "unity/Sprites/Efeitos/gancho/impacto.png",
+      "frameSize": 64,
+      "frames": 9,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 4,
+      "impactFrame0": 4,
+      "anchorPixelsTopLeft": [
+        9,
+        28
+      ],
+      "unityPivot": [
+        0.140625,
+        0.5625
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:gancho",
+      "sha256": "61370c61a5414bae72dcb528aea6b9ae836cbebd6649f630478a1660f036f340"
+    },
+    {
+      "resource": "Sprites/Efeitos/gancho/conjuracao",
+      "file": "unity/Sprites/Efeitos/gancho/conjuracao.png",
+      "frameSize": 48,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        24,
+        15
+      ],
+      "unityPivot": [
+        0.5,
+        0.6875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:fisico",
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/coroada/impacto",
+      "file": "unity/Sprites/Efeitos/coroada/impacto.png",
+      "frameSize": 72,
+      "frames": 11,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        29,
+        28
+      ],
+      "unityPivot": [
+        0.4027777777777778,
+        0.6111111111111112
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:coroada",
+      "sha256": "351ca9a015006938c336f786ace3c32de1a7890edcaa04cc745aee0114c042e4"
+    },
+    {
+      "resource": "Sprites/Efeitos/coroada/conjuracao",
+      "file": "unity/Sprites/Efeitos/coroada/conjuracao.png",
+      "frameSize": 48,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        24,
+        15
+      ],
+      "unityPivot": [
+        0.5,
+        0.6875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:fisico",
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/pauzinho/impacto",
+      "file": "unity/Sprites/Efeitos/pauzinho/impacto.png",
+      "frameSize": 48,
+      "frames": 9,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        20,
+        20
+      ],
+      "unityPivot": [
+        0.4166666666666667,
+        0.5833333333333333
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:pauzinho",
+      "sha256": "68d86c5e68b309b1fe4a9ce1df1717544487fdcce67e01c73324cc1867b7d6e5"
+    },
+    {
+      "resource": "Sprites/Efeitos/pauzinho/conjuracao",
+      "file": "unity/Sprites/Efeitos/pauzinho/conjuracao.png",
+      "frameSize": 48,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        24,
+        15
+      ],
+      "unityPivot": [
+        0.5,
+        0.6875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:fisico",
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/ferrao/impacto",
+      "file": "unity/Sprites/Efeitos/ferrao/impacto.png",
+      "frameSize": 40,
+      "frames": 14,
+      "fps": 10,
+      "loop": false,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        10,
+        10
+      ],
+      "unityPivot": [
+        0.25,
+        0.75
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-natureza:ferrao",
+      "sha256": "5ef4886284f8dc715ff9f3e42e38f448705384c205eb6ba95e492dc1fb7d742a"
+    },
+    {
+      "resource": "Sprites/Efeitos/ferrao/conjuracao",
+      "file": "unity/Sprites/Efeitos/ferrao/conjuracao.png",
+      "frameSize": 56,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        26,
+        26
+      ],
+      "unityPivot": [
+        0.4642857142857143,
+        0.5357142857142857
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:natureza",
+      "sha256": "f78b518ad5a040624b390bb0b8ba3adf1aa1243297851c0e6e4b479741c7f265",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/agulha/impacto",
+      "file": "unity/Sprites/Efeitos/agulha/impacto.png",
+      "frameSize": 64,
+      "frames": 14,
+      "fps": 10,
+      "loop": false,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        15,
+        11
+      ],
+      "unityPivot": [
+        0.234375,
+        0.828125
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-natureza:agulha",
+      "sha256": "7879e100cc4bdb0c9663a4f490f6b950ee0ca224124802fa03a4c411fa2cf4f4"
+    },
+    {
+      "resource": "Sprites/Efeitos/agulha/conjuracao",
+      "file": "unity/Sprites/Efeitos/agulha/conjuracao.png",
+      "frameSize": 56,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        26,
+        26
+      ],
+      "unityPivot": [
+        0.4642857142857143,
+        0.5357142857142857
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:natureza",
+      "sha256": "f78b518ad5a040624b390bb0b8ba3adf1aa1243297851c0e6e4b479741c7f265",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/casca/impacto",
+      "file": "unity/Sprites/Efeitos/casca/impacto.png",
+      "frameSize": 72,
+      "frames": 14,
+      "fps": 10,
+      "loop": false,
+      "peakFrame0": 9,
+      "impactFrame0": 9,
+      "anchorPixelsTopLeft": [
+        33,
+        33
+      ],
+      "unityPivot": [
+        0.4583333333333333,
+        0.5416666666666667
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-natureza:casca",
+      "sha256": "9ad651aeb4d8082ac853cfed30f5a4f16f78e6dee6f5dbe0642f0a46785c68e9"
+    },
+    {
+      "resource": "Sprites/Efeitos/casca/conjuracao",
+      "file": "unity/Sprites/Efeitos/casca/conjuracao.png",
+      "frameSize": 56,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        26,
+        26
+      ],
+      "unityPivot": [
+        0.4642857142857143,
+        0.5357142857142857
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:natureza",
+      "sha256": "f78b518ad5a040624b390bb0b8ba3adf1aa1243297851c0e6e4b479741c7f265",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/raizes/impacto",
+      "file": "unity/Sprites/Efeitos/raizes/impacto.png",
+      "frameSize": 72,
+      "frames": 14,
+      "fps": 10,
+      "loop": false,
+      "peakFrame0": 9,
+      "impactFrame0": 9,
+      "anchorPixelsTopLeft": [
+        33,
+        39
+      ],
+      "unityPivot": [
+        0.4583333333333333,
+        0.45833333333333337
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-natureza:raizes",
+      "sha256": "53fadb036a3353d10e42756223032e65e7b1fefb6bffbfde8f53455dc2525157"
+    },
+    {
+      "resource": "Sprites/Efeitos/raizes/conjuracao",
+      "file": "unity/Sprites/Efeitos/raizes/conjuracao.png",
+      "frameSize": 56,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        26,
+        26
+      ],
+      "unityPivot": [
+        0.4642857142857143,
+        0.5357142857142857
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:natureza",
+      "sha256": "f78b518ad5a040624b390bb0b8ba3adf1aa1243297851c0e6e4b479741c7f265",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/grito-de-comando/impacto",
+      "file": "unity/Sprites/Efeitos/grito-de-comando/impacto.png",
+      "frameSize": 136,
+      "frames": 14,
+      "fps": 10,
+      "loop": false,
+      "peakFrame0": 8,
+      "impactFrame0": 8,
+      "anchorPixelsTopLeft": [
+        68,
+        31
+      ],
+      "unityPivot": [
+        0.5,
+        0.7720588235294118
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-natureza:grito",
+      "sha256": "b7387d1ebd0f96a0a65b8c517c3b78fb94076b7f809a4e9d8d6f534c8abe5242"
+    },
+    {
+      "resource": "Sprites/Efeitos/grito-de-comando/conjuracao",
+      "file": "unity/Sprites/Efeitos/grito-de-comando/conjuracao.png",
+      "frameSize": 56,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        26,
+        26
+      ],
+      "unityPivot": [
+        0.4642857142857143,
+        0.5357142857142857
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:natureza",
+      "sha256": "f78b518ad5a040624b390bb0b8ba3adf1aa1243297851c0e6e4b479741c7f265",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/clava/impacto",
+      "file": "unity/Sprites/Efeitos/clava/impacto.png",
+      "frameSize": 80,
+      "frames": 9,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        33,
+        23
+      ],
+      "unityPivot": [
+        0.4125,
+        0.7125
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:clava",
+      "sha256": "5204a2ba5909c94eeef2896d52529be20c4c70bbf4738fd3a341feadc0822b28"
+    },
+    {
+      "resource": "Sprites/Efeitos/clava/conjuracao",
+      "file": "unity/Sprites/Efeitos/clava/conjuracao.png",
+      "frameSize": 48,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        24,
+        15
+      ],
+      "unityPivot": [
+        0.5,
+        0.6875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:fisico",
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/arremessar-pedra/impacto",
+      "file": "unity/Sprites/Efeitos/arremessar-pedra/impacto.png",
+      "frameSize": 80,
+      "frames": 9,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        35,
+        22
+      ],
+      "unityPivot": [
+        0.4375,
+        0.725
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:pedra",
+      "sha256": "622999b76bbf9b7b0c044712a5c1b725ba14dc99e3d8f03f2b055ad4230ca33d"
+    },
+    {
+      "resource": "Sprites/Efeitos/arremessar-pedra/conjuracao",
+      "file": "unity/Sprites/Efeitos/arremessar-pedra/conjuracao.png",
+      "frameSize": 48,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        24,
+        15
+      ],
+      "unityPivot": [
+        0.5,
+        0.6875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:fisico",
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/pancada-do-errante/impacto",
+      "file": "unity/Sprites/Efeitos/pancada-do-errante/impacto.png",
+      "frameSize": 120,
+      "frames": 11,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        59,
+        39
+      ],
+      "unityPivot": [
+        0.49166666666666664,
+        0.675
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:errante",
+      "sha256": "ec69fcd8b866b3c7b89bfdc4c5e624730a85e2ce75b5d40642a7ae58db04289b"
+    },
+    {
+      "resource": "Sprites/Efeitos/pancada-do-errante/conjuracao",
+      "file": "unity/Sprites/Efeitos/pancada-do-errante/conjuracao.png",
+      "frameSize": 48,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        24,
+        15
+      ],
+      "unityPivot": [
+        0.5,
+        0.6875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:fisico",
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/rugido/impacto",
+      "file": "unity/Sprites/Efeitos/rugido/impacto.png",
+      "frameSize": 176,
+      "frames": 11,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        85,
+        38
+      ],
+      "unityPivot": [
+        0.48295454545454547,
+        0.7840909090909091
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:rugido",
+      "sha256": "ec1252c2192045d82a9441e8a8f28094a450080afb86deaa9efd5bff8d117a71"
+    },
+    {
+      "resource": "Sprites/Efeitos/rugido/conjuracao",
+      "file": "unity/Sprites/Efeitos/rugido/conjuracao.png",
+      "frameSize": 48,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        24,
+        15
+      ],
+      "unityPivot": [
+        0.5,
+        0.6875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:fisico",
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/bola-de-fogo/impacto",
+      "file": "unity/Sprites/Efeitos/bola-de-fogo/impacto.png",
+      "frameSize": 104,
+      "frames": 15,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        50,
+        50
+      ],
+      "unityPivot": [
+        0.4807692307692308,
+        0.5192307692307692
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:fogo",
+      "sha256": "d963b544420f69945459e399cb2792a0d9cadad4501380e29aed561edfbb4691"
+    },
+    {
+      "resource": "Sprites/Efeitos/bola-de-fogo/conjuracao",
+      "file": "unity/Sprites/Efeitos/bola-de-fogo/conjuracao.png",
+      "frameSize": 64,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        28,
+        29
+      ],
+      "unityPivot": [
+        0.4375,
+        0.546875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:fogo",
+      "sha256": "1a4f4d96d748cfbf1ce6f8b16390e0e4af7b18432dbde2ec07f4e099420243c6",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/chao-de-gelo/impacto",
+      "file": "unity/Sprites/Efeitos/chao-de-gelo/impacto.png",
+      "frameSize": 72,
+      "frames": 16,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        38,
+        51
+      ],
+      "unityPivot": [
+        0.5277777777777778,
+        0.29166666666666663
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:gelo",
+      "sha256": "fcd82216a927da09f7d428ba7e029362db5dcc08037a240f3afcb0a4baf090cb"
+    },
+    {
+      "resource": "Sprites/Efeitos/chao-de-gelo/conjuracao",
+      "file": "unity/Sprites/Efeitos/chao-de-gelo/conjuracao.png",
+      "frameSize": 56,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        27,
+        27
+      ],
+      "unityPivot": [
+        0.48214285714285715,
+        0.5178571428571428
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:magia",
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/prisao-dos-pesadelos/impacto",
+      "file": "unity/Sprites/Efeitos/prisao-dos-pesadelos/impacto.png",
+      "frameSize": 88,
+      "frames": 16,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        29,
+        67
+      ],
+      "unityPivot": [
+        0.32954545454545453,
+        0.23863636363636365
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:prisao",
+      "sha256": "bb939b3c037b49ee668d5dfaaaf7774566e50136170cd6fb2d9ee10c7553f359"
+    },
+    {
+      "resource": "Sprites/Efeitos/prisao-dos-pesadelos/conjuracao",
+      "file": "unity/Sprites/Efeitos/prisao-dos-pesadelos/conjuracao.png",
+      "frameSize": 56,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        27,
+        27
+      ],
+      "unityPivot": [
+        0.48214285714285715,
+        0.5178571428571428
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:magia",
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/noite-dos-gatos/impacto",
+      "file": "unity/Sprites/Efeitos/noite-dos-gatos/impacto.png",
+      "frameSize": 96,
+      "frames": 16,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        38,
+        72
+      ],
+      "unityPivot": [
+        0.3958333333333333,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:noite",
+      "sha256": "f85775eaa06bb6d309527974533be635bdb00439409c8955036a7cb985d1f73e"
+    },
+    {
+      "resource": "Sprites/Efeitos/noite-dos-gatos/conjuracao",
+      "file": "unity/Sprites/Efeitos/noite-dos-gatos/conjuracao.png",
+      "frameSize": 56,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        18,
+        35
+      ],
+      "unityPivot": [
+        0.32142857142857145,
+        0.375
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:cura",
+      "sha256": "f4f0903e28f7acce4d61b901e50274e63c6c1a7ebfc7eca179a55fec07adb5dc",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/tentaculo-de-oleo/impacto",
+      "file": "unity/Sprites/Efeitos/tentaculo-de-oleo/impacto.png",
+      "frameSize": 56,
+      "frames": 15,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 8,
+      "impactFrame0": 8,
+      "anchorPixelsTopLeft": [
+        27,
+        25
+      ],
+      "unityPivot": [
+        0.48214285714285715,
+        0.5535714285714286
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:oleo",
+      "sha256": "250ed432fcb92c3bcd8dedab5e60cbd69eec360f6337de827171dc81c5496db6"
+    },
+    {
+      "resource": "Sprites/Efeitos/tentaculo-de-oleo/conjuracao",
+      "file": "unity/Sprites/Efeitos/tentaculo-de-oleo/conjuracao.png",
+      "frameSize": 56,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        27,
+        27
+      ],
+      "unityPivot": [
+        0.48214285714285715,
+        0.5178571428571428
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:magia",
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/canhao-de-peito/impacto",
+      "file": "unity/Sprites/Efeitos/canhao-de-peito/impacto.png",
+      "frameSize": 56,
+      "frames": 12,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        8,
+        17
+      ],
+      "unityPivot": [
+        0.14285714285714285,
+        0.6964285714285714
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:canhao",
+      "sha256": "e13955201d0d8d46c55906ba9bf21005ff972685bdc1e2542fecdf6c9f49d11e"
+    },
+    {
+      "resource": "Sprites/Efeitos/canhao-de-peito/conjuracao",
+      "file": "unity/Sprites/Efeitos/canhao-de-peito/conjuracao.png",
+      "frameSize": 64,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        28,
+        29
+      ],
+      "unityPivot": [
+        0.4375,
+        0.546875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:fogo",
+      "sha256": "1a4f4d96d748cfbf1ce6f8b16390e0e4af7b18432dbde2ec07f4e099420243c6",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/gancho-broca/impacto",
+      "file": "unity/Sprites/Efeitos/gancho-broca/impacto.png",
+      "frameSize": 64,
+      "frames": 9,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 4,
+      "impactFrame0": 4,
+      "anchorPixelsTopLeft": [
+        9,
+        28
+      ],
+      "unityPivot": [
+        0.140625,
+        0.5625
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:gancho",
+      "sha256": "61370c61a5414bae72dcb528aea6b9ae836cbebd6649f630478a1660f036f340"
+    },
+    {
+      "resource": "Sprites/Efeitos/gancho-broca/conjuracao",
+      "file": "unity/Sprites/Efeitos/gancho-broca/conjuracao.png",
+      "frameSize": 48,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        24,
+        15
+      ],
+      "unityPivot": [
+        0.5,
+        0.6875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:fisico",
+      "sha256": "7828bc65c21d4d2820e7c34965bd065ba2ea5932716582285dbb29724c85e18a",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/aquecer-motor/impacto",
+      "file": "unity/Sprites/Efeitos/aquecer-motor/impacto.png",
+      "frameSize": 64,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        28,
+        29
+      ],
+      "unityPivot": [
+        0.4375,
+        0.546875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:fogo",
+      "sha256": "1a4f4d96d748cfbf1ce6f8b16390e0e4af7b18432dbde2ec07f4e099420243c6"
+    },
+    {
+      "resource": "Sprites/Efeitos/aquecer-motor/conjuracao",
+      "file": "unity/Sprites/Efeitos/aquecer-motor/conjuracao.png",
+      "frameSize": 64,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        28,
+        29
+      ],
+      "unityPivot": [
+        0.4375,
+        0.546875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:fogo",
+      "sha256": "1a4f4d96d748cfbf1ce6f8b16390e0e4af7b18432dbde2ec07f4e099420243c6",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/faisca-da-varinha/impacto",
+      "file": "unity/Sprites/Efeitos/faisca-da-varinha/impacto.png",
+      "frameSize": 56,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        27,
+        27
+      ],
+      "unityPivot": [
+        0.48214285714285715,
+        0.5178571428571428
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:magia",
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c"
+    },
+    {
+      "resource": "Sprites/Efeitos/faisca-da-varinha/conjuracao",
+      "file": "unity/Sprites/Efeitos/faisca-da-varinha/conjuracao.png",
+      "frameSize": 56,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        27,
+        27
+      ],
+      "unityPivot": [
+        0.48214285714285715,
+        0.5178571428571428
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:magia",
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/faisca-laranja/impacto",
+      "file": "unity/Sprites/Efeitos/faisca-laranja/impacto.png",
+      "frameSize": 64,
+      "frames": 16,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 9,
+      "impactFrame0": 9,
+      "anchorPixelsTopLeft": [
+        41,
+        15
+      ],
+      "unityPivot": [
+        0.640625,
+        0.765625
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:laranja",
+      "sha256": "d85f7f6ab4bbd0abb38e14a38c35199bae75a61eeb5a40d04fb123555753334c"
+    },
+    {
+      "resource": "Sprites/Efeitos/faisca-laranja/conjuracao",
+      "file": "unity/Sprites/Efeitos/faisca-laranja/conjuracao.png",
+      "frameSize": 56,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        27,
+        27
+      ],
+      "unityPivot": [
+        0.48214285714285715,
+        0.5178571428571428
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:magia",
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/faisca-branca/impacto",
+      "file": "unity/Sprites/Efeitos/faisca-branca/impacto.png",
+      "frameSize": 56,
+      "frames": 16,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        37,
+        16
+      ],
+      "unityPivot": [
+        0.6607142857142857,
+        0.7142857142857143
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:branca",
+      "sha256": "86bb08f3419e01463f1641c2ebd57407c0eeda28c9c9d342bed1126ead694592"
+    },
+    {
+      "resource": "Sprites/Efeitos/faisca-branca/conjuracao",
+      "file": "unity/Sprites/Efeitos/faisca-branca/conjuracao.png",
+      "frameSize": 56,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        18,
+        35
+      ],
+      "unityPivot": [
+        0.32142857142857145,
+        0.375
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:cura",
+      "sha256": "f4f0903e28f7acce4d61b901e50274e63c6c1a7ebfc7eca179a55fec07adb5dc",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/faisca-malhada/impacto",
+      "file": "unity/Sprites/Efeitos/faisca-malhada/impacto.png",
+      "frameSize": 64,
+      "frames": 16,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        44,
+        16
+      ],
+      "unityPivot": [
+        0.6875,
+        0.75
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:malhada",
+      "sha256": "9e34cbf1dcc4413b879836cb151a954f79c69ae99c0d1243f7bdbb989c97cc1d"
+    },
+    {
+      "resource": "Sprites/Efeitos/faisca-malhada/conjuracao",
+      "file": "unity/Sprites/Efeitos/faisca-malhada/conjuracao.png",
+      "frameSize": 56,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        27,
+        27
+      ],
+      "unityPivot": [
+        0.48214285714285715,
+        0.5178571428571428
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:magia",
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/faisca-manchada/impacto",
+      "file": "unity/Sprites/Efeitos/faisca-manchada/impacto.png",
+      "frameSize": 64,
+      "frames": 16,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 1,
+      "impactFrame0": 1,
+      "anchorPixelsTopLeft": [
+        42,
+        15
+      ],
+      "unityPivot": [
+        0.65625,
+        0.765625
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:manchada",
+      "sha256": "d24f9ffb38c093de6188ae1848b7bf700d8c276b8dfdcf913911e28b2095b3d0"
+    },
+    {
+      "resource": "Sprites/Efeitos/faisca-manchada/conjuracao",
+      "file": "unity/Sprites/Efeitos/faisca-manchada/conjuracao.png",
+      "frameSize": 56,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        27,
+        27
+      ],
+      "unityPivot": [
+        0.48214285714285715,
+        0.5178571428571428
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:magia",
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/corrente/impacto",
+      "file": "unity/Sprites/Efeitos/corrente/impacto.png",
+      "frameSize": 120,
+      "frames": 14,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        17,
+        17
+      ],
+      "unityPivot": [
+        0.14166666666666666,
+        0.8583333333333334
+      ],
+      "pixelsPerUnit": 128,
+      "source": "glyph-corrente-fisica",
+      "sha256": "9ca53e0f2b3acdee76dcac11e7ac4684569664cd3901d38f433d37f45447bd83"
+    },
+    {
+      "resource": "Sprites/Efeitos/corrente/conjuracao",
+      "file": "unity/Sprites/Efeitos/corrente/conjuracao.png",
+      "frameSize": 48,
+      "frames": 14,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 4,
+      "impactFrame0": 4,
+      "anchorPixelsTopLeft": [
+        13,
+        23
+      ],
+      "unityPivot": [
+        0.2708333333333333,
+        0.5208333333333333
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:metal",
+      "sha256": "553e3a14744412ce2b5a98fc826499507c1b280dd9d1752cb45df01d4502cddc",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/Estados/escondido/loop",
+      "file": "unity/Sprites/Efeitos/Estados/escondido/loop.png",
+      "frameSize": 72,
+      "frames": 24,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 22,
+      "impactFrame0": 22,
+      "anchorPixelsTopLeft": [
+        23,
+        50
+      ],
+      "unityPivot": [
+        0.3194444444444444,
+        0.3055555555555556
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-estados:escondido",
+      "sha256": "64bb81f4124dbfafa2e09d33bd1045b822445f4ed9da13e03aabec9e4c8d7610"
+    },
+    {
+      "resource": "Sprites/Efeitos/Estados/preso/loop",
+      "file": "unity/Sprites/Efeitos/Estados/preso/loop.png",
+      "frameSize": 64,
+      "frames": 24,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        29,
+        18
+      ],
+      "unityPivot": [
+        0.453125,
+        0.71875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-estados:preso",
+      "sha256": "c0994ba6eab94343865cc91bf30455d3073e6c3d2cdb7f0dc5a125e69c5b940d"
+    },
+    {
+      "resource": "Sprites/Efeitos/Estados/sem-pm/loop",
+      "file": "unity/Sprites/Efeitos/Estados/sem-pm/loop.png",
+      "frameSize": 56,
+      "frames": 22,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 9,
+      "impactFrame0": 9,
+      "anchorPixelsTopLeft": [
+        26,
+        31
+      ],
+      "unityPivot": [
+        0.4642857142857143,
+        0.4464285714285714
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-estados:sem_pm",
+      "sha256": "db5dcb7715c0a874d07033e0e5fc70f45daf229f969feca791e616d6f35365be"
+    },
+    {
+      "resource": "Sprites/Efeitos/Estados/armadura/loop",
+      "file": "unity/Sprites/Efeitos/Estados/armadura/loop.png",
+      "frameSize": 64,
+      "frames": 24,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        28,
+        28
+      ],
+      "unityPivot": [
+        0.4375,
+        0.5625
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-estados:armadura",
+      "sha256": "be0f00c861d393521618d32a6dc72573aa319235eb0dff7b2d82a56f31276532"
+    },
+    {
+      "resource": "Sprites/Efeitos/Estados/desejo-canalizando/loop",
+      "file": "unity/Sprites/Efeitos/Estados/desejo-canalizando/loop.png",
+      "frameSize": 72,
+      "frames": 24,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 15,
+      "impactFrame0": 15,
+      "anchorPixelsTopLeft": [
+        33,
+        17
+      ],
+      "unityPivot": [
+        0.4583333333333333,
+        0.7638888888888888
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-estados:desejo",
+      "sha256": "7666bdd1720c9a1b5ebdba3f9ee41ee654d62e9ea59bdf4690e4744732a95e9f"
+    },
+    {
+      "resource": "Sprites/Efeitos/Estados/buff-pa-pm/loop",
+      "file": "unity/Sprites/Efeitos/Estados/buff-pa-pm/loop.png",
+      "frameSize": 72,
+      "frames": 24,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 21,
+      "impactFrame0": 21,
+      "anchorPixelsTopLeft": [
+        28,
+        47
+      ],
+      "unityPivot": [
+        0.3888888888888889,
+        0.3472222222222222
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-estados:buff",
+      "sha256": "a896b34bfff77563fb6ffb303bf34a55bda29bef9d6be7eaebf07107571b8983"
+    },
+    {
+      "resource": "Sprites/Efeitos/desejo-a/impacto",
+      "file": "unity/Sprites/Efeitos/desejo-a/impacto.png",
+      "frameSize": 144,
+      "frames": 20,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 9,
+      "impactFrame0": 9,
+      "anchorPixelsTopLeft": [
+        44,
+        121
+      ],
+      "unityPivot": [
+        0.3055555555555556,
+        0.1597222222222222
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-desejos:reviver",
+      "sha256": "6d7f691c3eb5eb9f1b9d745e27044ecc63af959a8e196ef7521a09b335120761"
+    },
+    {
+      "resource": "Sprites/Efeitos/desejo-b/impacto",
+      "file": "unity/Sprites/Efeitos/desejo-b/impacto.png",
+      "frameSize": 80,
+      "frames": 21,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        25,
+        50
+      ],
+      "unityPivot": [
+        0.3125,
+        0.375
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-desejos:cura",
+      "sha256": "7d99a46dcfb4b0b4e95cc6ae522eede36c5dbd507e505d083ff0ea11d7c63c47"
+    },
+    {
+      "resource": "Sprites/Efeitos/desejo-c/impacto",
+      "file": "unity/Sprites/Efeitos/desejo-c/impacto.png",
+      "frameSize": 112,
+      "frames": 20,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        34,
+        91
+      ],
+      "unityPivot": [
+        0.30357142857142855,
+        0.1875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-desejos:pa",
+      "sha256": "8cd1a3fa019f96d1af11f98d687dbe17362ef7fa3e84581d2234de1c6754f540"
+    },
+    {
+      "resource": "Sprites/Efeitos/desejo-d/impacto",
+      "file": "unity/Sprites/Efeitos/desejo-d/impacto.png",
+      "frameSize": 72,
+      "frames": 24,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 15,
+      "impactFrame0": 15,
+      "anchorPixelsTopLeft": [
+        35,
+        18
+      ],
+      "unityPivot": [
+        0.4861111111111111,
+        0.75
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-desejos:copiar",
+      "sha256": "8e7bad1484a9f3167f696a2629cc8f6150a83b236977e68ebca38028b2883a0d"
+    },
+    {
+      "resource": "Sprites/Efeitos/desejo-e/impacto",
+      "file": "unity/Sprites/Efeitos/desejo-e/impacto.png",
+      "frameSize": 112,
+      "frames": 10,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        32,
+        91
+      ],
+      "unityPivot": [
+        0.2857142857142857,
+        0.1875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "glyph-desejo-itens",
+      "sha256": "19d1b46fe7889c5cb636c3d322abc388f7faf972db82d464ed619bf841602bd3"
+    },
+    {
+      "resource": "Sprites/Efeitos/desejo-f/impacto",
+      "file": "unity/Sprites/Efeitos/desejo-f/impacto.png",
+      "frameSize": 112,
+      "frames": 15,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        52,
+        54
+      ],
+      "unityPivot": [
+        0.4642857142857143,
+        0.5178571428571428
+      ],
+      "pixelsPerUnit": 128,
+      "source": "glyph-desejo-apagar",
+      "sha256": "e301ba9a94de8d14f458cc5da050d220fc6883c2138c2f58620ffdc6206fafc5"
+    },
+    {
+      "resource": "Sprites/Efeitos/desejo/inicio",
+      "file": "unity/Sprites/Efeitos/desejo/inicio.png",
+      "frameSize": 72,
+      "frames": 24,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 15,
+      "impactFrame0": 15,
+      "anchorPixelsTopLeft": [
+        33,
+        17
+      ],
+      "unityPivot": [
+        0.4583333333333333,
+        0.7638888888888888
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-estados:desejo",
+      "sha256": "7666bdd1720c9a1b5ebdba3f9ee41ee654d62e9ea59bdf4690e4744732a95e9f"
+    },
+    {
+      "resource": "Sprites/Efeitos/devorar/impacto",
+      "file": "unity/Sprites/Efeitos/devorar/impacto.png",
+      "frameSize": 120,
+      "frames": 15,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        11,
+        61
+      ],
+      "unityPivot": [
+        0.09166666666666666,
+        0.4916666666666667
+      ],
+      "pixelsPerUnit": 128,
+      "source": "glyph-devorar-essencia",
+      "sha256": "4f861e4f6addc21f4bb481b1cdbefa28370f629fce6259a95f76cb978c530d9b",
+      "moveFromTargetToCaster": true
+    },
+    {
+      "resource": "Sprites/ProjeteisAnimados/bola-de-fogo",
+      "file": "unity/Sprites/ProjeteisAnimados/bola-de-fogo.png",
+      "frameSize": 56,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 1,
+      "impactFrame0": 1,
+      "anchorPixelsTopLeft": [
+        38,
+        15
+      ],
+      "unityPivot": [
+        0.6785714285714286,
+        0.7321428571428572
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-projeteis:fogo",
+      "sha256": "64d290107d4298e94abe001818cda2879d736b8fcc6749a9db8d894d96780399",
+      "facing": "right"
+    },
+    {
+      "resource": "Sprites/Projeteis/bola-de-fogo",
+      "file": "unity/Sprites/Projeteis/bola-de-fogo.png",
+      "frameSize": 56,
+      "frames": 1,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        38,
+        15
+      ],
+      "unityPivot": [
+        0.6785714285714286,
+        0.7321428571428572
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-projeteis:fogo",
+      "sha256": "d15477dd21a9d7f1bfbda2aee95d68050c50b4e775ea059cc5032749b9770c65",
+      "staticProjectile": true,
+      "facing": "right"
+    },
+    {
+      "resource": "Sprites/ProjeteisAnimados/faisca-laranja",
+      "file": "unity/Sprites/ProjeteisAnimados/faisca-laranja.png",
+      "frameSize": 48,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 1,
+      "impactFrame0": 1,
+      "anchorPixelsTopLeft": [
+        27,
+        13
+      ],
+      "unityPivot": [
+        0.5625,
+        0.7291666666666667
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-projeteis:laranja",
+      "sha256": "979624b858cc837b552a06c41fca1bfde8536d6a487d42d9f446629d589f959e",
+      "facing": "right"
+    },
+    {
+      "resource": "Sprites/Projeteis/faisca-laranja",
+      "file": "unity/Sprites/Projeteis/faisca-laranja.png",
+      "frameSize": 48,
+      "frames": 1,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        27,
+        13
+      ],
+      "unityPivot": [
+        0.5625,
+        0.7291666666666667
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-projeteis:laranja",
+      "sha256": "9b567dacfccab1306fa72ffb2b56810dd7132e906f785fe91231789d38326906",
+      "staticProjectile": true,
+      "facing": "right"
+    },
+    {
+      "resource": "Sprites/ProjeteisAnimados/faisca-branca",
+      "file": "unity/Sprites/ProjeteisAnimados/faisca-branca.png",
+      "frameSize": 56,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 1,
+      "impactFrame0": 1,
+      "anchorPixelsTopLeft": [
+        35,
+        13
+      ],
+      "unityPivot": [
+        0.625,
+        0.7678571428571428
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-projeteis:branca",
+      "sha256": "2af1c2af075dee14292435b5ec473ae94e3963b9948a9c8a8be0b7a7e5616cfd",
+      "facing": "right"
+    },
+    {
+      "resource": "Sprites/Projeteis/faisca-branca",
+      "file": "unity/Sprites/Projeteis/faisca-branca.png",
+      "frameSize": 56,
+      "frames": 1,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        35,
+        13
+      ],
+      "unityPivot": [
+        0.625,
+        0.7678571428571428
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-projeteis:branca",
+      "sha256": "984385b300d134ddbee58f03000368dab98d13d19f49a0404514c4ec00ae8e24",
+      "staticProjectile": true,
+      "facing": "right"
+    },
+    {
+      "resource": "Sprites/ProjeteisAnimados/faisca-malhada",
+      "file": "unity/Sprites/ProjeteisAnimados/faisca-malhada.png",
+      "frameSize": 48,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 1,
+      "impactFrame0": 1,
+      "anchorPixelsTopLeft": [
+        34,
+        13
+      ],
+      "unityPivot": [
+        0.7083333333333334,
+        0.7291666666666667
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-projeteis:malhada",
+      "sha256": "f40731a12442dbca33cc033c5e4a1f94d9350079f998facc4ede09d4693b9c8b",
+      "facing": "right"
+    },
+    {
+      "resource": "Sprites/Projeteis/faisca-malhada",
+      "file": "unity/Sprites/Projeteis/faisca-malhada.png",
+      "frameSize": 48,
+      "frames": 1,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        34,
+        13
+      ],
+      "unityPivot": [
+        0.7083333333333334,
+        0.7291666666666667
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-projeteis:malhada",
+      "sha256": "a36abdd926190d8afc443da261c6f25d52fe34bd376910b799a8803942f2f088",
+      "staticProjectile": true,
+      "facing": "right"
+    },
+    {
+      "resource": "Sprites/ProjeteisAnimados/faisca-manchada",
+      "file": "unity/Sprites/ProjeteisAnimados/faisca-manchada.png",
+      "frameSize": 48,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 1,
+      "impactFrame0": 1,
+      "anchorPixelsTopLeft": [
+        30,
+        13
+      ],
+      "unityPivot": [
+        0.625,
+        0.7291666666666667
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-projeteis:manchada",
+      "sha256": "87aeac63ba6dd84af3fa98ce60688c3b44c41c40442206a8992e061f54b5dee7",
+      "facing": "right"
+    },
+    {
+      "resource": "Sprites/Projeteis/faisca-manchada",
+      "file": "unity/Sprites/Projeteis/faisca-manchada.png",
+      "frameSize": 48,
+      "frames": 1,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        30,
+        13
+      ],
+      "unityPivot": [
+        0.625,
+        0.7291666666666667
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-projeteis:manchada",
+      "sha256": "49924c9dc519038c68e1aac0dffa12a0246108d5e05c6b7ea074094a295eabc5",
+      "staticProjectile": true,
+      "facing": "right"
+    },
+    {
+      "resource": "Sprites/ProjeteisAnimados/canhao-de-peito",
+      "file": "unity/Sprites/ProjeteisAnimados/canhao-de-peito.png",
+      "frameSize": 48,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 1,
+      "impactFrame0": 1,
+      "anchorPixelsTopLeft": [
+        34,
+        12
+      ],
+      "unityPivot": [
+        0.7083333333333334,
+        0.75
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-projeteis:canhao",
+      "sha256": "29beacdee094862ea7fd0c96ac99b5440378ecb62019bf65ed1fb240b8afab55",
+      "facing": "right"
+    },
+    {
+      "resource": "Sprites/Projeteis/canhao-de-peito",
+      "file": "unity/Sprites/Projeteis/canhao-de-peito.png",
+      "frameSize": 48,
+      "frames": 1,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        34,
+        12
+      ],
+      "unityPivot": [
+        0.7083333333333334,
+        0.75
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-projeteis:canhao",
+      "sha256": "9ccc21218d1301146a5d937f189b74192f80c65ad2e2b508176747e8b18c4ba0",
+      "staticProjectile": true,
+      "facing": "right"
+    },
+    {
+      "resource": "Sprites/Efeitos/bomba-de-fumaca/uso",
+      "file": "unity/Sprites/Efeitos/bomba-de-fumaca/uso.png",
+      "frameSize": 72,
+      "frames": 15,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 8,
+      "impactFrame0": 8,
+      "anchorPixelsTopLeft": [
+        37,
+        34
+      ],
+      "unityPivot": [
+        0.5138888888888888,
+        0.5277777777777778
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-loja:fumaca",
+      "sha256": "4789b27fb756d2cab58aafdbe2ed806a7bac9b0a6b37c59c2a45f7fb1014b56e"
+    },
+    {
+      "resource": "Sprites/Efeitos/totem-de-cura/uso",
+      "file": "unity/Sprites/Efeitos/totem-de-cura/uso.png",
+      "frameSize": 88,
+      "frames": 16,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 9,
+      "impactFrame0": 9,
+      "anchorPixelsTopLeft": [
+        34,
+        64
+      ],
+      "unityPivot": [
+        0.38636363636363635,
+        0.2727272727272727
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-loja:totem",
+      "sha256": "9a28245f88652ff99c3853b99efe0ceaec8d4cc280abb11e626ff93f0f957708"
+    },
+    {
+      "resource": "Sprites/Efeitos/mina-de-gelo/uso",
+      "file": "unity/Sprites/Efeitos/mina-de-gelo/uso.png",
+      "frameSize": 64,
+      "frames": 16,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        31,
+        40
+      ],
+      "unityPivot": [
+        0.484375,
+        0.375
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-loja:mina",
+      "sha256": "819f6cf79b33406597bcd46c30d2579d300de0fdbd878eb23ceff418fb8ab090"
+    },
+    {
+      "resource": "Sprites/Efeitos/cristal-de-foco/uso",
+      "file": "unity/Sprites/Efeitos/cristal-de-foco/uso.png",
+      "frameSize": 48,
+      "frames": 16,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 12,
+      "impactFrame0": 12,
+      "anchorPixelsTopLeft": [
+        13,
+        22
+      ],
+      "unityPivot": [
+        0.2708333333333333,
+        0.5416666666666667
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-loja:foco",
+      "sha256": "ebb6868c6e4cad8d10c85b8ab7a90f7e7fec1ae1b030fb8cfa02526dbd5d9928"
+    },
+    {
+      "resource": "Sprites/Efeitos/manto-de-espinhos/uso",
+      "file": "unity/Sprites/Efeitos/manto-de-espinhos/uso.png",
+      "frameSize": 56,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        20,
+        27
+      ],
+      "unityPivot": [
+        0.35714285714285715,
+        0.5178571428571428
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-loja:espinhos",
+      "sha256": "8184b03a636a32ee169ff840e7c239525e422bfbbbb521515414d066afca8edd"
+    },
+    {
+      "resource": "Sprites/Efeitos/bencao-de-pedra/uso",
+      "file": "unity/Sprites/Efeitos/bencao-de-pedra/uso.png",
+      "frameSize": 64,
+      "frames": 16,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 9,
+      "impactFrame0": 9,
+      "anchorPixelsTopLeft": [
+        31,
+        31
+      ],
+      "unityPivot": [
+        0.484375,
+        0.515625
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-loja:bencao",
+      "sha256": "aaf583b51f0c1153c3495d4bfe703aadefe31d482df6b97dbcc881c49b62f93f"
+    },
+    {
+      "resource": "Sprites/Efeitos/martelo-perfurante/uso",
+      "file": "unity/Sprites/Efeitos/martelo-perfurante/uso.png",
+      "frameSize": 160,
+      "frames": 16,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 1,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        46,
+        97
+      ],
+      "unityPivot": [
+        0.2875,
+        0.39375000000000004
+      ],
+      "pixelsPerUnit": 128,
+      "source": "composição declarada de duas peças PixelLab",
+      "sha256": "206bff4c8bdc500afbec7ed851de65f37ddc42f078097a3c8d44beb3c1d687dd"
+    },
+    {
+      "resource": "Sprites/Efeitos/pena-de-fenix/uso",
+      "file": "unity/Sprites/Efeitos/pena-de-fenix/uso.png",
+      "frameSize": 136,
+      "frames": 15,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        38,
+        101
+      ],
+      "unityPivot": [
+        0.27941176470588236,
+        0.25735294117647056
+      ],
+      "pixelsPerUnit": 128,
+      "source": "composição declarada de duas peças PixelLab",
+      "sha256": "9dc9fd004c1daa8e5997ab2f4428538eaaab94bbf8e0fb1108740d96b57cf6a5"
+    },
+    {
+      "resource": "Sprites/Efeitos/ancora/uso",
+      "file": "unity/Sprites/Efeitos/ancora/uso.png",
+      "frameSize": 128,
+      "frames": 15,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        36,
+        97
+      ],
+      "unityPivot": [
+        0.28125,
+        0.2421875
+      ],
+      "pixelsPerUnit": 128,
+      "source": "glyph-ancora-fantasma",
+      "sha256": "0ea649a93e150d65142b481a92172421b68953e82e900e1506ac1bf569274a07"
+    },
+    {
+      "resource": "Sprites/Efeitos/corrente-de-ferro/uso",
+      "file": "unity/Sprites/Efeitos/corrente-de-ferro/uso.png",
+      "frameSize": 120,
+      "frames": 14,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        17,
+        17
+      ],
+      "unityPivot": [
+        0.14166666666666666,
+        0.8583333333333334
+      ],
+      "pixelsPerUnit": 128,
+      "source": "glyph-corrente-fisica",
+      "sha256": "9ca53e0f2b3acdee76dcac11e7ac4684569664cd3901d38f433d37f45447bd83"
+    },
+    {
+      "resource": "Sprites/Objetos/bau-recompensa/surgir",
+      "file": "unity/Sprites/Objetos/bau-recompensa/surgir.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-bau-recompensa",
+      "sha256": "e3f2c7a03d94003716f77021adaa5830bdd29f973f47aa437b92ea5e3d19b8d8",
+      "ownerOnly": false
+    },
+    {
+      "resource": "Sprites/Objetos/bau-recompensa/idle",
+      "file": "unity/Sprites/Objetos/bau-recompensa/idle.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-bau-recompensa",
+      "sha256": "2871b78715410dfccaf85f2df6eff2a73fdfdd34497909587bac5c2877a17fca",
+      "ownerOnly": false
+    },
+    {
+      "resource": "Sprites/Objetos/bau-recompensa/quebrar",
+      "file": "unity/Sprites/Objetos/bau-recompensa/quebrar.png",
+      "frameSize": 160,
+      "frames": 5,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-bau-recompensa",
+      "sha256": "2be12ad1b22002f151f20adb83c7a1c9103cbf1678aee332735027376937e341",
+      "ownerOnly": false
+    },
+    {
+      "resource": "Sprites/Objetos/prisao-dos-pesadelos/surgir",
+      "file": "unity/Sprites/Objetos/prisao-dos-pesadelos/surgir.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-prisao-dos-pesadelos",
+      "sha256": "2acd67115e2b638b49fd7bed5a0bf6659f3876f95f709b0561cb492f1035b376",
+      "ownerOnly": false
+    },
+    {
+      "resource": "Sprites/Objetos/prisao-dos-pesadelos/idle",
+      "file": "unity/Sprites/Objetos/prisao-dos-pesadelos/idle.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-prisao-dos-pesadelos",
+      "sha256": "81fcbc6c20cbec562553c286622151fb9ba533c718d4427376f7aec4f0cb143a",
+      "ownerOnly": false
+    },
+    {
+      "resource": "Sprites/Objetos/prisao-dos-pesadelos/quebrar",
+      "file": "unity/Sprites/Objetos/prisao-dos-pesadelos/quebrar.png",
+      "frameSize": 160,
+      "frames": 6,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-prisao-dos-pesadelos",
+      "sha256": "f63b0b4361957b927c19f91b83243d25a6a694d2fa50fc956603905b7601285b",
+      "ownerOnly": false
+    },
+    {
+      "resource": "Sprites/Objetos/portal-de-rocha/surgir",
+      "file": "unity/Sprites/Objetos/portal-de-rocha/surgir.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-portal-de-rocha",
+      "sha256": "c936baca6160c7e4c7dd81401642e32a39bd5154de0260bb776a0f2e04ec3f13",
+      "ownerOnly": false
+    },
+    {
+      "resource": "Sprites/Objetos/portal-de-rocha/idle",
+      "file": "unity/Sprites/Objetos/portal-de-rocha/idle.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-portal-de-rocha",
+      "sha256": "e9312205948d9ab0402949e0c0dc27e91d332c6f859e42cd60a8cb4c2fffa13a",
+      "ownerOnly": false
+    },
+    {
+      "resource": "Sprites/Objetos/portal-de-rocha/quebrar",
+      "file": "unity/Sprites/Objetos/portal-de-rocha/quebrar.png",
+      "frameSize": 160,
+      "frames": 7,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-portal-de-rocha",
+      "sha256": "404f05a5e18b8a61f3aa9eb93a9b45531d71d087938fad9955cb2a5a120c8aa2",
+      "ownerOnly": false
+    },
+    {
+      "resource": "Sprites/Objetos/buraco-papa-moedas/surgir",
+      "file": "unity/Sprites/Objetos/buraco-papa-moedas/surgir.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        80,
+        100
+      ],
+      "unityPivot": [
+        0.5,
+        0.375
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-buraco-papa-moedas",
+      "sha256": "6ea537ca0bd448114378a211990bf6c1c57a16560d4d0e791f74c5a31ddd3398",
+      "ownerOnly": false
+    },
+    {
+      "resource": "Sprites/Objetos/buraco-papa-moedas/idle",
+      "file": "unity/Sprites/Objetos/buraco-papa-moedas/idle.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        80,
+        100
+      ],
+      "unityPivot": [
+        0.5,
+        0.375
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-buraco-papa-moedas",
+      "sha256": "cd022d01caae697ca64c338f8a144d49616b32bd5f8f3e83694c7265a0d43542",
+      "ownerOnly": false
+    },
+    {
+      "resource": "Sprites/Objetos/buraco-papa-moedas/quebrar",
+      "file": "unity/Sprites/Objetos/buraco-papa-moedas/quebrar.png",
+      "frameSize": 160,
+      "frames": 7,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        80,
+        100
+      ],
+      "unityPivot": [
+        0.5,
+        0.375
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-buraco-papa-moedas",
+      "sha256": "3a573f2d48799e9c16a214972d86b5067b734468c76c7bd2143bd840fb53acd4",
+      "ownerOnly": false
+    },
+    {
+      "resource": "Sprites/Objetos/casa-resfriada/surgir",
+      "file": "unity/Sprites/Objetos/casa-resfriada/surgir.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-casa-resfriada",
+      "sha256": "b1e75c86b16fcc9058d2cb6d00a7452c828d2089b36e955e32c7f4638fd70eff",
+      "ownerOnly": false
+    },
+    {
+      "resource": "Sprites/Objetos/casa-resfriada/idle",
+      "file": "unity/Sprites/Objetos/casa-resfriada/idle.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-casa-resfriada",
+      "sha256": "d409b21660d3db589210452c279a708534689af00a72d290a677447cf39d027b",
+      "ownerOnly": false
+    },
+    {
+      "resource": "Sprites/Objetos/casa-resfriada/quebrar",
+      "file": "unity/Sprites/Objetos/casa-resfriada/quebrar.png",
+      "frameSize": 160,
+      "frames": 6,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-casa-resfriada",
+      "sha256": "6f24cefed914bc5f917f9751f07b9a81e5986c7cd05f14ab5eadbf6d419a9ff4",
+      "ownerOnly": false
+    },
+    {
+      "resource": "Sprites/Objetos/casa-congelada/surgir",
+      "file": "unity/Sprites/Objetos/casa-congelada/surgir.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-casa-congelada",
+      "sha256": "2394181a43ccf8ddd63df8ab01f391a738b48dc54ba6f78c2b083e8a8643f3c0",
+      "ownerOnly": false
+    },
+    {
+      "resource": "Sprites/Objetos/casa-congelada/idle",
+      "file": "unity/Sprites/Objetos/casa-congelada/idle.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-casa-congelada",
+      "sha256": "396dd5d8c3333e4a0ecb0c4be807102112a06b4184a3b979f9c1625cfea0482a",
+      "ownerOnly": false
+    },
+    {
+      "resource": "Sprites/Objetos/casa-congelada/quebrar",
+      "file": "unity/Sprites/Objetos/casa-congelada/quebrar.png",
+      "frameSize": 160,
+      "frames": 5,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-casa-congelada",
+      "sha256": "19404288db865452560f8a7c237c68c0938990ba1691ee92163b0bda12ea73d0",
+      "ownerOnly": false
+    },
+    {
+      "resource": "Sprites/Objetos/mina-de-gelo-armada/surgir",
+      "file": "unity/Sprites/Objetos/mina-de-gelo-armada/surgir.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 7,
+      "impactFrame0": 7,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-mina-de-gelo-armada",
+      "sha256": "1a5ef60f45759e4a60365cd8b17c71832a9933ac8cd051a268c9f5b089c71ad8",
+      "ownerOnly": true
+    },
+    {
+      "resource": "Sprites/Objetos/mina-de-gelo-armada/idle",
+      "file": "unity/Sprites/Objetos/mina-de-gelo-armada/idle.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-mina-de-gelo-armada",
+      "sha256": "28c45bca2ed4e0ab5eee31154f5d873a4d7be249a8fbf35189c40226fd7ee656",
+      "ownerOnly": true
+    },
+    {
+      "resource": "Sprites/Objetos/mina-de-gelo-armada/quebrar",
+      "file": "unity/Sprites/Objetos/mina-de-gelo-armada/quebrar.png",
+      "frameSize": 160,
+      "frames": 6,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-mina-de-gelo-armada",
+      "sha256": "df6dfe7f25563ca0e255c53e81376cf9d4674324590ae28eb0faceca3a5f7297",
+      "ownerOnly": true
+    },
+    {
+      "resource": "Sprites/Objetos/totem-de-cura/idle",
+      "file": "unity/Sprites/Objetos/totem-de-cura/idle.png",
+      "frameSize": 132,
+      "frames": 5,
+      "fps": 10,
+      "loop": true,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        66,
+        113
+      ],
+      "unityPivot": [
+        0.5,
+        0.14393939393939392
+      ],
+      "pixelsPerUnit": 128,
+      "source": "arte existente TotemCura/idle_south-east",
+      "sha256": "046a6adb32248d6fa6d2a7d98e418f3bff7bb2caa7724686a72f65c04b592023",
+      "reusedActorArt": true
+    },
+    {
+      "resource": "Sprites/Objetos/totem-de-cura/surgir",
+      "file": "unity/Sprites/Objetos/totem-de-cura/surgir.png",
+      "frameSize": 132,
+      "frames": 7,
+      "fps": 10,
+      "loop": false,
+      "peakFrame0": 3,
+      "impactFrame0": 3,
+      "anchorPixelsTopLeft": [
+        66,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.09090909090909094
+      ],
+      "pixelsPerUnit": 128,
+      "source": "arte existente TotemCura/spawn_south-east",
+      "sha256": "76da991462a58432d628a46b270a58285793feb7b94e3a55d72e45791a485eaa",
+      "reusedActorArt": true
+    },
+    {
+      "resource": "Sprites/Objetos/totem-de-cura/quebrar",
+      "file": "unity/Sprites/Objetos/totem-de-cura/quebrar.png",
+      "frameSize": 132,
+      "frames": 9,
+      "fps": 10,
+      "loop": false,
+      "peakFrame0": 4,
+      "impactFrame0": 4,
+      "anchorPixelsTopLeft": [
+        66,
+        118
+      ],
+      "unityPivot": [
+        0.5,
+        0.10606060606060608
+      ],
+      "pixelsPerUnit": 128,
+      "source": "arte existente TotemCura/death_south-east",
+      "sha256": "6c614f036f8ca9579380bd45ffca345dcc8282af9f80ed341b8ebdedf5fb0c71",
+      "reusedActorArt": true
+    },
+    {
+      "resource": "Sprites/Objetos/casa-de-lava/surgir",
+      "file": "unity/Sprites/Objetos/casa-de-lava/surgir.png",
+      "frameSize": 160,
+      "frames": 6,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        80,
+        84
+      ],
+      "unityPivot": [
+        0.5,
+        0.475
+      ],
+      "pixelsPerUnit": 128,
+      "source": "reuso Sprites/Efeitos/mare-de-lava/inicio",
+      "sha256": "1fa401e9e5ff55cd1e78a32f64b6c25441897b1b41c9e735fc5599b32d103fbf"
+    },
+    {
+      "resource": "Sprites/Objetos/casa-de-lava/idle",
+      "file": "unity/Sprites/Objetos/casa-de-lava/idle.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 1,
+      "impactFrame0": 1,
+      "anchorPixelsTopLeft": [
+        80,
+        84
+      ],
+      "unityPivot": [
+        0.5,
+        0.475
+      ],
+      "pixelsPerUnit": 128,
+      "source": "reuso Sprites/Efeitos/mare-de-lava/loop",
+      "sha256": "151450fb8ee7ed6196be9125b73dc6d79635cb8199deda4011de414b33a63135"
+    },
+    {
+      "resource": "Sprites/Objetos/casa-de-lava/sumir",
+      "file": "unity/Sprites/Objetos/casa-de-lava/sumir.png",
+      "frameSize": 160,
+      "frames": 6,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        80,
+        84
+      ],
+      "unityPivot": [
+        0.5,
+        0.475
+      ],
+      "pixelsPerUnit": 128,
+      "source": "reuso Sprites/Efeitos/mare-de-lava/fim",
+      "sha256": "0a81cd1304e97c04a11b3dc7c04c017419d277b76878d1f314180a6e0df9ae01"
+    },
+    {
+      "resource": "Sprites/Objetos/marcador-de-fogos/surgir",
+      "file": "unity/Sprites/Objetos/marcador-de-fogos/surgir.png",
+      "frameSize": 104,
+      "frames": 15,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        40,
+        47
+      ],
+      "unityPivot": [
+        0.38461538461538464,
+        0.5480769230769231
+      ],
+      "pixelsPerUnit": 128,
+      "source": "festival-de-fogos:inicio",
+      "sha256": "05adb82c30c61f6b7a123444bb08a072f97b82b81b1d07f5bc4d0e8f41da0c04"
+    },
+    {
+      "resource": "Sprites/Objetos/marcador-de-fogos/idle",
+      "file": "unity/Sprites/Objetos/marcador-de-fogos/idle.png",
+      "frameSize": 64,
+      "frames": 16,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        30,
+        19
+      ],
+      "unityPivot": [
+        0.46875,
+        0.703125
+      ],
+      "pixelsPerUnit": 128,
+      "source": "festival-de-fogos:loop",
+      "sha256": "16806b4aa5c7f4d6180166910acb6e5ceebd4035a57a8293ec69c8a0d8e57f75"
+    },
+    {
+      "resource": "Sprites/Objetos/marcador-de-fogos/sumir",
+      "file": "unity/Sprites/Objetos/marcador-de-fogos/sumir.png",
+      "frameSize": 104,
+      "frames": 15,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 11,
+      "impactFrame0": 11,
+      "anchorPixelsTopLeft": [
+        48,
+        40
+      ],
+      "unityPivot": [
+        0.46153846153846156,
+        0.6153846153846154
+      ],
+      "pixelsPerUnit": 128,
+      "source": "festival-de-fogos:fim",
+      "sha256": "370b35b3fef23358de42dd9ec33b8a38bda50cc20ddbacc12378abb3127a121e"
+    },
+    {
+      "resource": "Sprites/Efeitos/aura-gatinho/loop",
+      "file": "unity/Sprites/Efeitos/aura-gatinho/loop.png",
+      "frameSize": 104,
+      "frames": 8,
+      "fps": 10,
+      "loop": true,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        25,
+        70
+      ],
+      "unityPivot": [
+        0.2403846153846154,
+        0.32692307692307687
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-aura-gatinho",
+      "sha256": "92bbf236d7a95fd5e33b2bfb89e79fcb75d91d8f79b50e685f5fc3e33f876e07"
+    },
+    {
+      "resource": "Sprites/Efeitos/aura-de-gatinho/loop",
+      "file": "unity/Sprites/Efeitos/aura-de-gatinho/loop.png",
+      "frameSize": 104,
+      "frames": 8,
+      "fps": 10,
+      "loop": true,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        25,
+        70
+      ],
+      "unityPivot": [
+        0.2403846153846154,
+        0.32692307692307687
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-aura-gatinho",
+      "sha256": "92bbf236d7a95fd5e33b2bfb89e79fcb75d91d8f79b50e685f5fc3e33f876e07"
+    },
+    {
+      "resource": "Sprites/Efeitos/aura-de-gatinho/impacto",
+      "file": "unity/Sprites/Efeitos/aura-de-gatinho/impacto.png",
+      "frameSize": 104,
+      "frames": 8,
+      "fps": 10,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        25,
+        70
+      ],
+      "unityPivot": [
+        0.2403846153846154,
+        0.32692307692307687
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-aura-gatinho",
+      "sha256": "92bbf236d7a95fd5e33b2bfb89e79fcb75d91d8f79b50e685f5fc3e33f876e07"
+    },
+    {
+      "resource": "Sprites/Efeitos/aura-de-gatinho/conjuracao",
+      "file": "unity/Sprites/Efeitos/aura-de-gatinho/conjuracao.png",
+      "frameSize": 56,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        18,
+        35
+      ],
+      "unityPivot": [
+        0.32142857142857145,
+        0.375
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:cura",
+      "sha256": "f4f0903e28f7acce4d61b901e50274e63c6c1a7ebfc7eca179a55fec07adb5dc",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/chamar-gato/impacto",
+      "file": "unity/Sprites/Efeitos/chamar-gato/impacto.png",
+      "frameSize": 160,
+      "frames": 12,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        77,
+        35
+      ],
+      "unityPivot": [
+        0.48125,
+        0.78125
+      ],
+      "pixelsPerUnit": 128,
+      "source": "portal-caotico:inicio",
+      "sha256": "8263b006ca224dd6f173178d70a788e12628231390dd593d5b5c5f82e4c8b170"
+    },
+    {
+      "resource": "Sprites/Efeitos/chamar-gato/conjuracao",
+      "file": "unity/Sprites/Efeitos/chamar-gato/conjuracao.png",
+      "frameSize": 56,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        27,
+        27
+      ],
+      "unityPivot": [
+        0.48214285714285715,
+        0.5178571428571428
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:magia",
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/mover-gato/impacto",
+      "file": "unity/Sprites/Efeitos/mover-gato/impacto.png",
+      "frameSize": 104,
+      "frames": 8,
+      "fps": 10,
+      "loop": false,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        25,
+        70
+      ],
+      "unityPivot": [
+        0.2403846153846154,
+        0.32692307692307687
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-aura-gatinho",
+      "sha256": "92bbf236d7a95fd5e33b2bfb89e79fcb75d91d8f79b50e685f5fc3e33f876e07"
+    },
+    {
+      "resource": "Sprites/Efeitos/mover-gato/conjuracao",
+      "file": "unity/Sprites/Efeitos/mover-gato/conjuracao.png",
+      "frameSize": 56,
+      "frames": 13,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 5,
+      "impactFrame0": 5,
+      "anchorPixelsTopLeft": [
+        27,
+        27
+      ],
+      "unityPivot": [
+        0.48214285714285715,
+        0.5178571428571428
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:magia",
+      "sha256": "9caac7baaa649c537e2185b41abc97f78474724136c81e55394dac3e0624bd0c",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/baltazar-martelo/impacto",
+      "file": "unity/Sprites/Efeitos/baltazar-martelo/impacto.png",
+      "frameSize": 104,
+      "frames": 11,
+      "fps": 14,
+      "loop": false,
+      "peakFrame0": 6,
+      "impactFrame0": 6,
+      "anchorPixelsTopLeft": [
+        52,
+        36
+      ],
+      "unityPivot": [
+        0.5,
+        0.6538461538461539
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-golpes:pancada",
+      "sha256": "b7b01cd20f41b77146cd9d2ae1fc5bf5f462fe65b2ddbcc97865dd8eb6ecaad0"
+    },
+    {
+      "resource": "Sprites/Efeitos/baltazar-martelo/conjuracao",
+      "file": "unity/Sprites/Efeitos/baltazar-martelo/conjuracao.png",
+      "frameSize": 48,
+      "frames": 14,
+      "fps": 12,
+      "loop": false,
+      "peakFrame0": 4,
+      "impactFrame0": 4,
+      "anchorPixelsTopLeft": [
+        13,
+        23
+      ],
+      "unityPivot": [
+        0.2708333333333333,
+        0.5208333333333333
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-conjuracao:metal",
+      "sha256": "553e3a14744412ce2b5a98fc826499507c1b280dd9d1752cb45df01d4502cddc",
+      "casterOverlay": true
+    },
+    {
+      "resource": "Sprites/Efeitos/Estados/sem-pm-oleo/loop",
+      "file": "unity/Sprites/Efeitos/Estados/sem-pm-oleo/loop.png",
+      "frameSize": 56,
+      "frames": 12,
+      "fps": 14,
+      "loop": true,
+      "peakFrame0": 4,
+      "impactFrame0": 4,
+      "anchorPixelsTopLeft": [
+        27,
+        25
+      ],
+      "unityPivot": [
+        0.48214285714285715,
+        0.5535714285714286
+      ],
+      "pixelsPerUnit": 128,
+      "source": "lib-magias:oleo, fase central reversível",
+      "sha256": "db2fcbd6274512058279474a87c453c089867429ca5c61c7c38b74b82be8e768",
+      "inheritTargetVisibility": true
+    },
+    {
+      "resource": "Sprites/Efeitos/noite-dos-gatos/aura",
+      "file": "unity/Sprites/Efeitos/noite-dos-gatos/aura.png",
+      "frameSize": 104,
+      "frames": 8,
+      "fps": 10,
+      "loop": true,
+      "peakFrame0": 0,
+      "impactFrame0": 0,
+      "anchorPixelsTopLeft": [
+        25,
+        70
+      ],
+      "unityPivot": [
+        0.2403846153846154,
+        0.32692307692307687
+      ],
+      "pixelsPerUnit": 128,
+      "source": "obj-aura-gatinho",
+      "sha256": "92bbf236d7a95fd5e33b2bfb89e79fcb75d91d8f79b50e685f5fc3e33f876e07"
+    },
+    {
+      "resource": "Sprites/Efeitos/lava/loop",
+      "file": "unity/Sprites/Efeitos/lava/loop.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 1,
+      "impactFrame0": 1,
+      "anchorPixelsTopLeft": [
+        80,
+        84
+      ],
+      "unityPivot": [
+        0.5,
+        0.475
+      ],
+      "pixelsPerUnit": 128,
+      "source": "alias Sprites/Objetos/casa-de-lava/idle",
+      "sha256": "151450fb8ee7ed6196be9125b73dc6d79635cb8199deda4011de414b33a63135"
+    },
+    {
+      "resource": "Sprites/Efeitos/gelo/loop",
+      "file": "unity/Sprites/Efeitos/gelo/loop.png",
+      "frameSize": 160,
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        80,
+        120
+      ],
+      "unityPivot": [
+        0.5,
+        0.25
+      ],
+      "pixelsPerUnit": 128,
+      "source": "alias Sprites/Objetos/casa-congelada/idle",
+      "sha256": "396dd5d8c3333e4a0ecb0c4be807102112a06b4184a3b979f9c1625cfea0482a"
+    },
+    {
+      "resource": "Sprites/Efeitos/fogos/loop",
+      "file": "unity/Sprites/Efeitos/fogos/loop.png",
+      "frameSize": 64,
+      "frames": 16,
+      "fps": 12,
+      "loop": true,
+      "peakFrame0": 2,
+      "impactFrame0": 2,
+      "anchorPixelsTopLeft": [
+        30,
+        19
+      ],
+      "unityPivot": [
+        0.46875,
+        0.703125
+      ],
+      "pixelsPerUnit": 128,
+      "source": "alias Sprites/Objetos/marcador-de-fogos/idle",
+      "sha256": "16806b4aa5c7f4d6180166910acb6e5ceebd4035a57a8293ec69c8a0d8e57f75"
+    }
+  ],
+  "sampling": {
+    "filter": "Point",
+    "mipmaps": false,
+    "compression": "None",
+    "alphaIsTransparency": true
+  },
+  "note": "Não importar Biblioteca no Resources; são peças-fonte. GIFs são prévias; PNGs RGBA são a entrega."
+}

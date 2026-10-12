@@ -1,0 +1,177 @@
+[
+  {
+    "id": "mare-de-lava",
+    "effect_id": "2aeba610-434c-4243-a0ea-8c0c2d243421",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/028a0c60-4c63-4968-9764-e329b1989605/",
+    "zip": "arena-mar-de-lava-sol-v2-game.zip",
+    "raw": "saved to My effects: 'Arena · Maré de lava · Sol v2' (effect id 2aeba610-434c-4243-a0ea-8c0c2d243421, replaced); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=2aeba610-434c-4243-a0ea-8c0c2d243421\n160x160, 24 frames @ 12 fps, plays once; anchor (origin) at 80,84\ndownload https://api.pixellab.ai/mcp/pixel-tools/028a0c60-4c63-4968-9764-e329b1989605/: arena-mar-de-lava-sol-v2-game.zip, arena-mar-de-lava-sol-v2.gif, arena-mar-de-lava-sol-v2.json, arena-mar-de-lava-sol-v2.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: 028a0c60-4c63-4968-9764-e329b1989605 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['6a4b0f50-d01d-40f9-8c8b-35dee44faac2', 'export', '--name', \"Arena \\u00b7 Mar\\u00e9 de lava \\u00b7 Sol v2\", '--replace', '2aeba610-434c-4243-a0ea-8c0c2d243421'])"
+  },
+  {
+    "id": "eco-ancestral",
+    "effect_id": "1e8cfdb2-88ca-439a-8a31-ccf831224c3a",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/fd86538f-b6ac-4fc1-a1a6-a14a5572aeac/",
+    "zip": "arena-eco-ancestral-sol-game.zip",
+    "raw": "saved to My effects: 'Arena eco-ancestral Sol' (effect id 1e8cfdb2-88ca-439a-8a31-ccf831224c3a); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=1e8cfdb2-88ca-439a-8a31-ccf831224c3a\n80x124, 14 frames @ 14 fps, plays once; anchor (origin) at 40,106\ndownload https://api.pixellab.ai/mcp/pixel-tools/fd86538f-b6ac-4fc1-a1a6-a14a5572aeac/: arena-eco-ancestral-sol-game.zip, arena-eco-ancestral-sol.gif, arena-eco-ancestral-sol.json, arena-eco-ancestral-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: fd86538f-b6ac-4fc1-a1a6-a14a5572aeac (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['30502530-0b61-49b2-bf5e-0ecb11811922', 'export', '--name', \"Arena eco-ancestral Sol\", '--replace', '1e8cfdb2-88ca-439a-8a31-ccf831224c3a'])"
+  },
+  {
+    "id": "portal-caotico",
+    "effect_id": "2b9a742e-7ff1-4768-bf2b-1a25974af54b",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/27db2088-2296-412e-9fa0-d7e1babfdc7f/",
+    "zip": "arena-portal-caotico-sol-game.zip",
+    "raw": "saved to My effects: 'Arena portal-caotico Sol' (effect id 2b9a742e-7ff1-4768-bf2b-1a25974af54b); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=2b9a742e-7ff1-4768-bf2b-1a25974af54b\n144x161, 12 frames @ 12 fps, loops; anchor (origin) at 72,80\ndownload https://api.pixellab.ai/mcp/pixel-tools/27db2088-2296-412e-9fa0-d7e1babfdc7f/: arena-portal-caotico-sol-game.zip, arena-portal-caotico-sol.gif, arena-portal-caotico-sol.json, arena-portal-caotico-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: 27db2088-2296-412e-9fa0-d7e1babfdc7f (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['5a75986c-7574-45c6-a585-a85f6cba26d0', 'export', '--name', \"Arena portal-caotico Sol\", '--replace', '2b9a742e-7ff1-4768-bf2b-1a25974af54b'])"
+  },
+  {
+    "id": "mare-de-energia",
+    "effect_id": "1bc347eb-c26d-4c8e-be67-ed3f2b83f2a9",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/80446ef2-4ad0-4ed9-a831-ae6b364d4e4a/",
+    "zip": "arena-mare-de-energia-sol-game.zip",
+    "raw": "saved to My effects: 'Arena mare-de-energia Sol' (effect id 1bc347eb-c26d-4c8e-be67-ed3f2b83f2a9); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=1bc347eb-c26d-4c8e-be67-ed3f2b83f2a9\n70x124, 12 frames @ 12 fps, plays once; anchor (origin) at 35,93\ndownload https://api.pixellab.ai/mcp/pixel-tools/80446ef2-4ad0-4ed9-a831-ae6b364d4e4a/: arena-mare-de-energia-sol-game.zip, arena-mare-de-energia-sol.gif, arena-mare-de-energia-sol.json, arena-mare-de-energia-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: 80446ef2-4ad0-4ed9-a831-ae6b364d4e4a (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['531ef734-900f-430e-ac54-2d035fa250bc', 'export', '--name', \"Arena mare-de-energia Sol\", '--replace', '1bc347eb-c26d-4c8e-be67-ed3f2b83f2a9'])"
+  },
+  {
+    "id": "vendaval",
+    "effect_id": "30bd9340-8b6a-4365-a4d8-b15e7bce4b0d",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/c8bf6855-e8fd-42f4-a672-3e82c6c2a039/",
+    "zip": "arena-vendaval-sol-game.zip",
+    "raw": "saved to My effects: 'Arena vendaval Sol' (effect id 30bd9340-8b6a-4365-a4d8-b15e7bce4b0d); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=30bd9340-8b6a-4365-a4d8-b15e7bce4b0d\n131x68, 12 frames @ 14 fps, plays once; anchor (origin) at 67,31\ndownload https://api.pixellab.ai/mcp/pixel-tools/c8bf6855-e8fd-42f4-a672-3e82c6c2a039/: arena-vendaval-sol-game.zip, arena-vendaval-sol.gif, arena-vendaval-sol.json, arena-vendaval-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: c8bf6855-e8fd-42f4-a672-3e82c6c2a039 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['6448ca9a-17ae-42da-b164-7ccc30b07361', 'export', '--name', \"Arena vendaval Sol\", '--replace', '30bd9340-8b6a-4365-a4d8-b15e7bce4b0d'])"
+  },
+  {
+    "id": "terremoto",
+    "effect_id": "c75d1083-abe2-44d7-98f7-31fbb4bc739d",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/e0440d30-5264-4095-a184-21a1c8817b15/",
+    "zip": "arena-terremoto-sol-game.zip",
+    "raw": "saved to My effects: 'Arena terremoto Sol' (effect id c75d1083-abe2-44d7-98f7-31fbb4bc739d); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=c75d1083-abe2-44d7-98f7-31fbb4bc739d\n99x78, 12 frames @ 12 fps, plays once; anchor (origin) at 49,29\ndownload https://api.pixellab.ai/mcp/pixel-tools/e0440d30-5264-4095-a184-21a1c8817b15/: arena-terremoto-sol-game.zip, arena-terremoto-sol.gif, arena-terremoto-sol.json, arena-terremoto-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: e0440d30-5264-4095-a184-21a1c8817b15 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['a6ec03c5-ddeb-4985-a305-5c87652079f0', 'export', '--name', \"Arena terremoto Sol\", '--replace', 'c75d1083-abe2-44d7-98f7-31fbb4bc739d'])"
+  },
+  {
+    "id": "festival-de-fogos",
+    "effect_id": "cb20beb0-3d92-443c-baec-0bb786140309",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/d3252d6f-3c00-4cfa-a8d1-e0d467ac5daa/",
+    "zip": "arena-festival-de-fogos-sol-game.zip",
+    "raw": "saved to My effects: 'Arena festival-de-fogos Sol' (effect id cb20beb0-3d92-443c-baec-0bb786140309); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=cb20beb0-3d92-443c-baec-0bb786140309\n94x129, 16 frames @ 12 fps, plays once; anchor (origin) at 47,61\ndownload https://api.pixellab.ai/mcp/pixel-tools/d3252d6f-3c00-4cfa-a8d1-e0d467ac5daa/: arena-festival-de-fogos-sol-game.zip, arena-festival-de-fogos-sol.gif, arena-festival-de-fogos-sol.json, arena-festival-de-fogos-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: d3252d6f-3c00-4cfa-a8d1-e0d467ac5daa (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['7894f872-bc7e-444a-8360-3b7da3208aec', 'export', '--name', \"Arena festival-de-fogos Sol\", '--replace', 'cb20beb0-3d92-443c-baec-0bb786140309'])"
+  },
+  {
+    "id": "nevoeiro",
+    "effect_id": "6a7adaab-0336-4cb9-9e90-ffa63446f126",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/ec8e1277-f51b-4c2a-9a7d-422fb6a3646a/",
+    "zip": "arena-nevoeiro-sol-game.zip",
+    "raw": "saved to My effects: 'Arena nevoeiro Sol' (effect id 6a7adaab-0336-4cb9-9e90-ffa63446f126); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=6a7adaab-0336-4cb9-9e90-ffa63446f126\n241x104, 16 frames @ 12 fps, plays once; anchor (origin) at 124,55\ndownload https://api.pixellab.ai/mcp/pixel-tools/ec8e1277-f51b-4c2a-9a7d-422fb6a3646a/: arena-nevoeiro-sol-game.zip, arena-nevoeiro-sol.gif, arena-nevoeiro-sol.json, arena-nevoeiro-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: ec8e1277-f51b-4c2a-9a7d-422fb6a3646a (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['d7b4a900-b532-4209-b15b-6041954e9b64', 'export', '--name', \"Arena nevoeiro Sol\", '--replace', '6a7adaab-0336-4cb9-9e90-ffa63446f126'])"
+  },
+  {
+    "id": "chuva-de-moedas",
+    "effect_id": "9b84b9e4-eb9e-4988-bf30-c26f9f2615d1",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/be102996-77dc-460c-8480-8260e7ff228e/",
+    "zip": "arena-chuva-de-moedas-sol-game.zip",
+    "raw": "saved to My effects: 'Arena chuva-de-moedas Sol' (effect id 9b84b9e4-eb9e-4988-bf30-c26f9f2615d1); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=9b84b9e4-eb9e-4988-bf30-c26f9f2615d1\n160x160, 24 frames @ 12 fps, plays once; anchor (origin) at 80,114\ndownload https://api.pixellab.ai/mcp/pixel-tools/be102996-77dc-460c-8480-8260e7ff228e/: arena-chuva-de-moedas-sol-game.zip, arena-chuva-de-moedas-sol.gif, arena-chuva-de-moedas-sol.json, arena-chuva-de-moedas-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: be102996-77dc-460c-8480-8260e7ff228e (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['d667eb64-895a-479b-91fd-114cc6111ec7', 'export', '--name', \"Arena chuva-de-moedas Sol\", '--replace', '9b84b9e4-eb9e-4988-bf30-c26f9f2615d1'])"
+  },
+  {
+    "id": "queda-de-pedras",
+    "effect_id": "daa5df9e-baae-493f-866b-0522efd18d4e",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/b3204792-0160-4329-a402-ded5c87455a3/",
+    "zip": "arena-queda-de-pedras-sol-game.zip",
+    "raw": "saved to My effects: 'Arena queda-de-pedras Sol' (effect id daa5df9e-baae-493f-866b-0522efd18d4e); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=daa5df9e-baae-493f-866b-0522efd18d4e\n160x160, 24 frames @ 12 fps, plays once; anchor (origin) at 80,114\ndownload https://api.pixellab.ai/mcp/pixel-tools/b3204792-0160-4329-a402-ded5c87455a3/: arena-queda-de-pedras-sol-game.zip, arena-queda-de-pedras-sol.gif, arena-queda-de-pedras-sol.json, arena-queda-de-pedras-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: b3204792-0160-4329-a402-ded5c87455a3 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['a87fb40c-8ee7-4dc6-a5b9-06e73c4f57ce', 'export', '--name', \"Arena queda-de-pedras Sol\", '--replace', 'daa5df9e-baae-493f-866b-0522efd18d4e'])"
+  },
+  {
+    "id": "lib-natureza",
+    "effect_id": "22902d78-a6d8-4999-bb10-f478840ad14f",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/87fa42d2-ee90-4227-9159-4f16e8a3fb08/",
+    "zip": "arena-biblioteca-natureza-sol-game.zip",
+    "raw": "saved to My effects: 'Arena biblioteca natureza Sol' (effect id 22902d78-a6d8-4999-bb10-f478840ad14f); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=22902d78-a6d8-4999-bb10-f478840ad14f\n704x704, 14 frames @ 10 fps, loops; anchor (origin) at 0,0\ndownload https://api.pixellab.ai/mcp/pixel-tools/87fa42d2-ee90-4227-9159-4f16e8a3fb08/: arena-biblioteca-natureza-sol-game.zip, arena-biblioteca-natureza-sol.gif, arena-biblioteca-natureza-sol.json, arena-biblioteca-natureza-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: 87fa42d2-ee90-4227-9159-4f16e8a3fb08 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['0572da7a-c1eb-442f-91ed-ec4a65ac3278', 'export', '--name', \"Arena biblioteca natureza Sol\", '--replace', '22902d78-a6d8-4999-bb10-f478840ad14f'])"
+  },
+  {
+    "id": "lib-golpes",
+    "effect_id": "086e4d66-f8cb-424c-bb09-cbf75c11c023",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/3c47d6eb-52e5-4977-b45d-ab33a0a124f2/",
+    "zip": "arena-biblioteca-golpes-sol-game.zip",
+    "raw": "saved to My effects: 'Arena biblioteca golpes Sol' (effect id 086e4d66-f8cb-424c-bb09-cbf75c11c023); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=086e4d66-f8cb-424c-bb09-cbf75c11c023\n704x704, 12 frames @ 14 fps, plays once; anchor (origin) at 0,0\ndownload https://api.pixellab.ai/mcp/pixel-tools/3c47d6eb-52e5-4977-b45d-ab33a0a124f2/: arena-biblioteca-golpes-sol-game.zip, arena-biblioteca-golpes-sol.gif, arena-biblioteca-golpes-sol.json, arena-biblioteca-golpes-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: 3c47d6eb-52e5-4977-b45d-ab33a0a124f2 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['67ecfd2c-8d89-4c5f-9c36-a41f32440fb5', 'export', '--name', \"Arena biblioteca golpes Sol\", '--replace', '086e4d66-f8cb-424c-bb09-cbf75c11c023'])"
+  },
+  {
+    "id": "lib-estados",
+    "effect_id": "629e47f5-4a7f-492d-b646-49ede98f10f1",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/e19654a7-b9ec-4749-a8ea-7431709a01c6/",
+    "zip": "arena-biblioteca-estados-sol-game.zip",
+    "raw": "saved to My effects: 'Arena biblioteca estados Sol' (effect id 629e47f5-4a7f-492d-b646-49ede98f10f1); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=629e47f5-4a7f-492d-b646-49ede98f10f1\n704x704, 24 frames @ 12 fps, loops; anchor (origin) at 0,0\ndownload https://api.pixellab.ai/mcp/pixel-tools/e19654a7-b9ec-4749-a8ea-7431709a01c6/: arena-biblioteca-estados-sol-game.zip, arena-biblioteca-estados-sol.gif, arena-biblioteca-estados-sol.json, arena-biblioteca-estados-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\ntoo big for the pixel tools to open as an image (the files are complete)\nnext: vfx_workbench(argv=['75024cb8-5455-4cca-9436-a91fe68f3fb4', 'export', '--name', \"Arena biblioteca estados Sol\", '--replace', '629e47f5-4a7f-492d-b646-49ede98f10f1'])"
+  },
+  {
+    "id": "lib-desejos",
+    "effect_id": "a274a7f3-47e5-4085-9ad3-26ef4be9101d",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/d083545b-d1c1-40fa-88e1-c6cb11b73b0f/",
+    "zip": "arena-biblioteca-desejos-sol-game.zip",
+    "raw": "saved to My effects: 'Arena biblioteca desejos Sol' (effect id a274a7f3-47e5-4085-9ad3-26ef4be9101d); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=a274a7f3-47e5-4085-9ad3-26ef4be9101d\n704x800, 24 frames @ 14 fps, plays once; anchor (origin) at 0,0\ndownload https://api.pixellab.ai/mcp/pixel-tools/d083545b-d1c1-40fa-88e1-c6cb11b73b0f/: arena-biblioteca-desejos-sol-game.zip, arena-biblioteca-desejos-sol.gif, arena-biblioteca-desejos-sol.json, arena-biblioteca-desejos-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\ntoo big for the pixel tools to open as an image (the files are complete)\nnext: vfx_workbench(argv=['bed3cfcc-f860-46a4-9d69-1ca68a3b6ba6', 'export', '--name', \"Arena biblioteca desejos Sol\", '--replace', 'a274a7f3-47e5-4085-9ad3-26ef4be9101d'])"
+  },
+  {
+    "id": "lib-magias",
+    "effect_id": "dda025a7-1585-4a1b-9f51-1b624858cb15",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/218d4c85-8d29-4e9a-a494-a94585c03a29/",
+    "zip": "arena-biblioteca-magias-sol-game.zip",
+    "raw": "saved to My effects: 'Arena biblioteca magias Sol' (effect id dda025a7-1585-4a1b-9f51-1b624858cb15); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=dda025a7-1585-4a1b-9f51-1b624858cb15\n704x800, 16 frames @ 14 fps, plays once; anchor (origin) at 0,0\ndownload https://api.pixellab.ai/mcp/pixel-tools/218d4c85-8d29-4e9a-a494-a94585c03a29/: arena-biblioteca-magias-sol-game.zip, arena-biblioteca-magias-sol.gif, arena-biblioteca-magias-sol.json, arena-biblioteca-magias-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\ntoo big for the pixel tools to open as an image (the files are complete)\nnext: vfx_workbench(argv=['c4690597-c6a0-4986-8233-8afd813039b5', 'export', '--name', \"Arena biblioteca magias Sol\", '--replace', 'dda025a7-1585-4a1b-9f51-1b624858cb15'])"
+  },
+  {
+    "id": "lib-loja",
+    "effect_id": "17fc4b60-40c1-4bea-b816-4e9046259cc0",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/6fa48c2a-9ea4-455d-ace8-20aefd220122/",
+    "zip": "arena-biblioteca-loja-sol-game.zip",
+    "raw": "saved to My effects: 'Arena biblioteca loja Sol' (effect id 17fc4b60-40c1-4bea-b816-4e9046259cc0); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=17fc4b60-40c1-4bea-b816-4e9046259cc0\n704x800, 16 frames @ 12 fps, plays once; anchor (origin) at 0,0\ndownload https://api.pixellab.ai/mcp/pixel-tools/6fa48c2a-9ea4-455d-ace8-20aefd220122/: arena-biblioteca-loja-sol-game.zip, arena-biblioteca-loja-sol.gif, arena-biblioteca-loja-sol.json, arena-biblioteca-loja-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\ntoo big for the pixel tools to open as an image (the files are complete)\nnext: vfx_workbench(argv=['eb6ddca7-5a98-4370-9553-51adeb3fdc79', 'export', '--name', \"Arena biblioteca loja Sol\", '--replace', '17fc4b60-40c1-4bea-b816-4e9046259cc0'])"
+  },
+  {
+    "id": "lib-conjuracao",
+    "effect_id": "ce2d88e5-dd8e-45c3-aff6-2f946c686e54",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/3a9f9ceb-a4a3-4cb2-b2c4-ce8a0fbf12cf/",
+    "zip": "arena-biblioteca-conjuracao-sol-game.zip",
+    "raw": "saved to My effects: 'Arena biblioteca conjuracao Sol' (effect id ce2d88e5-dd8e-45c3-aff6-2f946c686e54); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=ce2d88e5-dd8e-45c3-aff6-2f946c686e54\n704x704, 14 frames @ 12 fps, plays once; anchor (origin) at 0,0\ndownload https://api.pixellab.ai/mcp/pixel-tools/3a9f9ceb-a4a3-4cb2-b2c4-ce8a0fbf12cf/: arena-biblioteca-conjuracao-sol-game.zip, arena-biblioteca-conjuracao-sol.gif, arena-biblioteca-conjuracao-sol.json, arena-biblioteca-conjuracao-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: 3a9f9ceb-a4a3-4cb2-b2c4-ce8a0fbf12cf (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['bb4da3ab-c626-4a28-8ff7-267b72946858', 'export', '--name', \"Arena biblioteca conjuracao Sol\", '--replace', 'ce2d88e5-dd8e-45c3-aff6-2f946c686e54'])"
+  },
+  {
+    "id": "lib-projeteis",
+    "effect_id": "33a5a72f-7852-41e6-aa5d-5d3db126f036",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/8f70d19e-cce8-4e03-a844-63ff51f63b0e/",
+    "zip": "arena-biblioteca-projeteis-sol-game.zip",
+    "raw": "saved to My effects: 'Arena biblioteca projeteis Sol' (effect id 33a5a72f-7852-41e6-aa5d-5d3db126f036); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=33a5a72f-7852-41e6-aa5d-5d3db126f036\n704x704, 8 frames @ 12 fps, loops; anchor (origin) at 0,0\ndownload https://api.pixellab.ai/mcp/pixel-tools/8f70d19e-cce8-4e03-a844-63ff51f63b0e/: arena-biblioteca-projeteis-sol-game.zip, arena-biblioteca-projeteis-sol.gif, arena-biblioteca-projeteis-sol.json, arena-biblioteca-projeteis-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: 8f70d19e-cce8-4e03-a844-63ff51f63b0e (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['e98f827b-bc97-4844-9493-77303b46cbbc', 'export', '--name', \"Arena biblioteca projeteis Sol\", '--replace', '33a5a72f-7852-41e6-aa5d-5d3db126f036'])"
+  },
+  {
+    "id": "glyph-martelo-cristal",
+    "effect_id": "5756ebad-96fa-4f1c-8ec7-02afc9b89b2a",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/63f05e81-c504-4e3c-aa2c-8f893dbb291b/",
+    "zip": "arena-martelo-cristal-sol-game.zip",
+    "raw": "saved to My effects: 'Arena martelo-cristal Sol' (effect id 5756ebad-96fa-4f1c-8ec7-02afc9b89b2a); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=5756ebad-96fa-4f1c-8ec7-02afc9b89b2a\n160x160, 16 frames @ 12 fps, plays once; anchor (origin) at 80,102\ndownload https://api.pixellab.ai/mcp/pixel-tools/63f05e81-c504-4e3c-aa2c-8f893dbb291b/: arena-martelo-cristal-sol-game.zip, arena-martelo-cristal-sol.gif, arena-martelo-cristal-sol.json, arena-martelo-cristal-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: 63f05e81-c504-4e3c-aa2c-8f893dbb291b (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['7336d89e-9024-4dc3-80d2-573963d20628', 'export', '--name', \"Arena martelo-cristal Sol\", '--replace', '5756ebad-96fa-4f1c-8ec7-02afc9b89b2a'])"
+  },
+  {
+    "id": "glyph-corrente-fisica",
+    "effect_id": "47fbe22b-9c77-4430-a693-a03f5f489160",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/f551ec1e-f48e-45c5-b164-d4b53aaa9253/",
+    "zip": "arena-corrente-fisica-sol-game.zip",
+    "raw": "saved to My effects: 'Arena corrente-fisica Sol' (effect id 47fbe22b-9c77-4430-a693-a03f5f489160); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=47fbe22b-9c77-4430-a693-a03f5f489160\n160x160, 16 frames @ 12 fps, plays once; anchor (origin) at 25,80\ndownload https://api.pixellab.ai/mcp/pixel-tools/f551ec1e-f48e-45c5-b164-d4b53aaa9253/: arena-corrente-fisica-sol-game.zip, arena-corrente-fisica-sol.gif, arena-corrente-fisica-sol.json, arena-corrente-fisica-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: f551ec1e-f48e-45c5-b164-d4b53aaa9253 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['08a2703b-8312-49b8-bad2-3fd13e3d36f4', 'export', '--name', \"Arena corrente-fisica Sol\", '--replace', '47fbe22b-9c77-4430-a693-a03f5f489160'])"
+  },
+  {
+    "id": "glyph-pena-fenix",
+    "effect_id": "eb70f121-c2fb-4a10-8cd8-328b728e2596",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/0eef5125-fb6d-46b6-a198-70cc1053b8f0/",
+    "zip": "arena-pena-fenix-sol-game.zip",
+    "raw": "saved to My effects: 'Arena pena-fenix Sol' (effect id eb70f121-c2fb-4a10-8cd8-328b728e2596); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=eb70f121-c2fb-4a10-8cd8-328b728e2596\n160x160, 16 frames @ 12 fps, plays once; anchor (origin) at 80,102\ndownload https://api.pixellab.ai/mcp/pixel-tools/0eef5125-fb6d-46b6-a198-70cc1053b8f0/: arena-pena-fenix-sol-game.zip, arena-pena-fenix-sol.gif, arena-pena-fenix-sol.json, arena-pena-fenix-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: 0eef5125-fb6d-46b6-a198-70cc1053b8f0 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['3fb80f9f-64ef-49a3-bd75-d65ed2a317aa', 'export', '--name', \"Arena pena-fenix Sol\", '--replace', 'eb70f121-c2fb-4a10-8cd8-328b728e2596'])"
+  },
+  {
+    "id": "glyph-ancora-fantasma",
+    "effect_id": "ea37a4e5-db4b-447e-b1e3-b74c4404d1d7",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/caff4f65-55d6-4343-8ecb-7140b84145b6/",
+    "zip": "arena-ancora-fantasma-sol-game.zip",
+    "raw": "saved to My effects: 'Arena ancora-fantasma Sol' (effect id ea37a4e5-db4b-447e-b1e3-b74c4404d1d7); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=ea37a4e5-db4b-447e-b1e3-b74c4404d1d7\n160x160, 16 frames @ 12 fps, plays once; anchor (origin) at 80,102\ndownload https://api.pixellab.ai/mcp/pixel-tools/caff4f65-55d6-4343-8ecb-7140b84145b6/: arena-ancora-fantasma-sol-game.zip, arena-ancora-fantasma-sol.gif, arena-ancora-fantasma-sol.json, arena-ancora-fantasma-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: caff4f65-55d6-4343-8ecb-7140b84145b6 (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['0d1d2a22-ae00-47e0-8b36-dcd71c3fccc5', 'export', '--name', \"Arena ancora-fantasma Sol\", '--replace', 'ea37a4e5-db4b-447e-b1e3-b74c4404d1d7'])"
+  },
+  {
+    "id": "glyph-desejo-itens",
+    "effect_id": "8f13e30e-e432-4fc8-afd8-2fdf8ea5f3ab",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/b0197d56-cba3-484a-bad5-3f866f0eee0b/",
+    "zip": "arena-desejo-itens-sol-game.zip",
+    "raw": "saved to My effects: 'Arena desejo-itens Sol' (effect id 8f13e30e-e432-4fc8-afd8-2fdf8ea5f3ab); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=8f13e30e-e432-4fc8-afd8-2fdf8ea5f3ab\n160x160, 16 frames @ 12 fps, plays once; anchor (origin) at 80,102\ndownload https://api.pixellab.ai/mcp/pixel-tools/b0197d56-cba3-484a-bad5-3f866f0eee0b/: arena-desejo-itens-sol-game.zip, arena-desejo-itens-sol.gif, arena-desejo-itens-sol.json, arena-desejo-itens-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: b0197d56-cba3-484a-bad5-3f866f0eee0b (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['03bd3b00-5409-4f0b-a1e5-9bde655962bf', 'export', '--name', \"Arena desejo-itens Sol\", '--replace', '8f13e30e-e432-4fc8-afd8-2fdf8ea5f3ab'])"
+  },
+  {
+    "id": "glyph-desejo-apagar",
+    "effect_id": "3959eb37-0d8b-442c-907a-d16dbb053021",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/b3173793-0c37-45ba-8434-989fcb678feb/",
+    "zip": "arena-desejo-apagar-sol-game.zip",
+    "raw": "saved to My effects: 'Arena desejo-apagar Sol' (effect id 3959eb37-0d8b-442c-907a-d16dbb053021); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=3959eb37-0d8b-442c-907a-d16dbb053021\n160x160, 16 frames @ 12 fps, plays once; anchor (origin) at 80,102\ndownload https://api.pixellab.ai/mcp/pixel-tools/b3173793-0c37-45ba-8434-989fcb678feb/: arena-desejo-apagar-sol-game.zip, arena-desejo-apagar-sol.gif, arena-desejo-apagar-sol.json, arena-desejo-apagar-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: b3173793-0c37-45ba-8434-989fcb678feb (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['2f287180-690e-4f17-a3ed-fe32ad11bdb9', 'export', '--name', \"Arena desejo-apagar Sol\", '--replace', '3959eb37-0d8b-442c-907a-d16dbb053021'])"
+  },
+  {
+    "id": "glyph-devorar-essencia",
+    "effect_id": "3cea26ba-7bad-4010-b9da-6e29b2a3766e",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/145298a6-7090-4276-8fc5-7df2ece2007c/",
+    "zip": "arena-devorar-essencia-sol-game.zip",
+    "raw": "saved to My effects: 'Arena devorar-essencia Sol' (effect id 3cea26ba-7bad-4010-b9da-6e29b2a3766e); open it to tweak with sliders: https://pixellab.ai/create-vfx?effect=3cea26ba-7bad-4010-b9da-6e29b2a3766e\n160x160, 16 frames @ 12 fps, plays once; anchor (origin) at 25,100\ndownload https://api.pixellab.ai/mcp/pixel-tools/145298a6-7090-4276-8fc5-7df2ece2007c/: arena-devorar-essencia-sol-game.zip, arena-devorar-essencia-sol.gif, arena-devorar-essencia-sol.json, arena-devorar-essencia-sol.png\nthe game pack: one sheet per piece (the whole effect, behind and in front of the sprite, each part) + manifest.json (what each clip is and where it goes: anchor + offset) + README.txt\nimage id: 145298a6-7090-4276-8fc5-7df2ece2007c (its frames, image 1; for pixelart_workbench inspect/edit or save_to_asset)\nnext: vfx_workbench(argv=['1299ee31-03fb-49e1-9e21-fd2e42daca82', 'export', '--name', \"Arena devorar-essencia Sol\", '--replace', '3cea26ba-7bad-4010-b9da-6e29b2a3766e'])"
+  }
+]

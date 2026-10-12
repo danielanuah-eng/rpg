@@ -1,0 +1,91 @@
+{
+  "resumo": "Revisei ui/arena.js, ui/arena.css, ui/index.html, ui/conteudo.js, empacotar.py, verificar.py, assets.visual.json (só os trechos filtrados: entradas dos dois personagens, martelo-perfurante e verificacao.json) e as 3 contact sheets. Falhas concretas: navegação (item Personagens é destino duplicado de Jogar e nunca fica ativo; a tela arena não tem item de nav correspondente; navegação por botões usa replaceState, então o Voltar do navegador não volta tela), busca sem tratamento de acentos (não encontra Guardião/Príncipe/Canhão digitados sem acento), remover da equipe derruba o foco para o body, corrida no pause/reduced-motion que volta a congelar GIFs depois de retomar, e painel da equipe oculto no celular (display:none, sem alternativa). Sem falha encontrada em corte de alfa dos assets (verificacao.json com errors vazio; as 3 tiras de personagem têm alfa e 4/6/4 frames medidos) e nos pivôs dos dois personagens (âncora nos pés e deslocamento comum de 4/22 px). Ficam 3 dúvidas: frame 0 descartado nos reparos, impactFrame0 do martelo fixado em 6 contra peakFrame0=1, e a impossibilidade de ver o protótipo renderizado.",
+  "achados": [
+    {
+      "afirmacao": "Navegação: o botão Personagens tem o mesmo destino do botão Jogar (data-screen selecao) e por isso nunca pode ficar marcado como ativo/aria-current; o código exclui explicitamente qualquer botão de selecao cujo texto não seja Jogar. Ou seja, dois itens de menu apontam para a mesma tela e um deles é permanentemente inativo.",
+      "arquivo": "ui/arena.js",
+      "linha": 3,
+      "trecho": "const active=b.dataset.screen===id&&(id!=='selecao'||b.textContent.trim()==='Jogar');",
+      "ok": false
+    },
+    {
+      "afirmacao": "Prova do destino duplicado no HTML: os dois botões da barra apontam para a mesma tela selecao, e o card Personagens da home também leva para selecao. Sempre que a tela selecao abre, Jogar é o item destacado, mesmo tendo sido clicado em Personagens.",
+      "arquivo": "ui/index.html",
+      "linha": 5,
+      "trecho": "<button data-screen=\"selecao\">Jogar</button><button data-screen=\"selecao\">Personagens</button>",
+      "ok": false
+    },
+    {
+      "afirmacao": "Navegação/histórico: cada troca de tela faz history.replaceState, ou seja, substitui a entrada atual em vez de empilhar. Como todos os botões passam por screen(), o botão Voltar do navegador não retorna à tela anterior quando a navegação foi só por botões; o hash muda na URL mas não cria histórico. O único elemento que empilha histórico é o link da marca (href=#inicio). Não verifiquei isso em navegador por falta de servidor local.",
+      "arquivo": "ui/arena.js",
+      "linha": 3,
+      "trecho": "history.replaceState(null,'','#'+id);",
+      "ok": false
+    },
+    {
+      "afirmacao": "Foco/estado: a tela arena não tem nenhum botão de nav com data-screen=arena (nav só tem inicio, selecao, selecao, mapas, efeitos), então ao entrar em Ver arena nenhum item do menu fica destacado e a orientação do menu se perde.",
+      "arquivo": "ui/arena.js",
+      "linha": 3,
+      "trecho": "document.querySelectorAll('nav button').forEach(b=>{const active=b.dataset.screen===id",
+      "ok": false
+    },
+    {
+      "afirmacao": "Busca: o filtro só faz toLocaleLowerCase, sem remover acentos (confirmei por busca que não existe normalize/NFD em ui/). Lutadores com acento no nome ou no papel não são encontrados sem acento: digitar guardiao, principe, canhao ou protecao devolve zero resultados e mostra o aviso Nenhum lutador encontrado.",
+      "arquivo": "ui/arena.js",
+      "linha": 7,
+      "trecho": "const q=document.querySelector('#search').value.trim().toLocaleLowerCase('pt-BR');",
+      "ok": false
+    },
+    {
+      "afirmacao": "Prova de que 4 dos 6 lutadores têm acento no texto pesquisado (nome+role), o que torna a falha de busca reprodutível.",
+      "arquivo": "ui/conteudo.js",
+      "linha": 1,
+      "trecho": "{\"id\": \"guardiao-de-musgo\", \"folder\": \"GuardiaoMusgo\", \"name\": \"Guardião de Musgo\", \"role\": \"Proteção e raízes\"",
+      "ok": false
+    },
+    {
+      "afirmacao": "Foco ao remover da equipe: o clique no botão × (classe remove) cai no mesmo handler dos cartões; como remove não tem classe fighter, focused é false, drawTeam() destrói o botão que tinha o foco e nada recebe o foco de volta. O foco cai para o body e o usuário de teclado perde a posição.",
+      "arquivo": "ui/arena.js",
+      "linha": 9,
+      "trecho": "const focused=button.classList.contains('fighter');drawRoster();drawTeam();",
+      "ok": false
+    },
+    {
+      "afirmacao": "Pausa/reduced-motion: quando a página abre com prefers-reduced-motion (paused=true) os GIFs ainda não carregaram, então fica registrado um listener de load por imagem que não é cancelado ao retomar. Se o usuário clicar em Retomar animações antes de os GIFs terminarem de carregar, o load pendente roda draw() e volta a esconder o GIF e mostrar o canvas congelado, embora o botão passe a dizer Pausar animações (estado inconsistente).",
+      "arquivo": "ui/arena.js",
+      "linha": 15,
+      "trecho": "else img.addEventListener('load',draw,{once:true})",
+      "ok": false
+    },
+    {
+      "afirmacao": "Telas pequenas: na media query de 760px o painel da equipe da tela arena é escondido por completo, junto com o texto da barra inferior, e não há botão nem outro lugar que mostre a equipe preparada, vida/PA/PM e a dica. No celular a tela arena fica só com o tabuleiro.",
+      "arquivo": "ui/arena.css",
+      "linha": 2,
+      "trecho": ".battle-panel{display:none}.battle-bottom p{display:none}",
+      "ok": false
+    },
+    {
+      "afirmacao": "Contagem 4/6/4 conferida nas duas fontes: manifesto e PNG real. idle_west.png 672x168 com frameSize 168 = 4 frames; walk_west.png 1056x176 com frameSize 176 = 6 frames; idle_north-west.png 704x176 com frameSize 176 = 4 frames. Os três PNGs devolveram transparência=true e alfa 0 nos quatro cantos. Não há falha aqui.",
+      "arquivo": "assets.visual.json",
+      "linha": 42,
+      "trecho": "\"frames\": 6,",
+      "imagem": "unity/Sprites/Baltazar/walk_west.png (1056x176, transparencia=true); unity/Sprites/Baltazar/idle_west.png (672x168); unity/Sprites/GuardiaoMusgo/idle_north-west.png (704x176)",
+      "ok": true
+    },
+    {
+      "afirmacao": "Alfa/recorte dos assets: o verificacao.json gerado (221 assets, 2753 frames, 54 loops) está com errors vazio e loopNotes vazio, e as 3 contact sheets não mostram cartão vazio nem cortado. Não encontrei falha de corte de alfa. Ressalva: não pude rodar verificar.py (só há comandos node liberados), então uso o resultado já gravado como evidência.",
+      "arquivo": "verificacao.json",
+      "linha": 5,
+      "trecho": "\"errors\": [],",
+      "imagem": "previews/contact-01.png, previews/contact-02.png, previews/contact-03.png",
+      "ok": true
+    }
+  ],
+  "pendencias": [
+    "Não consegui ver o protótipo renderizado: file:// foi recusado pela ferramenta de tela (só localhost) e http://localhost/ui/index.html deu ERR_CONNECTION_REFUSED. Os achados de nav/foco/telas pequenas são leitura de código, não de captura.",
+    "? O frame 0 das três pastas de reparos é descartado e rotulado removedReferenceFrame0, mas não é duplicata byte a byte do frame 1: empacotar.py:110 usa range(1,count+1) e downloads-reparos-baixados.json mostra 0.png com 11675 bytes/sha c7a0573 e 1.png com 12347 bytes; no walk são 7 originais para 6 frames entregues. Se 0.png for uma pose real, o ciclo entregue tem um quadro a menos que a fonte.",
+    "? em assets.visual.json:3939 o impactFrame0 de martelo-perfurante/uso é fixado em 6 por condição hardcoded (empacotar.py:68) embora peakFrame0 medido seja 1 (linha 3938). O frame 6 é válido na tira de 16, mas não é o de maior alfa medido; não sei qual é o impacto correto.",
+    "? verificar.py:31 repete exatamente os mesmos números de empacotar.py:108 (4,6,4), então essa checagem é circular: ela confirma o próprio valor do empacotador e não detectaria uma contagem errada de frames.",
+    "? A navegação usa replaceState, o que também significa que a URL é o único estado compartilhável; não há pushState, então deep link funciona mas histórico não. Não sei se o comportamento de Voltar sem histórico é aceito no projeto."
+  ]
+}

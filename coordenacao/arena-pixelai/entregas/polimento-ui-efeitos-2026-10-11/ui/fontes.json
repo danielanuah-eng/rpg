@@ -1,0 +1,65 @@
+[
+  {
+    "file": "art/baltazar.png",
+    "source": "ArenaTaticaUnity/Assets/ArenaTatica/Resources/Sprites/Baltazar/south.png",
+    "sourceSha256": "6b5be470719235d10f2b2a84f0b030f476bf34bab49e9bcd1188ab9bda209863",
+    "outputSha256": "6b5be470719235d10f2b2a84f0b030f476bf34bab49e9bcd1188ab9bda209863"
+  },
+  {
+    "file": "art/guardiao-de-musgo.png",
+    "source": "ArenaTaticaUnity/Assets/ArenaTatica/Resources/Sprites/GuardiaoMusgo/south.png",
+    "sourceSha256": "7629e013ea80018c90969a9ac4d5f5d3ba7f0c7d2cd89df97192e9921d4e2f4b",
+    "outputSha256": "7629e013ea80018c90969a9ac4d5f5d3ba7f0c7d2cd89df97192e9921d4e2f4b"
+  },
+  {
+    "file": "art/asamyh.png",
+    "source": "ArenaTaticaUnity/Assets/ArenaTatica/Resources/Sprites/Asamyh/south.png",
+    "sourceSha256": "6cff89c94a1616417028d6b19965f00521900332990d1e3936b3c5b065c65862",
+    "outputSha256": "6cff89c94a1616417028d6b19965f00521900332990d1e3936b3c5b065c65862"
+  },
+  {
+    "file": "art/principe-kellen.png",
+    "source": "ArenaTaticaUnity/Assets/ArenaTatica/Resources/Sprites/PrincipeKellen/south.png",
+    "sourceSha256": "666bf942d94541ac112dfe8e40820da9413b19cdfd2192148f601d4d89c365c3",
+    "outputSha256": "666bf942d94541ac112dfe8e40820da9413b19cdfd2192148f601d4d89c365c3"
+  },
+  {
+    "file": "art/cheiro-pneu.png",
+    "source": "ArenaTaticaUnity/Assets/ArenaTatica/Resources/Sprites/CheiroPneu/south.png",
+    "sourceSha256": "193f76410f1a896eda2472991fc1d3a5979a2e5641d4780e273023e8e0e7cb0a",
+    "outputSha256": "193f76410f1a896eda2472991fc1d3a5979a2e5641d4780e273023e8e0e7cb0a"
+  },
+  {
+    "file": "art/colosso.png",
+    "source": "ArenaTaticaUnity/Assets/ArenaTatica/Resources/Sprites/Colosso/south.png",
+    "sourceSha256": "5b4d1c31c66a79baa1b8697b03f438ca80311b538e4ff959636efebf47b2944f",
+    "outputSha256": "5b4d1c31c66a79baa1b8697b03f438ca80311b538e4ff959636efebf47b2944f"
+  },
+  {
+    "file": "art/mapa-bosque.png",
+    "source": "coordenacao/arena-pixelai/entregas/mapas-rotativos-2026-10-10/fontes/bosque-quatro-patios.blend",
+    "sourceSha256": "3e05ad2beae580b5cf8d5d032d22d875684ef87ccfb46028166afb68890691cd",
+    "outputSha256": "2333655c4353080037cb09990f92e12e847841319f4029dbd3f6a72e60f7e53d",
+    "method": "Blender, fundo transparente, câmera existente",
+    "previousPreview": "coordenacao/arena-pixelai/entregas/mapas-rotativos-2026-10-10/previews/bosque-quatro-patios-jogador-1.png",
+    "previousPreviewSha256": "2ed98641fbca28da0f9ab3240ec3f1efc02dc68bc7d11d8d32cbfa6694047166"
+  },
+  {
+    "file": "art/mapa-pedreira.png",
+    "source": "coordenacao/arena-pixelai/entregas/mapas-rotativos-2026-10-10/fontes/pedreira-anel-partido.blend",
+    "sourceSha256": "5a59dcb890177948d1a44add89958ebc6cc2cac09710bd405ad07b75371b7386",
+    "outputSha256": "b7514a4e7daa041de568ba09aa655dfe1c3ba6df51ce524b4f9f890d553575fb",
+    "method": "Blender, fundo transparente, câmera existente",
+    "previousPreview": "coordenacao/arena-pixelai/entregas/mapas-rotativos-2026-10-10/previews/pedreira-anel-partido-jogador-1.png",
+    "previousPreviewSha256": "f20cb95a0cc69c103d120338fab32904a1e232721dac5104ffd91a051d75d9d1"
+  },
+  {
+    "file": "art/mapa-neve.png",
+    "source": "coordenacao/arena-pixelai/entregas/mapas-rotativos-2026-10-10/fontes/neve-bastioes-diagonais.blend",
+    "sourceSha256": "ac6f1d93e31c001b7996137958b6c4225e345497f60ebfef86a4f32e00c74a5d",
+    "outputSha256": "affb1a5db75f1fdf6683644e3253dead60a5bb37c50bd11d79c6febba5a30302",
+    "method": "Blender, fundo transparente, câmera existente",
+    "previousPreview": "coordenacao/arena-pixelai/entregas/mapas-rotativos-2026-10-10/previews/neve-bastioes-diagonais-jogador-1.png",
+    "previousPreviewSha256": "7352b1ab65e4b3b7e4d5608ff8bffef30b8729a5cddd38835c5c3decca83624d"
+  }
+]

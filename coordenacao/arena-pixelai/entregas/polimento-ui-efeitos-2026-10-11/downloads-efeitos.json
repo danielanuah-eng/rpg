@@ -1,0 +1,102 @@
+[
+  {
+    "file": "efeitos/fontes/mare-de-lava.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/028a0c60-4c63-4968-9764-e329b1989605/arena-mar-de-lava-sol-v2-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/eco-ancestral.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/fd86538f-b6ac-4fc1-a1a6-a14a5572aeac/arena-eco-ancestral-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/portal-caotico.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/27db2088-2296-412e-9fa0-d7e1babfdc7f/arena-portal-caotico-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/mare-de-energia.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/80446ef2-4ad0-4ed9-a831-ae6b364d4e4a/arena-mare-de-energia-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/vendaval.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/c8bf6855-e8fd-42f4-a672-3e82c6c2a039/arena-vendaval-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/terremoto.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/e0440d30-5264-4095-a184-21a1c8817b15/arena-terremoto-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/festival-de-fogos.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/d3252d6f-3c00-4cfa-a8d1-e0d467ac5daa/arena-festival-de-fogos-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/nevoeiro.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/ec8e1277-f51b-4c2a-9a7d-422fb6a3646a/arena-nevoeiro-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/chuva-de-moedas.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/be102996-77dc-460c-8480-8260e7ff228e/arena-chuva-de-moedas-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/queda-de-pedras.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/b3204792-0160-4329-a402-ded5c87455a3/arena-queda-de-pedras-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/lib-natureza.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/87fa42d2-ee90-4227-9159-4f16e8a3fb08/arena-biblioteca-natureza-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/lib-golpes.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/3c47d6eb-52e5-4977-b45d-ab33a0a124f2/arena-biblioteca-golpes-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/lib-estados.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/e19654a7-b9ec-4749-a8ea-7431709a01c6/arena-biblioteca-estados-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/lib-desejos.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/d083545b-d1c1-40fa-88e1-c6cb11b73b0f/arena-biblioteca-desejos-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/lib-magias.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/218d4c85-8d29-4e9a-a494-a94585c03a29/arena-biblioteca-magias-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/lib-loja.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/6fa48c2a-9ea4-455d-ace8-20aefd220122/arena-biblioteca-loja-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/lib-conjuracao.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/3a9f9ceb-a4a3-4cb2-b2c4-ce8a0fbf12cf/arena-biblioteca-conjuracao-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/lib-projeteis.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/8f70d19e-cce8-4e03-a844-63ff51f63b0e/arena-biblioteca-projeteis-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/glyph-martelo-cristal.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/63f05e81-c504-4e3c-aa2c-8f893dbb291b/arena-martelo-cristal-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/glyph-corrente-fisica.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/f551ec1e-f48e-45c5-b164-d4b53aaa9253/arena-corrente-fisica-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/glyph-pena-fenix.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/0eef5125-fb6d-46b6-a198-70cc1053b8f0/arena-pena-fenix-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/glyph-ancora-fantasma.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/caff4f65-55d6-4343-8ecb-7140b84145b6/arena-ancora-fantasma-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/glyph-desejo-itens.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/b0197d56-cba3-484a-bad5-3f866f0eee0b/arena-desejo-itens-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/glyph-desejo-apagar.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/b3173793-0c37-45ba-8434-989fcb678feb/arena-desejo-apagar-sol-game.zip"
+  },
+  {
+    "file": "efeitos/fontes/glyph-devorar-essencia.zip",
+    "url": "https://api.pixellab.ai/mcp/pixel-tools/145298a6-7090-4276-8fc5-7df2ece2007c/arena-devorar-essencia-sol-game.zip"
+  }
+]

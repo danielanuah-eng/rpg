@@ -1,0 +1,7 @@
+# Auditoria somente leitura: efeitos realmente faltantes
+
+Não edite nem gere assets. Autor: corrigir somente Baltazar e Guardião de Musgo; depois priorizar TODOS os efeitos faltantes; saldo PixelLab pode ser usado, e Blender é alternativa se acabar. As animações dos demais personagens ficam fora das correções. Claude deve aprovar a entrega automaticamente, conforme autorização atual do autor.
+
+Leia focalmente tarefas 004,006,007,010,014,015,016 e os registros/manifestos de efeitos que correspondam aos pedidos mais recentes. Não despejar JSON grande: extraia campos por script. Use no máximo 12 chamadas de investigação e conclua em até 1000 palavras. Compare gerado/revisado/exportado/integrado para eventos de campo, impactos, projéteis, uso de itens, status e objetos animados. Avisos centrais dos 12 Cataclisma já produzidos em fechamento-arena-2026-10-11/eventos-centrais; não são efeitos de campo. Props Blender desse lote já prontos. Não os repetir. Não investigar clipes de outros personagens.
+
+Devolva tabela pequena de pendências acionáveis: ID, tipo, arquivos existentes para reuso, formato/frames/fps/pivô/impacto pedidos, prioridade e evidência arquivo:linha. Aponte conflitos com ?, e diferencie falta na entrega de falta de importação. Citar registros mais novos que contradigam tarefas antigas. Nenhuma varredura fora desta pasta de código, nenhuma credencial ou documento pessoal.

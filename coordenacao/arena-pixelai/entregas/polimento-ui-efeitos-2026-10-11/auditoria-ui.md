@@ -1,0 +1,5 @@
+# Auditoria somente leitura: frontend Arena Tática
+
+Não edite arquivos: ArenaMenu.cs e ArenaHud.cs têm mudanças concorrentes do Claude. Analise só os scripts ArenaMenu.cs, ArenaHud.cs e os pontos visuais relevantes de ArenaPresentation.cs, mais metadados/recursos visuais necessários. Nunca ler credenciais nem documentos pessoais. Use no máximo 10 chamadas de investigação e conclua em até 700 palavras.
+
+O autor quer layout mais bonito, botões de seleção por retrato e um modelo visual de tela inicial. Codex produz o visual; Claude integra. Informe arquivo:linha para: framework de UI, árvore gerada e nomes dos elementos, telas e fluxo existente, criação dos botões/seleção, carregamento dos retratos, resoluções/pivôs/layout, pontos mínimos para um tema visual separado sem mudar regras nem sobrescrever código concorrente. Aponte assets de arena e retratos reais que possam ser usados na prévia. Inclua comandos de validação disponíveis e dúvidas com ?. Não executar Unity, compilação ou testes; não afirmar integração.

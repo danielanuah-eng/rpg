@@ -1,0 +1,42 @@
+[
+  {
+    "file": "efeitos/fontes/obj-bau-recompensa.zip",
+    "bytes": 7102,
+    "sha256": "d450db6e1f0217f8a5bae3aacc9a0329af9f7d47b0ef5bf0595b03f8733ecedf"
+  },
+  {
+    "file": "efeitos/fontes/obj-prisao-dos-pesadelos.zip",
+    "bytes": 10452,
+    "sha256": "cab34de8d01d699b1c0790e05224e9a935bba60a52fbc4497651cc7ffda7aeb0"
+  },
+  {
+    "file": "efeitos/fontes/obj-portal-de-rocha.zip",
+    "bytes": 22969,
+    "sha256": "279879a95f943a31ad6e4bb89a98d96fa393557b9c8dcae8335595382bc2c3cf"
+  },
+  {
+    "file": "efeitos/fontes/obj-buraco-papa-moedas.zip",
+    "bytes": 9275,
+    "sha256": "54f8494e907057369eaafe4547a5f2a27f6942cc8c1fef2c0e8352638d7efcea"
+  },
+  {
+    "file": "efeitos/fontes/obj-casa-resfriada.zip",
+    "bytes": 7716,
+    "sha256": "e4b9c683bb1828edc466ef63d63962338d22870ae9360760a715b06c20e126b8"
+  },
+  {
+    "file": "efeitos/fontes/obj-casa-congelada.zip",
+    "bytes": 8404,
+    "sha256": "c7dfa6711b7c375de94b7066a9fe34473755795447bbba0f5bc889679ec2443b"
+  },
+  {
+    "file": "efeitos/fontes/obj-mina-de-gelo-armada.zip",
+    "bytes": 8626,
+    "sha256": "a7af82ba832b4b587e0695037c895485bee5af67bd3ed5699672f6f88da1a326"
+  },
+  {
+    "file": "efeitos/fontes/obj-aura-gatinho.zip",
+    "bytes": 3126,
+    "sha256": "5e4f37f59d2c4fb0b52d585852741bfff1f3bf90a03bcc0f11d9cfabea6f1a16"
+  }
+]
