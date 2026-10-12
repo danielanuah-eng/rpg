@@ -79,7 +79,10 @@ namespace ArenaTatica
         // Toque ou clique sem arrastar é a ação na casa. fitSize é o enquadramento do tabuleiro inteiro.
         // Vista: 4 lados (90° cada), só neste aparelho; girar não muda casas, alcance nem turno (tarefa 012/013).
         public int View { get; private set; }
-        Vector3 CameraHome => Quaternion.Euler(0,90*View,0)*new Vector3(36,36,36);
+        // Vista de tabuleiro: quase de cima (CameraPitch) e um pouco de lado (CameraSide graus a partir de um lado da mesa).
+        public const float CameraPitch=60,CameraSide=20,CameraDistance=62;
+        static Vector3 SideDirection(int view) => Quaternion.Euler(0,90*view+CameraSide,0)*Vector3.back;
+        Vector3 CameraHome => (SideDirection(View)*Mathf.Cos(CameraPitch*Mathf.Deg2Rad)+Vector3.up*Mathf.Sin(CameraPitch*Mathf.Deg2Rad))*CameraDistance;
         // Posição de repouso: CameraHome deslocada para o tabuleiro ficar no centro da parte livre da tela (FitCamera).
         Vector3 homeShift; Vector3 Home => CameraHome+homeShift;
         float fitSize=1,pinchDistance; bool pressing,pressOnBoard,dragged,pinching,touchPress; Vector2 pressStart,lastDrag,pinchCenter;
@@ -515,10 +518,8 @@ namespace ArenaTatica
                 bounds=renderers[0].bounds; foreach(var r in renderers) bounds.Encapsulate(r.bounds);
                 visual.position+=new Vector3(root.position.x-bounds.center.x,root.position.y-bounds.min.y,root.position.z-bounds.center.z);
             }
-            // Sprite: de pé, virado para a câmera (que não gira); a direção do lutador escolhe o quadro.
-            visual.localRotation=sprite?Quaternion.Euler(0,BoardCamera.transform.eulerAngles.y,0):Quaternion.Euler(0,14.3f,0);
-            // De pé sob a câmera inclinada, a figura sairia achatada (cos 35° ≈ 82% da altura); estica de volta.
-            if(sprite) visual.localScale=Vector3.Scale(visual.localScale,new Vector3(1,1/Mathf.Cos(BoardCamera.transform.eulerAngles.x*Mathf.Deg2Rad),1));
+            // Sprite: encara a câmera de frente (inclinado com ela: não achata nem atravessa blocos atrás); a direção do lutador escolhe o quadro.
+            visual.localRotation=sprite?BoardCamera.transform.rotation:Quaternion.Euler(0,14.3f,0);
             if(Content.Fighters[f.def].flying) visual.localPosition+=Vector3.up*.35f;
             foreach(var t in visual.GetComponentsInChildren<Transform>()) if(t.name.StartsWith("Wing")||t.name.StartsWith("Asa")) { wings.Add(t); wingRest[t]=t.localRotation; }
             var color=TeamColor(f.team); if(f.summoner!=0) color=Color.Lerp(color,Violet,.45f);
@@ -829,10 +830,9 @@ namespace ArenaTatica
         public void RotateView(int delta)
         {
             View=((View+delta)%4+4)%4; FitCamera(); FitSky();
-            float yaw=BoardCamera.transform.eulerAngles.y;
             foreach(var kv in rigs.ToList()) {
                 if(!kv.Key) { rigs.Remove(kv.Key); continue; }
-                kv.Key.localRotation=Quaternion.Euler(0,yaw,0);
+                kv.Key.localRotation=BoardCamera.transform.rotation;
                 if(kv.Value.facing!=Vector3.zero&&kv.Key.parent) Turn(kv.Key.parent,kv.Value.facing);
             }
             Game.Notify(new[]{"Vista: lado 1","Vista: lado 2","Vista: lado 3","Vista: lado 4"}[View]+" (Q/E giram).");
@@ -843,7 +843,7 @@ namespace ArenaTatica
             var own=s.fighters.Where(f=>f.Alive&&s.Ally(f.team,Game.ViewerTeam)).Select(f=>Position(s,f.cell)).ToList();
             if(own.Count==0) return;
             var center=own.Aggregate(Vector3.zero,(a,p)=>a+p)/own.Count;
-            int best=Enumerable.Range(0,4).OrderByDescending(k=>Vector3.Dot(Quaternion.Euler(0,90*k,0)*new Vector3(1,0,1),center)).First();
+            int best=Enumerable.Range(0,4).OrderByDescending(k=>Vector3.Dot(SideDirection(k),center)).First();
             if(best!=View) RotateView(best-View);
         }
         // Quadros por pasta lidos uma vez; cada unidade ganha seu próprio rig (estado do clipe) apontando para eles.
@@ -946,7 +946,7 @@ namespace ArenaTatica
                 void Place(SpriteRenderer r,Sprite[] frames,float angle) {
                     if(!r) return;
                     r.transform.position=center+new Vector3(Mathf.Cos(angle),Mathf.Sin(t*2.3f+angle)*.12f,Mathf.Sin(angle))*radius;
-                    r.transform.rotation=Quaternion.Euler(0,BoardCamera.transform.eulerAngles.y,0);
+                    r.transform.rotation=BoardCamera.transform.rotation;
                     if(frames!=null&&frames.Length>0) r.sprite=frames[Mathf.Min(frame,frames.Length-1)];
                 }
                 Place(pair.angel,angelFrames,t); Place(pair.demon,demonFrames,t+Mathf.PI);

@@ -382,6 +382,27 @@ namespace ArenaTatica
             if(initial) { View.ResetView(State); ArenaStats.Begin(); } else { var list=m.events?.ToList()??new List<GameEvent>(); View.Play(list,State); ArenaStats.Record(list,State); }
             Status=$"Partida sincronizada. Você é P{Seat}.";
         }
+        // Conferência da câmera sem editor: partida contra bots, uma imagem por vista (4 lados) e fecha.
+        // NewLocal para todas as corrotinas: a partida começa antes e a captura depois.
+        void BoardShots(string prefix)
+        {
+            Menu?.Close(); VsBots=true; StartLocal(new[]{new[]{"damian","baltazar"},new[]{"ogro-de-pedra","perry"}});
+            StartCoroutine(Shots(System.IO.Path.GetFullPath(prefix)));
+        }
+        IEnumerator Shots(string prefix)
+        {
+            System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(prefix+"-x.png"));
+            yield return new WaitForSecondsRealtime(2.5f);
+            // Renderiza a câmera do tabuleiro numa textura (funciona também com -batchmode, sem janela).
+            var cam=View.BoardCamera; var rt=new RenderTexture(1600,900,24); var tex=new Texture2D(1600,900,TextureFormat.RGB24,false);
+            for(int v=0;v<4;v++) {
+                var old=cam.targetTexture; cam.targetTexture=rt; cam.Render(); cam.targetTexture=old;
+                RenderTexture.active=rt; tex.ReadPixels(new Rect(0,0,1600,900),0,0); tex.Apply(); RenderTexture.active=null;
+                System.IO.File.WriteAllBytes($"{prefix}-vista{v}.png",tex.EncodeToPNG()); Debug.Log("ARENA_SHOT "+v);
+                View.RotateView(1); yield return new WaitForSecondsRealtime(.8f);
+            }
+            Application.Quit();
+        }
         IEnumerator CommandLineRun()
         {
             yield return null;
@@ -399,6 +420,7 @@ namespace ArenaTatica
                 if(args[i]=="--arena-room") HostRoom();
                 if(args[i]=="--arena-room-join"&&i+1<args.Length) Join(args[++i]);
                 if(args[i]=="--arena-smoke") gameObject.AddComponent<ArenaSmoke>();
+                if(args[i]=="--arena-shot") BoardShots(i+1<args.Length?args[i+1]:"Artifacts/tabuleiro");
             }
             // Aberto por um convite: página com ?sala= ou deep link que iniciou o app.
             if(RoomFromLink(Application.absoluteURL) is string invited) { Menu.Close(); Join(invited); }
