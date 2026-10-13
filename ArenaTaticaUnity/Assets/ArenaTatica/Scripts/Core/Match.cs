@@ -16,7 +16,8 @@ namespace ArenaTatica.Core
         {
             var players=setup.players!=null&&setup.players.Length>=2?setup.players:new[]{ new PlayerSetup{fighters=setup.team1}, new PlayerSetup{fighters=setup.team2} };
             int n=Math.Min(players.Length,MatchState.MaxPlayers), size=Board.SizeFor(n);
-            var m=new Match(); var s=m.S=new MatchState { rng=setup.seed==0?1:setup.seed, mode=setup.mode, players=n, width=size, height=size, edits=Content.EditsJson };
+            var m=new Match(); var s=m.S=new MatchState { rng=setup.seed==0?1:setup.seed, mode=setup.mode, players=n, width=size, height=size, edits=Content.EditsJson,
+                turnMode=setup.turns, shopPool=(setup.shopItems??new string[0]).Where(id=>Shop.Def(id)!=null).Distinct().ToArray() };
             s.target=setup.target>0?setup.target:setup.mode==VictoryMode.Tesouro?15:5;
             // Times numerados 1..K na ordem dos assentos; time 0 no setup = jogador sozinho.
             var keys=new List<string>();
@@ -63,15 +64,25 @@ namespace ArenaTatica.Core
             var f=new Fighter { id=S.nextId++, def=def, team=team, hp=d.hp, cell=cell, summoner=summoner, form=d.startForm };
             S.fighters.Add(f); return f;
         }
-        // Ezequiela começa com uma cópia ilusória dela numa casa vizinha livre; os inimigos a veem como Ezequiela.
+        // Ezequiela começa com uma cópia ilusória dela colada (vizinha livre sorteada); os inimigos a veem como Ezequiela.
+        // Autor (13/10): sempre uma do lado da outra, mas sem dar para saber qual é qual: casa, id, ordem na lista e na
+        // linha do tempo são sorteados entre as duas.
         void SpawnIllusions()
         {
             foreach(var f in S.fighters.Where(x=>x.summoner==0&&Content.Def(x).illusion).ToList())
             {
-                var free=Board.Dirs.Select(d=>f.cell+d).Concat(Board.Dirs.Select(d=>f.cell+d+d)).FirstOrDefault(c=>Board.Contains(S,c)&&Board.Walkable(S,c,false)&&Board.At(S,c)==null);
-                if(!Board.Contains(S,free)||free==f.cell) continue;
-                var copy=Spawn("ilusao",f.team,free,f.id); copy.disguise=f.def;
-                S.timeline.Insert(S.timeline.IndexOf(f.id)+1,copy.id);
+                bool Free(Cell c) => Board.Contains(S,c)&&Board.Walkable(S,c,false)&&Board.At(S,c)==null;
+                var near=Board.Dirs.Select(d=>f.cell+d).Where(Free).ToList();
+                if(near.Count==0) near=Board.Dirs.Select(d=>f.cell+d+d).Where(Free).ToList();
+                if(near.Count==0) continue;
+                var copy=Spawn("ilusao",f.team,near[Dice.Range(S,near.Count)],f.id); copy.disguise=f.def;
+                if(Dice.Range(S,2)==0) { var c=f.cell; f.cell=copy.cell; copy.cell=c; }
+                if(Dice.Range(S,2)==0)
+                {
+                    int i=S.timeline.IndexOf(f.id); (f.id,copy.id)=(copy.id,f.id); copy.summoner=f.id; S.timeline[i]=f.id;
+                    S.fighters.Remove(copy); S.fighters.Insert(S.fighters.IndexOf(f),copy);
+                }
+                int at=S.timeline.IndexOf(f.id); S.timeline.Insert(Dice.Range(S,2)==0?at:at+1,copy.id);
             }
         }
         // Krosmaster (livro de regras): no turno de um jogador, TODOS os lutadores dele jogam em sequência, da maior Iniciativa para a menor
@@ -86,7 +97,16 @@ namespace ArenaTatica.Core
             var teams=seats.GroupBy(S.Team).Select(g=>g.OrderByDescending(p=>Score(Own(p)).sum).ThenByDescending(p=>Score(Own(p)).top).ThenBy(p=>p).ToList())
                 .OrderByDescending(g=>Score(g.SelectMany(Own)).sum).ThenByDescending(g=>Score(g.SelectMany(Own)).top).ThenBy(g=>S.Team(g[0])).ToList();
             S.timeline.Clear();
-            for(int i=0;i<teams.Max(g=>g.Count);i++) foreach(var g in teams) if(i<g.Count) S.timeline.AddRange(Own(g[i]).Select(f=>f.id));
+            if(S.turnMode==TurnMode.Alternada)
+            {
+                // Iniciativa alternada: cada time põe na fila o seu próximo lutador (maior Iniciativa primeiro; no empate,
+                // os jogadores do time se revezam).
+                var queues=teams.Select(g=>{ var lists=g.Select(Own).ToList(); var q=new List<Fighter>();
+                    for(int i=0;i<lists.Max(l=>l.Count);i++) foreach(var l in lists) if(i<l.Count) q.Add(l[i]);
+                    return q.OrderByDescending(Init).ThenBy(f=>q.IndexOf(f)).ToList(); }).ToList();
+                for(int i=0;i<queues.Max(q=>q.Count);i++) foreach(var q in queues) if(i<q.Count) S.timeline.Add(q[i].id);
+            }
+            else for(int i=0;i<teams.Max(g=>g.Count);i++) foreach(var g in teams) if(i<g.Count) S.timeline.AddRange(Own(g[i]).Select(f=>f.id));
             S.active=0;
         }
 
@@ -134,6 +154,9 @@ namespace ArenaTatica.Core
                 if(t.trap!=0&&!S.Ally(t.trap,f.team)&&!flying) { Spring(f,t,after); break; }
             }
             if(walked.Count>1) Emit(new GameEvent{kind="mover",actor=f.id,path=walked.ToArray()});
+            // Esbarrar: quem termina o movimento colado num inimigo escondido o revela.
+            if(f.Alive) foreach(var h in S.fighters.Where(x=>x.Alive&&x.hidden&&!S.Ally(x.team,f.team)&&x.cell.Distance(f.cell)==1).ToList())
+            { h.hidden=false; after.Add(new GameEvent{kind="revelar",actor=f.id,target=h.id,cell=h.cell}); }
             events.AddRange(after);
             if(!f.Alive) KO(f);
             return true;
@@ -141,7 +164,7 @@ namespace ArenaTatica.Core
         // Armadilha inimiga: dano fixo menos armadura e o movimento acaba ali.
         void Spring(Fighter f,Tile t,List<GameEvent> log)
         {
-            int dmg=Math.Max(0,t.trapDamage-Armor(f));
+            int dmg=Ghost(f)?0:Math.Max(0,t.trapDamage-Armor(f));
             f.pm=0;
             // Mina de gelo: também tira PA no próximo turno.
             if(t.trapPa>0) f.buffs.Add(new Buff{id="gelo",turns=2,pa=-t.trapPa});
@@ -152,10 +175,12 @@ namespace ArenaTatica.Core
         // Lava (evento): 2 de dano de fogo, menos armadura.
         void Burn(Fighter f,List<GameEvent> log)
         {
-            int dmg=Math.Max(0,2-Armor(f));
+            int dmg=Ghost(f)?0:Math.Max(0,2-Armor(f));
             log.Add(new GameEvent{kind="lava",target=f.id,cell=f.cell,value=dmg});
             Hurt(f,dmg,log);
         }
+        // Escondido anda no máximo HiddenPm casas por turno (nerf do autor, 13/10).
+        public const int HiddenPm=2;
         // Forma fantasma (Edgar): golpes de inimigos não o acertam.
         static bool Ghost(Fighter v) => Content.Form(v)?.intangible??false;
         int Armor(Fighter f) => f.armor+Content.Def(f).armor+f.buffs.Sum(b=>b.armor)+(Content.Form(f)?.armor??0)+Passive(f,PassiveStat.Armadura);
@@ -176,7 +201,8 @@ namespace ArenaTatica.Core
         // O nocaute (e o renascer) fica para quem chamou, depois do evento do golpe.
         void Hurt(Fighter v,int dmg,List<GameEvent> log)
         {
-            if(dmg<=0) return;
+            // Forma fantasma: nada fere (golpes, área, aura, armadilha, lava, batida, eventos).
+            if(dmg<=0||Ghost(v)) return;
             var guard=S.fighters.FirstOrDefault(g=>g.Alive&&g.id!=v.id&&S.Ally(g.team,v.team)&&Content.Def(g).guard&&!(Content.Form(g)?.noGuard??false)&&g.cell.Distance(v.cell)<=2);
             if(guard!=null) { dmg--; guard.hp=Math.Max(0,guard.hp-1); log.Add(new GameEvent{kind="guarda",actor=guard.id,target=v.id,value=1,cell=guard.cell}); }
             v.hp=Math.Max(0,v.hp-dmg);
@@ -295,8 +321,8 @@ namespace ArenaTatica.Core
             }
             if(sk.kind!=SkillKind.Comando&&!InRange(f,sk,c,out reason)) return false;
             var v=Board.At(S,c);
-            // Escondido: para o inimigo a casa parece vazia.
-            if(v!=null&&v.hidden&&!S.Ally(v.team,f.team)) v=null;
+            // Escondido: para o inimigo a casa parece vazia, menos colado nele (golpe de frente acerta; nerf do autor, 13/10).
+            if(v!=null&&v.hidden&&!S.Ally(v.team,f.team)&&f.cell.Distance(c)>1) v=null;
             // Preso na estrutura da Prisão dos pesadelos: ninguém o alcança.
             if(v!=null&&v!=f&&v.prisoned>0&&!sk.selfArea) { reason="Preso na estrutura: não pode ser alvo."; return false; }
             switch(sk.kind)
@@ -436,7 +462,7 @@ namespace ArenaTatica.Core
                 }
                 case SkillKind.Forma: SetForm(f,sk.toForm,sk.turns,sk.id); break;
                 case SkillKind.Esconder:
-                    f.hidden=true; Emit(new GameEvent{kind="esconder",actor=f.id,info=sk.id,cell=f.cell});
+                    f.hidden=true; f.pm=Math.Min(f.pm,HiddenPm); Emit(new GameEvent{kind="esconder",actor=f.id,info=sk.id,cell=f.cell});
                     break;
                 case SkillKind.Espelho:
                 {
@@ -491,7 +517,7 @@ namespace ArenaTatica.Core
             var inside=S.fighters.Where(x=>x.Alive&&x!=f&&x.prisoned==0&&x.cell.Distance(f.cell)<=sk.area).ToList();
             foreach(var a in inside.Where(x=>S.Ally(x.team,f.team))) if(sk.heal>0) Heal(a,sk.heal,f,sk.id);
             var log=new List<GameEvent>(); var hit=inside.Where(x=>!S.Ally(x.team,f.team)).ToList();
-            foreach(var v in hit) if(sk.damage>0) { log.Add(new GameEvent{kind="dano-evento",actor=f.id,target=v.id,value=sk.damage,info=sk.id,cell=v.cell}); Hurt(v,sk.damage,log); }
+            foreach(var v in hit) if(sk.damage>0) { log.Add(new GameEvent{kind="dano-evento",actor=f.id,target=v.id,value=Ghost(v)?0:sk.damage,info=sk.id,cell=v.cell}); Hurt(v,sk.damage,log); }
             events.AddRange(log); striker=f;
             foreach(var v in hit) if(!v.Alive) KO(v);
             striker=null;
@@ -611,7 +637,7 @@ namespace ArenaTatica.Core
             if(sk.selfArea) Emit(new GameEvent{kind="area",actor=f.id,info=sk.id,cell=f.cell,value=sk.area,dice=new[]{a,d}});
             foreach(var v in targets)
             {
-                bool ghost=Ghost(v)&&!S.Ally(v.team,f.team);
+                bool ghost=Ghost(v);
                 bool shield=Dice.Armor(d)&&!sk.precise&&!sk.pierce;
                 int alone=sk.isolatedBonus>0&&!S.fighters.Any(x=>x.Alive&&x!=v&&S.Ally(x.team,v.team)&&x.cell.Distance(v.cell)==1)?sk.isolatedBonus:0;
                 int dmg=missed||ghost||sk.damage<=0?0:Math.Max(0,sk.damage+bonus+alone-(shield?1:0)-(sk.pierce?0:Armor(v)));
@@ -758,6 +784,7 @@ namespace ArenaTatica.Core
             foreach(var w in f.cooldowns) w.uses--;
             f.cooldowns.RemoveAll(w=>w.uses<=0);
             f.pa=Math.Max(0,d.pa+f.bonusPa+f.buffs.Sum(b=>b.pa)+(form?.pa??0)+Passive(f,PassiveStat.PA)); f.pm=Math.Max(0,d.pm+f.bonusPm+f.buffs.Sum(b=>b.pm)+(form?.pm??0)+Passive(f,PassiveStat.PM)); f.used.Clear(); f.bought=false; f.focusUsed=false;
+            if(f.hidden) f.pm=Math.Min(f.pm,HiddenPm);
             // Chão de gelo dura até o próximo turno de quem congelou.
             foreach(var t in S.tiles) if(t.frozenBy==f.id) t.frozenBy=0;
             Emit(new GameEvent{kind="turno",actor=f.id,value=S.round});
@@ -937,7 +964,7 @@ namespace ArenaTatica.Core
                     Emit(new GameEvent{kind="explosao",cell=c,info=S.ev});
                     foreach(var v in S.fighters.Where(x=>x.Alive&&x.prisoned==0&&x.cell.Distance(c)<=1).ToList())
                     {
-                        var d=Roll(); int dmg=Math.Max(0,2-(Dice.Armor(d)?1:0)-Armor(v)); var log=new List<GameEvent>();
+                        var d=Roll(); int dmg=Ghost(v)?0:Math.Max(0,2-(Dice.Armor(d)?1:0)-Armor(v)); var log=new List<GameEvent>();
                         Emit(new GameEvent{kind="dano-evento",target=v.id,value=dmg,info=S.ev,cell=v.cell,dice=new[]{d}});
                         Hurt(v,dmg,log); events.AddRange(log); if(!v.Alive) KO(v);
                     }

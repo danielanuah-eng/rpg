@@ -222,7 +222,7 @@ namespace ArenaTatica
         {
             var go=new GameObject(label,typeof(RectTransform),typeof(Image),typeof(Button),typeof(LayoutElement)); go.transform.SetParent(panel,false);
             go.GetComponent<Image>().color=Idle; go.GetComponent<LayoutElement>().preferredHeight=26;
-            var b=go.GetComponent<Button>(); b.onClick.AddListener(()=>click());
+            var b=ArenaTema.Lerp(go.GetComponent<Button>()); b.onClick.AddListener(()=>click());
             var t=new GameObject("Texto",typeof(RectTransform),typeof(Text)).GetComponent<Text>(); t.transform.SetParent(go.transform,false);
             var r=t.rectTransform; r.anchorMin=Vector2.zero; r.anchorMax=Vector2.one; r.offsetMin=r.offsetMax=Vector2.zero;
             t.font=font; t.fontSize=13; t.color=Ink; t.alignment=TextAnchor.MiddleCenter; t.text=label;

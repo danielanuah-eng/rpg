@@ -88,7 +88,7 @@ namespace ArenaTatica
         static readonly Color Bg=ArenaTema.Background, Panel=ArenaTema.Panel, Edge=ArenaTema.Border, Ink=ArenaTema.Ink, Muted=ArenaTema.Muted,
             Gold=ArenaTema.Selected, Blue=ArenaTema.Pm, Green=ArenaTema.Healing, Red=ArenaTema.Hp, Pink=Hex(0xd27aa6), Idle=ArenaTema.Raised, Chosen=ArenaTema.SelectedFill;
         static Color Hex(int rgb) => new Color((rgb>>16&255)/255f,(rgb>>8&255)/255f,(rgb&255)/255f);
-        static readonly (string id,string name)[] Tabs={("inicio","Início"),("jogar","Jogar"),("personagens","Personagens"),("loja","Loja e eventos"),
+        static readonly (string id,string name)[] Tabs={("inicio","Início"),("jogar","Jogar"),("sala","Sala"),("personagens","Personagens"),("loja","Loja e eventos"),
             ("editor","Editor"),("mapas","Mapas"),("estatisticas","Estatísticas"),("regras","Regras"),("opcoes","Opções")};
         Font font; Canvas canvas; RectTransform root, body; Text title;
         readonly Dictionary<string,Image> tabButtons=new Dictionary<string,Image>();
@@ -124,8 +124,10 @@ namespace ArenaTatica
             if(title) title.gameObject.SetActive(!Portrait);
             // Girou o aparelho (ou a janela): remonta a aba aberta no arranjo da orientação nova.
             if(IsOpen&&shownPortrait!=Portrait) Show(tab);
+            // Sala: remonta quando alguém entra/sai ou o anfitrião muda algo.
+            else if(IsOpen&&tab=="sala"&&shownLobby!=Game.LobbyVersion) Show(tab);
         }
-        bool shownPortrait;
+        bool shownPortrait; int shownLobby=-1;
         // Texto que quebra linha mede a altura com a largura do quadro anterior: um segundo passe no quadro seguinte
         // evita cortar a última linha dos painéis (Novidades em 16:9).
         IEnumerator Relayout()
@@ -145,12 +147,13 @@ namespace ArenaTatica
 
         void Show(string t)
         {
-            tab=t; refreshers.Clear(); shownPortrait=Portrait; StartCoroutine(Relayout());
+            tab=t; refreshers.Clear(); shownPortrait=Portrait; shownLobby=Game.LobbyVersion; StartCoroutine(Relayout());
             foreach(Transform c in body) Destroy(c.gameObject);
             foreach(var kv in tabButtons) kv.Value.color=kv.Key==t?Chosen:Idle;
             switch(t)
             {
                 case "jogar": Play(); break;
+                case "sala": Room(); break;
                 case "personagens": Fighters(); break;
                 case "loja": ShopAndEvents(); break;
                 case "editor": Editor(); break;
@@ -196,39 +199,150 @@ namespace ArenaTatica
         void Play()
         {
             var c=Scroll(body);
-            Section(c,"Jogadores");
-            var row=Row(c,44);
-            for(int n=2;n<=MatchState.MaxPlayers;n++) { int k=n; Pick(Btn(row,n+" jogadores",()=>{ Game.SetSeats(k); Show("jogar"); },0,40),Game.Seats==k); }
-            Section(c,"Formato");
-            row=Row(c,44);
-            foreach(var f in ArenaGame.Formats.Where(f=>ArenaGame.FormatFits(f,Game.Seats))) { var k=f; Pick(Btn(row,ArenaGame.FormatName(f),()=>{ Game.SetFormat(k); Show("jogar"); },0,40),Game.Format==k); }
-            Section(c,"Vitória");
-            row=Row(c,44);
-            foreach(VictoryMode v in Enum.GetValues(typeof(VictoryMode))) { var k=v; Pick(Btn(row,VictoryName(v),()=>{ Game.Victory=k; Show("jogar"); },0,40),Game.Victory==k); }
-            Para(c,VictoryHelp(Game.Victory));
-            if(Game.Victory==VictoryMode.Galeoes) { row=Row(c,40); foreach(int g in new[]{8,12,16,20}) { int k=g; Pick(Btn(row,g+" Galeões",()=>{ Game.Galeoes=k; Show("jogar"); },0,36),Game.Galeoes==k); } }
-            Section(c,"Cenário");
-            row=Row(c,44);
-            for(int th=-1;th<MapGen.Themes.Length;th++) { int k=th; Pick(Btn(row,ArenaGame.ThemeName(th),()=>{ Game.SetTheme(k); Show("jogar"); },0,40),Game.Theme==k); }
-            Para(c,$"Mapa: <b>{MapLabel(Game.MapName)}</b> · troque ou crie mapas na aba Mapas. Os mapas do Codex já vêm com o cenário deles.");
+            MatchSettings(c,"jogar",true);
             Section(c,"Adversários");
-            row=Row(c,44);
+            var row=Row(c,44);
             Pick(Btn(row,"Pessoas (revezando o aparelho)",()=>{ Game.VsBots=false; Show("jogar"); },0,40),!Game.VsBots);
             Pick(Btn(row,"Bots (você é o P1)",()=>{ Game.VsBots=true; Show("jogar"); },0,40),Game.VsBots);
-            if(Game.VsBots) Para(c,"Você escolhe só o seu time; P2 em diante são bots com times aleatórios. No 2v2 e no 3v3, seus aliados também são bots.");
+            if(Game.VsBots) Para(c,"Você escolhe só o seu time; P2 em diante são bots com times aleatórios. Em equipes, seus aliados também são bots.");
             Section(c,"Neste aparelho");
             row=Row(c,56);
             Btn(row,"Escolher lutadores e jogar",()=>{ Close(); Game.Hud.OpenPicker(); },0,52,17).GetComponent<Image>().color=Chosen;
             Btn(row,"Partida rápida (times aleatórios)",()=>{ Close(); Game.StartLocal(Enumerable.Range(0,Game.Seats).Select(_=>ArenaGame.ValidTeam(Content.Roster.OrderBy(__=>UnityEngine.Random.value))).ToArray()); },0,52,16);
             Section(c,"Com amigos");
-            Para(c,$"Seu time nas salas: <b>{string.Join(", ",ArenaGame.MyTeam.Select(id=>Content.Fighters[id].name))}</b> (Nível {ArenaGame.MyTeam.Sum(id=>Content.Fighters[id].level)}/{ArenaGame.TeamLevel}). Troque na aba Personagens.");
+            Para(c,"Crie uma sala: primeiro você configura o modo (partida ou torneio), os turnos e a loja; depois libera na internet ou na rede local; a partida só começa quando você tocar em Iniciar.");
             row=Row(c,52);
-            Btn(row,"Criar sala na internet",()=>{ Close(); Game.HostRoom(); },0,48,16);
-            Btn(row,"Host na rede local",()=>{ Close(); Game.Host(); },0,48,16);
-            row=Row(c,52);
+            Btn(row,"Criar sala",()=>Game.OpenLobby(),0,48,16).GetComponent<Image>().color=Chosen;
+            Btn(row,"Ver a sala",()=>Show("sala"),0,48,16);
+            JoinRow(c);
+        }
+        void JoinRow(Transform c)
+        {
+            var row=Row(c,52);
             var input=Input(row,code,"Código da sala (6 letras) ou ws://IP:9080"); input.onValueChanged.AddListener(v=>code=v);
-            Btn(row,"Entrar",()=>{ if(string.IsNullOrWhiteSpace(code)) return; Close(); Game.Join(code.Trim()); },140,48,16);
-            Para(c,"<color=#a7b4c2>A sala usa as fichas e as edições do Host. O número de jogadores e o formato valem ao criar a sala.</color>");
+            Btn(row,"Entrar",()=>{ if(string.IsNullOrWhiteSpace(code)) return; Game.Join(code.Trim()); Show("sala"); },140,48,16);
+        }
+        // Configurações da partida, iguais no Jogar (local) e na Sala (anfitrião). seats: pode mudar o número de jogadores.
+        void MatchSettings(Transform c,string again,bool seats)
+        {
+            Transform row;
+            if(seats) {
+                Section(c,"Jogadores");
+                row=Row(c,44);
+                for(int n=2;n<=MatchState.MaxPlayers;n++) { int k=n; Pick(Btn(row,n+" jogadores",()=>{ Game.SetSeats(k); Show(again); },0,40),Game.Seats==k); }
+            }
+            if(!Game.Tournament||again=="jogar") {
+                Section(c,"Formato");
+                row=Row(c,44);
+                foreach(var f in ArenaGame.Formats.Where(f=>f=="equipes"||ArenaGame.FormatFits(f,Game.Seats))) { var k=f; Pick(Btn(row,ArenaGame.FormatName(f),()=>{ Game.SetFormat(k); Show(again); },0,40),Game.Format==k); }
+                if(Game.Format=="equipes") {
+                    // Modo de equipes livre: cada assento escolhe o time (A, B ou C).
+                    row=Row(c,44);
+                    for(int s=1;s<=Game.Seats;s++) { int k=s; Btn(row,$"P{k}: Time {"ABC"[ArenaGame.CustomTeams[k-1]-1]}",()=>{ Game.CycleCustomTeam(k); Show(again); },0,40,14); }
+                    if(!ArenaGame.FormatFits("equipes",Game.Seats)) Para(c,"<color=#ef6f7a>Ponha pelo menos dois times diferentes.</color>");
+                }
+            }
+            Section(c,"Turnos");
+            row=Row(c,44);
+            Pick(Btn(row,"Jogador completo (Krosmaster)",()=>{ Game.SetTurns(TurnMode.Completo); Show(again); },0,40),Game.Turns==TurnMode.Completo);
+            Pick(Btn(row,"Iniciativa alternada",()=>{ Game.SetTurns(TurnMode.Alternada); Show(again); },0,40),Game.Turns==TurnMode.Alternada);
+            Para(c,Game.Turns==TurnMode.Completo?"Cada jogador joga o time inteiro, do lutador de maior Iniciativa para o de menor, e passa a vez.":"Um lutador de cada time por vez, da maior Iniciativa para a menor: o time A joga 1, o B joga 1, e assim por diante.");
+            Section(c,"Vitória");
+            row=Row(c,44);
+            foreach(VictoryMode v in Enum.GetValues(typeof(VictoryMode))) { var k=v; Pick(Btn(row,VictoryName(v),()=>{ Game.SetVictory(k); Show(again); },0,40),Game.Victory==k); }
+            Para(c,VictoryHelp(Game.Victory));
+            if(Game.Victory==VictoryMode.Galeoes) { row=Row(c,40); foreach(int g in new[]{8,12,16,20}) { int k=g; Pick(Btn(row,g+" Galeões",()=>{ Game.SetGaleoes(k); Show(again); },0,36),Game.Galeoes==k); } }
+            Section(c,"Cenário");
+            row=Row(c,44);
+            for(int th=-1;th<MapGen.Themes.Length;th++) { int k=th; Pick(Btn(row,ArenaGame.ThemeName(th),()=>{ Game.SetTheme(k); Show(again); },0,40),Game.Theme==k); }
+            Para(c,$"Mapa: <b>{MapLabel(Game.MapName)}</b> · troque ou crie mapas na aba Mapas. Os mapas do Codex já vêm com o cenário deles.");
+            Section(c,"Itens da loja");
+            Para(c,$"<color=#a7b4c2>Toque para ligar ou desligar cada item desta sala ({(ArenaGame.ShopItems.Count==0?"todos ligados":$"{ArenaGame.ShopItems.Count} de {Shop.Catalog.Length} ligados")}).</color>");
+            row=Row(c,40); Btn(row,"Ligar todos",()=>{ Game.AllShopItems(); Show(again); },160,36,13);
+            int i=0;
+            foreach(var d in Shop.Catalog) {
+                if(i++%4==0) row=Row(c,40);
+                var id=d.id; var b=Btn(row,$"{d.name} · {d.price}",()=>{ Game.ToggleShopItem(id); Show(again); },0,36,13);
+                Pick(b,ArenaGame.ShopItemOn(id)); if(!ArenaGame.ShopItemOn(id)) b.GetComponentInChildren<Text>().color=Muted;
+            }
+        }
+        // ── Sala: 1) configurar, 2) liberar (internet ou rede local), 3) iniciar. Cliente vê o resumo do anfitrião. ──
+        void Room()
+        {
+            var c=Scroll(body);
+            bool host=Game.Network.IsHost, client=Game.Client;
+            if(!host&&!client&&!Game.Setup)
+            {
+                Section(c,"Sala");
+                Para(c,"Crie uma sala para jogar com amigos ou entre com o código que recebeu.");
+                var r=Row(c,52); Btn(r,"Criar sala",()=>Game.OpenLobby(),0,48,16).GetComponent<Image>().color=Chosen;
+                JoinRow(c);
+                return;
+            }
+            if(client)
+            {
+                Section(c,Game.Lobby?$"Na sala como P{Game.Seat}":"Sala");
+                Para(c,string.IsNullOrEmpty(Game.LobbyText)?"Conectando…":Game.LobbyText);
+                var r=Row(c,48);
+                Btn(r,"Meu time",()=>Game.Hud.OpenPicker(),0,44,15);
+                Btn(r,"Minha pool (torneio)",()=>Game.Hud.OpenPool(),0,44,15);
+                Btn(r,"Sair da sala",()=>{ Game.NewLocal(); Show("sala"); },0,44,15);
+                Para(c,"<color=#a7b4c2>O anfitrião escolhe o modo e toca em Iniciar. Seu time e sua pool vão para a sala na hora.</color>");
+                return;
+            }
+            // Anfitrião.
+            var top=Row(c,30);
+            string[] steps={"1. Configurar","2. Liberar","3. Iniciar"}; int step=Game.Setup?0:Game.Lobby?1:2;
+            for(int s=0;s<steps.Length;s++) { var t=Label(top,steps[s],15,s==step?Gold:Muted,TextAnchor.MiddleCenter); Layout(t.gameObject,0,30,1); }
+            if(!Game.Lobby&&!Game.Setup)
+            {
+                Section(c,Game.Torneio!=null?"Torneio em andamento":"Partida em andamento");
+                if(Game.Torneio!=null) Para(c,Game.LobbySummary());
+                var r=Row(c,48);
+                if(Game.Torneio!=null&&Game.Torneio.recorded) Btn(r,"Próxima partida do torneio",()=>{ Game.NextTournamentMatch(); Show("sala"); },0,44,15).GetComponent<Image>().color=Chosen;
+                Btn(r,"Reiniciar partida",()=>{ Game.RestartRoom(); Close(); },0,44,15);
+                Btn(r,"Voltar todos à sala",()=>{ Game.BackToLobby(); Show("sala"); },0,44,15);
+                Btn(r,"Voltar ao jogo",Close,0,44,15);
+                return;
+            }
+            bool editable=Game.Torneio==null;
+            if(Game.Lobby) { Section(c,"Sala liberada"); Para(c,Game.LobbySummary()); }
+            if(editable)
+            {
+                Section(c,"Modo");
+                var r=Row(c,44);
+                Pick(Btn(r,"Partida",()=>{ Game.SetTournament(false); Show("sala"); },0,40),!Game.Tournament);
+                Pick(Btn(r,"Torneio (até 6, picks e bans)",()=>{ Game.SetTournament(true); Show("sala"); },0,40),Game.Tournament);
+                if(Game.Tournament) {
+                    Para(c,"Mata-mata 1 contra 1 com quem estiver na sala. Cada jogador tem uma pool de até 8 lutadores; antes de cada partida, cada um bane lutadores da pool do outro e monta o time com o que sobrou.");
+                    r=Row(c,44);
+                    for(int b=0;b<=ArenaGame.MaxBans;b++) { int k=b; Pick(Btn(r,k==0?"Sem bans":$"{k} ban{(k>1?"s":"")} por jogador",()=>{ Game.SetBans(k); Show("sala"); },0,40),Game.Bans==k); }
+                }
+                MatchSettings(c,"sala",Game.Setup);
+            }
+            Section(c,"Você");
+            Para(c,$"Time: <b>{string.Join(", ",ArenaGame.MyTeam.Select(id=>Content.Fighters[id].name))}</b> · Pool: <b>{string.Join(", ",ArenaGame.MyPool.Select(id=>Content.Fighters[id].name))}</b>");
+            var mine=Row(c,48);
+            Btn(mine,"Meu time",()=>Game.Hud.OpenPicker(),0,44,15);
+            Btn(mine,"Minha pool (torneio)",()=>Game.Hud.OpenPool(),0,44,15);
+            Section(c,Game.Setup?"Liberar a sala":"Começar");
+            var act=Row(c,56);
+            if(Game.Setup)
+            {
+                Btn(act,"Liberar na internet",()=>Game.Release(true),0,52,16).GetComponent<Image>().color=Chosen;
+                Btn(act,"Liberar na rede local (LAN)",()=>Game.Release(false),0,52,16);
+                Btn(act,"Cancelar",()=>{ Game.CloseLobby(); Show("sala"); },160,52,15);
+                Para(c,"<color=#a7b4c2>Ao liberar, o código (internet) é copiado para você mandar aos amigos. Pela internet, o número de jogadores fica fixo depois de liberar.</color>");
+            }
+            else
+            {
+                bool cupNext=Game.Torneio!=null&&Game.Torneio.recorded;
+                var go=Btn(act,Game.Torneio!=null?(cupNext?"Próxima partida":"Torneio em andamento"):Game.Tournament?"Começar torneio":"Iniciar partida",()=>{ Game.StartRoom(); },0,52,17);
+                go.GetComponent<Image>().color=Chosen; go.interactable=Game.Filled>=2&&(Game.Torneio==null||cupNext);
+                if(Game.Torneio!=null&&Game.Torneio.champion>0) Btn(act,"Novo torneio / partida",()=>{ Game.BackToLobby(); Show("sala"); },0,52,15);
+                Btn(act,"Fechar sala",()=>{ Game.CloseLobby(); Show("sala"); },180,52,15);
+                if(Game.Filled<2) Para(c,"<color=#a7b4c2>Esperando pelo menos mais 1 jogador.</color>");
+            }
         }
         // ── Mapas: escolher o mapa das próximas partidas, editar, apagar e criar (editor dentro do jogo, ArenaMapEditor) ──
         void Maps()
@@ -417,8 +531,26 @@ namespace ArenaTatica
             Template(t2,"Prisão",new SkillDef{ kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=0, prison=1, cooldown=3 });
             Template(t2,"Grito (grupo)",new SkillDef{ kind=SkillKind.Dano, pa=4, minRange=0, maxRange=0, sight=false, selfArea=true, foes=true, area=2, damage=0, pmLoss=2, paLoss=1, perMatch=1, ultimate=true });
             Template(t2,"Zona de gelo",new SkillDef{ kind=SkillKind.Zona, pa=3, minRange=1, maxRange=4, area=1, freeze=true, perTurn=1 });
+            Section(c,"Biblioteca de skills genéricas");
+            Para(c,"<color=#a7b4c2>Golpes prontos de D&D, Krosmaster e anime. Toque para pôr na ficha; depois ajuste os números acima.</color>");
+            foreach(var g in Content.Generic.GroupBy(x=>x.group))
+            {
+                Label(c,g.Key.ToUpperInvariant(),12,Muted);
+                Transform r=null; int n=0;
+                foreach(var (_,model) in g) { if(n++%4==0) r=Row(c,44); var m=model; var b=Btn(r,m.name,()=>AddGeneric(m),0,40,13); Hint(b,Content.Describe(m)); }
+            }
             Refresh();
         }
+        // Skill da biblioteca: cópia com id próprio da ficha (o nome fica igual; repetido ganha número).
+        void AddGeneric(SkillDef model)
+        {
+            if(editing.skills.Length>=8) { editorStatus.text="<color=#ef6f7a>Limite de 8 skills.</color>"; return; }
+            var s=model.Clone(); int n=1; while(editing.skills.Any(x=>x.id==$"{editing.id}-{model.id}{(n>1?"-"+n:"")}")) n++;
+            s.id=$"{editing.id}-{model.id}{(n>1?"-"+n:"")}"; s.name=model.name+(n>1?" "+n:""); s.anim=model.kind==SkillKind.Esconder?"hide":"attack";
+            editing.skills=editing.skills.Append(s).ToArray(); dirty=true; Show("editor");
+        }
+        // Descrição curta ao passar o cursor/segurar o botão: aparece na linha de status do editor.
+        void Hint(Button b,string text) => b.gameObject.AddComponent<ArenaDica>().Enter=()=>{ if(editorStatus) editorStatus.text=text; };
         void Load(string id) { editing=Content.Copy(ArenaEdits.Get(id)??Content.Default(id)??Content.Fighters[id]); editorId=id; dirty=false; }
         void Changed() { dirty=true; if(editorStatus) editorStatus.text="<color=#e8c278>Alterações não salvas.</color>"; Refresh(); }
         void Refresh() { foreach(var r in refreshers) r(); }
@@ -575,7 +707,7 @@ namespace ArenaTatica
         Button Btn(Transform parent,string text,Action action,float w=0,float h=38,int size=15)
         {
             var r=Box(text,parent,Idle); var b=r.gameObject.AddComponent<Button>(); b.targetGraphic=r.GetComponent<Image>();
-            ArenaTema.StyleFocus(b); b.onClick.AddListener(()=>action());
+            ArenaTema.StyleFocus(b); ArenaTema.Lerp(b); b.onClick.AddListener(()=>action());
             var t=Label(r,text,size,Ink,TextAnchor.MiddleCenter); Fill(t.rectTransform,4); t.verticalOverflow=VerticalWrapMode.Truncate;
             var le=r.gameObject.AddComponent<LayoutElement>(); le.preferredHeight=le.minHeight=h;
             if(w>0) { le.preferredWidth=w; le.minWidth=w*.6f; } else { le.flexibleWidth=1; le.minWidth=60; }

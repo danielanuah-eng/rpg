@@ -78,11 +78,14 @@ namespace ArenaTatica
         // Câmera: pinça ou roda do mouse aproximam; arrastar (dedo, botão esquerdo, direito ou do meio) move.
         // Toque ou clique sem arrastar é a ação na casa. fitSize é o enquadramento do tabuleiro inteiro.
         // Vista: 4 lados (90° cada), só neste aparelho; girar não muda casas, alcance nem turno (tarefa 012/013).
-        public int View { get; private set; }
-        // Vista de tabuleiro: quase de cima (CameraPitch) e um pouco de lado (CameraSide graus a partir de um lado da mesa).
-        public const float CameraPitch=60,CameraSide=20,CameraDistance=62;
-        static Vector3 SideDirection(int view) => Quaternion.Euler(0,90*view+CameraSide,0)*Vector3.back;
-        Vector3 CameraHome => (SideDirection(View)*Mathf.Cos(CameraPitch*Mathf.Deg2Rad)+Vector3.up*Mathf.Sin(CameraPitch*Mathf.Deg2Rad))*CameraDistance;
+        // Autor (13/10): tabuleiro reto, como um quadrado, com a inclinação só na vertical (CameraSide 0); o giro é contínuo e
+        // suave (Yaw desliza até YawGoal), sem ficar preso aos 4 lados. View = lado mais próximo (0..3), para quem precisa dele.
+        public int View => ((Mathf.RoundToInt(Yaw/90f)%4)+4)%4;
+        public float Yaw { get; private set; }
+        float yawGoal;
+        public const float CameraPitch=60,CameraSide=0,CameraDistance=62,YawSpeed=10;
+        static Vector3 SideDirection(float yaw) => Quaternion.Euler(0,yaw+CameraSide,0)*Vector3.back;
+        Vector3 CameraHome => (SideDirection(Yaw)*Mathf.Cos(CameraPitch*Mathf.Deg2Rad)+Vector3.up*Mathf.Sin(CameraPitch*Mathf.Deg2Rad))*CameraDistance;
         // Posição de repouso: CameraHome deslocada para o tabuleiro ficar no centro da parte livre da tela (FitCamera).
         Vector3 homeShift; Vector3 Home => CameraHome+homeShift;
         float fitSize=1,pinchDistance; bool pressing,pressOnBoard,dragged,pinching,touchPress; Vector2 pressStart,lastDrag,pinchCenter;
@@ -826,16 +829,32 @@ namespace ArenaTatica
             float angle=Mathf.Atan2(Vector3.Dot(direction,right.normalized),Vector3.Dot(direction,toCamera.normalized))*Mathf.Rad2Deg;
             rig.facing=direction; rig.dir=((Mathf.RoundToInt(angle/45f)%8)+8)%8; ShowFrame(rig);
         }
-        // Gira a vista 90° (delta +1/−1). Os sprites voltam a encarar a câmera e escolhem o quadro pela direção em que já olhavam.
+        // Gira a vista até o próximo lado reto (delta +1/−1), deslizando.
         public void RotateView(int delta)
         {
-            View=((View+delta)%4+4)%4; FitCamera(); FitSky();
+            yawGoal=Mathf.Round(yawGoal/90f+delta)*90f;
+            Game.Notify("Girando a vista (Q/E segurados, arrastar com o botão direito ou dois dedos giram aos poucos).");
+        }
+        // Giro livre em graus (arraste, dois dedos, Q/E segurados, botões ◄ ►).
+        public void RotateBy(float degrees) { yawGoal+=degrees; }
+        // Endireita no lado reto mais próximo.
+        public void StraightenView() { yawGoal=Mathf.Round(yawGoal/90f)*90f; }
+        // Vista instantânea (partida nova, captura).
+        void SetYaw(float yaw) { Yaw=yawGoal=yaw; ApplyYaw(); }
+        void ApplyYaw()
+        {
+            FitCamera(); FitSky();
+            // Os sprites voltam a encarar a câmera e escolhem o quadro pela direção em que já olhavam.
             foreach(var kv in rigs.ToList()) {
                 if(!kv.Key) { rigs.Remove(kv.Key); continue; }
                 kv.Key.localRotation=BoardCamera.transform.rotation;
                 if(kv.Value.facing!=Vector3.zero&&kv.Key.parent) Turn(kv.Key.parent,kv.Value.facing);
             }
-            Game.Notify(new[]{"Vista: lado 1","Vista: lado 2","Vista: lado 3","Vista: lado 4"}[View]+" (Q/E giram).");
+        }
+        void SlideYaw()
+        {
+            if(Mathf.Abs(Yaw-yawGoal)<.01f) { if(Yaw!=yawGoal) { Yaw=yawGoal; ApplyYaw(); } return; }
+            Yaw=Mathf.Lerp(Yaw,yawGoal,1-Mathf.Exp(-YawSpeed*Time.unscaledDeltaTime)); ApplyYaw();
         }
         // Sala: começa com o próprio time perto da câmera (embaixo na tela).
         void AutoView(MatchState s)
@@ -843,8 +862,8 @@ namespace ArenaTatica
             var own=s.fighters.Where(f=>f.Alive&&s.Ally(f.team,Game.ViewerTeam)).Select(f=>Position(s,f.cell)).ToList();
             if(own.Count==0) return;
             var center=own.Aggregate(Vector3.zero,(a,p)=>a+p)/own.Count;
-            int best=Enumerable.Range(0,4).OrderByDescending(k=>Vector3.Dot(SideDirection(k),center)).First();
-            if(best!=View) RotateView(best-View);
+            int best=Enumerable.Range(0,4).OrderByDescending(k=>Vector3.Dot(SideDirection(k*90),center)).First();
+            SetYaw(best*90);
         }
         // Quadros por pasta lidos uma vez; cada unidade ganha seu próprio rig (estado do clipe) apontando para eles.
         static readonly Dictionary<string,SpriteRig> rigCache=new Dictionary<string,SpriteRig>();
@@ -1342,6 +1361,7 @@ namespace ArenaTatica
             var s=Game.State;
             if(!Ready||s==null) return;
             if(Screen.width!=screenWidth||Screen.height!=screenHeight) FitCamera();
+            SlideYaw();
             FitSky();
             AdvanceRigs(); SyncGhosts(); UpdateBars(s); UpdateCompanions(s); UpdateStates(s);
             for(int i=wings.Count-1;i>=0;i--) { var wing=wings[i]; if(!wing) { wings.RemoveAt(i); continue; } wing.localRotation=wingRest[wing]*Quaternion.Euler(0,0,Mathf.Sin(Time.time*1.8f)*3.15f); }
@@ -1373,7 +1393,8 @@ namespace ArenaTatica
                     }
                     if(rotating) {
                         rotateAcc+=point.x-lastDrag.x;
-                        if(Mathf.Abs(rotateAcc)>Mathf.Max(90,Screen.dpi*.6f)) { RotateView(rotateAcc>0?1:-1); rotateAcc=0; }
+                        // Giro contínuo: ~1 volta ao arrastar a largura da tela.
+                        RotateBy((point.x-lastDrag.x)*360f/Mathf.Max(400,Screen.width)); rotateAcc=0;
                     } else {
                         if(moved) dragged=true;
                         if(dragged&&pressOnBoard) { BoardCamera.transform.position+=World(lastDrag)-World(point); ClampCamera(); }
@@ -1390,14 +1411,20 @@ namespace ArenaTatica
             if(overBoard||pressing&&pressOnBoard) {
                 bool valid=Pick(point,out var c,out _); hover.SetActive(valid&&!dragged); if(valid) hover.transform.position=Position(s,c)+Vector3.up*.03f;
                 if(valid&&tap&&Game.EditingMap) Game.MapEditor.Tap(c);
-                else if(valid&&tap) { if(Game.Mode=="") Game.Submit("mover",c); else if(Game.Mode=="desejo-d") Game.Hud?.ChooseCopy(c); else Game.Submit("skill",c,Game.Mode); }
+                else if(valid&&tap) {
+                    // Mover numa casa com lutador visível: abre a ficha dele (skills e o que fazem) em vez de tentar andar.
+                    var who=Board.At(s,c); bool seen=who!=null&&(!who.hidden||s.Ally(who.team,Game.LocalTeam));
+                    if(Game.Mode==""&&seen) Game.Hud?.Inspect(who);
+                    else if(Game.Mode=="") Game.Submit("mover",c); else if(Game.Mode=="desejo-d") Game.Hud?.ChooseCopy(c); else Game.Submit("skill",c,Game.Mode);
+                }
             } else hover.SetActive(false);
             var selected=EventSystem.current?EventSystem.current.currentSelectedGameObject:null; // "?." não enxerga objeto Unity destruído
             bool typing=selected&&selected.GetComponent<UnityEngine.UI.InputField>()!=null;
             if(!typing&&Game.Hud?.PickerOpen!=true&&Keyboard.current?.spaceKey.wasPressedThisFrame==true) Game.Submit("passar");
             if(!typing&&Keyboard.current?.escapeKey.wasPressedThisFrame==true) Game.Mode="";
-            if(!typing&&Keyboard.current?.qKey.wasPressedThisFrame==true) RotateView(-1);
-            if(!typing&&Keyboard.current?.eKey.wasPressedThisFrame==true) RotateView(1);
+            // Q/E segurados giram aos poucos; ao soltar, a vista fica onde parou.
+            if(!typing&&Keyboard.current?.qKey.isPressed==true) RotateBy(-90*Time.unscaledDeltaTime);
+            if(!typing&&Keyboard.current?.eKey.isPressed==true) RotateBy(90*Time.unscaledDeltaTime);
         }
         float DragThreshold => Mathf.Max(8,Screen.dpi*.06f);
         Vector3 World(Vector2 p) => BoardCamera.ScreenToWorldPoint(new Vector3(p.x,p.y,10));
@@ -1420,8 +1447,8 @@ namespace ArenaTatica
             if(!pinching) { pinching=dragged=true; pressOnBoard=BoardCamera.pixelRect.Contains(center)&&!OverUi(center); twist=0; }
             else if(pressOnBoard) {
                 BoardCamera.transform.position+=World(pinchCenter)-World(center); ZoomAt(center,pinchDistance/distance);
-                // Dois dedos girando: a cada ~40° a vista vira 90°.
-                twist+=Mathf.DeltaAngle(pinchAngle,angle); if(Mathf.Abs(twist)>40) { RotateView(twist>0?-1:1); twist=0; }
+                // Dois dedos girando: a vista gira junto.
+                RotateBy(-Mathf.DeltaAngle(pinchAngle,angle)); twist=0;
             }
             pinchAngle=angle;
             pinchCenter=lastDrag=center; pinchDistance=distance;

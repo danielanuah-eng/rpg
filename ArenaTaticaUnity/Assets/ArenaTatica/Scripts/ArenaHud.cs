@@ -23,7 +23,7 @@ namespace ArenaTatica
         readonly Dictionary<string,Sprite> iconCache=new Dictionary<string,Sprite>();
         public Sprite ShopIcon(string id) { if(string.IsNullOrEmpty(id)) return null; if(!iconCache.TryGetValue(id,out var sp)) iconCache[id]=sp=Resources.Load<Sprite>("Sprites/Loja/"+id); return sp; }
         readonly List<string> logLines=new List<string>();
-        Button move,pass,host,room,join,resume,seats,format,theme,start,openShop;
+        Button move,pass,host,room,join,resume,seats,format,theme,start,restart,openShop;
         InputField address;
         Font font;
         int width,height;
@@ -81,11 +81,13 @@ namespace ArenaTatica
             seats=Button("",networkPanel,Game.CycleSeats,92);
             format=Button("",networkPanel,Game.CycleFormat,118);
             theme=Button("",networkPanel,Game.CycleTheme,128);
-            host=Button("Host LAN",networkPanel,Game.Host,82);
-            room=Button("Criar sala",networkPanel,Game.HostRoom,90);
+            // Sala em 3 passos: abrir (configurar) → liberar → iniciar. Host LAN e Criar sala abrem a configuração.
+            host=Button("Criar sala",networkPanel,Game.OpenLobby,82);
+            room=Button("Sala",networkPanel,()=>Game.Menu?.Open("sala"),90);
             address=Input(networkPanel,"","Código da sala ou ws://IP:9080");
             join=Button("Entrar",networkPanel,()=>Game.Join(address.text),62);
-            start=Button("Iniciar",networkPanel,Game.StartRoom,66);
+            start=Button("Iniciar",networkPanel,()=>{ if(Game.Torneio!=null) Game.NextTournamentMatch(); else Game.StartRoom(); },66);
+            restart=Button("Reiniciar partida",networkPanel,Game.RestartRoom,120);
             resume=Button("Retomar local",networkPanel,Game.ResumeLocal,104);
             fullscreen=Button("Tela cheia",networkPanel,ToggleFullScreen,88); fullscreen.gameObject.SetActive(!Application.isMobilePlatform);
             Button("Girar",networkPanel,()=>Game.View.RotateView(1),56);
@@ -93,7 +95,8 @@ namespace ArenaTatica
             // Girar a vista: sempre à mão no canto do tabuleiro (também: botão direito arrastado, segurar e arrastar, dois dedos, Q/E).
             viewPanel=Panel("Vista",root.transform);
             var viewRow=viewPanel.gameObject.AddComponent<HorizontalLayoutGroup>(); viewRow.spacing=6; viewRow.padding=new RectOffset(6,6,4,4); viewRow.childControlHeight=true; viewRow.childControlWidth=true; viewRow.childForceExpandWidth=false;
-            Button("◄ Girar",viewPanel,()=>Game.View.RotateView(-1),80); Button("Girar ►",viewPanel,()=>Game.View.RotateView(1),80);
+            // Giro aos poucos (30° deslizando) e "Reto" volta ao lado reto mais próximo.
+            Button("◄",viewPanel,()=>Game.View.RotateBy(-30),44); Button("Reto",viewPanel,Game.View.StraightenView,60); Button("►",viewPanel,()=>Game.View.RotateBy(30),44);
             // Painel recolhido: só esta aba na borda esquerda, abaixo da faixa do topo.
             sideTab=Button("☰",root.transform,()=>SetSideOpen(true)); sideTab.GetComponentInChildren<Text>().fontSize=20;
             networkPanel.gameObject.SetActive(false);
@@ -106,6 +109,7 @@ namespace ArenaTatica
             Anchors(mobileStats.rectTransform,new Vector2(0,.87f),new Vector2(1,.935f),new Vector2(20,0),new Vector2(-20,0));
             BuildShopWindow(root.transform);
             BuildCopyWindow(root.transform);
+            BuildInspect(root.transform);
             BuildPicker(root.transform);
             Layout();
             // Ao abrir o jogo, escolher os lutadores (execuções automáticas por linha de comando pulam).
@@ -140,6 +144,54 @@ namespace ArenaTatica
             Anchors(shopHelp.rectTransform,new Vector2(0,.36f),new Vector2(1,.44f),new Vector2(16,0),new Vector2(-16,0));
             shopWindow.gameObject.SetActive(false);
         }
+        // Ficha de um lutador do tabuleiro (autor, 13/10): tocar nele com Mover mostra atributos, estado e o que cada skill faz.
+        RectTransform inspect; Text inspectTitle,inspectBody; Image inspectArt; int inspectId;
+        void BuildInspect(Transform root)
+        {
+            inspect=Panel("FichaLutador",root); inspect.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.96f);
+            inspectArt=new GameObject("Retrato",typeof(RectTransform),typeof(Image)).GetComponent<Image>(); inspectArt.transform.SetParent(inspect,false);
+            inspectArt.preserveAspect=true; inspectArt.raycastTarget=false; Anchors(inspectArt.rectTransform,new Vector2(0,1),new Vector2(0,1),new Vector2(10,-96),new Vector2(96,-10));
+            inspectTitle=Text("",inspect,18,ArenaTema.Selected); inspectTitle.alignment=TextAnchor.UpperLeft; inspectTitle.verticalOverflow=VerticalWrapMode.Overflow;
+            Anchors(inspectTitle.rectTransform,new Vector2(0,1),Vector2.one,new Vector2(104,-96),new Vector2(-46,-10));
+            inspectBody=Text("",inspect,13,ink); inspectBody.alignment=TextAnchor.UpperLeft; inspectBody.horizontalOverflow=HorizontalWrapMode.Wrap; inspectBody.verticalOverflow=VerticalWrapMode.Truncate;
+            Anchors(inspectBody.rectTransform,Vector2.zero,Vector2.one,new Vector2(12,10),new Vector2(-12,-104));
+            var close=Button("✕",inspect,()=>inspect.gameObject.SetActive(false)); Anchors((RectTransform)close.transform,Vector2.one,Vector2.one,new Vector2(-42,-40),new Vector2(-8,-8));
+            inspect.gameObject.SetActive(false);
+        }
+        public bool InspectOpen => inspect&&inspect.gameObject.activeSelf;
+        public void Inspect(Fighter f)
+        {
+            if(!inspect||f==null) return;
+            if(InspectOpen&&inspectId==f.id) { inspect.gameObject.SetActive(false); return; }
+            inspectId=f.id; inspect.gameObject.SetActive(true); RefreshInspect();
+        }
+        void RefreshInspect()
+        {
+            var s=Game.State; var f=s?.F(inspectId);
+            if(f==null||!f.Alive||(f.hidden&&!s.Ally(f.team,Game.LocalTeam))) { inspect.gameObject.SetActive(false); return; }
+            var d=Content.Def(f); var form=Content.Form(f); string mu=ArenaTema.Html(muted);
+            string team=MatchState.Player(f.team)?$"<color=#{ColorUtility.ToHtmlStringRGB(ArenaPresentation.TeamColor(f.team))}>P{f.team}</color>":"Neutro";
+            var art=form?.sprites??d.sprites; var sp=string.IsNullOrEmpty(art)?null:Resources.Load<Sprite>("Sprites/"+art+"/south");
+            inspectArt.sprite=sp; inspectArt.color=sp?Color.white:Color.clear;
+            inspectTitle.text=$"{d.name}{(d.legendary?" ★":"")}  {team}\n<size=13><color=#{ArenaTema.Html(ArenaTema.Hp)}>{f.hp}/{Content.MaxHp(f)} PV</color> · <color=#{ArenaTema.Html(ArenaTema.Pm)}>{f.pa} PA · {f.pm} PM</color> · Iniciativa {d.initiative} · Nível {d.level}</size>";
+            var state=new List<string>();
+            if(form!=null&&f.form!=d.startForm) state.Add($"forma {form.name}{(form.intangible?" (imune a dano)":"")}{(f.formTurns>0?$", {f.formTurns} turno(s)":"")}");
+            if(f.hidden) state.Add($"escondido (anda até {Match.HiddenPm})"); if(f.prisoned>0) state.Add($"preso {f.prisoned} turno(s)"); if(f.channel>0) state.Add("canalizando o Desejo");
+            if(f.auraOn) state.Add("aura ligada");
+            foreach(var b in f.buffs) state.Add($"{b.id}{(b.pa!=0?$" {b.pa:+0;-0} PA":"")}{(b.pm!=0?$" {b.pm:+0;-0} PM":"")}{(b.armor!=0?$" {b.armor:+0;-0} armadura":"")} ({b.turns})");
+            int armor=f.armor+d.armor+f.buffs.Sum(b=>b.armor)+(form?.armor??0);
+            if(armor!=0) state.Add($"armadura {armor}");
+            var text=new List<string>();
+            string traits=Content.Traits(d); if(traits!="") text.Add($"<color=#d27aa6>{traits}</color>");
+            if(state.Count>0) text.Add($"<color=#{mu}>Estado:</color> {string.Join(" · ",state)}");
+            text.Add($"<color=#{mu}>SKILLS</color>");
+            foreach(var sk in Match.Skills(f)) {
+                var wait=f.cooldowns.Find(x=>x.skill==sk.id); var charge=f.charges.Find(x=>x.skill==sk.id);
+                text.Add("• "+Content.Describe(sk)+(wait!=null?$" <color=#{mu}>(recarga: {wait.uses})</color>":"")+(charge!=null?$" <color=#{mu}>(×{charge.uses})</color>":""));
+            }
+            if(d.forms!=null&&d.forms.Length>1) text.Add($"<color=#{mu}>Formas:</color> {string.Join(", ",d.forms.Select(x=>x.name))}");
+            inspectBody.text=string.Join("\n",text);
+        }
         // Desejo D: depois de tocar no lutador, a lista das skills dele que dá para copiar; o botão manda a escolhida (Command.slot).
         RectTransform copyWindow; Text copyTitle; readonly List<Button> copyButtons=new List<Button>(); Cell copyCell;
         void BuildCopyWindow(Transform root)
@@ -170,21 +222,34 @@ namespace ArenaTatica
             copyWindow.gameObject.SetActive(true);
         }
         // Seletor de lutadores: cada assento local monta o time (Nível até ArenaGame.TeamLevel, sem repetir).
-        // Em rede só o time deste aparelho, que vale na próxima sala.
-        RectTransform picker,pickerGrid,pickerSide,pickerRow; Text pickerTitle,pickerInfo; Button pickerNext; readonly List<Button> pickButtons=new List<Button>();
+        // Em rede só o time deste aparelho, que vale na próxima sala. Também serve ao torneio: pool, bans e escolha do draft.
+        // Organização (autor, 13/10): cartões por Nível e nome, filtro por Nível e a ficha (skills) do último lutador tocado.
+        enum PickMode { Team, Pool, Ban, Draft }
+        PickMode pickMode;
+        RectTransform picker,pickerGrid,pickerSide,pickerRow,pickerFilters; Text pickerTitle,pickerInfo,pickerDetail; Button pickerNext; readonly List<Button> pickButtons=new List<Button>();
+        readonly List<Button> filterButtons=new List<Button>();
         readonly List<string> picking=new List<string>(); string[][] picked; int pickSeat;
+        // Ordem dos cartões: Nível, depois nome. allowed: só esses aparecem (draft); pickLimit: máximo no modo Pool/Ban.
+        static string[] pickOrder;
+        HashSet<string> allowed; int pickLimit, levelFilter; string detailId; System.Action<string[]> pickDone;
+        static readonly (string name,int min,int max)[] LevelFilters={("Todos",0,99),("Nível 1–3",0,3),("Nível 4",4,4),("Nível 5+",5,99)};
         public bool PickerOpen => picker&&picker.gameObject.activeSelf;
         bool OnlineSession => Game.Network&&(Game.Network.IsHost||Game.Network.IsConnected);
         void BuildPicker(Transform root)
         {
+            pickOrder=Content.Roster.OrderBy(id=>Content.Fighters[id].level).ThenBy(id=>Content.Fighters[id].name).ToArray();
             picker=Panel("Seletor",root); picker.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.97f); Anchors(picker,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero);
-            pickerTitle=Text("",picker,22,ArenaPresentation.Gold); pickerTitle.alignment=TextAnchor.MiddleCenter; Anchors(pickerTitle.rectTransform,new Vector2(0,1),Vector2.one,new Vector2(16,-56),new Vector2(-16,-12));
+            pickerTitle=Text("",picker,22,ArenaPresentation.Gold); pickerTitle.alignment=TextAnchor.MiddleCenter; Anchors(pickerTitle.rectTransform,new Vector2(0,1),Vector2.one,new Vector2(16,-50),new Vector2(-16,-8));
+            // Filtros por Nível, logo abaixo do título.
+            pickerFilters=new GameObject("Filtros",typeof(RectTransform),typeof(HorizontalLayoutGroup)).GetComponent<RectTransform>(); pickerFilters.SetParent(picker,false);
+            var fr=pickerFilters.GetComponent<HorizontalLayoutGroup>(); fr.spacing=6; fr.childControlWidth=fr.childControlHeight=true; fr.childForceExpandWidth=false; fr.childAlignment=TextAnchor.MiddleLeft;
+            for(int i=0;i<LevelFilters.Length;i++) { int k=i; filterButtons.Add(Button(LevelFilters[i].name,pickerFilters,()=>{ levelFilter=k; LayoutPicker(); RefreshPicker(); },96)); }
             var grid=pickerGrid=new GameObject("Lutadores",typeof(RectTransform),typeof(GridLayoutGroup)).GetComponent<RectTransform>(); grid.SetParent(picker,false);
             // Cartões do modelo 017: retrato, nome, custo, Vida/PA/PM; a equipe fica no painel lateral à direita.
             var g=grid.GetComponent<GridLayoutGroup>(); g.cellSize=new Vector2(110,132); g.spacing=new Vector2(6,6); g.childAlignment=TextAnchor.UpperLeft;
-            Anchors(grid,Vector2.zero,Vector2.one,new Vector2(16,14),new Vector2(-316,-64));
-            foreach(string id in Content.Roster) {
+            foreach(string id in pickOrder) {
                 var d=Content.Fighters[id]; var b=Button("",grid,()=>TogglePick(id)); ArenaTema.StyleFocus(b); pickButtons.Add(b);
+                b.gameObject.AddComponent<ArenaDica>().Enter=()=>{ detailId=id; RefreshDetail(); };
                 var icon=new GameObject("Retrato",typeof(RectTransform),typeof(Image)).GetComponent<Image>(); icon.transform.SetParent(b.transform,false); icon.preserveAspect=true; icon.raycastTarget=false;
                 icon.sprite=d.sprites==null?null:Resources.Load<Sprite>("Sprites/"+d.sprites+"/south"); if(!icon.sprite) icon.color=Color.clear;
                 Anchors(icon.rectTransform,new Vector2(0,.42f),Vector2.one,new Vector2(6,0),new Vector2(-6,-4));
@@ -192,23 +257,39 @@ namespace ArenaTatica
                 label.text=CardText(d,false);
                 Anchors(label.rectTransform,Vector2.zero,new Vector2(1,.44f),new Vector2(3,3),new Vector2(-3,0));
             }
-            // Painel lateral: equipe, custo total e avanço (desabilitado com a equipe vazia).
-            var side=pickerSide=Panel("Equipe",picker); side.GetComponent<Image>().color=ArenaTema.Panel; Anchors(side,new Vector2(1,0),Vector2.one,new Vector2(-300,14),new Vector2(-16,-64));
+            // Painel lateral: equipe, custo total, ficha do lutador tocado e avanço (desabilitado com a equipe vazia).
+            var side=pickerSide=Panel("Equipe",picker); side.GetComponent<Image>().color=ArenaTema.Panel;
             var sideTitle=Text("EQUIPE",side,14,ArenaTema.Selected); sideTitle.fontStyle=FontStyle.Bold; Anchors(sideTitle.rectTransform,new Vector2(0,1),Vector2.one,new Vector2(14,-36),new Vector2(-14,-10));
-            pickerInfo=Text("",side,15,ink); pickerInfo.alignment=TextAnchor.UpperLeft; pickerInfo.verticalOverflow=VerticalWrapMode.Overflow; Anchors(pickerInfo.rectTransform,Vector2.zero,Vector2.one,new Vector2(14,200),new Vector2(-14,-42));
+            pickerInfo=Text("",side,14,ink); pickerInfo.alignment=TextAnchor.UpperLeft; pickerInfo.verticalOverflow=VerticalWrapMode.Overflow;
+            pickerDetail=Text("",side,12,muted); pickerDetail.alignment=TextAnchor.UpperLeft; pickerDetail.horizontalOverflow=HorizontalWrapMode.Wrap; pickerDetail.verticalOverflow=VerticalWrapMode.Truncate;
             var row=pickerRow=new GameObject("Botoes",typeof(RectTransform),typeof(VerticalLayoutGroup)).GetComponent<RectTransform>(); row.SetParent(side,false);
             var h=row.GetComponent<VerticalLayoutGroup>(); h.spacing=8; h.childAlignment=TextAnchor.LowerCenter; h.childControlWidth=h.childControlHeight=true; h.childForceExpandWidth=true; h.childForceExpandHeight=false;
-            Anchors(row,Vector2.zero,new Vector2(1,0),new Vector2(14,14),new Vector2(-14,190));
             Button("Aleatório",row,RandomPick); Button("Limpar",row,()=>{ picking.Clear(); RefreshPicker(); });
             pickerNext=Button("",row,NextPick); pickerNext.GetComponent<LayoutElement>().preferredHeight=48; ArenaTema.StyleFocus(pickerNext);
             picker.gameObject.SetActive(false);
         }
+        void ShowPicker(PickMode mode,IEnumerable<string> start,IEnumerable<string> only,int limit,System.Action<string[]> done)
+        {
+            shopWindow.gameObject.SetActive(false); Game.Menu?.Close();
+            pickMode=mode; allowed=only==null?null:new HashSet<string>(only); pickLimit=limit; pickDone=done; levelFilter=0;
+            picking.Clear(); picking.AddRange((start??new string[0]).Where(id=>allowed==null||allowed.Contains(id)));
+            detailId=picking.FirstOrDefault()??allowed?.FirstOrDefault()??pickOrder[0];
+            picker.gameObject.SetActive(true); LayoutPicker(); RefreshPicker();
+        }
         public void OpenPicker()
         {
-            shopWindow.gameObject.SetActive(false);
             // Contra bots, só o P1 escolhe; os bots recebem times aleatórios em StartLocal.
-            pickSeat=0; picked=new string[OnlineSession||Game.VsBots?1:Game.Seats][];
-            picking.Clear(); picking.AddRange(ArenaGame.MyTeam); picker.gameObject.SetActive(true); LayoutPicker(); RefreshPicker();
+            pickSeat=0; picked=new string[OnlineSession||Game.VsBots||Game.Setup?1:Game.Seats][];
+            ShowPicker(PickMode.Team,ArenaGame.MyTeam,null,ArenaGame.TeamSize,null);
+        }
+        // Pool do torneio (até ArenaGame.PoolSize, sem regra de Nível).
+        public void OpenPool() => ShowPicker(PickMode.Pool,ArenaGame.MyPool,null,ArenaGame.PoolSize,ids=>{ ArenaGame.MyPool=ids; Game.SendChoice(); Game.Menu?.Open("sala"); });
+        // Draft do torneio: "ban" escolhe até limit da pool do outro; "pick" monta o time com o que sobrou da sua.
+        public void OpenDraft(string phase,string[] options,int limit,System.Action<string[]> done)
+        {
+            options=(options??new string[0]).Where(Content.Fighters.ContainsKey).ToArray();
+            if(phase=="ban") ShowPicker(PickMode.Ban,new string[0],options,Mathf.Clamp(limit,0,ArenaGame.MaxBans),done);
+            else ShowPicker(PickMode.Draft,ArenaGame.MyTeam,options,ArenaGame.TeamSize,done);
         }
         // Cartão: retrato, nome, custo e Vida/PA/PM; compacto quando o cartão encolhe para caber o elenco.
         static string CardText(FighterDef d,bool compact)
@@ -226,56 +307,95 @@ namespace ArenaTatica
             }
             return new Vector2(110,132)*.7f;
         }
+        bool Shown(string id)
+        {
+            var d=Content.Fighters[id]; var f=LevelFilters[levelFilter];
+            return (allowed==null||allowed.Contains(id))&&d.level>=f.min&&d.level<=f.max;
+        }
         // Paisagem: equipe no painel à direita. Retrato: equipe numa faixa embaixo (lista à esquerda, botões à direita).
         void LayoutPicker()
         {
             if(!pickerGrid) return;
             float k=UiScale,w=Screen.width/k,h=Screen.height/k;
             if(Portrait) {
-                Anchors(pickerGrid,Vector2.zero,Vector2.one,new Vector2(10,244),new Vector2(-10,-64));
+                Anchors(pickerFilters,new Vector2(0,1),Vector2.one,new Vector2(10,-88),new Vector2(-10,-54));
+                Anchors(pickerGrid,Vector2.zero,Vector2.one,new Vector2(10,244),new Vector2(-10,-96));
                 Anchors(pickerSide,Vector2.zero,new Vector2(1,0),new Vector2(10,10),new Vector2(-10,234));
                 Anchors(pickerInfo.rectTransform,Vector2.zero,new Vector2(.56f,1),new Vector2(14,10),new Vector2(-6,-42));
+                pickerDetail.gameObject.SetActive(false);
                 Anchors(pickerRow,new Vector2(.56f,0),Vector2.one,new Vector2(6,12),new Vector2(-12,-12));
-                w-=20; h-=308;
+                w-=20; h-=340;
             } else {
-                Anchors(pickerGrid,Vector2.zero,Vector2.one,new Vector2(16,14),new Vector2(-316,-64));
-                Anchors(pickerSide,new Vector2(1,0),Vector2.one,new Vector2(-300,14),new Vector2(-16,-64));
-                Anchors(pickerInfo.rectTransform,Vector2.zero,Vector2.one,new Vector2(14,200),new Vector2(-14,-42));
-                Anchors(pickerRow,Vector2.zero,new Vector2(1,0),new Vector2(14,14),new Vector2(-14,190));
-                w-=332; h-=78;
+                Anchors(pickerFilters,new Vector2(0,1),new Vector2(1,1),new Vector2(16,-88),new Vector2(-316,-54));
+                Anchors(pickerGrid,Vector2.zero,Vector2.one,new Vector2(16,14),new Vector2(-316,-96));
+                Anchors(pickerSide,new Vector2(1,0),Vector2.one,new Vector2(-300,14),new Vector2(-16,-54));
+                Anchors(pickerInfo.rectTransform,new Vector2(0,.55f),Vector2.one,new Vector2(14,0),new Vector2(-14,-42));
+                Anchors(pickerDetail.rectTransform,Vector2.zero,new Vector2(1,.55f),new Vector2(14,190),new Vector2(-14,-6)); pickerDetail.gameObject.SetActive(true);
+                Anchors(pickerRow,Vector2.zero,new Vector2(1,0),new Vector2(14,14),new Vector2(-14,180));
+                w-=332; h-=110;
             }
-            var cell=CardSize(pickButtons.Count,w,h); pickerGrid.GetComponent<GridLayoutGroup>().cellSize=cell;
-            for(int i=0;i<pickButtons.Count;i++) pickButtons[i].GetComponentInChildren<Text>().text=CardText(Content.Fighters[Content.Roster[i]],cell.x<100);
+            for(int i=0;i<pickButtons.Count;i++) pickButtons[i].gameObject.SetActive(Shown(pickOrder[i]));
+            var cell=CardSize(pickButtons.Count(b=>b.gameObject.activeSelf),w,h); pickerGrid.GetComponent<GridLayoutGroup>().cellSize=cell;
+            for(int i=0;i<pickButtons.Count;i++) pickButtons[i].GetComponentInChildren<Text>().text=CardText(Content.Fighters[pickOrder[i]],cell.x<100);
         }
         void TogglePick(string id)
         {
+            detailId=id;
             if(picking.Contains(id)) picking.Remove(id);
+            else if(pickMode==PickMode.Pool||pickMode==PickMode.Ban) { if(picking.Count<pickLimit) picking.Add(id); else Game.Notify(pickMode==PickMode.Ban?$"Até {pickLimit} ban{(pickLimit==1?"":"s")}.":$"Pool de até {pickLimit} lutadores."); }
             else if(ArenaGame.ValidTeam(picking.Append(id)).Contains(id)) picking.Add(id);
             else Game.Notify(picking.Count>=ArenaGame.TeamSize?$"No máximo {ArenaGame.TeamSize} lutadores.":Content.Fighters[id].legendary&&picking.Any(x=>Content.Fighters[x].legendary)?"Só 1 Lendária por time.":$"Passa do limite de Nível {ArenaGame.TeamLevel}.");
             RefreshPicker();
         }
         void RandomPick()
         {
-            picking.Clear(); picking.AddRange(ArenaGame.ValidTeam(Content.Roster.OrderBy(_=>UnityEngine.Random.value))); RefreshPicker();
+            var pool=(allowed!=null?allowed.AsEnumerable():Content.Roster).OrderBy(_=>UnityEngine.Random.value).ToList();
+            picking.Clear();
+            if(pickMode==PickMode.Pool||pickMode==PickMode.Ban) picking.AddRange(pool.Take(pickLimit));
+            else picking.AddRange(ArenaGame.ValidTeam(pool).Where(id=>allowed==null||allowed.Contains(id)));
+            RefreshPicker();
         }
         void NextPick()
         {
-            if(picking.Count==0) { Game.Notify("Escolha pelo menos 1 lutador."); return; }
+            if(picking.Count==0&&pickMode!=PickMode.Ban) { Game.Notify("Escolha pelo menos 1 lutador."); return; }
+            if(pickMode!=PickMode.Team) { picker.gameObject.SetActive(false); if(pickMode==PickMode.Draft) ArenaGame.MyTeam=ArenaGame.ValidTeam(picking); pickDone?.Invoke(picking.ToArray()); return; }
             picked[pickSeat++]=picking.ToArray();
             if(pickSeat<picked.Length) { picking.Clear(); picking.AddRange(Game.Picks!=null&&pickSeat<Game.Picks.Length?Game.Picks[pickSeat]:ArenaGame.MyTeam); RefreshPicker(); return; }
             picker.gameObject.SetActive(false);
-            if(OnlineSession) { ArenaGame.MyTeam=picked[0]; Game.Notify("Time salvo: vale na próxima sala."); }
+            if(OnlineSession||Game.Setup) { ArenaGame.MyTeam=picked[0]; Game.SendChoice(); Game.Notify("Time salvo para a sala."); if(Game.Setup||Game.Lobby) Game.Menu?.Open("sala"); }
             else Game.StartLocal(picked);
+        }
+        void RefreshDetail()
+        {
+            if(!pickerDetail||detailId==null||!Content.Fighters.TryGetValue(detailId,out var d)) return;
+            string traits=Content.Traits(d);
+            pickerDetail.text=$"<b>{d.name}</b> · Nível {d.level} · {d.hp} PV · {d.pa} PA · {d.pm} PM · Ini {d.initiative}\n"+(traits!=""?$"<color=#d27aa6>{traits}</color>\n":"")+string.Join("\n",d.skills.Select(s=>"• "+Content.Describe(s)));
         }
         void RefreshPicker()
         {
-            int level=picking.Sum(id=>Content.Fighters[id].level);
-            pickerTitle.text=OnlineSession?"SEU TIME":$"TIME DE P{pickSeat+1}  <size=15>({pickSeat+1} de {picked.Length})</size>";
-            pickerInfo.text=(picking.Count==0?"Toque nos lutadores para montar o time.":string.Join("\n",picking.Select(id=>$"• {Content.Fighters[id].name} <color=#{ArenaTema.Html(ArenaTema.Muted)}>· custo {Content.Fighters[id].level}</color>")))+$"\n\n<b>Custo total {level}/{ArenaGame.TeamLevel}</b>\n<size=13>até {ArenaGame.TeamSize} lutadores · sem repetir</size>";
-            for(int i=0;i<pickButtons.Count;i++) ArenaTema.MarkSelected(pickButtons[i],picking.Contains(Content.Roster[i]),font);
-            // Equipe vazia: avanço desabilitado e indicando o que fazer.
-            pickerNext.interactable=ArenaTema.CanAdvance(picking.Count);
-            SetLabel(pickerNext,ArenaTema.AdvanceLabel(picking.Count,pickSeat+1<picked.Length?"Próximo jogador":"Começar"));
+            int level=picking.Sum(id=>Content.Fighters[id].level); string mu=ArenaTema.Html(ArenaTema.Muted);
+            string list=string.Join("\n",picking.Select(id=>$"• {Content.Fighters[id].name} <color=#{mu}>· custo {Content.Fighters[id].level}</color>"));
+            switch(pickMode)
+            {
+                case PickMode.Pool:
+                    pickerTitle.text="SUA POOL DO TORNEIO";
+                    pickerInfo.text=(picking.Count==0?"Toque nos lutadores da sua pool.":list)+$"\n\n<b>{picking.Count}/{pickLimit}</b>\n<size=12>No torneio, o adversário bane até {ArenaGame.MaxBans} da sua pool; você monta o time com o resto.</size>";
+                    break;
+                case PickMode.Ban:
+                    pickerTitle.text=$"TORNEIO · BANIR  <size=15>(até {pickLimit} da pool do adversário)</size>";
+                    pickerInfo.text=(picking.Count==0?"Ninguém banido ainda.":list)+$"\n\n<b>Bans {picking.Count}/{pickLimit}</b>";
+                    break;
+                default:
+                    pickerTitle.text=pickMode==PickMode.Draft?"TORNEIO · MONTE SEU TIME  <size=15>(da sua pool, sem os banidos)</size>":OnlineSession||Game.Setup?"SEU TIME":$"TIME DE P{pickSeat+1}  <size=15>({pickSeat+1} de {picked.Length})</size>";
+                    pickerInfo.text=(picking.Count==0?"Toque nos lutadores para montar o time.":list)+$"\n\n<b>Custo total {level}/{ArenaGame.TeamLevel}</b>\n<size=12>até {ArenaGame.TeamSize} lutadores · sem repetir</size>";
+                    break;
+            }
+            for(int i=0;i<pickButtons.Count;i++) ArenaTema.MarkSelected(pickButtons[i],picking.Contains(pickOrder[i]),font);
+            for(int i=0;i<filterButtons.Count;i++) filterButtons[i].GetComponent<Image>().color=i==levelFilter?chosen:idle;
+            RefreshDetail();
+            // Equipe vazia: avanço desabilitado e indicando o que fazer (banir ninguém vale).
+            pickerNext.interactable=pickMode==PickMode.Ban||ArenaTema.CanAdvance(picking.Count);
+            SetLabel(pickerNext,pickMode==PickMode.Ban?"Confirmar bans":pickMode==PickMode.Pool?"Salvar pool":pickMode==PickMode.Draft?ArenaTema.AdvanceLabel(picking.Count,"Confirmar time"):ArenaTema.AdvanceLabel(picking.Count,pickSeat+1<picked.Length?"Próximo jogador":OnlineSession||Game.Setup?"Salvar time":"Começar"));
         }
         void ChooseSkill(int index)
         {
@@ -329,7 +449,7 @@ namespace ArenaTatica
         Button Button(string name,Transform parent,UnityEngine.Events.UnityAction action,float w=0)
         {
             var rect=Panel(name,parent); var image=rect.GetComponent<Image>(); image.color=idle;
-            var b=rect.gameObject.AddComponent<Button>(); b.targetGraphic=image; var colors=b.colors; colors.highlightedColor=new Color(.82f,.9f,1); colors.pressedColor=ArenaPresentation.Gold; colors.disabledColor=new Color(.4f,.43f,.5f); b.colors=colors; b.onClick.AddListener(action);
+            var b=rect.gameObject.AddComponent<Button>(); b.targetGraphic=image; var colors=b.colors; colors.highlightedColor=new Color(.82f,.9f,1); colors.pressedColor=ArenaPresentation.Gold; colors.disabledColor=new Color(.4f,.43f,.5f); b.colors=colors; ArenaTema.Lerp(b); b.onClick.AddListener(action);
             var text=Text(name,rect,13,ink); text.alignment=TextAnchor.MiddleCenter; text.horizontalOverflow=HorizontalWrapMode.Wrap; Anchors(text.rectTransform,Vector2.zero,Vector2.one,new Vector2(4,0),new Vector2(-4,0));
             var le=rect.gameObject.AddComponent<LayoutElement>(); le.preferredHeight=34; le.minHeight=30; if(w>0) { le.preferredWidth=w; le.minWidth=w; } return b;
         }
@@ -390,6 +510,7 @@ namespace ArenaTatica
                 Anchors((RectTransform)sideTab.transform,Vector2.zero,Vector2.zero,new Vector2(8,BottomBar+6),new Vector2(56,BottomBar+54));
                 Anchors(shopWindow,new Vector2(0,.3f),new Vector2(1,.8f),new Vector2(8,0),new Vector2(-8,0));
                 Anchors(viewPanel,new Vector2(1,0),new Vector2(1,0),new Vector2(-190,freeLow+6),new Vector2(-8,freeLow+48));
+                Anchors(inspect,new Vector2(0,.5f),new Vector2(1,1),new Vector2(8,0),new Vector2(-8,-TopBar-6));
             } else {
                 Anchors(side,Vector2.zero,new Vector2(0,1),new Vector2(0,BottomBar),new Vector2(SideWidth,-TopBar));
                 v.padding=new RectOffset(12,12,8,10);
@@ -398,6 +519,8 @@ namespace ArenaTatica
                 // Canto inferior esquerdo da parte livre: o losango da mesa deixa esse canto vazio.
                 Anchors(portrait,Vector2.zero,Vector2.zero,new Vector2(freeLeft+8,BottomBar+6),new Vector2(freeLeft+120,BottomBar+150));
                 Anchors(viewPanel,new Vector2(1,0),new Vector2(1,0),new Vector2(-190,BottomBar+6),new Vector2(-8,BottomBar+48));
+                // Ficha do lutador tocado: à direita, sem cobrir o painel lateral.
+                Anchors(inspect,new Vector2(1,0),Vector2.one,new Vector2(-380,BottomBar+56),new Vector2(-8,-TopBar-6));
             }
             side.gameObject.SetActive(SideOpen); sideTab.gameObject.SetActive(!SideOpen);
             ShowPage(matchPage);
@@ -482,7 +605,8 @@ namespace ArenaTatica
             if(!atShop&&!PeekShop) shopWindow.gameObject.SetActive(false);
             openShop.interactable=atShop;
             SetLabel(openShop,!atShop?"Loja: fique ao lado dela":shopWindow.gameObject.activeSelf?"Fechar loja":"Abrir loja");
-            if(UnityEngine.InputSystem.Keyboard.current?.escapeKey.wasPressedThisFrame==true) shopWindow.gameObject.SetActive(false);
+            if(UnityEngine.InputSystem.Keyboard.current?.escapeKey.wasPressedThisFrame==true) { shopWindow.gameObject.SetActive(false); inspect.gameObject.SetActive(false); }
+            if(InspectOpen&&(Game.View==null||!Game.View.Busy)) RefreshInspect();
             for(int i=0;i<shopButtons.Count;i++) {
                 var d=i<slots.Length?Shop.Def(slots[i]):null; var b=shopButtons[i];
                 SetLabel(b,d==null?"—":$"<b>{d.name}</b>\n<color=#{ArenaTema.Html(ArenaPresentation.Gold)}>{d.price} moedas</color>\n<size=14><color=#{ArenaTema.Html(muted)}>{ItemEffect(d)}</color></size>");
@@ -504,10 +628,10 @@ namespace ArenaTatica
             SetLabel(seats,$"{Game.Seats} jogadores"); seats.interactable=Game.Network.Role=="Local";
             SetLabel(format,ArenaGame.FormatName(Game.Format)); format.interactable=Game.Network.Role=="Local"||(Game.Network.IsHost&&Game.Lobby);
             SetLabel(theme,ArenaGame.ThemeName(Game.Theme)); theme.interactable=format.interactable;
-            start.gameObject.SetActive(Game.Network.IsHost&&Game.Lobby); start.interactable=Game.Filled>=2;
-#if UNITY_WEBGL && !UNITY_EDITOR
-            host.interactable=false;
-#endif
+            // Iniciar na sala; no torneio, "Próxima partida" quando a anterior acabou. Reiniciar: mesma sala, partida nova.
+            bool cupNext=Game.Torneio!=null&&Game.Torneio.recorded;
+            start.gameObject.SetActive(Game.Network.IsHost&&(Game.Lobby&&Game.Torneio==null||cupNext)); start.interactable=Game.Filled>=2; SetLabel(start,cupNext?"Próxima partida":"Iniciar");
+            restart.gameObject.SetActive(Game.Network.IsHost&&!Game.Lobby);
         }
         public void ShowRoom(string code) { address.text=code; }
         public void Log(string line) { logLines.Add(line); if(logLines.Count>7) logLines.RemoveAt(0); }

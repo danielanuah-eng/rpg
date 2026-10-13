@@ -25,6 +25,9 @@ namespace ArenaTatica.Core
     // A face de crítico do Krosmaster virou Cataclisma (decisão 11); o coringa Crítico/Esquiva virou Esquiva/Trava.
     public enum Face { Cataclisma, Escudo, Trava, Esquiva, CoringaEsquivaTrava, Coringa }
     public enum VictoryMode { Galeoes, Eliminacao, Tesouro, Dominio }
+    // Ordem dos turnos (autor, 13/10): Completo = Krosmaster (o jogador joga o time inteiro); Alternada = um lutador de cada time
+    // por vez, da maior Iniciativa para a menor.
+    public enum TurnMode { Completo, Alternada }
     // Teleporte: vai para casa livre sem caminho. Salto: alvo inimigo, cai na casa livre vizinha a ele mais perto de quem salta.
     // Forma: muda a forma do próprio lutador (arma, transformação). Esconder: fica invisível junto a relevo mais alto, árvore ou caixa.
     // Espelho: ganha 1 uso da última skill que o alvo usou.
@@ -154,6 +157,9 @@ namespace ArenaTatica.Core
         public PlayerSetup[] players;
         // Mapa feito no editor (aba Mapas); null ou de outro tamanho = mapa sorteado.
         public MapDef map;
+        public TurnMode turns=TurnMode.Completo;
+        // Itens que podem sair na loja desta sala (ids de Shop.Catalog); vazio = todos.
+        public string[] shopItems;
         public string[] team1={"ciantia"}, team2={"ciantia"};
     }
     // Mapa do editor: relevo, peças (árvore, arbusto, caixa) e zona central de cada casa. width = Board.SizeFor(jogadores).
@@ -173,6 +179,9 @@ namespace ArenaTatica.Core
         public int theme;
         public bool over;
         public VictoryMode mode;
+        public TurnMode turnMode;
+        // Itens liberados na loja (vazio = catálogo inteiro).
+        public string[] shopPool=new string[0];
         // Evento com duração ativo (EVENTOS-LOJA-ELENCO.md): id e rodadas que faltam; vazio = nenhum.
         public string ev="";
         public int evRounds;

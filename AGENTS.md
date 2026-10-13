@@ -36,6 +36,7 @@
 - Seguir a divisão definida pelo autor em `COLABORACAO-IAS.md`.
 - Codex é responsável por imagens, designs, assets visuais, leitura e análise de referências e modelos de imagem e criação de modelos 3D quando necessários.
 - Claude é responsável pelas demais partes do projeto, incluindo código e integração dos assets.
+- **Exceção do autor (13/10/2026): na Arena Tática o GPT/Codex pode mexer em tudo**, inclusive no código de `ArenaTaticaUnity/` (turnos, câmera, sala online, torneio, loja, skills, UI). Ver `coordenacao/arena-pixelai/tarefas/018-codex-arena-pedidos-13-10.md`. Antes de editar um `.cs`, registrar o arquivo numa nota em `coordenacao/arena-pixelai/notas/` e rodar os testes depois; não mudar regras sem pedido do autor.
 - Respeitar as instruções mais específicas de cada diretório e as orientações atuais do autor.
 - Para trabalho simultâneo, usar pastas/worktrees e branches separadas; coordenar arquivos compartilhados.
 - Push automático autorizado pelo autor em 03/10/2026 para este trabalho; substitui a instrução anterior de perguntar antes. A expansão continua exigindo liberação específica para entrar em jogo.

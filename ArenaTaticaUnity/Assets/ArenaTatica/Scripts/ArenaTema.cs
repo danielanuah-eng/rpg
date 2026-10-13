@@ -37,5 +37,39 @@ namespace ArenaTatica
         {
             var c=b.colors; c.selectedColor=Hex(0x3a4a5e); c.highlightedColor=Hex(0x2c3b4d); c.pressedColor=Selected; b.colors=c;
         }
+        // Botões com transição suave (autor, 13/10: LERP em todos): a cor desliza (fadeDuration) e a escala cresce sob o cursor
+        // e afunda ao apertar. A escala não mexe no layout.
+        public static Button Lerp(Button b)
+        {
+            if(!b) return b;
+            var c=b.colors; c.fadeDuration=.16f; b.colors=c;
+            if(!b.GetComponent<ArenaBotaoLerp>()) b.gameObject.AddComponent<ArenaBotaoLerp>();
+            return b;
+        }
+    }
+    public sealed class ArenaBotaoLerp : MonoBehaviour, UnityEngine.EventSystems.IPointerEnterHandler, UnityEngine.EventSystems.IPointerExitHandler,
+        UnityEngine.EventSystems.IPointerDownHandler, UnityEngine.EventSystems.IPointerUpHandler
+    {
+        public const float Hover=1.045f, Press=.94f, Speed=18;
+        bool over, down; Selectable target;
+        void Awake() { target=GetComponent<Selectable>(); }
+        public void OnPointerEnter(UnityEngine.EventSystems.PointerEventData e) { over=true; }
+        public void OnPointerExit(UnityEngine.EventSystems.PointerEventData e) { over=false; down=false; }
+        public void OnPointerDown(UnityEngine.EventSystems.PointerEventData e) { down=true; }
+        public void OnPointerUp(UnityEngine.EventSystems.PointerEventData e) { down=false; }
+        void OnDisable() { over=down=false; transform.localScale=Vector3.one; }
+        public static float Goal(bool interactable,bool over,bool down) => !interactable?1:down?Press:over?Hover:1;
+        void Update()
+        {
+            float goal=Goal(!target||target.interactable,over,down), s=transform.localScale.x;
+            if(Mathf.Abs(s-goal)<.0005f) return;
+            s=Mathf.Lerp(s,goal,1-Mathf.Exp(-Speed*Time.unscaledDeltaTime)); transform.localScale=new Vector3(s,s,1);
+        }
+    }
+    // Dica ao passar o cursor (não bloqueia a rolagem como o EventTrigger).
+    public sealed class ArenaDica : MonoBehaviour, UnityEngine.EventSystems.IPointerEnterHandler
+    {
+        public System.Action Enter;
+        public void OnPointerEnter(UnityEngine.EventSystems.PointerEventData e) => Enter?.Invoke();
     }
 }

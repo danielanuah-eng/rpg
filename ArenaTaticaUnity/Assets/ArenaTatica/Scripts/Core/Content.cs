@@ -166,6 +166,51 @@ namespace ArenaTatica.Core
                 new SkillDef { id="pancada-do-errante", name="Pancada do Errante", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=3 },
                 new SkillDef { id="rugido", name="Rugido", kind=SkillKind.Dano, pa=0, minRange=0, maxRange=0, sight=false, selfArea=true, foes=true, area=2, damage=0, pmLoss=2, anim="roar" } } },
         };
+        // Biblioteca de skills genéricas (autor, 13/10): modelos prontos inspirados em D&D, Krosmaster e golpes de anime, montados
+        // só com efeitos que o motor já tem. O editor copia a escolhida para a ficha (id novo) e o autor ajusta os números.
+        public static readonly (string group,SkillDef skill)[] Generic=
+        {
+            ("D&D", new SkillDef { id="bola-de-fogo", name="Bola de fogo", kind=SkillKind.Dano, pa=4, minRange=2, maxRange=5, damage=2, area=1, modifiable=true, perTurn=1 }),
+            ("D&D", new SkillDef { id="misseis-magicos", name="Mísseis mágicos", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=6, damage=2, precise=true }),
+            ("D&D", new SkillDef { id="relampago", name="Relâmpago", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=5, damage=3, line=true, sight=false, cooldown=1 }),
+            ("D&D", new SkillDef { id="cone-de-frio", name="Cone de frio", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=2, damage=2, area=1, pmLoss=1 }),
+            ("D&D", new SkillDef { id="golpe-divino", name="Golpe divino", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=4, pierce=true, cooldown=2 }),
+            ("D&D", new SkillDef { id="ataque-furtivo", name="Ataque furtivo", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=2, isolatedBonus=2 }),
+            ("D&D", new SkillDef { id="teia", name="Teia", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=4, damage=0, pmLoss=10, cooldown=3 }),
+            ("D&D", new SkillDef { id="imobilizar-pessoa", name="Imobilizar pessoa", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=4, damage=0, prison=1, cooldown=4 }),
+            ("D&D", new SkillDef { id="curar-ferimentos", name="Curar ferimentos", kind=SkillKind.Cura, pa=3, minRange=0, maxRange=1, damage=4, perTurn=1 }),
+            ("D&D", new SkillDef { id="palavra-curativa", name="Palavra curativa", kind=SkillKind.Cura, pa=2, minRange=0, maxRange=4, damage=2, perTurn=1 }),
+            ("D&D", new SkillDef { id="bencao", name="Bênção", kind=SkillKind.Suporte, pa=3, minRange=0, maxRange=0, sight=false, selfArea=true, area=2, buffPa=1, turns=1, cooldown=3 }),
+            ("D&D", new SkillDef { id="escudo-arcano", name="Escudo arcano", kind=SkillKind.Suporte, pa=2, minRange=0, maxRange=0, sight=false, selfArea=true, buffArmor=2, turns=1, cooldown=2 }),
+            ("D&D", new SkillDef { id="passo-nebuloso", name="Passo nebuloso", kind=SkillKind.Teleporte, pa=2, minRange=1, maxRange=3, sight=false, cooldown=2 }),
+            ("D&D", new SkillDef { id="furia-barbara", name="Fúria bárbara", kind=SkillKind.Suporte, pa=1, minRange=0, maxRange=0, sight=false, selfArea=true, buffArmor=1, buffPm=1, turns=2, cooldown=4 }),
+            ("D&D", new SkillDef { id="chamar-lobo", name="Chamar lobo", kind=SkillKind.Invocacao, pa=4, minRange=1, maxRange=1, summon="lobo-de-cinzas", cooldown=3 }),
+            ("Krosmaster", new SkillDef { id="pancada", name="Pancada", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=2 }),
+            ("Krosmaster", new SkillDef { id="flecha", name="Flecha", kind=SkillKind.Dano, pa=3, minRange=2, maxRange=5, damage=2, modifiable=true }),
+            ("Krosmaster", new SkillDef { id="flecha-atordoante", name="Flecha atordoante", kind=SkillKind.Dano, pa=3, minRange=2, maxRange=4, damage=1, paLoss=2, cooldown=2 }),
+            ("Krosmaster", new SkillDef { id="bomba", name="Bomba", kind=SkillKind.Armadilha, pa=2, minRange=1, maxRange=3, damage=3, perTurn=1 }),
+            ("Krosmaster", new SkillDef { id="empurrao-sismico", name="Empurrão sísmico", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=1, push=3 }),
+            ("Krosmaster", new SkillDef { id="arpao", name="Arpão", kind=SkillKind.Dano, pa=3, minRange=2, maxRange=5, damage=1, line=true, pull=true }),
+            ("Krosmaster", new SkillDef { id="roubo-de-vida", name="Roubo de vida", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=2, damage=2, drain=2 }),
+            ("Krosmaster", new SkillDef { id="tremor", name="Tremor", kind=SkillKind.Dano, pa=4, minRange=0, maxRange=0, sight=false, selfArea=true, square=true, area=1, damage=2, cooldown=2 }),
+            ("Krosmaster", new SkillDef { id="dispersao", name="Dispersão", kind=SkillKind.Dano, pa=3, minRange=0, maxRange=0, sight=false, selfArea=true, foes=true, area=1, damage=1, push=1 }),
+            ("Krosmaster", new SkillDef { id="corrida", name="Corrida", kind=SkillKind.Suporte, pa=1, minRange=0, maxRange=0, sight=false, selfArea=true, buffPm=2, turns=1, perTurn=1 }),
+            ("Krosmaster", new SkillDef { id="esconder-se", name="Esconder-se", kind=SkillKind.Esconder, pa=1, minRange=0, maxRange=0, sight=false, perTurn=1 }),
+            ("Anime", new SkillDef { id="onda-de-energia", name="Onda de energia", kind=SkillKind.Dano, pa=5, minRange=1, maxRange=6, damage=4, line=true, sight=false, cooldown=2 }),
+            ("Anime", new SkillDef { id="esfera-espiral", name="Esfera espiral", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=4, push=2, cooldown=2 }),
+            ("Anime", new SkillDef { id="lamina-relampago", name="Lâmina relâmpago", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=3, pierce=true, paLoss=1, cooldown=3 }),
+            ("Anime", new SkillDef { id="corte-instantaneo", name="Corte instantâneo", kind=SkillKind.Salto, pa=2, minRange=2, maxRange=4, cooldown=2 }),
+            ("Anime", new SkillDef { id="clone-das-sombras", name="Clone das sombras", kind=SkillKind.Invocacao, pa=3, minRange=1, maxRange=1, summon="ilusao", maxActive=2, cooldown=3 }),
+            ("Anime", new SkillDef { id="punho-do-dragao", name="Punho do dragão", kind=SkillKind.Dano, pa=5, minRange=1, maxRange=1, damage=6, push=2, perMatch=1, ultimate=true }),
+            ("Anime", new SkillDef { id="explosao-final", name="Explosão final", kind=SkillKind.Dano, pa=6, minRange=0, maxRange=0, sight=false, selfArea=true, foes=true, area=2, damage=4, perMatch=1, ultimate=true }),
+            ("Anime", new SkillDef { id="selo-de-prisao", name="Selo de prisão", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=0, prison=1, cooldown=3 }),
+            ("Anime", new SkillDef { id="aura-de-batalha", name="Aura de batalha", kind=SkillKind.Suporte, pa=1, minRange=0, maxRange=0, sight=false, selfArea=true, buffPa=2, turns=1, cooldown=4 }),
+            ("Anime", new SkillDef { id="dominio-congelante", name="Domínio congelante", kind=SkillKind.Zona, pa=3, minRange=1, maxRange=4, area=1, freeze=true, perTurn=1 }),
+            ("Suporte", new SkillDef { id="chuva-de-cura", name="Chuva de cura", kind=SkillKind.Suporte, pa=4, minRange=1, maxRange=4, area=1, heal=2, perTurn=1 }),
+            ("Suporte", new SkillDef { id="grito-de-guerra", name="Grito de guerra", kind=SkillKind.Suporte, pa=3, minRange=0, maxRange=0, sight=false, selfArea=true, area=2, buffPm=1, buffArmor=1, turns=1, cooldown=3 }),
+            ("Suporte", new SkillDef { id="pele-de-pedra", name="Pele de pedra", kind=SkillKind.Suporte, pa=3, minRange=0, maxRange=3, buffArmor=2, turns=1, cooldown=2 }),
+            ("Suporte", new SkillDef { id="chama-da-fenix", name="Chama da fênix", kind=SkillKind.Reviver, pa=6, minRange=1, maxRange=1, sight=false, heal=4, perMatch=1, ultimate=true }),
+        };
         public const string Cats="gato-laranja|gato-branco|gato-malhado|gato-manchado";
         // Gato da Asamyh: sem turno, 1 PV, não trava; a skill dele é disparada pela Faísca da varinha.
         static FighterDef Cat(string id,string name,string sprites,SkillDef zap) =>
@@ -247,9 +292,9 @@ namespace ArenaTatica.Core
                 case SkillKind.Salto: e.Add("salta até o inimigo"); break;
                 case SkillKind.Forma:
                     e.Add("muda de forma"+(sk.turns>0?$" por {sk.turns} turno{(sk.turns>1?"s":"")}":""));
-                    if(Fighters.Values.Where(x=>x.forms!=null).SelectMany(x=>x.forms).Any(x=>x.id==sk.toForm&&x.intangible)) e.Add("golpes inimigos não o acertam");
+                    if(Fighters.Values.Where(x=>x.forms!=null).SelectMany(x=>x.forms).Any(x=>x.id==sk.toForm&&x.intangible)) e.Add("imune a todo dano enquanto dura");
                     break;
-                case SkillKind.Esconder: e.Add(sk.noCover?"fica escondido em qualquer lugar":"esconde-se junto a cobertura"); break;
+                case SkillKind.Esconder: e.Add((sk.noCover?"fica escondido em qualquer lugar":"esconde-se junto a cobertura")+$"; escondido anda até {Match.HiddenPm} casas, e quem encosta revela e acerta"); break;
                 case SkillKind.Espelho: e.Add("reflete o último ataque do alvo"); break;
                 case SkillKind.Zona: e.Add(sk.freeze?"congela as casas (+1 PM para entrar)":"marca as casas"); break;
                 case SkillKind.Comando: e.Add(sk.step>0?$"o gato anda até {sk.step} casas":"o gato dispara e some"); break;

@@ -607,5 +607,61 @@ namespace ArenaTatica.Core.Tests
                 Assert.IsTrue(S.fighters.Any(f=>f.summoner==0&&f.hp<Content.MaxHp(f)),$"{a}×{b}: ninguém se feriu");
             }
         }
+
+        // ── Pedidos do autor de 13/10 ──
+        [Test] public void AlternateInitiativeInterleavesTeams()
+        {
+            m=Match.New(new MatchSetup{ flatMap=true, turns=TurnMode.Alternada, team1=new[]{"devon","gryvro"}, team2=new[]{"teantha","diantus"} });
+            CollectionAssert.AreEqual(new[]{2,1,2,1},S.timeline.Select(id=>S.F(id).team).ToArray(),"um de cada time por vez, começando pela maior soma");
+            CollectionAssert.AreEqual(new[]{"gryvro","devon"},S.timeline.Where(id=>S.F(id).team==1).Select(id=>S.F(id).def).ToArray(),"maior Iniciativa primeiro");
+            m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"devon","gryvro"}, team2=new[]{"teantha","diantus"} });
+            CollectionAssert.AreEqual(new[]{2,2,1,1},S.timeline.Select(id=>S.F(id).team).ToArray(),"padrão continua Krosmaster");
+        }
+        [Test] public void GhostFormIgnoresEveryDamage()
+        {
+            Duel("edgar","rei-bobett"); var edgar=A; Put(edgar,5,5); Put(Enemy,9,9);
+            Assert.IsTrue(Do("skill",new Cell(5,5),"forma-fantasma"));
+            var t=S.At(new Cell(5,6)); t.trap=Enemy.team; t.trapDamage=4; S.At(new Cell(5,7)).lava=true;
+            Assert.IsTrue(Do("mover",new Cell(5,6))); Assert.AreEqual(13,edgar.hp,"armadilha não fere o fantasma");
+        }
+        [Test] public void HiddenMovesLessAndAdjacentFoesFindIt()
+        {
+            Duel("perry","teantha"); var perry=A; var foe=Enemy; Put(perry,5,5); Put(foe,9,9); S.At(new Cell(5,4)).terrain=Terrain.Arvore;
+            Assert.IsTrue(Do("skill",new Cell(5,5),"esconder")); Assert.IsTrue(perry.hidden);
+            Assert.AreEqual(Match.HiddenPm,perry.pm,"escondido anda no máximo 2");
+            Do("passar"); Assert.AreSame(foe,A); Put(foe,5,7);
+            Assert.IsFalse(m.CanTarget(foe,Content.Skill(foe,"foice-verde"),perry.cell,out _),"de longe a casa parece vazia");
+            Assert.IsTrue(Do("mover",new Cell(5,6))); Assert.IsFalse(perry.hidden,"quem encosta revela");
+            perry.hidden=true; Assert.IsTrue(m.CanTarget(foe,Content.Skill(foe,"foice-verde"),perry.cell,out _),"colado acerta");
+        }
+        [Test] public void IllusionAlwaysNextToEzequielaWithRandomSide()
+        {
+            var sides=new System.Collections.Generic.HashSet<string>(); int copyFirst=0;
+            for(uint seed=1;seed<=40;seed++) {
+                m=Match.New(new MatchSetup{ seed=seed, flatMap=true, team1=new[]{"ezequiela"}, team2=new[]{"ciantia"} });
+                var eze=S.fighters.First(f=>f.def=="ezequiela"); var copy=S.fighters.First(f=>f.def=="ilusao");
+                Assert.AreEqual(1,eze.cell.Distance(copy.cell),"sempre colada"); Assert.AreEqual(eze.id,copy.summoner);
+                sides.Add($"{copy.cell.x-eze.cell.x},{copy.cell.z-eze.cell.z}");
+                if(S.timeline.IndexOf(copy.id)<S.timeline.IndexOf(eze.id)) copyFirst++;
+                var view=Match.ViewFor(S,2); Assert.IsTrue(view.fighters.Where(f=>f.team==1).All(f=>f.def=="ezequiela"&&f.summoner==0),"inimigo vê duas Ezequielas");
+            }
+            Assert.Greater(sides.Count,1,"o lado da cópia varia"); Assert.Greater(copyFirst,0); Assert.Less(copyFirst,40);
+        }
+        [Test] public void RoomShopOnlyOffersChosenItems()
+        {
+            m=Match.New(new MatchSetup{ flatMap=true, shopItems=new[]{"furia","bencao-de-pedra"} });
+            for(int p=1;p<=2;p++) foreach(var id in S.shops[p].slots) Assert.IsTrue(id==null||id=="furia"||id=="bencao-de-pedra",id);
+            Assert.AreEqual(2,S.shops[1].slots.Count(x=>x!=null),"só 2 itens liberados: o 3º espaço fica vazio");
+        }
+        [Test] public void GenericSkillLibraryIsValid()
+        {
+            Assert.GreaterOrEqual(Content.Generic.Length,30);
+            Assert.AreEqual(Content.Generic.Length,Content.Generic.Select(g=>g.skill.id).Distinct().Count());
+            foreach(var (_,sk) in Content.Generic) {
+                var d=Content.Copy(Content.Fighters["ciantia"]); d.skills=new[]{ sk.Clone() };
+                Assert.AreEqual(sk.kind,Content.Sanitize(d).skills[0].kind,sk.id+" sobrevive ao Sanitize");
+                Assert.IsFalse(string.IsNullOrEmpty(Content.Describe(sk)));
+            }
+        }
     }
 }

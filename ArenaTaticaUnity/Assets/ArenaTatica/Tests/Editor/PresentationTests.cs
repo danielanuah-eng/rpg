@@ -47,10 +47,10 @@ namespace ArenaTatica.Tests
             }
         }
 
-        [Test] public void MenuKeepsTheNineTabs()
+        [Test] public void MenuKeepsTheTabsPlusRoom()
         {
             var tabs=(System.Array)typeof(ArenaMenu).GetField("Tabs",BindingFlags.NonPublic|BindingFlags.Static).GetValue(null);
-            Assert.AreEqual(9,tabs.Length);
+            Assert.AreEqual(10,tabs.Length,"9 abas + Sala (13/10)");
         }
 
         [Test] public void EmptyTeamDisablesAdvanceAndCostFollowsTheTeam()
@@ -140,6 +140,20 @@ namespace ArenaTatica.Tests
                 Assert.LessOrEqual(Mathf.CeilToInt(n/(float)cols)*(cell.y+6)-6,h+.01f,$"{w}x{h}");
                 Assert.GreaterOrEqual(cell.x,77-.01f);
             }
+        }
+        // 13/10: equipes livres, pool do torneio e LERP dos botões.
+        [Test] public void FreeTeamsPoolsAndButtonLerp()
+        {
+            var saved=ArenaGame.CustomTeams.ToArray();
+            try {
+                for(int i=0;i<6;i++) ArenaGame.CustomTeams[i]=1;
+                Assert.IsNull(ArenaGame.FormatTeams("equipes",3),"um time só não fecha");
+                ArenaGame.CustomTeams[2]=2; CollectionAssert.AreEqual(new[]{1,1,2},ArenaGame.FormatTeams("equipes",3),"2 contra 1");
+            } finally { saved.CopyTo(ArenaGame.CustomTeams,0); }
+            var pool=ArenaGame.ValidPool(new[]{"ciantia","ciantia","nao-existe"});
+            Assert.AreEqual(pool.Length,pool.Distinct().Count()); Assert.Contains("ciantia",pool);
+            Assert.GreaterOrEqual(pool.Length,ArenaGame.MaxBans+3,"sobra time depois dos bans"); Assert.LessOrEqual(ArenaGame.ValidPool(Content.Roster).Length,ArenaGame.PoolSize);
+            Assert.Greater(ArenaBotaoLerp.Goal(true,true,false),1); Assert.Less(ArenaBotaoLerp.Goal(true,true,true),1); Assert.AreEqual(1,ArenaBotaoLerp.Goal(false,true,true));
         }
     }
 }

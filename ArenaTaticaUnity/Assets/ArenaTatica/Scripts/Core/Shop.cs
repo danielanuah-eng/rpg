@@ -54,7 +54,9 @@ namespace ArenaTatica.Core
             for(int i=0;i<Slots;i++)
             {
                 if(!string.IsNullOrEmpty(shop.slots[i])) continue;
-                var pool=Catalog.Where(d=>!shop.slots.Contains(d.id)).ToList();
+                // Loja configurada na sala: só os itens liberados (sem itens suficientes, o espaço fica vazio).
+                var pool=Catalog.Where(d=>!shop.slots.Contains(d.id)&&(s.shopPool==null||s.shopPool.Length==0||s.shopPool.Contains(d.id))).ToList();
+                if(pool.Count==0) continue;
                 int roll=Dice.Range(s,pool.Sum(d=>d.weight));
                 foreach(var d in pool) { if(roll<d.weight) { shop.slots[i]=d.id; break; } roll-=d.weight; }
             }
