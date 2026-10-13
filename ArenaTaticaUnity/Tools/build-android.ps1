@@ -7,16 +7,21 @@ $arenaRoot = Split-Path $PSScriptRoot -Parent
 if (-not $StagePath) { $StagePath = Join-Path $env:LOCALAPPDATA 'ArenaTaticaAndroid' }
 $StagePath = [System.IO.Path]::GetFullPath($StagePath)
 if ($StagePath -match '[^\x00-\x7F]') { throw 'StagePath precisa conter somente caracteres ASCII.' }
-New-Item -ItemType Directory -Force $StagePath | Out-Null
+. (Join-Path $PSScriptRoot 'build-context.ps1')
+$arenaBuildLock=Enter-ArenaBuild $arenaRoot $StagePath
+try {
+$arenaSourceCommit=(& git -C $arenaRoot rev-parse HEAD).Trim()
 $artifacts = Join-Path $arenaRoot 'Artifacts'
 New-Item -ItemType Directory -Force $artifacts | Out-Null
 $log = Join-Path $artifacts 'android-cli.log'
 foreach ($folder in @('Assets','Packages','ProjectSettings')) {
+    Assert-ArenaChild $StagePath (Join-Path $StagePath $folder)
     & robocopy (Join-Path $arenaRoot $folder) (Join-Path $StagePath $folder) /MIR /NFL /NDL /NJH /NJS /NP /R:2 /W:2 | Out-Null
     if ($LASTEXITCODE -ge 8) { throw "Falha ao sincronizar $folder (robocopy $LASTEXITCODE)." }
 }
 Set-Content -LiteralPath (Join-Path $artifacts 'android-stage.txt') -Value $StagePath
 $apk = Join-Path $StagePath 'Builds/Android/ArenaTatica.apk'
+Assert-ArenaChild $StagePath $apk
 if (Test-Path -LiteralPath $apk) { Remove-Item -LiteralPath $apk -Force }
 Write-Output "Cópia Android sincronizada: $StagePath"
 # O servidor de compilação C# (VBCSCompiler) é compartilhado entre editores; o do editor aberto no projeto com acento
@@ -31,4 +36,6 @@ if (-not (Test-Path -LiteralPath $apk)) { throw 'O Unity terminou sem gerar o AP
 $destination = Join-Path $arenaRoot 'Builds/Android'
 New-Item -ItemType Directory -Force $destination | Out-Null
 Copy-Item -LiteralPath $apk -Destination (Join-Path $destination 'ArenaTatica.apk') -Force
+Save-ArenaBuildReceipt $arenaRoot $StagePath 'Android' $arenaSourceCommit
 Write-Output "APK pronto: $destination\ArenaTatica.apk"
+} finally { $arenaBuildLock.Dispose() }

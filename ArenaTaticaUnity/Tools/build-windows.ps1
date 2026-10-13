@@ -6,19 +6,27 @@ $ErrorActionPreference = 'Stop'
 $arenaRoot = Split-Path $PSScriptRoot -Parent
 if (-not $StagePath) { $StagePath = Join-Path $env:LOCALAPPDATA 'ArenaTaticaAndroid' }
 $StagePath = [System.IO.Path]::GetFullPath($StagePath)
-New-Item -ItemType Directory -Force $StagePath | Out-Null
+. (Join-Path $PSScriptRoot 'build-context.ps1')
+$arenaBuildLock=Enter-ArenaBuild $arenaRoot $StagePath
+try {
+$arenaSourceCommit=(& git -C $arenaRoot rev-parse HEAD).Trim()
 $artifacts = Join-Path $arenaRoot 'Artifacts'
 New-Item -ItemType Directory -Force $artifacts | Out-Null
 $log = Join-Path $artifacts 'windows-cli.log'
 $seed = Join-Path $env:LOCALAPPDATA 'ArenaTaticaAndroid/Library'
+if (-not (Test-Path -LiteralPath $seed)) { $seed=Join-Path $arenaRoot 'Library' }
 if (-not (Test-Path (Join-Path $StagePath 'Library')) -and (Test-Path $seed)) {
+    Assert-ArenaChild $StagePath (Join-Path $StagePath 'Library')
     & robocopy $seed (Join-Path $StagePath 'Library') /MIR /NFL /NDL /NJH /NJS /NP /R:2 /W:2 | Out-Null
+    if ($LASTEXITCODE -ge 8) { throw "Falha ao copiar cache (robocopy $LASTEXITCODE)." }
 }
 foreach ($folder in @('Assets','Packages','ProjectSettings')) {
+    Assert-ArenaChild $StagePath (Join-Path $StagePath $folder)
     & robocopy (Join-Path $arenaRoot $folder) (Join-Path $StagePath $folder) /MIR /NFL /NDL /NJH /NJS /NP /R:2 /W:2 | Out-Null
     if ($LASTEXITCODE -ge 8) { throw "Falha ao sincronizar $folder (robocopy $LASTEXITCODE)." }
 }
 $out = Join-Path $StagePath 'Builds/Windows'
+Assert-ArenaChild $StagePath $out
 if (Test-Path -LiteralPath $out) { Remove-Item -LiteralPath $out -Recurse -Force }
 Write-Output "Cópia Windows sincronizada: $StagePath"
 # Mesmo cuidado do build Android: o servidor de compilação do editor aberto não lê os .rsp da cópia (CS2011).
@@ -29,12 +37,10 @@ $ErrorActionPreference = 'Stop'
 if ($LASTEXITCODE -ne 0) { throw 'Build Windows falhou; consultar Artifacts/windows-cli.log.' }
 if (-not (Test-Path -LiteralPath (Join-Path $out 'ArenaTatica.exe'))) { throw 'O Unity terminou sem gerar o .exe; consultar Artifacts/windows-cli.log.' }
 $destination = Join-Path $arenaRoot 'Builds/Windows'
+Assert-ArenaChild $arenaRoot $destination
 & robocopy $out $destination /MIR /NFL /NDL /NJH /NJS /NP /R:2 /W:2 | Out-Null
 if ($LASTEXITCODE -ge 8) { throw "Falha ao copiar o build (robocopy $LASTEXITCODE)." }
-# tar do Windows em vez de Compress-Archive: este gravava pastas vazias (Plugins) também como arquivo, e o itch recusa o zip.
-$names = Get-ChildItem -LiteralPath $destination | Where-Object { $_.Name -notmatch 'BackUpThisFolder|BurstDebugInformation' } | Select-Object -ExpandProperty Name
-$zip = Join-Path $arenaRoot 'Builds/ArenaTatica-Windows.zip'
-if (Test-Path -LiteralPath $zip) { Remove-Item -LiteralPath $zip -Force }
-& tar.exe -a -c -f $zip -C $destination @names
-if ($LASTEXITCODE -ne 0) { throw 'Falha ao gerar o zip.' }
+Save-ArenaBuildReceipt $arenaRoot $StagePath 'Windows' $arenaSourceCommit
+& (Join-Path $PSScriptRoot 'package.ps1') -Platforms Windows -SkipSource -SkipAndroid
 Write-Output "Versão de PC pronta: $(Join-Path $arenaRoot 'Builds/ArenaTatica-Windows.zip')"
+} finally { $arenaBuildLock.Dispose() }

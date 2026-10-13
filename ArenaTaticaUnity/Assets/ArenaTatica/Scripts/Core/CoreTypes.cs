@@ -6,6 +6,8 @@ namespace ArenaTatica
     [Serializable] public struct Cell : IEquatable<Cell>
     {
         public int x, z;
+        // Visão de rede: mantém o lutador/turno, sem entregar sua casa ao adversário.
+        public static Cell Unknown => new Cell(-1,-1);
         public Cell(int x, int z) { this.x=x; this.z=z; }
         public bool Equals(Cell c) => x==c.x && z==c.z;
         public override bool Equals(object o) => o is Cell c && Equals(c);

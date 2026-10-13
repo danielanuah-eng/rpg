@@ -130,7 +130,7 @@ namespace ArenaTatica
             ["corrente"]=(ShotKind.Lamina,C(.7f,.72f,.75f)), ["corrente-de-ferro"]=(ShotKind.Lamina,C(.7f,.72f,.75f)), ["agulha"]=(ShotKind.Bala,C(.8f,.95f,.9f)),
             ["prisao-dos-pesadelos"]=(ShotKind.Orbe,C(.5f,.2f,.7f)), ["raizes"]=(ShotKind.Orbe,C(.4f,.7f,.3f)), ["arremessar-pedra"]=(ShotKind.Bomba,C(.55f,.45f,.35f)) };
         public static Vector3 Position(MatchState s,Cell c,int height) => new Vector3(c.x-(s.width-1)*.5f,height*HStep,c.z-(s.height-1)*.5f);
-        public static Vector3 Position(MatchState s,Cell c) => Position(s,c,s.At(c).height);
+        public static Vector3 Position(MatchState s,Cell c) => Board.Contains(s,c)?Position(s,c,s.At(c).height):Vector3.zero;
 
         void Awake()
         {
@@ -387,7 +387,7 @@ namespace ArenaTatica
                 if(t.frozenBy!=0) markers.Add(Overlay("gelo",p,iceMaterial,.9f));
                 if(t.mark) markers.Add(Overlay("fogos",p,markMaterial,.5f));
             }
-            foreach(var f in s.fighters.Where(f=>f.Alive&&f.prisoned>0)) {
+            foreach(var f in s.fighters.Where(f=>f.Alive&&f.prisoned>0&&Board.Contains(s,f.cell))) {
                 var p=Position(s,f.cell); float h=Heights.TryGetValue(f.def,out float hh)?hh:.75f;
                 foreach(var corner in new[]{new Vector3(-.4f,0,-.4f),new Vector3(.4f,0,-.4f),new Vector3(-.4f,0,.4f),new Vector3(.4f,0,.4f)})
                     markers.Add(Cube("Prisao",p+corner+Vector3.up*h*.5f,new Vector3(.08f,h,.08f),cageMaterial,world));
@@ -459,6 +459,7 @@ namespace ArenaTatica
             if(immediate) CancelAnimations();
             BuildBoard(state); RefreshMarkers(state);
             foreach(var f in state.fighters) {
+                if(!Board.Contains(state,f.cell)) { if(units.TryGetValue(f.id,out var concealed)) concealed.gameObject.SetActive(false); continue; }
                 bool fresh=false;
                 if(!units.TryGetValue(f.id,out var root)) { if(!f.Alive) continue; root=units[f.id]=CreateUnit(f); fresh=true; }
                 root.gameObject.SetActive(f.Alive);
@@ -629,7 +630,10 @@ namespace ArenaTatica
                     Game.Hud?.Log($"{Name(s,e.actor)}: {(e.info==null?"forma normal":Content.Def(s.F(e.actor)).forms?.FirstOrDefault(x=>x.id==e.info)?.name??e.info)}");
                     break;
                 case "esconder": if(actor) { PlayClip(actor,"hide"); Flash(actor.position+Vector3.up*.5f,Violet); yield return Wait(.4f); } RefreshHidden(s); Game.Hud?.Log($"{Name(s,e.actor)} se escondeu"); break;
-                case "revelar": RefreshHidden(s); if(target) { Flash(target.position+Vector3.up,Violet); Float(target.position,"Revelado!",Violet); } yield return Wait(.25f); break;
+                case "revelar":
+                    if(!target&&s.F(e.target) is Fighter revealed&&Board.Contains(s,revealed.cell)) target=units[e.target]=CreateUnit(revealed);
+                    if(target) { target.gameObject.SetActive(true); target.position=Position(s,e.cell); }
+                    RefreshHidden(s); if(target) { Flash(target.position+Vector3.up,Violet); Float(target.position,"Revelado!",Violet); } yield return Wait(.25f); break;
                 case "espelho":
                     if(actor) { PlayClip(actor,"mirror"); Flash(actor.position+Vector3.up,Violet); if(target) Flash(target.position+Vector3.up,Violet); yield return Wait(.5f); }
                     Game.Hud?.Log($"{Name(s,e.actor)} refletiu {Content.AnySkill(e.info)?.name} em {Name(s,e.target)}");

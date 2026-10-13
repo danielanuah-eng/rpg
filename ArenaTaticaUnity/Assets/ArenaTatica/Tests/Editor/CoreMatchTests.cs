@@ -15,6 +15,72 @@ namespace ArenaTatica.Core.Tests
         bool Do(string kind,Cell cell=default,string skill=null) => m.Apply(Cmd(kind,cell,skill),A.team,out _,out _);
         void Put(Fighter f,int x,int z) => f.cell=new Cell(x,z);
 
+        [Test] public void NetworkSnapshotHidesEnemyCellsButKeepsTurnsAndAuthority()
+        {
+            var hidden=S.fighters.First(f=>f.team==1); hidden.hidden=true; var cell=hidden.cell;
+            var enemy=Match.ViewFor(S,2); var ally=Match.ViewFor(S,1);
+            Assert.AreEqual(Cell.Unknown,enemy.F(hidden.id).cell);
+            Assert.AreEqual(cell,ally.F(hidden.id).cell);
+            CollectionAssert.AreEqual(S.timeline,enemy.timeline);
+            Assert.AreEqual(cell,S.F(hidden.id).cell,"projeção não altera a autoridade");
+            Assert.IsTrue(ArenaTatica.ArenaGame.ValidState(enemy,2));
+            Assert.IsFalse(ArenaTatica.ArenaGame.ValidState(enemy),"estado autoritativo não aceita posição desconhecida");
+            Assert.IsFalse(ArenaTatica.ArenaGame.ValidState(enemy,1),"não pode esconder posição própria");
+            var wire=JsonUtility.FromJson<ArenaTatica.WireMessage>(JsonUtility.ToJson(new ArenaTatica.WireMessage{kind="snapshot",state=enemy}));
+            Assert.AreEqual(Cell.Unknown,wire.state.F(hidden.id).cell,"snapshot/reconexão serializados");
+            hidden.hidden=false; Assert.AreEqual(cell,Match.ViewFor(S,2).F(hidden.id).cell);
+        }
+
+        [Test] public void MultipleUnknownEnemiesAndAlliesKeepValidProjectedState()
+        {
+            m=Match.New(new MatchSetup{flatMap=true,players=new[]{new PlayerSetup{team=1,fighters=new[]{"perry","ezequiela"}},new PlayerSetup{team=2},new PlayerSetup{team=1}}});
+            foreach(var f in S.fighters.Where(x=>x.team==1)) f.hidden=true;
+            var enemy=Match.ViewFor(S,2); Assert.IsTrue(ArenaTatica.ArenaGame.ValidState(enemy,2));
+            Assert.IsTrue(enemy.fighters.Where(x=>x.team==1).All(x=>x.cell==Cell.Unknown));
+            Assert.IsTrue(Match.ViewFor(S,3).fighters.Where(x=>x.team==1).All(x=>Board.Contains(S,x.cell)),"aliados veem posições");
+        }
+
+        [Test] public void HiddenPathStaysSecretEvenWhenTheFinalStateRevealsItsFighter()
+        {
+            var f=S.fighters.First(x=>x.team==1); var old=new Cell(2,3); f.cell=new Cell(4,3); f.hidden=false;
+            var events=new System.Collections.Generic.List<GameEvent>{
+                new GameEvent{kind="mover",actor=f.id,path=new[]{old,new Cell(3,3),f.cell}},
+                new GameEvent{kind="moeda",actor=f.id,cell=new Cell(3,3)},
+                new GameEvent{kind="revelar",target=f.id,cell=f.cell}};
+            var visible=Match.EventsFor(events,S,2,new[]{f.id});
+            Assert.AreEqual(1,visible.Count); Assert.AreEqual("revelar",visible[0].kind); Assert.AreEqual(f.cell,visible[0].cell);
+            Assert.AreEqual(3,Match.EventsFor(events,S,1,new[]{f.id}).Count,"aliado conserva animações");
+            Assert.AreEqual(old,events[0].path[0],"não altera eventos do Host");
+        }
+
+        [Test] public void EnemyReceivesNoHiddenTeleportOrTurnCoordinates()
+        {
+            var f=S.fighters.First(x=>x.team==1); f.hidden=true;
+            var events=new System.Collections.Generic.List<GameEvent>{new GameEvent{kind="teleporte",actor=f.id,cell=f.cell,path=new[]{new Cell(2,2),f.cell}},new GameEvent{kind="turno",actor=f.id,cell=f.cell}};
+            var result=Match.EventsFor(events,S,2,new[]{f.id});
+            Assert.AreEqual(1,result.Count); Assert.AreEqual("turno",result[0].kind); Assert.AreEqual(Cell.Unknown,result[0].cell); Assert.IsNull(result[0].path);
+        }
+
+        [Test] public void ProjectedMeleeCanBeSubmittedButOnlyHostDecidesTheTarget()
+        {
+            var setup=new MatchSetup{flatMap=true,team1=new[]{"perry"},team2=new[]{"ciantia"}}; m=Match.New(setup);
+            var foe=S.fighters.First(x=>x.team==1); var mine=S.fighters.First(x=>x.team==2);
+            foe.hidden=true; Put(foe,5,5); Put(mine,5,6); mine.pa=20;
+            var skill=Match.Skills(mine).First(x=>x.kind==SkillKind.Dano&&!x.selfArea);
+            var view=Match.ViewFor(S,2); var preview=Match.FromState(view,true);
+            Assert.IsTrue(preview.CanTarget(view.F(mine.id),skill,foe.cell,out _));
+            Assert.IsTrue(m.CanTarget(mine,skill,foe.cell,out _));
+            Assert.IsFalse(m.CanTarget(mine,skill,new Cell(6,6),out _),"Host rejeita casa vazia");
+            Assert.IsFalse(preview.Apply(new Command{kind="passar"},2,out _,out _),"prévia não aplica regras");
+        }
+
+        [Test] public void HiddenIceTrapLeavesNoSecondaryMarkerInEnemySnapshot()
+        {
+            var at=new Cell(3,3); S.At(at).trap=1; S.At(at).trapDamage=2; S.At(at).trapPa=1;
+            var enemy=Match.ViewFor(S,2).At(at); Assert.AreEqual(0,enemy.trap); Assert.AreEqual(0,enemy.trapDamage); Assert.AreEqual(0,enemy.trapPa);
+            Assert.AreEqual(1,Match.ViewFor(S,1).At(at).trapPa);
+        }
+
         [Test] public void GeneratedMapIsMirroredAndConnected()
         {
             for(uint seed=1;seed<30;seed++)

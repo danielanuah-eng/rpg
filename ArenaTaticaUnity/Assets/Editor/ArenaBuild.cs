@@ -24,7 +24,8 @@ public static class ArenaBuild
         Directory.CreateDirectory("Assets/ArenaTatica/Scenes");
         EditorSceneManager.SaveScene(scene,"Assets/ArenaTatica/Scenes/Arena.unity");
         EditorBuildSettings.scenes=new[]{new EditorBuildSettingsScene("Assets/ArenaTatica/Scenes/Arena.unity",true)};
-        PlayerSettings.companyName="Arcanoclisma"; PlayerSettings.productName="Arena Tática"; PlayerSettings.bundleVersion="1.0.0";
+        PlayerSettings.companyName="Arcanoclisma"; PlayerSettings.productName="Arena Tática"; PlayerSettings.bundleVersion="1.1.0";
+        PlayerSettings.Android.bundleVersionCode=2;
         PlayerSettings.defaultScreenWidth=1280; PlayerSettings.defaultScreenHeight=720; PlayerSettings.fullScreenMode=FullScreenMode.Windowed; PlayerSettings.resizableWindow=true; PlayerSettings.runInBackground=true;
         PlayerSettings.SetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.Android,"org.arcanoclisma.arenatatica");
         PlayerSettings.WebGL.compressionFormat=WebGLCompressionFormat.Disabled;
@@ -130,6 +131,7 @@ public static class ArenaBuild
     }
     static void Build(BuildTarget target,string destination)
     {
+        PlayerSettings.bundleVersion="1.1.0"; PlayerSettings.Android.bundleVersionCode=2;
         EnsureMaterials();
         if(!BuildPipeline.IsBuildTargetSupported(BuildPipeline.GetBuildTargetGroup(target),target)) throw new Exception("Módulo não instalado: "+target);
         Directory.CreateDirectory(Path.GetDirectoryName(destination));

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 using ArenaTatica.Core;
 
@@ -34,6 +35,13 @@ namespace ArenaTatica
         {
             game=GetComponent<ArenaGame>();
             yield return new WaitForSeconds(2);
+            if(Application.isBatchMode&&System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-release-qa")>=0) { yield return ReleaseQa(); yield break; }
+            if(game.Network.IsHost&&System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-relay-report")>=0) {
+                float roomDeadline=Time.realtimeSinceStartup+40;
+                while(string.IsNullOrEmpty(game.Network.RoomCode)&&Time.realtimeSinceStartup<roomDeadline) yield return null;
+                if(string.IsNullOrEmpty(game.Network.RoomCode)) { Finish(false,"Relay: "+game.Status); yield break; }
+                Directory.CreateDirectory("Artifacts"); File.WriteAllText("Artifacts/019-relay-code.txt",game.Network.RoomCode);
+            }
             if(game.Network.IsHost) {
                 float deadline=Time.realtimeSinceStartup+25;
                 while(!game.Network.IsConnected&&Time.realtimeSinceStartup<deadline) yield return null;
@@ -108,6 +116,79 @@ namespace ArenaTatica
             foreach(float at in new[]{.25f,.5f,.8f,1.1f,1.4f,1.8f,2.4f}) { while(Time.time-start<at) yield return null; ScreenCapture.CaptureScreenshot(prefix+(n++)+".png"); }
             yield return new WaitForSeconds(1);
             Finish(true,$"Capturas: {me.def} ataca {foe.def} com {attack.id}");
+        }
+        object InvokeGame(string name,params object[] args) => typeof(ArenaGame).GetMethod(name,System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic).Invoke(game,args);
+        IEnumerator QaWait(System.Func<bool> ready,float seconds=25) { float end=Time.realtimeSinceStartup+seconds; while(!ready()&&Time.realtimeSinceStartup<end) yield return null; }
+        IEnumerator ReleaseQa()
+        {
+            var args=System.Environment.GetCommandLineArgs(); int ix=System.Array.IndexOf(args,"--arena-qa-prefix");
+            string prefix=ix>=0&&ix+1<args.Length?args[ix+1]:Path.GetFullPath("Artifacts/019-qa");
+            Directory.CreateDirectory(Path.GetDirectoryName(prefix));
+            bool cup=System.Array.IndexOf(args,"--arena-qa-cup")>=0; int players=game.Seats;
+            game.AutoStart=false; game.Turns=TurnMode.Alternada; game.SetTournament(cup); game.OpenLobby();
+            var initial=game.State; game.StartRoom();
+            if(!game.Setup||game.Lobby||game.State!=initial) { Finish(false,"Configuração iniciou a partida antes da liberação"); yield break; }
+            if(players==2&&!cup) { ScreenCapture.CaptureScreenshot(prefix+"-configurar.png"); yield return new WaitForSeconds(.3f); }
+            game.Release(false);
+            if(!game.Lobby||!game.Network.IsHost) { Finish(false,"Liberar LAN: "+game.Status); yield break; }
+            File.WriteAllText(prefix+".ready","LAN");
+            yield return QaWait(()=>game.Filled==players,60);
+            if(game.Filled!=players) { Finish(false,"Não chegaram todos os participantes"); yield break; }
+            if(players==2&&!cup) { ScreenCapture.CaptureScreenshot(prefix+"-sala.png"); yield return new WaitForSeconds(.3f); }
+            game.StartRoom();
+            if(cup) {
+                int played=0;
+                while(game.Torneio.champion==0&&played<players) {
+                    float end=Time.realtimeSinceStartup+25;
+                    while(game.Torneio.phase!=""&&Time.realtimeSinceStartup<end) {
+                        var t=game.Torneio;
+                        if(t.a==1||t.b==1) {
+                            var choices=t.phase=="ban"?t.bans:t.picks;
+                            if(!choices.ContainsKey(1)) InvokeGame("DraftChoice",1,t.phase,t.phase=="ban"?game.DraftOptions(1).Take(2).ToArray():ArenaGame.ValidTeam(game.DraftOptions(1)));
+                        }
+                        yield return null;
+                    }
+                    if(game.Torneio.phase!=""||game.Lobby) { Finish(false,"Draft remoto não completou"); yield break; }
+                    // Fixture: os combates já têm cobertura própria. Aqui validamos chave/draft/transporte.
+                    game.State.over=true; game.State.winner=1; InvokeGame("RecordTournament"); played++; game.NextTournamentMatch();
+                    yield return new WaitForSeconds(.2f);
+                }
+                bool passed=played==players-1&&game.Torneio.champion>0;
+                File.WriteAllText(prefix+".result",passed?$"cup:{players};matches:{played};champion:{game.Torneio.champion}":"FAIL");
+                Finish(passed,$"Torneio LAN {players}: draft remoto, {played} partidas de fixture, campeão"); yield break;
+            }
+            if(game.Lobby||game.State.players!=players) { Finish(false,"Iniciar não entregou o estado da sala"); yield break; }
+            yield return Idle();
+            // Fixture opt-in e somente batch: usa Execute/Match.Apply reais para movimento e contato.
+            var s=game.State; var hidden=s.fighters.First(f=>f.team==1&&f.summoner==0); var visitor=s.fighters.First(f=>f.team==2&&f.summoner==0);
+            var reserved=new[]{new Cell(2,2),new Cell(2,3),new Cell(4,3),new Cell(3,3)};
+            foreach(var f in s.fighters.Where(f=>f!=hidden&&f!=visitor&&reserved.Contains(f.cell))) {
+                f.cell=Enumerable.Range(0,s.tiles.Length).Select(i=>new Cell(i%s.width,i/s.width)).First(c=>!reserved.Contains(c)&&Board.At(s,c)==null&&Board.Walkable(s,c,false));
+            }
+            foreach(var c in reserved) { s.At(c).terrain=ArenaTatica.Core.Terrain.Livre; s.At(c).height=0; s.At(c).coins=0; s.At(c).trap=0; }
+            hidden.cell=reserved[0]; hidden.hidden=true; hidden.pm=2; visitor.cell=reserved[2]; visitor.pm=2;
+            s.active=s.timeline.IndexOf(hidden.id);
+            InvokeGame("Execute",new Command{kind="mover",fighter=hidden.id,revision=s.revision,cell=reserved[1]},1,-1);
+            yield return QaWait(()=>File.Exists(prefix+".reconnected"));
+            if(!File.Exists(prefix+".reconnected")) { Finish(false,"Cliente não confirmou o snapshot secreto após reconexão"); yield break; }
+            yield return Idle(); s.active=s.timeline.IndexOf(visitor.id);
+            InvokeGame("Execute",new Command{kind="mover",fighter=visitor.id,revision=s.revision,cell=reserved[3]},2,-1);
+            yield return QaWait(()=>File.Exists(prefix+".revealed"));
+            if(hidden.hidden||!File.Exists(prefix+".revealed")) { Finish(false,"Contato não revelou pelo protocolo"); yield break; }
+            yield return Idle();
+            if(players==2) {
+                ScreenCapture.CaptureScreenshot(prefix+"-tabuleiro.png"); yield return new WaitForSeconds(.3f);
+                game.Hud.Inspect(visitor); ScreenCapture.CaptureScreenshot(prefix+"-ficha.png"); yield return new WaitForSeconds(.3f);
+                game.Hud.OpenPicker(); ScreenCapture.CaptureScreenshot(prefix+"-selecao.png"); yield return new WaitForSeconds(.3f);
+                Screen.SetResolution(960,540,false); yield return new WaitForSeconds(.5f);
+                ScreenCapture.CaptureScreenshot(prefix+"-selecao-960.png"); yield return new WaitForSeconds(.3f);
+            }
+            game.RestartRoom(); yield return QaWait(()=>File.Exists(prefix+".restarted"));
+            game.BackToLobby(); yield return QaWait(()=>File.Exists(prefix+".lobby"));
+            game.StartRoom(); yield return QaWait(()=>File.Exists(prefix+".again"));
+            bool complete=File.Exists(prefix+".restarted")&&File.Exists(prefix+".lobby")&&File.Exists(prefix+".again")&&game.State.players==players;
+            File.WriteAllText(prefix+".result",complete?$"room:{players};invisible:pass;reconnect:pass;restart:pass":"FAIL");
+            Finish(complete,$"Sala LAN {players}: configurar/liberar/iniciar, invisibilidade, reconexão, reinício, voltar à sala");
         }
         // Espera 1 s antes de fechar: o último estado ainda precisa sair pela rede.
         void Finish(bool success,string message) { Debug.Log("ARENA_SMOKE_"+(success?"PASS: ":"FAIL: ")+message); StartCoroutine(Quit(success?0:1)); }

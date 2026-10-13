@@ -7,11 +7,12 @@ using ArenaTatica.Core;
 
 namespace ArenaTatica
 {
-    // Protocolo 3: hello{token} sobe e recebe welcome{assento}; a sala manda lobby até começar; depois o estado filtrado
+    // Protocolo 4: coordenadas ocultas usam Cell.Unknown; clientes antigos precisam atualizar.
+    // hello{token} sobe e recebe welcome{assento}; a sala manda lobby até começar; depois o estado filtrado
     // por jogador e os eventos descem e os comandos sobem. O Host decide tudo.
     [Serializable] public class WireMessage
     {
-        public int protocol=3;
+        public int protocol=4;
         public string kind, text, token;
         public string[] fighters; // hello: time escolhido no aparelho do jogador
         public string[] pool;     // hello/escolha: pool do torneio
@@ -73,7 +74,13 @@ namespace ArenaTatica
         public const int PoolSize=8, MaxBans=2;
         public static string[] MyPool
         {
-            get => ValidPool(PlayerPrefs.GetString("arena-pool","").Split(','));
+            get
+            {
+                var saved=PlayerPrefs.GetString("arena-pool","");
+                var pool=ValidPool(saved.Split(',')); var value=string.Join(",",pool);
+                if(saved!=value) { PlayerPrefs.SetString("arena-pool",value); PlayerPrefs.Save(); }
+                return pool;
+            }
             set { PlayerPrefs.SetString("arena-pool",string.Join(",",ValidPool(value))); PlayerPrefs.Save(); }
         }
         // Pool: lutadores escolhíveis, sem repetir, até PoolSize; pequena demais completa com sorteados.
@@ -87,7 +94,7 @@ namespace ArenaTatica
         {
             public List<int> entrants=new List<int>(), winners=new List<int>();
             public List<int[]> round=new List<int[]>();
-            public int match=-1, a, b, champion, number;
+            public int match=-1, a, b, champion, number, recordedWinner;
             public string phase="";
             public bool recorded;
             public readonly Dictionary<int,string[]> bans=new Dictionary<int,string[]>(), picks=new Dictionary<int,string[]>();
@@ -111,7 +118,7 @@ namespace ArenaTatica
         public bool IsBot(int seat) => BotsPlaying&&seat>=2&&seat<=MatchState.MaxPlayers;
         float botWait; int botActions, botFighter=-1, botRevision=-1;
         // Regras de leitura (alcance, alvos) também no cliente, sobre o estado recebido.
-        public Match Preview => Match??(preview!=null&&preview.S==State?preview:preview=Match.FromState(State));
+        public Match Preview => Match??(preview!=null&&preview.S==State?preview:preview=Match.FromState(State,networkPreview:Client));
         Match preview;
         readonly Dictionary<string,float> throttle=new Dictionary<string,float>();
         readonly Queue<bool> probes=new Queue<bool>();
@@ -391,7 +398,7 @@ namespace ArenaTatica
         void Hello(int peer,string token,string[] fighters,string[] pool)
         {
             if(string.IsNullOrEmpty(token)||token.Length>64||peerSeat.ContainsKey(peer)) return;
-            if(Lobby) { tokenPick[token]=ValidTeam(fighters); tokenPool[token]=ValidPool(pool); }
+            if(Lobby&&Torneio==null) { tokenPick[token]=ValidTeam(fighters); tokenPool[token]=ValidPool(pool); }
             if(!tokenSeat.TryGetValue(token,out int seat))
             {
                 if(Lobby) for(int s=2;s<=Seats&&seat==0;s++) if(!tokenSeat.ContainsValue(s)) seat=s;
@@ -412,7 +419,7 @@ namespace ArenaTatica
         // Cliente trocou time/pool na sala.
         void Choice(int peer,string[] fighters,string[] pool)
         {
-            if(!Lobby||!peerSeat.TryGetValue(peer,out int seat)) return;
+            if(!Lobby||Torneio!=null||!peerSeat.TryGetValue(peer,out int seat)) return;
             var token=SeatToken(seat); if(token==null) return;
             if(fighters!=null&&fighters.Length>0) tokenPick[token]=ValidTeam(fighters);
             if(pool!=null&&pool.Length>0) tokenPool[token]=ValidPool(pool);
@@ -458,7 +465,15 @@ namespace ArenaTatica
         public void RestartRoom()
         {
             if(!Network.IsHost) { Status="Só o anfitrião reinicia a partida."; return; }
-            if(Torneio!=null&&Torneio.a>0) { Torneio.recorded=false; StartTournamentMatch(); return; }
+            if(Torneio!=null&&Torneio.a>0) {
+                if(Torneio.phase!=""||Torneio.champion>0) { Status="Conclua as escolhas ou volte à sala para iniciar outro torneio."; return; }
+                if(Torneio.recorded) {
+                    Torneio.winners.Remove(Torneio.recordedWinner);
+                    Torneio.log.RemoveAll(line=>line.StartsWith($"Partida {Torneio.number}: <b>"));
+                    Torneio.recordedWinner=0;
+                }
+                Torneio.recorded=false; StartTournamentMatch(); return;
+            }
             Lobby=true; StartRoom();
         }
         // Volta todos para a sala (trocar times, formato, loja) sem desconectar ninguém.
@@ -485,8 +500,9 @@ namespace ArenaTatica
         public void NextTournamentMatch()
         {
             var t=Torneio; if(t==null||!Network.IsHost) return;
+            if(t.phase!="") { Status="Conclua os bans e a escolha dos times antes de avançar."; return; }
             if(t.a>0&&State!=null&&!State.over&&!Lobby) { Status="A partida do torneio ainda está em andamento."; return; }
-            t.match++; t.a=t.b=0; t.phase=""; t.recorded=false;
+            t.match++; t.a=t.b=0; t.phase=""; t.recorded=false; t.recordedWinner=0;
             if(t.match>=t.round.Count)
             {
                 if(t.winners.Count<=1) { t.champion=t.winners.FirstOrDefault(); t.log.Add($"<color=#e8c278>Campeão: P{t.champion}!</color>"); Lobby=true; BroadcastLobby(); Status=$"Torneio encerrado. Campeão: P{t.champion}."; Menu?.Open("sala"); return; }
@@ -534,11 +550,11 @@ namespace ArenaTatica
         }
         void StartTournamentMatch()
         {
-            var t=Torneio; if(t==null||t.a==0) return;
+            var t=Torneio; if(t==null||t.a==0||t.phase!=""||!t.picks.ContainsKey(t.a)||!t.picks.ContainsKey(t.b)) return;
             Lobby=false; NewMatch(2,pick:p=>p==1?t.picks[t.a]:t.picks[t.b],format:"todos"); throttle.Clear(); View.ResetView(State);
             foreach(var kv in seatPeer) {
                 int team=MatchTeam(kv.Key);
-                if(team==0) { Send(kv.Value,new WireMessage{kind="lobby",seat=kv.Key,seats=Seats,text=LobbySummary()+$"\n\nAssistindo: P{t.a} × P{t.b} está em andamento."}); continue; }
+                if(team==0) { Send(kv.Value,new WireMessage{kind="lobby",seat=kv.Key,seats=Seats,text=LobbySummary()+$"\n\nResumo: P{t.a} × P{t.b} está em andamento (sem transmissão da partida)."}); continue; }
                 Send(kv.Value,new WireMessage{kind="welcome",seat=team,seats=2});
                 Send(kv.Value,new WireMessage{kind="snapshot",seat=team,state=Match.ViewFor(State,team)});
             }
@@ -550,7 +566,7 @@ namespace ArenaTatica
         {
             var t=Torneio; if(t==null||t.a==0||t.recorded||State==null||!State.over) return;
             t.recorded=true; int w=State.winner==1?t.a:State.winner==2?t.b:(UnityEngine.Random.value<.5f?t.a:t.b);
-            t.winners.Add(w); t.log.Add($"Partida {t.number}: <b>P{w} venceu</b>{(State.winner==0?" (empate decidido no sorteio)":"")}.");
+            t.recordedWinner=w; t.winners.Add(w); t.log.Add($"Partida {t.number}: <b>P{w} venceu</b>{(State.winner==0?" (empate decidido no sorteio)":"")}.");
             Status=$"P{w} venceu a partida {t.number} do torneio. Toque em Próxima partida.";
             LobbyVersion++;
         }
@@ -571,17 +587,18 @@ namespace ArenaTatica
         void Execute(Command cmd,int team,int peer)
         {
             if(Recovery||Match==null) return;
+            var hiddenBefore=State.fighters.Where(f=>f.hidden).Select(f=>f.id).ToArray();
             if(Match.Apply(cmd,team,out var events,out var reason)) {
                 State=Match.S; Mode="";
                 Status=cmd.kind=="passar"?"Turno encerrado.":cmd.kind=="comprar"?"Compra feita.":"Ação confirmada.";
                 View.Play(events,State); ArenaStats.Record(events,State);
                 if(Network.IsHost) foreach(var kv in seatPeer) { int t=MatchTeam(kv.Key); if(t==0) continue;
-                    Send(kv.Value,new WireMessage{kind="state",state=Match.ViewFor(State,t),events=Match.EventsFor(events,State,t).ToArray()}); }
+                    Send(kv.Value,new WireMessage{kind="state",state=Match.ViewFor(State,t),events=Match.EventsFor(events,State,t,hiddenBefore).ToArray()}); }
                 if(Network.IsHost&&State.over) RecordTournament();
             } else { Status=reason; if(Network.IsHost&&peer>=0) Send(peer,new WireMessage{kind="reject",text=reason}); }
         }
         void Send(int peer,WireMessage message) { Network.Send(peer,JsonUtility.ToJson(message)); }
-        public static bool ValidState(MatchState s)
+        public static bool ValidState(MatchState s,int viewer=0)
         {
             const int n=MatchState.MaxPlayers+1;
             if(s==null||!Board.ValidSize(s.width)||s.height!=s.width||s.players<2||s.players>MatchState.MaxPlayers||s.tiles==null||s.tiles.Length!=s.width*s.height) return false;
@@ -591,8 +608,9 @@ namespace ArenaTatica
             var ids=new HashSet<int>(); var cells=new HashSet<Cell>();
             foreach(var f in s.fighters) {
                 if(f==null||!ids.Add(f.id)||(f.team<1||f.team>s.players)&&f.team!=MatchState.Neutral||f.def==null||!Content.Fighters.ContainsKey(f.def)) return false;
-                if(f.hp<0||f.hp>Content.MaxHp(f)||f.pa<0||f.pm<0||!Board.Contains(s,f.cell)) return false;
-                if(f.Alive&&!cells.Add(f.cell)) return false;
+                bool concealed=viewer>0&&f.hidden&&!s.Ally(f.team,viewer)&&f.cell==Cell.Unknown;
+                if(f.hp<0||f.hp>Content.MaxHp(f)||f.pa<0||f.pm<0||(!concealed&&!Board.Contains(s,f.cell))) return false;
+                if(f.Alive&&!concealed&&!cells.Add(f.cell)) return false;
             }
             return true;
         }
@@ -600,7 +618,13 @@ namespace ArenaTatica
         {
             WireMessage m;
             try { m=JsonUtility.FromJson<WireMessage>(text); } catch(Exception) { return; }
-            if(m==null||m.protocol!=3) return;
+            if(m==null) return;
+            if(m.protocol!=4) {
+                const string update="Versões diferentes. Atualize a Arena Tática nos dois aparelhos.";
+                if(Network.IsHost&&m.kind=="hello") Send(peer,new WireMessage{protocol=m.protocol,kind="full",text=update});
+                else if(Client) { Network.Close(); Recovery=true; Synced=false; Status=update; }
+                return;
+            }
             if(m.kind=="ping") { if(Allow("remote:ping:"+peer)) Send(peer,new WireMessage{kind="pong",ping=m.ping}); return; }
             if(m.kind=="pong") { if(pingWaiting&&m.ping==pingId) { Rtt=Mathf.RoundToInt((Time.unscaledTime-pingSent)*1000); RecordProbe(false); pingWaiting=false; } return; }
             if(Network.IsHost) {
@@ -620,7 +644,7 @@ namespace ArenaTatica
             if(m.kind!="snapshot"&&m.kind!="state") return;
             // Fichas do Host valem na sala (o cliente confere PV máximos e skills com elas).
             if(m.state!=null) Content.ApplyEdits(m.state.edits);
-            if(Seat==0||!ValidState(m.state)||Seat>m.state.players||(!Synced&&m.kind!="snapshot")||(Synced&&State!=null&&m.state.revision<=State.revision&&m.kind!="snapshot")) return;
+            if(Seat==0||!ValidState(m.state,Seat)||Seat>m.state.players||(!Synced&&m.kind!="snapshot")||(Synced&&State!=null&&m.state.revision<=State.revision&&m.kind!="snapshot")) return;
             bool initial=m.kind=="snapshot";
             State=m.state; preview=null; Synced=true; Recovery=false; Lobby=false; Mode="";
             if(initial) { View.ResetView(State); ArenaStats.Begin(); Menu?.Close(); } else { var list=m.events?.ToList()??new List<GameEvent>(); View.Play(list,State); ArenaStats.Record(list,State); }

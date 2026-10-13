@@ -11,6 +11,7 @@ namespace ArenaTatica.Core
         // Só para testes: faces forçadas antes do RNG da partida.
         public readonly Queue<Face> Forced=new Queue<Face>();
         List<GameEvent> events=new List<GameEvent>();
+        bool networkPreview;
 
         public static Match New(MatchSetup setup)
         {
@@ -36,7 +37,7 @@ namespace ArenaTatica.Core
             m.BeginTurn(s.Active);
             return m;
         }
-        public static Match FromState(MatchState state) => new Match { S=state };
+        public static Match FromState(MatchState state,bool networkPreview=false) => new Match { S=state, networkPreview=networkPreview };
 
         // Grupo de spawn de cada jogador. Com 2 times, cada time fica de um lado do mapa; com 3 (2v2v2), esquerda, direita e centro.
         static int[] SlotOrder(MatchState s)
@@ -113,6 +114,7 @@ namespace ArenaTatica.Core
         public bool Apply(Command cmd,int team,out List<GameEvent> result,out string reason)
         {
             events=new List<GameEvent>(); result=events; reason="";
+            if(networkPreview) { reason="A visão de rede só permite prévia; envie o comando ao Host."; return false; }
             var f=S.Active;
             if(cmd==null) { reason="Comando vazio."; return false; }
             if(S.over) { reason="Partida encerrada."; return false; }
@@ -289,7 +291,7 @@ namespace ArenaTatica.Core
         {
             var v=UnityEngine.JsonUtility.FromJson<MatchState>(UnityEngine.JsonUtility.ToJson(s));
             v.rng=0;
-            foreach(var t in v.tiles) if(t.trap!=0&&!s.Ally(t.trap,player)) { t.trap=0; t.trapDamage=0; }
+            foreach(var t in v.tiles) if(t.trap!=0&&!s.Ally(t.trap,player)) { t.trap=0; t.trapDamage=0; t.trapPa=0; }
             // Ilusão: para os inimigos é igual à original (mesmo nome, PV e sem marca de invocação).
             foreach(var f in v.fighters.Where(x=>!string.IsNullOrEmpty(x.disguise)&&!s.Ally(x.team,player)))
             {
@@ -297,11 +299,32 @@ namespace ArenaTatica.Core
                 // PV mostrado = PV da original menos o dano que a ilusão já levou.
                 int lost=Content.Fighters["ilusao"].hp-f.hp;
                 f.def=f.disguise; f.summoner=0; if(real!=null) { f.hp=real.Alive?Math.Max(1,real.hp-lost):f.hp; f.form=real.form; }
+                f.disguise=null;
             }
+            foreach(var f in v.fighters.Where(x=>x.hidden&&!s.Ally(x.team,player))) f.cell=Cell.Unknown;
             return v;
         }
-        public static List<GameEvent> EventsFor(List<GameEvent> events,MatchState s,int player) =>
-            events.Where(e=>e.kind!="armadilha-posta"||(s.F(e.actor) is Fighter a&&s.Ally(a.team,player))).ToList();
+        public static List<GameEvent> EventsFor(List<GameEvent> events,MatchState s,int player,IEnumerable<int> hiddenBefore=null)
+        {
+            // O estado final pode já ter revelado alguém. A filtragem começa no estado ANTES da ação,
+            // para não divulgar o trajeto escondido que terminou num contato/revelação.
+            var hidden=new HashSet<int>(hiddenBefore??s.fighters.Where(f=>f.hidden).Select(f=>f.id));
+            hidden.RemoveWhere(id=>s.F(id) is Fighter f&&s.Ally(f.team,player));
+            var result=new List<GameEvent>();
+            foreach(var e in events) {
+                if(e.kind=="armadilha-posta"&&!(s.F(e.actor) is Fighter owner&&s.Ally(owner.team,player))) continue;
+                if(e.kind=="esconder"&&s.F(e.actor) is Fighter h&&!s.Ally(h.team,player)) hidden.Add(e.actor);
+                if(e.kind=="revelar"||e.kind=="renascer"||e.kind=="nocaute") hidden.Remove(e.target);
+                bool global=new[]{"turno","rodada","loja","dominio","eliminado","vitoria","cataclisma","evento-duracao","evento-fim"}.Contains(e.kind);
+                if(!global&&(hidden.Contains(e.actor)||hidden.Contains(e.target))) continue;
+                var copy=UnityEngine.JsonUtility.FromJson<GameEvent>(UnityEngine.JsonUtility.ToJson(e));
+                if(global&&hidden.Contains(e.actor)) { copy.cell=Cell.Unknown; copy.path=null; }
+                // O evento de invocação não deve entregar o tipo real de uma ilusão disfarçada.
+                if(e.kind=="invocar"&&s.F(e.target) is Fighter summoned&&!string.IsNullOrEmpty(summoned.disguise)&&!s.Ally(summoned.team,player)) copy.info=summoned.disguise;
+                result.Add(copy);
+            }
+            return result;
+        }
 
         public bool CanTarget(Fighter f,SkillDef sk,Cell c,out string reason) => Check(f,sk,c,false,out reason);
         // free: sem custo nem limites (o gato dispara pela Faísca da varinha, que já pagou).
@@ -329,6 +352,9 @@ namespace ArenaTatica.Core
             {
                 case SkillKind.Dano:
                     if(sk.selfArea) { if(c!=f.cell) { reason="Use em si mesmo."; return false; } break; }
+                    // O cliente pode tentar o golpe colado sem conhecer a casa do invisível.
+                    // A autoridade continua com Check no Host, que tem o alvo/custo reais.
+                    if(v==null&&networkPreview&&f.cell.Distance(c)==1&&S.fighters.Any(x=>x.Alive&&x.hidden&&x.cell==Cell.Unknown&&!S.Ally(x.team,f.team))) break;
                     if(v==null||S.Ally(v.team,f.team)) { reason="Alvo inválido."; return false; }
                     if(Ghost(v)) { reason="Forma fantasma: golpes não o acertam."; return false; }
                     break;
