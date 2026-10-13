@@ -16,8 +16,8 @@ New-Item -ItemType Directory -Force $artifacts | Out-Null
 $log = Join-Path $artifacts 'android-cli.log'
 foreach ($folder in @('Assets','Packages','ProjectSettings')) {
     Assert-ArenaChild $StagePath (Join-Path $StagePath $folder)
-    & robocopy (Join-Path $arenaRoot $folder) (Join-Path $StagePath $folder) /MIR /NFL /NDL /NJH /NJS /NP /R:2 /W:2 | Out-Null
-    if ($LASTEXITCODE -ge 8) { throw "Falha ao sincronizar $folder (robocopy $LASTEXITCODE)." }
+    & robocopy (Join-Path $arenaRoot $folder) (Join-Path $StagePath $folder) /MIR /MT:8 /NFL /NDL /NJH /NJS /NP /R:2 /W:2 | Out-Null
+    if ($LASTEXITCODE -lt 0 -or $LASTEXITCODE -ge 8) { throw "Falha ao sincronizar $folder (robocopy $LASTEXITCODE)." }
 }
 Set-Content -LiteralPath (Join-Path $artifacts 'android-stage.txt') -Value $StagePath
 $apk = Join-Path $StagePath 'Builds/Android/ArenaTatica.apk'

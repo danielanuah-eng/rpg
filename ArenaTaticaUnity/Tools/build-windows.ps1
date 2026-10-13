@@ -17,13 +17,13 @@ $seed = Join-Path $env:LOCALAPPDATA 'ArenaTaticaAndroid/Library'
 if (-not (Test-Path -LiteralPath $seed)) { $seed=Join-Path $arenaRoot 'Library' }
 if (-not (Test-Path (Join-Path $StagePath 'Library')) -and (Test-Path $seed)) {
     Assert-ArenaChild $StagePath (Join-Path $StagePath 'Library')
-    & robocopy $seed (Join-Path $StagePath 'Library') /MIR /NFL /NDL /NJH /NJS /NP /R:2 /W:2 | Out-Null
-    if ($LASTEXITCODE -ge 8) { throw "Falha ao copiar cache (robocopy $LASTEXITCODE)." }
+    & robocopy $seed (Join-Path $StagePath 'Library') /MIR /MT:8 /NFL /NDL /NJH /NJS /NP /R:2 /W:2 | Out-Null
+    if ($LASTEXITCODE -lt 0 -or $LASTEXITCODE -ge 8) { throw "Falha ao copiar cache (robocopy $LASTEXITCODE)." }
 }
 foreach ($folder in @('Assets','Packages','ProjectSettings')) {
     Assert-ArenaChild $StagePath (Join-Path $StagePath $folder)
-    & robocopy (Join-Path $arenaRoot $folder) (Join-Path $StagePath $folder) /MIR /NFL /NDL /NJH /NJS /NP /R:2 /W:2 | Out-Null
-    if ($LASTEXITCODE -ge 8) { throw "Falha ao sincronizar $folder (robocopy $LASTEXITCODE)." }
+    & robocopy (Join-Path $arenaRoot $folder) (Join-Path $StagePath $folder) /MIR /MT:8 /NFL /NDL /NJH /NJS /NP /R:2 /W:2 | Out-Null
+    if ($LASTEXITCODE -lt 0 -or $LASTEXITCODE -ge 8) { throw "Falha ao sincronizar $folder (robocopy $LASTEXITCODE)." }
 }
 $out = Join-Path $StagePath 'Builds/Windows'
 Assert-ArenaChild $StagePath $out
@@ -38,8 +38,8 @@ if ($LASTEXITCODE -ne 0) { throw 'Build Windows falhou; consultar Artifacts/wind
 if (-not (Test-Path -LiteralPath (Join-Path $out 'ArenaTatica.exe'))) { throw 'O Unity terminou sem gerar o .exe; consultar Artifacts/windows-cli.log.' }
 $destination = Join-Path $arenaRoot 'Builds/Windows'
 Assert-ArenaChild $arenaRoot $destination
-& robocopy $out $destination /MIR /NFL /NDL /NJH /NJS /NP /R:2 /W:2 | Out-Null
-if ($LASTEXITCODE -ge 8) { throw "Falha ao copiar o build (robocopy $LASTEXITCODE)." }
+& robocopy $out $destination /MIR /MT:8 /NFL /NDL /NJH /NJS /NP /R:2 /W:2 | Out-Null
+if ($LASTEXITCODE -lt 0 -or $LASTEXITCODE -ge 8) { throw "Falha ao copiar o build (robocopy $LASTEXITCODE)." }
 Save-ArenaBuildReceipt $arenaRoot $StagePath 'Windows' $arenaSourceCommit
 & (Join-Path $PSScriptRoot 'package.ps1') -Platforms Windows -SkipSource -SkipAndroid
 Write-Output "Versão de PC pronta: $(Join-Path $arenaRoot 'Builds/ArenaTatica-Windows.zip')"
