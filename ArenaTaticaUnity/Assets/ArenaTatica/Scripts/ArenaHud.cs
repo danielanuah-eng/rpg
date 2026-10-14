@@ -185,7 +185,7 @@ namespace ArenaTatica
         // Figura do lutador para o cartão/retrato: uma leitura por pasta de sprites.
         Sprite Face(string art) { if(string.IsNullOrEmpty(art)) return null; if(!faceCache.TryGetValue(art,out var sp)) faceCache[art]=sp=Resources.Load<Sprite>("Sprites/"+art+"/south"); return sp; }
         // Nome curto do cartão (o nome inteiro fica no alto e na lista de lutadores).
-        static string Short(string name) { if(string.IsNullOrEmpty(name)) return "?"; int i=name.IndexOf(' '); return i>0?name.Substring(0,i):name; }
+        static string Short(string name) { if(string.IsNullOrEmpty(name)) return "?"; if(name.StartsWith("O ")) name=name.Substring(2); if(name.Length<=14) return name; int i=name.IndexOf(' '); return i>0?name.Substring(0,i):name; }
         // Cartões: ordem de iniciativa, PV/PA/PM, estado e as marcas de turno ATUAL e PRÓXIMO. A identidade mostrada
         // é a do disfarce (clone ilusório aparece como o conjurador; nenhuma etiqueta de Ilusão em lugar nenhum).
         void RefreshTimeline(MatchState s)
@@ -219,7 +219,7 @@ namespace ArenaTatica
                 bool on=x.id==current; bool next=current!=0&&x.id==nextId;
                 string mark=on?"AGORA":next?"PRÓXIMO":"";
                 string vital=x.prisoned>0?"preso":x.channel>0?"canalizando":x.hidden&&s.Ally(x.team,Game.LocalTeam)?"escondido":"";
-                timelineTexts[i].text=$"<b>{Short(d.name)}</b> {mark}\n{x.hp}/{Content.MaxHp(x)} PV · {x.pa} PA · {x.pm} PM{(vital==""?"":" · "+vital)}";
+                timelineTexts[i].text=$"<b>{Short(d.name)}</b> {(MatchState.Player(x.team)?"P"+x.team:"Neutro")} {mark}\n{x.hp}/{Content.MaxHp(x)} PV · {x.pa} PA · {x.pm} PM{(vital==""?"":" · "+vital)}";
                 timelineCards[i].GetComponent<Image>().color=on?chosen:next?new Color(.13f,.29f,.38f):Color.Lerp(panel,ArenaPresentation.TeamColor(x.team),.15f);
             }
             if(current!=timelineActive) { timelineActive=current; if(timelineScroll) timelineScroll.horizontalNormalizedPosition=0; }

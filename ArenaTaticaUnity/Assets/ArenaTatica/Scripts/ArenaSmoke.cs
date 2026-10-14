@@ -250,6 +250,15 @@ namespace ArenaTatica
             ScreenCapture.CaptureScreenshot(Path.GetFullPath("Artifacts/020-ux-portrait.png")); yield return new WaitForSeconds(.4f);
             game.Menu.Open("opcoes"); yield return new WaitForSeconds(.3f);
             ScreenCapture.CaptureScreenshot(Path.GetFullPath("Artifacts/020-opcoes-portrait.png")); yield return new WaitForSeconds(.4f);
+            game.Menu.Close(); Screen.SetResolution(1280,720,false); yield return new WaitForSeconds(.5f);
+            game.SetSeats(6); game.SetRandomizer(true,true,false,true);
+            var team=ArenaGame.ValidTeam(Content.Roster.OrderBy(id=>Content.Fighters[id].level));
+            game.StartLocal(Enumerable.Range(0,6).Select(_=>team.ToArray()).ToArray()); yield return Idle(); Canvas.ForceUpdateCanvases();
+            var cards=(System.Collections.Generic.List<RectTransform>)typeof(ArenaHud).GetField("timelineCards",flags).GetValue(hud);
+            var scroll=(UnityEngine.UI.ScrollRect)typeof(ArenaHud).GetField("timelineScroll",flags).GetValue(hud);
+            if(game.State.fighters.Count(fighter=>fighter.Alive&&fighter.summoner==0)<24||content.rect.width<=((RectTransform)content.parent).rect.width||cards.Count<24||!BoardFits()) { Finish(false,"Iniciativa completa de seis jogadores não coube na rolagem"); yield break; }
+            scroll.horizontalNormalizedPosition=1; yield return new WaitForSeconds(.3f);
+            ScreenCapture.CaptureScreenshot(Path.GetFullPath("Artifacts/020-ux-six-players.png")); yield return new WaitForSeconds(.4f);
             game.CloseMatch(); if(!game.InMenu||game.CanAct) { Finish(false,"Fechar Partida deixou ações ativas"); yield break; }
             Finish(true,"UX: dois toques, ataque no vazio, pinça exclusiva, retrato/paisagem, fechar partida");
         }

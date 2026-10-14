@@ -368,7 +368,7 @@ namespace ArenaTatica.Core
             var d=original.Clone();
             if(r.stats) { d.hp=r.hp; d.pa=r.pa; d.pm=r.pm; d.initiative=r.initiative; }
             if(r.skills||r.stats) d.skills=r.powers.Select(p=>{
-                var sk=AnySkill(p.id)?.Clone();
+                var sk=(r.skills?AnySkill(p.id):original.skills.FirstOrDefault(s=>s.id==p.id)??AnySkill(p.id))?.Clone();
                 if(sk!=null&&r.stats) { sk.damage=p.damage; sk.maxRange=p.range; sk.minRange=System.Math.Min(sk.minRange,sk.maxRange); }
                 return sk;
             }).Where(sk=>sk!=null).ToArray();

@@ -611,7 +611,7 @@ namespace ArenaTatica
                         if(cast==0) cast=PlayClip(actor,"attack"); if(cast>0) yield return Wait(cast*.5f);
                         if(Vector3.Distance(Flat(actor.position),Flat(ground))>1.5f) yield return Shot(Content.BaseSkill(e.info),actor.position,ground,miss?.area??0);
                         else { PhaseFx(Content.BaseSkill(e.info)+"/impacto",ground+Vector3.up*.3f); Flash(ground+Vector3.up*.3f,Blue); }
-                        Sound("attack"); Float(ground,"Sem alvo",Blue); if(cast>0) yield return Wait(cast*.4f);
+                        Sound("attack"); Float(ground,miss?.kind==SkillKind.Dano?(miss.maxRange>1?"Disparo":"Golpe"):"Conjuração",Blue); if(cast>0) yield return Wait(cast*.4f);
                     }
                     Game.Hud?.Log(e.target==0?$"{Name(s,e.actor)}: {Content.AnySkill(e.info)?.name} no chão":e.value<0?$"{Name(s,e.actor)} errou {Name(s,e.target)} [{Dice(e.dice)}]":$"{Name(s,e.actor)} → {Name(s,e.target)}: {e.value} de dano{(e.dice!=null?$" [{Dice(e.dice)}]":"")}");
                     break;

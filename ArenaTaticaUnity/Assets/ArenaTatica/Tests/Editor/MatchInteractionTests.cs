@@ -40,6 +40,33 @@ namespace ArenaTatica.Tests
             Assert.AreEqual(new Cell(2+steps,2),f.cell); Assert.AreEqual(pm-steps,f.pm); Assert.IsFalse(v.hidden);
             Assert.IsFalse(events.Any(e=>e.path!=null&&e.path.Contains(v.cell))); Assert.AreNotEqual(f.cell,v.cell);
         }
+        [Test] public void ResistedHiddenShotAndEmptyShotHaveIdenticalPublicEvents()
+        {
+            string Public(bool occupied) {
+                var m=Duel(); var f=m.S.fighters.First(x=>x.team==1); var v=m.S.fighters.First(x=>x.team==2); Activate(m,f);
+                f.cell=new Cell(3,3); var aim=new Cell(3,5); v.cell=occupied?aim:new Cell(10,10); v.hidden=true; v.armor=100;
+                var sk=Match.Skills(f).First(x=>x.kind==SkillKind.Dano&&x.minRange<=2&&x.maxRange>=2);
+                m.Forced.Enqueue(Face.Trava); m.Forced.Enqueue(Face.Trava); Assert.IsTrue(Skill(m,sk.id,aim,out var events));
+                var visible=Match.EventsFor(events,m.S,1,new[]{v.id}); var cast=visible.First(e=>e.kind=="ataque");
+                Assert.AreEqual(0,cast.target); Assert.AreEqual(aim,cast.cell); Assert.IsTrue(v.hidden);
+                return JsonUtility.ToJson(new WireMessage{events=visible.ToArray(),state=Match.ViewFor(m.S,1)});
+            }
+            Assert.AreEqual(Public(false),Public(true),"o disparo não denuncia a presença de quem permaneceu escondido");
+        }
+        [Test] public void HiddenInterceptorNeverLeaksItsCellWhenItTakesNoDamage()
+        {
+            int intercepted=0;
+            for(uint seed=1;seed<30;seed++) {
+                var m=Match.New(new MatchSetup{seed=seed,flatMap=true}); var f=m.S.fighters.First(x=>x.team==1); var v=m.S.fighters.First(x=>x.team==2); Activate(m,f);
+                f.cell=new Cell(3,3); v.cell=new Cell(3,4); v.hidden=true; v.armor=100; var aim=new Cell(3,6);
+                var sk=Match.Skills(f).First(x=>x.kind==SkillKind.Dano&&!x.selfArea);
+                m.Forced.Enqueue(Face.Trava); m.Forced.Enqueue(Face.Trava); Assert.IsTrue(Skill(m,sk.id,aim,out var events));
+                if(events.Any(e=>e.kind=="ataque"&&e.target==v.id)) intercepted++;
+                var visible=Match.EventsFor(events,m.S,1,new[]{v.id}); var shot=visible.First(e=>e.kind=="ataque");
+                Assert.AreEqual(aim,shot.cell); Assert.AreEqual(0,shot.target); Assert.IsTrue(v.hidden);
+            }
+            Assert.Greater(intercepted,0);
+        }
         [Test] public void KnownEnemyAndFriendlyHiddenOccupantsStillBlockPlanning()
         {
             var m=Duel(); var f=m.S.Active; var v=m.S.fighters.First(x=>x.team!=f.team); f.cell=new Cell(2,2); v.cell=new Cell(3,2);

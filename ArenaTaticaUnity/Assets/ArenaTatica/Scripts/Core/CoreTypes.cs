@@ -237,6 +237,7 @@ namespace ArenaTatica.Core
         public string kind, info;
         public int actor, target, value;
         public Cell cell;
+        public Cell aim=Cell.Unknown;
         public Cell[] path;
         public Face[] dice;
     }

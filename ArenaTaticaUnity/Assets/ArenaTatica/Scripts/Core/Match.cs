@@ -351,8 +351,14 @@ namespace ArenaTatica.Core
                 if(e.kind=="esconder"&&s.F(e.actor) is Fighter h&&!s.Ally(h.team,player)) hidden.Add(e.actor);
                 if(e.kind=="revelar"||e.kind=="renascer"||e.kind=="nocaute") hidden.Remove(e.target);
                 bool global=new[]{"turno","rodada","loja","dominio","eliminado","vitoria","cataclisma","evento-duracao","evento-fim"}.Contains(e.kind);
-                if(!global&&(hidden.Contains(e.actor)||hidden.Contains(e.target))) continue;
+                if(!global&&hidden.Contains(e.actor)) continue;
                 var copy=UnityEngine.JsonUtility.FromJson<GameEvent>(UnityEngine.JsonUtility.ToJson(e));
+                if(!global&&hidden.Contains(e.target)) {
+                    // A conjuração continua visível, mas só no destino que o jogador escolheu.
+                    // Não revela um invisível que interceptou ou resistiu ao disparo, nem conta alvos secretos da área.
+                    if(e.kind!="ataque"||e.dice==null||!Board.Contains(s,e.aim)) continue;
+                    copy.target=0; copy.cell=e.aim; copy.value=-1; copy.path=null;
+                }
                 if(global&&hidden.Contains(e.actor)) { copy.cell=Cell.Unknown; copy.path=null; }
                 // O evento de invocação não deve entregar o tipo real de uma ilusão disfarçada.
                 if(e.kind=="invocar"&&s.F(e.target) is Fighter summoned&&!string.IsNullOrEmpty(summoned.disguise)&&!s.Ally(summoned.team,player)) copy.info=summoned.disguise;
@@ -494,7 +500,7 @@ namespace ArenaTatica.Core
                     S.At(c).trap=f.team; S.At(c).trapDamage=sk.damage; S.At(c).trapPa=sk.paLoss;
                     Emit(new GameEvent{kind="armadilha-posta",actor=f.id,info=sk.id,cell=c});
                     break;
-                case SkillKind.Dano: var hitCell=Intercept(f,c); Strike(f,sk,hitCell,hitCell!=c); break;
+                case SkillKind.Dano: var hitCell=Intercept(f,c); Strike(f,sk,hitCell,hitCell!=c,c); break;
                 case SkillKind.Teleporte:
                     if(Board.At(S,c)!=null) { GroundMiss(f,sk,c); break; }
                     Emit(new GameEvent{kind="teleporte",actor=f.id,info=sk.id,path=new[]{f.cell,c},cell=c});
@@ -543,7 +549,7 @@ namespace ArenaTatica.Core
             if(sk.endsForm) SetForm(f,Content.Def(f).startForm,0,sk.id);
             return true;
         }
-        void GroundMiss(Fighter f,SkillDef sk,Cell c) => Emit(new GameEvent{kind="ataque",actor=f.id,info=sk.id,cell=c,target=0,value=-1});
+        void GroundMiss(Fighter f,SkillDef sk,Cell c) => Emit(new GameEvent{kind="ataque",actor=f.id,info=sk.id,cell=c,aim=c,target=0,value=-1});
         Fighter Summon(Fighter f,string summon,Cell c)
         {
             var kinds=summon.Split('|');
@@ -612,7 +618,7 @@ namespace ArenaTatica.Core
             }
             var zap=Content.Def(u).skills[0];
             Emit(new GameEvent{kind="comando",actor=f.id,target=u.id,info=zap.id,cell=c});
-            if(zap.kind==SkillKind.Dano) { f.lastAttack=zap.id; Strike(u,zap,Intercept(u,c)); }
+            if(zap.kind==SkillKind.Dano) { f.lastAttack=zap.id; var hit=Intercept(u,c); Strike(u,zap,hit,hit!=c,c); }
             else if(zap.kind==SkillKind.Cura&&Board.At(S,c) is Fighter v) Heal(v,zap.damage,u,zap.id);
             if(u.Alive) { u.hp=0; u.deathProcessed=true; Emit(new GameEvent{kind="sumir",target=u.id,cell=u.cell}); AnyDeath(u); }
         }
@@ -674,7 +680,7 @@ namespace ArenaTatica.Core
         // Ataque: dado de ataque e de defesa, bônus de aura, área, erro do golpe impreciso, roubo, dreno, controle (PM, PA,
         // prisão, empurrão, puxão), espinhos e a devoração do Colosso.
         Fighter striker;
-        void Strike(Fighter f,SkillDef sk,Cell c,bool intercepted=false)
+        void Strike(Fighter f,SkillDef sk,Cell c,bool intercepted=false,Cell? aim=null)
         {
             Face a=Roll(), d=Roll();
             var main=sk.selfArea?null:Board.At(S,c);
@@ -683,7 +689,7 @@ namespace ArenaTatica.Core
             bool ambush=f.hidden;
             int bonus=S.fighters.Where(g=>g.Alive&&g.id!=f.id&&S.Ally(g.team,f.team)&&Content.Def(g).allyBonus>0&&g.cell.Distance(f.cell)<=Content.Def(g).auraRange).Select(g=>Content.Def(g).allyBonus).DefaultIfEmpty(0).Max();
             bonus+=Passive(f,PassiveStat.Dano);
-            if(ambush) { bonus++; f.hidden=false; }
+            if(ambush) { bonus++; f.hidden=false; Emit(new GameEvent{kind="revelar",target=f.id,cell=f.cell}); }
             if(f.focused&&!f.focusUsed&&sk.damage>0) { bonus++; f.focusUsed=true; }
             var targets=new List<Fighter>(); if(main!=null) targets.Add(main);
             var center=sk.selfArea?f.cell:c;
@@ -693,14 +699,14 @@ namespace ArenaTatica.Core
             var log=new List<GameEvent>(); int dealt=0; striker=f;
             // Golpe em volta de si: a apresentação anima a conjuração mesmo sem ninguém na área.
             if(sk.selfArea) Emit(new GameEvent{kind="area",actor=f.id,info=sk.id,cell=f.cell,value=sk.area,dice=new[]{a,d}});
-            else if(targets.Count==0) Emit(new GameEvent{kind="ataque",actor=f.id,target=0,value=-1,info=sk.id,cell=c,dice=new[]{a,d}});
+            else if(targets.Count==0) Emit(new GameEvent{kind="ataque",actor=f.id,target=0,value=-1,info=sk.id,cell=c,aim=aim??c,dice=new[]{a,d}});
             foreach(var v in targets)
             {
                 bool ghost=Ghost(v);
                 bool shield=Dice.Armor(d)&&!sk.precise&&!sk.pierce;
                 int alone=sk.isolatedBonus>0&&!S.fighters.Any(x=>x.Alive&&x!=v&&S.Ally(x.team,v.team)&&x.cell.Distance(v.cell)==1)?sk.isolatedBonus:0;
                 int dmg=missed||ghost||sk.damage<=0?0:Math.Max(0,sk.damage+bonus+alone-(shield?1:0)-(sk.pierce?0:Armor(v)));
-                Emit(new GameEvent{kind="ataque",actor=f.id,target=v.id,value=missed||ghost?-1:dmg,info=sk.id,cell=v.cell,dice=v==first&&!sk.selfArea?new[]{a,d}:null});
+                Emit(new GameEvent{kind="ataque",actor=f.id,target=v.id,value=missed||ghost?-1:dmg,info=sk.id,cell=v.cell,aim=aim??c,dice=v==first&&!sk.selfArea?new[]{a,d}:null});
                 Hurt(v,dmg,log); dealt+=dmg;
                 bool hit=!missed&&!ghost&&(dmg>0||sk.damage<=0);
                 if(hit&&sk.pmLoss>0) v.buffs.Add(new Buff{id="confusao",from=sk.id,turns=2,pm=-sk.pmLoss});
@@ -719,7 +725,6 @@ namespace ArenaTatica.Core
                     else { v.prisoned=sk.prison; log.Add(new GameEvent{kind="prisao",actor=f.id,target=v.id,value=sk.prison,cell=v.cell,info=sk.id}); }
                 }
             }
-            if(ambush) events.Insert(events.Count-targets.Count,new GameEvent{kind="revelar",target=f.id,cell=f.cell});
             if(sk.drain>0&&dealt>0&&f.Alive) { int heal=Math.Min(sk.drain,Content.MaxHp(f)-f.hp); if(heal>0) { f.hp+=heal; log.Add(new GameEvent{kind="cura",actor=f.id,target=f.id,value=heal,info=sk.id,cell=f.cell}); } }
             events.AddRange(log);
             foreach(var v in targets) if(!v.Alive) KO(v);

@@ -54,6 +54,21 @@ namespace ArenaTatica.Tests
             var m=Match.New(new MatchSetup{flatMap=true,randomStats=true,randomPlayers=true,team1=new[]{"ezequiela"},team2=new[]{"ciantia"}});
             Assert.IsTrue(ArenaGame.ValidState(Match.ViewFor(m.S,2),2));
         }
+        [Test] public void StatsOnlyKeepEachEditedFightersOwnSkillCostAndProperties()
+        {
+            var saved=Content.EditsJson;
+            try {
+                var a=Content.Fighters["ciantia"].Clone(); var b=Content.Fighters["perry"].Clone();
+                var first=Content.Generic.First(x=>x.skill.id=="bola-de-fogo").skill.Clone(); first.pa=1; first.area=2;
+                var second=first.Clone(); second.pa=5; second.area=1;
+                a.skills=new[]{first}; b.skills=new[]{second};
+                Content.ApplyEdits(JsonUtility.ToJson(new GameEdits{fighters=new System.Collections.Generic.List<FighterDef>{a,b}}));
+                var m=Match.New(Setup(1,false,true,true,true));
+                Assert.AreEqual(1,Content.Def(m.S.fighters.First(f=>f.def==a.id)).skills[0].pa);
+                Assert.AreEqual(5,Content.Def(m.S.fighters.First(f=>f.def==b.id)).skills[0].pa);
+                Assert.AreEqual(1,Content.Def(m.S.fighters.First(f=>f.def==b.id)).skills[0].area);
+            } finally { Content.ApplyEdits(saved); }
+        }
         [Test] public void ColossusAbsorbsRolledDamageAndRangeWithoutSharingMutableCache()
         {
             var m=Match.New(Setup(1,false,true,true,true)); var victim=m.S.fighters.First(f=>f.def=="talyssa"); var col=m.S.fighters.First(f=>f.def=="colosso");
