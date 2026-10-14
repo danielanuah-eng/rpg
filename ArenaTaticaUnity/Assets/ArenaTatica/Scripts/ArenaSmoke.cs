@@ -35,6 +35,7 @@ namespace ArenaTatica
         {
             game=GetComponent<ArenaGame>();
             yield return new WaitForSeconds(2);
+            Debug.Log($"ARENA_SMOKE_FIXTURE: {game.Network.Role}, {game.Turns}, ativo {game.Active?.def}, time salvo isolado");
             if(Application.isBatchMode&&System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-release-qa")>=0) { yield return ReleaseQa(); yield break; }
             if(game.Network.IsHost&&System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-relay-report")>=0) {
                 float roomDeadline=Time.realtimeSinceStartup+40;

@@ -19,3 +19,5 @@ Reserva adicional antes de editar: ArenaTaticaUnity/Assets/ArenaTatica/Scripts/A
 Capacidade final: 80 KiB (81.920 bytes), abaixo do máximo confiável de aproximadamente 88 KiB documentado no Unity Transport instalado, janela 64. Maior snapshot medido: 57.347 bytes (6 participantes, 4 lutadores/time).
 
 Reserva adicional antes de editar: ArenaTaticaUnity/Assets/ArenaTatica/Scripts/ArenaMenu.cs. Pedido atual do autor: conferir aviso de artes Damian/Tchu Tcha. Remover aviso genérico obsoleto da tarefa 015 e corrigir retorno de forma com clipe reverso existente, sem criar ou alterar imagens.
+
+Reteste no player: o smoke antigo assume Ciantia única e turnos completos, mas lê seleção, fichas e turnos persistidos. Correção reservada em ArenaGame.cs/ArenaSmoke.cs: fixture somente no player batch com --arena-smoke, em memória, sem gravar preferências; jogo normal preservado. Recompilar e repetir validação antes do upload.
