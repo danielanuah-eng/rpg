@@ -176,6 +176,7 @@ namespace ArenaTatica
             row.childForceExpandWidth=false; row.childForceExpandHeight=false;
             var fit=timelineContent.GetComponent<ContentSizeFitter>(); fit.horizontalFit=ContentSizeFitter.FitMode.PreferredSize;
             timelineContent.anchorMin=new Vector2(0,0); timelineContent.anchorMax=new Vector2(0,1); timelineContent.pivot=new Vector2(0,.5f);
+            timelineContent.sizeDelta=Vector2.zero; timelineContent.anchoredPosition=Vector2.zero;
             view.content=timelineContent; view.viewport=viewport;
             view.horizontal=true; view.vertical=false; view.movementType=ScrollRect.MovementType.Clamped;
             view.inertia=!Application.isMobilePlatform; view.scrollSensitivity=24; // arrastar a lista com um dedo; roda do mouse também rola
@@ -210,11 +211,12 @@ namespace ArenaTatica
                 }
                 for(int i=0;i<timelineCards.Count;i++) timelineCards[i].gameObject.SetActive(i<list.Count);
             }
+            int nextId=list.Skip(1).FirstOrDefault(x=>x.prisoned==0)?.id??0;
             for(int i=0;i<list.Count;i++) {
                 var x=list[i]; var d=ArenaPresentation.Shown(x); var form=Content.Form(x);
                 var sp=Face(form?.sprites??d.sprites);
                 timelineFaces[i].sprite=sp; timelineFaces[i].enabled=sp; timelineFaces[i].color=Color.white;
-                bool on=x.id==current; bool next=current!=0&&i==1;
+                bool on=x.id==current; bool next=current!=0&&x.id==nextId;
                 string mark=on?"AGORA":next?"PRÓXIMO":"";
                 string vital=x.prisoned>0?"preso":x.channel>0?"canalizando":x.hidden&&s.Ally(x.team,Game.LocalTeam)?"escondido":"";
                 timelineTexts[i].text=$"<b>{Short(d.name)}</b> {mark}\n{x.hp}/{Content.MaxHp(x)} PV · {x.pa} PA · {x.pm} PM{(vital==""?"":" · "+vital)}";
@@ -311,8 +313,10 @@ namespace ArenaTatica
         {
             var f=Game.Active; if(f==null||!Game.CanAct) return;
             var wish=Content.Skill(f,"desejo-d"); var v=Board.At(Game.State,c);
-            if(!Game.Preview.CanTarget(f,wish,c,out string reason)||v==null) { Game.Notify(string.IsNullOrEmpty(reason)?"Escolha um lutador.":reason); return; }
+            if(!Game.Preview.CanTarget(f,wish,c,out string reason)) { Game.Notify(reason); return; }
+            if(v==null||(v.hidden&&!Game.State.Ally(v.team,f.team))) { Game.Submit("skill",c,"desejo-d"); return; }
             var options=Match.Copyables(f,v); copyCell=c;
+            if(options.Count==0) { Game.Submit("skill",c,"desejo-d"); return; }
             copyTitle.text=$"Copiar uma skill de {Content.Fighters[v.def].name}";
             for(int i=0;i<copyButtons.Count;i++) {
                 bool show=i<options.Count; copyButtons[i].gameObject.SetActive(show);

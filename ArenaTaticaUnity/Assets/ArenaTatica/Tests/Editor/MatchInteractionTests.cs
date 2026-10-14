@@ -62,6 +62,12 @@ namespace ArenaTatica.Tests
             var view=Match.ViewFor(m.S,2); Assert.AreEqual(f.def,view.F(clone.id).def); Assert.AreEqual(0,view.F(clone.id).summoner);
             Assert.AreEqual(f.def,Match.EventsFor(events,m.S,2).First(e=>e.kind=="invocar").info); Assert.IsTrue(ArenaGame.ValidState(view,2));
         }
+        [Test] public void CopyWishCanBeCastOnEmptyTileWithoutTargetPickerOrException()
+        {
+            var m=Duel("principe-kellen"); var f=m.S.fighters.First(x=>x.team==1); Activate(m,f); f.wishReady=true; f.cell=new Cell(3,3);
+            var sk=Content.Skill(f,"desejo-d"); var c=new Cell(3,3+sk.minRange);
+            Assert.IsTrue(Skill(m,sk.id,c,out _)); Assert.IsFalse(f.wishReady); Assert.AreEqual(0,f.learned.Count);
+        }
         [Test] public void ColossusDevoursDeathCausedByDifferentFighterIncludingAlly()
         {
             var m=Match.New(new MatchSetup{flatMap=true,team1=new[]{"colosso","talyssa"},team2=new[]{"ogro-de-pedra"}});

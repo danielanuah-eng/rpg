@@ -139,6 +139,7 @@ namespace ArenaTatica.Core
         public bool auraOn, auraPaid;
         // stolen: skills devoradas (Colosso, +1 PA). learned: skills copiadas pelo Desejo.
         public List<string> stolen=new List<string>();
+        public List<SkillRoll> stolenPowers=new List<SkillRoll>();
         public List<string> learned=new List<string>();
         public List<string> usedMatch=new List<string>();
         public List<string> used=new List<string>();

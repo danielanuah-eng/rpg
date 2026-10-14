@@ -54,5 +54,14 @@ namespace ArenaTatica.Tests
             var m=Match.New(new MatchSetup{flatMap=true,randomStats=true,randomPlayers=true,team1=new[]{"ezequiela"},team2=new[]{"ciantia"}});
             Assert.IsTrue(ArenaGame.ValidState(Match.ViewFor(m.S,2),2));
         }
+        [Test] public void ColossusAbsorbsRolledDamageAndRangeWithoutSharingMutableCache()
+        {
+            var m=Match.New(Setup(1,false,true,true,true)); var victim=m.S.fighters.First(f=>f.def=="talyssa"); var col=m.S.fighters.First(f=>f.def=="colosso");
+            var power=victim.roll.powers.First(p=>p.id=="lamina-rosa"); power.damage=7; power.range=6;
+            victim.hp=0; typeof(Match).GetMethod("KO",System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic).Invoke(m,new object[]{victim,null});
+            var copied=Content.Skill(col,Content.Stolen+power.id); Assert.AreEqual(7,copied.damage); Assert.AreEqual(6,copied.maxRange);
+            var state=JsonUtility.FromJson<MatchState>(JsonUtility.ToJson(m.S)); Assert.AreEqual(7,Content.Skill(state.F(col.id),copied.id).damage);
+            Assert.AreNotEqual(7,Content.StolenSkill(power.id).damage,"cache global permanece com a ficha base");
+        }
     }
 }

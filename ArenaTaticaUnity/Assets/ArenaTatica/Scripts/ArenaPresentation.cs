@@ -1520,7 +1520,7 @@ namespace ArenaTatica
                 return;
             }
             var sk=Match.Skills(f).FirstOrDefault(x=>x.id==Game.Mode); if(sk==null) { Game.Mode=""; return; }
-            var m=Game.Preview; int r=sk.maxRange+2;
+            var m=Game.Preview; int r=Mathf.Max(s.width,s.height);
             for(int x=-r;x<=r;x++) for(int z=-r;z<=r;z++) {
                 var c=f.cell+new Cell(x,z);
                 if(m.CanTarget(f,sk,c,out _)) Mark(c,targetMaterial);

@@ -81,7 +81,7 @@ namespace ArenaTatica.Core
             ["gato-branco"]=Cat("gato-branco","Gato branco","GatoBranco",new SkillDef { id="faisca-branca", name="Faísca branca", kind=SkillKind.Cura, minRange=0, maxRange=3, damage=2, anim="zap" }),
             ["gato-malhado"]=Cat("gato-malhado","Gato preto e branco","GatoMalhado",new SkillDef { id="faisca-malhada", name="Faísca malhada", kind=SkillKind.Dano, minRange=1, maxRange=3, damage=1, pmLoss=2, anim="zap" }),
             ["gato-manchado"]=Cat("gato-manchado","Gato marrom manchado","GatoManchado",new SkillDef { id="faisca-manchada", name="Faísca manchada", kind=SkillKind.Dano, minRange=1, maxRange=3, damage=1, push=1, anim="zap" }),
-            // Tanque gigante e lento: devora a skill principal de quem nocauteia (+1 PA) e conjura com os próprios braços.
+            // Tanque gigante e lento: qualquer morte no mapa alimenta Devorar (+1 PA no custo da skill absorvida).
             ["colosso"]=new FighterDef { id="colosso", name="O Colosso", sprites="Colosso", hp=18, pa=6, pm=2, initiative=1, level=6, immovable=true, devour=true, skills=new[] {
                 new SkillDef { id="pancada-colossal", name="Pancada colossal", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=4 },
                 new SkillDef { id="pisao", name="Pisão", kind=SkillKind.Dano, pa=4, minRange=0, maxRange=0, sight=false, selfArea=true, square=true, area=1, damage=2, perTurn=1, anim="stomp" } } },
@@ -238,6 +238,12 @@ namespace ArenaTatica.Core
         }
         // Base de uma skill devorada (para partículas e projéteis da original).
         public static string BaseSkill(string id) => id==null?null:id.StartsWith(Stolen)?BaseSkill(id.Substring(Stolen.Length)):id.StartsWith("sorteio:")?id.Substring(8):id;
+        public static SkillDef StolenSkill(Fighter f,string id)
+        {
+            var sk=StolenSkill(id); var power=f.stolenPowers?.Find(p=>p.id==id);
+            if(sk==null||power==null) return sk;
+            sk=sk.Clone(); sk.damage=power.damage; sk.maxRange=power.range; sk.minRange=System.Math.Min(sk.minRange,sk.maxRange); return sk;
+        }
         public static void ClearCaches() => stolenCache.Clear();
 
         // ── Edições do autor (aba Editor do menu): fichas inteiras salvas por id; o Host manda as dele no estado da partida. ──
@@ -340,7 +346,7 @@ namespace ArenaTatica.Core
         {
             var t=new List<string>();
             if(d.legendary) t.Add("Lendária (1 por time)"); if(d.flying) t.Add("voa"); if(d.armor>0) t.Add($"ignora {d.armor} de dano de qualquer fonte");
-            if(d.immovable) t.Add("imóvel (não é empurrado nem trocado)"); if(d.devour) t.Add("devora a skill principal de quem nocauteia (+1 PA, guarda 2)");
+            if(d.immovable) t.Add("imóvel (não é empurrado nem trocado)"); if(d.devour) t.Add("absorve a primeira skill de dano de qualquer entidade que morra no mapa (+1 PA no custo, guarda 2)");
             if(d.allyBonus>0) t.Add($"aliados até {d.auraRange} casas causam +{d.allyBonus}"); if(d.guard) t.Add("protege aliados até 2 casas (leva 1 do dano deles)");
             if(d.revive>0) t.Add($"renasce com {d.revive} PV no 1º nocaute"); if(d.steal>0) t.Add($"{d.steal}% de roubar 1 moeda ao acertar");
             if(d.illusion) t.Add("começa com uma ilusão de 4 PV"); if(d.noTurn) t.Add("sem turno próprio"); if(d.noLock) t.Add("não trava");
@@ -372,7 +378,7 @@ namespace ArenaTatica.Core
         public static FormDef Form(Fighter f) => Def(f).forms?.FirstOrDefault(x=>x.id==f.form);
         // Qualquer skill do jogo pelo id: de um lutador ou da loja (Espelho primordial e cargas).
         public static SkillDef AnySkill(string id) =>
-            id==null?null:id.StartsWith(Stolen)?StolenSkill(BaseSkill(id)):
+            id==null?null:id.StartsWith(Stolen)?StolenSkill(id.Substring(Stolen.Length)):
             id.StartsWith("sorteio:")?RandomSkill(id):
             Fighters.Values.SelectMany(d=>d.skills).FirstOrDefault(s=>s.id==id)??Shop.BySkill(id)?.skill??System.Array.Find(Wishes,w=>w.id==id)??Generic.Select(x=>x.skill).FirstOrDefault(s=>s.id==id);
         static SkillDef RandomSkill(string id)
@@ -386,7 +392,7 @@ namespace ArenaTatica.Core
             if(id==null) return null;
             var own=System.Array.Find(Def(f).skills,s=>s.id==id);
             if(own!=null) return string.IsNullOrEmpty(own.form)||own.form==f.form?own:null;
-            if(id.StartsWith(Stolen)) return f.stolen.Contains(BaseSkill(id))?StolenSkill(BaseSkill(id)):null;
+            if(id.StartsWith(Stolen)) { var baseId=id.Substring(Stolen.Length); return f.stolen.Contains(baseId)?StolenSkill(f,baseId):null; }
             if(f.learned.Contains(id)) return AnySkill(id);
             if(f.wishReady&&System.Array.Exists(Wishes,w=>w.id==id)) return AnySkill(id);
             return f.charges.Exists(c=>c.skill==id&&c.uses>0)?AnySkill(id):null;

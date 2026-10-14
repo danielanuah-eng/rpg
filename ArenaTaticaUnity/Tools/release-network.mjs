@@ -23,7 +23,7 @@ async function listenerReady() {
   throw Error('Sala liberada, mas listener TCP não abriu');
 }
 async function run(players,cup) {
-  const prefix=join(root,'Artifacts',`019-${cup?'cup':'room'}-${players}`), clients=[], pending=[];
+  const prefix=join(root,'Artifacts',`020-${cup?'cup':'room'}-${players}`), clients=[], pending=[];
   for(const ext of ['ready','reconnected','revealed','restarted','lobby','again','result']) if(existsSync(prefix+'.'+ext)) unlinkSync(prefix+'.'+ext);
   const render=players===2&&!cup;
   // O cenário visual troca 960→1280 no smoke, forçando o backbuffer a ficar disponível.
@@ -33,7 +33,7 @@ async function run(players,cup) {
   function connect(seat) {
     const ws=new WebSocket('ws://127.0.0.1:9080'); clients.push(ws);
     const send=m=>ws.send(JSON.stringify({protocol:5,...m}));
-    ws.addEventListener('open',()=>send({kind:'hello',token:'019-qa-'+seat,fighters:['ciantia'],pool:['ciantia','perry','ezequiela','damian','baltazar']}));
+    ws.addEventListener('open',()=>send({kind:'hello',token:'020-qa-'+seat,fighters:['ciantia'],pool:['ciantia','perry','ezequiela','damian','baltazar']}));
     ws.addEventListener('message',event=>{
       try {
         maxMessageBytes=Math.max(maxMessageBytes,Buffer.byteLength(event.data)); const m=JSON.parse(event.data); assert.equal(m.protocol,5);
@@ -85,4 +85,4 @@ mkdirSync(join(root,'Artifacts'),{recursive:true});
 const results=[];
 try {for(const cup of [false,true]) for(const players of [2,3,6]) results.push(await run(players,cup));}
 catch(error) {console.error(error.stack);process.exitCode=1;}
-writeFileSync(join(root,'Artifacts/019-release-network.json'),JSON.stringify({passed:!process.exitCode,results},null,2));
+writeFileSync(join(root,'Artifacts/020-release-network.json'),JSON.stringify({passed:!process.exitCode,results},null,2));

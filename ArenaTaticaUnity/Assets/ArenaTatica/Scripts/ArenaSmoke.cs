@@ -232,6 +232,15 @@ namespace ArenaTatica
             pinch.Invoke(game.View,new object[]{center+new Vector2(10,-70),center+new Vector2(10,70)});
             if(zoom>=before||Mathf.Abs(game.View.BoardCamera.orthographicSize-zoom)>.001f||Vector3.Distance(position,game.View.BoardCamera.transform.position)>.001f||(float)typeof(ArenaPresentation).GetField("yawGoal",flags).GetValue(game.View)!=yaw) { Finish(false,"Pinça conflitou com giro/pan"); yield break; }
             Directory.CreateDirectory("Artifacts");
+            game.View.ResetView(game.State); yield return Idle();
+            Canvas.ForceUpdateCanvases();
+            var faces=(System.Collections.Generic.List<UnityEngine.UI.Image>)typeof(ArenaHud).GetField("timelineFaces",flags).GetValue(hud);
+            var content=(RectTransform)typeof(ArenaHud).GetField("timelineContent",flags).GetValue(hud);
+            var faceCorners=new Vector3[4]; var viewportCorners=new Vector3[4];
+            if(faces.Count==0||faces[0].sprite==null) { Finish(false,"Iniciativa sem retrato"); yield break; }
+            faces[0].rectTransform.GetWorldCorners(faceCorners); ((RectTransform)content.parent).GetWorldCorners(viewportCorners);
+            var faceRect=new Rect(faceCorners[0],faceCorners[2]-faceCorners[0]); var visibleRect=new Rect(viewportCorners[0],viewportCorners[2]-viewportCorners[0]);
+            if(!faceRect.Overlaps(visibleRect)) { Finish(false,"Retrato da iniciativa cortado pela lista"); yield break; }
             ScreenCapture.CaptureScreenshot(Path.GetFullPath("Artifacts/020-ux-landscape.png")); yield return new WaitForSeconds(.4f);
             Screen.SetResolution(540,960,false); yield return new WaitForSeconds(.7f);
             ScreenCapture.CaptureScreenshot(Path.GetFullPath("Artifacts/020-ux-portrait.png")); yield return new WaitForSeconds(.4f);

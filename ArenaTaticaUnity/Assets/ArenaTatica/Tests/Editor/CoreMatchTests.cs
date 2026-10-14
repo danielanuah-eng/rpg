@@ -355,7 +355,9 @@ namespace ArenaTatica.Core.Tests
             Assert.IsTrue(S.fighters.Where(f=>S.Team(f.team)==1).All(f=>f.cell.z<S.height/2),"aliados do mesmo lado");
             var ally=S.fighters.First(f=>f.team==3); var enemy=S.fighters.First(f=>f.team==2);
             Put(A,5,5); Put(ally,5,6); Put(enemy,9,9);
+            int allyHp=ally.hp;
             Assert.IsTrue(Do("skill",new Cell(5,6),"dragao-dourado"),"conjuração livre no chão");
+            Assert.AreEqual(allyHp,ally.hp,"golpe direto continua sem ferir aliados; área e interceptação mantêm as regras próprias");
             Assert.IsTrue(m.Apply(Cmd("mover",new Cell(4,5)),A.team,out var ev,out _));
             Assert.IsFalse(ev.Any(e=>e.kind=="trava"),"aliado não trava");
             Put(enemy,4,7); enemy.hp=1; m.Forced.Enqueue(Face.Escudo); m.Forced.Enqueue(Face.Trava);
