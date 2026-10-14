@@ -1,3 +1,15 @@
+# Validação da Arena Tática 1.2.0
+
+Estado: publicado e verificado. Itens 1–3 concluídos na revisão bea26431, protocolo 5. Windows (build 2127612) e Android (build 2127611), versão 2026.10.14-1.2.0, com processamento concluído no itch.io. Os 248 arquivos Windows e o hash do APK baixados são idênticos aos pacotes locais. Recibos e hashes em Documentacao/release-1.2.0.json. O canal Web não faz parte desta atualização.
+
+140/140 testes EditMode; smoke local/anfitrião/cliente; 10 cenários de contrato; salas e torneios com 2, 3 e 6 participantes; Relay DTLS real entre dois Windows no mesmo PC. A interface foi exercitada no player em retrato e paisagem e com 24 lutadores, incluindo duplo toque, bloqueio durante pinça, ataque no chão e encerramento. Tabuleiro e retratos ficam dentro da área visível. Evidências permanentes: Documentacao/020-testes.json e Documentacao/020-interface.json, com quatro capturas.
+
+Atributos base sorteados: Vida 4–30, PA 5–8, PM 1–6, Iniciativa 0–12; dano positivo das skills próprias 1–8 e alcance até 8. Formas, equipamentos, buffs e habilidades adquiridas continuam com seus efeitos. Skills e atributos têm controles independentes e escopos Bots/Jogadores; ambos ativados aplicam a todos os participantes iniciais. Não altera as fichas do Editor.
+
+Sem Android físico conectado: o gesto foi simulado no Windows; instalação, toque real e desempenho em celular ainda não testados. Distribuição atual utiliza os canais Windows e Android existentes no itch.io. Metadados concorrentes dos mapas e configuração de analytics foram preservados fora dos commits desta entrega.
+
+## Histórico da versão 1.1.0
+
 # Validação — Arena Tática 1.1.0
 
 Unity 6000.6.4f1 / URP. Protocolo de rede 4. Revisão de código: 7b13322e21f5d4068099b503af0f80385d72af83.

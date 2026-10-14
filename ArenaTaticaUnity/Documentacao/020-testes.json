@@ -1,0 +1,87 @@
+{
+  "sourceCommit": "bea264316cc084cb52df45bee5d20f19ba55b36a",
+  "version": "1.2.0",
+  "protocol": 5,
+  "editMode": {
+    "total": 140,
+    "passed": 140,
+    "failed": 0,
+    "skipped": 0
+  },
+  "completedAt": "2026-10-14 18:17:55Z",
+  "networkContract": {
+    "passed": true,
+    "checks": 10
+  },
+  "localHostClient": {
+    "passed": true
+  },
+  "roomsAndCups": {
+    "passed": true,
+    "results": [
+      {
+        "players": 2,
+        "mode": "room",
+        "maxMessageBytes": 21453,
+        "passed": true,
+        "result": "room:2;invisible:pass;reconnect:pass;restart:pass"
+      },
+      {
+        "players": 3,
+        "mode": "room",
+        "maxMessageBytes": 34840,
+        "passed": true,
+        "result": "room:3;invisible:pass;reconnect:pass;restart:pass"
+      },
+      {
+        "players": 6,
+        "mode": "room",
+        "maxMessageBytes": 45241,
+        "passed": true,
+        "result": "room:6;invisible:pass;reconnect:pass;restart:pass"
+      },
+      {
+        "players": 2,
+        "mode": "cup",
+        "maxMessageBytes": 25149,
+        "passed": true,
+        "result": "cup:2;matches:1;champion:1"
+      },
+      {
+        "players": 3,
+        "mode": "cup",
+        "maxMessageBytes": 25149,
+        "passed": true,
+        "result": "cup:3;matches:2;champion:1"
+      },
+      {
+        "players": 6,
+        "mode": "cup",
+        "maxMessageBytes": 25149,
+        "passed": true,
+        "result": "cup:6;matches:5;champion:3"
+      }
+    ]
+  },
+  "relay": {
+    "transport": "Unity Relay DTLS",
+    "platform": "Windows",
+    "sameComputer": true,
+    "completedAt": "2026-10-14T18:25:29.283Z",
+    "passed": true,
+    "players": [
+      {
+        "role": "host",
+        "exit": 0,
+        "passed": true,
+        "evidence": "ARENA_SMOKE_PASS: Host: turno próprio, comando do cliente e volta do turno (rodada 2, ativo P1, convidado 9,10→9,9, status Turno encerrado.)"
+      },
+      {
+        "role": "client",
+        "exit": 0,
+        "passed": true,
+        "evidence": "ARENA_SMOKE_PASS: Cliente: comando autoritativo e estado filtrado"
+      }
+    ]
+  }
+}

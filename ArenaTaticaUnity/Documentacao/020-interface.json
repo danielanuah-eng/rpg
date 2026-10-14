@@ -1,0 +1,53 @@
+{
+  "sourceCommit": "bea264316cc084cb52df45bee5d20f19ba55b36a",
+  "runtime": {
+    "passed": true,
+    "platform": "Windows",
+    "touchDevice": "simulated camera gesture; physical Android pending",
+    "captures": [
+      "020-ux-landscape.png",
+      "020-ux-portrait.png",
+      "020-opcoes-portrait.png",
+      "020-ux-six-players.png"
+    ],
+    "evidence": "ARENA_SMOKE_PASS: UX: dois toques, ataque no vazio, pinça exclusiva, retrato/paisagem, fechar partida",
+    "completedAt": "2026-10-14T18:15:56.82Z"
+  },
+  "captures": [
+    {
+      "file": "020-capturas/020-ux-landscape.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "d459a6f83b6cc84238ab33d265717554bf9fb7f36fe51f04b1cbe26b24a746ac",
+      "bytes": 134515
+    },
+    {
+      "file": "020-capturas/020-ux-portrait.png",
+      "width": 540,
+      "height": 960,
+      "sha256": "4c3d747147ea85f814a6d858dee019ce2a0078f06440711472d94497e335cd1a",
+      "bytes": 74362
+    },
+    {
+      "file": "020-capturas/020-opcoes-portrait.png",
+      "width": 540,
+      "height": 960,
+      "sha256": "8f0786d6b7f27ffdddf4dd925f7eaefca0ac9485e0f9016a18a62a9b1e600391",
+      "bytes": 29304
+    },
+    {
+      "file": "020-capturas/020-ux-six-players.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "4b1cc7e967be7f3b9b4671aa620f8e83fcc52bbeb5d7912f6c28bb1f122679fa",
+      "bytes": 193195
+    }
+  ],
+  "review": "Codex e DeepSeek: sem corte que impeça os requisitos; tabuleiro inteiro e retratos dentro do viewport.",
+  "resolvedReviewQuestions": [
+    "AGORA/PRÓXIMO estão no início da fila; a captura de seis jogadores foi rolada até o fim para conferir os últimos cartões.",
+    "O runner confirmou >=24 lutadores principais e >=24 cartões; uma imagem só mostra a janela da rolagem.",
+    "Cartão parcialmente visível na borda é comportamento normal da lista horizontal."
+  ],
+  "physicalAndroid": "Sem aparelho conectado; toque real e desempenho ainda pendentes."
+}

@@ -1,0 +1,96 @@
+{
+  "version": "1.2.0",
+  "sourceCommit": "bea264316cc084cb52df45bee5d20f19ba55b36a",
+  "state": "publicado-e-verificado",
+  "editMode": {
+    "total": 140,
+    "passed": 140,
+    "failed": 0,
+    "skipped": 0
+  },
+  "androidPhysical": "pendente",
+  "notes": "Itens 1–3 concluídos e publicados antes da integração de novas chamadas de efeitos. Atributos base numéricos limitados; Android físico pendente.",
+  "protocol": 5,
+  "sourceTreeSha256": "ec599fbce7aa9a80d3a4e5b744084681eddc0e0625675223b000dd365c867110",
+  "sourceFiles": 3758,
+  "validation": {
+    "tests": "020-testes.json",
+    "interface": "020-interface.json"
+  },
+  "platforms": {
+    "windows": {
+      "version": "1.2.0",
+      "protocol": 5,
+      "platform": "Windows",
+      "completedAt": "2026-10-14T18:03:32.7338653Z",
+      "sourceCommit": "bea264316cc084cb52df45bee5d20f19ba55b36a",
+      "codeDirty": false,
+      "stagedCodeMatches": true,
+      "sourceTreeSha256": "ec599fbce7aa9a80d3a4e5b744084681eddc0e0625675223b000dd365c867110",
+      "sourceFiles": 3758,
+      "stage": "C:\\Users\\Anuah\\AppData\\Local\\ArenaTaticaAndroid"
+    },
+    "android": {
+      "version": "1.2.0",
+      "protocol": 5,
+      "platform": "Android",
+      "completedAt": "2026-10-14T18:45:37.0430293Z",
+      "sourceCommit": "bea264316cc084cb52df45bee5d20f19ba55b36a",
+      "codeDirty": false,
+      "stagedCodeMatches": true,
+      "sourceTreeSha256": "ec599fbce7aa9a80d3a4e5b744084681eddc0e0625675223b000dd365c867110",
+      "sourceFiles": 3758,
+      "stage": "C:\\Users\\Anuah\\AppData\\Local\\ArenaTaticaAndroid"
+    }
+  },
+  "publishedAt": "2026-10-14T18:46:32Z",
+  "verifiedAt": "2026-10-14T18:57:35.192854+00:00",
+  "destination": "https://eiediboy.itch.io/bdx-master",
+  "userVersion": "2026.10.14-1.2.0",
+  "packages": {
+    "windows": {
+      "file": "ArenaTatica-Windows.zip",
+      "completedAt": "2026-10-14T18:28:27.3287984Z",
+      "sha256": "CC9EB44300B38AC07A2B57EF96C7C5E580AF2D052CFBE6740172B56D4CA766D6",
+      "files": 248,
+      "duplicateEntries": 0,
+      "extractedFilesMatch": true,
+      "accountFiles": 0,
+      "extractedPath": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\ArenaTaticaUnity\\Artifacts\\019-extracted-e7b215643b9041fa821301d381fbe80c"
+    },
+    "android": {
+      "file": "ArenaTatica.apk",
+      "completedAt": "2026-10-14T18:46:53.6132618Z",
+      "sourceCommit": "bea264316cc084cb52df45bee5d20f19ba55b36a",
+      "version": "1.2.0",
+      "versionCode": 3,
+      "package": "org.arcanoclisma.arenatatica",
+      "architecture": "arm64-v8a",
+      "internetPermission": true,
+      "signatureVerified": true,
+      "certificateSha256": "eab099f58dcbbf1a63d863228ecefe22ace342749f895d5f646f477dc5f27425",
+      "certificateMatchesPrevious": true,
+      "bytes": 212668250,
+      "sha256": "9cd66dfc6e803ecbdd32218f53aaaf12970951f3f3d88e9dc8948a8294a0e11a",
+      "physicalDeviceTested": false
+    }
+  },
+  "remoteVerification": {
+    "windows": {
+      "buildId": 2127612,
+      "state": "COMPLETED",
+      "files": 248,
+      "allFilesMatch": true
+    },
+    "android": {
+      "buildId": 2127611,
+      "state": "COMPLETED",
+      "sha256": "9cd66dfc6e803ecbdd32218f53aaaf12970951f3f3d88e9dc8948a8294a0e11a",
+      "matchesLocal": true
+    },
+    "publicPageVersions": [
+      "2026.10.14-1.2.0",
+      "2026.10.14-1.2.0"
+    ]
+  }
+}
