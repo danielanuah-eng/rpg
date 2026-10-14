@@ -25,7 +25,7 @@ namespace ArenaTatica
     public sealed class ArenaGame : MonoBehaviour
     {
         // O runner usa uma partida limpa em memória; nunca altera as preferências do jogador.
-        static bool BatchSmoke => !Application.isEditor&&Application.isBatchMode&&Array.IndexOf(Environment.GetCommandLineArgs(),"--arena-smoke")>=0;
+        static bool SmokeFixture => !Application.isEditor&&Array.IndexOf(Environment.GetCommandLineArgs(),"--arena-smoke")>=0&&(Application.isBatchMode||Array.IndexOf(Environment.GetCommandLineArgs(),"--arena-qa-render")>=0);
         static string[] smokeTeam={"ciantia"}, smokePool={"ciantia","perry","ezequiela","damian","baltazar"};
         public Match Match { get; private set; }
         public MatchState State { get; private set; }
@@ -59,9 +59,9 @@ namespace ArenaTatica
         // Ordem dos turnos e itens da loja escolhidos no menu (Jogar/Sala); valem na próxima partida local ou sala.
         // Lidos no Awake: PlayerPrefs não pode ser lido no construtor de um MonoBehaviour.
         public TurnMode Turns;
-        public void SetTurns(TurnMode t) { Turns=t; if(!BatchSmoke) { PlayerPrefs.SetInt("arena-turnos",(int)t); PlayerPrefs.Save(); } Changed(); }
+        public void SetTurns(TurnMode t) { Turns=t; if(!SmokeFixture) { PlayerPrefs.SetInt("arena-turnos",(int)t); PlayerPrefs.Save(); } Changed(); }
         public static readonly HashSet<string> ShopItems=new HashSet<string>();
-        public static void SaveShopItems() { if(!BatchSmoke) { PlayerPrefs.SetString("arena-loja",string.Join(",",ShopItems)); PlayerPrefs.Save(); } }
+        public static void SaveShopItems() { if(!SmokeFixture) { PlayerPrefs.SetString("arena-loja",string.Join(",",ShopItems)); PlayerPrefs.Save(); } }
         // Sala em 3 passos (autor, 13/10): Setup = configurando, sem rede; Liberar abre a sala (Lobby); Iniciar começa.
         // AutoStart: só por linha de comando (testes de rede), começa ao encher como antes.
         public bool Setup { get; private set; }
@@ -79,13 +79,13 @@ namespace ArenaTatica
         {
             get
             {
-                if(BatchSmoke) return smokePool.ToArray();
+                if(SmokeFixture) return smokePool.ToArray();
                 var saved=PlayerPrefs.GetString("arena-pool","");
                 var pool=ValidPool(saved.Split(',')); var value=string.Join(",",pool);
                 if(saved!=value) { PlayerPrefs.SetString("arena-pool",value); PlayerPrefs.Save(); }
                 return pool;
             }
-            set { if(BatchSmoke) { smokePool=ValidPool(value); return; } PlayerPrefs.SetString("arena-pool",string.Join(",",ValidPool(value))); PlayerPrefs.Save(); }
+            set { if(SmokeFixture) { smokePool=ValidPool(value); return; } PlayerPrefs.SetString("arena-pool",string.Join(",",ValidPool(value))); PlayerPrefs.Save(); }
         }
         // Pool: lutadores escolhíveis, sem repetir, até PoolSize; pequena demais completa com sorteados.
         public static string[] ValidPool(IEnumerable<string> ids)
@@ -149,8 +149,8 @@ namespace ArenaTatica
         // Time deste aparelho (usado na rede e como sugestão no seletor), salvo entre sessões.
         public static string[] MyTeam
         {
-            get => ValidTeam(BatchSmoke?smokeTeam:PlayerPrefs.GetString("arena-time","ciantia").Split(','));
-            set { if(BatchSmoke) { smokeTeam=ValidTeam(value); return; } PlayerPrefs.SetString("arena-time",string.Join(",",ValidTeam(value))); PlayerPrefs.Save(); }
+            get => ValidTeam(SmokeFixture?smokeTeam:PlayerPrefs.GetString("arena-time","ciantia").Split(','));
+            set { if(SmokeFixture) { smokeTeam=ValidTeam(value); return; } PlayerPrefs.SetString("arena-time",string.Join(",",ValidTeam(value))); PlayerPrefs.Save(); }
         }
         // Seletor: times de cada assento local; a partida recomeça com eles.
         public void StartLocal(string[][] picks)
@@ -166,9 +166,9 @@ namespace ArenaTatica
         void Awake()
         {
             Application.targetFrameRate=60; Application.runInBackground=true; ArenaMaps.Reset();
-            Turns=BatchSmoke?TurnMode.Completo:(TurnMode)Mathf.Clamp(PlayerPrefs.GetInt("arena-turnos",0),0,1);
-            ShopItems.Clear(); if(!BatchSmoke) foreach(var id in PlayerPrefs.GetString("arena-loja","").Split(',')) if(Shop.Def(id)!=null) ShopItems.Add(id);
-            for(int i=0;i<CustomTeams.Length;i++) CustomTeams[i]=BatchSmoke?i%2+1:Mathf.Clamp(PlayerPrefs.GetInt("arena-equipe-"+i,i%2+1),1,3);
+            Turns=SmokeFixture?TurnMode.Completo:(TurnMode)Mathf.Clamp(PlayerPrefs.GetInt("arena-turnos",0),0,1);
+            ShopItems.Clear(); if(!SmokeFixture) foreach(var id in PlayerPrefs.GetString("arena-loja","").Split(',')) if(Shop.Def(id)!=null) ShopItems.Add(id);
+            for(int i=0;i<CustomTeams.Length;i++) CustomTeams[i]=SmokeFixture?i%2+1:Mathf.Clamp(PlayerPrefs.GetInt("arena-equipe-"+i,i%2+1),1,3);
             NewMatch(Seats);
             Network=gameObject.AddComponent<ArenaTransport>();
             View=gameObject.AddComponent<ArenaPresentation>(); View.Game=this;
@@ -202,7 +202,7 @@ namespace ArenaTatica
         public void CycleCustomTeam(int seat)
         {
             int i=seat-1; if(i<0||i>=CustomTeams.Length) return;
-            CustomTeams[i]=CustomTeams[i]%3+1; if(!BatchSmoke) { PlayerPrefs.SetInt("arena-equipe-"+i,CustomTeams[i]); PlayerPrefs.Save(); } Changed();
+            CustomTeams[i]=CustomTeams[i]%3+1; if(!SmokeFixture) { PlayerPrefs.SetInt("arena-equipe-"+i,CustomTeams[i]); PlayerPrefs.Save(); } Changed();
         }
         public static bool FormatFits(string format,int players) => format=="todos"||FormatTeams(format,players)!=null;
         public static string FormatName(string format) => format=="todos"?"Todos contra todos":format=="equipes"?"Equipes livres":"Equipes "+format;
@@ -210,11 +210,11 @@ namespace ArenaTatica
         {
             var teams=FormatTeams(format??Format,players);
             // As edições salvas neste aparelho valem para a partida local e para a sala que ele hospeda.
-            Content.ApplyEdits(BatchSmoke?null:ArenaEdits.Saved);
+            Content.ApplyEdits(SmokeFixture?null:ArenaEdits.Saved);
             pick??=seat=>Picks!=null&&seat<=Picks.Length?Picks[seat-1]:MyTeam;
             // Mapa salvo escolhido no menu: só vale se for do tamanho deste número de jogadores.
             // Sorteado: um dos mapas do Codex do tamanho certo; ArenaMaps.Generated: o gerador do MapGen.
-            uint seed=BatchSmoke?19013u:(uint)Environment.TickCount|1; int size=Board.SizeFor(players);
+            uint seed=SmokeFixture?19013u:(uint)Environment.TickCount|1; int size=Board.SizeFor(players);
             var map=flat||MapName==ArenaMaps.Generated?null:MapName==""?ArenaMaps.Pick(size,seed):ArenaMaps.Find(MapName);
             if(map!=null&&!MapGen.Fits(map,size)) { Debug.LogWarning($"Mapa {MapName} é para {MapGen.PlayersFor(map.width)} jogadores; usando um dos mapas do Codex."); map=ArenaMaps.Pick(size,seed); }
             var setup=new MatchSetup{ seed=seed, flatMap=flat, theme=Theme, mode=Victory, galeoes=Galeoes, map=map, turns=Turns, shopItems=ShopItems.ToArray(),
@@ -360,7 +360,7 @@ namespace ArenaTatica
         string Token()
         {
             if(tokenOverride!=null) return tokenOverride;
-            if(BatchSmoke) return tokenOverride=Guid.NewGuid().ToString("N");
+            if(SmokeFixture) return tokenOverride=Guid.NewGuid().ToString("N");
             string key="arena-token:"+room, token=PlayerPrefs.GetString(key,"");
             if(token=="") { token=Guid.NewGuid().ToString("N"); PlayerPrefs.SetString(key,token); PlayerPrefs.Save(); }
             return token;

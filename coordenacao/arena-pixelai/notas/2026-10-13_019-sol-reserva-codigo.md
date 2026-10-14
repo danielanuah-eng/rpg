@@ -21,3 +21,5 @@ Capacidade final: 80 KiB (81.920 bytes), abaixo do máximo confiável de aproxim
 Reserva adicional antes de editar: ArenaTaticaUnity/Assets/ArenaTatica/Scripts/ArenaMenu.cs. Pedido atual do autor: conferir aviso de artes Damian/Tchu Tcha. Remover aviso genérico obsoleto da tarefa 015 e corrigir retorno de forma com clipe reverso existente, sem criar ou alterar imagens.
 
 Reteste no player: o smoke antigo assume Ciantia única e turnos completos, mas lê seleção, fichas e turnos persistidos. Correção reservada em ArenaGame.cs/ArenaSmoke.cs: fixture somente no player batch com --arena-smoke, em memória, sem gravar preferências; jogo normal preservado. Recompilar e repetir validação antes do upload.
+
+Captura de interface do batch confirmada preta. Tools/release-network.mjs executará o cenário de sala com dois participantes em renderização normal e flag explícita --arena-qa-render; ArenaGame/ArenaSmoke usam a mesma fixture somente para essa flag combinada com --arena-smoke. As demais verificações seguem batch. Nenhum controle de aplicativo externo.
