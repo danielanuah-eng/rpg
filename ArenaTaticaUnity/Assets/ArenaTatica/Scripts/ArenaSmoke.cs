@@ -35,6 +35,13 @@ namespace ArenaTatica
         {
             game=GetComponent<ArenaGame>();
             yield return new WaitForSeconds(2);
+            if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-qa-render")>=0) {
+                Screen.SetResolution(1280,720,false);
+                float splashDeadline=Time.realtimeSinceStartup+20;
+                while(!UnityEngine.Rendering.SplashScreen.isFinished&&Time.realtimeSinceStartup<splashDeadline) yield return null;
+                if(!UnityEngine.Rendering.SplashScreen.isFinished) { Finish(false,"Splash não terminou para a captura de interface"); yield break; }
+                yield return new WaitForSeconds(.5f);
+            }
             Debug.Log($"ARENA_SMOKE_FIXTURE: {game.Network.Role}, {game.Turns}, ativo {game.Active?.def}, time salvo isolado");
             if((Application.isBatchMode||System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-qa-render")>=0)&&System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-release-qa")>=0) { yield return ReleaseQa(); yield break; }
             if(game.Network.IsHost&&System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-relay-report")>=0) {

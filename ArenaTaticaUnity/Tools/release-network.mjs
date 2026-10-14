@@ -2,11 +2,26 @@ import {spawn} from 'node:child_process';
 import {existsSync,readFileSync,writeFileSync,mkdirSync,unlinkSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import {join} from 'node:path';
+import {connect as tcpConnect} from 'node:net';
 import assert from 'node:assert/strict';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const executable=join(root,'Builds/Windows/ArenaTatica.exe');
 const delay=ms=>new Promise(r=>setTimeout(r,ms));
 async function wait(test,label,limit=120000) { const end=Date.now()+limit; while(!test()&&Date.now()<end) await delay(100); if(!test()) throw Error(label); }
+async function listenerReady() {
+  const until=Date.now()+10000;
+  while(Date.now()<until) {
+    const listening=await new Promise(resolve=>{
+      const socket=tcpConnect({host:'127.0.0.1',port:9080}); let done=false;
+      const finish=okay=>{if(done) return;done=true;socket.destroy();resolve(okay);};
+      socket.setTimeout(800,()=>finish(false));
+      socket.once('connect',()=>finish(true)); socket.once('error',()=>finish(false));
+    });
+    if(listening) return;
+    await delay(100);
+  }
+  throw Error('Sala liberada, mas listener TCP não abriu');
+}
 async function run(players,cup) {
   const prefix=join(root,'Artifacts',`019-${cup?'cup':'room'}-${players}`), clients=[], pending=[];
   for(const ext of ['ready','reconnected','revealed','restarted','lobby','again','result']) if(existsSync(prefix+'.'+ext)) unlinkSync(prefix+'.'+ext);
@@ -25,7 +40,9 @@ async function run(players,cup) {
         if(m.kind==='full') throw Error(m.text);
         if(m.kind==='draft') send({kind:'draft',text:m.text,fighters:m.text==='ban'?m.fighters.slice(0,2):m.fighters});
         if(cup||seat!==2) return;
-        if(m.state) {
+        // Só snapshot/state carregam uma partida; campos vazios de welcome/ping não são snapshots.
+        if(m.kind==='snapshot'||m.kind==='state') {
+          assert.ok(m.state,'pacote de estado sem partida');
           assert.equal(m.state.players,players); assert.equal(m.state.rng,0);
           const secret=m.state.fighters.find(f=>f.team===1&&f.hidden);
           if(secret) {
@@ -51,7 +68,8 @@ async function run(players,cup) {
   }
   try {
     await wait(()=>existsSync(prefix+'.ready'),'Host não liberou a sala');
-    for(let seat=2;seat<=players;seat++) connect(seat);
+    await listenerReady();
+    for(let seat=2;seat<=players;seat++) {connect(seat);await delay(150);}
     await wait(()=>failure||existsSync(prefix+'.result'),'Ciclo de sala/torneio não terminou',180000);
     if(failure) throw failure;
     assert.notEqual(readFileSync(prefix+'.result','utf8'),'FAIL');
