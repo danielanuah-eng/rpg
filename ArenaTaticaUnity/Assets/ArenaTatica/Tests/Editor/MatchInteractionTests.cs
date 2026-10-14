@@ -54,6 +54,12 @@ namespace ArenaTatica.Tests
                 Assert.IsTrue(Skill(m,id,c,out _),id); Assert.IsTrue(ArenaGame.ValidState(m.S));
             }
         }
+        [Test] public void ZeroMinimumRangeAllowsHealingTheCasterWithLineOfSightEnabled()
+        {
+            var m=Duel(); var f=m.S.fighters.First(x=>x.team==1); Activate(m,f); f.learned.Add("curar-ferimentos"); f.hp--;
+            int hp=f.hp,pa=f.pa; var sk=Content.Skill(f,"curar-ferimentos"); Assert.IsTrue(sk.sight); Assert.AreEqual(0,sk.minRange);
+            Assert.IsTrue(Skill(m,sk.id,f.cell,out _)); Assert.AreEqual(hp+1,f.hp); Assert.AreEqual(pa-sk.pa,f.pa);
+        }
         [Test] public void ShadowCloneUsesCasterIdentityAndEnemyProjectionKeepsDisguise()
         {
             var m=Duel(); var f=m.S.fighters.First(x=>x.team==1); Activate(m,f); f.cell=new Cell(3,3); f.learned.Add("clone-das-sombras");

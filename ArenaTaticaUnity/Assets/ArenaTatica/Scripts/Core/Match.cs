@@ -307,7 +307,7 @@ namespace ArenaTatica.Core
             int dist=f.cell.Distance(c);
             if(dist<sk.minRange||dist>Range(f,sk,c)) { reason="Fora de alcance."; return false; }
             if(sk.line&&f.cell.x!=c.x&&f.cell.z!=c.z) { reason="Só em linha reta."; return false; }
-            if(sk.sight&&!Board.LineOfSight(S,f.cell,c)) { reason="Sem linha de visão."; return false; }
+            if(sk.sight&&c!=f.cell&&!Board.LineOfSight(S,f.cell,c)) { reason="Sem linha de visão."; return false; }
             return true;
         }
         // Skills que o lutador pode usar agora: as próprias e as cargas compradas.

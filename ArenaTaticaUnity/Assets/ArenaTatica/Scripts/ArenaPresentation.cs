@@ -97,6 +97,8 @@ namespace ArenaTatica
         // Girar a vista sem teclado: botão direito arrastado ou segurar parado ~0,45 s e arrastar para o lado.
         // Dois dedos dão SÓ zoom (ArenaTouchGesture): sem giro e sem deslocar o tabuleiro.
         bool rotating,rotateButton,pinchZoomed; float rotateAcc,pressTime;
+        int multiTouchReleased=-1;
+        public bool TouchGestureBusy => touchPress&&(pinching||(pinched&&(pressing||multiTouchReleased==Time.frameCount)));
         Material silhouetteMaterial;
         public static Color Gold=new Color(.93f,.72f,.35f), Blue=new Color(.3f,.73f,.95f), Violet=new Color(.64f,.5f,.98f), Red=new Color(.9f,.32f,.28f), Green=new Color(.45f,.85f,.5f);
         // Cor de cada jogador (P1..P6); invocações puxam para o violeta.
@@ -452,7 +454,8 @@ namespace ArenaTatica
             for(int x=-1;x<=1;x+=2) for(int z=-1;z<=1;z+=2) for(int y=0;y<=1;y++) {
                 var p=BoardCamera.transform.InverseTransformPoint(new Vector3(x*(boardSize*.5f+.4f),y*3.2f,z*(boardSize*.5f+.4f))); halfW=Mathf.Max(halfW,Mathf.Abs(p.x)); halfH=Mathf.Max(halfH,Mathf.Abs(p.y));
             }
-            BoardCamera.orthographicSize=fitSize=Mathf.Max(halfH,halfW/aspect)*1.06f;
+            // orthographicSize mede a tela inteira; reserve também a fração coberta pela HUD.
+            BoardCamera.orthographicSize=fitSize=Mathf.Max(halfH,halfW/aspect)*Screen.height/Mathf.Max(1,area.height)*1.06f;
             var cam=BoardCamera.transform; Vector2 d=area.center-new Vector2(Screen.width,Screen.height)*.5f;
             homeShift=-(cam.right*d.x+cam.up*d.y)*(2*fitSize/Mathf.Max(1,Screen.height)); cam.position=Home;
             screenWidth=Screen.width; screenHeight=Screen.height;
@@ -1438,6 +1441,7 @@ namespace ArenaTatica
                 }
             } else if(pressing) {
                 pressing=false;
+                if(touchPress&&pinched) multiTouchReleased=Time.frameCount;
                 // Só o toque/botão esquerdo age; o direito e o do meio servem apenas para arrastar.
                 // E só age o toque que começou com um dedo e nunca virou pinça nem gesto de câmera (1->2->1 não é clique).
                 tap=pressOnBoard&&ArenaTouchGesture.TapAfterGesture(pressFingers,pinched,dragged||rotating,pressOnUi)
@@ -1489,10 +1493,11 @@ namespace ArenaTatica
         {
             var center=(a+b)*.5f; float distance=Mathf.Max(1,Vector2.Distance(a,b));
             if(!pinching) {
+                touchPress=true; Game.Hud?.ClearConfirmation();
                 pressOnUi=pressOnUi||OverUi(a)||OverUi(b);
                 pinching=pinched=dragged=true; pinchZoomed=false; pinchStart=pinchDistance=distance; pinchScale=TouchScale;
                 pressOnBoard=!pressOnUi&&BoardCamera.pixelRect.Contains(center)&&!OverUi(center);
-                if(pressOnBoard) Game.Hud?.ClearConfirmation(); // começou a mexer na câmera: a mira armada cai
+                if(pressOnBoard) { yawGoal=Yaw; rotating=false; } // a pinça interrompe um giro anterior
                 pinchCenter=lastDrag=center; return; // no primeiro quadro da pinça só se mede a distância entre os dedos
             }
             // Abaixo do limiar (8 px escalados ou 2% da distância inicial) a pinça ainda não move a câmera.

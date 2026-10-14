@@ -506,6 +506,7 @@ namespace ArenaTatica
         // começar um gesto de câmera zera a confirmação (SyncConfirmation acima).
         void ChooseSkill(int index)
         {
+            if(Game.View?.TouchGestureBusy==true) { ClearConfirmation(); return; }
             var f=Game.Active; if(f==null) return;
             var skills=Match.Skills(f); if(index>=skills.Count) return;
             var sk=skills[index];
@@ -519,6 +520,7 @@ namespace ArenaTatica
         // Passar também é em dois toques, e o botão e a tecla Espaço usam este mesmo método (020-ux).
         public void ConfirmPass()
         {
+            if(Game.View?.TouchGestureBusy==true) { ClearConfirmation(); return; }
             SyncConfirmation();
             var f=Game.Active;
             if(f==null||!Game.CanAct) { confirm.Reset(); return; }

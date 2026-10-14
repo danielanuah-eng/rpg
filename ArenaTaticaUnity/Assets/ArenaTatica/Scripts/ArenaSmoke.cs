@@ -230,6 +230,8 @@ namespace ArenaTatica
             float zoom=game.View.BoardCamera.orthographicSize; var position=game.View.BoardCamera.transform.position;
             float yaw=(float)typeof(ArenaPresentation).GetField("yawGoal",flags).GetValue(game.View);
             pinch.Invoke(game.View,new object[]{center+new Vector2(10,-70),center+new Vector2(10,70)});
+            revision=game.State.revision; hud.ConfirmPass();
+            if(hud.HasPendingConfirmation||game.State.revision!=revision) { Finish(false,"Pinça acionou botão de turno"); yield break; }
             if(zoom>=before||Mathf.Abs(game.View.BoardCamera.orthographicSize-zoom)>.001f||Vector3.Distance(position,game.View.BoardCamera.transform.position)>.001f||(float)typeof(ArenaPresentation).GetField("yawGoal",flags).GetValue(game.View)!=yaw) { Finish(false,"Pinça conflitou com giro/pan"); yield break; }
             Directory.CreateDirectory("Artifacts");
             game.View.ResetView(game.State); yield return Idle();
@@ -240,14 +242,25 @@ namespace ArenaTatica
             if(faces.Count==0||faces[0].sprite==null) { Finish(false,"Iniciativa sem retrato"); yield break; }
             faces[0].rectTransform.GetWorldCorners(faceCorners); ((RectTransform)content.parent).GetWorldCorners(viewportCorners);
             var faceRect=new Rect(faceCorners[0],faceCorners[2]-faceCorners[0]); var visibleRect=new Rect(viewportCorners[0],viewportCorners[2]-viewportCorners[0]);
-            if(!faceRect.Overlaps(visibleRect)) { Finish(false,"Retrato da iniciativa cortado pela lista"); yield break; }
+            if(!visibleRect.Contains(faceRect.min)||!visibleRect.Contains(faceRect.max)) { Finish(false,"Retrato da iniciativa cortado pela lista"); yield break; }
+            if(!BoardFits()) { Finish(false,"Tabuleiro cortado em paisagem"); yield break; }
             ScreenCapture.CaptureScreenshot(Path.GetFullPath("Artifacts/020-ux-landscape.png")); yield return new WaitForSeconds(.4f);
             Screen.SetResolution(540,960,false); yield return new WaitForSeconds(.7f);
+            if(!BoardFits()) { Finish(false,"Tabuleiro cortado em retrato"); yield break; }
             ScreenCapture.CaptureScreenshot(Path.GetFullPath("Artifacts/020-ux-portrait.png")); yield return new WaitForSeconds(.4f);
             game.Menu.Open("opcoes"); yield return new WaitForSeconds(.3f);
             ScreenCapture.CaptureScreenshot(Path.GetFullPath("Artifacts/020-opcoes-portrait.png")); yield return new WaitForSeconds(.4f);
             game.CloseMatch(); if(!game.InMenu||game.CanAct) { Finish(false,"Fechar Partida deixou ações ativas"); yield break; }
             Finish(true,"UX: dois toques, ataque no vazio, pinça exclusiva, retrato/paisagem, fechar partida");
+        }
+        bool BoardFits()
+        {
+            var area=ArenaHud.BoardArea(); float half=game.State.width*.5f+.4f;
+            for(int x=-1;x<=1;x+=2) for(int z=-1;z<=1;z+=2) for(int y=0;y<=1;y++) {
+                var p=game.View.BoardCamera.WorldToScreenPoint(new Vector3(x*half,y*3.2f,z*half));
+                if(!area.Contains(new Vector2(p.x,p.y))) return false;
+            }
+            return true;
         }
         // Espera 1 s antes de fechar: o último estado ainda precisa sair pela rede.
         void Finish(bool success,string message) { Debug.Log("ARENA_SMOKE_"+(success?"PASS: ":"FAIL: ")+message); StartCoroutine(Quit(success?0:1)); }
