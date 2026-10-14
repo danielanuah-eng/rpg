@@ -219,7 +219,7 @@ namespace ArenaTatica
     // Sala pela internet com Unity Relay. O código da sala é o join code do Relay (6 letras); sem Lobby.
     public sealed partial class ArenaTransport
     {
-        const int RelayPayload=48*1024;
+        const int RelayPayload=80*1024;
         public event Action<string> RoomReady;
         public string RoomCode { get; private set; }
         public bool InRoom => relayActive;

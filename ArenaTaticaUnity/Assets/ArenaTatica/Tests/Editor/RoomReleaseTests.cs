@@ -44,6 +44,22 @@ namespace ArenaTatica.Tests
             for(int i=0;i<10;i++) CollectionAssert.AreEqual(first,ArenaGame.MyPool);
             Assert.AreEqual(string.Join(",",first),PlayerPrefs.GetString("arena-pool"));
         }
+        [TestCase(2)] [TestCase(3)] [TestCase(6)]
+        public void FullTeamsFitRelayPacket(int players)
+        {
+            var team=ArenaGame.ValidTeam(Content.Roster.OrderBy(id=>Content.Fighters[id].level));
+            int budget=(int)typeof(ArenaTransport).GetField("RelayPayload",BindingFlags.Static|BindingFlags.NonPublic).GetValue(null);
+            int largest=0;
+            for(uint seed=1;seed<=5;seed++) {
+                var match=Match.New(new MatchSetup{seed=seed,map=ArenaMaps.Pick(Board.SizeFor(players),seed),players=Enumerable.Range(0,players).Select(_=>new PlayerSetup{fighters=team}).ToArray()});
+                for(int viewer=1;viewer<=players;viewer++) {
+                    var packet=JsonUtility.ToJson(new WireMessage{kind="snapshot",state=Match.ViewFor(match.S,viewer)});
+                    largest=System.Math.Max(largest,System.Text.Encoding.UTF8.GetByteCount(packet));
+                }
+            }
+            TestContext.WriteLine($"{players} participantes, {team.Length} lutadores/time: maior snapshot {largest} bytes, limite Relay {budget}.");
+            Assert.LessOrEqual(largest,budget,"Uma sala válida precisa caber no transporte Relay.");
+        }
         void Host(int players,bool tournament=false)
         {
             game.SetSeats(players); game.SetTournament(tournament); game.OpenLobby();

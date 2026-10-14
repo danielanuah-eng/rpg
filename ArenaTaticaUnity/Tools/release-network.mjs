@@ -12,14 +12,14 @@ async function run(players,cup) {
   for(const ext of ['ready','reconnected','revealed','restarted','lobby','again','result']) if(existsSync(prefix+'.'+ext)) unlinkSync(prefix+'.'+ext);
   const host=spawn(executable,['-batchmode','-screen-width','1280','-screen-height','720','-logFile',prefix+'.log','--arena-seats',String(players),'--arena-smoke','--arena-release-qa','--arena-qa-prefix',prefix,...(cup?['--arena-qa-cup']:[])],{cwd:root,windowsHide:true,stdio:'ignore'});
   const exited=new Promise((resolve,reject)=>{host.on('exit',resolve);host.on('error',reject);});
-  let failure=null, concealed=null, reconnected=false, revealed=false, restarted=false, lobby=false, checkingReconnect=false;
+  let maxMessageBytes=0, failure=null, concealed=null, reconnected=false, revealed=false, restarted=false, lobby=false, checkingReconnect=false;
   function connect(seat) {
     const ws=new WebSocket('ws://127.0.0.1:9080'); clients.push(ws);
     const send=m=>ws.send(JSON.stringify({protocol:4,...m}));
     ws.addEventListener('open',()=>send({kind:'hello',token:'019-qa-'+seat,fighters:['ciantia'],pool:['ciantia','perry','ezequiela','damian','baltazar']}));
     ws.addEventListener('message',event=>{
       try {
-        const m=JSON.parse(event.data); assert.equal(m.protocol,4);
+        maxMessageBytes=Math.max(maxMessageBytes,Buffer.byteLength(event.data)); const m=JSON.parse(event.data); assert.equal(m.protocol,4);
         if(m.kind==='ping') send({kind:'pong',ping:m.ping});
         if(m.kind==='full') throw Error(m.text);
         if(m.kind==='draft') send({kind:'draft',text:m.text,fighters:m.text==='ban'?m.fighters.slice(0,2):m.fighters});
@@ -58,7 +58,7 @@ async function run(players,cup) {
     const code=await exited; assert.equal(code,0);
     const log=readFileSync(prefix+'.log','utf8'); assert.ok(log.includes('ARENA_SMOKE_PASS')); assert.ok(!/NullReferenceException|IndexOutOfRangeException|ARENA_SMOKE_FAIL/.test(log));
     console.log(`${cup?'CUP':'ROOM'} ${players}: PASS`);
-    return {players,mode:cup?'cup':'room',passed:true,result:readFileSync(prefix+'.result','utf8')};
+    return {players,mode:cup?'cup':'room',maxMessageBytes,passed:true,result:readFileSync(prefix+'.result','utf8')};
   } finally {for(const ws of clients) ws.close();host.kill();await Promise.allSettled(pending);}
 }
 mkdirSync(join(root,'Artifacts'),{recursive:true});
