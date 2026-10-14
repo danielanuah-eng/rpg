@@ -192,7 +192,6 @@ namespace ArenaTatica
             Para(card,"• <b>10 lutadores novos</b>: Asamyh (Lendária, gatos comandados), O Colosso (devora skills), Cheiro D.Pneu Queimado, Rei Bobett, Príncipe Kellen (Desejo na rodada 10), Vespa Cinzenta, Viúva da Agulha, Guardião de Musgo, Domador de Correntes e Ogro de Pedra.");
             Para(card,"• <b>11 itens novos na loja</b>: martelo perfurante, corrente, bomba de fumaça, pena de fênix, totem de cura, mina de gelo, gancho, cristal de foco, manto de espinhos, âncora e bênção de pedra.");
             Para(card,"• <b>Editor</b>: mude PV, PA, PM, Nível e cada skill, e crie skills novas de dano, suporte e controle de grupo (empurrar, puxar, prender, congelar, tirar PA/PM).");
-            Para(card,"<color=#a7b4c2>Algumas artes ainda estão sendo feitas pelo Codex (tarefa 015). Enquanto isso, o lutador aparece como uma figura simples.</color>");
         }
 
         // ── Jogar ──

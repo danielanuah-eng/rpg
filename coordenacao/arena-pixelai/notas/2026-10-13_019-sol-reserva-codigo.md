@@ -17,3 +17,5 @@ Também sob execução: scripts `Tools/package.ps1`, build Windows/Android, veri
 
 Reserva adicional antes de editar: ArenaTaticaUnity/Assets/ArenaTatica/Scripts/ArenaTransport.cs. O teste de times completos reproduziu snapshot de seis participantes acima dos 48 KiB do Relay; ajustar capacidade do transporte, sem mudar regras.
 Capacidade final: 80 KiB (81.920 bytes), abaixo do máximo confiável de aproximadamente 88 KiB documentado no Unity Transport instalado, janela 64. Maior snapshot medido: 57.347 bytes (6 participantes, 4 lutadores/time).
+
+Reserva adicional antes de editar: ArenaTaticaUnity/Assets/ArenaTatica/Scripts/ArenaMenu.cs. Pedido atual do autor: conferir aviso de artes Damian/Tchu Tcha. Remover aviso genérico obsoleto da tarefa 015 e corrigir retorno de forma com clipe reverso existente, sem criar ou alterar imagens.

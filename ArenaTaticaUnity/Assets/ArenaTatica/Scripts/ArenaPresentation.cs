@@ -617,6 +617,12 @@ namespace ArenaTatica
                         var who=s.F(e.actor); string anim=who==null?null:Content.Def(who).skills.FirstOrDefault(k=>k.kind==SkillKind.Forma&&k.toForm==e.info)?.anim;
                         float morph=PlayClip(actor,anim??"transform");
                         if(morph==0) morph=PlayClip(actor,"transform");
+                        // A volta do Berserk usa a transformação normal ao contrário quando a forma atual não tem clipe.
+                        if(morph==0&&who!=null&&actor.childCount>0&&rigs.TryGetValue(actor.GetChild(0),out var previous)&&previous.folder!=SpriteFolder(who)&&LoadRig(SpriteFolder(who))!=null) {
+                            var position=actor.position; rigs.Remove(actor.GetChild(0)); Destroy(actor.gameObject);
+                            actor=units[who.id]=CreateUnit(who); actor.position=position; Turn(actor,-position);
+                            morph=PlayClip(actor,"transform",reverse:true);
+                        }
                         Flash(actor.position+Vector3.up,e.info=="berserk"?Red:Violet);
                         if(morph>0) yield return Wait(morph); else yield return Pulse(actor);
                         // Forma com pasta própria de sprites (Berserk): troca o boneco.

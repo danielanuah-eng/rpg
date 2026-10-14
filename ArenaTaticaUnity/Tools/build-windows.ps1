@@ -1,4 +1,4 @@
-param([string]$StagePath)
+param([string]$StagePath,[switch]$SkipCacheSeed)
 # Versão de PC sem fechar o editor: o projeto aberto fica travado, então o build roda numa cópia própria (como o Android),
 # por padrão a mesma cópia do Android (uma segunda Library tem ~16 GB e lotou o disco C). Saída em Builds/Windows e o zip
 # em Builds/ArenaTatica-Windows.zip.
@@ -15,7 +15,7 @@ New-Item -ItemType Directory -Force $artifacts | Out-Null
 $log = Join-Path $artifacts 'windows-cli.log'
 $seed = Join-Path $env:LOCALAPPDATA 'ArenaTaticaAndroid/Library'
 if (-not (Test-Path -LiteralPath $seed)) { $seed=Join-Path $arenaRoot 'Library' }
-if (-not (Test-Path (Join-Path $StagePath 'Library')) -and (Test-Path $seed)) {
+if (-not $SkipCacheSeed -and -not (Test-Path (Join-Path $StagePath 'Library')) -and (Test-Path $seed)) {
     Assert-ArenaChild $StagePath (Join-Path $StagePath 'Library')
     & robocopy $seed (Join-Path $StagePath 'Library') /MIR /MT:8 /NFL /NDL /NJH /NJS /NP /R:2 /W:2 | Out-Null
     if ($LASTEXITCODE -lt 0 -or $LASTEXITCODE -ge 8) { throw "Falha ao copiar cache (robocopy $LASTEXITCODE)." }
