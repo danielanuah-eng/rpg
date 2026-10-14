@@ -1,0 +1,24 @@
+{
+  "sourceCommit": "7b13322e21f5d4068099b503af0f80385d72af83",
+  "captures": "019-capturas",
+  "images": 6,
+  "allNonBlank": true,
+  "fullBoardVisibleInPlay": true,
+  "resolutions": [
+    "1280x720",
+    "960x540"
+  ],
+  "method": "player com --arena-qa-render, troca960→1280 para disponibilizar backbuffer",
+  "review": "DeepSeek OpenRouter, consolidado pelo Codex",
+  "controlsBelowViewport": "ArenaMenu ScrollRect/ContentSizeFitter/RectMask2D confirmado por código",
+  "inspect": "painel HUD com botão fechar; sobrepõe parte do tabuleiro quando aberto",
+  "emptyHudBox": "Registro de eventos, vazio quando não há linhas",
+  "physicalTouchTested": false,
+  "pendingPolish": [
+    "Personagens quebra palavra no menu",
+    "Texto960 pequeno",
+    "Contraste de títulos secundários",
+    "Mensagens flutuantes podem sobrepor sprites",
+    "Skills quebram linha sem recuo"
+  ]
+}

@@ -1,61 +1,61 @@
-# Arena Tática — Unity
+# Arena Tática — Unity 1.1.0
 
-Port da Arena Tática Godot para **Unity 6000.6.4f1 / URP**, iniciado em 09/10/2026. O projeto original e o pacote de migração permanecem na pasta ArenaTatica. Este diretório contém o projeto Unity editável.
+Jogo de combate tático por turnos para 2 a 6 participantes, desenvolvido em Unity 6000.6.4f1 com URP. Distribuição: https://eiediboy.itch.io/bdx-master. Consulte VALIDACAO.md para a evidência e as limitações da versão publicada.
 
 ## Abrir e jogar
 
-- **Editor:** execute `ABRIR-UNITY.cmd`. A cena é `Assets/ArenaTatica/Scenes/Arena.unity`; pressione Play.
-- **Windows:** execute `JOGAR.cmd`. O executável fica em `Builds/Windows/ArenaTatica.exe`.
-- **Web:** execute `SERVIR-WEB.cmd` e abra `http://127.0.0.1:8080`. Requer Node.js e a build em `Builds/Web`. Abrir o HTML diretamente pelo Explorador não serve os arquivos WASM corretamente.
-- **Android:** `powershell -ExecutionPolicy Bypass -File Tools/build-android.ps1` gera `Builds/Android/ArenaTatica.apk`. Também pelo menu **Arena Tática → Exportar Android** (abre o script numa janela). Usa uma cópia fixa sem acentos em `%LOCALAPPDATA%\ArenaTaticaAndroid`, sincronizada a cada execução; a Library dessa cópia fica guardada, então o primeiro build é completo (~48 min) e os seguintes são incrementais (~18 min). O script encerra antes o servidor de compilação C# compartilhado (VBCSCompiler), que, vindo do editor aberto no caminho com acento, não lê os arquivos da cópia (erro CS2011). Log em `Artifacts/android-cli.log`. O módulo, SDK, NDK e JDK precisam estar instalados. Conferir o estado real da entrega em `VALIDACAO.md`.
+- Windows: extraia o ZIP inteiro e execute ArenaTatica.exe, mantendo os arquivos vizinhos. No projeto, JOGAR.cmd abre a build em Builds/Windows.
+- Android: instale ArenaTatica.apk em aparelho ARM64. A interface tem suporte a toque; a instalação e o desempenho em aparelho físico dependem de validação própria.
+- Editor: ABRIR-UNITY.cmd; cena Assets/ArenaTatica/Scenes/Arena.unity.
 
-Em partida local, a mesma pessoa controla P1 e P2 por turnos. Escolha **Mover** e clique em uma casa alcançável, ou **Atacar** e clique numa miniatura adversária. **Encerrar turno** ou Espaço passa a vez; os dragões agem automaticamente após P2.
+No menu, monte seu time com até quatro lutadores e limite de 12 níveis. Escolha partida local, bots ou sala online. O mapa acompanha o número de participantes. Os atributos e as skills de cada lutador aparecem na ficha; os valores variam entre personagens e equipamentos.
 
-O tabuleiro inteiro permanece visível. P1 é marcado em dourado, P2 em azul, dragões em violeta. O dourado pequeno está importado para uso futuro; nenhuma skill nova foi inventada para ele.
+Clique ou toque brevemente num lutador visível para abrir sua ficha. Clique numa casa alcançável para mover; depois de escolher uma skill, clique no alvo permitido. Use **Encerrar turno** ou Espaço para passar a vez. Arrastar desloca a câmera; arrastar com o botão direito gira a vista. No toque, segure por cerca de 0,45 segundo e arraste para girar; dois dedos controlam zoom. A roda do mouse também controla zoom. O enquadramento inicial mostra o tabuleiro inteiro.
 
-## Dois jogadores
+## Sala online
 
-1. No Windows, clique **Host**. Isso começa uma nova partida na porta TCP 9080.
-2. Na outra instância Windows ou no navegador, informe o endereço do Host e clique **Entrar**.
-3. No mesmo computador: `ws://127.0.0.1:9080`. Em rede local: `ws://IP-PRIVADO-DO-HOST:9080`. O Windows pode pedir liberação do aplicativo para a rede escolhida pelo usuário.
-4. Host controla P1; cliente controla P2. Apenas uma conexão de jogador é aceita por partida. Comandos do cliente são validados no Host.
-5. Se a conexão cair, use **Entrar** novamente para recuperar o estado existente. Unidades mortas não são recriadas. No Host, **Retomar local** continua a partida localmente. No cliente, esse botão começa uma partida local nova.
+1. O anfitrião abre **Configurar**, escolhe participantes, formato, mapa, opções de turno e loja e libera a sala.
+2. Em rede local, os clientes entram pelo endereço ws://IP-PRIVADO-DO-HOST:9080; no mesmo PC, ws://127.0.0.1:9080. Para conexão pela internet, use a opção de sala Relay e seu código.
+3. Os participantes escolhem seus times. O anfitrião inicia quando as vagas necessárias estiverem preenchidas.
+4. Reiniciar começa outra partida na mesma sala; voltar à sala permite nova preparação. Reconectar recupera o assento e o estado confirmado pelo anfitrião, enquanto essa sessão continuar aberta.
 
-O navegador é cliente; o Host usa o executável nativo. Para internet, usar `wss://` atrás de proxy TLS e certificado válido. Uma página HTTPS exige WSS. Esta entrega não publica nem configura um servidor na internet. A conexão sem TLS é limitada a localhost e faixas IPv4 privadas, inclusive em builds release.
+O anfitrião valida comandos, custos, vez e ocupação. O protocolo desta versão é **4**: todos os participantes devem atualizar. A visão enviada ao adversário omite posição e deslocamento de unidades invisíveis, armadilhas inimigas e o estado do gerador aleatório. Aliados e anfitrião mantêm sua visão permitida; o contato revela a unidade conforme as regras. Comandos rejeitados continuam sujeitos às regras de ocupação.
 
-## Regras preservadas
+WebSocket sem TLS é limitado a localhost e endereços IPv4 privados. Uma publicação Web em HTTPS requer WSS para esse transporte. O canal Web antigo não faz parte desta distribuição; não o misture com os clientes 1.1.0.
 
-Mapa 24 × 24, movimento ortogonal, 3 PM por turno e ocupação exclusiva. Jogadores começam com 100 HP, têm 2 PA por turno, ataque de 15 de dano por 1 PA e linha de visão lógica sem limite artificial de distância. Ordem P1 → P2 → dragões, ignorando derrotados. Monstros têm 30 HP; aproximam-se do humano mais próximo e atacam conforme seus atributos. A vitória exige um humano vivo e nenhum monstro; a derrota de todos os humanos encerra sem vencedor.
+## Torneio
 
-A regra é independente da apresentação. Modelos e animações representam o estado confirmado pelo Host. Entrada tardia aguarda o término da ação; efeitos antigos não são reproduzidos no snapshot. A HUD mostra HP, PA, PM, turno, resultado, RTT, sondas expiradas e cliques filtrados.
+Até seis participantes disputam partidas de eliminação, um contra um. Cada jogador escolhe uma pool de até oito lutadores; uma seleção pequena é completada até cinco. Os bans configurados retiram opções da pool adversária, e cada jogador monta um time válido com as restantes. Quatro lutadores é o máximo, não o mínimo. Participantes sem adversário na rodada avançam por bye.
 
-## Estrutura
+O anfitrião avança a chave após o resultado. Reiniciar a partida atual desfaz seu resultado registrado antes de disputá-la novamente. A reconexão conserva o draft; desconexão não gera derrota automática. Quem está fora da partida recebe o resumo do torneio: transmissão do tabuleiro para espectadores ainda não está implementada.
 
-- `Assets/ArenaTatica/Scripts/ArenaRules.cs`: células, caminhos, combate, turnos, IA e resultado.
-- `ArenaGame.cs`: sessão, comandos, snapshots e coordenação das animações.
-- `ArenaTransport.cs` + `Assets/Plugins/WebGL/ArenaWebSocket.jslib`: WebSocket nativo e navegador.
-- `ArenaPresentation.cs`: tabuleiro, câmera, modelos, seleção, movimentos, VFX e pool de áudio.
-- `ArenaHud.cs`: interface uGUI com mouse/toque e layouts horizontal/vertical.
-- `Resources`: modelos GLB, PNGs, WAVs e material URP explicitamente incluído nas builds.
-- `Assets/Editor/ArenaBuild.cs`: criação da cena e exportação Windows/Web/Android pelo Editor.
-- `Assets/ArenaTatica/Tests/Editor`: testes de regras e validação.
+## Projeto e validação
 
-Os GLBs vêm das cenas procedurais existentes no Godot, exportadas sem regenerá-las. Os PNGs e WAVs vêm do pacote de migração. A avaliação artística dos modelos continua pendente conforme os registros originais. O port não implica aprovação das artes.
+- Assets/ArenaTatica/Scripts/Core: regras, conteúdo, mapas e estado determinístico.
+- ArenaGame.cs: sala, torneio, comandos e projeções de rede.
+- ArenaTransport.cs: transporte local; componentes Relay cuidam das salas pela internet.
+- ArenaPresentation.cs, ArenaHud.cs e menus: tabuleiro, câmera e interface.
+- Assets/Editor/ArenaBuild.cs: configuração e exportação.
+- Assets/ArenaTatica/Tests/Editor: testes de regras e controlador.
 
-## Reproduzir a validação
-
-Com o Editor fechado:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File Tools/validate.ps1 -BuildWindows -BuildWeb
+~~~powershell
+./Tools/build-windows.ps1
+unity test "$env:LOCALAPPDATA/ArenaTaticaAndroid" --editor-version 6000.6.4f1 --mode EditMode --output Artifacts/editmode.xml --timeout 1200 -- -nographics
 node Tools/smoke.mjs
 node Tools/network-contract.mjs
-```
+node Tools/release-network.mjs
+node Tools/relay-contract.mjs
+./Tools/build-android.ps1
+./Tools/verify-android.ps1
+./Tools/package.ps1 -Platforms Windows
+./Tools/verify-package.ps1
+./Tools/verify-package.ps1 -Source
+~~~
 
-O primeiro comando prepara a cena, executa os testes EditMode e gera as builds selecionadas. O segundo executa uma partida local e dois jogadores na build Windows, salvando logs e captura em `Artifacts`. Caches, builds, logs e configurações locais estão excluídos do Git; `.meta`, Assets, Packages e ProjectSettings fazem parte do projeto.
+Builds Windows e Android usam sequencialmente a cópia ASCII %LOCALAPPDATA%/ArenaTaticaAndroid; não rode os dois ao mesmo tempo. Os scripts conferem caminhos, travam a cópia, registram revisão e hashes e recusam código alterado durante o build. São necessários Unity CLI, editor e módulos correspondentes. O build Android usa IL2CPP/ARM64; o primeiro build pode ser demorado. Logs ficam em Artifacts.
 
-Os testes automatizados não substituem avaliação de jogabilidade, aparência e performance em aparelhos reais. O estado confirmado de cada alvo fica em `VALIDACAO.md`.
+package.ps1 usa tar.exe, confere entradas duplicadas e caminhos internos e grava SHA-256 em Builds/entregas.json. Escolha explicitamente as plataformas atuais. O ZIP de fontes exclui caches, builds, logs e arquivos locais de conta Unity. As builds contêm proveniencia.json com a revisão de origem. Testes de torneio com vencedores definidos pela ferramenta verificam o fluxo da chave, não uma simulação completa de combate.
 
-## Pacotes
+verify-android.ps1 rejeita APK antigo ou de outro aplicativo e confere versão/code, ARM64, internet, certificado da atualização anterior e recibo do código final. A validação de arquivo e assinatura não substitui instalação e uso em aparelho físico.
 
-`Tools/package.ps1` cria o ZIP do projeto editável e os ZIPs Windows/Web em Builds, com tamanho e SHA-256 em `entregas.json`. O APK fica em Builds/Android. O ZIP de fontes exclui caches, builds e logs; após extraí-lo, o Unity reimporta os assets. Para jogar pelo ZIP Windows, extraia a pasta inteira e execute ArenaTatica.exe mantendo os arquivos vizinhos.
+O projeto editável usa Assets com seus .meta, Packages e ProjectSettings. Arte em produção e pedidos Blender têm avaliação separada; esta versão não representa conclusão dessa fila.

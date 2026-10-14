@@ -1,133 +1,533 @@
 {
-  "unity": "6000.6.4f1",
-  "validatedAt": "2026-10-10T00:01:04.1184759-03:00",
-  "editMode": {
-    "total": 26,
-    "cases": [
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.AiAttacksNearestAndUsesItsOwnDamage",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.AiPathBudgetAndOccupation",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.AttackSpendsOnePaAndDealsFifteen",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.CannotAttackSelfOrWithoutPa",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.DeadUnitsNoLongerOccupyCells",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.InitialStateMatchesGodot",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.MalformedSnapshotsAreRejected",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.MovementCostsPmAndLocksActions",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.NoArtificialAttackRangeCap",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.NoHumansEndsWithoutWinner",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.RejectsExcessMovementAndOccupiedDestinations",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.RejectsWrongOwnerTurnAndStaleRevision",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.ResetRestoresDeadUnitsAndAdvancesRevision",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.ShortestPathAvoidsOccupiedCells",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.SightIgnoresOriginAndIsSymmetricOnClearMap",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.SightRejectsOutOfBoundsAndSameCell",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.SnapshotCopyIsIndependent",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.SupercoverBlocksBothCornerEdges",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.TurnOrderAndRestoration",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.UrlPolicy(\"ws://127.0.0.1:9080\",True)",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.UrlPolicy(\"ws://192.168.1.5:9080\",True)",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.UrlPolicy(\"wss://example.org\",True)",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.UrlPolicy(\"ws://example.org\",False)",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.UrlPolicy(\"https://example.org\",False)",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.UrlPolicy(\"wss://name:password@example.org\",False)",
-        "result": "Passed"
-      },
-      {
-        "name": "ArenaTatica.Tests.ArenaRulesTests.VictoryRequiresOneHumanAndNoMonsters",
-        "result": "Passed"
-      }
-    ],
-    "passed": 26,
-    "failed": 0
-  },
-  "playerSmoke": {
-    "client": "PASS",
-    "local": "PASS",
-    "host": "PASS"
-  },
-  "websocket": {
-    "passed": true,
-    "checks": 7,
-    "scenarios": [
-      "ownership",
-      "stale revision",
-      "authoritative movement",
-      "death",
-      "reconnection",
-      "no replayed VFX",
-      "forged snapshot rejected"
-    ]
-  }
+  "version": "1.1.0",
+  "protocol": 4,
+  "testedCodeCommit": "7b13322e21f5d4068099b503af0f80385d72af83",
+  "completedAt": "2026-10-14 04:09:10Z",
+  "execution": "ASCII copy; every C# hash matched source; EditMode -nographics",
+  "total": 103,
+  "passed": 103,
+  "failed": 0,
+  "skipped": 0,
+  "relayFullTeamsSnapshots": [
+    "2 participantes, 4 lutadores/time: maior snapshot 25310 bytes, limite Relay 81920.",
+    "3 participantes, 4 lutadores/time: maior snapshot 40873 bytes, limite Relay 81920.",
+    "6 participantes, 4 lutadores/time: maior snapshot 57347 bytes, limite Relay 81920."
+  ],
+  "cases": [
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.AlliesSeeEachOthersTraps",
+      "result": "Passed",
+      "durationSeconds": 0.079137
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.AlternateInitiativeInterleavesTeams",
+      "result": "Passed",
+      "durationSeconds": 0.00646
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.AreaDamageHitsAlliesButNotTheCaster",
+      "result": "Passed",
+      "durationSeconds": 0.018325
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.ArmorItemReducesDamageAndHealCapsAtMax",
+      "result": "Passed",
+      "durationSeconds": 0.006377
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.ArmorReducesDamageAndCataclysmOnlyFromAttackDie",
+      "result": "Passed",
+      "durationSeconds": 0.008621
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.BaltazarAuraCostsOnePaPerTurnHealsAlliesAndHurtsFoes",
+      "result": "Passed",
+      "durationSeconds": 0.006369
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.BarkGivesArmorToAnAlly",
+      "result": "Passed",
+      "durationSeconds": 0.002347
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.BotsPlayOnlyLegalActionsAndFight",
+      "result": "Passed",
+      "durationSeconds": 1.012899
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.BuffLastsTwoTurns",
+      "result": "Passed",
+      "durationSeconds": 0.000956
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.BuyingCostsCoinsAllowsSeveralAndRefillsAtTurnEnd",
+      "result": "Passed",
+      "durationSeconds": 0.004697
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.BuyingOnlyNextToTheShop",
+      "result": "Passed",
+      "durationSeconds": 0.001316
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.CatsHaveNoTurnObeyAndVanishAfterShooting",
+      "result": "Passed",
+      "durationSeconds": 0.004751
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.ClimbingCostsAndCoinPickup",
+      "result": "Passed",
+      "durationSeconds": 0.001407
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.CodexMapsAreAllPlayable",
+      "result": "Passed",
+      "durationSeconds": 0.081519
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.ColossusDevoursTheMainSkillWithOneMorePa",
+      "result": "Passed",
+      "durationSeconds": 0.00222
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.DamianFormsHoldTheirWeaponPose",
+      "result": "Passed",
+      "durationSeconds": 0.000657
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.DodgedTackleLetsMove",
+      "result": "Passed",
+      "durationSeconds": 0.000646
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.DrillHookPushesUntilObstacleAndBumpHurts",
+      "result": "Passed",
+      "durationSeconds": 0.000684
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.EditorPassivesFollowTargetAndRange",
+      "result": "Passed",
+      "durationSeconds": 0.006009
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.EnemyReceivesNoHiddenTeleportOrTurnCoordinates",
+      "result": "Passed",
+      "durationSeconds": 0.003102
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.EveryEventRunsForSixRoundsWithoutBreaking",
+      "result": "Passed",
+      "durationSeconds": 0.012222
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.EveryUltimateHasALimit",
+      "result": "Passed",
+      "durationSeconds": 0.001137
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.FailedTackleRemovesActionPoints",
+      "result": "Passed",
+      "durationSeconds": 0.000736
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.FireworksExplodeAtTheEndOfTheRound",
+      "result": "Passed",
+      "durationSeconds": 0.001096
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.GeneratedMapIsMirroredAndConnected",
+      "result": "Passed",
+      "durationSeconds": 0.033727
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.GeneratedMapsWorkForEveryPlayerCount",
+      "result": "Passed",
+      "durationSeconds": 0.040372
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.GenericSkillLibraryIsValid",
+      "result": "Passed",
+      "durationSeconds": 0.009262
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.GhostFormDodgesBlowsForOneTurn",
+      "result": "Passed",
+      "durationSeconds": 0.000912
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.GhostFormIgnoresEveryDamage",
+      "result": "Passed",
+      "durationSeconds": 0.001096
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.GhostShipUltimateSummonsOnce",
+      "result": "Passed",
+      "durationSeconds": 0.000583
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.GoldenDragonNeedsLineSightAndRange",
+      "result": "Passed",
+      "durationSeconds": 0.000904
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.HiddenIceTrapLeavesNoSecondaryMarkerInEnemySnapshot",
+      "result": "Passed",
+      "durationSeconds": 0.001593
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.HiddenMovesLessAndAdjacentFoesFindIt",
+      "result": "Passed",
+      "durationSeconds": 0.000891
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.HiddenPathStaysSecretEvenWhenTheFinalStateRevealsItsFighter",
+      "result": "Passed",
+      "durationSeconds": 0.00126
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.IceCostsOneMoreMovementUntilCastersNextTurn",
+      "result": "Passed",
+      "durationSeconds": 0.001668
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.IceMineTakesMovementAndAction",
+      "result": "Passed",
+      "durationSeconds": 0.001013
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.IllusionAlwaysNextToEzequielaWithRandomSide",
+      "result": "Passed",
+      "durationSeconds": 0.028991
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.ImmovableAndAnchorResistPush",
+      "result": "Passed",
+      "durationSeconds": 0.000739
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.KillingTheCoinEaterPaysItsStomach",
+      "result": "Passed",
+      "durationSeconds": 0.000876
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.KingIgnoresOneDamage",
+      "result": "Passed",
+      "durationSeconds": 0.000636
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.KnockoutCostsGaleoesAndEndsMatch",
+      "result": "Passed",
+      "durationSeconds": 0.000695
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.KrosmasterTimelinePlaysWholeTeamAndStartsWithFullStats",
+      "result": "Passed",
+      "durationSeconds": 0.002255
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.LastPlayerStandingWins",
+      "result": "Passed",
+      "durationSeconds": 0.001037
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.LavaSpreadsBurnsAndCoolsDown",
+      "result": "Passed",
+      "durationSeconds": 0.001859
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.MirrorReflectsTheLastAttackAndHasCooldown",
+      "result": "Passed",
+      "durationSeconds": 0.001213
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.MultipleUnknownEnemiesAndAlliesKeepValidProjectedState",
+      "result": "Passed",
+      "durationSeconds": 0.006034
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.NeedlePiercesArmorAndShieldAndPunishesIsolation",
+      "result": "Passed",
+      "durationSeconds": 0.000661
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.NetworkSnapshotHidesEnemyCellsButKeepsTurnsAndAuthority",
+      "result": "Passed",
+      "durationSeconds": 0.003571
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.NewShopItemsApply",
+      "result": "Passed",
+      "durationSeconds": 0.000824
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.NightOfCatsHealsShieldsAndFillsCats",
+      "result": "Passed",
+      "durationSeconds": 0.000947
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.OnlyOneSummonAndItActsNext",
+      "result": "Passed",
+      "durationSeconds": 0.000565
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.PetCoexistsWithDragon",
+      "result": "Passed",
+      "durationSeconds": 0.000622
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.PhoenixFeatherRevivesAnAlly",
+      "result": "Passed",
+      "durationSeconds": 0.001396
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.PrisonSkipsTurnBlocksTargetingAndDodgeEscapes",
+      "result": "Passed",
+      "durationSeconds": 0.000799
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.ProjectedMeleeCanBeSubmittedButOnlyHostDecidesTheTarget",
+      "result": "Passed",
+      "durationSeconds": 0.001723
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.RejectsWrongTeamAndStaleRevision",
+      "result": "Passed",
+      "durationSeconds": 0.000415
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.RoomShopOnlyOffersChosenItems",
+      "result": "Passed",
+      "durationSeconds": 0.000694
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.SameSeedSameCommandsSameState",
+      "result": "Passed",
+      "durationSeconds": 0.001306
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.SavedMapIsUsedAndKeepsSpawnsFree",
+      "result": "Passed",
+      "durationSeconds": 0.001437
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.ScytheHitsAdjacentAndTwoAway",
+      "result": "Passed",
+      "durationSeconds": 0.000775
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.ShopBlocksTheMiddleAndZoneIsTheRing",
+      "result": "Passed",
+      "durationSeconds": 0.001052
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.ShopStartsWithThreeDistinctSlotsPerTeam",
+      "result": "Passed",
+      "durationSeconds": 0.000583
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.ShotsPassOverFightersAndMayHitWhoIsInTheWay",
+      "result": "Passed",
+      "durationSeconds": 0.006582
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.SixPlayersGrowTheMapAndRotateTurns",
+      "result": "Passed",
+      "durationSeconds": 0.003146
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.SpellIsSingleUse",
+      "result": "Passed",
+      "durationSeconds": 0.00141
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.TeamsShareGaleoesAndAlliesAreNotEnemies",
+      "result": "Passed",
+      "durationSeconds": 0.009124
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.ThreeVsThreeAndTwoTeamsOfThreeSpawnApart",
+      "result": "Passed",
+      "durationSeconds": 0.001616
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.TrapHurtsEnemyStopsMoveAndIgnoresOwner",
+      "result": "Passed",
+      "durationSeconds": 0.001292
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.WanderingBossHuntsAndLeaves",
+      "result": "Passed",
+      "durationSeconds": 0.001857
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.WishCanCancelTheActiveEvent",
+      "result": "Passed",
+      "durationSeconds": 0.002148
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.WishCopyLetsThePlayerPickWhichSkill",
+      "result": "Passed",
+      "durationSeconds": 0.002709
+    },
+    {
+      "name": "ArenaTatica.Core.Tests.CoreMatchTests.WishNeedsRoundTenChannelsTwoTurnsThenGrantsAChoice",
+      "result": "Passed",
+      "durationSeconds": 0.001178
+    },
+    {
+      "name": "ArenaTatica.Tests.PresentationTests.ContinuousStatesFollowTheFighterAndEndWithIt",
+      "result": "Passed",
+      "durationSeconds": 0.805374
+    },
+    {
+      "name": "ArenaTatica.Tests.PresentationTests.DamageWaitsForTheCollisionFrameNotThePeak",
+      "result": "Passed",
+      "durationSeconds": 0.002319
+    },
+    {
+      "name": "ArenaTatica.Tests.PresentationTests.EmptyTeamDisablesAdvanceAndCostFollowsTheTeam",
+      "result": "Passed",
+      "durationSeconds": 0.002056
+    },
+    {
+      "name": "ArenaTatica.Tests.PresentationTests.EveryManifestResourceLoadsWithItsDeclaredFrames",
+      "result": "Passed",
+      "durationSeconds": 0.789421
+    },
+    {
+      "name": "ArenaTatica.Tests.PresentationTests.FloatingTextsOnTheSameSpotStack",
+      "result": "Passed",
+      "durationSeconds": 0.002892
+    },
+    {
+      "name": "ArenaTatica.Tests.PresentationTests.FreeTeamsPoolsAndButtonLerp",
+      "result": "Passed",
+      "durationSeconds": 0.005839
+    },
+    {
+      "name": "ArenaTatica.Tests.PresentationTests.LoadingOnePhaseNeverBringsFramesOfAnother",
+      "result": "Passed",
+      "durationSeconds": 0.00739
+    },
+    {
+      "name": "ArenaTatica.Tests.PresentationTests.MenuKeepsTheTabsPlusRoom",
+      "result": "Passed",
+      "durationSeconds": 0.001588
+    },
+    {
+      "name": "ArenaTatica.Tests.PresentationTests.OwnerOnlyEffectIsHiddenFromTheEnemy",
+      "result": "Passed",
+      "durationSeconds": 0.000599
+    },
+    {
+      "name": "ArenaTatica.Tests.PresentationTests.RepairedStripsSliceIntoTheRightCells(\"Sprites/Baltazar/idle_west\",4,168)",
+      "result": "Passed",
+      "durationSeconds": 0.004151
+    },
+    {
+      "name": "ArenaTatica.Tests.PresentationTests.RepairedStripsSliceIntoTheRightCells(\"Sprites/Baltazar/walk_west\",6,176)",
+      "result": "Passed",
+      "durationSeconds": 0.001642
+    },
+    {
+      "name": "ArenaTatica.Tests.PresentationTests.RepairedStripsSliceIntoTheRightCells(\"Sprites/GuardiaoMusgo/idle_north-west\",4,176)",
+      "result": "Passed",
+      "durationSeconds": 0.001334
+    },
+    {
+      "name": "ArenaTatica.Tests.PresentationTests.RoomPathAcceptsCodePageLinkAndDeepLink",
+      "result": "Passed",
+      "durationSeconds": 0.001258
+    },
+    {
+      "name": "ArenaTatica.Tests.PresentationTests.StateEffectFollowsTargetVisibility",
+      "result": "Passed",
+      "durationSeconds": 0.000313
+    },
+    {
+      "name": "ArenaTatica.Tests.PresentationTests.TeamPickerCardsFitTheWholeRosterInBothOrientations",
+      "result": "Passed",
+      "durationSeconds": 0.000958
+    },
+    {
+      "name": "ArenaTatica.Tests.PresentationTests.TerrainLoopsHaveMoreThanOneFrame(\"lava\")",
+      "result": "Passed",
+      "durationSeconds": 0.002074
+    },
+    {
+      "name": "ArenaTatica.Tests.PresentationTests.TerrainLoopsHaveMoreThanOneFrame(\"gelo\")",
+      "result": "Passed",
+      "durationSeconds": 0.001718
+    },
+    {
+      "name": "ArenaTatica.Tests.PresentationTests.TerrainLoopsHaveMoreThanOneFrame(\"fogos\")",
+      "result": "Passed",
+      "durationSeconds": 0.001783
+    },
+    {
+      "name": "ArenaTatica.Tests.RoomReleaseTests.AutomaticPoolStaysTheSameAcrossDraftReads",
+      "result": "Passed",
+      "durationSeconds": 0.044871
+    },
+    {
+      "name": "ArenaTatica.Tests.RoomReleaseTests.CompleteTournamentRespectsBansByeMappingAndChampion(2)",
+      "result": "Passed",
+      "durationSeconds": 0.073776
+    },
+    {
+      "name": "ArenaTatica.Tests.RoomReleaseTests.CompleteTournamentRespectsBansByeMappingAndChampion(3)",
+      "result": "Passed",
+      "durationSeconds": 0.018829
+    },
+    {
+      "name": "ArenaTatica.Tests.RoomReleaseTests.CompleteTournamentRespectsBansByeMappingAndChampion(6)",
+      "result": "Passed",
+      "durationSeconds": 0.054921
+    },
+    {
+      "name": "ArenaTatica.Tests.RoomReleaseTests.FullTeamsFitRelayPacket(2)",
+      "result": "Passed",
+      "durationSeconds": 0.024965
+    },
+    {
+      "name": "ArenaTatica.Tests.RoomReleaseTests.FullTeamsFitRelayPacket(3)",
+      "result": "Passed",
+      "durationSeconds": 0.038486
+    },
+    {
+      "name": "ArenaTatica.Tests.RoomReleaseTests.FullTeamsFitRelayPacket(6)",
+      "result": "Passed",
+      "durationSeconds": 0.113003
+    },
+    {
+      "name": "ArenaTatica.Tests.RoomReleaseTests.ReconnectAndChoiceCannotChangePoolDuringDraft",
+      "result": "Passed",
+      "durationSeconds": 0.018536
+    },
+    {
+      "name": "ArenaTatica.Tests.RoomReleaseTests.RestartOfRecordedTournamentMatchRollsBackItsWinner",
+      "result": "Passed",
+      "durationSeconds": 0.022111
+    },
+    {
+      "name": "ArenaTatica.Tests.RoomReleaseTests.RoomFormatAndShopSettingsReachTheAuthoritativeMatch",
+      "result": "Passed",
+      "durationSeconds": 0.02197
+    },
+    {
+      "name": "ArenaTatica.Tests.RoomReleaseTests.RoomRestartsAndReturnsToLobbyWithoutLosingParticipants(2)",
+      "result": "Passed",
+      "durationSeconds": 0.037248
+    },
+    {
+      "name": "ArenaTatica.Tests.RoomReleaseTests.RoomRestartsAndReturnsToLobbyWithoutLosingParticipants(3)",
+      "result": "Passed",
+      "durationSeconds": 0.024897
+    },
+    {
+      "name": "ArenaTatica.Tests.RoomReleaseTests.RoomRestartsAndReturnsToLobbyWithoutLosingParticipants(6)",
+      "result": "Passed",
+      "durationSeconds": 0.043704
+    }
+  ]
 }

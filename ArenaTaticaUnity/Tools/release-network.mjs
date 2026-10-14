@@ -26,7 +26,8 @@ async function run(players,cup) {
   const prefix=join(root,'Artifacts',`019-${cup?'cup':'room'}-${players}`), clients=[], pending=[];
   for(const ext of ['ready','reconnected','revealed','restarted','lobby','again','result']) if(existsSync(prefix+'.'+ext)) unlinkSync(prefix+'.'+ext);
   const render=players===2&&!cup;
-  const host=spawn(executable,[...(render?['-screen-fullscreen','0','--arena-qa-render']:['-batchmode']),'-screen-width','1280','-screen-height','720','-logFile',prefix+'.log','--arena-seats',String(players),'--arena-smoke','--arena-release-qa','--arena-qa-prefix',prefix,...(cup?['--arena-qa-cup']:[])],{cwd:root,windowsHide:true,stdio:'ignore'});
+  // O cenário visual troca 960→1280 no smoke, forçando o backbuffer a ficar disponível.
+  const host=spawn(executable,[...(render?['-screen-fullscreen','0','--arena-qa-render']:['-batchmode']),'-screen-width',render?'960':'1280','-screen-height',render?'540':'720','-logFile',prefix+'.log','--arena-seats',String(players),'--arena-smoke','--arena-release-qa','--arena-qa-prefix',prefix,...(cup?['--arena-qa-cup']:[])],{cwd:root,windowsHide:true,stdio:'ignore'});
   const exited=new Promise((resolve,reject)=>{host.on('exit',resolve);host.on('error',reject);});
   let maxMessageBytes=0, failure=null, concealed=null, reconnected=false, revealed=false, restarted=false, lobby=false, checkingReconnect=false;
   function connect(seat) {

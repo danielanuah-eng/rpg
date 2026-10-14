@@ -1,0 +1,204 @@
+{
+  "version": "1.1.0",
+  "protocol": 4,
+  "sourceCommit": "7b13322e21f5d4068099b503af0f80385d72af83",
+  "state": "publicado",
+  "completedAt": "2026-10-14T13:01:12.4398855Z",
+  "sourceTreeSha256": "938270e4b80fbedfcca3b791b6e9f25583b8843e2664ba3f21e53ef7b6c23a84",
+  "sourceFiles": 3748,
+  "editMode": {
+    "passed": 103,
+    "failed": 0,
+    "skipped": 0,
+    "total": 103,
+    "completedAt": "2026-10-14 04:09:10Z",
+    "report": "testes.json"
+  },
+  "platforms": {
+    "windows": {
+      "buildCompletedAt": "2026-10-14T04:16:49.8339091Z",
+      "codeDirty": false,
+      "stagedCodeMatches": true,
+      "archiveSha256": "a01e2e86faf8704fb1f367e5b28954730644b8b2851830f7a0c0293d4726be82",
+      "extractedFiles": 248,
+      "extractedFilesMatch": true,
+      "duplicateEntries": 0,
+      "accountFiles": 0,
+      "remoteBuildId": 2125800,
+      "remoteDownloadFilesMatch": true,
+      "uploadedArchiveSha256": "39ed0961e5714473f429e806b33684ee04011b1b94c804ee336e26811434a58c",
+      "repackagedFilesMatch": true
+    },
+    "android": {
+      "buildCompletedAt": "2026-10-14T12:49:54.6896795Z",
+      "codeDirty": false,
+      "stagedCodeMatches": true,
+      "package": "org.arcanoclisma.arenatatica",
+      "versionCode": 2,
+      "architecture": "arm64-v8a",
+      "bytes": 212645978,
+      "sha256": "7eee7738d28534d3ad5c43b62b9b44815a4e77b0ff3faded7651fe0e7bf205cb",
+      "internetPermission": true,
+      "signatureVerified": true,
+      "certificateSha256": "eab099f58dcbbf1a63d863228ecefe22ace342749f895d5f646f477dc5f27425",
+      "certificateMatchesPrevious": true,
+      "lintDisabled": false,
+      "remoteBuildId": 2125802,
+      "remoteDownloadSha256Matches": true
+    }
+  },
+  "destination": "https://eiediboy.itch.io/bdx-master",
+  "publishedVersion": "2026.10.14-1.1.0",
+  "remote": {
+    "channels": [
+      {
+        "head": {
+          "createdAt": "2026-10-14T12:50:50Z",
+          "id": 2125802,
+          "parentBuildId": 2116860,
+          "state": "completed",
+          "updatedAt": "2026-10-14T12:52:47Z",
+          "userVersion": "2026.10.14-1.1.0",
+          "version": 2
+        },
+        "name": "android",
+        "tags": "",
+        "uploadId": 19726866
+      },
+      {
+        "head": {
+          "createdAt": "2026-10-14T12:50:34Z",
+          "id": 2125800,
+          "parentBuildId": 2116893,
+          "state": "completed",
+          "updatedAt": "2026-10-14T12:51:48Z",
+          "userVersion": "2026.10.14-1.1.0",
+          "version": 2
+        },
+        "name": "windows",
+        "tags": "",
+        "uploadId": 19726979
+      }
+    ],
+    "target": "eiediboy/bdx-master"
+  },
+  "remoteVerification": {
+    "completedAt": "2026-10-14T13:01:12.4398855Z",
+    "version": "2026.10.14-1.1.0",
+    "windowsBuildId": 2125800,
+    "windowsFiles": 248,
+    "windowsFilesMatch": true,
+    "androidBuildId": 2125802,
+    "androidSha256": "7eee7738d28534d3ad5c43b62b9b44815a4e77b0ff3faded7651fe0e7bf205cb",
+    "androidFileMatches": true,
+    "sourceCommit": "7b13322e21f5d4068099b503af0f80385d72af83"
+  },
+  "networkContract": {
+    "passed": 10,
+    "repeatedOn": "2026-10-14"
+  },
+  "roomsAndTournament": {
+    "passed": true,
+    "results": [
+      {
+        "players": 2,
+        "mode": "room",
+        "maxMessageBytes": 21155,
+        "passed": true,
+        "result": "room:2;invisible:pass;reconnect:pass;restart:pass"
+      },
+      {
+        "players": 3,
+        "mode": "room",
+        "maxMessageBytes": 34415,
+        "passed": true,
+        "result": "room:3;invisible:pass;reconnect:pass;restart:pass"
+      },
+      {
+        "players": 6,
+        "mode": "room",
+        "maxMessageBytes": 44435,
+        "passed": true,
+        "result": "room:6;invisible:pass;reconnect:pass;restart:pass"
+      },
+      {
+        "players": 2,
+        "mode": "cup",
+        "maxMessageBytes": 24133,
+        "passed": true,
+        "result": "cup:2;matches:1;champion:1"
+      },
+      {
+        "players": 3,
+        "mode": "cup",
+        "maxMessageBytes": 24133,
+        "passed": true,
+        "result": "cup:3;matches:2;champion:2"
+      },
+      {
+        "players": 6,
+        "mode": "cup",
+        "maxMessageBytes": 24133,
+        "passed": true,
+        "result": "cup:6;matches:5;champion:5"
+      }
+    ]
+  },
+  "relay": {
+    "transport": "Unity Relay DTLS",
+    "platform": "Windows",
+    "sameComputer": true,
+    "completedAt": "2026-10-14T04:20:07.528Z",
+    "passed": true,
+    "players": [
+      {
+        "role": "host",
+        "exit": 0,
+        "passed": true,
+        "evidence": "ARENA_SMOKE_PASS: Host: turno próprio, comando do cliente e volta do turno (rodada 2, ativo P1, convidado 9,10→9,9, status Turno encerrado.)"
+      },
+      {
+        "role": "client",
+        "exit": 0,
+        "passed": true,
+        "evidence": "ARENA_SMOKE_PASS: Cliente: comando autoritativo e estado filtrado"
+      }
+    ]
+  },
+  "interface": {
+    "sourceCommit": "7b13322e21f5d4068099b503af0f80385d72af83",
+    "captures": "019-capturas",
+    "images": 6,
+    "allNonBlank": true,
+    "fullBoardVisibleInPlay": true,
+    "resolutions": [
+      "1280x720",
+      "960x540"
+    ],
+    "method": "player com --arena-qa-render, troca960→1280 para disponibilizar backbuffer",
+    "review": "DeepSeek OpenRouter, consolidado pelo Codex",
+    "controlsBelowViewport": "ArenaMenu ScrollRect/ContentSizeFitter/RectMask2D confirmado por código",
+    "inspect": "painel HUD com botão fechar; sobrepõe parte do tabuleiro quando aberto",
+    "emptyHudBox": "Registro de eventos, vazio quando não há linhas",
+    "physicalTouchTested": false,
+    "pendingPolish": [
+      "Personagens quebra palavra no menu",
+      "Texto960 pequeno",
+      "Contraste de títulos secundários",
+      "Mensagens flutuantes podem sobrepor sprites",
+      "Skills quebram linha sem recuo"
+    ]
+  },
+  "webUpdated": false,
+  "physicalAndroidTested": false,
+  "physicalComputerPhoneMatchTested": false,
+  "limitations": [
+    "Espectadores recebem apenas resumo",
+    "Desconexão não causa derrota automática",
+    "Torneio da ferramenta usa vencedores definidos",
+    "Relay testado em duas instâncias Windows no mesmo PC",
+    "Instalação, abertura, toque e desempenho em Android físico pendentes",
+    "Arte Blender permanece pausada",
+    "Metadados de três mapas e define de analytics são alterações prévias preservadas; árvore de entrada efetiva identificada por hash"
+  ]
+}
