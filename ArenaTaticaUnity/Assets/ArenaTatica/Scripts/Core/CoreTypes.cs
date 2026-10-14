@@ -94,6 +94,7 @@ namespace ArenaTatica.Core
         public FormDef[] forms;
         // Passivas do editor: valem enquanto o dono está vivo (ver PassiveDef).
         public PassiveDef[] passives=new PassiveDef[0];
+        public FighterDef Clone() => (FighterDef)MemberwiseClone();
     }
     // Passiva genérica (editor de fichas): muda um atributo de quem ela pega. who: Si, Aliados (sem ele), AliadosESi, Inimigos
     // (neutros contam), Todos (menos ele). range: até N casas do dono; 0 = o mapa todo. amount pode ser negativo (ex.: −1 armadura nos inimigos).
@@ -120,6 +121,8 @@ namespace ArenaTatica.Core
     [Serializable] public class GameEdits { public List<FighterDef> fighters=new List<FighterDef>(); }
     [Serializable] public class Fighter
     {
+        public NumericRoll roll;
+        public bool deathProcessed;
         public int id, team, hp, pa, pm, summoner, bonusPa, bonusPm, bonusHp, armor, bonusRange;
         public string def;
         public Cell cell;
@@ -147,12 +150,22 @@ namespace ArenaTatica.Core
     }
     // Jogador (assento 1..6): controla lutadores, tem moedas e loja próprias. Time: divide Galeões e vitória (0 = time próprio).
     [Serializable] public class PlayerSetup { public string[] fighters={"ciantia"}; public int team; }
+    // Resultado compacto do sorteio do Host; nunca altera as fichas globais ou o Editor.
+    [Serializable] public class SkillRoll { public string id; public int damage, range; }
+    [Serializable] public class NumericRoll
+    {
+        public bool stats, skills;
+        public int hp, pa, pm, initiative;
+        public SkillRoll[] powers=new SkillRoll[0];
+    }
     [Serializable] public class MatchSetup
     {
         public uint seed=1;
         public VictoryMode mode=VictoryMode.Galeoes;
         public int galeoes=12, target;
         public bool flatMap;
+        public bool randomSkills, randomStats, randomBots, randomPlayers;
+        public int[] botSeats=new int[0];
         // Cenário (MapGen.Themes); -1 = sorteado pela seed, igual em todos os aparelhos.
         public int theme=-1;
         // Vazio = duelo com team1 e team2.

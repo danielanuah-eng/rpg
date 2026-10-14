@@ -53,8 +53,13 @@ namespace ArenaTatica
             ["asamyh"]=1.5f, ["gato-laranja"]=.55f, ["gato-branco"]=.55f, ["gato-malhado"]=.55f, ["gato-manchado"]=.55f, ["colosso"]=2.4f, ["cheiro-pneu"]=2.1f,
             ["rei-bobett"]=1.5f, ["principe-kellen"]=1f, ["vespa-cinzenta"]=.8f, ["viuva-da-agulha"]=1.55f, ["guardiao-de-musgo"]=1.8f, ["domador-de-correntes"]=1.65f,
             ["ogro-de-pedra"]=2f, ["baltazar"]=1.8f, ["totem-de-cura"]=.9f, ["papa-moedas"]=.6f, ["brutamontes-errante"]=2.5f };
-        // Pasta de sprites: a da forma atual (Berserk) ou a do lutador.
-        static string SpriteFolder(Fighter f) => Content.Form(f)?.sprites??Content.Def(f).sprites;
+        // Clone/ilusão (Fighter.disguise, preenchido pelo núcleo): o modelo, o sprite e o nome saem da identidade
+        // de quem conjurou, nunca da etiqueta da ilusão. Sem disfarce, é o próprio lutador.
+        static string ShownId(Fighter f) => f!=null&&!string.IsNullOrEmpty(f.disguise)&&Content.Fighters.ContainsKey(f.disguise)?f.disguise:f?.def;
+        public static FighterDef Shown(Fighter f) => f==null?null:ShownId(f)==f.def?Content.Def(f):Content.Fighters.TryGetValue(ShownId(f),out var d)?d:Content.Def(f);
+        static bool Veiled(Fighter f) => f!=null&&ShownId(f)!=f.def;
+        // Pasta de sprites: a da forma atual (Berserk) ou a da identidade mostrada.
+        static string SpriteFolder(Fighter f) => Content.Form(f)?.sprites??Shown(f).sprites;
         readonly Dictionary<Transform,SpriteRig> rigs=new Dictionary<Transform,SpriteRig>();
         Material spriteMaterial;
         readonly List<GameObject> transient=new List<GameObject>();
@@ -88,9 +93,10 @@ namespace ArenaTatica
         Vector3 CameraHome => (SideDirection(Yaw)*Mathf.Cos(CameraPitch*Mathf.Deg2Rad)+Vector3.up*Mathf.Sin(CameraPitch*Mathf.Deg2Rad))*CameraDistance;
         // Posição de repouso: CameraHome deslocada para o tabuleiro ficar no centro da parte livre da tela (FitCamera).
         Vector3 homeShift; Vector3 Home => CameraHome+homeShift;
-        float fitSize=1,pinchDistance; bool pressing,pressOnBoard,dragged,pinching,touchPress; Vector2 pressStart,lastDrag,pinchCenter;
-        // Girar a vista sem teclado: botão direito arrastado, segurar parado ~0,45 s e arrastar para o lado, ou girar dois dedos.
-        bool rotating,rotateButton; float rotateAcc,pressTime,pinchAngle,twist;
+        float fitSize=1,pinchDistance,pinchStart,pinchScale=1; bool pressing,pressOnBoard,pressOnUi,pinched,dragged,pinching,touchPress; int pressFingers=1; Vector2 pressStart,lastDrag,pinchCenter;
+        // Girar a vista sem teclado: botão direito arrastado ou segurar parado ~0,45 s e arrastar para o lado.
+        // Dois dedos dão SÓ zoom (ArenaTouchGesture): sem giro e sem deslocar o tabuleiro.
+        bool rotating,rotateButton,pinchZoomed; float rotateAcc,pressTime;
         Material silhouetteMaterial;
         public static Color Gold=new Color(.93f,.72f,.35f), Blue=new Color(.3f,.73f,.95f), Violet=new Color(.64f,.5f,.98f), Red=new Color(.9f,.32f,.28f), Green=new Color(.45f,.85f,.5f);
         // Cor de cada jogador (P1..P6); invocações puxam para o violeta.
@@ -489,8 +495,10 @@ namespace ArenaTatica
         Transform CreateUnit(Fighter f)
         {
             var root=new GameObject("Unidade_"+f.id).transform; root.SetParent(unitRoot);
-            float height=Heights.TryGetValue(f.def,out float h)?h:.75f;
-            string model=f.def=="ciantia"?"CiantiaChibi3D":f.def=="dragao-espectral"?"DragaoTransplanar3D":null;
+            // Identidade mostrada: o clone ilusório usa o modelo/altura/figura do disfarce (quem conjurou).
+            string shown=ShownId(f);
+            float height=Heights.TryGetValue(shown,out float h)?h:.75f;
+            string model=shown=="ciantia"?"CiantiaChibi3D":shown=="dragao-espectral"?"DragaoTransplanar3D":null;
             var prefab=model==null?null:Resources.Load<GameObject>("Models/"+model);
             string folder=SpriteFolder(f);
             var rig=folder==null?null:LoadRig(folder);
@@ -502,7 +510,7 @@ namespace ArenaTatica
                 rig.pose=Content.Form(f)?.pose; rigs[visual]=rig;
                 if(silhouetteMaterial) { rig.ghost=new GameObject("Silhueta",typeof(SpriteRenderer)).GetComponent<SpriteRenderer>(); rig.ghost.sharedMaterial=silhouetteMaterial; rig.ghost.color=new Color(TeamColor(f.team).r,TeamColor(f.team).g,TeamColor(f.team).b,.75f); rig.ghost.transform.SetParent(visual,false); }
             }
-            else if(!prefab&&Game.Hud?.ShopIcon(f.def) is Sprite icon) {
+            else if(!prefab&&Game.Hud?.ShopIcon(shown) is Sprite icon) {
                 // Invocação sem sprites próprios (lobo): a figura da loja, sempre de frente.
                 var renderer=new GameObject("Sprite",typeof(SpriteRenderer)).GetComponent<SpriteRenderer>(); renderer.sprite=icon; if(spriteMaterial) renderer.sharedMaterial=spriteMaterial;
                 visual=renderer.transform; visual.SetParent(root,false); sprite=true;
@@ -524,9 +532,11 @@ namespace ArenaTatica
             }
             // Sprite: encara a câmera de frente (inclinado com ela: não achata nem atravessa blocos atrás); a direção do lutador escolhe o quadro.
             visual.localRotation=sprite?BoardCamera.transform.rotation:Quaternion.Euler(0,14.3f,0);
-            if(Content.Fighters[f.def].flying) visual.localPosition+=Vector3.up*.35f;
+            if(Shown(f).flying) visual.localPosition+=Vector3.up*.35f;
             foreach(var t in visual.GetComponentsInChildren<Transform>()) if(t.name.StartsWith("Wing")||t.name.StartsWith("Asa")) { wings.Add(t); wingRest[t]=t.localRotation; }
-            var color=TeamColor(f.team); if(f.summoner!=0) color=Color.Lerp(color,Violet,.45f);
+            // Indicador do pé: cor exata da facção. O clone ilusório não se tinge de violeta (isso o denunciaria);
+            // só as demais invocações continuam puxando para o violeta.
+            var color=TeamColor(f.team); if(f.summoner!=0&&!Veiled(f)) color=Color.Lerp(color,Violet,.45f);
             if(rigs.TryGetValue(visual,out var made)&&made.ghost) made.ghost.color=new Color(color.r,color.g,color.b,.62f);
             Cube("Marcador",new Vector3(0,.018f,0),new Vector3(.67f,.028f,.67f),Material(color),root);
             root.gameObject.layer=8;
@@ -535,7 +545,7 @@ namespace ArenaTatica
             collider.height=height; collider.radius=.38f; collider.center=Vector3.up*height*.5f; collider.isTrigger=true;
             return root;
         }
-        string Name(MatchState s,int id) { var f=s.F(id); return f==null?"?":Content.Fighters[f.def].name+(f.team==MatchState.Neutral?" (neutro)":" (P"+f.team+")"); }
+        string Name(MatchState s,int id) { var f=s.F(id); return f==null?"?":Shown(f).name+(f.team==MatchState.Neutral?" (neutro)":" (P"+f.team+")"); }
         // Nome do time: em todos contra todos é o próprio jogador.
         public static string TeamName(MatchState s,int team) => s.TeamPlay?"Time "+team:"P"+team;
         static string Dice(Face[] dice) => dice==null?"":string.Join(" ",dice.Select(d=>d==Face.CoringaEsquivaTrava?"Coringa(E/T)":d.ToString()));
@@ -591,7 +601,16 @@ namespace ArenaTatica
                         else if(e.value>0||(dealt?.damage??1)>0) { Hit(target,actor.position,e.value,Shots.TryGetValue(look??"",out var hue)?hue.color:C(1,.85f,.6f)); Float(target.position,"−"+e.value,Gold); Turn(target,actor.position-target.position); PlayClip(target,"hit"); }
                         if(swing>0) yield return Wait(swing*.4f); else if(main) yield return Pulse(actor);
                     }
-                    Game.Hud?.Log(e.value<0?$"{Name(s,e.actor)} errou {Name(s,e.target)} [{Dice(e.dice)}]":$"{Name(s,e.actor)} → {Name(s,e.target)}: {e.value} de dano{(e.dice!=null?$" [{Dice(e.dice)}]":"")}");
+                    else if(actor&&e.target==0&&Board.Contains(s,e.cell)) {
+                        var ground=Position(s,e.cell); var miss=Content.AnySkill(e.info);
+                        if(e.dice!=null) { Game.Hud?.RollDice(e.dice,new[]{"Ataque","Defesa"}); yield return Wait(ArenaHud.DiceLand); }
+                        Turn(actor,ground-actor.position); float cast=PlayClip(actor,miss?.anim??"attack");
+                        if(cast==0) cast=PlayClip(actor,"attack"); if(cast>0) yield return Wait(cast*.5f);
+                        if(Vector3.Distance(Flat(actor.position),Flat(ground))>1.5f) yield return Shot(Content.BaseSkill(e.info),actor.position,ground,miss?.area??0);
+                        else { PhaseFx(Content.BaseSkill(e.info)+"/impacto",ground+Vector3.up*.3f); Flash(ground+Vector3.up*.3f,Blue); }
+                        Sound("attack"); Float(ground,"Sem alvo",Blue); if(cast>0) yield return Wait(cast*.4f);
+                    }
+                    Game.Hud?.Log(e.target==0?$"{Name(s,e.actor)}: {Content.AnySkill(e.info)?.name} no chão":e.value<0?$"{Name(s,e.actor)} errou {Name(s,e.target)} [{Dice(e.dice)}]":$"{Name(s,e.actor)} → {Name(s,e.target)}: {e.value} de dano{(e.dice!=null?$" [{Dice(e.dice)}]":"")}");
                     break;
                 case "teleporte":
                 case "salto":
@@ -672,6 +691,7 @@ namespace ArenaTatica
                         else Flash(target.position+Vector3.up,Green);
                         Float(target.position,"+"+e.value,Green);
                     }
+                    else if(Board.Contains(s,e.cell)) { if(actor) PlayClip(actor,"heal"); PhaseFx(Content.BaseSkill(e.info)+"/impacto",Position(s,e.cell)+Vector3.up*.3f); Flash(Position(s,e.cell)+Vector3.up*.3f,Green); }
                     yield return Wait(.4f); break;
                 case "armadilha":
                     if(target) { Hit(target,target.position+Vector3.back,e.value,Red); Float(target.position,"−"+e.value,Red); PlayClip(target,"hit"); }
@@ -843,9 +863,10 @@ namespace ArenaTatica
         public void RotateView(int delta)
         {
             yawGoal=Mathf.Round(yawGoal/90f+delta)*90f;
-            Game.Notify("Girando a vista (Q/E segurados, arrastar com o botão direito ou dois dedos giram aos poucos).");
+            Game.Notify("Girando a vista (Q/E segurados ou arrastar com o botão direito).");
         }
-        // Giro livre em graus (arraste, dois dedos, Q/E segurados, botões ◄ ►).
+        // Giro livre em graus (arraste com o botão direito, segurar e arrastar, Q/E segurados, botões ◄ ►).
+        // Dois dedos não giram: a pinça é só zoom (020-ux).
         public void RotateBy(float degrees) { yawGoal+=degrees; }
         // Endireita no lado reto mais próximo.
         public void StraightenView() { yawGoal=Mathf.Round(yawGoal/90f)*90f; }
@@ -1358,12 +1379,12 @@ namespace ArenaTatica
                     bar=bars[kv.Key]=(root,fill,label);
                 }
                 bar.root.gameObject.SetActive(shown); if(!shown) continue;
-                float height=(Heights.TryGetValue(f.def,out float hh)?hh:.75f)+(Content.Def(f).flying?.35f:0)+.18f;
+                float height=(Heights.TryGetValue(ShownId(f),out float hh)?hh:.75f)+(Shown(f).flying?.35f:0)+.18f;
                 var p=BoardCamera.WorldToScreenPoint(unit.position+Vector3.up*height);
                 if(p.z<0) { bar.root.gameObject.SetActive(false); continue; }
                 bar.root.anchoredPosition=new Vector2(p.x,p.y)/k;
                 bar.fill.anchorMax=new Vector2(Mathf.Clamp01(f.hp/(float)Mathf.Max(1,Content.MaxHp(f))),1);
-                if(bar.label) bar.label.text=$"{Content.Def(f).name}  {f.hp}/{Content.MaxHp(f)}";
+                if(bar.label) bar.label.text=$"{Shown(f).name}  {f.hp}/{Content.MaxHp(f)}";
             }
         }
         void Update()
@@ -1375,7 +1396,7 @@ namespace ArenaTatica
             FitSky();
             AdvanceRigs(); SyncGhosts(); UpdateBars(s); UpdateCompanions(s); UpdateStates(s);
             for(int i=wings.Count-1;i>=0;i--) { var wing=wings[i]; if(!wing) { wings.RemoveAt(i); continue; } wing.localRotation=wingRest[wing]*Quaternion.Euler(0,0,Mathf.Sin(Time.time*1.8f)*3.15f); }
-            string key=s.revision+"|"+Game.Mode+"|"+Game.CanAct;
+            string key=s.revision+"|"+Game.Mode+"|"+Game.CanAct+"|"+Game.Hud?.HasPendingConfirmation;
             if(key!=shownKey) UpdateHighlights(key);
             Vector2 point=default; bool tap=false,hasPointer=false,down=false;
             var touches=Touchscreen.current?.touches.Where(t=>t.press.isPressed).ToArray();
@@ -1391,22 +1412,26 @@ namespace ArenaTatica
             bool overBoard=hasPointer&&BoardCamera.pixelRect.Contains(point)&&!OverUi(point);
             if(down) {
                 if(!pressing) {
-                    pressing=true; pressOnBoard=overBoard; dragged=pinching; pressStart=lastDrag=point; pressTime=Time.unscaledTime; rotating=false; rotateAcc=0;
+                    // Toque que nasce sobre a interface não controla a câmera nem o tabuleiro (pressOnUi).
+                    pressOnUi=(pinching&&pressOnUi)||(hasPointer&&OverUi(point));
+                    pressing=true; pressOnBoard=overBoard&&!pressOnUi; dragged=pinching; pinched=pinching;
+                    pressStart=lastDrag=point; pressTime=Time.unscaledTime; rotating=false; rotateAcc=0;
                     touchPress=touches!=null&&touches.Length>0;
+                    pressFingers=touchPress?touches.Length:1; // começar com dois dedos nunca acaba em clique
                     rotateButton=mouse!=null&&mouse.rightButton.isPressed&&(touches==null||touches.Length==0);
                 }
-                else if(!pinching) {
+                else if(!pinching&&!pinched) {
                     bool moved=(point-pressStart).magnitude>DragThreshold;
                     // Botão direito arrastado gira; dedo/botão parado ~0,45 s também passa a girar (arrastar para o lado).
-                    if(pressOnBoard&&!rotating&&!dragged&&(rotateButton&&moved||!rotateButton&&!moved&&Time.unscaledTime-pressTime>.45f)) {
-                        rotating=dragged=true; if(!rotateButton) Game.Notify("Arraste para o lado para girar a vista.");
+                    if(pressOnBoard&&!rotating&&!dragged&&(rotateButton&&moved||!rotateButton&&!moved&&Time.unscaledTime-pressTime>ArenaTouchGesture.LongPressSeconds)) {
+                        rotating=dragged=true; Game.Hud?.ClearConfirmation(); if(!rotateButton) Game.Notify("Arraste para o lado para girar a vista.");
                     }
                     if(rotating) {
                         rotateAcc+=point.x-lastDrag.x;
                         // Giro contínuo: ~1 volta ao arrastar a largura da tela.
                         RotateBy((point.x-lastDrag.x)*360f/Mathf.Max(400,Screen.width)); rotateAcc=0;
                     } else {
-                        if(moved) dragged=true;
+                        if(moved&&!dragged) { dragged=true; if(pressOnBoard) Game.Hud?.ClearConfirmation(); } // arrastou: a mira armada cai
                         if(dragged&&pressOnBoard) { BoardCamera.transform.position+=World(lastDrag)-World(point); ClampCamera(); }
                     }
                     lastDrag=point;
@@ -1414,14 +1439,17 @@ namespace ArenaTatica
             } else if(pressing) {
                 pressing=false;
                 // Só o toque/botão esquerdo age; o direito e o do meio servem apenas para arrastar.
-                tap=pressOnBoard&&!dragged&&(touchPress||mouse==null||!mouse.rightButton.wasReleasedThisFrame&&!mouse.middleButton.wasReleasedThisFrame);
+                // E só age o toque que começou com um dedo e nunca virou pinça nem gesto de câmera (1->2->1 não é clique).
+                tap=pressOnBoard&&ArenaTouchGesture.TapAfterGesture(pressFingers,pinched,dragged||rotating,pressOnUi)
+                    &&(touchPress||mouse==null||!mouse.rightButton.wasReleasedThisFrame&&!mouse.middleButton.wasReleasedThisFrame);
+                pressOnUi=false;
             }
             float wheel=mouse!=null?mouse.scroll.ReadValue().y:0;
             if(overBoard&&Mathf.Abs(wheel)>.01f) ZoomAt(point,wheel>0?.87f:1/.87f);
             if(overBoard||pressing&&pressOnBoard) {
                 bool valid=Pick(point,out var c,out _); hover.SetActive(valid&&!dragged); if(valid) hover.transform.position=Position(s,c)+Vector3.up*.03f;
                 if(valid&&tap&&Game.EditingMap) Game.MapEditor.Tap(c);
-                else if(valid&&tap) {
+                else if(valid&&tap&&Game.Hud?.HasPendingConfirmation!=true) {
                     // Mover numa casa com lutador visível: abre a ficha dele (skills e o que fazem) em vez de tentar andar.
                     var who=Board.At(s,c); bool seen=who!=null&&(!who.hidden||s.Ally(who.team,Game.LocalTeam));
                     if(Game.Mode==""&&seen) Game.Hud?.Inspect(who);
@@ -1430,13 +1458,18 @@ namespace ArenaTatica
             } else hover.SetActive(false);
             var selected=EventSystem.current?EventSystem.current.currentSelectedGameObject:null; // "?." não enxerga objeto Unity destruído
             bool typing=selected&&selected.GetComponent<UnityEngine.UI.InputField>()!=null;
-            if(!typing&&Game.Hud?.PickerOpen!=true&&Keyboard.current?.spaceKey.wasPressedThisFrame==true) Game.Submit("passar");
+            // Espaço passa o turno pelo mesmo caminho do botão: o HUD confirma em dois toques (Hud.ConfirmPass).
+            if(!typing&&Game.Hud?.PickerOpen!=true&&Keyboard.current?.spaceKey.wasPressedThisFrame==true) {
+                if(Game.Hud!=null) Game.Hud.ConfirmPass(); else Game.Submit("passar");
+            }
             if(!typing&&Keyboard.current?.escapeKey.wasPressedThisFrame==true) Game.Mode="";
             // Q/E segurados giram aos poucos; ao soltar, a vista fica onde parou.
             if(!typing&&Keyboard.current?.qKey.isPressed==true) RotateBy(-90*Time.unscaledDeltaTime);
             if(!typing&&Keyboard.current?.eKey.isPressed==true) RotateBy(90*Time.unscaledDeltaTime);
         }
-        float DragThreshold => Mathf.Max(8,Screen.dpi*.06f);
+        // Limiar de toque/arrasto (~10 px) escalado por DPI e escala da interface, separado do limiar da pinça.
+        float TouchScale => ArenaTouchGesture.Scale(Screen.dpi,ArenaHud.UiScale);
+        float DragThreshold => ArenaTouchGesture.Threshold(TouchScale);
         Vector3 World(Vector2 p) => BoardCamera.ScreenToWorldPoint(new Vector3(p.x,p.y,10));
         bool OverUi(Vector2 p)
         {
@@ -1450,18 +1483,24 @@ namespace ArenaTatica
             BoardCamera.orthographicSize=Mathf.Clamp(BoardCamera.orthographicSize*factor,fitSize*.3f,fitSize);
             BoardCamera.transform.position+=before-World(p); ClampCamera();
         }
+        // Dois dedos: SÓ zoom. Não gira a vista e não desloca o tabuleiro (o deslocamento aqui é só o que o
+        // ZoomAt faz para manter o meio da pinça parado na tela). Só vale se o gesto começou fora da interface.
         void Pinch(Vector2 a,Vector2 b)
         {
             var center=(a+b)*.5f; float distance=Mathf.Max(1,Vector2.Distance(a,b));
-            float angle=Mathf.Atan2(b.y-a.y,b.x-a.x)*Mathf.Rad2Deg;
-            if(!pinching) { pinching=dragged=true; pressOnBoard=BoardCamera.pixelRect.Contains(center)&&!OverUi(center); twist=0; }
-            else if(pressOnBoard) {
-                BoardCamera.transform.position+=World(pinchCenter)-World(center); ZoomAt(center,pinchDistance/distance);
-                // Dois dedos girando: a vista gira junto.
-                RotateBy(-Mathf.DeltaAngle(pinchAngle,angle)); twist=0;
+            if(!pinching) {
+                pressOnUi=pressOnUi||OverUi(a)||OverUi(b);
+                pinching=pinched=dragged=true; pinchZoomed=false; pinchStart=pinchDistance=distance; pinchScale=TouchScale;
+                pressOnBoard=!pressOnUi&&BoardCamera.pixelRect.Contains(center)&&!OverUi(center);
+                if(pressOnBoard) Game.Hud?.ClearConfirmation(); // começou a mexer na câmera: a mira armada cai
+                pinchCenter=lastDrag=center; return; // no primeiro quadro da pinça só se mede a distância entre os dedos
             }
-            pinchAngle=angle;
-            pinchCenter=lastDrag=center; pinchDistance=distance;
+            // Abaixo do limiar (8 px escalados ou 2% da distância inicial) a pinça ainda não move a câmera.
+            if(!pinchZoomed&&ArenaTouchGesture.Zoom(pinchStart,distance,pinchScale)) pinchZoomed=true;
+            if(pressOnBoard&&pinchZoomed) {
+                ZoomAt(pinchCenter,pinchDistance/distance); pinchDistance=distance;
+            }
+            lastDrag=center;
         }
         // O tabuleiro nunca sai de vista; afastado de todo, a câmera volta ao centro.
         void ClampCamera() { var cam=BoardCamera.transform; cam.position=Home+Vector3.ClampMagnitude(cam.position-Home,(fitSize-BoardCamera.orthographicSize)*1.5f); }
@@ -1474,7 +1513,7 @@ namespace ArenaTatica
             void Mark(Cell c,Material m) => highlights.Add(Cube("Alcance",Position(s,c)+Vector3.up*.012f,new Vector3(.8f,.012f,.8f),m,world));
             // Editor de mapas: casas de início (sempre livres) e a peça escolhida para mover.
             if(Game.EditingMap) { foreach(var c in Game.MapEditor.SpawnCells) Mark(c,moveMaterial); if(Game.MapEditor.Picked is Cell p) Mark(p,targetMaterial); return; }
-            if(!Game.CanAct||f==null) return;
+            if(!Game.CanAct||f==null||Game.Hud?.HasPendingConfirmation==true) return;
             if(Game.Mode=="") {
                 var costs=Board.Costs(s,f);
                 for(int i=0;i<costs.Length;i++) if(costs[i]>0&&costs[i]<=f.pm) Mark(new Cell(i%s.width,i/s.width),moveMaterial);

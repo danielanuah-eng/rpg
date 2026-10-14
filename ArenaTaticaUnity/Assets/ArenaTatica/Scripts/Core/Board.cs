@@ -16,6 +16,11 @@ namespace ArenaTatica.Core
         // Casa encostada (lado, sem diagonal) numa casa da loja: só dali se compra.
         public static bool NextToShop(MatchState s,Cell c) { foreach(var d in Dirs) if(Contains(s,c+d)&&s.At(c+d).terrain==Terrain.Loja) return true; return false; }
         public static Fighter At(MatchState s,Cell c) => s.fighters.Find(f=>f.Alive&&f.cell==c);
+        // Planejamento usa apenas ocupantes conhecidos por quem está andando.
+        public static Fighter KnownAt(MatchState s,Cell c,Fighter viewer)
+        {
+            var f=At(s,c); return f!=null&&f.hidden&&!s.Ally(f.team,viewer.team)?null:f;
+        }
         public static bool Walkable(MatchState s,Cell c,bool flying) { var t=s.At(c).terrain; return t==Terrain.Livre||(flying&&t==Terrain.Arbusto); }
         // Gancho de escalada (climber): subir 2 custa 1 e dá para subir 3 (2 PM). Casa congelada: +1 PM (voador não sente).
         public static int StepCost(MatchState s,Cell a,Cell b,bool flying,bool climber=false)
@@ -42,7 +47,7 @@ namespace ArenaTatica.Core
                 foreach(var d in Dirs)
                 {
                     var nb=c+d; int cost=StepCost(s,c,nb,flying,climber);
-                    if(cost<0||(!ignoreFighters&&At(s,nb)!=null)) continue;
+                    if(cost<0||(!ignoreFighters&&KnownAt(s,nb,f)!=null)) continue;
                     int i=Index(s,nb); if(dist[best]+cost<dist[i]) dist[i]=dist[best]+cost;
                 }
             }

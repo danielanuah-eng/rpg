@@ -96,6 +96,25 @@ namespace ArenaTatica.Tests
                 Assert.IsTrue(game.Match.Apply(new Command{kind="passar",fighter=p3.id,revision=game.State.revision},game.MatchTeam(3),out _,out _),"P3 controla seus lutadores no time aliado de P1");
             } finally { ArenaGame.ShopItems.Clear(); foreach(var id in saved) ArenaGame.ShopItems.Add(id); }
         }
+        [Test] public void CloseLocalMatchBlocksFurtherActionsAndNewMatchCanStart()
+        {
+            game.NewLocal(); var old=game.State; game.CloseMatch();
+            Assert.IsTrue(game.InMenu); Assert.IsFalse(game.CanAct); Assert.AreEqual("Local",game.Network.Role);
+            Assert.AreSame(old,game.State,"preserva só o fundo visual sem inventar vencedor");
+            game.NewLocal(); Assert.IsFalse(game.InMenu); Assert.AreNotSame(old,game.State);
+        }
+        [Test] public void HostCloseMatchReturnsEveryoneToExistingLobby()
+        {
+            Host(3); game.StartRoom(); Assert.IsFalse(game.Lobby); int filled=game.Filled;
+            game.CloseMatch(); Assert.IsTrue(game.Lobby); Assert.AreEqual(filled,game.Filled); Assert.IsTrue(game.Network.IsHost);
+            game.StartRoom(); Assert.IsFalse(game.Lobby); Assert.IsFalse(game.InMenu);
+        }
+        [Test] public void HumanScopeRandomizerReachesNetworkMatch()
+        {
+            Host(3); game.SetRandomizer(true,true,false,true); game.StartRoom();
+            Assert.IsTrue(game.State.fighters.Where(f=>f.summoner==0).All(f=>f.roll!=null));
+            Assert.IsTrue(ArenaGame.ValidState(Match.ViewFor(game.State,2),2));
+        }
         [TestCase(2)] [TestCase(3)] [TestCase(6)]
         public void CompleteTournamentRespectsBansByeMappingAndChampion(int players)
         {

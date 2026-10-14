@@ -225,6 +225,14 @@ namespace ArenaTatica
         void MatchSettings(Transform c,string again,bool seats)
         {
             Transform row;
+            Section(c,"Aleatorizador");
+            row=Row(c,44);
+            Pick(Btn(row,"Skills",()=>{ Game.SetRandomizer(!Game.RandomSkills,Game.RandomStats,Game.RandomBots,Game.RandomPlayers); Show(again); },0,40),Game.RandomSkills);
+            Pick(Btn(row,"Atributos limitados",()=>{ Game.SetRandomizer(Game.RandomSkills,!Game.RandomStats,Game.RandomBots,Game.RandomPlayers); Show(again); },0,40),Game.RandomStats);
+            row=Row(c,44);
+            Pick(Btn(row,"Aplicar aos Bots",()=>{ Game.SetRandomizer(Game.RandomSkills,Game.RandomStats,!Game.RandomBots,Game.RandomPlayers); Show(again); },0,40),Game.RandomBots);
+            Pick(Btn(row,"Aplicar aos Jogadores",()=>{ Game.SetRandomizer(Game.RandomSkills,Game.RandomStats,Game.RandomBots,!Game.RandomPlayers); Show(again); },0,40),Game.RandomPlayers);
+            Para(c,"Ligue Bots e Jogadores para aplicar a todos. Vida 4–30 · PA 5–8 · PM 1–6 · Iniciativa 0–12 · Dano 1–8 · Alcance até 8. Bots disponíveis nas partidas locais.");
             if(seats) {
                 Section(c,"Jogadores");
                 row=Row(c,44);
@@ -679,6 +687,7 @@ namespace ArenaTatica
             Section(c,"Jogo");
             row=Row(c,48);
             Btn(row,"Voltar à partida",Close,0,44);
+            Btn(row,"Fechar a Partida",Game.CloseMatch,0,44);
             Btn(row,"Sair do jogo",Application.Quit,0,44).GetComponent<Image>().color=Hex(0x4a2030);
             Para(c,$"<color=#a7b4c2>Edições salvas em {Application.persistentDataPath}</color>");
         }

@@ -32,11 +32,11 @@ async function run(players,cup) {
   let maxMessageBytes=0, failure=null, concealed=null, reconnected=false, revealed=false, restarted=false, lobby=false, checkingReconnect=false;
   function connect(seat) {
     const ws=new WebSocket('ws://127.0.0.1:9080'); clients.push(ws);
-    const send=m=>ws.send(JSON.stringify({protocol:4,...m}));
+    const send=m=>ws.send(JSON.stringify({protocol:5,...m}));
     ws.addEventListener('open',()=>send({kind:'hello',token:'019-qa-'+seat,fighters:['ciantia'],pool:['ciantia','perry','ezequiela','damian','baltazar']}));
     ws.addEventListener('message',event=>{
       try {
-        maxMessageBytes=Math.max(maxMessageBytes,Buffer.byteLength(event.data)); const m=JSON.parse(event.data); assert.equal(m.protocol,4);
+        maxMessageBytes=Math.max(maxMessageBytes,Buffer.byteLength(event.data)); const m=JSON.parse(event.data); assert.equal(m.protocol,5);
         if(m.kind==='ping') send({kind:'pong',ping:m.ping});
         if(m.kind==='full') throw Error(m.text);
         if(m.kind==='draft') send({kind:'draft',text:m.text,fighters:m.text==='ban'?m.fighters.slice(0,2):m.fighters});

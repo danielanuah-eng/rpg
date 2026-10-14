@@ -24,6 +24,18 @@ namespace ArenaTatica
         public Sprite ShopIcon(string id) { if(string.IsNullOrEmpty(id)) return null; if(!iconCache.TryGetValue(id,out var sp)) iconCache[id]=sp=Resources.Load<Sprite>("Sprites/Loja/"+id); return sp; }
         readonly List<string> logLines=new List<string>();
         Button move,pass,host,room,join,resume,seats,format,theme,start,restart,openShop;
+        // Linha do tempo no topo (020-ux): retrato, nome curto, PV/PA/PM, estado e as marcas de turno ATUAL e PRÓXIMO.
+        RectTransform timeline,timelineContent; ScrollRect timelineScroll;
+        readonly List<RectTransform> timelineCards=new List<RectTransform>();
+        readonly List<Image> timelineFaces=new List<Image>();
+        readonly List<Text> timelineTexts=new List<Text>();
+        readonly Dictionary<string,Sprite> faceCache=new Dictionary<string,Sprite>();
+        string timelineKey; int timelineActive=-1;
+        // Confirmação em dois toques (020-ux): o HUD guarda o MatchState para zerar a mira mesmo se vier outro
+        // estado com a MESMA revisão (Fighter/atores iguais) — nenhuma mira sobrevive a uma troca de estado.
+        readonly ArenaActionConfirmation confirm=new ArenaActionConfirmation();
+        MatchState confirmState;
+        int actionInputFrame=-1;
         InputField address;
         Font font;
         int width,height;
@@ -55,10 +67,11 @@ namespace ArenaTatica
             fighters=LabelRow("",actionsPage,13,ink,112); labels.Add(fighters);
             labels.Add(LabelRow("AÇÕES",actionsPage,12,muted,18));
             actions=Grid("Acoes",actionsPage);
-            move=Button("Mover",actions,()=>Game.Mode="");
+            move=Button("Mover",actions,()=>{ confirm.Reset(); Game.Mode=""; });
             // 8 botões: Asamyh tem 5 skills e o Desejo do Kellen abre 6 opções.
             for(int i=0;i<8;i++) { int k=i; skillButtons.Add(Button("",actions,()=>ChooseSkill(k))); }
-            pass=Button("Passar  [Espaço]",actions,()=>Game.Submit("passar"));
+            // Passar (e o Espaço) usa o mesmo método: o primeiro toque destaca, o segundo passa o turno.
+            pass=Button("Passar  [Espaço]",actions,ConfirmPass);
             shopLabel=LabelRow("LOJA",actionsPage,12,muted,18); labels.Add(shopLabel);
             shopGrid=Grid("Loja",actionsPage);
             openShop=Button("Abrir loja",shopGrid,()=>shopWindow.gameObject.SetActive(!shopWindow.gameObject.activeSelf));
@@ -92,7 +105,9 @@ namespace ArenaTatica
             fullscreen=Button("Tela cheia",networkPanel,ToggleFullScreen,88); fullscreen.gameObject.SetActive(!Application.isMobilePlatform);
             Button("Girar",networkPanel,()=>Game.View.RotateView(1),56);
             Button("Menu",networkPanel,()=>Game.Menu?.Open(),64);
-            // Girar a vista: sempre à mão no canto do tabuleiro (também: botão direito arrastado, segurar e arrastar, dois dedos, Q/E).
+            Button("Fechar a Partida",networkPanel,Game.CloseMatch,120);
+            // Girar a vista: sempre à mão no canto do tabuleiro (também: botão direito arrastado, segurar e arrastar, Q/E).
+            // Dois dedos não giram: a pinça é só zoom (020-ux).
             viewPanel=Panel("Vista",root.transform);
             var viewRow=viewPanel.gameObject.AddComponent<HorizontalLayoutGroup>(); viewRow.spacing=6; viewRow.padding=new RectOffset(6,6,4,4); viewRow.childControlHeight=true; viewRow.childControlWidth=true; viewRow.childForceExpandWidth=false;
             // Giro aos poucos (30° deslizando) e "Reto" volta ao lado reto mais próximo.
@@ -111,6 +126,7 @@ namespace ArenaTatica
             BuildCopyWindow(root.transform);
             BuildInspect(root.transform);
             BuildPicker(root.transform);
+            BuildTimeline(root.transform);
             Layout();
             // Ao abrir o jogo, escolher os lutadores (execuções automáticas por linha de comando pulam).
             // Sem o menu (ArenaMenu), o seletor abre direto como antes.
@@ -144,6 +160,87 @@ namespace ArenaTatica
             Anchors(shopHelp.rectTransform,new Vector2(0,.36f),new Vector2(1,.44f),new Vector2(16,0),new Vector2(-16,0));
             shopWindow.gameObject.SetActive(false);
         }
+        // Linha do tempo no TOPO (020-ux): rolagem horizontal (ScrollRect + RectMask2D) com um cartão por lutador.
+        // Não cobre o tabuleiro: a faixa entra em BoardArea (BoardArea reserva TopBar+TimelineBar no alto da tela).
+        void BuildTimeline(Transform root)
+        {
+            timeline=Panel("LinhaDoTempo",root); timeline.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.82f);
+            var view=timeline.gameObject.AddComponent<ScrollRect>(); timelineScroll=view;
+            var viewport=new GameObject("Area",typeof(RectTransform),typeof(RectMask2D)).GetComponent<RectTransform>();
+            viewport.SetParent(timeline,false); viewport.GetComponent<RectMask2D>().padding=Vector4.zero;
+            Anchors(viewport,Vector2.zero,Vector2.one,new Vector2(4,3),new Vector2(-4,-3));
+            timelineContent=new GameObject("Cartoes",typeof(RectTransform),typeof(HorizontalLayoutGroup),typeof(ContentSizeFitter)).GetComponent<RectTransform>();
+            timelineContent.SetParent(viewport,false);
+            var row=timelineContent.GetComponent<HorizontalLayoutGroup>();
+            row.spacing=6; row.padding=new RectOffset(0,0,0,0); row.childControlWidth=row.childControlHeight=true;
+            row.childForceExpandWidth=false; row.childForceExpandHeight=false;
+            var fit=timelineContent.GetComponent<ContentSizeFitter>(); fit.horizontalFit=ContentSizeFitter.FitMode.PreferredSize;
+            timelineContent.anchorMin=new Vector2(0,0); timelineContent.anchorMax=new Vector2(0,1); timelineContent.pivot=new Vector2(0,.5f);
+            view.content=timelineContent; view.viewport=viewport;
+            view.horizontal=true; view.vertical=false; view.movementType=ScrollRect.MovementType.Clamped;
+            view.inertia=!Application.isMobilePlatform; view.scrollSensitivity=24; // arrastar a lista com um dedo; roda do mouse também rola
+            view.horizontalScrollbar=null; view.verticalScrollbar=null;
+        }
+        // Figura do lutador para o cartão/retrato: uma leitura por pasta de sprites.
+        Sprite Face(string art) { if(string.IsNullOrEmpty(art)) return null; if(!faceCache.TryGetValue(art,out var sp)) faceCache[art]=sp=Resources.Load<Sprite>("Sprites/"+art+"/south"); return sp; }
+        // Nome curto do cartão (o nome inteiro fica no alto e na lista de lutadores).
+        static string Short(string name) { if(string.IsNullOrEmpty(name)) return "?"; int i=name.IndexOf(' '); return i>0?name.Substring(0,i):name; }
+        // Cartões: ordem de iniciativa, PV/PA/PM, estado e as marcas de turno ATUAL e PRÓXIMO. A identidade mostrada
+        // é a do disfarce (clone ilusório aparece como o conjurador; nenhuma etiqueta de Ilusão em lugar nenhum).
+        void RefreshTimeline(MatchState s)
+        {
+            if(!timelineContent||s==null) return;
+            var list=s.timeline.Select(id=>s.F(id)).Where(x=>x!=null&&x.Alive).ToList();
+            int current=s.over?0:s.Active?.id??0;
+            int start=list.FindIndex(x=>x.id==current);
+            if(start>0) list=list.Skip(start).Concat(list.Take(start)).ToList();
+            string key=string.Join(",",list.Select(x=>x.id));
+            if(key!=timelineKey) {
+                timelineKey=key;
+                while(timelineCards.Count<list.Count) {
+                    var card=Panel("Lutador",timelineContent);
+                    var le=card.gameObject.AddComponent<LayoutElement>();
+                    le.preferredWidth=TimelineCard; le.minWidth=TimelineCard; le.flexibleWidth=0; le.preferredHeight=le.minHeight=TimelineBar-6;
+                    var face=new GameObject("Face",typeof(RectTransform),typeof(Image)).GetComponent<Image>(); face.transform.SetParent(card,false);
+                    face.preserveAspect=true; face.raycastTarget=false;
+                    float box=TimelineBar-14; Anchors(face.rectTransform,new Vector2(0,.5f),new Vector2(0,.5f),new Vector2(3,-box*.5f),new Vector2(3+box,box*.5f));
+                    var text=Text("",card,11,ink); text.alignment=TextAnchor.MiddleLeft; text.horizontalOverflow=HorizontalWrapMode.Wrap;
+                    Anchors(text.rectTransform,Vector2.zero,Vector2.one,new Vector2(box+4,1),new Vector2(-4,-1));
+                    timelineCards.Add(card); timelineFaces.Add(face); timelineTexts.Add(text);
+                }
+                for(int i=0;i<timelineCards.Count;i++) timelineCards[i].gameObject.SetActive(i<list.Count);
+            }
+            for(int i=0;i<list.Count;i++) {
+                var x=list[i]; var d=ArenaPresentation.Shown(x); var form=Content.Form(x);
+                var sp=Face(form?.sprites??d.sprites);
+                timelineFaces[i].sprite=sp; timelineFaces[i].enabled=sp; timelineFaces[i].color=Color.white;
+                bool on=x.id==current; bool next=current!=0&&i==1;
+                string mark=on?"AGORA":next?"PRÓXIMO":"";
+                string vital=x.prisoned>0?"preso":x.channel>0?"canalizando":x.hidden&&s.Ally(x.team,Game.LocalTeam)?"escondido":"";
+                timelineTexts[i].text=$"<b>{Short(d.name)}</b> {mark}\n{x.hp}/{Content.MaxHp(x)} PV · {x.pa} PA · {x.pm} PM{(vital==""?"":" · "+vital)}";
+                timelineCards[i].GetComponent<Image>().color=on?chosen:next?new Color(.13f,.29f,.38f):Color.Lerp(panel,ArenaPresentation.TeamColor(x.team),.15f);
+            }
+            if(current!=timelineActive) { timelineActive=current; if(timelineScroll) timelineScroll.horizontalNormalizedPosition=0; }
+        }
+        // Confirmação em dois toques (020-ux): a mira armada cai quando o contexto muda — perder CanAct, abrir
+        // menu/picker/loja (InMenu do ArenaGame zera CanAct) ou outro MatchState, mesmo com a mesma revisão.
+        void SyncConfirmation()
+        {
+            var s=Game.State;
+            if(!ReferenceEquals(confirmState,s)) { confirmState=s; confirm.Reset(); }
+            if(!confirm.Armed) return;
+            if(!Game.CanAct||PickerOpen||InspectOpen||(copyWindow&&copyWindow.gameObject.activeSelf)||(shopWindow&&shopWindow.gameObject.activeSelf)||confirm.Actor!=(Game.Active?.id??0)||s==null||confirm.Revision!=s.revision) confirm.Reset();
+        }
+        // A interface só pergunta ao HUD (o gesto de câmera da apresentação chama ClearConfirmation).
+        public bool Confirming(string key) => confirm.Is(key);
+        public bool HasPendingConfirmation => confirm.Armed;
+        public void ClearConfirmation() { confirm.Reset(); Game.Mode=""; }
+        bool PressAction(string key,Fighter f)
+        {
+            // Submit do botão e atalho de teclado no mesmo quadro contam como um único toque.
+            if(actionInputFrame==Time.frameCount) return false;
+            actionInputFrame=Time.frameCount; return confirm.Press(key,f.id,Game.State.revision);
+        }
         // Ficha de um lutador do tabuleiro (autor, 13/10): tocar nele com Mover mostra atributos, estado e o que cada skill faz.
         RectTransform inspect; Text inspectTitle,inspectBody; Image inspectArt; int inspectId;
         void BuildInspect(Transform root)
@@ -169,9 +266,11 @@ namespace ArenaTatica
         {
             var s=Game.State; var f=s?.F(inspectId);
             if(f==null||!f.Alive||(f.hidden&&!s.Ally(f.team,Game.LocalTeam))) { inspect.gameObject.SetActive(false); return; }
-            var d=Content.Def(f); var form=Content.Form(f); string mu=ArenaTema.Html(muted);
+            // Disfarce: o clone ilusório mostra a identidade do conjurador (nome, retrato, atributos e habilidades).
+            bool veiled=!string.IsNullOrEmpty(f.disguise);
+            var d=veiled?ArenaPresentation.Shown(f):Content.Def(f); var form=Content.Form(f); string mu=ArenaTema.Html(muted);
             string team=MatchState.Player(f.team)?$"<color=#{ColorUtility.ToHtmlStringRGB(ArenaPresentation.TeamColor(f.team))}>P{f.team}</color>":"Neutro";
-            var art=form?.sprites??d.sprites; var sp=string.IsNullOrEmpty(art)?null:Resources.Load<Sprite>("Sprites/"+art+"/south");
+            var art=form?.sprites??d.sprites; var sp=string.IsNullOrEmpty(art)?null:Face(art);
             inspectArt.sprite=sp; inspectArt.color=sp?Color.white:Color.clear;
             inspectTitle.text=$"{d.name}{(d.legendary?" ★":"")}  {team}\n<size=13><color=#{ArenaTema.Html(ArenaTema.Hp)}>{f.hp}/{Content.MaxHp(f)} PV</color> · <color=#{ArenaTema.Html(ArenaTema.Pm)}>{f.pa} PA · {f.pm} PM</color> · Iniciativa {d.initiative} · Nível {d.level}</size>";
             var state=new List<string>();
@@ -397,14 +496,30 @@ namespace ArenaTatica
             pickerNext.interactable=pickMode==PickMode.Ban||ArenaTema.CanAdvance(picking.Count);
             SetLabel(pickerNext,pickMode==PickMode.Ban?"Confirmar bans":pickMode==PickMode.Pool?"Salvar pool":pickMode==PickMode.Draft?ArenaTema.AdvanceLabel(picking.Count,"Confirmar time"):ArenaTema.AdvanceLabel(picking.Count,pickSeat+1<picked.Length?"Próximo jogador":OnlineSession||Game.Setup?"Salvar time":"Começar"));
         }
+        // Antimissclick (020-ux): o PRIMEIRO toque no botão só destaca; o SEGUNDO toque no mesmo botão e no mesmo
+        // contexto é que age — skill só em si mesma executa, skill com alvo entra no modo de mira (o toque na casa
+        // depois conjura). Trocar de botão, de ator, de revisão/turno, perder CanAct, abrir menu/picker/loja ou
+        // começar um gesto de câmera zera a confirmação (SyncConfirmation acima).
         void ChooseSkill(int index)
         {
             var f=Game.Active; if(f==null) return;
             var skills=Match.Skills(f); if(index>=skills.Count) return;
             var sk=skills[index];
-            // Só em si mesmo e sem área para mirar (forma, esconder, aura, começar o Desejo): age no clique do botão.
-            if(SelfOnly(sk)) { Game.Mode=""; Game.Submit("skill",f.cell,sk.id); return; }
-            Game.Mode=Game.Mode==sk.id?"":sk.id;
+            SyncConfirmation();
+            if(!Game.CanAct) { confirm.Reset(); return; }
+            if(!PressAction(ArenaActionConfirmation.Skill(sk.id),f)) { Game.Mode=""; return; } // 1º toque: só destaca
+            if(Game.Mode==sk.id) { Game.Mode=""; return; }                                     // tocar de novo enquanto mira cancela a mira
+            if(SelfOnly(sk)) { Game.Mode=""; Game.Submit("skill",f.cell,sk.id); return; }       // skill só em si mesma: executa agora
+            Game.Mode=sk.id;                                                                    // skill com alvo: entra no modo de mira
+        }
+        // Passar também é em dois toques, e o botão e a tecla Espaço usam este mesmo método (020-ux).
+        public void ConfirmPass()
+        {
+            SyncConfirmation();
+            var f=Game.Active;
+            if(f==null||!Game.CanAct) { confirm.Reset(); return; }
+            if(!PressAction(ArenaActionConfirmation.Pass,f)) { Game.Mode=""; Game.Notify("Toque novamente para passar."); return; }
+            Game.Mode=""; Game.Submit("passar");
         }
         public static bool SelfOnly(SkillDef sk) => sk.kind==SkillKind.Forma||sk.kind==SkillKind.Esconder||sk.kind==SkillKind.Aura||(sk.kind==SkillKind.Desejo&&string.IsNullOrEmpty(sk.wish));
         // Aviso do Cataclisma (entrega do Sol, 11/10): tira Sprites/Avisos/<id>, 12 quadros de 160 ms, um ciclo no centro do tabuleiro.
@@ -488,10 +603,12 @@ namespace ArenaTatica
         // Área livre para o tabuleiro em pixels, entre os painéis montados em Layout (mesmas medidas).
         // Faixas fixas (unidades do Canvas): topo, rodapé e largura do painel lateral aberto.
         public const float TopBar=40,BottomBar=28,SideWidth=288,SideBand=222;
+        // Faixa da linha do tempo (020-ux) e medidas do cartão de cada lutador.
+        public const float TimelineBar=64,TimelineCard=210;
         // Parte da tela que o tabuleiro tem livre (pixels). A câmera cobre a tela toda; o tabuleiro se centraliza aqui.
         public static Rect BoardArea()
         {
-            float k=UiScale,w=Screen.width,h=Screen.height,top=h-TopBar*k,low=BottomBar*k;
+            float k=UiScale,w=Screen.width,h=Screen.height,top=h-(TopBar+TimelineBar)*k,low=BottomBar*k;
             if(w<h) { if(SideOpen) low=(BottomBar+SideBand+8)*k; return new Rect(0,low,w,Mathf.Max(10,top-low)); }
             float left=SideOpen?(SideWidth+8)*k:0; return new Rect(left,low,Mathf.Max(10,w-left),Mathf.Max(10,top-low));
         }
@@ -501,6 +618,8 @@ namespace ArenaTatica
             mobileStats.gameObject.SetActive(Portrait); score.gameObject.SetActive(!Portrait); logPanel.gameObject.SetActive(!Portrait);
             foreach(var l in labels) l.gameObject.SetActive(!Portrait);
             Anchors(top,new Vector2(0,1),Vector2.one,new Vector2(0,-TopBar),Vector2.zero);
+            // Linha do tempo logo abaixo da faixa do turno; daí para baixo é tabuleiro (BoardArea).
+            Anchors(timeline,new Vector2(0,1),Vector2.one,new Vector2(0,-(TopBar+TimelineBar)),new Vector2(0,-TopBar));
             Anchors(footer,Vector2.zero,new Vector2(1,0),Vector2.zero,new Vector2(0,BottomBar));
             var v=side.GetComponent<VerticalLayoutGroup>();
             var board=BoardArea(); float k=UiScale, freeLeft=board.xMin/k, freeLow=board.yMin/k;
@@ -510,17 +629,17 @@ namespace ArenaTatica
                 Anchors((RectTransform)sideTab.transform,Vector2.zero,Vector2.zero,new Vector2(8,BottomBar+6),new Vector2(56,BottomBar+54));
                 Anchors(shopWindow,new Vector2(0,.3f),new Vector2(1,.8f),new Vector2(8,0),new Vector2(-8,0));
                 Anchors(viewPanel,new Vector2(1,0),new Vector2(1,0),new Vector2(-190,freeLow+6),new Vector2(-8,freeLow+48));
-                Anchors(inspect,new Vector2(0,.5f),new Vector2(1,1),new Vector2(8,0),new Vector2(-8,-TopBar-6));
+                Anchors(inspect,new Vector2(0,.5f),new Vector2(1,1),new Vector2(8,0),new Vector2(-8,-(TopBar+TimelineBar)-6));
             } else {
-                Anchors(side,Vector2.zero,new Vector2(0,1),new Vector2(0,BottomBar),new Vector2(SideWidth,-TopBar));
+                Anchors(side,Vector2.zero,new Vector2(0,1),new Vector2(0,BottomBar),new Vector2(SideWidth,-(TopBar+TimelineBar)));
                 v.padding=new RectOffset(12,12,8,10);
-                Anchors((RectTransform)sideTab.transform,new Vector2(0,1),new Vector2(0,1),new Vector2(8,-TopBar-54),new Vector2(56,-TopBar-6));
+                Anchors((RectTransform)sideTab.transform,new Vector2(0,1),new Vector2(0,1),new Vector2(8,-(TopBar+TimelineBar)-54),new Vector2(56,-(TopBar+TimelineBar)-6));
                 Anchors(shopWindow,new Vector2(.25f,.1f),new Vector2(.98f,.9f),Vector2.zero,Vector2.zero);
                 // Canto inferior esquerdo da parte livre: o losango da mesa deixa esse canto vazio.
                 Anchors(portrait,Vector2.zero,Vector2.zero,new Vector2(freeLeft+8,BottomBar+6),new Vector2(freeLeft+120,BottomBar+150));
                 Anchors(viewPanel,new Vector2(1,0),new Vector2(1,0),new Vector2(-190,BottomBar+6),new Vector2(-8,BottomBar+48));
                 // Ficha do lutador tocado: à direita, sem cobrir o painel lateral.
-                Anchors(inspect,new Vector2(1,0),Vector2.one,new Vector2(-380,BottomBar+56),new Vector2(-8,-TopBar-6));
+                Anchors(inspect,new Vector2(1,0),Vector2.one,new Vector2(-380,BottomBar+56),new Vector2(-8,-(TopBar+TimelineBar)-6));
             }
             side.gameObject.SetActive(SideOpen); sideTab.gameObject.SetActive(!SideOpen);
             ShowPage(matchPage);
@@ -559,9 +678,10 @@ namespace ArenaTatica
             if(shopScene&&vendor.Length>1&&shopWindow.gameObject.activeInHierarchy) shopScene.sprite=vendor[(int)(Time.unscaledTime*6)%vendor.Length];
             if(!canvas||Game.State==null) return;
             if(Screen.width!=width||Screen.height!=height) Layout();
+            SyncConfirmation(); // a mira armada cai antes de desenhar: perder CanAct, menu/picker/loja ou troca de estado
             var s=Game.State; var f=Game.Active;
             string Team(int t) => $"<color=#{ColorUtility.ToHtmlStringRGB(ArenaPresentation.TeamColor(t))}>P{t}</color>";
-            turn.text=f==null?$"RODADA {s.round}":$"RODADA {s.round}   •   {Content.Fighters[f.def].name} {Team(f.team)}   •   {f.pa} PA   •   {f.pm} PM";
+            turn.text=f==null?$"RODADA {s.round}":$"RODADA {s.round}   •   {ArenaPresentation.Shown(f).name} {Team(f.team)}   •   {f.pa} PA   •   {f.pm} PM";
             string Goal(int t) => s.eliminated[t]?"fora":s.mode==VictoryMode.Galeoes?$"{s.galeoes[t]} Galeões":s.mode==VictoryMode.Tesouro?$"{s.collected[t]}/{s.target} moedas":s.mode==VictoryMode.Dominio?$"domínio {s.domain[t]}/{s.target}":"eliminação";
             // Placar por time: em todos contra todos, um item por jogador; em times, os jogadores de cada time juntos.
             // PV, moedas e placar esperam a animação: não mostram o dano antes de os dados caírem.
@@ -573,16 +693,17 @@ namespace ArenaTatica
             // Na ordem da linha do tempo (Krosmaster: cada jogador joga o time inteiro, da maior Iniciativa para a menor).
             int Order(Fighter x) { int i=s.timeline.IndexOf(x.id); return i<0?999:i; }
             fighters.text=string.Join("\n",s.fighters.Where(x=>x.Alive||x.summoner==0).OrderBy(Order).Select(x=>{
-                string n=Content.Fighters[x.def].name; bool on=f!=null&&x.id==f.id;
-                return $"{(on?"▶ ":"")}{(MatchState.Player(x.team)?Team(x.team):"Neutro")} {n}{(x.summoner==0&&MatchState.Player(x.team)?$" <color=#a7b4c2>Ini {Content.Def(x).initiative}</color>":"")}  {(x.Alive?$"{x.hp}/{Content.MaxHp(x)} PV":"nocauteado")}{(x.summoner==0&&MatchState.Player(x.team)?$" · {s.coins[x.team]} moedas":"")}{(x.prisoned>0?" · preso":"")}";
+                string n=ArenaPresentation.Shown(x).name; bool on=f!=null&&x.id==f.id; // disfarce: o clone aparece como o conjurador
+                return $"{(on?"▶ ":"")}{(MatchState.Player(x.team)?Team(x.team):"Neutro")} {n}{(x.summoner==0&&MatchState.Player(x.team)?$" <color=#a7b4c2>Ini {ArenaPresentation.Shown(x).initiative}</color>":"")}  {(x.Alive?$"{x.hp}/{Content.MaxHp(x)} PV":"nocauteado")}{(x.summoner==0&&MatchState.Player(x.team)?$" · {s.coins[x.team]} moedas":"")}{(x.prisoned>0?" · preso":"")}";
             }));
             mobileStats.text=score.text;
-            var art=f==null?null:Content.Form(f)?.sprites??Content.Fighters[f.def].sprites;
+            var art=f==null?null:Content.Form(f)?.sprites??ArenaPresentation.Shown(f).sprites;
             portrait.gameObject.SetActive(!Portrait&&!string.IsNullOrEmpty(art));
             if(portrait.gameObject.activeSelf) {
-                if(portraitDef!=art) { portraitDef=art; portraitArt.sprite=Resources.Load<Sprite>("Sprites/"+art+"/south"); portraitArt.color=portraitArt.sprite?Color.white:Color.clear; }
-                portraitText.text=$"{Content.Fighters[f.def].name}  {f.hp}/{Content.MaxHp(f)} PV";
+                if(portraitDef!=art) { portraitDef=art; portraitArt.sprite=Face(art); portraitArt.color=portraitArt.sprite?Color.white:Color.clear; }
+                portraitText.text=$"{ArenaPresentation.Shown(f).name}  {f.hp}/{Content.MaxHp(f)} PV";
             }
+            RefreshTimeline(s); // retratos, PV/PA/PM, estado e turno ATUAL/PRÓXIMO, a cada revisão/turno/HP
             }
             var skills=f==null?new List<SkillDef>():Match.Skills(f);
             for(int i=0;i<skillButtons.Count;i++) {
@@ -593,10 +714,13 @@ namespace ArenaTatica
                 string cost=sk.kind==SkillKind.Aura?(f.auraOn?"ligada · desligar":f.auraPaid?"religar":$"{sk.pa} PA/turno"):$"{sk.pa} PA";
                 SetLabel(b,$"{sk.name} · {(spent?"usada":early?$"rodada {sk.minRound}":wait!=null?$"recarga {wait.uses}":cost)}{(charge!=null?$" ×{charge.uses}":"")}");
                 b.interactable=Game.CanAct&&f.pa>=Match.Cost(f,sk)&&wait==null&&!spent&&!early&&f.channel==0;
-                b.GetComponent<Image>().color=Game.Mode==sk.id?chosen:idle;
+                // Destaque do 1º toque (mira armada) e do modo de mira: o mesmo tom escolhido de sempre.
+                b.GetComponent<Image>().color=Game.Mode==sk.id||Confirming(ArenaActionConfirmation.Skill(sk.id))?chosen:idle;
             }
             move.interactable=pass.interactable=Game.CanAct;
-            move.GetComponent<Image>().color=Game.Mode==""?new Color(.21f,.36f,.43f):idle;
+            move.GetComponent<Image>().color=Game.Mode==""&&!confirm.Armed?new Color(.21f,.36f,.43f):idle;
+            SetLabel(pass,Confirming(ArenaActionConfirmation.Pass)?"Toque novamente para passar":"Passar  [Espaço]");
+            pass.GetComponent<Image>().color=Confirming(ArenaActionConfirmation.Pass)?chosen:idle;
             int team=f?.team??1; var slots=s.shops[team].slots;
             shopLabel.text=$"LOJA DE P{team} · {s.coins[team]} MOEDAS";
             shopTitle.text=$"Loja do Castor  ·  P{team}  ·  {s.coins[team]} moedas";
@@ -618,7 +742,11 @@ namespace ArenaTatica
             // Muitas skills (gatos, Desejo do Kellen): 2 colunas no painel lateral para não passar da tela.
             FitGrid(actions,Portrait?4:skills.Count>4?2:1); FitGrid(shopGrid,Portrait?3:1);
             var chosenSkill=skills.FirstOrDefault(x=>x.id==Game.Mode);
-            help.text=chosenSkill!=null?Describe(chosenSkill)+"\nClique num alvo laranja.":"Casas azuis: alcance dos PM. Clique para mover.";
+            var armed=skills.FirstOrDefault(x=>Confirming(ArenaActionConfirmation.Skill(x.id)));
+            help.text=chosenSkill!=null?Describe(chosenSkill)+"\nToque numa casa laranja, mesmo vazia."
+                :armed!=null?Describe(armed)+"\nToque de novo no mesmo botão para conjurar."
+                :Confirming(ArenaActionConfirmation.Pass)?"Toque novamente para passar."
+                :"Casas azuis: alcance dos PM. Clique para mover.";
             shopHelp.text=f!=null&&f.summoner!=0?"Invocações não compram.":"Toque num item para comprar. Compre quantos puder pagar.";
             result.text=s.over?(s.winner==0?"EMPATE":$"VITÓRIA · {ArenaPresentation.TeamName(s,s.winner).ToUpperInvariant()}"):Game.Recovery?"CONEXÃO INTERROMPIDA":Game.Lobby?"AGUARDANDO JOGADORES":"";
             status.text=Game.Status;

@@ -43,6 +43,7 @@ namespace ArenaTatica
                 yield return new WaitForSeconds(.5f);
             }
             Debug.Log($"ARENA_SMOKE_FIXTURE: {game.Network.Role}, {game.Turns}, ativo {game.Active?.def}, time salvo isolado");
+            if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-ux-qa")>=0) { yield return InteractionQa(); yield break; }
             if((Application.isBatchMode||System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-qa-render")>=0)&&System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-release-qa")>=0) { yield return ReleaseQa(); yield break; }
             if(game.Network.IsHost&&System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-relay-report")>=0) {
                 float roomDeadline=Time.realtimeSinceStartup+40;
@@ -197,6 +198,47 @@ namespace ArenaTatica
             bool complete=File.Exists(prefix+".restarted")&&File.Exists(prefix+".lobby")&&File.Exists(prefix+".again")&&game.State.players==players;
             File.WriteAllText(prefix+".result",complete?$"room:{players};invisible:pass;reconnect:pass;restart:pass":"FAIL");
             Finish(complete,$"Sala LAN {players}: configurar/liberar/iniciar, invisibilidade, reconexão, reinício, voltar à sala");
+        }
+        IEnumerator InteractionQa()
+        {
+            game.Menu?.Close(); game.VsBots=false; game.NewLocal(); yield return Idle();
+            var flags=System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic;
+            var choose=typeof(ArenaHud).GetMethod("ChooseSkill",flags);
+            var pinch=typeof(ArenaPresentation).GetMethod("Pinch",flags);
+            var hud=game.Hud; var f=game.Active; var skills=Match.Skills(f);
+            int at=skills.FindIndex(sk=>sk.kind==SkillKind.Dano&&!sk.selfArea); var attack=skills[at];
+            int revision=game.State.revision, pa=f.pa;
+            choose.Invoke(hud,new object[]{at}); yield return null;
+            if(game.State.revision!=revision||f.pa!=pa||game.Mode!=""||!hud.HasPendingConfirmation) { Finish(false,"Primeiro toque de skill agiu"); yield break; }
+            choose.Invoke(hud,new object[]{at}); yield return null;
+            if(game.State.revision!=revision||game.Mode!=attack.id||hud.HasPendingConfirmation) { Finish(false,"Segundo toque não armou a mira"); yield break; }
+            var empty=Enumerable.Range(0,game.State.tiles.Length).Select(i=>new Cell(i%game.State.width,i/game.State.width)).First(c=>Board.At(game.State,c)==null&&game.Preview.CanTarget(f,attack,c,out _));
+            game.Match.Forced.Enqueue(Face.Trava); game.Match.Forced.Enqueue(Face.Trava);
+            game.Submit("skill",empty,attack.id); yield return Idle();
+            if(game.State.revision!=revision+1||f.pa!=pa-attack.pa) { Finish(false,"Ataque no chão não consumiu custo correto"); yield break; }
+            revision=game.State.revision; hud.ConfirmPass(); yield return null;
+            if(game.State.revision!=revision||!hud.HasPendingConfirmation) { Finish(false,"Primeiro toque de Passar agiu"); yield break; }
+            hud.ConfirmPass(); yield return Idle();
+            if(game.State.revision!=revision+1) { Finish(false,"Segundo toque não passou"); yield break; }
+            // Método de câmera real: variação da distância aproxima; translação/ângulo constantes em distância não giram/panam.
+            var rect=ArenaHud.BoardArea(); var center=rect.center; var half=new Vector2(50,0);
+            typeof(ArenaPresentation).GetField("pressOnUi",flags).SetValue(game.View,false);
+            typeof(ArenaPresentation).GetField("pinching",flags).SetValue(game.View,false);
+            pinch.Invoke(game.View,new object[]{center-half,center+half});
+            float before=game.View.BoardCamera.orthographicSize;
+            pinch.Invoke(game.View,new object[]{center-half*1.4f,center+half*1.4f});
+            float zoom=game.View.BoardCamera.orthographicSize; var position=game.View.BoardCamera.transform.position;
+            float yaw=(float)typeof(ArenaPresentation).GetField("yawGoal",flags).GetValue(game.View);
+            pinch.Invoke(game.View,new object[]{center+new Vector2(10,-70),center+new Vector2(10,70)});
+            if(zoom>=before||Mathf.Abs(game.View.BoardCamera.orthographicSize-zoom)>.001f||Vector3.Distance(position,game.View.BoardCamera.transform.position)>.001f||(float)typeof(ArenaPresentation).GetField("yawGoal",flags).GetValue(game.View)!=yaw) { Finish(false,"Pinça conflitou com giro/pan"); yield break; }
+            Directory.CreateDirectory("Artifacts");
+            ScreenCapture.CaptureScreenshot(Path.GetFullPath("Artifacts/020-ux-landscape.png")); yield return new WaitForSeconds(.4f);
+            Screen.SetResolution(540,960,false); yield return new WaitForSeconds(.7f);
+            ScreenCapture.CaptureScreenshot(Path.GetFullPath("Artifacts/020-ux-portrait.png")); yield return new WaitForSeconds(.4f);
+            game.Menu.Open("opcoes"); yield return new WaitForSeconds(.3f);
+            ScreenCapture.CaptureScreenshot(Path.GetFullPath("Artifacts/020-opcoes-portrait.png")); yield return new WaitForSeconds(.4f);
+            game.CloseMatch(); if(!game.InMenu||game.CanAct) { Finish(false,"Fechar Partida deixou ações ativas"); yield break; }
+            Finish(true,"UX: dois toques, ataque no vazio, pinça exclusiva, retrato/paisagem, fechar partida");
         }
         // Espera 1 s antes de fechar: o último estado ainda precisa sair pela rede.
         void Finish(bool success,string message) { Debug.Log("ARENA_SMOKE_"+(success?"PASS: ":"FAIL: ")+message); StartCoroutine(Quit(success?0:1)); }

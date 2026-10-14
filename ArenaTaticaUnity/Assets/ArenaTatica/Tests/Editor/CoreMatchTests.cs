@@ -70,7 +70,7 @@ namespace ArenaTatica.Core.Tests
             var view=Match.ViewFor(S,2); var preview=Match.FromState(view,true);
             Assert.IsTrue(preview.CanTarget(view.F(mine.id),skill,foe.cell,out _));
             Assert.IsTrue(m.CanTarget(mine,skill,foe.cell,out _));
-            Assert.IsFalse(m.CanTarget(mine,skill,new Cell(6,6),out _),"Host rejeita casa vazia");
+            Assert.IsTrue(m.CanTarget(mine,skill,new Cell(6,6),out _),"Host aceita conjuração no chão");
             Assert.IsFalse(preview.Apply(new Command{kind="passar"},2,out _,out _),"prévia não aplica regras");
         }
 
@@ -286,7 +286,7 @@ namespace ArenaTatica.Core.Tests
             m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"ezequiela"}, team2=new[]{"devon"} });
             var e=Solo("ezequiela"); var foe=S.fighters.First(f=>f.def=="devon");
             Put(e,5,5); Put(foe,5,8);
-            Assert.IsFalse(Use(e,"espelho-primordial",foe.cell),"inimigo ainda não atacou");
+            Assert.IsTrue(m.CanTarget(e,Content.Skill(e,"espelho-primordial"),foe.cell,out _),"conjuração permitida mesmo antes de existir ataque para refletir");
             foe.lastAttack="golpe-necrotico"; int hp=foe.hp;
             m.Forced.Enqueue(Face.Trava); m.Forced.Enqueue(Face.Esquiva);
             Assert.IsTrue(Use(e,"espelho-primordial",foe.cell));
@@ -355,7 +355,7 @@ namespace ArenaTatica.Core.Tests
             Assert.IsTrue(S.fighters.Where(f=>S.Team(f.team)==1).All(f=>f.cell.z<S.height/2),"aliados do mesmo lado");
             var ally=S.fighters.First(f=>f.team==3); var enemy=S.fighters.First(f=>f.team==2);
             Put(A,5,5); Put(ally,5,6); Put(enemy,9,9);
-            Assert.IsFalse(Do("skill",new Cell(5,6),"dragao-dourado"),"aliado não é alvo");
+            Assert.IsTrue(Do("skill",new Cell(5,6),"dragao-dourado"),"conjuração livre no chão");
             Assert.IsTrue(m.Apply(Cmd("mover",new Cell(4,5)),A.team,out var ev,out _));
             Assert.IsFalse(ev.Any(e=>e.kind=="trava"),"aliado não trava");
             Put(enemy,4,7); enemy.hp=1; m.Forced.Enqueue(Face.Escudo); m.Forced.Enqueue(Face.Trava);
@@ -403,7 +403,7 @@ namespace ArenaTatica.Core.Tests
             Duel("edgar","rei-bobett"); var edgar=A; var king=Enemy; Put(edgar,5,5); Put(king,5,6);
             Assert.IsTrue(Do("skill",new Cell(5,5),"forma-fantasma")); Assert.AreEqual("fantasma",edgar.form);
             Do("passar"); Assert.AreSame(king,A);
-            Assert.IsFalse(Do("skill",new Cell(5,5),"coroada"),"fantasma não é alvo");
+            Hit(); Assert.IsTrue(Do("skill",new Cell(5,5),"coroada"),"conjura no chão ocupado pelo fantasma"); Assert.AreEqual(13,edgar.hp,"fantasma segue imune");
             Do("passar"); Assert.AreSame(edgar,A); Assert.AreEqual("normal",edgar.form,"dura 1 turno");
             Do("passar"); Hit(); Assert.IsTrue(Do("skill",new Cell(5,5),"coroada")); Assert.AreEqual(13-2,edgar.hp);
         }
@@ -696,7 +696,7 @@ namespace ArenaTatica.Core.Tests
             Assert.IsTrue(Do("skill",new Cell(5,5),"esconder")); Assert.IsTrue(perry.hidden);
             Assert.AreEqual(Match.HiddenPm,perry.pm,"escondido anda no máximo 2");
             Do("passar"); Assert.AreSame(foe,A); Put(foe,5,7);
-            Assert.IsFalse(m.CanTarget(foe,Content.Skill(foe,"foice-verde"),perry.cell,out _),"de longe a casa parece vazia");
+            Assert.IsTrue(m.CanTarget(foe,Content.Skill(foe,"foice-verde"),perry.cell,out _),"conjuração no chão permite tentar acertar invisível");
             Assert.IsTrue(Do("mover",new Cell(5,6))); Assert.IsFalse(perry.hidden,"quem encosta revela");
             perry.hidden=true; Assert.IsTrue(m.CanTarget(foe,Content.Skill(foe,"foice-verde"),perry.cell,out _),"colado acerta");
         }

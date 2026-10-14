@@ -237,7 +237,7 @@ namespace ArenaTatica.Core
             return stolenCache[id]=s;
         }
         // Base de uma skill devorada (para partículas e projéteis da original).
-        public static string BaseSkill(string id) => id!=null&&id.StartsWith(Stolen)?id.Substring(Stolen.Length):id;
+        public static string BaseSkill(string id) => id==null?null:id.StartsWith(Stolen)?BaseSkill(id.Substring(Stolen.Length)):id.StartsWith("sorteio:")?id.Substring(8):id;
         public static void ClearCaches() => stolenCache.Clear();
 
         // ── Edições do autor (aba Editor do menu): fichas inteiras salvas por id; o Host manda as dele no estado da partida. ──
@@ -356,13 +356,30 @@ namespace ArenaTatica.Core
             $"{(string.IsNullOrEmpty(p.name)?"Passiva":p.name)}: {Sign(p.amount)} {StatName(p.stat)} {WhoName(p.who)}{(p.who==PassiveWho.Si?"":p.range<=0?" (mapa todo)":$" até {p.range} casa{(p.range>1?"s":"")}")}";
         // Lutadores que dá para escolher (sem invocações), na ordem do seletor.
         public static readonly string[] Roster=Fighters.Values.Where(d=>d.picker).Select(d=>d.id).ToArray();
-        public static FighterDef Def(Fighter f) => Fighters[f.def];
+        public static FighterDef Def(Fighter f)
+        {
+            var original=Fighters[f.def]; var r=f.roll; if(r==null) return original;
+            var d=original.Clone();
+            if(r.stats) { d.hp=r.hp; d.pa=r.pa; d.pm=r.pm; d.initiative=r.initiative; }
+            if(r.skills||r.stats) d.skills=r.powers.Select(p=>{
+                var sk=AnySkill(p.id)?.Clone();
+                if(sk!=null&&r.stats) { sk.damage=p.damage; sk.maxRange=p.range; sk.minRange=System.Math.Min(sk.minRange,sk.maxRange); }
+                return sk;
+            }).Where(sk=>sk!=null).ToArray();
+            return d;
+        }
         public static int MaxHp(Fighter f) => Def(f).hp+f.bonusHp;
         public static FormDef Form(Fighter f) => Def(f).forms?.FirstOrDefault(x=>x.id==f.form);
         // Qualquer skill do jogo pelo id: de um lutador ou da loja (Espelho primordial e cargas).
         public static SkillDef AnySkill(string id) =>
             id==null?null:id.StartsWith(Stolen)?StolenSkill(BaseSkill(id)):
-            Fighters.Values.SelectMany(d=>d.skills).FirstOrDefault(s=>s.id==id)??Shop.BySkill(id)?.skill??System.Array.Find(Wishes,w=>w.id==id);
+            id.StartsWith("sorteio:")?RandomSkill(id):
+            Fighters.Values.SelectMany(d=>d.skills).FirstOrDefault(s=>s.id==id)??Shop.BySkill(id)?.skill??System.Array.Find(Wishes,w=>w.id==id)??Generic.Select(x=>x.skill).FirstOrDefault(s=>s.id==id);
+        static SkillDef RandomSkill(string id)
+        {
+            var sk=Generic.Select(x=>x.skill).FirstOrDefault(x=>"sorteio:"+x.id==id)?.Clone();
+            if(sk!=null) sk.id=id; return sk;
+        }
         // Skill própria (na forma atual) ou carga (loja, espelho) enquanto houver usos.
         public static SkillDef Skill(Fighter f,string id)
         {

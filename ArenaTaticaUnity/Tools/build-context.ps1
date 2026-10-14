@@ -32,8 +32,8 @@ function Save-ArenaBuildReceipt([string]$ArenaRoot,[string]$StagePath,[string]$P
     $revision=if($SourceCommit) { $SourceCommit } else { (& git -C $ArenaRoot rev-parse HEAD).Trim() }
     & git -C $ArenaRoot diff --quiet -- Assets/ArenaTatica/Scripts Assets/Editor
     $codeDirty=$LASTEXITCODE -ne 0
-    $receipt=[ordered]@{version='1.1.0';protocol=4;platform=$Platform;completedAt=[DateTime]::UtcNow.ToString('o');sourceCommit=$revision;codeDirty=$codeDirty;stagedCodeMatches=$true;sourceTreeSha256=$digest;sourceFiles=$source.Count;stage=$StagePath}
+    $receipt=[ordered]@{version='1.2.0';protocol=5;platform=$Platform;completedAt=[DateTime]::UtcNow.ToString('o');sourceCommit=$revision;codeDirty=$codeDirty;stagedCodeMatches=$true;sourceTreeSha256=$digest;sourceFiles=$source.Count;stage=$StagePath}
     $destination=Join-Path $ArenaRoot "Builds/$Platform/proveniencia.json"
     $receipt | ConvertTo-Json | Set-Content -LiteralPath $destination -Encoding utf8
-    $lines | Set-Content -LiteralPath (Join-Path $ArenaRoot "Artifacts/019-inputs-$Platform.sha256") -Encoding utf8
+    $lines | Set-Content -LiteralPath (Join-Path $ArenaRoot "Artifacts/020-inputs-$Platform.sha256") -Encoding utf8
 }

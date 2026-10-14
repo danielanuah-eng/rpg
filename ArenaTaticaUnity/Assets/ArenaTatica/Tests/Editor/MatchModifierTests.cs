@@ -1,0 +1,58 @@
+using System;
+using System.Linq;
+using NUnit.Framework;
+using UnityEngine;
+using ArenaTatica.Core;
+
+namespace ArenaTatica.Tests
+{
+    public class MatchModifierTests
+    {
+        MatchSetup Setup(uint seed,bool skills,bool stats,bool bots,bool players) => new MatchSetup{seed=seed,flatMap=true,
+            randomSkills=skills,randomStats=stats,randomBots=bots,randomPlayers=players,botSeats=new[]{2},
+            team1=new[]{"ciantia","perry"},team2=new[]{"colosso","talyssa"}};
+        [TestCase(true,false)] [TestCase(false,true)] [TestCase(true,true)] [TestCase(false,false)]
+        public void ScopeSelectsOnlyIntendedParticipants(bool bots,bool players)
+        {
+            var m=Match.New(Setup(7,true,true,bots,players));
+            foreach(var f in m.S.fighters) Assert.AreEqual(f.team==2?bots:players,f.roll!=null);
+        }
+        [TestCase(true,false)] [TestCase(false,true)] [TestCase(true,true)]
+        public void SameSeedProducesSameRollAndLeavesEditorUnchanged(bool skills,bool stats)
+        {
+            var original=JsonUtility.ToJson(Content.Fighters["ciantia"]); var setup=Setup(987,skills,stats,true,true);
+            var a=Match.New(setup); var b=Match.New(setup);
+            Assert.AreEqual(JsonUtility.ToJson(a.S),JsonUtility.ToJson(b.S));
+            Assert.AreEqual(original,JsonUtility.ToJson(Content.Fighters["ciantia"]));
+            Assert.IsTrue(ArenaGame.ValidState(a.S));
+            var roundtrip=JsonUtility.FromJson<MatchState>(JsonUtility.ToJson(a.S));
+            foreach(var f in a.S.fighters) CollectionAssert.AreEqual(Match.Skills(f).Select(s=>s.id),Match.Skills(roundtrip.F(f.id)).Select(s=>s.id));
+        }
+        [Test] public void NumericRollsStayBoundedAndSkillsRemainUsableAcrossManySeeds()
+        {
+            for(uint seed=1;seed<=80;seed++) {
+                var m=Match.New(Setup(seed,true,true,true,true));
+                foreach(var f in m.S.fighters) {
+                    var d=Content.Def(f); Assert.That(d.hp,Is.InRange(4,30)); Assert.That(d.pa,Is.InRange(5,8)); Assert.That(d.pm,Is.InRange(1,6)); Assert.That(d.initiative,Is.InRange(0,12));
+                    Assert.AreEqual(d.hp,f.hp); Assert.IsTrue(d.skills.Any(s=>s.kind==SkillKind.Dano&&s.damage>0&&s.pa<=d.pa));
+                    Assert.AreEqual(d.skills.Length,d.skills.Select(s=>s.id).Distinct().Count());
+                    foreach(var sk in d.skills) { Assert.That(sk.damage,Is.InRange(0,8)); Assert.That(sk.maxRange,Is.InRange(sk.minRange,8)); Assert.IsNotNull(Content.Skill(f,sk.id)); }
+                }
+            }
+        }
+        [Test] public void RandomizedSixPlayerSnapshotFitsRelayBudget()
+        {
+            var team=ArenaGame.ValidTeam(Content.Roster.OrderBy(id=>Content.Fighters[id].level));
+            var m=Match.New(new MatchSetup{seed=8,randomSkills=true,randomStats=true,randomPlayers=true,
+                players=Enumerable.Range(0,6).Select(_=>new PlayerSetup{fighters=team}).ToArray()});
+            int budget=(int)typeof(ArenaTransport).GetField("RelayPayload",System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.NonPublic).GetValue(null);
+            var view=Match.ViewFor(m.S,2); var packet=JsonUtility.ToJson(new WireMessage{kind="snapshot",state=view});
+            Assert.LessOrEqual(System.Text.Encoding.UTF8.GetByteCount(packet),budget); Assert.IsTrue(ArenaGame.ValidState(view,2));
+        }
+        [Test] public void RandomizedCloneHasValidDisguisedSnapshot()
+        {
+            var m=Match.New(new MatchSetup{flatMap=true,randomStats=true,randomPlayers=true,team1=new[]{"ezequiela"},team2=new[]{"ciantia"}});
+            Assert.IsTrue(ArenaGame.ValidState(Match.ViewFor(m.S,2),2));
+        }
+    }
+}

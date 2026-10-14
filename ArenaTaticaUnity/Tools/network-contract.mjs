@@ -13,17 +13,17 @@ function open() {
   return new Promise((resolve,reject)=>{
     const candidate=new WebSocket('ws://127.0.0.1:9080');
     candidate.addEventListener('error',()=>reject(Error('Host ainda indisponível')),{once:true});
-    candidate.addEventListener('open',()=>{ws=candidate;candidate.send(JSON.stringify({protocol:4,kind:'hello',token:'contrato'}));resolve();},{once:true});
+    candidate.addEventListener('open',()=>{ws=candidate;candidate.send(JSON.stringify({protocol:5,kind:'hello',token:'contrato'}));resolve();},{once:true});
     candidate.addEventListener('message',event=>{
       const m=JSON.parse(event.data); messages.push(m);
       if(m.kind==='state'||m.kind==='snapshot') state=m.state;
       if(m.kind==='snapshot') snapshot=m;
-      if(m.kind==='ping') candidate.send(JSON.stringify({protocol:4,kind:'pong',ping:m.ping}));
+      if(m.kind==='ping') candidate.send(JSON.stringify({protocol:5,kind:'pong',ping:m.ping}));
     });
   });
 }
 async function waitFor(test,label,timeout=20000) { const end=Date.now()+timeout; while(!test()) {if(Date.now()>end) throw Error('Timeout: '+label); await delay(30);} }
-function send(m) { ws.send(JSON.stringify({protocol:4,...m})); }
+function send(m) { ws.send(JSON.stringify({protocol:5,...m})); }
 const active=()=>state.fighters.find(f=>f.id===state.timeline[state.active]);
 const tile=c=>state.tiles[c.z*state.width+c.x];
 // Casa vizinha livre, sem lutador e sem subida de 2+ níveis.
