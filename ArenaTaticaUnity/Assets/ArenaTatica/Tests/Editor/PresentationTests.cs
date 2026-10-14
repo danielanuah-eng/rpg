@@ -11,6 +11,48 @@ namespace ArenaTatica.Tests
     {
         static float Pivot(Sprite s) => s.pivot.y/s.rect.height;
 
+        [TestCase("esconder","bomba-de-fumaca","bomba-de-fumaca/uso")]
+        [TestCase("armadilha-posta","mina-de-gelo","mina-de-gelo/uso")]
+        [TestCase("invocar","erguer-totem","totem-de-cura/uso")]
+        [TestCase("cura","totem-de-cura","totem-de-cura/uso")]
+        [TestCase("compra","cristal-de-foco","cristal-de-foco/uso")]
+        [TestCase("compra","ancora","ancora/uso")]
+        [TestCase("compra","manto-de-espinhos","manto-de-espinhos/uso")]
+        [TestCase("compra","bencao-de-pedra","bencao-de-pedra/uso")]
+        public void RecentEventUsesItsAvailableSpritePhase(string kind,string id,string phase)
+        {
+            Assert.AreEqual(phase,ArenaEfeitos.UsePhase(kind,id));
+            string resource="Sprites/Efeitos/"+phase;
+            Assert.IsNotNull(ArenaEfeitos.Entrada(resource));
+            Assert.AreEqual(ArenaEfeitos.Entrada(resource).frames,ArenaEfeitos.Frames(resource).Length);
+        }
+        [TestCase("aquecer-motor","conjuracao")]
+        [TestCase("aquecer-motor","impacto")]
+        [TestCase("chao-de-gelo","conjuracao")]
+        public void RecentlyUncalledPhasesLoadWithTheirDeclaredTiming(string id,string phase)
+        {
+            string resource="Sprites/Efeitos/"+ArenaEfeitos.SkillPhase(id,phase);
+            var entry=ArenaEfeitos.Entrada(resource); Assert.IsNotNull(entry);
+            Assert.AreEqual(entry.frames,ArenaEfeitos.Frames(resource).Length);
+            Assert.AreEqual(entry.impactFrame0/entry.fps,ArenaEfeitos.ImpactTime(resource),.0001f);
+        }
+        [TestCase("bola-de-fogo","impacto")]
+        [TestCase("bomba-de-fumaca","uso")]
+        public void CopiedAndRandomSkillsKeepTheSameSpritesAndTiming(string id,string phase)
+        {
+            string original="Sprites/Efeitos/"+id+"/"+phase;
+            string variant="Sprites/Efeitos/roubada:sorteio:"+id+"/"+phase;
+            Assert.AreSame(ArenaEfeitos.Entrada(original),ArenaEfeitos.Entrada(variant));
+            var method=typeof(ArenaPresentation).GetMethod("EffectFrames",BindingFlags.NonPublic|BindingFlags.Static);
+            CollectionAssert.AreEqual(ArenaEfeitos.Frames(original),(Sprite[])method.Invoke(null,new object[]{"roubada:sorteio:"+id+"/"+phase}));
+        }
+        [Test] public void BuyingAMagicOrPetDoesNotPlayItsCastOrSummonEarly()
+        {
+            Assert.IsNull(ArenaEfeitos.UsePhase("compra","bomba-de-fumaca"));
+            Assert.IsNull(ArenaEfeitos.UsePhase("compra","totem-de-cura"));
+            Assert.IsNull(ArenaEfeitos.UsePhase("cura","pauzinho"),"Dreno não repete a arte do golpe");
+        }
+
         [Test] public void EveryManifestResourceLoadsWithItsDeclaredFrames()
         {
             var entries=ArenaEfeitos.Entradas.ToList();

@@ -636,7 +636,9 @@ namespace ArenaTatica
                 case "forma":
                     if(actor) {
                         // info é a forma de destino: o clipe vem da skill que leva a ela (Damian: morph); a volta usa transform.
-                        var who=s.F(e.actor); string anim=who==null?null:Content.Def(who).skills.FirstOrDefault(k=>k.kind==SkillKind.Forma&&k.toForm==e.info)?.anim;
+                        var who=s.F(e.actor); var formSkill=who==null||e.info==null?null:Content.Def(who).skills.FirstOrDefault(k=>k.kind==SkillKind.Forma&&k.toForm==e.info);
+                        string anim=formSkill?.anim;
+                        PhaseFx(ArenaEfeitos.SkillPhase(formSkill?.id,"conjuracao"),actor.position+Vector3.up*.9f);
                         float morph=PlayClip(actor,anim??"transform");
                         if(morph==0) morph=PlayClip(actor,"transform");
                         // A volta do Berserk usa a transformação normal ao contrário quando a forma atual não tem clipe.
@@ -647,6 +649,7 @@ namespace ArenaTatica
                         }
                         Flash(actor.position+Vector3.up,e.info=="berserk"?Red:Violet);
                         if(morph>0) yield return Wait(morph); else yield return Pulse(actor);
+                        PhaseFx(ArenaEfeitos.SkillPhase(formSkill?.id,"impacto"),actor.position+Vector3.up*.7f);
                         // Forma com pasta própria de sprites (Berserk): troca o boneco.
                         if(who!=null&&units[who.id].childCount>0&&rigs.TryGetValue(units[who.id].GetChild(0),out var old)&&old.folder!=SpriteFolder(who)&&LoadRig(SpriteFolder(who))!=null) {
                             rigs.Remove(units[who.id].GetChild(0)); Destroy(units[who.id].gameObject);
@@ -657,7 +660,7 @@ namespace ArenaTatica
                     }
                     Game.Hud?.Log($"{Name(s,e.actor)}: {(e.info==null?"forma normal":Content.Def(s.F(e.actor)).forms?.FirstOrDefault(x=>x.id==e.info)?.name??e.info)}");
                     break;
-                case "esconder": if(actor) { PlayClip(actor,"hide"); Flash(actor.position+Vector3.up*.5f,Violet); yield return Wait(.4f); } RefreshHidden(s); Game.Hud?.Log($"{Name(s,e.actor)} se escondeu"); break;
+                case "esconder": if(actor) { PlayClip(actor,"hide"); PhaseFx(ArenaEfeitos.UsePhase(e.kind,e.info),actor.position+Vector3.up*.5f); Flash(actor.position+Vector3.up*.5f,Violet); yield return Wait(.4f); } RefreshHidden(s); Game.Hud?.Log($"{Name(s,e.actor)} se escondeu"); break;
                 case "revelar":
                     if(!target&&s.F(e.target) is Fighter revealed&&Board.Contains(s,revealed.cell)) target=units[e.target]=CreateUnit(revealed);
                     if(target) { target.gameObject.SetActive(true); target.position=Position(s,e.cell); }
@@ -687,6 +690,7 @@ namespace ArenaTatica
                     if(actor&&e.info=="totem-de-cura"&&!Playing(actor,"heal")) PlayClip(actor,"heal"); // um pulso do totem cura vários aliados
                     // Aura de gatinho e curas com arte: conjuração em quem cura, impacto no alvo; o número entra na colisão.
                     if(target) {
+                        PhaseFx(ArenaEfeitos.UsePhase(e.kind,e.info),target.position+Vector3.up*.6f);
                         // Dreno (cura vinda de golpe) não repete a arte do golpe.
                         bool mendArt=e.info!=null&&Content.AnySkill(e.info) is SkillDef mendSkill&&mendSkill.kind!=SkillKind.Dano;
                         if(mendArt&&actor&&actor!=target&&e.info!="totem-de-cura") PhaseFx(e.info+"/conjuracao",actor.position+Vector3.up*.9f);
@@ -700,13 +704,14 @@ namespace ArenaTatica
                     if(target) { Hit(target,target.position+Vector3.back,e.value,Red); Float(target.position,"−"+e.value,Red); PlayClip(target,"hit"); }
                     Game.Hud?.Log($"{Name(s,e.target)} pisou numa armadilha: {e.value} de dano");
                     yield return Wait(.45f); break;
-                case "armadilha-posta": Float(Position(s,e.cell),"Armadilha",Red); yield return Wait(.2f); break;
+                case "armadilha-posta": PhaseFx(ArenaEfeitos.UsePhase(e.kind,e.info),Position(s,e.cell)+Vector3.up*.05f); Float(Position(s,e.cell),"Armadilha",Red); yield return Wait(.2f); break;
                 case "invocar":
                     var f=s.F(e.target);
                     if(f!=null&&!units.ContainsKey(f.id)) {
                         float cast=0; if(actor) { Turn(actor,Position(s,f.cell)-actor.position); cast=PlayClip(actor,"summon"); }
                         // Skill que invocou (Chamar gato, Noite dos Gatos): conjuração no lançador e impacto na casa, antes de surgir.
                         string by=s.F(e.actor)?.lastSkill; float call=0;
+                        PhaseFx(ArenaEfeitos.UsePhase(e.kind,by),Position(s,f.cell)+Vector3.up*.4f);
                         if(actor&&by!=null) { PhaseFx(by+"/conjuracao",actor.position+Vector3.up*.9f); if(EffectFrames(by+"/impacto")!=null) { PhaseFx(by+"/impacto",Position(s,f.cell)+Vector3.up*.4f); call=ArenaEfeitos.ImpactTime("Sprites/Efeitos/"+by+"/impacto"); } }
                         cast=Mathf.Max(cast*.6f,call); if(cast>0) yield return Wait(cast);
                         var u=units[f.id]=CreateUnit(f); u.position=Position(s,f.cell); if(actor) Turn(u,u.position-actor.position);
@@ -735,6 +740,7 @@ namespace ArenaTatica
                         for(int i=0;i<Mathf.Min(e.value,5);i++) { var up=actor.position+Vector3.up*1.3f; StartCoroutine(Coin(up,up+Vector3.up*1.1f+new Vector3(UnityEngine.Random.Range(-.5f,.5f),0,UnityEngine.Random.Range(-.5f,.5f)),i*.07f,.5f)); }
                         Float(actor.position,"−"+e.value+" moedas",Gold);
                         var icon=Game.Hud?.ShopIcon(e.info); if(icon) StartCoroutine(ShowItem(icon,actor.position+Vector3.up*1.9f));
+                        PhaseFx(ArenaEfeitos.UsePhase(e.kind,e.info),actor.position+Vector3.up*.9f);
                         yield return Wait(.6f);
                     }
                     Game.Hud?.Log($"{Name(s,e.actor)} comprou {Shop.Def(e.info)?.name} por {e.value}"); break;
@@ -751,7 +757,7 @@ namespace ArenaTatica
                     Game.Hud?.Log($"{Name(s,e.actor)}: {Content.AnySkill(e.info)?.name}");
                     break;
                 case "zona":
-                    if(actor) { Turn(actor,Position(s,e.cell)-actor.position); PlayClip(actor,Content.AnySkill(e.info)?.anim??"attack"); }
+                    if(actor) { Turn(actor,Position(s,e.cell)-actor.position); PlayClip(actor,Content.AnySkill(e.info)?.anim??"attack"); PhaseFx(ArenaEfeitos.SkillPhase(e.info,"conjuracao"),actor.position+Vector3.up*.9f); }
                     if(e.path!=null) foreach(var c in e.path) StartCoroutine(Fx(e.info,Position(s,c)+Vector3.up*.1f,C(.7f,.9f,1),.1f));
                     RefreshMarkers(s); yield return Wait(.45f);
                     Game.Hud?.Log($"{Name(s,e.actor)}: {Content.AnySkill(e.info)?.name}");
@@ -1161,6 +1167,7 @@ namespace ArenaTatica
         static Sprite[] EffectFrames(string id)
         {
             if(string.IsNullOrEmpty(id)) return null;
+            id=Content.BaseSkill(id);
             if(!effectCache.TryGetValue(id,out var frames)) {
                 // Uma fase = um arquivo (<id>/inicio, <id>/impacto…): só os quadros dele, nunca os de outras fases da mesma pasta.
                 effectCache[id]=frames=ArenaEfeitos.Frames("Sprites/Efeitos/"+id);
@@ -1172,6 +1179,7 @@ namespace ArenaTatica
         static Sprite[] ProjectileFrames(string id)
         {
             if(string.IsNullOrEmpty(id)) return null;
+            id=Content.BaseSkill(id);
             if(!flightCache.TryGetValue(id,out var frames)) flightCache[id]=frames=ArenaEfeitos.Frames("Sprites/ProjeteisAnimados/"+id);
             return frames;
         }
@@ -1179,6 +1187,7 @@ namespace ArenaTatica
         static Sprite ProjectileImage(string id)
         {
             if(string.IsNullOrEmpty(id)) return null;
+            id=Content.BaseSkill(id);
             if(!projectileCache.TryGetValue(id,out var sp)) projectileCache[id]=sp=Resources.Load<Sprite>("Sprites/Projeteis/"+id);
             return sp;
         }

@@ -1,6 +1,6 @@
 param(
-    [string]$ExpectedVersion = '1.2.0',
-    [int]$ExpectedVersionCode = 3,
+    [string]$ExpectedVersion = '1.2.1',
+    [int]$ExpectedVersionCode = 4,
     [string]$ExpectedSourceCommit,
     [string]$ExpectedCertificateSha256 = 'eab099f58dcbbf1a63d863228ecefe22ace342749f895d5f646f477dc5f27425',
     [string]$EditorRoot = 'C:/Program Files/Unity/Hub/Editor/6000.6.4f1/Editor'
@@ -40,7 +40,7 @@ if (-not $certificate.Success -or $certificate.Groups[1].Value -ne $ExpectedCert
 if (-not (Test-Path -LiteralPath $receiptPath)) { throw 'Recibo do build Android ausente.' }
 $receipt = Get-Content -LiteralPath $receiptPath -Raw | ConvertFrom-Json
 if (-not $ExpectedSourceCommit) {
-    $ExpectedSourceCommit = (Get-Content -LiteralPath (Join-Path $arenaRoot 'Documentacao/release-1.2.0.json') -Raw | ConvertFrom-Json).sourceCommit
+    $ExpectedSourceCommit = (Get-Content -LiteralPath (Join-Path $arenaRoot 'Documentacao/release-1.2.1.json') -Raw | ConvertFrom-Json).sourceCommit
 }
 if ($receipt.platform -ne 'Android' -or $receipt.version -ne $ExpectedVersion -or $receipt.protocol -ne 5 -or
     $receipt.sourceCommit -ne $ExpectedSourceCommit -or $receipt.codeDirty -ne $false -or $receipt.stagedCodeMatches -ne $true) {

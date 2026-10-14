@@ -44,6 +44,7 @@ namespace ArenaTatica
             }
             Debug.Log($"ARENA_SMOKE_FIXTURE: {game.Network.Role}, {game.Turns}, ativo {game.Active?.def}, time salvo isolado");
             if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-ux-qa")>=0) { yield return InteractionQa(); yield break; }
+            if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-effects-qa")>=0) { yield return EffectsQa(); yield break; }
             if((Application.isBatchMode||System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-qa-render")>=0)&&System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-release-qa")>=0) { yield return ReleaseQa(); yield break; }
             if(game.Network.IsHost&&System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-relay-report")>=0) {
                 float roomDeadline=Time.realtimeSinceStartup+40;
@@ -198,6 +199,30 @@ namespace ArenaTatica
             bool complete=File.Exists(prefix+".restarted")&&File.Exists(prefix+".lobby")&&File.Exists(prefix+".again")&&game.State.players==players;
             File.WriteAllText(prefix+".result",complete?$"room:{players};invisible:pass;reconnect:pass;restart:pass":"FAIL");
             Finish(complete,$"Sala LAN {players}: configurar/liberar/iniciar, invisibilidade, reconexão, reinício, voltar à sala");
+        }
+        IEnumerator EffectsQa()
+        {
+            game.Menu?.Close(); game.VsBots=false;
+            game.StartLocal(new[]{new[]{"cheiro-pneu"},new[]{"ciantia"}}); yield return Idle();
+            var s=game.State; var f=s.fighters.First(x=>x.team==1);
+            var totem=new Fighter { id=s.fighters.Max(x=>x.id)+1,def="totem-de-cura",team=1,hp=4,cell=f.cell };
+            s.fighters.Add(totem); f.lastSkill="erguer-totem";
+            var events=new System.Collections.Generic.List<GameEvent>{
+                new GameEvent {kind="forma",actor=f.id,info="motor-quente",cell=f.cell},
+                new GameEvent {kind="esconder",actor=f.id,info="bomba-de-fumaca",cell=f.cell},
+                new GameEvent {kind="armadilha-posta",actor=f.id,info="mina-de-gelo",cell=f.cell},
+                new GameEvent {kind="invocar",actor=f.id,target=totem.id,cell=totem.cell},
+                new GameEvent {kind="cura",actor=totem.id,target=f.id,info="totem-de-cura",value=1,cell=f.cell},
+                new GameEvent {kind="zona",actor=f.id,info="chao-de-gelo",cell=f.cell,path=new[]{f.cell}}
+            };
+            foreach(string id in new[]{"cristal-de-foco","ancora","manto-de-espinhos","bencao-de-pedra"}) events.Add(new GameEvent {kind="compra",actor=f.id,info=id});
+            game.View.Play(events,s); yield return Idle(20);
+            var cache=(System.Collections.Generic.Dictionary<string,Sprite[]>)typeof(ArenaPresentation).GetField("effectCache",System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.NonPublic).GetValue(null);
+            foreach(string phase in new[]{"aquecer-motor/conjuracao","aquecer-motor/impacto","bomba-de-fumaca/uso","mina-de-gelo/uso","totem-de-cura/uso","chao-de-gelo/conjuracao","chao-de-gelo/impacto","cristal-de-foco/uso","ancora/uso","manto-de-espinhos/uso","bencao-de-pedra/uso"}) {
+                if(!cache.TryGetValue(phase,out var frames)||frames==null||frames.Length==0) { Finish(false,"Fase não tocada: "+phase); yield break; }
+                Debug.Log("ARENA_EFFECT_PHASE: "+phase+" quadros="+frames.Length);
+            }
+            Finish(!game.View.Busy,"Efeitos: 11 fases tocadas pelos eventos no player, sem exceções");
         }
         IEnumerator InteractionQa()
         {

@@ -29,8 +29,29 @@ namespace ArenaTatica
             if(data?.entries!=null) foreach(var e in data.entries) manifest[e.resource]=e;
         }
         public static void Reset() { manifest=null; }
+        // Fases usam a identidade visual original, inclusive skills sorteadas ou devoradas.
+        public static string SkillPhase(string id,string phase) => string.IsNullOrEmpty(id)?null:Core.Content.BaseSkill(id)+"/"+phase;
+        public static string UsePhase(string kind,string id)
+        {
+            id=Core.Content.BaseSkill(id);
+            if(string.IsNullOrEmpty(id)) return null;
+            switch(kind) {
+                case "esconder": case "armadilha-posta": return SkillPhase(id,"uso");
+                case "invocar": return id=="erguer-totem"?"totem-de-cura/uso":null;
+                case "cura": return id=="totem-de-cura"?"totem-de-cura/uso":null;
+                case "compra":
+                    var item=Core.Shop.Def(id);
+                    return item!=null&&item.skill==null&&(item.kind==Core.ShopKind.Item||item.kind==Core.ShopKind.Buff)?SkillPhase(id,"uso"):null;
+                default: return null;
+            }
+        }
+        static string Resource(string path)
+        {
+            const string prefix="Sprites/Efeitos/";
+            return path!=null&&path.StartsWith(prefix)?prefix+Core.Content.BaseSkill(path.Substring(prefix.Length)):path;
+        }
         // resource = caminho Resources do manifesto, ex.: Sprites/Efeitos/mare-de-lava/inicio.
-        public static EfeitoEntrada Entrada(string resource) { Load(); return resource!=null&&manifest.TryGetValue(resource,out var e)?e:null; }
+        public static EfeitoEntrada Entrada(string resource) { Load(); resource=Resource(resource); return resource!=null&&manifest.TryGetValue(resource,out var e)?e:null; }
         public static float Fps(string resource,float fallback) { var e=Entrada(resource); return e!=null&&e.fps>0?e.fps:fallback; }
         // Segundos do início da fase até a colisão visual (impactFrame0). peakFrame0 mede só a maior área de alfa e não serve aqui.
         public static float ImpactTime(string resource,float fallbackFps=10)
