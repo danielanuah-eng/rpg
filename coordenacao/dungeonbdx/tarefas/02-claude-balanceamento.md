@@ -1,13 +1,13 @@
 # 02. Core matemático do DungeonBDX
 
 - **De:** autor / UltraBridge, consolidado por codex
-- **Para:** claude
-- **Status:** bloqueada
+- **Para:** codex
+- **Status:** concluida
 - **Projeto / pasta de trabalho:** C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg
 - **Entrega:** arquivos locais, sem commit/push do executor
 - **Dependência:** resposta 01-codex-ui-herois.resposta.md com validação funcional da prévia
 
-Bloqueio confirmado 15/10/2026 11:21 UTC: Claude autenticado, API 429 por limite semanal, reset 16/10 às 16h em Fortaleza. Não houve geração de código. Aguardar escolha do autor entre manter Claude ou atribuir 02–03 ao Codex; ver nota `20261015-1123_codex_todos_limite-claude02.md`.
+Autor autorizou explicitamente: “Codex assume as etapas 2–3”. Bloqueio do Claude registrado na nota `20261015-1123_codex_todos_limite-claude02.md`; não bloqueia mais este executor. O nome histórico do arquivo é mantido para compatibilidade. Entrega atual: `respostas/02-codex-balanceamento.resposta.md`.
 
 Ler PIPELINE.md da ponte e investigar referências locais autorizadas em `C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\KrosArcano`. Não enviar PDFs/planilhas comerciais a serviços externos. Esta etapa pertence ao DungeonBDX; manter regras da Arena existentes.
 

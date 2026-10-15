@@ -2,6 +2,10 @@ param([switch]$Check)
 $ErrorActionPreference = 'Stop'
 $dungeonRepo = Split-Path (Split-Path $PSScriptRoot -Parent) -Parent
 $dungeonWorktree = Join-Path $dungeonRepo 'tmp/dungeonbdx-step1-git'
+$dungeonCurrentState = Get-Content -LiteralPath (Join-Path $dungeonRepo 'coordenacao/dungeonbdx/estado.codex.json') -Raw | ConvertFrom-Json
+if (($dungeonCurrentState.etapas | Where-Object { $_.id -eq 2 }).responsavel -ne 'Claude') {
+    throw 'O autor atribuiu as etapas 2-3 ao Codex. Nao iniciar outro executor Claude neste worktree.'
+}
 $dungeonClaude = Get-Command claude -ErrorAction SilentlyContinue
 if (-not $dungeonClaude) { throw 'Claude CLI ausente. Instale o CLI oficial antes de iniciar a etapa 2.' }
 $dungeonClaudePath = $dungeonClaude.Source

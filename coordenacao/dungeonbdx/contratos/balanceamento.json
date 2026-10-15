@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "implementation": "DungeonBDX.Combat",
+  "owner": "Codex; autor reassigned stages 2-3 on 2026-10-15",
+  "status": "validated-core-28-of-28-unity-editmode",
+  "units": { "damage": "integer health points", "armor": "armor score", "ratios": "basis points (10000 = 100%)", "turn": "one authoritative actor turn, shared with owned summons" },
+  "caps": {
+    "Basis": 10000, "Dice": 6, "Rerolls": 1, "BasePower": 12, "FlatDamage": 8,
+    "DamageBonus": 5000, "ModifierCount": 16, "ArmorSoft": 50, "ArmorHard": 150,
+    "Mitigation": 6000, "Actions": 3, "DamagePerAction": 30, "DamagePerTurn": 60,
+    "HealingPerAction": 12, "HealingPerTurn": 18, "ShieldPerAction": 8,
+    "ShieldPerTurn": 12, "ShieldCapacity": 12, "HealthCapacity": 200
+  },
+  "formulas": {
+    "attack": "faces 1-2 miss; 3-5 hit; 6 hit + exactly 1 extra point; no exploding dice",
+    "rerolls": "reroll a miss at most once per base die; replace its result; hits/criticals never trigger another roll",
+    "modifiers": "sum up to 16 signed flat and percentage modifiers in int64; clamp totals to [-8,8] and [-5000,5000] once; order independent",
+    "raw": "if hits=0 then 0; else clamp(floor(max(0,clamp(power,0,12)+hits+criticals+flat)*(10000+bonus)/10000),0,30)",
+    "armor": "a=max(0,clamp(armor,0,150)-clamp(penetration,0,150)); q=4*a if a<=50 else 200+(a-50)",
+    "mitigation": "clamp(floor(q*10000/(q+200))+resistanceBasisPoints,0,6000)",
+    "budget": "grant=min(requestedRaw,actionDamageRemaining,ownerTurnDamageRemaining), charged before mitigation; zero granted stays zero",
+    "final": "grant=0 => 0; otherwise ceil(grant*(10000-mitigation)/10000); armor cannot reduce a positive grant below 1",
+    "shield": "separate finite pool of at most 12 points; absorbing damage does not refund the source budget",
+    "support": "healing/shield grants have independent shared action/turn limits; overheal/unused shields do not refund spending"
+  },
+  "probabilities": {
+    "oneDieNoReroll": { "hit": "2/3", "critical": "1/6", "expectedPoints": "5/6", "power6NoArmorExpectedRaw": "29/6" },
+    "oneDieOneMissReroll": { "hit": "8/9", "critical": "2/9", "expectedPoints": "10/9", "power6NoArmorExpectedRaw": "58/9" },
+    "sixDiceAllCriticalNoReroll": "(1/6)^6; all criticals still produce only 12 points and at most 30 raw",
+    "rollCount": "at most 12 accepted die faces per attack; criticals add none; RNG rejection of excess uint values is not an extra game die"
+  },
+  "rng": { "algorithm": "SplitMix64 upper uint32, unsigned unchecked arithmetic, d6 rejection sampling values<4", "seed": "uint64, including 0", "saveState": "persist ulong State after each command; constructor restores it exactly", "authority": "server owns seed/state in online mode; determinism is not client authorization" },
+  "examples": [
+    { "power": 6, "normalHits": 1, "criticals": 0, "armor": 0, "raw": 7, "damage": 7 },
+    { "power": 6, "normalHits": 0, "criticals": 1, "armor": 50, "raw": 8, "mitigationBasisPoints": 5000, "damage": 4 },
+    { "power": 12, "normalHits": 0, "criticals": 6, "flat": 8, "bonusBasisPoints": 5000, "armor": 150, "raw": 30, "mitigationBasisPoints": 6000, "damage": 12 }
+  ],
+  "invariants": [
+    "All damage families and targets of an action share one ActionBudget; all owned entities share one TurnBudget.",
+    "One open action at a time; closing/end-turn invalidates old handles. No refund, reset or extra-AP API.",
+    "At most 3 paid actions, 60 outgoing raw, 18 healing and 12 granted shielding per owner turn.",
+    "AOE target iteration must be stable. Iteration order can distribute the fixed budget but never duplicate it.",
+    "Core uses integers, no floats, UnityEngine or Runtime/UI references; caps are mandatory and cannot be disabled by campaign modules.",
+    "Caller/server owns actor identity, turn lifecycle, targeting and commands. New TurnBudget construction is trusted engine work, not an anti-cheat gate."
+  ],
+  "worstBuild": "6 critical dice + power12 + flat8 + bonus50% requests 48 and is capped at 30/action, 60/turn. Multiple projectiles, AOE, pets, dots and reactions consume that same owner budget. With 60% mitigation at most 12/action from a 30 grant; no recursive crit or percent product. Rounding each small grant upward still cannot exceed granted raw.",
+  "referencesLocal": [
+    { "file": "KrosArcano/arcadia_quest_infer_livro_de_regras_arcadia_ques_109200.pdf", "pages": [8], "finding": "Reference uses defense dice and hero cards; DungeonBDX defines its own bounded armor score instead of copying card values." },
+    { "file": "KrosArcano/arcadia_quest_manuais_de_dragoes_a4_resum_244142.pdf", "pages": [2,22], "finding": "Dragon encounter objectives and limited scenario defense resources inform modular encounter contracts, not copied hero abilities." }
+  ],
+  "limits": "Mathematical invariants, not a claim of final PvP balance. Hero conversion and skills belong to stage 3; playable scene/HUD combat integration belongs to later gates. Native multiplayer/anti-cheat not implemented."
+}

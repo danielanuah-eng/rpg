@@ -1,0 +1,6 @@
+{
+  "name": "DungeonBDX.Combat.Tests",
+  "references": ["DungeonBDX.Combat"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

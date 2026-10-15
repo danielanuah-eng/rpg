@@ -1,0 +1,20 @@
+{
+  "stage": 2,
+  "owner": "Codex, authorized reassignment",
+  "unity": "6000.6.4f1",
+  "testResult": {
+    "result": "Passed",
+    "total": "28",
+    "passed": "28",
+    "failed": "0"
+  },
+  "capsVerified": 19,
+  "files": {
+    "ArenaTaticaUnity/Assets/DungeonBDX/Combat/DungeonCombat.cs": "d858f05af5f81776fd9ab6d96bc5021ac750a06e431283dc39c46ca45b2abc0c",
+    "ArenaTaticaUnity/Assets/DungeonBDX/Combat/DungeonTurnBudget.cs": "e952331ab70d7acafaa0442fe97827ef673bfa5de97c5fc997dbd82c6473e19c",
+    "ArenaTaticaUnity/Assets/DungeonBDX/Tests/Combat/DungeonBudgetTests.cs": "348003cd49b60984c5efe41f93bb9e6d703e60ce68d05aa264ffaac87aec85f3",
+    "ArenaTaticaUnity/Assets/DungeonBDX/Tests/Combat/DungeonCombatTests.cs": "b41d2d6bf864c29b536c96541e8315a2a7d1cce6855d892f8365545c1e8d8097",
+    "coordenacao/dungeonbdx/entregas/02-core/editmode.xml": "7af5135497d4dfe3aa55bd5191bd9c1989a6212665e0f3e4553c7b8a74c5fa60"
+  },
+  "scope": "pure numeric core; actor pools/pets/AOE integration tested in stage 3"
+}

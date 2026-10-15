@@ -1,0 +1,7 @@
+{
+  "name": "DungeonBDX.Combat",
+  "rootNamespace": "DungeonBDX.Combat",
+  "references": [],
+  "autoReferenced": true,
+  "noEngineReferences": true
+}

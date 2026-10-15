@@ -2,16 +2,56 @@
   "projeto": "DungeonBDX",
   "dataLocal": "2026-10-15",
   "branch": "codex/dungeonbdx-step1",
-  "etapaAtual": 2,
+  "etapaAtual": 3,
   "etapas": [
-    { "id": 1, "responsavel": "Codex", "estado": "concluida-previa-funcional", "testes": { "total": 165, "aprovados": 165, "falhas": 0, "reverificacaoUI": "11/11 apos ajustes visuais e captura" }, "herois": 28, "buildWindows": "aprovado; Development Build; cerca de 1.60 GB", "visual": "capturas URP conferidas; paleta provisoria; referencia nao anexada" },
-    { "id": 2, "responsavel": "Claude", "estado": "bloqueada-limite-semanal-claude", "branch": "codex/dungeonbdx-step2", "impedimento": "API 429 usage_limit_reached; seven_day utilization=1; overage out_of_credits", "resetLocal": "2026-10-16T16:00:00-03:00", "autenticacao": "confirmada apos aviso pronto do autor; diagnostico real retornou true", "execucao": "tentativa CLI em 2026-10-15T11:21:55Z rejeitada antes de gerar codigo; zero tokens/custo segundo resultado", "decisaoPendente": "autor escolhe manter Claude ou atribuir etapas 2-3 ao Codex", "iniciar": "ArenaTaticaUnity/CONTINUAR-DUNGEONBDX.cmd" },
-    { "id": 3, "responsavel": "Claude", "estado": "aguardando-gate-2" },
-    { "id": 4, "responsavel": "Antigravity", "estado": "aguardando-gate-3" },
-    { "id": 5, "responsavel": "Codex", "estado": "aguardando-gate-4" },
-    { "id": 6, "responsavel": "Codex + Antigravity", "estado": "aguardando-gate-5" }
+    {
+      "id": 1,
+      "responsavel": "Codex",
+      "estado": "concluida-previa-funcional",
+      "testes": {
+        "total": 165,
+        "aprovados": 165,
+        "falhas": 0,
+        "reverificacaoUI": "11/11 apos ajustes visuais e captura"
+      },
+      "herois": 28,
+      "buildWindows": "aprovado; Development Build; cerca de 1.60 GB",
+      "visual": "capturas URP conferidas; paleta provisoria; referencia nao anexada"
+    },
+    {
+      "id": 2,
+      "responsavel": "Codex",
+      "estado": "validada-28-28-unity",
+      "branch": "codex/dungeonbdx-step2",
+      "impedimento": null,
+      "resetLocal": "2026-10-16T16:00:00-03:00",
+      "autenticacao": "confirmada apos aviso pronto do autor; diagnostico real retornou true",
+      "execucao": "Core proprio implementado; validacao real Unity em andamento",
+      "decisaoPendente": "resolvida: autor autorizou Codex assumir 2-3",
+      "iniciar": "ArenaTaticaUnity/CONTINUAR-DUNGEONBDX.cmd"
+    },
+    {
+      "id": 3,
+      "responsavel": "Codex",
+      "estado": "em-implementacao"
+    },
+    {
+      "id": 4,
+      "responsavel": "Antigravity",
+      "estado": "aguardando-gate-3"
+    },
+    {
+      "id": 5,
+      "responsavel": "Codex",
+      "estado": "aguardando-gate-4"
+    },
+    {
+      "id": 6,
+      "responsavel": "Codex + Antigravity",
+      "estado": "aguardando-gate-5"
+    }
   ],
   "servicosOnline": "nao implementados nesta etapa",
   "androidNativo": "nao compilado; QA visual offscreen no Windows em 1600x900 e 900x1080; teste fisico pendente",
-  "agentesExternos": "Claude autenticado, bloqueado por cota semanal. Processo interativo encerrado apos usuario confirmar janela fechada; tentativa headless terminou com 429, sem entrega. Antigravity aguarda gate 3."
+  "agentesExternos": "Autor atribuiu 2-3 ao Codex. Nenhum Claude ativo. Antigravity aguarda gate 3."
 }

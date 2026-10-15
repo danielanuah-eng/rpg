@@ -1,11 +1,13 @@
 # 03. Pool de habilidades
 
 - **De:** autor / UltraBridge, consolidado por codex
-- **Para:** claude
-- **Status:** bloqueada
+- **Para:** codex
+- **Status:** em andamento
 - **Projeto / pasta de trabalho:** C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg
 - **Entrega:** arquivos locais, sem commit/push do executor
 - **Dependência:** 02 revisada por Codex; contrato de balanceamento versionado
+
+Autor autorizou explicitamente: “Codex assume as etapas 2–3”. Nome histórico do arquivo preservado; resposta atual em `respostas/03-codex-skills.resposta.md`. Manter gate 02 antes de implementação.
 
 Pool AQ-inspired com identidade própria DungeonBDX: pistoleiros, magos versáteis e domadores de dragões, adaptando os heróis Arena por ID. Não converter os atributos atuais silenciosamente nem alterar os heróis da Arena.
 
