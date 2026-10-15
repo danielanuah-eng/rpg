@@ -1,0 +1,6 @@
+{
+  "name": "DungeonBDX.Skills.Tests",
+  "references": ["DungeonBDX.Skills", "DungeonBDX.Combat", "ArenaTatica.Runtime"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

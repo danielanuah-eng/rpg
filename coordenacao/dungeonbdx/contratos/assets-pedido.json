@@ -1,0 +1,835 @@
+{
+  "version": "1.0.0",
+  "status": "REQUEST-ONLY; stage 4 not delivered",
+  "inputVersions": {
+    "balance": "1.0.0",
+    "skills": "1.0.0"
+  },
+  "outputDirectory": "coordenacao/dungeonbdx/entregas/04-assets",
+  "style": {
+    "direction": "DungeonBDX original stylized dark fantasy; charcoal/slate/bronze/wine provisional palette; readable shapes on mobile",
+    "referenceImage": "not attached; final palette fidelity pending",
+    "references": "Arena heroes by source ID; no reuse of withdrawn Ciantia frontal TCG image or locked expansion content"
+  },
+  "coordinates": {
+    "cellSizeMeters": 1,
+    "unityGroundPlane": "XZ",
+    "up": "+Y",
+    "forward": "+Z",
+    "scale": "1 unit = 1 meter",
+    "tilePivot": "floor center",
+    "sockets": "N/E/S/W edge centers; state dimensions, open/closed ports and collider in manifest"
+  },
+  "newHeroes": [
+    {
+      "id": "lyra-faisca",
+      "name": "Lyra Faísca",
+      "archetype": "Gunslinger",
+      "health": 44,
+      "armor": 10,
+      "movement": 4,
+      "actions": 3,
+      "skillIds": [
+        "dbdx.pistola.duplo",
+        "dbdx.pistola.ricochete",
+        "dbdx.pistola.mira",
+        "dbdx.pistola.ruptura",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.lyra-faisca",
+      "modelId": "dbdx.hero.lyra-faisca",
+      "assetStatus": "requested-stage-4",
+      "appearanceBrief": "Adult gunslinger with paired modular sidearms, coat silhouette and bronze/wine accents; original design",
+      "clips": [
+        "idle",
+        "move",
+        "cast",
+        "hurt",
+        "defeat",
+        "hover-select"
+      ],
+      "status": "model/card/animation requested"
+    },
+    {
+      "id": "orion-prisma",
+      "name": "Orion Prisma",
+      "archetype": "Arcanist",
+      "health": 42,
+      "armor": 8,
+      "movement": 3,
+      "actions": 3,
+      "skillIds": [
+        "dbdx.arcano.lanca",
+        "dbdx.arcano.geada",
+        "dbdx.arcano.egide",
+        "dbdx.arcano.transposicao",
+        "dbdx.arcano.pulso",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.orion-prisma",
+      "modelId": "dbdx.hero.orion-prisma",
+      "assetStatus": "requested-stage-4",
+      "appearanceBrief": "Versatile adult arcane mage with a prism focus and readable hand gestures for damage, defense, heal and teleport",
+      "clips": [
+        "idle",
+        "move",
+        "cast",
+        "hurt",
+        "defeat",
+        "hover-select"
+      ],
+      "status": "model/card/animation requested"
+    },
+    {
+      "id": "vaelis-vinculo",
+      "name": "Vaelis do Vínculo",
+      "archetype": "DragonBinder",
+      "health": 48,
+      "armor": 14,
+      "movement": 3,
+      "actions": 3,
+      "skillIds": [
+        "dbdx.draco.invocar",
+        "dbdx.draco.comandar",
+        "dbdx.draco.sopro",
+        "dbdx.draco.pacto",
+        "dbdx.draco.recolher",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.vaelis-vinculo",
+      "modelId": "dbdx.hero.vaelis-vinculo",
+      "assetStatus": "requested-stage-4",
+      "appearanceBrief": "Adult dragon binder with rune harness and distinct companion-command gestures; original design",
+      "clips": [
+        "idle",
+        "move",
+        "cast",
+        "hurt",
+        "defeat",
+        "hover-select"
+      ],
+      "status": "model/card/animation requested"
+    }
+  ],
+  "adaptedArenaHeroes": [
+    {
+      "id": "alvyr",
+      "archetype": "Support",
+      "skillIds": [
+        "dbdx.arcano.lanca",
+        "dbdx.arcano.egide",
+        "dbdx.arcano.pulso",
+        "dbdx.basico.revigorar",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.alvyr"
+    },
+    {
+      "id": "arqueiro-jack",
+      "archetype": "Ranger",
+      "skillIds": [
+        "dbdx.pistola.duplo",
+        "dbdx.pistola.ricochete",
+        "dbdx.pistola.mira",
+        "dbdx.pistola.ruptura",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.arqueiro-jack"
+    },
+    {
+      "id": "asamyh",
+      "archetype": "Support",
+      "skillIds": [
+        "dbdx.arcano.lanca",
+        "dbdx.arcano.egide",
+        "dbdx.arcano.pulso",
+        "dbdx.basico.revigorar",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.asamyh"
+    },
+    {
+      "id": "baltazar",
+      "archetype": "Support",
+      "skillIds": [
+        "dbdx.arcano.lanca",
+        "dbdx.arcano.egide",
+        "dbdx.arcano.pulso",
+        "dbdx.basico.revigorar",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.baltazar"
+    },
+    {
+      "id": "brumak",
+      "archetype": "Vanguard",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.baluarte",
+        "dbdx.basico.avanco",
+        "dbdx.basico.revigorar"
+      ],
+      "cardId": "dbdx.card.brumak"
+    },
+    {
+      "id": "cheiro-pneu",
+      "archetype": "Gunslinger",
+      "skillIds": [
+        "dbdx.pistola.duplo",
+        "dbdx.pistola.ricochete",
+        "dbdx.pistola.mira",
+        "dbdx.pistola.ruptura",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.cheiro-pneu"
+    },
+    {
+      "id": "ciantia",
+      "archetype": "DragonBinder",
+      "skillIds": [
+        "dbdx.draco.invocar",
+        "dbdx.draco.comandar",
+        "dbdx.draco.sopro",
+        "dbdx.draco.pacto",
+        "dbdx.draco.recolher",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.ciantia"
+    },
+    {
+      "id": "colosso",
+      "archetype": "Vanguard",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.baluarte",
+        "dbdx.basico.avanco",
+        "dbdx.basico.revigorar"
+      ],
+      "cardId": "dbdx.card.colosso"
+    },
+    {
+      "id": "damian",
+      "archetype": "Gunslinger",
+      "skillIds": [
+        "dbdx.pistola.duplo",
+        "dbdx.pistola.ricochete",
+        "dbdx.pistola.mira",
+        "dbdx.pistola.ruptura",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.damian"
+    },
+    {
+      "id": "devon",
+      "archetype": "Vanguard",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.baluarte",
+        "dbdx.basico.avanco",
+        "dbdx.basico.revigorar"
+      ],
+      "cardId": "dbdx.card.devon"
+    },
+    {
+      "id": "diantus",
+      "archetype": "Skirmisher",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.avanco",
+        "dbdx.arcano.transposicao",
+        "dbdx.pistola.mira"
+      ],
+      "cardId": "dbdx.card.diantus"
+    },
+    {
+      "id": "domador-de-correntes",
+      "archetype": "Arcanist",
+      "skillIds": [
+        "dbdx.arcano.lanca",
+        "dbdx.arcano.geada",
+        "dbdx.arcano.egide",
+        "dbdx.arcano.transposicao",
+        "dbdx.arcano.pulso",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.domador-de-correntes"
+    },
+    {
+      "id": "edgar",
+      "archetype": "Arcanist",
+      "skillIds": [
+        "dbdx.arcano.lanca",
+        "dbdx.arcano.geada",
+        "dbdx.arcano.egide",
+        "dbdx.arcano.transposicao",
+        "dbdx.arcano.pulso",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.edgar"
+    },
+    {
+      "id": "ezequiela",
+      "archetype": "Arcanist",
+      "skillIds": [
+        "dbdx.arcano.lanca",
+        "dbdx.arcano.geada",
+        "dbdx.arcano.egide",
+        "dbdx.arcano.transposicao",
+        "dbdx.arcano.pulso",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.ezequiela"
+    },
+    {
+      "id": "gryvro",
+      "archetype": "Skirmisher",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.avanco",
+        "dbdx.arcano.transposicao",
+        "dbdx.pistola.mira"
+      ],
+      "cardId": "dbdx.card.gryvro"
+    },
+    {
+      "id": "guardiao-de-musgo",
+      "archetype": "Vanguard",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.baluarte",
+        "dbdx.basico.avanco",
+        "dbdx.basico.revigorar"
+      ],
+      "cardId": "dbdx.card.guardiao-de-musgo"
+    },
+    {
+      "id": "nixira",
+      "archetype": "Ranger",
+      "skillIds": [
+        "dbdx.pistola.duplo",
+        "dbdx.pistola.ricochete",
+        "dbdx.pistola.mira",
+        "dbdx.pistola.ruptura",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.nixira"
+    },
+    {
+      "id": "ogro-de-pedra",
+      "archetype": "Vanguard",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.baluarte",
+        "dbdx.basico.avanco",
+        "dbdx.basico.revigorar"
+      ],
+      "cardId": "dbdx.card.ogro-de-pedra"
+    },
+    {
+      "id": "ossyro",
+      "archetype": "DragonBinder",
+      "skillIds": [
+        "dbdx.draco.invocar",
+        "dbdx.draco.comandar",
+        "dbdx.draco.sopro",
+        "dbdx.draco.pacto",
+        "dbdx.draco.recolher",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.ossyro"
+    },
+    {
+      "id": "perry",
+      "archetype": "Skirmisher",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.avanco",
+        "dbdx.arcano.transposicao",
+        "dbdx.pistola.mira"
+      ],
+      "cardId": "dbdx.card.perry"
+    },
+    {
+      "id": "principe-kellen",
+      "archetype": "Arcanist",
+      "skillIds": [
+        "dbdx.arcano.lanca",
+        "dbdx.arcano.geada",
+        "dbdx.arcano.egide",
+        "dbdx.arcano.transposicao",
+        "dbdx.arcano.pulso",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.principe-kellen"
+    },
+    {
+      "id": "raizor",
+      "archetype": "Vanguard",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.baluarte",
+        "dbdx.basico.avanco",
+        "dbdx.basico.revigorar"
+      ],
+      "cardId": "dbdx.card.raizor"
+    },
+    {
+      "id": "rei-bobett",
+      "archetype": "Vanguard",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.baluarte",
+        "dbdx.basico.avanco",
+        "dbdx.basico.revigorar"
+      ],
+      "cardId": "dbdx.card.rei-bobett"
+    },
+    {
+      "id": "talyssa",
+      "archetype": "Vanguard",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.baluarte",
+        "dbdx.basico.avanco",
+        "dbdx.basico.revigorar"
+      ],
+      "cardId": "dbdx.card.talyssa"
+    },
+    {
+      "id": "tchu-tcha",
+      "archetype": "Vanguard",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.baluarte",
+        "dbdx.basico.avanco",
+        "dbdx.basico.revigorar"
+      ],
+      "cardId": "dbdx.card.tchu-tcha"
+    },
+    {
+      "id": "teantha",
+      "archetype": "Skirmisher",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.avanco",
+        "dbdx.arcano.transposicao",
+        "dbdx.pistola.mira"
+      ],
+      "cardId": "dbdx.card.teantha"
+    },
+    {
+      "id": "vespa-cinzenta",
+      "archetype": "Skirmisher",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.avanco",
+        "dbdx.arcano.transposicao",
+        "dbdx.pistola.mira"
+      ],
+      "cardId": "dbdx.card.vespa-cinzenta"
+    },
+    {
+      "id": "viuva-da-agulha",
+      "archetype": "Skirmisher",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.avanco",
+        "dbdx.arcano.transposicao",
+        "dbdx.pistola.mira"
+      ],
+      "cardId": "dbdx.card.viuva-da-agulha"
+    }
+  ],
+  "companion": {
+    "id": "dbdx.draco.companheiro",
+    "modelId": "dbdx.draco.companheiro",
+    "ownerLimit": 1,
+    "health": 12,
+    "clips": [
+      "idle",
+      "move",
+      "claw",
+      "breath",
+      "summon",
+      "recall",
+      "hurt",
+      "defeat"
+    ],
+    "notes": "No independent turn; never animation-trigger gameplay damage twice. Commands use owner budget."
+  },
+  "skills": [
+    {
+      "id": "dbdx.arcano.egide",
+      "name": "Égide arcana",
+      "effects": [
+        "Shield"
+      ],
+      "target": "Ally",
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "steps": 0,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.arcano.egide",
+      "soundId": "dbdx.sfx.arcano.egide",
+      "iconId": "dbdx.icon.arcano.egide"
+    },
+    {
+      "id": "dbdx.arcano.geada",
+      "name": "Geada convergente",
+      "effects": [
+        "Attack",
+        "Slow"
+      ],
+      "target": "Enemy",
+      "maxTargets": 3,
+      "areaRadius": 1,
+      "steps": 0,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.arcano.geada",
+      "soundId": "dbdx.sfx.arcano.geada",
+      "iconId": "dbdx.icon.arcano.geada"
+    },
+    {
+      "id": "dbdx.arcano.lanca",
+      "name": "Lança prismática",
+      "effects": [
+        "Attack"
+      ],
+      "target": "Enemy",
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "steps": 0,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.arcano.lanca",
+      "soundId": "dbdx.sfx.arcano.lanca",
+      "iconId": "dbdx.icon.arcano.lanca"
+    },
+    {
+      "id": "dbdx.arcano.pulso",
+      "name": "Pulso vital",
+      "effects": [
+        "Heal"
+      ],
+      "target": "Ally",
+      "maxTargets": 2,
+      "areaRadius": 1,
+      "steps": 0,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.arcano.pulso",
+      "soundId": "dbdx.sfx.arcano.pulso",
+      "iconId": "dbdx.icon.arcano.pulso"
+    },
+    {
+      "id": "dbdx.arcano.transposicao",
+      "name": "Transposição",
+      "effects": [
+        "Move"
+      ],
+      "target": "Destination",
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "steps": 2,
+      "requiresPet": false,
+      "teleport": true,
+      "animationId": "dbdx.anim.arcano.transposicao",
+      "soundId": "dbdx.sfx.arcano.transposicao",
+      "iconId": "dbdx.icon.arcano.transposicao"
+    },
+    {
+      "id": "dbdx.basico.avanco",
+      "name": "Avanço protegido",
+      "effects": [
+        "Shield",
+        "Move"
+      ],
+      "target": "Destination",
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "steps": 2,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.basico.avanco",
+      "soundId": "dbdx.sfx.basico.avanco",
+      "iconId": "dbdx.icon.basico.avanco"
+    },
+    {
+      "id": "dbdx.basico.baluarte",
+      "name": "Baluarte",
+      "effects": [
+        "Shield",
+        "Armor"
+      ],
+      "target": "Self",
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "steps": 0,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.basico.baluarte",
+      "soundId": "dbdx.sfx.basico.baluarte",
+      "iconId": "dbdx.icon.basico.baluarte"
+    },
+    {
+      "id": "dbdx.basico.golpe",
+      "name": "Golpe firme",
+      "effects": [
+        "Attack"
+      ],
+      "target": "Enemy",
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "steps": 0,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.basico.golpe",
+      "soundId": "dbdx.sfx.basico.golpe",
+      "iconId": "dbdx.icon.basico.golpe"
+    },
+    {
+      "id": "dbdx.basico.revigorar",
+      "name": "Revigorar",
+      "effects": [
+        "Heal"
+      ],
+      "target": "Ally",
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "steps": 0,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.basico.revigorar",
+      "soundId": "dbdx.sfx.basico.revigorar",
+      "iconId": "dbdx.icon.basico.revigorar"
+    },
+    {
+      "id": "dbdx.draco.comandar",
+      "name": "Comando de garra",
+      "effects": [
+        "Attack"
+      ],
+      "target": "Enemy",
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "steps": 0,
+      "requiresPet": true,
+      "teleport": false,
+      "animationId": "dbdx.anim.draco.comandar",
+      "soundId": "dbdx.sfx.draco.comandar",
+      "iconId": "dbdx.icon.draco.comandar"
+    },
+    {
+      "id": "dbdx.draco.invocar",
+      "name": "Vínculo dracônico",
+      "effects": [
+        "Summon"
+      ],
+      "target": "Destination",
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "steps": 0,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.draco.invocar",
+      "soundId": "dbdx.sfx.draco.invocar",
+      "iconId": "dbdx.icon.draco.invocar"
+    },
+    {
+      "id": "dbdx.draco.pacto",
+      "name": "Pacto protetor",
+      "effects": [
+        "Heal",
+        "Shield"
+      ],
+      "target": "Ally",
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "steps": 0,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.draco.pacto",
+      "soundId": "dbdx.sfx.draco.pacto",
+      "iconId": "dbdx.icon.draco.pacto"
+    },
+    {
+      "id": "dbdx.draco.recolher",
+      "name": "Recolher vínculo",
+      "effects": [
+        "Heal",
+        "Recall"
+      ],
+      "target": "Self",
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "steps": 0,
+      "requiresPet": true,
+      "teleport": false,
+      "animationId": "dbdx.anim.draco.recolher",
+      "soundId": "dbdx.sfx.draco.recolher",
+      "iconId": "dbdx.icon.draco.recolher"
+    },
+    {
+      "id": "dbdx.draco.sopro",
+      "name": "Sopro em leque",
+      "effects": [
+        "Attack"
+      ],
+      "target": "Enemy",
+      "maxTargets": 3,
+      "areaRadius": 1,
+      "steps": 0,
+      "requiresPet": true,
+      "teleport": false,
+      "animationId": "dbdx.anim.draco.sopro",
+      "soundId": "dbdx.sfx.draco.sopro",
+      "iconId": "dbdx.icon.draco.sopro"
+    },
+    {
+      "id": "dbdx.pistola.duplo",
+      "name": "Disparo duplo",
+      "effects": [
+        "Attack"
+      ],
+      "target": "Enemy",
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "steps": 0,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.pistola.duplo",
+      "soundId": "dbdx.sfx.pistola.duplo",
+      "iconId": "dbdx.icon.pistola.duplo"
+    },
+    {
+      "id": "dbdx.pistola.mira",
+      "name": "Mira estável",
+      "effects": [
+        "Aim"
+      ],
+      "target": "Self",
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "steps": 0,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.pistola.mira",
+      "soundId": "dbdx.sfx.pistola.mira",
+      "iconId": "dbdx.icon.pistola.mira"
+    },
+    {
+      "id": "dbdx.pistola.ricochete",
+      "name": "Ricochete",
+      "effects": [
+        "Attack"
+      ],
+      "target": "Enemy",
+      "maxTargets": 2,
+      "areaRadius": 1,
+      "steps": 0,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.pistola.ricochete",
+      "soundId": "dbdx.sfx.pistola.ricochete",
+      "iconId": "dbdx.icon.pistola.ricochete"
+    },
+    {
+      "id": "dbdx.pistola.ruptura",
+      "name": "Tiro de ruptura",
+      "effects": [
+        "Attack"
+      ],
+      "target": "Enemy",
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "steps": 0,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.pistola.ruptura",
+      "soundId": "dbdx.sfx.pistola.ruptura",
+      "iconId": "dbdx.icon.pistola.ruptura"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "cripta-de-bronze",
+      "status": "planned; not mapped",
+      "theme": "Tombs, oxidized bronze, worn stone, vaulted passages",
+      "tileRequests": [
+        "floor",
+        "wall",
+        "corner",
+        "door-open",
+        "door-closed",
+        "stair",
+        "pillar",
+        "rubble",
+        "trap"
+      ],
+      "musicId": "dbdx.bgm.cripta-de-bronze",
+      "ambientId": "dbdx.amb.cripta-de-bronze"
+    },
+    {
+      "id": "biblioteca-do-crepusculo",
+      "status": "planned; not mapped",
+      "theme": "Arcane library, suspended runes, shelves and fractured prisms",
+      "tileRequests": [
+        "floor",
+        "wall",
+        "corner",
+        "door-open",
+        "door-closed",
+        "bridge",
+        "shelf",
+        "crystal",
+        "trap"
+      ],
+      "musicId": "dbdx.bgm.biblioteca-do-crepusculo",
+      "ambientId": "dbdx.amb.biblioteca-do-crepusculo"
+    },
+    {
+      "id": "ninho-do-eclipse",
+      "status": "planned; not mapped",
+      "theme": "Obsidian dragon roost, cracked terraces, embers and eggs",
+      "tileRequests": [
+        "floor",
+        "wall",
+        "corner",
+        "door-open",
+        "door-closed",
+        "ledge",
+        "nest",
+        "lava-edge",
+        "trap"
+      ],
+      "musicId": "dbdx.bgm.ninho-do-eclipse",
+      "ambientId": "dbdx.amb.ninho-do-eclipse"
+    }
+  ],
+  "delivery": {
+    "models": [
+      "editable .blend",
+      "FBX or glTF",
+      "preview images"
+    ],
+    "textures": "Editable sources + PNG/TGA; dimensions, alpha measurement, color space, normal convention, atlas/material links",
+    "animations": "clip ID, duration, loop, root-motion mode, impact event and cancellation timing; gameplay remains exactly-once from engine",
+    "audio": "Original/licensed WAV masters; distinct SFX per skill, loopable BGM and ambience per scenario; sample rate/channels/loop points/loudness documented",
+    "cards": "Editable custom hero template plus source-ID/skin bindings for 31 profiles; bottom action bars for later HUD integration",
+    "manifest": "Every file with SHA256, provenance/license/holder, dimensions/triangles/LODs/materials/sockets/colliders and linked IDs",
+    "platforms": "Measured PC/mobile memory/triangles/draw calls/texture and dynamic-light budget; profiling evidence, not only declared budgets",
+    "licensing": "Own or licensed exports; record Unity Store URL/license/holder/receipt. No paid purchase without explicit spending authorization."
+  },
+  "budgetTargetsProvisional": {
+    "mobileHeroLod0Triangles": 18000,
+    "mobileHeroLod1Triangles": 8000,
+    "mobileHeroLod2Triangles": 2000,
+    "mobileTextureMax": 2048,
+    "pcTextureMax": 4096,
+    "mobileShadowedRealtimeLights": 1,
+    "notes": "Targets to validate with actual exports/profiling; stage 4 must propose a bounded per-scene budget for stage 5."
+  },
+  "integration": "No assets or final soundtrack are claimed delivered here. Stage 5 waits for reviewed stage 4 files."
+}

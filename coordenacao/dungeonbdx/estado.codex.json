@@ -1,8 +1,8 @@
 {
   "projeto": "DungeonBDX",
   "dataLocal": "2026-10-15",
-  "branch": "codex/dungeonbdx-step1",
-  "etapaAtual": 3,
+  "branch": "main",
+  "etapaAtual": 4,
   "etapas": [
     {
       "id": 1,
@@ -21,24 +21,39 @@
     {
       "id": 2,
       "responsavel": "Codex",
-      "estado": "validada-28-28-unity",
+      "estado": "concluida-validada",
       "branch": "codex/dungeonbdx-step2",
-      "impedimento": null,
-      "resetLocal": "2026-10-16T16:00:00-03:00",
-      "autenticacao": "confirmada apos aviso pronto do autor; diagnostico real retornou true",
-      "execucao": "Core proprio implementado; validacao real Unity em andamento",
-      "decisaoPendente": "resolvida: autor autorizou Codex assumir 2-3",
-      "iniciar": "ArenaTaticaUnity/CONTINUAR-DUNGEONBDX.cmd"
+      "versao": "1.0.0",
+      "testes": {
+        "total": 28,
+        "aprovados": 28,
+        "falhas": 0
+      }
     },
     {
       "id": 3,
       "responsavel": "Codex",
-      "estado": "em-implementacao"
+      "estado": "concluida-dominio-skills-validado",
+      "branch": "codex/dungeonbdx-step3",
+      "versao": "1.0.0",
+      "skills": 18,
+      "perfisArena": 28,
+      "perfisNovos": 3,
+      "testes": {
+        "integrados": 218,
+        "skills": 25,
+        "core": 28,
+        "regressaoArenaUI": 165,
+        "falhas": 0
+      },
+      "integracaoCenaHUD": "etapas 5-6"
     },
     {
       "id": 4,
       "responsavel": "Antigravity",
-      "estado": "aguardando-gate-3"
+      "estado": "liberada-aguardando-ativacao",
+      "pedido": "contratos/assets-pedido.json",
+      "entregasRecebidas": 0
     },
     {
       "id": 5,
@@ -53,5 +68,7 @@
   ],
   "servicosOnline": "nao implementados nesta etapa",
   "androidNativo": "nao compilado; QA visual offscreen no Windows em 1600x900 e 900x1080; teste fisico pendente",
-  "agentesExternos": "Autor atribuiu 2-3 ao Codex. Nenhum Claude ativo. Antigravity aguarda gate 3."
+  "agentesExternos": "Nenhum executor externo ativo/confirmado. Autor atribuiu 2-3 ao Codex; 4 liberada para Antigravity.",
+  "decisaoAutor": "Codex assume as etapas 2-3 (2026-10-15)",
+  "previaWindows": "Build da etapa 1; fonte 2-3 compilada/testada no Editor, sem nova integracao de combate na cena/HUD"
 }

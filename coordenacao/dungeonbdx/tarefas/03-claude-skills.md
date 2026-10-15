@@ -2,7 +2,7 @@
 
 - **De:** autor / UltraBridge, consolidado por codex
 - **Para:** codex
-- **Status:** em andamento
+- **Status:** concluida
 - **Projeto / pasta de trabalho:** C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg
 - **Entrega:** arquivos locais, sem commit/push do executor
 - **Dependência:** 02 revisada por Codex; contrato de balanceamento versionado

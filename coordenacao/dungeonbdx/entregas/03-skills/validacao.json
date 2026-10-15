@@ -1,0 +1,43 @@
+{
+  "stage": 3,
+  "executor": "Codex, explicitly authorized reassignment",
+  "unity": "6000.6.4f1",
+  "tests": {
+    "result": "Passed",
+    "total": "218",
+    "passed": "218",
+    "failed": "0"
+  },
+  "components": {
+    "core": 28,
+    "skills": 25,
+    "arenaAndUI": 165
+  },
+  "skills": 18,
+  "arenaProfiles": 28,
+  "newProfiles": 3,
+  "sourceAndWorktreeEqual": true,
+  "projectSettingsRestoredToPreTestHash": true,
+  "files": {
+    "ArenaTaticaUnity/Assets/DungeonBDX/Combat/DungeonCombat.cs": "d858f05af5f81776fd9ab6d96bc5021ac750a06e431283dc39c46ca45b2abc0c",
+    "ArenaTaticaUnity/Assets/DungeonBDX/Combat/DungeonTurnBudget.cs": "e952331ab70d7acafaa0442fe97827ef673bfa5de97c5fc997dbd82c6473e19c",
+    "ArenaTaticaUnity/Assets/DungeonBDX/Skills/DungeonHeroProfiles.cs": "b291748e2cf386e73517e925d070d02241fc546bef0407b94dd383ed35651d20",
+    "ArenaTaticaUnity/Assets/DungeonBDX/Skills/DungeonSkillCatalog.cs": "70cfb4d14b971cb292934a05fe6eb6988f939c47a28d1ed6e5564b405c6f2845",
+    "ArenaTaticaUnity/Assets/DungeonBDX/Skills/DungeonSkillSession.cs": "3dbb3a918c921fd5bdfb05633adbcc49f97c6ba0a22b24b4e8c384aef8f152bc",
+    "ArenaTaticaUnity/Assets/DungeonBDX/Tests/Combat/DungeonBudgetTests.cs": "348003cd49b60984c5efe41f93bb9e6d703e60ce68d05aa264ffaac87aec85f3",
+    "ArenaTaticaUnity/Assets/DungeonBDX/Tests/Combat/DungeonCombatTests.cs": "b41d2d6bf864c29b536c96541e8315a2a7d1cce6855d892f8365545c1e8d8097",
+    "ArenaTaticaUnity/Assets/DungeonBDX/Tests/Skills/DungeonProfileTests.cs": "500351151f3f7421faf2b88d5bd87853a5f35d94a989dd53d16a7d9cbf2e4db3",
+    "ArenaTaticaUnity/Assets/DungeonBDX/Tests/Skills/DungeonSkillTests.cs": "4b2caebd699e9c805f85ac8e1dc45b90efa13633895428b4e18f137e2df88734",
+    "coordenacao/dungeonbdx/contratos/balanceamento.json": "cdea2b80021314198223df7f4cacfbe0226eef4e2cd04fda46232af3fcffb67c",
+    "coordenacao/dungeonbdx/contratos/skills.json": "48d228e95967a67e7e0b409d413a4c2d563c54ed291d1de92f2ea99e2a869a96",
+    "coordenacao/dungeonbdx/contratos/assets-pedido.json": "e4885e29681a2b9b9f04f55a3d238fa7660c3d383134bc17e445ec9d9ae0bc8b",
+    "coordenacao/dungeonbdx/entregas/03-skills/editmode.xml": "6de7682e306c9fbbdf656079155b2de8c86217fcd4a0accbc998c4f4a37add5a",
+    "ArenaTaticaUnity/Tools/export-dungeonbdx-contracts.ps1": "39938f485eed1c43a5516f8b8c51d6ad80c8d1013ea06241cc0fa642302569be"
+  },
+  "review": "DeepSeek mechanical review before selected-anchor correction; Codex reproduced the concern, reviewed final diff, and Unity final regression passed.",
+  "limits": [
+    "Domain engine only; preview scene/HUD combat integration belongs to stages 5-6.",
+    "Stage 4 model/VFX/SFX/music bindings are requests, not delivered assets.",
+    "No native mobile build, physical QA or stress test in this delivery."
+  ]
+}

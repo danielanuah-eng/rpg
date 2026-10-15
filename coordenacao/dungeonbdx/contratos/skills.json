@@ -1,0 +1,1112 @@
+{
+  "version": "1.0.0",
+  "balanceVersion": "1.0.0",
+  "executor": "Codex; reassignment explicitly authorized by author",
+  "schema": "dungeonbdx-skills-1",
+  "skills": [
+    {
+      "id": "dbdx.arcano.egide",
+      "name": "Égide arcana",
+      "family": "arcano",
+      "effects": [
+        "Shield"
+      ],
+      "target": "Ally",
+      "cost": 1,
+      "cooldownOwnerTurns": 1,
+      "minRange": 0,
+      "range": 3,
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "dice": 0,
+      "power": 0,
+      "penetration": 0,
+      "healing": 0,
+      "shield": 8,
+      "steps": 0,
+      "durationFutureOwnerTurns": 1,
+      "usesPerTurn": 1,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.arcano.egide",
+      "soundId": "dbdx.sfx.arcano.egide",
+      "iconId": "dbdx.icon.arcano.egide",
+      "budget": {
+        "noArmorNoBuffExpectedPerTarget": "0/1",
+        "noArmorNoBuffExpectedMaxTargetSet": "0/1",
+        "allCriticalBaseMaxRawPerAction": 0,
+        "allCriticalWithCappedModifiersMaxRawPerAction": 0,
+        "repeatedSkillWithCappedModifiersMaxRawPerOwnerTurn": 0,
+        "maxAcceptedFaceRollsWithAim": 0,
+        "healingPerAction": 0,
+        "shieldPerAction": 8
+      }
+    },
+    {
+      "id": "dbdx.arcano.geada",
+      "name": "Geada convergente",
+      "family": "arcano",
+      "effects": [
+        "Attack",
+        "Slow"
+      ],
+      "target": "Enemy",
+      "cost": 2,
+      "cooldownOwnerTurns": 1,
+      "minRange": 1,
+      "range": 3,
+      "maxTargets": 3,
+      "areaRadius": 1,
+      "dice": 2,
+      "power": 2,
+      "penetration": 0,
+      "healing": 0,
+      "shield": 0,
+      "steps": 0,
+      "durationFutureOwnerTurns": 1,
+      "usesPerTurn": 1,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.arcano.geada",
+      "soundId": "dbdx.sfx.arcano.geada",
+      "iconId": "dbdx.icon.arcano.geada",
+      "budget": {
+        "noArmorNoBuffExpectedPerTarget": "31/9",
+        "noArmorNoBuffExpectedMaxTargetSet": "31/3",
+        "allCriticalBaseMaxRawPerAction": 18,
+        "allCriticalWithCappedModifiersMaxRawPerAction": 30,
+        "repeatedSkillWithCappedModifiersMaxRawPerOwnerTurn": 30,
+        "maxAcceptedFaceRollsWithAim": 4,
+        "healingPerAction": 0,
+        "shieldPerAction": 0
+      }
+    },
+    {
+      "id": "dbdx.arcano.lanca",
+      "name": "Lança prismática",
+      "family": "arcano",
+      "effects": [
+        "Attack"
+      ],
+      "target": "Enemy",
+      "cost": 1,
+      "cooldownOwnerTurns": 0,
+      "minRange": 1,
+      "range": 4,
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "dice": 2,
+      "power": 5,
+      "penetration": 0,
+      "healing": 0,
+      "shield": 0,
+      "steps": 0,
+      "durationFutureOwnerTurns": 0,
+      "usesPerTurn": 3,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.arcano.lanca",
+      "soundId": "dbdx.sfx.arcano.lanca",
+      "iconId": "dbdx.icon.arcano.lanca",
+      "budget": {
+        "noArmorNoBuffExpectedPerTarget": "55/9",
+        "noArmorNoBuffExpectedMaxTargetSet": "55/9",
+        "allCriticalBaseMaxRawPerAction": 9,
+        "allCriticalWithCappedModifiersMaxRawPerAction": 25,
+        "repeatedSkillWithCappedModifiersMaxRawPerOwnerTurn": 60,
+        "maxAcceptedFaceRollsWithAim": 4,
+        "healingPerAction": 0,
+        "shieldPerAction": 0
+      }
+    },
+    {
+      "id": "dbdx.arcano.pulso",
+      "name": "Pulso vital",
+      "family": "arcano",
+      "effects": [
+        "Heal"
+      ],
+      "target": "Ally",
+      "cost": 2,
+      "cooldownOwnerTurns": 2,
+      "minRange": 0,
+      "range": 3,
+      "maxTargets": 2,
+      "areaRadius": 1,
+      "dice": 0,
+      "power": 0,
+      "penetration": 0,
+      "healing": 8,
+      "shield": 0,
+      "steps": 0,
+      "durationFutureOwnerTurns": 0,
+      "usesPerTurn": 1,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.arcano.pulso",
+      "soundId": "dbdx.sfx.arcano.pulso",
+      "iconId": "dbdx.icon.arcano.pulso",
+      "budget": {
+        "noArmorNoBuffExpectedPerTarget": "0/1",
+        "noArmorNoBuffExpectedMaxTargetSet": "0/1",
+        "allCriticalBaseMaxRawPerAction": 0,
+        "allCriticalWithCappedModifiersMaxRawPerAction": 0,
+        "repeatedSkillWithCappedModifiersMaxRawPerOwnerTurn": 0,
+        "maxAcceptedFaceRollsWithAim": 0,
+        "healingPerAction": 12,
+        "shieldPerAction": 0
+      }
+    },
+    {
+      "id": "dbdx.arcano.transposicao",
+      "name": "Transposição",
+      "family": "arcano",
+      "effects": [
+        "Move"
+      ],
+      "target": "Destination",
+      "cost": 1,
+      "cooldownOwnerTurns": 2,
+      "minRange": 0,
+      "range": 2,
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "dice": 0,
+      "power": 0,
+      "penetration": 0,
+      "healing": 0,
+      "shield": 0,
+      "steps": 2,
+      "durationFutureOwnerTurns": 0,
+      "usesPerTurn": 1,
+      "requiresPet": false,
+      "teleport": true,
+      "animationId": "dbdx.anim.arcano.transposicao",
+      "soundId": "dbdx.sfx.arcano.transposicao",
+      "iconId": "dbdx.icon.arcano.transposicao",
+      "budget": {
+        "noArmorNoBuffExpectedPerTarget": "0/1",
+        "noArmorNoBuffExpectedMaxTargetSet": "0/1",
+        "allCriticalBaseMaxRawPerAction": 0,
+        "allCriticalWithCappedModifiersMaxRawPerAction": 0,
+        "repeatedSkillWithCappedModifiersMaxRawPerOwnerTurn": 0,
+        "maxAcceptedFaceRollsWithAim": 0,
+        "healingPerAction": 0,
+        "shieldPerAction": 0
+      }
+    },
+    {
+      "id": "dbdx.basico.avanco",
+      "name": "Avanço protegido",
+      "family": "basico",
+      "effects": [
+        "Shield",
+        "Move"
+      ],
+      "target": "Destination",
+      "cost": 1,
+      "cooldownOwnerTurns": 1,
+      "minRange": 0,
+      "range": 2,
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "dice": 0,
+      "power": 0,
+      "penetration": 0,
+      "healing": 0,
+      "shield": 4,
+      "steps": 2,
+      "durationFutureOwnerTurns": 1,
+      "usesPerTurn": 1,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.basico.avanco",
+      "soundId": "dbdx.sfx.basico.avanco",
+      "iconId": "dbdx.icon.basico.avanco",
+      "budget": {
+        "noArmorNoBuffExpectedPerTarget": "0/1",
+        "noArmorNoBuffExpectedMaxTargetSet": "0/1",
+        "allCriticalBaseMaxRawPerAction": 0,
+        "allCriticalWithCappedModifiersMaxRawPerAction": 0,
+        "repeatedSkillWithCappedModifiersMaxRawPerOwnerTurn": 0,
+        "maxAcceptedFaceRollsWithAim": 0,
+        "healingPerAction": 0,
+        "shieldPerAction": 4
+      }
+    },
+    {
+      "id": "dbdx.basico.baluarte",
+      "name": "Baluarte",
+      "family": "basico",
+      "effects": [
+        "Shield",
+        "Armor"
+      ],
+      "target": "Self",
+      "cost": 1,
+      "cooldownOwnerTurns": 2,
+      "minRange": 0,
+      "range": 0,
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "dice": 0,
+      "power": 0,
+      "penetration": 0,
+      "healing": 0,
+      "shield": 8,
+      "steps": 0,
+      "durationFutureOwnerTurns": 1,
+      "usesPerTurn": 1,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.basico.baluarte",
+      "soundId": "dbdx.sfx.basico.baluarte",
+      "iconId": "dbdx.icon.basico.baluarte",
+      "budget": {
+        "noArmorNoBuffExpectedPerTarget": "0/1",
+        "noArmorNoBuffExpectedMaxTargetSet": "0/1",
+        "allCriticalBaseMaxRawPerAction": 0,
+        "allCriticalWithCappedModifiersMaxRawPerAction": 0,
+        "repeatedSkillWithCappedModifiersMaxRawPerOwnerTurn": 0,
+        "maxAcceptedFaceRollsWithAim": 0,
+        "healingPerAction": 0,
+        "shieldPerAction": 8
+      }
+    },
+    {
+      "id": "dbdx.basico.golpe",
+      "name": "Golpe firme",
+      "family": "basico",
+      "effects": [
+        "Attack"
+      ],
+      "target": "Enemy",
+      "cost": 1,
+      "cooldownOwnerTurns": 0,
+      "minRange": 1,
+      "range": 1,
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "dice": 3,
+      "power": 4,
+      "penetration": 0,
+      "healing": 0,
+      "shield": 0,
+      "steps": 0,
+      "durationFutureOwnerTurns": 0,
+      "usesPerTurn": 3,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.basico.golpe",
+      "soundId": "dbdx.sfx.basico.golpe",
+      "iconId": "dbdx.icon.basico.golpe",
+      "budget": {
+        "noArmorNoBuffExpectedPerTarget": "343/54",
+        "noArmorNoBuffExpectedMaxTargetSet": "343/54",
+        "allCriticalBaseMaxRawPerAction": 10,
+        "allCriticalWithCappedModifiersMaxRawPerAction": 27,
+        "repeatedSkillWithCappedModifiersMaxRawPerOwnerTurn": 60,
+        "maxAcceptedFaceRollsWithAim": 6,
+        "healingPerAction": 0,
+        "shieldPerAction": 0
+      }
+    },
+    {
+      "id": "dbdx.basico.revigorar",
+      "name": "Revigorar",
+      "family": "basico",
+      "effects": [
+        "Heal"
+      ],
+      "target": "Ally",
+      "cost": 2,
+      "cooldownOwnerTurns": 2,
+      "minRange": 0,
+      "range": 2,
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "dice": 0,
+      "power": 0,
+      "penetration": 0,
+      "healing": 10,
+      "shield": 0,
+      "steps": 0,
+      "durationFutureOwnerTurns": 0,
+      "usesPerTurn": 1,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.basico.revigorar",
+      "soundId": "dbdx.sfx.basico.revigorar",
+      "iconId": "dbdx.icon.basico.revigorar",
+      "budget": {
+        "noArmorNoBuffExpectedPerTarget": "0/1",
+        "noArmorNoBuffExpectedMaxTargetSet": "0/1",
+        "allCriticalBaseMaxRawPerAction": 0,
+        "allCriticalWithCappedModifiersMaxRawPerAction": 0,
+        "repeatedSkillWithCappedModifiersMaxRawPerOwnerTurn": 0,
+        "maxAcceptedFaceRollsWithAim": 0,
+        "healingPerAction": 10,
+        "shieldPerAction": 0
+      }
+    },
+    {
+      "id": "dbdx.draco.comandar",
+      "name": "Comando de garra",
+      "family": "draco",
+      "effects": [
+        "Attack"
+      ],
+      "target": "Enemy",
+      "cost": 1,
+      "cooldownOwnerTurns": 0,
+      "minRange": 1,
+      "range": 4,
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "dice": 2,
+      "power": 3,
+      "penetration": 0,
+      "healing": 0,
+      "shield": 0,
+      "steps": 0,
+      "durationFutureOwnerTurns": 0,
+      "usesPerTurn": 2,
+      "requiresPet": true,
+      "teleport": false,
+      "animationId": "dbdx.anim.draco.comandar",
+      "soundId": "dbdx.sfx.draco.comandar",
+      "iconId": "dbdx.icon.draco.comandar",
+      "budget": {
+        "noArmorNoBuffExpectedPerTarget": "13/3",
+        "noArmorNoBuffExpectedMaxTargetSet": "13/3",
+        "allCriticalBaseMaxRawPerAction": 7,
+        "allCriticalWithCappedModifiersMaxRawPerAction": 22,
+        "repeatedSkillWithCappedModifiersMaxRawPerOwnerTurn": 44,
+        "maxAcceptedFaceRollsWithAim": 4,
+        "healingPerAction": 0,
+        "shieldPerAction": 0
+      }
+    },
+    {
+      "id": "dbdx.draco.invocar",
+      "name": "Vínculo dracônico",
+      "family": "draco",
+      "effects": [
+        "Summon"
+      ],
+      "target": "Destination",
+      "cost": 2,
+      "cooldownOwnerTurns": 2,
+      "minRange": 1,
+      "range": 1,
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "dice": 0,
+      "power": 0,
+      "penetration": 0,
+      "healing": 0,
+      "shield": 0,
+      "steps": 0,
+      "durationFutureOwnerTurns": 0,
+      "usesPerTurn": 1,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.draco.invocar",
+      "soundId": "dbdx.sfx.draco.invocar",
+      "iconId": "dbdx.icon.draco.invocar",
+      "budget": {
+        "noArmorNoBuffExpectedPerTarget": "0/1",
+        "noArmorNoBuffExpectedMaxTargetSet": "0/1",
+        "allCriticalBaseMaxRawPerAction": 0,
+        "allCriticalWithCappedModifiersMaxRawPerAction": 0,
+        "repeatedSkillWithCappedModifiersMaxRawPerOwnerTurn": 0,
+        "maxAcceptedFaceRollsWithAim": 0,
+        "healingPerAction": 0,
+        "shieldPerAction": 0
+      }
+    },
+    {
+      "id": "dbdx.draco.pacto",
+      "name": "Pacto protetor",
+      "family": "draco",
+      "effects": [
+        "Heal",
+        "Shield"
+      ],
+      "target": "Ally",
+      "cost": 1,
+      "cooldownOwnerTurns": 2,
+      "minRange": 0,
+      "range": 3,
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "dice": 0,
+      "power": 0,
+      "penetration": 0,
+      "healing": 4,
+      "shield": 6,
+      "steps": 0,
+      "durationFutureOwnerTurns": 1,
+      "usesPerTurn": 1,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.draco.pacto",
+      "soundId": "dbdx.sfx.draco.pacto",
+      "iconId": "dbdx.icon.draco.pacto",
+      "budget": {
+        "noArmorNoBuffExpectedPerTarget": "0/1",
+        "noArmorNoBuffExpectedMaxTargetSet": "0/1",
+        "allCriticalBaseMaxRawPerAction": 0,
+        "allCriticalWithCappedModifiersMaxRawPerAction": 0,
+        "repeatedSkillWithCappedModifiersMaxRawPerOwnerTurn": 0,
+        "maxAcceptedFaceRollsWithAim": 0,
+        "healingPerAction": 4,
+        "shieldPerAction": 6
+      }
+    },
+    {
+      "id": "dbdx.draco.recolher",
+      "name": "Recolher vínculo",
+      "family": "draco",
+      "effects": [
+        "Heal",
+        "Recall"
+      ],
+      "target": "Self",
+      "cost": 1,
+      "cooldownOwnerTurns": 1,
+      "minRange": 0,
+      "range": 0,
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "dice": 0,
+      "power": 0,
+      "penetration": 0,
+      "healing": 6,
+      "shield": 0,
+      "steps": 0,
+      "durationFutureOwnerTurns": 0,
+      "usesPerTurn": 1,
+      "requiresPet": true,
+      "teleport": false,
+      "animationId": "dbdx.anim.draco.recolher",
+      "soundId": "dbdx.sfx.draco.recolher",
+      "iconId": "dbdx.icon.draco.recolher",
+      "budget": {
+        "noArmorNoBuffExpectedPerTarget": "0/1",
+        "noArmorNoBuffExpectedMaxTargetSet": "0/1",
+        "allCriticalBaseMaxRawPerAction": 0,
+        "allCriticalWithCappedModifiersMaxRawPerAction": 0,
+        "repeatedSkillWithCappedModifiersMaxRawPerOwnerTurn": 0,
+        "maxAcceptedFaceRollsWithAim": 0,
+        "healingPerAction": 6,
+        "shieldPerAction": 0
+      }
+    },
+    {
+      "id": "dbdx.draco.sopro",
+      "name": "Sopro em leque",
+      "family": "draco",
+      "effects": [
+        "Attack"
+      ],
+      "target": "Enemy",
+      "cost": 2,
+      "cooldownOwnerTurns": 1,
+      "minRange": 1,
+      "range": 3,
+      "maxTargets": 3,
+      "areaRadius": 1,
+      "dice": 3,
+      "power": 6,
+      "penetration": 0,
+      "healing": 0,
+      "shield": 0,
+      "steps": 0,
+      "durationFutureOwnerTurns": 0,
+      "usesPerTurn": 1,
+      "requiresPet": true,
+      "teleport": false,
+      "animationId": "dbdx.anim.draco.sopro",
+      "soundId": "dbdx.sfx.draco.sopro",
+      "iconId": "dbdx.icon.draco.sopro",
+      "budget": {
+        "noArmorNoBuffExpectedPerTarget": "149/18",
+        "noArmorNoBuffExpectedMaxTargetSet": "1777/72",
+        "allCriticalBaseMaxRawPerAction": 30,
+        "allCriticalWithCappedModifiersMaxRawPerAction": 30,
+        "repeatedSkillWithCappedModifiersMaxRawPerOwnerTurn": 30,
+        "maxAcceptedFaceRollsWithAim": 6,
+        "healingPerAction": 0,
+        "shieldPerAction": 0
+      }
+    },
+    {
+      "id": "dbdx.pistola.duplo",
+      "name": "Disparo duplo",
+      "family": "pistola",
+      "effects": [
+        "Attack"
+      ],
+      "target": "Enemy",
+      "cost": 1,
+      "cooldownOwnerTurns": 0,
+      "minRange": 1,
+      "range": 5,
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "dice": 2,
+      "power": 4,
+      "penetration": 0,
+      "healing": 0,
+      "shield": 0,
+      "steps": 0,
+      "durationFutureOwnerTurns": 0,
+      "usesPerTurn": 2,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.pistola.duplo",
+      "soundId": "dbdx.sfx.pistola.duplo",
+      "iconId": "dbdx.icon.pistola.duplo",
+      "budget": {
+        "noArmorNoBuffExpectedPerTarget": "47/9",
+        "noArmorNoBuffExpectedMaxTargetSet": "47/9",
+        "allCriticalBaseMaxRawPerAction": 8,
+        "allCriticalWithCappedModifiersMaxRawPerAction": 24,
+        "repeatedSkillWithCappedModifiersMaxRawPerOwnerTurn": 48,
+        "maxAcceptedFaceRollsWithAim": 4,
+        "healingPerAction": 0,
+        "shieldPerAction": 0
+      }
+    },
+    {
+      "id": "dbdx.pistola.mira",
+      "name": "Mira estável",
+      "family": "pistola",
+      "effects": [
+        "Aim"
+      ],
+      "target": "Self",
+      "cost": 1,
+      "cooldownOwnerTurns": 2,
+      "minRange": 0,
+      "range": 0,
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "dice": 0,
+      "power": 0,
+      "penetration": 0,
+      "healing": 0,
+      "shield": 0,
+      "steps": 0,
+      "durationFutureOwnerTurns": 1,
+      "usesPerTurn": 1,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.pistola.mira",
+      "soundId": "dbdx.sfx.pistola.mira",
+      "iconId": "dbdx.icon.pistola.mira",
+      "budget": {
+        "noArmorNoBuffExpectedPerTarget": "0/1",
+        "noArmorNoBuffExpectedMaxTargetSet": "0/1",
+        "allCriticalBaseMaxRawPerAction": 0,
+        "allCriticalWithCappedModifiersMaxRawPerAction": 0,
+        "repeatedSkillWithCappedModifiersMaxRawPerOwnerTurn": 0,
+        "maxAcceptedFaceRollsWithAim": 0,
+        "healingPerAction": 0,
+        "shieldPerAction": 0
+      }
+    },
+    {
+      "id": "dbdx.pistola.ricochete",
+      "name": "Ricochete",
+      "family": "pistola",
+      "effects": [
+        "Attack"
+      ],
+      "target": "Enemy",
+      "cost": 2,
+      "cooldownOwnerTurns": 1,
+      "minRange": 2,
+      "range": 5,
+      "maxTargets": 2,
+      "areaRadius": 1,
+      "dice": 2,
+      "power": 3,
+      "penetration": 0,
+      "healing": 0,
+      "shield": 0,
+      "steps": 0,
+      "durationFutureOwnerTurns": 0,
+      "usesPerTurn": 1,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.pistola.ricochete",
+      "soundId": "dbdx.sfx.pistola.ricochete",
+      "iconId": "dbdx.icon.pistola.ricochete",
+      "budget": {
+        "noArmorNoBuffExpectedPerTarget": "13/3",
+        "noArmorNoBuffExpectedMaxTargetSet": "26/3",
+        "allCriticalBaseMaxRawPerAction": 14,
+        "allCriticalWithCappedModifiersMaxRawPerAction": 30,
+        "repeatedSkillWithCappedModifiersMaxRawPerOwnerTurn": 30,
+        "maxAcceptedFaceRollsWithAim": 4,
+        "healingPerAction": 0,
+        "shieldPerAction": 0
+      }
+    },
+    {
+      "id": "dbdx.pistola.ruptura",
+      "name": "Tiro de ruptura",
+      "family": "pistola",
+      "effects": [
+        "Attack"
+      ],
+      "target": "Enemy",
+      "cost": 2,
+      "cooldownOwnerTurns": 2,
+      "minRange": 1,
+      "range": 4,
+      "maxTargets": 1,
+      "areaRadius": 0,
+      "dice": 3,
+      "power": 7,
+      "penetration": 20,
+      "healing": 0,
+      "shield": 0,
+      "steps": 0,
+      "durationFutureOwnerTurns": 0,
+      "usesPerTurn": 1,
+      "requiresPet": false,
+      "teleport": false,
+      "animationId": "dbdx.anim.pistola.ruptura",
+      "soundId": "dbdx.sfx.pistola.ruptura",
+      "iconId": "dbdx.icon.pistola.ruptura",
+      "budget": {
+        "noArmorNoBuffExpectedPerTarget": "499/54",
+        "noArmorNoBuffExpectedMaxTargetSet": "499/54",
+        "allCriticalBaseMaxRawPerAction": 13,
+        "allCriticalWithCappedModifiersMaxRawPerAction": 30,
+        "repeatedSkillWithCappedModifiersMaxRawPerOwnerTurn": 30,
+        "maxAcceptedFaceRollsWithAim": 6,
+        "healingPerAction": 0,
+        "shieldPerAction": 0
+      }
+    }
+  ],
+  "arenaHeroes": [
+    {
+      "id": "alvyr",
+      "archetype": "Support",
+      "skillIds": [
+        "dbdx.arcano.lanca",
+        "dbdx.arcano.egide",
+        "dbdx.arcano.pulso",
+        "dbdx.basico.revigorar",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.alvyr"
+    },
+    {
+      "id": "arqueiro-jack",
+      "archetype": "Ranger",
+      "skillIds": [
+        "dbdx.pistola.duplo",
+        "dbdx.pistola.ricochete",
+        "dbdx.pistola.mira",
+        "dbdx.pistola.ruptura",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.arqueiro-jack"
+    },
+    {
+      "id": "asamyh",
+      "archetype": "Support",
+      "skillIds": [
+        "dbdx.arcano.lanca",
+        "dbdx.arcano.egide",
+        "dbdx.arcano.pulso",
+        "dbdx.basico.revigorar",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.asamyh"
+    },
+    {
+      "id": "baltazar",
+      "archetype": "Support",
+      "skillIds": [
+        "dbdx.arcano.lanca",
+        "dbdx.arcano.egide",
+        "dbdx.arcano.pulso",
+        "dbdx.basico.revigorar",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.baltazar"
+    },
+    {
+      "id": "brumak",
+      "archetype": "Vanguard",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.baluarte",
+        "dbdx.basico.avanco",
+        "dbdx.basico.revigorar"
+      ],
+      "cardId": "dbdx.card.brumak"
+    },
+    {
+      "id": "cheiro-pneu",
+      "archetype": "Gunslinger",
+      "skillIds": [
+        "dbdx.pistola.duplo",
+        "dbdx.pistola.ricochete",
+        "dbdx.pistola.mira",
+        "dbdx.pistola.ruptura",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.cheiro-pneu"
+    },
+    {
+      "id": "ciantia",
+      "archetype": "DragonBinder",
+      "skillIds": [
+        "dbdx.draco.invocar",
+        "dbdx.draco.comandar",
+        "dbdx.draco.sopro",
+        "dbdx.draco.pacto",
+        "dbdx.draco.recolher",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.ciantia"
+    },
+    {
+      "id": "colosso",
+      "archetype": "Vanguard",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.baluarte",
+        "dbdx.basico.avanco",
+        "dbdx.basico.revigorar"
+      ],
+      "cardId": "dbdx.card.colosso"
+    },
+    {
+      "id": "damian",
+      "archetype": "Gunslinger",
+      "skillIds": [
+        "dbdx.pistola.duplo",
+        "dbdx.pistola.ricochete",
+        "dbdx.pistola.mira",
+        "dbdx.pistola.ruptura",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.damian"
+    },
+    {
+      "id": "devon",
+      "archetype": "Vanguard",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.baluarte",
+        "dbdx.basico.avanco",
+        "dbdx.basico.revigorar"
+      ],
+      "cardId": "dbdx.card.devon"
+    },
+    {
+      "id": "diantus",
+      "archetype": "Skirmisher",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.avanco",
+        "dbdx.arcano.transposicao",
+        "dbdx.pistola.mira"
+      ],
+      "cardId": "dbdx.card.diantus"
+    },
+    {
+      "id": "domador-de-correntes",
+      "archetype": "Arcanist",
+      "skillIds": [
+        "dbdx.arcano.lanca",
+        "dbdx.arcano.geada",
+        "dbdx.arcano.egide",
+        "dbdx.arcano.transposicao",
+        "dbdx.arcano.pulso",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.domador-de-correntes"
+    },
+    {
+      "id": "edgar",
+      "archetype": "Arcanist",
+      "skillIds": [
+        "dbdx.arcano.lanca",
+        "dbdx.arcano.geada",
+        "dbdx.arcano.egide",
+        "dbdx.arcano.transposicao",
+        "dbdx.arcano.pulso",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.edgar"
+    },
+    {
+      "id": "ezequiela",
+      "archetype": "Arcanist",
+      "skillIds": [
+        "dbdx.arcano.lanca",
+        "dbdx.arcano.geada",
+        "dbdx.arcano.egide",
+        "dbdx.arcano.transposicao",
+        "dbdx.arcano.pulso",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.ezequiela"
+    },
+    {
+      "id": "gryvro",
+      "archetype": "Skirmisher",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.avanco",
+        "dbdx.arcano.transposicao",
+        "dbdx.pistola.mira"
+      ],
+      "cardId": "dbdx.card.gryvro"
+    },
+    {
+      "id": "guardiao-de-musgo",
+      "archetype": "Vanguard",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.baluarte",
+        "dbdx.basico.avanco",
+        "dbdx.basico.revigorar"
+      ],
+      "cardId": "dbdx.card.guardiao-de-musgo"
+    },
+    {
+      "id": "nixira",
+      "archetype": "Ranger",
+      "skillIds": [
+        "dbdx.pistola.duplo",
+        "dbdx.pistola.ricochete",
+        "dbdx.pistola.mira",
+        "dbdx.pistola.ruptura",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.nixira"
+    },
+    {
+      "id": "ogro-de-pedra",
+      "archetype": "Vanguard",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.baluarte",
+        "dbdx.basico.avanco",
+        "dbdx.basico.revigorar"
+      ],
+      "cardId": "dbdx.card.ogro-de-pedra"
+    },
+    {
+      "id": "ossyro",
+      "archetype": "DragonBinder",
+      "skillIds": [
+        "dbdx.draco.invocar",
+        "dbdx.draco.comandar",
+        "dbdx.draco.sopro",
+        "dbdx.draco.pacto",
+        "dbdx.draco.recolher",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.ossyro"
+    },
+    {
+      "id": "perry",
+      "archetype": "Skirmisher",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.avanco",
+        "dbdx.arcano.transposicao",
+        "dbdx.pistola.mira"
+      ],
+      "cardId": "dbdx.card.perry"
+    },
+    {
+      "id": "principe-kellen",
+      "archetype": "Arcanist",
+      "skillIds": [
+        "dbdx.arcano.lanca",
+        "dbdx.arcano.geada",
+        "dbdx.arcano.egide",
+        "dbdx.arcano.transposicao",
+        "dbdx.arcano.pulso",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.principe-kellen"
+    },
+    {
+      "id": "raizor",
+      "archetype": "Vanguard",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.baluarte",
+        "dbdx.basico.avanco",
+        "dbdx.basico.revigorar"
+      ],
+      "cardId": "dbdx.card.raizor"
+    },
+    {
+      "id": "rei-bobett",
+      "archetype": "Vanguard",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.baluarte",
+        "dbdx.basico.avanco",
+        "dbdx.basico.revigorar"
+      ],
+      "cardId": "dbdx.card.rei-bobett"
+    },
+    {
+      "id": "talyssa",
+      "archetype": "Vanguard",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.baluarte",
+        "dbdx.basico.avanco",
+        "dbdx.basico.revigorar"
+      ],
+      "cardId": "dbdx.card.talyssa"
+    },
+    {
+      "id": "tchu-tcha",
+      "archetype": "Vanguard",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.baluarte",
+        "dbdx.basico.avanco",
+        "dbdx.basico.revigorar"
+      ],
+      "cardId": "dbdx.card.tchu-tcha"
+    },
+    {
+      "id": "teantha",
+      "archetype": "Skirmisher",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.avanco",
+        "dbdx.arcano.transposicao",
+        "dbdx.pistola.mira"
+      ],
+      "cardId": "dbdx.card.teantha"
+    },
+    {
+      "id": "vespa-cinzenta",
+      "archetype": "Skirmisher",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.avanco",
+        "dbdx.arcano.transposicao",
+        "dbdx.pistola.mira"
+      ],
+      "cardId": "dbdx.card.vespa-cinzenta"
+    },
+    {
+      "id": "viuva-da-agulha",
+      "archetype": "Skirmisher",
+      "skillIds": [
+        "dbdx.basico.golpe",
+        "dbdx.basico.avanco",
+        "dbdx.arcano.transposicao",
+        "dbdx.pistola.mira"
+      ],
+      "cardId": "dbdx.card.viuva-da-agulha"
+    }
+  ],
+  "newHeroes": [
+    {
+      "id": "lyra-faisca",
+      "name": "Lyra Faísca",
+      "archetype": "Gunslinger",
+      "health": 44,
+      "armor": 10,
+      "movement": 4,
+      "actions": 3,
+      "skillIds": [
+        "dbdx.pistola.duplo",
+        "dbdx.pistola.ricochete",
+        "dbdx.pistola.mira",
+        "dbdx.pistola.ruptura",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.lyra-faisca",
+      "modelId": "dbdx.hero.lyra-faisca",
+      "assetStatus": "requested-stage-4"
+    },
+    {
+      "id": "orion-prisma",
+      "name": "Orion Prisma",
+      "archetype": "Arcanist",
+      "health": 42,
+      "armor": 8,
+      "movement": 3,
+      "actions": 3,
+      "skillIds": [
+        "dbdx.arcano.lanca",
+        "dbdx.arcano.geada",
+        "dbdx.arcano.egide",
+        "dbdx.arcano.transposicao",
+        "dbdx.arcano.pulso",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.orion-prisma",
+      "modelId": "dbdx.hero.orion-prisma",
+      "assetStatus": "requested-stage-4"
+    },
+    {
+      "id": "vaelis-vinculo",
+      "name": "Vaelis do Vínculo",
+      "archetype": "DragonBinder",
+      "health": 48,
+      "armor": 14,
+      "movement": 3,
+      "actions": 3,
+      "skillIds": [
+        "dbdx.draco.invocar",
+        "dbdx.draco.comandar",
+        "dbdx.draco.sopro",
+        "dbdx.draco.pacto",
+        "dbdx.draco.recolher",
+        "dbdx.basico.golpe"
+      ],
+      "cardId": "dbdx.card.vaelis-vinculo",
+      "modelId": "dbdx.hero.vaelis-vinculo",
+      "assetStatus": "requested-stage-4"
+    }
+  ],
+  "conversion": {
+    "version": "arena-to-dbdx-1",
+    "health": "clamp(24+2*sourceHP,40,60)",
+    "armor": "clamp(10+20*sourceArmor+(sourceHP>=14?10:0),0,50)",
+    "movement": "clamp(sourcePM,2,5)",
+    "actions": 3,
+    "source": "Explicit adapter inputs, snapshot source skill IDs; no mutation, no 1:1 port of old effects. Base/forms/passives retain their Arena definitions."
+  },
+  "execution": {
+    "oneAttackRollPerCast": true,
+    "targetOrder": "targetIds[0] is the selected area center; budget distribution uses Ordinal unit ID independently",
+    "cooldown": "C>0 skips the next C owner turns; C=0 still honors per-turn use and AP caps",
+    "statuses": "Duration 1: expires at start of target owner tick current+2; refreshing does not stack potency; pets use owner clock",
+    "aim": "Next attack gains at most one miss reroll per die and additive 1500 BP; consumed even on miss",
+    "pet": "One 12HP/5armor companion per owner; paid commands share owner AP, RNG, cooldown and raw budgets; no independent turn; death/recall never refunds or resets cooldown",
+    "modules": "Companions, Control, Teleport and FriendlyFire; mandatory combat caps cannot be disabled",
+    "authority": "Domain engine only. Caller must authenticate/serialize commands and validate turn ownership in stage 5.",
+    "integration": "No combat binding to preview scene/HUD yet; stages 5-6 consume immutable outcomes and animation/SFX IDs",
+    "assets": "Bindings are requests; no models, VFX, SFX or music delivered in stage 3",
+    "budget": "Exact no-reroll expectations enumerate hit/critical outcome weights through compiled core. Capped modifier bounds are mathematical ceilings, not all reachable by every loadout. Mixed skills still share the same owner budget."
+  },
+  "compiledAssemblies": {
+    "combat": "9f106d5cabb60a55eb92bd389dbc3e0536ca5ed496b3e5c0b6ffb57bbfe6a69d",
+    "skills": "a0367b0ffea7bacb4e7ed402efdb6de26fe46515dd8332b70c1101f4678c494c"
+  }
+}

@@ -1,0 +1,1482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="218" result="Passed" total="218" passed="218" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-15 12:28:31Z" end-time="2026-10-15 12:28:35Z" duration="4,5090894">
+  <test-suite type="TestSuite" id="1000" name="Arena Tática" fullname="Arena Tática" runstate="Runnable" testcasecount="218" result="Passed" start-time="2026-10-15 12:28:31Z" end-time="2026-10-15 12:28:35Z" duration="4.509089" total="218" passed="218" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1173" name="ArenaTatica.Tests.dll" fullname="C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/ArenaTaticaUnity/Library/ScriptAssemblies/ArenaTatica.Tests.dll" runstate="Runnable" testcasecount="154" result="Passed" start-time="2026-10-15 12:28:31Z" end-time="2026-10-15 12:28:34Z" duration="3.209164" total="154" passed="154" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="41272" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1174" name="ArenaTatica" fullname="ArenaTatica" runstate="Runnable" testcasecount="154" result="Passed" start-time="2026-10-15 12:28:31Z" end-time="2026-10-15 12:28:34Z" duration="3.208429" total="154" passed="154" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1175" name="Core" fullname="ArenaTatica.Core" runstate="Runnable" testcasecount="72" result="Passed" start-time="2026-10-15 12:28:31Z" end-time="2026-10-15 12:28:32Z" duration="1.262404" total="72" passed="72" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1176" name="Tests" fullname="ArenaTatica.Core.Tests" runstate="Runnable" testcasecount="72" result="Passed" start-time="2026-10-15 12:28:31Z" end-time="2026-10-15 12:28:32Z" duration="1.262207" total="72" passed="72" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1001" name="CoreMatchTests" fullname="ArenaTatica.Core.Tests.CoreMatchTests" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" testcasecount="72" result="Passed" start-time="2026-10-15 12:28:31Z" end-time="2026-10-15 12:28:32Z" duration="1.259723" total="72" passed="72" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1036" name="AlliesSeeEachOthersTraps" fullname="ArenaTatica.Core.Tests.CoreMatchTests.AlliesSeeEachOthersTraps" methodname="AlliesSeeEachOthersTraps" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="624096753" result="Passed" start-time="2026-10-15 12:28:31Z" end-time="2026-10-15 12:28:31Z" duration="0.064573" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1068" name="AlternateInitiativeInterleavesTeams" fullname="ArenaTatica.Core.Tests.CoreMatchTests.AlternateInitiativeInterleavesTeams" methodname="AlternateInitiativeInterleavesTeams" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1480864818" result="Passed" start-time="2026-10-15 12:28:31Z" end-time="2026-10-15 12:28:31Z" duration="0.009838" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1031" name="AreaDamageHitsAlliesButNotTheCaster" fullname="ArenaTatica.Core.Tests.CoreMatchTests.AreaDamageHitsAlliesButNotTheCaster" methodname="AreaDamageHitsAlliesButNotTheCaster" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1439699842" result="Passed" start-time="2026-10-15 12:28:31Z" end-time="2026-10-15 12:28:31Z" duration="0.019659" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1024" name="ArmorItemReducesDamageAndHealCapsAtMax" fullname="ArenaTatica.Core.Tests.CoreMatchTests.ArmorItemReducesDamageAndHealCapsAtMax" methodname="ArmorItemReducesDamageAndHealCapsAtMax" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="2045566028" result="Passed" start-time="2026-10-15 12:28:31Z" end-time="2026-10-15 12:28:31Z" duration="0.006997" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1013" name="ArmorReducesDamageAndCataclysmOnlyFromAttackDie" fullname="ArenaTatica.Core.Tests.CoreMatchTests.ArmorReducesDamageAndCataclysmOnlyFromAttackDie" methodname="ArmorReducesDamageAndCataclysmOnlyFromAttackDie" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1645212685" result="Passed" start-time="2026-10-15 12:28:31Z" end-time="2026-10-15 12:28:31Z" duration="0.008928" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1061" name="BaltazarAuraCostsOnePaPerTurnHealsAlliesAndHurtsFoes" fullname="ArenaTatica.Core.Tests.CoreMatchTests.BaltazarAuraCostsOnePaPerTurnHealsAlliesAndHurtsFoes" methodname="BaltazarAuraCostsOnePaPerTurnHealsAlliesAndHurtsFoes" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1213208963" result="Passed" start-time="2026-10-15 12:28:31Z" end-time="2026-10-15 12:28:31Z" duration="0.008154" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1050" name="BarkGivesArmorToAnAlly" fullname="ArenaTatica.Core.Tests.CoreMatchTests.BarkGivesArmorToAnAlly" methodname="BarkGivesArmorToAnAlly" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1412719782" result="Passed" start-time="2026-10-15 12:28:31Z" end-time="2026-10-15 12:28:31Z" duration="0.004094" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1067" name="BotsPlayOnlyLegalActionsAndFight" fullname="ArenaTatica.Core.Tests.CoreMatchTests.BotsPlayOnlyLegalActionsAndFight" methodname="BotsPlayOnlyLegalActionsAndFight" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="542310053" result="Passed" start-time="2026-10-15 12:28:31Z" end-time="2026-10-15 12:28:32Z" duration="0.645460" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1026" name="BuffLastsTwoTurns" fullname="ArenaTatica.Core.Tests.CoreMatchTests.BuffLastsTwoTurns" methodname="BuffLastsTwoTurns" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1543139100" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.006589" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1022" name="BuyingCostsCoinsAllowsSeveralAndRefillsAtTurnEnd" fullname="ArenaTatica.Core.Tests.CoreMatchTests.BuyingCostsCoinsAllowsSeveralAndRefillsAtTurnEnd" methodname="BuyingCostsCoinsAllowsSeveralAndRefillsAtTurnEnd" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1102744714" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.003409" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1020" name="BuyingOnlyNextToTheShop" fullname="ArenaTatica.Core.Tests.CoreMatchTests.BuyingOnlyNextToTheShop" methodname="BuyingOnlyNextToTheShop" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1162397363" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001017" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1048" name="CatsHaveNoTurnObeyAndVanishAfterShooting" fullname="ArenaTatica.Core.Tests.CoreMatchTests.CatsHaveNoTurnObeyAndVanishAfterShooting" methodname="CatsHaveNoTurnObeyAndVanishAfterShooting" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="254304262" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.004770" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1011" name="ClimbingCostsAndCoinPickup" fullname="ArenaTatica.Core.Tests.CoreMatchTests.ClimbingCostsAndCoinPickup" methodname="ClimbingCostsAndCoinPickup" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1957995860" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001293" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1066" name="CodexMapsAreAllPlayable" fullname="ArenaTatica.Core.Tests.CoreMatchTests.CodexMapsAreAllPlayable" methodname="CodexMapsAreAllPlayable" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="995707994" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.100364" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1047" name="ColossusDevoursTheMainSkillWithOneMorePa" fullname="ArenaTatica.Core.Tests.CoreMatchTests.ColossusDevoursTheMainSkillWithOneMorePa" methodname="ColossusDevoursTheMainSkillWithOneMorePa" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1222471161" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001703" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1063" name="DamianFormsHoldTheirWeaponPose" fullname="ArenaTatica.Core.Tests.CoreMatchTests.DamianFormsHoldTheirWeaponPose" methodname="DamianFormsHoldTheirWeaponPose" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="453667872" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000607" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1015" name="DodgedTackleLetsMove" fullname="ArenaTatica.Core.Tests.CoreMatchTests.DodgedTackleLetsMove" methodname="DodgedTackleLetsMove" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="446442628" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000635" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1039" name="DrillHookPushesUntilObstacleAndBumpHurts" fullname="ArenaTatica.Core.Tests.CoreMatchTests.DrillHookPushesUntilObstacleAndBumpHurts" methodname="DrillHookPushesUntilObstacleAndBumpHurts" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1973826792" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000704" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1010" name="EditorPassivesFollowTargetAndRange" fullname="ArenaTatica.Core.Tests.CoreMatchTests.EditorPassivesFollowTargetAndRange" methodname="EditorPassivesFollowTargetAndRange" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1411198087" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.007136" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1005" name="EnemyReceivesNoHiddenTeleportOrTurnCoordinates" fullname="ArenaTatica.Core.Tests.CoreMatchTests.EnemyReceivesNoHiddenTeleportOrTurnCoordinates" methodname="EnemyReceivesNoHiddenTeleportOrTurnCoordinates" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="627853846" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.004188" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1057" name="EveryEventRunsForSixRoundsWithoutBreaking" fullname="ArenaTatica.Core.Tests.CoreMatchTests.EveryEventRunsForSixRoundsWithoutBreaking" methodname="EveryEventRunsForSixRoundsWithoutBreaking" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="401912168" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.014892" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1030" name="EveryUltimateHasALimit" fullname="ArenaTatica.Core.Tests.CoreMatchTests.EveryUltimateHasALimit" methodname="EveryUltimateHasALimit" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1123459389" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001691" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1014" name="FailedTackleRemovesActionPoints" fullname="ArenaTatica.Core.Tests.CoreMatchTests.FailedTackleRemovesActionPoints" methodname="FailedTackleRemovesActionPoints" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1899276011" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001097" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1054" name="FireworksExplodeAtTheEndOfTheRound" fullname="ArenaTatica.Core.Tests.CoreMatchTests.FireworksExplodeAtTheEndOfTheRound" methodname="FireworksExplodeAtTheEndOfTheRound" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="454851236" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001786" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1008" name="GeneratedMapIsMirroredAndConnected" fullname="ArenaTatica.Core.Tests.CoreMatchTests.GeneratedMapIsMirroredAndConnected" methodname="GeneratedMapIsMirroredAndConnected" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1631954378" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.046927" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1033" name="GeneratedMapsWorkForEveryPlayerCount" fullname="ArenaTatica.Core.Tests.CoreMatchTests.GeneratedMapsWorkForEveryPlayerCount" methodname="GeneratedMapsWorkForEveryPlayerCount" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1134782827" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.049851" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1073" name="GenericSkillLibraryIsValid" fullname="ArenaTatica.Core.Tests.CoreMatchTests.GenericSkillLibraryIsValid" methodname="GenericSkillLibraryIsValid" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1735399168" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.011103" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1040" name="GhostFormDodgesBlowsForOneTurn" fullname="ArenaTatica.Core.Tests.CoreMatchTests.GhostFormDodgesBlowsForOneTurn" methodname="GhostFormDodgesBlowsForOneTurn" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="844348551" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001104" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1069" name="GhostFormIgnoresEveryDamage" fullname="ArenaTatica.Core.Tests.CoreMatchTests.GhostFormIgnoresEveryDamage" methodname="GhostFormIgnoresEveryDamage" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="810767763" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001187" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1041" name="GhostShipUltimateSummonsOnce" fullname="ArenaTatica.Core.Tests.CoreMatchTests.GhostShipUltimateSummonsOnce" methodname="GhostShipUltimateSummonsOnce" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="858344763" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000627" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1012" name="GoldenDragonNeedsLineSightAndRange" fullname="ArenaTatica.Core.Tests.CoreMatchTests.GoldenDragonNeedsLineSightAndRange" methodname="GoldenDragonNeedsLineSightAndRange" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="2079149693" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000835" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1007" name="HiddenIceTrapLeavesNoSecondaryMarkerInEnemySnapshot" fullname="ArenaTatica.Core.Tests.CoreMatchTests.HiddenIceTrapLeavesNoSecondaryMarkerInEnemySnapshot" methodname="HiddenIceTrapLeavesNoSecondaryMarkerInEnemySnapshot" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1052811842" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001614" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1070" name="HiddenMovesLessAndAdjacentFoesFindIt" fullname="ArenaTatica.Core.Tests.CoreMatchTests.HiddenMovesLessAndAdjacentFoesFindIt" methodname="HiddenMovesLessAndAdjacentFoesFindIt" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1073208482" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001253" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1004" name="HiddenPathStaysSecretEvenWhenTheFinalStateRevealsItsFighter" fullname="ArenaTatica.Core.Tests.CoreMatchTests.HiddenPathStaysSecretEvenWhenTheFinalStateRevealsItsFighter" methodname="HiddenPathStaysSecretEvenWhenTheFinalStateRevealsItsFighter" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="965906870" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.002228" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1044" name="IceCostsOneMoreMovementUntilCastersNextTurn" fullname="ArenaTatica.Core.Tests.CoreMatchTests.IceCostsOneMoreMovementUntilCastersNextTurn" methodname="IceCostsOneMoreMovementUntilCastersNextTurn" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1580313922" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.002567" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1059" name="IceMineTakesMovementAndAction" fullname="ArenaTatica.Core.Tests.CoreMatchTests.IceMineTakesMovementAndAction" methodname="IceMineTakesMovementAndAction" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="384277132" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000894" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1071" name="IllusionAlwaysNextToEzequielaWithRandomSide" fullname="ArenaTatica.Core.Tests.CoreMatchTests.IllusionAlwaysNextToEzequielaWithRandomSide" methodname="IllusionAlwaysNextToEzequielaWithRandomSide" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1247023248" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.045779" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1042" name="ImmovableAndAnchorResistPush" fullname="ArenaTatica.Core.Tests.CoreMatchTests.ImmovableAndAnchorResistPush" methodname="ImmovableAndAnchorResistPush" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="215747664" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000722" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1056" name="KillingTheCoinEaterPaysItsStomach" fullname="ArenaTatica.Core.Tests.CoreMatchTests.KillingTheCoinEaterPaysItsStomach" methodname="KillingTheCoinEaterPaysItsStomach" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="713910679" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000948" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1045" name="KingIgnoresOneDamage" fullname="ArenaTatica.Core.Tests.CoreMatchTests.KingIgnoresOneDamage" methodname="KingIgnoresOneDamage" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="147966930" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000712" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1017" name="KnockoutCostsGaleoesAndEndsMatch" fullname="ArenaTatica.Core.Tests.CoreMatchTests.KnockoutCostsGaleoesAndEndsMatch" methodname="KnockoutCostsGaleoesAndEndsMatch" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="994627802" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000815" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1009" name="KrosmasterTimelinePlaysWholeTeamAndStartsWithFullStats" fullname="ArenaTatica.Core.Tests.CoreMatchTests.KrosmasterTimelinePlaysWholeTeamAndStartsWithFullStats" methodname="KrosmasterTimelinePlaysWholeTeamAndStartsWithFullStats" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1144029410" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.002607" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1034" name="LastPlayerStandingWins" fullname="ArenaTatica.Core.Tests.CoreMatchTests.LastPlayerStandingWins" methodname="LastPlayerStandingWins" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1968318615" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001401" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1053" name="LavaSpreadsBurnsAndCoolsDown" fullname="ArenaTatica.Core.Tests.CoreMatchTests.LavaSpreadsBurnsAndCoolsDown" methodname="LavaSpreadsBurnsAndCoolsDown" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1148933391" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001972" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1029" name="MirrorReflectsTheLastAttackAndHasCooldown" fullname="ArenaTatica.Core.Tests.CoreMatchTests.MirrorReflectsTheLastAttackAndHasCooldown" methodname="MirrorReflectsTheLastAttackAndHasCooldown" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1520018806" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001419" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1003" name="MultipleUnknownEnemiesAndAlliesKeepValidProjectedState" fullname="ArenaTatica.Core.Tests.CoreMatchTests.MultipleUnknownEnemiesAndAlliesKeepValidProjectedState" methodname="MultipleUnknownEnemiesAndAlliesKeepValidProjectedState" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1370663342" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.007206" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1046" name="NeedlePiercesArmorAndShieldAndPunishesIsolation" fullname="ArenaTatica.Core.Tests.CoreMatchTests.NeedlePiercesArmorAndShieldAndPunishesIsolation" methodname="NeedlePiercesArmorAndShieldAndPunishesIsolation" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="2039825434" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000680" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1002" name="NetworkSnapshotHidesEnemyCellsButKeepsTurnsAndAuthority" fullname="ArenaTatica.Core.Tests.CoreMatchTests.NetworkSnapshotHidesEnemyCellsButKeepsTurnsAndAuthority" methodname="NetworkSnapshotHidesEnemyCellsButKeepsTurnsAndAuthority" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="2016180728" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.003906" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1058" name="NewShopItemsApply" fullname="ArenaTatica.Core.Tests.CoreMatchTests.NewShopItemsApply" methodname="NewShopItemsApply" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1309594622" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000941" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1049" name="NightOfCatsHealsShieldsAndFillsCats" fullname="ArenaTatica.Core.Tests.CoreMatchTests.NightOfCatsHealsShieldsAndFillsCats" methodname="NightOfCatsHealsShieldsAndFillsCats" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="279729191" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000868" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1016" name="OnlyOneSummonAndItActsNext" fullname="ArenaTatica.Core.Tests.CoreMatchTests.OnlyOneSummonAndItActsNext" methodname="OnlyOneSummonAndItActsNext" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="185146739" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000594" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1038" name="PetCoexistsWithDragon" fullname="ArenaTatica.Core.Tests.CoreMatchTests.PetCoexistsWithDragon" methodname="PetCoexistsWithDragon" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="242304224" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000567" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1060" name="PhoenixFeatherRevivesAnAlly" fullname="ArenaTatica.Core.Tests.CoreMatchTests.PhoenixFeatherRevivesAnAlly" methodname="PhoenixFeatherRevivesAnAlly" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1553674868" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001712" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1043" name="PrisonSkipsTurnBlocksTargetingAndDodgeEscapes" fullname="ArenaTatica.Core.Tests.CoreMatchTests.PrisonSkipsTurnBlocksTargetingAndDodgeEscapes" methodname="PrisonSkipsTurnBlocksTargetingAndDodgeEscapes" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="838735151" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000904" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1006" name="ProjectedMeleeCanBeSubmittedButOnlyHostDecidesTheTarget" fullname="ArenaTatica.Core.Tests.CoreMatchTests.ProjectedMeleeCanBeSubmittedButOnlyHostDecidesTheTarget" methodname="ProjectedMeleeCanBeSubmittedButOnlyHostDecidesTheTarget" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1514675659" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001616" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1018" name="RejectsWrongTeamAndStaleRevision" fullname="ArenaTatica.Core.Tests.CoreMatchTests.RejectsWrongTeamAndStaleRevision" methodname="RejectsWrongTeamAndStaleRevision" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1536211030" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000424" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1072" name="RoomShopOnlyOffersChosenItems" fullname="ArenaTatica.Core.Tests.CoreMatchTests.RoomShopOnlyOffersChosenItems" methodname="RoomShopOnlyOffersChosenItems" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="309613533" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000725" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1019" name="SameSeedSameCommandsSameState" fullname="ArenaTatica.Core.Tests.CoreMatchTests.SameSeedSameCommandsSameState" methodname="SameSeedSameCommandsSameState" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="11348951" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001939" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1064" name="SavedMapIsUsedAndKeepsSpawnsFree" fullname="ArenaTatica.Core.Tests.CoreMatchTests.SavedMapIsUsedAndKeepsSpawnsFree" methodname="SavedMapIsUsedAndKeepsSpawnsFree" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="104700071" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.002642" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1027" name="ScytheHitsAdjacentAndTwoAway" fullname="ArenaTatica.Core.Tests.CoreMatchTests.ScytheHitsAdjacentAndTwoAway" methodname="ScytheHitsAdjacentAndTwoAway" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1030434478" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001343" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1065" name="ShopBlocksTheMiddleAndZoneIsTheRing" fullname="ArenaTatica.Core.Tests.CoreMatchTests.ShopBlocksTheMiddleAndZoneIsTheRing" methodname="ShopBlocksTheMiddleAndZoneIsTheRing" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1226301830" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001306" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1021" name="ShopStartsWithThreeDistinctSlotsPerTeam" fullname="ArenaTatica.Core.Tests.CoreMatchTests.ShopStartsWithThreeDistinctSlotsPerTeam" methodname="ShopStartsWithThreeDistinctSlotsPerTeam" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="5963860" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000763" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1028" name="ShotsPassOverFightersAndMayHitWhoIsInTheWay" fullname="ArenaTatica.Core.Tests.CoreMatchTests.ShotsPassOverFightersAndMayHitWhoIsInTheWay" methodname="ShotsPassOverFightersAndMayHitWhoIsInTheWay" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="686157904" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.006947" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1032" name="SixPlayersGrowTheMapAndRotateTurns" fullname="ArenaTatica.Core.Tests.CoreMatchTests.SixPlayersGrowTheMapAndRotateTurns" methodname="SixPlayersGrowTheMapAndRotateTurns" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1706695330" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.002318" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1023" name="SpellIsSingleUse" fullname="ArenaTatica.Core.Tests.CoreMatchTests.SpellIsSingleUse" methodname="SpellIsSingleUse" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1515445919" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001255" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1035" name="TeamsShareGaleoesAndAlliesAreNotEnemies" fullname="ArenaTatica.Core.Tests.CoreMatchTests.TeamsShareGaleoesAndAlliesAreNotEnemies" methodname="TeamsShareGaleoesAndAlliesAreNotEnemies" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="80497216" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.013509" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1037" name="ThreeVsThreeAndTwoTeamsOfThreeSpawnApart" fullname="ArenaTatica.Core.Tests.CoreMatchTests.ThreeVsThreeAndTwoTeamsOfThreeSpawnApart" methodname="ThreeVsThreeAndTwoTeamsOfThreeSpawnApart" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="2057140090" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.023251" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1025" name="TrapHurtsEnemyStopsMoveAndIgnoresOwner" fullname="ArenaTatica.Core.Tests.CoreMatchTests.TrapHurtsEnemyStopsMoveAndIgnoresOwner" methodname="TrapHurtsEnemyStopsMoveAndIgnoresOwner" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1777611675" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.005838" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1055" name="WanderingBossHuntsAndLeaves" fullname="ArenaTatica.Core.Tests.CoreMatchTests.WanderingBossHuntsAndLeaves" methodname="WanderingBossHuntsAndLeaves" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1908670635" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.005741" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1052" name="WishCanCancelTheActiveEvent" fullname="ArenaTatica.Core.Tests.CoreMatchTests.WishCanCancelTheActiveEvent" methodname="WishCanCancelTheActiveEvent" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1573650466" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.011150" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1062" name="WishCopyLetsThePlayerPickWhichSkill" fullname="ArenaTatica.Core.Tests.CoreMatchTests.WishCopyLetsThePlayerPickWhichSkill" methodname="WishCopyLetsThePlayerPickWhichSkill" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1316301683" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.002821" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1051" name="WishNeedsRoundTenChannelsTwoTurnsThenGrantsAChoice" fullname="ArenaTatica.Core.Tests.CoreMatchTests.WishNeedsRoundTenChannelsTwoTurnsThenGrantsAChoice" methodname="WishNeedsRoundTenChannelsTwoTurnsThenGrantsAChoice" classname="ArenaTatica.Core.Tests.CoreMatchTests" runstate="Runnable" seed="1975982715" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001023" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestSuite" id="1177" name="Tests" fullname="ArenaTatica.Tests" runstate="Runnable" testcasecount="82" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:34Z" duration="1.945796" total="82" passed="82" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1074" name="ActionConfirmationTests" fullname="ArenaTatica.Tests.ActionConfirmationTests" classname="ArenaTatica.Tests.ActionConfirmationTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.011782" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1078" name="AnotherActorOrStateNeverConfirms" fullname="ArenaTatica.Tests.ActionConfirmationTests.AnotherActorOrStateNeverConfirms" methodname="AnotherActorOrStateNeverConfirms" classname="ArenaTatica.Tests.ActionConfirmationTests" runstate="Runnable" seed="321799591" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000700" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1075" name="FirstPressOnlyHighlightsAndArmsTheKey" fullname="ArenaTatica.Tests.ActionConfirmationTests.FirstPressOnlyHighlightsAndArmsTheKey" methodname="FirstPressOnlyHighlightsAndArmsTheKey" classname="ArenaTatica.Tests.ActionConfirmationTests" runstate="Runnable" seed="1532910831" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000490" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1080" name="PassUsesTheSameConfirmedMethod" fullname="ArenaTatica.Tests.ActionConfirmationTests.PassUsesTheSameConfirmedMethod" methodname="PassUsesTheSameConfirmedMethod" classname="ArenaTatica.Tests.ActionConfirmationTests" runstate="Runnable" seed="1559081204" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000249" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1077" name="PressingAnotherButtonResetsTheConfirmation" fullname="ArenaTatica.Tests.ActionConfirmationTests.PressingAnotherButtonResetsTheConfirmation" methodname="PressingAnotherButtonResetsTheConfirmation" classname="ArenaTatica.Tests.ActionConfirmationTests" runstate="Runnable" seed="1860162894" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000327" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1079" name="ResetAndEmptyKeyClearEverything" fullname="ArenaTatica.Tests.ActionConfirmationTests.ResetAndEmptyKeyClearEverything" methodname="ResetAndEmptyKeyClearEverything" classname="ArenaTatica.Tests.ActionConfirmationTests" runstate="Runnable" seed="1882378611" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000361" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1076" name="SecondPressOnTheSameButtonConfirmsAndRearms" fullname="ArenaTatica.Tests.ActionConfirmationTests.SecondPressOnTheSameButtonConfirmsAndRearms" methodname="SecondPressOnTheSameButtonConfirmsAndRearms" classname="ArenaTatica.Tests.ActionConfirmationTests" runstate="Runnable" seed="1854204961" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000312" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1085" name="MatchInteractionTests" fullname="ArenaTatica.Tests.MatchInteractionTests" classname="ArenaTatica.Tests.MatchInteractionTests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.029894" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1098" name="ColossusDevoursDeathCausedByDifferentFighterIncludingAlly" fullname="ArenaTatica.Tests.MatchInteractionTests.ColossusDevoursDeathCausedByDifferentFighterIncludingAlly" methodname="ColossusDevoursDeathCausedByDifferentFighterIncludingAlly" classname="ArenaTatica.Tests.MatchInteractionTests" runstate="Runnable" seed="374533912" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.002019" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1099" name="ColossusObservesTrapDeathAndDoesNotTriggerTwice" fullname="ArenaTatica.Tests.MatchInteractionTests.ColossusObservesTrapDeathAndDoesNotTriggerTwice" methodname="ColossusObservesTrapDeathAndDoesNotTriggerTwice" classname="ArenaTatica.Tests.MatchInteractionTests" runstate="Runnable" seed="1209043177" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001207" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1097" name="CopyWishCanBeCastOnEmptyTileWithoutTargetPickerOrException" fullname="ArenaTatica.Tests.MatchInteractionTests.CopyWishCanBeCastOnEmptyTileWithoutTargetPickerOrException" methodname="CopyWishCanBeCastOnEmptyTileWithoutTargetPickerOrException" classname="ArenaTatica.Tests.MatchInteractionTests" runstate="Runnable" seed="144463507" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000615" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1094" name="EmptyHealingAndSupportNeverHealEnemyOrThrow" fullname="ArenaTatica.Tests.MatchInteractionTests.EmptyHealingAndSupportNeverHealEnemyOrThrow" methodname="EmptyHealingAndSupportNeverHealEnemyOrThrow" classname="ArenaTatica.Tests.MatchInteractionTests" runstate="Runnable" seed="734496551" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000859" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1086" name="GroundAttackConsumesCostAndEmitsMissAtChosenTile" fullname="ArenaTatica.Tests.MatchInteractionTests.GroundAttackConsumesCostAndEmitsMissAtChosenTile" methodname="GroundAttackConsumesCostAndEmitsMissAtChosenTile" classname="ArenaTatica.Tests.MatchInteractionTests" runstate="Runnable" seed="39263048" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001051" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1087" name="GroundAttackHitsHiddenEnemyBeyondAdjacentRange" fullname="ArenaTatica.Tests.MatchInteractionTests.GroundAttackHitsHiddenEnemyBeyondAdjacentRange" methodname="GroundAttackHitsHiddenEnemyBeyondAdjacentRange" classname="ArenaTatica.Tests.MatchInteractionTests" runstate="Runnable" seed="558521426" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001594" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1090" name="HiddenCollisionStopsBeforeOccupantAndPreservesUnspentPm" fullname="ArenaTatica.Tests.MatchInteractionTests.HiddenCollisionStopsBeforeOccupantAndPreservesUnspentPm" classname="ArenaTatica.Tests.MatchInteractionTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.005069" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1088" name="HiddenCollisionStopsBeforeOccupantAndPreservesUnspentPm(0)" fullname="ArenaTatica.Tests.MatchInteractionTests.HiddenCollisionStopsBeforeOccupantAndPreservesUnspentPm(0)" methodname="HiddenCollisionStopsBeforeOccupantAndPreservesUnspentPm" classname="ArenaTatica.Tests.MatchInteractionTests" runstate="Runnable" seed="1374108890" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.002221" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1089" name="HiddenCollisionStopsBeforeOccupantAndPreservesUnspentPm(2)" fullname="ArenaTatica.Tests.MatchInteractionTests.HiddenCollisionStopsBeforeOccupantAndPreservesUnspentPm(2)" methodname="HiddenCollisionStopsBeforeOccupantAndPreservesUnspentPm" classname="ArenaTatica.Tests.MatchInteractionTests" runstate="Runnable" seed="1500688951" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001901" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1092" name="HiddenInterceptorNeverLeaksItsCellWhenItTakesNoDamage" fullname="ArenaTatica.Tests.MatchInteractionTests.HiddenInterceptorNeverLeaksItsCellWhenItTakesNoDamage" methodname="HiddenInterceptorNeverLeaksItsCellWhenItTakesNoDamage" classname="ArenaTatica.Tests.MatchInteractionTests" runstate="Runnable" seed="507856254" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.005016" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1093" name="KnownEnemyAndFriendlyHiddenOccupantsStillBlockPlanning" fullname="ArenaTatica.Tests.MatchInteractionTests.KnownEnemyAndFriendlyHiddenOccupantsStillBlockPlanning" methodname="KnownEnemyAndFriendlyHiddenOccupantsStillBlockPlanning" classname="ArenaTatica.Tests.MatchInteractionTests" runstate="Runnable" seed="827951801" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000845" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1091" name="ResistedHiddenShotAndEmptyShotHaveIdenticalPublicEvents" fullname="ArenaTatica.Tests.MatchInteractionTests.ResistedHiddenShotAndEmptyShotHaveIdenticalPublicEvents" methodname="ResistedHiddenShotAndEmptyShotHaveIdenticalPublicEvents" classname="ArenaTatica.Tests.MatchInteractionTests" runstate="Runnable" seed="2050211617" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.003459" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1096" name="ShadowCloneUsesCasterIdentityAndEnemyProjectionKeepsDisguise" fullname="ArenaTatica.Tests.MatchInteractionTests.ShadowCloneUsesCasterIdentityAndEnemyProjectionKeepsDisguise" methodname="ShadowCloneUsesCasterIdentityAndEnemyProjectionKeepsDisguise" classname="ArenaTatica.Tests.MatchInteractionTests" runstate="Runnable" seed="513970723" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001698" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1095" name="ZeroMinimumRangeAllowsHealingTheCasterWithLineOfSightEnabled" fullname="ArenaTatica.Tests.MatchInteractionTests.ZeroMinimumRangeAllowsHealingTheCasterWithLineOfSightEnabled" methodname="ZeroMinimumRangeAllowsHealingTheCasterWithLineOfSightEnabled" classname="ArenaTatica.Tests.MatchInteractionTests" runstate="Runnable" seed="1440731112" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000601" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1100" name="MatchModifierTests" fullname="ArenaTatica.Tests.MatchModifierTests" classname="ArenaTatica.Tests.MatchModifierTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.183802" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1114" name="ColossusAbsorbsRolledDamageAndRangeWithoutSharingMutableCache" fullname="ArenaTatica.Tests.MatchModifierTests.ColossusAbsorbsRolledDamageAndRangeWithoutSharingMutableCache" methodname="ColossusAbsorbsRolledDamageAndRangeWithoutSharingMutableCache" classname="ArenaTatica.Tests.MatchModifierTests" runstate="Runnable" seed="240653904" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.004079" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1110" name="NumericRollsStayBoundedAndSkillsRemainUsableAcrossManySeeds" fullname="ArenaTatica.Tests.MatchModifierTests.NumericRollsStayBoundedAndSkillsRemainUsableAcrossManySeeds" methodname="NumericRollsStayBoundedAndSkillsRemainUsableAcrossManySeeds" classname="ArenaTatica.Tests.MatchModifierTests" runstate="Runnable" seed="1888303742" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.129971" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1112" name="RandomizedCloneHasValidDisguisedSnapshot" fullname="ArenaTatica.Tests.MatchModifierTests.RandomizedCloneHasValidDisguisedSnapshot" methodname="RandomizedCloneHasValidDisguisedSnapshot" classname="ArenaTatica.Tests.MatchModifierTests" runstate="Runnable" seed="567081151" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.002465" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1111" name="RandomizedSixPlayerSnapshotFitsRelayBudget" fullname="ArenaTatica.Tests.MatchModifierTests.RandomizedSixPlayerSnapshotFitsRelayBudget" methodname="RandomizedSixPlayerSnapshotFitsRelayBudget" classname="ArenaTatica.Tests.MatchModifierTests" runstate="Runnable" seed="791654396" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.010041" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1109" name="SameSeedProducesSameRollAndLeavesEditorUnchanged" fullname="ArenaTatica.Tests.MatchModifierTests.SameSeedProducesSameRollAndLeavesEditorUnchanged" classname="ArenaTatica.Tests.MatchModifierTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.027387" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1106" name="SameSeedProducesSameRollAndLeavesEditorUnchanged(True,False)" fullname="ArenaTatica.Tests.MatchModifierTests.SameSeedProducesSameRollAndLeavesEditorUnchanged(True,False)" methodname="SameSeedProducesSameRollAndLeavesEditorUnchanged" classname="ArenaTatica.Tests.MatchModifierTests" runstate="Runnable" seed="1124292654" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.007521" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1107" name="SameSeedProducesSameRollAndLeavesEditorUnchanged(False,True)" fullname="ArenaTatica.Tests.MatchModifierTests.SameSeedProducesSameRollAndLeavesEditorUnchanged(False,True)" methodname="SameSeedProducesSameRollAndLeavesEditorUnchanged" classname="ArenaTatica.Tests.MatchModifierTests" runstate="Runnable" seed="1778126408" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.011870" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1108" name="SameSeedProducesSameRollAndLeavesEditorUnchanged(True,True)" fullname="ArenaTatica.Tests.MatchModifierTests.SameSeedProducesSameRollAndLeavesEditorUnchanged(True,True)" methodname="SameSeedProducesSameRollAndLeavesEditorUnchanged" classname="ArenaTatica.Tests.MatchModifierTests" runstate="Runnable" seed="1219354904" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.003840" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="ParameterizedMethod" id="1105" name="ScopeSelectsOnlyIntendedParticipants" fullname="ArenaTatica.Tests.MatchModifierTests.ScopeSelectsOnlyIntendedParticipants" classname="ArenaTatica.Tests.MatchModifierTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.004005" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1101" name="ScopeSelectsOnlyIntendedParticipants(True,False)" fullname="ArenaTatica.Tests.MatchModifierTests.ScopeSelectsOnlyIntendedParticipants(True,False)" methodname="ScopeSelectsOnlyIntendedParticipants" classname="ArenaTatica.Tests.MatchModifierTests" runstate="Runnable" seed="1677806318" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001149" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1102" name="ScopeSelectsOnlyIntendedParticipants(False,True)" fullname="ArenaTatica.Tests.MatchModifierTests.ScopeSelectsOnlyIntendedParticipants(False,True)" methodname="ScopeSelectsOnlyIntendedParticipants" classname="ArenaTatica.Tests.MatchModifierTests" runstate="Runnable" seed="95123979" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000581" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1103" name="ScopeSelectsOnlyIntendedParticipants(True,True)" fullname="ArenaTatica.Tests.MatchModifierTests.ScopeSelectsOnlyIntendedParticipants(True,True)" methodname="ScopeSelectsOnlyIntendedParticipants" classname="ArenaTatica.Tests.MatchModifierTests" runstate="Runnable" seed="977308160" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000983" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1104" name="ScopeSelectsOnlyIntendedParticipants(False,False)" fullname="ArenaTatica.Tests.MatchModifierTests.ScopeSelectsOnlyIntendedParticipants(False,False)" methodname="ScopeSelectsOnlyIntendedParticipants" classname="ArenaTatica.Tests.MatchModifierTests" runstate="Runnable" seed="207152683" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000253" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1113" name="StatsOnlyKeepEachEditedFightersOwnSkillCostAndProperties" fullname="ArenaTatica.Tests.MatchModifierTests.StatsOnlyKeepEachEditedFightersOwnSkillCostAndProperties" methodname="StatsOnlyKeepEachEditedFightersOwnSkillCostAndProperties" classname="ArenaTatica.Tests.MatchModifierTests" runstate="Runnable" seed="1343287739" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.002408" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1115" name="PresentationTests" fullname="ArenaTatica.Tests.PresentationTests" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" testcasecount="32" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:33Z" duration="1.124232" total="32" passed="32" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1132" name="BuyingAMagicOrPetDoesNotPlayItsCastOrSummonEarly" fullname="ArenaTatica.Tests.PresentationTests.BuyingAMagicOrPetDoesNotPlayItsCastOrSummonEarly" methodname="BuyingAMagicOrPetDoesNotPlayItsCastOrSummonEarly" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="1428694485" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.000745" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1148" name="ContinuousStatesFollowTheFighterAndEndWithIt" fullname="ArenaTatica.Tests.PresentationTests.ContinuousStatesFollowTheFighterAndEndWithIt" methodname="ContinuousStatesFollowTheFighterAndEndWithIt" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="529909150" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.041201" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1131" name="CopiedAndRandomSkillsKeepTheSameSpritesAndTiming" fullname="ArenaTatica.Tests.PresentationTests.CopiedAndRandomSkillsKeepTheSameSpritesAndTiming" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.022266" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1129" name="CopiedAndRandomSkillsKeepTheSameSpritesAndTiming(&quot;bola-de-fogo&quot;,&quot;impacto&quot;)" fullname="ArenaTatica.Tests.PresentationTests.CopiedAndRandomSkillsKeepTheSameSpritesAndTiming(&quot;bola-de-fogo&quot;,&quot;impacto&quot;)" methodname="CopiedAndRandomSkillsKeepTheSameSpritesAndTiming" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="2061424702" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.015620" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1130" name="CopiedAndRandomSkillsKeepTheSameSpritesAndTiming(&quot;bomba-de-fumaca&quot;,&quot;uso&quot;)" fullname="ArenaTatica.Tests.PresentationTests.CopiedAndRandomSkillsKeepTheSameSpritesAndTiming(&quot;bomba-de-fumaca&quot;,&quot;uso&quot;)" methodname="CopiedAndRandomSkillsKeepTheSameSpritesAndTiming" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="1963238958" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.005609" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1147" name="DamageWaitsForTheCollisionFrameNotThePeak" fullname="ArenaTatica.Tests.PresentationTests.DamageWaitsForTheCollisionFrameNotThePeak" methodname="DamageWaitsForTheCollisionFrameNotThePeak" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="1257425777" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.002215" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1140" name="EmptyTeamDisablesAdvanceAndCostFollowsTheTeam" fullname="ArenaTatica.Tests.PresentationTests.EmptyTeamDisablesAdvanceAndCostFollowsTheTeam" methodname="EmptyTeamDisablesAdvanceAndCostFollowsTheTeam" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="809880041" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:32Z" duration="0.001666" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1133" name="EveryManifestResourceLoadsWithItsDeclaredFrames" fullname="ArenaTatica.Tests.PresentationTests.EveryManifestResourceLoadsWithItsDeclaredFrames" methodname="EveryManifestResourceLoadsWithItsDeclaredFrames" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="185059843" result="Passed" start-time="2026-10-15 12:28:32Z" end-time="2026-10-15 12:28:33Z" duration="0.998080" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1150" name="FloatingTextsOnTheSameSpotStack" fullname="ArenaTatica.Tests.PresentationTests.FloatingTextsOnTheSameSpotStack" methodname="FloatingTextsOnTheSameSpotStack" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="1767398486" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.002770" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1152" name="FreeTeamsPoolsAndButtonLerp" fullname="ArenaTatica.Tests.PresentationTests.FreeTeamsPoolsAndButtonLerp" methodname="FreeTeamsPoolsAndButtonLerp" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="533711262" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.007038" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1134" name="LoadingOnePhaseNeverBringsFramesOfAnother" fullname="ArenaTatica.Tests.PresentationTests.LoadingOnePhaseNeverBringsFramesOfAnother" methodname="LoadingOnePhaseNeverBringsFramesOfAnother" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="1573092109" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.003492" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1139" name="MenuKeepsTheTabsPlusRoom" fullname="ArenaTatica.Tests.PresentationTests.MenuKeepsTheTabsPlusRoom" methodname="MenuKeepsTheTabsPlusRoom" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="1157214512" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.001289" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1141" name="OwnerOnlyEffectIsHiddenFromTheEnemy" fullname="ArenaTatica.Tests.PresentationTests.OwnerOnlyEffectIsHiddenFromTheEnemy" methodname="OwnerOnlyEffectIsHiddenFromTheEnemy" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="242883871" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.000439" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1124" name="RecentEventUsesItsAvailableSpritePhase" fullname="ArenaTatica.Tests.PresentationTests.RecentEventUsesItsAvailableSpritePhase" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.006947" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1116" name="RecentEventUsesItsAvailableSpritePhase(&quot;esconder&quot;,&quot;bomba-de-fumaca&quot;,&quot;bomba-de-fumaca/uso&quot;)" fullname="ArenaTatica.Tests.PresentationTests.RecentEventUsesItsAvailableSpritePhase(&quot;esconder&quot;,&quot;bomba-de-fumaca&quot;,&quot;bomba-de-fumaca/uso&quot;)" methodname="RecentEventUsesItsAvailableSpritePhase" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="1038295138" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.001162" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1117" name="RecentEventUsesItsAvailableSpritePhase(&quot;armadilha-posta&quot;,&quot;mina-de-gelo&quot;,&quot;mina-de-gelo/uso&quot;)" fullname="ArenaTatica.Tests.PresentationTests.RecentEventUsesItsAvailableSpritePhase(&quot;armadilha-posta&quot;,&quot;mina-de-gelo&quot;,&quot;mina-de-gelo/uso&quot;)" methodname="RecentEventUsesItsAvailableSpritePhase" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="1171871176" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.000635" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1118" name="RecentEventUsesItsAvailableSpritePhase(&quot;invocar&quot;,&quot;erguer-totem&quot;,&quot;totem-de-cura/uso&quot;)" fullname="ArenaTatica.Tests.PresentationTests.RecentEventUsesItsAvailableSpritePhase(&quot;invocar&quot;,&quot;erguer-totem&quot;,&quot;totem-de-cura/uso&quot;)" methodname="RecentEventUsesItsAvailableSpritePhase" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="1789932841" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.000457" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1119" name="RecentEventUsesItsAvailableSpritePhase(&quot;cura&quot;,&quot;totem-de-cura&quot;,&quot;totem-de-cura/uso&quot;)" fullname="ArenaTatica.Tests.PresentationTests.RecentEventUsesItsAvailableSpritePhase(&quot;cura&quot;,&quot;totem-de-cura&quot;,&quot;totem-de-cura/uso&quot;)" methodname="RecentEventUsesItsAvailableSpritePhase" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="1177813932" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.000595" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1120" name="RecentEventUsesItsAvailableSpritePhase(&quot;compra&quot;,&quot;cristal-de-foco&quot;,&quot;cristal-de-foco/uso&quot;)" fullname="ArenaTatica.Tests.PresentationTests.RecentEventUsesItsAvailableSpritePhase(&quot;compra&quot;,&quot;cristal-de-foco&quot;,&quot;cristal-de-foco/uso&quot;)" methodname="RecentEventUsesItsAvailableSpritePhase" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="836584102" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.000550" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1121" name="RecentEventUsesItsAvailableSpritePhase(&quot;compra&quot;,&quot;ancora&quot;,&quot;ancora/uso&quot;)" fullname="ArenaTatica.Tests.PresentationTests.RecentEventUsesItsAvailableSpritePhase(&quot;compra&quot;,&quot;ancora&quot;,&quot;ancora/uso&quot;)" methodname="RecentEventUsesItsAvailableSpritePhase" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="1246389569" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.000594" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1122" name="RecentEventUsesItsAvailableSpritePhase(&quot;compra&quot;,&quot;manto-de-espinhos&quot;,&quot;manto-de-espinhos/uso&quot;)" fullname="ArenaTatica.Tests.PresentationTests.RecentEventUsesItsAvailableSpritePhase(&quot;compra&quot;,&quot;manto-de-espinhos&quot;,&quot;manto-de-espinhos/uso&quot;)" methodname="RecentEventUsesItsAvailableSpritePhase" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="757719032" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.000400" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1123" name="RecentEventUsesItsAvailableSpritePhase(&quot;compra&quot;,&quot;bencao-de-pedra&quot;,&quot;bencao-de-pedra/uso&quot;)" fullname="ArenaTatica.Tests.PresentationTests.RecentEventUsesItsAvailableSpritePhase(&quot;compra&quot;,&quot;bencao-de-pedra&quot;,&quot;bencao-de-pedra/uso&quot;)" methodname="RecentEventUsesItsAvailableSpritePhase" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="1984086659" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.000455" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="ParameterizedMethod" id="1128" name="RecentlyUncalledPhasesLoadWithTheirDeclaredTiming" fullname="ArenaTatica.Tests.PresentationTests.RecentlyUncalledPhasesLoadWithTheirDeclaredTiming" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.003616" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1125" name="RecentlyUncalledPhasesLoadWithTheirDeclaredTiming(&quot;aquecer-motor&quot;,&quot;conjuracao&quot;)" fullname="ArenaTatica.Tests.PresentationTests.RecentlyUncalledPhasesLoadWithTheirDeclaredTiming(&quot;aquecer-motor&quot;,&quot;conjuracao&quot;)" methodname="RecentlyUncalledPhasesLoadWithTheirDeclaredTiming" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="642288090" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.000941" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1126" name="RecentlyUncalledPhasesLoadWithTheirDeclaredTiming(&quot;aquecer-motor&quot;,&quot;impacto&quot;)" fullname="ArenaTatica.Tests.PresentationTests.RecentlyUncalledPhasesLoadWithTheirDeclaredTiming(&quot;aquecer-motor&quot;,&quot;impacto&quot;)" methodname="RecentlyUncalledPhasesLoadWithTheirDeclaredTiming" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="949273615" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.000772" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1127" name="RecentlyUncalledPhasesLoadWithTheirDeclaredTiming(&quot;chao-de-gelo&quot;,&quot;conjuracao&quot;)" fullname="ArenaTatica.Tests.PresentationTests.RecentlyUncalledPhasesLoadWithTheirDeclaredTiming(&quot;chao-de-gelo&quot;,&quot;conjuracao&quot;)" methodname="RecentlyUncalledPhasesLoadWithTheirDeclaredTiming" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="113579483" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.000664" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="ParameterizedMethod" id="1138" name="RepairedStripsSliceIntoTheRightCells" fullname="ArenaTatica.Tests.PresentationTests.RepairedStripsSliceIntoTheRightCells" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.013635" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1135" name="RepairedStripsSliceIntoTheRightCells(&quot;Sprites/Baltazar/idle_west&quot;,4,168)" fullname="ArenaTatica.Tests.PresentationTests.RepairedStripsSliceIntoTheRightCells(&quot;Sprites/Baltazar/idle_west&quot;,4,168)" methodname="RepairedStripsSliceIntoTheRightCells" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="306100277" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.007796" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1136" name="RepairedStripsSliceIntoTheRightCells(&quot;Sprites/Baltazar/walk_west&quot;,6,176)" fullname="ArenaTatica.Tests.PresentationTests.RepairedStripsSliceIntoTheRightCells(&quot;Sprites/Baltazar/walk_west&quot;,6,176)" methodname="RepairedStripsSliceIntoTheRightCells" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="1043546369" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.001980" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1137" name="RepairedStripsSliceIntoTheRightCells(&quot;Sprites/GuardiaoMusgo/idle_north-west&quot;,4,176)" fullname="ArenaTatica.Tests.PresentationTests.RepairedStripsSliceIntoTheRightCells(&quot;Sprites/GuardiaoMusgo/idle_north-west&quot;,4,176)" methodname="RepairedStripsSliceIntoTheRightCells" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="434485150" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.001233" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1149" name="RoomPathAcceptsCodePageLinkAndDeepLink" fullname="ArenaTatica.Tests.PresentationTests.RoomPathAcceptsCodePageLinkAndDeepLink" methodname="RoomPathAcceptsCodePageLinkAndDeepLink" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="911870990" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.001513" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1142" name="StateEffectFollowsTargetVisibility" fullname="ArenaTatica.Tests.PresentationTests.StateEffectFollowsTargetVisibility" methodname="StateEffectFollowsTargetVisibility" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="1095719706" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.000401" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1151" name="TeamPickerCardsFitTheWholeRosterInBothOrientations" fullname="ArenaTatica.Tests.PresentationTests.TeamPickerCardsFitTheWholeRosterInBothOrientations" methodname="TeamPickerCardsFitTheWholeRosterInBothOrientations" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="1033948609" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.001130" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1146" name="TerrainLoopsHaveMoreThanOneFrame" fullname="ArenaTatica.Tests.PresentationTests.TerrainLoopsHaveMoreThanOneFrame" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.008607" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1143" name="TerrainLoopsHaveMoreThanOneFrame(&quot;lava&quot;)" fullname="ArenaTatica.Tests.PresentationTests.TerrainLoopsHaveMoreThanOneFrame(&quot;lava&quot;)" methodname="TerrainLoopsHaveMoreThanOneFrame" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="160020228" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.002487" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1144" name="TerrainLoopsHaveMoreThanOneFrame(&quot;gelo&quot;)" fullname="ArenaTatica.Tests.PresentationTests.TerrainLoopsHaveMoreThanOneFrame(&quot;gelo&quot;)" methodname="TerrainLoopsHaveMoreThanOneFrame" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="1286888747" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.002180" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1145" name="TerrainLoopsHaveMoreThanOneFrame(&quot;fogos&quot;)" fullname="ArenaTatica.Tests.PresentationTests.TerrainLoopsHaveMoreThanOneFrame(&quot;fogos&quot;)" methodname="TerrainLoopsHaveMoreThanOneFrame" classname="ArenaTatica.Tests.PresentationTests" runstate="Runnable" seed="854102921" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:33Z" duration="0.001907" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+          <test-suite type="TestFixture" id="1153" name="RoomReleaseTests" fullname="ArenaTatica.Tests.RoomReleaseTests" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" testcasecount="16" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:34Z" duration="0.578936" total="16" passed="16" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1154" name="AutomaticPoolStaysTheSameAcrossDraftReads" fullname="ArenaTatica.Tests.RoomReleaseTests.AutomaticPoolStaysTheSameAcrossDraftReads" methodname="AutomaticPoolStaysTheSameAcrossDraftReads" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" seed="981310206" result="Passed" start-time="2026-10-15 12:28:33Z" end-time="2026-10-15 12:28:34Z" duration="0.043271" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1164" name="CloseLocalMatchBlocksFurtherActionsAndNewMatchCanStart" fullname="ArenaTatica.Tests.RoomReleaseTests.CloseLocalMatchBlocksFurtherActionsAndNewMatchCanStart" methodname="CloseLocalMatchBlocksFurtherActionsAndNewMatchCanStart" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" seed="1223389219" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.033489" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1170" name="CompleteTournamentRespectsBansByeMappingAndChampion" fullname="ArenaTatica.Tests.RoomReleaseTests.CompleteTournamentRespectsBansByeMappingAndChampion" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.126134" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1167" name="CompleteTournamentRespectsBansByeMappingAndChampion(2)" fullname="ArenaTatica.Tests.RoomReleaseTests.CompleteTournamentRespectsBansByeMappingAndChampion(2)" methodname="CompleteTournamentRespectsBansByeMappingAndChampion" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" seed="1740742207" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.065875" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1168" name="CompleteTournamentRespectsBansByeMappingAndChampion(3)" fullname="ArenaTatica.Tests.RoomReleaseTests.CompleteTournamentRespectsBansByeMappingAndChampion(3)" methodname="CompleteTournamentRespectsBansByeMappingAndChampion" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" seed="253519478" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.018682" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1169" name="CompleteTournamentRespectsBansByeMappingAndChampion(6)" fullname="ArenaTatica.Tests.RoomReleaseTests.CompleteTournamentRespectsBansByeMappingAndChampion(6)" methodname="CompleteTournamentRespectsBansByeMappingAndChampion" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" seed="442166152" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.039166" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="ParameterizedMethod" id="1158" name="FullTeamsFitRelayPacket" fullname="ArenaTatica.Tests.RoomReleaseTests.FullTeamsFitRelayPacket" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.190521" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1155" name="FullTeamsFitRelayPacket(2)" fullname="ArenaTatica.Tests.RoomReleaseTests.FullTeamsFitRelayPacket(2)" methodname="FullTeamsFitRelayPacket" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" seed="299021631" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.037079" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[2 participantes, 4 lutadores/time: maior snapshot 26580 bytes, limite Relay 81920.
+]]></output>
+              </test-case>
+              <test-case id="1156" name="FullTeamsFitRelayPacket(3)" fullname="ArenaTatica.Tests.RoomReleaseTests.FullTeamsFitRelayPacket(3)" methodname="FullTeamsFitRelayPacket" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" seed="464767441" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.040290" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[3 participantes, 4 lutadores/time: maior snapshot 42778 bytes, limite Relay 81920.
+]]></output>
+              </test-case>
+              <test-case id="1157" name="FullTeamsFitRelayPacket(6)" fullname="ArenaTatica.Tests.RoomReleaseTests.FullTeamsFitRelayPacket(6)" methodname="FullTeamsFitRelayPacket" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" seed="343147556" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.111291" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[6 participantes, 4 lutadores/time: maior snapshot 61157 bytes, limite Relay 81920.
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-case id="1165" name="HostCloseMatchReturnsEveryoneToExistingLobby" fullname="ArenaTatica.Tests.RoomReleaseTests.HostCloseMatchReturnsEveryoneToExistingLobby" methodname="HostCloseMatchReturnsEveryoneToExistingLobby" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" seed="1094164977" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.018960" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1166" name="HumanScopeRandomizerReachesNetworkMatch" fullname="ArenaTatica.Tests.RoomReleaseTests.HumanScopeRandomizerReachesNetworkMatch" methodname="HumanScopeRandomizerReachesNetworkMatch" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" seed="1472380616" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.016949" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1171" name="ReconnectAndChoiceCannotChangePoolDuringDraft" fullname="ArenaTatica.Tests.RoomReleaseTests.ReconnectAndChoiceCannotChangePoolDuringDraft" methodname="ReconnectAndChoiceCannotChangePoolDuringDraft" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" seed="1479214318" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.013164" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1172" name="RestartOfRecordedTournamentMatchRollsBackItsWinner" fullname="ArenaTatica.Tests.RoomReleaseTests.RestartOfRecordedTournamentMatchRollsBackItsWinner" methodname="RestartOfRecordedTournamentMatchRollsBackItsWinner" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" seed="1288534039" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.015715" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1163" name="RoomFormatAndShopSettingsReachTheAuthoritativeMatch" fullname="ArenaTatica.Tests.RoomReleaseTests.RoomFormatAndShopSettingsReachTheAuthoritativeMatch" methodname="RoomFormatAndShopSettingsReachTheAuthoritativeMatch" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" seed="372707017" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.031383" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1162" name="RoomRestartsAndReturnsToLobbyWithoutLosingParticipants" fullname="ArenaTatica.Tests.RoomReleaseTests.RoomRestartsAndReturnsToLobbyWithoutLosingParticipants" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.083798" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1159" name="RoomRestartsAndReturnsToLobbyWithoutLosingParticipants(2)" fullname="ArenaTatica.Tests.RoomReleaseTests.RoomRestartsAndReturnsToLobbyWithoutLosingParticipants(2)" methodname="RoomRestartsAndReturnsToLobbyWithoutLosingParticipants" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" seed="1749038994" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.015539" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1160" name="RoomRestartsAndReturnsToLobbyWithoutLosingParticipants(3)" fullname="ArenaTatica.Tests.RoomReleaseTests.RoomRestartsAndReturnsToLobbyWithoutLosingParticipants(3)" methodname="RoomRestartsAndReturnsToLobbyWithoutLosingParticipants" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" seed="430315181" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.023381" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1161" name="RoomRestartsAndReturnsToLobbyWithoutLosingParticipants(6)" fullname="ArenaTatica.Tests.RoomReleaseTests.RoomRestartsAndReturnsToLobbyWithoutLosingParticipants(6)" methodname="RoomRestartsAndReturnsToLobbyWithoutLosingParticipants" classname="ArenaTatica.Tests.RoomReleaseTests" runstate="Runnable" seed="2145752676" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.042861" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+          <test-suite type="TestFixture" id="1081" name="TouchGestureTests" fullname="ArenaTatica.Tests.TouchGestureTests" classname="ArenaTatica.Tests.TouchGestureTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.003225" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1084" name="OneToTwoToOneOrStartingOnUiNeverActsOnTheBoard" fullname="ArenaTatica.Tests.TouchGestureTests.OneToTwoToOneOrStartingOnUiNeverActsOnTheBoard" methodname="OneToTwoToOneOrStartingOnUiNeverActsOnTheBoard" classname="ArenaTatica.Tests.TouchGestureTests" runstate="Runnable" seed="1895702425" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000536" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1083" name="PinchNeedsItsOwnSlackAndNeverRotatesOrPans" fullname="ArenaTatica.Tests.TouchGestureTests.PinchNeedsItsOwnSlackAndNeverRotatesOrPans" methodname="PinchNeedsItsOwnSlackAndNeverRotatesOrPans" classname="ArenaTatica.Tests.TouchGestureTests" runstate="Runnable" seed="322019705" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000493" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1082" name="ThresholdsGrowWithDpiAndInterfaceScale" fullname="ArenaTatica.Tests.TouchGestureTests.ThresholdsGrowWithDpiAndInterfaceScale" methodname="ThresholdsGrowWithDpiAndInterfaceScale" classname="ArenaTatica.Tests.TouchGestureTests" runstate="Runnable" seed="1150136582" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000556" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1212" name="DungeonBDX.Combat.Tests.dll" fullname="C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/ArenaTaticaUnity/Library/ScriptAssemblies/DungeonBDX.Combat.Tests.dll" runstate="Runnable" testcasecount="28" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:35Z" duration="0.774216" total="28" passed="28" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="41272" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1213" name="DungeonBDX" fullname="DungeonBDX" runstate="Runnable" testcasecount="28" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:35Z" duration="0.773975" total="28" passed="28" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1214" name="Tests" fullname="DungeonBDX.Tests" runstate="Runnable" testcasecount="28" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:35Z" duration="0.773847" total="28" passed="28" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1215" name="Combat" fullname="DungeonBDX.Tests.Combat" runstate="Runnable" testcasecount="28" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:35Z" duration="0.773679" total="28" passed="28" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1178" name="DungeonBudgetTests" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.013694" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1183" name="ActionHandlesCannotOverlapBeReusedOrResetWithDispose" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.ActionHandlesCannotOverlapBeReusedOrResetWithDispose" methodname="ActionHandlesCannotOverlapBeReusedOrResetWithDispose" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="79129124" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.001730" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1188" name="InvalidActionCostDoesNotSpendAnything" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.InvalidActionCostDoesNotSpendAnything" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.001673" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1184" name="InvalidActionCostDoesNotSpendAnything(int.MinValue)" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.InvalidActionCostDoesNotSpendAnything(int.MinValue)" methodname="InvalidActionCostDoesNotSpendAnything" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="1648171077" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000415" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1185" name="InvalidActionCostDoesNotSpendAnything(0)" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.InvalidActionCostDoesNotSpendAnything(0)" methodname="InvalidActionCostDoesNotSpendAnything" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="2067033405" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000091" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1186" name="InvalidActionCostDoesNotSpendAnything(4)" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.InvalidActionCostDoesNotSpendAnything(4)" methodname="InvalidActionCostDoesNotSpendAnything" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="348901669" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000074" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1187" name="InvalidActionCostDoesNotSpendAnything(int.MaxValue)" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.InvalidActionCostDoesNotSpendAnything(int.MaxValue)" methodname="InvalidActionCostDoesNotSpendAnything" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="1946197203" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000076" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1190" name="NegativeResourcesAndInvalidEnumsCannotCreateCredits" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.NegativeResourcesAndInvalidEnumsCannotCreateCredits" methodname="NegativeResourcesAndInvalidEnumsCannotCreateCredits" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="1611799415" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.002154" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1182" name="RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.001854" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1179" name="RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps(Damage,30,60)" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps(Damage,30,60)" methodname="RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="295223036" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000546" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1180" name="RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps(Healing,12,18)" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps(Healing,12,18)" methodname="RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="2070886751" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000123" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1181" name="RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps(Shield,8,12)" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps(Shield,8,12)" methodname="RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="1541490460" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000109" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1189" name="SpentBudgetCannotBeResurrectedByMinimumDamageRounding" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.SpentBudgetCannotBeResurrectedByMinimumDamageRounding" methodname="SpentBudgetCannotBeResurrectedByMinimumDamageRounding" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="330747297" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.001031" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1191" name="ZeroActionPointActorCannotStartOrBorrowAnAction" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.ZeroActionPointActorCannotStartOrBorrowAnAction" methodname="ZeroActionPointActorCannotStartOrBorrowAnAction" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="1429933720" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000314" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1192" name="DungeonCombatTests" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" testcasecount="17" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:35Z" duration="0.759420" total="17" passed="17" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1205" name="ArmorAndPenetrationAreMonotoneAndNeverCreateInvulnerability" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ArmorAndPenetrationAreMonotoneAndNeverCreateInvulnerability" methodname="ArmorAndPenetrationAreMonotoneAndNeverCreateInvulnerability" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="424884862" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.021988" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1204" name="ArmorBeyondSoftCapHasLessMarginalEffect" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ArmorBeyondSoftCapHasLessMarginalEffect" methodname="ArmorBeyondSoftCapHasLessMarginalEffect" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="1236330170" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000414" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1203" name="ArmorHasSoftHardAndGlobalCaps" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ArmorHasSoftHardAndGlobalCaps" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.001768" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1198" name="ArmorHasSoftHardAndGlobalCaps(long.MinValue,0)" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ArmorHasSoftHardAndGlobalCaps(long.MinValue,0)" methodname="ArmorHasSoftHardAndGlobalCaps" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="55564495" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000333" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1199" name="ArmorHasSoftHardAndGlobalCaps(0,0)" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ArmorHasSoftHardAndGlobalCaps(0,0)" methodname="ArmorHasSoftHardAndGlobalCaps" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="1375185782" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000084" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1200" name="ArmorHasSoftHardAndGlobalCaps(50,5000)" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ArmorHasSoftHardAndGlobalCaps(50,5000)" methodname="ArmorHasSoftHardAndGlobalCaps" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="560578920" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000073" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1201" name="ArmorHasSoftHardAndGlobalCaps(150,6000)" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ArmorHasSoftHardAndGlobalCaps(150,6000)" methodname="ArmorHasSoftHardAndGlobalCaps" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="936488863" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000067" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1202" name="ArmorHasSoftHardAndGlobalCaps(long.MaxValue,6000)" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ArmorHasSoftHardAndGlobalCaps(long.MaxValue,6000)" methodname="ArmorHasSoftHardAndGlobalCaps" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="454329149" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000086" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1193" name="CriticalsNeverGenerateAnotherRollEvenAtExtremeInputs" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.CriticalsNeverGenerateAnotherRollEvenAtExtremeInputs" methodname="CriticalsNeverGenerateAnotherRollEvenAtExtremeInputs" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="338053487" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000397" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1195" name="ExhaustiveSingleDieProbabilitiesAndExpectedDamageAreExact" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ExhaustiveSingleDieProbabilitiesAndExpectedDamageAreExact" methodname="ExhaustiveSingleDieProbabilitiesAndExpectedDamageAreExact" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="1305481380" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000470" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1206" name="ExtremeArmorResistanceAndPowerCannotOverflowOrMultiplyCaps" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ExtremeArmorResistanceAndPowerCannotOverflowOrMultiplyCaps" methodname="ExtremeArmorResistanceAndPowerCannotOverflowOrMultiplyCaps" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="1300671183" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.001465" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1209" name="InvalidDieSourceIsRejected" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.InvalidDieSourceIsRejected" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.001096" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1207" name="InvalidDieSourceIsRejected(0)" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.InvalidDieSourceIsRejected(0)" methodname="InvalidDieSourceIsRejected" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="302680401" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000376" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1208" name="InvalidDieSourceIsRejected(7)" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.InvalidDieSourceIsRejected(7)" methodname="InvalidDieSourceIsRejected" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="609779570" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000098" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1194" name="MissCanRerollOnlyOnceAndCannotTriggerOnAHit" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.MissCanRerollOnlyOnceAndCannotTriggerOnAHit" methodname="MissCanRerollOnlyOnceAndCannotTriggerOnAHit" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="757602575" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000377" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1196" name="MissStaysZeroDespiteExtremePositiveBuffsAndArmorFloor" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.MissStaysZeroDespiteExtremePositiveBuffsAndArmorFloor" methodname="MissStaysZeroDespiteExtremePositiveBuffsAndArmorFloor" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="2086986009" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.000278" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1197" name="ModifiersAreSummedOnceAndAreIndependentOfOrder" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ModifiersAreSummedOnceAndAreIndependentOfOrder" methodname="ModifiersAreSummedOnceAndAreIndependentOfOrder" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="424654161" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:34Z" duration="0.003116" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1211" name="SameSeedAlwaysProducesTheSameRollsWithinBoundedWork" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.SameSeedAlwaysProducesTheSameRollsWithinBoundedWork" methodname="SameSeedAlwaysProducesTheSameRollsWithinBoundedWork" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="1888093464" result="Passed" start-time="2026-10-15 12:28:34Z" end-time="2026-10-15 12:28:35Z" duration="0.720680" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1210" name="SeedZeroHasKnownSplitMix64VectorAndResumeableState" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.SeedZeroHasKnownSplitMix64VectorAndResumeableState" methodname="SeedZeroHasKnownSplitMix64VectorAndResumeableState" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="1439548379" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.003610" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1244" name="DungeonBDX.Skills.Tests.dll" fullname="C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/ArenaTaticaUnity/Library/ScriptAssemblies/DungeonBDX.Skills.Tests.dll" runstate="Runnable" testcasecount="25" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.076620" total="25" passed="25" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="41272" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1245" name="DungeonBDX" fullname="DungeonBDX" runstate="Runnable" testcasecount="25" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.075731" total="25" passed="25" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1246" name="Tests" fullname="DungeonBDX.Tests" runstate="Runnable" testcasecount="25" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.075176" total="25" passed="25" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1247" name="Skills" fullname="DungeonBDX.Tests.Skills" runstate="Runnable" testcasecount="25" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.074911" total="25" passed="25" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1216" name="DungeonProfileTests" fullname="DungeonBDX.Tests.Skills.DungeonProfileTests" classname="DungeonBDX.Tests.Skills.DungeonProfileTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.025870" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1220" name="AllEighteenSkillsDeclareBoundedCostsAndStableArtBindings" fullname="DungeonBDX.Tests.Skills.DungeonProfileTests.AllEighteenSkillsDeclareBoundedCostsAndStableArtBindings" methodname="AllEighteenSkillsDeclareBoundedCostsAndStableArtBindings" classname="DungeonBDX.Tests.Skills.DungeonProfileTests" runstate="Runnable" seed="1239232775" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.006043" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1218" name="ConversionUsesInt64AndSnapshotsSourceLists" fullname="DungeonBDX.Tests.Skills.DungeonProfileTests.ConversionUsesInt64AndSnapshotsSourceLists" methodname="ConversionUsesInt64AndSnapshotsSourceLists" classname="DungeonBDX.Tests.Skills.DungeonProfileTests" runstate="Runnable" seed="1003013606" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.005242" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1217" name="EveryPlayableArenaIdHasAnExplicitBoundedIndependentAdaptation" fullname="DungeonBDX.Tests.Skills.DungeonProfileTests.EveryPlayableArenaIdHasAnExplicitBoundedIndependentAdaptation" methodname="EveryPlayableArenaIdHasAnExplicitBoundedIndependentAdaptation" classname="DungeonBDX.Tests.Skills.DungeonProfileTests" runstate="Runnable" seed="1607201301" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.006259" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1219" name="ThreeNewArchetypesHaveUniqueIdsAndValidLoadouts" fullname="DungeonBDX.Tests.Skills.DungeonProfileTests.ThreeNewArchetypesHaveUniqueIdsAndValidLoadouts" methodname="ThreeNewArchetypesHaveUniqueIdsAndValidLoadouts" classname="DungeonBDX.Tests.Skills.DungeonProfileTests" runstate="Runnable" seed="1593097683" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.005214" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1221" name="DungeonSkillTests" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" testcasecount="21" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.047825" total="21" passed="21" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1230" name="AimRerollsMissesOnlyForOneAttackAndCannotCreateAnAttackLoop" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.AimRerollsMissesOnlyForOneAttackAndCannotCreateAnAttackLoop" methodname="AimRerollsMissesOnlyForOneAttackAndCannotCreateAnAttackLoop" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="125831231" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.014797" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1233" name="AreaAnchorIsTheSelectedTargetIndependentOfOrdinalBudgetOrder" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.AreaAnchorIsTheSelectedTargetIndependentOfOrdinalBudgetOrder" methodname="AreaAnchorIsTheSelectedTargetIndependentOfOrdinalBudgetOrder" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="94574573" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.002165" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1240" name="AttackLineOfSightCannotPassThroughWallsOrBlockedCorners" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.AttackLineOfSightCannotPassThroughWallsOrBlockedCorners" methodname="AttackLineOfSightCannotPassThroughWallsOrBlockedCorners" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="860747177" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.002214" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1234" name="DeadPetCannotActOrBlockFutureSummoningForever" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.DeadPetCannotActOrBlockFutureSummoningForever" methodname="DeadPetCannotActOrBlockFutureSummoningForever" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="1613329715" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.001453" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1241" name="DisabledModulesDoNotDisableDamageCapsOrTheBasicFallback" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.DisabledModulesDoNotDisableDamageCapsOrTheBasicFallback" methodname="DisabledModulesDoNotDisableDamageCapsOrTheBasicFallback" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="803728204" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.000887" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1228" name="DuplicateTargetsAndExtremeCoordinatesAreRejectedBeforeSpending" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.DuplicateTargetsAndExtremeCoordinatesAreRejectedBeforeSpending" methodname="DuplicateTargetsAndExtremeCoordinatesAreRejectedBeforeSpending" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="1382695718" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.000490" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1242" name="FriendlyFireIsAnIndependentExplicitCampaignChoice" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.FriendlyFireIsAnIndependentExplicitCampaignChoice" methodname="FriendlyFireIsAnIndependentExplicitCampaignChoice" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="548138081" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.000569" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1238" name="HealingSharesAreaBudgetAndNeverOverflowsMaxHealth" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.HealingSharesAreaBudgetAndNeverOverflowsMaxHealth" methodname="HealingSharesAreaBudgetAndNeverOverflowsMaxHealth" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="1870903707" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.002932" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1243" name="IdenticalSeedAndCommandsReplayIdenticalDomainOutcomes" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.IdenticalSeedAndCommandsReplayIdenticalDomainOutcomes" methodname="IdenticalSeedAndCommandsReplayIdenticalDomainOutcomes" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="1721634691" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.005587" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1239" name="MovementChecksOccupancyPathsAndWallsWhileTeleportCanCrossAWall" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.MovementChecksOccupancyPathsAndWallsWhileTeleportCanCrossAWall" methodname="MovementChecksOccupancyPathsAndWallsWhileTeleportCanCrossAWall" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="1804684128" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.001893" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1231" name="OneCooldownSkipsExactlyOneFutureOwnerTurn" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.OneCooldownSkipsExactlyOneFutureOwnerTurn" methodname="OneCooldownSkipsExactlyOneFutureOwnerTurn" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="1336261062" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.000679" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1235" name="OwnerDeathDespawnsThePetAndEndsADefeatedTeam" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.OwnerDeathDespawnsThePetAndEndsADefeatedTeam" methodname="OwnerDeathDespawnsThePetAndEndsADefeatedTeam" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="917120836" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.000858" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1229" name="PaidActionsUsesAndCooldownCannotBeResetWithinTheSameTurn" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.PaidActionsUsesAndCooldownCannotBeResetWithinTheSameTurn" methodname="PaidActionsUsesAndCooldownCannotBeResetWithinTheSameTurn" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="175611662" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.000626" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1232" name="PetAndAreaUseTheOwnersBudgetAndHaveNoIndependentTurn" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.PetAndAreaUseTheOwnersBudgetAndHaveNoIndependentTurn" methodname="PetAndAreaUseTheOwnersBudgetAndHaveNoIndependentTurn" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="602552884" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.001827" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1236" name="PetRecallIsPaidAndDoesNotResetSummonCooldownOrActions" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.PetRecallIsPaidAndDoesNotResetSummonCooldownOrActions" methodname="PetRecallIsPaidAndDoesNotResetSummonCooldownOrActions" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="783342071" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.000692" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1227" name="RejectedCommandsAreAtomicAndDoNotConsumeRng" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.RejectedCommandsAreAtomicAndDoNotConsumeRng" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.002800" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1222" name="RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;unknown&quot;,&quot;dbdx.arcano.lanca&quot;,&quot;enemy&quot;,NotYourTurn)" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;unknown&quot;,&quot;dbdx.arcano.lanca&quot;,&quot;enemy&quot;,NotYourTurn)" methodname="RejectedCommandsAreAtomicAndDoNotConsumeRng" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="1057131083" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.000622" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1223" name="RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;caster&quot;,&quot;unknown&quot;,&quot;enemy&quot;,UnknownSkill)" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;caster&quot;,&quot;unknown&quot;,&quot;enemy&quot;,UnknownSkill)" methodname="RejectedCommandsAreAtomicAndDoNotConsumeRng" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="481397415" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.000159" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1224" name="RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;caster&quot;,&quot;dbdx.pistola.duplo&quot;,&quot;enemy&quot;,NotInLoadout)" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;caster&quot;,&quot;dbdx.pistola.duplo&quot;,&quot;enemy&quot;,NotInLoadout)" methodname="RejectedCommandsAreAtomicAndDoNotConsumeRng" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="738051733" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.000132" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1225" name="RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;caster&quot;,&quot;dbdx.arcano.lanca&quot;,&quot;missing&quot;,InvalidTarget)" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;caster&quot;,&quot;dbdx.arcano.lanca&quot;,&quot;missing&quot;,InvalidTarget)" methodname="RejectedCommandsAreAtomicAndDoNotConsumeRng" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="1581936136" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.000143" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1226" name="RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;caster&quot;,&quot;dbdx.arcano.lanca&quot;,&quot;caster&quot;,InvalidTarget)" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;caster&quot;,&quot;dbdx.arcano.lanca&quot;,&quot;caster&quot;,InvalidTarget)" methodname="RejectedCommandsAreAtomicAndDoNotConsumeRng" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="720767109" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.000148" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1237" name="ShieldStackingAcrossOwnersStaysCappedAtTwelveAndExpires" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.ShieldStackingAcrossOwnersStaysCappedAtTwelveAndExpires" methodname="ShieldStackingAcrossOwnersStaysCappedAtTwelveAndExpires" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="100426835" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.000613" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1262" name="DungeonBDX.Tests.dll" fullname="C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/ArenaTaticaUnity/Library/ScriptAssemblies/DungeonBDX.Tests.dll" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.431129" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="41272" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1263" name="DungeonBDX" fullname="DungeonBDX" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.430846" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1264" name="Tests" fullname="DungeonBDX.Tests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.430677" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1248" name="DungeonSetupTests" fullname="DungeonBDX.Tests.DungeonSetupTests" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.430383" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1260" name="AllSixDamianSkillsCanBeConsultedThroughTheBottomBar" fullname="DungeonBDX.Tests.DungeonSetupTests.AllSixDamianSkillsCanBeConsultedThroughTheBottomBar" methodname="AllSixDamianSkillsCanBeConsultedThroughTheBottomBar" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="190537543" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.345220" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1252" name="CampaignModulesCanBeEnabledIndependently" fullname="DungeonBDX.Tests.DungeonSetupTests.CampaignModulesCanBeEnabledIndependently" methodname="CampaignModulesCanBeEnabledIndependently" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="1746205636" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.000982" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1249" name="CatalogKeepsEveryPlayableSourceHeroAndSkill" fullname="DungeonBDX.Tests.DungeonSetupTests.CatalogKeepsEveryPlayableSourceHeroAndSkill" methodname="CatalogKeepsEveryPlayableSourceHeroAndSkill" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="1340408060" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.002769" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1256" name="MotionConvergesEquallyAcrossFrameRates" fullname="DungeonBDX.Tests.DungeonSetupTests.MotionConvergesEquallyAcrossFrameRates" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.005934" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1253" name="MotionConvergesEquallyAcrossFrameRates(30)" fullname="DungeonBDX.Tests.DungeonSetupTests.MotionConvergesEquallyAcrossFrameRates(30)" methodname="MotionConvergesEquallyAcrossFrameRates" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="1998942436" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.001242" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1254" name="MotionConvergesEquallyAcrossFrameRates(60)" fullname="DungeonBDX.Tests.DungeonSetupTests.MotionConvergesEquallyAcrossFrameRates(60)" methodname="MotionConvergesEquallyAcrossFrameRates" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="1687317634" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.000117" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1255" name="MotionConvergesEquallyAcrossFrameRates(144)" fullname="DungeonBDX.Tests.DungeonSetupTests.MotionConvergesEquallyAcrossFrameRates(144)" methodname="MotionConvergesEquallyAcrossFrameRates" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="1480373253" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.000081" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1251" name="PartyRejectsUnknownHeroesDuplicatesAndOverflow" fullname="DungeonBDX.Tests.DungeonSetupTests.PartyRejectsUnknownHeroesDuplicatesAndOverflow" methodname="PartyRejectsUnknownHeroesDuplicatesAndOverflow" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="687669425" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.001554" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1259" name="SafeAreaRespectsNotchesInBothOrientations" fullname="DungeonBDX.Tests.DungeonSetupTests.SafeAreaRespectsNotchesInBothOrientations" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.002705" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1257" name="SafeAreaRespectsNotchesInBothOrientations(1080,2400,60,100,960,2150)" fullname="DungeonBDX.Tests.DungeonSetupTests.SafeAreaRespectsNotchesInBothOrientations(1080,2400,60,100,960,2150)" methodname="SafeAreaRespectsNotchesInBothOrientations" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="939963417" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.001618" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1258" name="SafeAreaRespectsNotchesInBothOrientations(2400,1080,100,20,2200,1040)" fullname="DungeonBDX.Tests.DungeonSetupTests.SafeAreaRespectsNotchesInBothOrientations(2400,1080,100,20,2200,1040)" methodname="SafeAreaRespectsNotchesInBothOrientations" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="1384742102" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.000187" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1261" name="ShellKeepsSetupAcrossTabsAndDoesNotCreateArenaMatch" fullname="DungeonBDX.Tests.DungeonSetupTests.ShellKeepsSetupAcrossTabsAndDoesNotCreateArenaMatch" methodname="ShellKeepsSetupAcrossTabsAndDoesNotCreateArenaMatch" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="1041534164" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.067092" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1250" name="SnapshotsAreIndependentOfLaterSourceEdits" fullname="DungeonBDX.Tests.DungeonSetupTests.SnapshotsAreIndependentOfLaterSourceEdits" methodname="SnapshotsAreIndependentOfLaterSourceEdits" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="119447087" result="Passed" start-time="2026-10-15 12:28:35Z" end-time="2026-10-15 12:28:35Z" duration="0.000674" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Anuah/AppData/LocalLow/Arcanoclisma/Arena Tática\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

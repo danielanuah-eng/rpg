@@ -6,8 +6,8 @@ Fonte: instrução direta UltraBridge do autor em 15/10/2026. Essa instrução p
 |---|---|---|---|
 | 1 UI / heróis / CLI | Codex | catálogo Arena | prévia funcional validada; referência visual pendente |
 | 2 crítico / armadura | Codex, autorizado pelo autor | entrega 1 validada | validada; 28/28 testes Unity; contrato v1.0.0 |
-| 3 skills | Codex, autorizado pelo autor | métricas aprovadas em 2 | liberada; implementação iniciada |
-| 4 assets / áudio | Antigravity | contratos 2 e 3 | aguardando 3 |
+| 3 skills | Codex, autorizado pelo autor | métricas aprovadas em 2 | validada; 18 skills, 31 perfis; 218/218 integração |
+| 4 assets / áudio | Antigravity | contratos 2 e 3 | liberada; pedido de assets disponível; ativação não confirmada |
 | 5 mapas / contas / salas / saves | Codex | assets 4 | aguardando 4 |
 | 6 HUD final / mitigação | Codex + Antigravity | 2 e 5 | aguardando 5 |
 

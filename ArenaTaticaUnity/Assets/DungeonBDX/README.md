@@ -4,7 +4,9 @@ Módulo independente sobre ArenaTaticaUnity. Abra `Scenes/DungeonBDX.unity` e en
 
 Abas: Heróis, Campanha, Sessão. Clique/toque na carta para consultar; Recrutar/Remover monta o grupo local de até três. Setas percorrem todos os heróis e todas as skills, inclusive as seis do Damian. Ações inferiores consultam a ficha de origem; ainda não executam combate. Módulos da campanha conservam a seleção enquanto a prévia está aberta. LERP usa tempo não escalado; controles reagem a mouse, foco e toque. Safe area e layout respondem à orientação.
 
-Paleta provisória: carvão, bronze e vinho (a referência citada ainda não foi anexada). Classes novas, balanceamento, assets finais, contas/salas/convites, salvamento contínuo e mapas procedurais seguem as etapas 02–06 em `coordenacao/dungeonbdx/PIPELINE.md`. A aba Sessão informa que os serviços ainda não estão disponíveis.
+Paleta provisória: carvão, bronze e vinho (a referência citada ainda não foi anexada). Domínio 02–03 concluído: núcleo determinístico com caps, 18 skills executáveis, adaptador explícito de 28 heróis e três perfis novos. Integração na cena/HUD, assets finais, contas/salas/convites, saves e mapas seguem 04–06 em `coordenacao/dungeonbdx/PIPELINE.md`. A aba Sessão informa que os serviços ainda não estão disponíveis.
+
+`Combat/` e `Skills/` são assemblies sem UnityEngine; `DungeonSkillSession` executa os comandos com orçamentos compartilhados por dono/ação e resultados imutáveis para animação/SFX. Contratos em `coordenacao/dungeonbdx/contratos/`; guia da API e limitações em `coordenacao/dungeonbdx/entregas/03-skills/README.md`. Exportar contratos das DLLs compiladas com `pwsh -NoProfile -File Tools/export-dungeonbdx-contracts.ps1`. Nenhum modelo/SFX/BGM final é incluído por esses bindings.
 
 CLI oficial já instalada; execute do projeto Unity:
 
