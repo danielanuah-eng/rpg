@@ -7,6 +7,8 @@ Pipeline do autor (15/10/2026): Codex implementa 01; Claude 02 e 03; Antigravity
 Estado: `node estado.mjs`.
 
 ## Execução
+
+Retomada 15/10: Claude CLI instalado, mas sem login (verificado fora do sandbox). O worktree limpo `tmp/dungeonbdx-step1-git` foi reutilizado na branch `codex/dungeonbdx-step2`, sem copiar Library/builds. Abrir `ArenaTaticaUnity/CONTINUAR-DUNGEONBDX.cmd` autentica no fluxo oficial e inicia somente a tarefa 02 nesse worktree. Não há bypass de permissões do Claude. O launcher usa RemoteSigned apenas no processo PowerShell, sem mudar política persistente. Para diagnóstico sem login nem execução: `powershell -NoProfile -ExecutionPolicy RemoteSigned -File ArenaTaticaUnity/Tools/dungeonbdx-claude.ps1 -Check`. A resposta fica no worktree; Codex revisa e executa os testes antes da integração.
 Ler a tarefa de menor número destinada à IA, somente após a dependência estar revisada no estado. Cada executor usa cópia/worktree e os arquivos exclusivos da tarefa. Não editar os scripts de outro executor. Respostas atômicas em `respostas/`; Codex confere diff e testes antes de liberar a próxima etapa.
 
 Etapa 01 tem módulo/cena próprios em `ArenaTaticaUnity/Assets/DungeonBDX`; catálogo por ID, sem alterar combate da Arena. Branch `codex/dungeonbdx-step1`. O cache Unity existente é usado na validação por limite de espaço em disco. Fontes TMP oficiais ficam dentro do módulo. Imagem de referência citada não anexada; paleta provisória registrada.

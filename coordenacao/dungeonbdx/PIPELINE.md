@@ -5,7 +5,7 @@ Fonte: instrução direta UltraBridge do autor em 15/10/2026. Essa instrução p
 | Etapa | Responsável | Dependência | Estado |
 |---|---|---|---|
 | 1 UI / heróis / CLI | Codex | catálogo Arena | prévia funcional validada; referência visual pendente |
-| 2 crítico / armadura | Claude | entrega 1 validada | liberada para ativação do Claude |
+| 2 crítico / armadura | Claude | entrega 1 validada | liberada; CLI instalado, autenticação pendente |
 | 3 skills | Claude | métricas aprovadas em 2 | aguardando 2 |
 | 4 assets / áudio | Antigravity | contratos 2 e 3 | aguardando 3 |
 | 5 mapas / contas / salas / saves | Codex | assets 4 | aguardando 4 |
