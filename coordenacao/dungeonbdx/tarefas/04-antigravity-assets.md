@@ -2,7 +2,7 @@
 
 - **De:** autor / UltraBridge, consolidado por codex
 - **Para:** antigravity
-- **Status:** pendente
+- **Status:** bloqueada
 - **Projeto / pasta de trabalho:** C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg
 - **Entrega:** arquivos locais, sem commit/push do executor
 - **Dependência:** 03 revisada por Codex; contratos de skills e métricas 02 disponíveis

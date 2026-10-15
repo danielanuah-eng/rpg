@@ -2,7 +2,7 @@
 
 - **De:** autor / UltraBridge
 - **Para:** codex
-- **Status:** pendente
+- **Status:** bloqueada
 - **Projeto / pasta de trabalho:** C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg
 - **Entrega:** módulo DungeonBDX validado
 - **Dependência:** 04 revisada e integrada; 02/03 versionadas
