@@ -1,0 +1,17 @@
+{
+  "projeto": "DungeonBDX",
+  "dataLocal": "2026-10-15",
+  "branch": "codex/dungeonbdx-step1",
+  "etapaAtual": 2,
+  "etapas": [
+    { "id": 1, "responsavel": "Codex", "estado": "concluida-previa-funcional", "testes": { "total": 165, "aprovados": 165, "falhas": 0, "reverificacaoUI": "11/11 apos ajustes visuais e captura" }, "herois": 28, "buildWindows": "aprovado; Development Build; cerca de 1.60 GB", "visual": "capturas URP conferidas; paleta provisoria; referencia nao anexada" },
+    { "id": 2, "responsavel": "Claude", "estado": "liberada-aguardando-ativacao" },
+    { "id": 3, "responsavel": "Claude", "estado": "aguardando-gate-2" },
+    { "id": 4, "responsavel": "Antigravity", "estado": "aguardando-gate-3" },
+    { "id": 5, "responsavel": "Codex", "estado": "aguardando-gate-4" },
+    { "id": 6, "responsavel": "Codex + Antigravity", "estado": "aguardando-gate-5" }
+  ],
+  "servicosOnline": "nao implementados nesta etapa",
+  "androidNativo": "nao compilado; QA visual offscreen no Windows em 1600x900 e 900x1080; teste fisico pendente",
+  "agentesExternos": "tarefas em arquivos; ativacao de Claude/Antigravity ainda nao confirmada"
+}

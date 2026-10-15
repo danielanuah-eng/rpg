@@ -1,0 +1,5 @@
+{
+  "name": "DungeonBDX.Editor",
+  "references": ["DungeonBDX.Runtime", "Unity.TextMeshPro"],
+  "includePlatforms": ["Editor"]
+}

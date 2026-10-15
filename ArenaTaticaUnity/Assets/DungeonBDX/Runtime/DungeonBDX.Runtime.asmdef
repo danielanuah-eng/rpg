@@ -1,0 +1,6 @@
+{
+  "name": "DungeonBDX.Runtime",
+  "rootNamespace": "DungeonBDX",
+  "references": ["ArenaTatica.Runtime", "UnityEngine.UI", "Unity.TextMeshPro", "Unity.InputSystem"],
+  "autoReferenced": true
+}

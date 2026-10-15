@@ -1,0 +1,6 @@
+{
+  "name": "DungeonBDX.Tests",
+  "references": ["DungeonBDX.Runtime", "ArenaTatica.Runtime", "UnityEngine.UI", "Unity.TextMeshPro"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

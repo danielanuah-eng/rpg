@@ -1,0 +1,38 @@
+{
+  "dataLocal": "2026-10-15",
+  "etapa": 1,
+  "escopo": "previa funcional",
+  "herois": 28,
+  "testesIntegrados": "165/165",
+  "reverificacaoFinalUI": "11/11",
+  "buildWindows": "aprovado, Development, completo + atualizacao somente scripts",
+  "referenciaVisual": "nao anexada",
+  "mobileFisico": "pendente",
+  "captura": "Canvas Unity URP offscreen",
+  "evidencias": [
+    {
+      "arquivo": "ArenaTaticaUnity\\Artifacts\\dungeonbdx-all-editmode.xml",
+      "sha256": "69E6EDBE925BB0D0D6A7B88A51BBC2D94B0B211568993F3770AD5432FD789239"
+    },
+    {
+      "arquivo": "ArenaTaticaUnity\\Artifacts\\dungeonbdx-final-ui.xml",
+      "sha256": "FD37433828A31BF655F68F5C757563475B796DBDAFA2423BBE04DC8F9235459B"
+    },
+    {
+      "arquivo": "ArenaTaticaUnity\\Builds\\DungeonBDX\\DungeonBDX_Data\\Managed\\DungeonBDX.Runtime.dll",
+      "sha256": "82282A83B69FA77A7464399BBE9D566FBDF300EAA6FF41A95A0EF0EDBCCCD8CC"
+    },
+    {
+      "arquivo": "coordenacao\\dungeonbdx\\entregas\\01-ui\\pc-herois.png",
+      "sha256": "9D78B0EA828FE59E13AE94C85241BA46B66D833B58FE2298282B28474A919771"
+    },
+    {
+      "arquivo": "coordenacao\\dungeonbdx\\entregas\\01-ui\\mobile-herois.png",
+      "sha256": "B14FF143E797E2B783F506CFBEB36630B41A5A09B04FAAE6E788DD85D7932969"
+    },
+    {
+      "arquivo": "coordenacao\\dungeonbdx\\entregas\\01-ui\\pc-campanha.png",
+      "sha256": "BD28FD4E79A4EA325C075F1CE71407DB13928B5392551F4FDB8F2DE9C2A132DB"
+    }
+  ]
+}
