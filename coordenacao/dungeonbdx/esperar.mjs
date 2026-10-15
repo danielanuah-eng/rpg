@@ -1,8 +1,9 @@
 // Cronômetro sem tokens: espera (até N minutos) uma tarefa ou nota nova para uma IA e só então devolve o controle.
-// Uso: node esperar.mjs <pasta-da-ponte> --eu codex [--minutos 10] [--intervalo 5]
+// Uso: node esperar.mjs <pasta-da-ponte> --eu codex [--minutos 10] [--intervalo 5] [--resposta arquivo.md]
 // Saída (a IA só "acorda" quando o comando termina):
 //   TAREFA  <arquivo>   (+ conteúdo)  -> há tarefa 'pendente' para <eu> ou 'qualquer'
 //   NOTA    <arquivo>   (+ conteúdo)  -> nota nova para <eu> ou 'todos'
+//   RESPOSTA <arquivo> (+ conteúdo)  -> resposta atômica explicitamente aguardada
 //   SEM_TAREFA                         -> passou o tempo sem nada: a IA deve PARAR (o Henrique reativa)
 //   PARAR                              -> existe o arquivo STOP na ponte
 // Enquanto o script espera, nenhum modelo é chamado: custo zero de tokens.
@@ -14,6 +15,10 @@ const opt = (k, d) => { const i = a.indexOf('--' + k); return i >= 0 ? a[i + 1] 
 const dir = path.resolve(a[0] && !a[0].startsWith('--') ? a[0] : '.');
 const eu = (opt('eu', '') || '').toLowerCase();
 if (!eu) { console.error('Uso: node esperar.mjs <ponte> --eu <claude|codex|antigravity> [--minutos 10] [--intervalo 5]'); process.exit(1); }
+const resposta = opt('resposta', '');
+if (resposta && (path.basename(resposta) !== resposta || !resposta.endsWith('.md'))) {
+  console.error('--resposta deve ser apenas o nome de um arquivo .md em respostas/.'); process.exit(1);
+}
 const limite = Date.now() + Number(opt('minutos', 10)) * 60000;
 const passo = Math.max(1, Number(opt('intervalo', 5))) * 1000;
 
@@ -27,6 +32,9 @@ const lidas = new Set(fs.existsSync(lidasArq) ? fs.readFileSync(lidasArq, 'utf8'
 
 function achar() {
   if (fs.existsSync(path.join(dir, 'STOP'))) return { tipo: 'PARAR' };
+  if (resposta && fs.existsSync(path.join(dir, 'respostas', resposta))) {
+    return { tipo: 'RESPOSTA', f: resposta, texto: fs.readFileSync(path.join(dir, 'respostas', resposta), 'utf8') };
+  }
   for (const f of ls('tarefas').filter((f) => f.endsWith('.md'))) {
     const t = fs.readFileSync(path.join(dir, 'tarefas', f), 'utf8');
     if (/pendente/.test(campo(t, 'Status')) && meu(campo(t, 'Para'))) return { tipo: 'TAREFA', f, texto: t };

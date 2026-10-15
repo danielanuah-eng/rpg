@@ -8,6 +8,8 @@ Estado: `node estado.mjs`.
 
 ## Execução
 
+Estado atual, 15/10 11:23 UTC: autenticação concluída pelo autor; tentativa real da etapa 02 recusada pela cota semanal do Claude (reset 16/10 às 16h, Fortaleza), antes de gerar código. Não repetir chamadas nem comprar créditos. Aguarda escolha do autor sobre o responsável por 02–03; ver nota de limite e estado.codex.json. Para futura revisão automática: `node esperar.mjs <ponte-do-worktree> --eu codex --resposta 02-claude-balanceamento.resposta.md`.
+
 Retomada 15/10: Claude CLI instalado, mas sem login (verificado fora do sandbox). O worktree limpo `tmp/dungeonbdx-step1-git` foi reutilizado na branch `codex/dungeonbdx-step2`, sem copiar Library/builds. Abrir `ArenaTaticaUnity/CONTINUAR-DUNGEONBDX.cmd` autentica no fluxo oficial e inicia somente a tarefa 02 nesse worktree. Não há bypass de permissões do Claude. O launcher usa RemoteSigned apenas no processo PowerShell, sem mudar política persistente. Para diagnóstico sem login nem execução: `powershell -NoProfile -ExecutionPolicy RemoteSigned -File ArenaTaticaUnity/Tools/dungeonbdx-claude.ps1 -Check`. A resposta fica no worktree; Codex revisa e executa os testes antes da integração.
 Ler a tarefa de menor número destinada à IA, somente após a dependência estar revisada no estado. Cada executor usa cópia/worktree e os arquivos exclusivos da tarefa. Não editar os scripts de outro executor. Respostas atômicas em `respostas/`; Codex confere diff e testes antes de liberar a próxima etapa.
 
