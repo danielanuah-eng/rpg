@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="114" result="Passed" total="114" passed="114" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:57Z" duration="4,6515537">
+  <test-suite type="TestSuite" id="1000" name="Arena Tática" fullname="Arena Tática" runstate="Runnable" testcasecount="268" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:57Z" duration="4.651554" total="114" passed="114" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1212" name="DungeonBDX.Combat.Tests.dll" fullname="C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/ArenaTaticaUnity/Library/ScriptAssemblies/DungeonBDX.Combat.Tests.dll" runstate="Runnable" testcasecount="28" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:54Z" duration="1.089353" total="28" passed="28" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="9408" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1213" name="DungeonBDX" fullname="DungeonBDX" runstate="Runnable" testcasecount="28" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:54Z" duration="1.088576" total="28" passed="28" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1214" name="Tests" fullname="DungeonBDX.Tests" runstate="Runnable" testcasecount="28" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:54Z" duration="1.088308" total="28" passed="28" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1215" name="Combat" fullname="DungeonBDX.Tests.Combat" runstate="Runnable" testcasecount="28" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:54Z" duration="1.088027" total="28" passed="28" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1178" name="DungeonBudgetTests" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.075121" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1183" name="ActionHandlesCannotOverlapBeReusedOrResetWithDispose" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.ActionHandlesCannotOverlapBeReusedOrResetWithDispose" methodname="ActionHandlesCannotOverlapBeReusedOrResetWithDispose" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="802150661" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.025226" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1188" name="InvalidActionCostDoesNotSpendAnything" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.InvalidActionCostDoesNotSpendAnything" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.005965" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1184" name="InvalidActionCostDoesNotSpendAnything(int.MinValue)" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.InvalidActionCostDoesNotSpendAnything(int.MinValue)" methodname="InvalidActionCostDoesNotSpendAnything" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="1962693718" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000702" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1185" name="InvalidActionCostDoesNotSpendAnything(0)" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.InvalidActionCostDoesNotSpendAnything(0)" methodname="InvalidActionCostDoesNotSpendAnything" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="669881648" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000136" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1186" name="InvalidActionCostDoesNotSpendAnything(4)" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.InvalidActionCostDoesNotSpendAnything(4)" methodname="InvalidActionCostDoesNotSpendAnything" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="800215086" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000079" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1187" name="InvalidActionCostDoesNotSpendAnything(int.MaxValue)" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.InvalidActionCostDoesNotSpendAnything(int.MaxValue)" methodname="InvalidActionCostDoesNotSpendAnything" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="1113800132" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000071" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1190" name="NegativeResourcesAndInvalidEnumsCannotCreateCredits" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.NegativeResourcesAndInvalidEnumsCannotCreateCredits" methodname="NegativeResourcesAndInvalidEnumsCannotCreateCredits" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="1237842936" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.007543" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1182" name="RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.005172" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1179" name="RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps(Damage,30,60)" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps(Damage,30,60)" methodname="RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="1379033272" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.002495" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1180" name="RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps(Healing,12,18)" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps(Healing,12,18)" methodname="RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="1213890545" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000571" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1181" name="RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps(Shield,8,12)" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps(Shield,8,12)" methodname="RepeatedAreaPetAndReactionChargesShareActionAndTurnCaps" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="1309417062" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000321" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1189" name="SpentBudgetCannotBeResurrectedByMinimumDamageRounding" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.SpentBudgetCannotBeResurrectedByMinimumDamageRounding" methodname="SpentBudgetCannotBeResurrectedByMinimumDamageRounding" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="2001538166" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.001805" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1191" name="ZeroActionPointActorCannotStartOrBorrowAnAction" fullname="DungeonBDX.Tests.Combat.DungeonBudgetTests.ZeroActionPointActorCannotStartOrBorrowAnAction" methodname="ZeroActionPointActorCannotStartOrBorrowAnAction" classname="DungeonBDX.Tests.Combat.DungeonBudgetTests" runstate="Runnable" seed="749578193" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000533" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1192" name="DungeonCombatTests" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" testcasecount="17" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:54Z" duration="1.011337" total="17" passed="17" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1205" name="ArmorAndPenetrationAreMonotoneAndNeverCreateInvulnerability" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ArmorAndPenetrationAreMonotoneAndNeverCreateInvulnerability" methodname="ArmorAndPenetrationAreMonotoneAndNeverCreateInvulnerability" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="41566978" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.033666" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1204" name="ArmorBeyondSoftCapHasLessMarginalEffect" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ArmorBeyondSoftCapHasLessMarginalEffect" methodname="ArmorBeyondSoftCapHasLessMarginalEffect" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="2138978862" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000649" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1203" name="ArmorHasSoftHardAndGlobalCaps" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ArmorHasSoftHardAndGlobalCaps" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.004080" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1198" name="ArmorHasSoftHardAndGlobalCaps(long.MinValue,0)" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ArmorHasSoftHardAndGlobalCaps(long.MinValue,0)" methodname="ArmorHasSoftHardAndGlobalCaps" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="1521118182" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000642" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1199" name="ArmorHasSoftHardAndGlobalCaps(0,0)" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ArmorHasSoftHardAndGlobalCaps(0,0)" methodname="ArmorHasSoftHardAndGlobalCaps" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="1455292809" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000193" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1200" name="ArmorHasSoftHardAndGlobalCaps(50,5000)" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ArmorHasSoftHardAndGlobalCaps(50,5000)" methodname="ArmorHasSoftHardAndGlobalCaps" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="2145417807" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000136" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1201" name="ArmorHasSoftHardAndGlobalCaps(150,6000)" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ArmorHasSoftHardAndGlobalCaps(150,6000)" methodname="ArmorHasSoftHardAndGlobalCaps" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="943710556" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000122" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1202" name="ArmorHasSoftHardAndGlobalCaps(long.MaxValue,6000)" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ArmorHasSoftHardAndGlobalCaps(long.MaxValue,6000)" methodname="ArmorHasSoftHardAndGlobalCaps" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="1837919092" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000127" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1193" name="CriticalsNeverGenerateAnotherRollEvenAtExtremeInputs" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.CriticalsNeverGenerateAnotherRollEvenAtExtremeInputs" methodname="CriticalsNeverGenerateAnotherRollEvenAtExtremeInputs" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="1320785041" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000568" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1195" name="ExhaustiveSingleDieProbabilitiesAndExpectedDamageAreExact" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ExhaustiveSingleDieProbabilitiesAndExpectedDamageAreExact" methodname="ExhaustiveSingleDieProbabilitiesAndExpectedDamageAreExact" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="1994286325" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000844" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1206" name="ExtremeArmorResistanceAndPowerCannotOverflowOrMultiplyCaps" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ExtremeArmorResistanceAndPowerCannotOverflowOrMultiplyCaps" methodname="ExtremeArmorResistanceAndPowerCannotOverflowOrMultiplyCaps" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="1040961166" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.002053" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1209" name="InvalidDieSourceIsRejected" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.InvalidDieSourceIsRejected" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.001484" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1207" name="InvalidDieSourceIsRejected(0)" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.InvalidDieSourceIsRejected(0)" methodname="InvalidDieSourceIsRejected" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="310654092" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000432" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1208" name="InvalidDieSourceIsRejected(7)" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.InvalidDieSourceIsRejected(7)" methodname="InvalidDieSourceIsRejected" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="1831111678" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000149" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1194" name="MissCanRerollOnlyOnceAndCannotTriggerOnAHit" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.MissCanRerollOnlyOnceAndCannotTriggerOnAHit" methodname="MissCanRerollOnlyOnceAndCannotTriggerOnAHit" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="1064151525" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000617" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1196" name="MissStaysZeroDespiteExtremePositiveBuffsAndArmorFloor" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.MissStaysZeroDespiteExtremePositiveBuffsAndArmorFloor" methodname="MissStaysZeroDespiteExtremePositiveBuffsAndArmorFloor" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="820962296" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.000413" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1197" name="ModifiersAreSummedOnceAndAreIndependentOfOrder" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.ModifiersAreSummedOnceAndAreIndependentOfOrder" methodname="ModifiersAreSummedOnceAndAreIndependentOfOrder" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="996286975" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:53Z" duration="0.003001" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1211" name="SameSeedAlwaysProducesTheSameRollsWithinBoundedWork" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.SameSeedAlwaysProducesTheSameRollsWithinBoundedWork" methodname="SameSeedAlwaysProducesTheSameRollsWithinBoundedWork" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="501055658" result="Passed" start-time="2026-10-16 00:38:53Z" end-time="2026-10-16 00:38:54Z" duration="0.952802" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1210" name="SeedZeroHasKnownSplitMix64VectorAndResumeableState" fullname="DungeonBDX.Tests.Combat.DungeonCombatTests.SeedZeroHasKnownSplitMix64VectorAndResumeableState" methodname="SeedZeroHasKnownSplitMix64VectorAndResumeableState" classname="DungeonBDX.Tests.Combat.DungeonCombatTests" runstate="Runnable" seed="1816924718" result="Passed" start-time="2026-10-16 00:38:54Z" end-time="2026-10-16 00:38:54Z" duration="0.004547" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1223" name="DungeonBDX.Online.Tests.dll" fullname="C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/ArenaTaticaUnity/Library/ScriptAssemblies/DungeonBDX.Online.Tests.dll" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-16 00:38:54Z" end-time="2026-10-16 00:38:54Z" duration="0.011101" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="9408" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1224" name="DungeonBDX" fullname="DungeonBDX" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-16 00:38:54Z" end-time="2026-10-16 00:38:54Z" duration="0.010267" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1225" name="Tests" fullname="DungeonBDX.Tests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-16 00:38:54Z" end-time="2026-10-16 00:38:54Z" duration="0.009877" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1226" name="Online" fullname="DungeonBDX.Tests.Online" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-16 00:38:54Z" end-time="2026-10-16 00:38:54Z" duration="0.009664" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1216" name="DungeonOnlineValidationTests" fullname="DungeonBDX.Tests.Online.DungeonOnlineValidationTests" classname="DungeonBDX.Tests.Online.DungeonOnlineValidationTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-16 00:38:54Z" end-time="2026-10-16 00:38:54Z" duration="0.009153" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1222" name="EditorTestsStillRequireRealAuthorizationAndOwnProfile" fullname="DungeonBDX.Tests.Online.DungeonOnlineValidationTests.EditorTestsStillRequireRealAuthorizationAndOwnProfile" methodname="EditorTestsStillRequireRealAuthorizationAndOwnProfile" classname="DungeonBDX.Tests.Online.DungeonOnlineValidationTests" runstate="Runnable" seed="166122348" result="Passed" start-time="2026-10-16 00:38:54Z" end-time="2026-10-16 00:38:54Z" duration="0.001222" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1219" name="LoginDoesNotApplyRegistrationCompositionRulesToExistingCredentials" fullname="DungeonBDX.Tests.Online.DungeonOnlineValidationTests.LoginDoesNotApplyRegistrationCompositionRulesToExistingCredentials" methodname="LoginDoesNotApplyRegistrationCompositionRulesToExistingCredentials" classname="DungeonBDX.Tests.Online.DungeonOnlineValidationTests" runstate="Runnable" seed="46858664" result="Passed" start-time="2026-10-16 00:38:54Z" end-time="2026-10-16 00:38:54Z" duration="0.000721" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1218" name="RegistrationRequiresEveryPasswordCategoryWithoutTrimming" fullname="DungeonBDX.Tests.Online.DungeonOnlineValidationTests.RegistrationRequiresEveryPasswordCategoryWithoutTrimming" methodname="RegistrationRequiresEveryPasswordCategoryWithoutTrimming" classname="DungeonBDX.Tests.Online.DungeonOnlineValidationTests" runstate="Runnable" seed="1234268130" result="Passed" start-time="2026-10-16 00:38:54Z" end-time="2026-10-16 00:38:54Z" duration="0.000444" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1221" name="RoomCodesAreDataNotAccountCredentials" fullname="DungeonBDX.Tests.Online.DungeonOnlineValidationTests.RoomCodesAreDataNotAccountCredentials" methodname="RoomCodesAreDataNotAccountCredentials" classname="DungeonBDX.Tests.Online.DungeonOnlineValidationTests" runstate="Runnable" seed="1381131191" result="Passed" start-time="2026-10-16 00:38:54Z" end-time="2026-10-16 00:38:54Z" duration="0.000551" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1220" name="RoomPasswordsAreIndependentAndOptional" fullname="DungeonBDX.Tests.Online.DungeonOnlineValidationTests.RoomPasswordsAreIndependentAndOptional" methodname="RoomPasswordsAreIndependentAndOptional" classname="DungeonBDX.Tests.Online.DungeonOnlineValidationTests" runstate="Runnable" seed="1822196701" result="Passed" start-time="2026-10-16 00:38:54Z" end-time="2026-10-16 00:38:54Z" duration="0.000911" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1217" name="UsernamesRespectProviderAlphabetAndBoundaries" fullname="DungeonBDX.Tests.Online.DungeonOnlineValidationTests.UsernamesRespectProviderAlphabetAndBoundaries" methodname="UsernamesRespectProviderAlphabetAndBoundaries" classname="DungeonBDX.Tests.Online.DungeonOnlineValidationTests" runstate="Runnable" seed="758567131" result="Passed" start-time="2026-10-16 00:38:54Z" end-time="2026-10-16 00:38:54Z" duration="0.001185" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1241" name="DungeonBDX.Services.Tests.dll" fullname="C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/ArenaTaticaUnity/Library/ScriptAssemblies/DungeonBDX.Services.Tests.dll" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-10-16 00:38:54Z" end-time="2026-10-16 00:38:55Z" duration="1.251439" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="9408" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1242" name="DungeonBDX" fullname="DungeonBDX" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-10-16 00:38:54Z" end-time="2026-10-16 00:38:55Z" duration="1.251033" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1243" name="Tests" fullname="DungeonBDX.Tests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-10-16 00:38:54Z" end-time="2026-10-16 00:38:55Z" duration="1.250816" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1244" name="Services" fullname="DungeonBDX.Tests.Services" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-10-16 00:38:54Z" end-time="2026-10-16 00:38:55Z" duration="1.250594" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1227" name="DungeonCampaignSaveTests" fullname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests" classname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-10-16 00:38:54Z" end-time="2026-10-16 00:38:55Z" duration="1.250087" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1233" name="CommandLimitCannotBeExceededAndCampaignFlagsRoundTrip" fullname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests.CommandLimitCannotBeExceededAndCampaignFlagsRoundTrip" methodname="CommandLimitCannotBeExceededAndCampaignFlagsRoundTrip" classname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests" runstate="Runnable" seed="468829426" result="Passed" start-time="2026-10-16 00:38:54Z" end-time="2026-10-16 00:38:55Z" duration="0.773803" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1238" name="CorruptHistoryIsNeverSilentlyOverwritten" fullname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests.CorruptHistoryIsNeverSilentlyOverwritten" methodname="CorruptHistoryIsNeverSilentlyOverwritten" classname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests" runstate="Runnable" seed="692475280" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.059678" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1240" name="ExclusiveWriterLockIsReportedAsConflict" fullname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests.ExclusiveWriterLockIsReportedAsConflict" methodname="ExclusiveWriterLockIsReportedAsConflict" classname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests" runstate="Runnable" seed="749454366" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.040173" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1239" name="FirstSaveAlreadyHasBackupAndIdempotentRetryRepairsPrimary" fullname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests.FirstSaveAlreadyHasBackupAndIdempotentRetryRepairsPrimary" methodname="FirstSaveAlreadyHasBackupAndIdempotentRetryRepairsPrimary" classname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests" runstate="Runnable" seed="721914271" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.054036" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1235" name="InterruptedTemporaryFileDoesNotReplaceCommittedRevision" fullname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests.InterruptedTemporaryFileDoesNotReplaceCommittedRevision" methodname="InterruptedTemporaryFileDoesNotReplaceCommittedRevision" classname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests" runstate="Runnable" seed="1741629092" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.035039" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1229" name="InvalidCommandsDoNotEnterJournalAndMovementReplays" fullname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests.InvalidCommandsDoNotEnterJournalAndMovementReplays" methodname="InvalidCommandsDoNotEnterJournalAndMovementReplays" classname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests" runstate="Runnable" seed="655869664" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.020086" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1230" name="OutOfBandSessionMutationCannotBeSaved" fullname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests.OutOfBandSessionMutationCannotBeSaved" methodname="OutOfBandSessionMutationCannotBeSaved" classname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests" runstate="Runnable" seed="2116203092" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.001102" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1237" name="ProfilesCannotTraverseOrReadEachOthersStorage" fullname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests.ProfilesCannotTraverseOrReadEachOthersStorage" methodname="ProfilesCannotTraverseOrReadEachOthersStorage" classname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests" runstate="Runnable" seed="121661133" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.034705" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1232" name="RecomputedChecksumDoesNotBypassCommandValidation" fullname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests.RecomputedChecksumDoesNotBypassCommandValidation" methodname="RecomputedChecksumDoesNotBypassCommandValidation" classname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests" runstate="Runnable" seed="1175468934" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.003730" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1236" name="RecoversValidBackupAndPreservesItDuringNextWrite" fullname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests.RecoversValidBackupAndPreservesItDuringNextWrite" methodname="RecoversValidBackupAndPreservesItDuringNextWrite" classname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests" runstate="Runnable" seed="1292799397" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.078103" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1231" name="RejectsCorruptionUnknownSchemaOversizedPayloadAndUnknownProfile" fullname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests.RejectsCorruptionUnknownSchemaOversizedPayloadAndUnknownProfile" methodname="RejectsCorruptionUnknownSchemaOversizedPayloadAndUnknownProfile" classname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests" runstate="Runnable" seed="1205710027" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.003607" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1228" name="ReplayPreservesSummonCooldownBudgetsRngAndNextOutcome" fullname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests.ReplayPreservesSummonCooldownBudgetsRngAndNextOutcome" methodname="ReplayPreservesSummonCooldownBudgetsRngAndNextOutcome" classname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests" runstate="Runnable" seed="636337063" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.016220" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1234" name="StoreEnforcesRevisionAndIdempotentRetry" fullname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests.StoreEnforcesRevisionAndIdempotentRetry" methodname="StoreEnforcesRevisionAndIdempotentRetry" classname="DungeonBDX.Tests.Services.DungeonCampaignSaveTests" runstate="Runnable" seed="946557279" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.104127" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1276" name="DungeonBDX.Skills.Tests.dll" fullname="C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/ArenaTaticaUnity/Library/ScriptAssemblies/DungeonBDX.Skills.Tests.dll" runstate="Runnable" testcasecount="27" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.097055" total="27" passed="27" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="9408" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1277" name="DungeonBDX" fullname="DungeonBDX" runstate="Runnable" testcasecount="27" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.096096" total="27" passed="27" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1278" name="Tests" fullname="DungeonBDX.Tests" runstate="Runnable" testcasecount="27" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.095544" total="27" passed="27" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1279" name="Skills" fullname="DungeonBDX.Tests.Skills" runstate="Runnable" testcasecount="27" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.095166" total="27" passed="27" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1245" name="DungeonMovementTests" fullname="DungeonBDX.Tests.Skills.DungeonMovementTests" classname="DungeonBDX.Tests.Skills.DungeonMovementTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.008922" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1247" name="WalkCannotCrossWallsOccupiedCellsOrExceedMovementAndActions" fullname="DungeonBDX.Tests.Skills.DungeonMovementTests.WalkCannotCrossWallsOccupiedCellsOrExceedMovementAndActions" methodname="WalkCannotCrossWallsOccupiedCellsOrExceedMovementAndActions" classname="DungeonBDX.Tests.Skills.DungeonMovementTests" runstate="Runnable" seed="394598447" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.005248" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1246" name="WalkingSpendsOneActionAndLeavesAttackBudgetAndRngUntouched" fullname="DungeonBDX.Tests.Skills.DungeonMovementTests.WalkingSpendsOneActionAndLeavesAttackBudgetAndRngUntouched" methodname="WalkingSpendsOneActionAndLeavesAttackBudgetAndRngUntouched" classname="DungeonBDX.Tests.Skills.DungeonMovementTests" runstate="Runnable" seed="1343857673" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.000858" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1248" name="DungeonProfileTests" fullname="DungeonBDX.Tests.Skills.DungeonProfileTests" classname="DungeonBDX.Tests.Skills.DungeonProfileTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.043607" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1252" name="AllEighteenSkillsDeclareBoundedCostsAndStableArtBindings" fullname="DungeonBDX.Tests.Skills.DungeonProfileTests.AllEighteenSkillsDeclareBoundedCostsAndStableArtBindings" methodname="AllEighteenSkillsDeclareBoundedCostsAndStableArtBindings" classname="DungeonBDX.Tests.Skills.DungeonProfileTests" runstate="Runnable" seed="1785567754" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.005516" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1250" name="ConversionUsesInt64AndSnapshotsSourceLists" fullname="DungeonBDX.Tests.Skills.DungeonProfileTests.ConversionUsesInt64AndSnapshotsSourceLists" methodname="ConversionUsesInt64AndSnapshotsSourceLists" classname="DungeonBDX.Tests.Skills.DungeonProfileTests" runstate="Runnable" seed="1527551600" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.002021" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1249" name="EveryPlayableArenaIdHasAnExplicitBoundedIndependentAdaptation" fullname="DungeonBDX.Tests.Skills.DungeonProfileTests.EveryPlayableArenaIdHasAnExplicitBoundedIndependentAdaptation" methodname="EveryPlayableArenaIdHasAnExplicitBoundedIndependentAdaptation" classname="DungeonBDX.Tests.Skills.DungeonProfileTests" runstate="Runnable" seed="1399012912" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.026565" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1251" name="ThreeNewArchetypesHaveUniqueIdsAndValidLoadouts" fullname="DungeonBDX.Tests.Skills.DungeonProfileTests.ThreeNewArchetypesHaveUniqueIdsAndValidLoadouts" methodname="ThreeNewArchetypesHaveUniqueIdsAndValidLoadouts" classname="DungeonBDX.Tests.Skills.DungeonProfileTests" runstate="Runnable" seed="1680756554" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.004711" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1253" name="DungeonSkillTests" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" testcasecount="21" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.040902" total="21" passed="21" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1262" name="AimRerollsMissesOnlyForOneAttackAndCannotCreateAnAttackLoop" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.AimRerollsMissesOnlyForOneAttackAndCannotCreateAnAttackLoop" methodname="AimRerollsMissesOnlyForOneAttackAndCannotCreateAnAttackLoop" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="1614708647" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.001653" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1265" name="AreaAnchorIsTheSelectedTargetIndependentOfOrdinalBudgetOrder" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.AreaAnchorIsTheSelectedTargetIndependentOfOrdinalBudgetOrder" methodname="AreaAnchorIsTheSelectedTargetIndependentOfOrdinalBudgetOrder" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="1893333837" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.002662" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1272" name="AttackLineOfSightCannotPassThroughWallsOrBlockedCorners" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.AttackLineOfSightCannotPassThroughWallsOrBlockedCorners" methodname="AttackLineOfSightCannotPassThroughWallsOrBlockedCorners" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="1869549466" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.001512" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1266" name="DeadPetCannotActOrBlockFutureSummoningForever" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.DeadPetCannotActOrBlockFutureSummoningForever" methodname="DeadPetCannotActOrBlockFutureSummoningForever" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="1336601485" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.001803" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1273" name="DisabledModulesDoNotDisableDamageCapsOrTheBasicFallback" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.DisabledModulesDoNotDisableDamageCapsOrTheBasicFallback" methodname="DisabledModulesDoNotDisableDamageCapsOrTheBasicFallback" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="363462288" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.001492" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1260" name="DuplicateTargetsAndExtremeCoordinatesAreRejectedBeforeSpending" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.DuplicateTargetsAndExtremeCoordinatesAreRejectedBeforeSpending" methodname="DuplicateTargetsAndExtremeCoordinatesAreRejectedBeforeSpending" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="422605794" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.000871" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1274" name="FriendlyFireIsAnIndependentExplicitCampaignChoice" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.FriendlyFireIsAnIndependentExplicitCampaignChoice" methodname="FriendlyFireIsAnIndependentExplicitCampaignChoice" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="134651062" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.001121" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1270" name="HealingSharesAreaBudgetAndNeverOverflowsMaxHealth" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.HealingSharesAreaBudgetAndNeverOverflowsMaxHealth" methodname="HealingSharesAreaBudgetAndNeverOverflowsMaxHealth" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="844029107" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.003242" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1275" name="IdenticalSeedAndCommandsReplayIdenticalDomainOutcomes" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.IdenticalSeedAndCommandsReplayIdenticalDomainOutcomes" methodname="IdenticalSeedAndCommandsReplayIdenticalDomainOutcomes" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="890431325" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.004842" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1271" name="MovementChecksOccupancyPathsAndWallsWhileTeleportCanCrossAWall" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.MovementChecksOccupancyPathsAndWallsWhileTeleportCanCrossAWall" methodname="MovementChecksOccupancyPathsAndWallsWhileTeleportCanCrossAWall" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="551142675" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.001261" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1263" name="OneCooldownSkipsExactlyOneFutureOwnerTurn" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.OneCooldownSkipsExactlyOneFutureOwnerTurn" methodname="OneCooldownSkipsExactlyOneFutureOwnerTurn" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="1580184756" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.001137" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1267" name="OwnerDeathDespawnsThePetAndEndsADefeatedTeam" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.OwnerDeathDespawnsThePetAndEndsADefeatedTeam" methodname="OwnerDeathDespawnsThePetAndEndsADefeatedTeam" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="757308156" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.001013" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1261" name="PaidActionsUsesAndCooldownCannotBeResetWithinTheSameTurn" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.PaidActionsUsesAndCooldownCannotBeResetWithinTheSameTurn" methodname="PaidActionsUsesAndCooldownCannotBeResetWithinTheSameTurn" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="2068528980" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.000617" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1264" name="PetAndAreaUseTheOwnersBudgetAndHaveNoIndependentTurn" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.PetAndAreaUseTheOwnersBudgetAndHaveNoIndependentTurn" methodname="PetAndAreaUseTheOwnersBudgetAndHaveNoIndependentTurn" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="1716852423" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.001981" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1268" name="PetRecallIsPaidAndDoesNotResetSummonCooldownOrActions" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.PetRecallIsPaidAndDoesNotResetSummonCooldownOrActions" methodname="PetRecallIsPaidAndDoesNotResetSummonCooldownOrActions" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="1589411679" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.001031" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1259" name="RejectedCommandsAreAtomicAndDoNotConsumeRng" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.RejectedCommandsAreAtomicAndDoNotConsumeRng" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.002999" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1254" name="RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;unknown&quot;,&quot;dbdx.arcano.lanca&quot;,&quot;enemy&quot;,NotYourTurn)" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;unknown&quot;,&quot;dbdx.arcano.lanca&quot;,&quot;enemy&quot;,NotYourTurn)" methodname="RejectedCommandsAreAtomicAndDoNotConsumeRng" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="1573978622" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.000722" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1255" name="RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;caster&quot;,&quot;unknown&quot;,&quot;enemy&quot;,UnknownSkill)" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;caster&quot;,&quot;unknown&quot;,&quot;enemy&quot;,UnknownSkill)" methodname="RejectedCommandsAreAtomicAndDoNotConsumeRng" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="1236452649" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.000199" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1256" name="RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;caster&quot;,&quot;dbdx.pistola.duplo&quot;,&quot;enemy&quot;,NotInLoadout)" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;caster&quot;,&quot;dbdx.pistola.duplo&quot;,&quot;enemy&quot;,NotInLoadout)" methodname="RejectedCommandsAreAtomicAndDoNotConsumeRng" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="877011069" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.000148" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1257" name="RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;caster&quot;,&quot;dbdx.arcano.lanca&quot;,&quot;missing&quot;,InvalidTarget)" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;caster&quot;,&quot;dbdx.arcano.lanca&quot;,&quot;missing&quot;,InvalidTarget)" methodname="RejectedCommandsAreAtomicAndDoNotConsumeRng" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="564915454" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.000140" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1258" name="RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;caster&quot;,&quot;dbdx.arcano.lanca&quot;,&quot;caster&quot;,InvalidTarget)" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.RejectedCommandsAreAtomicAndDoNotConsumeRng(&quot;caster&quot;,&quot;dbdx.arcano.lanca&quot;,&quot;caster&quot;,InvalidTarget)" methodname="RejectedCommandsAreAtomicAndDoNotConsumeRng" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="1754412080" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.000154" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1269" name="ShieldStackingAcrossOwnersStaysCappedAtTwelveAndExpires" fullname="DungeonBDX.Tests.Skills.DungeonSkillTests.ShieldStackingAcrossOwnersStaysCappedAtTwelveAndExpires" methodname="ShieldStackingAcrossOwnersStaysCappedAtTwelveAndExpires" classname="DungeonBDX.Tests.Skills.DungeonSkillTests" runstate="Runnable" seed="829612517" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.000903" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1309" name="DungeonBDX.Tests.dll" fullname="C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/ArenaTaticaUnity/Library/ScriptAssemblies/DungeonBDX.Tests.dll" runstate="Runnable" testcasecount="22" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:57Z" duration="1.348949" total="22" passed="22" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="9408" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1310" name="DungeonBDX" fullname="DungeonBDX" runstate="Runnable" testcasecount="22" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:57Z" duration="1.348477" total="22" passed="22" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1311" name="Tests" fullname="DungeonBDX.Tests" runstate="Runnable" testcasecount="22" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:57Z" duration="1.348056" total="22" passed="22" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1280" name="DungeonExpeditionTests" fullname="DungeonBDX.Tests.DungeonExpeditionTests" classname="DungeonBDX.Tests.DungeonExpeditionTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:56Z" duration="0.790897" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1282" name="AllNativeProfilesAndImportedProfilesResolveToRealLoadouts" fullname="DungeonBDX.Tests.DungeonExpeditionTests.AllNativeProfilesAndImportedProfilesResolveToRealLoadouts" methodname="AllNativeProfilesAndImportedProfilesResolveToRealLoadouts" classname="DungeonBDX.Tests.DungeonExpeditionTests" runstate="Runnable" seed="1577431384" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.016313" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1283" name="AssetBindingsResolveForEachNativeHeroAndEverySkillAndScenario" fullname="DungeonBDX.Tests.DungeonExpeditionTests.AssetBindingsResolveForEachNativeHeroAndEverySkillAndScenario" methodname="AssetBindingsResolveForEachNativeHeroAndEverySkillAndScenario" classname="DungeonBDX.Tests.DungeonExpeditionTests" runstate="Runnable" seed="881653723" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.116579" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1292" name="CameraKeepsAllBoardCornersAboveHudAndWithinSafeArea" fullname="DungeonBDX.Tests.DungeonExpeditionTests.CameraKeepsAllBoardCornersAboveHudAndWithinSafeArea" classname="DungeonBDX.Tests.DungeonExpeditionTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.015518" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1289" name="CameraKeepsAllBoardCornersAboveHudAndWithinSafeArea(1600,900,0,0,1600,900)" fullname="DungeonBDX.Tests.DungeonExpeditionTests.CameraKeepsAllBoardCornersAboveHudAndWithinSafeArea(1600,900,0,0,1600,900)" methodname="CameraKeepsAllBoardCornersAboveHudAndWithinSafeArea" classname="DungeonBDX.Tests.DungeonExpeditionTests" runstate="Runnable" seed="1198141118" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.010693" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1290" name="CameraKeepsAllBoardCornersAboveHudAndWithinSafeArea(900,1600,30,90,840,1430)" fullname="DungeonBDX.Tests.DungeonExpeditionTests.CameraKeepsAllBoardCornersAboveHudAndWithinSafeArea(900,1600,30,90,840,1430)" methodname="CameraKeepsAllBoardCornersAboveHudAndWithinSafeArea" classname="DungeonBDX.Tests.DungeonExpeditionTests" runstate="Runnable" seed="989461803" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.000572" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1291" name="CameraKeepsAllBoardCornersAboveHudAndWithinSafeArea(2400,1080,100,20,2200,1040)" fullname="DungeonBDX.Tests.DungeonExpeditionTests.CameraKeepsAllBoardCornersAboveHudAndWithinSafeArea(2400,1080,100,20,2200,1040)" methodname="CameraKeepsAllBoardCornersAboveHudAndWithinSafeArea" classname="DungeonBDX.Tests.DungeonExpeditionTests" runstate="Runnable" seed="282181064" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:55Z" duration="0.000552" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1281" name="ClickingAnImportedBillboardSelectsItsOwnerCellRatherThanFloorBehindIt" fullname="DungeonBDX.Tests.DungeonExpeditionTests.ClickingAnImportedBillboardSelectsItsOwnerCellRatherThanFloorBehindIt" methodname="ClickingAnImportedBillboardSelectsItsOwnerCellRatherThanFloorBehindIt" classname="DungeonBDX.Tests.DungeonExpeditionTests" runstate="Runnable" seed="1285125518" result="Passed" start-time="2026-10-16 00:38:55Z" end-time="2026-10-16 00:38:56Z" duration="0.255194" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1288" name="FullBattlesFinishWithinCapsAndReplayExactly" fullname="DungeonBDX.Tests.DungeonExpeditionTests.FullBattlesFinishWithinCapsAndReplayExactly" classname="DungeonBDX.Tests.DungeonExpeditionTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-16 00:38:56Z" end-time="2026-10-16 00:38:56Z" duration="0.349801" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1285" name="FullBattlesFinishWithinCapsAndReplayExactly(&quot;cripta-de-bronze&quot;)" fullname="DungeonBDX.Tests.DungeonExpeditionTests.FullBattlesFinishWithinCapsAndReplayExactly(&quot;cripta-de-bronze&quot;)" methodname="FullBattlesFinishWithinCapsAndReplayExactly" classname="DungeonBDX.Tests.DungeonExpeditionTests" runstate="Runnable" seed="693948594" result="Passed" start-time="2026-10-16 00:38:56Z" end-time="2026-10-16 00:38:56Z" duration="0.204610" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1286" name="FullBattlesFinishWithinCapsAndReplayExactly(&quot;biblioteca-do-crepusculo&quot;)" fullname="DungeonBDX.Tests.DungeonExpeditionTests.FullBattlesFinishWithinCapsAndReplayExactly(&quot;biblioteca-do-crepusculo&quot;)" methodname="FullBattlesFinishWithinCapsAndReplayExactly" classname="DungeonBDX.Tests.DungeonExpeditionTests" runstate="Runnable" seed="745635931" result="Passed" start-time="2026-10-16 00:38:56Z" end-time="2026-10-16 00:38:56Z" duration="0.070758" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1287" name="FullBattlesFinishWithinCapsAndReplayExactly(&quot;ninho-do-eclipse&quot;)" fullname="DungeonBDX.Tests.DungeonExpeditionTests.FullBattlesFinishWithinCapsAndReplayExactly(&quot;ninho-do-eclipse&quot;)" methodname="FullBattlesFinishWithinCapsAndReplayExactly" classname="DungeonBDX.Tests.DungeonExpeditionTests" runstate="Runnable" seed="158964082" result="Passed" start-time="2026-10-16 00:38:56Z" end-time="2026-10-16 00:38:56Z" duration="0.070446" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1284" name="RealProfilesMapJournalAndStorageResumeTheSamePaidMove" fullname="DungeonBDX.Tests.DungeonExpeditionTests.RealProfilesMapJournalAndStorageResumeTheSamePaidMove" methodname="RealProfilesMapJournalAndStorageResumeTheSamePaidMove" classname="DungeonBDX.Tests.DungeonExpeditionTests" runstate="Runnable" seed="1629785964" result="Passed" start-time="2026-10-16 00:38:56Z" end-time="2026-10-16 00:38:56Z" duration="0.029892" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1293" name="DungeonSetupTests" fullname="DungeonBDX.Tests.DungeonSetupTests" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-16 00:38:56Z" end-time="2026-10-16 00:38:57Z" duration="0.552357" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1305" name="AllSixDungeonOrionSkillsCanBeConsultedThroughTheBottomBar" fullname="DungeonBDX.Tests.DungeonSetupTests.AllSixDungeonOrionSkillsCanBeConsultedThroughTheBottomBar" methodname="AllSixDungeonOrionSkillsCanBeConsultedThroughTheBottomBar" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="1686564535" result="Passed" start-time="2026-10-16 00:38:56Z" end-time="2026-10-16 00:38:56Z" duration="0.362098" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1297" name="CampaignModulesCanBeEnabledIndependently" fullname="DungeonBDX.Tests.DungeonSetupTests.CampaignModulesCanBeEnabledIndependently" methodname="CampaignModulesCanBeEnabledIndependently" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="1214529033" result="Passed" start-time="2026-10-16 00:38:56Z" end-time="2026-10-16 00:38:56Z" duration="0.001469" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1294" name="CatalogKeepsEveryPlayableSourceHeroAndSkill" fullname="DungeonBDX.Tests.DungeonSetupTests.CatalogKeepsEveryPlayableSourceHeroAndSkill" methodname="CatalogKeepsEveryPlayableSourceHeroAndSkill" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="771904155" result="Passed" start-time="2026-10-16 00:38:56Z" end-time="2026-10-16 00:38:56Z" duration="0.007954" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1301" name="MotionConvergesEquallyAcrossFrameRates" fullname="DungeonBDX.Tests.DungeonSetupTests.MotionConvergesEquallyAcrossFrameRates" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-16 00:38:56Z" end-time="2026-10-16 00:38:56Z" duration="0.010711" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1298" name="MotionConvergesEquallyAcrossFrameRates(30)" fullname="DungeonBDX.Tests.DungeonSetupTests.MotionConvergesEquallyAcrossFrameRates(30)" methodname="MotionConvergesEquallyAcrossFrameRates" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="411861988" result="Passed" start-time="2026-10-16 00:38:56Z" end-time="2026-10-16 00:38:56Z" duration="0.002388" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1299" name="MotionConvergesEquallyAcrossFrameRates(60)" fullname="DungeonBDX.Tests.DungeonSetupTests.MotionConvergesEquallyAcrossFrameRates(60)" methodname="MotionConvergesEquallyAcrossFrameRates" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="723440926" result="Passed" start-time="2026-10-16 00:38:56Z" end-time="2026-10-16 00:38:56Z" duration="0.000335" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1300" name="MotionConvergesEquallyAcrossFrameRates(144)" fullname="DungeonBDX.Tests.DungeonSetupTests.MotionConvergesEquallyAcrossFrameRates(144)" methodname="MotionConvergesEquallyAcrossFrameRates" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="419747511" result="Passed" start-time="2026-10-16 00:38:56Z" end-time="2026-10-16 00:38:56Z" duration="0.000616" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1296" name="PartyRejectsUnknownHeroesDuplicatesAndOverflow" fullname="DungeonBDX.Tests.DungeonSetupTests.PartyRejectsUnknownHeroesDuplicatesAndOverflow" methodname="PartyRejectsUnknownHeroesDuplicatesAndOverflow" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="811709860" result="Passed" start-time="2026-10-16 00:38:56Z" end-time="2026-10-16 00:38:56Z" duration="0.003455" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1304" name="SafeAreaRespectsNotchesInBothOrientations" fullname="DungeonBDX.Tests.DungeonSetupTests.SafeAreaRespectsNotchesInBothOrientations" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-16 00:38:56Z" end-time="2026-10-16 00:38:57Z" duration="0.007595" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1302" name="SafeAreaRespectsNotchesInBothOrientations(1080,2400,60,100,960,2150)" fullname="DungeonBDX.Tests.DungeonSetupTests.SafeAreaRespectsNotchesInBothOrientations(1080,2400,60,100,960,2150)" methodname="SafeAreaRespectsNotchesInBothOrientations" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="2069394226" result="Passed" start-time="2026-10-16 00:38:56Z" end-time="2026-10-16 00:38:56Z" duration="0.003273" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1303" name="SafeAreaRespectsNotchesInBothOrientations(2400,1080,100,20,2200,1040)" fullname="DungeonBDX.Tests.DungeonSetupTests.SafeAreaRespectsNotchesInBothOrientations(2400,1080,100,20,2200,1040)" methodname="SafeAreaRespectsNotchesInBothOrientations" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="1460323844" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.000520" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1306" name="ShellKeepsSetupAcrossTabsAndDoesNotCreateArenaMatch" fullname="DungeonBDX.Tests.DungeonSetupTests.ShellKeepsSetupAcrossTabsAndDoesNotCreateArenaMatch" methodname="ShellKeepsSetupAcrossTabsAndDoesNotCreateArenaMatch" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="1704390940" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.148595" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1295" name="SnapshotsAreIndependentOfLaterSourceEdits" fullname="DungeonBDX.Tests.DungeonSetupTests.SnapshotsAreIndependentOfLaterSourceEdits" methodname="SnapshotsAreIndependentOfLaterSourceEdits" classname="DungeonBDX.Tests.DungeonSetupTests" runstate="Runnable" seed="971649493" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.001080" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1307" name="DungeonTacticsTests" fullname="DungeonBDX.Tests.DungeonTacticsTests" classname="DungeonBDX.Tests.DungeonTacticsTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.003615" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1308" name="EnemyCanWalkAwayToEscapeADeadEndWithoutCrossingWallOrAlly" fullname="DungeonBDX.Tests.DungeonTacticsTests.EnemyCanWalkAwayToEscapeADeadEndWithoutCrossingWallOrAlly" methodname="EnemyCanWalkAwayToEscapeADeadEndWithoutCrossingWallOrAlly" classname="DungeonBDX.Tests.DungeonTacticsTests" runstate="Runnable" seed="1855259261" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.001574" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1334" name="DungeonBDX.World.Tests.dll" fullname="C:/Users/Anuah/OneDrive/Área de Trabalho/Rpg/ArenaTaticaUnity/Library/ScriptAssemblies/DungeonBDX.World.Tests.dll" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.837039" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="9408" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1335" name="DungeonBDX" fullname="DungeonBDX" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.836535" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1336" name="Tests" fullname="DungeonBDX.Tests" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.836023" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1337" name="World" fullname="DungeonBDX.Tests.World" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.835729" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1312" name="DungeonMapTests" fullname="DungeonBDX.Tests.World.DungeonMapTests" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.835253" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1320" name="DifferentSeedsAndScenarioStreamsProduceVariety" fullname="DungeonBDX.Tests.World.DungeonMapTests.DifferentSeedsAndScenarioStreamsProduceVariety" methodname="DifferentSeedsAndScenarioStreamsProduceVariety" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" seed="1566315987" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.012801" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1328" name="InvalidSizeIsRejected" fullname="DungeonBDX.Tests.World.DungeonMapTests.InvalidSizeIsRejected" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.002549" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1324" name="InvalidSizeIsRejected(8,11)" fullname="DungeonBDX.Tests.World.DungeonMapTests.InvalidSizeIsRejected(8,11)" methodname="InvalidSizeIsRejected" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" seed="10225986" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.000576" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1325" name="InvalidSizeIsRejected(32,11)" fullname="DungeonBDX.Tests.World.DungeonMapTests.InvalidSizeIsRejected(32,11)" methodname="InvalidSizeIsRejected" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" seed="1132823198" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.000123" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1326" name="InvalidSizeIsRejected(11,8)" fullname="DungeonBDX.Tests.World.DungeonMapTests.InvalidSizeIsRejected(11,8)" methodname="InvalidSizeIsRejected" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" seed="971496857" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.000093" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1327" name="InvalidSizeIsRejected(11,32)" fullname="DungeonBDX.Tests.World.DungeonMapTests.InvalidSizeIsRejected(11,32)" methodname="InvalidSizeIsRejected" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" seed="1337384869" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.000094" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1323" name="LineOfSightIsSymmetricAndCannotCutBlockedCorners" fullname="DungeonBDX.Tests.World.DungeonMapTests.LineOfSightIsSymmetricAndCannotCutBlockedCorners" methodname="LineOfSightIsSymmetricAndCannotCutBlockedCorners" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" seed="387254895" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.026782" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1321" name="PathUsesAdjacentFloorCellsAndIncludesEndpoints" fullname="DungeonBDX.Tests.World.DungeonMapTests.PathUsesAdjacentFloorCellsAndIncludesEndpoints" methodname="PathUsesAdjacentFloorCellsAndIncludesEndpoints" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" seed="2129309838" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.004592" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1318" name="SameSeedProducesIdenticalTopologyAndDecorationsAcrossInstances" fullname="DungeonBDX.Tests.World.DungeonMapTests.SameSeedProducesIdenticalTopologyAndDecorationsAcrossInstances" methodname="SameSeedProducesIdenticalTopologyAndDecorationsAcrossInstances" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" seed="454538359" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.033863" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1317" name="SeedMatrixHasConnectedFloorAndSeparatedReachableUniqueSpawns" fullname="DungeonBDX.Tests.World.DungeonMapTests.SeedMatrixHasConnectedFloorAndSeparatedReachableUniqueSpawns" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.738404" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1313" name="SeedMatrixHasConnectedFloorAndSeparatedReachableUniqueSpawns(9,9)" fullname="DungeonBDX.Tests.World.DungeonMapTests.SeedMatrixHasConnectedFloorAndSeparatedReachableUniqueSpawns(9,9)" methodname="SeedMatrixHasConnectedFloorAndSeparatedReachableUniqueSpawns" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" seed="1785698563" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.055743" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1314" name="SeedMatrixHasConnectedFloorAndSeparatedReachableUniqueSpawns(11,11)" fullname="DungeonBDX.Tests.World.DungeonMapTests.SeedMatrixHasConnectedFloorAndSeparatedReachableUniqueSpawns(11,11)" methodname="SeedMatrixHasConnectedFloorAndSeparatedReachableUniqueSpawns" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" seed="659100494" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.061011" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1315" name="SeedMatrixHasConnectedFloorAndSeparatedReachableUniqueSpawns(16,13)" fullname="DungeonBDX.Tests.World.DungeonMapTests.SeedMatrixHasConnectedFloorAndSeparatedReachableUniqueSpawns(16,13)" methodname="SeedMatrixHasConnectedFloorAndSeparatedReachableUniqueSpawns" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" seed="858173480" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.095410" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1316" name="SeedMatrixHasConnectedFloorAndSeparatedReachableUniqueSpawns(31,31)" fullname="DungeonBDX.Tests.World.DungeonMapTests.SeedMatrixHasConnectedFloorAndSeparatedReachableUniqueSpawns(31,31)" methodname="SeedMatrixHasConnectedFloorAndSeparatedReachableUniqueSpawns" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" seed="355812798" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.522614" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1333" name="UnknownScenarioIsRejected" fullname="DungeonBDX.Tests.World.DungeonMapTests.UnknownScenarioIsRejected" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.009250" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1329" name="UnknownScenarioIsRejected(null)" fullname="DungeonBDX.Tests.World.DungeonMapTests.UnknownScenarioIsRejected(null)" methodname="UnknownScenarioIsRejected" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" seed="512812473" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.000615" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1330" name="UnknownScenarioIsRejected(&quot;&quot;)" fullname="DungeonBDX.Tests.World.DungeonMapTests.UnknownScenarioIsRejected(&quot;&quot;)" methodname="UnknownScenarioIsRejected" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" seed="770541355" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.000363" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1331" name="UnknownScenarioIsRejected(&quot;unknown&quot;)" fullname="DungeonBDX.Tests.World.DungeonMapTests.UnknownScenarioIsRejected(&quot;unknown&quot;)" methodname="UnknownScenarioIsRejected" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" seed="1113284054" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.000249" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1332" name="UnknownScenarioIsRejected(&quot;Cripta-de-bronze&quot;)" fullname="DungeonBDX.Tests.World.DungeonMapTests.UnknownScenarioIsRejected(&quot;Cripta-de-bronze&quot;)" methodname="UnknownScenarioIsRejected" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" seed="1927223674" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.000175" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1319" name="VersionOneSeed42ReferenceTopologyIsStableForSaveReplay" fullname="DungeonBDX.Tests.World.DungeonMapTests.VersionOneSeed42ReferenceTopologyIsStableForSaveReplay" methodname="VersionOneSeed42ReferenceTopologyIsStableForSaveReplay" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" seed="138790706" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.000943" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1322" name="WallsAndInvalidCoordinatesCannotBeUsedAsEndpoints" fullname="DungeonBDX.Tests.World.DungeonMapTests.WallsAndInvalidCoordinatesCannotBeUsedAsEndpoints" methodname="WallsAndInvalidCoordinatesCannotBeUsedAsEndpoints" classname="DungeonBDX.Tests.World.DungeonMapTests" runstate="Runnable" seed="1087234782" result="Passed" start-time="2026-10-16 00:38:57Z" end-time="2026-10-16 00:38:57Z" duration="0.001345" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: C:/Users/Anuah/AppData/LocalLow/Arcanoclisma/Arena Tática\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

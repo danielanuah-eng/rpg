@@ -1,0 +1,6 @@
+{
+  "name": "DungeonBDX.Online.Tests",
+  "references": ["DungeonBDX.Online"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

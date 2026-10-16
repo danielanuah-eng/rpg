@@ -1,0 +1,7 @@
+{
+  "name": "DungeonBDX.World",
+  "rootNamespace": "DungeonBDX.World",
+  "references": ["DungeonBDX.Skills"],
+  "autoReferenced": true,
+  "noEngineReferences": true
+}

@@ -1,14 +1,16 @@
-# DungeonBDX — prévia de seleção
+# DungeonBDX — expedição local
 
-Módulo independente sobre ArenaTaticaUnity. Abra `Scenes/DungeonBDX.unity` e entre em Play; também disponível pelo build `Builds/DungeonBDX/DungeonBDX.exe`. A cena Arena e seu combate permanecem independentes.
+Abra Scenes/DungeonBDX.unity em Play ou execute JOGAR-DUNGEONBDX.cmd na raiz Unity após o build. Na aba Sessão, escolha Cripta de Bronze, Biblioteca do Crepúsculo ou Ninho do Eclipse. Sem recrutados, a equipe é Lyra, Orion e Vaelis; a seleção oferece também os 28 heróis adaptados da Arena.
 
-Abas: Heróis, Campanha, Sessão. Clique/toque na carta para consultar; Recrutar/Remover monta o grupo local de até três. Setas percorrem todos os heróis e todas as skills, inclusive as seis do Damian. Ações inferiores consultam a ficha de origem; ainda não executam combate. Módulos da campanha conservam a seleção enquanto a prévia está aberta. LERP usa tempo não escalado; controles reagem a mouse, foco e toque. Safe area e layout respondem à orientação.
+Escolha uma habilidade no HUD inferior e toque/clique no alvo. MOVER custa 1 PA e respeita caminho, ocupação e lentidão. ENCERRAR TURNO avança equipe e adversários. A ficha mostra valores e loadout DungeonBDX; os dados de origem permanecem preservados no catálogo. Críticos, armadura, dano, cura e escudo usam o domínio das etapas 02–03.
 
-Paleta provisória: carvão, bronze e vinho (a referência citada ainda não foi anexada). Domínio 02–03 concluído: núcleo determinístico com caps, 18 skills executáveis, adaptador explícito de 28 heróis e três perfis novos. Integração na cena/HUD, assets finais, contas/salas/convites, saves e mapas seguem 04–06 em `coordenacao/dungeonbdx/PIPELINE.md`. A aba Sessão informa que os serviços ainda não estão disponíveis.
+Cada comando aceito salva o progresso local. RETOMAR recompõe turnos, RNG, recargas, buffs e companheiro pelo journal. Há backup, revisões e exclusão entre escritores. Falhas interrompem novas ações até recuperação. Limite desta versão: 4.096 comandos por expedição. Pasta: Application.persistentDataPath/DungeonBDX/Campaigns/local. Senhas não entram nesse save.
 
-`Combat/` e `Skills/` são assemblies sem UnityEngine; `DungeonSkillSession` executa os comandos com orçamentos compartilhados por dono/ação e resultados imutáveis para animação/SFX. Contratos em `coordenacao/dungeonbdx/contratos/`; guia da API e limitações em `coordenacao/dungeonbdx/entregas/03-skills/README.md`. Exportar contratos das DLLs compiladas com `pwsh -NoProfile -File Tools/export-dungeonbdx-contracts.ps1`. Nenhum modelo/SFX/BGM final é incluído por esses bindings.
+Fogo amigo e encontros com dragões são módulos disponíveis; objetivos especiais e armadilhas aparecem como preparação. Três mapas por seed, salas/corredores conectados, visão integral, câmera com safe area, modelos originais e LERP por casas. Os 18 SFX e três ambientes musicais são síntese original provisória. Fontes Blender/Python: Tools/GenerateDungeonAssets; procedência/hashes: Art/manifest.json. Arte high-end, rigs, LODs, texturas finais e animações particulares permanecem pendentes.
 
-CLI oficial já instalada; execute do projeto Unity:
+CONTAS & SALAS abre o cliente real Unity Authentication/MPS: login/cadastro por senha, salas privadas e entrada por código. Só conecta após ação explícita. O provedor Username & Password precisa estar configurado no Unity Cloud; funcionamento cloud não foi testado nesta entrega. A sala gerencia membros; **combate multiplayer, convites direcionados e saves cloud ainda não estão implementados**. APIs online exigem autorização real. O SDK gerencia seus tokens de sessão; DESCONECTAR pede sua limpeza.
+
+CLI oficial, a partir do projeto Unity:
 
 ```powershell
 .\Tools\dungeonbdx.ps1 -Action Prepare
@@ -16,6 +18,6 @@ CLI oficial já instalada; execute do projeto Unity:
 .\Tools\dungeonbdx.ps1 -Action Windows
 ```
 
-Fontes e recursos TMP oficiais estão incluídos no módulo, com GUIDs e licença da fonte preservados. O build aponta explicitamente para a cena DungeonBDX; não troca a cena padrão da Arena. Builds/Artifacts são saídas locais ignoradas pelo Git. Prévia Windows é Development Build; captura automática de QA aceita `-dungeonbdx-capture C:\caminho\previa.png`, com `-dungeonbdx-tab Campaign` opcional, e só existe em Editor/Development.
+Builds/Artifacts são saídas locais ignoradas pelo Git. QA somente Editor/Development: -dungeonbdx-play cripta-de-bronze -dungeonbdx-qa -dungeonbdx-smoke -dungeonbdx-capture C:\saida\partida.png. O perfil QA é separado. O smoke exercita ações, escudo, invocação, save, replay e projeção do tabuleiro; grava JSON ao lado da imagem.
 
-QA usa renderização direta URP para textura (janelas ocultas não forneciam framebuffer útil). As capturas são da UI Unity real. Teste de retrato foi limitado pelo desktop a 900x1080; dispositivos móveis físicos permanecem pendentes. Após um build completo, alterações exclusivamente de código podem usar `unity build . --target StandaloneWindows64 --execute-method DungeonBuild.WindowsScriptsOnly`. Mudanças de recursos/cena exigem o build completo.
+Tema provisório carvão/bronze/vinho; referência visual ausente. Android nativo, desempenho mobile e QA físico pendentes. Licenças TMP preservadas. Evidências: coordenacao/dungeonbdx/entregas/04-06-local/.

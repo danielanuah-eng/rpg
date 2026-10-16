@@ -1,0 +1,6 @@
+{
+  "name": "DungeonBDX.World.Tests",
+  "references": ["DungeonBDX.World", "DungeonBDX.Skills"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

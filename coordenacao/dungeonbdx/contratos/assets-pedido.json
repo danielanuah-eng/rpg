@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "status": "REQUEST-ONLY; stage 4 not delivered",
+  "status": "FUNCTIONAL ORIGINAL BASE DELIVERED; final high-end assets pending",
   "inputVersions": {
     "balance": "1.0.0",
     "skills": "1.0.0"
@@ -831,5 +831,13 @@
     "mobileShadowedRealtimeLights": 1,
     "notes": "Targets to validate with actual exports/profiling; stage 4 must propose a bounded per-scene budget for stage 5."
   },
-  "integration": "No assets or final soundtrack are claimed delivered here. Stage 5 waits for reviewed stage 4 files."
+  "integration": "No assets or final soundtrack are claimed delivered here. Stage 5 waits for reviewed stage 4 files.",
+  "functionalDelivery": {
+    "owner": "Codex / internal agents / Blender",
+    "manifest": "ArenaTaticaUnity/Assets/DungeonBDX/Art/manifest.json",
+    "validation": "coordenacao/dungeonbdx/entregas/04-06-local/validacao.json",
+    "models": 18,
+    "sfx": 18,
+    "ambientLoops": 3
+  }
 }

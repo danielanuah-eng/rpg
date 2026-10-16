@@ -56,6 +56,8 @@ namespace DungeonBDX.Tests
         public void CampaignModulesCanBeEnabledIndependently()
         {
             var setup = new DungeonSetup(DungeonHeroCatalog.ImportArena());
+            Assert.That(setup.Mechanics,Is.EqualTo(CampaignMechanics.None));
+            setup.SetMechanic(CampaignMechanics.Objectives,true);
             setup.SetMechanic(CampaignMechanics.Traps, false);
             setup.SetMechanic(CampaignMechanics.DragonEncounters, true);
             Assert.That(setup.HasMechanic(CampaignMechanics.Objectives), Is.True);
@@ -91,12 +93,12 @@ namespace DungeonBDX.Tests
         }
 
         [Test]
-        public void AllSixDamianSkillsCanBeConsultedThroughTheBottomBar()
+        public void AllSixDungeonOrionSkillsCanBeConsultedThroughTheBottomBar()
         {
             var go = new GameObject("DungeonBDX paging fixture");
             try
             {
-                var shell = go.AddComponent<DungeonShell>(); shell.Initialize(); shell.SelectHero("damian");
+                var shell = go.AddComponent<DungeonShell>(); shell.Initialize(); shell.SelectHero("orion-prisma");
                 var seen = new System.Collections.Generic.HashSet<string>();
                 for (int page = 0; page < 3; page++)
                 {
@@ -106,7 +108,7 @@ namespace DungeonBDX.Tests
                         seen.Add(button.name.Substring("Action ".Length));
                     buttons.Last().onClick.Invoke();
                 }
-                Assert.That(seen, Is.EquivalentTo(Content.Fighters["damian"].skills.Select(s => s.id)));
+                Assert.That(seen, Is.EquivalentTo(DungeonProfiles.Resolve("orion-prisma").SkillIds));
             }
             finally { UnityEngine.Object.DestroyImmediate(go); }
         }

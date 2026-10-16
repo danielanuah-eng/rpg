@@ -15,6 +15,14 @@ public static class DungeonBuild
     [MenuItem("DungeonBDX/Preparar cena de seleção")]
     public static void Prepare()
     {
+        EnsureMaterial("WorldLit","Universal Render Pipeline/Lit");
+        EnsureMaterial("SkillUnlit","Universal Render Pipeline/Unlit");
+        foreach(var guid in AssetDatabase.FindAssets("t:Model",new[]{"Assets/DungeonBDX/Art"}))
+        {
+            var path=AssetDatabase.GUIDToAssetPath(guid);
+            if(AssetImporter.GetAtPath(path) is ModelImporter model && !model.isReadable)
+            { model.isReadable=true;model.importAnimation=false;model.SaveAndReimport(); }
+        }
         if (!Resources.Load<TMP_Settings>("TMP Settings"))
         {
             throw new Exception("Restaure os recursos TMP oficiais incluídos em Assets/DungeonBDX/TextMesh Pro antes de preparar.");
@@ -33,6 +41,16 @@ public static class DungeonBuild
         }
         finally { if (additive) EditorSceneManager.CloseScene(scene, true); }
         AssetDatabase.SaveAssets();
+    }
+
+    static void EnsureMaterial(string name,string shaderName)
+    {
+        const string folder="Assets/DungeonBDX/Art/Resources/DungeonBDX/Materials";
+        if(!Directory.Exists(folder)){Directory.CreateDirectory(folder);AssetDatabase.Refresh();}
+        string path=folder+"/"+name+".mat";
+        if(AssetDatabase.LoadAssetAtPath<Material>(path))return;
+        var shader=Shader.Find(shaderName);if(!shader)throw new Exception("Shader obrigatório indisponível: "+shaderName);
+        AssetDatabase.CreateAsset(new Material(shader){name=name,color=Color.white,enableInstancing=true},path);
     }
 
     [MenuItem("DungeonBDX/Build Windows da prévia")]

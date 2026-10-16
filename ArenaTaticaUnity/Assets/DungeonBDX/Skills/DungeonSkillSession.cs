@@ -164,6 +164,23 @@ namespace DungeonBDX.Skills
         public int HealingSpentThisTurn => budget?.Spent(CombatResource.Healing) ?? 0;
         public int ShieldSpentThisTurn => budget?.Spent(CombatResource.Shield) ?? 0;
         public ulong? RandomState => random is DungeonRandom seeded ? seeded.State : (ulong?)null;
+        // Canonical persistence diagnostics include private clocks, cooldowns and queue order.
+        // This is an integrity input for local replay, never an authorization credential.
+        public string PersistenceState
+        {
+            get
+            {
+                var text = new System.Text.StringBuilder(FormattableString.Invariant(
+                    $"{(int)mechanics}|{turnCursor}|{string.Join(",",turnOrder)}|{ActiveActorId}|{TurnIndex}|{Finished}|{RemainingActions}|{DamageSpentThisTurn}|{HealingSpentThisTurn}|{ShieldSpentThisTurn}|{RandomState}"));
+                foreach (var unit in units.Values.OrderBy(u=>u.Id,StringComparer.Ordinal))
+                {
+                    text.Append(FormattableString.Invariant($";{unit.Id}|{unit.Owner}|{unit.Profile?.Id}|{unit.Team}|{unit.Health}|{unit.MaxHealth}|{unit.BaseArmor}|{unit.Shield}|{unit.ArmorBonus}|{unit.Slow}|{unit.Cell.X}|{unit.Cell.Y}|{unit.OwnTurn}|{unit.ShieldExpires}|{unit.ArmorExpires}|{unit.SlowExpires}|{unit.AimExpires}|{unit.Aim}"));
+                    foreach (var entry in unit.ReadyAt.OrderBy(e=>e.Key,StringComparer.Ordinal)) text.Append(FormattableString.Invariant($"|c:{entry.Key}:{entry.Value}"));
+                    foreach (var entry in unit.Uses.OrderBy(e=>e.Key,StringComparer.Ordinal)) text.Append(FormattableString.Invariant($"|u:{entry.Key}:{entry.Value}"));
+                }
+                return text.ToString();
+            }
+        }
         public IReadOnlyList<UnitSnapshot> Units => Array.AsReadOnly(units.Values.OrderBy(unit => unit.Id, StringComparer.Ordinal).Select(unit => new UnitSnapshot(unit)).ToArray());
 
         public DungeonSkillSession(IEnumerable<HeroSpawn> initial, ISkillBoard board, ulong seed = 1,
@@ -192,6 +209,22 @@ namespace DungeonBDX.Skills
         public string PetId(string ownerId) => ownerId != null && units.TryGetValue("pet:" + ownerId, out var pet) && pet.Health > 0 ? pet.Id : null;
         bool Enabled(SkillMechanics flag) => (mechanics & flag) != 0;
         bool IsVacant(GridCell cell) => board.CanStand(cell) && !units.Values.Any(unit => unit.Health > 0 && unit.Cell.Equals(cell));
+
+        // A walk is one paid action. Validate the whole path before touching budgets or RNG.
+        public SkillFailure Move(string actorId, GridCell destination)
+        {
+            if (Finished) return SkillFailure.Finished;
+            if (actorId != ActiveActorId) return SkillFailure.NotYourTurn;
+            var actor = units[actorId];
+            if (RemainingActions < 1) return SkillFailure.NoActions;
+            int steps = Math.Max(1, actor.Profile.Movement - actor.Slow);
+            if (destination.Equals(actor.Cell) || !IsVacant(destination) ||
+                GridCell.Distance(actor.Cell, destination) > steps || !CanWalk(actor.Cell, destination, steps))
+                return SkillFailure.InvalidDestination;
+            if (!budget.TryBeginAction(1, out var action)) return SkillFailure.NoActions;
+            using (action) actor.Cell = destination;
+            return SkillFailure.None;
+        }
 
         public bool EndTurn(string actorId)
         {

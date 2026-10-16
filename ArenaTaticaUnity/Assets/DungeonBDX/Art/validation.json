@@ -1,0 +1,128 @@
+{
+  "status": "passed",
+  "verifiedModelHashes": 18,
+  "verifiedAudioHashes": 21,
+  "verifiedBlendHash": true,
+  "totalModelTrianglesFromBlender": 6204,
+  "checks": [
+    {
+      "id": "dbdx.music.cripta-de-bronze",
+      "status": "passed",
+      "bytes": 1411200,
+      "seamJumpPCM": 66,
+      "maxAdjacentJumpPCM": 242,
+      "meanPCM": 0.0001
+    },
+    {
+      "id": "dbdx.music.biblioteca-do-crepusculo",
+      "status": "passed",
+      "bytes": 1411200,
+      "seamJumpPCM": 99,
+      "maxAdjacentJumpPCM": 307,
+      "meanPCM": 0.0001
+    },
+    {
+      "id": "dbdx.music.ninho-do-eclipse",
+      "status": "passed",
+      "bytes": 1411200,
+      "seamJumpPCM": 58,
+      "maxAdjacentJumpPCM": 189,
+      "meanPCM": 0.0002
+    },
+    {
+      "id": "dbdx.sfx.basico.golpe",
+      "status": "passed",
+      "bytes": 8378
+    },
+    {
+      "id": "dbdx.sfx.basico.avanco",
+      "status": "passed",
+      "bytes": 14112
+    },
+    {
+      "id": "dbdx.sfx.basico.revigorar",
+      "status": "passed",
+      "bytes": 28664
+    },
+    {
+      "id": "dbdx.sfx.basico.baluarte",
+      "status": "passed",
+      "bytes": 22050
+    },
+    {
+      "id": "dbdx.sfx.pistola.duplo",
+      "status": "passed",
+      "bytes": 8820
+    },
+    {
+      "id": "dbdx.sfx.pistola.ricochete",
+      "status": "passed",
+      "bytes": 15434
+    },
+    {
+      "id": "dbdx.sfx.pistola.mira",
+      "status": "passed",
+      "bytes": 16758
+    },
+    {
+      "id": "dbdx.sfx.pistola.ruptura",
+      "status": "passed",
+      "bytes": 17640
+    },
+    {
+      "id": "dbdx.sfx.arcano.lanca",
+      "status": "passed",
+      "bytes": 21168
+    },
+    {
+      "id": "dbdx.sfx.arcano.geada",
+      "status": "passed",
+      "bytes": 28664
+    },
+    {
+      "id": "dbdx.sfx.arcano.egide",
+      "status": "passed",
+      "bytes": 24254
+    },
+    {
+      "id": "dbdx.sfx.arcano.transposicao",
+      "status": "passed",
+      "bytes": 19844
+    },
+    {
+      "id": "dbdx.sfx.arcano.pulso",
+      "status": "passed",
+      "bytes": 33074
+    },
+    {
+      "id": "dbdx.sfx.draco.invocar",
+      "status": "passed",
+      "bytes": 37484
+    },
+    {
+      "id": "dbdx.sfx.draco.comandar",
+      "status": "passed",
+      "bytes": 11466
+    },
+    {
+      "id": "dbdx.sfx.draco.sopro",
+      "status": "passed",
+      "bytes": 33074
+    },
+    {
+      "id": "dbdx.sfx.draco.pacto",
+      "status": "passed",
+      "bytes": 28664
+    },
+    {
+      "id": "dbdx.sfx.draco.recolher",
+      "status": "passed",
+      "bytes": 22050
+    }
+  ],
+  "notVerified": [
+    "Unity FBX import and runtime playback: integrated project validation required",
+    "Physical mobile/PC performance",
+    "Author visual and soundtrack acceptance"
+  ]
+}

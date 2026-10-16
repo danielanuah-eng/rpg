@@ -13,7 +13,7 @@ namespace DungeonBDX
         readonly HashSet<string> available;
         public int PartyCapacity { get; }
         public IReadOnlyList<string> Party => party.AsReadOnly();
-        public CampaignMechanics Mechanics { get; private set; } = CampaignMechanics.Objectives | CampaignMechanics.Traps;
+        public CampaignMechanics Mechanics { get; private set; } = CampaignMechanics.None;
 
         public DungeonSetup(IEnumerable<DungeonHero> heroes, int partyCapacity = 3)
         {

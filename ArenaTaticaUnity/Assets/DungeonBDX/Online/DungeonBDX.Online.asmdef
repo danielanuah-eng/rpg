@@ -1,0 +1,6 @@
+{
+  "name": "DungeonBDX.Online",
+  "rootNamespace": "DungeonBDX.Online",
+  "references": ["Unity.Services.Core", "Unity.Services.Authentication", "Unity.Services.Multiplayer"],
+  "autoReferenced": true
+}

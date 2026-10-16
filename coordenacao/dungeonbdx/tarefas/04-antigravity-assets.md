@@ -1,8 +1,10 @@
 # 04. Modelos, tiles e áudio
 
+> Direção posterior do autor: não utiliza Antigravity; Codex redistribui e continua a base funcional. Dependências abaixo referem-se ao briefing original. Estado atual e pendências: PIPELINE.md e entregas/04-06-local/.
+
 - **De:** autor / UltraBridge, consolidado por codex
-- **Para:** antigravity
-- **Status:** pendente
+- **Para:** codex / agente de assets / Blender
+- **Status:** base-funcional-entregue; acabamento-final-pendente
 - **Projeto / pasta de trabalho:** C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg
 - **Entrega:** arquivos locais, sem commit/push do executor
 - **Dependência:** 03 revisada por Codex; contratos de skills e métricas 02 disponíveis

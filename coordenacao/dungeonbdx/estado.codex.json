@@ -2,7 +2,7 @@
   "projeto": "DungeonBDX",
   "dataLocal": "2026-10-15",
   "branch": "main",
-  "etapaAtual": 4,
+  "etapaAtual": 5,
   "etapas": [
     {
       "id": 1,
@@ -14,7 +14,7 @@
         "falhas": 0,
         "reverificacaoUI": "11/11 apos ajustes visuais e captura"
       },
-      "herois": 28,
+      "herois": 31,
       "buildWindows": "aprovado; Development Build; cerca de 1.60 GB",
       "visual": "capturas URP conferidas; paleta provisoria; referencia nao anexada"
     },
@@ -50,25 +50,50 @@
     },
     {
       "id": 4,
-      "responsavel": "Antigravity",
-      "estado": "liberada-aguardando-ativacao",
+      "responsavel": "Codex / agentes internos / Blender",
+      "estado": "base-original-funcional-validada; acabamento-final-pendente",
       "pedido": "contratos/assets-pedido.json",
-      "entregasRecebidas": 0
+      "entregasRecebidas": 39,
+      "modelos": 18,
+      "sfx": 18,
+      "ambientesMusicais": 3,
+      "acabamentoFinal": "pendente"
     },
     {
       "id": 5,
       "responsavel": "Codex",
-      "estado": "aguardando-gate-4"
+      "estado": "expedicao-local-saves-validados; online-parcial",
+      "mapas": 3,
+      "saves": "journal local atomico, backup, revisoes",
+      "online": "cliente SDK real; sem QA cloud ou replicacao",
+      "testesPlayer": 3
     },
     {
       "id": 6,
-      "responsavel": "Codex + Antigravity",
-      "estado": "aguardando-gate-5"
+      "responsavel": "Codex",
+      "estado": "HUD-local-validado-no-player; acabamento-final-pendente"
     }
   ],
-  "servicosOnline": "nao implementados nesta etapa",
-  "androidNativo": "nao compilado; QA visual offscreen no Windows em 1600x900 e 900x1080; teste fisico pendente",
-  "agentesExternos": "Nenhum executor externo ativo/confirmado. Autor atribuiu 2-3 ao Codex; 4 liberada para Antigravity.",
-  "decisaoAutor": "Codex assume as etapas 2-3 (2026-10-15)",
-  "previaWindows": "Build da etapa 1; fonte 2-3 compilada/testada no Editor, sem nova integracao de combate na cena/HUD"
+  "servicosOnline": "Cliente Unity Authentication/MPS implementado; funcionamento cloud, combate sincronizado, convites direcionados e cloud saves pendentes",
+  "androidNativo": "nao compilado; retrato Windows offscreen; QA fisico e desempenho pendentes",
+  "agentesExternos": "Antigravity nao utilizado; agentes internos entregaram World/Services/Art/Online",
+  "decisaoAutor": "Codex assume 2-3; autor nao usa Antigravity: redistribuir e continuar o possivel",
+  "previaWindows": "Expedicao local jogavel Development; tres cenarios e smokes reais aprovados",
+  "testesAtuais": {
+    "integrados": {
+      "total": 267,
+      "passed": 267,
+      "failed": 0,
+      "skipped": 0
+    },
+    "reverificacaoModulo": {
+      "total": 114,
+      "passed": 114,
+      "failed": 0,
+      "skipped": 0
+    },
+    "smokesPlayer": 3,
+    "falhasPlayerFinais": 0
+  },
+  "evidenciaAtual": "entregas/04-06-local/validacao.json"
 }

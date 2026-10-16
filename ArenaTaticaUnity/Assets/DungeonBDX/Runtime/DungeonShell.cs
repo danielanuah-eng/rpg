@@ -31,6 +31,7 @@ namespace DungeonBDX
         int lastWidth, lastHeight;
         Rect lastSafe;
         bool portrait;
+        bool onlinePage;
 
         public DungeonSetup Setup { get; private set; }
         public DungeonTab CurrentTab { get; private set; }
@@ -42,7 +43,7 @@ namespace DungeonBDX
         public void Initialize()
         {
             if (canvas) return;
-            heroes = DungeonHeroCatalog.ImportArena();
+            heroes = DungeonHeroCatalog.ImportAll();
             Setup = new DungeonSetup(heroes);
             selected = heroes.FirstOrDefault()?.Id;
             foreach (var hero in heroes) portraits[hero.Id] = hero.LoadPortrait();
@@ -61,6 +62,7 @@ namespace DungeonBDX
             if (!EventSystem.current)
             {
                 var events = new GameObject("DungeonBDX Events", typeof(EventSystem), typeof(InputSystemUIInputModule));
+                events.GetComponent<InputSystemUIInputModule>().AssignDefaultActions();
                 events.transform.SetParent(transform, false); ownedEvents = events.GetComponent<EventSystem>();
             }
             Rebuild();
@@ -178,11 +180,13 @@ namespace DungeonBDX
             Label(detail, "FICHA DO HERÓI", new Vector2(.04f, .87f), new Vector2(.96f, .98f), 12, Bronze);
             Label(detail, heroSelected.Name, new Vector2(.04f, .75f), new Vector2(.96f, .89f), 30, Ink);
             Portrait(detail, heroSelected, new Vector2(.02f, .23f), new Vector2(.38f, .77f));
-            Label(detail, $"VIDA  <b>{heroSelected.Health}</b>     PA  <b>{heroSelected.Actions}</b>\nMOV  <b>{heroSelected.Movement}</b>      ARM BASE  <b>{heroSelected.Armor}</b>",
+            var profile=DungeonProfiles.Resolve(heroSelected.Id);
+            var playable=PlayableActions(heroSelected.Id);
+            Label(detail, $"VIDA  <b>{profile.Health}</b>     PA  <b>{profile.Actions}</b>\nMOV  <b>{profile.Movement}</b>      ARM BASE  <b>{profile.Armor}</b>",
                 new Vector2(.4f, .53f), new Vector2(.97f, .76f), 18, Bronze);
-            string description = selectedSkill >= 0 && selectedSkill < heroSelected.Skills.Count
-                ? heroSelected.Skills[selectedSkill].Description
-                : "Selecione uma habilidade na barra inferior para consultar a ficha de origem.";
+            string description = selectedSkill >= 0 && selectedSkill < playable.Count
+                ? playable[selectedSkill].Description
+                : "Selecione uma habilidade na barra inferior para consultar a ficha DungeonBDX.";
             Label(detail, description, new Vector2(.4f, .19f), new Vector2(.96f, .53f), 17, Muted);
             string caption = Setup.Party.Contains(selected) ? "REMOVER DA EXPEDIÇÃO" : "RECRUTAR HERÓI";
             Button(detail, caption, new Vector2(.04f, .025f), new Vector2(.96f, .18f), ToggleSelected);
@@ -200,7 +204,7 @@ namespace DungeonBDX
         {
             var panel = Box("Campaign Setup", body, Vector2.zero, Vector2.one, Panel);
             Label(panel, "AS REGRAS DA SUA CRÔNICA", new Vector2(.04f, .8f), new Vector2(.96f, .97f), 25, Bronze);
-            Label(panel, "Escolha os módulos da campanha. Configuração local de preparação.", new Vector2(.04f, .69f), new Vector2(.96f, .82f), 17, Muted);
+            Label(panel, "Fogo amigo e encontros com dragões disponíveis na expedição local.", new Vector2(.04f, .69f), new Vector2(.96f, .82f), 17, Muted);
             CampaignMechanics[] flags = { CampaignMechanics.Objectives, CampaignMechanics.Traps, CampaignMechanics.FriendlyFire, CampaignMechanics.DragonEncounters };
             string[] names = { "Objetivos de cenário", "Armadilhas da masmorra", "Fogo amigo", "Encontros com dragões" };
             for (int i = 0; i < flags.Length; i++)
@@ -210,16 +214,43 @@ namespace DungeonBDX
                 var b = Button(panel, (enabled ? "[x]  ATIVO    " : "[ ]  INATIVO    ") + names[i],
                     new Vector2(.04f, top - .13f), new Vector2(.96f, top), () => { Setup.SetMechanic(flag, !Setup.HasMechanic(flag)); RenderPage(); });
                 b.GetComponent<DungeonMotion>().Chosen = enabled;
+                if(flag==CampaignMechanics.Objectives || flag==CampaignMechanics.Traps)
+                { b.GetComponent<UnityEngine.UI.Button>().interactable=false;b.GetComponentInChildren<TextMeshProUGUI>().text=names[i]+" · EM PREPARAÇÃO"; }
             }
         }
 
         void SessionPage()
         {
             var panel = Box("Session Preview", body, Vector2.zero, Vector2.one, Panel);
-            Label(panel, "À PORTA DA MASMORRA", new Vector2(.06f, .7f), new Vector2(.94f, .94f), 30, Bronze);
-            Label(panel, "Contas protegidas • Salas privadas • Convites no jogo", new Vector2(.06f, .52f), new Vector2(.94f, .72f), 22, Ink);
-            Label(panel, "Os serviços online ainda não estão disponíveis nesta prévia.\n\nA seleção de heróis e os módulos da campanha podem ser preparados localmente.",
-                new Vector2(.06f, .14f), new Vector2(.94f, .52f), 21, Muted);
+            if(onlinePage)
+            {
+                var client=GetComponent<Online.DungeonOnlineClient>() ?? gameObject.AddComponent<Online.DungeonOnlineClient>();
+                panel.gameObject.AddComponent<DungeonOnlinePanel>().Mount(client,()=>{onlinePage=false;RenderPage();});return;
+            }
+            Label(panel, "À PORTA DA MASMORRA", new Vector2(.04f, .8f), new Vector2(.96f, .98f), 28, Bronze);
+            Label(panel, "Expedição local · Salvamento automático\nSem recrutados: Lyra, Orion e Vaelis acompanham você.", new Vector2(.04f, .64f), new Vector2(.96f, .8f), 17, Ink);
+            string[] scenarios = { "cripta-de-bronze", "biblioteca-do-crepusculo", "ninho-do-eclipse" };
+            string[] names = { "CRIPTA DE BRONZE", "BIBLIOTECA DO CREPÚSCULO", "NINHO DO ECLIPSE" };
+            for (int i = 0; i < scenarios.Length; i++)
+            {
+                string scenario = scenarios[i]; float top = .64f - i * .14f;
+                Button(panel, "INICIAR  ·  " + names[i], new Vector2(.04f, top-.13f), new Vector2(.96f, top), () => LaunchExpedition(scenario));
+            }
+            Button(panel, "RETOMAR EXPEDIÇÃO SALVA", new Vector2(.04f,.08f),new Vector2(.96f,.21f),() => LaunchExpedition(null));
+            Button(panel, "CONTAS & SALAS (INTEGRAÇÃO)", new Vector2(.04f,.0f),new Vector2(.96f,.08f),()=>{onlinePage=true;RenderPage();});
+        }
+
+        public void LaunchExpedition(string scenario)
+        {
+            var expedition = GetComponent<DungeonExpedition>() ?? gameObject.AddComponent<DungeonExpedition>();
+            if (!expedition.Open(this, scenario, Setup)) { feedback = expedition.SaveMessage ?? "Nenhuma expedição salva."; RenderPage(); return; }
+            canvas.gameObject.SetActive(false); GetComponentInChildren<Camera>().enabled = false; enabled = false;
+        }
+
+        public void ReturnToSetup()
+        {
+            enabled = true; canvas.gameObject.SetActive(true);
+            GetComponentsInChildren<Camera>(true).First(c => c.gameObject.name == "DungeonBDX Camera").enabled = true;
         }
 
         void ActionBar()
@@ -227,19 +258,20 @@ namespace DungeonBDX
             string partyNames = Setup.Party.Count == 0 ? "Nenhum herói recrutado" : string.Join("  /  ", Setup.Party.Select(id => heroes.First(h => h.Id == id).Name));
             Label(hud, $"EXPEDIÇÃO  {Setup.Party.Count}/{Setup.PartyCapacity}   ·   {partyNames}", new Vector2(.025f, .74f), new Vector2(.975f, .98f), 16, Bronze);
             var hero = Selected;
+            var playable=hero==null ? Array.Empty<DungeonAction>() : PlayableActions(hero.Id);
             int perPage = portrait ? 3 : 4;
-            int pages = Mathf.Max(1, Mathf.CeilToInt((hero?.Skills.Count ?? 0) / (float)perPage));
+            int pages = Mathf.Max(1, Mathf.CeilToInt(playable.Count / (float)perPage));
             skillPage = Mathf.Clamp(skillPage, 0, pages - 1);
             if (hero != null)
             {
-                int visible = Mathf.Min(perPage, hero.Skills.Count - skillPage * perPage);
+                int visible = Mathf.Min(perPage, playable.Count - skillPage * perPage);
                 float actionStart = .08f + (perPage - visible) * .42f / perPage;
                 Button(hud, "‹", new Vector2(.015f, .28f), new Vector2(.075f, .7f), () => { skillPage = (skillPage + pages - 1) % pages; RenderPage(); });
                 for (int i = 0; i < perPage; i++)
                 {
                     int index = skillPage * perPage + i;
-                    if (index >= hero.Skills.Count) break;
-                    var action = hero.Skills[index];
+                    if (index >= playable.Count) break;
+                    var action = playable[index];
                     var b = Button(hud, $"{index + 1}  {action.Name}\n<size=80%>{action.Cost} PA · CONSULTAR</size>",
                         new Vector2(actionStart + i * .84f / perPage, .28f), new Vector2(actionStart + (i + 1) * .84f / perPage, .7f),
                         () => { selectedSkill = index; CurrentTab = DungeonTab.Heroes; RenderPage(); });
@@ -249,6 +281,9 @@ namespace DungeonBDX
             }
             Label(hud, feedback + $"   •   Habilidades {skillPage + 1}/{pages}", new Vector2(.025f, .01f), new Vector2(.975f, .25f), 14, Muted, TextAlignmentOptions.Center);
         }
+
+        static IReadOnlyList<DungeonAction> PlayableActions(string id) => Array.AsReadOnly(DungeonProfiles.Resolve(id).SkillIds
+            .Select(skill=>new DungeonAction(Skills.DungeonSkillCatalog.All[skill])).ToArray());
 
         void Portrait(Transform parent, DungeonHero hero, Vector2 min, Vector2 max)
         {
@@ -335,9 +370,17 @@ namespace DungeonBDX
             int capture = Array.IndexOf(args, "-dungeonbdx-capture");
             if (capture >= 0 && capture + 1 < args.Length)
             {
+                int expedition = Array.IndexOf(args, "-dungeonbdx-play");
+                if (expedition >= 0) LaunchExpedition(expedition + 1 < args.Length && !args[expedition + 1].StartsWith("-") ? args[expedition + 1] : "cripta-de-bronze");
                 int tab = Array.IndexOf(args, "-dungeonbdx-tab");
                 if (tab >= 0 && tab + 1 < args.Length && Enum.TryParse<DungeonTab>(args[tab + 1], true, out var requested)) ShowTab(requested);
+                if(Array.IndexOf(args,"-dungeonbdx-smoke")>=0 && GetComponent<DungeonExpedition>()?.IsOpen==true)
+                {
+                    if(!GetComponent<DungeonExpedition>().RunSmoke(Path.ChangeExtension(args[capture+1],".json")))
+                    {Application.Quit(1);yield break;}
+                }
                 for (int i = 0; i < 30; i++) yield return null;
+                if(Array.IndexOf(args,"-dungeonbdx-smoke")>=0)yield return new WaitForSecondsRealtime(1.3f);
                 try { CapturePreview(args[capture + 1]); Application.Quit(); }
                 catch (Exception error) { Debug.LogException(error); Application.Quit(1); }
             }
@@ -348,17 +391,19 @@ namespace DungeonBDX
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
         void CapturePreview(string path)
         {
-            var camera = GetComponentInChildren<Camera>();
+            var expedition = GetComponent<DungeonExpedition>();
+            var camera = expedition && expedition.IsOpen ? expedition.ViewCamera : GetComponentInChildren<Camera>();
+            var captureCanvas = expedition && expedition.IsOpen ? expedition.HudCanvas : canvas;
             var output = RenderTexture.GetTemporary(Screen.width, Screen.height, 24, RenderTextureFormat.ARGB32);
             var previousTarget = camera.targetTexture;
             var previousActive = RenderTexture.active;
-            var previousMode = canvas.renderMode;
-            var previousCamera = canvas.worldCamera;
+            var previousMode = captureCanvas.renderMode;
+            var previousCamera = captureCanvas.worldCamera;
             Texture2D pixels = null;
             try
             {
                 camera.targetTexture = output;
-                canvas.renderMode = RenderMode.ScreenSpaceCamera; canvas.worldCamera = camera; canvas.planeDistance = 1;
+                captureCanvas.renderMode = RenderMode.ScreenSpaceCamera; captureCanvas.worldCamera = camera; captureCanvas.planeDistance = 1;
                 Canvas.ForceUpdateCanvases();
                 if (GraphicsSettings.currentRenderPipeline)
                 {
@@ -376,7 +421,7 @@ namespace DungeonBDX
             finally
             {
                 camera.targetTexture = previousTarget; RenderTexture.active = previousActive;
-                canvas.renderMode = previousMode; canvas.worldCamera = previousCamera;
+                captureCanvas.renderMode = previousMode; captureCanvas.worldCamera = previousCamera;
                 if (pixels) DestroyObject(pixels);
                 RenderTexture.ReleaseTemporary(output);
             }

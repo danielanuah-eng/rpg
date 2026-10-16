@@ -1,8 +1,10 @@
 # 05. Cenários e serviços
 
+> Direção posterior do autor: não utiliza Antigravity; Codex redistribui e continua a base funcional. Dependências abaixo referem-se ao briefing original. Estado atual e pendências: PIPELINE.md e entregas/04-06-local/.
+
 - **De:** autor / UltraBridge
-- **Para:** codex
-- **Status:** bloqueada
+- **Para:** codex / agentes World, Services e Online
+- **Status:** local-validado; multiplayer-cloud-pendente
 - **Projeto / pasta de trabalho:** C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg
 - **Entrega:** módulo DungeonBDX validado
 - **Dependência:** 04 revisada e integrada; 02/03 versionadas

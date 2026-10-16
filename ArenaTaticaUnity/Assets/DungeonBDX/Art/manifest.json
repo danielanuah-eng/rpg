@@ -1,0 +1,910 @@
+{
+  "version": "0.1.0",
+  "status": "original functional art/audio prototype; final high-end art and soundtrack pending",
+  "author": "DungeonBDX asset production via Codex / Blender procedural geometry and Python synthesis",
+  "provenance": "Created from first principles for this project. No downloaded or copied AQ tiles, meshes, samples or tracks.",
+  "license": "Project-original assets; reusable by the project author. Generator source included. No third-party asset license required.",
+  "units": "1 Unity unit = 1 metre; Y up, forward +Z; pivot at floor center",
+  "fbxImport": "Static meshes with diffuse material colours, no textures. Unity URP consumer must use URP/Lit or compatible shader. Collider recommendations are metadata, not baked physics.",
+  "budget": {
+    "totalMeasuredTriangles": 6204,
+    "modelCount": 18,
+    "musicLoops": 3,
+    "skillSounds": 18,
+    "runtimeGpuOrMobileProfiling": "not measured; author QA pending"
+  },
+  "source": {
+    "path": "Tools/GenerateDungeonAssets/Source/DungeonBDX-original-kit.blend",
+    "bytes": 203627,
+    "sha256": "25e18aa0d3ed02602df573b4c89d265167ec29f6e604cfd6d60034f9a1619158"
+  },
+  "models": [
+    {
+      "id": "dbdx.model.floor-bronze",
+      "name": "floor-bronze",
+      "kind": "floor",
+      "resource": "DungeonBDX/Models/floor-bronze",
+      "path": "Resources/DungeonBDX/Models/floor-bronze.fbx",
+      "triangles": 244,
+      "meshCount": 7,
+      "unityBoundsMeters": {
+        "min": [
+          -0.5,
+          -0.17,
+          -0.5
+        ],
+        "max": [
+          0.5,
+          0.0225,
+          0.5
+        ]
+      },
+      "pivot": "floor center at origin",
+      "colliderRecommendation": "BoxCollider 1 x 0.17 x 1; floor top 0",
+      "scenarios": [
+        "all"
+      ],
+      "ports": [
+        "N",
+        "E",
+        "S",
+        "W"
+      ],
+      "animation": "static model; runtime transform motion only; skeletal clips pending",
+      "bytes": 38988,
+      "sha256": "de1e8ffe148a803ec37caf410fdc5dbe82a46c40c8d05ba2eaf5393ce3a4aabf"
+    },
+    {
+      "id": "dbdx.model.floor-library",
+      "name": "floor-library",
+      "kind": "floor",
+      "resource": "DungeonBDX/Models/floor-library",
+      "path": "Resources/DungeonBDX/Models/floor-library.fbx",
+      "triangles": 292,
+      "meshCount": 11,
+      "unityBoundsMeters": {
+        "min": [
+          -0.5,
+          -0.17,
+          -0.5
+        ],
+        "max": [
+          0.5,
+          0.0225,
+          0.5
+        ]
+      },
+      "pivot": "floor center at origin",
+      "colliderRecommendation": "BoxCollider 1 x 0.17 x 1; floor top 0",
+      "scenarios": [
+        "all"
+      ],
+      "ports": [
+        "N",
+        "E",
+        "S",
+        "W"
+      ],
+      "animation": "static model; runtime transform motion only; skeletal clips pending",
+      "bytes": 52204,
+      "sha256": "9cb03981e12659d90d8f57d980f7bd5e098c10443500be119a750547fb7e47d8"
+    },
+    {
+      "id": "dbdx.model.floor-nest",
+      "name": "floor-nest",
+      "kind": "floor",
+      "resource": "DungeonBDX/Models/floor-nest",
+      "path": "Resources/DungeonBDX/Models/floor-nest.fbx",
+      "triangles": 324,
+      "meshCount": 12,
+      "unityBoundsMeters": {
+        "min": [
+          -0.5,
+          -0.17,
+          -0.5
+        ],
+        "max": [
+          0.5,
+          0.048,
+          0.5
+        ]
+      },
+      "pivot": "floor center at origin",
+      "colliderRecommendation": "BoxCollider 1 x 0.17 x 1; floor top 0",
+      "scenarios": [
+        "all"
+      ],
+      "ports": [
+        "N",
+        "E",
+        "S",
+        "W"
+      ],
+      "animation": "static model; runtime transform motion only; skeletal clips pending",
+      "bytes": 55276,
+      "sha256": "9dc96f7de64e659a05c6655d45cac5c27672c128f7b292bd9d3a6d170c13b3f5"
+    },
+    {
+      "id": "dbdx.model.wall-bronze",
+      "name": "wall-bronze",
+      "kind": "wall",
+      "resource": "DungeonBDX/Models/wall-bronze",
+      "path": "Resources/DungeonBDX/Models/wall-bronze.fbx",
+      "triangles": 440,
+      "meshCount": 10,
+      "unityBoundsMeters": {
+        "min": [
+          -0.52,
+          0.0,
+          -0.14
+        ],
+        "max": [
+          0.52,
+          1.07,
+          0.145
+        ]
+      },
+      "pivot": "floor center at origin",
+      "colliderRecommendation": "BoxCollider",
+      "scenarios": [
+        "all"
+      ],
+      "ports": [],
+      "animation": "static model; runtime transform motion only; skeletal clips pending",
+      "bytes": 51292,
+      "sha256": "1cdd99e48f7ea11d8d285aa5132e63207492fa2d96b9b70013f9b002f565e5e7"
+    },
+    {
+      "id": "dbdx.model.door-arch",
+      "name": "door-arch",
+      "kind": "door-frame",
+      "resource": "DungeonBDX/Models/door-arch",
+      "path": "Resources/DungeonBDX/Models/door-arch.fbx",
+      "triangles": 240,
+      "meshCount": 6,
+      "unityBoundsMeters": {
+        "min": [
+          -0.53,
+          0.0,
+          -0.17
+        ],
+        "max": [
+          0.53,
+          1.376,
+          0.2298
+        ]
+      },
+      "pivot": "floor center at origin",
+      "colliderRecommendation": "2 side BoxColliders, open center",
+      "scenarios": [
+        "all"
+      ],
+      "ports": [
+        "N",
+        "S"
+      ],
+      "animation": "static model; runtime transform motion only; skeletal clips pending",
+      "bytes": 36444,
+      "sha256": "004a5a8166718d3fff327ea15874a126bf4b6ba731e2dbe6929bed5815bba7a0"
+    },
+    {
+      "id": "dbdx.model.column-bronze",
+      "name": "column-bronze",
+      "kind": "prop",
+      "resource": "DungeonBDX/Models/column-bronze",
+      "path": "Resources/DungeonBDX/Models/column-bronze.fbx",
+      "triangles": 140,
+      "meshCount": 5,
+      "unityBoundsMeters": {
+        "min": [
+          -0.26,
+          0.0,
+          -0.26
+        ],
+        "max": [
+          0.26,
+          1.3,
+          0.26
+        ]
+      },
+      "pivot": "floor center at origin",
+      "colliderRecommendation": "BoxCollider",
+      "scenarios": [
+        "cripta-de-bronze"
+      ],
+      "ports": [],
+      "animation": "static model; runtime transform motion only; skeletal clips pending",
+      "bytes": 29788,
+      "sha256": "e140972cb020928b306f329d498d09a4103f20d0b247b8655b72cc3c275973fa"
+    },
+    {
+      "id": "dbdx.model.bookcase",
+      "name": "bookcase",
+      "kind": "prop",
+      "resource": "DungeonBDX/Models/bookcase",
+      "path": "Resources/DungeonBDX/Models/bookcase.fbx",
+      "triangles": 1232,
+      "meshCount": 28,
+      "unityBoundsMeters": {
+        "min": [
+          -0.415,
+          0.0,
+          -0.18
+        ],
+        "max": [
+          0.415,
+          1.4,
+          0.18
+        ]
+      },
+      "pivot": "floor center at origin",
+      "colliderRecommendation": "BoxCollider",
+      "scenarios": [
+        "biblioteca-do-crepusculo"
+      ],
+      "ports": [],
+      "animation": "static model; runtime transform motion only; skeletal clips pending",
+      "bytes": 119692,
+      "sha256": "ac2043d78a419fd79dcbebb6f698a0d1a7f07016e5947128206d0d8bf4552f68"
+    },
+    {
+      "id": "dbdx.model.brazier",
+      "name": "brazier",
+      "kind": "prop",
+      "resource": "DungeonBDX/Models/brazier",
+      "path": "Resources/DungeonBDX/Models/brazier.fbx",
+      "triangles": 96,
+      "meshCount": 7,
+      "unityBoundsMeters": {
+        "min": [
+          -0.24,
+          0.0,
+          -0.24
+        ],
+        "max": [
+          0.24,
+          0.79,
+          0.24
+        ]
+      },
+      "pivot": "floor center at origin",
+      "colliderRecommendation": "SphereCollider lower pedestal",
+      "scenarios": [
+        "cripta-de-bronze"
+      ],
+      "ports": [],
+      "animation": "static model; runtime transform motion only; skeletal clips pending",
+      "bytes": 35372,
+      "sha256": "91a4a715b7d1d5f6827e3cbc12762c3be5be4ea1aa1d76c05bcc4bfee8392d19"
+    },
+    {
+      "id": "dbdx.model.nest-spire",
+      "name": "nest-spire",
+      "kind": "prop",
+      "resource": "DungeonBDX/Models/nest-spire",
+      "path": "Resources/DungeonBDX/Models/nest-spire.fbx",
+      "triangles": 84,
+      "meshCount": 6,
+      "unityBoundsMeters": {
+        "min": [
+          -0.3619,
+          -0.0297,
+          -0.2645
+        ],
+        "max": [
+          0.3511,
+          1.4267,
+          0.4187
+        ]
+      },
+      "pivot": "floor center at origin",
+      "colliderRecommendation": "BoxCollider",
+      "scenarios": [
+        "ninho-do-eclipse"
+      ],
+      "ports": [],
+      "animation": "static model; runtime transform motion only; skeletal clips pending",
+      "bytes": 33036,
+      "sha256": "20b7fcde8750640639b831351732a7c1072231eedd3204deb4de3a4ad1aa66f5"
+    },
+    {
+      "id": "dbdx.model.dragon-egg",
+      "name": "dragon-egg",
+      "kind": "objective-prop",
+      "resource": "DungeonBDX/Models/dragon-egg",
+      "path": "Resources/DungeonBDX/Models/dragon-egg.fbx",
+      "triangles": 244,
+      "meshCount": 14,
+      "unityBoundsMeters": {
+        "min": [
+          -0.3508,
+          -0.016,
+          -0.3636
+        ],
+        "max": [
+          0.3655,
+          0.556,
+          0.3635
+        ]
+      },
+      "pivot": "floor center at origin",
+      "colliderRecommendation": "SphereCollider",
+      "scenarios": [
+        "ninho-do-eclipse"
+      ],
+      "ports": [],
+      "animation": "static model; runtime transform motion only; skeletal clips pending",
+      "bytes": 61132,
+      "sha256": "b0b5d00dca9cbaad71a84d088f586531111531e25de628001ebe8a6cd1b19685"
+    },
+    {
+      "id": "dbdx.model.objective-crystal",
+      "name": "objective-crystal",
+      "kind": "objective-prop",
+      "resource": "DungeonBDX/Models/objective-crystal",
+      "path": "Resources/DungeonBDX/Models/objective-crystal.fbx",
+      "triangles": 112,
+      "meshCount": 6,
+      "unityBoundsMeters": {
+        "min": [
+          -0.2445,
+          0.0,
+          -0.2445
+        ],
+        "max": [
+          0.2445,
+          0.924,
+          0.2445
+        ]
+      },
+      "pivot": "floor center at origin",
+      "colliderRecommendation": "SphereCollider",
+      "scenarios": [
+        "all"
+      ],
+      "ports": [],
+      "animation": "static model; runtime transform motion only; skeletal clips pending",
+      "bytes": 34364,
+      "sha256": "3c403eceda42bf9bd3dd0746f56350890b6bae6ecfe102de83cc9bd869c6e4a1"
+    },
+    {
+      "id": "dbdx.model.crate",
+      "name": "crate",
+      "kind": "prop",
+      "resource": "DungeonBDX/Models/crate",
+      "path": "Resources/DungeonBDX/Models/crate.fbx",
+      "triangles": 132,
+      "meshCount": 3,
+      "unityBoundsMeters": {
+        "min": [
+          -0.23,
+          -0.015,
+          -0.245
+        ],
+        "max": [
+          0.23,
+          0.475,
+          0.245
+        ]
+      },
+      "pivot": "floor center at origin",
+      "colliderRecommendation": "BoxCollider",
+      "scenarios": [
+        "all"
+      ],
+      "ports": [],
+      "animation": "static model; runtime transform motion only; skeletal clips pending",
+      "bytes": 24572,
+      "sha256": "2a517b5764b5a02800d987d04c5b68c8943f80364d6d748cc7efb91038e1273b"
+    },
+    {
+      "id": "dbdx.model.rubble",
+      "name": "rubble",
+      "kind": "prop",
+      "resource": "DungeonBDX/Models/rubble",
+      "path": "Resources/DungeonBDX/Models/rubble.fbx",
+      "triangles": 140,
+      "meshCount": 7,
+      "unityBoundsMeters": {
+        "min": [
+          -0.3828,
+          -0.0025,
+          -0.3361
+        ],
+        "max": [
+          0.3881,
+          0.1625,
+          0.3361
+        ]
+      },
+      "pivot": "floor center at origin",
+      "colliderRecommendation": "No collider; decorative",
+      "scenarios": [
+        "all"
+      ],
+      "ports": [],
+      "animation": "static model; runtime transform motion only; skeletal clips pending",
+      "bytes": 36524,
+      "sha256": "0a0a73db94687dc65c57647807275b505fe39b0b947e68fc187950124d8ae860"
+    },
+    {
+      "id": "dbdx.model.trap-spikes",
+      "name": "trap-spikes",
+      "kind": "prop",
+      "resource": "DungeonBDX/Models/trap-spikes",
+      "path": "Resources/DungeonBDX/Models/trap-spikes.fbx",
+      "triangles": 116,
+      "meshCount": 10,
+      "unityBoundsMeters": {
+        "min": [
+          -0.35,
+          0.0,
+          -0.35
+        ],
+        "max": [
+          0.35,
+          0.295,
+          0.35
+        ]
+      },
+      "pivot": "floor center at origin",
+      "colliderRecommendation": "Trigger BoxCollider only; rules authority external",
+      "scenarios": [
+        "all"
+      ],
+      "ports": [],
+      "animation": "static model; runtime transform motion only; skeletal clips pending",
+      "bytes": 44636,
+      "sha256": "18a5fde8ee265f993050347769d1728cea282cd1ac53ca6ede7106e6e58c52bc"
+    },
+    {
+      "id": "dbdx.hero.lyra-faisca",
+      "name": "lyra-faisca",
+      "kind": "hero",
+      "resource": "DungeonBDX/Models/lyra-faisca",
+      "path": "Resources/DungeonBDX/Models/lyra-faisca.fbx",
+      "triangles": 672,
+      "meshCount": 20,
+      "unityBoundsMeters": {
+        "min": [
+          -0.3957,
+          0.0,
+          -0.265
+        ],
+        "max": [
+          0.3957,
+          1.665,
+          0.49
+        ]
+      },
+      "pivot": "floor center at origin",
+      "colliderRecommendation": "CapsuleCollider; upright footprint <= 0.9 m",
+      "scenarios": [
+        "all"
+      ],
+      "ports": [],
+      "animation": "static model; runtime transform motion only; skeletal clips pending",
+      "bytes": 85660,
+      "sha256": "791d559d297551a8aca6db873a6b8efe11ca895ba8fef81f6daade10d72ea82e"
+    },
+    {
+      "id": "dbdx.hero.orion-prisma",
+      "name": "orion-prisma",
+      "kind": "hero",
+      "resource": "DungeonBDX/Models/orion-prisma",
+      "path": "Resources/DungeonBDX/Models/orion-prisma.fbx",
+      "triangles": 596,
+      "meshCount": 21,
+      "unityBoundsMeters": {
+        "min": [
+          -0.4106,
+          0.0,
+          -0.265
+        ],
+        "max": [
+          0.4256,
+          1.806,
+          0.215
+        ]
+      },
+      "pivot": "floor center at origin",
+      "colliderRecommendation": "CapsuleCollider",
+      "scenarios": [
+        "all"
+      ],
+      "ports": [],
+      "animation": "static model; runtime transform motion only; skeletal clips pending",
+      "bytes": 90092,
+      "sha256": "b4fc48b8bdca23a55ed56fa06328733aeaaa1264acffef9914f130ccd4db60ab"
+    },
+    {
+      "id": "dbdx.hero.vaelis-vinculo",
+      "name": "vaelis-vinculo",
+      "kind": "hero",
+      "resource": "DungeonBDX/Models/vaelis-vinculo",
+      "path": "Resources/DungeonBDX/Models/vaelis-vinculo.fbx",
+      "triangles": 552,
+      "meshCount": 20,
+      "unityBoundsMeters": {
+        "min": [
+          -0.4141,
+          0.0,
+          -0.265
+        ],
+        "max": [
+          0.4294,
+          1.655,
+          0.215
+        ]
+      },
+      "pivot": "floor center at origin",
+      "colliderRecommendation": "CapsuleCollider",
+      "scenarios": [
+        "all"
+      ],
+      "ports": [],
+      "animation": "static model; runtime transform motion only; skeletal clips pending",
+      "bytes": 87308,
+      "sha256": "c69a8ad439f267553b27c4bd5fa030e5cd929a4b3aebf92f4c0ce0bc5d6ec0ba"
+    },
+    {
+      "id": "dbdx.model.companion-dragon",
+      "name": "companion-dragon",
+      "kind": "companion",
+      "resource": "DungeonBDX/Models/companion-dragon",
+      "path": "Resources/DungeonBDX/Models/companion-dragon.fbx",
+      "triangles": 548,
+      "meshCount": 26,
+      "unityBoundsMeters": {
+        "min": [
+          -0.5684,
+          0.0125,
+          -0.714
+        ],
+        "max": [
+          0.5684,
+          0.7348,
+          0.5736
+        ]
+      },
+      "pivot": "floor center at origin",
+      "colliderRecommendation": "CapsuleCollider; wide wings are visual only",
+      "scenarios": [
+        "all"
+      ],
+      "ports": [],
+      "animation": "static model; runtime transform motion only; skeletal clips pending",
+      "bytes": 101644,
+      "sha256": "46235e50acb1c062557b2735ef55310b8ae0464d3baf2e6520646a99b9aeb7b9"
+    }
+  ],
+  "audio": [
+    {
+      "id": "dbdx.music.cripta-de-bronze",
+      "resource": "DungeonBDX/Audio/Music/cripta-de-bronze",
+      "kind": "music-prototype",
+      "path": "Resources/DungeonBDX/Audio/Music/cripta-de-bronze.wav",
+      "description": "bronze sub-drone and soft metallic overtones",
+      "durationSeconds": 16.0,
+      "sampleRate": 22050,
+      "channels": 2,
+      "peakLinear": 0.16187,
+      "rmsLinear": 0.04014,
+      "loop": true,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 1411244,
+      "sha256": "739efb4d8ef51af568253129a314b80c4f377038c7aad8a6a740ae25bd9df5df"
+    },
+    {
+      "id": "dbdx.music.biblioteca-do-crepusculo",
+      "resource": "DungeonBDX/Audio/Music/biblioteca-do-crepusculo",
+      "kind": "music-prototype",
+      "path": "Resources/DungeonBDX/Audio/Music/biblioteca-do-crepusculo.wav",
+      "description": "airy sustained suspended harmony and glass-like arpeggio",
+      "durationSeconds": 16.0,
+      "sampleRate": 22050,
+      "channels": 2,
+      "peakLinear": 0.14929,
+      "rmsLinear": 0.04007,
+      "loop": true,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 1411244,
+      "sha256": "db74d0e7bb441bc3fea461fe1c0a24a8863e78ad5f0000a34fa4868cf471f2c6"
+    },
+    {
+      "id": "dbdx.music.ninho-do-eclipse",
+      "resource": "DungeonBDX/Audio/Music/ninho-do-eclipse",
+      "kind": "music-prototype",
+      "path": "Resources/DungeonBDX/Audio/Music/ninho-do-eclipse.wav",
+      "description": "low breath-like drone and slow dissonant harmonic pulse",
+      "durationSeconds": 16.0,
+      "sampleRate": 22050,
+      "channels": 2,
+      "peakLinear": 0.14979,
+      "rmsLinear": 0.04026,
+      "loop": true,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 1411244,
+      "sha256": "73aca0d4325e428f89e3f53e11167641c48137d7d53937c45d62759ac412f9b3"
+    },
+    {
+      "id": "dbdx.sfx.basico.golpe",
+      "resource": "DungeonBDX/Audio/Sfx/basico-golpe",
+      "kind": "skill-sfx-prototype",
+      "path": "Resources/DungeonBDX/Audio/Sfx/basico-golpe.wav",
+      "durationSeconds": 0.18997732426303854,
+      "sampleRate": 22050,
+      "channels": 1,
+      "peakLinear": 0.05718,
+      "rmsLinear": 0.01091,
+      "loop": false,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 8422,
+      "sha256": "6a7b50b5dd4a4f0684103f702f0a9e3d3b8a4452a00df094f0a1679c11ed882e"
+    },
+    {
+      "id": "dbdx.sfx.basico.avanco",
+      "resource": "DungeonBDX/Audio/Sfx/basico-avanco",
+      "kind": "skill-sfx-prototype",
+      "path": "Resources/DungeonBDX/Audio/Sfx/basico-avanco.wav",
+      "durationSeconds": 0.32,
+      "sampleRate": 22050,
+      "channels": 1,
+      "peakLinear": 0.0792,
+      "rmsLinear": 0.01945,
+      "loop": false,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 14156,
+      "sha256": "56319cc1e79beb13949deecb0026313a2d8cb2fe7204d1f361b2205c588e284c"
+    },
+    {
+      "id": "dbdx.sfx.basico.revigorar",
+      "resource": "DungeonBDX/Audio/Sfx/basico-revigorar",
+      "kind": "skill-sfx-prototype",
+      "path": "Resources/DungeonBDX/Audio/Sfx/basico-revigorar.wav",
+      "durationSeconds": 0.6499773242630386,
+      "sampleRate": 22050,
+      "channels": 1,
+      "peakLinear": 0.14856,
+      "rmsLinear": 0.0568,
+      "loop": false,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 28708,
+      "sha256": "7bc6b5820b8c83393ed3706120424c03ba5f7d2f9e688e33dcc018d83c645819"
+    },
+    {
+      "id": "dbdx.sfx.basico.baluarte",
+      "resource": "DungeonBDX/Audio/Sfx/basico-baluarte",
+      "kind": "skill-sfx-prototype",
+      "path": "Resources/DungeonBDX/Audio/Sfx/basico-baluarte.wav",
+      "durationSeconds": 0.5,
+      "sampleRate": 22050,
+      "channels": 1,
+      "peakLinear": 0.14853,
+      "rmsLinear": 0.0568,
+      "loop": false,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 22094,
+      "sha256": "301c58e790c9aaa10904061bf33f35a00bc7a67e931b89286b71a0bf17d0a466"
+    },
+    {
+      "id": "dbdx.sfx.pistola.duplo",
+      "resource": "DungeonBDX/Audio/Sfx/pistola-duplo",
+      "kind": "skill-sfx-prototype",
+      "path": "Resources/DungeonBDX/Audio/Sfx/pistola-duplo.wav",
+      "durationSeconds": 0.2,
+      "sampleRate": 22050,
+      "channels": 1,
+      "peakLinear": 0.33893,
+      "rmsLinear": 0.06184,
+      "loop": false,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 8864,
+      "sha256": "05084ce885cf6e764b42d510df42bf916c05a8da42302b4d522e05a48a8c95dd"
+    },
+    {
+      "id": "dbdx.sfx.pistola.ricochete",
+      "resource": "DungeonBDX/Audio/Sfx/pistola-ricochete",
+      "kind": "skill-sfx-prototype",
+      "path": "Resources/DungeonBDX/Audio/Sfx/pistola-ricochete.wav",
+      "durationSeconds": 0.34997732426303857,
+      "sampleRate": 22050,
+      "channels": 1,
+      "peakLinear": 0.31718,
+      "rmsLinear": 0.04428,
+      "loop": false,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 15478,
+      "sha256": "1050325396afca1b6a649c6d65c065aea5a1c9c09f4bbaacc94ab4a1e5e09473"
+    },
+    {
+      "id": "dbdx.sfx.pistola.mira",
+      "resource": "DungeonBDX/Audio/Sfx/pistola-mira",
+      "kind": "skill-sfx-prototype",
+      "path": "Resources/DungeonBDX/Audio/Sfx/pistola-mira.wav",
+      "durationSeconds": 0.38,
+      "sampleRate": 22050,
+      "channels": 1,
+      "peakLinear": 0.14852,
+      "rmsLinear": 0.0568,
+      "loop": false,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 16802,
+      "sha256": "c3360e8d21801c9f85981d881920c50b8f3235d18e5c3202a59f2cc2d2282012"
+    },
+    {
+      "id": "dbdx.sfx.pistola.ruptura",
+      "resource": "DungeonBDX/Audio/Sfx/pistola-ruptura",
+      "kind": "skill-sfx-prototype",
+      "path": "Resources/DungeonBDX/Audio/Sfx/pistola-ruptura.wav",
+      "durationSeconds": 0.4,
+      "sampleRate": 22050,
+      "channels": 1,
+      "peakLinear": 0.3108,
+      "rmsLinear": 0.03994,
+      "loop": false,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 17684,
+      "sha256": "d19afbf525f1a9e204e9ccd255ad609ceb4baca03a094939fd78e61722a3a3cd"
+    },
+    {
+      "id": "dbdx.sfx.arcano.lanca",
+      "resource": "DungeonBDX/Audio/Sfx/arcano-lanca",
+      "kind": "skill-sfx-prototype",
+      "path": "Resources/DungeonBDX/Audio/Sfx/arcano-lanca.wav",
+      "durationSeconds": 0.48,
+      "sampleRate": 22050,
+      "channels": 1,
+      "peakLinear": 0.14837,
+      "rmsLinear": 0.0568,
+      "loop": false,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 21212,
+      "sha256": "62bc0520dde03f5a1a2dbde463128704ed2b83abb45120082c705a94f2ef5864"
+    },
+    {
+      "id": "dbdx.sfx.arcano.geada",
+      "resource": "DungeonBDX/Audio/Sfx/arcano-geada",
+      "kind": "skill-sfx-prototype",
+      "path": "Resources/DungeonBDX/Audio/Sfx/arcano-geada.wav",
+      "durationSeconds": 0.6499773242630386,
+      "sampleRate": 22050,
+      "channels": 1,
+      "peakLinear": 0.08991,
+      "rmsLinear": 0.01736,
+      "loop": false,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 28708,
+      "sha256": "f9f8e8010a7a7e09017079a8f0faa27673cee6c3bca7fea75b61fa607f21157b"
+    },
+    {
+      "id": "dbdx.sfx.arcano.egide",
+      "resource": "DungeonBDX/Audio/Sfx/arcano-egide",
+      "kind": "skill-sfx-prototype",
+      "path": "Resources/DungeonBDX/Audio/Sfx/arcano-egide.wav",
+      "durationSeconds": 0.5499773242630386,
+      "sampleRate": 22050,
+      "channels": 1,
+      "peakLinear": 0.14852,
+      "rmsLinear": 0.0568,
+      "loop": false,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 24298,
+      "sha256": "69230705c697406b17cec92c9f0c719a6201765c821c5b1cb4b673322f9af7e6"
+    },
+    {
+      "id": "dbdx.sfx.arcano.transposicao",
+      "resource": "DungeonBDX/Audio/Sfx/arcano-transposicao",
+      "kind": "skill-sfx-prototype",
+      "path": "Resources/DungeonBDX/Audio/Sfx/arcano-transposicao.wav",
+      "durationSeconds": 0.44997732426303855,
+      "sampleRate": 22050,
+      "channels": 1,
+      "peakLinear": 0.07532,
+      "rmsLinear": 0.0158,
+      "loop": false,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 19888,
+      "sha256": "f9ad9860ac0cea900819f7b0800d11858657af334f4c0e6e69afada83ff16d33"
+    },
+    {
+      "id": "dbdx.sfx.arcano.pulso",
+      "resource": "DungeonBDX/Audio/Sfx/arcano-pulso",
+      "kind": "skill-sfx-prototype",
+      "path": "Resources/DungeonBDX/Audio/Sfx/arcano-pulso.wav",
+      "durationSeconds": 0.7499773242630385,
+      "sampleRate": 22050,
+      "channels": 1,
+      "peakLinear": 0.14856,
+      "rmsLinear": 0.0568,
+      "loop": false,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 33118,
+      "sha256": "1ac7ee57dfdc78b5af8c2848d607abc9cbb53107954e66d0c7e411aa823cbab6"
+    },
+    {
+      "id": "dbdx.sfx.draco.invocar",
+      "resource": "DungeonBDX/Audio/Sfx/draco-invocar",
+      "kind": "skill-sfx-prototype",
+      "path": "Resources/DungeonBDX/Audio/Sfx/draco-invocar.wav",
+      "durationSeconds": 0.8499773242630385,
+      "sampleRate": 22050,
+      "channels": 1,
+      "peakLinear": 0.14852,
+      "rmsLinear": 0.0568,
+      "loop": false,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 37528,
+      "sha256": "adb507bc981cbac1b79749a5333427e8eadebab8a2a94ed499cd7e86ae6d649d"
+    },
+    {
+      "id": "dbdx.sfx.draco.comandar",
+      "resource": "DungeonBDX/Audio/Sfx/draco-comandar",
+      "kind": "skill-sfx-prototype",
+      "path": "Resources/DungeonBDX/Audio/Sfx/draco-comandar.wav",
+      "durationSeconds": 0.26,
+      "sampleRate": 22050,
+      "channels": 1,
+      "peakLinear": 0.04366,
+      "rmsLinear": 0.00804,
+      "loop": false,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 11510,
+      "sha256": "d70c403e33eed75d671d22da71449ac9f18b4fb52c4cbd775c2245dac37b7448"
+    },
+    {
+      "id": "dbdx.sfx.draco.sopro",
+      "resource": "DungeonBDX/Audio/Sfx/draco-sopro",
+      "kind": "skill-sfx-prototype",
+      "path": "Resources/DungeonBDX/Audio/Sfx/draco-sopro.wav",
+      "durationSeconds": 0.7499773242630385,
+      "sampleRate": 22050,
+      "channels": 1,
+      "peakLinear": 0.08703,
+      "rmsLinear": 0.01908,
+      "loop": false,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 33118,
+      "sha256": "462fe4199020eec0bb99c1189fbd66aa46ff854101c1c078d2650f8d033b217b"
+    },
+    {
+      "id": "dbdx.sfx.draco.pacto",
+      "resource": "DungeonBDX/Audio/Sfx/draco-pacto",
+      "kind": "skill-sfx-prototype",
+      "path": "Resources/DungeonBDX/Audio/Sfx/draco-pacto.wav",
+      "durationSeconds": 0.6499773242630386,
+      "sampleRate": 22050,
+      "channels": 1,
+      "peakLinear": 0.14852,
+      "rmsLinear": 0.0568,
+      "loop": false,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 28708,
+      "sha256": "f5d7b55fef69c58f62e55845ca7613b11fc1e0f9e734f6dee325d1f91ab53ffb"
+    },
+    {
+      "id": "dbdx.sfx.draco.recolher",
+      "resource": "DungeonBDX/Audio/Sfx/draco-recolher",
+      "kind": "skill-sfx-prototype",
+      "path": "Resources/DungeonBDX/Audio/Sfx/draco-recolher.wav",
+      "durationSeconds": 0.5,
+      "sampleRate": 22050,
+      "channels": 1,
+      "peakLinear": 0.14856,
+      "rmsLinear": 0.0568,
+      "loop": false,
+      "encoding": "PCM signed 16-bit little endian",
+      "bytes": 22094,
+      "sha256": "9081287ab2a301e118979f234789f92557c554e50296c949f508c741a22ec07d"
+    }
+  ],
+  "pending": [
+    "Skeletal rigs and animation clips",
+    "High-end sculpting, authored textures and LODs",
+    "Final composed scenario soundtracks",
+    "31 hero card templates",
+    "Adapted meshes for the 28 original Arena hero identities",
+    "Reference image palette verification",
+    "Physical PC/mobile performance and stress QA"
+  ]
+}

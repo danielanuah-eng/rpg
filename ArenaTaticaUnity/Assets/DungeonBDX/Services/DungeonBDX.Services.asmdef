@@ -1,0 +1,6 @@
+{
+  "name": "DungeonBDX.Services",
+  "rootNamespace": "DungeonBDX.Services",
+  "references": ["DungeonBDX.Skills", "DungeonBDX.Combat"],
+  "autoReferenced": true
+}
