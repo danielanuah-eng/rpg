@@ -1,0 +1,1951 @@
+{
+  "version": 1,
+  "date": "2026-10-15",
+  "scope": "reference research, not automatic game-rule import",
+  "counts": {
+    "files": 72,
+    "unique": 46,
+    "identical_copies": 26,
+    "loose_pdfs": 30,
+    "loose_pdf_pages": 331,
+    "archives": 12,
+    "workbooks": 1,
+    "workbook_sheets": 12,
+    "campaign_jpgs": 3,
+    "archive_card_token_pngs": 71
+  },
+  "method": "Local hash deduplication, safe archive member reads, read-only openpyxl, pypdf text extraction, Poppler/PIL visual previews; no references sent to DeepSeek.",
+  "coverage_limit": "Extraction and classification are not a line-by-line editorial audit of every page, translation or card. Detailed reviewed pages are explicit; unlisted image pages remain for targeted scenario implementation.",
+  "sources": [
+    {
+      "aliases": [
+        "Arcadia_Quest_-_Card_List_1.2 - Copia.xlsx"
+      ],
+      "sha256": "e669f3f511d490d23636a904e56f026a7d066fcba674f87fdd80ad039af5ce60",
+      "size": 131340,
+      "extension": ".xlsx",
+      "sheets": [
+        {
+          "name": "Set Counts",
+          "max_row": 14,
+          "max_column": 11,
+          "nonempty_rows": 14,
+          "formulas": 108
+        },
+        {
+          "name": "Item Type by Set",
+          "max_row": 103,
+          "max_column": 24,
+          "nonempty_rows": 103,
+          "formulas": 337
+        },
+        {
+          "name": "Upgrades",
+          "max_row": 309,
+          "max_column": 13,
+          "nonempty_rows": 309,
+          "formulas": 0
+        },
+        {
+          "name": "Quests",
+          "max_row": 105,
+          "max_column": 3,
+          "nonempty_rows": 105,
+          "formulas": 0
+        },
+        {
+          "name": "Death Curses",
+          "max_row": 17,
+          "max_column": 6,
+          "nonempty_rows": 17,
+          "formulas": 0
+        },
+        {
+          "name": "Stone Cards",
+          "max_row": 41,
+          "max_column": 6,
+          "nonempty_rows": 41,
+          "formulas": 0
+        },
+        {
+          "name": "Heroes",
+          "max_row": 145,
+          "max_column": 6,
+          "nonempty_rows": 145,
+          "formulas": 0
+        },
+        {
+          "name": "Monsters",
+          "max_row": 199,
+          "max_column": 14,
+          "nonempty_rows": 199,
+          "formulas": 0
+        },
+        {
+          "name": "Pets",
+          "max_row": 79,
+          "max_column": 8,
+          "nonempty_rows": 79,
+          "formulas": 0
+        },
+        {
+          "name": "Mounts",
+          "max_row": 11,
+          "max_column": 5,
+          "nonempty_rows": 11,
+          "formulas": 0
+        },
+        {
+          "name": "Dragons",
+          "max_row": 17,
+          "max_column": 14,
+          "nonempty_rows": 17,
+          "formulas": 0
+        },
+        {
+          "name": "Dragon Turns",
+          "max_row": 47,
+          "max_column": 5,
+          "nonempty_rows": 47,
+          "formulas": 0
+        }
+      ],
+      "source": "KrosArcano/Arcadia_Quest_-_Card_List_1.2.xlsx",
+      "review": "all 12 sheets parsed; data counts and selected skill/combo rows analysed; no source edits"
+    },
+    {
+      "aliases": [
+        "arcadia_quest_alguem_poderia_traduzir_o_modo_172937 - Copia.zip"
+      ],
+      "sha256": "fc86f504d61532432ed8ed0f7a611cbf2a4ad0fc6bc304a02140a9bff53265cd",
+      "size": 52366497,
+      "extension": ".zip",
+      "source": "KrosArcano/arcadia_quest_alguem_poderia_traduzir_o_modo_172937.zip",
+      "review": "catalogued"
+    },
+    {
+      "aliases": [
+        "arcadia_quest_cartas_da_campanha_bedtime_aga_244144 - Copia.pdf"
+      ],
+      "sha256": "f155f68b3860e5ae7862db1cd1eff2decece881f973d0ef3c6c96b4a68d4096b",
+      "size": 37374473,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_cartas_da_campanha_bedtime_aga_244144.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF01",
+      "pages": 6,
+      "text_chars_per_page": [
+        76,
+        491,
+        314,
+        0,
+        0,
+        0
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [],
+      "sha256": "87c48d462e1b798e3fe849dd46d2d68f827a09793c6e3a764948a67eb33755f2",
+      "size": 5955108,
+      "extension": ".zip",
+      "source": "KrosArcano/arcadia_quest_cartas_de_herois_presentes_na_17920.zip",
+      "review": "catalogued"
+    },
+    {
+      "aliases": [
+        "arcadia_quest_cartas_de_titulo_107309 - Copia.pdf"
+      ],
+      "sha256": "520293767e33fcf47763d1af7048aa9523b36b75f14ac453d2948cc8e575d418",
+      "size": 389315,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_cartas_de_titulo_107309.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF02",
+      "pages": 1,
+      "text_chars_per_page": [
+        0
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [
+        "arcadia_quest_cartas_de_todos_os_dragoes_244131 - Copia.pdf"
+      ],
+      "sha256": "3dcc191183ae594c589c444fae552d96f07fe47681dd42b0c5e3f9ac743fd6b5",
+      "size": 70394392,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_cartas_de_todos_os_dragoes_244131.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF03",
+      "pages": 24,
+      "text_chars_per_page": [
+        9322,
+        4173,
+        2943,
+        3636,
+        2082,
+        2311,
+        3335,
+        4263,
+        3352,
+        2270,
+        1892,
+        3769,
+        3774,
+        4044,
+        608,
+        2410,
+        2322,
+        2776,
+        3521,
+        3801,
+        606,
+        2315,
+        1866,
+        2153
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [
+        "arcadia_quest_chaos_livro_de_encontro_havok_o_157899 - Copia.pdf"
+      ],
+      "sha256": "79c53baf4619fa58155fba699d49a5681da587f7f60d2f04a6c077fc93529879",
+      "size": 19852671,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_chaos_livro_de_encontro_havok_o_157899.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF04",
+      "pages": 20,
+      "text_chars_per_page": [
+        0,
+        3594,
+        3593,
+        4701,
+        6242,
+        4725,
+        3617,
+        3993,
+        3035,
+        2766,
+        5951,
+        4051,
+        4460,
+        3242,
+        4862,
+        1082,
+        736,
+        2755,
+        601,
+        467
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [
+        "arcadia_quest_chaos_livro_de_encontro_icewyng_o_157846 - Copia.pdf"
+      ],
+      "sha256": "f6ef83f1ef9edcfc85cddc63c52cdbc4c351676a546478978e76c4b416e73684",
+      "size": 20659933,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_chaos_livro_de_encontro_icewyng_o_157846.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF05",
+      "pages": 20,
+      "text_chars_per_page": [
+        0,
+        3586,
+        3207,
+        5168,
+        5968,
+        4653,
+        5062,
+        3951,
+        2871,
+        2411,
+        6488,
+        4290,
+        1780,
+        3471,
+        856,
+        813,
+        3109,
+        750,
+        533,
+        1
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [
+        "arcadia_quest_chaos_traducao_das_cartas_de_itens_82996 - Copia.pdf"
+      ],
+      "sha256": "7b49fac3d4823ee68ead1a87297cfa3a5f3ee7510a529aec32c359ef2abb2453",
+      "size": 59114,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_chaos_traducao_das_cartas_de_itens_82996.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF06",
+      "pages": 1,
+      "text_chars_per_page": [
+        8556
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [
+        "arcadia_quest_dungeons_of_arcadia_side_quest_159138 - Copia.zip"
+      ],
+      "sha256": "fc4aa41974779f79a04d5a7e0296e853bb1cb9bb732414f741bd40cee0f9fba2",
+      "size": 26188414,
+      "extension": ".zip",
+      "source": "KrosArcano/arcadia_quest_dungeons_of_arcadia_side_quest_159138.zip",
+      "review": "catalogued"
+    },
+    {
+      "aliases": [],
+      "sha256": "966e2ca24a5ea9dcfe4852e5edf75ad6d2f27926d751ac00f60f9fe8e952c7f9",
+      "size": 18089557,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_fire_livro_de_encontro_mog_dor_o_157845.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF07",
+      "pages": 20,
+      "text_chars_per_page": [
+        0,
+        2541,
+        2485,
+        4981,
+        4227,
+        4765,
+        3840,
+        3463,
+        2886,
+        2858,
+        4837,
+        4133,
+        749,
+        4931,
+        2990,
+        940,
+        812,
+        3539,
+        588,
+        541
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [
+        "arcadia_quest_folha_de_campanha_de_arcadia_q_330058 - Copia.pdf"
+      ],
+      "sha256": "608f3b7e728674b4954a854df93fe2957d72234d1732e5e28486647bc9c89595",
+      "size": 6633079,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_folha_de_campanha_de_arcadia_q_330058.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF08",
+      "pages": 2,
+      "text_chars_per_page": [
+        6925,
+        658
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [
+        "arcadia_quest_habilidade_de_todos_os_herois_85420 - Copia.pdf"
+      ],
+      "sha256": "49568ecaa5a9a7c6fa4e348bed4eb0f979976bef3d1b7513c8a26d1c85130d2d",
+      "size": 8840393,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_habilidade_de_todos_os_herois_85420.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF09",
+      "pages": 5,
+      "text_chars_per_page": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [
+        "arcadia_quest_heroinas_171673 - Copia.pdf"
+      ],
+      "sha256": "313b62749d14fc6158019cf53fafd7f0b0c36281aa29723a6bc94ca28c6aa4f4",
+      "size": 569291,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_heroinas_171673.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF10",
+      "pages": 1,
+      "text_chars_per_page": [
+        0
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [
+        "arcadia_quest_herois_nerd_otaku_rev_03_98218 - Copia.rar"
+      ],
+      "sha256": "0ff2b52aae040eb1c31422daeb3d8fe6eb90d7f7dab4acac47fa04013ecbbc04",
+      "size": 13572889,
+      "extension": ".rar",
+      "source": "KrosArcano/arcadia_quest_herois_nerd_otaku_rev_03_98218.rar",
+      "review": "catalogued"
+    },
+    {
+      "aliases": [
+        "arcadia_quest_herois_promocionais_presente_17919 - Copia.zip"
+      ],
+      "sha256": "6556cd2dc48e384bc31f4bee8a61b87b4233dfdf9a4a5e4eb88968e0b3af2680",
+      "size": 23820298,
+      "extension": ".zip",
+      "source": "KrosArcano/arcadia_quest_herois_promocionais_presente_17919.zip",
+      "review": "catalogued"
+    },
+    {
+      "aliases": [
+        "arcadia_quest_infer_arcadia_quest_base_inferno_152251 - Copia.rar"
+      ],
+      "sha256": "aed38a43c9195f4b43aefec8fd2fb402df551af82b664a8bcab5965211958d7b",
+      "size": 30109456,
+      "extension": ".rar",
+      "source": "KrosArcano/arcadia_quest_infer_arcadia_quest_base_inferno_152251.rar",
+      "review": "catalogued"
+    },
+    {
+      "aliases": [],
+      "sha256": "d80de602fe01823d66cd35ab518999eafb0b1d3d41644813ee5ca20cc9064cdf",
+      "size": 92777941,
+      "extension": ".rar",
+      "source": "KrosArcano/arcadia_quest_infer_arcadia_quest_base_inferno_152660.rar",
+      "review": "catalogued"
+    },
+    {
+      "aliases": [
+        "arcadia_quest_infer_arcadia_quest_fall_of_arcadia_80967 - Copia.jpg"
+      ],
+      "sha256": "2aff3d0754f4f222a40fba54778ed59e08fe9ed1144c9248c2dbd8870539856e",
+      "size": 1437956,
+      "extension": ".jpg",
+      "source": "KrosArcano/arcadia_quest_infer_arcadia_quest_fall_of_arcadia_80967.jpg",
+      "review": "visual: campaign/inventory image supplied by author"
+    },
+    {
+      "aliases": [
+        "arcadia_quest_infer_arcadia_quest_inferno_campaing_80965 - Copia.jpg"
+      ],
+      "sha256": "443066dd596220047ba7dccd0e2ea92ef18539a60fd9a1c500b230af2eb2606b",
+      "size": 919924,
+      "extension": ".jpg",
+      "source": "KrosArcano/arcadia_quest_infer_arcadia_quest_inferno_campaing_80965.jpg",
+      "review": "visual: campaign/inventory image supplied by author"
+    },
+    {
+      "aliases": [
+        "arcadia_quest_infer_arcadia_quest_inferno_campaing_80966 - Copia.jpg"
+      ],
+      "sha256": "a5390ff9dace6c4c09e88cbb05d08394013ba9a53f8ea8f3e04e3b65e1623ad8",
+      "size": 365835,
+      "extension": ".jpg",
+      "source": "KrosArcano/arcadia_quest_infer_arcadia_quest_inferno_campaing_80966.jpg",
+      "review": "visual: campaign/inventory image supplied by author"
+    },
+    {
+      "aliases": [
+        "arcadia_quest_infer_arcadia_quest_inferno_heroes_t_82997 - Copia.pdf"
+      ],
+      "sha256": "a1e7409f19f839af0e992d77c0bf9b572be056a6cf04d48a646caa67c3160ed8",
+      "size": 7132275,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_infer_arcadia_quest_inferno_heroes_t_82997.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF11",
+      "pages": 6,
+      "text_chars_per_page": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [
+        "arcadia_quest_infer_arcadia_quest_solo_mode_ofic_153046 - Copia.pdf"
+      ],
+      "sha256": "152a8c3f91f10e9b2bf7fb4a8c90b98d8497fa5918e04fcf09b54e092da10e57",
+      "size": 17379149,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_infer_arcadia_quest_solo_mode_ofic_153046.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF12",
+      "pages": 7,
+      "text_chars_per_page": [
+        4422,
+        6033,
+        925,
+        3912,
+        874,
+        1155,
+        3574
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [
+        "arcadia_quest_infer_campanha_cenario_2_o_ulti_161276 - Copia.rar"
+      ],
+      "sha256": "367e80a00dcd18dd21baa901729a21f768013d28334733283f41c07b2b49eaa6",
+      "size": 10807295,
+      "extension": ".rar",
+      "source": "KrosArcano/arcadia_quest_infer_campanha_cenario_2_o_ulti_161276.rar",
+      "review": "catalogued"
+    },
+    {
+      "aliases": [],
+      "sha256": "5f31bd8675d34d1ab695ad3c1c7084876f6d84e5052b2e9b405cac07f312ae7a",
+      "size": 29062133,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_infer_livro_de_campanha_pets_ingl_62697.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF13",
+      "pages": 26,
+      "text_chars_per_page": [
+        64,
+        3613,
+        4697,
+        32666,
+        793,
+        4360,
+        3872,
+        3227,
+        5387,
+        3767,
+        6031,
+        5987,
+        3049,
+        4850,
+        2457,
+        2924,
+        3598,
+        895,
+        342,
+        473,
+        428,
+        409,
+        289,
+        0,
+        0,
+        1994
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [],
+      "sha256": "d55e9439f2a899a8eec226f710ed8de33d7d9f9b8df6ca89f1ae3b4b363b4661",
+      "size": 19448036,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_infer_livro_de_regras_arcadia_ques_109200.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF14",
+      "pages": 40,
+      "text_chars_per_page": [
+        369,
+        4414,
+        6574,
+        14333,
+        40611,
+        1862,
+        7600,
+        8890,
+        3548,
+        4095,
+        9382,
+        3921,
+        3531,
+        7013,
+        11398,
+        5027,
+        2969,
+        8161,
+        6935,
+        5610,
+        3801,
+        6658,
+        4010,
+        4758,
+        9278,
+        4505,
+        7764,
+        6500,
+        7645,
+        7785,
+        5473,
+        2830,
+        6215,
+        6928,
+        15066,
+        6107,
+        5341,
+        2936,
+        14592,
+        6190
+      ],
+      "visual_pages": [
+        1,
+        13,
+        16,
+        18
+      ]
+    },
+    {
+      "aliases": [],
+      "sha256": "b6dc4aba4c0edb75cc2d4cf56550c8ba18107796a0630114b8276593f90205ea",
+      "size": 152735,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_infer_modo_cooperativo_e_solo_136121.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF15",
+      "pages": 4,
+      "text_chars_per_page": [
+        1852,
+        2187,
+        2633,
+        2333
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [],
+      "sha256": "c8b4dcbfbd2fec6239d526a61a3f2a325d2e905bb5468f265b7de4034fdf77dc",
+      "size": 11577641,
+      "extension": ".zip",
+      "source": "KrosArcano/arcadia_quest_infer_tacosgiveday_cmon_oficial_arca_144259.zip",
+      "review": "catalogued"
+    },
+    {
+      "aliases": [],
+      "sha256": "af63373a0fbbcab820a7de80c393c3e2208ab00af475bad53ad675140c67d3ad",
+      "size": 101597050,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_manuais_de_dragoes_a4_resum_244142.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF16",
+      "pages": 25,
+      "text_chars_per_page": [
+        4230,
+        4422,
+        4760,
+        4970,
+        5374,
+        6085,
+        4720,
+        4560,
+        3204,
+        2300,
+        4791,
+        5511,
+        5703,
+        2392,
+        2001,
+        5676,
+        6024,
+        4574,
+        2394,
+        396,
+        6461,
+        3184,
+        5108,
+        2774,
+        906
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [],
+      "sha256": "e129aaa04f56259ffcbdb5dbce8720e400b732f7b7c0991452478541bff161de",
+      "size": 2609654,
+      "extension": ".rar",
+      "source": "KrosArcano/arcadia_quest_mini_expansao_fa_made_que_ad_69402.rar",
+      "review": "catalogued"
+    },
+    {
+      "aliases": [],
+      "sha256": "8deaabf91820647ab3da6361c2119ab994905465fd8e3b40a402d531ac14ff24",
+      "size": 24947854,
+      "extension": ".zip",
+      "source": "KrosArcano/arcadia_quest_orcs_e_goblins_natalinos_165746.zip",
+      "review": "catalogued"
+    },
+    {
+      "aliases": [],
+      "sha256": "242e325b35383934e40e21203084ba987284226c7dd37dd34f3db2238ba68eb3",
+      "size": 1370047,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_paste_ups_para_os_itens_inicia_19003.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF17",
+      "pages": 1,
+      "text_chars_per_page": [
+        0
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [],
+      "sha256": "8d0ae754697bb144afe0f9fe61cdcc75c63c6c4cba0f3221f3f61fc9124f858f",
+      "size": 1823137,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_paste_ups_para_os_itens_nivel_19012.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF18",
+      "pages": 1,
+      "text_chars_per_page": [
+        0
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [],
+      "sha256": "204a9740e380345d98c1026e15e372982e326e3efa6396af937198afad9c6f49",
+      "size": 2908702,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_pasteups_para_os_itens_lvl_2_e_20753.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF19",
+      "pages": 1,
+      "text_chars_per_page": [
+        0
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [],
+      "sha256": "bdffc2124a08b46ae365cf78fe305cbe5d365e11061ae17bc839ace5b8476672",
+      "size": 2240696,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_pasteups_para_os_itens_lvl_3_e_20754.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF20",
+      "pages": 1,
+      "text_chars_per_page": [
+        0
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [],
+      "sha256": "43b3770d347b7d85da753348343bc3d23bc881ac4fc7e1057faddefdf5f0211c",
+      "size": 2995537,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_pasteups_para_os_itens_lvl_4_e_20779.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF21",
+      "pages": 1,
+      "text_chars_per_page": [
+        0
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [],
+      "sha256": "a9297a11d7a3be82d02f87a642cdf7726cbb6ba2e8a24e0ef8dc67e1a73d2708",
+      "size": 3002714,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_pasteups_para_os_itens_lvl_5_e_20783.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF22",
+      "pages": 1,
+      "text_chars_per_page": [
+        0
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [],
+      "sha256": "0e17e837c110ec5799eef5192f6e4fe0cfbaab94c56f449aad366f7b2393255d",
+      "size": 538987,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_regras_modo_co_op_5_jogad_108785.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF23",
+      "pages": 3,
+      "text_chars_per_page": [
+        2689,
+        3478,
+        2094
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [
+        "arcadia_quest_rider_arcadia_quest_riders_campaig_181562 - Copia.pdf"
+      ],
+      "sha256": "d48a7cd3b80ab757cf8e1e64dbaf25c5fda360acee3c842c93f4ff26a614b7ab",
+      "size": 3409199,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_rider_arcadia_quest_riders_campaig_181562.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF24",
+      "pages": 2,
+      "text_chars_per_page": [
+        4181,
+        524
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [],
+      "sha256": "bca366b3875b518a0758c1ab0aac0eb20d3c7f3d8bf5761d18b6c468fafbdc2d",
+      "size": 13216267,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_rider_arcadia_quest_riders_rulebo_107662.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF25",
+      "pages": 48,
+      "text_chars_per_page": [
+        45,
+        7458,
+        2553,
+        21542,
+        740,
+        3294,
+        2668,
+        3203,
+        4449,
+        4927,
+        4226,
+        2772,
+        1624,
+        4849,
+        955,
+        824,
+        6035,
+        1016,
+        1085,
+        5766,
+        997,
+        2231,
+        4831,
+        922,
+        1144,
+        6220,
+        1283,
+        1174,
+        5870,
+        1700,
+        914,
+        1245,
+        4964,
+        1874,
+        1257,
+        5875,
+        844,
+        1727,
+        3007,
+        2599,
+        2632,
+        959,
+        2555,
+        2147,
+        1483,
+        0,
+        0,
+        4569
+      ],
+      "visual_pages": [
+        1,
+        8
+      ]
+    },
+    {
+      "aliases": [],
+      "sha256": "21dfaf850e3c9bf024ec6432d74f588b1027e0addbef746dd7f2fba0471d4be3",
+      "size": 443554,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_rider_carta_de_titulos_portugues_198251.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF26",
+      "pages": 1,
+      "text_chars_per_page": [
+        0
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [],
+      "sha256": "29e247790d426cdfb577a9ad02ee699493a20bf0dd96552fd7a671233b045b06",
+      "size": 2542847,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_rider_traducao_da_expansao_riders_117679.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF27",
+      "pages": 56,
+      "text_chars_per_page": [
+        3782,
+        2910,
+        1803,
+        3209,
+        441,
+        2076,
+        1876,
+        1283,
+        2541,
+        2219,
+        1531,
+        1619,
+        0,
+        2462,
+        5,
+        0,
+        2180,
+        1264,
+        0,
+        0,
+        2050,
+        1090,
+        0,
+        0,
+        2207,
+        679,
+        0,
+        0,
+        2003,
+        1636,
+        0,
+        0,
+        2318,
+        313,
+        0,
+        2045,
+        1441,
+        0,
+        0,
+        1890,
+        929,
+        0,
+        0,
+        2688,
+        1050,
+        0,
+        0,
+        2367,
+        2347,
+        2463,
+        2401,
+        1086,
+        0,
+        0,
+        0,
+        0
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [
+        "arcadia_quest_todas_as_cartas_de_herois_da_17918 - Copia.zip"
+      ],
+      "sha256": "06dd870cb793b184a936f386ee8194559c1d331b99bba3e9a76b135b1a549756",
+      "size": 12420955,
+      "extension": ".zip",
+      "source": "KrosArcano/arcadia_quest_todas_as_cartas_de_herois_da_17918.zip",
+      "review": "catalogued"
+    },
+    {
+      "aliases": [
+        "arcadia_quest_whole_lotta_lava_cartas_244225 - Copia.pdf"
+      ],
+      "sha256": "8f88075070c5355db10aa8e6ce091bdfe7c864d1d17aec978e6eb444605f5029",
+      "size": 11902586,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_whole_lotta_lava_cartas_244225.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF28",
+      "pages": 2,
+      "text_chars_per_page": [
+        1790,
+        3776
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [
+        "arcadia_quest_whole_lotta_lava_manual_a4_244224 - Copia.pdf"
+      ],
+      "sha256": "3f8de3abcd2ab1e29cf374c5fc6fcd127c4b57e0d72bcabaa1a7d56ba6151006",
+      "size": 15110883,
+      "extension": ".pdf",
+      "source": "KrosArcano/arcadia_quest_whole_lotta_lava_manual_a4_244224.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF29",
+      "pages": 3,
+      "text_chars_per_page": [
+        3877,
+        6458,
+        6653
+      ],
+      "visual_pages": [
+        1
+      ]
+    },
+    {
+      "aliases": [
+        "ArcadiaQuest_PromoAndExtras_AbilityOverlays_gaps_4px - Copia.pdf"
+      ],
+      "sha256": "98b70f5d18e55c9cd16d9c767993446e16fd6628d16a0e9b5f2bd7ac97641aa2",
+      "size": 2843024,
+      "extension": ".pdf",
+      "source": "KrosArcano/ArcadiaQuest_PromoAndExtras_AbilityOverlays_gaps_4px.pdf",
+      "review": "text extracted; first-page visual classification; targeted rules reading",
+      "pdf_id": "PDF30",
+      "pages": 2,
+      "text_chars_per_page": [
+        0,
+        0
+      ],
+      "visual_pages": [
+        1
+      ]
+    }
+  ],
+  "archives": [
+    {
+      "name": "arcadia_quest_alguem_poderia_traduzir_o_modo_172937.zip",
+      "sha256": "fc86f504d61532432ed8ed0f7a611cbf2a4ad0fc6bc304a02140a9bff53265cd",
+      "members": [
+        {
+          "name": "Solo Mode 1.2/AQ-Print Files-A4-1.pdf",
+          "extension": ".pdf",
+          "sha256": "e7f5b813889dd7a2b1632c65cc83bf41db8ed4af33ce13a82e669c1ccf2821d0",
+          "size": 8520051,
+          "pages": 6,
+          "text_chars": 10,
+          "text_pages": [],
+          "text_extracted": true,
+          "review": "text extracted; structural catalogue; detailed visual/text review only where listed",
+          "visual_pages": []
+        },
+        {
+          "name": "Solo Mode 1.2/AQ-Print Files-letter-1.pdf",
+          "extension": ".pdf",
+          "sha256": "7c6905941e5dd02d248440c7575afe9d95fdd1e6df063abce615eb480eb99a8c",
+          "size": 8519870,
+          "pages": 6,
+          "text_chars": 10,
+          "text_pages": [],
+          "text_extracted": true,
+          "review": "text extracted; structural catalogue; detailed visual/text review only where listed",
+          "visual_pages": []
+        },
+        {
+          "name": "Solo Mode 1.2/AQ-Solo Mode-1.2.pdf",
+          "extension": ".pdf",
+          "sha256": "50807bd409d8a3b3250ea35fc4dff111a43fef169fe4d5cb65f5bd3afd723c48",
+          "size": 37796102,
+          "pages": 16,
+          "text_chars": 30127,
+          "text_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "text_extracted": true,
+          "review": "text extracted; structural catalogue; detailed visual/text review only where listed",
+          "visual_pages": [],
+          "text_reviewed_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "name": "arcadia_quest_cartas_de_herois_presentes_na_17920.zip",
+      "sha256": "87c48d462e1b798e3fe849dd46d2d68f827a09793c6e3a764948a67eb33755f2",
+      "members": [
+        {
+          "name": "card-H-Smiley-Faceless.png",
+          "extension": ".png",
+          "sha256": "0487e3ce46d921fca668018bdedd70af262edde6563c068a034fd3557320eafc",
+          "size": 1008643,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Surprised-Faceless.png",
+          "extension": ".png",
+          "sha256": "e3008f6687e9ef5d699be0c88049f7d4fbdf207d6fbff43f7a84e51ac51751a1",
+          "size": 996332,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Frowny-Faceless.png",
+          "extension": ".png",
+          "sha256": "636cc6f076ae2bd06ba46cd498e3066beba3d037db8fdf85dbcda1f458c14916",
+          "size": 1010950,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Heartless.png",
+          "extension": ".png",
+          "sha256": "7037ce7ca81ba9f349db563eabace95a1119ccf0edbe83cb90af3557e9fc5ada",
+          "size": 1010107,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Nameless.png",
+          "extension": ".png",
+          "sha256": "4f9a82853264fb311cdb87ba1873dc21528aca368ee9a9a7c7b6c5770498e71b",
+          "size": 1030267,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Serious-Faceless.png",
+          "extension": ".png",
+          "sha256": "1f258f269879e630c534057df387eb0b58f78d90a403421d8060c1a159175fe8",
+          "size": 997746,
+          "review": "visual contact sheet: art/template and ability examples"
+        }
+      ]
+    },
+    {
+      "name": "arcadia_quest_dungeons_of_arcadia_side_quest_159138.zip",
+      "sha256": "fc4aa41974779f79a04d5a7e0296e853bb1cb9bb732414f741bd40cee0f9fba2",
+      "members": [
+        {
+          "name": "Tiny Spider Lvl 4-5.png",
+          "extension": ".png",
+          "sha256": "7de7cba0ce503150befe8d5fe40e582289c9238596395abea99cf9b8b493121f",
+          "size": 962954,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "Tiny Spider Lvl 6.png",
+          "extension": ".png",
+          "sha256": "13cfaf5898c633673ffdffaff5fbad13d4b30501a6aee28e56a8b08ee10d76a9",
+          "size": 935466,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "web token.png",
+          "extension": ".png",
+          "sha256": "9efe9f6cdffa6ec4e14361ebdb78b601652e9dc6a84dd583d6c1624d6188e696",
+          "size": 75604,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "Aunty Bitsy Lvl 1.png",
+          "extension": ".png",
+          "sha256": "84bb337d5e482b0bfdacbc3fbeae392fce857985c26a16a76e94d54346eb087b",
+          "size": 1391689,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "Aunty Bitsy Lvl 2-3.png",
+          "extension": ".png",
+          "sha256": "85ae4f57963c64eb257698544a6ece84e69b62ff23900b797e06a62a8d900fb1",
+          "size": 1368208,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "Aunty Bitsy Lvl 4-5.png",
+          "extension": ".png",
+          "sha256": "fc76ff1c8f4c4cc64aab873c8ea9a6f583ac9a647bf0e9f1807b4a348d95eb61",
+          "size": 1286680,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "Aunty Bitsy Lvl 6.png",
+          "extension": ".png",
+          "sha256": "e244529ae153e870e08519296c76bceb73fb74b235a0df975fc6a32b8f5e2732",
+          "size": 1269598,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "Campaign Dungeons of Arcadia.pdf",
+          "extension": ".pdf",
+          "sha256": "ebca1abc16f6a8aaa21838c6536eec5f16814b84b58ffc13eb43e8161d33b0ab",
+          "size": 3140808,
+          "pages": 6,
+          "text_chars": 156,
+          "text_pages": [],
+          "text_extracted": true,
+          "review": "text extracted; structural catalogue; detailed visual/text review only where listed",
+          "visual_pages": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "PVE Destroy Spider Eggs.png",
+          "extension": ".png",
+          "sha256": "e17e2f1db5a4dbee2cc9f3524d6ead89fb2265c60d17d87ac41b250f798086f8",
+          "size": 1828622,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "PVE Hunt Spiders.png",
+          "extension": ".png",
+          "sha256": "3039fa4c491f6d33b559816a39c225eff01312b19672a7d245176def256c9bf1",
+          "size": 2950604,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "PVE Kill Aunty Bitsy.png",
+          "extension": ".png",
+          "sha256": "f22f0c19a10657955bfe53d68191948ec91bf8a4d6e34af971aca6670d6915b5",
+          "size": 1826096,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "PVE Rescue a Villager.png",
+          "extension": ".png",
+          "sha256": "9b9e08a89c340e0850a2b094362ec96303d9387c1ee826afea31c8e7d96c2b57",
+          "size": 1837795,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "PVE Save a Cocooned Hero.png",
+          "extension": ".png",
+          "sha256": "9821e9a1b10d2ef0e2c7f99ebdbd9de015f7dc190db19bb19ffed55603ef1d28",
+          "size": 1817001,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "Reward Black Mage x1.png",
+          "extension": ".png",
+          "sha256": "702beec088312fbb7d26a77bc2b8a90e81dc711f9a39be52ab53acf46d693971",
+          "size": 1219815,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "Reward Sword Chucks x2.png",
+          "extension": ".png",
+          "sha256": "01febb3d8e0fc7fa939c2945f9ec685335296a8b3e92af1a71d00ccb8a9ea06d",
+          "size": 1281996,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "Reward White Mage Hat x1.png",
+          "extension": ".png",
+          "sha256": "c1d7ec029521a4a0f3f223db25dc77c3c77fee58de0868b9d0567cc645f37319",
+          "size": 1206331,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "Tiny Spider Lvl 1.png",
+          "extension": ".png",
+          "sha256": "271e92b79238afc5b995906dc686d81050b35ace6a0f2ebb8f23a00e80366b1b",
+          "size": 1084387,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "Tiny Spider Lvl 2-3.png",
+          "extension": ".png",
+          "sha256": "a134c96bc985d4ed4bc8a3d4c3e8bdd10669dd5e89a6dcc0861bfe94ca588eb6",
+          "size": 1085819,
+          "review": "visual contact sheet: art/template and ability examples"
+        }
+      ]
+    },
+    {
+      "name": "arcadia_quest_herois_nerd_otaku_rev_03_98218.rar",
+      "sha256": "0ff2b52aae040eb1c31422daeb3d8fe6eb90d7f7dab4acac47fa04013ecbbc04",
+      "members": [
+        {
+          "name": "herói D&D - Bobby.png",
+          "extension": ".png",
+          "sha256": "d995b61a95a4f941012de31be622294be4c2ec2e5af4a892cf53bdfac0c7e0eb",
+          "size": 1174349,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "herói D&D - Diana.png",
+          "extension": ".png",
+          "sha256": "312afc8faf0f76dec8e7fb89c2631134ad8b0391e99ce1eba52f598713f40724",
+          "size": 1162993,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "herói D&D - Mestre dos Magos.png",
+          "extension": ".png",
+          "sha256": "1c4fc6c02464d7eb49a420efc87a9fd929d17bbf20709e8da16f6bc8ec6a79f6",
+          "size": 1101062,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "herói D&D - Sheila.png",
+          "extension": ".png",
+          "sha256": "22dee0fd69d6bd5352ccf994eb0f6a506b6fc1d95c059636c55be18065fe6fb9",
+          "size": 1173966,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "herói LOTR - Aragorn.png",
+          "extension": ".png",
+          "sha256": "bebcb8881d80222b3b0f211733c3f1a1cdb7266528ca456e9abcbb5594f77590",
+          "size": 1113978,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "herói LOTR - Gandalf.png",
+          "extension": ".png",
+          "sha256": "eb0551c09c286d87d3058ce6258c4da554b49f30fe22817180a4d5fd4d68f17d",
+          "size": 1136295,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "herói LOTR - Gimli.png",
+          "extension": ".png",
+          "sha256": "f1deb58ca59fa36e3c3fe40694304ccf44aeeec78e5d1466dbe9b761d903dae8",
+          "size": 1141138,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "herói LOTR - Legolas.png",
+          "extension": ".png",
+          "sha256": "d134994bd4de4e78cfc1c1da000c05c42c098eb48af3dc8b35b63b0382437c03",
+          "size": 1116759,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "herói Naruto - Kakashi.png",
+          "extension": ".png",
+          "sha256": "34d3c77bf281a5ab89e4a8f064567ba61db52b28ade0f8e83dba6183c130e941",
+          "size": 1077820,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "herói Naruto - Naruko.png",
+          "extension": ".png",
+          "sha256": "9598ac1514084f2123d589d413d2e0dbfbe56929e3a5840fbcacd488cb35fad3",
+          "size": 1120357,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "herói Naruto - Sarutobi.png",
+          "extension": ".png",
+          "sha256": "937bdc4b3cc663a65eb4477bcbed085035751c63ab85fe0bd900704618363c4d",
+          "size": 1090588,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "herói Naruto - Tsunade.png",
+          "extension": ".png",
+          "sha256": "fb9eca73d56fd1de9b2dc2caef704b9df049ee2e324e9c9e694f1b65aae9088f",
+          "size": 1161658,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "LEIA-ME!.rtf",
+          "extension": ".rtf",
+          "review": "text read locally as data; author identifies 12 custom heroes and balance recommendation"
+        }
+      ]
+    },
+    {
+      "name": "arcadia_quest_herois_promocionais_presente_17919.zip",
+      "sha256": "6556cd2dc48e384bc31f4bee8a61b87b4233dfdf9a4a5e4eb88968e0b3af2680",
+      "members": [
+        {
+          "name": "card-H-Zahra.png",
+          "extension": ".png",
+          "sha256": "50d080019e824b86ee1ac04e9929866eb916de95b9cc6404cf5a09ec487462b5",
+          "size": 958120,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Black-Newt.png",
+          "extension": ".png",
+          "sha256": "b7c438526973a10b76d465553258f3d5ef51a3a2c51bc7a49996600bc351185b",
+          "size": 912992,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Bob.png",
+          "extension": ".png",
+          "sha256": "97ee9709a7740403bd8da6e330435c5810e0e8fb8d3ffa033a30f140575d3d70",
+          "size": 951979,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Bowie.png",
+          "extension": ".png",
+          "sha256": "0c08e23d796248be19a287b22dd515788c6388a3e255c96b8be1c80c6ac2467a",
+          "size": 1082796,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Elysia.png",
+          "extension": ".png",
+          "sha256": "4cb6c03c72aa14f89488805741f117520ab2288defda808bea9fd7e7f1837d90",
+          "size": 1060663,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Heartless.png",
+          "extension": ".png",
+          "sha256": "7037ce7ca81ba9f349db563eabace95a1119ccf0edbe83cb90af3557e9fc5ada",
+          "size": 1010107,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Hitch.png",
+          "extension": ".png",
+          "sha256": "d8611285de2e21bdbff177456a8fedcc972571724896a33c08806b17551991a1",
+          "size": 973414,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-King-of-Thieves.png",
+          "extension": ".png",
+          "sha256": "c714e5f3afa03a7c54e9c2d09fb4aaa41e425462fcd4931b24f2aa4898e909e6",
+          "size": 1009608,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Koba.png",
+          "extension": ".png",
+          "sha256": "253a03e2877c58fde52f0e150638a265e4c8358a1c1a973dff918e683f21e20c",
+          "size": 1013563,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Lillith.png",
+          "extension": ".png",
+          "sha256": "e9440135d2a214d6ae0484f720e39ddbf3ed254ec073c10fdad22e99938b7201",
+          "size": 975034,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-LordFang.png",
+          "extension": ".png",
+          "sha256": "227386e65f9c6789ad418604bb1587c0141f20b465522f25704a7fb36201a921",
+          "size": 1065305,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Lydia.png",
+          "extension": ".png",
+          "sha256": "1e8e74aff54eedd9d1b591e3d41c62f4e008e1b9538f953d69e3fccec5e9d522",
+          "size": 1030345,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Monkey-King.png",
+          "extension": ".png",
+          "sha256": "dfc81fc08f8acd46a3bbb40e03a7dc3f5aaa2bab1cb7a90003045225ac7a6339",
+          "size": 1063029,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Monkey-Queen.png",
+          "extension": ".png",
+          "sha256": "87e06132782689695d156ea279556029435abb1c24c0af8a0d36e09be2828c8b",
+          "size": 1016850,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Montoya.png",
+          "extension": ".png",
+          "sha256": "f06305a3090443ec0fd405b1090326c5d009024e5267f7617b224562e978a9b8",
+          "size": 1008853,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Morgan.png",
+          "extension": ".png",
+          "sha256": "63ab63027c1f9387d1890fa834da950ebc989111241b49921c4edc9e644030dd",
+          "size": 969524,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Nibbles.png",
+          "extension": ".png",
+          "sha256": "39b695796f7cf8fb004a57551d00eee76dc83af2b33d11f61bdaf6a9f7cc1294",
+          "size": 1033849,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Pigsy.png",
+          "extension": ".png",
+          "sha256": "e0516343c8c8b355a97485fd8e0bde02af7f634779f35cfe67507c8fda6459e2",
+          "size": 983068,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Pluck.png",
+          "extension": ".png",
+          "sha256": "3ad6235ff501fd8c8161ba6e33fd4dcc32a96d2533be3b9006fb7c25e7fc2102",
+          "size": 1005761,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Prince-Aaron.png",
+          "extension": ".png",
+          "sha256": "a5497016fa785b1aac62d99b226d87df6ca0f064b5bd41eb2e80f3bcb0571748",
+          "size": 1012978,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Queen-of-Beggars.png",
+          "extension": ".png",
+          "sha256": "077a9e68bd9ae5f231b5d73f0a66f8688059bbb0621d7e096e1f5959f0a02bc7",
+          "size": 1096076,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Sonja.png",
+          "extension": ".png",
+          "sha256": "05c86ca5aa6d4bb6bd5a157185d9e6522a8756dc200961ccd182bda91593221a",
+          "size": 983183,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Sting.png",
+          "extension": ".png",
+          "sha256": "44c11405b453eb8ca5f3035312ea68af24f089c5b4c8825275bdff8158415dc5",
+          "size": 1054838,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Viktor.png",
+          "extension": ".png",
+          "sha256": "3bef50e64701595c274d3480e01528277312346d6c9e031bf257ec56a439504d",
+          "size": 941247,
+          "review": "visual contact sheet: art/template and ability examples"
+        }
+      ]
+    },
+    {
+      "name": "arcadia_quest_infer_arcadia_quest_base_inferno_152251.rar",
+      "sha256": "aed38a43c9195f4b43aefec8fd2fb402df551af82b664a8bcab5965211958d7b",
+      "members": [
+        {
+          "name": "Um Portal Turbulento - Cartas - PT BR.pdf",
+          "extension": ".pdf",
+          "sha256": "97cfaeefcc18554e9e9578972900b33e0b732f4174a8a0f3edf8f13d1710deb5",
+          "size": 10977752,
+          "pages": 2,
+          "text_chars": 2,
+          "text_pages": [],
+          "text_extracted": true,
+          "review": "text extracted; structural catalogue; detailed visual/text review only where listed",
+          "visual_pages": []
+        },
+        {
+          "name": "Um Portal Turbulento - Missão - PT BR.pdf",
+          "extension": ".pdf",
+          "sha256": "f5ac29fd02af7a7c4eec8fc0833904a3ef0da2f65f6206bdd07e8a75819f3ce3",
+          "size": 20149134,
+          "pages": 4,
+          "text_chars": 6,
+          "text_pages": [],
+          "text_extracted": true,
+          "review": "text extracted; structural catalogue; detailed visual/text review only where listed",
+          "visual_pages": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "arcadia_quest_infer_arcadia_quest_base_inferno_152660.rar",
+      "sha256": "d80de602fe01823d66cd35ab518999eafb0b1d3d41644813ee5ca20cc9064cdf",
+      "members": [
+        {
+          "name": "Carta - O Dia de Ação de Tacos - Base.pdf",
+          "extension": ".pdf",
+          "sha256": "ecbc222c0add705ec6df7f29814c889150d396b586b1fab2f2eebf48cd1a8d99",
+          "size": 35833958,
+          "pages": 3,
+          "text_chars": 4,
+          "text_pages": [],
+          "text_extracted": true,
+          "review": "text extracted; structural catalogue; detailed visual/text review only where listed",
+          "visual_pages": []
+        },
+        {
+          "name": "Carta - O Dia de Ação de Tacos - Inferno.pdf",
+          "extension": ".pdf",
+          "sha256": "eb652dd1d67416185ab05368d44ba561db30f9a332e77f703a74b4c0c606f782",
+          "size": 36280902,
+          "pages": 3,
+          "text_chars": 4,
+          "text_pages": [],
+          "text_extracted": true,
+          "review": "text extracted; structural catalogue; detailed visual/text review only where listed",
+          "visual_pages": []
+        },
+        {
+          "name": "Cenário - O Dia de Ação de Tacos.pdf",
+          "extension": ".pdf",
+          "sha256": "0181a4407194b779322806631132b6138bb1d34fe7f3e9cb1a1c8a050be908e3",
+          "size": 21998507,
+          "pages": 4,
+          "text_chars": 6,
+          "text_pages": [],
+          "text_extracted": true,
+          "review": "text extracted; structural catalogue; detailed visual/text review only where listed",
+          "visual_pages": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "arcadia_quest_infer_campanha_cenario_2_o_ulti_161276.rar",
+      "sha256": "367e80a00dcd18dd21baa901729a21f768013d28334733283f41c07b2b49eaa6",
+      "members": [
+        {
+          "name": "O Último é a Mulher do Padre - Missão 2 - PT BR.pdf",
+          "extension": ".pdf",
+          "sha256": "411ffd5af7d7ef5e1c50e0361efd80c2cdd260a426299dcf5249e92f79f11f7d",
+          "size": 10087832,
+          "pages": 4,
+          "text_chars": 11384,
+          "text_pages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "text_extracted": true,
+          "review": "text extracted; structural catalogue; detailed visual/text review only where listed",
+          "visual_pages": [],
+          "text_reviewed_pages": [
+            1,
+            3
+          ]
+        },
+        {
+          "name": "Campanha - Missão - PT BR.jpg",
+          "extension": ".jpg",
+          "sha256": "1b9c34464201b84c6fe4b137c741cd90f40282e00fbb6ea3b7902f4c50ba9231",
+          "size": 1048131
+        }
+      ]
+    },
+    {
+      "name": "arcadia_quest_infer_tacosgiveday_cmon_oficial_arca_144259.zip",
+      "sha256": "c8b4dcbfbd2fec6239d526a61a3f2a325d2e905bb5468f265b7de4034fdf77dc",
+      "members": [
+        {
+          "name": "CARDS BACK-Tacosgiving Day-Inferno.pdf",
+          "extension": ".pdf",
+          "sha256": "d48417c96a8922f3b0d5c759236a7d80bb71205b1ab13643bed2580e2eb7cddf",
+          "size": 1538270,
+          "pages": 1,
+          "text_chars": 0,
+          "text_pages": [],
+          "text_extracted": true,
+          "review": "text extracted; structural catalogue; detailed visual/text review only where listed",
+          "visual_pages": []
+        },
+        {
+          "name": "__MACOSX/._CARDS BACK-Tacosgiving Day-Inferno.pdf",
+          "extension": ".pdf",
+          "skip": "AppleDouble metadata, not a document"
+        },
+        {
+          "name": "QUEST CARDS-Tacosgiving Day-Inferno.pdf",
+          "extension": ".pdf",
+          "sha256": "a10dd0e182570c5f752ea97f74dbd09947caf3bd91e8c40ef6ee96835d070ad8",
+          "size": 1993855,
+          "pages": 2,
+          "text_chars": 288,
+          "text_pages": [
+            1,
+            2
+          ],
+          "text_extracted": true,
+          "review": "text extracted; structural catalogue; detailed visual/text review only where listed",
+          "visual_pages": []
+        },
+        {
+          "name": "__MACOSX/._QUEST CARDS-Tacosgiving Day-Inferno.pdf",
+          "extension": ".pdf",
+          "skip": "AppleDouble metadata, not a document"
+        },
+        {
+          "name": "AQ-PR05-Tacosgiving Day-Inferno.pdf",
+          "extension": ".pdf",
+          "sha256": "96d5eeb5868253c2686072e45472a4ab736b58bd6e33329dcb604564302d40ba",
+          "size": 8792463,
+          "pages": 2,
+          "text_chars": 3693,
+          "text_pages": [
+            1,
+            2
+          ],
+          "text_extracted": true,
+          "review": "text extracted; structural catalogue; detailed visual/text review only where listed",
+          "visual_pages": []
+        },
+        {
+          "name": "__MACOSX/._AQ-PR05-Tacosgiving Day-Inferno.pdf",
+          "extension": ".pdf",
+          "skip": "AppleDouble metadata, not a document"
+        }
+      ]
+    },
+    {
+      "name": "arcadia_quest_mini_expansao_fa_made_que_ad_69402.rar",
+      "sha256": "e129aaa04f56259ffcbdb5dbce8720e400b732f7b7c0991452478541bff161de",
+      "members": [
+        {
+          "name": "Fonte de Cura.pdf",
+          "extension": ".pdf",
+          "sha256": "47782946932e158df880b7d2845cd27f1a6216027c3d9470a21244f5b14d18dc",
+          "size": 1144275,
+          "pages": 2,
+          "text_chars": 0,
+          "text_pages": [],
+          "text_extracted": true,
+          "review": "text extracted; structural catalogue; detailed visual/text review only where listed",
+          "visual_pages": [
+            1
+          ]
+        },
+        {
+          "name": "Tokens.pdf",
+          "extension": ".pdf",
+          "sha256": "4fe37cdea5f72e9deb381639876326e46fb0e1ed4881e7f4495905e64b4f6b73",
+          "size": 3569744,
+          "pages": 1,
+          "text_chars": 53,
+          "text_pages": [],
+          "text_extracted": true,
+          "review": "text extracted; structural catalogue; detailed visual/text review only where listed",
+          "visual_pages": []
+        }
+      ]
+    },
+    {
+      "name": "arcadia_quest_orcs_e_goblins_natalinos_165746.zip",
+      "sha256": "8deaabf91820647ab3da6361c2119ab994905465fd8e3b40a402d531ac14ff24",
+      "members": [
+        {
+          "name": "SK_Christmas2020/Gift.stl",
+          "extension": ".stl",
+          "sha256": "ca80d603d0e1fb817a1c6f0deacd2e77829eaab734257ec184b4294f5327162b",
+          "size": 583734,
+          "review": "binary STL geometry inspected locally; no game import/rig"
+        },
+        {
+          "name": "SK_Christmas2020/Goblelf.stl",
+          "extension": ".stl",
+          "sha256": "7fbd98c3fb2e33db7087ea0758ae48e29284b1b1bb7b04d623f55d80dc8bb316",
+          "size": 14453984,
+          "review": "binary STL geometry inspected locally; no game import/rig"
+        },
+        {
+          "name": "SK_Christmas2020/RND_Basic.stl",
+          "extension": ".stl",
+          "sha256": "1bb9e71fd68bd31398a81fffc4fed03f0043bd64af46a2f7c6ed2be14d573a93",
+          "size": 51284,
+          "review": "binary STL geometry inspected locally; no game import/rig"
+        },
+        {
+          "name": "SK_Christmas2020/Santa_orc_Candy.stl",
+          "extension": ".stl",
+          "sha256": "417dc8eb317070d299aadaaff17a78b14e40b2dcfd56e131fcb6e67dfc97a5eb",
+          "size": 8633684,
+          "review": "binary STL geometry inspected locally; no game import/rig"
+        },
+        {
+          "name": "SK_Christmas2020/Santa_orc_Gift.stl",
+          "extension": ".stl",
+          "sha256": "b0cec59fee2342dcee0a67f033bebcd641d4aa4d104797be9d6c2f730ae6f46b",
+          "size": 8154584,
+          "review": "binary STL geometry inspected locally; no game import/rig"
+        },
+        {
+          "name": "SK_Christmas2020/SQR_Basic.stl",
+          "extension": ".stl",
+          "sha256": "63db4bc742eca06b35fa9a293eac30e9a59cda0a698a0880bad7d766a0a6715c",
+          "size": 25884,
+          "review": "binary STL geometry inspected locally; no game import/rig"
+        }
+      ]
+    },
+    {
+      "name": "arcadia_quest_todas_as_cartas_de_herois_da_17918.zip",
+      "sha256": "06dd870cb793b184a936f386ee8194559c1d331b99bba3e9a76b135b1a549756",
+      "members": [
+        {
+          "name": "card-H-Zazu.png",
+          "extension": ".png",
+          "sha256": "928c1d76e9bfd99b1a0e9423abbdc461f17b6027e48c186cbeacbeb930b59a8a",
+          "size": 1065656,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Diva.png",
+          "extension": ".png",
+          "sha256": "afe2b05338583eb3e8cb1a4e2a269e7faef259fd0ebb34050a8f5edbfab007cc",
+          "size": 1045106,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Greensleeves.png",
+          "extension": ".png",
+          "sha256": "12adffc3752882357b836181f8f27a5bb39cbf1c111e0617c60e343b15042560",
+          "size": 1033834,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Grom.png",
+          "extension": ".png",
+          "sha256": "72266efc7c1fd456c114efbbc9812c89cf4dd66d816f817457677f96e88d4708",
+          "size": 1067513,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Hobsbawm.png",
+          "extension": ".png",
+          "sha256": "8ca7e26ee374e0742fc46b418eb50ace49936fa76904476de7869479a64f2bf9",
+          "size": 1049197,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Johan.png",
+          "extension": ".png",
+          "sha256": "8e5c22c0502f4a487c6318c1abb2c6aaa931d26a1101fe1d6d1adedb445f8f14",
+          "size": 1057206,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Kanga.png",
+          "extension": ".png",
+          "sha256": "d72dbdf26114a46ba81434345c74913010ee172efa6175e860cafdea7489cebe",
+          "size": 1105713,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Maya.png",
+          "extension": ".png",
+          "sha256": "b342526662b43be78274bfe04c434fe4b2949f65fbd0f206a6a545bcf7838284",
+          "size": 1050101,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Scarlet.png",
+          "extension": ".png",
+          "sha256": "812a1bf3b47f5407d37b8f07f724f2d0e4dcc032c3b2f10505f563f297391146",
+          "size": 1054777,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Seth.png",
+          "extension": ".png",
+          "sha256": "8db09a480c0a4c555210ae2bac1b498f626ad9207092b6f5e520a9b4ff574572",
+          "size": 1039379,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Spike.png",
+          "extension": ".png",
+          "sha256": "9830cfcd5df8ea4d281e10a8066f648d697f93aa86e5320074f1f3158116ad7e",
+          "size": 1064687,
+          "review": "visual contact sheet: art/template and ability examples"
+        },
+        {
+          "name": "card-H-Wisp.png",
+          "extension": ".png",
+          "sha256": "5e61441ff44506d7e71693c3c90d1e9c4b6eee8c13e7ae43dc581ab592c35674",
+          "size": 984987,
+          "review": "visual contact sheet: art/template and ability examples"
+        }
+      ]
+    }
+  ]
+}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DungeonBDX.Skills;
 using DungeonBDX.World;
+using TMPro;
 using UnityEngine;
 
 namespace DungeonBDX
@@ -14,11 +15,18 @@ namespace DungeonBDX
         readonly Dictionary<string,GridCell> logicalCells = new Dictionary<string,GridCell>();
         readonly Dictionary<string,Queue<Vector3>> routes = new Dictionary<string,Queue<Vector3>>();
         readonly List<(GameObject visual, float expires)> effects = new List<(GameObject,float)>();
+        readonly Dictionary<string,DungeonActorAnimation> animations = new Dictionary<string,DungeonActorAnimation>();
+        readonly Dictionary<GridCell,GameObject> rangeMarkers = new Dictionary<GridCell,GameObject>();
+        readonly List<Transform> rangeLabels = new List<Transform>();
         DungeonMap map;
         DungeonSkillSession session;
         Transform marker;
         Transform architecture;
         public Camera ViewCamera { get; private set; }
+        public float CameraYaw { get; private set; }
+        public float CameraZoom { get; private set; } = 1;
+        Vector2 cameraPan;
+        public DungeonActionPreview Preview { get; private set; }
 
         public void Build(DungeonMap plan, DungeonSkillSession game)
         {
@@ -64,21 +72,81 @@ namespace DungeonBDX
 
         public void FitCamera()
         {
+            CameraYaw=0;CameraZoom=1;cameraPan=Vector2.zero;
             Frame(ViewCamera,map.Width,map.Height,Screen.safeArea,Screen.width,Screen.height);
+            RefreshBillboards();
         }
 
         public static void Frame(Camera camera,int mapWidth,int mapHeight,Rect safe,int width,int height)
+            => Frame(camera,mapWidth,mapHeight,safe,width,height,0,1,Vector2.zero);
+
+        public static void Frame(Camera camera,int mapWidth,int mapHeight,Rect safe,int width,int height,float yaw,float zoom,Vector2 pan)
         {
             float w=Mathf.Max(1,width),h=Mathf.Max(1,height),aspect=w/h;
             bool portrait=width<height;
             var usable=new Rect((safe.x+safe.width*.02f)/w,(safe.y+safe.height*(portrait?.40f:.32f))/h,
                 safe.width*.96f/w,safe.height*(portrait?.47f:.55f)/h);
             var center=new Vector3((mapWidth-1)*.5f,.65f,(mapHeight-1)*.5f);
-            camera.aspect=aspect;camera.transform.position=center+new Vector3(0,15,-9);camera.transform.LookAt(center);
-            float halfHeight=mapHeight*.5f*Mathf.Abs(camera.transform.up.z)+.7f*Mathf.Abs(camera.transform.up.y);
-            camera.orthographicSize=Mathf.Max(halfHeight/Mathf.Max(.1f,usable.height),mapWidth*.5f/aspect/Mathf.Max(.1f,usable.width));
+            camera.aspect=aspect;camera.transform.position=center+Quaternion.Euler(0,yaw,0)*new Vector3(0,15,-9);camera.transform.LookAt(center);
+            float halfHeight=mapWidth*.5f*Mathf.Abs(camera.transform.up.x)+mapHeight*.5f*Mathf.Abs(camera.transform.up.z)+.7f*Mathf.Abs(camera.transform.up.y);
+            float halfWidth=mapWidth*.5f*Mathf.Abs(camera.transform.right.x)+mapHeight*.5f*Mathf.Abs(camera.transform.right.z);
+            camera.orthographicSize=Mathf.Max(halfHeight/Mathf.Max(.1f,usable.height),halfWidth/aspect/Mathf.Max(.1f,usable.width))/Mathf.Clamp(zoom,1,3.2f);
             camera.transform.position-=camera.transform.right*((usable.center.x-.5f)*2*camera.orthographicSize*aspect)
                 +camera.transform.up*((usable.center.y-.5f)*2*camera.orthographicSize);
+            float panFactor=1-1/Mathf.Clamp(zoom,1,3.2f);
+            camera.transform.position+=new Vector3(Mathf.Clamp(pan.x,-mapWidth*.4f*panFactor,mapWidth*.4f*panFactor),0,
+                Mathf.Clamp(pan.y,-mapHeight*.4f*panFactor,mapHeight*.4f*panFactor));
+        }
+
+        public void RotateCamera(float degrees)
+        {if(float.IsNaN(degrees)||float.IsInfinity(degrees))return;CameraYaw=Mathf.Repeat(CameraYaw+degrees,360);ApplyCamera();}
+        public void ZoomCamera(float factor)
+        {if(float.IsNaN(factor)||float.IsInfinity(factor)||factor<=0)return;CameraZoom=Mathf.Clamp(CameraZoom*factor,1,3.2f);ApplyCamera();}
+        public void PanCamera(Vector2 pixels)
+        {
+            if(float.IsNaN(pixels.x)||float.IsNaN(pixels.y)||float.IsInfinity(pixels.x)||float.IsInfinity(pixels.y))return;
+            var delta=-(ViewCamera.transform.right*pixels.x+ViewCamera.transform.up*pixels.y)*(2*ViewCamera.orthographicSize/Mathf.Max(1,Screen.height));
+            cameraPan+=new Vector2(delta.x,delta.z);ApplyCamera();
+        }
+        void ApplyCamera()
+        {
+            float factor=1-1/CameraZoom;
+            cameraPan=new Vector2(Mathf.Clamp(cameraPan.x,-map.Width*.4f*factor,map.Width*.4f*factor),Mathf.Clamp(cameraPan.y,-map.Height*.4f*factor,map.Height*.4f*factor));
+            Frame(ViewCamera,map.Width,map.Height,Screen.safeArea,Screen.width,Screen.height,CameraYaw,CameraZoom,cameraPan);RefreshBillboards();
+        }
+        void RefreshBillboards()
+        {
+            foreach(var animation in animations.Values)if(animation)animation.RefreshFacing();
+            foreach(var label in rangeLabels)if(label)label.rotation=ViewCamera.transform.rotation;
+        }
+
+        public void ShowRange(DungeonActionPreview preview)
+        {
+            Preview=preview;foreach(var markerObject in rangeMarkers.Values)if(markerObject)markerObject.SetActive(false);
+            if(preview==null)return;
+            foreach(var entry in preview.Cells)
+            {
+                if(!rangeMarkers.TryGetValue(entry.Cell,out var range))
+                {
+                    range=new GameObject("Range "+entry.Cell.X+","+entry.Cell.Y,typeof(LineRenderer));range.transform.SetParent(transform,false);
+                    var line=range.GetComponent<LineRenderer>();line.positionCount=5;line.startWidth=line.endWidth=.035f;
+                    var p=Position(entry.Cell)+Vector3.up*.045f;
+                    line.SetPositions(new[]{p+new Vector3(-.44f,0,-.44f),p+new Vector3(.44f,0,-.44f),p+new Vector3(.44f,0,.44f),p+new Vector3(-.44f,0,.44f),p+new Vector3(-.44f,0,-.44f)});
+                    line.shadowCastingMode=UnityEngine.Rendering.ShadowCastingMode.Off;
+                    var labelObject=new GameObject("Distance",typeof(TextMeshPro));labelObject.transform.SetParent(range.transform,false);
+                    labelObject.transform.position=p+Vector3.up*.22f;labelObject.transform.localScale=Vector3.one*.24f;
+                    var label=labelObject.GetComponent<TextMeshPro>();label.font=TMP_Settings.defaultFontAsset;
+                    label.fontSize=14;label.alignment=TextAlignmentOptions.Center;label.outlineWidth=.18f;label.outlineColor=Color.black;
+                    label.rectTransform.sizeDelta=new Vector2(3,2);label.color=Color.white;label.text=entry.Distance.ToString();
+                    label.GetComponent<Renderer>().shadowCastingMode=UnityEngine.Rendering.ShadowCastingMode.Off;
+                    rangeLabels.Add(labelObject.transform);rangeMarkers.Add(entry.Cell,range);
+                }
+                range.SetActive(true);
+                range.GetComponent<LineRenderer>().sharedMaterial=Material(preview.Movement?new Color(.2f,.9f,.78f):entry.CanTarget?new Color(1,.64f,.26f):new Color(.27f,.53f,.78f),true);
+                var distanceLabel=range.GetComponentInChildren<TextMeshPro>();
+                distanceLabel.text=entry.Distance.ToString();distanceLabel.ForceMeshUpdate();
+            }
+            RefreshBillboards();
         }
 
         public bool Pick(Vector2 screen, out GridCell cell)
@@ -127,17 +195,19 @@ namespace DungeonBDX
                     var root = new GameObject("Unit " + unit.Id); root.transform.SetParent(transform,false);
                     root.transform.position = Position(unit.Cell); visual = root.transform; actors.Add(unit.Id,visual);
                     logicalCells.Add(unit.Id,unit.Cell);routes.Add(unit.Id,new Queue<Vector3>());
+                    Transform animatedVisual=null;
+                    var source = DungeonHeroCatalog.ImportArena().FirstOrDefault(h=>h.Id==unit.ProfileId);
+                    var portrait = source?.LoadPortrait();
                     string model = unit.IsSummon ? "companion-dragon" : unit.ProfileId;
                     var imported = Resources.Load<GameObject>("DungeonBDX/Models/"+model);
                     if (imported)
                     {
                         var body = Instantiate(imported,visual); body.transform.localPosition = Vector3.zero;
                         body.transform.localScale = Vector3.one*.75f; FixMaterials(body);
+                        animatedVisual=body.transform;
                     }
                     else
                     {
-                        var source = DungeonHeroCatalog.ImportArena().FirstOrDefault(h=>h.Id==unit.ProfileId);
-                        var portrait = source?.LoadPortrait();
                         if (portrait)
                         {
                             var spriteObject = new GameObject("Arena silhouette",typeof(SpriteRenderer)); spriteObject.transform.SetParent(visual,false);
@@ -147,20 +217,26 @@ namespace DungeonBDX
                             spriteObject.transform.localScale = Vector3.one*scale;
                             spriteObject.transform.localPosition=Vector3.up*.06f-ViewCamera.transform.up*(portrait.bounds.min.y*scale)
                                 -ViewCamera.transform.right*(portrait.bounds.center.x*scale);
+                            animatedVisual=spriteObject.transform;
                         }
                         else
                         {
                             var body = Primitive(PrimitiveType.Capsule,"Adventurer",Position(unit.Cell)+Vector3.up*.45f,
                                 new Vector3(.4f,.45f,.4f),unit.Team==0 ? new Color(.31f,.57f,.65f) : new Color(.65f,.24f,.28f));
                             body.transform.SetParent(visual,true);
+                            animatedVisual=body.transform;
                         }
                     }
                     var baseObject = Primitive(PrimitiveType.Cylinder,"Team base",Position(unit.Cell)+Vector3.up*.03f,
                         new Vector3(.59f,.035f,.59f),unit.Team==0 ? new Color(.26f,.55f,.59f) : new Color(.65f,.21f,.29f));
                     baseObject.transform.SetParent(visual,true);
+                    var animation=root.AddComponent<DungeonActorAnimation>();
+                    animation.Initialize(source?.SpriteFolder,portrait,animatedVisual??visual,ViewCamera);animations.Add(unit.Id,animation);
                 }
                 bool reappeared=unit.Alive && !visual.gameObject.activeSelf;
-                visual.gameObject.SetActive(unit.Alive);
+                if(unit.Alive && animations[unit.Id].State=="death")animations[unit.Id].Revive();
+                visual.gameObject.SetActive(true);
+                if(!unit.Alive && animations[unit.Id].State!="death")animations[unit.Id].PlayAction(Vector3.zero,dead:true);
                 if(immediate || reappeared || unit.Id==teleportActor) {routes[unit.Id].Clear();visual.position=Position(unit.Cell);}
                 else if(!logicalCells[unit.Id].Equals(unit.Cell))
                     foreach(var step in map.FindPath(logicalCells[unit.Id],unit.Cell).Skip(1))routes[unit.Id].Enqueue(Position(step));
@@ -172,6 +248,15 @@ namespace DungeonBDX
         public void PlayResult(SkillUseResult result)
         {
             if (!result.Success) return;
+            var skill=DungeonSkillCatalog.All[result.SkillId];
+            Sync(teleportActor:skill.Teleport ? result.ActorId : null);
+            string performer=skill.RequiresPet && skill.Has(SkillEffect.Attack) ? session.PetId(result.ActorId)??result.ActorId : result.ActorId;
+            if(animations.TryGetValue(performer,out var actionAnimation))
+                actionAnimation.PlayAction(Position(result.Destination)-Position(result.Origin),cast:!result.SkillId.Contains("pistola")&&!result.SkillId.Contains("golpe"));
+            foreach(var impact in result.Impacts)
+                if((impact.HealthDelta<0 || impact.ShieldDelta<0) && animations.TryGetValue(impact.UnitId,out var hurt))
+                {hurt.gameObject.SetActive(true);hurt.PlayAction(Position(result.Origin)-Position(result.Destination),hurt:true,dead:session.Unit(impact.UnitId)?.Alive!=true);}
+            if(result.SummonId!=null && animations.TryGetValue(result.SummonId,out var companion))companion.PlayAction(Vector3.forward,cast:true);
             Color color = result.SkillId.Contains("pistola") ? new Color(1,.68f,.24f) : result.SkillId.Contains("draco") ? new Color(.74f,.31f,.95f) : new Color(.22f,.77f,.95f);
             var effect = new GameObject(result.AnimationId,typeof(LineRenderer)); effect.transform.SetParent(transform,false);
             var line = effect.GetComponent<LineRenderer>(); line.positionCount = 2; line.startWidth = .055f; line.endWidth = .11f;
@@ -180,7 +265,6 @@ namespace DungeonBDX
             effects.Add((effect,Time.unscaledTime+.45f));
             var burst = Primitive(PrimitiveType.Sphere,"Skill burst",Position(result.Destination)+Vector3.up*.35f,Vector3.one*.24f,color);
             effects.Add((burst,Time.unscaledTime+.4f));
-            Sync(teleportActor:DungeonSkillCatalog.All[result.SkillId].Teleport ? result.ActorId : null);
         }
 
         void Update()
@@ -188,16 +272,25 @@ namespace DungeonBDX
             if (session==null) return;
             float blend = DungeonMotion.Blend(7,Time.unscaledDeltaTime);
             foreach (var unit in session.Units)
-                if (actors.TryGetValue(unit.Id,out var visual) && routes[unit.Id].Count>0)
+                if (actors.TryGetValue(unit.Id,out var visual))
                 {
-                    var next=routes[unit.Id].Peek();visual.position=Vector3.Lerp(visual.position,next,blend);
-                    if((visual.position-next).sqrMagnitude<.001f){visual.position=next;routes[unit.Id].Dequeue();}
+                    bool moving=unit.Alive && routes[unit.Id].Count>0;
+                    Vector3 direction=moving?routes[unit.Id].Peek()-visual.position:Vector3.zero;
+                    if(animations.TryGetValue(unit.Id,out var animation))animation.SetMoving(direction,moving);
+                    if(moving)
+                    {
+                        var next=routes[unit.Id].Peek();visual.position=Vector3.Lerp(visual.position,next,blend);
+                        if((visual.position-next).sqrMagnitude<.001f){visual.position=next;routes[unit.Id].Dequeue();}
+                    }
                 }
             var active = session.Unit(session.ActiveActorId);
             marker.gameObject.SetActive(active!=null);
             if (active!=null) marker.position = Vector3.Lerp(marker.position,Position(active.Cell)+Vector3.up*.012f,blend);
             for (int i=effects.Count-1;i>=0;i--) if (Time.unscaledTime>=effects[i].expires)
             { Destroy(effects[i].visual); effects.RemoveAt(i); }
+            foreach(var pair in actors)
+                if(session.Unit(pair.Key)==null && animations.TryGetValue(pair.Key,out var removed) && removed.DeathComplete)
+                    pair.Value.gameObject.SetActive(false);
         }
 
         GameObject Model(string name,Vector3 position,Vector3 scale)

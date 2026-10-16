@@ -16,7 +16,7 @@
       },
       "herois": 31,
       "buildWindows": "aprovado; Development Build; cerca de 1.60 GB",
-      "visual": "capturas URP conferidas; paleta provisoria; referencia nao anexada"
+      "visual": "paleta provisória; referências AQ recebidas e catalogadas"
     },
     {
       "id": 2,
@@ -71,7 +71,7 @@
     {
       "id": 6,
       "responsavel": "Codex",
-      "estado": "HUD-local-validado-no-player; acabamento-final-pendente"
+      "estado": "HUD-câmera-alcance-sprites-validados-no-player; acabamento-final-pendente"
     }
   ],
   "servicosOnline": "Cliente Unity Authentication/MPS implementado; funcionamento cloud, combate sincronizado, convites direcionados e cloud saves pendentes",
@@ -81,19 +81,32 @@
   "previaWindows": "Expedicao local jogavel Development; tres cenarios e smokes reais aprovados",
   "testesAtuais": {
     "integrados": {
-      "total": 267,
-      "passed": 267,
+      "total": 286,
+      "passed": 286,
       "failed": 0,
       "skipped": 0
     },
-    "reverificacaoModulo": {
-      "total": 114,
-      "passed": 114,
+    "moduloNoIntegradoFinal": {
+      "total": 132,
+      "passed": 132,
       "failed": 0,
       "skipped": 0
     },
     "smokesPlayer": 3,
+    "smokesApresentacao": 3,
     "falhasPlayerFinais": 0
   },
-  "evidenciaAtual": "entregas/04-06-local/validacao.json"
+  "evidenciaAtual": "entregas/07-camera-alcance-animacao/validacao.json",
+  "referencias": {
+    "pasta": "referencias/arcadia-quest/",
+    "arquivos": 72,
+    "conteudosUnicos": 46,
+    "cobertura": "inventário completo; leitura temática/visual dirigida, não auditoria editorial integral"
+  },
+  "controles": {
+    "pc": "botões, wheel, right-drag orbit, middle-drag pan",
+    "touch": "botões, pinch, two-finger twist/pan; aparelho físico pendente",
+    "alcance": "distância de caminho/visão/origem do pet; preview sem AP/RNG",
+    "animacao": "sprites Arena reais; modelos FBX sem rig com feedback procedural"
+  }
 }

@@ -381,6 +381,30 @@ namespace DungeonBDX
                 }
                 for (int i = 0; i < 30; i++) yield return null;
                 if(Array.IndexOf(args,"-dungeonbdx-smoke")>=0)yield return new WaitForSecondsRealtime(1.3f);
+                int presentation = Array.IndexOf(args, "-dungeonbdx-presentation");
+                if (presentation >= 0 && GetComponent<DungeonExpedition>()?.IsOpen == true)
+                {
+                    var probe = new DungeonPresentationSmoke(GetComponent<DungeonExpedition>(), args[capture + 1],
+                        presentation + 1 < args.Length ? args[presentation + 1] : "range");
+                    Exception failure = null;
+                    try { probe.Begin(); } catch (Exception error) { failure = error; }
+                    if (failure == null)
+                    {
+                        yield return new WaitForSecondsRealtime(.25f);
+                        try { probe.ObserveIdleAndAttack(); } catch (Exception error) { failure = error; }
+                    }
+                    if (failure == null)
+                    {
+                        yield return new WaitForSecondsRealtime(.2f);
+                        try { probe.ObserveAttackAndPrepareCapture(); CapturePreview(args[capture + 1]); }
+                        catch (Exception error) { failure = error; }
+                        yield return new WaitForSecondsRealtime(6);
+                    }
+                    bool passed = probe.Complete(failure);
+                    if (failure != null) Debug.LogException(failure);
+                    Application.Quit(passed ? 0 : 1);
+                    yield break;
+                }
                 try { CapturePreview(args[capture + 1]); Application.Quit(); }
                 catch (Exception error) { Debug.LogException(error); Application.Quit(1); }
             }

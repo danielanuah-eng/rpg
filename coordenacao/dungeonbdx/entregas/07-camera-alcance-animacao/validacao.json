@@ -1,0 +1,239 @@
+{
+  "version": 1,
+  "scope": "camera/range/animation feedback + Arcadia Quest reference study",
+  "tests": {
+    "editmode-integrated.xml": {
+      "total": 286,
+      "passed": 286,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "player": [
+    {
+      "slug": "pc-rotacao",
+      "scenario": "cripta-de-bronze",
+      "revision": 100,
+      "commands": 6,
+      "units": 7,
+      "width": 1600,
+      "height": 900,
+      "movementCells": 8,
+      "skillCells": 12,
+      "idle": [
+        "idle_south-east_6",
+        "idle_south-east_8"
+      ],
+      "attack": "attack_north-east_1",
+      "passed": true
+    },
+    {
+      "slug": "celular-alcance",
+      "scenario": "biblioteca-do-crepusculo",
+      "revision": 107,
+      "commands": 6,
+      "units": 7,
+      "width": 900,
+      "height": 1080,
+      "movementCells": 7,
+      "skillCells": 10,
+      "idle": [
+        "idle_south-east_6",
+        "idle_south-east_8"
+      ],
+      "attack": "attack_north-east_1",
+      "passed": true
+    },
+    {
+      "slug": "pc-animacao",
+      "scenario": "ninho-do-eclipse",
+      "revision": 114,
+      "commands": 6,
+      "units": 7,
+      "width": 1600,
+      "height": 900,
+      "movementCells": 9,
+      "skillCells": 13,
+      "idle": [
+        "idle_south-east_6",
+        "idle_south-east_8"
+      ],
+      "attack": "attack_north-east_1",
+      "passed": true
+    }
+  ],
+  "build": {
+    "target": "StandaloneWindows64",
+    "development": true,
+    "scriptsOnly": true,
+    "passed": true
+  },
+  "caveats": [
+    "Portrait is Windows rendering (900x1080), not Android device QA.",
+    "Native FBX has procedural transform feedback, no skeletal rig.",
+    "AQ reference research does not automatically import game rules or licensed assets.",
+    "Online multiplayer/invites/cloud saves remain outside this completed feedback patch."
+  ],
+  "sourceFiles": [
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonActionRange.cs",
+      "sha256": "7188e75a0042d493834301a010ca61eb0460ea67e4d14514110890f52ff11175"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonActionRange.cs.meta",
+      "sha256": "1829205c2b54071b37e022e3b36b02d73f9a4cf3f56034596a0dfc99765cc1df"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonActorAnimation.cs",
+      "sha256": "70bb4d3b862a9626f3973464211e2f739e97beeb7b15c3cb4ee0897a680b8f9e"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonActorAnimation.cs.meta",
+      "sha256": "841e72fd7f268133b6fd35af5dd070cee256db0dd80bc943a03a2881dfe056a1"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonAudio.cs",
+      "sha256": "8f3b39b9a54f126b761934ccc1529ef1528dca986a769da3d3e6e89e2270d3cf"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonAudio.cs.meta",
+      "sha256": "e26aef02a17e3012dc74ed7b06bb78986f67bf62054a657882e2c6bc87d90135"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonBDX.Runtime.asmdef",
+      "sha256": "94b757ca5f13efd9a5bffc394dc23fd57e46cdd28174170586a8fa354e1ea963"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonCameraInput.cs",
+      "sha256": "e4f76781e9224fc9e238d554636b24f0327279e3f78eac39656bc3166f6e5812"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonCameraInput.cs.meta",
+      "sha256": "052fb923bde3b1bfaff1c9959962b1ea414d7951e780b857f6b36c8de3dd6170"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonExpedition.cs",
+      "sha256": "636bf87003d302c43ba20884d6b2c256706cd0a8c3d17f9a4528099df3383e85"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonExpedition.cs.meta",
+      "sha256": "f8ff3f779a3d1abf51df483899f25e420afdbd979608a90952801cadf3028235"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonHeroCatalog.cs",
+      "sha256": "2afa39119e8e06343e0bfcb1a9beda7d3efa1fd2cae4e5f398767b761628ddda"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonHeroCatalog.cs.meta",
+      "sha256": "415fe6c82a37c2b02b07d46849cf4e05b1af35ee8f1a30060b05a1974d09534e"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonMotion.cs",
+      "sha256": "7144252a60e6090744f358ebe692ceb0c784a7f6a369aa75bec17fe857625d88"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonMotion.cs.meta",
+      "sha256": "32c07d24772bd416047dcb9745b2b51b55a1c1d5816f73e2e288d6bfb492f0ba"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonOnlinePanel.cs",
+      "sha256": "9c52f54d8aa287c6e78a2394875eb2c7dcd41e92bf5aad650fc56f97bc78c3a2"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonOnlinePanel.cs.meta",
+      "sha256": "937c497649309acdb11c8fc7ef8f09742eee63fab33b327a95a5850623ea2ea6"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonPresentationSmoke.cs",
+      "sha256": "d9032d621e4732e9eefc4014e10d1a2da51fb6c8e1caf8561e41ccbda0727ec5"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonPresentationSmoke.cs.meta",
+      "sha256": "6edb300583a0d3203c48062127a7f49cd272e00c3eaad893f687b31cf6f89127"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonProfiles.cs",
+      "sha256": "dc33f87664737107d52991de377f50f8e5ea2f225b03f47d264205053a90e7db"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonProfiles.cs.meta",
+      "sha256": "7c9b2e0f0c0467376368b0711b30a7ca5645d38c62890d2ae31bc93b6cc34ecf"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonSetup.cs",
+      "sha256": "befbc739661647ef472f504ebb1bc40aa7e42cee8026fc292fbcf768c5f5bba1"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonSetup.cs.meta",
+      "sha256": "a55cedb594dc19b73eb9ab4298172514bfe32802fa55e1018af138cb7d7ab263"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonShell.cs",
+      "sha256": "94628084d7ec4ebe32f1bf3737b46768e133f59942e63f7a8b310dd0ecb568ee"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonShell.cs.meta",
+      "sha256": "5ea1062f5ad82068562609c17ccbc4cd2ccb90155979ab6ce3fbf26b94ae2218"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonTactics.cs",
+      "sha256": "d3a489f06df2cb67bb92d64665cc603f4a1f6d355d86c138a6c1eeab186517aa"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonTactics.cs.meta",
+      "sha256": "6280de7884c8746c082cfe1b5f17cec3a0b257d28310aa4a256290be72a3007e"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonWorldView.cs",
+      "sha256": "422a582d074d06c7e0347d1edba80640065dae8709cbb28b975ba41ce89776b0"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Runtime/DungeonWorldView.cs.meta",
+      "sha256": "41b04780477cc5cba4f5dd3bb000c73dd28b6f96f67d2a7f443ce663b74a8c28"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Tests/Editor/DungeonActorAnimationTests.cs",
+      "sha256": "57b2e493ed9f7ae774fbc1b6e3f3a89287eec5efce64675551bb71acc503f231"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Tests/Editor/DungeonActorAnimationTests.cs.meta",
+      "sha256": "f972bdd96a8a4959c8fe0ebbc1fde50c41e960ca37d222705031d9432e73bf45"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Tests/Editor/DungeonBDX.Tests.asmdef",
+      "sha256": "d6cf4a3d0add7e2244afe05602e7e289c67c849f35e5a97a3dfa0055a1d6924b"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Tests/Editor/DungeonCameraRangeTests.cs",
+      "sha256": "cffe93649def6b9a14bee781ae1c832f61a65e91c79041c64fd0f1d566ce6d5a"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Tests/Editor/DungeonCameraRangeTests.cs.meta",
+      "sha256": "64b4573100bc8b3ac2c5a0460f3df7edf1bd92727c812ee50dfc5171a033c52f"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Tests/Editor/DungeonExpeditionTests.cs",
+      "sha256": "6ac049c9032afed048520dcfdd8ec653493cd1b7c6a3cd88823d1c4326e55c00"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Tests/Editor/DungeonExpeditionTests.cs.meta",
+      "sha256": "eb33674b988e201915c88e685e306603901ea5c22e7818c940c60efee7ebfa0b"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Tests/Editor/DungeonSetupTests.cs",
+      "sha256": "423a597cc1467fb9aad61e3155daa2180ce93065bc9b38cf87d9d29caaf49584"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Tests/Editor/DungeonSetupTests.cs.meta",
+      "sha256": "b72d5b1d54b01288d5ede190e1d384d410e37e73c619bc74efcae379442c2fef"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Tests/Editor/DungeonTacticsTests.cs",
+      "sha256": "f7014b39d3185f3af15581633e541017123fded16335b615a5fd2344e05367a0"
+    },
+    {
+      "path": "ArenaTaticaUnity/Assets/DungeonBDX/Tests/Editor/DungeonTacticsTests.cs.meta",
+      "sha256": "da043345b3cc14c7360de598d52fbe4e056500ae1ed4d6d55a7b99fc07b1c218"
+    }
+  ]
+}
