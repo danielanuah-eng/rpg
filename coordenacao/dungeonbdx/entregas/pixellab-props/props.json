@@ -1,0 +1,134 @@
+{
+ "object_id": "d33c8639-c6b7-4523-aa1c-97c4ff25cc58",
+ "canvas": 80,
+ "props": {
+  "tree": {
+   "fonte": "00-tree.png",
+   "size": [
+    76,
+    78
+   ],
+   "sha256": "766734ccf28e60a4e4a0c32ba0f25239d387b2a6cab2ae40e44c70c5c1c94f33"
+  },
+  "pine": {
+   "fonte": "01-pine.png",
+   "size": [
+    60,
+    79
+   ],
+   "sha256": "cb20680ab25a305b125a4216be883211e7c3b217d0ec51b6cf4f0eca7c79035e"
+  },
+  "deadtree": {
+   "fonte": "02-deadtree.png",
+   "size": [
+    64,
+    79
+   ],
+   "sha256": "5a6f7d40973ff4ee8f1642c2c6b71dd64ac11f21fa431c386c46eab39e03e364"
+  },
+  "bush": {
+   "fonte": "03-bush.png",
+   "size": [
+    50,
+    40
+   ],
+   "sha256": "672be97ea4b025ce38796ea638218c00260baa8e8d6261e1d8e5e86f0c448a98"
+  },
+  "barrels": {
+   "fonte": "04-barrels.png",
+   "size": [
+    64,
+    61
+   ],
+   "sha256": "7493ef6190da750d625a0743c48004d5cc66522f09a6f4d6fcccce3e312bac38"
+  },
+  "table": {
+   "fonte": "05-table.png",
+   "size": [
+    63,
+    54
+   ],
+   "sha256": "77551c78e86833f3a05b487cf2c5fdc42edbdb6198bc71bd9f3306101be88b8d"
+  },
+  "chest": {
+   "fonte": "06-chest.png",
+   "size": [
+    58,
+    59
+   ],
+   "sha256": "ef2fc6607a7f3e8362491453e321e217ff92347764aa12f0c771abe8903ba95f"
+  },
+  "sarcophagus": {
+   "fonte": "07-sarcophagus.png",
+   "size": [
+    74,
+    65
+   ],
+   "sha256": "30783028a9cea15c3bd15147aca1aa57447696b5b90f7c242170207980c06467"
+  },
+  "statue": {
+   "fonte": "08-statue.png",
+   "size": [
+    36,
+    78
+   ],
+   "sha256": "be7041e6d1e328b521a189bdfb25e848c92d988905afc3c23c8de52431c8e397"
+  },
+  "fountain": {
+   "fonte": "09-fountain.png",
+   "size": [
+    72,
+    64
+   ],
+   "sha256": "4a8b1df84df9dc60159ea5404662b760f9152619027fcbcf455b797bb10a40a7"
+  },
+  "crates": {
+   "fonte": "10-crates.png",
+   "size": [
+    74,
+    71
+   ],
+   "sha256": "4910adb90daeb1dff938456e41b6272a3218b1d4e51f2845076858d6d872ba0d"
+  },
+  "weapons": {
+   "fonte": "11-weapons.png",
+   "size": [
+    72,
+    78
+   ],
+   "sha256": "a7bfa27c02ad32045deb2f26bf80d99412a5e2bddadfc92a1807173f1663f902"
+  },
+  "candles": {
+   "fonte": "12-candles.png",
+   "size": [
+    38,
+    72
+   ],
+   "sha256": "8e9e002cc66364749333bdadfd631241013c6aa0a1134d2cb256e32b61ac9371"
+  },
+  "pillar": {
+   "fonte": "13-pillar.png",
+   "size": [
+    61,
+    70
+   ],
+   "sha256": "b3b95a4be0aabfb3774c56b1d944639fc92cfbebd274923ad1661fb7f3e41343"
+  },
+  "bones": {
+   "fonte": "14-bones.png",
+   "size": [
+    76,
+    44
+   ],
+   "sha256": "8a4f4103a43bc14a193e41194b15df31c8c729d9a392be55c8e68db31a61245a"
+  },
+  "mushrooms": {
+   "fonte": "15-mushrooms.png",
+   "size": [
+    47,
+    53
+   ],
+   "sha256": "dc444ac813695ee88f8a48706c8d5e669ed803f80beb859556df54bc43dba147"
+  }
+ }
+}

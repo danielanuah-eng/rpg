@@ -1,0 +1,43 @@
+{
+ "origem": "PixelLab create_ui_asset 72fc636d-a4f2-417f-af47-3294df6914fd",
+ "pecas": {
+  "tab": [
+   181,
+   190,
+   332,
+   235
+  ],
+  "slot": [
+   16,
+   258,
+   73,
+   315
+  ],
+  "medallion": [
+   16,
+   400,
+   89,
+   473
+  ],
+  "plaque": [
+   326,
+   330,
+   497,
+   375
+  ]
+ },
+ "barra": [
+  96,
+  447,
+  416,
+  481
+ ],
+ "sha256": {
+  "tab": "394d958cabacee5077aa00cd805ee6c49b3fec26872624dd3c1d82da74bdb091",
+  "slot": "d7c0e9e0835e9125407949c5d23398539667ce5807d4ebe935318d6b4804088a",
+  "medallion": "89b145d4264646e8f5ae00728a7197d43cfa47092d8ff3cdb19e01ec923c4b4e",
+  "plaque": "1e45f58d2f071dc978a49ac3310e359b727c444ee2e4d72d309b7d9885c416a6",
+  "bar-frame": "5a8a1325e7c7f5e7888258226ace7ebaf8103d18507882672c38a8c640f949d9",
+  "bar-fill": "e707100a97857d6fe24c176e35a74e27460d7fcc170f44c9d3e3e0c3c2bd9123"
+ }
+}

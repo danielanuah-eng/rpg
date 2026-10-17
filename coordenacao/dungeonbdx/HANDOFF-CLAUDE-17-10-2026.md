@@ -13,9 +13,16 @@
   - Novos testes `AqMapTests`: elenco de 14 e Jack fora dos inimigos; lacaios variam por capítulo e chefes têm arte carregável.
 - Verificação: EditMode **372/372**; build Windows ok (o build aplica `EnsureSprites` e grava os `.meta`); capturas em `entregas/08-configuracao-arcadia/` com probes `passed:true` (conferidas visualmente).
 
+## Commit seguinte: UI e props PixelLab (autor: "UI primeiro, sobra para animações"; "props batendo no muro, mais props")
+- Props: `AqBoardView.PropAnchor(board, cell, metade)` encosta o prop no lado aberto da casa; com parede, `deslocamento + metade ≤ .38` (a parede entra .105). Arte PixelLab em `Iso/Props/<id>.png` (outdoor/indoor: tree, pine, deadtree, bush, barrels, table, chest, sarcophagus, statue, fountain, crates, weapons, candles, pillar, bones, mushrooms) vira billboard com altura por `PropHeights` e largura máx. .72; sem arte, fica o primitivo 3D antigo. `AqBoard.Deco()` espalha cenário extra (sem efeito de regra). Fonte e recorte: `entregas/pixellab-props/` (`recortar.py`).
+- UI: `entregas/pixellab-ui/kit2/` (kit 72fc636d) → `Iso/UI/tab|bar-frame|bar-fill|slot|medallion|plaque.png`. `AqUi.Tab` (abas do menu), `AqUi.LifeBar` (cartões de herói do HUD), `AqUi.Icon` (64 ícones 40 px em `Iso/UI/Icons/<nome>.png`, lista em `entregas/pixellab-ui/icones/icones.json` e `prancha.png`; usados em ações, VIDA/SOM/MENU e câmera).
+- Testes `Tests/Editor/AqPropArtTests.cs`. EditMode 374/374, build ok, capturas ok.
+- PixelLab: **66 gerações** até 10/11 (gasto: props 15, ícones 15, kit UI 25). **Se acabar: Canva** para imagens, textos e fontes (decisão do autor 17/10; conector Canva precisa de autorização em claude.ai).
+
 ## Pendente
-1. **Perguntar ao autor** como gastar as ~113 gerações PixelLab que restam até 10/11 (caminhada 4 diagonais ≈ 12/personagem; conjunto completo ≈ 45): animar chefes x lacaios x UI (aba, barra de vida, ícones de ação que faltam).
-2. Mais vilões/lacaios (autor quer muito mais; 4 níveis do Arcadia Quest: lacaio menor/maior, vilão menor/maior + dragões).
+1. Gastar as 66 gerações restantes em animações (caminhada dos chefes/lacaios ≈ 12 cada).
+2. Ícones ainda não usados (moedas, emblema, relíquia, pista, cativo, ritual, portal, tesouro, missão, dado, caveira, coroa…) podem entrar nos marcadores do placar/missões.
+3. Mais vilões/lacaios (autor quer muito mais; 4 níveis do Arcadia Quest: lacaio menor/maior, vilão menor/maior + dragões).
 3. Modo DungeonBDX clássico (`DungeonExpedition.cs:98`, `DungeonHeroProfiles`) ainda usa ids antigos como inimigos/arquétipos — não tocado.
 
 ## Fatos operacionais

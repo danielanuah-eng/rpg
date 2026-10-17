@@ -113,9 +113,9 @@ namespace DungeonBDX
             var header=AqUi.Box(safe,"Header",0,.925f,1,.075f,AqUi.Panel);
             AqUi.Text(header,Session.Scenario.Name,.02f,.37f,.62f,.58f,portrait?21:28,AqUi.Gold);
             AqUi.Text(header,$"GUILDA {Session.CurrentGuild+1} · TURNO {Session.Turn} · {Session.Guilds[Session.CurrentGuild].Coins} MOEDAS · "+(SavePaused?"SAVE PENDENTE":"SALVO"),.02f,.02f,.72f,.36f,14,AqUi.Muted);
-            AqUi.Button(header,"MENU",.86f,.12f,.13f,.76f,Close);
-            AqUi.Button(header,muted?"SOM OFF":"SOM",.735f,.12f,.12f,.76f,()=>{muted=!muted;music.mute=sfx.mute=muted;Draw();});
-            AqUi.Button(header,AqBoardView.ShowLife?"VIDA":"VIDA OFF",.645f,.2f,.08f,.6f,()=>{AqBoardView.ShowLife=!AqBoardView.ShowLife;view?.RefreshLife();Draw();});
+            AqUi.Icon(AqUi.Button(header,"MENU",.86f,.12f,.13f,.76f,Close),"menu");
+            AqUi.Icon(AqUi.Button(header,muted?"SOM OFF":"SOM",.735f,.12f,.12f,.76f,()=>{muted=!muted;music.mute=sfx.mute=muted;Draw();}),"sound");
+            AqUi.Icon(AqUi.Button(header,AqBoardView.ShowLife?"VIDA":"VIDA OFF",.645f,.2f,.08f,.6f,()=>{AqBoardView.ShowLife=!AqBoardView.ShowLife;view?.RefreshLife();Draw();}),"life");
             var quests=AqUi.Box(safe,"Quest strip",0,.88f,1,.045f,new Color(.12f,.14f,.15f,.97f));
             string progress=string.Join("  |  ",Session.Guilds.Select(g=>$"G{g.Index+1}: {g.Completed.Count}/{(Session.Guilds.Count==2?2:3)}"));
             AqUi.Text(quests,progress+"    ·    "+Session.Scenario.Quests[0]+" / "+Session.Scenario.Quests[1],.02f,.03f,.96f,.94f,15);
@@ -133,7 +133,8 @@ namespace DungeonBDX
                     :AqUi.Button(foot,"",heroArea.x,heroArea.y+(2-i)*heroArea.height/3,heroArea.width,heroArea.height/3-.02f,()=>Select(u.Id),selected==u.Id);
                 AqUi.Portrait(b.transform,u.HeroId,.02f,.03f,portrait?.21f:.16f,.94f);
                 AqUi.Text(b.transform,portrait?u.Name+"\n"+(u.Alive?$"VIDA {u.Health}/{u.MaxHealth} · DEF {u.Defense}":"CAÍDO · DESCANSE"):u.Name+"   "+(u.Alive?$"{u.Health}/{u.MaxHealth} · DEF {u.Defense}":"CAÍDO"),
-                    portrait?.25f:.2f,.08f,portrait?.72f:.78f,.84f,portrait?16:15,u.Alive?AqUi.Ink:AqUi.Muted);
+                    portrait?.25f:.2f,.36f,portrait?.72f:.78f,.6f,portrait?16:15,u.Alive?AqUi.Ink:AqUi.Muted);
+                if(u.Alive)AqUi.LifeBar(b.transform,portrait?.25f:.2f,.1f,portrait?.6f:.5f,.24f,u.Health,u.MaxHealth);
             }
             var hero=Session.Unit(selected);string ability=hero.AbilityText.Split(':')[0];
             string state=Session.Reaction!=null?$"GUILDA {Session.Controller+1}: REAÇÃO DE {Session.Unit(Session.Reaction.Monster).Name.ToUpperInvariant()} · MOV {Session.Reaction.Movement}":
@@ -147,34 +148,34 @@ namespace DungeonBDX
                 b.interactable=g!=null&&Session.Reaction==null&&(!g.Exhausted||Session.Resting);
             }
             // Actions: one row in portrait; a 3 + 2 grid on PC.
-            void Act(int slot,int count,int row,string text,Action click,bool on=false,bool enabled=true)
+            void Act(int slot,int count,int row,string text,Action click,bool on=false,bool enabled=true,string icon=null)
             {
                 float w=actionArea.width/count,h=portrait?actionArea.height:actionArea.height/2;
                 float y=portrait?actionArea.y:actionArea.y+(1-row)*h;
-                AqUi.Button(foot,text,actionArea.x+slot*w,y,w-.004f,h-.02f,click,on).interactable=enabled;
+                var act=AqUi.Button(foot,text,actionArea.x+slot*w,y,w-.004f,h-.02f,click,on);act.interactable=enabled;if(icon!=null)AqUi.Icon(act,icon);
             }
             if(Session.Reaction!=null)
             {
                 int n=portrait?4:2;
-                Act(0,n,0,"MOVER MONSTRO",()=>{mode="move";Draw();});
-                Act(1,n,0,"PORTA",()=>{mode="door";Draw();});
-                Act(portrait?2:0,n,portrait?0:1,"ATACAR HERÓI",()=>Do(new AqCommand("react-attack")));
-                Act(portrait?3:1,n,portrait?0:1,"ENCERRAR REAÇÃO",()=>Do(new AqCommand("react-skip")));
+                Act(0,n,0,"MOVER MONSTRO",()=>{mode="move";Draw();},icon:"claw");
+                Act(1,n,0,"PORTA",()=>{mode="door";Draw();},icon:"door");
+                Act(portrait?2:0,n,portrait?0:1,"ATACAR HERÓI",()=>Do(new AqCommand("react-attack")),icon:"sword");
+                Act(portrait?3:1,n,portrait?0:1,"ENCERRAR REAÇÃO",()=>Do(new AqCommand("react-skip")),icon:"skip");
             }
             else
             {
                 int top=portrait?5:3,low=portrait?5:2;
-                Act(0,top,0,"MOVER",()=>{mode="move";Draw();},mode=="move");
-                Act(1,top,0,"PORTA",()=>{mode="door";Draw();});
-                Act(2,top,0,hero.Ability=="arsenal"?"FORMA":hero.Ability=="phase"?"PASSO SOMBRIO":"HABILIDADE",()=>{if(hero.Ability=="arsenal")Do(new AqCommand("stance",selected));else if(hero.Ability=="phase"){mode="phase";Draw();}else {Message=hero.AbilityText;Draw();}});
-                Act(portrait?3:0,low,portrait?0:1,Session.Resting?"DESCANSANDO":"DESCANSAR",()=>Do(new AqCommand("rest")),false,!Session.Resting&&Session.ActiveId<0);
-                Act(portrait?4:1,low,portrait?0:1,"ENCERRAR TURNO",()=>Do(new AqCommand("end")));
+                Act(0,top,0,"MOVER",()=>{mode="move";Draw();},mode=="move",icon:"move");
+                Act(1,top,0,"PORTA",()=>{mode="door";Draw();},icon:"door");
+                Act(2,top,0,hero.Ability=="arsenal"?"FORMA":hero.Ability=="phase"?"PASSO SOMBRIO":"HABILIDADE",()=>{if(hero.Ability=="arsenal")Do(new AqCommand("stance",selected));else if(hero.Ability=="phase"){mode="phase";Draw();}else {Message=hero.AbilityText;Draw();}},icon:"ability");
+                Act(portrait?3:0,low,portrait?0:1,Session.Resting?"DESCANSANDO":"DESCANSAR",()=>Do(new AqCommand("rest")),false,!Session.Resting&&Session.ActiveId<0,"rest");
+                Act(portrait?4:1,low,portrait?0:1,"ENCERRAR TURNO",()=>Do(new AqCommand("end")),icon:"endturn");
             }
             // Camera column at the right edge of the table area.
             float colX=portrait?.89f:.935f,colW=portrait?.1f:.055f,step=portrait?.055f:.08f,colY=footerHeight+.07f;
-            string[] camLabels={"GIRAR <","GIRAR >","ZOOM +","ZOOM -","REPOR"};
+            string[] camLabels={"GIRAR","GIRAR","ZOOM","ZOOM","REPOR"},camIcons={"rotate-left","rotate-right","zoom-in","zoom-out","reset"};
             Action[] camActions={()=>view.RotateCamera(-90),()=>view.RotateCamera(90),()=>view.ZoomCamera(1.2f),()=>view.ZoomCamera(1/1.2f),view.ResetCamera};
-            for(int i=0;i<camLabels.Length;i++)AqUi.Button(safe,camLabels[i],colX,colY+(camLabels.Length-1-i)*step,colW,step-.008f,camActions[i]);
+            for(int i=0;i<camLabels.Length;i++)AqUi.Icon(AqUi.Button(safe,camLabels[i],colX,colY+(camLabels.Length-1-i)*step,colW,step-.008f,camActions[i]),camIcons[i]);
             if(SavePaused)AqUi.Button(header,"TENTAR SALVAR",.55f,.12f,.17f,.76f,SavePending);
             var hint=AqUi.Box(safe,"Board hint",portrait?.5f:.6f,footerHeight+.005f,portrait?.48f:.32f,.035f,Color.clear);
             AqUi.Text(hint,mode=="attack"?"DISTÂNCIA NAS CASAS · CLIQUE EM UM ALVO":mode=="door"?"CLIQUE NO ESPAÇO DO OUTRO LADO DA PORTA":"CLIQUE NO TABULEIRO PARA AGIR",0,0,1,1,13,AqUi.Muted,TextAlignmentOptions.Right);

@@ -140,11 +140,11 @@ namespace DungeonBDX.Arcadia
             Room(s,"Arquivo",2,8,2,8,"wood","books");Room(s,"Observatório",4,8,5,8,"marble","table");
             Room(s,"Santuário",6,8,6,8,"marble","statue");Room(s,"Taverna",8,7,8,8,"wood","barrels");
             Room(s,"Oficina",0,6,0,7,"wood","table");Room(s,"Guilda do Sol",1,6,2,6,"terracotta","");
-            Room(s,"Fonte",3,6,3,6,"marble","fountain");Room(s,"Torre",5,6,5,6,"marble","statue");
-            Room(s,"Guilda da Lua",6,6,7,6,"terracotta","");Room(s,"Alquimia",0,5,0,5,"mosaic","books");
-            Room(s,"Arsenal",2,5,2,5,"wood","barrels");Room(s,"Salão",3,5,5,5,"marble","table");
-            Room(s,"Mercado",6,5,7,5,"mosaic","table");Room(s,"Passagem",4,4,4,4,"wood","");
-            Room(s,"Relicário",0,3,0,3,"mosaic","statue");Room(s,"Biblioteca",2,3,2,3,"wood","books");
+            Room(s,"Fonte",3,6,3,6,"marble","fountain");Room(s,"Torre",5,6,5,6,"marble","pillar");
+            Room(s,"Guilda da Lua",6,6,7,6,"terracotta","");Room(s,"Alquimia",0,5,0,5,"mosaic","mushrooms");
+            Room(s,"Arsenal",2,5,2,5,"wood","weapons");Room(s,"Salão",3,5,5,5,"marble","table");
+            Room(s,"Mercado",6,5,7,5,"mosaic","crates");Room(s,"Passagem",4,4,4,4,"wood","");
+            Room(s,"Relicário",0,3,0,3,"mosaic","candles");Room(s,"Biblioteca",2,3,2,3,"wood","books");
             Room(s,"Cripta",3,3,5,3,"mosaic","sarcophagus");Room(s,"Ritual",6,3,7,3,"marble","rune");
             Room(s,"Laboratório",0,1,0,2,"wood","books");Room(s,"Guilda da Rosa",1,2,2,2,"terracotta","");
             Room(s,"Memorial",3,2,3,2,"marble","statue");Room(s,"Despensa",5,2,5,2,"wood","barrels");
@@ -245,6 +245,7 @@ namespace DungeonBDX.Arcadia
             s.Board.Space(new AqCell(4,4)).Prop="rune";
             foreach(var c in new[]{new AqCell(0,4),new AqCell(8,4),new AqCell(4,8),new AqCell(4,0)})Token(s,"emblem",c.X,c.Y,"gold");
             foreach(var c in new[]{new AqCell(2,2),new AqCell(6,2),new AqCell(2,6),new AqCell(6,6)})Token(s,"portal",c.X,c.Y);
+            Deco(s,"tree",2,0);Deco(s,"tree",6,8);Deco(s,"bush",0,6);Deco(s,"bush",8,2);Deco(s,"pillar",3,3);Deco(s,"pillar",5,5);
             Token(s,"portal",0,4,"violet");Token(s,"portal",8,4,"violet");
             foreach(var c in new[]{new AqCell(1,3),new AqCell(7,3),new AqCell(3,7),new AqCell(3,1)})Monster(s,c.X,c.Y);
             foreach(var c in new[]{new AqCell(1,5),new AqCell(7,5),new AqCell(5,7),new AqCell(5,1)})Monster(s,c.X,c.Y,true);
@@ -258,8 +259,9 @@ namespace DungeonBDX.Arcadia
             CornerGuilds(s,"wood");
             // Four crypt wings and a gated ritual chamber create short dangerous routes and a safe outer loop.
             Room(s,"Cripta do Poente",0,3,2,5,"crypt","sarcophagus");Room(s,"Cripta da Aurora",6,3,8,5,"crypt","sarcophagus");
-            Room(s,"Arquivo dos Mortos",3,6,5,8,"wood","books");Room(s,"Santuário Submerso",3,0,5,2,"mosaic","statue");
+            Room(s,"Arquivo dos Mortos",3,6,5,8,"wood","books");Room(s,"Santuário Submerso",3,0,5,2,"mosaic","fountain");
             Room(s,"Câmara do Ritual",3,3,5,5,"mosaic","rune");
+            Deco(s,"bones",2,5);Deco(s,"candles",8,5);Deco(s,"mushrooms",6,5);Deco(s,"pillar",2,0);Deco(s,"deadtree",6,8);Deco(s,"statue",5,0);
             Door(s,2,4,3,4,false);Door(s,5,4,6,4,false);Door(s,4,5,4,6,false);Door(s,4,2,4,3,false);
             Door(s,0,5,0,6,true);Door(s,8,3,8,2,true);Door(s,5,7,6,7,true);Door(s,3,1,2,1,true);
             Token(s,"captive",0,4,"gold");Token(s,"captive",8,4,"gold");
@@ -271,6 +273,8 @@ namespace DungeonBDX.Arcadia
             Boss(s,"necromante-cripta","Necromante da Cripta",3,5,true);Boss(s,"conde-vesperal","Conde Vesperal",5,3);
             foreach(var c in new[]{new AqCell(0,6),new AqCell(8,2),new AqCell(2,8),new AqCell(6,0),new AqCell(4,4),new AqCell(0,2),new AqCell(8,6)})Token(s,"explore",c.X,c.Y);
         }
+        // Extra scenery only: never replaces a room prop and has no rule effect.
+        static void Deco(AqScenario s,string prop,int x,int y){var p=s.Board.Space(new AqCell(x,y));if(string.IsNullOrEmpty(p.Prop))p.Prop=prop;}
         static void Door(AqScenario s,int x,int y,int xx,int yy,bool open)=>s.Board.SetEdge(new AqCell(x,y),new AqCell(xx,yy),true,open);
         static void Room(AqScenario s,string name,int x0,int y0,int x1,int y1,string surface,string prop)
         {

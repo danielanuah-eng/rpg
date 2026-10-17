@@ -1,0 +1,262 @@
+{
+ "object_id": "e9d1f52e-ea51-4490-bac1-7f4df521f89f",
+ "size": 40,
+ "icons": {
+  "move": {
+   "frame": 0,
+   "sha256": "90dad280a0632b57f90ee7f054153d47eba9e71c8c2700ff8f7e947cabb42711"
+  },
+  "door": {
+   "frame": 1,
+   "sha256": "3bbbd4d26d4d3dff778ac37bdb6dcf64410679a5c7ae395d29e2c1ccd914ccc4"
+  },
+  "ability": {
+   "frame": 2,
+   "sha256": "7101efef873d230a7b2e31136eaca1614d3e1c08204c13e2dba5bced5f46b741"
+  },
+  "rest": {
+   "frame": 3,
+   "sha256": "048350c18edadc9f8a4cd6c39939966ba6d954f8c216e46eca7368991b6dfc43"
+  },
+  "endturn": {
+   "frame": 4,
+   "sha256": "681865626d2caeebdd3f6244650a8ff0b2d8419899e16471a1ea818db5ae44c3"
+  },
+  "sword": {
+   "frame": 5,
+   "sha256": "12bd37b410550b8c5a34b5ec2034067c7dc4404c12c3782e77b338da0a414019"
+  },
+  "bow": {
+   "frame": 6,
+   "sha256": "81b0371fe6e32fca86dcf18f8549d1a5be486de9f48110f9cc0113f1dc4e4be2"
+  },
+  "claw": {
+   "frame": 7,
+   "sha256": "b8d07ed0278270234a0ac40a9101a16721aef4720dc3d6e4a20ec08d9dc4a66e"
+  },
+  "skip": {
+   "frame": 8,
+   "sha256": "e4a55b944752758526f19c9e48407de9ee7a280545f933ff259531b3260dd75a"
+  },
+  "rotate-left": {
+   "frame": 9,
+   "sha256": "7630c5b5b0e436f6417abf6bc77cdd1d2a0b6d90f603d3bff1f8e7ffdc254ab7"
+  },
+  "rotate-right": {
+   "frame": 10,
+   "sha256": "599d5c7233afb05d10b0faf9782c806e292a07ff0d0297a25853ff17bba84fb8"
+  },
+  "zoom-in": {
+   "frame": 11,
+   "sha256": "6845fe0ac0c29145cc96bd69fe8a816473fbd6157601639a50166c4c944b7b1c"
+  },
+  "zoom-out": {
+   "frame": 12,
+   "sha256": "57c3fbddd42975ea1befe878f371cd7367b3619bbd5480b45c93e0424a0f2cdb"
+  },
+  "reset": {
+   "frame": 13,
+   "sha256": "ddf9ea80a55e9409694b43b3eecdda8d4327f18f1c88e3b0d89d5587a1b5004d"
+  },
+  "menu": {
+   "frame": 14,
+   "sha256": "cdaef140c666a5da8f5cbe3caa15a0c398a5aeff69227eb63cffb1b67312826b"
+  },
+  "sound": {
+   "frame": 15,
+   "sha256": "38e9bc66326d3ef301554044ad7a57b11b714e79a0d002b1d6ebfa2a52ddbd37"
+  },
+  "life": {
+   "frame": 16,
+   "sha256": "076ba83b09711731475f26ac94d78110d3382d5ba379f54f06a9c09fd4bcc849"
+  },
+  "defense": {
+   "frame": 17,
+   "sha256": "b43a3aa14bfdcf38417df408e9a1f03144ae5b5f39e5dcdcb9a15fafaee111a0"
+  },
+  "die": {
+   "frame": 18,
+   "sha256": "3100e8f6772461025d37f48f3ba17bb4ee9f5a771d2f8e7299e5ab9d7305a6cf"
+  },
+  "coin": {
+   "frame": 19,
+   "sha256": "e0e023fbdb6d56e036411180dd5778e667fd79210bd9a85a97e5033a74db6c44"
+  },
+  "emblem": {
+   "frame": 20,
+   "sha256": "6bb57d8a245f88db52c38774aa6034372a50f0e5b530ae5bf9f8add7cbfa6b33"
+  },
+  "relic": {
+   "frame": 21,
+   "sha256": "81b008b84a8a1aa3d668e9f96ab08d9ecd6fa4fc25fa18d69a7edf56856fba64"
+  },
+  "clue": {
+   "frame": 22,
+   "sha256": "917a90d0380b5ee3f53bf1e2e2727f973108c9fa4393f3aa6ec481a38c2f9424"
+  },
+  "captive": {
+   "frame": 23,
+   "sha256": "7f65eb7c802ed3a6db6c21556ba4827ab7c0870805cf91971bece0b617dd86ea"
+  },
+  "ritual": {
+   "frame": 24,
+   "sha256": "113a38c0df2390a642ea7bd13379b395e906cf2a44f89cb2e7a51ba98457130a"
+  },
+  "portal": {
+   "frame": 25,
+   "sha256": "ce2104f6c5a3b40b4ed292aee769b3f5ed5317b4d064247c763f4da3d39e2497"
+  },
+  "treasure": {
+   "frame": 26,
+   "sha256": "b32ce8a854c33b4f8d9662ab410c8822218505bd6ec03f28361f3b65191cd803"
+  },
+  "quest": {
+   "frame": 27,
+   "sha256": "99bf71fd6a5626c777d4b287b2687ba53022b30db026bd36063c4acb5db7380c"
+  },
+  "save": {
+   "frame": 28,
+   "sha256": "2808dafeeb48052d26fd9e1d41fc4b9705b9de1d4da0040826d320aab9460457"
+  },
+  "settings": {
+   "frame": 29,
+   "sha256": "a374848e86dba11fdb27ada3e284805ae791dec0f8ddfc9cbe66904b48c361e3"
+  },
+  "death": {
+   "frame": 30,
+   "sha256": "5065f8da96488caa94bd134e68d457f0eeb7715a62b7a852f96845ba1f355013"
+  },
+  "winner": {
+   "frame": 31,
+   "sha256": "926997287a3ed76ac5cc62760d65ef5aade7e75283c34d84cb97655f8a3cf34d"
+  },
+  "key": {
+   "frame": 32,
+   "sha256": "ea0321f37e7d965dda3b468bf977fcbe1bff0783419cc5acc7da8805ffb6fa06"
+  },
+  "potion-red": {
+   "frame": 33,
+   "sha256": "eee70f290b705da45344778c89f4d93f9b7b90b653243fc452f959be1858c102"
+  },
+  "potion-blue": {
+   "frame": 34,
+   "sha256": "f3843ae4c6bf4ada1b1adce15a5a1deabefe29e03196a31b4f07c5359bd7ee17"
+  },
+  "potion-green": {
+   "frame": 35,
+   "sha256": "3ba4a0ff187cdc87b22fb3c9290f02f84bbc119a6f2f2a02e0cb3812f9a66339"
+  },
+  "wand": {
+   "frame": 36,
+   "sha256": "1bae2fe23a1c3c3908482bfc1de6c0d11d6d86a9e259f2759c885cbf67ea805b"
+  },
+  "helmet": {
+   "frame": 37,
+   "sha256": "4e28c978e4561cf29ed22e119a3a81432cd09b267acb976687e7ed4065dcdfc3"
+  },
+  "coin-bag": {
+   "frame": 38,
+   "sha256": "6f7d2950bcb9ee06ef549ae6d696f067dddd8e80592208f033529050f66eefb1"
+  },
+  "compass": {
+   "frame": 39,
+   "sha256": "2bff43bd63fcbc4c9a652eaffef273a9c33775bf3b0c628979e27a381e62458c"
+  },
+  "map": {
+   "frame": 40,
+   "sha256": "f1ad5fc91e7ed3278f5160f045c92767797ea1d877286880261eaa76683ad7f7"
+  },
+  "anvil": {
+   "frame": 41,
+   "sha256": "dfda0bf41a1955517b9db0b74b2eedebf65d15c52529a050eae0b316a6187169"
+  },
+  "torch": {
+   "frame": 42,
+   "sha256": "53cd59ebb0569f366edee54b872132c0ecf913c1f8e78bc3463165097e8ba7eb"
+  },
+  "ring": {
+   "frame": 43,
+   "sha256": "cf6f2c2defb5d6173f8acdaa3de47f55c5cec81e3a4651d4a0f49441dc310b3a"
+  },
+  "meat": {
+   "frame": 44,
+   "sha256": "b4cfc1879b36b7ecd52fde94f54f44ca74d993089e1b8fdf1e662bcd743e4351"
+  },
+  "shield-wood": {
+   "frame": 45,
+   "sha256": "3209d328439a1c835a45b6bc179a5da0eccd0483e38afae77b0742f8d88805db"
+  },
+  "axe": {
+   "frame": 46,
+   "sha256": "f2fec8ccfea81cfeb1ecb312b422cb3c28cd858a990b0e499aea71df5edef6dd"
+  },
+  "amulet": {
+   "frame": 47,
+   "sha256": "02f6814f40367be535c8b1953773390a268bc668ded56dea7121fe6f91d71375"
+  },
+  "quill": {
+   "frame": 48,
+   "sha256": "03b39be463d6f9be851ca20d198b1a9e344afe3da8d901f9374958b4e385ebd7"
+  },
+  "orb": {
+   "frame": 49,
+   "sha256": "fadc00df4af44288ad18d2a1b890263c90c415252bd691960edf1e7bc881681e"
+  },
+  "dagger-poison": {
+   "frame": 50,
+   "sha256": "13a3feef545f055ea6b7496f769a1e65e9d68511cfbc627c259ebcb8c69a46cd"
+  },
+  "mace": {
+   "frame": 51,
+   "sha256": "5f4ae15eba7137a0fe56891efb8f358537dbe81e16ab4015d841d708240d8ec6"
+  },
+  "chalice": {
+   "frame": 52,
+   "sha256": "f94badf8c1d91c397b57258577d66f8e1b0601c875c2020751110fea8071c6df"
+  },
+  "rune-scroll": {
+   "frame": 53,
+   "sha256": "f6fefe6abdc77cb8e35b8a4c7eeba2acef4c3921853703a430e8f8ce866deeaa"
+  },
+  "hammer": {
+   "frame": 54,
+   "sha256": "ae7a8866eb838656c3120c4aaae1b0b84530085926f7f0fe1abef01e5625fd52"
+  },
+  "tent": {
+   "frame": 55,
+   "sha256": "04870c256227463eb32665dad5d8ae911437a2ecc7bae86739cd8c49b1d46b84"
+  },
+  "shovel": {
+   "frame": 56,
+   "sha256": "ed6a4521a25a1b8e2086ff6c67ae14a77975171ea84305ab9842a93740458bad"
+  },
+  "bell": {
+   "frame": 57,
+   "sha256": "00e9c7e41e19abfe5b7f248fdd619a60609ee70cd94c88ceb96f411fa3e52202"
+  },
+  "fish": {
+   "frame": 58,
+   "sha256": "871d572f74ba2ec6de3820fc5aa216b3fab51744b2410cc1c476d164e1841265"
+  },
+  "backpack": {
+   "frame": 59,
+   "sha256": "011f4365047da1ed200c0df82ca1751dedd9c1738c58020829c3ff3c4facf663"
+  },
+  "scales": {
+   "frame": 60,
+   "sha256": "0c2da3e0a029c7e2b639bdf242e6be4e6e177b79c2f2c075b27faf41eaf1b68e"
+  },
+  "spyglass": {
+   "frame": 61,
+   "sha256": "2dfd70cbf1967eb056879caee433d7defeba935c5354031c00bca3cc55b71338"
+  },
+  "bread": {
+   "frame": 62,
+   "sha256": "f9ed623e1a52d23acbe324bb736e99e617eee4b6852f3ef7cff9ec3d7f34bba3"
+  },
+  "trophy": {
+   "frame": 63,
+   "sha256": "7c280b5e9b4b813509e3f90b7d2067b05df382b71c0a036936970d5facf8e380"
+  }
+ }
+}

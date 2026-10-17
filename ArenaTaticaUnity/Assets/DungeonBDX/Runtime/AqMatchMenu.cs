@@ -46,6 +46,35 @@ namespace DungeonBDX
             else{motion.Configure(visual,Card,Teal);Box(visual,"Rule",0,0,1,.025f,selected?Gold:new Color(.34f,.31f,.25f));}
             Text(visual,text,.06f,.08f,.88f,.84f,18,Ink,TextAlignmentOptions.Center);return b;
         }
+        // PixelLab tab plaque (Iso/UI/tab); the chosen tab keeps full colour, the others are dimmed.
+        public static UnityEngine.UI.Button Tab(Transform parent,string text,float x,float y,float w,float h,Action click,bool selected)
+        {
+            var b=Button(parent,text,x,y,w,h,click,selected);var tab=Skin("tab");if(!tab)return b;
+            var face=(RectTransform)b.transform.Find("Face");var motion=b.GetComponent<DungeonMotion>();
+            Slice(face.GetComponent<UnityEngine.UI.Image>(),tab);motion.UseSprites(tab,tab,tab);
+            var dim=new Color(.6f,.56f,.52f);motion.Configure(face,dim,Color.white);face.GetComponent<UnityEngine.UI.Image>().color=selected?Color.white:dim;
+            return b;
+        }
+        // PixelLab life bar: frame (Iso/UI/bar-frame) with the red fill cut horizontally by health.
+        public static RectTransform LifeBar(Transform parent,float x,float y,float w,float h,int health,int max)
+        {
+            float amount=Mathf.Clamp01(health/(float)Mathf.Max(1,max));var frame=Skin("bar-frame");var fill=Skin("bar-fill");
+            var r=Box(parent,"Life bar",x,y,w,h,frame?Color.white:new Color(.17f,.09f,.12f));
+            if(frame){var i=r.GetComponent<UnityEngine.UI.Image>();i.sprite=frame;i.type=UnityEngine.UI.Image.Type.Simple;}
+            var f=Box(r,"Fill",0,0,1,1,fill?Color.white:new Color(.78f,.16f,.18f)).GetComponent<UnityEngine.UI.Image>();
+            if(fill){f.sprite=fill;f.type=UnityEngine.UI.Image.Type.Filled;f.fillMethod=UnityEngine.UI.Image.FillMethod.Horizontal;f.fillAmount=amount;}
+            else{var fr=f.rectTransform;fr.anchorMax=new Vector2(amount,1);}
+            return r;
+        }
+        // PixelLab action icon (Iso/UI/Icons/<id>) on the left of a button; the label moves right. No art: unchanged.
+        public static void Icon(UnityEngine.UI.Button button,string id)
+        {
+            var t=Resources.Load<Texture2D>("DungeonBDX/Iso/UI/Icons/"+id);if(!t||!button)return;
+            var face=button.transform.Find("Face");var label=face.GetComponentInChildren<TextMeshProUGUI>();
+            var icon=Box(face,"Icon "+id,.04f,.14f,.24f,.72f,Color.white).GetComponent<UnityEngine.UI.Image>();
+            icon.sprite=Sprite.Create(t,new Rect(0,0,t.width,t.height),new Vector2(.5f,.5f),100);icon.preserveAspect=true;
+            if(label){var lr=label.rectTransform;lr.anchorMin=new Vector2(.28f,lr.anchorMin.y);lr.anchorMax=new Vector2(.97f,lr.anchorMax.y);}
+        }
         // Delivered UI art (lote Tripo): 9-slice frames from Resources/DungeonBDX/Iso/UI; null keeps the flat look.
         static readonly System.Collections.Generic.Dictionary<string,Sprite> skins=new System.Collections.Generic.Dictionary<string,Sprite>();
         public static Sprite Skin(string id)
@@ -95,7 +124,7 @@ namespace DungeonBDX
             AqUi.Text(safe,"DUNGEON<size=75%>BDX</size>",.035f,.92f,.7f,.065f,39,AqUi.Gold);
             AqUi.Text(safe,"GUILDAS  /  AVENTURAS  /  RIVAIS",.04f,.885f,.8f,.04f,14,AqUi.Muted);
             string[] tabs={"adventures","heroes","rules"},labels={"AVENTURAS","GUILDAS & HERÓIS","REGRAS"};
-            for(int i=0;i<3;i++){string key=tabs[i];AqUi.Button(safe,labels[i],.03f+i*.315f,.805f,.31f,.072f,()=>{tab=key;Draw();},tab==key);}
+            for(int i=0;i<3;i++){string key=tabs[i];AqUi.Tab(safe,labels[i],.03f+i*.315f,.805f,.31f,.072f,()=>{tab=key;Draw();},tab==key);}
             body=AqUi.Box(safe,"Page",.03f,.17f,.94f,.62f,AqUi.Panel);
             if(tab=="adventures")Adventures(portrait);else if(tab=="heroes")Heroes(portrait);else Rules();
             var foot=AqUi.Box(safe,"Bottom controls",.03f,.025f,.94f,.13f,AqUi.Panel);

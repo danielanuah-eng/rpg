@@ -351,9 +351,63 @@ namespace DungeonBDX
             }
         }
 
+        // Half footprint of each prop on the floor (world units); billboards use half their drawn width.
+        static float PropHalf(string prop)
+        {
+            switch (prop)
+            {
+                case "table": case "fountain": case "sarcophagus": case "tree": case "rune": return .32f;
+                case "barrels": return .25f;
+                default: return .24f;
+            }
+        }
+
+        // PixelLab props (Iso/Props/<id>.png, trimmed, feet at the bottom): drawn at their world height,
+        // but never wider than .72 of a cell so the anchor can keep them off the walls.
+        static readonly Dictionary<string,float> PropHeights = new Dictionary<string,float> {
+            ["tree"]=1.3f, ["pine"]=1.3f, ["deadtree"]=1.2f, ["statue"]=1f, ["pillar"]=.85f, ["candles"]=.75f,
+            ["weapons"]=.7f, ["fountain"]=.6f, ["crates"]=.6f, ["barrels"]=.55f, ["table"]=.5f, ["sarcophagus"]=.5f,
+            ["chest"]=.45f, ["bush"]=.45f, ["mushrooms"]=.4f, ["bones"]=.3f };
+        public const float PropMaxWidth = .72f;
+
+        public static float PropPixelsPerUnit(string prop, Texture2D art)
+            => Mathf.Max(art.height/(PropHeights.TryGetValue(prop, out var h) ? h : .6f), art.width/PropMaxWidth);
+
+        void BuildPropArt(string prop, Texture2D art, AqCell cell)
+        {
+            float ppu = PropPixelsPerUnit(prop, art);
+            var sprite = ArtSprite("Props/" + prop, new Vector2(.5f,0f), ppu);
+            var go = new GameObject("Prop " + prop, typeof(SpriteRenderer));
+            go.transform.SetParent(boardRoot, false);
+            go.transform.position = PropAnchor(board, cell, art.width*.5f/ppu);
+            go.transform.localScale = new Vector3(1f, IsoStretch, 1f);
+            var view = new PropSprite {Renderer=go.GetComponent<SpriteRenderer>(), Facing=Vector3.back, ByDirection=new[]{sprite,sprite,sprite,sprite}};
+            propSprites.Add(view);
+            RefreshPropSprite(view);
+        }
+
+        // Walls reach .105 into each cell; the prop leans toward the open side so it never crosses them.
+        public static Vector3 PropAnchor(AqBoard board, AqCell cell, float half)
+        {
+            float Axis(AqCell plus, AqCell minus, float preferred)
+            {
+                bool blockedPlus = !board.Contains(plus) || board.Edge(cell, plus) != null;
+                bool blockedMinus = !board.Contains(minus) || board.Edge(cell, minus) != null;
+                float sign = preferred;
+                if (sign > 0 ? blockedPlus && !blockedMinus : blockedMinus && !blockedPlus) sign = -sign;
+                bool blocked = sign > 0 ? blockedPlus : blockedMinus;
+                return sign*Mathf.Clamp((blocked ? .38f : .48f) - half, 0f, .30f);
+            }
+            return new Vector3(cell.X, 0f, cell.Y) + new Vector3(Axis(new AqCell(cell.X+1,cell.Y), new AqCell(cell.X-1,cell.Y), 1f),
+                0f, Axis(new AqCell(cell.X,cell.Y+1), new AqCell(cell.X,cell.Y-1), -1f));
+        }
+
         void BuildProp(string prop, AqCell cell)
         {
-            var center = CellPosition(cell) + new Vector3(.30f,0f,-.30f);
+            prop = (prop ?? "").Trim().ToLowerInvariant();
+            var art = prop == "books" ? null : Resources.Load<Texture2D>("DungeonBDX/Iso/Props/" + prop);
+            if (art) { BuildPropArt(prop, art, cell); return; }
+            var center = PropAnchor(board, cell, PropHalf(prop));
             var wood = MaterialLook("prop-wood", new Color(.55f,.36f,.20f), null, false);
             var woodDark = MaterialLook("prop-wood-dark", new Color(.36f,.24f,.14f), null, false);
             var stone = MaterialLook("prop-stone", new Color(.60f,.58f,.53f), null, false);
