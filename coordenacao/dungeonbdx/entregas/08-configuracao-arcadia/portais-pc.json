@@ -10,7 +10,7 @@
     "combat": true,
     "idleAnimated": true,
     "heroes": 6,
-    "monsters": 8,
+    "monsters": 9,
     "tiles": 9,
     "commands": 8,
     "width": 1600,

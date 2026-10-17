@@ -81,5 +81,26 @@ namespace DungeonBDX.Tests
             Assert.That(crypt.Tokens.Count(t=>t.Kind=="ritual"),Is.EqualTo(4));
             Assert.That(crypt.Tokens.Count(t=>t.Kind=="hazard"),Is.EqualTo(2));
         }
+
+        [Test] public void RosterHasTheFourteenRpgHeroesAndJackIsNoLongerAnEnemy()
+        {
+            Assert.That(AqContent.Playable.Length,Is.EqualTo(14));
+            Assert.That(AqContent.Playable.Distinct().Count(),Is.EqualTo(14));
+            Assert.That(AqContent.Playable.All(AqContent.Heroes.ContainsKey));
+            Assert.That(AqContent.Hero("colosso").Name,Is.EqualTo("Primal Beast"));
+            foreach(var id in AqScenarios.Ids)
+                Assert.That(AqScenarios.Create(id).Monsters.Any(m=>AqContent.Playable.Contains(m.HeroId)),Is.False,id);
+        }
+
+        [Test] public void ChaptersVaryMinionsAndBossesUseExportedArt()
+        {
+            var lineups=AqScenarios.Ids.Select(id=>string.Join(",",AqScenarios.Create(id).Monsters.Where(m=>m.Reward<2).Select(m=>m.HeroId).Distinct().OrderBy(x=>x))).ToArray();
+            Assert.That(lineups.Distinct().Count(),Is.EqualTo(lineups.Length));
+            Assert.That(AqScenarios.Create(AqScenarios.Ids[0]).Monsters.Count(m=>m.HeroId=="rei-goblin-ferrugem"),Is.EqualTo(1));
+            Assert.That(AqScenarios.Create(AqScenarios.Ids[2]).Monsters.Count(m=>m.Reward==2),Is.EqualTo(2));
+            foreach(var id in AqScenarios.Ids)
+                foreach(var m in AqScenarios.Create(id).Monsters.Where(m=>m.SpriteFolder!=null))
+                    Assert.That(UnityEngine.Resources.Load<UnityEngine.Sprite>("Sprites/"+m.SpriteFolder+"/south"),Is.Not.Null,m.SpriteFolder);
+        }
     }
 }

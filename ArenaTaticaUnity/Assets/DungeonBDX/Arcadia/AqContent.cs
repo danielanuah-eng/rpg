@@ -50,6 +50,9 @@ namespace DungeonBDX.Arcadia
     {
         // Individual natural abilities, not shared archetype loadouts. Equipment remains transferable.
         public static readonly IReadOnlyDictionary<string,AqHeroDef> Heroes=Build();
+        // The RPG roster: only these are offered to players. The other definitions stay for fixtures and enemy reuse.
+        public static readonly string[] Playable={"principe-kellen","ezequiela","damian","arqueiro-jack","cheiro-pneu","ciantia","tchu-tcha",
+            "colosso","baltazar","asamyh","perry","diantus","talyssa","edgar"};
         static Dictionary<string,AqHeroDef> Build()
         {
             var d=new Dictionary<string,AqHeroDef>(StringComparer.Ordinal);
@@ -64,7 +67,7 @@ namespace DungeonBDX.Arcadia
             Add(d,"arqueiro-jack","Arqueiro Jack","sniper","Linha perfeita","Ataque à distância antes do movimento: +1 dado.","Flecha certeira",true,"attack",4);
             Add(d,"perry","Perry","scout","Passos leves","A primeira reação de Alerta contra Perry na ativação é evitada.","Adaga furtiva",false,"attack",4);
             Add(d,"asamyh","Asamyh","feline","Agilidade felina","Pode atravessar espaços com 2 inimigos; deve terminar em espaço livre.","Garras velozes");
-            Add(d,"colosso","O Colosso","colossus","Presença colossal","Ocupa o espaço inteiro. Ataques próximos contra monstros: +1 dado.","Punho titânico",false,"attack",7);
+            Add(d,"colosso","Primal Beast","colossus","Presença colossal","Ocupa o espaço inteiro. Ataques próximos contra monstros: +1 dado.","Punho titânico",false,"attack",7);
             Add(d,"cheiro-pneu","Cheiro de Pneu","charge","Arrancada","Após mover 3 espaços nesta ativação, recebe +1 dado de ataque próximo.","Impacto da corrida",false,"attack",6);
             Add(d,"rei-bobett","Rei Bobett","royal","Tesouro real","A primeira missão que sua guilda cumpre rende 1 moeda adicional.","Cetro real");
             Add(d,"principe-kellen","Príncipe Kellen","flank","Oportunidade","+1 dado ao atacar um alvo Perto de outro inimigo dele.","Lâmina do príncipe",false,"attack",4);

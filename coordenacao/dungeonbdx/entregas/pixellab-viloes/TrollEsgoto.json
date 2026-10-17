@@ -1,0 +1,20 @@
+{
+ "character_id": "75f50ab3-23c3-4c29-856a-2d32011dbd7e",
+ "frame": 128,
+ "crop180": [
+  27,
+  20,
+  155,
+  148
+ ],
+ "files": {
+  "south.png": "9268ce32254f59b852df2f9a43e95fbf20d92b205c9a03e8fcb35abe4fb45299",
+  "south-east.png": "e1c716040dac8038e287ef76c370265cd015997537ab53d360f4cc84d60e32c9",
+  "east.png": "d3af7ed03be68c7907c0aafa5810419ac9c3df63be9a8776850211537335bdfd",
+  "north-east.png": "9076110157aa11e307c54270ebab12a5d5b2d048362c84b0d1c48a36812aea1f",
+  "north.png": "585a472d5f93790750e3c80554eb5a55304542b4dd6d988d26903201a518db6b",
+  "north-west.png": "3da1ef2d6dcd61e38155ccc423ec1400fc0701c120721312bbdf7131c3f2eb7f",
+  "west.png": "9bbfb42f6761e87ae0a223bac961023ec43f917576e43162b395cd9a0667d90e",
+  "south-west.png": "30d546c6f0068c1d46eb6aa4c4e621286656d51c8a9fb3defd3188c0562ef37b"
+ }
+}

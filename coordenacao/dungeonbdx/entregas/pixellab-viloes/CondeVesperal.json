@@ -1,0 +1,24 @@
+{
+ "character_id": "92c36932-4b65-4f57-b546-1107de518001",
+ "frame": 139,
+ "crop180": [
+  22,
+  12,
+  161,
+  151
+ ],
+ "files": {
+  "south.png": "dfbaa88e4288247b8796c49450a5a0b9a6f91cd2e35b91c29719429d41a1987e",
+  "south-east.png": "c3a105a1e0057a2ce7ec16d3f38783eb0eae0fbd5818a6432683aaeba1babe0d",
+  "east.png": "0e79f7b8b5854f777704a2761d959641ceb61749cdd4d2c9e8e4233ffa9d15ad",
+  "north-east.png": "735da37b9e2c49dfdb36b460cd45666c69480bef773f95d3df0638cb4e23b408",
+  "north.png": "9dca2b5c99911ad5247b7db53993ecdd9eb09cc5296978f767d220efd6adc86b",
+  "north-west.png": "d0cedbb2f57b9edc571b5137803cb6cb0272a2510d47156cdf41e66548c9edf7",
+  "west.png": "bc99ef8a9e621ceae127146cd2e4de7aa3197ba8590264f38f566fa7be26f8a4",
+  "south-west.png": "4aafd87d8138ff77854b68b80eab96d368cb95e649638da36f1cacdc2c35ccc8",
+  "walk_south-east.png": "5260411c01a16629b262b1ef7b5985ce6675112bb6ca72e4a87350599528ef8a",
+  "walk_south-west.png": "90fb01ce190f8af3c6b4068e1522fe008e72807fb1f82894e7c929b7b4bcdc83",
+  "walk_north-east.png": "c16a3604089699ddbbab71efab3eecf4742d9d61b44f30ee99287f134c79df09",
+  "walk_north-west.png": "4d52198d473d015f3a5d933083fe4a62ea3b3733fff8e46fa5734aa351387f98"
+ }
+}

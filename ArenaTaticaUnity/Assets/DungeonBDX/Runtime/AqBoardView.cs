@@ -1001,7 +1001,7 @@ namespace DungeonBDX
         static float TargetHeight(AqUnit unit)
         {
             // Figures stay smaller than a space (the table reads as a map, not as oversized miniatures).
-            return FigureScale*(unit.Monster&&!unit.Huge?1.35f:AqHeroImport.Height(unit.HeroId));
+            return FigureScale*(unit.Monster&&!unit.Huge&&unit.Reward<2?1.35f:AqHeroImport.Height(unit.HeroId));
         }
 
         static bool IsWide(AqUnit unit) => unit != null && (unit.Huge || unit.HeroId == "colosso");

@@ -73,7 +73,7 @@ namespace DungeonBDX.Arcadia
                 Units.Last(u=>u.Guild==g).Gear.Add(new AqGear{Id="bow."+g,Name="Arco de reserva",Dice=2,Ranged=true});
             }
             foreach(var m in Scenario.Monsters)
-                Units.Add(new AqUnit{Id=Units.Count,Guild=-1,Monster=true,HeroId=m.HeroId,Name=m.HeroId=="arqueiro-jack"?"Sentinela goblin":m.HeroId=="brutamontes-errante"?"Guardião da praça":"Saqueador de pedra",
+                Units.Add(new AqUnit{Id=Units.Count,Guild=-1,Monster=true,HeroId=m.HeroId,Name=m.Name??(m.HeroId=="brutamontes-errante"?"Guardião da praça":"Saqueador de pedra"),SpriteFolder=m.SpriteFolder,
                     Cell=m.Cell,Health=m.Health,MaxHealth=m.Health,Defense=m.Defense,Dice=m.Dice,Ranged=m.Ranged,Movement=m.Movement,Overkill=m.Overkill,Reward=m.Reward,Huge=m.HeroId=="brutamontes-errante"});
         }
         public AqUnit Unit(int id)=>Units.FirstOrDefault(u=>u.Id==id);

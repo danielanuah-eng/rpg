@@ -17,6 +17,10 @@ public static class DungeonBuild
     {
         EnsureMaterial("WorldLit","Universal Render Pipeline/Lit");
         EnsureMaterial("SkillUnlit","Universal Render Pipeline/Unlit");
+        // Monsters reuse the Arena sprite folders: slice new strips with the Arena importer (pivot on the feet, PPU 128).
+        var arenaSprites=Type.GetType("ArenaBuild, Assembly-CSharp-Editor")?.GetMethod("EnsureSprites",
+            System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Static);
+        arenaSprites?.Invoke(null,null);
         foreach(var guid in AssetDatabase.FindAssets("t:Model",new[]{"Assets/DungeonBDX/Art"}))
         {
             var path=AssetDatabase.GUIDToAssetPath(guid);

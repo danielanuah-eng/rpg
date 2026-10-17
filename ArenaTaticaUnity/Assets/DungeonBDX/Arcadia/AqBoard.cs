@@ -35,7 +35,7 @@ namespace DungeonBDX.Arcadia
     }
     public sealed class AqSpawn
     {
-        public string HeroId;
+        public string HeroId,Name,SpriteFolder;
         public AqCell Cell;
         public bool Ranged;
         public int Health=3,Defense,Dice=3,Movement=2,Overkill=5,Reward=1;
@@ -165,10 +165,9 @@ namespace DungeonBDX.Arcadia
             foreach(var c in new[]{new AqCell(0,5),new AqCell(2,5),new AqCell(0,3),new AqCell(2,3)})
                 s.Tokens.Add(new AqToken{Id="clue"+n++,Kind="clue",Color="gold",Cell=c});
             for(int i=0;i<4;i++)s.Tokens.Add(new AqToken{Id="relic"+i,Kind="relic",Color="gold",Cell=new AqCell(6,3)});
-            foreach(var c in new[]{new AqCell(4,7),new AqCell(1,4),new AqCell(7,4),new AqCell(4,1)})
-                s.Monsters.Add(new AqSpawn{HeroId="ogro-de-pedra",Cell=c,Health=3,Dice=3,Overkill=5});
-            foreach(var c in new[]{new AqCell(0,5),new AqCell(2,3),new AqCell(7,3),new AqCell(4,7)})
-                s.Monsters.Add(new AqSpawn{HeroId="arqueiro-jack",Cell=c,Health=2,Dice=2,Ranged=true,Overkill=4});
+            foreach(var c in new[]{new AqCell(4,7),new AqCell(1,4),new AqCell(7,4),new AqCell(4,1)})Monster(s,c.X,c.Y);
+            foreach(var c in new[]{new AqCell(0,5),new AqCell(2,3),new AqCell(7,3),new AqCell(4,7)})Monster(s,c.X,c.Y,true);
+            Boss(s,"rei-goblin-ferrugem","Rei Goblin Ferrugem",4,0);
             s.Name="PORTAIS EM RUÍNAS";s.Subtitle="Capítulo I · investigação e transporte";
             s.Story="Os portais da cidade foram sabotados. Investigue duas pistas nas oficinas ou retire uma relíquia da câmara do ritual e entregue-a em um portal azul para restaurar a rede. As guildas rivais também procuram o responsável.";
             s.Ending="A rede volta a brilhar. Entre os vestígios surge o selo de uma confraria que opera sob a praça.";
@@ -209,8 +208,30 @@ namespace DungeonBDX.Arcadia
         }
         static void Token(AqScenario s,string kind,int x,int y,string color="blue")
             =>s.Tokens.Add(new AqToken{Id=kind+s.Tokens.Count,Kind=kind,Color=color,Cell=new AqCell(x,y)});
+        // Each chapter alternates its own minions; combat numbers stay those of the melee/ranged profile.
+        static readonly Dictionary<string,(string id,string name)[]> Melee=new Dictionary<string,(string,string)[]>{
+            ["portais-em-ruinas"]=new[]{("ogro-de-pedra","Saqueador de pedra"),("troll-esgoto","Troll do esgoto")},
+            ["praca-dos-quatro-emblemas"]=new[]{("domador-de-correntes","Carcereiro da confraria"),("lobo-de-cinzas","Lobo de cinzas")},
+            ["resgate-nas-catacumbas"]=new[]{("esqueleto-lanceiro","Esqueleto lanceiro"),("viuva-da-agulha","Viúva da agulha")}};
+        static readonly Dictionary<string,(string id,string name)[]> Shooters=new Dictionary<string,(string,string)[]>{
+            ["portais-em-ruinas"]=new[]{("cultista-encapuzado","Cultista encapuzado"),("nixira","Xamã dos cogumelos")},
+            ["praca-dos-quatro-emblemas"]=new[]{("vespa-cinzenta","Vespa cinzenta"),("cultista-encapuzado","Cultista encapuzado")},
+            ["resgate-nas-catacumbas"]=new[]{("nixira","Xamã dos cogumelos"),("cultista-encapuzado","Cultista encapuzado")}};
+        // PixelLab enemies without an Arena fighter entry; their folders are passed straight to the unit.
+        public static readonly IReadOnlyDictionary<string,string> EnemyArt=new Dictionary<string,string>{
+            ["troll-esgoto"]="TrollEsgoto",["cultista-encapuzado"]="CultistaEncapuzado",["esqueleto-lanceiro"]="EsqueletoLanceiro",
+            ["rei-goblin-ferrugem"]="ReiGoblinFerrugem",["conde-vesperal"]="CondeVesperal",["necromante-cripta"]="NecromanteCripta"};
+        static AqSpawn Spawn(string id,string name,int x,int y)
+            =>new AqSpawn{HeroId=id,Name=name,Cell=new AqCell(x,y),SpriteFolder=EnemyArt.TryGetValue(id,out var f)?f:null};
+        // Chapter bosses: tougher than minions and worth 2 coins.
+        static void Boss(AqScenario s,string id,string name,int x,int y,bool ranged=false)
+        {var b=Spawn(id,name,x,y);b.Ranged=ranged;b.Health=ranged?4:5;b.Defense=1;b.Dice=3;b.Overkill=6;b.Reward=2;s.Monsters.Add(b);}
         static void Monster(AqScenario s,int x,int y,bool ranged=false)
-            =>s.Monsters.Add(new AqSpawn{HeroId=ranged?"arqueiro-jack":"ogro-de-pedra",Cell=new AqCell(x,y),Ranged=ranged,Health=ranged?2:3,Dice=ranged?2:3,Overkill=ranged?4:5});
+        {
+            (string id,string name)[] table=(ranged?Shooters:Melee).TryGetValue(s.Id??"",out var list)?list:new[]{ranged?("cultista-encapuzado","Cultista encapuzado"):("ogro-de-pedra","Saqueador de pedra")};
+            var pick=table[s.Monsters.Count(m=>m.Ranged==ranged)%table.Length];
+            var m=Spawn(pick.id,pick.name,x,y);m.Ranged=ranged;m.Health=ranged?2:3;m.Dice=ranged?2:3;m.Overkill=ranged?4:5;s.Monsters.Add(m);
+        }
         static void Plaza(AqScenario s)
         {
             s.Board=new AqBoard(9,9);s.Tokens.Clear();s.Monsters.Clear();
@@ -228,7 +249,7 @@ namespace DungeonBDX.Arcadia
             foreach(var c in new[]{new AqCell(1,3),new AqCell(7,3),new AqCell(3,7),new AqCell(3,1)})Monster(s,c.X,c.Y);
             foreach(var c in new[]{new AqCell(1,5),new AqCell(7,5),new AqCell(5,7),new AqCell(5,1)})Monster(s,c.X,c.Y,true);
             foreach(var c in new[]{new AqCell(0,2),new AqCell(8,6),new AqCell(2,8),new AqCell(6,0),new AqCell(3,4),new AqCell(5,4)})Token(s,"explore",c.X,c.Y);
-            s.Monsters.Add(new AqSpawn{HeroId="brutamontes-errante",Cell=new AqCell(4,4),Health=7,Defense=1,Dice=4,Overkill=8,Reward=3});
+            s.Monsters.Add(new AqSpawn{HeroId="brutamontes-errante",Name="Guardião da praça",Cell=new AqCell(4,4),Health=7,Defense=1,Dice=4,Overkill=8,Reward=3});
         }
         static void Catacombs(AqScenario s)
         {
@@ -247,6 +268,7 @@ namespace DungeonBDX.Arcadia
             Token(s,"portal",2,6);Token(s,"portal",6,2);Token(s,"portal",2,2,"violet");Token(s,"portal",6,6,"violet");
             foreach(var c in new[]{new AqCell(1,4),new AqCell(7,4),new AqCell(4,6),new AqCell(4,2)})Monster(s,c.X,c.Y);
             foreach(var c in new[]{new AqCell(1,5),new AqCell(7,3),new AqCell(3,7),new AqCell(5,1)})Monster(s,c.X,c.Y,true);
+            Boss(s,"necromante-cripta","Necromante da Cripta",3,5,true);Boss(s,"conde-vesperal","Conde Vesperal",5,3);
             foreach(var c in new[]{new AqCell(0,6),new AqCell(8,2),new AqCell(2,8),new AqCell(6,0),new AqCell(4,4),new AqCell(0,2),new AqCell(8,6)})Token(s,"explore",c.X,c.Y);
         }
         static void Door(AqScenario s,int x,int y,int xx,int yy,bool open)=>s.Board.SetEdge(new AqCell(x,y),new AqCell(xx,yy),true,open);
