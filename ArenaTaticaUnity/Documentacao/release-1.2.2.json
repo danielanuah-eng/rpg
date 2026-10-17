@@ -1,7 +1,7 @@
 {
     "version":  "1.2.2",
     "sourceCommit":  "157fd72e8dfa939779ee341792bcd4a60e6113a4",
-    "state":  "builds-verificados",
+    "state":  "publicado-itch",
     "protocol":  6,
     "editMode":  {
                      "total":  406,
@@ -81,5 +81,19 @@
                  },
     "sourceTreeSha256":  "4cf16367282d3ba9da659d78b9779eece96ff3b693afae4fe0e64898c424f3f5",
     "sourceFiles":  4665,
-    "verifiedAt":  "2026-10-17T16:28:26.9617036Z"
+    "verifiedAt":  "2026-10-17T16:28:26.9617036Z",
+    "remoteVerification":  {
+                               "windows":  {
+                                               "buildId":  2146933,
+                                               "state":  "completed",
+                                               "userVersion":  "2026.10.17-1.2.2",
+                                               "verifiedAt":  "2026-10-17T16:48:26.9887343Z"
+                                           },
+                               "android":  {
+                                               "buildId":  2146935,
+                                               "state":  "completed",
+                                               "userVersion":  "2026.10.17-1.2.2",
+                                               "verifiedAt":  "2026-10-17T16:48:26.9887343Z"
+                                           }
+                           }
 }
