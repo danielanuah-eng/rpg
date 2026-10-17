@@ -241,10 +241,10 @@ namespace DungeonBDX
                 if (edge.Door) BuildDoor(edge, mid, horizontal);
                 else
                 {
-                    var wallArt = Resources.Load<Texture2D>("DungeonBDX/Iso/Walls/wall");
-                    var wall = wallArt ? MaterialLook("wall-art", Color.white, wallArt, false) : MaterialLook("wall", StoneMid, null, false);
-                    Slab("Wall", mid + Vector3.up*.13f, horizontal ? new Vector3(.15f,.26f,1.02f) : new Vector3(1.02f,.26f,.15f), wall, boardRoot);
-                    Slab("Cap", mid + Vector3.up*.28f, horizontal ? new Vector3(.21f,.06f,1.08f) : new Vector3(1.08f,.06f,.21f), gold, boardRoot);
+                    // Thin PixelLab wall (texture shown at its real proportion), so props keep the cell.
+                    var wall = WallLook(WallArtFor(edge));
+                    Slab("Wall", mid + Vector3.up*WallHeight*.5f, horizontal ? new Vector3(WallThickness,WallHeight,1.02f) : new Vector3(1.02f,WallHeight,WallThickness), wall, boardRoot);
+                    Slab("Cap", mid + Vector3.up*(WallHeight+.012f), horizontal ? new Vector3(WallThickness+.02f,.024f,1.04f) : new Vector3(1.04f,.024f,WallThickness+.02f), gold, boardRoot);
                 }
             }
         }
@@ -270,6 +270,33 @@ namespace DungeonBDX
             }
         }
 
+        public const float WallThickness = .06f, WallHeight = .42f;
+
+        // Crypt rooms get the mossy crypt wall, gardens a hedge; everything else the stone wall.
+        string WallArtFor(AqEdge edge)
+        {
+            string a = board.Contains(edge.A) ? board.Space(edge.A).Surface : null, b = board.Contains(edge.B) ? board.Space(edge.B).Surface : null;
+            if (a == "crypt" || b == "crypt") return "wall-crypt";
+            if (a == "garden" || b == "garden") return "hedge";
+            return "wall";
+        }
+
+        Material WallLook(string id)
+        {
+            var art = Resources.Load<Texture2D>("DungeonBDX/Iso/Walls/" + id) ?? Resources.Load<Texture2D>("DungeonBDX/Iso/Walls/wall");
+            if (!art) return MaterialLook("wall", StoneMid, null, false);
+            string key = "wall-art-" + id;
+            bool fresh = !materials.ContainsKey(key);
+            var material = MaterialLook(key, Color.white, art, false);
+            if (fresh)
+            {
+                var tiling = new Vector2(1f, WallHeight);
+                material.mainTextureScale = tiling;
+                if (material.HasProperty("_BaseMap")) material.SetTextureScale("_BaseMap", tiling);
+            }
+            return material;
+        }
+
         void BuildDoor(AqEdge edge, Vector3 mid, bool horizontal)
         {
             var along = horizontal ? Vector3.forward : Vector3.right;
@@ -280,13 +307,13 @@ namespace DungeonBDX
             var doorArt = Resources.Load<Texture2D>("DungeonBDX/Iso/Doors/door");
             var bronze = doorArt ? MaterialLook("door-art", Color.white, doorArt, false) : MaterialLook("door-bronze", new Color(.63f,.44f,.21f), null, false);
             var teal = MaterialLook("door-teal", new Color(.17f,.40f,.38f), null, false);
-            var postA = Slab("Post", mid + Vector3.up*.23f - along*.45f, new Vector3(.14f,.46f,.14f), frame, root.transform);
-            var postB = Slab("Post", mid + Vector3.up*.23f + along*.45f, new Vector3(.14f,.46f,.14f), frame, root.transform);
-            var lintel = Slab("Lintel", mid + Vector3.up*.5f, horizontal ? new Vector3(.2f,.14f,1.16f) : new Vector3(1.16f,.14f,.2f),
+            var postA = Slab("Post", mid + Vector3.up*.23f - along*.46f, new Vector3(.08f,.46f,.08f), frame, root.transform);
+            var postB = Slab("Post", mid + Vector3.up*.23f + along*.46f, new Vector3(.08f,.46f,.08f), frame, root.transform);
+            var lintel = Slab("Lintel", mid + Vector3.up*.48f, horizontal ? new Vector3(.1f,.06f,1.02f) : new Vector3(1.02f,.06f,.1f),
                 MaterialLook("door-lintel", GoldTrim, null, false), root.transform);
             Slab("Threshold", mid + Vector3.up*.012f, horizontal ? new Vector3(.7f,.024f,1.02f) : new Vector3(1.02f,.024f,.7f),
                 MaterialLook("threshold", new Color(.30f,.27f,.23f), null, false), root.transform);
-            var panel = Slab("Panel", mid + Vector3.up*.22f, horizontal ? new Vector3(.12f,.44f,.9f) : new Vector3(.9f,.44f,.12f),
+            var panel = Slab("Panel", mid + Vector3.up*.22f, horizontal ? new Vector3(WallThickness,.44f,.86f) : new Vector3(.86f,.44f,WallThickness),
                 bronze, root.transform);
             doors[key] = new DoorView {Panel=panel.transform, PanelRenderer=panel.GetComponent<Renderer>(), Bronze=bronze, Teal=teal, Frame=new[]{postA,postB,lintel}};
         }
@@ -386,7 +413,7 @@ namespace DungeonBDX
             RefreshPropSprite(view);
         }
 
-        // Walls reach .105 into each cell; the prop leans toward the open side so it never crosses them.
+        // Walls reach half their thickness into each cell; the prop leans toward the open side so it never crosses them.
         public static Vector3 PropAnchor(AqBoard board, AqCell cell, float half)
         {
             float Axis(AqCell plus, AqCell minus, float preferred)
@@ -396,7 +423,7 @@ namespace DungeonBDX
                 float sign = preferred;
                 if (sign > 0 ? blockedPlus && !blockedMinus : blockedMinus && !blockedPlus) sign = -sign;
                 bool blocked = sign > 0 ? blockedPlus : blockedMinus;
-                return sign*Mathf.Clamp((blocked ? .38f : .48f) - half, 0f, .30f);
+                return sign*Mathf.Clamp((blocked ? .48f - WallThickness*.5f : .48f) - half, 0f, .30f);
             }
             return new Vector3(cell.X, 0f, cell.Y) + new Vector3(Axis(new AqCell(cell.X+1,cell.Y), new AqCell(cell.X-1,cell.Y), 1f),
                 0f, Axis(new AqCell(cell.X,cell.Y+1), new AqCell(cell.X,cell.Y-1), -1f));
@@ -633,7 +660,7 @@ namespace DungeonBDX
                 else
                 {
                     view.Panel.position = mid + Vector3.up*.22f;
-                    view.Panel.localScale = horizontal ? new Vector3(.12f,.44f,.9f) : new Vector3(.9f,.44f,.12f);
+                    view.Panel.localScale = horizontal ? new Vector3(WallThickness,.44f,.86f) : new Vector3(.86f,.44f,WallThickness);
                     if (view.PanelRenderer) view.PanelRenderer.sharedMaterial = view.Bronze;
                 }
             }

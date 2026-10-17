@@ -19,6 +19,11 @@
 - Testes `Tests/Editor/AqPropArtTests.cs`. EditMode 374/374, build ok, capturas ok.
 - PixelLab: **66 gerações** até 10/11 (gasto: props 15, ícones 15, kit UI 25). **Se acabar: Canva** para imagens, textos e fontes (decisão do autor 17/10; conector Canva precisa de autorização em claude.ai).
 
+## Commit seguinte: mapa e paredes PixelLab (autor: "tire as paredes do Blender, faça paredes e mapa no PixelLab")
+- Um `create_tiles_pro` (3c8c9727, 64 px, ampliado 8x): pisos `Iso/Tiles/*` (wood, marble, terracotta, mosaic, crypt, garden, street), `Iso/Walls/wall|wall-crypt|hedge`, `Iso/Doors/door`, `Iso/Frame/frame`. Extras não usados: piso vertical, terra, cripta com ossos, grade (`entregas/pixellab-mapa/`). `Iso/manifesto.json` atualizado.
+- Paredes finas: `AqBoardView.WallThickness=.06`, `WallHeight=.42` (antes .15–.21 de espessura). `WallArtFor`: cripta → wall-crypt, jardim → sebe, resto → pedra. Portas mais finas. `PropAnchor` usa a espessura nova (prop pode ir até .45 do centro).
+- EditMode 374/374, build ok, capturas ok. PixelLab: ver `get_balance` (≈41 gerações).
+
 ## Pendente
 1. Gastar as 66 gerações restantes em animações (caminhada dos chefes/lacaios ≈ 12 cada).
 2. Ícones ainda não usados (moedas, emblema, relíquia, pista, cativo, ritual, portal, tesouro, missão, dado, caveira, coroa…) podem entrar nos marcadores do placar/missões.

@@ -8,7 +8,7 @@ namespace DungeonBDX.Tests
     // PixelLab scenery and HUD art: every prop a chapter places is drawn and stays clear of the walls.
     public class AqPropArtTests
     {
-        const float WallReach = .105f;
+        const float WallReach = AqBoardView.WallThickness*.5f;
 
         [Test] public void EveryScenarioPropHasArtAndStaysOffTheWalls()
         {
@@ -26,7 +26,7 @@ namespace DungeonBDX.Tests
                     void Side(AqCell n, float reach)
                     {
                         bool wall = !s.Board.Contains(n) || s.Board.Edge(c, n) != null;
-                        if (wall) Assert.That(reach + half, Is.LessThanOrEqualTo(.5f - WallReach), id + " " + space.Prop + " " + c);
+                        if (wall) Assert.That(reach + half, Is.LessThanOrEqualTo(.5f - WallReach + .0001f), id + " " + space.Prop + " " + c);
                     }
                     Side(new AqCell(c.X+1, c.Y), at.x - c.X); Side(new AqCell(c.X-1, c.Y), c.X - at.x);
                     Side(new AqCell(c.X, c.Y+1), at.z - c.Y); Side(new AqCell(c.X, c.Y-1), c.Y - at.z);

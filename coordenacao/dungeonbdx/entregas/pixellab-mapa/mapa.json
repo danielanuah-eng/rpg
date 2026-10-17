@@ -1,0 +1,61 @@
+{
+ "tiles_pro_id": "3c8c9727-8bd5-4984-9305-a1fa49ebac38",
+ "escala": 8,
+ "arquivos": {
+  "Tiles/wood": {
+   "tile": 0,
+   "sha256": "a10ef7e6f97036f1afce1ece1053522a182222d358e2637caa9d510954e4ecb0"
+  },
+  "Tiles/marble": {
+   "tile": 2,
+   "sha256": "70eeee2a6d002e0cc27bdc04f42eb5530d26b48b5db656703e37c37a5f51fa8d"
+  },
+  "Tiles/terracotta": {
+   "tile": 3,
+   "sha256": "3e83ab25c81a042242f0fed6a1d877db81d74d55398005a18f4ceaf5c837a2f5"
+  },
+  "Tiles/mosaic": {
+   "tile": 4,
+   "sha256": "c8ce2c6cb8f3ae6979e85670df6c6e64961dc9a074eefd30134240c4aab92e1a"
+  },
+  "Tiles/crypt": {
+   "tile": 5,
+   "sha256": "39b02edc6dcd787f6685eb17ae057a25ded858348b1c6180af9ebf4e5422f0ff"
+  },
+  "Tiles/garden": {
+   "tile": 6,
+   "sha256": "3f345fbae28fd01e6fcd4b892a132183f89563f883c95a4c5adf7455f8cd1b81"
+  },
+  "Tiles/street": {
+   "tile": 7,
+   "sha256": "d9910e5b44a5581dffa4a3911807a431c1ea126e7898a9b9261a22164633de74"
+  },
+  "Walls/wall": {
+   "tile": 8,
+   "sha256": "c0f26ed244a84f5240e1e8149123f75d8cc448e7e03f2c86a09f1bb6197c83a5"
+  },
+  "Walls/wall-crypt": {
+   "tile": 9,
+   "sha256": "71cf914dc028253710daefd7887d74688e54b7e3c745d3ca840ccdc986126a92"
+  },
+  "Doors/door": {
+   "tile": 10,
+   "sha256": "a14c3a94986fc6c251dde2021c7230027154ec75f4be477f830b29a0d47fbb29"
+  },
+  "Frame/frame": {
+   "tile": 11,
+   "sha256": "abaee1b5acc0975f2cd723c30839c26a730d962717bc525aa2ad46597861b9b2"
+  },
+  "Walls/hedge": {
+   "tile": 12,
+   "sha256": "ed2afbc1707fb990c798b53f4cf12341718bd1d8ea181fd1f40806c8744bf489",
+   "nota": "pixels brancos da borda trocados por verde-escuro (material opaco)"
+  }
+ },
+ "extras": {
+  "1": "wood-vertical",
+  "13": "dirt",
+  "14": "crypt-bones",
+  "15": "grate"
+ }
+}
