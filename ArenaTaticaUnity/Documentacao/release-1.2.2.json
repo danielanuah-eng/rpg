@@ -1,0 +1,85 @@
+{
+    "version":  "1.2.2",
+    "sourceCommit":  "157fd72e8dfa939779ee341792bcd4a60e6113a4",
+    "state":  "builds-verificados",
+    "protocol":  6,
+    "editMode":  {
+                     "total":  406,
+                     "passed":  405,
+                     "failed":  1,
+                     "skipped":  0,
+                     "failureNote":  "Unica falha veio de erro de conexao do servidor MCP do Unity durante a execucao; RoomReleaseTests repetido passou 22/22.",
+                     "rerun":  {
+                                   "suite":  "RoomReleaseTests",
+                                   "total":  22,
+                                   "passed":  22,
+                                   "failed":  0,
+                                   "skipped":  0
+                               }
+                 },
+    "androidPhysical":  "pendente",
+    "onlineTwoDevices":  "pendente",
+    "previousRelease":  "release-1.2.1.json",
+    "validation":  {
+                       "tests":  "../Artifacts/editmode-1.2.2.xml",
+                       "rerun":  "../Artifacts/editmode-1.2.2-reteste.xml"
+                   },
+    "notes":  "Sprint 1 (posicionamento, iniciativa, gatos, formas, reviver), ceus, fallback de lava, 44 efeitos de habilidade novos e correcao da dessincronia online quando o Host faz muitas acoes no turno (Relay e LAN). Protocolo 6: a 1.2.1 fica recusada online. Correcao de rede ainda nao testada com dois aparelhos.",
+    "platforms":  {
+                      "windows":  {
+                                      "version":  "1.2.2",
+                                      "protocol":  6,
+                                      "platform":  "Windows",
+                                      "completedAt":  "2026-10-17T15:52:36.2364325Z",
+                                      "sourceCommit":  "157fd72e8dfa939779ee341792bcd4a60e6113a4",
+                                      "codeDirty":  false,
+                                      "stagedCodeMatches":  true,
+                                      "sourceTreeSha256":  "4cf16367282d3ba9da659d78b9779eece96ff3b693afae4fe0e64898c424f3f5",
+                                      "sourceFiles":  4665,
+                                      "stage":  "C:\\Users\\Anuah\\AppData\\Local\\ArenaTaticaAndroid"
+                                  },
+                      "android":  {
+                                      "version":  "1.2.2",
+                                      "protocol":  6,
+                                      "platform":  "Android",
+                                      "completedAt":  "2026-10-17T16:25:28.3596809Z",
+                                      "sourceCommit":  "157fd72e8dfa939779ee341792bcd4a60e6113a4",
+                                      "codeDirty":  false,
+                                      "stagedCodeMatches":  true,
+                                      "sourceTreeSha256":  "4cf16367282d3ba9da659d78b9779eece96ff3b693afae4fe0e64898c424f3f5",
+                                      "sourceFiles":  4665,
+                                      "stage":  "C:\\Users\\Anuah\\AppData\\Local\\ArenaTaticaAndroid"
+                                  }
+                  },
+    "packages":  {
+                     "windows":  {
+                                     "file":  "ArenaTatica-Windows.zip",
+                                     "completedAt":  "2026-10-17T16:27:38.2702094Z",
+                                     "sha256":  "AB9B760E5706811F9912054438994F8E339F5425FFB6343C01048124586AA172",
+                                     "files":  255,
+                                     "duplicateEntries":  0,
+                                     "extractedFilesMatch":  true,
+                                     "accountFiles":  0,
+                                     "extractedPath":  "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\ArenaTaticaUnity\\Artifacts\\019-extracted-58b78343e34e4300a04607d155b5047a"
+                                 },
+                     "android":  {
+                                     "file":  "ArenaTatica.apk",
+                                     "completedAt":  "2026-10-17T16:27:39.7826667Z",
+                                     "sourceCommit":  "157fd72e8dfa939779ee341792bcd4a60e6113a4",
+                                     "version":  "1.2.2",
+                                     "versionCode":  5,
+                                     "package":  "org.arcanoclisma.arenatatica",
+                                     "architecture":  "arm64-v8a",
+                                     "internetPermission":  true,
+                                     "signatureVerified":  true,
+                                     "certificateSha256":  "eab099f58dcbbf1a63d863228ecefe22ace342749f895d5f646f477dc5f27425",
+                                     "certificateMatchesPrevious":  true,
+                                     "bytes":  223364177,
+                                     "sha256":  "d6b7014e527b1a382f6a220c26a9b1ea8f868689022e39afe3e1b780c92c9cc9",
+                                     "physicalDeviceTested":  false
+                                 }
+                 },
+    "sourceTreeSha256":  "4cf16367282d3ba9da659d78b9779eece96ff3b693afae4fe0e64898c424f3f5",
+    "sourceFiles":  4665,
+    "verifiedAt":  "2026-10-17T16:28:26.9617036Z"
+}
