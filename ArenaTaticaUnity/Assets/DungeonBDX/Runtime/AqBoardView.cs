@@ -48,6 +48,7 @@ namespace DungeonBDX
         {
             public Transform Panel;
             public Renderer PanelRenderer;
+            public GameObject[] Frame;
             public Material Bronze;
             public Material Teal;
         }
@@ -99,6 +100,7 @@ namespace DungeonBDX
         public static readonly float IsoStretch = 1f/Mathf.Cos(IsoPitch*Mathf.Deg2Rad);
         // Feet sit on the frame pivot (15%); the drawn head ends near 70% of the frame above it.
         const float HeadLine = .68f;
+        public const float FigureScale = .74f;
 
         public UnityEngine.Camera Camera => viewCamera;
         /// <summary>Requested view angle; the camera eases toward it and rests on 45+90k after a gesture.</summary>
@@ -249,16 +251,16 @@ namespace DungeonBDX
             root.transform.SetParent(liveRoot,false);
             var frame = MaterialLook("door-frame", new Color(.44f,.34f,.21f), null, false);
             var bronze = MaterialLook("door-bronze", new Color(.63f,.44f,.21f), null, false);
-            var teal = MaterialLook("door-teal", new Color(.20f,.74f,.70f), null, true);
-            Slab("Post", mid + Vector3.up*.23f - along*.45f, new Vector3(.14f,.46f,.14f), frame, root.transform);
-            Slab("Post", mid + Vector3.up*.23f + along*.45f, new Vector3(.14f,.46f,.14f), frame, root.transform);
-            Slab("Lintel", mid + Vector3.up*.5f, horizontal ? new Vector3(.2f,.14f,1.16f) : new Vector3(1.16f,.14f,.2f),
+            var teal = MaterialLook("door-teal", new Color(.17f,.40f,.38f), null, false);
+            var postA = Slab("Post", mid + Vector3.up*.23f - along*.45f, new Vector3(.14f,.46f,.14f), frame, root.transform);
+            var postB = Slab("Post", mid + Vector3.up*.23f + along*.45f, new Vector3(.14f,.46f,.14f), frame, root.transform);
+            var lintel = Slab("Lintel", mid + Vector3.up*.5f, horizontal ? new Vector3(.2f,.14f,1.16f) : new Vector3(1.16f,.14f,.2f),
                 MaterialLook("door-lintel", GoldTrim, null, false), root.transform);
             Slab("Threshold", mid + Vector3.up*.012f, horizontal ? new Vector3(.7f,.024f,1.02f) : new Vector3(1.02f,.024f,.7f),
                 MaterialLook("threshold", new Color(.30f,.27f,.23f), null, false), root.transform);
             var panel = Slab("Panel", mid + Vector3.up*.22f, horizontal ? new Vector3(.12f,.44f,.9f) : new Vector3(.9f,.44f,.12f),
                 bronze, root.transform);
-            doors[key] = new DoorView {Panel=panel.transform, PanelRenderer=panel.GetComponent<Renderer>(), Bronze=bronze, Teal=teal};
+            doors[key] = new DoorView {Panel=panel.transform, PanelRenderer=panel.GetComponent<Renderer>(), Bronze=bronze, Teal=teal, Frame=new[]{postA,postB,lintel}};
         }
 
         void BuildTokens()
@@ -289,14 +291,7 @@ namespace DungeonBDX
                 {
                     Cylinder("Chip", root.transform.position + Vector3.up*.02f, new Vector3(.34f,.04f,.34f),
                         MaterialLook("chip-"+token.Kind, color, null, true), root.transform);
-                    var glyph = token.Kind=="spawn"?token.Color.Replace("melee","E").Replace("ranged","A").Replace("critical","C").Replace("-","/"):TokenGlyph(token.Kind);
-                    if (glyph.Length > 0)
-                    {
-                        var label = CreateLabel("Glyph", root.transform, .22f, .2f);
-                        label.text = glyph;
-                        label.color = Color.Lerp(color,Color.white,.2f);
-                        label.ForceMeshUpdate();
-                    }
+                    // Colour only on the table: letters made it read like a board-game print. Icons come from the art lot.
                 }
                 tokens[token.Id] = root;
             }
@@ -319,22 +314,6 @@ namespace DungeonBDX
                 case "ritual": return new Color(.86f,.30f,.52f);
                 case "hazard": return new Color(.92f,.30f,.24f);
                 default: return new Color(.78f,.72f,.60f);
-            }
-        }
-
-        // Short, readable marks; E/A/C on entrances mean sword/ranged/critical.
-        static string TokenGlyph(string kind)
-        {
-            switch ((kind ?? "").Trim().ToLowerInvariant())
-            {
-                case "clue": return "P";
-                case "explore": return "?";
-                case "emblem": return "E";
-                case "captive": return "C";
-                case "ritual": return "R";
-                case "relic": return "J";
-                case "hazard": return "!";
-                default: return "";
             }
         }
 
@@ -461,7 +440,7 @@ namespace DungeonBDX
             // Foot anchor is handled inside DungeonActorAnimation; the root stays on the cell plane.
             animation.Initialize(SpriteFolderOf(unit), view.Fallback, view.Visual, viewCamera);
             animations[unit.Id] = animation;
-            view.Label = CreateLabel("Unit label", body.transform, view.Height*IsoStretch*HeadLine + .1f, .16f);
+            view.Label = CreateLabel("Unit label", body.transform, view.Height*IsoStretch*HeadLine + .08f, .13f);
             var labelRenderer = view.Label.GetComponent<Renderer>();
             if (labelRenderer) labelRenderer.sortingOrder = 10;
             views[unit.Id] = view;
@@ -543,10 +522,12 @@ namespace DungeonBDX
                 if (!doors.TryGetValue(EdgeKey(edge.A,edge.B), out var view) || view.Panel == null) continue;
                 bool horizontal = edge.A.X != edge.B.X;
                 var mid = EdgeMid(edge.A, edge.B);
+                if (view.Frame != null) foreach (var piece in view.Frame) if (piece) piece.SetActive(!edge.Open);
                 if (edge.Open)
                 {
-                    view.Panel.position = mid + Vector3.up*.05f;
-                    view.Panel.localScale = horizontal ? new Vector3(.16f,.05f,.9f) : new Vector3(.9f,.05f,.16f);
+                    // An open passage is just a gap with a faint sill; the frame only marks closed doors.
+                    view.Panel.position = mid + Vector3.up*.015f;
+                    view.Panel.localScale = horizontal ? new Vector3(.08f,.02f,.7f) : new Vector3(.7f,.02f,.08f);
                     if (view.PanelRenderer) view.PanelRenderer.sharedMaterial = view.Teal;
                 }
                 else
@@ -667,7 +648,7 @@ namespace DungeonBDX
                     marker.transform.SetParent(markerRoot,false);
                     var line = marker.GetComponent<LineRenderer>();
                     line.positionCount = 5;
-                    line.startWidth = line.endWidth = .05f;
+                    line.startWidth = line.endWidth = .03f;
                     line.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
                     line.useWorldSpace = true;
                     var point = CellPosition(entry.Key) + Vector3.up*.05f;
@@ -676,10 +657,10 @@ namespace DungeonBDX
                         point+new Vector3(-.42f,0f,-.42f), point+new Vector3(.42f,0f,-.42f),
                         point+new Vector3(.42f,0f,.42f), point+new Vector3(-.42f,0f,.42f), point+new Vector3(-.42f,0f,-.42f)
                     });
-                    var label = CreateLabel("Distance", marker.transform, 0f, .3f);
-                    label.transform.position = point + Vector3.up*.26f;
-                    label.fontSize = 16;
-                    label.color = Color.white;
+                    var label = CreateLabel("Distance", marker.transform, 0f, .16f);
+                    label.transform.position = point + Vector3.up*.12f;
+                    label.fontSize = 14;
+                    label.color = new Color(1f,1f,1f,.7f);
                     cellMarkers[entry.Key] = marker;
                 }
                 marker.SetActive(true);
@@ -839,7 +820,7 @@ namespace DungeonBDX
             float w = Mathf.Max(1f,width), h = Mathf.Max(1f,height), aspect = w/h;
             // Header strips (12%) and the compact footer stay free; the camera column takes the right edge.
             bool portrait = width < height;
-            float bottom = portrait ? .385f : .25f, across = portrait ? .86f : .9f;
+            float bottom = portrait ? .385f : .215f, across = portrait ? .86f : .9f;
             var usable = new Rect((safe.x + safe.width*.02f)/w,(safe.y + safe.height*bottom)/h,
                 Mathf.Max(.05f,safe.width*across/w),Mathf.Max(.08f,safe.height*(.875f-bottom)/h));
             var center = new Vector3((mapWidth-1)*.5f,0f,(mapHeight-1)*.5f);
@@ -850,7 +831,7 @@ namespace DungeonBDX
             float minR = float.MaxValue, maxR = float.MinValue, minU = float.MaxValue, maxU = float.MinValue;
             for (int corner=0; corner<8; corner++)
             {
-                var point = new Vector3(((corner&1)==0?-1f:1f)*(mapWidth*.5f+.42f),(corner&4)==0?-.3f:1.25f,((corner&2)==0?-1f:1f)*(mapHeight*.5f+.42f));
+                var point = new Vector3(((corner&1)==0?-1f:1f)*(mapWidth*.5f+.42f),(corner&4)==0?-.3f:1f,((corner&2)==0?-1f:1f)*(mapHeight*.5f+.42f));
                 float r = Vector3.Dot(point,right), u = Vector3.Dot(point,up);
                 minR = Mathf.Min(minR,r); maxR = Mathf.Max(maxR,r); minU = Mathf.Min(minU,u); maxU = Mathf.Max(maxU,u);
             }
@@ -972,7 +953,8 @@ namespace DungeonBDX
 
         static float TargetHeight(AqUnit unit)
         {
-            return unit.Monster&&!unit.Huge?1.35f:AqHeroImport.Height(unit.HeroId);
+            // Figures stay smaller than a space (the table reads as a map, not as oversized miniatures).
+            return FigureScale*(unit.Monster&&!unit.Huge?1.35f:AqHeroImport.Height(unit.HeroId));
         }
 
         static bool IsWide(AqUnit unit) => unit != null && (unit.Huge || unit.HeroId == "colosso");

@@ -56,7 +56,7 @@ namespace DungeonBDX
             if(input.Read(view.ZoomCamera,view.RotateCamera,view.PanCamera,HitsHud,out var point)&&!SavePaused&&view.Pick(point,out var cell,out int unit))Tap(cell,unit);
         }
         // Compact footer: camera controls live in a slim column beside the table, so the board gets the room.
-        static float FooterHeight=>Screen.width<Screen.height?.33f:.235f;
+        static float FooterHeight=>Screen.width<Screen.height?.33f:.2f;
         bool HitsHud(Vector2 p)
         {
             Rect area=Screen.safeArea;float y=(p.y-area.y)/Mathf.Max(1,area.height);bool portrait=Screen.width<Screen.height;
@@ -120,36 +120,54 @@ namespace DungeonBDX
             AqUi.Text(quests,progress+"    ·    "+Session.Scenario.Quests[0]+" / "+Session.Scenario.Quests[1],.02f,.03f,.96f,.94f,15);
             float footerHeight=FooterHeight;var foot=AqUi.Box(safe,"Bottom guild dashboard",0,0,1,footerHeight,AqUi.Panel);
             var party=Session.Units.Where(u=>!u.Monster&&u.Guild==Session.CurrentGuild).ToArray();
+            // PC: three columns (heroes | cards | actions). Portrait keeps stacked rows.
+            Rect heroArea=portrait?new Rect(.01f,.755f,.98f,.235f):new Rect(.005f,.03f,.25f,.94f);
+            Rect cardArea=portrait?new Rect(.01f,.36f,.98f,.245f):new Rect(.265f,.03f,.43f,.72f);
+            Rect stateArea=portrait?new Rect(.02f,.62f,.96f,.12f):new Rect(.27f,.78f,.42f,.2f);
+            Rect actionArea=portrait?new Rect(.01f,.04f,.98f,.3f):new Rect(.705f,.03f,.29f,.94f);
             for(int i=0;i<party.Length;i++)
             {
-                var u=party[i];var b=AqUi.Button(foot,"",.01f+i*.98f/3,.755f,.98f/3,.235f,()=>Select(u.Id),selected==u.Id);
-                AqUi.Portrait(b.transform,u.HeroId,.02f,.03f,.21f,.94f);
-                AqUi.Text(b.transform,u.Name+"\n"+(u.Alive?$"VIDA {u.Health}/{u.MaxHealth} · DEF {u.Defense}":"CAÍDO · DESCANSE PARA RESSUSCITAR"),.25f,.08f,.72f,.84f,16,u.Alive?AqUi.Ink:AqUi.Muted);
+                var u=party[i];
+                var b=portrait?AqUi.Button(foot,"",heroArea.x+i*heroArea.width/3,heroArea.y,heroArea.width/3,heroArea.height,()=>Select(u.Id),selected==u.Id)
+                    :AqUi.Button(foot,"",heroArea.x,heroArea.y+(2-i)*heroArea.height/3,heroArea.width,heroArea.height/3-.02f,()=>Select(u.Id),selected==u.Id);
+                AqUi.Portrait(b.transform,u.HeroId,.02f,.03f,portrait?.21f:.16f,.94f);
+                AqUi.Text(b.transform,portrait?u.Name+"\n"+(u.Alive?$"VIDA {u.Health}/{u.MaxHealth} · DEF {u.Defense}":"CAÍDO · DESCANSE"):u.Name+"   "+(u.Alive?$"{u.Health}/{u.MaxHealth} · DEF {u.Defense}":"CAÍDO"),
+                    portrait?.25f:.2f,.08f,portrait?.72f:.78f,.84f,portrait?16:15,u.Alive?AqUi.Ink:AqUi.Muted);
             }
-            var hero=Session.Unit(selected);string state=Session.Reaction!=null?$"GUILDA {Session.Controller+1}: REAÇÃO DE {Session.Unit(Session.Reaction.Monster).Name.ToUpperInvariant()} · MOV {Session.Reaction.Movement}":
-                Session.Resting?"DESCANSO · Clique em carta e em outro herói para transferir; selecione um caído para ressuscitar.":$"{hero.Name} · MOV {Session.MovesLeft}/3 · ATAQUE {(Session.Attacked?"USADO":"PRONTO")} · "+hero.AbilityText;
-            AqUi.Text(foot,state,.02f,.62f,.96f,.12f,15,AqUi.Ink);
+            var hero=Session.Unit(selected);string ability=hero.AbilityText.Split(':')[0];
+            string state=Session.Reaction!=null?$"GUILDA {Session.Controller+1}: REAÇÃO DE {Session.Unit(Session.Reaction.Monster).Name.ToUpperInvariant()} · MOV {Session.Reaction.Movement}":
+                Session.Resting?"DESCANSO · carta + herói transfere; caído ressuscita":$"{hero.Name} · MOV {Session.MovesLeft}/3 · ATAQUE {(Session.Attacked?"USADO":"PRONTO")} · {ability}";
+            AqUi.Text(foot,state,stateArea.x,stateArea.y,stateArea.width,stateArea.height,15,AqUi.Ink);
             for(int i=0;i<4;i++)
             {
                 int index=i;var g=i<hero.Gear.Count?hero.Gear[i]:null;
-                var b=AqUi.Button(foot,g==null?"ESPAÇO LIVRE":g.Name+"\n<size=80%>"+(g.Exhausted?"EXAUSTA":$"{g.Dice} DADOS · {(g.Ranged?"VISÃO":"PRÓXIMO")}")+"</size>",.01f+i*.98f/4,.36f,.98f/4,.245f,
+                var b=AqUi.Button(foot,g==null?"":g.Name+"\n<size=80%>"+(g.Exhausted?"EXAUSTA":$"{g.Dice} DADOS · {(g.Ranged?"VISÃO":"PRÓXIMO")}")+"</size>",cardArea.x+i*cardArea.width/4,cardArea.y,cardArea.width/4-.004f,cardArea.height,
                     ()=>{card=index;mode=Session.Resting?"transfer":"attack";Draw();},mode=="attack"&&card==i);
                 b.interactable=g!=null&&Session.Reaction==null&&(!g.Exhausted||Session.Resting);
             }
+            // Actions: one row in portrait; a 3 + 2 grid on PC.
+            void Act(int slot,int count,int row,string text,Action click,bool on=false,bool enabled=true)
+            {
+                float w=actionArea.width/count,h=portrait?actionArea.height:actionArea.height/2;
+                float y=portrait?actionArea.y:actionArea.y+(1-row)*h;
+                AqUi.Button(foot,text,actionArea.x+slot*w,y,w-.004f,h-.02f,click,on).interactable=enabled;
+            }
             if(Session.Reaction!=null)
             {
-                AqUi.Button(foot,"MOVER MONSTRO",.01f,.04f,.245f,.3f,()=>{mode="move";Draw();});
-                AqUi.Button(foot,"PORTA",.255f,.04f,.245f,.3f,()=>{mode="door";Draw();});
-                AqUi.Button(foot,"ATACAR HERÓI",.50f,.04f,.245f,.3f,()=>Do(new AqCommand("react-attack")));
-                AqUi.Button(foot,"ENCERRAR REAÇÃO",.745f,.04f,.245f,.3f,()=>Do(new AqCommand("react-skip")));
+                int n=portrait?4:2;
+                Act(0,n,0,"MOVER MONSTRO",()=>{mode="move";Draw();});
+                Act(1,n,0,"PORTA",()=>{mode="door";Draw();});
+                Act(portrait?2:0,n,portrait?0:1,"ATACAR HERÓI",()=>Do(new AqCommand("react-attack")));
+                Act(portrait?3:1,n,portrait?0:1,"ENCERRAR REAÇÃO",()=>Do(new AqCommand("react-skip")));
             }
             else
             {
-                AqUi.Button(foot,"MOVER",.01f,.04f,.16f,.3f,()=>{mode="move";Draw();},mode=="move");
-                AqUi.Button(foot,"PORTA",.17f,.04f,.16f,.3f,()=>{mode="door";Draw();});
-                AqUi.Button(foot,hero.Ability=="arsenal"?"FORMA":hero.Ability=="phase"?"PASSO SOMBRIO":"HABILIDADE",.33f,.04f,.16f,.3f,()=>{if(hero.Ability=="arsenal")Do(new AqCommand("stance",selected));else if(hero.Ability=="phase"){mode="phase";Draw();}else {Message=hero.AbilityText;Draw();}});
-                AqUi.Button(foot,Session.Resting?"DESCANSANDO":"DESCANSAR",.49f,.04f,.25f,.3f,()=>Do(new AqCommand("rest"))).interactable=!Session.Resting&&Session.ActiveId<0;
-                AqUi.Button(foot,"ENCERRAR TURNO",.74f,.04f,.25f,.3f,()=>Do(new AqCommand("end")));
+                int top=portrait?5:3,low=portrait?5:2;
+                Act(0,top,0,"MOVER",()=>{mode="move";Draw();},mode=="move");
+                Act(1,top,0,"PORTA",()=>{mode="door";Draw();});
+                Act(2,top,0,hero.Ability=="arsenal"?"FORMA":hero.Ability=="phase"?"PASSO SOMBRIO":"HABILIDADE",()=>{if(hero.Ability=="arsenal")Do(new AqCommand("stance",selected));else if(hero.Ability=="phase"){mode="phase";Draw();}else {Message=hero.AbilityText;Draw();}});
+                Act(portrait?3:0,low,portrait?0:1,Session.Resting?"DESCANSANDO":"DESCANSAR",()=>Do(new AqCommand("rest")),false,!Session.Resting&&Session.ActiveId<0);
+                Act(portrait?4:1,low,portrait?0:1,"ENCERRAR TURNO",()=>Do(new AqCommand("end")));
             }
             // Camera column at the right edge of the table area.
             float colX=portrait?.89f:.935f,colW=portrait?.1f:.055f,step=portrait?.055f:.08f,colY=footerHeight+.07f;

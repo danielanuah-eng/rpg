@@ -8,12 +8,12 @@ Regras para todos os prompts:
 - Uma imagem por pedido (o Gemini erra tiras e grades; Claude monta as tiras).
 - Fundo de recorte **verde chapado #00FF00** quando o asset é transparente (o Gemini não entrega alfa real).
 - Nada de texto, número, logotipo ou moldura dentro da imagem.
-- Estilo: miniatura de jogo de tabuleiro pintada à mão, cores saturadas, contorno escuro suave, luz de cima à esquerda, sem sombra projetada no chão.
+- Estilo (pedido do autor, 16/10): **RPG em pixel art de 16 bits**, como os sprites da Arena: pixels nítidos, paleta limitada, sem antisserrilhado, contorno escuro de 1 pixel, luz de cima à esquerda, sem sombra projetada no chão. Nada com cara de peça de tabuleiro impressa.
 
 ## 1. Piso `wood` → `amostra-01/tile-wood.png`
 
 ```
-Top-down orthographic texture of an old wooden plank floor for a fantasy board game dungeon tile.
+Top-down orthographic texture of an old wooden plank floor for a 16-bit pixel art fantasy RPG dungeon. Crisp pixels, limited palette, no anti-aliasing.
 Seen exactly from above, no perspective, no vanishing point. Warm brown oak planks running
 horizontally, worn edges, a few nail heads and subtle scratches. Seamless and tileable on all
 four edges. Even lighting, no directional shadow, no vignette, no objects, no text.
@@ -23,7 +23,7 @@ Square image, 1024x1024.
 ## 2. Parede → `amostra-01/wall.png`
 
 ```
-Front elevation texture of a low dungeon wall for a fantasy board game, seen straight on,
+Front elevation texture of a low dungeon wall for a 16-bit pixel art fantasy RPG, crisp pixels, limited palette, seen straight on,
 no perspective. Rough grey-brown stone blocks with mortar lines and a thin gold trim at the top
 edge. Seamless and tileable horizontally (left and right edges match). Even lighting,
 no shadow, no objects, no text. Wide image, 1536x576 (aspect 8:3).
@@ -37,10 +37,10 @@ Gerar primeiro `south-east` e repetir o mesmo texto trocando só a direção, an
 como referência de personagem para manter a identidade.
 
 ```
-Full-body game miniature sprite of Lyra Faisca, a young fantasy gunslinger: short red hair with
+Full-body 16-bit pixel art RPG sprite (crisp pixels, limited palette, no anti-aliasing) of Lyra Faisca, a young fantasy gunslinger: short red hair with
 small sparks, short brown leather coat with brass details, red scarf, ash-grey revolver with
 glowing orange embers held in her right hand. Standing idle pose, feet together on the ground.
-Camera looks down at 30 degrees (isometric board game view). She faces SOUTH-EAST (toward the
+Camera looks down at 30 degrees (isometric RPG view). She faces SOUTH-EAST (toward the
 viewer's lower right). Whole body visible, feet near the bottom of the image, figure fills about
 80% of the image height, centered. Flat pure green background #00FF00, no ground, no shadow,
 no text. Square image, 1024x1024.
@@ -81,9 +81,9 @@ Mesmo prompt do piso `wood`, trocando a descrição do material:
 
 ### Fichas no chão → `token-<tipo>.png`
 ```
-Top-down round board game token, seen exactly from above, thick painted rim, centered,
-filling 90% of the image, symbol: <SYMBOL>. Fantasy dungeon style, saturated colors,
-soft dark outline. Flat pure green background #00FF00, no shadow, no text, no numbers.
+Top-down round 16-bit pixel art RPG floor marker, seen exactly from above, thick pixel rim, centered,
+filling 90% of the image, symbol: <SYMBOL>. Crisp pixels, limited palette,
+1-pixel dark outline. Flat pure green background #00FF00, no shadow, no text, no numbers.
 Square image, 1024x1024.
 ```
 | tipo | símbolo (`<SYMBOL>`) |
@@ -99,7 +99,7 @@ Square image, 1024x1024.
 
 ### Painel de porta → `door.png`
 ```
-Front view of a closed dungeon door panel for a fantasy board game: heavy bronze-banded oak,
+Front view of a closed dungeon door panel for a 16-bit pixel art RPG: heavy iron-banded oak, crisp pixels,
 round iron ring handle, small teal gem on top. Seen straight on, no perspective, centered,
 bottom edge touching the bottom of the image. Flat pure green background #00FF00, no text.
 Square image, 1024x1024.
@@ -107,8 +107,8 @@ Square image, 1024x1024.
 
 ### Props (4 diagonais) → `prop-<prop>_<direcao>.png`
 ```
-Game miniature prop: <PROP>. Camera looks down at 30 degrees (isometric board game view),
-object seen from the <DIRECTION> side. Painted fantasy board game style, soft dark outline.
+16-bit pixel art RPG prop: <PROP>. Camera looks down at 30 degrees (isometric RPG view),
+object seen from the <DIRECTION> side. Crisp pixels, limited palette, 1-pixel dark outline.
 Base touching the bottom of the image, centered, filling about 80% of the image.
 Flat pure green background #00FF00, no ground, no shadow, no text. Square image, 1024x1024.
 ```
@@ -120,8 +120,8 @@ Direções: `south-east`, `south-west`, `north-east`, `north-west` (mesmo texto 
 
 ### UI → `ui-<peca>.png`
 ```
-Fantasy board game UI element: <PIECE>. Front view, flat, painted bronze and dark slate,
-soft gold trim, empty center (no text, no icons), borders even so it can be 9-sliced.
+16-bit pixel art RPG UI element: <PIECE>. Front view, flat, dark wood and iron with
+chunky pixel bevels and a thin gold pixel trim, crisp pixels, limited palette, empty center (no text, no icons), borders even so it can be 9-sliced.
 Flat pure green background #00FF00. <SIZE>.
 ```
 | peça | `<PIECE>` | `<SIZE>` |
@@ -131,6 +131,27 @@ Flat pure green background #00FF00. <SIZE>.
 | `button-disabled` | rectangular button, desaturated grey | wide image 1024x384 |
 | `panel` | large dashboard panel | wide image 1536x768 |
 | `card-frame` | vertical playing card frame with a window for art and a lower text box | portrait image 750x1050 |
+
+### UI RPG em pixel art (pedido do autor: organizar e dar estilo de RPG) → `ui/`
+Mesmo prompt da seção anterior, um arquivo por peça. Molduras com centro vazio (o texto é da Unity).
+| arquivo | `<PIECE>` | `<SIZE>` |
+|---|---|---|
+| `ui/hud-bar.png` | long bottom dashboard bar, stone and wood, divided softly into three areas | wide image 2048x384 |
+| `ui/hero-slot.png` | small horizontal hero name plate with a square portrait window on the left | wide image 1024x256 |
+| `ui/hero-slot-selected.png` | same hero plate with glowing gold pixel edge | wide image 1024x256 |
+| `ui/card-slot.png` | small equipment card frame, vertical, window for an icon | portrait image 512x704 |
+| `ui/card-slot-exhausted.png` | same equipment card frame, darkened and cracked | portrait image 512x704 |
+| `ui/header-bar.png` | top title banner, dark wood with iron corners | wide image 2048x192 |
+| `ui/quest-scroll.png` | thin horizontal parchment scroll for objectives | wide image 2048x128 |
+| `ui/log-box.png` | small dark message box with rounded pixel corners | wide image 1024x192 |
+
+Ícones de ação (fundo verde #00FF00, 512×512, um símbolo centralizado, sem texto, mesmo estilo pixel):
+`icon-move` (boot print arrows), `icon-door` (wooden door), `icon-ability` (glowing star rune),
+`icon-rest` (campfire), `icon-end-turn` (hourglass), `icon-rotate-left` / `icon-rotate-right` (curved arrow),
+`icon-zoom-in` / `icon-zoom-out` (magnifier with plus / minus), `icon-reset` (compass),
+`icon-heart` (red pixel heart), `icon-shield` (small iron shield), `icon-dice` (six-sided die), `icon-eye` (line of sight).
+Prompt: `16-bit pixel art RPG icon: <SYMBOL>. Centered, filling 80% of the image, crisp pixels, limited palette,
+1-pixel dark outline. Flat pure green background #00FF00, no text. Square image, 512x512.`
 
 ### Heróis faltantes (conjunto completo, 4 diagonais)
 Usar o método do herói `lyra-faisca`: estáticos das 4 diagonais e quadros por clipe, anexando o estático como referência.

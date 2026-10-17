@@ -49,6 +49,9 @@ Novo journal determinístico em `DungeonBDX/Campaigns/Arcadia-v1`, separado do l
 - Figuras em pé: pés no pivô (0,153) da Arena, sem a margem transparente do quadro; escala pelo primeiro quadro `idle`.
 - Paredes rebaixadas (0,26) e portas (0,46) para não esconder casas; só a vida sobre as figuras.
 - HUD inferior compacto e coluna de câmera à direita: o tabuleiro ganhou cerca de 20% no PC.
+- Menos informação no mapa: fichas só por cor (sem letras), distâncias discretas, passagens abertas sem moldura.
+- Figuras a 74% da altura anterior para caber na casa; HUD do PC em três colunas (heróis | cartas | ações).
+- Estilo das artes novas: RPG em pixel art 16 bits (combina com os sprites da Arena).
 - Artes novas: NanoBanana (Gemini), pedidos em `entregas/nanobanana/` e `tarefas/08-gemini-nanobanana-artes.md`.
 
 ## Validação

@@ -6,7 +6,7 @@ O modo Arcadia usa nove tiles de 3×3 espaços, ocupação compartilhada, três 
 
 Vista **2D isométrica** (contrato em `coordenacao/dungeonbdx/contratos/ISOMETRICO-2D.md`): câmera ortográfica a 30°, giro de 360° que repousa em 45°+90°·k, arrasto preso ao chão; figuras em pé com os pés (pivô 0,153 da Arena) na casa e ordem de desenho pelos pés. Sobre as figuras fica só a vida; nomes ficam no HUD.
 
-O HUD inferior compacto reúne heróis, cartas, habilidade natural, portas, descanso e encerramento do turno; GIRAR/ZOOM/REPOR ficam numa coluna à direita do tabuleiro. Selecione uma carta para ver distâncias/visão; selecione MOVER para ver custo pelo caminho. PC: roda aproxima/afasta, botão direito gira, botão central desloca. Touch: pinça, torção e deslocamento com dois dedos.
+No PC o HUD inferior tem três colunas (heróis | cartas | ações); no celular, linhas. O HUD inferior compacto reúne heróis, cartas, habilidade natural, portas, descanso e encerramento do turno; GIRAR/ZOOM/REPOR ficam numa coluna à direita do tabuleiro. Selecione uma carta para ver distâncias/visão; selecione MOVER para ver custo pelo caminho. PC: roda aproxima/afasta, botão direito gira, botão central desloca. Touch: pinça, torção e deslocamento com dois dedos.
 
 O Colosso usa altura própria (2,4 contra 1,5; a escala mede o quadro animado, não o estático) e ocupa a casa inteira. Figuras comuns dividem a casa em duas posições visuais. Golpes usam os clips correspondentes da Arena quando disponíveis; a Vingança mortal termina antes da morte visual. Pisos, salas, portas, mobiliário, portais e marcadores diferenciam os três cenários.
 
