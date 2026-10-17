@@ -36,14 +36,42 @@ namespace DungeonBDX
             var r=Box(parent,text,x,y,w,h,Card);r.offsetMin=new Vector2(3,3);r.offsetMax=new Vector2(-3,-3);
             var img=r.GetComponent<UnityEngine.UI.Image>();img.raycastTarget=true;var b=r.gameObject.AddComponent<UnityEngine.UI.Button>();b.targetGraphic=img;
             b.transition=UnityEngine.UI.Selectable.Transition.None;b.onClick.AddListener(()=>click());
-            var visual=Box(r,"Face",0,0,1,1,selected?Teal:Card);var motion=r.gameObject.AddComponent<DungeonMotion>();motion.Configure(visual,Card,Teal);motion.Chosen=selected;
-            Box(visual,"Rule",0,0,1,.025f,selected?Gold:new Color(.34f,.31f,.25f));Text(visual,text,.04f,.04f,.92f,.92f,18,Ink,TextAlignmentOptions.Center);return b;
+            var visual=Box(r,"Face",0,0,1,1,selected?Teal:Card);var motion=r.gameObject.AddComponent<DungeonMotion>();motion.Chosen=selected;
+            var skin=Skin("button");
+            if(skin)
+            {
+                img.color=Color.clear;Slice(visual.GetComponent<UnityEngine.UI.Image>(),selected?Skin("button-selected")??skin:skin);
+                motion.Configure(visual,new Color(.86f,.86f,.86f),Color.white);motion.UseSprites(skin,Skin("button-selected"),Skin("button-disabled"));
+            }
+            else{motion.Configure(visual,Card,Teal);Box(visual,"Rule",0,0,1,.025f,selected?Gold:new Color(.34f,.31f,.25f));}
+            Text(visual,text,.06f,.08f,.88f,.84f,18,Ink,TextAlignmentOptions.Center);return b;
+        }
+        // Delivered UI art (lote Tripo): 9-slice frames from Resources/DungeonBDX/Iso/UI; null keeps the flat look.
+        static readonly System.Collections.Generic.Dictionary<string,Sprite> skins=new System.Collections.Generic.Dictionary<string,Sprite>();
+        public static Sprite Skin(string id)
+        {
+            if(skins.TryGetValue(id,out var cached))return cached;
+            var t=Resources.Load<Texture2D>("DungeonBDX/Iso/UI/"+id);Sprite sprite=null;
+            if(t){float edge=Mathf.Round(Mathf.Min(t.width,t.height)*.18f);
+                sprite=Sprite.Create(t,new Rect(0,0,t.width,t.height),new Vector2(.5f,.5f),100,0,SpriteMeshType.FullRect,new Vector4(edge,edge,edge,edge));}
+            skins[id]=sprite;return sprite;
+        }
+        public static void Slice(UnityEngine.UI.Image image,Sprite sprite)
+        {
+            if(!image||!sprite)return;image.sprite=sprite;image.type=UnityEngine.UI.Image.Type.Sliced;image.pixelsPerUnitMultiplier=3.2f;image.color=Color.white;
+        }
+        public static RectTransform Panelled(Transform parent,string name,float x,float y,float w,float h,Color fallback)
+        {
+            var r=Box(parent,name,x,y,w,h,fallback);Slice(r.GetComponent<UnityEngine.UI.Image>(),Skin("panel"));return r;
         }
         public static void Portrait(Transform parent,string id,float x,float y,float w,float h)
         {
-            var r=Box(parent,"Portrait "+id,x,y,w,h,Color.clear);var sprite=AqHeroImport.Portrait(id);
-            if(sprite){var image=r.GetComponent<UnityEngine.UI.Image>();image.sprite=sprite;image.color=Color.white;image.preserveAspect=true;}
-            else Text(r,AqContent.Hero(id).Name.Substring(0,1),0,0,1,1,44,Gold,TextAlignmentOptions.Center);
+            var r=Box(parent,"Portrait "+id,x,y,w,h,Color.clear);var sprite=AqHeroImport.Portrait(id);var ring=Skin("portrait-ring");
+            // With the delivered ring (PixelLab kit) the face sits inside it and the band hides the square corners.
+            var face=ring?Box(r,"Face",.16f,.16f,.68f,.68f,Color.clear):r;
+            if(sprite){var image=face.GetComponent<UnityEngine.UI.Image>();image.sprite=sprite;image.color=Color.white;image.preserveAspect=true;}
+            else Text(face,AqContent.Hero(id).Name.Substring(0,1),0,0,1,1,44,Gold,TextAlignmentOptions.Center);
+            if(ring){var band=Box(r,"Ring",0,0,1,1,Color.white).GetComponent<UnityEngine.UI.Image>();band.sprite=ring;band.preserveAspect=true;}
         }
         public static void Clear(Transform parent)
         {for(int i=parent.childCount-1;i>=0;i--){var c=parent.GetChild(i).gameObject;c.SetActive(false);if(Application.isPlaying)UnityEngine.Object.Destroy(c);else UnityEngine.Object.DestroyImmediate(c);}}

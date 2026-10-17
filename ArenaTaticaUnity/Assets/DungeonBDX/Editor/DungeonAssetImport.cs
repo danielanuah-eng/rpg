@@ -10,4 +10,13 @@ public sealed class DungeonAssetImport : AssetPostprocessor
         var model=(ModelImporter)assetImporter;model.isReadable=true;model.importAnimation=false;
         model.importCameras=false;model.importLights=false;
     }
+
+    // Board art is pixel art enlarged 8x: keep the pixels crisp and the colours exact.
+    void OnPreprocessTexture()
+    {
+        if(!assetPath.StartsWith("Assets/DungeonBDX/Art/Resources/DungeonBDX/Iso/",StringComparison.Ordinal))return;
+        var texture=(TextureImporter)assetImporter;texture.filterMode=UnityEngine.FilterMode.Point;
+        texture.textureCompression=TextureImporterCompression.Uncompressed;texture.mipmapEnabled=true;
+        texture.wrapMode=assetPath.Contains("/Frame/")?UnityEngine.TextureWrapMode.Repeat:UnityEngine.TextureWrapMode.Clamp;
+    }
 }

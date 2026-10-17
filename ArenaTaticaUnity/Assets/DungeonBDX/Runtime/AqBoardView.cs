@@ -78,6 +78,15 @@ namespace DungeonBDX
         readonly List<Texture2D> textures = new List<Texture2D>();
         readonly List<Floating> floats = new List<Floating>();
         readonly List<PortalMotion> portals = new List<PortalMotion>();
+        readonly List<PropSprite> propSprites = new List<PropSprite>();
+        readonly Dictionary<string, Sprite> artSprites = new Dictionary<string, Sprite>();
+
+        sealed class PropSprite
+        {
+            public SpriteRenderer Renderer;
+            public Vector3 Facing;
+            public Sprite[] ByDirection; // facing index 1,3,5,7 on screen -> sw, ne, nw, se art
+        }
         readonly Dictionary<int,float> deathAfterAttack = new Dictionary<int,float>();
 
         AqScenario scenario;
@@ -105,6 +114,19 @@ namespace DungeonBDX
         public UnityEngine.Camera Camera => viewCamera;
         /// <summary>Requested view angle; the camera eases toward it and rests on 45+90k after a gesture.</summary>
         public float Yaw => yawTarget;
+
+        // Life numbers over the figures: a player option, remembered between sessions.
+        const string ShowLifeKey = "dungeonbdx.showLife";
+        public static bool ShowLife
+        {
+            get => PlayerPrefs.GetInt(ShowLifeKey, 1) == 1;
+            set { PlayerPrefs.SetInt(ShowLifeKey, value ? 1 : 0); PlayerPrefs.Save(); }
+        }
+
+        public void RefreshLife()
+        {
+            foreach (var view in views.Values) RefreshLabel(view);
+        }
         public float Zoom { get; private set; } = 1f;
         public IReadOnlyDictionary<int,DungeonActorAnimation> Animations => animations;
         public float RenderedSpriteHeight(int id)
@@ -201,13 +223,16 @@ namespace DungeonBDX
                 Slab("Grid", new Vector3(x0,.02f,z0+1.5f), new Vector3(.09f,.04f,3f), grid, boardRoot);
                 Slab("Grid", new Vector3(x0+3f,.02f,z0+1.5f), new Vector3(.09f,.04f,3f), grid, boardRoot);
             }
-            // Heavy gold/stone frame around the whole table.
-            var gold = MaterialLook("frame-gold", GoldTrim, null, false);
+            // Heavy frame around the whole table: delivered stone/bronze art (repeated, never stretched) or gold.
+            var frameArt = Resources.Load<Texture2D>("DungeonBDX/Iso/Frame/frame");
+            var gold = frameArt ? MaterialLook("frame-cap", new Color(.36f,.31f,.26f), null, false) : MaterialLook("frame-gold", GoldTrim, null, false);
             float minX = -.5f, maxX = boardWidth-.5f, minZ = -.5f, maxZ = boardHeight-.5f;
-            Slab("Frame", new Vector3((minX+maxX)*.5f,-.13f,minZ-.19f), new Vector3(boardWidth+.78f,.32f,.38f), gold, boardRoot);
-            Slab("Frame", new Vector3((minX+maxX)*.5f,-.13f,maxZ+.19f), new Vector3(boardWidth+.78f,.32f,.38f), gold, boardRoot);
-            Slab("Frame", new Vector3(minX-.19f,-.13f,(minZ+maxZ)*.5f), new Vector3(.38f,.32f,boardHeight+.78f), gold, boardRoot);
-            Slab("Frame", new Vector3(maxX+.19f,-.13f,(minZ+maxZ)*.5f), new Vector3(.38f,.32f,boardHeight+.78f), gold, boardRoot);
+            var frameX = frameArt ? FrameLook("x", frameArt, new Vector2((boardWidth+.78f)/.38f,1f)) : gold;
+            var frameZ = frameArt ? FrameLook("z", frameArt, new Vector2(1f,(boardHeight+.78f)/.38f)) : gold;
+            Slab("Frame", new Vector3((minX+maxX)*.5f,-.13f,minZ-.19f), new Vector3(boardWidth+.78f,.32f,.38f), frameX, boardRoot);
+            Slab("Frame", new Vector3((minX+maxX)*.5f,-.13f,maxZ+.19f), new Vector3(boardWidth+.78f,.32f,.38f), frameX, boardRoot);
+            Slab("Frame", new Vector3(minX-.19f,-.13f,(minZ+maxZ)*.5f), new Vector3(.38f,.32f,boardHeight+.78f), frameZ, boardRoot);
+            Slab("Frame", new Vector3(maxX+.19f,-.13f,(minZ+maxZ)*.5f), new Vector3(.38f,.32f,boardHeight+.78f), frameZ, boardRoot);
             foreach (var edge in board.Edges)
             {
                 if (edge == null) continue;
@@ -232,13 +257,15 @@ namespace DungeonBDX
                 var cells = scenario.Starts[guild];
                 if (cells == null) continue;
                 var color = GuildColors[((guild%GuildColors.Length)+GuildColors.Length)%GuildColors.Length];
-                var pad = MaterialLook("start-" + guild, Color.Lerp(color,Color.black,.4f), null, true);
                 var rim = MaterialLook("start-rim-" + guild, color, null, true);
                 foreach (var cell in cells)
                 {
-                    // Flat pads only: guild colour stays readable without hiding the miniature feet.
-                    Cylinder("Start pad", CellPosition(cell) + Vector3.up*.008f, new Vector3(.9f,.016f,.9f), pad, boardRoot);
-                    Cylinder("Start rim", CellPosition(cell) + Vector3.up*.024f, new Vector3(.34f,.012f,.34f), rim, boardRoot);
+                    // Four small corner marks: the guild colour reads without a big disc covering the floor art.
+                    for (int corner=0; corner<4; corner++)
+                    {
+                        var dir = new Vector3(corner%2==0 ? -.36f : .36f, 0f, corner<2 ? -.36f : .36f);
+                        Slab("Start mark", CellPosition(cell) + dir + Vector3.up*.006f, new Vector3(.1f,.012f,.1f), rim, boardRoot);
+                    }
                 }
             }
         }
@@ -250,7 +277,8 @@ namespace DungeonBDX
             var root = new GameObject("Door " + key);
             root.transform.SetParent(liveRoot,false);
             var frame = MaterialLook("door-frame", new Color(.44f,.34f,.21f), null, false);
-            var bronze = MaterialLook("door-bronze", new Color(.63f,.44f,.21f), null, false);
+            var doorArt = Resources.Load<Texture2D>("DungeonBDX/Iso/Doors/door");
+            var bronze = doorArt ? MaterialLook("door-art", Color.white, doorArt, false) : MaterialLook("door-bronze", new Color(.63f,.44f,.21f), null, false);
             var teal = MaterialLook("door-teal", new Color(.17f,.40f,.38f), null, false);
             var postA = Slab("Post", mid + Vector3.up*.23f - along*.45f, new Vector3(.14f,.46f,.14f), frame, root.transform);
             var postB = Slab("Post", mid + Vector3.up*.23f + along*.45f, new Vector3(.14f,.46f,.14f), frame, root.transform);
@@ -277,11 +305,15 @@ namespace DungeonBDX
                 var color = TokenColor(token);
                 if (token.Kind == "portal")
                 {
-                    Cylinder("Portal", root.transform.position + Vector3.up*.02f, new Vector3(1f,.04f,1f),
-                        MaterialLook("portal-"+token.Color, Color.Lerp(color,Color.black,.35f), null, true), root.transform);
-                    Cylinder("Portal rim", root.transform.position + Vector3.up*.012f, new Vector3(.72f,.024f,.72f),
-                        MaterialLook("portal-rim", color, null, true), root.transform);
-                    var orbs = new Transform[3];
+                    var portalArt = ArtSprite("Tokens/portal", new Vector2(.5f,.5f), 256f/.78f);
+                    if (portalArt) FlatSprite("Portal art", root.transform.position + Vector3.up*.014f, portalArt, root.transform);
+                    // Thin glowing ring around a dark well instead of a full-cell coloured disc.
+                    else Cylinder("Portal rim", root.transform.position + Vector3.up*.008f, new Vector3(.7f,.016f,.7f),
+                        MaterialLook("portal-rim-"+token.Color, color, null, true), root.transform);
+                    if (!portalArt) Cylinder("Portal", root.transform.position + Vector3.up*.012f, new Vector3(.6f,.016f,.6f),
+                        MaterialLook("portal-"+token.Color, Color.Lerp(color,Color.black,.78f), null, true), root.transform);
+                    // The spiral art already moves the eye; the orbiting orbs stay only on the flat fallback.
+                    var orbs = new Transform[portalArt ? 0 : 3];
                     for (int i=0;i<orbs.Length;i++)
                         orbs[i] = Sphere("Orb", root.transform.position + Vector3.up*.32f, Vector3.one*.12f,
                             MaterialLook("portal-orb", Color.Lerp(color,Color.white,.45f), null, true), root.transform).transform;
@@ -289,7 +321,9 @@ namespace DungeonBDX
                 }
                 else
                 {
-                    Cylinder("Chip", root.transform.position + Vector3.up*.02f, new Vector3(.34f,.04f,.34f),
+                    var chipArt = ArtSprite("Tokens/" + token.Kind, new Vector2(.5f,.5f), 256f/.4f);
+                    if (chipArt) FlatSprite("Chip art", root.transform.position + Vector3.up*.012f, chipArt, root.transform);
+                    else Cylinder("Chip", root.transform.position + Vector3.up*.02f, new Vector3(.34f,.04f,.34f),
                         MaterialLook("chip-"+token.Kind, color, null, true), root.transform);
                     // Colour only on the table: letters made it read like a board-game print. Icons come from the art lot.
                 }
@@ -325,6 +359,8 @@ namespace DungeonBDX
             var stone = MaterialLook("prop-stone", new Color(.60f,.58f,.53f), null, false);
             switch ((prop ?? "").Trim().ToLowerInvariant())
             {
+                case "books" when BuildShelfSprite(center):
+                    break;
                 case "books":
                     Slab("Book", center + Vector3.up*.035f, new Vector3(.34f,.07f,.26f), MaterialLook("book-a", new Color(.60f,.24f,.22f), null, false), boardRoot);
                     Slab("Book", center + Vector3.up*.105f, new Vector3(.30f,.07f,.24f), MaterialLook("book-b", new Color(.24f,.36f,.50f), null, false), boardRoot);
@@ -369,6 +405,9 @@ namespace DungeonBDX
                     Slab("Sarcophagus", center + Vector3.up*.14f, new Vector3(.66f,.26f,.42f), stone, boardRoot);
                     Slab("Lid", center + Vector3.up*.30f, new Vector3(.62f,.08f,.38f),
                         MaterialLook("prop-stone-dark", StoneDark, null, false), boardRoot);
+                    break;
+                case "rune" when ArtSprite("Tokens/ritual", new Vector2(.5f,.5f), 256f/.7f):
+                    FlatSprite("Rune art", center + Vector3.up*.01f, ArtSprite("Tokens/ritual", new Vector2(.5f,.5f), 256f/.7f), boardRoot);
                     break;
                 case "rune":
                     Cylinder("Rune", center + Vector3.up*.02f, new Vector3(.62f,.04f,.62f),
@@ -429,10 +468,16 @@ namespace DungeonBDX
             body.transform.SetParent(root.transform,false);
             var view = new AqUnitView {Id=unit.Id, Unit=unit, Root=root.transform, Body=body.transform, Logical=unit.Cell};
             view.Height = TargetHeight(unit);
-            view.Base = Primitive(PrimitiveType.Cylinder,"Base", body.transform.position + Vector3.up*.02f,
-                new Vector3(.5f,.04f,.5f), Solid(BaseColor(unit)), body.transform);
-            view.Ring = Primitive(PrimitiveType.Cylinder,"Selection", body.transform.position + Vector3.up*.048f,
-                new Vector3(.64f,.025f,.64f), Solid(RingGold,true), body.transform);
+            // Player heroes only: slim guild ring around a darker tinted centre. Monsters stand bare on the floor.
+            if (!unit.Monster)
+            {
+                view.Base = Primitive(PrimitiveType.Cylinder,"Base", body.transform.position + Vector3.up*.008f,
+                    new Vector3(.4f,.012f,.4f), Solid(BaseColor(unit)), body.transform);
+                Primitive(PrimitiveType.Cylinder,"Foot shadow", body.transform.position + Vector3.up*.011f,
+                    new Vector3(.32f,.012f,.32f), Solid(Color.Lerp(BaseColor(unit),Color.black,.6f)), body.transform);
+            }
+            view.Ring = Primitive(PrimitiveType.Cylinder,"Selection", body.transform.position + Vector3.up*.004f,
+                new Vector3(.52f,.008f,.52f), Solid(RingGold,true), body.transform);
             view.Ring.SetActive(false);
             view.Visual = CreateVisual(view, body.transform);
             var animation = body.AddComponent<DungeonActorAnimation>();
@@ -506,6 +551,7 @@ namespace DungeonBDX
             string text = view.Unit.Monster
                 ? view.Unit.Health.ToString()
                 : view.Unit.Health + "/" + Mathf.Max(1, view.Unit.MaxHealth);
+            view.Label.gameObject.SetActive(ShowLife);
             if (view.LabelText == text) return;
             view.LabelText = text;
             view.Label.text = text;
@@ -851,6 +897,7 @@ namespace DungeonBDX
             for (int i=billboards.Count-1;i>=0;i--) if (!billboards[i]) billboards.RemoveAt(i);
             var rotation = viewCamera ? viewCamera.transform.rotation : Quaternion.identity;
             foreach (var billboard in billboards) if (billboard) billboard.rotation = rotation;
+            foreach (var prop in propSprites) RefreshPropSprite(prop);
             ApplyOccupancy();
             foreach (var animation in animations.Values) if (animation) animation.RefreshFacing();
         }
@@ -1095,6 +1142,77 @@ namespace DungeonBDX
             return material;
         }
 
+        // ---------------------------------------------------------------- delivered sprites (lote Tripo)
+
+        Sprite ArtSprite(string path, Vector2 pivot, float pixelsPerUnit)
+        {
+            string key = path + "@" + pixelsPerUnit.ToString("0.0");
+            if (artSprites.TryGetValue(key, out var cached)) return cached;
+            var texture = Resources.Load<Texture2D>("DungeonBDX/Iso/" + path);
+            var sprite = texture ? Sprite.Create(texture, new Rect(0,0,texture.width,texture.height), pivot, pixelsPerUnit) : null;
+            artSprites[key] = sprite;
+            return sprite;
+        }
+
+        // Flat on the floor and drawn under every figure, so feet never hide behind a token.
+        void FlatSprite(string name, Vector3 position, Sprite sprite, Transform parent)
+        {
+            var go = new GameObject(name, typeof(SpriteRenderer));
+            go.transform.SetParent(parent, false);
+            go.transform.position = position;
+            go.transform.rotation = Quaternion.Euler(90f, 0f, 0f);
+            var renderer = go.GetComponent<SpriteRenderer>();
+            renderer.sprite = sprite;
+            renderer.sortingOrder = -20;
+        }
+
+        bool BuildShelfSprite(Vector3 center)
+        {
+            string[] names = {"sw","ne","nw","se"};
+            var sprites = new Sprite[4];
+            for (int i=0;i<4;i++)
+            {
+                var texture = Resources.Load<Texture2D>("DungeonBDX/Iso/Props/bookshelf_" + names[i]);
+                if (!texture) return false;
+                // Every view keeps the same world height (.82), whatever the drawn width.
+                sprites[i] = ArtSprite("Props/bookshelf_" + names[i], new Vector2(.5f,0f), texture.height/.82f);
+            }
+            var go = new GameObject("Bookshelf", typeof(SpriteRenderer));
+            go.transform.SetParent(boardRoot, false);
+            go.transform.position = center;
+            go.transform.localScale = new Vector3(1f, IsoStretch, 1f);
+            var prop = new PropSprite {Renderer=go.GetComponent<SpriteRenderer>(), Facing=Vector3.back, ByDirection=sprites};
+            propSprites.Add(prop);
+            RefreshPropSprite(prop);
+            return true;
+        }
+
+        void RefreshPropSprite(PropSprite prop)
+        {
+            if (prop == null || !prop.Renderer || !viewCamera) return;
+            var north = viewCamera.transform.forward; north.y = 0f;
+            if (north.sqrMagnitude < .0001f) north = Vector3.forward;
+            north.Normalize();
+            var right = Vector3.Cross(Vector3.up, north);
+            float angle = Mathf.Atan2(Vector3.Dot(prop.Facing, right), Vector3.Dot(prop.Facing, -north))*Mathf.Rad2Deg;
+            int index = ((Mathf.FloorToInt(angle/90f) % 4) + 4) % 4; // quadrant: 0..90 = index 1, 90..180 = 3, ...
+            prop.Renderer.sprite = prop.ByDirection[index];
+            prop.Renderer.transform.rotation = Quaternion.Euler(0f, viewCamera.transform.eulerAngles.y, 0f);
+        }
+
+        Material FrameLook(string axis, Texture2D art, Vector2 tiling)
+        {
+            string key = "frame-art-" + axis + "-" + tiling.x.ToString("0.00") + "x" + tiling.y.ToString("0.00");
+            bool fresh = !materials.ContainsKey(key);
+            var material = MaterialLook(key, Color.white, art, false);
+            if (fresh)
+            {
+                material.mainTextureScale = tiling;
+                if (material.HasProperty("_BaseMap")) material.SetTextureScale("_BaseMap", tiling);
+            }
+            return material;
+        }
+
         Material Surface(string surface)
         {
             string key = (surface ?? "street").Trim().ToLowerInvariant();
@@ -1315,6 +1433,9 @@ namespace DungeonBDX
             foreach (var texture in textures) DestroyObject(texture);
             textures.Clear();
             portals.Clear();
+            propSprites.Clear();
+            foreach (var sprite in artSprites.Values) if (sprite) DestroyObject(sprite);
+            artSprites.Clear();
             floats.Clear();
             views.Clear();
             animations.Clear();

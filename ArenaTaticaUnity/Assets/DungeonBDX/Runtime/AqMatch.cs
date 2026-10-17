@@ -111,14 +111,15 @@ namespace DungeonBDX
             var scaler=canvas.GetComponent<UnityEngine.UI.CanvasScaler>();scaler.referenceResolution=portrait?new Vector2(720,1100):new Vector2(1440,900);
             AqUi.Clear(canvas.transform);safe=AqUi.Box(canvas.transform,"Safe area",0,0,1,1,Color.clear);DungeonShell.ApplySafeArea(safe,Screen.safeArea,Screen.width,Screen.height);
             var header=AqUi.Box(safe,"Header",0,.925f,1,.075f,AqUi.Panel);
-            AqUi.Text(header,Session.Scenario.Name,.02f,.37f,.72f,.58f,portrait?21:28,AqUi.Gold);
+            AqUi.Text(header,Session.Scenario.Name,.02f,.37f,.62f,.58f,portrait?21:28,AqUi.Gold);
             AqUi.Text(header,$"GUILDA {Session.CurrentGuild+1} · TURNO {Session.Turn} · {Session.Guilds[Session.CurrentGuild].Coins} MOEDAS · "+(SavePaused?"SAVE PENDENTE":"SALVO"),.02f,.02f,.72f,.36f,14,AqUi.Muted);
             AqUi.Button(header,"MENU",.86f,.12f,.13f,.76f,Close);
             AqUi.Button(header,muted?"SOM OFF":"SOM",.735f,.12f,.12f,.76f,()=>{muted=!muted;music.mute=sfx.mute=muted;Draw();});
+            AqUi.Button(header,AqBoardView.ShowLife?"VIDA":"VIDA OFF",.645f,.2f,.08f,.6f,()=>{AqBoardView.ShowLife=!AqBoardView.ShowLife;view?.RefreshLife();Draw();});
             var quests=AqUi.Box(safe,"Quest strip",0,.88f,1,.045f,new Color(.12f,.14f,.15f,.97f));
             string progress=string.Join("  |  ",Session.Guilds.Select(g=>$"G{g.Index+1}: {g.Completed.Count}/{(Session.Guilds.Count==2?2:3)}"));
             AqUi.Text(quests,progress+"    ·    "+Session.Scenario.Quests[0]+" / "+Session.Scenario.Quests[1],.02f,.03f,.96f,.94f,15);
-            float footerHeight=FooterHeight;var foot=AqUi.Box(safe,"Bottom guild dashboard",0,0,1,footerHeight,AqUi.Panel);
+            float footerHeight=FooterHeight;var foot=AqUi.Panelled(safe,"Bottom guild dashboard",0,0,1,footerHeight,AqUi.Panel);
             var party=Session.Units.Where(u=>!u.Monster&&u.Guild==Session.CurrentGuild).ToArray();
             // PC: three columns (heroes | cards | actions). Portrait keeps stacked rows.
             Rect heroArea=portrait?new Rect(.01f,.755f,.98f,.235f):new Rect(.005f,.03f,.25f,.94f);

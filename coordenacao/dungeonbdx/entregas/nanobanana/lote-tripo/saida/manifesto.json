@@ -1,0 +1,410 @@
+{
+  "lote": "tripo-2026-10-16",
+  "itens": [
+    {
+      "id": "crypt",
+      "tipo": "piso",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: tile-crypt.png",
+      "caminho": "Tiles/crypt.png",
+      "sha256": "d66d787090268a9999ffba309e2a58320ca4020f39df66659a1d49d16b21c15e",
+      "projecao": "topo",
+      "largura": 512,
+      "altura": 512,
+      "pivo": null,
+      "alfa": null
+    },
+    {
+      "id": "garden",
+      "tipo": "piso",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: tile-garden.png",
+      "caminho": "Tiles/garden.png",
+      "sha256": "6de6ee2f647f5503515f1f3ed92cb2e29de401f7cb3c458b21cab15f4b9e210b",
+      "projecao": "topo",
+      "largura": 512,
+      "altura": 512,
+      "pivo": null,
+      "alfa": null
+    },
+    {
+      "id": "marble",
+      "tipo": "piso",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: tile-marble.png",
+      "caminho": "Tiles/marble.png",
+      "sha256": "326e98fda66178c5fdd4526f6e3df59ad34984fe416243edf370bc915bac0190",
+      "projecao": "topo",
+      "largura": 512,
+      "altura": 512,
+      "pivo": null,
+      "alfa": null
+    },
+    {
+      "id": "mosaic",
+      "tipo": "piso",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: tile-mosaic.png",
+      "caminho": "Tiles/mosaic.png",
+      "sha256": "ad84510ddba9d9c5090bbf7513ecbef36c4110afa4cef5abf1ee2c2eacd68c62",
+      "projecao": "topo",
+      "largura": 512,
+      "altura": 512,
+      "pivo": null,
+      "alfa": null
+    },
+    {
+      "id": "street",
+      "tipo": "piso",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: tile-street.png",
+      "caminho": "Tiles/street.png",
+      "sha256": "4a1a8f86595872d24ec826e52a142330c6d424f4ff59c5a592530f1a725e1d44",
+      "projecao": "topo",
+      "largura": 512,
+      "altura": 512,
+      "pivo": null,
+      "alfa": null
+    },
+    {
+      "id": "terracotta",
+      "tipo": "piso",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: tile-terracotta.png",
+      "caminho": "Tiles/terracotta.png",
+      "sha256": "206899be58502a1fdee84002277ee083e3bdb657ba68f807ace86af3e7c63d0d",
+      "projecao": "topo",
+      "largura": 512,
+      "altura": 512,
+      "pivo": null,
+      "alfa": null
+    },
+    {
+      "id": "wood",
+      "tipo": "piso",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: Piso de madeira.jpeg",
+      "caminho": "Tiles/wood.png",
+      "sha256": "5735dc7c50fb93a4a15be60e9e51baa25b84e97dd4bc4899b0d9ae5ceab320c9",
+      "projecao": "topo",
+      "largura": 512,
+      "altura": 512,
+      "pivo": null,
+      "alfa": null
+    },
+    {
+      "id": "wall",
+      "tipo": "parede",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: Parede da masmorra.jpeg",
+      "caminho": "Walls/wall.png",
+      "sha256": "5971e7e2c9335512b2dc09e8e97ac600b279796f4a03b7452eb5641ff6e59a8d",
+      "projecao": "frontal",
+      "largura": 512,
+      "altura": 192,
+      "pivo": null,
+      "alfa": null
+    },
+    {
+      "id": "captive",
+      "tipo": "ficha",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: token-captive.png",
+      "caminho": "Tokens/captive.png",
+      "sha256": "13a3eb9e680273d8f1c996d64bef6f05adbb9b88386e4afabcd5794000a27735",
+      "projecao": "topo",
+      "largura": 256,
+      "altura": 256,
+      "pivo": [
+        0.5,
+        0.5
+      ],
+      "alfa": {
+        "transparente": 0.502,
+        "parcial": 0.056
+      }
+    },
+    {
+      "id": "clue",
+      "tipo": "ficha",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: token-clue.png (pista).jpeg",
+      "caminho": "Tokens/clue.png",
+      "sha256": "bdf5e2abb04dd90c9d322c45ec31ad808d8220e23b535734537d2ed4d22cf2c8",
+      "projecao": "topo",
+      "largura": 256,
+      "altura": 256,
+      "pivo": [
+        0.5,
+        0.5
+      ],
+      "alfa": {
+        "transparente": 0.512,
+        "parcial": 0.035
+      }
+    },
+    {
+      "id": "emblem",
+      "tipo": "ficha",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: token-emblem.png",
+      "caminho": "Tokens/emblem.png",
+      "sha256": "e01fbdb293fb341cb1f0b90d87eef1b6d9a07c36055b1f91102ac8de40952f3b",
+      "projecao": "topo",
+      "largura": 256,
+      "altura": 256,
+      "pivo": [
+        0.5,
+        0.5
+      ],
+      "alfa": {
+        "transparente": 0.465,
+        "parcial": 0.033
+      }
+    },
+    {
+      "id": "explore",
+      "tipo": "ficha",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: token-explore.png",
+      "caminho": "Tokens/explore.png",
+      "sha256": "896828e57fc70dae0f1fb48b62515a1132aacb4e11115a4bd784e851b82aec7a",
+      "projecao": "topo",
+      "largura": 256,
+      "altura": 256,
+      "pivo": [
+        0.5,
+        0.5
+      ],
+      "alfa": {
+        "transparente": 0.214,
+        "parcial": 0.013
+      }
+    },
+    {
+      "id": "hazard",
+      "tipo": "ficha",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: token-hazard.png",
+      "caminho": "Tokens/hazard.png",
+      "sha256": "d406df2796759d708b66217f7392f507d46e47541c271e5370079b9b9ad9cc9c",
+      "projecao": "topo",
+      "largura": 256,
+      "altura": 256,
+      "pivo": [
+        0.5,
+        0.5
+      ],
+      "alfa": {
+        "transparente": 0.556,
+        "parcial": 0.04
+      }
+    },
+    {
+      "id": "portal",
+      "tipo": "ficha",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: token-portal.png",
+      "caminho": "Tokens/portal.png",
+      "sha256": "c48464d4aaa93e5aff97d9feb6a87144011e4e61a8b0f11dc204cb04e9501ce8",
+      "projecao": "topo",
+      "largura": 256,
+      "altura": 256,
+      "pivo": [
+        0.5,
+        0.5
+      ],
+      "alfa": {
+        "transparente": 0.21,
+        "parcial": 0.013
+      }
+    },
+    {
+      "id": "relic",
+      "tipo": "ficha",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: token-relic.png",
+      "caminho": "Tokens/relic.png",
+      "sha256": "d3e45ffa68525e98f0bf46626446d89d8d898710caf8bf6134697ca719b1a6f7",
+      "projecao": "topo",
+      "largura": 256,
+      "altura": 256,
+      "pivo": [
+        0.5,
+        0.5
+      ],
+      "alfa": {
+        "transparente": 0.55,
+        "parcial": 0.036
+      }
+    },
+    {
+      "id": "ritual",
+      "tipo": "ficha",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: token-ritual.png",
+      "caminho": "Tokens/ritual.png",
+      "sha256": "2d3c516d73ff642686446ae6f51c356e01c3aba7252975b45595e48fe67ca894",
+      "projecao": "topo",
+      "largura": 256,
+      "altura": 256,
+      "pivo": [
+        0.5,
+        0.5
+      ],
+      "alfa": {
+        "transparente": 0.223,
+        "parcial": 0.013
+      }
+    },
+    {
+      "id": "bookshelf_ne",
+      "tipo": "prop",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: prop-bookshelf_ne.png",
+      "caminho": "Props/bookshelf_ne.png",
+      "sha256": "ce92d5f7d95615401ce0b0a0a5771d4008f9310e836851f0718959fffd99a668",
+      "projecao": "camera30",
+      "largura": 151,
+      "altura": 256,
+      "pivo": [
+        0.5,
+        0.0
+      ],
+      "alfa": {
+        "transparente": 0.235,
+        "parcial": 0.02
+      }
+    },
+    {
+      "id": "bookshelf_nw",
+      "tipo": "prop",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: prop-bookshelf_nw.png",
+      "caminho": "Props/bookshelf_nw.png",
+      "sha256": "a37ca86cc0648cfb9f88fa8f7134cc760c67da1f691521bc209e75c8816daff6",
+      "projecao": "camera30",
+      "largura": 157,
+      "altura": 256,
+      "pivo": [
+        0.5,
+        0.0
+      ],
+      "alfa": {
+        "transparente": 0.206,
+        "parcial": 0.025
+      }
+    },
+    {
+      "id": "bookshelf_se",
+      "tipo": "prop",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: prop-bookshelf_se.png",
+      "caminho": "Props/bookshelf_se.png",
+      "sha256": "b55fb94ebf93bb32de836e32530d3c2a3c1cda8d8d17bb3bee40afc69e6e9b7d",
+      "projecao": "camera30",
+      "largura": 151,
+      "altura": 256,
+      "pivo": [
+        0.5,
+        0.0
+      ],
+      "alfa": {
+        "transparente": 0.225,
+        "parcial": 0.019
+      }
+    },
+    {
+      "id": "bookshelf_sw",
+      "tipo": "prop",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: prop-bookshelf_sw.png).jpeg",
+      "caminho": "Props/bookshelf_sw.png",
+      "sha256": "7a4c9c17d6f5e0a3fd4a50a837919089cf8321827162865469c88ad6fca234e0",
+      "projecao": "camera30",
+      "largura": 137,
+      "altura": 256,
+      "pivo": [
+        0.5,
+        0.0
+      ],
+      "alfa": {
+        "transparente": 0.179,
+        "parcial": 0.02
+      }
+    },
+    {
+      "id": "door",
+      "tipo": "porta",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: porta da masmorra fechada.jpeg",
+      "caminho": "Doors/door.png",
+      "sha256": "2038ef6aae09daaf54bafb44d43e3959e917964d44b32cbe935d1d85d9578c59",
+      "projecao": "frontal",
+      "largura": 256,
+      "altura": 198,
+      "pivo": null,
+      "alfa": {
+        "transparente": 0.0,
+        "parcial": 0.008
+      }
+    },
+    {
+      "id": "button-disabled",
+      "tipo": "ui",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: ui-button-disabled.png",
+      "caminho": "UI/button-disabled.png",
+      "sha256": "09371f67eb2d1f6fa32b2004e3dd36f6f34c7a138095af5f463ddf829f91d09c",
+      "projecao": "frontal",
+      "largura": 384,
+      "altura": 149,
+      "pivo": null,
+      "alfa": {
+        "transparente": 0.03,
+        "parcial": 0.019
+      }
+    },
+    {
+      "id": "button-selected",
+      "tipo": "ui",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: ui-button-selected.png",
+      "caminho": "UI/button-selected.png",
+      "sha256": "f54b0c4609985320f5a8fb270121a8a44122955e5cd9c50740fca9312f10643b",
+      "projecao": "frontal",
+      "largura": 384,
+      "altura": 148,
+      "pivo": null,
+      "alfa": {
+        "transparente": 0.026,
+        "parcial": 0.041
+      }
+    },
+    {
+      "id": "button",
+      "tipo": "ui",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: ui-button.png (rectangular button).jpeg",
+      "caminho": "UI/button.png",
+      "sha256": "4f3d7c57cd00012e11c05c7f581c2e9a2aec392c8ee8d8b6a15a8f62d0307b79",
+      "projecao": "frontal",
+      "largura": 384,
+      "altura": 154,
+      "pivo": null,
+      "alfa": {
+        "transparente": 0.001,
+        "parcial": 0.012
+      }
+    },
+    {
+      "id": "panel",
+      "tipo": "ui",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: ui-panel.png (large dashboard panel).jpeg",
+      "caminho": "UI/panel.png",
+      "sha256": "0aae8884a5150a129c235669ca31b9169effb594b656fa472a69c24f3e39c798",
+      "projecao": "frontal",
+      "largura": 768,
+      "altura": 425,
+      "pivo": null,
+      "alfa": {
+        "transparente": 0.015,
+        "parcial": 0.006
+      }
+    },
+    {
+      "id": "card-frame",
+      "tipo": "ui",
+      "origem": "NanoBanana (Gemini), gerado pelo autor; pasta Tripo: ui-card-frame.png (vertical playing card frame).jpeg",
+      "caminho": "UI/card-frame.png",
+      "sha256": "23e70875a807ad47c10c4c3700ac8dd5b8705c7db4e47bb432ba56778f1d64a5",
+      "projecao": "frontal",
+      "largura": 375,
+      "altura": 525,
+      "pivo": null,
+      "alfa": {
+        "transparente": 0.491,
+        "parcial": 0.011
+      }
+    }
+  ],
+  "fora": [
+    "Lyra faiska modelo.jpeg (referência de 1 quadro, fundo bege: sprites vão pelo PixelLab)"
+  ]
+}

@@ -11,6 +11,7 @@ namespace DungeonBDX
         UnityEngine.UI.Image image;
         UnityEngine.UI.Selectable button;
         Color idle, accent;
+        Sprite normalSprite, chosenSprite, disabledSprite;
         bool hovered, focused, pressed, chosen;
         public bool Chosen { get => chosen; set => chosen = value; }
 
@@ -21,6 +22,10 @@ namespace DungeonBDX
             visual = target; image = visual.GetComponent<UnityEngine.UI.Image>();
             button = GetComponent<UnityEngine.UI.Selectable>(); idle = normal; accent = active;
         }
+
+        // Delivered button art: one frame per state; the colour then only brightens on hover.
+        public void UseSprites(Sprite normal, Sprite selected, Sprite disabled)
+        { normalSprite = normal; chosenSprite = selected ? selected : normal; disabledSprite = disabled ? disabled : normal; }
 
         void Update()
         {
@@ -34,6 +39,7 @@ namespace DungeonBDX
                 Vector3.one * (enabled && pressed ? .98f : active ? 1.015f : 1), blend);
             Color target = enabled && chosen ? accent : active ? Color.Lerp(idle, accent, .45f) : idle;
             if (image) image.color = Color.Lerp(image.color, target, blend);
+            if (image && normalSprite) image.sprite = !enabled ? disabledSprite : chosen ? chosenSprite : normalSprite;
         }
 
         void OnDisable()

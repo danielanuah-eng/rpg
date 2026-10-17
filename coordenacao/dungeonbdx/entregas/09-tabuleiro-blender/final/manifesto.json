@@ -1,0 +1,131 @@
+{
+  "lote": "09-tabuleiro-blender",
+  "itens": [
+    {
+      "id": "crypt",
+      "tipo": "piso",
+      "origem": "Blender 5.2 (fontes/tabuleiro_texturas.py) + fontes/pos_pixel.py",
+      "caminho": "crypt.png",
+      "sha256": "b64417f9bdded0553661782a005690a399f411ae2840cc5e724b8c9080b2c3f7",
+      "projecao": "topo",
+      "largura": 512,
+      "altura": 512,
+      "pixelArte": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "frame",
+      "tipo": "moldura",
+      "origem": "Blender 5.2 (fontes/tabuleiro_texturas.py) + fontes/pos_pixel.py",
+      "caminho": "frame.png",
+      "sha256": "cf758c433581986f8d9cdbf6648ae3b19017120e36fe2263fa2e3e4a596564f9",
+      "projecao": "topo",
+      "largura": 512,
+      "altura": 512,
+      "pixelArte": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "garden",
+      "tipo": "piso",
+      "origem": "Blender 5.2 (fontes/tabuleiro_texturas.py) + fontes/pos_pixel.py",
+      "caminho": "garden.png",
+      "sha256": "5a05d0b8c52d0b7ee38cb81eddc7399571e7c9eec6c01b3bc0f15c598bbe0f1b",
+      "projecao": "topo",
+      "largura": 512,
+      "altura": 512,
+      "pixelArte": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "marble",
+      "tipo": "piso",
+      "origem": "Blender 5.2 (fontes/tabuleiro_texturas.py) + fontes/pos_pixel.py",
+      "caminho": "marble.png",
+      "sha256": "041400461b2cdf76c81566ce7a43b0d5e97ac5a52e6554f8550b3cbdbe0a2274",
+      "projecao": "topo",
+      "largura": 512,
+      "altura": 512,
+      "pixelArte": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "mosaic",
+      "tipo": "piso",
+      "origem": "Blender 5.2 (fontes/tabuleiro_texturas.py) + fontes/pos_pixel.py",
+      "caminho": "mosaic.png",
+      "sha256": "fb37452b8c8caa38d296e9df00195ed2ecbe5bffe9bdd076294c0679c97013fb",
+      "projecao": "topo",
+      "largura": 512,
+      "altura": 512,
+      "pixelArte": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "street",
+      "tipo": "piso",
+      "origem": "Blender 5.2 (fontes/tabuleiro_texturas.py) + fontes/pos_pixel.py",
+      "caminho": "street.png",
+      "sha256": "584e4acf8b62430a0609ead70e08af47c8b44ab19b60791f1a091c9d9b3ed5ba",
+      "projecao": "topo",
+      "largura": 512,
+      "altura": 512,
+      "pixelArte": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "terracotta",
+      "tipo": "piso",
+      "origem": "Blender 5.2 (fontes/tabuleiro_texturas.py) + fontes/pos_pixel.py",
+      "caminho": "terracotta.png",
+      "sha256": "8720be853adacb4ff7a16895009b10d3a21b6473d9c4201e58c8a48fe1c45172",
+      "projecao": "topo",
+      "largura": 512,
+      "altura": 512,
+      "pixelArte": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "wall",
+      "tipo": "parede",
+      "origem": "Blender 5.2 (fontes/tabuleiro_texturas.py) + fontes/pos_pixel.py",
+      "caminho": "wall.png",
+      "sha256": "06c06bc6bf229b3cb7d7ec54cdc46c8c181fb427c77ffe6fc07d9c923b9be81b",
+      "projecao": "frontal",
+      "largura": 512,
+      "altura": 192,
+      "pixelArte": [
+        64,
+        24
+      ]
+    },
+    {
+      "id": "wood",
+      "tipo": "piso",
+      "origem": "Blender 5.2 (fontes/tabuleiro_texturas.py) + fontes/pos_pixel.py",
+      "caminho": "wood.png",
+      "sha256": "e4a6f07badf89aba69ae3174267e373fe215c1c5424387f5d7e36890f6d832c9",
+      "projecao": "topo",
+      "largura": 512,
+      "altura": 512,
+      "pixelArte": [
+        64,
+        64
+      ]
+    }
+  ]
+}
