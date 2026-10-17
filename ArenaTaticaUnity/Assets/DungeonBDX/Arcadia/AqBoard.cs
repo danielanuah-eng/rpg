@@ -208,15 +208,16 @@ namespace DungeonBDX.Arcadia
         }
         static void Token(AqScenario s,string kind,int x,int y,string color="blue")
             =>s.Tokens.Add(new AqToken{Id=kind+s.Tokens.Count,Kind=kind,Color=color,Cell=new AqCell(x,y)});
-        // Each chapter alternates its own minions; combat numbers stay those of the melee/ranged profile.
+        // Each chapter alternates its own minions (one of each per spawn row); combat numbers stay those of the melee/ranged profile.
+        // Non-playable Arena characters (author, 17/10) fill the rows with chapter names; an id is never both melee and ranged in a chapter.
         static readonly Dictionary<string,(string id,string name)[]> Melee=new Dictionary<string,(string,string)[]>{
-            ["portais-em-ruinas"]=new[]{("ogro-de-pedra","Saqueador de pedra"),("troll-esgoto","Troll do esgoto")},
-            ["praca-dos-quatro-emblemas"]=new[]{("domador-de-correntes","Carcereiro da confraria"),("lobo-de-cinzas","Lobo de cinzas")},
-            ["resgate-nas-catacumbas"]=new[]{("esqueleto-lanceiro","Esqueleto lanceiro"),("viuva-da-agulha","Viúva da agulha")}};
+            ["portais-em-ruinas"]=new[]{("ogro-de-pedra","Saqueador de pedra"),("troll-esgoto","Troll do esgoto"),("raizor","Espinheiro do canal"),("guardiao-de-musgo","Musgoso das ruínas")},
+            ["praca-dos-quatro-emblemas"]=new[]{("domador-de-correntes","Carcereiro da confraria"),("lobo-de-cinzas","Lobo de cinzas"),("brumak","Arrombador da confraria"),("gryvro","Grifo de rapina")},
+            ["resgate-nas-catacumbas"]=new[]{("esqueleto-lanceiro","Esqueleto lanceiro"),("viuva-da-agulha","Viúva da agulha"),("devon","Morto inquieto"),("ossyro","Ceifador da cripta")}};
         static readonly Dictionary<string,(string id,string name)[]> Shooters=new Dictionary<string,(string,string)[]>{
-            ["portais-em-ruinas"]=new[]{("cultista-encapuzado","Cultista encapuzado"),("nixira","Xamã dos cogumelos")},
-            ["praca-dos-quatro-emblemas"]=new[]{("vespa-cinzenta","Vespa cinzenta"),("cultista-encapuzado","Cultista encapuzado")},
-            ["resgate-nas-catacumbas"]=new[]{("nixira","Xamã dos cogumelos"),("cultista-encapuzado","Cultista encapuzado")}};
+            ["portais-em-ruinas"]=new[]{("cultista-encapuzado","Cultista encapuzado"),("nixira","Xamã dos cogumelos"),("alvyr","Aprendiz renegado"),("viuva-da-agulha","Tecelã de teias")},
+            ["praca-dos-quatro-emblemas"]=new[]{("vespa-cinzenta","Vespa cinzenta"),("cultista-encapuzado","Cultista encapuzado"),("rei-bobett","Coletor de tributos"),("alvyr","Arcanista da confraria")},
+            ["resgate-nas-catacumbas"]=new[]{("nixira","Xamã dos cogumelos"),("cultista-encapuzado","Cultista encapuzado"),("teantha","Espectro da foice"),("alvyr","Vidente do ritual")}};
         // PixelLab enemies without an Arena fighter entry; their folders are passed straight to the unit.
         public static readonly IReadOnlyDictionary<string,string> EnemyArt=new Dictionary<string,string>{
             ["troll-esgoto"]="TrollEsgoto",["cultista-encapuzado"]="CultistaEncapuzado",["esqueleto-lanceiro"]="EsqueletoLanceiro",

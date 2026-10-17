@@ -54,3 +54,5 @@
 - Modo clássico: `DungeonHeroCatalog.ImportPlayable()` (14 do RPG + 3 originais) no `DungeonShell`; inimigos `raizor`, `nixira`, `domador-de-correntes`/`vaelis-vinculo` (nenhum jogável).
 - `DungeonWorldView.Pick`: quando o corpo de quem está na frente cobre a base de quem está atrás, ganha o mais próximo em termos relativos (base pelo raio, corpo pela meia-altura).
 - EditMode 407/407. Build não refeito nesta parte (os PNGs novos viram Sprite no próximo build).
+- Lacaios: cada capítulo agora tem 4 tipos corpo a corpo e 4 à distância (um por posição), com NPCs da Arena que já têm sprite (raizor, guardião de musgo, brumak, gryvro, devon, ossyro, alvyr, viúva, rei bobett, teantha) e nomes de capítulo. Números de combate iguais. Testes `EveryChapterFieldsFourMeleeAndFourRangedMinionKinds` e `EveryChapterMonsterHasSpriteArt`. EditMode 408/409 — a falha é `UiSkinTests` (`Iso/UI/panel-dark.png` e `card-frame.png` apagados na cópia de trabalho por outra mão, não commitado).
+- Próximo: níveis Arcadia (vilão menor por capítulo, dragões) mexem no balanceamento — combinar com o autor.

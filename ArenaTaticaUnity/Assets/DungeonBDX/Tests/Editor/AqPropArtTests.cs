@@ -42,6 +42,17 @@ namespace DungeonBDX.Tests
                 Assert.That(Resources.Load<Texture2D>("DungeonBDX/Iso/UI/Icons/" + icon), Is.Not.Null, icon);
         }
 
+        [Test] public void EveryChapterMonsterHasSpriteArt()
+        {
+            foreach (var id in AqScenarios.Ids)
+                foreach (var m in AqScenarios.Create(id).Monsters)
+                {
+                    string folder = m.SpriteFolder ?? (ArenaTatica.Core.Content.Fighters.TryGetValue(m.HeroId, out var f) ? f.sprites : null);
+                    Assert.That(folder, Is.Not.Null, m.HeroId);
+                    Assert.That(Resources.LoadAll<Texture2D>("Sprites/" + folder), Is.Not.Empty, m.HeroId);
+                }
+        }
+
         [Test] public void BookRoomsWearShelfWallsInsteadOfAShelfProp()
         {
             Assert.That(Resources.Load<Texture2D>("DungeonBDX/Iso/Walls/wall-books"), Is.Not.Null);

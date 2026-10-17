@@ -92,6 +92,18 @@ namespace DungeonBDX.Tests
                 Assert.That(AqScenarios.Create(id).Monsters.Any(m=>AqContent.Playable.Contains(m.HeroId)),Is.False,id);
         }
 
+        [Test] public void EveryChapterFieldsFourMeleeAndFourRangedMinionKinds()
+        {
+            foreach(var id in AqScenarios.Ids)
+            {
+                var minions=AqScenarios.Create(id).Monsters.Where(m=>m.Reward<2&&m.HeroId!="brutamontes-errante").ToArray();
+                var melee=minions.Where(m=>!m.Ranged).Select(m=>m.HeroId).Distinct().ToArray();var ranged=minions.Where(m=>m.Ranged).Select(m=>m.HeroId).Distinct().ToArray();
+                Assert.That(melee,Has.Length.EqualTo(4),id);Assert.That(ranged,Has.Length.EqualTo(4),id);
+                // Monster dice are looked up by id, so one id never plays both profiles in a chapter.
+                Assert.That(melee.Intersect(ranged),Is.Empty,id);
+            }
+        }
+
         [Test] public void ChaptersVaryMinionsAndBossesUseExportedArt()
         {
             var lineups=AqScenarios.Ids.Select(id=>string.Join(",",AqScenarios.Create(id).Monsters.Where(m=>m.Reward<2).Select(m=>m.HeroId).Distinct().OrderBy(x=>x))).ToArray();
