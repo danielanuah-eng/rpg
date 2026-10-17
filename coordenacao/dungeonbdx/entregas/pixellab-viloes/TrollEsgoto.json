@@ -1,20 +1,28 @@
 {
  "character_id": "75f50ab3-23c3-4c29-856a-2d32011dbd7e",
- "frame": 128,
+ "frame": 134,
  "crop180": [
-  27,
-  20,
-  155,
-  148
+  22,
+  16,
+  156,
+  150
  ],
  "files": {
-  "south.png": "9268ce32254f59b852df2f9a43e95fbf20d92b205c9a03e8fcb35abe4fb45299",
-  "south-east.png": "e1c716040dac8038e287ef76c370265cd015997537ab53d360f4cc84d60e32c9",
-  "east.png": "d3af7ed03be68c7907c0aafa5810419ac9c3df63be9a8776850211537335bdfd",
-  "north-east.png": "9076110157aa11e307c54270ebab12a5d5b2d048362c84b0d1c48a36812aea1f",
-  "north.png": "585a472d5f93790750e3c80554eb5a55304542b4dd6d988d26903201a518db6b",
-  "north-west.png": "3da1ef2d6dcd61e38155ccc423ec1400fc0701c120721312bbdf7131c3f2eb7f",
-  "west.png": "9bbfb42f6761e87ae0a223bac961023ec43f917576e43162b395cd9a0667d90e",
-  "south-west.png": "30d546c6f0068c1d46eb6aa4c4e621286656d51c8a9fb3defd3188c0562ef37b"
- }
+  "south.png": "072a6f40e1beda47c108924e6baf5f6272ac48bb49037fb10c2a5c38da353ab4",
+  "south-east.png": "874e10caccd9b70bbe57c452ee75cb56edd40d19c9937958df8f019873713d47",
+  "east.png": "77b4b725b8b1d86eb60a77e3a9031099131569dc3263fdd8eae7c3779dd4db62",
+  "north-east.png": "af7fe9d2adbb524cff9145df5df6b619111fd31aa45cf3519af029aa0ad24ae5",
+  "north.png": "310f663a54374c321ee28e1d424a72f5eb7ea2a1c100535c29f1f42d42831516",
+  "north-west.png": "dc346e18636149315eedd35bac182127dc489c693aca75aa0086ebf86741d100",
+  "west.png": "8dc530fef73086cb0523e5df3c88601e2e21132060f830c91b9da9d1af6d6090",
+  "south-west.png": "f3c6e6fa241a04edbe9d4bbdc27784bd1461be15590eb23e49405027a0a9876f",
+  "walk_south-east.png": "4489a0d2f52f31546838ad737d9145221c08fbd062fd3f631bc7fe6ac5150f5b",
+  "walk_north-east.png": "3dd53ee4c96f31bc39938609e49e71cea14e90f6c06da6b642b44828d90f7016",
+  "walk_north-west.png": "39b39143f8a960a2b58c58ced5200b4001b48d024119557a5c13f27ceecf010c",
+  "walk_south-west.png": "9033d468a8b2402f1211bb7083958dc079e62fef947fb3cb276c4d57632ae60a",
+  "idle_south-east.png": "d059207b86ed71981e89673a6558f6b2ab5e7cc2240c436945bbe1d0fae6df98",
+  "idle_north-east.png": "0e8ef03887600891339addb190e32764192125c25fdc6977960d223711bffc65"
+ },
+ "nota": "walk_south-east = espelho de walk_south-west (o modelo walking-6-frames perdeu o martelo nessa dire\u00e7\u00e3o)",
+ "idle": "idle-respiracao.py: quadro parado com a parte de cima descendo 0-1-2-1 px (sem gera\u00e7\u00e3o)"
 }

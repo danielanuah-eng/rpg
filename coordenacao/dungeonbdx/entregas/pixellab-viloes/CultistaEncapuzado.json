@@ -1,20 +1,27 @@
 {
  "character_id": "04ea8470-e422-4204-bff4-68de4aa19a62",
- "frame": 131,
+ "frame": 140,
  "crop180": [
-  26,
-  17,
-  157,
-  148
+  21,
+  9,
+  161,
+  149
  ],
  "files": {
-  "south.png": "030c332e1e55144979a8a0ec15df161238fbbc0434170507fba1f21cb8b3cfbe",
-  "south-east.png": "92a0de5e603f8dd2e227892d2f7bc6fb2ca93a77334ac4d5c50d4c53f72852c3",
-  "east.png": "19daca803d840acae4d8973342fd9f802dc79fcc2ec40996f9354d7775df3eb3",
-  "north-east.png": "7b5da86e863fc6e43494cc051c3235cdd677d6e698871d293673de92e39b52aa",
-  "north.png": "f72b413442520fceb565416db163ed8814fe66cda066033808e8d8f230bec5ab",
-  "north-west.png": "e0e78e960c6feb9581a71fe096a34c2a5fd72020d004cf923d3d26f1dd0b09f6",
-  "west.png": "e1a73d91ac343301b35224facc71fa55f754276ea2b81613cf8457cdf7d2efef",
-  "south-west.png": "7aebb377ac91b9d4e295005eecafcc244c5f6a3f5e3803e99a89c461f507568e"
- }
+  "south.png": "dd7f19e7ccbfd81961fbab710751dbb51d02feabeecfa87befbf8235965fe8aa",
+  "south-east.png": "436551c3b27efc5c84573867ec8c89bc631078ef58727709a2c9759a31142e50",
+  "east.png": "fa63dfe94b5d1ce491e089acd553968f1c7734339c85c23d996d768641e7c1b5",
+  "north-east.png": "c4f0268a36cf84883eb527cfda6b5b06bdce40f464e4107e972295574ba31a30",
+  "north.png": "01e05d784a4170c18fd8d84371a3240e0619209ea3a8e9d6c14e1d2a652e7794",
+  "north-west.png": "600e827a2e23431277345e5dafbab01c1e8c6921346509f56247d6ae1e5d3e4b",
+  "west.png": "bf8daeeb374050e5ca32c1fa8af68d759f1429f1729de0486d0733295a45a8fb",
+  "south-west.png": "7f85acd1111ea1bfe56302a1c9f0ef600e5daa80b0e9df57664f0ef66d8e3cc3",
+  "walk_south-west.png": "7329b8f300610aa44d257ffc93875671a3f4faa7d59c9be5d413632e2cd5fc1d",
+  "walk_north-east.png": "ea65d84590a83ad3d83523d70bf2e16958b98e9d60051108f28b33167226a7d9",
+  "walk_north-west.png": "6cfdcb0274d34d4ccbf24a838843c6f1856b4f87e9600189e6a60643b940b9b2",
+  "idle_south-east.png": "498740d93cd2cec9b1b4824e3b29bed3ce98e0d0ab5223f2ec3373d19d516ddc",
+  "idle_north-east.png": "a041882313f4b4f20d4f3582c0f29f588680e13fde3ed2c3092c4e285a9cabb1"
+ },
+ "nota": "walk_south-east removido (adaga sumia e o rosto mudava); o animador espelha walk_south-west",
+ "idle": "idle-respiracao.py: quadro parado com a parte de cima descendo 0-1-2-1 px (sem gera\u00e7\u00e3o)"
 }

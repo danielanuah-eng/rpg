@@ -28,8 +28,14 @@
 - Sem prop de estante: `Room(...,"books")` marca `AqSpace.Wall="books"` em toda a sala; `WallArtFor` usa `Iso/Walls/wall-books` (PixelLab pixflux b6cd2199, 128x56 ampliado 8x, tiling 1x1) em qualquer parede vizinha. Removidos `BuildShelfSprite` e o primitivo de livros (PNGs `Props/bookshelf_*` ficam, sem uso). Fonte em `entregas/pixellab-mapa/estante/`.
 - Teste `BookRoomsWearShelfWallsInsteadOfAShelfProp`. EditMode 375/375, build ok, capturas ok (estante um pouco escura sob a luz da cena).
 
+## Commit seguinte: caminhada e idle dos vilões (autor: "espelhe a que já existe… economiza no pixel")
+- `walking-6-frames` (template, ~3 ger./direção em 180 px) para Troll, Rei Goblin, Cultista, Esqueleto e Necromante. Regra nova: gerar só 1 diagonal de cada par; `DungeonActorAnimation.Frames` já espelha `(8-d)%8` (SE↔SW, NE↔NW). Troll SE = espelho do SW (martelo sumia); Cultista sem SE (adaga sumia) → usa SW espelhado.
+- Idle sem geração: `entregas/pixellab-viloes/idle-respiracao.py` (parte de cima do quadro parado desce 0-1-2-1 px) → `idle_south-east|north-east` dos 6 vilões.
+- Teste `VillainsWalkAndBreatheOnEveryDiagonalOrItsMirror`. EditMode: todos do DungeonBDX passam; 1 falha da Arena (`MatchModifierTests.RandomizedSixPlayerSnapshotFitsRelayBudget`, trabalho em andamento da outra sessão). Build ok, probes ok.
+- PixelLab: ~21 gerações até 10/11.
+
 ## Pendente
-1. Gastar as 66 gerações restantes em animações (caminhada dos chefes/lacaios ≈ 12 cada).
+1. Animações de ataque/dano dos vilões (gerar 1 diagonal por par e espelhar).
 2. Ícones ainda não usados (moedas, emblema, relíquia, pista, cativo, ritual, portal, tesouro, missão, dado, caveira, coroa…) podem entrar nos marcadores do placar/missões.
 3. Mais vilões/lacaios (autor quer muito mais; 4 níveis do Arcadia Quest: lacaio menor/maior, vilão menor/maior + dragões).
 3. Modo DungeonBDX clássico (`DungeonExpedition.cs:98`, `DungeonHeroProfiles`) ainda usa ids antigos como inimigos/arquétipos — não tocado.

@@ -1,20 +1,25 @@
 {
  "character_id": "61918d81-b004-4bbe-8c46-5418e9c2b4ac",
- "frame": 118,
+ "frame": 124,
  "crop180": [
-  30,
-  28,
-  148,
-  146
+  27,
+  25,
+  151,
+  149
  ],
  "files": {
-  "south.png": "c144a8168d103034f1f98979e2d7074d91e5b614eba0067dbf953e7183382efd",
-  "south-east.png": "d659183750ce49d34040e416e2023fb79b168908dcc80d64cfc2edd5d09954b7",
-  "east.png": "fc2b073b64bb94183f5f38236da894c4c31fe6b48834ddd82f17ba0b9c83ca82",
-  "north-east.png": "0eb4bf4104aaa2ecc9faa7eb7d6cb1047fcc6671a9df7431767d13ee7f7a5c81",
-  "north.png": "440b491cb0642677ff6cbda07f2617d3ead2f1ef1ccd8aa9763b39e7b55d0116",
-  "north-west.png": "6fd70b408a8fb9f9e855111e0c9fe7b0c1811c164b901fe4227a8493195e5726",
-  "west.png": "2df899eb9f5b084a5ae78bb8c250b6eec1fd974123b910d4dc39e24a85383eca",
-  "south-west.png": "db0879e796d1b8e90cf46eb971ed58c54612c1a48448170cf5b5b27f0a9eb3a6"
- }
+  "south.png": "1ac9765abbabb251c6ec0c158d942a117b5771fbeb67d52a8476c4d07bc4a7e3",
+  "south-east.png": "e0e207426dcacd8414f0a4bae1e94f761998f91b0440893297e412513e99e42f",
+  "east.png": "9ca9e9249c611ad17386bed92c1e916434d8edf98b32bb2648fe3f4a16016e95",
+  "north-east.png": "862af91330d011aaf5081c3d87628755df95df58b08b1a2306b24adcb644dab4",
+  "north.png": "01097cb17004190b44cf06e196f41e2c602d117307d63b00f95c8e50b36fec7a",
+  "north-west.png": "202063eb452157e0fc6e0682acb667f0fccca4f62deec56cf824e6904dbd8c02",
+  "west.png": "25473a2c14f417b5560bdc69f72bd3b2920966bcdbc953f2e2934bd4da71face",
+  "south-west.png": "b5c00998a072f57191097fbeb68e4e66e8123cafa324375ef211c23df635e433",
+  "walk_north-east.png": "1a7282bf1b687cc2ceb239ac4ed971bce767a7d5d555dd33c9564225bd164621",
+  "walk_south-east.png": "6ca467470fbde3ba3cf59725d6e9f1f06e20771a673dd230314c782731f439d5",
+  "idle_south-east.png": "a5db016344656fbd7751e5fadbe9c7c7298c7f40487a4f32eb0de4b418b37291",
+  "idle_north-east.png": "195edcbbc8a6687b7d906c6420f0555af7a298c2ed19ab61b79fd77f9ed3a069"
+ },
+ "idle": "idle-respiracao.py: quadro parado com a parte de cima descendo 0-1-2-1 px (sem gera\u00e7\u00e3o)"
 }

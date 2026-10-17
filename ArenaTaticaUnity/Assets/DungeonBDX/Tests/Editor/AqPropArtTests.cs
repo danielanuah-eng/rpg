@@ -54,5 +54,17 @@ namespace DungeonBDX.Tests
             }
             Assert.That(shelved, Is.GreaterThan(0));
         }
+
+        [Test] public void VillainsWalkAndBreatheOnEveryDiagonalOrItsMirror()
+        {
+            foreach (var folder in new[] {"TrollEsgoto","CultistaEncapuzado","EsqueletoLanceiro","ReiGoblinFerrugem","NecromanteCripta","CondeVesperal"})
+                foreach (var (east, west) in new[] {("south-east","south-west"), ("north-east","north-west")})
+                {
+                    // The animator flips the opposite diagonal, so one side of each pair is enough.
+                    bool Has(string clip, string d) => Resources.Load<Texture2D>("Sprites/" + folder + "/" + clip + "_" + d) != null;
+                    Assert.That(Has("walk", east) || Has("walk", west), folder + " walk " + east);
+                    Assert.That(Has("idle", east) || Has("idle", west), folder + " idle " + east);
+                }
+        }
     }
 }

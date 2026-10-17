@@ -19,6 +19,9 @@
   "walk_south-east.png": "5260411c01a16629b262b1ef7b5985ce6675112bb6ca72e4a87350599528ef8a",
   "walk_south-west.png": "90fb01ce190f8af3c6b4068e1522fe008e72807fb1f82894e7c929b7b4bcdc83",
   "walk_north-east.png": "c16a3604089699ddbbab71efab3eecf4742d9d61b44f30ee99287f134c79df09",
-  "walk_north-west.png": "4d52198d473d015f3a5d933083fe4a62ea3b3733fff8e46fa5734aa351387f98"
- }
+  "walk_north-west.png": "4d52198d473d015f3a5d933083fe4a62ea3b3733fff8e46fa5734aa351387f98",
+  "idle_south-east.png": "fbc59c99f5074796ec3484eae3be55b4cd1e408b8dd8705792e8d508ace31040",
+  "idle_north-east.png": "9bbce5e12949b866d4b980b4b494884060910fa4b92bab9f62a021d2b39aa44a"
+ },
+ "idle": "idle-respiracao.py: quadro parado com a parte de cima descendo 0-1-2-1 px (sem gera\u00e7\u00e3o)"
 }

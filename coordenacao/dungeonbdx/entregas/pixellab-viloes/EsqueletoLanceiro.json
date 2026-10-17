@@ -1,20 +1,27 @@
 {
  "character_id": "c6d891c6-1ce0-4a58-88a7-43bea95ecf09",
- "frame": 119,
+ "frame": 130,
  "crop180": [
-  30,
-  26,
-  149,
-  145
+  24,
+  18,
+  154,
+  148
  ],
  "files": {
-  "south.png": "97d77838366ce122788bba8b71656af75e4568544f915f943621035cd4817169",
-  "south-east.png": "69d873aa10e64afb0e330236d823b5aa490c012e470858b0991ca9a9cc3dae35",
-  "east.png": "bd7956e290437e23b0a3d2df1f79538c716ded80a4f4eb25590d04bf8d8894fd",
-  "north-east.png": "cd2b79df65f6e988103e107f9ac31f0e6b92a6ba392e0eb869c5d129782fe2fe",
-  "north.png": "3aa9fe3ef61965a175cfcfd4ccbd47ea61181982c3cf266b69199ce7323945ba",
-  "north-west.png": "461486f23c097e2a79e6ccb013c1b09d0ab599f7f1d8e638fee96df19da71fd7",
-  "west.png": "5013b142ef1ed230d29cdb54f6d41c6e18e107a869a71a181f2c5ac2d18a49f8",
-  "south-west.png": "c50e5d56265981c9bca7dac06fb2b6743b9e285b6787d2dcc8a2ff8d821abeee"
- }
+  "south.png": "4bc19ac2c4a9cbc59e53336ee8daad01c8d53b0905dc29f17df77860c39dac47",
+  "south-east.png": "b082e55e7c1d8ce472afeffc432fd873a06b7e5b06793b135dbb8850757e3cb7",
+  "east.png": "3dbf3017a9004f354a8df7c4fc334ecb9cf404701e099598263f555cf905ce59",
+  "north-east.png": "3d14771c5570864a8a19b27234b3fd10795514b704c1742ba3789be2e48d708f",
+  "north.png": "df5cbc48533c122b51949f14db62c19ee611c23695a5b4ba0dc8c292f7da8f54",
+  "north-west.png": "cbee8cddefde87e9622bf3b70b4caba289b7def800e270057b3141c6c53e7547",
+  "west.png": "dd6c2a8527ab5b405acd950344037591fb617adf5a38b12c71f7778b38c39d9f",
+  "south-west.png": "657b0764d4eb3d6491c07db27a126219f8f2d63c196f42c35fd5060330021026",
+  "walk_south-east.png": "a2fae19dc4786b9f8cf35d36ab5c51dd2171b8cd49b193e260ffd7063460ca47",
+  "walk_south-west.png": "4a82ccf1622339dc286d81941ebb8786e82cf6e61c13eaa4b6ed6b27d1a70edf",
+  "walk_north-east.png": "a84e9db078a082db8b9f3e8f7c467fb3264246c1b56bed6850d3e37867d683f6",
+  "walk_north-west.png": "7ba343551824a936aa5c66086b7b3bd1aeadba396593cc1318db0fc6ccd9b693",
+  "idle_south-east.png": "9f486963f4108402618016d7f93a3c263ffdf6b191565fab0a59483c3a22df12",
+  "idle_north-east.png": "f85a7061aad64b917dc39e391ef3b4db005ba75d27371b26a6104337dfcf5342"
+ },
+ "idle": "idle-respiracao.py: quadro parado com a parte de cima descendo 0-1-2-1 px (sem gera\u00e7\u00e3o)"
 }
