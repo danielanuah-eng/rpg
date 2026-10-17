@@ -146,8 +146,9 @@ namespace ArenaTatica
                         data.Write(buffer,0,result.Count);
                     } while(!result.EndOfMessage);
                     string text=new UTF8Encoding(false,true).GetString(data.ToArray());
-                    // Bound main-thread backlog even if a remote peer floods the socket.
-                    if(pending.Count>128) throw new IOException("Muitas mensagens pendentes");
+                    // Bound main-thread backlog even if a remote peer floods the socket. Turno longo do Host manda um estado por
+                    // ação; 128 derrubava o cliente num quadro lento (carregamento, tela em segundo plano).
+                    if(pending.Count>4096) throw new IOException("Muitas mensagens pendentes");
                     Enqueue(gen,()=>Message?.Invoke(peer,text));
                 }
             }
@@ -227,6 +228,8 @@ namespace ArenaTatica
         NetworkPipeline relayPipe;
         NetworkConnection relayConn;
         readonly System.Collections.Generic.Dictionary<int,NetworkConnection> relayPeers=new System.Collections.Generic.Dictionary<int,NetworkConnection>();
+        // Mensagens que o driver não aceitou ainda (fila/janela cheia): reenviadas em ordem no próximo RelayTick, sem perder estado.
+        readonly System.Collections.Generic.Dictionary<int,System.Collections.Generic.Queue<byte[]>> relayOutbox=new System.Collections.Generic.Dictionary<int,System.Collections.Generic.Queue<byte[]>>();
         bool relayActive;
 #if UNITY_WEBGL && !UNITY_EDITOR
         const string RelayProtocol="wss";
@@ -277,7 +280,9 @@ namespace ArenaTatica
             var settings=new NetworkSettings();
             settings.WithRelayParameters(ref data);
             settings.WithFragmentationStageParameters(payloadCapacity:RelayPayload);
-            settings.WithReliableStageParameters(windowSize:64);
+            // Cada estado (até 80 KB) vira ~60 fragmentos confiáveis: janela de 64 enchia com 2 ações seguidas do Host.
+            settings.WithReliableStageParameters(windowSize:1024);
+            settings.WithNetworkConfigParameters(receiveQueueCapacity:4096,sendQueueCapacity:4096);
 #if UNITY_WEBGL && !UNITY_EDITOR
             relayDriver=NetworkDriver.Create(new WebSocketNetworkInterface(),settings);
 #else
@@ -291,6 +296,7 @@ namespace ArenaTatica
             if(!relayActive) return;
             int gen=generation;
             relayDriver.ScheduleUpdate().Complete();
+            foreach(var id in new System.Collections.Generic.List<int>(relayOutbox.Keys)) Flush(id);
             if(IsHost) {
                 NetworkConnection c;
                 while((c=relayDriver.Accept())!=default) {
@@ -327,9 +333,24 @@ namespace ArenaTatica
             if(!IsConnected||!conn.IsCreated) return;
             var bytes=Encoding.UTF8.GetBytes(text);
             if(bytes.Length>RelayPayload) { Failed?.Invoke("Mensagem grande demais para a sala."); return; }
-            if(relayDriver.BeginSend(relayPipe,conn,out var writer)!=0) { Failed?.Invoke("Não foi possível enviar a mensagem."); return; }
-            using(var data=new NativeArray<byte>(bytes,Allocator.Temp)) writer.WriteBytes(data);
-            if(relayDriver.EndSend(writer)<0) Failed?.Invoke("Não foi possível enviar a mensagem.");
+            if(!relayOutbox.TryGetValue(peer,out var queue)) relayOutbox[peer]=queue=new System.Collections.Generic.Queue<byte[]>();
+            // Fila travada há muito tempo: o cliente se recupera pelo resync (salto de revisão/pong).
+            if(queue.Count>=512) { queue.Clear(); Failed?.Invoke("Conexão lenta: mensagens descartadas, a partida será ressincronizada."); }
+            queue.Enqueue(bytes); Flush(peer);
+        }
+        void Flush(int peer)
+        {
+            if(!relayOutbox.TryGetValue(peer,out var queue)) return;
+            NetworkConnection conn=relayConn;
+            if(IsHost&&!relayPeers.TryGetValue(peer,out conn)||!conn.IsCreated) { relayOutbox.Remove(peer); return; }
+            while(queue.Count>0) {
+                if(relayDriver.BeginSend(relayPipe,conn,out var writer)!=0) return;
+                using(var data=new NativeArray<byte>(queue.Peek(),Allocator.Temp)) writer.WriteBytes(data);
+                int sent=relayDriver.EndSend(writer);
+                if(sent==(int)Unity.Networking.Transport.Error.StatusCode.NetworkSendQueueFull) return;
+                queue.Dequeue();
+                if(sent<0) Failed?.Invoke("Não foi possível enviar a mensagem.");
+            }
         }
         // Desconexão local não gera evento no driver: avisa aqui.
         void RelayKick(int peer)
@@ -345,7 +366,7 @@ namespace ArenaTatica
                 relayDriver.ScheduleUpdate().Complete();
                 relayDriver.Dispose();
             }
-            relayActive=false; relayConn=default; relayPeers.Clear(); RoomCode=null;
+            relayActive=false; relayConn=default; relayPeers.Clear(); relayOutbox.Clear(); RoomCode=null;
         }
     }
 }
