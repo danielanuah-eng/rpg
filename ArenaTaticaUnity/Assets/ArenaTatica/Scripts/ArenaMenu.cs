@@ -130,7 +130,7 @@ namespace ArenaTatica
         static readonly (string id,string name)[] Tabs={("inicio","Início"),("jogar","Jogar"),("sala","Sala"),("personagens","Personagens"),("loja","Loja e eventos"),
             ("editor","Editor"),("mapas","Mapas"),("estatisticas","Estatísticas"),("regras","Regras"),("opcoes","Opções")};
         Font font; Canvas canvas; RectTransform root, body; Text title;
-        readonly Dictionary<string,Image> tabButtons=new Dictionary<string,Image>();
+        readonly Dictionary<string,Button> tabButtons=new Dictionary<string,Button>();
         string tab="inicio", selected="ciantia", editorId="ciantia", code="", presetName="";
         bool Portrait => Screen.width<Screen.height;
 
@@ -141,13 +141,13 @@ namespace ArenaTatica
             canvas=go.GetComponent<Canvas>(); canvas.renderMode=RenderMode.ScreenSpaceOverlay; canvas.sortingOrder=100;
             var scaler=go.GetComponent<CanvasScaler>(); scaler.uiScaleMode=CanvasScaler.ScaleMode.ScaleWithScreenSize; scaler.referenceResolution=new Vector2(1280,720); scaler.matchWidthOrHeight=.5f;
             root=Box("Fundo",go.transform,Bg); Fill(root);
-            var top=Box("Topo",root,Panel); top.anchorMin=new Vector2(0,1); top.anchorMax=Vector2.one; top.offsetMin=new Vector2(0,-64); top.offsetMax=Vector2.zero;
-            var line=Box("Borda",top,Edge); line.anchorMin=Vector2.zero; line.anchorMax=new Vector2(1,0); line.offsetMin=Vector2.zero; line.offsetMax=new Vector2(0,2);
+            var top=Box("Topo",root,Panel); bool art=ArenaTema.Slice(top.GetComponent<Image>(),"panel-dark",8); top.anchorMin=new Vector2(0,1); top.anchorMax=Vector2.one; top.offsetMin=new Vector2(0,-64); top.offsetMax=Vector2.zero;
+            var line=Box("Borda",top,art?Color.clear:Edge); line.anchorMin=Vector2.zero; line.anchorMax=new Vector2(1,0); line.offsetMin=Vector2.zero; line.offsetMax=new Vector2(0,2);
             var bar=top.gameObject.AddComponent<HorizontalLayoutGroup>(); bar.padding=new RectOffset(14,14,10,10); bar.spacing=6; bar.childAlignment=TextAnchor.MiddleLeft;
             bar.childControlWidth=bar.childControlHeight=true; bar.childForceExpandWidth=false; bar.childForceExpandHeight=true;
             title=Label(top,"ARENA TÁTICA",22,Gold,TextAnchor.MiddleLeft); Layout(title.gameObject,190,0);
-            foreach(var t in Tabs) { var id=t.id; var b=Btn(top,t.name,()=>Show(id),0,44,14); tabButtons[id]=b.GetComponent<Image>(); b.GetComponent<LayoutElement>().minWidth=58; }
-            Btn(top,"Voltar ao jogo",Close,130,44,14).GetComponent<Image>().color=Chosen;
+            foreach(var t in Tabs) { var id=t.id; var b=Btn(top,t.name,()=>Show(id),0,44,14); tabButtons[id]=b; b.GetComponent<LayoutElement>().minWidth=58; }
+            Accent(Btn(top,"Voltar ao jogo",Close,130,44,14),Chosen);
             body=New("Conteudo",root); body.anchorMin=Vector2.zero; body.anchorMax=Vector2.one; body.offsetMin=Vector2.zero; body.offsetMax=new Vector2(0,-64);
             var args=Environment.GetCommandLineArgs();
             int shot=Array.IndexOf(args,"--arena-menu-shot");
@@ -188,7 +188,7 @@ namespace ArenaTatica
         {
             tab=t; refreshers.Clear(); shownPortrait=Portrait; shownLobby=Game.LobbyVersion; StartCoroutine(Relayout());
             foreach(Transform c in body) Destroy(c.gameObject);
-            foreach(var kv in tabButtons) kv.Value.color=kv.Key==t?Chosen:Idle;
+            foreach(var kv in tabButtons) Accent(kv.Value,kv.Key==t?Chosen:Idle);
             switch(t)
             {
                 case "jogar": Play(); break;
@@ -216,7 +216,7 @@ namespace ArenaTatica
             var kicker=Label(left,"MINIATURAS TÁTICAS",13,Gold); kicker.fontStyle=FontStyle.Bold;
             var big=Label(left,"ARENA TÁTICA",52,Ink); big.fontStyle=FontStyle.Bold; Layout(big.gameObject,0,70);
             Label(left,"Miniaturas táticas no estilo Krosmaster · de 2 a 6 jogadores · no mesmo aparelho ou pela internet",17,Muted);
-            var cta=Btn(left,"Jogar",()=>Show("jogar"),0,60,22); cta.GetComponent<Image>().color=Gold; cta.GetComponentInChildren<Text>().color=Bg; cta.GetComponentInChildren<Text>().fontStyle=FontStyle.Bold;
+            var cta=Btn(left,"Jogar",()=>Show("jogar"),0,60,22); Accent(cta,Gold); if(!cta.GetComponent<ArenaBotaoPele>()) cta.GetComponentInChildren<Text>().color=Bg; cta.GetComponentInChildren<Text>().fontStyle=FontStyle.Bold;
             // Retrato: os atalhos empilham para não espremer os rótulos.
             var row=Portrait?left:Row(left,48);
             Btn(row,"Personagens",()=>Show("personagens"),0,44,16);
@@ -245,12 +245,12 @@ namespace ArenaTatica
             if(Game.VsBots) Para(c,"Você escolhe só o seu time; P2 em diante são bots com times aleatórios. Em equipes, seus aliados também são bots.");
             Section(c,"Neste aparelho");
             row=Row(c,56);
-            Btn(row,"Escolher lutadores e jogar",()=>{ Close(); Game.Hud.OpenPicker(); },0,52,17).GetComponent<Image>().color=Chosen;
+            Accent(Btn(row,"Escolher lutadores e jogar",()=>{ Close(); Game.Hud.OpenPicker(); },0,52,17),Chosen);
             Btn(row,"Partida rápida (times aleatórios)",()=>{ Close(); Game.StartLocal(Enumerable.Range(0,Game.Seats).Select(_=>ArenaGame.ValidTeam(Content.Roster.OrderBy(__=>UnityEngine.Random.value))).ToArray()); },0,52,16);
             Section(c,"Com amigos");
             Para(c,"Crie uma sala: primeiro você configura o modo (partida ou torneio), os turnos e a loja; depois libera na internet ou na rede local; a partida só começa quando você tocar em Iniciar.");
             row=Row(c,52);
-            Btn(row,"Criar sala",()=>Game.OpenLobby(),0,48,16).GetComponent<Image>().color=Chosen;
+            Accent(Btn(row,"Criar sala",()=>Game.OpenLobby(),0,48,16),Chosen);
             Btn(row,"Ver a sala",()=>Show("sala"),0,48,16);
             JoinRow(c);
         }
@@ -337,7 +337,7 @@ namespace ArenaTatica
             {
                 Section(c,"Sala");
                 Para(c,"Crie uma sala para jogar com amigos ou entre com o código que recebeu.");
-                var r=Row(c,52); Btn(r,"Criar sala",()=>Game.OpenLobby(),0,48,16).GetComponent<Image>().color=Chosen;
+                var r=Row(c,52); Accent(Btn(r,"Criar sala",()=>Game.OpenLobby(),0,48,16),Chosen);
                 JoinRow(c);
                 return;
             }
@@ -361,7 +361,7 @@ namespace ArenaTatica
                 Section(c,Game.Torneio!=null?"Torneio em andamento":"Partida em andamento");
                 if(Game.Torneio!=null) Para(c,Game.LobbySummary());
                 var r=Row(c,48);
-                if(Game.Torneio!=null&&Game.Torneio.recorded) Btn(r,"Próxima partida do torneio",()=>{ Game.NextTournamentMatch(); Show("sala"); },0,44,15).GetComponent<Image>().color=Chosen;
+                if(Game.Torneio!=null&&Game.Torneio.recorded) Accent(Btn(r,"Próxima partida do torneio",()=>{ Game.NextTournamentMatch(); Show("sala"); },0,44,15),Chosen);
                 Btn(r,"Reiniciar partida",()=>{ Game.RestartRoom(); Close(); },0,44,15);
                 Btn(r,"Voltar todos à sala",()=>{ Game.BackToLobby(); Show("sala"); },0,44,15);
                 Btn(r,"Voltar ao jogo",Close,0,44,15);
@@ -391,7 +391,7 @@ namespace ArenaTatica
             var act=Row(c,56);
             if(Game.Setup)
             {
-                Btn(act,"Liberar na internet",()=>Game.Release(true),0,52,16).GetComponent<Image>().color=Chosen;
+                Accent(Btn(act,"Liberar na internet",()=>Game.Release(true),0,52,16),Chosen);
                 Btn(act,"Liberar na rede local (LAN)",()=>Game.Release(false),0,52,16);
                 Btn(act,"Cancelar",()=>{ Game.CloseLobby(); Show("sala"); },160,52,15);
                 Para(c,"<color=#a7b4c2>Ao liberar, o código (internet) é copiado para você mandar aos amigos. Pela internet, o número de jogadores fica fixo depois de liberar.</color>");
@@ -400,7 +400,7 @@ namespace ArenaTatica
             {
                 bool cupNext=Game.Torneio!=null&&Game.Torneio.recorded;
                 var go=Btn(act,Game.Torneio!=null?(cupNext?"Próxima partida":"Torneio em andamento"):Game.Tournament?"Começar torneio":"Iniciar partida",()=>{ Game.StartRoom(); },0,52,17);
-                go.GetComponent<Image>().color=Chosen; go.interactable=Game.Filled>=2&&(Game.Torneio==null||cupNext);
+                Accent(go,Chosen); go.interactable=Game.Filled>=2&&(Game.Torneio==null||cupNext);
                 if(Game.Torneio!=null&&Game.Torneio.champion>0) Btn(act,"Novo torneio / partida",()=>{ Game.BackToLobby(); Show("sala"); },0,52,15);
                 Btn(act,"Fechar sala",()=>{ Game.CloseLobby(); Show("sala"); },180,52,15);
                 if(Game.Filled<2) Para(c,"<color=#a7b4c2>Esperando pelo menos mais 1 jogador.</color>");
@@ -451,13 +451,13 @@ namespace ArenaTatica
         // ── Personagens ──
         void Fighters()
         {
-            var left=Box("Lista",body,Panel); left.anchorMin=Vector2.zero; left.anchorMax=new Vector2(Portrait?.42f:.3f,1); left.offsetMin=new Vector2(12,12); left.offsetMax=new Vector2(-6,-12);
+            var left=Framed(Box("Lista",body,Panel)); left.anchorMin=Vector2.zero; left.anchorMax=new Vector2(Portrait?.42f:.3f,1); left.offsetMin=new Vector2(12,12); left.offsetMax=new Vector2(-6,-12);
             var list=Scroll(left);
             Label(list,"ESCOLHÍVEIS",12,Muted);
             foreach(var id in Content.Roster) FighterButton(list,id,()=>{ selected=id; Show("personagens"); },id==selected);
             Label(list,"INVOCAÇÕES E NEUTROS",12,Muted);
             foreach(var d in Content.Fighters.Values.Where(d=>!d.picker)) { var id=d.id; FighterButton(list,id,()=>{ selected=id; Show("personagens"); },id==selected); }
-            var right=Box("Ficha",body,Panel); right.anchorMin=new Vector2(Portrait?.42f:.3f,0); right.anchorMax=Vector2.one; right.offsetMin=new Vector2(6,12); right.offsetMax=new Vector2(-12,-12);
+            var right=Framed(Box("Ficha",body,Panel)); right.anchorMin=new Vector2(Portrait?.42f:.3f,0); right.anchorMax=Vector2.one; right.offsetMin=new Vector2(6,12); right.offsetMax=new Vector2(-12,-12);
             var c=Scroll(right);
             if(!Content.Fighters.TryGetValue(selected,out var f)) return;
             var head=Row(c,190);
@@ -471,7 +471,7 @@ namespace ArenaTatica
                 // Toda ficha é editável (PV, PM, custo e alcance das skills, passivas), inclusive invocações e chefes.
                 var row=Row(info,44); bool mine=ArenaGame.MyTeam.Contains(f.id);
                 if(f.picker) Btn(row,mine?"Tirar do meu time":"Pôr no meu time",()=>{ ToggleMine(f.id); Show("personagens"); },190,40);
-                Btn(row,"Editar ficha e skills",()=>{ editorId=f.id; Show("editor"); },200,40).GetComponent<Image>().color=Chosen;
+                Accent(Btn(row,"Editar ficha e skills",()=>{ editorId=f.id; Show("editor"); },200,40),Chosen);
             }
             Section(c,"Skills");
             foreach(var s in f.skills) Para(c,"• "+Content.Describe(s));
@@ -544,16 +544,16 @@ namespace ArenaTatica
         void Editor()
         {
             if(editing==null||editing.id!=editorId) Load(editorId);
-            var left=Box("Lista",body,Panel); left.anchorMin=Vector2.zero; left.anchorMax=new Vector2(Portrait?.38f:.26f,1); left.offsetMin=new Vector2(12,12); left.offsetMax=new Vector2(-6,-12);
+            var left=Framed(Box("Lista",body,Panel)); left.anchorMin=Vector2.zero; left.anchorMax=new Vector2(Portrait?.38f:.26f,1); left.offsetMin=new Vector2(12,12); left.offsetMax=new Vector2(-6,-12);
             var list=Scroll(left);
             foreach(var d in Content.Roster.Select(id=>Content.Fighters[id]).Concat(Content.Fighters.Values.Where(d=>!d.picker)))
             { var id=d.id; FighterButton(list,id,()=>{ if(dirty&&id!=editorId) { editorStatus.text="<color=#ef6f7a>Salve ou descarte antes de trocar de ficha.</color>"; return; } editorId=id; editing=null; Show("editor"); },id==editorId); }
-            var right=Box("Ficha",body,Panel); right.anchorMin=new Vector2(Portrait?.38f:.26f,0); right.anchorMax=Vector2.one; right.offsetMin=new Vector2(6,12); right.offsetMax=new Vector2(-12,-12);
+            var right=Framed(Box("Ficha",body,Panel)); right.anchorMin=new Vector2(Portrait?.38f:.26f,0); right.anchorMax=Vector2.one; right.offsetMin=new Vector2(6,12); right.offsetMax=new Vector2(-12,-12);
             var c=Scroll(right);
             var e=editing;
             Label(c,e.name,26,Gold);
             var row=Row(c,44);
-            Btn(row,"Salvar",()=>{ ArenaEdits.Put(editing); dirty=false; editorStatus.text="<color=#7fd1a0>Salvo. Vale na próxima partida (e nas salas que você hospedar).</color>"; },0,40).GetComponent<Image>().color=Chosen;
+            Accent(Btn(row,"Salvar",()=>{ ArenaEdits.Put(editing); dirty=false; editorStatus.text="<color=#7fd1a0>Salvo. Vale na próxima partida (e nas salas que você hospedar).</color>"; },0,40),Chosen);
             Btn(row,"Descartar",()=>{ Load(editorId); Show("editor"); },0,40);
             Btn(row,"Padrão desta ficha",()=>{ ArenaEdits.Reset(editorId); Load(editorId); Show("editor"); },0,40);
             Btn(row,"Restaurar tudo",()=>{ ArenaEdits.ResetAll(); Load(editorId); Show("editor"); },0,40);
@@ -668,7 +668,7 @@ namespace ArenaTatica
             v.childControlWidth=v.childControlHeight=true; v.childForceExpandHeight=false;
             var head=Row(box,40);
             var name=Input(head,p.name,"Nome da passiva"); name.onValueChanged.AddListener(x=>{ p.name=x; Changed(); });
-            Btn(head,"Remover",()=>{ editing.passives=editing.passives.Where(x=>x!=p).ToArray(); dirty=true; Show("editor"); },100,36,13).GetComponent<Image>().color=Hex(0x4a2030);
+            Accent(Btn(head,"Remover",()=>{ editing.passives=editing.passives.Where(x=>x!=p).ToArray(); dirty=true; Show("editor"); },100,36,13),Hex(0x4a2030));
             var desc=Label(box,"",13,Ink); refreshers.Add(()=>desc.text=Content.Describe(p));
             var row=Row(box,40);
             var stat=Btn(row,"",()=>{ p.stat=(PassiveStat)(((int)p.stat+1)%StatCount); Changed(); },0,36,13);
@@ -692,7 +692,7 @@ namespace ArenaTatica
             var name=Input(head,s.name,"Nome da skill"); name.onValueChanged.AddListener(x=>{ s.name=x; Changed(); });
             var kind=Btn(head,"",()=>{ int k=Array.IndexOf(EditableKinds,s.kind); s.kind=EditableKinds[(k+1+EditableKinds.Length)%EditableKinds.Length]; if(s.kind==SkillKind.Invocacao&&string.IsNullOrEmpty(s.summon)) s.summon="lobo-de-cinzas"; Changed(); },230,36,13);
             refreshers.Add(()=>kind.GetComponentInChildren<Text>().text="Tipo: "+KindName(s.kind)+(Array.IndexOf(EditableKinds,s.kind)<0?" (fixo)":""));
-            Btn(head,"Remover",()=>{ editing.skills=editing.skills.Where(x=>x!=s).ToArray(); dirty=true; Show("editor"); },100,36,13).GetComponent<Image>().color=Hex(0x4a2030);
+            Accent(Btn(head,"Remover",()=>{ editing.skills=editing.skills.Where(x=>x!=s).ToArray(); dirty=true; Show("editor"); },100,36,13),Hex(0x4a2030));
             var desc=Label(box,"",13,Ink); refreshers.Add(()=>desc.text=Content.Describe(s));
             var grid=Grid(box);
             Stepper(grid,"PA",()=>s.pa,x=>s.pa=x); Stepper(grid,"Dano",()=>s.damage,x=>s.damage=x); Stepper(grid,"Cura (suporte)",()=>s.heal,x=>s.heal=x);
@@ -720,8 +720,8 @@ namespace ArenaTatica
             void Dot(string text,Hit bit,int rgb)
             {
                 var b=Btn(row,"",()=>{ int h=s.Custom?s.hits:DefaultHits(s.kind); h^=(int)bit; s.hits=h; Changed(); },120,34,13);
-                var t=b.GetComponentInChildren<Text>(); var img=b.GetComponent<Image>();
-                refreshers.Add(()=>{ bool on=s.Custom&&(s.hits&(int)bit)!=0; t.text=(on?"● ":"○ ")+text; img.color=on?Hex(rgb):Idle; });
+                var t=b.GetComponentInChildren<Text>();
+                refreshers.Add(()=>{ bool on=s.Custom&&(s.hits&(int)bit)!=0; t.text=(on?"● ":"○ ")+text; Accent(b,on?Hex(rgb):Idle); });
             }
             Dot("Si",Hit.Si,0x2f5f9e); Dot("Inimigos",Hit.Inimigo,0x8e2f3a); Dot("Aliados",Hit.Aliado,0x2f7a46);
             Btn(row,"Padrão",()=>{ s.hits=0; Changed(); },90,34,13);
@@ -737,8 +737,8 @@ namespace ArenaTatica
         }
         void Flag(Transform grid,string label,Func<bool> get,Action<bool> set)
         {
-            var b=Btn(grid,"",()=>{ set(!get()); Changed(); },0,30,13); var t=b.GetComponentInChildren<Text>(); var img=b.GetComponent<Image>();
-            refreshers.Add(()=>{ t.text=(get()?"✓ ":"   ")+label; img.color=get()?Hex(0x24503a):Idle; });
+            var b=Btn(grid,"",()=>{ set(!get()); Changed(); },0,30,13); var t=b.GetComponentInChildren<Text>();
+            refreshers.Add(()=>{ t.text=(get()?"✓ ":"   ")+label; Accent(b,get()?Hex(0x24503a):Idle); });
         }
 
         // ── Estatísticas ──
@@ -758,7 +758,7 @@ namespace ArenaTatica
             }
             if(d.fighters.Count==0) Para(c,"<color=#a7b4c2>Ainda não há partidas jogadas neste aparelho.</color>");
             if(d.events.Count>0) { Section(c,"Eventos que já saíram"); Para(c,string.Join("  ·  ",d.events.OrderByDescending(x=>x.n).Select(x=>$"{ArenaPresentation.EventName(x.id)} {x.n}"))); }
-            var row2=Row(c,44); Btn(row2,"Zerar estatísticas",()=>{ ArenaStats.Reset(); Show("estatisticas"); },220,40).GetComponent<Image>().color=Hex(0x4a2030);
+            var row2=Row(c,44); Accent(Btn(row2,"Zerar estatísticas",()=>{ ArenaStats.Reset(); Show("estatisticas"); },220,40),Hex(0x4a2030));
         }
 
         // ── Regras ──
@@ -795,7 +795,7 @@ namespace ArenaTatica
             row=Row(c,48);
             Btn(row,"Voltar à partida",Close,0,44);
             Btn(row,"Fechar a Partida",Game.CloseMatch,0,44);
-            Btn(row,"Sair do jogo",Application.Quit,0,44).GetComponent<Image>().color=Hex(0x4a2030);
+            Accent(Btn(row,"Sair do jogo",Application.Quit,0,44),Hex(0x4a2030));
             Para(c,$"<color=#a7b4c2>Edições salvas em {Application.persistentDataPath}</color>");
         }
         void Awake() { AudioListener.volume=PlayerPrefs.GetFloat("arena-volume",1); }
@@ -822,16 +822,23 @@ namespace ArenaTatica
         Button Btn(Transform parent,string text,Action action,float w=0,float h=38,int size=15)
         {
             var r=Box(text,parent,Idle); var b=r.gameObject.AddComponent<Button>(); b.targetGraphic=r.GetComponent<Image>();
-            ArenaTema.StyleFocus(b); ArenaTema.Lerp(b); b.onClick.AddListener(()=>action());
+            ArenaTema.SkinButton(b); ArenaTema.StyleFocus(b); ArenaTema.Lerp(b); b.onClick.AddListener(()=>action());
             var t=Label(r,text,size,Ink,TextAnchor.MiddleCenter); Fill(t.rectTransform,4); t.verticalOverflow=VerticalWrapMode.Truncate;
             var le=r.gameObject.AddComponent<LayoutElement>(); le.preferredHeight=le.minHeight=h;
             if(w>0) { le.preferredWidth=w; le.minWidth=w*.6f; } else { le.flexibleWidth=1; le.minWidth=60; }
             return b;
         }
-        static void Pick(Button b,bool on) { if(on) { b.GetComponent<Image>().color=Chosen; var o=b.GetComponent<Outline>()??b.gameObject.AddComponent<Outline>(); o.effectColor=Gold; o.effectDistance=new Vector2(ArenaTema.FocusOutline,-ArenaTema.FocusOutline); } }
+        // Destaque: com a arte, Chosen/Gold viram o quadro escolhido e as outras cores só tingem a moldura; sem ela, a cor lisa.
+        static Button Accent(Button b,Color c)
+        {
+            var img=b.GetComponent<Image>(); var pele=b.GetComponent<ArenaBotaoPele>();
+            if(!pele) { img.color=c; return b; }
+            bool on=c==Chosen||c==Gold; pele.Chosen=on; pele.Apply(); img.color=on||c==Idle?Color.white:Color.Lerp(Color.white,c,.5f); return b;
+        }
+        static void Pick(Button b,bool on) { if(on) { Accent(b,Chosen); var o=b.GetComponent<Outline>()??b.gameObject.AddComponent<Outline>(); o.effectColor=Gold; o.effectDistance=new Vector2(ArenaTema.FocusOutline,-ArenaTema.FocusOutline); } }
         InputField Input(Transform parent,string value,string hint)
         {
-            var r=Box("Campo",parent,Hex(0x110d24)); var input=r.gameObject.AddComponent<InputField>();
+            var r=Box("Campo",parent,Hex(0x110d24)); ArenaTema.Slice(r.GetComponent<Image>(),"panel-dark",5); var input=r.gameObject.AddComponent<InputField>();
             var text=Label(r,value,15,Ink,TextAnchor.MiddleLeft); Fill(text.rectTransform,8); text.supportRichText=false;
             var ph=Label(r,hint,14,Muted,TextAnchor.MiddleLeft); Fill(ph.rectTransform,8);
             input.textComponent=text; input.placeholder=ph; input.text=value; input.characterLimit=120;
@@ -852,8 +859,11 @@ namespace ArenaTatica
         {
             var r=Box("Painel",parent,Panel); var g=r.gameObject.AddComponent<VerticalLayoutGroup>(); g.padding=new RectOffset(18,18,14,14); g.spacing=8;
             g.childControlWidth=g.childControlHeight=true; g.childForceExpandWidth=true; g.childForceExpandHeight=false;
+            Framed(r); if(r.GetComponent<Image>().sprite) return r;
             var o=r.gameObject.AddComponent<Outline>(); o.effectColor=Edge; o.effectDistance=new Vector2(2,-2); return r;
         }
+        // Quadros do menu com a moldura escura do DungeonBDX (sem a arte, o painel liso com contorno).
+        static RectTransform Framed(RectTransform r) { ArenaTema.Slice(r.GetComponent<Image>(),"panel-dark",10); return r; }
         RectTransform Grid(Transform parent)
         {
             var r=New("Campos",parent,typeof(GridLayoutGroup)); var g=r.GetComponent<GridLayoutGroup>();
