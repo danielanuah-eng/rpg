@@ -50,6 +50,12 @@
    "tile": 12,
    "sha256": "ed2afbc1707fb990c798b53f4cf12341718bd1d8ea181fd1f40806c8744bf489",
    "nota": "pixels brancos da borda trocados por verde-escuro (material opaco)"
+  },
+  "Walls/wall-books": {
+   "pixflux": "b6cd2199-bb5f-4a7d-a03f-5d506818c50c",
+   "fonte": "estante/wall-books-fonte.png",
+   "sha256": "1647874d56de1f617e3f6168e2e2ae5c1306fe6e29044045025d3a139d6103be",
+   "nota": "estante para paredes das salas 'books' (sem prop de estante)"
   }
  },
  "extras": {

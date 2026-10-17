@@ -24,6 +24,10 @@
 - Paredes finas: `AqBoardView.WallThickness=.06`, `WallHeight=.42` (antes .15–.21 de espessura). `WallArtFor`: cripta → wall-crypt, jardim → sebe, resto → pedra. Portas mais finas. `PropAnchor` usa a espessura nova (prop pode ir até .45 do centro).
 - EditMode 374/374, build ok, capturas ok. PixelLab: ver `get_balance` (≈41 gerações).
 
+## Commit seguinte: paredes-estante (autor: "tire as estantes de livros e faça paredes com skin com estante de livros")
+- Sem prop de estante: `Room(...,"books")` marca `AqSpace.Wall="books"` em toda a sala; `WallArtFor` usa `Iso/Walls/wall-books` (PixelLab pixflux b6cd2199, 128x56 ampliado 8x, tiling 1x1) em qualquer parede vizinha. Removidos `BuildShelfSprite` e o primitivo de livros (PNGs `Props/bookshelf_*` ficam, sem uso). Fonte em `entregas/pixellab-mapa/estante/`.
+- Teste `BookRoomsWearShelfWallsInsteadOfAShelfProp`. EditMode 375/375, build ok, capturas ok (estante um pouco escura sob a luz da cena).
+
 ## Pendente
 1. Gastar as 66 gerações restantes em animações (caminhada dos chefes/lacaios ≈ 12 cada).
 2. Ícones ainda não usados (moedas, emblema, relíquia, pista, cativo, ritual, portal, tesouro, missão, dado, caveira, coroa…) podem entrar nos marcadores do placar/missões.

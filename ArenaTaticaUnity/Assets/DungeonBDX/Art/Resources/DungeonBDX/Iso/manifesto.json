@@ -438,6 +438,18 @@
       "sha256": "ed2afbc1707fb990c798b53f4cf12341718bd1d8ea181fd1f40806c8744bf489",
       "largura": 512,
       "altura": 512
+    },
+    {
+      "id": "wall-books",
+      "tipo": "parede",
+      "caminho": "Walls/wall-books.png",
+      "projecao": "frente",
+      "pivo": null,
+      "alfa": null,
+      "origem": "PixelLab create_image_pixflux b6cd2199-bb5f-4a7d-a03f-5d506818c50c (128x56, ampliado 8x); paredes das salas de livros, substitui o prop de estante em 17/10/2026",
+      "sha256": "1647874d56de1f617e3f6168e2e2ae5c1306fe6e29044045025d3a139d6103be",
+      "largura": 1024,
+      "altura": 448
     }
   ],
   "fora": [

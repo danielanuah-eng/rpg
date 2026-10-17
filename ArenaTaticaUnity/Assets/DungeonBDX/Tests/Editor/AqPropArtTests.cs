@@ -15,7 +15,7 @@ namespace DungeonBDX.Tests
             foreach (var id in AqScenarios.Ids)
             {
                 var s = AqScenarios.Create(id);
-                foreach (var space in s.Board.Spaces.Where(p => !string.IsNullOrEmpty(p.Prop) && p.Prop != "books" && p.Prop != "rune"))
+                foreach (var space in s.Board.Spaces.Where(p => !string.IsNullOrEmpty(p.Prop) && p.Prop != "rune"))
                 {
                     var art = Resources.Load<Texture2D>("DungeonBDX/Iso/Props/" + space.Prop);
                     Assert.That(art, Is.Not.Null, id + " " + space.Prop);
@@ -40,6 +40,19 @@ namespace DungeonBDX.Tests
                 Assert.That(Resources.Load<Texture2D>("DungeonBDX/Iso/UI/" + ui), Is.Not.Null, ui);
             foreach (var icon in new[] {"move","door","ability","rest","endturn","sword","claw","skip","rotate-left","rotate-right","zoom-in","zoom-out","reset","menu","sound","life"})
                 Assert.That(Resources.Load<Texture2D>("DungeonBDX/Iso/UI/Icons/" + icon), Is.Not.Null, icon);
+        }
+
+        [Test] public void BookRoomsWearShelfWallsInsteadOfAShelfProp()
+        {
+            Assert.That(Resources.Load<Texture2D>("DungeonBDX/Iso/Walls/wall-books"), Is.Not.Null);
+            int shelved = 0;
+            foreach (var id in AqScenarios.Ids)
+            {
+                var s = AqScenarios.Create(id);
+                Assert.That(s.Board.Spaces.Any(p => p.Prop == "books"), Is.False, id);
+                shelved += s.Board.Spaces.Count(p => p.Wall == "books");
+            }
+            Assert.That(shelved, Is.GreaterThan(0));
         }
     }
 }

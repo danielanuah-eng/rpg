@@ -17,7 +17,7 @@ namespace DungeonBDX.Arcadia
     public sealed class AqSpace
     {
         public AqCell Cell;
-        public string Surface="street", Room="", Prop="";
+        public string Surface="street", Room="", Prop="", Wall="";
         public int Tile;
     }
     public sealed class AqEdge
@@ -281,7 +281,8 @@ namespace DungeonBDX.Arcadia
             for(int y=y0;y<=y1;y++)for(int x=x0;x<=x1;x++)
             {
                 var p=s.Board.Space(new AqCell(x,y));p.Room=name;p.Surface=surface;
-                if(x==x0&&y==y0)p.Prop=prop;
+                // "books" rooms wear bookshelf walls instead of a shelf prop.
+                if(prop=="books")p.Wall="books";else if(x==x0&&y==y0)p.Prop=prop;
                 foreach(var d in new[]{new AqCell(1,0),new AqCell(-1,0),new AqCell(0,1),new AqCell(0,-1)})
                 {
                     var b=new AqCell(x+d.X,y+d.Y);

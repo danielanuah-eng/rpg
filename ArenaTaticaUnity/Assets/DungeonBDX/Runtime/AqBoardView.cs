@@ -276,6 +276,7 @@ namespace DungeonBDX
         string WallArtFor(AqEdge edge)
         {
             string a = board.Contains(edge.A) ? board.Space(edge.A).Surface : null, b = board.Contains(edge.B) ? board.Space(edge.B).Surface : null;
+            if (board.Contains(edge.A) && board.Space(edge.A).Wall == "books" || board.Contains(edge.B) && board.Space(edge.B).Wall == "books") return "wall-books";
             if (a == "crypt" || b == "crypt") return "wall-crypt";
             if (a == "garden" || b == "garden") return "hedge";
             return "wall";
@@ -290,7 +291,8 @@ namespace DungeonBDX
             var material = MaterialLook(key, Color.white, art, false);
             if (fresh)
             {
-                var tiling = new Vector2(1f, WallHeight);
+                // The bookshelf strip is drawn at the wall's own proportions; the square tiles show their lower band.
+                var tiling = id == "wall-books" ? Vector2.one : new Vector2(1f, WallHeight);
                 material.mainTextureScale = tiling;
                 if (material.HasProperty("_BaseMap")) material.SetTextureScale("_BaseMap", tiling);
             }
@@ -432,7 +434,7 @@ namespace DungeonBDX
         void BuildProp(string prop, AqCell cell)
         {
             prop = (prop ?? "").Trim().ToLowerInvariant();
-            var art = prop == "books" ? null : Resources.Load<Texture2D>("DungeonBDX/Iso/Props/" + prop);
+            var art = Resources.Load<Texture2D>("DungeonBDX/Iso/Props/" + prop);
             if (art) { BuildPropArt(prop, art, cell); return; }
             var center = PropAnchor(board, cell, PropHalf(prop));
             var wood = MaterialLook("prop-wood", new Color(.55f,.36f,.20f), null, false);
@@ -440,13 +442,6 @@ namespace DungeonBDX
             var stone = MaterialLook("prop-stone", new Color(.60f,.58f,.53f), null, false);
             switch ((prop ?? "").Trim().ToLowerInvariant())
             {
-                case "books" when BuildShelfSprite(center):
-                    break;
-                case "books":
-                    Slab("Book", center + Vector3.up*.035f, new Vector3(.34f,.07f,.26f), MaterialLook("book-a", new Color(.60f,.24f,.22f), null, false), boardRoot);
-                    Slab("Book", center + Vector3.up*.105f, new Vector3(.30f,.07f,.24f), MaterialLook("book-b", new Color(.24f,.36f,.50f), null, false), boardRoot);
-                    Slab("Book", center + Vector3.up*.175f, new Vector3(.26f,.07f,.20f), MaterialLook("book-c", new Color(.72f,.62f,.30f), null, false), boardRoot);
-                    break;
                 case "table":
                     Slab("Table", center + Vector3.up*.36f, new Vector3(.64f,.07f,.54f), wood, boardRoot);
                     Slab("Table leg", center + Vector3.up*.17f, new Vector3(.14f,.34f,.14f), woodDark, boardRoot);
@@ -1245,27 +1240,6 @@ namespace DungeonBDX
             var renderer = go.GetComponent<SpriteRenderer>();
             renderer.sprite = sprite;
             renderer.sortingOrder = -20;
-        }
-
-        bool BuildShelfSprite(Vector3 center)
-        {
-            string[] names = {"sw","ne","nw","se"};
-            var sprites = new Sprite[4];
-            for (int i=0;i<4;i++)
-            {
-                var texture = Resources.Load<Texture2D>("DungeonBDX/Iso/Props/bookshelf_" + names[i]);
-                if (!texture) return false;
-                // Every view keeps the same world height (.82), whatever the drawn width.
-                sprites[i] = ArtSprite("Props/bookshelf_" + names[i], new Vector2(.5f,0f), texture.height/.82f);
-            }
-            var go = new GameObject("Bookshelf", typeof(SpriteRenderer));
-            go.transform.SetParent(boardRoot, false);
-            go.transform.position = center;
-            go.transform.localScale = new Vector3(1f, IsoStretch, 1f);
-            var prop = new PropSprite {Renderer=go.GetComponent<SpriteRenderer>(), Facing=Vector3.back, ByDirection=sprites};
-            propSprites.Add(prop);
-            RefreshPropSprite(prop);
-            return true;
         }
 
         void RefreshPropSprite(PropSprite prop)
