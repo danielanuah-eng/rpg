@@ -75,6 +75,16 @@ namespace DungeonBDX
             icon.sprite=Sprite.Create(t,new Rect(0,0,t.width,t.height),new Vector2(.5f,.5f),100);icon.preserveAspect=true;
             if(label){var lr=label.rectTransform;lr.anchorMin=new Vector2(.28f,lr.anchorMin.y);lr.anchorMax=new Vector2(.97f,lr.anchorMax.y);}
         }
+        // Scoreboard marker: square PixelLab icon (height-driven) then the text; iconW is the caller's width estimate. No art: text only.
+        public static TextMeshProUGUI Chip(Transform parent,string id,string text,float x,float y,float w,float h,float iconW,float size=14,Color? color=null)
+        {
+            var t=Resources.Load<Texture2D>("DungeonBDX/Iso/UI/Icons/"+id);
+            if(!t)return Text(parent,text,x,y,w,h,size,color);
+            var r=Box(parent,"Chip "+id,x,y+h*.1f,0,h*.8f,Color.white);r.pivot=new Vector2(0,.5f);
+            var fit=r.gameObject.AddComponent<UnityEngine.UI.AspectRatioFitter>();fit.aspectMode=UnityEngine.UI.AspectRatioFitter.AspectMode.HeightControlsWidth;fit.aspectRatio=1;
+            var icon=r.GetComponent<UnityEngine.UI.Image>();icon.sprite=Sprite.Create(t,new Rect(0,0,t.width,t.height),new Vector2(.5f,.5f),100);icon.preserveAspect=true;
+            return Text(parent,text,x+iconW,y,Mathf.Max(.01f,w-iconW),h,size,color);
+        }
         // Delivered UI art (lote Tripo): 9-slice frames from Resources/DungeonBDX/Iso/UI; null keeps the flat look.
         static readonly System.Collections.Generic.Dictionary<string,Sprite> skins=new System.Collections.Generic.Dictionary<string,Sprite>();
         public static Sprite Skin(string id)

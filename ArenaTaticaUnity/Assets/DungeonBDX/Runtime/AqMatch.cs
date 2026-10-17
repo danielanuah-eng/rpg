@@ -112,13 +112,22 @@ namespace DungeonBDX
             AqUi.Clear(canvas.transform);safe=AqUi.Box(canvas.transform,"Safe area",0,0,1,1,Color.clear);DungeonShell.ApplySafeArea(safe,Screen.safeArea,Screen.width,Screen.height);
             var header=AqUi.Box(safe,"Header",0,.925f,1,.075f,AqUi.Panel);
             AqUi.Text(header,Session.Scenario.Name,.02f,.37f,.62f,.58f,portrait?21:28,AqUi.Gold);
-            AqUi.Text(header,$"GUILDA {Session.CurrentGuild+1} · TURNO {Session.Turn} · {Session.Guilds[Session.CurrentGuild].Coins} MOEDAS · "+(SavePaused?"SAVE PENDENTE":"SALVO"),.02f,.02f,.72f,.36f,14,AqUi.Muted);
+            // Status markers with PixelLab icons; the icon width is estimated from the reference resolution.
+            float hi=portrait?.045f:.02f;
+            AqUi.Chip(header,"emblem",$"GUILDA {Session.CurrentGuild+1}",.02f,.02f,.15f,.36f,hi,14,AqUi.GuildColors[Session.CurrentGuild%AqUi.GuildColors.Length]);
+            AqUi.Chip(header,"die",$"TURNO {Session.Turn}",.17f,.02f,.12f,.36f,hi,14,AqUi.Muted);
+            AqUi.Chip(header,"coin",$"{Session.Guilds[Session.CurrentGuild].Coins} MOEDAS",.29f,.02f,.15f,.36f,hi,14,AqUi.Gold);
+            AqUi.Chip(header,"save",SavePaused?"SAVE PENDENTE":"SALVO",.44f,.02f,.11f,.36f,hi,14,SavePaused?new Color(1,.48f,.35f):AqUi.Muted);
             AqUi.Icon(AqUi.Button(header,"MENU",.86f,.12f,.13f,.76f,Close),"menu");
             AqUi.Icon(AqUi.Button(header,muted?"SOM OFF":"SOM",.735f,.12f,.12f,.76f,()=>{muted=!muted;music.mute=sfx.mute=muted;Draw();}),"sound");
             AqUi.Icon(AqUi.Button(header,AqBoardView.ShowLife?"VIDA":"VIDA OFF",.645f,.2f,.08f,.6f,()=>{AqBoardView.ShowLife=!AqBoardView.ShowLife;view?.RefreshLife();Draw();}),"life");
             var quests=AqUi.Box(safe,"Quest strip",0,.88f,1,.045f,new Color(.12f,.14f,.15f,.97f));
-            string progress=string.Join("  |  ",Session.Guilds.Select(g=>$"G{g.Index+1}: {g.Completed.Count}/{(Session.Guilds.Count==2?2:3)}"));
-            AqUi.Text(quests,progress+"    ·    "+Session.Scenario.Quests[0]+" / "+Session.Scenario.Quests[1],.02f,.03f,.96f,.94f,15);
+            // Quest progress per guild (trophy) and the scenario quests (quest scroll).
+            float qi=portrait?.065f:.026f,gw=portrait?.13f:.075f;int goal=Session.Guilds.Count==2?2:3;
+            foreach(var g in Session.Guilds)
+                AqUi.Chip(quests,"trophy",$"G{g.Index+1} {g.Completed.Count}/{goal}",.01f+g.Index*gw,.03f,gw,.94f,qi,15,AqUi.GuildColors[g.Index%AqUi.GuildColors.Length]);
+            float qx=.015f+Session.Guilds.Count*gw;
+            AqUi.Chip(quests,"quest",Session.Scenario.Quests[0]+" / "+Session.Scenario.Quests[1],qx,.03f,.985f-qx,.94f,qi,15);
             float footerHeight=FooterHeight;var foot=AqUi.Panelled(safe,"Bottom guild dashboard",0,0,1,footerHeight,AqUi.Panel);
             var party=Session.Units.Where(u=>!u.Monster&&u.Guild==Session.CurrentGuild).ToArray();
             // PC: three columns (heroes | cards | actions). Portrait keeps stacked rows.

@@ -43,7 +43,7 @@ namespace DungeonBDX
         public void Initialize()
         {
             if (canvas) return;
-            heroes = DungeonHeroCatalog.ImportAll();
+            heroes = DungeonHeroCatalog.ImportPlayable();
             Setup = new DungeonSetup(heroes);
             selected = heroes.FirstOrDefault()?.Id;
             foreach (var hero in heroes) portraits[hero.Id] = hero.LoadPortrait();

@@ -120,7 +120,7 @@ namespace DungeonBDX.Tests
             try
             {
                 var shell = go.AddComponent<DungeonShell>(); shell.Initialize();
-                string id = DungeonHeroCatalog.ImportArena()[0].Id;
+                string id = DungeonHeroCatalog.ImportPlayable()[0].Id;
                 shell.SelectHero(id); shell.Setup.ToggleHero(id);
                 shell.ShowTab(DungeonTab.Campaign); shell.ShowTab(DungeonTab.Session); shell.ShowTab(DungeonTab.Heroes);
                 Assert.That(shell.SelectedHeroId, Is.EqualTo(id)); Assert.That(shell.Setup.Party, Does.Contain(id));

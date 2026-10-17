@@ -19,7 +19,12 @@
   "walk_north-east.png": "1a7282bf1b687cc2ceb239ac4ed971bce767a7d5d555dd33c9564225bd164621",
   "walk_south-east.png": "6ca467470fbde3ba3cf59725d6e9f1f06e20771a673dd230314c782731f439d5",
   "idle_south-east.png": "a5db016344656fbd7751e5fadbe9c7c7298c7f40487a4f32eb0de4b418b37291",
-  "idle_north-east.png": "195edcbbc8a6687b7d906c6420f0555af7a298c2ed19ab61b79fd77f9ed3a069"
+  "idle_north-east.png": "195edcbbc8a6687b7d906c6420f0555af7a298c2ed19ab61b79fd77f9ed3a069",
+  "attack_south-east.png": "18ed0f25717991a3b456a1f257a5c23f224e4fe237a306c81721bfa2c672725d",
+  "hit_south-east.png": "1310ffdcd4e7acb8f02f599939607993f6b472a9b3b2a63d5abdd72e3fbfb928",
+  "attack_north-east.png": "9107c21f1069eedb4808d47f9be67250cff5c80c79bcf07b6c4724420c31c8cf",
+  "hit_north-east.png": "8e955ed7ede0f603b5ed0b69370d6a2319a85ab219ac80136d46fcf9b65d23c0"
  },
- "idle": "idle-respiracao.py: quadro parado com a parte de cima descendo 0-1-2-1 px (sem gera\u00e7\u00e3o)"
+ "idle": "idle-respiracao.py: quadro parado com a parte de cima descendo 0-1-2-1 px (sem gera\u00e7\u00e3o)",
+ "golpe": "golpe-dano.py: ataque (6 quadros) e dano (4 quadros) a partir do quadro parado, sem gera\u00e7\u00e3o"
 }

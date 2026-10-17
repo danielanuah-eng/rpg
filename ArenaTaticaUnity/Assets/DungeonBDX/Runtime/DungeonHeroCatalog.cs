@@ -78,6 +78,10 @@ namespace DungeonBDX
         public static IReadOnlyList<DungeonHero> ImportAll() => Array.AsReadOnly(ImportArena()
             .Concat(DungeonHeroProfiles.NewHeroes.Select(p => new DungeonHero(p))).ToArray());
 
+        // Author's roster (17/10): only the RPG heroes and the original DungeonBDX heroes are playable; the rest are NPCs/enemies.
+        public static IReadOnlyList<DungeonHero> ImportPlayable() => Array.AsReadOnly(ImportAll()
+            .Where(h => DungeonBDX.Arcadia.AqContent.Playable.Contains(h.Id) || DungeonHeroProfiles.NewHeroes.Any(p => p.Id == h.Id)).ToArray());
+
         public static IReadOnlyList<DungeonHero> ImportArena()
         {
             return Array.AsReadOnly(Content.Fighters.Values.Where(f => f.picker && f.level > 0)

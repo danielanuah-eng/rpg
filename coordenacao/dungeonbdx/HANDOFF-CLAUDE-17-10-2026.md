@@ -47,3 +47,10 @@
 - PNG novo em `Resources/Sprites` só vira Sprite depois do build (ou `ArenaBuild.EnsureSprites`).
 - A outra sessão (UI da Arena) testa na cópia `%LOCALAPPDATA%/ArenaTaticaAndroid`; conferir processos `Unity.exe` antes de abrir o projeto principal.
 - Nunca `git add .`, nem `DungeonBDX.unity`, `ProjectSettings.asset` ou os `.meta` de `Sprites/Menu` (alterações alheias).
+
+## Commit seguinte: placar com ícones, golpe/dano dos vilões, modo clássico (17/10)
+- `AqUi.Chip(parent, ícone, texto, …)`: ícone PixelLab quadrado + texto (sem arte, só texto). Cabeçalho: emblema (guilda), dado (turno), moeda, save. Faixa de missões: troféu por guilda + pergaminho (`quest`).
+- PixelLab com ~4,9 gerações até 10/11: ataque e dano dos 6 vilões feitos por `entregas/pixellab-viloes/golpe-dano.py` (inclinação/deslocamento do quadro parado; `attack_*` 6 quadros, `hit_*` 4 com clarão vermelho), só diagonais leste (espelhadas).
+- Modo clássico: `DungeonHeroCatalog.ImportPlayable()` (14 do RPG + 3 originais) no `DungeonShell`; inimigos `raizor`, `nixira`, `domador-de-correntes`/`vaelis-vinculo` (nenhum jogável).
+- `DungeonWorldView.Pick`: quando o corpo de quem está na frente cobre a base de quem está atrás, ganha o mais próximo em termos relativos (base pelo raio, corpo pela meia-altura).
+- EditMode 407/407. Build não refeito nesta parte (os PNGs novos viram Sprite no próximo build).

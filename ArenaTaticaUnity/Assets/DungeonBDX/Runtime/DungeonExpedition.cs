@@ -95,7 +95,8 @@ namespace DungeonBDX
             if (party==null || party.Count<1 || party.Count>3 || party.Distinct().Count()!=party.Count) throw new ArgumentException("Equipe inválida.");
             var initial = new List<HeroSpawn>();
             for (int i=0;i<party.Count;i++) initial.Add(new HeroSpawn("hero"+i,0,DungeonProfiles.Resolve(party[i]),map.HeroSpawns[i]));
-            string[] enemies = {"colosso","nixira",dragons ? "vaelis-vinculo" : "edgar"};
+            // Enemies are NPCs, never playable heroes (author, 17/10).
+            string[] enemies = {"raizor","nixira",dragons ? "vaelis-vinculo" : "domador-de-correntes"};
             for (int i=0;i<enemies.Length;i++) initial.Add(new HeroSpawn("enemy"+i,1,DungeonProfiles.Resolve(enemies[i]),map.EnemySpawns[i]));
             return initial.AsReadOnly();
         }

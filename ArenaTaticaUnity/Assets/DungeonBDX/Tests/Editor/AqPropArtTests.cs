@@ -38,7 +38,7 @@ namespace DungeonBDX.Tests
         {
             foreach (var ui in new[] {"tab", "bar-frame", "bar-fill"})
                 Assert.That(Resources.Load<Texture2D>("DungeonBDX/Iso/UI/" + ui), Is.Not.Null, ui);
-            foreach (var icon in new[] {"move","door","ability","rest","endturn","sword","claw","skip","rotate-left","rotate-right","zoom-in","zoom-out","reset","menu","sound","life"})
+            foreach (var icon in new[] {"move","door","ability","rest","endturn","sword","claw","skip","rotate-left","rotate-right","zoom-in","zoom-out","reset","menu","sound","life","emblem","die","coin","save","trophy","quest"})
                 Assert.That(Resources.Load<Texture2D>("DungeonBDX/Iso/UI/Icons/" + icon), Is.Not.Null, icon);
         }
 
@@ -64,6 +64,8 @@ namespace DungeonBDX.Tests
                     bool Has(string clip, string d) => Resources.Load<Texture2D>("Sprites/" + folder + "/" + clip + "_" + d) != null;
                     Assert.That(Has("walk", east) || Has("walk", west), folder + " walk " + east);
                     Assert.That(Has("idle", east) || Has("idle", west), folder + " idle " + east);
+                    Assert.That(Has("attack", east) || Has("attack", west), folder + " attack " + east);
+                    Assert.That(Has("hit", east) || Has("hit", west), folder + " hit " + east);
                 }
         }
     }

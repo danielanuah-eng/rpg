@@ -47,6 +47,18 @@ namespace DungeonBDX.Tests
         }
 
         [Test]
+        public void ClassicModeOffersOnlyPlayableHeroesAndFightsNpcs()
+        {
+            var playable=DungeonHeroCatalog.ImportPlayable().Select(h=>h.Id).ToArray();
+            Assert.That(playable,Has.Length.EqualTo(DungeonBDX.Arcadia.AqContent.Playable.Length+DungeonHeroProfiles.NewHeroes.Count));
+            Assert.That(playable,Has.No.Member("brumak").And.No.Member("nixira"));
+            var map=DungeonMap.Generate(42,DungeonMap.Crypt);
+            foreach(bool dragons in new[]{false,true})
+                foreach(var enemy in DungeonExpedition.CreateSpawns(map,new[]{"orion-prisma"},dragons).Where(s=>s.Team==1))
+                    Assert.That(DungeonBDX.Arcadia.AqContent.Playable,Has.No.Member(enemy.Profile.Id),enemy.Profile.Id);
+        }
+
+        [Test]
         public void AssetBindingsResolveForEachNativeHeroAndEverySkillAndScenario()
         {
             foreach(var name in new[]{"WorldLit","SkillUnlit"})

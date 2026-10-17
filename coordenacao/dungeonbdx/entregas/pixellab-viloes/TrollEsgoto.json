@@ -21,8 +21,13 @@
   "walk_north-west.png": "39b39143f8a960a2b58c58ced5200b4001b48d024119557a5c13f27ceecf010c",
   "walk_south-west.png": "9033d468a8b2402f1211bb7083958dc079e62fef947fb3cb276c4d57632ae60a",
   "idle_south-east.png": "d059207b86ed71981e89673a6558f6b2ab5e7cc2240c436945bbe1d0fae6df98",
-  "idle_north-east.png": "0e8ef03887600891339addb190e32764192125c25fdc6977960d223711bffc65"
+  "idle_north-east.png": "0e8ef03887600891339addb190e32764192125c25fdc6977960d223711bffc65",
+  "attack_south-east.png": "2a96e56aad85292ab5d346d4a695270c4b5fb01b9815f39dad22038e6fd8cdd6",
+  "hit_south-east.png": "520386c5ebfec7ec126fe7c5240594e13c061aaa718051eeac12dd5eb516a021",
+  "attack_north-east.png": "de16030ca5d4a87297032424375b08deef6922cf03669a94776115faa9382cb4",
+  "hit_north-east.png": "fe4d67f64c0bf613413a7b56ca191b608f7daa83ebdf5a4102460b31a6b9c8f3"
  },
  "nota": "walk_south-east = espelho de walk_south-west (o modelo walking-6-frames perdeu o martelo nessa dire\u00e7\u00e3o)",
- "idle": "idle-respiracao.py: quadro parado com a parte de cima descendo 0-1-2-1 px (sem gera\u00e7\u00e3o)"
+ "idle": "idle-respiracao.py: quadro parado com a parte de cima descendo 0-1-2-1 px (sem gera\u00e7\u00e3o)",
+ "golpe": "golpe-dano.py: ataque (6 quadros) e dano (4 quadros) a partir do quadro parado, sem gera\u00e7\u00e3o"
 }

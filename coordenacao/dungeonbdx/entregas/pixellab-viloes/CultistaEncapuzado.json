@@ -20,8 +20,13 @@
   "walk_north-east.png": "ea65d84590a83ad3d83523d70bf2e16958b98e9d60051108f28b33167226a7d9",
   "walk_north-west.png": "6cfdcb0274d34d4ccbf24a838843c6f1856b4f87e9600189e6a60643b940b9b2",
   "idle_south-east.png": "498740d93cd2cec9b1b4824e3b29bed3ce98e0d0ab5223f2ec3373d19d516ddc",
-  "idle_north-east.png": "a041882313f4b4f20d4f3582c0f29f588680e13fde3ed2c3092c4e285a9cabb1"
+  "idle_north-east.png": "a041882313f4b4f20d4f3582c0f29f588680e13fde3ed2c3092c4e285a9cabb1",
+  "attack_south-east.png": "21867cb992a787512ac8dd3f3f72ce018082b11ef757621a2fa65e20bc9eafb3",
+  "hit_south-east.png": "19ba11b5f27c511623a761186901a557af6fc162033c5e00ed9e113f46118418",
+  "attack_north-east.png": "4e122376edf56a38c79909c3a67364b54ba86eba0e8ea95f1d01b9996eefb754",
+  "hit_north-east.png": "e1c1c9f140dab0c35e3e4b57826083060f82e6700ef133d081bc415894cefffc"
  },
  "nota": "walk_south-east removido (adaga sumia e o rosto mudava); o animador espelha walk_south-west",
- "idle": "idle-respiracao.py: quadro parado com a parte de cima descendo 0-1-2-1 px (sem gera\u00e7\u00e3o)"
+ "idle": "idle-respiracao.py: quadro parado com a parte de cima descendo 0-1-2-1 px (sem gera\u00e7\u00e3o)",
+ "golpe": "golpe-dano.py: ataque (6 quadros) e dano (4 quadros) a partir do quadro parado, sem gera\u00e7\u00e3o"
 }

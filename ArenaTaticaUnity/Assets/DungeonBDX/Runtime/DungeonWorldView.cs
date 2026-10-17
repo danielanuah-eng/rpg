@@ -153,27 +153,26 @@ namespace DungeonBDX
         {
             // Elevated meshes/billboards must select their owner, rather than the floor
             // cell behind their head. Bases remain reliable in overlapping silhouettes.
+            // Where a body drawn in front overlaps the base of whoever stands behind it, the click goes to
+            // whichever is relatively closer: that base (by its radius) or the front body's centre (by its half-height).
+            bool Covered(UnitSnapshot owner,float footShare)
+            {
+                float depth=ViewCamera.WorldToScreenPoint(Position(owner.Cell)).z;
+                return session.Units.Any(u=>u.Alive&&u!=owner&&ViewCamera.WorldToScreenPoint(Position(u.Cell)).z<depth&&ScreenRect(u,out var r)&&r.Contains(screen)
+                    &&Vector2.Distance(screen,r.center)/Mathf.Max(1,r.height*.5f)<footShare);
+            }
             foreach(var unit in session.Units.Where(u=>u.Alive))
             {
                 Vector2 foot=ViewCamera.WorldToScreenPoint(Position(unit.Cell));
                 Vector2 edge=ViewCamera.WorldToScreenPoint(Position(unit.Cell)+ViewCamera.transform.right*.28f);
-                if(Vector2.Distance(screen,foot)<=Mathf.Max(6,Vector2.Distance(foot,edge)))
+                float radius=Mathf.Max(6,Vector2.Distance(foot,edge)),footDistance=Vector2.Distance(screen,foot);
+                if(footDistance<=radius&&!Covered(unit,footDistance/radius))
                 {cell=unit.Cell;return true;}
             }
             UnitSnapshot chosen=null;float nearest=float.MaxValue;
             foreach(var unit in session.Units.Where(u=>u.Alive))
             {
-                if(!actors.TryGetValue(unit.Id,out var visual))continue;
-                var renderers=visual.GetComponentsInChildren<Renderer>();if(renderers.Length==0)continue;
-                var bounds=renderers[0].bounds;foreach(var renderer in renderers.Skip(1))bounds.Encapsulate(renderer.bounds);
-                Vector2 min=new Vector2(float.MaxValue,float.MaxValue),max=new Vector2(float.MinValue,float.MinValue);
-                for(int corner=0;corner<8;corner++)
-                {
-                    var point=ViewCamera.WorldToScreenPoint(bounds.center+Vector3.Scale(bounds.extents,
-                        new Vector3((corner&1)==0?-1:1,(corner&2)==0?-1:1,(corner&4)==0?-1:1)));
-                    min=Vector2.Min(min,point);max=Vector2.Max(max,point);
-                }
-                var rect=Rect.MinMaxRect(min.x,min.y,max.x,max.y);float screenDistance=(screen-rect.center).sqrMagnitude;
+                if(!ScreenRect(unit,out var rect))continue;float screenDistance=(screen-rect.center).sqrMagnitude;
                 if(rect.Contains(screen) && screenDistance<nearest){nearest=screenDistance;chosen=unit;}
             }
             if(chosen!=null){cell=chosen.Cell;return true;}
@@ -184,6 +183,22 @@ namespace DungeonBDX
                 return map.CanStand(cell);
             }
             cell = default; return false;
+        }
+
+        bool ScreenRect(UnitSnapshot unit,out Rect rect)
+        {
+            rect=default;
+            if(!actors.TryGetValue(unit.Id,out var visual))return false;
+            var renderers=visual.GetComponentsInChildren<Renderer>();if(renderers.Length==0)return false;
+            var bounds=renderers[0].bounds;foreach(var renderer in renderers.Skip(1))bounds.Encapsulate(renderer.bounds);
+            Vector2 min=new Vector2(float.MaxValue,float.MaxValue),max=new Vector2(float.MinValue,float.MinValue);
+            for(int corner=0;corner<8;corner++)
+            {
+                var point=ViewCamera.WorldToScreenPoint(bounds.center+Vector3.Scale(bounds.extents,
+                    new Vector3((corner&1)==0?-1:1,(corner&2)==0?-1:1,(corner&4)==0?-1:1)));
+                min=Vector2.Min(min,point);max=Vector2.Max(max,point);
+            }
+            rect=Rect.MinMaxRect(min.x,min.y,max.x,max.y);return true;
         }
 
         public void Sync(bool immediate = false,string teleportActor=null)
