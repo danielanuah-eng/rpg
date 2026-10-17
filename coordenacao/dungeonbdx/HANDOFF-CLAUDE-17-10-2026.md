@@ -10,13 +10,14 @@
 - Import: `DungeonAssetImport.OnPreprocessTexture` → `Iso/` com filtro Point, sem compressão; `Frame/` em Repeat.
 - Evidência: 362/362 EditMode, 3 probes `passed:true`, capturas em `entregas/08-configuracao-arcadia/`.
 
-## Em andamento
+## PixelLab (feito)
 
-- PixelLab UI asset `f712c2aa-607a-4fec-9b4e-02eb6129c8b8` ("kit-hud-arena-dungeon": botão, botão de ícone, aba, barra de vida, moldura de retrato, painel; 25 gerações). Recortar as peças para `DungeonBDX/Art/Resources/DungeonBDX/Iso/UI/` e para a Arena (`ArenaHud`).
+- UI asset `f712c2aa-607a-4fec-9b4e-02eb6129c8b8` (25 gerações; restam ~133): veio só painel de madeira, anel de retrato e um botão de ícone com espada (o botão largo trouxe "NEW" escrito; aba e barra de vida não vieram). Integrados: `Iso/UI/panel.png` (rodapé; o escuro da Tripo virou `panel-dark.png`) e `Iso/UI/portrait-ring.png` (`AqUi.Portrait`). Recortes em `entregas/pixellab-ui/`.
+- Portal com arte: sem as esferas orbitando. Prop `rune`: usa `Tokens/ritual` deitado.
 
 ## Próximos passos
 
-1. Integrar o kit de HUD nas duas engines (Arena: abas Ações/Partida, barra lateral, botões).
+1. Levar a mesma UI (botões Tripo, painel e anel PixelLab) para a Arena Tática (`ArenaHud`: abas Ações/Partida, painel lateral, loja). Aba e barra de vida: pedir ao Gemini ou outro painel PixelLab.
 2. Ícones (mover, porta, habilidade, descansar, encerrar, girar, zoom, som, menu, vida): pedir ao autor no Gemini (`Tripo/`) ou PixelLab barato (objeto 1 direção).
 3. Heróis faltantes (`lyra-faisca`, `orion-prisma`, `vaelis-vinculo`) e `baltazar` hit/death: ~60–80 gerações por herói no PixelLab — só com OK do autor.
 4. Pendências antigas: subdividir grid (opcional), captura da Vingança mortal, QA Android.
