@@ -12,7 +12,7 @@ namespace ArenaTatica
     // por jogador e os eventos descem e os comandos sobem. O Host decide tudo.
     [Serializable] public class WireMessage
     {
-        public int protocol=5;
+        public int protocol=6;
         public string kind, text, token;
         public string[] fighters; // hello: time escolhido no aparelho do jogador
         public string[] pool;     // hello/escolha: pool do torneio
@@ -773,7 +773,7 @@ namespace ArenaTatica
             WireMessage m;
             try { m=JsonUtility.FromJson<WireMessage>(text); } catch(Exception) { return; }
             if(m==null) return;
-            if(m.protocol!=5) {
+            if(m.protocol!=6) {
                 const string update="Versões diferentes. Atualize a Arena Tática nos dois aparelhos.";
                 if(Network.IsHost&&m.kind=="hello") Send(peer,new WireMessage{protocol=m.protocol,kind="full",text=update});
                 else if(Client) { Network.Close(); Recovery=true; Synced=false; Status=update; }

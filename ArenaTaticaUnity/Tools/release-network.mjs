@@ -32,7 +32,7 @@ async function run(players,cup) {
   let maxMessageBytes=0, failure=null, concealed=null, reconnected=false, revealed=false, restarted=false, lobby=false, checkingReconnect=false;
   function connect(seat) {
     const ws=new WebSocket('ws://127.0.0.1:9080'); clients.push(ws);
-    const send=m=>ws.send(JSON.stringify({protocol:5,...m}));
+    const send=m=>ws.send(JSON.stringify({protocol:6,...m}));
     ws.addEventListener('open',()=>send({kind:'hello',token:'020-qa-'+seat,fighters:['ciantia'],pool:['ciantia','perry','ezequiela','damian','baltazar']}));
     ws.addEventListener('message',event=>{
       try {

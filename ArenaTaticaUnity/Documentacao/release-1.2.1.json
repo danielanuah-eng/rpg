@@ -1,0 +1,87 @@
+{
+  "version": "1.2.1",
+  "sourceCommit": "67853f69dcf4f810e151416ec3b91353699a8668",
+  "state": "builds-verificados",
+  "protocol": 5,
+  "editMode": {
+    "total": 154,
+    "passed": 154,
+    "failed": 0,
+    "skipped": 0
+  },
+  "androidPhysical": "pendente",
+  "previousRelease": "release-1.2.0.json",
+  "validation": {
+    "tests": "021-testes.json",
+    "effects": "021-efeitos.json"
+  },
+  "notes": "Fases de sprites integradas depois do deploy verificado da 1.2.0; sem PNGs ou regras novos.",
+  "platforms": {
+    "windows": {
+      "version": "1.2.1",
+      "protocol": 5,
+      "platform": "Windows",
+      "completedAt": "2026-10-14T19:17:02.8781468Z",
+      "sourceCommit": "67853f69dcf4f810e151416ec3b91353699a8668",
+      "codeDirty": false,
+      "stagedCodeMatches": true,
+      "sourceTreeSha256": "e57d91445ac2464c9e0fa583ac51af369957ab6850a4290311b765b156f4e9e2",
+      "sourceFiles": 3758,
+      "stage": "C:\\Users\\Anuah\\AppData\\Local\\ArenaTaticaAndroid"
+    },
+    "android": {
+      "version": "1.2.1",
+      "protocol": 5,
+      "platform": "Android",
+      "completedAt": "2026-10-14T19:39:01.8856413Z",
+      "sourceCommit": "67853f69dcf4f810e151416ec3b91353699a8668",
+      "codeDirty": false,
+      "stagedCodeMatches": true,
+      "sourceTreeSha256": "e57d91445ac2464c9e0fa583ac51af369957ab6850a4290311b765b156f4e9e2",
+      "sourceFiles": 3758,
+      "stage": "C:\\Users\\Anuah\\AppData\\Local\\ArenaTaticaAndroid"
+    }
+  },
+  "packages": {
+    "windows": {
+      "file": "ArenaTatica-Windows.zip",
+      "completedAt": "2026-10-14T19:19:13.3467409Z",
+      "sha256": "B6B176DA0E0F1F92A8F4F2FB540C0A84F0F3FF62951C4A66A6BD30EF7C95E435",
+      "files": 248,
+      "duplicateEntries": 0,
+      "extractedFilesMatch": true,
+      "accountFiles": 0,
+      "extractedPath": "C:\\Users\\Anuah\\OneDrive\\Área de Trabalho\\Rpg\\ArenaTaticaUnity\\Artifacts\\019-extracted-feee94ea460f4cf793b4d95a6bb3eafc"
+    },
+    "android": {
+      "file": "ArenaTatica.apk",
+      "completedAt": "2026-10-14T19:40:03.7347472Z",
+      "sourceCommit": "67853f69dcf4f810e151416ec3b91353699a8668",
+      "version": "1.2.1",
+      "versionCode": 4,
+      "package": "org.arcanoclisma.arenatatica",
+      "architecture": "arm64-v8a",
+      "internetPermission": true,
+      "signatureVerified": true,
+      "certificateSha256": "eab099f58dcbbf1a63d863228ecefe22ace342749f895d5f646f477dc5f27425",
+      "certificateMatchesPrevious": true,
+      "bytes": 212667386,
+      "sha256": "209824b474f236e48d443761128d08f162c7e6fc7135fdc757c81d156677809c",
+      "physicalDeviceTested": false
+    }
+  },
+  "sourceTreeSha256": "e57d91445ac2464c9e0fa583ac51af369957ab6850a4290311b765b156f4e9e2",
+  "sourceFiles": 3758,
+  "runtimeEffectsPassed": true,
+  "verifiedAt": "2026-10-14T19:40:04.972386+00:00",
+  "remoteVerification": {
+    "windows": {
+      "buildId": 2127774,
+      "state": "completed",
+      "userVersion": "2026.10.14-1.2.1",
+      "files": 248,
+      "allFilesMatch": true,
+      "verifiedAt": "2026-10-14T19:42:16.591384+00:00"
+    }
+  }
+}

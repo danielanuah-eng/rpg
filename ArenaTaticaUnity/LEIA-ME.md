@@ -1,4 +1,4 @@
-# Arena Tática — Unity 1.2.0
+# Arena Tática — Unity 1.2.2
 
 Jogo de combate tático por turnos para 2 a 6 participantes, desenvolvido em Unity 6000.6.4f1 com URP. Distribuição: https://eiediboy.itch.io/bdx-master. Consulte VALIDACAO.md para a evidência e as limitações da versão publicada.
 
@@ -66,3 +66,7 @@ package.ps1 usa tar.exe, confere entradas duplicadas e caminhos internos e grava
 verify-android.ps1 rejeita APK antigo ou de outro aplicativo e confere versão/code, ARM64, internet, certificado da atualização anterior e recibo do código final. A validação de arquivo e assinatura não substitui instalação e uso em aparelho físico.
 
 O projeto editável usa Assets com seus .meta, Packages e ProjectSettings. Arte em produção e pedidos Blender têm avaliação separada; esta versão não representa conclusão dessa fila.
+
+Atualização 1.2.1: sprites de uso da bomba de fumaça, mina de gelo e totem; conjuração/impacto do motor quente; conjuração do chão de gelo; uso de quatro equipamentos/buffs da loja. Magias e pets só animam ao usar. Skills copiadas/sorteadas mantêm a arte e o tempo da original.
+
+Atualização 1.2.2 (protocolo 6): posicionamento inicial, desempate de iniciativa, gatos, formas, reviver, alturas, mina terrestre; quatro céus; lava cercada volta a crescer; 44 efeitos de impacto novos. Aparelhos na 1.2.1 não jogam online com a 1.2.2.

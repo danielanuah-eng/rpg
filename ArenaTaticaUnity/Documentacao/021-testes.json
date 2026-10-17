@@ -1,0 +1,14 @@
+{
+  "sourceCommit": "67853f69dcf4f810e151416ec3b91353699a8668",
+  "version": "1.2.1",
+  "protocol": 5,
+  "editMode": {
+    "total": 154,
+    "passed": 154,
+    "failed": 0,
+    "skipped": 0
+  },
+  "completedAt": "2026-10-14 19:09:02Z",
+  "additionalCases": 14,
+  "coreAndNetwork": "Regras e rede preservadas desde a 1.2.0. Contrato, salas, torneios e Relay verificados nessa entrega; ver release-1.2.0.json."
+}

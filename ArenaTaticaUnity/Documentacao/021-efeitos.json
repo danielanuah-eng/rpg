@@ -1,0 +1,75 @@
+{
+  "sourceCommit": "67853f69dcf4f810e151416ec3b91353699a8668",
+  "phases": [
+    "aquecer-motor/conjuracao",
+    "aquecer-motor/impacto",
+    "bomba-de-fumaca/uso",
+    "mina-de-gelo/uso",
+    "totem-de-cura/uso",
+    "chao-de-gelo/conjuracao",
+    "chao-de-gelo/impacto",
+    "cristal-de-foco/uso",
+    "ancora/uso",
+    "manto-de-espinhos/uso",
+    "bencao-de-pedra/uso"
+  ],
+  "review": "Codex e DeepSeek: sprites, frames e tempo confirmados no manifesto; compra de magia/pet não reproduz cast; IDs copiados/sorteados conservam fases e fps originais.",
+  "resolvedQuestions": [
+    "O filtro Match.EventsFor descarta eventos de esconder para inimigos e restringe armadilha-posta a aliados, antes da apresentação.",
+    "Resources/Efeitos/manifesto.json existe no projeto real; a cópia de análise tinha outro local apenas para leitura.",
+    "Aura-gatinho é cura pontual; não foi inventado um buff contínuo para tocar o loop legado."
+  ],
+  "runtime": {
+    "passed": true,
+    "platform": "Windows",
+    "completedAt": "2026-10-14T19:18:02.114Z",
+    "phases": [
+      {
+        "phase": "aquecer-motor/conjuracao",
+        "frames": 13
+      },
+      {
+        "phase": "aquecer-motor/impacto",
+        "frames": 13
+      },
+      {
+        "phase": "bomba-de-fumaca/uso",
+        "frames": 15
+      },
+      {
+        "phase": "mina-de-gelo/uso",
+        "frames": 16
+      },
+      {
+        "phase": "totem-de-cura/uso",
+        "frames": 16
+      },
+      {
+        "phase": "chao-de-gelo/conjuracao",
+        "frames": 13
+      },
+      {
+        "phase": "chao-de-gelo/impacto",
+        "frames": 16
+      },
+      {
+        "phase": "cristal-de-foco/uso",
+        "frames": 16
+      },
+      {
+        "phase": "ancora/uso",
+        "frames": 15
+      },
+      {
+        "phase": "manto-de-espinhos/uso",
+        "frames": 12
+      },
+      {
+        "phase": "bencao-de-pedra/uso",
+        "frames": 16
+      }
+    ],
+    "fixture": "Eventos de apresentação: forma, esconder, armadilha, invocação, cura, zona e compra. Não simula o balanceamento de uma partida."
+  },
+  "physicalAndroid": "Sem aparelho conectado."
+}
