@@ -20,7 +20,7 @@ namespace ArenaTatica
         // Seleção por borda dourada + fundo + selo "OK" (não só por cor).
         public static void MarkSelected(Button b,bool on,Font font)
         {
-            var img=b.GetComponent<Image>(); if(img) img.color=on?SelectedFill:Raised;
+            Paint(b,on,SelectedFill,Raised);
             var outline=b.GetComponent<Outline>(); if(!outline) { outline=b.gameObject.AddComponent<Outline>(); outline.effectColor=Selected; outline.effectDistance=new Vector2(FocusOutline,-FocusOutline); }
             outline.enabled=on;
             var badge=b.transform.Find("Selo");
@@ -32,10 +32,43 @@ namespace ArenaTatica
             }
             badge.gameObject.SetActive(on);
         }
+        // UI comum com o DungeonBDX (16/10): botões do lote Tripo e painel/anel do PixelLab, molduras 9-slice em
+        // Resources/DungeonBDX/Iso/UI (Point, sem compressão, pelo DungeonAssetImport). Sem a arte, Skin devolve null e fica o visual liso.
+        public const string SkinFolder="DungeonBDX/Iso/UI/";
+        public const float SkinEdge=.18f;
+        static readonly System.Collections.Generic.Dictionary<string,Sprite> skins=new System.Collections.Generic.Dictionary<string,Sprite>();
+        public static Sprite Skin(string id)
+        {
+            if(skins.TryGetValue(id,out var cached)&&cached) return cached;
+            var t=Resources.Load<Texture2D>(SkinFolder+id); Sprite sprite=null;
+            if(t) { float edge=Mathf.Round(Mathf.Min(t.width,t.height)*SkinEdge);
+                sprite=Sprite.Create(t,new Rect(0,0,t.width,t.height),new Vector2(.5f,.5f),100,0,SpriteMeshType.FullRect,new Vector4(edge,edge,edge,edge)); sprite.name=id; }
+            skins[id]=sprite; return sprite;
+        }
+        // Moldura fatiada; border = espessura da borda em unidades do Canvas (a arte encolhe para caber em faixas finas).
+        public static bool Slice(Image image,string id,float border,float alpha=1)
+        {
+            var sprite=Skin(id); if(!image||!sprite) return false;
+            image.sprite=sprite; image.type=Image.Type.Sliced; image.pixelsPerUnitMultiplier=sprite.border.x/Mathf.Max(1,border); image.color=new Color(1,1,1,alpha); return true;
+        }
+        // Botão com a arte: um quadro por estado (normal, escolhido, desligado); o tom só clareia sob o cursor.
+        public static bool SkinButton(Button b,float border=9)
+        {
+            var image=b?b.GetComponent<Image>():null; if(!Slice(image,"button",border)) return false;
+            var c=b.colors; c.normalColor=new Color(.88f,.88f,.88f); c.highlightedColor=c.selectedColor=Color.white; c.pressedColor=new Color(1,.86f,.62f); c.disabledColor=new Color(.9f,.9f,.9f); b.colors=c;
+            var pele=b.GetComponent<ArenaBotaoPele>(); if(!pele) pele=b.gameObject.AddComponent<ArenaBotaoPele>();
+            pele.Normal=image.sprite; pele.Selected=Skin("button-selected")??image.sprite; pele.Disabled=Skin("button-disabled")??image.sprite; return true;
+        }
+        // Destaque de um botão: com a arte troca o quadro; sem ela, pinta a cor lisa como antes.
+        public static void Paint(Button b,bool on,Color onColor,Color offColor)
+        {
+            if(!b) return; var pele=b.GetComponent<ArenaBotaoPele>(); if(pele) { pele.Chosen=on; pele.Apply(); return; }
+            var img=b.GetComponent<Image>(); if(img) img.color=on?onColor:offColor;
+        }
         // Foco de teclado visível (Tab/setas): tinge o botão selecionado pelo EventSystem.
         public static void StyleFocus(Button b)
         {
-            var c=b.colors; c.selectedColor=Hex(0x3a4a5e); c.highlightedColor=Hex(0x2c3b4d); c.pressedColor=Selected; b.colors=c;
+            var c=b.colors; bool art=b.GetComponent<ArenaBotaoPele>(); c.selectedColor=art?Color.white:Hex(0x3a4a5e); c.highlightedColor=art?Color.white:Hex(0x2c3b4d); c.pressedColor=Selected; b.colors=c;
         }
         // Botões com transição suave (autor, 13/10: LERP em todos): a cor desliza (fadeDuration) e a escala cresce sob o cursor
         // e afunda ao apertar. A escala não mexe no layout.
@@ -65,6 +98,19 @@ namespace ArenaTatica
             if(Mathf.Abs(s-goal)<.0005f) return;
             s=Mathf.Lerp(s,goal,1-Mathf.Exp(-Speed*Time.unscaledDeltaTime)); transform.localScale=new Vector3(s,s,1);
         }
+    }
+    // Quadro da arte conforme o estado do botão (desligado > escolhido > normal).
+    public sealed class ArenaBotaoPele : MonoBehaviour
+    {
+        public Sprite Normal,Selected,Disabled; public bool Chosen;
+        Image image; Selectable target;
+        public Sprite Current(bool interactable) => !interactable?Disabled:Chosen?Selected:Normal;
+        public void Apply()
+        {
+            if(!image) image=GetComponent<Image>(); if(!target) target=GetComponent<Selectable>();
+            var s=Current(!target||target.interactable); if(image&&s&&image.sprite!=s) image.sprite=s;
+        }
+        void LateUpdate() => Apply();
     }
     // Dica ao passar o cursor (não bloqueia a rolagem como o EventTrigger).
     public sealed class ArenaDica : MonoBehaviour, UnityEngine.EventSystems.IPointerEnterHandler

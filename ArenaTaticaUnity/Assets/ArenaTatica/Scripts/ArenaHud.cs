@@ -49,10 +49,10 @@ namespace ArenaTatica
             var scaler=root.GetComponent<CanvasScaler>(); scaler.uiScaleMode=CanvasScaler.ScaleMode.ConstantPixelSize;
             if(!EventSystem.current) new GameObject("EventSystem",typeof(EventSystem),typeof(InputSystemUIInputModule));
             // Tabuleiro na tela inteira: cabeçalho e rodapé são faixas finas translúcidas; o resto fica no painel lateral recolhível.
-            top=Panel("Cabecalho",root.transform); top.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.55f);
+            top=Panel("Cabecalho",root.transform); top.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.55f); ArenaTema.Slice(top.GetComponent<Image>(),"panel-dark",7,.94f);
             turn=Text("",top,15,ink); turn.alignment=TextAnchor.MiddleLeft; Anchors(turn.rectTransform,Vector2.zero,new Vector2(.55f,1),new Vector2(14,0),new Vector2(0,0));
             score=Text("",top,13,muted); score.alignment=TextAnchor.MiddleRight; Anchors(score.rectTransform,new Vector2(.45f,0),Vector2.one,Vector2.zero,new Vector2(-14,0));
-            side=Panel("Comandos",root.transform); side.GetComponent<Image>().color=new Color(panel.r,panel.g,panel.b,.93f);
+            side=Panel("Comandos",root.transform); side.GetComponent<Image>().color=new Color(panel.r,panel.g,panel.b,.93f); skinned=ArenaTema.Slice(side.GetComponent<Image>(),"panel",13);
             var layout=side.gameObject.AddComponent<VerticalLayoutGroup>(); layout.padding=new RectOffset(12,12,8,10); layout.spacing=6; layout.childControlWidth=true; layout.childControlHeight=true; layout.childForceExpandHeight=false;
             // Abas do painel: Ações (lutadores, skills, loja, registro) e Partida (nova partida, salas, vista, menu); ◀ recolhe.
             var tabs=new GameObject("Abas",typeof(RectTransform),typeof(HorizontalLayoutGroup),typeof(LayoutElement)).GetComponent<RectTransform>(); tabs.SetParent(side,false);
@@ -78,10 +78,10 @@ namespace ArenaTatica
             help=LabelRow("",actionsPage,12,muted,44); labels.Add(help);
             result=LabelRow("",actionsPage,16,ArenaPresentation.Gold,28);
             // Registro no fim do painel lateral, ocupando o que sobra: não cobre mais o tabuleiro.
-            logPanel=Panel("Registro",actionsPage); logPanel.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.6f);
+            logPanel=Panel("Registro",actionsPage); logPanel.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.6f); ArenaTema.Slice(logPanel.GetComponent<Image>(),"panel-dark",6,.92f);
             var logSize=logPanel.gameObject.AddComponent<LayoutElement>(); logSize.flexibleHeight=1; logSize.minHeight=40;
             log=Text("",logPanel,12,ink); log.verticalOverflow=VerticalWrapMode.Truncate; log.alignment=TextAnchor.LowerLeft; Anchors(log.rectTransform,Vector2.zero,Vector2.one,new Vector2(10,6),new Vector2(-10,-6));
-            footer=Panel("Rodape",root.transform); footer.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.55f); footer.GetComponent<Image>().raycastTarget=false;
+            footer=Panel("Rodape",root.transform); footer.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.55f); ArenaTema.Slice(footer.GetComponent<Image>(),"panel-dark",5,.94f); footer.GetComponent<Image>().raycastTarget=false;
             status=Text("",footer,13,ink); status.alignment=TextAnchor.MiddleLeft; Anchors(status.rectTransform,Vector2.zero,new Vector2(.62f,1),new Vector2(12,0),Vector2.zero);
             metrics=Text("",footer,10,muted); metrics.alignment=TextAnchor.MiddleRight; Anchors(metrics.rectTransform,new Vector2(.62f,0),Vector2.one,Vector2.zero,new Vector2(-12,0));
             metrics.gameObject.SetActive(!Application.isMobilePlatform);
@@ -108,7 +108,7 @@ namespace ArenaTatica
             Button("Fechar a Partida",networkPanel,Game.CloseMatch,120);
             // Girar a vista: sempre à mão no canto do tabuleiro (também: botão direito arrastado, segurar e arrastar, Q/E).
             // Dois dedos não giram: a pinça é só zoom (020-ux).
-            viewPanel=Panel("Vista",root.transform);
+            viewPanel=Panel("Vista",root.transform); ArenaTema.Slice(viewPanel.GetComponent<Image>(),"panel-dark",5,.94f);
             var viewRow=viewPanel.gameObject.AddComponent<HorizontalLayoutGroup>(); viewRow.spacing=6; viewRow.padding=new RectOffset(6,6,4,4); viewRow.childControlHeight=true; viewRow.childControlWidth=true; viewRow.childForceExpandWidth=false;
             // Giro aos poucos (30° deslizando) e "Reto" volta ao lado reto mais próximo.
             Button("◄",viewPanel,()=>Game.View.RotateBy(-30),44); Button("Reto",viewPanel,Game.View.StraightenView,60); Button("►",viewPanel,()=>Game.View.RotateBy(30),44);
@@ -119,6 +119,13 @@ namespace ArenaTatica
             portrait=Panel("Retrato",root.transform); var frame=portrait.GetComponent<Image>(); frame.color=new Color(.03f,.04f,.07f,.72f); frame.raycastTarget=false;
             portraitArt=new GameObject("Arte",typeof(RectTransform),typeof(Image)).GetComponent<Image>(); portraitArt.transform.SetParent(portrait,false);
             portraitArt.preserveAspect=true; portraitArt.raycastTarget=false; Anchors(portraitArt.rectTransform,Vector2.zero,Vector2.one,new Vector2(4,24),new Vector2(-4,-4));
+            // Com a arte: moldura escura e o anel do PixelLab; o rosto fica dentro do anel, que esconde os cantos.
+            if(ArenaTema.Slice(frame,"panel-dark",7,.9f)&&ArenaTema.Skin("portrait-ring")) {
+                var ring=new GameObject("Anel",typeof(RectTransform)).GetComponent<RectTransform>(); ring.SetParent(portrait,false); Anchors(ring,Vector2.zero,Vector2.one,new Vector2(8,24),new Vector2(-8,-8));
+                portraitArt.transform.SetParent(ring,false); Anchors(portraitArt.rectTransform,new Vector2(.16f,.16f),new Vector2(.84f,.84f),Vector2.zero,Vector2.zero);
+                var band=new GameObject("Borda",typeof(RectTransform),typeof(Image)).GetComponent<Image>(); band.transform.SetParent(ring,false); band.sprite=ArenaTema.Skin("portrait-ring");
+                band.preserveAspect=true; band.raycastTarget=false; Anchors(band.rectTransform,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero);
+            }
             portraitText=Text("",portrait,12,ink); portraitText.alignment=TextAnchor.MiddleCenter; portraitText.raycastTarget=false; Anchors(portraitText.rectTransform,Vector2.zero,new Vector2(1,0),new Vector2(4,3),new Vector2(-4,23));
             mobileStats=Text("",root.transform,14,ink);
             Anchors(mobileStats.rectTransform,new Vector2(0,.87f),new Vector2(1,.935f),new Vector2(20,0),new Vector2(-20,0));
@@ -135,7 +142,7 @@ namespace ArenaTatica
         // Janela da loja: cenário do castor lojista, itens sobre o balcão e a descrição do item sob o cursor.
         void BuildShopWindow(Transform root)
         {
-            shopWindow=Panel("JanelaLoja",root); shopWindow.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.97f);
+            shopWindow=Panel("JanelaLoja",root); shopWindow.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.97f); ArenaTema.Slice(shopWindow.GetComponent<Image>(),"panel-dark",14);
             var scene=new GameObject("Cena",typeof(RectTransform),typeof(Image)).GetComponent<Image>(); scene.transform.SetParent(shopWindow,false);
             // Cena animada do castor (Sprites/Vendedor/frame-NN, tarefa 004); sem ela, a imagem parada.
             vendor=Resources.LoadAll<Sprite>("Sprites/Vendedor").OrderBy(x=>x.name).ToArray(); shopScene=scene;
@@ -247,7 +254,7 @@ namespace ArenaTatica
         RectTransform inspect; Text inspectTitle,inspectBody; Image inspectArt; int inspectId;
         void BuildInspect(Transform root)
         {
-            inspect=Panel("FichaLutador",root); inspect.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.96f);
+            inspect=Panel("FichaLutador",root); inspect.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.96f); ArenaTema.Slice(inspect.GetComponent<Image>(),"panel-dark",10);
             inspectArt=new GameObject("Retrato",typeof(RectTransform),typeof(Image)).GetComponent<Image>(); inspectArt.transform.SetParent(inspect,false);
             inspectArt.preserveAspect=true; inspectArt.raycastTarget=false; Anchors(inspectArt.rectTransform,new Vector2(0,1),new Vector2(0,1),new Vector2(10,-96),new Vector2(96,-10));
             inspectTitle=Text("",inspect,18,ArenaTema.Selected); inspectTitle.alignment=TextAnchor.UpperLeft; inspectTitle.verticalOverflow=VerticalWrapMode.Overflow;
@@ -297,7 +304,7 @@ namespace ArenaTatica
         RectTransform copyWindow; Text copyTitle; readonly List<Button> copyButtons=new List<Button>(); Cell copyCell;
         void BuildCopyWindow(Transform root)
         {
-            copyWindow=Panel("CopiarSkill",root); copyWindow.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.97f);
+            copyWindow=Panel("CopiarSkill",root); copyWindow.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.97f); ArenaTema.Slice(copyWindow.GetComponent<Image>(),"panel-dark",10);
             Anchors(copyWindow,new Vector2(.28f,.22f),new Vector2(.72f,.78f),Vector2.zero,Vector2.zero);
             copyTitle=Text("",copyWindow,17,ArenaPresentation.Gold); copyTitle.alignment=TextAnchor.MiddleCenter;
             Anchors(copyTitle.rectTransform,new Vector2(0,1),Vector2.one,new Vector2(12,-44),new Vector2(-12,-8));
@@ -494,7 +501,7 @@ namespace ArenaTatica
                     break;
             }
             for(int i=0;i<pickButtons.Count;i++) ArenaTema.MarkSelected(pickButtons[i],picking.Contains(pickOrder[i]),font);
-            for(int i=0;i<filterButtons.Count;i++) filterButtons[i].GetComponent<Image>().color=i==levelFilter?chosen:idle;
+            for(int i=0;i<filterButtons.Count;i++) ArenaTema.Paint(filterButtons[i],i==levelFilter,chosen,idle);
             RefreshDetail();
             // Equipe vazia: avanço desabilitado e indicando o que fazer (banir ninguém vale).
             pickerNext.interactable=pickMode==PickMode.Ban||ArenaTema.CanAdvance(picking.Count);
@@ -570,14 +577,14 @@ namespace ArenaTatica
         Button Button(string name,Transform parent,UnityEngine.Events.UnityAction action,float w=0)
         {
             var rect=Panel(name,parent); var image=rect.GetComponent<Image>(); image.color=idle;
-            var b=rect.gameObject.AddComponent<Button>(); b.targetGraphic=image; var colors=b.colors; colors.highlightedColor=new Color(.82f,.9f,1); colors.pressedColor=ArenaPresentation.Gold; colors.disabledColor=new Color(.4f,.43f,.5f); b.colors=colors; ArenaTema.Lerp(b); b.onClick.AddListener(action);
+            var b=rect.gameObject.AddComponent<Button>(); b.targetGraphic=image; var colors=b.colors; colors.highlightedColor=new Color(.82f,.9f,1); colors.pressedColor=ArenaPresentation.Gold; colors.disabledColor=new Color(.4f,.43f,.5f); b.colors=colors; ArenaTema.SkinButton(b); ArenaTema.Lerp(b); b.onClick.AddListener(action);
             var text=Text(name,rect,13,ink); text.alignment=TextAnchor.MiddleCenter; text.horizontalOverflow=HorizontalWrapMode.Wrap; Anchors(text.rectTransform,Vector2.zero,Vector2.one,new Vector2(4,0),new Vector2(-4,0));
             var le=rect.gameObject.AddComponent<LayoutElement>(); le.preferredHeight=34; le.minHeight=30; if(w>0) { le.preferredWidth=w; le.minWidth=w; } return b;
         }
         static void SetLabel(Button b,string text) => b.GetComponentInChildren<Text>().text=text;
         InputField Input(Transform parent,string value,string hint)
         {
-            var rect=Panel("Endereco",parent); var input=rect.gameObject.AddComponent<InputField>();
+            var rect=Panel("Endereco",parent); ArenaTema.Slice(rect.GetComponent<Image>(),"panel-dark",5); var input=rect.gameObject.AddComponent<InputField>();
             var text=Text(value,rect,13,ink); text.alignment=TextAnchor.MiddleLeft; Anchors(text.rectTransform,Vector2.zero,Vector2.one,new Vector2(9,0),new Vector2(-9,0));
             var hintText=Text(hint,rect,13,muted); hintText.alignment=TextAnchor.MiddleLeft; Anchors(hintText.rectTransform,Vector2.zero,Vector2.one,new Vector2(9,0),new Vector2(-9,0));
             input.textComponent=text; input.placeholder=hintText; input.text=value; input.characterLimit=240;
@@ -587,6 +594,8 @@ namespace ArenaTatica
         bool Portrait => width<height;
         // Painel lateral: aberto ou recolhido (só a aba ☰). O tabuleiro ocupa a tela inteira e se centraliza na parte livre.
         RectTransform actionsPage; Button actionsTab,matchTab,sideTab; bool matchPage;
+        // Painel lateral com a moldura de madeira: o conteúdo recua para dentro da borda.
+        bool skinned; int Inset => skinned?6:0;
         public static bool SideOpen=true;
         void SetSideOpen(bool open)
         {
@@ -601,7 +610,7 @@ namespace ArenaTatica
         void ShowPage(bool match)
         {
             matchPage=match; actionsPage.gameObject.SetActive(!match); networkPanel.gameObject.SetActive(match);
-            actionsTab.GetComponent<Image>().color=match?idle:chosen; matchTab.GetComponent<Image>().color=match?chosen:idle;
+            ArenaTema.Paint(actionsTab,!match,chosen,idle); ArenaTema.Paint(matchTab,match,chosen,idle);
         }
         // Escala da interface: a mesma do CanvasScaler (referência 1280×720, meio a meio), mas no PC não passa de 1,
         // para que em tela grande os botões não inchem e o espaço ganho vá para o tabuleiro.
@@ -631,14 +640,14 @@ namespace ArenaTatica
             var board=BoardArea(); float k=UiScale, freeLeft=board.xMin/k, freeLow=board.yMin/k;
             if(Portrait) {
                 Anchors(side,Vector2.zero,new Vector2(1,0),new Vector2(8,BottomBar+4),new Vector2(-8,BottomBar+SideBand));
-                v.padding=new RectOffset(10,10,6,6);
+                v.padding=new RectOffset(10+Inset,10+Inset,6+Inset,6+Inset);
                 Anchors((RectTransform)sideTab.transform,Vector2.zero,Vector2.zero,new Vector2(8,BottomBar+6),new Vector2(56,BottomBar+54));
                 Anchors(shopWindow,new Vector2(0,.3f),new Vector2(1,.8f),new Vector2(8,0),new Vector2(-8,0));
                 Anchors(viewPanel,new Vector2(1,0),new Vector2(1,0),new Vector2(-190,freeLow+6),new Vector2(-8,freeLow+48));
                 Anchors(inspect,new Vector2(0,.5f),new Vector2(1,1),new Vector2(8,0),new Vector2(-8,-(TopBar+TimelineBar)-6));
             } else {
                 Anchors(side,Vector2.zero,new Vector2(0,1),new Vector2(0,BottomBar),new Vector2(SideWidth,-(TopBar+TimelineBar)));
-                v.padding=new RectOffset(12,12,8,10);
+                v.padding=new RectOffset(12+Inset,12+Inset,8+Inset,10+Inset);
                 Anchors((RectTransform)sideTab.transform,new Vector2(0,1),new Vector2(0,1),new Vector2(8,-(TopBar+TimelineBar)-54),new Vector2(56,-(TopBar+TimelineBar)-6));
                 Anchors(shopWindow,new Vector2(.25f,.1f),new Vector2(.98f,.9f),Vector2.zero,Vector2.zero);
                 // Canto inferior esquerdo da parte livre: o losango da mesa deixa esse canto vazio.
@@ -721,12 +730,12 @@ namespace ArenaTatica
                 SetLabel(b,$"{sk.name} · {(spent?"usada":early?$"rodada {sk.minRound}":wait!=null?$"recarga {wait.uses}":cost)}{(charge!=null?$" ×{charge.uses}":"")}");
                 b.interactable=Game.CanAct&&f.pa>=Match.Cost(f,sk)&&wait==null&&!spent&&!early&&f.channel==0;
                 // Destaque do 1º toque (mira armada) e do modo de mira: o mesmo tom escolhido de sempre.
-                b.GetComponent<Image>().color=Game.Mode==sk.id||Confirming(ArenaActionConfirmation.Skill(sk.id))?chosen:idle;
+                ArenaTema.Paint(b,Game.Mode==sk.id||Confirming(ArenaActionConfirmation.Skill(sk.id)),chosen,idle);
             }
             move.interactable=pass.interactable=Game.CanAct;
-            move.GetComponent<Image>().color=Game.Mode==""&&!confirm.Armed?new Color(.21f,.36f,.43f):idle;
+            ArenaTema.Paint(move,Game.Mode==""&&!confirm.Armed,new Color(.21f,.36f,.43f),idle);
             SetLabel(pass,Confirming(ArenaActionConfirmation.Pass)?"Toque novamente para passar":"Passar  [Espaço]");
-            pass.GetComponent<Image>().color=Confirming(ArenaActionConfirmation.Pass)?chosen:idle;
+            ArenaTema.Paint(pass,Confirming(ArenaActionConfirmation.Pass),chosen,idle);
             int team=f?.team??1; var slots=s.shops[team].slots;
             shopLabel.text=$"LOJA DE P{team} · {s.coins[team]} MOEDAS";
             shopTitle.text=$"Loja do Castor  ·  P{team}  ·  {s.coins[team]} moedas";
