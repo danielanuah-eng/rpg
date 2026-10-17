@@ -1,5 +1,7 @@
 # DungeonBDX
 
+**Atualização 16/10/2026:** GPT/Codex parado; Claude faz código, integração e pedidos. Modo Arcadia em 2D isométrico (`contratos/ISOMETRICO-2D.md`), evidência em `entregas/08-configuracao-arcadia/`. Imagens novas pelo NanoBanana (Gemini): `tarefas/08-gemini-nanobanana-artes.md`. Acabamento do tabuleiro no Blender é o passo seguinte.
+
 Direção atual: o autor atribuiu 02–03 ao Codex e informou que não usa Antigravity, autorizando redistribuir e continuar o possível. Codex coordena agentes internos e ferramentas locais. Não há dependência de ativação externa.
 
 | Etapa | Responsável atual | Estado real |

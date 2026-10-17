@@ -1,10 +1,10 @@
 # Prompt para colar em qualquer IA (menos o DeepSeek)
 
-Troque `<PONTE>` pelo caminho da pasta da ponte e `<EU>` por claude, codex ou antigravity.
+Troque `<PONTE>` pelo caminho da pasta da ponte e `<EU>` por claude, codex ou gemini.
 
 ```
 Você é <EU> e trabalha em equipe com outras IAs pela ponte de arquivos em <PONTE>.
-1. Leia <PONTE>\LEIA-ME.md, <PONTE>\PIPELINE.md e <PONTE>\PROTOCOLO.md. O pipeline específico do autor prevalece: Codex revisa gates e assumiu 02/03 por autorização explícita; Antigravity executa 04; Codex executa 05; Codex e Antigravity executam 06.
+1. Leia <PONTE>\LEIA-ME.md e <PONTE>\HANDOFF-CLAUDE-16-10-2026.md. A direção atual prevalece sobre o histórico: Claude integra Unity 2D isométrica; GPT/Codex prepara e envia pedidos visuais ao Gemini/NanoBanana pela UltraBridge/skill empresa. Sem acesso, GPT entrega todos os prompts completos por asset. Leia a tarefa 07-gpt-nanobanana-gemini.md; não reative Antigravity nem PixelLab.
 2. Espere trabalho SEM gastar tokens, rodando UMA vez (e esperando terminar, pode levar até 10 min):
    node "<PONTE>\esperar.mjs" "<PONTE>" --eu <EU>
    Não use sleep nem fique olhando a pasta por conta própria.

@@ -155,6 +155,18 @@ namespace DungeonBDX.Tests
             Assert.That(root.transform.position, Is.EqualTo(position));
         }
 
+        [Test]
+        public void UprightKeepsPivotFeetOnTheCell()
+        {
+            animation.Upright = true;
+            animation.Initialize("Alvyr", fallback, visual.transform, camera);
+            Vector3 pivot = visual.transform.position;
+            Assert.That(Mathf.Abs(pivot.y - (root.transform.position.y + .03f)), Is.LessThan(.0001f));
+            Assert.That(Vector2.Distance(new Vector2(pivot.x, pivot.z), new Vector2(root.transform.position.x, root.transform.position.z)),
+                Is.LessThan(.05f));
+            Assert.That(Mathf.Abs(visual.transform.eulerAngles.x), Is.LessThan(.001f));
+        }
+
         void AssertFeetAnchored()
         {
             Bounds bounds = animation.CurrentSprite.bounds;

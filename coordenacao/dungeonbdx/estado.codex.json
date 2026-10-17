@@ -1,6 +1,6 @@
 {
   "projeto": "DungeonBDX",
-  "dataLocal": "2026-10-15",
+  "dataLocal": "2026-10-16",
   "branch": "main",
   "etapaAtual": 5,
   "etapas": [
@@ -76,27 +76,20 @@
   ],
   "servicosOnline": "Cliente Unity Authentication/MPS implementado; funcionamento cloud, combate sincronizado, convites direcionados e cloud saves pendentes",
   "androidNativo": "nao compilado; retrato Windows offscreen; QA fisico e desempenho pendentes",
-  "agentesExternos": "Antigravity nao utilizado; agentes internos entregaram World/Services/Art/Online",
-  "decisaoAutor": "Codex assume 2-3; autor nao usa Antigravity: redistribuir e continuar o possivel",
-  "previaWindows": "Expedicao local jogavel Development; tres cenarios e smokes reais aprovados",
+  "agentesExternos": "Gemini/NanoBanana só gera imagens (manual pelo autor); tarefa 08",
+  "decisaoAutor": "16/10: GPT/Codex parado; Claude faz tudo. Modo Arcadia em 2D isométrico; imagens novas pelo NanoBanana (Gemini), geradas manualmente pelo autor",
+  "previaWindows": "Modo Arcadia isométrico jogável (Development); 3 cenários com probe aprovado",
   "testesAtuais": {
     "integrados": {
-      "total": 286,
-      "passed": 286,
+      "total": 362,
+      "passed": 362,
       "failed": 0,
       "skipped": 0
     },
-    "moduloNoIntegradoFinal": {
-      "total": 132,
-      "passed": 132,
-      "failed": 0,
-      "skipped": 0
-    },
-    "smokesPlayer": 3,
-    "smokesApresentacao": 3,
+    "probesPlayer": 3,
     "falhasPlayerFinais": 0
   },
-  "evidenciaAtual": "entregas/07-camera-alcance-animacao/validacao.json",
+  "evidenciaAtual": "entregas/08-configuracao-arcadia/validacao.json",
   "referencias": {
     "pasta": "referencias/arcadia-quest/",
     "arquivos": 72,
@@ -109,4 +102,4 @@
     "alcance": "distância de caminho/visão/origem do pet; preview sem AP/RNG",
     "animacao": "sprites Arena reais; modelos FBX sem rig com feedback procedural"
   }
-}
+}

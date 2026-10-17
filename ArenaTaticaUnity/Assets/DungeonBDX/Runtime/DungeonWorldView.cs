@@ -213,7 +213,7 @@ namespace DungeonBDX
                             var spriteObject = new GameObject("Arena silhouette",typeof(SpriteRenderer)); spriteObject.transform.SetParent(visual,false);
                             var sprite = spriteObject.GetComponent<SpriteRenderer>(); sprite.sprite = portrait;
                             spriteObject.transform.rotation = ViewCamera.transform.rotation;
-                            float height = Mathf.Max(.01f,portrait.bounds.size.y),scale=1.05f/height;
+                            float height = Mathf.Max(.01f,portrait.bounds.size.y),scale=AqHeroImport.Height(unit.ProfileId)/height;
                             spriteObject.transform.localScale = Vector3.one*scale;
                             spriteObject.transform.localPosition=Vector3.up*.06f-ViewCamera.transform.up*(portrait.bounds.min.y*scale)
                                 -ViewCamera.transform.right*(portrait.bounds.center.x*scale);

@@ -1,4 +1,22 @@
-# DungeonBDX — expedição local
+# DungeonBDX — aventuras de guildas
+
+A entrada padrão agora é **AVENTURAS / GUILDAS & HERÓIS / REGRAS**. Execute `JOGAR-DUNGEONBDX.cmd` na raiz Unity depois de gerar o build. Escolha entre Portais em Ruínas, Praça dos Quatro Emblemas e Resgate nas Catacumbas; configure 2–4 guildas locais, cada uma com três heróis, e inicie ou retome o cenário.
+
+O modo Arcadia usa nove tiles de 3×3 espaços, ocupação compartilhada, três pontos de movimento, um ataque com carta exaurida ou descanso da guilda. Guarda e Vingança são controladas pelo rival à direita; a reação automática é uma opção explícita em REGRAS. Há 31 habilidades naturais distintas. Os limites de crítico, mitigação, dano e cura continuam obrigatórios.
+
+Vista **2D isométrica** (contrato em `coordenacao/dungeonbdx/contratos/ISOMETRICO-2D.md`): câmera ortográfica a 30°, giro de 360° que repousa em 45°+90°·k, arrasto preso ao chão; figuras em pé com os pés (pivô 0,153 da Arena) na casa e ordem de desenho pelos pés. Sobre as figuras fica só a vida; nomes ficam no HUD.
+
+O HUD inferior compacto reúne heróis, cartas, habilidade natural, portas, descanso e encerramento do turno; GIRAR/ZOOM/REPOR ficam numa coluna à direita do tabuleiro. Selecione uma carta para ver distâncias/visão; selecione MOVER para ver custo pelo caminho. PC: roda aproxima/afasta, botão direito gira, botão central desloca. Touch: pinça, torção e deslocamento com dois dedos.
+
+O Colosso usa altura própria (2,4 contra 1,5; a escala mede o quadro animado, não o estático) e ocupa a casa inteira. Figuras comuns dividem a casa em duas posições visuais. Golpes usam os clips correspondentes da Arena quando disponíveis; a Vingança mortal termina antes da morte visual. Pisos, salas, portas, mobiliário, portais e marcadores diferenciam os três cenários.
+
+Cada ação aceita salva em `Application.persistentDataPath/DungeonBDX/Campaigns/Arcadia-v1`. Há replay determinístico, backup, escrita atômica, exclusão entre escritores e revisões monotônicas. Falhas de persistência suspendem novas ações. Saves da expedição anterior permanecem separados.
+
+Referências, exceções e lacunas: `coordenacao/dungeonbdx/entregas/08-configuracao-arcadia/REFERENCIAS-E-DECISOES.md`. Esta base **não representa equivalência completa** a todas as regras, aventuras e expansões AQ. Campanha entre cenários, mercado, maldições, multiplayer sincronizado e acabamento final ainda estão pendentes. O cliente de contas/salas anterior continua acessível pelo modo legado (`-dungeonbdx-legacy`).
+
+QA nativo Editor/Development: `-dungeonbdx-aq portais-em-ruinas -dungeonbdx-qa -dungeonbdx-capture C:\saida\arcadia.png`. O probe usa armazenamento temporário próprio e verifica ações reais, replay, animações, escala e câmera; grava JSON junto da captura. `-dungeonbdx-aq-menu` captura a seleção de aventuras. Não substitui QA físico Android.
+
+## Expedição anterior — compatibilidade (`-dungeonbdx-legacy`)
 
 Abra Scenes/DungeonBDX.unity em Play ou execute JOGAR-DUNGEONBDX.cmd na raiz Unity após o build. Na aba Sessão, escolha Cripta de Bronze, Biblioteca do Crepúsculo ou Ninho do Eclipse. Sem recrutados, a equipe é Lyra, Orion e Vaelis; a seleção oferece também os 28 heróis adaptados da Arena.
 

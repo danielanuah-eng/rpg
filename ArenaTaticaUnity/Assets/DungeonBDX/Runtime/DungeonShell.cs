@@ -253,6 +253,14 @@ namespace DungeonBDX
             GetComponentsInChildren<Camera>(true).First(c => c.gameObject.name == "DungeonBDX Camera").enabled = true;
         }
 
+        public void HideForArcadia()
+        {
+            canvas.gameObject.SetActive(false);
+            var camera=GetComponentsInChildren<Camera>(true).First(c=>c.gameObject.name=="DungeonBDX Camera");camera.enabled=false;enabled=false;
+        }
+        public AqMatchMenu OpenArcadia()
+        {var menu=GetComponent<AqMatchMenu>()??gameObject.AddComponent<AqMatchMenu>();menu.Open(this);return menu;}
+
         void ActionBar()
         {
             string partyNames = Setup.Party.Count == 0 ? "Nenhum herói recrutado" : string.Join("  /  ", Setup.Party.Select(id => heroes.First(h => h.Id == id).Name));
@@ -368,6 +376,23 @@ namespace DungeonBDX
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
             var args = Environment.GetCommandLineArgs();
             int capture = Array.IndexOf(args, "-dungeonbdx-capture");
+            if(Array.IndexOf(args,"-dungeonbdx-aq-menu")>=0&&capture>=0&&capture+1<args.Length)
+            {
+                var menu=OpenArcadia();var cameraObject=new GameObject("AQ menu capture",typeof(Camera));var shotCamera=cameraObject.GetComponent<Camera>();shotCamera.clearFlags=CameraClearFlags.SolidColor;
+                for(int i=0;i<30;i++)yield return null;
+                AqMatch.Capture(args[capture+1],shotCamera,menu.HudCanvas);Application.Quit(0);yield break;
+            }
+            int aq=Array.IndexOf(args,"-dungeonbdx-aq");
+            if(aq>=0)
+            {
+                var menu=OpenArcadia();var match=GetComponent<AqMatch>()??gameObject.AddComponent<AqMatch>();
+                string scenario=aq+1<args.Length&&!args[aq+1].StartsWith("-")?args[aq+1]:Arcadia.AqScenarios.Ids[0];
+                string probeRoot=capture>=0&&Array.IndexOf(args,"-dungeonbdx-qa")>=0?Path.Combine(Application.temporaryCachePath,"DungeonBDX-Probes",Guid.NewGuid().ToString("N")):null;
+                if(!match.Open(menu,scenario,AqHeroImport.DefaultParties(),false,false,probeRoot)){Debug.LogError(match.Message);Application.Quit(1);yield break;}
+                menu.HudCanvas.gameObject.SetActive(false);menu.enabled=false;
+                if(capture>=0&&capture+1<args.Length)yield return match.CaptureProbe(args[capture+1]);
+                yield break;
+            }
             if (capture >= 0 && capture + 1 < args.Length)
             {
                 int expedition = Array.IndexOf(args, "-dungeonbdx-play");
@@ -409,6 +434,7 @@ namespace DungeonBDX
                 catch (Exception error) { Debug.LogException(error); Application.Quit(1); }
             }
 #endif
+            if(!Environment.GetCommandLineArgs().Contains("-dungeonbdx-capture")&&!Environment.GetCommandLineArgs().Contains("-dungeonbdx-legacy"))OpenArcadia();
             yield break;
         }
 

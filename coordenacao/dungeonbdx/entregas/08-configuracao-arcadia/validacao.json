@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "data": "2026-10-16",
+  "autor": "Claude",
+  "scope": "modo Arcadia em 2D isométrico: câmera 30°, giro 45°+90k, pés no pivô, Colosso em escala, HUD compacto",
+  "tests": {
+    "editmode-final.xml": {
+      "total": 362,
+      "passed": 362,
+      "failed": 0
+    }
+  },
+  "build": {
+    "alvo": "StandaloneWindows64",
+    "metodo": "DungeonBuild.Windows",
+    "arcadiaDllRegistrada": true
+  },
+  "player": [
+    {
+      "slug": "portais-pc",
+      "passed": true,
+      "width": 1600,
+      "height": 900,
+      "heroes": 6,
+      "monsters": 8,
+      "commands": 8,
+      "colossusHeight": 2.7712812423706055,
+      "heroHeight": 1.6743158102035522,
+      "facingBefore": "south-east",
+      "facingAfter": "north-east",
+      "attackClip": "pistol",
+      "saveReplay": true,
+      "camera": true,
+      "combat": true
+    },
+    {
+      "slug": "praca-pc",
+      "passed": true,
+      "width": 1600,
+      "height": 900,
+      "heroes": 6,
+      "monsters": 9,
+      "commands": 5,
+      "colossusHeight": 2.7712812423706055,
+      "heroHeight": 1.6743158102035522,
+      "facingBefore": "south-east",
+      "facingAfter": "north-east",
+      "attackClip": "attack",
+      "saveReplay": true,
+      "camera": true,
+      "combat": true
+    },
+    {
+      "slug": "catacumbas-vertical",
+      "passed": true,
+      "width": 900,
+      "height": 1080,
+      "heroes": 6,
+      "monsters": 8,
+      "commands": 9,
+      "colossusHeight": 2.7712812423706055,
+      "heroHeight": 1.6743158102035522,
+      "facingBefore": "south-east",
+      "facingAfter": "north-east",
+      "attackClip": "pistol",
+      "saveReplay": true,
+      "camera": true,
+      "combat": true
+    }
+  ],
+  "menu": "selecao-aventuras.png",
+  "pendente": [
+    "QA de toque em aparelho físico",
+    "desempenho Android",
+    "captura dedicada da Vingança mortal",
+    "artes NanoBanana (amostra-01) ainda não geradas",
+    "acabamento do tabuleiro no Blender"
+  ]
+}

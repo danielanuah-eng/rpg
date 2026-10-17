@@ -1,5 +1,11 @@
 # Ponte: DungeonBDX
 
+## Direção atual — 16/10/2026
+
+Leia primeiro `HANDOFF-CLAUDE-16-10-2026.md` e `tarefas/07-gpt-nanobanana-gemini.md`. Unity 2D isométrica: Claude programa/integra; GPT/Codex envia pedidos de novas imagens ao Gemini/NanoBanana pela UltraBridge/skill empresa. Sem acesso, entregar todos os prompts completos por asset. PixelLab foi substituído; Antigravity não é utilizado. Reaproveitar personagens/golpes existentes e preservar caps. Os registros abaixo são históricos e não autorizam reativar o pipeline antigo nem descrevem o estado atual.
+
+## Histórico da ponte
+
 Projeto: C:\Users\Anuah\OneDrive\Área de Trabalho\Rpg\ArenaTaticaUnity
 Pipeline atual do autor (15/10/2026): Codex implementa 01–03 (02/03 reatribuídas explicitamente); Antigravity 04; Codex 05; Codex + Antigravity 06. Ordem estrita; ver `PIPELINE.md`. Codex consolida gates, revisão e entrega. O pedido direto do autor prevalece sobre a tabela genérica do PROTOCOLO.md.
 

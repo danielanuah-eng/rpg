@@ -1,0 +1,17 @@
+{
+  "lote": "amostra-01",
+  "data": "2026-10-16",
+  "autor": "Claude",
+  "ferramenta": "Gemini / NanoBanana (colagem manual pelo autor; Gemini confirmou que não grava arquivos)",
+  "prompts": "PROMPTS-COMPLETOS.md",
+  "destinoBruto": "entregas/nanobanana/amostra-01/",
+  "status": "aguardando-geracao",
+  "tarefa": "tarefas/08-gemini-nanobanana-artes.md",
+  "lote02": "PROMPTS-COMPLETOS.md#lote-02 → entregas/nanobanana/lote-02/",
+  "itens": [
+    {"id": "tile-wood", "tipo": "piso", "projecao": "topo", "bruto": "tile-wood.png", "final": "ArenaTaticaUnity/Assets/DungeonBDX/Resources/DungeonBDX/Iso/Tiles/wood.png", "largura": 512, "altura": 512},
+    {"id": "wall", "tipo": "parede", "projecao": "frontal", "bruto": "wall.png", "final": "ArenaTaticaUnity/Assets/DungeonBDX/Resources/DungeonBDX/Iso/Walls/wall.png", "largura": 512, "altura": 192},
+    {"id": "lyra-faisca.estaticos", "tipo": "heroi", "projecao": "camera30", "bruto": "lyra/<direcao>.png", "direcoes": ["south-east", "south-west", "north-east", "north-west"], "final": "ArenaTaticaUnity/Assets/ArenaTatica/Resources/Sprites/<pasta-lyra>/", "largura": 176, "altura": 176, "pivo": [0.5, 0.153], "ppu": 128},
+    {"id": "lyra-faisca.idle", "tipo": "heroi", "projecao": "camera30", "bruto": "lyra/idle_<direcao>_<n>.png", "clipe": "idle", "quadros": 4, "fps": 5, "loop": true, "direcoes": ["south-east", "south-west", "north-east", "north-west"], "largura": 176, "altura": 176, "pivo": [0.5, 0.153], "ppu": 128}
+  ]
+}

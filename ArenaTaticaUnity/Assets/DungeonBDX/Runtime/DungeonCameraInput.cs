@@ -26,6 +26,9 @@ namespace DungeonBDX
         public void Reset() {down=cancelled=multi=touchSequence=cameraDrag=dragBlocked=false;}
 
         public bool Read(DungeonWorldView world,Func<Vector2,bool> hitsHud,out Vector2 tap)
+            =>Read(world.ZoomCamera,world.RotateCamera,world.PanCamera,hitsHud,out tap);
+
+        public bool Read(Action<float> zoom,Action<float> rotate,Action<Vector2> pan,Func<Vector2,bool> hitsHud,out Vector2 tap)
         {
             tap=default;
             var touches=Touchscreen.current?.touches.Where(t=>t.press.isPressed).Take(2).ToArray();
@@ -47,8 +50,8 @@ namespace DungeonBDX
                         if(!dragBlocked)
                         {
                             if(lastSpan.magnitude>20 && span.magnitude>20)
-                            {world.ZoomCamera(span.magnitude/lastSpan.magnitude);world.RotateCamera(Vector2.SignedAngle(lastSpan,span));}
-                            world.PanCamera(center-lastCenter);
+                            {zoom(span.magnitude/lastSpan.magnitude);rotate(Vector2.SignedAngle(lastSpan,span));}
+                            pan(center-lastCenter);
                         }
                         lastCenter=center;lastSpan=span;
                     }
@@ -71,8 +74,8 @@ namespace DungeonBDX
                 dragBlocked|=overHud;
                 if(!dragBlocked)
                 {
-                    if(mouse.rightButton.isPressed)world.RotateCamera((position.x-lastDrag.x)*.38f);
-                    if(mouse.middleButton.isPressed)world.PanCamera(position-lastDrag);
+                    if(mouse.rightButton.isPressed)rotate((position.x-lastDrag.x)*.38f);
+                    if(mouse.middleButton.isPressed)pan(position-lastDrag);
                 }
                 lastDrag=position;
                 if(!mouse.rightButton.isPressed&&!mouse.middleButton.isPressed)cameraDrag=false;
@@ -80,7 +83,7 @@ namespace DungeonBDX
             if(!overHud && Mathf.Abs(mouse.scroll.ReadValue().y)>.01f)
             {
                 if(down)cancelled=true;
-                world.ZoomCamera(Mathf.Exp(mouse.scroll.ReadValue().y*.0015f));
+                zoom(Mathf.Exp(mouse.scroll.ReadValue().y*.0015f));
             }
             if(mouse.leftButton.wasPressedThisFrame)PointerDown(position,overHud||cameraDrag);
             if(mouse.leftButton.isPressed)PointerMoved(position,overHud||cameraDrag);

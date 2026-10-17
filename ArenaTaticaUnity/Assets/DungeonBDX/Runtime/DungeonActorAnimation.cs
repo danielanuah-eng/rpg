@@ -33,6 +33,8 @@ namespace DungeonBDX
         bool moving, dead, action;
         int direction;
 
+        /// <summary>Isometric 2D: stay vertical and turn only around Y, so the feet keep their depth.</summary>
+        public bool Upright { get; set; }
         public string State => state;
         public bool DeathComplete => dead && elapsed >= actionDuration;
         public string FacingDirection => Directions[direction];
@@ -103,6 +105,17 @@ namespace DungeonBDX
             RefreshFacing();
         }
 
+        // Arena's authored SkillDef.anim clip (pistol, hammer, teleport, leap, summon...).
+        // Missing clips retain the normal attack/cast fallback; no gameplay is encoded here.
+        public void PlayClip(string requested,Vector3 directionInWorld)
+        {
+            PlayAction(directionInWorld,cast:requested=="cast"||requested=="summon"||requested=="zap");
+            if(dead||library==null||string.IsNullOrWhiteSpace(requested)||!library.Clips.TryGetValue(requested,out var directions))return;
+            clip=requested;int longest=0;foreach(var frames in directions)if(frames!=null)longest=Mathf.Max(longest,frames.Length);
+            actionDuration=longest>0?longest/Fps(clip):.65f;RefreshFacing();
+        }
+        public string CurrentClip=>clip;
+
         void Update() => Advance(Time.deltaTime);
 
         /// <summary>Advances visual time; public for deterministic presentation tests.</summary>
@@ -137,16 +150,18 @@ namespace DungeonBDX
                 }
                 spriteRenderer.sprite = selected ? selected : Still();
                 spriteRenderer.flipX = selected && flipped;
-                if (viewCamera) visual.rotation = viewCamera.transform.rotation;
+                if (viewCamera) visual.rotation = Upright ? Quaternion.Euler(0, viewCamera.transform.eulerAngles.y, 0) : viewCamera.transform.rotation;
                 // Recompute after EVERY frame and camera orbit; pivots/frame bounds may differ.
                 if (visual != transform && spriteRenderer.sprite)
                 {
                     Bounds bounds = spriteRenderer.sprite.bounds;
                     Vector3 scale = visual.lossyScale;
                     float center = bounds.center.x * (spriteRenderer.flipX ? -1 : 1);
-                    visual.position = transform.position + Vector3.up * .06f
+                    // Upright (isometric): the Arena pivot (0.5, 0.153) is the feet, so it sits on the cell;
+                    // the frame's transparent margin below the feet would otherwise lift the figure off its space.
+                    visual.position = transform.position + Vector3.up * (Upright ? .03f : .06f)
                         - visual.right * (center * Mathf.Abs(scale.x))
-                        - visual.up * (bounds.min.y * Mathf.Abs(scale.y));
+                        - (Upright ? Vector3.zero : visual.up * (bounds.min.y * Mathf.Abs(scale.y)));
                 }
             }
             else ApplyModelFeedback();
@@ -222,6 +237,18 @@ namespace DungeonBDX
                 }
             }
             return fallback;
+        }
+
+        /// <summary>First idle frame: animated canvases differ from the still "south" crop, so size by this.</summary>
+        public static Sprite ReferenceFrame(string folder)
+        {
+            var library = Load(folder);
+            if (library == null) return null;
+            foreach (var name in IdleClips)
+                if (library.Clips.TryGetValue(name, out var directions))
+                    foreach (var frames in directions)
+                        if (frames != null) foreach (var frame in frames) if (frame) return frame;
+            return null;
         }
 
         static FrameLibrary Load(string folder)
