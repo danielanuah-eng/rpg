@@ -319,7 +319,8 @@ namespace ArenaTatica.Core.Tests
         {
             m=Players(0,0,0,0,0,0);
             Assert.AreEqual(18,S.width); Assert.AreEqual(6,S.players); Assert.IsFalse(S.TeamPlay);
-            CollectionAssert.AreEqual(new[]{1,2,3,4,5,6},S.timeline.Select(id=>S.F(id).team).ToArray());
+            // Seis Ciantias = espelho com somas iguais: a ordem dos jogadores é sorteada (Sprint 1.4), cada um joga uma vez.
+            CollectionAssert.AreEquivalent(new[]{1,2,3,4,5,6},S.timeline.Select(id=>S.F(id).team).ToArray());
             Assert.AreEqual(6,S.fighters.Select(f=>f.cell).Distinct().Count());
             for(int p=1;p<=6;p++) { Assert.AreEqual(p,S.Team(p)); Assert.AreEqual(Shop.Slots,S.shops[p].slots.Length); }
         }
@@ -378,7 +379,8 @@ namespace ArenaTatica.Core.Tests
             Assert.IsTrue(S.fighters.Where(f=>S.Team(f.team)==2).All(f=>f.cell.z>=S.height/2));
             m=Players(1,2,3,1,2,3);
             Assert.AreEqual(3,S.Teams().Count); Assert.AreEqual(6,S.fighters.Select(f=>f.cell).Distinct().Count());
-            CollectionAssert.AreEqual(new[]{1,2,3,1,2,3},S.timeline.Select(id=>S.Team(S.F(id).team)).ToArray());
+            var order=S.timeline.Select(id=>S.Team(S.F(id).team)).ToArray(); // espelho: ordem dos times sorteada, mas sempre revezando
+            CollectionAssert.AreEquivalent(new[]{1,2,3},order.Take(3).ToArray()); CollectionAssert.AreEqual(order.Take(3).ToArray(),order.Skip(3).ToArray());
         }
         [Test] public void PetCoexistsWithDragon()
         {
@@ -520,6 +522,17 @@ namespace ArenaTatica.Core.Tests
             PassRound(); PassRound();
             Assert.AreEqual("",S.ev); Assert.AreEqual(0,S.tiles.Count(t=>t.lava));
         }
+        [Test] public void SurroundedLavaStillGrowsEveryRound()
+        {
+            m.Trigger("mare-de-lava");
+            for(int i=0;i<S.tiles.Length;i++)
+            {
+                var c=new Cell(i%S.width,i/S.width);
+                if(!S.tiles[i].lava&&Board.Dirs.Any(d=>Board.Contains(S,c+d)&&S.At(c+d).lava)) S.tiles[i].height=1;
+            }
+            int before=S.tiles.Count(t=>t.lava);
+            PassRound(); Assert.Greater(S.tiles.Count(t=>t.lava),before,"nasce lava nova longe da cercada");
+        }
         [Test] public void FireworksExplodeAtTheEndOfTheRound()
         {
             m.Trigger("festival-de-fogos");
@@ -586,6 +599,8 @@ namespace ArenaTatica.Core.Tests
         [Test] public void BaltazarAuraCostsOnePaPerTurnHealsAlliesAndHurtsFoes()
         {
             m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"baltazar","ogro-de-pedra"}, team2=new[]{"ogro-de-pedra"} });
+            // Espelho (Ogro dos dois lados): a menor soma começa (o Ogro sozinho); ele passa e vem o Baltazar.
+            Assert.AreEqual(2,A.team,"espelho: menor soma começa"); Assert.IsTrue(Do("passar"));
             var b=A; Assert.AreEqual("baltazar",b.def);
             var ally=S.fighters.First(f=>f.team==b.team&&f!=b); var foe=Enemy;
             Put(b,5,5); Put(ally,5,7); Put(foe,7,5); ally.hp=10; int foeHp=foe.hp;
@@ -596,10 +611,10 @@ namespace ArenaTatica.Core.Tests
             Assert.IsTrue(Do("skill",b.cell,"baltazar-dualidade")); Assert.IsTrue(b.auraOn);
             Assert.AreEqual(5,b.pa); Assert.AreEqual(11,ally.hp); Assert.AreEqual(foeHp-1,foe.hp);
             // Próximo turno dele: cobra 1 PA e aplica de novo; fora do alcance, nada.
-            Put(ally,5,9); PassRound();
+            Put(ally,5,9); PassRound(); Assert.IsTrue(Do("passar"),"o Ogro do espelho abre a rodada");
             Assert.AreSame(b,A); Assert.IsTrue(b.auraOn); Assert.AreEqual(5,b.pa); Assert.AreEqual(11,ally.hp); Assert.AreEqual(foeHp-2,foe.hp);
             // Sem PA para manter: desliga.
-            b.buffs.Add(new Buff{id="teste",turns=3,pa=-6}); PassRound();
+            b.buffs.Add(new Buff{id="teste",turns=3,pa=-6}); PassRound(); Assert.IsTrue(Do("passar"));
             Assert.AreSame(b,A); Assert.IsFalse(b.auraOn); Assert.AreEqual(foeHp-2,foe.hp);
         }
         [Test] public void WishCopyLetsThePlayerPickWhichSkill()
@@ -730,6 +745,327 @@ namespace ArenaTatica.Core.Tests
                 Assert.AreEqual(sk.kind,Content.Sanitize(d).skills[0].kind,sk.id+" sobrevive ao Sanitize");
                 Assert.IsFalse(string.IsNullOrEmpty(Content.Describe(sk)));
             }
+        }
+        // ── Sprint 1 (17/10): bolinhas, minas, portal, troca, canalizada, caminho, Damian, isolado, lobo solitário ──
+        // Ciantia (time 1) com as skills dadas, Talyssa aliada, Teantha inimiga; tabuleiro todo livre; Ciantia ativa, PA e PM cheios.
+        Fighter Sprint(params SkillDef[] skills)
+        {
+            var def=Content.Copy(Content.Fighters["ciantia"]); def.skills=skills;
+            Content.ApplyEdits(JsonUtility.ToJson(new GameEdits{ fighters=new System.Collections.Generic.List<FighterDef>{def} }));
+            m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"ciantia","talyssa"}, team2=new[]{"teantha"} });
+            foreach(var t in S.tiles) { t.terrain=Terrain.Livre; t.height=0; t.coins=0; t.trap=0; }
+            var cia=S.fighters.First(f=>f.def=="ciantia"); S.active=S.timeline.IndexOf(cia.id); cia.pa=12; cia.pm=6; cia.used.Clear();
+            foreach(var f in S.fighters) f.buffs.Clear();
+            Put(cia,5,5); Put(Ally,0,11); Put(Foe,11,0);
+            return cia;
+        }
+        Fighter Ally => S.fighters.First(f=>f.def=="talyssa");
+        Fighter Foe => S.fighters.First(f=>f.def=="teantha");
+        bool Use(string skill,Cell c,Cell c2=default) => m.Apply(new Command{kind="skill",skill=skill,cell=c,cell2=c2,fighter=A.id,revision=S.revision},A.team,out _,out _);
+        void Dice2() { m.Forced.Enqueue(Face.Esquiva); m.Forced.Enqueue(Face.Esquiva); }
+        void Trap(int x,int z,int team,bool mine) { var c=new Cell(x,z); S.At(c).trap=team; S.At(c).trapDamage=1; if(mine) S.mines.Add(Board.Index(S,c)); }
+        static void Clean() => Content.ApplyEdits("");
+
+        [Test] public void BlueDotLetsTheCasterKnockHimselfOut()
+        {
+            try {
+                var cia=Sprint(new SkillDef{id="nova",kind=SkillKind.Dano,pa=2,minRange=0,maxRange=0,sight=false,selfArea=true,area=1,damage=5,pierce=true,hits=(int)(ArenaTatica.Core.Hit.Si|ArenaTatica.Core.Hit.Inimigo)});
+                Put(Foe,5,6); cia.hp=3; int foeHp=Foe.hp; Dice2();
+                Assert.IsTrue(Use("nova",cia.cell));
+                Assert.IsFalse(cia.Alive,"🔵: a própria skill nocauteia"); Assert.AreEqual(foeHp-5,Foe.hp);
+            } finally { Clean(); }
+        }
+        [Test] public void GreenOnlyAreaSparesEnemiesAndPushesAllies()
+        {
+            try {
+                var cia=Sprint(new SkillDef{id="onda",kind=SkillKind.Dano,pa=2,minRange=1,maxRange=3,damage=1,pierce=true,area=1,push=2,hits=(int)ArenaTatica.Core.Hit.Aliado});
+                Put(Ally,5,6); Put(Foe,6,6); int foeHp=Foe.hp, allyHp=Ally.hp, hp=cia.hp; Dice2();
+                Assert.IsTrue(Use("onda",new Cell(5,6)));
+                Assert.AreEqual(foeHp,Foe.hp,"🔴 desligada"); Assert.Less(Ally.hp,allyHp,"🟢 ligada"); Assert.AreEqual(hp,cia.hp,"🔵 desligada");
+                Assert.AreEqual(new Cell(5,8),Ally.cell,"empurrão em aliado (2.3)");
+            } finally { Clean(); }
+        }
+        [Test] public void LandmineHurtsWithoutStoppingMovementButTrapStops()
+        {
+            try {
+                var cia=Sprint(new SkillDef{id="x",kind=SkillKind.Dano,pa=1,damage=1});
+                Trap(5,6,2,true); Trap(5,7,2,true);
+                int hp=cia.hp; Assert.IsTrue(Do("mover",new Cell(5,8)));
+                Assert.AreEqual(new Cell(5,8),cia.cell,"mina não para"); Assert.AreEqual(hp-2,cia.hp); Assert.AreEqual(3,cia.pm,"mina não tira PM");
+                Assert.AreEqual(0,S.mines.Count,"minas gastas");
+                Trap(5,9,2,false);
+                Assert.IsTrue(Do("mover",new Cell(5,10)));
+                Assert.AreEqual(new Cell(5,9),cia.cell,"armadilha para"); Assert.AreEqual(0,cia.pm);
+            } finally { Clean(); }
+        }
+        [Test] public void PushRunsThroughSeveralLandmines()
+        {
+            try {
+                Sprint(new SkillDef{id="soco",kind=SkillKind.Dano,pa=1,damage=0,push=3,hits=(int)ArenaTatica.Core.Hit.Inimigo});
+                Put(Foe,5,6); Trap(5,7,1,true); Trap(5,8,1,true);
+                int hp=Foe.hp; Dice2();
+                Assert.IsTrue(Use("soco",new Cell(5,6)));
+                Assert.AreEqual(new Cell(5,9),Foe.cell); Assert.AreEqual(hp-2,Foe.hp,"combo em duas minas");
+            } finally { Clean(); }
+        }
+        [Test] public void PathGoesAroundLockWhenThePmAllow()
+        {
+            try {
+                var cia=Sprint(new SkillDef{id="x",kind=SkillKind.Dano,pa=1,damage=1});
+                Put(Foe,6,7); var to=new Cell(5,9);
+                Assert.AreEqual(5,Board.Path(S,cia,to,4).Count,"orçamento justo: o mais curto, mesmo passando colado");
+                var around=Board.Path(S,cia,to,6);
+                Assert.AreEqual(7,around.Count,"com PM sobrando, contorna");
+                Assert.IsFalse(around.Skip(1).Take(around.Count-2).Any(c=>c.Distance(Foe.cell)==1));
+                Put(Foe,11,0); Assert.AreEqual(5,Board.Path(S,cia,to,6).Count,"sem ameaça, o mais curto");
+            } finally { Clean(); }
+        }
+        [Test] public void ShamblesSwapsTwoFightersButNotAnchored()
+        {
+            try {
+                var cia=Sprint(Content.Generic.First(g=>g.skill.id=="shambles").skill.Clone());
+                Put(Ally,5,7); Put(Foe,7,5);
+                Assert.IsTrue(Use("shambles",new Cell(5,7),new Cell(7,5)));
+                Assert.AreEqual(new Cell(7,5),Ally.cell); Assert.AreEqual(new Cell(5,7),Foe.cell);
+                Foe.anchored=true; cia.cooldowns.Clear();
+                Assert.IsFalse(Use("shambles",Ally.cell,Foe.cell),"ancorado não troca");
+            } finally { Clean(); }
+        }
+        [Test] public void PortalSendsWhoStepsInNextToTheExit()
+        {
+            try {
+                var cia=Sprint(Content.Generic.First(g=>g.skill.id=="portal").skill.Clone());
+                Assert.IsTrue(Use("portal",new Cell(5,6),new Cell(8,8)));
+                Assert.AreEqual(1,S.portals.Count);
+                Assert.IsTrue(Do("mover",new Cell(5,7)));
+                Assert.AreEqual(1,cia.cell.Distance(new Cell(8,8)),"sai colado na saída");
+            } finally { Clean(); }
+        }
+        [Test] public void MistyStepWithGreenDotMovesAnAlly()
+        {
+            try {
+                var cia=Sprint(Content.Generic.First(g=>g.skill.id=="passo-nebuloso-aliado").skill.Clone());
+                Put(Ally,5,7); Assert.IsTrue(Use("passo-nebuloso-aliado",new Cell(5,7),new Cell(7,7)));
+                Assert.AreEqual(new Cell(7,7),Ally.cell); Assert.AreEqual(new Cell(5,5),cia.cell);
+            } finally { Clean(); }
+        }
+        [Test] public void ChanneledSkillResolvesOnTheCastersNextTurn()
+        {
+            try {
+                var cia=Sprint(new SkillDef{id="meteoro",kind=SkillKind.Dano,pa=2,minRange=1,maxRange=6,damage=3,pierce=true,channeled=true});
+                Put(Foe,5,8); int hp=Foe.hp;
+                Assert.IsTrue(Use("meteoro",new Cell(5,8))); Assert.AreEqual(hp,Foe.hp,"ainda canalizando"); Assert.AreEqual(0,cia.pa);
+                // Online: o inimigo vê só a skill canalizada, sem as casas do alvo; o dono vê tudo.
+                Assert.AreEqual("meteoro",Match.ViewFor(S,Foe.team).F(cia.id).channeling);
+                Assert.AreEqual(cia.channeling,Match.ViewFor(S,cia.team).F(cia.id).channeling);
+                for(int i=0;i<6&&!string.IsNullOrEmpty(cia.channeling);i++) { Dice2(); Assert.IsTrue(Do("passar")); }
+                Assert.IsTrue(string.IsNullOrEmpty(cia.channeling)); Assert.AreEqual(hp-3,Foe.hp,"resolve no começo do turno seguinte");
+            } finally { Clean(); }
+        }
+        [Test] public void DamianSwapsWeaponForFreeUntilHeAttacks()
+        {
+            m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"damian"}, team2=new[]{"teantha"} });
+            var d=S.fighters.First(f=>f.def=="damian"); d.used.Clear();
+            var swap=Content.Def(d).skills.First(s=>s.kind==SkillKind.Forma&&s.toForm!=d.form);
+            Assert.AreEqual(0,Match.Cost(d,swap),"ainda não usou arma");
+            d.used.Add(Content.Def(d).skills.First(s=>s.kind==SkillKind.Dano).id);
+            Assert.AreEqual(swap.pa,Match.Cost(d,swap),"depois de atacar paga");
+        }
+        [Test] public void IsolatedChecksTheWhole3x3AndLoneWolfNeedsNoAllyNear()
+        {
+            try {
+                var def=Content.Copy(Content.Fighters["ciantia"]); def.passives=new[]{ new PassiveDef{name="Lobo solitário",stat=PassiveStat.Dano,who=PassiveWho.Si,amount=2,lonely=2} };
+                Content.ApplyEdits(JsonUtility.ToJson(new GameEdits{ fighters=new System.Collections.Generic.List<FighterDef>{def} }));
+                m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"ciantia","talyssa"}, team2=new[]{"teantha"} });
+                var cia=S.fighters.First(f=>f.def=="ciantia");
+                Put(cia,2,2); Put(Ally,3,3);
+                Assert.IsFalse(Match.Isolated(S,cia),"diagonal conta (3×3)");
+                Assert.AreEqual(0,m.Passive(cia,PassiveStat.Dano),"aliado perto: sem Lobo solitário");
+                // Sozinho (autor 17/10): qualquer direção, diagonal incluída — aliado a 2 casas na diagonal ainda acompanha.
+                Put(Ally,4,4); Assert.AreEqual(0,m.Passive(cia,PassiveStat.Dano),"diagonal a 2 casas conta no Lobo solitário 2");
+                Put(Ally,2,5); Assert.IsTrue(Match.Isolated(S,cia)); Assert.AreEqual(2,m.Passive(cia,PassiveStat.Dano));
+            } finally { Clean(); }
+        }
+        // ── Sprint 1.3/1.4: fase de posicionamento e desempate de espelho ──
+        bool Do(Command c,int team) { c.revision=S.revision; return m.Apply(c,team,out _,out _); }
+        [Test] public void PlacementPhaseRearrangesStartCellsInTurnOrderThenStarts()
+        {
+            m=Match.New(new MatchSetup{ flatMap=true, placement=true, team1=new[]{"devon","gryvro"}, team2=new[]{"teantha","diantus"} });
+            Assert.IsNull(S.Active,"sem turno durante o posicionamento");
+            CollectionAssert.AreEqual(new[]{2,1},m.PlaceOrder(),"posiciona na ordem em que joga (soma 12 contra 9)"); Assert.AreEqual(2,S.placing);
+            var mine=S.fighters.First(f=>f.team==2); var mate=S.fighters.First(f=>f.team==2&&f!=mine); var foe=S.fighters.First(f=>f.team==1);
+            var free=m.PlaceCells(2,mine).First(c=>Board.At(S,c)==null);
+            Assert.IsFalse(Do(new Command{kind="posicionar",fighter=foe.id,cell=m.PlaceCells(1,foe).First()},1),"fora da vez");
+            Assert.IsFalse(Do(new Command{kind="posicionar",fighter=mine.id,cell=new Cell(S.width/2,S.height/2)},2),"só na borda do mapa");
+            Assert.IsFalse(Do(new Command{kind="posicionar",fighter=mine.id,cell=foe.cell},2),"nem nas do inimigo");
+            Assert.IsFalse(Do(new Command{kind="mover",fighter=mine.id,cell=free},2),"sem mover/skill antes de começar");
+            Assert.IsTrue(Do(new Command{kind="posicionar",fighter=mine.id,cell=free},2)); Assert.AreEqual(free,mine.cell);
+            var a=mine.cell; var b=mate.cell;
+            Assert.IsTrue(Do(new Command{kind="posicionar",fighter=mine.id,cell=b},2),"casa de outro herói meu = troca");
+            Assert.AreEqual(b,mine.cell); Assert.AreEqual(a,mate.cell);
+            Assert.IsTrue(Do(new Command{kind="passar"},2)); Assert.AreEqual(1,S.placing); Assert.IsNull(S.Active);
+            Assert.IsTrue(Do(new Command{kind="passar"},1)); Assert.AreEqual(0,S.placing);
+            Assert.IsNotNull(A); Assert.AreEqual(2,A.team); Assert.AreEqual(6,A.pa,"o primeiro turno começa com PA cheios");
+        }
+        [Test] public void PlacementUsesFreeBorderCellsAwayFromOtherPlayersAndKeepsTheTeamTogether()
+        {
+            m=Match.New(new MatchSetup{ flatMap=true, placement=true, team1=new[]{"devon","gryvro"}, team2=new[]{"teantha","diantus"} });
+            int p=S.placing, q=3-p; var mine=S.fighters.Where(f=>f.team==p).ToList(); var foes=S.fighters.Where(f=>f.team==q).ToList();
+            bool Edge(Cell c) => c.x==0||c.z==0||c.x==S.width-1||c.z==S.height-1;
+            var cells=m.PlaceCells(p,mine[0]); Assert.IsNotEmpty(cells);
+            foreach(var c in cells) { Assert.IsTrue(Edge(c),$"{c} na borda"); Assert.IsTrue(Board.Walkable(S,c,false)); Assert.IsTrue(foes.All(x=>x.cell.Distance(c)>=Match.PlaceGap),$"{c} longe do outro time"); }
+            // Qualquer lado da borda vale: não é só a fileira das casas de início.
+            Assert.Greater(cells.Select(c=>c.x==0?0:c.x==S.width-1?1:c.z==0?2:3).Distinct().Count(),1,"mais de um lado do mapa");
+            // Colado no outro time: recusado.
+            var near=Enumerable.Range(0,S.width).Select(x=>new Cell(x,0)).Concat(Enumerable.Range(0,S.width).Select(x=>new Cell(x,S.height-1)))
+                .First(c=>foes.Any(x=>x.cell.Distance(c)<Match.PlaceGap));
+            Assert.IsFalse(Do(new Command{kind="posicionar",fighter=mine[0].id,cell=near},p),"não cola no outro jogador");
+            // 1º herói na borda; o 2º só até PlaceGroup casas dele.
+            var first=cells[0]; Assert.IsTrue(Do(new Command{kind="posicionar",fighter=mine[0].id,cell=first},p));
+            var second=m.PlaceCells(p,mine[1]); Assert.IsNotEmpty(second);
+            Assert.IsTrue(second.All(c=>c.Distance(first)<=Match.PlaceGroup),"o time fica por ali");
+            var far=cells.FirstOrDefault(c=>c.Distance(first)>Match.PlaceGroup);
+            if(far!=default) Assert.IsFalse(Do(new Command{kind="posicionar",fighter=mine[1].id,cell=far},p),"longe do próprio time: recusado");
+            Assert.IsTrue(Do(new Command{kind="posicionar",fighter=mine[1].id,cell=second[0]},p));
+            // Depois que este jogador confirma, o outro não pode colocar perto dele.
+            Assert.IsTrue(Do(new Command{kind="passar"},p)); Assert.AreEqual(q,S.placing);
+            Assert.IsTrue(m.PlaceCells(q,foes[0]).All(c=>mine.All(x=>x.cell.Distance(c)>=Match.PlaceGap)));
+        }
+        [Test] public void EzequielaIllusionEntersAfterPlacement()
+        {
+            m=Match.New(new MatchSetup{ flatMap=true, placement=true, team1=new[]{"ezequiela"}, team2=new[]{"ciantia"} });
+            Assert.IsFalse(S.fighters.Any(f=>f.def=="ilusao"),"a cópia não existe enquanto posicionam");
+            while(S.placing>0) Assert.IsTrue(Do(new Command{kind="passar"},S.placing));
+            var copy=S.fighters.Single(f=>f.def=="ilusao"); var eze=S.fighters.Single(f=>f.def=="ezequiela");
+            Assert.AreEqual(1,copy.cell.Distance(eze.cell),"colada na Ezequiela já posicionada"); Assert.Contains(copy.id,S.timeline);
+        }
+        [Test] public void MirrorMatchTieIsBrokenBySeedDraw()
+        {
+            int Ini(string id) => Content.Fighters[id].initiative;
+            // Espelho com somas diferentes (autor 17/10): a MENOR soma começa, antes do sorteio. Sem espelho continua a maior.
+            var others=Content.Roster.Where(id=>id!="ciantia"&&Content.Fighters.ContainsKey(id)).ToList();
+            string lo=others.OrderBy(Ini).First(), hi=others.OrderBy(Ini).Last(); Assert.Less(Ini(lo),Ini(hi));
+            m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"ciantia",hi}, team2=new[]{"ciantia",lo} });
+            Assert.AreEqual(2,S.F(S.timeline[0]).team,"espelho: menor soma começa");
+            m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"ciantia",lo}, team2=new[]{"ciantia",hi} });
+            Assert.AreEqual(1,S.F(S.timeline[0]).team,"espelho: menor soma começa (lado trocado)");
+            m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{lo}, team2=new[]{hi} });
+            Assert.AreEqual(2,S.F(S.timeline[0]).team,"sem espelho: maior soma começa");
+            // Empate persistente: sorteio pela semente, igual em todos os aparelhos e sem gastar os dados.
+            var firsts=new System.Collections.Generic.HashSet<int>();
+            for(uint seed=1;seed<=40;seed++)
+            {
+                m=Match.New(new MatchSetup{ seed=seed, flatMap=true, team1=new[]{"ciantia"}, team2=new[]{"ciantia"} }); int first=S.F(S.timeline[0]).team; uint rng=S.rng; firsts.Add(first);
+                m=Match.New(new MatchSetup{ seed=seed, flatMap=true, team1=new[]{"ciantia"}, team2=new[]{"ciantia"} });
+                Assert.AreEqual(first,S.F(S.timeline[0]).team,"mesma semente, mesmo sorteio"); Assert.AreEqual(rng,S.rng);
+            }
+            CollectionAssert.AreEquivalent(new[]{1,2},firsts,"o sorteio dá os dois lados");
+        }
+        // ── Sprint 3.6: times de até 6 heróis (limite da sala) ──
+        [Test] public void SixHeroTeamsGetSixFreeStartCells()
+        {
+            var ids=Content.Roster.Where(id=>!Content.Fighters[id].illusion).Take(12).ToArray(); Assert.AreEqual(12,ids.Length);
+            foreach(int players in new[]{2,4})
+            for(uint seed=1;seed<=6;seed++)
+            {
+                m=Match.New(new MatchSetup{ seed=seed, placement=true, players=Enumerable.Range(0,players).Select(p=>new PlayerSetup{fighters=p%2==0?ids.Take(6).ToArray():ids.Skip(6).ToArray()}).ToArray() });
+                for(int p=1;p<=players;p++)
+                {
+                    var team=S.fighters.Where(f=>f.team==p&&f.summoner==0).ToList(); var cells=m.StartCells(p);
+                    Assert.AreEqual(6,team.Count,$"P{p} com 6 heróis"); Assert.AreEqual(6,cells.Length);
+                    foreach(var f in team) { Assert.Contains(f.cell,cells); Assert.IsTrue(Board.Walkable(S,f.cell,false),$"{f.def} em casa livre"); }
+                }
+                Assert.AreEqual(S.fighters.Count,S.fighters.Select(f=>f.cell).Distinct().Count(),"ninguém divide casa");
+            }
+            // Time de até 4: as casas de início continuam as 4 de sempre.
+            m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"ciantia"}, team2=new[]{"perry"} });
+            Assert.AreEqual(4,m.StartCells(1).Length);
+        }
+        // ── Sprint 3.7/3.8: recargas da ilusão e escolha de quem reviver ──
+        [Test] public void IllusionShowsTheOriginalCooldownsToEnemies()
+        {
+            m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"ezequiela"}, team2=new[]{"ciantia"} });
+            var eze=S.fighters.First(f=>f.def=="ezequiela"); var copy=S.fighters.First(f=>f.def=="ilusao");
+            eze.cooldowns.Add(new Charge{skill="x",uses=2}); eze.used.Add("x"); eze.usedMatch.Add("y");
+            var enemy=Match.ViewFor(S,2); var a=enemy.F(eze.id); var b=enemy.F(copy.id);
+            Assert.AreEqual(a.cooldowns.Single().uses,b.cooldowns.Single().uses,"inimigo vê a mesma recarga");
+            CollectionAssert.AreEqual(a.used,b.used); CollectionAssert.AreEqual(a.usedMatch,b.usedMatch);
+            b.cooldowns[0].uses=9; Assert.AreEqual(2,a.cooldowns[0].uses,"cópia própria, não a mesma lista");
+            Assert.AreEqual(0,Match.ViewFor(S,1).F(copy.id).cooldowns.Count,"o dono vê a ilusão como ela é");
+            Assert.AreEqual(0,copy.cooldowns.Count,"o estado real não muda");
+        }
+        Fighter KellenWithTwoDead()
+        {
+            m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"principe-kellen","talyssa","ciantia"}, team2=new[]{"ogro-de-pedra"} });
+            var kellen=S.fighters.First(f=>f.def=="principe-kellen");
+            for(int i=0;i<20&&A!=kellen;i++) Do("passar"); Assert.AreSame(kellen,A);
+            foreach(var f in S.fighters.Where(f=>f.team==kellen.team&&f!=kellen)) { f.hp=0; f.deathProcessed=true; }
+            Put(kellen,5,5); Put(Enemy,0,11); return kellen;
+        }
+        [Test] public void WishReviveLetsThePlayerPickFromTheGraveyard()
+        {
+            var kellen=KellenWithTwoDead(); kellen.wishReady=true;
+            var dead=Match.Graveyard(S,kellen); Assert.AreEqual(2,dead.Count);
+            Command Revive(int slot) => new Command{kind="skill",skill="desejo-a",cell=new Cell(5,6),slot=slot,fighter=A.id,revision=S.revision};
+            Assert.IsFalse(m.Apply(Revive(5),A.team,out _,out _),"opção que não existe");
+            Assert.IsTrue(m.Apply(Revive(1),A.team,out _,out _));
+            Assert.IsTrue(dead[1].Alive); Assert.IsFalse(dead[0].Alive,"voltou o escolhido, não o de maior Nível");
+            Assert.AreEqual(new Cell(5,6),dead[1].cell); Assert.AreEqual(0,dead[1].summoner);
+            // Vínculo de vida: o nocaute do Kellen leva as invocações dele, não o aliado revivido.
+            typeof(Match).GetMethod("KO",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance).Invoke(m,new object[]{kellen,null});
+            Assert.IsFalse(kellen.Alive); Assert.IsTrue(dead[1].Alive);
+        }
+        [Test] public void ReviveGivesBackGaleoesSoTheNextKoDoesNotWipeTheTeam()
+        {
+            var kellen=KellenWithTwoDead(); kellen.wishReady=true; var dead=Match.Graveyard(S,kellen); var back=dead[1];
+            // Galeões que sobraram depois do nocaute do aliado: só o Nível do Kellen.
+            int t=S.Team(kellen.team); S.galeoes[t]=Content.Def(kellen).level;
+            Assert.IsTrue(m.Apply(new Command{kind="skill",skill="desejo-a",cell=new Cell(5,6),slot=1,fighter=A.id,revision=S.revision},A.team,out _,out _));
+            Assert.AreEqual(Content.Def(kellen).level+Content.Def(back).level,S.galeoes[t],"reviver devolve o Nível do revivido");
+            var flags=System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance;
+            kellen.hp=0; typeof(Match).GetMethod("KO",flags).Invoke(m,new object[]{kellen,null}); typeof(Match).GetMethod("CheckVictory",flags).Invoke(m,null);
+            Assert.IsFalse(S.eliminated[t],"o nocaute do Kellen não elimina o time"); Assert.IsTrue(back.Alive,"o revivido continua vivo");
+        }
+        [Test] public void PhoenixFeatherAlsoAsksWhoToRevive()
+        {
+            var kellen=KellenWithTwoDead(); var dead=Match.Graveyard(S,kellen);
+            S.coins[A.team]=20; S.shops[A.team].slots[0]="pena-de-fenix"; Assert.IsTrue(Buy());
+            Command Flame(int slot) => new Command{kind="skill",skill="pena-de-fenix",cell=new Cell(5,6),slot=slot,fighter=A.id,revision=S.revision};
+            Assert.IsFalse(m.Apply(Flame(-1),A.team,out _,out _),"com 2 no cemitério precisa escolher");
+            Assert.IsTrue(m.Apply(Flame(1),A.team,out _,out _)); Assert.IsTrue(dead[1].Alive); Assert.AreEqual(4,dead[1].hp);
+            Assert.AreEqual(1,Match.Graveyard(S,kellen).Count);
+        }
+        // ── Sprint 3.9: escolha do gato da Asamyh (Command.cell2 = casa do gato) ──
+        (Fighter near,Fighter far) TwoCats()
+        {
+            Duel("asamyh","ogro-de-pedra"); Put(A,5,5); Put(Enemy,5,9);
+            Assert.IsTrue(Do("skill",new Cell(5,6),"chamar-gato")); Assert.IsTrue(Do("skill",new Cell(4,5),"chamar-gato"));
+            var cats=S.fighters.Where(x=>x.summoner==A.id).ToList(); Assert.AreEqual(2,cats.Count);
+            foreach(var c in cats) c.def="gato-laranja";
+            Put(cats[0],5,8); Put(cats[1],7,9); A.pa=6; return (cats[0],cats[1]);
+        }
+        [Test] public void TwoCatsInReachAskWhichOneShoots()
+        {
+            var (near,far)=TwoCats(); var spark=Content.Skill(A,"faisca-da-varinha");
+            CollectionAssert.AreEqual(new[]{near,far},m.Cats(A,spark,Enemy.cell),"mais perto primeiro (escolha antiga dos bots)");
+            Assert.IsTrue(m.CanTarget(A,spark,Enemy.cell,out _),"a mira do HUD aceita o alvo");
+            Assert.IsFalse(m.Apply(Cmd("skill",Enemy.cell,"faisca-da-varinha"),A.team,out _,out string reason),"sem escolher");
+            StringAssert.Contains("Escolha qual gato",reason); Assert.AreEqual(6,A.pa,"não paga");
+            var cmd=Cmd("skill",Enemy.cell,"faisca-da-varinha"); cmd.cell2=far.cell;
+            Hit(); Assert.IsTrue(m.Apply(cmd,A.team,out _,out _));
+            Assert.IsFalse(far.Alive,"o escolhido dispara e some"); Assert.IsTrue(near.Alive);
+            Assert.AreEqual(16-2,Enemy.hp);
+            Hit(); Assert.IsTrue(Do("skill",Enemy.cell,"faisca-da-varinha"),"um gato só: sem escolha"); Assert.IsFalse(near.Alive);
+        }
+        [Test] public void MoveCatGoesWithTheChosenCatAndBotKeepsTheNearest()
+        {
+            var (near,far)=TwoCats(); var walk=Content.Skill(A,"mover-gato"); var to=new Cell(6,8);
+            Assert.AreEqual(2,m.Cats(A,walk,to).Count);
+            var cmd=Cmd("skill",to,"mover-gato"); cmd.cell2=new Cell(0,0);
+            Assert.IsFalse(m.Apply(cmd,A.team,out _,out _),"casa sem gato não vale como escolha");
+            cmd=Cmd("skill",to,"mover-gato"); cmd.cell2=far.cell;
+            Assert.IsTrue(m.Apply(cmd,A.team,out _,out _)); Assert.AreEqual(to,far.cell); Assert.AreEqual(new Cell(5,8),near.cell);
+            Assert.AreEqual(0,m.Cats(A,walk,far.cell).Count,"casa ocupada: nenhum gato anda para lá");
         }
     }
 }

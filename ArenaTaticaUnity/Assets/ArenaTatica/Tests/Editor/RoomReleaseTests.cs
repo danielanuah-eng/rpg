@@ -12,7 +12,9 @@ namespace ArenaTatica.Tests
     {
         GameObject root;
         ArenaGame game;
-        string savedTeam,savedPool;
+        string savedTeam,savedPool,savedEdits,savedStats,savedPreset;
+        int savedTurnTime,savedTeamLevel,savedTeamSize;
+        static void TeamLimits(int level,int size) => typeof(ArenaGame).GetMethod("ApplyTeamLimits",BindingFlags.Static|BindingFlags.NonPublic).Invoke(null,new object[]{level,size});
         int[] savedTeams;
         UnityEngine.Random.State random;
         static readonly BindingFlags Private=BindingFlags.Instance|BindingFlags.NonPublic;
@@ -22,19 +24,169 @@ namespace ArenaTatica.Tests
         [SetUp] public void Setup()
         {
             savedTeam=PlayerPrefs.GetString("arena-time",""); savedPool=PlayerPrefs.GetString("arena-pool",""); savedTeams=ArenaGame.CustomTeams.ToArray();
+            savedEdits=Content.EditsJson; savedStats=PlayerPrefs.GetString("arena-estatisticas",""); savedPreset=PlayerPrefs.GetString("arena-preset",""); savedTurnTime=PlayerPrefs.GetInt("arena-tempo-turno",0);
+            // Limites do time: o aparelho do autor pode ter outros; os testes começam no padrão (12 / 4).
+            savedTeamLevel=PlayerPrefs.GetInt("arena-time-custo",ArenaGame.DefaultTeamLevel); savedTeamSize=PlayerPrefs.GetInt("arena-time-tamanho",ArenaGame.DefaultTeamSize);
+            PlayerPrefs.SetInt("arena-time-custo",ArenaGame.DefaultTeamLevel); PlayerPrefs.SetInt("arena-time-tamanho",ArenaGame.DefaultTeamSize); TeamLimits(ArenaGame.DefaultTeamLevel,ArenaGame.DefaultTeamSize);
             random=UnityEngine.Random.state; UnityEngine.Random.InitState(19013);
             ArenaGame.MyTeam=new[]{"ciantia"}; ArenaGame.MyPool=Content.Roster.Take(5).ToArray();
             root=new GameObject("019-room-test"); game=root.AddComponent<ArenaGame>();
             if(game.Network==null) Call("Awake");
             // Os menus são construídos no Start do player.
             Property("Menu",null); Property("Hud",null);
+            // Testes antigos começam direto no primeiro turno; o posicionamento tem teste próprio.
+            game.Placement=false;
         }
         [TearDown] public void Cleanup()
         {
             game.Network.Close(); Object.DestroyImmediate(root);
+            if(clientRoot) { client.Network.Close(); Object.DestroyImmediate(clientRoot); }
             PlayerPrefs.SetString("arena-time",savedTeam); PlayerPrefs.SetString("arena-pool",savedPool);
+            PlayerPrefs.SetString("arena-preset",savedPreset); PlayerPrefs.SetInt("arena-tempo-turno",savedTurnTime);
+            PlayerPrefs.SetInt("arena-time-custo",savedTeamLevel); PlayerPrefs.SetInt("arena-time-tamanho",savedTeamSize); TeamLimits(ArenaGame.DefaultTeamLevel,ArenaGame.DefaultTeamSize);
+            // Execute grava estatísticas: devolve as do aparelho e solta o cache.
+            PlayerPrefs.SetString("arena-estatisticas",savedStats); typeof(ArenaStats).GetField("data",BindingFlags.Static|BindingFlags.NonPublic).SetValue(null,null);
+            ArenaEdits.Folder=null; Content.ApplyEdits(savedEdits);
             for(int i=0;i<savedTeams.Length;i++) ArenaGame.CustomTeams[i]=savedTeams[i];
             UnityEngine.Random.state=random;
+        }
+        // ── Sprint 1: 1.1 desync de turno e 1.2 presets ──
+        GameObject clientRoot;
+        ArenaGame client;
+        bool drop;
+        readonly List<WireMessage> toClient=new List<WireMessage>();
+        // Cliente real no mesmo processo: o que o Host manda ao peer 102 chega ao cliente e vice-versa (drop = mensagem perdida).
+        void Wire()
+        {
+            toClient.Clear(); drop=false;
+            clientRoot=new GameObject("019-client-test"); client=clientRoot.AddComponent<ArenaGame>();
+            if(client.Network==null) typeof(ArenaGame).GetMethod("Awake",Private).Invoke(client,null);
+            typeof(ArenaGame).GetProperty("Menu").SetValue(client,null); typeof(ArenaGame).GetProperty("Hud").SetValue(client,null);
+            typeof(ArenaTransport).GetProperty("Role").SetValue(client.Network,"Client");
+            var receive=typeof(ArenaGame).GetMethod("Receive",Private);
+            game.Sent+=(peer,m)=>{ if(peer!=102) return; toClient.Add(m); if(!drop) receive.Invoke(client,new object[]{0,JsonUtility.ToJson(m)}); };
+            client.Sent+=(peer,m)=>receive.Invoke(game,new object[]{102,JsonUtility.ToJson(m)});
+        }
+        void Pass() { var f=game.Active; Call("Execute",new Command{kind="passar",fighter=f.id,revision=game.State.revision},f.team,-1); }
+        // O tempo não anda dentro do teste: zera as travas de repetição do cliente e do Host.
+        void ResetResyncThrottle() { typeof(ArenaGame).GetField("resyncAt",Private).SetValue(client,-9f); ((Dictionary<string,float>)typeof(ArenaGame).GetField("throttle",Private).GetValue(game)).Clear(); }
+        [Test] public void LostEndTurnIsRecoveredBySnapshot()
+        {
+            Wire(); Host(2); game.StartRoom();
+            Assert.AreEqual(2,client.Seat); Assert.IsTrue(client.Synced); Assert.AreEqual(game.State.revision,client.State.revision);
+            // 1) Salto: o EndTurn se perde e o estado seguinte chega com revisão +2 → cliente pede snapshot e o Host reenvia.
+            drop=true; Pass(); drop=false; Pass();
+            Assert.AreEqual(game.State.revision,client.State.revision,"salto de revisão volta pelo snapshot");
+            Assert.IsTrue(client.Synced); Assert.AreEqual(game.State.active,client.State.active);
+            Assert.IsTrue(toClient.Any(m=>m.kind=="snapshot"&&m.text=="resync"));
+            // 2) Atraso: o último EndTurn se perde e nada mais chega; o pong mostra o Host à frente → snapshot.
+            ResetResyncThrottle(); drop=true; Pass(); drop=false;
+            Assert.Less(client.State.revision,game.State.revision);
+            Call("Receive",102,JsonUtility.ToJson(new WireMessage{kind="ping",ping=7}));
+            Assert.AreEqual(game.State.revision,client.State.revision,"pong com revisão maior faz o cliente pedir o estado");
+            // 3) Comando com revisão velha: o Host recusa e reenvia o estado sem o cliente pedir.
+            ResetResyncThrottle(); drop=true; Pass(); drop=false; int stale=client.State.revision; toClient.Clear();
+            var mine=game.State.fighters.First(f=>f.team==2);
+            Call("Receive",102,JsonUtility.ToJson(new WireMessage{kind="command",command=new Command{kind="passar",fighter=mine.id,revision=stale}}));
+            Assert.AreEqual("reject",toClient[0].kind); Assert.AreEqual(game.State.revision,client.State.revision);
+        }
+        [Test] public void TurnTimeoutPassesStalledTurnOnHost()
+        {
+            Host(2); game.StartRoom(); int rev=game.State.revision, first=game.Active.id;
+            Call("TurnClock",0f); Call("TurnClock",500f); Assert.AreEqual(rev,game.State.revision,"sem limite não passa");
+            game.SetTurnTime(30);
+            Call("TurnClock",1000f); Call("TurnClock",1029f); Assert.AreEqual(rev,game.State.revision,"dentro do tempo");
+            Call("TurnClock",1031f); Assert.AreEqual(rev+1,game.State.revision,"estourou: Host passa sozinho"); Assert.AreNotEqual(first,game.Active.id);
+            Call("TurnClock",1032f); Call("TurnClock",1060f); Assert.AreEqual(rev+1,game.State.revision,"o próximo lutador ganha tempo cheio");
+            Call("TurnClock",1063f); Assert.AreEqual(rev+2,game.State.revision);
+            StringAssert.Contains("Tempo de turno: <b>30 s</b>",game.LobbySummary());
+        }
+        [Test] public void PlacementPhaseAcceptsRemoteCommandOnHostAndTimesOut()
+        {
+            game.Placement=true; Host(2); game.StartRoom();
+            Assert.IsTrue(game.Placing); Assert.IsNull(game.Active);
+            var match=game.Match; var mine=game.State.fighters.First(f=>f.team==2);
+            if(game.State.placing==1) Execute1("passar");
+            Assert.AreEqual(2,game.State.placing);
+            var free=match.PlaceCells(2,mine).First(c=>Board.At(game.State,c)==null);
+            Call("Receive",102,JsonUtility.ToJson(new WireMessage{kind="command",command=new Command{kind="posicionar",fighter=mine.id,cell=free,revision=game.State.revision}}));
+            Assert.AreEqual(free,mine.cell,"Host aceita posicionar do cliente");
+            // O relógio da sala também vale no posicionamento.
+            game.SetTurnTime(30); Call("TurnClock",0f); Call("TurnClock",31f);
+            if(game.Placing) { Assert.AreEqual(1,game.State.placing); Execute1("passar"); }
+            Assert.IsFalse(game.Placing); Assert.IsNotNull(game.Active,"depois de todos, começa o primeiro turno");
+        }
+        // Sprint 3.6: custo e tamanho do time são da sala; o cliente valida com os do Host e não muda os da sala.
+        [Test] public void TeamLimitsAreRoomSettingsSentToClients()
+        {
+            Wire(); Host(2);
+            game.SetTeamLimits(9,6);
+            Assert.AreEqual(9,ArenaGame.TeamLevel); Assert.AreEqual(6,ArenaGame.TeamSize);
+            Assert.AreEqual(9,PlayerPrefs.GetInt("arena-time-custo"),"fica salvo no aparelho do Host");
+            var lobby=toClient.Last(m=>m.kind=="lobby"); Assert.AreEqual(9,lobby.teamLevel); Assert.AreEqual(6,lobby.teamSize);
+            StringAssert.Contains("Times: <b>custo 9</b> · <b>até 6 heróis</b>",game.LobbySummary());
+            // Host e cliente dividem os estáticos no mesmo processo: zera para o padrão e entrega o "lobby" ao cliente.
+            TeamLimits(ArenaGame.DefaultTeamLevel,ArenaGame.DefaultTeamSize);
+            typeof(ArenaGame).GetMethod("Receive",Private).Invoke(client,new object[]{0,JsonUtility.ToJson(lobby)});
+            Assert.AreEqual(9,ArenaGame.TeamLevel,"cliente recebe o custo da sala"); Assert.AreEqual(6,ArenaGame.TeamSize);
+            client.SetTeamLimits(24,1); Assert.AreEqual(9,ArenaGame.TeamLevel,"cliente não muda os limites"); Assert.AreEqual(6,ArenaGame.TeamSize);
+            Assert.LessOrEqual(ArenaGame.ValidTeam(Content.Roster).Sum(id=>Content.Fighters[id].level),9);
+            // Time grande: até 6 heróis na partida da sala.
+            game.SetTeamLimits(24,6);
+            ArenaGame.MyTeam=Content.Roster.OrderBy(id=>Content.Fighters[id].level).ToArray(); int size=ArenaGame.MyTeam.Length;
+            Assert.Greater(size,ArenaGame.DefaultTeamSize); Assert.LessOrEqual(size,6);
+            game.StartRoom();
+            var mine=game.State.fighters.Where(f=>f.team==1&&f.summoner==0).ToList();
+            Assert.AreEqual(size,mine.Count); Assert.AreEqual(mine.Count,mine.Select(f=>f.cell).Distinct().Count());
+        }
+        // Bugs só do cliente remoto: eventos pelo JSON, tempo de turno da sala e 1ª casa velha de skill de 2 casas.
+        [Test] public void ClientGetsCleanEventsTurnTimeAndDropsStaleFirstCell()
+        {
+            var sent=new WireMessage{kind="state",events=new[]{new GameEvent{kind="ataque",actor=1,target=2,value=1},new GameEvent{kind="trava",dice=new[]{Face.Trava},info="x"}}};
+            var got=JsonUtility.FromJson<WireMessage>(JsonUtility.ToJson(sent)).events;
+            Assert.IsNotNull(got[0].dice,"causa: o JSON devolve [] no lugar de null (alvo extra da área virava golpe principal)");
+            var list=ArenaGame.FromWire(got);
+            Assert.IsNull(list[0].dice); Assert.IsNull(list[0].path); Assert.IsNull(list[0].info);
+            Assert.AreEqual(1,list[1].dice.Length); Assert.AreEqual("x",list[1].info);
+            CollectionAssert.IsEmpty(ArenaGame.FromWire(null));
+
+            game.SetTurnTime(30); Wire(); Host(2); game.StartRoom();
+            Assert.IsTrue(client.Synced); Assert.AreEqual(30,toClient.Last(m=>m.kind=="lobby").turnTime);
+            var clock=typeof(ArenaGame).GetMethod("TurnClock",Private); float now=Time.unscaledTime;
+            clock.Invoke(client,new object[]{now});
+            Assert.Greater(client.TurnLeft,29f,"cliente conta o tempo da sala"); Assert.LessOrEqual(client.TurnLeft,30f);
+            int rev=client.State.revision; clock.Invoke(client,new object[]{now+100});
+            Assert.AreEqual(rev,client.State.revision,"quem passa a vez é o Host, não o cliente");
+
+            client.FirstFor="portal"; client.FirstCell=new Cell(1,1); Pass();
+            Assert.AreEqual(game.State.revision,client.State.revision); Assert.AreEqual("",client.FirstFor,"estado novo descarta a 1ª casa guardada");
+        }
+        void Execute1(string kind) => Call("Execute",new Command{kind=kind,revision=game.State.revision},1,-1);
+        [Test] public void BalancePresetIsSavedChosenBeforeDraftAndValidatesTeams()
+        {
+            ArenaEdits.Folder=System.IO.Path.Combine(Application.temporaryCachePath,"019-presets-"+System.Guid.NewGuid().ToString("N"));
+            System.IO.Directory.CreateDirectory(ArenaEdits.Folder);
+            try {
+                game.SetPreset(ArenaEdits.Default);
+                string other=Content.Roster.First(id=>id!="ciantia"&&Content.Fighters[id].level>=1&&!Content.Fighters[id].legendary&&Content.Fighters[id].level+Content.Fighters["ciantia"].level<=ArenaGame.TeamLevel);
+                ArenaGame.MyTeam=new[]{"ciantia",other}; Assert.AreEqual(2,ArenaGame.MyTeam.Length);
+                var caro=Content.Copy(Content.Default("ciantia")); caro.level=ArenaGame.TeamLevel; ArenaEdits.Put(caro);
+                Assert.IsTrue(ArenaEdits.SavePreset(" caro ")); Assert.IsFalse(ArenaEdits.SavePreset(ArenaEdits.Default)); ArenaEdits.ResetAll();
+                CollectionAssert.AreEqual(new[]{"caro"},ArenaEdits.PresetNames); Assert.IsNull(ArenaEdits.Get("ciantia"));
+                Wire(); Host(2);
+                game.SetPreset("caro"); Assert.AreEqual(ArenaGame.TeamLevel,Content.Fighters["ciantia"].level);
+                CollectionAssert.AreEqual(new[]{"ciantia"},ArenaGame.ValidTeam(new[]{"ciantia",other}),"custo do preset vale na sala");
+                var lobby=toClient.Last(m=>m.kind=="lobby"); Assert.AreEqual(ArenaEdits.PresetJson("caro"),lobby.edits,"cliente valida com o preset do Host");
+                StringAssert.Contains("Balanceamento: <b>caro</b>",game.LobbySummary());
+                Content.ApplyEdits(""); game.StartRoom();
+                Assert.AreEqual(ArenaEdits.PresetJson("caro"),game.State.edits);
+                CollectionAssert.AreEqual(new[]{"ciantia"},game.State.fighters.Where(f=>f.team==1&&f.summoner==0).Select(f=>f.def).ToArray(),"time do P1 cortado pelo Nível do preset");
+                game.SetPreset(ArenaEdits.Default); Assert.AreEqual("caro",game.Preset,"não muda com a partida em andamento");
+                game.BackToLobby(); game.SetPreset(ArenaEdits.Default); game.StartRoom();
+                Assert.AreEqual("",game.State.edits); Assert.AreEqual(2,game.State.fighters.Count(f=>f.team==1&&f.summoner==0));
+                Assert.IsTrue(ArenaEdits.LoadPreset("caro")); Assert.AreEqual(ArenaGame.TeamLevel,ArenaEdits.Get("ciantia").level,"carregar põe o preset no editor");
+                ArenaEdits.ResetAll(); ArenaEdits.DeletePreset("caro"); Assert.IsEmpty(ArenaEdits.PresetNames); Assert.AreEqual(ArenaEdits.Saved,ArenaEdits.PresetJson("caro"));
+            } finally { try { System.IO.Directory.Delete(ArenaEdits.Folder,true); } catch(System.Exception) { } }
         }
         [Test] public void AutomaticPoolStaysTheSameAcrossDraftReads()
         {

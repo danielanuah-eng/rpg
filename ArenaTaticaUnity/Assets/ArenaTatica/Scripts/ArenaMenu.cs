@@ -11,9 +11,15 @@ namespace ArenaTatica
 {
     // Fichas editadas neste aparelho (aba Editor): Application.persistentDataPath/arena-edicoes.json.
     // Valem na próxima partida local e na sala que este aparelho hospeda (o Host manda as dele no estado).
+    // Preset de balanceamento: conjunto nomeado de edições (o JSON de GameEdits guardado como texto).
+    [Serializable] public class EditPreset { public string name, json; }
+    [Serializable] public class EditPresets { public List<EditPreset> presets=new List<EditPreset>(); }
     public static class ArenaEdits
     {
-        static string FilePath => Path.Combine(Application.persistentDataPath,"arena-edicoes.json");
+        // Pasta dos arquivos (testes trocam por uma temporária; null = persistentDataPath).
+        static string folder;
+        public static string Folder { get => folder??Application.persistentDataPath; set { folder=value; saved=null; presets=null; } }
+        static string FilePath => Path.Combine(Folder,"arena-edicoes.json");
         static string saved;
         public static string Saved
         {
@@ -32,6 +38,39 @@ namespace ArenaTatica
         public static void Reset(string id) { var e=Load(); e.fighters.RemoveAll(x=>x.id==id); Save(e); }
         public static void ResetAll() => Save(new GameEdits());
         public static FighterDef Get(string id) => Load().fighters.Find(x=>x.id==id);
+
+        // ── Presets (Sprint 1, 1.2): arena-presets.json. Salvar guarda as edições atuais com um nome; carregar as põe no editor.
+        // A sala usa PresetJson(nome): "" = edições atuais, Default = fichas originais.
+        public const string Default="Padrão";
+        static string PresetPath => Path.Combine(Folder,"arena-presets.json");
+        static EditPresets presets;
+        static EditPresets Presets
+        {
+            get
+            {
+                if(presets==null) { try { if(File.Exists(PresetPath)) presets=JsonUtility.FromJson<EditPresets>(File.ReadAllText(PresetPath)); } catch(Exception) { } }
+                presets??=new EditPresets(); presets.presets.RemoveAll(p=>p==null||string.IsNullOrEmpty(p.name));
+                return presets;
+            }
+        }
+        static void SavePresets() { try { File.WriteAllText(PresetPath,JsonUtility.ToJson(Presets)); } catch(Exception ex) { Debug.LogWarning("Presets: "+ex.Message); } }
+        public static string[] PresetNames => Presets.presets.Select(p=>p.name).ToArray();
+        public static string CleanName(string name) { name=(name??"").Trim(); return name.Length>32?name.Substring(0,32):name; }
+        public static string PresetLabel(string name) => string.IsNullOrEmpty(name)?"Edições deste aparelho":name==Default?"Fichas originais":name;
+        public static bool SavePreset(string name)
+        {
+            name=CleanName(name); if(name==""||name==Default) return false;
+            Presets.presets.RemoveAll(p=>p.name==name); Presets.presets.Add(new EditPreset{name=name,json=Saved}); SavePresets(); return true;
+        }
+        public static bool LoadPreset(string name)
+        {
+            var p=Presets.presets.Find(x=>x.name==name); if(p==null) return false;
+            GameEdits e=null; try { e=string.IsNullOrEmpty(p.json)?null:JsonUtility.FromJson<GameEdits>(p.json); } catch(Exception) { }
+            Save(e??new GameEdits()); return true;
+        }
+        public static void DeletePreset(string name) { if(Presets.presets.RemoveAll(p=>p.name==name)>0) SavePresets(); }
+        // Preset apagado volta às edições atuais.
+        public static string PresetJson(string name) => string.IsNullOrEmpty(name)?Saved:name==Default?"":Presets.presets.Find(p=>p.name==name)?.json??Saved;
     }
 
     // Estatísticas deste aparelho (aba Estatísticas), contadas pelos eventos que a tela anima.
@@ -92,7 +131,7 @@ namespace ArenaTatica
             ("editor","Editor"),("mapas","Mapas"),("estatisticas","Estatísticas"),("regras","Regras"),("opcoes","Opções")};
         Font font; Canvas canvas; RectTransform root, body; Text title;
         readonly Dictionary<string,Image> tabButtons=new Dictionary<string,Image>();
-        string tab="inicio", selected="ciantia", editorId="ciantia", code="";
+        string tab="inicio", selected="ciantia", editorId="ciantia", code="", presetName="";
         bool Portrait => Screen.width<Screen.height;
 
         void Start()
@@ -233,6 +272,22 @@ namespace ArenaTatica
             Pick(Btn(row,"Aplicar aos Bots",()=>{ Game.SetRandomizer(Game.RandomSkills,Game.RandomStats,!Game.RandomBots,Game.RandomPlayers); Show(again); },0,40),Game.RandomBots);
             Pick(Btn(row,"Aplicar aos Jogadores",()=>{ Game.SetRandomizer(Game.RandomSkills,Game.RandomStats,Game.RandomBots,!Game.RandomPlayers); Show(again); },0,40),Game.RandomPlayers);
             Para(c,"Ligue Bots e Jogadores para aplicar a todos. Vida 4–30 · PA 5–8 · PM 1–6 · Iniciativa 0–12 · Dano 1–8 · Alcance até 8. Bots disponíveis nas partidas locais.");
+            Section(c,"Balanceamento");
+            row=Row(c,44);
+            foreach(var name in new[]{"",ArenaEdits.Default}.Concat(ArenaEdits.PresetNames)) { var k=name; Pick(Btn(row,ArenaEdits.PresetLabel(k),()=>{ Game.SetPreset(k); Show(again); },0,40,14),Game.Preset==k); }
+            Para(c,"<color=#a7b4c2>Fichas usadas na próxima partida; o Nível/custo dos times segue este preset. Salve presets na aba Editor.</color>");
+            Section(c,"Limites do time");
+            row=Row(c,44);
+            foreach(int l in ArenaGame.TeamLevels) { int k=l; Pick(Btn(row,"Custo "+k,()=>{ Game.SetTeamLimits(k,ArenaGame.TeamSize); Show(again); },0,40,14),ArenaGame.TeamLevel==k); }
+            row=Row(c,44);
+            for(int n=1;n<=ArenaGame.MaxTeamSize;n++) { int k=n; Pick(Btn(row,n+(n==1?" herói":" heróis"),()=>{ Game.SetTeamLimits(ArenaGame.TeamLevel,k); Show(again); },0,40,14),ArenaGame.TeamSize==k); }
+            Para(c,"<color=#a7b4c2>Soma de Nível e quantidade de heróis por time; na sala vale o que o anfitrião escolher.</color>");
+            if(again=="sala") {
+                Section(c,"Tempo de turno");
+                row=Row(c,44);
+                foreach(int t in ArenaGame.TurnTimes) { int k=t; Pick(Btn(row,k==0?"Sem limite":k+" s",()=>{ Game.SetTurnTime(k); Show(again); },0,40),Game.TurnTime==k); }
+                Para(c,"<color=#a7b4c2>Estourou o tempo, o anfitrião passa a vez do lutador sozinho (jogador que caiu não trava a sala).</color>");
+            }
             if(seats) {
                 Section(c,"Jogadores");
                 row=Row(c,44);
@@ -428,7 +483,7 @@ namespace ArenaTatica
         {
             var team=ArenaGame.MyTeam.ToList();
             if(team.Contains(id)) { if(team.Count>1) team.Remove(id); }
-            else { var next=ArenaGame.ValidTeam(team.Append(id)); if(!next.Contains(id)) { Game.Notify("Não cabe no time (Nível 12, até 4, 1 Lendária)."); return; } team=next.ToList(); }
+            else { var next=ArenaGame.ValidTeam(team.Append(id)); if(!next.Contains(id)) { Game.Notify($"Não cabe no time ({ArenaGame.TeamRule})."); return; } team=next.ToList(); }
             ArenaGame.MyTeam=team.ToArray();
         }
         void FighterButton(Transform list,string id,Action click,bool on)
@@ -483,9 +538,9 @@ namespace ArenaTatica
         // ── Editor de fichas e skills ──
         readonly List<Action> refreshers=new List<Action>();
         FighterDef editing; bool dirty; Text editorStatus;
-        static readonly SkillKind[] EditableKinds={SkillKind.Dano,SkillKind.Cura,SkillKind.Suporte,SkillKind.Zona,SkillKind.Armadilha,SkillKind.Teleporte,SkillKind.Esconder,SkillKind.Reviver,SkillKind.Invocacao};
+        static readonly SkillKind[] EditableKinds={SkillKind.Dano,SkillKind.Cura,SkillKind.Suporte,SkillKind.Zona,SkillKind.Armadilha,SkillKind.Teleporte,SkillKind.Esconder,SkillKind.Reviver,SkillKind.Invocacao,SkillKind.Troca,SkillKind.Portal};
         static string KindName(SkillKind k) => k switch { SkillKind.Dano=>"Dano / controle", SkillKind.Cura=>"Cura", SkillKind.Suporte=>"Suporte (buff/cura em área)", SkillKind.Zona=>"Zona (gelo)",
-            SkillKind.Armadilha=>"Armadilha", SkillKind.Teleporte=>"Teleporte", SkillKind.Esconder=>"Esconder", SkillKind.Reviver=>"Reviver", SkillKind.Invocacao=>"Invocação", _=>k.ToString() };
+            SkillKind.Armadilha=>"Armadilha", SkillKind.Teleporte=>"Teleporte", SkillKind.Esconder=>"Esconder", SkillKind.Reviver=>"Reviver", SkillKind.Invocacao=>"Invocação", SkillKind.Troca=>"Troca (Shambles)", SkillKind.Portal=>"Portal", _=>k.ToString() };
         void Editor()
         {
             if(editing==null||editing.id!=editorId) Load(editorId);
@@ -502,6 +557,16 @@ namespace ArenaTatica
             Btn(row,"Descartar",()=>{ Load(editorId); Show("editor"); },0,40);
             Btn(row,"Padrão desta ficha",()=>{ ArenaEdits.Reset(editorId); Load(editorId); Show("editor"); },0,40);
             Btn(row,"Restaurar tudo",()=>{ ArenaEdits.ResetAll(); Load(editorId); Show("editor"); },0,40);
+            Section(c,"Presets de balanceamento");
+            row=Row(c,44);
+            Input(row,presetName,"Nome do preset").onValueChanged.AddListener(v=>presetName=v);
+            Btn(row,"Salvar edições como preset",()=>{ if(dirty) { editorStatus.text="<color=#ef6f7a>Salve a ficha antes.</color>"; return; } if(ArenaEdits.SavePreset(presetName)) Show("editor"); else editorStatus.text="<color=#ef6f7a>Dê um nome (não pode ser Padrão).</color>"; },0,40,14);
+            foreach(var name in ArenaEdits.PresetNames) {
+                var k=name; row=Row(c,40);
+                Layout(Label(row,k,15,Ink,TextAnchor.MiddleLeft).gameObject,0,36,1);
+                Btn(row,"Carregar no editor",()=>{ ArenaEdits.LoadPreset(k); dirty=false; Load(editorId); Show("editor"); },170,36,13);
+                Btn(row,"Apagar",()=>{ ArenaEdits.DeletePreset(k); Show("editor"); },90,36,13);
+            }
             editorStatus=Label(c,dirty?"<color=#e8c278>Alterações não salvas.</color>":"Mude os números com − e +. Alcance e movimento contam em casas.",13,Muted);
             Section(c,"Ficha");
             var grid=Grid(c);
@@ -509,6 +574,21 @@ namespace ArenaTatica
             Stepper(grid,"Iniciativa",()=>e.initiative,v=>e.initiative=v); Stepper(grid,"Nível",()=>e.level,v=>e.level=v); Stepper(grid,"Armadura fixa",()=>e.armor,v=>e.armor=v);
             Flag(grid,"Voa",()=>e.flying,v=>e.flying=v); Flag(grid,"Lendária",()=>e.legendary,v=>e.legendary=v); Flag(grid,"Imóvel",()=>e.immovable,v=>e.immovable=v);
             Flag(grid,"Devora skills",()=>e.devour,v=>e.devour=v);
+            // Formas (3.3): bônus de cada forma ficam à vista e editáveis; passivas podem valer só numa forma (abaixo).
+            if(e.forms!=null&&e.forms.Length>1)
+            {
+                Section(c,"Formas");
+                Para(c,"<color=#a7b4c2>Bônus enquanto o lutador está na forma (somam aos atributos da ficha). Skills com forma marcada só aparecem nela.</color>");
+                foreach(var fm in e.forms)
+                {
+                    var f=fm; Label(c,f.name+(f.id==e.startForm?" (inicial)":""),15,Gold);
+                    var fg=Grid(c);
+                    Stepper(fg,"PA a mais",()=>f.pa,x=>f.pa=Mathf.Clamp(x,-6,6)); Stepper(fg,"PM a mais",()=>f.pm,x=>f.pm=Mathf.Clamp(x,-6,6)); Stepper(fg,"Armadura a mais",()=>f.armor,x=>f.armor=Mathf.Clamp(x,-3,4));
+                    Flag(fg,"Sem guarda",()=>f.noGuard,x=>f.noGuard=x); Flag(fg,"Intangível",()=>f.intangible,x=>f.intangible=x);
+                    var skills=e.skills.Where(x=>x.form==f.id).Select(x=>x.name).ToArray();
+                    if(skills.Length>0) Para(c,"<color=#a7b4c2>Skills desta forma: "+string.Join(", ",skills)+"</color>");
+                }
+            }
             Section(c,"Skills");
             Para(c,"<color=#a7b4c2>Em cada skill: PA = custo; Alcance mínimo/máximo = distância do ataque em casas.</color>");
             for(int i=0;i<e.skills.Length;i++) SkillEditor(c,e.skills[i],i);
@@ -525,6 +605,7 @@ namespace ArenaTatica
             PassiveTemplate(pr,"Fúria (+dano em si)",new PassiveDef{ name="Fúria", stat=PassiveStat.Dano, who=PassiveWho.Si, amount=1 });
             PassiveTemplate(pr,"Lentidão nos inimigos",new PassiveDef{ name="Lentidão", stat=PassiveStat.PM, who=PassiveWho.Inimigos, amount=-1, range=3 });
             PassiveTemplate(pr,"Bênção global",new PassiveDef{ name="Bênção", stat=PassiveStat.CuraPorTurno, who=PassiveWho.AliadosESi, amount=1, range=0 });
+            PassiveTemplate(pr,"Lobo solitário",new PassiveDef{ name="Lobo solitário", stat=PassiveStat.Dano, who=PassiveWho.Si, amount=1, lonely=2 });
             Section(c,"Criar skill");
             Para(c,"<color=#a7b4c2>Comece de um modelo e ajuste os números e efeitos. Até 8 skills por ficha.</color>");
             var t1=Row(c,44); var t2=Row(c,44);
@@ -595,6 +676,13 @@ namespace ArenaTatica
             refreshers.Add(()=>{ stat.GetComponentInChildren<Text>().text="Atributo: "+StatLabel(p.stat); who.GetComponentInChildren<Text>().text="Afeta: "+WhoLabel(p.who); });
             var grid=Grid(box);
             Stepper(grid,"Quanto (+ ou −)",()=>p.amount,x=>p.amount=Mathf.Clamp(x,-5,5)); Stepper(grid,"Distância (0 = global)",()=>p.range,x=>p.range=Mathf.Clamp(x,0,12));
+            Stepper(grid,"Lobo solitário: sem aliado até",()=>p.lonely,x=>p.lonely=Mathf.Clamp(x,0,12));
+            var forms=editing.forms;
+            if(forms!=null&&forms.Length>1)
+            {
+                var fb=Btn(grid,"",()=>{ int i=Array.FindIndex(forms,x=>x.id==p.form); p.form=i+1>=forms.Length?"":forms[i+1].id; Changed(); },0,30,13);
+                refreshers.Add(()=>fb.GetComponentInChildren<Text>().text="Forma: "+(string.IsNullOrEmpty(p.form)?"todas":Array.Find(forms,x=>x.id==p.form)?.name??p.form));
+            }
         }
         void SkillEditor(Transform c,SkillDef s,int index)
         {
@@ -618,6 +706,25 @@ namespace ArenaTatica
             Flag(grid,"Em volta de si",()=>s.selfArea,x=>{ s.selfArea=x; if(x) { s.minRange=0; s.maxRange=0; } }); Flag(grid,"Área nas 8 casas",()=>s.square,x=>s.square=x); Flag(grid,"Área só inimigos",()=>s.foes,x=>s.foes=x);
             Flag(grid,"Puxa até colar",()=>s.pull,x=>s.pull=x); Flag(grid,"Ignora armadura",()=>s.pierce,x=>s.pierce=x); Flag(grid,"Ignora Escudo",()=>s.precise,x=>s.precise=x);
             Flag(grid,"Congela casas (zona)",()=>s.freeze,x=>s.freeze=x); Flag(grid,"Pode errar",()=>s.wild,x=>s.wild=x); Flag(grid,"Ultimate",()=>s.ultimate,x=>{ s.ultimate=x; if(x&&s.perTurn==0&&s.perMatch==0&&s.cooldown==0) s.perMatch=1; });
+            Flag(grid,"Canalizada (próximo turno)",()=>s.channeled,x=>s.channeled=x); Flag(grid,"Mina (não para o movimento)",()=>s.mine,x=>s.mine=x); Flag(grid,"Grátis sem usar arma",()=>s.freeSwap,x=>s.freeSwap=x);
+            Targets(box,s);
+        }
+        // As 3 bolinhas (3.1): quem a skill pega. Desligadas todas = regra padrão do tipo.
+        static int DefaultHits(SkillKind k) => k switch { SkillKind.Dano=>(int)(Hit.Inimigo|Hit.Aliado), SkillKind.Cura=>(int)(Hit.Si|Hit.Aliado), SkillKind.Suporte=>(int)(Hit.Si|Hit.Aliado),
+            SkillKind.Troca=>(int)(Hit.Si|Hit.Inimigo|Hit.Aliado), _=>(int)Hit.Si };
+        void Targets(Transform box,SkillDef s)
+        {
+            var row=Row(box,40);
+            var label=Label(row,"",13,Muted,TextAnchor.MiddleLeft); Layout(label.gameObject,0,0,1);
+            refreshers.Add(()=>label.text=s.Custom?"Pega:":"Pega: padrão do tipo");
+            void Dot(string text,Hit bit,int rgb)
+            {
+                var b=Btn(row,"",()=>{ int h=s.Custom?s.hits:DefaultHits(s.kind); h^=(int)bit; s.hits=h; Changed(); },120,34,13);
+                var t=b.GetComponentInChildren<Text>(); var img=b.GetComponent<Image>();
+                refreshers.Add(()=>{ bool on=s.Custom&&(s.hits&(int)bit)!=0; t.text=(on?"● ":"○ ")+text; img.color=on?Hex(rgb):Idle; });
+            }
+            Dot("Si",Hit.Si,0x2f5f9e); Dot("Inimigos",Hit.Inimigo,0x8e2f3a); Dot("Aliados",Hit.Aliado,0x2f7a46);
+            Btn(row,"Padrão",()=>{ s.hits=0; Changed(); },90,34,13);
         }
         void Stepper(Transform grid,string label,Func<int> get,Action<int> set)
         {

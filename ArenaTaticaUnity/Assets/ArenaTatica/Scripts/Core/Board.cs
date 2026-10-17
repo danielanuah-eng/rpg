@@ -53,24 +53,43 @@ namespace ArenaTatica.Core
             }
             return dist;
         }
+        // Risco de Trava ao SAIR de c: inimigos conhecidos, soltos e que travam, colados nela.
+        public static int LockRisk(MatchState s,Fighter f,Cell c)
+        {
+            int n=0;
+            foreach(var e in s.fighters) if(e.Alive&&e!=f&&!s.Ally(e.team,f.team)&&!(e.hidden)&&e.prisoned==0&&!Content.Def(e).noLock&&e.cell.Distance(c)==1) n++;
+            return n;
+        }
+        // Caminho (sprint 1, 2.1): dentro dos PM, primeiro o que passa por menos casas de Trava (cada inimigo colado conta 1;
+        // a casa de saída e a de chegada não contam, pois não dá para evitá-las); empate, o mais barato em PM.
+        // Rótulos por (casa, PM gastos): exato com orçamento, e o mapa máximo (18×18 × PM) é pequeno.
         public static List<Cell> Path(MatchState s,Fighter f,Cell to,int budget)
         {
-            if(!Contains(s,to)||to==f.cell) return null;
-            var dist=Costs(s,f); bool flying=Content.Def(f).flying;
-            if(dist[Index(s,to)]>budget) return null;
-            var path=new List<Cell>{to}; var c=to;
-            while(c!=f.cell)
+            if(!Contains(s,to)||to==f.cell||budget<=0) return null;
+            bool flying=Content.Def(f).flying; int n=s.width*s.height, b=budget+1, start=Index(s,f.cell), goal=Index(s,to);
+            var risk=new int[n*b]; var prev=new int[n*b];
+            for(int i=0;i<risk.Length;i++) { risk[i]=int.MaxValue; prev[i]=-1; }
+            risk[start*b]=0;
+            var lockAt=new int[n]; for(int i=0;i<n;i++) lockAt[i]=-1;
+            int Lock(int i) { if(lockAt[i]<0) lockAt[i]=LockRisk(s,f,new Cell(i%s.width,i/s.width)); return lockAt[i]; }
+            // PM só cresce: varrer por PM gasto é uma ordem topológica.
+            for(int k=0;k<=budget;k++) for(int i=0;i<n;i++)
             {
-                Cell prev=c; bool found=false;
+                int r=risk[i*b+k]; if(r==int.MaxValue||i==goal) continue;
+                var c=new Cell(i%s.width,i/s.width); int leave=i==start?0:Lock(i);
                 foreach(var d in Dirs)
                 {
-                    var p=c+d; if(!Contains(s,p)||dist[Index(s,p)]==int.MaxValue) continue;
-                    int cost=StepCost(s,p,c,flying,f.climber);
-                    if(cost>0&&dist[Index(s,p)]+cost==dist[Index(s,c)]) { prev=p; found=true; break; }
+                    var nb=c+d; int cost=StepCost(s,c,nb,flying,f.climber);
+                    if(cost<=0||k+cost>budget||KnownAt(s,nb,f)!=null) continue;
+                    int j=Index(s,nb)*b+k+cost;
+                    if(r+leave<risk[j]) { risk[j]=r+leave; prev[j]=i*b+k; }
                 }
-                if(!found) return null;
-                c=prev; path.Add(c);
             }
+            int best=-1;
+            for(int k=0;k<=budget;k++) { int j=goal*b+k; if(risk[j]!=int.MaxValue&&(best<0||risk[j]<risk[best])) best=j; }
+            if(best<0) return null;
+            var path=new List<Cell>();
+            for(int j=best;j>=0;j=prev[j]) { int i=j/b; path.Add(new Cell(i%s.width,i/s.width)); }
             path.Reverse(); return path;
         }
         public static int Index(MatchState s,Cell c) => c.z*s.width+c.x;

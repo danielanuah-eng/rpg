@@ -197,5 +197,20 @@ namespace ArenaTatica.Tests
             Assert.GreaterOrEqual(pool.Length,ArenaGame.MaxBans+3,"sobra time depois dos bans"); Assert.LessOrEqual(ArenaGame.ValidPool(Content.Roster).Length,ArenaGame.PoolSize);
             Assert.Greater(ArenaBotaoLerp.Goal(true,true,false),1); Assert.Less(ArenaBotaoLerp.Goal(true,true,true),1); Assert.AreEqual(1,ArenaBotaoLerp.Goal(false,true,true));
         }
+        // 3.2: forma sem pasta de sprites (Content.Copy grava "" pelo JsonUtility) cai na forma inicial/identidade, não na cápsula cinza.
+        [Test] public void FormWithoutSpritesFallsBackToStartFormOrIdentity()
+        {
+            var damian=Content.Fighters["damian"]; var tchu=Content.Fighters["tchu-tcha"]; var edgar=Content.Fighters["edgar"];
+            try {
+                Content.Fighters["damian"]=Content.Copy(damian);
+                Assert.AreEqual("",Content.Fighters["damian"].forms[1].sprites,"as edições gravam vazio, não null");
+                Assert.AreEqual("Damian",ArenaPresentation.SpriteFolder(new Fighter{def="damian",form="canhao"}));
+                Assert.AreEqual("TchuTchaBerserk",ArenaPresentation.SpriteFolder(new Fighter{def="tchu-tcha",form="berserk"}),"forma com pasta própria");
+                var t=Content.Fighters["tchu-tcha"]=Content.Copy(tchu); t.startForm="berserk";
+                Assert.AreEqual("TchuTchaBerserk",ArenaPresentation.SpriteFolder(new Fighter{def="tchu-tcha",form="normal"}),"cai na forma inicial");
+                var e=Content.Fighters["edgar"]=Content.Copy(edgar); e.forms[1].sprites="PastaQueNaoExiste";
+                Assert.AreEqual("Edgar",ArenaPresentation.SpriteFolder(new Fighter{def="edgar",form="fantasma"}),"pasta sem quadros cai na identidade");
+            } finally { Content.Fighters["damian"]=damian; Content.Fighters["tchu-tcha"]=tchu; Content.Fighters["edgar"]=edgar; }
+        }
     }
 }

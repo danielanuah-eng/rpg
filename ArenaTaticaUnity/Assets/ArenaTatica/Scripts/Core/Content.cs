@@ -36,9 +36,9 @@ namespace ArenaTatica.Core
                     new SkillDef { id="tiro-de-pistola", name="Tiro de pistola", kind=SkillKind.Dano, pa=3, minRange=2, maxRange=5, damage=2, precise=true, modifiable=true, form="pistola", anim="pistol" },
                     new SkillDef { id="canhao-de-mao", name="Canhão de mão", kind=SkillKind.Dano, pa=4, minRange=2, maxRange=4, damage=3, area=1, wild=true, form="canhao", anim="cannon" },
                     new SkillDef { id="martelada", name="Martelada", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=4, form="martelo", anim="hammer" },
-                    new SkillDef { id="camaleao-pistola", name="Camaleão: pistola", kind=SkillKind.Forma, pa=1, minRange=0, maxRange=0, sight=false, toForm="pistola", anim="morph" },
-                    new SkillDef { id="camaleao-canhao", name="Camaleão: canhão", kind=SkillKind.Forma, pa=1, minRange=0, maxRange=0, sight=false, toForm="canhao", anim="morph" },
-                    new SkillDef { id="camaleao-martelo", name="Camaleão: martelo", kind=SkillKind.Forma, pa=1, minRange=0, maxRange=0, sight=false, toForm="martelo", anim="morph" } } },
+                    new SkillDef { id="camaleao-pistola", name="Camaleão: pistola", kind=SkillKind.Forma, pa=1, minRange=0, maxRange=0, sight=false, toForm="pistola", anim="morph", freeSwap=true },
+                    new SkillDef { id="camaleao-canhao", name="Camaleão: canhão", kind=SkillKind.Forma, pa=1, minRange=0, maxRange=0, sight=false, toForm="canhao", anim="morph", freeSwap=true },
+                    new SkillDef { id="camaleao-martelo", name="Camaleão: martelo", kind=SkillKind.Forma, pa=1, minRange=0, maxRange=0, sight=false, toForm="martelo", anim="morph", freeSwap=true } } },
             // Ilusionista: começa com uma cópia ilusória (4 PV); ilusões tiram PM; Espelho primordial reflete no inimigo o último ataque dele.
             ["ezequiela"]=new FighterDef { id="ezequiela", name="Ezequiela", sprites="Ezequiela", hp=9, pa=6, pm=3, initiative=4, level=3, illusion=true, skills=new[] {
                 new SkillDef { id="ilusao-confusa", name="Ilusão confusa", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=2, pmLoss=1, modifiable=true },
@@ -170,6 +170,12 @@ namespace ArenaTatica.Core
         // só com efeitos que o motor já tem. O editor copia a escolhida para a ficha (id novo) e o autor ajusta os números.
         public static readonly (string group,SkillDef skill)[] Generic=
         {
+            // Sprint 1 (17/10): troca, portal, passo nebuloso com aliado, mina terrestre e skill canalizada.
+            ("Sprint", new SkillDef { id="shambles", name="Shambles", kind=SkillKind.Troca, pa=3, minRange=1, maxRange=5, sight=false, cooldown=2, hits=(int)(Hit.Inimigo|Hit.Aliado|Hit.Si), anim="teleport" }),
+            ("Sprint", new SkillDef { id="portal", name="Portal", kind=SkillKind.Portal, pa=3, minRange=1, maxRange=6, sight=false, turns=2, cooldown=3, anim="cast" }),
+            ("Sprint", new SkillDef { id="passo-nebuloso-aliado", name="Passo nebuloso", kind=SkillKind.Teleporte, pa=2, minRange=0, maxRange=4, sight=false, perTurn=1, hits=(int)(Hit.Si|Hit.Aliado), anim="teleport" }),
+            ("Sprint", new SkillDef { id="mina-terrestre", name="Mina terrestre", kind=SkillKind.Armadilha, pa=2, minRange=1, maxRange=3, damage=2, mine=true, perTurn=1 }),
+            ("Sprint", new SkillDef { id="meteoro-canalizado", name="Meteoro canalizado", kind=SkillKind.Dano, pa=4, minRange=2, maxRange=6, damage=5, area=1, channeled=true, cooldown=3, hits=(int)(Hit.Inimigo|Hit.Aliado|Hit.Si) }),
             ("D&D", new SkillDef { id="bola-de-fogo", name="Bola de fogo", kind=SkillKind.Dano, pa=4, minRange=2, maxRange=5, damage=2, area=1, modifiable=true, perTurn=1 }),
             ("D&D", new SkillDef { id="misseis-magicos", name="Mísseis mágicos", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=6, damage=2, precise=true }),
             ("D&D", new SkillDef { id="relampago", name="Relâmpago", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=5, damage=3, line=true, sight=false, cooldown=1 }),
@@ -272,13 +278,13 @@ namespace ArenaTatica.Core
             {
                 s.pa=Clamp(s.pa,0,12); s.damage=Clamp(s.damage,0,20); s.heal=Clamp(s.heal,0,20); s.minRange=Clamp(s.minRange,0,12); s.maxRange=Clamp(s.maxRange,s.minRange,s.kind==SkillKind.Comando||s.kind==SkillKind.Desejo?99:12);
                 s.area=Clamp(s.area,0,4); s.perTurn=Clamp(s.perTurn,0,5); s.cooldown=Clamp(s.cooldown,0,9); s.push=Clamp(s.push,0,6); s.prison=Clamp(s.prison,0,2);
-                s.pmLoss=Clamp(s.pmLoss,0,10); s.paLoss=Clamp(s.paLoss,0,6); s.buffPa=Clamp(s.buffPa,-6,6); s.buffPm=Clamp(s.buffPm,-6,6); s.buffArmor=Clamp(s.buffArmor,-3,4); s.turns=Clamp(s.turns,0,5);
+                s.pmLoss=Clamp(s.pmLoss,0,10); s.paLoss=Clamp(s.paLoss,0,6); s.buffPa=Clamp(s.buffPa,-6,6); s.buffPm=Clamp(s.buffPm,-6,6); s.buffArmor=Clamp(s.buffArmor,-3,4); s.turns=Clamp(s.turns,0,5); s.hits&=7;
                 if(s.ultimate&&s.perTurn==0&&s.perMatch==0&&s.cooldown==0) s.perMatch=1;
                 if(s.kind==SkillKind.Invocacao&&(string.IsNullOrEmpty(s.summon)||!s.summon.Split('|').All(Fighters.ContainsKey))) s.kind=SkillKind.Dano;
             }
             d.allyBonus=Clamp(d.allyBonus,0,5); d.auraRange=Clamp(d.auraRange,0,12); d.revive=Clamp(d.revive,0,40); d.steal=Clamp(d.steal,0,100); d.healAura=Clamp(d.healAura,0,10);
             d.passives=(d.passives??new PassiveDef[0]).Where(x=>x!=null).Take(6).ToArray();
-            foreach(var x in d.passives) { x.amount=Clamp(x.amount,-5,5); x.range=Clamp(x.range,0,12); }
+            foreach(var x in d.passives) { x.amount=Clamp(x.amount,-5,5); x.range=Clamp(x.range,0,12); x.lonely=Clamp(x.lonely,0,12); }
             return d;
         }
 
@@ -292,9 +298,11 @@ namespace ArenaTatica.Core
             {
                 case SkillKind.Dano: if(sk.damage>0) e.Add($"{sk.damage} de dano"); break;
                 case SkillKind.Cura: e.Add($"cura {sk.damage}"); break;
-                case SkillKind.Armadilha: e.Add(sk.damage>0?$"armadilha de {sk.damage}":"armadilha"); break;
+                case SkillKind.Armadilha: e.Add((sk.mine?"mina":"armadilha")+(sk.damage>0?$" de {sk.damage}":"")+(sk.mine?" (não para o movimento)":"")); break;
                 case SkillKind.Invocacao: e.Add("invoca "+string.Join(" ou ",(sk.summon??"").Split('|').Where(Fighters.ContainsKey).Select(x=>Fighters[x].name))); break;
-                case SkillKind.Teleporte: e.Add("teleporte"); break;
+                case SkillKind.Teleporte: e.Add(sk.TwoCells?"teleporta o alvo para outra casa":"teleporte"); break;
+                case SkillKind.Troca: e.Add("troca dois lutadores de lugar"); break;
+                case SkillKind.Portal: e.Add($"abre um portal (entrada e saída) por {(sk.turns>0?sk.turns:2)} turnos"); break;
                 case SkillKind.Salto: e.Add("salta até o inimigo"); break;
                 case SkillKind.Forma:
                     e.Add("muda de forma"+(sk.turns>0?$" por {sk.turns} turno{(sk.turns>1?"s":"")}":""));
@@ -324,6 +332,8 @@ namespace ArenaTatica.Core
             if(sk.pmLoss>=10) e.Add("prende no lugar (0 PM)"); else if(sk.pmLoss>0) e.Add($"−{sk.pmLoss} PM"); if(sk.paLoss>0) e.Add($"−{sk.paLoss} PA");
             if(sk.prison>0) e.Add($"aprisiona {sk.prison} turno (Esquiva escapa)");
             if(sk.drain>0) e.Add($"cura {sk.drain} ao acertar"); if(sk.wild) e.Add("pode errar");
+            if(sk.Custom) e.Add("pega "+string.Join("/",new[]{sk.CanHitSelf?"si":null,sk.CanHitEnemy?"inimigos":null,sk.CanHitAlly?"aliados":null}.Where(x=>x!=null)));
+            if(sk.channeled) e.Add("canalizada (resolve no próximo turno)"); if(sk.freeSwap) e.Add("grátis se ainda não usou arma no turno");
             if(sk.summonCount>0&&sk.kind!=SkillKind.Invocacao) e.Add($"invoca até {sk.summonCount}");
             var limits=new List<string>();
             if(sk.perTurn>0) limits.Add($"{sk.perTurn}× por turno"); if(sk.perMatch>0) limits.Add($"{sk.perMatch}× por partida");
@@ -359,7 +369,7 @@ namespace ArenaTatica.Core
         public static string WhoName(PassiveWho w) => w switch { PassiveWho.Si=>"em si", PassiveWho.Aliados=>"nos aliados", PassiveWho.AliadosESi=>"em si e nos aliados",
             PassiveWho.Inimigos=>"nos inimigos", _=>"em todos" };
         public static string Describe(PassiveDef p) =>
-            $"{(string.IsNullOrEmpty(p.name)?"Passiva":p.name)}: {Sign(p.amount)} {StatName(p.stat)} {WhoName(p.who)}{(p.who==PassiveWho.Si?"":p.range<=0?" (mapa todo)":$" até {p.range} casa{(p.range>1?"s":"")}")}";
+            $"{(string.IsNullOrEmpty(p.name)?"Passiva":p.name)}: {Sign(p.amount)} {StatName(p.stat)} {WhoName(p.who)}{(p.who==PassiveWho.Si?"":p.range<=0?" (mapa todo)":$" até {p.range} casa{(p.range>1?"s":"")}")}{(p.lonely>0?$" se não houver aliado até {p.lonely} casa{(p.lonely>1?"s":"")} em qualquer direção":"")}{(string.IsNullOrEmpty(p.form)?"":$" (só na forma {p.form})")}";
         // Lutadores que dá para escolher (sem invocações), na ordem do seletor.
         public static readonly string[] Roster=Fighters.Values.Where(d=>d.picker).Select(d=>d.id).ToArray();
         public static FighterDef Def(Fighter f)

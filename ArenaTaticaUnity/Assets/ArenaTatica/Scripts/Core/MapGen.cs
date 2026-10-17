@@ -66,17 +66,19 @@ namespace ArenaTatica.Core
                 s.decor.Add(new Decor{ piece=piece, x=m.x-dx, z=m.z-dz, rot=rot+180 });
             }
         }
-        // Casas de um grupo de spawn (até 4 lutadores). Slots pares embaixo, ímpares no espelho de cima.
-        public static Cell[] Spawns(MatchState s,int slot)
+        // Casas de um grupo de spawn (4 lutadores; count até 6 para times maiores da sala, Sprint 3.6). Slots pares embaixo,
+        // ímpares no espelho de cima. Só as 4 primeiras entram na geração do mapa: a ordem dos sorteios não muda.
+        public static Cell[] Spawns(MatchState s,int slot,int count=4)
         {
             Cell[] c;
-            if(s.width==Board.Size) c=new[]{ new Cell(2,1), new Cell(4,1), new Cell(7,1), new Cell(9,1) };
+            if(s.width==Board.Size) c=new[]{ new Cell(2,1), new Cell(4,1), new Cell(7,1), new Cell(9,1), new Cell(3,2), new Cell(8,2) };
             else
             {
                 int[] xs=s.width<=16?new[]{4,11}:new[]{3,14,9};
                 int x=xs[(slot/2)%xs.Length];
-                c=new[]{ new Cell(x,1), new Cell(x-2,1), new Cell(x+2,1), new Cell(x,3) };
+                c=new[]{ new Cell(x,1), new Cell(x-2,1), new Cell(x+2,1), new Cell(x,3), new Cell(x-2,3), new Cell(x+2,3) };
             }
+            c=c.Take(Math.Max(4,Math.Min(count,c.Length))).ToArray();
             if(slot%2==1) for(int i=0;i<c.Length;i++) c[i]=s.Mirror(c[i]);
             return c;
         }

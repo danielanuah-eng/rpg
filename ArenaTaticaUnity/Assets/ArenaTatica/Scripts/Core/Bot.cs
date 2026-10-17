@@ -67,10 +67,10 @@ namespace ArenaTatica.Core
                     if(sk.kind==SkillKind.Forma&&(!allowForm||c!=origin)) continue;
                     foreach(var t in Targets(s,me,sk,foes))
                     {
-                        if(!sim.CanTarget(me,sk,t,out _)) continue;
+                        if(sk.TwoCells||sk.channeled||!sim.CanTarget(me,sk,t,out _)) continue;
                         int slot=0; double v=Value(sim,me,sk,t,foes,ref slot);
                         if(v<=0) continue; v+=place;
-                        if(v>best) { best=v; cmd=c==origin?new Command{kind="skill",skill=sk.id,cell=t,slot=slot}:new Command{kind="mover",cell=c}; }
+                        if(v>best) { best=v; cmd=c==origin?new Command{kind="skill",skill=sk.id,cell=t,slot=slot,cell2=sk.kind==SkillKind.Comando?sim.Cats(me,sk,t)[0].cell:default}:new Command{kind="mover",cell=c}; }
                     }
                 }
             }
@@ -225,7 +225,7 @@ namespace ArenaTatica.Core
         static double Hit(MatchState s,Fighter me,SkillDef sk,Fighter v,bool main)
         {
             if(v==null) return 0;
-            bool alone=sk.isolatedBonus>0&&!s.fighters.Any(x=>x.Alive&&x!=v&&s.Ally(x.team,v.team)&&x.cell.Distance(v.cell)==1);
+            bool alone=sk.isolatedBonus>0&&Match.Isolated(s,v);
             // Escudo ou Coringa no dado de defesa: 2 em 6.
             double dmg=sk.damage<=0?0:Math.Max(0,sk.damage+(alone?sk.isolatedBonus:0)-(sk.pierce?0:Armor(v))-(sk.pierce||sk.precise?0:1/3.0));
             if(s.Ally(v.team,me.team)) return -(dmg*1.5+(dmg>=v.hp?5:0));

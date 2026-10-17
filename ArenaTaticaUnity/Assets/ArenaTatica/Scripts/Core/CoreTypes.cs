@@ -38,11 +38,18 @@ namespace ArenaTatica.Core
     // Reviver: volta um aliado nocauteado numa casa vizinha. Desejo: canaliza 2 turnos e escolhe uma opção (wish a..f).
     // Aura (Baltazar): liga/desliga em si; ligada, cobra pa no começo de cada turno do dono e cura heal nos aliados e fere damage nos
     // inimigos até area casas, 1 vez por alvo por turno do dono. Sem PA para manter, desliga. Novos tipos sempre no fim (as edições guardam o número).
-    public enum SkillKind { Dano, Invocacao, Cura, Armadilha, Teleporte, Salto, Forma, Esconder, Espelho, Suporte, Zona, Comando, Reviver, Desejo, Aura }
+    // Troca (Shambles): dois alvos (Command.cell e cell2) trocam de casa. Portal: entrada em cell, saída em cell2; quem entra sai numa casa
+    // livre vizinha da saída.
+    public enum SkillKind { Dano, Invocacao, Cura, Armadilha, Teleporte, Salto, Forma, Esconder, Espelho, Suporte, Zona, Comando, Reviver, Desejo, Aura, Troca, Portal }
+    // As 3 bolinhas do editor (sprint 1): 🔵 si, 🔴 inimigos, 🟢 aliados. SkillDef.hits 0 = regra antiga de cada tipo.
+    [Flags] public enum Hit { Padrao=0, Si=1, Inimigo=2, Aliado=4 }
     public enum ShopKind { Item, Magia, Pet, Armadilha, Buff }
 
     // lava/mark: eventos (maré de lava, fogos). frozenBy: lutador que congelou a casa (+1 PM para entrar). trapPa: mina de gelo.
     [Serializable] public class Tile { public int height, coins, trap, trapDamage, trapPa, frozenBy; public Terrain terrain; public bool zone, lava, mark; }
+    // Portal (sprint 1): casas de entrada e saída (Board.Index), quem abriu e turnos do dono que faltam. Fica numa lista do estado,
+    // não em cada casa, para o snapshot de 6 jogadores caber no Relay.
+    [Serializable] public class Portal { public int a, b, by, turns; }
 
     [Serializable] public class SkillDef
     {
@@ -69,6 +76,17 @@ namespace ArenaTatica.Core
         public bool pierce, pull, selfArea, square, foes, freeze, noCover;
         public int push, paLoss, prison, isolatedBonus, minRound, heal, buffPa, buffPm, buffArmor, buffRange, maxActive, summonCount, step;
         public string wish;
+        // hits: bolinhas (Hit); 0 = padrão do tipo. channeled: resolve no começo do próximo turno de quem usa, que encerra o turno ao canalizar.
+        // mine (Armadilha): vira mina terrestre. freeSwap (Forma): custa 0 se não usou skill de arma neste turno (Damian).
+        // turns também é a duração do Portal (turnos do dono; 0 = 2).
+        public int hits;
+        public bool channeled, mine, freeSwap;
+        public bool CanHitSelf => (hits&(int)Hit.Si)!=0;
+        public bool CanHitEnemy => (hits&(int)Hit.Inimigo)!=0;
+        public bool CanHitAlly => (hits&(int)Hit.Aliado)!=0;
+        public bool Custom => hits!=0;
+        // Troca, Portal e Teleporte de aliado pedem uma 2ª casa (Command.cell2).
+        public bool TwoCells => kind==SkillKind.Troca||kind==SkillKind.Portal||(kind==SkillKind.Teleporte&&Custom&&(CanHitAlly||CanHitEnemy));
         public SkillDef Clone() => (SkillDef)MemberwiseClone();
     }
     // Forma do lutador (arma do Damian, Berserk do Tchu tcha): bônus enquanto dura e a pasta de sprites dela.
@@ -102,7 +120,9 @@ namespace ArenaTatica.Core
     // de distância. CuraPorTurno/DanoPorTurno: no começo do turno de quem é pego.
     public enum PassiveStat { Dano, Armadura, PA, PM, Alcance, CuraPorTurno, DanoPorTurno }
     public enum PassiveWho { Si, Aliados, AliadosESi, Inimigos, Todos }
-    [Serializable] public class PassiveDef { public string name; public PassiveStat stat; public PassiveWho who; public int amount=1, range; public PassiveDef Clone() => (PassiveDef)MemberwiseClone(); }
+    [Serializable] public class PassiveDef { public string name; public PassiveStat stat; public PassiveWho who; public int amount=1, range;
+        // lonely (Lobo solitário): só vale se o dono não tem aliado até N casas; form: só nessa forma do dono (vazio = sempre).
+        public int lonely; public string form; public PassiveDef Clone() => (PassiveDef)MemberwiseClone(); }
     // Loja: Item e Buff valem na hora; Magia, Pet e Armadilha dão skills de uso limitado (cargas).
     [Serializable] public class ShopDef
     {
@@ -137,6 +157,8 @@ namespace ArenaTatica.Core
         public bool wishReady, anchored, climber, focused, focusUsed;
         // Aura do Baltazar: ligada e já paga neste turno (desligar e religar no mesmo turno não cobra nem aplica de novo).
         public bool auraOn, auraPaid;
+        // Skill canalizada (SkillDef.channeled): "skill;x;z;x2;z2;slot", resolve no começo do próximo turno (vazio = nenhuma).
+        public string channeling;
         // stolen: skills devoradas (Colosso, +1 PA). learned: skills copiadas pelo Desejo.
         public List<string> stolen=new List<string>();
         public List<SkillRoll> stolenPowers=new List<SkillRoll>();
@@ -165,6 +187,8 @@ namespace ArenaTatica.Core
         public VictoryMode mode=VictoryMode.Galeoes;
         public int galeoes=12, target;
         public bool flatMap;
+        // Começa com a fase de posicionamento (cada jogador arruma os heróis nas suas casas de início).
+        public bool placement;
         public bool randomSkills, randomStats, randomBots, randomPlayers;
         public int[] botSeats=new int[0];
         // Cenário (MapGen.Themes); -1 = sorteado pela seed, igual em todos os aparelhos.
@@ -194,6 +218,8 @@ namespace ArenaTatica.Core
         // Só visual: paleta e enfeites do cenário (MapGen.Themes).
         public int theme;
         public bool over;
+        // Fase de posicionamento (Sprint 1.3): assento que está arrumando os heróis nas casas de início; 0 = partida em curso.
+        public int placing;
         public VictoryMode mode;
         public TurnMode turnMode;
         // Itens liberados na loja (vazio = catálogo inteiro).
@@ -206,6 +232,9 @@ namespace ArenaTatica.Core
         public Tile[] tiles;
         // Enfeites e modelos do mapa (só visual, iguais em todos os aparelhos).
         public List<Decor> decor=new List<Decor>();
+        // Minas terrestres (Board.Index das casas com trap que não param o movimento) e portais abertos.
+        public List<int> mines=new List<int>();
+        public List<Portal> portals=new List<Portal>();
         public List<Fighter> fighters=new List<Fighter>();
         public List<int> timeline=new List<int>();
         // Índice 0 sem uso. Fighter.team, coins e shops são por jogador; galeoes, collected, domain e eliminated por time (alliance[jogador]).
@@ -215,7 +244,7 @@ namespace ArenaTatica.Core
         static TeamShop[] Shops() { var a=new TeamShop[MaxPlayers+1]; for(int i=0;i<a.Length;i++) a[i]=new TeamShop(); return a; }
         public Tile At(Cell c) => tiles[c.z*width+c.x];
         public Fighter F(int id) => fighters.Find(f=>f.id==id);
-        public Fighter Active => over||timeline.Count==0?null:F(timeline[active]);
+        public Fighter Active => over||placing>0||timeline.Count==0?null:F(timeline[active]);
         public Cell Mirror(Cell c) => new Cell(width-1-c.x,height-1-c.z);
         public int Team(int player) => player>=1&&player<=MaxPlayers?alliance[player]:0;
         public bool Ally(int a,int b) => a==b||(Team(a)!=0&&Team(a)==Team(b));
@@ -230,6 +259,8 @@ namespace ArenaTatica.Core
         public string kind, skill;
         public int revision, fighter, slot;
         public Cell cell;
+        // 2ª casa: destino do aliado no Teleporte, 2º alvo da Troca, saída do Portal.
+        public Cell cell2;
     }
     // kind: turno, mover, trava, moeda, armadilha, armadilha-posta, compra, loja, cura, ataque, cataclisma, invocar, nocaute, eliminado, rodada, dominio, vitoria
     [Serializable] public class GameEvent

@@ -23,7 +23,7 @@ namespace ArenaTatica
         readonly Dictionary<string,Sprite> iconCache=new Dictionary<string,Sprite>();
         public Sprite ShopIcon(string id) { if(string.IsNullOrEmpty(id)) return null; if(!iconCache.TryGetValue(id,out var sp)) iconCache[id]=sp=Resources.Load<Sprite>("Sprites/Loja/"+id); return sp; }
         readonly List<string> logLines=new List<string>();
-        Button move,pass,host,room,join,resume,seats,format,theme,start,restart,openShop;
+        Button move,pass,heights,host,room,join,resume,seats,format,theme,start,restart,openShop;
         // Linha do tempo no topo (020-ux): retrato, nome curto, PV/PA/PM, estado e as marcas de turno ATUAL e PRÓXIMO.
         RectTransform timeline,timelineContent; ScrollRect timelineScroll;
         readonly List<RectTransform> timelineCards=new List<RectTransform>();
@@ -72,6 +72,8 @@ namespace ArenaTatica
             for(int i=0;i<8;i++) { int k=i; skillButtons.Add(Button("",actions,()=>ChooseSkill(k))); }
             // Passar (e o Espaço) usa o mesmo método: o primeiro toque destaca, o segundo passa o turno.
             pass=Button("Passar  [Espaço]",actions,ConfirmPass);
+            // Sprint 3.5: números de altura no tabuleiro, só neste aparelho.
+            heights=Button("Alturas  [H]",actions,()=>Game.View?.ToggleHeights());
             shopLabel=LabelRow("LOJA",actionsPage,12,muted,18); labels.Add(shopLabel);
             shopGrid=Grid("Loja",actionsPage);
             openShop=Button("Abrir loja",shopGrid,()=>shopWindow.gameObject.SetActive(!shopWindow.gameObject.activeSelf));
@@ -301,7 +303,9 @@ namespace ArenaTatica
             inspectBody.text=string.Join("\n",text);
         }
         // Desejo D: depois de tocar no lutador, a lista das skills dele que dá para copiar; o botão manda a escolhida (Command.slot).
-        RectTransform copyWindow; Text copyTitle; readonly List<Button> copyButtons=new List<Button>(); Cell copyCell;
+        // A mesma janela escolhe quem reviver (Desejo A, Chama/Pena da fênix): índice em Match.Graveyard.
+        // E qual gato cumpre a ordem (3.9): copyCats = casas dos gatos, enviadas em Command.cell2.
+        RectTransform copyWindow; Text copyTitle; readonly List<Button> copyButtons=new List<Button>(); Cell copyCell; string copySkill; List<Cell> copyCats;
         void BuildCopyWindow(Transform root)
         {
             copyWindow=Panel("CopiarSkill",root); copyWindow.GetComponent<Image>().color=new Color(.03f,.04f,.07f,.97f); ArenaTema.Slice(copyWindow.GetComponent<Image>(),"panel-dark",10);
@@ -311,7 +315,7 @@ namespace ArenaTatica
             var list=new GameObject("Skills",typeof(RectTransform),typeof(VerticalLayoutGroup)).GetComponent<RectTransform>(); list.SetParent(copyWindow,false);
             var v=list.GetComponent<VerticalLayoutGroup>(); v.spacing=6; v.childControlWidth=v.childControlHeight=true; v.childForceExpandHeight=false;
             Anchors(list,Vector2.zero,Vector2.one,new Vector2(12,58),new Vector2(-12,-50));
-            for(int i=0;i<8;i++) { int k=i; copyButtons.Add(Button("",list,()=>{ copyWindow.gameObject.SetActive(false); Game.Submit("skill",copyCell,"desejo-d",k); })); }
+            for(int i=0;i<8;i++) { int k=i; copyButtons.Add(Button("",list,()=>{ copyWindow.gameObject.SetActive(false); if(copyCats!=null) { if(k<copyCats.Count) Game.Submit("skill",copyCell,copySkill,0,copyCats[k]); } else Game.Submit("skill",copyCell,copySkill,k); })); }
             var cancel=Button("Cancelar",copyWindow,()=>copyWindow.gameObject.SetActive(false));
             Anchors((RectTransform)cancel.transform,new Vector2(.3f,0),new Vector2(.7f,0),new Vector2(0,10),new Vector2(0,48));
             copyWindow.gameObject.SetActive(false);
@@ -322,7 +326,7 @@ namespace ArenaTatica
             var wish=Content.Skill(f,"desejo-d"); var v=Board.At(Game.State,c);
             if(!Game.Preview.CanTarget(f,wish,c,out string reason)) { Game.Notify(reason); return; }
             if(v==null||(v.hidden&&!Game.State.Ally(v.team,f.team))) { Game.Submit("skill",c,"desejo-d"); return; }
-            var options=Match.Copyables(f,v); copyCell=c;
+            var options=Match.Copyables(f,v); copyCell=c; copySkill="desejo-d"; copyCats=null;
             if(options.Count==0) { Game.Submit("skill",c,"desejo-d"); return; }
             copyTitle.text=$"Copiar uma skill de {Content.Fighters[v.def].name}";
             for(int i=0;i<copyButtons.Count;i++) {
@@ -330,6 +334,36 @@ namespace ArenaTatica
                 if(show) SetLabel(copyButtons[i],$"{options[i].name} · {options[i].pa} PA{(options[i].damage>0&&options[i].kind==SkillKind.Dano?$" · {options[i].damage} de dano":"")}");
             }
             copyWindow.gameObject.SetActive(true);
+        }
+        // Reviver com 2+ aliados no cemitério: abre a lista em vez de mandar direto. false = não precisa escolher (segue o toque normal).
+        public bool ChooseRevive(Cell c)
+        {
+            var f=Game.Active; var sk=f==null?null:Match.Skills(f).FirstOrDefault(x=>x.id==Game.Mode);
+            if(!Match.Revives(sk)||!Game.CanAct) return false;
+            var dead=Match.Graveyard(Game.State,f); if(dead.Count<2) return false;
+            if(!Game.Preview.CanTarget(f,sk,c,out string reason)) { Game.Notify(reason); return true; }
+            copyCell=c; copySkill=sk.id; copyCats=null; copyTitle.text="Quem vai reviver?";
+            for(int i=0;i<copyButtons.Count;i++) {
+                bool show=i<dead.Count; copyButtons[i].gameObject.SetActive(show);
+                if(show) SetLabel(copyButtons[i],$"{Content.Fighters[dead[i].def].name} · Nível {Content.Def(dead[i]).level} · {Content.MaxHp(dead[i])} PV máx.");
+            }
+            copyWindow.gameObject.SetActive(true);
+            return true;
+        }
+        // Ordem a um gato (Mover gato, Faísca da varinha) com 2+ gatos que cumprem: lista para escolher qual. false = segue o toque normal.
+        public bool ChooseCat(Cell c)
+        {
+            var f=Game.Active; var sk=f==null?null:Match.Skills(f).FirstOrDefault(x=>x.id==Game.Mode);
+            if(sk==null||sk.kind!=SkillKind.Comando||!Game.CanAct) return false;
+            if(!Game.Preview.CanTarget(f,sk,c,out string reason)) { Game.Notify(reason); return true; }
+            var cats=Game.Preview.Cats(f,sk,c); if(cats.Count<2) return false;
+            copyCell=c; copySkill=sk.id; copyCats=cats.Select(x=>x.cell).ToList(); copyTitle.text="Qual gato cumpre a ordem?";
+            for(int i=0;i<copyButtons.Count;i++) {
+                bool show=i<cats.Count; copyButtons[i].gameObject.SetActive(show);
+                if(show) SetLabel(copyButtons[i],$"{Content.Fighters[cats[i].def].name} · casa ({cats[i].cell.x},{cats[i].cell.z}) · a {cats[i].cell.Distance(c)} casa{(cats[i].cell.Distance(c)==1?"":"s")}{(i==0?" (mais perto)":"")}");
+            }
+            copyWindow.gameObject.SetActive(true);
+            return true;
         }
         // Seletor de lutadores: cada assento local monta o time (Nível até ArenaGame.TeamLevel, sem repetir).
         // Em rede só o time deste aparelho, que vale na próxima sala. Também serve ao torneio: pool, bans e escolha do draft.
@@ -528,6 +562,8 @@ namespace ArenaTatica
         public void ConfirmPass()
         {
             if(Game.View?.TouchGestureBusy==true) { ClearConfirmation(); return; }
+            // Posicionamento: Passar = pronto (um toque só; ainda não há turno).
+            if(Game.Placing) { confirm.Reset(); Game.SubmitPlacement("passar"); return; }
             SyncConfirmation();
             var f=Game.Active;
             if(f==null||!Game.CanAct) { confirm.Reset(); return; }
@@ -696,7 +732,9 @@ namespace ArenaTatica
             SyncConfirmation(); // a mira armada cai antes de desenhar: perder CanAct, menu/picker/loja ou troca de estado
             var s=Game.State; var f=Game.Active;
             string Team(int t) => $"<color=#{ColorUtility.ToHtmlStringRGB(ArenaPresentation.TeamColor(t))}>P{t}</color>";
-            turn.text=f==null?$"RODADA {s.round}":$"RODADA {s.round}   •   {ArenaPresentation.Shown(f).name} {Team(f.team)}   •   {f.pa} PA   •   {f.pm} PM";
+            turn.text=Game.Placing?$"POSICIONAMENTO   •   vez de {Team(s.placing)}":f==null?$"RODADA {s.round}":$"RODADA {s.round}   •   {ArenaPresentation.Shown(f).name} {Team(f.team)}   •   {f.pa} PA   •   {f.pm} PM";
+            // Tempo de turno da sala: contagem no Host e no cliente (o cliente conta a partir do estado recebido).
+            if(Game.TurnLeft>=0) turn.text+=$"   •   {Mathf.CeilToInt(Game.TurnLeft)} s";
             string Goal(int t) => s.eliminated[t]?"fora":s.mode==VictoryMode.Galeoes?$"{s.galeoes[t]} Galeões":s.mode==VictoryMode.Tesouro?$"{s.collected[t]}/{s.target} moedas":s.mode==VictoryMode.Dominio?$"domínio {s.domain[t]}/{s.target}":"eliminação";
             // Placar por time: em todos contra todos, um item por jogador; em times, os jogadores de cada time juntos.
             // PV, moedas e placar esperam a animação: não mostram o dano antes de os dados caírem.
@@ -732,10 +770,11 @@ namespace ArenaTatica
                 // Destaque do 1º toque (mira armada) e do modo de mira: o mesmo tom escolhido de sempre.
                 ArenaTema.Paint(b,Game.Mode==sk.id||Confirming(ArenaActionConfirmation.Skill(sk.id)),chosen,idle);
             }
-            move.interactable=pass.interactable=Game.CanAct;
+            move.interactable=Game.CanAct; pass.interactable=Game.CanAct||Game.CanPlace;
             ArenaTema.Paint(move,Game.Mode==""&&!confirm.Armed,new Color(.21f,.36f,.43f),idle);
-            SetLabel(pass,Confirming(ArenaActionConfirmation.Pass)?"Toque novamente para passar":"Passar  [Espaço]");
+            SetLabel(pass,Game.Placing?"Pronto  [Espaço]":Confirming(ArenaActionConfirmation.Pass)?"Toque novamente para passar":"Passar  [Espaço]");
             ArenaTema.Paint(pass,Confirming(ArenaActionConfirmation.Pass),chosen,idle);
+            ArenaTema.Paint(heights,ArenaPresentation.ShowHeights,chosen,idle);
             int team=f?.team??1; var slots=s.shops[team].slots;
             shopLabel.text=$"LOJA DE P{team} · {s.coins[team]} MOEDAS";
             shopTitle.text=$"Loja do Castor  ·  P{team}  ·  {s.coins[team]} moedas";

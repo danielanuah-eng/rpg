@@ -58,8 +58,14 @@ namespace ArenaTatica
         static string ShownId(Fighter f) => f!=null&&!string.IsNullOrEmpty(f.disguise)&&Content.Fighters.ContainsKey(f.disguise)?f.disguise:f?.def;
         public static FighterDef Shown(Fighter f) => f==null?null:ShownId(f)==f.def?Content.Def(f):Content.Fighters.TryGetValue(ShownId(f),out var d)?d:Content.Def(f);
         static bool Veiled(Fighter f) => f!=null&&ShownId(f)!=f.def;
-        // Pasta de sprites: a da forma atual (Berserk) ou a da identidade mostrada.
-        static string SpriteFolder(Fighter f) => Content.Form(f)?.sprites??Shown(f).sprites;
+        // Pasta de sprites: a da forma atual (Berserk) ou a da identidade mostrada. Forma sem pasta com quadros (sem sprites, ou ""
+        // depois das edições, que passam por JsonUtility) cai na forma inicial e depois na identidade, nunca na cápsula cinza (3.2).
+        public static string SpriteFolder(Fighter f)
+        {
+            var d=Content.Def(f);
+            foreach(var form in new[]{Content.Form(f),d.forms?.FirstOrDefault(x=>x.id==d.startForm)}) if(HasRig(form?.sprites)) return form.sprites;
+            return Shown(f).sprites;
+        }
         readonly Dictionary<Transform,SpriteRig> rigs=new Dictionary<Transform,SpriteRig>();
         Material spriteMaterial;
         readonly List<GameObject> transient=new List<GameObject>();
@@ -209,6 +215,7 @@ namespace ArenaTatica
             boardKey=key;
             foreach(Transform child in boardRoot) Destroy(child.gameObject);
             foreach(var m in generatedMeshes) Destroy(m); generatedMeshes.Clear();
+            BuildHeights(s);
             int kitTheme=Mathf.Clamp(s.theme,0,KitFolders.Length-1);
             boardBase.SetActive(!HasKit(kitTheme));
             if(HasKit(kitTheme)) { BuildKit(s,kitTheme); return; }
@@ -228,6 +235,33 @@ namespace ArenaTatica
                 var go=new GameObject("Tabuleiro"+g,typeof(MeshFilter),typeof(MeshRenderer)); go.transform.SetParent(boardRoot,false);
                 go.GetComponent<MeshFilter>().sharedMesh=mesh; go.GetComponent<MeshRenderer>().sharedMaterial=floorMaterials[g];
             }
+        }
+        // Sprint 3.5: altura (0–3) escrita no topo de cada casa livre; liga/desliga só neste aparelho (botão Alturas ou H).
+        public static bool ShowHeights;
+        Transform heightRoot; Font heightFont;
+        public void ToggleHeights() { ShowHeights=!ShowHeights; if(heightRoot) heightRoot.gameObject.SetActive(ShowHeights); }
+        void BuildHeights(MatchState s)
+        {
+            heightRoot=new GameObject("Alturas").transform; heightRoot.SetParent(boardRoot,false);
+            if(!heightFont) heightFont=Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+            for(int x=0;x<s.width;x++) for(int z=0;z<s.height;z++) {
+                var c=new Cell(x,z); if(s.At(c).terrain!=Terrain.Livre) continue;
+                var label=new GameObject($"Altura_{x}_{z}").transform; label.SetParent(heightRoot,false); label.localPosition=Position(s,c)+Vector3.up*.04f;
+                // Sombra escura um pouco abaixo e atrás: o número fica legível em casa clara e escura.
+                foreach(var (name,color,offset) in new[]{("Sombra",new Color(0,0,0,.75f),new Vector3(.02f,-.02f,.005f)),("Numero",new Color(1,.95f,.75f),Vector3.zero)}) {
+                    var go=new GameObject(name,typeof(TextMesh)); go.transform.SetParent(label,false); go.transform.localPosition=offset;
+                    var t=go.GetComponent<TextMesh>(); t.text=s.At(c).height.ToString(); t.font=heightFont; t.fontSize=64; t.characterSize=.045f; t.fontStyle=FontStyle.Bold;
+                    t.anchor=TextAnchor.MiddleCenter; t.alignment=TextAlignment.Center; t.color=color; go.GetComponent<MeshRenderer>().sharedMaterial=heightFont.material;
+                }
+            }
+            heightRoot.gameObject.SetActive(ShowHeights);
+        }
+        // Números deitados no topo da casa, sempre de pé para a câmera (a vista gira com Q/E).
+        void FaceHeights()
+        {
+            if(!ShowHeights||!heightRoot) return;
+            var rot=Quaternion.Euler(90,BoardCamera.transform.eulerAngles.y,0);
+            foreach(Transform label in heightRoot) label.rotation=rot;
         }
         // ── Kit Blender do Codex (tarefa 011): Models/Mapa/<cenário>/<peça>.glb; 1 casa = 1 m, nível = 0,45 m, pivô no centro da base ──
         static readonly string[] KitFolders={"pedreira","bosque","deserto","neve","vulcao"};
@@ -395,6 +429,12 @@ namespace ArenaTatica
                 if(t.frozenBy!=0) markers.Add(Overlay("gelo",p,iceMaterial,.9f));
                 if(t.mark) markers.Add(Overlay("fogos",p,markMaterial,.5f));
             }
+            // Portais (sprint 1): o brilho da invocação dos gatos da Asamyh em laço, deitado na entrada e na saída.
+            foreach(var g in s.portals??new List<Portal>()) foreach(int i in new[]{g.a,g.b})
+                markers.Add(PortalMark(Position(s,new Cell(i%s.width,i/s.width)),i==g.a));
+            // Minas terrestres do time: placa menor que a armadilha.
+            foreach(int i in s.mines??new List<int>()) if(i>=0&&i<s.tiles.Length&&s.tiles[i].trap!=0&&(viewer==0||s.Ally(s.tiles[i].trap,viewer)))
+                markers.Add(Cube("Mina",Position(s,new Cell(i%s.width,i/s.width))+Vector3.up*.05f,new Vector3(.3f,.06f,.3f),markMaterial,world));
             foreach(var f in s.fighters.Where(f=>f.Alive&&f.prisoned>0&&Board.Contains(s,f.cell))) {
                 var p=Position(s,f.cell); float h=Heights.TryGetValue(f.def,out float hh)?hh:.75f;
                 foreach(var corner in new[]{new Vector3(-.4f,0,-.4f),new Vector3(.4f,0,-.4f),new Vector3(-.4f,0,.4f),new Vector3(.4f,0,.4f)})
@@ -408,6 +448,16 @@ namespace ArenaTatica
             var go=new GameObject("Armadilha",typeof(SpriteRenderer)); go.transform.SetParent(world,false); go.transform.position=p+Vector3.up*.02f;
             var r=go.GetComponent<SpriteRenderer>(); r.sprite=frames[0]; if(spriteMaterial) r.sharedMaterial=spriteMaterial;
             var loop=go.AddComponent<SpriteLoop>(); loop.frames=frames; loop.fps=ArenaEfeitos.Fps("Sprites/Objetos/"+id+"/idle",8); loop.billboard=true; return go;
+        }
+        GameObject PortalMark(Vector3 p,bool entrance)
+        {
+            var frames=EffectFrames("chamar-gato/conjuracao")??EffectFrames("chamar-gato/impacto");
+            if(frames==null) return Cube(entrance?"Portal_entrada":"Portal_saida",p+Vector3.up*.02f,new Vector3(.8f,.02f,.8f),entrance?markMaterial:iceMaterial,world);
+            var go=new GameObject(entrance?"Portal_entrada":"Portal_saida",typeof(SpriteRenderer)); go.transform.SetParent(world,false); go.transform.position=p+Vector3.up*.03f; go.transform.rotation=Quaternion.Euler(90,0,0);
+            var r=go.GetComponent<SpriteRenderer>(); r.sprite=frames[0]; if(spriteMaterial) r.sharedMaterial=spriteMaterial; r.color=entrance?C(1,.75f,1):C(.7f,.9f,1);
+            go.transform.localScale=Vector3.one*(.95f/Mathf.Max(.01f,frames[0].bounds.size.x));
+            if(frames.Length>1) { var loop=go.AddComponent<SpriteLoop>(); loop.frames=frames; loop.fps=10; }
+            return go;
         }
         // Casa coberta: arte do Codex em Sprites/Efeitos/<id>/loop (deitada no chão) ou uma placa colorida.
         GameObject Overlay(string id,Vector3 p,Material fallback,float size)
@@ -633,6 +683,33 @@ namespace ArenaTatica
                     }
                     Game.Hud?.Log($"{Name(s,e.actor)}: {Content.AnySkill(e.info)?.name}");
                     break;
+                case "troca":
+                {
+                    // Shambles: os dois somem e reaparecem um no lugar do outro.
+                    units.TryGetValue(e.target,out var a); units.TryGetValue(e.value,out var b);
+                    if(e.path!=null&&e.path.Length==2) {
+                        var pa=Position(s,e.path[0]); var pb=Position(s,e.path[1]);
+                        if(actor) PlayClip(actor,Content.AnySkill(e.info)?.anim??"attack");
+                        Flash(pa+Vector3.up,Blue); Flash(pb+Vector3.up,Blue); yield return Wait(.25f);
+                        if(a) a.position=pb; if(b) b.position=pa; Flash(pa+Vector3.up,Blue); Flash(pb+Vector3.up,Blue); yield return Wait(.25f);
+                    }
+                    Game.Hud?.Log($"{Name(s,e.actor)}: {Content.AnySkill(e.info)?.name} ({Name(s,e.target)} ⇄ {Name(s,e.value)})");
+                    break;
+                }
+                case "portal-aberto":
+                    if(actor) PlayClip(actor,Content.AnySkill(e.info)?.anim??"attack");
+                    if(e.path!=null) foreach(var c in e.path) PhaseFx("chamar-gato/conjuracao",Position(s,c)+Vector3.up*.3f);
+                    Game.Hud?.Log($"{Name(s,e.actor)}: portal aberto por {e.value} turnos"); yield return Wait(.35f);
+                    break;
+                case "portal":
+                    if(actor&&e.path!=null&&e.path.Length==2) {
+                        var from=Position(s,e.path[0]); var to=Position(s,e.path[1]);
+                        PhaseFx("chamar-gato/impacto",from+Vector3.up*.5f); yield return Wait(.2f);
+                        actor.position=to; PhaseFx("chamar-gato/impacto",to+Vector3.up*.5f); yield return Wait(.2f);
+                    }
+                    Game.Hud?.Log($"{Name(s,e.actor)} atravessou o portal");
+                    break;
+                case "portal-fechado": Game.Hud?.Log($"Portal de {Name(s,e.actor)} fechou"); break;
                 case "forma":
                     if(actor) {
                         // info é a forma de destino: o clipe vem da skill que leva a ela (Damian: morph); a volta usa transform.
@@ -907,6 +984,12 @@ namespace ArenaTatica
         }
         // Quadros por pasta lidos uma vez; cada unidade ganha seu próprio rig (estado do clipe) apontando para eles.
         static readonly Dictionary<string,SpriteRig> rigCache=new Dictionary<string,SpriteRig>();
+        static bool HasRig(string folder)
+        {
+            if(string.IsNullOrEmpty(folder)) return false;
+            if(!rigCache.TryGetValue(folder,out var shared)) rigCache[folder]=shared=ReadRig(folder);
+            return shared!=null;
+        }
         static SpriteRig LoadRig(string folder)
         {
             if(string.IsNullOrEmpty(folder)) return null;
@@ -1408,7 +1491,7 @@ namespace ArenaTatica
             FitSky();
             AdvanceRigs(); SyncGhosts(); UpdateBars(s); UpdateCompanions(s); UpdateStates(s);
             for(int i=wings.Count-1;i>=0;i--) { var wing=wings[i]; if(!wing) { wings.RemoveAt(i); continue; } wing.localRotation=wingRest[wing]*Quaternion.Euler(0,0,Mathf.Sin(Time.time*1.8f)*3.15f); }
-            string key=s.revision+"|"+Game.Mode+"|"+Game.CanAct+"|"+Game.Hud?.HasPendingConfirmation;
+            string key=s.revision+"|"+Game.Mode+"|"+Game.CanAct+"|"+Game.CanPlace+"|"+Game.Hud?.HasPendingConfirmation;
             if(key!=shownKey) UpdateHighlights(key);
             Vector2 point=default; bool tap=false,hasPointer=false,down=false;
             var touches=Touchscreen.current?.touches.Where(t=>t.press.isPressed).ToArray();
@@ -1462,11 +1545,12 @@ namespace ArenaTatica
             if(overBoard||pressing&&pressOnBoard) {
                 bool valid=Pick(point,out var c,out _); hover.SetActive(valid&&!dragged); if(valid) hover.transform.position=Position(s,c)+Vector3.up*.03f;
                 if(valid&&tap&&Game.EditingMap) Game.MapEditor.Tap(c);
+                else if(valid&&tap&&Game.Placing) Game.PlaceTap(c);
                 else if(valid&&tap&&Game.Hud?.HasPendingConfirmation!=true) {
                     // Mover numa casa com lutador visível: abre a ficha dele (skills e o que fazem) em vez de tentar andar.
                     var who=Board.At(s,c); bool seen=who!=null&&(!who.hidden||s.Ally(who.team,Game.LocalTeam));
                     if(Game.Mode==""&&seen) Game.Hud?.Inspect(who);
-                    else if(Game.Mode=="") Game.Submit("mover",c); else if(Game.Mode=="desejo-d") Game.Hud?.ChooseCopy(c); else Game.Submit("skill",c,Game.Mode);
+                    else if(Game.Mode=="") Game.Submit("mover",c); else if(Game.Mode=="desejo-d") Game.Hud?.ChooseCopy(c); else if(Game.Hud?.ChooseRevive(c)!=true&&Game.Hud?.ChooseCat(c)!=true) SkillTap(c);
                 }
             } else hover.SetActive(false);
             var selected=EventSystem.current?EventSystem.current.currentSelectedGameObject:null; // "?." não enxerga objeto Unity destruído
@@ -1479,6 +1563,8 @@ namespace ArenaTatica
             // Q/E segurados giram aos poucos; ao soltar, a vista fica onde parou.
             if(!typing&&Keyboard.current?.qKey.isPressed==true) RotateBy(-90*Time.unscaledDeltaTime);
             if(!typing&&Keyboard.current?.eKey.isPressed==true) RotateBy(90*Time.unscaledDeltaTime);
+            if(!typing&&Keyboard.current?.hKey.wasPressedThisFrame==true) ToggleHeights();
+            FaceHeights();
         }
         // Limiar de toque/arrasto (~10 px) escalado por DPI e escala da interface, separado do limiar da pinça.
         float TouchScale => ArenaTouchGesture.Scale(Screen.dpi,ArenaHud.UiScale);
@@ -1518,6 +1604,20 @@ namespace ArenaTatica
         }
         // O tabuleiro nunca sai de vista; afastado de todo, a câmera volta ao centro.
         void ClampCamera() { var cam=BoardCamera.transform; cam.position=Home+Vector3.ClampMagnitude(cam.position-Home,(fitSize-BoardCamera.orthographicSize)*1.5f); }
+        // Toque com skill armada. Skill de 2 casas: o 1º toque guarda a casa (quem vai / entrada / 1º alvo) e o 2º envia.
+        void SkillTap(Cell c)
+        {
+            var f=Game.Active; var sk=f==null?null:Match.Skills(f).FirstOrDefault(x=>x.id==Game.Mode);
+            if(sk==null||!sk.TwoCells) { Game.Submit("skill",c,Game.Mode); return; }
+            if(!Game.HasFirst) {
+                if(!Game.Preview.CanTarget(f,sk,c,out string reason)) { Game.Notify(reason); return; }
+                Game.FirstCell=c; Game.FirstFor=Game.Mode; shownKey=null;
+                Game.Notify(sk.kind==SkillKind.Portal?"Agora escolha a saída do portal.":sk.kind==SkillKind.Troca?"Agora escolha o segundo lutador.":"Agora escolha o destino.");
+                return;
+            }
+            if(c==Game.FirstCell) { Game.FirstFor=""; shownKey=null; return; }
+            Game.Submit("skill",Game.FirstCell,Game.Mode,0,c);
+        }
         // Mover: casas ao alcance dos PM. Skill: área de alcance (clara) e alvos válidos (forte).
         void UpdateHighlights(string key)
         {
@@ -1527,6 +1627,8 @@ namespace ArenaTatica
             void Mark(Cell c,Material m) => highlights.Add(Cube("Alcance",Position(s,c)+Vector3.up*.012f,new Vector3(.8f,.012f,.8f),m,world));
             // Editor de mapas: casas de início (sempre livres) e a peça escolhida para mover.
             if(Game.EditingMap) { foreach(var c in Game.MapEditor.SpawnCells) Mark(c,moveMaterial); if(Game.MapEditor.Picked is Cell p) Mark(p,targetMaterial); return; }
+            // Posicionamento: casas da borda que o herói escolhido (ou qualquer um, sem escolha) pode ocupar (verde) e ele (forte).
+            if(Game.Placing) { if(!Game.CanPlace) return; foreach(var c in Game.Preview.PlaceCells(s.placing,s.F(Game.PlacePick))) Mark(c,moveMaterial); if(s.F(Game.PlacePick) is Fighter pick) Mark(pick.cell,targetMaterial); return; }
             if(!Game.CanAct||f==null||Game.Hud?.HasPendingConfirmation==true) return;
             if(Game.Mode=="") {
                 var costs=Board.Costs(s,f);
@@ -1534,10 +1636,11 @@ namespace ArenaTatica
                 return;
             }
             var sk=Match.Skills(f).FirstOrDefault(x=>x.id==Game.Mode); if(sk==null) { Game.Mode=""; return; }
-            var m=Game.Preview; int r=Mathf.Max(s.width,s.height);
+            var m=Game.Preview; int r=Mathf.Max(s.width,s.height); bool second=sk.TwoCells&&Game.HasFirst;
+            if(second) Mark(Game.FirstCell,moveMaterial);
             for(int x=-r;x<=r;x++) for(int z=-r;z<=r;z++) {
                 var c=f.cell+new Cell(x,z);
-                if(m.CanTarget(f,sk,c,out _)) Mark(c,targetMaterial);
+                if(second?c!=Game.FirstCell&&m.CanTarget(f,sk,Game.FirstCell,c,out _):m.CanTarget(f,sk,c,out _)) Mark(c,targetMaterial);
                 else if(m.InRange(f,sk,c,out _)) Mark(c,rangeMaterial);
             }
         }
