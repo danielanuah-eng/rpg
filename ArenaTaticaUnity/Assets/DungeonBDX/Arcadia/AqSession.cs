@@ -51,6 +51,9 @@ namespace DungeonBDX.Arcadia
         int routeIndex,attackTarget=-1,attackCard=-1;
         bool moveStepGuarded,waitingAttack,usedPhase,usedScout,usedPortal,usedDoor,usedResonance;
         uint rng;
+        readonly int firstMonster;
+        public readonly int[] Tuning=new int[AqTuning.Count];
+        public int BaseMoves=>Math.Max(1,3+Tuning[AqTuning.HeroMove]);
         public uint RandomState=>rng;
         public AqSession(string scenario,IEnumerable<IEnumerable<string>> parties,uint seed=19,bool autoMonsters=false)
         {
@@ -72,6 +75,7 @@ namespace DungeonBDX.Arcadia
                 var first=Units.First(u=>u.Guild==g);first.Gear.Add(new AqGear{Id="sword."+g,Name="Espada de reserva",Dice=3});
                 Units.Last(u=>u.Guild==g).Gear.Add(new AqGear{Id="bow."+g,Name="Arco de reserva",Dice=2,Ranged=true});
             }
+            firstMonster=Units.Count;
             foreach(var m in Scenario.Monsters)
                 Units.Add(new AqUnit{Id=Units.Count,Guild=-1,Monster=true,HeroId=m.HeroId,Name=m.Name??(m.HeroId=="brutamontes-errante"?"Guardião da praça":"Saqueador de pedra"),SpriteFolder=m.SpriteFolder,Ability=m.Ability,AbilityText=m.AbilityText??"",
                     Cell=m.Cell,Health=m.Health,MaxHealth=m.Health,Defense=m.Defense,Dice=m.Dice,Ranged=m.Ranged,Movement=m.Movement,Overkill=m.Overkill,Reward=m.Reward,Huge=m.Huge||m.HeroId=="brutamontes-errante"});
@@ -132,6 +136,9 @@ namespace DungeonBDX.Arcadia
         AqResult Execute(AqCommand c)
         {
             if(Reaction!=null)return React(c);
+            if(c.Kind=="tune")return Tune(c);
+            if(c.Kind=="buy")return Buy(c);
+            if(c.Kind=="discard")return Discard(c);
             if(c.Kind=="end")return End();
             if(c.Kind=="rest")return Rest();
             if(c.Kind=="revive")return Revive(c);
@@ -185,6 +192,7 @@ namespace DungeonBDX.Arcadia
         AqResult Attack(AqUnit u,AqUnit target,int card)
         {
             if(Attacked||card<0||card>=u.Gear.Count||u.Gear[card].Exhausted)return Fail("Escolha uma carta restaurada. Apenas um ataque por ativação.");
+            if(u.Gear[card].Passive)return Fail(u.Gear[card].Name+" é passiva: não ataca.");
             var gear=u.Gear[card];if(!CanTarget(u,target,gear))return Fail("Alvo sem alcance ou linha de visão.");
             Bind(u);Attacked=true;if(MovementStarted)MovementClosed=true;
             gear.Exhausted=true;attackTarget=target.Id;attackCard=card;waitingAttack=true;
@@ -259,7 +267,7 @@ namespace DungeonBDX.Arcadia
         {
             var rx=Reaction;var m=Unit(rx.Monster);var hero=Unit(rx.Hero);
             if(!m.Alive)Kill(m,hero,r);
-            var spawn=Scenario.Monsters.FirstOrDefault(s=>s.HeroId==m.HeroId);if(spawn!=null)m.Dice=spawn.Dice;
+            var spawn=SpawnOf(m);if(spawn!=null)m.Dice=MonsterDice(spawn);
             reactions.RemoveAt(0);Continue(r);
         }
         void AutoReactions(AqResult r)
@@ -277,14 +285,15 @@ namespace DungeonBDX.Arcadia
             }
         }
         int NextFace(){rng^=rng<<13;rng^=rng>>17;rng^=rng<<5;return (int)(rng%6)+1;}
-        int Roll(int dice,bool ranged,bool defense,bool reroll,out int crit)
+        int Roll(int dice,bool ranged,bool defense,bool reroll,out int crit,bool sharp=false)
         {
             int successes=0;crit=0;bool rerolled=false;
+            bool Critical(int face)=>face==6||sharp&&face==5;
             for(int i=0;i<Math.Max(0,Math.Min(MaxDice,dice));i++)
             {
-                int face=NextFace();bool hit=face==6||(defense?face<=2:ranged?face==4||face==5:face<=3);
-                if(!hit&&reroll&&!rerolled){face=NextFace();rerolled=true;hit=face==6||(defense?face<=2:ranged?face==4||face==5:face<=3);}
-                if(hit)successes++;if(face==6)crit++;
+                int face=NextFace();bool hit=Critical(face)||(defense?face<=2:ranged?face==4||face==5:face<=3);
+                if(!hit&&reroll&&!rerolled){face=NextFace();rerolled=true;hit=Critical(face)||(defense?face<=2:ranged?face==4||face==5:face<=3);}
+                if(hit)successes++;if(Critical(face))crit++;
             }
             // Author exception: linear critical bonus, no recursive extra dice.
             return successes+Math.Min(3,crit);
@@ -298,9 +307,10 @@ namespace DungeonBDX.Arcadia
             if(a.Ability=="flank"&&Units.Any(v=>v.Alive&&v!=a&&Enemy(b,v)&&Board.Close(v.Cell,b.Cell)))dice++;
             if(a.Ability=="isolate"&&!Units.Any(v=>v.Alive&&v!=b&&!Enemy(b,v)&&Board.Close(v.Cell,b.Cell)))dice++;
             if(AqProfiles.Has(a.Ability,"pack")&&Units.Any(v=>v.Alive&&v!=a&&v.Monster&&Board.Close(v.Cell,a.Cell)))dice++;
+            if(!a.Monster)dice=Math.Max(1,dice+Tuning[AqTuning.HeroDice]);
             if(AqProfiles.Has(b.Ability,"prickly")&&!a.Monster)
             {Hurt(a,1,b,r);if(!a.Alive){Kill(a,b,r);r.Message+=$" {a.Name} cai nos espinhos de {b.Name}.";return 0;}}
-            int hits=Roll(dice,gear.Ranged,false,a.Ability=="focus"&&gear.Ranged,out int crit);
+            int hits=Roll(dice,gear.Ranged,false,a.Ability=="focus"&&gear.Ranged||gear.Reroll,out int crit,gear.Sharp);
             if(AqProfiles.Has(b.Ability,"might"))hits=crit+Math.Min(3,crit);
             if(AqProfiles.Has(a.Ability,"brutal"))hits+=crit;
             if(a.Ability=="berserk"&&a.Health==1&&!gear.Ranged)hits++;
@@ -425,6 +435,51 @@ namespace DungeonBDX.Arcadia
             if(!Resting||a==null||b==null||a==b||a.Monster||b.Monster||a.Guild!=CurrentGuild||b.Guild!=CurrentGuild||c.Card<0||c.Card>=a.Gear.Count||b.Gear.Count>=4)return Fail("Durante descanso, transfira uma carta para um aliado com espaço (máximo 4).");
             var gear=a.Gear[c.Card];a.Gear.RemoveAt(c.Card);b.Gear.Add(gear);return Ok(gear.Name+" transferida para "+b.Name+".");
         }
+        AqResult Buy(AqCommand c)
+        {
+            var u=Unit(c.Actor);
+            if(!Resting||u==null||u.Monster||u.Guild!=CurrentGuild||c.Card<0||c.Card>=AqShop.Items.Length)return Fail("A loja só abre durante o descanso da guilda.");
+            var item=AqShop.Items[c.Card];var g=Guilds[CurrentGuild];
+            if(u.Gear.Count>=4)return Fail(u.Name+" já carrega 4 cartas. Descarte ou transfira uma antes.");
+            if(g.Coins<item.Cost)return Fail($"{item.Name} custa {item.Cost} moedas; a guilda tem {g.Coins}.");
+            g.Coins-=item.Cost;u.Gear.Add(item.Create(item.Id+"."+u.Id+"."+Commands.Count));
+            return Ok($"{u.Name} comprou {item.Name} por {item.Cost} moedas.");
+        }
+        AqResult Discard(AqCommand c)
+        {
+            var u=Unit(c.Actor);
+            if(!Resting||u==null||u.Monster||u.Guild!=CurrentGuild||c.Card<0||c.Card>=u.Gear.Count)return Fail("Descarte cartas só durante o descanso.");
+            var gear=u.Gear[c.Card];if(gear.Id=="signature."+u.HeroId)return Fail("A arma própria do herói não pode ser descartada.");
+            u.Gear.RemoveAt(c.Card);return Ok(gear.Name+" descartada.");
+        }
+        // Host adjustment: absolute offset per stat, only before the first real command of the scenario.
+        AqResult Tune(AqCommand c)
+        {
+            if(Commands.Any(v=>v.Kind!="tune")||ActiveId>=0||Resting||Turn!=1)return Fail("Os ajustes do host só valem antes da primeira jogada.");
+            if(!AqTuning.Valid(c.Card,c.X))return Fail("Ajuste fora dos limites.");
+            Tuning[c.Card]=c.X;
+            foreach(var u in Units)
+            {
+                if(!u.Monster)
+                {
+                    var h=AqContent.Hero(u.HeroId);u.MaxHealth=u.Health=Math.Max(1,h.Health+Tuning[AqTuning.HeroHealth]);
+                    u.Defense=Math.Max(0,h.Defense+Tuning[AqTuning.HeroDefense]);continue;
+                }
+                var s=SpawnOf(u);if(s==null)continue;
+                u.MaxHealth=u.Health=Math.Max(1,s.Health+Tuning[AqTuning.MonsterHealth]);u.Defense=Math.Max(0,s.Defense+Tuning[AqTuning.MonsterDefense]);
+                u.Dice=MonsterDice(s);u.Movement=Math.Max(0,s.Movement+Tuning[AqTuning.MonsterMove]);
+                u.Overkill=Math.Max(1,s.Overkill+Tuning[AqTuning.MonsterOverkill]);u.Reward=Math.Max(0,s.Reward+Tuning[AqTuning.MonsterReward]);
+            }
+            foreach(var g in Guilds)g.Coins=Tuning[AqTuning.StartCoins];
+            MovesLeft=BaseMoves;
+            return Ok($"Ajuste do host: {AqTuning.Labels[c.Card]} {(c.X>0?"+":"")}{c.X}.");
+        }
+        AqSpawn SpawnOf(AqUnit m)
+        {
+            int i=m.Id-firstMonster;
+            return i>=0&&i<Scenario.Monsters.Count&&Scenario.Monsters[i].HeroId==m.HeroId?Scenario.Monsters[i]:Scenario.Monsters.FirstOrDefault(s=>s.HeroId==m.HeroId);
+        }
+        int MonsterDice(AqSpawn s)=>Math.Max(1,s.Dice+Tuning[AqTuning.MonsterDice]);
         AqResult End()
         {
             var r=Ok("Próxima guilda.");
@@ -442,7 +497,7 @@ namespace DungeonBDX.Arcadia
                 }
                 SpawnQueue.Clear();r.Message+=" Entrada de monstros resolvida.";
             }
-            CurrentGuild=(CurrentGuild+1)%Guilds.Count;Turn++;ActiveId=-1;MovesLeft=3;Moved=0;
+            CurrentGuild=(CurrentGuild+1)%Guilds.Count;Turn++;ActiveId=-1;MovesLeft=BaseMoves;Moved=0;
             Attacked=MovementClosed=MovementStarted=Resting=usedPhase=usedScout=usedPortal=usedDoor=usedResonance=false;
             Array.Clear(damage,0,damage.Length);Array.Clear(healing,0,healing.Length);restAllies.Clear();return r;
         }
@@ -450,13 +505,15 @@ namespace DungeonBDX.Arcadia
         {
             var s=new StringBuilder();s.Append(Version).Append('|').Append(Scenario.Id).Append('|').Append(rng).Append('|').Append(CurrentGuild).Append('|').Append(Turn).Append('|').Append(ActiveId).Append('|').Append(MovesLeft).Append('|').Append(Moved).Append('|').Append(Attacked).Append('|').Append(MovementClosed).Append('|').Append(Resting).Append('|').Append(Winner);
             s.Append('|').Append(MovementStarted).Append('|').Append(string.Join(",",resolvedDeaths.OrderBy(v=>v)));
-            foreach(var u in Units){s.Append(';').Append(u.Id).Append(':').Append(u.HeroId).Append(':').Append(u.Cell).Append(':').Append(u.Health).Append(':').Append(u.Deaths).Append(':').Append(u.SpentLife).Append(':').Append(u.Dice);foreach(var g in u.Gear)s.Append('/').Append(g.Id).Append(',').Append(g.Exhausted).Append(',').Append(g.Ranged).Append(',').Append(g.Dice).Append(',').Append(g.Defense).Append(',').Append(g.Clip);s.Append('[').Append(string.Join(",",u.Carry)).Append(']');}
+            foreach(var u in Units){s.Append(';').Append(u.Id).Append(':').Append(u.HeroId).Append(':').Append(u.Cell).Append(':').Append(u.Health).Append(':').Append(u.Deaths).Append(':').Append(u.SpentLife).Append(':').Append(u.Dice);foreach(var g in u.Gear)s.Append('/').Append(g.Id).Append(',').Append(g.Exhausted).Append(',').Append(g.Ranged).Append(',').Append(g.Dice).Append(',').Append(g.Defense).Append(',').Append(g.Clip).Append(g.Sharp?",sharp":"").Append(g.Reroll?",reroll":"");s.Append('[').Append(string.Join(",",u.Carry)).Append(']');}
             foreach(var g in Guilds)s.Append(';').Append(g.Coins).Append(':').Append(g.Emblems).Append(':').Append(g.Rituals).Append(':').Append(string.Join(",",g.Completed.OrderBy(x=>x)));
             foreach(var e in Board.Edges)s.Append(';').Append(e.A).Append(':').Append(e.B).Append(':').Append(e.Open);
             foreach(var t in Scenario.Tokens)s.Append(';').Append(t.Id).Append(':').Append(t.Cell).Append(':').Append(t.Taken).Append(':').Append(t.Owner);
             foreach(var rx in reactions)s.Append(';').Append(rx.Monster).Append(':').Append(rx.Hero).Append(':').Append(rx.Movement).Append(':').Append(rx.Vengeance).Append(':').Append(rx.Dying);
             s.Append('|').Append(string.Join(",",SpawnQueue)).Append('|').Append(string.Join(",",damage)).Append('|').Append(string.Join(",",healing)).Append('|').Append(string.Join(",",firstQuests.OrderBy(v=>v))).Append('|').Append(string.Join(",",restAllies.OrderBy(v=>v))).Append('|').Append(string.Join(",",royalReward.OrderBy(v=>v)));
             s.Append('|').Append(string.Join(";",moveRoute)).Append(':').Append(routeIndex).Append(':').Append(moveStepGuarded).Append(':').Append(waitingAttack).Append(':').Append(attackTarget).Append(':').Append(attackCard).Append(':').Append(usedPhase).Append(':').Append(usedScout).Append(':').Append(usedPortal).Append(':').Append(usedDoor).Append(':').Append(usedResonance);
+            // Old saves have no host adjustments; their fingerprint stays unchanged.
+            if(Tuning.Any(v=>v!=0))s.Append("|tune:").Append(string.Join(",",Tuning));
             return s.ToString();
         }
         static AqResult Fail(string s)=>new AqResult(false,s);

@@ -14,7 +14,41 @@ namespace DungeonBDX.Arcadia
     {
         public string Id,Name,Clip="attack";
         public int Dice=3,Defense;
-        public bool Ranged,Exhausted;
+        // Sharp: a 5 also counts as critical (gets through "might"). Reroll: one failed attack die is rolled again.
+        public bool Ranged,Exhausted,Sharp,Reroll;
+        public bool Passive=>Dice<=0;
+    }
+    // Shop card in the style of the Arcadia upgrades: bought with guild coins while resting. Names are original.
+    public sealed class AqShopItem
+    {
+        public string Id,Name,Text,Clip="attack";
+        public int Cost,Dice,Defense;
+        public bool Ranged,Sharp,Reroll;
+        public AqGear Create(string id)=>new AqGear{Id=id,Name=Name,Clip=Clip,Dice=Dice,Defense=Defense,Ranged=Ranged,Sharp=Sharp,Reroll=Reroll};
+    }
+    public static class AqShop
+    {
+        public static readonly AqShopItem[] Items=
+        {
+            new AqShopItem{Id="iron-blade",Name="Lâmina de ferro batido",Cost=3,Dice=4,Text="Ataque próximo, 4 dados."},
+            new AqShopItem{Id="yew-bow",Name="Arco longo de teixo",Cost=3,Dice=3,Ranged=true,Text="Ataque à distância, 3 dados."},
+            new AqShopItem{Id="leather-vest",Name="Gibão acolchoado",Cost=3,Dice=0,Defense=1,Text="Passiva: +1 dado de defesa."},
+            new AqShopItem{Id="keen-dagger",Name="Adaga afiada",Cost=4,Dice=3,Sharp=true,Text="Ataque próximo, 3 dados. Afiada: 5 também é crítico."},
+            new AqShopItem{Id="echo-staff",Name="Cajado do eco",Cost=4,Dice=3,Ranged=true,Reroll=true,Clip="cast",Text="Ataque à distância, 3 dados. Rerrola uma falha."},
+            new AqShopItem{Id="heavy-crossbow",Name="Besta pesada",Cost=5,Dice=4,Ranged=true,Text="Ataque à distância, 4 dados."},
+            new AqShopItem{Id="rune-greatsword",Name="Montante rúnico",Cost=6,Dice=5,Text="Ataque próximo, 5 dados."},
+            new AqShopItem{Id="glass-arrows",Name="Flechas de vidro-dragão",Cost=6,Dice=3,Ranged=true,Sharp=true,Text="Ataque à distância, 3 dados. Afiada: 5 também é crítico."},
+            new AqShopItem{Id="scale-coat",Name="Couraça de escamas",Cost=6,Dice=0,Defense=2,Text="Passiva: +2 dados de defesa."},
+            new AqShopItem{Id="obsidian-spear",Name="Lança de obsidiana",Cost=7,Dice=4,Sharp=true,Reroll=true,Text="Ataque próximo, 4 dados. Afiada e rerrola uma falha."},
+        };
+    }
+    // Host adjustments, applied as "tune" commands before the first move so save and replay stay seed + commands.
+    public static class AqTuning
+    {
+        public const int HeroHealth=0,HeroDefense=1,HeroDice=2,HeroMove=3,MonsterHealth=4,MonsterDefense=5,MonsterDice=6,MonsterMove=7,MonsterOverkill=8,StartCoins=9,MonsterReward=10,Count=11;
+        public static readonly string[] Labels={"Vida dos heróis","Defesa dos heróis","Dados dos heróis","Movimento dos heróis","Vida dos inimigos","Defesa dos inimigos","Dados dos inimigos","Movimento dos inimigos","Overkill dos inimigos","Moedas iniciais","Moedas por inimigo"};
+        public static readonly int[] Min={-3,-1,-2,-1,-5,-2,-3,-1,-5,0,-1},Max={5,3,3,2,5,3,3,2,5,20,3};
+        public static bool Valid(int stat,int value)=>stat>=0&&stat<Count&&value>=Min[stat]&&value<=Max[stat];
     }
     [Serializable] public sealed class AqUnit
     {

@@ -379,6 +379,7 @@ namespace DungeonBDX
             if(Array.IndexOf(args,"-dungeonbdx-aq-menu")>=0&&capture>=0&&capture+1<args.Length)
             {
                 var menu=OpenArcadia();var cameraObject=new GameObject("AQ menu capture",typeof(Camera));var shotCamera=cameraObject.GetComponent<Camera>();shotCamera.clearFlags=CameraClearFlags.SolidColor;
+                int menuTab=Array.IndexOf(args,"-dungeonbdx-aq-tab");if(menuTab>=0&&menuTab+1<args.Length)menu.ShowTab(args[menuTab+1]);
                 for(int i=0;i<30;i++)yield return null;
                 AqMatch.Capture(args[capture+1],shotCamera,menu.HudCanvas);Application.Quit(0);yield break;
             }
@@ -388,8 +389,11 @@ namespace DungeonBDX
                 var menu=OpenArcadia();var match=GetComponent<AqMatch>()??gameObject.AddComponent<AqMatch>();
                 string scenario=aq+1<args.Length&&!args[aq+1].StartsWith("-")?args[aq+1]:Arcadia.AqScenarios.Ids[0];
                 string probeRoot=capture>=0&&Array.IndexOf(args,"-dungeonbdx-qa")>=0?Path.Combine(Application.temporaryCachePath,"DungeonBDX-Probes",Guid.NewGuid().ToString("N")):null;
-                if(!match.Open(menu,scenario,AqHeroImport.DefaultParties(),false,false,probeRoot)){Debug.LogError(match.Message);Application.Quit(1);yield break;}
+                bool shopShot=Array.IndexOf(args,"-dungeonbdx-aq-shop")>=0;int[] tuning=null;
+                if(shopShot){tuning=new int[Arcadia.AqTuning.Count];tuning[Arcadia.AqTuning.StartCoins]=8;}
+                if(!match.Open(menu,scenario,AqHeroImport.DefaultParties(),false,false,probeRoot,tuning)){Debug.LogError(match.Message);Application.Quit(1);yield break;}
                 menu.HudCanvas.gameObject.SetActive(false);menu.enabled=false;
+                if(shopShot&&capture>=0&&capture+1<args.Length){yield return match.CaptureShop(args[capture+1]);yield break;}
                 if(capture>=0&&capture+1<args.Length)yield return match.CaptureProbe(args[capture+1]);
                 yield break;
             }

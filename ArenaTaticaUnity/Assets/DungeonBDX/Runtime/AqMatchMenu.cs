@@ -121,6 +121,7 @@ namespace DungeonBDX
         DungeonShell shell;Canvas canvas;RectTransform safe,body;string scenario=AqScenarios.Ids[0],tab="adventures",inspected="colosso",message="";
         readonly List<List<string>> parties=AqHeroImport.DefaultParties(4).Select(p=>p.ToList()).ToList();
         int guildCount=2,guild,page,lastW,lastH;bool autoMonsters;
+        readonly int[] tuning=new int[AqTuning.Count];
         public Canvas HudCanvas=>canvas;
         public void Open(DungeonShell owner)
         {shell=owner;if(!canvas)canvas=AqUi.Canvas(transform,"Adventure selection");canvas.gameObject.SetActive(true);enabled=true;shell.HideForArcadia();Draw();}
@@ -133,12 +134,12 @@ namespace DungeonBDX
             safe=AqUi.Box(canvas.transform,"Safe area",0,0,1,1,Color.clear);DungeonShell.ApplySafeArea(safe,Screen.safeArea,Screen.width,Screen.height);
             AqUi.Text(safe,"DUNGEON<size=75%>BDX</size>",.035f,.92f,.7f,.065f,39,AqUi.Gold);
             AqUi.Text(safe,"GUILDAS  /  AVENTURAS  /  RIVAIS",.04f,.885f,.8f,.04f,14,AqUi.Muted);
-            string[] tabs={"adventures","heroes","rules"},labels={"AVENTURAS","GUILDAS & HERÓIS","REGRAS"};
-            for(int i=0;i<3;i++){string key=tabs[i];AqUi.Tab(safe,labels[i],.03f+i*.315f,.805f,.31f,.072f,()=>{tab=key;Draw();},tab==key);}
+            string[] tabs={"adventures","heroes","rules","host"},labels={"AVENTURAS","GUILDAS & HERÓIS","REGRAS","AJUSTES DO HOST"};
+            for(int i=0;i<4;i++){string key=tabs[i];AqUi.Tab(safe,labels[i],.03f+i*.236f,.805f,.232f,.072f,()=>{tab=key;Draw();},tab==key);}
             body=AqUi.Box(safe,"Page",.03f,.17f,.94f,.62f,AqUi.Panel);
-            if(tab=="adventures")Adventures(portrait);else if(tab=="heroes")Heroes(portrait);else Rules();
+            if(tab=="adventures")Adventures(portrait);else if(tab=="heroes")Heroes(portrait);else if(tab=="host")Host(portrait);else Rules();
             var foot=AqUi.Box(safe,"Bottom controls",.03f,.025f,.94f,.13f,AqUi.Panel);
-            AqUi.Text(foot,message==""?$"{guildCount} GUILDAS · 3 HERÓIS CADA · { (autoMonsters?"REAÇÕES AUTOMÁTICAS":"MONSTROS CONTROLADOS PELO RIVAL")}":message,.02f,.63f,.96f,.31f,15,AqUi.Muted);
+            AqUi.Text(foot,message==""?$"{guildCount} GUILDAS · 3 HERÓIS CADA · { (autoMonsters?"REAÇÕES AUTOMÁTICAS":"MONSTROS CONTROLADOS PELO RIVAL")}{(tuning.Any(v=>v!=0)?" · AJUSTES DO HOST ATIVOS":"")}":message,.02f,.63f,.96f,.31f,15,AqUi.Muted);
             bool exists=new AqLocalSave(AqUi.Root,scenario).Exists;
             AqUi.Button(foot,exists?"RECOMEÇAR CENÁRIO":"INICIAR AVENTURA",.015f,.07f,.48f,.52f,()=>Launch(false));
             AqUi.Button(foot,"CONTINUAR PARTIDA SALVA",.505f,.07f,.48f,.52f,()=>Launch(true)).interactable=exists;
@@ -194,16 +195,33 @@ namespace DungeonBDX
             AqUi.Text(body,"CONFIGURAÇÃO DA PARTIDA",.04f,.84f,.92f,.12f,27,AqUi.Gold);
             for(int i=2;i<=4;i++){int count=i;AqUi.Button(body,i+" GUILDAS",.04f+(i-2)*.31f,.72f,.3f,.1f,()=>{guildCount=count;guild=Math.Min(guild,guildCount-1);Draw();},guildCount==count);}
             AqUi.Button(body,autoMonsters?"REAÇÕES: AUTOMÁTICAS":"REAÇÕES: JOGADOR À DIREITA",.04f,.59f,.92f,.1f,()=>{autoMonsters=!autoMonsters;Draw();});
-            AqUi.Text(body,"Em cada turno, ative UM herói ou descanse a guilda.\nMovimento: 3 pontos; ataque antes ou depois, sem interromper o movimento.\nAtaques exaustam cartas; descanso restaura cartas, permite transferir itens e ressuscitar.\nInventário: 4 cartas por herói. Duas miniaturas por espaço; Colosso ocupa o espaço inteiro.\nMonstros reagem por Alerta e Vingança. Extermínio impede a última reação.\nVitória: 2 missões com 2 guildas; 3 com 3–4 guildas, incluindo ao menos uma PvE.",.04f,.17f,.92f,.4f,19);
+            AqUi.Text(body,"Em cada turno, ative UM herói ou descanse a guilda.\nMovimento: 3 pontos; ataque antes ou depois, sem interromper o movimento.\nAtaques exaustam cartas; descanso restaura cartas, abre a loja (moedas), permite transferir itens e ressuscitar.\nInventário: 4 cartas por herói. Duas miniaturas por espaço; Colosso ocupa o espaço inteiro.\nMonstros reagem por Alerta e Vingança. Extermínio impede a última reação.\nVitória: 2 missões com 2 guildas; 3 com 3–4 guildas, incluindo ao menos uma PvE.",.04f,.17f,.92f,.4f,19);
             AqUi.Text(body,"BALANCEAMENTO CONFIRMADO: até 6 dados, crítico linear (+1 por crítico, bônus máx. 3), mitigação máx. 60%, dano 30/ação e 60/turno. Heróis e aventuras DungeonBDX adaptados às referências AQ.",.04f,.025f,.92f,.13f,15,AqUi.Muted);
+        }
+        // Host adjustments: offsets over the Arcadia base lines, recorded in the replay as "tune" commands.
+        void Host(bool portrait)
+        {
+            AqUi.Text(body,"AJUSTES DO HOST",.03f,.9f,.6f,.08f,24,AqUi.Gold);
+            AqUi.Button(body,"ZERAR AJUSTES",.68f,.9f,.3f,.08f,()=>{Array.Clear(tuning,0,tuning.Length);Draw();});
+            int cols=portrait?1:2,rows=(AqTuning.Count+cols-1)/cols;float h=.76f/rows,w=.96f/cols;
+            for(int i=0;i<AqTuning.Count;i++)
+            {
+                int stat=i;float x=.02f+i/rows*w,y=.12f+(rows-1-i%rows)*h;
+                AqUi.Text(body,AqTuning.Labels[i],x+.01f,y,w*.55f,h,portrait?15:18);
+                AqUi.Button(body,"-",x+w*.56f,y,w*.12f,h,()=>{tuning[stat]=Math.Max(AqTuning.Min[stat],tuning[stat]-1);Draw();}).interactable=tuning[i]>AqTuning.Min[i];
+                AqUi.Text(body,(tuning[i]>0?"+":"")+tuning[i],x+w*.68f,y,w*.16f,h,20,tuning[i]==0?AqUi.Muted:AqUi.Gold,TextAlignmentOptions.Center);
+                AqUi.Button(body,"+",x+w*.84f,y,w*.12f,h,()=>{tuning[stat]=Math.Min(AqTuning.Max[stat],tuning[stat]+1);Draw();}).interactable=tuning[i]<AqTuning.Max[i];
+            }
+            AqUi.Text(body,"Somados aos valores base do Arcadia de cada herói e inimigo. Valem ao INICIAR AVENTURA e ficam gravados no save e no replay; partidas continuadas mantêm os ajustes com que começaram.",.03f,.01f,.94f,.1f,14,AqUi.Muted);
         }
         void Launch(bool resume)
         {
             if(!resume&&parties.Take(guildCount).Any(p=>p.Count!=3)){tab="heroes";message="Complete as guildas com três heróis cada.";Draw();return;}
             var match=gameObject.GetComponent<AqMatch>()??gameObject.AddComponent<AqMatch>();
-            if(!match.Open(this,scenario,parties.Take(guildCount).Select(p=>p.ToArray()).ToArray(),autoMonsters,resume)){message=match.Message;Draw();return;}
+            if(!match.Open(this,scenario,parties.Take(guildCount).Select(p=>p.ToArray()).ToArray(),autoMonsters,resume,null,tuning)){message=match.Message;Draw();return;}
             canvas.gameObject.SetActive(false);enabled=false;
         }
         public void Return(){canvas.gameObject.SetActive(true);enabled=true;Draw();}
+        public void ShowTab(string key){tab=key;Draw();}
     }
 }

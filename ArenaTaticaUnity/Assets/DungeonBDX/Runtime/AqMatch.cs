@@ -16,7 +16,7 @@ namespace DungeonBDX
         AqMatchMenu menu;AqJournal journal;AqLocalSave store;GameObject world;AqBoardView view;Canvas canvas;RectTransform safe;
         readonly DungeonCameraInput input=new DungeonCameraInput();
         readonly List<RaycastResult> hits=new List<RaycastResult>();
-        int selected,card,lastW,lastH;string mode="move",pendingOperation;AqResult pendingResult;
+        int selected,card,lastW,lastH;string mode="move",pendingOperation;AqResult pendingResult;bool shop;
         AudioSource music,sfx;bool muted;
         public AqSession Session=>journal?.Session;
         public AqBoardView View=>view;
@@ -24,13 +24,17 @@ namespace DungeonBDX
         public string Message {get;private set;}="";
         public bool IsOpen=>world&&world.activeSelf;
         public bool SavePaused=>pendingOperation!=null;
-        public bool Open(AqMatchMenu owner,string scenario,string[][] parties,bool autoMonsters,bool resume,string storageRoot=null)
+        public bool Open(AqMatchMenu owner,string scenario,string[][] parties,bool autoMonsters,bool resume,string storageRoot=null,int[] tuning=null)
         {
             try
             {
                 var nextStore=new AqLocalSave(storageRoot??AqUi.Root,scenario);var stored=nextStore.Load();
                 if(resume&&stored==null){Message="Nenhuma partida salva neste cenário.";return false;}
                 var next=resume?stored:new AqJournal(scenario,parties,Environment.GetCommandLineArgs().Contains("-dungeonbdx-qa")?29u:unchecked((uint)DateTime.UtcNow.Ticks),autoMonsters);
+                // Host adjustments enter the replay as the first commands.
+                if(!resume&&tuning!=null)
+                    for(int i=0;i<Math.Min(tuning.Length,AqTuning.Count);i++)
+                        if(tuning[i]!=0&&!next.Session.Apply(new AqCommand("tune",card:i,x:tuning[i])).Accepted){Message="Ajuste do host inválido: "+AqTuning.Labels[i];return false;}
                 if(!resume)nextStore.Save(next,Guid.NewGuid().ToString("N"));
                 Cleanup();menu=owner;journal=next;store=nextStore;AqHeroImport.Apply(Session);input.Reset();
                 world=new GameObject("Arcadia adventure");world.transform.SetParent(transform,false);view=world.AddComponent<AqBoardView>();view.Build(Session.Scenario,Session.Units);
@@ -149,14 +153,15 @@ namespace DungeonBDX
             }
             var hero=Session.Unit(selected);string ability=hero.AbilityText.Split(':')[0];
             string state=Session.Reaction!=null?$"GUILDA {Session.Controller+1}: REAÇÃO DE {Session.Unit(Session.Reaction.Monster).Name.ToUpperInvariant()} · MOV {Session.Reaction.Movement}"+(string.IsNullOrEmpty(Session.Unit(Session.Reaction.Monster).AbilityText)?"":" · "+Session.Unit(Session.Reaction.Monster).AbilityText.Split(':')[0]):
-                Session.Resting?"DESCANSO · carta + herói transfere; caído ressuscita":$"{hero.Name} · MOV {Session.MovesLeft}/3 · ATAQUE {(Session.Attacked?"USADO":"PRONTO")} · {ability}";
+                Session.Resting?"DESCANSO · carta + herói transfere; caído ressuscita":$"{hero.Name} · MOV {Session.MovesLeft}/{Session.BaseMoves} · ATAQUE {(Session.Attacked?"USADO":"PRONTO")} · {ability}";
             AqUi.Text(foot,state,stateArea.x,stateArea.y,stateArea.width,stateArea.height,15,AqUi.Ink);
             for(int i=0;i<4;i++)
             {
                 int index=i;var g=i<hero.Gear.Count?hero.Gear[i]:null;
-                var b=AqUi.Button(foot,g==null?"":g.Name+"\n<size=80%>"+(g.Exhausted?"EXAUSTA":$"{g.Dice} DADOS · {(g.Ranged?"VISÃO":"PRÓXIMO")}")+"</size>",cardArea.x+i*cardArea.width/4,cardArea.y,cardArea.width/4-.004f,cardArea.height,
-                    ()=>{card=index;mode=Session.Resting?"transfer":"attack";Draw();},mode=="attack"&&card==i);
-                b.interactable=g!=null&&Session.Reaction==null&&(!g.Exhausted||Session.Resting);
+                string detail=g==null?"":g.Passive?$"PASSIVA · +{g.Defense} DEFESA":g.Exhausted?"EXAUSTA":$"{g.Dice} DADOS · {(g.Ranged?"VISÃO":"PRÓXIMO")}{(g.Sharp?" · AFIADA":"")}{(g.Reroll?" · RERROLA":"")}";
+                var b=AqUi.Button(foot,g==null?"":g.Name+"\n<size=80%>"+detail+"</size>",cardArea.x+i*cardArea.width/4,cardArea.y,cardArea.width/4-.004f,cardArea.height,
+                    ()=>{card=index;mode=Session.Resting?"transfer":"attack";Draw();},(mode=="attack"||Session.Resting&&mode=="transfer")&&card==i);
+                b.interactable=g!=null&&Session.Reaction==null&&(Session.Resting||!g.Exhausted&&!g.Passive);
             }
             // Actions: one row in portrait; a 3 + 2 grid on PC.
             void Act(int slot,int count,int row,string text,Action click,bool on=false,bool enabled=true,string icon=null)
@@ -177,7 +182,8 @@ namespace DungeonBDX
             {
                 int top=portrait?5:3,low=portrait?5:2;
                 Act(0,top,0,"MOVER",()=>{mode="move";Draw();},mode=="move",icon:"move");
-                Act(1,top,0,"PORTA",()=>{mode="door";Draw();},icon:"door");
+                if(Session.Resting)Act(1,top,0,"LOJA",()=>{shop=true;Draw();},shop,icon:"coin");
+                else Act(1,top,0,"PORTA",()=>{mode="door";Draw();},icon:"door");
                 Act(2,top,0,hero.Ability=="arsenal"?"FORMA":hero.Ability=="phase"?"PASSO SOMBRIO":"HABILIDADE",()=>{if(hero.Ability=="arsenal")Do(new AqCommand("stance",selected));else if(hero.Ability=="phase"){mode="phase";Draw();}else {Message=hero.AbilityText;Draw();}},icon:"ability");
                 Act(portrait?3:0,low,portrait?0:1,Session.Resting?"DESCANSANDO":"DESCANSAR",()=>Do(new AqCommand("rest")),false,!Session.Resting&&Session.ActiveId<0,"rest");
                 Act(portrait?4:1,low,portrait?0:1,"ENCERRAR TURNO",()=>Do(new AqCommand("end")),icon:"endturn");
@@ -192,6 +198,8 @@ namespace DungeonBDX
             AqUi.Text(hint,mode=="attack"?"DISTÂNCIA NAS CASAS · CLIQUE EM UM ALVO":mode=="door"?"CLIQUE NO ESPAÇO DO OUTRO LADO DA PORTA":"CLIQUE NO TABULEIRO PARA AGIR",0,0,1,1,13,AqUi.Muted,TextAlignmentOptions.Right);
             var notice=AqUi.Box(safe,"Action result",.02f,footerHeight+.005f,portrait?.47f:.34f,portrait?.05f:.06f,new Color(.055f,.06f,.065f,.92f));
             AqUi.Text(notice,Message,.01f,.03f,.98f,.94f,15,SavePaused?new Color(1,.48f,.35f):AqUi.Ink);
+            if(!Session.Resting)shop=false;
+            if(shop)Shop(hero,portrait,footerHeight);
             if(Session.Winner>=0)
             {
                 var win=AqUi.Box(safe,"Victory",.18f,.43f,.64f,.32f,AqUi.Panel);
@@ -199,6 +207,24 @@ namespace DungeonBDX
                 AqUi.Button(win,"VOLTAR ÀS AVENTURAS",.15f,.07f,.7f,.19f,Close);
             }
             Preview();
+        }
+        // Rest shop: buy upgrade cards for the selected hero with the guild's coins (4-card limit).
+        void Shop(AqUnit hero,bool portrait,float bottom)
+        {
+            var panel=AqUi.Panelled(safe,"Shop",.02f,bottom+.07f,portrait?.96f:.62f,.86f-bottom-.08f,AqUi.Panel);
+            panel.GetComponent<UnityEngine.UI.Image>().raycastTarget=true;
+            int coins=Session.Guilds[Session.CurrentGuild].Coins;
+            AqUi.Chip(panel,"coin",$"LOJA · {coins} MOEDAS · PARA {hero.Name.ToUpperInvariant()} ({hero.Gear.Count}/4 CARTAS)",.03f,.89f,.94f,.08f,portrait?.06f:.04f,18,AqUi.Gold);
+            var items=AqShop.Items;int rows=(items.Length+1)/2;float h=.74f/rows;
+            for(int i=0;i<items.Length;i++)
+            {
+                int index=i;var item=items[i];
+                var b=AqUi.Button(panel,$"{item.Name} · {item.Cost} MOEDAS\n<size=72%>{item.Text}</size>",.02f+i%2*.48f,.14f+(rows-1-i/2)*h,.48f,h,()=>Do(new AqCommand("buy",selected,card:index)));
+                b.interactable=coins>=item.Cost&&hero.Gear.Count<4&&!SavePaused;
+            }
+            var chosen=card<hero.Gear.Count?hero.Gear[card]:null;bool signature=chosen!=null&&chosen.Id=="signature."+hero.HeroId;
+            AqUi.Button(panel,chosen==null?"DESCARTAR":"DESCARTAR "+chosen.Name.ToUpperInvariant(),.02f,.02f,.6f,.11f,()=>Do(new AqCommand("discard",selected,card:card))).interactable=chosen!=null&&!signature&&!SavePaused;
+            AqUi.Button(panel,"FECHAR LOJA",.64f,.02f,.34f,.11f,()=>{shop=false;Draw();});
         }
         void Preview()
         {
@@ -258,6 +284,14 @@ namespace DungeonBDX
             try{Capture(path,view.Camera,canvas);}catch(Exception e){failure=e;}
             report.error=failure?.ToString();report.passed=failure==null&&report.sharedSpace&&report.colossusLarger&&report.uniqueAbilities&&report.saveReplay&&report.camera&&report.animation&&report.idleAnimated&&report.moved&&report.combat;
             File.WriteAllText(Path.ChangeExtension(path,".json"),JsonUtility.ToJson(report,true));Application.Quit(report.passed?0:1);
+        }
+        // QA capture of the rest shop: the guild rests (coins come from the host adjustment) and the shop opens.
+        public IEnumerator CaptureShop(string path)
+        {
+            for(int i=0;i<30;i++)yield return null;
+            var r=Do(new AqCommand("rest"));shop=true;Draw();
+            yield return new WaitForSecondsRealtime(.25f);
+            Capture(path,view.Camera,canvas);Application.Quit(r.Accepted&&Session.Resting?0:1);
         }
         void ProbeCommands(Probe report)
         {
