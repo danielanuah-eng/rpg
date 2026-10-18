@@ -1,8 +1,0 @@
-Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
-
-ERROR: Evento compacto possui dano calculado pelo Host
-   at: push_error (core/variant/variant_utility.cpp:1024)
-   GDScript backtrace (most recent call first):
-       [0] check (res://tests/test_combat.gd:15)
-       [1] _run (res://tests/test_combat.gd:73)
-FASE 6 LOCAL: 37 verificações, 1 falhas.
