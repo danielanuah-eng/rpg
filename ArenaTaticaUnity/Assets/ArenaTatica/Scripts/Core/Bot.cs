@@ -55,14 +55,14 @@ namespace ArenaTatica.Core
                 var c=new Cell(i%s.width,i/s.width);
                 if(Board.At(s,c)==null&&!s.At(c).lava) cells.Add((c,costs[i]));
             }
-            int nearOrigin=foes.Count(x=>x.cell.Distance(origin)==1&&!Content.Def(x).noLock);
+            int nearOrigin=foes.Count(x=>Board.Gap(x,origin)==1&&!Content.Def(x).noLock);
             bool ranged=Reach(me)>=3;
             double best=0; Command cmd=null;
             foreach(var (c,cost) in cells)
             {
                 me.cell=c;
                 // Andar custa um pouco; sair colado em inimigos arrisca a Trava; atirador evita terminar colado.
-                double place=-.12*cost-(cost>0?.6*nearOrigin:0)-(ranged?.4*foes.Count(x=>x.cell.Distance(c)==1):0);
+                double place=-.12*cost-(cost>0?.6*nearOrigin:0)-(ranged?.4*foes.Count(x=>Board.Gap(x,c)==1):0);
                 foreach(var sk in Match.Skills(me))
                 {
                     if(me.pa<Match.Cost(me,sk,s)) continue;
@@ -137,7 +137,7 @@ namespace ArenaTatica.Core
         {
             if(SelfCast(sk)) return new[]{me.cell};
             var allies=s.fighters.Where(x=>x.Alive&&s.Ally(x.team,me.team)).Select(x=>x.cell);
-            IEnumerable<Cell> Free(int r) => Ring(s,me.cell,r).Where(c=>Board.At(s,c)==null).OrderBy(c=>foes.Count==0?0:foes.Min(f=>f.cell.Distance(c))).Take(12);
+            IEnumerable<Cell> Free(int r) => Ring(s,me.cell,r).Where(c=>Board.At(s,c)==null).OrderBy(c=>foes.Count==0?0:foes.Min(f=>Board.Gap(f,c))).Take(12);
             switch(sk.kind)
             {
                 case SkillKind.Dano: case SkillKind.Espelho: case SkillKind.Salto: case SkillKind.Zona: return foes.Select(x=>x.cell);
@@ -169,12 +169,12 @@ namespace ArenaTatica.Core
                 {
                     var center=sk.selfArea?me.cell:t;
                     var list=s.fighters.Where(x=>x.Alive&&s.Ally(x.team,me.team)&&(x.cell==t&&!sk.selfArea||(sk.selfArea||sk.area>0)&&Inside(center,x.cell,sk.area,sk.square))).ToList();
-                    double val=list.Sum(x=>Math.Min(sk.heal,Content.MaxHp(x)-x.hp)+(sk.buffPa+sk.buffPm*.5+sk.buffArmor*(foes.Any(f=>f.cell.Distance(x.cell)<=3)?1.2:.3)+sk.buffRange*.5)*.8);
+                    double val=list.Sum(x=>Math.Min(sk.heal,Content.MaxHp(x)-x.hp)+(sk.buffPa+sk.buffPm*.5+sk.buffArmor*(foes.Any(f=>Board.Gap(f,x)<=3)?1.2:.3)+sk.buffRange*.5)*.8);
                     if(sk.summonCount>0) val+=1.5*sk.summonCount;
                     return val;
                 }
-                case SkillKind.Invocacao: return foes.Count==0?0:2.6-.05*foes.Min(f=>f.cell.Distance(t));
-                case SkillKind.Armadilha: return foes.Any(f=>f.cell.Distance(t)<=1)?.9:0;
+                case SkillKind.Invocacao: return foes.Count==0?0:2.6-.05*foes.Min(f=>Board.Gap(f,t));
+                case SkillKind.Armadilha: return foes.Any(f=>Board.Gap(f,t)<=1)?.9:0;
                 case SkillKind.Salto:
                 {
                     // Vale se depois do salto ainda sobra PA para bater colado.
@@ -184,7 +184,7 @@ namespace ArenaTatica.Core
                 case SkillKind.Forma:
                 {
                     // Forma temporária (Berserk, Asas, Motor): liga quando há inimigo perto. Forma fixa (Damian): compara a melhor jogada nas duas.
-                    if(sk.turns>0) return foes.Any(f=>f.cell.Distance(me.cell)<=4)?3:0;
+                    if(sk.turns>0) return foes.Any(f=>Board.Gap(f,me)<=4)?3:0;
                     string form=me.form; int pa=me.pa, pm=me.pm;
                     double now=Search(sim,me,false).score;
                     me.form=sk.toForm; me.pa-=sk.pa;
@@ -192,7 +192,7 @@ namespace ArenaTatica.Core
                     me.form=form; me.pa=pa; me.pm=pm;
                     return after-now-.3;
                 }
-                case SkillKind.Esconder: return foes.Any(f=>f.cell.Distance(me.cell)<=1)?0:me.pa<=2?.6:.25;
+                case SkillKind.Esconder: return foes.Any(f=>Board.Gap(f,me)<=1)?0:me.pa<=2?.6:.25;
                 case SkillKind.Zona: return foes.Count(f=>Inside(t,f.cell,sk.area,sk.square))*.6;
                 case SkillKind.Comando:
                     if(v==null) return 0;
@@ -202,13 +202,13 @@ namespace ArenaTatica.Core
                 {
                     // Nunca desliga sozinho; liga quando há gente para curar ou ferir no alcance.
                     if(me.auraOn) return 0;
-                    int count=s.fighters.Count(x=>x.Alive&&x!=me&&x.cell.Distance(me.cell)<=sk.area&&(!s.Ally(x.team,me.team)&&!x.hidden||s.Ally(x.team,me.team)&&x.hp<Content.MaxHp(x)));
+                    int count=s.fighters.Count(x=>x.Alive&&x!=me&&Board.Gap(x,me)<=sk.area&&(!s.Ally(x.team,me.team)&&!x.hidden||s.Ally(x.team,me.team)&&x.hp<Content.MaxHp(x)));
                     return count==0?0:1+count;
                 }
                 case SkillKind.Desejo:
                     switch(sk.wish)
                     {
-                        case null: case "": return foes.Any(f=>f.cell.Distance(me.cell)<=1)?1:3;
+                        case null: case "": return foes.Any(f=>Board.Gap(f,me)<=1)?1:3;
                         case "a": return 6;
                         case "b": return v==null||!s.Ally(v.team,me.team)?0:Content.MaxHp(v)-v.hp;
                         case "c": return v==null?0:v==me?2.5:3;

@@ -115,7 +115,8 @@ namespace ArenaTatica.Core
         // armor: armadura fixa (Rei Bobett). legendary: 1 por time. immovable: não é empurrado, puxado nem trocado. devour: rouba a
         // skill de quem nocauteia (Colosso). noTurn: invocação sem turno (gatos, totem). noLock: não trava. neutral: time neutro.
         // healAura: no turno do dono, cura aliados até 2 casas.
-        public int armor, healAura;
+        // size: lado em casas (Primal Beast 2 = ocupa 2×2; cell é o canto de menor x e z). 0 ou 1 = uma casa.
+        public int armor, healAura, size;
         public bool legendary, immovable, devour, noTurn, noLock, neutral;
         public string startForm;
         public FormDef[] forms;

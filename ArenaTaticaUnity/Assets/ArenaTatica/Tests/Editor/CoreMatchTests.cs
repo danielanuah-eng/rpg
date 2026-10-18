@@ -465,8 +465,8 @@ namespace ArenaTatica.Core.Tests
         [Test] public void ColossusDevoursTheMainSkillWithOneMorePa()
         {
             m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"colosso"}, team2=new[]{"talyssa","ogro-de-pedra"} });
-            var victim=S.fighters.First(f=>f.def=="talyssa"); while(A.def!="colosso") Do("passar"); Put(A,5,5); Put(victim,5,6); victim.hp=1;
-            Hit(); Assert.IsTrue(Do("skill",new Cell(5,6),"pancada-colossal"));
+            var victim=S.fighters.First(f=>f.def=="talyssa"); while(A.def!="colosso") Do("passar"); Put(A,5,5); Put(victim,5,7); victim.hp=1;
+            Hit(); Assert.IsTrue(Do("skill",new Cell(5,7),"pancada-colossal"));
             Assert.IsFalse(victim.Alive); CollectionAssert.Contains(A.stolen,"lamina-rosa");
             var stolen=Match.Skills(A).First(s=>s.id==Content.Stolen+"lamina-rosa");
             Assert.AreEqual(4,stolen.pa); Assert.AreEqual("steal-slam",stolen.anim);
@@ -977,9 +977,10 @@ namespace ArenaTatica.Core.Tests
                 {
                     var team=S.fighters.Where(f=>f.team==p&&f.summoner==0).ToList(); var cells=m.StartCells(p);
                     Assert.AreEqual(6,team.Count,$"P{p} com 6 heróis"); Assert.AreEqual(6,cells.Length);
-                    foreach(var f in team) { Assert.Contains(f.cell,cells); Assert.IsTrue(Board.Walkable(S,f.cell,false),$"{f.def} em casa livre"); }
+                    // O grande (2×2) que não cabe na casa de início vai para o canto livre mais perto.
+                    foreach(var f in team) { if(Board.SizeOf(f)>1) Assert.IsTrue(Board.Fits(S,f,f.cell),f.def); else Assert.Contains(f.cell,cells); Assert.IsTrue(Board.Walkable(S,f.cell,false),$"{f.def} em casa livre"); }
                 }
-                Assert.AreEqual(S.fighters.Count,S.fighters.Select(f=>f.cell).Distinct().Count(),"ninguém divide casa");
+                Assert.AreEqual(S.fighters.Sum(f=>Board.Footprint(f).Count()),S.fighters.SelectMany(f=>Board.Footprint(f)).Distinct().Count(),"ninguém divide casa");
             }
             // Time de até 4: as casas de início continuam as 4 de sempre.
             m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"ciantia"}, team2=new[]{"perry"} });

@@ -806,7 +806,7 @@ namespace ArenaTatica
                 }
                 bool concealed=viewer>0&&f.hidden&&!s.Ally(f.team,viewer)&&f.cell==Cell.Unknown;
                 if(f.hp<0||f.hp>Content.MaxHp(f)||f.pa<0||f.pm<0||(!concealed&&!Board.Contains(s,f.cell))) return false;
-                if(f.Alive&&!concealed&&!cells.Add(f.cell)) return false;
+                if(f.Alive&&!concealed&&Board.Footprint(f).Any(c=>!Board.Contains(s,c)||!cells.Add(c))) return false;
             }
             return true;
         }
@@ -866,7 +866,7 @@ namespace ArenaTatica
         void BoardShots(string prefix)
         {
             // A captura não troca o time salvo deste aparelho (StartLocal grava o do P1).
-            var mine=MyTeam; Menu?.Close(); VsBots=true; Placement=false; StartLocal(new[]{new[]{"damian","baltazar"},new[]{"ogro-de-pedra","perry"}}); MyTeam=mine;
+            var mine=MyTeam; Menu?.Close(); VsBots=true; Placement=false; StartLocal(new[]{new[]{"damian","baltazar"},new[]{"colosso","perry"}}); MyTeam=mine;
             StartCoroutine(Shots(System.IO.Path.GetFullPath(prefix)));
         }
         IEnumerator Shots(string prefix)

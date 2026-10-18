@@ -82,7 +82,7 @@ namespace ArenaTatica.Core
             ["gato-malhado"]=Cat("gato-malhado","Gato preto e branco","GatoMalhado",new SkillDef { id="faisca-malhada", name="Faísca malhada", kind=SkillKind.Dano, minRange=1, maxRange=3, damage=1, pmLoss=2, anim="zap" }),
             ["gato-manchado"]=Cat("gato-manchado","Gato marrom manchado","GatoManchado",new SkillDef { id="faisca-manchada", name="Faísca manchada", kind=SkillKind.Dano, minRange=1, maxRange=3, damage=1, push=1, anim="zap" }),
             // Tanque gigante e lento: qualquer morte no mapa alimenta Devorar (+1 PA no custo da skill absorvida).
-            ["colosso"]=new FighterDef { id="colosso", name="Primal Beast", sprites="Colosso", hp=18, pa=6, pm=2, initiative=1, level=6, immovable=true, devour=true, skills=new[] {
+            ["colosso"]=new FighterDef { id="colosso", name="Primal Beast", sprites="Colosso", hp=18, pa=6, pm=2, initiative=1, level=6, size=2, immovable=true, devour=true, skills=new[] {
                 new SkillDef { id="pancada-colossal", name="Pancada colossal", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=4 },
                 new SkillDef { id="pisao", name="Pisão", kind=SkillKind.Dano, pa=4, minRange=0, maxRange=0, sight=false, selfArea=true, square=true, area=1, damage=2, perTurn=1, anim="stomp" } } },
             // Pirata de óleo: tentáculos em volta, canhão de peito em 2 tempos e o gancho-broca que arremessa o alvo.
@@ -275,7 +275,7 @@ namespace ArenaTatica.Core
             defaults??=new Dictionary<string,FighterDef>(Fighters);
             foreach(var kv in defaults) Fighters[kv.Key]=kv.Value;
             if(json!="")
-                try { var e=UnityEngine.JsonUtility.FromJson<GameEdits>(json); foreach(var d in e?.fighters??new List<FighterDef>()) if(d!=null&&defaults.ContainsKey(d.id)) Fighters[d.id]=Sanitize(d); }
+                try { var e=UnityEngine.JsonUtility.FromJson<GameEdits>(json); foreach(var d in e?.fighters??new List<FighterDef>()) if(d!=null&&defaults.ContainsKey(d.id)) { d.size=defaults[d.id].size; Fighters[d.id]=Sanitize(d); } }
                 catch(System.Exception) { json=""; }
             EditsJson=json; ClearCaches();
         }

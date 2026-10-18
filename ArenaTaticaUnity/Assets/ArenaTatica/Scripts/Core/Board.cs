@@ -17,7 +17,43 @@ namespace ArenaTatica.Core
         public static bool Contains(MatchState s,Cell c) => c.x>=0&&c.z>=0&&c.x<s.width&&c.z<s.height;
         // Casa encostada (lado, sem diagonal) numa casa da loja: só dali se compra.
         public static bool NextToShop(MatchState s,Cell c) { foreach(var d in Dirs) if(Contains(s,c+d)&&s.At(c+d).terrain==Terrain.Loja) return true; return false; }
-        public static Fighter At(MatchState s,Cell c) => s.fighters.Find(f=>f.Alive&&f.cell==c);
+        public static Fighter At(MatchState s,Cell c) => s.fighters.Find(f=>f.Alive&&Occupies(f,c));
+        // ── Lutador grande (FighterDef.size, autor 18/10: Primal Beast em 2×2) ──
+        // f.cell é o canto de menor x e z; ele ocupa size×size casas, bate e é atingido por qualquer uma delas.
+        public static int SizeOf(Fighter f) => Math.Max(1,Content.Def(f).size);
+        public static IEnumerable<Cell> Footprint(Fighter f,Cell at) { int n=SizeOf(f); for(int x=0;x<n;x++) for(int z=0;z<n;z++) yield return at+new Cell(x,z); }
+        public static IEnumerable<Cell> Footprint(Fighter f) => Footprint(f,f.cell);
+        public static bool Occupies(Fighter f,Cell c)
+        {
+            if(f.cell.x<0) return false; int n=SizeOf(f);
+            return c.x>=f.cell.x&&c.z>=f.cell.z&&c.x<f.cell.x+n&&c.z<f.cell.z+n;
+        }
+        // Distância (em casas, sem diagonal) entre dois quadrados: canto a com lado na e canto b com lado nb.
+        static int Gap(Cell a,int na,Cell b,int nb) => Math.Max(0,Math.Max(a.x-(b.x+nb-1),b.x-(a.x+na-1)))+Math.Max(0,Math.Max(a.z-(b.z+nb-1),b.z-(a.z+na-1)));
+        public static int Gap(Fighter f,Cell c) => Gap(f.cell,SizeOf(f),c,1);
+        public static int Gap(Fighter a,Fighter b) => Gap(a.cell,SizeOf(a),b.cell,SizeOf(b));
+        // Casa do lutador mais perto de c (de onde ele mira e mede a linha).
+        public static Cell Nearest(Fighter f,Cell c) { int n=SizeOf(f)-1; return new Cell(Math.Max(f.cell.x,Math.Min(c.x,f.cell.x+n)),Math.Max(f.cell.z,Math.Min(c.z,f.cell.z+n))); }
+        // O lutador cabe inteiro com o canto em at: todas as casas no mapa, de chão e sem outro lutador.
+        public static bool Fits(MatchState s,Fighter f,Cell at)
+        {
+            foreach(var c in Footprint(f,at)) { if(!Contains(s,c)||!Walkable(s,c,Content.Def(f).flying)) return false; var o=At(s,c); if(o!=null&&o!=f) return false; }
+            return true;
+        }
+        // Passo do lutador inteiro de a para b: cada casa dele faz o mesmo passo; vale o mais caro. -1 = não passa.
+        public static int Step(MatchState s,Fighter f,Cell a,Cell b,bool flying,bool climber=false,bool doors=false)
+        {
+            int n=SizeOf(f); if(n==1) return StepCost(s,a,b,flying,climber,doors);
+            int worst=-1;
+            for(int x=0;x<n;x++) for(int z=0;z<n;z++) { var o=new Cell(x,z); int c=StepCost(s,a+o,b+o,flying,climber,doors); if(c<0) return -1; worst=Math.Max(worst,c); }
+            return worst;
+        }
+        // Outro lutador conhecido em alguma casa que f ocuparia com o canto em at.
+        static bool Crowded(MatchState s,Fighter f,Cell at)
+        {
+            foreach(var c in Footprint(f,at)) { var o=KnownAt(s,c,f); if(o!=null&&o!=f) return true; }
+            return false;
+        }
         // Planejamento usa apenas ocupantes conhecidos por quem está andando.
         public static Fighter KnownAt(MatchState s,Cell c,Fighter viewer)
         {
@@ -51,8 +87,8 @@ namespace ArenaTatica.Core
                 done[best]=true; var c=new Cell(best%s.width,best/s.width);
                 foreach(var d in Dirs)
                 {
-                    var nb=c+d; int cost=StepCost(s,c,nb,flying,climber,throughDoors);
-                    if(cost<0||(!ignoreFighters&&KnownAt(s,nb,f)!=null)) continue;
+                    var nb=c+d; int cost=Step(s,f,c,nb,flying,climber,throughDoors);
+                    if(cost<0||(!ignoreFighters&&Crowded(s,f,nb))) continue;
                     int i=Index(s,nb); if(dist[best]+cost<dist[i]) dist[i]=dist[best]+cost;
                 }
             }
@@ -62,7 +98,7 @@ namespace ArenaTatica.Core
         public static int LockRisk(MatchState s,Fighter f,Cell c)
         {
             int n=0;
-            foreach(var e in s.fighters) if(e.Alive&&e!=f&&!s.Ally(e.team,f.team)&&!(e.hidden)&&e.prisoned==0&&!Content.Def(e).noLock&&e.cell.Distance(c)==1) n++;
+            foreach(var e in s.fighters) if(e.Alive&&e!=f&&!s.Ally(e.team,f.team)&&!(e.hidden)&&e.prisoned==0&&!Content.Def(e).noLock&&Gap(e.cell,SizeOf(e),c,SizeOf(f))==1) n++;
             return n;
         }
         // Caminho (sprint 1, 2.1): dentro dos PM, primeiro o que passa por menos casas de Trava (cada inimigo colado conta 1;
@@ -84,8 +120,8 @@ namespace ArenaTatica.Core
                 var c=new Cell(i%s.width,i/s.width); int leave=i==start?0:Lock(i);
                 foreach(var d in Dirs)
                 {
-                    var nb=c+d; int cost=StepCost(s,c,nb,flying,f.climber);
-                    if(cost<=0||k+cost>budget||KnownAt(s,nb,f)!=null) continue;
+                    var nb=c+d; int cost=Step(s,f,c,nb,flying,f.climber);
+                    if(cost<=0||k+cost>budget||Crowded(s,f,nb)) continue;
                     int j=Index(s,nb)*b+k+cost;
                     if(r+leave<risk[j]) { risk[j]=r+leave; prev[j]=i*b+k; }
                 }

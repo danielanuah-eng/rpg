@@ -114,7 +114,7 @@ namespace ArenaTatica.Tests
         [Test] public void ColossusObservesTrapDeathAndDoesNotTriggerTwice()
         {
             var m=Match.New(new MatchSetup{flatMap=true,team1=new[]{"colosso"},team2=new[]{"talyssa","ogro-de-pedra"}});
-            var col=m.S.fighters.First(x=>x.def=="colosso"); var v=m.S.fighters.First(x=>x.def=="talyssa"); Activate(m,v); v.cell=new Cell(3,3); v.hp=1;
+            var col=m.S.fighters.First(x=>x.def=="colosso"); var v=m.S.fighters.First(x=>x.def=="talyssa"); Activate(m,v); v.cell=new Cell(3,3); v.hp=1; col.cell=new Cell(8,8);
             var c=new Cell(3,4); m.S.At(c).trap=1; m.S.At(c).trapDamage=20;
             Assert.IsTrue(m.Apply(new Command{kind="mover",fighter=v.id,revision=m.S.revision,cell=c},v.team,out var events,out _));
             CollectionAssert.Contains(col.stolen,"lamina-rosa"); Assert.AreEqual(1,events.Count(e=>e.kind=="devorar"&&e.actor==col.id));

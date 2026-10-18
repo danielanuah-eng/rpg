@@ -150,6 +150,13 @@ namespace ArenaTatica
             ["prisao-dos-pesadelos"]=(ShotKind.Orbe,C(.5f,.2f,.7f)), ["raizes"]=(ShotKind.Orbe,C(.4f,.7f,.3f)), ["arremessar-pedra"]=(ShotKind.Bomba,C(.55f,.45f,.35f)) };
         public static Vector3 Position(MatchState s,Cell c,int height) => new Vector3(c.x-(s.width-1)*.5f,height*HStep,c.z-(s.height-1)*.5f);
         public static Vector3 Position(MatchState s,Cell c) => Board.Contains(s,c)?Position(s,c,s.At(c).height):Vector3.zero;
+        // Onde fica o lutador com o canto em c: o grande (Primal Beast, 2×2) no meio das casas dele, na mais alta.
+        public static Vector3 Spot(MatchState s,Fighter f,Cell c)
+        {
+            int n=f==null?1:Board.SizeOf(f); if(n==1||!Board.Contains(s,c)) return Position(s,c);
+            var cells=Board.Footprint(f,c).Where(x=>Board.Contains(s,x)).ToList();
+            var p=cells.Aggregate(Vector3.zero,(a,x)=>a+Position(s,x))/cells.Count; p.y=cells.Max(x=>s.At(x).height)*HStep; return p;
+        }
 
         void Awake()
         {
@@ -608,7 +615,7 @@ namespace ArenaTatica
             foreach(int i in s.mines??new List<int>()) if(i>=0&&i<s.tiles.Length&&s.tiles[i].trap!=0&&(viewer==0||s.Ally(s.tiles[i].trap,viewer)))
                 markers.Add(Cube("Mina",Position(s,new Cell(i%s.width,i/s.width))+Vector3.up*.05f,new Vector3(.3f,.06f,.3f),markMaterial,world));
             foreach(var f in s.fighters.Where(f=>f.Alive&&f.prisoned>0&&Board.Contains(s,f.cell))) {
-                var p=Position(s,f.cell); float h=Heights.TryGetValue(f.def,out float hh)?hh:.75f;
+                var p=Spot(s,f,f.cell); float h=Heights.TryGetValue(f.def,out float hh)?hh:.75f;
                 foreach(var corner in new[]{new Vector3(-.4f,0,-.4f),new Vector3(.4f,0,-.4f),new Vector3(-.4f,0,.4f),new Vector3(.4f,0,.4f)})
                     markers.Add(Cube("Prisao",p+corner+Vector3.up*h*.5f,new Vector3(.08f,h,.08f),cageMaterial,world));
                 markers.Add(Cube("Prisao",p+Vector3.up*h,new Vector3(.9f,.06f,.9f),cageMaterial,world));
@@ -695,9 +702,9 @@ namespace ArenaTatica
                 bool fresh=false;
                 if(!units.TryGetValue(f.id,out var root)) { if(!f.Alive) continue; root=units[f.id]=CreateUnit(f); fresh=true; }
                 root.gameObject.SetActive(f.Alive);
-                root.position=Position(state,f.cell);
+                root.position=Spot(state,f,f.cell);
                 if(fresh) Turn(root,-root.position);
-                if(!fresh&&f.Alive&&root.childCount>0&&rigs.TryGetValue(root.GetChild(0),out var shown)&&shown.folder!=SpriteFolder(f)&&LoadRig(SpriteFolder(f))!=null) { rigs.Remove(root.GetChild(0)); Destroy(root.gameObject); root=units[f.id]=CreateUnit(f); root.position=Position(state,f.cell); Turn(root,-root.position); }
+                if(!fresh&&f.Alive&&root.childCount>0&&rigs.TryGetValue(root.GetChild(0),out var shown)&&shown.folder!=SpriteFolder(f)&&LoadRig(SpriteFolder(f))!=null) { rigs.Remove(root.GetChild(0)); Destroy(root.gameObject); root=units[f.id]=CreateUnit(f); root.position=Spot(state,f,f.cell); Turn(root,-root.position); }
                 else if(root.childCount>0&&rigs.TryGetValue(root.GetChild(0),out var rig)) rig.pose=Content.Form(f)?.pose;
             }
             foreach(var id in units.Keys.Where(id=>state.F(id)==null).ToList()) { if(units[id].childCount>0) rigs.Remove(units[id].GetChild(0)); Destroy(units[id].gameObject); units.Remove(id); }
@@ -762,12 +769,13 @@ namespace ArenaTatica
             // Sprite: encara a câmera de frente (inclinado com ela: não achata nem atravessa blocos atrás); a direção do lutador escolhe o quadro.
             visual.localRotation=sprite?BoardCamera.transform.rotation:Quaternion.Euler(0,14.3f,0);
             if(Shown(f).flying) visual.localPosition+=Vector3.up*.35f;
+            if(sprite) { lifts[visual]=Shown(f).flying?.35f:0; Plant(visual); }
             foreach(var t in visual.GetComponentsInChildren<Transform>()) if(t.name.StartsWith("Wing")||t.name.StartsWith("Asa")) { wings.Add(t); wingRest[t]=t.localRotation; }
             // Indicador do pé: cor exata da facção. O clone ilusório não se tinge de violeta (isso o denunciaria);
             // só as demais invocações continuam puxando para o violeta.
             var color=TeamColor(f.team); if(f.summoner!=0&&!Veiled(f)) color=Color.Lerp(color,Violet,.45f);
             if(rigs.TryGetValue(visual,out var made)&&made.ghost) made.ghost.color=new Color(color.r,color.g,color.b,.62f);
-            Cube("Marcador",new Vector3(0,.018f,0),new Vector3(.67f,.028f,.67f),Material(color),root);
+            float side=Board.SizeOf(f)-.33f; Cube("Marcador",new Vector3(0,.018f,0),new Vector3(side,.028f,side),Material(color),root);
             root.gameObject.layer=8;
             root.gameObject.AddComponent<ArenaUnitPick>().Id=f.id;
             var collider=root.gameObject.AddComponent<CapsuleCollider>();
@@ -789,7 +797,7 @@ namespace ArenaTatica
                 case "mover":
                     // Comando de andar (Mover gato): conjuração em quem manda, impacto onde a invocação chega.
                     if(e.info!=null&&s.F(e.actor) is Fighter walker&&units.TryGetValue(walker.summoner,out var boss)&&boss) PhaseFx(e.info+"/conjuracao",boss.position+Vector3.up*.9f);
-                    if(actor&&e.path!=null&&e.path.Length>1) yield return Walk(actor,s,e.path);
+                    if(actor&&e.path!=null&&e.path.Length>1) yield return Walk(actor,s,e.path,s.F(e.actor));
                     if(actor&&e.info!=null) PhaseFx(e.info+"/impacto",actor.position+Vector3.up*.3f);
                     break;
                 case "trava":
@@ -906,7 +914,7 @@ namespace ArenaTatica
                         // Forma com pasta própria de sprites (Berserk): troca o boneco.
                         if(who!=null&&units[who.id].childCount>0&&rigs.TryGetValue(units[who.id].GetChild(0),out var old)&&old.folder!=SpriteFolder(who)&&LoadRig(SpriteFolder(who))!=null) {
                             rigs.Remove(units[who.id].GetChild(0)); Destroy(units[who.id].gameObject);
-                            var fresh=units[who.id]=CreateUnit(who); fresh.position=Position(s,who.cell); Turn(fresh,-fresh.position);
+                            var fresh=units[who.id]=CreateUnit(who); fresh.position=Spot(s,who,who.cell); Turn(fresh,-fresh.position);
                         }
                         // Sem pasta própria (Damian): a pose parada passa a segurar a arma da forma.
                         else if(who!=null&&units[who.id].childCount>0&&rigs.TryGetValue(units[who.id].GetChild(0),out var same)) same.pose=Content.Form(who)?.pose;
@@ -967,7 +975,7 @@ namespace ArenaTatica
                         PhaseFx(ArenaEfeitos.UsePhase(e.kind,by),Position(s,f.cell)+Vector3.up*.4f);
                         if(actor&&by!=null) { PhaseFx(by+"/conjuracao",actor.position+Vector3.up*.9f); if(EffectFrames(by+"/impacto")!=null) { PhaseFx(by+"/impacto",Position(s,f.cell)+Vector3.up*.4f); call=ArenaEfeitos.ImpactTime("Sprites/Efeitos/"+by+"/impacto"); } }
                         cast=Mathf.Max(cast*.6f,call); if(cast>0) yield return Wait(cast);
-                        var u=units[f.id]=CreateUnit(f); u.position=Position(s,f.cell); if(actor) Turn(u,u.position-actor.position);
+                        var u=units[f.id]=CreateUnit(f); u.position=Spot(s,f,f.cell); if(actor) Turn(u,u.position-actor.position);
                         float rise=PlayClip(u,"spawn"); // quem tem arte de surgimento usa a arte; os outros pulsam
                         if(rise>0) yield return Wait(rise); else yield return Pulse(u);
                     }
@@ -985,7 +993,7 @@ namespace ArenaTatica
                     if(EffectFrames(e.info+"/inicio") is Sprite[] intro) StartCoroutine(PlayEffect(intro,Vector3.up*1.5f,ArenaEfeitos.Fps("Sprites/Efeitos/"+e.info+"/inicio",10),boardSize*.9f));
                     Game.Hud?.ShowWarning(e.info);
                     // Chuva de moedas: as novas caem do céu.
-                    foreach(var m in markers) if(m&&m.name.StartsWith("Moeda")&&!before.Contains(m.name)) StartCoroutine(Drop(m.transform,UnityEngine.Random.Range(0,.4f))); foreach(var x in s.fighters) if(x.Alive&&units.TryGetValue(x.id,out var r)) r.position=Position(s,x.cell);
+                    foreach(var m in markers) if(m&&m.name.StartsWith("Moeda")&&!before.Contains(m.name)) StartCoroutine(Drop(m.transform,UnityEngine.Random.Range(0,.4f))); foreach(var x in s.fighters) if(x.Alive&&units.TryGetValue(x.id,out var r)) r.position=Spot(s,x,x.cell);
                     yield return Shake(); break;
                 case "compra":
                     // Moedas saem de quem comprou e a figura do produto aparece sobre a cabeça.
@@ -1146,13 +1154,25 @@ namespace ArenaTatica
         public void StraightenView() { yawGoal=Mathf.Round(yawGoal/90f)*90f; }
         // Vista instantânea (partida nova, captura).
         void SetYaw(float yaw) { Yaw=yawGoal=yaw; ApplyYaw(); }
+        // Pés no chão (autor, 18/10): o sprite gira pelo centro para encarar a câmera e, sem isto, quem é alto (Primal Beast)
+        // fica com os pés acima da casa. Desce o sprite até o desenho tocar o meio da casa (ou das casas, no 2×2).
+        readonly Dictionary<Transform,float> lifts=new Dictionary<Transform,float>();
+        void Plant(Transform visual)
+        {
+            if(!visual||!visual.parent||!(visual.GetComponent<SpriteRenderer>() is SpriteRenderer r)||!r.sprite) return;
+            // Quadros com folga transparente embaixo: o pé é o vértice mais baixo da malha justa do sprite.
+            var b=r.sprite.bounds; float low=b.min.y; var v=r.sprite.vertices; if(v!=null&&v.Length>0) low=v.Min(x=>x.y);
+            var feet=visual.TransformPoint(new Vector3(b.center.x,low,0));
+            lifts.TryGetValue(visual,out float lift);
+            visual.position+=visual.parent.position+Vector3.up*lift-feet;
+        }
         void ApplyYaw()
         {
             FitCamera(); FitSky();
             // Os sprites voltam a encarar a câmera e escolhem o quadro pela direção em que já olhavam.
             foreach(var kv in rigs.ToList()) {
                 if(!kv.Key) { rigs.Remove(kv.Key); continue; }
-                kv.Key.localRotation=BoardCamera.transform.rotation;
+                kv.Key.localRotation=BoardCamera.transform.rotation; Plant(kv.Key);
                 if(kv.Value.facing!=Vector3.zero&&kv.Key.parent) Turn(kv.Key.parent,kv.Value.facing);
             }
         }
@@ -1440,11 +1460,11 @@ namespace ArenaTatica
         static Vector3 Flat(Vector3 v) { v.y=0; return v; }
         // Caminho inteiro numa curva só: acelera na primeira meia casa, anda constante e freia na última (independe do FPS).
         // Com clipe de caminhada cada casa dura meio ciclo do walk (um passo); sem ele, saltinhos.
-        IEnumerator Walk(Transform actor,MatchState s,Cell[] path)
+        IEnumerator Walk(Transform actor,MatchState s,Cell[] path,Fighter who=null)
         {
             float cycle=PlayClip(actor,"walk"); bool walks=cycle>0;
             float step=walks?Mathf.Clamp(cycle*.5f,.3f,.6f):.3f;
-            var points=path.Select(c=>Position(s,c)).ToArray(); int n=points.Length-1, seg=-1;
+            var points=path.Select(c=>Spot(s,who,c)).ToArray(); int n=points.Length-1, seg=-1;
             float total=step*n, a=.5f/n, vmax=1/(1-a);
             for(float t=0;t<total;t+=Time.deltaTime) {
                 float x=t/total, u=x<a?vmax*x*x/(2*a):x<1-a?vmax*(x-a/2):1-vmax*(1-x)*(1-x)/(2*a);
