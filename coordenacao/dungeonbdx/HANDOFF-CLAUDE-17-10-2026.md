@@ -64,3 +64,11 @@
 - Pacotes: o PackageCache foi recriado. 13 pacotes pediam login no Hub, então reaproveitei os tarballs do backup `%LOCALAPPDATA%/Unity/cache/upm.corrompido`. Os embutidos do Editor que faltarem são copiados por `$TEMP/cmp_pkgs.py fix` (compara com `BuiltInPackages`).
 - A instalação do Editor 6000.6.4f1 perdeu 24 arquivos (HDRP, physics, não usados). Se der problema, reparar pelo Hub.
 - A Lixeira tem 21 arquivos de `Rpg/Tripo` e 5 de `Rpg`, para o autor decidir se restaura.
+
+## Inimigos no padrão Arcadia Quest (17/10, autor: "use como padrão skills e valores do arcadia quest")
+- `AqProfiles` (AqBoard.cs): linhas de nível 1 da planilha `KrosArcano/Arcadia_Quest_-_Card_List_1.2.xlsx` (vida, overkill, defesa, movimento, dados, moedas, habilidade). Todo inimigo nasce de um perfil (`Spawn(..., perfil)`); nomes e arte continuam do DungeonBDX. Dragão: Havok jovem (10 dados limitados a `MaxDice` 6).
+- Níveis: `minion` (lacaio menor), `major` (lacaio maior: 4º tipo de cada fileira), `villain`, `boss`, `dragon`.
+- Habilidades no motor (`AqSession`): undying, pack, pierce, mend, cleave, brutal, quake, prickly, might, breath, echo (`AqProfiles.Has`, combináveis com `+`). Sem efeitos de status (atordoar, empurrar, invocar ficaram de fora).
+- Novos: Papa-moedas (Owlbunny) no cap. I; 4 gatos de rua (Wild Pet) e o Guardião como Underlord no II; Conde Vesperal = Lord Fang (à distância), Necromante = Malkhor no III.
+- EditMode 417/417, build ok, capturas ok. **Balanceamento ainda não jogado pelo autor.**
+- PIL do Python do Codex quebrado (CCleaner): `from PIL import Image` falha.

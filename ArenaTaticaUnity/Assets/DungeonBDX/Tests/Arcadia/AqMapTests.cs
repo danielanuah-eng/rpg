@@ -96,7 +96,8 @@ namespace DungeonBDX.Tests
         {
             foreach(var id in AqScenarios.Ids)
             {
-                var minions=AqScenarios.Create(id).Monsters.Where(m=>m.Tier=="minion").ToArray();
+                // Spawn rows: three minor minions and one major minion per side; wild pets come on top.
+                var minions=AqScenarios.Create(id).Monsters.Where(m=>(m.Tier=="minion"||m.Tier=="major")&&m.Profile!="pet").ToArray();
                 var melee=minions.Where(m=>!m.Ranged).Select(m=>m.HeroId).Distinct().ToArray();var ranged=minions.Where(m=>m.Ranged).Select(m=>m.HeroId).Distinct().ToArray();
                 Assert.That(melee,Has.Length.EqualTo(4),id);Assert.That(ranged,Has.Length.EqualTo(4),id);
                 // Monster dice are looked up by id, so one id never plays both profiles in a chapter.
@@ -108,19 +109,40 @@ namespace DungeonBDX.Tests
         {
             foreach(var id in AqScenarios.Ids)
             {
-                var s=AqScenarios.Create(id);var villain=s.Monsters.Single(m=>m.Tier=="villain");
-                var minion=s.Monsters.First(m=>m.Tier=="minion");int boss=s.Monsters.Where(m=>m.Tier=="boss").Max(m=>m.Health);
-                // A minor villain sits between the minions and the chapter boss.
-                Assert.That(villain.Health,Is.GreaterThan(minion.Health).And.LessThan(boss),id);
-                Assert.That(villain.Reward,Is.GreaterThan(minion.Reward),id);
-                Assert.That(AqContent.Playable,Has.No.Member(villain.HeroId),id);
+                var s=AqScenarios.Create(id);
+                foreach(var tier in new[]{"minion","major","villain","boss"})Assert.That(s.Monsters.Any(m=>m.Tier==tier),Is.True,id+" "+tier);
+                int Coins(string tier)=>s.Monsters.Where(m=>m.Tier==tier).Max(m=>m.Reward);
+                // Arcadia coins: minor minion 1, major minion 2, villains 2-3, major villain 3.
+                Assert.That(Coins("minion"),Is.LessThan(s.Monsters.Where(m=>m.Tier=="major").Min(m=>m.Reward)),id);
+                Assert.That(s.Monsters.Where(m=>m.Tier=="villain").Min(m=>m.Reward),Is.GreaterThanOrEqualTo(2),id);
+                Assert.That(s.Monsters.Where(m=>m.Tier=="boss").Min(m=>m.Reward),Is.EqualTo(3),id);
+                Assert.That(s.Monsters.Where(m=>m.Tier=="villain"||m.Tier=="boss").Select(m=>m.HeroId).Intersect(AqContent.Playable),Is.Empty,id);
             }
             var crypt=AqScenarios.Create(AqScenarios.Ids[2]);var dragon=crypt.Monsters.Single(m=>m.Tier=="dragon");
             Assert.That(dragon.Huge,Is.True);Assert.That(dragon.Health,Is.GreaterThan(crypt.Monsters.Where(m=>m.Tier!="dragon").Max(m=>m.Health)));
+            Assert.That(dragon.Reward,Is.EqualTo(4));
             // A huge figure fills its space: nobody else starts there.
             Assert.That(crypt.Monsters.Count(m=>m.Cell.Equals(dragon.Cell)),Is.EqualTo(1));
             var session=new AqSession(AqScenarios.Ids[2],new[]{new[]{"colosso","ciantia","talyssa"},new[]{"damian","perry","diantus"}});
             Assert.That(session.Units.Single(u=>u.HeroId=="dragao-espectral").Huge,Is.True);
+        }
+
+        [Test] public void EveryEnemyUsesTheWholeArcadiaLineOfItsProfile()
+        {
+            foreach(var id in AqScenarios.Ids)
+            {
+                var s=AqScenarios.Create(id);var session=new AqSession(id,new[]{new[]{"colosso","ciantia","talyssa"},new[]{"damian","perry","diantus"}});
+                foreach(var m in s.Monsters)
+                {
+                    Assert.That(AqProfiles.All.ContainsKey(m.Profile??""),Is.True,m.HeroId);var p=AqProfiles.All[m.Profile];
+                    Assert.That(new[]{m.Health,m.Overkill,m.Defense,m.Movement,m.Dice,m.Reward},Is.EqualTo(new[]{p.Life,p.Overkill,p.Defense,p.Move,p.Attack,p.Coins}),m.HeroId);
+                    Assert.That(m.Ranged,Is.EqualTo(p.Ranged),m.HeroId);Assert.That(m.Tier,Is.EqualTo(p.Tier),m.HeroId);
+                    // The live unit carries the ability so the session can apply it.
+                    Assert.That(session.Units.First(u=>u.Monster&&u.HeroId==m.HeroId).Ability,Is.EqualTo(p.Ability),m.HeroId);
+                }
+            }
+            Assert.That(AqProfiles.All["troll"].Reference,Is.EqualTo("Troll"));
+            Assert.That(AqProfiles.All.Values.Count(p=>p.Ability!=null&&p.AbilityText==null),Is.Zero);
         }
 
         [Test] public void ChaptersVaryMinionsAndBossesUseExportedArt()

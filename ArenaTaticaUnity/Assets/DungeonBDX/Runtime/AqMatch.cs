@@ -148,7 +148,7 @@ namespace DungeonBDX
                 if(u.Alive)AqUi.LifeBar(b.transform,portrait?.25f:.2f,.1f,portrait?.6f:.5f,.24f,u.Health,u.MaxHealth);
             }
             var hero=Session.Unit(selected);string ability=hero.AbilityText.Split(':')[0];
-            string state=Session.Reaction!=null?$"GUILDA {Session.Controller+1}: REAÇÃO DE {Session.Unit(Session.Reaction.Monster).Name.ToUpperInvariant()} · MOV {Session.Reaction.Movement}":
+            string state=Session.Reaction!=null?$"GUILDA {Session.Controller+1}: REAÇÃO DE {Session.Unit(Session.Reaction.Monster).Name.ToUpperInvariant()} · MOV {Session.Reaction.Movement}"+(string.IsNullOrEmpty(Session.Unit(Session.Reaction.Monster).AbilityText)?"":" · "+Session.Unit(Session.Reaction.Monster).AbilityText.Split(':')[0]):
                 Session.Resting?"DESCANSO · carta + herói transfere; caído ressuscita":$"{hero.Name} · MOV {Session.MovesLeft}/3 · ATAQUE {(Session.Attacked?"USADO":"PRONTO")} · {ability}";
             AqUi.Text(foot,state,stateArea.x,stateArea.y,stateArea.width,stateArea.height,15,AqUi.Ink);
             for(int i=0;i<4;i++)

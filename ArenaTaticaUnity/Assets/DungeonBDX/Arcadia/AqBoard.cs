@@ -35,12 +35,62 @@ namespace DungeonBDX.Arcadia
     }
     public sealed class AqSpawn
     {
-        public string HeroId,Name,SpriteFolder;
+        public string HeroId,Name,SpriteFolder,Profile,Ability,AbilityText;
         public AqCell Cell;
         public bool Ranged,Huge;
-        // Arcadia levels: minion, villain (minor villain), boss (major villain), dragon.
+        // Arcadia levels: minion (minor minion), major (major minion), villain (minor villain), boss (major villain), dragon.
         public string Tier="minion";
         public int Health=3,Defense,Dice=3,Movement=2,Overkill=5,Reward=1;
+    }
+    // Level-1 stat lines of the Arcadia Quest card list (KrosArcano/Arcadia_Quest_-_Card_List_1.2.xlsx, Monsters/Dragons).
+    // Only the numbers and the ability rule are reused; DungeonBDX enemies keep their own names and art.
+    // Attack dice above MaxDice (dragons roll 10) are capped by the session.
+    public sealed class AqProfile
+    {
+        public string Id,Reference,Tier,Ability,AbilityText;
+        public int Life,Overkill,Defense,Move,Attack,Coins;
+        public bool Ranged;
+    }
+    public static class AqProfiles
+    {
+        public static readonly IReadOnlyDictionary<string,AqProfile> All=Build();
+        static Dictionary<string,AqProfile> Build()
+        {
+            var d=new Dictionary<string,AqProfile>(StringComparer.Ordinal);
+            void P(string id,string reference,string tier,int life,int overkill,int defense,int move,bool ranged,int attack,int coins,string ability=null,string text=null)
+                =>d[id]=new AqProfile{Id=id,Reference=reference,Tier=tier,Life=life,Overkill=overkill,Defense=defense,Move=move,Ranged=ranged,Attack=attack,Coins=coins,Ability=ability,AbilityText=text};
+            // Minor minions.
+            P("marauder","Orc Marauder","minion",2,3,0,1,false,3,1);
+            P("skelebone","Skelebone","minion",2,5,1,1,false,3,1);
+            P("jackal","Jacklol","minion",2,3,1,3,false,2,1);
+            P("demoness","Demoness","minion",2,4,0,2,false,3,1);
+            P("pet","Wild Pet","minion",2,3,1,1,false,2,1);
+            P("zombie","Slasher Zombie","minion",2,2,0,1,false,2,1,"undying","Morto-vivo: descarta os ferimentos se não sofrer overkill.");
+            P("archer","Goblin Archer","minion",1,2,0,1,true,2,1);
+            P("harpy","Harpy","minion",1,2,0,3,true,2,1);
+            P("flinger","Axe Flinger Zombie","minion",2,2,0,1,true,2,1,"undying","Morto-vivo: descarta os ferimentos se não sofrer overkill.");
+            // Major minions.
+            P("hammer","Hammer Beastman","major",3,5,0,1,false,4,2);
+            P("korilla","Korilla","major",3,4,1,2,false,4,2);
+            P("ghost","Ghost","major",4,3,0,3,false,3,2);
+            P("spear","Spear Beastman","major",3,5,0,1,true,3,2,"pack","Matilha: +1 dado se estiver Perto de outro monstro.");
+            P("hornet","Hedgehornet","major",2,4,2,2,true,3,2,"pierce","Ferrão: com crítico, o alvo não rola defesa.");
+            P("sister","Sister of Pleasure","major",3,5,0,1,true,3,2,"mend","Deleite: cada crítico cura 2 ferimentos dele.");
+            // Minor villains.
+            P("troll","Troll","villain",4,6,2,2,false,4,3,"cleave","Varredura: ataca todos os heróis Perto.");
+            P("minotaur","Minotaur","villain",5,6,1,2,false,4,3,"brutal","Brutal: cada crítico causa 1 acerto extra.");
+            P("leah","Leah","villain",4,6,2,3,false,4,3,"quake","Rasante: depois de atacar, cada herói Perto sofre 1 ferimento.");
+            P("owlbunny","Owlbunny","villain",3,4,0,2,false,3,2,"prickly","Espinhento: quem o ataca sofre 1 ferimento antes.");
+            // Major villains.
+            P("dread","Dread King","boss",3,4,0,2,false,4,3,"might","Couraça: só críticos acertam.");
+            P("malkhor","Malkhor","boss",6,6,1,2,true,4,3,"brutal","Brutal: cada crítico causa 1 acerto extra.");
+            P("fang","Lord Fang","boss",5,7,0,1,true,4,3,"breath","Sede: também ataca os heróis Perto do alvo.");
+            P("underlord","The Underlord","boss",6,7,1,0,true,4,3,"echo","Eco: cada crítico fere 1 vez os outros heróis da guilda do alvo.");
+            // Young dragon, initial side (Havok).
+            P("dragon","Havok (Young - Initial)","dragon",10,11,2,1,true,10,4,"breath+might","Bafo e Couraça: atinge os heróis Perto do alvo; só críticos o acertam.");
+            return d;
+        }
+        public static bool Has(string ability,string id)=>!string.IsNullOrEmpty(ability)&&ability.Split('+').Contains(id);
     }
     public sealed class AqScenario
     {
@@ -178,7 +228,8 @@ namespace DungeonBDX.Arcadia
             for(int i=0;i<4;i++)s.Tokens.Add(new AqToken{Id="relic"+i,Kind="relic",Color="gold",Cell=new AqCell(6,3)});
             foreach(var c in new[]{new AqCell(4,7),new AqCell(1,4),new AqCell(7,4),new AqCell(4,1)})Monster(s,c.X,c.Y);
             foreach(var c in new[]{new AqCell(0,5),new AqCell(2,3),new AqCell(7,3),new AqCell(4,7)})Monster(s,c.X,c.Y,true);
-            Boss(s,"rei-goblin-ferrugem","Rei Goblin Ferrugem",4,0);Villain(s,"brumak","Capataz da ferrugem",6,0);
+            Spawn(s,"rei-goblin-ferrugem","Rei Goblin Ferrugem",4,0,"dread");Spawn(s,"brumak","Capataz da ferrugem",6,0,"troll");
+            Spawn(s,"papa-moedas","Papa-moedas do tesouro",2,0,"owlbunny");
             s.Name="PORTAIS EM RUÍNAS";s.Subtitle="Capítulo I · investigação e transporte";
             s.Story="Os portais da cidade foram sabotados. Investigue duas pistas nas oficinas ou retire uma relíquia da câmara do ritual e entregue-a em um portal azul para restaurar a rede. As guildas rivais também procuram o responsável.";
             s.Ending="A rede volta a brilhar. Entre os vestígios surge o selo de uma confraria que opera sob a praça.";
@@ -219,36 +270,34 @@ namespace DungeonBDX.Arcadia
         }
         static void Token(AqScenario s,string kind,int x,int y,string color="blue")
             =>s.Tokens.Add(new AqToken{Id=kind+s.Tokens.Count,Kind=kind,Color=color,Cell=new AqCell(x,y)});
-        // Each chapter alternates its own minions (one of each per spawn row); combat numbers stay those of the melee/ranged profile.
-        // Non-playable Arena characters (author, 17/10) fill the rows with chapter names; an id is never both melee and ranged in a chapter.
-        static readonly Dictionary<string,(string id,string name)[]> Melee=new Dictionary<string,(string,string)[]>{
-            ["portais-em-ruinas"]=new[]{("ogro-de-pedra","Saqueador de pedra"),("troll-esgoto","Troll do esgoto"),("raizor","Espinheiro do canal"),("guardiao-de-musgo","Musgoso das ruínas")},
-            ["praca-dos-quatro-emblemas"]=new[]{("domador-de-correntes","Carcereiro da confraria"),("lobo-de-cinzas","Lobo de cinzas"),("brumak","Arrombador da confraria"),("gryvro","Grifo de rapina")},
-            ["resgate-nas-catacumbas"]=new[]{("esqueleto-lanceiro","Esqueleto lanceiro"),("viuva-da-agulha","Viúva da agulha"),("devon","Morto inquieto"),("ossyro","Ceifador da cripta")}};
-        static readonly Dictionary<string,(string id,string name)[]> Shooters=new Dictionary<string,(string,string)[]>{
-            ["portais-em-ruinas"]=new[]{("cultista-encapuzado","Cultista encapuzado"),("nixira","Xamã dos cogumelos"),("alvyr","Aprendiz renegado"),("viuva-da-agulha","Tecelã de teias")},
-            ["praca-dos-quatro-emblemas"]=new[]{("vespa-cinzenta","Vespa cinzenta"),("cultista-encapuzado","Cultista encapuzado"),("rei-bobett","Coletor de tributos"),("alvyr","Arcanista da confraria")},
-            ["resgate-nas-catacumbas"]=new[]{("nixira","Xamã dos cogumelos"),("cultista-encapuzado","Cultista encapuzado"),("teantha","Espectro da foice"),("alvyr","Vidente do ritual")}};
+        // Each chapter alternates its own minions (one of each per spawn row): three minor minions and one major minion per side,
+        // each on the Arcadia level-1 line of its profile. Non-playable Arena characters keep chapter names; an id is never both melee and ranged in a chapter.
+        static readonly Dictionary<string,(string id,string name,string profile)[]> Melee=new Dictionary<string,(string,string,string)[]>{
+            ["portais-em-ruinas"]=new[]{("ogro-de-pedra","Saqueador de pedra","marauder"),("raizor","Espinheiro do canal","jackal"),("guardiao-de-musgo","Musgoso das ruínas","skelebone"),("troll-esgoto","Troll do esgoto","hammer")},
+            ["praca-dos-quatro-emblemas"]=new[]{("domador-de-correntes","Carcereiro da confraria","marauder"),("lobo-de-cinzas","Lobo de cinzas","jackal"),("gryvro","Grifo de rapina","demoness"),("brumak","Arrombador da confraria","korilla")},
+            ["resgate-nas-catacumbas"]=new[]{("esqueleto-lanceiro","Esqueleto lanceiro","skelebone"),("devon","Morto inquieto","zombie"),("viuva-da-agulha","Viúva da agulha","demoness"),("ossyro","Ceifador da cripta","ghost")}};
+        static readonly Dictionary<string,(string id,string name,string profile)[]> Shooters=new Dictionary<string,(string,string,string)[]>{
+            ["portais-em-ruinas"]=new[]{("cultista-encapuzado","Cultista encapuzado","archer"),("nixira","Xamã dos cogumelos","archer"),("viuva-da-agulha","Tecelã de teias","harpy"),("alvyr","Aprendiz renegado","spear")},
+            ["praca-dos-quatro-emblemas"]=new[]{("vespa-cinzenta","Vespa cinzenta","harpy"),("cultista-encapuzado","Cultista encapuzado","archer"),("alvyr","Arcanista da confraria","archer"),("rei-bobett","Coletor de tributos","hornet")},
+            ["resgate-nas-catacumbas"]=new[]{("nixira","Xamã dos cogumelos","archer"),("cultista-encapuzado","Cultista encapuzado","flinger"),("teantha","Espectro da foice","harpy"),("alvyr","Vidente do ritual","sister")}};
         // PixelLab enemies without an Arena fighter entry; their folders are passed straight to the unit.
         public static readonly IReadOnlyDictionary<string,string> EnemyArt=new Dictionary<string,string>{
             ["troll-esgoto"]="TrollEsgoto",["cultista-encapuzado"]="CultistaEncapuzado",["esqueleto-lanceiro"]="EsqueletoLanceiro",
-            ["rei-goblin-ferrugem"]="ReiGoblinFerrugem",["conde-vesperal"]="CondeVesperal",["necromante-cripta"]="NecromanteCripta"};
-        static AqSpawn Spawn(string id,string name,int x,int y)
-            =>new AqSpawn{HeroId=id,Name=name,Cell=new AqCell(x,y),SpriteFolder=EnemyArt.TryGetValue(id,out var f)?f:null};
-        // Chapter bosses: tougher than minions and worth 2 coins.
-        static void Boss(AqScenario s,string id,string name,int x,int y,bool ranged=false)
-        {var b=Spawn(id,name,x,y);b.Tier="boss";b.Ranged=ranged;b.Health=ranged?4:5;b.Defense=1;b.Dice=3;b.Overkill=6;b.Reward=2;s.Monsters.Add(b);}
-        // Minor villain (one per chapter): between a minion and the boss, worth 2 coins.
-        static void Villain(AqScenario s,string id,string name,int x,int y,bool ranged=false)
-        {var v=Spawn(id,name,x,y);v.Tier="villain";v.Ranged=ranged;v.Health=4;v.Defense=1;v.Dice=3;v.Overkill=5;v.Reward=2;s.Monsters.Add(v);}
-        // Young dragon (chapter III), simplified from the Arcadia dragons: fills its space, breathes from range, worth 4 coins.
-        static void Dragon(AqScenario s,string id,string name,int x,int y)
-        {var d=Spawn(id,name,x,y);d.Tier="dragon";d.Huge=true;d.Ranged=true;d.Health=9;d.Defense=2;d.Dice=5;d.Overkill=10;d.Reward=4;s.Monsters.Add(d);}
+            ["rei-goblin-ferrugem"]="ReiGoblinFerrugem",["conde-vesperal"]="CondeVesperal",["necromante-cripta"]="NecromanteCripta",
+            ["papa-moedas"]="PapaMoedas",["gato-malhado"]="GatoMalhado",["gato-laranja"]="GatoLaranja",["gato-branco"]="GatoBranco",["gato-manchado"]="GatoManchado"};
+        // Every enemy takes the whole line of its profile: life, overkill, defense dice, move, attack dice, coins and ability.
+        static AqSpawn Spawn(AqScenario s,string id,string name,int x,int y,string profile)
+        {
+            var p=AqProfiles.All[profile];
+            var m=new AqSpawn{HeroId=id,Name=name,Cell=new AqCell(x,y),SpriteFolder=EnemyArt.TryGetValue(id,out var f)?f:null,Profile=profile,Tier=p.Tier,
+                Ranged=p.Ranged,Health=p.Life,Overkill=p.Overkill,Defense=p.Defense,Movement=p.Move,Dice=p.Attack,Reward=p.Coins,Ability=p.Ability,AbilityText=p.AbilityText,Huge=p.Tier=="dragon"};
+            s.Monsters.Add(m);return m;
+        }
         static void Monster(AqScenario s,int x,int y,bool ranged=false)
         {
-            (string id,string name)[] table=(ranged?Shooters:Melee).TryGetValue(s.Id??"",out var list)?list:new[]{ranged?("cultista-encapuzado","Cultista encapuzado"):("ogro-de-pedra","Saqueador de pedra")};
-            var pick=table[s.Monsters.Count(m=>m.Ranged==ranged)%table.Length];
-            var m=Spawn(pick.id,pick.name,x,y);m.Ranged=ranged;m.Health=ranged?2:3;m.Dice=ranged?2:3;m.Overkill=ranged?4:5;s.Monsters.Add(m);
+            (string id,string name,string profile)[] table=(ranged?Shooters:Melee).TryGetValue(s.Id??"",out var list)?list:new[]{ranged?("cultista-encapuzado","Cultista encapuzado","archer"):("ogro-de-pedra","Saqueador de pedra","marauder")};
+            var pick=table[s.Monsters.Count(m=>m.Ranged==ranged&&(m.Tier=="minion"||m.Tier=="major"))%table.Length];
+            Spawn(s,pick.id,pick.name,x,y,pick.profile);
         }
         static void Plaza(AqScenario s)
         {
@@ -268,8 +317,11 @@ namespace DungeonBDX.Arcadia
             foreach(var c in new[]{new AqCell(1,3),new AqCell(7,3),new AqCell(3,7),new AqCell(3,1)})Monster(s,c.X,c.Y);
             foreach(var c in new[]{new AqCell(1,5),new AqCell(7,5),new AqCell(5,7),new AqCell(5,1)})Monster(s,c.X,c.Y,true);
             foreach(var c in new[]{new AqCell(0,2),new AqCell(8,6),new AqCell(2,8),new AqCell(6,0),new AqCell(3,4),new AqCell(5,4)})Token(s,"explore",c.X,c.Y);
-            s.Monsters.Add(new AqSpawn{HeroId="brutamontes-errante",Name="Guardião da praça",Cell=new AqCell(4,4),Tier="boss",Huge=true,Health=7,Defense=1,Dice=4,Overkill=8,Reward=3});
-            Villain(s,"ossyro","Carrasco da confraria",5,8);
+            Spawn(s,"brutamontes-errante","Guardião da praça",4,4,"underlord").Huge=true;
+            // Wild pets of the square: stray cats around the central plaza.
+            Spawn(s,"gato-malhado","Gato de rua",3,3,"pet");Spawn(s,"gato-laranja","Gato de rua",5,5,"pet");
+            Spawn(s,"gato-branco","Gato de rua",3,5,"pet");Spawn(s,"gato-manchado","Gato de rua",5,3,"pet");
+            Spawn(s,"ossyro","Carrasco da confraria",5,8,"minotaur");
         }
         static void Catacombs(AqScenario s)
         {
@@ -289,8 +341,8 @@ namespace DungeonBDX.Arcadia
             Token(s,"portal",2,6);Token(s,"portal",6,2);Token(s,"portal",2,2,"violet");Token(s,"portal",6,6,"violet");
             foreach(var c in new[]{new AqCell(1,4),new AqCell(7,4),new AqCell(4,6),new AqCell(4,2)})Monster(s,c.X,c.Y);
             foreach(var c in new[]{new AqCell(1,5),new AqCell(7,3),new AqCell(3,7),new AqCell(5,1)})Monster(s,c.X,c.Y,true);
-            Boss(s,"necromante-cripta","Necromante da Cripta",3,5,true);Boss(s,"conde-vesperal","Conde Vesperal",5,3);
-            Villain(s,"gryvro","Grifo das criptas",6,5);Dragon(s,"dragao-espectral","Dragão espectral",4,4);
+            Spawn(s,"necromante-cripta","Necromante da Cripta",3,5,"malkhor");Spawn(s,"conde-vesperal","Conde Vesperal",5,3,"fang");
+            Spawn(s,"gryvro","Grifo das criptas",6,5,"leah");Spawn(s,"dragao-espectral","Dragão espectral",4,4,"dragon");
             foreach(var c in new[]{new AqCell(0,6),new AqCell(8,2),new AqCell(2,8),new AqCell(6,0),new AqCell(4,4),new AqCell(0,2),new AqCell(8,6)})Token(s,"explore",c.X,c.Y);
         }
         // Extra scenery only: never replaces a room prop and has no rule effect.

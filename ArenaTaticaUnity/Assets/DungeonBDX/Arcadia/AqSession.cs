@@ -73,7 +73,7 @@ namespace DungeonBDX.Arcadia
                 Units.Last(u=>u.Guild==g).Gear.Add(new AqGear{Id="bow."+g,Name="Arco de reserva",Dice=2,Ranged=true});
             }
             foreach(var m in Scenario.Monsters)
-                Units.Add(new AqUnit{Id=Units.Count,Guild=-1,Monster=true,HeroId=m.HeroId,Name=m.Name??(m.HeroId=="brutamontes-errante"?"Guardião da praça":"Saqueador de pedra"),SpriteFolder=m.SpriteFolder,
+                Units.Add(new AqUnit{Id=Units.Count,Guild=-1,Monster=true,HeroId=m.HeroId,Name=m.Name??(m.HeroId=="brutamontes-errante"?"Guardião da praça":"Saqueador de pedra"),SpriteFolder=m.SpriteFolder,Ability=m.Ability,AbilityText=m.AbilityText??"",
                     Cell=m.Cell,Health=m.Health,MaxHealth=m.Health,Defense=m.Defense,Dice=m.Dice,Ranged=m.Ranged,Movement=m.Movement,Overkill=m.Overkill,Reward=m.Reward,Huge=m.Huge||m.HeroId=="brutamontes-errante"});
         }
         public AqUnit Unit(int id)=>Units.FirstOrDefault(u=>u.Id==id);
@@ -218,6 +218,7 @@ namespace DungeonBDX.Arcadia
                 waitingAttack=false;var target=Unit(attackTarget);var gear=u.Gear[attackCard];
                 if(target==null||!target.Alive)return;
                 var dealt=Strike(u,target,gear,r);
+                if(target.Monster&&target.Alive&&dealt>0&&dealt<target.Overkill&&AqProfiles.Has(target.Ability,"undying"))target.Health=target.MaxHealth;
                 if(target.Monster&&dealt<target.Overkill)
                     reactions.Add(new AqReaction{Monster=target.Id,Hero=u.Id,Vengeance=true,Movement=u.Ability=="web"&&dealt>0?0:target.Movement,Dying=!target.Alive});
                 else if(!target.Alive)Kill(target,u,r);
@@ -247,7 +248,12 @@ namespace DungeonBDX.Arcadia
             var attack=new AqGear{Dice=m.Dice,Ranged=m.Ranged,Clip="attack"};
             if(!CanTarget(m,hero,attack))return Fail("O monstro não alcança o herói ativo.");
             var result=Ok("Reação de "+m.Name+".");Strike(m,hero,attack,result);
-            if(!hero.Alive)Kill(hero,m,result);FinishReaction(result);return result;
+            if(!hero.Alive)Kill(hero,m,result);
+            // Arcadia multi-target attacks: cleave hits every hero Close to the monster, breath every hero Close to the target.
+            if(AqProfiles.Has(m.Ability,"cleave")||AqProfiles.Has(m.Ability,"breath"))
+                foreach(var v in Units.Where(v=>v.Alive&&v!=hero&&!v.Monster&&(AqProfiles.Has(m.Ability,"cleave")&&Board.Close(m.Cell,v.Cell)||AqProfiles.Has(m.Ability,"breath")&&Board.Close(hero.Cell,v.Cell))&&CanTarget(m,v,attack)).OrderBy(v=>v.Id).ToArray())
+                {Strike(m,v,attack,result);if(!v.Alive)Kill(v,m,result);}
+            FinishReaction(result);return result;
         }
         void FinishReaction(AqResult r)
         {
@@ -291,11 +297,17 @@ namespace DungeonBDX.Arcadia
             if(a.Ability=="fury"&&!gear.Ranged&&a.Health<a.MaxHealth||a.Ability=="sniper"&&gear.Ranged&&Moved==0||a.Ability=="colossus"&&!gear.Ranged&&b.Monster||a.Ability=="charge"&&!gear.Ranged&&Moved>=3||a.Ability=="reaper"&&b.Health<b.MaxHealth||a.Ability=="frost"&&Occupants(b.Cell).Count()>1)dice++;
             if(a.Ability=="flank"&&Units.Any(v=>v.Alive&&v!=a&&Enemy(b,v)&&Board.Close(v.Cell,b.Cell)))dice++;
             if(a.Ability=="isolate"&&!Units.Any(v=>v.Alive&&v!=b&&!Enemy(b,v)&&Board.Close(v.Cell,b.Cell)))dice++;
+            if(AqProfiles.Has(a.Ability,"pack")&&Units.Any(v=>v.Alive&&v!=a&&v.Monster&&Board.Close(v.Cell,a.Cell)))dice++;
+            if(AqProfiles.Has(b.Ability,"prickly")&&!a.Monster)
+            {Hurt(a,1,b,r);if(!a.Alive){Kill(a,b,r);r.Message+=$" {a.Name} cai nos espinhos de {b.Name}.";return 0;}}
             int hits=Roll(dice,gear.Ranged,false,a.Ability=="focus"&&gear.Ranged,out int crit);
+            if(AqProfiles.Has(b.Ability,"might"))hits=crit+Math.Min(3,crit);
+            if(AqProfiles.Has(a.Ability,"brutal"))hits+=crit;
             if(a.Ability=="berserk"&&a.Health==1&&!gear.Ranged)hits++;
             int defense=b.Defense+b.Gear.Sum(g=>g.Defense);
             if(b.Ability=="moss"&&Board.Space(b.Cell).Room!=""||b.Ability=="stone"&&!gear.Ranged)defense++;
             if(a.Ability=="gunslinger"&&gear.Ranged)defense=Math.Max(0,defense-1);
+            if(AqProfiles.Has(a.Ability,"pierce")&&crit>0)defense=0;
             int saves=Roll(defense,false,true,false,out _);
             // Same hard mitigation ceiling requested for DungeonBDX; defense dice replace armor ratings.
             saves=Math.Min(saves,(int)Math.Floor(hits*.6));
@@ -304,6 +316,11 @@ namespace DungeonBDX.Arcadia
             r.Effects.Add(new AqEffect{Kind="attack",Actor=a.Id,Target=b.Id,From=a.Cell,To=b.Cell,Clip=gear.Clip});
             Hurt(b,amount,a,r);
             if(amount>0&&a.Ability=="drain")Heal(a,a,1,r);
+            if(crit>0&&AqProfiles.Has(a.Ability,"mend"))Heal(a,a,2*crit,r);
+            if(crit>0&&AqProfiles.Has(a.Ability,"echo")&&!b.Monster)
+                foreach(var v in Units.Where(v=>v.Alive&&v!=b&&!v.Monster&&v.Guild==b.Guild).ToArray()){Hurt(v,Math.Min(3,crit),a,r);if(!v.Alive)Kill(v,a,r);}
+            if(AqProfiles.Has(a.Ability,"quake"))
+                foreach(var v in Units.Where(v=>v.Alive&&!v.Monster&&Enemy(a,v)&&Board.Close(a.Cell,v.Cell)).ToArray()){Hurt(v,1,a,r);if(!v.Alive&&v!=b)Kill(v,a,r);}
             if(amount>0&&a.Ability=="bond")
             {
                 var friend=Units.Where(v=>v.Alive&&v!=a&&v.Guild==a.Guild&&!v.Monster&&v.Health<v.MaxHealth&&Board.Close(a.Cell,v.Cell)).OrderBy(v=>v.Health).ThenBy(v=>v.Id).FirstOrDefault();

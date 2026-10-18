@@ -250,5 +250,68 @@ namespace DungeonBDX.Tests
             }
             Assert.That(reflectedKill, Is.True);
         }
+
+        // Arcadia monster abilities (AqProfiles): numbers come from the card list, rules from the ability text.
+        static AqUnit Target(AqSession s, string ability)
+        {
+            var m = s.Units.First(u => u.Monster); s.Unit(3).Cell = new AqCell(7, 7);
+            m.Cell = new AqCell(4, 4); m.Health = m.MaxHealth = 100; m.Defense = 0; m.Overkill = 1000; m.Ability = ability;
+            return m;
+        }
+
+        [Test]
+        public void MightLetsOnlyCriticalsWoundTheMonster()
+        {
+            int plain = 0, might = 0;
+            for (uint seed = 1; seed <= 40; seed++)
+            {
+                var a = Duel(seed); a.Unit(0).Gear[0].Dice = 6; var ma = Target(a, "");
+                var b = Duel(seed); b.Unit(0).Gear[0].Dice = 6; var mb = Target(b, "breath+might");
+                int wa = Wounds(Attack(a, ma.Id), ma.Id), wb = Wounds(Attack(b, mb.Id), mb.Id);
+                Assert.That(wb, Is.LessThanOrEqualTo(wa), "seed " + seed);
+                plain += wa; might += wb;
+            }
+            Assert.That(might, Is.LessThan(plain));
+        }
+
+        [Test]
+        public void UndyingMonstersDiscardWoundsUnlessOverkilled()
+        {
+            bool shrugged = false;
+            for (uint seed = 1; seed <= 60; seed++)
+            {
+                var s = Duel(seed); s.Unit(0).Gear[0].Dice = 1; var m = Target(s, "undying");
+                m.Health = m.MaxHealth = 2; m.Overkill = 2;
+                int w = Wounds(Attack(s, m.Id), m.Id);
+                if (w == 1) { shrugged = true; Assert.That(m.Health, Is.EqualTo(2)); }
+                if (w >= 2) Assert.That(m.Alive, Is.False);
+            }
+            Assert.That(shrugged, Is.True);
+        }
+
+        [Test]
+        public void PricklyMonstersWoundWhoeverAttacksThem()
+        {
+            var s = Duel(5); var m = Target(s, "prickly");
+            var r = Attack(s, m.Id);
+            Assert.That(r.Effects.Any(e => e.Kind == "hit" && e.Target == 0 && e.Actor == m.Id && e.Amount == 1), Is.True);
+        }
+
+        [Test]
+        public void CleaveAttacksEveryHeroCloseToTheMonster()
+        {
+            bool both = false;
+            for (uint seed = 1; seed <= 20 && !both; seed++)
+            {
+                var s = Duel(seed); var m = Target(s, "cleave"); m.Dice = 6; m.Ranged = false;
+                s.Unit(1).Cell = new AqCell(4, 5);
+                Apply(s, "move", 0, x: 2, y: 4);
+                Assert.That(s.Reaction, Is.Not.Null);
+                var r = Apply(s, "react-attack");
+                both = r.Effects.Any(e => e.Kind == "attack" && e.Actor == m.Id && e.Target == 0)
+                    && r.Effects.Any(e => e.Kind == "attack" && e.Actor == m.Id && e.Target == 1);
+            }
+            Assert.That(both, Is.True);
+        }
     }
 }
