@@ -1,0 +1,13 @@
+{
+    "version": "1.2.4",
+    "state": "publicado-itch-windows",
+    "protocol": 7,
+    "sourceCommit": "7be35b61",
+    "editMode": { "total": 454, "passed": 454, "failed": 0, "skipped": 0 },
+    "notes": "Labirintos e mapas aleatorios organizados (estradas, desenhos, vilas), portas, Primal Beast 2x2 com os pes no chao, tamanhos Primal Beast/Edgar/navio. Protocolo 7: online so com a 1.2.4.",
+    "previousRelease": "release-1.2.3.json",
+    "platforms": {
+        "windows": { "channel": "eiediboy/bdx-master:windows", "userVersion": "2026.10.18-1.2.4", "state": "enviado" },
+        "android": { "state": "nao publicado", "reason": "Android parado pelo autor em 18/10" }
+    }
+}
