@@ -74,7 +74,7 @@ namespace DungeonBDX.Arcadia
             }
             foreach(var m in Scenario.Monsters)
                 Units.Add(new AqUnit{Id=Units.Count,Guild=-1,Monster=true,HeroId=m.HeroId,Name=m.Name??(m.HeroId=="brutamontes-errante"?"Guardião da praça":"Saqueador de pedra"),SpriteFolder=m.SpriteFolder,
-                    Cell=m.Cell,Health=m.Health,MaxHealth=m.Health,Defense=m.Defense,Dice=m.Dice,Ranged=m.Ranged,Movement=m.Movement,Overkill=m.Overkill,Reward=m.Reward,Huge=m.HeroId=="brutamontes-errante"});
+                    Cell=m.Cell,Health=m.Health,MaxHealth=m.Health,Defense=m.Defense,Dice=m.Dice,Ranged=m.Ranged,Movement=m.Movement,Overkill=m.Overkill,Reward=m.Reward,Huge=m.Huge||m.HeroId=="brutamontes-errante"});
         }
         public AqUnit Unit(int id)=>Units.FirstOrDefault(u=>u.Id==id);
         public IEnumerable<AqUnit> Occupants(AqCell cell)=>Units.Where(u=>u.Alive&&u.Cell.Equals(cell));

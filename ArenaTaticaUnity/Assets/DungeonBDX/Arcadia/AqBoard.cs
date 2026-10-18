@@ -37,7 +37,9 @@ namespace DungeonBDX.Arcadia
     {
         public string HeroId,Name,SpriteFolder;
         public AqCell Cell;
-        public bool Ranged;
+        public bool Ranged,Huge;
+        // Arcadia levels: minion, villain (minor villain), boss (major villain), dragon.
+        public string Tier="minion";
         public int Health=3,Defense,Dice=3,Movement=2,Overkill=5,Reward=1;
     }
     public sealed class AqScenario
@@ -167,7 +169,7 @@ namespace DungeonBDX.Arcadia
             for(int i=0;i<4;i++)s.Tokens.Add(new AqToken{Id="relic"+i,Kind="relic",Color="gold",Cell=new AqCell(6,3)});
             foreach(var c in new[]{new AqCell(4,7),new AqCell(1,4),new AqCell(7,4),new AqCell(4,1)})Monster(s,c.X,c.Y);
             foreach(var c in new[]{new AqCell(0,5),new AqCell(2,3),new AqCell(7,3),new AqCell(4,7)})Monster(s,c.X,c.Y,true);
-            Boss(s,"rei-goblin-ferrugem","Rei Goblin Ferrugem",4,0);
+            Boss(s,"rei-goblin-ferrugem","Rei Goblin Ferrugem",4,0);Villain(s,"brumak","Capataz da ferrugem",6,0);
             s.Name="PORTAIS EM RUÍNAS";s.Subtitle="Capítulo I · investigação e transporte";
             s.Story="Os portais da cidade foram sabotados. Investigue duas pistas nas oficinas ou retire uma relíquia da câmara do ritual e entregue-a em um portal azul para restaurar a rede. As guildas rivais também procuram o responsável.";
             s.Ending="A rede volta a brilhar. Entre os vestígios surge o selo de uma confraria que opera sob a praça.";
@@ -226,7 +228,13 @@ namespace DungeonBDX.Arcadia
             =>new AqSpawn{HeroId=id,Name=name,Cell=new AqCell(x,y),SpriteFolder=EnemyArt.TryGetValue(id,out var f)?f:null};
         // Chapter bosses: tougher than minions and worth 2 coins.
         static void Boss(AqScenario s,string id,string name,int x,int y,bool ranged=false)
-        {var b=Spawn(id,name,x,y);b.Ranged=ranged;b.Health=ranged?4:5;b.Defense=1;b.Dice=3;b.Overkill=6;b.Reward=2;s.Monsters.Add(b);}
+        {var b=Spawn(id,name,x,y);b.Tier="boss";b.Ranged=ranged;b.Health=ranged?4:5;b.Defense=1;b.Dice=3;b.Overkill=6;b.Reward=2;s.Monsters.Add(b);}
+        // Minor villain (one per chapter): between a minion and the boss, worth 2 coins.
+        static void Villain(AqScenario s,string id,string name,int x,int y,bool ranged=false)
+        {var v=Spawn(id,name,x,y);v.Tier="villain";v.Ranged=ranged;v.Health=4;v.Defense=1;v.Dice=3;v.Overkill=5;v.Reward=2;s.Monsters.Add(v);}
+        // Young dragon (chapter III), simplified from the Arcadia dragons: fills its space, breathes from range, worth 4 coins.
+        static void Dragon(AqScenario s,string id,string name,int x,int y)
+        {var d=Spawn(id,name,x,y);d.Tier="dragon";d.Huge=true;d.Ranged=true;d.Health=9;d.Defense=2;d.Dice=5;d.Overkill=10;d.Reward=4;s.Monsters.Add(d);}
         static void Monster(AqScenario s,int x,int y,bool ranged=false)
         {
             (string id,string name)[] table=(ranged?Shooters:Melee).TryGetValue(s.Id??"",out var list)?list:new[]{ranged?("cultista-encapuzado","Cultista encapuzado"):("ogro-de-pedra","Saqueador de pedra")};
@@ -251,7 +259,8 @@ namespace DungeonBDX.Arcadia
             foreach(var c in new[]{new AqCell(1,3),new AqCell(7,3),new AqCell(3,7),new AqCell(3,1)})Monster(s,c.X,c.Y);
             foreach(var c in new[]{new AqCell(1,5),new AqCell(7,5),new AqCell(5,7),new AqCell(5,1)})Monster(s,c.X,c.Y,true);
             foreach(var c in new[]{new AqCell(0,2),new AqCell(8,6),new AqCell(2,8),new AqCell(6,0),new AqCell(3,4),new AqCell(5,4)})Token(s,"explore",c.X,c.Y);
-            s.Monsters.Add(new AqSpawn{HeroId="brutamontes-errante",Name="Guardião da praça",Cell=new AqCell(4,4),Health=7,Defense=1,Dice=4,Overkill=8,Reward=3});
+            s.Monsters.Add(new AqSpawn{HeroId="brutamontes-errante",Name="Guardião da praça",Cell=new AqCell(4,4),Tier="boss",Huge=true,Health=7,Defense=1,Dice=4,Overkill=8,Reward=3});
+            Villain(s,"ossyro","Carrasco da confraria",5,8);
         }
         static void Catacombs(AqScenario s)
         {
@@ -272,6 +281,7 @@ namespace DungeonBDX.Arcadia
             foreach(var c in new[]{new AqCell(1,4),new AqCell(7,4),new AqCell(4,6),new AqCell(4,2)})Monster(s,c.X,c.Y);
             foreach(var c in new[]{new AqCell(1,5),new AqCell(7,3),new AqCell(3,7),new AqCell(5,1)})Monster(s,c.X,c.Y,true);
             Boss(s,"necromante-cripta","Necromante da Cripta",3,5,true);Boss(s,"conde-vesperal","Conde Vesperal",5,3);
+            Villain(s,"gryvro","Grifo das criptas",6,5);Dragon(s,"dragao-espectral","Dragão espectral",4,4);
             foreach(var c in new[]{new AqCell(0,6),new AqCell(8,2),new AqCell(2,8),new AqCell(6,0),new AqCell(4,4),new AqCell(0,2),new AqCell(8,6)})Token(s,"explore",c.X,c.Y);
         }
         // Extra scenery only: never replaces a room prop and has no rule effect.

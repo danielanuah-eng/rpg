@@ -96,7 +96,7 @@ namespace DungeonBDX.Tests
         {
             foreach(var id in AqScenarios.Ids)
             {
-                var minions=AqScenarios.Create(id).Monsters.Where(m=>m.Reward<2&&m.HeroId!="brutamontes-errante").ToArray();
+                var minions=AqScenarios.Create(id).Monsters.Where(m=>m.Tier=="minion").ToArray();
                 var melee=minions.Where(m=>!m.Ranged).Select(m=>m.HeroId).Distinct().ToArray();var ranged=minions.Where(m=>m.Ranged).Select(m=>m.HeroId).Distinct().ToArray();
                 Assert.That(melee,Has.Length.EqualTo(4),id);Assert.That(ranged,Has.Length.EqualTo(4),id);
                 // Monster dice are looked up by id, so one id never plays both profiles in a chapter.
@@ -104,12 +104,31 @@ namespace DungeonBDX.Tests
             }
         }
 
+        [Test] public void ChaptersClimbTheArcadiaLevelsUpToADragon()
+        {
+            foreach(var id in AqScenarios.Ids)
+            {
+                var s=AqScenarios.Create(id);var villain=s.Monsters.Single(m=>m.Tier=="villain");
+                var minion=s.Monsters.First(m=>m.Tier=="minion");int boss=s.Monsters.Where(m=>m.Tier=="boss").Max(m=>m.Health);
+                // A minor villain sits between the minions and the chapter boss.
+                Assert.That(villain.Health,Is.GreaterThan(minion.Health).And.LessThan(boss),id);
+                Assert.That(villain.Reward,Is.GreaterThan(minion.Reward),id);
+                Assert.That(AqContent.Playable,Has.No.Member(villain.HeroId),id);
+            }
+            var crypt=AqScenarios.Create(AqScenarios.Ids[2]);var dragon=crypt.Monsters.Single(m=>m.Tier=="dragon");
+            Assert.That(dragon.Huge,Is.True);Assert.That(dragon.Health,Is.GreaterThan(crypt.Monsters.Where(m=>m.Tier!="dragon").Max(m=>m.Health)));
+            // A huge figure fills its space: nobody else starts there.
+            Assert.That(crypt.Monsters.Count(m=>m.Cell.Equals(dragon.Cell)),Is.EqualTo(1));
+            var session=new AqSession(AqScenarios.Ids[2],new[]{new[]{"colosso","ciantia","talyssa"},new[]{"damian","perry","diantus"}});
+            Assert.That(session.Units.Single(u=>u.HeroId=="dragao-espectral").Huge,Is.True);
+        }
+
         [Test] public void ChaptersVaryMinionsAndBossesUseExportedArt()
         {
             var lineups=AqScenarios.Ids.Select(id=>string.Join(",",AqScenarios.Create(id).Monsters.Where(m=>m.Reward<2).Select(m=>m.HeroId).Distinct().OrderBy(x=>x))).ToArray();
             Assert.That(lineups.Distinct().Count(),Is.EqualTo(lineups.Length));
             Assert.That(AqScenarios.Create(AqScenarios.Ids[0]).Monsters.Count(m=>m.HeroId=="rei-goblin-ferrugem"),Is.EqualTo(1));
-            Assert.That(AqScenarios.Create(AqScenarios.Ids[2]).Monsters.Count(m=>m.Reward==2),Is.EqualTo(2));
+            Assert.That(AqScenarios.Create(AqScenarios.Ids[2]).Monsters.Count(m=>m.Tier=="boss"),Is.EqualTo(2));
             foreach(var id in AqScenarios.Ids)
                 foreach(var m in AqScenarios.Create(id).Monsters.Where(m=>m.SpriteFolder!=null))
                     Assert.That(UnityEngine.Resources.Load<UnityEngine.Sprite>("Sprites/"+m.SpriteFolder+"/south"),Is.Not.Null,m.SpriteFolder);

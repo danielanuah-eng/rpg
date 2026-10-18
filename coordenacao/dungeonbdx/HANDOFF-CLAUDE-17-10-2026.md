@@ -56,3 +56,11 @@
 - EditMode 407/407. Build não refeito nesta parte (os PNGs novos viram Sprite no próximo build).
 - Lacaios: cada capítulo agora tem 4 tipos corpo a corpo e 4 à distância (um por posição), com NPCs da Arena que já têm sprite (raizor, guardião de musgo, brumak, gryvro, devon, ossyro, alvyr, viúva, rei bobett, teantha) e nomes de capítulo. Números de combate iguais. Testes `EveryChapterFieldsFourMeleeAndFourRangedMinionKinds` e `EveryChapterMonsterHasSpriteArt`. EditMode 408/409 — a falha é `UiSkinTests` (`Iso/UI/panel-dark.png` e `card-frame.png` apagados na cópia de trabalho por outra mão, não commitado).
 - Próximo: níveis Arcadia (vilão menor por capítulo, dragões) mexem no balanceamento — combinar com o autor.
+
+## Níveis Arcadia e o CCleaner (17/10, noite)
+- Código (não commitado até os testes passarem): `AqSpawn` ganhou `Huge` e `Tier` (minion/villain/boss/dragon). Vilão menor por capítulo: brumak (6,0) no cap. I; ossyro (5,8) no II, com o Guardião como boss+Huge; gryvro (6,5) no III, mais o `dragao-espectral` (4,4) com altura 2.6. Teste `ChaptersClimbTheArcadiaLevelsUpToADragon`.
+- **O Localizador de arquivos duplicados do CCleaner 7 apagou arquivos** do projeto, do `Library/PackageCache` e da instalação do Unity, porque Unity e git têm muitos arquivos idênticos. Foram 4.438 arquivos rastreados (pasta `Arcanoclisma` inteira). O autor decidiu restaurar só o DungeonBDX.
+- Ao rodar o localizador, escolher só pastas pessoais. Em `Rpg`, só `ArenaTaticaUnity/Builds`, `Artifacts` e `Logs`. Nunca `Rpg/tmp` (tem o WT).
+- Pacotes: o PackageCache foi recriado. 13 pacotes pediam login no Hub, então reaproveitei os tarballs do backup `%LOCALAPPDATA%/Unity/cache/upm.corrompido`. Os embutidos do Editor que faltarem são copiados por `$TEMP/cmp_pkgs.py fix` (compara com `BuiltInPackages`).
+- A instalação do Editor 6000.6.4f1 perdeu 24 arquivos (HDRP, physics, não usados). Se der problema, reparar pelo Hub.
+- A Lixeira tem 21 arquivos de `Rpg/Tripo` e 5 de `Rpg`, para o autor decidir se restaura.
